@@ -85,7 +85,6 @@
 <script src="{$baseUrl}/lib/pkp/js/controllers/modal/ButtonConfirmationModalHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/modal/JsEventConfirmationModalHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/modal/AjaxModalHandler.js"></script>
-<script src="{$baseUrl}/lib/pkp/js/controllers/modal/AjaxLegacyPluginModalHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/modal/WizardModalHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/modals/editorDecision/form/EditorDecisionFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/linkAction/LinkActionHandler.js"></script>

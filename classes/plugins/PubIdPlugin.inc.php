@@ -221,10 +221,10 @@ abstract class PubIdPlugin extends Plugin {
 		list($verbName, $verbLocalized) = $verb;
 
 		if ($verbName === 'settings') {
-			import('lib.pkp.classes.linkAction.request.AjaxLegacyPluginModal');
-			$actionRequest = new AjaxLegacyPluginModal(
-					$router->url($request, null, null, 'plugin', null, array('verb' => 'settings', 'plugin' => $this->getName(), 'category' => 'pubIds')),
-					$this->getDisplayName()
+			import('lib.pkp.classes.linkAction.request.AjaxModal');
+			$actionRequest = new AjaxModal(
+				$router->url($request, null, null, 'plugin', null, array('verb' => 'settings', 'plugin' => $this->getName(), 'category' => 'pubIds')),
+				$this->getDisplayName()
 			);
 			return new LinkAction($verbName, $actionRequest, $verbLocalized, null);
 		}
