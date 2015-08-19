@@ -52,7 +52,7 @@ class ContentBaseTestCase extends PKPContentBaseTestCase {
 		$this->waitForElementPresent($selector = 'css=[id^=externalReview-button-]');
 		$this->click($selector);
 		$this->waitForElementPresent('//form[@id=\'initiateReview\']//input[@type=\'checkbox\']');
-		$this->waitForElementPresent($selector = '//form[@id=\'initiateReview\']//button[contains(@id, \'submitFormButton-\')]');
+		$this->waitForElementPresent($selector = '//form[@id=\'initiateReview\']//button[contains(., \'Send to Review\')]');
 		$this->click($selector);
 		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
 	}
