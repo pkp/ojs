@@ -81,6 +81,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 
 				// Next, create a galley PROOF file out of the submission file uploaded.
 				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+				import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_... constants
 				$submissionFiles = $submissionFileDao->getLatestRevisions($submission->getId(), SUBMISSION_FILE_SUBMISSION);
 				// Watch for a single file, or any PDFs.
 				foreach ($submissionFiles as $submissionFile) {
