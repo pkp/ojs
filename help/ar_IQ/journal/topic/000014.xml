@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Email Users
+  *
+  -->
+
+<topic id="journal/topic/000014" locale="ar_IQ" title="Email Users" toc="journal/toc/000002" key="journal.users.emailUsers">
+	<section>
+		<![CDATA[<p>يمكن لرئيس تحرير المجلة مراسلة جميع المسجلين فيها أو مجموعة معينة منهم. لاحظ أن جميع قراء المجلة يستلمون رسالة عبر البريد الالكتروني كلما صدر عدد جديد من المجلة مع جدول محتوياته، أو في حالة {help_topic key="publishing.index" text="النشر المستمر"}، يحصلون على عنوان المؤلَّف واسم مؤلفه. على المجلة أيضاً أن تتضمن سياسة للخصوصية، يتم إدخالها خلال عملية التهيئة ومتاحة للجميع ضمن صفحة (عن المجلة) والتي تشرح كيفية التعامل مع البيانات الشخصية للمسجلين في المجلة.</p>]]>	
+	</section>
+</topic>

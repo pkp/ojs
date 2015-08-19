@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - About
+  *
+  -->
+
+<topic id="user/topic/000002" locale="ar_IQ" title="عن المجلة" toc="user/toc/000000" key="user.about">
+	<section>
+		<![CDATA[<p>ضمن هذه الصفحة، تعرض المجلة سياساتها وإجراءاتها وأمور أخرى ذات صلة، بهدف جعل عمل المجلة شفافاً بقدر الإمكان. هذه الصفحة التي يُرجع إليها عادة بمثابة المحتوى الأمامي لكل مجلة. هنا، يتعرف المؤلف على المجلة ونطاق عملها وتركيزها، وعلى سياستها في تحكيم المؤلفات وكيفية معالجتها للنشر وأنماطه وطرق تحضيره، فضلاً عن كيفية تقديم طلبات النشر فيها.</p>]]>	
+	</section>
+</topic>

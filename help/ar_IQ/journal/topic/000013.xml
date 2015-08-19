@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Import Users
+  *
+  -->
+
+<topic id="journal/topic/000013" locale="ar_IQ" title="استيراد المستخدمين" toc="journal/toc/000002" key="journal.users.importUsers">
+	<section>
+		<![CDATA[<p>نظام المجلات المفتوحة يقدم أداة بسيطة لاستيراد بيانات المستخدمين من ملف بصيغة XML، والذي يمكن إنشاؤه بسهولة من قواعد بيانات أخرى تتضمن بيانات المستخدمين. راجع أدبيات النظام لمعرفة المزيد عن صيغة ملفات XML و XML DTD لبيانات المستخدمين.</p>]]>	
+	</section>
+</topic>

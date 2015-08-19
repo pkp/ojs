@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/pubIds/urn/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * URN plugin localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.pubIds.urn.urns">URNs</message>
+
+	<!-- plugin -->
+	<message key="plugins.pubIds.urn.displayName">URN</message>
+	<message key="plugins.pubIds.urn.description">هذه الإضافة تتيح تعيين أسماء موارد موحدة لمكونات نظام المجلات المفتوحة (أعداد، مقالات، ألواح طباعية، وملفات تكميلية).</message>
+
+	<!-- URN manager options, setting -->
+	<message key="plugins.pubIds.urn.manager.settings.description"><![CDATA[لطفاً، قم بإجراء خطوات التهيئة الآتية لتتمكن من إدارة واستعمال URN في نظام المجلات المفتوحة:]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSettings">إعدادات URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">بادئة URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix.description"><![CDATA[إن بادئة URN هي الجزء الثابت الذي لا يتغير أبداً من URN (مثل: "urn:nbn:de:0000-").]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">لاحقة URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default">استعمل الأنماط الافتراضية.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default.description"><![CDATA[%j.v%vi%i للأعداد<br />%j.v%vi%i.%a للمقالات<br />%j.v%vi%i.%a.g%g للألواح الطباعية <br />%j.v%vi%i.%a.s%s للملفات التكميلية.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern">استعمل النمط المذكور أدناه لتوليد لواحق URN. استعمل %j لبادئات المجلة، %v لرقم المجلد، %i لرقم العدد، %Y للسنة، %a لرمز تعريف مقالة نظام المجلات المفتوحة، %g لرمز تعريف اللوح الطباعي، %s للرمز التعريفي للملف التكميلي، %p لرقم الصفحة، و %x لـ "معرفات مخصصة" (يجب تمكينها في خطوة التهيئة 4.3).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.issues">للأعداد</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.articles">للمقالات</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.galleys">للألواح الطباعية</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">للملفات التكميلية.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample">على سبيل المثال: vol%viss%ipp%p يمكن أن تنشئ لاحقة URN "vol3iss2pp230".</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">لاحقة URN يمكن أن تتخذ أي شكل، لكنها ينبغي أن تكون فريدة لكل فقرة منشورة.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">استعمل "المعرف المخصص" للفقرات المنشورة بمثابة لاحقة URN (يجب تمكينها في خطوة التهيئة 4.3). هذا نفس المعرف الذي سيتم استعماله لروابط الإنترنت العمومية.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">أدخل لاحقة URN منفردة لكل فقرة منشورة مستقلة ومختلفة عن "المعرف المخصص" المذكور في الخيار السابق. ستجد حقل إدخال URN إضافي في كل صفحة بيانات وصفية.</message>
+	<message key="plugins.pubIds.urn.manager.settings.clearURNs">إزالة URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.clearURNs.description">إذا قمت بتغيير إعدادات URN فإن URN  التي سبق لك تعيينها لن تكون ذات جدوى. بمجرد حفظ إعدادات URN استعمل هذا الزر لإزالة كل ما موجود من URN  بحيث يمكن للإعدادات الجديدة أن يظهر مفعولها في المقالات الموجودة سلفاً.</message>
+	<message key="plugins.pubIds.urn.manager.settings.clearURNs.confirm">هل أنت متأكد من رغبتك في إزالة كل ما موجود من URN؟</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo">رقم التحقق</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo.label">إن ر قم التحقق سيتم احتسابه وإضافته تلقائياً في النهاية، كرقم أخير في URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace">مساحة الاسم</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">إختر</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.description">إن معرف مساحة الاسم الدائمية مطلوبة عادة لغرض التسجيل (مثل حالة Deutsche Nationalbibliothek).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver">محلل رابط الإنترنت</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(مثل: http://nbn-resolving.de/)</message>
+
+	<message key="plugins.pubIds.urn.manager.settings.journalContent">محتوى المجلة</message>
+	<message key="plugins.pubIds.urn.manager.settings.URNsForJournalContent">لطفاً، إختر المكونات التي على URN أن تتعين لها.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">URN سيتم تعيينها للأعداد.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableArticleURN">URN سيتم تعيينها للمقالات.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableGalleyURN">URN سيتم تعيينها للألواح الطباعية (مثل: HTML أو PDF).</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableSuppFileURN">URN سيتم تعيينها للملفات التكميلية.</message>
+
+	<!-- custom URN suffix for an object -->
+	<message key="plugins.pubIds.urn.metadata">البيانات الوصفية لـ URN</message>
+	<message key="plugins.pubIds.urn.urnSuffix">لاحقة URN</message>
+	<message key="plugins.pubIds.urn.urnSuffix.description">لاحقة مخصصة URN لهذه المقالة.</message>
+	<message key="plugins.pubIds.urn.calculateCheckNo">إحسب رقم التحقق</message>
+	
+	<!--  metadata form -->
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">عدد</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">مقالة</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">لوح طباعي</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">ملف تكميلي</message>
+	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">ما تراه هو عرض لـ URN قد يكون غير مكتمل. لم يتم إنشاء URN بعد. نشر العدد ومعاينة الصفحة العامة. {$pubObjectType} سيؤدي تلقائياً إلى إنشاء URN فريد لهذا {$pubObjectType}.</message>
+
+	<!-- consider URNs at other places in the system -->
+	<message key="plugins.pubIds.urn.rt.metadata.urn">اسم الموارد الموحد</message>
+
+	<!-- errors -->
+	<message key="plugins.pubIds.urn.manager.settings.form.journalContentRequired">لطفاً، إختر المكونات التي على URN أن تتعين لها.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixRequired">لطفاً، أدخل بادئة URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"><![CDATA[إن نمط بادئة URN ينبغي أن يكون بشكل "urn:"&lt;NID&gt;":"&lt;NSS&gt;.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnIssueSuffixPatternRequired">لطفاً، أدخل نمط لاحقة URN للأعداد.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnArticleSuffixPatternRequired">لطفاً، أدخل نمط لاحقة URN للمقالات.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnGalleySuffixPatternRequired">لطفاً، أدخل نمط لاحقة URN للألواح الطباعية.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnSuppFileSuffixPatternRequired">لطفاً، أدخل نمط لاحقة URN للملفات التكميلية.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.namespaceRequired">لطفاً، إختر مساحة الاسم.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">لطفاً، أدخل رابط الإنترنت للمحلل.</message>
+
+	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">لاحقة URN المعطاة قيد الاستعمال حالياً لمكون منشور آخر. لطفاً، أدخل لاحقة URN فريدة لكل فقرة.</message>
+	<message key="plugins.pubIds.urn.form.checkNoRequired">رقم التحقق مفقود.</message>
+
+</locale>

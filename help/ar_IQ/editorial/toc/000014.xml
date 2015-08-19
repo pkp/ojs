@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Proofreader's Role
+  *
+  -->
+
+<toc id="editorial/toc/000014" locale="ar_IQ" title="دور مصحح القراءة" parent_topic="editorial/topic/000014">
+	<topic id="editorial/topic/000042" title="طلبات النشر" />
+	<topic id="editorial/topic/000043" title="القراءة التصحيحية" />
+
+	<breadcrumb url="editorial/topic/000000" title="عملية التحرير" />
+	<breadcrumb url="editorial/topic/000014" title="دور مصحح القراءة" />
+</toc>

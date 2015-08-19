@@ -731,6 +731,8 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. Eine Bestätigung geht an diese E-Mail-Adresse.]]></message>
 
 	<!-- Registrierung -->
+	<message key="user.register.emailValidation">Validierung der E-Mail-Adresse erforderlich</message>
+	<message key="user.register.emailValidationDescription">Sie müssen Ihre E-Mail-Adresse bestätigen, bevor Sie fortfahren können. Bitte prüfen Sie Ihren E-Mail-Eingang für weitere Hinweise. Nachdem Sie Ihren Account validiert haben, können Sie sich einloggen..</message>
 	<message key="user.register.selectJournal">Wählen Sie die Zeitschrift aus, für die Sie sich registrieren wollen</message>
 	<message key="user.register.noJournals">Auf dieser Seite gibt es keine Zeitschriften, bei denen Sie sich eintragen könnten.</message>
 	<message key="user.register.privacyStatement">Schutz persönlicher Daten</message>
@@ -876,12 +878,16 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<message key="about.subscriptionTypes.duration">Dauer</message>
 	<message key="about.subscriptionTypes.cost">Kosten</message>
 	<message key="about.availableSubscriptionTypes">Typen von Abonnements</message>
+	<message key="about.purchaseIssue">Kauf einer Ausgabe</message>
+	<message key="about.purchaseArticle">Kauf eines Artikels</message>
+	<message key="about.purchaseIssueDescription">Leserinnen und Leser ohne Abonnement können einzelne Ausgaben erwerben. Die folgenden Zahlungsmöglichkeiten und Kosten können gewählt werden.</message>
+	<message key="about.purchaseArticleDescription">Leserinnen und Leser ohne Abonnement können einzelne Artikel erwerben. Die folgenden Zahlungsmöglichkeiten und Kosten können gewählt werden.</message>
 	<message key="about.memberships">Mitgliedschaften</message>
 	<message key="about.journalSponsorship">Unterstützung</message>
 	<message key="about.aboutThisPublishingSystem">Über dieses Publikationssystem</message>
 	<message key="about.aboutThisPublishingSystem.altText">Redaktions- und Veröffentlichungsprozess mit OJS</message>
-	<message key="about.aboutOJSJournal"><![CDATA[Diese Zeitschrift verwendet Open Journal Systems {$ojsVersion}, eine Open-Source-Zeitschriften- und Publikationsmanagement-Software. Sie wird unter der GNU General Public Licence entwickelt, dokumentiert und kostenlos vertrieben durch das <a href="http://pkp.sfu.ca/">Public Knowledge Project</a>.]]></message>
-	<message key="about.aboutOJSSite"><![CDATA[Diese Website verwendet Open Journal Systems {$ojsVersion}, eine Open-Source-Zeitschriften- und Publikationsmanagement-Software. Sie wird unter der GNU General Public Licence entwickelt, dokumentiert und kostenlos vertrieben durch das <a href="http://pkp.sfu.ca/">Public Knowledge Project</a>.]]></message>
+	<message key="about.aboutOJSJournal"><![CDATA[Diese Zeitschrift verwendet Open Journal Systems {$ojsVersion}, eine Open-Source-Zeitschriften- und Publikationsmanagement-Software. Sie wird unter der GNU General Public License entwickelt, dokumentiert und kostenlos vertrieben durch das <a href="http://pkp.sfu.ca/">Public Knowledge Project</a>.]]></message>
+	<message key="about.aboutOJSSite"><![CDATA[Diese Website verwendet Open Journal Systems {$ojsVersion}, eine Open-Source-Zeitschriften- und Publikationsmanagement-Software. Sie wird unter der GNU General Public License entwickelt, dokumentiert und kostenlos vertrieben durch das <a href="http://pkp.sfu.ca/">Public Knowledge Project</a>.]]></message>
 
 	<!-- Mitteilungen -->
 
@@ -1017,8 +1023,8 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 <p>Wir <strong>empfehlen dringend</strong>, dass Sie ein Backup Ihrer Datenbank, Dateiverzeichnisse und OJS-Installation machen, bevor Sie fortfahren.</p>
 <p>Falls Sie in einem <a href="http://www.php.net/features.safe-mode" target="_blank">PHP-Safe Mode</a> arbeiten, stellen Sie bitte sicher, dass die max_execution_time-Richtlinie in Ihrer php.ini-Konfigurationsdatei auf einen hohen Grenzwert eingestellt ist. Sollte dieses (oder irgendein anderes) Zeitlimit (z.B. die "Timeout"-Regelung von Apache) erreicht werden und der Upgrade-Prozess unterbrochen werden, müssen Sie manuell eingreifen.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Zur durchgängigen Unterstützung von Unicode (UTF-8) verwenden Sie stets UTF-8 als Zeichensatz. Beachten Sie, dass MySQL >= 4.1.1 oder PostgreSQL >= 7.1-Datenbankserver erforderlich sind. Beachten Sie bitte außerdem, dass die Unterstützung von Unicode PHP >= 4.3.0 kompiliert mit der Bibliothek <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> verlangt (in den meisten neueren PHP-Installationen standardmäßig aktiviert). Falls Ihr Server diese Anforderungen nicht erfüllt, können Schwierigkeiten mit erweiterten Schriftsätzen auftreten.
-	<br /><br />
-	Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></message>
+<br /><br />
+Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.allowFileUploads"><![CDATA[Ihr Server erlaubt momentan Dateiuploads: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Ihr Server erlaubt beim Upload momentan eine maximale Dateigröße von: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="installer.localeInstructions">Die Hauptsprache dieses Systems. Falls Sie an hier nicht aufgeführten Sprachen interessiert sind, sehen Sie bitte in der OJS-Dokumentation nach.</message>

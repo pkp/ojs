@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000020.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary - Submission Metadata
+  *
+  -->
+
+<topic id="editorial/topic/000020" locale="ar_IQ" title="البيانات الوصفية لطلب النشر" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionMetadata">
+	<section>
+		<![CDATA[<p>البيانات الوصفية التي ستُستعمل لفهرسة طلب النشر عند إطلاقه قد تم إدخالها من قبل المؤلف، ويمكن تعديلها من قبل محرر القسم فضلاً عن المؤلف نفسه والمدقق خلال عملية التحرير.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration - Installation 
+  *
+  -->
+
+<topic id="site/topic/000001" locale="ar_IQ" title="التنصيب" toc="site/toc/000000" key="site.installation">
+	<section>
+		<![CDATA[<p>نظام المجلات المفتوحة هو تطبيق مفتوح المصدر على الإنترنت، وهو متاح مجاناً للتنزيل والتنصيب تقريباً على أي حاسبة منضدية أو ملقم.</p>]]>	
+	</section>
+	
+	<section title="الرخصة">
+		<![CDATA[<p>نظام المجلات المفتوحة يوزع تحت فقرات <a href="http://www.gnu.org/copyleft/gpl.html" target="_blank">GNU General Public License الرخصة العامة المشاعة</a>. نسخة من فقرات الرخصة لإعادة توزيع هذا النظام وبرامجياته بشكله الأصلي أو المعدل مضمنة مع حزمة النظام.</p>]]>
+	</section>
+	
+	<section title="متطلبات النظام">
+		<![CDATA[<p>بيئة ملقم يلبي المتطلبات الآتية هو ما يوصى به:</p>
+		<ul>
+			<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x</li>
+			<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (بضمنها
+	  PostgreSQL 8.x)</li>
+			<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x أو Microsoft IIS 6+</li>
+			<li>Operating system: أي أنظمة تشغيل تدعم البرامجيات أعلاه، بضمنها <a href="http://www.linux.org/" target="_blank">Linux</a>، <a href="http://www.bsd.org/" target="_blank">BSD</a>، <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>، <a href="http://www.apple.com/" target="_blank">Mac OS X</a>، و <a href="http://www.microsoft.com/">Windows</a></li>
+		</ul>
+		<p>نظام المجلات المفتوحة مفحوص حالياً على MySQL و PostgreSQL، فقط... ورغم أن اعتماد قواعد بيانات أخرى مدعومة من <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> قد تعمل (كلياً أو جزئياً). إبلاغات التوافقية و/أو حزم البرامجيات لأنظمة إدارة قواعد بيانات أخرى يُرحب بها.</p>
+		]]>
+	</section>
+	
+	<section title="التنزيل">
+		<![CDATA[<p>نظام المجلات المفتوحة يمكن تنزيله من <a href="http://pkp.sfu.ca/ojs/" target="_blank">موقع مشروع المعرفة العامة</a>.</p>]]>
+	</section>
+	
+	<section title="التنصيب">
+		<![CDATA[<p>نظام المجلات المفتوحة يأتي مع نص تنصيب يعمل من المتصفح يقوم مدير النظام خلال عملية التنصيب. أو كبديل عن ذلك، تتاح أيضاً أداة تنصيب عبر نصوص الأوامر.</p>
+		<ol>
+			<li>
+				تنزيل رزمة نظام المجلات المفتوحة.
+			</li>
+			<li>
+				إفتح ضغط رزمة النظام إلى حافظة ملفات تختارها ضمن شجرة ملفات ملقم الإنترنت في حاسبتك:<br />
+				<tt>$ tar -zxf ojs-2.*.tar.gz<br />
+				$ mv ojs-* /var/www/myjournal</tt>
+			</li>
+			<li>
+				إجعل الملفات وحوافظها الآتية قابلة للتعديل (أي مستعملاً الأمر chown أو chmod):<br />
+				- config.inc.php (إختيارياً)<br />
+				- public<br />
+				- cache<br />
+				- cache/t_cache<br />
+				- cache/t_config<br />
+				- cache/t_compile<br />
+				- cache/_db
+			</li>
+			<li>
+				إفتح مستعرض الإنترنت على موضع تنصيب ملفات نظام المجلات المفتوحة (مثلاً: http://www.mydomain.com/myjournal/) واتبع التعليمات الظاهرة أمامك على الشاشة لإكمال التنصيب. أنظر docs/README للمزيد من المعلومات عن عملية التنصيب.
+			</li>
+		</ol>
+		]]>
+	</section>
+</topic>

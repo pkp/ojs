@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Roles. 
+  *
+  -->
+
+<toc id="journal/toc/000003" locale="ar_IQ" title="الأدوار" parent_topic="journal/topic/000003">
+	<topic id="journal/topic/000015" title="رئيس التحرير" />
+	<topic id="journal/topic/000016" title="المحرر" />
+	<topic id="journal/topic/000017" title="محرر القسم" />
+	<topic id="journal/topic/000019" title="المدقق" />
+	<topic id="journal/topic/000018" title="المصمم الطباعي" />
+	<topic id="journal/topic/000020" title="مصحح القراءة" />
+	<topic id="journal/topic/000021" title="المحكم" />
+	<topic id="journal/topic/000022" title="المؤلف" />
+	<topic id="journal/topic/000023" title="القارئ" />
+	<topic id="journal/topic/000032" title="مدير الاشتراكات" />
+
+	<breadcrumb url="journal/topic/000000" title="إدارة المجلة" />
+	<breadcrumb url="journal/topic/000003" title="الأدوار" />
+</toc>

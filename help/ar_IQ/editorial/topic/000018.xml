@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - Archives 
+  *
+  -->
+
+<topic id="editorial/topic/000018" locale="ar_IQ" title="المحفوظات" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.archives">
+	<section>
+		<![CDATA[<p>طلبات التقديم المنضوية في هذا الطابور قد مرت بمرحلة التحرير، سواءً رُفضت أو جُدولت للنشر أو نُشرت فعلياً. يوفر هذا الطابور للمحررين ومحرري الأقسام المعينين الوصول الكامل لتأريخ مرحلة التحرير (الملخص، طلب النشر، التحكيم، التحرير، الفعاليات السابقة).</p><p><em>لاستعادة فقرة محفوظة من الأرشيف إلى القائمة النشطة</em>. على مدير التحرير الرجوع إلى الأرشيف عبر صفحته الرئيسية والعثور على طلب النشر المعني. النقر على عنوان طلب النشر سيؤدي إلى صفحات الملخص، التحكيم، التحرير، التأريخ لذلك الطلب، وفي صفحة الملخص هنالك رابط "الاستعادة إلى القائمة النشطة"، وعبرها يمكن نقله مرة أخرى إلى قائمة التحكيم أو التحرير اعتماداً على المرحلة التي وصلها قبل أرشفته.</p>]]>	
+	</section>
+</topic>

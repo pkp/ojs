@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000031.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Import/Export
+  *
+  -->
+
+<topic id="journal/topic/000031" locale="ar_IQ" title="استيراد/تصدير البيانات" toc="journal/toc/000001" key="journal.managementPages.importExport">
+	<section>
+		<![CDATA[<p>إن ميزة استيراد/تصدير البيانات، المتاحة عبر إدارة المجلة، تمكن رئيس تحرير المجلة من رفد النظام بالبيانات من مصدر خارجي أو تصديرها إليه.</p><p>استيراد/تصدير البيانات يجري تشغيله عبر البرامج المضافة عبر كل نسق أو نوع من البيانات المتاحة لكل واحد من تلك الإضافات. لمزيد من المعلومات، راجع الأدبيات المرفقة بكل من تلك الإضافات، والموجودة ضمن حافظة الملفات الإضافات.</p><p>هناك خمس إضافات تتعلق باستيراد/تصدير البيانات تأتي ضمن نظام المجلات المفتوحة، وهي مسجلة هنا.</p><p>وظيفة استيراد/تصدير البيانات تتوفر أيضاً بصيغة أداة نصوص الأوامر؛ أنظر الملف tools/importExport.php للمزيد من المعلومات.</p>]]>
+	</section>
+	<section title="إضافة تبادل المستخدمين بصيغة XML">
+			<![CDATA[<p>يمكن استعماله لاستيراد/تصدير البيانات الخاصة بالمستخدمين وأدوارهم. أنظر XML DTD في "plugins/importexport/users/users.dtd" للمزيد من المعلومات.</p>]]>
+	</section>
+	<section title="إضافة الخبير لتصدير المؤلفات">
+			<![CDATA[<p>ينفذ تصديراً لمؤلَّف واحد بالنسبة لنص مفهرس بالكامل باستعمال Erudit's XML DTD. أنظر <a href="http://www.erudit.org">http://www.erudit.org</a> للمزيد من المعلومات.</p>]]>
+	</section>
+	<section title="إضافة المؤلفات والأعداد بصيغة XML">
+			<![CDATA[<p>هو الطريقة الأساسية لاستيراد/تصدير البيانات بشكل دفعات. يمكن استعمالها لاستيراد/تصدير البيانات لمؤلف واحد أو مؤلفات متعددة ولعدد واحد أو لأعداد مختلفة، بضمنها البيانات الوصفية. لمعلومات أخرى عن هذه الوظيفة الإضافية، أنظر XML DTD في "plugins/importexport/native/native.dtd".</p>]]>
+	</section>
+	<section title="إضافة التصدير PubMed XML">
+			<![CDATA[<p>يوفر إمكانية استيراد/تصدير البيانات لإنشاء معلومات مرجعية للمؤلفات في الإصدار الحالي حسب النسق القياسي PubMed لبيانات بصيغة XML لأغراض الفهرسة في NLM PubMed/MEDLINE. تفاصيل أخرى عن صيغة ملفات XML والبيانات المطلوبة تتوفر في: <a href="http://www.ncbi.nlm.nih.gov/entrez/query/static/spec.html">http://www.ncbi.nlm.nih.gov/entrez/query/static/spec.html</a>. للمزيد من المعلومات عن هذه الوظيفة الإضافية، أنظر "plugins/importexport/pubmed".</p>]]>
+	</section>
+	<section title="إضافة التصدير Crossref XML">
+			<![CDATA[<p>يوفر إمكانية استيراد/تصدير البيانات لإنشاء البيانات الوصفية للمؤلفات والأعداد لأغراض الفهرسة في CrossRef.  تفاصيل أخرى عن صيغة ملفات XML والبيانات المطلوبة تتوفر في: <a href="http://www.crossref.org/schema">http://www.crossref.org/schema</a>. للمزيد من المعلومات عن هذه الوظيفة الإضافية، أنظر "plugins/importexport/crossref".</p>]]>
+	</section>
+</topic>

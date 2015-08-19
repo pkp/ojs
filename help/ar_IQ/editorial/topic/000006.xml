@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Review 
+  *
+  -->
+
+<topic id="editorial/topic/000006" locale="ar_IQ" title="التحكيم" toc="editorial/toc/000004" subtoc="editorial/toc/000006" key="editorial.sectionEditorsRole.review">
+	<section>
+		<![CDATA[<p>إن صفحة التحكيم تقدم كل العناصر اللازمة لمحرر القسم كي ينظم ويكمل عملية التحكيم. يقوم محرر القسم بتهيئة النسخة المعدة للتحكيم من المؤلَّف، ويوجهها إلى محكم أو أكثر ومن ثم يدخل قرار المحرر، والذي إعتماداً عليه، يتم رفع المؤلَّف من طابور التحكيم إما إلى طابور التحرير، أو إلى الأرشيف، أو قد يعاد تقديمها إلى التحكيم في جولة أخرى.</p><p>لمزيد من المعلومات التفصيلية عن آلية إختيار نسخة التحكيم، أنظر {help_topic key="editorial.sectionEditorsRole.review.reviewVersion" text="نسخة التحكيم"}.</p><p>لمزيد من المعلومات التفصيلية عن عملية التحكيم المناظر، أنظر {help_topic key="editorial.sectionEditorsRole.review.peerReview" text="التحكيم المناظر"}.</p><p>لمزيد من المعلومات التفصيلية عن إجراء قرار المحرر، أنظر {help_topic key="editorial.sectionEditorsRole.review.editorDecision" text="قرار المحرر"}.</p>]]>
+</section>
+
+</topic>

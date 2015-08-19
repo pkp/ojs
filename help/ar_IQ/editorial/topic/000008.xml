@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index 
+  *
+  -->
+
+<topic id="editorial/topic/000008" locale="ar_IQ" title="دور المحكم" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
+	<section>
+		<![CDATA[<p>تتم دعوة المحكم عبر البريد الالكتروني لتحكيم طلب النشر، وتتضمن تلك الدعوة عنوان المؤلَّف وملخصه فضلاً عن رابط المجلة واسم الدخول وكلمة المرور ليتمكن المحكم عبرها من دخول موقع المجلة. يمكن للمجلة الاختيار ما بين إرسال طلب النشر للمحكم كمرفق بريد الكتروني، إضافة إلى رسالة دعوة التحكيم. وعند ذلك، على المحكم الاستجابة عبر البريد الالكتروني أيضاً. ما يتم وصفه هنا هو الطريقة الأساسية للتحكيم (التي تضمن التسجيل الكامل للعملية)، حيث تفرض على المحكم إجراء التحكيم عبر موقع المجلة، وليس عبر التراسل بالبريد الالكتروني.</p>]]>	
+	</section>
+</topic>

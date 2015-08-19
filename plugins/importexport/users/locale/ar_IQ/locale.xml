@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/users/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.importexport.users.displayName">إضافة XML للمستخدمين</message>
+	<message key="plugins.importexport.users.description">استيراد وتصدير المستخدمين</message>
+
+	<message key="plugins.importexport.users.cliUsage"><![CDATA[الاستعمال: {$scriptName} {$pluginName} [command] ...
+Commands:
+	import [xmlFileName] [journal_path] [optional flags]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [role_path1] [role_path2] ...
+
+علامات إختيارية:
+	continue_on_error: إذا تم تحديده مع الأمر، معناه لا تتوقف عن استيراد المستخدمين عند حدوث أخطاء
+
+	send_notify: إذا تم تحديده مع الأمر، أرسل إشعار عبر البريد الالكتروني
+		متضمناً أسماء المستخدمين وكلمات مرورهم معنون إلى المستخدمين أنفسهم
+
+أمثلة:
+	استيراد المستخدمين إلى مجلتي من الملف myImportFile.xml، مع الاستمرار حين الخطأ:
+	{$scriptName} {$pluginName} import myImportFile.xml myJournal continue_on_error
+
+	تصدير كل المستخدمين من مجلتي:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+
+	تصدير كل المستخدمين المسجلين بصفة محكمين، فضلاً عن منحهم ذلك الدور حصراً:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal reviewer
+]]></message>
+	<message key="plugins.importexport.users.import.importUsers">استيراد المستخدمين</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[إختر ملف بيانات بصيغة XML يتضمن معلومات المستخدمين لاستيرادها إلى هذه المجلة. أنظر ملف المساعدة الخاص بالمجلة للحصول على تفاصيل عن صيغة هذا الملف.<br /><br />لاحظ أنه إن كان الملف المستورد يتضمن أي أسماء مستخدمين أو عناوين بريد الكتروني موجودة سلفاً في النظام، فإن بيانات هؤلاء المستخدمين لن يتم استيرادها، مع منحهم أي أدوار جديدة فيما لو جاءت مستوردة من الملف المعني، أي بعبارة أخرى، سيتم التعامل مع المستخدمين المكررين على أنهم معروفون سابقاً في النظام.]]></message>
+	<message key="plugins.importexport.users.import.failedToImportUser">استيراد المستخدم لم ينجح</message>
+	<message key="plugins.importexport.users.import.failedToImportRole">تعذر منح المستخدم دور</message>
+	<message key="plugins.importexport.users.import.dataFile">ملف بيانات المستخدم</message>
+	<message key="plugins.importexport.users.import.sendNotify">أرسل إشعاراً بالبريد الالكتروني إلى كل مستخدم تم استيراده متضمناً اسم المستخدم وكلمة مروره.</message>
+	<message key="plugins.importexport.users.import.continueOnError">تابع استيراد المستخدمين الآخرين عند حدوث خطأ ما.</message>
+	<message key="plugins.importexport.users.import.noFileError">لم يتم رفع أي ملف!</message>
+	<message key="plugins.importexport.users.import.usersWereImported">المستخدمون الآتية أسماؤهم تم استيرادهم بنجاح إلى النظام</message>
+	<message key="plugins.importexport.users.import.errorsOccurred">حدثت أخطاء خلال عملية الاستيراد</message>
+	<message key="plugins.importexport.users.import.confirmUsers">أكد أن هؤلاء المستخدمون الذين تريد استيرادهم إلى النظام</message>
+	<message key="plugins.importexport.users.import.warning">تحذير</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">لا يمكن استعمال كلمات المرور المرمزة بواسطة {$importHash}؛ نظام المجلات المفتوحة مصمم لاستعمال {$ojsHash}. إذا تابعت الأمر، سيكون عليك إعادة ضبط كلمات مرور المستخدمين الذين ستستورد حساباتهم إلى النظام.</message>
+	<message key="plugins.importexport.users.unknownJournal">مسار مجلة "{$journalPath}" غير معروف تم تحديده.</message>
+
+	<message key="plugins.importexport.users.export.exportUsers">تصدير المستخدمين</message>
+	<message key="plugins.importexport.users.export.exportByRole">التصدير حسب الدور</message>
+	<message key="plugins.importexport.users.export.exportAllUsers">تصدير الكل</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">حدثت أخطاء خلال عملية التصدير</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">تعذرت الكتابة إلى الملف "{$fileName}".</message>
+</locale>

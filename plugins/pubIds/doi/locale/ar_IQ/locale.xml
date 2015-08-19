@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/pubIds/doi/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DOI plugin localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.description">هذه الإضافة تقوم بتعيين معرفات المكونات الرقمية للمقالات، الأعداد، الألواح الطباعية، والملفات التكميلية في نظام المجلات المفتوحة.</message>
+
+	<!-- settings form -->
+	<message key="plugins.pubIds.doi.manager.settings.doiSettings">إعدادات إضافة DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.description">لطفاً، قم بتهيئة إضافة DOI لتتمكن من إدارة واستعمال DOI في نظام المجلات المفتوحة:</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiObjects">محتوى المجلة</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">لطفاً، إختر المكونات التي على DOI أن تتعين لها.</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainDois">لطفاً، إختر مكونات النشر التي ستكون لها معرفات للمكونات الرقمية (DOI) معينة لها:</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>ملاحظة:</strong> عند استعمال DOI لـ <a href="http://www.crossref.org" target="_new">CrossRef</a>، لطفاً، إختر المقالات. المقالات يُنظر لها بمابة أعمال، أي: كيان من محتوى فكري وفني . لذلك فإن المقالة هي مكون النشر الذي يستند إليه التصدير والتسجيل في CrossRef DOI.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">الأعداد</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">المقالات</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">الألواح الطباعية</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableSuppFileDoi">الملفات التكميلية</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">بادئة DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefixDescription"><![CDATA[إن بادئة DOI يتم تعيينها من قبل وكالات التسجيل (مثل: <a href="http://www.crossref.org" target="_new">CrossRef</a>) وهي بصيغة 10.xxxx (مثل: 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">إن بادئة DOI هي إجبارية وينبغي أن تكون بصيغة 10.xxxx.</message>
+
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">لاحقة DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDescription">يمكن للاحقة DOI أن تأخذ أي شكل، لكنها يجب أن تكون فريدة بين كل المكونات المنشورة التي تمتلك نفس بادئة DOI:</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">استعمل النمط المذكور أدناه لتوليد لواحق DOI. استعمل %j لبادئات المجلة، %v لرقم المجلد، %i لرقم العدد، %Y للسنة، %a لرمز تعريف مقالة نظام المجلات المفتوحة، %g لرمز تعريف اللوح الطباعي، %s للرمز التعريفي للملف التكميلي، %p لرقم الصفحة، و %x لـ "معرفات مخصصة" (يجب تمكينها في خطوة التهيئة 4.3).</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">للأعداد</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">للمقالات</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys">للألواح الطباعية</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.suppFiles">للملفات التكميلية</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">على سبيل المثال: vol%viss%ipp%p يمكنه إنشاء DOI مثل: 10.1234/vol3iss2pp230</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">استعمل الأنماط الافتراضية.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i للأعداد<br />%j.v%vi%i.%a للمقالات<br />%j.v%vi%i.%a.g%g للألواح الطباعية <br />%j.v%vi%i.%a.s%s للملفات التكميلية.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">استعمل "المعرف المخصص" للفقرات المنشورة بمثابة لاحقة DOI (يجب تمكينها في خطوة التهيئة 4.3). هذا نفس المعرف الذي سيتم استعماله لروابط الإنترنت العمومية.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">أدخل لاحقة DOI منفردة لكل فقرة منشورة مستقلة ومختلفة عن "المعرف المخصص" المذكور في الخيار السابق. ستجد حقل إدخال DOI إضافي في كل صفحة بيانات وصفية.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">لطفاً، أدخل نمط لاحقة DOI للأعداد.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">لطفاً، أدخل نمط لاحقة DOI للمقالات.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">لطفاً، أدخل نمط لاحقة DOI للألواح الطباعية.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuppFileSuffixPatternRequired">لطفاً، أدخل نمط لاحقة DOI للملفات التكميلية.</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign">أعد تعيين DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">إذا قمت بتغيير إعدادات DOI، فإن DOI التي سبق لك تعيينها لن تكون ذات جدوى. بمجرد حفظ إعدادات DOI، استعمل هذا الزر لإزالة كل ما موجود من DOI بحيث يمكن للإعدادات الجديدة أن يظهر مفعولها في المقالات الموجودة سلفاً.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">هل أنت متأكد من رغبتك في إزالة كل ما موجود من DOI؟</message>	
+
+
+	<!-- metadata form -->
+	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">عدد</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">مقالة</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">لوح طباعي</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">ملف تكميلي</message>
+	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">ما تراه هو عرض لـ DOI قد يكون غير مكتمل. لم يتم إنشاء DOI بعد. نشر العدد ومعاينة الصفحة العامة {$pubObjectType} سيؤدي تلقائياً إلى إنشاء DOI فريد لهذا {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">لاحقة DOI المعطاة قيد الاستعمال حالياً لمكون منشور آخر. لطفاً، أدخل لاحقة DOI فريدة لكل فقرة.</message>
+</locale>

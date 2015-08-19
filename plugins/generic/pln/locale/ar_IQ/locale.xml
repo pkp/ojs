@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/pln/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+  *
+  * PLN plugin localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.generic.pln">إضافة مشروع المعرفة العامة PLN</message>
+	<message key="plugins.generic.pln.description">إن إضافة مشروع المعرفة العامة PLN ستقوم بإيداع محتوياتك المنشورة في شبكة LOCKSS العامة من أجل الحفاظ عليها.</message>
+	<message key="plugins.generic.pln.manager.setup.description"><![CDATA[<strong>الشبكة الخاصة لمشروع المعرفة العامة LOCKSS</strong><br /><br />لطفاً، إقرأ <a href="https://pkp.sfu.ca/pkp-lockss/" target="_blank">نظرة عامة على PLN لمشروع المعرفة العامة</a> ومن ثم أكمل <a href="{$plnPluginURL}">هذا النموذج البسيط</a>. هذا الخيار سيمكنك من تضمين مجلتك في الشبكة الاصة لمشروع المعرفة العامة LOCKSS (PKP PLN).]]></message>
+	
+	<message key="plugins.generic.pln.settings_page">إعدادات إضافة PLN لمشروع المعرفة العامة</message>
+	<message key="plugins.generic.pln.settings">الإعدادات</message>
+	<message key="plugins.generic.pln.settings.saved">تم حفظ إعدادات PLN لمشروع المعرفة العامة.</message>
+	<message key="plugins.generic.pln.settings.terms_of_use">شروط الاستعمال</message>
+	<message key="plugins.generic.pln.settings.terms_of_use_help">قبل الإيداع في شبكة ما، من الضروري الموافقة على كل شروطها للعمل.</message>
+	<message key="plugins.generic.pln.settings.terms_of_use_agree">أوافق</message>
+	<message key="plugins.generic.pln.settings.journal_uuid">رمز تعريف المجلة</message>
+	<message key="plugins.generic.pln.settings.journal_uuid_help">هذا هو رمز تعريف مجلتك لـ PLN الخاص بمشروع المعرفة العامة. بإمكانك مشاركته مع مدراء PLN لمشروع المعرفة العامة لأغراض الحصول على الدعم.</message>
+	<message key="plugins.generic.pln.settings.refresh">تنشيط</message>
+	<message key="plugins.generic.pln.settings.refresh_help">إن لم يكن هناك فقرات مدرجة أعلاه لأي سبب كان، أو أنك على علم بأن تلك الفقرات قد تم تعديلها، أنقر على زر تنشيط لمحاولة عرض الفقرات مجدداً.</message>
+	
+	<message key="plugins.generic.pln.required.pln_network">لطفاً، إختر شبكة PLN.</message>
+	<message key="plugins.generic.pln.required.object_type">لطفاً، إختر نوعية مكون الإيداع.</message>
+	<message key="plugins.generic.pln.required.object_threshold">لطفاً، إختر عتبة مكون الإيداع.</message>
+	<message key="plugins.generic.pln.required.terms_of_use_agreement">الموافقة على شروط استعمال الشبكة أمر ضروري لغرض الإيداع في PLN.</message>
+	
+	<message key="plugins.generic.pln.objects.article">المؤلَّف</message>
+	<message key="plugins.generic.pln.objects.issue">العدد</message>
+
+	<message key="plugins.generic.pln.status_page">حالة إضافة PLN لمشروع المعرفة العامة</message>
+	<message key="plugins.generic.pln.status.network_status">حالة الشبكة: {$networkStatusMessage}</message>
+	<message key="plugins.generic.pln.status.deposits">الإيداعات</message>
+	<message key="plugins.generic.pln.status">الحالة</message>
+	<message key="plugins.generic.pln.status.id">رمز التعريف</message>
+	<message key="plugins.generic.pln.status.type">النوع</message>
+	<message key="plugins.generic.pln.status.items">الفقرات</message>
+	<message key="plugins.generic.pln.status.packaged">معبأة</message>
+	<message key="plugins.generic.pln.status.transferred">منقولة</message>
+	<message key="plugins.generic.pln.status.received">مستلمة</message>
+	<message key="plugins.generic.pln.status.syncing">قيد المزامنة</message>
+	<message key="plugins.generic.pln.status.synced">تمت مزامنتها</message>
+	<message key="plugins.generic.pln.status.updated">محدثة</message>
+	<message key="plugins.generic.pln.status.local_failure">فشل محلي</message>
+	<message key="plugins.generic.pln.status.remote_failure">فشل ناء</message>
+	<message key="plugins.generic.pln.status.reset">إعادة ضبط</message>
+	<message key="plugins.generic.pln.status.yes">نعم</message>
+	<message key="plugins.generic.pln.status.no">لا</message>
+
+	<message key="plugins.generic.pln.depositorTask.name">مهمة الإيداع في PLN لمشروع المعرفة العامة</message>
+	<message key="plugins.generic.pln.notifications.processing_for">معالجة الإيداع من أجل</message>
+	<message key="plugins.generic.pln.notifications.pln_not_accepting">إن PLN لمشروع المعرفة العامة لا يتقبل حالياً إيداعات.</message>
+	<message key="plugins.generic.pln.notifications.pln_accepting">إن PLN لمشروع المعرفة العامة يتقبل الإيداعات.</message>
+	<message key="plugins.generic.pln.notifications.check_status">تحقق من حالة إيداعاتك.</message>
+	<message key="plugins.generic.pln.notifications.issn_missing">على مجتلك أن تمتلك رمز ISSN حتى تتمكن من إيداع محتوياتها في PLN لمشروع المعرفة العامة.</message>
+	<message key="plugins.generic.pln.notifications.http_error">حدث خطأ ما عند الاتصال بـ PLN لمشروع المعرفة العامة، لطفاً، اتصل بمدير النظام عندك.</message>
+	<message key="plugins.generic.pln.notifications.terms_updated">لقد تم تعديل شروط الاستعمال لـ PLN لمشروع المعرفة العامة. الموافقة على الشروط الجديدة مطلوب لمواصلة الإيداع فيها.</message>
+	<message key="plugins.generic.pln.notifications.curl_missing">دعم CURL ينبغي تمكينه للمتابعة.</message>
+	<message key="plugins.generic.pln.notifications.zip_missing">دعم ZipArchive ينبغي تمكينه للمتابعة.</message>
+</locale>

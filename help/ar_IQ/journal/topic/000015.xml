@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Journal Manager 
+  *
+  -->
+
+<topic id="journal/topic/000015" locale="ar_IQ" title="رئيس التحرير" toc="journal/toc/000003" key="journal.roles.journalManager">
+	<section>
+		<![CDATA[<p>رئيس تحرير المجلة هو المسؤول عن إدارة نظام التحرير والنشر فيها. هذا الأمر لا يتطلب توفر مهارات تقنية متقدمة، بل يستدعي معرفة إملاء القوالب ورفع الملفات. يقوم رئيس التحرير بعملية {help_topic key="journal.managementPages.setup" text="التهيئة"} للمجلة، ويوزع الأدوار على مستخدميها من محررين ومحرري أقسام ومدققين ومصممين طباعيين ومصححي قراءة ومحكمين. أو بدلاً عن ذلك، أسماء وعناوين الاتصال للمحكمين يمكن استيرادها من قاعدة بيانات خارجية أخرى والاستفادة منها في هذا الموقع عبر وظيفة استيراد تلك المعلومات المتوضعة ضمن {help_topic key="journal.managementPages.importExport" text="استيراد/تصدير البيانات"}. يمكن لرئيس التحرير أيضاً الوصول إلى أدوات إدارة أخرى وإنشاء أقسام جديدة في المجلة، وتعديل المجموعة الإفتراضية من الرسائل المحضرة في النظام، وإدارة {help_topic key="journal.managementPages.readingTools" text="أدوات القراءة"} المتوفرة للمجلة، والنظر في {help_topic key="journal.managementPages.statsAndReports" text="إحصائيات المجلة"} التي يقدمها النظام.</p><p>لاحظ أنه رغم كون دور رئيس التحرير هو ظاهرياً دور فريد لكل مجلة، فإن رؤساء التحرير ينبغي اعتبارهم بمثابة مستخدمين موثوقين على مستوى الموقع عموماً، إذ بإمكانهم تخمين شخصيات المستخدمين الآخرين المسجلين ضمن المجلات الأخرى في الموقع.</p>]]>
+	</section>
+</topic>

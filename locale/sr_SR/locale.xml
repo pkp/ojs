@@ -13,8 +13,7 @@
   * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
   -->
 
-<locale name="sr_SR"
-        full_name="Srpski">
+<locale name="sr_SR" full_name="Srpski">
 	<!-- 
 	 * This file is organized into several major sections, separated
 	 * by comments like this one. These sections are called:
@@ -26,13 +25,23 @@
 	 *  LOG - Contains phrases related to log entries
 	 *  MISC - Entries that don't belong elsewhere.
 	 *  DEFAULT - Default settings for configuration items.
-	 --><!-- 
+	 -->
+	 
+	 <!-- 
 	 *
 	 * COMMON - This section contains the most frequently-used words
 	 *
-	 --><!--  Common Messages  -->	<message key="common.openJournalSystems">Open Journal Systems</message>
+	 -->
+	 
+	 <!--  Common Messages  -->	
+	 <message key="common.openJournalSystems">Open Journal Systems</message>
 
-	<!--  Common Form Messages  -->	<!--  Common Email Messages  -->	<!--  Common Localization Terms  -->	<!--  Common Error Messages  -->	<!--  Navigation  --><message key="navigation.journalHelp">Pomoć</message>
+	<!--  Common Form Messages  -->	
+	<!--  Common Email Messages  -->	
+	<!--  Common Localization Terms  -->	
+	<!--  Common Error Messages  -->	
+	<!--  Navigation  -->
+	<message key="navigation.journalHelp">Pomoć</message>
 	
 	
 	<message key="navigation.archives">Arhiva</message>
@@ -67,14 +76,16 @@
 	 * ENTITIES - This section contains terms pertaining to the system's
 	 *            major entities, e.g. Article, Journal, Section
 	 *
-	 --><!--  Common Section Terms  --><message key="section.section">Sekcija</message>
+	 --><!--  Common Section Terms  -->
+	 <message key="section.section">Sekcija</message>
 	<message key="section.sections">Sekcije časopisa</message>
 	<message key="section.title">Naslov sekcije</message>
 	<message key="section.abbreviation">Skraćenica</message>
 	<message key="section.abbreviation.example">(Npr. Članci=ČLA)</message>
 	<message key="section.default.policy"/>
 
-	<!--  Common Article Terms  --><message key="article.articles">Članci</message>
+	<!--  Common Article Terms  -->
+	<message key="article.articles">Članci</message>
 	<message key="article.submissionId">Identifikator prijave</message>
 	<message key="article.title">Naslov</message>
 	<message key="article.authors">Autor(i)</message>
@@ -101,7 +112,8 @@
 	<message key="article.abstract">Apstrakt</message>
 	<message key="article.details">Detalji</message>
 
-	<!--  Submission Tracking - Common  -->	<message key="submission.submissionEditing">Uređivanje prijave</message>
+	<!--  Submission Tracking - Common  -->	
+	<message key="submission.submissionEditing">Uređivanje prijave</message>
 	<message key="submission.changeSection">Promeni u</message>
 
 	<message key="submission.editorDecision">Odluka urednika</message>
@@ -138,21 +150,27 @@
 	<message key="submissions.editorRuling">Odluka urednika</message>
 	<message key="submission.eventLog">Zapis događaja</message>
 
-	<!--  Submission list search engine  -->	<message key="submissions.copyeditComplete">Lektura dovršena</message>
+	<!--  Submission list search engine  -->	
+	<message key="submissions.copyeditComplete">Lektura dovršena</message>
 	<message key="submissions.layoutComplete">Prelom dovršen</message>
 	<message key="submissions.proofreadingComplete">Korigovano</message>
 
-	<!--  Submission Notes  -->	<!--  Common Journal Terms  --><message key="journal.currentIssue">Trenutni broj</message>
+	<!--  Submission Notes  -->	
+	
+	<!--  Common Journal Terms  -->
+	<message key="journal.currentIssue">Trenutni broj</message>
 	<message key="journal.journals">Časopisi</message>
 	<message key="journal.path">Putanja</message>
 	<message key="journal.journal">Časopis</message>
 
-	<!--  User  -->	<message key="user.showAllJournals">Prikaži moje časopise</message>
+	<!--  User  -->	
+	<message key="user.showAllJournals">Prikaži moje časopise</message>
 
 	<message key="user.registerForOtherJournals">Registracija za ostale časopise</message>
 	<message key="user.myJournals">Moji časopisi</message>
 	
-	<!--  Roles  -->	<message key="user.role.manager">Glavni urednik</message>
+	<!--  Roles  -->	
+	<message key="user.role.manager">Glavni urednik</message>
 	<message key="user.role.editor">Urednik</message>
 	<message key="user.role.sectionEditor">Urednik sekcije</message>
 	<message key="user.role.layoutEditor">Grafički urednik</message>
@@ -169,7 +187,8 @@
 	<message key="user.role.authors">Autori</message>
 	<message key="user.role.subscriptionManagers">Menadžeri pretplata</message>
 	
-	<!--  Common Issue Terms  --><message key="issue.issue">Broj časopisa</message>
+	<!--  Common Issue Terms  -->
+	<message key="issue.issue">Broj časopisa</message>
 	<message key="issue.issues">Brojevi časopisa</message>
 	<message key="issue.title">Naslov</message>
 	<message key="issue.volume">Godina</message>
@@ -185,7 +204,8 @@
 	 *
 	 * LOG - This section contains entries related to log entries.
 	 *
-	 -->	<message key="submission.event.general.defaultEvent">Dešavanja prilikom predaje</message>
+	 -->	
+	 <message key="submission.event.general.defaultEvent">Dešavanja prilikom predaje</message>
 	<message key="submission.event.general.articleSubmitted">Članak predat</message>
 	<message key="submission.event.general.issueScheduled">Rad je stavljen u red čekanja u rasporedu časopisa</message>
 	<message key="submission.event.general.issueAssigned">Rad je dodeljen broju časopisa</message>
@@ -222,15 +242,20 @@
 	<message key="submission.event.layout.layoutInitiated">Pokrenuta je dodela uređivanja preloma</message>
 	<message key="submission.event.layout.layoutGalleyCreated">Ažurirani prelomi</message>
 	<message key="submission.event.layout.layoutComplete">Završena je dodela uređivanja preloma</message>
+	
 	<!-- 
 	 *
 	 * INTERFACE - Contains phrases organized by the section of the
 	 *             user interface they appear in.
 	 *
-	 --><!--  Reader article view  -->	<!--  Reader Comments  --><message key="comments.commentsOnArticle">Komentari na ovaj članak</message>
+	 -->
+	 <!--  Reader article view  -->	
+	 <!--  Reader Comments  -->
+	 <message key="comments.commentsOnArticle">Komentari na ovaj članak</message>
 	<message key="comments.authenticated"><![CDATA[od <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>{$userName}]]></message>
 
-	<!--  Site Administration  -->	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Kako biste učinili sadržaj svih časopisa objavljenih u okviru ovog sajta indeksiranim unutar globalno distribuisanog sistema istraživačkih baza podataka, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrujte</a> URL ove stranice na <a href="http://pkp.sfu.ca/harvester/" target="_blank">sakupljaču</a> metapodataka Public Knowledge Project-a. Ovaj alat sakuplja metapodatke iz svakog indeksiranog priloga svakog časopisa na ovom sajtu, omogućavajući precizno i kolektivno pretraživanje istraživačkih stranica koje sudeluju u <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
+	<!--  Site Administration  -->	
+	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Kako biste učinili sadržaj svih časopisa objavljenih u okviru ovog sajta indeksiranim unutar globalno distribuisanog sistema istraživačkih baza podataka, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrujte</a> URL ove stranice na <a href="http://pkp.sfu.ca/harvester/" target="_blank">sakupljaču</a> metapodataka Public Knowledge Project-a. Ovaj alat sakuplja metapodatke iz svakog indeksiranog priloga svakog časopisa na ovom sajtu, omogućavajući precizno i kolektivno pretraživanje istraživačkih stranica koje sudeluju u <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
 Za registraciju na PKP sakupljaču <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">kliknite ovde</a> i upišite: <span class="highlight">{$siteUrl}</span> unutar <b>Site URL</b>-a i <span class="highlight">{$oaiUrl}</span> unutar <b>Base URL for OAI Archive</b>.
 <br /><br />
@@ -238,27 +263,38 @@ Aktivirani OAI protokol može biti isključen na nivou čitavog sajta promenom s
 
 	
 	
-	<!--  Languages  -->	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Određivanje primarnog izvora autentifikacije izvan OJS-a rezultuje sledećim:</p>
+	<!--  Languages  -->	
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Određivanje primarnog izvora autentifikacije izvan OJS-a rezultuje sledećim:</p>
 <ul>
  <li>Ako korisnik pokuša registrovati novi korisnički nalog na ovom sajtu sa korisničkim imenom koje postoji na izvoru autentifikacije (ali ne i u OJS bazi podataka), registracija je dopuštena ukoliko je priložena lozinka ispravna za taj korisnički nalog.</li>
 </ul>]]></message>
 	
-	<!--  System Information  -->	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NAPOMENA!</h4>
+	<!--  System Information  -->	
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NAPOMENA!</h4>
 <p>Sistem ne može automatski izvršiti prepisivanje konfiguracionog fajla. Da biste izvršili izmene fajl  <tt>config.inc.php</tt> mora imati perm. mod 777.</p>]]></message>
 
 	
-	<!--  Subscription Management  --><message key="subscriptionManager.subscriptionManagement">Upravljanje pretplatama</message>
+	<!--  Subscription Management  -->
+	<message key="subscriptionManager.subscriptionManagement">Upravljanje pretplatama</message>
 	
-	<!--  Journal Management  -->	<!--  Statistics & Reports  -->	<!--  Plugin Management  -->	<!--  General plugin information  -->	<message key="plugins.categories.generic.description">Generički dodaci služe proširivanju funkcionalnosti OJS-a na mnoge načine koji nisu podržani dodacima u drugim katerogijama.</message>
+	<!--  Journal Management  -->	
+	<!--  Statistics & Reports  -->	
+	<!--  Plugin Management  -->	
+	<!--  General plugin information  -->	
+	<message key="plugins.categories.generic.description">Generički dodaci služe proširivanju funkcionalnosti OJS-a na mnoge načine koji nisu podržani dodacima u drugim katerogijama.</message>
 	<message key="plugins.categories.auth.description">Autorizacijski dodaci omogućuju Open Journal Sistemu da vrši proveru verodostojnosti korisničkih pristupa putem spoljašnjih sistema  kao što je LDAP.</message>
 
 
 
-	<!--  Files Browser  -->	<!--  Journal Setup  -->	<!--  Setup Step 1  -->	<!--  Setup Step 2  -->	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems podržava <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (mnogo kopija čuva stvari sigurnima) sistem da bi osigurao sigurnu i trajnu arhivu za časopise. LOCKSS je program otvorenog koda razvijen pri univerzitetskoj biblioteci u Stanfordu koji omogućuje bibliotekama  da čuvaju odabrane elektronske časopise tako što periodički proveravaju sadržaj web sajtova časopisa registrovanih u sistemu, te arhiviraju sve novoobjavljene sadržaje. Sadržaj svakog arhiva se konstantno uspoređuje sa drugim bibliotekama koje su uključene u sistem, pa ako je bilo koji sadržaj neispravan ili izgubljen, sadržaj se obnavlja podacima iz drugih arhiva u mreži ili iz izvornog časopisa.
+	<!--  Files Browser  -->	
+	<!--  Journal Setup  -->	
+	<!--  Setup Step 1  -->	<!--  Setup Step 2  -->	
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems podržava <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (mnogo kopija čuva stvari sigurnima) sistem da bi osigurao sigurnu i trajnu arhivu za časopise. LOCKSS je program otvorenog koda razvijen pri univerzitetskoj biblioteci u Stanfordu koji omogućuje bibliotekama  da čuvaju odabrane elektronske časopise tako što periodički proveravaju sadržaj web sajtova časopisa registrovanih u sistemu, te arhiviraju sve novoobjavljene sadržaje. Sadržaj svakog arhiva se konstantno uspoređuje sa drugim bibliotekama koje su uključene u sistem, pa ako je bilo koji sadržaj neispravan ili izgubljen, sadržaj se obnavlja podacima iz drugih arhiva u mreži ili iz izvornog časopisa.
 <br /><br />
 Postavljanje LOCKSS podrške za Open Journal Systems nije potrebno dok izdavanje elektronske verzije časopisa nije zaista pokrenuto, odnosno prvi broj objavljen ili u izdavanju. Da bi se to učinilo, potrebno je slediti ova dva koraka:]]></message>
 	
-	<!--  Setup Step 3  -->	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Časopis će koristiti predmetnu klasifikaciju sistema dostupnu na mreži.<br />
+	<!--  Setup Step 3  -->	
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Časopis će koristiti predmetnu klasifikaciju sistema dostupnu na mreži.<br />
 Naslov klasifikacionog sistema]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Kako biste učinili sadržaj ovog časopisa indeksiranim unutar globalno distribuisanog sistema istraživačkih baza podataka, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrujte</a> URL vašeg časopisa na <a href="http://pkp.sfu.ca/harvester/" target="_blank">sakupljaču</a> metapodataka Public Knowledge Project-a. Ovaj alat sakuplja metapodatke iz svakog indeksiranog priloga u ovom časopisu, omogućavajući precizno i kolektivno pretraživanje istraživačkih sajtova koji sudeluju u <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
@@ -266,10 +302,17 @@ Ako je vaš administrator već registrovao ovaj sajt kod PKP sakupljača, vaš �
 <br /><br />
 Za registraciju na PKP sakupljaču <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">kliknite ovde</a> i unesite: <span class="highlight">{$siteUrl}</span> unutar <b>Site URL</b> i <span class="highlight">{$oaiUrl}</span> unutar <b>Base URL for OAI Archive</b>.]]></message>
 
-	<!--  Setup Step 4  -->	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Koraci: Red čekanja prijave > Recenzija prijave> Uređivanje prijave > Red čekanja pri određivanju rokova > Sadržaj.<br /><br />
+	<!--  Setup Step 4  -->	
+	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Koraci: Red čekanja prijave > Recenzija prijave> Uređivanje prijave > Red čekanja pri određivanju rokova > Sadržaj.<br /><br />
 Odaberite model za korištenje ovih aspekata lektorskoga postupka. (Da biste odredili glavnog urednika i urednika sekcija, idite na Urednici u Uređivački postupci.)]]></message>
 
-	<!--  Setup Step 5  -->	<!--  Languages  -->	<!--  Section Management  -->	<!--  Import/Export  -->	<!--  Groups / Editorial Team  -->	<!--  People Management  -->	<message key="manager.people.confirmDisable">Da li želite da onemogućite ovog korisnika? Ovo će sprečiti korisnika da se prijavi u sistem.
+	<!--  Setup Step 5  -->	
+	<!--  Languages  -->	
+	<!--  Section Management  -->	
+	<!--  Import/Export  -->	
+	<!--  Groups / Editorial Team  -->	
+	<!--  People Management  -->	
+	<message key="manager.people.confirmDisable">Da li želite da onemogućite ovog korisnika? Ovo će sprečiti korisnika da se prijavi u sistem.
 
 Opciono možete proslediti korisniku razlog zašto ste mu onemogućili nalog.</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[Izvinite, nemate administrativnih prava nad ovim korisnikom. To može biti zbog:

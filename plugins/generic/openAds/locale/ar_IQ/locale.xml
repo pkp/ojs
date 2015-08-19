@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/openAds/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2009 Siavash Miri and Alec Smecher
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.generic.openads.description">إن الإضافة OpenAds تتيح وضع إعلانات متحركة من ملقم إعلانات OpenAds في نظام المجلات المفتوحة.</message>
+	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[إن الإضافة OpenAds تتيح وضع إعلانات متحركة من ملقم إعلانات OpenAds في نظام المجلات المفتوحة. <strong>لطفاً، إقرأ ملف README المتوضع في plugins/generic/openAds للتعرف على كيفية تمكين هذه الإضافة.</strong>]]></message>
+	<message key="plugins.generic.openads">الإضافة OpenAds</message>
+	<message key="plugins.generic.openads.settings.description">استعمل هذا النموذج لاختيار نطاق إعلانات OpenAds الذي في النية عرضه في نظام المجلات المفتوحة من أي موقع محتمل.</message>
+	<message key="plugins.generic.openads.manager.settings">الإعدادات</message>
+
+	<message key="plugins.generic.openads.error.configFileNotFound">تعذر الوصول إلى ملف الإعدادات {$filename}.</message>
+	<message key="plugins.generic.openads.error.missingParameter">على الأقل أحد عوامل الإعداد المطلوبة من OpenAds تعذرت قراءته من الملف التعريفي. العوامل المطلوبة هي: dbhost، dbuser، dbpassword، dbname، url_prefix، و table_prefix.</message>
+	<message key="plugins.generic.openads.error.dbConnectionError">تعذر الاتصال بقاعدة بيانات OpenAds.</message>
+
+	<message key="plugins.generic.openads.headerAd">إعلانات رأس الصفحة</message>
+	<message key="plugins.generic.openads.contentAd">إعلانات محتوى الصفحة</message>
+	<message key="plugins.generic.openads.sidebarAd">إعلانات الشريط الجانبي</message>
+
+	<message key="plugins.generic.openads.orientation.left">يساراً</message>
+	<message key="plugins.generic.openads.orientation.centre">وسطاً</message>
+	<message key="plugins.generic.openads.orientation.right">يميناً</message>
+</locale>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Section Editor's Role - Review
+  *
+  -->
+
+<toc id="editorial/toc/000006" locale="ar_IQ" title="التحكيم" parent_topic="editorial/topic/000006">
+	<topic id="editorial/topic/000024" title="نسخة التحكيم" />
+	<topic id="editorial/topic/000025" title="التحكيم المناظر" />
+	<topic id="editorial/topic/000026" title="قرار المحرر" />
+
+	<breadcrumb url="editorial/topic/000000" title="عملية التحرير" />
+	<breadcrumb url="editorial/topic/000004" title="دور محرر القسم" />
+	<breadcrumb url="editorial/topic/000006" title="التحكيم" />
+</toc>

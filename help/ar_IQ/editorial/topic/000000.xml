@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editorial Process Index 
+  *
+  -->
+
+<topic id="editorial/topic/000000" locale="ar_IQ" title="عملية التحرير" toc="index/toc/000000" subtoc="editorial/toc/000000" key="editorial.index">
+	<section>
+		<![CDATA[<p>إن عملية التحرير لطلب نشر مقدم إلى المجلة تتضمن التحكيم، عادة، التحكيم السري المناظر، متبوعاً بقرار محرر القسم لقبول النشر أو رفضه. إن تم قبوله خلال مرحلة التحكيم من عملية التحرير، يذهب طلب النشر إلى مرحلة التحرير المشملة على التدقيق، التصميم الطباعي، والقراءة التصحيحية. بعدها تتم جدولة الطلب لغرض النشر في إصدار قادم للمجلة. إعتماداً على كيفية تنظيم الأمور في المجلة، قد يقوم بعملية التحرير محرر واحد أو فريق من المحررين ومحرري الأقسام والمصممين الطباعيين... إلخ.</p>]]>	
+	</section>
+</topic>

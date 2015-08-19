@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000032.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Index - Submissions
+  *
+  -->
+
+<topic id="editorial/topic/000032" locale="ar_IQ" title="طلبات النشر" toc="editorial/toc/000009" key="editorial.authorsRole.submissions">
+	<section>
+		<![CDATA[<p>عند الدخول إلى موقع المجلة واختيار دور المؤلف من صفحة المستخدم الأساسية، يأخذ الموقع المؤلف إلى صفحة طلبات النشر الفعالة. هذه الصفحة تعرض الطلبات قيد التحرير حالياً. يمكن للمؤلف أيضاً الوصول إلى طلبات النشر السابقة عبر رابط الأرشيف، كما بإمكانه تقديم طلب نشر جديد عبر رابط (بدء طلب نشر جديد).</p><p>إن كانت المجلة تتقبل دفع الرسوم عبر الإنترنت، يمكن للمؤلف دفع المستحقات المالية الخاصة بالطلب عبر تلك الصفحة. فيما تطلب عمل المجلة ذلك، يمكن لروابط: دفع رسوم التقديم، ورسوم النشر السريع، ورسوم شراء الإصدارات أن تظهر على تلك الصفحة، ولكل مؤلَّف على حدة، تحت (الحالة). النقر على تلك الروابط سيأخذ المؤلف إما إلى صفحة دفع الرسوم يدوياً، أو لصفحة الدفع عبر PayPal، حيث يمكن إكمال إجراءات الدفع المطلوبة عبر الإنترنت. مزيد من المعلومات عن عملية الدفع المالي يمكن معرفتها  {help_topic key="journal.managementPages.payments" text="هنا"}.</p><p>معلومات إضافية عن عملية تقديم طلب النشر يمكن الحصول عليها {help_topic key="submission.index" text="هنا"}.</p>]]>	
+	</section>
+</topic>

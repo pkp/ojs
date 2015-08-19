@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000016.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Editor 
+  *
+  -->
+
+<topic id="journal/topic/000016" locale="ar_IQ" title="المحرر" toc="journal/toc/000003" key="journal.roles.editor">
+	<section>
+		<![CDATA[<p>يشرف المحرر على مجمل عملية التحرير والنشر في المجلة. وهو يعمل مع رئيس تحرير المجلة عادة لوضع سياساتها وسياقات عملها، والتي يتم إدخالها في مرحلة {help_topic key="journal.managementPages.setup" text="التهيئة"}. خلال عملية التحرير، يعين المحرر طلبات النشر لمحرر الأقسام لمتابعة التحكيم وإجراءات التحرير التي تليها. يبقي المحرر قيد ناظريه متابعة مسيرة طلب النشر ويساعد في حل أي مشكلات قد تطرأ عليها. بمجرد إكمال التحكيم، عادة ما يعاين المحرر طلب النشر خلال عملية {help_topic key="editorial.sectionEditorsRole.editing" text="التحرير"} (المتضمنة للتدقيق والتصميم الطباعي والقراءة التصحيحية)، رغم أن تلك المهمة تكون في بعض المجلات على عاتق محرر القسم المعني بطلب النشر بعد مرحلة{help_topic key="editorial.sectionEditorsRole.review" text="التحكيم"}. يقوم المحرر أيضاً بجدولة طلبات النشر عبر تنظيمها في جدول محتويات الإصدارات القادمة من المجلة كجزء من {help_topic key="publishing.index" text="عملية النشر"}. يمكن للمحرر استعادة الطلبات المحفوظة في الأرشيف إلى طابور الطلبات التي قيد التحكيم أو قيد التحرير كما هو مبين في {help_topic key="editorial.editorsRole.submissions.archives" text="الأرشيف"}.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000009.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Author's Role
+  *
+  -->
+
+<toc id="editorial/toc/000009" locale="ar_IQ" title="دور المؤلف" parent_topic="editorial/topic/000009">
+	<topic id="editorial/topic/000032" title="طلبات النشر" />
+	<topic id="editorial/topic/000010" title="التحكيم" />
+	<topic id="editorial/topic/000011" title="التحرير" />
+
+	<breadcrumb url="editorial/topic/000000" title="عملية التحرير" />
+	<breadcrumb url="editorial/topic/000009" title="دور المؤلف" />
+</toc>

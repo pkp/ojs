@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
+<!--
+  * @file plugins/paymethod/paypal/locale/ar_IQ/emailTemplates.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  -->
+
+<email_texts locale="ar_IQ">
+	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
+		<subject>فعالية PayPal العالمية</subject>
+		<body>نظام المجلات المفتوحة قد تعرض إلى نشاط غير عادي يتعلق بآلية دعم المدفوعات عبر PayPal يخص المجلة {$journalName}. هذا النشاط قد يستدعي المزيد من التحقيق بشأنه ولو يدوياً.
+                       
+هذه الرسالة أنشأتها إضافة PayPal لنظام المجلات المفتوحة.
+
+معلومات الطرح الكامل للطلب:
+{$postInfo}
+
+معلومات إضافية (لو توفرت):
+{$additionalInfo}
+
+متغيرات الملقم:
+{$serverVars}
+</body>
+		<description>قالب الرسالة الالكترونية هذا يستعمل لإشعار عنوان الاتصال الرئيسي في المجلة بحدوث نشاط مريب من قبل إضافة PayPal مما قد يستدعي الالتفات إليه أو التحقيق بشأنه.</description>
+	</email_text>
+</email_texts>

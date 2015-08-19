@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/paymethod/manual/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.paymethod.manual.displayName">دفع الرسوم يدوياً</message>
+	<message key="plugins.paymethod.manual.description">سيقوم مدير التحرير أو رئيس التحرير يدوياً بتسجيل استلام مدفوعات المستخدمين (خارج هذا النظام).</message>
+	<message key="plugins.paymethod.manual">دفع الرسوم يدوياً</message>
+	<message key="plugins.paymethod.manual.settings">إعدادات الدفع اليدوي</message>
+	<message key="plugins.paymethod.manual.settings.instructions">تعليمات</message>
+	<message key="plugins.paymethod.manual.settings.manualInstructions">تعليمات دفع الرسوم يدوياً للمستخدمين الذين يختارون الدفع يدوياً</message>
+
+	<message key="plugins.paymethod.manual.sendNotificationOfPayment">أرسل إشعاراً بالدفع</message>
+	<message key="plugins.paymethod.manual.paymentNotification">إشعار الدفع</message>
+	<message key="plugins.paymethod.manual.notificationSent">تم إرسال إشعار الدفع</message>
+
+	<message key="plugins.paymethod.manual.purchase.title">العنوان</message>
+	<message key="plugins.paymethod.manual.purchase.fee">الرسم</message>
+</locale>

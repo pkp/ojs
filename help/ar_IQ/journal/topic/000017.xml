@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000017.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Section Editor 
+  *
+  -->
+
+<topic id="journal/topic/000017" locale="ar_IQ" title="محرر القسم" toc="journal/toc/000003" key="journal.roles.sectionEditor">
+	<section>
+		<![CDATA[<p>يدير محرر القسم عملية التحكيم والتحرير لطلبات النشر المكلف بها. في بعض الأحيان، يكون محرر القسم المتكفل بالإشراف على طلب النشر خلال مرحلة {help_topic key="editorial.sectionEditorsRole.review" text="التحكيم"} متكفلاً أيضاً بمتابعته بعد قبوله في مرحلة {help_topic key="editorial.sectionEditorsRole.editing" text="التحرير"} (أي خلال التدقيق والتصميم الطباعي والقراءة التصحيحية). عادة، ما يقتصر عمل محرري القسم على مرحلة التحكيم، بينما يقوم المحرر الذي يلعب دور محرر القسم، بالإشراف على عملية التحرير حتى النشر. المجلة تعمل وفق سياسة معينة لتوزيع المهام بين أفرادها.</p>]]>	
+	</section>
+</topic>

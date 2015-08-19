@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Main table of contents for help. 
+  *
+  -->
+
+<toc id="index/toc/000000" locale="ar_IQ" title="ملف المساعدة لنظام المجلات المفتوحة" parent_topic="index/topic/000000">
+	<topic id="intro/topic/000000" title="مقدمة لنظام المجلات المفتوحة" />
+	<topic id="site/topic/000000" title="إدارة الموقع" />
+	<topic id="journal/topic/000000" title="إدارة المجلة" />
+	<topic id="submission/topic/000000" title="عملية التقديم" />
+	<topic id="editorial/topic/000000" title="عملية التحرير" />
+	<topic id="publishing/topic/000000" title="عملية النشر" />
+	<topic id="user/topic/000000" title="موقع المجلة" />
+</toc>

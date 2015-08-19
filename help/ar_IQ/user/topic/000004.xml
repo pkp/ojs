@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Current and Archives
+  *
+  -->
+
+<topic id="user/topic/000004" locale="ar_IQ" title="العدد الحالي والأرشيف" toc="user/toc/000000" key="user.currentAndArchives">
+	<section>
+		<![CDATA[<p>إصدارات المجلة متاحة بشكل "العدد الحالي" مع مجموعة الأعداد السابقة المحفوظة في الأرشيف. يمكن لرئيس تحرير المجلة أن يحفظ فيها إصداراتها السابقة لبدء استعمال هذا النظام بحيث تصير جزءً من الأرشيف وإتاحتها للقراء في موقع المجلة.</p>]]>	
+	</section>
+</topic>

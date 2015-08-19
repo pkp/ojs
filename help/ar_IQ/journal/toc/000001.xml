@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Management Pages. 
+  *
+  -->
+
+<toc id="journal/toc/000001" locale="ar_IQ" title="صفحات الإدارة" parent_topic="journal/topic/000001">
+	<topic id="journal/topic/000034" title="الإعلانات" />
+	<topic id="journal/topic/000010" title="مستعرض الملفات" />
+	<topic id="journal/topic/000005" title="أقسام المجلة" />
+	<topic id="journal/topic/000036" title="نماذج التحكيم" />
+	<topic id="journal/topic/000007" title="اللغات" />
+	<topic id="journal/topic/000029" title="البيانات الإدارية" />
+	<topic id="journal/topic/000035" title="الدفع المالي" />
+	<topic id="journal/topic/000006" title="رسائل البريد الالكتروني المحضرة" />
+	<topic id="journal/topic/000009" title="أدوات القراءة" />
+	<topic id="journal/topic/000004" title="التهيئة" />
+	<topic id="journal/topic/000008" title="الإحصائيات والتقارير" />
+	<topic id="journal/topic/000025" title="الاشتراكات" />
+	<topic id="journal/topic/000030" title="إضافات النظام" />
+	<topic id="journal/topic/000031" title="استيراد/تصدير البيانات" />
+
+	<breadcrumb url="journal/topic/000000" title="إدارة المجلة" />
+	<breadcrumb url="journal/topic/000001" title="صفحات الإدارة" />
+</toc>

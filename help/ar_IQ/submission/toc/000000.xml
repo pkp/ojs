@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Author Submission Process. 
+  *
+  -->
+
+<toc id="submission/toc/000000" locale="ar_IQ" title="عملية التقديم" parent_topic="submission/topic/000000">
+	<topic id="submission/topic/000001" title="إرشادات المؤلف" />
+	<topic id="submission/topic/000002" title="متطلبات التقديم" />
+	<topic id="submission/topic/000003" title="الفهرسة والبيانات الوصفية" />
+	<topic id="submission/topic/000004" title="الملفات التكميلية" />
+	<breadcrumb url="submission/topic/000000" title="عملية التقديم" />
+</toc>

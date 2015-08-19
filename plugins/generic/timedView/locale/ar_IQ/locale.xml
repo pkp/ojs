@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/timedView/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.generic.timedView.displayName">تقرير مديات المعاينة</message>
+	<message key="plugins.generic.timedView.description">هذا البرنامج المساعد ينشئ تقريراً بتنسيق CSV يعطي فكرة للقراء ولكل مقالة عن فترات زيارات المستخدمين ومواعيدها.</message>
+
+	<message key="plugins.generic.timedView.form.dateStartRequired">تأريخ بدء التقرير مطلوب حتماً.</message>
+	<message key="plugins.generic.timedView.form.dateStartValid">لطفاً، حدد تأريخاً صحيحاً لبدء التقرير.</message>
+	<message key="plugins.generic.timedView.form.dateEndRequired">تأريخ إنتهاء التقرير مطلوب حتماً.</message>
+	<message key="plugins.generic.timedView.form.dateEndValid">لطفاً، حدد تأريخاً صحيحاً لانتهاء التقرير.</message>
+	<message key="plugins.generic.timedView.form.generate">إنشاء التقرير</message>
+	<message key="plugins.generic.timedView.form.clearLogs">إزالة سجلات الوقوعات</message>
+	<message key="plugins.generic.timedView.form.clearLogs.description">حدد تأريخاً ينظم عملية إزالة مدخلات سجل الوقوعات. كل المدخلات المؤرخة قبل هذا التأريخ ستتم إزالتها من السجل. لاحظ أن ذلك يؤثر فقط على تقرير مديات الزيارات إلى الموقع وليس على عدد تلك الزيارات (أي إجمالي عدد المعاينات المسجلة من قبل الإضافة).</message>
+	<message key="plugins.generic.timedView.form.clearLogs.confirm">هل أنت متأكد من رغبتك في حذف هذه السجلات؟ لا يمكن التراجع عن هذه العملية.</message>
+
+	<message key="plugins.generic.timedView.report.articleId">رمز المقالة</message>
+	<message key="plugins.generic.timedView.report.articleTitle">عنوان المقالة</message>
+	<message key="plugins.generic.timedView.report.datePublished">تأريخ نشرها</message>
+	<message key="plugins.generic.timedView.report.abstractViews">معاينات الملخص</message>
+	<message key="plugins.generic.timedView.report.galleyViews">إجمالي معاينات اللوح الطباعي</message>
+</locale>

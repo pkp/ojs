@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process. 
+  *
+  -->
+
+<toc id="editorial/toc/000000" locale="ar_IQ" title="عملية التحرير" parent_topic="editorial/topic/000000">
+	<topic id="editorial/topic/000001" title="دور المحرر" />
+	<topic id="editorial/topic/000004" title="دور محرر القسم" />
+	<topic id="editorial/topic/000008" title="دور المحكم" />
+	<topic id="editorial/topic/000009" title="دور المؤلف" />
+	<topic id="editorial/topic/000012" title="دور المدقق" />
+	<topic id="editorial/topic/000013" title="دور المصمم الطباعي" />
+	<topic id="editorial/topic/000014" title="دور مصحح القراءة" />
+
+	<breadcrumb url="editorial/topic/000000" title="عملية التحرير" />
+</toc>

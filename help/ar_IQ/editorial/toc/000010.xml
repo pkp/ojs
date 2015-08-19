@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000010.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Author's Role - Review
+  *
+  -->
+
+<toc id="editorial/toc/000010" locale="ar_IQ" title="التحكيم" parent_topic="editorial/topic/000010">
+	<topic id="editorial/topic/000033" title="التحكيم المناظر" />
+	<topic id="editorial/topic/000034" title="قرار المحرر" />
+
+	<breadcrumb url="editorial/topic/000000" title="عملية التحرير" />
+	<breadcrumb url="editorial/topic/000009" title="دور المؤلف" />
+	<breadcrumb url="editorial/topic/000010" title="التحكيم" />
+</toc>

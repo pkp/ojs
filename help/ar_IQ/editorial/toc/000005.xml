@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Section Editor's Role - Submissions
+  *
+  -->
+
+<toc id="editorial/toc/000005" locale="ar_IQ" title="طلبات النشر" parent_topic="editorial/topic/000005">
+	<topic id="editorial/topic/000021" title="قيد التحكيم" />
+	<topic id="editorial/topic/000022" title="قيد التحرير" />
+	<topic id="editorial/topic/000023" title="المحفوظات" />
+
+	<breadcrumb url="editorial/topic/000000" title="عملية التحرير" />
+	<breadcrumb url="editorial/topic/000004" title="دور محرر القسم" />
+	<breadcrumb url="editorial/topic/000005" title="طلبات النشر" />
+</toc>

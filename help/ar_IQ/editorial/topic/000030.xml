@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index - Submissions 
+  *
+  -->
+
+<topic id="editorial/topic/000030" locale="ar_IQ" title="طلبات النشر" toc="editorial/toc/000008" key="editorial.reviewersRole.submissions">
+	<section>
+		<![CDATA[<p>عند الدخول إلى موقع المجلة، يكون المحكم في صفحة المستخدم الأساسية. عند النقر على دور المحكم (حيث أنه قد يكون له أكثر من دور واحد في المجلة)، يذهب المحكم إلى صفحة طلب النشر. تعرض تلك الصفحة طلبات النشر التي سبق وأن دُعي المحكم لتقييمها أو ما كانت قيد التحكيم حالياً. هذه القائمة تذكر أيضاً رقم جولة التحكيم لكل مؤلَّف، لأنه قد يتعرض بعضها لأكثر من جولة تحكيم حسب قرار محرر القسم المعني بها. هذه الصفحة تتيح أيضاً معاينة التحكيمات السابقة المكتملة ضمن المجلة.</p>]]>	
+	</section>
+</topic>

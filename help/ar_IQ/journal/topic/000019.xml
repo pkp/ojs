@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000019.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Copyeditor 
+  *
+  -->
+
+<topic id="journal/topic/000019" locale="ar_IQ" title="المدقق" toc="journal/toc/000003" key="journal.roles.copyeditor">
+	<section>
+		<![CDATA[<p>المدقق يتحرى في المؤلَّف الأخطاء اللغوية والنحوية وتحسين انسيابية اللغة، وهو يعمل مع المؤلف للتأكد من أن كل شيء في محله، وضمان التقيد بمعايير المجلة وأنماطها، ويقوم بصناعة نسخة نظيفة من المؤلَّف للمصمم الطباعي ليقوم الأخير بتحويلها إلى الألواح الطباعية التي ستكون بصيغ النشر المعتمدة في المجلة. بعض المجلات تعين المحرر أو محرر القسم للقيام بمهمة التدقيق.</p><p>لمزيد من المعلومات، أنقر {help_topic key="editorial.copyeditorsRole" text="هنا"}.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000023.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Reader 
+  *
+  -->
+
+<topic id="journal/topic/000023" locale="ar_IQ" title="القارئ" toc="journal/toc/000003" key="journal.roles.reader">
+	<section>
+		<![CDATA[<p>يشمل القراء كل من: المشتركين إن كان الوصول إلى محتوى المجلة مبني على أساس الاشتراك، أو المستخدمين المسجلين في موقع المجلة التي تتيح الوصول المفتوح (سواءً كان الوصول المفتوح المباشر أو المؤجل الذي يحصل بعد مدة معينة من الإطلاق الأول للمحتوى المعين). القراءالمسجلون يستلمون رسالة إشعار عند صدور أي عدد تتضمن جدول محتوياته. عند تسجيل أنفسهم في الموقع، يمكن للمؤلفين تسجيل أنفسهم كقراء أيضاً.</p><p>لمزيد من المعلومات عن التسجيل في المجلة، أنظر {help_topic key="user.registerAndProfile" text="هنا"}.</p> ]]>	
+	</section>
+</topic>

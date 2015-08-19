@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Copyeditor's Role Index 
+  *
+  -->
+
+<topic id="editorial/topic/000012" locale="ar_IQ" title="دور المدقق" toc="editorial/toc/000000" subtoc="editorial/toc/000012" key="editorial.copyeditorsRole">
+	<section>
+		<![CDATA[<p>يستلم المدقق رسالة بالبريد الالكتروني من محرر القسم ملتمساً منه الشروع بتدقيق طلب النشر، وعندها سيظهر له في طابور التدقيق. المدقق الذي يتعذر عليه القيام بتلك المهمة، ببساطة يُعلم محرر القسم بذلك عبر البريد الالكتروني.</p>]]>	
+	</section>
+</topic>

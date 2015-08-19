@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages Index 
+  *
+  -->
+
+<topic id="journal/topic/000001" locale="ar_IQ" title="صفحات الإدارة" toc="journal/toc/000000" subtoc="journal/toc/000001" key="journal.managementPages.index">
+	<section>
+		<![CDATA[<p>يقوم رئيس تحرير المجلة بتعريف مكونات النظام وتهيئتها ليلائم العمل عبر مجموعة من صفحات الإدارة. تبدأ العملية بالخطوات الخمس لمرحلة التهيئة، غير أنها تشتمل أيضاً على إعداد الأقسام في المجلة، لهجة الرسائل الآلية للنظام وانتخاب كلماتها، اللغات المتاحة في المجلة، الإحصائيات التي تنشرها، والأدوات التي تتيحها للقراء.</p>]]>	
+	</section>
+</topic>

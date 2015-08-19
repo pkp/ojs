@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/native/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.importexport.native.displayName">إضافة XML للمقالات والأعداد</message>
+	<message key="plugins.importexport.native.description">استيراد وتصدير المقالات والأعداد</message>
+
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[الاستعمال: {$scriptName} {$pluginName} [command] ...
+Commands:
+	import [xmlFileName] [journal_path] [user_name] ...
+	export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+	export [xmlFileName] [journal_path] article [articleId]
+	export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
+	export [xmlFileName] [journal_path] issue [issueId]
+
+عوامل إضافية مطلوبة لاستيراد البيانات كما يلي
+اعتماداً على عقدة الجذر لملف XML.
+
+إن كانت عقدة الجذر هي <article> أو <articles>، المزيد من العوامل مطلوبة أيضاً.
+الصيغ الآتية مقبولة
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_id [sectionId]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_name [name]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
+	issue_id [issueId] section_abbrev [abbrev]
+]]></message>
+	<message key="plugins.importexport.native.export">تصدير البيانات</message>
+	<message key="plugins.importexport.native.export.issues">تصدير الأعداد</message>
+	<message key="plugins.importexport.native.export.sections">تصدير الأقسام</message>
+	<message key="plugins.importexport.native.export.articles">تصدير المقالات</message>
+
+	<message key="plugins.importexport.native.selectIssue">إختر العدد</message>
+	<message key="plugins.importexport.native.selectArticle">إختر المقالة</message>
+
+	<message key="plugins.importexport.native.import.articles">استيراد المقالات</message>
+	<message key="plugins.importexport.native.import.articles.description">الملف الذي تستورده يضم واحداً أو أكثر من المقالات. عليك أن تختار عدداً من أعداد المجلة مع قسم ما لاستيراد تلك المقالات إليها؛ إن لم تكن ترغب باستيرادها جميعاً إلى نفس القسم ونفس العدد، فقد ترغب في فصلها إلى عدة ملفات XML أو نقلها إلى العدد المناسب أو القسم المناسب بعد إجراء الاستيراد.</message>
+
+	<message key="plugins.importexport.native.import">استيراد البيانات</message>
+	<message key="plugins.importexport.native.import.description">هذه الإضافة تدعم استيراد البيانات استناداً إلى تعريف نوعية المستند native.dtd (كما هي تسميته في النظام). العقد الجذرية المدعومة هي: &amp;lt;article&amp;gt;, &amp;lt;articles&amp;gt;, &amp;lt;issue&amp;gt;, و &amp;lt;issues&amp;gt;.</message>
+
+	<message key="plugins.importexport.native.import.error">خطأ في الاستيراد</message>
+	<message key="plugins.importexport.native.import.error.description">حدث خطأ واحد أو أكثر خلال عملية الاستيراد. لطفاً، تحقق من كون صيغة الملف المستورد تطابق فعلاً ما هو مطلوب. بعض تفاصيل الخطأ مبينة أدناه.</message>
+
+	<message key="plugins.importexport.native.cliError">خطأ:</message>
+	<message key="plugins.importexport.native.error.uploadFailed">فشلت عملية الرفع؛ لطفاً، تأكد من كون رفع الملفات متاح في ملقمك وأن الملف الذي تريد رفعه ليس كبيراً جداً بالنسبة إلى إعدادات PHP وإعدادات ملقم الإنترنت.</message>
+	<message key="plugins.importexport.native.error.unknownUser">المستخدم المحدد: "{$userName}"غير موجود.</message>
+	<message key="plugins.importexport.native.error.unknownJournal">مسار المجلة المحدد: "{$journalPath}"غير موجود.</message>
+	<message key="plugins.importexport.native.export.error.couldNotWrite">تعذرت الكتابة إلى الملف "{$fileName}".</message>
+	<message key="plugins.importexport.native.export.error.sectionNotFound">لا يوجد قسم يطابق ما حددته "{$sectionIdentifier}".</message>
+	<message key="plugins.importexport.native.export.error.issueNotFound">لا توجد أعداد تطابق رمز التعريف المحدد "{$issueId}".</message>
+	<message key="plugins.importexport.native.export.error.articleNotFound">لا توجد مقالة تطابق رمز التعريف المحدد "{$articleId}".</message>
+	<message key="plugins.importexport.native.import.error.unsupportedRoot">هذه الإضافة لا تدعم عقدة الجذر المحددة "{$rootName}". لطفاً، تأكد من كون الملف بالصيغة الصحيحة ثم حاول مجدداً.</message>
+
+	<message key="plugins.importexport.native.import.error.titleMissing">عنوان العدد غير مذكور.</message>
+	<message key="plugins.importexport.native.import.error.defaultTitle">عنوان مفقود</message>
+	<message key="plugins.importexport.native.import.error.unknownIdentificationType">نوعية تعريف مجهولة "{$identificationType}" تم تحديدها في سمة "identification" لعنصر "issue" للعدد "{$issueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.invalidBooleanValue">قيمة منطقية غير صحيحة "{$value}" قد تم تحديدها. لطفاً، استعمل إما "true" أو "false".</message>
+	<message key="plugins.importexport.native.import.error.invalidDate">تأريخ غير صحيح "{$value}" تم تحديده.</message>
+	<message key="plugins.importexport.native.import.error.unknownEncoding">تم تضمين البيانات باستعمال نوعية ترميز غير معروفة "{$type}".</message>
+	<message key="plugins.importexport.native.import.error.couldNotWriteFile">تعذر حفظ نسخة محلية من "{$originalName}".</message>
+	<message key="plugins.importexport.native.import.error.illegalUrl">رابط الإنترنت المحدد "{$url}" للعدد "{$issueTitle}" كان خاطئاً. استيرادات البيانات المقدمة عبر الإنترنت تدعم فقط: http، https، ftp، أو ftps.</message>
+	<message key="plugins.importexport.native.import.error.unknownSuppFileType">نوعية ملف تكميلي غير معروفة "{$suppFileType}" تم تحديدها.</message>
+	<message key="plugins.importexport.native.import.error.couldNotCopy">رابط الإنترنت المحدد "{$url}" تعذر نسخه إلى ملف محلي.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicGalleyId">المعرف العام المعطى للوح الطباعة المستورد "{$publicId}" مستعمل سابقاً من قبل لوح طباعي آخر ضمن نفس المقال "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicSuppFileId">المعرف العام المعطى للملف التكميلي المستورد "{$suppFileTitle}" مستعمل سابقاً من قبل ملف تكميلي آخر ضمن نفس المقال "{$otherSuppFileTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicArticleId">المعرف العام المعطى للمقالة المستوردة "{$articleTitle}" مستعمل سابقاً من قبل مقال آخر "{$otherArticleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">المعرف العام المعطى للعدد المستورد "{$issueTitle}" مستعمل سابقاً من قبل عدد آخر "{$otherIssueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMissing">عنوان القسم مفقود من العدد "{$issueTitle}". لطفاً، تأكد من أن مستند XML يتفق مع DTD المناسبة.</message>
+	<message key="plugins.importexport.native.import.error.sectionMismatch">إن القسم "{$sectionTitle}" من العدد "{$issueTitle}" يطابق قسم موجود في المجلة، غير أن المختصر المحدد ("{$sectionAbbrev}") يماثل قسم آخر فيها!</message>
+	<message key="plugins.importexport.native.import.error.articleTitleMissing">عنوان المقالة مفقود من العدد "{$issueTitle}" في القسم "{$sectionTitle}". لطفاً، تأكد من أن مستند XML يتفق مع DTD المناسبة، وأن هناك عنواناً محدداً للغة المجلة.</message>
+	<message key="plugins.importexport.native.import.error.articleTitleLocaleUnsupported">إن عنوان المقالة ("{$articleTitle}") قد تم إدراجه في العدد "{$issueTitle}" بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.articleAbstractLocaleUnsupported">إن ملخص المقالة  "{$articleTitle}" ضمن العدد "{$issueTitle}" بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.galleyLabelMissing">المقالة "{$articleTitle}" في القسم "{$sectionTitle}" من العدد "{$issueTitle}" ينقصها عنوان اللوح الطباعي.</message>
+	<message key="plugins.importexport.native.import.error.suppFileMissing">المقالة "{$articleTitle}" في القسم "{$sectionTitle}" من العدد "{$issueTitle}" ينقصها ملف تكميلي.</message>
+	<message key="plugins.importexport.native.import.error.galleyFileMissing">المقالة "{$articleTitle}" في القسم "{$sectionTitle}" من العدد "{$issueTitle}" ينقصها ملف لوح طباعي.</message>
+
+	<message key="plugins.importexport.native.import.error.issueTitleLocaleUnsupported">عنوان العدد ("{$issueTitle}") مذكور بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.issueDescriptionLocaleUnsupported">وصف العدد "{$issueTitle}" مذكور بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.coverLocaleUnsupported">غلاف العدد "{$issueTitle}" مذكور بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+
+	<message key="plugins.importexport.native.import.error.sectionTitleLocaleUnsupported">عنوان القسم ("{$sectionTitle}") مذكور في العدد "{$issueTitle}" بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevLocaleUnsupported">مختصر القسم ("{$sectionAbbrev}") مذكور في العدد  ("{$issueTitle}") بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.sectionIdentifyTypeLocaleUnsupported">نوعية تعريف القسم ("{$sectionIdentifyType}") مذكورة في العدد  ("{$issueTitle}") بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.sectionPolicyLocaleUnsupported">سياسة القسم ("{$sectionPolicy}") مذكورة في العدد ("{$issueTitle}") بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+
+	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">عنوان القسم "{$section1Title}" وعنوان القسم "{$section2Title}" في العدد "{$issueTitle}" يطابقان قسمين مختلفين في المجلة.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMatch">عنوان القسم "{$sectionTitle}" في العدد "{$issueTitle}" يطابق قسماً موجوداً في المجلة، غير أن عنواناً آخر لهذا القسم لا يطابق نظيره لنفس القسم في المجلة.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">مختصر القسم "{$section1Abbrev}" ومختصر القسم "{$section2Abbrev}" في العدد "{$issueTitle}" يطابقان قسمين مختلفين في المجلة.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">مختصر القسم "{$sectionAbbrev}" في العدد "{$issueTitle}" يطابق مختصراً لقسم موجود في المجلة، غير أن مختصراً آخر لهذا القسم لا يطابق نظيره لنفس القسم في المجلة.</message>
+
+	<message key="plugins.importexport.native.import.error.articleDisciplineLocaleUnsupported">تخصص علمي للمقالة "{$articleTitle}" في العدد "{$issueTitle}" بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.articleTypeLocaleUnsupported">نوعية المقالة "{$articleTitle}" في العدد "{$issueTitle}" بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.articleSubjectLocaleUnsupported">موضوع المقالة "{$articleTitle}" في العدد "{$issueTitle}" بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.articleSubjectClassLocaleUnsupported">تصنيف موضوع المقالة "{$articleTitle}" في العدد "{$issueTitle}" بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageGeoLocaleUnsupported">التغطية الجغرافية للمقالة "{$articleTitle}" في العدد "{$issueTitle}" بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageChronLocaleUnsupported">التغطية التأريخية للمقالة "{$articleTitle}" في العدد "{$issueTitle}" بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageSampleLocaleUnsupported">التغطية العينية للمقالة "{$articleTitle}" في العدد "{$issueTitle}" بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.articleSponsorLocaleUnsupported">راعي المقالة "{$articleTitle}" في العدد "{$issueTitle}" بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+
+	<message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported">المصالح المتنافسة للمؤلف "{$authorFullName}" للمقالة "{$articleTitle}" في العدد "{$issueTitle}" بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorBiographyLocaleUnsupported">سيرة المؤلف "{$authorFullName}" للمقالة "{$articleTitle}" في العدد "{$issueTitle}" بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">إنتماء المؤلف "{$authorFullName}" للمقالة "{$articleTitle}" في العدد "{$issueTitle}" بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+
+	<message key="plugins.importexport.native.import.error.galleyLocaleUnsupported">اللوح الطباعي للمقالة "{$articleTitle}" في العدد "{$issueTitle}" مذكور بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+
+	<message key="plugins.importexport.native.import.error.articleSuppFileTitleLocaleUnsupported">عنوان الملف التكميلي ("{$suppFileTitle}") للمقالة "{$articleTitle}" في العدد "{$issueTitle}" مذكور بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileCreatorLocaleUnsupported">منشئ الملف التكميلي "{$suppFileTitle}" للمقالة "{$articleTitle}" في العدد "{$issueTitle}" مذكور بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSubjectLocaleUnsupported">موضوع الملف التكميلي "{$suppFileTitle}" للمقالة "{$articleTitle}" في العدد "{$issueTitle}" مذكور بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileTypeOtherLocaleUnsupported">نوعية مخصصة من الملف التكميلي "{$suppFileTitle}" للمقالة "{$articleTitle}" في العدد "{$issueTitle}" مذكور بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileDescriptionLocaleUnsupported">وصف الملف التكميلي "{$suppFileTitle}" للمقالة "{$articleTitle}" في العدد "{$issueTitle}" مذكور بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFilePublisherLocaleUnsupported">ناشر الملف التكميلي "{$suppFileTitle}" للمقالة "{$articleTitle}" في العدد "{$issueTitle}" مذكور بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">راعي الملف التكميلي "{$suppFileTitle}" للمقالة "{$articleTitle}" في العدد "{$issueTitle}" مذكور بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">مصدر الملف التكميلي "{$suppFileTitle}" للمقالة "{$articleTitle}" في العدد "{$issueTitle}" مذكور بلغة ("{$locale}") لا تدعمها هذه المجلة.</message>
+
+	<message key="plugins.importexport.native.import.error.invalidPubId">ملفك المستورد يتضمن مجموعة بيانات فيها {$pubIdType} غير صحيح: '{$pubId}'.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePubId">ملفك المستورد يتضمن مجموعة بيانات فيها  {$pubIdType} '{$pubId}' موجود سلفاً لمكون آخر في قاعدة البيانات. لطفاً، تأكد من كونك لا تستورد أبداً مكونات ذات رموز تعريف موجودة سابقاً في قاعدة البيانات.</message>
+	<message key="plugins.importexport.native.import.error.unknownPubId">ملفك المستورد يتضمن مجموعة بيانات فيها نوعية رمز التعريف '{$pubIdType}' ليس لها إضافة قادرة على معالجتها. لطفاً، قم بتنصيب و/أو تفعيل الإضافة ذات الصلة قبل محاولة استيراد مجموعة البيانات هذه.</message>
+	
+	<message key="plugins.importexport.native.import.success">تم الاستيراد بنجاح</message>
+	<message key="plugins.importexport.native.import.success.description">نجحت عملية الاستيراد. الفقرات المستوردة بنجاح مدرجة أدناه.</message>
+
+</locale>

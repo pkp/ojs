@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration Main 
+  *
+  -->
+
+<topic id="site/topic/000000" locale="ar_IQ" title="إدارة الموقع" toc="index/toc/000000" subtoc="site/toc/000000" key="site.index">
+	<section>
+		<![CDATA[<p>نظام الإدارة والنشر للمجلة هذا مصمم للتنصيب والتشغيل على حاسبة محلية. بمجرد تنصيبه، يمكن لمدير الموقع استعماله لإنشاء أي عدد من المجلات والإشراف على موقع كل مجلة منها.</p>]]>	
+	</section>
+</topic>

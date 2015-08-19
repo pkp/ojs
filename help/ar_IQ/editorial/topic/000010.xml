@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000010.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Review Index 
+  *
+  -->
+
+<topic id="editorial/topic/000010" locale="ar_IQ" title="التحكيم" toc="editorial/toc/000009" subtoc="editorial/toc/000010" key="editorial.authorsRole.review">
+	<section>
+		<![CDATA[<p>بإمكان المؤلف الاطلاع على موقف طلبه للنشر خلال مرحلة التحكيم، فضلاً عن تمكنه من رفع نسخ منقحة منه، وحسب ما يُطالب به من قبل محرر القسم المشرف على عملية التحكيم.</p>]]>	
+	</section>
+</topic>

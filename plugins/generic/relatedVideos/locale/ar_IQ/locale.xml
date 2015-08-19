@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/relatedVideos/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OpenAIRE plugin localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.generic.relatedVideos.displayName">الفيدوات ذات الصلة</message>
+	<message key="plugins.generic.relatedVideos.description">هذه الإضافة تقدم حقلاً إضافياً للمؤلفين والمحررين لتقديم ترميز HTML للفيدوات ذات الصلة.</message>
+	<message key="plugins.generic.relatedVideos">الفيدوات ذات الصلة</message>
+	<message key="plugins.generic.relatedVideos.description">ضع المحتوى الفيدوي (من Youtube، Vimeo... إلخ.) في هذا الحقل. بإمكانك لصق قصاصات خام من HTML (مثل: Youtube "embed code") عبر النقر على زر "HTML".</message>
+</locale>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Editor's Role - Submission Summary
+  *
+  -->
+
+<toc id="editorial/toc/000003" locale="ar_IQ" title="ملخص طلب النشر" parent_topic="editorial/topic/000003">
+	<topic id="editorial/topic/000019" title="إدارة طلب النشر" />
+	<topic id="editorial/topic/000020" title="البيانات الوصفية لطلب النشر" />
+
+	<breadcrumb url="editorial/topic/000000" title="عملية التحرير" />
+	<breadcrumb url="editorial/topic/000001" title="دور المحرر" />
+	<breadcrumb url="editorial/topic/000003" title="ملخص طلب النشر" />
+</toc>

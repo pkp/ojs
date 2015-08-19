@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000011.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - All Users 
+  *
+  -->
+
+<topic id="journal/topic/000011" locale="ar_IQ" title="المستخدمون ذوو الأدوار في هذه المجلة" toc="journal/toc/000002" key="journal.users.allUsers">
+	<section>
+		<![CDATA[<p>هذه القائمة تضم جميع المسجلين في المجلة. رئيس تحرير المجلة يمكنه دخول موقعها بصفة أي مستخدم آخر، وهذا الأمر مفيد للغاية عند محاولة تقديم الدعم لمستخدم معين عن بُعد، لأنه يسمح لرئيس التحرير بمعاينة حقيقية للمحتوى والبيئة التي يقابل بها الموقع ذلك المستخدم.</p><p>من هنا أيضاً، يمكن لرئيس التحرير إناطة الأدوار لمستخدمي موقع نظام المجلات المفتوحة إجمالاً، وكذلك إنشاء حسابات لأشخاص آخرين ومزامنة الأدوار بين المجلات المستضافة في الموقع.</p>]]>	
+	</section>
+</topic>

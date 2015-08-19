@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index 
+  *
+  -->
+
+<topic id="editorial/topic/000004" locale="ar_IQ" title="دور محرر القسم" toc="editorial/toc/000000" subtoc="editorial/toc/000004" key="editorial.sectionEditorsRole">
+	<section>
+		<![CDATA[<p>عادةً ما يدير محررو الأقسام تحكيم طلبات النشر وتحرير ما تم قبوله منها. إعتماداً على سياسات عمل المجلة، مع ذلك، قد يُطلب من محرر القسم المعين لمعالجة أحد طلبات نشر من قبل مدير التحرير، متابعة ذلك الطلب خلال مرحلة التحكيم فقط، أما بعدها، وإن كان الطلب مقبولاً، يتولى الأمر مدير التحرير. بخلاف ذلك، يلتمس مدير التحرير من محرر القسم متابعة الطلب طيلة عملية التحرير.</p>]]>	
+	</section>
+</topic>

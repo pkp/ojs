@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Management Pages - Reading Tools.
+  *
+  -->
+
+<toc id="journal/toc/000005" locale="ar_IQ" title="أدوات القراءة" parent_topic="journal/topic/000009">
+	<topic id="journal/topic/000026" title="خيارات أداة القراءة" />
+	<topic id="journal/topic/000027" title="مجموعة الفقرات ذات الصلة" />
+	<topic id="journal/topic/000028" title="السياقات" />
+
+	<breadcrumb url="journal/topic/000000" title="إدارة المجلة" />
+	<breadcrumb url="journal/topic/000001" title="صفحات الإدارة" />
+	<breadcrumb url="journal/topic/000009" title="أدوات القراءة" />
+</toc>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Layout Editor 
+  *
+  -->
+
+<topic id="journal/topic/000018" locale="ar_IQ" title="المصمم الطباعي" toc="journal/toc/000003" key="journal.roles.layoutEditor">
+	<section>
+		<![CDATA[<p>ينقل المصمم الطباعي النسخة المدققة من طلب النشر إلى الألواح الطباعية بصيغ HTML، PDF، PS... إلخ.، وهي الملفات التي اختارتها المجلة للنشر الالكتروني. هذا النظام لا يوفر البرامج التي تقوم بتحويل ملفات النصوص إلى تلك الصيغ، لذا فإن على المصصم الطباعي أن تكون بحيازته تطبيقات خارجية لصناعة الألواح الطياعية (مثل: Adobe Acrobat لملفات PDF، أو Dreamweaver لملفات HTML)، والتي تعرض المؤلفات على الشاشة مع تنسيق جيد مقروء وفقاً لأنماط النشر المتبعة في المجلات العلمية، مع وضع عينه على وسط النشر الجديد هذا (عبر الرجوع إلى التصميم الطباعي لناشرين آخرين على الإنترنت، مثل: Highwire Press، في علوم الحياة أو Project Muse في العلوم الإنسانية).</p><p>مزيد من المعلومات يمكن العثور عليها {help_topic key="editorial.layoutEditorsRole" text="هنا"}.</p>]]>	
+	</section>
+</topic>

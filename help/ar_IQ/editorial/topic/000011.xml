@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000011.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Editing Index 
+  *
+  -->
+
+<topic id="editorial/topic/000011" locale="ar_IQ" title="التحرير" toc="editorial/toc/000009" subtoc="editorial/toc/000011" key="editorial.authorsRole.editing">
+	<section>
+		<![CDATA[<p>يشارك المؤلف في عمليتي التدقيق والقراءة التصحيحية خلال مرحلةالتحرير، كجزء من تحضيرات النشر الالكتروني و/أو الورقي.</p>]]>	
+	</section>
+</topic>

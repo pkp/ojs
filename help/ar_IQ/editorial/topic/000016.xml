@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000016.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - In Review 
+  *
+  -->
+
+<topic id="editorial/topic/000016" locale="ar_IQ" title="قيد التحكيم" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inReview">
+	<section>
+		<![CDATA[<p>الطلبات المنتظمة في هذا الطابور متاحة للتحكيم ومن ثم التوصل إلى قرار بشأنها من قبل محرر القسم، فإما قبولها أو رفضها. إن امتداد فترة التحكيم مذكور ضمن سياسة التحكيم للمجلة (والتي قد تناقش الأمور الآتية: هل أن النشر في كل قسم من أقسام المجلة يتطلب التحكيم المناظر؟ كم عدد المحكمين المعتمدين عادة لتقييم المؤلَّف الواحد؟). عندما ينقر مدير التحرير أو محرر القسم على عنوان طلب النشر، يأخذه الموقع إلى صفحة التحكيم. عندما تحصل الموافقة على النشر، يُنقل الطلب إلى مرحلة التحرير، وبخلافه، يذهب إلى الأرشيف.</p>]]>	
+	</section>
+</topic>

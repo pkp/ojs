@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Subscription Manager 
+  *
+  -->
+
+<topic id="journal/topic/000032" locale="ar_IQ" title="مدير الاشتراكات" toc="journal/toc/000003" key="journal.roles.subscriptionManager">
+	<section>
+		<![CDATA[<p>مدير الاشتراكات يدير اشتراكات المجلة وأنواعها.</p><p>مزيد من المعلومات عن إدارة الاشتراكات تتوفر {help_topic key="journal.managementPages.subscriptions" text="هنا"}.</p>]]>
+	</section>
+</topic>

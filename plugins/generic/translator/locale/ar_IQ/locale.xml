@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/translator/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.generic.translator.name">إضافة المترجم</message>
+	<message key="plugins.generic.translator.description">هذه الإضافة تتيح إجراء الإدامة عبر الإنترنت على ملفات الترجمة.</message>
+	<message key="plugins.generic.translator.longdescription">هذه المنطقة تسمح لمدير الموقع ببناء، تعديل، وتدقيق الترجمات الخاصة بنظام المجلات المفتوحة. هذه الإجراءات عامة على مستوى الموقع وينبغي عدم إجراؤها لغرض تخصيص الترجمة في إحدى مجلات النظام. إذا قمت بتعديل أو إضافة ترجمة ما، لطفاً خذ بنظر الاعتبار إرسالها إلى مشروع المعرفة العامة ليتم توزيعها مع إصدارات النظام القادمة.</message>
+	<message key="plugins.generic.translator.localeDescription">هذه الصفحة تعرض كل مكونات الترجمة لنظام المجلات المفتوحة وتقدم للمترجم فرصة التعديل عليها. الترجمة الكاملة ينبغي أن تتضمن كل المكونات الخاصة بالنظام.</message>
+
+	<message key="plugins.generic.translator.tarMissing">إن وظيفة التصدير الخاصة بهذه الإضافة قد تم تعطيلها لأن ملف tar لم يتم العثور عليه في هذا النظام. لطفاً، تأكد من تنصيب برنامج tar لديك ومن ثم قم بتعريف المسار المؤدي إليه في ملف الإعدادات config.inc.php ضمن القسم المسمى [cli]!</message>
+
+	<message key="plugins.generic.translator.localeName">اسم اللغة</message>
+	<message key="plugins.generic.translator.localeKey">المفتاح</message>
+	<message key="plugins.generic.translator.localeKey.description">أدخل مفتاح اللغة الكامل للبحث عنه.</message>
+	<message key="plugins.generic.translator.localeKeyValue">القيمة</message>
+	<message key="plugins.generic.translator.translate">ترجم</message>
+	<message key="plugins.generic.translator.availableLocales">اللغات المتاحة</message>
+	<message key="plugins.generic.translator.check">التحقق</message>
+
+	<message key="plugins.generic.translator.errors">أخطاء اللغة</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">المفاتيح المفقودة</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">المفاتيح المضافة</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">قوائم العوامل المغايرة</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">ملفات اللغة المفقودة</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">مراسلات البريد الالكتروني المفقودة</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.title">مراسلات البريد الالكتروني المضافة</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.title">قوائم عوامل البريد الالكتروني المغايرة</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">إن المفتاح "{$key}" مفقود من "{$filename}". تم اعتماد النسخة الإنجليزية بمثابة النسخة الإفتراضية.</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">إن المفتاح "{$key}" لم يعد مستعملاً وبالإمكان حذفه من "{$filename}".</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">إن مفتاح اللغة "{$key}" الموجود في "{$filename}" مغاير لما هو مستعمل في اللغة المرجعية من العوامل التي يعتمد عليها. لطفاً، تأكد جيداً من كونه يتضمن كل العوامل المطلوبة. العوامل غير المطابقة هي:</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">إن ملف اللغة "{$filename}" مفقود أو تتعذر قراءته.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">إن رسالة البريد الالكتروني "{$key}" مفقودة من الترجمة.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.message">إن رسالة البريد الالكتروني "{$key}" لم تعد مستعملة وبالإمكان حذفها.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message">إن رسالة البريد الالكتروني "{$key}" مغايرة لما هو مستعمل في اللغة المرجعية من العوامل التي تعتمد عليها. لطفاً، تأكد جيداً من كونها تتضمن كل العوامل المطلوبة. العوامل غير المطابقة هي:</message>
+
+	<message key="plugins.generic.translator.locale">اللغة {$locale}</message>
+	<message key="plugins.generic.translator.localeFiles">ملفات اللغة</message>
+	<message key="plugins.generic.translator.miscFiles">ملفات متنوعة</message>
+	<message key="plugins.generic.translator.emails">قوالب البريد الالكتروني</message>
+	<message key="plugins.generic.translator.file.filename">اسم الملف</message>
+	<message key="plugins.generic.translator.file.edit">تعديل {$filename}</message>
+	<message key="plugins.generic.translator.email.edit">تعديل {$emailKey}</message>
+	<message key="plugins.generic.translator.file.reference">نسخة المرجع</message>
+	<message key="plugins.generic.translator.file.translation">الترجمة</message>
+	<message key="plugins.generic.translator.email.reference">نسخة المرجع</message>
+	<message key="plugins.generic.translator.email.translation">الترجمة</message>
+	<message key="plugins.generic.translator.file.reset">إعادة ضبط</message>
+	<message key="plugins.generic.translator.file.resetToReference">إعادة الضبط إلى النسخة المرجعية</message>
+	<message key="plugins.generic.translator.email.reset">إعادة ضبط</message>
+	<message key="plugins.generic.translator.email.resetToReference">إعادة الضبط إلى النسخة المرجعية</message>
+	<message key="plugins.generic.translator.file.resetConfirm">هل أنت متأكد من رغبتك في إعادة ضبط محتويات الملف؟</message>
+	<message key="plugins.generic.translator.email.resetConfirm">هل أنت متأكد من رغبتك في إعادة ضبط محتويات الرسالة الالكترونية؟</message>
+	<message key="plugins.generic.translator.file.doesNotExistNote">* هذا الملف لم تتم ترجمته بعد.</message>
+	<message key="plugins.generic.translator.file.confirmCreate">إن الملف "{$filename}" سيتم إنشاؤه باستعمال النسخة الإنجليزية؛ وستكون بحاجة إلى ترجمة كل النصوص في الملف. هل تريد المتابعة؟</message>
+	<message key="plugins.generic.translator.email.description">في الحقول الآتية، قم بترجمة عناوين الرسائل التي في القوالب، ومتونها، وأوصافها. الأوصاف هي مراجع توضيحية معدة لرئيس تحرير المجلة حصراً.</message>
+	<message key="plugins.generic.translator.confirmDelete">هل أنت متأكد من رغبتك في حذف هذه الفقرة؟ هذا الإجراء لا يمكن التراجع عنه.</message>
+	<message key="plugins.generic.translator.deleteKey">حذف هذا المفتاح</message>
+	<message key="plugins.generic.translator.deleteEmail">حذف هذه الرسالة الالكترونية</message>
+	<message key="plugins.generic.translator.saveBeforeContinuing">تأكد من حفظ أي تعديلات تقوم بها على هذه الصفحة قبل المتابعة، وإلا فإن تلك التعديلات ستذهب هباءً. هل تريد المتابعة؟ إن كان ذلك، فإن أي تعديلات غير محفوظة ستفقد.</message>
+	<message key="plugins.generic.translator.fileNotWriteable">ملف اللغة هذا غير قابل للكتابة من قبل الملقم. أي تعديلات تجريها عليه سيتعذر حفظها.</message>
+	<message key="plugins.generic.translator.filesNotWriteable">ملفات اللغة هذه غير قابلة للكتابة من قبل الملقم. أي تعديلات تجريها عليها سيتعذر حفظها.</message>
+</locale>

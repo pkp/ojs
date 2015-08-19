@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000011.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Author's Role - Editing
+  *
+  -->
+
+<toc id="editorial/toc/000011" locale="ar_IQ" title="التحرير" parent_topic="editorial/topic/000011">
+	<topic id="editorial/topic/000035" title="التدقيق" />
+	<topic id="editorial/topic/000036" title="القراءة التصحيحية" />
+
+	<breadcrumb url="editorial/topic/000000" title="عملية التحرير" />
+	<breadcrumb url="editorial/topic/000009" title="دور المؤلف" />
+	<breadcrumb url="editorial/topic/000011" title="التحرير" />
+</toc>

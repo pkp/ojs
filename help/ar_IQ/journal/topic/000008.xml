@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Stats & Reports
+  *
+  -->
+
+<topic id="journal/topic/000008" locale="ar_IQ" title="الإحصائيات والتقارير" toc="journal/toc/000001" key="journal.managementPages.statsAndReports">
+	<section>
+		<![CDATA[<p>الإحصائيات والتقارير تزود رئيس تحرير المجلة بمعلومات مؤرخة عن تشغيل المجلة بشكلين. الأول، ضمن إحصائيات، سنة بسنة، والتي توفر لمحة عن طلبات النشر، ممارسات المحررين والمستخدمين. أما الثاني، فيمكن لرئيس التحرير إنشاء واحد أو أكثر من أنواع التقارير ولمديات زمنية معينة.</p><p>هناك أربعة أنواع متاحة من التقارير:</p>
+		<ul>
+			<li><strong>تقرير المجلة</strong>: عن كل طلبات النشر خلال فترة معينة.</li>
+			<li><strong>تقرير المحرر</strong>: عن طلبات النشر، مبوبة حسب المحرر.</li>
+			<li><strong>تقرير التحكيم</strong>: عن طلبات النشر مبوبة حسب المحكم.</li>
+			<li><strong>تقرير القسم</strong>: عن طلبات النشر مبوبة حسب الأقسام.</li>
+		</ul>
+		<p>هذه التقارير تظهر بصيغة Comma-Separated Values ومختصرها (CSV) وينبغي فتحها باستعمال تطبيق خاص بجداول البيانات، مثل: Microsoft Excel.</p>]]>
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Table of Contents
+  *
+  -->
+
+<topic id="publishing/topic/000003" locale="ar_IQ" title="جدول المحتويات" toc="publishing/toc/000000" key="publishing.tableOfContents">
+	<section>
+		<![CDATA[<p>بمجرد جدولة مؤلَّف معين، فإنه سيظهر في جدول محتويات العدد المعني به من المجلة ضمن باب القسم الخاص به. إن لم يكن هناك طلبات نشر ضمن أحد أقسام المجلة، فإن ذلك القسم لن يُذكر في جدول محتويات العدد. يمكن للمحرر إعادة ترتيب الأقسام، وكذلك المؤلَّفات ضمن القسم الواحد.</p><p>إضافة إلى ذلك، لو أن رئيس تحرير المجلة قام بتمكين السيطرة على الاشتراكات، فإن بإمكان المحرر تبديل قواعد الوصول (التي قد تكون عبر الاشتراك أو الوصول المفتوح) على مستوى المؤلَّف الواحد، بدلاً من أن تكون على مستوى العدد بأكمله.</p>]]>	
+	</section>
+</topic>

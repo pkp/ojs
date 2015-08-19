@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000009.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Index 
+  *
+  -->
+
+<topic id="editorial/topic/000009" locale="ar_IQ" title="دور المؤلف" toc="editorial/toc/000000" subtoc="editorial/toc/000009" key="editorial.authorsRole">
+	<section>
+		<![CDATA[<p>يمكن للمؤلف الدخول إلى موقع المجلة ومتابعة مسيرة طلبات النشر الخاصة به والمشاركة في عملية التحرير. لو كان هناك أكثر من مؤلف واحد، يُطالب الشخص الذي قدم طلب النشر بتحديد عنوان الاتصال المعني بمتابعة عملية التحرير والتواصل مع المجلة عبر موقعها.</p>]]>	
+	</section>
+</topic>

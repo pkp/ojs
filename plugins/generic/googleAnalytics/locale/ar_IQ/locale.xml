@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleAnalytics/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">إضافة تحليلات Google</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[يكامل نظام المجلات المفتوحة مع تحليلات Google، وتطبيق تحليل حركة المرور للمواقع من Google. يتطلب الأمر قيامك مسبقاً بإعداد حساب تحليل من Google. لطفاً، أنظر <a href="http://www.google.com/analytics/" title="موقع تحليلات Google">موقع تحليلات Google</a> للمزيد من المعلومات.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">الإعدادات</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">إعدادات تحليلات Google</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>مع تمكين هذه الإضافة، تحليلات Google ستستعمل لتجميع وتحليل بيانات الاستعمال وحركة المرور لموقع المجلة. يتطلب الأمر قيامك مسبقاً بإعداد حساب تحليل من Google. لطفاً، أنظر <a href="http://www.google.com/analytics/" title="موقع تحليلات Google">موقع تحليلات Google</a> للمزيد من المعلومات.</p><p>لطفاً، لاحظ أن تحليلات  Google قد تتطلب حتى 24 ساعة قبل أن يتم تجميع الإحصائيات مع أجل التهيئة. خلال هذه الفترة، فإن وظيفة 'تدقيق الحالة' قد لا تبرك على وجه الدقة فيما لو كانت قد اكتشفت رمز التعقب المطلوب للمجلة.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">رقم الحساب</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions"><![CDATA[ضمن تحليلات Google، أنقر على 'تدقيق الحالة' لمعاينة رمز التعقب الخاص بموقعك. لرموز التعقب الموروثة، رقم الحساب معروض ضمن رمز التعقب بشكل: _uacct = "###". لرموز التعقب الجديدة، رقم الحساب معروض ضمن رمز التعقب بشكل: var pageTracker = _gat._getTracker("###"). أدخل النص المناظر لـ ###.]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">لطفاً، أدخل رقم الحساب.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">رمز التعقب</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">لطفاً، إختر رمز التعقب المطلوب استعمله.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">رمز التعقب الموروث (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">رمز التعقب الموروث (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">رمز التعقب الجديد للتحليلات العالمية (analytics.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">رقم حساب تحليلات Google</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">لتعقب قراءات المقالات المنشورة باستعمال تحليلات Google، أدخل رقم الحساب هنا (مثلاً: UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">واحد أو أكثر من أرقام حسابات تحليلات Google المدخلة هنا غير صحيحة.</message>
+</locale>

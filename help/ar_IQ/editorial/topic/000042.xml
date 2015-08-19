@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000042.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Proofreader's Role - Submissions
+  *
+  -->
+
+<topic id="editorial/topic/000042" locale="ar_IQ" title="طلبات النشر" toc="editorial/toc/000014" key="editorial.proofreadersRole.submissions">
+	<section>
+		<![CDATA[<p>بمجرد دخول مصحح القراءة إلى الموقع، ونقره على رابط مصحح القراءة في صفحة المستخدم الرئيسية، يأخذه الموقع إلى طابور طلبات النشر التي تندرج فيه الأعمال المطلوب تصحيحها. يمكنه الوصول أيضاً إلى الأعمال السابقة المنجزة عبر النقر على رابط الأرشيف. للذهاب إلى صفحة القراءة التصحيحية، على المستخدم النقر على عنوان المؤلَّف في القائمة النشطة.</p>]]>	
+	</section>
+</topic>

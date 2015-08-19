@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Publish
+  *
+  -->
+
+<topic id="publishing/topic/000004" locale="ar_IQ" title="النشر" toc="publishing/toc/000000" key="publishing.publish">
+	<section>
+		<![CDATA[<p>عندما يحين وقت نشر أحد أعداد المجلة، ينقر المحرر "{translate key="editor.issues.publishIssue"}" على صفحة العدد النشط ليتم نشره، أي الصفحة التي تتضمن جدول المحتويات. نشر عدد معين يتسبب في إظهار جدول محتوياته عندما {translate key="navigation.current"} يتم النقر عليه من قبل القراء، وكذلك صورة غلافه على الصفحة الرئيسية للمجلة. العدد السابق {translate key="navigation.current"} يذهب إلى {translate key="navigation.archives"}. إن لم يكن هناك صورة للغلاف، سيظهر جدول المحتويات على الصفحة الرئيسية، ما لم تكن الصفحة الرئيسية مصممة لتضم صورة أو نص معين خلال عملية التهيئة من قبل رئيس تحرير المجلة. نشر عدد في المجلة يؤدي أيضاً إلى إرسال إشعار عبر البريد الالكتروني إلى كل القراء المسجلين تتضمن جدول محتويات العدد مع رابط يأخذهم إلى موقع المجلة.</p>]]>	
+	</section>
+</topic>

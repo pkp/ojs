@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Review
+  *
+  -->
+
+<topic id="editorial/topic/000021" locale="ar_IQ" title="قيد التحكيم" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inReview">
+	<section>
+		<![CDATA[<p>طلبات النشر المدرجة ضمن (قيد التحكيم) عرضة لعملية التحكيم التي تقود محرر القسم إلى اتخاذ القرار بشأنها من حيث القبول أو الرفض. إن امتداد عملية التحكيم، فضلاً عن تحديد الأقسام التي تعتمد التحكيم المناظر وعدد المحكمين المعتمدين عادة للنظر في طلب النشر الواحد، منصوص عليها في سياسة تحكيم المجلة المعدة من قبل هيئة تحرير المجلة ورئيس تحريرها. عندما ينقر محرر القسم أو مدير التحرير على عنوان طلب النشر ضمن قائمة (قيد التحكيم)، يتم نقله إلى صفحة تحكيم الطلب، حيث يتم إجراء التحكيم والوصول إلى القرار بشأنه. إذا وافق محرر القسم على نشر المؤلَّف، يتم نقله عندها إلى طابور (قيد التحرير). أما رفض الطلب، فيؤول به إلى الأرشيف.</p><p>للمزيد من المعلومات عن عملية التحكيم، أنظر {help_topic key="editorial.sectionEditorsRole.review" text="قيد التحكيم"}.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000010.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Files Browser
+  *
+  -->
+
+<topic id="journal/topic/000010" locale="ar_IQ" title="مستعرض الملفات" toc="journal/toc/000001" key="journal.managementPages.fileBrowser">
+	<section>
+		<![CDATA[<p>مستعرض الملفات يتيح لرئيس تحرير المجلة تصفح وتنظيم شجرة حوافظ الملفات المرفوعة في الموقع (بضمنها كل الملفات المرفوعة خلال إدارة طلبات النشر). يمكن معاينة تلك الملفات، وحذفها، ونقلها بشكل يماثل العمل على نظام ملفات محلي.</p><p>لاحظ أن هذه الميزة متاحة لأغراض إدارية فقط ولن تكون مطلوبة عادة كعمل يومي. معلومات طلب النشر تُخزن بشكل مجموعة ملفات وسجلات في قاعدة البيانات، لذلك فإن حذف الملفات باستعمال مستعرض الملفات لن يؤدي إلى حذف سجلات قاعدة البيانات ذات الصلة.</p>]]>
+	</section>
+</topic>

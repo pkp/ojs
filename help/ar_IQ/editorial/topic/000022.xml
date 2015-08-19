@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Editing
+  *
+  -->
+
+<topic id="editorial/topic/000022" locale="ar_IQ" title="قيد التحرير" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inEditing">
+	<section>
+		<![CDATA[<p>طلبات النشر المنضوية في طابور (قيد التحرير) ستمر بعملية التدقيق، والتصميم الطباعي والقراءة التصحيحية. عندما ينقر مدير التحرير أو محرر القسم على عنوان طلب النشر في طابور (قيد التحرير) ينقله الموقع إلى صفحة تحرير الطلب. عندما يجتاز الطلب مرحلة التحرير ويُجدول للنشر في أحد أعداد المجلة، تتم إزالته من هذه القائمة ويوضع في الأرشيف.</p><p>للمزيد من المعلومات عن عملية التحرير، أنظر {help_topic key="editorial.sectionEditorsRole.editing" text="قيد التحرير"}.</p>]]>	
+	</section>
+</topic>

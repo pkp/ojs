@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/staticPages/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.generic.staticPages.displayName">إضافة الصفحات الثابتة</message>
+	<message key="plugins.generic.staticPages.description">هذه الإضافة تتيح إدارة المحتوى الثابت.</message>
+	<message key="plugins.generic.staticPages.pageTitle">العنوان</message>
+	<message key="plugins.generic.staticPages.content">المحتوى</message>
+
+	<message key="plugins.generic.staticPages.path">المسار</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>إن إضافة TinyMCE ينبغي أن تكون منصبة وممكنة من أجل إضافة/تعديل المحتوى.</strong>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">تعديل/إضافة المحتوى</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">إضافة صفحة ثابتة</message>
+	<message key="plugins.generic.staticPages.addNewPage">إضافة صفحة جديدة</message>
+	<message key="plugins.generic.staticPages.editStaticPage">تعديل صفحة ثابتة</message>	
+
+	<message key="plugins.generic.staticPages.settingInstructions">النموذج أدناه يعرض لك كل الصفحات الثابتة التي قمت بإنشائها. بإمكانك تعديل أو حذف الصفحات مستعملاً الروابط على الجانب الأيمن.</message>
+	<message key="plugins.generic.staticPages.editInstructions">استعمل النموذج أدناه لغرض إضافة/تعديل محتوى الصفحة.</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[يمكن عندها الوصل إلى الصفحات عبر: {$pagesPath}، حيث أن %PATH% هو قيمة من إختيارك. <strong>ملاحظة:</strong> لا يمكن لصفحتين أن يكون لهما نفس المسار.]]></message>
+	<message key="plugins.generic.staticPages.duplicatePath">هذا المسار موجود مسبقاً لصفحة ثابتة أخرى.</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">تم حفظ الصفحة بنجاح.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">حذفت الصفحة بنجاح.</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">لم يتم إنشاء أي صفحات بعد</message>
+</locale>

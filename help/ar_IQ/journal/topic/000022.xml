@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Author 
+  *
+  -->
+
+<topic id="journal/topic/000022" locale="ar_IQ" title="المؤلف" toc="journal/toc/000003" key="journal.roles.author">
+	<section>
+		<![CDATA[<p>يمكن للمؤلفين تسجيل أنفسهم وتقديم مؤلفاتهم للنشر في المجلة عبر موقعها مباشرة. يُطلب من المؤلف رفع مؤلَّفه وتزويد الموقع بالبيانات الوصفية لغرض الفهرسة. (تحسن البيانات الوصفية إمكانيات البحث عن المحتوى المنشور في المجلة عبر الإنترنت). يمكن للمؤلف رفع ملفات تكميلية، بشكل جداول بيانات أو أدوات بحثية أو موارد نصية أو ما شابه من المواد المعززة للمؤلَّف، فضلاً عن الإسهام بطرق أمتن في البحث العلمي. يمكن للمؤلف متابعة طلبه خلال مرحلة التحرير - وكذلك المشاركة في التدقيق والقراءة التصحيحة - عبر الدخول إلى موقع المجلة.</p><p>لمزيد من المعلومات، أنقر {help_topic key="editorial.authorsRole" text="هنا"}.</p>]]>	
+	</section>
+</topic>

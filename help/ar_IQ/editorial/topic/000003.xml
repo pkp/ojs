@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary Index 
+  *
+  -->
+
+<topic id="editorial/topic/000003" locale="ar_IQ" title="ملخص طلب النشر" toc="editorial/toc/000001" subtoc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary">
+	<section>
+		<![CDATA[<p>إن صفحة الملخص لكل طلب نشر يستعملها مدير التحرير لمعالجة ملفات الطلب ومتعلقاته من البيانات الوصفية أو بيانات الفهرسة.</p>]]>	
+	</section>
+</topic>

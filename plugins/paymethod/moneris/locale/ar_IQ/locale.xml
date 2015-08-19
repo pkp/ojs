@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+ * Copyright (c) 2000-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ar_IQ (العربية) locale.
+  *
+ -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.paymethod.moneris.displayName">Moneris</message>
+
+	<!-- Moneris Settings Form -->
+	<message key="plugins.paymethod.moneris.settings.monerisenable">تمكين Moneris</message>
+	<message key="plugins.paymethod.moneris.settings.monerisHost">استضافة Moneris</message>
+	<message key="plugins.paymethod.moneris.settings.monerisHost.description"><![CDATA[هذا هو اسم الاستضافة لبوابة الدفع Moneris. لاختبارها، استعمل <u>esqa.moneris.com</u>؛ لأنظمة العمل الفعلي، استعمل <u>www3.moneris.com</u>.]]></message>
+	<message key="plugins.paymethod.moneris.settings.storeId">إخزن رمز التعريف</message>
+	<message key="plugins.paymethod.moneris.settings.storeId.description">هذا هو رمز التعريف المخزني المعين من قبل Moneris لمنظمتك/مجلتك.</message>
+	<message key="plugins.paymethod.moneris.settings.apiToken">منوال API</message>
+	<message key="plugins.paymethod.moneris.settings.apiToken.description">هذا هو منوال API المعين من قبل Moneris لمنظمتك/مجلتك.</message>
+	<message key="plugins.paymethod.moneris.settings.CVD">CVD</message>
+	<message key="plugins.paymethod.moneris.settings.CVD.description">إختر هذا إن كانت لديك أرقام تدقيق البطاقة ممكنة في حسابك لدى Moneris.</message>
+	<message key="plugins.paymethod.moneris.settings.additionalInfo">المزيد من المعلومات للمستخدمين</message>
+	<message key="plugins.paymethod.moneris.settings.additionalInfo.description">بإمكانك إدخال أي معلومات إضافية تريد عرضها على صفحة الدفع، مثل معلومات الخصوصية أو سياسات إعادة التمويل.</message>	
+	
+
+	<message key="plugins.paymethod.moneris.settings.curlNotInstalled">تحذير: دعم CURL لـ PHP غير منصب حالياً. دعم آلية الدفع من Moneris يتطلب وجود مكتبة CURL ولن يقدر على العمل ما لم يتم تنصيبها.</message>
+	<message key="plugins.paymethod.moneris.settings">إعدادات Moneris</message>
+
+	<!-- Moneris -->
+	<message key="plugins.paymethod.moneris">بوابة الدفع Moneris</message>
+	<message key="plugins.paymethod.moneris.description"><![CDATA[إضافة Moneris تمكن المستخدمين من استعمال كل بطاقات الائتمان الرئيسية عند تسديد المبالغ عبر النظام. على رئيس تحرير المجلة تهيئة حساب <a href="https://www3.moneris.com/connect/en/index.php" target="_new">Moneris eSelect Plus</a> لاستعمال خيار الدفع المالي هذا.]]></message>
+	<message key="plugins.paymethod.moneris.تحذير"><![CDATA[النقر على زر الدفع سيؤدي إلى معالجة بطاقة ائتمانك. هذا الأمر قد يستغرق ثوانٍ قليلة <strong>لا تقم بتنشيط</strong> صفحة المستعرض عندك، لأن ذلك سيؤدي إلى معالجة بطاقتك مرة أخرى.]]></message>	
+	<message key="plugins.paymethod.moneris.purchase.amount">المبلغ</message>
+	<message key="plugins.paymethod.moneris.purchase.description">الوصف</message>
+	<message key="plugins.paymethod.moneris.purchase.cancelled">لقد تم إلغاء عملية الشراء.</message>
+	<message key="plugins.paymethod.moneris.purchase.cancelled.title">أُلغي الشراء</message>
+
+	<message key="plugins.paymethod.moneris.purchase.creditCardNumber">رقم بطاقة الائتمان</message>
+	<message key="plugins.paymethod.moneris.purchase.expiryDate">تأريخ انتهاء الصلاحية</message>
+	<message key="plugins.paymethod.moneris.purchase.CVD">الرقم السري (CVV)</message>
+	
+	<message key="plugins.paymethod.moneris.purchase.retry">إعادة المحاولة</message>
+	<message key="plugins.paymethod.moneris.purchase.retry.error">لطفاً، إملأ كل الحقول أدناه</message>
+		
+	<message key="plugins.paymethod.moneris.purchase.paymentReceived">تم استلام المبلغ</message>
+	<message key="plugins.paymethod.moneris.purchase.paymentReceived.message">لقد تمت معالجة الدفع وأرسل إيصال بذلك إلى بريدك الالكتروني. حالة تسجيلك تم تحديثها.</message>
+		
+	<message key="plugins.paymethod.moneris.purchase.paymentUnsuccessful">فشلت عملية الدفع</message>
+	<message key="plugins.paymethod.moneris.purchase.paymentUnsuccessful.explanation">لم نتمكن من معالجة بطاقتك. إن كنت تعتقد أن ذلك الأمر قابل للتصحيح، حاول مجدداً لطفاً.</message>
+	<message key="plugins.paymethod.moneris.purchase.payNow">إدفع الآن</message>
+		
+	<message key="plugins.paymethod.moneris.purchase.queuedPaymentUnfulfilled.title">تم استلام المبلغ</message>
+	<message key="plugins.paymethod.moneris.purchase.queuedPaymentUnfulfilled"><![CDATA[لقد تم استلام المبلغ منك، لكن حدث خطأ ما عند تحديث حالة تسجيلك. لقد تم إبلاغ فريقنا بالأمر ليقوموا بإصلاحه قريباً. <strong>لا تقم</strong> بإعادة الدفع مجدداً.]]></message>
+</locale>

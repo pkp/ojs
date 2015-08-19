@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - System Plugins
+  *
+  -->
+
+<topic id="journal/topic/000030" locale="ar_IQ" title="إضافات النظام" toc="journal/toc/000001" key="journal.managementPages.plugins">
+	<section>
+		<![CDATA[<p>صفحة إضافات النظام تمكن رئيس تحرير المجلة من معاينة قائمة بالإضافات المنصبة في نظام المجلات المفتوحة وإجراء أي مهام إدارية متاحة لكل من تلك الإضافات. للمزيد من المعلومات، راجع الأدبيات المرفقة بكل من تلك الإضافات، والموجودة ضمن حافظة الملفات (/path/to/install/plugins).</p>]]>
+	</section>
+</topic>
