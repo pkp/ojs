@@ -300,18 +300,16 @@ class IssueGridHandler extends GridHandler {
 	 */
 	function issueGalleys($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$issueId = $issue->getId();
-
 		$templateMgr = TemplateManager::getManager($request);
-		import('classes.issue.IssueAction');
-		$templateMgr->assign('issueId', $issueId);
-		$templateMgr->assign('unpublished',!$issue->getPublished());
-		$templateMgr->assign('issue', $issue);
-
-		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
-		$templateMgr->assign('issueGalleys', $issueGalleyDao->getByIssueId($issue->getId()));
-
-		return new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issueGalleys.tpl'));
+		$dispatcher = $request->getDispatcher();
+		return $templateMgr->fetchAjax(
+			'issueGalleysGridContainer',
+			$dispatcher->url(
+				$request, ROUTE_COMPONENT, null,
+				'grid.issueGalleys.IssueGalleyGridHandler', 'fetchGrid', null,
+				array('issueId' => $issue->getId())
+			)
+		);
 	}
 
 	/**
