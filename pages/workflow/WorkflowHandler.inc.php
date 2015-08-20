@@ -65,6 +65,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 				$notificationManager = new NotificationManager();
 				$user = $request->getUser();
 				import('lib.pkp.classes.log.SubmissionLog');
+				import('classes.log.SubmissionEventLogEntry'); // Log consts
 				SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_ISSUE_METADATA_UPDATE, 'submission.event.issueMetadataUpdated');
 				$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SUCCESS, array('contents' => __('notification.savedIssueMetadata')));
 

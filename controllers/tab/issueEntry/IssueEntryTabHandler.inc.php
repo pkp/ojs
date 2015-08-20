@@ -69,6 +69,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 					$form = new IssueEntryPublicationMetadataForm($submission->getId(), $user->getId(), $this->getStageId(), array('displayedInContainer' => true, 'tabPos' => $this->getTabPosition()));
 					$notificationKey = 'notification.savedIssueMetadata';
 					import('lib.pkp.classes.log.SubmissionLog');
+					import('classes.log.SubmissionEventLogEntry'); // Log consts
 					SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_ISSUE_METADATA_UPDATE, 'submission.event.issueMetadataUpdated');
 					break;
 			}
