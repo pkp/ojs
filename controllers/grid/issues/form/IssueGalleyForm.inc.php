@@ -151,8 +151,8 @@ class IssueGalleyForm extends Form {
 					$issueFileManager->deleteFile($issueGalley->getFileId());
 				}
 				// Upload new file
-				$fileId = $issueFileManager->fromTemporaryFile($temporaryFile);
-				$issueGalley->setFileId($fileId);
+				$issueFile = $issueFileManager->fromTemporaryFile($temporaryFile);
+				$issueGalley->setFileId($issueFile->getFileId());
 			}
 
 			$issueGalley->setLabel($this->getData('label'));
