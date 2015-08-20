@@ -70,10 +70,6 @@ class NativeImportDom {
 			// There were errors. Delete all the issues we've
 			// successfully created.
 			NativeImportDom::cleanupFailure ($dependentItems);
-			$issueDao =& DAORegistry::getDAO('IssueDAO');
-			foreach ($issues as $issue) {
-				$issueDao->deleteIssue($issue);
-			}
 			return false;
 		}
 		return true;
