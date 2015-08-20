@@ -20,4 +20,5 @@
 	<message key="plugins.block.user.logout">Log Out</message>
 	<message key="plugins.block.user.signOutAsUser">Log Out as User</message>
 	<message key="plugins.block.user.rememberMe">Remember me</message>
+	<message key="plugins.block.user.implicitAuthLogin">Journals Login</message>
 </locale>
