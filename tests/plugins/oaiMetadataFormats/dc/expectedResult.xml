@@ -6,7 +6,7 @@
 	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
 	<dc:title xml:lang="en-US">article-title-en</dc:title>
 	<dc:title xml:lang="de-DE">article-title-de</dc:title>
-	<dc:creator>author-lastname, author-firstname; author-affiliation</dc:creator>
+	<dc:creator>author-lastname, author-firstname</dc:creator>
 	<dc:subject xml:lang="en-US">article-discipline</dc:subject>
 	<dc:subject xml:lang="en-US">article-subject</dc:subject>
 	<dc:subject xml:lang="en-US">article-subject-class</dc:subject>
