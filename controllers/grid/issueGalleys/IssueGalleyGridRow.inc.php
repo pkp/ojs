@@ -41,7 +41,6 @@ class IssueGalleyGridRow extends GridRow {
 
 		// Is this a new row or an existing row?
 		$issueGalleyId = $this->getId();
-		error_log( $issueGalleyId);
 		if (!empty($issueGalleyId) && is_numeric($issueGalleyId)) {
 			$issue = $this->getData();
 			assert(is_a($issue, 'IssueGalley'));
