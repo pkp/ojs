@@ -72,7 +72,7 @@ class IssueGalleyGridRow extends GridRow {
 						__('grid.action.delete'),
 						$router->url(
 							$request, null, null, 'delete', null,
-							array($this->getRequestArgs(), array('issueGalleyId' => $issueGalleyId))
+							array_merge($this->getRequestArgs(), array('issueGalleyId' => $issueGalleyId))
 						),
 						'modal_delete'
 					),
