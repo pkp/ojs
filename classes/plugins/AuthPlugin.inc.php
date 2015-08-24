@@ -19,7 +19,7 @@
 define('AUTH_PLUGIN_CATEGORY', 'auth');
 import('lib.pkp.classes.plugins.Plugin');
 
-class AuthPlugin extends Plugin {
+abstract class AuthPlugin extends Plugin {
 
 	/** @var array settings for this plugin instance */
 	var $settings;
@@ -30,6 +30,7 @@ class AuthPlugin extends Plugin {
 	/**
 	 * Constructor.
 	 * @param $settings array
+	 * @param $authId int ID for this instance
 	 */
 	function AuthPlugin($settings = array(), $authId = null) {
 		parent::Plugin();
@@ -41,34 +42,6 @@ class AuthPlugin extends Plugin {
 	//
 	// General Plugin Functions
 	//
-
-	/**
-	 * Return the name of this plugin.
-	 * Should be overridden by subclass.
-	 * @return string
-	 */
-	function getName() {
-		assert(false); // Should always be overridden
-	}
-
-	/**
-	 * Return the localized name of this plugin.
-	 * Should be overridden by subclass.
-	 * @return string
-	 */
-	function getDisplayName() {
-		assert(false); // Should always be overridden
-	}
-
-	/**
-	 * Return the localized description of this plugin.
-	 * Should be overridden by subclass.
-	 * @return string
-	 */
-	function getDescription() {
-		assert(false); // Should always be overridden
-	}
-
 	/**
 	 * Return the path to a template for plugin settings.
 	 * Can return null if there are no plugin-specific settings.
@@ -82,13 +55,12 @@ class AuthPlugin extends Plugin {
 	//
 	// Wrapper Functions
 	//
-
 	/**
 	 * Update local user profile from the remote source, if enabled.
 	 * @param $user User
 	 * @return boolean true if successful
 	 */
-	function doGetUserInfo(&$user) {
+	function doGetUserInfo($user) {
 		if (isset($this->settings['syncProfiles'])) {
 			return $this->getUserInfo($user);
 		}
@@ -100,7 +72,7 @@ class AuthPlugin extends Plugin {
 	 * @param $user User
 	 * @return boolean true if successful
 	 */
-	function doSetUserInfo(&$user) {
+	function doSetUserInfo($user) {
 		if (isset($this->settings['syncProfiles'])) {
 			return $this->setUserInfo($user);
 		}
@@ -125,7 +97,7 @@ class AuthPlugin extends Plugin {
 	 * @param $user User to create
 	 * @return boolean true if successful
 	 */
-	function doCreateUser(&$user) {
+	function doCreateUser($user) {
 		if (isset($this->settings['createUsers'])) {
 			return $this->createUser($user);
 		}
@@ -137,17 +109,13 @@ class AuthPlugin extends Plugin {
 	// Core Plugin Functions
 	// (Must be implemented by every authentication plugin)
 	//
-
 	/**
 	 * Returns an instance of the authentication plugin
 	 * @param $settings array settings specific to this instance
 	 * @param $authId int identifier for this instance
 	 * @return AuthPlugin
 	 */
-	function &getInstance($settings, $authId) {
-		$returner = null;
-		return $returner;
-	}
+	abstract function getInstance($settings, $authId);
 
 	/**
 	 * Authenticate a username and password.
@@ -155,16 +123,13 @@ class AuthPlugin extends Plugin {
 	 * @param $password string
 	 * @return boolean true if authentication is successful
 	 */
-	function authenticate($username, $password) {
-		return false;
-	}
+	abstract function authenticate($username, $password);
 
 
 	//
 	// Optional Plugin Functions
 	// (Required for extended functionality but not for authentication-only plugins)
 	//
-
 	/**
 	 * Check if a username exists.
 	 * @param $username string
@@ -180,7 +145,7 @@ class AuthPlugin extends Plugin {
 	 * @param $user User to update
 	 * @return boolean true if successful
 	 */
-	function getUserInfo(&$user) {
+	function getUserInfo($user) {
 		return false;
 	}
 
@@ -189,7 +154,7 @@ class AuthPlugin extends Plugin {
 	 * @param $user User to store
 	 * @return boolean true if successful
 	 */
-	function setUserInfo(&$user) {
+	function setUserInfo($user) {
 		return false;
 	}
 
@@ -208,7 +173,7 @@ class AuthPlugin extends Plugin {
 	 * @param $user User to create
 	 * @return boolean true if successful
 	 */
-	function createUser(&$user) {
+	function createUser($user) {
 		return false;
 	}
 
@@ -228,29 +193,6 @@ class AuthPlugin extends Plugin {
 	 */
 	function isSitePlugin() {
 		return true;
-	}
-
-	/**
-	 * Return the management verbs for this plugin.
-	 */
-	function getManagementVerbs() {
-		return array(
-			array(
-				'authSources',
-				__('admin.authSources')
-			)
-		);
-	}
-
- 	/**
-	 * @see Plugin::manage()
-	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		if ($verb === 'authSources') {
-			$request =& $this->getRequest();
-			$request->redirect('index', 'admin', 'auth');
-		}
-		return false;
 	}
 }
 

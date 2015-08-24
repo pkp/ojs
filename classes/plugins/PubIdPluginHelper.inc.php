@@ -22,8 +22,8 @@ class PubIdPluginHelper {
 	 * @param $form object IssueForm, MetadataForm, or ArticleGalleyForm
 	 * @param $pubObject object An Article, Issue, or ArticleGalley
 	 */
-	function validate($journalId, &$form, &$pubObject) {
-		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+	function validate($journalId, $form, $pubObject) {
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 		if (is_array($pubIdPlugins)) {
 			foreach ($pubIdPlugins as $pubIdPlugin) {
 				$fieldNames = $pubIdPlugin->getFormFieldNames();
@@ -43,9 +43,9 @@ class PubIdPluginHelper {
 	 * @param $form object IssueForm, MetadataForm, or ArticleGalleyForm
 	 * @param $pubObject object An Article, Issue, or ArticleGalley
 	 */
-	function init(&$form, &$pubObject) {
+	function init($form, $pubObject) {
 		if (isset($pubObject)) {
-			$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+			$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 			if (is_array($pubIdPlugins)) {
 				foreach ($pubIdPlugins as $pubIdPlugin) {
 					$fieldNames = $pubIdPlugin->getFormFieldNames();
@@ -61,8 +61,8 @@ class PubIdPluginHelper {
 	 * Read the additional input data from public identifier plugins.
 	 * @param $form object IssueForm, MetadataForm, or ArticleGalleyForm
 	 */
-	function readInputData(&$form) {
-		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+	function readInputData($form) {
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 		if (is_array($pubIdPlugins)) {
 			foreach ($pubIdPlugins as $pubIdPlugin) {
 				$form->readUserVars($pubIdPlugin->getFormFieldNames());
@@ -75,8 +75,8 @@ class PubIdPluginHelper {
 	 * @param $form object IssueForm, MetadataForm, or ArticleGalleyForm
 	 * @param $pubObject object An Article, Issue, or ArticleGalley
 	 */
-	function execute(&$form, &$pubObject) {
-		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+	function execute($form, $pubObject) {
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 		if (is_array($pubIdPlugins)) {
 			foreach ($pubIdPlugins as $pubIdPlugin) {
 				// Public ID data can only be changed as long
@@ -92,7 +92,6 @@ class PubIdPluginHelper {
 			}
 		}
 	}
-
 }
 
 ?>

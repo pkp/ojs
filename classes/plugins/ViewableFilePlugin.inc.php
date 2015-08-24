@@ -24,17 +24,15 @@ abstract class ViewableFilePlugin extends PKPViewableFilePlugin {
 	}
 
 	/**
-	 * @see Plugin::register()
+	 * @copydoc Plugin::register()
 	 */
 	function register($category, $path) {
-		if (parent::register($category, $path)) {
-			if ($this->getEnabled()) {
-				HookRegistry::register('ArticleHandler::view::galley', array($this, 'articleCallback'));
-				HookRegistry::register('IssueHandler::view::galley', array($this, 'issueCallback'));
-			}
-			return true;
+		if (!parent::register($category, $path)) return false;
+		if ($this->getEnabled()) {
+			HookRegistry::register('ArticleHandler::view::galley', array($this, 'articleCallback'));
+			HookRegistry::register('IssueHandler::view::galley', array($this, 'issueCallback'));
 		}
-		return false;
+		return true;
 	}
 
 	/**
@@ -82,10 +80,9 @@ abstract class ViewableFilePlugin extends PKPViewableFilePlugin {
 
 	/**
 	 * Callback that renders the article galley.
-	 *
 	 * @param $hookName string
 	 * @param $args array
-	 * @return string
+	 * @return boolean
 	 */
 	function articleCallback($hookName, $args) {
 		$request =& $args[0];
@@ -104,10 +101,9 @@ abstract class ViewableFilePlugin extends PKPViewableFilePlugin {
 
 	/**
 	 * Callback that renders the issue galley.
-	 *
 	 * @param $hookName string
 	 * @param $args array
-	 * @return string
+	 * @return boolean
 	 */
 	function issueCallback($hookName, $args) {
 		$request = $args[0];

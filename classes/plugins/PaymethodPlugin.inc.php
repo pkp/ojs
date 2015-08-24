@@ -32,11 +32,9 @@ abstract class PaymethodPlugin extends PKPPaymethodPlugin {
 	 * 	the plugin will not be registered.
 	 */
 	function register($category, $path) {
-		$success = parent::register($category, $path);
-		if ($success) {
-			HookRegistry::register('Template::Manager::Payment::displayPaymentSettingsForm', array($this, '_smartyDisplayPaymentSettingsForm'));
-		}
-		return $success;
+		if (!parent::register($category, $path)) return false;
+		HookRegistry::register('Template::Manager::Payment::displayPaymentSettingsForm', array($this, '_smartyDisplayPaymentSettingsForm'));
+		return true;
 	}
 
 	/**

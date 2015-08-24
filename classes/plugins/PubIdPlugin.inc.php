@@ -29,98 +29,47 @@ abstract class PubIdPlugin extends Plugin {
 	// Implement template methods from Plugin
 	//
 	/**
-	 * @see Plugin::register()
+	 * @copydoc Plugin::register()
 	 */
 	function register($category, $path) {
-		$success = parent::register($category, $path);
-		if ($success) {
-			// Enable storage of additional fields.
-			foreach($this->_getDAOs() as $daoName) {
-				HookRegistry::register(strtolower_codesafe($daoName).'::getAdditionalFieldNames', array($this, 'getAdditionalFieldNames'));
-			}
+		if (!parent::register($category, $path)) return false;
+		// Enable storage of additional fields.
+		foreach($this->_getDAOs() as $daoName) {
+			HookRegistry::register(strtolower_codesafe($daoName).'::getAdditionalFieldNames', array($this, 'getAdditionalFieldNames'));
 		}
-		return $success;
-	}
-
-	/**
-	 * @see Plugin::getManagementVerbs()
-	 */
-	function getManagementVerbs() {
-		if ($this->getEnabled()) {
-			$verbs = array(
-				array(
-					'disable',
-					__('manager.plugins.disable')
-				),
-				array(
-					'settings',
-					__('manager.plugins.settings')
-				)
-			);
-		} else {
-			$verbs = array(
-				array(
-					'enable',
-					__('manager.plugins.enable')
-				)
-			);
-		}
-		return $verbs;
+		return true;
 	}
 
  	/**
-	 * @see Plugin::manage()
+	 * @copydoc Plugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		$request = $this->getRequest();
-		$templateManager = TemplateManager::getManager($request);
-		$templateManager->register_function('plugin_url', array($this, 'smartyPluginUrl'));
-		if (!$this->getEnabled() && $verb != 'enable') return false;
-		switch ($verb) {
-			case 'enable':
-				$this->setEnabled(true);
-				$message = NOTIFICATION_TYPE_PLUGIN_ENABLED;
-				$messageParams = array('pluginName' => $this->getDisplayName());
-				return false;
+	function manage($args, $request) {
+		$notificationManager = new NotificationManager();
+		$user = $request->getUser();
+		$journal = $request->getJournal();
 
-			case 'disable':
-				$this->setEnabled(false);
-				$message = NOTIFICATION_TYPE_PLUGIN_DISABLED;
-				$messageParams = array('pluginName' => $this->getDisplayName());
-				return false;
-
-			case 'settings':
-				$journal = $request->getJournal();
-
-				$settingsFormName = $this->getSettingsFormName();
-				$settingsFormNameParts = explode('.', $settingsFormName);
-				$settingsFormClassName = array_pop($settingsFormNameParts);
-				$this->import($settingsFormName);
-				$form = new $settingsFormClassName($this, $journal->getId());
-				if ($request->getUserVar('save')) {
-					$form->readInputData();
-					if ($form->validate()) {
-						$form->execute();
-						$message = NOTIFICATION_TYPE_SUCCESS;
-						return false;
-					} else {
-						$pluginModalContent = $form->fetch($request);
-					}
-				} elseif ($request->getUserVar('clearPubIds')) {
-					$form->readInputData();
-					$journalDao = DAORegistry::getDAO('JournalDAO');
-					$journalDao->deleteAllPubIds($journal->getId(), $this->getPubIdType());
-					$message = NOTIFICATION_TYPE_SUCCESS;
-					return false;
-				} else {
-					$form->initData();
-					$pluginModalContent = $form->fetch($request);
-				}
-				return false;
-			default:
-				// Unknown management verb
-				assert(false);
-				return false;
+		$settingsFormName = $this->getSettingsFormName();
+		$settingsFormNameParts = explode('.', $settingsFormName);
+		$settingsFormClassName = array_pop($settingsFormNameParts);
+		$this->import($settingsFormName);
+		$form = new $settingsFormClassName($this, $journal->getId());
+		if ($request->getUserVar('save')) {
+			$form->readInputData();
+			if ($form->validate()) {
+				$form->execute();
+				$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SUCCESS);
+				return new JSONMessage(true);
+			} else {
+				return new JSONMessage(true, $form->fetch($request));
+			}
+		} elseif ($request->getUserVar('clearPubIds')) {
+			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$journalDao->deleteAllPubIds($journal->getId(), $this->getPubIdType());
+			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SUCCESS);
+			return new JSONMessage(true);
+		} else {
+			$form->initData();
+			return new JSONMessage(true, $form->fetch($request));
 		}
 	}
 
@@ -212,24 +161,25 @@ abstract class PubIdPlugin extends Plugin {
 	abstract function getDAOFieldNames();
 
 	/**
-	 * Define management link actions for the settings verb.
-	 * @return LinkAction
+	 * @copydoc Plugin::getActions()
 	 */
-	function getManagementVerbLinkAction($request, $verb) {
+	function getActions($request, $actionArgs) {
 		$router = $request->getRouter();
-
-		list($verbName, $verbLocalized) = $verb;
-
-		if ($verbName === 'settings') {
-			import('lib.pkp.classes.linkAction.request.AjaxModal');
-			$actionRequest = new AjaxModal(
-				$router->url($request, null, null, 'plugin', null, array('verb' => 'settings', 'plugin' => $this->getName(), 'category' => 'pubIds')),
-				$this->getDisplayName()
-			);
-			return new LinkAction($verbName, $actionRequest, $verbLocalized, null);
-		}
-
-		return null;
+		import('lib.pkp.classes.linkAction.request.AjaxModal');
+		return array_merge(
+			array(
+				new LinkAction(
+					'settings',
+					new AjaxModal(
+						$router->url($request, null, null, 'plugin', null, $actionArgs),
+						$this->getDisplayName()
+					),
+					__('manager.plugins.settings'),
+					null
+				),
+			),
+			parent::getActions($request, $actionArgs)
+		);
 	}
 
 	//
@@ -359,7 +309,7 @@ abstract class PubIdPlugin extends Plugin {
 	 * @return string
 	 */
 	function setStoredPubId(&$pubObject, $pubObjectType, $pubId) {
-		$dao =& $this->getDAO($pubObjectType);
+		$dao = $this->getDAO($pubObjectType);
 		$dao->changePubId($pubObject->getId(), $this->getPubIdType(), $pubId);
 		$pubObject->setStoredPubId($this->getPubIdType(), $pubId);
 	}
@@ -369,7 +319,7 @@ abstract class PubIdPlugin extends Plugin {
 	 * @param $pubObject object
 	 * @return DAO
 	 */
-	function &getDAO($pubObjectType) {
+	function getDAO($pubObjectType) {
 		$daos =  array(
 			'Issue' => 'IssueDAO',
 			'Article' => 'ArticleDAO',
@@ -381,60 +331,22 @@ abstract class PubIdPlugin extends Plugin {
 	}
 
 	/**
-	 * Determine whether or not this plugin is enabled.
-	 * @return boolean
-	 */
-	function getEnabled($journalId = null) {
-		if (!$journalId) {
-			$request = $this->getRequest();
-			$router = $request->getRouter();
-			$journal = $router->getContext($request);
-
-			if (!$journal) return false;
-			$journalId = $journal->getid();
-		}
-		return $this->getSetting($journalId, 'enabled');
-	}
-
-	/**
-	 * Set the enabled/disabled state of this plugin.
-	 * @param $enabled boolean
-	 */
-	function setEnabled($enabled) {
-		$request = $this->getRequest();
-		$journal = $request->getJournal();
-		if ($journal) {
-			$this->updateSetting(
-				$journal->getId(),
-				'enabled',
-				$enabled?true:false
-			);
-			return true;
-		}
-		return false;
-	}
-
-	/**
 	 * Get the journal object.
 	 * @param $journalId integer
 	 * @return Journal
 	 */
-	function &getJournal($journalId) {
+	function getJournal($journalId) {
 		assert(is_numeric($journalId));
 
 		// Get the journal object from the context (optimized).
 		$request = $this->getRequest();
 		$router = $request->getRouter();
 		$journal = $router->getContext($request); /* @var $journal Journal */
+		if ($journal && $journal->getId() == $journalId) return $journal;
 
-		// Check whether we still have to retrieve the journal from the database.
-		if (!$journal || $journal->getId() != $journalId) {
-			unset($journal);
-			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$journal = $journalDao->getById($journalId);
-		}
-
-		return $journal;
+		// Fall back the database.
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		return $journalDao->getById($journalId);
 	}
 
 	//

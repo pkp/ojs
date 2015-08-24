@@ -13,7 +13,7 @@
  * @brief Sample import/export plugin
  */
 
-import('classes.plugins.ImportExportPlugin');
+import('lib.pkp.classes.plugins.ImportExportPlugin');
 
 class SampleImportExportPlugin extends ImportExportPlugin {
 	/**

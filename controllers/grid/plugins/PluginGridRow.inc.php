@@ -34,7 +34,7 @@ class PluginGridRow extends PKPPluginGridRow {
 	 * @param $plugin Plugin
 	 * @return boolean
 	 */
-	function _canEdit(&$plugin) {
+	protected function _canEdit($plugin) {
 		if ($plugin->isSitePlugin()) {
 			if (in_array(ROLE_ID_SITE_ADMIN, $this->_userRoles)) {
 				return true;

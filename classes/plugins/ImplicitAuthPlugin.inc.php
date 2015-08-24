@@ -18,6 +18,9 @@
 import('lib.pkp.classes.plugins.Plugin');
 
 abstract class ImplicitAuthPlugin extends Plugin {
+	/**
+	 * Constructor
+	 */
 	function ImplicitAuthPlugin() {
 		parent::Plugin();
 	}
@@ -32,9 +35,7 @@ abstract class ImplicitAuthPlugin extends Plugin {
 	 * otherwise, the method should not return (i.e. the request should be
 	 * redirected to login or elsewhere).
 	 */
-	function implicitAuth($hookname, $args) {
-		die('ABSTRACT METHOD');
-	}
+	abstract function implicitAuth($hookname, $args);
 }
 
 ?>

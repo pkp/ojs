@@ -88,6 +88,33 @@ class AbntCitationPlugin extends CitationPlugin {
 	}
 
 	/**
+	 * @copydoc Plugin::getManagementVerbLinkAction()
+	 */
+	function getManagementVerbLinkAction($request, $verb) {
+		list($verbName, $verbLocalized) = $verb;
+
+		switch ($verbName) {
+			case 'settings':
+				// Generate a link action for the "settings" action
+				$dispatcher = $request->getDispatcher();
+				import('lib.pkp.classes.linkAction.request.RedirectAction');
+				return new LinkAction(
+					$verbName,
+					new RedirectAction($dispatcher->url(
+						$request, ROUTE_PAGE,
+						null, 'management', 'settings', 'website',
+						array('uid' => uniqid()), // Force reload
+						'staticPages' // Anchor for tab
+					)),
+					$verbLocalized,
+					null
+				);
+			default:
+				return parent::getManagementVerbLinkAction($request, $verb);
+		}
+	}
+
+	/**
 	 * Display an HTML-formatted citation. We register String::strtoupper modifier
 	 * in order to convert author names to uppercase.
 	 * @param $article Article

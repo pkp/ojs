@@ -14,8 +14,7 @@
  */
 
 import('lib.pkp.classes.xml.XMLCustomWriter');
-
-import('classes.plugins.ImportExportPlugin');
+import('lib.pkp.classes.plugins.ImportExportPlugin');
 
 define('DOAJ_XSD_URL', 'http://www.doaj.org/schemas/doajArticles.xsd');
 

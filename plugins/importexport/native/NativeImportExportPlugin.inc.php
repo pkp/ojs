@@ -13,7 +13,7 @@
  * @brief Native XML import/export plugin
  */
 
-import('classes.plugins.ImportExportPlugin');
+import('lib.pkp.classes.plugins.ImportExportPlugin');
 
 class NativeImportExportPlugin extends ImportExportPlugin {
 	/**

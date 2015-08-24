@@ -21,7 +21,7 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 	 */
 	function SettingsPluginGridHandler() {
 		$roles = array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER);
-		$this->addRoleAssignment($roles, array('plugin'));
+		$this->addRoleAssignment($roles, array('manage'));
 		parent::PluginGridHandler($roles);
 	}
 
@@ -72,21 +72,22 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 	 * @copydoc GridHandler::authorize()
 	 */
 	function authorize($request, $args, $roleAssignments) {
-		$category = $request->getUserVar('category');
+		$categoryName = $request->getUserVar('category');
 		$pluginName = $request->getUserVar('plugin');
-		$verb = $request->getUserVar('verb');
-
-		if ($category && $pluginName) {
+		if ($categoryName && $pluginName) {
 			import('classes.security.authorization.OjsPluginAccessPolicy');
-			if ($verb) {
-				$accessMode = ACCESS_MODE_MANAGE;
-			} else {
-				$accessMode = ACCESS_MODE_ADMIN;
+			switch ($request->getRequestedOp()) {
+				case 'enable':
+				case 'disable':
+				case 'manage':
+					$accessMode = ACCESS_MODE_MANAGE;
+					break;
+				default:
+					$accessMode = ACCESS_MODE_ADMIN;
+					break;
 			}
-
 			$this->addPolicy(new OjsPluginAccessPolicy($request, $args, $roleAssignments, $accessMode));
 		}
-
 		return parent::authorize($request, $args, $roleAssignments);
 	}
 }

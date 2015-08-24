@@ -57,6 +57,12 @@ class BackupPlugin extends GenericPlugin {
 		return false;
 	}
 
+	/**
+	 * Hook callback: handle a request for the backup plugin.
+	 * @param $hookName string
+	 * @param $args array
+	 * @return boolean false (hook processing conventions)
+	 */
 	function handleRequest($hookName, $args) {
 		$page =& $args[0];
 		$op =& $args[1];
@@ -143,44 +149,6 @@ class BackupPlugin extends GenericPlugin {
 	 */
 	function getDescription() {
 		return __('plugins.generic.backup.description');
-	}
-
-	/**
-	 * Check whether or not this plugin is enabled
-	 * @return boolean
-	 */
-	function getEnabled() {
-		return $this->getSetting(0, 'enabled');
-	}
-
-	/**
-	 * Get a list of available management verbs for this plugin
-	 * @return array
-	 */
-	function getManagementVerbs() {
-		return array(array(
-			($this->getEnabled()?'disable':'enable'),
-			__($this->getEnabled()?'manager.plugins.disable':'manager.plugins.enable')
-		));
-	}
-
-	/**
-	 * @see Plugin::manage()
-	 */
-	function manage($verb, $args, &$message, &$messageParams) {
-		switch ($verb) {
-			case 'enable':
-				$this->updateSetting(0, 'enabled', true);
-				$message = NOTIFICATION_TYPE_PLUGIN_ENABLED;
-				$messageParams = array('pluginName' => $this->getDisplayName());
-				break;
-			case 'disable':
-				$this->updateSetting(0, 'enabled', false);
-				$message = NOTIFICATION_TYPE_PLUGIN_DISABLED;
-				$messageParams = array('pluginName' => $this->getDisplayName());
-				break;
-		}
-		return false;
 	}
 }
 
