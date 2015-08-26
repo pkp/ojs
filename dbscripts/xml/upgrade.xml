@@ -371,6 +371,10 @@
 		<note file="docs/release-notes/README-2.4.6" />
 	</upgrade>
 
+	<upgrade minversion="2.0.0.0" maxversion="2.4.6.0">
+		<note file="docs/release-notes/README-BEACON" />
+	</upgrade>
+
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>

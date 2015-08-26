@@ -1329,6 +1329,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			case 'active': return 'active';
 			case 'average': return 'average';
 			case 'name': return 'u.last_name';
+			case 'status': return 'a.status';
 			default: return null;
 		}
 	}

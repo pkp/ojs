@@ -145,15 +145,38 @@
 		{assign var=pubId value=$pubIdPlugin->getPubId($article, true)}{* Preview rather than assign a pubId *}
 	{/if}
 	{if $pubId}
+		{assign var=pubIdResolvingURL value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)}
 		<tr valign="top">
 			<td>10.</td>
 			<td>{translate key="rt.metadata.dublinCore.identifier"}</td>
-			<td>{$pubIdPlugin->getPubIdFullName()|escape}</td>
-			<td><a target="_new" href="{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}">{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}</a></td>
+			<td>{$pubIdPlugin->getPubIdFullName()|escape} ({$pubIdPlugin->getPubIdDisplayType()|escape})</td>
+			<td>{if $pubIdResolvingURL}<a target="_new" id="pub-id::{$pubIdPlugin->getPubIdType()|escape}" href="{$pubIdResolvingURL|escape}">{$pubIdResolvingURL|escape}</a>{else}{$pubId|escape}{/if}</td>
 		</tr>
 		<tr><td colspan="4" class="separator">&nbsp;</td></tr>
 	{/if}
 {/foreach}
+{assign var=galleys value=$article->getGalleys()}
+{if $galleys}
+	{foreach from=$pubIdPlugins item=pubIdPlugin}
+		{foreach from=$article->getGalleys() item=galley name=galleyList}
+			{if $issue->getPublished()}
+				{assign var=galleyPubId value=$pubIdPlugin->getPubId($galley)}
+			{else}
+				{assign var=galleyPubId value=$pubIdPlugin->getPubId($galley, true)}{* Preview rather than assign a pubId *}
+			{/if}
+			{if $galleyPubId}
+				{assign var=galleyPubIdResolvingURL value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $galleyPubId)}
+				<tr valign="top">
+					<td>10.</td>
+					<td>{translate key="rt.metadata.dublinCore.identifier"}</td>
+					<td>{$pubIdPlugin->getPubIdFullName()|escape} ({$pubIdPlugin->getPubIdDisplayType()|escape})<br />({$galley->getGalleyLabel()|escape})</td>
+					<td>{if $galleyPubIdResolvingURL}<a target="_new" id="pub-id::{$pubIdPlugin->getPubIdType()|escape}-g{$galley->getId()}" href="{$galleyPubIdResolvingURL|escape}">{$galleyPubIdResolvingURL|escape}</a>{else}{$galleyPubId|escape}{/if}</td>
+				</tr>
+				<tr><td colspan="4" class="separator">&nbsp;</td></tr>
+			{/if}
+		{/foreach}
+	{/foreach}
+{/if}
 <tr valign="top">
 	<td>11.</td>
 	<td>{translate key="rt.metadata.dublinCore.source"}</td>

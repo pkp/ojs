@@ -28,7 +28,9 @@
 		</ul>
 	{else}
 		{if $implicitAuth}
-			<a href="{url page="login" op="implicitAuthLogin"}">Journals Login</a>
+			<a href="{url page="login" op="implicitAuthLogin"}">{translate key="plugins.block.user.implicitAuthLogin"}</a>
+		{elseif $userBlockLoginSSL}
+			<a href="{$userBlockLoginUrl}">{translate key="user.login"}</a>
 		{else}
 			<form method="post" action="{$userBlockLoginUrl}">
 				<table>

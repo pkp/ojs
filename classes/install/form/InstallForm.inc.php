@@ -159,7 +159,8 @@ class InstallForm extends Form {
 			'databasePassword' => '',
 			'databaseName' => 'ojs',
 			'createDatabase' => 1,
-			'oaiRepositoryId' => 'ojs.' . Request::getServerHost()
+			'oaiRepositoryId' => 'ojs.' . Request::getServerHost(),
+			'enableBeacon'=> true
 		);
 	}
 
@@ -185,7 +186,8 @@ class InstallForm extends Form {
 			'databasePassword',
 			'databaseName',
 			'createDatabase',
-			'oaiRepositoryId'
+			'oaiRepositoryId',
+			'enableBeacon'
 		));
 
 		if ($this->getData('additionalLocales') == null || !is_array($this->getData('additionalLocales'))) {

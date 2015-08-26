@@ -26,6 +26,10 @@
 	<message key="plugins.generic.pln.settings.journal_uuid_help">Dies ist die eindeutige Kennung Ihrer Zeitschrift für das PKP PLN. Sie müssen diese Kennung angeben, wenn Sie Support durch die Administrator/innen von PKP PLN erhalten möchten.</message>
 	<message key="plugins.generic.pln.settings.refresh">Aktualisieren</message>
 	<message key="plugins.generic.pln.settings.refresh_help">Wenn aus irgendeinem Grund keine Einträge oben gelistet sind oder wenn Sie wissen, dass die Einträge aktualisiert worden sind, klicken Sie Aktualisieren um die Liste zu erneuern.</message>
+	<message key="plugins.generic.pln.settings.pln_network">PLN-Netzwerk-URL</message>
+	<message key="plugins.generic.pln.settings.pln_network_help">Die URL des Übergabeservers Ihres Netzwerks. Ändern Sie diese Einstellung nur, wenn Sie von Seiten Ihres Netzwerks dazu aufgefordert werden.</message>
+	<message key="plugins.generic.pln.settings.pln_network_invalid">Die angegebene URL ist nicht gültig. Bitte kontrollieren Sie die Adresse und versuchen Sie es erneut.</message>
+	<message key="plugins.generic.pln.settings.pln_network_path_invalid">PLN-Netzwerk-URLs müssen das Schema und den Host-Namen beinhalten und können eine Port-Nummer enthalten. Sie dürfen keine Pfade, Parameter, Benutzernamen, Passwörter oder URL-Fragmente enthalten.</message>
 	
 	<message key="plugins.generic.pln.required.object_type">Bitte wählen Sie einen Typ für die Objektablieferung.</message>
 	<message key="plugins.generic.pln.required.object_threshold">Bitte wählen Sie eine Schwelle für die Objektablieferung.</message>
@@ -54,7 +58,8 @@
 	<message key="plugins.generic.pln.status.no">Nein</message>
 
 	<message key="plugins.generic.pln.depositorTask.name">PKP PLN Ablieferungsaufgabe</message>
-	<message key="plugins.generic.pln.notifications.processing_for">Ablieferung wird durchgeführt für</message>
+	<message key="plugins.generic.pln.notifications.processing_for">Ablieferung wird durchgeführt für {$title}.</message>
+	<message key="plugins.generic.pln.notifications.getting_servicedocument">Hole das Service-Dokument.</message>
 	<message key="plugins.generic.pln.notifications.pln_not_accepting">Das PKP PLN akzeptiert momentan keine Ablieferungen.</message>
 	<message key="plugins.generic.pln.notifications.pln_accepting">Das PKP PLN akzeptiert Ablieferungen.</message>
 	<message key="plugins.generic.pln.notifications.check_status">Überprüfen Sie den Status Ihrer Ablieferungen.</message>
@@ -64,4 +69,25 @@
 	<message key="plugins.generic.pln.notifications.curl_missing">Die Unterstützung von CURL muss aktiviert werden, um fortfahren zu können.</message>
 	<message key="plugins.generic.pln.notifications.zip_missing">Die Unterstützung von ZipArchive muss aktiviert werden, um fortfahren zu können.</message>
 	<message key="plugins.generic.pln.notifications.issn_setting">Ihre Zeitschrift muss über eine ISSN verfügen, bevor Sie den Nutzungsbedingungen zustimmen können. Sie können die ISSN im Setup der Zeitschrift eingeben. Sobald die ISSN der Zeitschrift eingegeben ist, werden die Nutzungsbedingungen unten angezeigt.</message>
+	<message key="plugins.generic.pln.notifications.tar_missing">Ihr System muss über ein tar-Programm verfügen.</message>
+
+	<message key="plugins.generic.pln.error.network.servicedocument">Netzwerk-Fehler {$error} beim Versuch, das Service-Dokument vom PLN zu holen.</message>
+	<message key="plugins.generic.pln.error.network.deposit">Netzwerk-Fehler {$error} beim Versuch, die Ablieferung an das PLN zu senden.</message>
+	<message key="plugins.generic.pln.error.http.servicedocument">PLN-Server hat einen HTTP-Fehler {$error} gemeldet beim Versuch, das Service-Dokument zu holen.</message>
+	<message key="plugins.generic.pln.error.http.deposit">PLN-Server hat einen HTTP-Fehler {$error} gemeldet beim Versuch, die Ablieferung zu senden.</message>
+	<message key="plugins.generic.pln.error.depositor.missingpackage">Kann die Datei {$file} des Pakets nicht finden.</message>
+	<message key="plugins.generic.pln.error.depositor.export.articles.error">Ein Fehler ist beim Export der Artikel aufgetreten. Das Fehlerlog des Servers könnte weitere Informationen enthalten.</message>
+	<message key="plugins.generic.pln.error.depositor.export.issue.error">Ein Fehler ist beim Export einer Ausgabe aufgetreten. Das Fehlerlog des Servers könnte weitere Informationen enthalten.</message>
+	<message key="plugins.generic.pln.error.handler.uuid.invalid">Die angeforderte UUID ist ungültig oder ist nicht korrekt formatiert.</message>
+	<message key="plugins.generic.pln.error.handler.uuid.notfound">Es gibt keine Ablieferung mit der angegebenen UUID.</message>
+	<message key="plugins.generic.pln.error.handler.file.notfound">Die Datei der Ablieferung konnte nicht gefunden werden. Es könnte sein, dass sie noch nicht verpackt ist oder dass das Paket entfernt worden ist.</message>
+
+	<message key="plugins.generic.pln.depositor.statusupdates">Verarbeite die Aktualisierungen des Ablieferungsstatus.</message>
+	<message key="plugins.generic.pln.depositor.updatedcontent">Verarbeite aktualisierte Inhalte.</message>
+	<message key="plugins.generic.pln.depositor.newcontent"> Verarbeite neue Inhalte.</message>
+	<message key="plugins.generic.pln.depositor.packagingdeposits">Verpacke Inhalte zur Ablieferung.</message>
+	<message key="plugins.generic.pln.depositor.transferringdeposits">Sende Ablieferungen an das PLN.</message>
+
+	<message key="plugins.generic.plngateway.displayName">PLN-Schnittstelle</message>
+	<message key="plugins.generic.plngateway.description">Liefert den PLN-Status und die Titel der letzten Artikel an den Übergabeserver.</message>
 </locale>

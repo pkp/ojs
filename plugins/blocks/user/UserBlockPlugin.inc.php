@@ -61,9 +61,16 @@ class UserBlockPlugin extends BlockPlugin {
 			$templateMgr->assign_by_ref('userSession', $session);
 			$templateMgr->assign('loggedInUsername', $session->getSessionVar('username'));
 			$loginUrl = Request::url(null, 'login', 'signIn');
+			// if the page is not ssl enabled, and force_login_ssl is set, this flag will present a link instead of the form
+			$forceSSL = false;
 			if (Config::getVar('security', 'force_login_ssl')) {
+				if (Request::getProtocol() != 'https') {
+					$loginUrl = Request::url(null, 'login');
+					$forceSSL = true;
+				}
 				$loginUrl = String::regexp_replace('/^http:/', 'https:', $loginUrl);
 			}
+			$templateMgr->assign('userBlockLoginSSL', $forceSSL);
 			$templateMgr->assign('userBlockLoginUrl', $loginUrl);
 		}
 		return parent::getContents($templateMgr);

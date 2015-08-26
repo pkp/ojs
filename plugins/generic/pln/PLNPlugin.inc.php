@@ -14,23 +14,29 @@
  */
 
 import('lib.pkp.classes.plugins.GenericPlugin');
+import('lib.pkp.classes.config.Config');
 import('classes.article.PublishedArticle');
 import('classes.issue.Issue');
 
 define('PLN_PLUGIN_NAME','plnplugin');
 
-define('PLN_PLUGIN_NETWORK', 'http://pkp-pln.lib.sfu.ca');
+// defined here in case an upgrade doesn't pick up the default value.
+define('PLN_DEFAULT_NETWORK', 'http://pkp-pln.lib.sfu.ca');
 
 define('PLN_PLUGIN_HTTP_STATUS_OK', 200);
 define('PLN_PLUGIN_HTTP_STATUS_CREATED', 201);
 
 define('PLN_PLUGIN_XML_NAMESPACE','http://pkp.sfu.ca/SWORD');
+
+// base IRI for the SWORD server. IRIs are constructed by appending to 
+// this constant.
+define('PLN_PLUGIN_BASE_IRI', '/api/sword/2.0');
 // used to retrieve the service document
-define('PLN_PLUGIN_SD_IRI','/api/sword/2.0/sd-iri');
+define('PLN_PLUGIN_SD_IRI', PLN_PLUGIN_BASE_IRI . '/sd-iri');
 // used to submit a deposit
-define('PLN_PLUGIN_COL_IRI','/api/sword/2.0/col-iri');
+define('PLN_PLUGIN_COL_IRI',PLN_PLUGIN_BASE_IRI . '/col-iri');
 // used to edit and query the state of a deposit
-define('PLN_PLUGIN_CONT_IRI','/api/sword/2.0/cont-iri');
+define('PLN_PLUGIN_CONT_IRI',PLN_PLUGIN_BASE_IRI . '/cont-iri');
 
 define('PLN_PLUGIN_ARCHIVE_FOLDER','pln');
 
@@ -175,15 +181,25 @@ class PLNPlugin extends GenericPlugin {
 	 */
 	function getSetting($journalId,$settingName) {
 		// if there isn't a journal_uuid, make one
-		if ($settingName == 'journal_uuid') {
-			$uuid = parent::getSetting($journalId, $settingName);
-			if (!is_null($uuid) && $uuid != '') return $uuid;
-			$this->updateSetting($journalId, $settingName, $this->newUUID());
+                switch ($settingName) {
+			case 'journal_uuid':
+				$uuid = parent::getSetting($journalId, $settingName);
+				if (!is_null($uuid) && $uuid != '')
+					return $uuid;
+				$this->updateSetting($journalId, $settingName, $this->newUUID());
+				break;
+			case 'pln_network':
+				$network = parent::getSetting($journalId, 'pln_network');
+				if($network) return $network;
+				$network = Config::getVar('lockss', 'pln_url', PLN_DEFAULT_NETWORK);
+				$this->updateSetting($journalId, 'pln_network', $network);
+				break;
+			default:
+				break;
 		}
-		
 		return parent::getSetting($journalId,$settingName);
 	}
-	
+
 	/**
 	 * Register as a gateway plugin.
 	 * @param $hookName string
@@ -443,7 +459,7 @@ class PLNPlugin extends GenericPlugin {
 	/**
 	 * Request service document at specified URL
 	 * @param $journalId int The journal id for the service document we wish to fetch
-	 * @return int The HTTP response status
+	 * @return int The HTTP response status or FALSE for a network error.
 	 */
 	function getServiceDocument($journalId) {
 			
@@ -453,10 +469,10 @@ class PLNPlugin extends GenericPlugin {
 		// get the journal and determine the language.
 		$locale = $journal->getPrimaryLocale();
 		$language = strtolower(str_replace('_', '-', $locale));
-
+		$network = $this->getSetting($journal->getId(), 'pln_network');
 		// retrieve the service document
 		$result = $this->_curlGet(
-			PLN_PLUGIN_NETWORK . PLN_PLUGIN_SD_IRI,
+			$network . PLN_PLUGIN_SD_IRI,
 			array(
 				'On-Behalf-Of: '.$this->getSetting($journalId, 'journal_uuid'),
 				'Journal-URL: '.$journal->getUrl(),
@@ -465,7 +481,14 @@ class PLNPlugin extends GenericPlugin {
 		);
 		
 		// stop here if we didn't get an OK
-		if ($result['status'] != PLN_PLUGIN_HTTP_STATUS_OK) return $result['status'];
+		if ($result['status'] != PLN_PLUGIN_HTTP_STATUS_OK) {
+			if($result['status'] === FALSE) {
+				error_log(__('plugins.generic.pln.error.network.servicedocument', array('error' => $result['error'])));
+			} else {
+				error_log(__('plugins.generic.pln.error.http.servicedocument', array('error' => $result['status'])));
+			}
+			return $result['status'];
+		}
 
 		$serviceDocument = new DOMDocument();
 		$serviceDocument->preserveWhiteSpace = false;

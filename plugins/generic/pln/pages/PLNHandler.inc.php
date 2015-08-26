@@ -33,28 +33,37 @@ class PLNHandler extends Handler {
 	 */
 	function deposits($args, &$request) {
 		$journal =& $request->getJournal();
-		$plnPlugin =& PluginRegistry::getPlugin('generic', PLN_PLUGIN_NAME);
 		$depositDao =& DAORegistry::getDAO('DepositDAO');
 		$fileManager = new FileManager();
+		$dispatcher = $request->getDispatcher();
 		
 		$depositUuid = (!isset($args[0]) || empty($args[0])) ? null : $args[0];
 
 		// sanitize the input
-		if (!preg_match('/^[[:xdigit:]]{8}-[[:xdigit:]]{4}-[[:xdigit:]]{4}-[[:xdigit:]]{4}-[[:xdigit:]]{12}$/',$depositUuid)) return FALSE;
+		if (!preg_match('/^[[:xdigit:]]{8}-[[:xdigit:]]{4}-[[:xdigit:]]{4}-[[:xdigit:]]{4}-[[:xdigit:]]{12}$/',$depositUuid)) {
+			error_log(__("plugins.generic.pln.error.handler.uuid.invalid"));
+			$dispatcher->handle404();
+			return FALSE;
+		}
 		
 		$deposit =& $depositDao->getDepositByUUID($journal->getId(),$depositUuid);
 		
-		if (!$deposit) return FALSE;
+		if (!$deposit) {
+			error_log(__("plugins.generic.pln.error.handler.uuid.notfound"));
+			$dispatcher->handle404();
+			return FALSE;
+		}
 		
-		$depositPackage = new DepositPackage($deposit);
+		$depositPackage = new DepositPackage($deposit, null);
 		$depositBag = $depositPackage->getPackageFilePath();
 		
-		if (!$fileManager->fileExists($depositBag)) return FALSE;
+		if (!$fileManager->fileExists($depositBag)) {
+			error_log("plugins.generic.pln.error.handler.file.notfound");
+			$dispatcher->handle404();
+			return FALSE;
+		}
 				
-		//TODO: Additional check here for journal UUID in HTTP header from staging server
-		
-		return $fileManager->downloadFile($depositBag, mime_content_type($depositBag), TRUE);
-		
+		return $fileManager->downloadFile($depositBag, mime_content_type($depositBag), TRUE);		
 	}
 
 	/**
