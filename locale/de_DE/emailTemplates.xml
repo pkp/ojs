@@ -457,11 +457,11 @@ Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Ze
 
 wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: "{$articleTitle}" gekommen.
 
-Unsere Entscheidung lautet:
+Unsere Entscheidung lautet: Beitrag annehmen
 
 {$editorialContactSignature}
 </body>
-		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
+		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung "Beitrag annehmen" zu ihrer/seiner Einreichung.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
 		<subject>Entscheidung der Redaktion</subject>
@@ -469,11 +469,11 @@ Unsere Entscheidung lautet:
 
 wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: "{$articleTitle}" gekommen.
 
-Unsere Entscheidung lautet:
+Unsere Entscheidung lautet: Überarbeitung erforderlich
 
 {$editorialContactSignature}
 </body>
-		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
+		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung "Überarbeitung erforderlich" zu ihrer/seiner Einreichung.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
 		<subject>Entscheidung der Redaktion</subject>
@@ -481,11 +481,11 @@ Unsere Entscheidung lautet:
 
 wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: "{$articleTitle}" gekommen.
 
-Unsere Entscheidung lautet:
+Unsere Entscheidung lautet: Erneut zur Begutachtung einreichen
 
 {$editorialContactSignature}
 </body>
-		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
+		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung "Erneut zur Begutachtung einreichen" zu ihrer/seiner Einreichung.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
 		<subject>Entscheidung der Redaktion</subject>
@@ -493,11 +493,11 @@ Unsere Entscheidung lautet:
 
 wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: "{$articleTitle}" gekommen.
 
-Unsere Entscheidung lautet:
+Unsere Entscheidung lautet: Beitrag ablehnen
 
 {$editorialContactSignature}
 </body>
-		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
+		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung "Beitrag ablehnen" zu ihrer/seiner Einreichung.</description>
 	</email_text>
 		<email_text key="COPYEDIT_REQUEST">
 		<subject>Bitte um ein Lektorat</subject>
