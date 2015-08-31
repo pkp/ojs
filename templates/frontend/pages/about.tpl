@@ -1,11 +1,12 @@
 {**
- * templates/frontend/pages/article.tpl
+ * templates/frontend/pages/about.tpl
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @brief Display the page to view an article with all of it's details.
+ * @brief Display the page to view a journal's description, contact details,
+ *  politics and more.
  *
  * @uses $contextSettings object Settings related to this page. Used for
  *       accessing contact details
