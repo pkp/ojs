@@ -97,7 +97,7 @@
 	<message key="manager.plugins.copyError">Das Plug-In wurde nicht erfolgreich kopiert</message>
 	<message key="manager.plugins.delete">Plug-In löschen</message>
 	<message key="manager.plugins.deleteConfirm">Sind Sie sicher, dass dieses Plug-In aus dem System entfernt werden soll?</message>
-	<message key="manager.plugins.deleteDescription">Wenn Sie löschen anklicken, wird das Plug-In aus dem Dateisystem des Servers entfernt.</message>
+	<message key="manager.plugins.deleteDescription">Wenn Sie "Löschen" anklicken, wird das Plug-In aus dem Dateisystem des Servers entfernt.</message>
 	<message key="manager.plugins.deleteError">Das Plug-In konnte nicht aus dem Dateisystem gelöscht werden.</message>
 	<message key="manager.plugins.deleteSuccess">Plug-In erfolgreich gelöscht</message>
 	<message key="manager.plugins.description">Diese Seite ermöglicht es der/dem Zeitschriftenverwalter/in, die aktuell installierten Plug-Ins zu überprüfen und ggf. zu konfigurieren. Plug-Ins sind nach ihren Funktionen in Kategorien eingeteilt. Die entsprechenden Ordnungskategorien sind unten aufgeführt, darunter jeweils die derzeitig eingesetzten Plug-Ins.</message>
@@ -112,8 +112,8 @@
 	<message key="manager.plugins.invalidPluginArchive">Das hochgeladene Plug-In-Archiv enthält keinen zum Plug-In-Namen passenden Ordner.</message>
 	<message key="manager.plugins.wrongCategory">Das hochgeladene Plug-In passt nicht zu der Kategorie des aktualisierten Plug-Ins.</message>
 	<message key="manager.plugins.wrongName">Die version.xml in dem hochgeladenen Plug-In enthält einen Plug-In-Namen, der nicht zu dem Namen des aktualisierten Plug-Ins passt.</message>
-	<message key="manager.plugins.pleaseInstall">Plug-In nicht verfügbar. Bitte wählen Sie installieren</message>
-	<message key="manager.plugins.pleaseUpgrade">Das Plug-In existiert bereits, ist aber neuer als die installierte Version. Bitte wählen Sie Upgrade</message>
+	<message key="manager.plugins.pleaseInstall">Plug-In nicht verfügbar. Bitte wählen Sie "Installieren".</message>
+	<message key="manager.plugins.pleaseUpgrade">Das Plug-In existiert bereits, ist aber neuer als die installierte Version. Bitte wählen Sie "Upgrade".</message>
 	<message key="manager.plugins.settings">Einstellungen</message>
 	<message key="manager.plugins.tarCommandNotFound">Der tar-Befehl ist nicht verfügbar. Bitte konfigurieren Sie ihn in Ihrer "config.inc.php".</message>
 	<message key="manager.plugins.upgrade">Upgrade Plug-In</message>
