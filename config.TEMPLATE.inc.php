@@ -246,7 +246,7 @@ session_check_ip = On
 encryption = md5
 
 ; The unique salt to use for generating password reset hashes
-salt = YouMustSetASecretKeyHere!!
+salt = "YouMustSetASecretKeyHere!!"
 
 ; Allowed HTML tags for fields that permit restricted HTML.
 ; For PHP 5.0.5 and greater, allowed attributes must be specified individually
