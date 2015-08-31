@@ -1,2 +1,3 @@
 # ignore common community plug-ins - add your own if you like
 /latexRender/
+/alm/
