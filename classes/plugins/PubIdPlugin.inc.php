@@ -167,7 +167,7 @@ abstract class PubIdPlugin extends Plugin {
 		$router = $request->getRouter();
 		import('lib.pkp.classes.linkAction.request.AjaxModal');
 		return array_merge(
-			array(
+			$this->getEnabled()?array(
 				new LinkAction(
 					'settings',
 					new AjaxModal(
@@ -177,7 +177,7 @@ abstract class PubIdPlugin extends Plugin {
 					__('manager.plugins.settings'),
 					null
 				),
-			),
+			):array(),
 			parent::getActions($request, $actionArgs)
 		);
 	}
