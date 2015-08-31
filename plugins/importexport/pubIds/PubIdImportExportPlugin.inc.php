@@ -13,9 +13,7 @@
  * @brief Public identifier import/export plugin
  */
 
-
-import('classes.plugins.ImportExportPlugin');
-
+import('lib.pkp.classes.plugins.ImportExportPlugin');
 import('lib.pkp.classes.xml.XMLCustomWriter');
 
 define('PID_DTD_URL', 'http://pkp.sfu.ca/ojs/dtds/2.3/pubIds.dtd');

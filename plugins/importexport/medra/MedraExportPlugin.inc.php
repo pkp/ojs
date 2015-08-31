@@ -13,7 +13,6 @@
  * @brief mEDRA Onix for DOI (O4DOI) export/registration plugin.
  */
 
-
 if (!class_exists('DOIExportPlugin')) { // Bug #7848
 	import('plugins.importexport.medra.classes.DOIExportPlugin');
 }

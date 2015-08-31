@@ -13,7 +13,7 @@
  * @brief CrossRef/MEDLINE XML metadata export plugin
  */
 
-import('classes.plugins.ImportExportPlugin');
+import('lib.pkp.classes.plugins.ImportExportPlugin');
 
 class CrossRefExportPlugin extends ImportExportPlugin {
 	/**

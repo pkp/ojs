@@ -13,7 +13,7 @@
  * @brief PubMed/MEDLINE XML metadata export plugin
  */
 
-import('classes.plugins.ImportExportPlugin');
+import('lib.pkp.classes.plugins.ImportExportPlugin');
 
 class PubMedExportPlugin extends ImportExportPlugin {
 	/**

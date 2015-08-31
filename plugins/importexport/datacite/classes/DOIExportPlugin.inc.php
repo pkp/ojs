@@ -13,7 +13,7 @@
  * @brief Base class for DOI export/registration plugins.
  */
 
-import('classes.plugins.ImportExportPlugin');
+import('lib.pkp.classes.plugins.ImportExportPlugin');
 
 // Export types.
 define('DOI_EXPORT_ISSUES', 0x01);

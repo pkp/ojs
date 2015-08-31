@@ -13,7 +13,6 @@
  * @brief Provide usage event to other statistics plugins.
  */
 
-
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 // Our own and OA-S classification types.
@@ -26,46 +25,50 @@ class UsageEventPlugin extends GenericPlugin {
 	// Implement methods from Plugin.
 	//
 	/**
-	* @see LazyLoadPlugin::register()
-	*/
+	 * @copydoc Plugin::register()
+	 */
 	function register($category, $path) {
-		$success = parent::register($category, $path);
+		if (!parent::register($category, $path)) return false;
 
-		if ($success) {
-			// Register callbacks.
-			HookRegistry::register('TemplateManager::display', array($this, 'getUsageEvent'));
-			HookRegistry::register('ArticleHandler::viewFile', array($this, 'getUsageEvent'));
-			HookRegistry::register('ArticleHandler::downloadFile', array($this, 'getUsageEvent'));
-			HookRegistry::register('IssueHandler::viewFile', array($this, 'getUsageEvent'));
-			HookRegistry::register('FileManager::downloadFileFinished', array($this, 'getUsageEvent'));
-		}
-
-		return $success;
+		// Register callbacks.
+		HookRegistry::register('TemplateManager::display', array($this, 'getUsageEvent'));
+		HookRegistry::register('ArticleHandler::viewFile', array($this, 'getUsageEvent'));
+		HookRegistry::register('ArticleHandler::downloadFile', array($this, 'getUsageEvent'));
+		HookRegistry::register('IssueHandler::viewFile', array($this, 'getUsageEvent'));
+		HookRegistry::register('FileManager::downloadFileFinished', array($this, 'getUsageEvent'));
+		return true;
 	}
 
 	/**
-	 * @see Plugin::getDisplayName()
+	 * @copydoc Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
 		return __('plugins.generic.usageEvent.displayName');
 	}
 
 	/**
-	 * @see Plugin::getDescription()
+	 * @copydoc Plugin::getDescription()
 	 */
 	function getDescription() {
 		return __('plugins.generic.usageEvent.description');
 	}
 
 	/**
-	 * @see LazyLoadPlugin::getEnabled()
+	 * @copydoc Plugin::getCanDisable()
+	 */
+	function getCanDisable() {
+		return false;
+	}
+
+	/**
+	 * @copydoc Plugin::getEnabled()
 	 */
 	function getEnabled() {
 		return true;
 	}
 
 	/**
-	* @see Plugin::isSitePlugin()
+	* @copydoc Plugin::isSitePlugin()
 	*/
 	function isSitePlugin() {
 		return true;
@@ -80,7 +83,7 @@ class UsageEventPlugin extends GenericPlugin {
 	 * @return mixed string or null
 	 */
 	function getUniqueSiteId() {
-		return $this->getSetting(0, 'uniqueSiteId');
+		return $this->getSetting(CONTEXT_SITE, 'uniqueSiteId');
 	}
 
 
