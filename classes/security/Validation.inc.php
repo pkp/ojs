@@ -14,6 +14,7 @@
  */
 
 import('classes.security.Role');
+import('classes.security.password');
 
 class Validation {
 
@@ -70,7 +71,12 @@ class Validation {
 				}
 			} else {
 				// Validate against OJS user database
-				$valid = ($user->getPassword() === Validation::encryptCredentials($username, $password));
+				$valid = Validation::verifyPassword($username, $password, $user->getPassword(), $rehash);
+                                
+				if ($valid && !empty($rehash)) {
+					// update to new hashing algorithm
+					$user->setPassword($rehash);
+				}
 			}
 		}
 
@@ -109,6 +115,38 @@ class Validation {
 
 			return $user;
 		}
+	}
+	
+	/**
+	 * verify if the input password is correct
+	 * 
+	 * @param string $username the string username
+	 * @param string $password the plaintext password
+	 * @param string $hash the password hash from the database
+	 * @param string &$rehash if password needs rehash, this variable is used
+	 * @return boolean
+	 */
+	function verifyPassword($username, $password, $hash, &$rehash) {
+		if (LEGACY_ENCRYPTION) {
+			// BCRYPT not supported
+			return $hash === Validation::encryptCredentials($username, $password, false, true);
+		}
+		else if (password_needs_rehash($hash, PASSWORD_BCRYPT)) {
+			// update to new hashing algorithm
+			$oldHash = Validation::encryptCredentials($username, $password, false, true);
+
+			if ($oldHash === $hash) {
+				// update hash
+				$rehash = Validation::encryptCredentials($username, $password);
+				
+				return true;
+			}
+		}
+		else if (password_verify($password, $hash)) {
+			return true;
+		}
+		
+		return false;
 	}
 
 	/**
@@ -170,7 +208,16 @@ class Validation {
 			if (isset($auth)) {
 				$valid = $auth->authenticate($username, $password);
 			} else {
-				$valid = ($user->getPassword() === Validation::encryptCredentials($username, $password));
+				// Validate against OJS user database
+				$valid = Validation::verifyPassword($username, $password, $user->getPassword(), $rehash);
+				
+				if ($valid && !empty($rehash)) {
+					// update to new hashing algorithm
+					$user->setPassword($rehash);
+					
+					// save new password hash to database
+					$userDao->updateObject($user);
+				}
 			}
 		}
 
@@ -206,26 +253,32 @@ class Validation {
 	 * Encrypt user passwords for database storage.
 	 * The username is used as a unique salt to make dictionary
 	 * attacks against a compromised database more difficult.
-	 * @param $username string username
+	 * @param $username string username (kept for backwards compatibility)
 	 * @param $password string unencrypted password
 	 * @param $encryption string optional encryption algorithm to use, defaulting to the value from the site configuration
+         * @param $legacy boolean if true, use legacy hashing technique for backwards compatibility
 	 * @return string encrypted password
 	 */
-	function encryptCredentials($username, $password, $encryption = false) {
-		$valueToEncrypt = $username . $password;
+	function encryptCredentials($username, $password, $encryption = false, $legacy = LEGACY_ENCRYPTION) {
+		if ($legacy || LEGACY_ENCRYPTION) {
+			$valueToEncrypt = $username . $password;
 
-		if ($encryption == false) {
-			$encryption = Config::getVar('security', 'encryption');
+			if ($encryption == false) {
+				$encryption = Config::getVar('security', 'encryption');
+			}
+
+			switch ($encryption) {
+				case 'sha1':
+					if (function_exists('sha1')) {
+						return sha1($valueToEncrypt);
+					}
+				case 'md5':
+				default:
+					return md5($valueToEncrypt);
+			}
 		}
-
-		switch ($encryption) {
-			case 'sha1':
-				if (function_exists('sha1')) {
-					return sha1($valueToEncrypt);
-				}
-			case 'md5':
-			default:
-				return md5($valueToEncrypt);
+		else {
+			return password_hash($password, PASSWORD_BCRYPT);
 		}
 	}
 
@@ -257,7 +310,33 @@ class Validation {
 			// No such user
 			return false;
 		}
-		return substr(md5($user->getId() . $user->getUsername() . $user->getPassword()), 0, 6);
+		// create hash payload
+		$salt = Config::getVar('security', 'salt');
+		
+		// use last login time to create a basic expiry coefficient
+		$lastLogin = strtotime($user->getDateLastLogin());
+		$time = time();
+		$normalised = ($time - ($time % 3600)) + 7200;
+		$diff = floor(($normalised - $lastLogin) / 3600);
+
+		$data = $user->getUsername() . $user->getPassword() . $lastLogin . $diff;
+		
+		if (function_exists('hash_hmac')) {
+			$algos = hash_algos();
+				
+			foreach (array('sha256', 'sha1', 'md5') as $algo) {
+				if (in_array($algo, $algos)) {
+					return hash_hmac($algo, $data, $salt);
+				}
+			}
+				
+		} else if (function_exists('sha1')) {
+			// use SHA1 is HMAC not available
+			return sha1($data . $salt);
+		}
+		
+		// fallback to MD5
+		return md5($data . $salt);
 	}
 
 	/**
