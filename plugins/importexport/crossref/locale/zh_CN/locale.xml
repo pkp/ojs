@@ -39,5 +39,5 @@
 	<message key="plugins.importexport.crossref.error.pluginNotConfigured"><![CDATA[Crossref 插件没有配置。在<a href="{$settingsUrl}">设置页</a>配置该款插件。]]></message>
 	<message key="plugins.importexport.crossref.error.DOIsNotAvailable"><![CDATA[DOI Public Identifier插件没有配置。在<a href="{$doiUrl}target="_" blank">DOI插件</a> 设置页配置该款插件。]]></message>
 	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[期刊出版商尚未设置。在 <a href="{$publisherUrl}" target="_blank">期刊设置Step 1.5</a>添加期刊出版商。]]></message>
-	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[OJS将在文章发表后自动存储文章的DOI到Crossref 。注意，该进程会花费一些时间。你可以检查所有尚未注册的DOI在<a href="">未注册文章列表</a>.]]></message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[OJS将在文章发表后自动存储文章的DOI到Crossref 。注意，该进程会花费一些时间。你可以检查所有尚未注册的DOI在<a href="{$unregisteredURL}">未注册文章列表</a>.]]></message>
 </locale>
