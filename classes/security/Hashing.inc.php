@@ -75,13 +75,13 @@ class Hashing {
 				 *
 				 * we can't use that directly because namespaces may not be supported
 				 * which will cause a syntax error
-			     */
-                if (function_exists('crypt')) {
-                    $hash = '$2y$04$usesomesillystringfore7hnbRJHxXVLeakoG8K30oukPsA.ztMG';
-                    $supported = (crypt("password", $hash) == $hash);
-                }
+				 */
+				if (function_exists('crypt')) {
+					$hash = '$2y$04$usesomesillystringfore7hnbRJHxXVLeakoG8K30oukPsA.ztMG';
+					$supported = (crypt("password", $hash) == $hash);
+				}
 			}
-        }
+		}
 		
 		return $supported;
 	}
