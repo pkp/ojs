@@ -58,7 +58,7 @@ class Hashing {
 	
 	/**
 	 * Is password library supported?
-	 
+	 *
 	 * @return boolean
 	 */
 	function isSupported() {
