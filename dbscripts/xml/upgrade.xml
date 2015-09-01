@@ -11,7 +11,7 @@
   *
   -->
 
-<install version="2.4.6.1">
+<install version="2.4.7">
 	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
 		<!-- Correct null public issue IDs; this caused problems with
 		     2.x -> 2.2.0 upgrades using public issue IDs.-->
@@ -373,10 +373,6 @@
 
 	<upgrade minversion="2.0.0.0" maxversion="2.4.6.0">
 		<note file="docs/release-notes/README-BEACON" />
-	</upgrade>
-
-	<upgrade minversion="2.0.0.0" maxversion="2.4.6.1">
-		<data file="dbscripts/xml/upgrade/2.4.6_update.xml" />
 	</upgrade>
 	
 	<!-- update plugin configuration - should be done as the final upgrade task -->
