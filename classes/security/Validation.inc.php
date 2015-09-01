@@ -14,7 +14,7 @@
  */
 
 import('classes.security.Role');
-import('classes.security.password');
+import('classes.security.Hashing');
 
 class Validation {
 
@@ -127,11 +127,11 @@ class Validation {
 	 * @return boolean
 	 */
 	function verifyPassword($username, $password, $hash, &$rehash) {
-		if (LEGACY_ENCRYPTION) {
-			// BCRYPT not supported
+		if (!Hashing::isSupported()) {
+			// modern hashing not supported
 			return $hash === Validation::encryptCredentials($username, $password, false, true);
 		}
-		else if (password_needs_rehash($hash, PASSWORD_BCRYPT)) {
+		else if (Hashing::needsRehash($hash)) {
 			// update to new hashing algorithm
 			$oldHash = Validation::encryptCredentials($username, $password, false, true);
 
@@ -142,11 +142,8 @@ class Validation {
 				return true;
 			}
 		}
-		else if (password_verify($password, $hash)) {
-			return true;
-		}
 		
-		return false;
+		return Hashing::isValid($password, $hash);
 	}
 
 	/**
@@ -256,11 +253,15 @@ class Validation {
 	 * @param $username string username (kept for backwards compatibility)
 	 * @param $password string unencrypted password
 	 * @param $encryption string optional encryption algorithm to use, defaulting to the value from the site configuration
-         * @param $legacy boolean if true, use legacy hashing technique for backwards compatibility
+     * @param $legacy boolean if true, use legacy hashing technique for backwards compatibility
 	 * @return string encrypted password
 	 */
-	function encryptCredentials($username, $password, $encryption = false, $legacy = LEGACY_ENCRYPTION) {
-		if ($legacy || LEGACY_ENCRYPTION) {
+	function encryptCredentials($username, $password, $encryption = false, $legacy = null) {
+		if (!isset($legacy)) {
+			$legacy = !Hashing::isSupported();
+		}
+		
+		if ($legacy) {
 			$valueToEncrypt = $username . $password;
 
 			if ($encryption == false) {
@@ -278,7 +279,7 @@ class Validation {
 			}
 		}
 		else {
-			return password_hash($password, PASSWORD_BCRYPT);
+			return Hashing::getHash($password);
 		}
 	}
 
