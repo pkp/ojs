@@ -314,13 +314,8 @@ class Validation {
 		// create hash payload
 		$salt = Config::getVar('security', 'salt');
 		
-		// use last login time to create a basic expiry coefficient
-		$lastLogin = strtotime($user->getDateLastLogin());
-		$time = time();
-		$normalised = ($time - ($time % 3600)) + 7200;
-		$diff = floor(($normalised - $lastLogin) / 3600);
-
-		$data = $user->getUsername() . $user->getPassword() . $lastLogin . $diff;
+		// use last login time to ensure the hash changes when they log in
+		$data = $user->getUsername() . $user->getPassword() . $user->getDateLastLogin();
 		
 		if (function_exists('hash_hmac')) {
 			$algos = hash_algos();
