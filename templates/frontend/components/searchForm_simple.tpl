@@ -7,7 +7,7 @@
  *
  * @brief Simple display of a search form with just text input and search button
  *
- * @uses $context Journal The current journal
+ * @uses $currentJournal Journal The current journal
  * @uses $searchQuery string Previously input search query
  *}
 {if !$currentJournal || $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
