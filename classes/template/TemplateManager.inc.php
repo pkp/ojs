@@ -79,6 +79,14 @@ class TemplateManager extends PKPTemplateManager {
 					$this->addStyleSheet($request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()) . '/' . $contextStyleSheet['uploadName'], STYLE_SEQUENCE_LAST);
 				}
 
+				// Get a link to the settings page for the current context.
+				// This allows us to reduce template duplication by using this
+				// variable in templates/common/header.tpl, instead of
+				// reproducing a lot of OMP/OJS-specific logic there.
+				$router = $request->getRouter();
+				$dispatcher = $request->getDispatcher();
+				$this->assign( 'contextSettingsUrl', $dispatcher->url($request, ROUTE_PAGE, null, 'management', 'settings', 'journal') );
+
 				import('classes.payment.ojs.OJSPaymentManager');
 				$paymentManager = new OJSPaymentManager($request);
 				$this->assign('journalPaymentsEnabled', $paymentManager->isConfigured());
