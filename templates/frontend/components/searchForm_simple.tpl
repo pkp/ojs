@@ -1,11 +1,16 @@
 {**
- * templates/header/search.tpl
+ * templates/frontend/components/searchForm_simple.tpl
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Common search box.
+ * @brief Simple display of a search form with just text input and search button
+ *
+ * @uses $context Journal|Press Current context. A journal in OJS and Press in OMP
+ * @uses $actionUrl string URL for the form action parameter
+ * @uses $searchQuery string Previously input search query
+ * @uses $searchLabelKey string Translation string key for the search button label
  *}
 {if !$currentJournal || $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 	<form class="pkp_search" action="{url page="search" op="search"}" method="post">
