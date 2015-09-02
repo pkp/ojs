@@ -7,10 +7,8 @@
  *
  * @brief Simple display of a search form with just text input and search button
  *
- * @uses $context Journal|Press Current context. A journal in OJS and Press in OMP
- * @uses $actionUrl string URL for the form action parameter
+ * @uses $context Journal The current journal
  * @uses $searchQuery string Previously input search query
- * @uses $searchLabelKey string Translation string key for the search button label
  *}
 {if !$currentJournal || $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 	<form class="pkp_search" action="{url page="search" op="search"}" method="post">
