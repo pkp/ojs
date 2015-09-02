@@ -32,9 +32,10 @@
 		<div id="authorGuidelines" class="author_guidelines">
 			<h2>
 				{translate key="about.authorGuidelines"}
-				{include file="frontend/components/editLink.tpl" page="management" op="settings" path="journal" anchor="guides" sectionTitleKey="about.authorGuidelines"}
+				{include file="frontend/components/editLink.tpl" page="management" op="settings" path="journal" anchor="guidelines" sectionTitleKey="about.authorGuidelines"}
 			</h2>
 			{$currentJournal->getLocalizedSetting('authorGuidelines')|nl2br}
+		</div>
 	{/if}
 
 	{if $submissionChecklist}
