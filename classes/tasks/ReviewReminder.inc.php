@@ -43,7 +43,7 @@ class ReviewReminder extends ScheduledTask {
 
 		$reviewerAccessKeysEnabled = $context->getSetting('reviewerAccessKeysEnabled');
 
-		$email = new ArticleMailTemplate($submission, $reviewerAccessKeysEnabled?'REVIEW_REMIND_AUTO_ONECLICK':'REVIEW_REMIND_AUTO', $context->getPrimaryLocale(), false, $context);
+		$email = new ArticleMailTemplate($submission, $reviewerAccessKeysEnabled?'REVIEW_REMIND_AUTO_ONECLICK':'REVIEW_REMIND_AUTO', $context->getPrimaryLocale(), $context, false);
 		$email->setContext($context);
 		$email->setReplyTo(null);
 		$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());

@@ -74,7 +74,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		);
 
 		import('lib.pkp.classes.mail.MailTemplate');
-		$mail = new MailTemplate($emailKey, $journal->getPrimaryLocale());
+		$mail = new MailTemplate($emailKey, $journal->getPrimaryLocale(), $journal, false);
 		$mail->setReplyTo($subscriptionEmail, $subscriptionName);
 		$mail->addRecipient($user->getEmail(), $user->getFullName());
 		$mail->setSubject($mail->getSubject($journal->getPrimaryLocale()));

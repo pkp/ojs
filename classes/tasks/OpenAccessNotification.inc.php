@@ -35,7 +35,7 @@ class OpenAccessNotification extends ScheduledTask {
 		if ($users->getCount() != 0) {
 
 			import('lib.pkp.classes.mail.MailTemplate');
-			$email = new MailTemplate('OPEN_ACCESS_NOTIFY', $journal->getPrimaryLocale());
+			$email = new MailTemplate('OPEN_ACCESS_NOTIFY', $journal->getPrimaryLocale(), $journal, false);
 
 			$email->setSubject($email->getSubject($journal->getPrimaryLocale()));
 			$email->setReplyTo(null);
