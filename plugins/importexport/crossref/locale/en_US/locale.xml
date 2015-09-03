@@ -45,4 +45,5 @@
 ]]></message>
 
 	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">The date published is missing for the article with ID {$param}.</message>
+	<message key="plugins.importexport.crossref.senderTask.name">CrossRef info sender</message>
 </locale>
