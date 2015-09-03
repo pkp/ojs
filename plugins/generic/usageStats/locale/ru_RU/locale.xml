@@ -19,6 +19,8 @@
 	<message key="plugins.generic.usageStats.settings.logParseRegex">Регулярное выражение для разбора файлов журнала</message>
 	<message key="plugins.generic.usageStats.settings.logParseRegex.description">Регулярное выражение, используемое по умолчанию, может разибрать файлы журнала доступа apache в комбинированном формате, а также файлы журнала, создаваемые плагином. Если ваши файлы журнала доступа формируются в другом формате, то вам необходимо вставить регулярное выражение, которое может разобрать его и выдать ожидаемые значения. Для получения более подробной информации смотрите UsageStatsLoader::_getDataFromLogEntry().</message>
 	<message key="plugins.generic.usageStats.settings.saved">Настройки плагина «Статистика использования» сохранены</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Включите этот параметр, если вы хотите использовать версию плагина, которая учитывает требования законов о конфиденциальности, то есть хранит хэшированные IP-адреса, сообщает пользователям об отслеживании информации и дает возможность пользователям отказаться. Обратите внимание: при включении этого параметра нельзя будет воспользоваться возможностями плагина, связанными с географическим местоположением.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Учитывать требования конфиденциальности данных</message>
 	
 	<message key="plugins.generic.usageStats.usageStatsLoaderName">Задача загрузчика файлов статистики использования</message>
 	<message key="plugins.generic.usageStats.openFileFailed">Файл «{$file}» не может быть открыт и был отклонен.</message>
@@ -34,6 +36,20 @@
 	
 	<message key="plugins.reports.usageStats.report.displayName">Отчет о статистике использования OJS</message>
 	<message key="plugins.reports.usageStats.report.description">Отчет о статистике использования OJS, формируемый по умолчанию (готовый для COUNTER)</message>
+	
+	<message key="plugins.reports.usageStats.optout.displayName">Информация о конфиденциальности плагина «Статистика использования»</message>
+	<message key="plugins.reports.usageStats.optout.description">Информация о конфиденциальности плагина «Статистика использования»</message>
+	<message key="plugins.generic.usageStats.optout.title">Информация о конфиденциальности</message>
+	<message key="plugins.generic.usageStats.optout.shortDesc"><![CDATA[Мы сохраняем анонимные данные о статистике использования. Пожалуйста прочтите подробности в <a href="{$privacyInfo}">Информации о конфиденциальности</a>.]]></message>	
+	<message key="plugins.generic.usageStats.optout.done">Вы отказались от сбора статистики использования. Пока вы видите это сообщение, статистика о вашем использовании этого сайта не будет собираться. Щелкните на кнопке ниже, чтобы изменить свое решение.</message>
+	<message key="plugins.generic.usageStats.optin">Разрешить</message>
+	<message key="plugins.generic.usageStats.optout">Отклонить</message>
+	<message key="plugins.generic.usageStats.optout.cookie">
+		Если вы щелкните ниже на кнопке «Отклонить», ваш браузер получит специальный файл cookie, который не даст собирать статистику до тех пор, пока
+		этот файл будет сохраняться в вашем браузере. Информация об отказе от сбора будет храниться в течение одного года и будет возобновлена на следующий год, как только вы войдете в OJS. 
+		Файл cookie не содержит никакой информации, которая бы позволяла вас идентифицировать. Пожалуйста, обратите внимание, что если вы используете другой браузер или вы удалите файлы cookie из вашего
+		браузера, то вы должны снова отказаться от сбора статистики, так как мы не храним никакую персональную информацию о вас на нашем сервере, чтобы сохранить вашу конфиденциальность.
+	</message>
 	
 	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
 	<message key="plugins.reports.usageStats.metricType.full">Статистика Open Journal Systems (готовая для COUNTER)</message>
