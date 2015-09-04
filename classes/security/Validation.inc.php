@@ -303,9 +303,10 @@ class Validation {
 	/**
 	 * Generate a hash value to use for confirmation to reset a password.
 	 * @param $userId int
+	 * @param $expiry int timestamp when hash expires, defaults to CURRENT_TIME + RESET_SECONDS
 	 * @return string (boolean false if user is invalid)
 	 */
-	function generatePasswordResetHash($userId) {
+	function generatePasswordResetHash($userId, $expiry = null) {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		if (($user = $userDao->getUser($userId)) == null) {
 			// No such user
@@ -314,27 +315,56 @@ class Validation {
 		// create hash payload
 		$salt = Config::getVar('security', 'salt');
 		
-		// use last login time to ensure the hash changes when they log in
-		$data = $user->getUsername() . $user->getPassword() . $user->getDateLastLogin();
+		if (empty($expiry)) {
+			$expires = (int) Config::getVar('security', 'reset_seconds');
 		
+			if (empty($expires)) {
+				$expires = 7200; // defaults to 2 hours
+			}
+			
+			$expiry = time() + $expires;
+		}
+		
+		// use last login time to ensure the hash changes when they log in
+		$data = $user->getUsername() . $user->getPassword() . $user->getDateLastLogin() . $expiry;
+		
+		// generate hash and append expiry timestamp
 		if (function_exists('hash_hmac')) {
 			$algos = hash_algos();
 				
 			foreach (array('sha256', 'sha1', 'md5') as $algo) {
 				if (in_array($algo, $algos)) {
-					return hash_hmac($algo, $data, $salt);
+					return hash_hmac($algo, $data, $salt) . ':' . $expiry;
 				}
 			}
 				
 		} else if (function_exists('sha1')) {
-			// use SHA1 is HMAC not available
-			return sha1($data . $salt);
+			// use SHA1 if HMAC not available
+			return sha1($data . $salt) . ':' . $expiry;
 		}
 		
 		// fallback to MD5
-		return md5($data . $salt);
+		return md5($data . $salt) . ':' . $expiry;
 	}
 
+	/**
+	 * Check if provided password reset hash is valid.
+	 * @param $userId int
+	 * @param $hash string
+	 * @return boolean
+	 */
+	function verifyPasswordResetHash($userId, $hash) {
+		// append ":" to ensure the explode results in at least 2 elements
+		list(, $expiry) = explode(':', $hash . ':');
+
+		if (empty($expiry) || ((int) $expiry < time())) {
+			// expired
+			return false;
+		}
+
+		return ($hash === Validation::generatePasswordResetHash($userId, $expiry));
+	}
+		
 	/**
 	 * Suggest a username given the first and last names.
 	 * @return string

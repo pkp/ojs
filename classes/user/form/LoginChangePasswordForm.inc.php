@@ -32,7 +32,7 @@ class LoginChangePasswordForm extends Form {
 		} else {
 			$userDao = DAORegistry::getDAO('UserDAO');
 			$this->addCheck(new FormValidatorCustom($this, 'confirmHash', 'required', 'user.profile.form.hashInvalid',
-							create_function('$confirmHash,$form,$userDao', '$user = $userDao->getByUsername($form->getData(\'username\')); return $user && (Validation::generatePasswordResetHash($user->getId()) == $form->getData(\'confirmHash\'));'), array(&$this, $userDao)));
+							create_function('$confirmHash,$form,$userDao', '$user = $userDao->getByUsername($form->getData(\'username\')); return $user && Validation::verifyPasswordResetHash($user->getId(), $form->getData(\'confirmHash\'));'), array(&$this, $userDao)));
 		}
 		$this->addCheck(new FormValidatorLength($this, 'password', 'required', 'user.register.form.passwordLengthTooShort', '>=', $site->getMinPasswordLength()));
 		$this->addCheck(new FormValidator($this, 'password', 'required', 'user.profile.form.newPasswordRequired'));
