@@ -55,6 +55,8 @@ class UsageStatsSettingsForm extends Form {
 	function display() {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pluginName', $this->plugin->getName());
+		$saltFilepath = Config::getVar('usageStats', 'salt_filepath');
+		$templateMgr->assign('saltFilepath', $saltFilepath && file_exists($saltFilepath) && is_writable($saltFilepath));
 		parent::display();
 	}
 

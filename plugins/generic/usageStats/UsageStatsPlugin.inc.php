@@ -306,9 +306,42 @@ class UsageStatsPlugin extends GenericPlugin {
 	 * @param $usageEvent array
 	 */
 	function _writeUsageEventInLogFile($usageEvent) {
+		$salt = null;
 		if ($this->getSetting(CONTEXT_ID_NONE, 'dataPrivacyOption')) {
-			// TODO: Get the salt
-			$salt = 'ToBeSolved';
+			// Salt management.
+			if (!Config::getVar('usageStats', 'salt_filepath')) return false;
+			$saltFilename = Config::getVar('usageStats', 'salt_filepath');
+			$currentDate = date("Ymd");
+			$saltFilenameLastModified = date("Ymd", filemtime($saltFilename));
+			$file = fopen($saltFilename, 'r');
+			$salt = trim(fread($file,filesize($saltFilename)));
+			fclose($file);
+			if (empty($salt) || ($currentDate != $saltFilenameLastModified)) {
+				if(function_exists('mcrypt_create_iv')) {
+					$newSalt = bin2hex(mcrypt_create_iv(16, MCRYPT_DEV_URANDOM|MCRYPT_RAND));
+				} elseif (function_exists('openssl_random_pseudo_bytes')){
+					$newSalt = bin2hex(openssl_random_pseudo_bytes(16, $cstrong));
+				} elseif (file_exists('/dev/urandom')){
+					$newSalt = bin2hex(file_get_contents('/dev/urandom', false, null, 0, 16));
+				} else {
+					$newSalt = mt_rand();
+				}
+				$file = fopen($saltFilename,'wb');
+				if (flock($file, LOCK_EX)) {
+					fwrite($file, $newSalt);
+					flock($file, LOCK_UN);
+				} else {
+					// Couldn't lock the file.
+					assert(false);
+				}
+				fclose($file);
+				$salt = $newSalt;
+			}
+		}
+
+		// Manage the IP address (evtually hash it)
+		if ($this->getSetting(CONTEXT_ID_NONE, 'dataPrivacyOption')) {
+			if (!isset($salt)) return false;
 			// Hash the IP
 			$hashedIp = $this->_hashIp($usageEvent['ip'], $salt);
 			// Never store unhashed IPs!
@@ -324,7 +357,7 @@ class UsageStatsPlugin extends GenericPlugin {
 			$desiredParams[] = '-';
 		}
 
-		if (isset($usageEvent['user'])) {
+		if (!$this->getSetting(CONTEXT_ID_NONE, 'dataPrivacyOption') && isset($usageEvent['user'])) {
 			$desiredParams[] = $usageEvent['user']->getId();
 		} else {
 			$desiredParams[] = '-';
@@ -355,6 +388,7 @@ class UsageStatsPlugin extends GenericPlugin {
 		}
 
 		$filePath = $usageEventFilesPath . DIRECTORY_SEPARATOR . $filename;
+		// Log the entry
 		$fp = fopen($filePath, 'ab');
 		if (flock($fp, LOCK_EX)) {
 			fwrite($fp, $usageLogEntry);

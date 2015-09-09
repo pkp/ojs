@@ -1,0 +1,21 @@
+Data Privacy Option
+--------------------
+
+REQUIREMENTS:
+In order to use the data privacy option, insert the section "[usageSats]" in the
+config.inc.php file and define the variable "salt_filepath" there, e.g. like this:
+
+[usageStats]
+salt_filepath = /path/to/your/salt_file
+
+The file must exist, must be readable and writable for the web user and
+must NOT be backed up (in order to ensure the privacy protection)!!!
+
+This option will hash the logged IP addresses using a randomly generated salt that will be daily changed.
+The salt is randomly generated either using:
+- the function mcrypt_create_iv, which requires the PHP mcrypt
+- the function openssl_random_pseudo_bytes, which requires the PHP openssl
+- the file /dev/urandom, which works only on *nix systems
+- the function mt_rand, which is not cryptographically safe.
+Thus, if you are using a Windows server, please ensure that you install either the PHP mcrypt or openssl,
+in order to have the cryptographically safe generated salt.

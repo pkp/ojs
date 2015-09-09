@@ -36,20 +36,25 @@
 	<message key="plugins.reports.usageStats.report.displayName">OJS-Nutzungsstatistik-Bericht</message>
 	<message key="plugins.reports.usageStats.report.description">OJS-Standardbericht zur Nutzungsstatistik (COUNTER-fähig)</message>
 
-	<message key="plugins.reports.usageStats.optout.displayName">Nutzungsstatistiken: Datenschutz-Hinweise</message>
-	<message key="plugins.reports.usageStats.optout.description">Nutzungsstatistiken: Datenschutz-Hinweise</message>
-	<message key="plugins.generic.usageStats.optout.title">Datenschutz-Hinweise</message>
-	<message key="plugins.generic.usageStats.optout.shortDesc"><![CDATA[Wir protokollieren anonymisierte Nutzungsstatistiken. Bitte lesen Sie die <a href="{$privacyInfo}">Datenschutz-Hinweise</a> für Details.]]></message>	
-	<message key="plugins.generic.usageStats.optout.done">Sie haben der Sammlung von Nutzungsinformationen widersprochen. Solange Sie diese Nachricht sehen, werden keine Statistiken Ihrer Nutzung dieser Website erhoben. Klicken Sie den Knopf unten um Ihre Entscheidung rückgängig zu machen.</message>
-	<message key="plugins.generic.usageStats.optin">Einwilligen</message>
-	<message key="plugins.generic.usageStats.optout">Widersprechen</message>
-	<message key="plugins.generic.usageStats.optout.cookie">
-		Wenn Sie den Widersprechen-Knopf unten klicken, wird Ihr Browser ein Opt-Out-Cookie erhalten, und es werden keine Statistikdaten gesammelt werden, solange
-		dieser Cookie in Ihrem Browser gespeichert ist. Die Opt-Out-Information wird für ein Jahr gespeichert und wird um ein Jahr verlängert, wenn Sie auf OJS zugreifen. Der
-		Cookie enthält keine Informationen, die Sie identifizieren können. Bitte beachten Sie, dass Sie erneut widersprechen müssen, wenn Sie einen anderen Browser benutzen
-		oder Cookies aus Ihrem Browser löschen, da wir aus Datenschutzgründen keine Informationen über Sie auf Serverseite speichern.
-	</message>
-
+	<message key="plugins.generic.usageStats.optout.description"><![CDATA[
+		<h3>Allgemeine Datenschutzhinweise</h3>
+		<p>Unsere allgemeinen Datenschutzhinweise finden Sie <a href="{$privacyStatementUrl}">hier</a>.</p>
+		<h3>Nutzungsstatistik</h3>
+		<p>Zum Zwecke der Analyse von Nutzung und Reichweite unseres Journals sowie der hier publizierten Artikel dokumentieren und speichern wir die Zugriffe auf die Hauptseite des Journals, auf Ausgaben, Artikel, Fahnen und zusätzlichen Dateien. Dabei werden alle Informationen anonymisiert. IP-Adressen werden mittels eines Hash-Algorithmus (<em>SHA 256</em>) in Kombination mit einem <em>sicheren 64-Zeichen Salt</em> anonymisiert. Der Salt wird <em>automatisch zufallsgeneriert und täglich überschrieben.</em> Auf diese Weise können IP-Adressen nachträglich nicht mehr rekonstruiert werden.</p>
+		<p>Über die anonymisierten IP-Adressen hinaus werden folgende Daten erhoben:
+		<ul>
+		<li>Zugriffsart (z.B. administrative Zugriffe)</li>
+		<li>Zugriffszeit</li>
+		<li>aufgerufene URL</li>
+		<li>HTTP-Status-Code</li>
+		<li>Browser</li>
+		</ul>
+		</p>
+		<p>Die gesammelten Informationen werden nur verwendet, um die Nutzung der Inhalte statistisch auszuwerten. Es findet keine Zuordnung von IP-Adressen zu Benutzer-IDs statt. Es ist technisch unmöglich, nachträglich einen spezifischen Datensatz zu einer spezifischen IP-Adresse nachzuverfolgen.</p>]]></message> 
+	<message key="plugins.generic.usageStats.optout.cookie"><![CDATA[
+		<p>Sollten sie den Wunsch haben, dass Ihre anonymisierten Daten nicht gespeichert werden, bieten wir Ihnen die Möglichkeit, die Teilnahme am Auswertungsprozess zu unterbinden. Durch einen Klick auf den unten stehenden Opt-out-Button wird ein sog. <em>Cookie</em> auf Ihrem System erstellt, das Ihre Entscheidung dokumentiert und speichert. Sollten die Sicherheits- oder Privatsphären-Einstellungen Ihres Browser Cookies automatisch nach Beendigung löschen, müssen Sie beim nächsten Zugriff auf diese Seite erneut dem Auswertungsprozess widersprechen. Das Cookie ist jeweils nur für einen Browser gültig. Sollten Sie unterschiedliche Browser benutzen, so müssen Sie für jeden Browser Ihren Widerspruch dokumentieren und auf den unten stehenden Button klicken. Innerhalb des Cookies werden keinerlei personenbezogene Daten gespeichert, sondern lediglich Ihr Widerspruch dokumentiert. Dieses Cookie wird bei jedem Zugriff auf dieses Journal automatisch um ein Jahr verlängert.</p>
+		<p>Bitte berücksichtigen Sie, dass die allgemeinen Server-Logs von Ihrer Entscheidung unberührt bleiben, am detaillierten Evaluationsprozess nicht teilzunehmen. Berücksichtigen Sie daher auch unsere <a href="{$privacyStatementUrl}">allgemeinen Datenschutzhinweise</a>.</p>]]></message>
+	
 	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
 	<message key="plugins.reports.usageStats.metricType.full">Open-Journal-Systems-Statistiken (COUNTER-fähig)</message>
 </locale>

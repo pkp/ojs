@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/generic/oas/UsageStatsHandler.inc.php
+ * @file plugins/generic/usageStats/UsageStatsHandler.inc.php
  *
  * Copyright (c) 2013-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
@@ -50,6 +50,9 @@ class UsageStatsHandler extends Handler {
 			}
 		}
 
+		$router = $request->getRouter(); /* @var $router PageRouter */
+		$privacyStatementUrl = $router->url($request, null, 'about', 'submissions', null, null, 'privacyStatement');
+
 		// Display the privacy info page.
 		$this->setupTemplate($request);
 		$plugin = $this->_getPlugin();
@@ -57,7 +60,7 @@ class UsageStatsHandler extends Handler {
 		$templateMgr->assign('pageTitle', 'plugins.generic.usageStats.optout.title');
 		$templateMgr->assign('usageStatsDisplayPrivacyInfo', true);
 		$templateMgr->assign('hasOptedOut', ($request->getCookieVar('usageStats-opt-out') ? true : false));
-		$templateMgr->assign('privacyMessage', $plugin->getSetting(0, 'privacyMessage'));
+		$templateMgr->assign('privacyStatementUrl', $privacyStatementUrl);
 		$templateMgr->display($plugin->getTemplatePath().'privacyInformation.tpl');
 	}
 
