@@ -144,6 +144,7 @@ class EditAssignmentDAO extends DAO {
 		$editAssignment->setIsEditor($row['editor_role_id']==ROLE_ID_EDITOR?1:0);
 		$editAssignment->setDateUnderway($this->datetimeFromDB($row['date_underway']));
 		$editAssignment->setDateNotified($this->datetimeFromDB($row['date_notified']));
+		$editAssignment->setDateAssigned($this->datetimeFromDB($row['date_assigned']));
 
 		HookRegistry::call('EditAssignmentDAO::_returnEditAssignmentFromRow', array(&$editAssignment, &$row));
 
@@ -157,9 +158,10 @@ class EditAssignmentDAO extends DAO {
 	function insertEditAssignment(&$editAssignment) {
 		$this->update(
 			sprintf('INSERT INTO edit_assignments
-				(article_id, editor_id, can_edit, can_review, date_notified, date_underway)
+				(article_id, editor_id, can_edit, can_review, date_assigned, date_notified, date_underway)
 				VALUES
-				(?, ?, ?, ?, %s, %s)',
+				(?, ?, ?, ?, %s, %s, %s)',
+				$this->datetimeToDB($editAssignment->getDateAssigned()),
 				$this->datetimeToDB($editAssignment->getDateNotified()),
 				$this->datetimeToDB($editAssignment->getDateUnderway())),
 			array(
@@ -185,9 +187,11 @@ class EditAssignmentDAO extends DAO {
 					editor_id = ?,
 					can_review = ?,
 					can_edit = ?,
+					date_assigned = %s,                                        
 					date_notified = %s,
 					date_underway = %s
 				WHERE edit_id = ?',
+				$this->datetimeToDB($editAssignment->getDateAssigned()),
 				$this->datetimeToDB($editAssignment->getDateNotified()),
 				$this->datetimeToDB($editAssignment->getDateUnderway())),
 			array(
