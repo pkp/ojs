@@ -19,27 +19,27 @@
 {/if}
 
 <ul>
-	{if !$currentJournal->getSetting('disableUserReg')}<li id="linkDisableUserReg"><a href="{url page="about" op="submissions" anchor="onlineSubmissions"}">{translate key="about.onlineSubmissions"}</a></li>{/if}
+	<li id="linkDisableUserReg"><a href="{url page="about" op="submissions" anchor="onlineSubmissions"}">{translate key="about.onlineSubmissions"}</a></li>
 	{if $currentJournal->getLocalizedSetting('authorGuidelines') != ''}<li id="linkAuthorGuidelines"><a href="{url page="about" op="submissions" anchor="authorGuidelines"}">{translate key="about.authorGuidelines"}</a></li>{/if}
 	{if $currentJournal->getLocalizedSetting('copyrightNotice') != ''}<li id="linkCopyrightNotice"><a href="{url page="about" op="submissions" anchor="copyrightNotice"}">{translate key="about.copyrightNotice"}</a></li>{/if}
 	{if $currentJournal->getLocalizedSetting('privacyStatement') != ''}<li id="linkPrivacyStatement"><a href="{url page="about" op="submissions" anchor="privacyStatement"}">{translate key="about.privacyStatement"}</a></li>{/if}
 	{if $authorFees}<li id="linkAuthorFees"><a href="{url page="about" op="submissions" anchor="authorFees"}">{translate key="about.authorFees"}</a></li>{/if}
 </ul>
 
-{if !$currentJournal->getSetting('disableUserReg')}
-	<div id="onlineSubmissions">
-		<h3>{translate key="about.onlineSubmissions"}</h3>
-		<p>
-			{translate key="about.onlineSubmissions.haveAccount" journalTitle=$siteTitle|escape}<br />
-			<a href="{url page="login"}" class="action">{translate key="about.onlineSubmissions.login"}</a>
-		</p>
+<div id="onlineSubmissions">
+	<h3>{translate key="about.onlineSubmissions"}</h3>
+	<p>
+		{translate key="about.onlineSubmissions.haveAccount" journalTitle=$siteTitle|escape}<br />
+		<a href="{url page="login"}" class="action">{translate key="about.onlineSubmissions.login"}</a>
+	</p>
+	{if !$currentJournal->getSetting('disableUserReg')}
 		<p>
 			{translate key="about.onlineSubmissions.needAccount"}<br />
 			<a href="{url page="user" op="register"}" class="action">{translate key="about.onlineSubmissions.registration"}</a>
 		</p>
 		<p>{translate key="about.onlineSubmissions.registrationRequired"}</p>
-	</div>
-{/if}
+	{/if}
+</div>
 
 <div class="separator">&nbsp;</div>
 
