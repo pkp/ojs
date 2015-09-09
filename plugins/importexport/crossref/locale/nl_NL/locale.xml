@@ -42,7 +42,7 @@
 		maar u kunt uw DOIs niet registeren bij  CrossRef vanuit OJS.
 		Merk op dat het wachtwoord als test wordt opgeslagen, dus niet versleutel, vanwege
 		de eisen van de CrossRef registratieservice.]]></message>
-	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[OJS stuurt artikel-DIO's automatisch naar Crossref als artikelen gepubliceerd worden. Merk op dat het verwerken daarvan enige tijd in beslag kan nemen. U kunt alle niet-geregistreerde DOI's opzoeken in de <a href="">lijst niet-geregistreerd DOI's]]></message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[OJS stuurt artikel-DIO's automatisch naar Crossref als artikelen gepubliceerd worden. Merk op dat het verwerken daarvan enige tijd in beslag kan nemen. U kunt alle niet-geregistreerde DOI's opzoeken in de <a href="{$unregisteredURL}">lijst niet-geregistreerd DOI's]]></message>
 	<message key="plugins.importexport.crossref.requirements">Vereist</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">Niet aan alle vereisten is voldaan</message>
 	<message key="plugins.importexport.crossref.error.pluginNotConfigured"><![CDATA[Crossref plugin is niet geconfigureerd! Configureer de plugin op de <a href="{$settingsUrl}">instellingen pagina</a>.]]></message>
