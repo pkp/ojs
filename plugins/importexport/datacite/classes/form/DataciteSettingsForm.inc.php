@@ -35,6 +35,8 @@ class DataciteSettingsForm extends DOIExportSettingsForm {
 		// Add form validation checks.
 		// The username is used in HTTP basic authentication and according to RFC2617 it therefore may not contain a colon.
 		$this->addCheck(new FormValidatorRegExp($this, 'username', FORM_VALIDATOR_OPTIONAL_VALUE, 'plugins.importexport.datacite.settings.form.usernameRequired', '/^[^:]+$/'));
+		$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'plugins.importexport.datacite.settings.form.usernameRequired', create_function('$username,$form', 'if ($form->getData(\'automaticRegistration\')) { return false; } return true;'), array(&$this)));
+		$this->addCheck(new FormValidatorCustom($this, 'password', 'required', 'plugins.importexport.datacite.settings.form.passwordRequired', create_function('$password,$form', 'if ($form->getData(\'automaticRegistration\')) { return false; } return true;'), array(&$this)));
 	}
 
 	/**
