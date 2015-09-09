@@ -10,7 +10,7 @@
  * @class DataciteInfoSender
  * @ingroup plugins_importexport_datacite
  *
- * @brief Scheduled task to DOIs to the DataCite server.
+ * @brief Scheduled task to register DOIs to the DataCite server.
  */
 
 import('lib.pkp.classes.scheduledTask.ScheduledTask');
@@ -126,7 +126,7 @@ class DataciteInfoSender extends ScheduledTask {
 		$journals = array();
 		while($journal =& $journalFactory->next()) {
 			$journalId = $journal->getId();
-			if (!$plugin->getSetting($journalId, 'enabled') && !$plugin->getSetting($journalId, 'automaticRegistration')) continue;
+			if (!$plugin->getSetting($journalId, 'enabled') || !$plugin->getSetting($journalId, 'automaticRegistration')) continue;
 
 			$doiPrefix = null;
 			$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $journalId);
