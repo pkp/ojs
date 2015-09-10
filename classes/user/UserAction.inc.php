@@ -119,6 +119,14 @@ class UserAction {
 			$giftDao->updateObject($gift);
 		}
 
+		// Transfer completed payments.
+		$paymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
+		$paymentFactory = $paymentDao->getByUserId($oldUserId);
+		while ($payment = $paymentFactory->next()) {
+			$payment->setUserId($newUserId);
+			$paymentDao->updateObject($payment);
+		}
+
 		// Delete the old user and associated info.
 		$sessionDao = DAORegistry::getDAO('SessionDAO');
 		$sessionDao->deleteByUserId($oldUserId);
