@@ -10,13 +10,13 @@
  *}
 {include file="common/header.tpl"}
 
-<p>{translate key="plugins.generic.usageStats.optout.description" privacyStatementUrl=$privacyStatementUrl}</p>
+{translate key="plugins.generic.usageStats.optout.description" privacyStatementUrl=$privacyStatementUrl}
 <form action="{url}" method="POST">
 	{if $hasOptedOut}
-		<p>{translate key="plugins.generic.usageStats.optout.done"}</p>
+		{translate key="plugins.generic.usageStats.optout.done"}
 		<input type="submit" name="opt-in" class="button defaultButton" value="{translate key="plugins.generic.usageStats.optin"}"/>
 	{else}
-		<p>{translate key="plugins.generic.usageStats.optout.cookie" privacyStatementUrl=$privacyStatementUrl}</p>
+		{translate key="plugins.generic.usageStats.optout.cookie" privacyStatementUrl=$privacyStatementUrl}
 		<input type="submit" name="opt-out" class="button defaultButton" value="{translate key="plugins.generic.usageStats.optout"}"/>
 	{/if}
 </form>
