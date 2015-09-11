@@ -236,7 +236,7 @@ class IssueDAO extends DAO {
 			'issue_id', 'locale', 'setting_name'
 		);
 		$updateArray = array(
-			'issue_id' => $issueId,
+			'issue_id' => (int) $issueId,
 			'locale' => '',
 			'setting_name' => 'pub-id::'.$pubIdType,
 			'setting_type' => 'string',
