@@ -63,44 +63,32 @@ the migration process can take hours.
 Obtaining the latest OJS code
 -----------------------------
 
-The OJS source code is available in three forms: as patches against older
-releases of OJS, from read-only github access, and as a complete
-stand-alone package.
+The OJS source code is available in three forms: as a complete stand-alone 
+package, from read-only github access, and as patches against older releases 
+of OJS.
 
-Patching or updating from github is the recommended approach if you have made
-local modifications to the system.
+1. Full Package
 
-1. Patch
+If you have not made local code modifications to the system, upgrade by 
+downloading the complete package for the latest release of OJS:
 
-Patch files for older releases of OJS can be downloaded from the OJS web site.
+    - Download and decompress the package from the OJS web site
+    - Make a copy of the config.inc.php provided in the new package
+    - Move or copy the following files and directories from your current OJS
+      installation:
+        - config.inc.php
+        - public/
+        - Your uploaded files directory ("files_dir" in config.inc.php), if it
+          resides within your OJS directory
+    - Replace the current OJS directory with the new OJS directory, moving the
+      old one to a safe location as a backup
+    - Be sure to review the Configuration Changes section of the release notes
+      in docs/release-notes/README-(version) for all versions between your
+      original version and the new version. You may need to manually add
+      new items to your config.inc.php file.
 
-To update by patching, download the appropriate patch file for your current
-version of OJS and run the following command from your OJS directory:
-
-    $ patch -p1 < PATCH_FILE
-
-"PATCH_FILE" should be replaced with the path to the decompressed patch file
-that was downloaded, e.g. "ojs-2.0_to_2.0.1.patch".
-
-Alternatively, OJS 2.0.1 and later provide a command-line tool to automatically
-download and apply the appropriate patch to upgrade to the latest release. To
-use this tool run the following command from your OJS directory:
-
-    $ php tools/upgrade.php patch
-
-Note that this will require the GNU patch tool to be installed. GNU patch is
-included in most *NIX distributions, and is available for Windows and Solaris
-as a download. Windows users may need to work around a patch bug by converting
-the line-endings in the patch file from UNIX to DOS; to do this, open the patch
-file in Notepad and save it again.
-
-Patch upgrades will NOT include any binary files that were introduced in the
-new version, i.e. any GIF images that are needed in the new version but were
-not included in the old version. To find a list of binaries that should be
-manually added after applying the patch, search the patch file for lines like:
-"Binary files (filename here) differ" (not including the quotes). These files
-can be found in the distribution archive.
-
+Updating from github is the recommended approach if you have made local
+modifications to the system.
 
 2. git
 
@@ -130,27 +118,36 @@ than OJS or third-party developers; using experimental code on a production
 deployment is strongly discouraged and will not be supported in any way by
 the OJS team.
 
+3. Patch
 
-3. Full Package
+Patch files for older releases of OJS can be downloaded from the OJS web site.
 
-It is also possible to upgrade by downloading the complete package for the
-latest release of OJS:
+To update by patching, download the appropriate patch file for your current
+version of OJS and run the following command from your OJS directory:
 
-    - Download and decompress the package from the OJS web site
-    - Make a copy of the config.inc.php provided in the new package
-    - Move or copy the following files and directories from your current OJS
-      installation:
-        - config.inc.php
-        - public/
-        - Your uploaded files directory ("files_dir" in config.inc.php), if it
-          resides within your OJS directory
-    - Replace the current OJS directory with the new OJS directory, moving the
-      old one to a safe location as a backup
-    - Be sure to review the Configuration Changes section of the release notes
-      in docs/release-notes/README-(version) for all versions between your
-      original version and the new version. You may need to manually add
-      new items to your config.inc.php file.
+    $ patch -p1 < PATCH_FILE
 
+"PATCH_FILE" should be replaced with the path to the decompressed patch file
+that was downloaded, e.g. "ojs-2.0_to_2.0.1.patch".
+
+Alternatively, OJS 2.0.1 and later provide a command-line tool to automatically
+download and apply the appropriate patch to upgrade to the latest release. To
+use this tool run the following command from your OJS directory:
+
+    $ php tools/upgrade.php patch
+
+Note that this will require the GNU patch tool to be installed. GNU patch is
+included in most *NIX distributions, and is available for Windows and Solaris
+as a download. Windows users may need to work around a patch bug by converting
+the line-endings in the patch file from UNIX to DOS; to do this, open the patch
+file in Notepad and save it again.
+
+Patch upgrades will NOT include any binary files that were introduced in the
+new version, i.e. any GIF images that are needed in the new version but were
+not included in the old version. To find a list of binaries that should be
+manually added after applying the patch, search the patch file for lines like:
+"Binary files (filename here) differ" (not including the quotes). These files
+can be found in the distribution archive.
 
 
 Applying the Latest Recommended Patches
