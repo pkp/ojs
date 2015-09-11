@@ -331,8 +331,7 @@ class UsageStatsPlugin extends GenericPlugin {
 					fwrite($file, $newSalt);
 					flock($file, LOCK_UN);
 				} else {
-					// Couldn't lock the file.
-					assert(false);
+					ScheduledTask::addExecutionLogEntry(__('plugins.generic.usageStats.saltWriteError', array()), SCHEDULED_TASK_MESSAGE_TYPE_ERROR);
 				}
 				fclose($file);
 				$salt = $newSalt;
@@ -341,7 +340,10 @@ class UsageStatsPlugin extends GenericPlugin {
 
 		// Manage the IP address (evtually hash it)
 		if ($this->getSetting(CONTEXT_ID_NONE, 'dataPrivacyOption')) {
-			if (!isset($salt)) return false;
+			if (!isset($salt)) {
+				ScheduledTask::addExecutionLogEntry(__('plugins.generic.usageStats.hashSaltMissing', array()), SCHEDULED_TASK_MESSAGE_TYPE_ERROR);
+				return false;
+			}
 			// Hash the IP
 			$hashedIp = $this->_hashIp($usageEvent['ip'], $salt);
 			// Never store unhashed IPs!
