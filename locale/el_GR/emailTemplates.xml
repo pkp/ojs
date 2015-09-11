@@ -712,8 +712,8 @@ URL Υποβολής: {$submissionUrl}
 {$principalContactSignature}</body>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Νέα ειδοποίηση από {$siteTitle}</subject>
-		<body>Έχετε μια νέα ειδοποίηση από {$siteTitle}:
+		<subject>Νέα ειδοποίηση από {$journalName}</subject>
+		<body>Έχετε μια νέα ειδοποίηση από {$journalName}:
 --
 {$notificationContents}
 
@@ -725,8 +725,8 @@ URL Υποβολής: {$submissionUrl}
 {$principalContactSignature}</body>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Καλώς ορίσατε mailing list του  {$siteTitle}!</subject>
-		<body>Έχετε εγγραφεί στην λίστα για να λαμβάνεται ενημέρωτικά μηνύματα από το  {$siteTitle}.
+		<subject>Καλώς ορίσατε mailing list του  {$journalName}!</subject>
+		<body>Έχετε εγγραφεί στην λίστα για να λαμβάνεται ενημέρωτικά μηνύματα από το  {$journalName}.
 
 Σας παρακαλούμε επιλέξτε τον σύνδεσμο αυτό για να επιβεβαιώσετε την εγγραφή σας και να προσθέσετε το email σας στην λίστα: {$confirmLink}
 

@@ -25,8 +25,8 @@ Enlace: {$url}
 		<description>Este correo electrónico se envía a usuarios/as registrados que seleccionaron recibir este tipo de notificaciones por correo.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Nueva notificación de {$siteTitle}</subject>
-		<body>Recibió una nueva notificación de {$siteTitle}:
+		<subject>Nueva notificación de {$journalName}</subject>
+		<body>Recibió una nueva notificación de {$journalName}:
 --
 {$notificationContents}
 
@@ -39,8 +39,8 @@ Si desea dejar de recibir notificaciones por correo, vaya a {$unsubscribeLink}.
 		<description>Este correo electrónico se envía a los usuarios/as no registrados que aparecen en la lista de distribución de notificaciones por correo.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Bienvenido/a a la lista de distribución de correo {$siteTitle}.</subject>
-		<body>Se inscribió para recibir notificaciones de {$siteTitle}. 
+		<subject>Bienvenido/a a la lista de distribución de correo {$journalName}.</subject>
+		<body>Se inscribió para recibir notificaciones de {$journalName}. 
 
 Haga clic en el enlace para confirmar su solicitud y añadir su dirección de correo electrónico a la lista de distribución de correo: {$confirmLink}
 

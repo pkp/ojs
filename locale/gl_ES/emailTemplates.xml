@@ -667,8 +667,8 @@ Ligazón: {$url}
 		<description>O email é enviado a usuarios rexistrados que seleccionaron receber notificacions.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Nova notificación dende {$siteTitle}</subject>
-		<body>Tes unha nova notificación dende {$siteTitle}:
+		<subject>Nova notificación dende {$journalName}</subject>
+		<body>Tes unha nova notificación dende {$journalName}:
 --
 {$notificationContents}
 
@@ -681,8 +681,8 @@ Se non desexsa receber os correos de notificacions, vai dereito a {$unsubscribeL
 		<description>Este email é enviado a usuarios sen registrar na listaxe de notificacions.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Benvido á listaxe de correo de {$siteTitle} !</subject>
-		<body>Escolliches receber notificacions dende {$siteTitle}.
+		<subject>Benvido á listaxe de correo de {$journalName} !</subject>
+		<body>Escolliches receber notificacions dende {$journalName}.
 
 Clica nesta ligazón para confirmar a túa petición e engadir o teu email na listaxe de notificacions:
  {$confirmLink}
@@ -772,15 +772,6 @@ A nosa decisión é:
 
 {$editorialContactSignature}</body>
 		<description>Este email do Editor ou Editor de Sección a un Autor notificalles que se tomou unha decisión definitiva sobre a súa presentación.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
-		<subject>A túa listaxe de correo de notificacions de {$siteTitle}</subject>
-		<body>O teu novo contrasinal  para deshabilitar os emails de notificación é: {$password}
-
-Se desexas deixar de receber emails de notificación, vai dereito a {$unsubscribeLink} e insire o teu enderezo de  email e o contrasinal.
-
-{$principalContactSignature}</body>
-		<description>Este email envíase a usuarios sen rexistrar cando indican que esqueceron o contrasinal ou non son capaces de entrar. Fornece unha URL que poden seguir para reconfigurar o seu contrasinal.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
 		<subject>Decisión del Editor</subject>
