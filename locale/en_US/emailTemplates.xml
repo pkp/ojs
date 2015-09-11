@@ -24,8 +24,8 @@ Link: {$url}
 		<description>The email is sent to registered users that have selected to have this type of notification emailed to them.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>New notification from {$siteTitle}</subject>
-		<body>You have a new notification from {$siteTitle}:
+		<subject>New notification from {$journalName}</subject>
+		<body>You have a new notification from {$journalName}:
 --
 {$notificationContents}
 
@@ -38,8 +38,8 @@ If you wish to stop receiving notification emails, please go to {$unsubscribeLin
 		<description>This email is sent to unregistered users on the notification mailing list.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Welcome to the the {$siteTitle} mailing list!</subject>
-		<body>You have signed up to receive notifications from {$siteTitle}.
+		<subject>Welcome to the the {$journalName} mailing list!</subject>
+		<body>You have signed up to receive notifications from {$journalName}.
 
 Please click on this link to confirm your request and add your email address to the mailing list: {$confirmLink}
 

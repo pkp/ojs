@@ -27,8 +27,8 @@
                <description>Цей лист надсилається зареєстрованому користувачу, який обрав опцію отримання цього типу сповіщень електронною поштою.</description>
        </email_text>
        <email_text key="NOTIFICATION_MAILLIST">
-               <subject>Ви маєте нове сповіщення від сайту {$siteTitle}</subject>
-               <body>Ви маєте нове сповіщення від сайту {$siteTitle}:
+               <subject>Ви маєте нове сповіщення від сайту {$journalName}</subject>
+               <body>Ви маєте нове сповіщення від сайту {$journalName}:
 --
 {$notificationContents}
 
@@ -41,8 +41,8 @@
                <description>Цей лист надсилається незареєстрованим користувачам зі списку поштової розсилки.</description>
        </email_text>
        <email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Вітаємо у списку поштової розсилки {$siteTitle}!</subject>
-		<body>Ви зареєстрували себе для отримання сповіщень від сайту {$siteTitle}.
+		<subject>Вітаємо у списку поштової розсилки {$journalName}!</subject>
+		<body>Ви зареєстрували себе для отримання сповіщень від сайту {$journalName}.
                        
 Будь ласка, натисніть це посилання, щоб підтвердити свій запит та додати Вашу адресу email до списку поштової розсилки: {$confirmLink}
 

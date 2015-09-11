@@ -714,8 +714,8 @@ Odkaz: {$url}
 {$principalContactSignature}</body>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Nové oznámení od {$siteTitle}</subject>
-		<body>Máte nové oznámení od {$siteTitle}:
+		<subject>Nové oznámení od {$journalName}</subject>
+		<body>Máte nové oznámení od {$journalName}:
 --
 {$notificationContents}
 
@@ -727,8 +727,8 @@ Pokud chcete ukončit odebírání těchto informačních emalů, přejděte pro
 {$principalContactSignature}</body>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Vítejte na rezesílacím seznamu {$siteTitle}!</subject>
-		<body>Přihlásil jste se k odběru oznámení z {$siteTitle}.
+		<subject>Vítejte na rezesílacím seznamu {$journalName}!</subject>
+		<body>Přihlásil jste se k odběru oznámení z {$journalName}.
 
 Pro potvrzení Vaší žádosti a přidání Vaší emailové adresy do rozesílacího seznamu klikněte prosím na tento odkaz: {$confirmLink}
 

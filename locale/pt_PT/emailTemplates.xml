@@ -824,8 +824,8 @@ Link: {$url}
 		<description>Esta mensagem é enviada a utilizadores registados que escolheram activar este tipo de notificação via email.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Nova notificação de {$siteTitle}</subject>
-		<body>Você possui uma nova notificação de {$siteTitle}:
+		<subject>Nova notificação de {$journalName}</subject>
+		<body>Você possui uma nova notificação de {$journalName}:
 --
 {$notificationContents}
 
@@ -838,8 +838,8 @@ Caso não deseje receber mais notificações via e-mail, aceda a {$unsubscribeLi
 		<description>Esta mensagem é enviada a utilizadores não registados que pertencem à lista de correio.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Bem-vindo à lista de correio de {$siteTitle}!</subject>
-		<body>Você assinou a lista de notificações de {$siteTitle}.
+		<subject>Bem-vindo à lista de correio de {$journalName}!</subject>
+		<body>Você assinou a lista de notificações de {$journalName}.
 
 Clique no link a seguir para confirmar o seu pedido e incluir o seu e-mail na lista de correio: {$confirmLink}
 

@@ -25,8 +25,8 @@
 		<description>ഇത്തരം അറിയിപ്പ് ഇമെയലുകള്‍ സ്വീകരിക്കാന്‍ റജിസ്റ്റര്‍ ചെയ്തവര്‍ക്ക് ഈ ഇമെയില്‍ അയക്കുന്നതാണ്.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>{$siteTitle}ല്‍ നിന്ന് പുതിയ അറിയിപ്പ്</subject>
-		<body>{$siteTitle}ല്‍ നിന്ന് താങ്കള്‍ക്ക് ഒരു പുതിയ അറിയിപ്പുണ്ട്:
+		<subject>{$journalName}ല്‍ നിന്ന് പുതിയ അറിയിപ്പ്</subject>
+		<body>{$journalName}ല്‍ നിന്ന് താങ്കള്‍ക്ക് ഒരു പുതിയ അറിയിപ്പുണ്ട്:
 --
 {$notificationContents}
 
@@ -39,8 +39,8 @@
 		<description>നോട്ടിഫിക്കേഷന്‍ മെയിലിങ്ങ് പട്ടികയിലുള്ള രജിസ്റ്റര്‍ ചെയ്യാത്ത യൂസറുകള്‍ക്കാണ് ഈ മെയില്‍ അയച്ചത്.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>{$siteTitle} മെയിലിങ്ങ് പട്ടികയിലേക്ക് സ്വാഗതം!</subject>
-		<body>{$siteTitle}ഇല്‍ നിന്ന് വിജ്ഞാപനങ്ങള്‍ സ്വീകരിക്കാന്‍ താങ്കള്‍ അംഗത്വമെടുത്തിരിക്കുന്നു.
+		<subject>{$journalName} മെയിലിങ്ങ് പട്ടികയിലേക്ക് സ്വാഗതം!</subject>
+		<body>{$journalName}ഇല്‍ നിന്ന് വിജ്ഞാപനങ്ങള്‍ സ്വീകരിക്കാന്‍ താങ്കള്‍ അംഗത്വമെടുത്തിരിക്കുന്നു.
 			
 താങ്കളുടെ അപേക്ഷ സ്ഥിരീകരിക്കാനും താങ്കളുടെ ഇമെയില്‍ വിലാസം മെയിലിങ് പട്ടികയിലേക്ക് ചേര്‍ക്കാനും വേണ്ടി ഈ കണ്ണിയില്‍ ക്ലിക്ക് ചെയ്യുക:
 
@@ -50,15 +50,6 @@
 
 {$principalContactSignature}</body>
 		<description>This email is sent to an unregistered user who just registered with the notification mailing list.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
-		<subject>Your notification mailing list information for {$siteTitle}</subject>
-		<body>Your new password for disabling notification emails is: {$password}
-
-If you wish to stop receiving notification emails, please go to {$unsubscribeLink} and enter your email address and password.
-
-{$principalContactSignature}</body>
-		<description>This email is sent to an unregistered user on the notification mailing list when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Password Reset Confirmation</subject>

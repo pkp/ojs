@@ -715,8 +715,8 @@ Link: {$url}
 {$principalContactSignature}</body>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Nieuw bericht van {$siteTitle}</subject>
-		<body>U heeft een nieuw bericht van {$siteTitle}:
+		<subject>Nieuw bericht van {$journalName}</subject>
+		<body>U heeft een nieuw bericht van {$journalName}:
 --
 {$notificationContents}
 
@@ -728,8 +728,8 @@ Als u deze berichten niet meer wilt ontvangen, ga dan naar {$unsubscribeLink} en
 {$principalContactSignature}</body>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Welkom bij de {$siteTitle} maillijst!</subject>
-		<body>U heeft zich geregistreerd om berichten te ontvangen van {$siteTitle}.
+		<subject>Welkom bij de {$journalName} maillijst!</subject>
+		<body>U heeft zich geregistreerd om berichten te ontvangen van {$journalName}.
 
 Klik op deze link om uw verzoek te bevestigen en uw e-mail adres toe te voegen aan de lijst: {$confirmLink}
 

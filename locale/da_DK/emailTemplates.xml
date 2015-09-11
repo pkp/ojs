@@ -642,8 +642,8 @@ Link: {$url}
 		<description>Denne e-mail er blevet sendt til registrerede brugere, som har valgt at få tilsendt denne type meddelelser.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Ny meddelelse fra {$siteTitle}</subject>
-		<body>Du har modtaget en ny meddelelse fra {$siteTitle}:
+		<subject>Ny meddelelse fra {$journalName}</subject>
+		<body>Du har modtaget en ny meddelelse fra {$journalName}:
 --
 {$notificationContents}
 
@@ -656,8 +656,8 @@ Hvis du ikke længere ønsker at modtage e-mail-meddelelser, skal du gå ind på
 		<description>Denne e-mail er blevet sendt til uregistrerede brugere på meddelelses-mailinglisten.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Velkommen til {$siteTitle}-mailinglisten!</subject>
-		<body>Du har bedt om at modtage meddelelser fra {$siteTitle}.
+		<subject>Velkommen til {$journalName}-mailinglisten!</subject>
+		<body>Du har bedt om at modtage meddelelser fra {$journalName}.
 			
 Klik på dette link for at bekræfte din anmodning og tilføje din e-mail-adresse til mailinglisten: {$confirmLink}
 

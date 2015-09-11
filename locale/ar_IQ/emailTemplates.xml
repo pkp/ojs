@@ -24,8 +24,8 @@ Link: {$url}
 		<description>رسالة البريد الالكتروني هذه مرسلة إلى المستخدمين المسجلين الذين اختاروا استلام إشعار من هذا النوع عبر البريد الالكتروني</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>إشعار جديد من {$siteTitle}</subject>
-		<body>لديك إشعار جديد من {$siteTitle}:
+		<subject>إشعار جديد من {$journalName}</subject>
+		<body>لديك إشعار جديد من {$journalName}:
 --
 {$notificationContents}
 
@@ -38,8 +38,8 @@ Link: {$url}
 		<description>هذه الرسالة مرسلة إلى المستخدمين غير المسجلين في قائمة الإشعار البريدي</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>مرحباً بك في {$siteTitle} قائمة المراسلة!</subject>
-		<body>لقد سجلت دخولك لتحصل على إشعارات من {$siteTitle}.
+		<subject>مرحباً بك في {$journalName} قائمة المراسلة!</subject>
+		<body>لقد سجلت دخولك لتحصل على إشعارات من {$journalName}.
 
 لطفاً، أنقر هذا الرابط لتأكيد طلبك ولتضيف عنوان بريدك الالكتروني إلى قائمة المراسلة: {$confirmLink}
 

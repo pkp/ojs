@@ -24,8 +24,8 @@ Link: {$url}
 		<description>Оваа порака е пратена до регистрираните корисници кои го имаат избрано овој тип на известување.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Ново известување од {$siteTitle}</subject>
-		<body>Имате ново известување {$siteTitle}:
+		<subject>Ново известување од {$journalName}</subject>
+		<body>Имате ново известување {$journalName}:
 --
 {$notificationContents}
 
@@ -38,8 +38,8 @@ If you wish to stop receiving notification emails, please go to {$unsubscribeLin
 		<description>Оваа порака е испратена до новорегистрираните корисници.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Добродојдовте до{$siteTitle} поштенска листа!</subject>
-		<body>Сте пријавени да добивате известување од {$siteTitle}.
+		<subject>Добродојдовте до{$journalName} поштенска листа!</subject>
+		<body>Сте пријавени да добивате известување од {$journalName}.
 
 Ве молиме, кликните на следниот линк за да го потврдите Вашето барање и додадете ја Вашата email адреса на поштенскиот лист: {$confirmLink}
 

@@ -25,8 +25,8 @@ Link: {$url}
 		<description>Ova poruka je poslata registrovanim korisnicima koji su obeležili da žele da primaju poruke putem imejla.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Nova poruka od {$siteTitle}</subject>
-		<body>Imate novu poruku od {$siteTitle}:
+		<subject>Nova poruka od {$journalName}</subject>
+		<body>Imate novu poruku od {$journalName}:
 --
 {$notificationContents}
 
@@ -39,8 +39,8 @@ Ukoliko želite da više ne primate obaveštenja o novim porukama idite na link 
 		<description>Ova poruka je poslata neregistrovanim korisnicima na mejling listi</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Dobrodošli na {$siteTitle} mejling listu!</subject>
-		<body>Prijavili ste se da primate obaveštenja od {$siteTitle}.
+		<subject>Dobrodošli na {$journalName} mejling listu!</subject>
+		<body>Prijavili ste se da primate obaveštenja od {$journalName}.
 
 Molimo Vas da kliknete na link kako biste potvrdili svoj zahtev i dodali Vašu imejl adresu na mejling listu: {$confirmLink}
 
