@@ -175,8 +175,12 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 
 		if (!empty($currentJournal)) {
 			$journal =& Request::getJournal();
-			$journalId = $journal->getId();
-			$googleAnalyticsSiteId = $this->getSetting($journalId, 'googleAnalyticsSiteId');
+			$contextId = $journal->getId();
+		} else {
+			$contextId = CONTEXT_ID_NONE;
+		}
+		if ($contextId || $this->getSetting($contextId, 'enabled')) {
+			$googleAnalyticsSiteId = $this->getSetting($contextId, 'googleAnalyticsSiteId');
 
 			$article = $templateMgr->get_template_vars('article');
 			if (Request::getRequestedPage() == 'article' && $article) {
@@ -190,7 +194,7 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 
 			if (!empty($googleAnalyticsSiteId) || !empty($authorAccounts)) {
 				$templateMgr->assign('googleAnalyticsSiteId', $googleAnalyticsSiteId);
-				$trackingCode = $this->getSetting($journalId, 'trackingCode');
+				$trackingCode = $this->getSetting($contextId, 'trackingCode');
 				if ($trackingCode == "ga") {
 					$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTagGa.tpl');
 				} elseif ($trackingCode == "urchin") {

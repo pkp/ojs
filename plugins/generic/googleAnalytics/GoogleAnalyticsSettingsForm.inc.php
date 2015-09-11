@@ -12,7 +12,9 @@
  *
  * @brief Form for journal managers to modify Google Analytics plugin settings
  */
-
+define('GOOGLE_ANALYTICS_SITE_ENABLE', 1);
+define('GOOGLE_ANALYTICS_SITE_DISABLE', -1);
+define('GOOGLE_ANALYTICS_SITE_UNCHANGED', 0);
 
 import('lib.pkp.classes.form.Form');
 
@@ -36,8 +38,29 @@ class GoogleAnalyticsSettingsForm extends Form {
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
 		$this->addCheck(new FormValidator($this, 'googleAnalyticsSiteId', 'required', 'plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired'));
-
 		$this->addCheck(new FormValidator($this, 'trackingCode', 'required', 'plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired'));
+		$this->addCheck(new FormValidatorPost($this));
+	}
+
+	/**
+	 * @see Form::display()
+	 */
+	function display($request = null, $template = null) {
+		if (Validation::isSiteAdmin()) {
+			$plugin =& $this->plugin;
+			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr->assign('siteAdmin', TRUE);
+			if ($plugin->getSetting(CONTEXT_ID_NONE, 'enabled')) {
+				$templateMgr->assign('siteEnabled', TRUE);
+				$templateMgr->assign('siteTrackingCode', $plugin->getSetting(CONTEXT_ID_NONE, 'trackingCode'));
+				$templateMgr->assign('siteGoogleAnalyticsSiteId', $plugin->getSetting(CONTEXT_ID_NONE, 'googleAnalyticsSiteId'));
+			} else {
+				$templateMgr->assign('siteEnabled', FALSE);
+				$templateMgr->assign('siteTrackingCode', __('plugins.generic.googleAnalytics.manager.settings.disabled'));
+				$templateMgr->assign('siteGoogleAnalyticsSiteId', __('plugins.generic.googleAnalytics.manager.settings.disabled'));
+			}
+		}
+		parent::display($request, $template);
 	}
 
 	/**
@@ -51,13 +74,20 @@ class GoogleAnalyticsSettingsForm extends Form {
 			'googleAnalyticsSiteId' => $plugin->getSetting($journalId, 'googleAnalyticsSiteId'),
 			'trackingCode' => $plugin->getSetting($journalId, 'trackingCode')
 		);
+		if (Validation::isSiteAdmin()) {
+			$this->_data['enableSite'] = GOOGLE_ANALYTICS_SITE_UNCHANGED;
+		}
 	}
 
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('googleAnalyticsSiteId', 'trackingCode'));
+		$vars = array('googleAnalyticsSiteId', 'trackingCode');
+		if (Validation::isSiteAdmin()) {
+			$vars[] = 'enableSite';
+		}
+		$this->readUserVars($vars);
 	}
 
 	/**
@@ -74,6 +104,14 @@ class GoogleAnalyticsSettingsForm extends Form {
 			$trackingCode = "urchin";
 		}
 		$plugin->updateSetting($journalId, 'trackingCode', $trackingCode, 'string');
+		if (Validation::isSiteAdmin()) {
+			// Enable this code on the site level
+			if ($this->getData('enableSite')) {
+				$plugin->updateSetting(CONTEXT_ID_NONE, 'enabled', $this->getData('enableSite') == GOOGLE_ANALYTICS_SITE_ENABLE ? TRUE : FALSE, 'boolean');
+				$plugin->updateSetting(CONTEXT_ID_NONE, 'trackingCode', $this->getData('enableSite') == GOOGLE_ANALYTICS_SITE_ENABLE ? $trackingCode : '', 'string');
+				$plugin->updateSetting(CONTEXT_ID_NONE, 'googleAnalyticsSiteId', $this->getData('enableSite') == GOOGLE_ANALYTICS_SITE_ENABLE ? trim($this->getData('googleAnalyticsSiteId'), "\"\';") : '', 'string');
+			}
+		}
 	}
 }
 

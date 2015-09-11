@@ -29,6 +29,12 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Legacy tracking code (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Legacy tracking code (ga.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">New tracking code for Universal Analytics (analytics.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.enableSite">Site Homepage</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteEnable">Enable this journal's settings on the site homepage</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteDisable">Disable existing settings on the site homepage</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteUnchanged">Leave the site hompage settings as-is</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.disabled">Disabled</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.enableSiteInstructions">These settings can be applied when users browse at the site level as well.  If no settings are applied at the site level, Google Analytics will only be active at the journal level.</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics account number</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">To track published article readership using Google Analytics, enter an account number here (e.g. UA-xxxxxx-x).</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">One or more Google Analytics account numbers entered for submission authors are not valid.</message>
