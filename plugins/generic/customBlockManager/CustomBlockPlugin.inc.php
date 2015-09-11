@@ -192,7 +192,7 @@ class CustomBlockPlugin extends BlockPlugin {
 		$blockContent = $this->getSetting($journalId, 'blockContent');
 		$blockContentLocale = '';
 	
-		if (array_key_exists($locale, $blockContent)) {
+		if (is_array($blockContent) && array_key_exists($locale, $blockContent)) {
 			$blockContentLocale = $blockContent[$locale];
 		}
 
