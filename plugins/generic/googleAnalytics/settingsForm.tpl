@@ -33,9 +33,9 @@
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="trackingCode-urchin" required="true" key="plugins.generic.googleAnalytics.manager.settings.trackingCode"}</td>
 		<td width="80%" class="value">
-			<div><input type="radio" name="trackingCode" id="trackingCode-urchin" value="urchin" {if $trackingCode eq "urchin" || $trackingCode eq ""}checked="checked" {/if}/> {translate key="plugins.generic.googleAnalytics.manager.settings.urchin"}</div>
-			<div><input type="radio" name="trackingCode" id="trackingCode-ga" value="ga" {if $trackingCode eq "ga"}checked="checked" {/if}/> {translate key="plugins.generic.googleAnalytics.manager.settings.ga"}</div>
-			<div><input type="radio" name="trackingCode" id="trackingCode-analytics" value="analytics" {if $trackingCode eq "analytics"}checked="checked" {/if}/> {translate key="plugins.generic.googleAnalytics.manager.settings.analytics"}</div>
+			<div><input type="radio" name="trackingCode" id="trackingCode-urchin" value="urchin" {if $trackingCode eq "urchin" || $trackingCode eq ""}checked="checked" {/if}/> {fieldLabel name="trackingCode-urchin" key="plugins.generic.googleAnalytics.manager.settings.urchin"}</div>
+			<div><input type="radio" name="trackingCode" id="trackingCode-ga" value="ga" {if $trackingCode eq "ga"}checked="checked" {/if}/> {fieldLabel name="trackingCode-ga" key="plugins.generic.googleAnalytics.manager.settings.ga"}</div>
+			<div><input type="radio" name="trackingCode" id="trackingCode-analytics" value="analytics" {if $trackingCode eq "analytics"}checked="checked" {/if}/> {fieldLabel name="trackingCode-analytics" key="plugins.generic.googleAnalytics.manager.settings.analytics"}</div>
 		</td>
 	</tr>
 	{if $siteAdmin}
@@ -45,12 +45,12 @@
 			<div>
 				<span class="instruct">{translate key="plugins.generic.googleAnalytics.manager.settings.enableSiteInstructions"}</span>
 			</div>
-			<div><input type="radio" name="enableSite" id="enableSite-true" value="{$smarty.const.GOOGLE_ANALYTICS_SITE_ENABLE}" {if $trackingCode eq GOOGLE_ANALYTICS_SITE_ENABLE}checked="checked" {/if}/> {translate key="plugins.generic.googleAnalytics.manager.settings.siteEnable"}</div>
+			<div><input type="radio" name="enableSite" id="enableSite-true" value="{$smarty.const.GOOGLE_ANALYTICS_SITE_ENABLE}" {if $trackingCode eq GOOGLE_ANALYTICS_SITE_ENABLE}checked="checked" {/if}/> {fieldLabel name="enableSite-true" key="plugins.generic.googleAnalytics.manager.settings.siteEnable"}</div>
 			<div>
-				<input type="radio" name="enableSite" id="enableSite-unchanged" value="{$smarty.const.GOOGLE_ANALYTICS_SITE_UNCHANGED}" {if $trackingCode eq GOOGLE_ANALYTICS_SITE_UNCHANGED || $trackingCode eq ""}checked="checked" {/if}/> {translate key="plugins.generic.googleAnalytics.manager.settings.siteUnchanged"}
+				<input type="radio" name="enableSite" id="enableSite-unchanged" value="{$smarty.const.GOOGLE_ANALYTICS_SITE_UNCHANGED}" {if $trackingCode eq GOOGLE_ANALYTICS_SITE_UNCHANGED || $trackingCode eq ""}checked="checked" {/if}/> {fieldLabel name="enableSite-unchanged" key="plugins.generic.googleAnalytics.manager.settings.siteUnchanged"}
 				<dl>
 					<dt>{translate key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId"}</dt>
-					<dd>{$siteGoogleAnalyticsSiteId}</dd>
+					<dd>{$siteGoogleAnalyticsSiteId|escape}</dd>
 					<dt>{translate key="plugins.generic.googleAnalytics.manager.settings.trackingCode"}</dt>
 					<dd>
 						{if $siteTrackingCode eq "analytics"}{translate key="plugins.generic.googleAnalytics.manager.settings.analytics"}
@@ -62,7 +62,7 @@
 				</dl>
 			</div>
 			{if $siteEnabled}
-			<div><input type="radio" name="enableSite" id="enableSite-false" value="{$smarty.const.GOOGLE_ANALYTICS_SITE_DISABLE}" {if $trackingCode eq GOOGLE_ANALYTICS_SITE_DISABLE}checked="checked" {/if}/> {translate key="plugins.generic.googleAnalytics.manager.settings.siteDisable"}</div>
+			<div><input type="radio" name="enableSite" id="enableSite-false" value="{$smarty.const.GOOGLE_ANALYTICS_SITE_DISABLE}" {if $trackingCode eq GOOGLE_ANALYTICS_SITE_DISABLE}checked="checked" {/if}/> {fieldLabel name="enableSite-false" key="plugins.generic.googleAnalytics.manager.settings.siteDisable"}</div>
 			{/if}
 		</td>
 	</tr>
