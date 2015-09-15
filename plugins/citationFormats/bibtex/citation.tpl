@@ -23,11 +23,11 @@
 {/literal}{assign var=onlineIssn value=$journal->getSetting('onlineIssn')}
 {assign var=issn value=$journal->getSetting('issn')}{if $issn}{literal}	issn = {{/literal}{$issn|bibtex_escape}{literal}},{/literal}
 {elseif $onlineIssn}{literal}	issn = {{/literal}{$onlineIssn|bibtex_escape}{literal}},{/literal}{/if}
-{literal}
-	url = {{/literal}{url|bibtex_escape page="article" op="view" path=$article->getBestArticleId()}{literal}},{/literal}
 {if $article->getPages()}{if $article->getStartingPage()}	pages = {literal}{{/literal}{$article->getStartingPage()}{if $article->getEndingPage()}--{$article->getEndingPage()}{/if}{literal}}{/literal}{/if}{/if}
-{literal}
-}
+{if $article->getPubId('doi')}	doi = {ldelim}{$article->getPubId('doi')|escape}{rdelim},
+{/if}
+	url = {ldelim}{url|bibtex_escape page="article" op="view" path=$article->getBestArticleId()}{rdelim}
+{rdelim}
 </pre>
 {/literal}
 </div>
