@@ -27,6 +27,8 @@ PY  - {$issue->getYear()|escape}
 TI  - {$article->getLocalizedTitle()|strip_tags}
 JF  - {$journal->getLocalizedName()}{if $issue}; {$issue->getIssueIdentification()|strip_tags}{/if}
 
+{if $article->getPubId('doi')}DO  - {$article->getPubId('doi')|escape}
+{/if}
 KW  - {$article->getLocalizedSubject()|escape}
 N2  - {$article->getLocalizedAbstract()|strip_tags|replace:"\n":" "|replace:"\r":" "}
 UR  - {$articleUrl}
