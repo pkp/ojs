@@ -173,7 +173,10 @@ class ExternalFeedPlugin extends GenericPlugin {
 		$journalId = $journal?$journal->getId():0;
 
 		if ($this->getEnabled()) {
-			$requestedPage = Request::getRequestedPage();
+			// Only pages requests interest us here
+			$request =& Registry::get('request');
+			if (!is_a($request->getRouter(), 'PKPPageRouter')) return false;
+			$requestedPage = $request->getRequestedPage();
 
 			if (empty($requestedPage) || $requestedPage == 'index') {
 				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
