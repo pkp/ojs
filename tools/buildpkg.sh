@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# buildpkg.sh
+# tools/buildpkg.sh
 #
 # Copyright (c) 2014-2015 Simon Fraser University Library
 # Copyright (c) 2003-2015 John Willinsky
@@ -9,14 +9,14 @@
 #
 # Script to create an OJS package for distribution.
 #
-# Usage: buildpkg.sh <version> [<tag>] [<patch_dir>]
+# Usage: buildpkg.sh <version> [<tag>]
 #
 #
 
 GITREP=git://github.com/pkp/ojs.git
 
 if [ -z "$1" ]; then
-	echo "Usage: $0 <version> [<tag>-<branch>] [<patch_dir>]";
+	echo "Usage: $0 <version> [<tag>-<branch>]";
 	exit 1;
 fi
 
@@ -84,21 +84,17 @@ lib/pkp/lib/swordappv2/test"
 cd $TMPDIR
 
 echo -n "Cloning $GITREP and checking out tag $TAG ... "
-git clone -q -n $GITREP $BUILD || exit 1
+git clone -b $TAG --depth 1 -q -n $GITREP $BUILD || exit 1
 cd $BUILD
 git checkout -q $TAG || exit 1
 echo "Done"
 
-echo -n "Checking out corresponding submodule ... "
-git submodule -q update --init >/dev/null || exit 1
-echo "Done"
-
-echo -n "Checking out submodule submodules ... "
-cd lib/pkp
-git submodule -q update --init >/dev/null || exit 1
+echo -n "Checking out corresponding submodules ... "
+git submodule -q update --init --recursive >/dev/null || exit 1
 echo "Done"
 
 echo -n "Installing composer dependencies ... "
+cd lib/pkp
 composer.phar update
 cd lib/vendor/oyejorge/less.php
 composer.phar update
