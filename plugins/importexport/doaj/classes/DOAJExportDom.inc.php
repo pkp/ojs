@@ -176,7 +176,7 @@ class DOAJExportDom {
 		foreach ((array) $article->getAbstract(null) as $locale => $abstract) {
 			if (empty($abstract)) continue;
 
-			$abstractNode = XMLCustomWriter::createChildWithText($doc, $root, 'abstract', $abstract);
+			$abstractNode = XMLCustomWriter::createChildWithText($doc, $root, 'abstract', String::html2text($abstract));
 			if (strlen($locale) == 5) XMLCustomWriter::setAttribute($abstractNode, 'language', DOAJExportDom::mapLang(String::substr($locale, 0, 2)));
 		}
 
