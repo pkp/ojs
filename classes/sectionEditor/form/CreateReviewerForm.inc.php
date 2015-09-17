@@ -162,6 +162,7 @@ class CreateReviewerForm extends Form {
 		$user->setLocales($locales);
 
 		$user->setUsername($this->getData('username'));
+		$user->setMustChangePassword(true); // Emailed P/W not safe
 		$password = Validation::generatePassword();
 		$sendNotify = $this->getData('sendNotify');
 
