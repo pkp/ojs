@@ -77,10 +77,10 @@ class AboutContextHandler extends Handler {
 			$templateMgr->assign('showSupportContact', true);
 		}
 
-		$templateMgr->assign('mailingAddress', $contextSettings->mailingAddress);
+		$templateMgr->assign('mailingAddress', $contextSettings['mailingAddress']);
 		$templateMgr->assign('contactName', $contactName);
 		$templateMgr->assign('contactTitle', $contactTitle);
-		$templateMgr->assign('contactAffiliation', $contactAffiliate);
+		$templateMgr->assign('contactAffiliation', $contactAffiliation);
 		$templateMgr->assign('contactMailingAddress', $contactMailingAddress);
 		$templateMgr->assign('contactPhone', $contactPhone);
 		$templateMgr->assign('contactFax', $contactFax);
