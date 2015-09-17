@@ -821,7 +821,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				u.last_name,
 				ar.review_id,
 				(SELECT AVG(ra.quality) FROM review_assignments ra WHERE ra.reviewer_id = u.user_id) AS average_quality,
-				(SELECT COUNT(ac.review_id) FROM review_assignments ac WHERE ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL) AS completed,
+				(SELECT COUNT(ac.review_id) FROM review_assignments ac WHERE ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL AND ac.cancelled = 0) AS completed,
 				(SELECT COUNT(ac.review_id) FROM review_assignments ac, articles a WHERE
 					ac.reviewer_id = u.user_id AND
 					ac.submission_id = a.article_id AND
@@ -831,7 +831,7 @@ class SectionEditorSubmissionDAO extends DAO {
 					ac.declined = 0 AND
 					a.status <> '.STATUS_QUEUED.') AS incomplete,
 				(SELECT MAX(ac.date_notified) FROM review_assignments ac WHERE ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL) AS latest,
-				(SELECT AVG(ac.date_completed-ac.date_notified) FROM review_assignments ac WHERE ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL) AS average
+				(SELECT AVG(ac.date_completed-ac.date_notified) FROM review_assignments ac WHERE ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL AND ac.cancelled = 0) AS average
 			 FROM users u
 				LEFT JOIN review_assignments ra ON (ra.reviewer_id = u.user_id)
 				LEFT JOIN review_assignments ar ON (ar.reviewer_id = u.user_id AND ar.cancelled = 0 AND ar.submission_id = ? AND ar.round = ?)
