@@ -15,7 +15,7 @@
 {foreach from=$section.articles item=article}
 {$article->getLocalizedTitle()|strip_tags}{if $article->getPages()} ({$article->getPages()}){/if}
 
-{if !$section.hideAuthor}
+{if (!$section.hideAuthor && $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_DEFAULT) || $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_SHOW}
 {foreach from=$article->getAuthors() item=author name=authorList}
 	{$author->getFullName()}{if !$smarty.foreach.authorList.last},{/if}
 {/foreach}
