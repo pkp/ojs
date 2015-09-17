@@ -30,13 +30,12 @@ DISTRIBDIR=$2
 ACCESSTOKEN=$3
 
 # Make sure we're at the head of the stable branch
-echo "FIXME: Reinstate this checkout code."
-# git checkout ${BRANCH}
-# git pull
-# cd lib/pkp
-# git checkout ${BRANCH}
-# git pull
-# cd ../..
+git checkout ${BRANCH}
+git pull
+cd lib/pkp
+git checkout ${BRANCH}
+git pull
+cd ../..
 
 # Determine the tag of the last release on this branch (e.g. ojs-2_4_5-0)
 LASTTAG=`git describe --tags --abbrev=0 $BRANCH`
@@ -100,15 +99,14 @@ git add docs/RELEASE ${RELEASE_ALTCOPY}
 echo " Done."
 
 # Commit the last changes
-echo "FIXME: NEUTERED GIT COMMIT"
 git add lib/pkp
-echo git commit -m "Automated commits for ${APPLICATION_UPPER} ${MAJOR}.${MINOR}.${REVISION}-${THISBUILD}"
-echo cd lib/pkp
-echo git tag ${THISTAG}
-echo git push --tags
-echo cd ../..
-echo git tag ${THISTAG}
-echo git push --tags
+git commit -m "Automated commits for ${APPLICATION_UPPER} ${MAJOR}.${MINOR}.${REVISION}-${THISBUILD}"
+cd lib/pkp
+git tag ${THISTAG}
+git push --tags
+cd ../..
+git tag ${THISTAG}
+git push --tags
 
 # Build the package
 bash tools/buildpkg.sh ${MAJOR}.${MINOR}.${REVISION}-${THISBUILD} ${THISTAG} ${DISTRIBDIR}
