@@ -29,6 +29,7 @@ Berrezarri nire pasahitza: {$url}
 		<body>{$siteTitle} webgunean sartzeko pasahitza ongi berrezarri da. Ondo gorde erabiltzaile-izen eta pasahitz hauek, aldizkarian sartzeko beharko baitituzu.
 
 Zure erabiltzaile-izena: {$username}
+Zure pasahitz berria: {$password}
 
 {$principalContactSignature}</body>
 		<description>Mezu hau bidaltzen zaie PASSWORD_RESET_CONFIRM mezuan azaldutako prozesuaren bidez pasahitza ondo berrezartzea lortu duten erabiltzaile erregistratuei.</description>
@@ -40,6 +41,7 @@ Zure erabiltzaile-izena: {$username}
 {$journalName} aldizkarian erabiltzaile gisa erregistratuta zaude orain. Zure erabiltzaile-izena eta pasahitza mezu honetan ematen dizkizugu; aldizkarian edozein lan egiteko beharko dituzu. Nahi duzunean eska dezakezu zure izena aldizkariaren erabiltzaileen zerrendatik kentzea, nirekin harremanetan jarriz.
 
 Erabiltzaile-izena: {$username}
+Pasahitza: {$password}
 
 Eskerrik asko,
 {$principalContactSignature}</body>
@@ -739,6 +741,8 @@ Egin klik esteka honetan zure eskaera berresteko eta zure helbide elektronikoa p
 
 Jakinarazpen-mezu gehiago jaso nahi ez baduzu, joan {$unsubscribeLink} orrira eta sartu zure helbide elektronikoa eta pasahitza.
 
+Hau da jakinarazpen-mezuak desgaitzeko zure pasahitza: {$password}
+
 {$principalContactSignature}</body>
 		<description>Mezu hau jakinarazpenen posta-zerrendako erabiltzaile erregistratu berriei bidaltzen zaie.</description>
 	</email_text>
@@ -1002,6 +1006,7 @@ Zure oparia trukatzeko, mesedez, erregistratu webgunearen aldizkarian hemen:
 {$giftUrl}
 
 Erabiltzailea: {$username}
+Pasahitza: {$password}
 
 Behin erregistratu ondoren, pasahitza alda dezakezu noiznahi.
 
