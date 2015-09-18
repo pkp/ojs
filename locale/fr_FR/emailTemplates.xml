@@ -27,6 +27,7 @@ Réinitialisation du mot de passe : {$url}
 		<body>Votre mot de passe pour le site Web {$siteTitle} a été réinitialisé avec succès. Veuillez conserver précieusement votre nom d'utilisateur ainsi que votre mot de passe. Vous en aurez besoin pour chacune de vos interactions avec la revue.
 
 Votre nom d'utilisateur : {$username}
+Votre nouveau mot de passe : {$password}
 
 {$principalContactSignature}</body>
 		<description><![CDATA[Ce courriel est envoyé aux utilisateurs inscrits lorsqu'ils ont réussi à réinitialiser leur mot de passe en ayant suivi la procédure décrite dans le courriel « Confirmation de la réinitialisation du mot de passe ».]]></description>
@@ -38,6 +39,7 @@ Votre nom d'utilisateur : {$username}
 Vous êtes désormais inscrit en tant qu'utilisateur pour {$journalName}. Veuillez conserver précieusement votre nom d'utilisateur et votre mot de passe.  Vous en aurez besoin pour toutes vos interactions avec la revue. À n'importe quel moment, vous pouvez demander à être retiré de la liste des utilisateurs de la revue en me contactant.
 
 Nom d'utilisateur : {$username}
+Mot de passe : {$password}
 
 Merci,
 {$principalContactSignature}</body>
@@ -996,6 +998,7 @@ Vous avez reçu un cadeau de la part de {$buyerFullName}, sur la revue {$giftJou
 Vous pouvez récupérer votre cadeau en vous connectant sur le site Web de la revue à l'adresse suivante : {$giftUrl}
 
 Nom d'utilisateur : {$username}
+Mot de passe : {$password}
 
 Une fois connecté, vous pouvez modifier votre mot de passe à tout moment.
 

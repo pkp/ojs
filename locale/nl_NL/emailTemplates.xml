@@ -29,6 +29,7 @@ Herstel mijn wachtwoord: {$url}
 		<body>Uw wachtwoord is met succes hersteld voor de website {$siteTitle}. Bewaar de gebruikersnaam en wachtwoord, ze zijn nodig om het tijdschrift te kunnen gebruiken.
 
 Uw gebruikersnaam: {$username}
+Uw nieuwe wachtwoord: {$password}
 
 {$principalContactSignature}</body>
 		<description>Deze e-mail wordt verstuurd naar een geregistreerde gebruiker als ze met succes hun wachtwoord hebben veranderd volgens de procedure die is beschreven in de PASSWORD_RESET_CONFIRM e-mail.</description>
@@ -40,6 +41,7 @@ Uw gebruikersnaam: {$username}
 U bent nu geregistreerd als gebruiker bij {$journalName}. We hebben uw gebruikersnaam en wachtwoord in deze e-mail opgenomen. U heeft die nodig om met het tijdschrift te werken. U kunt op ieder gewenst moment verwijderd worden van de lijst gebruikers van dit tijdschrift door contact met mij op te nemen
 
 Gebruikersnaam: {$username}
+Wachtwoord: {$password}
 
 Dank u,
 {$principalContactSignature}</body>
@@ -983,6 +985,7 @@ We hopen dat u zult genieten van uw gift!
 Om uw gift in te wisselen kunt u inloggen op de website van het tijdschrift op: {$giftUrl}
 
 Uw gebruikersnaam: {$username}
+Uw wachtwoord: {$password}
 
 Na het inloggen kunt u uw wachtwoord veranderen.
 

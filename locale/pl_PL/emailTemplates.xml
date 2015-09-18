@@ -44,6 +44,8 @@ Aby potwierdzić należy subskrypcję powiadomień należy kliknąć w poniższy
 
 Aby zrezygnować z subskrypcji powiadomień, należy przejść na stronę {$unsubscribeLink}, wprowadzić e-mail i hasło.
 
+Hasło do rezygnacji z subskrypcji powiadomień: {$password}
+
 {$principalContactSignature}</body>
 		<description>Wiadomość jest przesyłana do niezarejestrowanych użytkowników, którzy właśnie dodali swoje adresy e-mail do listy mailingowej powiadomień.</description>
 	</email_text>
@@ -61,6 +63,7 @@ Jeśli nie chce Pan/Pani zmieniać hasła, należy zignorować wiadomość. W ce
 		<body>Zresetowano Pana/Pani hasło na stronie czasopisma {$siteTitle}. Należy zachować nowe dane do logowania:
 
 Nazwa użytkownika: {$username}
+Nowe hasło: {$password}
 
 {$principalContactSignature}</body>
 		<description>Wiadomość jest przesyłana do zarejestrowanych użytkowników po zmianie hasła.</description>
@@ -72,6 +75,7 @@ Nazwa użytkownika: {$username}
 Jest Pan/Pani zarejestrowany/a na stronie czasopisma jako {$journalName}. W celu usunięcia swoich danych z bazy czasopisma prosimy o kontakt.
 
 Nazwa użytkownika: {$username}
+Hasło: {$password}
 
 Dziękujemy, 
 {$principalContactSignature}</body>

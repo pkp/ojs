@@ -31,6 +31,7 @@ Reset password: {$url}
 Qui sotto trovi il tuo username e la nuova password.
 
 La tua username: {$username}
+La tua nuova password: {$password}
 
 {$principalContactSignature}]]></body>
 		<description>Questa email viene mandata ad un utente registrato quando ha resettato la password seguendo il processo descritto nella email PASSWORD_RESETTA_CONFERMA.</description>
@@ -41,6 +42,7 @@ La tua username: {$username}
 Qui sotto trovi lo username e la password che dovrai utilizzare per accedere e lavorare alla rivista. Puoi contattarmi in ogni momento per richiedere di essere rimosso dall'elenco degli utenti della rivista.
 
 Username: {$username}
+Password: {$password}
 
 Puoi richiedere in ogni momento la rimozione del tuo account mandandomi un email.
 
@@ -937,7 +939,7 @@ Speriamo che tu abbia gradito il regalo!</body>
 Per utilizzare il regalo, autenticati al sito {$giftUrl}
 
 Username: {$username}
-		</body>
+Password: {$password}</body>
 		<description>Questo messaggio informa il destinatario di un regalo dei dettagli del suo nuovo account.</description>
 	</email_text>
 	<email_text key="GIFT_AVAILABLE">

@@ -46,6 +46,8 @@ Molimo Vas da kliknete na link kako biste potvrdili svoj zahtev i dodali Vašu i
 
 Ukoliko ne želite više da primate imejlove o obaveštenjima, idite na {$unsubscribeLink} i unesite imejl adresu i lozinku.
 
+Vaša lozinka za onemogućavanje imejl obaveštenja je: {$password}
+
 {$principalContactSignature}</body>
 		<description>Ova poruka se šalje neregistrovanim korisnicima koji su se tek registrovali na mejling listu obaveštenja</description>
 	</email_text>

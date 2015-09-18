@@ -47,6 +47,8 @@ Dați clic pe acest link pentru a confirma solicitarea de adăugare a emailului 
 
 Dacă nu mai doriți să primiți emailuri de înștiințare, mergeți la {$unsubscribeLink}, unde introduceți adresa de email și parola.
 
+Parola pentru dezactivarea înștiințărilor prin email este: {$password}
+
 {$principalContactSignature}</body>
 		<description>Acest email este trimis unui utilizator neînregistrat pe site, dar care s-a înscris doar pe lista de email.</description>
 	</email_text>
@@ -66,6 +68,7 @@ Resetează parola: {$url}
 		<body>Parola dumneavoastră a fost resetată pentru a fi utilizată pe siteul {$siteTitle}. Rețineți numele de utilizator și parola, fiind necesare pentru lucrul cu revista.
 
 Numele de utilizator: {$username}
+Noua parolă: {$password}
 
 {$principalContactSignature}</body>
 		<description>Acest email este trimis unui utilizator înregistrat la momentul resetării cu succes a parolei urmând procedura descrisă în emailul  PASSWORD_RESET_CONFIRM.</description>
@@ -77,6 +80,7 @@ Numele de utilizator: {$username}
 Ați fost înregistrat ca utilizator la {$journalName}. Am inclus numele de utilizator și parola în acest email, care sunt necesare pentru a opera cu revista prin intermediul siteului său. Puteți fi scos din lista utilizatorilor revistei contactându-mă.
 
 Nume utilizator: {$username}
+Parolă: {$password}
 
 Vă mulțumim,
 {$principalContactSignature}</body>
