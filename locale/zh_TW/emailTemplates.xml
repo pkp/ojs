@@ -30,7 +30,6 @@
 		<body>您的密碼已經成功重新設定以使用{$siteTitle}網站。請保管好這份使用者名稱和密碼，它對於使用本站的所有功能來說是非常必要的。
 
 您的使用者名稱：{$username}
-您的新密碼：{$password}
 
 {$principalContactSignature}</body>
 		<description>當註冊使用者成功依照PASSWORD_RESET_CONFIRM電子郵件的指示重新設定他們的密碼時，這封電子郵件會被寄給他們。</description>
@@ -40,7 +39,6 @@
 		<body>謝謝您註冊成為《{$journalName}》的一個使用者。請保管好這份使用者名稱和密碼，它對於使用本站的所有功能來說是非常必要的。
 
 使用者名稱：{$username}
-密碼：{$password}
 
 謝謝您
 {$principalContactSignature}</body>

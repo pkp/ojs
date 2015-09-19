@@ -68,7 +68,6 @@ Reinicialitza la meva contrasenya: {$url}
 Recordeu aquest nom d'usuari/ària i aquesta contrasenya, ja que els necessitareu per accedir a la revista i treballar-hi.
 
 Nom d'usuari/ària: {$username}
-Contrasenya nova: {$password}
 
 {$principalContactSignature}</body>
 		<description>Aquest missatge de correu electrònic s'envia a un usuari/ària registrat per notificar-li que la seva contrasenya s'ha reinicialitzat amb èxit després d'haver seguit el procés descrit al missatge de correu electrònic PASSWORD_RESET_CONFIRM.</description>
@@ -80,7 +79,6 @@ Contrasenya nova: {$password}
 us acabeu de registrar com a usuari/ària de {$journalName}. Aquest missatge de correu electrònic conté el vostre nom d'usuari/ària i la vostra contrasenya. Necessitareu aquestes dades per accedir al lloc web de la revista i treballar-hi. Recordeu que en qualsevol moment em podeu sol·licitar que us elimini de la llista d'usuaris/àries de la revista.
 
 Nom d'usuari/ària: {$username}
-Contrasenya: {$password}
 
 Moltes gràcies,
 {$principalContactSignature}</body>
@@ -988,7 +986,6 @@ Esperem que l'obsequi sigui del vostre grat.
 Per bescanviar l'obsequi heu d'iniciar la sessió al lloc web de la revista a {$giftUrl}
 
 Nom d’usuari/ària: {$username}
-Contrasenya: {$password}
 
 Una vegada dins el sistema podreu canviar la contrasenya en qualsevol moment.
 

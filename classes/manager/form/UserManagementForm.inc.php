@@ -182,10 +182,7 @@ class UserManagementForm extends Form {
 			$roleSymbolic = $roleDao->getRolePath($roleId);
 
 			$this->_data = array(
-				'enrollAs' => array($roleSymbolic),
-				'generatePassword' => 1,
-				'sendNotify' => 1,
-				'mustChangePassword' => 1
+				'enrollAs' => array($roleSymbolic)
 			);
 		}
 		return parent::initData();

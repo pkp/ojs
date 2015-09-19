@@ -29,7 +29,6 @@
 		<body>رمزعبور شما برای استفاده از وب سایت {$journalName}، دوباره تنظیم شد. لطفا این کلمه کاربری و رمز عبور را محفوظ نگاه دارید، زیرا برای کارکردن با وب سایت مجله لازم است.
 
 نام کاربری شما: {$username}
-رمز عبور جدید شما: {$password}
 
 {$principalContactSignature}</body>
 		<description>This email is sent to a registered user when they have successfully reset their password following the process described in the PASSWORD_RESET_CONFIRM email.</description>
@@ -39,7 +38,6 @@
 		<body>برای ثبت نام در {$journalName} از شما سپاسگزارم. لطفا نام کاربری و رمز عبور خود را که برای ورود به وب سایت این مجله مورد نیاز می باشد به خاطر بسپارید.
 
 نام کاربری: {$username}
-رمز عبور: {$password}
 
 
 باتشکر
@@ -731,8 +729,6 @@ jhvdo hkrqh: {$expiryDate}
 
 چنانچه دی\ر مایل به دریافت ایمیل اطلاع رسانی نیستید، لطفا به آدرس {$unsubscribeLink} رفته و ایمیل و رمز خود را وارد کنید.
 
- :رمز عبور شما برای غیر فعال کردن ایمیل اطلاع رسانی{$password}
-
 {$principalContactSignature}</body>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
@@ -906,7 +902,6 @@ Subscription Type:
 ‎برای دریافت هدیه لطفا با اسم و رمز زیر در سایت ما به آدرس{$giftUrl}  لاگ این کنید‫.‬
 
 ‎اسم ورود: {$username}
-‎رمز ورود: {$password}
 
 ‎بعد از ورود شما میتوانید رمزتان را هر موقعی خواستید تغییر دهید‫.‬
 
