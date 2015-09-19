@@ -45,8 +45,6 @@ Klik di tautan ini untuk mengkonfirmasi permintaan Anda dan tambahkan alamat ema
 
 Jika Anda ingin berhenti menerima email notifikasi, pergilah ke {$unsubscribeLink} dan masukkan alamat email dan kata sandi Anda.
 
-Kata sandi Anda untuk menon-aktifkan email adalah: {$password}
-
 {$principalContactSignature}</body>
 		<description>Email ini dikirim ke pengguna yang tidak terdaftar yang baru saja terdaftar dengan mailing list notifikasi.</description>
 	</email_text>
@@ -66,7 +64,6 @@ Atur ulang kata sandi saya: {$url}
 		<body>Kata sandi Anda telah sukses diatur ulang untuk penggunaan dengan web site {$siteTitle}. Ingatlah nama pengguna dan kata sandi ini karena diperlukan untuk semua pekerjaan di jurnal.
 
 Nama pengguna Anda: {$username}
-Kata sandi baru Anda: {$password}
 
 {$principalContactSignature}</body>
 		<description>Email ini dikirim untuk pengguna yang terdaftar saat mereka telah sukses mengatur ulang kata sandi mereka dengan mengikuti proses yang dideskripsikan di email  PASSWORD_RESET_CONFIRM.</description>
@@ -78,7 +75,6 @@ Kata sandi baru Anda: {$password}
 Anda sekarang telah terdaftar sebagai pengguna dengan {$journalName}. Kami telah memasukkan nama pengguna dan kata sandi Anda di email ini, yang dibutuhkan untuk semua pekerjaan dengan jurnal ini di dalam websitenya. Kapanpun, Anda dapat meminta untuk dipindahkan dari daftar pengguna jurnal dengan menghubungi saya. 
 
 Nama pengguna: {$username}
-Kata Sandi: {$password}
 
 Terima kasih,
 {$principalContactSignature}</body>

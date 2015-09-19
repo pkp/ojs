@@ -31,7 +31,6 @@ Recuperar senha: {$url}
 		<body>A sua senha de acesso ao site {$siteTitle} foi actualizada com sucesso. Guarde os dados de login (nome de utilizador e a senha), uma vez que serão necessários para todas as interacções relacionadas com este portal.
 
 O seu nome de utilizador: {$username}
-A sua nova senha: {$password}
 
 {$principalContactSignature}</body>
 		<description>Mensagem enviada a utilizador registado quando o mesmo informa que esqueceu a sua senha ou encontra problemas para aceder ao sistema. O link contido permite ao utilizador actualizar a senha de acesso.</description>
@@ -43,7 +42,6 @@ A sua nova senha: {$password}
 Agradecemos o seu registo no portal da revista {$journalName}. Guarde o nome de utilizador e a senha, pois serão necessários para todos os contactos mantidos com revista. Caso pretenda ser removido do portal, entre em contacto.
 
 Nome de utilizador: {$username}
-Senha: {$password}
 
 Agradecendo desde já a atenção dispensada,
 {$principalContactSignature}</body>
@@ -1105,7 +1103,6 @@ We hope that you enjoy your gift!
 To redeem your gift, please login to the journal website at {$giftUrl}
 
 Your username: {$username}
-Your password: {$password}
 
 Once logged in, you can change your password at any time.
 
