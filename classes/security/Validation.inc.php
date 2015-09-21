@@ -72,7 +72,7 @@ class Validation {
 			} else {
 				// Validate against OJS user database
 				$valid = Validation::verifyPassword($username, $password, $user->getPassword(), $rehash);
-                                
+
 				if ($valid && !empty($rehash)) {
 					// update to new hashing algorithm
 					$user->setPassword($rehash);
@@ -253,7 +253,7 @@ class Validation {
 	 * @param $username string username (kept for backwards compatibility)
 	 * @param $password string unencrypted password
 	 * @param $encryption string optional encryption algorithm to use, defaulting to the value from the site configuration
-     * @param $legacy boolean if true, use legacy hashing technique for backwards compatibility
+	 * @param $legacy boolean if true, use legacy hashing technique for backwards compatibility
 	 * @return string encrypted password
 	 */
 	function encryptCredentials($username, $password, $encryption = false, $legacy = null) {
