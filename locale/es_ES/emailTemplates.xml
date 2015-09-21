@@ -67,6 +67,7 @@ Restablecer mi contraseña: {$url}
 Conserve este nombre de usuario/a y contraseña, ya que se requieren para realizar cualquier acción con la revista.
 
 Su nombre de usuario/a: {$username}
+Su nueva contraseña: {$password}
 
 {$principalContactSignature}</body>
 		<description>Este correo electrónico se envía a los usuarios/as registrados cuando restablecen su contraseña con éxito siguiendo el proceso descrito en el correo electrónico CONFIRMACIÓN_DEL_RESTABLECIMIEMTO_DE_LA_CONTRASEÑA.</description>
@@ -78,6 +79,7 @@ Su nombre de usuario/a: {$username}
 Incluimos su nombre de usuario/a y contraseña en este correo electrónico. Ambos serán necesarios para realizar cualquier tipo de acción en esta revista a través de su sitio web. Puede solicitar su exclusión de la lista de usuarios/as de la revista en cualquier momento poniéndose en contacto conmigo. 
 
 Nombre de usuario/a: {$username} 
+Contraseña: {$password} 
 
 Gracias,
 {$principalContactSignature}</body>
@@ -972,6 +974,7 @@ Esperamos que el regalo sea de su agrado.
 Para reclamar su regalo, inicie sesión en el sitio web de la revista en {$giftUrl} 
 
 Su nombre de usuario/a: {$username}
+Su contraseña: {$password}
 
 Una vez se haya registrado, podrá cambiar su contraseña cuando lo desee. 
 

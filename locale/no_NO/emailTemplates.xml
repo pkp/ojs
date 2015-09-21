@@ -29,6 +29,7 @@ Forny passordet: {$url}
 		<body>Passordet ditt til nettstedet for {$siteTitle} er nå fornyet. Ta godt vare på brukernavnet og passordet, som du vil trenge for de oppgavene du skal utføre på nettstedet.
 
 Ditt brukernavn: {$username}
+Ditt nye passord: {$password}
 
 {$principalContactSignature}</body>
 		<description>Denne e-posten sendes til en bruker som har fullført fornying av passordet sitt som beskrevet i PASSWORD_RESET_CONFIRM e-posten.</description>
@@ -38,6 +39,7 @@ Ditt brukernavn: {$username}
 		<body>Takk for at du har registrert deg som bruker av nettstedet for {$journalName}. Ta godt vare på brukernavnet og passordet, som du vil trenge hver gang du skal utføre brukeroppgaver på nettstedet.
 
 Brukernavn: {$username}
+Passord: {$password}
 
 Vennlig hilsen,
 {$principalContactSignature}</body>
@@ -679,6 +681,8 @@ Om du ikke lenger ønsker å motte slike meldinger per e-post, gå til  {$unsubs
 Vennligst klikke på denne lenken for å bekrefte ditt ønske og legge din e-postadresse til e-postlisten: {$confirmLink}
 
 Om du ikke lenger ønsker å få meldinger via e-post, gå til {$unsubscribeLink} og oppgi din e-postadresse og passord.
+
+Ditt passord for å slå av e-postmeldinger er: {$password}
 
 {$principalContactSignature}</body>
 	</email_text>

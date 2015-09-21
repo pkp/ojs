@@ -64,6 +64,7 @@ Mein Passwort neu setzen: {$url}
 		<body>Ihr Benutzer/innen-Passwort für die Webseite {$siteTitle} wurde neu gesetzt. Bitte notieren Sie Benutzer/innennamen und Passwort, beides wird für alle Arbeiten mit dieser Zeitschrift gebraucht.
 
 Ihr Benutzer/innenname: {$username}
+Ihr neues Passwort: {$password}
 
 {$principalContactSignature}</body>
 		<description>Diese E-Mail wird an registrierte Benutzer/innen gesendet, nachdem sie ihr Passwort erfolgreich nach dem in der PASSWORD_RESET_CONFIRM-E-Mail beschriebenen Verfahren zurückgesetzt haben.</description>
@@ -75,6 +76,7 @@ Ihr Benutzer/innenname: {$username}
 Sie sind nun als neue/r Benutzer/in von {$journalName} registriert. Wir haben Ihren Benutzer/innennamen und Ihr Passwort in dieser Mail aufgeführt, beides wird für alle Arbeiten mit dieser Zeitschrift gebraucht. Sie können sich zu jedem Zeitpunkt als Benutzer/in der Zeitschrift austragen lassen, indem Sie mich kontaktieren.
 
 Benutzer/innenname: {$username}
+Passwort: {$password}
 
 Vielen Dank,
 {$principalContactSignature}</body>
@@ -1005,6 +1007,7 @@ Wir hoffen, dass Sie sich über Ihr Geschenk freuen!
 Um Ihr Geschenk einzulösen, loggen Sie sich bitte auf der Website der Zeitschrift unter {$giftUrl} ein.
 
 Ihr Benutzer/innenname: {$username}
+Ihr Passwort: {$password}
 
 Sobald Sie sich eingeloggt haben, können Sie Ihr Passwort jederzeit ändern.
 

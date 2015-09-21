@@ -30,6 +30,7 @@ Eğer şifrenizi değiştirmek istiyorsanız aşağıdaki bağlantıyı tıklay�
 		<body>{$siteTitle} sitesinde kullanacağınız şifreniz değiştirilmiştir. Kullanıcı adı ve şifre dergi ile yapacağınız tüm çalışmalarda gerekli olduğundan güvenli bir yere not ediniz. 
 
 Kullanıcı adı: {$username}
+Yeni şifre: {$password}
 
 {$principalContactSignature}</body>
 		<description>Bu e-posta PASSWORD_RESET_CONFIRM mesajında aktarılan süreç doğrultusunda şifre değişikliği yapmış kayıtlı kullanıcılara gönderilmektedir.</description>
@@ -39,6 +40,7 @@ Kullanıcı adı: {$username}
 		<body>{$journalName} adlı dergiye kayıt yaptırdığınız için teşekkür ederiz. Kullanıcı adı ve şifre dergi ile yapacağınız tüm işlemlerde gerekli olduğundan güvenli bir yere not ediniz.
 
 Kullanıcı adı: {$username}
+Şifreniz: {$password}
 
 Teşekkür ederiz,
 {$principalContactSignature}</body>
@@ -966,6 +968,7 @@ We hope that you enjoy your gift!
 To redeem your gift, please login to the journal website at {$giftUrl}
 
 Your username: {$username}
+Your password: {$password}
 
 Once logged in, you can change your password at any time.
 

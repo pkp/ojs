@@ -30,6 +30,7 @@ Atualizar senha: {$url}
 		<body>Sua senha de acesso ao site {$siteTitle} foi atualizada com sucesso. Guarde o login e a senha, uma vez que serão necessários para todas as atividades relacionadas ao sistema.
 
 Seu login: {$username}
+Sua nova senha: {$password}
 
 {$principalContactSignature}</body>
 		<description>Mensagem enviada a usuário cadastrado quando o mesmo informa que esqueceu sua senha ou encontra problemas para acessar o sistema. O link contido permite ao usuário atualizar a senha de acesso.</description>
@@ -41,6 +42,7 @@ Seu login: {$username}
 Agradecemos o seu cadastro no sistema da revista {$journalName}. Guarde o login e a senha, pois serão necessários para todos os trabalhos junto à revista. Caso deseje ser removido do sistema, entre em contato.
 
 Login: {$username}
+Senha: {$password}
 
 Agradecendo desde já a atenção dispensada,
 {$principalContactSignature}</body>
@@ -1115,6 +1117,7 @@ Esperamos que o presente seja de seu agrado!
 Para resgatá-lo, acesse {$giftUrl} com as credenciais a seguir:
 
 Login: {$username}
+Senha: {$password}
 
 Após o acesso, você pode alterar sua senha a qualquer tempo.
 

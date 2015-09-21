@@ -27,6 +27,7 @@ Cambiar mi contraseña: {$url}
 		<body>Su contraseña en {$siteTitle} se ha cambiado sin problema. Por favor, guarde en lugar seguro su nombre de usuaria/o y contraseña, ya que son necesarios para trabajar con la revista.
 
 Nombre de usuaria/o: {$username}
+Nueva contraseña: {$password}
 
 {$principalContactSignature}</body>
 		<description>Este correo se envía a un/a usuario/a registrado/a una vez han cambiado su contraseña siguiendo el procedimiento descrito en el correo-e PASSWORD_RESET_CONFIRM.</description>
@@ -36,6 +37,7 @@ Nombre de usuaria/o: {$username}
 		<body>Gracias por registrarse como usuaria/o en {$journalName}. Por favor, guarde en lugar seguro su nombre de usuaria/o y contraseña, ya que son necesarios para trabajar con la revista.
 
 Nombre de usuario/a: {$username}
+Contraseña: {$password}
 
 Gracias,
 {$principalContactSignature}</body>
@@ -939,6 +941,7 @@ Esperamos que disfrute de su obsequio!.
 Para recibir su obsequio, por favor identifíquese en la revista en el siguiente enlace: {$giftUrl}
 
 Su nombre de usuario: {$username}
+Su clave: {$password}
 
 Una vez que esté identificado puede cambiar su clave las veces que quiera.
 
