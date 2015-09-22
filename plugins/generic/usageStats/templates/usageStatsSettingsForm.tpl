@@ -30,6 +30,9 @@
 		{fbvFormSection title="plugins.generic.usageStats.settings.logParseRegex" description="plugins.generic.usageStats.settings.logParseRegex.description"}
 			{fbvElement type="text" id="accessLogFileParseRegex" value=$accessLogFileParseRegex"}
 		{/fbvFormSection}
+		{fbvFormSection for="dataPrivacyOption" list=true description="plugins.generic.usageStats.settings.dataPrivacyOption.description"}
+			{fbvElement type="checkbox" id="dataPrivacyOption" value="1" checked=$dataPrivacyOption label="plugins.generic.usageStats.settings.dataPrivacyOption"}
+		{/fbvFormSection}
 	{/fbvFormArea}
 	{fbvFormButtons id="usageStatsSettingsFormSubmit" submitText="common.save" hideCancel=true}
 </form>

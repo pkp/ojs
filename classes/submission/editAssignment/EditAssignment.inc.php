@@ -125,6 +125,22 @@ class EditAssignment extends DataObject {
 	}
 
 	/**
+	 * Get date editor assigned.
+	 * @return timestamp
+	 */
+	function getDateAssigned() {
+		return $this->getData('dateAssigned');
+	}
+
+	/**
+	 * Set date editor assigned.
+	 * @param $dateAssigned timestamp
+	 */
+	function setDateAssigned($dateAssigned) {
+		return $this->setData('dateAssigned', $dateAssigned);
+	}
+        
+	/**
 	 * Get date editor notified.
 	 * @return timestamp
 	 */

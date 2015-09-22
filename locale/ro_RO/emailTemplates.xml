@@ -26,8 +26,8 @@ Link: {$url}
 		<description>Emailul este trimis utilizatorilor înregistrați care au optat pentru a avea acest tip de înștiințare.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Înștiințare nouă de la {$siteTitle}</subject>
-		<body>Aveți o înștiințare nouă de la {$siteTitle}:
+		<subject>Înștiințare nouă de la {$journalName}</subject>
+		<body>Aveți o înștiințare nouă de la {$journalName}:
 --
 {$notificationContents}
 
@@ -40,8 +40,8 @@ Dacă nu mai doriți să primiți emailuri de înștiințare, mergeți la {$unsu
 		<description>Acest email este trimis utilizatorilor neînregistrați prezenți pe lista de înștiințare prin email.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Bine ați venit pe lista de email {$siteTitle}!</subject>
-		<body>V-ați înscris pentru a primi înștiințări de la {$siteTitle}.
+		<subject>Bine ați venit pe lista de email {$journalName}!</subject>
+		<body>V-ați înscris pentru a primi înștiințări de la {$journalName}.
 
 Dați clic pe acest link pentru a confirma solicitarea de adăugare a emailului pe această listă: {$confirmLink}
 

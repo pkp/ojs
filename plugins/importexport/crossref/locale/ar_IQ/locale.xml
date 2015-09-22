@@ -25,7 +25,7 @@
 	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">لطفاً، أدخل اسم المودع.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">لطفاً، أدخل البريد الالكتروني للمودع.</message>
 	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">قم بتسجيل DOI تلقائياً</message>
-	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[نظام المجلات المفتوحة سيقوم بإيداع DOI الخاصة بالمقالات آلياً في CrossRef بمجرد نشر تلك المقالات. لطفاً، لاحظ أن هذا الأمر قد يستغرق وقتاً قصيراً للمعالجة بعد إجراء النشر. بإمكانك التحقق من كل DOI غير المسجلة عبر <a href="">قائمة المقالات غير المسجلة</a>.]]></message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[نظام المجلات المفتوحة سيقوم بإيداع DOI الخاصة بالمقالات آلياً في CrossRef بمجرد نشر تلك المقالات. لطفاً، لاحظ أن هذا الأمر قد يستغرق وقتاً قصيراً للمعالجة بعد إجراء النشر. بإمكانك التحقق من كل DOI غير المسجلة عبر <a href="{$unregisteredURL}">قائمة المقالات غير المسجلة</a>.]]></message>
 
 	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[هذه الإضافة بإمكانك ضبطها لتقوم تلقائياً بتسجيل معرفات المكونات الرقمية (DOIs) في CrossRef. سيكون بحاجة إلى اسم مستخدم وكلمة مرور (متوافران عبر <a href="http://www.crossref.org" target="_blank">CrossRef</a>) من أجل القيام بذلك. إن لم يكن لك اسم مستخدم وكلمة مرور خاصين بك، سيكون بإمكانك أيضاً التصدير إلى CrossRef بصيغة XML، لكن لن تتمكن من تسجيل DOI الخاصة بك في CrossRef من داخل نظام المجلات المفتوحة.]]></message>
 

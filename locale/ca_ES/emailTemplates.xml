@@ -25,8 +25,8 @@ Enllaç: {$url}
 		<description>El missatge de correu electrònic s'envia als usuaris/àries registrats que han seleccionat l'opció de rebre aquest tipus de notificacions per correu electrònic.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Notificació nova de {$siteTitle}</subject>
-		<body>Teniu una notificació nova de {$siteTitle}:
+		<subject>Notificació nova de {$journalName}</subject>
+		<body>Teniu una notificació nova de {$journalName}:
 --
 {$notificationContents}
 
@@ -39,8 +39,8 @@ Si no voleu rebre més notificacions per correu electrònic, dirigiu-vos a {$uns
 		<description>Aquest missatge de correu electrònic s'envia als usuaris/àries no registrats de la llista de notificacions.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Benvingut/uda a la llista de correu de {$siteTitle}.</subject>
-		<body>Us heu registrat per rebre notificacions de {$siteTitle}.
+		<subject>Benvingut/uda a la llista de correu de {$journalName}.</subject>
+		<body>Us heu registrat per rebre notificacions de {$journalName}.
 
 Feu clic en aquest enllaç per confirmar la sol·licitud i afegir la vostra adreça electrònica a la llista de correu:
 {$confirmLink}

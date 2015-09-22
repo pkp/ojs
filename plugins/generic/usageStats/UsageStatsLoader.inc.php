@@ -181,7 +181,11 @@ class UsageStatsLoader extends FileLoader {
 			list($assocId, $assocType) = $this->_getAssocFromUrl($entryData['url'], $filePath, $lineNumber);
 			if(!$assocId || !$assocType) continue;
 
-			list($countryCode, $cityName, $region) = $geoTool ? $geoTool->getGeoLocation($entryData['ip']) : array(null, null, null);
+			$countryCode = $cityName = $region = null;
+			$plugin = $this->_plugin;
+			if (!$plugin->getSetting(CONTEXT_ID_NONE, 'dataPrivacyOption')) {
+				list($countryCode, $cityName, $region) = $geoTool ? $geoTool->getGeoLocation($entryData['ip']) : array(null, null, null);
+			}
 			$day = date('Ymd', $entryData['date']);
 
 			$type = $this->_getFileType($assocType, $assocId);
@@ -239,7 +243,7 @@ class UsageStatsLoader extends FileLoader {
 	/**
 	 * Auto stage usage stats log files, also moving files that
 	 * might be in processing folder to stage folder.
-	 */ 
+	 */
 	function autoStage() {
 		$plugin = $this->_plugin;
 
@@ -268,9 +272,7 @@ class UsageStatsLoader extends FileLoader {
 				$filename = pathinfo($filePath, PATHINFO_BASENAME);
 				$currentDayFilename = $plugin->getUsageEventCurrentDayLogName();
 				if ($filename == $currentDayFilename) continue;
-				if ($fileMgr->copyFile($filePath, $this->getStagePath() . DIRECTORY_SEPARATOR . $filename)) {
-					$fileMgr->deleteFile($filePath);
-				}
+				$this->moveFile(pathinfo($filePath, PATHINFO_DIRNAME), $this->getStagePath(), $filename);
 			}
 		}
 	}

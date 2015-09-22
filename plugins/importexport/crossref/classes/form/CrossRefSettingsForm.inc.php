@@ -37,6 +37,15 @@ class CrossRefSettingsForm extends DOIExportSettingsForm {
 		$this->addCheck(new FormValidatorEmail($this, 'depositorEmail', 'required', 'plugins.importexport.crossref.settings.form.depositorEmailRequired'));
 	}
 
+	/**
+	 * @see Form::display()
+	 */
+	function display($request) {
+		$templateMgr =& TemplateManager::getManager($request);
+		$plugin = $this->_plugin;
+		$templateMgr->assign('unregisteredURL', $request->url(null, null, 'importexport', array('plugin', $plugin->getName(), 'all')));
+		parent::display($request);
+	}
 
 	//
 	// Implement template methods from DOIExportSettingsForm

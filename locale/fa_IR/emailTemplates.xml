@@ -709,8 +709,8 @@ jhvdo hkrqh: {$expiryDate}
 {$principalContactSignature}</body>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>فرم اطلاع رسانی جدید {$siteTitle}</subject>
-		<body>یک فرم اطلاع رسانی جدید از {$siteTitle} دارید
+		<subject>فرم اطلاع رسانی جدید {$journalName}</subject>
+		<body>یک فرم اطلاع رسانی جدید از {$journalName} دارید
 --
 {$notificationContents}
 
@@ -723,8 +723,8 @@ jhvdo hkrqh: {$expiryDate}
 {$principalContactSignature}</body>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>به لیست ایمیلی {$siteTitle} خوش آمدید</subject>
-		<body>شما جهت دریافت اطلاع رسانی از {$siteTitle} ثبت نام کرده اید.
+		<subject>به لیست ایمیلی {$journalName} خوش آمدید</subject>
+		<body>شما جهت دریافت اطلاع رسانی از {$journalName} ثبت نام کرده اید.
 
 لطفا بر روی این لینک کلیک کنید تا تقاضای خود را تایید کرده آدرس ایمیل خود را به لیست اضافه کنید:
 {$confirmLink}

@@ -144,7 +144,6 @@ class CreateReviewerForm extends Form {
 		$user->setCountry($this->getData('country'));
 		$user->setBiography($this->getData('biography'), null); // Localized
 		$user->setGossip($this->getData('gossip'), null); // Localized
-		$user->setMustChangePassword($this->getData('mustChangePassword') ? 1 : 0);
 
 		$authDao =& DAORegistry::getDAO('AuthSourceDAO');
 		$auth =& $authDao->getDefaultPlugin();
@@ -174,6 +173,7 @@ class CreateReviewerForm extends Form {
 		} else {
 			$user->setPassword(Validation::encryptCredentials($this->getData('username'), $password));
 		}
+		$user->setMustChangePassword(isset($auth) ? 0 : 1);
 
 		$user->setDateRegistered(Core::getCurrentDate());
 		parent::execute($user);

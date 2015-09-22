@@ -87,7 +87,7 @@
 			<tr valign="top">
 				<td width="20%" class="label">{fieldLabel name="automaticRegistration" key="plugins.importexport.crossref.settings.form.automaticRegistration"}</td>
 				<td width="80%" class="value">
-					<input type="checkbox" name="automaticRegistration" id="automaticRegistration" value="1" {if $automaticRegistration} checked="checked"{/if} />&nbsp;{translate key="plugins.importexport.crossref.settings.form.automaticRegistration.description"}
+					<input type="checkbox" name="automaticRegistration" id="automaticRegistration" value="1" {if $automaticRegistration} checked="checked"{/if} />&nbsp;{translate key="plugins.importexport.crossref.settings.form.automaticRegistration.description" unregisteredURL=$unregisteredURL}
 				</td>
 			</tr>
 			<tr><td colspan="2">&nbsp;</td></tr>

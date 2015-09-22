@@ -426,7 +426,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 			} elseif ($hookName == 'Templates::Author::Index::AdditionalItems') { // On author's home page
 				$output .= '<br /><div class="separator"></div><h3>' . __('plugins.generic.objectsForReview.author.objectsForReview') . '</h3><ul><li><a href="' . Request::url(null, 'author', 'objectsForReview', 'all') . '">' . __('plugins.generic.objectsForReview.author.myObjectsForReview') . '</a></li></ul><br />';
 			} elseif ($hookName == 'Templates::Common::Header::Navbar::CurrentJournal' && $this->getSetting($journal->getId(), 'displayListing')) { // In the main nav bar
-				$output .= '<li><a href="' . Request::url(null, 'objectsForReview') . '" target="_parent">' . __('plugins.generic.objectsForReview.public.headerLink') . '</a></li>';
+				$output .= '<li id="objectsForReview"><a href="' . Request::url(null, 'objectsForReview') . '" target="_parent">' . __('plugins.generic.objectsForReview.public.headerLink') . '</a></li>';
 			}
 		}
 		return false;

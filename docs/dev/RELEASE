@@ -39,18 +39,12 @@ OJS release:
     docs/dev/ojs2.doxygen
 
 
-3. Generate ChangeLog for the release:
+3. Copy the current release notes to docs/:
 
-    see e.g. http://github.com/jwiegley/git-scripts/blob/master/git-changelog
-
-
-4. Copy the current changelog and release notes to docs/:
-
-    cp docs/release-notes/ChangeLog-<VERSION> docs/ChangeLog
     cp docs/release-notes/README-<VERSION> docs/RELEASE
 
 
-5. After committing any pending modifications, tag the release in git (both the
+4. After committing any pending modifications, tag the release in git (both the
 OJS codebase and the PKP library to be distributed with it). DO NOT FORGET TO
 COMMIT THE lib/pkp HASH FIRST.
 
@@ -62,7 +56,7 @@ COMMIT THE lib/pkp HASH FIRST.
     git push --tags
 
 
-6. Build the OJS package and patch files:
+5. Build the OJS package and patch files:
 
     sh tools/buildpkg.sh <VERSION> <TAG>-<BRANCH> <PATCH_DIR>
     
@@ -70,7 +64,7 @@ COMMIT THE lib/pkp HASH FIRST.
      packages against which to build patches)
 
 
-7. Place the new package, patches, version descriptor, and Doxygen docs on the
+6. Place the new package, patches, version descriptor, and Doxygen docs on the
    OJS web site:
 
     http://pkp.sfu.ca/ojs/download/
@@ -78,7 +72,7 @@ COMMIT THE lib/pkp HASH FIRST.
     http://pkp.sfu.ca/ojs/xml/ojs-version.xml
     http://pkp.sfu.ca/ojs/doxygen
 
-8. Place the release notes, upgrade instructions, readme, and any relevant DTDs
+7. Place the release notes, upgrade instructions, readme, and any relevant DTDs
    on the OJS website:
 
 	http://pkp.sfu.ca/ojs/README-<VERSION>

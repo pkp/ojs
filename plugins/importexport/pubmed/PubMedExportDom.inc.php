@@ -182,6 +182,19 @@ class PubMedExportDom {
 			$abstractNode = XMLCustomWriter::createChildWithText($doc, $root, 'Abstract', strip_tags($article->getAbstract($article->getLocale())), false);
 		}
 
+		if ($subject = $article->getSubject($article->getLocale())) {
+			$objectListNode = XMLCustomWriter::createElement($doc, 'ObjectList');
+			XMLCustomWriter::appendChild($root, $objectListNode);
+			foreach (explode(';', $subject) as $keyword) {
+				$objectNode = XMLCustomWriter::createElement($doc, 'Object');
+				$objectNode->setAttribute('Type', 'keyword');
+				$paramNode =& XMLCustomWriter::createChildWithText($doc, $objectNode, 'Param', $keyword);
+				$paramNode->setAttribute('Name', 'value');
+				XMLCustomWriter::appendChild($objectListNode, $objectNode);
+				unset($keywordNode, $paramNode);
+			}
+		}
+
 		return $root;
 	}
 

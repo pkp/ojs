@@ -45,9 +45,9 @@ class CrossrefInfoSender extends ScheduledTask {
 	}
 
 	/**
-	 * @see FileLoader::execute()
+	 * @see ScheduledTask::executeActions()
 	 */
-	function execute() {
+	function executeActions() {
 		if (!$this->_plugin) return false;
 
 		$plugin = $this->_plugin;

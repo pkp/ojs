@@ -24,8 +24,8 @@ Link: {$url}
 		<description>Diese E-Mail wird an angemeldete Benutzer/innen geschickt, die sich für diese Art der Benachrichtigung angemeldet haben.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Neue Benachrichtigung von {$siteTitle}</subject>
-		<body>Sie haben eine neue Benachrichtigung von {$siteTitle}:
+		<subject>Neue Benachrichtigung von {$journalName}</subject>
+		<body>Sie haben eine neue Benachrichtigung von {$journalName}:
 --
 {$notificationContents}
 
@@ -38,8 +38,8 @@ Wenn Sie keine Benachrichtigungs-E-Mails mehr erhalten möchten, gehen Sie bitte
 		<description>Diese E-Mail wird an nicht registrierte Benutzer/innen auf der Benachrichtigungs-Mailingliste gesendet.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Willkommen zu der {$siteTitle}-Mailingliste!</subject>
-		<body>Sie haben Sich angemeldet, Benachrichtigungen von {$siteTitle} zu erhalten.
+		<subject>Willkommen zu der {$journalName}-Mailingliste!</subject>
+		<body>Sie haben Sich angemeldet, Benachrichtigungen von {$journalName} zu erhalten.
 
 Bitte klicken Sie auf diesen Link, um Ihre Anfrage zu bestätigen und Ihre E-Mail-Adresse zur Mailingliste hinzuzufügen: {$confirmLink}
 
@@ -457,11 +457,11 @@ Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Ze
 
 wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: "{$articleTitle}" gekommen.
 
-Unsere Entscheidung lautet:
+Unsere Entscheidung lautet: Beitrag annehmen
 
 {$editorialContactSignature}
 </body>
-		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
+		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung "Beitrag annehmen" zu ihrer/seiner Einreichung.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
 		<subject>Entscheidung der Redaktion</subject>
@@ -469,11 +469,11 @@ Unsere Entscheidung lautet:
 
 wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: "{$articleTitle}" gekommen.
 
-Unsere Entscheidung lautet:
+Unsere Entscheidung lautet: Überarbeitung erforderlich
 
 {$editorialContactSignature}
 </body>
-		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
+		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung "Überarbeitung erforderlich" zu ihrer/seiner Einreichung.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
 		<subject>Entscheidung der Redaktion</subject>
@@ -481,11 +481,11 @@ Unsere Entscheidung lautet:
 
 wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: "{$articleTitle}" gekommen.
 
-Unsere Entscheidung lautet:
+Unsere Entscheidung lautet: Erneut zur Begutachtung einreichen
 
 {$editorialContactSignature}
 </body>
-		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
+		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung "Erneut zur Begutachtung einreichen" zu ihrer/seiner Einreichung.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
 		<subject>Entscheidung der Redaktion</subject>
@@ -493,11 +493,11 @@ Unsere Entscheidung lautet:
 
 wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: "{$articleTitle}" gekommen.
 
-Unsere Entscheidung lautet:
+Unsere Entscheidung lautet: Beitrag ablehnen
 
 {$editorialContactSignature}
 </body>
-		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
+		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung "Beitrag ablehnen" zu ihrer/seiner Einreichung.</description>
 	</email_text>
 		<email_text key="COPYEDIT_REQUEST">
 		<subject>Bitte um ein Lektorat</subject>
