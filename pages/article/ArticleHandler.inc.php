@@ -196,7 +196,7 @@ class ArticleHandler extends Handler {
 
 		if($journalRt->getSharingEnabled()) {
 			$templateMgr->assign('sharingRequestURL', $request->getRequestURL());
-			$templateMgr->assign('sharingArticleTitle', $article->getArticleTitle());
+			$templateMgr->assign('sharingArticleTitle', $article->getLocalizedTitle());
 			$templateMgr->assign_by_ref('sharingUserName', $journalRt->getSharingUserName());
 			$templateMgr->assign_by_ref('sharingButtonStyle', $journalRt->getSharingButtonStyle());
 			$templateMgr->assign_by_ref('sharingDropDownMenu', $journalRt->getSharingDropDownMenu());
