@@ -18,6 +18,6 @@
 <scheduled_tasks>
 	<task class="plugins.importexport.datacite.DataciteInfoSender">
 		<descr>Send DOI deposit to DataCite server.</descr>
-		<frequency hour="24"/>
+		<frequency hour="0"/>
 	</task>
 </scheduled_tasks>
