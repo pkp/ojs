@@ -1,7 +1,6 @@
 {**
  * templates/search/authorIndex.tpl
- *
- * Copyright (c) 2013-2015 Simon Fraser University Library
+  Copyright (c) 2013-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -22,7 +21,50 @@
 
 	{if $lastFirstLetter|lower != $firstLetter|lower}
 			<div id="{$firstLetter|escape}">
-		<h3>{$firstLetter|escape}</h3>
+
+		{php}
+			/**
+			 * Complex letter heading for authorIndex
+			 * 
+			 * This code offers an improved handling of letter headings in the alphabetically
+			 * sorted authorIndex. While the sorting order is coming from the database, this code allows
+			 * to avoid new headings appearing when a last name's first letter contains diacritics.
+			 * 
+			 * to do:
+			 *  - find a better way to deal with the settings string
+			 *  - adapt to fit in with OJS architecture
+			 */
+
+			/* Accessing variables from the smarty loop outside this php code. */
+			$firstLetter = $this->get_template_vars('firstLetter');
+			$lastFirstLetter = $this->get_template_vars('lastFirstLetter');
+			
+			/* Define settings string. The way it is passed to this code needs to be improved. */
+			$settingsString = "A,B,C,D,E,F,G,H,I,J,K Ǩ,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z Ż";
+			$explodedSettingsString = explode(',', $settingsString);
+
+			/* Parse each setting and write all letters to be grouped under one heading in an array field */
+			$settingsArray = array();
+			foreach ($explodedSettingsString as $currentGroup) {
+				$explodedCurrentGroup = explode(' ', $currentGroup);
+				$firstInGroup = $currentGroup[0];
+				$settingsArray[$firstInGroup] = $explodedCurrentGroup;
+			}
+
+			/* If current first letter and last first letter are members of the same group in the settings
+			   string, the letter heading will not be displayed. */
+			$showLetterHeading = True;
+			foreach ($settingsArray as $value) { 
+				if (in_array($firstLetter, $value)) { 
+					if (in_array($lastFirstLetter, $value)) {
+						$showLetterHeading = False;
+					}
+				}
+			}
+			if  ($showLetterHeading) {
+				echo "<h3>" . $firstLetter . "</h3>";
+			}
+		{/php}
 			</div>
 	{/if}
 
