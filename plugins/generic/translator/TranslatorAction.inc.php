@@ -149,11 +149,13 @@ class TranslatorAction {
 			unset($referenceLocaleFile);
 		}
 
+		$pluginsReferenceLocaleFilenamesList = array();
 		$plugins =& PluginRegistry::loadAllPlugins();
 		foreach (array_keys($plugins) as $key) {
 			$plugin =& $plugins[$key];
 			$referenceLocaleFilenames = $plugin->getLocaleFilename($referenceLocale);
-			if ($referenceLocaleFilenames) {
+			if ($referenceLocaleFilenames && !in_array($referenceLocaleFilenames, $pluginsReferenceLocaleFilenamesList)) {
+				$pluginsReferenceLocaleFilenamesList[] = $referenceLocaleFilenames;
 				if (is_scalar($referenceLocaleFilenames)) $referenceLocaleFilenames = array($referenceLocaleFilenames);
 				$localeFilenames = $plugin->getLocaleFilename($locale);
 				if (is_scalar($localeFilenames)) $localeFilenames = array($localeFilenames);
