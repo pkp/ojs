@@ -150,6 +150,8 @@ class ExternalFeedPlugin extends GenericPlugin {
 		$journalId = $journal?$journal->getId():0;
 
 		if ($this->getEnabled()) {
+			// Only page requests will be handled
+			if (!is_a($request->getRouter(), 'PKPPageRouter')) return false;
 			$requestedPage = $request->getRequestedPage();
 
 			if (empty($requestedPage) || $requestedPage == 'index') {
