@@ -37,7 +37,7 @@
 			{fbvElement type="text" multilingual=true name="acronym" id="acronym" value=$acronym}
 		{/fbvFormSection}
 
-		{fbvFormSection title="manager.setup.journalAbbreviation" for="abbreviation" required=true inline=true size=$fbvStyles.size.SMALL}
+		{fbvFormSection title="manager.setup.journalAbbreviation" for="abbreviation" inline=true size=$fbvStyles.size.SMALL}
 			{fbvElement type="text" multilingual=true name="abbreviation" id="abbreviation" value=$abbreviation}
 		{/fbvFormSection}
 
