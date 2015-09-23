@@ -105,7 +105,6 @@ class SubscriptionForm extends Form {
 		$templateMgr->assign('userFullName', $user->getFullName());
 		$templateMgr->assign('userEmail', $user->getEmail());
 		$templateMgr->assign('userPhone', $user->getPhone());
-		$templateMgr->assign('userFax', $user->getFax());
 		$templateMgr->assign('userMailingAddress', $user->getMailingAddress());
 		$templateMgr->assign('userCountry', $user->getCountry());
 		$templateMgr->assign('genderOptions', $userDao->getGenderOptions());
@@ -148,7 +147,6 @@ class SubscriptionForm extends Form {
 				'userUrl', $user->getUrl(),
 				'userEmail' => $user->getEmail(),
 				'userPhone' => $user->getPhone(),
-				'userFax' => $user->getFax(),
 				'userMailingAddress' => $user->getMailingAddress(),
 				'userCountry' => $user->getCountry(),
 				'membership' => $subscription->getMembership(),
@@ -162,7 +160,7 @@ class SubscriptionForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('status', 'userId', 'typeId', 'dateStartYear', 'dateStartMonth', 'dateStartDay', 'dateEndYear', 'dateEndMonth', 'dateEndDay', 'userSalutation', 'userFirstName', 'userMiddleName', 'userLastName', 'userInitials', 'userGender', 'userAffiliation', 'userUrl', 'userEmail', 'userPhone', 'userFax', 'userMailingAddress', 'userCountry', 'membership', 'referenceNumber', 'notes', 'notifyEmail'));
+		$this->readUserVars(array('status', 'userId', 'typeId', 'dateStartYear', 'dateStartMonth', 'dateStartDay', 'dateEndYear', 'dateEndMonth', 'dateEndDay', 'userSalutation', 'userFirstName', 'userMiddleName', 'userLastName', 'userInitials', 'userGender', 'userAffiliation', 'userUrl', 'userEmail', 'userPhone', 'userMailingAddress', 'userCountry', 'membership', 'referenceNumber', 'notes', 'notifyEmail'));
 		$this->_data['dateStart'] = Request::getUserDateVar('dateStart');
 		$this->_data['dateEnd'] = Request::getUserDateVar('dateEnd');
 
@@ -242,7 +240,6 @@ class SubscriptionForm extends Form {
 		$user->setUrl($this->getData('userUrl'));
 		$user->setEmail($this->getData('userEmail'));
 		$user->setPhone($this->getData('userPhone'));
-		$user->setFax($this->getData('userFax'));
 		$user->setMailingAddress($this->getData('userMailingAddress'));
 		$user->setCountry($this->getData('userCountry'));
 
@@ -267,7 +264,6 @@ class SubscriptionForm extends Form {
 		$subscriptionName = $journalSettingsDao->getSetting($journalId, 'subscriptionName');
 		$subscriptionEmail = $journalSettingsDao->getSetting($journalId, 'subscriptionEmail');
 		$subscriptionPhone = $journalSettingsDao->getSetting($journalId, 'subscriptionPhone');
-		$subscriptionFax = $journalSettingsDao->getSetting($journalId, 'subscriptionFax');
 		$subscriptionMailingAddress = $journalSettingsDao->getSetting($journalId, 'subscriptionMailingAddress');
 		$subscriptionContactSignature = $subscriptionName;
 
@@ -276,9 +272,6 @@ class SubscriptionForm extends Form {
 		}
 		if ($subscriptionPhone != '') {
 			$subscriptionContactSignature .= "\n" . __('user.phone') . ': ' . $subscriptionPhone;
-		}
-		if ($subscriptionFax != '') {
-			$subscriptionContactSignature .= "\n" . __('user.fax') . ': ' . $subscriptionFax;
 		}
 
 		$subscriptionContactSignature .= "\n" . __('user.email') . ': ' . $subscriptionEmail;

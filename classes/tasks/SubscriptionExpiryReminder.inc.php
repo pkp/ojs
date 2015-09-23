@@ -45,7 +45,6 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		$subscriptionName = $journal->getSetting('subscriptionName');
 		$subscriptionEmail = $journal->getSetting('subscriptionEmail');
 		$subscriptionPhone = $journal->getSetting('subscriptionPhone');
-		$subscriptionFax = $journal->getSetting('subscriptionFax');
 		$subscriptionMailingAddress = $journal->getSetting('subscriptionMailingAddress');
 
 		$subscriptionContactSignature = $subscriptionName;
@@ -57,9 +56,6 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		}
 		if ($subscriptionPhone != '') {
 			$subscriptionContactSignature .= "\n" . AppLocale::Translate('user.phone') . ': ' . $subscriptionPhone;
-		}
-		if ($subscriptionFax != '') {
-			$subscriptionContactSignature .= "\n" . AppLocale::Translate('user.fax') . ': ' . $subscriptionFax;
 		}
 
 		$subscriptionContactSignature .= "\n" . AppLocale::Translate('user.email') . ': ' . $subscriptionEmail;

@@ -18,7 +18,6 @@
  * @uses $contactAffiliation string Primary contact affiliation
  * @uses $contactMailingAddress Primary contact Mailing Address
  * @uses $contactPhone string Primary contact phone number
- * @uses $contactFax string Primary contact fax number
  * @uses $contactEmail string Primary contact email address
  * @uses $showSupportContact bool Should the support contact section be shown?
  * @uses $supportName string Support contact name
@@ -93,17 +92,6 @@
 						</span>
 						<span class="value">
 							{$contactPhone|escape}
-						</span>
-					</div>
-					{/if}
-
-					{if $contactFax}
-					<div class="fax">
-						<span class="label">
-							{translate key="about.contact.fax"}
-						</span>
-						<span class="value">
-							{$contactFax|escape}
 						</span>
 					</div>
 					{/if}

@@ -24,9 +24,6 @@
 	{if !empty($subscriptionPhone)}
 		{translate key="user.phone"}: {$subscriptionPhone|escape}<br />
 	{/if}
-	{if !empty($subscriptionFax)}
-		{translate key="user.fax"}: {$subscriptionFax|escape}<br />
-	{/if}
 	{if !empty($subscriptionEmail)}
 		{translate key="user.email"}: {mailto address=$subscriptionEmail|escape encode="hex"}<br />
 	{/if}

@@ -299,9 +299,6 @@ class LDAPAuthPlugin extends AuthPlugin {
 		if (!isset($email))
 			$email = @$attr['email'][0];
 		$phone = @$attr['telephonenumber'][0];
-		$fax = @$attr['facsimiletelephonenumber'][0];
-		if (!isset($fax))
-			$fax = @$attr['fax'][0];
 		$mailingAddress = @$attr['postaladdress'][0];
 		if (!isset($mailingAddress))
 			$mailingAddress = @$attr['registeredAddress'][0];
@@ -323,8 +320,6 @@ class LDAPAuthPlugin extends AuthPlugin {
 			$user->setEmail($email);
 		if (isset($phone))
 			$user->setPhone($phone);
-		if (isset($fax))
-			$user->setFax($fax);
 		if (isset($mailingAddress))
 			$user->setMailingAddress($mailingAddress);
 		if (isset($biography))
@@ -353,8 +348,6 @@ class LDAPAuthPlugin extends AuthPlugin {
 			$attr['mail'] = $user->getEmail();
 		if ($user->getPhone())
 			$attr['telephoneNumber'] = $user->getPhone();
-		if ($user->getFax())
-			$attr['facsimileTelephoneNumber'] = $user->getFax();
 		if ($user->getMailingAddress())
 			$attr['postalAddress'] = $user->getMailingAddress();
 	}

@@ -157,7 +157,6 @@ class UserHandler extends PKPUserHandler {
 		$subscriptionName = $journal->getSetting('subscriptionName');
 		$subscriptionEmail = $journal->getSetting('subscriptionEmail');
 		$subscriptionPhone = $journal->getSetting('subscriptionPhone');
-		$subscriptionFax = $journal->getSetting('subscriptionFax');
 		$subscriptionMailingAddress = $journal->getSetting('subscriptionMailingAddress');
 		$subscriptionAdditionalInformation = $journal->getLocalizedSetting('subscriptionAdditionalInformation');
 		// Get subscriptions and options for current journal
@@ -182,7 +181,6 @@ class UserHandler extends PKPUserHandler {
 		$templateMgr->assign('subscriptionName', $subscriptionName);
 		$templateMgr->assign('subscriptionEmail', $subscriptionEmail);
 		$templateMgr->assign('subscriptionPhone', $subscriptionPhone);
-		$templateMgr->assign('subscriptionFax', $subscriptionFax);
 		$templateMgr->assign('subscriptionMailingAddress', $subscriptionMailingAddress);
 		$templateMgr->assign('subscriptionAdditionalInformation', $subscriptionAdditionalInformation);
 		$templateMgr->assign('journalTitle', $journal->getLocalizedName());

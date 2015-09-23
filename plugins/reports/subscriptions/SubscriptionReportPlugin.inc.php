@@ -91,7 +91,6 @@ class SubscriptionReportPlugin extends ReportPlugin {
 			'country' => __('common.country'),
 			'email' => __('user.email'),
 			'phone' => __('user.phone'),
-			'fax' => __('user.fax')
 		);
 
 		$columns = array_merge($columnsCommon, $columnsIndividual);
@@ -149,9 +148,6 @@ class SubscriptionReportPlugin extends ReportPlugin {
 					case 'phone':
 						$columns[$index] = $user->getPhone();
 						break;
-					case 'fax':
-						$columns[$index] = $user->getFax();
-						break;
 					default:
 						$columns[$index] = '';
 				}
@@ -177,7 +173,6 @@ class SubscriptionReportPlugin extends ReportPlugin {
 			'country' => __('common.country'),
 			'email' => __('user.email'),
 			'phone' => __('user.phone'),
-			'fax' => __('user.fax')
 		);
 
 		$columns = array_merge($columnsCommon, $columnsInstitution);
@@ -246,9 +241,6 @@ class SubscriptionReportPlugin extends ReportPlugin {
 						break;
 					case 'phone':
 						$columns[$index] = $user->getPhone();
-						break;
-					case 'fax':
-						$columns[$index] = $user->getFax();
 						break;
 					default:
 						$columns[$index] = '';

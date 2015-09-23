@@ -86,10 +86,6 @@
 		<td class="value"><input type="text" name="subscriptionPhone" id="subscriptionPhone" value="{$subscriptionPhone|escape}" size="15" maxlength="24" class="textField" /></td>
 	</tr>
 	<tr>
-		<td class="label">{fieldLabel name="subscriptionFax" key="user.fax"}</td>
-		<td class="value"><input type="text" name="subscriptionFax" id="subscriptionFax" value="{$subscriptionFax|escape}" size="15" maxlength="24" class="textField" /></td>
-	</tr>
-	<tr>
 		<td class="label">{fieldLabel name="subscriptionMailingAddress" key="common.mailingAddress"}</td>
 		<td class="value"><textarea name="subscriptionMailingAddress" id="subscriptionMailingAddress" rows="6" cols="40" class="textArea richContent">{$subscriptionMailingAddress|escape}</textarea></td>
 	</tr>

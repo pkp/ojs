@@ -71,10 +71,6 @@
 	<td class="value"><input type="text" name="userPhone" id="userPhone" value="{$userPhone|escape}" size="15" maxlength="24" class="textField" /></td>
 </tr>
 <tr>
-	<td class="label">{fieldLabel name="userFax" key="user.fax"}</td>
-	<td class="value"><input type="text" name="userFax" id="userFax" value="{$userFax|escape}" size="15" maxlength="24" class="textField" /></td>
-</tr>
-<tr>
 	<td class="label">{fieldLabel name="userMailingAddress" key="common.mailingAddress"}</td>
 	<td class="value"><textarea name="userMailingAddress" id="userMailingAddress" rows="3" cols="40" class="textArea">{$userMailingAddress|escape}</textarea></td>
 </tr>
