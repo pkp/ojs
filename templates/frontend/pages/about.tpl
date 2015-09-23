@@ -16,7 +16,6 @@
  * @uses $contactName string Primary contact name
  * @uses $contactTitle string Primary contact title
  * @uses $contactAffiliation string Primary contact affiliation
- * @uses $contactMailingAddress Primary contact Mailing Address
  * @uses $contactPhone string Primary contact phone number
  * @uses $contactEmail string Primary contact email address
  * @uses $showSupportContact bool Should the support contact section be shown?
@@ -50,7 +49,7 @@
 
 			{if $mailingAddress}
 				<div class="address">
-					{$mailingAddress}
+					{$mailingAddress|escape}
 				</div>
 			{/if}
 
@@ -76,12 +75,6 @@
 					{if $contactAffiliation}
 					<div class="affiliation">
 						{$contactAffiliation|strip_unsafe_html}
-					</div>
-					{/if}
-
-					{if $contactMailingAddress}
-					<div class="address">
-						{$contactMailingAddress|strip_unsafe_html}
 					</div>
 					{/if}
 

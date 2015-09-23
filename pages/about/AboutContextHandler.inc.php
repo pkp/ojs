@@ -58,7 +58,6 @@ class AboutContextHandler extends Handler {
 		$contactName = $contextSettings['contactName'];
 		$contactTitle = $context->getLocalizedSetting('contactTitle');
 		$contactAffiliation = $context->getLocalizedSetting('contactAffiliation');
-		$contactMailingAddress = $context->getLocalizedSetting('contactMailingAddress');
 		$contactPhone = $contextSettings['contactPhone'];
 		$contactEmail = $contextSettings['contactEmail'];
 		$supportName = $contextSettings['supportName'];
@@ -66,7 +65,7 @@ class AboutContextHandler extends Handler {
 		$supportEmail = $contextSettings['supportEmail'];
 
 		// Whether or not contact details should be displayed
-		if ($contactName || $contactTitle || $contactAffiliation || $contactMailingAddress ||
+		if ($contactName || $contactTitle || $contactAffiliation ||
 			$contactPhone || $contactEmail ) {
 			$templateMgr->assign('showContact', true);
 		}
@@ -80,7 +79,6 @@ class AboutContextHandler extends Handler {
 		$templateMgr->assign('contactName', $contactName);
 		$templateMgr->assign('contactTitle', $contactTitle);
 		$templateMgr->assign('contactAffiliation', $contactAffiliation);
-		$templateMgr->assign('contactMailingAddress', $contactMailingAddress);
 		$templateMgr->assign('contactPhone', $contactPhone);
 		$templateMgr->assign('contactEmail', $contactEmail);
 		$templateMgr->assign('supportName', $supportName);
