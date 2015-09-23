@@ -26,7 +26,6 @@
 			<li><a href="{url op="settings"}">{translate key="admin.siteSettings"}</a></li>
 		{/if}
 		<li><a href="{url op="contexts"}">{translate key="admin.hostedJournals"}</a></li>
-		<li><a href="{url op="auth"}">{translate key="admin.authSources"}</a></li>
 		{call_hook name="Templates::Admin::Index::SiteManagement"}
 	</ul>
 
