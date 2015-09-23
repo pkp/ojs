@@ -24,8 +24,8 @@ tautan: {$url}
 		<description>Email ini dikirim untuk pengguna yang telah terdaftar yang memilih untuk menerima tipe notifikasi ini dikirim melalui email kepada mereka. </description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Notifikasi baru dari {$siteTitle}</subject>
-		<body>Anda punya notifikasi baru dari {$siteTitle}:
+		<subject>Notifikasi baru dari {$journalName}</subject>
+		<body>Anda punya notifikasi baru dari {$journalName}:
 --
 {$notificationContents}
 
@@ -38,8 +38,8 @@ Jika Anda ingin berhenti menerima email notifikasi, pergilah ke {$unsubscribeLin
 		<description>Email ini dikirim untuk pengguna yang telah terdaftar di mailing list notifikasi.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Selamat datang ke  mailing list{$siteTitle}!</subject>
-		<body>Anda telah sign up untuk menerima notifikasi dari {$siteTitle}.
+		<subject>Selamat datang ke  mailing list{$journalName}!</subject>
+		<body>Anda telah sign up untuk menerima notifikasi dari {$journalName}.
 			
 Klik di tautan ini untuk mengkonfirmasi permintaan Anda dan tambahkan alamat email Anda ke mailing list: {$confirmLink}
 
@@ -49,15 +49,6 @@ Kata sandi Anda untuk menon-aktifkan email adalah: {$password}
 
 {$principalContactSignature}</body>
 		<description>Email ini dikirim ke pengguna yang tidak terdaftar yang baru saja terdaftar dengan mailing list notifikasi.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
-		<subject>informasi mailing list notifikasi Anda untuk {$siteTitle}</subject>
-		<body>Kata sandi baru Anda untuk menon-aktifkan email notifikasi adalah: {$password}
-
-Jika Anda ingin berhenti menerima email notifikasi, pergilah ke {$unsubscribeLink} dan masukkan alamat email dan kata sandi Anda.
-
-{$principalContactSignature}</body>
-		<description>Email ini dikirim ke pengguna yang tidak terdaftar di mailing list notifikasi saat mereka menunjukkan bahwa mereka lupa kata sandi mereka atau tidak bisa login. Email ini menyediakan URL yang bisa mereka ikuti untuk mengatur ulang kata sandi mereka. </description>
 	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Konfirmasi Atur Ulang Kata Sandi</subject>

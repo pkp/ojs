@@ -159,7 +159,7 @@ class RegistrationForm extends Form {
 		$this->setData('registerAsReader', 1);
 		$this->setData('existingUser', $this->existingUser);
 		$this->setData('userLocales', array());
-		$this->setData('sendPassword', 1);
+		$this->setData('sendPassword', 0);
 	}
 
 	/**

@@ -89,8 +89,15 @@ class PluginHandler extends ManagerHandler {
 
 		$plugins =& PluginRegistry::loadCategory($category);
 		$message = $messageParams = null;
-		if (!isset($plugins[$plugin]) || !$plugins[$plugin]->manage($verb, $args, $message, $messageParams, $request)) {
-			HookRegistry::call('PluginHandler::plugin', array($verb, $args, $message, $messageParams, $plugins[$plugin]));
+		$pluginObject = null;
+		if (isset($plugins[$plugin])) $pluginObject = $plugins[$plugin];
+
+		if (is_null($pluginObject)) {
+			$request->redirect(null, null, 'plugins', array($category));
+		}
+
+		if (!$pluginObject->manage($verb, $args, $message, $messageParams, $request)) {
+			HookRegistry::call('PluginHandler::plugin', array($verb, $args, $message, $messageParams, $pluginObject));
 			if ($message) {
 				$user =& $request->getUser();
 				import('classes.notification.NotificationManager');

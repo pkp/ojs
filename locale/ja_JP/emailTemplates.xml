@@ -761,8 +761,8 @@ Link: {$url}
 {$principalContactSignature}</body>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>{$siteTitle} からの新しいお知らせ</subject>
-		<body>{$siteTitle} からの新しいお知らせです。
+		<subject>{$journalName} からの新しいお知らせ</subject>
+		<body>{$journalName} からの新しいお知らせです。
 --
 {$notificationContents}
 
@@ -774,8 +774,8 @@ Link: {$url}
 {$principalContactSignature}</body>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>{$siteTitle} メーリングリストへようこそ！</subject>
-		<body>あなたは {$siteTitle} からのお知らせを受け取ることに同意しました。
+		<subject>{$journalName} メーリングリストへようこそ！</subject>
+		<body>あなたは {$journalName} からのお知らせを受け取ることに同意しました。
 
 メーリングリストにあなたのメールアドレスを追加するために下記の確認リンクをクリックしてください。
 {$confirmLink}

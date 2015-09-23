@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE install SYSTEM "../../lib/pkp/dtd/install.dtd">
 <!--
-  * install.xml
+  * dbscripts/xml/install.xml
   *
   * Copyright (c) 2013-2015 Simon Fraser University Library
   * Copyright (c) 2003-2015 John Willinsky
@@ -10,7 +10,7 @@
   * Installation descriptor file.
   -->
 
-<install version="2.4.6.0">
+<install version="2.4.7.0">
 	<code function="createDirectories"/>
 	<code function="createDatabase"/>
 

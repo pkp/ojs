@@ -713,8 +713,8 @@ Lien: {$url}
 		<description>Ce courriel est envoyé aux utilisateurs inscrits qui ont choisi de recevoir par courriel ce type d'avis.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Nouvel avis de {$siteTitle}</subject>
-		<body>Vous avez un avis de {$siteTitle}:
+		<subject>Nouvel avis de {$journalName}</subject>
+		<body>Vous avez un avis de {$journalName}:
 --
 {$notificationContents}
 
@@ -727,8 +727,8 @@ Si vous souhaitez ne plus recevoir d'avis par courriel, veuillez aller à {$unsu
 		<description>Ce courriel est envoyé aux utilisateurs non inscrits sur la liste de diffusion d'avis.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Bienvenue à la liste de diffusion de {$siteTitle}!</subject>
-		<body>Vous vous êtes inscrits pour recevoir des avis de {$siteTitle}.
+		<subject>Bienvenue à la liste de diffusion de {$journalName}!</subject>
+		<body>Vous vous êtes inscrits pour recevoir des avis de {$journalName}.
 
 Veuillez cliquer sur ce lien pour confirmer votre demande et ajouter votre adresse de courriel à la liste de diffusion : {$confirmLink}
 

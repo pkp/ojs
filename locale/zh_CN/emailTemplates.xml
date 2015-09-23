@@ -25,8 +25,8 @@
 		<description>这封电子邮件是发送给需要这种类型通知的注册用户。</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>来自{$siteTitle}的新信息</subject>
-		<body>您有一条来自{$siteTitle}的新信息:
+		<subject>来自{$journalName}的新信息</subject>
+		<body>您有一条来自{$journalName}的新信息:
 --
 {$notificationContents}
 
@@ -39,8 +39,8 @@
 		<description>这封电子邮件是发送给通知邮件列表中的未注册用户。</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>欢迎来到{$siteTitle}邮件列表!</subject>
-		<body>您已签署接收来自{$siteTitle}的通知。
+		<subject>欢迎来到{$journalName}邮件列表!</subject>
+		<body>您已签署接收来自{$journalName}的通知。
 
 请点击链接确认您的请求并把你的邮件地址添加到邮件列表:{$confirmLink}
 

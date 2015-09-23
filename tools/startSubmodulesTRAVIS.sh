@@ -18,7 +18,7 @@ fi
 echo "3 - Verifying if last non merge commit is a subproject commit:"
 libModuleHash=$(git show "$commitHash" | grep "+Subproject commit" | cut -f3 -d" ")
 strLength=${#libModuleHash}
-echo "    Subprojet commit hash: $libModuleHash"
+echo "    Subproject commit hash: $libModuleHash"
 if [ \( -n "$libModuleHash" \) -a \( "$strLength" -eq 40 \) ]; then
 	echo "    Last non merge commit is subproject commit."
 	echo "4 - Trying to get user and branch from commit message:"
