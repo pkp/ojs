@@ -41,6 +41,11 @@
 			$firstLetter = $this->get_template_vars('firstLetter');
 			$lastFirstLetter = $this->get_template_vars('lastFirstLetter');
 			$settingsString = $this->get_template_vars('settingsString');
+			
+			/* If no setting is defined for current locale, use default alphabet */
+			if (strpos($settingsString, "#")) {
+				$settingsString = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z";
+			}
 
 			/* Parse each setting and write all letters to be grouped under one heading in an array field */
 			$explodedSettingsString = explode(',', $settingsString);
