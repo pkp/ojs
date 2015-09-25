@@ -15,6 +15,8 @@
 
 <p>{foreach from=$alphaList item=letter}<a href="{url op="authors" searchInitial=$letter}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{url op="authors"}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
+{translate|assign:'settingsString' key='authorList.sortOrder'}
+
 <div id="authors">
 {iterate from=authors item=author}
 	{assign var=lastFirstLetter value=$firstLetter}
@@ -32,19 +34,16 @@
 			 * to avoid new headings appearing when a last name's first letter contains diacritics.
 			 *
 			 * to do:
-			 *  - find a better way to deal with the settings string
 			 *  - adapt to fit in with OJS architecture
 			 */
 
 			/* Accessing variables from the smarty loop outside this php code. */
 			$firstLetter = $this->get_template_vars('firstLetter');
 			$lastFirstLetter = $this->get_template_vars('lastFirstLetter');
-
-			/* Define settings string. The way it is passed to this code needs to be improved. */
-			$settingsString = "A,B,C,D,E,F,G,H,I,J,K Ǩ,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z Ż";
-			$explodedSettingsString = explode(',', $settingsString);
+			$settingsString = $this->get_template_vars('settingsString');
 
 			/* Parse each setting and write all letters to be grouped under one heading in an array field */
+			$explodedSettingsString = explode(',', $settingsString);
 			$settingsArray = array();
 			foreach ($explodedSettingsString as $currentGroup) {
 				$explodedCurrentGroup = explode(' ', $currentGroup);
