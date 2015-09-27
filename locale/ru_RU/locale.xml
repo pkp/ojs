@@ -843,8 +843,8 @@
 	<message key="about.history">История журнала</message>
 	<message key="about.editorialTeam">Редакция</message>
 	<message key="about.editorialTeam.biography">Биография</message>
-	<message key="about.editorialPolicies">Редакционная политика</message>
-	<message key="about.focusAndScope">Тематика</message>
+	<message key="about.editorialPolicies">О проекте</message>
+	<message key="about.focusAndScope">Концепция журнала</message>
 	<message key="about.sectionPolicies">Политика разделов журнала</message>
 	<message key="about.submissions">Отправка статей</message>
 	<message key="about.sponsors">Спонсоры</message>
@@ -864,7 +864,7 @@
 	<message key="about.authorFeesMessage">Этот журнал взымает с авторов следующие платежи.</message>
 	<message key="about.peerReviewProcess">Процесс рецензирования</message>
 	<message key="about.publicationFrequency">Периодичность издания</message>
-	<message key="about.openAccessPolicy">Политика открытого доступа</message>
+	<message key="about.openAccessPolicy">Открытый доступ</message>
 	<message key="about.delayedOpenAccess">Отложенный открытый доступ</message>
 	<message key="about.delayedOpenAccessDescription1">Содержимое этого журнала будет доступно в открытом доступе через</message>
 	<message key="about.delayedOpenAccessDescription2">месяцев после публикации выпуска.</message>
