@@ -45,4 +45,5 @@
 ]]></message>
 
 	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">Das Publikationsdatum fehlt für den Artikel mit ID {$param}.</message>
+	<message key="plugins.importexport.crossref.senderTask.name">CrossRef-Absendeinformationen</message>
 </locale>
