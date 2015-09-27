@@ -30,6 +30,12 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Старый код отслеживания (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Новый код отслеживания (ga.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">Новый код отслеживания для универсальной аналитики (analytics.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.enableSite">Домашняя страница сайта</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteEnable">Включить настройки этого журнала на домашней странице сайта</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteDisable">Отключить существующие настройки на домашней странице сайта</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteUnchanged">Оставить главную страницу сайта без изменений</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.disabled">Отключено</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.enableSiteInstructions">Эти настройки могут быть применены, когда пользователи также находятся на уровне сайта. Если на уровне сайта не применяются никакие настройки, то Google Analytics будет активна только на уровне журнала.</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount">Номер учетной записи Google Analytics</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">Чтобы отслеживать читателй опубликованной статьи с помощью Google Analytics, введите здесь номер учетной записи (например, UA-xxxxxx-x).</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Один или несколько введенных номеров учетных записей Google Analytics, принадлежащих авторам материала, являются неправильными.</message>

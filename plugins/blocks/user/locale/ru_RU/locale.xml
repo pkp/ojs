@@ -20,4 +20,5 @@
 	<message key="plugins.block.user.logout">Выйти</message>
 	<message key="plugins.block.user.signOutAsUser">Выйти как пользователь</message>
 	<message key="plugins.block.user.rememberMe">Запомнить меня</message>
+	<message key="plugins.block.user.implicitAuthLogin">Вход в журналы</message>
 </locale>

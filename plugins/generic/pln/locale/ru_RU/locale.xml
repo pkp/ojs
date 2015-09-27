@@ -27,6 +27,10 @@
 	<message key="plugins.generic.pln.settings.journal_uuid_help">Это уникальный идентификатор вашего журнала для PKP PLN. Возможно Вам потребуется сообщить его администраторам PKP PLN для поддержки Вашего журнала.</message>
 	<message key="plugins.generic.pln.settings.refresh">Обновить</message>
 	<message key="plugins.generic.pln.settings.refresh_help">Если по какой-либо причине выше не показаны условия использования или вы знаете, что эти условия были изменены, щелкните на кнопке «Обновить» для обновления списка условий выше.</message>
+	<message key="plugins.generic.pln.settings.pln_network">URL сети PLN</message>
+	<message key="plugins.generic.pln.settings.pln_network_help">URL рабочего сервера вашей сети. Изменяйте его только в случае получения инструкций от кого-то из вашей сети.</message>
+	<message key="plugins.generic.pln.settings.pln_network_invalid">Указанный URL является неправильным. Пожалуйста, перепроверьте URL и попытайтесь снова.</message>
+	<message key="plugins.generic.pln.settings.pln_network_path_invalid">Адреса URL сети PLN должны состоять из схемы и имени хоста, а также могут включать номер порта. Они не должны содержать пути, строки запросов, имена пользователей, их пароли или фрагменты URL.</message>
 	
 	<message key="plugins.generic.pln.required.object_type">Пожалуйста, выберите тип депонируемого объекта.</message>
 	<message key="plugins.generic.pln.required.object_threshold">Пожалуйста, выберите порог депонируемых объектов.</message>
@@ -56,6 +60,7 @@
 
 	<message key="plugins.generic.pln.depositorTask.name">Задача депонирования PKP PLN</message>
 	<message key="plugins.generic.pln.notifications.processing_for">Депонирование выполняется для</message>
+	<message key="plugins.generic.pln.notifications.getting_servicedocument">Получение служебного документа.</message>
 	<message key="plugins.generic.pln.notifications.pln_not_accepting">PKP PLN сейчас не принимает депонируемые объекты.</message>
 	<message key="plugins.generic.pln.notifications.pln_accepting">PKP PLN принимает депонируемые объекты.</message>
 	<message key="plugins.generic.pln.notifications.check_status">Проверьте статус ваших депонируемых объектов.</message>
@@ -66,7 +71,24 @@
 	<message key="plugins.generic.pln.notifications.zip_missing">Для работы необходимо включить поддержку ZipArchive.</message>
 	<message key="plugins.generic.pln.notifications.issn_setting">У вашего журнала должен быть ISSN до того, как вы примение условия использования. Вы можете ввести ISSN на странице «Настройка журнала». После того как будет введен ISSN журнал, условия использования будут показаны ниже.</message>
 	<message key="plugins.generic.pln.notifications.tar_missing">В вашей системе должен быть исполняемый файл tar.</message>
-	
+
+	<message key="plugins.generic.pln.error.network.servicedocument">Ошибка сети {$error} при подключении к PLN для получения служебного документа.</message>
+	<message key="plugins.generic.pln.error.network.deposit">Ошибка сети {$error} при подключении к PLN для отправки депонируемого объекта.</message>
+	<message key="plugins.generic.pln.error.http.servicedocument">Сервер PLN вернул ошибку HTTP {$error} при попытке получения служебного документа.</message>
+	<message key="plugins.generic.pln.error.http.deposit">Сервер PLN вернул ошибку HTTP {$error} при отправке депонируемого объекта.</message>
+	<message key="plugins.generic.pln.error.depositor.missingpackage">Не удается найти файл пакета {$file}.</message>
+	<message key="plugins.generic.pln.error.depositor.export.articles.error">В процессе экспорта статей произошла ошибка. Более подробная информация может быть в журнале ошибок сервера.</message>
+	<message key="plugins.generic.pln.error.depositor.export.issue.error">При экспорте выпуска произошла ошибка. Более подробная информация может быть в журнале ошибок сервера.</message>
+	<message key="plugins.generic.pln.error.handler.uuid.invalid">Запрошенный UUID является некорректным или имеет неправильный формат.</message>
+	<message key="plugins.generic.pln.error.handler.uuid.notfound">Запрошенному UUID не соответствует ни один депонируемый объект.</message>
+	<message key="plugins.generic.pln.error.handler.file.notfound">Не удается найти депонируемый файл. Возможно он еще не был упакован или же пакет мог быть удален.</message>
+
+	<message key="plugins.generic.pln.depositor.statusupdates">Обработка обновлений статуса депонируемых объектов.</message>
+	<message key="plugins.generic.pln.depositor.updatedcontent">Обработка обновленного контента.</message>
+	<message key="plugins.generic.pln.depositor.newcontent">Обработка нового контента.</message>
+	<message key="plugins.generic.pln.depositor.packagingdeposits">Упаковка контента для депонирования.</message>
+	<message key="plugins.generic.pln.depositor.transferringdeposits">Отправка депонируемых объектов в PLN.</message>
+
 	<message key="plugins.generic.plngateway.displayName">Шлюз PLN</message>
 	<message key="plugins.generic.plngateway.description">Передает статус PLN и названия последних статей на сервер.</message>
 </locale>
