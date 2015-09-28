@@ -254,4 +254,5 @@
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorAssigned">Autor asignado para el objeto a revisar.</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.recipient">Receptor</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsBy">Palabras por</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.isbn">ISBN</message>
 </locale>

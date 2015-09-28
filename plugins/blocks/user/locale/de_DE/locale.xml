@@ -20,4 +20,5 @@
 	<message key="plugins.block.user.logout">Abmelden</message>
 	<message key="plugins.block.user.signOutAsUser">Als Benutzer/in abmelden</message>
 	<message key="plugins.block.user.rememberMe">An mich erinnern</message>
+	<message key="plugins.block.user.implicitAuthLogin">Einloggen</message>
 </locale>

@@ -34,7 +34,7 @@
 	<message key="plugins.generic.pln.required.object_type">Bitte wählen Sie einen Typ für die Objektablieferung.</message>
 	<message key="plugins.generic.pln.required.object_threshold">Bitte wählen Sie eine Schwelle für die Objektablieferung.</message>
 	<message key="plugins.generic.pln.required.terms_of_use_agreement">Die Zustimmung zu den Nutzungsbedingungen des Netzwerks ist erforderlich, um bei dem PLN abzuliefern.</message>
-	
+
 	<message key="plugins.generic.pln.objects.article">Artikel</message>
 	<message key="plugins.generic.pln.objects.issue">Ausgabe</message>
 

@@ -18,6 +18,8 @@
 	<message key="plugins.generic.usageStats.settings.logParseRegex">Regex zum Parsen der Logdateien</message>
 	<message key="plugins.generic.usageStats.settings.logParseRegex.description">Der standardmäßig benutzte reguläre Ausdruck kann Apache-Logdateien im Combined-Format und außerdem die Logdateien des Plug-Ins parsen. Wenn Ihre Zugriffsprotokolldateien in einem anderen Format sind, müssen Sie einen regulären Ausdruck einfügen, mit dem die Dateien geparst werden können und der die erwarteten Werte liefert. Vgl. UsageStatsLoader::_getDataFromLogEntry() für weitere Informationen.</message>
 	<message key="plugins.generic.usageStats.settings.saved">Einstellungen des Zugriffsstatistik-Plug-Ins gespeichert</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Aktivieren Sie diese Option, um eine Verson des Plug-Ins zu benutzen, die Datenschutzregeln berücksichtigt, indem nur gehashte IP-Adressen protokolliert werden, Benutzer/innen über das Tracking informiert werden und eine Opt-Out-Möglichkeit für Nutzer/innen angeboten wird. Hinweis: Bei Nutzung dieser Option können Sie nicht die Geo-Funktionalitäten des Plug-Ins benutzen.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Datenschutz gewährleisten</message>
 
 	<message key="plugins.generic.usageStats.usageStatsLoaderName">Nutzungsstatistik-Fileloader</message>
 	<message key="plugins.generic.usageStats.openFileFailed">Die Datei {$file} konnte nicht geöffnet werden und wurde zurückgewiesen.</message>
@@ -33,7 +35,21 @@
 	
 	<message key="plugins.reports.usageStats.report.displayName">OJS-Nutzungsstatistik-Bericht</message>
 	<message key="plugins.reports.usageStats.report.description">OJS-Standardbericht zur Nutzungsstatistik (COUNTER-fähig)</message>
-	
+
+	<message key="plugins.reports.usageStats.optout.displayName">Nutzungsstatistiken: Datenschutz-Hinweise</message>
+	<message key="plugins.reports.usageStats.optout.description">Nutzungsstatistiken: Datenschutz-Hinweise</message>
+	<message key="plugins.generic.usageStats.optout.title">Datenschutz-Hinweise</message>
+	<message key="plugins.generic.usageStats.optout.shortDesc"><![CDATA[Wir protokollieren anonymisierte Nutzungsstatistiken. Bitte lesen Sie die <a href="{$privacyInfo}">Datenschutz-Hinweise</a> für Details.]]></message>	
+	<message key="plugins.generic.usageStats.optout.done">Sie haben der Sammlung von Nutzungsinformationen widersprochen. Solange Sie diese Nachricht sehen, werden keine Statistiken Ihrer Nutzung dieser Website erhoben. Klicken Sie den Knopf unten um Ihre Entscheidung rückgängig zu machen.</message>
+	<message key="plugins.generic.usageStats.optin">Einwilligen</message>
+	<message key="plugins.generic.usageStats.optout">Widersprechen</message>
+	<message key="plugins.generic.usageStats.optout.cookie">
+		Wenn Sie den Widersprechen-Knopf unten klicken, wird Ihr Browser ein Opt-Out-Cookie erhalten, und es werden keine Statistikdaten gesammelt werden, solange
+		dieser Cookie in Ihrem Browser gespeichert ist. Die Opt-Out-Information wird für ein Jahr gespeichert und wird um ein Jahr verlängert, wenn Sie auf OJS zugreifen. Der
+		Cookie enthält keine Informationen, die Sie identifizieren können. Bitte beachten Sie, dass Sie erneut widersprechen müssen, wenn Sie einen anderen Browser benutzen
+		oder Cookies aus Ihrem Browser löschen, da wir aus Datenschutzgründen keine Informationen über Sie auf Serverseite speichern.
+	</message>
+
 	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
 	<message key="plugins.reports.usageStats.metricType.full">Open-Journal-Systems-Statistiken (COUNTER-fähig)</message>
 </locale>
