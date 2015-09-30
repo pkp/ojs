@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.block.user.displayName">Δομική Μονάδα Χρήστη</message>
 	<message key="plugins.block.user.description">Το πρόσθετο αυτό εμφανίζει στην πλαϊνή μπάρα εργαλεία διαχείρισης του λογαριασμού του χρήστη (π.χ. σύνδεση, αποσύνδεση, σύνδεσμος προφίλ χρήστη κλπ).</message>
 	<message key="plugins.block.user.loggedInAs">Είστε συνδεδεμένος ως...</message>

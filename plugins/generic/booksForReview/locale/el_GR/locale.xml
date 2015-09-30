@@ -11,7 +11,7 @@
   * Books for review plugin localization strings for the el_GR locale.
   -->
 
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 
 	<!-- Books For Review Notifications -->
 	<message key="plugins.generic.booksForReview.notification.bookRequested">Αίτημα βιβλίου. Αναμονή επιβεβαίωσης από τον Επιμελητή.</message>

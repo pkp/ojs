@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.block.donation.displayName">Δομική Μονάδα Δωρεών</message>
 	<message key="plugins.block.donation.description">Το πρόσθετο αυτό παρέχει ένα σύνδεσμο στην πλαϊνή μπάρα για την αποδοχή δωρεών.</message>
 </locale>

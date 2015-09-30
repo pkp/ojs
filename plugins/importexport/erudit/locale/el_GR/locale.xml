@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.importexport.erudit.displayName">Πρόσθετο εξαγωγής άρθρου Erudit</message>
 	<message key="plugins.importexport.erudit.description">Εξαγωγή άρθρων με την χρήση του English Erudit DTD</message>
 

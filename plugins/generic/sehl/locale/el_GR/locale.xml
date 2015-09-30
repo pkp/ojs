@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.generic.sehl.name">Πρόσθετο SEHL</message>
 	<message key="plugins.generic.sehl.description">Το πρόσθετο αυτό υλοποιεί το εφέ Search Engine HighLighting (SEHL) έτσι ώστε όταν μια μηχανή αναζήτησης εντοπίζει ένα HTML άρθρο, οι όροι αναζήτησης που εντοπίστηκαν στο άρθρο να τονίζονται.</message>
 </locale>

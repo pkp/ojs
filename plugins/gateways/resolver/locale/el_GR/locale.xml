@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.gateways.resolver.displayName">Πρόσθετο Αναλυτή Παραπομπών</message>
 	<message key="plugins.gateways.resolver.description">Το πρόσθετο αυτό αναλύει τεύχη και άρθρα σύμφωνα με τις πληροφορίες παραπομπής.</message>
 	<message key="plugins.gateways.resolver.errors.errorMessage">Δεν ειναι δυνατή η ανάλυση μιας μοναδικής οντότητας με την χρήση των συγκεκριμένων πληροφοριών παραπομπής. Σιγουρευτείτε ότι οι σχετικές πληροφορίες είναι αναλυτικές και αναφέρονται σε μια οντότητα της συγκεκριμένης εγκατάστασης του OJS.</message>

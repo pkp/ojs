@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.block.developedBy.displayName">Δομική μονάδα "Αναπτύχθηκε από"</message>
 	<message key="plugins.block.developedBy.description">Το πρόσθετο αυτό παρέχει ένα σύνδεσμο "Αναπτύχθηκε από" στην πλαϊνή μπάρα.</message>
 </locale>

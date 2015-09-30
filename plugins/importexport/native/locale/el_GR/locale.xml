@@ -19,7 +19,7 @@
   *
   -->
 
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.importexport.native.displayName"><![CDATA[Πρόσθετο XML Άρθρων & Τευχών]]></message>
 	<message key="plugins.importexport.native.description">Εισαγωγή και εξαγωγή άρθρων και τευχών</message>
 

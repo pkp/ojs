@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.generic.tinymce.name">Πρόσθετο TinyMCE</message>
 	<message key="plugins.generic.tinymce.description"><![CDATA[Το πρόσθετο αυτό ενεργοποιεί την WYSIWYG (What You See Is What You Get) επεξεργασία των πεδίων κειμένου του OJS με την χρήση του επεξεργαστή περιεχομένου <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
 	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Το πρόσθετο αυτό ενεργοποιεί την WYSIWYG (What You See Is What You Get) επεξεργασία των πεδίων κειμένου του OJS με την χρήση του  επεξεργαστή περιεχομένου <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>. <strong>Το TinyMCE δεν έχει εγκατασταθεί. Παρακαλούμε εγκαταστήστε το στο {$tinyMcePath}.</strong>]]></message>

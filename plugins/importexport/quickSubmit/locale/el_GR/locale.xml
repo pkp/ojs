@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.importexport.quickSubmit.addToExisting">Προσθήκη σε ένα υπάρχον τεύχος:</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestination">Προορισμός Υποβολής</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestinationDescription">Επιλέξτε αν θα προσθέσετε τις νέες υποβολές σε ένα υπάρχον τεύχος ή θα τις αφήσετε στην σειρά αναμονής για επιμέλεια.</message>

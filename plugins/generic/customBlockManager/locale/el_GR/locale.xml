@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.generic.customBlockManager.displayName">Διαχειριστής Προσαρμοσμένων Δομικών Μονάδων</message>
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Μπορείτε να χρησιμοποιήσετε το πρόσθετο αυτό για να προσθέτετε ή διαγράφετε προσαρμοσμένα πρόσθετα δομικών μονάδων. Στην συνέχεια, μπορείτε να επεξεργαστείτε το περιεχόμενο μέσω της σελίδας <a href="{$systemPluginsUrl}">Πρόσθετα Συστήματος</a> (στην ενότητα Πρόσθετα Δομικών Μονάδων).  Για να τοποθετήσετε το πρόσθετό σας στην επιθυμητή θέση στην πλαϊνή μπάρα, πηγαίνετε στο <a href="{$setupStep56}">Βήμα 5.6</a>.]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Ρυθμίσεις</message>
