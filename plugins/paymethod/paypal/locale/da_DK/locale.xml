@@ -8,10 +8,10 @@
   * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the da_DK (Dutch) locale.
+  * Localization strings for the da_DK (Dansk) locale.
   -->
  
-<locale name="da_DK" full_name="Dutch">
+<locale name="da_DK" full_name="Dansk">
 	<message key="plugins.paymethod.paypal.displayName">PayPal gebyrbetaling</message>
 
 	<!-- PayPal Settings Form -->

@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="da_DK" full_name="Dutch">
+<locale name="da_DK" full_name="Dansk">
 	<message key="plugins.citationFormats.mla.displayName">MLA citeringsformat plugin</message>
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
 	<message key="plugins.citationFormats.mla.description">Dette plugin implementerer MLA citeringsformatet.</message>

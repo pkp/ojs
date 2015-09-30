@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * COinS plugin localization strings for the da_DK (Dutch) locale.
+  * COinS plugin localization strings for the da_DK (Dansk) locale.
   *
   -->
  
-<locale name="da_DK" full_name="Dutch">
+<locale name="da_DK" full_name="Dansk">
 	<message key="plugins.generic.coins.displayName">COinS Plugin</message>
 	<message key="plugins.generic.coins.description">COinS plugin tilføjer en OpenURL descriptor til artikelsider (abstract og HTML), som f.eks. kan bruges til at trække information til citeringsværktøjer.</message>
 </locale>
