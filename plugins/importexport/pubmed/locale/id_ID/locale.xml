@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the id_ID (Indonesia) locale.
+  * Localization strings for the id_ID (Bahasa Indonesia) locale.
   *
   -->
  
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.importexport.pubmed.displayName">Plugin Ekspor PubMed XML</message>
 	<message key="plugins.importexport.pubmed.description">Ekspor metadata artikel dalam format PubMed XML untuk mengindeks dalam MEDLINE.</message>
 	

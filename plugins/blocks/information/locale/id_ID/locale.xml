@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.block.information.displayName">Blok Informasi</message>
 	<message key="plugins.block.information.description">Plugin ini menyediakan link informasi.</message>
 	<message key="plugins.block.information.link">Informasi</message>

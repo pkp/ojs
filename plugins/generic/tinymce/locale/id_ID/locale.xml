@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the id_ID (Indonesia) locale.
+  * Localization strings for the id_ID (Bahasa Indonesia) locale.
   *
   -->
  
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.generic.tinymce.name">Plugin TinyMCE</message>
 	<message key="plugins.generic.tinymce.description"><![CDATA[Plugin ini memudahkan pengeditan WYSIWYG untuk teks area OJS menggunakan <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> konten editor.]]></message>
 	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Plugin ini memudahkan pengeditan WYSIWYG untuk teks area OJS menggunakan <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> konten editor. <strong>TinyMCE sekarang belum diinstal; mohon instal ini di {$tinyMcePath}.</strong>]]></message>

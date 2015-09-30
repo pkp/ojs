@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.gateways.resolver.displayName"> Plugin Resolver </message> 
 	<message key="plugins.gateways.resolver.description"> Plugin ini memisahkan terbitan dan artikel berdasarkan informasi kutipan.</message>	<message key="plugins.gateways.resolver.errors.errorMessage"> Tidak bisa memisahkan kesatuan tunggal dengan menggunakan informasi kutipan. Pastikan informasi kutipan dapat dimengerti dan mengacu ke kesatuan tunggal dalam penempatan jurnal ini.</message> 
 	<message key="plugins.gateways.resolver.exportHoldings"> Ekspor Saham</message> 

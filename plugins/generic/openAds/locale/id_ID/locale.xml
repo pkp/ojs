@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.generic.openads.description"> Plugin OpenAds bisa membuat iklan dinamis dari server iklan OpenAds untuk diselipkan ke dalam IOJS.</message> 
 	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[Plugin OpenAds membuat iklan dinamis dari server iklan OpenAds untuk diselipkan ke dalam IOJS. Baca file README di plugin/generic/openAds untuk informasi untuk mengaktifkan plugin ini.</strong>]]></message> 
 

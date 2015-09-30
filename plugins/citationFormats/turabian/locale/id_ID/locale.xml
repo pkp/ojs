@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.citationFormats.turabian.displayName"> Plugin format kutipan Turabian </message> 
 	<message key="plugins.citationFormats.turabian.citationFormatName">Turabian</message> 
 	<message key="plugins.citationFormats.turabian.description"> Plugin ini menerapkan format kutipan Turabian.</message>

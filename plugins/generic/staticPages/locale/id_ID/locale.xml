@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the id_ID (Indonesia) locale.
+  * Localization strings for the id_ID (Bahasa Indonesia) locale.
   *
   -->
  
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.generic.staticPages.displayName">Plugin Halaman Statis</message>
 	<message key="plugins.generic.staticPages.description">Plugin ini memudahkan Manajemen Konten Statis.</message>
 	<message key="plugins.generic.staticPages.pageTitle">Judul</message>
