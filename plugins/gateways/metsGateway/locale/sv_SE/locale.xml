@@ -10,11 +10,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the sv_SE (Swedish) locale.
+  * Localization strings for the sv_SE (Svenska) locale.
   *
   -->
  
-<locale name="sv_SE" full_name="Swedish">
+<locale name="sv_SE" full_name="Svenska">
 	<message key="plugins.gateways.metsGateway.displayName">METS Gateway Tillägg</message>
 	<message key="plugins.gateways.metsGateway.settings">Instä'llningar</message>
 	<message key="plugins.gateways.metsGateway.description"><![CDATA[Det här tillägget skapar "rå" XML-data i METS format för en specifik publikation<strong>OBS: Tillägget är avsett att användas av webb servicar och det tillåter obegränsad access till publikationen i XML form (innehållet är kodat i base64).</strong>]]></message>

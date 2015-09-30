@@ -8,14 +8,14 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the sv_SE (Swedish) locale.
+  * Localization strings for the sv_SE (Svenska) locale.
   *
   * 
   * Translated by per@funke.com 2010-02-04
   * 
   -->
  
-<locale name="sv_SE" full_name="Swedish">
+<locale name="sv_SE" full_name="Svenska">
 	<message key="plugins.importexport.crossref.displayName">CrossRef XML export plugin</message>
 	<message key="plugins.importexport.crossref.description">Export artikelmetadata i CrossRef XML format.</message>
 	

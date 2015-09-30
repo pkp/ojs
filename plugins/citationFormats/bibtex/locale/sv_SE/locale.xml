@@ -14,7 +14,7 @@
   *
   -->
  
-<locale name="sv_SE" full_name="Swedish">
+<locale name="sv_SE" full_name="Svenska">
 	<message key="plugins.citationFormats.bibtex.displayName">BibTeX citeringsformattillägg</message>
 	<message key="plugins.citationFormats.bibtex.citationFormatName">BibTeX</message>
 	<message key="plugins.citationFormats.bibtex.description">Detta tillägg implementerar BibTeX citeringsformat.</message>
