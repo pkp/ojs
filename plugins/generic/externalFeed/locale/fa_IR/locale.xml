@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="fa_IR" full_name="Persian">
+<locale name="fa_IR" full_name="فارسی">
 
 	<!-- External Feed -->
 	<message key="plugins.generic.externalFeed.displayName">فید اکسترنال</message>

@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="fa_IR" full_name="Persian">
+<locale name="fa_IR" full_name="فارسی">
 	<message key="plugins.reports.reviews.displayName">گزارش کارشناسی</message>
 	<message key="plugins.reports.reviews.description">با این پلاگین میتوان میتوان یک گزارش CSV حاوی لیستی از انتسابات کارشناسی برای مجله تولید کرد.</message>
 	<message key="plugins.reports.reviews.round">دور</message>
