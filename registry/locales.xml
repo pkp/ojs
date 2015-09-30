@@ -16,30 +16,30 @@
 <!DOCTYPE locales SYSTEM "../lib/pkp/dtd/locales.dtd">
 
 <locales>
-	<locale key="ca_ES" complete="false" name="Catalan" iso639-2b="cat" iso639-3="cat" />
-	<locale key="cs_CZ" complete="false" name="Czech" iso639-2b="cze" iso639-3="ces" />
-	<locale key="da_DK" complete="false" name="Danish" iso639-2b="dan" iso639-3="dan" />
+	<locale key="ca_ES" complete="false" name="Català" iso639-2b="cat" iso639-3="cat" />
+	<locale key="cs_CZ" complete="false" name="Čeština" iso639-2b="cze" iso639-3="ces" />
+	<locale key="da_DK" complete="false" name="Dansk" iso639-2b="dan" iso639-3="dan" />
 	<locale key="de_DE" complete="false" name="Deutsch" iso639-2b="ger" iso639-3="deu" />
-	<locale key="en_US" name="English" iso639-2b="eng" iso639-3="eng" />
-	<locale key="el_GR" complete="false" name="Greek" iso639-2b="gre" iso639-3="ell" />
-	<locale key="es_ES" complete="false" name="Español" iso639-2b="spa" iso639-3="spa" />
-	<locale key="eu_ES" complete="false" name="Basque" iso639-2b="eus" iso639-3="eus" />
-	<locale key="fa_IR" complete="false" name="Persian" iso639-2b="per" iso639-3="fas" stylesheet="lib/pkp/styles/rtl.css" />
-	<locale key="fr_CA" complete="false" name="Français" iso639-2b="fre" iso639-3="fra" />
-	<locale key="gl_ES" complete="false" name="Galician" iso639-2b="glg" iso639-3="glg" />
+	<locale key="en_US" complete="true"  name="English" iso639-2b="eng" iso639-3="eng" />
+	<locale key="el_GR" complete="false" name="ελληνικά" iso639-2b="gre" iso639-3="ell" />
+	<locale key="es_ES" complete="false" name="Español (España)" iso639-2b="spa" iso639-3="spa" />
+	<locale key="eu_ES" complete="false" name="Euskara" iso639-2b="eus" iso639-3="eus" />
+	<locale key="fa_IR" complete="false" name="فارسی" iso639-2b="per" iso639-3="fas" stylesheet="lib/pkp/styles/rtl.css" />
+	<locale key="fr_CA" complete="false" name="Français (Canada)" iso639-2b="fre" iso639-3="fra" />
+	<locale key="gl_ES" complete="false" name="Galego" iso639-2b="glg" iso639-3="glg" />
 	<locale key="hr_HR" complete="false" name="Hrvatski" iso639-2b="hrv" iso639-3="hrv" />
-	<locale key="id_ID" complete="false" name="Indonesian" iso639-2b="ind" iso639-3="ind" />
+	<locale key="id_ID" complete="false" name="Bahasa Indonesia" iso639-2b="ind" iso639-3="ind" />
 	<locale key="it_IT" complete="false" name="Italiano" iso639-2b="ita" iso639-3="ita" />
 	<locale key="ja_JP" complete="false" name="日本語" iso639-2b="jpn" iso639-3="jpn" />
-	<locale key="ml_IN" complete="false" name="Malayalam" iso639-2b="mal" iso639-3="mal" />
+	<locale key="ml_IN" complete="false" name="മലയാളം" iso639-2b="mal" iso639-3="mal" />
 	<locale key="nl_NL" complete="false" name="Nederlands" iso639-2b="dut" iso639-3="nld" />
-	<locale key="nb_NO" complete="false" name="Norwegian Bokmål" iso639-2b="nor" iso639-3="nor" />
+	<locale key="nb_NO" complete="false" name="Norsk Bokmål" iso639-2b="nor" iso639-3="nor" />
 	<locale key="pt_BR" complete="false" name="Português (Brasil)" iso639-2b="por" iso639-3="por" />
 	<locale key="pt_PT" complete="false" name="Português (Portugal)" iso639-2b="por" iso639-3="por" />
-	<locale key="ro_RO" complete="false" name="Romanian" iso639-2b="rum" iso639-3="ron" />
-	<locale key="ru_RU" complete="false" name="Russian" iso639-2b="rus" iso639-3="rus" />
-	<locale key="sr_SR" complete="false" name="Serbian" iso639-2b="srp" iso639-3="srp" />
-	<locale key="sv_SE" complete="false" name="Swedish" iso639-2b="swe" iso639-3="swe" />
+	<locale key="ro_RO" complete="false" name="Limba Română" iso639-2b="rum" iso639-3="ron" />
+	<locale key="ru_RU" complete="false" name="Русский" iso639-2b="rus" iso639-3="rus" />
+	<locale key="sr_SR" complete="false" name="Cрпски" iso639-2b="srp" iso639-3="srp" />
+	<locale key="sv_SE" complete="false" name="Svenska" iso639-2b="swe" iso639-3="swe" />
 	<locale key="tr_TR" complete="false" name="Türkçe" iso639-2b="tur" iso639-3="tur" />
 	<locale key="uk_UA" complete="false" name="Українська" iso639-2b="ukr" iso639-3="ukr" />	
 	<locale key="vi_VN" complete="false" name="Tiếng Việt" iso639-2b="vie" iso639-3="vie" />
