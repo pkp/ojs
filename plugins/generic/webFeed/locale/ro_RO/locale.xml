@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ro_RO (Romanian) locale.
+  * Localization strings for the ro_RO (Limba Română) locale.
   *
   -->
  
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.generic.webfeed.displayName">Modul pentru fluxuri web</message>
 	<message key="plugins.generic.webfeed.description">Acest modul emite fluxuri web RSS/Atom pentru numărul curent.</message>
 	<message key="plugins.generic.webfeed.settings">Setări</message>

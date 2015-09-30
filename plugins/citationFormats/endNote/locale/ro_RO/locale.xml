@@ -12,7 +12,7 @@
   * KOSSON FECIT
   -->
  
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.citationFormats.endNote.displayName">Modul pentru citarea în format EndNote</message>
 	<message key="plugins.citationFormats.endNote.citationFormatName">EndNote - format EndNote (Macintosh &amp; Windows)</message>
 	<message key="plugins.citationFormats.endNote.description">Acest modul implementează formatul EndNote pentru citări.</message>

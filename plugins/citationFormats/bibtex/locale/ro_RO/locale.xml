@@ -12,7 +12,7 @@
   * KOSSON FECIT
   -->
  
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.citationFormats.bibtex.displayName">Modul pentru citarea în format BibTeX</message>
 	<message key="plugins.citationFormats.bibtex.citationFormatName">BibTeX</message>
 	<message key="plugins.citationFormats.bibtex.description">Acest modul implementează formatul BibTeX pentru citări.</message>

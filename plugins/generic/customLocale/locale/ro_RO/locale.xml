@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ro_RO (Română) locale.
+  * Localization strings for the ro_RO (Limba Română) locale.
   * KOSSON FECIT
   -->
  
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.generic.customLocale.name">Modul pentru adaptarea localizării</message>
 	<message key="plugins.generic.customLocale.description">Acest modul permite adaptarea textului interfeţei utilizatorului folosită de OJS.</message>
 	<message key="plugins.generic.customLocale.longDescription">Această pagină afişează toate localizările instalate pentru revistă.</message>

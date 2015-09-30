@@ -12,7 +12,7 @@
   * KOSSON FECIT
   -->
  
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.citationFormats.apa.displayName">modul pentru citarea în format APA</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
 	<message key="plugins.citationFormats.apa.description">Acest modul implementează formatul APA pentru citări.</message>

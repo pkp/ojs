@@ -12,7 +12,7 @@
   * KOSSON FECIT
   -->
  
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.citationFormats.turabian.displayName">Modul pentru citarea în format Turabian</message>
 	<message key="plugins.citationFormats.turabian.citationFormatName">Turabian</message>
 	<message key="plugins.citationFormats.turabian.description">Acest modul implementează formatul Turabian pentru citări.</message>
