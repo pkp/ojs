@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the tr_TR (Turkish) locale.
+  * Localization strings for the tr_TR (Türkçe) locale.
   *
   -->
  
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.generic.customBlockManager.displayName">Özelleştirilmiş Blok Yöneticisi</message>
 	<message key="plugins.generic.customBlockManager.description">Bu eklenti yan taraftaki özel blokları yönetmenizi sağlar. Burada oluşturduğunuz her eklenti bloklarını ayarlardan düzenleyebilirsiniz.</message>	
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Özel blok eklentilerini eklemek veya silmek için bu eklentiyi kullanabilirsiniz. Daha sonra <a href="{$systemPluginsUrl}">Sistem Eklentileri</a> sayfası aracılığıyla içeriği düzenleyebilirsiniz (Blok Eklentileri bölümünde). Kenar çubuğunda istenilen konuma eklenti yerleştirmek için, <a href="{$setupStep56}">5.6 Ayar Adımı</a> bölümüne gidin.]]></message>

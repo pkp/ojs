@@ -11,7 +11,7 @@
   * Localization strings
   -->
  
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<!-- plugin -->
 	<message key="plugins.importexport.pubIds.displayName">Genel Belirleyici XML Eklentisi</message>
 	<message key="plugins.importexport.pubIds.description">Genel belirleyici ithal ve ihracı</message>

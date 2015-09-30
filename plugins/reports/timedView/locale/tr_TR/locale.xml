@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.reports.timedView.displayName">Zamanlı Görüntüleme Raporu</message>
 	<message key="plugins.reports.timedView.form.dateStartRequired">Bir başlanğıç tarihi gerekli</message>
 	<message key="plugins.reports.timedView.form.dateStartValid">Lütfen geçerli bir başlanğıç tarihi seçiniz.</message>

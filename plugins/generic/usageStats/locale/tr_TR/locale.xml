@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.generic.usageStats.settings.logging">Erişim günlüğü seçenekleri</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles">Günlük dosyaları oluştur</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Activating this option will make the plugin create access log files inside the files directory. Those files should be used to extract the usage statistics data. If you don't want to create more access log files you can leave this option disabled and use your own server log access files.</message>
