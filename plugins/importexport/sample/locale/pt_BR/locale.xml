@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the pt_BR (Brasilian Portuguese) locale.
+  * Localization strings for the pt_BR (Português (Brasil)) locale.
   *
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.importexport.sample.displayName">Plugin Exemplo de Importação/Exportação</message>
 	<message key="plugins.importexport.sample.description">Este plugin proporciona uma exemplo de implementação para o desenvolvimento de plugins de importação/exportação plugins. Não é um plugin útil ou utilizável no seu estado atual.</message>
 

@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 
 	<!-- phpMyVisites -->
 	<message key="plugins.generic.phpmv.displayName">Análise de tráfego phpMyVisites</message>

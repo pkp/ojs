@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.reports.timedView.displayName">Relatórios temporais de acessos</message>
 	<message key="plugins.reports.timedView.description">Este plugin implementa um relatório no formato CSV para cada artigo, filtrado por um período de tempo definido pelo usuário.</message>
 

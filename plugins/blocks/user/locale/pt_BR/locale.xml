@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.block.user.displayName">Ferramentas do usuário</message>
 	<message key="plugins.block.user.description">Este plugin oferece ferramentas de usuário na barra lateral (ex.: logar, sair do sistema, acesso ao perfil, etc).</message>
 	<message key="plugins.block.user.loggedInAs">Logado como:</message>

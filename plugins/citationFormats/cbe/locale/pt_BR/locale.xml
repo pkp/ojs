@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.citationFormats.cbe.displayName">Citação CBE</message>
 	<message key="plugins.citationFormats.cbe.citationFormatName">CBE</message>
 	<message key="plugins.citationFormats.cbe.description">Este plugin implementa o formato de citação CBE.</message>

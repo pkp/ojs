@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.generic.xmlGalley.displayName">Composições em XML</message>
 	<message key="plugins.generic.xmlGalley.description">Este plugin gera composições em XHTML de uma submissão em XML utilizando uma XSLT.</message>
 

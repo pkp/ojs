@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.generic.openads.description">Esta ferramenta permite incluir anúncios do servidor de publicidade OpenAds no sistema.</message>
 	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[A ferramenta permite incluir publicidade dinâmica do servidor OpenAds dentro do sistema. <strong>Leia o README disponível em plugins/generic/openAds para informações sobre como habilitar o plugin.</strong>]]></message>
 	<message key="plugins.generic.openads">Publicidade OpenAds</message>
