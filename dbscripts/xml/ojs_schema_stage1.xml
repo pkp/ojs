@@ -131,7 +131,7 @@
 		<field name="username" type="C2" size="32">
 			<NOTNULL/>
 		</field>
-		<field name="password" type="C2" size="40">
+		<field name="password" type="C2" size="255">
 			<NOTNULL/>
 		</field>
 		<field name="salutation" type="C2" size="40"/>

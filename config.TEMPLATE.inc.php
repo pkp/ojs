@@ -245,6 +245,12 @@ session_check_ip = On
 ; Note that sha1 requires PHP >= 4.3.0
 encryption = md5
 
+; The unique salt to use for generating password reset hashes
+salt = "YouMustSetASecretKeyHere!!"
+
+; The number of seconds before a password reset hash expires (defaults to 7200 / 2 hours)
+reset_seconds = 7200
+
 ; Allowed HTML tags for fields that permit restricted HTML.
 ; For PHP 5.0.5 and greater, allowed attributes must be specified individually
 ; e.g. <img src|alt> to allow "src" and "alt" attributes. Unspecified

@@ -7,3 +7,6 @@
 [submodule "plugins/generic/pdfJsViewer"]
 	path = plugins/generic/pdfJsViewer
 	url = git://github.com/pkp/pdfJsViewer
+[submodule "lib/password_compat"]
+	path = lib/password_compat
+	url = git://github.com/ircmaxell/password_compat.git
