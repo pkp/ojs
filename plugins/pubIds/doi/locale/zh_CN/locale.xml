@@ -11,7 +11,7 @@
   * DOI plugin localization strings
   -->
 
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">该插件能够为期次，文章，样稿和附加文件分配DOI。</message>
 

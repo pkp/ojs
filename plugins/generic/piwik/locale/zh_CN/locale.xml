@@ -11,7 +11,7 @@
   * Piwik plugin localization strings
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 
 	<!-- Piwik -->
 	<message key="plugins.generic.piwik.displayName">Piwik 插件</message>

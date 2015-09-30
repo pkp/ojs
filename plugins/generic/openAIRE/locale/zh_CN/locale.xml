@@ -11,7 +11,7 @@
   * OpenAIRE plugin localization strings
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
 	<message key="plugins.generic.openAIRE.description">OpenAIRE插件添加项目ID元素到文章元数据，并且依据OpenAIRE指南1.1kuozhan OAI-PMH界面，帮助OJS期刊实现 OpenAIRE兼容。</message>
 	<message key="plugins.generic.openAIRE.projectID">项目ID</message>

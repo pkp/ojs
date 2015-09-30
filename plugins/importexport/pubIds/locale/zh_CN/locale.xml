@@ -11,7 +11,7 @@
   * Localization strings
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<!-- plugin -->
 	<message key="plugins.importexport.pubIds.displayName">公共标识符XML插件</message>
 	<message key="plugins.importexport.pubIds.description">导入和导出公共标识符。</message>

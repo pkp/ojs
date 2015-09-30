@@ -11,7 +11,7 @@
   * Browse plugin localization strings
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<!-- plugin -->
 	<message key="plugins.generic.browse.displayName">浏览</message>
 	<message key="plugins.generic.browse.description">该款插件可以浏览部分或识别类型</message>

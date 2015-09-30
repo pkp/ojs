@@ -11,7 +11,7 @@
   * URN plugin localization strings
   -->
 
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.pubIds.urn.urns">URNs</message>
 
 	<!-- plugin -->

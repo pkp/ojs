@@ -11,7 +11,7 @@
   * Stop Forum Spam plugin localization strings
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 
 	<message key="plugins.generic.stopForumSpam.displayName">阻止垃圾讯息入侵插件</message>
 	<message key="plugins.generic.stopForumSpam.description">OJS和阻挡垃圾讯息系统融为一体，这样来减少垃圾讯息的注册数量。</message>

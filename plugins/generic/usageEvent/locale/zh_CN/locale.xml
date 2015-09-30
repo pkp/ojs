@@ -11,7 +11,7 @@
   * Localization strings.
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.generic.usageEvent.displayName">使用事件</message>
 	<message key="plugins.generic.usageEvent.description">创建一个可以提供特定格式使用事件的钩子。</message>
 </locale>

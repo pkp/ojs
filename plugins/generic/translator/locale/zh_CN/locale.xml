@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the zh_CN (China) locale.
+  * Localization strings for the zh_CN (简体中文) locale.
   *
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.generic.translator.name">翻译插件</message>
 	<message key="plugins.generic.translator.description">此插件允许基于网络的维护翻译文件。</message>
 	<message key="plugins.generic.translator.longdescription">此区域允许网站管理员创建，修改和检查OJS翻译。这是整个网站的，不应用来定制一本OJS期刊。如果你正确或创建一个翻译，请考虑为将来的版本提交到分配公共知识项目。</message>

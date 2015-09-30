@@ -11,7 +11,7 @@
   * OJS solr/lucene search plugin localization strings
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.generic.lucene.displayName">Lucene 搜索插件</message>
 	<message key="plugins.generic.lucene.description">Lucene支持多种语言，提高搜索结果的相关型，加快搜索，完善扩展性等。</message>
 

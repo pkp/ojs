@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="zh_CN" full_name="China .PR">
+<locale name="zh_CN" full_name="简体中文">
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Google Analytics插件</message>

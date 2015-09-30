@@ -11,7 +11,7 @@
   * Dataverse plugin localization strings
   -->
 
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 
 	<!-- Dataverse Plugin -->
 	<message key="plugins.generic.dataverse.displayName">Dataverse 插件</message>
