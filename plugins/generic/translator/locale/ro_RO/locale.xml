@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ro_RO (Română) locale.
+  * Localization strings for the ro_RO (Limba Română) locale.
   * KOSSON FECIT
   -->
  
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.generic.translator.name">Modulul Translator</message>
 	<message key="plugins.generic.translator.description">Acest modul permite întreţinerea bazată pe servicii web a fişierelor de traducere.</message>
 	<message key="plugins.generic.translator.longdescription">Această zonă permite administratorului siteului să construiască, să modifice şi să verifice traducerile OJS. Acesta este valabil pentru tot siteul şi nu ar trebui să fie folosit pentru a adapta pentru o singură revistă. Dacă corectaţi sau creeaţi o traducere, consideraţi trimiterea acesteia la Public Knowledge Project pentru distribuirea cu viitoarele distribuţii.</message>

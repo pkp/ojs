@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ro_RO (Română) locale.
+  * Localization strings for the ro_RO (Limba Română) locale.
   *
   -->
  
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.importexport.crossref.displayName">Modulul de export CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Exportă metadatele articolului în format XML CrossRef.</message>
 	

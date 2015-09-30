@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="ro_RO" full_name="Romanian">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.generic.usageStats.settings.logging">Opțiunile jurnalierului de acces</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles">Creează fișiere de jurnalizare</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Activarea acestei opțiuni va conduce la crearea de către plugin a unor fișiere de acces în structura de directoare. Aceste fișiere ar trebui utilizate pentru extragerea de date privind utilizarea. Dacă nu dorești să creezi mai multe fișiere de jurnalizare, poți lăsa această opțiune dezactivată și să continui folosirea fișierelor jurnal ale serverului.</message>

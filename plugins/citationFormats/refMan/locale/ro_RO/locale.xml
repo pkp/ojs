@@ -12,7 +12,7 @@
   * KOSSON FECIT
   -->
  
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.citationFormats.refMan.displayName">Modul pentru citarea în format Reference Manager</message>
 	<message key="plugins.citationFormats.refMan.citationFormatName">Reference Manager - format RIS (doar pentru Windows)</message>
 	<message key="plugins.citationFormats.refMan.description">Acest modul implementează formatul Reference Manager pentru citări.</message>

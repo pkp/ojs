@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ro_RO (Română) locale.
+  * Localization strings for the ro_RO (Limba Română) locale.
   * KOSSON FECIT
   -->
 
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.importexport.doaj.displayName">Modul de export pentru DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Export al revistei în DOAJ şi trimiterea prin email a informaţiilor importante privind revista</message>
 

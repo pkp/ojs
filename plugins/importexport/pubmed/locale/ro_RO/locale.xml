@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ro_RO (Română) locale.
+  * Localization strings for the ro_RO (Limba Română) locale.
   *
   -->
  
-<locale name="ro_RO" full_name="U.S. English">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.importexport.pubmed.displayName">Modul de export PubMed XML</message>
 	<message key="plugins.importexport.pubmed.description">Exportă metadatele articolelor în format PubMed XML pentru a fi indexat în MEDLINE.</message>
 	

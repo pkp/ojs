@@ -8,11 +8,11 @@
   * Copyright (c) 2000-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ro_RO (Romanian) locale.
+  * Localization strings for the ro_RO (Limba Română) locale.
   *
   -->
 
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.importexport.quickSubmit.addToExisting">Adaugă la un număr existent:</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestination">Destinația propunerii</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestinationDescription">Selectează dacă adaugi noi propuneri unui număr existent sau le lași în lista de editare.</message>

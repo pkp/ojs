@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2013 Siavash Miri and Alec Smecher
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ro_RO (Română) locale.
+  * Localization strings for the ro_RO (Limba Română) locale.
   * KOSSON FECIT
   -->
  
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.generic.openads.description">Modulul OpenAds permite introducerea de anunţuri comerciale de la serverul OpenAds pentru a fi introduse în OJS.</message>
 	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[Modulul OpenAds permite introducerea de anunţuri comerciale de la serverul OpenAds pentru a fi introduse în OJS. <strong>Citiţi fişierul README din plugins/generic/openAds pentru informare la activarea acestui modul.</strong>]]></message>
 	<message key="plugins.generic.openads">Modulul OpenAds</message>
