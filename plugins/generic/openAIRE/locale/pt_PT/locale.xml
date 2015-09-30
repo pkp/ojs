@@ -8,10 +8,10 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * OpenAIRE plugin localization strings for the pt_PT (Portugal) locale.
+  * OpenAIRE plugin localization strings for the pt_PT (Português (Portugal)) locale.
   -->
  
-<locale name="pt_PT" full_name="Português de Portugal">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
 	<message key="plugins.generic.openAIRE.description">O plugin OpenAIRE inclui o elemento projectID nos metadados do artigo e estende a interface OAI-PMH para se adequar às Orientações do OpenAIRE 1.1, auxiliando as revistas que usam o OJS a serem compatíveis com o OpenAIRE.</message>
 	<message key="plugins.generic.openAIRE.projectID">Número de Projeto (Project ID)</message>

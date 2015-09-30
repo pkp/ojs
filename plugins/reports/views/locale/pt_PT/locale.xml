@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the pt_PT (Português) locale.
+  * Localization strings for the pt_PT (Português (Portugal)) locale.
   *
   -->
 
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.reports.views.displayName">Visualizar Relatório</message>
 	<message key="plugins.reports.views.description">Este plugin implementa um relatório em formato CSV descrevendo as leituras feitas para cada artigo.</message>
 </locale>
