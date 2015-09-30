@@ -539,7 +539,7 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<message key="about.onlineSubmissions.registrationRequired">L'inscription et l'ouverture de session sont obligatoires pour soumettre des articles en ligne et pour vérifier l'état des soumissions courantes.</message>
 	<message key="about.authorGuidelines">Directives aux auteurs</message>
 	<message key="about.submissionPreparationChecklist">Liste de vérification de la soumission</message>
-	<message key="about.submissionPreparationChecklist.description">En tant que partie intégrante du processus de soumission, les auteurs doivent s'assurer de la conformité de leur soumission avec tous les éléments suivants, et les soumissions peuvent être retournées aux auteurs qui ne sont conforment pas à ces directives.</message>
+	<message key="about.submissionPreparationChecklist.description">En tant que partie intégrante du processus de soumission, les auteurs doivent s'assurer de la conformité de leur soumission avec tous les éléments suivants, et les soumissions peuvent être retournées aux auteurs qui ne sont pas conformes à ces directives.</message>
 	<message key="about.copyrightNotice">Mention de droit d'auteur</message>
 	<message key="about.privacyStatement">Déclaration de confidentialité</message>
 	<message key="about.peerReviewProcess">Processus d'évaluation par les pairs</message>
