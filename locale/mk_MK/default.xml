@@ -11,7 +11,7 @@
   * Localization strings.
   -->
  
-<locale name="mk_MK" full_name="Macedonian">
+<locale name="mk_MK" full_name="Македонски јазик">
 	<!-- Section default -->
 	<message key="section.default.title">Статии</message>
 	<message key="section.default.abbrev">ART</message>

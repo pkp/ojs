@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="mk_MK" full_name="Macedonian">
+<locale name="mk_MK" full_name="Македонски јазик">
 	<message key="admin.hostedJournals">Домаќин списание</message>
 	<message key="admin.settings.journalRedirect">Пренасочување на списание</message>
 	<message key="admin.settings.options">Опции</message>

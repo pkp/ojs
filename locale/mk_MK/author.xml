@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="mk_MK" full_name="Macedonian">
+<locale name="mk_MK" full_name="Македонски јазик">
 	<message key="author.submit">Ново поднесување</message>
 	<message key="author.track">Активни поднесувања</message>
 	<message key="author.competingInterests"><![CDATA[Конкурентни&nbsp;интереси <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Правила</a>]]></message>
