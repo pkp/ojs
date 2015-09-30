@@ -11,7 +11,7 @@
   * Browse plugin localization strings
   -->
  
-<locale name="ru_RU" full_name="Russian">
+<locale name="ru_RU" full_name="Русский">
 	<!-- plugin -->
 	<message key="plugins.generic.browse.displayName">Просмотр</message>
 	<message key="plugins.generic.browse.description">Этот модуль позволяет просмотр по разделам и/или идентификационным типам.</message>

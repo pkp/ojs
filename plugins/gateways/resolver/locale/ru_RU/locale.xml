@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ru_RU (Russian) locale.
+  * Localization strings for the ru_RU (Русский) locale.
   *
   -->
  
-<locale name="ru_RU" full_name="Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="plugins.gateways.resolver.displayName">Модуль Идентификации</message>
 	<message key="plugins.gateways.resolver.description">Этот модуль идентифицирует выпуски и статьи на основании информации в ссылках.</message>
 	<message key="plugins.gateways.resolver.errors.errorMessage">Указанной в ссылке информации недостаточно для получения уникального ответа. Пожалуйста убедитесь, что ссылка полна и относится к статье, опубликованной на данном сервере.</message>
