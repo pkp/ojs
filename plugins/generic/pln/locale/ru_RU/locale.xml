@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ru_RU (Russian) locale.
+  * Localization strings for the ru_RU (Русский) locale.
   * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="ru_RU" full_name="Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="plugins.generic.pln">Плагин «PKP PLN»</message>
 	<message key="plugins.generic.pln.description">Плагин «PKP PLN» отправляет ваш опубликованный контент для депонирования в Частную сеть LOCKSS от PKP.</message>
 	<message key="plugins.generic.pln.manager.setup.description"><![CDATA[<strong>Частная сеть LOCKSS от PKP</strong><br /><br />Пожалуйста, прочитайте <a href="https://pkp.sfu.ca/pkp-lockss/" target="_blank">обзор PKP PLN</a> и заполните <a href="{$plnPluginURL}">эту простую форму</a>. Эта настройка позволит включить ваш журналв Частную сеть LOCKSS, созданную Public Knowledge Project (PKP PLN).]]></message>

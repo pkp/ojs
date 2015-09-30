@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ru_RU (Russian) locale.
+  * Localization strings for the ru_RU (Русский) locale.
   * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="ru_RU" full_name="Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="plugins.reports.counter.description"><![CDATA[Плагин «COUNTER» позволяет сформировать отчеты об активности сайта, используя <a href="http://www.projectcounter.org">стандарт COUNTER</a>. Сами по себе эти отчеты не делают журнал соответствующим стандарту COUNTER. Чтобы сделать журнал соответствующим этому стандарту, просмотрите требования на сайте проекта COUNTER.]]></message>
 	<message key="plugins.reports.counter">Плагин «Отчеты COUNTER»</message>
 	<message key="plugins.reports.counter.1a.introduction">Эти ссылки генерируют отчеты, готовые для COUNTER, опираясь на устаревшую версию Release 3. Если возможно, используйте более поздние версии стандарта.</message>

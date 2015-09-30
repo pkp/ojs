@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ru_RU (Russian) locale.
+  * Localization strings for the ru_RU (Русский) locale.
   * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="ru_RU" full_name="Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="plugins.metadata.mods34.articleAdapter.displayName">Плагин «Адаптер для статей MODS 3.4»</message>
 	<message key="plugins.metadata.mods34.articleAdapter.description">Этот плагин извлекает метаданные из статей/добавляет метаданные в статьи.</message>
 </locale>
