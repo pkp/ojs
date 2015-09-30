@@ -11,7 +11,7 @@
   * Books for review plugin localization strings
   -->
  
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 
 	<!-- Books For Review Notifications -->
 	<message key="plugins.generic.booksForReview.notification.bookRequested">Livro solicitado. Aguardando confirmação do Editor.</message>

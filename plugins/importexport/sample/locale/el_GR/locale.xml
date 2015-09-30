@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.importexport.sample.displayName">Δείγμα Plugin Εισαγωγής/Εξαγωγής</message>
 	<message key="plugins.importexport.sample.description">Το plugin αυτό παρέχει ένα παράδειγμα υλοποίησης για την περίπτωση ανάπτυξης ενός νέου plugin Εισαγωγής/Εξαγωγής. </message>
 

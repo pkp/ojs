@@ -11,7 +11,7 @@
   * OJS solr/lucene search plugin localization strings
   -->
  
-<locale name="da_DK" full_name="Danish">
+<locale name="da_DK" full_name="Dansk">
 	<message key="plugins.generic.lucene.displayName">Lucene Search Plugin</message>
 	<message key="plugins.generic.lucene.description">The Lucene plugin provides multi-language support, improved search result relevance, faster indexing, better scalability and more.</message>
 

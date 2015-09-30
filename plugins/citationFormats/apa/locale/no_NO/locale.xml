@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="no_NO" full_name="Norwegian">
+<locale name="no_NO" full_name="Norsk">
 	<message key="plugins.citationFormats.apa.displayName">Programutvidelse for APA referanseformat</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
 	<message key="plugins.citationFormats.apa.description">Denne programutvidelsen implementerer referanseformatet fra APA.</message>

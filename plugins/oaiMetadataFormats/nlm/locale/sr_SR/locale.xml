@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the sr_SR (Serbian) locale.
+  * Localization strings for the sr_SR (Cрпски) locale.
   *
   -->
  
-<locale name="sr_SR" full_name="Serbian">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.oaiMetadata.nlm.displayName">NLM format metapodataka</message>
 	<message key="plugins.oaiMetadata.nlm.description">Podešava strukturu metapodataka koji je u skladu sa NLM Journal Article formatom.</message>
 </locale>

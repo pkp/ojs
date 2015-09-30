@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.block.user.displayName">Blok Pengguna</message>
 	<message key="plugins.block.user.description">Plugin ini menyediakan alat untuk akun pengguna (contoh: login, logout, link profil, dll).</message>
 	<message key="plugins.block.user.loggedInAs">Anda login sebagai...</message>

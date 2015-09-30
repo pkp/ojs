@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.generic.roundedcorners.displayName">Zaokrąglone krawędzie</message>
 	<message key="plugins.generic.roundedcorners.description">Wtyczka dodaje zaokrąglone krawędzie dla każdego elementu blokowego wyświetlanego w pasku bocznym.</message>
 </locale>

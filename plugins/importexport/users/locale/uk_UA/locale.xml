@@ -12,7 +12,7 @@
   * V. I. Vernadsky National Library of Ukraine
   -->
  
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <message key="plugins.importexport.users.displayName">Модуль користувачів у XML</message>
        <message key="plugins.importexport.users.description">Імпорт та експорт користувачів</message>
 

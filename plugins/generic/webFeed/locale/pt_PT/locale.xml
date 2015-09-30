@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.generic.webfeed.displayName">Plugin Canal de Divulgação RSS</message>
 	<message key="plugins.generic.webfeed.description">Este plugin produz canais de divulgação RSS/Atom para a edição actual.</message>
 	<message key="plugins.generic.webfeed.settings">Configurações</message>

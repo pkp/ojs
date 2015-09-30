@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2009 Siavash Miri and Alec Smecher
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the no_NO (Norwegian) locale.
+  * Localization strings for the no_NO (Norsk) locale.
   *
   -->
  
-<locale name="no_NO" full_name="Norwegian">
+<locale name="no_NO" full_name="Norsk">
 	<message key="plugins.generic.openads.description">Programutvidelsen for OpenAds gjør det mulig å vise dynamiske annonser fra OpenAds annonseserver i OJS.</message>
 	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[Programutvidelsen for OpenAds gjør det mulig å vise dynamiske annonser fra OpenAds annonseserver i OJS.
  <strong>Les README-filen i plugins/generic/openAds for informasjon om å slå på denne programutvidelsen.</strong>]]></message>

@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the fr_FR (Français) locale.
+  * Localization strings for the fr_FR (Français (France)) locale.
   *
   -->
  
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.block.role.displayName">Bloc de rôle spécifique</message>
 	<message key="plugins.block.role.description">Ce plugiciel offre un bloc dans l'encadré latéral comprenant des renseignements de rôle spécifiques tels le nombre de soumissions, et des liens rapides vers des auteurs, des rédacteurs, etc.</message>
 </locale>

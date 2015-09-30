@@ -11,7 +11,7 @@
   * DOI plugin localization strings
   -->
 
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">Ce plugiciel permet l'assignation d'identifiants d'objets numériques aux numéros, articles, épreuves et fichiers supplémentaires dans OJS.</message>
 

@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.block.help.displayName">Δομική Μονάδα Βοήθειας</message>
 	<message key="plugins.block.help.description">Το πρόσθετο αυτό παρέχει ένα σύνδεσμο Βοήθειας στην πλαϊνή μπάρα .</message>
 </locale>

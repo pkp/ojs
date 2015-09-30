@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the no_NO (Norwegian) locale.
+  * Localization strings for the no_NO (Norsk) locale.
   *
   -->
  
-<locale name="no_NO" full_name="Norwegian">
+<locale name="no_NO" full_name="Norsk">
 	<message key="plugins.theme.custom.name">Programutvidelse for designtema</message>
 	<message key="plugins.theme.custom.description">Denne programutvidelsen gjør det mulig å tilpasse nettstedets designtema for tidsskriftet.</message>
 	<message key="plugins.theme.custom.notWritable">MERK: Denne programutvidelsens stilark (css-fil), "{$stylesheetFileLocation}", er for øyeblikket ikke en overskrivbar fil. Filen må åpnes for overskriving før plugin'en kan brukes.</message>

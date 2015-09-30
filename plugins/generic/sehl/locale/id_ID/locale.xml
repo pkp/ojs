@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the id_ID (Indonesia) locale.
+  * Localization strings for the id_ID (Bahasa Indonesia) locale.
   *
   -->
  
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.generic.sehl.name">Plugin SEHL</message>
 	<message key="plugins.generic.sehl.description">Plugin ini mengimplementasikan Search Engine HighLighting (SEHL) sehingga saat mesin pencari meletakkan artikel HTML, kata kunci yang dikehendaki disoroti.</message>
 </locale>

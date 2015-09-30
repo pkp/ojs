@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.generic.customLocale.name">Custom Locale Plugin</message>
 	<message key="plugins.generic.customLocale.description"> Plugin ini memungkinkan penyesuaian default teks antarmuka pengguna yang digunakan IOJS.</message> 
 

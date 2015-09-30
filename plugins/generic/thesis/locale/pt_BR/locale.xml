@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.generic.thesis.displayName">Resumos de teses</message>
 	<message key="plugins.generic.thesis.description">Solicitar e publicar o resumo de teses.</message>
 

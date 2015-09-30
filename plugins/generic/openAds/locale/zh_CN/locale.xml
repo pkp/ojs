@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2009 Siavash Miri and Alec Smecher
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the zh_CN (China) locale.
+  * Localization strings for the zh_CN (简体中文) locale.
   *
   -->
  
-<locale name="zh_CN" full_name="China PR">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.generic.openads.description">使用Openads插件可以实现整个从Openads服务器读取动态广告到OJS。</message>
 	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[使用Openads插件可以实现整个从Openads服务器读取动态广告到OJS。 <strong>使用详细请参阅plugins/generic/openAds的README.</strong>]]></message>
 	<message key="plugins.generic.openads">OpenAds插件</message>

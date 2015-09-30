@@ -11,7 +11,7 @@
   * Stop Forum Spam plugin localization strings
   -->
  
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 
 	<message key="plugins.generic.stopForumSpam.displayName">Forum Spam Eklentisini Durdur</message>
 	<message key="plugins.generic.stopForumSpam.description">Integrate OJS with the Stop Forum Spam prevention system, which aims to reduce the amount of spam registrations.</message>

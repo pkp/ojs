@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="mk_MK" full_name="Macedonian">
+<locale name="mk_MK" full_name="Македонски јазик">
 	<message key="manager.emails.confirmResetAll">Дали сте сигурни дека сакате да ги ресетирате сите е-маил шаблони во ова списание? Ќе ги изгубите сите прилагодувања кои сте ги направиле.</message>
 	<message key="manager.files.note">Забелешка: Пребарувачот на датотеки е напредна функција која им овозможува на датотеките и директориумите поврзани со списанието да се гледаат и обработуваат директно.</message>
 	<message key="manager.groups">Име на списание</message>

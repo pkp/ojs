@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the eu_ES (Basque (Euskara)) locale.
+  * Localization strings for the eu_ES (Euskara) locale.
   *
   -->
 
-<locale name="eu_ES" full_name="Basque (Euskara)">
+<locale name="eu_ES" full_name="Euskara">
 	<message key="plugins.importexport.quickSubmit.addToExisting">Add to an existing issue:</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestination">Submission Destination</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestinationDescription">Select whether to add new submissions to an existing issue or to leave in the editing queue.</message>

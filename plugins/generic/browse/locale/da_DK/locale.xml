@@ -11,7 +11,7 @@
   * Browse plugin localization strings
   -->
  
-<locale name="da_DK" full_name="Danish">
+<locale name="da_DK" full_name="Dansk">
 	<!-- plugin -->
 	<message key="plugins.generic.browse.displayName">Browse</message>
 	<message key="plugins.generic.browse.description">Dette plugin gør det muligt at browse gennem sektioner og/eller id-typer.</message>

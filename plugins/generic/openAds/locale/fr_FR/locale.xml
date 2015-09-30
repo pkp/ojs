@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2009 Siavash Miri and Alec Smecher
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the fr_FR (Français) locale.
+  * Localization strings for the fr_FR (Français (France)) locale.
   *
   -->
  
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.generic.openads.description">Le plugiciel OpenAds permet d'insérer dans OJS des annonces publicitaires dynamiques tirés du serveur publicitaire OpenAds.</message>
 	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[Le plugiciel OpenAds permet d'insérer dans OJS des annonces publicitaires dynamiques tirés du serveur publicitaire OpenAds.  <strong>Veuillez lire le fichier LISEZMOI dans plugiciel/générique/openAds pour de plus amples renseignements concernant l’activation de ce plugiciel.</strong>]]></message>
 	<message key="plugins.generic.openads">Plugiciel OpenAds</message>

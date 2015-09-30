@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.importexport.pubmed.displayName">Plugiciel d'exportation PubMed XML</message>
 	<message key="plugins.importexport.pubmed.description">Exporter en format PubMed XML les métadonnées de l'article pour indexation dans MEDLINE.</message>
 	

@@ -11,7 +11,7 @@
   * Localization strings
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.importexport.medra.displayName">mEDRA 导出/注册插件</message>
 	<message key="plugins.importexport.medra.description">导出期次，文章和样稿元数据在Onix DOI (O4DOI)格式，并且在mEDRA 注册机构注册DOI。</message>
 

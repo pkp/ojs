@@ -14,7 +14,7 @@
   *
   -->
  
-<locale name="sv_SE" full_name="Swedish">
+<locale name="sv_SE" full_name="Svenska">
 	<message key="plugins.citationFormats.mla.displayName">MLA citeringsformattillägg</message>
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
 	<message key="plugins.citationFormats.mla.description">Detta tillägg implementerar MLA citeringsformat</message>

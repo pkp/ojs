@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ro_RO (Română) locale.
+  * Localization strings for the ro_RO (Limba Română) locale.
   * KOSSON FECIT
   -->
  
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.gateways.resolver.displayName">Modulul Resolver</message>
 	<message key="plugins.gateways.resolver.description">Acest modul corelează articolele şi numerele de reviste pe baza informaţiei din referinţa bibliografică.</message>
 	<message key="plugins.gateways.resolver.errors.errorMessage">Nu s-a putut face corelaţia nici măcar a unei singure entităţi folosindu-se informaţia bibliografică oferită. Asiguraţi-vă că referinţa bibliografică este completă şi se referă la o entitate în cazul acestei instalări OJS.</message>

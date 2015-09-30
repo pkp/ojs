@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.generic.usageStats.settings.logging">Επιλογές αρχείου καταγραφής πρόσβασης</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles">Δημιουργία αρχείου καταγραφής</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Η ενεργοποίηση αυτής της επιλογής θα κάνει το plugin δημιουργήσεις  αρχεία καταγραφής πρόσβασης μέσα στον κατάλογο αρχείων. Αυτά τα αρχεία θα πρέπει να χρησιμοποιηθούν για την εξαγωγή των δεδομένων στατιστικών στοιχείων χρήσης. Εάν δεν θέλετε να δημιουργήσετε περισσότερα αρχεία καταγραφής πρόσβασης μπορείτε να αφήσετε αυτή την επιλογή με ειδικές ανάγκες και να χρησιμοποιούν τη δική σας πρόσβαση σε αρχεία καταγραφής του διακομιστή.</message>

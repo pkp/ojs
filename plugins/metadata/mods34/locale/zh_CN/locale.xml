@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.metadata.mods34.articleAdapter.displayName">MODS 3.4 文章配适器</message>
 	<message key="plugins.metadata.mods34.articleAdapter.description">提取/添加元数据从/到文章。</message>
 </locale>

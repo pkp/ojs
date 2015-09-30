@@ -11,7 +11,7 @@
   * Shared localization strings
   -->
 
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">为使用该款插件，请在"公共标识符"插件种类中，开启和配置DOI插件并且指定一个有效的DOI字首。</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">插件尚未完全建立。</message>
 

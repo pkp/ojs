@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.block.keywordCloud.displayName">Blok Kata Kunci Cloud</message>
 	<message key="plugins.block.keywordCloud.description">Plugin ini menyediakan tag cloud dari kanta kunci artikel.</message>
 	<message key="plugins.block.keywordCloud.title">Kata Kunci</message>

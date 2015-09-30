@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.generic.backup.name">Yedekleme Eklentisi</message>
 	<message key="plugins.generic.backup.description">Bu eklenti yüklemenin bir yedeğini oluşturur.</message>
 

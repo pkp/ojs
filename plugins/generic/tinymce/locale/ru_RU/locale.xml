@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ru_RU (Russian) locale.
+  * Localization strings for the ru_RU (Русский) locale.
   * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="ru_RU" full_name="Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="plugins.generic.tinymce.name">Плагин «TinyMCE»</message>
 	<message key="plugins.generic.tinymce.description"><![CDATA[Этот плагин включает визуальное редактирование (WYSIWYG) текстовых полей в OJS с использованием редактора <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
 	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Этот плагин включает визуальное редактирование (WYSIWYG) текстовых полей в OJS с использованием редактора <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.<strong>TinyMCE сейчас не установлен; пожалуйста, установите его в {$tinyMcePath}.</strong>]]></message>

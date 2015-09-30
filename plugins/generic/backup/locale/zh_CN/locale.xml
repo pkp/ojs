@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.generic.backup.name">备份插件</message>
 	<message key="plugins.generic.backup.description">该插件产生安装备份。</message>
 

@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ru_RU (Russian) locale.
+  * Localization strings for the ru_RU (Русский) locale.
   * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="ru_RU" full_name="Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="plugins.generic.translator.name">Плагин «Переводчик»</message>
 	<message key="plugins.generic.translator.description">Этот плагин позволяет выполнять работать с файлами перевода через веб-интерфейс.</message>
 	<message key="plugins.generic.translator.longdescription">Эта область позволяет администратору сайта создавать, изменять и проверять переводы системы OJS. Изменения в этой области затрагивают весь сайт, поэтому данная область не должна использоваться для изменения перевода для одного журнала OJS. Если вы корректируете или создаете перевод, пожалуйста подумайте над его отправкой в Public Knowledge Project для включения в будущие версии OJS.</message>

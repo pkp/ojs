@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.citationFormats.endNote.displayName">EndNote citation format plugin</message>
 	<message key="plugins.citationFormats.endNote.citationFormatName">EndNote - EndNote format (Macintosh &amp; Windows)</message>
 	<message key="plugins.citationFormats.endNote.description">This plugin implements the EndNote citation format.</message>

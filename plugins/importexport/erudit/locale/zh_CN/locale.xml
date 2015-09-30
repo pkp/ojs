@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the zh_CN (China) locale.
+  * Localization strings for the zh_CN (简体中文) locale.
   *
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.importexport.erudit.displayName">Erudit文章导出插件(Erudit Article Export Plugin)</message>
 	<message key="plugins.importexport.erudit.description">使用英文Erudit DTD导出文章(Export articles using the English Erudit DTD)</message>
 

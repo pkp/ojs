@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.block.navigation.displayName">Nawigacja</message>
 	<message key="plugins.block.navigation.description">Ta wtyczka udostępnia łącza nawigacji wyświetlane w kolumnie.</message>
 	<message key="plugins.block.navigation.journalContent">Zawartość czasopisma</message>

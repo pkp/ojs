@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="da_DK" full_name="Danish">
+<locale name="da_DK" full_name="Dansk">
 	<message key="plugins.generic.backup.name">Backup Plugin</message>
 	<message key="plugins.generic.backup.description">This plugin generates a backup of the installation.</message>
 

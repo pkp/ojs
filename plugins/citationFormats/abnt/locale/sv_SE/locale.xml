@@ -15,7 +15,7 @@
   *
   -->
  
-<locale name="sv_SE" full_name="Swedish">
+<locale name="sv_SE" full_name="Svenska">
 	<message key="plugins.citationFormats.abnt.displayName">ABNT citationsformatstillägg (the Brazilian Association of Technical Standards, Associação Brasileira de Normas Técnicas)</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Det här tillägget implementerar ABNT citationsformat. Om det finns problem med formatet kontrollera bugrapport på adressen http://pkp.sfu.ca/bugzilla/show_bug.cgi?id=4645</message>

@@ -7,10 +7,10 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the fa_IR (Persian) locale.
+  * Localization strings for the fa_IR (فارسی) locale.
   *
   -->
-<locale name="fa_IR" full_name="Persian">
+<locale name="fa_IR" full_name="فارسی">
 	<message key="plugins.importexport.doaj.displayName">پلاگین صادراتی دواج</message>
 	<message key="plugins.importexport.doaj.description">مجله را برای دواج صادر میکند و اطلاعات مجله را به نماینده دواج ایمیل میکند.</message>
 

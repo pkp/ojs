@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.metadata.dc11.articleAdapter.displayName">Adaptateur d'article DC 1.1</message>
 	<message key="plugins.metadata.dc11.articleAdapter.description">Extrait/injecte les métadonnées de/dans l'article.</message>
 </locale>

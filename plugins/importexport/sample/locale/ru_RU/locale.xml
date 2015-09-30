@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ru_RU (Russian) locale.
+  * Localization strings for the ru_RU (Русский) locale.
   * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="ru_RU" full_name="Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="plugins.importexport.sample.displayName">Плагин «Образец импорта/экспорта»</message>
 	<message key="plugins.importexport.sample.description">Этот плагин является примером реализации, который может использоваться при разработке плагинов импорта/экспорта. Сам по себе этот плагин не очень полезен.</message>
 

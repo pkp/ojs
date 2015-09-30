@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * External feed plugin localization strings for the sr_SR (Serbian) locale.
+  * External feed plugin localization strings for the sr_SR (Cрпски) locale.
   *
   -->
  
-<locale name="sr_SR" full_name="Serbian">
+<locale name="sr_SR" full_name="Cрпски">
 
 	<!-- External Feed -->
 	<message key="plugins.generic.externalFeed.displayName">Agregator spoljašnjih linkova</message>

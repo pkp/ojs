@@ -11,7 +11,7 @@
   * URN plugin localization strings
   -->
  
-<locale name="da_DK" full_name="Danish">
+<locale name="da_DK" full_name="Dansk">
 	<message key="plugins.pubIds.urn.urns">URNs</message>
 
 	<!-- plugin -->

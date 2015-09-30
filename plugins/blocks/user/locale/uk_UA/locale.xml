@@ -8,13 +8,13 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the uk_UA (Ukrainian) locale.
+  * Localization strings for the uk_UA (Українська) locale.
   *
   * Translated by Denys Solovianenko, 2011
   * V. I. Vernadsky National Library of Ukraine
   -->
  
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <message key="plugins.block.user.displayName">Блок користувача</message>
        <message key="plugins.block.user.description">Цей модуль відображає панель з інструментами облікового запису користувача (наприклад, увійти, вийти, посилання на профіль тощо).</message>
        <message key="plugins.block.user.loggedInAs">Ви увійшли як...</message>

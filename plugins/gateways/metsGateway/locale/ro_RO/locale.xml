@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ro_RO (Română) locale.
+  * Localization strings for the ro_RO (Limba Română) locale.
   * KOSSON FECIT
   -->
  
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.gateways.metsGateway.displayName">Modul pentru METS</message>
 	<message key="plugins.gateways.metsGateway.settings">Setări</message>
 	<message key="plugins.gateways.metsGateway.description"><![CDATA[Acest modul oferă date brute în format XML codate METS pentru o revistă. <strong>NOTĂ: este menit să fie folosit cu servicii web iar activarea acestui modul pune şi o problemă de securitate prin faptul că oferă access nerestricţionat la revistă în format XML (conţinutul este codat base64).</strong>]]></message>

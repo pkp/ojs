@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.block.role.displayName">Role</message>
 	<message key="plugins.block.role.description">Wtyczka elementu blokowego dla działań kontekstowych różnych typów użytkowników.</message>
 </locale>

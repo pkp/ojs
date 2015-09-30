@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the sr_SR (Serbian) locale.
+  * Localization strings for the sr_SR (Cрпски) locale.
   *
   -->
  
-<locale name="sr_SR" full_name="Serbian">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.gateways.metsGateway.displayName">METS Gateway dodatak</message>
 	<message key="plugins.gateways.metsGateway.settings">Podešavanja</message>
 	<message key="plugins.gateways.metsGateway.description"><![CDATA[Ovaj dodatak daje sirove XML podatke u METS formatu za određeni časopis. <strong> NAPOMENA: Namena dodatka je da ga koriste web servisi pa time predstavlja i sigurnosnu nedostatak pošto postoji direktan pristup časopisima u XML formatu (sadržaj je kodiran u base64)</strong>]]></message>

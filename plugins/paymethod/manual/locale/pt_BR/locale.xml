@@ -11,7 +11,7 @@
   * Localization strings for the pt_BR (Português (Brasil)) locale.
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.paymethod.manual.displayName">Controle de pagamento manual</message>
 	<message key="plugins.paymethod.manual.description">O responsável registrará o recebimento do pagamento pelo usuário.</message>
 	<message key="plugins.paymethod.manual">Registro de pagamento</message>

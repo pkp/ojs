@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the zh_CN (China) locale.
+  * Localization strings for the zh_CN (简体中文) locale.
   *
   -->
 
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.reports.articles.displayName">文章报告</message>
 	<message key="plugins.reports.articles.description">本插件实现了一个包含文章列表及其信息的CSV报告。</message>
 	<message key="plugins.reports.articles.nodecision">没有决策</message>

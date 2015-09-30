@@ -11,7 +11,7 @@
   * Localization strings.
   -->
  
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.generic.usageEvent.displayName">Kullanım durumu</message>
 	<message key="plugins.generic.usageEvent.description">Tanımlanmış bir biçimde kullanım etkinliği sağlayan bir kulp oluşturur.</message>
 </locale>

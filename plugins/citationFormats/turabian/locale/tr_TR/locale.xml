@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.citationFormats.turabian.displayName">Turabian atıf biçim eklentisi</message>
 	<message key="plugins.citationFormats.turabian.citationFormatName">Turabian</message>
 	<message key="plugins.citationFormats.turabian.description">Bu eklenti Turabian atıf biçimini uygular.</message>

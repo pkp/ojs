@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="sr_SR" full_name="Serbian">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.citationFormats.apa.displayName">APA format citata</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
 	<message key="plugins.citationFormats.apa.description">Ovaj dodatak implementira the APA format citata.</message>

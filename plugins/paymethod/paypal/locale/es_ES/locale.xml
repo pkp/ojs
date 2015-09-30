@@ -12,7 +12,7 @@
   * Localization strings
   -->
  
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.paymethod.paypal.displayName">Pago de cuotas mediante PayPal</message>
+<locale name="es_ES" full_name="Español (España)">Pago de cuotas mediante PayPal</message>
 
 	<!-- PayPal Settings Form -->
 	<message key="plugins.paymethod.paypal.settings.paypalenable">Habilitar PayPal</message>

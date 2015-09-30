@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="fr_CA" full_name="Français">
+<locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.generic.usageStats.settings.logging">Options des logs d'accès</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles">Créer les fichiers log</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Activer cette option créera des fichiers log sur les accès à l'intérieur du répertoire de fichiers. Ces fichiers devront être utilisés pour extraire les données statistiques d'utilisation. Si vous ne souhaitez pas créer plus de fichiers log d'accès vous pouvez laisser cette option désactivée et utiliser vos propres fichiers logs d'accès sur vos serveurs.</message>

@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Dataverse plugin localization strings for the ru_RU (Russian) locale.
+  * Dataverse plugin localization strings for the ru_RU (Русский) locale.
   * With updates from Pavel Pisklakov (revising translation). 
   -->
 
-<locale name="ru_RU" full_name="Russian">
+<locale name="ru_RU" full_name="Русский">
 
 	<!-- Плагин «Dataverse» -->
 	<message key="plugins.generic.dataverse.displayName">Плагин «Dataverse»</message>

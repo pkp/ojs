@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.reports.timedView.displayName">定时的浏览量报告</message>
 	<message key="plugins.reports.timedView.description">该款插件使用CSV报告描述每篇文章的读者量，过滤用户定义的时间段。</message>
 

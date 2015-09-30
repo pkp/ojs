@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.generic.referral.name">Plugin de Apontadores para Artigos</message>
 	<message key="plugins.generic.referral.description">O Plugin de Apontadores para Artigos mantém o controlo dos URLs que apontam para os artigos (quando um leitor clica num link para um artigo noutro site, por exemplo), permitindo aos autores manter e possivelmente publicar automaticamente um lista actualizada de ligações para um artigo.</message>
 	<message key="plugins.generic.referral.editReferral">Editar Apontador</message>

@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.importexport.duracloud.displayName">Plugiciel d'Import/Export DuraCloud</message>
 	<message key="plugins.importexport.duracloud.description">Archive et restaure les numéros en utilisant un service externe DuraCloud pour le stockage</message>
 

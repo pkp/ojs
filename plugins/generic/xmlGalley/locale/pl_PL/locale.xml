@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.generic.xmlGalley.displayName">Generator stron XHTML ze źródeł XML</message>
 	<message key="plugins.generic.xmlGalley.description">Wtyczka generuje pliki XHTML ze źródeł XML.</message>
 

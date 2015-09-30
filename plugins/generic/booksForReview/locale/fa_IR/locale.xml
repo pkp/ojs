@@ -11,7 +11,7 @@
   * Books for review plugin localization strings for the en_US (U.S. English) locale.
   -->
  
-<locale name="fa_IR" full_name="Persian">
+<locale name="fa_IR" full_name="فارسی">
 
 	<!-- Books For Review Notifications -->
 	<message key="plugins.generic.booksForReview.notification.bookRequested">کتاب درخواست شد. منتظر تایید ادیتور</message>

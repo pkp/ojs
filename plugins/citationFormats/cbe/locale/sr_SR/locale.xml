@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="sr_SR" full_name="Serbian">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.citationFormats.cbe.displayName">CBE format citata</message>
 	<message key="plugins.citationFormats.cbe.citationFormatName">CBE</message>
 	<message key="plugins.citationFormats.cbe.description">Ovaj dodatak implementira CBE format citata.</message>

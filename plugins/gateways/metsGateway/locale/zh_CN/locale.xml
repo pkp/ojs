@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the zh_CN (China) locale.
+  * Localization strings for the zh_CN (简体中文) locale.
   *
   -->
  
-<locale name="zh_CN" full_name="China PR">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.gateways.metsGateway.displayName">MetS的网关插件</message>
 	<message key="plugins.gateways.metsGateway.settings">设置</message>
 	<message key="plugins.gateways.metsGateway.description"><![CDATA[这个插件提供了一个指定的杂志在MetS的原始XML格式的数据。<strong>注意: 这是为了使用WEB服务，另外，在期刊使用XML样式（内容基于Base64编码）提供无限制访问的时候，会导致一个安全问题。</strong>]]></message>

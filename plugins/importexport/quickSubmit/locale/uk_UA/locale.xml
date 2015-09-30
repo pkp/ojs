@@ -12,7 +12,7 @@
   * V. I. Vernadsky National Library of Ukraine
   -->
  
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <message key="plugins.importexport.quickSubmit.addToExisting">Додати до існуючого випуску:</message>
        <message key="plugins.importexport.quickSubmit.chooseDestination">Розміщення подання</message>
        <message key="plugins.importexport.quickSubmit.chooseDestinationDescription">Визначте, чи потрібно додавати нові подання до існуючого випуску, або потрібно їх включити до редакційної черги.</message>

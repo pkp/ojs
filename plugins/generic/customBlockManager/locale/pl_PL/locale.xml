@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.generic.customBlockManager.displayName">Manager elementów blokowych</message>
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Wtyczka umożliwia dodawanie i usuwanie niestandardowych elementów blokowych. Możesz je edytować przez <a href="{$systemPluginsUrl}">Wtyczki systemowe</a>.  Aby dodać wtyczkę w odpowiednie miejsce w panelu bocznym, udaj się do <a href="{$setupStep56}">Konfiguracji, krok 5.6</a>]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Ustawienia</message>

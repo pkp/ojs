@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the da_DK (Danish) locale.
+  * Localization strings for the da_DK (Dansk) locale.
   *
   -->
  
-<locale name="da_DK" full_name="Danish">
+<locale name="da_DK" full_name="Dansk">
 	<message key="plugins.generic.referral.name">Henvisningsplugin</message>
 	<message key="plugins.generic.referral.description">Henvisningsplugin’et indsamler URL’er fra eksterne ressourcer, der henviser til artikler, hvilket gør det muligt for forfattere at opretholde og eventuelt publicere en automatisk opdateret liste over eksterne henvisninger (refbacks) til en artikel.</message>
 	

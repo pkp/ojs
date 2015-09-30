@@ -11,7 +11,7 @@
   * Piwik plugin localization strings
   -->
  
-<locale name="sr_SR" full_name="Srpski">
+<locale name="sr_SR" full_name="Cрпски">
 
 	<!-- Piwik -->
 	<message key="plugins.generic.piwik.displayName">Piwik dodatak</message>

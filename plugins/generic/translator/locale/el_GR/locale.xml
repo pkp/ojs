@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.generic.translator.name">Πρόσθετο Μετάφρασης</message>
 	<message key="plugins.generic.translator.description">Το πρόσθετο αυτό επιτρέπει την δικτυακή διαχείριση των αρχείων μετάφρασης.</message>
 	<message key="plugins.generic.translator.longdescription">Σε αυτή την περιοχή ο Διαχειριστής του Ιστοτόπου μπορεί να δημιουργήσει, επεξεργαστεί και να ελέγξει τις μεταφράσεις του OJS. Αυτό γίνεται σε επίπεδο ιστοτόπου συστήματος και δεν θα πρέπει να χρησιμοποιείται για τη διαμόρφωση ενός μόνο περιοδικού. Αν διορθώνεται ή δημιουργείτε μια μετάφραση, παρακαλούμε σκεφτείτε το ενδεχόμενο να την υποβάλετε στο Public Knowledge Project για διανομή με μελλοντικές εκδόσεις.</message>

@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.generic.translator.name"> Plugin Translator </message> 
 	<message key="plugins.generic.translator.description"> Plugin ini memungkinkan pemeliharaan web-based file terjemahan.</message> 
 	<message key="plugins.generic.translator.longdescription"> Area ini memungkinkan  Administrator Situs untuk membangun, memodifikasi, dan mengecek terjemahan IOJS. Ini adalah site-wide dan tidak seharusnya digunakan untuk menyesuaikan jurnal OJS tunggal.</message> 

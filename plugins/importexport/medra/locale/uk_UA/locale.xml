@@ -11,7 +11,7 @@
   * Localization strings
   -->
  
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
 	<message key="plugins.importexport.medra.displayName">Модуль експорту/реєстрації mEDRA</message>
 	<message key="plugins.importexport.medra.description">Експорт метаданих випусків, статей та супровідних файлів у формат Onix for DOI (O4DOI) та реєстрація DOI через реєстраційну агенцію mEDRA.</message>
 

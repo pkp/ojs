@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="fr_CA" full_name="Français">
+<locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.generic.usageEvent.displayName">Évènement d'utilisation</message>
 	<message key="plugins.generic.usageEvent.description">Créer un hameçon (hook) qui fournit un événement d'utilisation dans un format défini.</message>
 </locale>

@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.citationFormats.proCite.displayName">Plugiciel de format de référence bibliographique ProCite</message>
 	<message key="plugins.citationFormats.proCite.citationFormatName">ProCite - Format RIS (Macintosh et Windows)</message>
 	<message key="plugins.citationFormats.proCite.description">Ce plugiciel implante le format de référence bibliographique ProCite.</message>

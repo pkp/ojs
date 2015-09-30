@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the fr_FR (Français) locale.
+  * Localization strings for the fr_FR (Français (France)) locale.
   *
   -->
 
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.importexport.doaj.displayName">Plugiciel d'exportation DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Exporte la revue vers DOAJ et envoie par courriel l'information de la revue pour l'intégration</message>
 

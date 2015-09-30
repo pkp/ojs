@@ -8,11 +8,11 @@
   * Copyright (c) 2000-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the zh_CN (China) locale.
+  * Localization strings for the zh_CN (简体中文) locale.
   *
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.importexport.quickSubmit.addToExisting">添加到现有期刊：</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestination">提交地址</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestinationDescription">选择是将新稿件添加到已存在期刊还是编辑队列。</message>

@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.citationFormats.endNote.displayName">Πρόσθετο σχήματος παραπομπής EndNote</message>
 	<message key="plugins.citationFormats.endNote.citationFormatName"><![CDATA[EndNote - EndNote σχήμα (Macintosh & Windows)]]></message>
 	<message key="plugins.citationFormats.endNote.description">Το πρόσθετο αυτό υλοποιεί το σχήμα παραπομπής EndNote.</message>

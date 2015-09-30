@@ -11,7 +11,7 @@
   * Localization strings.
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.importexport.datacite.displayName">Exportação/Registro DataCite</message>
 	<message key="plugins.importexport.datacite.description">Exporte ou registre metadados de edições, artigos, composições e arquivos suplementares no DataCite.</message>
 

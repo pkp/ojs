@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.block.fontSize.displayName">Tamanho de fonte</message>
 	<message key="plugins.block.fontSize.description">Este plugin habilita a ferramenta de alteração de tamanho de fonte.</message>
 	<message key="plugins.block.fontSize.title">Tamanho de fonte</message>

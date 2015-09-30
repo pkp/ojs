@@ -11,7 +11,7 @@
   * Thesis abstracts plugin localization strings
   -->
  
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
 
 	<!-- Thesis Abstract Management -->
 	<message key="plugins.generic.thesis.manager.settings">Налаштування</message>

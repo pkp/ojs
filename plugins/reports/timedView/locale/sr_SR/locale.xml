@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="sr_SR" full_name="Srpski">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.reports.timedView.displayName">Izveštaj vremena prikaza</message>
 	<message key="plugins.reports.timedView.description">Ovaj dodatak implementira CVS izveštaj koji opisuje čitanje svakog članka filtrirano kroz vremenske odrednice.</message>
 

@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2009 Siavash Miri and Alec Smecher
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the sr_SR (Serbian) locale.
+  * Localization strings for the sr_SR (Cрпски) locale.
   *
   -->
  
-<locale name="sr_SR" full_name="Serbian">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.generic.openads.description">OpenAds dodatak dozvoljava da dinamički dodaci sa OpenAds ad servera budu uvršteni u sistem.</message>
 	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[OpenAds dodatak dozvoljava da dinamički dodaci sa OpenAds ad servera budu uvršteni u sistem. <strong>Molimo Vas da pročitate README fajl u plugins/generic/openAds za više informacija o dodatku.</strong>]]></message>
 	<message key="plugins.generic.openads">OpenAds dodatak</message>

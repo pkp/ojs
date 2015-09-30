@@ -11,7 +11,7 @@
   * Localization strings
   -->
  
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.importexport.datacite.displayName">Plugiciel DataCite d'exportation / d'enregistrement</message>
 	<message key="plugins.importexport.datacite.description">Exporte ou enregistre les métadonnées d'un numéro, un article ou une épreuve et les fichiers supplémentaires dans un format DataCite.</message>
 

@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.citationFormats.abnt.displayName">ABNT atıf biçim eklentisi</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Bu eklenti ABNT atıf biçimini uygular.</message>

@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.generic.staticPages.displayName">Πρόσθετο Στατικών Σελίδων</message>
 	<message key="plugins.generic.staticPages.description">Αυτό το πρόσθετο επιτρέπει την διαχείριση στατικού περιεχομένου.</message>
 	<message key="plugins.generic.staticPages.pageTitle">Τίτλος</message>

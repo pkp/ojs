@@ -11,7 +11,7 @@
   * DRIVER plugin localization strings
   -->
  
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.generic.driver.displayName">DRIVER</message>
 	<message key="plugins.generic.driver.description">O plugin DRIVER configura o interface OAI-PMH de acordo com as diretrizes DRIVER 2.0, tornando as revistas compatíveis com DRIVER.</message>
 </locale>

@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ru_RU (Russian) locale.
+  * Localization strings for the ru_RU (Русский) locale.
   * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="ru_RU" full_name="Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="plugins.generic.usageStats.settings.logging">Настройки журнала доступа</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles">Создавать файлы журнала</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Активация этой настройки приведет к созданию плагином файлов журнала доступа в каталоге files. Эти файлы должны быть использованы для извлечения данных по статистике использования. Если вы не хотите создавать дополнительные файлы журнала доступа, вы можете оставить эту настройку отключенной и использовать файлы журнала доступа вашего сервера.</message>

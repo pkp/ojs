@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.citationFormats.refMan.displayName">Reference Manager citation format plugin</message>
 	<message key="plugins.citationFormats.refMan.citationFormatName">Reference Manager - RIS format (Windows only)</message>
 	<message key="plugins.citationFormats.refMan.description">This plugin implements the Reference Manager citation format.</message>

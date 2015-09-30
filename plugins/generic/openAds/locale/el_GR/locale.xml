@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.generic.openads.description">Το πρόσθετο OpenAds επιτρέπει την εισαγωγή δυναμικών διαφημίσεων στο OJS από τον εξυπηρετητή OpenAds.</message>
 	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[Το πρόσθετο OpenAds επιτρέπει την εισαγωγή δυναμικών διαφημίσεων στο OJS από τον εξυπηρετητή  OpenAds. <strong>Παρακαλούμε διαβάστε το αρχείο README στο plugins/generic/openAds για λεπτομέρειες σχετικά με την ενεργοποίηση αυτού του πρόσθετου.</strong>]]></message>
 	<message key="plugins.generic.openads">Πρόσθετο OpenAds</message>

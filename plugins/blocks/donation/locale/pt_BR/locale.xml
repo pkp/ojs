@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.block.donation.displayName">Aceitar doações</message>
 	<message key="plugins.block.donation.description">Este plugin oferece um link na barra lateral para aceitar doações.</message>
 </locale>

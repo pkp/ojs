@@ -11,7 +11,7 @@
   * Objects for review plugin localization strings
   -->
 
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 
 	<!-- Objects For Review Plug-In -->
 	<message key="plugins.generic.objectsForReview.displayName">Compte rendu d'objets</message>

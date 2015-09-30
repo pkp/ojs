@@ -11,7 +11,7 @@
   * Dataverse plugin localization strings
   -->
 
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.generic.dataverse.suppFile.studyDescription">Descrição do Estudo</message>
 	<message key="plugins.generic.dataverse.suppFile.studyDescription.description">Forneça um sumário do objectivo, natureza e âmbito dos dados do estudo.</message>
 </locale>

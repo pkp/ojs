@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.importexport.crossref.displayName">Plugiciel d'exportation CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Exporter les métadonnées de l'article en format CrossRef XML.</message>
 	

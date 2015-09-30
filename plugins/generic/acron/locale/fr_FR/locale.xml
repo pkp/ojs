@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.generic.acron.name">Plugin Acron</message>
 	<message key="plugins.generic.acron.description"><![CDATA[This plugin attempts to reduce the dependance of OCS on periodic scheduling tools such as 'cron.']]></message>
 

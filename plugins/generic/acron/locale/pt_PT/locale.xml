@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.generic.acron.name">Plugin Acron</message>
 	<message key="plugins.generic.acron.description">Este plugin tem por objectivo reduzir a dependência do OCS em ferramentas de agendamento periódico, tais como a 'cron.'</message>
 

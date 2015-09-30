@@ -11,7 +11,7 @@
   * Books for review plugin localization strings for the en_US (U.S. English) locale.
   -->
  
-<locale name="ro_RO" full_name="Romanian">
+<locale name="ro_RO" full_name="Limba Română">
 
 	<!-- Books For Review Notifications -->
 	<message key="plugins.generic.booksForReview.notification.bookRequested">Cartea a fost solicitată. Se așteaptă confirmare de la Redactor/Editor.</message>

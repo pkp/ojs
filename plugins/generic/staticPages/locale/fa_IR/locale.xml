@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="fa_IR" full_name="Persian">
+<locale name="fa_IR" full_name="فارسی">
 	<message key="plugins.generic.staticPages.displayName">پلاگین صفحات استاتیک</message>
 	<message key="plugins.generic.staticPages.description">با این پلاگین میتوان محتوای استاتیک را اداره کرد</message>
 	<message key="plugins.generic.staticPages.pageTitle">عنوان</message>

@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.importexport.duracloud.displayName">DuraCloud 导入/导出插件</message>
 	<message key="plugins.importexport.duracloud.description">使用外部DuraCloud 归档和恢复期次。</message>
 

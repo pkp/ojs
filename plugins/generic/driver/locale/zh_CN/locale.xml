@@ -11,7 +11,7 @@
   * DRIVER plugin localization strings
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.generic.driver.displayName">驱动程序</message>
 	<message key="plugins.generic.driver.description">驱动程序插件依据驱动方针2.0扩展OAI-PMH界面，帮助OJS期刊能够驱动兼容。</message>
 </locale>

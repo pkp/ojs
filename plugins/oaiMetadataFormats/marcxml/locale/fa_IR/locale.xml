@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the fa_IR (Persian) locale.
+  * Localization strings for the fa_IR (فارسی) locale.
   *
   -->
  
-<locale name="fa_IR" full_name="Persian">
+<locale name="fa_IR" full_name="فارسی">
 	<message key="plugins.OAIMetadata.marcxml.displayName">فرمت متاداده مارک ۲۱</message>
 	<message key="plugins.OAIMetadata.marcxml.description">ساختار متاداده باید با فرمت مارک ۲۱ سازگار باشد</message>
 </locale>

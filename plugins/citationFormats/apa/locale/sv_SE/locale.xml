@@ -15,7 +15,7 @@
   *
   -->
  
-<locale name="sv_SE" full_name="Swedish">
+<locale name="sv_SE" full_name="Svenska">
 	<message key="plugins.citationFormats.apa.displayName">APA citeringsformattillägg</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
 	<message key="plugins.citationFormats.apa.description">Detta tillägg implementerar APA citeringsformat</message>

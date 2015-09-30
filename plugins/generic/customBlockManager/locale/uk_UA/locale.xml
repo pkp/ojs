@@ -8,13 +8,13 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the uk_UA (Ukrainian) locale.
+  * Localization strings for the uk_UA (Українська) locale.
   *
   * Translated by Denys Solovianenko, 2011
   * V. I. Vernadsky National Library of Ukraine
   -->
  
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <message key="plugins.generic.customBlockManager.displayName">Менеджер власних блоків</message>
        <message key="plugins.generic.customBlockManager.description">Цей модуль дозволяє створити додаткові блоки на панелі. Після створення блоків з'являється можливість редагувати їх зміст та налаштовувати їх розташування на панелях.</message>  
        <message key="plugin.generic.customBlockManager.introduction"><![CDATA[Ви можете використовувати цей модуль для того, щоб додавати або видаляти власні модулі блоків.  Ви можете редагувати зміст створених блоків на сторінці <a href="{$systemPluginsUrl}">Модулі системи</a> (у розділі Модулі блоків).  Для того, щоб розташувати створений модуль у бажаному місці на панелі, перейдіть до пункту <a href="{$setupStep56}">Налаштування. Крок 5.6</a>]]></message>

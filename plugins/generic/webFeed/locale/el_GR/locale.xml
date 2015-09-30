@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.generic.webfeed.displayName">Πρόσθετο Ροών Παγκοσμίου Ιστού</message>
 	<message key="plugins.generic.webfeed.description">Το πρόσθετο αυτό παράγει RSS/Atom web syndication ροές για το τρέχον τεύχος.</message>
 

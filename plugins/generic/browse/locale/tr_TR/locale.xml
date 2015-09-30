@@ -11,7 +11,7 @@
   * Plugin localization strings
   -->
  
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<!-- plugin -->
 	<message key="plugins.generic.browse.displayName">Listeleme</message>
 	<message key="plugins.generic.browse.description">Bu eklenti bölümlere ve/veya onların türlerini belirlemeye göre istelemeyi etkinleştirir.</message>

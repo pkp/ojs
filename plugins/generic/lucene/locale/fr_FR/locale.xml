@@ -11,7 +11,7 @@
   * OJS solr/lucene search plugin localization strings
   -->
 
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.generic.lucene.displayName">Plugiciel de recherche Lucene</message>
 	<message key="plugins.generic.lucene.description">Le plugiciel Lucene offre un support multilingue, une pertinenc des résultats de recherche améliorée, une indexation plus rapide, une meilleure évolutivité et plus encore.</message>
 	<message key="plugins.generic.lucene.settings">Paramètres</message>

@@ -7,11 +7,11 @@
   * Copyright (c) 2009 Konstantin L. Metlov
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ru_RU (Russian) locale.
+  * Localization strings for the ru_RU (Русский) locale.
   * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="ru_RU" full_name="Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="plugins.block.fontSize.displayName">Блок «Размер шрифта»</message>
 	<message key="plugins.block.fontSize.description">Этот плагин добавляет возможность изменять размер шрифта на боковую панель.</message>
 	<message key="plugins.block.fontSize.title">Размер шрифта</message>

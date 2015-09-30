@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.importexport.users.displayName">Import/eksport użytkowników do formatu XML</message>
 	<message key="plugins.importexport.users.description">Wtyczka umożliwia importowanie oraz eksportowanie użytkowników</message>
 

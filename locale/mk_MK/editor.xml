@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="mk_MK" full_name="Macedonian">
+<locale name="mk_MK" full_name="Македонски јазик">
 	<message key="editor.article.reviewForms">Форми за преглед</message>
 	<message key="editor.article.selectReviewForm">Избери форма за преглед</message>
 	<message key="editor.article.clearReviewForm">Избриши ја формата за преглед</message>

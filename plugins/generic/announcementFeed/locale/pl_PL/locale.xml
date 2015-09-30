@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.generic.announcementfeed.displayName">Wtyczka ogłoszeń</message>
 	<message key="plugins.generic.announcementfeed.description">Wtyczka tworzy powiadomienia RSS/Atom dla czasopism.</message>
 	

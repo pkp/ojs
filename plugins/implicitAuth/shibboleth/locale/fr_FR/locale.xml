@@ -8,13 +8,13 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the fr_FR (Français) locale.
+  * Localization strings for the fr_FR (Français (France)) locale.
   *
   * Contributed by Dan Galewsky, University of Texas
   *
   -->
  
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.implicitAuth.shibboleth.displayName">Plugiciel ShibAuth</message>
 	<message key="plugins.implicitAuth.shibboleth.description">Plugiciel ShibAuth. Il s'agit d'un plugiciel global pour l'ensemble du site et qui est activé dans le fichier de configuration OJS.</message>
 </locale>

@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<!-- plugin -->
 	<message key="plugins.importexport.pubIds.displayName">Plugiciel d'identificateurs publics XML</message>
 	<message key="plugins.importexport.pubIds.description">Import et export d'identificateurs publics</message>

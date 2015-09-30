@@ -11,7 +11,7 @@
   * Books for review plugin localization strings for the en_US (U.S. English) locale.
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 
 	<!-- Books For Review Notifications -->
 	<message key="plugins.generic.booksForReview.notification.bookRequested">Book requested. Awaiting confirmation from the Editor.</message>

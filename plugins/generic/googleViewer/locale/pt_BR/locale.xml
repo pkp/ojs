@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.generic.googleViewer.name">Plugin de visualização Google embutido</message>
 	<message key="plugins.generic.googleViewer.description"><![CDATA[Este plugin usa o servço <a href='https://docs.google.com/viewer'>Visualiador Google Docs</a> para embutir PDFs na página do artigo.]]></message>
 </locale>

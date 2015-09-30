@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the zh_CN (China) locale.
+  * Localization strings for the zh_CN (简体中文) locale.
   *
   -->
  
-<locale name="zh_CN" full_name="China PR">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.generic.customLocale.name">定制语系插件</message>
 	<message key="plugins.generic.customLocale.description">这个插件激活默认用户界面的使用OJS文本的定制功能。</message>
 	<message key="plugins.generic.customLocale.longDescription">本页面列出当前所有为期刊已经安装的语系。</message>

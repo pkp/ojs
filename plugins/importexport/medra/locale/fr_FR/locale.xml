@@ -11,7 +11,7 @@
   * Localization strings
   -->
  
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.importexport.medra.displayName">Plugiciel d'exportation / d'enregistrement mEDRA</message>
 	<message key="plugins.importexport.medra.description">Exporte les métadonnées des numéros, articles et les épreuves dans Onix pour format DOI (O4GOI) et enregistre les DOI avec l'agence d'enregistrement mEDRA.</message>
 

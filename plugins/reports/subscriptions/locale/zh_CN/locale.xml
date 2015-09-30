@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.reports.subscriptions.displayName">订阅报告</message>
 	<message key="plugins.reports.subscriptions.description">该插件使用CSV报告包含一张订阅情况和他们的信息的列表。</message>
 	<message key="plugins.reports.subscriptions.institutionMailingAddress">机构邮寄地址</message>

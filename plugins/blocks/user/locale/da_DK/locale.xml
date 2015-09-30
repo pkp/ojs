@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the da_DK (Danish) locale.
+  * Localization strings for the da_DK (Dansk) locale.
   *
   -->
  
-<locale name="da_DK" full_name="Danish">
+<locale name="da_DK" full_name="Dansk">
 	<message key="plugins.block.user.displayName">Brugerfunktion</message>
 	<message key="plugins.block.user.description">Dette plugin indsætter funktioner vedrørende brugerregistrering i sidekolonnen (f.eks. login, logout, profil link osv.).</message>
 	<message key="plugins.block.user.loggedInAs">Du er logget ind som...</message>

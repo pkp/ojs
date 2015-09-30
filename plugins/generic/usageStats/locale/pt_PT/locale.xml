@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.generic.usageStats.settings.logging">Opções de Access aos logs</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles">Criar ficheiros log</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Ao ativar esta opção vai permitir ao plugin criar ficheiros de logs nas pastas do sistema da revista. Esses ficheiros devem ser usados para extrair as estatísticas de uso. Se não pretende criar mais ficheiros de log, deixe esta opção inativa e use o sistema de logs do seu servidor.</message>

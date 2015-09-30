@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ru_RU (Russian) locale.
+  * Localization strings for the ru_RU (Русский) locale.
   * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="ru_RU" full_name="Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="plugins.generic.roundedcorners.displayName">Плагин «Скругленные углы»</message>
 	<message key="plugins.generic.roundedcorners.description">Этот плагин добавляет фон для каждого блока боковых панелей и скругляет их углы. Используемые цвета можно изменить путем редактирования таблицы стилей CSS, находящейся в каталоге плагина.</message>
 </locale>

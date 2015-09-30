@@ -11,7 +11,7 @@
   * Localization strings
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.importexport.datacite.displayName">DataCite 导出/注册插件</message>
 	<message key="plugins.importexport.datacite.description">导出或者注册DataCite格式的期次，文章，初次排版和附加文件元数据。</message>
 

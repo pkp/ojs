@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="sr_SR" full_name="Srpski">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.generic.googleViewer.name">Google dokument pregledač</message>
 	<message key="plugins.generic.googleViewer.description"><![CDATA[Ovaj dodatak koristi <a href="https://docs.google.com/viewer">Google Docs Viewer</a>servis da prikaže PDF-ove.]]></message>
 </locale>

@@ -13,7 +13,7 @@
   * Traducción de la versión original 1.2 por Sergio Ruiz (sruiz@revistaesalud.com) - 2005/09/27  
   -->
  
-<locale name="es_AR" full_name="Español Argentina">
+<locale name="es_AR" full_name="Español (Argentina)">
 	<message key="plugins.importexport.users.displayName">Plugin XML de usuarios/as</message>
 	<message key="plugins.importexport.users.description">Importación y exportación de usuarios/as</message>
 

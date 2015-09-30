@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the da_DK (Danish) locale.
+  * Localization strings for the da_DK (Dansk) locale.
   *
   -->
  
-<locale name="da_DK" full_name="Danish">
+<locale name="da_DK" full_name="Dansk">
 	<message key="plugins.OAIMetadata.rfc1807.displayName">RFC1807 Metadata Format</message>
 	<message key="plugins.OAIMetadata.rfc1807.description">Strukturerer metadata i overensstemmelse med RFC1807-formatet.</message>
 </locale>

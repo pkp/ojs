@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.block.notification.displayName">Δομική Μονάδα "Ειδοποιήσεων"</message>
 	<message key="plugins.block.notification.description">Αυτό το πρόσθετο εμφανίζει πληροφορίες σχετικά με τις ειδοποιήσεις του συστήματος.</message>
 </locale>

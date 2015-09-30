@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.metadata.mods34.articleAdapter.displayName">Adaptador de artigo MODS 3.4</message>
 	<message key="plugins.metadata.mods34.articleAdapter.description">Extrai/injeta metadados de/em artigos.</message>
 </locale>

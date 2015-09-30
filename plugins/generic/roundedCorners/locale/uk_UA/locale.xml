@@ -8,13 +8,13 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the uk_UA (Ukrainian) locale.
+  * Localization strings for the uk_UA (Українська) locale.
   *
   * Translated by Denys Solovianenko, 2011
   * V. I. Vernadsky National Library of Ukraine
   -->
  
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <message key="plugins.generic.roundedcorners.displayName">Закруглені кути</message>
        <message key="plugins.generic.roundedcorners.description">Цей модуль додає колір тла для кожного з блоків на бічних панелях та закруглює кути цих блоків.  Змінити кольорову гаму можна шляхом редагування таблиці стилю CSS цього модуля.</message>
 </locale>

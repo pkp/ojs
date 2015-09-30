@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.generic.translator.name">Tradução de idiomas</message>
 	<message key="plugins.generic.translator.description">Este plugin permite a manutenção, via Web, dos arquivos de tradução.</message>
 	<message key="plugins.generic.translator.longdescription">Esta área permite ao administrador do portal construir, modificar e verificar as traduções do sistema. Isto permeia todo o sistema e não deve ser usado para personalizar uma única instalação. Se você corrigir ou criar uma tradução, por favor, envie-a ao Public Knowledge Project para distribuição em versões futuras.</message>

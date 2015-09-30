@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the no_NO (Norwegian) locale.
+  * Localization strings for the no_NO (Norsk) locale.
   *
   -->
  
-<locale name="no_NO" full_name="Norwegian">
+<locale name="no_NO" full_name="Norsk">
 	<message key="plugins.generic.sehl.name">SEHL programutvidelse</message>
 	<message key="plugins.generic.sehl.description">Denne programutvidelsen implementerer Search Engine HighLighting (SEHL - søkemotormarkering) slik at når en søkemotor finner en HTML-artikkel, blir søkeordene markert i søkeresultatet.</message>
 </locale>

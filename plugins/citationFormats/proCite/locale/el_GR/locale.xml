@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.citationFormats.proCite.displayName">Πρόσθετο σχήματος παραπομπής ProCite</message>
 	<message key="plugins.citationFormats.proCite.citationFormatName"><![CDATA[ProCite - RIS σχήμα (Macintosh & Windows)]]></message>
 	<message key="plugins.citationFormats.proCite.description">Το πρόσθετο αυτό υλοποιεί το σχήμα παραπομπής ProCite.</message>

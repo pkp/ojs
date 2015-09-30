@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the zh_CN (China) locale.
+  * Localization strings for the zh_CN (简体中文) locale.
   *
   -->
  
-<locale name="zh_CN" full_name="China .PR">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.generic.roundedcorners.displayName">圆角</message>
 	<message key="plugins.generic.roundedcorners.description">这个插件放置一个背景到每个边栏的单元里，使其实现圆角。通过编辑本插件的CSS样式表可以修改其颜色.</message>
 </locale>

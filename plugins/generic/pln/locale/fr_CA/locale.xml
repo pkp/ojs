@@ -11,7 +11,7 @@
   * PLN plugin localization strings
   -->
 
-<locale name="fr_CA" full_name="Français">
+<locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.generic.pln">Plugiciel PKP PLN</message>
 	<message key="plugins.generic.pln.description">Le Plugiciel PKP PLN déposera votre contenu publié dans le réseau privé LOCKSS de PKP pour préservation.</message>
 	<message key="plugins.generic.pln.manager.setup.description"><![CDATA[<strong>Réseau privé LOCKSS de PKP</strong><br /><br />Veuillez lire le <a href="https://pkp.sfu.ca/pkp-lockss/" target="_blank">guide de PKP PLN</a> et compléter <a href="{$plnPluginURL}">ce simple formulaire</a>. Cette option permettra l'inclusion de votre revue dans le réseau LOCKSS privé du Public Project Knowledge (PKP PLN).]]></message>

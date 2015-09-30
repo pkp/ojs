@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.block.keywordCloud.description">Αυτό το πρόσθετο παρέχει ένα  νέφος ετικετών με λέξεις κλειδιά για ένα άρθρο.</message>
 	<message key="plugins.block.keywordCloud.title">Λέξεις κλειδιά</message>
 	<message key="plugins.block.keywordCloud.displayName">Δομική Μοανάδα Νέφους Λέξεων Κλειδιών</message>

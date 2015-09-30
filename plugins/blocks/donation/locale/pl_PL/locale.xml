@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.block.donation.displayName">Darowizny</message>
 	<message key="plugins.block.donation.description">Wtyczka elementu blokowego systemu darowizn.</message>
 </locale>
