@@ -8,12 +8,12 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the it_IT (Italian) locale.
+  * Localization strings for the it_IT (Italiano) locale.
   * Contributed by Andrea Marchitelli - CINECA.
   *
   -->
 
-<locale name="it_IT" full_name="Italian">
+<locale name="it_IT" full_name="Italiano">
 	<!--
 	 * This file is organized into several major sections, separated
 	 * by comments like this one. These sections are called:

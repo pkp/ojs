@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="it_IT" full_name="Italian">
+<locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.staticPages.displayName">Pagine statiche</message>
 	<message key="plugins.generic.staticPages.description">Questo plugin permette la creazione e la gestione di pagine statiche.</message>
 	<message key="plugins.generic.staticPages.pageTitle">Titolo</message>
