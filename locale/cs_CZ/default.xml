@@ -11,7 +11,7 @@
   * Localization strings.
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<!-- Section default -->
 	<message key="section.default.title">Články</message>
 	<message key="section.default.abbrev">ČL</message>

@@ -14,7 +14,7 @@
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.citationFormats.turabian.displayName">Plugin pro citační formát Turabian</message>
 	<message key="plugins.citationFormats.turabian.citationFormatName">Turabian</message>
 	<message key="plugins.citationFormats.turabian.description">Tento plugin zavádí citační formát Turabian.</message>

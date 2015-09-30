@@ -8,10 +8,10 @@
   * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the cs_CZ (Czech) locale.
+  * Localization strings for the cs_CZ (Čeština) locale.
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.paymethod.paypal.displayName">Platba poplatku přes PayPal</message>
 
 	<!-- PayPal Settings Form -->
