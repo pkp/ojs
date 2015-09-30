@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * (Norwegian translation from english by Karl Henrik Flyum, Dept. of teacher education and school development, University of Oslo, Norway, 2006-2007)
-  * Localization strings for the nb_NO (Norwegian) locale.
+  * Localization strings for the nb_NO (Norsk bokmål) locale.
   *
   -->
  
-<locale name="nb_NO" full_name="Norwegian">
+<locale name="nb_NO" full_name="Norsk bokmål">
  	<message key="default.journalSettings.checklist.notPreviouslyPublished">Manuskriptet er ikke tidligere publisert, og er heller ikke til vurdering i noe annet tidsskrift (eller gi forklaring i feltet 'Kommentarer til redaktøren').</message>
 	<message key="default.journalSettings.checklist.fileFormat">Manuskriptfilen er levert i Microsoft Word eller RTF filformat.</message>
 	<message key="default.journalSettings.checklist.addressesLinked"><![CDATA[Så langt det går an er URL-adresser oppgitt til alle siterte kilder som foreligger på nett. URL-adressene skal være klikkbare (som for eks. <a href="http://pkp.sfu.ca">http://pkp.sfu.ca</a>).]]></message>

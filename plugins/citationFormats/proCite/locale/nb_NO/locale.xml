@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="nb_NO" full_name="Norwegian">
+<locale name="nb_NO" full_name="Norsk bokmål">
 	<message key="plugins.citationFormats.proCite.displayName">Programutvidelse for ProCite siteringsformat</message>
 	<message key="plugins.citationFormats.proCite.citationFormatName"><![CDATA[ProCite - RIS format (Macintosh & Windows)]]></message>
 	<message key="plugins.citationFormats.proCite.description">Denne programutvidelsen implementerer ProCite siteringsformat.</message>

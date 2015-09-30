@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * LDAP authentication plugin localization strings for the nb_NO (Norwegian) locale.
+  * LDAP authentication plugin localization strings for the nb_NO (Norsk bokmål) locale.
   *
   -->
  
-<locale name="nb_NO" full_name="Norwegian">
+<locale name="nb_NO" full_name="Norsk bokmål">
 	<message key="plugins.auth.ldap.displayName">LDAP</message>
 	<message key="plugins.auth.ldap.description">Denne programutvidelsen gir mulighet til å autentisere og synkronisere brukerkonti mot en ekstern LDAP-datakilde.</message>
 	

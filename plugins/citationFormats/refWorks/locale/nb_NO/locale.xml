@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="nb_NO" full_name="Norwegian">
+<locale name="nb_NO" full_name="Norsk bokmål">
 	<message key="plugins.citationFormats.refWorks.displayName">Programutvidelse for RefWorks siteringsformat</message>
 	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
 	<message key="plugins.citationFormats.refWorks.description">Denne programutvidelsen implementerer RefWorks siteringsformat.</message>

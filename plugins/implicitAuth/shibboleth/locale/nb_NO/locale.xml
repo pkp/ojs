@@ -8,13 +8,13 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the nb_NO (Norwegian) locale.
+  * Localization strings for the nb_NO (Norsk bokmål) locale.
   *
   * Contributed by Dan Galewsky, University of Texas
   *
   -->
  
-<locale name="nb_NO" full_name="Norwegian">
+<locale name="nb_NO" full_name="Norsk bokmål">
 	<message key="plugins.implicitAuth.shibboleth.displayName">Programutvidelse for ShibAuth</message>
 	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Denne programutvidelsen vil gjelde for hele nettstedet, og må slås på i OJS config-filen.</message>
 </locale>

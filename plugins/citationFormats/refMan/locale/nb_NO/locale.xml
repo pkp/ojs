@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="nb_NO" full_name="Norwegian">
+<locale name="nb_NO" full_name="Norsk bokmål">
 	<message key="plugins.citationFormats.refMan.displayName">Programutvidelse for Reference Manager siteringsformat</message>
 	<message key="plugins.citationFormats.refMan.citationFormatName">Reference Manager - RIS format (kun for Windows)</message>
 	<message key="plugins.citationFormats.refMan.description">Denne programutvidelsen implementerer Reference Manager siteringsformat.</message>
