@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the sr_SR (Serbian) locale.
+  * Localization strings for the sr_SR (Cрпски) locale.
   *
   -->
 
-<locale name="sr_SR" full_name="Serbian">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.reports.reviews.displayName">Izveštaj recenzenata</message>
 	<message key="plugins.reports.reviews.description">Ovaj dodatak implementira CVS izveštaj koji sadrži listu recenzijskih zaduženja za časopis.</message>
 	<message key="plugins.reports.reviews.round">Runda</message>

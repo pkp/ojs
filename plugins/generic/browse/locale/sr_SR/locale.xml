@@ -11,7 +11,7 @@
   * Browse plugin localization strings
   -->
  
-<locale name="sr_SR" full_name="Srpski">
+<locale name="sr_SR" full_name="Cрпски">
 	<!-- plugin -->
 	<message key="plugins.generic.browse.displayName">Browse</message>
 	<message key="plugins.generic.browse.description">Ovaj dodatak omogućuje pregledanje po sekcijama i/ili tipovima identifikatora.</message>

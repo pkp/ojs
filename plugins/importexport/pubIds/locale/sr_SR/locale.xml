@@ -11,7 +11,7 @@
   * Localization strings
   -->
  
-<locale name="sr_SR" full_name="Srpski">
+<locale name="sr_SR" full_name="Cрпски">
 	<!-- plugin -->
 	<message key="plugins.importexport.pubIds.displayName">Public Identifiers XML Plugin</message>
 	<message key="plugins.importexport.pubIds.description">Uvozi i izvozi javne identifikatore</message>

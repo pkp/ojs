@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the sr_SR (Serbian) locale.
+  * Localization strings for the sr_SR (Cрпски) locale.
   *
   -->
 
-<locale name="sr_SR" full_name="Serbian">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.block.readingTools.displayName">Blok alatki za čitanje</message>
 	<message key="plugins.block.readingTools.description">Ovaj blok prikazuje alatke za čitanje.</message>
 	<message key="plugins.block.readingTools.title">Alatke za čitanje</message>

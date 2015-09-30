@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the sr_SR (Serbian) locale.
+  * Localization strings for the sr_SR (Cрпски) locale.
   *
   -->
  
-<locale name="sr_SR" full_name="Serbian">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.theme.custom.name">Dodatak prilagođenog šablona</message>
 	<message key="plugins.theme.custom.description">Ovaj dodatak omogućuje prilagođavanje šablona.</message>
 	<message key="plugins.theme.custom.notWritable">NAPOMENA: Stylesheet fajl ovog dodatka, "{$stylesheetFileLocation}", trenutno nema dozvole za upisivanje. Morate promeniti dozvole kako biste koristili oddatak.</message>

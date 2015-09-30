@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="sr_SR" full_name="Srpski">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.metadata.mods34.articleAdapter.displayName">MODS 3.4 Article Adapter</message>
 	<message key="plugins.metadata.mods34.articleAdapter.description">Izdvaja i ubacuje metapodatke iz i u članke.</message>
 </locale>

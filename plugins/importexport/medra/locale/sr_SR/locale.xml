@@ -11,7 +11,7 @@
   * Localization strings
   -->
  
-<locale name="sr_SR" full_name="Srpski">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.importexport.medra.displayName">mEDRA Export/Registration Plugin</message>
 	<message key="plugins.importexport.medra.description">Izvezite metapodatke jedinice, članka ili prikaza u Onix za DOI (O4DOI) format i registrujte DOIs u mEDRA agenciji.</message>
 
