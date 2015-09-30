@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the fa_IR (Persian) locale.
+  * Localization strings for the fa_IR (فارسی) locale.
   *
   -->
 
-<locale name="fa_IR" full_name="Persian">
+<locale name="fa_IR" full_name="فارسی">
 	<message key="plugins.block.authorBios.displayName">بلوک بیوگرافی نویسنده</message>
 	<message key="plugins.block.authorBios.description">این افزونه یک بلوک حاوی بیوگرافی نویسنده در نوار جانبی ابزارهای خواندن نمایش میدهد</message>
 	<message key="plugins.block.authorBios.title">درباره نویسندگان</message>

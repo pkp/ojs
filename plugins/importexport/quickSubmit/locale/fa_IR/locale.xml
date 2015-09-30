@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="fa_IR" full_name="Persian">
+<locale name="fa_IR" full_name="فارسی">
 	<message key="plugins.importexport.quickSubmit.addToExisting">افزودن به شماره مجله موجود:</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestination">مقصد ساب میشن</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestinationDescription">آیا میخواخید ساب میشن جدید را به یک شماره مجله موجود اضافه کنید یا آنرا در نوبت انتشار قرار دهید.</message>
