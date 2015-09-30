@@ -11,7 +11,8 @@
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name="Bahasa Indonesia"> Pembayaran Biaya Manual </message> 
+<locale name="id_ID" full_name="Bahasa Indonesia">
+	<message key="plugins.paymethod.manual.displayName"> Pembayaran Biaya Manual </message>
 	<message key="plugins.paymethod.manual.description"> Manajer secara manual akan mencatat kwitansi dari pembayaran pengguna (di luar perangkat lunak ini).</message>
 	<message key="plugins.paymethod.manual"> Pembayaran Biaya Manual </message> 
 	<message key="plugins.paymethod.manual.settings"> Pengaturan Pembayaran Manual </message> 
