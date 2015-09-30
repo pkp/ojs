@@ -8,13 +8,13 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español España) locale.
+  * Localization strings for the es_ES (Español (España)) locale.
   *
 
   * Traducción de la versión original 1.2 por Sergio Ruiz (sruiz@revistaesalud.com) - 2005/09/27
   -->
 
-<locale name="es_ES" full_name="Español">
+<locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.importexport.users.displayName">Plugin XML de usuarios/as</message>
 	<message key="plugins.importexport.users.description">Importación y exportación de usuarios/as</message>
 

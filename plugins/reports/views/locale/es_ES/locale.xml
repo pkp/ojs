@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español) locale.
+  * Localization strings for the es_ES (Español (España)) locale.
   *
   -->
 
-<locale name="es_ES" full_name="Español">
+<locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.reports.views.displayName">Ver informe</message>
 	<message key="plugins.reports.views.description">Este plugin implementa un informe CSV que describe a los lectores de cada artículo.</message>
 </locale>
