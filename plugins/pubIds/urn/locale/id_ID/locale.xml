@@ -11,7 +11,7 @@
   * URN plugin localization strings
   -->
  
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.pubIds.urn.urns">URN</message>
 
 	<!-- plugin -->

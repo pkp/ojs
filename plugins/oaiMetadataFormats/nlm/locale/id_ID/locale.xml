@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 <message key="plugins.oaiMetadata.nlm.displayName"> Format Metadata NLM </message> 
 	<message key="plugins.oaiMetadata.nlm.description">> Menyusun metadata agar konsisten dengan format Artikel Jurnal NLM.</message>
 </locale>

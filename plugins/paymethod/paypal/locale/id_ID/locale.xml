@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 <message key="plugins.paymethod.paypal.displayName"> Biaya Pembayaran PayPal </message> 
 	<!-- PayPal Settings Form -->
 	<message key="plugins.paymethod.paypal.settings.paypalenable">Memungkinkan </message>

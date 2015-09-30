@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.OAIMetadata.marc.displayName"> Format Metadata MARC </message> 
 	<message key="plugins.OAIMetadata.marc.description"> Menyusun metadata agar konsisten dengan format MARC.</message> 
 </locale>

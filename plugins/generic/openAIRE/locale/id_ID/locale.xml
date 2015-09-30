@@ -11,7 +11,7 @@
   * OpenAIRE plugin localization strings for the en_US (U.S. English) locale.
   -->
  
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
 	<message key="plugins.generic.openAIRE.description">Plugin OpenAIRE menambahkan elemen projectID ke metadata artikel dan memperluas interface OAI-PMH menurut Petunjuk OpenAIRE 1.1, membantu jurnal OJS untuk menjadi OpenAIRE compliant.</message>
 	<message key="plugins.generic.openAIRE.projectID">ProjectID</message>

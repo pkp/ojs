@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.reports.subscriptions.displayName"> Laporan Langganan </message> 
 	<message key="plugins.reports.subscriptions.description"> Plugin ini menerapkan laporan CSV yang berisi daftar langganan dan info mereka.</message> 
 	<message key="plugins.reports.subscriptions.institutionMailingAddress"> Alamat surat menyurat Insitusi </message> 

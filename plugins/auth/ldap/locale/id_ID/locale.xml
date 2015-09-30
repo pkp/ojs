@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 		<message key="plugins.auth.ldap.displayName">LDAP</message> 
 	<message key="plugins.auth.ldap.description"> Plugin ini mengizinkan pengesahan dan sinkronisasi akun pengguna terhadap sumber data LDAP.</message>	
 	<message key="plugins.auth.ldap.settings">Pengaturan LDAP</message> 

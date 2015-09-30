@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.citationFormats.cbe.displayName">Plugin format kutipan CBE</message>
 	<message key="plugins.citationFormats.cbe.citationFormatName">CBE</message>
 	<message key="plugins.citationFormats.cbe.description">Plugin ini menerapkan format kutipan CBE.</message>

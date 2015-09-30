@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.generic.counter.description"><![CDATA[COUNTER plugin bisa merekam dan <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> melaporkan di aktifitas situs.]]></message> 
 	<message key="plugins.generic.counter"> Statistik COUNTER </message> 
 	<message key="plugins.generic.counter.migrate"> Log Migrasi </message> 
