@@ -11,7 +11,7 @@
   * Localization strings
   -->
  
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.importexport.medra.displayName">mEDRA İhraç/Kayıt Eklentisi</message>
 	<message key="plugins.importexport.medra.description">mEDRA kayıt ajansı ile DOI (O4DOI) biçimi ve DOI'lere kayıt için Onix'de sayı, makale ve dizgi ihracı.</message>
 </locale>

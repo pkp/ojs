@@ -11,7 +11,7 @@
   * Shared localization strings
   -->
  
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.importexport.common.settings">Ayarlar</message>
 
 	<message key="plugins.importexport.common.settings.form.password">Şifre</message>
