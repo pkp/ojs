@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<!-- Section default -->
 	<message key="section.default.title">Articles</message>
 	<message key="section.default.abbrev">ART</message>

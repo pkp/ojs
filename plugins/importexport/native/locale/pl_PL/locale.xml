@@ -10,7 +10,7 @@
   *
   -->
 
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.importexport.native.displayName">Import/eksport numerów do formatu XML</message>
 	<message key="plugins.importexport.native.description">Wtyczka umożliwia import/eksport numerów do formatu XML</message>
 

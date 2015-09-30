@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Wtyczka Google Analytics</message>

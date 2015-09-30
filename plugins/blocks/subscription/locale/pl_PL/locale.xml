@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.block.subscription.displayName">Subskrypcje</message>
 	<message key="plugins.block.subscription.description">Wtyczka elementu blokowego informacji o subskrypcji.</message>
 	<message key="plugins.block.subscription.blockTitle">Subskrypcje</message>

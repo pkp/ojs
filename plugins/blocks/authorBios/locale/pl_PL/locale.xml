@@ -10,7 +10,7 @@
   *
   -->
 
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.block.authorBios.displayName">Biogram</message>
 	<message key="plugins.block.authorBios.description">Wtyczka wyświetla element blokowy zawierający biogram blokowy.</message>
 	<message key="plugins.block.authorBios.title">O autorach</message>

@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.generic.webfeed.displayName">Wtyczka RSS/Atom</message>
 	<message key="plugins.generic.webfeed.description">Wtyczka generuje kanały RSS/Atom</message>
 

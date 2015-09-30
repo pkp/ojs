@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.block.keywordCloud.displayName">Chmura słów kluczowych</message>
 	<message key="plugins.block.keywordCloud.description">Wtyczka wyświetla chmurę słów kluczowych w kontekście tekstu wyświetlanego na stronie głównej.</message>
 	<message key="plugins.block.keywordCloud.title">Słowa kluczowe</message>

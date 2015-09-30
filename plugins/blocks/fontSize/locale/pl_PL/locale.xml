@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.block.fontSize.displayName">Rozmiar tekstu</message>
 	<message key="plugins.block.fontSize.description">Ta wtyczka umożliwia zmianę wielkości tekstu.</message>
 	<message key="plugins.block.fontSize.title">Wielkość tekstu</message>

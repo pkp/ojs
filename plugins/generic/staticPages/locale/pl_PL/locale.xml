@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.generic.staticPages.displayName">Strony statyczne</message>
 	<message key="plugins.generic.staticPages.description">Wtyczka umożliwia zarządzanie stronami statycznymi</message>
 	<message key="plugins.generic.staticPages.pageTitle">Tytuł</message>

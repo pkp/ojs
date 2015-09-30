@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.generic.customLocale.name">Niestandardowe pliki języka</message>
 	<message key="plugins.generic.customLocale.description">Wtyczka umożliwia dostosowywanie do preferencji użytkownika część treści interfejsu OJS.</message>
 

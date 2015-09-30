@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 
 	<!-- Thesis Abstract Management -->
 	<message key="plugins.generic.thesis.manager.settings">Ustawienia</message>

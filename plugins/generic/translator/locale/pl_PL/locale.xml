@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.generic.translator.name">Translator</message>
 	<message key="plugins.generic.translator.description"><![CDATA[<span style="color: #00F";>Wtyczka umożliwia zarządzanie oraz edycję tłumaczeń z poziomu systemu (przeglądarki)</span>]]></message>
 	<message key="plugins.generic.translator.longdescription">This area allows the Site Administrator to build, modify and check translations of OJS. This is site-wide and should not be used to customize a single OJS journal. If you correct or create a translation, please consider submitting it to the Public Knowledge Project for distribution with future releases.</message>

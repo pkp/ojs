@@ -10,7 +10,7 @@
   *
   -->
 
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="editor.article.reviewForms">Formularze recenzji</message>
 	<message key="editor.article.selectReviewForm">Wybierz formularz recenzji</message>
 	<message key="editor.article.clearReviewForm">Wyczyść formularz recenzji</message>

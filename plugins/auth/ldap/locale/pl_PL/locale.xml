@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.auth.ldap.displayName">LDAP</message>
 	<message key="plugins.auth.ldap.description">Wtyczka umożliwia uwierzytelnianie użytkowników za pomocą zewnętrznych serwerów LDAP</message>
 	

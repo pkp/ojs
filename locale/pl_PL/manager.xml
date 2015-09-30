@@ -10,7 +10,7 @@
   *
   -->
 
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="manager.emails.confirmResetAll">Zresetować wszystkie szablony e-mail w tym czasopiśmie? Zmiany są nieodwracalne.</message>
 	<message key="manager.files.note">Uwaga: Przeglądarka plików jest zaawansowaną funkcją, która umożliwia przeglądanie wszystkich plików w systemie, bezpośrednio, z pominięciem ról użytkowników.</message>
 	<message key="manager.groups">Zespół redakcyjny</message>

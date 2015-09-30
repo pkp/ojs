@@ -11,7 +11,7 @@
  
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.block.help.displayName">Pomoc</message>
 	<message key="plugins.block.help.description">Wtyczka elementu blokowego dostępu do pomocy systemu.</message>
 </locale>

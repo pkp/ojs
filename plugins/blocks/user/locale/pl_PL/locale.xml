@@ -10,7 +10,7 @@
   *
   -->
  
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.block.user.displayName">Użytkownik</message>
 	<message key="plugins.block.user.description">Ta wtyczka wyświetla narzędzia logowania.</message>
 	<message key="plugins.block.user.loggedInAs">Jesteś zalogowany jako...</message>
