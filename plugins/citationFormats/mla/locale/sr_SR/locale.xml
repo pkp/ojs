@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="sr_SR" full_name="Serbian">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.citationFormats.mla.displayName">MLA format citata</message>
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
 	<message key="plugins.citationFormats.mla.description">Ovaj dodatak implementira MLA format citata.</message>

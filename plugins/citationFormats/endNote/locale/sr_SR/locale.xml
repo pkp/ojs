@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="sr_SR" full_name="Serbian">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.citationFormats.endNote.displayName">EndNote format citata</message>
 	<message key="plugins.citationFormats.endNote.citationFormatName"><![CDATA[EndNote - EndNote format (Macintosh & Windows)]]></message>
 	<message key="plugins.citationFormats.endNote.description">Ovaj dodatak implementira EndNote format citata.</message>

@@ -8,13 +8,13 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the sr_SR (Serbian) locale.
+  * Localization strings for the sr_SR (Cрпски) locale.
   *
   * Contributed by Dan Galewsky, University of Texas
   *
   -->
  
-<locale name="sr_SR" full_name="Serbian">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuth dodatak</message>
 	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Ovo je dodatak za ceo sajt i uključuje se u OJS konfiguracionom fajlu.</message>
 </locale>

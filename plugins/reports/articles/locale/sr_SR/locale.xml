@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the sr_SR (Serbian) locale.
+  * Localization strings for the sr_SR (Cрпски) locale.
   *
   -->
 
-<locale name="sr_SR" full_name="Serbian">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.reports.articles.displayName">Izveštaj o člancima</message>
 	<message key="plugins.reports.articles.description">Ovaj dodatak implementira CVS izveštaj koji sadrži listu članaka i informacije o njima.</message>
 	<message key="plugins.reports.articles.nodecision">Nema odluke</message>

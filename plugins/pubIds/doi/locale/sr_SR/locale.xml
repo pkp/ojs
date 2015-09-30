@@ -11,7 +11,7 @@
   * DOI plugin localization strings
   -->
  
-<locale name="sr_SR" full_name="Srpski">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">Ovaj dodatak omogućuje dodavanje Digital Object Identifiers jedinicama (brojevima), člancima, prikazima i dodatnim fajlovima u OJS-u.</message>
 

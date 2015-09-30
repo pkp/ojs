@@ -8,10 +8,10 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * OpenAIRE plugin localization strings for the sr_SR (Serbian) locale.
+  * OpenAIRE plugin localization strings for the sr_SR (Cрпски) locale.
   -->
  
-<locale name="sr_SR" full_name="Serbian">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
 	<message key="plugins.generic.openAIRE.description">OpenAIRE dodatak dodaje projectID element metapodataka i proširuje OAI-PMH interfejs u skladu sa smernicama OpenAIRE 1.1 , pomažući OJS časopisu da postane OpenAIRE kompatibilan.</message>
 	<message key="plugins.generic.openAIRE.projectID">ID projekta</message>
