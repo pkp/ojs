@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="eu_ES" full_name="Basque (Euskara)">
+<locale name="eu_ES" full_name="Euskara">
 	<message key="plugins.block.notification.displayName">"Notification" Block</message>
 	<message key="plugins.block.notification.description">This plugin displays information about system notifications.</message>
 </locale>
