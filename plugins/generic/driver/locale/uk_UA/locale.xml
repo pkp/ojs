@@ -11,7 +11,7 @@
   * DRIVER plugin localization strings
   -->
  
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
 	<message key="plugins.generic.driver.displayName">DRIVER</message>
 	<message key="plugins.generic.driver.description">Модуль DRIVER дозволяє розширене використання інтерфейсу OAI-PMH відповідно до DRIVER Guidelines 2.0 і забезпечує сумісність журналів OJS зі стандартами європейського сховища DRIVER.</message>
 </locale>

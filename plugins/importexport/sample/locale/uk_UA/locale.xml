@@ -12,7 +12,7 @@
   * V. I. Vernadsky National Library of Ukraine
   -->
  
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <message key="plugins.importexport.sample.displayName">Приклад модуля імпорту/експорту</message>
        <message key="plugins.importexport.sample.description">Цей модуль пропонується як приклад для використання розробниками модулів імпорту/експорту. Сам по собі цей модуль не дуже корисний.</message>
 

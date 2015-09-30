@@ -12,7 +12,7 @@
   * V. I. Vernadsky National Library of Ukraine
   -->
  
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <message key="plugins.metadata.mods34.articleAdapter.displayName">Схема метаданих статей MODS 3.4</message>
        <message key="plugins.metadata.mods34.articleAdapter.description">Модуль забезпечує екстракцію метаданих зі статей.</message>
 </locale>
