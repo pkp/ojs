@@ -8,10 +8,10 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * OpenAIRE plugin localization strings for the da_DK (Danish) locale.
+  * OpenAIRE plugin localization strings for the da_DK (Dansk) locale.
   -->
  
-<locale name="da_DK" full_name="Danish">
+<locale name="da_DK" full_name="Dansk">
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
 	<message key="plugins.generic.openAIRE.description">OpenAIRE plugin’et tilføjer et projektID-element til artiklens metadata og udvider OAI-PMH-grænsefladen i overensstemmelse med OpenAIRE Guidelines 1.1, og  gør det dermed muligt for OJS-tidsskrifter at blive OpenAIRE-kompatible.</message>
 	<message key="plugins.generic.openAIRE.projectID">ProjektID</message>

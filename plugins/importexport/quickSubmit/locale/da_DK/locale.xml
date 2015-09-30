@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the da_DK (Danish) locale.
+  * Localization strings for the da_DK (Dansk) locale.
   *
   -->
 
-<locale name="da_DK" full_name="Danish">
+<locale name="da_DK" full_name="Dansk">
 	<message key="plugins.importexport.quickSubmit.addToExisting">Føj til et eksisterende nummer:</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestination">Indsendelsesdestination</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestinationDescription">Vælg om nye indsendelser skal føjes til eksisterende numre eller om de skal indsættes i redigeringskøen.</message>

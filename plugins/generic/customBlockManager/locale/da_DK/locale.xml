@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the da_DK (Danish) locale.
+  * Localization strings for the da_DK (Dansk) locale.
   *
   -->
  
-<locale name="da_DK" full_name="Danish">
+<locale name="da_DK" full_name="Dansk">
 	<message key="plugins.generic.customBlockManager.displayName">Custom Block Manager</message>
 	<message key="plugins.generic.customBlockManager.description">Dette plugin gør det muligt at indsætte brugerdefineret sidemenuindhold. Du kan redigere hver enkelt element (plugin), du opretter.	</message>	
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Du kan anvende dette plugin til at tilføje eller slette elementer (plugins). Du kan efterfølgende redigere indholdet via <a href="{$systemPluginsUrl}">System Plugins</a>  siden (i Blocks Plugin section). For at indplacere dit element (plugin) på det ønskede sted i sidemenuen, skal du redigere <a href="{$setupStep56}">Konfiguration trin 5.6</a>]]></message>

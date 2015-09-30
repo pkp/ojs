@@ -11,7 +11,7 @@
   * Piwik plugin localization strings
   -->
  
-<locale name="da_DK" full_name="Danish">
+<locale name="da_DK" full_name="Dansk">
 
 	<!-- Piwik -->
 	<message key="plugins.generic.piwik.displayName">Piwik Plugin</message>
