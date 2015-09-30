@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the no_NO (Norwegian) locale.
+  * Localization strings for the no_NO (Norsk) locale.
   *
   -->
  
-<locale name="no_NO" full_name="Norwegian">
+<locale name="no_NO" full_name="Norsk">
 	<message key="plugins.block.information.displayName">Informasjonsblokk</message>
 	<message key="plugins.block.information.description">Denne programutvidelsen oppretter en informasjonslenke i sidespalten.</message>
 	<message key="plugins.block.information.link">Informasjon</message>

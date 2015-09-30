@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="no_NO" full_name="Norwegian">
+<locale name="no_NO" full_name="Norsk">
 
 	<!-- phpMyVisites -->
 	<message key="plugins.generic.phpmv.displayName">Programutvidelse for phpMyVisites</message>

@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="no_NO" full_name="Norwegian">
+<locale name="no_NO" full_name="Norsk">
 	<message key="plugins.citationFormats.abnt.displayName">Programutvidelse for ABNT siteringsformat</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Denne programutvidelsen implementerer ABNT-siteringsformatet.</message>
