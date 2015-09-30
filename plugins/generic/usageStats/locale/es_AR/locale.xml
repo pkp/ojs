@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="es_AR" full_name="Español">
+<locale name="es_AR" full_name="Español (Argentina)">
 	<message key="plugins.generic.usageStats.settings.logging">Opciones del log de Accesos</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles">Crear archivos log</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Activando esta opción permite al plugin crear logs de accesos dentro de la carpeta de files. Estos archivos deben serán utilizados para extraer datos para las estadísticas de uso. Si no desea crear más logs de acceso, puede dejar esta opción deshabilitada y utilizar los logs de su servidor.</message>

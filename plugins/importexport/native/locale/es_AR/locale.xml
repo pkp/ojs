@@ -8,12 +8,12 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_AR (Español Argentina) locale.
+  * Localization strings for the es_AR (Español (Argentina)) locale.
   *
   * Traducción de la versión original 1.12 por Sergio Ruiz (sruiz@revistaesalud.com) - 2005/09/27
 -->
  
-<locale name="es_AR" full_name="Español Argentina">
+<locale name="es_AR" full_name="Español (Argentina)">
 	<message key="plugins.importexport.native.displayName"><![CDATA[Plugin XML para artículos & números]]></message>
 	<message key="plugins.importexport.native.description">Importar y exportar artículos y números completos</message>
 
