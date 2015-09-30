@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.auth.ldap.displayName">LDAP</message>
 	<message key="plugins.auth.ldap.description">此插件允许对外部LDAP数据源认证和用户帐户的同步。</message>
 	

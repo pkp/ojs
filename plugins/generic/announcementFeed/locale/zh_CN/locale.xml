@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the zh_CN (China) locale.
+  * Localization strings for the zh_CN (简体中文) locale.
   *
   -->
  
-<locale name="zh_CN" full_name="China.PR">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.generic.announcementfeed.displayName">公告Feed插件</message>
 	<message key="plugins.generic.announcementfeed.description">本插件用于提供期刊公告的RSS/ATOM服务。</message>
 

@@ -12,7 +12,7 @@
   *
   -->
   
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.citationFormats.abnt.displayName">ABNT引文格式插件(ABNT citation format plugin)</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">本插件实现了ABNT引文格式(This plugin implements the ABNT citation format).</message>

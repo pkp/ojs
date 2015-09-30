@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the zh_CN (China) locale.
+  * Localization strings for the zh_CN (简体中文) locale.
   *
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.block.languageToggle.displayName">语言切换单元</message>
 	<message key="plugins.block.languageToggle.description">本插件在边栏提供语言切换.</message>
 </locale>
