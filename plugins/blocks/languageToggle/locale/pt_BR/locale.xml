@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.block.languageToggle.displayName">Alteração de idioma</message>
 	<message key="plugins.block.languageToggle.description">Este plugin oferece a ferramenta de alteração de idiomas na barra lateral.</message>
 </locale>

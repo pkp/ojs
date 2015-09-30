@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.citationFormats.proCite.displayName">Citação ProCite</message>
 	<message key="plugins.citationFormats.proCite.citationFormatName"><![CDATA[ProCite - formato RIS (Macintosh & Windows)]]></message>
 	<message key="plugins.citationFormats.proCite.description">Este plugin implementa o formato de citação ProCite.</message>

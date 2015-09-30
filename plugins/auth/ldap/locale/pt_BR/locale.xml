@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.auth.ldap.displayName">Autenticação LDAP</message>
 	<message key="plugins.auth.ldap.description">Plugin de Autenticação LDAP, que permite a sincronização de contas de usuários em uma fonte externa LDAP.</message>
 	

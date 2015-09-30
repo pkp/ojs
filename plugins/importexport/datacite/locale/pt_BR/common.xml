@@ -11,7 +11,7 @@
   * Localization strings.
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">Para usar este plugin, acesse a categoria de plugins "Identificadores públicos", habilite e configure o plugin DOI e especifique um prefixo DOI válido nele.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">O plugin não está totalmente configurado.</message>
 

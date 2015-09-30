@@ -11,7 +11,7 @@
   * Localization strings.
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">Este plugin habilita a atribuição de de Identificadores de Objeto Digital (DOI) a edições, artigos, composições e arquivos suplementares no OJS.</message>
 

@@ -11,7 +11,7 @@
   * Localization strings for the pt_BR locale.
   -->
 
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.importexport.users.displayName">Plugin Usuários em XML</message>
 	<message key="plugins.importexport.users.description">Importar e exportar usuários no formato XML</message>
 
