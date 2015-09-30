@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.reports.reviews.displayName">Plugin de Relatórios de Revisão</message>
 	<message key="plugins.reports.reviews.description">Este plugin implementa um relatório no formato CSV (planilha eletrónica) contendo a lista de tarefas de revisão para uma revista.</message>
 	<message key="plugins.reports.reviews.round">Ronda</message>

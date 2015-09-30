@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.generic.backup.name">Cópia de segurança</message>
 	<message key="plugins.generic.backup.description">Este plugin gera uma cópia de segurança da instalação.</message>
 

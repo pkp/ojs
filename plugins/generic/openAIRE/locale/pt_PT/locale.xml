@@ -11,7 +11,7 @@
   * OpenAIRE plugin localization strings
   -->
  
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
 	<message key="plugins.generic.openAIRE.description">O Plugin OpenAIRE adiciona o ID do projeto aos metadados do trabalho e extende o interface OAI-PMH de acordo com as diretrizes OpenAIRE 1.1, tornando as revistas compatíveis.</message>
 	<message key="plugins.generic.openAIRE.projectID">ID do Projeto</message>

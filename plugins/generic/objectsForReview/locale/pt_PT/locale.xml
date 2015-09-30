@@ -11,7 +11,7 @@
   * Objects for review plugin localization strings for the en_US (U.S. English) locale.
   -->
 
-<locale name="pt_PT" full_name="U.S. English">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorAssigned">Autor designado para revisão</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsBy">Palavras Por</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.recipient">Destinatário</message>

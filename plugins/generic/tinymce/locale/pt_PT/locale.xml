@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.generic.tinymce.name">Plugin TinyMCE</message>
 	<message key="plugins.generic.tinymce.description"><![CDATA[Este plugin permite edição WYSIWYG (What You See Is What You Get) em campos de texto através do editor de conteúdo <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
 	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Este plugin permite edição WYSIWYG (What You See Is What You Get) em campos de texto através do editor de conteúdo <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>. O <strong>TinyMCE não está instalado actualmente. Faça a instalação em {$tinyMcePath}.</strong>]]></message>

@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.block.notification.displayName">Plugin Bloco de "Notificações"</message>
 	<message key="plugins.block.notification.description">Este plugin exibe informações sobre as notificações do sistema.</message>
 </locale>

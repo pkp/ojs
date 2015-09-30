@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.importexport.erudit.displayName">Plugin de Exportação Formato Erudit</message>
 	<message key="plugins.importexport.erudit.description">Exporta artigos utilizando a DTD inglesa Erudit</message>
 

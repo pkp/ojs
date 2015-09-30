@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.citationFormats.apa.displayName">Plugin Formato de Citação APA</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
 	<message key="plugins.citationFormats.apa.description">Este plugin implementa a citação sob o formato da APA.</message>

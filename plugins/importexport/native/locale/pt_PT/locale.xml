@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.importexport.native.displayName">Plugin XML de Artigos e Edições</message>
 	<message key="plugins.importexport.native.description">Importar e exportar artigos e edições</message>
 

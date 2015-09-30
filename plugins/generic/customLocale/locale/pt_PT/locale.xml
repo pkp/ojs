@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the pt_PT (Português) locale.
+  * Localization strings for the pt_PT (Português (Portugal)) locale.
   *
   -->
  
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.generic.customLocale.name">Plugin de Customização de Idioma</message>
 	<message key="plugins.generic.customLocale.description">Este plugin permite a customização do idioma da interface padrão do sistema.</message>
 

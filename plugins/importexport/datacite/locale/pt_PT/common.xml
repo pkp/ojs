@@ -11,7 +11,7 @@
   * Shared localization strings
   -->
 
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.importexport.common.settings.form.password.description">Tenha em atenção que a senha será guardada como texto, não encriptada.</message>
 	<message key="plugins.importexport.common.markRegistered">Marcar como registado</message>
 	<message key="plugins.importexport.common.markRegisteredDescription">Clicar neste botão para marcar os objectos registados (e.g. se registado antes ou manualmente).</message>
