@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="nb_NO" full_name="Norwegian">
+<locale name="nb_NO" full_name="Norsk bokmål">
 	<message key="plugins.citationFormats.mla.displayName">Programutvidelse for MLA siteringsformat</message>
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
 	<message key="plugins.citationFormats.mla.description">Denne programutvidelsen implementerer MLA siteringsformat.</message>

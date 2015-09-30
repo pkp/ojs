@@ -14,7 +14,7 @@
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.citationFormats.refMan.displayName">Plugin pro citační formát Reference Manager</message>
 	<message key="plugins.citationFormats.refMan.citationFormatName">Reference Manager - RIS formát (pouze Windows)</message>
 	<message key="plugins.citationFormats.refMan.description">Tento plugin zavádí citační formát pro Reference Manager.</message>

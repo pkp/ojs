@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the da_DK (Danish) locale.
+  * Localization strings for the da_DK (Dansk) locale.
   *
   -->
 
-<locale name="da_DK" full_name="Danish">
+<locale name="da_DK" full_name="Dansk">
 	<message key="plugins.reports.reviews.displayName">Bedømmerrapport</message>
 	<message key="plugins.reports.reviews.description">Dette plugin genererer en CSV-rapport indeholdende en oversigt over tidsskriftets bedømmelsesoverdragelser.</message>
 	<message key="plugins.reports.reviews.round">Gang</message>

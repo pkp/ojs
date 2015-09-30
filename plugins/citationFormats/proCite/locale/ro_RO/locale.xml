@@ -12,7 +12,7 @@
   * KOSSON FECIT
   -->
  
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.citationFormats.proCite.displayName">Modul pentru citarea în format ProCite</message>
 	<message key="plugins.citationFormats.proCite.citationFormatName">ProCite - format RIS (Macintosh &amp; Windows)</message>
 	<message key="plugins.citationFormats.proCite.description">Acest modul implementează formatul ProCite pentru citări.</message>

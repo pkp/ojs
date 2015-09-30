@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.reports.reviews.displayName">Αναφορά Αξιολογήσεων</message>
 	<message key="plugins.reports.reviews.description">Αυτό το plugin δημιουργεί μια αναφορά σε μορφή CSV που περιλαμβάνει μια λίστα με τις αναθέσεις για αξιολόγηση για ένα περιοδικό.</message>
 	<message key="plugins.reports.reviews.round">Γύρος</message>

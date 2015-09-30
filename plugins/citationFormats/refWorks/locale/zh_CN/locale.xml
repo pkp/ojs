@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.citationFormats.refWorks.displayName">RefWorks引文格式插件(RefWorks citation format plugin</message>
 	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
 	<message key="plugins.citationFormats.refWorks.description">本插件实现了RefWorks引文格式(This plugin implements the RefWorks citation format).</message>

@@ -14,7 +14,7 @@
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.block.information.displayName">Informační blok</message>
 	<message key="plugins.block.information.description">Tento plugin poskytne v postraním panelu odkaz na informace.</message>
 	<message key="plugins.block.information.link">Informace</message>

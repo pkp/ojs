@@ -11,7 +11,7 @@
   * Plugin localization strings
   -->
  
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.generic.driver.displayName">SÜRÜCÜ (DRIVER)</message>
 	<message key="plugins.generic.driver.description">SÜRÜCÜ (DRIVER) eklentisi, ADS'yi kullanan dergilerin SÜRÜCÜ uyumlu hale getirilmesi ve SÜRÜCÜ Rehberi 2.0 göre OAI-PMH arabiriminin genişletilmesini sağlar.</message>
 </locale>

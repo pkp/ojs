@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ro_RO (Română) locale.
+  * Localization strings for the ro_RO (Limba Română) locale.
   * KOSSON FECIT
   -->
  
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.generic.announcementfeed.displayName">Modul pentru fluxuri</message>
 	<message key="plugins.generic.announcementfeed.description">Acest modul produce agregare web de tip RSS/Atom pentru anunţurile din cadrul revistei.</message>
 	<message key="plugins.generic.announcementfeed.settings">Setări</message>

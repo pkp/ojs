@@ -11,7 +11,7 @@
   * Shared localization strings
   -->
  
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">Щоб використовувати цей модуль, будь ласка, перейдіть до категорії модулів "Публічні ідентифікатори", включіть та налаштуйте модуль DOI, а потім вкажіть тут Ваш префікс DOI.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">Модуль не був повністю підключений.</message>
 

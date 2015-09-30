@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the el_GR (Greek) locale.
+  * Localization strings for the el_GR (ελληνικά) locale.
   *
   -->
 
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.block.relatedItems.displayName">Block σχετικών στοιχείων</message>
 	<message key="plugins.block.relatedItems.description">Αυτό το plugin εμφανίζει ένα block που περιέχει στοιχεία σχετικά με τα εργαλεία ανάγνωσης της πλαϊνής μπάρας.</message>
 	<message key="plugins.block.relatedItems.title">Σχετικά Στοιχεία</message>

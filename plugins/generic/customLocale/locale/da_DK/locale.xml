@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the da_DK (Dutch) locale.
+  * Localization strings for the da_DK (Dansk) locale.
   *
   -->
  
-<locale name="da_DK" full_name="Dutch">
+<locale name="da_DK" full_name="Dansk">
 	<message key="plugins.generic.customLocale.name">Standard lokaliserings-plugin</message>
 	<message key="plugins.generic.customLocale.description">Dette plugin aktiverer mulighed for redigering af standard bruger-interfacet i OJS.</message>
 

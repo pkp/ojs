@@ -11,7 +11,7 @@
   * DOI plugin localization strings
   -->
  
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">Bu eklenti ADS'de sayılara, makalelere, dizgilere ve ek dosyalara Dijital Nesne Belirleyici (DOI) atamasını etkinleştirir.</message>
 

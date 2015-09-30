@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.block.information.displayName">Block Πληροφοριών</message>
 	<message key="plugins.block.information.description">Το plugin αυτό παρέχει ένα σύνδεσμο Πληροφορίες στην πλαϊνή μπάρα.</message>
 	<message key="plugins.block.information.link">Πληροφορίες</message>

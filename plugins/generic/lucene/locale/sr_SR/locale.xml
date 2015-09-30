@@ -11,7 +11,7 @@
   * OJS solr/lucene search plugin localization strings
   -->
  
-<locale name="sr_SR" full_name="Srpski">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.generic.lucene.displayName">Dodatak: Lucene pretraga</message>
 	<message key="plugins.generic.lucene.description">Lucene dodatak obezbeđuje višejezičnu podršku, unapređuje rezultate pretrage, obezbeđuje brže indeksiranje i bolju skalabilnost.</message>
 	<message key="plugins.generic.lucene.settings">Podešavanja</message>

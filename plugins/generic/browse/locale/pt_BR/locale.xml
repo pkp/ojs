@@ -11,7 +11,7 @@
   * Plugin localization strings
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<!-- plugin -->
 	<message key="plugins.generic.browse.displayName">Navegar</message>
 	<message key="plugins.generic.browse.description">Este plugin permite a navegação por seções e/ou por tipos de identificação.</message>

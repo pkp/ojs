@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.metadata.mods34.articleAdapter.displayName">MODS 3.4 Makale Adaptörü</message>
 	<message key="plugins.metadata.mods34.articleAdapter.description">Extracts/injects meta-data from/into articles.</message>
 </locale>

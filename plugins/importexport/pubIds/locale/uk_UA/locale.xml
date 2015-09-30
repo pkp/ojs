@@ -11,7 +11,7 @@
   * Localization strings
   -->
  
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
 	<!-- plugin -->
 	<message key="plugins.importexport.pubIds.displayName">Модуль публічних ідентифікаторів XML</message>
 	<message key="plugins.importexport.pubIds.description">Імпорт та експорт публічних ідентифікаторів</message>

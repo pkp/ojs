@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="da_DK" full_name="Danish">
+<locale name="da_DK" full_name="Dansk">
 	<!-- Section default -->
 	<message key="section.default.title">Artikler</message>
 	<message key="section.default.abbrev">ART</message>

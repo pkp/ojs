@@ -11,7 +11,7 @@
   * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
   -->
  
-<locale name="de_DE" full_name="Deutsch (Deutschland))">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.importexport.datacite.displayName">DataCite-Export/Registrierungs-Plug-In</message>
 	<message key="plugins.importexport.datacite.description">Exportieren oder registrieren Sie Metadaten zu Ausgaben, Artikeln, Fahnen und Zusatzdateien im DataCite-Format.</message>
 

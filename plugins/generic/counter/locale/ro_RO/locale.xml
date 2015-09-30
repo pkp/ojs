@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ro_RO (Română) locale.
+  * Localization strings for the ro_RO (Limba Română) locale.
   * KOSSON FECIT
   -->
  
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.generic.counter.description"><![CDATA[Modulul COUNTER permite înregistrarea cu raportarea conform <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> a activităţii de pe site.]]></message>
 	<message key="plugins.generic.counter">Statistici COUNTER</message>
 

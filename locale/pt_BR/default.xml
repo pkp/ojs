@@ -8,13 +8,13 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the pt_BR (Português do Brasil) locale.
+  * Localization strings for the pt_BR (Português (Brasil)) locale.
   * Translation by Desenvolvimento Web, Ibict/MCT
   * Ramón Martins Sodoma da Fonseca (ramon@ibict.br)
   *
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">A contribuição é original e inédita, e não está sendo avaliada para publicação por outra revista; caso contrário, deve-se justificar em "Comentários ao editor".</message>
 	<message key="default.journalSettings.checklist.fileFormat">O arquivo da submissão está em formato Microsoft Word, OpenOffice ou RTF.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">O texto está em espaço simples; usa uma fonte de 12-pontos; emprega itálico em vez de sublinhado (exceto em endereços URL); as figuras e tabelas estão inseridas no texto, não no final do documento na forma de anexos.</message>

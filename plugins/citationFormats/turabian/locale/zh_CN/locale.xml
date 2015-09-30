@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.citationFormats.turabian.displayName">Turabian引文格式插件(Turabian citation format plugin)</message>
 	<message key="plugins.citationFormats.turabian.citationFormatName">Turabian</message>
 	<message key="plugins.citationFormats.turabian.description">本插件实现了Turabian格式引文(This plugin implements the Turabian citation format).</message>

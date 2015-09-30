@@ -8,12 +8,12 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ro_RO (Romanian) locale.
+  * Localization strings for the ro_RO (Limba Română) locale.
   * Provided by Constantinescu Nicolaie. 
   *
   -->
  
-<locale name="ro_RO" full_name="Romanian">
+<locale name="ro_RO" full_name="Limba Română">
 	<!--
 	 * This file is organized into several major sections, separated
 	 * by comments like this one. These sections are called:

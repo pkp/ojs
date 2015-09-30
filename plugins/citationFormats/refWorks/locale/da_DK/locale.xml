@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="da_DK" full_name="Dutch">
+<locale name="da_DK" full_name="Dansk">
 	<message key="plugins.citationFormats.refWorks.displayName">RefWorks citeringsformat plugin</message>
 	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
 	<message key="plugins.citationFormats.refWorks.description">Dette plugin implementerer RefWorks citeringsformat.</message>

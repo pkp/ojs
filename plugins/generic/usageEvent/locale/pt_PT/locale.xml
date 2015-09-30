@@ -11,7 +11,7 @@
   * Localization strings.
   -->
  
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.generic.usageEvent.displayName">Evento de Uso</message>
 	<message key="plugins.generic.usageEvent.description">Cria um evento de uso da revista num formato definido.</message>
 </locale>

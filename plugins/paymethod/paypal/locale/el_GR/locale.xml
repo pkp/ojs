@@ -18,7 +18,7 @@
   * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
   -->
  
- <locale name="el_GR" full_name="Greek">	
+ <locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.paymethod.paypal.displayName">Πληρωμή εισφορών μέσω PayPal</message>
 
 	<!-- PayPal Settings Form -->

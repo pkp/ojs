@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="ru_RU" full_name="Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="plugins.citationFormats.mla.displayName">Модуль формата ссылок MLA</message>
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
 	<message key="plugins.citationFormats.mla.description">Реализует формат ссылок MLA.</message>

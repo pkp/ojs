@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="da_DK" full_name="Dutch">
+<locale name="da_DK" full_name="Dansk">
 	<message key="plugins.citationFormats.abnt.displayName">ABNT citeringsformat plugin</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Dette plugin implementerer ABNT citeringsformatet.</message>

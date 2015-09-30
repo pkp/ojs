@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.generic.webfeed.displayName">Web Feed Plugin</message>
 	<message key="plugins.generic.webfeed.description">Το plugin αυτό παράγει RSS/Atom web syndication feeds για το τρέχον τεύχος.</message>
 

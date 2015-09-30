@@ -11,7 +11,7 @@
   * Plugin localization strings
   -->
  
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
 	<!-- plugin -->
 	<message key="plugins.generic.browse.displayName">Перегляд за розділами</message>
 	<message key="plugins.generic.browse.description">Цей модуль дозволяє перегляд матеріалів за розділами та/або типами опублікованих об'єктів.</message>

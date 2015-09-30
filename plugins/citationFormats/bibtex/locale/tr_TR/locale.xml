@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.citationFormats.bibtex.displayName">BibTeX atıf biçim eklentisi</message>
 	<message key="plugins.citationFormats.bibtex.citationFormatName">BibTeX</message>
 	<message key="plugins.citationFormats.bibtex.description">Bu eklenti BibTeX atıf biçimini uygular.</message>

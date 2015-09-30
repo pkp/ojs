@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="ru_RU" full_name="Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="plugins.citationFormats.bibtex.displayName">Модуль формата ссылок BibTeX</message>
 	<message key="plugins.citationFormats.bibtex.citationFormatName">BibTeX</message>
 	<message key="plugins.citationFormats.bibtex.description">Реализует формат ссылок BibTeX.</message>

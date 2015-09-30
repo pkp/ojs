@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the tr_TR (Turkish) locale.
+  * Localization strings for the tr_TR (Türkçe) locale.
   *
   -->
  
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.generic.counter.description"><![CDATA[Sayaç Eklentisi, site aktivitesini <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> uyumlu olarak raporlamak ve kayıt etmek için kullanılır.]]></message>
 	<message key="plugins.generic.counter">SAYAÇ İstatistikleri</message>
 	<message key="plugins.generic.counter.migrate">Günlük Dosyasını Göç Ettir</message>

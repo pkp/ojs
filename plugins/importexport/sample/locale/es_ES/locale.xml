@@ -13,7 +13,7 @@
   * Traducción de la versión original 1.2 por Sergio Ruiz (sruiz@revistaesalud.com) - 2005/09/27
   -->
  
-<locale name="es_ES" full_name="Español España">
+<locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.importexport.sample.displayName">Plugin de ejemplo de importación/exportación</message>
 	<message key="plugins.importexport.sample.description">Este plugin proporciona un ejemplo de implementación que se puede usar para desarrollar plugins de importación/exportación. No es muy útil por si solo.</message>
 

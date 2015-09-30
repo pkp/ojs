@@ -11,7 +11,7 @@
   * DOI plugin localization strings
   -->
  
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">Цей модуль дозволяє призначення цифрових ідентифікаторів об'єктів (DOI) для випусків, статей, гранок та супровідних файлів OJS.</message>
 

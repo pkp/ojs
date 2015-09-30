@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the sr_SR (Serbian) locale.
+  * Localization strings for the sr_SR (Cрпски) locale.
   *
   -->
  
-<locale name="sr_SR" full_name="Serbian">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.generic.webfeed.displayName">Web Feed dodatak</message>
 	<message key="plugins.generic.webfeed.description">Ovaj dodatak proizvodi RSS/Atom web syndication feeds za trenutni broj časopisa.</message>
 

@@ -8,13 +8,13 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the pt_PT (Português) locale.
+  * Localization strings for the pt_PT (Português (Portugal)) locale.
   *
   * Contributed by Dan Galewsky, University of Texas
   *
   -->
  
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.implicitAuth.shibboleth.displayName">Plugin de Autenticação Shiboleth</message>
 	<message key="plugins.implicitAuth.shibboleth.description">Este é um plugin de alcance geral, habilitado no ficheiro de configuração do sistema.</message>
 </locale>

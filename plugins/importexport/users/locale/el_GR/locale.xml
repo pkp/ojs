@@ -18,7 +18,7 @@
   * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
   -->
 
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.importexport.users.displayName">XML Plugin Χρηστών</message>
 	<message key="plugins.importexport.users.description">Εισαγωγή και εξαγωγή χρηστών</message>
 

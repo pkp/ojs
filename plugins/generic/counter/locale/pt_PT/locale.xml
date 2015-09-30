@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.generic.counter.description"><![CDATA[O plugin COUNTER permite armazenar e produzir relatórios compatíveis com a iniciativa <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>, sobre a actividade no portal.]]></message>
 	<message key="plugins.generic.counter">Estatísticas COUNTER</message>
 

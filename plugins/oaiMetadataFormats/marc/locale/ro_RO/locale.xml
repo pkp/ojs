@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ro_RO (Romanian) locale.
+  * Localization strings for the ro_RO (Limba Română) locale.
   *
   -->
  
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.OAIMetadata.marc.displayName">Formant de metadate MARC</message>
 	<message key="plugins.OAIMetadata.marc.description">Structurează metadatele într-un mod conform cu formatul MARC.</message>
 </locale>

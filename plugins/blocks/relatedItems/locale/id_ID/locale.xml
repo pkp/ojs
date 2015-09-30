@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.block.relatedItems.displayName">Blok Item Terkait</message>
 	<message key="plugins.block.relatedItems.description">Plugin ini menampilkan blok yang berisi item terkait di bagian alat membaca.</message>
 	<message key="plugins.block.relatedItems.title">Item Terkait</message>

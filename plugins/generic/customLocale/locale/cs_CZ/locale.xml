@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the cs_CZ (Czech) locale.
+  * Localization strings for the cs_CZ (Čeština) locale.
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.generic.customLocale.name">Plugin přizpůsobení lokalizace</message>
 	<message key="plugins.generic.customLocale.description">Tento plugin umožňuje přizpůsobení výchozího textu uživatelského rozhraní používaného v OJS.</message>
 

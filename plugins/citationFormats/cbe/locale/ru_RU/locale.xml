@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="ru_RU" full_name="Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="plugins.citationFormats.cbe.displayName">Модуль формата ссылок CBE</message>
 	<message key="plugins.citationFormats.cbe.citationFormatName">CBE</message>
 	<message key="plugins.citationFormats.cbe.description">Реализует формат ссылок CBE.</message>

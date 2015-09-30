@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.citationFormats.refMan.displayName">Reference Manager atıf biçim eklentisi</message>
 	<message key="plugins.citationFormats.refMan.citationFormatName">Reference Manager - RIS biçimi (Sadece Windows)</message>
 	<message key="plugins.citationFormats.refMan.description">Bu eklenti Reference Manager atıf biçimini uygular.</message>

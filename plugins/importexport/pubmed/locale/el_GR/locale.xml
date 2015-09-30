@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.importexport.pubmed.displayName">Plugin εξαγωγής PubMed XML </message>
 	<message key="plugins.importexport.pubmed.description">Εξαγωγή μεταδεδομένων άρθρων σε μορφή PubMed XML για την ευρετηρίαση στο MEDLINE.</message>
 	

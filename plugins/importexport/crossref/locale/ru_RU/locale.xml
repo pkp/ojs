@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ru_RU (Russian) locale.
+  * Localization strings for the ru_RU (Русский) locale.
   *
   -->
  
-<locale name="ru_RU" full_name="Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="plugins.importexport.crossref.displayName">Экспорт в формате CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Экспорт метаданны статей в формате CrossRef XML.</message>
 	

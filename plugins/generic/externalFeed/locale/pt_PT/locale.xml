@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_PT" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 
 	<!-- External Feed -->
 	<message key="plugins.generic.externalFeed.displayName">Feeds Externos</message>

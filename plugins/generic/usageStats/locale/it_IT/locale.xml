@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="it_IT" full_name="Italian">
+<locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.usageStats.settings.logging">Opzioni log</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles">Crea file di log</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Attivando questa opzione, il plugin creerà dei log degli accessi nella cartella dei file. Questi file verranno utilizzati per estrarre i dati delle statistiche d'uso. Se non vuoi creare ulteriori file, lascia questa opzione disabilitata e usa i log di accesso del tuo server.</message>

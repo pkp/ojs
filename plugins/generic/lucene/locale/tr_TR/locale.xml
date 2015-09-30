@@ -11,7 +11,7 @@
   * OJS solr/lucene search plugin localization strings
   -->
  
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.generic.lucene.displayName">Lucene Arama Eklentisi</message>
 	<message key="plugins.generic.lucene.description">Lucene eklentisi çoklu dil desteği, geliştirilmiş ilgili arama sonucu, daha hızlı indeksleme, daha iyi ölçeklenebilirlik ve daha fazlasını sağlar.</message>
 	<message key="plugins.generic.lucene.settings">Ayarlar</message>

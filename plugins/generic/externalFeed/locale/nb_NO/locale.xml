@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="nb_NO" full_name="Norwegian">
+<locale name="nb_NO" full_name="Norsk bokmål">
 
 	<!-- External Feed -->
 	<message key="plugins.generic.externalFeed.displayName">Eksternt innhold</message>

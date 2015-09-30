@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * COinS plugin localization strings for the ro_RO (Română) locale.
+  * COinS plugin localization strings for the ro_RO (Limba Română) locale.
   *
   -->
  
-<locale name="ro_RO" full_name="Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.generic.coins.displayName">Modulul COinS</message>
 	<message key="plugins.generic.coins.description">Acest modul adaugă un descriptor OpenURL la paginile articolelor (abstract şi HTML) care poate fi utilizat, de exemplu, pentru regăsirea prin intermediul instrumentelor pentru referinţe bibliografice.</message>
 </locale>
