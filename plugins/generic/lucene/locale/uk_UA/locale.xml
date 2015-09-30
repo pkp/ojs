@@ -11,7 +11,7 @@
   * OJS solr/lucene search plugin localization strings
   -->
  
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
 	<message key="plugins.generic.lucene.displayName">Модуль пошуку Lucene</message>
 	<message key="plugins.generic.lucene.description">Модуль Lucene пропонує можливості багатомовного пошуку, покращену релевантність пошукових результатів, швидке індексування, масштабованість ті ін.</message>
 	<message key="plugins.generic.lucene.settings">Налаштування</message>

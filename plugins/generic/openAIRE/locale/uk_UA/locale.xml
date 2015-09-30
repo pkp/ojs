@@ -8,13 +8,13 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * OpenAIRE plugin localization strings for the uk_UA (Ukrainian) locale.
+  * OpenAIRE plugin localization strings for the uk_UA (Українська) locale.
   *
   * Translated by Denys Solovianenko, 2011
   * V. I. Vernadsky National Library of Ukraine
   -->
  
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
        <message key="plugins.generic.openAIRE.description">Модуль OpenAIRE додає елемент projectID у метадані статті та розширює інтерфейс OAI-PMH згідно вимог OpenAIRE Guidelines 1.1, допомагаючи журналам на платформі OJS стати сумісними з OpenAIRE.</message>
        <message key="plugins.generic.openAIRE.projectID">ProjectID</message>

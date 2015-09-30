@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
 	<message key="plugins.reports.timedView.displayName">Звіт про використання за період часу</message>
 	<message key="plugins.reports.timedView.description">Цей модуль дозволяє формування CSV-звітів про читаність кожної статті за певний визначений період часу.</message>
 

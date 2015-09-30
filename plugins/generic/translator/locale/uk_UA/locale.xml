@@ -11,7 +11,7 @@
   * Localization strings.
   -->
  
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
 	<message key="plugins.generic.translator.name">Модуль перекладача</message>
 	<message key="plugins.generic.translator.description">Цей модуль дозволяє веб-орієнтовану підтримку перекладу файлів.</message>
 	<message key="plugins.generic.translator.longdescription">У цьому інтерфейсі адміністратор сайту може створювати, змінювати та перевіряти переклади OJS. Цей модуль загальносистемний, він не може використовуватись для налаштування окремого журналу на платформі OJS. Якщо Ви виправили переклад або створили новий, будь ласка, розгляньте можливість надіслати його Public Knowledge Project для включення до майбутніх випусків дистрибутиву.</message>

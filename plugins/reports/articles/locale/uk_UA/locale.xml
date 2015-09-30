@@ -8,13 +8,13 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the uk_UA (Ukrainian) locale.
+  * Localization strings for the uk_UA (Українська) locale.
   *
   * Translated by Denys Solovianenko, 2011
   * V. I. Vernadsky National Library of Ukraine
   -->
  
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <message key="plugins.reports.articles.displayName">Звіт про статті</message>
        <message key="plugins.reports.articles.description">Цей модуль дозволяє формувати звіти у форматі CSV зі списками статей та інформацією про них.</message>
        <message key="plugins.reports.articles.nodecision">Немає рішення</message>

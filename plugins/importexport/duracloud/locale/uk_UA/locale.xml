@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="uk_UA" full_name="Ukrainian">
+<locale name="uk_UA" full_name="Українська">
 	<message key="plugins.importexport.duracloud.displayName">Модуль імпорту/експорту DuraCloud</message>
 	<message key="plugins.importexport.duracloud.description">Архівуйте та відновлюйте випуски за допомогою зовнішньої служби збереження DuraCloud</message>
 
