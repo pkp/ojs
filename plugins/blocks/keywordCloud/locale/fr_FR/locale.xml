@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.block.keywordCloud.displayName">Bloc de nuage de mots-clés</message>
 	<message key="plugins.block.keywordCloud.description">Ce plugiciel fournit un nuage de mots-clés d'articles.</message>
 	<message key="plugins.block.keywordCloud.title">Mots-clés</message>

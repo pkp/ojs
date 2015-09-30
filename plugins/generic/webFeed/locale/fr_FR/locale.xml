@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.generic.webfeed.displayName">Plugiciel de flux de nouvelles</message>
 	<message key="plugins.generic.webfeed.description">Ce plugiciel produit des flux de nouvelles en format Atom/RSS pour le numéro courant.</message>
 	<message key="plugins.generic.webfeed.settings">Paramètres</message>

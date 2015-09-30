@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the fr_FR (Français) locale.
+  * Localization strings for the fr_FR (Français (France)) locale.
   *
   -->
 
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.theme.custom.name">Plugiciel de thème personnalisé</message>
 	<message key="plugins.theme.custom.description">Ce plugiciel met en place un thème personnalisable.</message>
 	<message key="plugins.theme.custom.notWritable">NOTE : le fichier de feuille de style de ce plugiciel, "{$stylesheetFileLocation}", n'est pas disponible en écriture présentement. Ce fichier doit être disponible en écriture avant que le plugiciel puisse être utilisé.</message>

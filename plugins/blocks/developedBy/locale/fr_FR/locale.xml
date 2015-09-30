@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the fr_FR (Français) locale.
+  * Localization strings for the fr_FR (Français (France)) locale.
   *
   -->
  
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.block.developedBy.displayName">Bloc « Développé par »</message>
 	<message key="plugins.block.developedBy.description">Ce plugiciel offre un lien au bloc « Développé par » dans l'encadré latéral.</message>
 </locale>

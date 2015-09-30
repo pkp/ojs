@@ -11,7 +11,7 @@
   * URN plugin localization strings
   -->
 
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.pubIds.urn.urns">URNs</message>
 
 	<!-- plugin -->

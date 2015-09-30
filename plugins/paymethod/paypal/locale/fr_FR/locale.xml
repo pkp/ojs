@@ -8,10 +8,10 @@
   * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the fr_FR (Français) locale.
+  * Localization strings for the fr_FR (Français (France)) locale.
   -->
  
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.paymethod.paypal.displayName">Paiement des frais par Paypal</message>
 
 	<!-- PayPal Settings Form -->

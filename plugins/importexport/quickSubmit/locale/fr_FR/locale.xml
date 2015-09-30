@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.importexport.quickSubmit.addToExisting">Ajouter à un numéro existant :</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestination">Destination de la soumission</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestinationDescription">Choisir soit d'ajouter les nouvelles soumissions à un numéro existant, soit de les laisser en révision.</message>

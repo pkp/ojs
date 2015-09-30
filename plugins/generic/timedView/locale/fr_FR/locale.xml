@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.generic.timedView.displayName">Rapport de durée des vues</message>
 	<message key="plugins.generic.timedView.description">Ce plugiciel crée un rapport au format CSV décrivant le lectorat pour chaque article filtré par la durée des visites des utilisateurs.</message>
 

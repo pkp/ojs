@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.generic.referral.name">Plugiciel de référence</message>
 	<message key="plugins.generic.referral.description">Le plugiciel de référence retrace les URL entrants de renvoi aux articles (c.-à-d. quand un lecteur suit un lien externe vers un article), permettant à des auteurs de maintenir et, potentiellement, de publier une liste mise à jour automatiquement de références à un article.</message>
 	

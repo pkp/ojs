@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.reports.subscriptions.displayName">Rapport sur les abonnements</message>
 	<message key="plugins.reports.subscriptions.description">Ce plugiciel crée un rapport au format CSV qui contient une liste des abonnements ainsi que leurs informations.</message>
 	<message key="plugins.reports.subscriptions.institutionMailingAddress">Adresse courriel de l'institution</message>

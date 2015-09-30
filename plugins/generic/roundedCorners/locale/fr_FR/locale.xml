@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the fr_FR (Français) locale.
+  * Localization strings for the fr_FR (Français (France)) locale.
   *
   -->
  
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.generic.roundedcorners.displayName">Coins arrondis</message>
 	<message key="plugins.generic.roundedcorners.description">Ce plugiciel crée un arrière-plan sur chaque bloc d'encadré latéral et arrondit ses coins. On peut changer les couleurs en modifiant la feuille de style CSS qui se trouve dans le plugiciel.</message>
 </locale>

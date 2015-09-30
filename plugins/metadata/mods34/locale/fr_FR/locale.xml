@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.metadata.mods34.articleAdapter.displayName">MODS 3.4 Article Adapter</message>
 	<message key="plugins.metadata.mods34.articleAdapter.description">Extrait/Injecte des métadonnées dans les articles.</message>
 </locale>

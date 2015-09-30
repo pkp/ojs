@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.generic.backup.name">Plugiciel Sauvegarde</message>
 	<message key="plugins.generic.backup.description">Ce plugiciel produit une sauvegarde de votre installation.</message>
 

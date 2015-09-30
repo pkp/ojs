@@ -11,7 +11,7 @@
   * Shared localization strings
   -->
 
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">Afin d'utiliser ce plugiciel, veuillez aller à la catégorie "identifiants publics", activez et configurez le plugiciel DOI et spécifiez un préfixe DOI valide.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">Ce plugiciel n'est pas entièrement configuré.</message>
 

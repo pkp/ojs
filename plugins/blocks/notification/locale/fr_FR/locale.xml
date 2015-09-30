@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.block.notification.displayName">Bloc "Avis"</message>
 	<message key="plugins.block.notification.description">Ce plugiciel affiche de l'information à propos du système d'avis.</message>
 </locale>

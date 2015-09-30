@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the fr_FR (French) locale.
+  * Localization strings for the fr_FR (Français (France)) locale.
   *
   -->
  
-<locale name="fr_FR" full_name="Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.auth.ldap.displayName">Protocole LDAP</message>
 	<message key="plugins.auth.ldap.description">Ce plugiciel permet l'authentification et la synchronisation de comptes d'utilisateurs au moyen d'une source de données LDAP externe.</message>
 	
