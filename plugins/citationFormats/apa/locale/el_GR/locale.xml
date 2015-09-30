@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.citationFormats.apa.displayName">Plugin σχήματος παραπομπής APA </message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
 	<message key="plugins.citationFormats.apa.description">Το plugin αυτό υλοποιεί το σχήμα παραπομπής APA.</message>

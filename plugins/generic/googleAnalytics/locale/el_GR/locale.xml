@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Google Analytics Plugin</message>

@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the el_GR (Greek) locale.
+  * Localization strings for the el_GR (ελληνικά) locale.
   *
   -->
 
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.reports.articles.displayName">Αναφορά Άρθρων</message>
 	<message key="plugins.reports.articles.description">Το plugin αυτό δημιουργεί μια αναφορά σε μορφή  CSV που περιέχει μια λίστα άρθρων με τι αντίστοιχες πληροφορίες.</message>
 	<message key="plugins.reports.articles.nodecision">Χωρίς απόφαση</message>

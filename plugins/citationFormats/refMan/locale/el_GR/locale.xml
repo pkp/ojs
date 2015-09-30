@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.citationFormats.refMan.displayName">Plugin σχήματος παραπομπής Reference Manager</message>
 	<message key="plugins.citationFormats.refMan.citationFormatName">Reference Manager - RIS format (Windows only)</message>
 	<message key="plugins.citationFormats.refMan.description">Το plugin αυτό υλοποιεί το σχήμα παραπομπής Reference Manager.</message>

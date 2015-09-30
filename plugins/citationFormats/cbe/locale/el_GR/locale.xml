@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.citationFormats.cbe.displayName">Plugin σχήματος παραπομπής CBE</message>
 	<message key="plugins.citationFormats.cbe.citationFormatName">CBE</message>
 	<message key="plugins.citationFormats.cbe.description">Το plugin αυτό υλοποιεί το σχήμα παραπομπής CBE.</message>

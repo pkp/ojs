@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.citationFormats.refWorks.displayName">Plugin σχήματος παραπομπής RefWorks</message>
 	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
 	<message key="plugins.citationFormats.refWorks.description">Το plugin αυτό υλοποιεί το σχήμα παραπομπής RefWorks.</message>

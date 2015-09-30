@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.block.languageToggle.displayName">Block Αλλαγής Γλώσσας</message>
 	<message key="plugins.block.languageToggle.description">Το plugin αυτό παρέχει ένα εργαλείο Αλλαγής γλώσσας στην πλαϊνή μπάρα.</message>
 </locale>

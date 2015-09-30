@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.citationFormats.turabian.displayName">Plugin σχήματος παραπομπής Turabian</message>
 	<message key="plugins.citationFormats.turabian.citationFormatName">Turabian</message>
 	<message key="plugins.citationFormats.turabian.description">Το plugin αυτό υλοποιεί το σχήμα παραπομπής Turabian.</message>

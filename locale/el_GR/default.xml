@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
         <message key="default.journalSettings.checklist.notPreviouslyPublished">Η υποβολή δεν έχει δημοσιευτεί εκ των προτέρων, ούτε έχει υποβληθεί σε άλλο περιοδικό για εξέταση (ή δεν έχει δοθεί εξήγηση στα Σχόλια προς τον επιμελητή).</message>
         <message key="default.journalSettings.checklist.fileFormat">Το αρχείο υποβολής είναι σε μορφή αρχείου εγγράφου OpenOffice, Microsoft Word, RTF, ή WordPerfect.</message>
         <message key="default.journalSettings.checklist.addressesLinked"><![CDATA[Όταν είναι διαθέσιμα, παρέχονται τα URL για πρόσβαση σε αναφορές online.]]></message>

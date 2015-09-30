@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.citationFormats.bibtex.displayName">Plugin σχήματος παραπομπής BibTeX citation format plugin</message>
 	<message key="plugins.citationFormats.bibtex.citationFormatName">BibTeX</message>
 	<message key="plugins.citationFormats.bibtex.description">Το plugin αυτό υλοποιεί το σχήμα παραπομπής BibTeX.</message>

@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.citationFormats.abnt.displayName">Plugin σχήματος παραπομπής ABNT </message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Το plugin αυτό υλοποιεί το σχήμα παραπομπής ABNT.</message>

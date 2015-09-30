@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the el_GR (Greek) locale.
+  * Localization strings for the el_GR (ελληνικά) locale.
   *
   -->
  
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.generic.customLocale.name">Plugin προσαρμογής τοπικών ρυθμίσεων</message>
 	<message key="plugins.generic.customLocale.description">Το plugin αυτό ενεργοποιεί την δυνατότητα προσαρμογής του κειμένου της εξ'ορισμού διεπαφής του χρήστη που χρησιμοποιεί το OJS.</message>
 

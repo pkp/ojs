@@ -18,7 +18,7 @@
   * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.paymethod.manual.displayName">Μη αυτόματη Πληρωμή Εισφορών</message>
 	<message key="plugins.paymethod.manual.description">Ο διαχεριστής του περιοδικού θα καταγράφει χειρωνακτικά τις εισπράξεις πληρωμών των χρηστών (ανεξάρτητα από το OJS).</message>
 	<message key="plugins.paymethod.manual">Μη αυτόματη Πληρωμή Εισφορώνt</message>

@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.auth.ldap.displayName">LDAP</message>
 	<message key="plugins.auth.ldap.description">Το plugin αυτό υποστηρίζει την πιστοποίηση και τον συγχρονισμό των λογαριασμών χρηστών βάση μιας εξωτερικής LDAP πηγής.</message>
 	

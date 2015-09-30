@@ -19,7 +19,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">	
+<locale name="el_GR" full_name="ελληνικά">	
 	<message key="plugins.citationFormats.mla.displayName">Plugin σχήματος παραπομπής MLA </message>
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
 	<message key="plugins.citationFormats.mla.description">Το plugin αυτό υλοποιεί το σχήμα παραπομπής  MLA.</message>
