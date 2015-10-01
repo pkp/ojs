@@ -247,8 +247,15 @@ session_check_ip = On
 
 ; The encryption (hashing) algorithm to use for encrypting user passwords
 ; Valid values are: md5, sha1
-; Note that sha1 requires PHP >= 4.3.0
+; NOTE: This hashing method is deprecated, but necessary to permit gradual
+; migration of old password hashes.
 encryption = md5
+
+; The unique salt to use for generating password reset hashes
+salt = "YouMustSetASecretKeyHere!!"
+
+; The number of seconds before a password reset hash expires (defaults to 7200 / 2 hours)
+reset_seconds = 7200
 
 ; Allowed HTML tags for fields that permit restricted HTML.
 ; Use e.g. "img[src,alt],p" to allow "src" and "alt" attributes to the "img"
