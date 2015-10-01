@@ -8,11 +8,11 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
-  *
   * Localization strings
   -->
  
-<locale name="es_ES" full_name="Español (España)">Pago de cuotas mediante PayPal</message>
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.paymethod.paypal.displayName">Pago de cuotas mediante PayPal</message>
 
 	<!-- PayPal Settings Form -->
 	<message key="plugins.paymethod.paypal.settings.paypalenable">Habilitar PayPal</message>
