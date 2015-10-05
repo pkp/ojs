@@ -35,8 +35,19 @@ class DataciteSettingsForm extends DOIExportSettingsForm {
 		// Add form validation checks.
 		// The username is used in HTTP basic authentication and according to RFC2617 it therefore may not contain a colon.
 		$this->addCheck(new FormValidatorRegExp($this, 'username', FORM_VALIDATOR_OPTIONAL_VALUE, 'plugins.importexport.datacite.settings.form.usernameRequired', '/^[^:]+$/'));
+		$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'plugins.importexport.datacite.settings.form.usernameRequired', create_function('$username,$form', 'if ($form->getData(\'automaticRegistration\') && empty($username)) { return false; } return true;'), array(&$this)));
+		$this->addCheck(new FormValidatorCustom($this, 'password', 'required', 'plugins.importexport.datacite.settings.form.passwordRequired', create_function('$password,$form', 'if ($form->getData(\'automaticRegistration\') && empty($password)) { return false; } return true;'), array(&$this)));
 	}
 
+	/**
+	 * @see Form::display()
+	 */
+	function display($request) {
+		$templateMgr =& TemplateManager::getManager($request);
+		$plugin = $this->_plugin;
+		$templateMgr->assign('unregisteredURL', $request->url(null, null, 'importexport', array('plugin', $plugin->getName(), 'all')));
+		parent::display($request);
+	}
 
 	//
 	// Implement template methods from DOIExportSettingsForm
@@ -47,8 +58,16 @@ class DataciteSettingsForm extends DOIExportSettingsForm {
 	function getFormFields() {
 		return array(
 			'username' => 'string',
-			'password' => 'string'
+			'password' => 'string',
+			'automaticRegistration' => 'bool'
 		);
+	}
+
+	/**
+	 * @see DOIExportSettingsForm::isOptional()
+	 */
+	function isOptional($settingName) {
+		return in_array($settingName, array('username', 'password', 'automaticRegistration'));
 	}
 }
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  * plugins/importexport/datacite/scheduledTasks.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DataCite Plugin Automatic Deposit
+  *
+  * This file describes the schedule task that will send deposits to DataCite in the background.
+  *
+  -->
+
+<!DOCTYPE scheduled_tasks SYSTEM "../../../lib/pkp/dtd/scheduledTasks.dtd">
+
+<scheduled_tasks>
+	<task class="plugins.importexport.datacite.DataciteInfoSender">
+		<descr>Send DOI deposit to DataCite server.</descr>
+		<frequency hour="0"/>
+	</task>
+</scheduled_tasks>
