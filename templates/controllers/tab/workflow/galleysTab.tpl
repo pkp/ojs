@@ -14,11 +14,12 @@ $(function() {ldelim}
 	$('#representationTabs').pkpHandler(
 		'$.pkp.controllers.tab.representations.RepresentationsTabHandler',
 		{ldelim}
-			tabsUrl:'{url|escape:javascript router=$smarty.const.ROUTE_PAGE
+			tabsUrl:{url|json_encode router=$smarty.const.ROUTE_PAGE
 				op='representationsTab'
 				submissionId=$submission->getId()
-				stageId=$smarty.const.WORKFLOW_STAGE_ID_PRODUCTION escape=false}',
-			{if $currentRepresentationTabId}currentRepresentationTabId: '{$currentRepresentationTabId}',{/if}
+				stageId=$smarty.const.WORKFLOW_STAGE_ID_PRODUCTION escape=false
+			},
+			{if $currentRepresentationTabId}currentRepresentationTabId: {$currentRepresentationTabId|json_encode},{/if}
 			emptyLastTab: true,
 		{rdelim}
 	);

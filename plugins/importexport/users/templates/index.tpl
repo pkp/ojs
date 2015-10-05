@@ -32,8 +32,8 @@
 					{ldelim}
 						$uploader: $('#plupload'),
 							uploaderOptions: {ldelim}
-								uploadUrl: '{plugin_url path="uploadImportXML"}',
-								baseUrl: '{$baseUrl|escape:javascript}'
+								uploadUrl: {plugin_url|json_encode path="uploadImportXML" escape=false},
+								baseUrl: {$baseUrl|json_encode}
 							{rdelim}
 					{rdelim}
 				);
@@ -65,7 +65,7 @@
 		</script>
 		<form id="exportXmlForm" class="pkp_form" action="{plugin_url path="export"}" method="post">
 			{fbvFormArea id="exportForm"}
-				{url|assign:usersGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.users.exportableUsers.ExportableUsersGridHandler" pluginName="UserImportExportPlugin" op="fetchGrid"}
+				{url|assign:usersGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.users.exportableUsers.ExportableUsersGridHandler" pluginName="UserImportExportPlugin" op="fetchGrid" escape=false}
 				{load_url_in_div id="usersGridContainer" url=$usersGridUrl}
 				{fbvFormButtons hideCancel="true"}
 			{/fbvFormArea}

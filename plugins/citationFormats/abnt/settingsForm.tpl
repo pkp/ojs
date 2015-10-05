@@ -36,7 +36,7 @@
 	<tr>
 		<td class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td class="value">
-			{plugin_url|assign:"setupFormUrl" path="settings"}
+			{plugin_url|assign:"setupFormUrl" path="settings" escape=false}
 			{form_language_chooser form="setupForm" url=$setupFormUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>
 		</td>

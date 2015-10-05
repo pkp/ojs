@@ -33,8 +33,8 @@
 					{ldelim}
 						$uploader: $('#plupload'),
 							uploaderOptions: {ldelim}
-								uploadUrl: '{plugin_url path="uploadImportXML"}',
-								baseUrl: '{$baseUrl|escape:javascript}'
+								uploadUrl: {plugin_url|json_encode path="uploadImportXML" escape=false},
+								baseUrl: {$baseUrl|json_encode}
 							{rdelim}
 					{rdelim}
 				);
@@ -66,7 +66,7 @@
 		</script>
 		<form id="exportSubmissionXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
 			{fbvFormArea id="submissionsXmlForm"}
-				{url|assign:submissionsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.submissions.exportableSubmissions.ExportableSubmissionsListGridHandler" op="fetchGrid"}
+				{url|assign:submissionsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.submissions.exportableSubmissions.ExportableSubmissionsListGridHandler" op="fetchGrid" escape=false}
 				{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
 				{fbvFormButtons hideCancel="true"}
 			{/fbvFormArea}
@@ -81,7 +81,7 @@
 		</script>
 		<form id="exportIssuesXmlForm" class="pkp_form" action="{plugin_url path="exportIssues"}" method="post">
 			{fbvFormArea id="issuesXmlForm"}
-				{url|assign:issuesListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.issues.ExportableIssuesListGridHandler" op="fetchGrid"}
+				{url|assign:issuesListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.issues.ExportableIssuesListGridHandler" op="fetchGrid" escape=false}
 				{load_url_in_div id="issuesListGridContainer" url=$issuesListGridUrl}
 				{fbvFormButtons hideCancel="true"}
 			{/fbvFormArea}

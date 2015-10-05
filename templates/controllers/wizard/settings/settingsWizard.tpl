@@ -15,9 +15,9 @@
 		$('#settingsWizard').pkpHandler(
 				'$.pkp.controllers.wizard.WizardHandler',
 			{ldelim}
-				cancelButtonText: '{translate|escape:javascript key="common.cancel"}',
-				continueButtonText: '{translate|escape:javascript key="common.continue"}',
-				finishButtonText: '{translate|escape:javascript key="common.finish"}'
+				cancelButtonText: {translate|json_encode key="common.cancel"},
+				continueButtonText: {translate|json_encode key="common.continue"},
+				finishButtonText: {translate|json_encode key="common.finish"}
 			{rdelim});
 	{rdelim});
 </script>

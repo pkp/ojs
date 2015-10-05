@@ -30,7 +30,7 @@
 	{load_url_in_div id="productionReadyFilesGridDiv" url=$productionReadyFilesGridUrl}
 
  	{if array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR), $userRoles)}
-		{url|assign:representationsGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.articleGalleys.ArticleGalleyGridHandler" op="fetchGrid" submissionId=$submission->getId()}
+		{url|assign:representationsGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.articleGalleys.ArticleGalleyGridHandler" op="fetchGrid" submissionId=$submission->getId() escape=false}
 		{load_url_in_div id="formatsGridContainer"|uniqid url=$representationsGridUrl}
 	{/if}
 

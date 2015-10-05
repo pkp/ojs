@@ -152,7 +152,7 @@
 		<td class="value">
 			<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.clearURNs.description"}</span>
 			<br />
-			<input type="submit" name="clearPubIds" value="{translate key="plugins.pubIds.urn.manager.settings.clearURNs"}" onclick="return confirm('{translate|escape:"jsparam" key="plugins.pubIds.urn.manager.settings.clearURNs.confirm"}')" class="action"/>
+			<input type="submit" name="clearPubIds" value="{translate key="plugins.pubIds.urn.manager.settings.clearURNs"}" onclick="return confirm({translate|json_encode key="plugins.pubIds.urn.manager.settings.clearURNs.confirm"})" class="action"/>
 		</td>
 	</tr>
 </table>
