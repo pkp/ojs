@@ -37,8 +37,8 @@
 	<message key="plugins.reports.usageStats.report.description">OJS-Standardbericht zur Nutzungsstatistik (COUNTER-fähig)</message>
 
 	<message key="plugins.generic.usageStats.optout.description"><![CDATA[
-		<h3>Allgemeine Datenschutzhinweise</h3>
-		<p>Unsere allgemeinen Datenschutzhinweise finden Sie <a href="{$privacyStatementUrl}">hier</a>.</p>
+		<h3>Allgemeine Datenschutz-Hinweise</h3>
+		<p>Unsere allgemeinen Datenschutz-Hinweise finden Sie <a href="{$privacyStatementUrl}">hier</a>.</p>
 		<h3>Nutzungsstatistik</h3>
 		<p>Zum Zwecke der Analyse von Nutzung und Reichweite unseres Journals sowie der hier publizierten Artikel dokumentieren und speichern wir die Zugriffe auf die Hauptseite des Journals, auf Ausgaben, Artikel, Fahnen und zusätzlichen Dateien. Dabei werden alle Informationen anonymisiert. IP-Adressen werden mittels eines Hash-Algorithmus (<em>SHA 256</em>) in Kombination mit einem <em>sicheren 64-Zeichen Salt</em> anonymisiert. Der Salt wird <em>automatisch zufallsgeneriert und täglich überschrieben.</em> Auf diese Weise können IP-Adressen nachträglich nicht mehr rekonstruiert werden.</p>
 		<p>Über die anonymisierten IP-Adressen hinaus werden folgende Daten erhoben:</p>

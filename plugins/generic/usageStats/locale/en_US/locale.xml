@@ -20,8 +20,8 @@
 	<message key="plugins.generic.usageStats.settings.saved">Usage statistics plugin settings saved</message>
 	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Data privacy option</message>
 	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements">In order to be able to activate this option, the file where the salt will be saved has to be defined: insert the section '[usageSats]' in the config.inc.php and define the variable 'salt_filepath' there. The file must exist and it must be writable for the web user. For further information on the requirements for this plugin option please see the plugin README file.</message>
-	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Activate this option if you would like to use a plugin version that considers the privacy legislations: the logged IP addresses are hashed using a daily randomly generated salt, the users are informed about the tracking and an opt-out option is provided for the users. Note: using this option you will not be able to use the geo location features of the plugin.</message>
-	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Consider data privacy</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Activate this option to use a plugin version that respects privacy legislations, i.e. that is logging hashed IP addresses, informs the users about the tracking and provides an opt-out option for users. Note: when using this option you will not be able to use the geo features of the plugin.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Respect data privacy</message>
 
 	<message key="plugins.generic.usageStats.usageStatsLoaderName">Usage statistics file loader task</message>
 	<message key="plugins.generic.usageStats.openFileFailed">The file {$file} could not be opened and was rejected.</message>
@@ -57,7 +57,7 @@
 		</ul>
 		<p>The collected data is only used for evaluation purposes. No IP addresses are mapped to user IDs. It is technically impossible to trace a specific set of data to a specific IP address.</p>]]></message> 
 	<message key="plugins.generic.usageStats.optout.done"><![CDATA[
-		<p>You successfully opted out from usage statistics collection. While you see this message no statictics will be collected from your usage of this site. Click the below button to revert your decision.</p>]]></message>
+		<p>You successfully opted out of usage statistics collection. While you see this message no statictics will be collected from your usage of this site. Click the below button to revert your decision.</p>]]></message>
 	<message key="plugins.generic.usageStats.optin">Opt In</message>
 	<message key="plugins.generic.usageStats.optout">Opt Out</message>
 	<message key="plugins.generic.usageStats.optout.cookie"><![CDATA[
