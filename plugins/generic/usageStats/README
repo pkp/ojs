@@ -2,7 +2,7 @@ Data Privacy Option
 --------------------
 
 REQUIREMENTS:
-In order to use the data privacy option, insert the section "[usageSats]" in the
+In order to use the data privacy option, insert the section "[usageStats]" in the
 config.inc.php file and define the variable "salt_filepath" there, e.g. like this:
 
 [usageStats]

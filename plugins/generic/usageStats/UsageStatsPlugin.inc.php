@@ -164,7 +164,7 @@ class UsageStatsPlugin extends GenericPlugin {
 			$this->import('UsageStatsReportPlugin');
 			$plugin = new UsageStatsReportPlugin();
 		}
-		if ($category ==  'blocks') {
+		if ($category ==  'blocks' && $this->getSetting(CONTEXT_ID_NONE, 'dataPrivacyOption')) {
 			$this->import('UsageStatsOptoutBlockPlugin');
 			$plugin = new UsageStatsOptoutBlockPlugin($this->getName());
 		}
