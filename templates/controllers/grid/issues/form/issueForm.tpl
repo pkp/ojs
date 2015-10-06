@@ -15,7 +15,7 @@
 			{ldelim}
 				$uploader: $('#pluploadcss'),
 				uploaderOptions: {ldelim}
-					uploadUrl: {url|json_encode op="uploadFile" escape=false}',
+					uploadUrl: {url|json_encode op="uploadFile" escape=false},
 					baseUrl: {$baseUrl|json_encode}
 				{rdelim}
 			{rdelim}
