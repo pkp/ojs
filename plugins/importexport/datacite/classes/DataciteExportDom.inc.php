@@ -285,6 +285,8 @@ class DataciteExportDom extends DOIExportDom {
 				$cache->markComplete('suppFilesByArticle', $articleId);
 				$suppFilesByArticle = $cache->get('suppFilesByArticle', $articleId);
 			}
+		} else {
+			$suppFilesByArticle = $cache->get('suppFilesByArticle', $articleId);
 		}
 		return $suppFilesByArticle;
 	}

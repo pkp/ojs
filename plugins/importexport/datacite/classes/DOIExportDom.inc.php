@@ -336,6 +336,8 @@ class DOIExportDom {
 				$cache->markComplete('articlesByIssue', $issueId);
 				$articlesByIssue = $cache->get('articlesByIssue', $issueId);
 			}
+		} else {
+			$articlesByIssue = $cache->get('articlesByIssue', $issueId);
 		}
 		return $articlesByIssue;
 	}
@@ -361,6 +363,8 @@ class DOIExportDom {
 				$cache->markComplete('galleysByArticle', $articleId);
 				$galleysByArticle = $cache->get('galleysByArticle', $articleId);
 			}
+		} else {
+			$galleysByArticle = $cache->get('galleysByArticle', $articleId);
 		}
 		return $galleysByArticle;
 	}
