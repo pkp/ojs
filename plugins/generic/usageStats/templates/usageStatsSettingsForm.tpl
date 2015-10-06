@@ -30,8 +30,18 @@
 		{fbvFormSection title="plugins.generic.usageStats.settings.logParseRegex" description="plugins.generic.usageStats.settings.logParseRegex.description"}
 			{fbvElement type="text" id="accessLogFileParseRegex" value=$accessLogFileParseRegex"}
 		{/fbvFormSection}
+	{/fbvFormArea}
+	{fbvFormArea id="usageStatsDataPrivacy" title="plugins.generic.usageStats.settings.dataPrivacyOption"}
+		{if $saltFilepath}
+			{assign var="disabled" value=false}
+		{else}
+			{assign var="disabled" value=true}
+		{/if}
+		{if $disabled}
+			<p>{translate key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements"}</p>
+		{/if}
 		{fbvFormSection for="dataPrivacyOption" list=true description="plugins.generic.usageStats.settings.dataPrivacyOption.description"}
-			{fbvElement type="checkbox" id="dataPrivacyOption" value="1" checked=$dataPrivacyOption label="plugins.generic.usageStats.settings.dataPrivacyOption"}
+			{fbvElement type="checkbox" id="dataPrivacyOption" value="1" checked=$dataPrivacyOption label="plugins.generic.usageStats.settings.dataPrivacyCheckbox" disabled=$disabled}
 		{/fbvFormSection}
 	{/fbvFormArea}
 	{fbvFormButtons id="usageStatsSettingsFormSubmit" submitText="common.save" hideCancel=true}
