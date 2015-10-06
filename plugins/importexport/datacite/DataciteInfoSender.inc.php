@@ -108,9 +108,8 @@ class DataciteInfoSender extends ScheduledTask {
 					$plugin->registerObjects($request, $exportSpec, $journal);
 				}
 			}
-
 		}
-
+		return true;
 	}
 
 	/**

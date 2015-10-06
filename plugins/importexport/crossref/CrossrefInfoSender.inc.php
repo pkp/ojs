@@ -80,7 +80,7 @@ class CrossrefInfoSender extends ScheduledTask {
 				$plugin->registerObjects($request, $exportSpec, $journal);
 			}
 		}
-
+		return true;
 	}
 
 	/**
