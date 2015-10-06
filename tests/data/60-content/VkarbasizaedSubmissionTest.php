@@ -60,8 +60,8 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 		$this->waitJQuery();
 
 		// Upload a galley file
-		$this->waitForElementPresent('css=a[id^=component-articleGalleyFiles-][id*=-addFile-button-]');
-		$this->click('css=a[id^=component-articleGalleyFiles-][id*=-addFile-button-]');
+		$this->waitForElementPresent($selector='css=a[id^=component-articleGalleyFiles-][id*=-addFile-button-]');
+		$this->click($selector);
 		$this->uploadWizardFile('PDF');
 
 		$this->logOut();
