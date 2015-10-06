@@ -86,10 +86,12 @@ class ArticleGalleyForm extends Form {
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleylDao ArticleGalleyDAO */
 
 		$publicGalleyId = $this->getData('publicGalleyId');
-		if ($publicGalleyId) $galleyWithPublicGalleyId = $galleyDao->getGalleyByPubId('publisher-id', $publicGalleyId, $this->articleId);
-		if ($publicGalleyId && $galleyWithPublicGalleyId && $galleyWithPublicGalleyId->getId() != $this->galleyId) {
-			$this->addError('publicGalleyId', __('editor.publicGalleyIdentificationExists', array('publicIdentifier' => $publicGalleyId)));
-			$this->addErrorField('publicGalleyId');
+		if ($publicGalleyId) {
+			$galleyWithPublicGalleyId = $galleyDao->getGalleyByPubId('publisher-id', $publicGalleyId, $this->articleId);
+			if ($galleyWithPublicGalleyId && $galleyWithPublicGalleyId->getId() != $this->galleyId) {
+				$this->addError('publicGalleyId', __('editor.publicGalleyIdentificationExists', array('publicIdentifier' => $publicGalleyId)));
+				$this->addErrorField('publicGalleyId');
+			}
 		}
 
 		// Verify additional fields from public identifer plug-ins.
