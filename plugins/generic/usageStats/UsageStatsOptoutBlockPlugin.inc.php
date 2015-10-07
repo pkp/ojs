@@ -63,6 +63,13 @@ class UsageStatsOptoutBlockPlugin extends BlockPlugin {
 	}
 
 	/**
+	* @see PKPPlugin::isSitePlugin()
+	*/
+	function isSitePlugin() {
+		return false;
+	}
+
+	/**
 	 * @see PKPPlugin::getPluginPath()
 	 */
 	function getPluginPath() {
