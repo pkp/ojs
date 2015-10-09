@@ -127,15 +127,15 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 		while ($issue =& $issueIterator->next()) {
 			$issueArticles =& $publishedArticleDao->getPublishedArticles($issue->getId());
 			$issueArticlesNo = 0;
-			$allArticlesRegistered = true;
+			$allArticlesRegistered[$issue->getId()] = true;
 			foreach ($issueArticles as $issueArticle) {
-				$articleRegistered = $issueArticle->getData('crossref::registeredDoi');
+				$articleRegistered = $issueArticle->getData($this->getPluginId().'::registeredDoi');
 				if ($issueArticle->getPubId('doi') && !isset($articleRegistered)) {
 					if (!in_array($issue, $issues)) $issues[] = $issue;
 					$issueArticlesNo++;
 				}
-				if ($allArticlesRegistered && !isset($articleRegistered)) {
-					$allArticlesRegistered = false;
+				if ($allArticlesRegistered[$issue->getId()] && !isset($articleRegistered)) {
+					$allArticlesRegistered[$issue->getId()] = false;
 				}
 			}
 			$numArticles[$issue->getId()] = $issueArticlesNo;
