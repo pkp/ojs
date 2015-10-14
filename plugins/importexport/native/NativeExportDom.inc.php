@@ -295,7 +295,8 @@ class NativeExportDom {
 		$permissionsNode =& XMLCustomWriter::createElement($doc, 'permissions');
 		XMLCustomWriter::appendChild($root, $permissionsNode);
 		XMLCustomWriter::createChildWithText($doc, $permissionsNode, 'license_url', $article->getLicenseURL(), false);
-		foreach ($article->getCopyrightHolder(null) as $locale => $copyrightHolder) {
+		$copyrightHolders = $article->getCopyrightHolder(null);
+		if (is_array($copyrightHolders)) foreach ($copyrightHolders as $locale => $copyrightHolder) {
 			$copyrightHolderNode =& XMLCustomWriter::createChildWithText($doc, $permissionsNode, 'copyright_holder', $copyrightHolder, false);
 			if ($copyrightHolderNode) {
 				XMLCustomWriter::setAttribute($copyrightHolderNode, 'locale', $locale);
