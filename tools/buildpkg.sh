@@ -46,6 +46,7 @@ lib/pkp/tests							\
 lib/pkp/.git							\
 lib/pkp/tools/travis						\
 lib/pkp/tools/mergePullRequest.sh				\
+lib/password_compat/.git					\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/test					\
 plugins/generic/pdfJsViewer/.git"
