@@ -169,7 +169,7 @@ class PiwikPlugin extends GenericPlugin {
 			$piwikSiteId = $this->getSetting($journalId, 'piwikSiteId');
 			$piwikUrl = $this->getSetting($journalId, 'piwikUrl');
 			if (!empty($piwikSiteId) && !empty($piwikUrl)) {
-				$output = 	'<!-- Piwik -->'.
+				$output .= 	'<!-- Piwik -->'.
 						'<script type="text/javascript">'.
 						'var pkBaseURL = "'.$piwikUrl.'/";'.
 						'document.write(unescape("%3Cscript src=\'" + pkBaseURL + "piwik.js\' type=\'text/javascript\'%3E%3C/script%3E"));'.
