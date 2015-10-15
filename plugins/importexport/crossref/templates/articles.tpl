@@ -88,7 +88,7 @@
 			{else}
 				<tr>
 					<td colspan="2" align="left">{page_info iterator=$articles}</td>
-					<td colspan="3" align="right">{page_links anchor="articles" name="articles" iterator=$articles}</td>
+					<td colspan="4" align="right">{page_links anchor="articles" name="articles" iterator=$articles}</td>
 				</tr>
 			{/if}
 		</table>

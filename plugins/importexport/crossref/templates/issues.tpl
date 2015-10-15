@@ -46,7 +46,7 @@
 
 			{iterate from=issues item=issue}
 				{assign var="issueId" value=$issue->getId()}
-				{if $allArticlesRegistered}
+				{if $allArticlesRegistered[$issueId]}
 					{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.update"}{/capture}
 					{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.updateDescription"}{/capture}
 				{else}
