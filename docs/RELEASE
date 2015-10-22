@@ -110,3 +110,13 @@ Bug Fixes
 	i798: DOIExportDom fails to return cached objects
 	i799: DataCite and CrossRef scheduled tasks error e-mails
 
+
+Automated Build 2-4-7.1
+-----------------------
+This automated build adds the following fixes to the base release of OJS 2.4.7:
+
+	#550: [OJS] Disabled journals exposed in site-wide OAI
+	#817: [OJS] lib/password_compat includes .git file in release tarball
+	#818: Native export fails when missing copyright holders
+	#819: piwik plugin doesn't play well with others
+	#822: Wrong URL when exporting and registering DOIs via command line
