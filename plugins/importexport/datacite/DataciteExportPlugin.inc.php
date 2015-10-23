@@ -383,19 +383,19 @@ class DataciteExportPlugin extends DOIExportPlugin {
 		$url = null;
 		switch (true) {
 			case is_a($object, 'Issue'):
-				$url = $router->url($request, null, 'issue', 'view', $object->getBestIssueId($journal));
+				$url = $router->url($request, $journal->getPath(), 'issue', 'view', $object->getBestIssueId($journal));
 				break;
 
 			case is_a($object, 'PublishedArticle'):
-				$url = $router->url($request, null, 'article', 'view', $object->getBestArticleId($journal));
+				$url = $router->url($request, $journal->getPath(), 'article', 'view', $object->getBestArticleId($journal));
 				break;
 
 			case is_a($object, 'ArticleGalley'):
-				$url = $router->url($request, null, 'article', 'view', array($article->getBestArticleId($journal), $object->getBestGalleyId($journal)));
+				$url = $router->url($request, $journal->getPath(), 'article', 'view', array($article->getBestArticleId($journal), $object->getBestGalleyId($journal)));
 				break;
 
 			case is_a($object, 'SuppFile'):
-				$url = $router->url($request, null, 'article', 'downloadSuppFile', array($article->getBestArticleId($journal), $object->getBestSuppFileId($journal)));
+				$url = $router->url($request, $journal->getPath(), 'article', 'downloadSuppFile', array($article->getBestArticleId($journal), $object->getBestSuppFileId($journal)));
 				break;
 		}
 
