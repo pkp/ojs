@@ -249,7 +249,7 @@ session_check_ip = On
 ; Valid values are: md5, sha1
 ; NOTE: This hashing method is deprecated, but necessary to permit gradual
 ; migration of old password hashes.
-encryption = md5
+encryption = sha1
 
 ; The unique salt to use for generating password reset hashes
 salt = "YouMustSetASecretKeyHere!!"
