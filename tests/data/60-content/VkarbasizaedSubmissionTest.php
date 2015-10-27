@@ -51,8 +51,8 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 		$this->assignParticipant('Proofreader', 'Catherine Turner');
 
 		// Create a galley
-		$this->waitForElementPresent('css=[id^=component-grid-articlegalleys-articlegalleygrid-addItem-button-]');
-		$this->click('css=[id^=component-grid-articlegalleys-articlegalleygrid-addItem-button-]');
+		$this->waitForElementPresent($selector='css=[id^=component-grid-articlegalleys-articlegalleygrid-addFormat-button-]');
+		$this->click($selector);
 		$this->waitForElementPresent('css=[id^=label-]');
 		$this->type('css=[id^=label-]', 'PDF');
 		$this->select('id=galleyType', 'PDF.JS PDF Viewer');
@@ -60,7 +60,7 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 		$this->waitJQuery();
 
 		// Upload a galley file
-		$this->waitForElementPresent($selector='css=a[id^=component-articleGalleyFiles-][id*=-addFile-button-]');
+		$this->waitForElementPresent($selector='//table[contains(@id,\'component-grid-articlegalleys-articlegalleygrid-\')]//span[contains(.,\'PDF\')]/../a[contains(@id,\'-name-addFile-button-\')]');
 		$this->click($selector);
 		$this->uploadWizardFile('PDF');
 
