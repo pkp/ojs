@@ -139,7 +139,7 @@ class ArticleGalleyGridHandler extends RepresentationsGridHandler {
 		import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
 		$articleGalleyForm = new ArticleGalleyForm($request, $submission, $representation);
 		$articleGalleyForm->readInputData();
-		if ($articleGalleyForm->validate()) {
+		if ($articleGalleyForm->validate($request)) {
 			$articleGalleyForm->execute($request);
 			return DAO::getDataChangedEvent();
 		}
