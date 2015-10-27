@@ -32,3 +32,119 @@
 
 // Temporary back-porting styling
 @import "styles/citationEditor.less";
+
+// Workflow > Publication > Galleys Grid
+[id^=formatsGridContainer] {
+
+    .category {
+        font-size: @font-base;
+    }
+
+    .pkp_controllers_grid td {
+        line-height: 30px; // larger to fit our special buttons
+    }
+
+    .onix_code {
+        margin-left: 1em;
+        font-size: 12px;
+        color: @text-light;
+        font-weight: @normal;
+    }
+
+    .pkp_controllers_grid .category .label.before_actions {
+        display: block;
+        margin: 0;
+        padding: 0;
+        background: transparent;
+        font-size: @font-sml;
+        font-weight: @bold;
+        color: @text;
+    }
+
+    .pkp_linkaction_deleteFormat {
+        color: @no;
+    }
+
+    .gridRow.category {
+
+        .first_column .pkp_controllers_linkAction {
+            margin-right: 1em;
+        }
+    }
+
+    .gridRow {
+        font-size: @font-sml;
+
+        &:not(.category) {
+
+            .first_column {
+                padding-left: @double * 2;
+            }
+
+            .sprite.show_extras,
+            .sprite.hide_extras {
+                left: @double;
+            }
+        }
+    }
+
+    .row_controls:not(.category_controls) td:first-child {
+        padding-left: @double * 2;
+    }
+
+    // Complete checkboxes
+    .pkp_linkaction_approved,
+    .pkp_linkaction_not_approved,
+    .pkp_linkaction_approveRepresentation {
+        display: inline-block;
+        padding: 5px 1em;
+        border: 1px solid fade(@primary-lift, 60%);
+        border-radius: @radius;
+        font-size: 12px;
+        line-height: 20px;
+        text-decoration: none;
+
+        &:before {
+            &:extend(.fa);
+            margin-right:  0.5em;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: @primary-lift;
+            background: @primary-lift;
+            color: #fff;
+
+            &:before {
+                color: #fff;
+            }
+        }
+    }
+
+    .pkp_linkaction_icon_complete,
+    .pkp_linkaction_approved {
+        border-color: @yes;
+        background: @yes;
+        color: #fff;
+
+        &:before {
+            color: #fff;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: @yes-lift;
+            background: @yes-lift;
+        }
+    }
+
+    .pkp_linkaction_not_approved:before,
+    .pkp_linkaction_icon_incomplete:before {
+        content: @fa-var-square-o;
+    }
+
+    .pkp_linkaction_approved:before,
+    .pkp_linkaction_icon_complete:before {
+        content: @fa-var-check-square-o;
+    }
+}

@@ -1150,4 +1150,9 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="user.profile.form.hideOtherContexts">Hide Other Journals</message>
 
 	<message key="article.view.interstitial">Please choose an article file to download.</message>
+	<message key="grid.catalogEntry.availableRepresentation.approved">Approved</message>
+	<message key="grid.catalogEntry.availableRepresentation.notApproved">Awaiting Approval</message>
+	<message key="grid.catalogEntry.approvedRepresentation.title">Galley Approval</message>
+	<message key="grid.catalogEntry.approvedRepresentation.message"><![CDATA[<p>Approve this galley for publication.</p>]]></message>
+	<message key="grid.catalogEntry.approvedRepresentation.removeMessage"><![CDATA[<p>Remove approval of this galley.</p>]]></message>
 </locale>

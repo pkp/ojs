@@ -234,7 +234,7 @@ class ArticleGalleyDAO extends RepresentationDAO {
 		$galley->setLabel($row['label']);
 		$galley->setSeq($row['seq']);
 		$galley->setRemoteURL($row['remote_url']);
-		$galley->setIsAvailable($row['is_available']);
+		$galley->setIsApproved($row['is_approved']);
 		$galley->setGalleyType($row['galley_type']);
 
 		$this->getDataObjectSettings('submission_galley_settings', 'galley_id', $row['galley_id'], $galley);
@@ -251,7 +251,7 @@ class ArticleGalleyDAO extends RepresentationDAO {
 	function insertObject($galley) {
 		$this->update(
 			'INSERT INTO submission_galleys
-				(submission_id, label, locale, seq, remote_url, is_available, galley_type)
+				(submission_id, label, locale, seq, remote_url, is_approved, galley_type)
 				VALUES
 				(?, ?, ?, ?, ?, ?, ?)',
 			array(
@@ -260,7 +260,7 @@ class ArticleGalleyDAO extends RepresentationDAO {
 				$galley->getLocale(),
 				$galley->getSeq() == null ? $this->getNextGalleySequence($galley->getSubmissionId()) : $galley->getSeq(),
 				$galley->getRemoteURL(),
-				$galley->getIsAvailable()?1:0,
+				$galley->getIsApproved()?1:0,
 				$galley->getGalleyType(),
 			)
 		);
@@ -284,7 +284,7 @@ class ArticleGalleyDAO extends RepresentationDAO {
 					locale = ?,
 					seq = ?,
 					remote_url = ?,
-					is_available = ?,
+					is_approved = ?,
 					galley_type = ?
 				WHERE galley_id = ?',
 			array(
@@ -292,7 +292,7 @@ class ArticleGalleyDAO extends RepresentationDAO {
 				$galley->getLocale(),
 				$galley->getSeq(),
 				$galley->getRemoteURL(),
-				(int) $galley->getIsAvailable(),
+				(int) $galley->getIsApproved(),
 				$galley->getGalleyType(),
 				(int) $galley->getId(),
 			)

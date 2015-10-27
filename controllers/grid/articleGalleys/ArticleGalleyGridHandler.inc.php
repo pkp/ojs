@@ -8,288 +8,187 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyGridHandler
- * @ingroup controllers_grid_issues
+ * @ingroup controllers_grid_articleGalleys
  *
- * @brief Handle issues grid requests.
+ * @brief Handle article galley grid requests.
  */
 
-import('lib.pkp.classes.controllers.grid.GridHandler');
-import('controllers.grid.articleGalleys.ArticleGalleyGridRow');
+import('lib.pkp.controllers.grid.representations.RepresentationsGridHandler');
 
-class ArticleGalleyGridHandler extends GridHandler {
+class ArticleGalleyGridHandler extends RepresentationsGridHandler {
+	/** @var PublicationFormatGridCellProvider */
+	var $_cellProvider;
+
 	/**
 	 * Constructor
 	 */
 	function ArticleGalleyGridHandler() {
-		parent::GridHandler();
-		$this->addRoleAssignment(
-			array(ROLE_ID_MANAGER),
-			array(
-				'fetchGrid', 'fetchRow', 'saveSequence',
-				'add', 'edit', 'update', 'delete',
-				'setAvailable'
-			)
-		);
+		parent::RepresentationsGridHandler();
 	}
 
 
-	//
-	// Implement template methods from PKPHandler
-	//
 	/**
-	 * @copydoc PKPHandler::authorize()
+	 * Configure the grid
+	 * @param $request PKPRequest
 	 */
-	function authorize($request, &$args, $roleAssignments) {
-		import('lib.pkp.classes.security.authorization.PkpContextAccessPolicy');
-		$this->addPolicy(new PkpContextAccessPolicy($request, $roleAssignments));
-
-		import('lib.pkp.classes.security.authorization.SubmissionAccessPolicy');
-		$this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments));
-
-		// If a representation was specified, authorize it.
-		if ($request->getUserVar('representationId')) {
-			import('lib.pkp.classes.security.authorization.internal.RepresentationRequiredPolicy');
-			$this->addPolicy(new RepresentationRequiredPolicy($request, $args));
-		}
-
-		return parent::authorize($request, $args, $roleAssignments);
-	}
-
-	/**
-	 * @copydoc GridHandler::getDataElementSequence()
-	 */
-	function getDataElementSequence($articleGalley) {
-		return $articleGalley->getSeq();
-	}
-
-	/**
-	 * @copydoc GridHandler::setDataElementSequence()
-	 */
-	function setDataElementSequence($request, $rowId, &$articleGalley, $newSequence) {
-		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
-		$articleGalley->setSeq($newSequence);
-		$articleGalleyDao->updateObject($articleGalley);
-	}
-
-	/**
-	 * @copydoc GridHandler::addFeatures()
-	 */
-	function initFeatures($request, $args) {
-		import('lib.pkp.classes.controllers.grid.feature.OrderGridItemsFeature');
-		return array(new OrderGridItemsFeature());
-	}
-
-	/**
-	 * @copydoc GridDataProvider::getRequestArgs()
-	 */
-	function getRequestArgs() {
-		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		$articleGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
-		$requestArgs = (array) parent::getRequestArgs();
-		$requestArgs['submissionId'] = $submission->getId();
-		if ($articleGalley) $requestArgs['representationId'] = $articleGalley->getId();
-		return $requestArgs;
-	}
-
-	/**
-	 * @copydoc PKPHandler::initialize()
-	 */
-	function initialize($request, $args) {
-		parent::initialize($request, $args);
-
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION,LOCALE_COMPONENT_APP_SUBMISSION);
+	function initialize($request) {
+		parent::initialize($request);
 
 		$this->setTitle('submission.layout.galleys');
 
-		// Add action
+		// Load submission-specific translations
+		AppLocale::requireComponents(
+			LOCALE_COMPONENT_APP_SUBMISSION,
+			LOCALE_COMPONENT_APP_DEFAULT,
+			LOCALE_COMPONENT_APP_EDITOR
+		);
+
+		// Grid actions
 		$router = $request->getRouter();
-		import('lib.pkp.classes.linkAction.request.AjaxModal');
+		$actionArgs = $this->getRequestArgs();
 		$this->addAction(
 			new LinkAction(
-				'addItem',
+				'addFormat',
 				new AjaxModal(
-					$router->url(
-						$request, null, null, 'add', null,
-						array_merge($this->getRequestArgs(), array('gridId' => $this->getId()))
-					),
+					$router->url($request, null, null, 'addFormat', null, $actionArgs),
 					__('submission.layout.addGalley'),
-					'modal_add_file'
+					'modal_add_item'
 				),
 				__('submission.layout.addGalley'),
-				'add'
+				'add_item'
 			)
 		);
 
-		// Grid columns.
-		import('controllers.grid.articleGalleys.ArticleGalleyGridCellProvider');
-		$articleGalleyGridCellProvider = new ArticleGalleyGridCellProvider();
-
-		// Issue identification
+		// Columns
+		$submission = $this->getSubmission();
+		import('lib.pkp.controllers.grid.representations.RepresentationsGridCellProvider');
+		$this->_cellProvider = new RepresentationsGridCellProvider($submission->getId());
 		$this->addColumn(
 			new GridColumn(
-				'label',
-				'submission.layout.galleyLabel',
+				'name',
+				'common.name',
 				null,
 				null,
-				$articleGalleyGridCellProvider
+				$this->_cellProvider,
+				array('width' => 60, 'anyhtml' => true)
 			)
 		);
-
-		// Language, if more than one is supported
-		$journal = $request->getJournal();
-		if (count($journal->getSupportedLocaleNames())>1) {
-			$this->addColumn(
-				new GridColumn(
-					'locale',
-					'common.language',
-					null,
-					null,
-					$articleGalleyGridCellProvider
-				)
-			);
-		}
-
-		// Public ID, if enabled
-		if ($journal->getSetting('enablePublicGalleyId')) {
-			$this->addColumn(
-				new GridColumn(
-					'publicGalleyId',
-					'submission.layout.publicGalleyId',
-					null,
-					null,
-					$articleGalleyGridCellProvider
-				)
-			);
-		}
-
 		$this->addColumn(
 			new GridColumn(
-				'isAvailable',
-				'common.available',
+				'isComplete',
+				'common.complete',
 				null,
 				'controllers/grid/common/cell/statusCell.tpl',
-				$articleGalleyGridCellProvider
+				$this->_cellProvider,
+				array('width' => 20)
 			)
 		);
 	}
 
 
-	/**
-	 * Get the row handler - override the default row handler
-	 * @return ArticleGalleyGridRow
-	 */
-	protected function getRowInstance() {
-		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		return new ArticleGalleyGridRow($submission->getId());
-	}
-
 	//
-	// Public operations
+	// Overridden methods from GridHandler
 	//
 	/**
-	 * An action to add a new galley.
-	 * @param $args array
-	 * @param $request PKPRequest
+	 * @see GridHandler::getRowInstance()
+	 * @return RepresentationsGridCategoryRow
 	 */
-	function add($args, $request) {
-		// Calling editArticleData with an empty ID will add
-		// a new issue.
-		return $this->edit($args, $request);
+	function getCategoryRowInstance() {
+		return new RepresentationsGridCategoryRow($this->getSubmission(), $this->_cellProvider);
 	}
 
+
+	//
+	// Public Publication Format Grid Actions
+	//
 	/**
-	 * An action to edit a submission galley
+	 * Edit a format
 	 * @param $args array
 	 * @param $request PKPRequest
 	 * @return JSONMessage JSON object
 	 */
-	function edit($args, $request) {
-		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		$articleGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
+	function editFormat($args, $request) {
+		$submission = $this->getSubmission();
+		$representationDao = Application::getRepresentationDAO();
+		$representation = $representationDao->getById(
+			$request->getUserVar('representationId'),
+			$submission->getId()
+		);
 
 		import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
-		$articleGalleyForm = new ArticleGalleyForm($request, $submission, $articleGalley);
+		$articleGalleyForm = new ArticleGalleyForm($request, $submission, $representation);
 		$articleGalleyForm->initData();
+
 		return new JSONMessage(true, $articleGalleyForm->fetch($request));
 	}
 
 	/**
-	 * Update a issue
+	 * Update a format
 	 * @param $args array
 	 * @param $request PKPRequest
 	 * @return JSONMessage JSON object
 	 */
-	function update($args, $request) {
-		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		$articleGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
+	function updateFormat($args, $request) {
+		$submission = $this->getSubmission();
+		$representationDao = Application::getRepresentationDAO();
+		$representation = $representationDao->getById(
+			$request->getUserVar('representationId'),
+			$submission->getId()
+		);
 
 		import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
-		$articleGalleyForm = new ArticleGalleyForm($request, $submission, $articleGalley);
+		$articleGalleyForm = new ArticleGalleyForm($request, $submission, $representation);
 		$articleGalleyForm->readInputData();
-
-		if ($articleGalleyForm->validate($request)) {
-			$galleyId = $articleGalleyForm->execute($request);
-			return DAO::getDataChangedEvent($galleyId);
-		} else {
-			return new JSONMessage(false);
+		if ($articleGalleyForm->validate()) {
+			$articleGalleyForm->execute($request);
+			return DAO::getDataChangedEvent();
 		}
+		return new JSONMessage(true, $articleGalleyForm->fetch($request));
 	}
 
 	/**
-	 * Removes an issue galley
+	 * Delete a format
 	 * @param $args array
 	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
 	 */
-	function delete($args, $request) {
-		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$articleGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
-		$articleGalleyDao->deleteObject($articleGalley);
+	function deleteFormat($args, $request) {
+		$context = $request->getContext();
+		$submission = $this->getSubmission();
+		$representationDao = Application::getRepresentationDAO();
+		$representation = $representationDao->getById(
+			$request->getUserVar('representationId'),
+			$submission->getId()
+		);
+
+		if (!$representation || !$representationDao->deleteById($representation->getId())) {
+			return new JSONMessage(false, __('manager.setup.errorDeletingItem'));
+		}
+
 		return DAO::getDataChangedEvent();
 	}
 
 	/**
-	 * Set a galley's "available" state
+	 * Set a format's "approved" state
 	 * @param $args array
 	 * @param $request PKPRequest
 	 * @return JSONMessage JSON object
 	 */
-	function setAvailable($args, $request) {
-		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$articleGalley = $articleGalleyDao->getByBestGalleyId(
+	function setApproved($args, $request) {
+		$submission = $this->getSubmission();
+		$representationDao = Application::getRepresentationDAO();
+		$representation = $representationDao->getById(
 			$request->getUserVar('representationId'),
-			$submission->getId() // Make sure to validate the context.
+			$submission->getId()
 		);
 
-		if ($articleGalley) {
-			$newAvailableState = (int) $request->getUserVar('newAvailableState');
-			$articleGalley->setIsAvailable($newAvailableState);
-			$articleGalleyDao->updateObject($articleGalley);
+		if (!$representation) return new JSONMessage(false, __('manager.setup.errorDeletingItem'));
 
-			// log the state changing of the format.
-			import('lib.pkp.classes.log.SubmissionLog');
-			import('classes.log.SubmissionEventLogEntry');
-			SubmissionLog::logEvent(
-				$request, $submission,
-				$newAvailableState?SUBMISSION_LOG_LAYOUT_GALLEY_AVAILABLE:SUBMISSION_LOG_LAYOUT_GALLEY_UNAVAILABLE,
-				$newAvailableState?'submission.event.articleGalleyMadeAvailable':'submission.event.articleGalleyMadeUnavailable',
-				array('galleyFormatName' => $articleGalley->getLocalizedName())
-			);
+		$newApprovedState = (int) $request->getUserVar('newApprovedState');
+		$representation->setIsApproved($newApprovedState);
+		$representationDao->updateObject($representation);
 
-			return DAO::getDataChangedEvent($articleGalley->getId());
-		} else {
-			return new JSONMessage(false, __('manager.setup.errorDeletingItem'));
-		}
-
-	}
-
-	/**
-	 * @copydoc GridHandler::loadData()
-	 */
-	protected function loadData($request, $filter) {
-		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		return $articleGalleyDao->getBySubmissionId($submission->getId());
+		return DAO::getDataChangedEvent($representation->getId());
 	}
 }
 

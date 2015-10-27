@@ -67,7 +67,7 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
 
 		$representation = parent::handleElement($node);
 
-		if ($node->getAttribute('available') == 'true') $representation->setIsAvailable(true);
+		if ($node->getAttribute('approved') == 'true') $representation->setIsApproved(true);
 
 		$galleyType = $node->getAttribute('galley_type');
 		$representation->setGalleyType($galleyType);

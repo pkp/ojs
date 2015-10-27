@@ -73,7 +73,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 				$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 				$articleGalley = $articleGalleyDao->newDataObject();
 				$articleGalley->setGalleyType('pdfarticlegalleyplugin');
-				$articleGalley->setIsAvailable(true);
+				$articleGalley->setIsApproved(true);
 				$articleGalley->setSubmissionId($submission->getId());
 				$articleGalley->setLocale($submission->getLocale());
 				$articleGalley->setLabel('PDF');

@@ -162,22 +162,6 @@ class ArticleGalley extends Representation {
 	}
 
 	/**
-	 * Determines if a galley is available or not.
-	 * @return boolean
-	 */
-	function getIsAvailable() {
-		return (boolean) $this->getData('isAvailable');
-	}
-
-	/**
-	 * Sets whether a galley is available or not.
-	 * @param boolean $isAvailable
-	 */
-	function setIsAvailable($isAvailable) {
-		return $this->setData('isAvailable', $isAvailable);
-	}
-
-	/**
 	 * Set the type of this galley, which maps to an articleGalley plugin.
 	 * @param string $galleyType
 	 */
