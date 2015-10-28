@@ -21,6 +21,12 @@ class UsageStatsPlugin extends GenericPlugin {
 	/** @var $_currentUsageEvent array */
 	var $_currentUsageEvent;
 
+	/** @var $_dataPrivacyOn boolean */
+	var $_dataPrivacyOn;
+
+	/** @var $_optedOut boolean */
+	var $_optedOut;
+
 	/**
 	* Constructor.
 	*/
@@ -52,6 +58,15 @@ class UsageStatsPlugin extends GenericPlugin {
 			// register to the usage event hook provider.
 			if ($this->getSetting(CONTEXT_ID_NONE, 'createLogFiles')) {
 				HookRegistry::register('UsageEventPlugin::getUsageEvent', array(&$this, 'logUsageEvent'));
+			}
+
+			$this->_dataPrivacyOn = $this->getSetting(CONTEXT_ID_NONE, 'dataPrivacyOption');
+			$application = Application::getApplication();
+			$request = $application->getRequest();
+			$this->_optedOut = $request->getCookieVar('usageStats-opt-out');
+			if ($this->_optedOut) {
+				// Renew the Opt-Out cookie if present.
+				$request->setCookieVar('usageStats-opt-out', true, time() + 60*60*24*365);
 			}
 		}
 
@@ -217,17 +232,9 @@ class UsageStatsPlugin extends GenericPlugin {
 	function logUsageEvent($hookName, $args) {
 		$hookName = $args[0];
 		$usageEvent = $args[1];
-
-		// Check (and renew) the statistics opt-out.
-		$application = Application::getApplication();
-		$request = $application->getRequest();
-		$optedOut = $request->getCookieVar('usageStats-opt-out');
-
-		if ($optedOut) {
-			// Renew the Opt-Out cookie if present.
-			$request->setCookieVar('usageStats-opt-out', true, time() + 60*60*24*365);
-			return false;
-		}
+		
+		// Check the statistics opt-out.
+		if ($this->_optedOut) return false;
 
 		if ($hookName == 'FileManager::downloadFileFinished' && !$usageEvent && $this->_currentUsageEvent) {
 			// File download is finished, try to log the current usage event.
@@ -307,7 +314,7 @@ class UsageStatsPlugin extends GenericPlugin {
 	 */
 	function _writeUsageEventInLogFile($usageEvent) {
 		$salt = null;
-		if ($this->getSetting(CONTEXT_ID_NONE, 'dataPrivacyOption')) {
+		if ($this->_dataPrivacyOn) {
 			// Salt management.
 			if (!Config::getVar('usageStats', 'salt_filepath')) return false;
 			$saltFilename = Config::getVar('usageStats', 'salt_filepath');
@@ -339,7 +346,7 @@ class UsageStatsPlugin extends GenericPlugin {
 		}
 
 		// Manage the IP address (evtually hash it)
-		if ($this->getSetting(CONTEXT_ID_NONE, 'dataPrivacyOption')) {
+		if ($this->_dataPrivacyOn) {
 			if (!isset($salt)) return false;
 			// Hash the IP
 			$hashedIp = $this->_hashIp($usageEvent['ip'], $salt);
@@ -356,7 +363,7 @@ class UsageStatsPlugin extends GenericPlugin {
 			$desiredParams[] = '-';
 		}
 
-		if (!$this->getSetting(CONTEXT_ID_NONE, 'dataPrivacyOption') && isset($usageEvent['user'])) {
+		if (!$this->_dataPrivacyOn && isset($usageEvent['user'])) {
 			$desiredParams[] = $usageEvent['user']->getId();
 		} else {
 			$desiredParams[] = '-';
