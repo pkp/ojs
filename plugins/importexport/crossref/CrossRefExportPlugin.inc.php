@@ -130,7 +130,8 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 			$allArticlesRegistered[$issue->getId()] = true;
 			foreach ($issueArticles as $issueArticle) {
 				$articleRegistered = $issueArticle->getData($this->getPluginId().'::registeredDoi');
-				if ($issueArticle->getPubId('doi') && !isset($articleRegistered)) {
+				$errors = array();
+				if ($this->canBeExported($issueArticle, $errors) && !isset($articleRegistered)) {
 					if (!in_array($issue, $issues)) $issues[] = $issue;
 					$issueArticlesNo++;
 				}
@@ -208,6 +209,7 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 			}
 			return parent::canBeExported($foundObject, $errors);
 		}
+		return false;
 	}
 
 	/**
