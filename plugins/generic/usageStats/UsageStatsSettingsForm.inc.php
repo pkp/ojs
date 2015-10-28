@@ -40,13 +40,14 @@ class UsageStatsSettingsForm extends Form {
 		$this->setData('createLogFiles', $plugin->getSetting(CONTEXT_ID_NONE, 'createLogFiles'));
 		$this->setData('accessLogFileParseRegex', $plugin->getSetting(CONTEXT_ID_NONE, 'accessLogFileParseRegex'));
 		$this->setData('dataPrivacyOption', $plugin->getSetting(CONTEXT_ID_NONE, 'dataPrivacyOption'));
+		$this->setData('selectedOptionalColumns', $plugin->getSetting(CONTEXT_ID_NONE, 'optionalColumns'));
 	}
 
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('createLogFiles','accessLogFileParseRegex', 'dataPrivacyOption'));
+		$this->readUserVars(array('createLogFiles','accessLogFileParseRegex', 'dataPrivacyOption', 'optionalColumns'));
 	}
 
 	/**
@@ -57,6 +58,7 @@ class UsageStatsSettingsForm extends Form {
 		$templateMgr->assign('pluginName', $this->plugin->getName());
 		$saltFilepath = Config::getVar('usageStats', 'salt_filepath');
 		$templateMgr->assign('saltFilepath', $saltFilepath && file_exists($saltFilepath) && is_writable($saltFilepath));
+		$templateMgr->assign('optionalColumnsOptions', $this->getOptionalColumnsList());
 		parent::display();
 	}
 
@@ -69,8 +71,25 @@ class UsageStatsSettingsForm extends Form {
 		$plugin->updateSetting(CONTEXT_ID_NONE, 'createLogFiles', $this->getData('createLogFiles'));
 		$plugin->updateSetting(CONTEXT_ID_NONE, 'accessLogFileParseRegex', $this->getData('accessLogFileParseRegex'));
 		$plugin->updateSetting(CONTEXT_ID_NONE, 'dataPrivacyOption', $this->getData('dataPrivacyOption'));
+
+		$optionalColumns = $this->getData('optionalColumns');
+		// Make sure optional columns data makes sense.
+		if (in_array(STATISTICS_DIMENSION_CITY, $optionalColumns) && !in_array(STATISTICS_DIMENSION_REGION, $optionalColumns)) {
+			$optionalColumns[] = STATISTICS_DIMENSION_REGION;
+		}
+		$plugin->updateSetting(CONTEXT_ID_NONE, 'optionalColumns', $optionalColumns);
 	}
 
+	/**
+	 * Get optional columns list.
+	 * @return array
+	 */
+	function getOptionalColumnsList() {
+		return array(
+			STATISTICS_DIMENSION_CITY => StatisticsHelper::getColumnNames(STATISTICS_DIMENSION_CITY),
+			STATISTICS_DIMENSION_REGION => StatisticsHelper::getColumnNames(STATISTICS_DIMENSION_REGION)
+		);
+	}
 }
 
 ?>
