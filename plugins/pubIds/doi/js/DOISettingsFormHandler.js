@@ -14,12 +14,10 @@
  * @brief Handle the DOI Settings form.
  */
 (function($) {
-
 	/** @type {Object} */
-	$.pkp.plugins.pubIds =
-			$.pkp.plugins.pubIds ||
-			{ doi: { js: { } } };
-
+	$.pkp.plugins.pubIds.doi =
+			$.pkp.plugins.pubIds.doi ||
+			{ js: { } };
 
 
 	/**

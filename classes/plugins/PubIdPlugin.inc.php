@@ -171,7 +171,7 @@ abstract class PubIdPlugin extends Plugin {
 				new LinkAction(
 					'settings',
 					new AjaxModal(
-						$router->url($request, null, null, 'plugin', null, $actionArgs),
+						$router->url($request, null, null, 'manage', null, $actionArgs),
 						$this->getDisplayName()
 					),
 					__('manager.plugins.settings'),

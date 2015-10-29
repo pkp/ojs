@@ -52,9 +52,9 @@ class DOISettingsForm extends Form {
 	 * @param $plugin DOIPubIdPlugin
 	 * @param $journalId integer
 	 */
-	function DOISettingsForm(&$plugin, $journalId) {
+	function DOISettingsForm($plugin, $journalId) {
 		$this->_journalId = $journalId;
-		$this->_plugin =& $plugin;
+		$this->_plugin = $plugin;
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
@@ -83,7 +83,6 @@ class DOISettingsForm extends Form {
 		);
 		$this->setData('clearPubIdsLinkAction', $clearPubIdsLinkAction);
 		$this->setData('pluginName', $plugin->getName());
-		$this->setData('doiSettingsHandlerJsUrl', $plugin->getJSFileUrl($request));
 	}
 
 
