@@ -53,8 +53,8 @@ class UsageStatsReportPlugin extends ReportPlugin {
 	/**
 	 * @see ReportPlugin::display()
 	 */
-	function display(&$args) {
-		parent::display($args);
+	function display($args, $request) {
+		parent::display($args, $request);
 		$journal =& Request::getJournal();
 
 		$reportArgs = array(
