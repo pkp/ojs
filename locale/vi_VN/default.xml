@@ -84,10 +84,9 @@ Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành
 &bull; [từ đã xóa] chỉ việc xóa từ "hoàn chỉnh"
 &bull; Lời bình có hồi âm đối với thắc mắc của BTV đối với tác giả]]></message>
 
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}
-]]></message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
+<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
+</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Chúng tôi khuyến khích bạn đọc đăng ký dịch vụ thông báo khi xuất bản với tạp chí này. Sử dụng đường dẫn <a href="{$indexUrl}/{$journalPath}/user/register">Đăng ký</a> ở đầu trang chủ của tạp chí này. Đăng ký sẽ giúp bạn đọc nhận được Mục lục của mỗi số tạp chí mới qua đường email. Danh sách đăng ký cũng cho phép tạp chí khẳng định một tỷ lệ ủng hộ hoặc lượng độc giả nhất định. Xem <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Tuyên bố về Tự do các nhân</a>, một cam kết đảm bảo với bạn đọc rằng tên và địa chỉ emmail của họ sẽ không được dùng cho các mục đích khác.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Quý vị quan tâm tới việc nộp bài cho tạp chí? Chúng tôi khuyến nghị quý vị xem trang <a href="{$indexUrl}/{$journalPath}/about">Giới thiệu Tạp chí</a> để hiểu về chính sách của tạp chí đối với từng chuyên mục và <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Hướng dẫn dành cho Tác giả</a>. Tác giả cần <a href="{$indexUrl}/{$journalPath}/user/register">đăng ký</a> với tạp chí trước khi nộp bài, hoặc nếu đã đăng ký chỉ cần <a href="{$indexUrl}/{$journalPath}/login">đăng nhập</a> và bắt đầu tiến trình nộp bài gồm 5 bước.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Chúng tôi khuyến khích cán bộ các thư viện nghiên cứu đưa tạp chí này vào danh mục các tạp chí điện tử của mình. Đồng thời, cũng xin lưu ý rằng phần mềm mã nguồn mở của tạp chí này rất phù hợp cho các thư viện để cài đặt cho các giảng viên sử dụng với những tạp chí mà họ tham gia biên tập (xem <a href="http://pkp.sfu.ca/ojs">Phần mềm Tạp chí Mở (Open Journal Systems)</a>).]]></message>

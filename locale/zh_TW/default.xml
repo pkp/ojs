@@ -110,10 +110,9 @@ Malinowski
 
 4. 格式化
 以「這個最新主題...」開頭的段落沒有縮排]]></message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}
-]]></message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
+<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
+</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[我們鼓勵讀者使用本期刊的出版通知服務。請使用首頁上方的<a href="{$indexUrl}/{$journalPath}/user/register">註冊</a> 連結在本期刊註冊。這個註冊動作會讓讀者以電子郵件的方式收到每份當期期刊的目錄。這份清單也讓本期刊顯示出某種支持度或讀者群。請見本期刊的<a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">隱私權聲明</a>， 保障讀者的姓名和電子郵件地址不會用於其他用途。]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[ 對這份期刊感興趣嗎？我們建議您看一下<a href="{$indexUrl}/{$journalPath}/about">期刊介紹</a>頁面，以瞭解期刊的文稿類型方針；也請同時看一下 <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">作者指引</a>。作者在進行投稿之前必須在本期刊<a href="{$indexUrl}/{$journalPath}/user/register">註冊</a>，而如果已經註冊的話，可以簡單地<a href="{$indexUrl}/{$journalPath}/login">登入</a>並且開始五個步驟的投稿流程。]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[我們鼓勵圖書館員將這份期刊加入其圖書館的電子期刊資料庫之中。同時，這份期刊的開源碼出版系統或許會適合圖書館放置他們的職員正在編輯的期刊。(請見<a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>

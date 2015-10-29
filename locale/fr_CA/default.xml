@@ -83,9 +83,9 @@ Lorsque que vos révisions sont terminées, changer le nom du fichier de AuthorN
 &bull; [mot supprimé] indique la suppression de "entièrement"
 &bull; Le commentaire contient une réponse aux QetR aux rédacteurs]]></message>
 
-	<message key="default.journalSettings.emailSignature">________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}</message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
+<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
+</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Nous incitons les lecteurs à s'inscrire pour recevoir les avis de publication pour cette revue. Utiliser le lien <a href="{$indexUrl}/{$journalPath}/user/register">S'inscrire</a> en haut de la page d'accueil de la revue. Cette inscription permettra au lecteur de recevoir par courriel la table des matières de chaque nouveau numéro de la revue. Cette liste permet aussi à la revue de revendiquer un certain niveau de soutien ou de lectorat. Voir la <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Déclaration de confidentialité</a>de la revue qui confirme aux lecteurs que leur nom et leur courriel ne seront pas utilisés à d'autres fins.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Intéressé à soumettre à cette revue? Nous vous recommandons de consulter les politiques de rubrique de la revue à la page <a href="{$indexUrl}/{$journalPath}/about">À propos de la revue</a> ainsi que les <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Directives aux auteurs</a>. Les auteurs doivent <a href="{$indexUrl}/{$journalPath}/user/register">S'inscrire</a> auprès de la revue avant de présenter une soumission, ou s'ils sont déjà inscrits, simplement <a href="{$indexUrl}/{$journalPath}/login">ouvrir une session</a> et commencer les 5 étapes du processus.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Nous incitons les bibliothécaires à lister cette revue dans leur fonds de revues numériques. Aussi, il peut être pertinent de mentionner que ce système de publication en accès libre est conçu pour être hébergé par les bibliothèques de recherche pour que les membres de leurs facultés l'utilisent avec les revues dans lesquelles ils sont impliqués (voir <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>

@@ -162,9 +162,9 @@ Tallene i tabel 3 er ikke justeret i tredje kolonne.</pre>
 <pre>4. FORMATERING
 Afsnittet, der begynder med "Dette sidste emne...", er ikke blevet indrykket.</pre>]]></message>
 	
-	<message key="default.journalSettings.emailSignature">________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}</message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
+<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
+</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Vi opfordrer læsere til at tilmelde sig nyhedstjenesten vedrørende publiceringer for dette tidsskrift. Brug linket <a href="{$indexUrl}/{$journalPath}/user/register">Registrer</a> øverst på tidsskriftets hjemmeside. Denne registrering medfører, at læseren via e-mail modtager indholdsfortegnelsen for alle nye udgaver af tidsskriftet. Denne liste giver også tidsskriftet mulighed for at hævde at have et vist supportniveau eller et vist antal læsere. Se tidsskriftets <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Erklæring om beskyttelse af personlige oplysninger</a>, der garanterer læserne, at deres navne og e-mail-adresser ikke benyttes til andre formål.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Er du interesseret i at fremsende et manuskript til dette tidsskrift? Vi anbefaler, at du gennemgår siden <a href="{$indexUrl}/{$journalPath}/about">Om tidsskriftet</a>, hvor du kan finde tidsskriftets sektionspolitikker, samt <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Retningslinjer for forfattere</a>. Forfattere skal <a href="{$indexUrl}/{$journalPath}/user/register">tilmelde sig</a> tidsskriftet, inden de kan fremsende et manuskript. Hvis de allerede er tilmeldt, kan de blot <a href="{$indexUrl}/index/login">logge på</a> og påbegynde processen, der består af 5 trin.]]></message>	
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Vi opfordrer forskningsbibliotekarer til at anføre dette tidsskrift på listen over deres biblioteks beholdning af elektroniske tidsskrifter. Det kan desuden være nyttigt at bemærke, at dette tidsskrifts open source-publiceringssystem er velegnet til biblioteker, som kan være værter for det til deres fakultetsmedlemmer, som kan bruge det til de tidsskrifter, de er ved at redigere (se <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>

@@ -285,10 +285,9 @@ The numbers in Table 3 are not aligned in the third column.</pre>
 <br />
 <pre>4. FORMATTING
 The paragraph that begins "This last topic..." is not indented.</pre>]]></message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}
-]]></message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
+<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
+</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Мы приглашаем наших читателей подписаться на рассылки с последними новостями. Для этого нужно <a href="{$indexUrl}/{$journalPath}/user/register">зарегистрироваться</a>. Регистрация позволить Вам выбрать роль автора, а также подписаться на журнальные рассылки с содержанием последнего выпуска журнала. Таким образом издатели журнала получат обратную информацию о читательском интересе. Посмотрите также страницу <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Конфиденциальность</a>.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Вы хотите отправить Ваши материалы для публикации в этом журнале? Просмотрите, пожалуйста, раздел <a href="{$indexUrl}/{$journalPath}/about">О нас</a>, где Вы сможете ознакомиться с редакционной политикой и<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">требованиями к авторам</a>. Будущим авторам нужно <a href="{$indexUrl}/{$journalPath}/user/register">зарегистрироваться</a> в роли Автора, <a href="{$indexUrl}/{$journalPath}/login">войти</a> в свой акаунт и <a href="{$indexUrl}/author/submit">заполнить</a> форму отправки статей.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Мы надеемся, что сотрудники библиотек впишут этот журнал в их список электронных журналов. Данная издательская система создана для того, чтобы дать возможность академическим и научным библиотекам организовать собственные электронные журналы для преподователей и научных работников. Больше об этих возможностей, см. сайт разработчиков <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>

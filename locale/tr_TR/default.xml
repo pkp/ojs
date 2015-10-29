@@ -152,9 +152,9 @@ Yeni dosyada <strong>[silinmiş sözcük]</strong> değiştirilmiş bölümler k
 	<pre>4. FORMATTING
 	The paragraph that begins "This last topic..." is not indented.</pre>]]></message>
 
-	<message key="default.journalSettings.emailSignature">________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}</message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
+<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
+</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Okuyucuların yayın bildirimi servisine kayıt olmaları önerilir. Dergi ana sayfasının üst kısmında yer alan <a href="{$indexUrl}/{$journalPath}/user/register">Kayıt</a> bağlantısı aracılığı ile bu işlem gerçekleştirilebilir. Bu kayıtla her yeni sayı yayınlandığında İÇİNDEKİLER sayfası e-posta aracılığı ile okuyucuya iletilir. Derginin <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">güvenlik kurallarına bakınız</a> yazarların kimlik bilgileri ve e-posta adresleri hiç bir şekilde başka amaçlar için kullanılmayacaktır.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Dergimize makale başvurusunda bulunmayı düşünüyorsanız <a href="{$indexUrl}/{$journalPath}/about">Dergi Hakkında</a> bağlantısı araılığıyla dergi yayın politikası ve <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Yazar Rehberi</a>'ne ulaşabilirsiniz. Yazarlar dergiye gönderi yapmadan önce <a href="{$indexUrl}/{$journalPath}/user/register">register</a> üye olmalıdır. Gönderi işlemi  <a href="{$indexUrl}/{$journalPath}/login">Üye Giriş</a> bağlantısı aracılığıyla 5 basamakta yapılır.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Kütüphanelere, bu açık erişimli dergiyi elektronik dergileri içine almaları önerilir. Açık Dergi Sitemleri ile ilgili ayrıntılı bilgi <a href="http://pkp.sfu.ca">Public Knowledge Project</a> bağlantısından elde edilebilir.]]></message>

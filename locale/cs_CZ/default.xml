@@ -141,9 +141,9 @@ Malinowski</pre>
 <br />
 <pre>4. FORMÁTOVÁNÍ
 Odstavec, který začíná "Toto poslední téma..." nebyl zamýšlený.</pre>]]></message>
-	<message key="default.journalSettings.emailSignature">________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}</message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
+<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
+</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Pobízíme čtenáře, aby se zapsali do služby pro oznamování nově vydaných čísel tohoto časopisu. Použijte odkaz <a href="{$indexUrl}/{$journalPath}/user/register">Registrovat</a> v horní části domácí stránky časopisu. Díky této registraci bude čtenář dostávat emailem obsah každého nově vydaného čísla. Seznam čtenářů rovněž umožňuje časopisu doložit určitou úroveň podpory nebo čtenosti časopisu. Viz <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Prohlášení o soukromí</a> tohoto časopisu, které ujišťuje čtenáře, že jejich jméno a emailová adresa nebudou použity pro jiné účely.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Máte zájem publikovat v tomto časopisu? Doporučujeme pročtení stránky <a href="{$indexUrl}/{$journalPath}/about">O časopisu</a> kde jsou uvedeny pravidla časopisu pro jednotlivé sekce, stejně jako <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Pokyny autorům</a>. Než mohou autoři odeslat příspěvek, musí se do časopisu <a href="{$indexUrl}/{$journalPath}/user/register">zaregistrovat</a> nebo pokud již registrovaní jsou, mohou se jednoduše <a href="{$indexUrl}/{$journalPath}/login">přihlásit</a> a zahájit pětistupňový proces.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Pobízíme knihovníky, aby uváděli tento časopis ve svém seznamu volně dostupných elektronických publikací. Také může být vhodné poznamenat, že open source redakční software, který tento časopis využívá, je vhodný pro použití s časopisy, v jejichž redakcích mohou členové fakult dané univerzity pracovat (viz <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>

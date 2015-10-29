@@ -135,10 +135,10 @@
 		表格3的数字在第三列没有对齐。
 
 		4. 格式化
-		以「这个最新主题...」开头的段落没有缩排]]</message>
-	<message key="default.journalSettings.emailSignature">________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}</message>
+		以「这个最新主题...」开头的段落没有缩排]]></message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
+<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
+</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[我们鼓励读者注册该期刊的出版通知服务。使用在期刊首页顶端的<a href="{$indexUrl}/{$journalPath}/user/register">Register</a>链接。注册后可以使读者通过电子邮件收到该期刊每期的出版内容。该列表也可以允许期刊获取一定程度的支持和读者群。参阅期刊的<a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Privacy Statement</a>,其将确保读者的名称和邮件地址不会用于其它目的。]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[ 
 		对这份期刊感兴趣吗？我们建议您看一下<a href="{$indexUrl}/{$journalPath}/about">期刊介绍</a>页面，以了解期刊的栏目方针；也请同时看一下 <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">作者指引</a>。作者在进行投稿之前必须在本期刊<a href="{$indexUrl}/{$journalPath}/user/register">注册</a>，而如果已经注册的话，可以简单地<a href="{$indexUrl}/index/login">登入</a>并且开始五个步骤的投稿流程。]]></message>
