@@ -61,7 +61,7 @@
 						{if $hasCredentials}
 							<a href="{plugin_url path="process" issueId=$issue->getId() params=$testMode target="issue" register=true}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
 						{/if}
-						<a href="{plugin_url path="process" issueId=$issue->getId() params=$testMode target="issue" register=true}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
+						<a href="{plugin_url path="process" issueId=$issue->getId() params=$testMode target="issue" export=true}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
 					</nobr></td>
 				</tr>
 				<tr>
