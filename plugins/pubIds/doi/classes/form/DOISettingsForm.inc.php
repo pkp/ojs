@@ -69,19 +69,17 @@ class DOISettingsForm extends Form {
 		import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
 		$application = PKPApplication::getApplication();
 		$request = $application->getRequest();
-		$clearPubIdsLinkAction =
-		new LinkAction(
+		$this->setData('clearPubIdsLinkAction', new LinkAction(
 			'reassignDOIs',
 			new RemoteActionConfirmationModal(
 				__('plugins.pubIds.doi.manager.settings.doiReassign.confirm'),
 				__('common.delete'),
-				$request->url(null, null, 'plugin', null, array('verb' => 'settings', 'clearPubIds' => true, 'plugin' => $plugin->getName(), 'category' => 'pubIds')),
+				$request->url(null, null, 'manage', null, array('verb' => 'settings', 'clearPubIds' => true, 'plugin' => $plugin->getName(), 'category' => 'pubIds')),
 				'modal_delete'
 			),
 			__('plugins.pubIds.doi.manager.settings.doiReassign'),
 			'delete'
-		);
-		$this->setData('clearPubIdsLinkAction', $clearPubIdsLinkAction);
+		));
 		$this->setData('pluginName', $plugin->getName());
 	}
 
