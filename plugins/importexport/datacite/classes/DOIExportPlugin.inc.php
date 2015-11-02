@@ -481,10 +481,11 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$this->registerDaoHook('IssueDAO');
 		$issueIterator =& $issueDao->getPublishedIssues($journal->getId(), Handler::getRangeInfo('issues'));
 
-		// Filter only issues that have a DOI assigned.
+		// Filter only issues that can be exported.
 		$issues = array();
 		while ($issue =& $issueIterator->next()) {
-			if ($issue->getPubId('doi')) {
+			$errors = array();
+			if ($this->canBeExported($issue, $errors)) {
 				$issues[] =& $issue;
 			}
 			unset($issue);
@@ -1035,10 +1036,11 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$this->registerDaoHook('PublishedArticleDAO');
 		$allArticles = $this->getAllPublishedArticles($journal);
 
-		// Filter only articles that have a DOI assigned.
+		// Filter only articles that can be exported.
 		$articles = array();
 		foreach($allArticles as $article) {
-			if ($article->getPubId('doi')) {
+			$errors = array();
+			if ($this->canBeExported($article, $errors)) {
 				$articles[] = $article;
 			}
 			unset($article);
@@ -1092,9 +1094,10 @@ class DOIExportPlugin extends ImportExportPlugin {
 			// Retrieve galleys for the article.
 			$articleGalleys =& $galleyDao->getGalleysByArticle($article->getId());
 
-			// Filter only galleys that have a DOI assigned.
+			// Filter only galleys that can be exported.
 			foreach ($articleGalleys as $galley) {
-				if ($galley->getPubId('doi')) {
+				$errors = array();
+				if ($this->canBeExported($galley, $errors)) {
 					$galleys[] =& $galley;
 				}
 				unset($galley);
