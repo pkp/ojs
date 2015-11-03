@@ -1,5 +1,5 @@
 /**
- * @file styles/structure/footer.less
+ * @file plugins/themes/default/styles/footer.less
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
@@ -9,77 +9,58 @@
  */
 
 .pkp_structure_footer_wrapper {
-	padding: @double 0;
-	background: @bg;
+	min-height: @logo-height + (@triple * 4); // logo + logo padding + padding-bottom
+	padding-bottom: @triple * 2;
+	background: @bg-base;
 
-	.categories {
-		.pkp_helpers_clear;
+	.pkp_site_name_wrapper {
+		bottom: auto;
+		top: 0;
 	}
 
-	.category {
-		margin-bottom: @double;
-		text-align: center;
+	.pkp_site_name {
+		padding-top: @triple;
+		padding-bottom: @triple;
+	}
 
-		&:last-child {
+	.page_footer {
+		padding: @base;
+		background: @lift;
+
+		> *:first-child {
+			margin-top: 0;
+		}
+
+		> *:last-child {
 			margin-bottom: 0;
 		}
 
-		h4 {
-			margin: 0;
-			line-height: @double;
-		}
+	}
 
-		ul {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-		}
+	@media(min-width: @screen-phone) {
 
-		li {
-			padding: 4px 0;
-			font-size: @font-sml;
-			line-height: @line-base;
+		.page_footer {
+			padding: @double;
 		}
 	}
 
-	// 2 categories per row
 	@media(min-width: @screen-tablet) {
 
-		.category {
-			float: left;
-			width: (@screen-tablet-container / 2) - @base;
-			text-align: left;
+		.pkp_structure_footer {
+			background: @bg;
+		}
 
-			&:nth-child(odd) {
-				margin-right: @base;
-			}
-
-			&:nth-child(even) {
-				margin-left: @base;
-			}
-
-			&.category_1 {
-				margin-right: @base;
-			}
+		.page_footer {
+			padding: @triple;
 		}
 	}
 
-	// 3 categories per row
 	@media(min-width: @screen-desktop) {
 
-		.categories:not(.categories_2) {
-
-			.category {
-				width: (@screen-desktop-container / 3) - @base;
-				margin-right: @base;
-			}
-
-			&.categories_3 .category 3
-			&.categories_6 .category 3,
-			&.categories_6 .category 6 {
-				margin-right: 0;
-				margin-left: @base;
-			}
+		.page_footer {
+			min-height: @logo-height + (@triple * 2);
+			margin-left: @sidebar-width;
+			border-top: @bg-border;
 		}
 	}
 }

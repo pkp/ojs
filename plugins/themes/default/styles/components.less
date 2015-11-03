@@ -18,9 +18,9 @@
 	border-radius: @radius;
 	box-shadow: inset 0 -1em 1em rgba(0, 0, 0, 0.1);
 	font-size: @font-sml;
-	line-height: @double - 2; // account for border
+	line-height: @triple - 2; // account for border
 	font-weight: @bold;
-	color: @text-light;
+	color: @primary-lift;
 }
 
 // Wire button
@@ -31,7 +31,7 @@
 	border: 1px solid @primary-lift;
 	border-radius: @radius;
 	font-size: @font-sml;
-	line-height: @double;
+	line-height: @triple - 2; // account for border
 	color: @primary-lift;
 	text-decoration: none;
 
@@ -72,7 +72,7 @@
 			.error {
 				position: absolute;
 				left: 0.5em; // Sit off the rounded edge of input fields
-				bottom: 9px; // Sit on the bottom line of the input field above
+				bottom: -3px; // Sit on the bottom line of the input field above
 				padding: 4px 0.5em; // Keep it tight so it doesn't bleed into next field
 				background: @no;
 				border-bottom-left-radius: 2px;
@@ -109,12 +109,12 @@
 	textarea {
 		padding: 0 0.5em;
 		width: 100%;
-		height: @double - 2; // account for border
+		height: @triple - 2; // account for border
 		background: #fff;
 		border: 1px solid #aaa;
 		border-radius: @radius;
 		font-size: @font-sml;
-		line-height: @double - 2; // account for border
+		line-height: @triple - 2; // account for border
 	}
 
 	textarea {
@@ -217,4 +217,42 @@
 	padding: @double;
 	background: @bg;
 	text-align: center;
+}
+
+// Breadcrumbs
+.cmp_breadcrumbs {
+	display: inline-block;
+
+
+	ol {
+		&:extend(.pkp_unstyled_list);
+		margin-bottom: @triple;
+		padding: 5px 0;
+		line-height: @double;
+		font-size: @font-sml;
+	}
+
+	li {
+		display: inline-block;
+	}
+
+	a {
+		display: inline-block;
+		text-decoration: none;
+	}
+
+	.separator {
+		color: @text-light;
+		padding: 0 0.5em;
+	}
+
+	.current {
+		color: @text-light;
+
+		h1 {
+			margin: 0;
+			font-size: @font-sml;
+			font-weight: @normal;
+		}
+	}
 }

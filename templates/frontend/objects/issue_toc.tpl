@@ -21,20 +21,6 @@
 		{include file="frontend/components/notification.tpl" type="warning" messageKey="editor.issues.preview"}
 	{/if}
 
-	{* Title *}
-	<h1 class="title">
-		{if $issueTitle}
-			{$issueTitle}
-		{else}
-			{$issueSeries}
-		{/if}
-	</h1>
-	{if $issueTitle}
-		<h2 class="series">
-			{$issueSeries}
-		</h2>
-	{/if}
-
 	{* Description *}
 	{if $issue->hasDescription()}
 		<div class="description">
@@ -44,39 +30,39 @@
 
 	{* Full-issue galleys *}
 	{if $issueGalleys && ($hasAccess || $showGalleyLinks)}
-		<h3 class="heading_full_issue">
-			{translate key="issue.fullIssue"}
-		</h3>
-		<ul class="galleys_links">
-			{foreach from=$issueGalleys item=galley}
-				<li>
-					{include file="frontend/objects/galley_link.tpl" parent=$issue}
-				</li>
-			{/foreach}
-		</ul>
+		<div class="galleys">
+			<h2>
+				{translate key="issue.fullIssue"}
+			</h2>
+			<ul class="galleys_links">
+				{foreach from=$issueGalleys item=galley}
+					<li>
+						{include file="frontend/objects/galley_link.tpl" parent=$issue}
+					</li>
+				{/foreach}
+			</ul>
+		</div>
 	{/if}
 
 	{* Articles *}
-	<ul class="sections">
+	<div class="sections">
 	{foreach name=sections from=$publishedArticles item=section}
+		<div class="section">
 		{if $section.articles}
-			{if !$section.title}
-				<li class="section section_no_title">
-			{else}
-				<li class="section section_{$section.title|escape|replace:' ':'_'}">
-					<h3>
-						{$section.title|escape}
-					</h3>
+			{if $section.title}
+				<h2>
+					{$section.title|escape}
+				</h2>
 			{/if}
-				<ul class="articles">
-					{foreach from=$section.articles item=article}
-						<li>
-							{include file="frontend/objects/article_summary.tpl"}
-						</li>
-					{/foreach}
-				</ul>
-			</li>
+			<ul class="articles">
+				{foreach from=$section.articles item=article}
+					<li>
+						{include file="frontend/objects/article_summary.tpl"}
+					</li>
+				{/foreach}
+			</ul>
 		{/if}
+		</div>
 	{/foreach}
-	</ul>
+	</div><!-- .sections -->
 </div>

@@ -1,67 +1,76 @@
-//
-// Common variables
-//
-// These variables are used throughout the theme styles. They provide a fully
-// separated interface for defining variables, so that changes desired on the
-// frontend won't impact the backend.
-//
-
+/**
+ * @file plugins/themes/default/styles/variables.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Common variables used through the the theme styles. They provide a
+ *  fully separated interface for defining variables, so that changes desired on
+ *  the frontend won't impact the backend.
+ */
 //
 // Colors
 //
 
 // Background
-@bg:                     #ddd;
-@shade:                  #888;
 @lift:                   #fff;
+@bg-base:                #007ab2;
+                         // Compiles tinted background colors
+                         // screen: mix base color with light grey to produce a light, off-white version
+                         // desaturate: add more grey
+                         // darken: darken
+                         // softlight: tint with yellow to make it a touch warmer
+@bg:                     softlight(darken(desaturate(screen(@bg-base, #ddd),35%),17%),#dda); // compiled from #8e4200: #d4d2c3
+@bg-dark:                softlight(darken(desaturate(screen(@bg-base, #bbb),35%),17%),#bba); // compiled from #8e4200: #b8b6ad
 
-// Primary "anchor" color for backgrounds and links
-@primary:                #113241;
-@primary-lift:           #007ab2;
+// Primary "anchor" color for links
+@primary-lift:           @bg-base;
+@primary:                #113241; // active (eg - hover/focus)
 
-// Offset "highlight" color
-@offset:                 #D00A6C;
-@offset-shade:           #B50E61;
-
-// Yes/no, success/error, on/off, go/stop, etc
-@yes:                    #00B24E;
-@no:                     @offset;
-@warn:                   @offset;
+// Yes/no, success/error, on/off, go/stop, etc. Typically green and red.
+@yes:                    #00b24e;
+@no:                     #ff4040;
 
 // Text
-@text:                   #222;
-@text-light:             #777;
+@text:                   rgba(0,0,0,0.87);
+@text-light:             rgba(0,0,0,0.54);
 
 // Border colors
-@bg-border-color:        #bbb;
+@bg-border-color:        @bg;
+@bg-border-dark-color:   @bg-dark;
 
 //
 // Spacing
 //
 // The baseline size should be used to achieve consistent vertical rhythm. All
 // vertical margins, padding, line-height and block heights should use a
-// multiple of this baseline (or half/quarter). Where appropriate, horizontal
+// multiple of this baseline (or half). Where appropriate, horizontal
 // spacings should also use this baseline. However, in some cases with inline
 // elements it is more appropriate to use an `em` spacing.
 //
-@base:                   16px;
+@base:                   10px;
 @half:                   @base / 2;
 @double:                 @base * 2;
+@triple:                 @base * 3;
+@quadruple:              @base * 4;
+@quintuple:              @base * 5;
 
 //
 // Typography
 //
 @font:                   "Noto Sans", Arial, Helvetica, sans-serif;
-@font-sml:               14px;
-@line-sml:               24px;
-@font-base:              16px;
-@line-base:              24px;
-@font-bump:              18px;
-@line-bump:              24px;
-@font-lead:              24px;
-@line-lead:              @double;
-@font-header:            36px;
-@line-header:            @double + @base;
+@font-sml:               13px;
+@line-sml:               @double;
+@font-base:              14px;
+@line-base:              @double;
+@line-base-large:        @line-base + 5; // large blocks of text
+@font-bump:              16px;
+@line-bump:              @double;
+@font-lead:              18px;
+@line-lead:              @triple;
+@font-header:            24px;
+@line-header:            @triple;
 
 // Font weights
 @normal:                 400;
@@ -71,6 +80,7 @@
 // Borders
 //
 @bg-border:              1px solid @bg-border-color;
+@bg-border-dark:         1px solid @bg-border-dark-color;
 @radius:                 3px;
 
 
@@ -78,10 +88,13 @@
 // Screen width breakpoints
 //
 @screen-phone:                480px;
-@screen-phone-container:      @screen-phone - (@base * 2);
 @screen-tablet:               768px;
 @screen-tablet-container:     @screen-tablet - (@double * 2);
 @screen-desktop:              992px;
 @screen-desktop-container:    @screen-desktop - (@double * 2);
 @screen-lg-desktop:           1200px;
 @screen-lg-desktop-container: @screen-lg-desktop - (@double * 2);
+
+// Fixed widths and heights
+@sidebar-width:               300px;
+@logo-height:                 @quadruple * 3;

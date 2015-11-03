@@ -8,11 +8,19 @@
  * @brief Display the page to view an article with all of it's details.
  *
  * @uses $article Article This article
+ * @uses $issue Issue The issue this article is assigned to
+ * @uses $section Section The journal section this article is assigned to
  * @uses $ccLicenseBadge @todo
  *}
 {include file="common/frontend/header.tpl" pageTitleTranslated=$article->getLocalizedTitle()|escape}
 
 <div class="page page_article">
+	{if $section}
+		{include file="frontend/components/breadcrumbs_article.tpl" currentTitle=$section->getLocalizedTitle()|escape}
+	{else}
+		{include file="frontend/components/breadcrumbs_article.tpl" currentTitleKey="article.article"}
+	{/if}
+
 	{if $galley}
 		<h1 class="page_title">{$article->getLocalizedTitle()|escape}</h1>
 
