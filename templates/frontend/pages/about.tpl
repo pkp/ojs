@@ -30,9 +30,7 @@
 {include file="common/frontend/header.tpl" pageTitle="about.aboutTheJournal"}
 
 <div class="page page_about">
-	<h1 class="page_title">
-		{translate key="about.aboutTheJournal"}
-	</h1>
+	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.aboutTheJournal"}
 
 	{if $currentJournal->getLocalizedSetting('description')}
 	<div class="description">

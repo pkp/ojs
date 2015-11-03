@@ -13,9 +13,7 @@
 {include file="common/frontend/header.tpl" pageTitle="about.submissions"}
 
 <div class="page page_submissions">
-	<h1 class="page_title">
-		{translate key="about.submissions"}
-	</h1>
+	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.submissions"}
 
 	{* Login/register prompt *}
 	{capture assign="login"}

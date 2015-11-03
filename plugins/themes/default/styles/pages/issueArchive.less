@@ -1,0 +1,44 @@
+/**
+ * @file plugins/themes/default/styles/pages/issueArchive.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to issue archive page
+ * @link templates/frontend/pages/issueArchive.tpl
+ */
+.page_issue_archive {
+
+	.issues_archive {
+		&:extend(.pkp_unstyled_list);
+		margin-left: -@base;
+		margin-right: -@base;
+		border-top: @bg-border;
+
+		> li {
+			padding: @triple @base;
+			border-bottom: @bg-border;
+		}
+
+		@media(min-width: @screen-phone) {
+			margin-left: -@double;
+			margin-right: -@double;
+
+			> li {
+				padding-left: @double;
+				padding-right: @double;
+			}
+		}
+
+		@media(min-width: @screen-desktop) {
+			margin-left: -@triple;
+			margin-right: -@triple;
+
+			> li {
+				padding-left: @triple;
+				padding-right: @triple;
+			}
+		}
+	}
+}

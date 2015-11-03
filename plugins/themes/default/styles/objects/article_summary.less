@@ -1,0 +1,50 @@
+/**
+ * @file styles/objects/article_details.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to a view of an article with all details
+ * @link templates/frontend/objects/article_details.tpl
+ */
+.obj_article_summary {
+
+	> .title {
+		font-size: @font-base;
+		line-height: @line-base;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.meta {
+		position: relative;
+		padding-top: @half;
+		font-size: @font-sml;
+		line-height: @double;
+	}
+
+	.pages {
+		color: @text-light;
+	}
+
+	.galleys_links {
+		margin-top: @base;
+	}
+
+	@media(min-width: @screen-tablet) {
+
+		.authors {
+			padding-right: 5em;
+		}
+
+		.pages {
+			position: absolute;
+			top: 0;
+			right: 0;
+			line-height: @line-lead;
+		}
+	}
+}

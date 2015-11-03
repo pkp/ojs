@@ -1,5 +1,5 @@
 /**
- * @file styles/structure/body.less
+ * @file plugins/themes/default/styles/body.less
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
@@ -13,6 +13,7 @@ body {
 	font-size: @font-base;
 	line-height: @line-base;
 	color: @text;
+	background: @bg-dark;
 }
 
 a {
@@ -26,12 +27,11 @@ a {
 
 
 // Page container widths
-.pkp_structure_head .pkp_site_name,
-.pkp_structure_head .pkp_navigation_primary_wrapper,
-.pkp_structure_head .pkp_navigation_user,
+.pkp_head_wrapper,
 .pkp_structure_content,
 .pkp_structure_footer {
 	.pkp_helpers_clear;
+	position: relative;
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 @base;
@@ -51,62 +51,60 @@ a {
 }
 
 // Layout scaffold for content and sidebars
-.pkp_structure_main,
+.pkp_structure_main {
+	padding: @base;
+	background: @lift;
+}
+
 .pkp_structure_sidebar {
-	padding-top: @double;
-	padding-bottom: @double * 2;
+	background: @bg;
+}
+
+@media( min-width: @screen-phone ) {
+	.pkp_structure_main {
+		padding: @double;
+	}
 }
 
 @media( min-width: @screen-desktop ) {
 
 	.pkp_structure_sidebar {
-		width: 256px;
-
-		&.left {
-			float: left;
-		}
-
-		&.right {
-			float: right;
-		}
-	}
-
-	// 1 sidebar
-	.has_left_sidebar .pkp_structure_main,
-	.has_right_sidebar .pkp_structure_main {
 		float: left;
-		// Screen width - container padding - sidebar width - gutter
-		width: @screen-desktop-container - 256px - @double;
+		width: @sidebar-width;
 	}
 
-	// Add gutters between sidebar and main content
-	.has_left_sidebar .pkp_structure_main {
+	.pkp_structure_main {
 		float: right;
-		margin-left: @double;
+		padding: 0 @triple @triple;
+		width: @screen-desktop-container - @sidebar-width;
 	}
 
-	.has_right_sidebar .pkp_structure_main {
-		margin-right: @double;
+	// Full-height background layers
+	.pkp_structure_sidebar:before,
+	.pkp_structure_main:before, {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: @sidebar-width;
+		height: 100%;
+		background: @bg;
+		z-index: -1;
 	}
 
-	// 2 sidebars
-	.has_left_sidebar.has_right_sidebar .pkp_structure_main {
-		// Screen width - container padding - 2 sidebar widths - two gutters
-		width: @screen-desktop-container - (256px * 2) - (@double * 2);
+	.pkp_structure_main:before {
+		left: auto;
+		right: 0;
+		width: @screen-desktop-container - @sidebar-width;
+		background: @lift;
 	}
 }
 
 @media( min-width: @screen-lg-desktop ) {
 
-	.has_left_sidebar .pkp_structure_main,
-	.has_right_sidebar .pkp_structure_main {
-		// Screen width - container padding - sidebar width - gutter
-		width: @screen-lg-desktop-container - 256px - @double;
-	}
-
-	.has_left_sidebar.has_right_sidebar .pkp_structure_main {
-		// Screen width - container padding - 2 sidebar widths - two gutters
-		width: @screen-lg-desktop-container - (256px * 2) - (@double * 2);
+	.pkp_structure_main,
+	.pkp_structure_main:before {
+		width: @screen-lg-desktop-container - @sidebar-width;
 	}
 }
 

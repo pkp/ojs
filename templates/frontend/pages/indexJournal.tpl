@@ -18,7 +18,6 @@
 {include file="common/frontend/header.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
 
 <div class="page">
-	<h2 class="page_title">{$currentJournal->getLocalizedName()}</h2>
 
 	{$journalDescription}
 

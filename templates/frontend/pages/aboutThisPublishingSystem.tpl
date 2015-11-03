@@ -14,9 +14,7 @@
 {include file="common/frontend/header.tpl" pageTitle="about.aboutThisPublishingSystem"}
 
 <div class="page page_about_publishing_system">
-	<h1 class="page_title">
-		{translate key="about.aboutThisPublishingSystem"}
-	</h1>
+	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.aboutThisPublishingSystem"}
 
 	<p>
 		{if $currentJournal}

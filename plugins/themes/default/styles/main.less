@@ -1,5 +1,5 @@
 /**
- * @file styles/structure/main.less
+ * @file plugins/themes/default/styles/main.less
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
@@ -59,6 +59,7 @@
 	}
 
 	p {
+		line-height: @line-base-large;
 		margin: @line-base 0;
 	}
 
@@ -66,29 +67,54 @@
 		margin-bottom: 0;
 	}
 
-	// Page titles shuld always have h1 styles
-	.page_title {
-		&:extend(.pkp_structure_main h1);
-		margin-top: 0;
-	}
-}
+	.page {
 
-// Issues archive page
-.issues_archive {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+	    // Edit link that isn't nested in a section
+	    > .cmp_edit_link {
+	        float: right;
+	        padding: @half 0;
+	        line-height: @triple;
+	    }
 
-	> li {
-		margin-bottom: @double;
-	}
-}
+		// Count of catalog entries on the current page
+		// used in catalog, category, series and search pages
+		.monograph_count {
+			float: right;
+			padding: @base 0;
+			font-size: @font-sml;
+			color: @text-light;
+		}
 
-// Aarticle page
-.page_article {
+		// Description and image for catalog category/series
+		.about_section {
+			.pkp_helpers_clear;
+			color: @text-light;
+			line-height: @triple;
 
-	.galleys_links {
-		margin-top: @double;
-		&:extend(.pkp_unstyled_list);
+			.cover {
+				float: right;
+				width: 20%;
+				margin-left: 10%;
+				margin-right: 10%;
+
+				img {
+					display: block;
+					margin: 0 auto;
+				}
+			}
+
+			.description p:first-child {
+				margin-top: 0;
+			}
+
+			.description p:last-child {
+				margin-bottom: 0;
+			}
+
+			@media(min-width: @screen-phone) {
+				font-size: @font-bump;
+				font-style: italic;
+			}
+		}
 	}
 }

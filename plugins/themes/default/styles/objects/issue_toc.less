@@ -10,18 +10,6 @@
  */
 .obj_issue_toc {
 
-	> .title {
-		margin: 0;
-	}
-
-	> .series {
-		margin: 0;
-		font-size: @font-lead;
-		line-height: @line-header;
-		font-weight: @normal;
-		color: @text-light;
-	}
-
 	h3 {
 		display: inline-block;
 		margin-top: @double * 2;
@@ -30,75 +18,71 @@
 		line-height: @double - 2; // Adjust for border
 	}
 
-	.sections,
+	.description {
+		margin-bottom: @triple * 2;
+		font-size: @font-bump;
+		font-style: italic;
+		line-height: @line-lead;
+		color: @text-light;
+
+		> *:first-child {
+			margin-top: 0;
+		}
+
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+
 	.articles,
 	.galleys_links {
-		margin: 0;
-		padding: 0;
-		list-style: none;
+		&:extend(.pkp_unstyled_list);
 	}
 
 	.galleys_links {
 
 		li {
 			display: inline-block;
-		}
-	}
-
-	.section_no_title {
-		margin-top: @double * 2;
-	}
-
-	// Articles in issue table of contents
-	.articles {
-
-		> li {
-			margin-bottom: @double * 2;
+			margin-right: 1em;
 
 			&:last-child {
-				margin-bottom: 0;
+				margin-right: 0;
 			}
 		}
+	}
 
-		.title {
-			font-size: @font-lead;
-			line-height: @line-lead;
-
-			a {
-				text-decoration: none;
-			}
-		}
-
-		.meta {
-			position: relative;
-		}
-
-		.authors {
-			font-size: @font-bump;
-			line-height: @line-lead;
-			color: @text-light;
-		}
-
-		.pages {
-			font-size: @font-sml;
-		}
-
-		.galleys_links {
-			margin-top: @base;
-		}
+	.articles > li {
+		margin-bottom: @triple;
 	}
 
 	@media(min-width: @screen-tablet) {
 
-		.authors {
-			padding-right: 5em;
-		}
+		.galleys,
+		.sections {
+			position: relative;
+			margin: @triple -@double;
+			padding: @triple;
+			border-top: @bg-border;
 
-		.pages {
-			position: absolute;
-			top: 0;
-			right: 0;
-			line-height: @line-lead;
+			h2 {
+				position: absolute;
+				top: -15px;
+				left: @triple / 2;
+				margin-top: 0;
+				padding: 0 (@triple / 2);
+				background: @lift;
+				font-size: @font-bump;
+				font-weight: @normal;
+				color: @text-light;
+			}
+		}
+	}
+
+	@media(min-width: @screen-desktop) {
+
+		.galleys,
+		.sections {
+			margin: @triple -@triple;
 		}
 	}
 }

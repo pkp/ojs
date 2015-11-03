@@ -12,9 +12,7 @@
 {include file="common/frontend/header.tpl" pageTitle="about.editorialTeam"}
 
 <div class="page page_editorial_team">
-	<h1 class="page_title">
-		{translate key="about.editorialTeam"}
-	</h1>
+	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.editorialTeam"}
 	{$currentJournal->getLocalizedSetting('masthead')}
 </div><!-- .page -->
 

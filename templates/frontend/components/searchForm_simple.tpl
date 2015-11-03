@@ -7,12 +7,20 @@
  *
  * @brief Simple display of a search form with just text input and search button
  *
- * @uses $currentJournal Journal The current journal
  * @uses $searchQuery string Previously input search query
  *}
 {if !$currentJournal || $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 	<form class="pkp_search" action="{url page="search" op="search"}" method="post">
 		<input name="query" value="{$searchQuery|escape}" type="text">
-		<button>{translate key="common.search"}</button>
-	</form>
+		<button>
+			{translate key="common.search"}
+		</button>
+		<div class="search_controls" aria-hidden="true">
+			<a href="{url page="search" op="search"}" class="headerSearchPrompt search_prompt" aria-hidden="true">
+				{translate key="common.search"}
+			</a>
+			<a href="#" class="search_cancel headerSearchCancel" aria-hidden="true"></a>
+			<span class="search_loading" aria-hidden="true"></span>
+		</div>
+</form>
 {/if}

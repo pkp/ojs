@@ -783,6 +783,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 
 	<!-- Archive index -->
 	<message key="archive.archives">Archives</message>
+	<message key="archive.archivesPageNumber">Archives - Page {$pageNumber}</message>
 	<message key="archive.browse">Browse through the older issues</message>
 	<message key="archive.issueUnavailable">Issue Unavailable</message>
 
