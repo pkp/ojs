@@ -176,6 +176,7 @@ class TimedViewReportForm extends Form {
 				}
 				$galleyId = $record[STATISTICS_DIMENSION_ASSOC_ID];
 				$galley =& $galleyDao->getGalley($galleyId, null, true);
+				if (!$galley) continue;
 				$label = $galley->getLabel();
 				$i = array_search($label, $galleyLabels);
 				if ($i === false) {
