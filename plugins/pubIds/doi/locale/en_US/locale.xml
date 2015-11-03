@@ -55,6 +55,7 @@
 
 	<!-- metadata form -->
 	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
+	<message key="plugins.pubIds.doi.editor.doi.issueObjects">Issue Objects DOIs</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">issue</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">article</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">galley</message>
