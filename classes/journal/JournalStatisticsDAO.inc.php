@@ -45,6 +45,18 @@ class JournalStatisticsDAO extends DAO {
 		$row = $result->GetRowAssoc(false);
 		$firstActivityDate = $this->datetimeFromDB($row['first_date']);
 		$result->Close();
+		// An earlier user registration can override the earliest article activity date
+		$result =& $this->retrieve(
+			'SELECT MIN(u.date_registered) AS first_date FROM users u JOIN roles r ON (u.user_id = r.user_id) WHERE r.journal_id = ?',
+			array(
+				(int) $journalId
+			)
+		);
+		$row = $result->GetRowAssoc(false);
+		$firstUserDate = $this->datetimeFromDB($row['first_date']);
+		if (!$firstActivityDate || ($firstUserDate && $firstActivityDate && strtotime($firstUserDate) < strtotime($firstActivityDate))) {
+			$firstActivityDate = $firstUserDate;
+		}
 		if (!$firstActivityDate) return null;
 		return strtotime($firstActivityDate);
 
