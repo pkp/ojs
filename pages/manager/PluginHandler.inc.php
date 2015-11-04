@@ -68,6 +68,21 @@ class PluginHandler extends ManagerHandler {
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.plugins');
 
 		$site =& $request->getSite();
+		$pluginDir = dirname(dirname(dirname(__FILE__))).'/plugins/';
+		// Don't show the install link unless something can be installed somewhere
+		$preventPluginInstall = true;
+		// must be able to write into one of the existing category directories
+		foreach (glob($pluginDir.'*', GLOB_ONLYDIR) as $file) {
+			if (is_writable($file)) {
+				$preventPluginInstall = false;
+			}
+		}
+		// or create a new category directory (unlikely)
+		if (is_writable($pluginDir)) {
+			$preventPluginInstall = false;
+		}
+		$templateMgr->assign('preventPluginInstall', $preventPluginInstall);
+
 		$preventManagerPluginManagement = $site->getSetting('preventManagerPluginManagement');
 		$templateMgr->assign('preventManagerPluginManagement', !Validation::isSiteAdmin() && $preventManagerPluginManagement);
 
