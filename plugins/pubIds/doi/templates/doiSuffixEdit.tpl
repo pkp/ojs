@@ -60,21 +60,26 @@
 		{capture assign=translatedObjectType}{translate key="plugins.pubIds.doi.editor.doiObjectType"|cat:$pubObjectType}{/capture}
 		{translate key="plugins.pubIds.doi.editor.excludePubObject" pubObjectType=$translatedObjectType}<br />
 
-		{if $pubObjectType == 'Issue'}
-			{assign var=enableArticleDoi value=$pubIdPlugin->getSetting($currentJournal->getId(), "enableArticleDoi")}
-			{assign var=enableGalleyDoi value=$pubIdPlugin->getSetting($currentJournal->getId(), "enableGalleyDoi")}
-			{assign var=enableSuppFileDoi value=$pubIdPlugin->getSetting($currentJournal->getId(), "enableSuppFileDoi")}
-			{if $enableArticleDoi || $enableGalleyDoi || $enableSuppFileDoi}
-				<br />
-				<span class="instruct">{translate key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi.description"}</span><br/>
-				<input type="submit" name="excludeIssueObjects_{$pubIdPlugin->getPubIdType()|escape}" value="{translate key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi"}" class="action" /><br />
-				<br />
-				<span class="instruct">{translate key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"}</span><br/>
-				<input type="submit" name="clearIssueObjects_{$pubIdPlugin->getPubIdType()|escape}" value="{translate key="plugins.pubIds.doi.editor.clearIssueObjectsDoi"}" class="action" /><br />
-			{/if}
-		{/if}
-
 	</div>
+	{assign var=divSeparator value=true}
+{/if}
+{if $pubObjectType == 'Issue'}
+	{assign var=enableArticleDoi value=$pubIdPlugin->getSetting($currentJournal->getId(), "enableArticleDoi")}
+	{assign var=enableGalleyDoi value=$pubIdPlugin->getSetting($currentJournal->getId(), "enableGalleyDoi")}
+	{assign var=enableSuppFileDoi value=$pubIdPlugin->getSetting($currentJournal->getId(), "enableSuppFileDoi")}
+	{if $enableArticleDoi || $enableGalleyDoi || $enableSuppFileDoi}
+		<div id="pub-id::doi::excludeIssueObjects">
+			<h3>{translate key="plugins.pubIds.doi.editor.doi.issueObjects"}</h3>
+			<span class="instruct">{translate key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi.description"}</span><br/>
+			<input type="submit" name="excludeIssueObjects_{$pubIdPlugin->getPubIdType()|escape}" value="{translate key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi"}" class="action" /><br />
+			<br />
+			<span class="instruct">{translate key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"}</span><br/>
+			<input type="submit" name="clearIssueObjects_{$pubIdPlugin->getPubIdType()|escape}" value="{translate key="plugins.pubIds.doi.editor.clearIssueObjectsDoi"}" class="action" /><br />
+		</div>
+		{assign var=divSeparator value=true}
+	{/if}
+{/if}
+{if $divSeparator}
 	<div class="separator"> </div>
 {/if}
 {/if}
