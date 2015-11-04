@@ -23,7 +23,7 @@
 		{/foreach}
 	</ul>
 
-	{if !$preventManagerPluginManagement}
+	{if !$preventManagerPluginManagement && !$preventPluginInstall}
 		<ul id="pluginManagement">
 			<li><b><a href="{url op="managePlugins" path=install}">{translate key="manager.plugins.install"}</a></b></li>
 		</ul>
@@ -59,7 +59,7 @@
 					<a class="action" href="{url op="plugin" path=$category|to_array:$plugin->getName():$verb[0]}">{$verb[1]|escape}</a>&nbsp;
 				{/foreach}
 			{/if}
-			{if $plugin->getCurrentVersion() && !$preventManagerPluginManagement}
+			{if $plugin->getPluginPathIsWritable() && $plugin->getCurrentVersion() && !$preventManagerPluginManagement}
 				{assign var=pluginInstallName value=$plugin->getPluginPath()|basename}
 				<a class="action" href="{url op="managePlugins" path="upgrade"|to_array:$category:$pluginInstallName}">{translate key="manager.plugins.upgrade"}</a>&nbsp;
 				<a class="action" href="{url op="managePlugins" path="delete"|to_array:$category:$pluginInstallName}">{translate key="manager.plugins.delete"}</a>&nbsp;
