@@ -210,6 +210,10 @@
 		<note file="docs/release-notes/README-3.0b" />
 	</upgrade>
 
+	<upgrade minversion="2.3.0.0" maxversion="3.0.0.9">
+		<note file="docs/release-notes/README-BEACON" />
+	</upgrade>
+
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>
