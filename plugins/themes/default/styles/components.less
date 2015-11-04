@@ -66,20 +66,20 @@
 
 		> li {
 			position: relative;
-			padding-bottom: @double; // Contain errors
+			padding-bottom: @triple; // Contain errors
 
 			// Nest so we don't grab .error class attached to li
 			.error {
 				position: absolute;
 				left: 0.5em; // Sit off the rounded edge of input fields
-				bottom: -3px; // Sit on the bottom line of the input field above
-				padding: 4px 0.5em; // Keep it tight so it doesn't bleed into next field
+				bottom: 11px; // Sit on the bottom line of the input field above
+				padding: 0 0.5em; // Keep it tight so it doesn't bleed into next field
 				background: @no;
-				border-bottom-left-radius: 2px;
-				border-bottom-right-radius: 2px;
-				font-size: 12px; // Special case for tiny text
-				line-height: 16px;
-				font-weight: 700;
+				border-bottom-left-radius: @radius;
+				border-bottom-right-radius: @radius;
+				font-size: @font-sml;
+				line-height: @double;
+				font-weight: @bold;
 				color: #fff;
 			}
 		}
@@ -131,6 +131,84 @@
 		input[type="phone"],
 		select {
 			max-width: 20em;
+		}
+	}
+
+	// Tag-it component
+	// @todo This just duplicates some styles from pkp-lib. We can probably
+	//  find a better way to share styles after beta, or move this to somewhere
+	//  more appropriate in the theme.
+	.tagit {
+		&:extend(.pkp_unstyled_list);
+		&:extend(.pkp_form input[type="text"]);
+		.pkp_helpers_clear();
+
+		// overwrite text field styles
+		max-width: 100%;
+		height: auto;
+
+		> li {
+			display: inline-block;
+
+			&.tagit-choice {
+				margin-right: 0.5em;
+				padding-left: 0.5em;
+				background: @bg;
+				border-radius: @radius;
+				line-height: @double;
+			}
+		}
+
+		input[type="text"] {
+			display: inline-block;
+			border: none;
+			width: inherit;
+			line-height: 30px;
+			height: 30px;
+			vertical-align: top;
+			padding: 0 0.5em;
+		}
+	}
+
+	.tagit-close {
+		padding: 0 0.5em;
+		color: @no;
+	}
+}
+
+// Auto-complete selection fields for tagit component (not nested in .pkp_form)
+.ui-autocomplete {
+	&:extend(.pkp_unstyled_list);
+	width: 20em;
+	padding: 2px;
+	border-radius: @radius;
+	background: @bg-base;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -@half;
+		left: 1em;
+		width: 0;
+		height: 0;
+		color: @bg-base;
+		border-bottom: @half solid;
+		border-right: @half solid transparent;
+		border-left: @half solid transparent;
+		vertical-align: middle;
+	}
+
+	> li {
+		padding: @half;
+		font-size: @font-sml;
+		line-height: @line-sml;
+		color: #fff;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			background: @bg;
+			color: @text;
 		}
 	}
 }
