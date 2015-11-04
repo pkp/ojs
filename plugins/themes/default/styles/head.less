@@ -164,22 +164,46 @@
 	}
 }
 
+#notificationsToggle.expandedIndicator {
+	background: @bg;
+	color: @text;
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: -@base;
+		left: 50%;
+		.transform(translateX(-100%)); // Extra 50% centers under text, accounting for extra space from dropdown caret on the right.
+		width: 0;
+		height: 0;
+		color: @bg-base;
+		border-bottom: @base solid;
+		border-right: @base solid transparent;
+		border-left: @base solid transparent;
+		vertical-align: middle;
+	}
+}
+
 // Tasks grid. Hacky workarounds for styling a grid...
+@tasks-border: 1px solid rgba(255,255,255,0.2);
 #notificationsPopover {
 	display: none;
 	position: absolute;
-	top: 100%;
+	top: 60px;
 	right: 0;
 	width: 30em;
 	background: @bg-base;
+	border-radius: @radius;
 	color: #fff;
+	z-index: 100;
 
-	a {
-		color: #fff;
+	.footer,
+	.gridPaging {
+		line-height: @triple;
 	}
 
 	.footer {
-		float: left;
+		border-top: @tasks-border;
 	}
 
 	// Override .pkp_nav_list ul styles
@@ -195,24 +219,21 @@
 
 		a {
 			padding: 0 @base;
-			line-height: @double;
+			line-height: @triple;
 		}
-	}
-
-	.gridPaging {
-		float: right;
-		line-height: @double;
 	}
 
 	.gridPages {
 		padding: 0 @base;
+		text-align: right;
 		color: rgba(255,255,255,0.7);
 	}
 
 	.pkp_controllers_grid {
 
 		thead {
-			line-height: @double;
+			border-bottom: @tasks-border;
+			line-height: @triple;
 
 			th:first-child {
 				&:extend(.pkp_screen_reader);
@@ -220,25 +241,30 @@
 		}
 
 		tbody {
-			background: @bg;
 
 			a {
 				padding: @half 0;
-				color: @primary-lift;
+				color: rgba(255,255,255,0.7);
 
 				&:hover,
 				&:focus {
-					color: @primary;
+					color: #fff;
 				}
+			}
+
+			tr {
+				border-bottom: 1px solid rgba(255,255,255,0.2);
 			}
 		}
 
 		.first_column {
 			padding-left: @base;
+			padding-right: @base;
 			min-width: @double + @base;
 		}
 	}
 }
+
 
 // Site logo/name
 .pkp_site_name {
