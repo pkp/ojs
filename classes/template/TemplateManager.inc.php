@@ -34,7 +34,7 @@ class TemplateManager extends PKPTemplateManager {
 		assert(is_a($router, 'PKPRouter'));
 
 		// Are we using implicit authentication?
-		$this->assign('implicitAuth', Config::getVar('security', 'implicit_auth'));
+		$this->assign('implicitAuth', strtolower(Config::getVar('security', 'implicit_auth')));
 
 		if (!defined('SESSION_DISABLE_INIT')) {
 			/**

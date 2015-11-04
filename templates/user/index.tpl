@@ -223,7 +223,7 @@
 	{/if}
 	<li><a href="{url page="user" op="profile"}">{translate key="user.editMyProfile"}</a></li>
 
-	{if !$implicitAuth}
+	{if !$implicitAuth || $implicitAuth === $smarty.const.IMPLICIT_AUTH_OPTIONAL}
 		<li><a href="{url page="user" op="changePassword"}">{translate key="user.changeMyPassword"}</a></li>
 	{/if}
 
