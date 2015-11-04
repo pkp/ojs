@@ -499,3 +499,7 @@ display_errors = Off
 
 ; Display deprecation warnings
 deprecation_warnings = Off
+
+; Log web service request information for debugging
+log_web_service_info = Off
+
