@@ -11,13 +11,8 @@
 
 .pkp_block {
 	padding: @base @double;
-	border-top: @bg-border-dark;
 	font-size: @font-base;
 	line-height: @line-base;
-
-	&:first-child {
-		border-top: none;
-	}
 
 	.title {
 		display: block;
@@ -28,19 +23,27 @@
 		color: @text-light;
 	}
 
-	.content ul {
-		&:extend(.pkp_unstyled_list);
+	.content {
 
-		li {
-			line-height: @line-base;
-			padding: @half 0;
+		 ul {
+			&:extend(.pkp_unstyled_list);
+
+			li {
+				line-height: @line-base;
+				padding: @half 0;
+			}
 		}
 
-		.current a {
-			padding-left: 0.5em;
-			border-left: 4px solid @bg-border-dark;
-			color: @text-light;
-			cursor: text;
+		p {
+			line-height: @line-base-large;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 
