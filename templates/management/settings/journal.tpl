@@ -7,11 +7,14 @@
  *
  * The journal settings page.
  *}
+{include file="common/header.tpl" pageTitle="manager.setup"}
 
-{strip}
-{assign var="pageTitle" value="manager.setup"}
-{include file="common/header.tpl"}
-{/strip}
+{if $newVersionAvailable}
+	<div class="pkp_notification">
+		{translate|assign:"notificationContents" key="site.upgradeAvailable.manager" currentVersion=$currentVersion latestVersion=$latestVersion siteAdminName=$siteAdmin->getFullName() siteAdminEmail=$siteAdmin->getEmail()}
+		{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId="upgradeWarning-"|uniqid notificationStyleClass="notifyWarning" notificationTitle="common.warning"|translate notificationContents=$notificationContents}
+	</div>
+{/if}
 
 <script type="text/javascript">
 	// Attach the JS file tab handler.

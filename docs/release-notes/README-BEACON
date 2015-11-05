@@ -1,0 +1,7 @@
+This software will optionally provide PKP with a unique identifier for the
+installation and the OAI base URL. These are to be used for statistics and
+security alert purposes only.
+
+This feature is optional. If you do not wish to participate, you may either
+uncheck the "beacon" option in the installation form, or for existing installs,
+edit your config.inc.php configuration file and set "enable_beacon" to Off.

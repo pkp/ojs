@@ -117,6 +117,10 @@ show_upgrade_warning = On
 ; source for debugging or if you are working off a development branch without compiled JavaScript.
 enable_minified = Off
 
+; Provide a unique site ID and OAI base URL to PKP for statistics and security
+; alert purposes only.
+enable_beacon = On
+
 
 ;;;;;;;;;;;;;;;;;;;;;
 ; Database Settings ;
