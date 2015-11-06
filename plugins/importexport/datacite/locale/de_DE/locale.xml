@@ -32,9 +32,9 @@
  
 	<message key="plugins.importexport.datacite.settings.form.description">Bitte konfigurieren Sie das DataCite-Export-Plug-In:</message>
 	<message key="plugins.importexport.datacite.settings.form.username">Benutzer/innenname (symbol)</message>
-	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Bitte geben Sie den Benutzer/innennamen (symbol), den Sie von DataCite erhalten haben. Der Benutzer/innenname darf keinen Doppelpunkt enthalten.</message>
- 
-	<message key="plugins.importexport.datacite.export.suppFiles">Ausgewählte Zusatzdateien exportieren</message>
+	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Bitte geben Sie den Benutzer/innennamen (symbol) ein, den Sie von DataCite erhalten haben. Der Benutzer/innenname darf keinen Doppelpunkt enthalten.</message>
+
+	<message key="plugins.importexport.datacite.export.suppFiles">Zusatzdateien exportieren</message>
 	<message key="plugins.importexport.datacite.export.selectSuppFile">Wählen Sie Zusatzdateien aus</message>
 	<message key="plugins.importexport.datacite.export.noSuppFiles">Keinen Zusatzdateien sind momentan DOI zugewiesen.</message>
  

@@ -12,6 +12,7 @@
   -->
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
+
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">Um dieses Plug-In zu benutzen, gehen Sie bitte zu der Plug-In-Kategorie "Öffentliche Kennungen". Aktivieren und konfigurieren Sie das DOI-Plug-In und geben Sie dort einen gültigen DOI-Präfix an.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">Dieses Plug-In ist nicht komplett eingerichtet.</message>
 
@@ -34,18 +35,18 @@
 	<message key="plugins.importexport.common.export">Daten exportieren</message>
 	<message key="plugins.importexport.common.export.unregistered">Exportieren aller unregistrierten Ausgaben, Artikel und Fahnen</message>
 	<message key="plugins.importexport.common.export.selectUnregistered">Wählen Sie unregistrierte Ausgaben, Artikel und Fahnen aus</message>
-	<message key="plugins.importexport.common.export.noUnregistered">Alle Ausgaben, Artikel und Fahnen sind bereits registriert (oder haben keinen DOI zugeteilt).</message>
-	<message key="plugins.importexport.common.export.issues">Ausgewählte Ausgaben exportieren</message>
+	<message key="plugins.importexport.common.export.noUnregistered">Alle veröffentlichten Ausgaben, Artikel und Fahnen sind bereits registriert (oder haben keinen DOI zugeteilt).</message>
+	<message key="plugins.importexport.common.export.issues">Ausgaben exportieren</message>
 	<message key="plugins.importexport.common.export.selectIssue">Ausgaben auswählen</message>
 	<message key="plugins.importexport.common.export.noIssues">Keinen Ausgaben sind momentan DOI zugewiesen.</message>
-	<message key="plugins.importexport.common.export.articles">Ausgewählte Artikel exportieren</message>
+	<message key="plugins.importexport.common.export.articles">Artikel exportieren</message>
 	<message key="plugins.importexport.common.export.selectArticle">Artikel auswählen</message>
 	<message key="plugins.importexport.common.export.noArticles">Keinen Artikeln sind momentan DOI zugewiesen.</message>
-	<message key="plugins.importexport.common.export.galleys">Ausgewählte Fahnen exportieren</message>
+	<message key="plugins.importexport.common.export.galleys">Fahnen exportieren</message>
 	<message key="plugins.importexport.common.export.selectGalley">Fahnen auswählen</message>
 	<message key="plugins.importexport.common.export.noGalleys">Keinen Fahnen sind momentan DOI zugewiesen.</message>
-	<message key="plugins.importexport.common.exportDescription">Klicken Sie diesen Knopf, u, XML-Daten für die ausgewählten Objekte in eine lokale Datei zu exportieren, ohne sie zu registrieren. Dies kann sinnvoll sein, wenn Sie eine dritte Partei mit der Registrierung von DOI beauftragen oder wenn Sie das XML-Format vor einer Registrierung untersuchen möchten.</message>
- 
+	<message key="plugins.importexport.common.exportDescription">Klicken Sie diesen Knopf, um XML-Daten für die ausgewählten Objekte in eine lokale Datei zu exportieren, ohne sie zu registrieren. Dies kann sinnvoll sein, wenn Sie eine dritte Partei mit der Registrierung von DOI beauftragen oder wenn Sie das XML-Format vor einer Registrierung untersuchen möchten.</message>
+
 	<message key="plugins.importexport.common.export.error.issueNotFound">Keine Ausgabe passte zur angegebenen ID: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.articleNotFound">Kein Artikel passte zur angegebenen ID: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.galleyNotFound">Keine Fahne passte zur angegebenen ID: {$param}.</message>
@@ -53,7 +54,7 @@
 	<message key="plugins.importexport.common.export.error.unknownJournal">Keine Zeitschrift passte zum angegebenen Pfad: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.unknownObjectType">Der Objekttyp {$param} kann nicht exportiert werden.</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Die Ausgabedatei {$param} ist nicht schreibbar.</message>
- 
+
 	<message key="plugins.importexport.common.notification.exportSuccessful">Die ausgewählten Objekte wurden erfolgreich zu '{$param}' exportiert.</message>
  
 	<message key="plugins.importexport.common.cliError">FEHLER:</message>

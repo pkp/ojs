@@ -34,12 +34,12 @@
 	<message key="plugins.importexport.datacite.settings.form.username">Username (symbol)</message>
 	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Please enter the username (symbol) you got from DataCite. The username may not contain colons.</message>
  
-	<message key="plugins.importexport.datacite.export.suppFiles">Export specific supplementary files</message>
+	<message key="plugins.importexport.datacite.export.suppFiles">Export supplementary files</message>
 	<message key="plugins.importexport.datacite.export.selectSuppFile">Select Supplementary Files</message>
 	<message key="plugins.importexport.datacite.export.noSuppFiles">No supplementary files currently have DOIs assigned.</message>
  
 	<message key="plugins.importexport.datacite.export.error.suppFileNotFound">No supplementary file matched the specified suppfile ID: {$param}.</message>
- 
+
 	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[Usage: 
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
