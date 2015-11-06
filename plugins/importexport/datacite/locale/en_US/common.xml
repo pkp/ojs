@@ -12,6 +12,7 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
+
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">In order to use this plug-in please go to the "Public Identifier" plug-in category, enable and configure the DOI plug-in and specify a valid DOI prefix there.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">The plug-in is not fully set up.</message>
 
@@ -35,13 +36,13 @@
 	<message key="plugins.importexport.common.export.unregistered">Export all unregistered issues, articles and galleys</message>
 	<message key="plugins.importexport.common.export.selectUnregistered">Select unregistered Issues, Articles and Galleys</message>
 	<message key="plugins.importexport.common.export.noUnregistered">All published issues, articles and galleys have already been registered (or none of them has a DOI assigned).</message>
-	<message key="plugins.importexport.common.export.issues">Export specific issues</message>
+	<message key="plugins.importexport.common.export.issues">Export issues</message>
 	<message key="plugins.importexport.common.export.selectIssue">Select Issues</message>
 	<message key="plugins.importexport.common.export.noIssues">No issues currently have DOIs assigned.</message>
-	<message key="plugins.importexport.common.export.articles">Export specific articles</message>
+	<message key="plugins.importexport.common.export.articles">Export articles</message>
 	<message key="plugins.importexport.common.export.selectArticle">Select Articles</message>
 	<message key="plugins.importexport.common.export.noArticles">No articles currently have DOIs assigned.</message>
-	<message key="plugins.importexport.common.export.galleys">Export specific galleys</message>
+	<message key="plugins.importexport.common.export.galleys">Export galleys</message>
 	<message key="plugins.importexport.common.export.selectGalley">Select Galleys</message>
 	<message key="plugins.importexport.common.export.noGalleys">No galleys currently have DOIs assigned.</message>
 	<message key="plugins.importexport.common.exportDescription">Click this button to export XML data for the selected object(s) into a local file without registering it with the registration agency. This can be useful if you want a third party to register DOIs for you or if you want to inspect the XML format before registering it.</message>
@@ -55,6 +56,6 @@
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">The output file {$param} is not writable.</message>
  
 	<message key="plugins.importexport.common.notification.exportSuccessful">Successfully exported selected objects to '{$param}'</message>
- 
+
 	<message key="plugins.importexport.common.cliError">ERROR:</message>
 </locale>
