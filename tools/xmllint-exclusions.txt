@@ -6,3 +6,4 @@
 ./plugins/generic/xmlGalley/transform/test.xml
 ./plugins/generic/lucene/embedded/
 ./plugins/generic/lucene/embedded/
+./plugins/generic/translator/registry/emailTemplateData.xml
