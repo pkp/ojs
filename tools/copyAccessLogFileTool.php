@@ -113,7 +113,7 @@ class CopyAccessLogFileTool extends CommandLineTool {
 
 		if ($fileMgr->fileExists($filePath, 'dir')) {
 			// Directory.
-			$filesToCopy = glob($filePath . DIRECTORY_SEPARATOR . '*.*');
+			$filesToCopy = glob($filePath . DIRECTORY_SEPARATOR . '*');
 			foreach ($filesToCopy as $file) {
 				// If a base filename is given as a parameter, check it.
 				if (count($this->argv) == 2) {
@@ -175,19 +175,41 @@ class CopyAccessLogFileTool extends CommandLineTool {
 		}
 
 		// Uncompress it, if needed.
-		$gunzipPath = escapeshellarg(Config::getVar('cli', 'gunzip'));
+		$gunzipPath = Config::getVar('cli', 'gunzip');
 		if ($isCompressed) {
-			exec($gunzipPath . ' ' . $tmpFilePath);
+			if (!is_executable($gunzipPath)) {
+				printf(__('admin.copyAccessLogFileTool.error.executingUtil', array('utilPath' => $gunzipPath, 'utilVar' => 'gunzip')) . "\n");
+				exit(1);
+			}
+			$gunzipPath = escapeshellarg($gunzipPath);
+			$output = array();
+			$returnValue = 0;
+			exec($gunzipPath . ' ' . $tmpFilePath, $output, $returnValue);
+			if ($returnValue == 1) {
+				printf(__('admin.copyAccessLogFileTool.error.executingUtil', array('utilPath' => $gunzipPath, 'utilVar' => 'gunzip')) . "\n");
+				exit(1);
+			}
 			$tmpFilePath = substr($tmpFilePath, 0, -3);
 		}
 
 		// Filter only entries that contains journal paths.
-		$egrepPath = escapeshellarg(Config::getVar('cli', 'egrep'));
+		$egrepPath = Config::getVar('cli', 'egrep');
 		$destinationPath = $usageStatsDir . DIRECTORY_SEPARATOR .
 		FILE_LOADER_PATH_STAGING . DIRECTORY_SEPARATOR .
 		pathinfo($tmpFilePath, PATHINFO_BASENAME);
+		if (!is_executable($egrepPath)) {
+			printf(__('admin.copyAccessLogFileTool.error.executingUtil', array('utilPath' => $egrepPath, 'utilVar' => 'egrep')) . "\n");
+			exit(1);
+		}
+		$egrepPath = escapeshellarg(Config::getVar('cli', 'egrep'));
+		$output = array();
+		$returnValue = 0;
 		// Each journal path is already escaped, see the constructor.
-		exec($egrepPath . " -i '" . $this->_journalPaths . "' " . escapeshellarg($tmpFilePath) . " > " . escapeshellarg($destinationPath));
+		exec($egrepPath . " -i '" . $this->_journalPaths . "' " . escapeshellarg($tmpFilePath) . " > " . escapeshellarg($destinationPath), $output, $returnValue);
+		if ($returnValue > 1) {
+			printf(__('admin.copyAccessLogFileTool.error.executingUtil', array('utilPath' => $egrepPath, 'utilVar' => 'egrep')) . "\n");
+			exit(1);
+		}
 
 		if (!$fileMgr->deleteFile($tmpFilePath)) {
 			printf(__('admin.copyAccessLogFileTool.error.deletingFile', array('tmpFilePath' => $tmpFilePath)) . "\n");
