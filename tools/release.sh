@@ -58,7 +58,7 @@ sed -i	-e "s/<tag>.*<\/tag>/<tag>${THISTAG}<\/tag>/" \
 	-e "s/<release>.*<\/release>/<release>${MAJOR}.${MINOR}.${REVISION}.${THISBUILD}<\/release>/" \
 	-e "s/<date>.*<\/date>/<date>${BUILDDATE}<\/date>/" \
 	-e "s/<package>.*<\/package>/<package>http:\/\/pkp.sfu.ca\/${APPLICATION}\/download\/${APPLICATION}-${MAJOR}.${MINOR}.${REVISION}-${THISBUILD}.tar.gz<\/package>/" \
-	-e "s/\(<patch .*_to_\).*\(\.patch\.gz.*\)/\1${MAJOR}.${MINOR}.${REVISION}-${THISBUILD}.patch.gz/" \
+	-e "s/\(<patch .*_to_\).*\(\.patch\.gz\)/\1${MAJOR}.${MINOR}.${REVISION}-${THISBUILD}.patch.gz/" \
 	-e "s/<\/version>/	<patch from=\"${MAJOR}.${MINOR}.${REVISION}.${LASTBUILD}\">http:\/\/pkp.sfu.ca\/${APPLICATION}\/download\/patch\/ojs-${LASTPATCHSUFFIX}_to_${MAJOR}.${MINOR}.${REVISION}-${THISBUILD}.patch.gz<\/patch>\n<\/version>/" \
 	dbscripts/xml/version.xml
 git add dbscripts/xml/version.xml
