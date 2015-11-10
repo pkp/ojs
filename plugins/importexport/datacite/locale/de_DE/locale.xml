@@ -33,8 +33,11 @@
 	<message key="plugins.importexport.datacite.settings.form.description">Bitte konfigurieren Sie das DataCite-Export-Plug-In:</message>
 	<message key="plugins.importexport.datacite.settings.form.username">Benutzer/innenname (symbol)</message>
 	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Bitte geben Sie den Benutzer/innennamen (symbol) ein, den Sie von DataCite erhalten haben. Der Benutzer/innenname darf keinen Doppelpunkt enthalten.</message>
+	<message key="plugins.importexport.datacite.settings.form.passwordRequired">Bitte geben Sie das Passwort ein, das Sie von DataCite erhalten haben.</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration">DOI automatisch registrieren</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description"><![CDATA[OJS wird DOI automatisch bei DataCite registrieren, sobald ein Artikel neu veröffentlicht wird. Bitte beachten Sie, dass dieser Prozess etwas Zeit im Anschluss an die Publikation braucht. Sie können alle noch unregistrierten DOI in der <a href="{$unregisteredURL}">Liste unregistrierter Artikel</a> sehen.]]></message>
  
-	<message key="plugins.importexport.datacite.export.suppFiles">Ausgewählte Zusatzdateien exportieren</message>
+	<message key="plugins.importexport.datacite.export.suppFiles">Zusatzdateien exportieren</message>
 	<message key="plugins.importexport.datacite.export.selectSuppFile">Wählen Sie Zusatzdateien aus</message>
 	<message key="plugins.importexport.datacite.export.noSuppFiles">Keinen Zusatzdateien sind momentan DOI zugewiesen.</message>
  
@@ -44,4 +47,5 @@
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
 ]]></message>
+	<message key="plugins.importexport.datacite.senderTask.name">DataCite info sender</message>
 </locale>

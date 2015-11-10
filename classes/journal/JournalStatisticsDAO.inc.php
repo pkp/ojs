@@ -28,18 +28,15 @@ class JournalStatisticsDAO extends DAO {
 	 */
 	function getFirstActivityDate($journalId) {
 		$result =& $this->retrieve(
-			'SELECT	LEAST(a.date_submitted, COALESCE(pa.date_published, NOW()), COALESCE(i.date_published, NOW()), u.date_registered) AS first_date
-			FROM	articles a INNER JOIN users u
+			'SELECT	LEAST(a.date_submitted, COALESCE(pa.date_published, NOW()), COALESCE(i.date_published, NOW())) AS first_date
+			FROM	articles a
 				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
 				LEFT JOIN issues i ON (pa.issue_id = i.issue_id)
 				LEFT JOIN articles a2 ON (a2.article_id < a.article_id AND a2.date_submitted IS NOT NULL AND a2.journal_id = ?)
-				LEFT JOIN roles r ON (u.user_id = r.user_id)
 			WHERE	a2.article_id IS NULL AND
 				a.date_submitted IS NOT NULL AND
-				a.journal_id = ? AND
-				r.journal_id = ?',
+				a.journal_id = ?',
 			array(
-				(int) $journalId,
 				(int) $journalId,
 				(int) $journalId
 			)
@@ -48,6 +45,18 @@ class JournalStatisticsDAO extends DAO {
 		$row = $result->GetRowAssoc(false);
 		$firstActivityDate = $this->datetimeFromDB($row['first_date']);
 		$result->Close();
+		// An earlier user registration can override the earliest article activity date
+		$result =& $this->retrieve(
+			'SELECT MIN(u.date_registered) AS first_date FROM users u JOIN roles r ON (u.user_id = r.user_id) WHERE r.journal_id = ?',
+			array(
+				(int) $journalId
+			)
+		);
+		$row = $result->GetRowAssoc(false);
+		$firstUserDate = $this->datetimeFromDB($row['first_date']);
+		if (!$firstActivityDate || ($firstUserDate && $firstActivityDate && strtotime($firstUserDate) < strtotime($firstActivityDate))) {
+			$firstActivityDate = $firstUserDate;
+		}
 		if (!$firstActivityDate) return null;
 		return strtotime($firstActivityDate);
 

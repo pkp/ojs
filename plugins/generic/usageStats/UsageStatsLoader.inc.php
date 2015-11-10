@@ -185,6 +185,10 @@ class UsageStatsLoader extends FileLoader {
 			$plugin = $this->_plugin;
 			if (!$plugin->getSetting(CONTEXT_ID_NONE, 'dataPrivacyOption')) {
 				list($countryCode, $cityName, $region) = $geoTool ? $geoTool->getGeoLocation($entryData['ip']) : array(null, null, null);
+				// Check optional columns setting.
+				$optionalColumns = $plugin->getSetting(CONTEXT_ID_NONE, 'optionalColumns');
+				if (!in_array(STATISTICS_DIMENSION_CITY, $optionalColumns)) $cityName = null;
+				if (!in_array(STATISTICS_DIMENSION_REGION, $optionalColumns)) $cityName = $region = null;
 			}
 			$day = date('Ymd', $entryData['date']);
 
