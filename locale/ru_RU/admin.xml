@@ -103,6 +103,7 @@
 	<message key="admin.copyAccessLogFileTool.error.acessingFile">Ошибка: Файл {$filePath} не существует или к нему нет доступа.</message>
 	<message key="admin.copyAccessLogFileTool.error.copyingFile">Ошибка: не могу скопировать файл из {$filePath} в {$tmpFilePath}</message>
 	<message key="admin.copyAccessLogFileTool.error.deletingFile">Ошибка: не могу удалить файл {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.executingUtil">Ошибка: не могу запустить «{$utilPath}».  Проверьте вашу настройку {$utilVar} в config.inc.php.</message>
 	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Предупреждение: файл {$filePath} уже существует в каталоге статистики использования.</message>
 	<message key="admin.copyAccessLogFileTool.success">Успех: {$filePath} в {$destinationPath}</message>
 </locale>

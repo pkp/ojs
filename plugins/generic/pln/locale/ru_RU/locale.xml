@@ -21,7 +21,7 @@
 	<message key="plugins.generic.pln.settings">Настройки</message>
 	<message key="plugins.generic.pln.settings.saved">Настройки PKP PLN сохранены.</message>
 	<message key="plugins.generic.pln.settings.terms_of_use">Условия использования</message>
-	<message key="plugins.generic.pln.settings.terms_of_use_help">Перед депонированием в сети необходимо принять все условия ее использования.</message>
+	<message key="plugins.generic.pln.settings.terms_of_use_help">Как основное контактное лицо, я добросовестно принимаю и соглашаюсь со следующими условиями участия в частной сети LOCKSS, созданной Public Knowledge Project (PKP-PLN):</message>
 	<message key="plugins.generic.pln.settings.terms_of_use_agree">Я соглашаюсь</message>
 	<message key="plugins.generic.pln.settings.journal_uuid">Идентификатор журнала</message>
 	<message key="plugins.generic.pln.settings.journal_uuid_help">Это уникальный идентификатор вашего журнала для PKP PLN. Возможно Вам потребуется сообщить его администраторам PKP PLN для поддержки Вашего журнала.</message>

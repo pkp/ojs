@@ -38,7 +38,7 @@
 	<message key="plugins.importexport.datacite.settings.form.automaticRegistration">Регистрировать DOI автоматически</message>
 	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description"><![CDATA[OJS будет автоматически передавать DOI в DataCite после опубликования статей. Пожалуйста, обратите внимание, что обработка может занять некоторое время после публикации. Вы можете проверить все незарегистрированные DOI в <a href="{$unregisteredURL}">списке незарегистрированных статей</a>.]]></message>
  
-	<message key="plugins.importexport.datacite.export.suppFiles">Экспортировать определенные дополнительные файлы</message>
+	<message key="plugins.importexport.datacite.export.suppFiles">Экспортировать дополнительные файлы</message>
 	<message key="plugins.importexport.datacite.export.selectSuppFile">Выбрать дополнительные файлы</message>
 	<message key="plugins.importexport.datacite.export.noSuppFiles">Ни один из дополнительных файлов сейчас не имеет назначенных DOI.</message>
  
