@@ -13,7 +13,16 @@
 {/strip}
 
 <p>{translate key="plugins.reports.counter.description"}</p>
+<h3>{translate key="plugins.reports.counter.release"} {$release}</h3>
+<ul>
+	{foreach from=$available key="report" item="reportfile"}
+		<li>
+			{translate key="plugins.reports.counter.$report.title"|lower}: {foreach from=$years item=year}&nbsp;&nbsp;<a href="{url path="CounterReportPlugin" type="fetch" release=$release report=$report year=$year}">{$year|escape}</a>{/foreach}
+		</li>
+	{/foreach}
+</ul>
 
+<h3>{translate key="plugins.reports.counter.olderReports"}</h3>
 <p>{translate key="plugins.reports.counter.1a.introduction"}</p>
 <ul>
 	<li>{translate key="plugins.reports.counter.1a.title"}{foreach from=$years item=year}&nbsp;&nbsp;<a href="{url path="CounterReportPlugin" type="report" year=$year}">{$year|escape}</a>{/foreach}</li>
