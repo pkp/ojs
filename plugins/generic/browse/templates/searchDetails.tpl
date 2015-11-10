@@ -8,12 +8,14 @@
  * Display published articles by browse object (section or identify type)
  *
  *}
+{strip}
 {if $enableBrowseBySections}
 {assign var=pageTitle value="plugins.generic.browse.search.sectionDetails"}
 {else if $enableBrowseByIdentifyTypes}
 {assign var=pageTitle value="plugins.generic.browse.search.identifyTypeDetails"}
 {/if}
 {include file="common/header.tpl"}
+{/strip}
 
 <br />
 

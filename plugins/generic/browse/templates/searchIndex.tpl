@@ -8,12 +8,14 @@
  * Display journal browse objects (sections or identify types)
  *
  *}
+{strip}
 {if $enableBrowseBySections}
 {assign var="pageTitle" value="plugins.generic.browse.search.sectionIndex"}
 {else if $enableBrowseByIdentifyTypes}
 {assign var="pageTitle" value="plugins.generic.browse.search.identifyTypeIndex"}
 {/if}
 {include file="common/header.tpl"}
+{/strip}
 
 <div id="results">
 {if $enableBrowseBySections}
