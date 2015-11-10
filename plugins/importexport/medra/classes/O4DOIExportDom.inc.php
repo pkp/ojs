@@ -782,7 +782,7 @@ class O4DOIExportDom extends DOIExportDom {
 
 		// ISSN
 		if (!empty($issn)) {
-			$issn = String::regexp_replace('/[^0-9]/', '', $issn);
+			$issn = String::regexp_replace('/[^0-9xX]/', '', $issn);
 			XMLCustomWriter::appendChild($serialVersionElement, $this->_idElement('Product', O4DOI_ID_TYPE_ISSN, $issn));
 		}
 
