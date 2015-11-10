@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (hrvatski) locale.
+  -->
+
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="plugins.block.developedBy.displayName">"Sustav razvili" blok</message>
+	<message key="plugins.block.developedBy.description">Ovaj dodatak prikazuje poveznicu na razvojni tim OMP-a u rubnom izborniku.</message>
+</locale>
