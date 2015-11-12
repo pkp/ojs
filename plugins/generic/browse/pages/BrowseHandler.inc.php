@@ -1,4 +1,4 @@
- <?php
+<?php
 
 /**
  * @file plugins/generic/browse/pages/BrowseHandler.inc.php
