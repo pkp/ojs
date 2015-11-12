@@ -66,6 +66,13 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$section =& $sectionDao->getSection($submission->getSectionId());
+		if (!$section) {
+			import('classes.notification.NotificationManager');
+			$notificationManager = new NotificationManager();
+			$notificationManager->createTrivialNotification(
+				$user->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('author.submit.form.sectionRequired'))
+			);
+		}
 
 		$enableComments = $journal->getSetting('enableComments');
 
