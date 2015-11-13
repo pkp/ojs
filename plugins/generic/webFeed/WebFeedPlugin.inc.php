@@ -54,6 +54,14 @@ class WebFeedPlugin extends GenericPlugin {
 	}
 
 	/**
+	 * Override the builtin to get the correct template path.
+	 * @return string
+	 */
+	function getTemplatePath() {
+		return parent::getTemplatePath() . 'templates/';
+	}
+
+	/**
 	 * Register as a block plugin, even though this is a generic plugin.
 	 * This will allow the plugin to behave as a block plugin, i.e. to
 	 * have layout tasks performed on it.
@@ -145,24 +153,32 @@ class WebFeedPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Display verbs for the management interface.
+	 * @see Plugin::getActions()
 	 */
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
-		if ($this->getEnabled()) {
-			$verbs[] = array('settings', __('plugins.generic.webfeed.settings'));
-		}
-		return $verbs;
+	function getActions($request, $verb) {
+		$router = $request->getRouter();
+		import('lib.pkp.classes.linkAction.request.AjaxModal');
+		return array_merge(
+			$this->getEnabled()?array(
+				new LinkAction(
+					'settings',
+					new AjaxModal(
+						$router->url($request, null, null, 'manage', null, array('verb' => 'settings', 'plugin' => $this->getName(), 'category' => 'generic')),
+						$this->getDisplayName()
+					),
+					__('manager.plugins.settings'),
+					null
+				),
+			):array(),
+			parent::getActions($request, $verb)
+		);
 	}
 
  	/**
 	 * @see Plugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
-		$request =& $this->getRequest();
-
-		switch ($verb) {
+	function manage($args, $request) {
+		switch ($request->getUserVar('verb')) {
 			case 'settings':
 				$journal = $request->getJournal();
 
@@ -177,21 +193,14 @@ class WebFeedPlugin extends GenericPlugin {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
-						$request->redirect(null, null, 'plugins');
-						return false;
-					} else {
-						$form->display();
+						return new JSONMessage(true);
 					}
 				} else {
 					$form->initData();
-					$form->display();
 				}
-				return true;
-			default:
-				// Unknown management verb
-				assert(false);
-				return false;
+				return new JSONMessage(true, $form->fetch($request));
 		}
+		return parent::manage($args, $request);
 	}
 
 	/**

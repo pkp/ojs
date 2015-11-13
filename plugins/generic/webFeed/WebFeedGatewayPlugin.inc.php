@@ -72,7 +72,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 	 */
 	function getTemplatePath() {
 		$plugin =& $this->getWebFeedPlugin();
-		return $plugin->getTemplatePath() . 'templates/';
+		return $plugin->getTemplatePath();
 	}
 
 	/**
