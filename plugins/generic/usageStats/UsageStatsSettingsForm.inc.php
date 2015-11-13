@@ -59,6 +59,9 @@ class UsageStatsSettingsForm extends Form {
 		$saltFilepath = Config::getVar('usageStats', 'salt_filepath');
 		$templateMgr->assign('saltFilepath', $saltFilepath && file_exists($saltFilepath) && is_writable($saltFilepath));
 		$templateMgr->assign('optionalColumnsOptions', $this->getOptionalColumnsList());
+		if (!$this->getData('selectedOptionalColumns')) {
+			$this->setData('selectedOptionalColumns', array());
+		}
 		parent::display();
 	}
 
