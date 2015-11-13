@@ -25,7 +25,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$this->addRoleAssignment(
 			array(ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER),
 			array(
-				'publicationMetadata',
+				'publicationMetadata', 'pubIds',
 			)
 		);
 	}
@@ -37,8 +37,8 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 
 	/**
 	 * Show the publication metadata form.
-	 * @param $request Request
 	 * @param $args array
+	 * @param $request Request
 	 * @return JSONMessage JSON object
 	 */
 	function publicationMetadata($args, $request) {
@@ -52,6 +52,21 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 
 		$issueEntryPublicationMetadataForm->initData();
 		return new JSONMessage(true, $issueEntryPublicationMetadataForm->fetch($request));
+	}
+
+	/**
+	 * Show the public identifiers form.
+	 * @param $args array
+	 * @param $request Request
+	 * @return JSONMessage JSON object
+	 */
+	function pubIds($args, $request) {
+		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
+		$submission = $this->getSubmission();
+		$stageId = $this->getStageId();
+		$identifiersForm = new PublicIdentifiersForm($submission, $stageId, array('displayedInContainer' => true));
+		$identifiersForm->initData();
+		return new JSONMessage(true, $identifiersForm->fetch($request));
 	}
 
 	/**
@@ -71,6 +86,11 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 					import('lib.pkp.classes.log.SubmissionLog');
 					import('classes.log.SubmissionEventLogEntry'); // Log consts
 					SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_ISSUE_METADATA_UPDATE, 'submission.event.issueMetadataUpdated');
+					break;
+				case 'identifiers':
+					import('controllers.tab.pubIds.form.PublicIdentifiersForm');
+					$form = new PublicIdentifiersForm($submission, $this->getStageId(), array('displayedInContainer' => true, 'tabPos' => $this->getTabPosition()));
+					$notificationKey = 'common.changesSaved';
 					break;
 			}
 		}
