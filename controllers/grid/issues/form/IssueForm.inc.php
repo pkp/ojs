@@ -222,11 +222,6 @@ class IssueForm extends Form {
 		if ($this->getData('enableOpenAccessDate')) $issue->setOpenAccessDate($this->getData('openAccessDate'));
 		else $issue->setOpenAccessDate(null);
 
-		// consider the additional field names from the public identifer plugins
-		import('classes.plugins.PubIdPluginHelper');
-		$pubIdPluginHelper = new PubIdPluginHelper();
-		$pubIdPluginHelper->execute($this, $issue);
-
 		// if issueId is supplied, then update issue otherwise insert a new one
 		if (!$isNewIssue) {
 			parent::execute();
