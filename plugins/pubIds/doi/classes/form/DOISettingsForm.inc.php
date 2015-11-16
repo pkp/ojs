@@ -22,14 +22,14 @@ class DOISettingsForm extends Form {
 	// Private properties
 	//
 	/** @var integer */
-	var $_journalId;
+	var $_contextId;
 
 	/**
-	 * Get the journal ID.
+	 * Get the context ID.
 	 * @return integer
 	 */
-	function _getJournalId() {
-		return $this->_journalId;
+	function _getContextId() {
+		return $this->_contextId;
 	}
 
 	/** @var DOIPubIdPlugin */
@@ -50,19 +50,19 @@ class DOISettingsForm extends Form {
 	/**
 	 * Constructor
 	 * @param $plugin DOIPubIdPlugin
-	 * @param $journalId integer
+	 * @param $contextId integer
 	 */
-	function DOISettingsForm($plugin, $journalId) {
-		$this->_journalId = $journalId;
+	function DOISettingsForm($plugin, $contextId) {
+		$this->_contextId = $contextId;
 		$this->_plugin = $plugin;
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
-		$this->addCheck(new FormValidatorCustom($this, 'doiObjects', 'required', 'plugins.pubIds.doi.manager.settings.doiObjectsRequired', create_function('$enableIssueDoi,$form', 'return $form->getData(\'enableIssueDoi\') || $form->getData(\'enableArticleDoi\') || $form->getData(\'enableGalleyDoi\');'), array($this)));
-		$this->addCheck(new FormValidatorRegExp($this, 'doiPrefix', 'required', 'plugins.pubIds.doi.manager.settings.doiPrefixPattern', '/^10\.[0-9]{4,7}$/'));
+		$this->addCheck(new FormValidatorCustom($this, 'doiObjects', 'required', 'plugins.pubIds.doi.manager.settings.doiObjectsRequired', create_function('$enableIssueDoi,$form', 'return $form->getData(\'enableIssueDoi\') || $form->getData(\'enableArticleDoi\') || $form->getData(\'enableArticleGalleyDoi\');'), array($this)));
+		//$this->addCheck(new FormValidatorRegExp($this, 'doiPrefix', 'required', 'plugins.pubIds.doi.manager.settings.doiPrefixPattern', '/^10\.[0-9]{4,7}$/'));
 		$this->addCheck(new FormValidatorCustom($this, 'doiIssueSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired', create_function('$doiIssueSuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableIssueDoi\')) return $doiIssueSuffixPattern != \'\';return true;'), array($this)));
 		$this->addCheck(new FormValidatorCustom($this, 'doiArticleSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired', create_function('$doiArticleSuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableArticleDoi\')) return $doiArticleSuffixPattern != \'\';return true;'), array($this)));
-		$this->addCheck(new FormValidatorCustom($this, 'doiGalleySuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired', create_function('$doiGalleySuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableGalleyDoi\')) return $doiGalleySuffixPattern != \'\';return true;'), array($this)));
+		$this->addCheck(new FormValidatorCustom($this, 'doiArticleGalleySuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired', create_function('$doiArticleGalleySuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableArticleGalleyDoi\')) return $doiArticleGalleySuffixPattern != \'\';return true;'), array($this)));
 		$this->addCheck(new FormValidatorPost($this));
 
 		// for DOI reset requests
@@ -91,10 +91,10 @@ class DOISettingsForm extends Form {
 	 * @see Form::initData()
 	 */
 	function initData() {
-		$journalId = $this->_getJournalId();
+		$contextId = $this->_getContextId();
 		$plugin =& $this->_getPlugin();
 		foreach($this->_getFormFields() as $fieldName => $fieldType) {
-			$this->setData($fieldName, $plugin->getSetting($journalId, $fieldName));
+			$this->setData($fieldName, $plugin->getSetting($contextId, $fieldName));
 		}
 	}
 
@@ -110,9 +110,9 @@ class DOISettingsForm extends Form {
 	 */
 	function execute() {
 		$plugin =& $this->_getPlugin();
-		$journalId = $this->_getJournalId();
+		$contextId = $this->_getContextId();
 		foreach($this->_getFormFields() as $fieldName => $fieldType) {
-			$plugin->updateSetting($journalId, $fieldName, $this->getData($fieldName), $fieldType);
+			$plugin->updateSetting($contextId, $fieldName, $this->getData($fieldName), $fieldType);
 		}
 	}
 
@@ -124,12 +124,12 @@ class DOISettingsForm extends Form {
 		return array(
 			'enableIssueDoi' => 'bool',
 			'enableArticleDoi' => 'bool',
-			'enableGalleyDoi' => 'bool',
+			'enableArticleGalleyDoi' => 'bool',
 			'doiPrefix' => 'string',
 			'doiSuffix' => 'string',
 			'doiIssueSuffixPattern' => 'string',
 			'doiArticleSuffixPattern' => 'string',
-			'doiGalleySuffixPattern' => 'string',
+			'doiArticleGalleySuffixPattern' => 'string',
 		);
 	}
 }
