@@ -13,17 +13,16 @@
  * @brief Abstract class for public identifiers plugins
  */
 
-import('lib.pkp.classes.plugins.Plugin');
+import('lib.pkp.classes.plugins.PKPPubIdPlugin');
 
-abstract class PubIdPlugin extends Plugin {
+class PubIdPlugin extends PKPPubIdPlugin {
 
 	/**
 	 * Constructor
 	 */
 	function PubIdPlugin() {
-		parent::Plugin();
+		parent::PKPPubIdPlugin();
 	}
-
 
 	//
 	// Implement template methods from Plugin
@@ -32,333 +31,228 @@ abstract class PubIdPlugin extends Plugin {
 	 * @copydoc Plugin::register()
 	 */
 	function register($category, $path) {
-		if (!parent::register($category, $path)) return false;
-		// Enable storage of additional fields.
-		foreach($this->_getDAOs() as $daoName) {
-			HookRegistry::register(strtolower_codesafe($daoName).'::getAdditionalFieldNames', array($this, 'getAdditionalFieldNames'));
-		}
-		return true;
+		return parent::register($category, $path);
 	}
 
- 	/**
-	 * @copydoc Plugin::manage()
+	//
+	// Protected template methods from PKPPlubIdPlugin
+	//
+	/**
+	 * @copydoc PKPPubIdPlugin::getPubObjectTypes()
 	 */
-	function manage($args, $request) {
-		$notificationManager = new NotificationManager();
-		$user = $request->getUser();
-		$journal = $request->getJournal();
+	function getPubObjectTypes() {
+		return array('Issue', 'Article', 'ArticleGalley');
+	}
 
-		$settingsFormName = $this->getSettingsFormName();
-		$settingsFormNameParts = explode('.', $settingsFormName);
-		$settingsFormClassName = array_pop($settingsFormNameParts);
-		$this->import($settingsFormName);
-		$form = new $settingsFormClassName($this, $journal->getId());
-		if ($request->getUserVar('save')) {
-			$form->readInputData();
-			if ($form->validate()) {
-				$form->execute();
-				$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SUCCESS);
-				return new JSONMessage(true);
-			} else {
-				return new JSONMessage(true, $form->fetch($request));
-			}
-		} elseif ($request->getUserVar('clearPubIds')) {
-			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$journalDao->deleteAllPubIds($journal->getId(), $this->getPubIdType());
-			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SUCCESS);
-			return new JSONMessage(true);
+	/**
+	 * @copydoc PKPPubIdPlugin::getPubObjects()
+	 */
+	function getPubObjects($pubObjectType, $contextId) {
+		$objectsToCheck = null;
+		switch($pubObjectType) {
+			case 'Issue':
+				$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+				$objectsToCheck = $issueDao->getIssues($contextId);
+				break;
+
+			case 'Article':
+				$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao PublishedArticleDAO */
+				$objectsToCheck =& $articleDao->getByContextId($contextId);
+				break;
+
+			case 'ArticleGalley':
+				$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+				$objectsToCheck = $galleyDao->getByJournalId($contextId);
+				break;
+		}
+		return $objectsToCheck;
+	}
+
+	/**
+	 * @copydoc PKPPubIdPlugin::getPubId()
+	 */
+	function getPubId($pubObject, $preview = false) {
+		if ($this->isObjectExcluded($pubObject)) return null;
+
+		// Get the pub id type
+		$pubIdType = $this->getPubIdType();
+
+		// If we already have an assigned pub id, use it.
+		$storedDOI = $pubObject->getStoredPubId($pubIdType);
+		if ($storedDOI) return $storedDOI;
+
+		// Determine the type of the publishing object.
+		$pubObjectType = $this->getPubObjectType($pubObject);
+
+		// Initialize variables for publication objects.
+		$issue = ($pubObjectType == 'Issue' ? $pubObject : null);
+		$article = ($pubObjectType == 'Article' ? $pubObject : null);
+		$galley = ($pubObjectType == 'ArticleGalley' ? $pubObject : null);
+
+		// Get the context id of the object.
+		if (in_array($pubObjectType, array('Issue', 'Article'))) {
+			$contextId = $pubObject->getJournalId();
 		} else {
-			$form->initData();
-			return new JSONMessage(true, $form->fetch($request));
+			// Retrieve the published article.
+			assert(is_a($pubObject, 'ArticleGalley'));
+			$articleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
+			$article =& $articleDao->getPublishedArticleByArticleId($pubObject->getSubmissionId(), null, true);
+			if (!$article) return null;
+
+			// Now we can identify the context.
+			$contextId = $article->getJournalId();
 		}
-	}
 
+		$context = $this->getContext($contextId);
+		if (!$context) return null;
+		$contextId = $context->getId();
 
-	//
-	// Protected template methods to be implemented by sub-classes.
-	//
-	/**
-	 * Get the public identifier.
-	 * @param $pubObject object
-	 *  (Issue, Article, PublishedArticle, ArticleGalley)
-	 * @param $preview boolean
-	 *  when true, the public identifier will not be stored
-	 * @return string
-	 */
-	abstract function getPubId($pubObject, $preview = false);
+		// Check whether pub ids are enabled for the given object type.
+		$objectTypeEnabled = $this->isObjectTypeEnabled($pubObjectType, $contextId);
+		if (!$objectTypeEnabled) return null;
 
-	/**
-	 * Public identifier type, see
-	 * http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html
-	 * @return string
-	 */
-	abstract function getPubIdType();
+		// Retrieve the issue.
+		if (!is_a($pubObject, 'Issue')) {
+			assert(!is_null($article));
+			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+			$issue = $issueDao->getIssueByArticleId($article->getId(), $context->getId(), true);
+		}
+		if ($issue && $contextId != $issue->getJournalId()) return null;
 
-	/**
-	 * Public identifier type that will be displayed to the reader.
-	 * @return string
-	 */
-	abstract function getPubIdDisplayType();
+		// Retrieve the pub id prefix.
+		$pubIdPrefix = $this->getSetting($contextId, $this->getPrefixFieldName());
+		if (empty($pubIdPrefix)) return null;
 
-	/**
-	 * Full name of the public identifier.
-	 * @return string
-	 */
-	abstract function getPubIdFullName();
+		// Generate the pub id suffix.
+		$suffixFieldName = $this->getSuffixFieldName();
+		$suffixGenerationStrategy = $this->getSetting($contextId, $suffixFieldName);
+		switch ($suffixGenerationStrategy) {
+			case 'customId':
+				$pubIdSuffix = $pubObject->getData($suffixFieldName);
+				break;
 
-	/**
-	 * Get the whole resolving URL.
-	 * @param $journalId int
-	 * @param $pubId string
-	 * @return string resolving URL
-	 */
-	abstract function getResolvingURL($journalId, $pubId);
+			case 'pattern':
+				$suffixPatternsFieldNames = $this->getSuffixPatternsFieldNames();
+				$pubIdSuffix = $this->getSetting($contextId, $suffixPatternsFieldNames[$pubObjectType]);
 
-	/**
-	 * Get the file (path + filename)
-	 * to be included into the object's
-	 * metadata pages.
-	 * @return string
-	 */
-	abstract function getPubIdMetadataFile();
+				// %j - journal initials
+				$pubIdSuffix = String::regexp_replace('/%j/', String::strtolower($context->getAcronym($context->getPrimaryLocale())), $pubIdSuffix);
 
-	/**
-	 * Get the class name of the settings form.
-	 * @return string
-	 */
-	abstract function getSettingsFormName();
+				// %x - custom identifier
+				if ($pubObject->getStoredPubId('publisher-id')) {
+					$pubIdSuffix = String::regexp_replace('/%x/', $pubObject->getStoredPubId('publisher-id'), $pubIdSuffix);
+				}
 
-	/**
-	 * Verify form data.
-	 * @param $fieldName string The form field to be checked.
-	 * @param $fieldValue string The value of the form field.
-	 * @param $pubObject object
-	 * @param $journalId integer
-	 * @param $errorMsg string Return validation error messages here.
-	 * @return boolean
-	 */
-	abstract function verifyData($fieldName, $fieldValue, &$pubObject, $journalId, &$errorMsg);
+				if ($issue) {
+					// %v - volume number
+					$pubIdSuffix = String::regexp_replace('/%v/', $issue->getVolume(), $pubIdSuffix);
+					// %i - issue number
+					$pubIdSuffix = String::regexp_replace('/%i/', $issue->getNumber(), $pubIdSuffix);
+					// %Y - year
+					$pubIdSuffix = String::regexp_replace('/%Y/', $issue->getYear(), $pubIdSuffix);
+				}
 
-	/**
-	 * Check whether the given pubId is valid.
-	 * @param $pubId string
-	 * @return boolean
-	 */
-	function validatePubId($pubId) {
-		return true; // Assume a valid ID by default;
-	}
+				if ($article) {
+					// %a - article id
+					$pubIdSuffix = String::regexp_replace('/%a/', $article->getId(), $pubIdSuffix);
+					// %p - page number
+					if ($article->getPages()) {
+						$pubIdSuffix = String::regexp_replace('/%p/', $article->getPages(), $pubIdSuffix);
+					}
+				}
 
-	/**
-	 * Get the additional form field names.
-	 * @return array
-	 */
-	abstract function getFormFieldNames();
+				if ($galley) {
+					// %g - galley id
+					$pubIdSuffix = String::regexp_replace('/%g/', $galley->getId(), $pubIdSuffix);
+				}
 
-	/**
-	 * Get additional field names to be considered for storage.
-	 * @return array
-	 */
-	abstract function getDAOFieldNames();
+				break;
 
-	/**
-	 * @copydoc Plugin::getActions()
-	 */
-	function getActions($request, $actionArgs) {
-		$router = $request->getRouter();
-		import('lib.pkp.classes.linkAction.request.AjaxModal');
-		return array_merge(
-			$this->getEnabled()?array(
-				new LinkAction(
-					'settings',
-					new AjaxModal(
-						$router->url($request, null, null, 'manage', null, $actionArgs),
-						$this->getDisplayName()
-					),
-					__('manager.plugins.settings'),
-					null
-				),
-			):array(),
-			parent::getActions($request, $actionArgs)
-		);
+			default:
+				$pubIdSuffix = String::strtolower($context->getAcronym($context->getPrimaryLocale()));
+
+				if ($issue) {
+					$pubIdSuffix .= '.v' . $issue->getVolume() . 'i' . $issue->getNumber();
+				} else {
+					$pubIdSuffix .= '.v%vi%i';
+				}
+
+				if ($article) {
+					$pubIdSuffix .= '.' . $article->getId();
+				}
+
+				if ($galley) {
+					$pubIdSuffix .= '.g' . $galley->getId();
+				}
+		}
+		if (empty($pubIdSuffix)) return null;
+
+		// Costruct the pub id from prefix and suffix.
+		$pubId = $this->constructPubId($pubIdPrefix, $pubIdSuffix, $contextId);
+
+		if ($pubId && !$preview) {
+			$this->setStoredPubId($pubObject, $pubObjectType, $pubId);
+		}
+
+		return $pubId;
 	}
 
 	//
 	// Public API
 	//
 	/**
-	 * Check for duplicate public identifiers.
-	 * @param $pubId string
-	 * @param $pubObject object
-	 * @param $journalId integer
-	 * @return boolean
+	 * Exclude all issue objects (articles, galleys) from
+	 * assigning them the pubId or
+	 * clear pubIds of all issue objects (articles, galleys)
+	 * @param $exclude bool
+	 * @param $clear bool
+	 * @param $issue Issue
 	 */
-	function checkDuplicate($pubId, &$pubObject, $journalId) {
-		// FIXME: Hack to ensure that we get a published article if possible.
-		// Remove this when we have migrated getBest...(), etc. to Article.
-		if (is_a($pubObject, 'Submission') && !is_a($pubObject, 'PublishedArticle')) {
-			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
-			$pubArticle =& $publishedArticleDao->getPublishedArticleByArticleId($pubObject->getId());
-			if (is_a($pubArticle, 'PublishedArticle')) {
-				unset($pubObject);
-				$pubObject =& $pubArticle;
+	function excludeAndClearIssueObjects($exclude, $clear, $issue) {
+		$issueId = $issue->getId();
+		$articlePubIdEnabled = $this->isObjectTypeEnabled('Article', $issue->getJournalId());
+		$galleyPubIdEnabled = $this->isObjectTypeEnabled('ArticleGalley', $issue->getJournalId());
+		if (!$articlePubIdEnabled && !$galleyPubIdEnabled) return false;
+		$settingName = $this->getExcludeFormFieldName();
+		$pubIdType = $this->getPubIdType();
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
+		foreach ($publishedArticles as $publishedArticle) {
+			if ($articlePubIdEnabled) {
+				if ($exclude && (!$publishedArticle->getStoredPubId($pubIdType) || $clear)) {
+					$publishedArticle->setData($settingName, 1);
+					$articleDao->updateObject($publishedArticle);
+				} else if ($clear) {
+					$articleDao->deletePubId($publishedArticle->getId(), $pubIdType);
+				}
+			}
+			if ($galleyPubIdEnabled) {
+				$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+				$articleGalleys =& $articleGalleyDao->getGalleysByArticle($publishedArticle->getId());
+				foreach ($articleGalleys as $articleGalley) {
+					if ($exclude && (!$articleGalley->getStoredPubId($pubIdType) || $clear)) {
+						$articleGalley->setData($settingName, 1);
+						$articleGalleyDao->updateObject($articleGalley);
+					} else if ($clear) {
+						$articleGalleyDao->deletePubId($articleGalley->getId(), $pubIdType);
+					}
+				}
 			}
 		}
-
-		// Check all objects of the journal whether they have
-		// the same pubId. This includes pubIds that are not yet generated
-		// but could be generated at any moment if someone accessed
-		// the object publicly. We have to check "real" pubIds rather than
-		// the pubId suffixes only as a pubId with the given suffix may exist
-		// (e.g. through import) even if the suffix itself is not in the
-		// database.
-		$typesToCheck = array('Issue', 'PublishedArticle', 'ArticleGalley');
-		$objectsToCheck = null; // Suppress scrutinizer warn
-
-		foreach($typesToCheck as $pubObjectType) {
-			switch($pubObjectType) {
-				case 'Issue':
-					$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-					$objectsToCheck = $issueDao->getIssues($journalId);
-					break;
-
-				case 'PublishedArticle':
-					// FIXME: We temporarily have to use the published article
-					// DAO here until we've moved pubId-generation to the Article
-					// class.
-					$articleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
-					$objectsToCheck =& $articleDao->getPublishedArticlesByJournalId($journalId);
-					break;
-
-				case 'ArticleGalley':
-					$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-					$objectsToCheck = $galleyDao->getByJournalId($journalId);
-					break;
-			}
-
-			$excludedId = (is_a($pubObject, $pubObjectType) ? $pubObject->getId() : null);
-			while ($objectToCheck = $objectsToCheck->next()) {
-				// The publication object for which the new pubId
-				// should be admissible is to be ignored. Otherwise
-				// we might get false positives by checking against
-				// a pubId that we're about to change anyway.
-				if ($objectToCheck->getId() == $excludedId) continue;
-
-				// Check for ID clashes.
-				$existingPubId = $this->getPubId($objectToCheck, true);
-				if ($pubId == $existingPubId) return false;
-			}
-
-			unset($objectsToCheck);
-		}
-
-		// We did not find any ID collision, so go ahead.
-		return true;
 	}
 
 	/**
-	 * Add the suffix element and the public identifier
-	 * to the object (issue, article, galley, supplementary file).
-	 * @param $hookName string
-	 * @param $params array ()
+	 * @copydoc PKPPubIdPlugin::getDAOs()
 	 */
-	function getAdditionalFieldNames($hookName, $params) {
-		$fields =& $params[1];
-		$formFieldNames = $this->getFormFieldNames();
-		foreach ($formFieldNames as $formFieldName) {
-			$fields[] = $formFieldName;
-		}
-		$daoFieldNames = $this->getDAOFieldNames();
-		foreach ($daoFieldNames as $daoFieldName) {
-			$fields[] = $daoFieldName;
-		}
-		return false;
-	}
-
-	/**
-	 * Return the object type.
-	 * @param $pubObject object
-	 *  (Issue, Article, PublishedArticle, ArticleGalley)
-	 * @return array
-	 */
-	function getPubObjectType($pubObject) {
-		$allowedTypes = array(
-			'Issue' => 'Issue',
-			'Article' => 'Article',
-			'ArticleGalley' => 'Galley',
-		);
-		$pubObjectType = null;
-		foreach ($allowedTypes as $allowedType => $pubObjectTypeCandidate) {
-			if (is_a($pubObject, $allowedType)) {
-				$pubObjectType = $pubObjectTypeCandidate;
-				break;
-			}
-		}
-		if (is_null($pubObjectType)) {
-			// This must be a dev error, so bail with an assertion.
-			assert(false);
-			return null;
-		}
-		return $pubObjectType;
-	}
-
-	/**
-	 * Set and store a public identifier.
-	 * @param $pubObject Issue|Article|ArticleGalley
-	 * @param $pubObjectType string As returned from self::getPubObjectType()
-	 * @param $pubId string
-	 * @return string
-	 */
-	function setStoredPubId(&$pubObject, $pubObjectType, $pubId) {
-		$dao = $this->getDAO($pubObjectType);
-		$dao->changePubId($pubObject->getId(), $this->getPubIdType(), $pubId);
-		$pubObject->setStoredPubId($this->getPubIdType(), $pubId);
-	}
-
-	/**
-	 * Return the name of the corresponding DAO.
-	 * @param $pubObject object
-	 * @return DAO
-	 */
-	function getDAO($pubObjectType) {
-		$daos =  array(
+	function getDAOs() {
+		return  array(
 			'Issue' => 'IssueDAO',
 			'Article' => 'ArticleDAO',
-			'Galley' => 'ArticleGalleyDAO',
+			'ArticleGalley' => 'ArticleGalleyDAO',
 		);
-		$daoName = $daos[$pubObjectType];
-		assert(!empty($daoName));
-		return DAORegistry::getDAO($daoName);
 	}
 
-	/**
-	 * Get the journal object.
-	 * @param $journalId integer
-	 * @return Journal
-	 */
-	function getJournal($journalId) {
-		assert(is_numeric($journalId));
-
-		// Get the journal object from the context (optimized).
-		$request = $this->getRequest();
-		$router = $request->getRouter();
-		$journal = $router->getContext($request); /* @var $journal Journal */
-		if ($journal && $journal->getId() == $journalId) return $journal;
-
-		// Fall back the database.
-		$journalDao = DAORegistry::getDAO('JournalDAO');
-		return $journalDao->getById($journalId);
-	}
-
-	//
-	// Private helper methods
-	//
-	/**
-	 * Return an array of the corresponding DAOs.
-	 * @return array
-	 */
-	function _getDAOs() {
-		return array('IssueDAO', 'ArticleDAO', 'ArticleGalleyDAO');
-	}
 }
 
 ?>
