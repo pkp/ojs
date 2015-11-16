@@ -65,11 +65,10 @@ class WebFeedBlockPlugin extends BlockPlugin {
 
 	/**
 	 * Get the web feed plugin
-	 * @return object
+	 * @return WebFeedPlugin
 	 */
-	function &getWebFeedPlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
-		return $plugin;
+	function getWebFeedPlugin() {
+		return PluginRegistry::getPlugin('generic', $this->parentPluginName);
 	}
 
 	/**
@@ -77,8 +76,7 @@ class WebFeedBlockPlugin extends BlockPlugin {
 	 * @return string
 	 */
 	function getPluginPath() {
-		$plugin =& $this->getWebFeedPlugin();
-		return $plugin->getPluginPath();
+		return $this->getWebFeedPlugin()->getPluginPath();
 	}
 
 	/**
@@ -86,8 +84,7 @@ class WebFeedBlockPlugin extends BlockPlugin {
 	 * @return string
 	 */
 	function getTemplatePath() {
-		$plugin =& $this->getWebFeedPlugin();
-		return $plugin->getTemplatePath();
+		return $this->getWebFeedPlugin()->getTemplatePath();
 	}
 
 	/**
@@ -96,20 +93,14 @@ class WebFeedBlockPlugin extends BlockPlugin {
 	 * @param $request PKPRequest
 	 * @return $string
 	 */
-	function getContents(&$templateMgr, $request = null) {
+	function getContents($templateMgr, $request = null) {
 		$journal = $request->getJournal();
-		if (!$journal) return '';
-
-		$plugin =& $this->getWebFeedPlugin();
-		$displayPage = $plugin->getSetting($journal->getId(), 'displayPage');
+		$plugin = $this->getWebFeedPlugin();
 		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$currentIssue = $issueDao->getCurrent($journal->getId(), true);
-
-		if ($currentIssue) {
+		if ($issueDao->getCurrent($journal->getId(), true)) {
 			return parent::getContents($templateMgr, $request);
-		} else {
-			return '';
 		}
+		return '';
 	}
 }
 
