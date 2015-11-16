@@ -28,18 +28,13 @@
 			{fbvElement type="checkbox" id="createLogFiles" value="1" checked=$createLogFiles label="plugins.generic.usageStats.settings.createLogFiles"}
 		{/fbvFormSection}
 		{fbvFormSection title="plugins.generic.usageStats.settings.logParseRegex" description="plugins.generic.usageStats.settings.logParseRegex.description"}
-			{fbvElement type="text" id="accessLogFileParseRegex" value=$accessLogFileParseRegex"}
+			{fbvElement type="text" id="accessLogFileParseRegex" value=$accessLogFileParseRegex}
 		{/fbvFormSection}
 	{/fbvFormArea}
 	{fbvFormArea id="usageStatsDataPrivacy" title="plugins.generic.usageStats.settings.dataPrivacyOption"}
-		{if $saltFilepath}
-			{assign var="disabled" value=false}
-		{else}
-			{assign var="disabled" value=true}
-		{/if}
-		{if $disabled}
-			<p>{translate key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements"}</p>
-		{/if}
+		{fbvFormSection for="saltFilepath" title="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath" description="plugins.generic.usageStats.settings.dataPrivacyOption.requirements"}
+			{fbvElement type="text" id="saltFilepath" value=$saltFilepath}
+		{/fbvFormSection}
 		{fbvFormSection for="dataPrivacyOption" list=true description="plugins.generic.usageStats.settings.dataPrivacyOption.description"}
 			{fbvElement type="checkbox" id="dataPrivacyOption" value="1" checked=$dataPrivacyOption label="plugins.generic.usageStats.settings.dataPrivacyCheckbox" disabled=$disabled}
 		{/fbvFormSection}
