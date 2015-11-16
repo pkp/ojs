@@ -51,19 +51,17 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 
 	/**
 	 * Get the web feed plugin
-	 * @return object
+	 * @return WebFeedPlugin
 	 */
-	function &getWebFeedPlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
-		return $plugin;
+	function getWebFeedPlugin() {
+		return PluginRegistry::getPlugin('generic', $this->parentPluginName);
 	}
 
 	/**
 	 * Override the builtin to get the correct plugin path.
 	 */
 	function getPluginPath() {
-		$plugin =& $this->getWebFeedPlugin();
-		return $plugin->getPluginPath();
+		return $this->getWebFeedPlugin()->getPluginPath();
 	}
 
 	/**
@@ -71,8 +69,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 	 * @return string
 	 */
 	function getTemplatePath() {
-		$plugin =& $this->getWebFeedPlugin();
-		return $plugin->getTemplatePath() . 'templates/';
+		return $this->getWebFeedPlugin()->getTemplatePath();
 	}
 
 	/**
@@ -81,17 +78,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 	 * @return boolean
 	 */
 	function getEnabled() {
-		$plugin =& $this->getWebFeedPlugin();
-		return $plugin->getEnabled(); // Should always be true anyway if this is loaded
-	}
-
-	/**
-	 * Get the management verbs for this plugin (override to none so that the parent
-	 * plugin can handle this)
-	 * @return array
-	 */
-	function getManagementVerbs() {
-		return array();
+		return $this->getWebFeedPlugin()->getEnabled();
 	}
 
 	/**
@@ -110,7 +97,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		$issue = $issueDao->getCurrent($journal->getId(), true);
 		if (!$issue) return false;
 
-		$webFeedPlugin =& $this->getWebFeedPlugin();
+		$webFeedPlugin = $this->getWebFeedPlugin();
 		if (!$webFeedPlugin->getEnabled()) return false;
 
 		// Make sure the feed type is specified and valid
@@ -135,13 +122,13 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		if ($displayItems == 'recent' && $recentItems > 0) {
 			import('lib.pkp.classes.db.DBResultRange');
 			$rangeInfo = new DBResultRange($recentItems, 1);
-			$publishedArticleObjects =& $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId(), $rangeInfo, true);
+			$publishedArticleObjects = $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId(), $rangeInfo, true);
 			$publishedArticles = array();
 			while ($publishedArticle = $publishedArticleObjects->next()) {
 				$publishedArticles[]['articles'][] = $publishedArticle;
 			}
 		} else {
-			$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId(), true);
+			$publishedArticles = $publishedArticleDao->getPublishedArticlesInSections($issue->getId(), true);
 		}
 
 		$versionDao = DAORegistry::getDAO('VersionDAO');

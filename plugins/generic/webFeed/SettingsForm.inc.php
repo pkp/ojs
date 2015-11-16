@@ -17,20 +17,20 @@ import('lib.pkp.classes.form.Form');
 
 class SettingsForm extends Form {
 
-	/** @var int */
-	var $journalId;
+	/** @var int Associated journal ID */
+	private $_journalId;
 
-	/** @var object */
-	var $plugin;
+	/** @var WebFeedPlugin Web feed plugin */
+	private $_plugin;
 
 	/**
 	 * Constructor
 	 * @param $plugin object
 	 * @param $journalId int
 	 */
-	function SettingsForm(&$plugin, $journalId) {
-		$this->journalId = $journalId;
-		$this->plugin =& $plugin;
+	function SettingsForm($plugin, $journalId) {
+		$this->_journalId = $journalId;
+		$this->_plugin = $plugin;
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 		$this->addCheck(new FormValidatorPost($this));
@@ -40,8 +40,8 @@ class SettingsForm extends Form {
 	 * Initialize form data.
 	 */
 	function initData() {
-		$journalId = $this->journalId;
-		$plugin =& $this->plugin;
+		$journalId = $this->_journalId;
+		$plugin = $this->_plugin;
 
 		$this->setData('displayPage', $plugin->getSetting($journalId, 'displayPage'));
 		$this->setData('displayItems', $plugin->getSetting($journalId, 'displayItems'));
@@ -58,24 +58,33 @@ class SettingsForm extends Form {
 		if ((int) $this->getData('recentItems') <= 0) $this->setData('recentItems', '');
 
 		// if recent items is selected, check that we have a value
-		if ($this->getData('displayItems') == "recent") {
+		if ($this->getData('displayItems') == 'recent') {
 			$this->addCheck(new FormValidator($this, 'recentItems', 'required', 'plugins.generic.webfeed.settings.recentItemsRequired'));
 		}
 
 	}
 
 	/**
+	 * Fetch the form.
+	 * @copydoc Form::fetch()
+	 */
+	function fetch($request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign('pluginName', $this->_plugin->getName());
+		return parent::fetch($request);
+	}
+
+	/**
 	 * Save settings. 
 	 */
 	function execute() {
-		$plugin =& $this->plugin;
-		$journalId = $this->journalId;
+		$plugin = $this->_plugin;
+		$journalId = $this->_journalId;
 
 		$plugin->updateSetting($journalId, 'displayPage', $this->getData('displayPage'));
 		$plugin->updateSetting($journalId, 'displayItems', $this->getData('displayItems'));
 		$plugin->updateSetting($journalId, 'recentItems', $this->getData('recentItems'));
 	}
-
 }
 
 ?>

@@ -75,13 +75,9 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @param $request PKPRequest
 	 */
 	function display($args, $request) {
+		parent::display($args, $request);
 		$templateMgr = TemplateManager::getManager($request);
 		$journal = $request->getJournal();
-
-		parent::display($args, $request);
-
-		$templateMgr->assign('plugin', $this);
-
 		switch (array_shift($args)) {
 			case 'index':
 			case '':
