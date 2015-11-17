@@ -44,7 +44,7 @@ class WebFeedPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Get the name of the settings file to be installed on new journal
+	 * Get the name of the settings file to be installed on new context
 	 * creation.
 	 * @return string
 	 */
@@ -140,14 +140,14 @@ class WebFeedPlugin extends GenericPlugin {
 	function manage($args, $request) {
 		switch ($request->getUserVar('verb')) {
 			case 'settings':
-				$journal = $request->getJournal();
+				$context = $request->getContext();
 
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 
 				$this->import('SettingsForm');
-				$form = new SettingsForm($this, $journal->getId());
+				$form = new SettingsForm($this, $context->getId());
 
 				if ($request->getUserVar('save')) {
 					$form->readInputData();
@@ -161,15 +161,6 @@ class WebFeedPlugin extends GenericPlugin {
 				return new JSONMessage(true, $form->fetch($request));
 		}
 		return parent::manage($args, $request);
-	}
-
-	/**
-	 * Clean up the Journal title.
-	 * @param $string
-	 * @return $string
-	 */
-	function sanitize($string) {
-		return htmlspecialchars(strip_tags($string));
 	}
 }
 

@@ -10,26 +10,26 @@
  * @class SettingsForm
  * @ingroup plugins_generic_webFeed
  *
- * @brief Form for journal managers to modify web feeds plugin settings
+ * @brief Form for managers to modify web feeds plugin settings
  */
 
 import('lib.pkp.classes.form.Form');
 
 class SettingsForm extends Form {
 
-	/** @var int Associated journal ID */
-	private $_journalId;
+	/** @var int Associated context ID */
+	private $_contextId;
 
 	/** @var WebFeedPlugin Web feed plugin */
 	private $_plugin;
 
 	/**
 	 * Constructor
-	 * @param $plugin object
-	 * @param $journalId int
+	 * @param $plugin WebFeedPlugin Web feed plugin
+	 * @param $contextId int Context ID
 	 */
-	function SettingsForm($plugin, $journalId) {
-		$this->_journalId = $journalId;
+	function SettingsForm($plugin, $contextId) {
+		$this->_contextId = $contextId;
 		$this->_plugin = $plugin;
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
@@ -40,12 +40,12 @@ class SettingsForm extends Form {
 	 * Initialize form data.
 	 */
 	function initData() {
-		$journalId = $this->_journalId;
+		$contextId = $this->_contextId;
 		$plugin = $this->_plugin;
 
-		$this->setData('displayPage', $plugin->getSetting($journalId, 'displayPage'));
-		$this->setData('displayItems', $plugin->getSetting($journalId, 'displayItems'));
-		$this->setData('recentItems', $plugin->getSetting($journalId, 'recentItems'));
+		$this->setData('displayPage', $plugin->getSetting($contextId, 'displayPage'));
+		$this->setData('displayItems', $plugin->getSetting($contextId, 'displayItems'));
+		$this->setData('recentItems', $plugin->getSetting($contextId, 'recentItems'));
 	}
 
 	/**
@@ -79,11 +79,11 @@ class SettingsForm extends Form {
 	 */
 	function execute() {
 		$plugin = $this->_plugin;
-		$journalId = $this->_journalId;
+		$contextId = $this->_contextId;
 
-		$plugin->updateSetting($journalId, 'displayPage', $this->getData('displayPage'));
-		$plugin->updateSetting($journalId, 'displayItems', $this->getData('displayItems'));
-		$plugin->updateSetting($journalId, 'recentItems', $this->getData('recentItems'));
+		$plugin->updateSetting($contextId, 'displayPage', $this->getData('displayPage'));
+		$plugin->updateSetting($contextId, 'displayItems', $this->getData('displayItems'));
+		$plugin->updateSetting($contextId, 'recentItems', $this->getData('recentItems'));
 	}
 }
 
