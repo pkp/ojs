@@ -1082,7 +1082,7 @@ class IssueManagementHandler extends EditorHandler {
 			$emails = array();
 			while ($recipients && !$recipients->eof()) {
 				$recipient =& $recipients->next();
-				if ($recipient->getDisabled()) continue;
+				if ($recipient instanceof User && $recipient->getDisabled()) continue;
 				if (!isset($emails[$recipient->getEmail()])) {
 					if (preg_match(ValidatorEmail::getRegexp(), $recipient->getEmail())) {
 						$email->addRecipient($recipient->getEmail(), $recipient->getFullName());
@@ -1097,6 +1097,7 @@ class IssueManagementHandler extends EditorHandler {
 			if($request->getUserVar('sendToMailList')) {
 				$mailList = $notificationMailListDao->getMailList($journal->getId());
 				foreach ($mailList as $mailListRecipient) {
+					if ($recipient instanceof User && $recipient->getDisabled()) continue;
 					$email->addRecipient($mailListRecipient);
 				}
 			}
