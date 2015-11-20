@@ -17,7 +17,8 @@
 			{ldelim}
 				cancelButtonText: {translate|json_encode key="common.cancel"},
 				continueButtonText: {translate|json_encode key="common.continue"},
-				finishButtonText: {translate|json_encode key="common.finish"}
+				finishButtonText: {translate|json_encode key="common.finish"},
+				enforceLinear: false
 			{rdelim});
 	{rdelim});
 </script>
