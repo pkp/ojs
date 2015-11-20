@@ -107,7 +107,7 @@ class GoogleAnalyticsSettingsForm extends Form {
 		if (Validation::isSiteAdmin()) {
 			// Enable this code on the site level
 			if ($this->getData('enableSite')) {
-				$plugin->updateSetting(CONTEXT_ID_NONE, 'enabled', $this->getData('enableSite') == GOOGLE_ANALYTICS_SITE_ENABLE ? TRUE : FALSE, 'boolean');
+				$plugin->updateSetting(CONTEXT_ID_NONE, 'enabled', $this->getData('enableSite') == GOOGLE_ANALYTICS_SITE_ENABLE ? TRUE : FALSE, 'bool');
 				$plugin->updateSetting(CONTEXT_ID_NONE, 'trackingCode', $this->getData('enableSite') == GOOGLE_ANALYTICS_SITE_ENABLE ? $trackingCode : '', 'string');
 				$plugin->updateSetting(CONTEXT_ID_NONE, 'googleAnalyticsSiteId', $this->getData('enableSite') == GOOGLE_ANALYTICS_SITE_ENABLE ? trim($this->getData('googleAnalyticsSiteId'), "\"\';") : '', 'string');
 			}
