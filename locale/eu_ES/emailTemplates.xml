@@ -120,7 +120,7 @@ Eskerrik asko,<br />
 <br />
 Eskerrik asko {$submissionTitle} eskuizkribua {$contextName} aldizkarira bidaltzeagatik. Aldizkaria Interneten kudeatzeko erabiltzen dugun sistemari esker, prozesu editorialean zehar egiten duen ibilbidea jarraitu ahal izango duzu, aldizkariaren webgunean sartuta:<br />
 <br />
-Eskuizkribuaren URLa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Eskuizkribuaren URLa: {$submissionUrl}<br />
 Erabiltzaile-izena: {$authorUsername}<br />
 <br />
 Galderaren bat baduzu, jar zaitez harremanetan nirekin. Eskerrik asko zure lana bidaltzeko aldizkari hau aintzakotzat hartzeagatik.<br />
@@ -160,7 +160,7 @@ Galderaren bat baduzu, jar zaitez harremanetan nirekin. Eskerrik asko zure lana 
 <br />
 {$contextName} aldizkariko “{$submissionTitle}” artikulua esleitu dizugu prozesu editorialean eraman dezazun, Ataleko editore gisa.<br />
 <br />
-Artikuluaren URLa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Artikuluaren URLa: {$submissionUrl}<br />
 Erabiltzaile-izena: {$editorUsername}<br />
 <br />
 Eskerrik asko,<br />
@@ -507,7 +507,7 @@ Eskerrik asko {$contextName} aldizkariko &quot;{$submissionTitle}&quot; eskuizkr
 5. Gorde zuzenketak eta bidali posta elektronikoz Maketatzaileari eta Proba-zuzentzaileari.<br />
 6. Bidali BUKATU duzula adierazteko mezua editoreari.<br />
 <br />
-Artikuluaren URLa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Artikuluaren URLa: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Mezu hau Ataleko editoreak Egileari bidaltzen dio galeradak zuzentzen hasteko prest daudela jakinarazteko. Artikuluari buruzko informazioa eta fitxategia hartzeko datuak ematen ditu.</description>
@@ -544,7 +544,7 @@ Gure jakinarazpen-zerbitzuan izena ematen baduzu, zure lana argitaratzen denean 
 5. Gorde zuzenketak eta bidali posta elektronikoz Maketatzaileari.<br />
 6. Bidali BUKATU duzula adierazteko mezua editoreari.<br />
 <br />
-Eskuizkribuaren URLa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Eskuizkribuaren URLa: {$submissionUrl}<br />
 Erabiltzaile-izena: {$proofreaderUsername}<br />
 <br />
 Orain ezin badiozu lan honi heldu, edo galderaren bat egin nahi badiguzu, jar zaitez harremanetan nirekin, mesedez. Eskerrik asko aldizkariari egiten diozun ekarpenagatik.<br />
@@ -581,7 +581,7 @@ Eskerrik asko {$contextName} aldizkariko &quot;{$submissionTitle}&quot; eskuizkr
 3. Bidali Proba-zuzenketako 3. urratsa BUKATU duzula adierazteko mezua editoreari.<br />
 <br />
 {$contextName} aldizkariaren URLa: <a href="{$journalUrl}">{$journalUrl}</a><br />
-Artikuluaren URLa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Artikuluaren URLa: {$submissionUrl}<br />
 Erabiltzaile-izena: {$layoutEditorUsername}<br />
 <br />
 Orain ezin badiozu lan honi heldu, edo galderaren bat egin nahi badiguzu, jar zaitez harremanetan nirekin, mesedez. Eskerrik asko aldizkariari egiten diozun ekarpenagatik.<br />
@@ -1025,7 +1025,7 @@ Opariaz gozatuko duzulakoan gaude!<br />
 <br />
 &quot;{$submissionTitle}&quot; artikuluaren bertsio berrikusia gora kargatu du {$authorName} egileak.<br />
 <br />
-URL aurkezpena: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL aurkezpena: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Mezu hau automatikoki bidaltzen zaio dagokion editoreari, egileak artikulu baten bertsio berrikusia gora kargatzen duenean.</description>

@@ -159,7 +159,7 @@ Vă mulțumim,<br />
 <br />
 Vă mulțumim pentru depunerea manuscrisului &quot;{$submissionTitle}&quot; la {$contextName}. Folosind sistemul de management online al revistei, vom putea urmări evoluția prin întreg procesul editorial prin autentificarea pe siteul revistei:<br />
 <br />
-URL-ul manuscrisului: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL-ul manuscrisului: {$submissionUrl}<br />
 Nume utilizator: {$authorUsername}<br />
 <br />
 Dacă aveți întrebări, vă rog să mă contactați. Vă mulțumim că ați luat în considerare această revistă ca o deschidere pentru contribuțiile dumneavoastră.<br />
@@ -199,7 +199,7 @@ O evaluare inițială pentru &quot;{$submissionTitle}&quot; a scos la iveală fa
 <br />
 Propunerea intitulată &quot;{$submissionTitle}&quot; trimisă revistei {$contextName} v-a fost trimisă pentru a o superviza de-a lungul procesului editorial în calitatea de redactor de secțiune.<br />
 <br />
-URL-ul propunerii: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL-ul propunerii: {$submissionUrl}<br />
 Nume utilizator: {$editorUsername}<br />
 <br />
 Vă mulțumim,<br />
@@ -593,7 +593,7 @@ Propunerea intitulată &quot;{$submissionTitle}&quot; înaintată revistei {$con
 5. Salvează și trimite prin email corecturile redactorului de machetă cât și corectorului.<br />
 6. Trimite emailul de ÎNCHEIERE redactorului.<br />
 <br />
-URL-ul propunerii: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL-ul propunerii: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Acet email este trimis de redactorul de secțiune autorului înștiințându-l pe acesta asupra faptului că asamblările articolului sunt pregătite pentru corectură. Sunt oferite informații privind articolul și cum poate fi acesta accesat.</description>
@@ -630,7 +630,7 @@ Propunerea intitulată &quot;{$submissionTitle}&quot; trimisă {$contextName} ar
 5. Salvează și trimite prin email corecturile redactorului de machetă.<br />
 6. Trimite emailul de ÎNCHEIERE redactorului.<br />
 <br />
-URL-ul manuscrisului: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL-ul manuscrisului: {$submissionUrl}<br />
 Nume utilizator: {$proofreaderUsername}<br />
 <br />
 Dacă nu puteți îndeplini această sarcină în acest moment sau aveți întrebări, contactați-mă. Mulțumim pentru contribuția dumneavoastră la această revistă.<br />
@@ -667,7 +667,7 @@ Propunerea intitulată &quot;{$submissionTitle}&quot; trimisă revistei {$contex
 4. Trimite emailul de ÎNCHEIERE de la pasul 3 al sesiunii de corectură către redactor.<br />
 <br />
 {$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL-ul propunerii: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL-ul propunerii: {$submissionUrl}<br />
 Nume utilizatorilor: {$layoutEditorUsername}<br />
 <br />
 Dacă nu puteți îndeplini această sarcină în acest moment sau aveți întrebări, contactați-mă. Mulțumim pentru contribuția dumneavoastră la această revistă.<br />

@@ -117,7 +117,7 @@ Grazie,<br />
 <br />
 Grazie per aver inviato la proposta dal titolo &quot;{$submissionTitle}&quot; a {$contextName}. Attraverso l'interfaccia web potrà seguire i vari passi della submission attraverso il processo di revisione utlizzando la sua login al sito:<br />
 <br />
-URL della submission: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL della submission: {$submissionUrl}<br />
 Username: {$authorUsername}<br />
 <br />
 Per qualsiasi domanda non esiti a contattarmi.<br />
@@ -165,7 +165,7 @@ Grazie ancora per il tuo contributo.<br />
 <br />
 La submission, &quot;{$submissionTitle},&quot; a {$contextName} ti è stata assegnata come Section Editor.<br />
 <br />
-Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Submission URL: {$submissionUrl}<br />
 Username: {$editorUsername}<br />
 <br />
 Grazie,<br />
@@ -509,7 +509,7 @@ E' necessario correggere le bozze del tuo contributo &quot;{$submissionTitle}&qu
 5. Salva le modifiche.<br />
 6. Invia all'editor il messaggio COMPLETATO.<br />
 <br />
-URL del contributo: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL del contributo: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Questa mail viene inviata dall'editor all'autore per informarlo che è necessario correggere le bozze del suo contributo. Fornisce informazioni sulla procedura.</description>
@@ -546,7 +546,7 @@ Vorrei chiederti di corregere le bozze per l'articolo, &quot;{$submissionTitle},
 4. Inserisci le correzioni, limitandoti a quelle tipografiche e al formato, in 'Correzioni delle bozze', indicando per ciascuna il numero di pagina e di riga<br />
 5. Salva le modifiche<br />
 6. Invia all'editor comunicazione di aver completato l'incarico.<br />
-URL manoscritto: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL manoscritto: {$submissionUrl}<br />
 Username: {$proofreaderUsername}<br />
 <br />
 Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi.<br />
@@ -585,7 +585,7 @@ Le bozze del manoscritto &quot;{$submissionTitle}&quot; per {$contextName} sono 
 3. Carica i file corretti<br />
 4. Invia all'editor la comunicazione di aver completato l'incarico, dal Passo n. 3 della correzione.<br />
 <br />
-URL manoscritto: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL manoscritto: {$submissionUrl}<br />
 Username: {$layoutEditorUsername}<br />
 <br />
 Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi. Grazie per il tuo contributo al journal.<br />
@@ -895,7 +895,7 @@ Copy-Editor, {$contextName}]]></body>
 <br />
 L'autore {$authorName} ha caricato una versione revisionata di &quot;{$submissionTitle}&quot;.<br />
 <br />
-Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Submission URL: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Questo messaggio viene inviato automaticamente all'editor quando un autore carica una versione revisionata di un articolo</description>

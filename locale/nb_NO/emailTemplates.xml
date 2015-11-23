@@ -93,7 +93,7 @@ Vennlig hilsen,<br />
 <br />
 Takk for at du har sendt inn manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Gjennom det nettbaserte publiseringssystemet vårt vil du kunne følge manuskriptet på sin vei gjennom den redasjonelle prosessen, ved å logge deg inn på tidsskriftets nettsted:<br />
 <br />
-Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskript URL: {$submissionUrl}<br />
 Brukernavn: {$authorUsername}<br />
 <br />
 Ta kontakt med meg, hvis det er noe mer du vil vite. Takk for at du velger tidsskriftet vårt som kanal for å publisere arbeidet ditt.<br />
@@ -133,7 +133,7 @@ Ved den redaksjonelle gjennomgangen av ditt manuskript &quot;{$submissionTitle}&
 <br />
 Som seksjonsredaktør i {$contextName} er du herved oppnevnt til å føre det innsendte manuskriptet &quot;{$submissionTitle}&quot; gjennom den redaksjonelle prosessen.<br />
 <br />
-Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskript URL: {$submissionUrl}<br />
 Brukernavn: {$editorUsername}<br />
 <br />
 Vennlig hilsen,<br />
@@ -439,7 +439,7 @@ Takk for at du har satt opp sidene til manuskriptet &quot;{$submissionTitle}&quo
 <br />
 Vi ber med dette om at du leser sluttkorrektur på de oppsatte sidene for ditt manuskript  &quot;{$submissionTitle}&quot; for {$contextName}. For å få tilgang til den aktuelle manuskriptfilen ber vi deg om å logge inn på tidsskriftets nettsted med lenken nedenfor. Bruk deretter VIS KORREKTUR-lenken for å få se manuskriptsidene slik de vil bli publisert. Vi minner om at det bare er formatfeil og typografiske feil som kan korrigeres i denne produksjonsfasen. Vi ber deg om å følge vår Instruks for korrekturlesing. Oppgi slike feil i boksen som blir hentet fram av lenken Korrekturlesing: rettelser.<br />
 <br />
-Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskript URL: {$submissionUrl}<br />
 <br />
 Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.<br />
 <br />
@@ -472,7 +472,7 @@ Hvis du har krysset av på din brukerside for å få e-post varsel når ny utgav
 <br />
 Jeg ber deg med dette om å lese korrektur på de oppsatte sidene for manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}.<br />
 <br />
-Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskript URL: {$submissionUrl}<br />
 Brukernavn: {$proofreaderUsername}<br />
 <br />
 Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.<br />
@@ -504,7 +504,7 @@ Takk for at du har gjennomført korrektur av manuskriptet &quot;{$submissionTitl
 <br />
 Vi ber med dette om at du utfører de rettelsene korrekturlesningen har påpekt behov for, i manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}.<br />
 <br />
-Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskript URL: {$submissionUrl}<br />
 Brukernavn: {$layoutEditorUsername}<br />
 <br />
 Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.<br />

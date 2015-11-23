@@ -121,7 +121,7 @@ Tack, vänliga hälsningar:<br />
 <br />
 Tack för att du har skickat in manuskriptet, &quot;{$submissionTitle}&quot; till {$contextName}. I det publiceringssystem vi använder har du möjlighet att följa den redaktionella processen av manuskriptet genom att logga in på sidan:<br />
 <br />
-Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskript URL: {$submissionUrl}<br />
 Användarnamn: {$authorUsername}<br />
 <br />
 Om du har frågor, vänligen kontakta mig, tack för att du har valt att skicka manuskriptet till den här tidskriften.<br />
@@ -162,7 +162,7 @@ Vid den redaktionella granskningen av manuskriptet &quot;{$submissionTitle}&quot
 <br />
 				Som sektionsredaktör för {$contextName} har du fått i uppdrag att föra manuskriptet &quot;{$submissionTitle},&quot; genom den redaktionella processen.<br />
 <br />
-				Manuskriptets URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+				Manuskriptets URL: {$submissionUrl}<br />
 				Användarnamn: {$editorUsername}<br />
 <br />
 				Tack, vänligen:<br />
@@ -346,7 +346,7 @@ Vi har nu avslutat sakkunnigbedömning av ditt manuskript &quot;{$submissionTitl
 <br />
 Ytterligare kommentarer av Redaktion och Sakkunnigbedömare hitatr du om du loggar in på tidskriftens hemsida:<br />
 <br />
-Manuskriptets URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskriptets URL: {$submissionUrl}<br />
 <br />
 Vänligen kontakta mig om du har några frågor.<br />
 <br />
@@ -532,7 +532,7 @@ Ditt manuskript &quot;{$submissionTitle}&quot; till {$contextName} ska korrektur
 5. Spara och maila ändringarna till Layoutredaktör och Korrekturläsare.<br />
 6. Skicka COMPLETE mailet till Redaktören.<br />
 <br />
-Manuskriptets URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskriptets URL: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Det här meddelandet från Sektionsredaktören till Författaren innehåller information om att Korrekturversionen är iordningställd för Korrekturläsning.</description>
@@ -570,7 +570,7 @@ Manuskriptet &quot;{$submissionTitle}&quot; till {$contextName} ska korrekturlä
 5. Spara och maila eventuella korrigeringar till Layoutredaktör.<br />
 6. Skicka COMPLETE mailet till Redaktören.<br />
 <br />
-Manuskriptets URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskriptets URL: {$submissionUrl}<br />
 Användarnamn: {$proofreaderUsername}<br />
 <br />
 Om du inte har möjlighet att genomföra korrekturläsningen för tillfället, eller om du har andra frågor, vänligen kontakta mig.<br />
@@ -607,7 +607,7 @@ Manuskriptet &quot;{$submissionTitle}&quot; till {$contextName} har korrekturlä
 3. Skicka COMPLETE mailet under Korrekturläsning Steg 3 till Redaktör.<br />
 <br />
 {$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-Manuskriptets URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskriptets URL: {$submissionUrl}<br />
 Användarnamn: {$layoutEditorUsername}<br />
 <br />
 Om du inte har möjlighet att korrekturläsa manuskriptet för tillfället, eller om du har några frågor, vänligen kontakta mig.<br />

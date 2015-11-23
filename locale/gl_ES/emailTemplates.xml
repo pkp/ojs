@@ -171,7 +171,7 @@ Gracias,<br />
 <br />
 Benzón por enviarnos o teu manuscrito &quot;{$submissionTitle}&quot; a {$contextName}. Grazas ao sistema de xestión de revistas online que estamos a empregar poderás seguir o seu progreso através do proceso editorial identificándote na páxina web da revista:<br />
 <br />
-URL do manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL do manuscrito: {$submissionUrl}<br />
 Nome de usuaria/o: {$authorUsername}<br />
 <br />
 Se tes algunha pregunta non dubides en contactar connosco. Benzóns por contar con esta revista para difundir o teu traballo.<br />
@@ -211,7 +211,7 @@ Logo dunha revisión inicial de &quot;{$submissionTitle}&quot; decidiuse que est
 <br />
 Asignóuseche o envío, &quot;{$submissionTitle},&quot; a {$contextName} para que o revises no proceso editorial como Editor/a de Sección.<br />
 <br />
-URL del envío: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL del envío: {$submissionUrl}<br />
 Usuario/a: {$editorUsername}<br />
 <br />
 Benzóns,<br />
@@ -521,7 +521,7 @@ Benzóns por preparar as probas do manuscrito con correccións (galeradas) &quot
 <br />
 Pregámosche que te encargues da corrección das probas do teu manuscrito con correccións (galeradas) &quot;{$submissionTitle},&quot; para {$contextName}. Para ver as probas de correción (galeradas), identifícate na revista através da ligazón que amosamos a seguir. Clica na opción VER PRoBA para ler a que será a versión publicada e busca somente os erros tipográficos e de maquetaxe. Registra este erros na caixa  Correcciçóns de Probas seguindo as instruccións.<br />
 <br />
-URL do manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL do manuscrito: {$submissionUrl}<br />
 <br />
 Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta connosco. Benzóns pola túa achega á revista.<br />
 <br />
@@ -554,7 +554,7 @@ Se estás subscrito ao noso servizo de notificación recibirás un correo electr
 <br />
 Pregámosche que te encargues da corrección das probas do teu manuscrito con correccións (galeradas) &quot;{$submissionTitle},&quot; para {$contextName}. <br />
 <br />
-URL do manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL do manuscrito: {$submissionUrl}<br />
 Nome de usuaria/o: {$proofreaderUsername}<br />
 <br />
 Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta connosco. Benzóns pola túa achega á revista.<br />
@@ -586,7 +586,7 @@ Benzóns por corrixir as probas de corrección (galeradas)  do manuscrito &quot;
 <br />
 Pregámosche  que procedas a facer as correccións solicitadas unha vez corrixidas as probas de galeradas do manuscrito &quot;{$submissionTitle},&quot; para {$contextName}.<br />
 <br />
-URL do manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL do manuscrito: {$submissionUrl}<br />
 Nome de usuaria/o: {$layoutEditorUsername}<br />
 <br />
 Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta connosco. Benzóns pola túa achega á revista.<br />

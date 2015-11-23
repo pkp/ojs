@@ -120,7 +120,7 @@ Dank u,<br />
 <br />
 Dank u voor het inzenden van het manuscript &quot;{$submissionTitle}&quot; voor {$contextName}. Het online tijdschriftbeheersysteem dat wij gebruiken geeft u de mogelijkheid om de voortgang van het redactieproces te volgen door in te loggen op de website van het tijdschrift:<br />
 <br />
-Manuscript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuscript URL: {$submissionUrl}<br />
 Gebruikersnaam: {$authorUsername}<br />
 <br />
 Neemt u alstublieft contact op als u vragen heeft. Dank u voor het overwegen van dit tijdschrift als podium voor u werk.<br />
@@ -161,7 +161,7 @@ Een eerste review van &quot;{$submissionTitle}&quot; heeft duidelijk gemaakt dat
 <br />
 De inzending &quot;{$submissionTitle}&quot; voor {$contextName} is aan u toegewezen om in uw rol als sectieredacteur door het redactieproces te leiden.<br />
 <br />
-URL inzending: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL inzending: {$submissionUrl}<br />
 Gebruikersnaam: {$editorUsername}<br />
 <br />
 Dank u,<br />
@@ -507,7 +507,7 @@ Uw inzending &quot;{$submissionTitle}&quot; voor {$contextName} kan proefgelezen
 5. Bewaar en e-mail de correcties naar de opmaakredacteur en proeflezer.<br />
 6. Stuur de GEREED e-mail naar de redacteur.<br />
 <br />
-URL inzending: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL inzending: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Deze e-mail van de sectieredacteur aan de auteur vraagt om het proeflezen van de proeven van een artikel. Het levert informatie over het artikel en hoe het te benaderen.</description>
@@ -544,7 +544,7 @@ De inzending &quot;{$submissionTitle}&quot; voor {$contextName} kan proefgelezen
 5. Bewaar en e-mail de correcties naar de opmaakredacteur.<br />
 6. Stuur de GEREED e-mail naar de redacteur.<br />
 <br />
-Manuscript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuscript URL: {$submissionUrl}<br />
 Gebruikersnaam: {$proofreaderUsername}<br />
 <br />
 Als momenteel u niet in staat ben om dit werk uit te voeren of als u vragen heeft, neem dan contact met me op. Dank u voor uw bijdrage aan dit tijdschrift<br />
@@ -581,7 +581,7 @@ De inzending &quot;{$submissionTitle}&quot; bij {$contextName} is proefgelezen d
 4. Stuur de GEREED e-mail in Proeflezen stap 3 naar de redacteur.<br />
 <br />
 {$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL inzending: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL inzending: {$submissionUrl}<br />
 Gebruikersnaam: {$layoutEditorUsername}<br />
 <br />
 Als u momenteel niet in staat bent om dit werk uit te voeren of als u vragen heeft, neemt u dan contact met me op. Dank u voor uw bijdrage aan dit tijdschrift.<br />
@@ -1002,7 +1002,7 @@ We wensen u veel plezier met uw gift!<br />
 <br />
 Een herziene versie van &quot;{$submissionTitle}&quot; is geladen door de auteur {$authorName}.<br />
 <br />
-URL van de inzending: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL van de inzending: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Deze e-mail wordt automatisch verstuurd naar de redacteur als de auteur een herziene versie van een artikel laadt.</description>

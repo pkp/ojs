@@ -155,7 +155,7 @@ Vielen Dank,<br />
 <br />
 vielen Dank für die Einreichung Ihres Manuskript &quot;{$submissionTitle}&quot; zur Veröffentlichung in {$contextName}. Das Verwaltungssystem unserer Webzeitschrift erlaubt Ihnen, jederzeit den Lauf Ihres Beitrags im Redaktionsprozess zu beobachten. Sie loggen sich dazu einfach auf unserer Webseite ein:<br />
 <br />
-URL des Manuskripts: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL des Manuskripts: {$submissionUrl}<br />
 Benutzer/innenname: {$authorUsername}<br />
 <br />
 Für weitere Fragen stehen wir Ihnen gern zur Verfügung. Danke für Ihr Interesse an einer Veröffentlichung in unserer Zeitschrift.<br />
@@ -195,7 +195,7 @@ eine erste Lektüre von &quot;{$submissionTitle}&quot; ergab, dass Ihr Beitrag d
 <br />
 der Beitrag &quot;{$submissionTitle}&quot; für {$contextName} wird Ihnen zur Durchführung des redaktionellen Prozesses in Ihrer Rolle als Rubrikredakteur/in zugewiesen.<br />
 <br />
-URL des Beitrags: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL des Beitrags: {$submissionUrl}<br />
 Benutzer/innenname: {$editorUsername}<br />
 <br />
 Vielen Dank,<br />
@@ -666,7 +666,7 @@ wir bitten Sie, die Fahnenkorrektur von &quot;{$submissionTitle}&quot; für {$co
 5. Speichern Sie die Datei ab und schicken Sie sie per E-Mail an die Layoutredaktion und das Korrekturlektorat.<br />
 6. Senden Sie die ABGESCHLOSSEN-E-Mail an die Redaktion.<br />
 <br />
-URL des Beitrags: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL des Beitrags: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Autor/in benachrichtigt diese/n, dass die Fahnen eines Artikels zum Korrekturlektorat bereit stehen. Sie liefert Informationen über den Beitrag und darüber, wie auf ihn zugegriffen werden kann.</description>
@@ -703,7 +703,7 @@ der Beitrag &quot;{$submissionTitle}&quot; für {$contextName} muss nun gemäß 
 5. Speichern Sie die Korrekturen und senden sie per E-Mail an die Layouterin/den Layouter.<br />
 6. Senden Sie die ABGESCHLOSSEN-E-Mail an die Redakteurin/den Redakteur.<br />
 <br />
-Manuskript-URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskript-URL: {$submissionUrl}<br />
 Benutzer/innenname: {$proofreaderUsername}<br />
 <br />
 Falls Sie zur Zeit nicht in der Lage sein sollten, unserer Aufforderung nachzukommen, oder noch Fragen haben, geben Sie mir bitte Bescheid. Vielen Dank für Ihren Beitrag zu dieser Zeitschrift.<br />
@@ -740,7 +740,7 @@ der Beitrag &quot;{$submissionTitle}&quot; für {$contextName} ist von Autor/in 
 4. Senden Sie die ABGESCHLOSSEN-E-Mail in Schritt 3 des Korrekturlektorats an die Redakteurin/den Redakteur.<br />
 <br />
 URL {$contextName}: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL des Beitrags: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL des Beitrags: {$submissionUrl}<br />
 Benutzer/innenname: {$layoutEditorUsername}<br />
 <br />
 Wenn Sie diese Aufgabe zur Zeit nicht erledigen können oder wenn Sie irgendwelche Fragen haben, kontaktieren Sie mich bitte. Danke für Ihren Beitrag zu dieser Zeitschrift.<br />
@@ -1026,7 +1026,7 @@ Wir hoffen, dass Sie sich über Ihr Geschenk freuen!<br />
 <br />
 eine überarbeitete Fassung von &quot;{$submissionTitle}&quot; ist von der/dem Autor/in {$authorName} hochgeladen worden.<br />
 <br />
-URL des Beitrags: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL des Beitrags: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
         <description>Diese E-Mail wird automatisch an die/den zuständige/n Redakteur/in geschickt, wenn ein/e Autor/in eine überarbeitete Fassung eines Artikels hochgeladen hat.</description>

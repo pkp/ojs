@@ -175,7 +175,7 @@ Thank you,<br />
 <br />
 Thank you for submitting the manuscript, &quot;{$submissionTitle}&quot; to {$contextName}. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />
 <br />
-Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Submission URL: {$submissionUrl}<br />
 Username: {$authorUsername}<br />
 <br />
 If you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />
@@ -197,7 +197,7 @@ An initial review of &quot;{$submissionTitle}&quot; has made it clear that this 
 <br />
 The submission, &quot;{$submissionTitle},&quot; to {$contextName} has been assigned to you to see through the editorial process in your role as Section Editor.<br />
 <br />
-Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Submission URL: {$submissionUrl}<br />
 Username: {$editorUsername}<br />
 <br />
 Thank you,<br />
@@ -452,7 +452,7 @@ We have reached a decision regarding your submission to {$contextName}, &quot;{$
 <br />
 Our decision is to: Send to Review<br />
 <br />
-Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Submission URL: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}<br />
 ]]></body>
@@ -464,7 +464,7 @@ Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 The editing of your submission, &quot;{$submissionTitle},&quot; is complete.  We are now sending it to production.<br />
 <br />
-Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Submission URL: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}<br />
 ]]></body>
@@ -815,7 +815,7 @@ We hope that you enjoy your gift!<br />
 <br />
 A revised version of &quot;{$submissionTitle}&quot; has been uploaded by the author {$authorName}.<br />
 <br />
-Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Submission URL: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>This email is automatically sent to the assigned editor when author uploads a revised version of an article.</description>

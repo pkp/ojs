@@ -156,7 +156,7 @@ URL-адреса маніфесту видавця LOCKSS для нашого ж
 <br />
 Дякуємо, що надіслали рукопис &quot;{$submissionTitle}&quot; для публікації у виданні &quot;{$contextName}&quot;. Онлайнова система керування журналом, яку ми використовуємо, дозволяє авторам відслідковувати редакційне опрацювання поданих до друку рукописів. Для цього потрібно увійти на веб-сайт журналу зі своїм іменем користувача:<br />
 <br />
-URL рукопису: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL рукопису: {$submissionUrl}<br />
 Ім'я користувача: {$authorUsername}<br />
 <br />
 Якщо Ви маєте питання, будь ласка, звертайтеся до мене. Дякую за вибір цього журналу як місця публікації своєї роботи.<br />
@@ -196,7 +196,7 @@ URL рукопису: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Як редактор розділу Ви були призначені керувати процесом редакційного опрацювання подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;.  <br />
 <br />
-URL подання: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL подання: {$submissionUrl}<br />
 Ім'я користувача: {$editorUsername}<br />
 <br />
 Дякую,<br />
@@ -587,7 +587,7 @@ URL подання:  <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a>
 5. Збережіть та надішліть виправлення редактору верстки та коректору.<br />
 6. Натисніть на зображення поштового конверту під заголовком &quot;Завершення&quot;, щоб надіслати лист редактору.<br />
 <br />
-URL подання: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL подання: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
                <description>Цим листом редактор розділу повідомляє автору, що гранка його статті готова до коректури. У листі міститься інформація про статтю та про те, як отримати доступ до нєї.</description>
@@ -624,7 +624,7 @@ URL подання: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 5. Збережіть та надішліть виправлення редактору верстки.<br />
 6. Натисніть на зображення поштового конверту під заголовком &quot;Завершення&quot;, щоб надіслати лист редактору.<br />
 <br />
-URL подання: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL подання: {$submissionUrl}<br />
 Ім'я користувача: {$proofreaderUsername}<br />
 <br />
 Якщо зараз Ви не маєте можливості виконати цю роботу або маєте додаткові питання, будь ласка, повідомте мені. Дякую за працю для нашого журналу.<br />
@@ -661,7 +661,7 @@ URL подання: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 6. Натисніть на зображення поштового конверту під заголовком &quot;Завершення&quot; кроку 3, щоб надіслати лист редактору.<br />
 <br />
 URL видання {$contextName}: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL подання: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL подання: {$submissionUrl}<br />
 Ім'я користувача: {$layoutEditorUsername}<br />
 <br />
 Якщо зараз Ви не маєте можливості виконати цю роботу або маєте додаткові питання, будь ласка, повідомте мені. Дякую за працю для нашого журналу.<br />
@@ -1019,7 +1019,7 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 <br />
 Перероблена версія рукопису &quot;{$submissionTitle}&quot; була вивантажена автором {$authorName}.<br />
 <br />
-URL подання: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL подання: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Цей лист автоматично надсилається призначеному редактору, коли автор вивантажує перероблену версію своєї статті.</description>

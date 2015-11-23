@@ -94,7 +94,7 @@
 <br />
 感謝您將稿件 〈{$submissionTitle}〉 投稿至《{$contextName}》。透過我們所使用的期刊管理系統，您將能夠登入期刊網站來追蹤稿件的編輯進度：<br />
 <br />
-稿件網址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
+稿件網址：{$submissionUrl}<br />
 使用者名稱：{$authorUsername}<br />
 <br />
 如果您有任何問題，請與我們聯絡。再次感謝您考慮本期刊出版您的作品。<br />
@@ -134,7 +134,7 @@
 <br />
 我們已經將投稿到《{$contextName}》的稿件〈{$submissionTitle}〉指派給您進行編輯工作，請在您的「區段編輯」介面中進行編輯工作。<br />
 <br />
-稿件網址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
+稿件網址：{$submissionUrl}<br />
 使用者名稱：{$editorUsername}<br />
 <br />
 謝謝您<br />
@@ -458,7 +458,7 @@
 <br />
 我們要請您針對投稿《{$contextName}》之稿件〈{$submissionTitle}〉進行文字排版的校對工作。要檢視排版版本，請使用下面的連結登入本期刊網站。點擊「檢視校對」連結來檢查即將出版之稿件中，有哪些地方可能會有字樣與排版上的錯誤。請依循我們提供之校對指引，將這些錯誤記錄在「校對修訂」的文字框中。<br />
 <br />
-稿件網址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
+稿件網址：{$submissionUrl}<br />
 <br />
 如果您目前無法進行這份工作，或者對這份工作有任何問題，請回信聯絡我們。感謝您對本期刊的貢獻。<br />
 <br />
@@ -491,7 +491,7 @@
 <br />
 我們想請您為投稿《{$contextName}》之稿件〈{$submissionTitle}〉進行校對工作。<br />
 <br />
-稿件網址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
+稿件網址：{$submissionUrl}<br />
 使用者名稱：{$proofreaderUsername}<br />
 <br />
 如果您目前無法進行這份工作，或者對這份工作有任何問題，請回信聯絡我們。感謝您對本期刊的貢獻。<br />
@@ -525,7 +525,7 @@
 <br />
 我們想請您為投稿《{$contextName}》之稿件〈{$submissionTitle}〉進行任何必要的校對工作，作為最終的排版稿校對版本。<br />
 <br />
-稿件網址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
+稿件網址：{$submissionUrl}<br />
 使用者名稱：{$layoutEditorUsername}<br />
 <br />
 如果您目前無法進行這份工作，或者對這份工作有任何問題，請回信聯絡我們。感謝您對本期刊的貢獻。<br />

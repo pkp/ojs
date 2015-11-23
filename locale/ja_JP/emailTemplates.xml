@@ -108,7 +108,7 @@
 <br />
 雑誌『{$contextName}』に原稿「{$submissionTitle}」をご投稿いただき、ありがとうございました。本誌が使用しているオンライン雑誌管理システムでは、雑誌のWebサイトにログインすることにより、編集過程の進捗状況を確認することができます。<br />
 <br />
-原稿のURL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+原稿のURL: {$submissionUrl}<br />
 ユーザ名: {$authorUsername}<br />
 <br />
 何かご不明な点がございましたら、ご連絡ください。<br />
@@ -150,7 +150,7 @@
 <br />
 この度、雑誌『{$contextName}』への投稿論文「{$submissionTitle}」のセクションエディタとして、編集プロセス全般の管理をお願いすることになりました。<br />
 <br />
-投稿物のURL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+投稿物のURL: {$submissionUrl}<br />
 投稿者:      {$editorUsername}<br />
 <br />
 よろしくお願いいたします。<br />
@@ -493,7 +493,7 @@
 <br />
 雑誌『{$contextName}』に投稿いただいた原稿「{$submissionTitle}」のゲラができましたので、校正をお願いいたします。ゲラを見るには、下に示すリンクを使って雑誌のWebサイトにログインしてください。閲覧リンクをクリックして、原稿の出版版を読み、校正の手引きに従って文字やレイアウトの誤りのみをチェックしてください。修正点は、校正による修正入力ボックスに記入してください。<br />
 <br />
-原稿のURL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+原稿のURL: {$submissionUrl}<br />
 <br />
 今回この作業を行うことができない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />
 <br />
@@ -532,7 +532,7 @@
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの校正をお願いいたしたくメールを差し上げました。<br />
 <br />
-原稿URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+原稿URL: {$submissionUrl}<br />
 ユーザ名: {$proofreaderUsername}<br />
 <br />
 今回この作業を行うことができない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />
@@ -570,7 +570,7 @@
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の校正作業の結果、ゲラの修正をお願いすることになりました。<br />
 <br />
-原稿のURL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+原稿のURL: {$submissionUrl}<br />
 ユーザ名: {$layoutEditorUsername}<br />
 <br />
 今回この作業を行うことができない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />

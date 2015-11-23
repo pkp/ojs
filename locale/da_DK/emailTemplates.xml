@@ -112,7 +112,7 @@ Tak.<br />
 <br />
 Tak, fordi du har fremsendt manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Ved hjælp af det onlinetidsskriftsstyringssystem, vi bruger, kan du følge manuskriptet igennem den redaktionelle proces ved at logge på tidsskriftets websted:<br />
 <br />
-Manuskriptets URL-adresse: <a href="{$submissionUrl}">{$submissionUrl}</a> Brugernavn: {$authorUsername}<br />
+Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$authorUsername}<br />
 <br />
 Hvis du har spørgsmål, er du velkommen til at kontakte mig.<br />
  Tak, fordi du har valgt at publicere din artikel i dette tidsskrift.<br />
@@ -151,7 +151,7 @@ En indledende bedømmelse af &quot;{$submissionTitle}&quot; viser, at dette manu
 <br />
 Som sektionsredaktør har du fået tildelt manuskriptet &quot;{$submissionTitle}&quot;, der er sendt til {$contextName}, og som du skal følge igennem den redaktionelle proces.  <br />
 <br />
-Manuskriptets URL-adresse: <a href="{$submissionUrl}">{$submissionUrl}</a> Brugernavn: {$editorUsername}<br />
+Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$editorUsername}<br />
 <br />
 Tak. {$editorialContactSignature}]]></body>
 		<description>Denne e-mail underretter en sektionsredaktør om, at redaktøren har tildelt vedkommende opgaven med at følge et manuskript igennem redigeringsprocessen. Den indeholder oplysninger om manuskriptet og om, hvordan der oprettes adgang til tidsskriftets websted.</description>
@@ -456,7 +456,7 @@ Tak, fordi du har oprettet satsskibene for manuskriptet &quot;{$submissionTitle}
 <br />
 Dit manuskript &quot;{$submissionTitle}&quot; til {$contextName} skal nu korrekturlæses ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og få vist INSTRUKTIONER TIL KORREKTURLÆSNING 3. Klik på VIS KORREKTUR under Layout, og læs korrektur på satsskibet i det eller de anvendte formater. 4. Angiv rettelser (typografiske og formateringsmæssige) under Korrekturrettelser. 5. Gem og send rettelserne via e-mail til layoutredaktøren og korrekturlæseren. 6. Send e-mailen under UDFØR til redaktøren.<br />
 <br />
-Manuskriptets URL-adresse: <a href="{$submissionUrl}">{$submissionUrl}</a>
+Manuskriptets URL-adresse: {$submissionUrl}
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Denne e-mail fra sektionsredaktøren til forfatteren underretter forfatteren om, at en artikels satsskibe er klar til korrekturlæsning. Den indeholder oplysninger om artiklen og om, hvordan der oprettes adgang til den.</description>
@@ -487,7 +487,7 @@ Hvis du abonnerer på vores meddelelsestjeneste, modtager du en e-mail med indho
 <br />
 Manuskriptet &quot;{$submissionTitle}&quot; til {$contextName} skal nu korrekturlæses ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og få vist INSTRUKTIONER TIL KORREKTURLÆSNING. 3. Klik på VIS KORREKTUR under Layout, og læs korrektur på satsskibet i det eller de anvendte formater. 4. Angiv rettelser (typografiske og formateringsmæssige) under Korrekturrettelser. 5. Gem og send rettelserne via e-mail til layoutredaktøren. 6. Send e-mailen under UDFØR til redaktøren.<br />
 <br />
-Manuskriptets URL-adresse: <a href="{$submissionUrl}">{$submissionUrl}</a> Brugernavn: {$proofreaderUsername}<br />
+Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$proofreaderUsername}<br />
 <br />
 Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunkt eller har spørgsmål, bedes du kontakte mig.<br />
  Tak for dit bidrag til dette tidsskrift.<br />
@@ -518,7 +518,7 @@ Tak, fordi du har læst korrektur på satsskibene for manuskriptet &quot;{$submi
 <br />
 Manuskriptet &quot;{$submissionTitle}&quot; til {$contextName} er blevet korrekturlæst af forfatteren og korrekturlæseren, og der skal nu foretages eventuelle rettelser ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og få vist Korrekturrettelser for at oprette korrigerede satsskibe. 3. Overfør de rettede satsskibe. 4. Send e-mailen under UDFØR i trin 3 under Korrekturlæsning til redaktøren.<br />
 <br />
-{$contextName} URL-adresse: <a href="{$journalUrl}">{$journalUrl}</a> Manuskriptets URL-adresse: <a href="{$submissionUrl}">{$submissionUrl}</a> Brugernavn: {$layoutEditorUsername}<br />
+{$contextName} URL-adresse: <a href="{$journalUrl}">{$journalUrl}</a> Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$layoutEditorUsername}<br />
 <br />
 Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunkt eller har spørgsmål, bedes du kontakte mig.<br />
  Tak for dit bidrag til dette tidsskrift.<br />

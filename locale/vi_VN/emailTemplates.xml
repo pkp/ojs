@@ -93,7 +93,7 @@ Trân trọng cảm ơn,<br />
 <br />
 Cảm ơn vì đã nộp bản thảo bài viết, &quot;{$submissionTitle}&quot; cho {$contextName}. Với phần mềmm quản lý tạp chí trực tuyến mà chúng tôi đang sử dụng, quý vị có thể theo dõi toàn bộ tiến trình biên tập bằng cách đăng nhập vào website của tạp chí:<br />
 <br />
-Đường dẫn (URL) của bản thảo: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Đường dẫn (URL) của bản thảo: {$submissionUrl}<br />
 Bí danh: {$authorUsername}<br />
 <br />
 Nếu quý vị có thắc mắc nào, xin vui lòng liên hệ với tôi. Cảm ơn quý vị đã chọn tạp chí làm nơi công bố tác phẩm của mình.<br />
@@ -133,7 +133,7 @@ Theo nhận xét sơ bộ, bài viết &quot;{$submissionTitle}&quot; không ph�
 <br />
 Bài viết, &quot;{$submissionTitle},&quot; gửi cho tạp chí {$contextName} đã được giao cho quý vị để theo dõi toàn bộ quá trình biên tập với vai trò là BTV Chuyên mục.  <br />
 <br />
-Đường dẫn (URL) bài viết: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Đường dẫn (URL) bài viết: {$submissionUrl}<br />
 Bí danh: {$editorUsername}<br />
 <br />
 Xin trân trọng cảm ơn,<br />
@@ -432,7 +432,7 @@ Cảm ơn quý vị đã chuẩn bị các bản bông cho bài viết, &quot;{$
 <br />
 Chúng tôi xin đề nghị quý vị đọc soát lỗi các bản bông cho bài nộp của quý vị, &quot;{$submissionTitle},&quot; cho tạp chí {$contextName}. Để xem các bản bông, vui lòng đăng nhập vào website của tạp chí bằng đường dẫn dưới đây. Sử dụng liên kết Xem bản soát lỗi để đọc bản sẽ được xuất bản để tìm các lỗi đánh máy và trình bày. Ghi lại những lỗi này trong ô Sửa soát lỗi theo các hướng dẫn soát lỗi được cung cấp.<br />
 <br />
-Đường dẫn tới bản thảo: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Đường dẫn tới bản thảo: {$submissionUrl}<br />
 <br />
 Nếu quý vị không thể thực hiện được công việc vào thời điểm này hoặc có bất kỳ câu hỏi nào, xin vui lòng liên hệ với tôi. Trân trọng cảm ơn sự đóng góp của của quý vị cho tạp chí.<br />
 <br />
@@ -465,7 +465,7 @@ Nếu quý vị đăng ký dịch vụ thông báo của chúng tôi, quý vị 
 <br />
 Tôi xin đề nghị quý vị soát lỗi các bản bông của bài viết, &quot;{$submissionTitle},&quot; cho tạp chí {$contextName}. <br />
 <br />
-Đường dẫn tới bản thảo: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Đường dẫn tới bản thảo: {$submissionUrl}<br />
 Bí danh: {$proofreaderUsername}<br />
 <br />
 Nếu quý vị không thể thực hiện được công việc vào thời điểm này hoặc có bất kỳ câu hỏi nào, xin vui lòng liên hệ với tôi. Trân trọng cảm ơn sự đóng góp của của quý vị cho tạp chí.<br />
@@ -497,7 +497,7 @@ Cảm ơn quý vị đã soát lỗi các bản bông của bài viết, &quot;{
 <br />
 Chúng tôi xin đề nghị quý vị sửa bất kỳ lỗi nào cần thiết từ kết quả soát lỗi các bản bông của bài viết, &quot;{$submissionTitle},&quot; cho tạp chí {$contextName}.<br />
 <br />
-Đường dẫn tới bản thảo: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Đường dẫn tới bản thảo: {$submissionUrl}<br />
 Bí danh: {$layoutEditorUsername}<br />
 <br />
 Nếu quý vị không thể thực hiện được công việc vào thời điểm này hoặc có bất kỳ câu hỏi nào, xin vui lòng liên hệ với tôi. Trân trọng cảm ơn sự đóng góp của của quý vị cho tạp chí.<br />

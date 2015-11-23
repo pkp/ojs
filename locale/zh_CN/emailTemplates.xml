@@ -157,7 +157,7 @@
 <br />
 感谢您将稿件 〈{$submissionTitle}〉 投稿至《{$contextName}》。透过我们所使用的期刊管理系统，您将能够登入期刊网站来追踪稿件的编辑进度：<br />
 <br />
-稿件网址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
+稿件网址：{$submissionUrl}<br />
 用户名称：{$authorUsername}<br />
 <br />
 如果您有任何问题，请与我们联络。再次感谢您考虑本期刊出版您的作品。<br />
@@ -197,7 +197,7 @@
 <br />
 我们已经将投稿到《{$contextName}》的稿件〈{$submissionTitle}〉指派给您进行编辑工作，请在您的「区段编辑」介面中进行编辑工作。<br />
 <br />
-稿件网址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
+稿件网址：{$submissionUrl}<br />
 用户名称：{$editorUsername}<br />
 <br />
 谢谢您<br />
@@ -595,7 +595,7 @@
 5. 保存并电邮更正意见给排版编辑和校对人员.<br />
 6. 发送完成电邮给编辑.<br />
 <br />
-稿件URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+稿件URL: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>这封电子邮件是由区段编辑寄发给作者，通知他们一篇文章的排版稿已经可以进行校对了。邮件中含有稿件的信息以及如何取得稿件的指引。</description>
@@ -632,7 +632,7 @@
 5. 保存并电邮更正意见给排版编辑和校对人员.<br />
 6. 发送完成电邮给编辑.<br />
 <br />
-稿件URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+稿件URL: {$submissionUrl}<br />
 用户名: {$proofreaderUsername}<br />
 <br />
 如果您这次不能完成这项工作或者有任何质询，请联系我们，感谢您对本刊的贡献.<br />
@@ -671,7 +671,7 @@
 4. 在校对步骤3里发送完成电邮给编辑.<br />
 <br />
 {$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-Subnmission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Subnmission URL: {$submissionUrl}<br />
 Username: {$layoutEditorUsername}<br />
 <br />
 如果您这次不能完成这项工作或者有任何质询，请联系我们，感谢您对本刊的贡献.<br />
@@ -1034,7 +1034,7 @@ We hope that you enjoy your gift!<br />
 <br />
 A revised version of &quot;{$submissionTitle}&quot; has been uploaded by the author {$authorName}.<br />
 <br />
-Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Submission URL: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>当作者上传的修订版的一篇文章后，此邮件将被自动发送到指定的编辑</description>

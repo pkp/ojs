@@ -118,7 +118,7 @@ Děkujeme,<br />
 <br />
 Děkujeme za zaslání příspěvku &quot;{$submissionTitle}&quot; do {$contextName}. S online systémem, který používáme, budete moci sledovat postup příspěvku redakčním procesem po přihlášení na stránkách časopisu:<br />
 <br />
-URL rukopisu: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL rukopisu: {$submissionUrl}<br />
 Uživatelské jméno: {$authorUsername}<br />
 <br />
 Pokud máte nějaké otázky, kontaktujte mě prosím. Děkujeme, že jste zvolili tento časopis pro publikování Vaší práce.<br />
@@ -158,7 +158,7 @@ Z úvodního prostudování příspěvku &quot;{$submissionTitle}&quot; jasně v
 <br />
 Byl Vám přidělen příspěvek &quot;{$submissionTitle}&quot; do {$contextName}, abyste s ním v roli editora sekce prošel redakčním zpracováním.<br />
 <br />
-URL příspěvku: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL příspěvku: {$submissionUrl}<br />
 Uživatelské jméno: {$editorUsername}<br />
 <br />
 Děkujeme,<br />
@@ -505,7 +505,7 @@ Váš příspěvek &quot;{$submissionTitle}&quot; pro {$contextName} nyní vyža
 5. Uložte a odešlete opravy typografovi a korektorovi.<br />
 6. Pošlete email DOKONČENO editorovi.<br />
 <br />
-URL příspěvku: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL příspěvku: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Tento email posílá editor sekce autorovi, aby mu oznámil, že sazebnice příspěvku jsou připraveny pro korektury. Obsahuje informace o článku a přístupu k němu.</description>
@@ -542,7 +542,7 @@ Příspěvek &quot;{$submissionTitle}&quot; pro {$contextName} nyní vyžaduje k
 5. Uložte a pošlete opravy typografovi.<br />
 6. Pošlete email DOKONČENO editorovi.<br />
 <br />
-URL příspěvku: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL příspěvku: {$submissionUrl}<br />
 Uživatelské jméno: {$proofreaderUsername}<br />
 <br />
 Pokud nyní nemůžete tento úkol udělat nebo máte nějaké otázky, kontaktujte mě prosím. Děkujeme za Vaši pomoc našemu časopisu.<br />
@@ -579,7 +579,7 @@ U příspěvku &quot;{$submissionTitle}&quot; pro {$contextName} byly provedeny 
 4. Pošlete editorovi email DOKONČENO v Korekturách v Kroku 3.<br />
 <br />
 {$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL příspěvku: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL příspěvku: {$submissionUrl}<br />
 Uživatelské jméno: {$layoutEditorUsername}<br />
 <br />
 Pokud nyní nemůžete tento úkol udělat nebo máte nějaké otázky, kontaktujte mě prosím. Děkujeme za Vaši pomoc našemu časopisu.<br />

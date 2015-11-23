@@ -180,7 +180,7 @@ Agradecendo desde já a atenção dispensada,<br />
 Agradecemos a submissão do trabalho &quot;{$submissionTitle}&quot; para a revista {$contextName}.<br />
 Acompanhe o progresso da sua submissão por meio da interface de administração do sistema, disponível em:<br />
 <br />
-URL da submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL da submissão: {$submissionUrl}<br />
 Login: {$authorUsername}<br />
 <br />
 Em caso de dúvidas,  entre em contato via e-mail.<br />
@@ -230,7 +230,7 @@ Agradecemos sua contribuição, fundamental para garantir a qualidade deste proc
 <br />
 Como parte de suas funções como editor de seção, designamos para seu acompanhamento do processo editorial a submissão &quot;{$submissionTitle}&quot; para a revista {$contextName}.<br />
 <br />
-URL da submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL da submissão: {$submissionUrl}<br />
 login: {$editorUsername}<br />
 <br />
 Agradecendo desde já a atenção dispensada,<br />
@@ -647,7 +647,7 @@ Solicitamos a leitura de provas do trabalho&quot;{$submissionTitle}&quot;, subme
 5. Salve e envie o e-mail com as correções ao editor de layout e ao leitor de prova.<br />
 6. Clique no ícone de e-mail sob CONCLUÍDO e envie a mensagem ao editor.<br />
 <br />
-URL da Submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL da Submissão: {$submissionUrl}<br />
 <br />
 Em caso de dúvidas, entre em contato via e-mail.<br />
 <br />
@@ -693,7 +693,7 @@ Solicito a leitura de provas do trabalho &quot;{$submissionTitle}&quot;, submeti
 5. Salve e envie as correções via e-mail ao editor de layout.<br />
 6. Clique no ícone de e-mail sob CONCLUÍDO e envie a mensagem ao editor.<br />
 <br />
-URL da Submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL da Submissão: {$submissionUrl}<br />
 Login: {$proofreaderUsername}<br />
 <br />
 Caso não esteja disponível para assumir esta responsabilidade no momento, ou tenha quaisquer dúvidas, entre em contato via e-mail.<br />
@@ -737,7 +737,7 @@ As correções devem agora ser incorporadas conforme instruções a seguir:<br /
 4. Clique no ícone de e-mail sob CONCLUÍDO no Passo 3 da seção Leitura de provas, e envie a mensagem ao editor.<br />
 <br />
 URL da revista {$contextName}: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL da Submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL da Submissão: {$submissionUrl}<br />
 Login: {$layoutEditorUsername}<br />
 <br />
 Caso não esteja disponível para assumir esta responsabilidade no momento, ou em caso de dúvidas, entre em contato através deste e-mail.<br />
@@ -1132,7 +1132,7 @@ Esperamos que o presente seja de seu agrado!<br />
 <br />
 Uma versão atualizada de &quot;{$submissionTitle}&quot; foi enviada pelo autor {$authorName}.<br />
 <br />
-URL da submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL da submissão: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>This email is automatically sent to the assigned editor when author uploads a revised version of an article.</description>

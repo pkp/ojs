@@ -124,7 +124,7 @@ Moltes gràcies,<br />
 <br />
 Gràcies per haver tramès el manuscrit &quot;{$submissionTitle}&quot; a {$contextName}. Gràcies al sistema de gestió de revistes en línia que utilitzem, en podreu seguir el progrés durant el procés editorial iniciant la sessió al lloc web de la revista:<br />
 <br />
-URL del manuscrit: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL del manuscrit: {$submissionUrl}<br />
 Nom d'usuari: {$authorUsername}<br />
 <br />
 Si teniu qualsevol dubte o consulta, no dubteu a fer-me-la arribar. Us agraeixo que hàgiu tingut en compte aquesta revista com a mitjà per a difondre la vostra obra.<br />
@@ -167,7 +167,7 @@ Gràcies una vegada més per la vostra important contribució a aquest procés.<
 <br />
 Us ha estat assignada la tramesa &quot;{$submissionTitle}&quot; per a la revista {$contextName} perquè en superviseu el procés editorial en qualitat d'editor de secció.<br />
 <br />
-URL de la tramesa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL de la tramesa: {$submissionUrl}<br />
 Nom d'usuari: {$editorUsername}<br />
 <br />
 Moltes gràcies,<br />
@@ -524,7 +524,7 @@ Us volem demanar que us encarregueu de la correcció de proves de la vostra tram
 5. Deseu les correccions i envieu-les per correu electrònic al maquetista i el corrector de proves.<br />
 6. Envieu el missatge de correu electrònic COMPLET a l'editor.<br />
 <br />
-URL de la tramesa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL de la tramesa: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Aquest missatge de correu electrònic té l'editor de secció com a remitent i s'envia a l'autor per a notificar-li que les galerades d'un article ja són a punt per a fer-hi la correcció de proves. Proporciona informació sobre l'article i com s'hi ha d'accedir.</description>
@@ -562,7 +562,7 @@ Us volem demanar que us encarregueu de la correcció de proves de la tramesa &qu
 5. Deseu les correccions i envieu-les per correu electrònic al maquetista.<br />
 6. Envieu el missatge de correu electrònic COMPLET a l'editor.<br />
 <br />
-URL del manuscrit: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL del manuscrit: {$submissionUrl}<br />
 Nom d'usuari: {$proofreaderUsername}<br />
 <br />
 Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.<br />
@@ -602,7 +602,7 @@ L'autor i el corrector de proves ja han fet la correcció de proves de la trames
 4. Envieu el missatge de correu electrònic COMPLET del pas 3 de la correcció de proves a l'editor.<br />
 <br />
 URL de {$contextName}: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL de la tramesa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL de la tramesa: {$submissionUrl}<br />
 Nom d'usuari: {$layoutEditorUsername}<br />
 <br />
 Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.<br />

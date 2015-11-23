@@ -171,7 +171,7 @@ Gracias,<br />
 <br />
 Gracias por enviarnos su manuscrito &quot;{$submissionTitle}&quot; a {$contextName}. Gracias al sistema de gestión de revistas online que usamos podrá seguir su progreso a través del proceso editorial identificándose en el sitio web de la revista:<br />
 <br />
-URL del manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL del manuscrito: {$submissionUrl}<br />
 Nombre de usuaria/o: {$authorUsername}<br />
 <br />
 Si tiene cualquier pregunta no dude en contactar con nosotros/as. Gracias por tener en cuenta esta revista para difundir su trabajo.<br />
@@ -211,7 +211,7 @@ Tras una revisión inicial de &quot;{$submissionTitle}&quot; se ha decidido que 
 <br />
 Se le ha asignado el envío, &quot;{$submissionTitle},&quot; a {$contextName} para que lo revise en el proceso editorial como Editor/a de Sección.<br />
 <br />
-URL del envío: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL del envío: {$submissionUrl}<br />
 Usuario/a: {$editorUsername}<br />
 <br />
 Gracias,<br />
@@ -521,7 +521,7 @@ Gracias por prepara las galeradas para el manuscrito &quot;{$submissionTitle},&q
 <br />
 Le rogamos que se encargue de la corrección de las galeradas de su manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Para ver las galeradas, identifíquese en la revista a través del enlace que le mostramos a continuación. Pinche en la opción VER PRUEBA para leer lo que será la versión publicada y buscar sólo errores tipográficos y de maquetación sólo. Registre estos errores en la caja de Correcciones de Pruebas, siguiendo las instrucciones proporcionadas.<br />
 <br />
-URL del manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL del manuscrito: {$submissionUrl}<br />
 <br />
 Si no puede llevar a cabo esta tarea en este momento o tiene cualquier pregunta, póngase en contacto con nosotros/as. Gracias por su contribución a esta revista.<br />
 <br />
@@ -554,7 +554,7 @@ Si se ha suscrito a nuestro servicio de notificación recibirá un correo-e con 
 <br />
 Le rogaría que corrigiera las pruebas de las galeradas de su manuscrito &quot;{$submissionTitle},&quot; para {$contextName}.<br />
 <br />
-URL del manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL del manuscrito: {$submissionUrl}<br />
 Nombre de usuaria/o: {$proofreaderUsername}<br />
 <br />
 Si no puede llevar a cabo esta tarea en este momento o tiene cualquier pregunta, póngase en contacto con nosotros/as. Gracias por su contribución a esta revista.<br />
@@ -586,7 +586,7 @@ Gracias por corregir las pruebas de las galeradas del manuscrito &quot;{$submiss
 <br />
 Le solicitamos que proceda a hacer las correcciones solicitadas una vez corregidas las pruebas de las galeradas del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}.<br />
 <br />
-URL del manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL del manuscrito: {$submissionUrl}<br />
 Nombre de usuaria/o: {$layoutEditorUsername}<br />
 <br />
 Si no puede llevar a cabo esta tarea en este momento o tiene cualquier pregunta, póngase en contacto con nosotros/as. Gracias por su contribución a esta revista.<br />

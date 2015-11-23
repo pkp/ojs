@@ -93,7 +93,7 @@ Unaprijed hvala,<br />
 <br />
 zahvaljujemo što ste prijavili prilog &quot;{$submissionTitle}&quot; našem časopisu {$contextName}. Pomoću sustava upravljanja časopisom koji koristimo, moći ćete aktivno pratiti kretanje članka kroz postupak uređivanja prijavljujući se na mrežnu stranicu časopisa:<br />
 <br />
-URL rukopisa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL rukopisa: {$submissionUrl}<br />
 Korisničko ime: {$authorUsername}<br />
 <br />
 U slučaju da imate bilo kakvih pitanja, molimo vas da nam se obratite.<br />
@@ -138,7 +138,7 @@ Srdačno,<br />
 <br />
 u okviru raspodjele uredničkih zaduženja za časopis {$contextName} vama je dodijeljen zaprimljeni prilog &quot;{$submissionTitle}&quot; kako biste proveli postupak njegova uređivanja.<br />
 <br />
-URL priloga: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL priloga: {$submissionUrl}<br />
 Korisničko ime: {$editorUsername}<br />
 <br />
 Unaprijed hvala,<br />
@@ -456,7 +456,7 @@ Srdačno,<br />
 <br />
 molimo vas da izvršite korekturu prijeloma vašeg priloga &quot;{$submissionTitle}&quot; za časopis {$contextName}. Kako biste pristupili radnom primjerku prijeloma, molimo vas da otiđete na mrežnu stranicu časopisa koristeći se poveznicom koja se nalazi u nastavku teksta. Koristite poveznicu VIEW PROOF kako biste pregledali postoje li tiskarske pogreške i greške u prijelomu u tekstu oblikovanom za objavljivanje. Ispravke zabilježite unutar okvira Korektorski ispravci, koristeći se priloženim uputama za ispravke.<br />
 <br />
-URL Rukopisa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL Rukopisa: {$submissionUrl}<br />
 <br />
 U slučaju da trenutačno niste u mogućnosti izraditi korekturu svog priloga ili ako imate bilo kakvih dodatnih pitanja, molim vas da nam se obratite.<br />
 <br />
@@ -492,7 +492,7 @@ Srdačno,<br />
 <br />
 molim vas da izvršite korekturu prijeloma priloga &quot;{$submissionTitle}&quot; za časopis {$contextName}.<br />
 <br />
-URL Rukopisa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL Rukopisa: {$submissionUrl}<br />
 Korisničko ime: {$proofreaderUsername}<br />
 <br />
 U slučaju da trenutačno niste u mogućnosti preuzeti ovu korekturu ili u slučaju da imate bilo kakvih pitanja, molimo vas da nam se obratite.<br />
@@ -527,7 +527,7 @@ Srdačno,<br />
 <br />
 molimo vas da izvršite potrebne ispravke u prijelomu priloga &quot;{$submissionTitle}&quot; za časopis {$contextName} u skladu s priloženim korekturama.<br />
 <br />
-URL priloga: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL priloga: {$submissionUrl}<br />
 Korisničko ime: {$layoutEditorUsername}<br />
 <br />
 U slučaju da trenutačno niste u mogućnosti izvršiti ove unose ili ako imate bilo kakva dodatna pitanja, molimo vas da nam se obratite.<br />

@@ -113,7 +113,7 @@ Thank you,<br />
 <br />
 از ارسال مقاله &quot;{$submissionTitle}&quot; به {$contextName} متشکرم. با استفاده از سامانه الکترونیکی مدیریت مجله، که هم اکنون استفاده می شود، قادر خواهید بود ازطریق وارد شدن به وب سایت مجله، روند پیشرفت بررسی مقاله خود را پیگیری نمائید.<br />
 <br />
-آدرس مقاله : <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+آدرس مقاله : {$submissionUrl}<br />
 نام کاربری: {$authorUsername}<br />
 <br />
 لطفا چنانچه سوالی دارید، با من تماس بگیرید.<br />
@@ -154,7 +154,7 @@ Thank you,<br />
 <br />
 شما به عنوان کارشناس مسئول مقاله ضضض مربوط به {$contextName} انتخاب شده اید تا بر مراحل ویرایش آن نظارت داشته باشید.<br />
 <br />
-آدرس مقاله: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+آدرس مقاله: {$submissionUrl}<br />
 نام کاربری: {$editorUsername}<br />
 <br />
 متشکرم<br />
@@ -403,7 +403,7 @@ please contact me. Thank you for your contribution to this journal.<br />
 <br />
 از شما درخواست می شود که نمونه پیش از چاپ مقاله ارسالی خود را تحت عنوان ضضض مربوط به {$contextName}، مورد بررسی نهایی قراردهید. لطفا برای دیدن نمونه های پیش از چاپ، بوسیله پیوند زیر وارد وب سایت مجله شوید. جهت فقط خواندن موارد غلط های املایی و صفحه آرایی در نسخه ای که چاپ خواهد شد، از پیوند VIEW PROOF استفاده کنید. این غلط ها را در کادر اطلاعات نمونه خوانی ذخیره کرده و طبق دستورالعمل های مربوط به بررسی نهایی (نمونه خوانی) که در وب سایت گنجانده شده است، عمل نمایید.<br />
 <br />
-آدرس مقاله: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+آدرس مقاله: {$submissionUrl}<br />
 <br />
 چنانچه در حال حاضر قادر به انجام موارد فوق نیستید و یا در این رابطه سوالی دارید با من تماس بگیرید. پیشاپیش از همکاری شما با این مجله سپاسگزارم.<br />
 <br />
@@ -432,7 +432,7 @@ please contact me. Thank you for your contribution to this journal.<br />
 <br />
 از شما درخواست می شود که بررسی نهایی مقاله &quot;{$submissionTitle}&quot; مربوط به {$contextName} را انجام دهید.<br />
 <br />
-آدرس مقاله: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+آدرس مقاله: {$submissionUrl}<br />
 نام کاربری: {$proofreaderUsername}<br />
 <br />
 چنانچه در حال حاضر قادر به انجام موارد فوق نیستید و یا در این رابطه سوالی دارید، با من تماس بگیرید.<br />
@@ -464,7 +464,7 @@ please contact me. Thank you for your contribution to this journal.<br />
 <br />
 از شما درخواست میگردد که براساس نتایج بررسی های نهایی مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName}، اصلاحات لازم را ایجاد نمایید.<br />
 <br />
-آدرس مقاله: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+آدرس مقاله: {$submissionUrl}<br />
 نام کاربری: {$layoutEditorUsername}<br />
 <br />
 چنانچه در حال حاضر قادر به انجام امور مذکور نیستید و یا جهت طرح سوالات خود، با من تماس بگیرید.<br />

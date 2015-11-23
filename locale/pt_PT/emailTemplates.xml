@@ -184,7 +184,7 @@ Agradecendo desde já a sua atenção,<br />
 <br />
 Agradecemos a submissão do seu manuscrito &quot;{$submissionTitle}&quot; para a revista {$contextName}. Através da interface de administração do sistema, utilizado para a submissão, será possível acompanhar o progresso do documento dentro do processo editorial, bastando ligar-se ao sistema disponível em:<br />
 <br />
-URL do Manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL do Manuscrito: {$submissionUrl}<br />
 Nome de utilizador: {$authorUsername}<br />
 <br />
 Em caso de dúvidas,  entre em contacto através deste email.<br />
@@ -660,7 +660,7 @@ Solicitamos a leitura de provas do manuscrito &quot;{$submissionTitle}&quot;, su
 5. Salve e envie o email com as correcções ao Editor de Layout e ao Leitor de Prova.<br />
 6. Envie o email CONCLUÍDO ao editor.<br />
 <br />
-URL da Submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL da Submissão: {$submissionUrl}<br />
 <br />
 Em caso de dúvidas, entre em contacto através deste email.<br />
 <br />
@@ -706,7 +706,7 @@ Solicito a leitura de provas do manuscrito &quot;{$submissionTitle}&quot;, subme
 5. Salve e envie as correcções via email ao Editor de Layout.<br />
 6. Envie o email CONCLUÍDO ao editor.<br />
 <br />
-URL da Submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL da Submissão: {$submissionUrl}<br />
 Nome de utilizador: {$proofreaderUsername}<br />
 <br />
 Caso não esteja disponível para assumir esta responsabilidade no momento, ou em caso de dúvidas, entre em contacto através deste email.<br />
@@ -748,7 +748,7 @@ O autor e o Leitor de Provas concluíram a leitura de provas do manuscrito &quot
 4. Envie o email CONCLUÍDO no Passo 3 da secção Leitura de Provas ao editor.<br />
 <br />
 URL da revista {$contextName}: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL da Submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL da Submissão: {$submissionUrl}<br />
 Nome de utilizador: {$layoutEditorUsername}<br />
 <br />
 Caso não esteja disponível para assumir esta responsabilidade no momento, ou em caso de dúvidas, entre em contacto através deste email.<br />
