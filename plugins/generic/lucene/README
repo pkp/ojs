@@ -198,17 +198,16 @@ a Solr search server.
      compliant Java package.
 
   3) Download the Jetty and Solr binaries:
+  	 The plug-in is tested with Solr version 3.6.2 and Jetty 6.1.26.
 
-     - Jetty: Get the latest Jetty 6 binary from http://dist.codehaus.org/jetty/
+     - Jetty: Get the Jetty 6.1.26 binary, e.g. from 
+       http://get.jenv.mvnsearch.org/download/jetty/jetty-6.1.26.zip
        and unzip it into plugins/generic/lucene/lib in your OJS application
        directory.
 
-       We are using version 6.1.26 here as an example but the latest version may
-       be different. Please change the following commands accordingly.
-
        Execute something like (from the OJS application directory):
           #> cd plugins/generic/lucene/lib
-          #> wget http://dist.codehaus.org/jetty/jetty-6.1.26/jetty-6.1.26.zip
+          #> wget http://get.jenv.mvnsearch.org/download/jetty/jetty-6.1.26.zip
           #> unzip jetty-6.1.26.zip
 
        (You may have to install the unzip tool first...)
