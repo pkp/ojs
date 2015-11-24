@@ -171,12 +171,6 @@
 	<message key="manager.setup.doiPrefix">Tiền tố DOI</message>
 	<message key="manager.setup.doiPrefixDescription"><![CDATA[Tiền tố DOI (Digital Object Identifier - Chỉ số Nhận dạng Vật thể số) được <a href="http://www.crossref.org" target="_new">CrossRef</a> cấp và có định dạng 10.xxxx (v.d. 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Quyết định của BTV</message>
-	<message key="manager.setup.editorialMembers">Vào mục Thành viên Hội đồng để thêm một Thành viên Hội đồng Biên tập và/hoặc Thành viên Hội đồng Phản biện. Việc này có thể làm ở bất kỳ thời điểm nào.</message>
-	<message key="manager.setup.editorialProcess1">Một hoặc nhiều BTV xử lý các bước cơ bản mà không cần chỉ định vai trò cụ thể.</message>
-	<message key="manager.setup.editorialProcess2">BTV quản lý xử lý Danh sách bài nộp và Mục lục, còn các BTV chuyên mục xử lý Phản biện bài nộp và Biên tập bài nộp.</message>
-	<message key="manager.setup.editorialProcess3">BTV quản lý xử lý Danh sách bài nộp, Biên tập bài nộp và Mục lục còn các BTV chuyên mục xử lý Phản biện bài nộp.</message>
-	<message key="manager.setup.editorialReviewBoard">Hội đồng Biên tập/Phản biện</message>
-	<message key="manager.setup.editorialReviewBoardDescription">Các tạp chí thường có Hội đồng Biên tập để quản lý định hướng biên tập của tạp chí, để tham gia vào việc bổ nhiệm các BTV, và để tạo dựng vị thế của tạp chí từ danh tiếng của các thành viên trong hội đồng. Hội đồng Phản biện đóng vai trò tương tự nhưng ngoài ra họ còn dẫn dắt quá trình phản biện chuyên gia. Thành viên của Hội đồng Phản biện không chỉ có quyền truy cập vào hệ thống hành chính của tạp chí mà còn được đưa vào danh sách những người có thể phản biện chuyên gia.</message>
 	<message key="manager.setup.emailBounceAddress"> Các địa chỉ bị trả lại thư</message>
 	<message key="manager.setup.emailBounceAddressDescription"> Bất kỳ email nào không gửi được cũng sẽ trở thành một báo lỗi gửi tới địa chỉ này.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Lưu ý:</strong> Để kích hoạt lựa chọn này, người quản trị website phải kích hoạt lựa chọn <tt>allow_envelope_sender</tt> trong file cấu hình của OJS. Cấu hình máy chủ bố sung có thể cần để hỗ trợ tính năng này (có thể không có ở tất cả các máy chủ), như được nêu trong tài liệu hướng dẫn OJS.]]></message>

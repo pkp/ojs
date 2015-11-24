@@ -106,12 +106,6 @@
 	<message key="manager.setup.displayCurrentIssue">.為當期期刊新增一份目錄（如果可以的話）</message>
 	<message key="manager.setup.doiPrefix">DOI 字首</message>
 	<message key="manager.setup.doiPrefixDescription"><![CDATA[DOI字首(Digital Object Identifier 數位物件識別號) 是由 <a href="http://www.crossref.org">CrossRef</a>所指派， 格式為：10.xxxx (例如， 10.1234).]]></message>
-	<message key="manager.setup.editorialMembers">前往「委員會成員」並新增「編輯委員會」以及/或者「審查委員會」成員。在期刊運作的任何階段都可以做到這件事情。</message>
-	<message key="manager.setup.editorialProcess1">一個或多個編輯處理這些基本步驟，但並沒有特別分配預定的角色。</message>
-	<message key="manager.setup.editorialProcess2">編輯處理稿件順序、目錄，而文稿類型編輯處理稿件審查與編輯。</message>
-	<message key="manager.setup.editorialProcess3">編輯處理稿件順序、目錄，而文稿類型編輯處理稿件審查。</message>
-	<message key="manager.setup.editorialReviewBoard">編輯/審查委員會</message>
-	<message key="manager.setup.editorialReviewBoardDescription">各期刊設有編輯顧問監督期刊的編輯方針，提供編輯建言，並基於顧問成員的學術聲望賦予該期刊某些學術地位。審查委員會則扮演一個類似但額外的角色：他們負責審查的過程。審查委員會成員將不會進入期刊的管理系統，不過會被加入到可以進行審查工作的人員清單中。</message>
 	<message key="manager.setup.emailBounceAddress">退信地址</message>
 	<message key="manager.setup.emailBounceAddressDescription">如有任何退回的電子郵件，都會送出一封錯誤訊息到這個地址。</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>注意：</strong>要啟用這個選項，網站管理員必須啟用OJS設定檔中的 <tt>allow_envelope_sender</tt>選項。可能會需要額外的伺服器設定才能支持使用這個功能（可能不是所有伺服器上都能用），請見上述的OJS文件。]]></message>

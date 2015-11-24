@@ -213,12 +213,6 @@
 	<message key="manager.setup.doiReassign">റിഅസൈന്‍ ഡിഒഐ-സ്</message>
 	<message key="manager.setup.doiReassign.description">താങ്കള്‍ ഡിഒഐ കോണ്‍ഫിഗറേഷന്‍ വ്യത്യാസപ്പെടുത്തുന്ന പക്ഷം, അവ നിലവിലുള്ള ഡിഒഐ -നെ ബാധിക്കുന്നതല്ല. ഒരിക്കല്‍ ഡിഒഐ കോണ്‍ഫിഗറേഷന്‍ രേഖപ്പെടുത്തിയാല്‍, നിലവിലുള്ള എല്ലാ ഡിഒഐ -നെ ക്ലിയര്‍ ചെയ്യുകയും തന്മൂലം നിലവിലുള്ള ലേഖനത്തിനെ പുതിയ ക്രമീകരണങ്ങള്‍ സ്വാധീനം ചെലുത്തുനതിനുമായി ഈ ബട്ടണില്‍ ക്ലിക്ക് ചെയ്യുക</message>
 	<message key="manager.setup.editorDecision">ഗ്രന്ഥപരിശോധകന്റെ തീരുമാനം</message>
-	<message key="manager.setup.editorialMembers">ബോര്‍ഡ് മെമ്പര്‍സ് -ല്‍ പോകുകയും എഡിറ്റോറിയല്‍ ബോര്‍ഡ് പിന്നെ/അഥവാ റിവ്യൂ ബോര്‍ഡ് മെമ്പര്‍സ് -നെ ചേര്‍ക്കുക. എത് ഏതൊരു സന്ദര്‍ഭത്തിലും നടത്താവുന്നതാണ്.</message>
-	<message key="manager.setup.editorialProcess1">നിര്‍ദ്ദിഷ്ട ചുമതല ഇല്ലാതെ ഒന്നോ അതിലധികമോ ഗ്രന്ഥപരിശോധകര്‍ അടിസ്ഥാന സ്റ്റെപ്പ്സ് നിയന്ത്രിക്കുന്നു.</message>
-	<message key="manager.setup.editorialProcess2">സെക്ഷന്‍ എഡിറ്റര്‍സ് സബ്മിഷന്‍ റിവ്യു സബ്മിഷന്‍ എഡിറ്റിങ്ങ് എന്നിവ നിയന്ത്രിക്കുമ്പോള്‍ മാനേജിങ്ങ് എഡിറ്റര്‍ സബ്മിഷന്‍ ക്യൂ ഉള്ളടക്ക പട്ടിക എന്നിവ നിയന്ത്രിക്കുന്നു.</message>
-	<message key="manager.setup.editorialProcess3">സെക്ഷന്‍ എഡിറ്റര്‍സ് സബ്മിഷന്‍ റിവ്യു നിയന്ത്രിക്കുമ്പോള്‍ മാനേജിങ്ങ് എഡിറ്റര്‍ സബ്മിഷന്‍ ക്യൂ സബ്മിഷന്‍ എഡിറ്റിങ്ങ് ഉള്ളടക്ക പട്ടിക എന്നിവ നിയന്ത്രിക്കുന്നു.</message>
-	<message key="manager.setup.editorialReviewBoard">എഡിറ്റോറിയല്‍ / റിവ്യൂ ബോര്‍ഡ്</message>
-	<message key="manager.setup.editorialReviewBoardDescription">Journals have Editorial Boards to oversee the editorial direction of the journal, participate in the appointment of editors, and, by virtue of board members' reputations, give the journal some standing in the field. Review Boards play a similar role but in addition, they lead the peer review process. Review Board members will not have access to the journal's administrative system but will be added to the list of those available to do peer reviews.</message>
 	<message key="manager.setup.emailBounceAddress">ബൗന്‍സ് അഡ്രസ്</message>
 	<message key="manager.setup.emailBounceAddressDescription">ലഭിക്കപ്പെടാത്ത ഇമെയില്‍സ് ഈ അഡ്രസിന്റെ പിശകായി വിലയിരുത്തപ്പെടുന്നു.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>allow_envelope_sender</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>

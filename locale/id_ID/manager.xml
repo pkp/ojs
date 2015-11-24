@@ -214,12 +214,6 @@
 <message key="manager.setup.doiReassign">Menugaskan Kembali DOIs</message>
 <message key="manager.setup.doiReassign.description"> Jika Anda mengubah konfigurasi DOI, DOI yang sebelumnya tidak akan berfungsi lagi. Saat konfigurasi DOI disimpan, gunakan tombol ini untuk menghapus semua DOI yang ada sehingga pengaturan baru akan berlaku pada artikel yang sudah ada.</message> 
 	<message key="manager.setup.editorDecision"> Keputusan Editor</message> 
-	<message key="manager.setup.editorialMembers"> Pergi ke Anggota Dewan dan tambahkan Dewan Editorial dan/ atau anggota dewan Reviewer. Ini dapat dilakukan kapanpun dalam mengoperasikan jurnal.</message>
-	<message key="manager.setup.editorialProcess1"> Satu editor atau lebih menangani langkah awal tanpa peran tertentu.</message> 
-	<message key="manager.setup.editorialProcess2"> Pengaturan Editor menangani Antrian Penyerahan, Daftar Isi sedankan Editor Bagian menangani Review Penyerahan dan Pengeditan Penyerahan.</message> 
-	<message key="manager.setup.editorialProcess3"> Pengaturan Editor menangani Antrian Penyerahan, pengeditan penyerahan, dan daftar isi, sedangkan editor bagian menangani review penyerahan.</message> 
-	<message key="manager.setup.editorialReviewBoard">Editorial/Dewan Reviewer </message> 
-	<message key="manager.setup.editorialReviewBoardDescription"> Jurnal memiliki Dewan Editorial untuk mengawasi arah editorial jurnal, berpartisipasi dalam penunjukan editor dan karena reputasi anggota dewan, memberikan jurnal reputasi di bidang itu. Anggota dewan Reviewer tidak akan memiliki akses ke sistem administrasi jurnal tapi akan ditambahkan ke daftar yang tersedia/ yang bisa untuk mengerjakan peer review.</message> 
 	<message key="manager.setup.emailBounceAddress">Bounce Address</message> 
 	<message key="manager.setup.emailBounceAddressDescription">Setiap email yang tidak terkirim akan menghasilkan pesan eror ke alamat ini.</message> 
 	<message  key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Catatan:</strong> Untuk mengaktifkan pilihan ini, administrator situs harus mengaktifkan pilihan <tt>allow_envelope_sender</tt> di file konfigurasi OJS. Konfigurasi server tambahan mungkin diperlukan untuk mensupport fungsi ini (yang tidak dapat dilakukan pada semua server), seperti yang tercantum di dokumentasi OJS.]]></message> 

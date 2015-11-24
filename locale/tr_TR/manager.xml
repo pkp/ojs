@@ -204,12 +204,6 @@
 	<message key="manager.setup.disciplineProvideExamples">Bu dergi için uygun akademik disiplin örnekleri ver.</message>
 	<message key="manager.setup.displayCurrentIssue">Son sayının içindekiler bölümünü ekle (mevcut ise).</message>
 	<message key="manager.setup.editorDecision">Editör Kararı</message>
-	<message key="manager.setup.editorialMembers">Kurul üyelerine git ve Editoryal Kurul ve/veya Değerlendirme Kurulu üyeleri ekle. Bu işlem daha sonra da yapılabilir.</message>
-	<message key="manager.setup.editorialProcess1">Bir veya bir kaç editör temel basamakları, rolleri paylaşmadan yönetebilirler.</message>
-	<message key="manager.setup.editorialProcess2">Yönetici editör Başvuru Kuyruğu, İçindekiler bölümlerini, Bölüm Editörleri ise Başvuru Değerlendirilmesi, Yazıların Düzenlenmesi bölümlerini yönetirler.</message>
-	<message key="manager.setup.editorialProcess3">Yönetici editör Başvuru Kuyruğunu, Yazıların Düzenlenmesini, İçindekiler bölümlerini, Bölüm Editörleri ise Başvuru Değerlendirilmesi bölümlerini yönetirler.</message>
-	<message key="manager.setup.editorialReviewBoard">Değerlendirme Kurulu</message>
-	<message key="manager.setup.editorialReviewBoardDescription">Derginin editoryal yönünü denetlemek, editörlerin atanmasına katılmak, üyelerinin itibarı aracılığıyla  sahasında dergiye statü kazandırmak için dergilerin editöyal kurulu vardır. Değerlendirme Kurulu benzer rol oynar, fakat ek olarak, değerlendirme sürecine öncülük eder. Bu kurulun  üyeleri derginin yönetim sistemine ulaşamayacaklardır fakat değerlendirme yapmak için listeye ekleneceklerdir.</message>
 	<message key="manager.setup.emailBounceAddress">Yanıt vermeyen e-posta adresi</message>
 	<message key="manager.setup.emailBounceAddressDescription">İletilemeyen her posta bu adreste hata mesajı olarak sonuçlanacaktır.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Not:</strong> Bu seçeneği etkinleştirmek için ADS konfigürasyon dosyasında <tt>allow_envelope_sender</tt> seçeneği etkin olmalıdır. Bu işlevin kullanılabilmesi için sunucu (tüm sunucularda çalışmayabilir) ayarlarında da değişiklik yapılması gerekir. Daha fazla bilgi için ADS belgelerine bakınız.]]></message>

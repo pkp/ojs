@@ -207,12 +207,6 @@
 	<message key="manager.setup.doiSuffixDescription">Un sufix DOI poate avea orice formă, dar trebuie să fie unic pentru fiecare articol publicat.</message>
 	<message key="manager.setup.doiSuffixPublisherId">Folosește „identificator particularizat” pentru articolele publicate ca fiind un sufix DOI (acesta trebuie activat la Pasul 4).</message>
 	<message key="manager.setup.editorDecision">Decizia redactorului</message>
-	<message key="manager.setup.editorialMembers">Mergi la membrii colectivului şi mai adaugă dintre aceștia la colectivul redacţional şi/sau la cel de evaluare. Acest lucru poate fi făcut în orice moment al activităţii revistei.</message>
-	<message key="manager.setup.editorialProcess1">Unu sau mai mulţi redactori gestionează paşii de bază fără a avea roluri desemnate.</message>
-	<message key="manager.setup.editorialProcess2">Redactorul manager gestionează lista propunerilor şi cuprinsul în timp ce redactorii secţiunilor se ocupă de evaluarea propunerilor şi de editarea acestora.</message>
-	<message key="manager.setup.editorialProcess3">Redactorul manager gestionează lista propunerilor şi cuprinsul în timp ce redactorii secţiunilor se ocupă de evaluarea propunerilor şi de editarea acestora.</message>
-	<message key="manager.setup.editorialReviewBoard">Colectivul editorial / de evaluatori</message>
-	<message key="manager.setup.editorialReviewBoardDescription">Revistele au un colectiv editorial care îngrijeşte la direcţiile redacţionale ale revistei, participă în numirea redactorilor iar prin calitatea membrilor acestui colectiv dau o poziţie revistei în sfera domeniului. Colectivul de evaluare joacă un rol similar, dar, în plus, conduc procesele de evaluare. Membrii colectivului de evaluare nu vor avea acces la sistemul administrativ al revistei, dar vor fi adăugaţi la lista celor care sunt disponibili pentru a face evaluări.</message>
 	<message key="manager.setup.emailBounceAddress">Adresă de salt</message>
 	<message key="manager.setup.emailBounceAddressDescription">Orice email care nu poate fi trimis va avea ca rezultat o eroare trimisă la această adresă.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Notă:</strong> Pentru a folosi această opţiune, administratorul trebuie să activeze opţiunea <tt>allow_envelope_sender</tt> din fişierul de configurare al OJS. Poate să fie nevoie de configurări suplimentare pentru server pentru a suporta această funcţie (ceea ce nu se poate aplica pentru toate serverele), după cum este precizat şi în documentaţia OJS.]]></message>

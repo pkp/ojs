@@ -169,12 +169,6 @@
 	<message key="manager.setup.disciplineProvideExamples">Geef voorbeelden van relevante academische disciplins voor dit tijdschrift</message>
 	<message key="manager.setup.displayCurrentIssue">De inhoudsopgave van het huidige nummer toevoegen (indien beschikbaar).</message>
 	<message key="manager.setup.editorDecision">Beslissing redacteur</message>
-	<message key="manager.setup.editorialMembers">Ga naar Teamleden en voeg redactie- en/of beoordelingsteamleden toe. Dit kan op ieder gewenst moment gebeuren.</message>
-	<message key="manager.setup.editorialProcess1">Een of meer redacteuren voeren de stappen uit zonder vooraf bepaalde rollen.</message>
-	<message key="manager.setup.editorialProcess2">De eindredacteur behandelt de inzendings-wachtrij en de inhoudsopgave, de sectieredacteuren behandelen de reviews en redactie van de inzendingen.</message>
-	<message key="manager.setup.editorialProcess3">De eindredacteur behandelt de inzendings-wachtrij, de redactie van de inzendingen en de inhoudsopgave, de sectieredacteuren doen de reviews.</message>
-	<message key="manager.setup.editorialReviewBoard">Redactie / Review team</message>
-	<message key="manager.setup.editorialReviewBoardDescription">Tijdschriften hebben een redactieteam om de redactionele richting van het tijdschrift te beoordelen, deel te nemen in het benoemen van redacteuren, en door middel van de reputatie van de leden van het redactieteam, het tijdschrift aanzicht in het veld te geven. Reviewteams hebben een soortgelijke rol maar leiden bovendien de reviewprocedure. Reviewteam leden hebben geen toegang tot het administratieve systeem van het tijdschrift maar worden toegevoegd aan de lijst van beschikbare reviewers.</message>
 	<message key="manager.setup.emailBounceAddress">Retouradres voor onbestelbare e-mail</message>
 	<message key="manager.setup.emailBounceAddressDescription">E-mails die niet afgeleverd kunnen worden, resulteren in een foutbericht op dit adres.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Noot:</strong> Om deze optie te activeren moet de beheerder de <tt>allow_envelope_sender</tt> optie in het OJS configuratiebestand inschakelen. Additionale server configuratie kan noodzakelijk zijn om deze optie te gebruiken (die niet op alle servers ondersteund wordt) zoals aangegeven in de OJS documentatie.]]></message>

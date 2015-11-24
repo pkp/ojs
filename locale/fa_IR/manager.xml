@@ -172,12 +172,6 @@
 	<message key="manager.setup.displayCurrentIssue">افزودن فهرست مطالب شماره جاری در صورت موجود بودن.</message>
 	<message key="manager.setup.doiPrefix">DOI پیشوند</message>
 	<message key="manager.setup.editorDecision">تصمیم دبیر</message>
-	<message key="manager.setup.editorialMembers">به قسمت اعضای شورا رفته و اعضای شورای نویسندگان یا کارشناسان را کم یا زیاد کنید. این کار را در هر زمانی در طول حیات آن لاین مجله میتوان انجام داد.</message>
-	<message key="manager.setup.editorialProcess1">یک یا چند دبیر مراحل پایه ای را بدون انتصاب رل انجام میدهند.</message>
-	<message key="manager.setup.editorialProcess2">دبیر ااداره کننده به نوبت ساب میشن و فهرست مطالب رسیدگی میکند و کارشناسی ساب میشن و ویرایش آن ها به عهده دبیران دیگر خواهد بود.</message>
-	<message key="manager.setup.editorialProcess3">دبیر ااداره کننده به نوبت ساب میشن ، ویرایش آنها و فهرست مطالب رسیدگی میکند و کارشناسی ساب میشن به عهده دبیران دیگر خواهد بود.</message>
-	<message key="manager.setup.editorialReviewBoard">شورای نویسندگان و کارشناسان</message>
-	<message key="manager.setup.editorialReviewBoardDescription">شورای نویسندگان امور دبیری را سرپرستی میکند ، دبیر هر مقاله را تعیین می کند ، و با کمک شهرت دبیران موجب شهرت مجله میشود. شورای کارشناسی نقش مشابهی دارد ، به علاوه کارشناسی را نیز به عهده دارند. اعضای شورای کارشناسا ن به قسمت های مدیریتی سیستم دسترسی ندارند بلکه توسط دبیران برای انجام کارشناسی منصوب می شوند.</message>
 	<message key="manager.setup.emailBounceAddress">آدرس برگشت</message>
 	<message key="manager.setup.emailBounceAddressDescription">اگر ایمیلی برگشت بخورد پیغامی به این ادرس ارسال می شود</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>توجه:</strong> برای فعال ساختن این گزینه مدیر سایت میبایست گزینه <tt>allow_envelope_sender</tt> در فایل تنظیمات OJS فعال سازد. همچنین ممکن است ویژگی خاص سرور نیز لازم باشد که ممکن است همه سرور ها آن را نداشته باشند. برای اطلاعات بیشتر به مستندات OJS مراجعه کنید.]]></message>

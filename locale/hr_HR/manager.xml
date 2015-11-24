@@ -166,12 +166,6 @@
 	<message key="manager.setup.doiPrefix">DOI prefiks</message>
 	<message key="manager.setup.doiPrefixDescription"><![CDATA[DOI (Digital Object Identifier) prefiks dodijeljuje <a href="http://www.crossref.org" target="_new">CrossRef</a>, a unosi se u formatu 10.xxxx (npr. 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Urednička odluka</message>
-	<message key="manager.setup.editorialMembers">Odite na članove upravnog organa i dodajte članove uredništva i/ili recenzente. To može biti učinjeno u bili kojem trenutku prilikom rada sa časopisom.</message>
-	<message key="manager.setup.editorialProcess1">Jedan ili više urednika upravljaju glavnim koracima bez određenih uloga.</message>
-	<message key="manager.setup.editorialProcess2">Glavni urednik upravlja Redom čekanja prijave i Kazalom sadržaja, dok Urednici rubrika upravljaju Recenzijom prijave i Uređivanjem prijave.</message>
-	<message key="manager.setup.editorialProcess3">Glavni urednik upravlja Redom čekanja prijave, Uređivanjem prijave i Kazalom sadržaja, dok Urednici rubrika upravljaju Recenzijom prijave.</message>
-	<message key="manager.setup.editorialReviewBoard">Uredništvo / Recenzenti</message>
-	<message key="manager.setup.editorialReviewBoardDescription">Časopisi imaju uredništva koja organiziraju lektorske smjernice časopisa, sudjeluju na sastancima urednika i na temelju reputacije članova upravnog organa daju časopisu određeni položaj u području. Recenzenti imaju sličnu ulogu, ali u tom postupku recenzije svi su ravnopravni. Recenzenti nemaju pristup administrativnom sustavu časopisa, ali će biti dodani na listu onih koji su raspoloživi za rad stručnih recenzija.</message>
 	<message key="manager.setup.emailBounceAddress">Adresa obavijesti o nedostavljanju</message>
 	<message key="manager.setup.emailBounceAddressDescription">Bilo koja nedostavljena e-pošta rezultirat će slanjem poruke o pogrešci na ovu adresu.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Obavijest:</strong> Kako bi aktivirao ovu opciju, administrator stranice mora omogućiti <tt>allow_envelope_sender</tt> u konfiguracijskoj datoteci OJS-a. Dodatna konfiguracija poslužitelja je potrebna da bi podržala ovu funkcionalnost (što nije moguće na svim poslužiteljima) -  naznačeno u  OJS dokumentaciji.]]></message>

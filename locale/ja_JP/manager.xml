@@ -159,12 +159,6 @@
 	<message key="manager.setup.displayCurrentIssue">（もしあれば）最新号の目次を追加する。</message>
 	<message key="manager.setup.doiPrefix">DOIプリフィックス</message>
 	<message key="manager.setup.editorDecision">編集者の判断</message>
-	<message key="manager.setup.editorialMembers">委員会委員のページで、編集委員会委員または査読委員会委員を追加してください。この処理は、雑誌運営のいつの時点で行っても構いません。</message>
-	<message key="manager.setup.editorialProcess1">1人以上の編集者が担当者が指定されていない基本的ステップを担当する。</message>
-	<message key="manager.setup.editorialProcess2">編集長が受付と目次を担当し、セクションエディタが査読と編集を担当する。</message>
-	<message key="manager.setup.editorialProcess3">編集長が受付と編集、目次を担当し、セクションエディタが査読を担当する。</message>
-	<message key="manager.setup.editorialReviewBoard">編集・査読委員会</message>
-	<message key="manager.setup.editorialReviewBoardDescription">雑誌は、雑誌の編集上の方向性を監督し、編集者の任命を行い、委員会委員の評判により該当分野におけるその雑誌の地位を高めるために編集委員会を設けます。査読委員会も同様な役割を果たしますが、さらに、査読処理を主導します。査読委員会の委員は、雑誌の管理システムへのアクセス権は持ちませんが、査読を行う候補者のリストに追加されます。</message>
 	<message key="manager.setup.emailBounceAddress">返信アドレス</message>
 	<message key="manager.setup.emailBounceAddressDescription">配信できなかったメールは、次のアドレスへエラーメッセージとなり返送されます。</message>
 	<message key="manager.setup.emails">メールの識別</message>

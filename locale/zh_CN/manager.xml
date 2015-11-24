@@ -198,12 +198,6 @@
 	<message key="manager.setup.disciplineProvideExamples">提供这份期刊相关的学科领域作为范例</message>
 	<message key="manager.setup.displayCurrentIssue">.为当期期刊新增一份目录（如果可以的话）</message>
 	<message key="manager.setup.editorDecision">编辑决策</message>
-	<message key="manager.setup.editorialMembers">前往「委员会成员」并新增「编辑委员会」以及/或者「审稿委员会」成员。在期刊运作的任何阶段都可以做到这件事情。</message>
-	<message key="manager.setup.editorialProcess1">一个或多个编辑处理这些基本步骤，但并没有特别分配预定的角色。</message>
-	<message key="manager.setup.editorialProcess2">编辑处理稿件顺序、目录，而栏目编辑处理稿件审稿与编辑。</message>
-	<message key="manager.setup.editorialProcess3">编辑处理稿件顺序、目录，而栏目编辑处理稿件审稿。</message>
-	<message key="manager.setup.editorialReviewBoard">编辑/审稿委员会</message>
-	<message key="manager.setup.editorialReviewBoardDescription">各期刊设有编辑顾问监督期刊的编辑方针，提供编辑建言，并基于顾问成员的学术声望赋予该期刊某些学术地位。审稿委员会则扮演一个类似但额外的角色：他们负责审稿的过程。审稿委员会成员将不会进入期刊的管理系统，不过会被加入到可以进行审稿工作的人员清单中。</message>
 	<message key="manager.setup.emailBounceAddress">退信邮箱</message>
 	<message key="manager.setup.emailBounceAddressDescription">如有任何退回的电子邮件，都会发送一封错误信息到这个地址。</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>注意：</strong>要启用这个选项，网站管理员必须启用OJS配置文件中的 <tt>allow_envelope_sender</tt>选项。可能会需要额外的服务器配置才能支持使用这个功能（可能不是所有服务器上都能用），请见上述的OJS文件。]]></message>

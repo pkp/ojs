@@ -167,12 +167,6 @@
 	<message key="manager.setup.doiPrefix">DOI prefix</message>
 	<message key="manager.setup.doiPrefixDescription"><![CDATA[ DOI (Digital Object Identifier) prefixet tilldelas av <a href="http://www.crossref.org" target="_new">CrossRef</a> i formatet 10.xxxx (ex. 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Redaktörens beslut</message>
-	<message key="manager.setup.editorialMembers">Gå till Medlemmar i Redaktionen och lägg till Redaktion och/eller redaktionsråd för granskning. Det här kan göras närsonhelst under installationen av tidskriften.</message>
-	<message key="manager.setup.editorialProcess1">En eller flera redaktörer hanterar de grundläggande stegen utan fördefinierade roller.</message>
-	<message key="manager.setup.editorialProcess2">Redaktionsledaren administrerar inskickade manuskript och innehållsförteckning, Sektionsredaktören administrerar manusgranskning och manusredigering.</message>
-	<message key="manager.setup.editorialProcess3">Redaktionsledaren administrerar inskickade manuskript, manusredigering, och innehållsförteckning, Sektionsredaktören administrerar manusgranskning.</message>
-	<message key="manager.setup.editorialReviewBoard">Redaktion och redaktionsråd för granskning</message>
-	<message key="manager.setup.editorialReviewBoardDescription">Redaktionen ansvarar för tidskriftsarbetets redaktionella riktning, deltar i utnämning av redaktörer samt går i god för tidkriftens rykte och rennommé, Redaktionsrådet för granskning har en liknande funktion men leder dessutom granskningsprocessen. Medlemmar i redaktionsrådet för granskning har inte tillgång till tidskriftens administrativa del men ingår på listan för granskare.</message>
 	<message key="manager.setup.emailBounceAddress">Felaktig adress</message>
 	<message key="manager.setup.emailBounceAddressDescription">Felmeddelande för E-post som inte kan levereras skickas till den här adressen.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<<strong>Observera:</strong> För att göra det här valet måste sidadministratören aktivera <tt>allow_envelope_sender</tt> i OJS konfigureringsfil. Ytterligare serverkonfigurering kan komma att bli nödvändig (något som inte alla servrar tillåter, se OJS-dokumentationen för info.)]]></message>

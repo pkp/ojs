@@ -83,12 +83,6 @@
 	<message key="manager.setup.disciplineExamples"></message>
 	<message key="manager.setup.disciplineProvideExamples"></message>
 	<message key="manager.setup.displayCurrentIssue">Добавить содержание к текущему изданию.</message>
-	<message key="manager.setup.editorialMembers">Перейти к членам коллегии и добавить новых редакторов или рецензентов. Это можно сделать в любое время.</message>
-	<message key="manager.setup.editorialProcess1"></message>
-	<message key="manager.setup.editorialProcess2"></message>
-	<message key="manager.setup.editorialProcess3"></message>
-	<message key="manager.setup.editorialReviewBoard">Редакторы и рецензенты</message>
-	<message key="manager.setup.editorialReviewBoardDescription"></message>
 	<message key="manager.setup.emailBounceAddress">Обратный адрес</message>
 	<message key="manager.setup.emailBounceAddressDescription"></message>
 	<message key="manager.setup.emails"></message>

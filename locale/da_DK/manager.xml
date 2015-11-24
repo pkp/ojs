@@ -190,12 +190,6 @@
 	<message key="manager.setup.disciplineProvideExamples">Angiv eksempler på relevante akademiske fagområder for dette tidsskrift</message>
 	<message key="manager.setup.displayCurrentIssue">Føj indholdsfortegnelsen til den aktuelle udgave (hvis den er tilgængelig).</message>
 	<message key="manager.setup.editorDecision">Redaktørbeslutning</message>
-	<message key="manager.setup.editorialMembers">Gå til Udvalgsmedlemmer, og tilføj redaktionsudvalgs- og/eller bedømmelsesudvalgsmedlemmer. Du kan gøre dette på et hvilket som helst tidspunkt under driften af tidsskriftet.</message>
-	<message key="manager.setup.editorialProcess1">En eller flere redaktører håndterer de grundlæggende trin uden anviste roller.</message>
-	<message key="manager.setup.editorialProcess2">Chefredaktøren håndterer Manuskriptkø og Indholdsfortegnelse, mens sektionsredaktørerne håndterer Manuskriptbedømmelse og Manuskriptredigering.</message>
-	<message key="manager.setup.editorialProcess3">Chefredaktøren håndterer Manuskriptkø, Manuskriptredigering og Indholdsfortegnelse, mens sektionsredaktørerne håndterer Manuskriptbedømmelse.</message>
-	<message key="manager.setup.editorialReviewBoard">Redaktionsudvalg/bedømmelsesudvalg</message>
-	<message key="manager.setup.editorialReviewBoardDescription">Tidsskrifter har redaktionsudvalg, som fører tilsyn med tidsskriftets redaktionelle linje, som deltager i udnævnelsen af redaktører, og som i kraft af udvalgsmedlemmernes renommé giver tidsskriftet en vis status inden for det pågældende felt. Bedømmelsesudvalget spiller en lignende rolle, men leder derudover peer review-processen. Medlemmer af bedømmelsesudvalget har ikke adgang til tidsskriftets administrative system, men står anført på listen over de personer, der kan foretage peer review.</message>
 	<message key="manager.setup.emailBounceAddress">Returadresse</message>
 	<message key="manager.setup.emailBounceAddressDescription">Alle e-mails, der ikke kan leveres, resulterer i en fejlmeddelelse til denne adresse.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Bemærk!</strong> Hvis du vil aktivere denne indstilling, skal webstedsadministratoren aktivere indstillingen <tt>allow_envelope_sender</tt> i OJS-konfigurationsfilen. Understøttelse af denne funktionalitet (som eventuelt ikke er muligt på alle servere) kan kræve yderligere konfiguration af serveren som angivet i dokumentationen til OJS.]]></message>

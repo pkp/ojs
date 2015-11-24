@@ -743,7 +743,6 @@
 	<message key="manager.setup.editorialReviewBoard">Éðîtórîål / Rèvîèw Bóårð</message>
 	<message key="manager.setup.useEditorialReviewBoard">Æñ èðîtórîål/rèvîèw bóårð wîll bè üþèð bý thè jóürñål.</message>
 	<message key="manager.setup.editorialReviewBoardDescription">Jóürñålþ håvè Éðîtórîål Bóårðþ tó óvèrþèè thè èðîtórîål ðîrèçtîóñ óf thè jóürñål, pårtîçîpåtè îñ thè åppóîñtmèñt óf èðîtórþ, åñð, bý vîrtüè óf bóårð mèmbèrþ' rèpütåtîóñþ, gîvè thè jóürñål þómè þtåñðîñg îñ thè fîèlð. Rèvîèw Bóårðþ plåý å þîmîlår rólè büt îñ åððîtîóñ, thèý lèåð thè pèèr rèvîèw próçèþþ. Rèvîèw Bóårð mèmbèrþ wîll ñót håvè åççèþþ tó thè jóürñål'þ åðmîñîþtråtîvè þýþtèm büt wîll bè åððèð tó thè lîþt óf thóþè åvåîlåblè tó ðó pèèr rèvîèwþ.</message>
-	<message key="manager.setup.editorialMembers">Gó tó Bóårð Mèmbèrþ åñð åðð Éðîtórîål Bóårð åñð/ór Rèvîèw Bóårð mèmbèrþ. Thîþ çåñ bè ðóñè åt åñý póîñt îñ ópèråtîñg thè jóürñål.</message>
 	<message key="manager.setup.principalContact">Prîñçîpål Çóñtåçt</message>
 	<message key="manager.setup.principalContactDescription">Thîþ póþîtîóñ, whîçh çåñ bè trèåtèð åþ å prîñçîpål èðîtórþhîp, måñågîñg èðîtórþhîp, ór åðmîñîþtråtîvè þtåff póþîtîóñ, wîll bè lîþtèð óñ thè hómèpågè óf thè jóürñål üñðèr Çóñtåçt, ålóñg wîth thè Tèçhñîçål ßüppórt Çóñtåçt.</message>
 	<message key="manager.setup.technicalSupportContact">Tèçhñîçål ßüppórt Çóñtåçt</message>

@@ -104,12 +104,6 @@
 	<message key="manager.setup.disciplineExamples">(For eks. historie; utdanningsvitenskap; sosiologi; psykologi; kulturstudier; statsvitenskap)</message>
 	<message key="manager.setup.disciplineProvideExamples">Gi eksempler på relevante fagemner for dette tidsskriftet</message>
 	<message key="manager.setup.displayCurrentIssue">Legg til innholdsoversikten for nyste utgave (hvis tilgjengelig).</message>
-	<message key="manager.setup.editorialMembers">Gå til Rådsmedlemmer og legg til redaksjonsråd- og/eller fagfellerådsmedlemmer. Dette kan ordnes når som helst i arbeidsprosessen.</message>
-	<message key="manager.setup.editorialProcess1">En eller flere redaktører håndterer de grunnleggende trinnene uten fordelte roller.</message>
-	<message key="manager.setup.editorialProcess2">Ansvarlig redaktør håndterer manuskriptarbeidskø og innholdsfortegnelse, mens seksjonsredaktører håndterer manuskriptvurdering og manuskriptbehandling.</message>
-	<message key="manager.setup.editorialProcess3">Ansvarlig redaktør håndterer manuskriptarbeidskø, manuskriptbehandling og innholdsfortegnelse, mens seksjonsredaktørene håndterer manuskriptvurdering.</message>
-	<message key="manager.setup.editorialReviewBoard">Redaksjons- eller fagfelleråd</message>
-	<message key="manager.setup.editorialReviewBoardDescription">Vitenskapelige tidsskrift har redaksjonsråd som holder oppsyn med den redaksjonelle utviklingen i tidsskriftet, deltar ved utnevnelse av redaktører, og gir tidsskriftet troverdighet i kraft av rådsmedlemmenes omdømme. Fagfelleråd spiller en lignende rolle, men i tillegg leder de fagvurderingsprosessen. Fagfellerådsmedlemmer vil ikke få tilgang til tidsskriftets administrative system, men de vil bli lagt til i listen over brukere som er tilgjengelige for å utføre fagvurderinger.</message>
 	<message key="manager.setup.emailBounceAddress">Feilmeldingsadresse</message>
 	<message key="manager.setup.emailBounceAddressDescription">Alle e-poster som ikke kan leveres, vil utløse en feilmelding som sendes til denne adressen.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>NB:</strong> For å aktivere denne valgmuligheten, må nettstedsadministratoren slå på <tt>allow_envelope_sender</tt> valgmuligheten i OJS konfigurasjonsfilen. Ytterligere serverkonfigurasjon kan være påkrevet for å støtte denne funksjonen (som likevel kan være umulig å bruke på enkelte servere), som oppgitt i OJS-dokumentasjonen.]]></message>

@@ -171,12 +171,6 @@
 	<message key="manager.setup.doiPrefix">Prefixo de DOI</message>
 	<message key="manager.setup.doiPrefixDescription"><![CDATA[O prefixo de DOI (Identificador de Obxecto Digital) está asignado por <a href="http://www.crossref.org" target="_new">CrossRef</a> e ten o formato 10.xxxx (p.e. 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Decisión del Editor</message>
-	<message key="manager.setup.editorialMembers">Ir a Membros do Consello e engadir membros ao Consello Editorial e/o ao Consello Revisor. Esta tarefa pódese facer hacer máis adiante.</message>
-	<message key="manager.setup.editorialProcess1">Un/a ou máis editores/a administran os pasos básicos sen roles designados.</message>
-	<message key="manager.setup.editorialProcess2">O/a editor/a principal administra a cola de envíos, a cola de axenda, e a táboa de contidos, mentres que os/as editores/as de sección administran a  revisión de envíos e a edición de envíos.</message>
-	<message key="manager.setup.editorialProcess3">O/a editor/a principal administra a cola de envíos, a edición de envíos, a cola de envíos e a taáboa de contidos, mentres que os/as editores/as de sección administran a revisión de envíos.</message>
-	<message key="manager.setup.editorialReviewBoard">Consello Editorial / Revisor</message>
-	<message key="manager.setup.editorialReviewBoardDescription">As revistas contan con Consellos Editoriais / Revisores para supervisar a liña editorial da revista, participar na escolla de editoras/es, e, por meio da reputación dos membros do consello, achegar relevo á revista na súa área temática. Os Consellos Revisores xogan un papel similar, ainda que tamén se encargan do proceso de revisión por pares. Os membros do Consello Revisor non tenrán acceso ao sistema administrativo da revista, mais deberanse incluir á lista de revisores/as.</message>
 	<message key="manager.setup.emailBounceAddress">Enderzo de Rebote</message>
 	<message key="manager.setup.emailBounceAddressDescription">Enviarase unha mensaxe de erro a este enderezo por cada correo que non se poidera entregar.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Atención:</strong> Para activar esta opción, o/a administrador/a debe habilitar a opción <tt>allow_envelope_sender</tt> no ficheiro de configuración de OJS. É posibel que se teñan que configurar máis cousas no servidor (o que pode non ser posibel en todos os servidores) para suportar esta funcionalidade, tal e como se aponta na documentación de OJS.]]></message>

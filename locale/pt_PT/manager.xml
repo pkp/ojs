@@ -171,12 +171,6 @@
 	<message key="manager.setup.doiPrefix">Prefixo DOI</message>
 	<message key="manager.setup.doiPrefixDescription"><![CDATA[O Prefixo DOI (Digital Object Identifier) é controlado e oferecido por <a href="http://www.crossref.org" target="_new">CrossRef</a> e possui o formato 10.xxxx (ex.: 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Decisão Editorial</message>
-	<message key="manager.setup.editorialMembers">Entre em Membros do Equipa para registar pessoas na Equipa Editorial e/ou Revisor. Pode ser realizado a qualquer tempo.</message>
-	<message key="manager.setup.editorialProcess1">Um ou mais editores podem tratar os passos básicos sem papéis definidos.</message>
-	<message key="manager.setup.editorialProcess2">Editor trata da Fila de Submissão e Sumário, enquanto Editores de Secção tratam da Revisão e Edição da Submissão.</message>
-	<message key="manager.setup.editorialProcess3">Editor trata da Fila de Submissão, Edição de Submissão e Sumário, enquanto os Editores de Secção tratam da Revisão da Submissão.</message>
-	<message key="manager.setup.editorialReviewBoard">Equipa Editorial / Revisor</message>
-	<message key="manager.setup.editorialReviewBoardDescription">A função da Equipa Editorial é definir as directrizes, âmbito e público alvo da revista, definir o corpo editorial, e, pela reputação dos seus participantes, proporcionar à revista um posicionamento na área de actuação. A Equipa de Revisores tem uma função similar, porém ainda acompanha o processo de revisão por pares. Os membros do Equipa de Revisores não terão acesso à administração do sistema, mas estarão incluídos na lista de revisores.</message>
 	<message key="manager.setup.emailBounceAddress">Endereço de retorno de e-mail</message>
 	<message key="manager.setup.emailBounceAddressDescription">Qualquer e-mail retornado (não recebido) produzirá uma mensagem de erro para o endereço definido aqui.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Aviso:</strong> Para activar esta opção, o administrador do portal deve activar a opção <tt>allow_envelope_sender</tt> no documento de configuração do sistema. Configurações adicionais no servidor podem ser necessárias para suportar tal funcionalidade (pode não ser possível em todos os tipos de servidores!), como descrito na documentação do sistema.]]></message>
