@@ -75,7 +75,6 @@ Atur ulang kata sandi saya: {$url}<br />
 		<body><![CDATA[Kata sandi Anda telah sukses diatur ulang untuk penggunaan dengan web site {$siteTitle}. Ingatlah nama pengguna dan kata sandi ini karena diperlukan untuk semua pekerjaan di jurnal.<br />
 <br />
 Nama pengguna Anda: {$username}<br />
-Kata sandi baru Anda: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Email ini dikirim untuk pengguna yang terdaftar saat mereka telah sukses mengatur ulang kata sandi mereka dengan mengikuti proses yang dideskripsikan di email  PASSWORD_RESET_CONFIRM.</description>

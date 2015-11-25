@@ -27,7 +27,6 @@ Reinicialització de la meva contrasenya: {$url}<br />
 		<body><![CDATA[La vostra contrasenya per al lloc web {$siteTitle} s'ha reinicialitzat correctament. Recordeu aquest nom d'usuari i aquesta contrasenya, ja que els necessitareu per a accedir a la revista i treballar-hi.<br />
 <br />
 Nom d'usuari: {$username}<br />
-Contrasenya nova: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Aquest missatge de correu electrònic s'envia a un usuari registrat per a notificar-li que la seva contrasenya s'ha reinicialitzat amb èxit després d'haver seguit el procés descrit al missatge de correu electrònic PASSWORD_RESET_CONFIRM.</description>

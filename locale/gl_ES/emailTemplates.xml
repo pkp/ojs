@@ -29,7 +29,6 @@ Mudar o meu contrasinal: {$url}<br />
 		<body><![CDATA[O teu contrasinal en {$siteTitle} cambiouse sen problema. Desde xa,garda en lugar seguro o teu nome de usuaria/o e contrasinal, xa que  son necesarios para traballar na revista.<br />
 <br />
 Nombe de usuaria/o: {$username}<br />
-Novo contrasinal: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Este correo envíase a un/a usuario/a rexistrado/a unha vez que mudou o seu contrasinal seguindo o procedimento descrito no correo electrónico PASSWORD_RESET_CONFIRM.</description>

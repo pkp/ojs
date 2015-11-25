@@ -29,7 +29,6 @@ Forny passordet: {$url}<br />
 		<body><![CDATA[Passordet ditt til nettstedet for {$siteTitle} er nå fornyet. Ta godt vare på brukernavnet og passordet, som du vil trenge for de oppgavene du skal utføre på nettstedet.<br />
 <br />
 Ditt brukernavn: {$username}<br />
-Ditt nye passord: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Denne e-posten sendes til en bruker som har fullført fornying av passordet sitt som beskrevet i PASSWORD_RESET_CONFIRM e-posten.</description>

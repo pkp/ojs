@@ -27,7 +27,7 @@ Nulstil min adgangskode: {$url}<br />
 		<subject>Nulstil adgangskode</subject>
 		<body><![CDATA[Din adgangskode er blevet nulstillet og kan benyttes på webstedet {$siteTitle}. Opbevar brugernavnet og adgangskoden, da de er nødvendige for alt arbejde i forbindelse med tidsskriftet.<br />
 <br />
-Dit brugernavn: {$username} Din nye adgangskode: {$password}<br />
+Dit brugernavn: {$username}<br/>
 <br />
 {$principalContactSignature}]]></body>
 		<description>Denne e-mail sendes til registrerede brugere, når de har nulstillet deres adgangskode, efter at de har fulgt den proces, der er beskrevet i e-mailen PASSWORD_RESET_CONFIRM.</description>

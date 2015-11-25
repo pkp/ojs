@@ -31,7 +31,6 @@ Reset password: {$url}<br />
 Qui sotto trovi il tuo username e la nuova password.<br />
 <br />
 La tua username: {$username}<br />
-La tua nuova password: {$password}<br />
 <br />
 {$principalContactSignature}]]&gt;]]></body>
 		<description>Questa email viene mandata ad un utente registrato quando ha resettato la password seguendo il processo descritto nella email PASSWORD_RESETTA_CONFERMA.</description>

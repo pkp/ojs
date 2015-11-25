@@ -29,7 +29,6 @@ Herstel mijn wachtwoord: {$url}<br />
 		<body><![CDATA[Uw wachtwoord is met succes hersteld voor de website {$siteTitle}. Bewaar de gebruikersnaam en wachtwoord, ze zijn nodig om het tijdschrift te kunnen gebruiken.<br />
 <br />
 Uw gebruikersnaam: {$username}<br />
-Uw nieuwe wachtwoord: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Deze e-mail wordt verstuurd naar een geregistreerde gebruiker als ze met succes hun wachtwoord hebben veranderd volgens de procedure die is beschreven in de PASSWORD_RESET_CONFIRM e-mail.</description>

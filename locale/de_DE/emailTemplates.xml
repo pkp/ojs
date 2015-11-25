@@ -64,7 +64,6 @@ Mein Passwort neu setzen: {$url}<br />
 		<body><![CDATA[Ihr Benutzer/innen-Passwort für die Webseite {$siteTitle} wurde neu gesetzt. Bitte notieren Sie Benutzer/innennamen und Passwort, beides wird für alle Arbeiten mit dieser Zeitschrift gebraucht.<br />
 <br />
 Ihr Benutzer/innenname: {$username}<br />
-Ihr neues Passwort: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Diese E-Mail wird an registrierte Benutzer/innen gesendet, nachdem sie ihr Passwort erfolgreich nach dem in der PASSWORD_RESET_CONFIRM-E-Mail beschriebenen Verfahren zurückgesetzt haben.</description>

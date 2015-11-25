@@ -68,7 +68,6 @@ Resetează parola: {$url}<br />
 		<body><![CDATA[Parola dumneavoastră a fost resetată pentru a fi utilizată pe siteul {$siteTitle}. Rețineți numele de utilizator și parola, fiind necesare pentru lucrul cu revista.<br />
 <br />
 Numele de utilizator: {$username}<br />
-Noua parolă: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Acest email este trimis unui utilizator înregistrat la momentul resetării cu succes a parolei urmând procedura descrisă în emailul  PASSWORD_RESET_CONFIRM.</description>

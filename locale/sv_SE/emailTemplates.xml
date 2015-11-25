@@ -29,7 +29,6 @@ Om du inte har gjort det här önskemålet, vänligen bortse från mailet, ditt 
 		<body><![CDATA[Ditt lösenord för {$siteTitle} har ändrats. Vänligen spara inloggningsuppgifterna eftersom dessa är nödvändiga för allt arbete med tidskriften.<br />
 <br />
 Ditt användarnamn: {$username}<br />
-Ditt nya lösenord: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Det här meddelandet skickas till registrerade användare som bekräftelse på ändrat lösenord (enligt beskrivning i PASSWORD_RESET_CONFIRM -mailet).</description>

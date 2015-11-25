@@ -76,7 +76,6 @@ Reset my password: {$url}<br />
 		<body><![CDATA[Your password has been successfully reset for use with the {$siteTitle} web site. Please retain this username and password, as it is necessary for all work with the journal.<br />
 <br />
 Your username: {$username}<br />
-Your new password: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>This email is sent to a registered user when they have successfully reset their password following the process described in the PASSWORD_RESET_CONFIRM email.</description>

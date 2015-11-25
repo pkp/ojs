@@ -29,7 +29,6 @@
 		<body><![CDATA[رمزعبور شما برای استفاده از وب سایت {$contextName}، دوباره تنظیم شد. لطفا این کلمه کاربری و رمز عبور را محفوظ نگاه دارید، زیرا برای کارکردن با وب سایت مجله لازم است.<br />
 <br />
 نام کاربری شما: {$username}<br />
-رمز عبور جدید شما: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>This email is sent to a registered user when they have successfully reset their password following the process described in the PASSWORD_RESET_CONFIRM email.</description>

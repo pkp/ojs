@@ -29,7 +29,6 @@ Berrezarri nire pasahitza: {$url}<br />
 		<body><![CDATA[{$siteTitle} webgunean sartzeko pasahitza ongi berrezarri da. Ondo gorde erabiltzaile-izen eta pasahitz hauek, aldizkarian sartzeko beharko baitituzu.<br />
 <br />
 Zure erabiltzaile-izena: {$username}<br />
-Zure pasahitz berria: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Mezu hau bidaltzen zaie PASSWORD_RESET_CONFIRM mezuan azaldutako prozesuaren bidez pasahitza ondo berrezartzea lortu duten erabiltzaile erregistratuei.</description>

@@ -29,7 +29,6 @@ Thay đổi mật khẩu của tôi: {$url}<br />
 		<body><![CDATA[Mật khẩu của quý vị đã được thay đổi để sử dụng với web site {$siteTitle}. Vui lòng giữ lại bí danh và mật khẩu này bởi vì nó cần để đăng nhập vào tạp chí.<br />
 <br />
 Bí danh: {$username}<br />
-Mật khẩu: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Email này được gửi tới bạn đọc khi họ đã đổi thành công mật khẩu của mình trong email PASSWORD_RESET_CONFIRM.</description>

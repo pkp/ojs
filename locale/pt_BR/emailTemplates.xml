@@ -30,7 +30,6 @@ Atualizar senha: {$url}<br />
 		<body><![CDATA[Sua senha de acesso ao site {$siteTitle} foi atualizada com sucesso. Guarde o login e a senha, uma vez que serão necessários para todas as atividades relacionadas ao sistema.<br />
 <br />
 Seu login: {$username}<br />
-Sua nova senha: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Mensagem enviada a usuário cadastrado quando o mesmo informa que esqueceu sua senha ou encontra problemas para acessar o sistema. O link contido permite ao usuário atualizar a senha de acesso.</description>

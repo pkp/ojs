@@ -30,7 +30,6 @@ Eğer şifrenizi değiştirmek istiyorsanız aşağıdaki bağlantıyı tıklay�
 		<body><![CDATA[{$siteTitle} sitesinde kullanacağınız şifreniz değiştirilmiştir. Kullanıcı adı ve şifre dergi ile yapacağınız tüm çalışmalarda gerekli olduğundan güvenli bir yere not ediniz. <br />
 <br />
 Kullanıcı adı: {$username}<br />
-Yeni şifreniz: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Bu e-posta PASSWORD_RESET_CONFIRM mesajında aktarılan süreç doğrultusunda şifre değişikliği yapmış kayıtlı kullanıcılara gönderilmektedir.</description>

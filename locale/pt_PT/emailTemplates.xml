@@ -35,7 +35,6 @@ Actualizar senha: {$url}<br />
 A sua senha de acesso ao site {$siteTitle} foi actualizada com sucesso. Guarde o login (nome de utilizador) e a senha, uma vez que serão necessários para todas as actividades relacionadas com este portal.<br />
 <br />
 O seu nome de utilizador: {$username}<br />
-A sua nova senha: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Mensagem enviada a utilizador registado quando o mesmo informa que esqueceu a sua senha ou encontra problemas para aceder ao sistema. O link contido permite ao utilizador actualizar a senha de acesso.</description>

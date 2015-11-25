@@ -27,7 +27,6 @@ Resetovat moje heslo: {$url}<br />
 		<body><![CDATA[Vaše heslo pro stránku {$siteTitle} bylo úspěšně resetováno. Zapamatujte si prosím toto uživatelské jméno a heslo, protože je budete potřebovat pro veškerou práci s tímto časopisem.<br />
 <br />
 Vaše uživatelské jméno: {$username}<br />
-Vaše nové heslo: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Tento email je zaslán registrovanému uživateli, když úspěšně resetuje své heslo postupem uvedeným v PASSWORD_RESET_CONFIRM emailu.</description>

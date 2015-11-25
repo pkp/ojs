@@ -66,7 +66,6 @@
 		<body><![CDATA[您的密码已经成功重新设定以使用{$siteTitle}网站。请保管好这份用户名称和密码，它对于使用本站的所有功能来说是非常必要的。<br />
 <br />
 您的用户名称：{$username}<br />
-您的新密码：{$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>当注册用户成功依照PASSWORD_RESET_CONFIRM电子邮件的指示重新设定他们的密码时，这封电子邮件会被寄给他们。</description>

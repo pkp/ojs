@@ -29,7 +29,6 @@ Cambiar mi contraseña: {$url}<br />
 		<body><![CDATA[Su contraseña en {$siteTitle} se ha cambiado sin problema. Por favor, guarde en lugar seguro su nombre de usuaria/o y contraseña, ya que son necesarios para trabajar con la revista.<br />
 <br />
 Nombre de usuaria/o: {$username}<br />
-Nueva contraseña: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Este correo se envía a un/a usuario/a registrado/a una vez han cambiado su contraseña siguiendo el procedimiento descrito en el correo-e PASSWORD_RESET_CONFIRM.</description>

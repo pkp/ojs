@@ -29,7 +29,6 @@ Promjena lozinke: {$url}<br />
 		<body><![CDATA[Vaša lozinka za mrežnu stranicu {$siteTitle} je uspješno promijenjena. Molimo vas da pohranite vaše korisničko ime i lozinku jer su oni nužni za sve aktivnosti vezane uz časopis.<br />
 <br />
 Vaše korisničko ime: {$username}<br />
-Vaša nova lozinka: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Ovaj obrazac e-pošte šalje se registriranim korisnicima nakon što  uspješno ponovno postave  svoju  lozinku slijedeći postupak koji je opisan u PASSWORD_RESET_CONFIRM.</description>
