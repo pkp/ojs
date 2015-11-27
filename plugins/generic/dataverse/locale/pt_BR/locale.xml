@@ -74,13 +74,13 @@ Os dados são produtos importantes do empreendimento científico, e eles devem s
      </li>
      <li>
        <p>Orientações sobre partilha de conjuntos de dados que derivam do trabalho envolvendo participantes humanos:</p>
-       <P> {$jornal} reconhece que há casos em que, por razões de privacidade, segurança nacional e de sigilo comercial, os dados completos não podem ser disponibilizados abertamente. Em tais casos, os pesquisadores devem partilhar a sua análise de dados em termos menos restritivas, de forma consistente com os requisitos legais, e cumprindo a ética em pesquisa e as diretrizes de sua comunidade. Isto deve incluir a abertura de dados não sensíveis, os dados de resumo, metadados e código; e facilitar o acesso se o proprietário dos dados originais concede permissão para outros pesquisadores a utilizar os dados. (Adaptado de de OKF <a href="http://openeconomics.net/principles/#sthash.MdxVXZlC.dpuf"> Open Economics Priciples </a>) </p>
+       <P> {$jornal} reconhece que há casos em que, por razões de privacidade, segurança nacional e de sigilo comercial, os dados completos não podem ser disponibilizados abertamente. Em tais casos, os pesquisadores devem partilhar a sua análise de dados em termos menos restritivas, de forma consistente com os requisitos legais, e cumprindo a ética em pesquisa e as diretrizes de sua comunidade. Isto deve incluir a abertura de dados não sensíveis, os dados de resumo, metadados e código; e facilitar o acesso se o proprietário dos dados originais concede permissão para outros pesquisadores a utilizar os dados. (Adaptado de de OKF <a href="http://openeconomics.net/principles/#sthash.MdxVXZlC.dpuf"> Open Economics Principles </a>) </p>
      </li>
      <li>
        <p> Orientação sobre citação de dados:</p>
        <p> Se os dados de pesquisa são depositado ao mesmo tempo que o seu manuscrito utilizando o formulário de submissão de artigos deste sistema, em seguida, a informação para citação dos dados será automaticamente gerada pela Harvard Dataverse. No entanto, se os dados da investigação já estão em um repositório, este é o formato de dados de citação sugerido a ser utilizado quando você enviar seu manuscrito: </p>
        <p> Autor (es), Ano, Título do Conjunto de Dados, identificador persistente Global, Repositório de Dados ou Archive, versão e subconjunto. </p>
-       <P> Para mais informações sobre citação de dados e melhores práticas reveja <a href="http://www.force11.org/datacitation"> Force11's Data Citation Priciples </a>. </p>
+       <P> Para mais informações sobre citação de dados e melhores práticas reveja <a href="http://www.force11.org/datacitation"> Force11's Data Citation Principles </a>. </p>
      </li>
    </ol>]]></message>
 	<message key="plugins.generic.dataverse.settings.default.checklist.extras">Exemplos da lista de verificação para preparação da submissão</message>

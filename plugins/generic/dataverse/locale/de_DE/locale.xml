@@ -78,13 +78,13 @@
      </li>
      <li>
        <p>Anleitung zum Teilen von Datensätzen aus der Forschung an Menschen</p>
-       <p>{$journal} erkennt an, dass es Fälle gibt, wo aus Gründen der Privatsphäre, nationaler Sicherheit oder bei Geschäftsgeheimnissen nicht die kompletten Daten frei zugänglich gemacht werden können. In solchen Fällen sollten Forscher/innen ihre Datenauswertung unter den am wenigsten restriktiven Bedingungen teilen, die mit den rechtlichen Anforderungen vereinbar und mit der Forschungsethik und den Leitlinien ihrer Communitiy im Einklang sind. Dazu sollte gehören, nicht-sensible Daten, zusammenfassende Daten, Metadaten und Code zugänglich zu machen sowie den Zugang zu erleichtern, wenn der/die Besitzer/in der Originaldaten anderen Forscher/innen die Erlaubnis zur Datennutzung gibt. (Adaption der <a href="http://openeconomics.net/principles/">Open Economics Priciples</a> der OKF)</p>
+       <p>{$journal} erkennt an, dass es Fälle gibt, wo aus Gründen der Privatsphäre, nationaler Sicherheit oder bei Geschäftsgeheimnissen nicht die kompletten Daten frei zugänglich gemacht werden können. In solchen Fällen sollten Forscher/innen ihre Datenauswertung unter den am wenigsten restriktiven Bedingungen teilen, die mit den rechtlichen Anforderungen vereinbar und mit der Forschungsethik und den Leitlinien ihrer Communitiy im Einklang sind. Dazu sollte gehören, nicht-sensible Daten, zusammenfassende Daten, Metadaten und Code zugänglich zu machen sowie den Zugang zu erleichtern, wenn der/die Besitzer/in der Originaldaten anderen Forscher/innen die Erlaubnis zur Datennutzung gibt. (Adaption der <a href="http://openeconomics.net/principles/">Open Economics Principles</a> der OKF)</p>
      </li>
      <li>
        <p>Anleitung zur Datenzitation</p>
        <p>Wenn Sie Ihre Forschungsdaten zur gleichen Zeit archivieren, zu der Sie Ihr Manuskript über das Einreichungsformular von OJS einreichen, wird das Harvard Dataverse automatisch eine Datenzitation generieren. Wenn Ihre Forschungsdaten jedoch in einem Repository vorhanden sind, benutzen Sie bitte das hier vorgeschlagene Datenzitationsformat, wenn Sie Ihr Manuskript einreichen:</p>
        <p>Autor/in(nen), Jahr, Titel des Datensatzes, globale dauerhafte Kennung (Identifier), Datenrepository oder -archiv, Version und Teilmenge.</p>
-       <p>Mehr Informationen zur Datenzitation finden Sie in den <a href="http://www.force11.org/datacitation">Force11’s Data Citation Priciples</a>.</p>   
+       <p>Mehr Informationen zur Datenzitation finden Sie in den <a href="http://www.force11.org/datacitation">Force11’s Data Citation Principles</a>.</p>   
      </li>
    </ol>]]>
 	</message>
