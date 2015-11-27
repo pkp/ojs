@@ -329,6 +329,12 @@ class PLNPlugin extends GenericPlugin {
 				$this->import('classes.form.PLNSettingsForm');
 				$form = new PLNSettingsForm($this, $journal->getId());
 				
+				$application =& PKPApplication::getApplication();
+				$products =& $application->getEnabledProducts('plugins.generic');
+				if( ! isset($products['acron']) && ! Config::getVar('scheduled_tasks', false)) {
+					$templateMgr->assign('acronRequired', __('plugins.generic.pln.settings.acron_required'));
+				}
+				
 				if (Request::getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {

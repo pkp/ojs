@@ -16,8 +16,10 @@
 <div id="plnSettings">
 	<form class="pkp_form" id="plnSettingsForm" method="post" action="{plugin_url path="settings"}">
 		{include file="common/formErrors.tpl"}
+		{if isset($acronRequired)}
+		<p><span class="pkp_form_error">{$acronRequired}</span>
+		{/if}
 		<table class="data">
-
 			<tr>
 				<td class="label">
 					{fieldLabel name="terms_of_use" key="plugins.generic.pln.settings.terms_of_use"}
