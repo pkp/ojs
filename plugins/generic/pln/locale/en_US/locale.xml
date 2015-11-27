@@ -18,6 +18,7 @@
 	
 	<message key="plugins.generic.pln.settings_page">PKP PLN Plugin - Settings</message>
 	<message key="plugins.generic.pln.settings">Settings</message>
+	<message key="plugins.generic.pln.settings.acron_required">The PLN plugin requires either the Acron plugin or a periodic scheduling tools such as 'cron.'</message>
 	<message key="plugins.generic.pln.settings.saved">PKP PLN settings saved.</message>
 	<message key="plugins.generic.pln.settings.terms_of_use">Terms of Use</message>
 	<message key="plugins.generic.pln.settings.terms_of_use_help">As Primary Contact, I, in good faith, accept and confirm the following terms and conditions for participation in the Public Knowledge Project’s Private LOCKSS Network (PKP-PLN):</message>
