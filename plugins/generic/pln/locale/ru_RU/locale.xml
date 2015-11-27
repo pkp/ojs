@@ -19,6 +19,7 @@
 	
 	<message key="plugins.generic.pln.settings_page">Плагин «PKP PLN» — Настройки</message>
 	<message key="plugins.generic.pln.settings">Настройки</message>
+	<message key="plugins.generic.pln.settings.acron_required">Плагин PLN требуется либо плагин Acron, либо инструменты периодического запуска по расписанию, например, «cron».</message>
 	<message key="plugins.generic.pln.settings.saved">Настройки PKP PLN сохранены.</message>
 	<message key="plugins.generic.pln.settings.terms_of_use">Условия использования</message>
 	<message key="plugins.generic.pln.settings.terms_of_use_help">Как основное контактное лицо, я добросовестно принимаю и соглашаюсь со следующими условиями участия в частной сети LOCKSS, созданной Public Knowledge Project (PKP-PLN):</message>
