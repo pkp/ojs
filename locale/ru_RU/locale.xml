@@ -750,6 +750,7 @@
 	<message key="user.register.reviewerDescriptionNoInterests">Согласен участвовать в рецензировании рукописей, направляемых в этот журнал.</message>
 	<message key="user.register.reviewerDescription">Согласен участвовать в рецензировании рукописей, направляемых в журналы этого сайта.</message>
 	<message key="user.register.reviewerInterests">Укажите ваши интересы как рецензента (основные области и методы исследования):</message>
+	<message key="user.register.implicitAuth">Вход через Shibboleth с помощью существующего аккаунта в системе организации</message>
 
 	<!-- Подписки -->
 	<message key="user.subscriptions.mySubscriptions">Мои подписки</message>
