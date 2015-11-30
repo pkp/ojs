@@ -11,7 +11,8 @@
  * @ingroup tools
  *
  * @brief CLI tool to convert a .PO file for ISO3166 into the countries.xml format
- * supported by the PKP suite.
+ * supported by the PKP suite. These .po files can be sourced from e.g.:
+ * https://packages.debian.org/source/sid/iso-codes
  */
 
 require(dirname(__FILE__) . '/bootstrap.inc.php');
@@ -86,29 +87,22 @@ class poToCountries extends CommandLineTool {
 		}
 
 		// Use the map to convert the country list to the new locale
-		$ofn = 'registry/locale/' . $this->locale . '/countries.xml';
+		$ofn = 'lib/pkp/locale/' . $this->locale . '/countries.xml';
 		$oh = fopen($ofn, 'w');
 		if (!$oh) die ("Unable to $ofn for writing.\n");
 
 		fwrite($oh, '<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE countries SYSTEM "../../dtd/countries.dtd">
 
 <!--
-  * countries.xml
+  * ' . $ofn . '
   *
   * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2000-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized list of countries.
   -->
-
-<!DOCTYPE countries [
-	<!ELEMENT countries (country+)>
-	<!ELEMENT country EMPTY>
-		<!ATTLIST country
-			code CDATA #REQUIRED
-			name CDATA #REQUIRED>
-]>
 
 <countries>
 ');
