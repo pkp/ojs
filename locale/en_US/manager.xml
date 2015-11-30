@@ -121,12 +121,12 @@
 	<message key="manager.setup.sponsors.description">The name of the organizations (e.g., scholarly associations, university departments, cooperatives, etc.) sponsoring the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
 	<message key="manager.setup.homepageContent">Journal Homepage Content</message>
 	<message key="manager.setup.homepageContentDescription">The journal homepage consists of navigation links by default. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown.</message>
-	<message key="manager.setup.pageHeaderDescription">A graphic version of the journal title and logo (.gif, .jpg, or .png file), possibly a smaller version of the one used on the homepage, can be uploaded to appear as a header on journal pages, which will replace the text version that otherwise appears.</message>
+	<message key="manager.setup.pageHeaderDescription">Most themes will display the journal's name in the header if no logo has been uploaded.</message>
 	<message key="manager.setup.logo">Journal Logo</message>
 	<message key="manager.setup.logo.altText">Journal Logo</message>
-	<message key="manager.setup.useImageLogoDescription">An optional journal logo may be uploaded and used in conjunction with the image or text title configured above.</message>
+	<message key="manager.setup.useImageLogoDescription">Upload a logo for the journal. To comply with WCAG standards, be sure to enter Alternative Text that describes the image (usually the name of the journal) when requested during upload.</message>
 	<message key="manager.setup.pageFooter">Journal Page Footer</message>
-	<message key="manager.setup.pageFooterDescription">This is the footer of your journal. To change or update the footer, paste the HTML code in the textbox below. Examples could be another navigation bar, a counter, etc. This footer will appear on every page.</message>
+	<message key="manager.setup.pageFooterDescription">Enter any images, text or HTML code that you'd like to appear at the bottom of your journal's website.</message>
 	<message key="manager.setup.layout">Journal Layout</message>
 	<message key="manager.setup.useStyleSheet">Journal style sheet</message>
 	<message key="manager.setup.contextName">Journal Name</message>
@@ -138,7 +138,7 @@
 	<message key="manager.setup.addItem">Add Item</message>
 	<message key="manager.setup.addItemtoAboutJournal">Add Item to Appear in "About the Journal"</message>
 	<message key="manager.setup.additionalContent">Additional Content</message>
-	<message key="manager.setup.additionalContentDescription">Add the following content, using text/HTML, which will appear below the homepage image, if one is uploaded.</message>
+	<message key="manager.setup.additionalContentDescription">Add any additional content you'd like to appear on the homepage.</message>
 	<message key="manager.setup.addNavItem">Add Item</message>
 	<message key="manager.setup.addReviewerDatabaseLink">Add New Database Link</message>
 	<message key="manager.setup.addSponsor">Add Sponsoring Organization</message>
@@ -226,7 +226,7 @@
 	<message key="manager.setup.guidelines">Guidelines</message>
 	<message key="manager.setup.guidingSubmissions">Step 3. Guiding Submissions</message>
 	<message key="manager.setup.homepageImage">Homepage image</message>
-	<message key="manager.setup.homepageImageDescription">Add an image or graphic file to the middle of the page.</message>
+	<message key="manager.setup.homepageImageDescription">Upload an image to display prominently on the homepage.</message>
 	<message key="manager.setup.includeCreativeCommons">For journals that offer immediate or delayed open access, include a Creative Commons license with all published work at the appropriate time.</message>
 	<message key="manager.setup.information">Information</message>
 	<message key="manager.setup.information.description">Brief descriptions of the journal for librarians and prospective authors and readers are available in the "Information" section of the sidebar.</message>
@@ -266,7 +266,7 @@
 	<message key="manager.setup.journalStyleSheetInvalid">Invalid journal stylesheet format. Accepted format is .css.</message>
 	<message key="manager.setup.journalTheme">Journal Theme</message>
 	<message key="manager.setup.journalThumbnail">Journal thumbnail</message>
-	<message key="manager.setup.journalThumbnail.description">A small logo or representation of the journal that can optionally be used e.g. in lists of journals.</message>
+	<message key="manager.setup.journalThumbnail.description">A small logo or representation of the journal that can be used in lists of journals.</message>
 	<message key="manager.setup.journalThumbnail.altText">Alternate text for thumbnail</message>
 	<message key="manager.setup.journalTitle">Journal title</message>
 	<message key="manager.setup.labelName">Label name</message>
@@ -277,7 +277,7 @@
 	<message key="manager.setup.layoutTemplates.file">Template File</message>
 	<message key="manager.setup.layoutTemplates.title">Title</message>
 	<message key="manager.setup.lists">Lists</message>
-	<message key="manager.setup.listsDescription">Enter the maximum number of items (for example, submissions, users, or editing assignments) that appear on each page of a list, and the number of pages links to display on each page.</message>
+	<message key="manager.setup.listsDescription">Limit the number of items (for example, submissions, users, or editing assignments) to show in a list before showing subsequent items in another page. Also, limit the number of links to display to subsequent pages of the list.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page.]]></message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[A LOCKSS license will appear in About the Journal under Archiving: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">LOCKSS License Description</message>

@@ -8,26 +8,48 @@
  * Website appearance management form.
  *
  *}
+{include file="core:controllers/tab/settings/appearance/form/setup.tpl"}
+<form id="appearanceForm" class="pkp_form" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.WebsiteSettingsTabHandler" op="saveFormData" tab="appearance"}">
+	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="appearanceFormNotification"}
+	{include file="controllers/tab/settings/wizardMode.tpl" wizardMode=$wizardMode}
 
-{* In wizard mode, these fields should be hidden *}
-{if $wizardMode}
-	{assign var="wizard_class" value="is_wizard_mode"}
-{else}
-	{assign var="wizard_class" value=""}
-{/if}
+	{* Header *}
+	{include file="core:controllers/tab/settings/appearance/form/header.tpl"}
 
-{capture assign="additionalHomepageContent"}
+	{* Footer *}
+	{include file="core:controllers/tab/settings/appearance/form/footer.tpl"}
+
+	{* Theme and stylesheet *}
+	{include file="core:controllers/tab/settings/appearance/form/theme.tpl"}
+	{include file="core:controllers/tab/settings/appearance/form/stylesheet.tpl"}
+
+	{* Sidebar *}
+	{include file="core:controllers/tab/settings/appearance/form/sidebar.tpl"}
+
+	{* Homepage Image *}
+	{include file="core:controllers/tab/settings/appearance/form/homepageImage.tpl"}
+
+	{* Additional Homepage Content *}
+	{include file="core:controllers/tab/settings/appearance/form/additionalHomepageContent.tpl"}
+
+	{* List Display Options *}
+	{include file="core:controllers/tab/settings/appearance/form/lists.tpl"}
+
 	{* Journal thumbnail *}
 	{assign var="journal_thumbnail_field_id" value=$uploadImageLinkActions.journalThumbnail->getId()}
 	{fbvFormArea id="thumbnailArea" class="$wizard_class"}
 		{fbvFormSection for=$journal_thumbnail_field_id label="manager.setup.journalThumbnail" description="manager.setup.journalThumbnail.description"}
-			<div id="{$uploadImageLinkActions.journalThumbnail->getId()}" class="pkp_linkActions">
-				{include file="linkAction/linkAction.tpl" action=$uploadImageLinkActions.journalThumbnail contextId="appearanceForm"}
-			</div>
 			<div id="journalThumbnail">
 				{$imagesViews.journalThumbnail}
 			</div>
+			<div id="{$uploadImageLinkActions.journalThumbnail->getId()}" class="pkp_linkActions">
+				{include file="linkAction/linkAction.tpl" action=$uploadImageLinkActions.journalThumbnail contextId="appearanceForm"}
+			</div>
 		{/fbvFormSection}
 	{/fbvFormArea}
-{/capture}
-{include file="core:controllers/tab/settings/appearance/form/appearanceForm.tpl"}
+
+	{* Save button *}
+	{if !$wizardMode}
+		{fbvFormButtons id="appearanceFormSubmit" submitText="common.save" hideCancel=true}
+	{/if}
+</form>
