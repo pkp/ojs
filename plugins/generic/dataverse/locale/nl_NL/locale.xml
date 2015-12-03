@@ -78,13 +78,13 @@
      </li>
      <li>
        <p>Richtlijnen voor het delen van datasets die afgeleide zijn van onderzoek met menselijke deelnemers</p>
-       <p>{$journal} erkent dat er gevallen zijn waar privacy, nationale veiligheid of commerciële belangen verhinderen dat de volledige data openbaar gemaakt wordt. In die gevallen moeten de onderzoekers hun data analyse delen onder de minst beperkende voorwaarden die juridisch zijn toegestaan, conform de richtlijnen en ethiek van hun vakgebied. Dit houdt in dat niet-gevoelige gegevens, samenvattende data, metadata en code geopenbaard moeten worden. Er wordt ook medewerking verwacht als de eigenaar van de data andere onderzoekers toestemming geeft voor het gebruik van de data. (Afgeleid van OKF's <a href="http://openeconomics.net/principles/#sthash.MdxVXZlC.dpuf">Open Economics Priciples</a>)</p>
+       <p>{$journal} erkent dat er gevallen zijn waar privacy, nationale veiligheid of commerciële belangen verhinderen dat de volledige data openbaar gemaakt wordt. In die gevallen moeten de onderzoekers hun data analyse delen onder de minst beperkende voorwaarden die juridisch zijn toegestaan, conform de richtlijnen en ethiek van hun vakgebied. Dit houdt in dat niet-gevoelige gegevens, samenvattende data, metadata en code geopenbaard moeten worden. Er wordt ook medewerking verwacht als de eigenaar van de data andere onderzoekers toestemming geeft voor het gebruik van de data. (Afgeleid van OKF's <a href="http://openeconomics.net/principles/#sthash.MdxVXZlC.dpuf">Open Economics Principles</a>)</p>
      </li>
      <li>
        <p>Richtlijnen voor Data Citatie</p>
        <p>Als uw data wordt met uw manuscript wordt ingezonden via het inzendingsformulier van OJS, dan zal Harvard Dataverse automatisch een citatie genereren. Mocht uw data al in een repository gedeponeerd zijn, dan kunt u dit data citatie formaat gebruiken bij het inzenden van uw manuscript:</p>
        <p>Author(s), Year, Dataset Title, Global Persistent Identifier, Data Repository or Archive, version and subset.</p>
-       <p>Voor meer informatie over best practices voor data citatie, zie <a href="http://www.force11.org/datacitation">Force11's Data Citation Priciples</a>.</p>
+       <p>Voor meer informatie over best practices voor data citatie, zie <a href="http://www.force11.org/datacitation">Force11's Data Citation Principles</a>.</p>
      </li>
    </ol>]]></message>
 	<message key="plugins.generic.dataverse.settings.default.checklist.extras">Inzending voorbereiding checklist voorbeelden</message>
