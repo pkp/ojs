@@ -21,23 +21,31 @@ import('classes.handler.Handler');
 class OAIHandler extends Handler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function OAIHandler() {
 		parent::Handler();
 	}
 
+	/**
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function index($args, $request) {
 		$this->validate();
+
 		PluginRegistry::loadCategory('oaiMetadataFormats', true);
 
 		$oai = new JournalOAI(new OAIConfig($request->url(null, 'oai'), Config::getVar('oai', 'repository_id')));
-		if (!$request->getJournal() && Request::getRequestedJournalPath() != 'index') {
+		if (!$request->getJournal() && $request->getRequestedJournalPath() != 'index') {
 			$dispatcher = $request->getDispatcher();
 			return $dispatcher->handle404();
 		}
 		$oai->execute();
 	}
 
+	/**
+	 * Validate the request
+	 */
 	function validate() {
 		// Site validation checks not applicable
 		//parent::validate();
