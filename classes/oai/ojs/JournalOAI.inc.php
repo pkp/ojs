@@ -105,7 +105,7 @@ class JournalOAI extends OAI {
 	/**
 	 * @copydoc OAI::repositoryInfo()
 	 */
-	function &repositoryInfo() {
+	function repositoryInfo() {
 		$info = new OAIRepository();
 
 		if (isset($this->journal)) {
@@ -122,7 +122,7 @@ class JournalOAI extends OAI {
 
 		$info->toolkitTitle = 'Open Journal Systems';
 		$versionDao = DAORegistry::getDAO('VersionDAO');
-		$currentVersion =& $versionDao->getCurrentVersion();
+		$currentVersion = $versionDao->getCurrentVersion();
 		$info->toolkitVersion = $currentVersion->getVersionString();
 		$info->toolkitURL = 'http://pkp.sfu.ca/ojs/';
 
@@ -151,10 +151,10 @@ class JournalOAI extends OAI {
 	/**
 	 * @copydoc OAI::record()
 	 */
-	function &record($identifier) {
+	function record($identifier) {
 		$articleId = $this->identifierToArticleId($identifier);
 		if ($articleId) {
-			$record =& $this->dao->getRecord($articleId, array($this->journalId));
+			$record = $this->dao->getRecord($articleId, array($this->journalId));
 		}
 		if (!isset($record)) {
 			$record = false;
@@ -165,7 +165,7 @@ class JournalOAI extends OAI {
 	/**
 	 * @copydoc OAI::records()
 	 */
-	function &records($metadataPrefix, $from, $until, $set, $offset, $limit, &$total) {
+	function records($metadataPrefix, $from, $until, $set, $offset, $limit, &$total) {
 		$records = null;
 		if (!HookRegistry::call('JournalOAI::records', array($this, $from, $until, $set, $offset, $limit, $total, &$records))) {
 			$sectionId = null;
@@ -174,7 +174,7 @@ class JournalOAI extends OAI {
 			} else {
 				$journalId = $this->journalId;
 			}
-			$records =& $this->dao->getRecords(array($journalId, $sectionId), $from, $until, $set, $offset, $limit, $total);
+			$records = $this->dao->getRecords(array($journalId, $sectionId), $from, $until, $set, $offset, $limit, $total);
 		}
 		return $records;
 	}
@@ -182,7 +182,7 @@ class JournalOAI extends OAI {
 	/**
 	 * @copydoc OAI::identifiers()
 	 */
-	function &identifiers($metadataPrefix, $from, $until, $set, $offset, $limit, &$total) {
+	function identifiers($metadataPrefix, $from, $until, $set, $offset, $limit, &$total) {
 		$records = null;
 		if (!HookRegistry::call('JournalOAI::identifiers', array($this, $from, $until, $set, $offset, $limit, $total, &$records))) {
 			$sectionId = null;
@@ -191,7 +191,7 @@ class JournalOAI extends OAI {
 			} else {
 				$journalId = $this->journalId;
 			}
-			$records =& $this->dao->getIdentifiers(array($journalId, $sectionId), $from, $until, $set, $offset, $limit, $total);
+			$records = $this->dao->getIdentifiers(array($journalId, $sectionId), $from, $until, $set, $offset, $limit, $total);
 		}
 		return $records;
 	}
@@ -199,7 +199,7 @@ class JournalOAI extends OAI {
 	/**
 	 * @copydoc OAI::sets()
 	 */
-	function &sets($offset, $limit, &$total) {
+	function sets($offset, $limit, &$total) {
 		$sets = null;
 		if (!HookRegistry::call('JournalOAI::sets', array($this, $offset, $limit, $total, &$sets))) {
 			$sets = $this->dao->getJournalSets($this->journalId, $offset, $limit, $total);
@@ -210,7 +210,7 @@ class JournalOAI extends OAI {
 	/**
 	 * @copydoc OAI::resumptionToken()
 	 */
-	function &resumptionToken($tokenId) {
+	function resumptionToken($tokenId) {
 		$this->dao->clearTokens();
 		$token = $this->dao->getToken($tokenId);
 		if (!isset($token)) {
@@ -222,7 +222,7 @@ class JournalOAI extends OAI {
 	/**
 	 * @copydoc OAI::saveResumptionToken()
 	 */
-	function &saveResumptionToken($offset, $params) {
+	function saveResumptionToken($offset, $params) {
 		$token = new OAIResumptionToken(null, $offset, $params, time() + $this->config->tokenLifetime);
 		$this->dao->insertToken($token);
 		return $token;
