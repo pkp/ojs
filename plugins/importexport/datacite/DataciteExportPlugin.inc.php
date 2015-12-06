@@ -119,7 +119,7 @@ class DataciteExportPlugin extends DOIExportPlugin {
 		$object =& $objects[0];
 
 		// Get the DOI and the URL for the object.
-		$doi = $object->getPubId('doi');
+		$doi = $object->getStoredPubId('doi');
 		assert(!empty($doi));
 		if ($this->isTestMode($request)) {
 			$doi = PKPString::regexp_replace('#^[^/]+/#', DATACITE_API_TESTPREFIX . '/', $doi);

@@ -32,7 +32,7 @@
 %U {$articleUrl}
 %J {$currentJournal->getLocalizedName()|escape}
 %0 Journal Article
-{if $article->getPubId('doi')}%R {$article->getPubId('doi')|escape}
+{if $article->getStoredPubId('doi')}%R {$article->getStoredPubId('doi')|escape}
 {/if}
 {if $article->getPages()}
 {if $article->getStartingPage()}%& {$article->getStartingPage()|escape}{/if}

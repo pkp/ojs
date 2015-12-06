@@ -109,8 +109,8 @@
 				{/if}
 			{/if}
 
-			{if $article->getPubId('doi')}
-				<prism:doi>{$article->getPubId('doi')|escape}</prism:doi>
+			{if $article->getStoredPubId('doi')}
+				<prism:doi>{$article->getStoredPubId('doi')|escape}</prism:doi>
 			{/if}
 		</item>
 	{/foreach}{* articles *}

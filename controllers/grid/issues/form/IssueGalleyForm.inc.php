@@ -102,7 +102,7 @@ class IssueGalleyForm extends Form {
 		if ($this->_issueGalley) {
 			$this->_data = array(
 				'label' => $this->_issueGalley->getLabel(),
-				'publicGalleyId' => $this->_issueGalley->getPubId('publisher-id'),
+				'publicGalleyId' => $this->_issueGalley->getStoredPubId('publisher-id'),
 				'galleyLocale' => $this->_issueGalley->getLocale()
 			);
 		} else {

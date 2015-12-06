@@ -101,6 +101,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 			$templateMgr->assign('publicationPayment', $completedPaymentDao->getPublicationCompletedPayment($context->getId(), $this->getSubission()->getId()));
 		}
 
+		$templateMgr->assign('submission', $this->getSubmission());
+
 		return parent::fetch($request);
 	}
 

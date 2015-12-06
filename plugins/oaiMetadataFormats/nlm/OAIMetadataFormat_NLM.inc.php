@@ -88,7 +88,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 			"\t\t</journal-meta>\n" .
 			"\t\t<article-meta>\n" .
 			"\t\t\t<article-id pub-id-type=\"other\">" . htmlspecialchars(Core::cleanVar($article->getBestArticleId())) . "</article-id>\n" .
-			(($s = $article->getPubId('doi'))?"\t\t\t<article-id pub-id-type=\"doi\">" . htmlspecialchars(Core::cleanVar($s)) . "</article-id>\n":'') .
+			(($s = $article->getStoredPubId('doi'))?"\t\t\t<article-id pub-id-type=\"doi\">" . htmlspecialchars(Core::cleanVar($s)) . "</article-id>\n":'') .
 			"\t\t\t<article-categories><subj-group subj-group-type=\"heading\"><subject>" . htmlspecialchars(Core::cleanVar($section->getLocalizedTitle())) . "</subject></subj-group></article-categories>\n" .
 			"\t\t\t<title-group>\n" .
 			"\t\t\t\t<article-title>" . htmlspecialchars(Core::cleanVar(strip_tags($article->getLocalizedTitle()))) . "</article-title>\n";

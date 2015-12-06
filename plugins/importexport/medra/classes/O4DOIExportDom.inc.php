@@ -1134,7 +1134,7 @@ class O4DOIExportDom extends DOIExportDom {
 	 * @return string
 	 */
 	function _getDoi(&$object) {
-		$doi = $object->getPubId('doi');
+		$doi = $object->getStoredPubId('doi');
 		if (!empty($doi) && $this->getTestMode()) {
 			$doi = PKPString::regexp_replace('#^[^/]+/#', MEDRA_WS_TESTPREFIX . '/', $doi);
 		}
