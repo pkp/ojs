@@ -769,7 +769,7 @@ abstract class DOIExportPlugin extends ImportExportPlugin {
 	 * @parem $testPrefix string
 	 */
 	function markRegistered($request, $object, $testPrefix) {
-		$registeredDoi = $object->getPubId('doi');
+		$registeredDoi = $object->getStoredPubId('doi');
 		assert(!empty($registeredDoi));
 		if ($this->isTestMode($request)) {
 			$registeredDoi = PKPString::regexp_replace('#^[^/]+/#', $testPrefix . '/', $registeredDoi);
@@ -962,7 +962,7 @@ abstract class DOIExportPlugin extends ImportExportPlugin {
 		// Filter only issues that have a DOI assigned.
 		$issues = array();
 		while ($issue = $issueIterator->next()) {
-			if ($issue->getPubId('doi')) {
+			if ($issue->getStoredPubId('doi')) {
 				$issues[] = $issue;
 			}
 		}
@@ -991,7 +991,7 @@ abstract class DOIExportPlugin extends ImportExportPlugin {
 		// Filter only articles that have a DOI assigned.
 		$articles = array();
 		foreach($allArticles as $article) {
-			if ($article->getPubId('doi')) {
+			if ($article->getStoredPubId('doi')) {
 				$articles[] = $article;
 			}
 			unset($article);
@@ -1045,7 +1045,7 @@ abstract class DOIExportPlugin extends ImportExportPlugin {
 
 			// Filter only galleys that have a DOI assigned.
 			while ($galley = $galleys->next()) {
-				if ($galley->getPubId('doi')) {
+				if ($galley->getStoredPubId('doi')) {
 					$galleys[] = $galley;
 				}
 			}
@@ -1386,7 +1386,7 @@ abstract class DOIExportPlugin extends ImportExportPlugin {
 				// Only export objects that have a DOI assigned.
 				// NB: This may generate DOIs for the selected
 				// objects on the fly.
-				if (!is_null($foundObject->getPubId('doi'))) $objects[] =& $foundObject;
+				if (!is_null($foundObject->getStoredPubId('doi'))) $objects[] =& $foundObject;
 				unset($foundObject);
 			}
 			unset($foundObjects);

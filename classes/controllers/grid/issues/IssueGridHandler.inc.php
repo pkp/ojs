@@ -37,6 +37,7 @@ class IssueGridHandler extends GridHandler {
 				'issueToc',
 				'issueGalleys',
 				'deleteIssue', 'publishIssue', 'unpublishIssue',
+				'identifiers', 'updateIdentifiers', 'clearPubId', 'clearIssueObjectsPubIds',
 			)
 		);
 	}
@@ -68,6 +69,8 @@ class IssueGridHandler extends GridHandler {
 		parent::initialize($request, $args);
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
+		// Load submission-specific translations
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION);
 
 		// Grid columns.
 		import('controllers.grid.issues.IssueGridCellProvider');
@@ -280,6 +283,67 @@ class IssueGridHandler extends GridHandler {
 	}
 
 	/**
+	 * An action to edit issue pub ids
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function identifiers($args, $request) {
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
+		$form = new PublicIdentifiersForm($issue);
+		$form->initData($request);
+		return new JSONMessage(true, $form->fetch($request));
+	}
+
+	/**
+	 * Update issue pub ids
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function updateIdentifiers($args, $request) {
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
+		$form = new PublicIdentifiersForm($issue);
+		$form->readInputData();
+		if ($form->validate($request)) {
+			$form->execute($request);
+			return DAO::getDataChangedEvent($issue->getId());
+		} else {
+			return new JSONMessage(true, $form->fetch($request));
+		}
+	}
+
+	/**
+	 * Clear issue pub id
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function clearPubId($args, $request) {
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
+		$form = new PublicIdentifiersForm($issue);
+		$form->clearPubId($request->getUserVar('pubIdPlugIn'));
+		return new JSONMessage(true);
+	}
+
+	/**
+	 * Clear issue objects pub ids
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function clearIssueObjectsPubIds($args, $request) {
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
+		$form = new PublicIdentifiersForm($issue);
+		$form->clearIssueObjectsPubIds($request->getUserVar('pubIdPlugIn'));
+		return new JSONMessage(true);
+	}
+
+	/**
 	 * Display the table of contents
 	 * @param $args array
 	 * @param $request PKPRequest
@@ -326,6 +390,19 @@ class IssueGridHandler extends GridHandler {
 
 		$articleSearchIndex = null;
 		if (!$issue->getPublished()) {
+			$confirmationText = __('editor.issues.confirmPublish');
+			import('lib.pkp.controllers.grid.pubIds.form.PKPAssignPublicIdentifiersForm');
+			$formTemplate = $this->getAssignPublicIdentifiersFormTemplate();
+			$assignPublicIdentifiersForm = new PKPAssignPublicIdentifiersForm($formTemplate, $issue, 1, $confirmationText);
+			if (!$request->getUserVar('confirmed')) {
+				// Display assign pub ids modal
+				$assignPublicIdentifiersForm->initData($args, $request);
+				return new JSONMessage(true, $assignPublicIdentifiersForm->fetch($request));
+			}
+			// Asign pub ids
+			$assignPublicIdentifiersForm->readInputData();
+			$assignPublicIdentifiersForm->execute($request);
+
 			// Set the status of any attendant queued articles to STATUS_PUBLISHED.
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			$articleDao = DAORegistry::getDAO('ArticleDAO');
@@ -430,6 +507,14 @@ class IssueGridHandler extends GridHandler {
 		$json = new JSONMessage();
 		$json->setEvent('containerReloadRequested', array('tabsUrl' => $dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues', 'index')));
 		return $json;
+	}
+
+	/**
+	 * Get the teplate for the assign public identifiers form.
+	 * @return string
+	 */
+	function getAssignPublicIdentifiersFormTemplate() {
+		return 'controllers/grid/pubIds/form/assignPublicIdentifiersForm.tpl';
 	}
 }
 

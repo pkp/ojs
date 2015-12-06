@@ -176,6 +176,8 @@ class ArticleGalleyGridHandler extends GridHandler {
 		return new JSONMessage(true, $galleyForm->fetch($request, $this->getRequestArgs()));
 	}
 
+
+
 	/**
 	 * Delete a galley.
 	 * @param $args array
@@ -237,7 +239,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		}
 		return new JSONMessage(true, $galleyForm->fetch());
 	}
-
+	
 	/**
 	 * @copydoc GridHandler::fetchRow()
 	 */

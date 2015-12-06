@@ -119,7 +119,7 @@ class Article extends Submission {
 		}
 
 		if ($journal->getSetting('enablePublicArticleId')) {
-			$publicArticleId = $this->getPubId('publisher-id');
+			$publicArticleId = $this->getStoredPubId('publisher-id');
 			if (!empty($publicArticleId)) return $publicArticleId;
 		}
 		return $this->getId();

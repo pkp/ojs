@@ -321,35 +321,6 @@ class ArticleDAO extends SubmissionDAO {
 	}
 
 	/**
-	 * Checks if public identifier exists (other than for the specified
-	 * article ID, which is treated as an exception).
-	 * @param $pubIdType string One of the NLM pub-id-type values or
-	 * 'other::something' if not part of the official NLM list
-	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-	 * @param $pubId string
-	 * @param $articleId int An ID to be excluded from the search.
-	 * @param $journalId int
-	 * @return boolean
-	 */
-	function pubIdExists($pubIdType, $pubId, $articleId, $journalId) {
-		$result = $this->retrieve(
-			'SELECT COUNT(*)
-			FROM submission_settings sst
-				INNER JOIN submissions s ON sst.submission_id = s.submission_id
-			WHERE sst.setting_name = ? and sst.setting_value = ? and sst.submission_id <> ? AND s.context_id = ?',
-			array(
-				'pub-id::'.$pubIdType,
-				$pubId,
-				(int) $articleId,
-				(int) $journalId
-			)
-		);
-		$returner = $result->fields[0] ? true : false;
-		$result->Close();
-		return $returner;
-	}
-
-	/**
 	 * Removes articles from a section by section ID
 	 * @param $sectionId int
 	 */
@@ -358,30 +329,6 @@ class ArticleDAO extends SubmissionDAO {
 			'UPDATE submissions SET section_id = null WHERE section_id = ?', (int) $sectionId
 		);
 
-		$this->flushCache();
-	}
-
-	/**
-	 * Delete the public IDs of all articles in a journal.
-	 * @param $journalId int
-	 * @param $pubIdType string One of the NLM pub-id-type values or
-	 * 'other::something' if not part of the official NLM list
-	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-	 */
-	function deleteAllPubIds($journalId, $pubIdType) {
-		$journalId = (int) $journalId;
-		$settingName = 'pub-id::'.$pubIdType;
-
-		$articles = $this->getByContextId($journalId);
-		while ($article = $articles->next()) {
-			$this->update(
-				'DELETE FROM submission_settings WHERE setting_name = ? AND submission_id = ?',
-				array(
-					$settingName,
-					(int)$article->getId()
-				)
-			);
-		}
 		$this->flushCache();
 	}
 
@@ -395,7 +342,7 @@ class ArticleDAO extends SubmissionDAO {
 		$cache->flush();
 	}
 
-	
+
 	//
 	// Protected functions
 	//

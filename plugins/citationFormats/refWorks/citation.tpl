@@ -25,7 +25,7 @@
 	number = {{/literal}{$issue->getNumber()|escape}{literal}},{/literal}{/if}{literal}
 	year = {{/literal}{if $article->getDatePublished()}{$article->getDatePublished()|date_format:'%Y'}{elseif $issue->getDatePublished()}{$issue->getDatePublished()|date_format:'%Y'}{else}{$issue->getYear()|escape}{/if}{literal}},
 {/literal}{assign var=issn value=$journal->getSetting('issn')|escape}{if $issn}{literal}	issn = {{/literal}{$issn|escape}{literal}},{/literal}{/if}
-{if $article->getPubId('doi')}	doi = {ldelim}{$article->getPubId('doi')|escape}{rdelim},
+{if $article->getStoredPubId('doi')}	doi = {ldelim}{$article->getStoredPubId('doi')|escape}{rdelim},
 {/if}
 {literal}	url = {{/literal}{$articleUrl}{literal}}
 }{/literal}</textarea>

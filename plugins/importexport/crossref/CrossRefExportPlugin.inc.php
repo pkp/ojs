@@ -98,7 +98,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 					$issueArticles =& $publishedArticleDao->getPublishedArticles($issue->getId());
 					$issueArticlesNo = 0;
 					foreach ($issueArticles as $issueArticle) {
-						if ($issueArticle->getPubId('doi')) {
+						if ($issueArticle->getStoredPubId('doi')) {
 							if (!in_array($issue, $issues)) $issues[] = $issue;
 							$issueArticlesNo++;
 						}
@@ -120,7 +120,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				$articleIds = array();
 				while ($article = $articleIterator->next()) {
 					// Check whether there is a DOI.
-					if ($article->getPubId('doi')) {
+					if ($article->getSotredPubId('doi')) {
 						$articleIds[] = $article->getId();
 					}
 				}
@@ -221,7 +221,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 		foreach ($issues as $issue) {
 			foreach ($sectionDao->getByIssueId($issue->getId()) as $section) {
 				foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getId(), $issue->getId()) as $article) {
-					if ($article->getPubId('doi')) {
+					if ($article->getStoredPubId('doi')) {
 						// Create the metadata node
 						// this does not need to be repeated for every article
 						// but its allowed to be and its simpler to do so

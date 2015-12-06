@@ -144,6 +144,10 @@ class JournalDAO extends ContextDAO {
 			$dao = DAORegistry::getDAO($daoName);
 			$dao->deleteAllPubIds($journalId, $pubIdType);
 		}
+		import('lib.pkp.classes.submission.SubmissionFileDAODelegate');
+		$submissionFileDaoDelegate = new SubmissionFileDAODelegate();
+		$submissionFileDaoDelegate->deleteAllPubIds($journalId, $pubIdType);
+
 	}
 
 	/**
@@ -157,18 +161,28 @@ class JournalDAO extends ContextDAO {
 	 * @param $assocType int The object type of an object to be excluded from
 	 *  the search. Identified by one of the ASSOC_TYPE_* constants.
 	 * @param $assocId int The id of an object to be excluded from the search.
+	 * @param $forSameType boolean Whether only the same objects should be considered.
 	 * @return boolean
 	 */
 	function anyPubIdExists($journalId, $pubIdType, $pubId,
-			$assocType = ASSOC_TYPE_ANY, $assocId = 0) {
+			$assocType = ASSOC_TYPE_ANY, $assocId = 0, $forSameType = false) {
+
+		import('lib.pkp.classes.submission.SubmissionFileDAODelegate');
+		$submissionFileDAODelegete = new SubmissionFileDAODelegate();
 		$pubObjectDaos = array(
-			ASSOC_TYPE_ISSUE => 'IssueDAO',
-			ASSOC_TYPE_ARTICLE => 'ArticleDAO',
-			ASSOC_TYPE_GALLEY => 'ArticleGalleyDAO',
-			ASSOC_TYPE_ISSUE_GALLEY => 'IssueGalleyDAO',
+			ASSOC_TYPE_ISSUE => DAORegistry::getDAO('IssueDAO'),
+			ASSOC_TYPE_ARTICLE => Application::getSubmissionDAO(),
+			ASSOC_TYPE_GALLEY => Application::getRepresentationDAO(),
+			ASSOC_TYPE_ISSUE_GALLEY => DAORegistry::getDAO('IssueGalleyDAO'),
+			ASSOC_TYPE_SUBMISSION_FILE => $submissionFileDAODelegete
 		);
-		foreach($pubObjectDaos as $daoAssocType => $daoName) {
-			$dao = DAORegistry::getDAO($daoName);
+		if ($forSameType) {
+			$dao = $pubObjectDaos[$assocType];
+			$excludedId = $assocId;
+			if ($dao->pubIdExists($pubIdType, $pubId, $excludedId, $journalId)) return true;
+			return false;
+		}
+		foreach($pubObjectDaos as $daoAssocType => $dao) {
 			if ($assocType == $daoAssocType) {
 				$excludedId = $assocId;
 			} else {

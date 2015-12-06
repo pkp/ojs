@@ -187,9 +187,9 @@
 			{* @todo this hasn't been tested or styled *}
 			{foreach from=$pubIdPlugins item=pubIdPlugin}
 				{if $issue->getPublished()}
-					{assign var=pubId value=$pubIdPlugin->getPubId($pubObject)}
+					{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{else}
-					{assign var=pubId value=$pubIdPlugin->getPubId($pubObject, true)}{* Preview rather than assign a pubId *}
+					{assign var=pubId value=$pubIdPlugin->getPubId($article)}{* Preview pubId *}
 				{/if}
 				{if $pubId}
 					<div class="item pubid">

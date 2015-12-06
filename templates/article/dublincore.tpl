@@ -52,9 +52,9 @@
 {/if}
 {foreach from=$pubIdPlugins item=pubIdPlugin}
 	{if $issue->getPublished()}
-		{assign var=pubId value=$pubIdPlugin->getPubId($pubObject)}
+		{assign var=pubId value=$pubObject->getStoredPubId($pubIdPlugin->getPubIdType())}
 	{else}
-		{assign var=pubId value=$pubIdPlugin->getPubId($pubObject, true)}{* Preview rather than assign a pubId *}
+		{assign var=pubId value=$pubIdPlugin->getPubId($pubObject)}{* Preview pubId *}
 	{/if}
 	{if $pubId}
 		<meta name="DC.Identifier.{$pubIdPlugin->getPubIdDisplayType()|escape}" content="{$pubId|escape}"/>

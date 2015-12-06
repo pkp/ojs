@@ -139,25 +139,6 @@ class IssueGalley extends IssueFile {
 	}
 
 	/**
-	 * Get a public ID for this galley.
-	 * @param $pubIdType string One of the NLM pub-id-type values or
-	 * 'other::something' if not part of the official NLM list
-	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-	 * @param $preview boolean If true, generate a non-persisted preview only.
-	 */
-	function getPubId($pubIdType, $preview = false) {
-		// If we already have an assigned ID, use it.
-		$storedId = $this->getStoredPubId($pubIdType);
-
-		// Ensure that blanks are treated as nulls.
-		if ($storedId === '') {
-			$storedId = null;
-		}
-
-		return $storedId;
-	}
-
-	/**
 	 * Get stored public ID of the galley.
 	 * @param $pubIdType string One of the NLM pub-id-type values or
 	 * 'other::something' if not part of the official NLM list
@@ -180,7 +161,7 @@ class IssueGalley extends IssueFile {
 	}
 
 	/**
-	 * Return the "best" article ID -- If a public article ID is set,
+	 * Return the "best" issue galley ID -- If a public isue galley ID is set,
 	 * use it; otherwise use the internal article Id. (Checks the journal
 	 * settings to ensure that the public ID feature is enabled.)
 	 * @param $journal Object the journal this galley is in
@@ -188,7 +169,7 @@ class IssueGalley extends IssueFile {
 	 */
 	function getBestGalleyId(&$journal) {
 		if ($journal->getSetting('enablePublicGalleyId')) {
-			$publicGalleyId = $this->getPubId('publisher-id');
+			$publicGalleyId = $this->getStoredPubId('publisher-id');
 			if (!empty($publicGalleyId)) return $publicGalleyId;
 		}
 		return $this->getId();

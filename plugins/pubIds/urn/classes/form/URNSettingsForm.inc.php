@@ -22,10 +22,26 @@ class URNSettingsForm extends Form {
 	// Private properties
 	//
 	/** @var integer */
-	var $_journalId;
+	var $_contextId;
+
+	/**
+	 * Get the context ID.
+	 * @return integer
+	 */
+	function _getContextId() {
+		return $this->_contextId;
+	}
 
 	/** @var URNPubIdPlugin */
 	var $_plugin;
+
+	/**
+	 * Get the plugin.
+	 * @return URNPubIdPlugin
+	 */
+	function _getPlugin() {
+		return $this->_plugin;
+	}
 
 	//
 	// Constructor
@@ -33,33 +49,51 @@ class URNSettingsForm extends Form {
 	/**
 	 * Constructor
 	 * @param $plugin URNPubIdPlugin
-	 * @param $journalId integer
+	 * @param $contextId integer
 	 */
-	function URNSettingsForm(&$plugin, $journalId) {
-		$this->_journalId = $journalId;
-		$this->_plugin =& $plugin;
+	function URNSettingsForm($plugin, $contextId) {
+		$this->_contextId = $contextId;
+		$this->_plugin = $plugin;
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
-		$this->addCheck(new FormValidatorCustom($this, 'enableIssueURN', 'required', 'plugins.pubIds.urn.manager.settings.form.journalContentRequired', create_function('$enableIssueURN,$form', 'return $form->getData(\'enableIssueURN\') || $form->getData(\'enableArticleURN\') || $form->getData(\'enableGalleyURN\');'), array($this)));
-		$this->addCheck(new FormValidator($this, 'urnPrefix', 'required', 'plugins.pubIds.urn.manager.settings.form.urnPrefixRequired'));
-		$this->addCheck(new FormValidatorRegExp($this, 'urnPrefix', 'optional', 'plugins.pubIds.urn.manager.settings.form.urnPrefixPattern', '/^urn:[a-zA-Z0-9-]*:.*/'));
+		$this->addCheck(new FormValidatorCustom($this, 'urnObjects', 'required', 'plugins.pubIds.urn.manager.settings.urnObjectsRequired', create_function('$enableIssueURN,$form', 'return $form->getData(\'enableIssueURN\') || $form->getData(\'enableArticleURN\') || $form->getData(\'enableSubmissionFileURN\');'), array($this)));
+		$this->addCheck(new FormValidatorRegExp($this, 'urnPrefix', 'required', 'plugins.pubIds.urn.manager.settings.form.urnPrefixPattern', '/^urn:[a-zA-Z0-9-]*:.*/'));
 		$this->addCheck(new FormValidatorCustom($this, 'urnIssueSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnIssueSuffixPatternRequired', create_function('$urnIssueSuffixPattern,$form', 'if ($form->getData(\'urnSuffix\') == \'pattern\' && $form->getData(\'enableIssueURN\')) return $urnIssueSuffixPattern != \'\';return true;'), array($this)));
 		$this->addCheck(new FormValidatorCustom($this, 'urnArticleSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnArticleSuffixPatternRequired', create_function('$urnArticleSuffixPattern,$form', 'if ($form->getData(\'urnSuffix\') == \'pattern\' && $form->getData(\'enableArticleURN\')) return $urnArticleSuffixPattern != \'\';return true;'), array($this)));
-		$this->addCheck(new FormValidatorCustom($this, 'urnGalleySuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnGalleySuffixPatternRequired', create_function('$urnGalleySuffixPattern,$form', 'if ($form->getData(\'urnSuffix\') == \'pattern\' && $form->getData(\'enableGalleyURN\')) return $urnGalleySuffixPattern != \'\';return true;'), array($this)));
-		$this->addCheck(new FormValidator($this, 'namespace', 'required', 'plugins.pubIds.urn.manager.settings.form.namespaceRequired'));
+		$this->addCheck(new FormValidatorCustom($this, 'urnRepresentationSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnRepresentationSuffixPatternRequired', create_function('$urnRepresentationSuffixPattern,$form', 'if ($form->getData(\'urnSuffix\') == \'pattern\' && $form->getData(\'enableRepresentationURN\')) return $urnRepresentationSuffixPattern != \'\';return true;'), array($this)));
+		$this->addCheck(new FormValidatorCustom($this, 'urnSubmissionFileSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnSubmissionFileSuffixPatternRequired', create_function('$urnSubmissionFileSuffixPattern,$form', 'if ($form->getData(\'urnSuffix\') == \'pattern\' && $form->getData(\'enableSubmissionFileURN\')) return $urnSubmissionFileSuffixPattern != \'\';return true;'), array($this)));
 		$this->addCheck(new FormValidatorUrl($this, 'urnResolver', 'required', 'plugins.pubIds.urn.manager.settings.form.urnResolverRequired'));
 		$this->addCheck(new FormValidatorPost($this));
+
+		// for URN reset requests
+		import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
+		$application = PKPApplication::getApplication();
+		$request = $application->getRequest();
+		$this->setData('clearPubIdsLinkAction', new LinkAction(
+			'reassignURNs',
+			new RemoteActionConfirmationModal(
+				__('plugins.pubIds.urn.manager.settings.urnReassign.confirm'),
+				__('common.delete'),
+				$request->url(null, null, 'manage', null, array('verb' => 'clearPubIds', 'plugin' => $plugin->getName(), 'category' => 'pubIds')),
+				'modal_delete'
+			),
+			__('plugins.pubIds.urn.manager.settings.urnReassign'),
+			'delete'
+		));
+		$this->setData('pluginName', $plugin->getName());
 	}
+
 
 	//
 	// Implement template methods from Form
 	//
 	/**
-	 * @see Form::display()
+	 * @copydoc Form::fetch()
 	 */
 	function fetch($request) {
-		$namespaces = array(
+		$urnNamespaces = array(
+			'' => '',
 			'urn:nbn:de' => 'urn:nbn:de',
 			'urn:nbn:at' => 'urn:nbn:at',
 			'urn:nbn:ch' => 'urn:nbn:ch',
@@ -67,58 +101,36 @@ class URNSettingsForm extends Form {
 			'urn' => 'urn'
 		);
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('namespaces', $namespaces);
-
-		// for DOI reset requests
-		import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
-		$clearPubIdsLinkAction =
-		new LinkAction(
-			'reassignURNs',
-			new RemoteActionConfirmationModal(
-				__('plugins.pubIds.urn.manager.settings.clearURNs.confirm'),
-				__('common.delete'),
-				$request->url(null, null, 'plugin', null, array('verb' => 'settings', 'clearPubIds' => true, 'plugin' => $this->_plugin->getName(), 'category' => 'pubIds')),
-				'modal_delete'
-			),
-			__('plugins.pubIds.urn.manager.settings.clearURNs'),
-			'delete'
-		);
-
-		$templateMgr->assign('clearPubIdsLinkAction', $clearPubIdsLinkAction);
-
-		return parent::fetch();
+		$templateMgr->assign('urnNamespaces', $urnNamespaces);
+		return parent::fetch($request);
 	}
 
 	/**
-	 * @see Form::initData()
+	 * @copydoc Form::initData()
 	 */
 	function initData() {
-		$journalId = $this->_journalId;
-		$plugin =& $this->_plugin;
-
+		$contextId = $this->_getContextId();
+		$plugin = $this->_getPlugin();
 		foreach($this->_getFormFields() as $fieldName => $fieldType) {
-			$this->setData($fieldName, $plugin->getSetting($journalId, $fieldName));
+			$this->setData($fieldName, $plugin->getSetting($contextId, $fieldName));
 		}
-
-		$this->setData('pluginName', $plugin->getName());
 	}
 
 	/**
-	 * @see Form::readInputData()
+	 * @copydoc Form::readInputData()
 	 */
 	function readInputData() {
 		$this->readUserVars(array_keys($this->_getFormFields()));
 	}
 
 	/**
-	 * @see Form::validate()
+	 * @copydoc Form::validate()
 	 */
 	function execute() {
-		$plugin =& $this->_plugin;
-		$journalId = $this->_journalId;
-
+		$contextId = $this->_getContextId();
+		$plugin = $this->_getPlugin();
 		foreach($this->_getFormFields() as $fieldName => $fieldType) {
-			$plugin->updateSetting($journalId, $fieldName, $this->getData($fieldName), $fieldType);
+			$plugin->updateSetting($contextId, $fieldName, $this->getData($fieldName), $fieldType);
 		}
 	}
 
@@ -129,15 +141,17 @@ class URNSettingsForm extends Form {
 		return array(
 			'enableIssueURN' => 'bool',
 			'enableArticleURN' => 'bool',
-			'enableGalleyURN' => 'bool',
+			'enableRepresentationURN' => 'bool',
+			'enableSubmissionFileURN' => 'bool',
 			'urnPrefix' => 'string',
 			'urnSuffix' => 'string',
 			'urnIssueSuffixPattern' => 'string',
 			'urnArticleSuffixPattern' => 'string',
-			'urnGalleySuffixPattern' => 'string',
-			'checkNo' => 'bool',
-			'namespace' => 'string',
-			'urnResolver' => 'string'
+			'urnRepresentationSuffixPattern' => 'string',
+			'urnSubmissionFileSuffixPattern' => 'string',
+			'urnCheckNo' => 'bool',
+			'urnNamespace' => 'string',
+			'urnResolver' => 'string',
 		);
 	}
 }
