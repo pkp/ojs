@@ -101,7 +101,7 @@ class PLNPlugin extends GenericPlugin {
 
 		return $success;
 	}
-	
+
 	/**
 	 * Register this plugin's DAOs with the application
 	 */	
@@ -323,6 +323,41 @@ class PLNPlugin extends GenericPlugin {
 		$journal =& Request::getJournal();
 
 		switch($verb) {
+			case 'enable':
+				if( ! @include_once('Archive/Tar.php')) {
+					$message = NOTIFICATION_TYPE_ERROR;
+					$messageParams = array('contents' => __('plugins.generic.pln.notifications.archive_tar_missing'));
+					break;
+				}
+				if( ! $this->php5Installed()) {
+					$message = NOTIFICATION_TYPE_ERROR;
+					$messageParams = array('contents' => __('plugins.generic.pln.notifications.php5_missing'));
+					break;
+				}
+				if( ! $this->curlInstalled()) {
+					$message = NOTIFICATION_TYPE_ERROR;
+					$messageParams = array('contents' => __('plugins.generic.pln.notifications.curl_missing'));
+					break;
+				}
+				if( ! $this->zipInstalled()) {
+					$message = NOTIFICATION_TYPE_ERROR;
+					$messageParams = array('contents' => __('plugins.generic.pln.notifications.zip_missing'));
+					break;
+				}
+				if( ! $this->tarInstalled()) {
+					$message = NOTIFICATION_TYPE_ERROR;
+					$messageParams = array('contents' => __('plugins.generic.pln.notifications.tar_missing'));
+					break;
+				}
+				$message = NOTIFICATION_TYPE_SUCCESS;
+				$messageParams = array('contents' => __('plugins.generic.pln.enabled'));
+				$this->updateSetting($journal->getId(), 'enabled', true);
+				break;
+			case 'disable':
+				$message = NOTIFICATION_TYPE_SUCCESS;
+				$messageParams = array('contents' => __('plugins.generic.pln.disabled'));
+				$this->updateSetting($journal->getId(), 'enabled', false);
+				break;
 			case 'settings':
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
@@ -554,7 +589,7 @@ class PLNPlugin extends GenericPlugin {
 			unset($journalManager);
 		}
 	}
-	
+
 	/**
 	 * Get whether we're running php 5
 	 * @return boolean
