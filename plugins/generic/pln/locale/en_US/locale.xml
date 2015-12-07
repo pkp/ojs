@@ -15,6 +15,8 @@
 	<message key="plugins.generic.pln">PKP PLN Plugin</message>
 	<message key="plugins.generic.pln.description">The PKP PLN plugin will deposit your published content into the PKP Private LOCKSS Network for preservation.</message>
 	<message key="plugins.generic.pln.manager.setup.description"><![CDATA[<strong>PKP Private LOCKSS Network</strong><br /><br />Please read the <a href="https://pkp.sfu.ca/pkp-lockss/" target="_blank">overview of the PKP PLN</a> and complete <a href="{$plnPluginURL}">this simple form</a>. This option will enable inclusion of your journal in the Public Knowledge Project Private LOCKSS Network (PKP PLN).]]></message>
+	<message key="plugins.generic.pln.enabled">The PKP PLN plugin has been enabled.</message>
+	<message key="plugins.generic.pln.disabled">The PKP PLN plugin has been disabled.</message>
 	
 	<message key="plugins.generic.pln.settings_page">PKP PLN Plugin - Settings</message>
 	<message key="plugins.generic.pln.settings">Settings</message>
@@ -71,6 +73,8 @@
 	<message key="plugins.generic.pln.notifications.zip_missing">ZipArchive support must be enabled to proceed.</message>
 	<message key="plugins.generic.pln.notifications.issn_setting">Your journal must have an ISSN before you can agree to the terms of service. You can enter the ISSN on the Journal Settings page. Once the journal ISSN is entered, the terms of service will be shown below.</message>
 	<message key="plugins.generic.pln.notifications.tar_missing">Your system must have a tar executable.</message>
+	<message key="plugins.generic.pln.notifications.archive_tar_missing">The Archive_Tar PHP extension must be installed before the PKP PLN can be enabled.</message>
+	<message key="plugins.generic.pln.notifications.php5_missing">The PKP PLN requires PHP version 5 or higher.</message>
 
 	<message key="plugins.generic.pln.error.network.servicedocument">Network error {$error} connecting to the PLN to get the service document.</message>
 	<message key="plugins.generic.pln.error.network.deposit">Network error {$error} connecting to the PLN to send the deposit.</message>
