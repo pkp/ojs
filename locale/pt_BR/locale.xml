@@ -833,7 +833,7 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="sectionEditor.review.enrollReviewer">Cadastrar usuário existente como avaliador</message>
 	<message key="submission.layout.imageInvalid">Formato de imagem inválido. Formatos aceitáveis são .gif, .jpg ou .png.  Verifique as configurações de MimeType do servidor e permissões de pastas.</message>
 	<message key="reviewer.article.restrictedFileAccess">Os documentos poderão ser visualizados somente após assumir a tarefa de avaliação</message>
-	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Declare se há conflito de interesses com relação à esta submissão (veja<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Política de Conflito de Interesses</a>).]]></message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Declare se há conflito de interesses com relação à esta submissão (veja a <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Política de Conflito de Interesses</a>).]]></message>
 	<message key="reviewer.competingInterests">Conflito de Interesses</message>
 	<message key="submission.layout.noLayoutFile">Nenhum (Enviar versão final da edição de texto como Versão de Prova antes de enviar a solicitação)</message>
 	<message key="submission.layout.referenceLinking">URLs para Referências</message>
