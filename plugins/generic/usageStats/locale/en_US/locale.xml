@@ -23,6 +23,9 @@
 	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Activate this option to use a plugin version that respects privacy legislations, i.e. that is logging hashed IP addresses, informs the users about the tracking and provides an opt-out option for users. Note: when using this option you will not be able to use the geo features of the plugin.</message>
 	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Respect data privacy</message>
 	<message key="plugins.generic.usageStats.settings.optionalColumns">Optional statistic information</message>
+	<message key="plugins.generic.usageStats.settings.archives">Archives</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives.description">Activate this option to compress archived log files using gzip tool (you will have to configure the gzip setting inside config.inc.php). If you have a high traffic site it's a good idea to enable this, so you can save some extra disk space.</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives">Compress archives</message>
 	<message key="plugins.generic.usageStats.settings.optionalColumns.description">Enable or disable the collection of the following optional information. This will influence on the possible statistics reports you can retrieve, and also will have an impact on the database size. DO NOT CHANGE unless you fully understand what you're doing.</message>
 
 	<message key="plugins.generic.usageStats.usageStatsLoaderName">Usage statistics file loader task</message>

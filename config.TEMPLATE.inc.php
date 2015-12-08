@@ -455,8 +455,8 @@ tar = /bin/tar
 ; egrep (used in copyAccessLogFileTool)
 egrep = /bin/egrep
 
-; gunzip (used in copyAccessLogFileTool)
-gunzip = /bin/gunzip
+; gzip (used in FileManager)
+gzip = /bin/gzip
 
 ; On systems that do not have PHP4's Sablotron/xsl or PHP5's libxsl/xslt
 ; libraries installed, or for those who require a specific XSLT processor,

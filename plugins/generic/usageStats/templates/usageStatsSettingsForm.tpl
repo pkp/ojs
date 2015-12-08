@@ -31,6 +31,11 @@
 			{fbvElement type="text" id="accessLogFileParseRegex" value=$accessLogFileParseRegex"}
 		{/fbvFormSection}
 	{/fbvFormArea}
+	{fbvFormArea id="usageStatsArchives" title="plugins.generic.usageStats.settings.archives"}
+		{fbvFormSection for="compressArchives" list=true description="plugins.generic.usageStats.settings.compressArchives.description"}
+			{fbvElement type="checkbox" id="compressArchives" value="1" checked=$compressArchives label="plugins.generic.usageStats.settings.compressArchives"}
+		{/fbvFormSection}
+	{/fbvFormArea}
 	{fbvFormArea id="usageStatsDataPrivacy" title="plugins.generic.usageStats.settings.dataPrivacyOption"}
 		{if $saltFilepath}
 			{assign var="disabled" value=false}
