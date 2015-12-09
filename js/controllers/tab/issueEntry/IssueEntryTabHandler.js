@@ -201,8 +201,8 @@
 				galleyId = gridHandler.getRowDataId($gridRow);
 
 		this.getHtmlElement().tabs({
-				active: /** @type {string} */ (this.getTabPositionByGalleyId_(
-						galleyId, this.getHtmlElement()))});
+			active: /** @type {string} */ (this.getTabPositionByGalleyId_(
+					galleyId, this.getHtmlElement()))});
 	};
 
 
@@ -232,7 +232,7 @@
 	 * Callback that overrides TabHandler's tabReloadRequested method
 	 * in order to close the modal once the form has been submitted.
 	 *
-	 * @todo This should be handled earlier in the stack. Ideally, the issueEntry
+	 * TODO: This should be handled earlier in the stack. Ideally, the issueEntry
 	 *  ajax form should return an empty content string once the form is
 	 *  submitted. If that happened, then AjaxFormHandler::handleResponse will
 	 *  automatically emit the `formSubmitted` event, which the modal will
@@ -245,7 +245,7 @@
 	 */
 	$.pkp.controllers.tab.issueEntry.IssueEntryTabHandler.prototype.
 			tabsReloadRequested = function(divElement, event, jsonContent) {
-		this.getHtmlElement().trigger( 'formSubmitted' );
+		this.getHtmlElement().trigger('formSubmitted');
 	};
 /** @param {jQuery} $ jQuery closure. */
 }(jQuery));
