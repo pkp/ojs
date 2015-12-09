@@ -224,7 +224,7 @@ class OAIDAO extends PKPOAIDAO {
 	/**
 	 * @see lib/pkp/classes/oai/PKPOAIDAO::setOAIData()
 	 */
-	function &setOAIData(&$record, $row, $isRecord = true) {
+	function setOAIData($record, $row, $isRecord = true) {
 		$journal = $this->getJournal($row['journal_id']);
 		$section = $this->getSection($row['section_id']);
 		$articleId = $row['submission_id'];
