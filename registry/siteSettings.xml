@@ -43,4 +43,8 @@
 		<name>contactEmail</name>
 		<value>{$contactEmail}</value>
 	</setting>
+	<setting type="string" locale="0">
+		<name>themePluginPath</name>
+		<value>default</value>
+	</setting>
 </site_settings>
