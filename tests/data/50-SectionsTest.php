@@ -49,11 +49,11 @@ class SectionsTest extends WebTestCase {
 
 		// Save changes
 		$this->click('//form[@id=\'sectionForm\']//button[text()=\'Save\']');
-		$this->waitJQuery();
+		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
 
 		// Verify resulting grid row
 		$this->assertEquals('Berardo, Buskins', $this->getText('css=#cell-1-editors > span'));
-		$this->waitForElementNotPresent('css=div.pkp_modal_panel'); // pkp/pkp-lib#655
+		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
 
 		// Create a new "Reviews" section
 		$this->click('css=[id^=component-grid-settings-sections-sectiongrid-addSection-button-]');
@@ -69,6 +69,6 @@ class SectionsTest extends WebTestCase {
 		$this->waitForElementPresent('//select[@name=\'newRowId[name]\']//option[text()=\'Minoti Inoue\']');
 		$this->select('name=newRowId[name]', 'label=Minoti Inoue');
 		$this->click('//form[@id=\'sectionForm\']//button[text()=\'Save\']');
-		$this->waitJQuery();
+		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
 	}
 }
