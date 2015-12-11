@@ -43,7 +43,7 @@ class NpiersonSubmissionTest extends ContentBaseTestCase {
 		$this->select($selector, 'Vol 1 No 1 (2014)');
 		$this->waitForElementPresent($selector = '//button[text()=\'Save\']');
 		$this->click($selector);
-		$this->waitJQuery();
+		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
 		$this->logOut();
 	}
 }

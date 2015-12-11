@@ -57,7 +57,7 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 		$this->type('css=[id^=label-]', 'PDF');
 		$this->select('id=galleyType', 'PDF.JS PDF Viewer');
 		$this->click('//button[text()=\'Save\']');
-		$this->waitJQuery();
+		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
 
 		// Upload a galley file
 		$this->waitForElementPresent($selector='//table[contains(@id,\'component-grid-articlegalleys-articlegalleygrid-\')]//span[contains(.,\'PDF\')]/../a[contains(@id,\'-name-addFile-button-\')]');
