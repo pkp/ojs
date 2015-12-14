@@ -108,7 +108,6 @@
 <script src="{$baseUrl}/lib/pkp/js/controllers/tab/workflow/WorkflowTabHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/tab/representations/RepresentationsTabHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/informationCenter/NotesHandler.js"></script>
-<script src="{$baseUrl}/lib/pkp/js/controllers/dashboard/form/DashboardTaskFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/pages/header/HeaderHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/pages/header/TasksHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/pages/admin/ContextsHandler.js"></script>
