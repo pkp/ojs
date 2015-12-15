@@ -42,8 +42,7 @@ class SubmissionFilesUploadBaseForm extends PKPSubmissionFilesUploadBaseForm {
 	 * For now, this simply uses the parent method.  Having this allows for different sets of submission files
 	 * depending on stageId or fileStage.  See e.g. this class in the OMP codebase as an example.
 	 */
-
-	function &getSubmissionFiles() {
+	function getSubmissionFiles() {
 		if (is_null($this->_submissionFiles)) {
 			$this->_submissionFiles =& parent::getSubmissionFiles();
 		}
