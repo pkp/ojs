@@ -102,7 +102,6 @@ Usage (processing all files of a directory whose names start with the passed str
 	<message key="admin.copyAccessLogFileTool.error.acessingFile">Error: File {$filePath} don't exist or can't be accessed.</message>
 	<message key="admin.copyAccessLogFileTool.error.copyingFile">Error: can't copy file from {$filePath} to {$tmpFilePath}</message>
 	<message key="admin.copyAccessLogFileTool.error.deletingFile">Error: can't delete file {$tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.error.executingUtil">Error: can't execute "{$utilPath}".  Check your {$utilVar} setting in config.inc.php.</message>
 	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Warning: file {$filePath} already exists inside the usage stats directory.</message>
 	<message key="admin.copyAccessLogFileTool.success">Success: {$filePath} to {$destinationPath}</message>
 </locale>
