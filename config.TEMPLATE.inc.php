@@ -188,10 +188,11 @@ connection_charset = Off
 ; Must be set to "Off" if not supported by the database server
 database_charset = Off
 
-; Enable character normalization to utf-8 (recommended)
+; Enable character normalization to utf-8
 ; If disabled, strings will be passed through in their native encoding
 ; Note that client_charset and database collation must be set
 ; to "utf-8" for this to work, as characters are stored in utf-8
+; (Note that this is generally no longer needed, as UTF8 adoption is good.)
 charset_normalization = Off
 
 ;;;;;;;;;;;;;;;;;
@@ -455,8 +456,8 @@ tar = /bin/tar
 ; egrep (used in copyAccessLogFileTool)
 egrep = /bin/egrep
 
-; gunzip (used in copyAccessLogFileTool)
-gunzip = /bin/gunzip
+; gzip (used in FileManager)
+gzip = /bin/gzip
 
 ; On systems that do not have PHP4's Sablotron/xsl or PHP5's libxsl/xslt
 ; libraries installed, or for those who require a specific XSLT processor,

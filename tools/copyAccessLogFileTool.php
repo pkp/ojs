@@ -36,7 +36,7 @@ class CopyAccessLogFileTool extends CommandLineTool {
 	function CopyAccessLogFileTool($argv = array()) {
 		parent::CommandLineTool($argv);
 
-		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_ADMIN);
+		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_ADMIN, LOCALE_COMPONENT_PKP_ADMIN);
 
 		if (count($this->argv) < 1 || count($this->argv) > 2)  {
 			$this->usage();
@@ -175,18 +175,11 @@ class CopyAccessLogFileTool extends CommandLineTool {
 		}
 
 		// Uncompress it, if needed.
-		$gunzipPath = Config::getVar('cli', 'gunzip');
 		if ($isCompressed) {
-			if (!is_executable($gunzipPath)) {
-				printf(__('admin.copyAccessLogFileTool.error.executingUtil', array('utilPath' => $gunzipPath, 'utilVar' => 'gunzip')) . "\n");
-				exit(1);
-			}
-			$gunzipPath = escapeshellarg($gunzipPath);
-			$output = array();
-			$returnValue = 0;
-			exec($gunzipPath . ' ' . $tmpFilePath, $output, $returnValue);
-			if ($returnValue == 1) {
-				printf(__('admin.copyAccessLogFileTool.error.executingUtil', array('utilPath' => $gunzipPath, 'utilVar' => 'gunzip')) . "\n");
+			$fileMgr = new FileManager();
+			$errorMsg = null;
+			if (!$fileMgr->decompressFile($filePath, $errorMsg)) {
+				printf($errorMsg . "\n");
 				exit(1);
 			}
 			$tmpFilePath = substr($tmpFilePath, 0, -3);
@@ -198,7 +191,7 @@ class CopyAccessLogFileTool extends CommandLineTool {
 		FILE_LOADER_PATH_STAGING . DIRECTORY_SEPARATOR .
 		pathinfo($tmpFilePath, PATHINFO_BASENAME);
 		if (!is_executable($egrepPath)) {
-			printf(__('admin.copyAccessLogFileTool.error.executingUtil', array('utilPath' => $egrepPath, 'utilVar' => 'egrep')) . "\n");
+			printf(__('admin.error.executingUtil', array('utilPath' => $egrepPath, 'utilVar' => 'egrep')) . "\n");
 			exit(1);
 		}
 		$egrepPath = escapeshellarg(Config::getVar('cli', 'egrep'));
@@ -207,7 +200,7 @@ class CopyAccessLogFileTool extends CommandLineTool {
 		// Each journal path is already escaped, see the constructor.
 		exec($egrepPath . " -i '" . $this->_journalPaths . "' " . escapeshellarg($tmpFilePath) . " > " . escapeshellarg($destinationPath), $output, $returnValue);
 		if ($returnValue > 1) {
-			printf(__('admin.copyAccessLogFileTool.error.executingUtil', array('utilPath' => $egrepPath, 'utilVar' => 'egrep')) . "\n");
+			printf(__('admin.error.executingUtil', array('utilPath' => $egrepPath, 'utilVar' => 'egrep')) . "\n");
 			exit(1);
 		}
 
