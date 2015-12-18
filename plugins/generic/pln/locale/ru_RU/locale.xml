@@ -16,6 +16,8 @@
 	<message key="plugins.generic.pln">Плагин «PKP PLN»</message>
 	<message key="plugins.generic.pln.description">Плагин «PKP PLN» отправляет ваш опубликованный контент для депонирования в Частную сеть LOCKSS от PKP.</message>
 	<message key="plugins.generic.pln.manager.setup.description"><![CDATA[<strong>Частная сеть LOCKSS от PKP</strong><br /><br />Пожалуйста, прочитайте <a href="https://pkp.sfu.ca/pkp-lockss/" target="_blank">обзор PKP PLN</a> и заполните <a href="{$plnPluginURL}">эту простую форму</a>. Эта настройка позволит включить ваш журналв Частную сеть LOCKSS, созданную Public Knowledge Project (PKP PLN).]]></message>
+	<message key="plugins.generic.pln.enabled">Плагин «PKP PLN» был включен.</message>
+	<message key="plugins.generic.pln.disabled">Плагин «PKP PLN» был отключен.</message>
 	
 	<message key="plugins.generic.pln.settings_page">Плагин «PKP PLN» — Настройки</message>
 	<message key="plugins.generic.pln.settings">Настройки</message>
@@ -29,7 +31,7 @@
 	<message key="plugins.generic.pln.settings.refresh">Обновить</message>
 	<message key="plugins.generic.pln.settings.refresh_help">Если по какой-либо причине выше не показаны условия использования или вы знаете, что эти условия были изменены, щелкните на кнопке «Обновить» для обновления списка условий выше.</message>
 	<message key="plugins.generic.pln.settings.pln_network">URL сети PLN</message>
-	<message key="plugins.generic.pln.settings.pln_network_help">URL рабочего сервера вашей сети. Изменяйте его только в случае получения инструкций от кого-то из вашей сети.</message>
+	<message key="plugins.generic.pln.settings.pln_network_help">URL рабочего сервера вашей сети. Изменяйте его только в случае получения инструкций от кого-то из вашей сети. Вам не нужно создавать учетную запись или входить под учетной записью на этом сервере.</message>
 	<message key="plugins.generic.pln.settings.pln_network_invalid">Указанный URL является неправильным. Пожалуйста, перепроверьте URL и попытайтесь снова.</message>
 	<message key="plugins.generic.pln.settings.pln_network_path_invalid">Адреса URL сети PLN должны состоять из схемы и имени хоста, а также могут включать номер порта. Они не должны содержать пути, строки запросов, имена пользователей, их пароли или фрагменты URL.</message>
 	
@@ -72,6 +74,8 @@
 	<message key="plugins.generic.pln.notifications.zip_missing">Для работы необходимо включить поддержку ZipArchive.</message>
 	<message key="plugins.generic.pln.notifications.issn_setting">У вашего журнала должен быть ISSN до того, как вы примение условия использования. Вы можете ввести ISSN на странице «Настройка журнала». После того как будет введен ISSN журнал, условия использования будут показаны ниже.</message>
 	<message key="plugins.generic.pln.notifications.tar_missing">В вашей системе должен быть исполняемый файл tar.</message>
+	<message key="plugins.generic.pln.notifications.archive_tar_missing">Расширение PHP Archive_Tar должно быть установлено до включения PKP PLN.</message>
+	<message key="plugins.generic.pln.notifications.php5_missing">PKP PLN требует PHP версии 5 или выше.</message>
 
 	<message key="plugins.generic.pln.error.network.servicedocument">Ошибка сети {$error} при подключении к PLN для получения служебного документа.</message>
 	<message key="plugins.generic.pln.error.network.deposit">Ошибка сети {$error} при подключении к PLN для отправки депонируемого объекта.</message>

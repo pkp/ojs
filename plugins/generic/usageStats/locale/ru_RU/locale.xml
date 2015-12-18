@@ -24,6 +24,9 @@
 	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Включите этот параметр, если вы хотите использовать версию плагина, которая учитывает требования законов о конфиденциальности, то есть хранит хэшированные IP-адреса, сообщает пользователям об отслеживании информации и дает возможность пользователям отказаться. Обратите внимание: при включении этого параметра нельзя будет воспользоваться возможностями плагина, связанными с географическим местоположением.</message>
 	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Учитывать требования конфиденциальности данных</message>
 	<message key="plugins.generic.usageStats.settings.optionalColumns">Дополнительная статистическая информация</message>
+	<message key="plugins.generic.usageStats.settings.archives">Архивы</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives.description">Включите этот параметр для сжатия архивированных файлов журнала с помощью инструмента gzip (вам нужно будет настроить параметры gzip в файле config.inc.php). Если у вас сайт с большим трафиком, стоит включить этот параметр, чтобы сэкономить место на диске.</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives">Сжать архивы</message>
 	<message key="plugins.generic.usageStats.settings.optionalColumns.description">Включить или отключить сбор следующей дополнительной информации. Это повлияет на возможные статистические отчеты, которые вы можете получить, а также повлияет на размер базы данных. НЕ МЕНЯЙТЕ НАСТРОЙКУ, если вы не до конца понимаете, что вы делаете.</message>
 
 	<message key="plugins.generic.usageStats.usageStatsLoaderName">Задача загрузчика файлов статистики использования</message>
