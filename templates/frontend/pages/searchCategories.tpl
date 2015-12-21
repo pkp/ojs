@@ -1,5 +1,5 @@
 {**
- * templates/index/categories.tpl
+ * templates/frontend/pages/searchCategories.tpl
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
@@ -10,7 +10,7 @@
  *}
 {strip}
 {assign var="pageTitle" value="navigation.categories"}
-{include file="common/frontend/header.tpl"}
+{include file="frontend/components/header.tpl"}
 {/strip}
 
 <br />
@@ -24,5 +24,4 @@
 {/foreach}
 </ul>
 
-{include file="common/frontend/footer.tpl"}
-
+{include file="frontend/components/footer.tpl"}

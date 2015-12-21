@@ -1,5 +1,5 @@
 {**
- * templates/search/authorIndex.tpl
+ * templates/frontend/pages/searchAuthorIndex.tpl
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
@@ -10,7 +10,7 @@
  *}
 {strip}
 {assign var="pageTitle" value="search.authorIndex"}
-{include file="common/frontend/header.tpl"}
+{include file="frontend/components/header.tpl"}
 {/strip}
 
 <p>{foreach from=$alphaList item=letter}<a href="{url op="authors" searchInitial=$letter}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{url op="authors"}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
@@ -54,5 +54,5 @@
 {else}
 {/if}
 </div>
-{include file="common/frontend/footer.tpl"}
+{include file="frontend/components/footer.tpl"}
 

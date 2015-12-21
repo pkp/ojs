@@ -54,7 +54,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 				'backLink' => $request->url(null, null, 'payments'),
 				'backLinkLabel' => 'manager.payment.feePaymentOptions'
 			));
-			$templateMgr->display('common/message.tpl');		
+			$templateMgr->display('frontend/pages/message.tpl');		
 		}
 	 }	 
 	 

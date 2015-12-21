@@ -12,7 +12,7 @@
  * @uses $section Section The journal section this article is assigned to
  * @uses $ccLicenseBadge @todo
  *}
-{include file="common/frontend/header.tpl" pageTitleTranslated=$article->getLocalizedTitle()|escape}
+{include file="frontend/components/header.tpl" pageTitleTranslated=$article->getLocalizedTitle()|escape}
 
 <div class="page page_article">
 	{if $section}
@@ -63,4 +63,4 @@
 
 </div><!-- .page -->
 
-{include file="common/frontend/footer.tpl"}
+{include file="frontend/components/footer.tpl"}

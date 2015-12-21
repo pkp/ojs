@@ -96,7 +96,7 @@ class GiftsHandler extends Handler {
 			'journalName' => $journal->getLocalizedName(),
 			'message' => 'gifts.thankYouMessage'
 		));
-		$templateMgr->display('common/message.tpl');
+		$templateMgr->display('frontend/pages/message.tpl');
 	}
 }
 

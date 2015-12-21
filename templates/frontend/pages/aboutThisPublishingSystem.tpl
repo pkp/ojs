@@ -11,7 +11,7 @@
  * @uses $appVersion string Current version of OJS
  * @uses $pubProcessFile string Path to image of OJS publishing process
  *}
-{include file="common/frontend/header.tpl" pageTitle="about.aboutThisPublishingSystem"}
+{include file="frontend/components/header.tpl" pageTitle="about.aboutThisPublishingSystem"}
 
 <div class="page page_about_publishing_system">
 	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.aboutThisPublishingSystem"}
@@ -28,4 +28,4 @@
 
 </div><!-- .page -->
 
-{include file="common/frontend/footer.tpl"}
+{include file="frontend/components/footer.tpl"}

@@ -15,7 +15,7 @@
  * @uses $issue Issue Current issue
  * @uses $socialMediaBlocks @todo
  *}
-{include file="common/frontend/header.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
+{include file="frontend/components/header.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
 
 <div class="page">
 
@@ -58,4 +58,4 @@
 
 </div><!-- .page -->
 
-{include file="common/frontend/footer.tpl"}
+{include file="frontend/components/footer.tpl"}
