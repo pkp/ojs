@@ -18,7 +18,7 @@
  * @uses $activeFilters array Key value pair of filters used for this query
  * @uses $inactiveFilters array Key value pair of filters NOT used for this query
  *}
-{include file="common/frontend/header.tpl" pageTitle="common.search"}
+{include file="frontend/components/header.tpl" pageTitle="common.search"}
 
 {* InstantSearch - return only results *}
 {* @todo implement this *}
@@ -265,4 +265,4 @@
 
 {/if}
 
-{include file="common/frontend/footer.tpl"}
+{include file="frontend/components/footer.tpl"}

@@ -114,7 +114,7 @@ class IndexHandler extends Handler {
 			$templateMgr->assign('site', $site);
 
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
-			$templateMgr->display('index/site.tpl');
+			$templateMgr->display('frontend/pages/indexSite.tpl');
 		}
 	}
 }

@@ -121,7 +121,7 @@ class BackupPlugin extends GenericPlugin {
 				$templateMgr->assign('message', 'plugins.generic.backup.failure');
 				$templateMgr->assign('backLink', $request->url(null, null, 'backup'));
 				$templateMgr->assign('backLinkLabel', 'plugins.generic.backup.link');
-				$templateMgr->display('common/message.tpl');
+				$templateMgr->display('frontend/pages/message.tpl');
 				exit();
 		}
 		return false;

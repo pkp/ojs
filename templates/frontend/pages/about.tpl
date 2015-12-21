@@ -27,7 +27,7 @@
  * @uses $sponsorNote string Description for sponsors section
  * @uses $sponsors array List of sponsors of this journal
  *}
-{include file="common/frontend/header.tpl" pageTitle="about.aboutTheJournal"}
+{include file="frontend/components/header.tpl" pageTitle="about.aboutTheJournal"}
 
 <div class="page page_about">
 	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.aboutTheJournal"}
@@ -218,4 +218,4 @@
 
 </div><!-- .page -->
 
-{include file="common/frontend/footer.tpl"}
+{include file="frontend/components/footer.tpl"}

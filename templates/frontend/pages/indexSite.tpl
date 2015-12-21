@@ -1,5 +1,5 @@
 {**
- * templates/index/site.tpl
+ * templates/frontend/pages/indexSite.tpl
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
@@ -8,7 +8,7 @@
  * Site index.
  *
  *}
-{include file="common/frontend/header.tpl"}
+{include file="frontend/components/header.tpl"}
 
 <div class="page">
 	{if $intro}{$intro|nl2br}{/if}
@@ -43,4 +43,4 @@
 	<div id="journalListPageLinks">{page_links anchor="journals" name="journals" iterator=$journals}</div>
 </div><!-- .page -->
 
-{include file="common/frontend/footer.tpl"}
+{include file="frontend/components/footer.tpl"}
