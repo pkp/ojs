@@ -16,7 +16,7 @@
 		{translate key="archive.archives"}
 	{/if}
 {/capture}
-{include file="common/frontend/header.tpl" pageTitleTranslated=$pageTitle}
+{include file="frontend/components/header.tpl" pageTitleTranslated=$pageTitle}
 
 <div class="page page_issue_archive">
 	{include file="frontend/components/breadcrumbs.tpl" currentTitle=$pageTitle}
@@ -44,4 +44,4 @@
 	{/if}
 </div>
 
-{include file="common/frontend/footer.tpl"}
+{include file="frontend/components/footer.tpl"}

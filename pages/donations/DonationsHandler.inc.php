@@ -62,7 +62,7 @@ class DonationsHandler extends Handler {
 			'journalName' => $journal->getLocalizedName(),
 			'message' => 'donations.thankYouMessage'
 		));
-		$templateMgr->display('common/message.tpl');
+		$templateMgr->display('frontend/pages/message.tpl');
 	}
 }
 

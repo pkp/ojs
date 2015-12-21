@@ -122,7 +122,7 @@ class ResolverPlugin extends GatewayPlugin {
 		$templateMgr = TemplateManager::getManager($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
 		$templateMgr->assign('message', 'plugins.gateways.resolver.errors.errorMessage');
-		$templateMgr->display('common/message.tpl');
+		$templateMgr->display('frontend/pages/message.tpl');
 		exit;
 	}
 

@@ -1,5 +1,5 @@
 {**
- * templates/about/history.tpl
+ * templates/frontend/pages/history.tpl
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
@@ -10,9 +10,9 @@
  *}
 {strip}
 {assign var="pageTitle" value="about.history"}
-{include file="common/frontend/header.tpl"}
+{include file="frontend/components/header.tpl"}
 {/strip}
 
 {$history}
 
-{include file="common/frontend/footer.tpl"}
+{include file="frontend/components/footer.tpl"}

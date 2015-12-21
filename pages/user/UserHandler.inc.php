@@ -236,7 +236,7 @@ class UserHandler extends PKPUserHandler {
 		} else {
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign('message', $deniedKey);
-			return $templateMgr->display('common/message.tpl');
+			return $templateMgr->display('frontend/pages/message.tpl');
 		}
 	}
 

@@ -325,7 +325,7 @@ class PayPalPlugin extends PaymethodPlugin {
 					'backLink' => $request->getUserVar('ojsReturnUrl'),
 					'backLinkLabel' => 'common.continue'
 				));
-				$templateMgr->display('common/message.tpl');
+				$templateMgr->display('frontend/pages/message.tpl');
 				exit();
 		}
 		parent::handle($args, $request); // Don't know what to do with it

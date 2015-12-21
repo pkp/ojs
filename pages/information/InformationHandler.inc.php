@@ -64,7 +64,7 @@ class InformationHandler extends Handler {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('pageTitle', $pageTitle);
 		$templateMgr->assign('content', $content);
-		$templateMgr->display('information/information.tpl');
+		$templateMgr->display('frontend/pages/information.tpl');
 	}
 
 	function readers($args, $request) {
