@@ -38,6 +38,11 @@
 			</a>
 			<ul>
 				<li>
+					<a href="{url router=$smarty.const.ROUTE_PAGE page="about"}">
+						{translate key="about.aboutTheJournal"}
+					</a>
+				</li>
+				<li>
 					<a href="{url router=$smarty.const.ROUTE_PAGE page="about" op="editorialTeam"}">
 						{translate key="about.editorialTeam"}
 					</a>
