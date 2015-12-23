@@ -31,7 +31,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 *
 	 * @param $article Article
 	 */
-	function articleMetadataChanged(&$article) {
+	function articleMetadataChanged($article) {
 		// Check whether a search plug-in jumps in.
 		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::articleMetadataChanged',
@@ -132,7 +132,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 *
 	 * @param $article Article
 	 */
-	function submissionFilesChanged(&$article) {
+	function submissionFilesChanged($article) {
 		// Check whether a search plug-in jumps in.
 		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::submissionFilesChanged',

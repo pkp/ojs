@@ -69,6 +69,10 @@ class WorkflowHandler extends PKPWorkflowHandler {
 				SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_ISSUE_METADATA_UPDATE, 'submission.event.issueMetadataUpdated');
 				$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SUCCESS, array('contents' => __('notification.savedIssueMetadata')));
 
+				// For indexing
+				import('classes.search.ArticleSearchIndex');
+				$articleSearchIndex = new ArticleSearchIndex();
+
 				// Now, create a galley for this submission.  Assume PDF, and set to 'available'.
 				$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 				$articleGalley = $articleGalleyDao->newDataObject();
@@ -100,9 +104,16 @@ class WorkflowHandler extends PKPWorkflowHandler {
 						$submissionFile->setAssocId($articleGalleyId);
 
 						$submissionFileDao->insertObject($submissionFile, $currentFilePath);
+
+						// Update file index
+						$articleSearchIndex->submissionFileChanged($submission->getId(), SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile->getFileId());
 						break;
 					}
 				}
+
+				// Update index
+				$articleSearchIndex->articleMetadataChanged($submission);
+				$articleSearchIndex->articleChangesFinished();
 
 				// no errors, clear all notifications for this submission which may have been created during the submission process and close the modal.
 				$context = $request->getContext();
