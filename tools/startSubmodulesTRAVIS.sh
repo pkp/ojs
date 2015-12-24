@@ -35,6 +35,7 @@ if [ \( -n "$libModuleHash" \) -a \( "$strLength" -eq 40 \) ]; then
 		cd lib/pkp
 		echo "7 - Updating pkp-lib with code from $gitUser repository, $branch branch."
 		git remote add "$gitUser" git://github.com/"$gitUser"/pkp-lib
+		git reset --hard HEAD
 		git pull --rebase "$gitUser" "$branch"
 		exit 0
 	fi
