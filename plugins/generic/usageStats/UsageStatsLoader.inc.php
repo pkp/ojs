@@ -167,10 +167,6 @@ class UsageStatsLoader extends FileLoader {
 			// Avoid internal apache requests.
 			if ($entryData['url'] == '*') continue;
 
-			// Avoid url with file extension (accept no extension or php only).
-			$fileExtension = pathinfo($entryData['url'], PATHINFO_EXTENSION);
-			if ($fileExtension && substr_count($fileExtension, 'php') == false) continue;
-
 			// Avoid non sucessful requests.
 			$sucessfulReturnCodes = array(200, 304);
 			if (!in_array($entryData['returnCode'], $sucessfulReturnCodes)) continue;
