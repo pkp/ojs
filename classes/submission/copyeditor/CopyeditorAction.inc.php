@@ -251,7 +251,7 @@ class CopyeditorAction extends Action {
 
 			// Add log
 			import('classes.article.log.ArticleLog');
-			ArticleLog::logEvent($request, $copyeditorSubmission, ARTICLE_LOG_COPYEDITOR_FILE, 'log.copyedit.copyeditorFile', array('copyeditorName' => $user->getFullName(), 'fileId' => $fileId));
+			ArticleLog::logEvent($request, $copyeditorSubmission, ARTICLE_LOG_COPYEDIT_COPYEDITOR_FILE, 'log.copyedit.copyeditorFile', array('copyeditorName' => $user->getFullName(), 'fileId' => $fileId));
 		}
 	}
 
