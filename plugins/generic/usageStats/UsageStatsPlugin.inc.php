@@ -27,6 +27,9 @@ class UsageStatsPlugin extends GenericPlugin {
 	/** @var $_optedOut boolean */
 	var $_optedOut;
 
+	/** @var $_saltpath string */
+	var $_saltpath;
+
 	/**
 	* Constructor.
 	*/
@@ -61,6 +64,9 @@ class UsageStatsPlugin extends GenericPlugin {
 			}
 
 			$this->_dataPrivacyOn = $this->getSetting(CONTEXT_ID_NONE, 'dataPrivacyOption');
+			$this->_saltpath = $this->getSetting(CONTEXT_ID_NONE, 'saltFilepath');
+			// Check config for backward compatibility.
+			if (!$this->_saltpath) $this->_saltpath = Config::getVar('usageStats', 'salt_filepath');
 			$application = Application::getApplication();
 			$request = $application->getRequest();
 			$this->_optedOut = $request->getCookieVar('usageStats-opt-out');
@@ -71,6 +77,14 @@ class UsageStatsPlugin extends GenericPlugin {
 		}
 
 		return $success;
+	}
+
+	/**
+	 * Get the path to the salt file.
+	 * @return string
+	 */
+	function getSaltpath() {
+		return $this->_saltpath;
 	}
 
 	/**
@@ -239,18 +253,6 @@ class UsageStatsPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Get the path to the salt file. Check config.inc.php for backwards compatibility.
-	 * @return string
-	 */
-	function getSaltpath() {
-		$saltpath = $this->getSetting(CONTEXT_ID_NONE, 'saltFilepath');
-		if (!$saltpath) {
-			$saltpath = Config::getVar('usageStats', 'salt_filepath');
-		}
-		return $saltpath;
-	}
-
-	/**
 	 * Log the usage event into a file.
 	 * @param $hookName string
 	 * @param $args array
@@ -259,7 +261,7 @@ class UsageStatsPlugin extends GenericPlugin {
 	function logUsageEvent($hookName, $args) {
 		$hookName = $args[0];
 		$usageEvent = $args[1];
-		
+
 		// Check the statistics opt-out.
 		if ($this->_optedOut) return false;
 
