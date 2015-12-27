@@ -25,5 +25,14 @@
 		<name>accessLogFileParseRegex</name>
 		<value>/^(\S+) \S+ \S+ \[(.*?)\] "\S+ (\S+).*?" (\S+) \S+ ".*?" "(.*?)"/</value>
 	</setting>
+	<setting type="object">
+		<name>optionalColumns</name>
+		<value>
+			<array>
+				<element>city</element>
+				<element>region</element>
+			</array>
+		</value>
+	</setting>
 </plugin_settings>
 
