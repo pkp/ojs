@@ -23,7 +23,7 @@
 	</setting>
 	<setting type="string">
 		<name>accessLogFileParseRegex</name>
-		<value>/^(?P<ip>\S+) \S+ \S+ \[(?P<date>.*?)\] "\S+ (?P<url>\S+).*?" (?P<returnCode>\S+) \S+ ".*?" "(?P<userAgent>.*?)"/</value>
+		<value>/^(?P&lt;ip&gt;\S+) \S+ \S+ \[(?P&lt;date&gt;.*?)\] "\S+ (?P&lt;url&gt;\S+).*?" (?P&lt;returnCode&gt;\S+) \S+ ".*?" "(?P&lt;userAgent&gt;.*?)"/</value>
 	</setting>
 	<setting type="object">
 		<name>optionalColumns</name>
