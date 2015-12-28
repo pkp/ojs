@@ -322,7 +322,7 @@ class UsageStatsLoader extends FileLoader {
 		}
 
 		// The default regex will parse only apache log files in combined format.
-		if (!$parseRegex) $parseRegex = '/^(?P<ip>\S+) \S+ \S+ \[?P<date>(.*?)\] "\S+ (?P<url>\S+).*?" (?P<returnCode>\S+) \S+ ".*?" "(?P<userAgent>.*?)"/';
+		if (!$parseRegex) $parseRegex = '/^(?P<ip>\S+) \S+ \S+ \[(?P<date>.*?)\] "\S+ (?P<url>\S+).*?" (?P<returnCode>\S+) \S+ ".*?" "(?P<userAgent>.*?)"/';
 
 		$returner = array();
 		if (preg_match($parseRegex, $entry, $m)) {
