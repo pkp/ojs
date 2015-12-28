@@ -34,8 +34,11 @@
 	<message key="plugins.importexport.datacite.settings.form.description">Пожалуйста, настройте плагин экспорта DataCite:</message>
 	<message key="plugins.importexport.datacite.settings.form.username">Имя пользователя (символ)</message>
 	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Пожалуйста, введите имя пользователя (символ), который вы получили от DataCite. Имя пользователя не может содержать двоеточие.</message>
+	<message key="plugins.importexport.datacite.settings.form.passwordRequired">Пожалуйста, введите пароль, который вы получили от DataCite.</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration">Регистрировать DOI автоматически</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description"><![CDATA[OJS будет автоматически передавать DOI в DataCite после опубликования статей. Пожалуйста, обратите внимание, что обработка может занять некоторое время после публикации. Вы можете проверить все незарегистрированные DOI в <a href="{$unregisteredURL}">списке незарегистрированных статей</a>.]]></message>
  
-	<message key="plugins.importexport.datacite.export.suppFiles">Экспортировать определенные дополнительные файлы</message>
+	<message key="plugins.importexport.datacite.export.suppFiles">Экспортировать дополнительные файлы</message>
 	<message key="plugins.importexport.datacite.export.selectSuppFile">Выбрать дополнительные файлы</message>
 	<message key="plugins.importexport.datacite.export.noSuppFiles">Ни один из дополнительных файлов сейчас не имеет назначенных DOI.</message>
  
@@ -45,4 +48,5 @@
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
 ]]></message>
+	<message key="plugins.importexport.datacite.senderTask.name">Информация об отправителе в DataCite</message>
 </locale>

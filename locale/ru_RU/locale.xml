@@ -237,6 +237,7 @@
 	<message key="user.orcid">ORCID iD</message>
 	<message key="user.orcid.description"><![CDATA[ORCID iD могут быть присвоен только <a href="http://orcid.org/" target="_blank">Регистром ORCID</a>. Вы должны соответствовать их стандартам для формирования ORCID iD и добавить полный адрес URI (например, <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
 	<message key="user.profile.form.orcidInvalid">Указанный вами ORCID iD является неправильным.</message>
+	<message key="user.profile.implicitAuthChangePasswordInstructions">Если вы вошли в систему через Shibboleth, для смены пароля следуйте схеме, установленной в вашей организации. Локальные пользователи могут продолжить смену ниже.</message>
 
 	<!-- Роли -->
 	<message key="user.role.manager">Управляющий журнала</message>
@@ -730,6 +731,7 @@
 	<message key="user.login.registerNewAccount">Не являетесь пользователем? Зарегистрируйтесь на этом сайте</message>
 	<message key="user.login.resetPasswordInstructions"><![CDATA[В целях безопасности эта система сбрасывает пароль зарегистрированного пользователя и высылает новый, а не отправляет пользователю его 
 старый пароль.<br /><br />Введите ниже ваш адрес электронной почты для сброса вашего пароля. Подтверждение будет направлено вам на этот адрес электронной почты.]]></message>
+	<message key="user.login.implicitAuthLogin">Вход через Shibboleth</message>
 
 	<!-- Регистрация -->
 	<message key="user.register.emailValidation">Требуется подтверждение адреса электронной почты</message>
@@ -748,6 +750,7 @@
 	<message key="user.register.reviewerDescriptionNoInterests">Согласен участвовать в рецензировании рукописей, направляемых в этот журнал.</message>
 	<message key="user.register.reviewerDescription">Согласен участвовать в рецензировании рукописей, направляемых в журналы этого сайта.</message>
 	<message key="user.register.reviewerInterests">Укажите ваши интересы как рецензента (основные области и методы исследования):</message>
+	<message key="user.register.implicitAuth">Вход через Shibboleth с помощью существующего аккаунта в системе организации</message>
 
 	<!-- Подписки -->
 	<message key="user.subscriptions.mySubscriptions">Мои подписки</message>

@@ -11,7 +11,7 @@
   * Localization strings for the ru_RU (Русский) locale.
   * With updates from Pavel Pisklakov (revising translation). 
   -->
- 
+
 <locale name="ru_RU" full_name="Русский">
 	<message key="plugins.generic.usageStats.settings.logging">Настройки журнала доступа</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles">Создавать файлы журнала</message>
@@ -19,9 +19,16 @@
 	<message key="plugins.generic.usageStats.settings.logParseRegex">Регулярное выражение для разбора файлов журнала</message>
 	<message key="plugins.generic.usageStats.settings.logParseRegex.description">Регулярное выражение, используемое по умолчанию, может разибрать файлы журнала доступа apache в комбинированном формате, а также файлы журнала, создаваемые плагином. Если ваши файлы журнала доступа формируются в другом формате, то вам необходимо вставить регулярное выражение, которое может разобрать его и выдать ожидаемые значения. Для получения более подробной информации смотрите UsageStatsLoader::_getDataFromLogEntry().</message>
 	<message key="plugins.generic.usageStats.settings.saved">Настройки плагина «Статистика использования» сохранены</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Настройка конфиденциальности данных</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements">Для того чтобы активировать эту настройку, необходимо определить файл в котором будет сохранена соль (модификатор): вставьте раздел «[usageSats]» в config.inc.php и определите в нем переменную «salt_filepath». Файл должен существовать и быть доступным на запись для веб-пользователя. Более подробную информацию о требованиях для этой настройки плагина вы можете прочитать в файле README плагина.</message>
 	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Включите этот параметр, если вы хотите использовать версию плагина, которая учитывает требования законов о конфиденциальности, то есть хранит хэшированные IP-адреса, сообщает пользователям об отслеживании информации и дает возможность пользователям отказаться. Обратите внимание: при включении этого параметра нельзя будет воспользоваться возможностями плагина, связанными с географическим местоположением.</message>
-	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Учитывать требования конфиденциальности данных</message>
-	
+	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Учитывать требования конфиденциальности данных</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns">Дополнительная статистическая информация</message>
+	<message key="plugins.generic.usageStats.settings.archives">Архивы</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives.description">Включите этот параметр для сжатия архивированных файлов журнала с помощью инструмента gzip (вам нужно будет настроить параметры gzip в файле config.inc.php). Если у вас сайт с большим трафиком, стоит включить этот параметр, чтобы сэкономить место на диске.</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives">Сжать архивы</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.description">Включить или отключить сбор следующей дополнительной информации. Это повлияет на возможные статистические отчеты, которые вы можете получить, а также повлияет на размер базы данных. НЕ МЕНЯЙТЕ НАСТРОЙКУ, если вы не до конца понимаете, что вы делаете.</message>
+
 	<message key="plugins.generic.usageStats.usageStatsLoaderName">Задача загрузчика файлов статистики использования</message>
 	<message key="plugins.generic.usageStats.openFileFailed">Файл «{$file}» не может быть открыт и был отклонен.</message>
 	<message key="plugins.generic.usageStats.invalidLogEntry">Строка с номером  {$lineNumber} из файла «{$file}» является некорректной записью журнала и файл был отклонен.</message>
@@ -36,21 +43,32 @@
 	
 	<message key="plugins.reports.usageStats.report.displayName">Отчет о статистике использования OJS</message>
 	<message key="plugins.reports.usageStats.report.description">Отчет о статистике использования OJS, формируемый по умолчанию (готовый для COUNTER)</message>
-	
+
 	<message key="plugins.reports.usageStats.optout.displayName">Информация о конфиденциальности плагина «Статистика использования»</message>
 	<message key="plugins.reports.usageStats.optout.description">Информация о конфиденциальности плагина «Статистика использования»</message>
-	<message key="plugins.generic.usageStats.optout.title">Информация о конфиденциальности</message>
+	<message key="plugins.generic.usageStats.optout.title">Информация о статистике использования</message>
 	<message key="plugins.generic.usageStats.optout.shortDesc"><![CDATA[Мы сохраняем анонимные данные о статистике использования. Пожалуйста прочтите подробности в <a href="{$privacyInfo}">Информации о конфиденциальности</a>.]]></message>	
-	<message key="plugins.generic.usageStats.optout.done">Вы отказались от сбора статистики использования. Пока вы видите это сообщение, статистика о вашем использовании этого сайта не будет собираться. Щелкните на кнопке ниже, чтобы изменить свое решение.</message>
+	<message key="plugins.generic.usageStats.optout.description"><![CDATA[
+		<h3>Общая информация о конфиденциальности</h3>
+		<p>Пожалуйста обратитесь к нашему общему <a href="{$privacyStatementUrl}">Заявлению о конфиденциальности</a>.</p>
+		<h3>Статистика использования</h3>
+		<p>Для того чтобы можно было проанализировать использование и влияние нашего журнала и опубликованных в нем статей, мы собираем и записываем данные о доступе к главной странице журнала, выпускам, статьям, гранкам и дополнительным файлам. Вся собранная информация является анонимной. Никакая личная информация не записывается. IP-адреса делаются анонимными путем хэширования (с помощью <em>SHA 256</em>) в сочетании с <em>безопасной 64-символьной солью</em>, которая автоматически <em>генерируется случайным образом и меняется каждый день</em>. Поэтому IP-адреса не могут быть реконструированы.</p>
+		<p>Следующая информация собирается вместе с анонимными IP-адресами:</p>
+		<ul>
+		<li>Тип доступа (то есть административный)</li>
+		<li>Время запроса</li>
+		<li>Запрошенный URL</li>
+		<li>Код статуса HTTP</li>
+		<li>Браузер</li>
+		</ul>
+		<p>Собранные данные используются только для оценивания. IP-адреса никак не сопоставляются с ID пользователей. Технически невозможно отследить конкретный набор данных по конкретному IP-адресу.</p>]]></message> 
+	<message key="plugins.generic.usageStats.optout.done"><![CDATA[
+		<p>Вы отказались от сбора статистики использования. Пока вы видите это сообщение, статистика о вашем использовании этого сайта не будет собираться. Щелкните на кнопке ниже, чтобы изменить свое решение.</p>]]></message>
 	<message key="plugins.generic.usageStats.optin">Разрешить</message>
 	<message key="plugins.generic.usageStats.optout">Отклонить</message>
-	<message key="plugins.generic.usageStats.optout.cookie">
-		Если вы щелкните ниже на кнопке «Отклонить», ваш браузер получит специальный файл cookie, который не даст собирать статистику до тех пор, пока
-		этот файл будет сохраняться в вашем браузере. Информация об отказе от сбора будет храниться в течение одного года и будет возобновлена на следующий год, как только вы войдете в OJS. 
-		Файл cookie не содержит никакой информации, которая бы позволяла вас идентифицировать. Пожалуйста, обратите внимание, что если вы используете другой браузер или вы удалите файлы cookie из вашего
-		браузера, то вы должны снова отказаться от сбора статистики, так как мы не храним никакую персональную информацию о вас на нашем сервере, чтобы сохранить вашу конфиденциальность.
-	</message>
-	
+	<message key="plugins.generic.usageStats.optout.cookie"><![CDATA[
+		<p>При желании вы можете отказаться от участия в процессе сбора данных. Щелкнув на кнопку «Отклонить» ниже, вы можете явно отказаться от участия в статистическом анализе. При нажатии кнопки «Отклонить» в вашей системе создается файл <em>cookie</em>, который хранит данное решение. Если настройки безопасности вашего браузера автоматически удаляют файлы cookie, вам нужно будет снова нажимать на конпку «Отклонить» при следующем входе в этот журнал. Файл cookie действует только для одного браузера. Если вы используете другой браузер, вам нужно снова нажать кнопку «Отклонить». В этом cookie не хранится никакая личная информация о вас. Cookie с отказом действителен в течение одного года после вашего последнего входа в журнал.</p>
+		<p>Пожалуйста помните, что общие журналы доступа сервера не попадают под ваше решение отказаться от процесса подробной оценки. Пожалуйста, прочтите наше общее <a href="{$privacyStatementUrl}">Заявление о конфиденциальности</a>.</p>]]></message>
 	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
 	<message key="plugins.reports.usageStats.metricType.full">Статистика Open Journal Systems (готовая для COUNTER)</message>
 </locale>

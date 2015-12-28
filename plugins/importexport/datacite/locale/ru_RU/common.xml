@@ -13,6 +13,7 @@
   -->
  
 <locale name="ru_RU" full_name="Русский">
+
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">Для того чтобы использовать этот плагин, пожалуйста, перейдите в категорию плагинов «Плагины открытых идентификаторов», включите и настройте плагин DOI и укажите там верный префикс DOI.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">Плагин не полностью настроен.</message>
 
@@ -41,13 +42,13 @@
 	<message key="plugins.importexport.common.export.unregistered">Экспортировать все незарегистрированные выпуски, статьи и гранки</message>
 	<message key="plugins.importexport.common.export.selectUnregistered">Выбрать незарегистрированные выпуски, статьи и гранки</message>
 	<message key="plugins.importexport.common.export.noUnregistered">Все опубликованные выпуски, статьи и гранки уже были зарегистрированы (или ни одному из них не был присвоен DOI).</message>
-	<message key="plugins.importexport.common.export.issues">Все выпуски</message>
+	<message key="plugins.importexport.common.export.issues">Экспортировать выпуски</message>
 	<message key="plugins.importexport.common.export.selectIssue">Выбрать выпуски</message>
 	<message key="plugins.importexport.common.export.noIssues">На текущий момент нет выпусков с назначенными DOI.</message>
-	<message key="plugins.importexport.common.export.articles">Все статьи</message>
+	<message key="plugins.importexport.common.export.articles">Экспортировать статьи</message>
 	<message key="plugins.importexport.common.export.selectArticle">Выбрать статьи</message>
 	<message key="plugins.importexport.common.export.noArticles">На текущий момент нет статей с назначенными DOI.</message>
-	<message key="plugins.importexport.common.export.galleys">Экспортировать определенные гранки</message>
+	<message key="plugins.importexport.common.export.galleys">Экспортировать гранки</message>
 	<message key="plugins.importexport.common.export.selectGalley">Выбрать гранки</message>
 	<message key="plugins.importexport.common.export.noGalleys">На текущий момент нет гранок с назначенными DOI.</message>
 	<message key="plugins.importexport.common.exportDescription">Щелкните на этой кнопке, чтобы экспортировать XML-данные выбранных объектов в локальный файл без регистрации их в регистрационном агентстве. Это может быть полезно, если вы хотите использовать третью сторону для регистрации DOI для вас или если вы хотите проверить XML перед его регистрацией.</message>
