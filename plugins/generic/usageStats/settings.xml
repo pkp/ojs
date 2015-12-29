@@ -23,7 +23,16 @@
 	</setting>
 	<setting type="string">
 		<name>accessLogFileParseRegex</name>
-		<value>/^(\S+) \S+ \S+ \[(.*?)\] "\S+ (\S+).*?" (\S+) \S+ ".*?" "(.*?)"/</value>
+		<value>/^(?P&lt;ip&gt;\S+) \S+ \S+ \[(?P&lt;date&gt;.*?)\] "\S+ (?P&lt;url&gt;\S+).*?" (?P&lt;returnCode&gt;\S+) \S+ ".*?" "(?P&lt;userAgent&gt;.*?)"/</value>
+	</setting>
+	<setting type="object">
+		<name>optionalColumns</name>
+		<value>
+			<array>
+				<element>city</element>
+				<element>region</element>
+			</array>
+		</value>
 	</setting>
 </plugin_settings>
 

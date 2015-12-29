@@ -318,19 +318,20 @@ class UsageStatsLoader extends FileLoader {
 			$parseRegex = $plugin->getSetting(0, 'accessLogFileParseRegex');
 		} else {
 			// Regex to parse this plugin's log access files.
-			$parseRegex = '/^(\S+) \S+ \S+ "(.*?)" (\S+) (\S+) "(.*?)"/';
+			$parseRegex = '/^(?P<ip>\S+) \S+ \S+ "(?P<date>.*?)" (?P<url>\S+) (?P<returnCode>\S+) "(?P<userAgent>.*?)"/';
 		}
 
 		// The default regex will parse only apache log files in combined format.
-		if (!$parseRegex) $parseRegex = '/^(\S+) \S+ \S+ \[(.*?)\] "\S+ (\S+).*?" (\S+) \S+ ".*?" "(.*?)"/';
+		if (!$parseRegex) $parseRegex = '/^(?P<ip>\S+) \S+ \S+ \[(?P<date>.*?)\] "\S+ (?P<url>\S+).*?" (?P<returnCode>\S+) \S+ ".*?" "(?P<userAgent>.*?)"/';
 
 		$returner = array();
 		if (preg_match($parseRegex, $entry, $m)) {
-			$returner['ip'] = $m[1];
-			$returner['date'] = strtotime($m[2]);
-			$returner['url'] = urldecode($m[3]);
-			$returner['returnCode'] = $m[4];
-			$returner['userAgent'] = $m[5];
+			$associative = count(array_filter(array_keys($m), 'is_string')) > 0;
+			$returner['ip'] = $associative ? $m['ip'] : $m[1];
+			$returner['date'] = strtotime($associative ? $m['date'] : $m[2]);
+			$returner['url'] = urldecode($associative ? $m['url'] : $m[3]);
+			$returner['returnCode'] = $associative ? $m['returnCode'] : $m[4];
+			$returner['userAgent'] = $associative ? $m['userAgent'] : $m[5];
 		}
 
 		return $returner;
