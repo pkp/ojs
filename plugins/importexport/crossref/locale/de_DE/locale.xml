@@ -35,7 +35,7 @@
 	<message key="plugins.importexport.crossref.settings.form.username">Benutzer/innenname</message>
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Bitte geben Sie den Benutzer/innennamen ein, den Sie von CrossRef erhalten haben.</message>
 
-	<message key="plugins.importexport.crossref.export.unregistered">Alle unregistrierten Artikel exportieren</message>
+	<message key="plugins.importexport.crossref.export.unregistered">Unregistrierte Artikel exportieren</message>
 	<message key="plugins.importexport.crossref.export.selectUnregistered">Unregistrierte Artikel auswählen</message>
 	<message key="plugins.importexport.crossref.export.noUnregistered">Alle veröffentlichten Artikel mit DOI sind bereits registriert worden.</message>
 
