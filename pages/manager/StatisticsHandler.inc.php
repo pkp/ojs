@@ -184,7 +184,7 @@ class StatisticsHandler extends ManagerHandler {
 	function generateReport(&$args, &$request) {
 		$this->validate();
 		$this->setupTemplate(true);
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION);
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_OJS_EDITOR);
 
 		$router =& $request->getRouter();
 		$context =& $router->getContext($request); /* @var $context Journal */
