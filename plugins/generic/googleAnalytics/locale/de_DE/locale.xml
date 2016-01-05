@@ -29,6 +29,12 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Klassischer Tracking Code (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Klassischer Tracking-Code (ga.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">Neuer Tracking-Code für Universal Analytics (analytics.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.enableSite">Site-Ebene</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteEnable">Die Einstellungen dieser Zeitschrift auch auf Site-Ebene aktivieren</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteDisable">Momentane Google-Analytics-Nutzung auf Site-Ebene deaktivieren</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteUnchanged">Die Site-Einstellungen unverändert lassen</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.disabled">Deaktiviert</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.enableSiteInstructions">Diese Einstellungen können auch auf Site-Level angewendet werden. Wenn keine Einstellungen für die Site-Ebene gesetzt werden, wird Google Analytics nur auf Zeitschriften-Ebene aktiv sein.</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics Account-Nummer</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">Um die Leser/innenschaft veröffentlichter Artikel per Google Analytics zu verfolgen, geben Sie hier eine Account-Nummer ein (z.B. UA-xxxxxx-x).</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Eine oder mehrere Google-Analytics-Accountnummern, die für Autor/innen des Beitrags eingegeben worden sind, sind nicht gültig.</message>
