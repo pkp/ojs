@@ -68,7 +68,7 @@
 		</ul>
 		<p>The collected data is only used for evaluation purposes. No IP addresses are mapped to user IDs. It is technically impossible to trace a specific set of data to a specific IP address.</p>]]></message> 
 	<message key="plugins.generic.usageStats.optout.done"><![CDATA[
-		<p>You successfully opted out of usage statistics collection. While you see this message no statictics will be collected from your usage of this site. Click the below button to revert your decision.</p>]]></message>
+		<p>You successfully opted out of usage statistics collection. While you see this message no statictics will be collected from your usage of this site. Click the button below to revert your decision.</p>]]></message>
 	<message key="plugins.generic.usageStats.optin">Opt In</message>
 	<message key="plugins.generic.usageStats.optout">Opt Out</message>
 	<message key="plugins.generic.usageStats.optout.cookie"><![CDATA[
