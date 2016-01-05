@@ -26,6 +26,9 @@ class ReportGeneratorForm extends Form {
 	/* @var $_columns array */
 	var $_columns;
 
+	/* @var $_optionalColumns array */
+	var $_optionalColumns;
+
 	/* @var $_objects array */
 	var $_objects;
 
@@ -44,6 +47,7 @@ class ReportGeneratorForm extends Form {
 	/**
 	 * Constructor.
 	 * @param $columns array Report column names.
+	 * @param $optionalColumns array Report column names that are optional.
 	 * @param $objects array Object types.
 	 * @param $fileTypes array File types.
 	 * @param $metricType string The default report metric type.
@@ -54,10 +58,11 @@ class ReportGeneratorForm extends Form {
 	 * @param $reportTemplateIndex int (optional) Current report template index
 	 * from the passed default report templates array.
 	 */
-	function ReportGeneratorForm($columns, $objects, $fileTypes, $metricType, $defaultReportTemplates, $reportTemplateIndex = null) {
+	function ReportGeneratorForm($columns, $optionalColumns, $objects, $fileTypes, $metricType, $defaultReportTemplates, $reportTemplateIndex = null) {
 		parent::Form('controllers/statistics/form/reportGeneratorForm.tpl');
 
 		$this->_columns = $columns;
+		$this->_optionalColumns = $optionalColumns;
 		$this->_objects = $objects;
 		$this->_fileTypes = $fileTypes;
 		$this->_metricType = $metricType;
@@ -207,6 +212,7 @@ class ReportGeneratorForm extends Form {
 		// Reports will always include this column.
 		unset($columnsOptions[STATISTICS_METRIC]);
 		$this->setData('columnsOptions', $columnsOptions);
+		$this->setData('optionalColumns', $this->_optionalColumns);
 
 		return parent::fetch($request);
 	}

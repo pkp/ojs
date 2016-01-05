@@ -166,6 +166,9 @@ class ReportGeneratorHandler extends Handler {
 		$columns = $reportPlugin->getColumns($metricType);
 		$columns = array_flip(array_intersect(array_flip(StatisticsHelper::getColumnNames()), $columns));
 
+		$optionalColumns = $reportPlugin->getOptionalColumns($metricType);
+		$optionalColumns = array_flip(array_intersect(array_flip(StatisticsHelper::getColumnNames()), $optionalColumns));
+
 		$objects = $reportPlugin->getObjectTypes($metricType);
 		$objects = array_flip(array_intersect(array_flip(StatisticsHelper::getObjectTypeString()), $objects));
 
@@ -185,7 +188,7 @@ class ReportGeneratorHandler extends Handler {
 		$reportTemplate = $request->getUserVar('reportTemplate');
 
 		import('controllers.statistics.form.ReportGeneratorForm');
-		$reportGeneratorForm = new ReportGeneratorForm($columns,
+		$reportGeneratorForm = new ReportGeneratorForm($columns, $optionalColumns,
 			$objects, $fileTypes, $metricType, $defaultReportTemplates, $reportTemplate);
 
 		return $reportGeneratorForm;

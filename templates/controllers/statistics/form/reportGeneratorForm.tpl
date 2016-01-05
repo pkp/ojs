@@ -38,7 +38,12 @@
 				{rdelim},
 				fetchRegionsUrl: '{url op=fetchRegions}',
 				regionSelectSelector: '#regions',
-				countrySelectSelector: '#countries'
+				countrySelectSelector: '#countries',
+				optionalColumns: {ldelim}
+					{foreach from=$optionalColumns key=key item=column}
+						{$key|escape:"javascript"}: '{$column|escape:"javascript"}',
+					{/foreach}
+				{rdelim}
 			{rdelim}
 		);
 	{rdelim});
@@ -60,7 +65,7 @@
 			{fbvFormSection inline=true size=$fbvStyles.size.SMALL}
 				{fbvElement type="select" name="reportTemplate" id="reportTemplate" from=$reportTemplateOptions selected=$reportTemplate translate=false}
 			{/fbvFormSection}
-			{fbvFormSection for="aggregationColumns" title="manager.statistics.reports.aggregationColumns" list=true}
+			{fbvFormSection for="aggregationColumns" label="manager.statistics.reports.aggregationColumns" description="manager.statistics.reports.optinoalColumns.description" list=true}
 				{fbvElement type="checkboxgroup" name="aggregationColumns" id="aggregationColumns" from=$aggregationOptions selected=$selectedAggregationOptions translate=false}
 			{/fbvFormSection}
 		{/fbvFormArea}
@@ -89,7 +94,7 @@
 	{capture assign="advancedOptionsContent"}
 		{fbvFormArea id="columnsFormArea" title="manager.statistics.reports.columns"}
 			<p>{translate key="manager.statistics.reports.columns.description"}</p>
-			{fbvFormSection inline=true size=$fbvStyles.size.SMALL}
+			{fbvFormSection description="manager.statistics.reports.optinoalColumns.description" inline=true size=$fbvStyles.size.MEDIUM}
 				{fbvElement type="select" name="columns[]" id="columns" from=$columnsOptions multiple="multiple" selected=$columns translate=false required=true}
 			{/fbvFormSection}
 		{/fbvFormArea}
@@ -147,15 +152,17 @@
 		{/fbvFormArea}
 		
 		{fbvFormArea id="orderByFormArea" title="manager.statistics.reports.orderBy"}
-			{foreach from=$orderColumnsOptions item=item key=key}
-				{fbvFormSection inline=true size=$fbvStyles.size.SMALL}
-					{fbvElement type="select" name="orderByColumn[]" id="orderByColumn-$key" from=$orderColumnsOptions defaultValue=0 defaultLabel="manager.statistics.reports.columns"|translate selected=$orderByColumn translate=false}
-				{/fbvFormSection}
-				{fbvFormSection inline=true size=$fbvStyles.size.SMALL}
-					{fbvElement type="select" name="orderByDirection[]" id="orderByDirection-$key" from=$orderDirectionsOptions defaultValue=0 defaultLabel="manager.statistics.reports.orderDir"|translate selected=$orderByDirection translate=false}
-				{/fbvFormSection}
-				<div style="clear:both"></div>
-			{/foreach}
+			{fbvFormSection description="manager.statistics.reports.optinoalColumns.description"}
+				{foreach from=$orderColumnsOptions item=item key=key}
+					{fbvFormSection inline=true size=$fbvStyles.size.SMALL}
+						{fbvElement type="select" name="orderByColumn[]" id="orderByColumn-$key" from=$orderColumnsOptions defaultValue=0 defaultLabel="manager.statistics.reports.columns"|translate selected=$orderByColumn translate=false}
+					{/fbvFormSection}
+					{fbvFormSection inline=true size=$fbvStyles.size.SMALL}
+						{fbvElement type="select" name="orderByDirection[]" id="orderByDirection-$key" from=$orderDirectionsOptions defaultValue=0 defaultLabel="manager.statistics.reports.orderDir"|translate selected=$orderByDirection translate=false}
+					{/fbvFormSection}
+					<div style="clear:both"></div>
+				{/foreach}
+			{/fbvFormSection}
 		{/fbvFormArea}
 	{/capture}
 	
