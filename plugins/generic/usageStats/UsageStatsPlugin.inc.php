@@ -43,6 +43,19 @@ class UsageStatsPlugin extends GenericPlugin {
 
 
 	//
+	// Public methods.
+	//
+	/**
+	 * Get the report plugin object that implements
+	 * the metric type details.
+	 */
+	function getReportPlugin() {
+		$this->import('UsageStatsReportPlugin');
+		return new UsageStatsReportPlugin();
+	}
+
+
+	//
 	// Implement methods from PKPPlugin.
 	//
 	/**
@@ -190,9 +203,7 @@ class UsageStatsPlugin extends GenericPlugin {
 		$plugin = null;
 		$category = $args[0];
 		if ($category == 'reports') {
-			$this->import('UsageStatsReportPlugin');
-			$plugin = new UsageStatsReportPlugin();
-		}
+			$plugin = $this->getReportPlugin();		}
 		if ($category ==  'blocks' && $this->getSetting(CONTEXT_ID_NONE, 'dataPrivacyOption')) {
 			$this->import('UsageStatsOptoutBlockPlugin');
 			$plugin = new UsageStatsOptoutBlockPlugin($this->getName());
