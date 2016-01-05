@@ -36,7 +36,7 @@ class RelatedItemsBlockPlugin extends BlockPlugin {
 	 * @return array
 	 */
 	function getSupportedContexts() {
-		return array(BLOCK_CONTEXT_RIGHT_SIDEBAR);
+		return array(BLOCK_CONTEXT_LEFT_SIDEBAR);
 	}
 
 	/**
