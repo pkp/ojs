@@ -529,7 +529,7 @@
 	<message key="manager.statistics.reports.objectType">Object Type</message>
 	<message key="manager.statistics.reports.objectId">Object id</message>
 	<message key="manager.statistics.reports.objectId.label">Define one or more object ids, comma separated (e.g. 1,2,3,4,5).</message>
-	<message key="manager.statistics.reports.today">Today</message>
+	<message key="manager.statistics.reports.yesterday">Yesterday</message>
 	<message key="manager.statistics.reports.currentMonth">Current month</message>
 	<message key="manager.statistics.reports.orderBy">Order by</message>
 	<message key="manager.statistics.reports.orderDir">Direction</message>

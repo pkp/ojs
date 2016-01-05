@@ -20,7 +20,7 @@
 				columnsSelector: '#columns', 
 				timeFilterWrapperSelector: '#reportTimeFilterArea',
 				currentMonthSelector: '#currentMonth',
-				currentDaySelector: '#today',
+				yesterdaySelector: '#yesterday',
 				rangeByMonthSelector: '#rangeByMonth',
 				rangeByDaySelector: '#rangeByDay',
 				startDayElementSelector: "select[name='dateStartDay']",
@@ -68,7 +68,7 @@
 	{if $showMonthInputs || $showDayInputs}
 		{fbvFormArea id="reportTimeFilterArea" title="manager.statistics.reports.filters.byTime"}			
 			{fbvFormSection for="currentMonth" size=$fbvStyles.size.SMALL list=true}
-				{fbvElement type="radio" name="timeFilterOption" value=$smarty.const.TIME_FILTER_OPTION_CURRENT_DAY id="today" checked=$today label="manager.statistics.reports.today"}
+				{fbvElement type="radio" name="timeFilterOption" value=$smarty.const.TIME_FILTER_OPTION_YESTERDAY id="yesterday" checked=$yesterday label="manager.statistics.reports.yesterday"}
 				{fbvElement type="radio" name="timeFilterOption" value=$smarty.const.TIME_FILTER_OPTION_CURRENT_MONTH id="currentMonth" checked=$currentMonth label="manager.statistics.reports.currentMonth"}
 			{/fbvFormSection}
 			{fbvFormSection title="manager.statistics.reports.filters.byTime.dimensionSelector" list=true size=$fbvStyles.size.SMALL inline=true}

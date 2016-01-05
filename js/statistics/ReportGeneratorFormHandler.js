@@ -38,7 +38,7 @@
 	 *   columnsSelector: string,
 	 *   aggregationOptionsSelector: string,
 	 *   currentMonthSelector: string,
-	 *   currentDaySelector: string,
+	 *   yesterdaySelector: string,
 	 *   dateRangeWrapperSelector: string,
 	 *   fetchArticlesUrl: string,
 	 *   articleSelectSelector: string,
@@ -103,7 +103,7 @@
 		}
 
 		// Add click handler to current time filter selectors.
-		$currentDaySelectElement = $(options.currentDaySelector,
+		$currentDaySelectElement = $(options.yesterdaySelector,
 				this.getHtmlElement());
 		$currentTimeElements = $(options.currentMonthSelector,
 				this.getHtmlElement()).add($currentDaySelectElement);

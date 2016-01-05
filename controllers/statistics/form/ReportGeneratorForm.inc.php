@@ -16,7 +16,7 @@
 
 import('lib.pkp.classes.form.Form');
 
-define('TIME_FILTER_OPTION_CURRENT_DAY', 0);
+define('TIME_FILTER_OPTION_YESTERDAY', 0);
 define('TIME_FILTER_OPTION_CURRENT_MONTH', 1);
 define('TIME_FILTER_OPTION_RANGE_DAY', 2);
 define('TIME_FILTER_OPTION_RANGE_MONTH', 3);
@@ -127,8 +127,8 @@ class ReportGeneratorForm extends Form {
 			$timeFilterSelectedOption = TIME_FILTER_OPTION_CURRENT_MONTH;
 		}
 		switch ($timeFilterSelectedOption) {
-			case TIME_FILTER_OPTION_CURRENT_DAY:
-				$this->setData('today', true);
+			case TIME_FILTER_OPTION_YESTERDAY:
+				$this->setData('yesterday', true);
 				break;
 			case TIME_FILTER_OPTION_CURRENT_MONTH:
 			default:
@@ -268,8 +268,8 @@ class ReportGeneratorForm extends Form {
 
 		$timeFilterOption = $this->getData('timeFilterOption');
 		switch($timeFilterOption) {
-			case TIME_FILTER_OPTION_CURRENT_DAY:
-				$filter[STATISTICS_DIMENSION_MONTH] = STATISTICS_CURRENT_DAY;
+			case TIME_FILTER_OPTION_YERSTERDAY:
+				$filter[STATISTICS_DIMENSION_DAY] = STATISTICS_YESTERDAY;
 				break;
 			case TIME_FILTER_OPTION_CURRENT_MONTH:
 				$filter[STATISTICS_DIMENSION_MONTH] = STATISTICS_CURRENT_MONTH;
@@ -289,8 +289,8 @@ class ReportGeneratorForm extends Form {
 					// only one specific date. Use the start time.
 					$filter[STATISTICS_DIMENSION_MONTH] = $startDate;
 				} else {
-					$filter[STATISTICS_DIMENSION_MONTH]['from'] = $startDate;
-					$filter[STATISTICS_DIMENSION_MONTH]['to'] = $endDate;
+					$filter[STATISTICS_DIMENSION_DAY]['from'] = $startDate;
+					$filter[STATISTICS_DIMENSION_DAY]['to'] = $endDate;
 				}
 				break;
 			default:
