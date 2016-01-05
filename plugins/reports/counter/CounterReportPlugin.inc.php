@@ -140,21 +140,6 @@ class CounterReportPlugin extends ReportPlugin {
 	}
 
 	/**
-	 * Return the report path
-	 * @return string
-	 */
-	function getReleasePath() {
-		return $this->getClassPath().DIRECTORY_SEPARATOR.'releases';
-	}
-
-	/**
-	 * @see PKPPlugin::isSitePlugin()
-	 */
-	function isSitePlugin() {
-		return true;
-	}
-
-	/**
 	 * @see ReportPlugin::setBreadcrumbs()
 	 */
 	function setBreadcrumbs() {
@@ -185,10 +170,6 @@ class CounterReportPlugin extends ReportPlugin {
 		// We need these constants
 		import('classes.statistics.StatisticsHelper');
 
-		if (!Validation::isSiteAdmin()) {
-			Validation::redirectLogin();
-		}
-
 		$this->setBreadcrumbs();
 		$available = $this->getValidReports();
 		$years = $this->_getYears();
@@ -199,6 +180,10 @@ class CounterReportPlugin extends ReportPlugin {
 				case 'report':
 				case 'reportxml':
 					// Legacy COUNTER Release 3
+					if (!Validation::isSiteAdmin()) {
+						// Legacy reports are site-wide
+						Validation::redirectLogin();
+					}
 					import('plugins.reports.counter.classes.LegacyJR1');
 					$r3jr1 = new LegacyJR1($this->getTemplatePath());
 					$r3jr1->display($request);
@@ -253,6 +238,8 @@ class CounterReportPlugin extends ReportPlugin {
 		$templateManager->assign('available', $available);
 		$templateManager->assign('release', $this->getCurrentRelease());
 		$templateManager->assign('years', $years);
+		// legacy reports are site-wide, so only site admins have access
+		$templateManager->assign('showLegacy', Validation::isSiteAdmin());
 		if (!empty($legacyYears)) $templateManager->assign('legacyYears', $legacyYears);
 		$templateManager->display($this->getTemplatePath() . 'index.tpl');
 	}

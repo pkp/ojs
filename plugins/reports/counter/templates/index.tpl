@@ -22,6 +22,7 @@
 	{/foreach}
 </ul>
 
+{if $showLegacy}
 <h3>{translate key="plugins.reports.counter.olderReports"}</h3>
 <p>{translate key="plugins.reports.counter.1a.introduction"}</p>
 <ul>
@@ -35,6 +36,7 @@
 		<li>{translate key="plugins.reports.counter.1a.title"}{foreach from=$legacyYears item=year}&nbsp;&nbsp;<a href="{url path="CounterReportPlugin" type="report" year=$year useOldCounterStats=true}">{$year|escape}</a>{/foreach}</li>
 		<li>{translate key="plugins.reports.counter.1a.xml"} {foreach from=$legacyYears item=year}&nbsp;&nbsp;<a href="{url path="CounterReportPlugin" type="reportxml" year=$year useOldCounterStats=true}">{$year|escape}</a>{/foreach}</li>
 	</ul>
+{/if}
 {/if}
 
 {include file="common/footer.tpl"}
