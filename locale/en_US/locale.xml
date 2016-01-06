@@ -26,7 +26,8 @@
 	-->
 
 	<!-- common -->
-	<message key="context.select">Select a Journal...</message>
+	<message key="context.current">Current Journal:</message>
+	<message key="context.select">Switch to another journal:</message>
 
 	<!-- Categories -->
 	<message key="navigation.categories">Categories</message>
