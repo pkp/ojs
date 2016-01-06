@@ -245,7 +245,6 @@ class MetricsDAO extends DAO {
 		$isArticleFile = false;
 		switch($recordToStore['assoc_type']) {
 			case ASSOC_TYPE_GALLEY:
-			case ASSOC_TYPE_SUPP_FILE:
 				if ($recordToStore['assoc_type'] == ASSOC_TYPE_GALLEY) {
 					$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 					$submissionFile = $galleyDao->getById($recordToStore['assoc_id']);
