@@ -13,6 +13,6 @@
 <version>
 	<application>counterReport</application>
 	<type>plugins.reports</type>
-	<release>1.0.0.0</release>
-	<date>2013-09-01</date>
+	<release>1.1.0.0</release>
+	<date>2015-01-11</date>
 </version>

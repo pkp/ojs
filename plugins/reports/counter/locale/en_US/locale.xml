@@ -12,9 +12,15 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.reports.counter.description"><![CDATA[The COUNTER plugin allows reporting on site activity, using the <a href="http://www.projectcounter.org">COUNTER standard</a>. These reports alone do not make a journal COUNTER compliant. To offer COUNTER compliance, review the requirements at the Project COUNTER website.]]></message>
+	<message key="plugins.reports.counter.description"><![CDATA[The COUNTER plugin allows reporting on journal activity, using the <a href="http://www.projectcounter.org">COUNTER standard</a>. These reports alone do not make a journal COUNTER compliant. To offer COUNTER compliance, review the requirements at the Project COUNTER website.]]></message>
 	<message key="plugins.reports.counter">COUNTER Reports</message>
-	<message key="plugins.reports.counter.1a.introduction">These links generate COUNTER-ready reports based on the obsolete Release 3. Use the later Releases instead, when possible.</message>
+	<message key="plugins.reports.counter.release">COUNTER Release</message>
+	<message key="plugins.reports.counter.olderReports">Older Site Reports</message>
+	<message key="plugins.reports.counter.error.badParameters">The report parameters were invalid.</message>
+	<message key="plugins.reports.counter.error.badRequest">The report request is invalid.</message>
+	<message key="plugins.reports.counter.error.noResults">No results were found for this report.</message>
+	<message key="plugins.reports.counter.error.noXML">The results could not be formatted as XML.</message>
+	<message key="plugins.reports.counter.1a.introduction">These links generate COUNTER-ready reports based on the obsolete Release 3.0. This report spans all journals on the site. Use the latest Release instead, when possible.</message>
 	<message key="plugins.reports.counter.1a.name">COUNTER Report JR1 (R3)</message>
 	<message key="plugins.reports.counter.1a.xml">XML version</message>
 	<message key="plugins.reports.counter.1a.description">COUNTER Journal Report 1 (R3): Full-Text Article Requests by Month and Journal</message>
@@ -32,4 +38,5 @@
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Total for all journals</message>
 	<message key="plugins.reports.counter.1a.anonymous">anonymous</message>
 	<message key="plugins.reports.counter.legacyStats">The links below generate obsolete reports using the old plugin data, which is not COUNTER-ready. If you want to generate current COUNTER reports using the new OJS COUNTER metric type, use the links above.</message>
+	<message key="plugins.reports.counter.allCustomers">All Customers</message>
 </locale>
