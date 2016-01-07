@@ -19,3 +19,6 @@
 [submodule "plugins/viewableFiles/lensGalley"]
 	path = plugins/viewableFiles/lensGalley
 	url = https://github.com/asmecher/lensGalley
+[submodule "docs/manual"]
+	path = docs/manual
+	url = https://git.gitbook.com/pkp/ojs3.git

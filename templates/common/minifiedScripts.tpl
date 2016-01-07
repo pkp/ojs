@@ -65,6 +65,7 @@
 <script src="{$baseUrl}/lib/pkp/js/controllers/RangeSliderHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/RevealMoreHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/NotificationHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/controllers/HelpPanelHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/form/FormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/form/DropdownHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/form/AjaxFormHandler.js"></script>
