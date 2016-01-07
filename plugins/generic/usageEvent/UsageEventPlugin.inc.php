@@ -44,11 +44,18 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 				case 'TemplateManager::display':
 					$page = $router->getRequestedPage($request);
 					$op = $router->getRequestedOp($request);
+					$args = $router->getRequestedArgs($request);
 
 					$wantedPages = array('issue', 'article');
 					$wantedOps = array('index', 'view');
 
 					if (!in_array($page, $wantedPages) || !in_array($op, $wantedOps)) break;
+
+					// View requests with 1 argument might relate to journal
+					// or article. With more than 1 is related with other objects
+					// that we are not interested in or that are counted using a
+					// different hook.
+					if ($op == 'view' && count($args) > 1) break;
 
 					$journal = $templateMgr->get_template_vars('currentContext');
 					$issue = $templateMgr->get_template_vars('issue');
@@ -84,8 +91,8 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 					// Issue galley.
 				case 'IssueHandler::download':
 					$assocType = ASSOC_TYPE_ISSUE_GALLEY;
-					$galley = $hookArgs[2];
-					$issue = $hookArgs[1];
+					$issue = $hookArgs[0];
+					$galley = $hookArgs[1];
 					$canonicalUrlOp = 'download';
 					$canonicalUrlParams = array($issue->getId(), $galley->getId());
 					$idParams = array('i' . $issue->getId(), 'f' . $galley->getId());
@@ -96,13 +103,15 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 					// Article file.
 				case 'ArticleHandler::download':
 					$assocType = ASSOC_TYPE_SUBMISSION_FILE;
-					$file = $hookArgs[2];
-					$article = $hookArgs[1];
+					$article = $hookArgs[0];
+					$galley = $hookArgs[1];
+					$fileId = $hookArgs[2];
 					$canonicalUrlOp = 'download';
-					$canonicalUrlParams = array($article->getId(), $file->getAssocId(), $file->getFileId());
-					$idParams = array('a' . $article->getId(), 'f' . $file->getId());
+					$canonicalUrlParams = array($article->getId(), $galley->getId(), $fileId);
+					$idParams = array('a' . $article->getId(), 'g' . $galley->getId(), 'f' . $fileId);
 					$downloadSuccess = false;
-					$pubObject = $file;
+					$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+					$pubObject = $submissionFileDao->getLatestRevision($fileId);
 					break;
 				default:
 					// Why are we called from an unknown hook?
@@ -110,6 +119,7 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 			}
 		}
 
+		return array($pubObject, $downloadSuccess, $assocType, $idParams, $canonicalUrlPage, $canonicalUrlOp, $canonicalUrlParams);
 	}
 
 	/**
