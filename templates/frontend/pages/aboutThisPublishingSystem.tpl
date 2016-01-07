@@ -28,4 +28,4 @@
 
 </div><!-- .page -->
 
-{include file="frontend/components/footer.tpl"}
+{include file="common/frontend/footer.tpl"}

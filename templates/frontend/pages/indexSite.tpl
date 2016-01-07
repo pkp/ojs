@@ -43,4 +43,4 @@
 	<div id="journalListPageLinks">{page_links anchor="journals" name="journals" iterator=$journals}</div>
 </div><!-- .page -->
 
-{include file="frontend/components/footer.tpl"}
+{include file="common/frontend/footer.tpl"}
