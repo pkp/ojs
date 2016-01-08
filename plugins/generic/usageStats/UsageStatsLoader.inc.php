@@ -113,6 +113,24 @@ class UsageStatsLoader extends PKPUsageStatsLoader {
 	}
 
 	/**
+	 * @copydoc PKPUsageStatsLoader::getFileType()
+	 */
+	protected function getFileTypeFromAssoc($assocType, $assocId) {
+		$type = parent::getFileTypeFromAssoc($assocType, $assocId);
+		if (!$type) {
+			switch ($assocType) {
+				case ASSOC_TYPE_ISSUE_GALLEY:
+					$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
+					$issueGalley = $issueGalleyDao->getById($assocId);
+					$type = $this->getFileTypeFromFile($issueGalley);
+					break;
+			}
+		}
+
+		return $type;
+	}
+
+	/**
 	 * @see PKPUsageStatsLoader::getMetricType()
 	 */
 	protected function getMetricType() {
