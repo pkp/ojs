@@ -511,7 +511,8 @@
 	</message>
 	<message key="manager.statistics.reports">Генератор отчетов</message>
 	<message key="manager.statistics.reports.aggregationColumns">Агрегировать статистику по:</message>
-	<message key="manager.statistics.reports.defaultReportTemplates">Щаблоны отчетов по умолчанию</message>
+	<message key="manager.statistics.reports.optinoalColumns.description">Элементы набранные курсивом и отмеченные * представляют собой данные, которые являются необязательными для установленного сейчас способа подсчета статистики в OJS (тип метрики). Вы можете получить эти данные или не получить в зависимости от настроек вашего плагина статистики.</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">Шаблоны отчетов по умолчанию</message>
 	<message key="manager.statistics.reports.defaultReport.articleDownloads">Скачивания файла статьи</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">Просмотры страницы аннотации статьи</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Скачивания и просмотры аннотации статьи</message>
@@ -530,7 +531,7 @@
 	<message key="manager.statistics.reports.objectType">Тип объекта</message>
 	<message key="manager.statistics.reports.objectId">ID объекта</message>
 	<message key="manager.statistics.reports.objectId.label">Задайте один или несколько ID объектов, разделяя их запятыми (например, 1,2,3,4,5).</message>
-	<message key="manager.statistics.reports.today">Сегодня</message>
+	<message key="manager.statistics.reports.yesterday">Вчера</message>
 	<message key="manager.statistics.reports.currentMonth">Текущий месяц</message>
 	<message key="manager.statistics.reports.orderBy">Сортировка по</message>
 	<message key="manager.statistics.reports.orderDir">Направление</message>

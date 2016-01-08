@@ -36,7 +36,7 @@
 	<message key="plugins.importexport.crossref.settings.form.username">Имя пользователя</message>
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Пожалуйста, введите имя пользователя, которое вы получили от CrossRef.</message>
 
-	<message key="plugins.importexport.crossref.export.unregistered">Незарегистрированные статьи</message>
+	<message key="plugins.importexport.crossref.export.unregistered">Экспорт незарегистрированных статей</message>
 	<message key="plugins.importexport.crossref.export.selectUnregistered">Выбрать незарегистрированные статьи</message>
 	<message key="plugins.importexport.crossref.export.noUnregistered">Все опубликованные статьи уже были зарегистрированы (или ни одной из них не был присвоен DOI).</message>
 
@@ -46,4 +46,5 @@
 ]]></message>
 
 	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">Дата опубликования отсутствует для статьи с ID {$param}.</message>
+	<message key="plugins.importexport.crossref.senderTask.name">Задача автоматической регистрации CrossRef</message>
 </locale>
