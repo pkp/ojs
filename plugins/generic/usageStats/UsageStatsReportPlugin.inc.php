@@ -104,7 +104,7 @@ class UsageStatsReportPlugin extends PKPUsageStatsReportPlugin {
 
 		// Article file downloads.
 		$columns = array(STATISTICS_DIMENSION_ASSOC_TYPE,
-			STATISTICS_DIMENSION__ID,
+			STATISTICS_DIMENSION_ASSOC_ID,
 			STATISTICS_DIMENSION_SUBMISSION_ID,
 			STATISTICS_DIMENSION_MONTH,
 			STATISTICS_DIMENSION_COUNTRY);
@@ -113,17 +113,17 @@ class UsageStatsReportPlugin extends PKPUsageStatsReportPlugin {
 			'metricType' => $metricType, 'columns' => $columns, 'filter' => $filter,
 			'aggregationColumns' => $aggregationColumns));
 
-		// Monograph abstract views.
+		// Article abstract views.
 		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_SUBMISSION);
 		array_unshift($reports, array('nameLocaleKey' => 'manager.statistics.reports.defaultReport.monographAbstract',
 			'metricType' => $metricType, 'columns' => $columns, 'filter' => $filter,
 			'aggregationColumns' => $aggregationColumns));
 
-		// Series main page views.
+		// Issue main page views.
 		$columns = array(STATISTICS_DIMENSION_ASSOC_TYPE,
 			STATISTICS_DIMENSION_MONTH,
 			STATISTICS_DIMENSION_COUNTRY);
-		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_SERIES);
+		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_ISSUE);
 		array_unshift($reports, array('nameLocaleKey' => 'manager.statistics.reports.defaultReport.seriesIndexPageViews',
 			'metricType' => $metricType, 'columns' => $columns, 'filter' => $filter,
 			'aggregationColumns' => $aggregationColumns));

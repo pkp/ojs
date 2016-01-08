@@ -29,7 +29,7 @@ class StatisticsHelper extends PKPStatisticsHelper {
 		switch ($column) {
 			case STATISTICS_DIMENSION_SUBMISSION_ID:
 				return __('article.article');
-			case STATISTICS_DIMENSION_SECTION_ID:
+			case STATISTICS_DIMENSION_PKP_SECTION_ID:
 				return __('section.section');
 			case STATISTICS_DIMENSION_CONTEXT_ID:
 				return __('context.context');
