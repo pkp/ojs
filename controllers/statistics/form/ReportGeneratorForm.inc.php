@@ -16,7 +16,7 @@
 
 import('lib.pkp.classes.form.Form');
 
-define('TIME_FILTER_OPTION_CURRENT_DAY', 0);
+define('TIME_FILTER_OPTION_YESTERDAY', 0);
 define('TIME_FILTER_OPTION_CURRENT_MONTH', 1);
 define('TIME_FILTER_OPTION_RANGE_DAY', 2);
 define('TIME_FILTER_OPTION_RANGE_MONTH', 3);
@@ -25,6 +25,9 @@ class ReportGeneratorForm extends Form {
 
 	/* @var $_columns array */
 	var $_columns;
+
+	/* @var $_optionalColumns array */
+	var $_optionalColumns;
 
 	/* @var $_objects array */
 	var $_objects;
@@ -44,6 +47,7 @@ class ReportGeneratorForm extends Form {
 	/**
 	 * Constructor.
 	 * @param $columns array Report column names.
+	 * @param $optionalColumns array Report column names that are optional.
 	 * @param $objects array Object types.
 	 * @param $fileTypes array File types.
 	 * @param $metricType string The default report metric type.
@@ -54,10 +58,11 @@ class ReportGeneratorForm extends Form {
 	 * @param $reportTemplateIndex int (optional) Current report template index
 	 * from the passed default report templates array.
 	 */
-	function ReportGeneratorForm($columns, $objects, $fileTypes, $metricType, $defaultReportTemplates, $reportTemplateIndex = null) {
+	function ReportGeneratorForm($columns, $optionalColumns, $objects, $fileTypes, $metricType, $defaultReportTemplates, $reportTemplateIndex = null) {
 		parent::Form('controllers/statistics/form/reportGeneratorForm.tpl');
 
 		$this->_columns = $columns;
+		$this->_optionalColumns = $optionalColumns;
 		$this->_objects = $objects;
 		$this->_fileTypes = $fileTypes;
 		$this->_metricType = $metricType;
@@ -127,8 +132,8 @@ class ReportGeneratorForm extends Form {
 			$timeFilterSelectedOption = TIME_FILTER_OPTION_CURRENT_MONTH;
 		}
 		switch ($timeFilterSelectedOption) {
-			case TIME_FILTER_OPTION_CURRENT_DAY:
-				$this->setData('today', true);
+			case TIME_FILTER_OPTION_YESTERDAY:
+				$this->setData('yesterday', true);
 				break;
 			case TIME_FILTER_OPTION_CURRENT_MONTH:
 			default:
@@ -207,6 +212,7 @@ class ReportGeneratorForm extends Form {
 		// Reports will always include this column.
 		unset($columnsOptions[STATISTICS_METRIC]);
 		$this->setData('columnsOptions', $columnsOptions);
+		$this->setData('optionalColumns', $this->_optionalColumns);
 
 		return parent::fetch($request);
 	}
@@ -268,8 +274,8 @@ class ReportGeneratorForm extends Form {
 
 		$timeFilterOption = $this->getData('timeFilterOption');
 		switch($timeFilterOption) {
-			case TIME_FILTER_OPTION_CURRENT_DAY:
-				$filter[STATISTICS_DIMENSION_MONTH] = STATISTICS_CURRENT_DAY;
+			case TIME_FILTER_OPTION_YERSTERDAY:
+				$filter[STATISTICS_DIMENSION_DAY] = STATISTICS_YESTERDAY;
 				break;
 			case TIME_FILTER_OPTION_CURRENT_MONTH:
 				$filter[STATISTICS_DIMENSION_MONTH] = STATISTICS_CURRENT_MONTH;
@@ -289,8 +295,8 @@ class ReportGeneratorForm extends Form {
 					// only one specific date. Use the start time.
 					$filter[STATISTICS_DIMENSION_MONTH] = $startDate;
 				} else {
-					$filter[STATISTICS_DIMENSION_MONTH]['from'] = $startDate;
-					$filter[STATISTICS_DIMENSION_MONTH]['to'] = $endDate;
+					$filter[STATISTICS_DIMENSION_DAY]['from'] = $startDate;
+					$filter[STATISTICS_DIMENSION_DAY]['to'] = $endDate;
 				}
 				break;
 			default:

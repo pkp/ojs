@@ -1284,6 +1284,8 @@ a.request_review { background-image:url(../lib/pkp/templates/images/structure/gr
 .ui-dialog-buttonpane { border-color:#f7f5f4; }
 #reportGeneratorContainer .pkp_form #columns, #reportGeneratorContainer .pkp_form #issues, #reportGeneratorContainer .pkp_form #articles, #reportGeneratorContainer .pkp_form #countries, #reportGeneratorContainer .pkp_form #regions { height:150px; }
 #reportGeneratorContainer .pkp_form #reportTimeFilterArea .selectMenu { width:auto; }
+#reportGeneratorContainer .pkp_form .optionalColumn { font-style:italic; }
+#reportGeneratorContainer .pkp_form .optionalColumn:after { content:"*"; }
 .pkp_controllers_extrasOnDemand .ui-icon { float:left; }
 .pkp_controllers_extrasOnDemand .toggleExtras {
   margin-top:15px;

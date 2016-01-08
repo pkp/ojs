@@ -77,10 +77,21 @@ class ReportPlugin extends Plugin {
 	 * Get the columns used in reports by the passed
 	 * metric type.
 	 * @param $metricType string One of the values returned from getMetricTypes()
-	 * @return null|array Return an array with STATISTICS_DIMENSION_...
+	 * @return array Return an array with STATISTICS_DIMENSION_...
 	 * constants.
 	 */
 	function getColumns($metricType) {
+		return array();
+	}
+
+	/**
+	 * Get optional columns that are not required for this report
+	 * to implement the passed metric type.
+	 * @param $metricType string One of the values returned from getMetricTypes()
+	 * @return array Return an array with STATISTICS_DIMENSION_...
+	 * constants.
+	 */
+	function getOptionalColumns($metricType) {
 		return array();
 	}
 

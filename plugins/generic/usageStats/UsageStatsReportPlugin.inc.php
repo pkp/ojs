@@ -140,6 +140,17 @@ class UsageStatsReportPlugin extends ReportPlugin {
 			ASSOC_TYPE_GALLEY
 		);
 	}
+
+	/**
+	 * @see ReportPlugin::getOptionalColumns()
+	 */
+	function getOptionalColumns($metricType) {
+		if ($metricType !== OJS_METRIC_TYPE_COUNTER) return array();
+		return array(
+			STATISTICS_DIMENSION_CITY,
+			STATISTICS_DIMENSION_REGION
+		);
+	}
 }
 
 ?>

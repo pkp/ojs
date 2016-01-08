@@ -18,8 +18,21 @@
 	<message key="plugins.generic.usageStats.settings.logParseRegex">Regex zum Parsen der Logdateien</message>
 	<message key="plugins.generic.usageStats.settings.logParseRegex.description">Der standardmäßig benutzte reguläre Ausdruck kann Apache-Logdateien im Combined-Format und außerdem die Logdateien des Plug-Ins parsen. Wenn Ihre Zugriffsprotokolldateien in einem anderen Format sind, müssen Sie einen regulären Ausdruck einfügen, mit dem die Dateien geparst werden können und der die erwarteten Werte liefert. Vgl. UsageStatsLoader::_getDataFromLogEntry() für weitere Informationen.</message>
 	<message key="plugins.generic.usageStats.settings.saved">Einstellungen des Zugriffsstatistik-Plug-Ins gespeichert</message>
-	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Aktivieren Sie diese Option, um eine Verson des Plug-Ins zu benutzen, die Datenschutzregeln berücksichtigt, indem nur gehashte IP-Adressen protokolliert werden, Benutzer/innen über das Tracking informiert werden und eine Opt-Out-Möglichkeit für Nutzer/innen angeboten wird. Hinweis: Bei Nutzung dieser Option können Sie nicht die Geo-Funktionalitäten des Plug-Ins benutzen.</message>
 	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Datenschutz gewährleisten</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath">Pfad zum Salt (für die Anonymisierung)</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath.invalid">Die Salt-Datei ist nicht schreibbar.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements">Um den Datenschutz zu gewährleisten, müssen Sie eine Datei angeben, die für den Webnutzer les- und schreibbar ist und die einen zufällig erzeugten Salt-Wert enthält. Diese Datei darf NICHT nicht im Backup gesichert werden, um den Datenschutz zu garantieren. Das Salt wird zufällig mittels einer der folgenden Methoden erzeugt: durch die Funktion mcrypt_create_iv, die PHP-mycrypt benötigt; die Funktion openssl_random_pseudo_bytes, die PHP-openssl benötigt; die Datei /dev/urandom, die nur in *nix-Systemen existiert, oder die Funktion function mt_rand, die nicht kryptografisch sicher ist. Deshalb sollten Sie, wenn Sie einen Windows-Server nutzen, sicherstellen, dass Sie in PHP entweder mcrypt oder openssl aktiviert haben, um einen kryptografisch sicheren Salt benutzen.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Aktivieren Sie diese Option, um eine Verson des Plug-Ins zu benutzen, die Datenschutzregeln berücksichtigt, indem nur gehashte IP-Adressen protokolliert werden, Benutzer/innen über das Tracking informiert werden und eine Opt-Out-Möglichkeit für Nutzer/innen angeboten wird. Hinweis: Bei Nutzung dieser Option können Sie nicht die Geo-Funktionalitäten des Plug-Ins benutzen.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requiresSalt">Um die Datenschutz-Option zu aktivieren, wird eine Salt-Datei benötigt.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesCity">Die Datenschutz-Option zu aktivieren, schließt die Erhebung von Statistiken zu "Stadt" aus.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesRegion">Die Datenschutz-Option zu aktivieren, schließt die Erhebung von Statistiken zu "Region" aus.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Datenschutz-Option aktivieren</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns">Optionale statistische Informationen</message>
+	<message key="plugins.generic.usageStats.settings.archives">Archive</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives.description">Aktivieren Sie diese Option, um archivierte Logdateien mit gzip zu komprimieren (Sie werden Einstellungen zu gzip in config.inc.php eintragen müssen.). Wenn Sie eine stark genutzte Website haben, ist die Aktivierung dieser Option anzuraten, damit Speicherplatz gespart wird.</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives">Archive komprimieren</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.description">Die Sammlung folgender optionaler Daten aktivieren oder deaktivieren.  Dies beeinflusst, welche Berichte Sie erhalten können und wie groß die Datenbank wird. Ändern Sie diese Einstellungen NICHT, wenn Sie nicht genau wissen, was Sie tun.</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.cityRequiresRegion">Die optionale Spalte "Stadt" erfordert die optionale Spalte "Region".</message>
 
 	<message key="plugins.generic.usageStats.usageStatsLoaderName">Nutzungsstatistik-Fileloader</message>
 	<message key="plugins.generic.usageStats.openFileFailed">Die Datei {$file} konnte nicht geöffnet werden und wurde zurückgewiesen.</message>
@@ -36,6 +49,10 @@
 	<message key="plugins.reports.usageStats.report.displayName">OJS-Nutzungsstatistik-Bericht</message>
 	<message key="plugins.reports.usageStats.report.description">OJS-Standardbericht zur Nutzungsstatistik (COUNTER-fähig)</message>
 
+	<message key="plugins.reports.usageStats.optout.displayName">Datenschutz-Informationen zur Nutzungsstatistik</message>
+	<message key="plugins.reports.usageStats.optout.description">Datenschutz-Informationen zur Nutzungsstatistik</message>
+	<message key="plugins.generic.usageStats.optout.title">Nutzungsstatistik-Informationen</message>
+	<message key="plugins.generic.usageStats.optout.shortDesc"><![CDATA[Wir führen eine anonymisierte Nutzungsstatistik. Bitte lesen Sie die <a href="{$privacyInfo}">Datenschutz-Informationen</a>, um mehr zu erfahren.]]></message>	
 	<message key="plugins.generic.usageStats.optout.description"><![CDATA[
 		<h3>Allgemeine Datenschutz-Hinweise</h3>
 		<p>Unsere allgemeinen Datenschutz-Hinweise finden Sie <a href="{$privacyStatementUrl}">hier</a>.</p>
@@ -50,10 +67,13 @@
 		<li>Browser</li>
 		</ul>
 		<p>Die gesammelten Informationen werden nur verwendet, um die Nutzung der Inhalte statistisch auszuwerten. Es findet keine Zuordnung von IP-Adressen zu Benutzer-IDs statt. Es ist technisch unmöglich, nachträglich einen spezifischen Datensatz zu einer spezifischen IP-Adresse nachzuverfolgen.</p>]]></message> 
+	<message key="plugins.generic.usageStats.optout.done"><![CDATA[
+		<p>Sie haben der Nutzung Ihrer Daten für die Nutzungsstatistik erfolgreich widersprochen. Solange Sie diese Nachricht sehen, werden keine statistischen Daten aus Ihrer Nutzung dieser Seite gewonnen. Klicken Sie den Knopf unten, um Ihre Entscheidung zurückzunehmen.</p>]]></message>
+	<message key="plugins.generic.usageStats.optin">Opt In (Einwilligen)</message>
+	<message key="plugins.generic.usageStats.optout">Opt Out (Widersprechen)</message>
 	<message key="plugins.generic.usageStats.optout.cookie"><![CDATA[
-		<p>Sollten sie den Wunsch haben, dass Ihre anonymisierten Daten nicht gespeichert werden, bieten wir Ihnen die Möglichkeit, die Teilnahme am Auswertungsprozess zu unterbinden. Durch einen Klick auf den unten stehenden Opt-out-Button wird ein sog. <em>Cookie</em> auf Ihrem System erstellt, das Ihre Entscheidung dokumentiert und speichert. Sollten die Sicherheits- oder Privatsphären-Einstellungen Ihres Browser Cookies automatisch nach Beendigung löschen, müssen Sie beim nächsten Zugriff auf diese Seite erneut dem Auswertungsprozess widersprechen. Das Cookie ist jeweils nur für einen Browser gültig. Sollten Sie unterschiedliche Browser benutzen, so müssen Sie für jeden Browser Ihren Widerspruch dokumentieren und auf den unten stehenden Button klicken. Innerhalb des Cookies werden keinerlei personenbezogene Daten gespeichert, sondern lediglich Ihr Widerspruch dokumentiert. Dieses Cookie wird bei jedem Zugriff auf dieses Journal automatisch um ein Jahr verlängert.</p>
+		<p>Sollten Sie den Wunsch haben, dass Ihre anonymisierten Daten nicht gespeichert werden, bieten wir Ihnen die Möglichkeit, die Teilnahme am Auswertungsprozess zu unterbinden. Durch einen Klick auf den unten stehenden Opt-out-Button wird ein sog. <em>Cookie</em> auf Ihrem System erstellt, das Ihre Entscheidung dokumentiert und speichert. Sollten die Sicherheits- oder Privatsphären-Einstellungen Ihres Browser Cookies automatisch nach Beendigung löschen, müssen Sie beim nächsten Zugriff auf diese Seite erneut dem Auswertungsprozess widersprechen. Das Cookie ist jeweils nur für einen Browser gültig. Sollten Sie unterschiedliche Browser benutzen, so müssen Sie für jeden Browser Ihren Widerspruch dokumentieren und auf den unten stehenden Button klicken. Innerhalb des Cookies werden keinerlei personenbezogene Daten gespeichert, sondern lediglich Ihr Widerspruch dokumentiert. Dieses Cookie wird bei jedem Zugriff auf dieses Journal automatisch um ein Jahr verlängert.</p>
 		<p>Bitte berücksichtigen Sie, dass die allgemeinen Server-Logs von Ihrer Entscheidung unberührt bleiben, am detaillierten Evaluationsprozess nicht teilzunehmen. Berücksichtigen Sie daher auch unsere <a href="{$privacyStatementUrl}">allgemeinen Datenschutzhinweise</a>.</p>]]></message>
-	
 	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
 	<message key="plugins.reports.usageStats.metricType.full">Open-Journal-Systems-Statistiken (COUNTER-fähig)</message>
 </locale>

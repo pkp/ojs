@@ -103,10 +103,14 @@ class UsageStatsSettingsForm extends Form {
 	 * @return array
 	 */
 	function getOptionalColumnsList() {
-		return array(
-			STATISTICS_DIMENSION_CITY => StatisticsHelper::getColumnNames(STATISTICS_DIMENSION_CITY),
-			STATISTICS_DIMENSION_REGION => StatisticsHelper::getColumnNames(STATISTICS_DIMENSION_REGION)
-		);
+		$plugin =& $this->plugin;
+		$reportPlugin = $plugin->getReportPlugin();
+		$optionalColumns = $reportPlugin->getOptionalColumns(OJS_METRIC_TYPE_COUNTER);
+		$columnsList = array();
+		foreach ($optionalColumns as $column) {
+			$columnsList[$column] = StatisticsHelper::getColumnNames($column);
+		}
+		return $columnsList;
 	}
 
 	/**

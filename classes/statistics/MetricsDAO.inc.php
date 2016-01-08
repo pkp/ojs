@@ -34,8 +34,8 @@ class MetricsDAO extends DAO {
 	 * @param $nonAdditive boolean False will mix two different metric types,
 	 *  results, which is conceptually wrong because different metric types
 	 *  counts events differently. Only use this in cases that you know the
-	 *  metric types counts events similary, and where the metric numbers 
-	 *  accuracy is not that crucial. 
+	 *  metric types counts events similary, and where the metric numbers
+	 *  accuracy is not that crucial.
 	 *
 	 * @return null|array The selected data as a simple tabular result set or
 	 *  null if metrics are not supported by this plug-in, the specified report
@@ -78,7 +78,7 @@ class MetricsDAO extends DAO {
 		// either require a filter on a single metric type or the metric type
 		// must be present as a column.
 		if (empty($metricType)) return $nullVar;
-		// Let addition happen if parameter is false. 
+		// Let addition happen if parameter is false.
 		if ($nonAdditive && count($metricType) !== 1) {
 			if (!in_array(STATISTICS_DIMENSION_METRIC_TYPE, $columns)) {
 				array_push($columns, STATISTICS_DIMENSION_METRIC_TYPE);
@@ -150,7 +150,7 @@ class MetricsDAO extends DAO {
 		// Replace the current time constant by time values
 		// inside the parameters array.
 		$currentTime = array(
-			STATISTICS_CURRENT_DAY => date('Ymd', time()),
+			STATISTICS_YESTERDAY => date('Ymd', strtotime('-1 day', time())),
 			STATISTICS_CURRENT_MONTH => date('Ym', time()));
 		foreach ($currentTime as $constant => $time) {
 			$currentTimeKeys = array_keys($params, $constant);

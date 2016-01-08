@@ -15,19 +15,22 @@
 	<message key="plugins.generic.pln">PKP-PLN-Plug-In</message>
 	<message key="plugins.generic.pln.description">Das PKP-PLN-Plug-In wird Ihre veröffentlichten Inhalte in das PKP Private LOCKSS Network zur Archivierung abliefern.</message>
 	<message key="plugins.generic.pln.manager.setup.description"><![CDATA[<strong>PKP Private LOCKSS Network</strong><br /><br />Bitte lesen Sie die <a href="https://pkp.sfu.ca/pkp-lockss/" target="_blank">Übersicht zu PKP PLN</a> und füllen Sie <a href="{$plnPluginURL}">dieses einfache Formular</a> aus. Diese Option wird die Aufnahme Ihrer Zeitschrift in das Public Knowledge Project Private LOCKSS Network (PKP PLN) aktivieren.]]></message>
+	<message key="plugins.generic.pln.enabled">Das PKP-PLN-Plug-In wurde aktiviert.</message>
+	<message key="plugins.generic.pln.disabled">Das PKP-PLN-Plug-In wurde deaktiviert.</message>
 	
 	<message key="plugins.generic.pln.settings_page">PKP-PLN-Plug-In - Einstellungen</message>
 	<message key="plugins.generic.pln.settings">Einstellungen</message>
+	<message key="plugins.generic.pln.settings.acron_required">Das PKP-PLN-Plug-In benötigt entweder das Acron-Plug-In oder ein Tool für regelmäßig wiederholte Aktionen (wie 'cron').</message>
 	<message key="plugins.generic.pln.settings.saved">PKP-PLN-Einstellungen gespeichert.</message>
 	<message key="plugins.generic.pln.settings.terms_of_use">Nutzungsbedingungen</message>
-	<message key="plugins.generic.pln.settings.terms_of_use_help">Vor der Ablieferung an ein Netzwerk ist es nötig, allen seinen Nutzungsbedingungen zuzustimmen.</message>
+	<message key="plugins.generic.pln.settings.terms_of_use_help">Als Hauptkontakt der Zeitschrift akzeptiere und bestätige ich die folgenden Nutzungsbedingungen zur Teilnahme am Private LOCKSS Network des Public Knowledge Projects (PKP-PLN):</message>
 	<message key="plugins.generic.pln.settings.terms_of_use_agree">Ich stimme zu</message>
 	<message key="plugins.generic.pln.settings.journal_uuid">Kennzeichnung der Zeitschrift</message>
 	<message key="plugins.generic.pln.settings.journal_uuid_help">Dies ist die eindeutige Kennung Ihrer Zeitschrift für das PKP PLN. Sie müssen diese Kennung angeben, wenn Sie Support durch die Administrator/innen von PKP PLN erhalten möchten.</message>
 	<message key="plugins.generic.pln.settings.refresh">Aktualisieren</message>
 	<message key="plugins.generic.pln.settings.refresh_help">Wenn aus irgendeinem Grund keine Einträge oben gelistet sind oder wenn Sie wissen, dass die Einträge aktualisiert worden sind, klicken Sie Aktualisieren um die Liste zu erneuern.</message>
 	<message key="plugins.generic.pln.settings.pln_network">PLN-Netzwerk-URL</message>
-	<message key="plugins.generic.pln.settings.pln_network_help">Die URL des Übergabeservers Ihres Netzwerks. Ändern Sie diese Einstellung nur, wenn Sie von Seiten Ihres Netzwerks dazu aufgefordert werden.</message>
+	<message key="plugins.generic.pln.settings.pln_network_help">Die URL des Übergabeservers Ihres Netzwerks. Ändern Sie diese Einstellung nur, wenn Sie von Seiten Ihres Netzwerks dazu aufgefordert werden. Sie müssen keinen Account anlegen oder sich auf diesem Server einloggen.</message>
 	<message key="plugins.generic.pln.settings.pln_network_invalid">Die angegebene URL ist nicht gültig. Bitte kontrollieren Sie die Adresse und versuchen Sie es erneut.</message>
 	<message key="plugins.generic.pln.settings.pln_network_path_invalid">PLN-Netzwerk-URLs müssen das Schema und den Host-Namen beinhalten und können eine Port-Nummer enthalten. Sie dürfen keine Pfade, Parameter, Benutzernamen, Passwörter oder URL-Fragmente enthalten.</message>
 	
@@ -70,6 +73,8 @@
 	<message key="plugins.generic.pln.notifications.zip_missing">Die Unterstützung von ZipArchive muss aktiviert werden, um fortfahren zu können.</message>
 	<message key="plugins.generic.pln.notifications.issn_setting">Ihre Zeitschrift muss über eine ISSN verfügen, bevor Sie den Nutzungsbedingungen zustimmen können. Sie können die ISSN im Setup der Zeitschrift eingeben. Sobald die ISSN der Zeitschrift eingegeben ist, werden die Nutzungsbedingungen unten angezeigt.</message>
 	<message key="plugins.generic.pln.notifications.tar_missing">Ihr System muss über ein tar-Programm verfügen.</message>
+	<message key="plugins.generic.pln.notifications.archive_tar_missing">Die Archive_Tar-PHP-Erweiterung muss installiert werden, bevor das PKP PLN aktiviert werden kann.</message>
+	<message key="plugins.generic.pln.notifications.php5_missing">PKP PLN benötigt eine PHP-Version 5 oder höher.</message>
 
 	<message key="plugins.generic.pln.error.network.servicedocument">Netzwerk-Fehler {$error} beim Versuch, das Service-Dokument vom PLN zu holen.</message>
 	<message key="plugins.generic.pln.error.network.deposit">Netzwerk-Fehler {$error} beim Versuch, die Ablieferung an das PLN zu senden.</message>
