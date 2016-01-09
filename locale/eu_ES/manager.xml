@@ -232,8 +232,6 @@
 	<message key="manager.setup.journalLogo.altText">Aldizkariaren logoa</message>
 	<message key="manager.setup.journalPageFooter">Aldizkariko orri-oina</message>
 	<message key="manager.setup.journalPageFooterDescription">Hau da zure aldizkariko orri-oina. Aldatu nahi baduzu, idatzi orri-oinaren HTML kodea beheko testu-koadroan. Adibidez, beste nabigazio-barra bat, kontagailu bat, etab. Orri-oina orrialde guztietan agertuko da.</message>
-	<message key="manager.setup.journalPageHeader">Aldizkariko orri-burua</message>
-	<message key="manager.setup.journalPageHeaderDescription">Aldizkariaren tituluaren eta logoaren bertsio grafikoa (.gif, .jpg, edo .png fitxategi bat), hasierako orrian jarri dena baino txikiagoa normalean, karga daiteke aldizkariko orri-buru bezala ager dadin, bestela agertuko litzatekeen testu-bertsioaren ordez.</message>
 	<message key="manager.setup.journalPolicies">2. urratsa. Aldizkariaren politika</message>
 	<message key="manager.setup.journalSetup">Aldizkariaren konfigurazioa</message>
 	<message key="manager.setup.journalSetupUpdated">Zure aldizkariaren konfigurazioa eguneratu da.</message>

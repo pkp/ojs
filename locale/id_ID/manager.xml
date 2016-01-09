@@ -289,8 +289,6 @@
 </message> 
 	<message key="manager.setup.journalPageFooter"> Footer Halaman Jurnal </message> 
 	<message key="manager.setup.journalPageFooterDescription"> Ini adalah footer jurnal Anda. Untuk mengganti atau meng-update footer, salin kode HTML pada kotak teks di bawah. Sebagai contoh dapat berisi navigasi lain, counter, dll. Footer ini akan tampil di tiap halaman.</message> 
-	<message key="manager.setup.journalPageHeader"> Header Halaman Jurnal </message> 
-	<message key="manager.setup.journalPageHeaderDescription"> Versi grafis judul dan logo jurnal (file .gif, .jpg. atau .png) dapat diunggah untuk ditampilkan sebagai header di halaman jurnal, yang akan menggantikan versi teks jika tidak ditampilkan.</message> 
 	<message key="manager.setup.journalPolicies"> Langkah 2. Kebijakan Jurnal </message> 
 	<message key="manager.setup.journalSetup">Setup Jurnal</message> 
 	<message key="manager.setup.journalSetupUpdated"> Setup jurnal Anda telah di-update.</message> 

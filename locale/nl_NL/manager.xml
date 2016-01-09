@@ -239,8 +239,6 @@
 	<message key="manager.setup.journalLogo.altText">Tijdschrift logo</message>
 	<message key="manager.setup.journalPageFooter">Tijdschriftpagina voettekst</message>
 	<message key="manager.setup.journalPageFooterDescription">Dit is de voettekst van uw tijdschrift. De voettekst kan veranderd worden door de HTML code ervan in het tekstvak hieronder in te voeren. Voorbeelden van een voettekst zijn een navigatiebalk, een teller, enz. Deze voettekst verschijnt op iedere pagina.</message>
-	<message key="manager.setup.journalPageHeader">Paginakop</message>
-	<message key="manager.setup.journalPageHeaderDescription">Een grafische versie (als .gif, .jpg of .png bestand) van de titel en het logo van het tijdschrift, wellicht een kleinere versie van degene op de homepage staat, kan als kop gebruikt worden op de andere tijdschriftpagina's. Deze vervangt de tekstversie die daar anders staat.</message>
 	<message key="manager.setup.journalPolicies">Stap 2. Beleid van het tijdschrift</message>
 	<message key="manager.setup.journalSetup">Tijdschrift inrichten</message>
 	<message key="manager.setup.journalSetupUpdated">De instellingen van uw tijdschrift zijn bijgewerkt.</message>

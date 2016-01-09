@@ -933,7 +933,6 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<message key="article.fontSize.large.altText">Grande</message>
 	<message key="user.noRoles.chooseJournal">Il tuo account non è associato a nessuna rivista. Per favore seleziona una rivista:</message>
 	<message key="reviewer.article.enterReviewForm">Cliccare sull'icona per compilare il modulo di revisione</message>
-	<message key="common.pageHeader.altText">Testata della pagina</message>
 	<message key="user.noRoles.noRolesForJournal">Il tuo account non ha ruoli assegnati per questa rivista. Scegli tra le azioni elencate sotto:</message>
 	<message key="user.noRoles.submitArticle">Invia una proposta</message>
 	<message key="user.noRoles.submitArticleRegClosed">Proponi un articolo: la registrazione degli autori è attualmente disabilitata</message>

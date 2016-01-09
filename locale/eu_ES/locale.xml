@@ -54,7 +54,6 @@
 	<message key="common.confirmComplete">Ziur zaude bukatutako gisa markatu nahi duzula zeregin hau? Gero ezingo duzu aldaketarik egin.</message>
 	<message key="common.payment">Ordainketa</message>
 	<message key="common.payments">Ordainketak</message>
-	<message key="common.pageHeader.altText">Orri-burua</message>
 	<message key="common.homePageHeader.altText">Hasierako orriaren goiburua</message>
 	<message key="common.journalHomepageImage.altText">Aldizkariaren hasierako orriko irudia</message>
 

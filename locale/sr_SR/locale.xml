@@ -754,7 +754,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="reviewer.article.restrictedFileAccess">Tekst prijave će biti na raspolaganju kada i ako recenzent prihvati ponudu izrade recenzije.</message>
 	<message key="reviewer.article.enterReviewForm">Kliknite na ikonu kako biste ispunili recenzijski obrazac.</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Molimo popunite obavezna polja.</message>
-	<message key="common.pageHeader.altText">Zaglavlje stranice</message>
 	<message key="common.homePageHeader.altText">Zaglavlje naslovne stranice</message>
 	<message key="common.journalHomepageImage.altText">Slika naslovne stranice časopisa</message>
 	<message key="article.coverPage.altText">Slika naslovne stranice članka</message>

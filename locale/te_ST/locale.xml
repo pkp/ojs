@@ -952,8 +952,6 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.setup.itemsDescription">Ñåvîgåtîóñ bår îtèmþ çåñ bè åððèð tó thè çürrèñt þèt (Hómè, Æbóüt, Üþèr Hómè, ètç.) thåt åppèår åt thè tóp óf thè pågè.</message>
 	<message key="manager.setup.labelName">Låbèl ñåmè</message>
 	<message key="manager.setup.addNavItem">Æðð Îtèm</message>
-	<message key="manager.setup.journalPageHeader">Jóürñål Pågè Hèåðèr</message>
-	<message key="manager.setup.journalPageHeaderDescription">Æ gråphîç vèrþîóñ óf thè jóürñål'þ tîtlè åñð lógó (.gîf, .jpg, ór .pñg fîlè), póþþîblý å þmållèr vèrþîóñ óf thè óñè üþèð óñ thè hómèpågè, çåñ bè üplóåðèð tó åppèår åþ å hèåðèr óñ jóürñål pågèþ, whîçh wîll rèplåçè thè tèxt vèrþîóñ thåt óthèrwîþè åppèårþ.</message>
 	<message key="manager.setup.alternateHeader">Æltèrñåtè Hèåðèr</message>
 	<message key="manager.setup.alternateHeaderDescription">Æltèrñåtèlý, îñþtèåð óf tîtlè åñð lógó, åñ HTML vèrþîóñ óf thè hèåðèr çåñ bè îñþèrtèð îñtó thè tèxt bóx bèlów. Lèåvè tèxtbóx blåñk îf ñót rèqüîrèð.</message>
 	<message key="manager.setup.journalPageFooter">Jóürñål Pågè Fóótèr</message>

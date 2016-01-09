@@ -244,8 +244,6 @@ Exemplo:
 	<message key="manager.setup.journalLogo.altText">Logotipo</message>
 	<message key="manager.setup.journalPageFooter">Rodapé</message>
 	<message key="manager.setup.journalPageFooterDescription">No rodapé da revista é possível incluir ou atualizar o conteúdo, inserindo código HTML, como outras barras de navegação, contadores, ou publicidade. O rodapé aparecerá em todas as páginas.</message>
-	<message key="manager.setup.journalPageHeader">Cabeçalho das páginas internas</message>
-	<message key="manager.setup.journalPageHeaderDescription">Uma versão em formato de imagem do título e logotipo da revista (como .gif, .jpg, ou .png ) pode ser submetida, possivelmente em tamanho reduzido, que substituirá a versão em texto que aparece por padrão.</message>
 	<message key="manager.setup.journalPolicies">Passo 2. Políticas da revista</message>
 	<message key="manager.setup.journalSetup">Configuração da revista</message>
 	<message key="manager.setup.journalSetupUpdated">Configuração atualizada.</message>

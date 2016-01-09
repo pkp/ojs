@@ -231,8 +231,6 @@
 	<message key="manager.setup.journalLogo">Λογότυπο περιοδικού</message>
 	<message key="manager.setup.journalPageFooter">Υποσελίδο σελίδας περιοδικού</message>
 	<message key="manager.setup.journalPageFooterDescription">Πρόκειται για το υποσέλιδο του περιοδικού σας. Για να αλλάξετε ή να ενημερώσετε το υποσέλιδο, εισάγετε τον κατάλληλο κώδικα HTML στο παρακάτων πλαίσιο κειμένου. Παραδείγματα θα μπορούσαν να είναι άλλη μια μπάρα πλοήγησης, counter, κτλ. Το συγκεκριμένο υποσέλιδο εμφανίζεται σε κάθε σελίδα.</message>
-	<message key="manager.setup.journalPageHeader">Κεφαλίδα σελίδας περιοδικού</message>
-	<message key="manager.setup.journalPageHeaderDescription">Γραφική έκδοση του τίτλου και του λογοτύπου του περιοδικού (ως αρχεία σε μορφή .gif, .jpg, ή .png), πιθανώς σε μικρότερη έκδοση από αυτή της αρχικής σελίδας, μπορούν να φορτωθούν για να εμφανίζονται ως κεφαλίδα στις σελίδες του περιοδικού, που θα αντικαταστήσει την έκδοση του κειμένου που εμφανίζεται σε διαφορετική περίπτωση.</message>
 	<message key="manager.setup.journalPolicies">Βήμα 2. Πολιτικές </message>
 	<message key="manager.setup.journalSetup">Οργάνωση περιοδικού</message>
 	<message key="manager.setup.journalSetupUpdated">Οι ρυθμίσεις του περιοδικού ενημερώθηκαν.</message>

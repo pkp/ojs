@@ -954,7 +954,6 @@ Authors who publish with this journal agree to the following terms:
 </ol>]]></message>
 	<message key="reviewer.article.enterReviewForm">Nhập chuột vào biểu tượng để điền vào mẫu phiếu phản biện.</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Vui lòng điền vào các trường bắt buộc.</message>
-	<message key="common.pageHeader.altText">Măng-séc trang</message>
 	<message key="common.homePageHeader.altText">Măng-séc trang chủ</message>
 	<message key="common.journalHomepageImage.altText">Ảnh trang chủ tạp chí</message>
 	<message key="article.coverPage.altText">Ảnh bìa</message>

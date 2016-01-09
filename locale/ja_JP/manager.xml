@@ -222,8 +222,6 @@
 	<message key="manager.setup.journalLogo">雑誌ロゴ</message>
 	<message key="manager.setup.journalPageFooter">雑誌ページのフッタ</message>
 	<message key="manager.setup.journalPageFooterDescription">雑誌のフッタです。フッタを変更または更新する場合は、下の記入欄にHTML文を貼り付けてください。フッタの例としては、2つ目のナビゲーションバーやカウンターなどが考えられます。このフッタはすべてのページに表示されます。</message>
-	<message key="manager.setup.journalPageHeader">雑誌ページのヘッダ</message>
-	<message key="manager.setup.journalPageHeaderDescription">雑誌名と雑誌ロゴの画像（.gif, .jpg, .pngファイル。通常はホームページで使用したものより小型のもの）をホームページにアップロードできます。雑誌名の画像を指定すると雑誌名は表示されません。指定がないと雑誌名が表示されます。</message>
 	<message key="manager.setup.journalPolicies">ステップ 2. 雑誌ポリシー</message>
 	<message key="manager.setup.journalSetup">雑誌設定</message>
 	<message key="manager.setup.journalSetupUpdated">雑誌設定が更新されました。</message>

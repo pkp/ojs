@@ -121,10 +121,9 @@
 	<message key="manager.setup.sponsors.description">The name of the organizations (e.g., scholarly associations, university departments, cooperatives, etc.) sponsoring the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
 	<message key="manager.setup.homepageContent">Journal Homepage Content</message>
 	<message key="manager.setup.homepageContentDescription">The journal homepage consists of navigation links by default. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown.</message>
-	<message key="manager.setup.pageHeaderDescription">Most themes will display the journal's name in the header if no logo has been uploaded.</message>
 	<message key="manager.setup.logo">Journal Logo</message>
 	<message key="manager.setup.logo.altText">Journal Logo</message>
-	<message key="manager.setup.useImageLogoDescription">Upload a logo for the journal. To comply with WCAG standards, be sure to enter Alternative Text that describes the image (usually the name of the journal) when requested during upload.</message>
+	<message key="manager.setup.useImageLogoDescription">Upload a logo for the journal. To comply with WCAG standards, be sure to enter Alternative Text that describes the image (usually the name of the journal) when requested during upload. Note that most themes will display the journal's name in the header if no logo has been uploaded. </message>
 	<message key="manager.setup.pageFooter">Journal Page Footer</message>
 	<message key="manager.setup.pageFooterDescription">Enter any images, text or HTML code that you'd like to appear at the bottom of your journal's website.</message>
 	<message key="manager.setup.layout">Journal Layout</message>
@@ -258,8 +257,6 @@
 	<message key="manager.setup.journalLogo.altText">Journal Logo</message>
 	<message key="manager.setup.journalPageFooter">Journal Page Footer</message>
 	<message key="manager.setup.journalPageFooterDescription">This is the footer of your journal. To change or update the footer, paste the HTML code in the textbox below. Examples could be another navigation bar, a counter, etc. This footer will appear on every page.</message>
-	<message key="manager.setup.journalPageHeader">Journal Page Header</message>
-	<message key="manager.setup.journalPageHeaderDescription">A graphic version of the journal's title and logo (.gif, .jpg, or .png file), possibly a smaller version of the one used on the homepage, can be uploaded to appear as a header on journal pages, which will replace the text version that otherwise appears.</message>
 	<message key="manager.setup.journalPolicies">Step 2. Journal Policies</message>
 	<message key="manager.setup.journalSetup">Journal Setup</message>
 	<message key="manager.setup.journalSetupUpdated">Your journal setup has been updated.</message>

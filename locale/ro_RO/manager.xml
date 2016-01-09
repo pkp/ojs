@@ -281,8 +281,6 @@
 	<message key="manager.setup.journalLogo.altText">Logo-ul revistei</message>
 	<message key="manager.setup.journalPageFooter">Coloncifrul revistei (footer)</message>
 	<message key="manager.setup.journalPageFooterDescription">Acesta este coloncifrul revistei. pentru a modifica sau actualiza puteţi copia cod HTML în căsuţa de mai jos. De exemplu, ar putea fi o altă bară de navigare, un contor, etc. Acest coloncifru va apărea în fiecare pagină.</message>
-	<message key="manager.setup.journalPageHeader">Colontitlul revistei (header)</message>
-	<message key="manager.setup.journalPageHeaderDescription">O versiune grafică a titlului revistei şi a logo-ului (ca un fişier .gif, .jpg, sau .png), poate o versiune mai mică a celui utilizat pe pagina principală și poate fi încărcat pentru a apărea ca şi colontitlu pe paginile revistei, care va înlocui versiunea text implicită.</message>
 	<message key="manager.setup.journalPolicies">Pasul 2. Politicile revistei</message>
 	<message key="manager.setup.journalSetup">Setarea revistei</message>
 	<message key="manager.setup.journalSetupUpdated">Setările revistei au fost actualizate.</message>

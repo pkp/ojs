@@ -241,8 +241,6 @@
 	<message key="manager.setup.journalLogo.altText">Lô-gô Tạp chí</message>
 	<message key="manager.setup.journalPageFooter">Chân trang tạp chí</message>
 	<message key="manager.setup.journalPageFooterDescription">Đây là chân trang tạp chí. Để thay đổi hoặc cập nhật chân trang, dán đoạn mã HTLM cần thay đổi vào trong ô text dưới đây. Chân trang có thể là một thanh điều khiển, công cụ đếm, ... Chân trang sẽ xuất hiện ở tất cả các trang.</message>
-	<message key="manager.setup.journalPageHeader">Măng séc trang trong của tạp chí</message>
-	<message key="manager.setup.journalPageHeaderDescription">Có thể tải lên phiên bản đồ họa của tên tạp chí và logo (dạng .gif, .jpg, or .png), có thể là nhỏ hơn so với phiên bản trên trang chủ, làm măng séc các trang trong của tạp chí .</message>
 	<message key="manager.setup.journalPolicies">Bước 2. Chính sách của tạp chí</message>
 	<message key="manager.setup.journalSetup">Thiết lập Tạp chí</message>
 	<message key="manager.setup.journalSetupUpdated">Thiết lập cho tạp chí của quý vị đã được cập nhật.</message>

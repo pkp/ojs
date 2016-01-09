@@ -236,8 +236,6 @@
 	<message key="manager.setup.journalLogo">Tidskriftens logo</message>
 	<message key="manager.setup.journalPageFooter">Tidskriftens sidfot</message>
 	<message key="manager.setup.journalPageFooterDescription">Det här är tiskriftens sidfot. För att ändra eller uppdatera sidfoten, klistra in HTML-koden i rutan nedan. (T.ex. räknare, ytterligare navigeringsfält etc.) Sidfoten kommer att synas på varje sida.</message>
-	<message key="manager.setup.journalPageHeader">Tidskriftens sidhuvud</message>
-	<message key="manager.setup.journalPageHeaderDescription">En grafisk representation av tidskriftens titel och logo (.gif, .jpg, eller .png file), förslagsvis en mindre version av den som används på hemsidan, kan laddas upp till sidhuvudet och ersätta den text som syns i annat fall.</message>
 	<message key="manager.setup.journalPolicies">Step 2. Tidskriftens policy</message>
 	<message key="manager.setup.journalSetup">Installation av tidskriften</message>
 	<message key="manager.setup.journalSetupUpdated">Tidskriftsinstallationen har uppdaterats.</message>

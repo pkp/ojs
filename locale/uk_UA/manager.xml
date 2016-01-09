@@ -279,8 +279,6 @@
        <message key="manager.setup.journalLogo.altText">Логотип журналу</message>
        <message key="manager.setup.journalPageFooter">Нижній колонтитул сторінки</message>
        <message key="manager.setup.journalPageFooterDescription">Це нижній колонтитул сторінок Вашого журналу. Щоб змінити або оновити нижній колонтитул, вставте код HTML у поле нижче. Наприклад, у нижньому колонтитулі може розміщуватись ще одна навігаційна панель, лічильник тощо. Нижній колонтитул з'явиться на всіх сторінках сайту журналу.</message>
-       <message key="manager.setup.journalPageHeader">Заголовок сторінки</message>
-       <message key="manager.setup.journalPageHeaderDescription">Замість тексту, який відображається на сторінках сайту за замовчуванням, можна вивантажити графічну версію назви та логотипу журналу (як файл формату .gif, .jpg або .png). Ця графічна версія може бути такою ж, як і вивантажена для заголовку домашньої сторінки, але може і відрізнятися від неї.</message>
        <message key="manager.setup.journalPolicies">Крок 2. Політика журналу</message>
        <message key="manager.setup.journalSetup">Налаштування журналу</message>
        <message key="manager.setup.journalSetupUpdated">Налаштування Вашого журналу оновлені.</message>

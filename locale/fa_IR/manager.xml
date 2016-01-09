@@ -241,8 +241,6 @@
 	<message key="manager.setup.journalLogo.altText">لوگوی مجله</message>
 	<message key="manager.setup.journalPageFooter">پاورقی صفحات مجله</message>
 	<message key="manager.setup.journalPageFooterDescription">این قسمت پاورقی صفحات مجله را نشان میدهد. برای تغییر یا بروزرسانی آن ، متن HTML دلخواه خود را در جعبه متن زیر وارد کنید. به عنوان مثال میتوانید یک منوی گشت و گذار دیر ، یک شمارشگر بازدید کننده ها و غیره میتواند باشد. این پاورقی در تمام صفحات ظاهر میشود.</message>
-	<message key="manager.setup.journalPageHeader">هدر صفحات مجله</message>
-	<message key="manager.setup.journalPageHeaderDescription">یک نسخه گرافیک عنوان و لوگوی مجله بصورت فایل .gif, .jpg, یا .png که بهتر است نسخه ای کوچک ت از نسخه بکاررفته در صفحه خانگی باشد را میتوان آپلود کرد تا به عنوان هدر در تمام صفحات مجله ظاهر شود. در غیر این صورت نسخه متنی بکار خواهد رفت.</message>
 	<message key="manager.setup.journalPolicies">مرحله 2: سیاست گذاری</message>
 	<message key="manager.setup.journalSetup">نصب مجله</message>
 	<message key="manager.setup.journalSetupUpdated">نصب مجله بروزرسانی شد</message>

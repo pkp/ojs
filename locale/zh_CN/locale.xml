@@ -55,7 +55,6 @@
 	<message key="common.confirmComplete">你确定要标记这个任务为完成状态吗？以后您可能无法进行更改。</message>
 	<message key="common.payment">支付</message>
 	<message key="common.payments">支付</message>
-	<message key="common.pageHeader.altText">页面头部</message>
 	<message key="common.homePageHeader.altText">主页头部</message>
 	<message key="common.journalHomepageImage.altText">期刊主页图片</message>
 

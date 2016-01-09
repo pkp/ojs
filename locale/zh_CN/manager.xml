@@ -271,8 +271,6 @@
 	<message key="manager.setup.journalLogo.altText">期刊标志</message>
 	<message key="manager.setup.journalPageFooter">期刊网页页尾</message>
 	<message key="manager.setup.journalPageFooterDescription">这是您的期刊的页尾。要变更或更新页尾，在下面的文字框中贴上HTML代码。比方说，可以是另一个导航栏、一个计数器等等。这个页尾会显示在所有的页面中。</message>
-	<message key="manager.setup.journalPageHeader">期刊网页标题</message>
-	<message key="manager.setup.journalPageHeaderDescription">可以上传一个图形版本的期刊标题和图标，可能是一个比首页图标还要小一点的版本，当作期刊页面的标题显示，会替换文字版本的标题。</message>
 	<message key="manager.setup.journalPolicies">步骤 2：期刊方针</message>
 	<message key="manager.setup.journalSetup">期刊配置</message>
 	<message key="manager.setup.journalSetupUpdated">您的期刊配置已经更新。</message>

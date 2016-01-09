@@ -241,8 +241,6 @@
 	<message key="manager.setup.journalLogo.altText">Logo de la revue</message>
 	<message key="manager.setup.journalPageFooter">Pied de page de la revue</message>
 	<message key="manager.setup.journalPageFooterDescription">Cela est le pied de page de votre revue. Pour modifier ou mettre à jour le pied de page, copier le code HTML dans la zone de texte ci-dessous. Des exemples pourraient être une autre barre de navigation, un compteur, etc. Ce pied de page figurera dans toutes les pages.</message>
-	<message key="manager.setup.journalPageHeader">En-têtes des pages de la revue</message>
-	<message key="manager.setup.journalPageHeaderDescription">Une version graphique du titre et du logo de la revue (fichier .gif, .jpg, ou .png), possiblement une version plus petite que celle qui est utilisée dans la page d'accueil, peut être téléchargée pour servir d'en-tête dans les pages de la revue, et remplacera la version textuelle qui y figure habituellement.</message>
 	<message key="manager.setup.journalPolicies">Étape 2. Politiques de la revue</message>
 	<message key="manager.setup.journalSetup">Configuration de la revue</message>
 	<message key="manager.setup.journalSetupUpdated">La configuration de votre revue a été mise à jour.</message>

@@ -888,7 +888,6 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="payment.submission.paySubmission">Pagar taxa de submissão</message>
 	<message key="reviewer.article.enterReviewForm">Clique no ícone para preencher o formulário de avaliação.</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Preencha os campos obrigatórios.</message>
-	<message key="common.pageHeader.altText">Cabeçalho da página</message>
 	<message key="common.homePageHeader.altText">Cabeçalho da página inicial</message>
 	<message key="common.journalHomepageImage.altText">Imagem para capa da revista</message>
 	<message key="article.coverPage.altText">Imagem para capa</message>

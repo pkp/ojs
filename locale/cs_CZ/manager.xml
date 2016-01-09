@@ -241,8 +241,6 @@
 	<message key="manager.setup.journalLogo.altText">Logo časopisu</message>
 	<message key="manager.setup.journalPageFooter">Zápatí stránky časopisu</message>
 	<message key="manager.setup.journalPageFooterDescription">Toto je zápatí vašeho časopisu. Pro změnu nebo aktualizaci zápatí vložte HTML kód do textového pole níže. Může jít například o další navigační panel, počítadlo atd. Toto zápatí se objeví na každé stránce.</message>
-	<message key="manager.setup.journalPageHeader">Hlavička stránky časopisu</message>
-	<message key="manager.setup.journalPageHeaderDescription">Pro stránky časopisu můžete nahrát grafickou verzi názvu časopisu a logo - pokud možno v menší verzi než byla použita pro domácí stránku - (jako soubory typu .gif, .jpg, nebo .png), které nahradí jinak zobrazovanou textovou verzi.</message>
 	<message key="manager.setup.journalPolicies">Krok 2. Pravidla časopisu</message>
 	<message key="manager.setup.journalSetup">Nastavení časopisu</message>
 	<message key="manager.setup.journalSetupUpdated">Nastavení časopisu bylo aktualizováno.</message>

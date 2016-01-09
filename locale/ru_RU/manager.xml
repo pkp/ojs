@@ -137,8 +137,6 @@
 	<message key="manager.setup.journalLogo">Логотип</message>
 	<message key="manager.setup.journalPageFooter"></message>
 	<message key="manager.setup.journalPageFooterDescription"></message>
-	<message key="manager.setup.journalPageHeader"></message>
-	<message key="manager.setup.journalPageHeaderDescription"></message>
 	<message key="manager.setup.journalPolicies">Шаг 2. Редакционная политика</message>
 	<message key="manager.setup.journalSetup">Установка журнала</message>
 	<message key="manager.setup.journalSetupUpdated">Установка журнала обновлена.</message>

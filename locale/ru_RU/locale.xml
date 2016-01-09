@@ -511,7 +511,6 @@
 	<message key="common.confirmComplete">Вы уверены, что хотите завершить эту задачу ? Впоследствии она будет закрыта для изменений.</message>
 	<message key="common.payment">Платеж</message>
 	<message key="common.payments">Платежи</message>
-	<message key="common.pageHeader.altText">Заголовок Страницы</message>
 	<message key="common.homePageHeader.altText">Заголовок Домашней Страницы</message>
 	<message key="common.journalHomepageImage.altText">Картинка на домашней странице Журнала</message>
 	<message key="article.article">Статья</message>

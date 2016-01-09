@@ -55,7 +55,6 @@
 	<message key="common.confirmComplete">Esteu segur/a que voleu marcar aquesta tasca com a completa? Si ho feu, no hi podreu fer canvis més endavant.</message>
 	<message key="common.payment">Pagament</message>
 	<message key="common.payments">Pagaments</message>
-	<message key="common.pageHeader.altText">Capçalera de pàgina</message>
 	<message key="common.homePageHeader.altText">Capçalera de la pàgina inicial</message>
 	<message key="common.journalHomepageImage.altText">Imatge per a la pàgina inicial de la revista</message>
 

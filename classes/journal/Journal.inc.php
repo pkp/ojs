@@ -37,35 +37,24 @@ class Journal extends Context {
 
 	/**
 	 * Get "localized" journal page title (if applicable).
-	 * param $home boolean get homepage title
 	 * @return string
 	 */
-	function getLocalizedPageHeaderTitle($home = false) {
-		$prefix = $home ? 'home' : 'page';
-		$typeArray = $this->getSetting($prefix . 'HeaderTitleType');
-		$imageArray = $this->getSetting($prefix . 'HeaderTitleImage');
-		$titleArray = $this->getSetting($prefix . 'HeaderTitle');
-
+	function getLocalizedPageHeaderTitle() {
+		$titleArray = $this->getSetting('name');
 		$title = null;
 
 		foreach (array(AppLocale::getLocale(), AppLocale::getPrimaryLocale()) as $locale) {
-			if (isset($typeArray[$locale]) && $typeArray[$locale]) {
-				if (isset($imageArray[$locale])) $title = $imageArray[$locale];
-			}
-			if (empty($title) && isset($titleArray[$locale])) $title = $titleArray[$locale];
-			if (!empty($title)) return $title;
+			if (isset($titleArray[$locale])) return $titleArray[$locale];
 		}
 		return null;
 	}
 
 	/**
 	 * Get "localized" journal page logo (if applicable).
-	 * param $home boolean get homepage logo
 	 * @return string
 	 */
-	function getLocalizedPageHeaderLogo($home = false) {
-		$prefix = $home ? 'home' : 'page';
-		$logoArray = $this->getSetting($prefix . 'HeaderLogoImage');
+	function getLocalizedPageHeaderLogo() {
+		$logoArray = $this->getSetting('pageHeaderLogoImage');
 		foreach (array(AppLocale::getLocale(), AppLocale::getPrimaryLocale()) as $locale) {
 			if (isset($logoArray[$locale])) return $logoArray[$locale];
 		}

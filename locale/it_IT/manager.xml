@@ -282,8 +282,6 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.journalLogo.altText">Logo della rivista</message>
 	<message key="manager.setup.journalPageFooter">Pie' di pagina</message>
 	<message key="manager.setup.journalPageFooterDescription">Questo è il pie' di pagina della rivista. Per cambiarlo o aggiornarlo, inserire del codice HTML nella box sottostante. È possibile, per esempio, inserire un'altra barra di navigazione, un contatore ecc. Questo pie' di pagina apparirà su ogni pagina della rivista.</message>
-	<message key="manager.setup.journalPageHeader">Testata della rivista</message>
-	<message key="manager.setup.journalPageHeaderDescription">È possibile caricare un'immagine con il titolo ed il logo della rivista (in formato .gif, .jpg, o .png). Questa immagine  potrebbe essere una versione più piccola di quella inserita per l'homepage, e sostituirà il testo che eventualmente compaia.</message>
 	<message key="manager.setup.journalPolicies">Fase 2. Politiche della rivista</message>
 	<message key="manager.setup.journalSetup">Setup della rivista</message>
 	<message key="manager.setup.journalSetupUpdated">Il setup della rivista è stato aggiornato.</message>

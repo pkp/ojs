@@ -278,8 +278,6 @@
 	<message key="manager.setup.journalLogo.altText">Logo der Zeitschrift</message>
 	<message key="manager.setup.journalPageFooter">Fußzeile der Zeitschrift </message>
 	<message key="manager.setup.journalPageFooterDescription">Dies ist die Fußzeile Ihrer Zeitschrift. Sollten Sie sie ändern oder aktualisieren wollen, kopieren Sie den neuen HTML-Text in das nachstehende Textfeld. Beispiele könnten eine zusätzliche Navigationszeile oder ein Zähler sein. Diese Fußzeile wird auf allen Seiten erscheinen.</message>
-	<message key="manager.setup.journalPageHeader">Kopfzeile der Seite</message>
-	<message key="manager.setup.journalPageHeaderDescription">Grafische Versionen von Zeitschriftentitel und -logo (als .gif-, .jpg- oder .png-Dateien), eventuell eine kleinere Version der Grafiken auf der Startseite, können als Kopfzeile auf die Seiten der Zeitschrift hochgeladen werden, um die Textversion zu ersetzen, die ansonsten erscheint.</message>
 	<message key="manager.setup.journalPolicies">2. Schritt: Zeitschriftenrichtlinien und Publikationsprozess</message>
 	<message key="manager.setup.journalSetup">Einrichten der Zeitschrift</message>
 	<message key="manager.setup.journalSetupUpdated">Die Konfiguration Ihrer Zeitschrift wurde aktualisiert.</message>

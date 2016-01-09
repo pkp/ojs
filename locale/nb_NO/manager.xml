@@ -165,8 +165,6 @@
 	<message key="manager.setup.journalLogo">Tidsskriftlogo</message>
 	<message key="manager.setup.journalPageFooter">Tidsskriftside bunntekst</message>
 	<message key="manager.setup.journalPageFooterDescription">Dette er bunnteksten for tidsskriftet ditt. For å endre eller oppdatere bunnteksten, lim inn HTML kode i tekstboksen nedenfor. For eksempel et annet navigasjonsfelt, et telleverk etc. Denne bunnteksten vil bli vist på hver side.</message>
-	<message key="manager.setup.journalPageHeader">Tidsskriftside topptekst</message>
-	<message key="manager.setup.journalPageHeaderDescription">En grafisk versjon av tidsskriftets tittel og logo (.gif-, .jpg-, eller .png-fil), gjerne en mindre versjon av den som brukes på hjemmesiden, kan lastes opp og vises som topptekst på tidsskriftsidene, og erstatter da tekstversjonen som ellers vises.</message>
 	<message key="manager.setup.journalPolicies">Trinn 2. Retningslinjer for tidsskriftet</message>
 	<message key="manager.setup.journalSetup">Tidsskriftoppsett</message>
 	<message key="manager.setup.journalSetupUpdated">Ditt tidsskriftoppsett er nå oppdatert.</message>

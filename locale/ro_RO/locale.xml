@@ -56,7 +56,6 @@
 	<message key="common.confirmComplete">Eşti sigur că vrei să marchezi această sarcină ca fiind încheiată? Nu vei mai putea face modificări după.</message>
 	<message key="common.payment">Plată</message>
 	<message key="common.payments">Plăţi</message>
-	<message key="common.pageHeader.altText">Colontitlul paginii (header)</message>
 	<message key="common.homePageHeader.altText">Colontitlul paginii principale</message>
 	<message key="common.journalHomepageImage.altText">Imaginea din pagina principală a revistei</message>
 

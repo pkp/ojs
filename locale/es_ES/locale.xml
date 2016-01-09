@@ -794,7 +794,6 @@ La validación puede fallar en URLs de búsque que necesitan el envío de formul
 
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Por favor llene los campos requeridos</message>
 	<message key="reviewer.article.enterReviewForm">Haga "click" en el ícono para llenar el formulario de revisión</message>
-	<message key="common.pageHeader.altText">Título de página</message>
 	<message key="common.homePageHeader.altText">Título (Página de Inicio)</message>
 	<message key="common.journalHomepageImage.altText">Imagen de la Página Inicial de la Revista</message>
 	<message key="article.coverPage.altText">Imagen de la portada</message>

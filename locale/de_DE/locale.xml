@@ -54,7 +54,6 @@
 	<message key="common.confirmComplete">Sind Sie sicher, dass Sie diese Aufgabe als beendet markieren wollen? Später können möglicherweise keine Änderungen mehr vorgenommen werden.</message>
 	<message key="common.payment">Zahlung</message>
 	<message key="common.payments">Zahlungen</message>
-	<message key="common.pageHeader.altText">Kopfzeile</message>
 	<message key="common.homePageHeader.altText">Kopfzeile der Startseite</message>
 	<message key="common.journalHomepageImage.altText">Bild auf der Startseite der Zeitschrift</message>
 

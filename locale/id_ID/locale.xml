@@ -37,7 +37,6 @@
 	<message key="common.confirmComplete">Apakah Anda yakin tugas ini telah selesai? Anda mungkin tidak bisa membuat perubahan setelahnya.</message>
 	<message key="common.payment">Pembayaran</message>
 	<message key="common.payments">Pembayaran</message>
-	<message key="common.pageHeader.altText">Header Halaman</message>
 	<message key="common.homePageHeader.altText">Header Beranda</message>
 	<message key="common.journalHomepageImage.altText">Gambar Beranda Jurnal</message>
 

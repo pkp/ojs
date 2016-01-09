@@ -277,8 +277,6 @@
 	<message key="manager.setup.journalLogo">Dergi Logosu</message>
 	<message key="manager.setup.journalPageFooter">Dergi Sayfa Altlığı</message>
 	<message key="manager.setup.journalPageFooterDescription">Dergi Sayfalarının alt bölümünde görülemesini istediğiniz bağlantıları HTML biçiminde bu alana yazınız (Örneğin; yönlendirme, sayaç, reklam v.b.). Altlık her sayfada görüntülenecektir.</message>
-	<message key="manager.setup.journalPageHeader">Dergi Sayfa Başlığı</message>
-	<message key="manager.setup.journalPageHeaderDescription">Dergi adının grafik biçimi ve dergi logosu (jpg, png veya gif biçimindeki bir şekil, dergi saylarının başında yer alacağı için giriş sayfasındakine göre biraz daha küçük boyutta) dergi sayfalarının başındaki metin biçimindeki dergi adının yerini alabilir.</message>
 	<message key="manager.setup.journalPolicies">Adım 2. Dergi Politikaları</message>
 	<message key="manager.setup.journalSetup">Dergi Yapılandırma</message>
 	<message key="manager.setup.journalSetupUpdated">Derginizin yapıladırması güncellenmiştir.</message>

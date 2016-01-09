@@ -57,7 +57,6 @@
        <message key="common.confirmComplete">Ви впевнені, що хочете позначити це завдання як завершене? Після цього, ймовірно, ви не матимете можливості вносити зміни.</message>
        <message key="common.payment">Платіж</message>
        <message key="common.payments">Платежі</message>
-       <message key="common.pageHeader.altText">Заголовок сторінки</message>
        <message key="common.homePageHeader.altText">Заголовок домашньої сторінки</message>
        <message key="common.journalHomepageImage.altText">Зображення домашньої сторінки журналу</message>
 

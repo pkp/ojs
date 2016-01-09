@@ -242,8 +242,6 @@
 	<message key="manager.setup.journalLogo.altText">Logotip de la revista</message>
 	<message key="manager.setup.journalPageFooter">Peu de pàgina de la revista</message>
 	<message key="manager.setup.journalPageFooterDescription">Aquest és el peu de pàgina de la revista. Si el voleu canviar o actualitzar, enganxeu-ne el codi HTML corresponent en el quadre de text que hi ha a continuació. Aquest peu apareixerà a totes les pàgines i pot ser una barra de navegació addicional, un comptador, etc.</message>
-	<message key="manager.setup.journalPageHeader">Capçalera de pàgina de la revista</message>
-	<message key="manager.setup.journalPageHeaderDescription">Podeu penjar una versió gràfica del títol i el logotip de la revista (en format .gif, .jpg o .png) per a la capçalera de les pàgines de la revista. Aquesta imatge reemplaçarà el text que es mostra habitualment i probablement haurà de ser més petita que la versió utilitzada per a la pàgina inicial.</message>
 	<message key="manager.setup.journalPolicies">Pas 2. Polítiques de la revista</message>
 	<message key="manager.setup.journalSetup">Configuració de la revista</message>
 	<message key="manager.setup.journalSetupUpdated">S’ha actualitzat la configuració de la revista.</message>

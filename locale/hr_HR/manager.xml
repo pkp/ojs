@@ -234,8 +234,6 @@
 	<message key="manager.setup.journalLogo.altText">Logotip časopisa</message>
 	<message key="manager.setup.journalPageFooter">Podnožje stranice časopisa</message>
 	<message key="manager.setup.journalPageFooterDescription">Ovo je podnožje stranica vašeg časopisa. Da biste promijenili ili dopunili podnožje, zalijepite HTML kod u tekstni okvir ispod. Na primjer, ovdje možete postaviti druge navigacijske trake, brojač posjeta, i sl. Ovo podnožje će se pojaviti na svakoj stranici.</message>
-	<message key="manager.setup.journalPageHeader">Zaglavlje stranice časopisa</message>
-	<message key="manager.setup.journalPageHeaderDescription">U zaglavlju svake stranice časopisa mogu se nalaziti tekstualna ili grafička verzija naslova te logotip časopisa (u obliku .gif, .jpg, ili .png datoteke). Ovi elementi mogu biti različiti (na primjer, manji) od onih postavljenih na naslovnoj stranici (5.1).</message>
 	<message key="manager.setup.journalSetupUpdated">Uređivanje postavki časopisa je ažurirano.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Neispravan format stilske tablice časopisa. Prihvaćeni format je .css.</message>
 	<message key="manager.setup.journalTheme">Stilska tema časopisa</message>

@@ -241,8 +241,6 @@
 	<message key="manager.setup.journalLogo.altText">Logo da Revista</message>
 	<message key="manager.setup.journalPageFooter">Pé de páxina da revista</message>
 	<message key="manager.setup.journalPageFooterDescription">Este é o pé da revista. Para mudalo ou actualizao, pega o código HTML na caixa de texto. Por exemplo, outra barra de navegación, un contador, etc. Este pé aparecerá en todas as páxinas.</message>
-	<message key="manager.setup.journalPageHeader">Cabecera de página de revista</message>
-	<message key="manager.setup.journalPageHeaderDescription">Pódese subir unha versión gráfica do título e logotipo da revista, en principio unha versión máis pequena da que aparece na cabeceira, (como .gif, .jpg, o .png), que substituiría a versión de texto.</message>
 	<message key="manager.setup.journalPolicies">Paso 2. Política da revista</message>
 	<message key="manager.setup.journalSetup">Configuración da revista</message>
 	<message key="manager.setup.journalSetupUpdated">A configuración da túarevista foi actualizada.</message>

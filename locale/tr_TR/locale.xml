@@ -55,7 +55,6 @@
 	<message key="common.confirmComplete">Bu görevi tamamlandı olarak işaretlemek istediğinizden emin misiniz? Sonradan değişiklik yapmanız mümkün olmayabilir.</message>
 	<message key="common.payment">Ödeme</message>
 	<message key="common.payments">Ödemeler</message>
-	<message key="common.pageHeader.altText">Sayfa Başlığı</message>
 	<message key="common.homePageHeader.altText">Ana Sayfa Başlığı</message>
 	<message key="common.journalHomepageImage.altText">Dergi Ana Sayfa Görseli</message>
 	

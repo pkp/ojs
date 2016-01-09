@@ -167,8 +167,6 @@
 	<message key="manager.setup.journalLogo">期刊圖標</message>
 	<message key="manager.setup.journalPageFooter">期刊網頁頁尾</message>
 	<message key="manager.setup.journalPageFooterDescription">這是您的期刊的頁尾。要變更或更新頁尾，在下面的文字框中貼上HTML代碼。比方說，可以是另一個導覽列、一個計數器等等。這個頁尾會顯示在所有的頁面中。</message>
-	<message key="manager.setup.journalPageHeader">期刊網頁標頭</message>
-	<message key="manager.setup.journalPageHeaderDescription">可以上傳一個圖形版本的期刊標題和圖標，可能是一個比首頁圖標還要小一點的版本，當作期刊頁面的標頭顯示，會取代文字版本的標頭。</message>
 	<message key="manager.setup.journalPolicies">步驟 2：期刊方針</message>
 	<message key="manager.setup.journalSetup">期刊設定</message>
 	<message key="manager.setup.journalSetupUpdated">您的期刊設定已經更新。</message>

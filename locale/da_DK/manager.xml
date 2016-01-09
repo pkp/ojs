@@ -260,8 +260,6 @@
 	<message key="manager.setup.journalLogo.altText">Tidsskriftslogo</message>
 	<message key="manager.setup.journalPageFooter">Sidefod til tidsskrift</message>
 	<message key="manager.setup.journalPageFooterDescription">Dette er tidsskriftets sidefod. Sidefoden kan ændres eller opdateres ved at indsætte HTML-kode i tekstboksen nedenfor. Som eksempel kan det være en anden navigationslinje, en tæller osv. Denne sidefod vises på hver side.</message>
-	<message key="manager.setup.journalPageHeader">Sidehoved til tidsskrift</message>
-	<message key="manager.setup.journalPageHeaderDescription">En grafik version af tidsskriftets titel og logo (.gif-, .jpg- eller .png-fil), muligvis en mindre version af den, der bruges på hjemmesiden, kan overføres til tidsskriftets sider som et sidehoved, der erstatter den tekstversion, som ellers er vist.</message>
 	<message key="manager.setup.journalPolicies">Trin 2. Tidsskriftspolitikker</message>
 	<message key="manager.setup.journalSetup">Konfiguration af tidsskrift</message>
 	<message key="manager.setup.journalSetupUpdated">Konfigurationen af tidsskriftet er blevet opdateret.</message>

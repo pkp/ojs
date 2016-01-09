@@ -55,7 +55,6 @@
 	<message key="common.confirmComplete">ഈ ജോലി പൂര്‍ത്തിയായതായി അടയാളപ്പെടുത്താന്‍ നിങ്ങള്‍ ആഗ്രഹിക്കുന്നു   ? നിങ്ങള്‍ക്ക് പിന്നീട് വ്യത്യാസം വരുതാന്‍ കഴിയില്ല.</message>
 	<message key="common.payment">പണം കൊടുക്കല്‍</message>
 	<message key="common.payments">പണം  ഒടുക്കല്‍</message>
-	<message key="common.pageHeader.altText">താളിന്റെ ഹെഡര്‍</message>
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">ജേണല്‍ ഹെല്പ്</message>

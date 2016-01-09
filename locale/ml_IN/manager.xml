@@ -287,8 +287,6 @@
 	<message key="manager.setup.journalLogo.altText">ജേണല്‍ ലോഗോ</message>
 	<message key="manager.setup.journalPageFooter">ജേണല്‍ പേജ് ഫുട്ടര്‍</message>
 	<message key="manager.setup.journalPageFooterDescription">This is the footer of your journal. To change or update the footer, paste the HTML code in the textbox below. Examples could be another navigation bar, a counter, etc. This footer will appear on every page.</message>
-	<message key="manager.setup.journalPageHeader">ജേണല്‍ പേജ് ഹെഡര്‍</message>
-	<message key="manager.setup.journalPageHeaderDescription">A graphic version of the journal's title and logo (.gif, .jpg, or .png file), possibly a smaller version of the one used on the homepage, can be uploaded to appear as a header on journal pages, which will replace the text version that otherwise appears.</message>
 	<message key="manager.setup.journalPolicies">സ്റ്റെപ്പ്  2. ജേണല്‍ നയങ്ങള്‍</message>
 	<message key="manager.setup.journalSetup">ജേണല്‍ സെറ്റ്അപ്</message>
 	<message key="manager.setup.journalSetupUpdated">താങ്കളുടെ ജേണല്‍ സെറ്റ്അപ് അപ്ഡേറ്റ് ചെയ്തിരിക്കുന്നു.</message>

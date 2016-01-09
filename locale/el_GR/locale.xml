@@ -893,7 +893,6 @@
 	<!-- Default settings for payment items. -->
 	<message key="reviewer.article.enterReviewForm">Πατήστε το εικονίδιο για να συμπληρώσετε την φόρμα αξιολόγησης</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Σας παρακαλούμε συμπληρώστε τα υποχρεωτικά πεδία.</message>
-	<message key="common.pageHeader.altText">Κεφαλίδα Σελίδας</message>
 	<message key="common.homePageHeader.altText">Επικεφαλίδα Αρχικής Σελίδας</message>
 	<message key="common.journalHomepageImage.altText">Εικόνα Αρχικής Σελίδας Περιοδικού</message>
 	<message key="article.coverPage.altText">Εικόνα εξωφύλλου</message>
