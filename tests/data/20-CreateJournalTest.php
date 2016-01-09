@@ -72,12 +72,5 @@ class CreateJournalTest extends WebTestCase {
 		$this->type('css=[id^=supportName-]', 'Ramiro Vaca');
 		$this->click('//form[@id=\'contactForm\']//button[text()=\'Save\']');
 		$this->waitForTextPresent('Your changes have been saved.');
-
-		// Management > Settings > Website
-		$this->click('link=Website');
-		$this->waitForElementPresent('css=[id^=pageHeaderTitle-]');
-		$this->type('css=[id^=pageHeaderTitle-]', 'Journal of Public Knowledge');
-		$this->click('//form[@id=\'appearanceForm\']//button[text()=\'Save\']');
-		$this->waitForTextPresent('Your changes have been saved.');
 	}
 }
