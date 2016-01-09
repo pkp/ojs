@@ -19,13 +19,6 @@ import('lib.pkp.controllers.statistics.form.PKPReportGeneratorForm');
 class ReportGeneratorForm extends PKPReportGeneratorForm {
 
 	/**
-	 * Constructor
-	 */
-	function ReportGeneratorForm($columns, $objects, $fileTypes, $metricType, $defaultReportTemplates, $reportTemplateIndex = null) {
-		parent::PKPReportGeneratorForm($columns, $objects, $fileTypes, $metricType, $defaultReportTemplates, $reportTemplateIndex);
-	}
-
-	/**
 	 * @see PKPReportGeneratorForm::getFileAssocTypes()
 	 */
 	function getFileAssocTypes() {

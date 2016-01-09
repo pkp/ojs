@@ -115,7 +115,7 @@ class UsageStatsReportPlugin extends PKPUsageStatsReportPlugin {
 
 		// Article abstract views.
 		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_SUBMISSION);
-		array_unshift($reports, array('nameLocaleKey' => 'manager.statistics.reports.defaultReport.monographAbstract',
+		array_unshift($reports, array('nameLocaleKey' => 'manager.statistics.reports.defaultReport.articleAbstract',
 			'metricType' => $metricType, 'columns' => $columns, 'filter' => $filter,
 			'aggregationColumns' => $aggregationColumns));
 
@@ -124,7 +124,7 @@ class UsageStatsReportPlugin extends PKPUsageStatsReportPlugin {
 			STATISTICS_DIMENSION_MONTH,
 			STATISTICS_DIMENSION_COUNTRY);
 		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_ISSUE);
-		array_unshift($reports, array('nameLocaleKey' => 'manager.statistics.reports.defaultReport.seriesIndexPageViews',
+		array_unshift($reports, array('nameLocaleKey' => 'manager.statistics.reports.defaultReport.issuePageViews',
 			'metricType' => $metricType, 'columns' => $columns, 'filter' => $filter,
 			'aggregationColumns' => $aggregationColumns));
 
