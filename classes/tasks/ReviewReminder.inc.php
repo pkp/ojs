@@ -31,7 +31,7 @@ class ReviewReminder extends ScheduledTask {
 		return __('admin.scheduledTask.reviewReminder');
 	}
 
-	function sendReminder ($reviewAssignment, $article, $journal) {
+	function sendReminder ($reviewAssignment, $article, $journal, $reminderType) {
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$reviewId = $reviewAssignment->getId();
@@ -43,7 +43,7 @@ class ReviewReminder extends ScheduledTask {
 
 		$reviewerAccessKeysEnabled = $journal->getSetting('reviewerAccessKeysEnabled');
 
-		$email = new ArticleMailTemplate($article, $reviewerAccessKeysEnabled?'REVIEW_REMIND_AUTO_ONECLICK':'REVIEW_REMIND_AUTO', $journal->getPrimaryLocale(), false, $journal, false, true);
+		$email = new ArticleMailTemplate($article, $reviewerAccessKeysEnabled?$reminderType . '_ONECLICK':$reminderType, $journal->getPrimaryLocale(), false, $journal, false, true);
 		$email->setJournal($journal);
 		$email->setReplyTo(null);
 		$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
@@ -132,12 +132,14 @@ class ReviewReminder extends ScheduledTask {
 				$checkDate = strtotime($reviewAssignment->getDateNotified());
 				if (time() - $checkDate > 60 * 60 * 24 * $inviteReminderDays) {
 					$shouldRemind = true;
+                                        $reminderType = 'REVIEW_REMIND_AUTO';
 				}
 			}
 			if ($submitReminderEnabled==1 && $reviewAssignment->getDateDue() != null) {
 				$checkDate = strtotime($reviewAssignment->getDateDue());
 				if (time() - $checkDate > 60 * 60 * 24 * $submitReminderDays) {
 					$shouldRemind = true;
+                                        $reminderType = 'REVIEW_REQUEST_REMIND_AUTO';
 				}
 			}
 
@@ -145,7 +147,7 @@ class ReviewReminder extends ScheduledTask {
 				$shouldRemind = false;
 			}
 
-			if ($shouldRemind) $this->sendReminder ($reviewAssignment, $article, $journal);
+			if ($shouldRemind) $this->sendReminder ($reviewAssignment, $article, $journal, $reminderType);
 		}
 
 		return true;
