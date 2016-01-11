@@ -30,10 +30,6 @@
 	<message key="plugins.generic.pln.settings.journal_uuid_help">Это уникальный идентификатор вашего журнала для PKP PLN. Возможно Вам потребуется сообщить его администраторам PKP PLN для поддержки Вашего журнала.</message>
 	<message key="plugins.generic.pln.settings.refresh">Обновить</message>
 	<message key="plugins.generic.pln.settings.refresh_help">Если по какой-либо причине выше не показаны условия использования или вы знаете, что эти условия были изменены, щелкните на кнопке «Обновить» для обновления списка условий выше.</message>
-	<message key="plugins.generic.pln.settings.pln_network">URL сети PLN</message>
-	<message key="plugins.generic.pln.settings.pln_network_help">URL рабочего сервера вашей сети. Изменяйте его только в случае получения инструкций от кого-то из вашей сети. Вам не нужно создавать учетную запись или входить под учетной записью на этом сервере.</message>
-	<message key="plugins.generic.pln.settings.pln_network_invalid">Указанный URL является неправильным. Пожалуйста, перепроверьте URL и попытайтесь снова.</message>
-	<message key="plugins.generic.pln.settings.pln_network_path_invalid">Адреса URL сети PLN должны состоять из схемы и имени хоста, а также могут включать номер порта. Они не должны содержать пути, строки запросов, имена пользователей, их пароли или фрагменты URL.</message>
 	
 	<message key="plugins.generic.pln.required.object_type">Пожалуйста, выберите тип депонируемого объекта.</message>
 	<message key="plugins.generic.pln.required.object_threshold">Пожалуйста, выберите порог депонируемых объектов.</message>

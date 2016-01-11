@@ -61,16 +61,6 @@
 			<tr><td colspan="2"><div class="separator">&nbsp;</div></td></tr>
 
 			<tr>
-				<td class="label">{fieldLabel name="pln_network" key="plugins.generic.pln.settings.pln_network"}</td>
-				<td class="value">
-					<p>{translate key="plugins.generic.pln.settings.pln_network_help"}</p>
-					<input type="text" id="pln_network" name="pln_network" class="textField" value="{$pln_network|escape}"/>
-				</td>
-			</tr>
-
-            <tr><td colspan="2"><div class="separator">&nbsp;</div></td></tr>
-
-			<tr>
 				<td class="label">
 				</td>
 				<td class="value">

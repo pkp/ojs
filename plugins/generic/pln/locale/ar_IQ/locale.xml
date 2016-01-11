@@ -27,7 +27,6 @@
 	<message key="plugins.generic.pln.settings.refresh">تنشيط</message>
 	<message key="plugins.generic.pln.settings.refresh_help">إن لم يكن هناك فقرات مدرجة أعلاه لأي سبب كان، أو أنك على علم بأن تلك الفقرات قد تم تعديلها، أنقر على زر تنشيط لمحاولة عرض الفقرات مجدداً.</message>
 	
-	<message key="plugins.generic.pln.required.pln_network">لطفاً، إختر شبكة PLN.</message>
 	<message key="plugins.generic.pln.required.object_type">لطفاً، إختر نوعية مكون الإيداع.</message>
 	<message key="plugins.generic.pln.required.object_threshold">لطفاً، إختر عتبة مكون الإيداع.</message>
 	<message key="plugins.generic.pln.required.terms_of_use_agreement">الموافقة على شروط استعمال الشبكة أمر ضروري لغرض الإيداع في PLN.</message>

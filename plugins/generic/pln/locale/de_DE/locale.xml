@@ -29,10 +29,6 @@
 	<message key="plugins.generic.pln.settings.journal_uuid_help">Dies ist die eindeutige Kennung Ihrer Zeitschrift für das PKP PLN. Sie müssen diese Kennung angeben, wenn Sie Support durch die Administrator/innen von PKP PLN erhalten möchten.</message>
 	<message key="plugins.generic.pln.settings.refresh">Aktualisieren</message>
 	<message key="plugins.generic.pln.settings.refresh_help">Wenn aus irgendeinem Grund keine Einträge oben gelistet sind oder wenn Sie wissen, dass die Einträge aktualisiert worden sind, klicken Sie Aktualisieren um die Liste zu erneuern.</message>
-	<message key="plugins.generic.pln.settings.pln_network">PLN-Netzwerk-URL</message>
-	<message key="plugins.generic.pln.settings.pln_network_help">Die URL des Übergabeservers Ihres Netzwerks. Ändern Sie diese Einstellung nur, wenn Sie von Seiten Ihres Netzwerks dazu aufgefordert werden. Sie müssen keinen Account anlegen oder sich auf diesem Server einloggen.</message>
-	<message key="plugins.generic.pln.settings.pln_network_invalid">Die angegebene URL ist nicht gültig. Bitte kontrollieren Sie die Adresse und versuchen Sie es erneut.</message>
-	<message key="plugins.generic.pln.settings.pln_network_path_invalid">PLN-Netzwerk-URLs müssen das Schema und den Host-Namen beinhalten und können eine Port-Nummer enthalten. Sie dürfen keine Pfade, Parameter, Benutzernamen, Passwörter oder URL-Fragmente enthalten.</message>
 	
 	<message key="plugins.generic.pln.required.object_type">Bitte wählen Sie einen Typ für die Objektablieferung.</message>
 	<message key="plugins.generic.pln.required.object_threshold">Bitte wählen Sie eine Schwelle für die Objektablieferung.</message>

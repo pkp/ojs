@@ -189,11 +189,7 @@ class PLNPlugin extends GenericPlugin {
 				$this->updateSetting($journalId, $settingName, $this->newUUID());
 				break;
 			case 'pln_network':
-				$network = parent::getSetting($journalId, 'pln_network');
-				if($network) return $network;
-				$network = Config::getVar('lockss', 'pln_url', PLN_DEFAULT_NETWORK);
-				$this->updateSetting($journalId, 'pln_network', $network);
-				break;
+				return Config::getVar('lockss', 'pln_url', PLN_DEFAULT_NETWORK);
 			default:
 				break;
 		}
