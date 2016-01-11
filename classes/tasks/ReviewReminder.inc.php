@@ -15,9 +15,6 @@
 
 import('lib.pkp.classes.scheduledTask.ScheduledTask');
 
-define('REVIEW_REMIND_AUTO', 'REVIEW_REMIND_AUTO');
-define('REVIEW_REQUEST_REMIND_AUTO', 'REVIEW_REQUEST_REMIND_AUTO');
-
 class ReviewReminder extends ScheduledTask {
 
 	/**
@@ -34,7 +31,7 @@ class ReviewReminder extends ScheduledTask {
 		return __('admin.scheduledTask.reviewReminder');
 	}
 
-	function sendReminder ($reviewAssignment, $article, $journal, $reminderType = REVIEW_REMIND_AUTO) {
+	function sendReminder ($reviewAssignment, $article, $journal) {
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$reviewId = $reviewAssignment->getId();
@@ -46,7 +43,7 @@ class ReviewReminder extends ScheduledTask {
 
 		$reviewerAccessKeysEnabled = $journal->getSetting('reviewerAccessKeysEnabled');
 
-		$email = new ArticleMailTemplate($article, $reviewerAccessKeysEnabled ? $reminderType . '_ONECLICK' : $reminderType, $journal->getPrimaryLocale(), false, $journal, false, true);
+		$email = new ArticleMailTemplate($article, $reviewerAccessKeysEnabled?'REVIEW_REMIND_AUTO_ONECLICK':'REVIEW_REMIND_AUTO', $journal->getPrimaryLocale(), false, $journal, false, true);
 		$email->setJournal($journal);
 		$email->setReplyTo(null);
 		$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
@@ -130,25 +127,25 @@ class ReviewReminder extends ScheduledTask {
 
 			// $article, $journal, $...ReminderEnabled, $...ReminderDays, and $reviewAssignment
 			// are initialized by this point.
-			$reminderType = false;
+			$shouldRemind = false;
 			if ($inviteReminderEnabled==1 && $reviewAssignment->getDateConfirmed() == null) {
 				$checkDate = strtotime($reviewAssignment->getDateNotified());
 				if (time() - $checkDate > 60 * 60 * 24 * $inviteReminderDays) {
-					$reminderType = REVIEW_REQUEST_REMIND_AUTO;
+					$shouldRemind = true;
 				}
 			}
 			if ($submitReminderEnabled==1 && $reviewAssignment->getDateDue() != null) {
 				$checkDate = strtotime($reviewAssignment->getDateDue());
 				if (time() - $checkDate > 60 * 60 * 24 * $submitReminderDays) {
-					$reminderType = REVIEW_REMIND_AUTO;
+					$shouldRemind = true;
 				}
 			}
 
 			if ($reviewAssignment->getDateReminded() !== null) {
-				$reminderType = false;
+				$shouldRemind = false;
 			}
 
-			if ($reminderType) $this->sendReminder ($reviewAssignment, $article, $journal, $reminderType);
+			if ($shouldRemind) $this->sendReminder ($reviewAssignment, $article, $journal);
 		}
 
 		return true;
