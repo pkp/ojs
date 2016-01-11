@@ -83,7 +83,6 @@ class DepositObjectDAO extends DAO {
 	 * @param $objectType string
 	 */
 	function markHavingUpdatedContent($journalId, $objectType) {
-		$objects = array();
 		$depositDao =& DAORegistry::getDAO('DepositDAO');
 	
 		switch ($objectType) {
@@ -100,12 +99,15 @@ class DepositObjectDAO extends DAO {
 				while (!$result->EOF) {
 					$row = $result->GetRowAssoc(false);
 					$depositObject =& $this->getDepositObjectId($journalId,$row['deposit_object_id']);
-					$depositObject->setDateModified($row['last_modified']);
-					$this->updateDepositObject($depositObject);
 					$deposit =& $depositDao->getDepositById($journalId, $depositObject->getDepositId());
-					$deposit->setNewStatus();
-					$deposit->setUpdateStatus();
-					$depositDao->updateDeposit($deposit);
+					if($deposit->getSyncedStatus() || ! $deposit->getTransferredStatus()) {
+						// only update a deposit after it has been synced in LOCKSS.
+						$depositObject->setDateModified($row['last_modified']);
+						$this->updateDepositObject($depositObject);
+						$deposit->setNewStatus();
+						$deposit->setUpdateStatus(true); // this is an update.
+						$depositDao->updateDeposit($deposit);
+					}
 					$result->MoveNext();
 				}
 				$result->Close();
@@ -125,18 +127,20 @@ class DepositObjectDAO extends DAO {
 				while (!$result->EOF) {
 					$row = $result->GetRowAssoc(false);
 					$depositObject =& $this->getDepositObject($journalId,$row['deposit_object_id']);
-					
-					if ($row['issue_modified'] > $row['article_modified']) {
-						$depositObject->setDateModified($row['issue_modified']);
-					} else {
-						$depositObject->setDateModified($row['article_modified']);
-					}
-
-					$this->updateDepositObject($depositObject);
 					$deposit =& $depositDao->getDepositById($journalId, $depositObject->getDepositId());
-					$deposit->setNewStatus();
-					$deposit->setUpdateStatus();
-					$depositDao->updateDeposit($deposit);
+					if($deposit->getSyncedStatus() || ! $deposit->getTransferredStatus()) {
+						// only update a deposit after it has been synced in LOCKSS.
+						if ($row['issue_modified'] > $row['article_modified']) {
+							$depositObject->setDateModified($row['issue_modified']);
+						} else {
+							$depositObject->setDateModified($row['article_modified']);
+						}
+
+						$this->updateDepositObject($depositObject);
+						$deposit->setNewStatus();
+						$deposit->setUpdateStatus(true); // this is an update.
+						$depositDao->updateDeposit($deposit);
+					}
 					$result->MoveNext();
 				}
 				$result->Close();
