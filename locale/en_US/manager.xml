@@ -510,7 +510,7 @@
 	</message>
 	<message key="manager.statistics.reports">Report Generator</message>
 	<message key="manager.statistics.reports.aggregationColumns">Aggregate stats by:</message>
-	<message key="manager.statistics.reports.optinoalColumns.description">Items in italic and marked with * represents data that is optional to the current way of counting statistics in OJS (metric type). You might have that data or not, depending on your statistics plugin configuration.</message>
+	<message key="manager.statistics.reports.optionalColumns.description">Items in italic and marked with * represent data that is optional to the current way of counting statistics in OJS (metric type). You might have that data or not, depending on your statistics plugin configuration.</message>
 	<message key="manager.statistics.reports.defaultReportTemplates">Default report templates</message>
 	<message key="manager.statistics.reports.defaultReport.articleDownloads">Article file downloads</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">Article abstract page views</message>

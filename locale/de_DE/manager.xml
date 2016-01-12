@@ -510,14 +510,15 @@
 	</message>
 	<message key="manager.statistics.reports">Berichterstellung</message>
 	<message key="manager.statistics.reports.aggregationColumns">Erzeuge Statistiken nach:</message>
+	<message key="manager.statistics.reports.optionalColumns.description">Elemente, die kursiv gesetzt und mit * markiert sind, stehen für optionale Daten fürdie momentane Statistikmethode in OJS sind (gewählte Metrik). Abhängig von Ihrer Konfiguration des Statistik-Plug-Ins haben Sie diese Daten oder nicht.</message>
 	<message key="manager.statistics.reports.defaultReportTemplates">Standard-Berichtsvorlagen</message>
 	<message key="manager.statistics.reports.defaultReport.articleDownloads">Downloads von Artikeldateien</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">Aufrufe der Abstractseiten von Artikeln</message>
-	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Article Abstracts und Downloads</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Abstractseiten und Downloads</message>
 	<message key="manager.statistics.reports.defaultReport.issueDownloads">Downloads von Ausgabendateien</message>
-	<message key="manager.statistics.reports.defaultReport.issueTableOfContents">Issue Aufrufe der Inhaltsverzeichnis-Seiten</message>
-	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">Issue table of contents and downloads</message>
-	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Journal Startseiten-Aufrufe</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContents">Aufrufe der Inhaltsverzeichnis-Seiten</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">Inhaltsverzeichnisse und Downloads</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Startseiten-Aufrufe</message>
 	<message key="manager.statistics.reports.description">OJS erstellt Berichte, die die Details der Verarbeitung von Beiträgen aus der Perspektive von Beiträgen, Redakteur/innen, Gutachter/innen sowie Rubriken über einen festgelegten Zeitraum nachzeichnen. Die Berichte werden im CSV-Format erstellt, die mit einer Tabellenkalkulation betrachtet werden können.</message>
 	<message key="manager.statistics.reports.generateReport">Benutzerdefinierten Bericht erzeugen</message>
 	<message key="manager.statistics.reports.advancedOptions">Erweiterte Einstellungen</message>
@@ -529,7 +530,7 @@
 	<message key="manager.statistics.reports.objectType">Objekttyp</message>
 	<message key="manager.statistics.reports.objectId">Objekt-ID</message>
 	<message key="manager.statistics.reports.objectId.label">Definieren Sie eine oder mehrere Objekt-ID, jeweils mit Komma getrennt (z.B. 1,2,3,4,5).</message>
-	<message key="manager.statistics.reports.today">Heute</message>
+	<message key="manager.statistics.reports.yesterday">Gestern</message>
 	<message key="manager.statistics.reports.currentMonth">Aktueller Monat</message>
 	<message key="manager.statistics.reports.orderBy">Sortieren nach</message>
 	<message key="manager.statistics.reports.orderDir">Richtung</message>
