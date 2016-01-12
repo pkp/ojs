@@ -506,3 +506,22 @@ deprecation_warnings = Off
 ; Log web service request information for debugging
 log_web_service_info = Off
 
+;;;;;;;;;;;;;;;;
+; PLN Settings ;
+;;;;;;;;;;;;;;;;
+
+[lockss]
+
+; Domain name where deposits will be sent to.
+; The URL of your network's staging server. Do not change this unless instructed
+; to do so by someone from your network. You do not need to create an 
+; account or login on this server. 
+; 
+; For more information, please see https://pkp.sfu.ca/pkp-lockss/
+; 
+; If you do change this value, a journal manager must also reset each deposit in
+; each journal so that the new network will receive and process the deposits. 
+; Deposits can be reset for each journal on the PLN Plugin's status page at 
+; Journal Management > System Plugins > Generic Plugins > PKP PLN Plugin
+; 
+; pln_url = http://pkp-pln.lib.sfu.ca
