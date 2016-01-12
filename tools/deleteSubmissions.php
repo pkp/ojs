@@ -39,7 +39,7 @@ class SubmissionDeletionTool extends CommandLineTool {
 	 */
 	function usage() {
 		echo "Permanently removes submission(s) and associated information.  USE WITH CARE.\n"
-			. "Usage: {$this->scriptName} submssion_id [...]\n";
+			. "Usage: {$this->scriptName} submission_id [...]\n";
 	}
 
 	/**
