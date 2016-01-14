@@ -44,12 +44,13 @@ class SubmissionHandler extends PKPSubmissionHandler {
 	 * Get the step numbers and their corresponding title locale keys.
 	 * @return array
 	 */
-	protected function _getStepsNumberAndLocaleKeys() {
+	function getStepsNumberAndLocaleKeys() {
 		return array(
 			1 => 'author.submit.start',
 			2 => 'author.submit.upload',
 			3 => 'author.submit.metadata',
-			4 => 'author.submit.confirmation'
+			4 => 'author.submit.confirmation',
+			5 => 'author.submit.nextSteps',
 		);
 	}
 
@@ -57,8 +58,8 @@ class SubmissionHandler extends PKPSubmissionHandler {
 	 * Get the number of submission steps.
 	 * @return int
 	 */
-	protected function _getStepCount() {
-		return 4;
+	function getStepCount() {
+		return 5;
 	}
 }
 
