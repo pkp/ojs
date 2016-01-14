@@ -226,6 +226,56 @@ Başvuruya ulaşım için adres: {$submissionReviewUrl}
 {$articleAbstract}</body>
 		<description>Yazının hakemlere önerilmesi için kullanılan mesajdır. Ayarlarda "tek tıklama özelliği" etkinleştirildi ise kullanılır..</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Makale Değerlendirme İsteği</subject>
+		<body>Sayın {$reviewerName},
+
+{$journalName} için gönderilen "{$articleTitle}" başlıklı çalışmanın sizin ilgi alanlarınız ile uyuştuğunu ve dergimizde yayınlanabilirliği açısından inceleyebileceğinize inanoyoruz. Başvurunun içeriği aşağıya eklenmiştir. Bu görevin bizim için ne kadar önemli olduğunu göz önünde bulunduracağınızı umuyoruz.
+
+{$weekLaterDate} tarihine kadar, bu çalışmanın hakemliğini kabul edip etmediğinizi belirtmek, ilgili çalışmaya ulaşmak, eleştiri ve önerilerinizi kaydetmek için dergi internet sitesine giriş yapabilirsiniz. Dergi adresi: {$journalUrl} 
+
+Değerlendirme için son tarih: {$reviewDueDate}.
+
+Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). {$passwordResetUrl}
+
+Makale Erişim Adresi: {$submissionReviewUrl}
+
+Bu dileğimizi değerlendirdiğiniz için teşekkür ederiz.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+Özet:
+{$articleAbstract}</body>
+		<description>Bu eposta Bölüm Editöründen bir hakeme bir çalışmanın hakemlik görevine cavet amacı ile iletir. Gönderiyle ilgili başlık ve özet gibi bilgileri, değerlendirme sona erme tarihini ve kendisinin başvuruya nasıl erişilebileceği ile ilgili bilgileri içerir.	Bu mesaj Dergi Ayarları Adım 2'de seçilen Standart Değerlendirme Sürecinde kullanılır. (Ayrıca bkz.: REVIEW_REQ_MULTI_ATTACHED ve REVIEW_REQUEST_REMIND_AUTO_ATTACHED.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Makale Değerlendirme İsteği</subject>
+		<body>Sayın {$reviewerName},
+
+{$journalName} için yayınlanmak üzere gönderilen "{$articleTitle}" başlıklı makaleyi değerlendiremek için en uygun hakemlerden birisi olarak, yazı hakkındaki değerli görüşlerinizi bize ileteceğinizi umuyoruz. Başvurunun önemli özellikleri aşağıda iletilmiştir. Dergimiz için çok değerli olan görüşlerinizden bizi mahrum etmeyeceğinizi umuyoruz.
+
+Dergimiz web sitesine girerek, {$weekLaterDate} süresinde gözden geçirme isteğimizi kabul ettiğinizi bildiriniz. İlgili sayfadan yazının tam metnine ulaşabileceksiniz.
+
+Değerlendirme raporunuz için son tarih {$reviewDueDate}.
+
+Başvuruya ulaşım için adres: {$submissionReviewUrl}
+
+İsteğimize olumlu yaklaşımınız için şimdiden teşekkür ederiz.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+Özet
+{$articleAbstract}</body>
+		<description>Yazının hakemlere önerilmesi için kullanılan mesajdır. Ayarlarda "tek tıklama özelliği" etkinleştirildi ise kullanılır..</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Makale Değerlendirme İsteği</subject>
 		<body>Sayın {$reviewerName},

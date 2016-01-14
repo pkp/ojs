@@ -256,6 +256,56 @@ Vă mulțumim pentru că luați în considerare această solicitare.
 {$articleAbstract}</body>
 		<description>Acest email este trimis de către un redactor de secțiune ca răspuns la solicitarea făcută unui evaluator de a accepta sau refuza misiunea de a evalua o propunere. Sunt incluse informații despre propunere precum titlul și abstractul, data limită pentru evaluare și cum poate fi accesat materialul în sine. Acest mesaj este trimis atunci când este selectat procesul standard de evaluare din setările revistei la pasul 2 fiind oferit evaluatorului accesul printr-un singur clic.</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Solicitare pentru evaluarea articolului</subject>
+		<body>{$reviewerName}:
+
+Suntem încredințați că ați putea face evaluarea acestui manuscris intitulat "{$articleTitle}", care a fost trimis revistei {$journalName}. Abstractul propunerii este introdus mai jos și sperăm că veți accepta această misiune importantă.
+
+Vă rugăm să vă autentificați pe siteul revistei prin {$weekLaterDate} pentru a indica dacă veți face evaluarea sau nu. De asemenea, veți putea accesa propunerea și veți putea înregistra evaluarea precum și recomandările. Siteul web se află la {$journalUrl}
+
+Evaluarea va trebui făcută până la data de {$reviewDueDate}.
+
+Dacă nu aveți acces la datele privind contul cu nume de utilizator și parolă pentru siteul revistei, puteți folosi acest link pentru a reseta parola (care mai apoi vă va fi trimisă prin email împreună cu numele de utilizator). {$passwordResetUrl}
+
+URL-ul propunerii: {$submissionReviewUrl}
+
+Vă mulțumim pentru că luați în considerare această solicitare.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Acest email este trimis de către un redactor de secțiune ca răspuns la solicitarea făcută unui evaluator de a accepta sau refuza misiunea de a evalua o propunere. Conține informații despre propunere precum titlul și abstractul, data limită pentru evaluare și cum poate fi accesată propunerea. Acest mesaj este trimis atunci când este selectat procesul standard de evaluare din setările revistei la pasul 2. (Altfel, vezi REVIEW_REQUEST_REMIND_AUTO_ATTACHED.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Solicitare pentru evaluarea articolului</subject>
+		<body>{$reviewerName}:
+
+Suntem încredințați că ați putea face evaluarea acestui manuscris intitulat "{$articleTitle}," care a fost trimis revistei {$journalName}. Abstractul propunerii este introdus mai jos și sperăm că veți accepta această misiune importantă.
+
+Vă rugăm să vă autentificați pe siteul revistei prin {$weekLaterDate} pentru a indica dacă veți face evaluarea sau nu. De asemenea, veți putea accesa propunerea și veți putea înregistra evaluarea precum și recomandările.
+
+Evaluarea va trebui făcută până la data de {$reviewDueDate}.
+
+URL-ul propunerii: {$submissionReviewUrl}
+
+Vă mulțumim pentru că luați în considerare această solicitare.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Acest email este trimis de către un redactor de secțiune ca răspuns la solicitarea făcută unui evaluator de a accepta sau refuza misiunea de a evalua o propunere. Sunt incluse informații despre propunere precum titlul și abstractul, data limită pentru evaluare și cum poate fi accesat materialul în sine. Acest mesaj este trimis atunci când este selectat procesul standard de evaluare din setările revistei la pasul 2 fiind oferit evaluatorului accesul printr-un singur clic.</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Solicitare pentru evaluarea articolului</subject>
 		<body>{$reviewerName}:

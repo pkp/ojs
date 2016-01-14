@@ -256,6 +256,59 @@ Terima kasih untuk mempertimbangkan permintaan ini.
 {$articleAbstract}</body>
 		<description>Email ini dari Editor Bagian untuk Reviewer yang meminta Reviewer untuk menerima atau menolak tugas mereview naskah. Email ini memberikan informasi tentang naskah seperti judul dan abstrak, tanggal jatuh tempo tijauan, dan bagaimana mengakses naskah itu sendiri. Pesan ini digunakan saat proses review standar dipilih di Setup Jurnal, Langkah 2 dan akses Reviewer satu kali klik dapat digunakan. </description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Permintaan Review Artikel</subject>
+		<body>{$reviewerName}:
+
+Saya yakin Anda dapat menjadi reviewer handal manuskrip, "{$articleTitle}," yang telah diserahkan ke {$journalName}. Abstrak naskah disertakan di bawah ini, dan saya harap Anda mempertimbangkan untuk mengambil tugas penting ini untuk kami. 
+
+
+Mohon login ke web site jurnal sebelum tanggal {$weekLaterDate} untuk menunjukkan apakah Anda akan mengambil Review ini atau tidak, serta untuk mengakses naskah dan mencatat Review dan rekomendasi Anda. Web sitenya adalah {$journalUrl}
+
+Review jatuh tempo tanggal {$reviewDueDate}.
+
+Jika Anda tidak punya nama pengguna dan kata sandi untuk web site jurnal, Anda dapat menggunakan tautan ini untuk mengatur ulang kata sandi Anda (yang kemudian akan diemail kepada Anda beserta nama pengguna Anda). 
+
+{$passwordResetUrl}
+
+URL Penyerahan: {$submissionReviewUrl}
+
+Terima kasih untuk mempertimbangkan permintaan ini.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Email ini dari Editor Bagian untuk Reviewer yang meminta Reviewer untuk menerima atau menolak tugas mereview naskah. Email ini memberikan informasi tentang naskah seperti judul dan abstrak, tanggal jatuh tempo review, dan bagaimana mengakses naskah itu sendiri. Pesan ini digunakan saat proses review standar dipilih di Setup Jurnal, Langkah 2. (Jika tidak, lihat  REVIEW_REQUEST_REMIND_AUTO_ATTACHED.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Permintaan Review Artikel</subject>
+		<body>{$reviewerName}:
+
+Saya yakin Anda akan berperan sebagai Reviewer handal manuskrip, "{$articleTitle}," yang telah diserahkan ke {$journalName}. Abstrak naskah disertakan di bawah ini, dan saya harap Anda akan mempertimbangkan untuk mengambil tugas penting ini untuk kami.
+
+Login ke web site jurnal sebelum tanggal {$weekLaterDate} untuk menunjukkan apakah Anda akan mengambil review atau tidak, serta untuk mengakses naskah dan mencatat review dan rekomendasi Anda.
+
+Review jatuh tempo sebelum tanggal {$reviewDueDate}.
+
+URL Penyerahan: {$submissionReviewUrl}
+
+Terima kasih untuk mempertimbangkan permintaan ini.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Email ini dari Editor Bagian untuk Reviewer yang meminta Reviewer untuk menerima atau menolak tugas mereview naskah. Email ini memberikan informasi tentang naskah seperti judul dan abstrak, tanggal jatuh tempo tijauan, dan bagaimana mengakses naskah itu sendiri. Pesan ini digunakan saat proses review standar dipilih di Setup Jurnal, Langkah 2 dan akses Reviewer satu kali klik dapat digunakan. </description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Permintaan Review Artikel</subject>
 		<body>{$reviewerName}:
