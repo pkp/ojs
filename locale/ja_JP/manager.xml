@@ -173,7 +173,7 @@
 	<message key="manager.setup.enableAnnouncements">雑誌管理者による告知文の追加機能を有効にする。</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">雑誌ホームページに最新の告知文を</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">件表示する。</message>
-	<message key="manager.setup.enablePageNumber">アイテムのページ数を独自に計算して、目次に入力する（例えば、pp. 13-26）。</message>
+	<message key="manager.setup.enablePageNumber">アイテムのページ数を独自に計算して、目次に入力する（例えば、13-26）。</message>
 	<message key="manager.setup.enablePublicArticleId">出版アイテムを識別するためにカスタム識別子を使用する。</message>
 	<message key="manager.setup.enablePublicIssueId">巻号を識別するためにカスタム識別子を使用する。</message>
 	<message key="manager.setup.enablePublicSuppFileId">論文補足ファイルを識別するためにカスタム識別子を使用する。</message>

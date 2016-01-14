@@ -65,7 +65,7 @@
 			{fbvFormSection inline=true size=$fbvStyles.size.SMALL}
 				{fbvElement type="select" name="reportTemplate" id="reportTemplate" from=$reportTemplateOptions selected=$reportTemplate translate=false}
 			{/fbvFormSection}
-			{fbvFormSection for="aggregationColumns" label="manager.statistics.reports.aggregationColumns" description="manager.statistics.reports.optinoalColumns.description" list=true}
+			{fbvFormSection for="aggregationColumns" label="manager.statistics.reports.aggregationColumns" description="manager.statistics.reports.optionalColumns.description" list=true}
 				{fbvElement type="checkboxgroup" name="aggregationColumns" id="aggregationColumns" from=$aggregationOptions selected=$selectedAggregationOptions translate=false}
 			{/fbvFormSection}
 		{/fbvFormArea}
@@ -94,7 +94,7 @@
 	{capture assign="advancedOptionsContent"}
 		{fbvFormArea id="columnsFormArea" title="manager.statistics.reports.columns"}
 			<p>{translate key="manager.statistics.reports.columns.description"}</p>
-			{fbvFormSection description="manager.statistics.reports.optinoalColumns.description" inline=true size=$fbvStyles.size.MEDIUM}
+			{fbvFormSection description="manager.statistics.reports.optionalColumns.description" inline=true size=$fbvStyles.size.MEDIUM}
 				{fbvElement type="select" name="columns[]" id="columns" from=$columnsOptions multiple="multiple" selected=$columns translate=false required=true}
 			{/fbvFormSection}
 		{/fbvFormArea}
@@ -152,7 +152,7 @@
 		{/fbvFormArea}
 		
 		{fbvFormArea id="orderByFormArea" title="manager.statistics.reports.orderBy"}
-			{fbvFormSection description="manager.statistics.reports.optinoalColumns.description"}
+			{fbvFormSection description="manager.statistics.reports.optionalColumns.description"}
 				{foreach from=$orderColumnsOptions item=item key=key}
 					{fbvFormSection inline=true size=$fbvStyles.size.SMALL}
 						{fbvElement type="select" name="orderByColumn[]" id="orderByColumn-$key" from=$orderColumnsOptions defaultValue=0 defaultLabel="manager.statistics.reports.columns"|translate selected=$orderByColumn translate=false}

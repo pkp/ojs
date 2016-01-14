@@ -219,7 +219,7 @@
 	<message key="manager.setup.enableAnnouncements">Geef tijdschriftbeheerders de mogelijkheid om nieuwsberichten bij het tijdschrift te plaatsen</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Toon</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">van de nieuwste berichten op de homepage van het tijdschrift</message>
-	<message key="manager.setup.enablePageNumber">Paginanummers worden handmatig opgenomen in de inhoudsopgave (bv. pp. 13-26).</message>
+	<message key="manager.setup.enablePageNumber">Paginanummers worden handmatig opgenomen in de inhoudsopgave (bv. 13-26).</message>
 	<message key="manager.setup.enablePublicArticleId">Er worden aangepaste identificaties gebruikt voor het identificeren van gepubliceerde artikelen.</message>
 	<message key="manager.setup.enablePublicGalleyId">Aangepaste identificaties gebruiken voor het identificeren van proefdrukken (bv. HTML of PDF bestanden) van gepubliceerde artikelen</message>
 	<message key="manager.setup.enablePublicIssueId">Er worden aangepaste identificaties gebruikt voor het identificeren van nummers.</message>

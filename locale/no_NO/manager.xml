@@ -119,7 +119,7 @@
 	<message key="manager.setup.enableAnnouncements">Tillat redaksjonsledere å legge til tidsskriftsoppslag.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Vis de</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">nyeste oppslagene på tidsskriftets hjemmeside.</message>
-	<message key="manager.setup.enablePageNumber">Sidetall for elementene vil bli regnet ut og skrevet inn manuelt i innholdsoversikten (for eks. pp. 13-26).</message>
+	<message key="manager.setup.enablePageNumber">Sidetall for elementene vil bli regnet ut og skrevet inn manuelt i innholdsoversikten (for eks. 13-26).</message>
 	<message key="manager.setup.enablePublicArticleId">Tilpassete identifikatorer vil bli brukt for å identifisere publisert elementer.</message>
 	<message key="manager.setup.enablePublicIssueId">Tilpassete identifikatorer vil bli brukt for å identifisere utgaver.</message>
 	<message key="manager.setup.enablePublicSuppFileId">Tilpassete identifikatorer vil bli brukt for å identifisere tilleggsfiler til artikler.</message>
