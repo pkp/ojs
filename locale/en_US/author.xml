@@ -30,6 +30,8 @@
 	<message key="author.submit.metadata">Enter Metadata</message>
 	<message key="author.submit.supplementaryFiles">Upload Supplementary Files</message>
 	<message key="author.submit.confirmation">Confirmation</message>
+	<message key="submission.confirm.message">Your submission has been uploaded and is ready to be sent to the journal. You may review and adjust any of the information you have entered before continuing. When you are ready, click "Finish Submission".</message>
+	<message key="author.submit.nextSteps">Next Steps</message>
 	<message key="author.submit.cancelSubmission">You can complete this submission at a later date by selecting Active Submissions from the Author home.</message>
 	<message key="author.submit.notAccepting">This journal is not accepting submissions at this time.</message>
 	<message key="author.submit.requestWaiver">Request Waiver</message>
