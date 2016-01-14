@@ -208,6 +208,57 @@
 {$articleAbstract}</body>
 		<description>このメールは、セクションエディタから査読者に投稿物の査読を依頼するものです。メールには、タイトルや要旨などの投稿物に関する情報、査読期限日、投稿物へのアクセス方法を示しています。このメールは、雑誌設定のステップ2で標準的査読プロセスが選択され、ワンクリック査読者アクセスが有効な場合に使用されます。</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>論文査読のお願い</subject>
+		<body>{$reviewerName} 殿:
+
+雑誌『{$journalName}』への投稿原稿「{$articleTitle}」の査読をお願いいたしたくメールを差し上げました。投稿物の要旨を以下に添付しました。貴殿がこの重要な仕事を引き受けてくださることを希望いたしております。
+
+{$weekLaterDate}までに、雑誌のWebサイトにログインして、査読を引き受けていただけるかどうかを示していただけるようお願いいたします。引き受けていただける場合は、このサイトで投稿物にアクセスし、査読結果と答申を記録することができます。雑誌のWebサイトのURLは、{$journalUrl} です。
+
+査読作業自体の期限日は、{$reviewDueDate}です。
+
+雑誌のWebサイトにアクセスするユーザ名とパスワードをお持ちでない場合は、次のリンクを使ってパスワードをリセットしてください（パスワードはユーザ名と共にメールで送信されます）: {$passwordResetUrl}
+
+
+投稿物のURL: {$submissionReviewUrl}
+
+よろしくご検討くださるよう、お願いいたします。
+
+{$editorialContactSignature}
+
+
+
+「{$articleTitle}」
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>このメールは、セクションエディタから査読者に投稿物の査読を依頼するものです。メールには、タイトルや要旨などの投稿物に関する情報、査読期限日、投稿物へのアクセス方法を示しています。このメールは、雑誌設定のステップ2で標準的査読プロセスが選択された場合に使用されます（そうでない場合は、REVIEW_REQUEST_REMIND_AUTO_ATTACHEDを参照してください）。</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>論文査読のお願い</subject>
+		<body>{$reviewerName} 殿:
+
+雑誌『{$journalName}』への投稿原稿「{$articleTitle}」の査読をお願いいたしたくメールを差し上げました。投稿物の要旨を以下に添付しました。貴殿がこの重要な仕事を引き受けてくださることを希望いたしております。
+
+{$weekLaterDate}までに、雑誌のWebサイトにログインして、査読を引き受けていただけるかどうかを示していただけるようお願いいたします。引き受けていただける場合は、このサイトで投稿物にアクセスし、査読結果と答申を記録することができます。雑誌のWebサイトのURLは、{$journalUrl} です。
+
+査読作業自体の期限日は、{$reviewDueDate}です。
+
+投稿物のURL: {$submissionReviewUrl}
+
+よろしくご検討くださるよう、お願いいたします。
+
+{$editorialContactSignature}
+
+
+
+「{$articleTitle}」
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>このメールは、セクションエディタから査読者に投稿物の査読を依頼するものです。メールには、タイトルや要旨などの投稿物に関する情報、査読期限日、投稿物へのアクセス方法を示しています。このメールは、雑誌設定のステップ2で標準的査読プロセスが選択され、ワンクリック査読者アクセスが有効な場合に使用されます。</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>論文査読のお願い</subject>
 		<body>{$reviewerName} 殿:

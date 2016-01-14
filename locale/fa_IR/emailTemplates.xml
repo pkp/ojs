@@ -205,6 +205,50 @@ Thank you,
 {$articleAbstract}</body>
 		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>درخواست کارشناسی مقاله</subject>
+		<body>{$reviewerName}:
+
+شما به عنوان یک کارشناس ممتاز برای بررسی مقاله "{$articleTitle}"که برای {$journalName} ارسال شده است انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید
+
+لطفا قبل از تاریخ "{$weekLaterDate}" وارد وب سایت مجله شده و مشخص کنید که آیا مایل به قبول کارشناسی مقاله هستید یا خیر. همچنین به طور همزمان می توانید به مقاله ارسالی دسترسی پیدا کرده و متن کارشناسی و توصیه های خودرا ذخیره کنید. آدرس وب سایت مجله {$journalUrl} است.
+
+ضمنا آخرین مهلت بررسی این مقاله تا تاریخ "{$reviewDueDate}" می باشد
+
+چنانچه نام کاربری و رمز عبور خود مربوط به وب سایت این مجله را در دسترس ندارید می توانید از پیوند زیر جهت تنظیم دوباره رمزعبور خود استفاده کنید (که به همراه نام کاربری برایتان ارسال می گردد).
+
+{$passwordResetUrl}
+آدرس مقاله : {$submissionReviewUrl}
+
+از توجه شما به این درخواست سپاسگزاری می کنم.
+
+{$editorialContactSignature}</body>
+		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_REMIND_AUTO_ATTACHED.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>درخواست کارشناسی مقاله</subject>
+		<body>{$reviewerName}:
+
+شما به عنوان یک کارشناس ممتاز برای بررسی مقاله "{$articleTitle}" که برای {$journalName} ارسال شده است انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید.
+
+لطفا قبل از تاریخ {$reviewDueDate} وارد وب سایت مجله شده و مشخص سازید که آیا مایل به قبول کارشناسی هستید یا خیر؟ همچنین به طور همزمان می توانید به مقاله ارسالی دسترسی پیدا کرده و متن کارشناسی و توصیه های خودرا ذخیره کنید.
+
+ضمنا آخرین مهلت بررسی این مقاله تا تاریخ {$reviewDueDate} می باشد.
+
+آدرس مقاله: {$submissionReviewUrl}
+
+از توجه شما به این درخواست متشکرم.
+
+{$editorialContactSignature}
+
+
+--------------------------------
+"{$articleTitle}"
+
+چکیده:
+{$articleAbstract}</body>
+		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>درخواست کارشناسی مقاله</subject>
 		<body>{$reviewerName}:

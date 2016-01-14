@@ -298,6 +298,67 @@ Resumo:
 {$articleAbstract}</body>
 		<description>Mensagem do Editor de Seção para solicitar ao Avaliador que indique disponibilidade ou não para realizar uma avaliação. Oferece informações sobre a submissão, como título e resumo, além da data para a conclusão dos trabalhos e como acessar o documento. Esta mensagem é usada quando se utiliza o Processo Padrão de Avaliação, definido no Passo 2 de Configuração da Revista e a opção de acesso one-click está habilitada (Caso contrário veja REVIEW_REQ_MULTI_ATTACHED e REVIEW_REQUEST_ATTACHED).</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>A revista {$journalName} solicita avaliação de artigo</subject>
+		<body>{$reviewerName},
+
+Acredito que seu conhecimento será fundamental para realizar a avaliação do trabalho "{$articleTitle}" submetido a {$journalName}. Informações sobre a submissão encontram-se nesta mensagem, e espero que considere assumir esta importante responsabilidade.
+
+Acesse o sistema até {$weekLaterDate} para informar se estará disponível ou não para realizar a avaliação, bem como acessar os dados completos da submissão e registrar sua avaliação e recomendações, por meio da URL {$journalUrl}.
+
+O prazo para a conclusão da avaliação é {$reviewDueDate}.
+
+Caso não tenha seu login e senha de acesso para acessar o sistema, use o link a seguir para que o sistema crie uma nova senha que lhe será enviada via e-mail, após mensagem de confirmação de solicitação de atualização de senha, junto com o seu login. Clique no link a seguir para criar sua nova senha: {$passwordResetUrl}
+
+Clique no link baixo para acessar o sistema e a submissão designada.
+URL da submissão: {$submissionReviewUrl}
+
+Agradecemos desde já sua atenção.
+
+{$editorialContactSignature}
+
+---------------------------------------------------------------
+Dados da submissão
+
+Título
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+
+Resumo
+{$articleAbstract}</body>
+		<description>Mensagem do Editor de Seção para solicitar ao Avaliador que indique disponibilidade ou não para realizar uma avaliação. Oferece informações sobre a submissão, como título e resumo, além da data para a conclusão dos trabalhos e como acessar o documento. Esta mensagem é usada quando se utiliza o Processo Padrão de Avaliação, definido no Passo 2 de Configuração da Revista. (Caso contrário veja REVIEW_REQ_MULTI_ATTACHED e REVIEW_REQUEST_REMIND_AUTO_ATTACHED.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>A revista {$journalName} solicita avaliação de artigo</subject>
+		<body>{$reviewerName},
+
+Acredito que seu conhecimento será fundamental para realizar a avaliação do manuscrito "{$articleTitle}" submetido a {$journalName}. Informações sobre a submissão encontram-se abaixo, e espero que considere assumir esta importante responsabilidade.
+
+Acesse o sistema até {$weekLaterDate} para informar se estará disponível ou não para realizar a avaliação, bem como acessar os dados completos da submissão e registrar sua avaliação e recomendações.
+
+O prazo para a entrega da avaliação é {$reviewDueDate}.
+
+URL da Submissão: {$submissionReviewUrl}
+A URL da submissão permite acesso direto, sem a necessidade de informar login e senha, que serão necessários para acessar outras áreas.
+
+Agradecendo desde já a atenção dispensada,
+
+{$editorialContactSignature}
+
+
+----------------------------------------------------
+Dados da submissão
+
+Título:
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+
+Resumo:
+{$articleAbstract}</body>
+		<description>Mensagem do Editor de Seção para solicitar ao Avaliador que indique disponibilidade ou não para realizar uma avaliação. Oferece informações sobre a submissão, como título e resumo, além da data para a conclusão dos trabalhos e como acessar o documento. Esta mensagem é usada quando se utiliza o Processo Padrão de Avaliação, definido no Passo 2 de Configuração da Revista e a opção de acesso one-click está habilitada (Caso contrário veja REVIEW_REQ_MULTI_ATTACHED e REVIEW_REQUEST_REMIND_AUTO_ATTACHED).</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>A revista {$journalName} solicita avaliação de artigo</subject>
 		<body>{$reviewerName},
