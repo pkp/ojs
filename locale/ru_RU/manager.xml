@@ -279,7 +279,7 @@
 	<message key="manager.setup.enableAnnouncements">Разрешить управляющим журналами добавлять объявления журнала.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Показать</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">последних обьявлений на главной странице журнала.</message>
-	<message key="manager.setup.enablePageNumber">Номера страниц для материалов будут вычисляться и вводиться вручную в Содержание выпуска (например, с. 13-26).</message>
+	<message key="manager.setup.enablePageNumber">Номера страниц для материалов будут вычисляться и вводиться вручную в Содержание выпуска (например, 13-26).</message>
 	<message key="manager.setup.enablePublicArticleId">Пользовательские идентификаторы будут использоваться для идентификации опубликованных материалов.</message>
 	<message key="manager.setup.enablePublicGalleyId">Пользовательские идентификаторы будут использоваться для идентификации гранок (например, файлов HTML или PDF) для опубликованных материалов.</message>
 	<message key="manager.setup.enablePublicIssueId">Пользовательские идентификаторы будут использоваться для идентификации выпусков.</message>
@@ -511,7 +511,7 @@
 	</message>
 	<message key="manager.statistics.reports">Генератор отчетов</message>
 	<message key="manager.statistics.reports.aggregationColumns">Агрегировать статистику по:</message>
-	<message key="manager.statistics.reports.optinoalColumns.description">Элементы набранные курсивом и отмеченные * представляют собой данные, которые являются необязательными для установленного сейчас способа подсчета статистики в OJS (тип метрики). Вы можете получить эти данные или не получить в зависимости от настроек вашего плагина статистики.</message>
+	<message key="manager.statistics.reports.optionalColumns.description">Элементы набранные курсивом и отмеченные * представляют собой данные, которые являются необязательными для установленного сейчас способа подсчета статистики в OJS (тип метрики). Вы можете получить эти данные или не получить в зависимости от настроек вашего плагина статистики.</message>
 	<message key="manager.statistics.reports.defaultReportTemplates">Шаблоны отчетов по умолчанию</message>
 	<message key="manager.statistics.reports.defaultReport.articleDownloads">Скачивания файла статьи</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">Просмотры страницы аннотации статьи</message>
