@@ -96,7 +96,6 @@ class GalleyFilesGridHandler extends FileListGridHandler {
 		$representation = $this->getAuthorizedContextObject(ASSOC_TYPE_REPRESENTATION);
 		$this->setId('articleGalleyFiles-' . $representation->getId());
 		$this->setTitle('submission.galleyFiles');
-		$this->setInstructions('submission.proofReadingDescription');
 	}
 
 

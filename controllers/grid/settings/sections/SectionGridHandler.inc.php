@@ -51,8 +51,6 @@ class SectionGridHandler extends SetupGridHandler {
 		// Set the grid title.
 		$this->setTitle('section.sections');
 
-		$this->setInstructions('manager.setup.section.description');
-
 		// Elements to be displayed in the grid
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$sectionEditorsDao = DAORegistry::getDAO('SectionEditorsDAO');
