@@ -190,6 +190,55 @@
 {$articleAbstract}</body>
 		<description>這封電子郵件這封電子郵件是由區段編輯寄發給審查人一份邀請函，詢問審查人接受或婉謝一份稿件的審查工作。郵件中含有關於稿件標題和摘要的資訊，一個審查工作到期日，以及如何存取稿件的說明資訊。在「期刊設定」之步驟2中選擇「標準審查流程」選項，並且啟用「審查人一點即往」的功能，才會用到這份訊息。</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>邀請您審查稿件</subject>
+		<body>{$reviewerName}您好：
+
+《{$journalName}》的編輯團隊相信您是投稿到本期刊之稿件〈{$articleTitle}〉的最佳審查人選。該份稿件的摘要如下，而我們希望您會考慮進行這份對我們來說相當重要的一個工作。
+
+無論您是否接受審查工作與否，都請在{$weekLaterDate}之前登入這個期刊網站，同時檢閱這份稿件並且記錄您的審查意見和編輯建議。網站為：{$journalUrl}
+
+請注意審查工作的期限為：{$reviewDueDate}。
+
+如果您沒有您在這個期刊網站的使用者帳號和密碼。您可以使用這個連結去重新設定您的密碼（該密碼會和您的使用者帳號名稱一起電郵給您）：{$passwordResetUrl}
+
+稿件網址：{$submissionReviewUrl}
+
+非常感謝您考慮我們的邀請。
+
+{$editorialContactSignature}
+
+
+
+〈{$articleTitle}〉
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>這封電子郵件是由區段編輯寄發給審查人一份邀請函，詢問審查人接受或婉謝一份稿件的審查工作。郵件中含有關於稿件標題和摘要的資訊，一個審查工作到期日，以及如何存取稿件的說明資訊。在「期刊設定」之步驟2中選擇「標準審查流程」選項時，才會用到這份訊息。(否則請見：REVIEW_REQUEST_REMIND_AUTO_ATTACHED.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>邀請您審查稿件</subject>
+		<body>{$reviewerName}您好：
+
+《{$journalName}》的編輯團隊相信您是投稿到本期刊之稿件〈{$articleTitle}〉的最佳審查人選。該份稿件的摘要如下，而我們希望您會考慮進行這份對我們來說相當重要的一個工作。
+
+無論您是否接受審查工作與否，都請在{$weekLaterDate}之前登入這個期刊網站，同時檢閱這份稿件並且記錄您的審查意見和編輯建議。網站為：{$journalUrl}
+
+請注意審查工作的期限為：{$reviewDueDate}。
+
+稿件網址：{$submissionReviewUrl}
+
+非常感謝您考慮我們的邀請。
+{$editorialContactSignature}
+
+
+
+〈{$articleTitle}〉
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>這封電子郵件這封電子郵件是由區段編輯寄發給審查人一份邀請函，詢問審查人接受或婉謝一份稿件的審查工作。郵件中含有關於稿件標題和摘要的資訊，一個審查工作到期日，以及如何存取稿件的說明資訊。在「期刊設定」之步驟2中選擇「標準審查流程」選項，並且啟用「審查人一點即往」的功能，才會用到這份訊息。</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>邀請您審查稿件</subject>
 		<body>{$reviewerName}您好：

@@ -223,6 +223,57 @@ Abstract
 {$articleAbstract}</body>
 		<description>Questa email dal section editor al revisore richiede che quest'ultimo accetti o rifiuti il compito di revisionare una submission. Fornisce informazioni sulla submission quali il titolo e l'abstract, una data attesa per la revisione, e su come accedere alla submission stessa. Questo messaggio è usato quando il processo Standard di revisione è selezionato nel Journal Setup, fase 2, e il accesso one-click del revisore è attivato.</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Richiesta di revisione della proposta</subject>
+		<body>Gentile {$reviewerName},
+
+Ti propongo la revisione del manoscritto "{$articleTitle}," che è stato proposto a {$journalName}. L'abstract della submission  è inserito qui sotto. Spero che vorrai prendere in carico questo compito.
+
+Ti chiedo quindi di effettuare il log in al sito web della rivista entro il {$weekLaterDate} per indicare se prenderai in carico la revisione o meno.
+Potrai poi accedere alla submission e inviare il tuo parere. Il sito web è {$journalUrl}
+
+La data di scadenza per la revisione è fissata al {$reviewDueDate}.
+
+Se non hai una username and password per il sito web della rivista, puoi usare questo link per resettare la  password (che ti sarà quindi mandata per email insieme con la username). {$passwordResetUrl}
+
+Submission URL: {$submissionReviewUrl}
+
+Grazie per la tua collaborazione.
+
+{$editorialContactSignature}
+
+======
+
+"{$articleTitle}"
+
+Abstract
+{$articleAbstract}</body>
+		<description>Questa email dal section editor al revisore richiede che quest'ultimo accetti o rifiuti il compito di revisionare una submission. Fornisce informazioni sulla submission quali il titolo e l'abstract, una data attesa per la revisione, e su come accedere alla submission stessa. Questo messaggio è usato quando il processo Standard di revisione è selezionato nel Journal Setup, fase 2. (Altrimenti vedi  ALLEGATA_RICHIESTA_REVISIONE.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Richiesta di revisione della proposta</subject>
+		<body>Gentile {$reviewerName}:
+
+Ti propongo la revisione del manoscritto "{$articleTitle}," che è stato inviato a {$journalName}. L'abstract della proposta è più sotto. Spero che vorrai prendere in carico questo compito.
+
+Ti chiedo quindi di effettuare il log in al sito web della rivista entro il {$weekLaterDate} per indicare se prenderai in carico la revisione o meno. Potrai poi accedere alla submission e inviare il tuo parere.
+
+La data di scadenza per la revisione è fissata al {$reviewDueDate}.
+
+Submission URL: {$submissionReviewUrl}
+
+Grazie per la tua collaborazione
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+Abstract
+{$articleAbstract}</body>
+		<description>Questa email dal section editor al revisore richiede che quest'ultimo accetti o rifiuti il compito di revisionare una submission. Fornisce informazioni sulla submission quali il titolo e l'abstract, una data attesa per la revisione, e su come accedere alla submission stessa. Questo messaggio è usato quando il processo Standard di revisione è selezionato nel Journal Setup, fase 2, e il accesso one-click del revisore è attivato.</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Richiesta di revisione della proposta</subject>
 		<body>{$reviewerName}:

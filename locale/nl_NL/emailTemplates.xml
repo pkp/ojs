@@ -218,6 +218,56 @@ Dank u voor het overwegen van dit verzoek.
 {$articleAbstract}</body>
 		<description>Deze e-mail van de sectieredacteur aan een reviewer vraagt aan de reviewer een review te accepteren of te weigeren. Er wordt informatie meegestuurd over de inzending zoals de titel en de samenvatting, de datum waarop de review gereed moet zijn en instructies voor het benaderen van de inzending. Dit bericht word gebruikt wanneer het standaard reviewproces is geselecteerd in stap 2 van het inrichten van het tijdschrift en de een-klik toegang voor de reviewer is ingeschakeld.</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Artikel review verzoek</subject>
+		<body>{$reviewerName}:
+
+Ik geloof dat u een excellente reviewer zou zijn voor het manuscript "{$articleTitle}" dat is ingestuurd bij {$journalName}. De samenvatting van de inzending staat hieronder. Ik hoop dat u wilt overwegen deze belangrijke taak voor ons uit te voeren.
+
+Wilt u voor {$weekLaterDate} inloggen op de website van het tijdschrift om aan te geven of u de review al of niet doet. Daar kunt u ook de inzending vinden en uw review en aanbeveling vastleggen. De website is {$journalUrl}
+
+Het review wordt verwacht op {$reviewDueDate}.
+
+Als u uw gebruikersnaam en het wachtwoord van de website van het tijdschrift niet heeft, kunt u deze link gebruiken voor het herstellen van uw wachtwoord (dat samen met uw gebruikersnaam in een e-mail naar u verstuurd wordt). {$passwordResetUrl}
+
+URL inzending: {$submissionReviewUrl}
+
+Dank u voor het overwegen van dit verzoek.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Deze e-mail van de sectieredacteur aan een reviewer vraagt aan de reviewer een review te accepteren of te weigeren. Er wordt informatie meegestuurd over de inzending zoals de titel en de samenvatting, de datum waarop de review gereed moet zijn en instructies voor het benaderen van de inzending. Dit bericht word gebruikt wanneer het standaard reviewproces is geselecteerd in stap 2 van het inrichten van het tijdschrift (zie verder REVIEW_REQUEST_REMIND_AUTO_ATTACHED)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Artikel review verzoek</subject>
+		<body>{$reviewerName}:
+
+Ik geloof dat u een excellente reviewer zou zijn voor het manuscript "{$articleTitle}" dat is ingestuurd bij {$journalName}. De samenvatting van de inzending staat hieronder. Ik hoop dat u wilt overwegen deze belangrijke taak voor ons uit te voeren.
+
+Wilt u voor {$weekLaterDate} inloggen op de website van het tijdschrift om aan te geven of u de review al of niet doet. Daar kunt u ook de inzending vinden en uw review en aanbeveling vastleggen.
+
+Het review wordt verwacht op {$reviewDueDate}.
+
+URL inzending: {$submissionReviewUrl}
+
+Dank u voor het overwegen van dit verzoek.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Deze e-mail van de sectieredacteur aan een reviewer vraagt aan de reviewer een review te accepteren of te weigeren. Er wordt informatie meegestuurd over de inzending zoals de titel en de samenvatting, de datum waarop de review gereed moet zijn en instructies voor het benaderen van de inzending. Dit bericht word gebruikt wanneer het standaard reviewproces is geselecteerd in stap 2 van het inrichten van het tijdschrift en de een-klik toegang voor de reviewer is ingeschakeld.</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Artikel review verzoek</subject>
 		<body>{$reviewerName}:

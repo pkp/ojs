@@ -270,6 +270,58 @@ Resumen
 {$articleAbstract}</body>
 		<description>Este correo do / da Editor/a de Sección a un/a revisor/a ll solicita que acepte ou rexeite a revisión dun envío.Fornece información sobre o envío como o título e o resumo, o prazo de revisión, e sobre como acceder ao envío. Esta mensaxe emprégase cando se selecciona o Proceso de Envío Estándar na configuración da revista, paso 2, e está activado o acceso á revisión nun clic.</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Solicitude de revisión de artigo</subject>
+		<body>{$reviewerName}:
+
+Teño o convencimento de que serías un/unha excelente revisor/a do manuscrito, "{$articleTitle}," que foi enviado a {$journalName}. A continuación atoparás un extracto do envío, coa esperanza de que aceptarás levar a cabo esta importante tarefa para nós.
+
+Por favor, identifícate na revista antes de {$weekLaterDate} para decirnos si farás ou non a revisión e para teres acceso ao envío e poder rexistrar a túa revisión e recomendacións. O enderezo é {$journalUrl}
+
+A revisión debe estar lista para o {$reviewDueDate}.
+
+Se perdiches o teu nome de usuaria/o e contrasinal podes clicar na seguinte ligazón para mudar o teu contrasinal (chegarache por correo electrónico xunto co teu nome de usuaria/o). {$passwordResetUrl}
+
+URL do envío: {$submissionReviewUrl}
+
+Benzóns por ter en conta a nosa solicitude.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+Resumen
+{$articleAbstract}</body>
+		<description>Este correo do/a Editor/a de Sección a un/a revisor/a lle solicita que acepte o rechace la revisión de un envío. Proporciona información sobre el envío como el título y el resumen, el plazo de revisión, y cómo acceder al envío propiamente dicho. Este mensaje se usa cuando se selecciona el Proceso de Envío Estándar en la configuración de la revista, paso 2. (En caso de haber seleccionado otra opción, REVIEW_REQUEST_REMIND_AUTO_ATTACHED.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Petición de Revisión de Artículo</subject>
+		<body>{$reviewerName}:
+				
+Teño o convencimento de que serías un/unha excelente revisor/a do manuscrito, "{$articleTitle}," que foi enviado a {$journalName}. A continuación atoparás un extracto do envío, coa esperanza de que aceptarás levar a cabo esta importante tarefa para nós.
+
+Por favor, identifícate na revista antes de {$weekLaterDate} para decirnos si farás ou non a revisión e para teres acceso ao envío e poder rexistrar a túa revisión e recomendacións. O enderezo é {$journalUrl}
+
+A revisión debe estar lista para o {$reviewDueDate}.
+
+Se perdiches o teu nome de usuaria/o e contrasinal podes clicar na seguinte ligazón para mudar o teu contrasinal (chegarache por correo electrónico xunto co teu nome de usuaria/o). {$passwordResetUrl}
+
+URL do envío: {$submissionReviewUrl}
+
+Benzóns por ter en conta a nosa solicitude.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+Resumen
+{$articleAbstract}</body>
+		<description>Este correo do / da Editor/a de Sección a un/a revisor/a ll solicita que acepte ou rexeite a revisión dun envío.Fornece información sobre o envío como o título e o resumo, o prazo de revisión, e sobre como acceder ao envío. Esta mensaxe emprégase cando se selecciona o Proceso de Envío Estándar na configuración da revista, paso 2, e está activado o acceso á revisión nun clic.</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Petición de revisión de artículo</subject>
 		<body>{$reviewerName}:

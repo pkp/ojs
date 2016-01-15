@@ -190,6 +190,56 @@ Cảm ơn vì đã xem xét đề nghị này.
 {$articleAbstract}</body>
 		<description>Email này được gửi từ BTV Chuyên mục tới một Người phản biện đề nghị cho biết ý kiến đồng ý hay từ chối phản biện một bài nộp. Nó cung cấp thông tin về bài nộp như tiêu đề và tóm tắt, thời hạn phản biện và các truy cập vào bài nộp. Email này được sử dụng khi Quá trình Phản biện chuẩn lựa chọn khi Thiết lập Tạp chí, Bước 2, và chức năng truy cập bằng một nhấp chuột dành cho người phản biện được kích hoạt.</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Đề nghị phản biện bài nộp</subject>
+		<body>{$reviewerName}:
+
+Tôi tin rằng quý vị sẽ là người phản biện xuất sắc đối với bản thảo bài viết, "{$articleTitle}," nộp cho tạp chí {$journalName}. Tóm tắt của bài nộp được kèm ở cuối thư, hy vọng rằng quý vị sẽ cân nhắc nhận giúp cho công việc quan trọng này.
+
+Xin vui lòng đăng nhập vào website trước ngày {$weekLaterDate} để báo cho BBT biết liệu quý vị có nhận lời phản biện hay không, đồng thời truy cập vào bài nộp, ghi lại lời phản biện và đề xuất. Địa chỉ của website là {$journalUrl}
+
+Thời hạn phản biện là {$reviewDueDate}.
+
+Nếu quý vị không nhớ bí danh và mật khẩu dùng cho website của tạp chí này, quý vị có thể sử dụng đường dẫn để đổi lại mật khẩu (sẽ được gửi tới email của quý vị cùng với bí danh). {$passwordResetUrl}
+
+Đường dẫn (URL) bài viết: {$submissionReviewUrl}
+
+Cảm ơn vì đã xem xét đề nghị này.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Email này được gửi từ BTV Chuyên mục tới một Người phản biện đề nghị cho biết ý kiến đồng ý hay từ chối phản biện một bài nộp. Nó cung cấp thông tin về bài nộp như tiêu đề và tóm tắt, thời hạn phản biện và các truy cập vào bài nộp. Email này được sử dụng khi Quá trình Phản biện chuẩn lựa chọn khi Thiết lập Tạp chí, Bước 2. (Nếu không, xem REVIEW_REQUEST_REMIND_AUTO_ATTACHED.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Đề nghị phản biện bài nộp</subject>
+		<body>{$reviewerName}:
+
+Tôi tin rằng quý vị sẽ là người phản biện xuất sắc đối với bản thảo bài viết, "{$articleTitle}," nộp cho tạp chí {$journalName}. Tóm tắt của bài nộp được kèm ở cuối thư, hy vọng rằng quý vị sẽ cân nhắc nhận giúp cho công việc quan trọng này.
+
+Xin vui lòng đăng nhập vào website trước ngày {$weekLaterDate} để báo cho BBT biết liệu quý vị có nhận lời phản biện hay không, đồng thời truy cập vào bài nộp, ghi lại lời phản biện và đề xuất. Địa chỉ của website là {$journalUrl}
+
+Thời hạn phản biện là {$reviewDueDate}.
+
+Đường dẫn (URL) bài viết: {$submissionReviewUrl}
+
+Cảm ơn vì đã xem xét đề nghị này.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Email này được gửi từ BTV Chuyên mục tới một Người phản biện đề nghị cho biết ý kiến đồng ý hay từ chối phản biện một bài nộp. Nó cung cấp thông tin về bài nộp như tiêu đề và tóm tắt, thời hạn phản biện và các truy cập vào bài nộp. Email này được sử dụng khi Quá trình Phản biện chuẩn lựa chọn khi Thiết lập Tạp chí, Bước 2, và chức năng truy cập bằng một nhấp chuột dành cho người phản biện được kích hoạt.</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Đề nghị phản biện bài nộp</subject>
 		<body>{$reviewerName}:
