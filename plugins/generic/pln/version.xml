@@ -13,7 +13,7 @@
 <version>
 	<application>pln</application>
 	<type>plugins.generic</type>
-	<release>1.0.2.0</release>
+	<release>1.2.0.0</release>
 	<date>2015-07-13</date>
 	<lazy-load>1</lazy-load>
 	<sitewide>0</sitewide>
