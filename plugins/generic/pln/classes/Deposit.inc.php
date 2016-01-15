@@ -47,7 +47,7 @@ class Deposit extends DataObject {
 	}
 	
 	/**
-	 * Get deposit uuid 
+	 * Get deposit uuid
 	 * @return string
 	 */
 	function getUUID() {
@@ -110,8 +110,8 @@ class Deposit extends DataObject {
 		}
 		if($this->getNewStatus()) {
 			return 'plugins.generic.pln.status.new';
-		}
-		
+		}		
+		return 'plugins.generic.pln.status.unknown';
 	}
 	
 	/**
@@ -139,13 +139,13 @@ class Deposit extends DataObject {
 	 */
 	function getLockssStatus() {
 		if($this->getLockssAgreementStatus()) {
-			$status = 'plugins.generic.pln.status.agreement';
+			return 'plugins.generic.pln.status.agreement';
 		}
 		if($this->getLockssSyncingStatus()) {
-			$status = 'plugins.generic.pln.status.syncing';
+			return 'plugins.generic.pln.status.syncing';
 		}
 		if($this->getLockssReceivedStatus()) {
-			$status = 'plugins.generic.pln.status.received';
+			return 'plugins.generic.pln.status.received';
 		}
 		return 'plugins.generic.pln.status.unknown';
 	}
