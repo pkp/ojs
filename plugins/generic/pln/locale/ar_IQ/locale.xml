@@ -13,7 +13,7 @@
  
 <locale name="ar_IQ" full_name="العربية">
 	<message key="plugins.generic.pln">إضافة مشروع المعرفة العامة PLN</message>
-	<message key="plugins.generic.pln.description">إن إضافة مشروع المعرفة العامة PLN ستقوم بإيداع محتوياتك المنشورة في شبكة LOCKSS العامة من أجل الحفاظ عليها.</message>
+	<message key="plugins.generic.pln.description">إن إضافة مشروع المعرفة العامة PLN ستقوم بإيداع محتوياتك المنشورة في شبكة LOCKSS الخاصة من أجل الحفاظ عليها.</message>
 	<message key="plugins.generic.pln.manager.setup.description"><![CDATA[<strong>الشبكة الخاصة لمشروع المعرفة العامة LOCKSS</strong><br /><br />لطفاً، إقرأ <a href="https://pkp.sfu.ca/pkp-lockss/" target="_blank">نظرة عامة على PLN لمشروع المعرفة العامة</a> ومن ثم أكمل <a href="{$plnPluginURL}">هذا النموذج البسيط</a>. هذا الخيار سيمكنك من تضمين مجلتك في الشبكة الاصة لمشروع المعرفة العامة LOCKSS (PKP PLN).]]></message>
 	
 	<message key="plugins.generic.pln.settings_page">إعدادات إضافة PLN لمشروع المعرفة العامة</message>
@@ -28,7 +28,13 @@
 	<message key="plugins.generic.pln.settings.refresh_help">إن لم يكن هناك فقرات مدرجة أعلاه لأي سبب كان، أو أنك على علم بأن تلك الفقرات قد تم تعديلها، أنقر على زر تنشيط لمحاولة عرض الفقرات مجدداً.</message>
 	
 	<message key="plugins.generic.pln.required.pln_network">لطفاً، إختر شبكة PLN.</message>
-	<message key="plugins.generic.pln.required.object_type">لطفاً، إختر نوعية مكون الإيداع.</message>
+
+    <message key="plugins.generic.pln.settings.pln_network">رابط شبكة PLN</message>
+    <message key="plugins.generic.pln.settings.pln_network_help">رابط الإنترنت للملقم المرحلي لشبكتك. لا تغيره ما لم يطلب منك ذلك أحد العاملين في شبكتك.</message>
+    <message key="plugins.generic.pln.settings.pln_network_invalid">رابط الإنترنت المحدد غير صحيح. لطفاً، أنقر الرابط نقراً مزدوجاً ثم حاول مجدداً.</message>
+    <message key="plugins.generic.pln.settings.pln_network_path_invalid">رابط شبكة PLN ينبغي أن يتضمن مسمى المضيف ومخططه، وقد يشتمل أيضاً على رقم المنفذ. لا يجب أن يتضمن مسميات حوافظ الملفات أو نصوص استعلامات أو أسماء مستخدمين وكلمات مرورهم، أو حتى مقاطع مجتزأة من روابط الإنترنت.</message>
+
+    <message key="plugins.generic.pln.required.object_type">لطفاً، إختر نوعية مكون الإيداع.</message>
 	<message key="plugins.generic.pln.required.object_threshold">لطفاً، إختر عتبة مكون الإيداع.</message>
 	<message key="plugins.generic.pln.required.terms_of_use_agreement">الموافقة على شروط استعمال الشبكة أمر ضروري لغرض الإيداع في PLN.</message>
 	
@@ -55,8 +61,9 @@
 	<message key="plugins.generic.pln.status.no">لا</message>
 
 	<message key="plugins.generic.pln.depositorTask.name">مهمة الإيداع في PLN لمشروع المعرفة العامة</message>
-	<message key="plugins.generic.pln.notifications.processing_for">معالجة الإيداع من أجل</message>
-	<message key="plugins.generic.pln.notifications.pln_not_accepting">إن PLN لمشروع المعرفة العامة لا يتقبل حالياً إيداعات.</message>
+	<message key="plugins.generic.pln.notifications.processing_for">معالجة الإيداع الخاص بـ {$title}.</message>
+    <message key="plugins.generic.pln.notifications.getting_servicedocument">يجري الحصول على مستند الخدمة.</message>
+    <message key="plugins.generic.pln.notifications.pln_not_accepting">إن PLN لمشروع المعرفة العامة لا يتقبل حالياً إيداعات.</message>
 	<message key="plugins.generic.pln.notifications.pln_accepting">إن PLN لمشروع المعرفة العامة يتقبل الإيداعات.</message>
 	<message key="plugins.generic.pln.notifications.check_status">تحقق من حالة إيداعاتك.</message>
 	<message key="plugins.generic.pln.notifications.issn_missing">على مجتلك أن تمتلك رمز ISSN حتى تتمكن من إيداع محتوياتها في PLN لمشروع المعرفة العامة.</message>
@@ -64,4 +71,26 @@
 	<message key="plugins.generic.pln.notifications.terms_updated">لقد تم تعديل شروط الاستعمال لـ PLN لمشروع المعرفة العامة. الموافقة على الشروط الجديدة مطلوب لمواصلة الإيداع فيها.</message>
 	<message key="plugins.generic.pln.notifications.curl_missing">دعم CURL ينبغي تمكينه للمتابعة.</message>
 	<message key="plugins.generic.pln.notifications.zip_missing">دعم ZipArchive ينبغي تمكينه للمتابعة.</message>
+    <message key="plugins.generic.pln.notifications.issn_setting">ينبغي أن يكون لمجلتك رمز ISSN قبل أن يتسنى لك الموافقة على شروط الخدمة. بإمكانك إدخال رمز ISSN في صفحة إعدادات المجلة. بمجرد إدخال هذا الرمز، ستظهر لك شروط الخدمة أدناه.</message>
+    <message key="plugins.generic.pln.notifications.tar_missing">ينبغي أن تكون لنظامك القدرة على تشغيل ملفات مضغوطة بصيغة tar.</message>
+
+    <message key="plugins.generic.pln.error.network.servicedocument">خطأ في الشبكة: {$error} عند الاتصال بـ PLN للحصول على مستند الخدمة.</message>
+    <message key="plugins.generic.pln.error.network.deposit">خطأ في الشبكة: {$error} عند الاتصال بـ PLN لإرسال الإيداع.</message>
+    <message key="plugins.generic.pln.error.http.servicedocument">أعاد ملقم PLN خطأ بترميز HTTP مفاده: {$error} عند محاولة الحصول على مستند الخدمة.</message>
+    <message key="plugins.generic.pln.error.http.deposit">أعاد ملقم PLN خطأ بترميز HTTP مفاده: {$error} عند إرسال الإيداع.</message>
+    <message key="plugins.generic.pln.error.depositor.missingpackage">تعذر العثور على ملف حزمة {$file}.</message>
+    <message key="plugins.generic.pln.error.depositor.export.articles.error">حصل خطأ ما عند تصدير المؤلفات. قد يتضمن ملف توثيق الملقم المزيد من المعلومات.</message>
+    <message key="plugins.generic.pln.error.depositor.export.issue.error">حصل خطأ ما عند تصدير العدد. قد يتضمن ملف توثيق الملقم المزيد من المعلومات.</message>
+    <message key="plugins.generic.pln.error.handler.uuid.invalid">الرمز التعريفي UUID غير صحيح، أو غير منسق كما ينبغي.</message>
+    <message key="plugins.generic.pln.error.handler.uuid.notfound">ليس هناك أي إيداع ذو صلة بالرمز التعريفي المعطى.</message>
+    <message key="plugins.generic.pln.error.handler.file.notfound">تعذر العثور على ملف الإيداع. قد لا يكون مكتمل الرزم بعد، أو أن الرزمة الخاصة به قد تمت إزالتها.</message>
+
+    <message key="plugins.generic.pln.depositor.statusupdates">تجري معالجة تحديثات موقف الإيداع.</message>
+    <message key="plugins.generic.pln.depositor.updatedcontent">معالجة المحتوى المحدث.</message>
+    <message key="plugins.generic.pln.depositor.newcontent">معالجة المحتوى الجديد.</message>
+    <message key="plugins.generic.pln.depositor.packagingdeposits">يجري رزم محتوى الإيداع.</message>
+    <message key="plugins.generic.pln.depositor.transferringdeposits">يجري إرسال الإيداعات إلى PLN.</message>
+
+    <message key="plugins.generic.plngateway.displayName">بوابة PLN</message>
+    <message key="plugins.generic.plngateway.description">يقدم تقارير عن موقف PLN مع عناوين المؤلفات الأخيرة إلى الملقم المرحلي.</message>
 </locale>

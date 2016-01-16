@@ -19,13 +19,13 @@
 
 	<!-- Set up Dataverse: DVN URL and authentication details -->
 	<message key="plugins.generic.dataverse.settings.connect">اتصال</message>
-	<message key="plugins.generic.dataverse.settings.dvnUri">رابط الإنترنت لشبكة Dataverse</message>
-	<message key="plugins.generic.dataverse.settings.dvnUriDescription">رابط الإنترنت لشبكة Dataverse التي يعود إليها Dataverse الخاص بالمجلة</message>
-	<message key="plugins.generic.dataverse.settings.usernameDescription">اسم المستخدم الذي سيستعمل لإيداع الملفات في Dataverse</message>
-	<message key="plugins.generic.dataverse.settings.passwordDescription">كلمة المرور التابعة لاسم المستخدم المذكور أعلاه</message>
-	<message key="plugins.generic.dataverse.settings.dvnUriRequired">رابط الإنترنت لشبكة Dataverse مطلوب حتماً.</message>
-	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">رابط الإنترنت لشبكة Dataverse غير صحيح.</message>
-	<message key="plugins.generic.dataverse.settings.usernameRequired">لطفاً، أدخل اسم مستخدم صحيح لشبكة Dataverse المحددة.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUri">رابط الإنترنت لـ Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriDescription">جذر رابط الإنترنت لـ Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.usernameDescription">اسم المستخدم أو معرفه لـ API</message>
+	<message key="plugins.generic.dataverse.settings.passwordDescription">كلمة المرور. غير مطلوبة لمعرف API</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriRequired">رابط الإنترنت لـ Dataverse مطلوب حتماً.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">تعذر الاتصال بـ Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.usernameRequired">لطفاً، أدخل اسم مستخدم لـ Dataverse.</message>
 	<message key="plugins.generic.dataverse.settings.passwordRequired">لطفاً، أدخل كلمة مرور صحيحة لشبكة Dataverse المحددة.</message>
 
 	<!-- Set up Dataverse: select Dataverse -->
@@ -149,7 +149,9 @@
 	<message key="plugins.generic.dataverse.suppFile.publishData.error">لطفاً، إرفع ملفاً لإيداعه في Dataverse.</message>
 	<message key="plugins.generic.dataverse.suppFile.dataCitationDescription">ستتم إضافة الملف إلى دراسة Dataverse المنشأة لهذا التقديم:</message>
 	<message key="plugins.generic.dataverse.suppFile.studyLocked">هذه الدراسة مغلقة لأغراض المعالجة. لا يمكن إجراء تعديلات على بيانات التقديم حتى تكتمل المعالجة.</message>
-	<message key="plugins.generic.dataverse.suppFile.externalDataCitation">اقتباس البيانات الخارجية</message>
+    <message key="plugins.generic.dataverse.suppFile.studyDescription">وصف الدراسة</message>
+    <message key="plugins.generic.dataverse.suppFile.studyDescription.description">أعط ملخصاً للغرض من بيانات الدراسة وطبيعتها ومداها.</message>
+    <message key="plugins.generic.dataverse.suppFile.externalDataCitation">اقتباس البيانات الخارجية</message>
 	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.description">إن كانت البيانات التي من المفترض نشرها مع هذا المؤلَّف مودعة سابقاً في مستودع آخر، لطفاً، أذكر رابط اقتباس البيانات.</message>
 	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.error">لطفاً، إرفع ملفات لإيداعها في Dataverse أو ذكر الرابط الخارجي لاقتباس البيانات.</message>
 

@@ -271,9 +271,11 @@
 	<message key="manager.setup.emailBounceAddressDescription">أي رسالة لا تصل إلى هدفها سيعتبرها الموقع خطأً يُبلغ عنه إلى العنوان البريدي</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>ملاحظة:</strong> لتفعيل هذا الخيار، على مدير الموقع تفعيل <tt>allow_envelope_sender</tt> في ملف إعداد نظام المجلات المفتوحة. قد يتطلب الأمر أيضاً المزيد من التعديل في إعدادات الملقم لدعم هذه الوظيفة (الأمر الذي قد لا يكون ممكناً في جميع الملقمات)، كما هو مبين في أدبيات النظام.]]></message>
 	<message key="manager.setup.emails">تحديد هوية البريد الالكتروني</message>
-	<message key="manager.setup.emailSignature">التوقيع</message>
+    <message key="manager.setup.emailHeader">نص عنوان البريد الالكتروني</message>
+    <message key="manager.setup.emailHeaderDescription">رسائل البريد الالكتروني المرسلة نيابة عن المجلة سيتصدرها العنوان الآتي. ستكون هذه الرسائل صادرة بتوقيع عنوان الاتصال الرئيسي للمجلة، لذلك سيكون من المهم التوضيح بأن صاحب هذا العنوان ليس بالضرورة مسؤولاً عن مضمونات تلك الرسائل، لأنها قد تصدر من قبل مستخدمين آخرين لموقع المجلة هذا.</message>
+    <message key="manager.setup.emailSignature">التوقيع</message>
 	<message key="manager.setup.emailSignatureDescription">رسائل البريد الالكتروني المُحضرَّة آلياً والمرسلة من قبل النظام نيابة عن المجلة، ستكون مذيلة بالتوقيع الآتي، علماً أن محتوى تلك الرسائل قابل للتعديل ضمن باب (إدارة المجلة).</message>
-	<message key="manager.setup.enableAnnouncements">تمكين مديري المجلات من إضافة إعلاناتهم على الموقع.</message>
+	<message key="manager.setup.enableAnnouncements">تمكين مدراء المجلة من إضافة إعلاناتهم على الموقع.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">عرض</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">من الإعلانات الأخيرة الموجودة في صفحة المجلة الرئيسية.</message>
 	<message key="manager.setup.enablePageNumber">أرقام صفحات الفقرات سيتم إحتسابها وإدخالها يدوياً في جدول المحتويات (مثلاً: ص 13-26).</message>
@@ -351,7 +353,7 @@
 	<message key="manager.setup.labelName">اسم الملصق</message>
 	<message key="manager.setup.layoutAndGalleys">مصممو الطباعة</message>
 	<message key="manager.setup.layoutInstructions">إرشادات التصميم الطباعي</message>
-	<message key="manager.setup.layoutInstructionsDescription">إرشادات التصميم الطباعي يمكن تحضيرها لتنسيق المؤلَّفات التي ستنشرها المجلة والتي من الممكن إدخالها أدناه بشكل نص صريح أو نص فائق HTML. ستكون تلك متاحة للمصمم الطباعي ولمحرر القسم خلال مرحلة التحرير لكل طلب نشر. (بما أن كل مجلة لها تنسيقاتها وتنضيدها القياسي وأنماطها... إلخ.، لا توجد رزمة جاهزة من التعليمات المتعلقة بذلك.)</message>
+	<message key="manager.setup.layoutInstructionsDescription">إرشادات التصميم الطباعي يمكن تحضيرها لتنسيق المؤلَّفات التي ستنشرها المجلة والتي من الممكن إدخالها أدناه بشكل نص صريح أو نص فائق HTML. ستكون تلك متاحة للمصمم الطباعي ولمحرر القسم خلال مرحلة التحرير لكل طلب نشر. (بما أن كل مجلة لها تنسيقاتها وتنضيدها القياسي وأنماطها... إلخ.، لا توجد رزمة جاهزة من التعليمات المتعلقة بذلك).</message>
 	<message key="manager.setup.layoutTemplates">قوالب التصميم الطباعي</message>
 	<message key="manager.setup.layoutTemplatesDescription">يمكن تحميل القوالب لتظهر كتصميم طباعي لكل من التنسيقات القياسية التي تُنشر في المجلة (أي، المقالات، الكتب، تقييمات الكتب... إلخ.) عبر استعمال أي من الصيغ المتعارف عليها، مثل: pdf، doc... إلخ. مع إضافة الملاحظات المحددة لنوع الخط، الحجم، الهوامش... إلخ. لتكون بمثابة دليل عمل للمصممين الطباعيين والموكلين بالقراءة التصحيحية.</message>
 	<message key="manager.setup.layoutTemplates.file">ملف قالب</message>
@@ -467,7 +469,7 @@
 	<message key="manager.setup.siteAccess">تقييدات الوصول في الموقع ومحتوياته الأخرى</message>
 	<message key="manager.setup.sponsors">المنظمات الراعية</message>
 	<message key="manager.setup.sponsorNoteDescription">هذا النص سيظهر تحت عنوان "الرعاة" وفوق قائمة أسمائهم وروابطهم ضمن بند "رعاة المجلة" في صفحة (عن المجلة).</message>
-	<message key="manager.setup.sponsorsDescription">أسماء المنظمات، مثل: روابط التدريسيين، أقسام الجامعة، الوكالات... إلخ. التي تقدم الرعاية للمجلة، والتي سيتظهر ما يشير إليها ضمن (عن المجلة) وقد تصحبها كلمة شكر وعرفان.</message>
+	<message key="manager.setup.sponsorsDescription">أسماء المنظمات، مثل: روابط التدريسيين، أقسام الجامعة، الوكالات... إلخ. التي تقدم الرعاية للمجلة، والتي سيظهر ما يشير إليها ضمن (عن المجلة) وقد تصحبها كلمة شكر وعرفان.</message>
 	<message key="manager.setup.stepsToJournalSite">خمس خطوات للحصول على موقع للمجلة</message>
 	<message key="manager.setup.subjectClassification">تصنيف المواضيع</message>
 	<message key="manager.setup.subjectClassificationExamples">(على سبيل المثال: تصنيف مواضيع الرياضيات، تصنيف مواضيع المكتبة)</message>

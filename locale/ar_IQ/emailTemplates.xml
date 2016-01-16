@@ -457,7 +457,7 @@ Link: {$url}
 
 قد توصلنا إلى قرار بشأن طلبك للنشر في {$journalTitle}، والموسوم "{$articleTitle}".
 
-قرارنا هو:
+قرارنا هو: قبول طلب النشر
 
 {$editorialContactSignature}
 </body>
@@ -469,7 +469,7 @@ Link: {$url}
 
 قد توصلنا إلى قرار بشأن طلبك للنشر في {$journalTitle}، والموسوم "{$articleTitle}".
 
-قرارنا هو:
+قرارنا هو: أن بعض التنقيحات مطلوبة
 
 {$editorialContactSignature}
 </body>
@@ -481,11 +481,11 @@ Link: {$url}
 
 قد توصلنا إلى قرار بشأن طلبك للنشر في {$journalTitle}، والموسوم "{$articleTitle}".
 
-قرارنا هو:
+قرارنا هو: إعادة التقديم مجدداً
 
 {$editorialContactSignature}
 </body>
-		<description>هذه الرسالة يعنونها محرر القسم إلى طالب النشر يعلمه فيها بالقرار النهائي لهيئة التحرير بشأن طلبه</description>
+		<description>هذه الرسالة يعنونها محرر القسم إلى طالب النشر يعلمه فيها بالقرار النهائي لهيئة التحرير بشأن طلبه، ملخصه (إعادة تقديم طلب النشر)</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
 		<subject>قرار هيئة التحرير</subject>
@@ -493,11 +493,11 @@ Link: {$url}
 
 قد توصلنا إلى قرار بشأن طلبك للنشر في {$journalTitle}، والموسوم "{$articleTitle}".
 
-قرارنا هو:
+قرارنا هو: الرفض
 
 {$editorialContactSignature}
 </body>
-		<description>هذه الرسالة يعنونها محرر القسم إلى طالب النشر يعلمه فيها بالقرار النهائي لهيئة التحرير بشأن طلبه</description>
+		<description>هذه الرسالة يعنونها محرر القسم إلى طالب النشر يعلمه فيها بالقرار النهائي لهيئة التحرير بشأن طلبه، ملخصه (رفض الطلب)</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>إلتماس نسخة التحرير</subject>

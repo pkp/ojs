@@ -48,7 +48,7 @@
 	<message key="plugins.generic.lucene.results.orderDir.desc">تنازلياً</message>
 	<message key="plugins.generic.lucene.results.similarDocuments">وثائق مشابهة</message>
 	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[
-		تلميحات البحث: <ul>
+		<h4>تلميحات البحث:</h4><ul>
 			<li>عبارات البحث حساسة للحروف الصغيرة والكبيرة</li>
 			<li>يتم تجاهل الكلمات الشائعة</li>
 			<li>بشكل إفتراضي، المقالات التي تتضمن <em>أي</em> من عبارات الحرف ستظهر في النتائج (أي: <em>OR</em> هي المطبقة)</li>
