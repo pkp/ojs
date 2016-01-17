@@ -204,6 +204,54 @@ Tak for din overvejelse af denne forespørgsel.
 {$abstractTermIfEnabled} {$articleAbstract}</body>
 		<description>Denne e-mail fra sektionsredaktøren til en bedømmer anmoder bedømmeren om at acceptere eller afvise at bedømme et manuskript. Den indeholder oplysninger om manuskriptet, f.eks. titel og resumé, forfaldsdato for bedømmelse, samt hvordan der kan oprettes adgang til selve manuskriptet. Denne meddelelse benyttes, hvis indstillingen Standardbedømmelsesproces er valgt under Konfiguration af tidsskrift, trin 2, og adgang for bedømmere ved hjælp af ét klik er aktiveret.</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Forespørgsel om bedømmelse af artikel</subject>
+		<body>{$reviewerName}:
+
+Jeg tror, at du vil være en fremragende bedømmer af manuskriptet "{$articleTitle}", der er blevet sendt til {$journalName}. Nedenfor finder du et resumé af manuskriptet, og jeg håber, at du vil overveje at påtage dig denne vigtige opgave for os.
+
+Log på tidsskriftets websted inden den {$weekLaterDate} for at angive, om du vil påtage dig bedømmelsen eller ej, samt for at få adgang til manuskriptet og registrere din bedømmelse og anbefaling. Webstedet er {$journalUrl}
+
+Selve bedømmelsen skal afleveres senest den {$reviewDueDate}.
+
+Hvis du ikke har dit brugernavn og din adgangskode til tidsskriftets websted, kan du bruge dette link til at nulstille adgangskoden (som så vil blive sendt til dig via e-mail sammen med dit brugernavn). {$passwordResetUrl}
+
+Manuskriptets URL-adresse: {$submissionReviewUrl}
+
+Tak for din overvejelse af denne forespørgsel.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled} {$articleAbstract}</body>
+		<description>Denne e-mail fra sektionsredaktøren til en bedømmer anmoder bedømmeren om at acceptere eller afvise at bedømme et manuskript. Den indeholder oplysninger om manuskriptet, f.eks. titel og resumé, forfaldsdato for bedømmelse, samt hvordan der kan oprettes adgang til selve manuskriptet. Denne meddelelse benyttes, hvis indstillingen Standardbedømmelsesproces er valgt under Konfiguration af tidsskrift, trin 2. (Se ellers REVIEW_REQUEST_REMIND_AUTO_ATTACHED).</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Forespørgsel om bedømmelse af artikel</subject>
+		<body>{$reviewerName}:
+
+Jeg tror, at du vil være en fremragende bedømmer af manuskriptet "{$articleTitle}", der er blevet sendt til {$journalName}. Nedenfor finder du et resumé af manuskriptet, og jeg håber, at du vil overveje at påtage dig denne vigtige opgave for os.
+
+Log på tidsskriftets websted inden den {$weekLaterDate} for at angive, om du vil påtage dig bedømmelsen eller ej, samt for at få adgang til manuskriptet og registrere din bedømmelse og anbefaling.
+
+Selve bedømmelsen skal afleveres senest den {$reviewDueDate}.
+
+Manuskriptets URL-adresse: {$submissionReviewUrl}
+
+Tak for din overvejelse af denne forespørgsel.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled} {$articleAbstract}</body>
+		<description>Denne e-mail fra sektionsredaktøren til en bedømmer anmoder bedømmeren om at acceptere eller afvise at bedømme et manuskript. Den indeholder oplysninger om manuskriptet, f.eks. titel og resumé, forfaldsdato for bedømmelse, samt hvordan der kan oprettes adgang til selve manuskriptet. Denne meddelelse benyttes, hvis indstillingen Standardbedømmelsesproces er valgt under Konfiguration af tidsskrift, trin 2, og adgang for bedømmere ved hjælp af ét klik er aktiveret.</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Forespørgsel om bedømmelse af artikel</subject>
 		<body>{$reviewerName}:

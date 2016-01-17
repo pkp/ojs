@@ -254,6 +254,55 @@ Gracias por considerar esta solicitud.
 {$articleAbstract}</body>
 		<description>Este correo electrónico del editor/a de sección a un revisor/a solicita que el revisor/a acepte o rechace la tarea de revisar un envío. Además, proporciona información sobre el envío como el título, el resumen, la fecha de entrega de la revisión y cómo obtener acceso al propio envío. Este mensaje se usa cuando se selecciona el proceso de revisión estándar en el paso 2 de la configuración de la revista y cuando se habilita el acceso al revisor/a con un solo clic.</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Solicitud de revisión de un artículo</subject>
+		<body>{$reviewerName}:
+
+Creo que sería un excelente revisor/a del manuscrito "{$articleTitle}," el cual se envió a {$journalName}. El resumen del envío aparece abajo, espero que considere la posibilidad de llevar a cabo esta importante tarea para nosotros.
+
+Inicie sesión en el sitio web de la revista antes de {$weekLaterDate} para indicar si llevará a cabo la revisión o no, además de para obtener acceso al envío y registrar su revisión y recomendación. El sitio web es {$journalUrl}
+
+La revisión deberá entregarse el {$reviewDueDate}.
+
+Si no dispone de un nombre de usuario/a y contraseña para el sitio web de la revista, puede hacer clic en este enlace para restablecer su contraseña (se la enviaremos junto con su nombre de usuario/a). {$passwordResetUrl} 
+
+URL del envío: {$submissionReviewUrl}
+
+Gracias por considerar esta solicitud. 
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Este correo electrónico del editor/a de sección a un revisor/a solicita que el revisor/a acepte o rechace la tarea de revisar un envío. Además, proporciona información sobre el envío como el título, el resumen, la fecha de entrega de la revisión y cómo obtener acceso al propio envío. Este mensaje se usa cuando se selecciona el proceso de revisión estándar en el paso 2 de la configuración de la revista. (Por lo demás, vea SOLICITUD_DE_REVISIÓN_ADJUNTA).</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Solicitud de revisión de un artículo</subject>
+		<body>{$reviewerName}:
+
+Creo que sería un excelente revisor/a del manuscrito "{$articleTitle}," el cual se envió a {$journalName}. El resumen del envío aparece abajo, espero que considere la posibilidad de llevar a cabo esta importante tarea para nosotros.
+
+Inicie sesión en el sitio web de la revista antes de {$weekLaterDate} para indicar si llevará a cabo la revisión o no, además de para obtener acceso al envío y registrar su revisión y recomendación.
+
+La revisión deberá ser entregada el {$reviewDueDate}.
+
+URL del envío: {$submissionReviewUrl}
+
+Gracias por considerar esta solicitud.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Este correo electrónico del editor/a de sección a un revisor/a solicita que el revisor/a acepte o rechace la tarea de revisar un envío. Además, proporciona información sobre el envío como el título, el resumen, la fecha de entrega de la revisión y cómo obtener acceso al propio envío. Este mensaje se usa cuando se selecciona el proceso de revisión estándar en el paso 2 de la configuración de la revista y cuando se habilita el acceso al revisor/a con un solo clic.</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Solicitud de revisión de un artículo</subject>
 		<body>{$reviewerName}:
