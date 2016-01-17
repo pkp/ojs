@@ -13,9 +13,15 @@
   -->
  
 <locale name="ru_RU" full_name="Русский">
-	<message key="plugins.reports.counter.description"><![CDATA[Плагин «COUNTER» позволяет сформировать отчеты об активности сайта, используя <a href="http://www.projectcounter.org">стандарт COUNTER</a>. Сами по себе эти отчеты не делают журнал соответствующим стандарту COUNTER. Чтобы сделать журнал соответствующим этому стандарту, просмотрите требования на сайте проекта COUNTER.]]></message>
+	<message key="plugins.reports.counter.description"><![CDATA[Плагин «COUNTER» позволяет сформировать отчеты об активности журнала, используя <a href="http://www.projectcounter.org">стандарт COUNTER</a>. Сами по себе эти отчеты не делают журнал соответствующим стандарту COUNTER. Чтобы сделать журнал соответствующим этому стандарту, просмотрите требования на сайте проекта COUNTER.]]></message>
 	<message key="plugins.reports.counter">Плагин «Отчеты COUNTER»</message>
-	<message key="plugins.reports.counter.1a.introduction">Эти ссылки генерируют отчеты, готовые для COUNTER, опираясь на устаревшую версию Release 3. Если возможно, используйте более поздние версии стандарта.</message>
+	<message key="plugins.reports.counter.release">Версия COUNTER Release</message>
+	<message key="plugins.reports.counter.olderReports">Устаревшие отчеты по сайту</message>
+	<message key="plugins.reports.counter.error.badParameters">Неправильные параметры отчета.</message>
+	<message key="plugins.reports.counter.error.badRequest">Неправильный запрос отчета.</message>
+	<message key="plugins.reports.counter.error.noResults">Результаты для этого отчета не найдены.</message>
+	<message key="plugins.reports.counter.error.noXML">Не удается сформатировать результаты в XML.</message>
+	<message key="plugins.reports.counter.1a.introduction">Эти ссылки генерируют отчеты, готовые для COUNTER, опираясь на устаревшую версию Release 3.0. Этот отчет включает в себя все журналы на сайте. Если возможно, используйте более позднюю версию.</message>
 	<message key="plugins.reports.counter.1a.name">Отчет COUNTER JR1 (R3)</message>
 	<message key="plugins.reports.counter.1a.xml">XML-версия</message>
 	<message key="plugins.reports.counter.1a.description">COUNTER Отчет журнала 1 (R3): Запросы полных текстов статей по месяцам и журналам</message>
@@ -33,4 +39,5 @@
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Итого для всех журналов</message>
 	<message key="plugins.reports.counter.1a.anonymous">анонимно</message>
 	<message key="plugins.reports.counter.legacyStats">Ссылки ниже генерируют устаревшие отчеты, используя данные старого плагина, который не является готовым для COUNTER. Если вы хотите сгенерировать текущие отчеты «COUNTER», используя новый тип метрики OJS COUNTER, воспользуйтесь ссылками выше.</message>
+	<message key="plugins.reports.counter.allCustomers">Все покупатели</message>
 </locale>
