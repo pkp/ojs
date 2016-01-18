@@ -16,6 +16,8 @@
 
 import('lib.pkp.classes.statistics.PKPStatisticsHelper');
 
+define('STATISTICS_DIMENSION_ISSUE_ID', STATISTICS_DIMENSION_ASSOC_OBJECT_ID);
+
 class StatisticsHelper extends PKPStatisticsHelper {
 
 	function StatisticsHelper() {
@@ -36,6 +38,16 @@ class StatisticsHelper extends PKPStatisticsHelper {
 			default:
 				assert(false);
 		}
+	}
+
+	/**
+	 * @see PKPStatisticsHelper::getReportColumnsArray()
+	 */
+	protected function getReportColumnsArray() {
+		return array_merge(
+			parent::getReportColumnsArray(),
+			array(STATISTICS_DIMENSION_ISSUE_ID => __('issue.issue'))
+		);
 	}
 
 	/**

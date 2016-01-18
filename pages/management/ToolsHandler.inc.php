@@ -19,6 +19,22 @@ import('lib.pkp.pages.management.PKPToolsHandler');
 class ToolsHandler extends PKPToolsHandler {
 
 	/**
+	 * @copydoc PKPToolsHandler::getReportRowValue()
+	 */
+	protected function getReportRowValue($key, $record) {
+		$returnValue = parent::getReportRowValue($key, $record);
+
+		if (!$returnValue && $key == STATISTICS_DIMENSION_ISSUE_ID) {
+			$assocId = $record[STATISTICS_DIMENSION_ISSUE_ID];
+			$assocType = ASSOC_TYPE_ISSUE;
+			$returnValue = $this->getObjectTitle($assocId, $assocType);
+		}
+
+		return $returnValue;
+	}
+
+
+	/**
 	 * @copydoc PKPToolsHandler::getObjectTitle()
 	 */
 	protected function getObjectTitle($assocId, $assocType) {

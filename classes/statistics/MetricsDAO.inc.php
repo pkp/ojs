@@ -18,6 +18,26 @@ import('lib.pkp.classes.statistics.PKPMetricsDAO');
 class MetricsDAO extends PKPMetricsDAO {
 
 	/**
+	 * @copydoc PKPMetricsDAO::getMetrics()
+	 */
+	function &getMetrics($metricType, $columns = array(), $filters = array(), $orderBy = array(), $range = null, $nonAdditive = true) {
+		// Translate the issue dimension to a generic one used in pkp library.
+		foreach (array(&$columns, &$filters, &$orderBy) as &$parameter) { // Reference needed.
+			if ($parameter === $filters && array_key_exists(STATISTICS_DIMENSION_ISSUE_ID, $parameter)) {
+				$parameter[STATISTICS_DIMENSION_ASSOC_OBJECT_TYPE] = ASSOC_TYPE_ISSUE;
+			}
+
+			$key = array_search(STATISTICS_DIMENSION_ISSUE_ID, $parameter);
+			if ($key !== false) {
+				$parameter[] = STATISTICS_DIMENSION_ASSOC_OBJECT_TYPE;
+			}
+			unset($parameter);
+		}
+
+		return parent::getMetrics($metricType, $columns, $filters, $orderBy, $range, $nonAdditive);
+	}
+
+	/**
 	 * @copydoc PKPMetricsDAO::foreignKeyLookup()
 	 */
 	protected function foreignKeyLookup($assocType, $assocId) {
@@ -60,6 +80,21 @@ class MetricsDAO extends PKPMetricsDAO {
 		}
 
 		return array($contextId, $sectionId, $assocObjType, $assocObjId, $submissionId, $representationId);
+	}
+
+	/**
+	 * @copydoc PKPMetricsDAO::getAssocObjectInfo()
+	 */
+	protected function getAssocObjectInfo($submissionId, $contextId) {
+		$returnArray = parent::getAssocObjectInfo($submissionId, $contextId);
+
+		// Submissions in OJS are associated with an Issue.
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submissionId, $contextId, true);
+		if ($publishedArticle) {
+			$returnArray = array(ASSOC_TYPE_ISSUE, $publishedArticle->getIssueId());
+		}
+		return $returnArray;
 	}
 }
 ?>
