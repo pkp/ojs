@@ -13,50 +13,43 @@
 {include file="common/header.tpl"}
 {/strip}
 
+{translate|assign:"confirmReset" key="plugins.generic.pln.status.confirmReset"}
 <div id="plnStatus">
 	<h3>{translate key="plugins.generic.pln.status.deposits"}</h3>
 	<p>{translate key="plugins.generic.pln.status.network_status" networkStatusMessage=$networkStatusMessage}</p>
 	<form class="pkp_form" id="plnStatusForm" method="post" action="{plugin_url path="status"}">
 		<table>
 			<tr>
-				<th>{translate key="plugins.generic.pln.status.id"}</th>
-				<th>{translate key="plugins.generic.pln.status.type"}</th>
-				<th>{translate key="plugins.generic.pln.status.items"}</th>
-				<th>{translate key="plugins.generic.pln.status.packaged"}</th>
-				<th>{translate key="plugins.generic.pln.status.transferred"}</th>
-				<th>{translate key="plugins.generic.pln.status.received"}</th>
-				<th>{translate key="plugins.generic.pln.status.syncing"}</th>
-				<th>{translate key="plugins.generic.pln.status.synced"}</th>
-				<th>{translate key="plugins.generic.pln.status.updated"}</th>
-				<th>{translate key="plugins.generic.pln.status.local_failure"}</th>
-				<th>{translate key="plugins.generic.pln.status.remote_failure"}</th>
+				<th>{translate key="common.id"}</th>
+				<th>{translate key="common.type"}</th>
+				<th>{translate key="plugins.generic.pln.status.checked"}</th>
+				<th>{translate key="plugins.generic.pln.status.local_status"}</th>
+				<th>{translate key="plugins.generic.pln.status.processing_status"}</th>
+				<th>{translate key="plugins.generic.pln.status.lockss_status"}</th>
+				<th>{translate key="plugins.generic.pln.status.complete"}</th>
 				<th></th>
 			</tr>
 			{iterate from=deposits item=deposit}
 			<tr>
 				<td>{$deposit->getId()}</td>
 				<td>{$deposit->getObjectType()}</td>
-				<td>{$deposit->getDepositObjects()|@count}</td>
-				<td>{if $deposit->getPackagedStatus()}{translate key="plugins.generic.pln.status.yes"}{else}{translate key="plugins.generic.pln.status.no"}{/if}</td>
-				<td>{if $deposit->getTransferredStatus()}{translate key="plugins.generic.pln.status.yes"}{else}{translate key="plugins.generic.pln.status.no"}{/if}</td>
-				<td>{if $deposit->getReceivedStatus()}{translate key="plugins.generic.pln.status.yes"}{else}{translate key="plugins.generic.pln.status.no"}{/if}</td>
-				<td>{if $deposit->getSyncingStatus()}{translate key="plugins.generic.pln.status.yes"}{else}{translate key="plugins.generic.pln.status.no"}{/if}</td>
-				<td>{if $deposit->getSyncedStatus()}{translate key="plugins.generic.pln.status.yes"}{else}{translate key="plugins.generic.pln.status.no"}{/if}</td>
-				<td>{if $deposit->getUpdateStatus()}{translate key="plugins.generic.pln.status.yes"}{else}{translate key="plugins.generic.pln.status.no"}{/if}</td>
-				<td>{if $deposit->getLocalFailureStatus()}{translate key="plugins.generic.pln.status.yes"}{else}{translate key="plugins.generic.pln.status.no"}{/if}</td>
-				<td>{if $deposit->getRemoteFailureStatus()}{translate key="plugins.generic.pln.status.yes"}{else}{translate key="plugins.generic.pln.status.no"}{/if}</td>
-				<td><input type="submit" name="reset[{$deposit->getId()}]" class="button" value="{translate key="plugins.generic.pln.status.reset"}"/></td>
+				<td>{$deposit->getLastStatusDate()}</td>
+				<td>{translate key=$deposit->getLocalStatus()}</td>
+				<td>{translate key=$deposit->getProcessingStatus()}</td>
+				<td>{translate key=$deposit->getLockssStatus()}</td>
+				<td>{translate key=$deposit->getComplete()}</td>
+				<td><input type="submit" name="reset[{$deposit->getId()}]" class="button" value="{translate key="common.reset"}" onclick="return confirm('{$confirmReset|escape}')" /></td>
 			</tr>
 			{/iterate}
 			{if $deposits->wasEmpty()}
 			<tr>
-				<td colspan="12" class="nodata">{translate key="common.none"}</td>
+				<td colspan="8" class="nodata">{translate key="common.none"}</td>
 			</tr>
-			<tr><td colspan="12" class="endseparator">&nbsp;</td></tr>
+			<tr><td colspan="8" class="endseparator">&nbsp;</td></tr>
 			{else}
 				<tr>
-					<td colspan="7" align="left">{page_info iterator=$deposits}</td>
-					<td colspan="5" align="right">{page_links anchor="deposits" name="deposits" iterator=$deposits}</td>
+					<td colspan="4" align="left">{page_info iterator=$deposits}</td>
+					<td colspan="4" align="right">{page_links anchor="deposits" name="deposits" iterator=$deposits}</td>
 				</tr>
 			{/if}
 		</table>
