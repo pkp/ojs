@@ -30,7 +30,7 @@
 	<message key="plugins.generic.pln.settings.journal_uuid_help">Это уникальный идентификатор вашего журнала для PKP PLN. Возможно Вам потребуется сообщить его администраторам PKP PLN для поддержки Вашего журнала.</message>
 	<message key="plugins.generic.pln.settings.refresh">Обновить</message>
 	<message key="plugins.generic.pln.settings.refresh_help">Если по какой-либо причине выше не показаны условия использования или вы знаете, что эти условия были изменены, щелкните на кнопке «Обновить» для обновления списка условий выше.</message>
-	
+
 	<message key="plugins.generic.pln.required.object_type">Пожалуйста, выберите тип депонируемого объекта.</message>
 	<message key="plugins.generic.pln.required.object_threshold">Пожалуйста, выберите порог депонируемых объектов.</message>
 	<message key="plugins.generic.pln.required.terms_of_use_agreement">Принятие условий использования сети является обязательным для депонирования в PLN.</message>
@@ -42,20 +42,31 @@
 	<message key="plugins.generic.pln.status.network_status">Статус сети: {$networkStatusMessage}</message>
 	<message key="plugins.generic.pln.status.deposits">Депонируемые объекты</message>
 	<message key="plugins.generic.pln.status">Статус</message>
+
+	<!-- Заголовки таблицы на странице статуса -->	
 	<message key="plugins.generic.pln.status.id">ID</message>
 	<message key="plugins.generic.pln.status.type">Тип</message>
 	<message key="plugins.generic.pln.status.items">Объекты</message>
-	<message key="plugins.generic.pln.status.packaged">Упакованы</message>
-	<message key="plugins.generic.pln.status.transferred">Переданы</message>
-	<message key="plugins.generic.pln.status.received">Получены</message>
-	<message key="plugins.generic.pln.status.syncing">Идет синхронизация</message>
-	<message key="plugins.generic.pln.status.synced">Синхронизированы</message>
-	<message key="plugins.generic.pln.status.updated">Обновлены</message>
+	<message key="plugins.generic.pln.status.checked">Отметка</message>
+	<message key="plugins.generic.pln.status.local_status">Локальный статус</message>
+	<message key="plugins.generic.pln.status.processing_status">Статус обработки</message>
+	<message key="plugins.generic.pln.status.lockss_status">Статус LOCKSS</message>
+	<message key="plugins.generic.pln.status.complete">Завершено</message>
+	<message key="plugins.generic.pln.status.confirmReset">Вы уверены, что хотите заменить эти депонируемые объекты? Они будут заново упакованы и отправлены на сервер обработки.</message>
+	
+	<!-- строки в таблице на странице статуса -->
+	<message key="plugins.generic.pln.status.unknown">Неизвестно</message>
+	<message key="plugins.generic.pln.status.new">Новый</message>
+	<message key="plugins.generic.pln.status.packaged">Упакован</message>
+	<message key="plugins.generic.pln.status.transferred">Передан</message>
+	<message key="plugins.generic.pln.status.received">Получен</message>
+	<message key="plugins.generic.pln.status.validate">Проверен</message>
+	<message key="plugins.generic.pln.status.sent">Отправлен</message>
+	<message key="plugins.generic.pln.status.synced">Синхронизирован</message>
+	<message key="plugins.generic.pln.status.agreement">Соглашение</message>
+	<message key="plugins.generic.pln.status.updated">Обновлен</message>
 	<message key="plugins.generic.pln.status.local_failure">Локальная ошибка</message>
 	<message key="plugins.generic.pln.status.remote_failure">Удаленная ошибка</message>
-	<message key="plugins.generic.pln.status.reset">Сброс</message>
-	<message key="plugins.generic.pln.status.yes">Да</message>
-	<message key="plugins.generic.pln.status.no">Нет</message>
 
 	<message key="plugins.generic.pln.depositorTask.name">Задача депонирования PKP PLN</message>
 	<message key="plugins.generic.pln.notifications.processing_for">Депонирование выполняется для</message>
@@ -75,8 +86,10 @@
 
 	<message key="plugins.generic.pln.error.network.servicedocument">Ошибка сети {$error} при подключении к PLN для получения служебного документа.</message>
 	<message key="plugins.generic.pln.error.network.deposit">Ошибка сети {$error} при подключении к PLN для отправки депонируемого объекта.</message>
+	<message key="plugins.generic.pln.error.network.swordstatement">Ошибка сети {$error} при подключении к PLN для получения обновленного статуса депонируемого объекта.</message>
 	<message key="plugins.generic.pln.error.http.servicedocument">Сервер PLN вернул ошибку HTTP {$error} при попытке получения служебного документа.</message>
 	<message key="plugins.generic.pln.error.http.deposit">Сервер PLN вернул ошибку HTTP {$error} при отправке депонируемого объекта.</message>
+	<message key="plugins.generic.pln.error.http.swordstatement">PLN вернул ошибку HTTP {$error} при проверке статуса депонируемого объекта.</message>
 	<message key="plugins.generic.pln.error.depositor.missingpackage">Не удается найти файл пакета {$file}.</message>
 	<message key="plugins.generic.pln.error.depositor.export.articles.error">В процессе экспорта статей произошла ошибка. Более подробная информация может быть в журнале ошибок сервера.</message>
 	<message key="plugins.generic.pln.error.depositor.export.issue.error">При экспорте выпуска произошла ошибка. Более подробная информация может быть в журнале ошибок сервера.</message>
