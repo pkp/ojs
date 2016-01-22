@@ -41,20 +41,31 @@
 	<message key="plugins.generic.pln.status.network_status">Network Status: {$networkStatusMessage}</message>
 	<message key="plugins.generic.pln.status.deposits">Deposits</message>
 	<message key="plugins.generic.pln.status">Status</message>
+
+	<!-- status page table headers -->	
 	<message key="plugins.generic.pln.status.id">ID</message>
 	<message key="plugins.generic.pln.status.type">Type</message>
 	<message key="plugins.generic.pln.status.items">Items</message>
+	<message key="plugins.generic.pln.status.checked">Checked</message>
+	<message key="plugins.generic.pln.status.local_status">Local Status</message>
+	<message key="plugins.generic.pln.status.processing_status">Processing Status</message>
+	<message key="plugins.generic.pln.status.lockss_status">LOCKSS Status</message>
+	<message key="plugins.generic.pln.status.complete">Complete</message>
+	<message key="plugins.generic.pln.status.confirmReset">Are you sure you want to reset this deposit? It will be repackaged and resent to the processing server.</message>
+	
+	<!-- entries in the status page table -->
+	<message key="plugins.generic.pln.status.unknown">Unknown</message>
+	<message key="plugins.generic.pln.status.new">New</message>
 	<message key="plugins.generic.pln.status.packaged">Packaged</message>
 	<message key="plugins.generic.pln.status.transferred">Transferred</message>
 	<message key="plugins.generic.pln.status.received">Received</message>
+	<message key="plugins.generic.pln.status.validated">Validated</message>
+	<message key="plugins.generic.pln.status.sent">Sent to LOCKSS</message>	
 	<message key="plugins.generic.pln.status.syncing">Syncing</message>
-	<message key="plugins.generic.pln.status.synced">Synced</message>
+	<message key="plugins.generic.pln.status.agreement">Agreement</message>
 	<message key="plugins.generic.pln.status.updated">Updated</message>
 	<message key="plugins.generic.pln.status.local_failure">Local Failure</message>
 	<message key="plugins.generic.pln.status.remote_failure">Remote Failure</message>
-	<message key="plugins.generic.pln.status.reset">Reset</message>
-	<message key="plugins.generic.pln.status.yes">Yes</message>
-	<message key="plugins.generic.pln.status.no">No</message>
 
 	<message key="plugins.generic.pln.depositorTask.name">PKP PLN Depositor Task</message>
 	<message key="plugins.generic.pln.notifications.processing_for">Depositor processing for {$title}.</message>
@@ -74,8 +85,10 @@
 
 	<message key="plugins.generic.pln.error.network.servicedocument">Network error {$error} connecting to the PLN to get the service document.</message>
 	<message key="plugins.generic.pln.error.network.deposit">Network error {$error} connecting to the PLN to send the deposit.</message>
+	<message key="plugins.generic.pln.error.network.swordstatement">Network error {$error} connecting to the PLN to get a status update for deposit.</message>
 	<message key="plugins.generic.pln.error.http.servicedocument">PLN server returned HTTP error {$error} when attempting to get the service document.</message>
 	<message key="plugins.generic.pln.error.http.deposit">PLN server returned HTTP error {$error} when sending the deposit.</message>
+	<message key="plugins.generic.pln.error.http.swordstatement">PLN server returned HTTP error {$error} when checking the status of a deposit.</message>
 	<message key="plugins.generic.pln.error.depositor.missingpackage">Cannot find package file {$file}.</message>
 	<message key="plugins.generic.pln.error.depositor.export.articles.error">An error occured while exporting articles. The server's error log may have more information.</message>
 	<message key="plugins.generic.pln.error.depositor.export.issue.error">An error occured while exporting an issue. The server's error log may have more information.</message>

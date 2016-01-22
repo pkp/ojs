@@ -150,7 +150,7 @@
 						</a>
 					{/if}
 					{if $hasAccess}
-						{foreach from=$publishedArticle->getLocalizedGalleys() item=galley name=galleyList}
+						{foreach from=$publishedArticle->getGalleys() item=galley name=galleyList}
 							&nbsp;<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)|to_array:$galley->getBestGalleyId($journal)}" class="file">{$galley->getGalleyLabel()|escape}</a>
 						{/foreach}
 					{/if}

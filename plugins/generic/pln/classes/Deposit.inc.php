@@ -97,6 +97,73 @@ class Deposit extends DataObject {
 	}
 
 	/**
+	 * Return a string representation of the local status.
+	 * 
+	 * @return string
+	 */
+	function getLocalStatus() {
+		if($this->getTransferredStatus()) {
+			return 'plugins.generic.pln.status.transferred';
+		}
+		if($this->getPackagedStatus()) {
+			return 'plugins.generic.pln.status.packaged';
+		}
+		if($this->getNewStatus()) {
+			return 'plugins.generic.pln.status.new';
+		}		
+		return 'plugins.generic.pln.status.unknown';
+	}
+	
+	/**
+	 * Return a string representation of the processing status.
+	 * 
+	 * @return string
+	 */
+	function getProcessingStatus() {
+		if($this->getSentStatus()) {
+			return 'plugins.generic.pln.status.sent';
+		}
+		if($this->getValidatedStatus()) {
+			return 'plugins.generic.pln.status.validated';
+		}
+		if($this->getReceivedStatus()) {
+			return 'plugins.generic.pln.status.received';
+		}
+		return 'plugins.generic.pln.status.unknown';
+	}
+	
+	/**
+	 * Return a string representation of the LOCKSS status.
+	 * 
+	 * @return string
+	 */
+	function getLockssStatus() {
+		if($this->getLockssAgreementStatus()) {
+			return 'plugins.generic.pln.status.agreement';
+		}
+		if($this->getLockssSyncingStatus()) {
+			return 'plugins.generic.pln.status.syncing';
+		}
+		if($this->getLockssReceivedStatus()) {
+			return 'plugins.generic.pln.status.received';
+		}
+		return 'plugins.generic.pln.status.unknown';
+	}
+	
+	/**
+	 * Return a string representation of wether or not the deposit processing
+	 * is complete ie. LOCKSS has acheived agreement.
+	 * 
+	 * @return string
+	 */
+	function getComplete() {
+		if($this->getLockssAgreementStatus()) {
+			return 'common.yes';
+		}
+		return 'common.no';
+	}
+	
+	/**
 	 * Get new (blank) deposit status
 	 * @return int
 	 */
@@ -112,11 +179,35 @@ class Deposit extends DataObject {
 	}
 
 	/**
+	 * Get a status from the bit field.
+	 * 
+	 * @param $field int one of the PLN_PLUGIN_DEPOSIT_STATUS_* constants.
+	 * @return int
+	 */
+	function _getStatusField($field) {
+		return $this->getStatus() & $field;
+	}
+	
+	/**
+	 * Set a status value.
+	 * 
+	 * @param boolean $value 
+	 * @param int $field one of the PLN_PLUGIN_DEPOSIT_STATUS_* constants.
+	 */
+	function _setStatusField($value, $field) {
+		if($value) {
+			$this->setStatus($this->getStatus() | $field);
+		} else {
+			$this->setStatus($this->getStatus() & ~$field);
+		}
+	}
+	
+	/**
 	 * Get whether the deposit has been packaged for the PLN
 	 * @return int
 	 */
 	function getPackagedStatus() {
-		return $this->getStatus() & PLN_PLUGIN_DEPOSIT_STATUS_PACKAGED;
+		return $this->_getStatusField(PLN_PLUGIN_DEPOSIT_STATUS_PACKAGED);
 	}
 
 	/**
@@ -124,7 +215,7 @@ class Deposit extends DataObject {
 	 * @param $status boolean
 	 */
 	function setPackagedStatus($status = true) {
-		$this->setStatus($status ? $this->getStatus() | PLN_PLUGIN_DEPOSIT_STATUS_PACKAGED : $this->getStatus() & ~PLN_PLUGIN_DEPOSIT_STATUS_PACKAGED);
+		$this->_setStatusField($status, PLN_PLUGIN_DEPOSIT_STATUS_PACKAGED);
 	}
 
 	/**
@@ -132,7 +223,7 @@ class Deposit extends DataObject {
 	 * @return int
 	 */
 	function getTransferredStatus() {
-		return $this->getStatus() & PLN_PLUGIN_DEPOSIT_STATUS_TRANSFERRED;
+		return $this->_getStatusField(PLN_PLUGIN_DEPOSIT_STATUS_TRANSFERRED);
 	}
 
 	/**
@@ -140,7 +231,7 @@ class Deposit extends DataObject {
 	 * @param $status boolean
 	 */
 	function setTransferredStatus($status = true) {
-		$this->setStatus($status ? $this->getStatus() | PLN_PLUGIN_DEPOSIT_STATUS_TRANSFERRED : $this->getStatus() & ~PLN_PLUGIN_DEPOSIT_STATUS_TRANSFERRED);
+		$this->_setStatusField($status, PLN_PLUGIN_DEPOSIT_STATUS_TRANSFERRED);
 	}
 
 	/**
@@ -148,7 +239,7 @@ class Deposit extends DataObject {
 	 * @return int
 	 */
 	function getReceivedStatus() {
-		return $this->getStatus() & PLN_PLUGIN_DEPOSIT_STATUS_RECEIVED;
+		return $this->_getStatusField(PLN_PLUGIN_DEPOSIT_STATUS_RECEIVED);
 	}
 
 	/**
@@ -156,87 +247,87 @@ class Deposit extends DataObject {
 	 * @param $status boolean
 	 */
 	function setReceivedStatus($status = true) {
-		$this->setStatus($status ? $this->getStatus() | PLN_PLUGIN_DEPOSIT_STATUS_RECEIVED : $this->getStatus() & ~PLN_PLUGIN_DEPOSIT_STATUS_RECEIVED);
+		$this->_setStatusField($status, PLN_PLUGIN_DEPOSIT_STATUS_RECEIVED);
 	}
 
 	/**
 	 * Get whether the PLN is syncing the deposit across its nodes
 	 * @return int
 	 */
-	function getSyncingStatus() {
-		return $this->getStatus() & PLN_PLUGIN_DEPOSIT_STATUS_SYNCING;
+	function getValidatedStatus() {
+		return $this->_getStatusField(PLN_PLUGIN_DEPOSIT_STATUS_VALIDATED);
 	}
 
 	/**
 	 * Set whether the PLN is syncing the deposit across its nodes
 	 * @param $status boolean
 	 */
-	function setSyncingStatus($status = true) {
-		$this->setStatus($status ? $this->getStatus() | PLN_PLUGIN_DEPOSIT_STATUS_SYNCING : $this->getStatus() & ~PLN_PLUGIN_DEPOSIT_STATUS_SYNCING);
+	function setValidatedStatus($status = true) {
+		$this->_setStatusField($status, PLN_PLUGIN_DEPOSIT_STATUS_VALIDATED);
 	}
 
 	/**
 	 * Get whether the deposit has been synced across its nodes
 	 * @return int
 	 */
-	function getSyncedStatus() {
-		return $this->getStatus() & PLN_PLUGIN_DEPOSIT_STATUS_SYNCED;
+	function getSentStatus() {
+		return $this->_getStatusField(PLN_PLUGIN_DEPOSIT_STATUS_SENT);
 	}
 
 	/**
 	 * Set whether the deposit has been synced across its nodes
 	 * @param $status boolean
 	 */
-	function setSyncedStatus($status = true) {
-		$this->setStatus($status ? $this->getStatus() | PLN_PLUGIN_DEPOSIT_STATUS_SYNCED : $this->getStatus() & ~PLN_PLUGIN_DEPOSIT_STATUS_SYNCED);
+	function setSentStatus($status = true) {
+		$this->_setStatusField($status, PLN_PLUGIN_DEPOSIT_STATUS_SENT);
 	}
 
 	/**
 	 * Get whether there's been an error from the staging server
 	 * @return int
 	 */
-	function getRemoteFailureStatus() {
-		return $this->getStatus() & PLN_PLUGIN_DEPOSIT_STATUS_REMOTE_FAILURE;
+	function getLockssReceivedStatus() {
+		return $this->_getStatusField(PLN_PLUGIN_DEPOSIT_STATUS_LOCKSS_RECEIVED);
 	}
 
 	/**
 	 * Set whether there's been an error from the staging server
 	 * @param $status boolean
 	 */
-	function setRemoteFailureStatus($status = true) {
-		$this->setStatus($status ? $this->getStatus() | PLN_PLUGIN_DEPOSIT_STATUS_REMOTE_FAILURE : $this->getStatus() & ~PLN_PLUGIN_DEPOSIT_STATUS_REMOTE_FAILURE);
+	function setLockssReceivedStatus($status = true) {
+		$this->_setStatusField($status, PLN_PLUGIN_DEPOSIT_STATUS_LOCKSS_RECEIVED);
 	}
 
 	/**
 	 * Get whether there's been a local error in the deposit process
 	 * @return int
 	 */
-	function getLocalFailureStatus() {
-		return $this->getStatus() & PLN_PLUGIN_DEPOSIT_STATUS_LOCAL_FAILURE;
+	function getLockssSyncingStatus() {
+		return $this->_getStatusField(PLN_PLUGIN_DEPOSIT_STATUS_LOCKSS_SYNCING);
 	}
 
 	/**
 	 * Set whether there's been a local error in the deposit process
 	 * @param $status boolean
 	 */
-	function setLocalFailureStatus($status = true) {
-		$this->setStatus($status ? $this->getStatus() | PLN_PLUGIN_DEPOSIT_STATUS_LOCAL_FAILURE : $this->getStatus() & ~PLN_PLUGIN_DEPOSIT_STATUS_LOCAL_FAILURE);
+	function setLockssSyncingStatus($status = true) {
+		$this->_setStatusField($status, PLN_PLUGIN_DEPOSIT_STATUS_LOCKSS_SYNCING);
 	}
 
 	/**
 	 * Get whether there's been an update to a deposit
 	 * @return int
 	 */
-	function getUpdateStatus() {
-		return $this->getStatus() & PLN_PLUGIN_DEPOSIT_STATUS_UPDATE;
+	function getLockssAgreementStatus() {
+		return $this->_getStatusField(PLN_PLUGIN_DEPOSIT_STATUS_LOCKSS_AGREEMENT);
 	}
 
 	/**
 	 * Set whether there's been an update to a deposit
 	 * @param $status boolean
 	 */
-	function setUpdateStatus($status = true) {
-		$this->setStatus($status ? $this->getStatus() | PLN_PLUGIN_DEPOSIT_STATUS_UPDATE : $this->getStatus() & ~PLN_PLUGIN_DEPOSIT_STATUS_UPDATE);
+	function setLockssAgreementStatus($status = true) {
+		$this->_setStatusField($status, PLN_PLUGIN_DEPOSIT_STATUS_LOCKSS_AGREEMENT);
 	}
 
 	/**
@@ -249,7 +340,7 @@ class Deposit extends DataObject {
 
 	/**
 	 * Set set the date of the last status change
-	 * @param $dateLastStatusd boolean
+	 * @param $dateLastStatus date
 	 */
 	function setLastStatusDate($dateLastStatus) {
 		$this->setData('date_status', $dateLastStatus);

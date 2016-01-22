@@ -73,7 +73,7 @@ class DepositDAO extends DAO {
 	 */
 	function &getDepositsByJournalId($journalId, $dbResultRange = null) {
 		$result =& $this->retrieveRange(
-			'SELECT * FROM pln_deposits WHERE journal_id = ? ORDER BY date_status DESC',
+			'SELECT * FROM pln_deposits WHERE journal_id = ? ORDER BY deposit_id',
 			(int) $journalId,
 			$dbResultRange
 		);
@@ -107,7 +107,7 @@ class DepositDAO extends DAO {
 			array (
 				(int) $journalId,
 				(int) PLN_PLUGIN_DEPOSIT_STATUS_TRANSFERRED,
-				(int) PLN_PLUGIN_DEPOSIT_STATUS_LOCAL_FAILURE
+				(int) PLN_PLUGIN_DEPOSIT_STATUS_LOCKSS_AGREEMENT
 			)
 		);
 		$returner = new DAOResultFactory($result, $this, '_returnDepositFromRow');
@@ -124,7 +124,7 @@ class DepositDAO extends DAO {
 			array(
 				(int) $journalId,
 				(int) PLN_PLUGIN_DEPOSIT_STATUS_PACKAGED,
-				(int) PLN_PLUGIN_DEPOSIT_STATUS_LOCAL_FAILURE
+				(int) PLN_PLUGIN_DEPOSIT_STATUS_LOCKSS_AGREEMENT
 			)
 		);
 		$returner = new DAOResultFactory($result, $this, '_returnDepositFromRow');
@@ -132,7 +132,7 @@ class DepositDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve all deposits that need packaging
+	 * Retrieve all deposits that need a status update
 	 * @return array Deposit
 	 */
 	function &getNeedStagingStatusUpdate($journalId) {
@@ -141,7 +141,7 @@ class DepositDAO extends DAO {
 			array (
 				(int) $journalId,
 				(int) PLN_PLUGIN_DEPOSIT_STATUS_TRANSFERRED,
-				(int) PLN_PLUGIN_DEPOSIT_STATUS_LOCAL_FAILURE
+				(int) PLN_PLUGIN_DEPOSIT_STATUS_LOCKSS_AGREEMENT
 			)
 		);
 		$returner = new DAOResultFactory($result, $this, '_returnDepositFromRow');

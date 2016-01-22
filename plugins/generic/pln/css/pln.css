@@ -11,7 +11,7 @@
 #plnSettingsForm table .value .separator { clear:both; margin-top: 1em; }
 
 #plnStatusForm table { width: 100%; }
-#plnStatusForm table td { border-top: 1px dotted black; }
+#plnStatusForm table td { border-top: 1px solid lightgrey; }
 #plnStatusForm table input { margin: 2px; }
 #plnStatusForm table th { height: 20px; }
 
