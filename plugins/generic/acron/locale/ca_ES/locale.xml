@@ -14,7 +14,7 @@
  
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.generic.acron.name">Mòdul Acron</message>
-	<message key="plugins.generic.acron.description"><![CDATA[Aquest mòdul intenta reduir la dependència que tenen els OCS d'eines de planificació periòdica com ara «cron.»]]></message>
+	<message key="plugins.generic.acron.description"><![CDATA[Aquest mòdul intenta reduir la dependència que tenen els OJS d'eines de planificació periòdica com ara «cron.»]]></message>
 	<message key="plugins.generic.acron.enabled">S'ha habilitat el mòdul Acron.</message>
 	<message key="plugins.generic.acron.disabled">S'ha deshabilitat el mòdul Acron.</message>
 

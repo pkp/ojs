@@ -14,7 +14,7 @@
  
 <locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.generic.acron.name">Acron Eklentisi</message>
-	<message key="plugins.generic.acron.description">This plugin attempts to reduce the dependance of OCS on periodic scheduling tools such as 'cron.'</message>
+	<message key="plugins.generic.acron.description">This plugin attempts to reduce the dependance of OJS on periodic scheduling tools such as 'cron.'</message>
 	<message key="plugins.generic.acron.enabled">Acron Eklentisi etkinleştirildi.</message>
 	<message key="plugins.generic.acron.disabled">Acron Eklentisi pasifleştirildi.</message>
 

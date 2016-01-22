@@ -15,7 +15,7 @@
  
 <locale name="ru_RU" full_name="Русский">
 	<message key="plugins.generic.acron.name">Плагин «Acron»</message>
-	<message key="plugins.generic.acron.description"><![CDATA[Этот плагин пытается уменьшить зависимость OCS от инструментов периодического запуска по расписанию, таких как cron.]]></message>
+	<message key="plugins.generic.acron.description"><![CDATA[Этот плагин пытается уменьшить зависимость OJS от инструментов периодического запуска по расписанию, таких как cron.]]></message>
 	<message key="plugins.generic.acron.enabled">Плагин «Acron» был включен.</message>
 	<message key="plugins.generic.acron.disabled">Плагин «Acron» был отключен.</message>
 

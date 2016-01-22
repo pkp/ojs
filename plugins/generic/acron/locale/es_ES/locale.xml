@@ -15,7 +15,7 @@
  
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.generic.acron.name">Módulo Acron</message>
-	<message key="plugins.generic.acron.description"><![CDATA[Este módulo intenta reducir la dependencia de OCS en herramientas de programación periódica, como "cron".]]></message>
+	<message key="plugins.generic.acron.description"><![CDATA[Este módulo intenta reducir la dependencia de OJS en herramientas de programación periódica, como "cron".]]></message>
 	<message key="plugins.generic.acron.enabled">Se habilitó el módulo Acron.</message>
 	<message key="plugins.generic.acron.disabled">Se deshabilitó el módulo Acron.</message>
 
