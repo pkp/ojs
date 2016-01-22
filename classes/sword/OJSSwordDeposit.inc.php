@@ -177,7 +177,7 @@ class OJSSwordDeposit {
 			$url, $username, $password,
 			'',
 			$this->outPath . '/deposit.zip',
-			'http://purl.org/net/sword-types/METSDSpaceSIP',
+			'http://purl.org/net/sword/package/METSDSpaceSIP',
 			'application/zip', false, true
 		);
 		return $response;
