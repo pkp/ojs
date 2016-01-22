@@ -15,7 +15,7 @@
  
 <locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.generic.acron.name">Doplněk Acron</message>
-	<message key="plugins.generic.acron.description">Doplněk omezuje závislost OCS na pravidelném spouštění naplánovaných úloh pomocí služby 'cron.'</message>
+	<message key="plugins.generic.acron.description">Doplněk omezuje závislost OJS na pravidelném spouštění naplánovaných úloh pomocí služby 'cron.'</message>
 	<message key="plugins.generic.acron.enabled">Doplněk Acron byl povolen.</message>
 	<message key="plugins.generic.acron.disabled">Doplněk Acron byl zakázán.</message>
  	<message key="plugins.generic.acron.reload">Znovu nahrát naplánované úlohy</message>

@@ -14,7 +14,7 @@
  
 <locale name="ar_IQ" full_name="العربية">
 	<message key="plugins.generic.acron.name">إضافة Acron</message>
-	<message key="plugins.generic.acron.description"><![CDATA[هذه الإضافة تحاول تقليل إعتمادية OCS على أدوات الجدولة الدورية، مثل: 'cron.']]></message>
+	<message key="plugins.generic.acron.description"><![CDATA[هذه الإضافة تحاول تقليل إعتمادية OJS على أدوات الجدولة الدورية، مثل: 'cron.']]></message>
 	<message key="plugins.generic.acron.enabled">إضافة Acron تم تمكينها.</message>
 	<message key="plugins.generic.acron.disabled">إضافة Acron تم تعطيلها.</message>
 

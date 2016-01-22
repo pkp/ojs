@@ -14,7 +14,7 @@
  
 <locale name="zh_TW" full_name="繁體中文">
 	<message key="plugins.generic.acron.name">Acron 外掛程式</message>
-	<message key="plugins.generic.acron.description">這個外掛程式可以用來降低 OCS 系統對於周期性行事曆工具 (例如 cron)的依賴性。</message>
+	<message key="plugins.generic.acron.description">這個外掛程式可以用來降低 OJS 系統對於周期性行事曆工具 (例如 cron)的依賴性。</message>
 
 	<message key="plugins.generic.acron.reload">重新載入行事曆中的工作</message>
 </locale>

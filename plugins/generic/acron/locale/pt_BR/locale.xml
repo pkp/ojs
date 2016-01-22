@@ -14,7 +14,7 @@
  
 <locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.generic.acron.name">Plugin Acron</message>
-	<message key="plugins.generic.acron.description">Este plugin tem a intenção de reduzir a dependência do OCS em ferramentas de agendamento periódico, tais como a 'cron.'</message>
+	<message key="plugins.generic.acron.description">Este plugin tem a intenção de reduzir a dependência do OJS em ferramentas de agendamento periódico, tais como a 'cron.'</message>
 
 	<message key="plugins.generic.acron.reload">Recarregar Tarefas Agendadas</message>
 	<message key="plugins.generic.acron.disabled">O Plugin Acron foi desabilitado.</message>

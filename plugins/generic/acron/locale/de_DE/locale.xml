@@ -14,7 +14,7 @@
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.acron.name">Acron-Plug-In</message>
-	<message key="plugins.generic.acron.description"><![CDATA[Dieses Plug-In versucht, OCS' Abhängigkeit von Zeitplanungswerkzeugen wie 'cron' zu reduzieren.]]></message>
+	<message key="plugins.generic.acron.description"><![CDATA[Dieses Plug-In versucht, OJS' Abhängigkeit von Zeitplanungswerkzeugen wie 'cron' zu reduzieren.]]></message>
 	<message key="plugins.generic.acron.enabled">Das Acron-Plugin ist aktiviert.</message>
 	<message key="plugins.generic.acron.disabled">Das Acron-Plugin ist deaktiviert.</message>
 
