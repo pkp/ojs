@@ -39,8 +39,9 @@ class OJSSwordDeposit {
 	/**
 	 * Constructor.
 	 * Create a SWORD deposit object for an OJS article.
+	 * @param $article Article
 	 */
-	function OJSSwordDeposit(&$article) {
+	function OJSSwordDeposit($article) {
 		// Create a directory for deposit contents
 		$this->outPath = tempnam('/tmp', 'sword');
 		unlink($this->outPath);
@@ -103,7 +104,7 @@ class OJSSwordDeposit {
 	/**
 	 * Add a file to a package. Used internally.
 	 */
-	function _addFile(&$file) {
+	function _addFile($file) {
 		$targetFilename = $this->outPath . '/files/' . $file->getFilename();
 		copy($file->getFilePath(), $targetFilename);
 		$this->package->addFile($file->getFilename(), $file->getFileType());
