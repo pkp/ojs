@@ -46,7 +46,6 @@
 				<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
 				<p>{translate key="plugins.importexport.native.import.instructions"}</p>
 
-				<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
 				{fbvFormArea id="file"}
 					{fbvFormSection title="common.file"}
 						{include file="controllers/fileUploadContainer.tpl" id="plupload"}
