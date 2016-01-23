@@ -18,7 +18,7 @@
 	<message key="author.submit.submitArticle">قدم مقالاً</message>
 	<message key="author.submit.stepsToSubmit">خمس خطوات لتقديم المقال</message>
 	<message key="author.submit.startHereTitle">إبدأ طلباً جديداً للنشر</message>
-	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Click here</a> to go to step one of the five-step submission process.]]></message>
+	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">أنقر هنا</a> للذهاب إلى الخطوة الأولى من الخطوات الخمس لتقديم الطلب.]]></message>
 	<message key="author.submit.step1">الخطوة الأولى: الشروع بالتقديم</message>
 	<message key="author.submit.step2">الخطوة الثانية: تحميل الملفات</message>
 	<message key="author.submit.step3">الخطوة الثالثة: إدخال البيانات الوصفية</message>
@@ -53,7 +53,7 @@
 	<message key="author.submit.submissionLocale">لغة طلب النشر</message>
 	<message key="author.submit.submissionLocaleDescription">هذه المجلة تتقبل طلبات النشر بعدة لغات. إختر لغة الطلب الأساسية من القائمة المنسدلة أدناه</message>
 	<message key="author.submit.submissionChecklist">مرجعيات طلب النشر</message>
-	<message key="author.submit.submissionChecklistDescription">أعلم المجلة بأن طلب النشر هذا جاهز للنظر به من قبل هيئة تحريرها عبر رفع تأشيرة (الملاحظات إلى هيئة التحرير يمكن إضافتها أدناه)</message>
+	<message key="author.submit.submissionChecklistDescription">أعلم المجلة بأن طلب النشر هذا جاهز للنظر به من قبل هيئة تحريرها عبر وضع التأشيرات لكل مما يأتي (الملاحظات إلى هيئة التحرير يمكن إضافتها أدناه):</message>
 	<message key="author.submit.verifyChecklist">عليك التأكد من أن كل فقرات نموذج التقديم تمت تلبيتها قبل المتابعة</message>
 	<message key="author.submit.copyrightNoticeAgree">المؤلف أو المؤلفون يوافقون على فقرات إشعار الحقوق الفكرية، والتي تنطبق على طلب النشر هذا إذا أو عند تحقق النشر عبر هذه المجلة (الملاحظات إلى هيئة التحرير يمكن إضافتها أدناه)</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">عليك أن توافق على فقرات إشعار الحقوق الفكرية لتتمكن من المتابعة</message>
@@ -118,7 +118,7 @@
 	<message key="author.suppFile.publicSuppFileIdentifier">معرِّف الملف التكميلي</message>
 	<message key="author.submit.confirmationDescription">لتقديم مؤلَّفِك إلى {$journalTitle} أنقر (إنهاء التقديم). جهة الاتصال الأساسية لطلب النشر ستتلقى إشعاراً عبر البريد الالكتروني، وستكون قادرة على متابعة مراحل النشر لدى هيئة التحرير عبر الولوج إلى موقع المجلة. نشكر لك إهتمامك بالنشر في {$journalTitle}.</message>
 	<message key="author.submit.noFiles">لم يتم ربط أي مرفقات بطلب النشر هذا</message>
-	<message key="author.submit.filesSummary">ملخص الملف</message>
+	<message key="author.submit.filesSummary">ملخص ملفات طلب النشر</message>
 	<message key="author.submit.finishSubmission">إنهاء التقديم</message>
 	<message key="author.submit.submissionComplete">التقديم قد إكتمل. نشكر لك إهتمامك بالنشر في {$journalTitle}.</message>
 	<message key="author.submit.expedite"><![CDATA[ إذا كان هذا التقديم في وضع يسمح له بالنشر مباشرة دون الحاجة إلى تحكيم أو مراجعة أو معالجة أو تنضيد، يمكن له أن يوضع الآن في المرحلة الأخيرية من مراحل التحرير <a href="{$expediteUrl}" class="action">عبر النقر هنا</a>. (تنويه: عضو هيئة تحرير المجلة حصراً، له أن يختار ذلك الأمر بالنسبة إلى ما يقدمه للنشر شخصياً)]]></message>

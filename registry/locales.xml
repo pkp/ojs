@@ -3,8 +3,8 @@
 <!--
   * registry/locales.xml
   *
-  * Copyright (c) 2013-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Locales registry file.
@@ -16,7 +16,7 @@
 <!DOCTYPE locales SYSTEM "../lib/pkp/dtd/locales.dtd">
 
 <locales>
-	<locale key="ar_IQ" complete="true"  name="العربية" iso639-2b="ara" iso639-3="ara" stylesheet="lib/pkp/styles/rtl.css" />
+	<locale key="ar_IQ" complete="true"  name="العربية" iso639-2b="ara" iso639-3="ara" stylesheet="lib/pkp/styles/rtl-arabic.css" />
 	<locale key="ca_ES" complete="false" name="Català" iso639-2b="cat" iso639-3="cat" />
 	<locale key="cs_CZ" complete="true"  name="Čeština" iso639-2b="cze" iso639-3="ces" />
 	<locale key="da_DK" complete="false" name="Dansk" iso639-2b="dan" iso639-3="dan" />
