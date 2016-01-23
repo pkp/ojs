@@ -20,4 +20,5 @@
 	<message key="plugins.block.user.logout">الخروج</message>
 	<message key="plugins.block.user.signOutAsUser">الخروج كمستخدم</message>
 	<message key="plugins.block.user.rememberMe">تذكرني</message>
+    <message key="plugins.block.user.implicitAuthLogin">تسجيل الدخول في المجلات</message>
 </locale>

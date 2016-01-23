@@ -394,7 +394,7 @@
 			
 		</search>
 		<search>
-			<search_title>Intute: العلوم، الهندسة &amp; التقنية</search_title>
+			<search_title>Intute: العلوم، الهندسة والتقنية</search_title>
 			<search_description>هو خدمة مجانية على الإنترنت، يتيح لك الوصول إلى أفضل المصادر في الشبكة العنكبوتية لأغراض: التعليم والبحث العلمي، مقيمة ومختارة من قبل شبكة من المتخصصين في تلك المواضيع. هي تغطي: العلوم الفيزياوية، الهندسة، الحاسوب، الجغرافية، الرياضيات، وعلم البيئة. قاعدة البيانات تضم حالياً 33349 سجل.</search_description>
 			<url>http://www.intute.ac.uk/sciences/</url>
 			<search_url>http://www.intute.ac.uk/sciences/cgi-bin/search.pl?submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;subject=sciences&amp;term1={$formKeywords}</search_url>
@@ -435,7 +435,7 @@
 			
 		</search>
 		<search>
-			<search_title>قاعدة بيانات النبات الوطنيةs</search_title>
+			<search_title>قاعدة بيانات النبات الوطنية</search_title>
 			<search_description>من وزارة الزراعة الأمريكية / خدمة حفظ الموارد الطبيعية: قاعدة بيانات النباتات هي مصدر فريد للمعلومات القياسية عن النباتات... يركز على: النباتات الوعائية، الطحالب، حشائش الكبد الطحلبية، النباتات الزهقرنية والأشنيات في الولايات المتحدة ومقاطعاتها. تتضمن قاعدة البينات هذه: أسماء، قوائم مراجعة، أدوات مؤتمتة، بيانات تعريفية، ملخصات أصناف، بيانات موزعة، معلومات عن المحاصيل، نماذج نباتات، بيانات نمو النباتات، معلومات مواد نباتية، روابط نباتية، مراجع، ومعلومات أخرى. هناك قسم للأسئلة الشائعة وإجاباتها مرتبط بالشريط العلوي للصفحة يقدم المزيد من المعلومات.</search_description>
 			<url>http://plants.usda.gov/</url>
 			<search_url>http://www.nrcs.usda.gov/search.asp?site=NPDC&amp;ct=ALL&amp;qu={$formKeywords}</search_url>

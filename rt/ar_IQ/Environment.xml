@@ -29,7 +29,7 @@
 			
 		</search>
 		<search>
-			<search_title>Intute: العلوم، الهندسة &amp; التقنية</search_title>
+			<search_title>Intute: العلوم، الهندسة والتقنية</search_title>
 			<search_description>هو خدمة مجانية على الإنترنت، يتيح لك الوصول إلى أفضل المصادر في الشبكة العنكبوتية لأغراض: التعليم والبحث العلمي، مقيمة ومختارة من قبل شبكة من المتخصصين في تلك المواضيع. هي تغطي: العلوم الفيزياوية، الهندسة، الحاسوب، الجغرافية، الرياضيات، وعلم البيئة. قاعدة البيانات تضم حالياً 33349 سجل.</search_description>
 			<url>http://www.intute.ac.uk/sciences/</url>
 			<search_url>http://www.intute.ac.uk/sciences/cgi-bin/search.pl?submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;subject=sciences&amp;term1={$formKeywords}</search_url>
@@ -125,7 +125,7 @@
 			
 		</search>
 		<search>
-			<search_title>Intute: العلوم، الهندسة &amp; التقنية</search_title>
+			<search_title>Intute: العلوم، الهندسة والتقنية</search_title>
 			<search_description>هو خدمة مجانية على الإنترنت، يتيح لك الوصول إلى أفضل المصادر في الشبكة العنكبوتية لأغراض: التعليم والبحث العلمي، مقيمة ومختارة من قبل شبكة من المتخصصين في تلك المواضيع. هي تغطي: العلوم الفيزياوية، الهندسة، الحاسوب، الجغرافية، الرياضيات، وعلم البيئة. قاعدة البيانات تضم حالياً 33349 سجل.</search_description>
 			<url>http://www.intute.ac.uk/sciences/</url>
 			<search_url>http://www.intute.ac.uk/sciences/cgi-bin/search.pl?submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;subject=sciences&amp;term1={$formKeywords}</search_url>
