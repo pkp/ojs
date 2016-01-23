@@ -730,7 +730,9 @@
 	<message key="user.login.resetPasswordInstructions"><![CDATA[لأسباب أمنية، هذا النظام يرسل للمستخدمين رسالة لإعادة ضبط كلمة المرور بدلاً من قيامه باستدعائها.<br /><br />أدخل عنوان بريدك الالكتروني أدناه لإعادة ضبط كلمة مرورك. رسالة تأكيد ستُرسل إلى هذا العنوان البريدي.]]></message>
 
 	<!-- Registration -->
-	<message key="user.register.selectJournal">إختر مجلةً لتُسجل نفسك فيها</message>
+    <message key="user.register.emailValidation">مصادقة عنوان البريد الالكتروني مطلوبة</message>
+    <message key="user.register.emailValidationDescription">عليك أن تثبت صحة عنوان بريدك الالكتروني قبل المتابعة. لطفاً، راجع حسابك البريدي للمزيد من التعليمات. بمجرد مصادقة حسابك البريدي، سيكون بمقدورك دخول الموقع.</message>
+    <message key="user.register.selectJournal">إختر مجلةً لتُسجل نفسك فيها</message>
 	<message key="user.register.noJournals">ليس من مجلة متاحة للتسجيل فيها ضمن هذا الموقع</message>
 	<message key="user.register.privacyStatement">بيان الخصوصية</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">أنقر هنا</a> إن سبق لك التسجيل في هذه المجلة أو غيرها ضمن هذا الموقع.]]></message>
@@ -794,7 +796,7 @@
 	<message key="search.allJournals">جميع المجلات</message>
 	<message key="search.authorIndex">استعرض فهرس المؤلفين</message>
 	<message key="search.authorDetails">تفاصيل المؤلف</message>
-	<message key="search.syntaxInstructions"><![CDATA[تلميحات البحث: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>تلميحات البحث: </h4><ul>
 <li>عبارات البحث تتحسس الفرق بين الحروف الصغيرة والكبيرة</li>
 <li>الكلمات الدارجة يتم تجاهلها</li>
 <li>إفتراضياً، نتيجة البحث تعطي المؤلفات المتضمنة <em>لكل</em> عبارات جملة البحث (بعبارة أخرى، <em>AND</em> تُطبق بين الكلمات الواردة في عبارة البحث)</li>
@@ -875,7 +877,11 @@
 	<message key="about.subscriptionTypes.duration">المدة</message>
 	<message key="about.subscriptionTypes.cost">الكلفة</message>
 	<message key="about.availableSubscriptionTypes">أنواع الاشتراكات</message>
-	<message key="about.memberships">العضوية</message>
+    <message key="about.purchaseIssue">شراء العدد</message>
+    <message key="about.purchaseArticle">شراء المؤلَّف</message>
+    <message key="about.purchaseIssueDescription">بوسع القراء غير المشتركين شراء أعداد منفردة.أدناه، خيارات الدفع المالي ورسومها المتاحة .</message>
+    <message key="about.purchaseArticleDescription">بوسع القراء غير المشتركين شراء مؤلفات منفردة.أدناه، خيارات الدفع المالي ورسومها المتاحة.</message>
+    <message key="about.memberships">العضوية</message>
 	<message key="about.journalSponsorship">كفالة المجلة</message>
 	<message key="about.aboutThisPublishingSystem">عن نظام النشر هذا</message>
 	<message key="about.aboutThisPublishingSystem.altText">عملية التحرير والنشر لنظام المجلات المفتوحة</message>
@@ -975,7 +981,7 @@
 	<message key="installer.installationInstructions">
         <![CDATA[<h4>نسخة نظام المجلات المفتوحة {$version}</h4>
 
-<p>شكراً لقيامك بتنزيل <strong>نظام المجلات المفتوحة</strong> لمشروع المعرفة العامة. قبل المتابعة، لطفاً إقرأ <a href="{$baseUrl}/docs/README">ملف إقرأني</a> المضمن في هذا البرنامج. للمزيد من المعلومات عن مشروع المعرفة العامة وبرامجياته، لطفاً اتبع الرابط <a href="http://pkp.sfu.ca/" target="_blank">موقع PKP</a>. إن كانت لديك إخباريات عن أخطاء برمجية، أو استفسارات فنية عن نظام المجلات المفتوحة، أنظر <a href="http://pkp.sfu.ca/support/forum" target="_blank">منتدى الدعم</a> أو زر موقع PKP's online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">نظام التبليغ عن الأخطاء</a>. رغم كون منتدى الدعم هو المكان الأمثل للحصول على المساعدة، إلا أنه بإمكانك أيضاً مراسلة فريق العمل على <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>شكراً لقيامك بتنزيل <strong>نظام المجلات المفتوحة</strong> لمشروع المعرفة العامة. قبل المتابعة، لطفاً إقرأ <a href="{$baseUrl}/docs/README">ملف إقرأني</a> المضمن في هذا البرنامج. للمزيد من المعلومات عن مشروع المعرفة العامة وبرامجياته، لطفاً اتبع الرابط <a href="http://pkp.sfu.ca/" target="_blank">موقع PKP</a>. إن كانت لديك إخباريات عن أخطاء برمجية، أو استفسارات فنية عن نظام المجلات المفتوحة، أنظر <a href="http://forum.pkp.sfu.ca" target="_blank">منتدى الدعم</a> أو زر موقع PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">نظام التبليغ عن الأخطاء</a>. رغم كون منتدى الدعم هو المكان الأمثل للحصول على المساعدة، إلا أنه بإمكانك أيضاً مراسلة فريق العمل على <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>الترقية</h4>
 
@@ -1013,7 +1019,7 @@
 <p>2. حافظة ملفات لتخزين الملفات المرفوعة إلى الموقع ينبغي إنشاؤها وجعلها قابلة للتعديل (أنظر "إعدادات الملفات" أدناه).</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>نسخة نظام المجلات المفتوحة {$version}</h4>
 
-<p>شكراً لقيامك بتنزيل <strong>نظام المجلات المفتوحة</strong> لمشروع المعرفة العامة. قبل المتابعة، لطفاً إقرأ <a href="{$baseUrl}/docs/README">ملف إقرأني</a> و <a href="{$baseUrl}/docs/UPGRADE">ملف الترقية</a>المضمنين في هذا البرنامج. للمزيد من المعلومات عن مشروع المعرفة العامة وبرامجياته، لطفاً اتبع الرابط <a href="http://pkp.sfu.ca/" target="_blank">موقع PKP</a>. إن كانت لديك إخباريات عن أخطاء برمجية، أو استفسارات فنية عن نظام المجلات المفتوحة، أنظر <a href="http://pkp.sfu.ca/support/forum" target="_blank">منتدى الدعم</a> أو زر موقع PKP's online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">نظام التبليغ عن الأخطاء</a>. رغم كون منتدى الدعم هو المكان الأمثل للحصول على المساعدة، إلا أنه بإمكانك أيضاً مراسلة فريق العمل على <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>شكراً لقيامك بتنزيل <strong>نظام المجلات المفتوحة</strong> لمشروع المعرفة العامة. قبل المتابعة، لطفاً إقرأ <a href="{$baseUrl}/docs/README">ملف إقرأني</a> و <a href="{$baseUrl}/docs/UPGRADE">ملف الترقية</a>المضمنين في هذا البرنامج. للمزيد من المعلومات عن مشروع المعرفة العامة وبرامجياته، لطفاً اتبع الرابط <a href="http://pkp.sfu.ca/" target="_blank">موقع PKP</a>. إن كانت لديك إخباريات عن أخطاء برمجية، أو استفسارات فنية عن نظام المجلات المفتوحة، أنظر <a href="http://forum.pkp.sfu.ca" target="_blank">منتدى الدعم</a> أو زر موقع PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">نظام التبليغ عن الأخطاء</a>. رغم كون منتدى الدعم هو المكان الأمثل للحصول على المساعدة، إلا أنه بإمكانك أيضاً مراسلة فريق العمل على <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>إنه من <strong>الموصى به بشدة</strong> أن تقوم بالخزن الإحتياطي لقاعدة بيانات النظام وحافظة ملفات التحميل وحافظة ملفات تنصيب النظام قبل المتابعة بعملية الترقية.</p>
 <p>إن كنت تقوم بالتشغيل عبر <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>، لطفاً، تأكد من أن max_execution_time directive المتوضع في الملف التعريفي php.ini مضبوط على high limit. إن كان الأمر غير ذلك (فإن مؤشرApache's "Timeout") سيصل حده الأقصى، وعملية الترقية ستتم مقاطعتها، ولذلك ستتطلب التدخل اليدوي.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[للحصول على دعم كامل لترميز Unicode (UTF-8)، إختر UTF-8 لجميع إعدادات ترميز الحروف. لاحظ أن هذا الدعم يتطلب حالياً أن تكون قواعد البيانات بخوادم MySQL >= 4.1.1 أو PostgreSQL >= 7.1 . فضلاً عن كون الدعم الكامل لترميز Unicode يتطلب PHP >= 4.3.0 مجتمعاً مع دعم مكتبة <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> (ممكنة إفتراضياً في معظم تنصيبات PHP الحالية). قد تواجه صعوبات عند استعمال مجموعات الحروف الإضافية فيما لو كان الملقم الذي تستعمله لا يلبي تلك المتطلبات.
@@ -1038,10 +1044,10 @@
 	<li>إنضم إلى <a href="http://pkp.sfu.ca/informed" target="_new">قائمة المناقشة</a> التابعة لأنظمة OJS, OCS, the Harvester, Lemon8-XML, OMP, أو كل ما سبق.</li>
 	<li>إشترك في <a href="http://pkp.sfu.ca/blog" target="_new">PKP blog</a> <a href="http://pkp.sfu.ca/blog/feed" target="_new">RSS feed</a>.</li>
 </ol>
-<p>إن كانت لديك استفسارات أو تعليقات، لطفاً، أنقر <a href="http://pkp.sfu.ca/support/forum" target="_new">منتدى الدعم</a>.</p>]]></message>
+<p>إن كانت لديك استفسارات أو تعليقات، لطفاً، أنقر <a href="http://forum.pkp.sfu.ca" target="_new">منتدى الدعم</a>.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>ترقية نظام المجلات المفتوحة إلى النسخة {$version} قد إكتمل بنجاح.</p>
 <p>لا تنسَ إعادة ضبط الإعداد "installed" في ملفك التعريفي config.inc.php إلى <em>On</em>.</p>
-<p>إن لم يسبق لك التسجيل وترغب في الحصول على الأخبار والتحديثات <strong>لطفاً، سجل في <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> إن كانت لديك استفسارات أو تعليقات، لطفاً، أنقر <a href="http://pkp.sfu.ca/support/forum" target="_new">منتدى الدعم</a>.</p>]]></message>
+<p>إن لم يسبق لك التسجيل وترغب في الحصول على الأخبار والتحديثات <strong>لطفاً، سجل في <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> إن كانت لديك استفسارات أو تعليقات، لطفاً، أنقر <a href="http://forum.pkp.sfu.ca" target="_new">منتدى الدعم</a>.</p>]]></message>
 
 	<!-- Installation upgrade warnings -->
 	<message key="site.upgradeAvailable.admin"><![CDATA[تم إطلاق نسخة جديدة من نظام المجلات المفتوحة! أنت حالياً تستعمل النسخة {$currentVersion}  منه. النسخة ذات الإصدار الأحدث هي  OJS {$latestVersion}. لطفاً، قم بزيارة <a href="http://pkp.sfu.ca/ojs_download" target="_new">هذه الصفحة</a> لتنزيل النسخة الأحدث والعثور على تعليمات الترقية.]]></message>

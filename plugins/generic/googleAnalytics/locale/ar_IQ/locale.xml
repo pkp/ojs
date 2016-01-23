@@ -29,7 +29,13 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">رمز التعقب الموروث (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">رمز التعقب الموروث (ga.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">رمز التعقب الجديد للتحليلات العالمية (analytics.js)</message>
-	<message key="plugins.generic.googleAnalytics.authorAccount">رقم حساب تحليلات Google</message>
+    <message key="plugins.generic.googleAnalytics.manager.settings.enableSite">الصفحة الرئيسية للموقع</message>
+    <message key="plugins.generic.googleAnalytics.manager.settings.siteEnable">تمكين إعدادات هذه المجلة في صفحة الموقع الرئيسية</message>
+    <message key="plugins.generic.googleAnalytics.manager.settings.siteDisable">تعطيل الإعدادات الموجودة في صفحة الموقع الرئيسية</message>
+    <message key="plugins.generic.googleAnalytics.manager.settings.siteUnchanged">أترك إعدادات صفحة الموقع الرئيسية كما هي</message>
+    <message key="plugins.generic.googleAnalytics.manager.settings.disabled">معطلة</message>
+    <message key="plugins.generic.googleAnalytics.manager.settings.enableSiteInstructions">هذه الإعدادات يمكن تطبيقها عندما يتصفح المستخدمون الموقع بشكل عام (حتى خارج هذه المجلة). إن لم تكن هناك إعدادات مطبقة على مستوى الموقع، ستكون تحليلات Google فعالة فقط على مستوى المجلة.</message>
+    <message key="plugins.generic.googleAnalytics.authorAccount">رقم حساب تحليلات Google</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">لتعقب قراءات المقالات المنشورة باستعمال تحليلات Google، أدخل رقم الحساب هنا (مثلاً: UA-xxxxxx-x).</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">واحد أو أكثر من أرقام حسابات تحليلات Google المدخلة هنا غير صحيحة.</message>
 </locale>

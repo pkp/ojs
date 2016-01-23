@@ -87,7 +87,7 @@
 			<search_title>WordWeb Online</search_title>
 			<search_description>هو قاموس عالمي وباحث كلمات لأكثر من 280 ألف كلمة وعبارة بحث. يتوفر أيضاُ بشكل برنامج حاسوبي.
 
-يغطي بالكامل الهجاء: الأمريكي، البريطاني، الأوسترالي، الكندي، والآسيوي للغة الإنجليزية.</search_description>
+يغطي بالكامل الهجاء: الأمريكي، البريطاني، الأسترالي، الكندي، والآسيوي للغة الإنجليزية.</search_description>
 			<url>http://www.wordwebonline.com/</url>
 			<search_url>http://www.wordwebonline.com/search.pl?w={$formKeywords}</search_url>
 			

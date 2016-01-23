@@ -263,8 +263,8 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Soc sci data</context_title>
-		<context_abbrev>Soc sci data</context_abbrev>
+		<context_title>بيانات العلوم الاجتماعية</context_title>
+		<context_abbrev>بيانات العلوم الاجتماعية</context_abbrev>
 		<context_description>يتيح الوصول لأرشيف هائل من بيانات العلوم الاجتماعية لأغراض البحث والتوجيه.</context_description>
 
 		<search>
@@ -282,7 +282,7 @@
 			
 		</search>
 		<search>
-			<search_title>أرشيف بيانات علم الاجتماع الأوسترالي</search_title>
+			<search_title>أرشيف بيانات علم الاجتماع الأسترالي</search_title>
 			<search_description>هو عضو في الاتحاد الدولي لمنظمات البيانات (IFDO) والذي عبره يديم التواصل مع منظمات البيانات في الخارج والتي تمارس فعاليات توفير البيانات المحوسبة والمستندات لمجتمع العلوم الاجتماعية. يرتبط بمحفوظات بيانات أخرى.</search_description>
 			<url>http://assda.anu.edu.au/</url>
 			<search_url>http://assda.anu.edu.au/htdig/htsearch?method=and&amp;format=builtin-long&amp;sort=score&amp;config=assda&amp;restrict=http://assda.anu.edu.au/&amp;exclude=&amp;words={$formKeywords}</search_url>
@@ -390,7 +390,7 @@
 		<context_description>مداخل ذات صلة</context_description>
 
 		<search>
-			<search_title>أرشيف بيانات علم الاجتماع الأوسترالي</search_title>
+			<search_title>أرشيف بيانات علم الاجتماع الأسترالي</search_title>
 			<search_description>هو عضو في الاتحاد الدولي لمنظمات البيانات (IFDO) والذي عبره يديم التواصل مع منظمات البيانات في الخارج والتي تمارس فعاليات توفير البيانات المحوسبة والمستندات لمجتمع العلوم الاجتماعية. يرتبط بمحفوظات بيانات أخرى.</search_description>
 			<url>http://assda.anu.edu.au/</url>
 			<search_url>http://assda.anu.edu.au/htdig/htsearch?method=and&amp;format=builtin-long&amp;sort=score&amp;config=assda&amp;restrict=http://assda.anu.edu.au/&amp;exclude=&amp;words={$formKeywords}</search_url>
