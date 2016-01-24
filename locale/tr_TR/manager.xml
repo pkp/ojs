@@ -11,7 +11,7 @@
   * Localization strings for the tr_TR (Türkçe) locale.
   -->
 
-<locale name="tr_TR" full_name = "Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="manager.emails.confirmResetAll">Bu dergide yer alan bütün e-posta şablonlarını varsayılan biçime döndürmek istediğinizden emin misiniz? Bu işlemi yaparsanız, özelleştirdiğiniz tüm şablonları kaybedeceksiniz!</message>
 	<message key="manager.files.note">Not: Dosya tarayıcı dergi ile ilişkilendirilmiş dosyalar ve dizinlerin doğrudan görülür ve yönetilebilir olmasını sağlayan, gelişmiş bir özelliktir.</message>
 	<message key="manager.groups">Yönetici Listesi</message>
@@ -84,7 +84,7 @@
 	<message key="manager.people.allUsers">Tüm Aktif Kullanıcılar</message>
 	<message key="manager.people.confirmRemove">Bu kullanıcıyı bu dergiden çıkar. Bu işlem kullanıcının bu dergideki tüm görevlerini iptal edecektir.</message>
 	<message key="manager.people.emailUsers.selectTemplate">Şablon seç</message>
-	<message key="manager.people.enrollExistingUser">TÜM KAYITLI KULLANICILAR</message>
+	<message key="manager.people.enrollExistingUser">Tüm Kayıtlı Kullancılar</message>
 	<message key="manager.people.enrollSyncJournal">Dergi ile</message>
 	<message key="manager.people.mergeUsers.from.description">Başka bir kullanıcı hesabı ile birleştirmek için bir ya da  birden çok kullanıcı seç (Örneğin; iki kullanıcı hesabı olan kişiler için). Birincil olarak seçilen hesap silinecek ve kullanıcının gönderileri, görevleri, atamaları gibi tüm kayıtları ikinci seçilen hesaba aktarılacaktır.</message>
 	<message key="manager.people.mergeUsers.into.description">Önceki seçtiğiniz kullanıcının yazarlık, atama gibi görvlerinin bağlanacağı bir kullanıcı seçiniz.</message>
@@ -740,5 +740,6 @@
 	<message key="manager.setup.copyrightYearBasis.Article">Varsayılan yıl makalenin yayın tarihinden itibaren çekilecektir.</message>
 	<message key="manager.setup.copyrightYearBasis.Issue">Varsayılan yıl sayının yayımı tarihinden itibaren çekilecek.</message>
 	<message key="manager.statistics.reports.objectNotFound">Obje veri tabanında bulunamadı</message>
-	<message key="manager.setup.emailHeader">e-Posta Başlığı</message>
+	<message key="manager.setup.emailHeader">E-posta Başlığı</message>
+	<message key="manager.setup.emailHeaderDescription">Dergi hesabından sistem tarafından gönderilen hazır e-postalara aşağıdaki başlık eklenecektir. Bu e-postalara temel iletişim adresi eklenir. Temel iletişimde belirtilen kişinin mesaj içeriğinden sorumlu olarak gösterilmesi gerekli değildir; çünkü mesaj başka bri kullanıcı üzerinden gönderilebilir.</message>	
 </locale>

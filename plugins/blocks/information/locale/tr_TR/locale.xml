@@ -15,5 +15,5 @@
 <locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.block.information.displayName">Bilgi Bloğu</message>
 	<message key="plugins.block.information.description">Bu eklenti yan taraf bilgi bağlantılarını sağlar.</message>
-	<message key="plugins.block.information.link">BİLGİ</message>
+	<message key="plugins.block.information.link">Bilgi</message>
 </locale>

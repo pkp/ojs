@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="tr_TR" full_name = "Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="admin.hostedJournals">Yayınlanan Dergiler</message>
 	<message key="admin.settings.journalRedirect">Dergiye Yönlendirme</message>
 	<message key="admin.settings.journalRedirectInstructions">Siteye girişler, doğrudan derginin ana sayfasına yönlendirilecektir. Özellikle tek dergi tutuluyor ise yararlıdır.</message>

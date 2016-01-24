@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="tr_TR" full_name = "Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="editor.article.reviewForms">Değerlendirme Formları</message>
 	<message key="editor.article.selectReviewForm">Değerlendirme Formu Seç</message>
 	<message key="editor.article.clearReviewForm">Değerlendirme Formunu Temizle</message>
@@ -213,7 +213,7 @@
 	<message key="editor.issues.galley">Sayı Dizgisi</message>
 	<message key="editor.issues.viewingGalley">Sayı Dizgisi Gösterimi</message>
 	<message key="editor.issues.issueGalleysDescription">Tüm konu içeriği ile dizgileri yayınla.</message>
-	<message key="editor.issues.noneIssueGalleys">Hiçbir sayı dizgisi yayınlanmıştır.</message>
+	<message key="editor.issues.noneIssueGalleys">Hiçbir sayı dizgisi yayınlanmamıştır.</message>
 	<message key="editor.issues.galleyLabelRequired">Sayı dizgi etiketi gerekli.</message>
 	<message key="editor.issues.galleyLocaleRequired">Sayı dizgi dili gerekli.</message>
 	<message key="editor.issues.galleyPublicIdentificationExists">Genel sayı dizgi kimliği zaten var.</message>
@@ -221,6 +221,6 @@
 	<message key="editor.issues.confirmDeleteGalley">Bu sayı dizgisini silmek istediğinizden emin misiniz?</message>
 	<message key="editor.article.remove">Kaldır</message>
 	<message key="editor.notifyUsers.allMailingList">Posta listesinde tüm e-postalar dahil ({$count} e-posta)</message>
-	<message key="editor.publicGalleyIdentificationExists">Bu makale için başka bir dizgi tablasında '{$publicIdentifier}' genel belge belirleyicisi olarak zaten belirlenmiş. Lütfen bu makale için tekil bir dizgi tablası belirleyicisi seçiniz.</message>
-	<message key="editor.issues.resetArticlePublicationDates">Makale yayın tarihlerini yenile</message>
+	<message key="editor.issues.resetArticlePublicationDates">Makale yayın tarihlerini sıfırla</message>
+	<message key="editor.publicGalleyIdentificationExists">Bu makale için '{$publicIdentifier}' genel belirleyicisi zaten başka bir baskı için verilmiş. Lütfen bu makale için tekil bir baskı belirleyicisi seçiniz.</message>
 </locale>

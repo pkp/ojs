@@ -8,22 +8,39 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Objects for review plugin localization strings for the en_US (U.S. English) locale.
+  * Objects for review plugin localization strings for the tr_TR (Türkçe) locale.
   -->
-
+ 
 <locale name="tr_TR" full_name="Türkçe">
 
 	<!-- Objects For Review Plug-In -->
 	<message key="plugins.generic.objectsForReview.displayName">Nesneler için değerlendirme</message>
+
+	<!--  Editor -->
+
+	<!-- Object Types Management -->
+
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.name">İsim</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.none">Hiçbiri</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.persons">Kişiler</message>
+
+
+
+	<message key="plugins.generic.objectsForReview.editor.objectType.edit">Review Object Type</message>
 	<message key="plugins.generic.objectsForReview.editor.objectTypes.update">Güncelleme</message>
+
 	<message key="plugins.generic.objectsForReview.editor.objectTypes.install">Yükle</message>
+
 	<message key="plugins.generic.objectsForReview.editor.objectType.name">İsim</message>
 	<message key="plugins.generic.objectsForReview.editor.objectType.description">Açıklama ve Talimatlar</message>
 	<message key="plugins.generic.objectsForReview.editor.objectType.metadata">Üst Veri</message>
 	<message key="plugins.generic.objectsForReview.editor.objectType.preview">Ön İzleme</message>
 
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata">Review Object Metadata</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.none">Hiçbiri</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copyTo">Şuraya Kopyala:</message>
+
+
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copy">Kopyala</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.name">İsim</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.required">Gerekli</message>
@@ -47,17 +64,21 @@
 	<!-- Objects For Review Settings -->
 	<message key="plugins.generic.objectsForReview.settings">Ayarlar</message>
 	<message key="plugins.generic.objectsForReview.settings.objectsForReviewMode">Yönetim</message>
+
 	<message key="plugins.generic.objectsForReview.settings.displayMetadata">Üst veri nesnesi görüntüle</message>
 	<message key="plugins.generic.objectsForReview.settings.displayAbstract">Makale özet sayfasında üst veri nesnesi görüntüle</message>
+
 
 	<!-- Search, filter, sort -->
 	<message key="plugins.generic.objectsForReview.search.field.title">Başlık</message>
 	<message key="plugins.generic.objectsForReview.search.field.abstract">Özet</message>
 	<message key="plugins.generic.objectsForReview.search.noResults">Hiç bir sonuç bulunamadı</message>
+
 	<message key="plugins.generic.objectsForReview.sort.sortDirectionAsc">Artan sıralama</message>
 	<message key="plugins.generic.objectsForReview.sort.sortDirectionDesc">Azalan sıralama</message>
 
 	<!-- Objects For Review -->
+	
 	<message key="plugins.generic.objectsForReview.objectsForReview.title">Başlık</message>
 	<message key="plugins.generic.objectsForReview.objectsForReview.dateCreated">Oluşturuldu</message>
 	<message key="plugins.generic.objectsForReview.objectsForReview.status">Durum</message>
@@ -96,7 +117,9 @@
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.additionalNotes">Ek notlar</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.notes">Notlar</message>
 
+
 	<!-- Objects For Review Assignments Management by Editor -->
+	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Objects For Review</message>
 	<message key="plugins.generic.objectsForReview.editor.assignments">Atamalar</message>
 	<!--  Actions -->
 	<message key="plugins.generic.objectsForReview.editor.select">Seçim</message>
@@ -105,6 +128,7 @@
 	<message key="plugins.generic.objectsForReview.editor.denyObjectReviewer">Reddet</message>
 	<message key="plugins.generic.objectsForReview.editor.notifyObjectMailed">Postalanan Nesne</message>
 	<message key="plugins.generic.objectsForReview.editor.removeObjectReviewer">Sil</message>
+
 	<message key="plugins.generic.objectsForReview.editor.selectSubmission">Gönderi seç</message>
 	<!-- Assign Author -->
 	<message key="plugins.generic.objectsForReview.editor.assignAuthor">Yazar Ata</message>
@@ -135,20 +159,26 @@
 
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.additionalNotes">Ek notlar</message>
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.notes">Notlar</message>
+
+
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.assignEditor">Bir editör ata</message>
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.editor">Editör</message>
 
+
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.available">Kullanılabilir</message>
+
 
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.status.available">Kullanılabilir</message>
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.status.notAvailable">Kullanılamaz</message>
 
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.delete">Sil</message>
 
+
 	<!-- Public -->
 	<message key="plugins.generic.objectsForReview.public.headerLink">Değerlendirme için nesne</message>
 	<message key="plugins.generic.objectsForReview.public.objectsForReview">Değerlendirme için nesne</message>
 	<message key="plugins.generic.objectsForReview.public.objectForReview">Değerlendirme için nesne</message>
+
 	
 	<!-- Article Abstract Page -->
 	<message key="plugins.generic.objectsForReview.public.articleObjectsForReview">Bu makalede nesneler değerlendirildi</message>
@@ -159,9 +189,11 @@
 	<message key="plugins.generic.objectsForReview.author.myObjectsForReview">Nesnelerim</message>
 	<!--  Actions -->
 
+
 	<message key="plugins.generic.objectsForReview.author.submit">Gönder</message>
 	<message key="plugins.generic.objectsForReview.author.view">Göster</message>
 	<!-- Submission -->
+
 
 
 	<!-- Notifications -->
@@ -170,10 +202,25 @@
 	<message key="plugins.generic.objectsForReview.notification.objectTypeUpdated">Değerlendirme nesne türü güncellendi.</message>
 	<message key="plugins.generic.objectsForReview.notification.objectTypeActivated">Değerlendirme nesne türü etkinleştirildi.</message>
 	<message key="plugins.generic.objectsForReview.notification.objectTypeDeactivated">Değerlendirme nesne türü pasifleştirildi.</message>
+
 	<message key="plugins.generic.objectsForReview.notification.ofrCreated">Değerlendirmee oluşturulması için yeni nesne.</message>
+
 	<message key="plugins.generic.objectsForReview.notification.ofrUpdated">Değerlendirme güncellemesi için nesne.</message>
 
+
+
+	<!-- errors -->
+	<!-- Object Types Management -->
+
+	<!-- Object For Review Edit -->
+
+	<!-- Objects For Review Settings -->
 	<message key="plugins.generic.objectsForReview.settings.modeRequired">Bir mod gerekli.</message>
+
+
+
+
+
 
 	<!-- Objects for Review and their Metadata -->
 	<!-- Common Metadata -->
@@ -210,6 +257,7 @@
 	<message key="plugins.generic.objectsForReview.object.audioRecording.isbn">ISBN</message>
 	<!-- Bill -->
 	<message key="plugins.generic.objectsForReview.object.bill">Fatura</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.sponsor">Sponsor</message>
 	<message key="plugins.generic.objectsForReview.object.bill.person.contributor">Katkı Sağlayan</message>
 	<message key="plugins.generic.objectsForReview.object.bill.person.cosponsor">Sponsorla Desteklemek</message>
 	<message key="plugins.generic.objectsForReview.object.bill.number">Fatura Numamarsı</message>
@@ -217,6 +265,7 @@
 	<message key="plugins.generic.objectsForReview.object.bill.codeVolume">Kod Cildi</message>
 	<message key="plugins.generic.objectsForReview.object.bill.section">Bölüm</message>
 	<message key="plugins.generic.objectsForReview.object.bill.codePages">Kod Sayfası</message>
+	<message key="plugins.generic.objectsForReview.object.bill.legislativeBody">Legislative Body</message>
 	<message key="plugins.generic.objectsForReview.object.bill.session">Oturum</message>
 	<message key="plugins.generic.objectsForReview.object.bill.history">Geçmiş</message>
 	<!-- Blog Post -->
@@ -566,7 +615,7 @@
 	<message key="plugins.generic.objectsForReview.object.webPage.websiteType">Web Sitesi Türü</message>
 
 
-	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsBy">Kelimeye Göre</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorAssigned">Değerlendirme için atanan hakem.</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsBy">Kelimelere Göre</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.recipient">Alıcı</message>
-	<message key="plugins.generic.objectsForReview.notification.ofrAuthorAssigned">Yazar inceleme için öğeye atandı.</message>
 </locale>
