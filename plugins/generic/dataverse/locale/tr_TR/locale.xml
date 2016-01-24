@@ -45,7 +45,6 @@
 	<message key="plugins.generic.dataverse.settings.pubIdType">Genel belirleyici türü</message>
 	<message key="plugins.generic.dataverse.settings.workflow">İş akışı ayarları</message>
 	<message key="plugins.generic.dataverse.settings.requireData">Gerekli veri dosyaları</message>
-continue.</message>
 	<message key="plugins.generic.dataverse.settings.studyRelease">Yayın taslak çalışmaları</message>
 	<message key="plugins.generic.dataverse.settings.studyReleaseSubmissionAccepted">editör kabulleri gönderisi</message>
 	<message key="plugins.generic.dataverse.settings.studyReleaseArticlePublished">Makale yayınlandı</message>
