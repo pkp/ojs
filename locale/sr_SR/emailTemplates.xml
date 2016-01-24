@@ -9,7 +9,6 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
-  *
   -->
 
 <email_texts locale="sr_SR">
@@ -36,17 +35,16 @@ Link: {$url}
 Ukoliko želite da više ne primate obaveštenja o novim porukama idite na link  {$unsubscribeLink} i unesite imejl adresu i lozinku.
 
 {$principalContactSignature}</body>
-		<description>Ova poruka je poslata neregistrovanim korisnicima na mejling listi</description>
+		<description>Ova poruka je poslata neregistrovanim korisnicima na mejling listi.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Dobrodošli na {$journalName} mejling listu!</subject>
-		<body>Prijavili ste se da primate obaveštenja od {$journalName}.
+		<subject>Dobrodošli na {$siteTitle} mejling listu!</subject>
+		<body>Prijavili ste se da primate obaveštenja od {$siteTitle}.
 
 Molimo Vas da kliknete na link kako biste potvrdili svoj zahtev i dodali Vašu imejl adresu na mejling listu: {$confirmLink}
 
 Ukoliko ne želite više da primate imejlove o obaveštenjima, idite na {$unsubscribeLink} i unesite imejl adresu i lozinku.
 
-Vaša lozinka za onemogućavanje imejl obaveštenja je: {$password}
 
 {$principalContactSignature}</body>
 		<description>Ova poruka se šalje neregistrovanim korisnicima koji su se tek registrovali na mejling listu obaveštenja</description>
