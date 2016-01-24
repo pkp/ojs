@@ -10,7 +10,7 @@
   *
   * DOI plugin localization strings
   -->
-
+ 
 <locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">Bu eklenti ADS'de sayılara, makalelere, dizgilere ve ek dosyalara Dijital Nesne Belirleyici (DOI) atamasını etkinleştirir.</message>
@@ -22,6 +22,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Dergi İçeriği</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Lütfen DOI'lerin atanacağı nesneleri seçiniz.</message>
 	<message key="plugins.pubIds.doi.manager.settings.explainDois">Lütfen Dijital Nesne Belirleyici (DOI) atanacak yayımlanmış nesneleri seçiniz:</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>NOTE:</strong> When using the <a href="http://www.crossref.org" target="_new">CrossRef</a> DOIs, please select articles. Article is seen as work, i.e. entity of intellectual and artistic content. Thus, article is the publishing object the CrossRef DOI export and registration is based upon.]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Sayılar</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Makaleler</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">Dizgiler</message>
@@ -41,6 +42,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Örneğin; vol%viss%ipp%p kodlaması, 10.1234/vol3iss2pp230 gibi bir DOI yaratabilir.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">varsayılan örneği/şablonu kullan.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[Sayılar için %j.v%vi%i<br />makaleler için %j.v%vi%i.%a<br />dizgiler için %j.v%vi%i.%a.g%g<br />ek dosyalar için %j.v%vi%i.%a.s%s.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Önceki seçenekte belirtilen "Özel Belirleyici"den farklı ve bağımsız yayımlanan her öğe için tekil bir DOI son ek girin. Her öğenin üst veri sayfasında ek DOI giriş alanı bulacaksınız.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Lütfen sayılar için örnek/şablon DOI son ekini giriniz.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Lütfen makaleler için örnek/şablon DOI son ekini giriniz.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Lütfen dizgiler için örnek/şablon DOI son ekini gibiniz.</message>
@@ -59,6 +61,11 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">ek dosya</message>
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Gördüğünüz DOI ön izleme eksik olabilir. Bir DOI henüz tamamlanmamış olabilir. Sayı yayınlama ve {$pubObjectType} genel sayfasını görüntüleme otomatik olarak bu {$pubObjectType} için benzersiz bir DOI üretecektir.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Verilen DOI son eki yayınlanmış başka bir öğe için zaten kullanılıyor. Her öğe için benzersiz bir DOI sonek giriniz.</message>
-	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>NOTE:</strong> When using the <a href="http://www.crossref.org" target="_new">CrossRef</a> DOIs, please select articles. Article is seen as work, i.e. entity of intellectual and artistic content. Thus, article is the publishing object the CrossRef DOI export and registration is based upon.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Her bir yayımlanmış öğe için tekil bir DOI sonek bilgisi giriniz. Her bir öğe'nin üst veri sayfasında ek bir DOI giriş alanı bulacaksınız.</message>
+	<message key="plugins.pubIds.doi.editor.excludePubObject">DOI atamasında {$pubObjectType} seçeneğini hariç tut.</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign">Yeniden DOI Ata</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign.description">{$pubObjectType} seçeneği için var olan DOI'leri kaldırmak üzere bu kutuyu işaretleyin.</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi">Sayı Nesnelerini Hariç Tut</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi.description">Use this button to exclude the objects (articles, galleys, and supp files) currently scheduled for this issue from assigning them a DOI. Note that the objects that are added/scheduled later will not be affected. You will still have the possibility to use the single object exclusion options.</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Sayı öğelerinin DOI'lerini temizle</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Bu sayı için şu halde belirlenmiş tüm öğelerin (makale, baskı ve ek dosyalar) DOI'lerini temizlemek için bu butonu kullanabilirsiniz.</message>
 </locale>

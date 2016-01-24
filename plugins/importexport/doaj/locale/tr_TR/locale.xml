@@ -21,4 +21,9 @@
 	<message key="plugins.importexport.doaj.export.contact">Katılım için DOAJ İletişimi</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">DOAJ içinde derginizin dikkate alınması için lütfen kısmen doldurulan bu form tamamlayınız.</message>
 
+	<message key="plugins.importexport.doaj.export.issue">Sayıları ihraç et</message>
+	<message key="plugins.importexport.doaj.export.issueInfo">Seçilen sayıları XML olarak ihraç et</message>
+	<message key="plugins.importexport.doaj.export.article">Makaleleri ihraç et</message>
+	<message key="plugins.importexport.doaj.export.articleInfo">Seçilmiş makaleleri XML olarak ihraç et</message>
+	<message key="plugins.importexport.doaj.markRegistered.success">Seçilmiş öğeler kayıtlı  olarak işaretlendir</message>
 </locale>

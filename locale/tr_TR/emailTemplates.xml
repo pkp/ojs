@@ -712,7 +712,7 @@ Bağlantı: {$url}
 		<description></description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>{$journalName} Adlı  Siteden Yeni Bildirim</subject>
+		<subject>{$journalName} Adlı  Dergiden Yeni Bildirim</subject>
 		<body>{$journalName} adlı siteden yeni bir bir bildiriminiz var:
 --
 {$notificationContents}

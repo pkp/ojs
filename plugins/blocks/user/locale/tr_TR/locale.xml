@@ -21,4 +21,5 @@
 	<message key="plugins.block.user.logout">Çıkış</message>
 	<message key="plugins.block.user.signOutAsUser">Üye Olarak Oturumu Kapat</message>
 	<message key="plugins.block.user.rememberMe">Beni hatırla</message>
+	<message key="plugins.block.user.implicitAuthLogin">Dergi Girişi</message>
 </locale>

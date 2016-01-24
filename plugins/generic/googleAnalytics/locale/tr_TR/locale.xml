@@ -33,4 +33,10 @@
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">Google Analytics kullanarak yayımlanmış makale okuyucusunu izlemek için, buraya bir hesap numarası girin (Örneğin; UA-xxxxxx-x) .</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Gönderi yazarı için girilen bir veya birden çok Google Analitik hesap numarası geçerli değil.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">Evrensel analtik için yeni izleme kodu (analytics.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.enableSite">Site Ana Sayfası</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteEnable">Bu derginin ayarlarını site ana sayfasında aktif et</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteDisable">Aktif ayarları site ana sayfasında kapat</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.disabled">Kapatıldı</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteUnchanged">Site ana sayfa ayarlarını olduğu gibi bırak</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.enableSiteInstructions">These settings can be applied when users browse at the site level as well.  If no settings are applied at the site level, Google Analytics will only be active at the journal level.</message>
 </locale>

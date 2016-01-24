@@ -14,26 +14,49 @@
 <locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.generic.usageStats.settings.logging">Erişim günlüğü seçenekleri</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles">Günlük dosyaları oluştur</message>
-	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Activating this option will make the plugin create access log files inside the files directory. Those files should be used to extract the usage statistics data. If you don't want to create more access log files you can leave this option disabled and use your own server log access files.</message>
-	<message key="plugins.generic.usageStats.settings.logParseRegex">Parse log files regex</message>
-	<message key="plugins.generic.usageStats.settings.logParseRegex.description">The default regex used can parse apache access log files in combined format and also the plugin's log files. If your access log files are in a different format you will have to insert a regex capable of parsing them and giving the expected values. See UsageStatsLoader::_getDataFromLogEntry() for more information.</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">Günlükleri düzenli olarak ayrıştır.</message>
 	<message key="plugins.generic.usageStats.settings.saved">Kullanım istatistikleri eklentisi ayarları kaydedildi</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Veri gizliliği seçeneği</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements">Bu seçeneği aktif edebilmek için dosyanın nereye kaydedileceğinin belirlenmiş olması gerekir: config.inc.php dosyasının '[usageSats]' kısmında  'salt_filepath' değişkenini tanımlayınız. Yolu gösterilen dosya açık ve web kullanıcısına yazma yetkisi verilmiş olmalıdır.  Bu eklentinin seçeneklerinin gereklilikleri konusunda daha fazla bilgi için eklentinin "BENİOKU" dosyasına bakınız.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Veri gizliliğine riayet ediniz</message>
 	
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Kullanım istatistikleri dosya yükleyici görevi</message>
 	<message key="plugins.generic.usageStats.openFileFailed">{$file} dosyası açık olamayacağından dolayı reddedildi.</message>
-	<message key="plugins.generic.usageStats.invalidLogEntry">The line number {$lineNumber} from the file {$file} is not a valid log entry and the file was rejected.</message>
+	<message key="plugins.generic.usageStats.loadDataError">{$file} dosyasından çıkarılan veriler çağrılamadı. Hata: {$error}. Dosya yeniden ortama taşındı.</message>
 	<message key="plugins.generic.usageStats.displayName">Kullanım İstatisitikleri</message>
-	<message key="plugins.generic.usageStats.description">Present data objects usage statistics. Can use server access log files to extract statistics.</message>
+	<message key="plugins.generic.usageStats.pluginDisabled">Kullanım istatistikleri eklentisi kapatıldı. Herhangi bir işlem kaydedilmeyecektir.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">{$directory} dizini boş değil. Bu bir önceki hatalı işlemi veya eş zamanlı gerçekleştirilmeye çalışılan başka bir işlemi gösterir. Eğer scheduledTasksAutoStage.xml uygulamasını da kullanacaksınız bu süreç otomatik olarak yeniden yürütülecektir. Aksi halde işlem dizinindeki sahipsiz dosyaları ortam dizinine manuel olarak taşımanız gerekir.</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">COUNTER sayacı listesi bulunamadı veya birden fazla liste mevcut.  {$file} dosyası için işlem yapılamadı.</message>
+	<message key="plugins.generic.usageStats.failedCounterBotList">{$botlist} adlı COUNTER sayaç listesi açılamadı. {$file} dosyası için işlem yapılamadı.</message>
 	
 	<message key="plugins.reports.usageStats.report.displayName">OJS kullanım istatisitkleri raporu</message>
 	<message key="plugins.reports.usageStats.report.description">ADS varsayılan kullanım istatistikleri raporu (COUNTER uyumlu)</message>
 	
+	<message key="plugins.reports.usageStats.optout.displayName">Kullanım İstatistikleri Gizlilik Bilgisi</message>
+	<message key="plugins.reports.usageStats.optout.description">Kullanım İstatistikleri Gizlilik Bilgisi</message>
+	<message key="plugins.generic.usageStats.optout.title">Kullanım İstatistikleri Bilgisi</message>
+	<message key="plugins.generic.usageStats.optout.shortDesc"><![CDATA[Biz anonim kullanım istatistikleri günlüğünü tutuyoruz. Lütfen detay için <a href="{$privacyInfo}">gizlilik bilgisini</a> okuyunuz.]]></message>
+	<message key="plugins.generic.usageStats.optout.description"><![CDATA[<h3>General Privacy Information</h3>
+		<p>Please refer to our general <a href="{$privacyStatementUrl}">privacy statement</a>.</p>
+		<h3>Usage Statistics</h3>
+		<p>In order to be able to analyse usage and impact of our journal and the published articles, we collect and log access to the journal’s homepage, issues, articles, galleys and supplementary files. In the process all data is anonymised. No personal information is logged. IP addresses are anonymised by being hashed (using <em>SHA 256</em>) in combination with a <em>secure 64 characters long salt</em> that is automatically <em>randomly generated and overridden on a daily basis</em>. Therefore IP addresses cannot be reconstructed.</p>
+		<p>The following information is collected next to the anonymised IP addresses:</p>
+		<ul>
+		<li>Access type (i.e. administrative)</li>
+		<li>Request time</li>
+		<li>Requested URL</li>
+		<li>HTTP status code</li>
+		<li>Browser</li>
+		</ul>
+		<p>The collected data is only used for evaluation purposes. No IP addresses are mapped to user IDs. It is technically impossible to trace a specific set of data to a specific IP address.</p>]]></message>	
+	<message key="plugins.generic.usageStats.optout.done"><![CDATA[<p>You successfully opted out of usage statistics collection. While you see this message no statictics will be collected from your usage of this site. Click the below button to revert your decision.</p>]]></message>	
+	<message key="plugins.generic.usageStats.optin">İzinli (Opt In)</message>
+	<message key="plugins.generic.usageStats.optout">İzinsiz (Opt Out)</message>
+	<message key="plugins.generic.usageStats.optout.cookie"><![CDATA[<p>If you wish you can opt-out of the data collection process. By clicking the opt-out button below, you can actively decide against participating in the statistical analysis. When clicking the opt-out button a <em>cookie</em> is being created on your system to store your decision. If the privacy settings of your browser lead to cookies being automatically deleted you will have to opt-out again the next time you access this journal. The cookie is only valid for one browser. If you use a different browser, you will have to opt out again. No individual information is stored within this cookie. This cookie lease is valid for one year after your last access.</p>
+		<p>Please bear in mind that general server logs are not affected by your decision to opt-out of the detailed evaluation process. Please refer to our general <a href="{$privacyStatementUrl}">privacy statement</a>.</p>]]></message>
 	<message key="plugins.reports.usageStats.metricType">ADS/COUNTER</message>
 	<message key="plugins.reports.usageStats.metricType.full">Açık Dergi Sistemleri istatistikleri (COUNTER uyumlu)</message>
-	<message key="plugins.generic.usageStats.usageStatsLoaderName">Kullanım istatistikleri dosyası yükleyicisi</message>
-	<message key="plugins.generic.usageStats.removeUrlError">The line number {$lineNumber} from the file {$file} contains an url that the system can't remove the base url from.</message>
-	<message key="plugins.generic.usageStats.loadDataError">Couldn't load data extracted from file {$file}. The error was: {$error}. The file was moved to stage again.</message>
-	<message key="plugins.generic.usageStats.pluginDisabled">Kullanım istatistikleri eklentisi kapalı. Hiçbir günlük dosyası işlenmemiş.</message>
-	<message key="plugins.generic.usageStats.noCounterBotList">COUNTER robot listesi bulunamadı veya birden fazla liste mevcut. {$file} dosyası işlenemedi.</message>
-	<message key="plugins.generic.usageStats.failedCounterBotList">COUNTER robot listesi {$botlist} açılamadı. {$file} dosyası işlenemedi.</message>
-	<message key="plugins.generic.usageStats.processingPathNotEmpty">The directory {$directory} is not empty. This could indicate a previously failed process, or a concurrently running process.  This file will be automatically reprocessed if you are also using scheduledTasksAutoStage.xml, otherwise you will need to manually move any orphaned files in the processing directory back into the stage directory.</message>
 </locale>
+
+
+
