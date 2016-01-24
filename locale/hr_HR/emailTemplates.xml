@@ -63,7 +63,7 @@ Hvala vam na interesu za naš rad,
 
 [Kratki opis časopisa]
 
-Adresa LOCKSS izdavače izjave za naš časopis je: {$articleUrl}/gateway/lockss
+Adresa LOCKSS izdavače izjave za naš časopis je: {$journalUrl}/gateway/lockss
 
 Prema našim spoznajama, vi već sudjelujete u sustavu LOCKSS. Vrlo rado ćemo vam pružiti bilo kakve dodatne metapodatke koji bi mogli biti potrebni u svrhu prijave našeg časopisa unutar vaše verzije LOCKSS sustava.
 
@@ -724,5 +724,41 @@ Hcala vam što ste kreirali korisnički račun pri časopisu {$journalName}. No,
 Srdačno,
 {$principalContactSignature}</body>
 		<description>Ova se poruka šalje novoregistriranim korisnicima kako bi im se zaželila dobrodošlica na sistem i zatražila potvrda njihove adrese e-pošte.</description>
+	</email_text>
+	<email_text key="NOTIFICATION">
+		<subject>Nova obavijest od {$siteTitle}</subject>
+		<body>Dobili ste obavijest od {$siteTitle}:
+
+{$notificationContents}
+
+Veza: {$url}
+
+{$principalContactSignature}</body>
+		<description>Ova poruka je poslata registriranim korisnicima koji su odabrali da im se šalju ovakve poruke.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>Nova obavijest od {$siteTitle}</subject>
+		<body>Imate obavijest od {$siteTitle}:
+--
+{$notificationContents}
+
+Veza: {$url}
+--
+
+Ako želite prekinuti prijem obavijesti otiđite na {$unsubscribeLink}.
+
+{$principalContactSignature}</body>
+		<description>Ova poruka je poslata neregistriranim korisnicima koji su na listi za obavijesti.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>Dobro došli u {$siteTitle} mailing listu!</subject>
+		<body>Zabilježili ste se za prijem obavijesti od {$siteTitle}.
+
+Kliknite na vezu i potvrdite vaš zahtjev i dodajte vašu e-adresu u listu: {$confirmLink}
+
+Ako želite prekinuti dobijati obavijesti otiđite na {$unsubscribeLink}.
+
+{$principalContactSignature}</body>
+		<description>Ova e-poruka je poslata neregistriranom korisniku koji se samo registritao u listu za obavijesti.</description>
 	</email_text>
 </email_texts>
