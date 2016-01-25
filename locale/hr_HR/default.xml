@@ -148,4 +148,16 @@ Paragraf koji počinje s "Posljednja tema..." nije uvučen.</pre>
 	<message key="default.journalSettings.membershipFeeDescription">Plaćanjem ove naknade postat ćete član ove organizacije na godinu dana, što će vam omogućiti besplatan pristup ovom časopisu.</message>
 	<message key="default.journalSettings.donationFeeDescription">Časopis sa velikom zahvalnošću prihvaća donacije u bilo kojem iznosu. One uvelike doprinose našim naporima redovnog izlaženja i unaprjeđenja kvalitete časopisa.</message>
 	<message key="default.journalSettings.purchaseArticleFeeDescription">Plaćanje ove naknade omogućit će vam neograničen pristup, preuzimanje i štampanje ovog članka.</message>
+	<message key="section.default.title">Članci</message>
+	<message key="default.journalSettings.emailHeader">SLijedeća poruka se šalje u ime {$journalName}.
+________________________________________________________________________</message>
+	<message key="default.journalSettings.submissionFee">Podnošenje članka</message>
+	<message key="default.journalSettings.donationFee">Donacije časopisu</message>
+	<message key="section.default.abbrev">ART</message>
+	<message key="default.journalSettings.fastTrackFee">Brza recenzija</message>
+	<message key="default.journalSettings.publicationFee">Objavljivanje članka</message>
+	<message key="default.journalSettings.purchaseArticleFee">Kupi članak</message>
+	<message key="default.journalSettings.purchaseIssueFee">Kupi izdanje</message>
+	<message key="default.journalSettings.purchaseIssueFeeDescription">Plaćanje ove cijene će vam omogućiti pregled, preuzimanje i tiskanje ovog izdanja.</message>
+	<message key="default.journalSettings.membershipFee">Članstvo u asocijaciji</message>
 </locale>

@@ -28,14 +28,17 @@
 	<message key="default.journalSettings.checklist.addressesLinked">Gde je moguće URL-ovi referenci su priloženi.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Tekst ima prored 1, korisi font veličine 12, koristi kurziv umesto podvlačenja (izuzev URL adresa) i ilustracije, tabele i prilozi su smešteni unutar teksta na odgovarajućim mestima na na kraju.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Tekst sa uputstvima vezanim za stil i bibliografske zahtevime je u <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Uputstva za autore</a>, koja se nalaze u sekciji "O časopisu".]]></message>
-	<message key="default.journalSettings.emailSignature">________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}</message>
+	<message key="section.default.policy">Pravila za rubriku</message>
 	
 	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.submissionFee">Predaja radova</message>
 	<message key="default.journalSettings.publicationFee">Objavljivanje radova</message>
+	<message key="default.journalSettings.publicationFeeDescription">If this paper is accepted for publication, you will be asked to pay an Article Publication Fee to cover publications costs.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Kupovina članaka</message>
 	<message key="default.journalSettings.membershipFee">Članstvo asocijacija</message>
 	<message key="default.journalSettings.donationFee">Donacije časopisu</message>
+	<message key="default.journalSettings.emailHeader">Sledeća poruka se šalje u ime  {$journalName}.
+________________________________________________________________________</message>
+	<message key="default.journalSettings.purchaseIssueFee">Kupi izdanje</message>
+	<message key="default.journalSettings.purchaseIssueFeeDescription">Plaćanje ovog iznosa će vam omogućiti da vidite, preuzmete ili odštampate izdanje broja.</message>
 </locale>

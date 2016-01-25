@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="sr_SR" full_name = "Srpski">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="author.submit">Nova predaja</message>
 	<message key="author.track">Aktivne predaje</message>
 	<message key="author.competingInterests"><![CDATA[Takmičarski interesi <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">TI&nbsp;Pravila</a>]]></message>
@@ -130,4 +130,5 @@ Hvala Vam na interesovanju da objavljujete radove u {$journalTitle}.</message>
 	<message key="author.article.copyeditedFile">Lektorski fajl</message>
 	<message key="author.article.authorRevisedFile">Autorski fajl</message>
 	<message key="author.submit.authorSubmitLoginMessage">Korisnički nalog je obavezan kako biste predali rad u ovaj časopis. Ovo omogućuje urednicima da prate status vašeg rada i da vas kontaktiraju ukoliko dođe do promena ili su potrebne dodatne informacije.</message>
+	<message key="author.submit.qualifyForWaiver">Molim vas da razmislite o odricanju od plaćanja cene za podnošenje članka.</message>
 </locale>
