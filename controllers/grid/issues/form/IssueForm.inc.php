@@ -64,9 +64,6 @@ class IssueForm extends Form {
 			$templateMgr->assign('issueId', $this->issue->getId());
 		}
 
-		// consider public identifiers
-		$templateMgr->assign('pubIdPlugins', PluginRegistry::loadCategory('pubIds', true));
-
 		return parent::fetch($request);
 	}
 
@@ -94,11 +91,6 @@ class IssueForm extends Form {
 			}
 		}
 
-		// Verify additional fields from public identifer plug-ins.
-		import('classes.plugins.PubIdPluginHelper');
-		$pubIdPluginHelper = new PubIdPluginHelper();
-		$pubIdPluginHelper->validate($journal->getId(), $this, $this->issue);
-
 		return parent::validate();
 	}
 
@@ -124,11 +116,6 @@ class IssueForm extends Form {
 				'styleFileName' => $this->issue->getStyleFileName(),
 				'originalStyleFileName' => $this->issue->getOriginalStyleFileName()
 			);
-			// consider the additional field names from the public identifer plugins
-			import('classes.plugins.PubIdPluginHelper');
-			$pubIdPluginHelper = new PubIdPluginHelper();
-			$pubIdPluginHelper->init($this, $this->issue);
-
 			parent::initData();
 		} else {
 			$journal = $request->getJournal();
@@ -172,10 +159,6 @@ class IssueForm extends Form {
 			'showTitle',
 			'temporaryFileId'
 		));
-		// consider the additional field names from the public identifer plugins
-		import('classes.plugins.PubIdPluginHelper');
-		$pubIdPluginHelper = new PubIdPluginHelper();
-		$pubIdPluginHelper->readInputData($this);
 
 		$this->readUserDateVars(array('datePublished', 'openAccessDate'));
 
@@ -221,11 +204,6 @@ class IssueForm extends Form {
 		$issue->setAccessStatus($this->getData('accessStatus') ? $this->getData('accessStatus') : ISSUE_ACCESS_OPEN); // See bug #6324
 		if ($this->getData('enableOpenAccessDate')) $issue->setOpenAccessDate($this->getData('openAccessDate'));
 		else $issue->setOpenAccessDate(null);
-
-		// consider the additional field names from the public identifer plugins
-		import('classes.plugins.PubIdPluginHelper');
-		$pubIdPluginHelper = new PubIdPluginHelper();
-		$pubIdPluginHelper->execute($this, $issue);
 
 		// if issueId is supplied, then update issue otherwise insert a new one
 		if (!$isNewIssue) {

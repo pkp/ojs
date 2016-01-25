@@ -37,6 +37,7 @@ class IssueGridHandler extends GridHandler {
 				'issueToc',
 				'issueGalleys',
 				'deleteIssue', 'publishIssue', 'unpublishIssue',
+				'pubIds', 'updatePubIds',
 			)
 		);
 	}
@@ -277,6 +278,41 @@ class IssueGridHandler extends GridHandler {
 		}
 
 		return DAO::getDataChangedEvent($issueId);
+	}
+
+	/**
+	 * An action to edit a issue's pub ids
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function pubIds($args, $request) {
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+
+		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
+		$form = new PublicIdentifiersForm($issue);
+		$form->initData($request);
+		return new JSONMessage(true, $form->fetch($request));
+	}
+
+	/**
+	 * Update an issue's pub ids
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function updatePubIds($args, $request) {
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+
+		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
+		$form = new PublicIdentifiersForm($issue);
+		$form->readInputData();
+		if ($form->validate($request)) {
+			$form->execute($request);
+			return DAO::getDataChangedEvent($issue->getId());
+		} else {
+			return new JSONMessage(true, $form->fetch($request));
+		}
 	}
 
 	/**

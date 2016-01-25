@@ -777,6 +777,25 @@ class IssueDAO extends DAO {
 	}
 
 	/**
+	 * Delete the public ID of an issue.
+	 * @param $issueId int
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 */
+	function deletePubId($issueId, $pubIdType) {
+		$settingName = 'pub-id::'.$pubIdType;
+		$this->update(
+			'DELETE FROM issue_settings WHERE setting_name = ? AND issue_id = ?',
+			array(
+				$settingName,
+				(int)$issueId
+			)
+		);
+		$this->flushCache();
+	}
+
+	/**
 	 * Flush the issue cache.
 	 */
 	function flushCache() {

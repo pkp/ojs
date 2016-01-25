@@ -8,165 +8,102 @@
  * URN plugin settings
  *
  *}
-{strip}
-{assign var="pageTitle" value="plugins.pubIds.urn.manager.settings.urnSettings"}
-{/strip}
-<div id="urnSettings">
+
 <div id="description">{translate key="plugins.pubIds.urn.manager.settings.description"}</div>
 
-<div class="separator"></div>
-
-<br />
-
+<script src="{$baseUrl}/plugins/pubIds/urn/js/URNSettingsFormHandler.js"></script>
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
-		$('#urnSettingsForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
+		$('#urnSettingsForm').pkpHandler('$.pkp.plugins.pubIds.urn.js.URNSettingsFormHandler');
 	{rdelim});
 </script>
 <form class="pkp_form" id="urnSettingsForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT op="manage" category="pubIds" plugin=$pluginName verb="settings" save="true"}">
-{include file="common/formErrors.tpl"}
-<table class="data">
-	<tr>
-		<td class="label">{fieldLabel name="journalContent" required="true" key="plugins.pubIds.urn.manager.settings.journalContent"}</td>
-		<td class="value">
-			{translate key="plugins.pubIds.urn.manager.settings.URNsForJournalContent"}<br />
-			<input type="checkbox" name="enableIssueURN" id="enableIssueURN" value="1"{if $enableIssueURN} checked="checked"{/if} />
-			{fieldLabel name="enableIssueURN" key="plugins.pubIds.urn.manager.settings.enableIssueURN"}<br />
-			<input type="checkbox" name="enableArticleURN" id="enableArticleURN" value="1"{if $enableArticleURN} checked="checked"{/if} />
-			{fieldLabel name="enableArticleURN" key="plugins.pubIds.urn.manager.settings.enableArticleURN"}<br />
-			<input type="checkbox" name="enableGalleyURN" id="enableGalleyURN" value="1"{if $enableGalleyURN} checked="checked"{/if} />
-			{fieldLabel name="enableGalleyURN" key="plugins.pubIds.urn.manager.settings.enableGalleyURN"}<br />
-		</td>
-	</tr>
-	<tr><td colspan="2">&nbsp;</td></tr>
-	<tr>
-		<td class="label">{fieldLabel name="urnPrefix" required="true" key="plugins.pubIds.urn.manager.settings.urnPrefix"}</td>
-		<td class="value"><input type="text" name="urnPrefix" value="{$urnPrefix|escape}" size="20" maxlength="20" id="urnPrefix" class="textField" />
-		<br />
-		<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.urnPrefix.description"}</span>
-		</td>
-	</tr>
-	<tr><td colspan="2">&nbsp;</td></tr>
-	<tr>
-		<td class="label">{fieldLabel name="urnSuffix" key="plugins.pubIds.urn.manager.settings.urnSuffix"}</td>
-		<td class="value">
-			<table class="data">
-				<tr>
-					<td width="5%" class="label" align="right" valign="top">
-						<input type="radio" name="urnSuffix" id="urnSuffixPattern" value="pattern" {if $urnSuffix eq "pattern"}checked{/if} />
-					</td>
-					<td class="value">
-						{fieldLabel name="urnSuffixPattern" key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern"}
-					</td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-					<td>
-						<input type="text" name="urnIssueSuffixPattern" value="{$urnIssueSuffixPattern|escape}" size="15" maxlength="50" id="urnIssueSuffixPattern" class="textField" />
-						<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.issues"}</span>
-					</td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-					<td>
-						<input type="text" name="urnArticleSuffixPattern" value="{$urnArticleSuffixPattern|escape}" size="15" maxlength="50" id="urnArticleSuffixPattern" class="textField" />
-						<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.articles"}</span>
-					</td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-					<td>
-						<input type="text" name="urnGalleySuffixPattern" value="{$urnGalleySuffixPattern|escape}" size="15" maxlength="50" id="urnGalleySuffixPattern" class="textField" />
-						<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.galleys"}</span>
-					</td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-					<td>
-						<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample"}</span>
-					</td>
-				</tr>
-				<tr>
-					<td width="5%" class="label" align="right" valign="top">
-						<input type="radio" name="urnSuffix" id="urnSuffixDefault" value="default" {if ($urnSuffix neq "pattern" && $urnSuffix neq "customIdentifier")}checked{/if} />
-					</td>
-					<td class="value">
-						{fieldLabel name="urnSuffixDefault" key="plugins.pubIds.urn.manager.settings.urnSuffix.default"}
-						<br />
-						<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.urnSuffix.default.description"}</span>
-					</td>
-				</tr>
-				<tr>
-					<td width="5%" class="label" align="right" valign="top">
-						<input type="radio" name="urnSuffix" id="urnSuffixPublisherId" value="publisherId" {if $urnSuffix eq "publisherId"}checked{/if} />
-					</td>
-					<td class="value">
-						{fieldLabel name="urnSuffixpublisherId" key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId"}
-					</td>
-				</tr>
-				<tr>
-					<td width="5%" class="label" align="right" valign="top">
-						<input type="radio" name="urnSuffix" id="urnSuffixCustomIdentifier" value="customIdentifier" {if $urnSuffix eq "customIdentifier"}checked{/if} />
-					</td>
-					<td class="value">
-						{fieldLabel name="urnSuffixCustomIdentifier" key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier"}
-					</td>
-				</tr>
-			</table>
-			<br />
-			<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.urnSuffix.description"}</span>
-		</td>
-	</tr>
-	<tr><td colspan="2">&nbsp;</td></tr>
-	<tr>
-		<td class="label">{fieldLabel name="checkNo" key="plugins.pubIds.urn.manager.settings.checkNo"}</td>
-		<td class="value">
-			<input type="checkbox" name="checkNo" id="checkNo" value="1"{if $checkNo} checked="checked"{/if} />
-			<label for="checkNo">{translate key="plugins.pubIds.urn.manager.settings.checkNo.label"}</label><br />
-		</td>
-	</tr>
-	<tr><td colspan="2">&nbsp;</td></tr>
-	<tr>
-		<td class="label">{fieldLabel name="namespace" required="true" key="plugins.pubIds.urn.manager.settings.namespace"}</td>
-		<td class="value">
-			<select name="namespace" id="namespace" class="selectMenu">
-				<option value="">{translate key="plugins.pubIds.urn.manager.settings.namespace.choose"}</option>
-				{html_options options=$namespaces selected=$namespace}
-			</select>
-			<br />
-			<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.namespace.description"}</span>
-		</td>
-	</tr>
-	<tr><td colspan="2">&nbsp;</td></tr>
-	<tr>
-		<td class="label">{fieldLabel name="urnResolver" required="true" key="plugins.pubIds.urn.manager.settings.urnResolver"}</td>
-		<td class="value"><input type="text" name="urnResolver" value="{$urnResolver|escape}" size="40" maxlength="255" id="urnResolver" class="textField" />
-		<br />
-		<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.urnResolver.description"}</span>
-		</td>
-	</tr>
-	<tr><td colspan="2">&nbsp;</td></tr>
-	<tr>
-		<td class="label">&nbsp;</td>
-		<td class="value">
-			<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.clearURNs.description"}</span>
-			<br />
-			<input type="submit" name="clearPubIds" value="{translate key="plugins.pubIds.urn.manager.settings.clearURNs"}" onclick="return confirm({translate|json_encode key="plugins.pubIds.urn.manager.settings.clearURNs.confirm"})" class="action"/>
-		</td>
-	</tr>
-</table>
-{fbvFormArea id="doiSuffixReassignFormArea" title="plugins.pubIds.urn.manager.settings.clearURNs"}
-	{fbvFormSection}
-		<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.clearURNs.description"}</span><br/>
-		{include file="linkAction/linkAction.tpl" action=$clearPubIdsLinkAction contextId="urnSettingsForm"}
-	{/fbvFormSection}
-{/fbvFormArea}
-
-
-{fbvFormButtons submitText="common.save"}
+	{include file="common/formErrors.tpl"}
+	{fbvFormArea id="urnObjectsFormArea" title="plugins.pubIds.urn.manager.settings.urnObjects"}
+		{fbvFormSection list="true" description="plugins.pubIds.urn.manager.settings.explainURNs"}
+			{if $enableIssueURN}
+				{assign var="checked" value=true}
+			{else}
+				{assign var="checked" value=false}
+			{/if}
+			{fbvElement type="checkbox" label="plugins.pubIds.urn.manager.settings.enableIssueURN" id="enableIssueURN" maxlength="40" checked=$checked}
+			{if $enableArticleURN}
+				{assign var="checked" value=true}
+			{else}
+				{assign var="checked" value=false}
+			{/if}
+			{fbvElement type="checkbox" label="plugins.pubIds.urn.manager.settings.enableArticleURN" id="enableArticleURN" maxlength="40" checked=$checked}
+			{if $enableArticleGalleyURN}
+				{assign var="checked" value=true}
+			{else}
+				{assign var="checked" value=false}
+			{/if}
+			{fbvElement type="checkbox" label="plugins.pubIds.urn.manager.settings.enableGalleyURN" id="enableArticleGalleyURN" maxlength="40" checked=$checked}
+		{/fbvFormSection}
+	{/fbvFormArea}
+	{fbvFormArea id="urnPrefixFormArea" title="plugins.pubIds.urn.manager.settings.urnPrefix"}
+		{fbvFormSection description="plugins.pubIds.urn.manager.settings.urnPrefix.description"}
+			{fbvElement type="text" id="urnPrefix" value=$urnPrefix required="true" label="plugins.pubIds.urn.manager.settings.urnPrefix" maxlength="40" size=$fbvStyles.size.MEDIUM}
+		{/fbvFormSection}
+	{/fbvFormArea}
+	{fbvFormArea id="urnSuffixFormArea" title="plugins.pubIds.urn.manager.settings.urnSuffix"}
+		{fbvFormSection list="true" label="plugins.pubIds.urn.manager.settings.urnSuffix.description"}
+			{if $urnSuffix eq "pattern"}
+				{assign var="checked" value=true}
+			{else}
+				{assign var="checked" value=false}
+			{/if}
+			{fbvElement type="radio" id="urnSuffixPattern" name="urnSuffix" value="pattern" label="plugins.pubIds.urn.manager.settings.urnSuffixPattern" checked=$checked}
+		{/fbvFormSection}
+		{fbvFormSection}
+			<p class="pkp_help">{translate key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"}</p>
+			{fbvElement type="text" label="plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues" id="urnIssueSuffixPattern" value=$urnIssueSuffixPattern maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
+			{fbvElement type="text" label="plugins.pubIds.urn.manager.settings.urnSuffixPattern.articles" id="urnArticleSuffixPattern" value=$urnArticleSuffixPattern maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
+			{fbvElement type="text" label="plugins.pubIds.urn.manager.settings.urnSuffixPattern.galleys" id="urnArticleGalleySuffixPattern" value=$urnArticleGalleySuffixPattern maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
+		{/fbvFormSection}
+		{fbvFormSection list="true"}
+			{if !in_array($urnSuffix, array("pattern", "customId"))}
+				{assign var="checked" value=true}
+			{else}
+				{assign var="checked" value=false}
+			{/if}
+			{fbvElement type="radio" id="urnSuffixDefault" name="urnSuffix" value="default" label="plugins.pubIds.urn.manager.settings.urnSuffixDefault" checked=$checked}
+			<blockquote><span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"}</span></blockquote>
+			{if $urnSuffix eq "customId"}
+				{assign var="checked" value=true}
+			{else}
+				{assign var="checked" value=false}
+			{/if}
+			{fbvElement type="radio" id="urnSuffixCustomId" name="urnSuffix" value="customId" label="plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier" checked=$checked}
+		{/fbvFormSection}
+	{/fbvFormArea}
+	{fbvFormArea id="urnCheckNoFormArea" title="plugins.pubIds.urn.manager.settings.checkNo"}
+		{fbvFormSection list="true" }
+			{if $urnCheckNo}
+				{assign var="checked" value=true}
+			{else}
+				{assign var="checked" value=false}
+			{/if}
+			{fbvElement type="checkbox" id="urnCheckNo" name="urnCheckNo" label="plugins.pubIds.urn.manager.settings.checkNo.label" checked=$checked}
+		{/fbvFormSection}
+	{/fbvFormArea}
+	{fbvFormArea id="urnNamespaceFormArea" title="plugins.pubIds.urn.manager.settings.namespace"}
+		{fbvFormSection description="plugins.pubIds.urn.manager.settings.namespace.description"}
+			{fbvElement type="select" id="urnNamespace" required="true" from=$urnNamespaces selected=$urnNamespace translate=false size=$fbvStyles.size.MEDIUM label="plugins.pubIds.urn.manager.settings.namespace"}
+		{/fbvFormSection}
+	{/fbvFormArea}
+	{fbvFormArea id="urnResolverFormArea" title="plugins.pubIds.urn.manager.settings.urnResolver"}
+		{fbvFormSection description="plugins.pubIds.urn.manager.settings.urnResolver.description"}
+			{fbvElement type="text" id="urnResolver" value=$urnResolver required="true" label="plugins.pubIds.urn.manager.settings.urnResolver"}
+		{/fbvFormSection}
+	{/fbvFormArea}
+	{fbvFormArea id="urnReassignFormArea" title="plugins.pubIds.urn.manager.settings.urnReassign"}
+		{fbvFormSection}
+			<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.urnReassign.description"}</span><br/>
+			{include file="linkAction/linkAction.tpl" action=$clearPubIdsLinkAction contextId="urnSettingsForm"}
+		{/fbvFormSection}
+	{/fbvFormArea}
+	{fbvFormButtons submitText="common.save"}
 </form>
-
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
-</div>
-{include file="common/footer.tpl"}
