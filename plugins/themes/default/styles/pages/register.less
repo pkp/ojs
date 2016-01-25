@@ -30,8 +30,12 @@
 		color: @text-light;
 	}
 
-	.buttons button {
-		&:extend(.cmp_button);
+	.buttons {
+		.pkp_helpers_clear;
+
+		button {
+			&:extend(.cmp_button all);
+		}
 	}
 
 	// Styles for form error list, which is still tied to a template shared by
