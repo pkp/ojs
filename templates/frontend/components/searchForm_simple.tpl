@@ -12,7 +12,7 @@
 {if !$currentJournal || $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 	<form class="pkp_search" action="{url page="search" op="search"}" method="post">
 		<input name="query" value="{$searchQuery|escape}" type="text">
-		<button>
+		<button type="submit">
 			{translate key="common.search"}
 		</button>
 		<div class="search_controls" aria-hidden="true">
