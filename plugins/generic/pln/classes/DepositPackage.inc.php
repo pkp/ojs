@@ -195,6 +195,30 @@ class DepositPackage {
 
 		$entry->appendChild($pkpDetails);
 		$atom->appendChild($entry);
+
+		$locale = $journal->getPrimaryLocale();
+		$license = $atom->createElementNS('http://pkp.sfu.ca/SWORD', 'license');
+		$license->appendChild($atom->createElementNS('http://pkp.sfu.ca/SWORD', 'openAccessPolicy', $journal->getLocalizedSetting('openAccessPolicy', $locale)));
+		$license->appendChild($atom->createElementNS('http://pkp.sfu.ca/SWORD', 'licenseURL', $journal->getSetting('licenseURL')));
+		
+		$mode = $atom->createElementNS('http://pkp.sfu.ca/SWORD', 'publishingMode');
+		switch($journal->getSetting('publishingMode')) {
+			case PUBLISHING_MODE_OPEN:
+				$mode->nodeValue = 'Open';
+				break;
+			case PUBLISHING_MODE_SUBSCRIPTION:
+				$mode->nodeValue = 'Subscription';
+				break;
+			case PUBLISHING_MODE_NONE:
+				$mode->nodeValue = 'None';
+				break;
+		}
+		$license->appendChild($mode);
+		$license->appendChild($atom->createElementNS('http://pkp.sfu.ca/SWORD', 'copyrightNotice', $journal->getLocalizedSetting('copyrightNotice', $locale)));
+		$license->appendChild($atom->createElementNS('http://pkp.sfu.ca/SWORD', 'copyrightBasis', $journal->getSetting('copyrightYearBasis')));
+		$license->appendChild($atom->createElementNS('http://pkp.sfu.ca/SWORD', 'copyrightHolder', $journal->getSetting('copyrightHolderType')));
+		
+		$entry->appendChild($license);
 		$atom->save($atomFile);
 		
 		return $atomFile;
