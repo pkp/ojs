@@ -174,7 +174,7 @@ class ArticleHandler extends Handler {
 
 				// Keywords
 				$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
-				$templateMgr->assign('keywords', $submissionKeywordDao->getKeywords($article->getId(), AppLocale::getLocale()));
+				$templateMgr->assign('keywords', $submissionKeywordDao->getKeywords($article->getId(), array(AppLocale::getLocale())));
 			}
 
 			$templateMgr->assign('issue', $issue);
