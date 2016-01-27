@@ -14,9 +14,18 @@
 <!ELEMENT ojsInfo (release)>
 <!ELEMENT release (#PCDATA)>
 
-<!ELEMENT pluginInfo (release, releaseDate, installed, current, terms)>
+<!ELEMENT pluginInfo (release, releaseDate, installed, current, prerequisites, terms)>
 <!ELEMENT releaseDate (#PCDATA)>
 <!ELEMENT current (#PCDATA)>
+
+<!ELEMENT prerequisites (phpVersion, curlVersion, zipInstalled, tarInstalled, acron, tasks)>
+<!ELEMENT phpVersion (#PCDATA)>
+<!ELEMENT curlVersion (#PCDATA)>
+<!ELEMENT zipInstalled (#PCDATA)>
+<!ELEMENT tarInstalled (#PCDATA)>
+<!ELEMENT acron (#PCDATA)>
+<!ELEMENT tasks (#PCDATA)>
+
 <!ELEMENT terms (term*)>
 		<!ATTLIST terms
 				termsAccepted (yes|no) #REQUIRED>
