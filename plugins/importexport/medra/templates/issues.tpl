@@ -45,6 +45,7 @@
 			</tr>
 
 			{iterate from=issues item=issue}
+				{assign var="issueId" value=$issue->getId()}
 				{if $issue->getData('medra::registeredDoi')}
 					{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.update"}{/capture}
 					{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.updateDescription"}{/capture}
@@ -53,17 +54,21 @@
 					{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.registerDescription"}{/capture}
 				{/if}
 				<tr valign="top">
-					<td><input type="checkbox" name="issueId[]" value="{$issue->getId()}"/></td>
+					<td>{if !$excludes[$issueId]}<input type="checkbox" name="issueId[]" value="{$issue->getId()}"/>{/if}</td>
 					<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 					<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"|default:"&mdash;"}</td>
 					<td>{$issue->getNumArticles()|escape}</td>
-					<td align="right"><nobr>
-						{if $hasCredentials}
-							<a href="{plugin_url path="process" issueId=$issue->getId() params=$testMode target="issue" register=true}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
-							{if $issue->getData('medra::registeredDoi')}<a href="{plugin_url path="process" issueId=$issue->getId() params=$testMode target="issue" reset=true}" title="{translate key="plugins.importexport.medra.resetDescription"}" class="action">{translate key="plugins.importexport.medra.reset"}</a>{/if}
+					<td align="right">
+						{if !$excludes[$issueId]}
+							<nobr>
+							{if $hasCredentials}
+								<a href="{plugin_url path="process" issueId=$issue->getId() params=$testMode target="issue" register=true}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
+								{if $issue->getData('medra::registeredDoi')}<a href="{plugin_url path="process" issueId=$issue->getId() params=$testMode target="issue" reset=true}" title="{translate key="plugins.importexport.medra.resetDescription"}" class="action">{translate key="plugins.importexport.medra.reset"}</a>{/if}
+							{/if}
+							<a href="{plugin_url path="process" issueId=$issue->getId() params=$testMode target="issue" export=true}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
+							</nobr>
 						{/if}
-						<a href="{plugin_url path="process" issueId=$issue->getId() params=$testMode target="issue" export=true}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
-					</nobr></td>
+					</td>
 				</tr>
 				<tr>
 					<td colspan="5" class="{if $issues->eof()}end{/if}separator">&nbsp;</td>
