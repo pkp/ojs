@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/manager.xml
   *
-  * Copyright (c) 2013-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -278,7 +278,7 @@
 	<message key="manager.setup.enableAnnouncements">تمكين مدراء المجلة من إضافة إعلاناتهم على الموقع.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">عرض</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">من الإعلانات الأخيرة الموجودة في صفحة المجلة الرئيسية.</message>
-	<message key="manager.setup.enablePageNumber">أرقام صفحات الفقرات سيتم إحتسابها وإدخالها يدوياً في جدول المحتويات (مثلاً: ص 13-26).</message>
+	<message key="manager.setup.enablePageNumber">أرقام صفحات الفقرات سيتم إحتسابها وإدخالها يدوياً في جدول المحتويات (مثلاً: 13-26).</message>
 	<message key="manager.setup.enablePublicArticleId">رموز تعريفية مخصصة ستُستعمل لتعريف الفقرات المنشورة.</message>
 	<message key="manager.setup.enablePublicGalleyId">رموز تعريفية مخصصة ستُستعمل لتعريف الألواح الطباعية (مثل ملفات HTML أو PDF) للفقرات المنشورة.</message>
 	<message key="manager.setup.enablePublicIssueId">رموز تعريفية مخصصة ستُستعمل لتعريف الأعداد المنشورة من المجلة.</message>
@@ -510,6 +510,7 @@
 	</message>
 	<message key="manager.statistics.reports">منشئ التقارير</message>
 	<message key="manager.statistics.reports.aggregationColumns">تجميع الإحصائية حسب:</message>
+    <message key="manager.statistics.reports.optionalColumns.description">الفقرات ذات الحروف المائلة والمعلمة بإشارة * تشير إلى بيانات إختيارية بالنسبة إلى الطريقة الحالية في حساب الإحصائيات لنظام المجلات المفتوحة (النظام المتري). بإمكانك توفير هذه البيانات أو لا اعتماداً على الإعدادات الخاصة بالوظيفة الإضافية.</message>    
 	<message key="manager.statistics.reports.defaultReportTemplates">قوالب التقارير الإفتراضية</message>
 	<message key="manager.statistics.reports.defaultReport.articleDownloads">تنزيلات ملفات المؤلَّفات</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">مشاهدات صفحة الملخصات</message>
@@ -529,7 +530,7 @@
 	<message key="manager.statistics.reports.objectType">نوع المكون</message>
 	<message key="manager.statistics.reports.objectId">رمز المكون</message>
 	<message key="manager.statistics.reports.objectId.label">عرف رمز مكون واحد أو أكثر، مفصولة بفوارز إنجليزية (مثل: 1,2,3,4,5).</message>
-	<message key="manager.statistics.reports.today">اليوم</message>
+	<message key="manager.statistics.reports.yesterday">البارحة</message>
 	<message key="manager.statistics.reports.currentMonth">الشهر الحالي</message>
 	<message key="manager.statistics.reports.orderBy">الفرز حسب</message>
 	<message key="manager.statistics.reports.orderDir">الاتجاه</message>
