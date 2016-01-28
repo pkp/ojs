@@ -120,19 +120,22 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 		$this->registerDaoHook('IssueDAO');
 		$issueIterator =& $issueDao->getPublishedIssues($journal->getId(), Handler::getRangeInfo('issues'));
 
-		// Filter only issues that contain an article that have a DOI assigned.
+		// Get issues that should be excluded i.e. that have no objects eligible to export/register.
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$issues = array();
+		$excludes = array();
+		$allExcluded = true;
 		$numArticles = array();
 		while ($issue =& $issueIterator->next()) {
+			$excludes[$issue->getId()] = true;
 			$issueArticles =& $publishedArticleDao->getPublishedArticles($issue->getId());
 			$issueArticlesNo = 0;
 			$allArticlesRegistered[$issue->getId()] = true;
 			foreach ($issueArticles as $issueArticle) {
 				$articleRegistered = $issueArticle->getData($this->getPluginId().'::registeredDoi');
 				$errors = array();
-				if ($this->canBeExported($issueArticle, $errors) && !isset($articleRegistered)) {
-					if (!in_array($issue, $issues)) $issues[] = $issue;
+				if ($this->canBeExported($issueArticle, $errors)) {
+					$excludes[$issue->getId()] = false;
+					$allExcluded = false;
 					$issueArticlesNo++;
 				}
 				if ($allArticlesRegistered[$issue->getId()] && !isset($articleRegistered)) {
@@ -140,15 +143,16 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 				}
 			}
 			$numArticles[$issue->getId()] = $issueArticlesNo;
+			unset($issue);
 		}
-
-		// Instantiate issue iterator.
-		import('lib.pkp.classes.core.ArrayItemIterator');
-		$rangeInfo = Handler::getRangeInfo('articles');
-		$iterator = new ArrayItemIterator($issues, $rangeInfo->getPage(), $rangeInfo->getCount());
+		unset($issueIterator);
 
 		// Prepare and display the issue template.
-		$templateMgr->assign_by_ref('issues', $iterator);
+		// Get the issue iterator from the DB for the template again.
+		$issueIterator =& $issueDao->getPublishedIssues($journal->getId(), Handler::getRangeInfo('issues'));
+		$templateMgr->assign_by_ref('issues', $issueIterator);
+		$templateMgr->assign('allExcluded', $allExcluded);
+		$templateMgr->assign('excludes', $excludes);
 		$templateMgr->assign('numArticles', $numArticles);
 		$templateMgr->assign('allArticlesRegistered', $allArticlesRegistered);
 		$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
