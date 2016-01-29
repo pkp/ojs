@@ -35,7 +35,7 @@
     <message key="plugins.importexport.datacite.settings.form.passwordRequired">لطفاً، أدخل كلمة المرور التي حصلت عليها من DataCite.</message>
     <message key="plugins.importexport.datacite.settings.form.automaticRegistration">قم بتسجيل DOIs تلقائياً</message>
     <message key="plugins.importexport.datacite.settings.form.automaticRegistration.description"><![CDATA[نظام المجلات المفتوحة سيقوم تلقائياً بإيداع DOIs في DataCite بمجرد نشر المقالات. لطفاً، لاحظ أن ذلك قد يستغرق وقتاً قصيراً بعد النشر بسبب متطلبات المعالجة. بإمكانك التحقق من وجود DOIs غير مسجلة عبر <a href="{$unregisteredURL}">قائمة المؤلفات غير المسجلة</a>.]]></message>
-    <message key="plugins.importexport.datacite.export.suppFiles">تصدير ملفات تكميلية معينة</message>
+    <message key="plugins.importexport.datacite.export.suppFiles">تصدير الملفات التكميلية</message>
 	<message key="plugins.importexport.datacite.export.selectSuppFile">إختر الملفات التكميلية</message>
 	<message key="plugins.importexport.datacite.export.noSuppFiles">لا توجد ملفات تكميلية تضم حالياً DOI معينة لها.</message>
  
@@ -45,5 +45,5 @@
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
 ]]></message>
-    <message key="plugins.importexport.datacite.senderTask.name">مرسل معلومات DataCite</message>
+    <message key="plugins.importexport.datacite.senderTask.name">مهمة التسجيل التلقائي لـ DataCite</message>
 </locale>

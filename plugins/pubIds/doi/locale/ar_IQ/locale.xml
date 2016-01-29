@@ -56,7 +56,8 @@
 
 	<!-- metadata form -->
 	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">عدد</message>
+    <message key="plugins.pubIds.doi.editor.doi.issueObjects">DOI الخاصة بمكونات العدد</message>
+    <message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">عدد</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">مقالة</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">لوح طباعي</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">ملف تكميلي</message>

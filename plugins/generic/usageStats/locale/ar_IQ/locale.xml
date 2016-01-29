@@ -19,9 +19,23 @@
 	<message key="plugins.generic.usageStats.settings.logParseRegex.description">إن التعابير المنطقية الإفتراضية المستعملة بإمكانها تحليل ملفات وقوعات الوصول الخاصة بـ apache ،بشكل مجمع فضلاً عن ملفات وقوعات هذه الإضافة. لو كانت ملفات وقوعاتك بصيغة أخرى، سيكون عليك إدراج تعابير منطقية قادرة على تحليلها وإعطاء النتائج المتوقعة. أنظر UsageStatsLoader::_getDataFromLogEntry() للمزيد من المعلومات.</message>
 	<message key="plugins.generic.usageStats.settings.saved">تم حفظ إعدادات إضافة إحصائيات الاستعمال</message>
     <message key="plugins.generic.usageStats.settings.dataPrivacyOption">خيار خصوصية البيانات</message>
-    <message key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements">من أجل أن تتمكن من تفعيل هذا الخيار، ينبغي تعريف الملف الخاص بحفظ وقوعات الوصول: أدرج الفقرة ذات المسمى '[usageSats]' في الملف config.inc.php وعرف المتغير 'salt_filepath' هناك. هذا الملف يجب أن يكون موجوداً بالفعل وقابلاً للتعديل من قبل المستخدم عبر الإنترنت. للمزيد من المعلومات عن متطلبات خيار الوظيفة الإضافية هذا، لطفاً، أنظر ملف README الخاص بها.</message>
+    <message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath">مسار ملف تعمية الهوية</message>
+    <message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath.invalid">إن الملف غير قابل للتعديل.</message>
+    <message key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements">لضمان خصوصية البيانات، عليك تحديد ملف قابل للقراءة والكتابة من قبل مستخدم الإنترنت ليتضمن قيمة مولدة عشوائياً. هذا الملف ينبغي أن لا يتعرض للحفظ الاحتياطي لضمان حماية الخصوصية. إن القيمة المخزونة في الملف تتولد عشوائياً بعدة وسائل: عبر دالة mcrypt_create_iv، والتي تتطلب وجود  mcrypt لـ PHP؛ عبر الدالة openssl_random_pseudo_bytes، التي تتطلب وجود  openssl لـ PHP؛ عبر الملف /dev/urandom، الذي يعمل فقط ضمن أنظمة *nix؛ أو عبر الدالة mt_rand، التي ليست آمنة من الناحية التشفيرية. لذلك، إن كنت من مستعملي ملقم يعمل بنظام تشغيل Windows، لطفاً، تأكد من قيامك بتنصيب أياً من mcrypt أو openssl لـ PHP وتمكينه للحصول على الرمز العشوائي الآمن.</message>
+
+
     <message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">قم بتفعيل هذا الخيار لاستعمال نسخة من هذه الوظيفة الإضافية تراعي التشريعات المتعلقة بالخصوصية، أي أن: توثيق عناوين IP المعلمة يتطلب إبلاغ المستخدمين عن إمكانية تتبعهم مكانياً ويقدم لهم باباً للخروج من الموقع. لاحظ أنه عند استعمال هذا الخيار، لن يعود بوسعك استعمال ميزة التتبع المكاني التي تقدمها الوظيفة الإضافية.</message>
+    <message key="plugins.generic.usageStats.settings.dataPrivacyOption.requiresSalt">تمكين خصوصية البيانات يتطلب وجود ملف للرمز العشوائي.</message>
+    <message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesCity">إن تمكين خاصية الحفاظ على الخصوصية، يستثني حقل المدينة من خيارات الإحصائية.</message>
+    <message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesRegion">إن تمكين خاصية الحفاظ على الخصوصية، يستثني حقل المنطقة من خيارات الإحصائية.</message>
     <message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">مراعاة خصوصية البيانات</message>
+    <message key="plugins.generic.usageStats.settings.optionalColumns">المعلومات الإحصائية الاختيارية</message>
+    <message key="plugins.generic.usageStats.settings.archives">الأرشيف</message>
+    <message key="plugins.generic.usageStats.settings.compressArchives.description">قم بتفعيل هذا الخيار لضغط ملفات التوثيق المحفوظة باستعمال تقنية gzip (سيكون عليك ضبط إعدادات هذه التقنية ضمن ملف config.inc.php). إن كان موقعك يتعرض إلى زخم تشغيل عال، سيكون من المستحسن تمكين ذلك لتتمكن من توفير بعض من المساحة المخصصة للحفظ.</message>
+    <message key="plugins.generic.usageStats.settings.compressArchives">ضغط الأرشيف</message>
+    <message key="plugins.generic.usageStats.settings.optionalColumns.description">تمكين أو تعطيل جمع البيانات الإختيارية الآتية. سيؤثر هذا على التقارير الإحصائية التي بإمكانك الحصول عليها، كما سيكون له أثر على حجم قاعدة البيانات. لا تعمد إلى تغييره ما لم تكن على دراية كاملة بما أنت صانع.</message>
+    <message key="plugins.generic.usageStats.settings.optionalColumns.cityRequiresRegion">الحقل الاختياري "City" يتطلب وجود الحقل الاختياري "Region".</message>
+
 
     <message key="plugins.generic.usageStats.usageStatsLoaderName">مهمة تحميل ملف إحصائيات الاستعمال</message>
 	<message key="plugins.generic.usageStats.openFileFailed">تعذر فتح الملف {$file} ولذا تم رفضه.</message>
@@ -31,9 +45,9 @@
 	<message key="plugins.generic.usageStats.displayName">إحصائيات الاستعمال</message>
 	<message key="plugins.generic.usageStats.description">إحصائيات استعمال مكونات البيانات الحالية. بالإمكان استعمال ملفات سجل وقوعات الوصول لاستقطاع الإحصائيات.</message>
 	<message key="plugins.generic.usageStats.pluginDisabled">تم تعطيل إضافة إحصائيات الوصول. لا توجد ملفات وقوعات لمعالجتها.</message>
-    <message key="plugins.generic.usageStats.processingPathNotEmpty">The directory {$directory} is not empty. This could indicate a previously failed process, or a concurrently running process.  This file will be automatically reprocessed if you are also using scheduledTasksAutoStage.xml, otherwise you will need to manually move any orphaned files in the processing directory back into the stage directory.</message>
-    <message key="plugins.generic.usageStats.noCounterBotList">The COUNTER bot list could not be found, or more than one list is present. The file {$file} could not be processed.</message>
-    <message key="plugins.generic.usageStats.failedCounterBotList">The COUNTER bot list {$botlist} could not be opened. The file {$file} could not be processed.</message>
+    <message key="plugins.generic.usageStats.processingPathNotEmpty">إن المسار {$directory} غير خالٍ. قد يكون هذا مؤشراً على عملية فاشلة سابقاً أو عملية جارية حالياً. ستعاد معالجة هذا الملف تلقائياً إن كنت تستعمل scheduledTasksAutoStage.xml أيضاً، وإلا، ستكون مضطراً على نقل أي ملفات متروكة في حافظة ملفات المعالجة إلى حافظة ملفات التشغيل يدوياً.</message>
+    <message key="plugins.generic.usageStats.noCounterBotList">تعذر العثور على قائمة COUNTER، أو هناك أكثر من قائمة واحدة. تعذرت معالجة الملف {$file}.</message>
+    <message key="plugins.generic.usageStats.failedCounterBotList">تعذر فتح قائمة COUNTER المسماة {$botlist}. تعذرت معالجة الملف {$file}.</message>
 
     <message key="plugins.reports.usageStats.report.displayName">تقرير إحصائيات الاستعمال لنظام المجلات المفتوحة</message>
 	<message key="plugins.reports.usageStats.report.description">تقرير الإحصائيات الإفتراضي لاستعمال نظام المجلات المفتوحة (العداد الجاهز)</message>
