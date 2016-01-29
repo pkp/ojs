@@ -45,6 +45,7 @@
 			</tr>
 
 			{iterate from=issues item=issue}
+				{assign var="issueId" value=$issue->getId()}
 				{if $issue->getData('datacite::registeredDoi')}
 					{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.update"}{/capture}
 					{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.updateDescription"}{/capture}
@@ -53,16 +54,20 @@
 					{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.registerDescription"}{/capture}
 				{/if}
 				<tr valign="top">
-					<td><input type="checkbox" name="issueId[]" value="{$issue->getId()}"/></td>
+					<td>{if !$excludes[$issueId]}<input type="checkbox" name="issueId[]" value="{$issue->getId()}"/>{/if}</td>
 					<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 					<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"|default:"&mdash;"}</td>
 					<td>{$issue->getNumArticles()|escape}</td>
-					<td align="right"><nobr>
-						{if $hasCredentials}
-							<a href="{plugin_url path="process" issueId=$issue->getId() params=$testMode target="issue" register=true}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
+					<td align="right">
+						{if !$excludes[$issueId]}
+							<nobr>
+							{if $hasCredentials}
+								<a href="{plugin_url path="process" issueId=$issue->getId() params=$testMode target="issue" register=true}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
+							{/if}
+							<a href="{plugin_url path="process" issueId=$issue->getId() params=$testMode target="issue" export=true}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
+							</nobr>
 						{/if}
-						<a href="{plugin_url path="process" issueId=$issue->getId() params=$testMode target="issue" export=true}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
-					</nobr></td>
+					</td>
 				</tr>
 				<tr>
 					<td colspan="5" class="{if $issues->eof()}end{/if}separator">&nbsp;</td>
@@ -82,24 +87,26 @@
 				</tr>
 			{/if}
 		</table>
-		<p>
-			{if !empty($testMode)}<input type="hidden" name="testMode" value="1" />{/if}
-			{if $hasCredentials}
-				<input type="submit" name="register" value="{translate key="plugins.importexport.common.register"}" title="{translate key="plugins.importexport.common.registerDescription.multi"}" class="button defaultButton"/>
+		{if !$allExcluded}
+			<p>
+				{if !empty($testMode)}<input type="hidden" name="testMode" value="1" />{/if}
+				{if $hasCredentials}
+					<input type="submit" name="register" value="{translate key="plugins.importexport.common.register"}" title="{translate key="plugins.importexport.common.registerDescription.multi"}" class="button defaultButton"/>
+					&nbsp;
+				{/if}
+				<input type="submit" name="export" value="{translate key="common.export"}" title="{translate key="plugins.importexport.common.exportDescription"}" class="button{if !$hasCredentials}  defaultButton{/if}"/>
 				&nbsp;
-			{/if}
-			<input type="submit" name="export" value="{translate key="common.export"}" title="{translate key="plugins.importexport.common.exportDescription"}" class="button{if !$hasCredentials}  defaultButton{/if}"/>
-			&nbsp;
-			<input type="button" value="{translate key="common.selectAll"}" class="button" onclick="toggleChecked()" />
-		</p>
-		<p>
-			{if $hasCredentials}
-				{translate key="plugins.importexport.common.register.warning"}
-			{else}
-				{capture assign="settingsUrl"}{plugin_url path="settings"}{/capture}
-				{translate key="plugins.importexport.common.register.noCredentials" settingsUrl=$settingsUrl}
-			{/if}
-		</p>
+				<input type="button" value="{translate key="common.selectAll"}" class="button" onclick="toggleChecked()" />
+			</p>
+			<p>
+				{if $hasCredentials}
+					{translate key="plugins.importexport.common.register.warning"}
+				{else}
+					{capture assign="settingsUrl"}{plugin_url path="settings"}{/capture}
+					{translate key="plugins.importexport.common.register.noCredentials" settingsUrl=$settingsUrl}
+				{/if}
+			</p>
+		{/if}
 	</form>
 </div>
 

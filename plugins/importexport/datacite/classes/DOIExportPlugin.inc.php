@@ -481,24 +481,26 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$this->registerDaoHook('IssueDAO');
 		$issueIterator =& $issueDao->getPublishedIssues($journal->getId(), Handler::getRangeInfo('issues'));
 
-		// Filter only issues that can be exported.
-		$issues = array();
+		// Get issues that should be excluded i.e. that have no DOI.
+		$excludes = array();
+		$allExcluded = true;
 		while ($issue =& $issueIterator->next()) {
+			$excludes[$issue->getId()] = true;
 			$errors = array();
 			if ($this->canBeExported($issue, $errors)) {
-				$issues[] =& $issue;
+				$excludes[$issue->getId()] = false;
+				$allExcluded = false;
 			}
 			unset($issue);
 		}
 		unset($issueIterator);
 
-		// Instantiate issue iterator.
-		import('lib.pkp.classes.core.ArrayItemIterator');
-		$rangeInfo = Handler::getRangeInfo('articles');
-		$iterator = new ArrayItemIterator($issues, $rangeInfo->getPage(), $rangeInfo->getCount());
-
 		// Prepare and display the issue template.
-		$templateMgr->assign_by_ref('issues', $iterator);
+		// Get the issue iterator from the DB for the template again.
+		$issueIterator =& $issueDao->getPublishedIssues($journal->getId(), Handler::getRangeInfo('issues'));
+		$templateMgr->assign_by_ref('issues', $issueIterator);
+		$templateMgr->assign('allExcluded', $allExcluded);
+		$templateMgr->assign('excludes', $excludes);
 		$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
 	}
 
