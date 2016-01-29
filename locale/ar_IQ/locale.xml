@@ -236,7 +236,7 @@
 	<message key="user.orcid">ORCID iD</message>
 	<message key="user.orcid.description"><![CDATA[ORCID iDs يمكن تعيينها حصراً من قبل <a href="http://orcid.org/" target="_blank">the ORCID Registry</a>. عليك أن تخضع لمعاييرهم لتستخلص ORCID iDs، وأن تُضَمِّن الرابط الكامل (مثلاً <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
 	<message key="user.profile.form.orcidInvalid">إن معرَّف ORCID iD الذي حددته غير صحيح</message>
-    <message key="user.profile.implicitAuthChangePasswordInstructions">لو سبق لك الدخول عبر المعطيات الخاصة بك، إتبع منهج مؤسستك لو أردت تغيير كلمة مرورك. بالنسبة للمستخدمين المحليين، يمكن الاستمرار أدناه.</message>
+    	<message key="user.profile.implicitAuthChangePasswordInstructions">لو سبق لك الدخول عبر المعطيات الخاصة بك، إتبع منهج مؤسستك لو أردت تغيير كلمة مرورك. بالنسبة للمستخدمين المحليين، يمكن الاستمرار أدناه.</message>
 
 	<!-- Roles -->
 	<message key="user.role.manager">رئيس التحرير</message>
@@ -362,10 +362,10 @@
 	<!-- Site Administration -->
 
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[لتحصل على فهرسة لمحتويات جميع المجلات المستضافة في هذا الموقع ضمن نظام موزع عالمياً من أنظمة المعلومات، <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">سجل</a> رابط موقعك في: البيانات الوصفية لمشروع المعرفة العامة <a href="http://pkp.sfu.ca/harvester/" target="_blank">الحاصود</a>. هذه الأداة تجمع البيانات الوصفية من كل فقرة مفهرسة في تلك المجلات، لتمكين عمليات البحث الدقيقة والمتكاملة بين المواقع البحثية التي تلتزم <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">بروتوكول مبادرة المحفوظات المفتوحة لحصد البيانات الوصفية</a>.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">أنقر هنا</a> وأدخل <span class="highlight">{$siteUrl}</span> ضمن <strong>رابط الموقع</strong>، و<span class="highlight">{$oaiUrl}</span> ضمن <strong>الرابط الأساسي لمحفوظات البروتوكول أعلاه</strong>.
-<br /><br />
-لاحظ أن واجهة OAI لهذا الموقع يمكن تعطيلها عبر تعديل إعدادات نظام المجلات المفتوحة. النسخ القادمة (بإذن الله) من هذا النظام ستسمح بتمكين أو تعطيل تلك الواجهة على مستوى أحد المجلات المستضافة في الموقع وليس للموقع بأكمله.]]></message>
+		<br /><br />
+			<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">أنقر هنا</a> وأدخل <span class="highlight">{$siteUrl}</span> ضمن <strong>رابط الموقع</strong>، و<span class="highlight">{$oaiUrl}</span> ضمن <strong>الرابط الأساسي لمحفوظات البروتوكول أعلاه</strong>.
+		<br /><br />
+	لاحظ أن واجهة OAI لهذا الموقع يمكن تعطيلها عبر تعديل إعدادات نظام المجلات المفتوحة. النسخ القادمة (بإذن الله) من هذا النظام ستسمح بتمكين أو تعطيل تلك الواجهة على مستوى أحد المجلات المستضافة في الموقع وليس للموقع بأكمله.]]></message>
 
 
 
@@ -375,16 +375,16 @@
 		<li>أن ملقمك لا يدعم أو يسمح بتشغيل أداة فك ضغط ملف من نوع "tar" </li>
 		<li>النظام عاجز عن تحديث ملف تسجيل اللغات، وهو عادة: "registry/locales.xml".</li>
 	</ul>
-<p>يمكن تنزيل حزم اللغات يدوياً من <a href="http://pkp.sfu.ca">موقع مشروع المعرفة العامة</a>.</p>]]></message>
+	<p>يمكن تنزيل حزم اللغات يدوياً من <a href="http://pkp.sfu.ca">موقع مشروع المعرفة العامة</a>.</p>]]></message>
 
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>تحديد مصدر مصادقة إفتراضي مغاير لنظام المجلات المفتوحة له التبعات الآتية:</p>
-<ul>
-	<li>لو حاول مستخدم ما تسجيل حساب جديد في هذا الموقع باسم دخول مسجل سلفاً في مصدر المصادقة (لكنه غير معروف في قاعدة بيانات نظام المجلات المفتوحة)، فإن ذلك التسجيل سيكون ممكناً فقط عندما تكون كلمة المرور صحيحة في ذلك المصدر الخارجي أيضاً.</li>
-</ul>]]></message>
+	<ul>
+		<li>لو حاول مستخدم ما تسجيل حساب جديد في هذا الموقع باسم دخول مسجل سلفاً في مصدر المصادقة (لكنه غير معروف في قاعدة بيانات نظام المجلات المفتوحة)، فإن ذلك التسجيل سيكون ممكناً فقط عندما تكون كلمة المرور صحيحة في ذلك المصدر الخارجي أيضاً.</li>
+	</ul>]]></message>
 
 	<!-- System Information -->
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ملاحظة!</div>
-<p>لا يتمكن النظام من تعديل ملف الإعدادات تلقائياً. لتتمكن من تغيير إعداداتك، عليك بفتح الملف <tt>config.inc.php</tt> مستعملاً أي برنامج مناسب لتحرير النصوص، واستبدل محتوياته بالمحتوى الظاهر في الخانة النصية أدناه.</p>]]></message>
+	<p>لا يتمكن النظام من تعديل ملف الإعدادات تلقائياً. لتتمكن من تغيير إعداداتك، عليك بفتح الملف <tt>config.inc.php</tt> مستعملاً أي برنامج مناسب لتحرير النصوص، واستبدل محتوياته بالمحتوى الظاهر في الخانة النصية أدناه.</p>]]></message>
 
 
 	<!-- Site Administrator Merge Users -->
@@ -481,7 +481,7 @@
 	<!-- People Management -->
 	<message key="manager.people.confirmDisable">أتريد تعطيل هذا المستخدم؟ هذا سيحرمه من دخول الموقع.
 
-ستقوم إختيارياً بتبرير تعطيلك لحساب مستخدم معين</message>
+	ستقوم إختيارياً بتبرير تعطيلك لحساب مستخدم معين</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[عذراً، ليس لديك صلاحيات إدارة لحساب هذا المستخدم. قد يكون ذلك بسبب:
 		<ul>
 			<li>المستخدم هو مدير للموقع</li>
@@ -729,12 +729,12 @@
 	<!-- Login -->
 	<message key="user.login.registerNewAccount">ألست مسجلاً في الموقع؟ سجل فيه الآن</message>
 	<message key="user.login.resetPasswordInstructions"><![CDATA[لأسباب أمنية، هذا النظام يرسل للمستخدمين رسالة لإعادة ضبط كلمة المرور بدلاً من قيامه باستدعائها.<br /><br />أدخل عنوان بريدك الالكتروني أدناه لإعادة ضبط كلمة مرورك. رسالة تأكيد ستُرسل إلى هذا العنوان البريدي.]]></message>
-    <message key="user.login.implicitAuthLogin">الدخول عبر المعطيات</message>
+    	<message key="user.login.implicitAuthLogin">الدخول عبر المعطيات</message>
     
 	<!-- Registration -->
-    <message key="user.register.emailValidation">مصادقة عنوان البريد الالكتروني مطلوبة</message>
-    <message key="user.register.emailValidationDescription">عليك أن تثبت صحة عنوان بريدك الالكتروني قبل المتابعة. لطفاً، راجع حسابك البريدي للمزيد من التعليمات. بمجرد مصادقة حسابك البريدي، سيكون بمقدورك دخول الموقع.</message>
-    <message key="user.register.selectJournal">إختر مجلةً لتُسجل نفسك فيها</message>
+    	<message key="user.register.emailValidation">مصادقة عنوان البريد الالكتروني مطلوبة</message>
+    	<message key="user.register.emailValidationDescription">عليك أن تثبت صحة عنوان بريدك الالكتروني قبل المتابعة. لطفاً، راجع حسابك البريدي للمزيد من التعليمات. بمجرد مصادقة حسابك البريدي، سيكون بمقدورك دخول الموقع.</message>
+    	<message key="user.register.selectJournal">إختر مجلةً لتُسجل نفسك فيها</message>
 	<message key="user.register.noJournals">ليس من مجلة متاحة للتسجيل فيها ضمن هذا الموقع</message>
 	<message key="user.register.privacyStatement">بيان الخصوصية</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">أنقر هنا</a> إن سبق لك التسجيل في هذه المجلة أو غيرها ضمن هذا الموقع.]]></message>
@@ -748,7 +748,7 @@
 	<message key="user.register.reviewerDescriptionNoInterests">راغبٌ في إجراء تحكيم مناظر لطلبات النشر في المجلة.</message>
 	<message key="user.register.reviewerDescription">راغبٌ في إجراء تحكيم مناظر لطلبات النشر في الموقع.</message>
 	<message key="user.register.reviewerInterests">عرِّف إهتمامات التحكيم (مجالاته الثابتة وطرق البحث):</message>
-    <message key="user.register.implicitAuth">الدخول عبر المعطيات باستعمال حساب مؤسسي موجود</message>
+    	<message key="user.register.implicitAuth">الدخول عبر المعطيات باستعمال حساب مؤسسي موجود</message>
     
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">اشتراكاتي</message>
@@ -880,11 +880,11 @@
 	<message key="about.subscriptionTypes.duration">المدة</message>
 	<message key="about.subscriptionTypes.cost">الكلفة</message>
 	<message key="about.availableSubscriptionTypes">أنواع الاشتراكات</message>
-    <message key="about.purchaseIssue">شراء العدد</message>
-    <message key="about.purchaseArticle">شراء المؤلَّف</message>
-    <message key="about.purchaseIssueDescription">بوسع القراء غير المشتركين شراء أعداد منفردة.أدناه، خيارات الدفع المالي ورسومها المتاحة .</message>
-    <message key="about.purchaseArticleDescription">بوسع القراء غير المشتركين شراء مؤلفات منفردة.أدناه، خيارات الدفع المالي ورسومها المتاحة.</message>
-    <message key="about.memberships">العضوية</message>
+    	<message key="about.purchaseIssue">شراء العدد</message>
+	<message key="about.purchaseArticle">شراء المؤلَّف</message>
+    	<message key="about.purchaseIssueDescription">بوسع القراء غير المشتركين شراء أعداد منفردة.أدناه، خيارات الدفع المالي ورسومها المتاحة .</message>
+    	<message key="about.purchaseArticleDescription">بوسع القراء غير المشتركين شراء مؤلفات منفردة.أدناه، خيارات الدفع المالي ورسومها المتاحة.</message>
+    	<message key="about.memberships">العضوية</message>
 	<message key="about.journalSponsorship">كفالة المجلة</message>
 	<message key="about.aboutThisPublishingSystem">عن نظام النشر هذا</message>
 	<message key="about.aboutThisPublishingSystem.altText">عملية التحرير والنشر لنظام المجلات المفتوحة</message>
