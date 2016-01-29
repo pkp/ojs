@@ -105,7 +105,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 				'primaryLocale' => $site->getPrimaryLocale(),
 				'contextName' => $names[$site->getPrimaryLocale()],
 				'ldelim' => '{', // Used to add variables to settings without translating now
-				'delim' => '}',
+				'rdelim' => '}',
 			));
 
 			// Create a default "Articles" section
