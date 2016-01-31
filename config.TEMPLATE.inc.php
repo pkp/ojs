@@ -525,3 +525,4 @@ log_web_service_info = Off
 ; Journal Management > System Plugins > Generic Plugins > PKP PLN Plugin
 ; 
 ; pln_url = http://pkp-pln.lib.sfu.ca
+; pln_status_docs = http://pkp-pln.lib.sfu.ca/docs/status

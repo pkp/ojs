@@ -22,6 +22,7 @@ define('PLN_PLUGIN_NAME','plnplugin');
 
 // defined here in case an upgrade doesn't pick up the default value.
 define('PLN_DEFAULT_NETWORK', 'http://pkp-pln.lib.sfu.ca');
+define('PLN_DEFAULT_STATUS_SUFFIX', '/docs/status');
 
 define('PLN_PLUGIN_HTTP_STATUS_OK', 200);
 define('PLN_PLUGIN_HTTP_STATUS_CREATED', 201);
@@ -197,6 +198,8 @@ class PLNPlugin extends GenericPlugin {
 				break;
 			case 'pln_network':
 				return Config::getVar('lockss', 'pln_url', PLN_DEFAULT_NETWORK);
+			case 'pln_status_docs':
+				return Config::getVar('lockss', 'pln_status_docs', Config::getVar('lockss', 'pln_url', PLN_DEFAULT_NETWORK) . PLN_DEFAULT_STATUS_SUFFIX);
 			default:
 				break;
 		}
