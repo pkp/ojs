@@ -16,8 +16,6 @@
 import('classes.file.JournalFileManager');
 import('lib.pkp.classes.scheduledTask.ScheduledTask');
 
-require_once(dirname(__FILE__).'/../lib/bagit.php');
-
 class DepositPackage {
 
 	/**
@@ -226,10 +224,17 @@ class DepositPackage {
 	}
 	
 	/**
-	 * Create a package containing the serialized deposit objects 
+	 * Create a package containing the serialized deposit objects. If the 
+	 * bagit library fails to load, null will be returned.
+	 * 
 	 * @return string The full path of the created zip archive
 	 */
 	function generatePackage() {
+		
+		if( ! @include_once(dirname(__FILE__).'/../lib/bagit.php')) {
+			$this->_logMessage(__("plugins.generic.pln.error.include.bagit"));
+			return;
+		}
 		
 		// get DAOs, plugins and settings
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
@@ -397,15 +402,19 @@ class DepositPackage {
 		$depositDir = $plnDir . DIRECTORY_SEPARATOR . $this->_deposit->getUUID();
 		if ($fileManager->fileExists($depositDir,'dir')) $fileManager->rmtree($depositDir);
 		$fileManager->mkdir($depositDir);
-
-		if (!$fileManager->fileExists($this->generatePackage())) {
-			$this->_deposit->setLockssSyncingStatus();
+		
+		$packagePath = $this->generatePackage();
+		if( ! $packagePath) {
+			return;
+		}
+		if (!$fileManager->fileExists($packagePath)) {
+			$this->_deposit->setPackagedStatus(false);
 			$depositDao->updateDeposit($this->_deposit);
 			return;
 		}
 		
 		if (!$fileManager->fileExists($this->generateAtomDocument())) {
-			$this->_deposit->setLockssSyncingStatus();
+			$this->_deposit->setPackagedStatus(false);
 			$depositDao->updateDeposit($this->_deposit);
 			return;
 		}

@@ -84,6 +84,7 @@
 	<message key="plugins.generic.pln.notifications.archive_tar_missing">The Archive_Tar PHP extension must be installed before the PKP PLN can be enabled.</message>
 	<message key="plugins.generic.pln.notifications.php5_missing">The PKP PLN requires PHP version 5 or higher.</message>
 
+	<message key="plugins.generic.pln.error.include.bagit">The BagIt library, which is included with OJS, cannot be loaded, probably due to a missing prerequisite.</message>
 	<message key="plugins.generic.pln.error.network.servicedocument">Network error {$error} connecting to the PLN to get the service document.</message>
 	<message key="plugins.generic.pln.error.network.deposit">Network error {$error} connecting to the PLN to send the deposit.</message>
 	<message key="plugins.generic.pln.error.network.swordstatement">Network error {$error} connecting to the PLN to get a status update for deposit.</message>

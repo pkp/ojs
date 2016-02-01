@@ -68,6 +68,36 @@ class PLNSettingsForm extends Form {
 			$this->setData('terms_of_use_agreement', $terms_agreed);
 		}
 	}
+	
+	/**
+	 * Check for the prerequisites for the plugin, and return a translated 
+	 * message for each missing requirement.
+	 * 
+	 * @return array
+	 */
+	function _checkPrerequisites() {
+		$messages = array();
+		
+		if( ! $this->_plugin->php5Installed()) {
+			// If php5 isn't available, then the other checks are not 
+			// useful.
+			$messages[] =  __('plugins.generic.pln.notifications.php5_missing');
+			return $messages;
+		}
+		if( ! @include_once('Archive/Tar.php')) {
+			$messages[] = __('plugins.generic.pln.notifications.archive_tar_missing');
+		}
+		if( ! $this->_plugin->curlInstalled()) {
+			$messages[] = __('plugins.generic.pln.notifications.curl_missing');
+		}
+		if( ! $this->_plugin->zipInstalled()) {
+			$messages = __('plugins.generic.pln.notifications.zip_missing');
+		}
+		if( ! $this->_plugin->cronEnabled()) {
+			$messages = __('plugins.generic.pln.settings.acron_required');
+		}
+		return $messages;
+	}
 
 	/**
 	 * @see Form::display()
@@ -86,6 +116,7 @@ class PLNSettingsForm extends Form {
 		}
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('hasIssn', $hasIssn);
+		$templateMgr->assign('prerequisitesMissing', $this->_checkPrerequisites());
 		$templateMgr->assign('journal_uuid', $this->_plugin->getSetting($this->_journalId, 'journal_uuid'));
 		$templateMgr->assign('terms_of_use', unserialize($this->_plugin->getSetting($this->_journalId, 'terms_of_use')));
 		$templateMgr->assign('terms_of_use_agreement', $this->getData('terms_of_use_agreement'));

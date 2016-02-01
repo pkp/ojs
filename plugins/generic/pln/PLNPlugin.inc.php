@@ -369,13 +369,7 @@ class PLNPlugin extends GenericPlugin {
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 				$this->import('classes.form.PLNSettingsForm');
 				$form = new PLNSettingsForm($this, $journal->getId());
-				
-				$application =& PKPApplication::getApplication();
-				$products =& $application->getEnabledProducts('plugins.generic');
-				if( ! isset($products['acron']) && ! Config::getVar('scheduled_tasks', false)) {
-					$templateMgr->assign('acronRequired', __('plugins.generic.pln.settings.acron_required'));
-				}
-				
+
 				if (Request::getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
@@ -620,14 +614,29 @@ class PLNPlugin extends GenericPlugin {
 		return class_exists('ZipArchive');
 	}
         
-        /**
-         * Check if the Archive_Tar extension is installed and available. BagIt
-         * requires it, and will not function without it.
-         */
-        function tarInstalled() {
-                return class_exists('Archive_Tar');
-        }
-	
+	/**
+	 * Check if the Archive_Tar extension is installed and available. BagIt
+	 * requires it, and will not function without it.
+	 * 
+	 * @return boolean
+	 */
+	function tarInstalled() {
+		@include_once('Archive/Tar.php');
+		return class_exists('Archive_Tar');
+	}
+
+	/**
+	 * Check if acron is enabled, or if the scheduled_tasks config var is set.
+	 * The plugin needs to run periodically through one of those systems.
+	 * 
+	 * @return boolean
+	 */
+	function cronEnabled() {
+		$application =& PKPApplication::getApplication();
+		$products =& $application->getEnabledProducts('plugins.generic');
+		return isset($products['acron']) || Config::getVar('scheduled_tasks', false);
+	}
+		
 	/**
 	 * Get resource using CURL
 	 * @param $url string
