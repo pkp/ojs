@@ -54,6 +54,7 @@
 			{/if}
 		</table>
 	</form>
+		<p>{translate key='plugins.generic.pln.status.docs' statusDocsUrl=$plnStatusDocs}</p>
 </div>
 
 {include file="common/footer.tpl"}

@@ -43,6 +43,7 @@
 	<message key="plugins.generic.pln.status">Status</message>
 
 	<!-- status page table headers -->	
+	<message key="plugins.generic.pln.status.docs"><![CDATA[The PLN <a href="{$statusDocsUrl}">deposit statuses are described here</a>.]]></message>
 	<message key="plugins.generic.pln.status.id">ID</message>
 	<message key="plugins.generic.pln.status.type">Type</message>
 	<message key="plugins.generic.pln.status.items">Items</message>
