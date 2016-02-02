@@ -41,20 +41,31 @@
 	<message key="plugins.generic.pln.status.network_status">Netzwerk-Status: {$networkStatusMessage}</message>
 	<message key="plugins.generic.pln.status.deposits">Ablieferungen</message>
 	<message key="plugins.generic.pln.status">Status</message>
+
+	<!-- status page table headers -->
 	<message key="plugins.generic.pln.status.id">ID</message>
 	<message key="plugins.generic.pln.status.type">Typ</message>
 	<message key="plugins.generic.pln.status.items">Elemente</message>
+	<message key="plugins.generic.pln.status.checked">Überprüft</message>
+	<message key="plugins.generic.pln.status.local_status">Lokaler Status</message>
+	<message key="plugins.generic.pln.status.processing_status">Bearbeitungsstatus</message>
+	<message key="plugins.generic.pln.status.lockss_status">LOCKSS-Status</message>
+	<message key="plugins.generic.pln.status.complete">Abgeschlossen</message>
+	<message key="plugins.generic.pln.status.confirmReset">Sind Sie sicher, dass Sie diese Ablieferung zurücksetzen wollen? Es wird neu gepackt und erneut zum Server zur Verarbeitung geschickt.</message>
+	
+	<!-- entries in the status page table -->
+	<message key="plugins.generic.pln.status.unknown">Unbekannt</message>
+	<message key="plugins.generic.pln.status.new">Neu</message>
 	<message key="plugins.generic.pln.status.packaged">Gepackt</message>
 	<message key="plugins.generic.pln.status.transferred">Transferiert</message>
 	<message key="plugins.generic.pln.status.received">Erhalten</message>
+	<message key="plugins.generic.pln.status.validated">Validiert</message>
+	<message key="plugins.generic.pln.status.sent">An LOCKSS geschickt</message>	
 	<message key="plugins.generic.pln.status.syncing">In Synchronisation</message>
-	<message key="plugins.generic.pln.status.synced">Synchronisiert</message>
+	<message key="plugins.generic.pln.status.agreement">Vereinbarung</message>
 	<message key="plugins.generic.pln.status.updated">Aktualisiert</message>
 	<message key="plugins.generic.pln.status.local_failure">Lokaler Fehler</message>
 	<message key="plugins.generic.pln.status.remote_failure">Serverfehler</message>
-	<message key="plugins.generic.pln.status.reset">Zurücksetzen</message>
-	<message key="plugins.generic.pln.status.yes">Ja</message>
-	<message key="plugins.generic.pln.status.no">Nein</message>
 
 	<message key="plugins.generic.pln.depositorTask.name">PKP PLN Ablieferungsaufgabe</message>
 	<message key="plugins.generic.pln.notifications.processing_for">Ablieferung wird durchgeführt für {$title}.</message>
@@ -74,8 +85,10 @@
 
 	<message key="plugins.generic.pln.error.network.servicedocument">Netzwerk-Fehler {$error} beim Versuch, das Service-Dokument vom PLN zu holen.</message>
 	<message key="plugins.generic.pln.error.network.deposit">Netzwerk-Fehler {$error} beim Versuch, die Ablieferung an das PLN zu senden.</message>
+	<message key="plugins.generic.pln.error.network.swordstatement">Netzwerk-Fehler {$error} beim Versuch, von PLN ein Statusupdate für die Ablieferung zu holen.</message>
 	<message key="plugins.generic.pln.error.http.servicedocument">PLN-Server hat einen HTTP-Fehler {$error} gemeldet beim Versuch, das Service-Dokument zu holen.</message>
 	<message key="plugins.generic.pln.error.http.deposit">PLN-Server hat einen HTTP-Fehler {$error} gemeldet beim Versuch, die Ablieferung zu senden.</message>
+	<message key="plugins.generic.pln.error.http.swordstatement">PLN-Server hat einen HTTP-Fehler {$error} gemeldet bei der Überprüfung des Status einer Ablieferung.</message>
 	<message key="plugins.generic.pln.error.depositor.missingpackage">Kann die Datei {$file} des Pakets nicht finden.</message>
 	<message key="plugins.generic.pln.error.depositor.export.articles.error">Ein Fehler ist beim Export der Artikel aufgetreten. Das Fehlerlog des Servers könnte weitere Informationen enthalten.</message>
 	<message key="plugins.generic.pln.error.depositor.export.issue.error">Ein Fehler ist beim Export einer Ausgabe aufgetreten. Das Fehlerlog des Servers könnte weitere Informationen enthalten.</message>
