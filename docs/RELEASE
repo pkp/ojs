@@ -1,112 +1,78 @@
-OJS 2.4.7 Release Notes
-GIT tag: ojs-2_4_7-0
-Release date: October 9, 2015
-================================
-
-Note: While we transition our issue management system from Bugzilla
-(http://pkp.sfu.ca/bugzilla) to Github Issues
-(http://www.github.com/pkp/pkp-lib/issues), this list will contain a mixture
-of IDs from both systems. Bugzilla entries will be prefixed with "bz" and
-Github issues will be prefixed with "i".
+OJS 2.4.8 Release Notes
+CVS tag: ojs-2_4_8-0
+Release date: February 5, 2016
+=================================
 
 Configuration Changes
 ---------------------
 
-New config.inc.php parameters:
-	- security:salt
-	- security:reset_seconds
+See config.TEMPLATE.inc.php for a description and examples of all supported
+configuration parameters.
 
-New Features
-------------
-	i807: Add iParadigms functionality to CrossRef plugin
-	i380: Implement beacon
-	i427: Add bulk editing tools for email templates
-	i685: Data Privacy Option for Statistic Plugin
-	i741: Make Google Analytics available at the Site level
-	i768: Enable webservice support for PUT
+New config.inc.php parameters:
+	- lockss:pln_network - PLN staging server host, where content deposits for
+		the LOCKSS network will be sent. See http://pkp.sfu.ca/pkp-lockss
+		for more details.
+
+	- locks:pln_status_docs - The URL of a page describing the PLN deposit
+		processing status table, and the terms used in it.
 
 Bug Fixes
 ---------
-	i274: Counter report includes hard-coded English
-	i336: COMPONENT_ROUTER_PATHINFO_MARKER request raises error in Request::getRequestedPage()
-	i347: Prep OJS for automated releases
-	i384: Issue cover settings are too locale specific
-	i391: Add DOI to reference export formats
-	i393: Fatal error calling DataObject::getLocalizedData() by reference if only non-locale specific data exists.
-	i417: getPublishedArticleIdsByJournal() can return unpublished objects
-	i428: Untranslated locale key in comment for authors emailing comments
-	i429: Announcements don't respect date_posted ("published") setting
-	i437: Strict ValidatorInSet type checking breaks subscription type creation
-	i443: Exclude disabled users from mass mailouts
-	i447: Improve WCAG / Section 508 compliance
-	i448: Reader fees not included in About
-	i449: Javascripts blocked when OJS is served through HTTPS
-	i451: Translate ALM plugin to Brazilian portuguese
-	i452: ReferralDAO may query insert ID without insert
-	i460: Stats can't process Issues with unique identifiers
-	i464: Error on favicon upload, when determining the favicon type
-	i465: Empty copyright holder
-	i472: Consider other license URL on the article page
-	i482: Articles from journals not intented for public display appear in search results
-	i486: OJS native import/export DTD: copyright_holder is multilingual
-	i496: Broken links on Editorial Policies page
-	i497: Unexpected behavior using "+" operator to append items to arrays in subclasses
-	i499: Call superclass when overriding methods in Form and DAO subclasses
-	i509: Public galley ID validation
-	i511: Payment description HTML support inconsistent
-	i521: Author signature appended to notification email when an author uploads a revision
-	i522: Link to current issue does not redirect to public id
-	i523: PDF not shown due to jQuery conflict when ALM plugin is activated
-	i526: Backport ContextDAO::getBySetting() to JournalDAO
-	i529: ISSN Validator doesn't handle 0 or X checkdigits
-	i534: Default theme css is overwriting default OJS general styles
-	i535: View report fails if stats refer to an object that's not available anymore
-	i536: Already Paid option missing for manual payment if waiver text not set
-	i540: Make search queries use GET parameters
-	i546: Translate plugin creates new files with default translations
-	i551: Months with 4 or less letters in ABNT citations are handled incorrectly
-	i552: Getting stats for all articles slows down access if used in a high traffic site
-	i557: PostgreSQL sequence re-creation on upgrade
-	i559: additional article author metadata
-	i560: fix for the single step exclusion of URNs
-	i563: Updates/corrections needed to ALM Plugin
-	i571: Avoid sending duplicate emails to multiple recipients
-	i574: Notification subscription (mailing list) source is confusing
-	i577: Display galley pubIds on abstract and indexing metadata page
-	i578: Add missing int casts to IssueDAO
-	i588: Sorting Archives list by status as Section Editor leads to DB error
-	i589: Problem with pagination in DOAJ plugin
-	i590: Get localized journal description
-	i634: Update PubMED XML export to include affiliation info, keywords
-	i653: Native import causes fatal error during Issue cleanup after failure
-	i680: site.tpl nest at least two <p> in journal description
-	i682: Set cookie request method is using the wrong cookie path sometimes
-	i690: force_login_ssl setting should not allow HTTPS form on HTTP page
-	i691: Empty "Edit Profile Form" when Administrator that is not a Journal Manager edit an user
-	i692: Cancelled reviews are counted as completed ones in reviewer stats
-	i695: Improve password hashes and reset
-	i702: Switching form language while registering as a new user doesn't work
-	i705: Payments records are not moved to target user when merging
-	i712: Crossref plugin scheduled task is not using the correct task interface
-	i715: Tweak author disambiguation scheme
-	i720: Submission metadata omit authors setting is not working when notifying users and including TOC
-	i721: Tiny MCE corrupts DOAJ XML
-	i722: Prevent email sending interaction with acron plugin
-	i724: OAI requests for nonexistent journals result in site-wide OAI URL behavior
-	i729: assign an id to the objects for review nav item
-	i730: Automatic DOI registration to DataCite
-	i731: missing unregistered articles URL in crossref plugin settings
-	i732: consider the expire parameter for the cookies
-	i734: Usage stats loader task doesn't warn about not being able to move files
-	i737: "Patch" upgrading should not be a recommended path
-	i745: Passwords should not be emailed
-	i761: Position footer hooks consistently
-	i764: Duplicate missing keys in translator plugin
-	i766: Remove "from" display name use from forced envelope sender setting
-	i771: Webservice requests need a bit more error checking
-	i774: Clear div necessary in the object for review details view
-	i784: Support replacing missing translation with the english text
-	i794: XML Writer could support Comments
-	i798: DOIExportDom fails to return cached objects
-	i799: DataCite and CrossRef scheduled tasks error e-mails
-
+	#345: PKPRequest::getBasePath() returns incorrect results with mod_rewrite on subdirectory
+	#366: Journal statistics from previous years not available if no object was published
+	#550: Disabled journals exposed in site-wide OAI
+	#619: Can't SWORD deposit into DSpace 3.2
+	#622: copyAccessLogFileTool reports "Success" even when shell command fails
+	#623: copyAccessLogFileTool confuses Solaris with *.*
+	#625: Change in documentation for page numbers in setup
+	#739: Allow new COUNTER Releases and Reports
+	#760: Plugins scheduled tasks files hour setting are using a non existing hour
+	#804: Crossref translations contain untranslated English and unused keys
+	#808: In the Crossref Issue Export, messaging does not match function
+	#816: Pdf links not displayed in search results depending on locale
+	#817: lib/password_compat includes .git file in release tarball
+	#818: Native export fails when missing copyright holders
+	#819: piwik plugin doesn't play well with others
+	#822: Wrong URL when exporting and registering DOIs via command line
+	#831: Password reset fails with addition of expiration token
+	#842: Missing page title for site registration
+	#843: Implement statistics dimensions settings
+	#845: Allow inheritance of DOI export -> Crossref export -> EZID export
+	#847: File download is not being logged anymore
+	#848: ReportPlugin::report() parameter $request is missing in UsageStatsReportPlugin::report()
+	#855: DataCite export link for issues is missing
+	#859: Enable exclude and clear of issue objects DOIs also if DOI shouldn't be assigned to the issues
+	#862: Implement better logging for web service requests
+	#872: OJS: DOI plugins' options have to be renamed
+	#873: The version.xml descriptor has invalid XML in OJS 2.4.7
+	#880: Archived usage stats log files are taking too much disk space
+	#881: [OJS] Incorrect notification signature
+	#884: Permit X in ONIX-formatted ISSNs
+	#885: Browse plugin drops whitespace in before HTML header
+	#889: Fatal error in editing submission metadata on missing section
+	#890: UsageStats settings form enhancements
+	#891: Fix METS export XML error message
+	#895: Backport *8636* NOTIFICATION_TYPE_WARNING Content
+	#897: ThesisFeedPlugin is missing request type check
+	#899: Google Analytics setting references "boolean instead of "bool"
+	#917: Update references to Codehaus
+	#919: [OJS] Notify users fails when notifying "All published authors"
+	#935: Poor SQL performance for ReviewFormDAO::getActiveByAssocId()
+	#947: Use of proxy settings is not consistent
+	#959: es_ES translation of plugins.generic.usageStats.usageStatsLoaderName seems off
+	#999: Stats processing is missing log entries that have pub ids
+	#1001: Usage event plugin should not use public ids
+	#1007: Custom report generator leaves Issue Galleys untranslated
+	#1009: Remove OpenAds plugin
+	#1010: Time filters options in custom report generator are not working
+	#1013: Ajax form submit controls doesn't get enabled after form submission
+	#1015: Let custom report generator knows about optional dimensions
+	#1036: Merging users messes up signoffs table
+	#1039: Correct announcement publication and expiry date comparisons
+	#1054: Split review reminder emails to separate request and review reminders
+	#1062: localized article cover images
+	#1087: Crossref plugin doesn't support newer content-types
+	#1088: Not all issues displayed for the DOI export/registration
+	#1092: OAI-PMH interface strips HTML, but leaves HTML entities
+	#1097: Escaped HTML is slipping into Crossref exports

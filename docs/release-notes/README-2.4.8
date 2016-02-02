@@ -1,10 +1,7 @@
 OJS 2.4.8 Release Notes
-CVS tag: 
-Release date: 
+CVS tag: ojs-2_4_8-0
+Release date: February 5, 2016
 =================================
-
-OJS 2.4.8 includes a new PLN Plugin for depositing content into the PKP's 
-Private LOCKSS Network for long-term preservation. 
 
 Configuration Changes
 ---------------------
@@ -20,9 +17,62 @@ New config.inc.php parameters:
 	- locks:pln_status_docs - The URL of a page describing the PLN deposit
 		processing status table, and the terms used in it.
 
-New Features
-------------
-
 Bug Fixes
 ---------
-
+	#345: PKPRequest::getBasePath() returns incorrect results with mod_rewrite on subdirectory
+	#366: Journal statistics from previous years not available if no object was published
+	#550: Disabled journals exposed in site-wide OAI
+	#619: Can't SWORD deposit into DSpace 3.2
+	#622: copyAccessLogFileTool reports "Success" even when shell command fails
+	#623: copyAccessLogFileTool confuses Solaris with *.*
+	#625: Change in documentation for page numbers in setup
+	#739: Allow new COUNTER Releases and Reports
+	#760: Plugins scheduled tasks files hour setting are using a non existing hour
+	#804: Crossref translations contain untranslated English and unused keys
+	#808: In the Crossref Issue Export, messaging does not match function
+	#816: Pdf links not displayed in search results depending on locale
+	#817: lib/password_compat includes .git file in release tarball
+	#818: Native export fails when missing copyright holders
+	#819: piwik plugin doesn't play well with others
+	#822: Wrong URL when exporting and registering DOIs via command line
+	#831: Password reset fails with addition of expiration token
+	#842: Missing page title for site registration
+	#843: Implement statistics dimensions settings
+	#845: Allow inheritance of DOI export -> Crossref export -> EZID export
+	#847: File download is not being logged anymore
+	#848: ReportPlugin::report() parameter $request is missing in UsageStatsReportPlugin::report()
+	#855: DataCite export link for issues is missing
+	#859: Enable exclude and clear of issue objects DOIs also if DOI shouldn't be assigned to the issues
+	#862: Implement better logging for web service requests
+	#872: OJS: DOI plugins' options have to be renamed
+	#873: The version.xml descriptor has invalid XML in OJS 2.4.7
+	#880: Archived usage stats log files are taking too much disk space
+	#881: [OJS] Incorrect notification signature
+	#884: Permit X in ONIX-formatted ISSNs
+	#885: Browse plugin drops whitespace in before HTML header
+	#889: Fatal error in editing submission metadata on missing section
+	#890: UsageStats settings form enhancements
+	#891: Fix METS export XML error message
+	#895: Backport *8636* NOTIFICATION_TYPE_WARNING Content
+	#897: ThesisFeedPlugin is missing request type check
+	#899: Google Analytics setting references "boolean instead of "bool"
+	#917: Update references to Codehaus
+	#919: [OJS] Notify users fails when notifying "All published authors"
+	#935: Poor SQL performance for ReviewFormDAO::getActiveByAssocId()
+	#947: Use of proxy settings is not consistent
+	#959: es_ES translation of plugins.generic.usageStats.usageStatsLoaderName seems off
+	#999: Stats processing is missing log entries that have pub ids
+	#1001: Usage event plugin should not use public ids
+	#1007: Custom report generator leaves Issue Galleys untranslated
+	#1009: Remove OpenAds plugin
+	#1010: Time filters options in custom report generator are not working
+	#1013: Ajax form submit controls doesn't get enabled after form submission
+	#1015: Let custom report generator knows about optional dimensions
+	#1036: Merging users messes up signoffs table
+	#1039: Correct announcement publication and expiry date comparisons
+	#1054: Split review reminder emails to separate request and review reminders
+	#1062: localized article cover images
+	#1087: Crossref plugin doesn't support newer content-types
+	#1088: Not all issues displayed for the DOI export/registration
+	#1092: OAI-PMH interface strips HTML, but leaves HTML entities
+	#1097: Escaped HTML is slipping into Crossref exports
