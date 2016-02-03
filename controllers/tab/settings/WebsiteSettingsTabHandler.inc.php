@@ -39,7 +39,6 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 			'languages' => 'controllers/tab/settings/languages/languages.tpl',
 			'plugins' => 'controllers/tab/settings/plugins/plugins.tpl',
 			'announcements' => 'lib.pkp.controllers.tab.settings.announcements.form.AnnouncementSettingsForm',
-			'navigation' => 'controllers/tab/settings/navigation/navigation.tpl',
 		));
 	}
 

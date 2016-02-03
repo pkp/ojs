@@ -78,16 +78,6 @@ class IndexHandler extends Handler {
 				}
 			}
 
-			// Include any social media items that are configured for the context itself.
-			$socialMediaDao = DAORegistry::getDAO('SocialMediaDAO');
-			$socialMedia =& $socialMediaDao->getEnabledForContextByContextId($journal->getId());
-			$blocks = array();
-			while ($media = $socialMedia->next()) {
-				$media->replaceCodeVars();
-				$blocks[] = $media->getCode();
-			}
-			$templateMgr->assign('socialMediaBlocks', $blocks);
-
 			$templateMgr->display('frontend/pages/indexJournal.tpl');
 		} else {
 			$site = $request->getSite();

@@ -13,7 +13,6 @@
  * @uses $additionalHomeContent string Arbitrary input from HTML text editor
  * @uses $enableAnnouncementsHomepage bool Should we display announcements here?
  * @uses $issue Issue Current issue
- * @uses $socialMediaBlocks @todo
  *}
 {include file="frontend/components/header.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
 
@@ -43,19 +42,6 @@
 		<h3>{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</h3>
 		{include file="frontend/objects/issue_toc.tpl"}
 	{/if}
-
-	{* Social media sharing blocks *}
-	{* @todo this hasn't been formatted or styled. May be removed *}
-	{if !empty($socialMediaBlocks)}
-		<div id="socialMediaBlocksContainer">
-		{foreach from=$socialMediaBlocks item=block name=b}
-			<div id="socialMediaBlock{$smarty.foreach.b.index}" class="socialMediaBlock pkp_helpers_clear">
-				{$block}
-			</div>
-		{/foreach}
-		</div>
-	{/if}
-
 </div><!-- .page -->
 
 {include file="common/frontend/footer.tpl"}

@@ -88,14 +88,6 @@ class TemplateManager extends PKPTemplateManager {
 				import('classes.payment.ojs.OJSPaymentManager');
 				$paymentManager = new OJSPaymentManager($request);
 				$this->assign('journalPaymentsEnabled', $paymentManager->isConfigured());
-
-				// Include footer links if they have been defined.
-				$footerCategoryDao = DAORegistry::getDAO('FooterCategoryDAO');
-				$footerCategories = $footerCategoryDao->getNotEmptyByContextId($context->getId());
-				$this->assign('footerCategories', $footerCategories->toArray());
-
-				$footerLinkDao = DAORegistry::getDAO('FooterLinkDAO');
-				$this->assign('maxLinks', $footerLinkDao->getLargestCategoryTotalbyContextId($context->getId()));
 				$this->assign('pageFooter', $context->getLocalizedSetting('journalPageFooter'));
 			} else {
 				// Add the site-wide logo, if set for this locale or the primary locale
