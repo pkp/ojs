@@ -88,7 +88,7 @@ class TemplateManager extends PKPTemplateManager {
 				import('classes.payment.ojs.OJSPaymentManager');
 				$paymentManager = new OJSPaymentManager($request);
 				$this->assign('journalPaymentsEnabled', $paymentManager->isConfigured());
-				$this->assign('pageFooter', $context->getLocalizedSetting('journalPageFooter'));
+				$this->assign('pageFooter', $context->getLocalizedSetting('pageFooter'));
 			} else {
 				// Add the site-wide logo, if set for this locale or the primary locale
 				$displayPageHeaderTitle = $site->getLocalizedPageHeaderTitle();
