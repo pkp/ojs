@@ -43,6 +43,7 @@
 	<message key="plugins.generic.pln.status">Status</message>
 
 	<!-- status page table headers -->
+	<message key="plugins.generic.pln.status.docs"><![CDATA[Das <a href="{$statusDocsUrl}">Statusangaben des PLN</a> sind hier beschrieben.]]></message>
 	<message key="plugins.generic.pln.status.id">ID</message>
 	<message key="plugins.generic.pln.status.type">Typ</message>
 	<message key="plugins.generic.pln.status.items">Elemente</message>
@@ -83,6 +84,7 @@
 	<message key="plugins.generic.pln.notifications.archive_tar_missing">Die Archive_Tar-PHP-Erweiterung muss installiert werden, bevor das PKP PLN aktiviert werden kann.</message>
 	<message key="plugins.generic.pln.notifications.php5_missing">PKP PLN benötigt eine PHP-Version 5 oder höher.</message>
 
+	<message key="plugins.generic.pln.error.include.bagit">Die in OJS enthaltene BagIt-Bibliothek kann nicht geladen werden, vermutlich aufgrund nicht erfüllter Grundvoraussetzungen.</message>
 	<message key="plugins.generic.pln.error.network.servicedocument">Netzwerk-Fehler {$error} beim Versuch, das Service-Dokument vom PLN zu holen.</message>
 	<message key="plugins.generic.pln.error.network.deposit">Netzwerk-Fehler {$error} beim Versuch, die Ablieferung an das PLN zu senden.</message>
 	<message key="plugins.generic.pln.error.network.swordstatement">Netzwerk-Fehler {$error} beim Versuch, von PLN ein Statusupdate für die Ablieferung zu holen.</message>
