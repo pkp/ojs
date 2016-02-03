@@ -122,6 +122,16 @@
 		height: 8em;
 	}
 
+	.pkp_form_error {
+		margin-bottom: @base;
+		border-radius: @radius;
+		padding: 0 0.5em;
+		font-weight: @bold;
+		font-size: @font-sml;
+		background: @no;
+		color: #fff;
+	}
+
 	@media(min-width: @screen-phone) {
 
 		input[type="text"],
@@ -333,4 +343,9 @@
 			font-weight: @normal;
 		}
 	}
+}
+
+// Backlink used on error.tpl and message.tpl
+.cmp_back_link {
+	margin-top: @double;
 }
