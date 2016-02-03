@@ -44,6 +44,7 @@
 	<message key="plugins.generic.pln.status">Статус</message>
 
 	<!-- Заголовки таблицы на странице статуса -->	
+	<message key="plugins.generic.pln.status.docs"><![CDATA[<a href="{$statusDocsUrl}">Здесь описаны статусы депонирования в PLN</a>.]]></message>
 	<message key="plugins.generic.pln.status.id">ID</message>
 	<message key="plugins.generic.pln.status.type">Тип</message>
 	<message key="plugins.generic.pln.status.items">Объекты</message>
@@ -60,9 +61,9 @@
 	<message key="plugins.generic.pln.status.packaged">Упакован</message>
 	<message key="plugins.generic.pln.status.transferred">Передан</message>
 	<message key="plugins.generic.pln.status.received">Получен</message>
-	<message key="plugins.generic.pln.status.validate">Проверен</message>
+	<message key="plugins.generic.pln.status.validated">Проверен</message>
 	<message key="plugins.generic.pln.status.sent">Отправлен</message>
-	<message key="plugins.generic.pln.status.synced">Синхронизирован</message>
+	<message key="plugins.generic.pln.status.syncing">Синхронизируется</message>
 	<message key="plugins.generic.pln.status.agreement">Соглашение</message>
 	<message key="plugins.generic.pln.status.updated">Обновлен</message>
 	<message key="plugins.generic.pln.status.local_failure">Локальная ошибка</message>
@@ -84,6 +85,7 @@
 	<message key="plugins.generic.pln.notifications.archive_tar_missing">Расширение PHP Archive_Tar должно быть установлено до включения PKP PLN.</message>
 	<message key="plugins.generic.pln.notifications.php5_missing">PKP PLN требует PHP версии 5 или выше.</message>
 
+	<message key="plugins.generic.pln.error.include.bagit">Библиотеку BagIt, входящую в состав OJS, не удается загрузить, скорее всего из-за отсутствия необходимых для ее работы компонент.</message>
 	<message key="plugins.generic.pln.error.network.servicedocument">Ошибка сети {$error} при подключении к PLN для получения служебного документа.</message>
 	<message key="plugins.generic.pln.error.network.deposit">Ошибка сети {$error} при подключении к PLN для отправки депонируемого объекта.</message>
 	<message key="plugins.generic.pln.error.network.swordstatement">Ошибка сети {$error} при подключении к PLN для получения обновленного статуса депонируемого объекта.</message>
