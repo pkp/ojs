@@ -73,6 +73,9 @@
 		<!-- articleAbstract becomes submissionAbstract -->
 		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$articleAbstract}', '{$submissionAbstract}'), subject=REPLACE(subject, '{$articleAbstract}', '{$submissionAbstract}')</query>
 		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$articleAbstract}', '{$submissionAbstract}'), subject=REPLACE(subject, '{$articleAbstract}', '{$submissionAbstract}')</query>
+		<!-- weekLaterDate becomes responseDueDate -->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$weekLaterDate}', '{$responseDueDate}'), subject=REPLACE(subject, '{$weekLaterDate}', '{$responseDueDate}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$weekLaterDate}', '{$responseDueDate}'), subject=REPLACE(subject, '{$weekLaterDate}', '{$responseDueDate}')</query>
 	</sql>
 	<!--   Bug #8148: Submission process into PKP lib  -->
 	<sql>
