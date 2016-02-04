@@ -49,7 +49,7 @@
 		<subject>新一期期刊已出版</subject>
 		<body><![CDATA[親愛的讀者您好：<br />
 <br />
-《{$contextName}》已經出版了最新一期的期刊，請見<a href="{$journalUrl}">{$journalUrl}</a>。我們誠摯地邀請您閱覽這裡的目錄，並接著訪問我們的網站以閱讀各種文章以及有趣的項目。<br />
+《{$contextName}》已經出版了最新一期的期刊，請見<a href="{$contextUrl}">{$contextUrl}</a>。我們誠摯地邀請您閱覽這裡的目錄，並接著訪問我們的網站以閱讀各種文章以及有趣的項目。<br />
 <br />
 感謝您持續地關注我們的作品，<br />
 {$editorialContactSignature}]]></body>
@@ -59,11 +59,11 @@
 		<subject>請典藏《{$contextName}》</subject>
 		<body><![CDATA[Dear [University Librarian]<br />
 <br />
-《{$contextName}》 &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;是一份適合貴單位一位教職員的期刊：[成員名稱]，[職稱]。這份期刊正試著與這個圖書館與其他大學圖書館，共同建立一個符合洛克斯典藏計畫(LOCKSS; Lots of Copies Keep Stuff Safe)的檢藏資料庫。<br />
+《{$contextName}》 &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;是一份適合貴單位一位教職員的期刊：[成員名稱]，[職稱]。這份期刊正試著與這個圖書館與其他大學圖書館，共同建立一個符合洛克斯典藏計畫(LOCKSS; Lots of Copies Keep Stuff Safe)的檢藏資料庫。<br />
 <br />
 [期刊的簡介]<br />
 <br />
-我們這份期刊在「洛克斯出版品一覽」的網址是：<a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+我們這份期刊在「洛克斯出版品一覽」的網址是：<a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 我們瞭解貴單位已經參與洛克斯計畫。我們非常樂意提供任何額外的後設資料，以在貴單位的洛克斯版本中進行註冊。<br />
 <br />
@@ -75,7 +75,7 @@
 		<subject>請典藏《{$contextName}》</subject>
 		<body><![CDATA[親愛的[大學圖書館]：<br />
 <br />
-《{$contextName}》 &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;是一份適合貴單位一位教職員的期刊：[成員名稱]，[職稱]。這份期刊正試著與這個圖書館與其他大學圖書館，共同建立一個符合洛克斯典藏計畫(LOCKSS; Lots of Copies Keep Stuff Safe)的檢藏資料庫。<br />
+《{$contextName}》 &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;是一份適合貴單位一位教職員的期刊：[成員名稱]，[職稱]。這份期刊正試著與這個圖書館與其他大學圖書館，共同建立一個符合洛克斯典藏計畫(LOCKSS; Lots of Copies Keep Stuff Safe)的檢藏資料庫。<br />
 <br />
 [期刊的簡介]<br />
 <br />
@@ -146,7 +146,7 @@
 <br />
 《{$contextName}》的編輯團隊相信您是投稿到本期刊之稿件〈{$submissionTitle}〉的最佳審查人選。該份稿件的摘要如下，而我們希望您會考慮進行這份對我們來說相當重要的一個工作。<br />
 <br />
-無論您是否接受審查工作與否，都請在{$weekLaterDate}之前登入這個期刊網站，同時檢閱這份稿件並且記錄您的審查意見和編輯建議。網站為：<a href="{$journalUrl}">{$journalUrl}</a><br />
+無論您是否接受審查工作與否，都請在{$responseDueDate}之前登入這個期刊網站，同時檢閱這份稿件並且記錄您的審查意見和編輯建議。網站為：<a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 請注意審查工作的期限為：{$reviewDueDate}。<br />
 <br />
@@ -172,7 +172,7 @@
 <br />
 《{$contextName}》的編輯團隊相信您是投稿到本期刊之稿件〈{$submissionTitle}〉的最佳審查人選。該份稿件的摘要如下，而我們希望您會考慮進行這份對我們來說相當重要的一個工作。<br />
 <br />
-無論您是否接受審查工作與否，都請在{$weekLaterDate}之前登入這個期刊網站，同時檢閱這份稿件並且記錄您的審查意見和編輯建議。網站為：<a href="{$journalUrl}">{$journalUrl}</a><br />
+無論您是否接受審查工作與否，都請在{$responseDueDate}之前登入這個期刊網站，同時檢閱這份稿件並且記錄您的審查意見和編輯建議。網站為：<a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 請注意審查工作的期限為：{$reviewDueDate}。<br />
 <br />
@@ -195,7 +195,7 @@
 <br />
 《{$contextName}》的編輯團隊相信您是投稿到本期刊之稿件〈{$submissionTitle}〉的最佳審查人選，而我們希望您會考慮進行這份對我們來說相當重要的一個工作。該份期刊的審查指引已經附列如下，而稿件隨附在這封電子郵件的附加檔案之中。如果您接受這份審查工作，麻煩您在{$reviewDueDate}之前，將您對這份稿件的審查意見書以及編輯建議寄給我們。<br />
 <br />
-無論您是否接受審查工作與否，都請在{$weekLaterDate}之內回覆此封電子郵件給我們，告知我們您是否願意進行這個審查工作。<br />
+無論您是否接受審查工作與否，都請在{$responseDueDate}之內回覆此封電子郵件給我們，告知我們您是否願意進行這個審查工作。<br />
 <br />
 非常感謝您考慮我們的邀請。<br />
 {$editorialContactSignature}<br />
@@ -582,7 +582,7 @@
 		<subject>本期內容已經開放存取</subject>
 		<body><![CDATA[親愛的讀者您好：<br />
 <br />
-《{$contextName}》已經以開放存取的格式公開本期期刊內容。我們邀請您瀏覽這裡所附的目錄，並且接著訪問我們的網站 (<a href="{$journalUrl}">{$journalUrl}</a>) ，閱讀文章以及您感興趣的項目。<br />
+《{$contextName}》已經以開放存取的格式公開本期期刊內容。我們邀請您瀏覽這裡所附的目錄，並且接著訪問我們的網站 (<a href="{$contextUrl}">{$contextUrl}</a>) ，閱讀文章以及您感興趣的項目。<br />
 <br />
 感謝您持續地關注本期刊<br />
 <br />

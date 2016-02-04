@@ -49,7 +49,7 @@ Teşekkür ederiz,<br />
 		<subject>Yeni Sayı Yayınlandı</subject>
 		<body><![CDATA[Kıymetli Okuyucumuz,<br />
 <br />
-{$contextName} adlı derginin yeni saysını yayınladı. Yeni sayıya <a href="{$journalUrl}">{$journalUrl}</a> adresinden ulaşabilirsiniz.<br />
+{$contextName} adlı derginin yeni saysını yayınladı. Yeni sayıya <a href="{$contextUrl}">{$contextUrl}</a> adresinden ulaşabilirsiniz.<br />
 <br />
 Sizi dergimizin içindekiler sayfasını incelemeye, beğendiğiniz makaleleri okumaya ve değerli görüşlerinizi diğer okuyucularımız ile paylaşmaya çağırıyoruz.<br />
 <br />
@@ -80,7 +80,7 @@ Herhangi bir sorunuz olursa lütfen çekinmeden benimle irtibat kurun.<br />
 		<subject>Sayı Açık Erişime Açıldı</subject>
 		<body><![CDATA[Sayın Okuyucu,<br />
 <br />
-{$contextName} aşağıdaki sayıyı açık erişime açmıştır. Sizi sayının içindekiler bölümünü incelemeye ve dilediğiniz yazıları okumak üzere web sitemize davet ediyoruz (<a href="{$journalUrl}">{$journalUrl}</a>).<br />
+{$contextName} aşağıdaki sayıyı açık erişime açmıştır. Sizi sayının içindekiler bölümünü incelemeye ve dilediğiniz yazıları okumak üzere web sitemize davet ediyoruz (<a href="{$contextUrl}">{$contextUrl}</a>).<br />
 <br />
 Çalışmalarımıza süren ilginiz için teşekkür ederiz,<br />
 {$editorialContactSignature}]]></body>
@@ -90,11 +90,11 @@ Herhangi bir sorunuz olursa lütfen çekinmeden benimle irtibat kurun.<br />
 		<subject>{$contextName} arşivleme talebi</subject>
 		<body><![CDATA[&lt;![CDATA[Kıymetli [University Librarian]<br />
 <br />
-{$contextName} &lt;<a href="{$journalUrl}">{$journalUrl}</a>&gt; dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. <br />
+{$contextName} &lt;<a href="{$contextUrl}">{$contextUrl}</a>&gt; dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. <br />
 <br />
 [Brief description of journal]<br />
 <br />
-Dergimizin LOCKSS yayınevi bildirgesi internet adresi: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+Dergimizin LOCKSS yayınevi bildirgesi internet adresi: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 LOCKSS sistemini kullandığınızı tespit etmiş bulunuyoruz. Dergimizin sizin kullandığınız LOCKSS sürümüne kaydedilebilmesi için gerekli her türlü meta veriyi sağlamaktan mutluluk duyarız.<br />
 <br />
@@ -106,7 +106,7 @@ Teşekkür ederiz,<br />
 		<subject>{$contextName} dergisi arşivleme talebi </subject>
 		<body><![CDATA[Değerli [University Librarian]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt; dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. <br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. <br />
 <br />
 <br />
 [Brief description of journal]<br />
@@ -182,7 +182,7 @@ Teşekkürler,<br />
 <br />
 {$contextName} için gönderilen &quot;{$submissionTitle}&quot; başlıklı çalışmanın sizin ilgi alanlarınız ile uyuştuğunu ve dergimizde yayınlanabilirliği açısından inceleyebileceğinize inanoyoruz. Başvurunun içeriği aşağıya eklenmiştir. Bu görevin bizim için ne kadar önemli olduğunu göz önünde bulunduracağınızı umuyoruz.<br />
 <br />
-{$weekLaterDate} tarihine kadar, bu çalışmanın hakemliğini kabul edip etmediğinizi belirtmek, ilgili çalışmaya ulaşmak, eleştiri ve önerilerinizi kaydetmek için dergi internet sitesine giriş yapabilirsiniz. Dergi adresi: <a href="{$journalUrl}">{$journalUrl}</a> <br />
+{$responseDueDate} tarihine kadar, bu çalışmanın hakemliğini kabul edip etmediğinizi belirtmek, ilgili çalışmaya ulaşmak, eleştiri ve önerilerinizi kaydetmek için dergi internet sitesine giriş yapabilirsiniz. Dergi adresi: <a href="{$contextUrl}">{$contextUrl}</a> <br />
 <br />
 Değerlendirme için son tarih: {$reviewDueDate}.<br />
 <br />
@@ -208,7 +208,7 @@ Bu dileğimizi değerlendirdiğiniz için teşekkür ederiz.<br />
 <br />
 {$contextName} için yayınlanmak üzere gönderilen &quot;{$submissionTitle}&quot; başlıklı makaleyi değerlendiremek için en uygun hakemlerden birisi olarak, yazı hakkındaki değerli görüşlerinizi bize ileteceğinizi umuyoruz. Başvurunun önemli özellikleri aşağıda iletilmiştir. Dergimiz için çok değerli olan görüşlerinizden bizi mahrum etmeyeceğinizi umuyoruz.<br />
 <br />
-Dergimiz web sitesine girerek, {$weekLaterDate} süresinde gözden geçirme isteğimizi kabul ettiğinizi bildiriniz. İlgili sayfadan yazının tam metnine ulaşabileceksiniz.<br />
+Dergimiz web sitesine girerek, {$responseDueDate} süresinde gözden geçirme isteğimizi kabul ettiğinizi bildiriniz. İlgili sayfadan yazının tam metnine ulaşabileceksiniz.<br />
 <br />
 Değerlendirme raporunuz için son tarih {$reviewDueDate}.<br />
 <br />
@@ -232,7 +232,7 @@ Başvuruya ulaşım için adres: <a href="{$submissionReviewUrl}">{$submissionRe
 <br />
 Dergimizde yayınlanmak üzere gönderilen &quot;{$submissionTitle}&quot; başlıklı makaleyi değerlendiremek için uygun hakemlerden birisi olarak, yazı hakkındaki değerli görüşlerinizi bize ileteceğinizi umuyoruz. Yazı e-posta ekinde gönderilmiştir ve dergimizin hakemlerimizden beklentileri aşağıda verilmiştir. Dergimiz için çok değerli olan görüşlerinizi bizimle paylaşacağınızı umuyoruz. Değerlendirme raporunuzun {$reviewDueDate} tarihine kadar gönderilmiş olması gerekmektedir.<br />
 <br />
-Lütfen değerlendirmeyi kabul edip, etmediğinizi {$weekLaterDate} tarihine kadar e-posta mesajı ile bildiriniz.<br />
+Lütfen değerlendirmeyi kabul edip, etmediğinizi {$responseDueDate} tarihine kadar e-posta mesajı ile bildiriniz.<br />
 <br />
 Katkılarınız için şimdiden teşekkür ederiz.<br />
 <br />
@@ -711,7 +711,7 @@ This regards the manuscript &quot;{$submissionTitle},&quot; which is under consi
 <br />
 Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.<br />
 <br />
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$journalUrl}">{$journalUrl}</a><br />
+Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
@@ -738,7 +738,7 @@ This regards the manuscript &quot;{$submissionTitle},&quot; which is under consi
 <br />
 Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.<br />
 <br />
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br />
+Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br />
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
@@ -765,7 +765,7 @@ Following the review of the previous version of the manuscript, the authors have
 <br />
 The Review Guidelines for this journal are appended below, and the submission is attached to this email. Your review of the submission, along with your recommendation, should be emailed to me by {$reviewDueDate}.<br />
 <br />
-Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.<br />
+Please indicate in a return email by {$responseDueDate} whether you are able and willing to do the review.<br />
 <br />
 Thank you for considering this request.<br />
 <br />

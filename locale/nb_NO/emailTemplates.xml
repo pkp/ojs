@@ -48,7 +48,7 @@ Vennlig hilsen,<br />
 		<subject>Ny utgave</subject>
 		<body><![CDATA[Til registrerte lesere:<br />
 <br />
-{$contextName} har nettopp publisert en ny utgave på nettstedet <a href="{$journalUrl}">{$journalUrl}</a>. Her kan du lese innholdsfortegnelsen, før du går videre til nettstedet for å se nærmere på innholdet.<br />
+{$contextName} har nettopp publisert en ny utgave på nettstedet <a href="{$contextUrl}">{$contextUrl}</a>. Her kan du lese innholdsfortegnelsen, før du går videre til nettstedet for å se nærmere på innholdet.<br />
 <br />
 Takk for den interessen du viser  for arbeidet vårt,<br />
 {$editorialContactSignature}]]></body>
@@ -58,11 +58,11 @@ Takk for den interessen du viser  for arbeidet vårt,<br />
 		<subject>Anmodning om arkivering av {$contextName}</subject>
 		<body><![CDATA[Kjære [oppgi universitetsbibliotekar]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt; er et tidsskrift der en av deres fagansatte, [oppgi medlemsnavn], har påtatt seg å være [oppgi rolletittel]. Tidsskriftet ønsker å etablere et LOCKSS (Lots of Copies Keep Stuff Safe) arkiv, i samarbeid med flere universitetsbibliotek.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; er et tidsskrift der en av deres fagansatte, [oppgi medlemsnavn], har påtatt seg å være [oppgi rolletittel]. Tidsskriftet ønsker å etablere et LOCKSS (Lots of Copies Keep Stuff Safe) arkiv, i samarbeid med flere universitetsbibliotek.<br />
 <br />
 [Gi en kort beskrivelse av tidsskriftet]<br />
 <br />
-URL til det LOCKSS Publisher Manifest som gjelder for tidsskriftet vårt er: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+URL til det LOCKSS Publisher Manifest som gjelder for tidsskriftet vårt er: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Vi forstår det slik at biblioteket deres allerede deltar i et LOCKSS-samarbeid. Hvis det er behov for det, bidrar vi gjerne med ytterligere nødvendige metadata for å få registrert tidsskriftet vårt med deres versjon av LOCKSS.<br />
 <br />
@@ -74,7 +74,7 @@ Vennlig hilsen,<br />
 		<subject>Anmodning om arkivering av {$contextName}</subject>
 		<body><![CDATA[Kjære [oppgi universitetsbibliotekar]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, er et tidsskrift der en av deres fagansatte, [oppgi medlemsnavn], har påtatt seg å være [oppgi rolletittel]. Tidsskriftet ønsker å etablere et LOCKSS (Lots of Copies Keep Stuff Safe) arkiv, i samarbeid med flere universitetsbibliotek.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, er et tidsskrift der en av deres fagansatte, [oppgi medlemsnavn], har påtatt seg å være [oppgi rolletittel]. Tidsskriftet ønsker å etablere et LOCKSS (Lots of Copies Keep Stuff Safe) arkiv, i samarbeid med flere universitetsbibliotek.<br />
 <br />
 [Gi en kort beskrivelse av tidsskriftet]<br />
 <br />
@@ -145,7 +145,7 @@ Vennlig hilsen,<br />
 <br />
 Vårt tidsskrift {$contextName} har fått tilsendt manuskriptet &quot;{$submissionTitle}&quot;. Vi håper du er villig til å gi en fagfellevurdering av dette manuskriptet, fordi vi mener dette kan passe med din vurderingskompetanse. Sammendraget som var vedlagt manuskriptet er skrevet inn nedenfor, og jeg håper du vil påta deg dette viktige oppdraget for oss.<br />
 <br />
-Vennligst logg inn på tidsskriftets nettsted innen {$weekLaterDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke. Hvis du påtar deg oppdraget skal du også bruke nettstedet for å skrive inn vurderingen din, og for å registrere den anbefalingen du gir oss. Adressen til nettstedet er <a href="{$journalUrl}">{$journalUrl}</a><br />
+Vennligst logg inn på tidsskriftets nettsted innen {$responseDueDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke. Hvis du påtar deg oppdraget skal du også bruke nettstedet for å skrive inn vurderingen din, og for å registrere den anbefalingen du gir oss. Adressen til nettstedet er <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 Vi venter vurderingsoppdraget ferdigstilt innen {$reviewDueDate}.<br />
 <br />
@@ -170,7 +170,7 @@ Takk for at du har sagt deg villig til å bidra til arbeidet vårt.<br />
 <br />
 Vårt tidsskrift {$contextName} har fått tilsendt manuskriptet &quot;{$submissionTitle}&quot;. Vi håper du er villig til å gi en fagfellevurdering av dette manuskriptet, fordi vi mener dette kan passe med din vurderingskompetanse. Sammendraget som var vedlagt manuskriptet er skrevet inn nedenfor, og jeg håper du vil påta deg dette viktige oppdraget for oss.<br />
 <br />
-Vennligst logg inn på tidsskriftets nettsted innen {$weekLaterDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke. Hvis du påtar deg oppdraget skal du også bruke nettstedet for å skrive inn vurderingen din, og for å registrere den anbefalingen du gir oss.<br />
+Vennligst logg inn på tidsskriftets nettsted innen {$responseDueDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke. Hvis du påtar deg oppdraget skal du også bruke nettstedet for å skrive inn vurderingen din, og for å registrere den anbefalingen du gir oss.<br />
 <br />
 Vi venter vurderingsoppdraget ferdigstilt innen {$reviewDueDate}.<br />
 <br />
@@ -193,7 +193,7 @@ Takk for at du har sagt deg villig til å bidra til arbeidet vårt.<br />
 <br />
 Vårt tidsskrift {$contextName} har fått tilsendt manuskriptet &quot;{$submissionTitle}&quot;. Vi håper du er villig til å gi en fagfellevurdering av dette manuskriptet, fordi vi mener dette kan passe med din vurderingskompetanse. Tidsskriftets retningslinjer for fagfellevurdering følger nedenfor, og selve manuskriptet er vedlagt denne e-posten. Vurderingen og anbefalingen din returneres til meg som e-post, og er ventet ferdig innen {$reviewDueDate}.<br />
 <br />
-Vennligst send meg en svarpost innen {$weekLaterDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke.<br />
+Vennligst send meg en svarpost innen {$responseDueDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke.<br />
 <br />
 Takk for at du har sagt deg villig til å bidra til arbeidet vårt.<br />
 <br />
@@ -557,7 +557,7 @@ Hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg.<br />
 		<subject>Ny utgave i Open Access</subject>
 		<body><![CDATA[Til våre lesere:<br />
 <br />
-{$contextName} har nå gjort følgende utgave tilgjengelig i open access format. Innholdsfortegnelsen er her vedlagt. Vi inviterer deg med det samme til å besøk nettstedet vårt (<a href="{$journalUrl}">{$journalUrl}</a>) for å se nærmere på innholdet.<br />
+{$contextName} har nå gjort følgende utgave tilgjengelig i open access format. Innholdsfortegnelsen er her vedlagt. Vi inviterer deg med det samme til å besøk nettstedet vårt (<a href="{$contextUrl}">{$contextUrl}</a>) for å se nærmere på innholdet.<br />
 <br />
 Takk for at du viser interesse for arbeidet vårt,<br />
 {$editorialContactSignature}]]></body>

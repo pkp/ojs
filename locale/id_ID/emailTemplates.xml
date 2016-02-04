@@ -121,7 +121,7 @@ Terima kasih,<br />
 		<subject>tTerbitan Baru diterbitkan</subject>
 		<body><![CDATA[Pembaca:<br />
 <br />
-{$contextName} baru saja menerbitkan terbitan terbarunya di <a href="{$journalUrl}">{$journalUrl}</a>. Kami mengundang Anda untuk mereview Daftar Isi dan kemudian mengunjungi web site kami untuk mereivew artikel dan item minat.<br />
+{$contextName} baru saja menerbitkan terbitan terbarunya di <a href="{$contextUrl}">{$contextUrl}</a>. Kami mengundang Anda untuk mereview Daftar Isi dan kemudian mengunjungi web site kami untuk mereivew artikel dan item minat.<br />
 <br />
 Terima kasih untuk melanjutkan minat pada pekerjaan kami,<br />
 {$editorialContactSignature}]]></body>
@@ -131,11 +131,11 @@ Terima kasih untuk melanjutkan minat pada pekerjaan kami,<br />
 		<subject>Permintaan Pengarsipan untuk {$contextName}</subject>
 		<body><![CDATA[Kepada [Pustakawan Universitas]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, adalah sebuah jurnal yang anggota fakultas Anda, [name of member], berperan sebagai [nama posisi]. Jurnal akan membuat arsip LOCKSS (Lots of Copies Keep Stuff Safe) dengan ini dan perpustakaan universitas lain.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, adalah sebuah jurnal yang anggota fakultas Anda, [name of member], berperan sebagai [nama posisi]. Jurnal akan membuat arsip LOCKSS (Lots of Copies Keep Stuff Safe) dengan ini dan perpustakaan universitas lain.<br />
 <br />
 [Deskripsi singkat tentang jurnal]<br />
 <br />
-URL ke LOCKSS Publisher Manifest untuk jurnal kami: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+URL ke LOCKSS Publisher Manifest untuk jurnal kami: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Kami mengerti Anda telah berpartisipasi di LOCKSS. Jika kami dapat menyediakan metadata tambahan apapun untuk tujuan mendaftarkan jurnal kami dengan versi Anda tentang LOCKSS, kami akan senang menyediakannya.<br />
 <br />
@@ -147,7 +147,7 @@ Terima kasih,<br />
 		<subject>Permintaan Mengarsipkan untuk {$contextName}</subject>
 		<body><![CDATA[Kepada [Pustakawan Universitas]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, adalah sebuah jurnal yang anggota fakultas Anda, [name of member] berperan sebagai [nama posisi]. Jurnal akan membuat arsip  LOCKSS (Lots of Copies Keep Stuff Safe) dengan ini dan perpustakaan universitas lain.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, adalah sebuah jurnal yang anggota fakultas Anda, [name of member] berperan sebagai [nama posisi]. Jurnal akan membuat arsip  LOCKSS (Lots of Copies Keep Stuff Safe) dengan ini dan perpustakaan universitas lain.<br />
 <br />
 [Deskripsi singkat tentang jurnal]<br />
 <br />
@@ -218,7 +218,7 @@ Terima kasih,<br />
 Saya yakin Anda dapat menjadi reviewer handal manuskrip, &quot;{$submissionTitle},&quot; yang telah diserahkan ke {$contextName}. Abstrak naskah disertakan di bawah ini, dan saya harap Anda mempertimbangkan untuk mengambil tugas penting ini untuk kami. <br />
 <br />
 <br />
-Mohon login ke web site jurnal sebelum tanggal {$weekLaterDate} untuk menunjukkan apakah Anda akan mengambil Review ini atau tidak, serta untuk mengakses naskah dan mencatat Review dan rekomendasi Anda. Web sitenya adalah <a href="{$journalUrl}">{$journalUrl}</a><br />
+Mohon login ke web site jurnal sebelum tanggal {$responseDueDate} untuk menunjukkan apakah Anda akan mengambil Review ini atau tidak, serta untuk mengakses naskah dan mencatat Review dan rekomendasi Anda. Web sitenya adalah <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 Review jatuh tempo tanggal {$reviewDueDate}.<br />
 <br />
@@ -245,7 +245,7 @@ Terima kasih untuk mempertimbangkan permintaan ini.<br />
 <br />
 Saya yakin Anda akan berperan sebagai Reviewer handal manuskrip, &quot;{$submissionTitle},&quot; yang telah diserahkan ke {$contextName}. Abstrak naskah disertakan di bawah ini, dan saya harap Anda akan mempertimbangkan untuk mengambil tugas penting ini untuk kami.<br />
 <br />
-Login ke web site jurnal sebelum tanggal {$weekLaterDate} untuk menunjukkan apakah Anda akan mengambil review atau tidak, serta untuk mengakses naskah dan mencatat review dan rekomendasi Anda.<br />
+Login ke web site jurnal sebelum tanggal {$responseDueDate} untuk menunjukkan apakah Anda akan mengambil review atau tidak, serta untuk mengakses naskah dan mencatat review dan rekomendasi Anda.<br />
 <br />
 Review jatuh tempo sebelum tanggal {$reviewDueDate}.<br />
 <br />
@@ -268,7 +268,7 @@ Terima kasih untuk mempertimbangkan permintaan ini.<br />
 <br />
 Saya yakin Anda akan berperan sebagai Reviewer handal manuskrip, &quot;{$submissionTitle},&quot; dan saya meminta Anda untuk mempertimbangkan tugas penting ini untuk kami. Petunjuk Review untuk jurnal ini dilampirkan di bawah ini, dan naskah dilampirkan di email ini. Review naskah, beserta rekomendasi Anda harus diemail ke saya sebelum tanggal {$reviewDueDate}.<br />
 <br />
-Mohon tunjukkan di email balasan sebelum {$weekLaterDate} apakah Anda bisa atau bersedia melakukan review.<br />
+Mohon tunjukkan di email balasan sebelum {$responseDueDate} apakah Anda bisa atau bersedia melakukan review.<br />
 <br />
 Terima kasih untuk mempertimbangkan permintaan ini.<br />
 <br />
@@ -438,7 +438,7 @@ Saya meminta Anda bertanggungjawab atas proses copyediting  &quot;{$submissionTi
 5. Simpan file yang telah dicopyedit, dan upload ke Langkah 1 copyediting.<br />
 6. Kirim email LENGKAP kepada editor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL Penyerahan: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Nama pengguna Copy Editor: {$copyeditorUsername}<br />
 <br />
@@ -529,7 +529,7 @@ Penulis dan editor telah menyelesaikan review copyediting mereka tentang &quot;{
 5. Klik METADATA untuk mengecek informasi pengindeksan (menyimpan koreksi apapun)<br />
 6. Kirim email LENGKAP kepada editor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL Penyerahan: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Nama pengguna Copy Editor: {$copyeditorUsername}<br />
 <br />
@@ -563,7 +563,7 @@ Naskah &quot;{$submissionTitle}&quot; ke {$contextName} sekarang membutuhkan gal
 2. Login ke jurnal dan gunakan file versi layout untuk membuat galley menurut standar jurnal. <br />
 3. Kirim email LENGKAP kepada editor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL Penyerahan: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
 Nama pengguna Layout Editor: {$layoutEditorUsername}<br />
 <br />
@@ -677,7 +677,7 @@ Naskah &quot;{$submissionTitle}&quot; untuk {$contextName} telah diproofread ole
 3. Upload galley yang telah direvisi.<br />
 4. Kirim email LENGKAP di Proofreading Langkah 3 kepada editor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL Penyerahan: {$submissionUrl}<br />
 Nama pengguna Layout Editor: {$layoutEditorUsername}<br />
 <br />
@@ -732,7 +732,7 @@ Jika Anda mempunyai pertanyaan, silakan hubungi saya.<br />
 		<subject>Akses Terbuka Terbitan Terkini</subject>
 		<body><![CDATA[Pembaca:<br />
 <br />
-{$contextName} telah membuat terbitan berikut ini tersedia di format akses terbuka. Kami mengundang Anda untuk mereview Daftar Isi di sini dan kemudian mengunjungi web site kami(<a href="{$journalUrl}">{$journalUrl}</a>) untuk mereview artikel dan item minat.<br />
+{$contextName} telah membuat terbitan berikut ini tersedia di format akses terbuka. Kami mengundang Anda untuk mereview Daftar Isi di sini dan kemudian mengunjungi web site kami(<a href="{$contextUrl}">{$contextUrl}</a>) untuk mereview artikel dan item minat.<br />
 <br />
 Terima kasih untuk melanjutkan minat Anda terhadap karya kami,<br />
 {$editorialContactSignature}]]></body>

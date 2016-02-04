@@ -75,7 +75,7 @@ Eskerrik asko,<br />
 		<subject>Zenbaki berria argitaratu da</subject>
 		<body><![CDATA[Irakurle:<br />
 <br />
-{$contextName} aldizkariak zenbaki berri bat argitaratu du <a href="{$journalUrl}">{$journalUrl}</a> webgunean. Honekin batera bidaltzen dizugun Aurkibidea aztertzera eta gure webgunean artikuluak irakurtzera gonbidatzen zaitugu.<br />
+{$contextName} aldizkariak zenbaki berri bat argitaratu du <a href="{$contextUrl}">{$contextUrl}</a> webgunean. Honekin batera bidaltzen dizugun Aurkibidea aztertzera eta gure webgunean artikuluak irakurtzera gonbidatzen zaitugu.<br />
 <br />
 Eskerrik asko gure lana interesez jarraitzeagatik,<br />
 {$editorialContactSignature}]]></body>
@@ -85,11 +85,11 @@ Eskerrik asko gure lana interesez jarraitzeagatik,<br />
 		<subject>{$contextName} aldizkaria artxiboan gehitzeko eskaera</subject>
 		<body><![CDATA[[Unibertsitateko liburuzain] estimatua<br />
 <br />
-{$contextName} aldizkaria &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt; aurkeztera gatozkizu. Aldizkariaren [kargua] zuen fakultateko [izena] da.  LOCKSS (Lots of Copies Keep Stuff Safe) konplitzen duen artxibo bat ezarri nahian gabiltza zuen unibertsitateko eta beste batzuetako liburutegiekin.<br />
+{$contextName} aldizkaria &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; aurkeztera gatozkizu. Aldizkariaren [kargua] zuen fakultateko [izena] da.  LOCKSS (Lots of Copies Keep Stuff Safe) konplitzen duen artxibo bat ezarri nahian gabiltza zuen unibertsitateko eta beste batzuetako liburutegiekin.<br />
 <br />
 [Aldizkariaren azalpen laburra]<br />
 <br />
-Hau da gure aldizkariaren LOCKSS Publisher Manifest URLa: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+Hau da gure aldizkariaren LOCKSS Publisher Manifest URLa: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Jakin dugunez, LOCKSSen partaide zarete dagoeneko. Gure aldizkaria zuen LOCKSS bertsioan erregistratzeko metadatu gehigarriak eskaintzerik izango bagenu, gustu handiz egingo genuke.<br />
 <br />
@@ -101,7 +101,7 @@ Eskerrik asko,<br />
 		<subject>{$contextName} aldizkaria artxiboan gehitzeko eskaera</subject>
 		<body><![CDATA[[Unibertsitateko liburuzain] estimatua<br />
 <br />
-{$contextName} aldizkaria &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt; aurkeztera gatozkizu. Aldizkariaren [kargua] zuen fakultateko [izena] da. LOCKSS (Lots of Copies Keep Stuff Safe) konplitzen duen artxibo bat ezarri nahian gabiltza zuen unibertsitateko eta beste batzuetako liburutegiekin.<br />
+{$contextName} aldizkaria &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; aurkeztera gatozkizu. Aldizkariaren [kargua] zuen fakultateko [izena] da. LOCKSS (Lots of Copies Keep Stuff Safe) konplitzen duen artxibo bat ezarri nahian gabiltza zuen unibertsitateko eta beste batzuetako liburutegiekin.<br />
 <br />
 [Aldizkariaren azalpen laburra]<br />
 <br />
@@ -172,7 +172,7 @@ Eskerrik asko,<br />
 <br />
 Uste dut ebaluatzaile bikaina izango zinatekeela {$contextName} aldizkarira bidali diguten {$submissionTitle} eskuizkribuari buruzko iritzia emateko. Artikuluaren laburpena behean duzu, eta espero dut aintzakotzat hartu eta pentsatuko duzula guretzat lan garrantzitsu hau egiteko eskaera.<br />
 <br />
-Mesedez, sar zaitez aldizkariaren webgunean {$weekLaterDate} aurretik, eta esaguzu ebaluazioa egiteko prest zauden ala ez, eta prest egonez gero, artikulua hartzeko eta zure ebaluazio-txostena eta gomendioa emateko. Webgunea <a href="{$journalUrl}">{$journalUrl}</a> da<br />
+Mesedez, sar zaitez aldizkariaren webgunean {$responseDueDate} aurretik, eta esaguzu ebaluazioa egiteko prest zauden ala ez, eta prest egonez gero, artikulua hartzeko eta zure ebaluazio-txostena eta gomendioa emateko. Webgunea <a href="{$contextUrl}">{$contextUrl}</a> da<br />
 <br />
 Ebaluazioa egiteko epea {$reviewDueDate} izango litzateke.<br />
 <br />
@@ -197,7 +197,7 @@ Eskerrik asko gure eskaera kontuan hartzeagatik.<br />
 <br />
 Uste dut ebaluatzaile bikaina izango zinatekeela {$contextName} aldizkarira bidali diguten {$submissionTitle} eskuizkribuari buruzko iritzia emateko. Artikuluaren laburpena behean duzu, eta espero dut aintzakotzat hartu eta pentsatuko duzula guretzat lan garrantzitsu hau egiteko eskaera.<br />
 <br />
-Mesedez, sar zaitez aldizkariaren webgunean {$weekLaterDate} aurretik, eta esaguzu ebaluazioa egiteko prest zauden ala ez, eta prest egonez gero, artikulua hartzeko eta zure ebaluazio-txostena eta gomendioa emateko.<br />
+Mesedez, sar zaitez aldizkariaren webgunean {$responseDueDate} aurretik, eta esaguzu ebaluazioa egiteko prest zauden ala ez, eta prest egonez gero, artikulua hartzeko eta zure ebaluazio-txostena eta gomendioa emateko.<br />
 <br />
 Ebaluazioa egiteko epea {$reviewDueDate} izango litzateke.<br />
 <br />
@@ -220,7 +220,7 @@ Eskerrik asko gure eskaera kontuan hartzeagatik.<br />
 <br />
 Uste dut ebaluatzaile bikaina izango zinatekeela {$submissionTitle} eskuizkribuari buruzko iritzia emateko, eta guretzat lan hori egiteko aukerarik izango ote zenukeen galdetzera natorkizu. Aldizkari honetako Ebaluazioak egiteko gidalerroak behean dituzu, eta artikulua mezu honi erantsita bidaltzen dizut. Artikuluari buruzko ebaluazio-txostena eta zure gomendioa niri bidali beharko zenizkidake posta elektronikoz {$reviewDueDate} aurretik.<br />
 <br />
-Erantzun iezadazu posta elektronikoz, mesedez, {$weekLaterDate} aurretik, ebaluazioa egiterik daukazun ala ez.<br />
+Erantzun iezadazu posta elektronikoz, mesedez, {$responseDueDate} aurretik, ebaluazioa egiterik daukazun ala ez.<br />
 <br />
 Eskerrik asko gure eskaera kontuan hartzeagatik.<br />
 <br />
@@ -339,7 +339,7 @@ Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori bu
 5. Gorde zuzendutako fitxategia, eta kargatu Zuzenketako 1. urratsean.<br />
 6. Bidali BUKATU duzula adierazteko mezua editoreari.<br />
 <br />
-{$contextName} aldizkariaren URLa: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} aldizkariaren URLa: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Artikuluaren URLa: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Erabiltzaile-izena: {$copyeditorUsername}<br />
 <br />
@@ -431,7 +431,7 @@ Egileak eta editoreak aztertu eta berrikusi dituzte {$contextName} aldizkariko &
 5. Egin klik METADATUetan indexatzeko informazioa berrikusteko (eta gorde aldaketak).<br />
 6. Bidali BUKATU duzula adierazteko mezua editoreari.<br />
 <br />
-{$contextName} aldizkariaren URLa: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} aldizkariaren URLa: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Artikuluaren URLa: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Erabiltzaile-izena: {$copyeditorUsername}<br />
 <br />
@@ -465,7 +465,7 @@ Eskerrik asko {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; eskuiz
 2. Sartu aldizkarian eta erabili Maketazio-bertsioko fitxategia, aldizkariaren arauen araberako galeradak prestatzeko.<br />
 3. Bidali BUKATU duzula adierazteko mezua editoreari.<br />
 <br />
-{$contextName} aldizkariaren URLa: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} aldizkariaren URLa: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Artikuluaren URLa: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
 Erabiltzaile-izena: {$layoutEditorUsername}<br />
 <br />
@@ -579,7 +579,7 @@ Eskerrik asko {$contextName} aldizkariko &quot;{$submissionTitle}&quot; eskuizkr
 3. Kargatu berrikusitako galeradak.<br />
 3. Bidali Proba-zuzenketako 3. urratsa BUKATU duzula adierazteko mezua editoreari.<br />
 <br />
-{$contextName} aldizkariaren URLa: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} aldizkariaren URLa: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Artikuluaren URLa: {$submissionUrl}<br />
 Erabiltzaile-izena: {$layoutEditorUsername}<br />
 <br />
@@ -638,7 +638,7 @@ Galderaren bat baduzu, jar zaitez harremanetan nirekin, mesedez.<br />
 		<subject>Zenbakia sarrera librekoa da orain</subject>
 		<body><![CDATA[Irakurle:<br />
 <br />
-{$contextName} aldizkariak sarrera libreko egin du ondoren zehazten dugun zenbakia. Honekin batera bidaltzen dizugun Aurkibidea aztertzera eta gure webgunean (<a href="{$journalUrl}">{$journalUrl}</a>) artikuluak irakurtzera gonbidatzen zaitugu.<br />
+{$contextName} aldizkariak sarrera libreko egin du ondoren zehazten dugun zenbakia. Honekin batera bidaltzen dizugun Aurkibidea aztertzera eta gure webgunean (<a href="{$contextUrl}">{$contextUrl}</a>) artikuluak irakurtzera gonbidatzen zaitugu.<br />
 <br />
 Eskerrik asko gure lana interesez jarraitzeagatik,<br />
 {$editorialContactSignature}]]></body>
@@ -890,7 +890,7 @@ Hau &quot;{$submissionTitle},&quot; eskuizkribuari dagokio, {$contextName} aldiz
 <br />
 Eskuizkribuaren aurreko bertsioaren berrikuspenari jarraituz, egileek orain haien lanaren bertsio berrikusi bat bidali dute. Eskertuko genuke ebaluatzen lagunduko bazenu.<br />
 <br />
-Mesedez, sartu aldizkariaren web orrian {$weekLaterDate} datarako, adierazteko berrikuspenaz arduratuko zaren edo ez, baita bidalitakora sartzeko eta zure berrikuspena eta gomendioa grabatzeko ere. Web gunea da: <a href="{$journalUrl}">{$journalUrl}</a><br />
+Mesedez, sartu aldizkariaren web orrian {$responseDueDate} datarako, adierazteko berrikuspenaz arduratuko zaren edo ez, baita bidalitakora sartzeko eta zure berrikuspena eta gomendioa grabatzeko ere. Web gunea da: <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 Berrikuspenaren epemuga: {$reviewDueDate}.<br />
 <br />
@@ -917,7 +917,7 @@ Hau &quot;{$submissionTitle},&quot; eskuizkribuari dagokio, {$contextName} aldiz
 <br />
 Eskuizkribuaren aurreko bertsioaren berrikuspenari jarraituz, egileek orain haien lanaren bertsio berrikusi bat bidali dute. Eskertuko genuke ebaluatzen lagunduko bazenu.<br />
 <br />
-Mesedez, sartu aldizkariaren web orrian {$weekLaterDate} datarako, adierazteko berrikuspenaz arduratuko zaren edo ez, baita bidalitakora sartzeko eta zure berrikuspena eta gomendioa grabatzeko ere.<br />
+Mesedez, sartu aldizkariaren web orrian {$responseDueDate} datarako, adierazteko berrikuspenaz arduratuko zaren edo ez, baita bidalitakora sartzeko eta zure berrikuspena eta gomendioa grabatzeko ere.<br />
 <br />
 Berrikuspenaren epemuga: {$reviewDueDate}.<br />
 <br />
@@ -944,7 +944,7 @@ Eskuizkribuaren aurreko bertsioaren berrikuspenari jarraituz, egileek orain haie
 <br />
 Aldizkari honetarako Berrikuspen Gidalerroak behean erantsita daude, eta mezuak bidalketa bat du erantsia. Bidalketaren berrikuspena, zure gomendioarekin batera, bidali niri posta elektronikoz {$reviewDueDate} datarako.<br />
 <br />
-Mesedez, adierazi mezu baten bidez {$weekLaterDate} datarako berrikuspena egiteko gai izango zaren eta egingo duzun.<br />
+Mesedez, adierazi mezu baten bidez {$responseDueDate} datarako berrikuspena egiteko gai izango zaren eta egingo duzun.<br />
 <br />
 Mila esker eskari hau kontuan hartzeagatik.<br />
 <br />

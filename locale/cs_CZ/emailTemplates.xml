@@ -73,7 +73,7 @@ Děkujeme,<br />
 		<subject>Vydání nového čísla</subject>
 		<body><![CDATA[Čtenáři:<br />
 <br />
-{$contextName} zrovna vydává své poslední číslo na <a href="{$journalUrl}">{$journalUrl}</a>. Zveme Vás zde ke shlédnutí obsahu a poté návštěvě našich stránek se všemi články.<br />
+{$contextName} zrovna vydává své poslední číslo na <a href="{$contextUrl}">{$contextUrl}</a>. Zveme Vás zde ke shlédnutí obsahu a poté návštěvě našich stránek se všemi články.<br />
 <br />
 Děkujeme za Váš dlouhodobý zájem o naši práci,<br />
 {$editorialContactSignature}]]></body>
@@ -83,11 +83,11 @@ Děkujeme za Váš dlouhodobý zájem o naši práci,<br />
 		<subject>Žádost o archivaci pro {$contextName}</subject>
 		<body><![CDATA[Vážený [univerzitní knihovník]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt; je časopis, ve kterém pracovník Vaší univerzity [jméno pracovníka] zastává pozici [název pozice]. Tento časopis má zájem vybudovat archiv kopatibilní s programem LOCKSS (Lots of Copies Keep Stuff Safe) společně s touto knihovnou a dalšími univerzitními knihovnami.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; je časopis, ve kterém pracovník Vaší univerzity [jméno pracovníka] zastává pozici [název pozice]. Tento časopis má zájem vybudovat archiv kopatibilní s programem LOCKSS (Lots of Copies Keep Stuff Safe) společně s touto knihovnou a dalšími univerzitními knihovnami.<br />
 <br />
 [Krátký popis časopisu]<br />
 <br />
-URL k Prohlášení LOCKSS vydavatele pro náš časopis je: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+URL k Prohlášení LOCKSS vydavatele pro náš časopis je: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Chápeme, že jste již zapojeni do LOCKSS. Pokud můžeme poskytnout jakákoliv dodatečná metadata pro účely zaregistrování našeho časopisu do Vaší verze LOCKSS, velice rádi Vám je dodáme.<br />
 <br />
@@ -99,7 +99,7 @@ Děkujeme,<br />
 		<subject>Žádost o archivaci pro {$contextName}</subject>
 		<body><![CDATA[Vážený [univerzitní knihovník]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt; je časopis, ve kterém pracovník Vaší univerzity [jméno pracovníka] zastává pozici [název pozice]. Tento časopis má zájem vybudovat archiv kopatibilní s programem LOCKSS (Lots of Copies Keep Stuff Safe) společně s touto knihovnou a dalšími univerzitními knihovnami.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; je časopis, ve kterém pracovník Vaší univerzity [jméno pracovníka] zastává pozici [název pozice]. Tento časopis má zájem vybudovat archiv kopatibilní s programem LOCKSS (Lots of Copies Keep Stuff Safe) společně s touto knihovnou a dalšími univerzitními knihovnami.<br />
 <br />
 [Krátký popis časopisu]<br />
 <br />
@@ -170,7 +170,7 @@ Děkujeme,<br />
 <br />
 Domnívám se, že byste mohl být výborným recenzentem příspěvku &quot;{$submissionTitle},&quot; který byl zaslán do {$contextName}. Abstrakt příspěvku je vložen níže. Věřím, že zvážíte možnost přijetí tohoto pro nás důležitého úkolu.<br />
 <br />
-Prosím, přihlaste se do {$weekLaterDate} na stránkách časopisu, abyste uvedl, zda recenzi zpracujete nebo ne a také pro přístup k příspěvku a zaznamenání Vaší recenze a doporučení. Adresa webové stránky je <a href="{$journalUrl}">{$journalUrl}</a><br />
+Prosím, přihlaste se do {$responseDueDate} na stránkách časopisu, abyste uvedl, zda recenzi zpracujete nebo ne a také pro přístup k příspěvku a zaznamenání Vaší recenze a doporučení. Adresa webové stránky je <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 Termín pro zpracování recenze je {$reviewDueDate}.<br />
 <br />
@@ -195,7 +195,7 @@ Děkujeme za zvážení této žádosti.<br />
 <br />
 Domnívám se, že byste mohl být výborným recenzentem příspěvku &quot;{$submissionTitle},&quot; který byl zaslán do {$contextName}. Abstrakt příspěvku je vložen níže. Věřím, že zvážíte možnost přijetí tohoto pro nás důležitého úkolu.<br />
 <br />
-Prosím, přihlaste se do {$weekLaterDate} na stránkách časopisu, abyste uvedl, zda recenzi zpracujete nebo ne a také pro přístup k příspěvku a zaznamenání Vaší recenze a doporučení.<br />
+Prosím, přihlaste se do {$responseDueDate} na stránkách časopisu, abyste uvedl, zda recenzi zpracujete nebo ne a také pro přístup k příspěvku a zaznamenání Vaší recenze a doporučení.<br />
 <br />
 Termín pro zpracování recenze je {$reviewDueDate}.<br />
 <br />
@@ -218,7 +218,7 @@ Děkujeme za zvážení této žádosti.<br />
 <br />
 Domnívám se, že byste mohl být výborným recenzentem příspěvku &quot;{$submissionTitle}&quot; a žádám Vás, abyste zvážil možnost přijetí tohoto pro nás důležitého úkolu. Instrukce pro zpracování recenze pro tento časopis jsou připojeny níže a příspěvek je přiložen k tomuto emailu. Vaši recenzi příspěvku spolu s Vaším doporučením byste mi měl zaslat emailem do {$reviewDueDate}.<br />
 <br />
-Uveďte prosím do {$weekLaterDate} v odpovědi na tento email, zda můžete a chcete zpracovat tuto recenzi.<br />
+Uveďte prosím do {$responseDueDate} v odpovědi na tento email, zda můžete a chcete zpracovat tuto recenzi.<br />
 <br />
 Děkujeme za zvážení této žádosti.<br />
 <br />
@@ -337,7 +337,7 @@ Chtěl bych vás požádat, abyste zredigoval článek &quot;{$submissionTitle}&
 5. Uložte zredigovaný soubor a nahrajte ho na stránce pro redigování do Korku 1.<br />
 6. Pošlte email DOKONČENO editorovi.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL příspěvku: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Uživatelské jméno: {$copyeditorUsername}<br />
 <br />
@@ -429,7 +429,7 @@ Autor a editor právě dokončili kontrolu redigování příspěvku&quot;{$subm
 5. Klikněte na METADATA a zkontrolujte informace pro indexování (uložte případné opravy).<br />
 6. Pošlete email DOKONČENO editorovi.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL příspěvku: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Uživatelské jméno: {$copyeditorUsername}<br />
 <br />
@@ -463,7 +463,7 @@ Příspěvek &quot;{$submissionTitle}&quot; pro {$contextName} je nyní třeba p
 2. Přihlaste se do časopisu a pro vytvoření sazebnice podle standardů časopisu použijte verzi souboru pro grafické úpravy.<br />
 3. Pošlete editorovi email DOKONČENO.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL příspěvku: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
 Uživatelské jméno: {$layoutEditorUsername}<br />
 <br />
@@ -577,7 +577,7 @@ U příspěvku &quot;{$submissionTitle}&quot; pro {$contextName} byly provedeny 
 3. Nahrajte opravené sazebnice.<br />
 4. Pošlete editorovi email DOKONČENO v Korekturách v Kroku 3.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL příspěvku: {$submissionUrl}<br />
 Uživatelské jméno: {$layoutEditorUsername}<br />
 <br />
@@ -632,7 +632,7 @@ Pokud máte nějaké dotazy, neváhejte mě kontaktovat<br />
 		<subject>Nyní otevřen přístup k číslu </subject>
 		<body><![CDATA[Čtenáři:<br />
 <br />
-Časopis {$contextName} povolil otevřený přístup k následujícímu číslu. Zveme vás k prohlédnutí obsahu časopisu a návštěvě našich stránek (<a href="{$journalUrl}">{$journalUrl}</a>).<br />
+Časopis {$contextName} povolil otevřený přístup k následujícímu číslu. Zveme vás k prohlédnutí obsahu časopisu a návštěvě našich stránek (<a href="{$contextUrl}">{$contextUrl}</a>).<br />
 <br />
 Děkujeme za Vás pokračující zájem o naši práci<br />
 {$editorialContactSignature}]]></body>

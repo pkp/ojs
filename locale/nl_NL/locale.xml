@@ -443,7 +443,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="sectionEditor.proofreader.confirmRenotify">Deze proeflezer opieuw berichten zal de taak herstarten. Weet u zeker dat u dit wilt doen?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Spijtopties</message>
-	<message key="sectionEditor.regrets.title"><![CDATA[#{$articleId} Reviewer spijtopties, terugtrekkingen & eerdere rondes]]></message>
+	<message key="sectionEditor.regrets.title"><![CDATA[#{$submissionId} Reviewer spijtopties, terugtrekkingen & eerdere rondes]]></message>
 	<message key="sectionEditor.regrets">Spijtopties</message>
 	<message key="sectionEditor.regrets.link">Toon spijtopties, terugtrekkingen, eerdere rondes</message>
 	<message key="sectionEditor.regrets.reviewRound">Peer review, ronde {$round}</message>
@@ -775,49 +775,49 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} heeft een nieuwe inzending gedaan, ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} heeft artikel {$articleId} herzien. Het nieuwe bestands-ID is {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} is teruggetrokken als reviewer van inzending {$articleId} voor reviewronde {$round}.</message>
-	<message key="log.review.reviewInitiated">De review voor ronde {$round} door {$reviewerName} voor inzending {$articleId} is gestart.</message>
-	<message key="log.review.reviewReinitiated">De review voor ronde {$round} door {$reviewerName} voor inzending {$articleId} is opnieuw gestart.</message>
-	<message key="log.review.reviewCancelled">De review voor ronde {$round} door {$reviewerName} voor inzending {$articleId} is ingetrokken.</message>
-	<message key="log.review.reviewCleared">De review voor ronde {$round} door {$reviewerName} voor inzending {$articleId} is gewist.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} is beoordeeld voor reviewronde {$round} van inzeinding {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">De afloopdatum voor de review voor ronde {$round} van inzending {$articleId} door {$reviewerName} staat op {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">De aanbeveling voor de review voor ronde {$round} van inzending {$articleId} door {$reviewerName} is vastgelegd.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">De aanbeveling voor de review voor ronde {$round} van inzending {$articleId} is vastgelegd door redacteur, {$editorName} namens reviewer {$reviewerName}.</message>
-	<message key="log.review.resubmit">Inzending {$articleId} is opnieuw ingezonden voor review.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} heeft de review voor ronde {$round} van inzending {$articleId} geweigerd.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} heeft de review voor ronde {$round} van inzending {$articleId} geaccepteerd.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} heeft de review voor ronde {$round} van inzending {$articleId} namens {$reviewerName} geweigerd.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} heeft de review voor ronde  {$round} van inzending {$articleId} namens {$reviewerName} geaccepteerd.</message>
-	<message key="log.review.reviewFileByProxy">Redacteur, {$userName}, heeft een reviewbestand geladen voor ronde {$round} van inzending {$articleId} namens reviewer {$reviewerName}.</message>
+	<message key="log.author.documentRevised">{$authorName} heeft artikel {$submissionId} herzien. Het nieuwe bestands-ID is {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} is teruggetrokken als reviewer van inzending {$submissionId} voor reviewronde {$round}.</message>
+	<message key="log.review.reviewInitiated">De review voor ronde {$round} door {$reviewerName} voor inzending {$submissionId} is gestart.</message>
+	<message key="log.review.reviewReinitiated">De review voor ronde {$round} door {$reviewerName} voor inzending {$submissionId} is opnieuw gestart.</message>
+	<message key="log.review.reviewCancelled">De review voor ronde {$round} door {$reviewerName} voor inzending {$submissionId} is ingetrokken.</message>
+	<message key="log.review.reviewCleared">De review voor ronde {$round} door {$reviewerName} voor inzending {$submissionId} is gewist.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} is beoordeeld voor reviewronde {$round} van inzeinding {$submissionId}.</message>
+	<message key="log.review.reviewDueDateSet">De afloopdatum voor de review voor ronde {$round} van inzending {$submissionId} door {$reviewerName} staat op {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">De aanbeveling voor de review voor ronde {$round} van inzending {$submissionId} door {$reviewerName} is vastgelegd.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">De aanbeveling voor de review voor ronde {$round} van inzending {$submissionId} is vastgelegd door redacteur, {$editorName} namens reviewer {$reviewerName}.</message>
+	<message key="log.review.resubmit">Inzending {$submissionId} is opnieuw ingezonden voor review.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} heeft de review voor ronde {$round} van inzending {$submissionId} geweigerd.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} heeft de review voor ronde {$round} van inzending {$submissionId} geaccepteerd.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} heeft de review voor ronde {$round} van inzending {$submissionId} namens {$reviewerName} geweigerd.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} heeft de review voor ronde  {$round} van inzending {$submissionId} namens {$reviewerName} geaccepteerd.</message>
+	<message key="log.review.reviewFileByProxy">Redacteur, {$userName}, heeft een reviewbestand geladen voor ronde {$round} van inzending {$submissionId} namens reviewer {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Een reviewbestand is geladen.</message>
 	<message key="log.editor.decision">Een redacteursbeslissing ({$decision}) voor artikel {$submissionId} is vastgelegd door {$editorName}.</message>
 
 
-	<message key="log.copyedit.initiate">Tekstredactie voor inzending  {$articleId} is gestart door {$copyeditorName}.</message>
+	<message key="log.copyedit.initiate">Tekstredactie voor inzending  {$submissionId} is gestart door {$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">Het standaard tekstredactiebestand is gekozen.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} heeft de initiële tekstredactie van inzending {$articleId} voltooid.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} heeft de definitieve tekstredactie van inzending {$articleId} voltooid.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} heeft de tekstredactie van inzending {$articleId} toegewezen gekregen.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} heeft de initiële tekstredactie van inzending {$submissionId} voltooid.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} heeft de definitieve tekstredactie van inzending {$submissionId} voltooid.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} heeft de tekstredactie van inzending {$submissionId} toegewezen gekregen.</message>
 	<message key="log.copyedit.copyeditorFile">Een tekstredacteurs-versie van de inzending is geladen.</message>
 	<message key="log.copyedit.authorFile">Een versie van de inzending die door de auteur geredigeerd is, is geladen.</message>
 
-	<message key="log.layout.layoutEditorAssigned">{$editorName} is als opmaakredacteur toegewezen aan inzending {$articleId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} is niet langer de opmaakredacteur van inzending {$articleId}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} heeft de opmaak van inzending {$articleId} afgerond.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} is als opmaakredacteur toegewezen aan inzending {$submissionId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} is niet langer de opmaakredacteur van inzending {$submissionId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} heeft de opmaak van inzending {$submissionId} afgerond.</message>
 
 	<message key="log.editor.metadataModified">De metadata voor deze inzending is gewijzigd door {$editorName}.</message>
 	<message key="log.editor.editorFile">Een redactieversie van de inzending is geladen.</message>
-	<message key="log.editor.archived">Inzending {$articleId} is gearchiveerd.</message>
-	<message key="log.editor.restored">Inzending {$articleId} staat weer in de wachtrij.</message>
-	<message key="log.editor.editorAssigned">{$editorName} is als redacteur toegekend aan de inzending {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} heeft het redactieproces van artikel {$articleId} versneld.</message>
+	<message key="log.editor.archived">Inzending {$submissionId} is gearchiveerd.</message>
+	<message key="log.editor.restored">Inzending {$submissionId} staat weer in de wachtrij.</message>
+	<message key="log.editor.editorAssigned">{$editorName} is als redacteur toegekend aan de inzending {$submissionId}.</message>
+	<message key="log.editor.submissionExpedited">{$editorName} heeft het redactieproces van artikel {$submissionId} versneld.</message>
 
-	<message key="log.proofread.assign">{$assignerName} heeft {$proofreaderName} aangwezen voor het proeflezen van inzending {$articleId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} heeft {$articleId} ingezonden voor inplannen.</message>
+	<message key="log.proofread.assign">{$assignerName} heeft {$proofreaderName} aangwezen voor het proeflezen van inzending {$submissionId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} heeft {$submissionId} ingezonden voor inplannen.</message>
 
-	<message key="log.imported">{$userName} heeft artikel {$articleId} geïmporteerd.</message>
+	<message key="log.imported">{$userName} heeft artikel {$submissionId} geïmporteerd.</message>
 
 	<!-- Reading Tools entries -->
 

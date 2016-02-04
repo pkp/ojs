@@ -396,7 +396,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="sectionEditor.proofreader.confirmRenotify">Thông báo cho Người soát lỗi này lần nữa sẽ bắt đầu lại việc giao bài. Quý vị có chắc chắn muốn làm điều này?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Từ chối</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} Từ chối phản biện, Hủy phản biện &amp; Các vòng phản biện trước</message>
+	<message key="sectionEditor.regrets.title">#{$submissionId} Từ chối phản biện, Hủy phản biện &amp; Các vòng phản biện trước</message>
 	<message key="sectionEditor.regrets">Từ chối</message>
 	<message key="sectionEditor.regrets.link">Xem các lần Từ chối, Hủy phản biện và các Vòng phản biện trước</message>
 	<message key="sectionEditor.regrets.reviewRound">Phản biện chuyên gia, Vòng {$round}</message>
@@ -725,47 +725,47 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<!-- Article Logs -->
 	<!-- Article Logs -->
 	<message key="log.author.submitted">Tác giả {$authorName} đã gửi một bài nộp, mã số (ID) {$submissionId}.</message>
-	<message key="log.author.documentRevised">Tác giả {$authorName} đã sửa lại bài viết mã số {$articleId}. Mã số (ID) mới của file là {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">Người phản biện {$reviewerName} không còn được giao phản biện bài nộp {$articleId} cho vòng phản biện thứ {$round}.</message>
-	<message key="log.review.reviewInitiated">Vòng phản biện thứ {$round} của {$reviewerName} của bài nộp {$articleId} đã được khởi động.</message>
-	<message key="log.review.reviewReinitiated">Vòng phản biện thứ {$round} của {$reviewerName} của bài nộp {$articleId} đã được khởi động lại.</message>
-	<message key="log.review.reviewCancelled">Vòng phản biện thứ {$round} của {$reviewerName} của bài nộp {$articleId} đã bị hủy.</message>
-	<message key="log.review.reviewCleared">Vòng phản biện thứ {$round} của {$reviewerName} của bài nộp {$articleId} đã bị xóa.</message>
-	<message key="log.review.reviewerRated">Người phản biện {$reviewerName} đã đánh giá cho vòng phản biện thứ {$round} của bài nộp {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">Thời hạn phản biện của vòng thứ {$round} của bài nộp {$articleId} do {$reviewerName} thực hiện đã được đổi thành {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">{$reviewerName} đã đưa ra khuyến nghị cho vòng phản biện thứ {$round} của bài nộp {$articleId}.</message>
-	<message key="log.review.reviewRecommendationSetByProxy"> BTV {$editorName}, thay mặt cho người phản biện {$reviewerName}, đã đưa ra khuyến nghị cho vòng phản biện thứ {$round} của bài nộp {$articleId}.</message>
-	<message key="log.review.resubmit">Bài nộp {$articleId} được được nộp lại lần nữa để phản biện.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} từ chối phản biện vòng thứ {$round} của bài nộp {$articleId}.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} đã đồng ý phản biện vòng thứ {$round} của bài nộp {$articleId}.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} đã đồng ý phản biện vòng thứ {$round} của bài nộp {$articleId} thay mặt cho người phản biện {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">BTV {$userName} đã tải lên file của người phản biện vòng thứ {$round} của bài nộp {$articleId} thay mặt người phản biện {$reviewerName}.</message>
+	<message key="log.author.documentRevised">Tác giả {$authorName} đã sửa lại bài viết mã số {$submissionId}. Mã số (ID) mới của file là {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">Người phản biện {$reviewerName} không còn được giao phản biện bài nộp {$submissionId} cho vòng phản biện thứ {$round}.</message>
+	<message key="log.review.reviewInitiated">Vòng phản biện thứ {$round} của {$reviewerName} của bài nộp {$submissionId} đã được khởi động.</message>
+	<message key="log.review.reviewReinitiated">Vòng phản biện thứ {$round} của {$reviewerName} của bài nộp {$submissionId} đã được khởi động lại.</message>
+	<message key="log.review.reviewCancelled">Vòng phản biện thứ {$round} của {$reviewerName} của bài nộp {$submissionId} đã bị hủy.</message>
+	<message key="log.review.reviewCleared">Vòng phản biện thứ {$round} của {$reviewerName} của bài nộp {$submissionId} đã bị xóa.</message>
+	<message key="log.review.reviewerRated">Người phản biện {$reviewerName} đã đánh giá cho vòng phản biện thứ {$round} của bài nộp {$submissionId}.</message>
+	<message key="log.review.reviewDueDateSet">Thời hạn phản biện của vòng thứ {$round} của bài nộp {$submissionId} do {$reviewerName} thực hiện đã được đổi thành {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">{$reviewerName} đã đưa ra khuyến nghị cho vòng phản biện thứ {$round} của bài nộp {$submissionId}.</message>
+	<message key="log.review.reviewRecommendationSetByProxy"> BTV {$editorName}, thay mặt cho người phản biện {$reviewerName}, đã đưa ra khuyến nghị cho vòng phản biện thứ {$round} của bài nộp {$submissionId}.</message>
+	<message key="log.review.resubmit">Bài nộp {$submissionId} được được nộp lại lần nữa để phản biện.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} từ chối phản biện vòng thứ {$round} của bài nộp {$submissionId}.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} đã đồng ý phản biện vòng thứ {$round} của bài nộp {$submissionId}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} đã đồng ý phản biện vòng thứ {$round} của bài nộp {$submissionId} thay mặt cho người phản biện {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">BTV {$userName} đã tải lên file của người phản biện vòng thứ {$round} của bài nộp {$submissionId} thay mặt người phản biện {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">File của người phản biện đã được tải lên.</message>
 
 
-	<message key="log.copyedit.initiate">BTV {$copyeditorName} đã bắt đầu biên tập bản thảo bài nộp {$articleId}.</message>
+	<message key="log.copyedit.initiate">BTV {$copyeditorName} đã bắt đầu biên tập bản thảo bài nộp {$submissionId}.</message>
 	<message key="log.copyedit.copyeditFileSet">File biên tập bản thảo mặc định đã được chọn.</message>
-	<message key="log.copyedit.initialEditComplete">BTV {$copyeditorName} đã hoàn thành lần biên tập bản thảo đầu tiên của bài nộp {$articleId}.</message>
-	<message key="log.copyedit.finalEditComplete">BTV {$copyeditorName} đã hoàn thành lần biên tập bản thảo cuối cùng của bài nộp {$articleId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">BTV {$copyeditorName} đã được giao biên tập bản thảo bài viết {$articleId}.</message>
+	<message key="log.copyedit.initialEditComplete">BTV {$copyeditorName} đã hoàn thành lần biên tập bản thảo đầu tiên của bài nộp {$submissionId}.</message>
+	<message key="log.copyedit.finalEditComplete">BTV {$copyeditorName} đã hoàn thành lần biên tập bản thảo cuối cùng của bài nộp {$submissionId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">BTV {$copyeditorName} đã được giao biên tập bản thảo bài viết {$submissionId}.</message>
 	<message key="log.copyedit.copyeditorFile">Phiên bản biên tập bản thảo của bài nộp đã được tải lên.</message>
 	<message key="log.copyedit.authorFile">Phiên bản do tác giả biên tập bản thảo đã được tải lên.</message>
 
-	<message key="log.layout.layoutEditorAssigned">BTV {$editorName} đã được giao trình bày bài nộp {$articleId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">BTV {$editorName} không còn được giao trình bày bài nộp {$articleId}.</message>
-	<message key="log.layout.layoutEditComplete">BTV {$editorName} đã hoàn thành trình bày bài nộp {$articleId}.</message>
+	<message key="log.layout.layoutEditorAssigned">BTV {$editorName} đã được giao trình bày bài nộp {$submissionId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">BTV {$editorName} không còn được giao trình bày bài nộp {$submissionId}.</message>
+	<message key="log.layout.layoutEditComplete">BTV {$editorName} đã hoàn thành trình bày bài nộp {$submissionId}.</message>
 
 	<message key="log.editor.metadataModified">BTV {$editorName} đã sửa dữ liệu mô tả bài viết này.</message>
 	<message key="log.editor.editorFile">Phiên bản bài nộp của BTV đã được tải lên.</message>
-	<message key="log.editor.archived">Bài nộp {$articleId} đã được lưu kho.</message>
-	<message key="log.editor.restored">Bài nộp {$articleId} đã được đưa lại danh sách đang xử lý.</message>
-	<message key="log.editor.editorAssigned">BTV {$editorName} đã được giao biên mục bài nộp {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">BTV {$editorName} làm tắt quá trình biên tập đối với bài nộp {$articleId}.</message>
+	<message key="log.editor.archived">Bài nộp {$submissionId} đã được lưu kho.</message>
+	<message key="log.editor.restored">Bài nộp {$submissionId} đã được đưa lại danh sách đang xử lý.</message>
+	<message key="log.editor.editorAssigned">BTV {$editorName} đã được giao biên mục bài nộp {$submissionId}.</message>
+	<message key="log.editor.submissionExpedited">BTV {$editorName} làm tắt quá trình biên tập đối với bài nộp {$submissionId}.</message>
 
-	<message key="log.proofread.assign">{$assignerName} đã giao {$proofreaderName} soát lỗi bài nộp {$articleId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} đã gửi bài nộp {$articleId} đi xếp bài.</message>
+	<message key="log.proofread.assign">{$assignerName} đã giao {$proofreaderName} soát lỗi bài nộp {$submissionId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} đã gửi bài nộp {$submissionId} đi xếp bài.</message>
 
-	<message key="log.imported">{$userName} đã nhập bài nộp {$articleId}.</message>
+	<message key="log.imported">{$userName} đã nhập bài nộp {$submissionId}.</message>
 
 	<!-- Reading Tools entries -->
 
@@ -1030,7 +1030,7 @@ Authors who publish with this journal agree to the following terms:
 	<message key="default.journalSettings.purchaseArticleFeeDescription">Việc trả phí này sẽ cho phép quý vị xem, tải xuống và in ra bài viết này.</message>
 	<message key="payment.alreadyPaidMessage">Chọn hộp này nếu quý vị đã trả tiền cho tạp chí nhằm kết thúc quá trình nộp bài. Bài nộp sẽ không được phản biện cho tới khi tạp chí nhận được tiền thanh toán. Nhấp chuột vào nút TRẢ TIỀN trên đây để biết hướng dẫn trả tiền.</message>
 	<message key="rt.admin.settings.addComment">Thêm lời bình</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} đã từ chối phản biện vòng {$round} cho bài viết {$articleId} thay {$reviewerName}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} đã từ chối phản biện vòng {$round} cho bài viết {$submissionId} thay {$reviewerName}.</message>
 	<message key="log.editor.decision">Quyết định của biên tập viên ({$decision}) đối với bài viết {$submissionId} đã được {$editorName} ghi lại.</message>
 	<message key="debug.notes.currencyListLoad">Danh sách tiền tệ "{$filename}" được tải từ XML</message>
 	<message key="default.journalSettings.waiverPolicy">Nếu quý vị không tiền để trả những khoản phí này, quý vị có cơ hội để được miễn từng loại phí. Chúng tôi không muốn vì lệ phí mà không xuất bản tác phẩm có giá trị.</message>

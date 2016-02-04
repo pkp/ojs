@@ -525,7 +525,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="sectionEditor.proofreader.confirmRenotify">Wenn Sie diese/n Korrekturlektor/in erneut benachrichtigen, beginnt ihre/seine Aufgabe erneut. Sind Sie sicher, dass Sie das wollen?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Absagen</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} Absagen durch Gutachter/innen, Abbrüche &amp; Frühere Durchgänge</message>
+	<message key="sectionEditor.regrets.title">#{$submissionId} Absagen durch Gutachter/innen, Abbrüche &amp; Frühere Durchgänge</message>
 	<message key="sectionEditor.regrets">Absagen</message>
 	<message key="sectionEditor.regrets.link">Absagen, Abbrüche, frühere Durchgänge anzeigen</message>
 	<message key="sectionEditor.regrets.reviewRound">Peer Review, Durchgang {$round}</message>
@@ -978,49 +978,49 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 
 	<!-- Protokolle - Beiträge -->
 	<message key="log.author.submitted">{$authorName} hat einen neuen Beitrag eingereicht, ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} hat den Artikel bearbeitet {$articleId}. Die neue Datei-ID ist {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">Der Beitrag {$articleId} wird nicht länger von {$reviewerName} im Durchgang {$round} begutachtet.</message>
-	<message key="log.review.reviewInitiated">Durchgang {$round} der Begutachtung von Beitrag {$articleId} durch {$reviewerName} hat begonnen.</message>
-	<message key="log.review.reviewReinitiated">Durchgang {$round} der Begutachtung von Beitrag {$articleId} durch {$reviewerName} wurde erneut begonnen.</message>
-	<message key="log.review.reviewCancelled">Durchgang {$round} der Begutachtung von Beitrag {$articleId} durch {$reviewerName} wurde abgebrochen.</message>
-	<message key="log.review.reviewCleared">Die Begutachtung von Beitrag {$articleId} in Durchgang {$round} durch {$reviewerName} wurde gelöscht.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} wurde beurteilt für Durchgang {$round} der Begutachtung von Beitrag {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">Abgabetermin für Durchgang {$round} der Begutachtung von Beitrag {$articleId} durch {$reviewerName} festgesetzt auf {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">Die Empfehlung für Durchgang {$round} der Begutachtung von Beitrag {$articleId} durch {$reviewerName} wurde abgegeben.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">Die Empfehlung für Durchgang {$round} der Begutachtung von Beitrag {$articleId} wurde von Redakteur/in {$editorName} im Auftrag der Gutachterin/des Gutachters {$reviewerName} abgegeben.</message>
-	<message key="log.review.resubmit">Beitrag {$articleId} wurde erneut zur Begutachtung eingereicht.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} hat die Begutachtung von Beitrag {$articleId} in Durchgang {$round} abgelehnt.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} hat die Begutachtung von Beitrag {$articleId} in Durchgang {$round} angenommen.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} hat die Begutachtung von Beitrag {$articleId} in Durchgang {$round} im Auftrag von {$reviewerName} abgelehnt.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} hat die Begutachtung von Beitrag {$articleId} in Durchgang {$round} im Auftrag von {$reviewerName} angenommen.</message>
-	<message key="log.review.reviewFileByProxy">Redakteur/in {$userName} hat die Begutachtungsdatei von Beitrag {$articleId} in Durchgang {$round} im Auftrag der Gutachterin/des Gutachters {$reviewerName} hochgeladen.</message>
+	<message key="log.author.documentRevised">{$authorName} hat den Artikel bearbeitet {$submissionId}. Die neue Datei-ID ist {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">Der Beitrag {$submissionId} wird nicht länger von {$reviewerName} im Durchgang {$round} begutachtet.</message>
+	<message key="log.review.reviewInitiated">Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} hat begonnen.</message>
+	<message key="log.review.reviewReinitiated">Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} wurde erneut begonnen.</message>
+	<message key="log.review.reviewCancelled">Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} wurde abgebrochen.</message>
+	<message key="log.review.reviewCleared">Die Begutachtung von Beitrag {$submissionId} in Durchgang {$round} durch {$reviewerName} wurde gelöscht.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} wurde beurteilt für Durchgang {$round} der Begutachtung von Beitrag {$submissionId}.</message>
+	<message key="log.review.reviewDueDateSet">Abgabetermin für Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} festgesetzt auf {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">Die Empfehlung für Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} wurde abgegeben.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">Die Empfehlung für Durchgang {$round} der Begutachtung von Beitrag {$submissionId} wurde von Redakteur/in {$editorName} im Auftrag der Gutachterin/des Gutachters {$reviewerName} abgegeben.</message>
+	<message key="log.review.resubmit">Beitrag {$submissionId} wurde erneut zur Begutachtung eingereicht.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} hat die Begutachtung von Beitrag {$submissionId} in Durchgang {$round} abgelehnt.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} hat die Begutachtung von Beitrag {$submissionId} in Durchgang {$round} angenommen.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} hat die Begutachtung von Beitrag {$submissionId} in Durchgang {$round} im Auftrag von {$reviewerName} abgelehnt.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} hat die Begutachtung von Beitrag {$submissionId} in Durchgang {$round} im Auftrag von {$reviewerName} angenommen.</message>
+	<message key="log.review.reviewFileByProxy">Redakteur/in {$userName} hat die Begutachtungsdatei von Beitrag {$submissionId} in Durchgang {$round} im Auftrag der Gutachterin/des Gutachters {$reviewerName} hochgeladen.</message>
 	<message key="log.review.reviewerFile">Begutachtungsdatei wurde hochgeladen.</message>
 	<message key="log.editor.decision">Eine Entscheidung ({$decision}) bezüglich Artikel {$submissionId} wurde von Redakteur/in {$editorName} abgegeben.</message>
 
 
-	<message key="log.copyedit.initiate">Lektorat von Beitrag {$articleId} wurde von {$copyeditorName} begonnen.</message>
+	<message key="log.copyedit.initiate">Lektorat von Beitrag {$submissionId} wurde von {$copyeditorName} begonnen.</message>
 	<message key="log.copyedit.copyeditFileSet">Die Standardbearbeitungsdatei wurde ausgewählt.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} hat das erste Lektorat von Beitrag {$articleId} fertiggestellt.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} hat das endgültige Lektorat von Beitrag {$articleId} fertiggestellt.</message>
-	<message key="log.copyedit.copyeditorAssigned"> Beitrag {$articleId} wurde {$copyeditorName} zum Lektorat zugewiesen.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} hat das erste Lektorat von Beitrag {$submissionId} fertiggestellt.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} hat das endgültige Lektorat von Beitrag {$submissionId} fertiggestellt.</message>
+	<message key="log.copyedit.copyeditorAssigned"> Beitrag {$submissionId} wurde {$copyeditorName} zum Lektorat zugewiesen.</message>
 	<message key="log.copyedit.copyeditorFile">Eine Lektoratsversion des Beitrags wurde hochgeladen.</message>
 	<message key="log.copyedit.authorFile">Von der Autorin/vom Autor lektorierte Beitragsdatei wurde hochgeladen.</message>
 
-	<message key="log.layout.layoutEditorAssigned">Beitrag {$articleId} wurde Layouter/in {$editorName} zugewiesen.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} ist nicht mehr Layouter/in von Beitrag {$articleId}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} hat das Layout von Beitrag {$articleId} abgeschlossen.</message>
+	<message key="log.layout.layoutEditorAssigned">Beitrag {$submissionId} wurde Layouter/in {$editorName} zugewiesen.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} ist nicht mehr Layouter/in von Beitrag {$submissionId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} hat das Layout von Beitrag {$submissionId} abgeschlossen.</message>
 
 	<message key="log.editor.metadataModified">Die Metadaten für den Beitrag wurden von {$editorName} verändert.</message>
 	<message key="log.editor.editorFile">Eine Redaktionsversion des Beitrags wurde hochgeladen.</message>
-	<message key="log.editor.archived">Beitrag {$articleId} wurde archiviert.</message>
-	<message key="log.editor.restored">Beitrag {$articleId} wurde wieder auf die Liste gesetzt.</message>
-	<message key="log.editor.editorAssigned">Beitrag {$articleId} wurde Redakteur/in {$editorName} zugewiesen.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} hat den Redaktionsprozess für Beitrag {$articleId} beschleunigt.</message>
+	<message key="log.editor.archived">Beitrag {$submissionId} wurde archiviert.</message>
+	<message key="log.editor.restored">Beitrag {$submissionId} wurde wieder auf die Liste gesetzt.</message>
+	<message key="log.editor.editorAssigned">Beitrag {$submissionId} wurde Redakteur/in {$editorName} zugewiesen.</message>
+	<message key="log.editor.submissionExpedited">{$editorName} hat den Redaktionsprozess für Beitrag {$submissionId} beschleunigt.</message>
 
-	<message key="log.proofread.assign">{$assignerName} hat Beitrag {$articleId} {$proofreaderName} zum Korrekturlektorat zugewiesen.</message>
-	<message key="log.proofread.complete">{$proofreaderName} hat Beitrag {$articleId} auf den Zeitplan gesetzt.</message>
+	<message key="log.proofread.assign">{$assignerName} hat Beitrag {$submissionId} {$proofreaderName} zum Korrekturlektorat zugewiesen.</message>
+	<message key="log.proofread.complete">{$proofreaderName} hat Beitrag {$submissionId} auf den Zeitplan gesetzt.</message>
 
-	<message key="log.imported">{$userName} hat Beitrag {$articleId} importiert.</message>
+	<message key="log.imported">{$userName} hat Beitrag {$submissionId} importiert.</message>
 
 	<!-- Lesewerkzeuge Angaben -->
 

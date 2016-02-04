@@ -48,7 +48,7 @@ Srdačno,<br />
 		<subject>Objavljen novi broj</subject>
 		<body><![CDATA[Poštovani čitatelji,<br />
 <br />
-upravo je objavljen novi broj časopisa {$contextName} koji je dostupan na adresi <a href="{$journalUrl}">{$journalUrl}</a>. Pozivamo vas da pregledate sadržaj broja i posjetite našu mrežnu stranicu kako bi pročitali vama zanimljive članke i druge priloge.<br />
+upravo je objavljen novi broj časopisa {$contextName} koji je dostupan na adresi <a href="{$contextUrl}">{$contextUrl}</a>. Pozivamo vas da pregledate sadržaj broja i posjetite našu mrežnu stranicu kako bi pročitali vama zanimljive članke i druge priloge.<br />
 <br />
 Hvala vam na interesu za naš rad,<br />
 {$editorialContactSignature}]]></body>
@@ -58,7 +58,7 @@ Hvala vam na interesu za naš rad,<br />
 		<subject>Zamolba za arhiviranje časopisa {$contextName}</subject>
 		<body><![CDATA[Poštovani [Knjižničar ustanove],<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt; je časopis s kojim zaposlenik vašeg fakulteta [ime zaposlenika] surađuje kao [titula]. Časopis pokušava, u ovoj i drugim knjižnicama u sustavu znanosti i visokog obrazovanja, uspostaviti arhivu u skladu s LOCKSS sustavom (Lots of Copies Keep Stuff Safe).<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; je časopis s kojim zaposlenik vašeg fakulteta [ime zaposlenika] surađuje kao [titula]. Časopis pokušava, u ovoj i drugim knjižnicama u sustavu znanosti i visokog obrazovanja, uspostaviti arhivu u skladu s LOCKSS sustavom (Lots of Copies Keep Stuff Safe).<br />
 <br />
 [Kratki opis časopisa]<br />
 <br />
@@ -74,7 +74,7 @@ Unaprijed hvala,<br />
 		<subject>Zamolba za arhiviranje časopisa {$contextName}</subject>
 		<body><![CDATA[Poštovani [Knjižničar ustanove],<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt; časopis je s kojim zaposlenik vašeg fakulteta [ime zaposlenika] surađuje kao [titula]. Časopis pokušava, u ovoj i drugim knjižnicama u sustavu znanosti i visokog obrazovanja, uspostaviti arhivu u skladu s LOCKSS sustavom (Lots of Copies Keep Stuff Safe).<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; časopis je s kojim zaposlenik vašeg fakulteta [ime zaposlenika] surađuje kao [titula]. Časopis pokušava, u ovoj i drugim knjižnicama u sustavu znanosti i visokog obrazovanja, uspostaviti arhivu u skladu s LOCKSS sustavom (Lots of Copies Keep Stuff Safe).<br />
 <br />
 [Kratki opis časopisa]<br />
 <br />
@@ -150,7 +150,7 @@ Unaprijed hvala,<br />
 <br />
 s obzirom na vaše iskustvo i područje ekspertize, rado bismo vam povjerili zadatak recenzije članka &quot;{$submissionTitle}&quot; prijavljenog u naš časopis {$contextName}. Sažetak članka nalazi se u nastavku ove poruke. Nadamo se da ćete prihvatiti našu ponudu te izvršiti ovu, za nas iznimno važnu, zadaću.<br />
 <br />
-Molimo vas da se kao korisnik prijavite na mrežnu stranicu časopisa do {$weekLaterDate} kako biste naznačili hoćete li preuzeti recenziju ili ne. Potom, ukoliko prihvatite izradu recenzije, na istome mjestu možete pristupiti tekstu članka te zabilježili vašu recenziju i preporuku. Mrežna stranica časopisa je <a href="{$journalUrl}">{$journalUrl}</a><br />
+Molimo vas da se kao korisnik prijavite na mrežnu stranicu časopisa do {$responseDueDate} kako biste naznačili hoćete li preuzeti recenziju ili ne. Potom, ukoliko prihvatite izradu recenzije, na istome mjestu možete pristupiti tekstu članka te zabilježili vašu recenziju i preporuku. Mrežna stranica časopisa je <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 U slučaju da nemate pri ruci svoje korisničko ime ili lozinku za mrežnu stranicu časopisa, možete se koristiti ovom poveznicom kako biste promijenili lozinku (koju ćemo vam tada, zajedno s korisničkim imenom, poslati putem e-pošte). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
 <br />
@@ -172,7 +172,7 @@ Srdačno,<br />
 <br />
 s obzirom na vaše iskustvo i područje ekspertize, rado bismo vam povjerili zadatak recenzije članka &quot;{$submissionTitle}&quot; prijavljenog u naš časopis {$contextName}. Sažetak članka nalazi se u nastavku ove poruke. Nadamo se da ćete prihvatiti našu ponudu te izvršiti ovu, za nas iznimno važnu, zadaću.<br />
 <br />
-Molimo vas da se kao korisnik prijavite na mrežnu stranicu časopisa do {$weekLaterDate} kako biste naznačili hoćete li preuzeti recenziju ili ne. Potom, ukoliko prihvatite izradu recenzije, na istome mjestu možete pristupiti tekstu članka te zabilježili vašu recenziju i preporuku.<br />
+Molimo vas da se kao korisnik prijavite na mrežnu stranicu časopisa do {$responseDueDate} kako biste naznačili hoćete li preuzeti recenziju ili ne. Potom, ukoliko prihvatite izradu recenzije, na istome mjestu možete pristupiti tekstu članka te zabilježili vašu recenziju i preporuku.<br />
 <br />
 Sama recenzija trebala bi biti završena zaključno s {$reviewDueDate}.<br />
 <br />
@@ -193,7 +193,7 @@ Srdačno,<br />
 s obzirom na vaše iskustvo i područje ekspertize, rado bismo vam povjerili zadatak recenzije članka &quot;{$submissionTitle}&quot; prijavljenog u naš časopis. Nadamo se da ćete prihvatiti našu ponudu te izvršiti ovu, za nas iznimno važnu, zadaću.<br />
 U nastavku teksta poruke nalaze se upute za recenzente našeg časopisa, a tekst članka nalazi se u prilogu. Od vas očekujemo da nam vašu recenziju članka, zajedno s preporukom dostavite e-poštom zaključno s {$reviewDueDate}.<br />
 <br />
-No prije svega, molimo vas da nam u odgovoru na ovu poruku e-poštom zaključno s datumom {$weekLaterDate} naznačite da li ste u mogućnosti i da li ste voljni izvršiti recenziju<br />
+No prije svega, molimo vas da nam u odgovoru na ovu poruku e-poštom zaključno s datumom {$responseDueDate} naznačite da li ste u mogućnosti i da li ste voljni izvršiti recenziju<br />
 <br />
 Srdačno,<br />
 {$editorialContactSignature}<br />
@@ -582,7 +582,7 @@ Srdačno,<br />
 	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
 		<subject>Broj dostupan pod uvjetima otvorenog pristupa</subject>
-		<body><![CDATA[Ovaj broj časopisa {$contextName} od sada je u cijelosti dostupan svim čitateljima pod uvjetima otvorenog pristupa. Pozivamo vas da pregledate kazalo sadržaja i potom posjetite našu mrežnu stranicu (<a href="{$journalUrl}">{$journalUrl}</a>) gdje možete bez ograničenja pregledati sve članke i priloge koji vas zanimaju.<br />
+		<body><![CDATA[Ovaj broj časopisa {$contextName} od sada je u cijelosti dostupan svim čitateljima pod uvjetima otvorenog pristupa. Pozivamo vas da pregledate kazalo sadržaja i potom posjetite našu mrežnu stranicu (<a href="{$contextUrl}">{$contextUrl}</a>) gdje možete bez ograničenja pregledati sve članke i priloge koji vas zanimaju.<br />
 <br />
 Hvala vam na zanimanju za naš rad,<br />
 {$editorialContactSignature}]]></body>

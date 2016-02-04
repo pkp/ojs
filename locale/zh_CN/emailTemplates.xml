@@ -112,7 +112,7 @@
 		<subject>新一期期刊已出版</subject>
 		<body><![CDATA[亲爱的读者您好：<br />
 <br />
-《{$contextName}》已经出版了最新一期的期刊，请见<a href="{$journalUrl}">{$journalUrl}</a>。我们诚挚地邀请您阅览这里的目录，并接着访问我们的网站以阅读各种文章以及有趣的项目。<br />
+《{$contextName}》已经出版了最新一期的期刊，请见<a href="{$contextUrl}">{$contextUrl}</a>。我们诚挚地邀请您阅览这里的目录，并接着访问我们的网站以阅读各种文章以及有趣的项目。<br />
 <br />
 感谢您持续地关注我们的作品，<br />
 {$editorialContactSignature}]]></body>
@@ -122,11 +122,11 @@
 		<subject>请存档《{$contextName}》</subject>
 		<body><![CDATA[Dear [University Librarian]<br />
 <br />
-《{$contextName}》 &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;是一份适合贵单位教职员的期刊：[成员名称]，[职称]。这份期刊正试着与这个图书馆与其他大学图书馆，共同建立一个符合洛克斯存档计划(LOCKSS; Lots of Copies Keep Stuff Safe)的检藏资料库。<br />
+《{$contextName}》 &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;是一份适合贵单位教职员的期刊：[成员名称]，[职称]。这份期刊正试着与这个图书馆与其他大学图书馆，共同建立一个符合洛克斯存档计划(LOCKSS; Lots of Copies Keep Stuff Safe)的检藏资料库。<br />
 <br />
 [期刊的简介]<br />
 <br />
-我们这份期刊在「洛克斯出版品一览」的网址是：<a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+我们这份期刊在「洛克斯出版品一览」的网址是：<a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 我们了解贵单位已经参与洛克斯计划。我们非常乐意提供任何额外的后设资料，以在贵单位的洛克斯版本中进行注册。<br />
 <br />
@@ -138,7 +138,7 @@
 		<subject>请存档《{$contextName}》</subject>
 		<body><![CDATA[亲爱的[大学图书馆]：<br />
 <br />
-《{$contextName}》 &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;是一份适合贵单位一位教职员的期刊：[成员名称]，[职称]。这份期刊正试着与这个图书馆与其他大学图书馆，共同建立一个符合洛克斯存档计划(LOCKSS; Lots of Copies Keep Stuff Safe)的检藏资料库。<br />
+《{$contextName}》 &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;是一份适合贵单位一位教职员的期刊：[成员名称]，[职称]。这份期刊正试着与这个图书馆与其他大学图书馆，共同建立一个符合洛克斯存档计划(LOCKSS; Lots of Copies Keep Stuff Safe)的检藏资料库。<br />
 <br />
 [期刊的简介]<br />
 <br />
@@ -209,7 +209,7 @@
 <br />
 《{$contextName}》的编辑团队相信您是投稿到本期刊之稿件〈{$submissionTitle}〉的最佳审查人选。该份稿件的摘要如下，而我们希望您会考虑进行这份对我们来说相当重要的一个工作。<br />
 <br />
-无论您是否接受审查工作与否，都请在{$weekLaterDate}之前登入这个期刊网站，同时检阅这份稿件并且记录您的审查意见和编辑建议。网站为：<a href="{$journalUrl}">{$journalUrl}</a><br />
+无论您是否接受审查工作与否，都请在{$responseDueDate}之前登入这个期刊网站，同时检阅这份稿件并且记录您的审查意见和编辑建议。网站为：<a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 请注意审查工作的期限为：{$reviewDueDate}。<br />
 <br />
@@ -235,7 +235,7 @@
 <br />
 《{$contextName}》的编辑团队相信您是投稿到本期刊之稿件〈{$submissionTitle}〉的最佳审查人选。该份稿件的摘要如下，而我们希望您会考虑进行这项对我们来说相当重要的工作。<br />
 <br />
-无论您是否接受审查工作与否，都请在{$weekLaterDate}之前登入这个期刊网站，同时检阅这份稿件并且记录您的审查意见和编辑建议。<br />
+无论您是否接受审查工作与否，都请在{$responseDueDate}之前登入这个期刊网站，同时检阅这份稿件并且记录您的审查意见和编辑建议。<br />
 <br />
 请注意审查工作的期限为：{$reviewDueDate}。<br />
 <br />
@@ -258,7 +258,7 @@
 <br />
 我相信您是投稿到本期刊之稿件〈{$submissionTitle}〉的最佳审查人选，而我们希望您会考虑进行这份对我们来说相当重要的一个工作。该份期刊的审查指引已经附列如下，而稿件随附在这封电子邮件的附加档案之中。如果您接受这份审查工作，麻烦您在{$reviewDueDate}之前，将您对这份稿件的审查意见书以及编辑建议寄给我们。<br />
 <br />
-无论您是否接受审查工作与否，都请在{$weekLaterDate}之内回复此封电子邮件给我们，告知我们您是否愿意进行审查工作。<br />
+无论您是否接受审查工作与否，都请在{$responseDueDate}之内回复此封电子邮件给我们，告知我们您是否愿意进行审查工作。<br />
 <br />
 非常感谢您考虑我们的邀请。<br />
 {$editorialContactSignature}<br />
@@ -514,7 +514,7 @@
 5. 点击元数据（METADATA），检查索引信息(保存任何更正).<br />
 6. 发送完成电子邮件给编辑.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 稿件URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 用户名: {$copyeditorUsername}<br />
 <br />
@@ -550,7 +550,7 @@
 2. 登录到期刊，并且使用排版版本文件根据期刊标准来创建样稿.<br />
 3. 发送完成稿件给编辑.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 稿件URL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
 用户名: {$layoutEditorUsername}<br />
 <br />
@@ -669,7 +669,7 @@
 3. 上传修订完的样稿.<br />
 4. 在校对步骤3里发送完成电邮给编辑.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Subnmission URL: {$submissionUrl}<br />
 Username: {$layoutEditorUsername}<br />
 <br />
@@ -728,7 +728,7 @@ Username: {$layoutEditorUsername}<br />
 		<subject>本期内容已经开放访问</subject>
 		<body><![CDATA[亲爱的读者您好：<br />
 <br />
-《{$contextName}》已经以开放访问的格式公开本期期刊内容。我们邀请您浏览这里所附的目录，并且接着访问我们的网站 (<a href="{$journalUrl}">{$journalUrl}</a>) ，阅读文章以及您感兴趣的项目。<br />
+《{$contextName}》已经以开放访问的格式公开本期期刊内容。我们邀请您浏览这里所附的目录，并且接着访问我们的网站 (<a href="{$contextUrl}">{$contextUrl}</a>) ，阅读文章以及您感兴趣的项目。<br />
 <br />
 感谢您持续地关注本期刊<br />
 <br />
@@ -903,7 +903,7 @@ This regards the manuscript &quot;{$submissionTitle},&quot; which is under consi
 <br />
 Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.<br />
 <br />
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$journalUrl}">{$journalUrl}</a><br />
+Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
@@ -932,7 +932,7 @@ Following the review of the previous version of the manuscript, the authors have
 <br />
 The Review Guidelines for this journal are appended below, and the submission is attached to this email. Your review of the submission, along with your recommendation, should be emailed to me by {$reviewDueDate}.<br />
 <br />
-Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.<br />
+Please indicate in a return email by {$responseDueDate} whether you are able and willing to do the review.<br />
 <br />
 Thank you for considering this request.<br />
 <br />
@@ -971,7 +971,7 @@ This regards the manuscript &quot;{$submissionTitle},&quot; which is under consi
 <br />
 Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.<br />
 <br />
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br />
+Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br />
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />

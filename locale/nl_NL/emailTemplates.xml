@@ -75,7 +75,7 @@ Dank u,<br />
 		<subject>Nieuw nummer gepubliceerd</subject>
 		<body><![CDATA[Lezers:<br />
 <br />
-{$contextName} heeft zijn nieuwste nummer gepubliceerd op <a href="{$journalUrl}">{$journalUrl}</a>. We nodigen u uit om de inhoudsopgave te bekijken en de website te bezoeken voor het bekijken van de artikelen en andere interessante items.<br />
+{$contextName} heeft zijn nieuwste nummer gepubliceerd op <a href="{$contextUrl}">{$contextUrl}</a>. We nodigen u uit om de inhoudsopgave te bekijken en de website te bezoeken voor het bekijken van de artikelen en andere interessante items.<br />
 <br />
 Dank voor uw interesse in ons werk,<br />
 {$editorialContactSignature}]]></body>
@@ -85,11 +85,11 @@ Dank voor uw interesse in ons werk,<br />
 		<subject>Verzoek tot archivering voor {$contextName}</subject>
 		<body><![CDATA[Beste [Universiteitsbibliothecaris]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt; is een tijdschrift waarvoor een lid van uw faculteit, [naam van het lid], fungeert als [titel van de positie]. Het tijdschrift streeft naar het starten van een LOCKSS (Lots of Copies Keep Stuff Safe) archief met deze en andere universiteitsbibliotheken.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; is een tijdschrift waarvoor een lid van uw faculteit, [naam van het lid], fungeert als [titel van de positie]. Het tijdschrift streeft naar het starten van een LOCKSS (Lots of Copies Keep Stuff Safe) archief met deze en andere universiteitsbibliotheken.<br />
 <br />
 [Korte beschrijving van het tijdschrift]<br />
 <br />
-De URL van het LOCKSS Publisher Manifest van ons tijdschrift is: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+De URL van het LOCKSS Publisher Manifest van ons tijdschrift is: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 We begrijpen dat u al deelneemt in LOCKSS. Als we additionele metadata kunnen leveren om ons tijdschrift bij uw versie van LOCKSS te registreren, zullen we die met alle genoegen leveren.<br />
 <br />
@@ -101,7 +101,7 @@ Dank u,<br />
 		<subject>Verzoek voor archivering van {$contextName}</subject>
 		<body><![CDATA[Beste [Universiteitsbibliothecaris]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, is een tijdschrift waarbij een lid van uw faculteit, [naam van het lid] fungeert als [totel van de positie]. Het tijdschrift streeft naar een LOCKSS (Lots of Copies Keep Stuff Safe) archief met deze en andere universiteitsbibliotheken.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, is een tijdschrift waarbij een lid van uw faculteit, [naam van het lid] fungeert als [totel van de positie]. Het tijdschrift streeft naar een LOCKSS (Lots of Copies Keep Stuff Safe) archief met deze en andere universiteitsbibliotheken.<br />
 <br />
 [Korte beschrijving van het tijdschrift]<br />
 <br />
@@ -173,7 +173,7 @@ Dank u,<br />
 <br />
 Ik geloof dat u een excellente reviewer zou zijn voor het manuscript &quot;{$submissionTitle}&quot; dat is ingestuurd bij {$contextName}. De samenvatting van de inzending staat hieronder. Ik hoop dat u wilt overwegen deze belangrijke taak voor ons uit te voeren.<br />
 <br />
-Wilt u voor {$weekLaterDate} inloggen op de website van het tijdschrift om aan te geven of u de review al of niet doet. Daar kunt u ook de inzending vinden en uw review en aanbeveling vastleggen. De website is <a href="{$journalUrl}">{$journalUrl}</a><br />
+Wilt u voor {$responseDueDate} inloggen op de website van het tijdschrift om aan te geven of u de review al of niet doet. Daar kunt u ook de inzending vinden en uw review en aanbeveling vastleggen. De website is <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 Het review wordt verwacht op {$reviewDueDate}.<br />
 <br />
@@ -198,7 +198,7 @@ Dank u voor het overwegen van dit verzoek.<br />
 <br />
 Ik geloof dat u een excellente reviewer zou zijn voor het manuscript &quot;{$submissionTitle}&quot; dat is ingestuurd bij {$contextName}. De samenvatting van de inzending staat hieronder. Ik hoop dat u wilt overwegen deze belangrijke taak voor ons uit te voeren.<br />
 <br />
-Wilt u voor {$weekLaterDate} inloggen op de website van het tijdschrift om aan te geven of u de review al of niet doet. Daar kunt u ook de inzending vinden en uw review en aanbeveling vastleggen.<br />
+Wilt u voor {$responseDueDate} inloggen op de website van het tijdschrift om aan te geven of u de review al of niet doet. Daar kunt u ook de inzending vinden en uw review en aanbeveling vastleggen.<br />
 <br />
 Het review wordt verwacht op {$reviewDueDate}.<br />
 <br />
@@ -221,7 +221,7 @@ Dank u voor het overwegen van dit verzoek.<br />
 <br />
 Ik geloof dat u een excellente reviewer zou zijn voor het manuscript &quot;{$submissionTitle}&quot; en ik wil u vragen om te overwegen deze belangrijke taak voor ons uit te voeren. De review richtlijnen voor dit tijdschrift staan hieronder en de inzending is als bijlage meegestuurd. Uw review van de inzending en uw aanbeveling zou naar mij gemaild moeten zijn op {$reviewDueDate}.<br />
 <br />
-Wilt u voor {$weekLaterDate} in een retourbericht aangeven of u bereid en in staat bent om deze review te doen.<br />
+Wilt u voor {$responseDueDate} in een retourbericht aangeven of u bereid en in staat bent om deze review te doen.<br />
 <br />
 Dank u voor het overwegen van dit verzoek.<br />
 <br />
@@ -339,7 +339,7 @@ Ik wil u vragen om de teksredactie uit te voeren voor artikel &quot;{$submission
 5. Bewaar het bewerkte bestand en laad het bij stap 1 van Tekstredactie.<br />
 6. Stuur de GEREED e-mail naar de redacteur.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL inzending: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Gerbruikersnaam: {$copyeditorUsername}<br />
 <br />
@@ -431,7 +431,7 @@ De auteur en redacteur hebben de opmaak-review van &quot;{$submissionTitle}&quot
 5. Klik op METADATA om de indexeringsinformatie te controleren (bewaar alle aanpassingen).<br />
 6. Stuur de GEREED e-mail naar de redacteur.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL inzending: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Gebruikersnaam: {$copyeditorUsername}<br />
 <br />
@@ -465,7 +465,7 @@ De proeven van inzending &quot;{$submissionTitle}&quot; bij {$contextName} kunne
 2. Log in bij het tijdschrift en gebruik het Layout versie bestand om de proeven aan te maken conform de regels van het tijdschrift.<br />
 3. Stuur de GEREED e-mail naar de redacteur.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL inzending: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
 Gebruikersnaam: {$layoutEditorUsername}<br />
 <br />
@@ -579,7 +579,7 @@ De inzending &quot;{$submissionTitle}&quot; bij {$contextName} is proefgelezen d
 3. Laad de herziene proeven.<br />
 4. Stuur de GEREED e-mail in Proeflezen stap 3 naar de redacteur.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL inzending: {$submissionUrl}<br />
 Gebruikersnaam: {$layoutEditorUsername}<br />
 <br />
@@ -634,7 +634,7 @@ Als vragen heeft, neemt u dan alstublieft contact met me op.<br />
 		<subject>Nummer nu Open Access</subject>
 		<body><![CDATA[Lezers:<br />
 <br />
-{$contextName} heeft het volgende nummer in open access beschikbaar gesteld. We nodigen u uit om de inhoudsopgave te bekijken en onze website te bezoeken (<a href="{$journalUrl}">{$journalUrl}</a>) voor de items en artikelen die u interesseren.<br />
+{$contextName} heeft het volgende nummer in open access beschikbaar gesteld. We nodigen u uit om de inhoudsopgave te bekijken en onze website te bezoeken (<a href="{$contextUrl}">{$contextUrl}</a>) voor de items en artikelen die u interesseren.<br />
 <br />
 Bedankt voor de interesse in ons werk,<br />
 {$editorialContactSignature}]]></body>
@@ -872,7 +872,7 @@ Dit betreft het manuscript &quot;{$submissionTitle},&quot; dat wordt overwogen d
 <br />
 Na de review van een vorige versie van hun manuscript hebben de auteurs een gereviseerde versie ingestuurd. We zouden het waarderen als u wilt helpen die te evalueren.<br />
 <br />
-Gelieve in te loggen op de website van het tijdschrift vóór {$weekLaterDate} om aan te geven of u deze review wilt doen of niet, alsmede om toegang te krijgen tot de inzending en uw bevindingen en aanbeveling vast te leggen. De website is <a href="{$journalUrl}">{$journalUrl}</a><br />
+Gelieve in te loggen op de website van het tijdschrift vóór {$responseDueDate} om aan te geven of u deze review wilt doen of niet, alsmede om toegang te krijgen tot de inzending en uw bevindingen en aanbeveling vast te leggen. De website is <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 De revieuw moet gereed zijn op {$reviewDueDate}.<br />
 <br />
@@ -899,7 +899,7 @@ Dit betreft het manuscript &quot;{$submissionTitle},&quot; dat wordt overwogen d
 <br />
 Na een review van een eerdere versie van het manuscript hebben de auteurs een gereviseerde versie van hun manuscript ingestuurd. We zouden het waarderen als u wilt helpen die te evalueren.<br />
 <br />
-Log in op de website van het tijdschrift vóór {$weekLaterDate} om aan te geven of u de review wilt doen en om de inzending te benaderen en uw review en aanbeveling vast te leggen.<br />
+Log in op de website van het tijdschrift vóór {$responseDueDate} om aan te geven of u de review wilt doen en om de inzending te benaderen en uw review en aanbeveling vast te leggen.<br />
 <br />
 Het review moet binnen zijn op {$reviewDueDate}.<br />
 URL van de inzending: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
@@ -925,7 +925,7 @@ Na een review van een eerdere versie van het manuscript hebben de auteurs een ge
 <br />
 De Review richtlijnen voor dit tijdschrift staan hieronder en de inzending is bijgevoegd bij deze e-mail. Uw review van de inzending en uw aanbeveling, zouden uiterlijk op {$reviewDueDate} naar mij gemaild moeten worden.<br />
 <br />
-Gelieve mij voor {$weekLaterDate} per e-mail te laten weten of u deze review kunt en wilt doen.<br />
+Gelieve mij voor {$responseDueDate} per e-mail te laten weten of u deze review kunt en wilt doen.<br />
 <br />
 Dank u voor het overwegen van dit verzoek.<br />
 <br />

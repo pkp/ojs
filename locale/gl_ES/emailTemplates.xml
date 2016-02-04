@@ -48,7 +48,7 @@ Moi agradecidos,<br />
 		<subject>Novo número publicado</subject>
 		<body><![CDATA[Estimados/as lectores/as:<br />
 <br />
-{$contextName} ven de publicar o seu último número en <a href="{$journalUrl}">{$journalUrl}</a>. A continuación mostrámosche a táboa de contidos, logo podes visitar a páxina web para consultar os artigos do teu interese.<br />
+{$contextName} ven de publicar o seu último número en <a href="{$contextUrl}">{$contextUrl}</a>. A continuación mostrámosche a táboa de contidos, logo podes visitar a páxina web para consultar os artigos do teu interese.<br />
 <br />
 Benzóns por manter o teu interese no noso traballo,<br />
 {$editorialContactSignature}]]></body>
@@ -77,7 +77,7 @@ Se ten outra pregunta no dubides  en contactar connosco<br />
 		<subject>Nestre intre o Número é de Acceso Libre</subject>
 		<body><![CDATA[Lectores:<br />
 <br />
-	{$contextName} acaba de facer disponibel en acceso libre o número seguinte. Convidámoste a revisar a Táboa de Contido e a visitar a nosa páxina web  (<a href="{$journalUrl}">{$journalUrl}</a>) para consultar os artigoss o teu interese.<br />
+	{$contextName} acaba de facer disponibel en acceso libre o número seguinte. Convidámoste a revisar a Táboa de Contido e a visitar a nosa páxina web  (<a href="{$contextUrl}">{$contextUrl}</a>) para consultar os artigoss o teu interese.<br />
 	<br />
 	Benzóns por manter o teu interese no noso traballo,<br />
 	{$editorialContactSignature}]]></body>
@@ -136,11 +136,11 @@ Se ten outra pregunta no dubides  en contactar connosco<br />
 		<subject>Petición de Archivado para {$contextName}</subject>
 		<body><![CDATA[Estimado/a [Bibliotecaria/o Universitaria/o]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, é unha revista na que un membro de túa Facultade/Universidade, [nome da persoa], colabora como [responsabilidade, cargo, función]. A revista está a tentar crear un arquivo LOCKSS (Lots of Copies Keep Stuff Safe) con esta e outras bibliotecas universitarias.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, é unha revista na que un membro de túa Facultade/Universidade, [nome da persoa], colabora como [responsabilidade, cargo, función]. A revista está a tentar crear un arquivo LOCKSS (Lots of Copies Keep Stuff Safe) con esta e outras bibliotecas universitarias.<br />
 <br />
 [Breve descrición da revista]<br />
 <br />
-A URL para o Manifesto Editorial LOCKSS para a nosa revista é: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+A URL para o Manifesto Editorial LOCKSS para a nosa revista é: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Entendemos que xa está a participar en LOCKSS. Se podemos proporcionarlle metadados adicionais para rexistrar a nosa revista coa súa versión de LOCKSS, estaremos satisfeitos de o facer.<br />
 <br />
@@ -152,7 +152,7 @@ Benzóns,<br />
 		<subject>Petición de archivo para {$contextName}</subject>
 		<body><![CDATA[Estimado/a [Bibliotecario/a Universitario/a]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, é unha revista na que un membro de túa Facultade/Universidade, [nome da persoa], colabora como [responsabilidade, cargo, función]. A revista está a tentar crear un arquivo LOCKSS (Lots of Copies Keep Stuff Safe) con esta e outras bibliotecas universitarias.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, é unha revista na que un membro de túa Facultade/Universidade, [nome da persoa], colabora como [responsabilidade, cargo, función]. A revista está a tentar crear un arquivo LOCKSS (Lots of Copies Keep Stuff Safe) con esta e outras bibliotecas universitarias.<br />
 <br />
 [Breve descrición da revista]<br />
 <br />
@@ -223,7 +223,7 @@ Benzóns,<br />
 <br />
 Teño o convencimento de que serías un/unha excelente revisor/a do manuscrito, &quot;{$submissionTitle},&quot; que foi enviado a {$contextName}. A continuación atoparás un extracto do envío, coa esperanza de que aceptarás levar a cabo esta importante tarefa para nós.<br />
 <br />
-Por favor, identifícate na revista antes de {$weekLaterDate} para decirnos si farás ou non a revisión e para teres acceso ao envío e poder rexistrar a túa revisión e recomendacións. O enderezo é <a href="{$journalUrl}">{$journalUrl}</a><br />
+Por favor, identifícate na revista antes de {$responseDueDate} para decirnos si farás ou non a revisión e para teres acceso ao envío e poder rexistrar a túa revisión e recomendacións. O enderezo é <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 A revisión debe estar lista para o {$reviewDueDate}.<br />
 <br />
@@ -249,7 +249,7 @@ Resumen<br />
 				<br />
 Teño o convencimento de que serías un/unha excelente revisor/a do manuscrito, &quot;{$submissionTitle},&quot; que foi enviado a {$contextName}. A continuación atoparás un extracto do envío, coa esperanza de que aceptarás levar a cabo esta importante tarefa para nós.<br />
 <br />
-Por favor, identifícate na revista antes de {$weekLaterDate} para decirnos si farás ou non a revisión e para teres acceso ao envío e poder rexistrar a túa revisión e recomendacións. O enderezo é <a href="{$journalUrl}">{$journalUrl}</a><br />
+Por favor, identifícate na revista antes de {$responseDueDate} para decirnos si farás ou non a revisión e para teres acceso ao envío e poder rexistrar a túa revisión e recomendacións. O enderezo é <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 A revisión debe estar lista para o {$reviewDueDate}.<br />
 <br />
@@ -275,7 +275,7 @@ Resumen<br />
 <br />
 Teño o convencimento de que serías un/unha excelente revisor/a do manuscrito, &quot;{$submissionTitle},&quot; que foi enviado a {$contextName}.A continuación atoparás un extracto do envío, coa esperanza de que aceptarás levar a cabo esta importante tarefa para nós. A continuación mostrámosche as Normas de Revisión desta revista e adxunto a este correo recibirás o envío. Deberías enviarme por correo electrónico a túa revisión do envío e as túas recomendacións antes do {$reviewDueDate}.<br />
 <br />
-Prégoche unha respota a este correo electrónico antes do {$weekLaterDate} e me comuniques se podes e queres facer a revisión.<br />
+Prégoche unha respota a este correo electrónico antes do {$responseDueDate} e me comuniques se podes e queres facer a revisión.<br />
 <br />
 Benzóns por ter en conta a nosa solicitude.<br />
 <br />

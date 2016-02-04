@@ -51,7 +51,7 @@ Agradecendo desde já a atenção dispensada,<br />
 		<subject>{$contextName} publica nova edição</subject>
 		<body><![CDATA[Caros leitores,<br />
 <br />
-A revista {$contextName} acaba de publicar seu último número, disponível em <a href="{$journalUrl}">{$journalUrl}</a>. Convidamos a navegar no sumário da revista para acessar os artigos e outros itens de seu interesse.<br />
+A revista {$contextName} acaba de publicar seu último número, disponível em <a href="{$contextUrl}">{$contextUrl}</a>. Convidamos a navegar no sumário da revista para acessar os artigos e outros itens de seu interesse.<br />
 <br />
 Agradecemos seu interesse e apoio contínuo em nosso trabalho,<br />
 {$editorialContactSignature}]]></body>
@@ -81,7 +81,7 @@ Em caso de dúvidas, entre em contato via e-mail.<br />
 		<subject>Nova edição de Acesso Livre da revista {$contextName}</subject>
 		<body><![CDATA[Caros leitores,<br />
 <br />
-A {$contextName} acaba de tornar disponível para Acesso Livre mais uma edição. Convidamos a examinar o sumário nesta mensagem e então acessar a revista (<a href="{$journalUrl}">{$journalUrl}</a>), para ler os artigos e outros itens de seu proveito.<br />
+A {$contextName} acaba de tornar disponível para Acesso Livre mais uma edição. Convidamos a examinar o sumário nesta mensagem e então acessar a revista (<a href="{$contextUrl}">{$contextUrl}</a>), para ler os artigos e outros itens de seu proveito.<br />
 <br />
 Agradecemos o interesse e apoio contínuo à revista,<br />
 {$editorialContactSignature}]]></body>
@@ -140,11 +140,11 @@ Em caso de dúvidas, entre em contato via e-mail.<br />
 		<subject>Solicitação para incluir a revista {$contextName} em seu arquivo</subject>
 		<body><![CDATA[&lt;![CDATA[Prezada(o) [Nome da(o) Bibliotecária(o) da Universidade],<br />
 <br />
-{$contextName} &lt;<a href="{$journalUrl}">{$journalUrl}</a>&gt; é uma revista na qual um docente da sua instituição, [nome da pessoa], possui o papel editorial de [título do papel editorial]. Esta revista deseja estabelecer arquivamento por meio do LOCKSS (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) com esta e outras bibliotecas de instituições de ensino superior.<br />
+{$contextName} &lt;<a href="{$contextUrl}">{$contextUrl}</a>&gt; é uma revista na qual um docente da sua instituição, [nome da pessoa], possui o papel editorial de [título do papel editorial]. Esta revista deseja estabelecer arquivamento por meio do LOCKSS (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) com esta e outras bibliotecas de instituições de ensino superior.<br />
 <br />
 [Breve descrição da revista]<br />
 <br />
-A URL do Manifesto LOCKSS da Editora da nossa revista é: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+A URL do Manifesto LOCKSS da Editora da nossa revista é: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Consta do nosso registro que esta biblioteca é participante do sistema LOCKSS. Estamos à disposição caso necessite de metadados adicionais para o cadastro da revista na sua versão do LOCKSS, os quais providenciaremos o mais rápido possível.<br />
 <br />
@@ -158,7 +158,7 @@ Agradecendo desde já a atenção dispensada,<br />
 		<subject>Solicitação de inclusão da revista {$contextName} em seu arquivo</subject>
 		<body><![CDATA[&lt;![CDATA[Prezada(o) [Nome da(o) Bibliotecária(o) da Universidade],<br />
 <br />
-{$contextName} &lt;<a href="{$journalUrl}">{$journalUrl}</a>&gt; é uma revista na qual um docente da sua instituição, [nome da pessoa], possui o papel editorial de [título do papel editorial]. Esta revista deseja estabelecer arquivamento por meio do LOCKSS (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) com esta e outras bibliotecas de instituições de ensino superior.<br />
+{$contextName} &lt;<a href="{$contextUrl}">{$contextUrl}</a>&gt; é uma revista na qual um docente da sua instituição, [nome da pessoa], possui o papel editorial de [título do papel editorial]. Esta revista deseja estabelecer arquivamento por meio do LOCKSS (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) com esta e outras bibliotecas de instituições de ensino superior.<br />
 <br />
 [Breve descrição da revista]<br />
 <br />
@@ -242,7 +242,7 @@ Agradecendo desde já a atenção dispensada,<br />
 <br />
 Acredito que seu conhecimento será fundamental para realizar a avaliação do trabalho &quot;{$submissionTitle}&quot; submetido a {$contextName}. Informações sobre a submissão encontram-se nesta mensagem, e espero que considere assumir esta importante responsabilidade.<br />
 <br />
-Acesse o sistema até {$weekLaterDate} para informar se estará disponível ou não para realizar a avaliação, bem como acessar os dados completos da submissão e registrar sua avaliação e recomendações, por meio da URL <a href="{$journalUrl}">{$journalUrl}</a>.<br />
+Acesse o sistema até {$responseDueDate} para informar se estará disponível ou não para realizar a avaliação, bem como acessar os dados completos da submissão e registrar sua avaliação e recomendações, por meio da URL <a href="{$contextUrl}">{$contextUrl}</a>.<br />
 <br />
 O prazo para a conclusão da avaliação é {$reviewDueDate}.<br />
 <br />
@@ -273,7 +273,7 @@ Resumo<br />
 <br />
 Acredito que seu conhecimento será fundamental para realizar a avaliação do manuscrito &quot;{$submissionTitle}&quot; submetido a {$contextName}. Informações sobre a submissão encontram-se abaixo, e espero que considere assumir esta importante responsabilidade.<br />
 <br />
-Acesse o sistema até {$weekLaterDate} para informar se estará disponível ou não para realizar a avaliação, bem como acessar os dados completos da submissão e registrar sua avaliação e recomendações.<br />
+Acesse o sistema até {$responseDueDate} para informar se estará disponível ou não para realizar a avaliação, bem como acessar os dados completos da submissão e registrar sua avaliação e recomendações.<br />
 <br />
 O prazo para a entrega da avaliação é {$reviewDueDate}.<br />
 <br />
@@ -305,7 +305,7 @@ Acredito que seu conhecimento será fundamental para realizar a avaliação do t
 As diretrizes de avaliação encontram-se no final desta mensagem, e a submissão encontra-se em anexo.<br />
 O prazo para avaliar a submissão, bem como definir sua recomendação, devem ser enviadas via e-mail até {$reviewDueDate}.<br />
 <br />
-Responda a esta mensagem até {$weekLaterDate} se estará disponível ou não para realizar a avaliação.<br />
+Responda a esta mensagem até {$responseDueDate} se estará disponível ou não para realizar a avaliação.<br />
 <br />
 Espero que considere assumir esta importante responsabilidade.<br />
 <br />
@@ -450,7 +450,7 @@ Solicito a edição de texto do trabalho&quot;{$submissionTitle}&quot;, submetid
 5. Salve o arquivo editado e envie o arquivo no Passo 1.<br />
 5. Clique no ícone de e-mail sob CONCLUÍDO e envie a mensagem ao editor.<br />
 <br />
-URL da revista {$contextName}: <a href="{$journalUrl}">{$journalUrl}</a><br />
+URL da revista {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL da Submissão: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Login: {$copyeditorUsername}<br />
 <br />
@@ -559,7 +559,7 @@ A versão final deverá ser preparada para envio ao estágio de Layout, conforme
 5. Clique em METADADOS para avaliar a qualidade da indexação do documento (salvando quaisquer alterações).<br />
 6. Clique no ícone de e-mail sob CONCLUÍDO e envie a mensagem ao editor.<br />
 <br />
-URL da revista {$contextName}: <a href="{$journalUrl}">{$journalUrl}</a><br />
+URL da revista {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL da submissão: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Login: {$copyeditorUsername}<br />
 <br />
@@ -600,7 +600,7 @@ Solicito a preparação das composições do manuscrito &quot;{$submissionTitle}
 2. Acesse o sistema e, usando a Versão de Layout como referência, produza as composições de acordo com os padrões desta revista.<br />
 3. Clique no ícone de e-mail sob CONCLUÍDO e envie a mensagem ao editor.<br />
 <br />
-URL da revista {$contextName}: <a href="{$journalUrl}">{$journalUrl}</a><br />
+URL da revista {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL da Submissão: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
 Login: {$layoutEditorUsername}<br />
 <br />
@@ -735,7 +735,7 @@ As correções devem agora ser incorporadas conforme instruções a seguir:<br /
 3. Envie as composições corrigidas.<br />
 4. Clique no ícone de e-mail sob CONCLUÍDO no Passo 3 da seção Leitura de provas, e envie a mensagem ao editor.<br />
 <br />
-URL da revista {$contextName}: <a href="{$journalUrl}">{$journalUrl}</a><br />
+URL da revista {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL da Submissão: {$submissionUrl}<br />
 Login: {$layoutEditorUsername}<br />
 <br />
@@ -1001,7 +1001,7 @@ Esta mensagem está relacionada ao trabalho &quot;{$submissionTitle},&quot; que 
 <br />
 Seguindo o processo de de avaliação da versão anterior, os autores encaminharam uma versão revisada. Nos seria de grande valia se pudesse ajudar a avaliar essa nova versão.<br />
 <br />
-Para tanto, acesse o sistema da revista até {$weekLaterDate} para indicar se aceita ou não assumir a avaliação, bem como acessar os dados da submissão e registrar sua avaliação e recomendação. O site da revista é <a href="{$journalUrl}">{$journalUrl}</a><br />
+Para tanto, acesse o sistema da revista até {$responseDueDate} para indicar se aceita ou não assumir a avaliação, bem como acessar os dados da submissão e registrar sua avaliação e recomendação. O site da revista é <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 A avaliação deve ser concluída até{$reviewDueDate}.<br />
 <br />
@@ -1028,7 +1028,7 @@ Esta mensagem é referente ao trabalho &quot;{$submissionTitle}&quot;, que está
 <br />
 Continuando o processo de avaliação da versão anterior do trabalho, os autores enviaram uma versão revisada. Nos seria de grande valia se pudesse ajudara a avaliá-lo.<br />
 <br />
-Para tanto, acesse o sistema da revista até {$weekLaterDate} para indicar se está disponível ou não para assumir a responsabilidade, bem como acessar os dados da submissão e registrar sua avaliação e recomendação.<br />
+Para tanto, acesse o sistema da revista até {$responseDueDate} para indicar se está disponível ou não para assumir a responsabilidade, bem como acessar os dados da submissão e registrar sua avaliação e recomendação.<br />
 <br />
 A avaliação deve ser concluída até {$reviewDueDate}.<br />
 <br />
@@ -1055,7 +1055,7 @@ Seguindo o processo de avaliação do trabalho, os autores encaminharam uma vers
 <br />
 As Diretrizes para Avaliação estão apensas a e a submissão como anexo a esta mensaagem. Sua avaliação, bem como recomendação, devem ser enviadas para este e-mail até {$reviewDueDate}.<br />
 <br />
-Responda a esta mensagem até {$weekLaterDate} indicando sua disponibilidade ou não para realizar a avaliação.<br />
+Responda a esta mensagem até {$responseDueDate} indicando sua disponibilidade ou não para realizar a avaliação.<br />
 <br />
 Agradecendo desde já a atenção dispensada,<br />
 <br />

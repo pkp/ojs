@@ -376,7 +376,7 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<message key="sectionEditor.proofreader.confirmRenotify">Notificar o leitor de prova novamente reiniciará a tarefa. Deseja realmente reiniciar a tarefa?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Arrependimentos</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} Histórico da avaliação</message>
+	<message key="sectionEditor.regrets.title">#{$submissionId} Histórico da avaliação</message>
 	<message key="sectionEditor.regrets">Arrependimentos</message>
 	<message key="sectionEditor.regrets.link">Ver histórico da avaliação</message>
 	<message key="sectionEditor.regrets.reviewRound">Avaliação pelos pares, rodada {$round}</message>
@@ -697,47 +697,47 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} submeteu um novo documento, ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} revisou o artigo {$articleId}. O novo ID é {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} liberada(o) da rodada {$round} de avaliação da submissão {$articleId}.</message>
-	<message key="log.review.reviewInitiated">Iniciada a rodada {$round} de avaliação da submissão {$articleId}, designada a {$reviewerName}.</message>
-	<message key="log.review.reviewReinitiated">Iniciada novamente a rodada {$round} de avaliação da submissão {$articleId}, designada a {$reviewerName}.</message>
-	<message key="log.review.reviewCancelled">Cancelada a rodada {$round} de avaliação da submissão {$articleId}, designada a {$reviewerName}.</message>
-	<message key="log.review.reviewCleared">{$reviewerName} foi liberada(o) da rodada {$round} de avaliação da submissão {$articleId}.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} recebeu classificação para a rodada {$round} de avaliação da submissão {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">Definido para {$dueDate} o prazo para conclusão da rodada {$round} de avaliação da submissão {$articleId}, designada a {$reviewerName}.</message>
-	<message key="log.review.reviewRecommendationSet">{$reviewerName} definiu a recomendação para a rodada {$round} de avaliação da submissão {$articleId}.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">O editor {$editorName} definiu a recomendação em nome do avaliador {$reviewerName}, para a rodada {$round} de avaliação da submissão {$articleId}.</message>
-	<message key="log.review.resubmit">Submissão {$articleId} enviada novamente para avaliação.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} não está disponível para avaliar a rodada {$round} da submissão {$articleId}.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} está disponível para a rodada de avaliação {$round} da submissão {$articleId}.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} está disponível para a rodada de avaliação {$round} da submissão {$articleId}, substituindo {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">O editor {$userName} enviou um documento de avaliação em nome do avaliador {$reviewerName}, para a rodada {$round} da submissão {$articleId}.</message>
+	<message key="log.author.documentRevised">{$authorName} revisou o artigo {$submissionId}. O novo ID é {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} liberada(o) da rodada {$round} de avaliação da submissão {$submissionId}.</message>
+	<message key="log.review.reviewInitiated">Iniciada a rodada {$round} de avaliação da submissão {$submissionId}, designada a {$reviewerName}.</message>
+	<message key="log.review.reviewReinitiated">Iniciada novamente a rodada {$round} de avaliação da submissão {$submissionId}, designada a {$reviewerName}.</message>
+	<message key="log.review.reviewCancelled">Cancelada a rodada {$round} de avaliação da submissão {$submissionId}, designada a {$reviewerName}.</message>
+	<message key="log.review.reviewCleared">{$reviewerName} foi liberada(o) da rodada {$round} de avaliação da submissão {$submissionId}.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} recebeu classificação para a rodada {$round} de avaliação da submissão {$submissionId}.</message>
+	<message key="log.review.reviewDueDateSet">Definido para {$dueDate} o prazo para conclusão da rodada {$round} de avaliação da submissão {$submissionId}, designada a {$reviewerName}.</message>
+	<message key="log.review.reviewRecommendationSet">{$reviewerName} definiu a recomendação para a rodada {$round} de avaliação da submissão {$submissionId}.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">O editor {$editorName} definiu a recomendação em nome do avaliador {$reviewerName}, para a rodada {$round} de avaliação da submissão {$submissionId}.</message>
+	<message key="log.review.resubmit">Submissão {$submissionId} enviada novamente para avaliação.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} não está disponível para avaliar a rodada {$round} da submissão {$submissionId}.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} está disponível para a rodada de avaliação {$round} da submissão {$submissionId}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} está disponível para a rodada de avaliação {$round} da submissão {$submissionId}, substituindo {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">O editor {$userName} enviou um documento de avaliação em nome do avaliador {$reviewerName}, para a rodada {$round} da submissão {$submissionId}.</message>
 	<message key="log.review.reviewerFile">Versão para Avaliação obrigatória.</message>
 
 
-	<message key="log.copyedit.initiate">Iniciada a Edição de Texto da submissão {$articleId} por {$copyeditorName}.</message>
+	<message key="log.copyedit.initiate">Iniciada a Edição de Texto da submissão {$submissionId} por {$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">O documento padrão para edição de texto foi definido.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} concluiu a edição de texto inicial da submissão {$articleId}.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} concluiu a edição de texto final da submissão {$articleId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} designada(o) para Edição de Texto da submissão {$articleId}.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} concluiu a edição de texto inicial da submissão {$submissionId}.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} concluiu a edição de texto final da submissão {$submissionId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} designada(o) para Edição de Texto da submissão {$submissionId}.</message>
 	<message key="log.copyedit.copyeditorFile">A versão de edição de texto foi enviada.</message>
 	<message key="log.copyedit.authorFile">A versão de edição de texto do autor foi enviada.</message>
 
-	<message key="log.layout.layoutEditorAssigned">{$editorName} designada(o) como editor de layout da submissão {$articleId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} liberada(o) da edição de layout da submissão {$articleId}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} concluiu a edição de layout da submissão {$articleId}.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} designada(o) como editor de layout da submissão {$submissionId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} liberada(o) da edição de layout da submissão {$submissionId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} concluiu a edição de layout da submissão {$submissionId}.</message>
 
 	<message key="log.editor.metadataModified">Os metadados foram modificados por {$editorName}.</message>
 	<message key="log.editor.editorFile">A versão de editor foi enviada.</message>
-	<message key="log.editor.archived">A submissão {$articleId} foi arquivada.</message>
-	<message key="log.editor.restored">A submissão {$articleId} foi restaurada para a fila.</message>
-	<message key="log.editor.editorAssigned">{$editorName} foi designada(o) como editor da submissão {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} agilizou o processo de edição para o artigo {$articleId}.</message>
+	<message key="log.editor.archived">A submissão {$submissionId} foi arquivada.</message>
+	<message key="log.editor.restored">A submissão {$submissionId} foi restaurada para a fila.</message>
+	<message key="log.editor.editorAssigned">{$editorName} foi designada(o) como editor da submissão {$submissionId}.</message>
+	<message key="log.editor.submissionExpedited">{$editorName} agilizou o processo de edição para o artigo {$submissionId}.</message>
 
-	<message key="log.proofread.assign">{$assignerName} designou {$proofreaderName} para a leitura de provas da submissão {$articleId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} enviou {$articleId} para agendamento.</message>
+	<message key="log.proofread.assign">{$assignerName} designou {$proofreaderName} para a leitura de provas da submissão {$submissionId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} enviou {$submissionId} para agendamento.</message>
 
-<message key="log.imported">{$userName} importou o documento {$articleId}.</message>
+<message key="log.imported">{$userName} importou o documento {$submissionId}.</message>
 
 	<!-- Reading Tools entries -->
 
@@ -859,7 +859,7 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="payment.subscription.renew">Renovar Assinatura</message>
 	<message key="payment.subscription.expires">Vencimento</message>
 	<message key="installer.databaseSettingsInstructions">O sistema exige acesso a uma base de dados SQL para armazenar seus dados. Verifique os requisitos do sistema para a lista de bases de dados suportadas. Nos campos a seguir, informe as configurações a serem utilizadas para conexão ao servidor de bases de dados.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} marcou indisponibilidade na rodada {$round} para avaliar a submissão {$articleId} em nome de {$reviewerName}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} marcou indisponibilidade na rodada {$round} para avaliar a submissão {$submissionId} em nome de {$reviewerName}.</message>
 	<message key="log.editor.decision">A Decisão Editorial ({$decision}) sobre a submissão {$submissionId} foi registrada por {$editorName}.</message>
 	<message key="rt.admin.settings.addComment">Incluir comentários (Permite a publicação de comentários pelos leitores, permitindo a exclusão pelo Editor-Gerente).</message>
 	<message key="rt.admin.settings.addComment.authenticated">Usuários devem estar cadastrados e logados para comentar, sem permissão de anonimato.</message>

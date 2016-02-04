@@ -53,7 +53,7 @@ Grazie,<br />
 		<subject>Pubblicato un nuovo fascicolo</subject>
 		<body><![CDATA[Gentile lettore,<br />
 <br />
-All'indirizzo <a href="{$journalUrl}">{$journalUrl}</a> è appena stato pubblicato un nuovo numero di {$contextName}.<br />
+All'indirizzo <a href="{$contextUrl}">{$contextUrl}</a> è appena stato pubblicato un nuovo numero di {$contextName}.<br />
 <br />
 Grazie per l'interesse dimostratoci,<br />
 {$editorialContactSignature}]]></body>
@@ -82,11 +82,11 @@ Per qualsiasi domanda non esitare a contattarmi.<br />
 		<subject>Richiesta di archiviazione per {$contextName}</subject>
 		<body><![CDATA[&lt;![CDATA[Caro [Bibliotecario dell'Universita']<br />
 <br />
-{$contextName} &lt;<a href="{$journalUrl}">{$journalUrl}</a>&gt;, &amp;#x00E8; una rivista a cui un membro della vostra facolt&amp;#x00E0;, [nome del membro], collabora come [posizione]  sta cercando di instaurare un archivio condiviso LOCKSS (Lots of Copies Keep Stuff Safe) con questa e altre biblioteche universitarie.<br />
+{$contextName} &lt;<a href="{$contextUrl}">{$contextUrl}</a>&gt;, &amp;#x00E8; una rivista a cui un membro della vostra facolt&amp;#x00E0;, [nome del membro], collabora come [posizione]  sta cercando di instaurare un archivio condiviso LOCKSS (Lots of Copies Keep Stuff Safe) con questa e altre biblioteche universitarie.<br />
 <br />
 [Breve descrizione del journal]<br />
 <br />
-La URL al manifesto di pubblicazione del LOCKSS  per il nostro journal &amp;#x00E8;: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+La URL al manifesto di pubblicazione del LOCKSS  per il nostro journal &amp;#x00E8;: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Comprendiamo che state gi&amp;#x00E0; partecipando al LOCKSS. Se possiamo fornire qualsiasi metadato aggiuntivo per scopi di registrazione al nostro journal con la vostra versione del LOCKSS, saremo felici di fornirvelo.<br />
 <br />
@@ -98,7 +98,7 @@ Grazie,<br />
 		<subject>Archiviare richiesta per {$contextName}</subject>
 		<body><![CDATA[Cara [biblioteca universitaria]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, &amp;amp;#x00E8; un journal per cui un membro della vostra facolt&amp;amp;#x00E0;, [nome del membro], presta servizio come [posizione]. Il journal sta cercando di instaurare un archivio condiviso LOCKSS (Lots of Copies Keep Stuff Safe) con questa e altre biblioteche universitarie.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, &amp;amp;#x00E8; un journal per cui un membro della vostra facolt&amp;amp;#x00E0;, [nome del membro], presta servizio come [posizione]. Il journal sta cercando di instaurare un archivio condiviso LOCKSS (Lots of Copies Keep Stuff Safe) con questa e altre biblioteche universitarie.<br />
 <br />
 [Breve descrizione del journal]<br />
 <br />
@@ -177,8 +177,8 @@ Grazie,<br />
 <br />
 Ti propongo la revisione del manoscritto &quot;{$submissionTitle},&quot; che è stato proposto a {$contextName}. L'abstract della submission  è inserito qui sotto. Spero che vorrai prendere in carico questo compito.<br />
 <br />
-Ti chiedo quindi di effettuare il log in al sito web della rivista entro il {$weekLaterDate} per indicare se prenderai in carico la revisione o meno.<br />
-Potrai poi accedere alla submission e inviare il tuo parere. Il sito web è <a href="{$journalUrl}">{$journalUrl}</a><br />
+Ti chiedo quindi di effettuare il log in al sito web della rivista entro il {$responseDueDate} per indicare se prenderai in carico la revisione o meno.<br />
+Potrai poi accedere alla submission e inviare il tuo parere. Il sito web è <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 La data di scadenza per la revisione è fissata al {$reviewDueDate}.<br />
 <br />
@@ -204,7 +204,7 @@ Abstract<br />
 <br />
 Ti propongo la revisione del manoscritto &quot;{$submissionTitle},&quot; che è stato inviato a {$contextName}. L'abstract della proposta è più sotto. Spero che vorrai prendere in carico questo compito.<br />
 <br />
-Ti chiedo quindi di effettuare il log in al sito web della rivista entro il {$weekLaterDate} per indicare se prenderai in carico la revisione o meno. Potrai poi accedere alla submission e inviare il tuo parere.<br />
+Ti chiedo quindi di effettuare il log in al sito web della rivista entro il {$responseDueDate} per indicare se prenderai in carico la revisione o meno. Potrai poi accedere alla submission e inviare il tuo parere.<br />
 <br />
 La data di scadenza per la revisione è fissata al {$reviewDueDate}.<br />
 <br />
@@ -231,7 +231,7 @@ Le linee guida per la revisione sono indicate sotto e il file della submission �
 <br />
 Puoi comunicarmi il tuo parere per posta elettronica entro il {$reviewDueDate}.<br />
 <br />
-Ti chiedo di farmi sapere entro il {$weekLaterDate} e accetti o meno l'incarico di revisione.<br />
+Ti chiedo di farmi sapere entro il {$responseDueDate} e accetti o meno l'incarico di revisione.<br />
 <br />
 Grazie per la tua collaborazione<br />
 <br />
@@ -624,7 +624,7 @@ pubblicato in {$contextName}, Vol. {$volume}, N. {$number} ({$year}) e disponibi
 <br />
 {$contextName} ha appena reso disponibile ad accesso aperto un fascicolo.<br />
 <br />
-Ti invitiamo dunque a visitare il sito web (<a href="{$journalUrl}">{$journalUrl}</a>) per trovare articoli e altre risorse di tuo interesse.<br />
+Ti invitiamo dunque a visitare il sito web (<a href="{$contextUrl}">{$contextUrl}</a>) per trovare articoli e altre risorse di tuo interesse.<br />
 <br />
 Grazie per l'interesse dimolstrato nei nostri confronti,<br />
 {$editorialContactSignature}]]></body>
@@ -953,7 +953,7 @@ ti scrivo riguardo alla proposta &quot;{$submissionTitle},&quot; che è in revis
 <br />
 Seguendo i suggerimenti emersi in precedenza, l'autore ha modificato il manoscritto e inviato una nuova versione. Ti sarei grato se volessi aiutarci a valutarla.<br />
 <br />
-Ti prego quindi di accedere al sito entro il {$weekLaterDate} per comunicare se ti incaricherai o meno della revisione e poi per accedere alla proposta e registrare il tuo parere. Il sito è <a href="{$journalUrl}">{$journalUrl}</a><br />
+Ti prego quindi di accedere al sito entro il {$responseDueDate} per comunicare se ti incaricherai o meno della revisione e poi per accedere alla proposta e registrare il tuo parere. Il sito è <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 La data di scadenza per l'incarico di revisione è il {$reviewDueDate}.<br />
 <br />
@@ -980,7 +980,7 @@ Ti scrivo riguardo al manoscritto &quot;{$submissionTitle},&quot; in corso di re
 <br />
 L'autore ha inviato una nuova versione, modificata secondo i suggerimenti ricevuti dai revisori. Tu sarei grato se volessi aiutarci a valutarla.<br />
 <br />
-Ti chiedo di autenticarti al sito {$weekLaterDate} per indicarmi se intendi accettare l'incarico o meno e poi per accedere alla proposta e registrare il tuo parere.<br />
+Ti chiedo di autenticarti al sito {$responseDueDate} per indicarmi se intendi accettare l'incarico o meno e poi per accedere alla proposta e registrare il tuo parere.<br />
 <br />
 La data di scadenza è il {$reviewDueDate}.<br />
 <br />
@@ -1007,7 +1007,7 @@ Seguendo i suggerimenti ricevuti dai revisori, lautore ha inviato una nuova vers
 <br />
 Più sotto trovi le Linee guida sulla revisione e il file del manoscritto è in allegato. Puoi inviarmi la revisione e il tuo parere sulla proposta via email, entro il  {$reviewDueDate}.<br />
 <br />
-Perfavore informami entro il {$weekLaterDate} se accetti o meno l'incarico.<br />
+Perfavore informami entro il {$responseDueDate} se accetti o meno l'incarico.<br />
 <br />
 Grazie della disponibilià<br />
 {$editorialContactSignature}<br />

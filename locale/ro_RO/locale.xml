@@ -593,7 +593,7 @@ Activ însemnă câte evaluări sunt în prezent luate în considerare sau în d
 	<message key="sectionEditor.proofreader.confirmRenotify">Trimițând din nou o înștiințare acestui corector, va reiniția sarcina acestuia. Ești sigur că dorești să faci asta?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Regrete</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} Regretele evaluatorului, anulări &amp; sesiuni anterioare</message>
+	<message key="sectionEditor.regrets.title">#{$submissionId} Regretele evaluatorului, anulări &amp; sesiuni anterioare</message>
 	<message key="sectionEditor.regrets">Regrete</message>
 	<message key="sectionEditor.regrets.link">Vezi regretele, anulările, sesiunile anterioare</message>
 	<message key="sectionEditor.regrets.reviewRound">Peer Review, sesiunea {$round}</message>
@@ -1050,49 +1050,49 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} a introdus o nouă propunere cu ID-ul {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} a revizuit articolul {$articleId}. Noul ID al fişierului este {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} a fost dezangajat din evaluarea propunerii {$articleId} pentru sesiunea de evaluare {$round}.</message>
-	<message key="log.review.reviewInitiated">Sesiunea {$round} de evaluare făcută de {$reviewerName} pentru propunerea {$articleId} a fost iniţializată.</message>
-	<message key="log.review.reviewReinitiated">Sesiunea {$round} de evaluare făcută de {$reviewerName} pentru propunerea {$articleId} a fost reiniţializată.</message>
-	<message key="log.review.reviewCancelled">Sesiunea {$round} de evaluare făcută de {$reviewerName} pentru propunerea {$articleId} a fost anulată.</message>
-	<message key="log.review.reviewCleared">Sesiunea {$round} de evaluare făcută de {$reviewerName} pentru propunerea {$articleId} a fost soluţionată.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} a fost cotat pentru sesiunea {$round} de evaluare a propunerii {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">Data limită a sesiunii {$round} de evaluare a propunerii {$articleId} făcută de {$reviewerName} a fost stabilită până la {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">A fost dată recomandarea pentru sesiunea {$round} de evaluare a propunerii {$articleId} făcută de {$reviewerName}.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">Recomandarea pentru sesiunea {$round} de evaluare a propunerii {$articleId} a fost stabilită de redactorul {$editorName} în numele evaluatorului {$reviewerName}.</message>
-	<message key="log.review.resubmit">Propunerea {$articleId} a fost retrimisă pentru evaluare.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} a respins sesiunea {$round} de evaluare pentru propunerea {$articleId}.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} a acceptat sesiunea {$round} de evaluare pentru propunerea {$articleId}.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} a respins sesiunea {$round} de evaluare pentru propunerea {$articleId} în numele lui {$reviewerName}.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} a acceptat sesiunea {$round} de evaluare pentru propunerea {$articleId} în numele lui {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">Redactorul {$userName} a încărcat un fişier de evaluare pentru sesiunea {$round} pentru propunerea {$articleId} în numele lui {$reviewerName}.</message>
+	<message key="log.author.documentRevised">{$authorName} a revizuit articolul {$submissionId}. Noul ID al fişierului este {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} a fost dezangajat din evaluarea propunerii {$submissionId} pentru sesiunea de evaluare {$round}.</message>
+	<message key="log.review.reviewInitiated">Sesiunea {$round} de evaluare făcută de {$reviewerName} pentru propunerea {$submissionId} a fost iniţializată.</message>
+	<message key="log.review.reviewReinitiated">Sesiunea {$round} de evaluare făcută de {$reviewerName} pentru propunerea {$submissionId} a fost reiniţializată.</message>
+	<message key="log.review.reviewCancelled">Sesiunea {$round} de evaluare făcută de {$reviewerName} pentru propunerea {$submissionId} a fost anulată.</message>
+	<message key="log.review.reviewCleared">Sesiunea {$round} de evaluare făcută de {$reviewerName} pentru propunerea {$submissionId} a fost soluţionată.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} a fost cotat pentru sesiunea {$round} de evaluare a propunerii {$submissionId}.</message>
+	<message key="log.review.reviewDueDateSet">Data limită a sesiunii {$round} de evaluare a propunerii {$submissionId} făcută de {$reviewerName} a fost stabilită până la {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">A fost dată recomandarea pentru sesiunea {$round} de evaluare a propunerii {$submissionId} făcută de {$reviewerName}.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">Recomandarea pentru sesiunea {$round} de evaluare a propunerii {$submissionId} a fost stabilită de redactorul {$editorName} în numele evaluatorului {$reviewerName}.</message>
+	<message key="log.review.resubmit">Propunerea {$submissionId} a fost retrimisă pentru evaluare.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} a respins sesiunea {$round} de evaluare pentru propunerea {$submissionId}.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} a acceptat sesiunea {$round} de evaluare pentru propunerea {$submissionId}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} a respins sesiunea {$round} de evaluare pentru propunerea {$submissionId} în numele lui {$reviewerName}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} a acceptat sesiunea {$round} de evaluare pentru propunerea {$submissionId} în numele lui {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">Redactorul {$userName} a încărcat un fişier de evaluare pentru sesiunea {$round} pentru propunerea {$submissionId} în numele lui {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">A fost încărcat fişierul de evaluare.</message>
 	<message key="log.editor.decision">Decizia ({$decision}) unui redactor pentru articolul {$submissionId} a fost înregistrată de {$editorName}.</message>
 
 
-	<message key="log.copyedit.initiate">(Tehno)redactarea propunerii {$articleId} a fost începută de {$copyeditorName}.</message>
+	<message key="log.copyedit.initiate">(Tehno)redactarea propunerii {$submissionId} a fost începută de {$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">A fost ales fişierul iniţial pentru tehnoredactare.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} a încheiat corectura iniţială pentru propunerea {$articleId}.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} a încheiat corectura finală pentru propunerea {$articleId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} a fost angajat în (tehno)redactarea propunerii {$articleId}.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} a încheiat corectura iniţială pentru propunerea {$submissionId}.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} a încheiat corectura finală pentru propunerea {$submissionId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} a fost angajat în (tehno)redactarea propunerii {$submissionId}.</message>
 	<message key="log.copyedit.copyeditorFile">A fost încărcată o versiune a fişierului de propunere de către un (tehno)redactor.</message>
 	<message key="log.copyedit.authorFile">A fost încărcată de către autor o versiune (tehno)redactată a fişierului de propunere.</message>
 
-	<message key="log.layout.layoutEditorAssigned">{$editorName} a fost angajat ca redactor de machetă pentru propunerea {$articleId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} a fost dezangajat ca redactor de machetă pentru propunerea {$articleId}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} a încheiat machetarea pentru propunerea {$articleId}.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} a fost angajat ca redactor de machetă pentru propunerea {$submissionId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} a fost dezangajat ca redactor de machetă pentru propunerea {$submissionId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} a încheiat machetarea pentru propunerea {$submissionId}.</message>
 
 	<message key="log.editor.metadataModified">Metadatele pentru acest articol au fost modificate de {$editorName}.</message>
 	<message key="log.editor.editorFile">A fost încărcată o versiune a redactorului pentru fişierului propunerii.</message>
-	<message key="log.editor.archived">Propunerea {$articleId} a fost arhivată.</message>
-	<message key="log.editor.restored">Propunerea {$articleId} a fost restaurată în lista de prelucrare.</message>
-	<message key="log.editor.editorAssigned">{$editorName} a fost angajat ca redactor al propunerii {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} a urgentat procesul de redactare pentru articolul {$articleId}.</message>
+	<message key="log.editor.archived">Propunerea {$submissionId} a fost arhivată.</message>
+	<message key="log.editor.restored">Propunerea {$submissionId} a fost restaurată în lista de prelucrare.</message>
+	<message key="log.editor.editorAssigned">{$editorName} a fost angajat ca redactor al propunerii {$submissionId}.</message>
+	<message key="log.editor.submissionExpedited">{$editorName} a urgentat procesul de redactare pentru articolul {$submissionId}.</message>
 
-	<message key="log.proofread.assign">{$assignerName} l-a angajat pe {$proofreaderName} să corecteze propunerea {$articleId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} a trimis {$articleId} pentru programare.</message>
+	<message key="log.proofread.assign">{$assignerName} l-a angajat pe {$proofreaderName} să corecteze propunerea {$submissionId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} a trimis {$submissionId} pentru programare.</message>
 
-	<message key="log.imported">{$userName} a importat articolul {$articleId}.</message>
+	<message key="log.imported">{$userName} a importat articolul {$submissionId}.</message>
 
 	<!-- Reading Tools entries -->
 

@@ -50,7 +50,7 @@ Merci,<br />
 		<subject>Parution du dernier numéro</subject>
 		<body><![CDATA[Lecteurs:<br />
 <br />
-Le plus récent numéro de {$contextName} vient d'être publié à l'adresse suivante : <a href="{$journalUrl}">{$journalUrl}</a>. Nous vous invitons à consulter la table des matières, puis à visiter notre site Web pour y lire les articles qui vous intéressent.<br />
+Le plus récent numéro de {$contextName} vient d'être publié à l'adresse suivante : <a href="{$contextUrl}">{$contextUrl}</a>. Nous vous invitons à consulter la table des matières, puis à visiter notre site Web pour y lire les articles qui vous intéressent.<br />
 <br />
 Nous vous remercions de l'intérêt que vous portez à notre revue,<br />
 {$editorialContactSignature}]]></body>
@@ -60,11 +60,11 @@ Nous vous remercions de l'intérêt que vous portez à notre revue,<br />
 		<subject>Demande d'archivage pour {$contextName}</subject>
 		<body><![CDATA[&lt;![CDATA[Cher [Bibliothécaire universitaire]<br />
 <br />
-{$contextName} &lt;<a href="{$journalUrl}">{$journalUrl}</a>&gt; est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la position occupée]. La revue désire mettre en place un système d'archivage conforme LOCKSS (Lots of Copies Keep Stuff Safe - Plusieurs exemplaires qui assurent la sécurité) avec votre bibliothèque universitaire ainsi que celles d'autres universités.<br />
+{$contextName} &lt;<a href="{$contextUrl}">{$contextUrl}</a>&gt; est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la position occupée]. La revue désire mettre en place un système d'archivage conforme LOCKSS (Lots of Copies Keep Stuff Safe - Plusieurs exemplaires qui assurent la sécurité) avec votre bibliothèque universitaire ainsi que celles d'autres universités.<br />
 <br />
 [Brève description de la revue]<br />
 <br />
-L'adresse URL pour le LOCKSS Publisher Manifest pour notre revue est: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+L'adresse URL pour le LOCKSS Publisher Manifest pour notre revue est: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Nous savons que vous participez déjà à LOCKSS. Si nous pouvons vous fournir des métadonnées supplémentaires afin d'inscrire notre revue avec votre version de LOCKSS, il nous fera plaisir de vous les fournir.<br />
 <br />
@@ -76,7 +76,7 @@ Merci,<br />
 		<subject>Demande d'archivage pour {$contextName}</subject>
 		<body><![CDATA[&lt;![CDATA[Cher [Bibliothécaire universitaire]<br />
 <br />
-{$contextName}, &lt;<a href="{$journalUrl}">{$journalUrl}</a>&gt;, est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la fonction occupée]. La revue désire mettre en place un système d'archivage conforme LOCKSS (Lots of Copies Keep Stuff Safe) avec votre bibliothèque universitaire et celles d'autres universités.<br />
+{$contextName}, &lt;<a href="{$contextUrl}">{$contextUrl}</a>&gt;, est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la fonction occupée]. La revue désire mettre en place un système d'archivage conforme LOCKSS (Lots of Copies Keep Stuff Safe) avec votre bibliothèque universitaire et celles d'autres universités.<br />
 <br />
 [Brève description de la revue]<br />
 <br />
@@ -150,7 +150,7 @@ Merci,<br />
 <br />
 Nous croyons que vous seriez un excellent évaluateur pour le manuscrit intitulé « {$submissionTitle} » qui a été soumis à la revue {$contextName}. Vous trouverez un résumé de la soumission ci-dessous.  Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.<br />
 <br />
-Veuillez accéder au site Web de la revue avant le {$weekLaterDate} pour nous laisser savoir si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : <a href="{$journalUrl}">{$journalUrl}</a><br />
+Veuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous laisser savoir si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 La date d'échéance de l'évaluation a été fixée au {$reviewDueDate}.<br />
 <br />
@@ -176,7 +176,7 @@ En espérant que vous accepterez notre demande, veuillez agréer l'expression de
 <br />
 Nous croyons que vous seriez un excellent évaluateur pour le manuscrit intitulé « {$submissionTitle} » qui a été soumis à la revue {$contextName}. Vous trouverez un résumé de la soumission ci-dessous.  Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.<br />
 <br />
-Veuillez accéder au site Web de la revue avant le {$weekLaterDate} pour nous informer si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : <a href="{$journalUrl}">{$journalUrl}</a><br />
+Veuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous informer si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 Date limite pour l'évaluation {$reviewDueDate}.<br />
 <br />
@@ -200,7 +200,7 @@ En espérant que vous accepterez notre demande, veuillez agréer l'expression de
 <br />
 Nous croyons que vous feriez un excellent évaluateur pour le manuscrit intitulé « {$submissionTitle} ».  Nous espérons que vous accepterez ce travail important pour notre revue. Les Directives pour l'évaluation se trouvent ci-dessous et la soumission est jointe au présent courriel.<br />
 <br />
-Veuillez nous faire savoir par courriel d'ici le {$weekLaterDate} si vous acceptez ou non d'effectuer cette évaluation.<br />
+Veuillez nous faire savoir par courriel d'ici le {$responseDueDate} si vous acceptez ou non d'effectuer cette évaluation.<br />
 <br />
 En espérant que vous accepterez notre demande, veuillez agréer l'expression de notre considération distinguée.<br />
 <br />
@@ -318,7 +318,7 @@ J'aimerais que vous effectuiez la révision du manuscrit intitulé « {$submissi
 5. Enregistrer le fichier révisé, et télécharger à l'Étape 1 de la révision.<br />
 6. Envoyer le courriel TERMINÉ au rédacteur.<br />
 <br />
-URL de {$contextName} : <a href="{$journalUrl}">{$journalUrl}</a><br />
+URL de {$contextName} : <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL de la soumission : <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Nom d'utilisateur : {$copyeditorUsername}<br />
 <br />
@@ -410,7 +410,7 @@ L'auteur et le rédacteur ont complété la revue de la révision de « {$submis
 5. Cliquer sur MÉTADONNÉES pour vérifier l'information d'indexation (en enregistrant toutes les corrections).<br />
 6. Envoyer le courriel TERMINÉ au rédacteur.<br />
 <br />
-URL de {$contextName} : <a href="{$journalUrl}">{$journalUrl}</a><br />
+URL de {$contextName} : <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL de la soumission : <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Nom d'utilisateur : {$copyeditorUsername}<br />
 <br />
@@ -444,7 +444,7 @@ J'aimerais que vous prépariez les épreuves du manuscrit intitulé « {$submiss
 2. Se connecter au site Web de la revue et utiliser la version de mise en page du fichier pour créer les épreuves en fonction des normes de la revue.<br />
 3. Envoyer le courriel TERMINÉ au rédacteur.<br />
 <br />
-URL de {$contextName} : <a href="{$journalUrl}">{$journalUrl}</a><br />
+URL de {$contextName} : <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL du manuscrit : <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
 Nom d'utilisateur : {$layoutEditorUsername}<br />
 <br />
@@ -555,7 +555,7 @@ Nous aimerions que vous insériez les modifications nécessaires à la suite de 
 3.Télécharger les épreuves corrigées.<br />
 4. Envoyer le courriel TERMINÉ de l'Étape 3 de Correction d'épreuves au rédacteur.<br />
 <br />
-URL de {$contextName} : <a href="{$journalUrl}">{$journalUrl}</a><br />
+URL de {$contextName} : <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL du manuscrit : {$submissionUrl}<br />
 Nom d'utilisateur : {$layoutEditorUsername}<br />
 <br />
@@ -610,7 +610,7 @@ Si vous avez des questions, n'hésitez pas à communiquer avec moi.<br />
 		<subject>Le numéro est maintenant à accès libre</subject>
 		<body><![CDATA[Chers lecteurs et lectrices :<br />
 <br />
-{$contextName} vient de rendre disponible en format libre accès le numéro suivant. Nous vous invitons à lire la table des matières ici puis visiter notre site Web (<a href="{$journalUrl}">{$journalUrl}</a>) pour lire les articles et autres textes qui pourraient vous intéresser.<br />
+{$contextName} vient de rendre disponible en format libre accès le numéro suivant. Nous vous invitons à lire la table des matières ici puis visiter notre site Web (<a href="{$contextUrl}">{$contextUrl}</a>) pour lire les articles et autres textes qui pourraient vous intéresser.<br />
 <br />
 Merci de votre intérêt continu pour notre travail,<br />
 {$editorialContactSignature}]]></body>
