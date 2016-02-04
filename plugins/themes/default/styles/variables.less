@@ -14,19 +14,13 @@
 //
 
 // Background
-@lift:                   #fff;
-@bg-base:                #007ab2;
-                         // Compiles tinted background colors
-                         // screen: mix base color with light grey to produce a light, off-white version
-                         // desaturate: add more grey
-                         // darken: darken
-                         // softlight: tint with yellow to make it a touch warmer
-@bg:                     softlight(darken(desaturate(screen(@bg-base, #ddd),35%),17%),#dda); // compiled from #8e4200: #d4d2c3
-@bg-dark:                softlight(darken(desaturate(screen(@bg-base, #bbb),35%),17%),#bba); // compiled from #8e4200: #b8b6ad
+@bg:                     #fff;
+@bg-shade:               #ddd;
+@bg-base:                #1E6292; // Accent color used in the header
 
 // Primary "anchor" color for links
-@primary-lift:           @bg-base;
-@primary:                #113241; // active (eg - hover/focus)
+@primary:                #007ab2;
+@primary-lift:           lighten(@primary, 10%);
 
 // Yes/no, success/error, on/off, go/stop, etc. Typically green and red.
 @yes:                    #00b24e;
@@ -35,10 +29,10 @@
 // Text
 @text:                   rgba(0,0,0,0.87);
 @text-light:             rgba(0,0,0,0.54);
+@text-on-bg:             #fff;
 
 // Border colors
-@bg-border-color:        @bg;
-@bg-border-dark-color:   @bg-dark;
+@bg-border-color:        @bg-shade;
 
 //
 // Spacing
@@ -80,7 +74,6 @@
 // Borders
 //
 @bg-border:              1px solid @bg-border-color;
-@bg-border-dark:         1px solid @bg-border-dark-color;
 @radius:                 3px;
 
 

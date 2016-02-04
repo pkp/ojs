@@ -9,52 +9,16 @@
  */
 
 .pkp_structure_footer_wrapper {
-	min-height: @logo-height + (@triple * 4); // logo + logo padding + padding-bottom
-	padding-bottom: @triple * 2;
-	background: @bg-base;
+	background: @bg-shade;
+}
 
-	.pkp_site_name_wrapper {
-		bottom: auto;
-		top: 0;
-	}
+.pkp_structure_footer {
+	text-align: center;
+}
 
-	.pkp_site_name .is_text {
-		padding: @triple 0;
-	}
-
-	.page_footer {
-		padding: @base;
-		background: @lift;
-		min-height: @logo-height;
-	}
-
-	@media(min-width: @screen-phone) {
-
-		.page_footer {
-			padding: @double;
-		}
-	}
-
-	// 2 categories per row
-	@media(min-width: @screen-tablet) {
-
-		.pkp_structure_footer {
-			background: @bg;
-		}
-
-		.page_footer {
-			padding: @triple
-		}
-	}
-
-	// 3 categories per row
-	@media(min-width: @screen-desktop) {
-
-		.page_footer {
-			margin-left: @sidebar-width;
-			border-top: @bg-border;
-		}
-	}
+.pkp_footer_content {
+	padding: @triple;
+	text-align: left;
 }
 
 // OJS brand images in footer

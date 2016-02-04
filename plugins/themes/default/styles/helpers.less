@@ -1,5 +1,5 @@
 /**
- * @file styles/structure/components.less
+ * @file plugins/themes/default/styles/helpers.less
  *
  * Copyright (c) 2014-2016 Simon Fraser University Library
  * Copyright (c) 2003-2016 John Willinsky
@@ -36,17 +36,12 @@
 	}
 
 	a {
-		display: block;
-		padding-left: 1em;
-		padding-right: 1em;
+		display: inline-block;
+		padding-left: @base;
+		padding-right: @base;
 		text-decoration: none;
 		padding-top: @half;
 		padding-bottom: @half;
-
-		&:hover,
-		&:focus {
-			color: @primary;
-		}
 	}
 
 	ul {
@@ -57,27 +52,35 @@
 		width: 15em;
 		margin: 0;
 		padding: 0;
-		background: @primary-lift;
+		background: @bg;
+		border-radius: @radius;
+		box-shadow: 0 0 5px rgba(0,0,0,0.3);
 
 		li {
 			display: block;
 		}
 
-		ul {
-			top: 0;
-			background: @primary-lift;
-			border-left: 4px solid @primary;
+		a {
+			display: block;
+			padding-left: @half;
+			border-left: @half solid transparent;
+
+			&:hover,
+			&:focus {
+				outline: 0;
+				background: @bg-shade;
+				border-color: @primary;
+			}
 		}
 
-		a:hover,
-		a:focus {
-			background: @primary;
+		li:first-child a {
+			border-top-left-radius: @radius;
+			border-top-right-radius: @radius;
 		}
 
-		li:hover > ul,
-		li:focus > ul,
-		li.in_focus > ul {
-			left: 100%;
+		li:last-child a {
+			border-bottom-left-radius: @radius;
+			border-bottom-right-radius: @radius;
 		}
 	}
 
@@ -87,18 +90,65 @@
 		left: 0;
 	}
 
+	// Arrow linking top-level menu items with submenus
+	.has_submenu:hover,
+	.has_submenu.in_focus {
+
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			.transform(translateX(-100%)); // Extra 50% centers under text, accounting for extra space from dropdown caret on the right.
+			width: 0;
+			height: 0;
+			color: @bg;
+			border-bottom: @base solid;
+			border-right: @base solid transparent;
+			border-left: @base solid transparent;
+			vertical-align: middle;
+			z-index: 1001;
+		}
+	}
+
+	// Ensure a dropdown doesn't open beyond the edge of the screen by aligning
+	// such dropdowns to the right rather than the left.
+	li.align_right:hover > ul,
+	li.align_right:focus > ul,
+	li.align_right.in_focus > ul {
+		left: auto;
+		// Position in center on very small screens to prevent if from flying
+		// off to the left. Not a perfect solution, but should suffice for the
+		// overwhelming majority of cases
+		width: 10em;
+		right: 50%;
+		.transform(translateX(50%));
+
+		@media(min-width: @screen-phone) {
+			right: 0;
+			.transform(none);
+			width: 15em;
+		}
+	}
+
 	// Dropdown caret indicating submenus
 	// @todo these can probably abstracted into reusable components
+	.has_submenu a:first-child {
+		margin-right: 0;
+	}
+
 	.has_submenu > a:after {
-		content: ' ';
+		position: relative;
+		display: inline-block;
+		content: '';
 		width: 0;
 		height: 0;
-		display: inline-block;
-		margin-left: 0.5em;
+		margin-left: 0.25em;
 		border-top: 4px solid;
 		border-right: 4px solid transparent;
 		border-left: 4px solid transparent;
 		vertical-align: middle;
+		overflow: hidden;
 	}
 
 	ul .has_submenu > a:after {
