@@ -12,277 +12,67 @@
 
 // Structural components of the header layout
 .pkp_structure_head {
-	padding-top: @quintuple; // Make room for the user nav at the top
 	background-color: @bg-base;
 }
 
 .pkp_head_wrapper {
-	position: relative;
+	padding-top: @triple * 2; // Make room for the user nav at the top
+}
+
+// Site logo/nav on same line on larger screens
+.has_site_logo {
 
 	@media(min-width: @screen-desktop) {
-		min-height: @logo-height;
-	}
-}
 
-.pkp_navigation_user_wrapper {
-	position: absolute;
-	bottom: 100%;
-	left: 0;
-	right: 0;
-	padding-left: @base;
-	padding-right: @base;
-}
-
-.pkp_site_name_wrapper {
-	padding-left: @base;
-	padding-right: @base;
-	background-color: @bg;
-
-	@media( min-width: @screen-phone ) {
-		padding-left: @double;
-		padding-right: @double;
-	}
-
-	@media(min-width: @screen-desktop) {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		padding-left: @triple;
-		padding-right: @triple;
-		width: @sidebar-width;
-		min-height: @logo-height;
-	}
-}
-
-.pkp_navigation_primary_row {
-	padding-left: @base;
-	padding-right: @base;
-	background: @lift;
-
-	@media(min-width: @screen-desktop) {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		width: @screen-desktop-container - @sidebar-width;
-		height: @logo-height;
-		padding: 0;
-	}
-
-	@media(min-width: @screen-lg-desktop) {
-		width: @screen-lg-desktop-container - @sidebar-width;
-	}
-}
-
-.pkp_navigation_primary_wrapper {
-	position: relative;
-
-	@media(min-width: @screen-desktop) {
-		padding-left: @triple;
-		padding-right: @triple;
-		border-bottom: @bg-border;
-	}
-}
-
-// User-focused navigation menu with login/logout, tasks, etc
-.pkp_navigation_user {
-	text-align: right;
-	font-size: @font-sml;
-
-	li {
-		text-align: left;
-	}
-
-	a {
-		padding-top: (@quintuple - @line-sml) / 2;
-		padding-bottom: (@quintuple - @line-sml) / 2;
-		line-height: @line-sml;
-		color: #fff;
-
-		&:hover,
-		&:focus {
-			color: #fff; // override default a hover styles
-		}
-	}
-
-	ul {
-		padding: 0 2px 2px; // Creates a border
-		border-bottom-left-radius: @radius;
-		border-bottom-right-radius: @radius;
-		width: 10em;
-		background: @bg-base;
-
-		a {
-			padding-top: @half;
-			padding-bottom: @half;
-
-			&:hover,
-			&:focus {
-				background: @bg;
-				color: @text;
-			}
-		}
-	}
-
-	// Open submenus aligned to the right edge, so they don't overflow screen
-	li:hover > ul,
-	li:focus > ul,
-	li.in_focus > ul {
-		left: auto;
-		right: 0;
-	}
-
-	// Align to the right edge of the container
-	> li:last-child a {
-		padding-right: 0;
-	}
-}
-
-// Tasks panel
-#userTasks {
-	position: relative;
-
-	.task-count {
-		display: block;
-		float: right;
-		width: 20px;
-		height: 20px;
-		margin-left: 0.5em;
-		border-radius: 50%;
-		background: rgba(255,255,255,0.5);
-		line-height: 20px;
-		color: @text;
-		text-align: center;
-
-		&.hasTasks {
-			background: #fff;
-		}
-	}
-
-	> a:hover .task-count,
-	> a:focus .task-count {
-		background: #fff;
-	}
-}
-
-#notificationsToggle.expandedIndicator {
-	background: @bg;
-	color: @text;
-
-	&:before {
-		content: '';
-		position: absolute;
-		bottom: -@base;
-		left: 50%;
-		.transform(translateX(-100%)); // Extra 50% centers under text, accounting for extra space from dropdown caret on the right.
-		width: 0;
-		height: 0;
-		color: @bg-base;
-		border-bottom: @base solid;
-		border-right: @base solid transparent;
-		border-left: @base solid transparent;
-		vertical-align: middle;
-	}
-}
-
-// Tasks grid. Hacky workarounds for styling a grid...
-@tasks-border: 1px solid rgba(255,255,255,0.2);
-#notificationsPopover {
-	display: none;
-	position: absolute;
-	top: 60px;
-	right: 0;
-	width: 30em;
-	background: @bg-base;
-	border-radius: @radius;
-	color: #fff;
-	z-index: 100;
-
-	.footer,
-	.gridPaging {
-		line-height: @triple;
-	}
-
-	.footer {
-		border-top: @tasks-border;
-	}
-
-	// Override .pkp_nav_list ul styles
-	.actions {
-		position: relative;
-		top: auto;
-		left: auto;
-		width: auto;
-
-		> li {
-			display: inline-block;
+		.pkp_site_name_wrapper {
+			float: left;
+			width: 25%;
 		}
 
-		a {
-			padding: 0 @base;
-			line-height: @triple;
-		}
-	}
-
-	.gridPages {
-		padding: 0 @base;
-		text-align: right;
-		color: rgba(255,255,255,0.7);
-	}
-
-	.pkp_controllers_grid {
-
-		thead {
-			border-bottom: @tasks-border;
-			line-height: @triple;
-
-			th:first-child {
-				&:extend(.pkp_screen_reader);
-			}
+		.pkp_navigation_primary_row {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 75%;
+			padding-bottom: @triple; // Manually centers it vertically. Assumes 80px tall logo
 		}
 
-		tbody {
-
-			a {
-				padding: @half 0;
-				color: rgba(255,255,255,0.7);
-
-				&:hover,
-				&:focus {
-					color: #fff;
-				}
-			}
-
-			tr {
-				border-bottom: 1px solid rgba(255,255,255,0.2);
-			}
+		.pkp_site_name > a {
+			padding-right: @triple;
 		}
 
-		.first_column {
-			padding-left: @base;
-			padding-right: @base;
-			min-width: @double + @base;
+		.pkp_head_wrapper .pkp_search.is_open {
+			border-radius: @radius;
 		}
 	}
 }
-
 
 // Site logo/name
 .pkp_site_name {
-	margin: 0;
+	margin-top: 0;
+	margin-bottom: 0;
 	text-align: center;
+
+	> a {
+		padding-top: @base;
+		padding-bottom: @base;
+
+		&:focus {
+			outline: 0;
+		}
+	}
 
 	.is_img {
 		display: inline-block;
-		width: 100%;
-		// Trick to vertically align the image
-		height: @logo-height;
-		padding-top: @double;
-		padding-bottom: @double;
-		line-height: @logo-height;
-		font-size: 0; // prevent extra spacing from inline content
+
+		&:focus {
+			box-shadow: 0 0 1px @text-on-bg;
+		}
 
 		img {
-			max-height: (@logo-height) - @quadruple; // must match height - padding of .is_img
+			display:block;
+			max-height: 80px; // must match height - padding of .is_img
+			max-width: 100%;
 			width: auto;
 			height: auto;
 		}
@@ -291,94 +81,85 @@
 	.is_text {
 		display: inline-block;
 		position: relative;
-		padding-top: @double;
-		padding-bottom: @double;
-		font-size: @font-bump;
-		line-height: 25px;
-		color: @text-light;
+		font-size: @font-header;
+		font-weight: @bold;
+		line-height: @line-header;
+		color: @text-on-bg;
 		text-decoration: none;
+
+		&:focus {
+			text-decoration: underline;
+		}
 	}
 
 	@media(min-width: @screen-desktop) {
 		text-align: left;
-
-		.is_img {
-			text-align: center;
-		}
 	}
 }
 
 // The padding to apply to top-level items in the navigation row
 // Total height - line height (divided by 2 since it will be applied to top and bottom)
-@pkp_nav_primary_row_el_padding: (@quintuple - @double) / 2;
+@pkp_nav_primary_row_el_padding: (@quadruple - @double) / 2;
 
 // Primary site navigation menu
 .pkp_navigation_primary {
-	line-height: @double;
 	text-align: center;
 
-	> li > a {
-		margin: 0 1em;
-		padding: @pkp_nav_primary_row_el_padding 0 (@pkp_nav_primary_row_el_padding - 2); // -2 to account for border size
-		border-bottom: 2px solid transparent;
+	> li {
 
-		&:hover,
-		&:focus {
-			outline: 0;
-			border-color: @primary-lift;
-			color: @primary-lift;
+		> a {
+			margin: 0 1em;
+			padding: @pkp_nav_primary_row_el_padding 0 (@pkp_nav_primary_row_el_padding - 2); // -2 to account for border size
+			border-bottom: 2px solid transparent;
+			color: @text-on-bg;
+
+			&:hover,
+			&:focus {
+				color: @text-on-bg;
+				outline: 0;
+				border-color: @text-on-bg;
+			}
+		}
+
+		&:first-child {
+
+			a {
+				margin-left: 0;
+			}
+		}
+
+		&:last-child {
+
+			a {
+				margin-right: 0;
+			}
 		}
 	}
 
+	.has_submenu a:focus,
+	.has_submenu a:hover {
+		border-color: transparent;
+	}
+
 	ul {
-		padding: 2px;
-		border-radius: @radius;
-		background: @bg-base;
 		text-align: left;
 
 		a {
 			padding-top: @base;
 			padding-bottom: @base;
-			color: #fff;
-
-			&:hover,
-			&:focus {
-				background: @bg;
-			}
+			color: @primary;
 		}
 	}
 
-	// Arrow linking top-level menu items with submenus
-	.has_submenu:hover,
-	.has_submenu.in_focus {
-
-		&:before {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			.transform(translateX(-100%)); // Extra 50% centers under text, accounting for extra space from dropdown caret on the right.
-			width: 0;
-			height: 0;
-			color: @bg-base;
-			border-bottom: @base solid;
-			border-right: @base solid transparent;
-			border-left: @base solid transparent;
-			vertical-align: middle;
-		}
-
-		> a {
-			border-color: transparent;
-		}
+	.has_submenu  ul a:focus,
+	.has_submenu  ul a:hover {
+		border-color: @primary;
 	}
 
 	@media(min-width: @screen-desktop) {
 		display: inline-block;
+		max-width: 80%;
 		text-align: left;
-
-		> li:first-child > a {
-			margin-left: 0;
-		}
 	}
 }
 
@@ -391,10 +172,14 @@
 	text-align: center;
 
 	button {
-		&:extend( .cmp_button );
+		&:extend(.cmp_button);
 		width: 100%;
 		margin-top: @base;
 
+		&:hover,
+		&:focus {
+			&:extend(.cmp_button:hover);
+		}
 
 		@media(min-width: @screen-phone) {
 			width: auto;
@@ -416,7 +201,6 @@
 	}
 
 	.search_prompt {
-		background-color: @lift;
 		transition: background-color 0.4s;
 
 		// Needs to be defined outside of a media query or the font doesn't
@@ -430,7 +214,7 @@
 	.search_cancel,
 	.search_loading {
 		position: absolute;
-		top: @base + @half;
+		top: @base;
 		right: 100%;
 		margin-right: @double;
 		text-align: center;
@@ -465,13 +249,11 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		height: @quintuple;
+		height: @quadruple;
 		min-width: 100px;
 		padding: 0;
 		font-size: @font-base;
 		line-height: @line-base;
-		border-left: @bg-border;
-		background: @lift;
 		transition: min-width 0.4s;
 		text-align: right;
 		overflow-x: hidden;
@@ -499,7 +281,7 @@
 			display: inline-block;
 			position: relative;
 			padding: @pkp_nav_primary_row_el_padding @double;
-			color: @primary-lift;
+			color: @text-on-bg;
 			cursor: pointer;
 
 			&:before {
@@ -511,43 +293,45 @@
 			&:focus {
 				outline: 0;
 				padding-bottom: @pkp_nav_primary_row_el_padding - 2;
-				border-bottom: 2px solid @primary-lift;
+				border-bottom: 2px solid @text-on-bg;
 			}
 		}
 
 		&.is_open {
 			min-width: 100%;
-			border-left: none;
+			background: @bg;
 
 			input[type="text"] {
 				width: 100%;
 				max-width: 100%;
-				line-height: @triple;
-				height: @triple;
-				top: @base;
-				left: @triple;
+				line-height: @quadruple;
+				height: @quadruple;
+				top: 0;
+				left: 0;
 				padding-left: 0.5em;
 				padding-right: 180px; // try to stop before the search button, but this can change with different translations
-				border-bottom: 2px solid @bg-border-dark-color;
+				border: none;
 				font-size: @font-bump;
-				font-style: italic;
-				color: @text-light;
+				background: @bg-shade;
 
-				&:hover,
+				&:hover {
+					background: @bg;
+				}
+
 				&:focus {
 					outline: 0;
-					border-color: @primary-lift;
+					background: @bg;
 				}
 			}
 
 			.search_prompt {
-				background: @primary-lift;
-				color: #fff;
+				background: @bg;
+				border-left: @bg-border;
+				color: @primary;
 
 				&:hover,
 				&:focus {
-					border-color: transparent;
-					background: @primary;
+					border-bottom-color: @primary;
 				}
 			}
 		}
@@ -565,10 +349,13 @@
 
 			.search_prompt {
 				background: @bg;
+				border-left: @bg-border;
+				color: @primary;
 
 				&:hover,
 				&:focus {
 					background: @bg;
+					color: @primary-lift;
 				}
 			}
 
@@ -581,5 +368,197 @@
 			}
 		}
 	}
+}
 
+// User-focused navigation menu with login/logout, tasks, etc
+.pkp_navigation_user_wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding-left: @base;
+	padding-right: @base;
+}
+
+.pkp_navigation_user {
+	text-align: right;
+	font-size: @font-sml;
+	padding-right: @double;
+
+	li {
+		text-align: left;
+	}
+
+	a {
+		padding-top: @half;
+		padding-bottom: @half;
+		line-height: @line-sml;
+	}
+
+	> li > a:focus,
+	#userTasks > a:focus {
+		outline: 0;
+		box-shadow: 0 0 1px @text-on-bg;
+	}
+
+	ul {
+		width: 10em;
+	}
+
+	> li > a,
+	> li.in_focus > a,
+	> li > a:hover,
+	> li > a:focus {
+		color: @text-on-bg;
+	}
+
+	// Open submenus aligned to the right edge, so they don't overflow screen
+	li:hover > ul,
+	li:focus > ul,
+	li.in_focus > ul {
+		left: auto;
+		right: 0;
+	}
+
+	// Align to the right edge of the container
+	> li:last-child a {
+		padding-right: 0;
+	}
+
+	// Offset the linking arrow a bit to compensate for short menu height
+	.has_submenu {
+
+		&:hover:before,
+		&.in_focus:before {
+			border-width: @half;
+		}
+	}
+}
+
+// Tasks panel
+#userTasks {
+	position: relative;
+
+	.task-count {
+		display: block;
+		float: right;
+		width: 20px;
+		height: 20px;
+		margin-left: 0.5em;
+		border-radius: 50%;
+		background: rgba(255,255,255,0.5);
+		line-height: 20px;
+		color: @text;
+		text-align: center;
+
+		&.hasTasks {
+			background: @text-on-bg;
+		}
+	}
+
+	> a {
+		color: @text-on-bg;
+	}
+
+	> a:hover .task-count,
+	> a:focus .task-count {
+		background: @text-on-bg;
+	}
+}
+
+#notificationsToggle.expandedIndicator {
+	background: @bg;
+	color: @text;
+
+	.task-count,
+	&:hover .task-count {
+		background: @bg-shade;
+	}
+}
+
+// Tasks grid. Hacky workarounds for styling a grid...
+@tasks-border: 1px solid rgba(255,255,255,0.2);
+#notificationsPopover {
+	display: none;
+	position: absolute;
+	top: @triple;
+	right: 0;
+	width: 30em;
+	background: @bg;
+	border-radius: @radius;
+	border-top-right-radius: 0;
+	z-index: 100;
+
+	.footer,
+	.gridPaging {
+		line-height: @triple;
+	}
+
+	.footer {
+		border-top: @tasks-border;
+	}
+
+	// Override .pkp_nav_list ul styles
+	.actions {
+		position: relative;
+		top: auto;
+		left: auto;
+		width: auto;
+		box-shadow: none;
+
+		> li {
+			display: inline-block;
+		}
+
+		a {
+			padding: 0 @base;
+			line-height: @triple;
+			border: none;
+
+			&:hover,
+			&:focus {
+				color: @primary-lift;
+				background: none;
+			}
+		}
+	}
+
+	.gridPages {
+		padding: 0 @base;
+		text-align: right;
+		color: rgba(255,255,255,0.7);
+	}
+
+	.pkp_controllers_grid {
+
+		table {
+			margin: @base;
+		}
+
+		thead {
+			border-bottom: @tasks-border;
+			line-height: @triple;
+
+			th:first-child {
+				&:extend(.pkp_screen_reader);
+			}
+		}
+
+		tbody {
+
+			a {
+				padding: @half 0;
+			}
+
+			tr {
+				border-bottom: 1px solid rgba(255,255,255,0.2);
+			}
+		}
+
+		.first_column {
+			padding-left: @base;
+			padding-right: @base;
+			min-width: @double + @base;
+		}
+	}
 }

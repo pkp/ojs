@@ -13,28 +13,31 @@ body {
 	font-size: @font-base;
 	line-height: @line-base;
 	color: @text;
-	background: @bg-dark;
+	background: @bg;
 }
 
 a {
-	color: @primary-lift;
+	color: @primary;
 
 	&:hover,
 	&:focus {
-		color: @primary;
+		color: @primary-lift;
 	}
 }
 
 
 // Page container widths
-.pkp_head_wrapper,
+.pkp_site_name,
+.pkp_navigation_primary_wrapper,
+.pkp_navigation_user,
 .pkp_structure_content,
 .pkp_structure_footer {
 	.pkp_helpers_clear;
 	position: relative;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 @base;
+	padding-left: @base;
+	padding-right: @base;
 
 	@media( min-width: @screen-tablet ) {
 		width: @screen-tablet-container;
@@ -50,61 +53,101 @@ a {
 	}
 }
 
+.has_site_logo {
+
+	.pkp_site_name,
+	.pkp_navigation_primary_wrapper {
+		width: auto;
+	}
+
+	.pkp_head_wrapper {
+		.pkp_helpers_clear;
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+		padding-left: @base;
+		padding-right: @base;
+
+		@media( min-width: @screen-tablet ) {
+			width: @screen-tablet-container;
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		@media( min-width: @screen-desktop ) {
+			width: @screen-desktop-container;
+		}
+
+		@media( min-width: @screen-lg-desktop ) {
+			width: @screen-lg-desktop-container;
+		}
+	}
+}
+
 // Layout scaffold for content and sidebars
 .pkp_structure_main {
 	padding: @base;
-	background: @lift;
-}
-
-.pkp_structure_sidebar {
-	background: @bg;
 }
 
 @media( min-width: @screen-phone ) {
+
 	.pkp_structure_main {
 		padding: @double;
 	}
 }
 
+@media( min-width: @screen-tablet ) {
+
+	// Full-height borders wrapping primary content column
+	.pkp_structure_main {
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 1px;
+			background: @bg-border-color;
+		}
+
+		&:after {
+			left: @screen-tablet-container;
+		}
+	}
+}
+
 @media( min-width: @screen-desktop ) {
 
+	.pkp_structure_content {
+		padding-top: @triple;
+	}
+
 	.pkp_structure_sidebar {
-		float: left;
+		float: right;
 		width: @sidebar-width;
 	}
 
 	.pkp_structure_main {
-		float: right;
-		padding: 0 @triple @triple;
+		float: left;
+		padding: 0 @triple (@triple * 3);
 		width: @screen-desktop-container - @sidebar-width;
-	}
 
-	// Full-height background layers
-	.pkp_structure_sidebar:before,
-	.pkp_structure_main:before, {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: @sidebar-width;
-		height: 100%;
-		background: @bg;
-		z-index: -1;
-	}
-
-	.pkp_structure_main:before {
-		left: auto;
-		right: 0;
-		width: @screen-desktop-container - @sidebar-width;
-		background: @lift;
+		&:after {
+			left: @screen-desktop-container - @sidebar-width;
+		}
 	}
 }
 
 @media( min-width: @screen-lg-desktop ) {
 
-	.pkp_structure_main,
-	.pkp_structure_main:before {
+	.pkp_structure_main {
 		width: @screen-lg-desktop-container - @sidebar-width;
+
+		&:after {
+			left: @screen-lg-desktop-container - @sidebar-width;
+		}
 	}
 }
 
