@@ -375,13 +375,15 @@ class UserHandler extends Handler {
 			$session->setSessionVar('currentLocale', $setLocale);
 		}
 
-		if(isset($_SERVER['HTTP_REFERER'])) {
-			$request->redirectUrl($_SERVER['HTTP_REFERER']);
-		}
-
 		$source = $request->getUserVar('source');
 		if (isset($source) && !empty($source)) {
 			$request->redirectUrl($request->getProtocol() . '://' . $request->getServerHost() . $source, false);
+		}
+
+		// TODO: this seems bad form, but is kept for legacy purposes
+		// Evaluate removal, or only trust the REFERER when it is a known base_url?
+		if(isset($_SERVER['HTTP_REFERER'])) {
+			$request->redirectUrl($_SERVER['HTTP_REFERER']);
 		}
 
 		$request->redirect(null, 'index');
