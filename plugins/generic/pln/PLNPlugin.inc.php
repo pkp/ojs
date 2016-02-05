@@ -582,7 +582,7 @@ class PLNPlugin extends GenericPlugin {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$journalManagers = $roleDao->getUsersByRoleId(ROLE_ID_JOURNAL_MANAGER,$journalId);
 		import('classes.notification.NotificationManager');
-		$notificationManager =& new NotificationManager();
+		$notificationManager = new NotificationManager();
 		// TODO: this currently gets sent to all journal managers - perhaps only limit to the technical contact's account?
 		while ($journalManager =& $journalManagers->next()) {
 			$notificationManager->createTrivialNotification($journalManager->getId(), $notificationType);

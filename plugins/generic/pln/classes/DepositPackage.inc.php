@@ -65,7 +65,7 @@ class DepositPackage {
 	 */
 	function getDepositDir() {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$fileManager =& new JournalFileManager($journalDao->getById($this->_deposit->getJournalId()));
+		$fileManager = new JournalFileManager($journalDao->getById($this->_deposit->getJournalId()));
 		return $fileManager->filesDir . PLN_PLUGIN_ARCHIVE_FOLDER . DIRECTORY_SEPARATOR . $this->_deposit->getUUID();
 	}
 
