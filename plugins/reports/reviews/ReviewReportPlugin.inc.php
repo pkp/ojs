@@ -99,6 +99,8 @@ class ReviewReportPlugin extends ReportPlugin {
 		$fp = fopen('php://output', 'wt');
 		String::fputcsv($fp, array_values($columns));
 
+		import('submission.sectionEditor.SectionEditorAction');
+
 		while ($row =& $reviewsIterator->next()) {
 			foreach ($columns as $index => $junk) {
 				if (in_array($index, $yesNoArray)) {
@@ -107,7 +109,9 @@ class ReviewReportPlugin extends ReportPlugin {
 					$columns[$index] = (!isset($row[$index])) ? __('common.none') : __($recommendations[$row[$index]]);
 				} elseif ($index == "comments") {
 					if (isset($comments[$row['articleid']][$row['reviewerid']])) {
-						$columns[$index] = $comments[$row['articleid']][$row['reviewerid']];
+						$columns[$index] = String::html2text(strip_tags($comments[$row['articleid']][$row['reviewerid']]));
+					} elseif (isset($row['reviewformid'])) {
+						$columns[$index] = String::html2text(strip_tags(SectionEditorAction::getReviewFormResponses($row['reviewid'], $row['reviewformid'])));
 					} else {
 						$columns[$index] = "";
 					}

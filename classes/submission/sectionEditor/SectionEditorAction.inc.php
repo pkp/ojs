@@ -810,6 +810,50 @@ class SectionEditorAction extends Action {
 	}
 
 	/**
+	 * Retrieve and parse review form questions and responses for a review
+	 * @param $reviewId int
+	 * @param $reviewFormId int
+	 * @return string
+	 */
+	function getReviewFormResponses($reviewId, $reviewFormId) {
+		$responses = "";
+
+		if (!$reviewId || !$reviewFormId) return $responses;
+
+		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
+		$reviewFormElements =& $reviewFormElementDao->getReviewFormElements($reviewFormId);
+
+		if (!$reviewFormElements) return $responses;
+
+		$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
+
+		foreach ($reviewFormElements as $reviewFormElement) if ($reviewFormElement->getIncluded()) {
+			$responses .= $reviewFormElement->getLocalizedQuestion() . ": \n";
+			$reviewFormResponse = $reviewFormResponseDao->getReviewFormResponse($reviewId, $reviewFormElement->getId());
+
+			if ($reviewFormResponse) {
+				$possibleResponses = $reviewFormElement->getLocalizedPossibleResponses();
+				$reviewFormElementType = $reviewFormElement->getElementType();
+				if (in_array($reviewFormElementType, $reviewFormElement->getMultipleResponsesElementTypes())) {
+					if ($reviewFormElementType == REVIEW_FORM_ELEMENT_TYPE_CHECKBOXES) {
+						foreach ($reviewFormResponse->getValue() as $value) {
+							$responses .= "\t" . $possibleResponses[$value-1]['content'] . "\n";
+						}
+					} else {
+						$responses .= "\t" . $possibleResponses[$reviewFormResponse->getValue()-1]['content'] . "\n";
+					}
+					$responses .= "\n";
+				} elseif ($reviewFormElementType == REVIEW_FORM_ELEMENT_TYPE_TEXTAREA) {
+					$responses .= $reviewFormResponse->getValue() . "\n\n";
+				} else {
+					$responses .= "\t" . $reviewFormResponse->getValue() . "\n\n";
+				}
+			}
+		}
+		return $responses;
+	}
+
+	/**
 	 * Set the file to use as the default copyedit file.
 	 * @param $sectionEditorSubmission object
 	 * @param $fileId int
@@ -2084,33 +2128,11 @@ class SectionEditorAction extends Action {
 						}
 						if ($reviewFormId = $reviewAssignment->getReviewFormId()) {
 							$reviewId = $reviewAssignment->getId();
-							$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
-							$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
-							$reviewFormElements =& $reviewFormElementDao->getReviewFormElements($reviewFormId);
 							if(!$articleComments) {
 								$body .= "------------------------------------------------------\n";
 								$body .= __('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => String::enumerateAlphabetically($reviewIndexes[$reviewAssignment->getReviewId()]))) . "\n\n";
 							}
-							foreach ($reviewFormElements as $reviewFormElement) if ($reviewFormElement->getIncluded()) {
-								$body .= String::html2text($reviewFormElement->getLocalizedQuestion()) . ": \n";
-								$reviewFormResponse = $reviewFormResponseDao->getReviewFormResponse($reviewId, $reviewFormElement->getId());
-
-								if ($reviewFormResponse) {
-									$possibleResponses = $reviewFormElement->getLocalizedPossibleResponses();
-									if (in_array($reviewFormElement->getElementType(), $reviewFormElement->getMultipleResponsesElementTypes())) {
-										if ($reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_CHECKBOXES) {
-											foreach ($reviewFormResponse->getValue() as $value) {
-												$body .= "\t" . String::html2text($possibleResponses[$value-1]['content']) . "\n";
-											}
-										} else {
-											$body .= "\t" . String::html2text($possibleResponses[$reviewFormResponse->getValue()-1]['content']) . "\n";
-										}
-										$body .= "\n";
-									} else {
-										$body .= "\t" . $reviewFormResponse->getValue() . "\n\n";
-									}
-								}
-							}
+							$body .= String::html2text(strip_tags(SectionEditorAction::getReviewFormResponses($reviewId, $reviewFormId)));
 							$body .= "------------------------------------------------------\n\n";
 						}
 					}

@@ -56,7 +56,9 @@ class ReviewReportDAO extends DAO {
 				r.date_reminded AS dateReminded,
 				(r.declined=1) AS declined,
 				(r.cancelled=1) AS cancelled,
-				r.recommendation AS recommendation
+				r.recommendation AS recommendation,
+				r.review_id AS reviewId,
+				r.review_form_id AS reviewFormId
 			FROM	review_assignments r
 				LEFT JOIN articles a ON r.submission_id = a.article_id
 				LEFT JOIN article_settings asl ON (a.article_id=asl.article_id AND asl.locale=? AND asl.setting_name=?)
