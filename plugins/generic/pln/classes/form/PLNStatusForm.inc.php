@@ -35,7 +35,7 @@ class PLNStatusForm extends Form {
 	function PLNStatusForm(&$plugin, $journalId) {
 		$this->_journalId = $journalId;
 		$this->_plugin =& $plugin;           
-		parent::Form($this->_plugin->getTemplatePath() . DIRECTORY_SEPARATOR . 'status.tpl');
+		parent::Form($this->_plugin->getTemplatePath() . 'status.tpl');
 	}
 
 	/**

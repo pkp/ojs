@@ -106,4 +106,8 @@
 
 	<message key="plugins.generic.plngateway.displayName">PLN Gateway</message>
 	<message key="plugins.generic.plngateway.description">Reports PLN Status and recent article titles for the staging server.</message>
+	
+	<message key="plugins.generic.plnblock.preservedin">Preserved in PKP|PLN</message>
+	<message key="plugins.generic.plnblock.name">"Preserved In" Block</message>
+	<message key="plugins.generic.plnblock.description">This plugin provides the "Preserved In" block.</message>
 </locale>
