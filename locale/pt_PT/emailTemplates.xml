@@ -56,7 +56,7 @@ Agradecendo desde já a atenção dispensada,<br />
 		<subject>{$contextName} publica nova edição</subject>
 		<body><![CDATA[Caros leitores,<br />
 <br />
-A revista {$contextName} acaba de publicar o seu último número, disponível em <a href="{$journalUrl}">{$journalUrl}</a>. Convidamos a navegar no sumário da revista para aceder aos artigos e outros itens do seu proveito.<br />
+A revista {$contextName} acaba de publicar o seu último número, disponível em <a href="{$contextUrl}">{$contextUrl}</a>. Convidamos a navegar no sumário da revista para aceder aos artigos e outros itens do seu proveito.<br />
 <br />
 Agradecemos o seu constante interesse no nosso trabalho,<br />
 {$editorialContactSignature}]]></body>
@@ -86,7 +86,7 @@ Em caso de dúvidas, entre em contacto através deste e-mail.<br />
 		<subject>Nova edição de Acesso Livre da revista {$contextName}</subject>
 		<body><![CDATA[Caros leitores,<br />
 <br />
-A {$contextName} acaba de tornar disponível para Acesso Livre mais uma edição. Convidamos a examinar o Sumário nesta mensagem e então aceder à revista (<a href="{$journalUrl}">{$journalUrl}</a>), para ler os artigos e outros itens de seu proveito.<br />
+A {$contextName} acaba de tornar disponível para Acesso Livre mais uma edição. Convidamos a examinar o Sumário nesta mensagem e então aceder à revista (<a href="{$contextUrl}">{$contextUrl}</a>), para ler os artigos e outros itens de seu proveito.<br />
 <br />
 Agradecemos o constante interesse e apoio à revista,<br />
 {$editorialContactSignature}]]></body>
@@ -145,11 +145,11 @@ Em caso de dúvidas, entre em contacto através deste email.<br />
 		<subject>Pedido para adicionar a revista {$contextName} no seu arquivo</subject>
 		<body><![CDATA[&lt;![CDATA[Prezada(o) [Nome da(o) Bibliotecária(o) da Universidade]<br />
 <br />
-{$contextName} &lt;<a href="{$journalUrl}">{$journalUrl}</a>&gt;, é uma revista na qual um docente da instituição, [nome da pessoa], possui o papel editorial de [título da função editorial]. Esta revista deseja estabelecer arquivamento através do LOCKSS (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) com esta e outras bibliotecas de instituições de ensino superior.<br />
+{$contextName} &lt;<a href="{$contextUrl}">{$contextUrl}</a>&gt;, é uma revista na qual um docente da instituição, [nome da pessoa], possui o papel editorial de [título da função editorial]. Esta revista deseja estabelecer arquivamento através do LOCKSS (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) com esta e outras bibliotecas de instituições de ensino superior.<br />
 <br />
 [Breve descrição da revista]<br />
 <br />
-A URL do Manifesto LOCKSS da Editora da nossa revista é: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+A URL do Manifesto LOCKSS da Editora da nossa revista é: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Consta do nosso registo que esta biblioteca é participante do sistema LOCKSS. Estamos à disposição caso necessite de metadados adicionais para o registos da revista na sua versão do LOCKSS, os quais serão fornecidos o mais rápido possível.<br />
 <br />
@@ -163,7 +163,7 @@ Agradecendo desde já a sua atenção,<br />
 		<subject>Pedido de inclusão da revista {$contextName} no seu arquivo</subject>
 		<body><![CDATA[&lt;![CDATA[Prezada(o) [Nome da(o) Bibliotecária(o) da Universidade]<br />
 <br />
-{$contextName} &lt;<a href="{$journalUrl}">{$journalUrl}</a>&gt; é uma revista na qual um docente da instituição, [nome da pessoa], possui o papel editorial de [título da função editorial]. Esta revista deseja estabelecer arquivamento através LOCKSS (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) com esta e outras bibliotecas de instituições de ensino superior.<br />
+{$contextName} &lt;<a href="{$contextUrl}">{$contextUrl}</a>&gt; é uma revista na qual um docente da instituição, [nome da pessoa], possui o papel editorial de [título da função editorial]. Esta revista deseja estabelecer arquivamento através LOCKSS (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) com esta e outras bibliotecas de instituições de ensino superior.<br />
 <br />
 [Breve descrição da revista]<br />
 <br />
@@ -248,7 +248,7 @@ Agradecendo desde já a sua atenção,<br />
 <br />
 Acreditamos que o seu conhecimento será fundamental para realizar a revisão do manuscrito &quot;{$submissionTitle}&quot; submetido a {$contextName}. Informações sobre a submissão encontram-se nesta mensagem, e espero que considere assumir esta importante responsabilidade.<br />
 <br />
-Aceda ao sistema até {$weekLaterDate} para confirmar a sua disponibilidade ou não para realizar a revisão, bem como aceder aos dados completos da submissão e registar a sua revisão e recomendações, através do URL <a href="{$journalUrl}">{$journalUrl}</a>.<br />
+Aceda ao sistema até {$responseDueDate} para confirmar a sua disponibilidade ou não para realizar a revisão, bem como aceder aos dados completos da submissão e registar a sua revisão e recomendações, através do URL <a href="{$contextUrl}">{$contextUrl}</a>.<br />
 <br />
 O prazo para a entrega da revisão é {$reviewDueDate}.<br />
 <br />
@@ -278,7 +278,7 @@ Resumo<br />
 <br />
 Acreditamos que o seu conhecimento será fundamental para realizar a revisão do manuscrito &quot;{$submissionTitle}&quot; submetido a {$contextName}. Informações sobre a submissão encontram-se abaixo, e espero que considere assumir esta importante responsabilidade.<br />
 <br />
-Aceda ao sistema até {$weekLaterDate} para confirmar a sua disponibilidade ou não para realizar a revisão, bem como aceder aos dados completos da submissão e registar a sua revisão e recomendações, através do URL <a href="{$journalUrl}">{$journalUrl}</a>.<br />
+Aceda ao sistema até {$responseDueDate} para confirmar a sua disponibilidade ou não para realizar a revisão, bem como aceder aos dados completos da submissão e registar a sua revisão e recomendações, através do URL <a href="{$contextUrl}">{$contextUrl}</a>.<br />
 <br />
 O prazo para a entrega da revisão é {$reviewDueDate}.<br />
 <br />
@@ -314,7 +314,7 @@ O prazo para entrega da revisão e as suas recomendações, enviadas para este e
 <br />
 Espero que considere assumir esta importante responsabilidade.<br />
 <br />
-Responda a esta mensagem até {$weekLaterDate} para informar se estará disponível ou não para realizar a revisão.<br />
+Responda a esta mensagem até {$responseDueDate} para informar se estará disponível ou não para realizar a revisão.<br />
 <br />
 Agradecemos desde já a sua atenção.<br />
 <br />
@@ -465,7 +465,7 @@ Solicito a edição do texto do manuscrito &quot;{$submissionTitle}&quot;, subme
 5. Guarde o ficheiro editado e envie o ficheiro no Passo 1.<br />
 6. Envie o e-mail de CONCLUÍDO ao editor e ao editor de texto.<br />
 <br />
-URL da revista {$contextName}: <a href="{$journalUrl}">{$journalUrl}</a><br />
+URL da revista {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL da Submissão: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Nome de utilizador: {$copyeditorUsername}<br />
 <br />
@@ -572,7 +572,7 @@ O autor e o editor concluíram a avaliação da edição do texto do manuscrito 
 5. Clique em METADADOS para avaliar a qualidade da indexação do documento (salvando quaisquer alterações).<br />
 6. Envie o email CONCLUÍDO ao editor.<br />
 <br />
-URL da revista {$contextName}: <a href="{$journalUrl}">{$journalUrl}</a><br />
+URL da revista {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL da submissão: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Nome de utilizador: {$copyeditorUsername}<br />
 <br />
@@ -613,7 +613,7 @@ Solicito a preparação das composições do manuscrito &quot;{$submissionTitle}
 2. Aceda ao sistema e use a Versão de Layout como referência, para produzir as composições de acordo com os padrões desta revista.<br />
 3. Envie a mensagem CONCLUÍDA ao editor.<br />
 <br />
-URL da revista {$contextName}: <a href="{$journalUrl}">{$journalUrl}</a><br />
+URL da revista {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL da Submissão: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
 Nome de utilizador: {$layoutEditorUsername}<br />
 <br />
@@ -746,7 +746,7 @@ O autor e o Leitor de Provas concluíram a leitura de provas do manuscrito &quot
 3. Envie as composições corrigidas.<br />
 4. Envie o email CONCLUÍDO no Passo 3 da secção Leitura de Provas ao editor.<br />
 <br />
-URL da revista {$contextName}: <a href="{$journalUrl}">{$journalUrl}</a><br />
+URL da revista {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL da Submissão: {$submissionUrl}<br />
 Nome de utilizador: {$layoutEditorUsername}<br />
 <br />

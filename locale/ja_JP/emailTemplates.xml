@@ -59,7 +59,7 @@
 <br />
 雑誌『{$contextName}』は、今日、最新号を発行しました。目次を送付いたしますので、興味のある論文や記事について、実際に雑誌のWebサイトにアクセスしてチェックしていただくようご案内いたします。<br />
 <br />
-雑誌WebサイトのURLは、<a href="{$journalUrl}">{$journalUrl}</a> です。<br />
+雑誌WebサイトのURLは、<a href="{$contextUrl}">{$contextUrl}</a> です。<br />
 <br />
 <br />
 {$editorialContactSignature}]]></body>
@@ -69,13 +69,13 @@
 		<subject>『{$contextName}』保存のお願い</subject>
 		<body><![CDATA[[大学図書館長] 御中<br />
 <br />
-本誌『{$contextName}』&amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;は、貴学の教官 [教官名]殿に[役職名]をお願いしているものです。本誌は、貴館およびその他の大学図書館との間でLOCKSS（Lots of Copies Keep Stuff Safe）準拠のアーカイブを構築したいと考えております。<br />
+本誌『{$contextName}』&amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;は、貴学の教官 [教官名]殿に[役職名]をお願いしているものです。本誌は、貴館およびその他の大学図書館との間でLOCKSS（Lots of Copies Keep Stuff Safe）準拠のアーカイブを構築したいと考えております。<br />
 <br />
 [雑誌の簡単な説明]<br />
 <br />
 本誌のLOCKSS出版者宣言書のURLは、以下の通りです。<br />
 <br />
-    <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+    <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 貴館は既にLOCKSSに参加していると伺っております。私たちの雑誌を貴館のLOCKSSに登録するためにメタデータを提供できるなら、喜んで提供したいと考えております。<br />
 <br />
@@ -88,7 +88,7 @@
 		<subject>『{$contextName}』保存のお願い</subject>
 		<body><![CDATA[[大学図書館長] 御中<br />
 <br />
-本誌『{$contextName}』&amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;は、貴学の教官 [教官名]殿に[役職名]をお願いしているものです。本誌は、貴館およびその他の大学図書館との間でLOCKSS（Lots of Copies Keep Stuff Safe）準拠のアーカイブを構築したいと考えております。<br />
+本誌『{$contextName}』&amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;は、貴学の教官 [教官名]殿に[役職名]をお願いしているものです。本誌は、貴館およびその他の大学図書館との間でLOCKSS（Lots of Copies Keep Stuff Safe）準拠のアーカイブを構築したいと考えております。<br />
 <br />
 [雑誌の簡単な説明]<br />
 <br />
@@ -162,7 +162,7 @@
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読をお願いいたしたくメールを差し上げました。投稿物の要旨を以下に添付しました。貴殿がこの重要な仕事を引き受けてくださることを希望いたしております。<br />
 <br />
-{$weekLaterDate}までに、雑誌のWebサイトにログインして、査読を引き受けていただけるかどうかを示していただけるようお願いいたします。引き受けていただける場合は、このサイトで投稿物にアクセスし、査読結果と答申を記録することができます。雑誌のWebサイトのURLは、<a href="{$journalUrl}">{$journalUrl}</a> です。<br />
+{$responseDueDate}までに、雑誌のWebサイトにログインして、査読を引き受けていただけるかどうかを示していただけるようお願いいたします。引き受けていただける場合は、このサイトで投稿物にアクセスし、査読結果と答申を記録することができます。雑誌のWebサイトのURLは、<a href="{$contextUrl}">{$contextUrl}</a> です。<br />
 <br />
 査読作業自体の期限日は、{$reviewDueDate}です。<br />
 <br />
@@ -189,7 +189,7 @@
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読をお願いいたしたくメールを差し上げました。投稿物の要旨を以下に添付しました。貴殿がこの重要な仕事を引き受けてくださることを希望いたしております。<br />
 <br />
-{$weekLaterDate}までに、雑誌のWebサイトにログインして、査読を引き受けていただけるかどうかを示していただけるようお願いいたします。引き受けていただける場合は、このサイトで投稿物にアクセスし、査読結果と答申を記録することができます。雑誌のWebサイトのURLは、<a href="{$journalUrl}">{$journalUrl}</a> です。<br />
+{$responseDueDate}までに、雑誌のWebサイトにログインして、査読を引き受けていただけるかどうかを示していただけるようお願いいたします。引き受けていただける場合は、このサイトで投稿物にアクセスし、査読結果と答申を記録することができます。雑誌のWebサイトのURLは、<a href="{$contextUrl}">{$contextUrl}</a> です。<br />
 <br />
 査読作業自体の期限日は、{$reviewDueDate}です。<br />
 <br />
@@ -213,7 +213,7 @@
 <br />
 原稿「{$submissionTitle}」の査読をお願いいたしたくメールを差し上げました。貴殿がこの重要な仕事を引き受けてくださることをお願いいたしております。この雑誌の査読の手引きを以下に添付しました。また、投稿物はメールの添付ファイルとして添付いたしました。投稿物の査読結果と答申は、{$reviewDueDate}までに私宛にメールでいただきたいと考えております。<br />
 <br />
-査読をしていただけるか否かを、{$weekLaterDate}までにメールでご返事いただけるようお願いいたします。<br />
+査読をしていただけるか否かを、{$responseDueDate}までにメールでご返事いただけるようお願いいたします。<br />
 <br />
 よろしくご検討くださるよう、お願いいたします。<br />
 <br />
@@ -638,7 +638,7 @@
 <br />
 雑誌『{$contextName}』の以下の号がオープンアクセスにより利用できるようになりましたのでご案内いたします。<br />
 <br />
- 雑誌のWebサイト（<a href="{$journalUrl}">{$journalUrl}</a>）にアクセスし、目次をチェックし興味のある論文や記事をご利用ください。<br />
+ 雑誌のWebサイト（<a href="{$contextUrl}">{$contextUrl}</a>）にアクセスし、目次をチェックし興味のある論文や記事をご利用ください。<br />
 <br />
 よろしくお願いいたします。<br />
 <br />

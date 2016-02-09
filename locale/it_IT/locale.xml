@@ -410,7 +410,7 @@ Se pensi di avere accesso a uno o più dei network LOCKSS elencati <a href="http
 	<message key="sectionEditor.proofreader.confirmRenotify">Un'altra notifica a questo correttore di bozze farà ricominciare da capo il loro incarico. Sei sicuro di voler fare questo?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Ripensamenti</message>
-	<message key="sectionEditor.regrets.title"><![CDATA[#{$articleId} Round precedenti, rifiuti & cancellazioni]]></message>
+	<message key="sectionEditor.regrets.title"><![CDATA[#{$submissionId} Round precedenti, rifiuti & cancellazioni]]></message>
 	<message key="sectionEditor.regrets">Rifiutato</message>
 	<message key="sectionEditor.regrets.link">Vedi rifiutati, cancellati e round precedenti</message>
 	<message key="sectionEditor.regrets.reviewRound">Peer review, round{$round}</message>
@@ -740,48 +740,48 @@ Il vostro server supporta mbstring: <strong>{$supportsMBString}</strong>]]></mes
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} ha inserito una nuova proposta, con il seguente ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} ha modificato l'articolo {$articleId}. Il nuovo ID è {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">A {$reviewerName} è stato assegnato il compito di revisionare la proposta #{$articleId} per il {$round} ciclo di revisione.</message>
-	<message key="log.review.reviewerUnassigned">A {$reviewerName} è stato tolto l'incarico di revisore della proposta {$articleId} per il {$round} ciclo di revisione.</message>
-	<message key="log.review.reviewInitiated">È iniziato il {$round} ciclo di revisione per la proposta {$articleId} assegnata a {$reviewerName}.</message>
-	<message key="log.review.reviewReinitiated">Il {$round} ciclo di revisione, assegnato a {$reviewerName} per la proposta {$articleId} è riniziato.</message>
-	<message key="log.review.reviewCancelled">Il ciclo di review nr. {$round} assegnato a {$reviewerName} per la proposta {$articleId} è stato cancellato.</message>
-	<message key="log.review.reviewCleared">Il ciclo di review nr. {$round} assegnato a {$reviewerName} per la proposta {$articleId} è stato portato a termine.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} è stato preso in considerazione per il ciclo di review nr. {$round} della proposta {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">La data di scadenza per il ciclo di review nr. {$round} della proposta {$articleId} assegnata a {$reviewerName} è il {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">È disponibile il parere per il {$round} ciclo di revisione della proposta {$articleId} assegnata a {$reviewerName}.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">La raccomandazione per la tornata {$round} di revisione della proposta {$articleId} è stata inviata all'editor, {$editorName}, per conto del revisore, {$reviewerName}.</message>
-	<message key="log.review.resubmit">La proposta {$articleId} è stata di presentata di nuovo per la review.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} ha rifiutato il ciclo di review nr. {$round} per la proposta {$articleId}.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} ha accettato il ciclo di review nr. {$round} per la {$articleId}.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} ha accettato il ciclo di review nr. {$round} per la proposta {$articleId} per conto di {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">L'editor, {$userName}, ha caricato un file di revisione per la tornata {$round} della proposta {$articleId} per conto del revisore, {$reviewerName}.</message>
+	<message key="log.author.documentRevised">{$authorName} ha modificato l'articolo {$submissionId}. Il nuovo ID è {$fileId}.</message>
+	<message key="log.review.reviewerAssigned">A {$reviewerName} è stato assegnato il compito di revisionare la proposta #{$submissionId} per il {$round} ciclo di revisione.</message>
+	<message key="log.review.reviewerUnassigned">A {$reviewerName} è stato tolto l'incarico di revisore della proposta {$submissionId} per il {$round} ciclo di revisione.</message>
+	<message key="log.review.reviewInitiated">È iniziato il {$round} ciclo di revisione per la proposta {$submissionId} assegnata a {$reviewerName}.</message>
+	<message key="log.review.reviewReinitiated">Il {$round} ciclo di revisione, assegnato a {$reviewerName} per la proposta {$submissionId} è riniziato.</message>
+	<message key="log.review.reviewCancelled">Il ciclo di review nr. {$round} assegnato a {$reviewerName} per la proposta {$submissionId} è stato cancellato.</message>
+	<message key="log.review.reviewCleared">Il ciclo di review nr. {$round} assegnato a {$reviewerName} per la proposta {$submissionId} è stato portato a termine.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} è stato preso in considerazione per il ciclo di review nr. {$round} della proposta {$submissionId}.</message>
+	<message key="log.review.reviewDueDateSet">La data di scadenza per il ciclo di review nr. {$round} della proposta {$submissionId} assegnata a {$reviewerName} è il {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">È disponibile il parere per il {$round} ciclo di revisione della proposta {$submissionId} assegnata a {$reviewerName}.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">La raccomandazione per la tornata {$round} di revisione della proposta {$submissionId} è stata inviata all'editor, {$editorName}, per conto del revisore, {$reviewerName}.</message>
+	<message key="log.review.resubmit">La proposta {$submissionId} è stata di presentata di nuovo per la review.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} ha rifiutato il ciclo di review nr. {$round} per la proposta {$submissionId}.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} ha accettato il ciclo di review nr. {$round} per la {$submissionId}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} ha accettato il ciclo di review nr. {$round} per la proposta {$submissionId} per conto di {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">L'editor, {$userName}, ha caricato un file di revisione per la tornata {$round} della proposta {$submissionId} per conto del revisore, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">È disponibile il file della recensione.</message>
 
 
-	<message key="log.copyedit.initiate">La revisione della proposta {$articleId} è stata iniziata da {$copyeditorName}.</message>
+	<message key="log.copyedit.initiate">La revisione della proposta {$submissionId} è stata iniziata da {$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">È stato scelto il file di revisione di default.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} ha completato la revisione iniziale della proposta {$articleId}.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} ha completato la revisione finale della proposta {$articleId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} è stata assegnata la revisione della proposta {$articleId}.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} ha completato la revisione iniziale della proposta {$submissionId}.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} ha completato la revisione finale della proposta {$submissionId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} è stata assegnata la revisione della proposta {$submissionId}.</message>
 	<message key="log.copyedit.copyeditorFile">È disponibile una versione revisionata.</message>
 	<message key="log.copyedit.authorFile">È disponibile la versione revisionata dall'autore.</message>
 
-	<message key="log.layout.layoutEditorAssigned">{$editorName} è stato scelto come editor del layout della {$articleId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} è stato tolto dall'incarico di layout editor della proposta {$articleId}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} ha completato l'editing del layout della proposta {$articleId}.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} è stato scelto come editor del layout della {$submissionId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} è stato tolto dall'incarico di layout editor della proposta {$submissionId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} ha completato l'editing del layout della proposta {$submissionId}.</message>
 
 	<message key="log.editor.metadataModified">I metadati di questo articolo sono stati modificati da {$editorName}.</message>
 	<message key="log.editor.editorFile">È disponibile una versione modificata dall'editor.</message>
-	<message key="log.editor.archived">La proposta {$articleId} è stata archiviata.</message>
-	<message key="log.editor.restored">La proposta {$articleId} è stata reinserita nella coda.</message>
-	<message key="log.editor.editorAssigned">{$editorName} è stato scelto come editor della proposta {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} ha accelerato il processo di editing per l'articolo {$articleId}.</message>
+	<message key="log.editor.archived">La proposta {$submissionId} è stata archiviata.</message>
+	<message key="log.editor.restored">La proposta {$submissionId} è stata reinserita nella coda.</message>
+	<message key="log.editor.editorAssigned">{$editorName} è stato scelto come editor della proposta {$submissionId}.</message>
+	<message key="log.editor.submissionExpedited">{$editorName} ha accelerato il processo di editing per l'articolo {$submissionId}.</message>
 
-	<message key="log.proofread.assign">{$assignerName} ha scelto {$proofreaderName} come correttore di bozze della proposta {$articleId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} ha inviato {$articleId} per l'inserimento nella scaletta.</message>
+	<message key="log.proofread.assign">{$assignerName} ha scelto {$proofreaderName} come correttore di bozze della proposta {$submissionId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} ha inviato {$submissionId} per l'inserimento nella scaletta.</message>
 
-	<message key="log.imported">{$userName} ha un articolo importato {$articleId}.</message>
+	<message key="log.imported">{$userName} ha un articolo importato {$submissionId}.</message>
 
 	<!-- Reading Tools entries -->
 
@@ -899,7 +899,7 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<message key="payment.publication.publicationPaid">Contributo per la pubblicazione pagato</message>
 	<message key="payment.subscription.renew">Rinnova l'abbonamento</message>
 	<message key="installer.databaseSettingsInstructions">Ojs richiede l'accesso a un database SQL per memorizzare i dati. Vedi i requisiti di sistema sopra per un elenco dei DBMS supportati. Nei campi sotto, fornisci le impostazioni per connetterti al DB.</message>
-	<message key="log.editor.decision">Una decisione dell'editor ({$decision}) per l'articolo {$articleId} è stata registrata da {$editorName}.</message>
+	<message key="log.editor.decision">Una decisione dell'editor ({$decision}) per l'articolo {$submissionId} è stata registrata da {$editorName}.</message>
 	<message key="rt.admin.settings.addComment">Aggiungi un commento (abilita i lettori a inviare commenti, che l'amministratore della rivista potrà cancellare).</message>
 	<message key="rt.admin.settings.addComment.authenticated">Gli utenti devono essere registrati e loggati per inviare, senza possibilità di anonimato.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Gli utenti devono essere registrati e autenticati per postare, con possibilità di anonimato.</message>
@@ -955,7 +955,7 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<message key="payment.fastTrack.inFastTrack">in velocità</message>
 	<message key="payment.membership.buyMembership">Acquista l'iscrizione individuale</message>
 	<message key="payment.membership.renewMembership">Rinnova l'iscrizione individuale</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} ha rifiutato il round di revisione n. {$round} per l'articolo {$articleId} in favore di {$reviewerName}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} ha rifiutato il round di revisione n. {$round} per l'articolo {$submissionId} in favore di {$reviewerName}.</message>
 	<message key="debug.notes.helpMappingLoad">Mappatura del file XML {$filename}  di help ricaricata in cerca di {$id}.</message>
 	<message key="journal.issn">ISSN</message>
 	<message key="article.article">Articolo</message>

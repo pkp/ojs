@@ -48,7 +48,7 @@ Thank you,<br />
 		<subject>New Issue Published</subject>
 		<body><![CDATA[Readers:<br />
 <br />
-{$contextName} has just published its latest issue at <a href="{$journalUrl}">{$journalUrl}</a>. We invite you to review the Table of Contents here and then visit our web site to review articles and items of interest.<br />
+{$contextName} has just published its latest issue at <a href="{$contextUrl}">{$contextUrl}</a>. We invite you to review the Table of Contents here and then visit our web site to review articles and items of interest.<br />
 <br />
 Thanks for the continuing interest in our work,<br />
 {$editorialContactSignature}]]></body>
@@ -77,11 +77,11 @@ If you have any questions, please feel free to contact me.<br />
 		<subject>Archiving Request for {$contextName}</subject>
 		<body><![CDATA[Dear [University Librarian]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
 <br />
 [Brief description of journal]<br />
 <br />
-The URL to the LOCKSS Publisher Manifest for our journal is: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+The URL to the LOCKSS Publisher Manifest for our journal is: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 We understand that you are already participating in LOCKSS. If we can provide any additional metadata for purposes of registering our journal with your version of LOCKSS, we would be happy to provide it.<br />
 <br />
@@ -93,7 +93,7 @@ Thank you,<br />
 		<subject>Archiving Request for {$contextName}</subject>
 		<body><![CDATA[Dear [University Librarian]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
 <br />
 [Brief description of journal]<br />
 <br />
@@ -164,7 +164,7 @@ Thank you,<br />
 <br />
 I believe that you would serve as an excellent reviewer of the manuscript, &quot;{$submissionTitle},&quot; which has been submitted to {$contextName}. The submission's extract is inserted below, and I hope that you will consider undertaking this important task for us.<br />
 <br />
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$journalUrl}">{$journalUrl}</a><br />
+Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
@@ -190,7 +190,7 @@ Abstract<br />
 <br />
 I believe that you would serve as an excellent reviewer of the manuscript, &quot;{$submissionTitle},&quot; and I am asking that you consider undertaking this important task for us. The Review Guidelines for this journal are appended below, and the submission is attached to this email. Your review of the submission, along with your recommendation, should be emailed to me by {$reviewDueDate}.<br />
 <br />
-Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.<br />
+Please indicate in a return email by {$responseDueDate} whether you are able and willing to do the review.<br />
 <br />
 Thank you for considering this request.<br />
 <br />
@@ -572,7 +572,7 @@ Thank you for completing the proofreading corrections for the galleys associated
 <br />
 Я уверен, Вы могли бы стать очень хорошим рецензентом для рукописи, &quot;{$submissionTitle},&quot; (ее резюме Вы найдете ниже) присланной для публикации в журнале {$contextName}. Надеюсь, на Вашу помощь в столь важной для нас задаче.<br />
 <br />
-Пожалуйста войдите на сайт нашего журнала до {$weekLaterDate}, чтобы согласиться (или отклонить) это предложение, либо чтобы получить доступ к полному тексту рукописи и передать Вашу рецензию и рекомендации.<br />
+Пожалуйста войдите на сайт нашего журнала до {$responseDueDate}, чтобы согласиться (или отклонить) это предложение, либо чтобы получить доступ к полному тексту рукописи и передать Вашу рецензию и рекомендации.<br />
 <br />
 Если Вы согласны, рецензию требуется отправить до {$reviewDueDate}.<br />
 <br />
@@ -663,7 +663,7 @@ Thank you for completing the proofreading corrections for the galleys associated
 		<subject>выпуск в открытом доступе</subject>
 		<body><![CDATA[Читатели:<br />
 <br />
-{$contextName} открывает свободный доступ к следующему выпуску. Мы приглашаем Вас ознакомиться с его оглавлением здесь и посетить наш сайт (<a href="{$journalUrl}">{$journalUrl}</a>) для получения доступа к полному тексту статей.<br />
+{$contextName} открывает свободный доступ к следующему выпуску. Мы приглашаем Вас ознакомиться с его оглавлением здесь и посетить наш сайт (<a href="{$contextUrl}">{$contextUrl}</a>) для получения доступа к полному тексту статей.<br />
 <br />
 Спасибо за интерес !<br />
 <br />

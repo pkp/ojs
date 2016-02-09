@@ -448,7 +448,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="sectionEditor.proofreader.confirmRenotify">Bu bildirimle, düzeltmen atamaları yeniden başlayacaktır. Bunu yapmak istediğinizden emin misiniz?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">İtirazlar</message>
-	<message key="sectionEditor.regrets.title"><![CDATA[#{$articleId} Hakem İtirazları, İptaller & Önceki Basamaklar]]></message>
+	<message key="sectionEditor.regrets.title"><![CDATA[#{$submissionId} Hakem İtirazları, İptaller & Önceki Basamaklar]]></message>
 	<message key="sectionEditor.regrets">İtirazlar</message>
 	<message key="sectionEditor.regrets.link">İtiraz, İptal ve Önceki Basamaklar</message>
 	<message key="sectionEditor.regrets.reviewRound">Hakem Değerlendirmesi: Tur {$round}</message>
@@ -886,49 +886,49 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} yeni bir gönderi yaptı, deyat: {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} {$articleId} numaralı gönderisini değiştirdi. Yeni dosya tanımı : {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} {$articleId} numaralı gönderiyi değerlendirme görevinden çekildi ({$round}. değerlendirme turu).</message>
-	<message key="log.review.reviewInitiated">{$articleId} numaralı gönderinin {$round}.  değerlendirme turu {$reviewerName} tarafından başlatıldı.</message>
-	<message key="log.review.reviewReinitiated">{$articleId} numaralı gönderinin {$round}.  değerlendirme turu {$reviewerName} tarafından yeniden başlatıldı.</message>
-	<message key="log.review.reviewCancelled">{$articleId} numaralı gönderinin {$round}. değerlendirme turu {$reviewerName} tarafından iptal edildi.</message>
-	<message key="log.review.reviewCleared">{$articleId} numaralı gönderinin {$round}. tur değerlendirmesi {$reviewerName} tarafından kaldırıldı.</message>
-	<message key="log.review.reviewerRated">{$reviewerName}, {$articleId} numaralı gönderi için {$round}. tur değerlendirmesi ile puanlandı.</message>
-	<message key="log.review.reviewDueDateSet">{$reviewerName} adlı hakeme {$articleId} numaralı makalenin {$round}. turdaki değerlendirmesi için son tarih {$dueDate} olarak belirlendi.</message>
-	<message key="log.review.reviewRecommendationSet">{$reviewerName} adlı hakeme {$articleId} numaralı gönderinin {$round}. turdaki değerlendirmesi için öneri gönderildi.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">Editör {$editorName}, {$articleId} numaralı gönderinin {$round}. turdaki değerlendirmesi için {$reviewerName} adlı hakemi önerdi.</message>
-	<message key="log.review.resubmit">{$articleId} numaralı gönderi yeniden değerlendirmeye sunuldu.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} {$articleId} numaralı gönderinin {$round}. turdaki değerlendirmesinde makaleyi reddetti.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} {$articleId} numaralı gönderinin {$round}. turdaki değerlendirmesinde makaleyi kabul etti.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} has declined the round {$round} review for submission {$articleId} on behalf of {$reviewerName}.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} {$articleId} ile tanımlı başvurunun {$round} nolu değerlendirmesini {$reviewerName} adına kabul etti.</message>
-	<message key="log.review.reviewFileByProxy">Editör, {$userName}, {$articleId} ile tanımlı başvurunun {$round} nolu değerlendirmesi sonucunda {$reviewerName} adına bir değerlendirme dosyası yükledi.</message>
+	<message key="log.author.documentRevised">{$authorName} {$submissionId} numaralı gönderisini değiştirdi. Yeni dosya tanımı : {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} {$submissionId} numaralı gönderiyi değerlendirme görevinden çekildi ({$round}. değerlendirme turu).</message>
+	<message key="log.review.reviewInitiated">{$submissionId} numaralı gönderinin {$round}.  değerlendirme turu {$reviewerName} tarafından başlatıldı.</message>
+	<message key="log.review.reviewReinitiated">{$submissionId} numaralı gönderinin {$round}.  değerlendirme turu {$reviewerName} tarafından yeniden başlatıldı.</message>
+	<message key="log.review.reviewCancelled">{$submissionId} numaralı gönderinin {$round}. değerlendirme turu {$reviewerName} tarafından iptal edildi.</message>
+	<message key="log.review.reviewCleared">{$submissionId} numaralı gönderinin {$round}. tur değerlendirmesi {$reviewerName} tarafından kaldırıldı.</message>
+	<message key="log.review.reviewerRated">{$reviewerName}, {$submissionId} numaralı gönderi için {$round}. tur değerlendirmesi ile puanlandı.</message>
+	<message key="log.review.reviewDueDateSet">{$reviewerName} adlı hakeme {$submissionId} numaralı makalenin {$round}. turdaki değerlendirmesi için son tarih {$dueDate} olarak belirlendi.</message>
+	<message key="log.review.reviewRecommendationSet">{$reviewerName} adlı hakeme {$submissionId} numaralı gönderinin {$round}. turdaki değerlendirmesi için öneri gönderildi.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">Editör {$editorName}, {$submissionId} numaralı gönderinin {$round}. turdaki değerlendirmesi için {$reviewerName} adlı hakemi önerdi.</message>
+	<message key="log.review.resubmit">{$submissionId} numaralı gönderi yeniden değerlendirmeye sunuldu.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} {$submissionId} numaralı gönderinin {$round}. turdaki değerlendirmesinde makaleyi reddetti.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} {$submissionId} numaralı gönderinin {$round}. turdaki değerlendirmesinde makaleyi kabul etti.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} has declined the round {$round} review for submission {$submissionId} on behalf of {$reviewerName}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} {$submissionId} ile tanımlı başvurunun {$round} nolu değerlendirmesini {$reviewerName} adına kabul etti.</message>
+	<message key="log.review.reviewFileByProxy">Editör, {$userName}, {$submissionId} ile tanımlı başvurunun {$round} nolu değerlendirmesi sonucunda {$reviewerName} adına bir değerlendirme dosyası yükledi.</message>
 	<message key="log.review.reviewerFile">Bir hakem değerlendirme dosyası yüklenmiş.</message>
 	<message key="log.editor.decision">An editor decision ({$decision}) for article {$submissionId} was recorded by {$editorName}.</message>
 	
 	
-	<message key="log.copyedit.initiate">{$articleId} ile tanımlı başvurunun sayfa düzeni {$copyeditorName} tarafından kabul edilmiştir.</message>
+	<message key="log.copyedit.initiate">{$submissionId} ile tanımlı başvurunun sayfa düzeni {$copyeditorName} tarafından kabul edilmiştir.</message>
 	<message key="log.copyedit.copyeditFileSet">Ön tanımlı sayfa düzeni dosyası seçilmiştir.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} {$articleId} ile tanımlı başvurunun ilk sayfa düzenini tamamlamıştır.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} {$articleId} ile tanımlı başvurunun son sayfa düzenini tamamlamıştır.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} {$articleId} ile tanımlı başvurunun sayfa düzeni için atanmıştır.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} {$submissionId} ile tanımlı başvurunun ilk sayfa düzenini tamamlamıştır.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} {$submissionId} ile tanımlı başvurunun son sayfa düzenini tamamlamıştır.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} {$submissionId} ile tanımlı başvurunun sayfa düzeni için atanmıştır.</message>
 	<message key="log.copyedit.copyeditorFile">Başvuru dosyasının sayfa düzeni sürümü sisteme gönderilmiştir.</message>
 	<message key="log.copyedit.authorFile">Başvuru dosyasının yazar sayfa düzeni sürümü yazar tarafından sisteme gönderilmiştir.</message>
 
-	<message key="log.layout.layoutEditorAssigned">{$editorName} {$articleId} ile tanımlı başvurunun mizanpajcısı olarak atanmıştır.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} {$articleId} ile tanımlı başvurunun mizanpajcılığından alınmıştır.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} {$articleId} ile tanımlı başvurunun mizanpajını tamamlamıştır.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} {$submissionId} ile tanımlı başvurunun mizanpajcısı olarak atanmıştır.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} {$submissionId} ile tanımlı başvurunun mizanpajcılığından alınmıştır.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} {$submissionId} ile tanımlı başvurunun mizanpajını tamamlamıştır.</message>
 
 	<message key="log.editor.metadataModified">{$editorName} bu makalenin meta verilerini değiştirmiştir.</message>
 	<message key="log.editor.editorFile">Başvuru dosyasının editör sürümü sisteme gönderilmiştir.</message>
-	<message key="log.editor.archived">{$articleId} numaralı gönderi arşivlendi.</message>
-	<message key="log.editor.restored">{$articleId} numaralı gönderi kuyruğa alınmıştır.</message>
-	<message key="log.editor.editorAssigned">{$editorName} {$articleId} numaralı gönderi için editör olarak atanmıştır.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} {$articleId} numaralı gönderi için editör sürecini hızlandırdı.</message>
+	<message key="log.editor.archived">{$submissionId} numaralı gönderi arşivlendi.</message>
+	<message key="log.editor.restored">{$submissionId} numaralı gönderi kuyruğa alınmıştır.</message>
+	<message key="log.editor.editorAssigned">{$editorName} {$submissionId} numaralı gönderi için editör olarak atanmıştır.</message>
+	<message key="log.editor.submissionExpedited">{$editorName} {$submissionId} numaralı gönderi için editör sürecini hızlandırdı.</message>
 
-	<message key="log.proofread.assign">{$assignerName} {$articleId} numaralı gönderi için düzeltmen olarak {$proofreaderName} öneriyor.</message>
-	<message key="log.proofread.complete">{$proofreaderName} {$articleId} numaralı gönderiyi yayın için gönderdi.</message>
+	<message key="log.proofread.assign">{$assignerName} {$submissionId} numaralı gönderi için düzeltmen olarak {$proofreaderName} öneriyor.</message>
+	<message key="log.proofread.complete">{$proofreaderName} {$submissionId} numaralı gönderiyi yayın için gönderdi.</message>
 	
-	<message key="log.imported">{$userName} {$articleId} numaralı gönderiyi sisteme yükledi.</message>
+	<message key="log.imported">{$userName} {$submissionId} numaralı gönderiyi sisteme yükledi.</message>
 
 	<!-- Reading Tools entries -->
 

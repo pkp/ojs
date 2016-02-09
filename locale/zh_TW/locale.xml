@@ -467,7 +467,7 @@
 	<message key="sectionEditor.proofreader.confirmRenotify">再次通知這個校對者會重新指派他們的編輯任務。您確定您想要這麼做？</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">婉謝</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} 審查人婉謝、取消 &amp; 之前的審查回合</message>
+	<message key="sectionEditor.regrets.title">#{$submissionId} 審查人婉謝、取消 &amp; 之前的審查回合</message>
 	<message key="sectionEditor.regrets">婉謝</message>
 	<message key="sectionEditor.regrets.link">檢視婉謝、取消、前一回合審查</message>
 	<message key="sectionEditor.regrets.reviewRound">審查，第{$round}回合審查</message>
@@ -811,47 +811,47 @@
 
 	<!-- Article Logs 文章記錄 -->
 	<message key="log.author.submitted">{$authorName}已經輸入一份新的投稿稿件， ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName}已經修改過文章{$articleId}。新檔案的 ID為{$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName}已經被取消指派對稿件{$articleId}進行{$round}審。</message>
-	<message key="log.review.reviewInitiated">{$reviewerName}對稿件{$articleId}進行{$round}審的工作已經開始進行。</message>
-	<message key="log.review.reviewReinitiated">{$reviewerName}對稿件{$articleId}進行{$round}審的工作已經重新開始進行。</message>
-	<message key="log.review.reviewCancelled">{$reviewerName}對稿件{$articleId}進行{$round}審的工作已經被取消。</message>
-	<message key="log.review.reviewCleared">{$reviewerName}對稿件{$articleId}進行{$round}審的工作已經被清除。</message>
-	<message key="log.review.reviewerRated">{$reviewerName}對稿件{$articleId}進行{$round}審的工作已經受到評分。</message>
-	<message key="log.review.reviewDueDateSet">{$reviewerName}對稿件{$articleId}進行{$round}審工作的截止期限日期已經被設定為{$dueDate}。</message>
-	<message key="log.review.reviewRecommendationSet">{$reviewerName}已經對稿件{$articleId}的{$round}審工作做出建議 。</message>
-	<message key="log.review.reviewRecommendationSetByProxy">編輯{$editorName}已對審查人{$reviewerName}對稿件{$articleId}進行{$round}審的審查意見做出建議。</message>
-	<message key="log.review.resubmit">稿件{$articleId}已經被重新投稿以進行審查。</message>
-	<message key="log.review.reviewDeclined">{$reviewerName}已經婉謝對稿件{$articleId}進行{$round}審。</message>
-	<message key="log.review.reviewAccepted">{$reviewerName}已經接受對稿件{$articleId}進行{$round}審。</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName}已經代表{$reviewerName}接受對稿件{$articleId}進行{$round}審。</message>
-	<message key="log.review.reviewFileByProxy">編輯{$userName}已經代表審查人{$reviewerName}上傳了稿件{$articleId}在{$round}審時的審查意見書檔案。</message>
+	<message key="log.author.documentRevised">{$authorName}已經修改過文章{$submissionId}。新檔案的 ID為{$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName}已經被取消指派對稿件{$submissionId}進行{$round}審。</message>
+	<message key="log.review.reviewInitiated">{$reviewerName}對稿件{$submissionId}進行{$round}審的工作已經開始進行。</message>
+	<message key="log.review.reviewReinitiated">{$reviewerName}對稿件{$submissionId}進行{$round}審的工作已經重新開始進行。</message>
+	<message key="log.review.reviewCancelled">{$reviewerName}對稿件{$submissionId}進行{$round}審的工作已經被取消。</message>
+	<message key="log.review.reviewCleared">{$reviewerName}對稿件{$submissionId}進行{$round}審的工作已經被清除。</message>
+	<message key="log.review.reviewerRated">{$reviewerName}對稿件{$submissionId}進行{$round}審的工作已經受到評分。</message>
+	<message key="log.review.reviewDueDateSet">{$reviewerName}對稿件{$submissionId}進行{$round}審工作的截止期限日期已經被設定為{$dueDate}。</message>
+	<message key="log.review.reviewRecommendationSet">{$reviewerName}已經對稿件{$submissionId}的{$round}審工作做出建議 。</message>
+	<message key="log.review.reviewRecommendationSetByProxy">編輯{$editorName}已對審查人{$reviewerName}對稿件{$submissionId}進行{$round}審的審查意見做出建議。</message>
+	<message key="log.review.resubmit">稿件{$submissionId}已經被重新投稿以進行審查。</message>
+	<message key="log.review.reviewDeclined">{$reviewerName}已經婉謝對稿件{$submissionId}進行{$round}審。</message>
+	<message key="log.review.reviewAccepted">{$reviewerName}已經接受對稿件{$submissionId}進行{$round}審。</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName}已經代表{$reviewerName}接受對稿件{$submissionId}進行{$round}審。</message>
+	<message key="log.review.reviewFileByProxy">編輯{$userName}已經代表審查人{$reviewerName}上傳了稿件{$submissionId}在{$round}審時的審查意見書檔案。</message>
 	<message key="log.review.reviewerFile">已上傳一份審查意見書</message>
 
 
-	<message key="log.copyedit.initiate">校樣編輯{$copyeditorName}已對稿件{$articleId}提出校樣意見。</message>
+	<message key="log.copyedit.initiate">校樣編輯{$copyeditorName}已對稿件{$submissionId}提出校樣意見。</message>
 	<message key="log.copyedit.copyeditFileSet">已經選擇預設的校樣編輯檔案。</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} 已經完成稿件{$articleId}的初始校樣編輯。</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName}已經完成稿件{$articleId}的最終校樣編輯。</message>
-	<message key="log.copyedit.copyeditorAssigned">稿件{$articleId}的校樣工作已經被指派給{$copyeditorName}。</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} 已經完成稿件{$submissionId}的初始校樣編輯。</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName}已經完成稿件{$submissionId}的最終校樣編輯。</message>
+	<message key="log.copyedit.copyeditorAssigned">稿件{$submissionId}的校樣工作已經被指派給{$copyeditorName}。</message>
 	<message key="log.copyedit.copyeditorFile">已經上傳一份此稿件檔案的校樣編輯版本。</message>
 	<message key="log.copyedit.authorFile">已經上傳一份此稿件檔案的作者校樣版本。</message>
 
-	<message key="log.layout.layoutEditorAssigned">稿件{$articleId}的版面編輯工作已經被指派給版面編輯{$editorName}。</message>
-	<message key="log.layout.layoutEditorUnassigned">稿件{$articleId}的版面編輯工作已經取消指派給版面編輯{$editorName}。.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName}已經完成稿件{$articleId}的版面編輯工作。</message>
+	<message key="log.layout.layoutEditorAssigned">稿件{$submissionId}的版面編輯工作已經被指派給版面編輯{$editorName}。</message>
+	<message key="log.layout.layoutEditorUnassigned">稿件{$submissionId}的版面編輯工作已經取消指派給版面編輯{$editorName}。.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName}已經完成稿件{$submissionId}的版面編輯工作。</message>
 
 	<message key="log.editor.metadataModified">此文章的後設資料已經被{$editorName}加以修改。</message>
 	<message key="log.editor.editorFile">已經上傳了一份此稿件的編輯版本。</message>
-	<message key="log.editor.archived">稿件{$articleId}已經被典藏。</message>
-	<message key="log.editor.restored">稿件{$articleId}已經被復原至列表中。</message>
-	<message key="log.editor.editorAssigned">{$editorName}被指派為稿件{$articleId}的編輯。</message>
-	<message key="log.editor.submissionExpedited">{$editorName}已經在進行稿件{$articleId}的編輯流程。</message>
+	<message key="log.editor.archived">稿件{$submissionId}已經被典藏。</message>
+	<message key="log.editor.restored">稿件{$submissionId}已經被復原至列表中。</message>
+	<message key="log.editor.editorAssigned">{$editorName}被指派為稿件{$submissionId}的編輯。</message>
+	<message key="log.editor.submissionExpedited">{$editorName}已經在進行稿件{$submissionId}的編輯流程。</message>
 
-	<message key="log.proofread.assign">{$assignerName} 已經被指派為{$proofreaderName}進行對稿件{$articleId}的校對。</message>
-	<message key="log.proofread.complete">{$proofreaderName}已經提交稿件 {$articleId}進行排程出版。.</message>
+	<message key="log.proofread.assign">{$assignerName} 已經被指派為{$proofreaderName}進行對稿件{$submissionId}的校對。</message>
+	<message key="log.proofread.complete">{$proofreaderName}已經提交稿件 {$submissionId}進行排程出版。.</message>
 
-	<message key="log.imported">{$userName}已經匯入文章{$articleId}。</message>
+	<message key="log.imported">{$userName}已經匯入文章{$submissionId}。</message>
 
 	<!-- Reading Tools entries 閱讀工具項目 -->
 

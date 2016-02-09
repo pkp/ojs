@@ -122,7 +122,7 @@ Thank you,<br />
 		<subject>New Issue Published</subject>
 		<body><![CDATA[Readers:<br />
 <br />
-{$contextName} has just published its latest issue at <a href="{$journalUrl}">{$journalUrl}</a>. We invite you to review the Table of Contents here and then visit our web site to review articles and items of interest.<br />
+{$contextName} has just published its latest issue at <a href="{$contextUrl}">{$contextUrl}</a>. We invite you to review the Table of Contents here and then visit our web site to review articles and items of interest.<br />
 <br />
 Thanks for the continuing interest in our work,<br />
 {$editorialContactSignature}]]></body>
@@ -132,11 +132,11 @@ Thanks for the continuing interest in our work,<br />
 		<subject>Archiving Request for {$contextName}</subject>
 		<body><![CDATA[Dear [University Librarian]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
 <br />
 [Brief description of journal]<br />
 <br />
-The URL to the LOCKSS Publisher Manifest for our journal is: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+The URL to the LOCKSS Publisher Manifest for our journal is: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 We understand that you are already participating in LOCKSS. If we can provide any additional metadata for purposes of registering our journal with your version of LOCKSS, we would be happy to provide it.<br />
 <br />
@@ -148,7 +148,7 @@ Thank you,<br />
 		<subject>Archiving Request for {$contextName}</subject>
 		<body><![CDATA[Dear [University Librarian]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
 <br />
 [Brief description of journal]<br />
 <br />
@@ -219,7 +219,7 @@ Thank you,<br />
 <br />
 I believe that you would serve as an excellent reviewer of the manuscript, &quot;{$submissionTitle},&quot; which has been submitted to {$contextName}. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br />
 <br />
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$journalUrl}">{$journalUrl}</a><br />
+Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
@@ -244,7 +244,7 @@ Thank you for considering this request.<br />
 <br />
 I believe that you would serve as an excellent reviewer of the manuscript, &quot;{$submissionTitle},&quot; which has been submitted to {$contextName}. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br />
 <br />
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br />
+Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br />
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
@@ -267,7 +267,7 @@ Thank you for considering this request.<br />
 <br />
 I believe that you would serve as an excellent reviewer of the manuscript, &quot;{$submissionTitle},&quot; and I am asking that you consider undertaking this important task for us. The Review Guidelines for this journal are appended below, and the submission is attached to this email. Your review of the submission, along with your recommendation, should be emailed to me by {$reviewDueDate}.<br />
 <br />
-Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.<br />
+Please indicate in a return email by {$responseDueDate} whether you are able and willing to do the review.<br />
 <br />
 Thank you for considering this request.<br />
 <br />
@@ -434,7 +434,7 @@ I would ask that you undertake the copyediting of &quot;{$submissionTitle}&quot;
 5. Save copyedited file, and upload to Step 1 of Copyediting.<br />
 6. Send the COMPLETE email to the editor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Submission URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Username: {$copyeditorUsername}<br />
 <br />
@@ -526,7 +526,7 @@ The author and editor have now completed their copyediting review of &quot;{$sub
 5. Click on METADATA to check indexing information (saving any corrections).<br />
 6. Send the COMPLETE email to the editor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Submission URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Username: {$copyeditorUsername}<br />
 <br />
@@ -560,7 +560,7 @@ The submission &quot;{$submissionTitle}&quot; to {$contextName} now needs galley
 2. Log into the journal and use the Layout Version file to create the galleys according to the journal's standards.<br />
 3. Send the COMPLETE email to the editor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Submission URL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
 Username: {$layoutEditorUsername}<br />
 <br />
@@ -674,7 +674,7 @@ The submission &quot;{$submissionTitle}&quot; to {$contextName} has been proofre
 3. Upload the revised galleys.<br />
 4. Send the COMPLETE email in Proofreading Step 3 to the editor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Subnmission URL: {$submissionUrl}<br />
 Username: {$layoutEditorUsername}<br />
 <br />
@@ -729,7 +729,7 @@ If you have any questions, please feel free to contact me.<br />
 		<subject>Issue Now Open Access</subject>
 		<body><![CDATA[Readers:<br />
 <br />
-{$contextName} has just made available in an open access format the following issue. We invite you to review the Table of Contents here and then visit our web site (<a href="{$journalUrl}">{$journalUrl}</a>) to review articles and items of interest.<br />
+{$contextName} has just made available in an open access format the following issue. We invite you to review the Table of Contents here and then visit our web site (<a href="{$contextUrl}">{$contextUrl}</a>) to review articles and items of interest.<br />
 <br />
 Thanks for the continuing interest in our work,<br />
 {$editorialContactSignature}]]></body>

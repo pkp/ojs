@@ -508,7 +508,7 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="sectionEditor.proofreader.confirmRenotify">Om du meddelar korrekturläsaren så kommer arbetet återaktiveras. Är du säker på att du vill göra det?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Avslag</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} Avslag från granskare, Avbrott &amp; Tidigare granskningsomgångar</message>
+	<message key="sectionEditor.regrets.title">#{$submissionId} Avslag från granskare, Avbrott &amp; Tidigare granskningsomgångar</message>
 	<message key="sectionEditor.regrets">Avslag</message>
 	<message key="sectionEditor.regrets.link">Visa avslag och Tidigare granskningomgångar</message>
 	<message key="sectionEditor.regrets.reviewRound">Granskning, Granskningsomgång {$round}</message>
@@ -889,49 +889,49 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} har lämnat ett nytt manuskript, ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} har omarbetat artikeln {$articleId}. Nytt fil-ID är {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} har avlösts som granskare för manuskript {$articleId} för granskningsomgång {$round}.</message>
-	<message key="log.review.reviewInitiated">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$articleId} har påbörjats.</message>
-	<message key="log.review.reviewReinitiated">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$articleId} har åter påbörjats.</message>
-	<message key="log.review.reviewCancelled">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$articleId} har avbrutits.</message>
-	<message key="log.review.reviewCleared">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$articleId} har tagits bort.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} har skickats till omgång {$round} för granskning av manuskript {$articleId}.</message>
+	<message key="log.author.documentRevised">{$authorName} har omarbetat artikeln {$submissionId}. Nytt fil-ID är {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} har avlösts som granskare för manuskript {$submissionId} för granskningsomgång {$round}.</message>
+	<message key="log.review.reviewInitiated">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$submissionId} har påbörjats.</message>
+	<message key="log.review.reviewReinitiated">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$submissionId} har åter påbörjats.</message>
+	<message key="log.review.reviewCancelled">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$submissionId} har avbrutits.</message>
+	<message key="log.review.reviewCleared">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$submissionId} har tagits bort.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} har skickats till omgång {$round} för granskning av manuskript {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Sista datum för omgång {$round} för granskning av manuskript av {$reviewerName} har satts till {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">Rekommendation för omgång {$round} för granskning av manuskript {$articleId} av {$reviewerName} har bestämts.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">Rekommendation för omgång {$round} för granskning av manuskript {$articleId} har bestämts av redaktör, {$editorName}, i enlighet med granskaren, {$reviewerName}.</message>
-	<message key="log.review.resubmit">Manuskriptet {$articleId} har åter skickats för granskning.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} har avslagit omgång {$round} för granskning av manuskript {$articleId}.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} har accepterat omgång {$round} för granskning av manuskript {$articleId}.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} har nekats omgång {$round} för granskning av manuskript {$articleId} av {$reviewerName}.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} har accepterats omgång {$round} för granskning av manuskript {$articleId} av {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">Redaktören, {$userName}, har laddat upp en granskningsfil för granskningsomgång {$round} av manuskriptet {$articleId} i enlighet med granskaren, {$reviewerName}.</message>
+	<message key="log.review.reviewRecommendationSet">Rekommendation för omgång {$round} för granskning av manuskript {$submissionId} av {$reviewerName} har bestämts.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">Rekommendation för omgång {$round} för granskning av manuskript {$submissionId} har bestämts av redaktör, {$editorName}, i enlighet med granskaren, {$reviewerName}.</message>
+	<message key="log.review.resubmit">Manuskriptet {$submissionId} har åter skickats för granskning.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} har avslagit omgång {$round} för granskning av manuskript {$submissionId}.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} har accepterat omgång {$round} för granskning av manuskript {$submissionId}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} har nekats omgång {$round} för granskning av manuskript {$submissionId} av {$reviewerName}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} har accepterats omgång {$round} för granskning av manuskript {$submissionId} av {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">Redaktören, {$userName}, har laddat upp en granskningsfil för granskningsomgång {$round} av manuskriptet {$submissionId} i enlighet med granskaren, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">En fil för granskning har laddats upp.</message>
 	<message key="log.editor.decision">Ett beslut av redaktören({$decision}) för artikel {$submissionId} skapades av {$editorName}.</message>
 
 
-	<message key="log.copyedit.initiate">Manusredigering av manuskriptet {$articleId} har påbörjats av {$copyeditorName}.</message>
+	<message key="log.copyedit.initiate">Manusredigering av manuskriptet {$submissionId} har påbörjats av {$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">Defaultfilen för manusredigering har valts.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} har avslutat den inledande manusredigeringen av {$articleId}.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} har avslutat den slutliga manusredigeringen av manuskriptet {$articleId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} har tilldelats att redigera manuskriptet {$articleId}.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} har avslutat den inledande manusredigeringen av {$submissionId}.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} har avslutat den slutliga manusredigeringen av manuskriptet {$submissionId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} har tilldelats att redigera manuskriptet {$submissionId}.</message>
 	<message key="log.copyedit.copyeditorFile">En version av manuskriptet för redigering har laddats upp.</message>
 	<message key="log.copyedit.authorFile">En version av manuskriptet, redigerad av författaren, har laddats upp.</message>
 
-	<message key="log.layout.layoutEditorAssigned">{$editorName} har utsetts till Layoutredaktör för manuskript {$articleId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} är inte länge ansvarig för layoutredigering av manuskript {$articleId}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} har avslutat layoutredigering för manuskript {$articleId}.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} har utsetts till Layoutredaktör för manuskript {$submissionId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} är inte länge ansvarig för layoutredigering av manuskript {$submissionId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} har avslutat layoutredigering för manuskript {$submissionId}.</message>
 
 	<message key="log.editor.metadataModified">Metadata till den här artikeln har ändrats av {$editorName}.</message>
 	<message key="log.editor.editorFile">En redaktörsveriosn av det här manuskriptet har laddats upp.</message>
-	<message key="log.editor.archived">Manuskriptet {$articleId} har arkiverats.</message>
-	<message key="log.editor.restored">Manuskriptet {$articleId} har återplacerats i kö.</message>
-	<message key="log.editor.editorAssigned">{$editorName} har utsetts till redaktör för manuskriptet {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} har utfört redigeringsprocessen för artikel {$articleId}.</message>
+	<message key="log.editor.archived">Manuskriptet {$submissionId} har arkiverats.</message>
+	<message key="log.editor.restored">Manuskriptet {$submissionId} har återplacerats i kö.</message>
+	<message key="log.editor.editorAssigned">{$editorName} har utsetts till redaktör för manuskriptet {$submissionId}.</message>
+	<message key="log.editor.submissionExpedited">{$editorName} har utfört redigeringsprocessen för artikel {$submissionId}.</message>
 
-	<message key="log.proofread.assign">{$assignerName} has utsett {$proofreaderName} att korrekturläsa manuskriptet {$articleId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} har skickat {$articleId} for planläggning.</message>
+	<message key="log.proofread.assign">{$assignerName} has utsett {$proofreaderName} att korrekturläsa manuskriptet {$submissionId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} har skickat {$submissionId} for planläggning.</message>
 
-	<message key="log.imported">{$userName} har importerat artikel {$articleId}.</message>
+	<message key="log.imported">{$userName} har importerat artikel {$submissionId}.</message>
 
 	<!-- Reading Tools entries -->
 

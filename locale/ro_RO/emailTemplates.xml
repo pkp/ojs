@@ -114,7 +114,7 @@ Vă mulțumim,<br />
 		<subject>A fost publicat un nou număr</subject>
 		<body><![CDATA[Cititorii:<br />
 <br />
-{$contextName} tocmai a publicat ultimul număr accesibil la <a href="{$journalUrl}">{$journalUrl}</a>. Vă invităm să parcurgeți cuprinsul și apoi să vizitați siteul pentru a vedea articolele și punctele de interes.<br />
+{$contextName} tocmai a publicat ultimul număr accesibil la <a href="{$contextUrl}">{$contextUrl}</a>. Vă invităm să parcurgeți cuprinsul și apoi să vizitați siteul pentru a vedea articolele și punctele de interes.<br />
 <br />
 Vă mulțumim pentru interesul manifestat față de eforturile noastre,<br />
 {$editorialContactSignature}]]></body>
@@ -124,11 +124,11 @@ Vă mulțumim pentru interesul manifestat față de eforturile noastre,<br />
 		<subject>Arhivarea solicitării pentru {$contextName}</subject>
 		<body><![CDATA[Stimate [University Librarian]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, este o revistă pentru care unul din membrii facultății noastre [name of member], este [title of position]. Revista dorește să inițieze o arhivă conformă LOCKSS (Lots of Copies Keep Stuff Safe) împreună cu instituția dumneavoastră și cu alte biblioteci universitare.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, este o revistă pentru care unul din membrii facultății noastre [name of member], este [title of position]. Revista dorește să inițieze o arhivă conformă LOCKSS (Lots of Copies Keep Stuff Safe) împreună cu instituția dumneavoastră și cu alte biblioteci universitare.<br />
 <br />
 [Brief description of journal]<br />
 <br />
-URL-ul manifestului editorial privind LOCKSS pentru revista noastră se află la: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+URL-ul manifestului editorial privind LOCKSS pentru revista noastră se află la: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Suntem la curent cu faptul că deja participați în LOCKSS. Am fi încântați dacă am putea să vă oferim metadate suplimentare cu scopul de a înregistra revista noastră cu versiunea dumneavoastră de LOCKSS.<br />
 <br />
@@ -140,7 +140,7 @@ Vă mulțumim,<br />
 		<subject>Arhivarea solicitării pentru {$contextName}</subject>
 		<body><![CDATA[Stimate [University Librarian]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, este o revistă pentru care unul din membrii facultății noastre [name of member], este [title of position]. Revista dorește să inițieze o arhivă conformă LOCKSS (Lots of Copies Keep Stuff Safe) cu instituția dumneavoastră și cu alte biblioteci universitare.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, este o revistă pentru care unul din membrii facultății noastre [name of member], este [title of position]. Revista dorește să inițieze o arhivă conformă LOCKSS (Lots of Copies Keep Stuff Safe) cu instituția dumneavoastră și cu alte biblioteci universitare.<br />
 <br />
 [Brief description of journal]<br />
 <br />
@@ -211,7 +211,7 @@ Vă mulțumim,<br />
 <br />
 Suntem încredințați că ați putea face evaluarea acestui manuscris intitulat &quot;{$submissionTitle}&quot;, care a fost trimis revistei {$contextName}. Abstractul propunerii este introdus mai jos și sperăm că veți accepta această misiune importantă.<br />
 <br />
-Vă rugăm să vă autentificați pe siteul revistei prin {$weekLaterDate} pentru a indica dacă veți face evaluarea sau nu. De asemenea, veți putea accesa propunerea și veți putea înregistra evaluarea precum și recomandările. Siteul web se află la <a href="{$journalUrl}">{$journalUrl}</a><br />
+Vă rugăm să vă autentificați pe siteul revistei prin {$responseDueDate} pentru a indica dacă veți face evaluarea sau nu. De asemenea, veți putea accesa propunerea și veți putea înregistra evaluarea precum și recomandările. Siteul web se află la <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 Evaluarea va trebui făcută până la data de {$reviewDueDate}.<br />
 <br />
@@ -236,7 +236,7 @@ Vă mulțumim pentru că luați în considerare această solicitare.<br />
 <br />
 Suntem încredințați că ați putea face evaluarea acestui manuscris intitulat &quot;{$submissionTitle},&quot; care a fost trimis revistei {$contextName}. Abstractul propunerii este introdus mai jos și sperăm că veți accepta această misiune importantă.<br />
 <br />
-Vă rugăm să vă autentificați pe siteul revistei prin {$weekLaterDate} pentru a indica dacă veți face evaluarea sau nu. De asemenea, veți putea accesa propunerea și veți putea înregistra evaluarea precum și recomandările.<br />
+Vă rugăm să vă autentificați pe siteul revistei prin {$responseDueDate} pentru a indica dacă veți face evaluarea sau nu. De asemenea, veți putea accesa propunerea și veți putea înregistra evaluarea precum și recomandările.<br />
 <br />
 Evaluarea va trebui făcută până la data de {$reviewDueDate}.<br />
 <br />
@@ -259,7 +259,7 @@ Vă mulțumim pentru că luați în considerare această solicitare.<br />
 <br />
 Suntem încredințați că ați putea face evaluarea acestui manuscris intitulat &quot;{$submissionTitle}&quot; și vă rugăm să acceptați această misiune importantă pentru noi. Îndrumările pentru evaluare sunt adăugate mai jos iar propunerea este atașată la acest email. Evaluarea propunerii împreună cu recomandarea ar trebui să-mi fie expediate până la {$reviewDueDate}.<br />
 <br />
-Indicați într-un email de răspuns până la data de {$weekLaterDate} dacă puteți și doriți să faceți evaluarea.<br />
+Indicați într-un email de răspuns până la data de {$responseDueDate} dacă puteți și doriți să faceți evaluarea.<br />
 <br />
 Vă mulțumim pentru că luați în considerare această solicitare.<br />
 <br />
@@ -425,7 +425,7 @@ Vă solicităm inițierea (tehno)redactării articolului intitulat &quot;{$submi
 5. Salvați fișierul (tehno)redactat și încărcați-l la pasul 1 corspunzător (tehno)redactării.<br />
 6. Trimiteți un email complet cu toate neclaritățile redactorului.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL-ul propunerii: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Nume utilizator: {$copyeditorUsername}<br />
 <br />
@@ -517,7 +517,7 @@ Autorul și redactorul au încheiat revizuirea (tehno)redactării pentru articol
 5. Clic pe METADATE pentru a verifica informația de indexare (salvând corecturile).<br />
 6. Trimite emailul de ÎNCHEIERE către redactor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL-ul propunerii: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Nume utilizator: {$copyeditorUsername}<br />
 <br />
@@ -551,7 +551,7 @@ Propunerea intitulată &quot;{$submissionTitle}&quot; făcută revistei {$contex
 2. Autentifică-te la revistă și folosește fișierul de machetare pentru a crea asamblarea urmând standardele revistei.<br />
 3. Trimite emailul de ÎNCHEIERE către redactor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL-ul propunerii: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
 Nume utilizator: {$layoutEditorUsername}<br />
 <br />
@@ -665,7 +665,7 @@ Propunerea intitulată &quot;{$submissionTitle}&quot; trimisă revistei {$contex
 3. Încarcă asamblările revizuite.<br />
 4. Trimite emailul de ÎNCHEIERE de la pasul 3 al sesiunii de corectură către redactor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL-ul propunerii: {$submissionUrl}<br />
 Nume utilizatorilor: {$layoutEditorUsername}<br />
 <br />
@@ -720,7 +720,7 @@ Dacă sunt întrebări, nu ezitați să mă contactați.<br />
 		<subject>Număr de revistă acum cu acces deschis</subject>
 		<body><![CDATA[Cititori:<br />
 <br />
-{$contextName} tocmai a publicat în regim de acces deschis acest număr. Vă invităm să consultați cuprinsul aici și să vizitați siteul web (<a href="{$journalUrl}">{$journalUrl}</a>) pentru a răsfoi articolele și punctele de interes.<br />
+{$contextName} tocmai a publicat în regim de acces deschis acest număr. Vă invităm să consultați cuprinsul aici și să vizitați siteul web (<a href="{$contextUrl}">{$contextUrl}</a>) pentru a răsfoi articolele și punctele de interes.<br />
 <br />
 Mulțumim pentru interesul continuu arătat pentru efortul nostru,<br />
 {$editorialContactSignature}]]></body>

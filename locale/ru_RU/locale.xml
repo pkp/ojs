@@ -302,7 +302,7 @@
 	<message key="sectionEditor.proofreader.confirmRenotify">Оповещение корректора подновит его назначение. Вы уверены, что это нужно сделать?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Сожаления</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} Сожаления рецензента, Отмены &amp; Прежние раунды</message>
+	<message key="sectionEditor.regrets.title">#{$submissionId} Сожаления рецензента, Отмены &amp; Прежние раунды</message>
 	<message key="sectionEditor.regrets">Сожаления</message>
 	<message key="sectionEditor.regrets.link">Сожаления рецензента, Отмены &amp; Прежние раунды</message>
 
@@ -713,11 +713,11 @@
 	<message key="installer.databaseSettingsInstructions">OJS хранит свои данные в базе данных, поддерживающей язык SQL. В списке выше указаны поддерживаемые базы данных. В следующих полях укажите установки, которые будут использованы для соединения с базой.</message>
 	<message key="installer.installApplication">Установить Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Обновить Open Journal Systems</message>
-	<message key="log.review.reviewRecommendationSetByProxy">Рекомендация для {$round} раунда рецензирования рукописи {$articleId} была введена редактором, {$editorName}, от имени рецензента, {$reviewerName}.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} отказался от рецензирования {$articleId} на {$round}-м раунде от имени {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">Редактор, {$userName}, ввел файл рецензии для {$round}-го раунда рецензирования рукописи {$articleId} от имени рецензента, {$reviewerName}.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">Рекомендация для {$round} раунда рецензирования рукописи {$submissionId} была введена редактором, {$editorName}, от имени рецензента, {$reviewerName}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} отказался от рецензирования {$submissionId} на {$round}-м раунде от имени {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">Редактор, {$userName}, ввел файл рецензии для {$round}-го раунда рецензирования рукописи {$submissionId} от имени рецензента, {$reviewerName}.</message>
 	<message key="log.editor.decision">Решение ({$decision}) для статьи {$submissionId} было введено {$editorName}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} ускорил процесс редактирования статьи {$articleId}.</message>
+	<message key="log.editor.submissionExpedited">{$editorName} ускорил процесс редактирования статьи {$submissionId}.</message>
 	<message key="rt.admin.settings.description">Инструменты читателя появляются в рамке рядом с опубликованными статьями в индексируемых разделах журнала. Они состоят из нижеперечисленного набора инструментов, а также инструментов, осуществляющих поиск по подобию, организованных в соответствии с разделом науки и дисциплиной.</message>
 	<message key="rt.admin.settings.enableReadingTools">Включить инструменты читателя для некоторых разделов журнала.</message>
 	<message key="rt.admin.settings.relatedItems">Раздел науки</message>

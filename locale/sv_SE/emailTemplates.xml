@@ -75,7 +75,7 @@ Vänligen,<br />
 		<subject>Nytt nummer</subject>
 		<body><![CDATA[Till registrerade läsare:<br />
 <br />
-{$contextName} har nyligen publicerat ett nytt nummer <a href="{$journalUrl}">{$journalUrl}</a>. Nedan följer innehållsförteckningen, klicka dig vidare till tidskriftens hemsida för att läsa de artiklar som kan vara av intresse.<br />
+{$contextName} har nyligen publicerat ett nytt nummer <a href="{$contextUrl}">{$contextUrl}</a>. Nedan följer innehållsförteckningen, klicka dig vidare till tidskriftens hemsida för att läsa de artiklar som kan vara av intresse.<br />
 <br />
 Tack för visat intresse för vårt arbete,<br />
 {$editorialContactSignature}]]></body>
@@ -85,11 +85,11 @@ Tack för visat intresse för vårt arbete,<br />
 		<subject>Begäran om arkivering för {$contextName}</subject>
 		<body><![CDATA[Hej [Ange namn på universitetsbibliotekarie]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, är en tidskrift där fakultetsmedlemmen, [ange namn på medlemmen], bistår som [ange position]. Tidskriften vill etablera ett LOCKSS- (Lots of Copies Keep Stuff Safe) kompatibelt arkiv vid det här och andra universitetsbibliotek.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, är en tidskrift där fakultetsmedlemmen, [ange namn på medlemmen], bistår som [ange position]. Tidskriften vill etablera ett LOCKSS- (Lots of Copies Keep Stuff Safe) kompatibelt arkiv vid det här och andra universitetsbibliotek.<br />
 <br />
 [Ange en kortare beskrivning av tidskriften]<br />
 <br />
-URL till LOCKSS Publisher Manifest för vår tidskrift är: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+URL till LOCKSS Publisher Manifest för vår tidskrift är: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Vi har förstått att ni redan deltar i LOCKSS. Om vi får leverera utförligare metadata för att registrera vår tidskrift i er LOCKSS-version så bistår vi gärna med detta.<br />
 <br />
@@ -102,7 +102,7 @@ Tack! Vänligen,<br />
 		<body><![CDATA[<br />
 				Hej [Ange namn på universitetsbibliotekarie]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, är en tidskrift där fakultetsmedlemmen, [ange namn på medlemmen], bistår som [ange position]. Tidskriften vill etablera ett LOCKSS- (Lots of Copies Keep Stuff Safe) kompatibelt arkiv vid det här och andra universitetsbibliotek.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, är en tidskrift där fakultetsmedlemmen, [ange namn på medlemmen], bistår som [ange position]. Tidskriften vill etablera ett LOCKSS- (Lots of Copies Keep Stuff Safe) kompatibelt arkiv vid det här och andra universitetsbibliotek.<br />
 <br />
 [Ange en kortare beskrivning av tidskriften]<br />
 <br />
@@ -175,7 +175,7 @@ Vid den redaktionella granskningen av manuskriptet &quot;{$submissionTitle}&quot
 <br />
 			Vår tidskrift {$contextName} har fått manuskriptet &quot;{$submissionTitle}&quot; tillskickat oss, och vi hoppas att du har möjlighet att göra en sakkunnigbdömning av manuskriptet eftersom vi anser att manuskriptets ämne matchar ditt kompetensområde. Manuskriptets sammanfattning är bifogad nedan.<br />
 			<br />
-			Vänligen logga in på tidskriftens hemsida innan {$weekLaterDate}, för att bekräfta om du har möjlighet att åta dig uppdraget eller inte. Om du väljer att granska manuskriptet ska du också använda tidkriftens hemsida för att lämna kommentarer och bedömning. Adressen till hemsidan är: <a href="{$journalUrl}">{$journalUrl}</a><br />
+			Vänligen logga in på tidskriftens hemsida innan {$responseDueDate}, för att bekräfta om du har möjlighet att åta dig uppdraget eller inte. Om du väljer att granska manuskriptet ska du också använda tidkriftens hemsida för att lämna kommentarer och bedömning. Adressen till hemsidan är: <a href="{$contextUrl}">{$contextUrl}</a><br />
 			<br />
 			Sista dag för bedömning är {$reviewDueDate}.<br />
 			<br />
@@ -201,7 +201,7 @@ Tack för hjälp, vänligen<br />
 <br />
 				Vår tidskrift {$contextName} har fått manuskriptet &quot;{$submissionTitle},&quot; tillskickat oss. Utifrån dina ämneskunskaper tror vi att du skulle sakkunnigbedöma manuskriptet på ett ypperligt sätt. Manuskriptets sammanfattning är bifogat nedan, och vi hoppas att du har möjlighet att genomföra detta viktiga arbete.<br />
 <br />
-				Vänligen logga in i tidskriften senast {$weekLaterDate} för att meddela om du avser granska manuskriptet eller inte. Väl inloggad kan du även läsa manuskriptet, avge bedömning samt lämna kommnetarer och rekommendationer.<br />
+				Vänligen logga in i tidskriften senast {$responseDueDate} för att meddela om du avser granska manuskriptet eller inte. Väl inloggad kan du även läsa manuskriptet, avge bedömning samt lämna kommnetarer och rekommendationer.<br />
 <br />
 				Bedömningen ska vara genomförd innan {$reviewDueDate}.<br />
 <br />
@@ -227,7 +227,7 @@ Tack för hjälp, vänligen<br />
 	<br />
 	Se länk nedan för information om tidskriftens riktlinjer för sakkunigbedömning. Manuskriptet bifogas i det här mailet. Bedömning av manuskriptet, samt rekommendation, ska mailas till mig senast {$reviewDueDate}.<br />
 <br />
-	Vänligen meddela mig innan {$weekLaterDate}, för att bekräfta om du har möjlighet att åta dig uppdraget eller inte<br />
+	Vänligen meddela mig innan {$responseDueDate}, för att bekräfta om du har möjlighet att åta dig uppdraget eller inte<br />
 <br />
 	Tack för din hjälp.<br />
 	<br />
@@ -364,7 +364,7 @@ Jag skulle vilja be dig om att genomföra manusredigering av manuskriptet &quot;
 5. Spara den redigerade filen och ladda upp den under Steg 1 under Manusredigering.<br />
 6. Skicka COMPLETE-mailet till Redaktören.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Manuskriptets URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Användarnamn: {$copyeditorUsername}<br />
 <br />
@@ -456,7 +456,7 @@ Författaren och Redaktören har nu avslutat redigering av manuskriptet &quot;{$
 5. Klicka på METADATA för att kontrollera och/eller ändra införd information.<br />
 6. Skicka COMPLETE mailet till Redaktören.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Manuskriptets URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
 Användarnamn: {$copyeditorUsername}<br />
 <br />
@@ -490,7 +490,7 @@ Manuskriptet &quot;{$submissionTitle}&quot; till {$contextName} behöver Korrekt
 2. Logga in på tidskriften och använd den &quot;tvättade versionen&quot; för att skapa en Korrkturversion enligt tidskriftens föreskrifter.<br />
 3. Skicka COMPLETE mailet till Redaktören.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Manuskriptets URL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
 Användarnamn: {$layoutEditorUsername}<br />
 <br />
@@ -605,7 +605,7 @@ Manuskriptet &quot;{$submissionTitle}&quot; till {$contextName} har korrekturlä
 3. Ladda upp den korrigerade och uppdaterade versionen.<br />
 3. Skicka COMPLETE mailet under Korrekturläsning Steg 3 till Redaktör.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Manuskriptets URL: {$submissionUrl}<br />
 Användarnamn: {$layoutEditorUsername}<br />
 <br />
@@ -661,7 +661,7 @@ Om du har några frågor, vänligen kontakta mig.<br />
 		<body><![CDATA[<br />
 				Läsare:<br />
 <br />
-				{$contextName} har nyligen gjorts tillgänglig som Open Access. Läs innehållsförteckningen nedan och klicka dig sedan in på tidskriften <a href="{$journalUrl}">{$journalUrl}</a>) för att ta del intressant material.<br />
+				{$contextName} har nyligen gjorts tillgänglig som Open Access. Läs innehållsförteckningen nedan och klicka dig sedan in på tidskriften <a href="{$contextUrl}">{$contextUrl}</a>) för att ta del intressant material.<br />
 <br />
 				Tack för fortsatt visat intresse för vårt arbete,<br />
 				{$editorialContactSignature}]]></body>

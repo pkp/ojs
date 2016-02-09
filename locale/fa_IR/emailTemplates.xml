@@ -74,7 +74,7 @@
 		<subject>شماره جدید چاپ شد</subject>
 		<body><![CDATA[خوانندگان گرامی:<br />
 <br />
-{$contextName}، آخرین شماره خود را به نشانی &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt; چاپ کرده است. از شما دعوت میشود که پس از ملاحظه فهرست عناوین از وب سایت مجله حاوی مقاله ها و موضوع های مورد علاقه بازدید کنید.<br />
+{$contextName}، آخرین شماره خود را به نشانی &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; چاپ کرده است. از شما دعوت میشود که پس از ملاحظه فهرست عناوین از وب سایت مجله حاوی مقاله ها و موضوع های مورد علاقه بازدید کنید.<br />
 <br />
 از توجه همیشگی مستمر شما نسبت به این مجله متشکریم.<br />
 {$editorialContactSignature}]]></body>
@@ -83,7 +83,7 @@
 	<email_text key="LOCKSS_NEW_ARCHIVE">
 		<subject>درخواست بایگانی کردن {$contextName}:</subject>
 		<body><![CDATA[مسئول محترم کتابخانه دانشگاه:<br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt; ، عضو دانشکده شما می باشد &amp;lt;[name of member]&amp;gt;. این مجله خواستار ایجاد سیستم بایگانی LOCKSS با آن کتابخانه و کتابخانه های دیگر دانشگاهها می باشد.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; ، عضو دانشکده شما می باشد &amp;lt;[name of member]&amp;gt;. این مجله خواستار ایجاد سیستم بایگانی LOCKSS با آن کتابخانه و کتابخانه های دیگر دانشگاهها می باشد.<br />
 <br />
 [Brief description of journal]<br />
 <br />
@@ -94,7 +94,7 @@
 باتشکر<br />
 {$principalContactSignature}Dear [University Librarian]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
 <br />
 [Brief description of journal]<br />
 <br />
@@ -166,7 +166,7 @@ Thank you,<br />
 <br />
 شما به عنوان یک کارشناس ممتاز برای بررسی مقاله &quot;{$submissionTitle}&quot;که برای {$contextName} ارسال شده است انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید<br />
 <br />
-لطفا قبل از تاریخ &quot;{$weekLaterDate}&quot; وارد وب سایت مجله شده و مشخص کنید که آیا مایل به قبول کارشناسی مقاله هستید یا خیر. همچنین به طور همزمان می توانید به مقاله ارسالی دسترسی پیدا کرده و متن کارشناسی و توصیه های خودرا ذخیره کنید. آدرس وب سایت مجله <a href="{$journalUrl}">{$journalUrl}</a> است.<br />
+لطفا قبل از تاریخ &quot;{$responseDueDate}&quot; وارد وب سایت مجله شده و مشخص کنید که آیا مایل به قبول کارشناسی مقاله هستید یا خیر. همچنین به طور همزمان می توانید به مقاله ارسالی دسترسی پیدا کرده و متن کارشناسی و توصیه های خودرا ذخیره کنید. آدرس وب سایت مجله <a href="{$contextUrl}">{$contextUrl}</a> است.<br />
 <br />
 ضمنا آخرین مهلت بررسی این مقاله تا تاریخ &quot;{$reviewDueDate}&quot; می باشد<br />
 <br />
@@ -524,7 +524,7 @@ please contact me. Thank you for your contribution to this journal.<br />
 <br />
 از توجه همیشگی شما نسبت به این مجله متشکریم.<br />
 <br />
-آدرس وب سایت مجله: <a href="{$journalUrl}">{$journalUrl}</a><br />
+آدرس وب سایت مجله: <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>This email is sent to registered readers who have requested to receive a notification email when an issue becomes open access.</description>
@@ -673,12 +673,12 @@ jhvdo hkrqh: {$expiryDate}<br />
 		<subject>تقاضای آزشیو برای {$contextName}</subject>
 		<body><![CDATA[مسئول محترم کتابخانه<br />
 <br />
-مجله {$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, مجله ای است که یکی از اعضای آن مؤسسه  (بنام فلان) در آن عضو میباشد. این مجله متقاضی آرشیو شدن محتوایش در یک سایت LOCKSS میباشد. خواهشمند است مساعدت فرموده و این مجله را در سیستم خود آرشیو کنید.rsity libraries.<br />
+مجله {$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, مجله ای است که یکی از اعضای آن مؤسسه  (بنام فلان) در آن عضو میباشد. این مجله متقاضی آرشیو شدن محتوایش در یک سایت LOCKSS میباشد. خواهشمند است مساعدت فرموده و این مجله را در سیستم خود آرشیو کنید.rsity libraries.<br />
 <br />
 [توضیح مختصری از مجله]<br />
 <br />
 آدرس وبی برای مانیفست ناشری LOCKSS مجله ما بقرار زیر است:<br />
-<a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+<a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 از آنجائیکه شما عضو شبکه LOCKSS هستید خواهشمند است مساعدت فرموده و ما را در آرشیو خود ذخیره فرمائید.<br />
 با تشکر<br />

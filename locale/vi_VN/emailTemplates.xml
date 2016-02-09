@@ -48,7 +48,7 @@ Xin cảm ơn,<br />
 		<subject>Số tạp chí mới ra</subject>
 		<body><![CDATA[Bạn đọc kính mến:<br />
 <br />
-{$contextName} vừa mới xuất bản số mới nhất tại địa chỉ <a href="{$journalUrl}">{$journalUrl}</a>. Xin mời quý vị xem Mục lục gửi kèm đây và truy cập vào website của chúng tôi để xem bài viết mà quý vị quan tâm.<br />
+{$contextName} vừa mới xuất bản số mới nhất tại địa chỉ <a href="{$contextUrl}">{$contextUrl}</a>. Xin mời quý vị xem Mục lục gửi kèm đây và truy cập vào website của chúng tôi để xem bài viết mà quý vị quan tâm.<br />
 <br />
 Xin trân trọng cảm ơn sự quan tâm của quý vị,<br />
 {$editorialContactSignature}]]></body>
@@ -58,11 +58,11 @@ Xin trân trọng cảm ơn sự quan tâm của quý vị,<br />
 		<subject>Đề nghị lưu trữ tạp chí {$contextName}</subject>
 		<body><![CDATA[Kính gửi [Giám đốc TV Đại học]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, là một tạp chí mà một giảng viên của trường quý vị,[tên giảng viên], tham gia với tư cách [chức vụ]. Tạp chí mong muốn xây dựng một kho lưu trữ theo nguyên tắc LOCKSS (Lots of Copies Keep Stuff Safe - Nhiều bản sao giữ cho tài liệu an toàn) với thư viện của quý vị và các thư viện đại học khác.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, là một tạp chí mà một giảng viên của trường quý vị,[tên giảng viên], tham gia với tư cách [chức vụ]. Tạp chí mong muốn xây dựng một kho lưu trữ theo nguyên tắc LOCKSS (Lots of Copies Keep Stuff Safe - Nhiều bản sao giữ cho tài liệu an toàn) với thư viện của quý vị và các thư viện đại học khác.<br />
 <br />
 [Mô tả ngắn gọn về tạp chí]<br />
 <br />
-Đường dẫn URL tới LOCKSS Publisher Manifest cho tạp chí của chúng tôi là: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+Đường dẫn URL tới LOCKSS Publisher Manifest cho tạp chí của chúng tôi là: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Chúng tôi được biết quý vị hiện đã tham gia vào sáng kiến LOCKSS. Chúng tôi sẵn sàng cung cấp thêm các thông tin mô tả cho mục đích đăng ký tạp chí của chúng tôi với phiên bản LOCKSS.<br />
 <br />
@@ -74,7 +74,7 @@ Trân trọng cảm ơn,<br />
 		<subject>Đề nghị lưu trữ tạp chí {$contextName}</subject>
 		<body><![CDATA[Kính gửi [Giám đốc TV Đại học]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, là một tạp chí mà một giảng viên của trường quý vị,[tên giảng viên], tham gia với tư cách [chức vụ]. Tạp chí mong muốn xây dựng một kho lưu trữ theo nguyên tắc LOCKSS (Lots of Copies Keep Stuff Safe - Nhiều bản sao giữ cho tài liệu an toàn) với thư viện của quý vị và các thư viện đại học khác.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, là một tạp chí mà một giảng viên của trường quý vị,[tên giảng viên], tham gia với tư cách [chức vụ]. Tạp chí mong muốn xây dựng một kho lưu trữ theo nguyên tắc LOCKSS (Lots of Copies Keep Stuff Safe - Nhiều bản sao giữ cho tài liệu an toàn) với thư viện của quý vị và các thư viện đại học khác.<br />
 <br />
 [Mô tả ngắn gọn về tạp chí]<br />
 <br />
@@ -145,7 +145,7 @@ Xin trân trọng cảm ơn,<br />
 <br />
 Tôi tin rằng quý vị sẽ là người phản biện xuất sắc đối với bản thảo bài viết, &quot;{$submissionTitle},&quot; nộp cho tạp chí {$contextName}. Tóm tắt của bài nộp được kèm ở cuối thư, hy vọng rằng quý vị sẽ cân nhắc nhận giúp cho công việc quan trọng này.<br />
 <br />
-Xin vui lòng đăng nhập vào website trước ngày {$weekLaterDate} để báo cho BBT biết liệu quý vị có nhận lời phản biện hay không, đồng thời truy cập vào bài nộp, ghi lại lời phản biện và đề xuất. Địa chỉ của website là <a href="{$journalUrl}">{$journalUrl}</a><br />
+Xin vui lòng đăng nhập vào website trước ngày {$responseDueDate} để báo cho BBT biết liệu quý vị có nhận lời phản biện hay không, đồng thời truy cập vào bài nộp, ghi lại lời phản biện và đề xuất. Địa chỉ của website là <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 Thời hạn phản biện là {$reviewDueDate}.<br />
 <br />
@@ -170,7 +170,7 @@ Cảm ơn vì đã xem xét đề nghị này.<br />
 <br />
 Tôi tin rằng quý vị sẽ là người phản biện xuất sắc đối với bản thảo bài viết, &quot;{$submissionTitle},&quot; nộp cho tạp chí {$contextName}. Tóm tắt của bài nộp được kèm ở cuối thư, hy vọng rằng quý vị sẽ cân nhắc nhận giúp cho công việc quan trọng này.<br />
 <br />
-Xin vui lòng đăng nhập vào website trước ngày {$weekLaterDate} để báo cho BBT biết liệu quý vị có nhận lời phản biện hay không, đồng thời truy cập vào bài nộp, ghi lại lời phản biện và đề xuất. Địa chỉ của website là <a href="{$journalUrl}">{$journalUrl}</a><br />
+Xin vui lòng đăng nhập vào website trước ngày {$responseDueDate} để báo cho BBT biết liệu quý vị có nhận lời phản biện hay không, đồng thời truy cập vào bài nộp, ghi lại lời phản biện và đề xuất. Địa chỉ của website là <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 Thời hạn phản biện là {$reviewDueDate}.<br />
 <br />
@@ -193,7 +193,7 @@ Cảm ơn vì đã xem xét đề nghị này.<br />
 <br />
 Tôi tin rằng quý vị sẽ là người phản biện xuất sắc đối với bản thảo bài viết, &quot;{$submissionTitle},&quot; và tôi xin đề nghị quý vị nhận giúp công việc quan trọng này. Bản Hướng dẫn Phản biện cho tạp chí này được gửi kèm sau đây và bài nộp được gửi trong file đính kèm. Xin gửi phản biện về bài nộp cùng với khuyến nghị của quý vị về cho tôi trước ngày {$reviewDueDate}.<br />
 <br />
-xin vui lòng khẳng định trong email hồi âm trước ngày {$weekLaterDate} liệu quý vị có thể và sẵn sàng phản biện bài viết hay không.<br />
+xin vui lòng khẳng định trong email hồi âm trước ngày {$responseDueDate} liệu quý vị có thể và sẵn sàng phản biện bài viết hay không.<br />
 <br />
 Cảm ơn quý vị đã xem xét đề nghị này.<br />
 <br />
@@ -549,7 +549,7 @@ Nếu quý vị có bất kỳ câu hỏi nào, xin vui lòng liên lạc với 
 		<subject>Số tạp chí đã được truy cập tự do</subject>
 		<body><![CDATA[Bạn đọc:<br />
 <br />
-Tạp chí {$contextName} đã cho phép truy cập tự do đối với số tạp chí sau đây. Chúng tôi xin mời quý vị xem Mục lục của số này ở đây và sau đó ghé thăm website (<a href="{$journalUrl}">{$journalUrl}</a>) để xem những bài viết mà quý vị quan tâm.<br />
+Tạp chí {$contextName} đã cho phép truy cập tự do đối với số tạp chí sau đây. Chúng tôi xin mời quý vị xem Mục lục của số này ở đây và sau đó ghé thăm website (<a href="{$contextUrl}">{$contextUrl}</a>) để xem những bài viết mà quý vị quan tâm.<br />
 <br />
 Xin cảm ơn quý vị đã dành sự quan tâm cho tạp chí,<br />
 {$editorialContactSignature}]]></body>
