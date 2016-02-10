@@ -49,6 +49,7 @@ lib/pkp/tools/mergePullRequest.sh				\
 lib/password_compat/.git					\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/test					\
+plugins/reports/counter/classes/COUNTER/.git			\
 plugins/generic/pdfJsViewer/.git"
 
 
