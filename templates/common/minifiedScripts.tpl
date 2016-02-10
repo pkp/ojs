@@ -63,6 +63,7 @@
 <script src="{$baseUrl}/lib/pkp/js/controllers/UploaderHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/AutocompleteHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/RangeSliderHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/controllers/RevealMoreHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/NotificationHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/form/FormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/form/DropdownHandler.js"></script>
@@ -120,6 +121,7 @@
 <script src="{$baseUrl}/lib/pkp/js/pages/workflow/SubmissionHeaderHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/pages/workflow/EditorDecisionsHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/grid/users/reviewer/AdvancedReviewerSearchHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/controllers/grid/users/reviewer/ReadReviewHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/grid/users/reviewer/form/EditReviewFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/grid/users/reviewer/form/AddReviewerFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/grid/users/stageParticipant/form/StageParticipantNotifyHandler.js"></script>
