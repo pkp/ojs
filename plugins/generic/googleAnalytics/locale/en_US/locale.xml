@@ -32,7 +32,7 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.enableSite">Site Homepage</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.siteEnable">Enable this journal's settings on the site homepage</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.siteDisable">Disable existing settings on the site homepage</message>
-	<message key="plugins.generic.googleAnalytics.manager.settings.siteUnchanged">Leave the site hompage settings as-is</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteUnchanged">Leave the site homepage settings as-is</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.disabled">Disabled</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.enableSiteInstructions">These settings can be applied when users browse at the site level as well.  If no settings are applied at the site level, Google Analytics will only be active at the journal level.</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics account number</message>
