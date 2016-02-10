@@ -33,7 +33,7 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 	 * @copydoc PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.plugins.importexport.native.filter.IssueGalleyNativeXmlFilter';
+		return 'plugins.importexport.native.filter.IssueGalleyNativeXmlFilter';
 	}
 
 
