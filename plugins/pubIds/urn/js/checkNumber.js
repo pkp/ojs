@@ -18,7 +18,7 @@
  *  the last number of the quotient before the decimal point is the check number.
  */
 function calculateCheckNo(urnPrefix) {
-	var urnSuffix = document.getElementById('urnSuffix').value
+    var urnSuffix = document.getElementById('urnSuffix').value;
     var urn = urnPrefix+urnSuffix;
     urn = urn.toLowerCase();
     
