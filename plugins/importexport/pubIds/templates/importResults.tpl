@@ -5,7 +5,7 @@
  * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Display the import results: the errors occured and the list of the successfully-imported public identifiers.
+ * Display the import results: the errors occurred and the list of the successfully-imported public identifiers.
  *
  *}
 {strip}

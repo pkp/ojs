@@ -1830,7 +1830,7 @@ class SimplePie
 	}
 
 	/**
-	 * Return the error message for the occured error
+	 * Return the error message for the occurred error
 	 *
 	 * @access public
 	 * @return string Error message
@@ -7924,7 +7924,7 @@ class SimplePie_HTTP_Parser
 	var $data = '';
 
 	/**
-	 * Input data length (to avoid calling strlen() everytime this is needed)
+	 * Input data length (to avoid calling strlen() every time this is needed)
 	 *
 	 * @access private
 	 * @var int
@@ -13780,7 +13780,7 @@ class SimplePie_XML_Declaration_Parser
 	var $data = '';
 
 	/**
-	 * Input data length (to avoid calling strlen() everytime this is needed)
+	 * Input data length (to avoid calling strlen() every time this is needed)
 	 *
 	 * @access private
 	 * @var int

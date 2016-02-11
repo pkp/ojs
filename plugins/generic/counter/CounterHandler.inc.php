@@ -316,7 +316,7 @@ class CounterHandler extends Handler {
 	}
 
 	/**
-	 * Validate that user has site admin privileges or journal manager priveleges.
+	 * Validate that user has site admin privileges or journal manager privileges.
 	 * Redirects to the user index page if not properly authenticated.
 	 * @param $canRedirect boolean Whether or not to redirect if the user cannot be validated; if not, the script simply terminates.
 	 */

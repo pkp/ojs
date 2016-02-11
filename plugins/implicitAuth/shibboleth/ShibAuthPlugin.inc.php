@@ -82,7 +82,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 
 			$uid = $_SERVER[$uin];
 
-			// If we dont have a UIN in the header then we can't continue - so send them back to the login screen.
+			// If we don't have a UIN in the header then we can't continue - so send them back to the login screen.
 
 			if ($uid == null) {
 
@@ -217,7 +217,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 
 	// If this user is in the list of admins then make sure they are set up as an admin.
 	// If they are not in the list - make sure they are not an admin. This is so you can
-	// take someone off the admin list - and their admin privelege will be revoked.
+	// take someone off the admin list - and their admin privilege will be revoked.
 
 	function implicitAuthAdmin($userID, $authStr) {
 
