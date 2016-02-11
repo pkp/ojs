@@ -59,7 +59,7 @@ class SolrWebService extends XmlWebService {
 	/** @var string The unique ID identifying this OJS installation to the solr server. */
 	var $_instId;
 
-	/** @var string A description of the last error or message that occured when calling the service. */
+	/** @var string A description of the last error or message that occurred when calling the service. */
 	var $_serviceMessage = '';
 
 	/** @var FileCache A cache containing the available search fields. */
@@ -212,7 +212,7 @@ class SolrWebService extends XmlWebService {
 	 *  updates to the given journal.
 	 *
 	 * @return integer The number of articles processed or
-	 *  null if an error occured. After an error the method
+	 *  null if an error occurred. After an error the method
 	 *  SolrWebService::getServiceMessage() will return details
 	 *  of the error.
 	 */
@@ -244,7 +244,7 @@ class SolrWebService extends XmlWebService {
 	 *  articles from the given journal.
 	 *
 	 * @return integer The number of articles processed or
-	 *  null if an error occured. After an error the method
+	 *  null if an error occurred. After an error the method
 	 *  SolrWebService::getServiceMessage() will return details
 	 *  of the error.
 	 */
@@ -303,7 +303,7 @@ class SolrWebService extends XmlWebService {
 	 *  The keys in the "scoredResults" sub-array are scores (1-9999) and the
 	 *  values are article IDs. The alternative spelling sub-array returns
 	 *  an alternative query string (if any) and the number of hits for this
-	 *  string. Null if an error occured while querying the server.
+	 *  string. Null if an error occurred while querying the server.
 	 */
 	function retrieveResults(&$searchRequest, &$totalResults) {
 		// Construct the main query.
@@ -1235,7 +1235,7 @@ class SolrWebService extends XmlWebService {
 	 *  the XML list that are marked for deletion.
 	 *
 	 * @return integer The number of articles processed or
-	 *  null if an error occured.
+	 *  null if an error occurred.
 	 *
 	 *  After an error the method SolrWebService::getServiceMessage()
 	 *  will return details of the error.
@@ -1898,7 +1898,7 @@ class SolrWebService extends XmlWebService {
 		$userInput = String::substr($userInput, 0, -String::strlen($facetPrefix));
 		switch ($fieldName) {
 			case 'query':
-				// The 'query' filter goes agains all fields.
+				// The 'query' filter goes against all fields.
 				$articleSearch = new ArticleSearch();
 				$solrFields = array_values($articleSearch->getIndexFieldMap());
 				break;
@@ -1977,7 +1977,7 @@ class SolrWebService extends XmlWebService {
 		// Only index published articles.
 		if (!$issue->getPublished() || $article->getStatus() != STATUS_PUBLISHED) return false;
 
-		// Make sure the requesting party is authorized to acces the article/issue.
+		// Make sure the requesting party is authorized to access the article/issue.
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 		$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);

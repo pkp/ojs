@@ -14,7 +14,7 @@
  *  every URN character is replaced with a number according to the conversion table,
  *  every number is multiplied by it's position/index (beginning with 1),
  *  the numbers' sum is calculated,
- *  the sum is devided by the last number,
+ *  the sum is divided by the last number,
  *  the last number of the quotient before the decimal point is the check number.
  */
 function calculateCheckNo(urnPrefix) {

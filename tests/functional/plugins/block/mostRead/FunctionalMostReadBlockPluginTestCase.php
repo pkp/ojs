@@ -80,7 +80,7 @@ class FunctionalMostReadBlockPluginTest extends WebTestCase {
 	/**
 	 * SCENARIO: display most-read articles of a journal
 	 *    WHEN I display a journal page
-	 *    THEN I see a block plugin wich lists the articles
+	 *    THEN I see a block plugin which lists the articles
 	 *         ranking highest for the selected "main metric"
 	 *         throughout the journal
 	 *     AND I'll see the articles as title links with the

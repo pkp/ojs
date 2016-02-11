@@ -1089,7 +1089,7 @@ class LucenePlugin extends GenericPlugin {
 
 	/**
 	 * Send an email to the site's tech admin
-	 * warning that an indexing error has occured.
+	 * warning that an indexing error has occurred.
 	 *
 	 * @param $error array An array of article ids.
 	 * @param $journal Journal A journal object.
