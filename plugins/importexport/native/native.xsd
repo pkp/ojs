@@ -67,7 +67,7 @@
 	  - Composite / root elements
 	  -->
 	<!-- Permit "issues" as a root element -->
-	<element name="issues" abstract="true">
+	<element name="issues">
 		<complexType>
 			<sequence>
 				<element ref="pkp:issue" maxOccurs="unbounded" />
