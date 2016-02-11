@@ -1775,7 +1775,7 @@ class SolrWebService extends XmlWebService {
 			$params = array();
 			foreach ($subQueries as $fieldList => $searchPhrase) {
 				// Construct the sub-query and add it to the search query and params.
-				$params = $this->_addSubquery($fieldList, $searchPhrase, $params, true);
+				$params = $this->_addSubquery($fieldList, $searchPhrase, $params);
 			}
 		}
 
