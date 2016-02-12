@@ -86,13 +86,13 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 			$mail->assignParams(array(
 				'authorName' => $user->getFullName(),
 				'authorUsername' => $user->getUsername(),
-				'editorialContactSignature' => $context->getSetting('contactName') . "\n" . $context->getLocalizedName(),
+				'editorialContactSignature' => $context->getSetting('contactName'),
 				'submissionUrl' => $router->url($request, null, 'authorDashboard', 'submission', $submission->getId()),
 			));
 
 			$authorMail->assignParams(array(
 				'submitterName' => $user->getFullName(),
-				'editorialContactSignature' => $context->getSetting('contactName') . "\n" . $context->getLocalizedName(),
+				'editorialContactSignature' => $context->getSetting('contactName'),
 			));
 
 			$mail->send($request);
