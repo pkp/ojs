@@ -84,6 +84,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$issueNode = $doc->createElementNS($deployment->getNamespace(), 'issue');
 		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', $issue->getId()));
 		$node->setAttribute('type', 'internal');
+		$node->setAttribute('advice', 'ignore');
 
 		$issueNode->setAttribute('volume', $issue->getVolume());
 		$issueNode->setAttribute('number', $issue->getNumber());
@@ -251,6 +252,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 
 			$sectionNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', $section->getId()));
 			$node->setAttribute('type', 'internal');
+			$node->setAttribute('advice', 'ignore');
 
 			if ($section->getReviewFormId()) $sectionNode->setAttribute('review_form_id', $section->getReviewFormId());
 			$sectionNode->setAttribute('ref', $section->getAbbrev($journal->getPrimaryLocale()));

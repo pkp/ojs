@@ -25,6 +25,16 @@
 					<attribute name="section_ref" type="string" />
 					<attribute name="seq" type="int" />
 					<attribute name="access_status" type="int" />
+					<attribute name="stage" use="required">
+						<simpleType>
+							<restriction base="string">
+								<enumeration value="submission" />
+								<enumeration value="externalReview" />
+								<enumeration value="editing" />
+								<enumeration value="production" />
+							</restriction>
+						</simpleType>
+					</attribute>
 				</extension>
 			</complexContent>
 		</complexType>
@@ -170,8 +180,8 @@
 			<element name="policy" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
 			<element name="title" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
 		</sequence>
-		<attribute name="journal_id" type="int" />
-		<attribute name="review_form_id" type="int" />
+		<attribute name="ref" type="string" />
+		<attribute name="review_form_id" type="int" use="optional" />
 		<attribute name="seq" type="string" />
 		<attribute name="editor_restricted" type="int" />
 		<attribute name="meta_indexed" type="int" />
