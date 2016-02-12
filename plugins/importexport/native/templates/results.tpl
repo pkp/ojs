@@ -10,7 +10,13 @@
 
 {translate key="plugins.importexport.native.importComplete"}
 <ul>
-	{foreach from=$submissions item=submission}
-		<li>{$submission->getLocalizedTitle()|strip_unsafe_html}</li>
+	{foreach from=$content item=contentItem}
+		<li>
+			{if is_a($contentItem, 'Submission')}
+				{$contentItem->getLocalizedTitle()|strip_unsafe_html}</li>
+			{else}
+				{$contentItem->getIssueIdentification()|escape}
+			{/if}
+		</li>
 	{/foreach}
 </ul>

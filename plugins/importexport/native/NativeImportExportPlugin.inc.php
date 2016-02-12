@@ -115,8 +115,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					return $json->getString();
 				}
 				$temporaryFilePath = $temporaryFile->getFilePath();
-				$submissions = $this->importSubmissions(file_get_contents($temporaryFilePath), $journal, $user);
-				$templateMgr->assign('submissions', $submissions);
+				$content = $this->importSubmissions(file_get_contents($temporaryFilePath), $journal, $user);
+				$templateMgr->assign('content', $content);
 				$json = new JSONMessage(true, $templateMgr->fetch($this->getTemplatePath() . 'results.tpl'));
 				return $json->getString();
 			case 'exportSubmissions':
@@ -208,7 +208,6 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		assert(count($nativeImportFilters) == 1); // Assert only a single unserialization filter
 		$importFilter = array_shift($nativeImportFilters);
 		$importFilter->setDeployment(new NativeImportExportDeployment($context, $user));
-
 		return $importFilter->execute($importXml);
 	}
 
