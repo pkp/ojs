@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <article xmlns="http://pkp.sfu.ca" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	locale="en_US" section_ref="1" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
+	locale="en_US" section_ref="1" xsi:schemaLocation="http://pkp.sfu.ca native.xsd"
+	stage="submission">
 	<id type="internal">1</id>
 	<title locale="en_US">Article Title</title>
 	<prefix locale="en_US">The</prefix>
