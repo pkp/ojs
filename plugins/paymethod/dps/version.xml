@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
+
+<!--
+  * plugins/paymethod/dps/version.xml
+  *
+  * Robert Carter <r.carter@auckland.ac.nz>
+  *
+  * Based on the work of these people:
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plugin version information.
+  -->
+<version>
+	<application>dps</application>
+	<type>plugins.paymethod</type>
+	<release>0.1</release>
+	<date>2016-01-18</date>
+</version>

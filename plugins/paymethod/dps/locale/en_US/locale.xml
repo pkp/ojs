@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/paymethod/dps/locale/en_US/locale.xml
+  *	
+  * Robert Carter <r.carter@auckland.ac.nz>
+  *
+  * Based on the work of these people:
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+
+	<message key="plugins.paymethod.dps.settings">DPS Settings</message>
+	<message key="plugins.paymethod.dps.displayName">DPS Payment</message>
+
+	<!-- DPS Settings Form -->
+	<message key="plugins.paymethod.dps.settings.dpsenable">Enable DPS</message>
+
+	<message key="plugins.paymethod.dps.settings.dpsmerchant">Merchant reference</message>
+	<message key="plugins.paymethod.dps.settings.dpsmerchant.description">This text will appear on the DPS statement to identify transactions from this web site.</message>
+
+	<message key="plugins.paymethod.dps.settings.dpsurl">DPS gateway URL</message>
+	<message key="plugins.paymethod.dps.settings.dpsurl.description"><![CDATA[This is the URL to DPS's payment service. Eg. <u>https://sec.paymentexpress.com/pxaccess/pxpay.aspx</u>.]]></message>
+
+	<message key="plugins.paymethod.dps.settings.dpsuser">DPS user ID</message>
+	<message key="plugins.paymethod.dps.settings.dpsuser.description"><![CDATA[For example <b>UOAPX2A2A_DEV</b>]]></message>
+
+	<message key="plugins.paymethod.dps.settings.dpskey">DPS key code</message>
+	<message key="plugins.paymethod.dps.settings.dpskey.description"><![CDATA[A big long alphanumberic number like: <b>0c6fd37a3128b6a16770627ae6a32db4a24b06262f997daa220b23404a753541</b>]]></message>
+
+	<message key="plugins.paymethod.dps.settings.dpscertpath">CA Certificate path</message>
+	<message key="plugins.paymethod.dps.settings.dpscertpath.description">Path to the certificate authority file. Your system administrator will need to provide you with this information.</message>
+
+	<message key="plugins.paymethod.dps.settings.curlNotInstalled">Warning: CURL support for PHP is not installed. DPS payment support requires the CURL library and will not function until it is installed.</message>
+
+	<!-- DPS messages-->
+	<message key="plugins.paymethod.dps">Payment Express Payment</message>
+	<message key="plugins.paymethod.dps.description"><![CDATA[DPS enables users to pay using credit card. The Manager will need to set up an account with DPS and configure the settings. See <b>User > Subscription Management > Fee Payment Methods</b>.]]></message>
+	<message key="plugins.paymethod.dps.warning">Click the Continue button below to pay by credit card.</message>
+	<message key="plugins.paymethod.dps.purchase.title">Title</message>
+	<message key="plugins.paymethod.dps.purchase.fee">Fee</message>
+	<message key="plugins.paymethod.dps.purchase.description">Description</message>
+	<message key="plugins.paymethod.dps.purchase.cancelled">Your purchase has been cancelled.</message>
+	<message key="plugins.paymethod.dps.purchase.cancelled.title">Purchase Cancelled</message>
+
+	<!-- Success page-->
+	<message key="plugins.paymethod.dps.purchase.success.title">Payment Complete</message>
+	<message key="plugins.paymethod.dps.purchase.success">Your payment was completed successfully.</message>
+<message key="plugins.paymethod.dps.purchase.success.backlink.title">Back to journal home page</message>
+
+	<!-- Error page-->
+	<message key="plugins.paymethod.dps.purchase.failure.title">Payment Unsuccessful</message>
+	<message key="plugins.paymethod.dps.purchase.failure">Your payment could not be completed because of a technical problem.</message>
+	<message key="plugins.paymethod.dps.purchase.cancel">Your payment could not be completed. Perhaps you cancelled the credit card form or entered the wrong details.</message>
+	<message key="plugins.paymethod.dps.purchase.failure.backlink.title">Back to your subscriptions</message>
+	
+
+
+</locale>
