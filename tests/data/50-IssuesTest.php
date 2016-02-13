@@ -29,18 +29,6 @@ class IssuesTest extends WebTestCase {
 		$this->click($selector);
 
 		// Create issue
-		$this->waitForElementPresent($selector='css=[id^=component-grid-issues-futureissuegrid-addIssue-button-]');
-		$this->click($selector);
-		$this->waitForElementPresent($selector='css=[id^=volume-]');
-		$this->type($selector, '1');
-		$this->type('css=[id^=number-]', '1');
-		$this->type('css=[id^=year-]', '2014');
-		$this->click('id=showTitle');
-		$this->click('//button[text()=\'Save\']');
-		$this->waitJQuery();
-		$this->waitForElementNotPresent('css=div.pkp_modal_panel'); // pkp/pkp-lib#655
-
-		// Create issue
 		$this->click('css=[id^=component-grid-issues-futureissuegrid-addIssue-button-]');
 		$this->waitForElementPresent($selector='css=[id^=volume-]');
 		$this->type($selector, '1');
