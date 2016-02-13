@@ -29,7 +29,8 @@ class IssuesTest extends WebTestCase {
 		$this->click($selector);
 
 		// Create issue
-		$this->click('css=[id^=component-grid-issues-futureissuegrid-addIssue-button-]');
+		$this->waitForElementPresent($selector='css=[id^=component-grid-issues-futureissuegrid-addIssue-button-]');
+		$this->click($selector);
 		$this->waitForElementPresent($selector='css=[id^=volume-]');
 		$this->type($selector, '1');
 		$this->type('css=[id^=number-]', '2');
