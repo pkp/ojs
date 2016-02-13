@@ -41,7 +41,7 @@ class IssuesTest extends WebTestCase {
 		$this->waitForElementNotPresent('css=div.pkp_modal_panel'); // pkp/pkp-lib#655
 
 		// Publish first issue
-		$this->waitForElementPresent($selector='//*[text()=\'Vol 1 No 1 (2014)\']/../../../following-sibling::*//a[text()=\'Publish Issue\']');
+		$this->waitForElementPresent($selector='//a[text()=\'Publish Issue\']');
 		$this->click($selector);
 		$this->waitForElementPresent($selector='//a[text()=\'OK\']');
 		$this->click($selector);
