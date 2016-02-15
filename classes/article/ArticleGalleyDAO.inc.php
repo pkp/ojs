@@ -147,13 +147,19 @@ class ArticleGalleyDAO extends RepresentationDAO {
 	/**
 	 * @copydoc RepresentationDAO::getBySubmissionId()
 	 */
-	function getBySubmissionId($submissionId) {
+	function getBySubmissionId($submissionId, $contextId = null) {
+		$params = array((int) $submissionId);
+		if ($contextId) $params[] = (int) $contextId;
+
 		return new DAOResultFactory(
 			$this->retrieve(
-				'SELECT *
-				FROM submission_galleys
-				WHERE submission_id = ? ORDER BY seq',
-				(int) $submissionId
+				'SELECT g.*
+				FROM submission_galleys g ' .
+				($contextId?'INNER JOIN submissions s ON (g.submission_id = s.submission_id) ':'') .
+				'WHERE g.submission_id = ? ' .
+				($contextId?' AND s.context_id = ? ':'') .
+				'ORDER BY seq',
+				$params
 			),
 			$this, '_fromRow'
 		);
