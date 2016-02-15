@@ -42,7 +42,7 @@ class DdioufSubmissionTest extends ContentBaseTestCase {
 		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignReviewer('phudson', 'Paul Hudson');
 		$this->assignReviewer('agallego', 'Adela Gallego');
-		$this->recordEditorialDecision('Accept Submission');
+		$this->recordEditorialDecision('Send to Copyediting');
 		$this->waitForElementPresent('//a[contains(text(), \'Copyediting\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Copyeditor', 'Maria Fritz');
 		$this->recordEditorialDecision('Send To Production');
