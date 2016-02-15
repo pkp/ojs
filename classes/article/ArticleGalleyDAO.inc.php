@@ -158,7 +158,7 @@ class ArticleGalleyDAO extends RepresentationDAO {
 				($contextId?'INNER JOIN submissions s ON (g.submission_id = s.submission_id) ':'') .
 				'WHERE g.submission_id = ? ' .
 				($contextId?' AND s.context_id = ? ':'') .
-				'ORDER BY seq',
+				'ORDER BY g.seq',
 				$params
 			),
 			$this, '_fromRow'
