@@ -19,13 +19,7 @@
 	{rdelim});
 </script>
 
-<form class="pkp_form" id="publicationMetadataEntryForm" method="post"
-	{if $formParams.expeditedSubmission}
-		action="{url router=$smarty.const.ROUTE_PAGE op="expedite"}"
-	{else}
-		action="{url router=$smarty.const.ROUTE_COMPONENT op="saveForm"}"
-	{/if}
->
+<form class="pkp_form" id="publicationMetadataEntryForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT op="saveForm"}">
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="publicationMetadataFormFieldsNotification"}
 
 	<input type="hidden" name="submissionId" value="{$submissionId|escape}" />
