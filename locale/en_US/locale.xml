@@ -1041,7 +1041,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.editor.archived">The submission {$submissionId} has been archived.</message>
 	<message key="log.editor.restored">The submission {$submissionId} has been restored to the queue.</message>
 	<message key="log.editor.editorAssigned">{$editorName} has been assigned as editor to submission {$submissionId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} has expedited the editing process for article {$submissionId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} has assigned {$proofreaderName} to proofread submission {$submissionId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} has submitted {$submissionId} for scheduling.</message>
