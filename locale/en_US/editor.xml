@@ -114,7 +114,6 @@
 	<message key="editor.issues.viewingGalley">Viewing Issue Galley</message>
 	<message key="editor.issues.confirmDeleteGalley">Are you sure you want to delete this issue galley?</message>
 	<message key="editor.navigation.futureIssues">Future Issues</message>
-	<message key="grid.action.expedite">Expedite this submission</message>
 	<message key="grid.action.publish">Publish Issue</message>
 	<message key="grid.action.addIssue">Create Issue</message>
 	<message key="grid.action.viewIssue">View</message>

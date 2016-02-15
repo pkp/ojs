@@ -26,7 +26,6 @@ switch ($op) {
 	case 'editorDecisionActions':
 	case 'submissionHeader':
 	case 'submissionProgressBar':
-	case 'expedite':
 		define('HANDLER_CLASS', 'WorkflowHandler');
 		import('pages.workflow.WorkflowHandler');
 		break;
