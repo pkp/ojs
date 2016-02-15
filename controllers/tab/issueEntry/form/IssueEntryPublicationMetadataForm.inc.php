@@ -50,12 +50,6 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$this->_formParams = $formParams;
 		$this->_userId = $userId;
 		$this->addCheck(new FormValidatorPost($this));
-		if (isset($formParams['expeditedSubmission']) && $formParams['expeditedSubmission']) {
-			// make choosing an issue mandatory for expedited submissions.
-			$request = Application::getRequest();
-			$context = $request->getContext();
-			$this->addCheck(new FormValidatorCustom($this, 'issueId', 'required', 'author.submit.form.issueRequired', array(DAORegistry::getDAO('IssueDAO'), 'issueIdExists'), array($context->getId())));
-		}
 
 		$this->addCheck(new FormValidatorURL($this, 'licenseURL', 'optional', 'form.url.invalid'));
 	}
