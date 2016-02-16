@@ -112,7 +112,7 @@
 <!ELEMENT caption (#PCDATA)>
 
 <!-- Section-related elements -->
-<!ELEMENT section (title+, abbrev*, identify_type*, policy*, article+)>
+<!ELEMENT section (title+, abbrev*, identify_type*, policy*, article*)>
 
 <!ELEMENT abbrev (#PCDATA)>
 	<!ATTLIST abbrev
