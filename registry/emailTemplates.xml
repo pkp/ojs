@@ -32,6 +32,8 @@
 	<email key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT" can_edit="1" can_disable="1" from_role_id="512" to_role_id="4096"/>
 	<email key="REVIEW_REQUEST_ATTACHED" can_edit="1" can_disable="0" from_role_id="512" to_role_id="4096"/>
 	<email key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT" can_edit="1" can_disable="0" from_role_id="512" to_role_id="4096"/>
+	<email key="REVIEW_REQUEST_REMIND_AUTO" can_edit="1" can_disable="0" to_role_id="4096"/>
+	<email key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK" can_edit="1" can_disable="0" to_role_id="4096"/>
 	<email key="REVIEW_CONFIRM" can_edit="1" can_disable="1" from_role_id="4096" to_role_id="512"/>
 	<email key="REVIEW_DECLINE" can_edit="1" can_disable="1" from_role_id="4096" to_role_id="512"/>
 	<email key="REVIEW_ACK" can_edit="1" can_disable="1" from_role_id="512" to_role_id="4096"/>
