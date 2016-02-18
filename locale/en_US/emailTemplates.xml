@@ -2,7 +2,7 @@
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
 
 <!--
-  * locale/en_US/emailTemplateData.xml
+  * locale/en_US/emailTemplates.xml
   *
   * Copyright (c) 2014-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
@@ -12,26 +12,6 @@
   -->
 
 <email_texts locale="en_US">
-	<email_text key="AUDITOR_REQUEST">
-		<subject>Manuscript Audit Request</subject>
-		<body><![CDATA[{$auditorName}:<br />
-<br />
-New files have been uploaded for the manuscript &quot;{$submissionTitle},&quot; and I am asking that you audit them. It is important to the journal that participants review the manuscript at each stage.<br />
-<br />
-You can find the files to review at: <br />
-<br />
-<a href="{$auditUrl}">{$auditUrl}</a><br />
-<br />
-Username: {$auditorUserName}<br />
-<br />
-Please indicate in a return email if you are not able to complete the audit by {$responseDueDate}.<br />
-<br />
-Thank you for considering this request.<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
-		<description>This email is sent by the Section Editor to an Auditor to request that they accept or decline the task of auditing a submission.</description>
-	</email_text>
 	<email_text key="NOTIFICATION">
 		<subject>New notification from {$siteTitle}</subject>
 		<body><![CDATA[You have a new notification from {$siteTitle}:<br />
