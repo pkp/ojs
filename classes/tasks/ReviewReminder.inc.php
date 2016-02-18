@@ -48,7 +48,15 @@ class ReviewReminder extends ScheduledTask {
 
 		$email = new ArticleMailTemplate($article, $reviewerAccessKeysEnabled ? $reminderType . '_ONECLICK' : $reminderType, $journal->getPrimaryLocale(), false, $journal, false, true);
 		$email->setJournal($journal);
-		$email->setReplyTo(null);
+
+		$contactEmail = $journal->getSetting('contactEmail');
+		$contactName = $journal->getSetting('contactName');
+		if ($contactEmail != '' && $contactName != '') {
+			$email->setReplyTo($contactEmail, $contactName);
+		} else {
+			$email->setReplyTo(null);
+		}
+
 		$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
 		$email->setSubject($email->getSubject($journal->getPrimaryLocale()));
 		$email->setBody($email->getBody($journal->getPrimaryLocale()));
