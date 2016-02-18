@@ -111,8 +111,9 @@ class BooksForReviewHandler extends Handler {
 				$templateMgr->assign('isAuthor', $isAuthor);
 				$templateMgr->display($bfrPlugin->getTemplatePath() . 'bookForReview.tpl');
 			}
+		} else {
+			$request->redirect(null, 'booksForReview');
 		}
-		$request->redirect(null, 'booksForReview');
 	}
 
 	/**
