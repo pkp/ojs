@@ -141,8 +141,9 @@ class BooksForReviewAuthorHandler extends Handler {
 					$email->displayEditForm($returnUrl);
 				}
 			}
+		} else {
+			$request->redirect(null, 'booksForReview');
 		}
-		$request->redirect(null, 'booksForReview');
 	}
 
 	/**
