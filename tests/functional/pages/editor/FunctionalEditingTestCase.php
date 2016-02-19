@@ -393,7 +393,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		$testFile = realpath($testFile);
 		if (Core::isWindows()) {
 			$testFile = str_replace(DIRECTORY_SEPARATOR, '/', $testFile);
-			$testFile = String::regexp_replace('%^[A-Z]:/%', '/', $testFile);
+			$testFile = PKPString::regexp_replace('%^[A-Z]:/%', '/', $testFile);
 		}
 		$testFile = 'file://' . $testFile;
 		return $testFile;

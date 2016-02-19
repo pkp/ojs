@@ -147,40 +147,40 @@ class DOIPubIdPlugin extends PubIdPlugin {
 				$doiSuffix = $this->getSetting($journalId, "doi${pubObjectType}SuffixPattern");
 
 				// %j - journal initials
-				$doiSuffix = String::regexp_replace('/%j/', String::strtolower($journal->getAcronym($journal->getPrimaryLocale())), $doiSuffix);
+				$doiSuffix = PKPString::regexp_replace('/%j/', PKPString::strtolower($journal->getAcronym($journal->getPrimaryLocale())), $doiSuffix);
 
 				// %x - custom identifier
 				if ($pubObject->getStoredPubId('publisher-id')) {
-					$doiSuffix = String::regexp_replace('/%x/', $pubObject->getStoredPubId('publisher-id'), $doiSuffix);
+					$doiSuffix = PKPString::regexp_replace('/%x/', $pubObject->getStoredPubId('publisher-id'), $doiSuffix);
 				}
 
 				if ($issue) {
 					// %v - volume number
-					$doiSuffix = String::regexp_replace('/%v/', $issue->getVolume(), $doiSuffix);
+					$doiSuffix = PKPString::regexp_replace('/%v/', $issue->getVolume(), $doiSuffix);
 					// %i - issue number
-					$doiSuffix = String::regexp_replace('/%i/', $issue->getNumber(), $doiSuffix);
+					$doiSuffix = PKPString::regexp_replace('/%i/', $issue->getNumber(), $doiSuffix);
 					// %Y - year
-					$doiSuffix = String::regexp_replace('/%Y/', $issue->getYear(), $doiSuffix);
+					$doiSuffix = PKPString::regexp_replace('/%Y/', $issue->getYear(), $doiSuffix);
 				}
 
 				if ($article) {
 					// %a - article id
-					$doiSuffix = String::regexp_replace('/%a/', $article->getId(), $doiSuffix);
+					$doiSuffix = PKPString::regexp_replace('/%a/', $article->getId(), $doiSuffix);
 					// %p - page number
 					if ($article->getPages()) {
-						$doiSuffix = String::regexp_replace('/%p/', $article->getPages(), $doiSuffix);
+						$doiSuffix = PKPString::regexp_replace('/%p/', $article->getPages(), $doiSuffix);
 					}
 				}
 
 				if ($galley) {
 					// %g - galley id
-					$doiSuffix = String::regexp_replace('/%g/', $galley->getId(), $doiSuffix);
+					$doiSuffix = PKPString::regexp_replace('/%g/', $galley->getId(), $doiSuffix);
 				}
 
 				break;
 
 			default:
-				$doiSuffix = String::strtolower($journal->getAcronym($journal->getPrimaryLocale()));
+				$doiSuffix = PKPString::strtolower($journal->getAcronym($journal->getPrimaryLocale()));
 
 				if ($issue) {
 					$doiSuffix .= '.v' . $issue->getVolume() . 'i' . $issue->getNumber();
@@ -235,10 +235,10 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	 */
 	function getResolvingURL($journalId, $pubId) {
 		// See ANSI/NISO Z39.84-2005, Appendix E. (Bug #8190)
-		$separatorIndex = String::strpos($pubId, '/');
+		$separatorIndex = PKPString::strpos($pubId, '/');
 		assert($separatorIndex !== false); // Should contain a slash
-		$prefix = String::substr($pubId, 0, $separatorIndex);
-		$suffix = String::substr($pubId, $separatorIndex+1);
+		$prefix = PKPString::substr($pubId, 0, $separatorIndex);
+		$suffix = PKPString::substr($pubId, $separatorIndex+1);
 		return 'http://dx.doi.org/' . $prefix . '/' . urlencode($suffix);
 	}
 

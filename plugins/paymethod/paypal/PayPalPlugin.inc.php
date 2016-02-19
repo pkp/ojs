@@ -131,7 +131,7 @@ class PayPalPlugin extends PaymethodPlugin {
 			'no_note' => 1,
 			'no_shipping' => 1,
 			'currency_code' => $queuedPayment->getCurrencyCode(),
-			'lc' => String::substr(AppLocale::getLocale(), 3),
+			'lc' => PKPString::substr(AppLocale::getLocale(), 3),
 			'custom' => $queuedPaymentId,
 			'notify_url' => $request->url(null, 'payment', 'plugin', array($this->getName(), 'ipn')),
 			'return' => $queuedPayment->getRequestUrl(),
@@ -215,8 +215,8 @@ class PayPalPlugin extends PaymethodPlugin {
 							$payPalDao->insertTransaction(
 								$transactionId,
 								$request->getUserVar('txn_type'),
-								String::strtolower($request->getUserVar('payer_email')),
-								String::strtolower($request->getUserVar('receiver_email')),
+								PKPString::strtolower($request->getUserVar('payer_email')),
+								PKPString::strtolower($request->getUserVar('receiver_email')),
 								$request->getUserVar('item_number'),
 								$request->getUserVar('payment_date'),
 								$request->getUserVar('payer_id'),
@@ -247,8 +247,8 @@ class PayPalPlugin extends PaymethodPlugin {
 							$grantedAmount = $request->getUserVar('mc_gross');
 							$queuedCurrency = $queuedPayment->getCurrencyCode();
 							$grantedCurrency = $request->getUserVar('mc_currency');
-							$grantedEmail = String::strtolower($request->getUserVar('receiver_email'));
-							$queuedEmail = String::strtolower($this->getSetting($journal->getId(), 'selleraccount'));
+							$grantedEmail = PKPString::strtolower($request->getUserVar('receiver_email'));
+							$queuedEmail = PKPString::strtolower($this->getSetting($journal->getId(), 'selleraccount'));
 							if (
 								($queuedAmount != $grantedAmount && $queuedAmount > 0) ||
 								$queuedCurrency != $grantedCurrency ||

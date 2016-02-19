@@ -131,13 +131,13 @@ class SubscriptionReportPlugin extends ReportPlugin {
 						$columns[$index] = $subscription->getReferenceNumber();
 						break;
 					case 'notes':
-						$columns[$index] = String::html2text($subscription->getNotes());
+						$columns[$index] = PKPString::html2text($subscription->getNotes());
 						break;
 					case 'name':
 						$columns[$index] = $user->getFullName();
 						break;
 					case 'mailing_address':
-						$columns[$index] = String::html2text($user->getMailingAddress());
+						$columns[$index] = PKPString::html2text($user->getMailingAddress());
 						break;
 					case 'country':
 						$columns[$index] = $countryDao->getCountry($user->getCountry());
@@ -213,13 +213,13 @@ class SubscriptionReportPlugin extends ReportPlugin {
 						$columns[$index] = $subscription->getReferenceNumber();
 						break;
 					case 'notes':
-						$columns[$index] = String::html2text($subscription->getNotes());
+						$columns[$index] = PKPString::html2text($subscription->getNotes());
 						break;
 					case 'institution_name':
 						$columns[$index] = $subscription->getInstitutionName();
 						break;
 					case 'institution_mailing_address':
-						$columns[$index] = String::html2text($subscription->getInstitutionMailingAddress());
+						$columns[$index] = PKPString::html2text($subscription->getInstitutionMailingAddress());
 						break;
 					case 'domain':
 						$columns[$index] = $subscription->getDomain();
@@ -231,7 +231,7 @@ class SubscriptionReportPlugin extends ReportPlugin {
 						$columns[$index] = $user->getFullName();
 						break;
 					case 'mailing_address':
-						$columns[$index] = String::html2text($user->getMailingAddress());
+						$columns[$index] = PKPString::html2text($user->getMailingAddress());
 						break;
 					case 'country':
 						$columns[$index] = $countryDao->getCountry($user->getCountry());

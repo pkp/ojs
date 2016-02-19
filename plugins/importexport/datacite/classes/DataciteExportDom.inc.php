@@ -159,7 +159,7 @@ class DataciteExportDom extends DOIExportDom {
 
 		// Rights
 		$rights = $this->getPrimaryTranslation($journal->getSetting('copyrightNotice', null), $objectLocalePrecedence);
-		if (!empty($rights)) XMLCustomWriter::createChildWithText($this->getDoc(), $rootElement, 'rights', String::html2text($rights));
+		if (!empty($rights)) XMLCustomWriter::createChildWithText($this->getDoc(), $rootElement, 'rights', PKPString::html2text($rights));
 
 		// Descriptions
 		$descriptionsElement =& $this->_descriptionsElement($issue, $article, $objectLocalePrecedence, $articlesByIssue);
@@ -249,7 +249,7 @@ class DataciteExportDom extends DOIExportDom {
 			return $falseVar;
 		}
 		if ($this->getTestMode()) {
-			$doi = String::regexp_replace('#^[^/]+/#', DATACITE_API_TESTPREFIX . '/', $doi);
+			$doi = PKPString::regexp_replace('#^[^/]+/#', DATACITE_API_TESTPREFIX . '/', $doi);
 		}
 		return $this->createElementWithText('identifier', $doi, array('identifierType' => 'DOI'));
 	}
@@ -617,7 +617,7 @@ class DataciteExportDom extends DOIExportDom {
 			$nullVar = null;
 		}
 		if ($this->getTestMode()) {
-			$id = String::regexp_replace('#^[^/]+/#', DATACITE_API_TESTPREFIX . '/', $id);
+			$id = PKPString::regexp_replace('#^[^/]+/#', DATACITE_API_TESTPREFIX . '/', $id);
 		}
 
 		return $this->createElementWithText(
