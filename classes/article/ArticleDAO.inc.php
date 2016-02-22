@@ -406,9 +406,9 @@ class ArticleDAO extends SubmissionDAO {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
 		return array(
-			'title', $primaryLocale,
+			'title', $primaryLocale, // Section title
 			'title', $locale,
-			'abbrev', $primaryLocale,
+			'abbrev', $primaryLocale, // Section abbrevation
 			'abbrev', $locale,
 		);
 	}
