@@ -159,10 +159,10 @@ class TranslatorAction {
 				if (is_scalar($referenceLocaleFilenames)) $referenceLocaleFilenames = array($referenceLocaleFilenames);
 				$localeFilenames = $plugin->getLocaleFilename($locale);
 				if (is_scalar($localeFilenames)) $localeFilenames = array($localeFilenames);
-				assert(count($localeFilenames) == count($referenceLocaleFilenames));
-				foreach($referenceLocaleFilenames as $index => $referenceLocaleFilename) {
-					assert(isset($localeFilenames[$index]));
-					$localeFile = new LocaleFile($locale, $localeFilenames[$index]);
+				foreach($referenceLocaleFilenames as $referenceLocaleFilename) {
+					$localeFilename = $referenceLocaleFilename;
+					$localeFilename = str_replace('/'.$referenceLocale.'/', '/'.$locale.'/', $referenceLocaleFilename);
+					$localeFile = new LocaleFile($locale, $localeFilename);
 					$referenceLocaleFile = new LocaleFile($referenceLocale, $referenceLocaleFilename);
 					$errors = array_merge_recursive($errors, $localeFile->testLocale($referenceLocaleFile));
 					unset($localeFile);
