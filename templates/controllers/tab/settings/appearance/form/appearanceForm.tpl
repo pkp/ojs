@@ -29,6 +29,9 @@
 	{* Homepage Image *}
 	{include file="core:controllers/tab/settings/appearance/form/homepageImage.tpl"}
 
+	{* Journal Favicon *}
+	{include file="core:controllers/tab/settings/appearance/form/journalFavicon.tpl"}
+
 	{* Additional Homepage Content *}
 	{include file="core:controllers/tab/settings/appearance/form/additionalHomepageContent.tpl"}
 
