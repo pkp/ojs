@@ -16,7 +16,12 @@
 				$uploader: $('#pluploadimage'),
 				uploaderOptions: {ldelim}
 					uploadUrl: {url|json_encode op="uploadFile" escape=false},
-					baseUrl: {$baseUrl|json_encode}
+					baseUrl: {$baseUrl|json_encode},
+					filters: {ldelim}
+						mime_types : [
+							{ldelim} title : "Image files", extensions : "jpg,jpeg,png" {rdelim}
+						]
+					{rdelim}
 				{rdelim}
 			{rdelim}
 		);
@@ -31,11 +36,13 @@
 	{/fbvFormArea}
 	{fbvFormArea id="coverFile"}
 		{fbvFormSection title="editor.issues.coverPage"}
-			<div id="pluploadimage"></div>
+			{include file="controllers/fileUploadContainer.tpl" id="pluploadimage"}
 			<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
 			{if $fileName.$formLocale}
 				<img src="{$publicFilesDir}/{$fileName.$formLocale|escape}?random=$issueId|uniqid}" alt="{$coverPageAltText.$formLocale|escape}"/>
 			{/if}
+		{/fbvFormSection}
+		{fbvFormSection}
 			{fbvElement type="text" id="coverPageAltText" label="common.altText" value=$coverPageAltText multilingual=true size=$fbvStyles.size.MEDIUM}
 		{/fbvFormSection}
 	{/fbvFormArea}
