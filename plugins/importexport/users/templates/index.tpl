@@ -48,7 +48,7 @@
 				<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
 				{fbvFormArea id="file"}
 					{fbvFormSection title="common.file"}
-						<div id="plupload"></div>
+						{include file="controllers/fileUploadContainer.tpl" id="plupload"}
 					{/fbvFormSection}
 				{/fbvFormArea}
 

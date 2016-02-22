@@ -24,20 +24,24 @@
 </script>
 <form class="pkp_form" id="issueGalleyForm" method="post" action="{url op="update" issueId=$issueId issueGalleyId=$issueGalleyId}">
 	{fbvFormArea id="file"}
-		{fbvFormSection title="editor.issues.galley"}
-			<div id="plupload"></div>
+		{fbvFormSection title="editor.issues.galley" required="true"}
+			{include file="controllers/fileUploadContainer.tpl" id="plupload"}
 			<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
 			{if $issueGalley}
 				<a href="{url op="download" issueId=$issueId issueGalleyId=$issueGalleyId}" target="_blank">{$issueGalley->getOriginalFileName()|escape}</a>
 			{/if}
 		{/fbvFormSection}
 
-		{fbvFormSection title="submission.layout.galleyFileData"}
-			{fbvElement type="text" label="submission.layout.galleyLabel" value=$label id="label"}
-			{if $enablePublicGalleyId}
-				{fbvElement type="text" label="submission.layout.publicGalleyId" value=$publicGalleyId id="publicGalleyId" size=$fbvStyles.size.MEDIUM}
-			{/if}
-			{fbvElement type="select" id="galleyLocale" label="common.language" from=$supportedLocales selected=$galleyLocale|default:$formLocale size=$fbvStyles.size.MEDIUM translate=false}
+		{fbvFormSection title="submission.layout.galleyLabel" required="true"}
+			{fbvElement type="text" value=$label id="label"}
+		{/fbvFormSection}
+		{if $enablePublicGalleyId}
+			{fbvFormSection title="submission.layout.publicGalleyId" required="true"}
+				{fbvElement type="text" value=$publicGalleyId id="publicGalleyId"}
+			{/fbvFormSection}
+		{/if}
+		{fbvFormSection title="common.language" required="true"}
+			{fbvElement type="select" id="galleyLocale" from=$supportedLocales selected=$galleyLocale|default:$formLocale translate=false}
 		{/fbvFormSection}
 	{/fbvFormArea}
 

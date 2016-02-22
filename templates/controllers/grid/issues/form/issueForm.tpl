@@ -16,7 +16,12 @@
 				$uploader: $('#pluploadcss'),
 				uploaderOptions: {ldelim}
 					uploadUrl: {url|json_encode op="uploadFile" escape=false},
-					baseUrl: {$baseUrl|json_encode}
+					baseUrl: {$baseUrl|json_encode},
+					filters: {ldelim}
+						mime_types : [
+							{ldelim} title : "CSS files", extensions : "css" {rdelim}
+						]
+					{rdelim}
 				{rdelim}
 			{rdelim}
 		);
@@ -72,7 +77,9 @@
 
 	{fbvFormArea id="file"}
 		{fbvFormSection title="editor.issues.styleFile"}
-			<div id="pluploadcss"></div>
+			{include file="controllers/fileUploadContainer.tpl" id="pluploadcss"}
+		{/fbvFormSection}
+		{fbvFormSection}
 			{if $styleFileName}
 				{translate key="common.currentStyleSheet"}: <a href="{$publicFilesDir}/{$styleFileName|escape}" target="_blank">{$originalStyleFileName|escape}</a>
 			{/if}
