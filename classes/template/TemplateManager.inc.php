@@ -64,7 +64,6 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('displayFavicon', $context->getLocalizedFavicon());
 				$this->assign('faviconDir', $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()));
 				$this->assign('metaSearchDescription', $context->getLocalizedSetting('searchDescription'));
-				$this->assign('metaSearchKeywords', $context->getLocalizedSetting('searchKeywords'));
 				$this->assign('metaCustomHeaders', $context->getLocalizedSetting('customHeaders'));
 				$this->assign('numPageLinks', $context->getSetting('numPageLinks'));
 				$this->assign('itemsPerPage', $context->getSetting('itemsPerPage'));
