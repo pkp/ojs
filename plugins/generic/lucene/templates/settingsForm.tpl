@@ -57,6 +57,12 @@
 					<span class="instruct">{translate key="plugins.generic.lucene.settings.instIdInstructions"}</span>
 				</td>
 			</tr>
+			<tr valign="top">
+				<td class="label">{fieldLabel name="useProxySettings" key="plugins.generic.lucene.settings.useProxySettings"}</td>
+				<td class="value"><input type="checkbox" name="useProxySettings" id="useProxySettings" {if $useProxySettings}checked="checked" {/if}/>
+					<label for="useProxySettings">{translate key="plugins.generic.lucene.settings.useProxySettingsInstructions"}</label>
+				</td>
+			</tr>
 		</table>
 
 		<br />

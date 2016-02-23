@@ -131,6 +131,8 @@
 		</ul>
 	]]></message>
 	<message key="plugins.generic.lucene.settings.usageStatistics">Usage Statistics</message>
+	<message key="plugins.generic.lucene.settings.useProxySettings">Proxy settings</message>
+	<message key="plugins.generic.lucene.settings.useProxySettingsInstructions">Use proxy settings from the file config.inc.php for the Solr web service requests.</message>
 	<message key="plugins.generic.lucene.settings.username">Username</message>
 	<message key="plugins.generic.lucene.settings.usernameInstructions">The Solr search server uses HTTP BASIC authentication. Please enter the username.</message>
 	<message key="plugins.generic.lucene.settings.usernameRequired">Please enter a valid username to authenticate to the Solr search server (colons are disallowed).</message>
