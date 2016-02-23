@@ -553,7 +553,7 @@
 	<message key="manager.plugins.installFailed">Instalace selhala</message>
 	<message key="manager.plugins.upgradeFailed">Upgrade selhal</message>
 	<message key="manager.setup.doiSuffix">DOI přípona</message>
-	<message key="manager.setup.journalFavicon">Favicon časopisu</message>
+	<message key="manager.setup.favicon">Favicon časopisu</message>
 	<message key="manager.subscriptions.renew">Obnovit</message>
 	<message key="manager.subscriptions.form.status">Stav</message>
 	<message key="manager.subscriptions.form.userContact">Kontakt</message>
@@ -575,7 +575,7 @@
 	<message key="manager.plugins.copyError">Plugin nebyl úspěšně zkopírován</message>
 	<message key="manager.plugins.doesNotExist">Plugin neexistuje</message>
 	<message key="manager.setup.history">Historie časopisu</message>
-	<message key="manager.setup.journalFaviconInvalid">Neplatný formát favicony. Akceptované formáty jsou .ico, .png a .gif.</message>
+	<message key="manager.setup.faviconInvalid">Neplatný formát favicony. Akceptované formáty jsou .ico, .png a .gif.</message>
 	<message key="manager.individualSubscriptions">Individuální předplatné</message>
 	<message key="manager.institutionalSubscriptions">Institucionální předplatné</message>
 	<message key="manager.subscriptions.summary">Souhrn předplatného</message>
@@ -615,7 +615,7 @@
 	<message key="manager.setup.doiSuffixDescription">DOI přípona může mít jakýkoliv formát, ale musí být jedinečná pro každou publikovanou položku.</message>
 	<message key="manager.setup.doiSuffixPublisherId">Použít "Uživatelský identifikátor" pro publikované položky jako DOI příponu (musí být povoleno v Kroku 4).</message>
 	<message key="manager.setup.form.doiPrefixPattern">DOI vzorec musí být ve formátu 10.xxxx.</message>
-	<message key="manager.setup.journalFaviconDescription">Přidat faviconu pro tento časopis, která se bude zobrazovat vedle navigační lišty, když uživatelé navštíví vaše stránky.</message>
+	<message key="manager.setup.faviconDescription">Přidat faviconu pro tento časopis, která se bude zobrazovat vedle navigační lišty, když uživatelé navštíví vaše stránky.</message>
 	<message key="manager.setup.publisherNoteDescription">Tento text se zobrazí pod hlavičkou "Vydavatel" a nad jménem/url vydavatele pod "Sponzorování časopisu" na stránce "O časopisu".</message>
 	<message key="manager.setup.sponsorNoteDescription">Tento text se zobrazí pod hlavičkou "Sponzoři" a nad seznamem jmen a url sponzorů pod "Sponzorování časopisu" na stránce "O časopisu".</message>
 	<message key="manager.setup.noPublishing">OJS nebude používán pro online publikování obsahu časopisu.</message>

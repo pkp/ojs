@@ -650,7 +650,7 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.sections.wordCount">Conteggio delle parole</message>
 	<message key="manager.sections.wordCountInstructions">Limita la lunghezza degli abstract per gli articoli di questa sezione (0 per illimitate)</message>
 	<message key="manager.setup.history">Storia della rivista</message>
-	<message key="manager.setup.journalFavicon">Favicon della rivista</message>
+	<message key="manager.setup.favicon">Favicon della rivista</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Notifiche di pagamenti manuali</message>
 	<message key="manager.subscriptions.renew">Rinnova</message>
 	<message key="manager.subscriptions.withStatus">Con status</message>
@@ -674,7 +674,7 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.subscriptionTypes.form.subscriptions">Abbonamenti</message>
 	<message key="manager.subscriptionTypes.form.individual">Individuale (gli utenti sono autenticati con username/password)</message>
 	<message key="manager.subscriptionTypes.form.options">Opzioni</message>
-	<message key="manager.setup.journalFaviconInvalid">Formato non valido. I formati accettati sono .ico, .png, e .gif.</message>
+	<message key="manager.setup.faviconInvalid">Formato non valido. I formati accettati sono .ico, .png, e .gif.</message>
 	<message key="manager.setup.noPublishing">OJS non viene utilizzato per pubblicare on line i contenuti della rivista</message>
 	<message key="manager.individualSubscriptions">Abbonamento individuale</message>
 	<message key="manager.institutionalSubscriptions">Abbonamento istituzionale</message>
@@ -689,7 +689,7 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.subscriptions.selectUser">Seleziona un utente</message>
 	<message key="manager.subscriptions.contact">Nome del contatto</message>
 	<message key="manager.subscriptions.institutionName">Nome dell'ente</message>
-	<message key="manager.setup.journalFaviconDescription">Aggiungi una favicon alla rivista, da mostrare sulla barra degli indirizzi degli utenti che visitano il sito.</message>
+	<message key="manager.setup.faviconDescription">Aggiungi una favicon alla rivista, da mostrare sulla barra degli indirizzi degli utenti che visitano il sito.</message>
 	<message key="manager.setup.publisherNoteDescription">Questo testo apparirà sotto l'intestazione "Editore" e sopra il nome/URL dell'editore, nel sttore "Sponsorship" della pagina "Informazioni sulla rivista".</message>
 	<message key="manager.setup.sponsorNoteDescription">Questo testo apparirà sotto l'intestazione "Sponsor" e sopra il nome/URL dell'editore, nel sttore "Sponsorship" della pagina "Informazioni sulla rivista".</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">Notifica via email al responsabile degli abbonamenti l'acquisto online di un abbonamento individuale.</message>

@@ -599,9 +599,9 @@ I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommenta
 	<message key="manager.setup.contributorNoteDescription">Denne tekst vises under overskriften "Støttekilder" og over listen med navne og url'er til støtteorganisationer under "Tidsskriftsponsorer" på siden "Om".</message>
 	<message key="manager.setup.history">Tidsskrifthistorik</message>
 	<message key="manager.setup.historyDescription">Denne tekst vises i sektionen "Om" på tidsskriftets websted og kan anvendes til at beskrive ændringer i titler, redaktionen og andet, der er relevant for tidsskriftets udgivelseshistorik.</message>
-	<message key="manager.setup.journalFavicon">Favicon for tidsskrift</message>
-	<message key="manager.setup.journalFaviconDescription">Tilføj et favicon for dette tidsskrift, som vises ved siden af navigationslinjen, når brugere besøger dit websted.</message>
-	<message key="manager.setup.journalFaviconInvalid">Ugyldigt favicon-format. Tilladte formater er .ico, .png og .gif.</message>
+	<message key="manager.setup.favicon">Favicon for tidsskrift</message>
+	<message key="manager.setup.faviconDescription">Tilføj et favicon for dette tidsskrift, som vises ved siden af navigationslinjen, når brugere besøger dit websted.</message>
+	<message key="manager.setup.faviconInvalid">Ugyldigt favicon-format. Tilladte formater er .ico, .png og .gif.</message>
 	<message key="manager.setup.publisherNoteDescription">Teksten vil blive vist under overskriften "Udgiver" og over udgiverens navn/url under "Tidsskriftsponsorer" på siden "Om".</message>
 	<message key="manager.setup.sponsorNoteDescription">Teksten vil blive vist under overskriften "Sponsorer" og over listen med sponsornavne/url'er under "Tidsskriftsponsorer" på siden "Om".</message>
 	<message key="manager.setup.noPublishing">OJS vil ikke blive anvendt til at udgive tidsskriftets indhold online.</message>

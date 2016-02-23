@@ -580,9 +580,9 @@
 	<message key="manager.setup.doiSuffixDescription">Το πρόθημα DOI μπορεί να πάρει οποιαδήποτε φόρμα, αλλά θα πρέπει να είναι μοναδικό για κάθε δημοσιευμένο τεκμήριο.</message>
 	<message key="manager.setup.doiSuffixPublisherId">Χρησιμοποιήστε το "Προσαρμοσμένο Αναγνωριστικό" για δημοσιευμένα τεκμήρια (πρέπει να ενεργοποιηθεί στο Βήμα 4.)</message>
 	<message key="manager.setup.form.doiPrefixPattern">Το υπόδειγμα DOI πρέπει να είναι της μορφής 10.xxxx.</message>
-	<message key="manager.setup.journalFavicon">Favicon περιοδικού</message>
-	<message key="manager.setup.journalFaviconDescription">Εισάγετε ένα favicon για το περιοδικό που θα εμφανίζεται στη μπάρα πλοήγηση όταν οι χρήστες επισκέπτονται τον ιστότοπο του περιοδικού σας.</message>
-	<message key="manager.setup.journalFaviconInvalid">Μη έγκυρος τύπος αρχείο Favicon. Επιτρεπτοί τύποι αρχείων είναι .ico, .png, και .gif.</message>
+	<message key="manager.setup.favicon">Favicon περιοδικού</message>
+	<message key="manager.setup.faviconDescription">Εισάγετε ένα favicon για το περιοδικό που θα εμφανίζεται στη μπάρα πλοήγηση όταν οι χρήστες επισκέπτονται τον ιστότοπο του περιοδικού σας.</message>
+	<message key="manager.setup.faviconInvalid">Μη έγκυρος τύπος αρχείο Favicon. Επιτρεπτοί τύποι αρχείων είναι .ico, .png, και .gif.</message>
 	<message key="manager.setup.publisherNoteDescription">Το κείμενο αυτό θα εμφανιστεί κάτω από την κεφαλίδα "Εκδότης" και πάνω από το όνομα/url του εκδότη κάτω από τους "Χορηγούς του Περιοδικού" στη σελίδα "Σχετικά".</message>
 	<message key="manager.setup.sponsorNoteDescription">Το κείμενο αυτό θα εμφανιστείς κάτω από της κεφαλίδα "Χορηγοί" και πάνω από την λίστα με τα ονόματα και τα ulr των χορηγών κάτω από τους "Χορηγούς του Περιοδικού" στη σελίδα "Σχετικά".</message>
 	<message key="manager.setup.noPublishing">Το OJS δεν θα χρησιμοποιηθεί για να δημοσιεύσει τα περιεχόμενα του περιοδικού Online.</message>

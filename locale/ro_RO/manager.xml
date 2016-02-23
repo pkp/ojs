@@ -266,9 +266,9 @@
 	<message key="manager.setup.journalArchiving">Arhivarea revistei</message>
 	<message key="manager.setup.journalDescription">Descrierea revistei</message>
 	<message key="manager.setup.journalDescriptionDescription">Adaugă un sumar de 20-25 de cuvinte ca text/HTML care va apărea imediat sub linkurile de navigare.</message>
-	<message key="manager.setup.journalFavicon">Favicon-ul revistei</message>
-	<message key="manager.setup.journalFaviconDescription">Adaugă un favicon (pictogramă de mici dimensiuni) pentru această revistă pentru a fi afișată în bara de adrese a browserului la momentul vizitării siteului.</message>
-	<message key="manager.setup.journalFaviconInvalid">Formatul favicon-ului nu este valid. Formatele acceptate sunt .ico, .png, și .gif.</message>
+	<message key="manager.setup.favicon">Favicon-ul revistei</message>
+	<message key="manager.setup.faviconDescription">Adaugă un favicon (pictogramă de mici dimensiuni) pentru această revistă pentru a fi afișată în bara de adrese a browserului la momentul vizitării siteului.</message>
+	<message key="manager.setup.faviconInvalid">Formatul favicon-ului nu este valid. Formatele acceptate sunt .ico, .png, și .gif.</message>
 	<message key="manager.setup.journalHomepageContent">Conţinutul paginii principale a revistei</message>
 	<message key="manager.setup.journalHomepageContentDescription">Implicit, pagina principală conține linkuri navigabile. Conţinutul suplimentar pentru pagina principală poate fi adăugat prin folosirea uneia sau a tuturor opţiunilor care urmează și care vor apărea în ordinea indicată. Trebuie remarcat faptul că numărul curent este mereu accesibil prin intermediul linkului corespunzător din bara de navigare.</message>
 	<message key="manager.setup.journalHomepageHeader">Colontitlul (headerul) paginii principale</message>

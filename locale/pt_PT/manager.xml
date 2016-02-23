@@ -583,9 +583,9 @@
 	<message key="manager.setup.doiSuffixDescription">Um sufixo DOI pode possuir qualquer formato, desde que seja único para cada artigo publicado.</message>
 	<message key="manager.setup.doiSuffixPublisherId">Usar o "Identificador Personalizado" para itens publicados como sufixo DOI (deve estar activado no Passo 4).</message>
 	<message key="manager.setup.form.doiPrefixPattern">O padrão DOI deve estar no formato 10.xxxx.</message>
-	<message key="manager.setup.journalFavicon">Favicon da revista</message>
-	<message key="manager.setup.journalFaviconDescription">Adicionar um ícone de favoritos da revista, a ser exibido na barra de endereço do navegador.</message>
-	<message key="manager.setup.journalFaviconInvalid">Formato de favicon inválido. Formatos aceites são .ico, .png e .gif.</message>
+	<message key="manager.setup.favicon">Favicon da revista</message>
+	<message key="manager.setup.faviconDescription">Adicionar um ícone de favoritos da revista, a ser exibido na barra de endereço do navegador.</message>
+	<message key="manager.setup.faviconInvalid">Formato de favicon inválido. Formatos aceites são .ico, .png e .gif.</message>
 	<message key="manager.setup.publisherNoteDescription">Este texto aparecerá abaixo de "Editora" e acima da lista de nomes e URLs de editoras, na página "Apoio à revista" na página "Sobre".</message>
 	<message key="manager.setup.sponsorNoteDescription">Este texto aparecerá abaixo de "Patrocínio" e acima da lista de nomes e URLs de patrocinadores, na página "Apoio à revista" na página "Sobre".</message>
 	<message key="manager.setup.noPublishing">O sistema não será usado para publicar o conteúdo da revista online.</message>

@@ -451,9 +451,9 @@
 	<message key="manager.setup.enableUserRegistration.reviewer">Рецензенты (готовы рецензировать рукописи)</message>
 	<message key="manager.setup.includeCreativeCommons">Для журналов, предлагающих немедленный или задержанный открытый доступ, включить лицензию Creative Commons во все опубликованные работы.</message>
 	<message key="manager.setup.journalAbbreviation">Сокращенное названия журнала</message>
-	<message key="manager.setup.journalFavicon">Мини-пиктограмма журнала</message>
-	<message key="manager.setup.journalFaviconDescription">Добавить мини-пиктограмму на панель навигации.</message>
-	<message key="manager.setup.journalFaviconInvalid">Неверный формат мини-пиктограммы. Допускаются .ico, .png, и .gif.</message>
+	<message key="manager.setup.favicon">Мини-пиктограмма журнала</message>
+	<message key="manager.setup.faviconDescription">Добавить мини-пиктограмму на панель навигации.</message>
+	<message key="manager.setup.faviconInvalid">Неверный формат мини-пиктограммы. Допускаются .ico, .png, и .gif.</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Заголовок страницы журнала</message>
 	<message key="manager.setup.journalLayout">Верстка журнала</message>
 	<message key="manager.setup.journalLayoutDescription">Выберите тему и компоненты раскладки. Можно также загрузить свой собственный стилевой файл, который переобозначит определения в системных стилях и стилях темы (если она выбрана).</message>

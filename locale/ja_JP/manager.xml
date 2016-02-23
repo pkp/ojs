@@ -549,9 +549,9 @@
 	<message key="manager.setup.lockssEnable"><![CDATA[LOCKSS を有効にする。LOCKSS の<a href="{$lockssUrl}" target="_blank">出版者マニュフェスト</a>ページを通じてLOCKSSを有効にし、参加図書館にある雑誌コンテンツを保管・配布します。LOCKSSライセンスはアーカイブの「この雑誌について」ページに表示されます。]]></message>
 	<message key="manager.setup.lockssLicenses"><![CDATA[<a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS ライセンスのその他のバージョンはここ</a>を参照してください。]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[雑誌を登録･キャッシュする図書館を6館から10館見つけます。例えば、編集者や雑誌委員会委員が勤務する機関や既にLOCKSSに参加している機関に問い合わせてください。<a href="http://www.lockss.org/community/" target="_blank">参加図書館はここ</a>を参照してください。あらかじめ用意されている(1) <a href="{$lockssExistingArchiveUrl}" target="_blank">LOCKSS参加図書館向け</a>、または、(2) <a href="{$lockssNewArchiveUrl}" target="_blank">LOCKSS未参加図書館向け</a> の招待状を使用してください。]]></message>
-	<message key="manager.setup.journalFavicon">雑誌ファビコン</message>
-	<message key="manager.setup.journalFaviconDescription">ユーザがあなたのサイトを訪れた際にナビゲーションバーに表示させるこの雑誌のファビコンを追加します。</message>
-	<message key="manager.setup.journalFaviconInvalid">ファビコンのフォーマットが不適切です。 フォーマットは [.ico], [.png], [.gif.]でなければなりません。</message>
+	<message key="manager.setup.favicon">雑誌ファビコン</message>
+	<message key="manager.setup.faviconDescription">ユーザがあなたのサイトを訪れた際にナビゲーションバーに表示させるこの雑誌のファビコンを追加します。</message>
+	<message key="manager.setup.faviconInvalid">ファビコンのフォーマットが不適切です。 フォーマットは [.ico], [.png], [.gif.]でなければなりません。</message>
 	<message key="manager.people.showNoRole">役割をもたないユーザを表示</message>
 	<message key="manager.subscriptions.form.institutionName">機関名</message>
 	<message key="manager.subscriptions.form.institutionNameRequired">機関名は必要です。</message>

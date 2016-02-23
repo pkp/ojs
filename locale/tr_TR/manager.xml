@@ -262,9 +262,9 @@
 	<message key="manager.setup.journalArchiving">Dergi Arşivi</message>
 	<message key="manager.setup.journalDescription">Dergi Tanımı</message>
 	<message key="manager.setup.journalDescriptionDescription">Dergiyi tanımlayan, yönlendirme çubuğu altında görülecek, 20-25 sözcükten oluşan bir açıklama (metin/HTML olabilir) ekleyebilirsiniz.</message>
-	<message key="manager.setup.journalFavicon">Dergi Favori Simgesi</message>
-	<message key="manager.setup.journalFaviconDescription">Kullanıcıların web sayfasını ziyaretleri sırasında yönlendirme çubuğunun yanında görüntülenmesi için bu dergi için bir favori simgesi ekleyiniz.</message>
-	<message key="manager.setup.journalFaviconInvalid">Geçersiz favori simgesi. Kabul edilebilir formatlar: .ico, .png ve .gif.</message>
+	<message key="manager.setup.favicon">Dergi Favori Simgesi</message>
+	<message key="manager.setup.faviconDescription">Kullanıcıların web sayfasını ziyaretleri sırasında yönlendirme çubuğunun yanında görüntülenmesi için bu dergi için bir favori simgesi ekleyiniz.</message>
+	<message key="manager.setup.faviconInvalid">Geçersiz favori simgesi. Kabul edilebilir formatlar: .ico, .png ve .gif.</message>
 	<message key="manager.setup.journalHomepageContent">Dergi Sayfa Sayfa İçeriği</message>
 	<message key="manager.setup.journalHomepageContentDescription">Giriş sayfası var sayılan yönlendirme bağlantılarından oluşur. Aşağıdaki seçenekler kullanılarak, aşağıdaki sıra ile görülmek üzere giriş sayfasına eklenebilirler. Son  sayı yönlendirme bağlantılarında "Son Sayı" olarak sürekli yer alır.</message>
 	<message key="manager.setup.journalHomepageHeader">Dergi Ana Sayfa Başlığı</message>

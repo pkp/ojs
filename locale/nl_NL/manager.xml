@@ -597,7 +597,7 @@
 	<message key="manager.plugins.installFailed">Installatie mislukt</message>
 	<message key="manager.plugins.upgradeFailed">Opwaarderen mislukt</message>
 	<message key="manager.sections.wordCount">Aantal woorden</message>
-	<message key="manager.setup.journalFavicon">Favicon van het tijdschrift</message>
+	<message key="manager.setup.favicon">Favicon van het tijdschrift</message>
 	<message key="manager.plugins.upgradeDescription">Dit formulier maakt het mogelijk om een plugin op te waarderen. Vergewis u ervan dat de plugin is gecomprimeerd als .tar.gz bestand.</message>
 	<message key="manager.plugins.deleteDescription">Door op verwijder te klikken, verwijdert u de plugin uit het systeem.</message>
 	<message key="manager.plugins.deleteConfirm">Weet u zeker dat u deze plugin uit het systeem wilt verwijderen?</message>
@@ -613,8 +613,8 @@
 	<message key="manager.setup.contributorNoteDescription">Deze tekst verschijnt onder de kop "Ondersteunende organisaties"  en boven de lijst met ondersteunende organisaties bij "Sponsors" op de pagina "Over het tijdschrift".</message>
 	<message key="manager.setup.history">Geschiedenis van het tijdschrift</message>
 	<message key="manager.setup.historyDescription">Deze tekst verschijnt in de "Over" sectie van de website van het tijdschrift en kan gebruikt worden om de veranderingen in het tijdschrift, de redactie en andere relevante historische feiten te beschrijven.</message>
-	<message key="manager.setup.journalFaviconDescription">Voeg een favicon toe aan dit tijdschrift. Dat wordt bij de adresbalk getoond van gebruikers die uw site bezoeken.</message>
-	<message key="manager.setup.journalFaviconInvalid">Onjuist favicon formaat. Geldige formaten zijn .ico, .png en .gif.</message>
+	<message key="manager.setup.faviconDescription">Voeg een favicon toe aan dit tijdschrift. Dat wordt bij de adresbalk getoond van gebruikers die uw site bezoeken.</message>
+	<message key="manager.setup.faviconInvalid">Onjuist favicon formaat. Geldige formaten zijn .ico, .png en .gif.</message>
 	<message key="manager.setup.noPublishing">OJS zal niet gebruikt worden om de inhoud van het tijdschrift online te publiceren.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Berichten over online betalingen</message>
 	<message key="manager.setup.publisherNoteDescription">Deze tekst wordt getoond onder de kop "uitgever" en boven de naam/url van de uitgever onder "Sponsors"  op de pagina "Over het tijdschrift".</message>

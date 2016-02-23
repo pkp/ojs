@@ -274,9 +274,9 @@
 	<message key="manager.setup.journalArchiving"> Mengarsip Jurnal </message> 
 	<message key="manager.setup.journalDescription"> Deskripsi Jurnal </message> 
 	<message key="manager.setup.journalDescriptionDescription"> Tambahkan deskripsi singkat (20-25 kata) dalam teks/ HTML yang akan ditampilkan di bawah navigasi.</message>  
-	<message key="manager.setup.journalFavicon"> Favicon Jurnal </message> 
-	<message key="manager.setup.journalFaviconDescription"> Tambahkan favicon untuk jurnal ini untuk ditampilkan di sepanjang tepi navigasi saat pengguna berkunjung ke situs Anda. </message> 
-	<message key="manager.setup.journalFaviconInvalid"> Format Favicon Invalid. Format yang diterima adalah .ico, .png, dan .gif.</message> 
+	<message key="manager.setup.favicon"> Favicon Jurnal </message> 
+	<message key="manager.setup.faviconDescription"> Tambahkan favicon untuk jurnal ini untuk ditampilkan di sepanjang tepi navigasi saat pengguna berkunjung ke situs Anda. </message> 
+	<message key="manager.setup.faviconInvalid"> Format Favicon Invalid. Format yang diterima adalah .ico, .png, dan .gif.</message> 
 	<message key="manager.setup.journalHomepageContent"> Konten Beranda Jurnal</message> 
 	<message key="manager.setup.journalHomepageContentDescription"> Secara default, beranda terdiri dari navigasi. Konten tambahan beranda dapat ditambahkan dengan menggunakan salah satu atau semua pilihan berikut ini, yang akan ditampilkan dalam urutan yang benar. Perhatikan bahwa terbitan terkini selalu dapat diakses melalui tautan Terkini di navigasi.</message> 
 	<message key="manager.setup.journalHomepageHeader"> Header Beranda Jurnal </message> 

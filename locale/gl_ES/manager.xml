@@ -617,9 +617,9 @@
 	<message key="manager.setup.doiSuffixDefault">Usar padrón por defecto (%j.v%vi%i.%a).</message>
 	<message key="manager.setup.doiSuffixDescription">Un sufixo DOI pode tomar cualquera forma, ainda que ten que ser único para cada ítem publicado.</message>
 	<message key="manager.setup.form.doiPrefixPattern">Un padrón DOI ten que ser da forma 10.xxxx.</message>
-	<message key="manager.setup.journalFavicon">Icono de Sitio da Revista</message>
-	<message key="manager.setup.journalFaviconDescription">Insire un icono de sitio a esta revista para que se vexa na barra de navegación cando os usuarios visiten el site.</message>
-	<message key="manager.setup.journalFaviconInvalid">Formato de icono de site inválido. Acéptanse os formatos  .ico, .png, and .gif.</message>
+	<message key="manager.setup.favicon">Icono de Sitio da Revista</message>
+	<message key="manager.setup.faviconDescription">Insire un icono de sitio a esta revista para que se vexa na barra de navegación cando os usuarios visiten el site.</message>
+	<message key="manager.setup.faviconInvalid">Formato de icono de site inválido. Acéptanse os formatos  .ico, .png, and .gif.</message>
 	<message key="manager.subscriptions.withStatus">Estado</message>
 	<message key="manager.subscriptions.form.userProfileInstructions">Nota: Todos as mudanzas en abaixo son para o perfil do usuario en todo o sistema.</message>
 	<message key="manager.setup.historyDescription">Este texto aparecerá na sección "Sobre nós"  da revista e pode ser usado para descreber cambios en cargos, consello editorial,e outros temas de relevo para a historia da revista.</message>

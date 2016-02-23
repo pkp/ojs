@@ -264,9 +264,9 @@
        <message key="manager.setup.journalArchiving">Архівування журналу</message>
        <message key="manager.setup.journalDescription">Опис журналу</message>
        <message key="manager.setup.journalDescriptionDescription">Додайте короткий опис (20-25 слів у форматі text/HTML), який буде відображений безпосередньо під посиланням на журнал.</message>
-       <message key="manager.setup.journalFavicon">Піктограма для бразузера</message>
-       <message key="manager.setup.journalFaviconDescription">Додати Favicon-піктограму логотипу журналу для відображення у адресному рядку браузерів відвідувачів сайту.</message>
-       <message key="manager.setup.journalFaviconInvalid">Неприпустимий формат Favicon-піктограми. Припустимими форматами є .ico, .png та .gif.</message>
+       <message key="manager.setup.favicon">Піктограма для бразузера</message>
+       <message key="manager.setup.faviconDescription">Додати Favicon-піктограму логотипу журналу для відображення у адресному рядку браузерів відвідувачів сайту.</message>
+       <message key="manager.setup.faviconInvalid">Неприпустимий формат Favicon-піктограми. Припустимими форматами є .ico, .png та .gif.</message>
        <message key="manager.setup.journalHomepageContent">Зміст домашньої сторінки журналу</message>
        <message key="manager.setup.journalHomepageContentDescription">За замовчуванням, на домашній сторінці розміщені лише навігаційні посилання. Використовуючи наступні опції можливо налаштувати домашню сторінку на відображення певного додаткового змісту. Зауважте, що зміст поточного випуску журналу завжди доступний за посиланням "Поточний випуск" на навігаційній панелі.</message>
        <message key="manager.setup.journalHomepageHeader">Заголовок домашньої сторінки</message>

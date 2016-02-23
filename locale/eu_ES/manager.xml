@@ -573,9 +573,9 @@
 	<message key="manager.setup.historyDescription">Testua aldizkariaren web orriko “Aldizkariari buruz” atalean agertuko da, eta tituluetan, talde editorialean eta aldizkariaren argitalpen-historian garrantzitsuak diren beste zenbait elementutan egindako aldaketak deskribatzeko erabili daiteke.</message>
 	<message key="manager.setup.enableUserRegistration.reviewer">Ebaluatzaileak (aurkezpenak ebaluatzeko moduan daudenak)</message>
 	<message key="manager.setup.frequencyOfPublicationNote">Oharra: utzi elementuen hutsunea aldizkari honekin erabili ez bada, eta editoreek zenbakiak berrezarriko dituzte argitalpen-prozesuan.</message>
-	<message key="manager.setup.journalFavicon">Aldizkariaren Favicon-a</message>
-	<message key="manager.setup.journalFaviconDescription">Gehitu favicon bat aldizkari honentzat, nabigazio-barrarekin batera azaltzeko, erabiltzaileak zure orria bisitatzen ari direnean.</message>
-	<message key="manager.setup.journalFaviconInvalid">Favicon-ak ez du baliozko formatua. Hauek dira onartzen diren formatuak: .ico, .png, and .gif.</message>
+	<message key="manager.setup.favicon">Aldizkariaren Favicon-a</message>
+	<message key="manager.setup.faviconDescription">Gehitu favicon bat aldizkari honentzat, nabigazio-barrarekin batera azaltzeko, erabiltzaileak zure orria bisitatzen ari direnean.</message>
+	<message key="manager.setup.faviconInvalid">Favicon-ak ez du baliozko formatua. Hauek dira onartzen diren formatuak: .ico, .png, and .gif.</message>
 	<message key="manager.setup.principalContactDescription">Kokaleku hau editore nagusiaren, editore-kontseilariaren edo administrazioko langileen kokalekutzat har daiteke. Kokalekua aldizkariaren orri nagusian jarriko da, “Kontaktua” atalaren azpian, eta “Laguntza Teknikoko foroa” atalarekin batera.</message>
 	<message key="manager.setup.publisherNoteDescription">Testu hau “Aldizkariari buruz” orrian agertuko da, “Argitaratzailea” tituluaren azpian eta argitaratzailearen izena/url-aren gainean agertuko da, “Aldizkariaren babesleak” atalaren azpian.</message>
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">Ebaluazioak egiteko uzten den ohiko denbora</message>

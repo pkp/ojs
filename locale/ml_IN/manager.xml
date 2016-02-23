@@ -272,9 +272,9 @@
 	<message key="manager.setup.journalArchiving">ജേണല്‍ ആര്‍ച്ചീവിങ്ങ്</message>
 	<message key="manager.setup.journalDescription">ജേണലിന്റെ വിവരണങ്ങള്‍</message>
 	<message key="manager.setup.journalDescriptionDescription">ടെക്സ്റ്റ്/എച്ച്ടിഎംഎല്‍ 20-25 വാക്കുകളില്‍ ഒരു ചുരുങ്ങിയ വിവരണം നല്‍ക്കുക. ഇവ നാവിഗേഷന്‍ ലിങ്കിനു തൊട്ടു മുകളിലായി ദൃശ്യമാകുന്നതാണ്.</message>
-	<message key="manager.setup.journalFavicon">ജേണല്‍ ഫവികോണ്‍</message>
-	<message key="manager.setup.journalFaviconDescription">യൂസര്‍സ് താങ്കളുടെ സൈറ്റ് സന്ദര്‍ഷിക്കുമ്പോള്‍ നാവിഗേഷന്‍ ബാറിന്റെ കൂടെ ദൃശ്യമാകുന്നതിനായി ജേണലിനു വേണ്ടി ഒരു ഫവികോണ്‍ ചേര്‍ക്കുക.</message>
-	<message key="manager.setup.journalFaviconInvalid">അപ്രാപ്യമായ ഫവികോണ്‍ ഫോര്‍മാറ്റ്. സ്വീകരിക്കുന്ന ഫോര്‍മാറ്റുകള്‍  .ico, .png, and .gif.</message>
+	<message key="manager.setup.favicon">ജേണല്‍ ഫവികോണ്‍</message>
+	<message key="manager.setup.faviconDescription">യൂസര്‍സ് താങ്കളുടെ സൈറ്റ് സന്ദര്‍ഷിക്കുമ്പോള്‍ നാവിഗേഷന്‍ ബാറിന്റെ കൂടെ ദൃശ്യമാകുന്നതിനായി ജേണലിനു വേണ്ടി ഒരു ഫവികോണ്‍ ചേര്‍ക്കുക.</message>
+	<message key="manager.setup.faviconInvalid">അപ്രാപ്യമായ ഫവികോണ്‍ ഫോര്‍മാറ്റ്. സ്വീകരിക്കുന്ന ഫോര്‍മാറ്റുകള്‍  .ico, .png, and .gif.</message>
 	<message key="manager.setup.journalHomepageContent">ജേണലിന്റെ ഹോം പേജിന്റെ ഉള്ളടക്കം</message>
 	<message key="manager.setup.journalHomepageContentDescription">By default, the homepage consists of navigation links. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown. Note that the current issue is always accessible through the Current link in the navigation bar.</message>
 	<message key="manager.setup.journalHomepageHeader">ജേണല്‍ ഹോം പേജ് ഹെഡര്‍</message>

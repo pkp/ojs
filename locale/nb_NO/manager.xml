@@ -590,9 +590,9 @@
 	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Opphavsrettserklæringen som legges inn nedenfor vil bli synlig i "om tidsskriftet" og i metadataene for hver publisert artikkel/tilsv. Selv om det det er opp til tidsskriftet å inngå opphavsrettsavtale med forfattere, anbefaler The Public Knowledge Project å bruke en <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a> lisens. For dette formål finnes det et <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">forslag til opphavsretterklæring</a> som kan klippes og limes inn nedenfor for tidsskrifter som (a) tilbyr open access, (b) tilbyr forsinket open access, eller (c) ikke tilbyr open access.]]></message>
 	<message key="manager.setup.contributorNoteDescription">Denne teksten vil vises nedenfor «Andre støttespillere» ovenfor listen med støttespillernes navn/url under «Tidsskriftets sponsorer» på «Om»-siden.</message>
 	<message key="manager.setup.history">Tidsskriftets historie</message>
-	<message key="manager.setup.journalFavicon">Tidsskriftets favicon</message>
-	<message key="manager.setup.journalFaviconDescription">Legg til et favicon som vises ved siden av navigasjonslinjen når brukere er inne på ditt nettsted.</message>
-	<message key="manager.setup.journalFaviconInvalid">Ugyldig favicon-format. Tillatte formater er .ico, .png, and .gif.</message>
+	<message key="manager.setup.favicon">Tidsskriftets favicon</message>
+	<message key="manager.setup.faviconDescription">Legg til et favicon som vises ved siden av navigasjonslinjen når brukere er inne på ditt nettsted.</message>
+	<message key="manager.setup.faviconInvalid">Ugyldig favicon-format. Tillatte formater er .ico, .png, and .gif.</message>
 	<message key="manager.setup.noPublishing">OJS vil ikke bli brukt til å publisere tidsskriftets innhold på nett.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Melding on online-betalinger</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Automatiske e-postbeskjeder (som kan redigeres av tidsskriftadministratorer i OJS' e-postmaler) kan sendes til abonnementsansvarlig når en online abonnementsbetaling er fullført.</message>

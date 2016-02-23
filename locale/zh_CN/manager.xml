@@ -256,9 +256,9 @@
 	<message key="manager.setup.journalArchiving">期刊存档</message>
 	<message key="manager.setup.journalDescription">期刊说明</message>
 	<message key="manager.setup.journalDescriptionDescription">以HTML或纯文字的方式，加入简短的 20-25字数说明；这会出现在导航栏的正下方。</message>
-	<message key="manager.setup.journalFavicon">杂志图标</message>
-	<message key="manager.setup.journalFaviconDescription">添加的图标显示在导航栏旁边</message>
-	<message key="manager.setup.journalFaviconInvalid">无效的图标格式。接受的格式有.ico,.png,和.gif。</message>
+	<message key="manager.setup.favicon">杂志图标</message>
+	<message key="manager.setup.faviconDescription">添加的图标显示在导航栏旁边</message>
+	<message key="manager.setup.faviconInvalid">无效的图标格式。接受的格式有.ico,.png,和.gif。</message>
 	<message key="manager.setup.journalHomepageContent">期刊首页内容</message>
 	<message key="manager.setup.journalHomepageContentDescription">根据预设，首页由导航链接所组成。您可以使用下面一个或所有的选项来增添额外的首页内容，会以所见的顺序来显示。注意，当期期刊永远都可以透过导航栏中的「当期期刊」链接来阅读</message>
 	<message key="manager.setup.journalHomepageHeader">期刊首页标题</message>

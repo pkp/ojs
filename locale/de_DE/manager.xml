@@ -263,9 +263,9 @@
 	<message key="manager.setup.journalArchiving">Archivierung der Zeitschrift</message>
 	<message key="manager.setup.journalDescription">Beschreibung der Zeitschrift</message>
 	<message key="manager.setup.journalDescriptionDescription">Geben Sie eine kurze Beschreibung (20-25 Wörter) in HTML oder reinem Text ein, die direkt unterhalb der Navigationslinks erscheint. </message>
-	<message key="manager.setup.journalFavicon">Zeitschriften-Favicon</message>
-	<message key="manager.setup.journalFaviconDescription">Fügen Sie ein Favicon für diese Zeitschrift hinzu, das in der Menüleiste angezeigt wird, wenn Nutzer/innen Ihre Seite besuchen.</message>
-	<message key="manager.setup.journalFaviconInvalid">Ungültiges Favicon-Format. Gültige Formate sind .ico, .png und .gif.</message>
+	<message key="manager.setup.favicon">Zeitschriften-Favicon</message>
+	<message key="manager.setup.faviconDescription">Fügen Sie ein Favicon für diese Zeitschrift hinzu, das in der Menüleiste angezeigt wird, wenn Nutzer/innen Ihre Seite besuchen.</message>
+	<message key="manager.setup.faviconInvalid">Ungültiges Favicon-Format. Gültige Formate sind .ico, .png und .gif.</message>
 	<message key="manager.setup.journalHomepageContentDescription">Standardmäßig besteht die Eingangsseite nur aus Navigationslinks. Zusätzlicher Inhalt kann mit einer der folgenden Optionen hinzugefügt werden. Er erscheint in der Reihenfolge der Optionen. Bitte beachten Sie, dass die aktuelle Ausgabe der Zeitschrift immer über den "Aktuelle Ausgabe"-Link in der Navigationsleiste zu erreichen ist.</message>
 	<message key="manager.setup.journalHomepageContent">Inhalt der Eingangsseite der Zeitschrift</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Kopfzeile der Startseite der Zeitschrift</message>

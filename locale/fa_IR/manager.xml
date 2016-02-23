@@ -595,9 +595,9 @@
 	<message key="manager.setup.issnDescription"><![CDATA[شابن یا شماره استاندارد بین المللی نشریه یه عدد هشت رقمی است که مشخصه انتشارات ادواری میباشد . شامل ادواری های الکترونیکی نیز میشود. اداره آن توسط شبکه کسترده ای از مراکز ملی است که توسط یک مرکز بین المللی در پاریس هماهنگ میگردند. پشتیبان آن یونسکو و دولت فرانسه است. شابن را میتوان از 
 <a href="http://www.issn.org" target="_new">وب سایت شابن</a>
 بدست آورد.]]></message>
-	<message key="manager.setup.journalFavicon">فاویکون مجله</message>
-	<message key="manager.setup.journalFaviconDescription">افزودن فاویکون برای این مجله تا در خط آدرس مرورگر هنگام بازدید از سایت ظاهر شود.</message>
-	<message key="manager.setup.journalFaviconInvalid">فرمات فاویکون بکار رفته نا معتبر است. فرماتهای مورد قبول عبارتند از .ico, .png, and .gif.</message>
+	<message key="manager.setup.favicon">فاویکون مجله</message>
+	<message key="manager.setup.faviconDescription">افزودن فاویکون برای این مجله تا در خط آدرس مرورگر هنگام بازدید از سایت ظاهر شود.</message>
+	<message key="manager.setup.faviconInvalid">فرمات فاویکون بکار رفته نا معتبر است. فرماتهای مورد قبول عبارتند از .ico, .png, and .gif.</message>
 	<message key="manager.setup.publisherNoteDescription">این متن در پائین قسمت عنوان ناشر و بالاتر از نام و آدرس ناشر تحت عنوان اسپانسر مجله ظاهر میشود.</message>
 	<message key="manager.setup.sponsorNoteDescription">این متن پائین تر از عنوان اسپانسرها و بالاتر از نام و آدرسهای اسپانسر ها تحت عنوان اسپانسر مجله ظاهر میشود.</message>
 	<message key="manager.setup.noPublishing">از او ج اس برای انتشار آن لاین محتوای مجله استفاده نخواهد شد.</message>

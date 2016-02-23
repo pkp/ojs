@@ -577,9 +577,9 @@ Exemplo:
 	<message key="manager.setup.contributorNoteDescription">Este texto será apresentado abaixo de "Contribuidores" e acima da lista de nomes e URLs para organizações que apóiam a revista, sob "Patrocínio da revista" na página "Sobre".</message>
 	<message key="manager.setup.history">Histórico da revista</message>
 	<message key="manager.setup.historyDescription">Este texto aparecerá na seção "Sobre" da revista e pode ser usado para detalhar mudanças de título, corpo editorial e outros itens de relevância na história da publicação.</message>
-	<message key="manager.setup.journalFavicon">Ícone de favoritos</message>
-	<message key="manager.setup.journalFaviconDescription">Incluir um ícone de favoritos (favicon) da revista, a ser exibido na barra de endereço do navegador.</message>
-	<message key="manager.setup.journalFaviconInvalid">Formato de ícone inválido. Formatos aceitos são .ico, .png e .gif.</message>
+	<message key="manager.setup.favicon">Ícone de favoritos</message>
+	<message key="manager.setup.faviconDescription">Incluir um ícone de favoritos (favicon) da revista, a ser exibido na barra de endereço do navegador.</message>
+	<message key="manager.setup.faviconInvalid">Formato de ícone inválido. Formatos aceitos são .ico, .png e .gif.</message>
 	<message key="manager.setup.publisherNoteDescription">Este texto aparecerá abaixo de "Editora" e acima da lista de nomes e URLs de editoras, em "Patrocínio da revista" na página "Sobre".</message>
 	<message key="manager.setup.sponsorNoteDescription">Este texto aparecerá na seção respectiva, acima da lista de nomes e URLs de patrocinadores, na página "Patrocínio da revista" na página "Sobre".</message>
 	<message key="manager.setup.noPublishing">O sistema não será usado para publicar o conteúdo da revista online.</message>

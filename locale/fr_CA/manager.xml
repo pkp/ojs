@@ -578,9 +578,9 @@
 	<message key="manager.setup.doiSuffixDescription">Un suffixe DOI peut prendre n'importe quelle forme, mais doit être unique pour chaque article publié.</message>
 	<message key="manager.setup.doiSuffixPublisherId">Utiliser l'« Identifiant personnalisé » comme suffixe DOI pour les articles publiés (doit être activé à l'Étape 4).</message>
 	<message key="manager.setup.form.doiPrefixPattern">Le DOI doit avoir le format 10.xxxx.</message>
-	<message key="manager.setup.journalFavicon">Icône (favicon) de la revue</message>
-	<message key="manager.setup.journalFaviconDescription">Ajouter un icône (favicon) pour cette revue pour fins d'affichage à côté de la barre de navigation quand les utilisateurs visitent votre site.</message>
-	<message key="manager.setup.journalFaviconInvalid">Format d'icône (favicon) invalide. Les formats acceptés sont .ico, .png et .gif.</message>
+	<message key="manager.setup.favicon">Icône (favicon) de la revue</message>
+	<message key="manager.setup.faviconDescription">Ajouter un icône (favicon) pour cette revue pour fins d'affichage à côté de la barre de navigation quand les utilisateurs visitent votre site.</message>
+	<message key="manager.setup.faviconInvalid">Format d'icône (favicon) invalide. Les formats acceptés sont .ico, .png et .gif.</message>
 	<message key="manager.setup.publisherNoteDescription">Ce texte apparaîtra sous l'entête « Éditeur » et au-dessus du nom/url de l'éditeur sous « Commandites de la revue » sur la page « À propos ».</message>
 	<message key="manager.setup.sponsors">Commanditaires de la revue</message>
 	<message key="manager.setup.sponsorNoteDescription">Ce texte apparaîtra sous l'entête « Commanditaires » et au-dessus de la liste des noms et urls des commenditaires sous « Commandites » sur la page « À propos ».</message>
