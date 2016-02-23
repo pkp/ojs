@@ -72,7 +72,7 @@ class SolrWebService extends XmlWebService {
 	var $_issueCache;
 
 	/** @var boolean Whether the proxy settings in the config.inc.php should be considered for the web service request. */
-	var $_useProxySettings;
+	var $_useProxySettings = false;
 
 	/**
 	 * Constructor
@@ -85,7 +85,7 @@ class SolrWebService extends XmlWebService {
 	 *  a shared index.
 	 *  @param $useProxy boolean Whether the proxy settings from config.inc.php should be considered.
 	 */
-	function SolrWebService($searchHandler, $username, $password, $instId, $useProxy) {
+	function SolrWebService($searchHandler, $username, $password, $instId, $useProxy = false) {
 		parent::XmlWebService();
 
 		// Configure the web service.
