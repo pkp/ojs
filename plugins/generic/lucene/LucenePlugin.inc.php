@@ -162,8 +162,10 @@ class LucenePlugin extends GenericPlugin {
 			$username = $this->getSetting(0, 'username');
 			$password = $this->getSetting(0, 'password');
 			$instId = $this->getSetting(0, 'instId');
+			$useProxySettings = $this->getSetting(0, 'useProxySettings');
+			if (!$useProxySettings) $useProxySettings = false;
 
-			$this->_solrWebService = new SolrWebService($searchHandler, $username, $password, $instId);
+			$this->_solrWebService = new SolrWebService($searchHandler, $username, $password, $instId, $useProxySettings);
 		}
 		return $success;
 	}
