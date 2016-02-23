@@ -29,6 +29,7 @@ class ImportIssueTest extends ContentBaseTestCase {
 		$this->click($selector);
 
 		$this->uploadFile(dirname(__FILE__) . '/issue.xml');
+		$this->waitForElementPresent($selector='//input[@name=\'temporaryFileId\' and string-length(@value)>0]');
 		$this->click('//form[@id=\'importXmlForm\']//button[starts-with(@id,\'submitFormButton-\')]');
 
 		// Ensure that the import was listed as completed.
