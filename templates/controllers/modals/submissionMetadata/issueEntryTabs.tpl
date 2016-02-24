@@ -22,7 +22,22 @@
 				{rdelim});
 	{rdelim});
 </script>
+<script src="{$baseUrl}/js/controllers/tab/issueEntry/SubmissionRevisionsHandler.js"></script>
 {if not $hideHelp}<p class="pkp_help">{translate key="issue.manage.entryDescription"}</p>{/if}
+<form id='submissionSettingsRevisionForm' class='pkp_form'>
+	{if $submissionSettingsRevisions|@count > 1}
+		<div id='editPreviousRevision'>
+			{fbvFormSection  for="submissionSettingsRevision"}
+				{fbvElement type="select" name="submissionSettingsRevision" id="submissionSettingsRevision" from=$submissionSettingsRevisions translate=false selected=$currentSubmissionSettingsRevision}
+			{/fbvFormSection}
+		</div>
+	{/if}
+	
+	<ul class="checkbox_and_radiobutton">
+		{fbvElement type="checkbox" id="saveAsRevision" name="saveAsRevision" label="submission.saveAsRevision"}
+	</ul>
+</form>
+<br /><br />
 <div id="newIssueEntryTabs">
 	<ul>
 		<li>

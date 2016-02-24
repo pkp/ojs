@@ -513,6 +513,7 @@
 		<field name="submission_id" type="I8">
 			<NOTNULL />
 		</field>
+		<field name="submission_revision" type="I8" />
 		<field name="locale" type="C2" size="5">
 			<NOTNULL />
 			<DEFAULT VALUE=""/>
@@ -531,6 +532,7 @@
 		</index>
 		<index name="submission_settings_pkey">
 			<col>submission_id</col>
+			<col>submission_revision</col>
 			<col>locale</col>
 			<col>setting_name</col>
 			<UNIQUE/>

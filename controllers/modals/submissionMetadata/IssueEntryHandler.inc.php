@@ -60,6 +60,10 @@ class IssueEntryHandler extends PublicationEntryHandler {
 
 		$tabContentUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'tab.issueEntry.IssueEntryTabHandler', 'galleyMetadata', null, array('submissionId' => $submission->getId(), 'stageId' => $this->getStageId()));
 		$templateMgr->assign('tabContentUrl', $tabContentUrl);
+		
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$submissionSettingsRevisions = $articleDao->getSubmissionRevisions($submission->getId(), true, true, SORT_DIRECTION_DESC);
+		$templateMgr->assign('submissionSettingsRevisions', $submissionSettingsRevisions);
 
 		return $templateMgr->fetchJson('controllers/modals/submissionMetadata/issueEntryTabs.tpl');
 	}
