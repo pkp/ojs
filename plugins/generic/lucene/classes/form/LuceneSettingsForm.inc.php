@@ -117,7 +117,7 @@ class LuceneSettingsForm extends Form {
 			'facetCategorySubject', 'facetCategoryType',
 			'facetCategoryCoverage', 'facetCategoryJournalTitle',
 			'facetCategoryAuthors', 'facetCategoryPublicationDate',
-			'customRanking'
+			'customRanking', 'useProxySettings'
 		);
 		$otherFormFields = array(
 			'searchEndpoint', 'username', 'instId',
