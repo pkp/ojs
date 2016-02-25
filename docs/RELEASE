@@ -14,9 +14,12 @@ New config.inc.php parameters:
 		the LOCKSS network will be sent. See http://pkp.sfu.ca/pkp-lockss
 		for more details.
 
-	- locks:pln_status_docs - The URL of a page describing the PLN deposit
+	- lockss:pln_status_docs - The URL of a page describing the PLN deposit
 		processing status table, and the terms used in it.
 
+	- debug:log_web_service_info - If On, will log detailed information about
+		web service requests made by the XmlWebService class.  Useful for
+		debugging connection issues with e.g. the Lucene plugin.
 Bug Fixes
 ---------
 	#345: PKPRequest::getBasePath() returns incorrect results with mod_rewrite on subdirectory
