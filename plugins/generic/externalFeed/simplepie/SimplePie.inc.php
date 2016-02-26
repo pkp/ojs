@@ -7677,6 +7677,13 @@ class SimplePie_File
 					curl_setopt($fp, CURLOPT_ENCODING, '');
 				}
 				curl_setopt($fp, CURLOPT_URL, $url);
+				if ($httpProxyHost = Config::getVar('proxy', 'http_host')) {
+					curl_setopt($fp, CURLOPT_PROXY, $httpProxyHost);
+					curl_setopt($fp, CURLOPT_PROXYPORT, Config::getVar('proxy', 'http_port', '80'));
+					if ($username = Config::getVar('proxy', 'username')) {
+						curl_setopt($fp, CURLOPT_PROXYUSERPWD, $username . ':' . Config::getVar('proxy', 'password'));
+					}
+				}
 				curl_setopt($fp, CURLOPT_HEADER, 1);
 				curl_setopt($fp, CURLOPT_RETURNTRANSFER, 1);
 				curl_setopt($fp, CURLOPT_TIMEOUT, $timeout);
