@@ -23,7 +23,7 @@ class IssuesTest extends WebTestCase {
 		$this->open(self::$baseUrl);
 
 		// Management > Issues
-		$this->waitForElementPresent($selector='link=Dashboard');
+		$this->waitForElementPresent($selector='css=li.profile a:contains(\'Submissions\')');
 		$this->clickAndWait($selector);
 		$this->waitForElementPresent($selector='link=Issues');
 		$this->click($selector);

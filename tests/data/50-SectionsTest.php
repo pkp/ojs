@@ -21,7 +21,7 @@ class SectionsTest extends WebTestCase {
 	 */
 	function testConfigureSections() {
 		$this->open(self::$baseUrl);
-		$this->waitForElementPresent($selector='link=Dashboard');
+		$this->waitForElementPresent($selector='css=li.profile a:contains(\'Submissions\')');
 		$this->clickAndWait($selector);
 
 		// Section settings

@@ -7,6 +7,11 @@
  *
  * The issue management page.
  *}
+{strip}
+{assign var="pageTitle" value="editor.navigation.issues"}
+{include file="common/header.tpl"}
+{/strip}
+
 <script type="text/javascript">
 	// Attach the JS file tab handler.
 	$(function() {ldelim}
@@ -27,3 +32,5 @@
 		{load_url_in_div id="backIssuesGridContainer" url=$backIssuesGridUrl}
 	</div>
 </div>
+
+{include file="common/footer.tpl"}
