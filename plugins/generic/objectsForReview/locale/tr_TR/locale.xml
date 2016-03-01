@@ -17,6 +17,7 @@
 	<message key="plugins.generic.objectsForReview.displayName">Nesneler için değerlendirme</message>
 
 	<!--  Editor -->
+	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Objects For Review</message>
 
 	<!-- Object Types Management -->
 
@@ -119,7 +120,6 @@
 
 
 	<!-- Objects For Review Assignments Management by Editor -->
-	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Objects For Review</message>
 	<message key="plugins.generic.objectsForReview.editor.assignments">Atamalar</message>
 	<!--  Actions -->
 	<message key="plugins.generic.objectsForReview.editor.select">Seçim</message>
