@@ -144,6 +144,7 @@
 	<message key="article.fontSize.small.altText">Klein</message>
 	<message key="article.fontSize.medium.altText">Mittel</message>
 	<message key="article.fontSize.large.altText">Groß</message>
+	<message key="article.revisions">Ältere Versionen</message>
 
 	<!-- Verlauf - Allgemein -->
 	<message key="submission.submissionEditing">Redaktionelle Bearbeitung des Beitrags</message>

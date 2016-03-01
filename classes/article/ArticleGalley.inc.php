@@ -218,6 +218,28 @@ class ArticleGalley extends Representation {
 
 		return null;
 	}
+	
+	/**
+	 * Retrieve not the first, but all other revisions assigned to this submission file.
+	 * @param $fileId int
+	 * @param $fileStage int (optional)
+	 * @param $submissionId int (optional)
+	 * @return Array
+	 */
+	function getOtherRevisions($fileId, $fileStage = null, $submissionId = null) {
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$revisions = $submissionFileDao->getAllRevisions($fileId, $fileStage, $submissionId);
+		array_shift($revisions);
+
+		$otherRevisions = array();
+		foreach($revisions as $data) {
+			$revision = $data->getData('revision');
+			$fileName = $data->getData('originalFileName');
+			$otherRevisions[$revision] = $fileName;
+		}
+
+		return $otherRevisions;
+	}
 }
 
 ?>

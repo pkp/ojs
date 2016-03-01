@@ -21,13 +21,17 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 	function toXml(&$record, $format = null) {
 		$article = $record->getData('article');
 		$journal = $record->getData('journal');
+		
+		$submissionDao = Application::getSubmissionDAO();
+		$submissionRevisions = $submissionDao->getSubmissionRevisions($article->getId());
 
 		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign(array(
 			'journal' => $journal,
 			'article' => $article,
 			'issue' => $record->getData('issue'),
-			'section' => $record->getData('section')
+			'section' => $record->getData('section'),
+			'submissionRevisions' => $submissionRevisions,
 		));
 
 		$subjects = array_merge_recursive(

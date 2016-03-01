@@ -69,8 +69,14 @@
 		</varfield>
 	{/foreach}
 	<varfield tag="856" ind1="4" ind2="0">
-		<subfield label="u">{url journal=$journal->getPath() page="article" op="view" path=$article->getBestArticleId()|escape}</subfield>
+		<subfield label="u">{url journal=$journal->getPath() page="article" op="view" path="article"|to_array:$article->getBestArticleId()|escape}</subfield>
 	</varfield>
+	
+	{foreach from=$submissionRevisions item=submissionRevision}
+		<varfield tag="787" ind1="4" ind2=" ">
+			<subfield label="u">{url journal=$journal->getPath() page="article" op="view" path="article"|to_array:$article->getBestArticleId():$submissionRevision|escape}</subfield>
+		</varfield>
+	{/foreach}
 
 	<varfield tag="786" ind1="0" ind2=" ">
 		<subfield label="n">{$journal->getName($journal->getPrimaryLocale())|escape}; {$issue->getIssueIdentification()|escape}</subfield>

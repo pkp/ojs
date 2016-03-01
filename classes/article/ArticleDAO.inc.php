@@ -81,10 +81,11 @@ class ArticleDAO extends SubmissionDAO {
 	/**
 	 * Internal function to return an Article object from a row.
 	 * @param $row array
+	 * @param $submissionRevision int
 	 * @return Article
 	 */
-	function _fromRow($row) {
-		$article = parent::_fromRow($row);
+	function _fromRow($row, $submissionRevision = null) {
+		$article = parent::_fromRow($row, $submissionRevision);
 
 		$article->setSectionId($row['section_id']);
 		$article->setSectionTitle($row['section_title']);

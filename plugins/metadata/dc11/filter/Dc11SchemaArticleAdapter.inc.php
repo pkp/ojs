@@ -194,9 +194,24 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		// Relation
 		// full text URLs
 		foreach ($galleys as $galley) {
-			$relation = Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId($journal), $galley->getBestGalleyId($journal)));
+			$relation = Request::url($journal->getPath(), 'article', 'view', array('galley', $article->getBestArticleId($journal), $galley->getBestGalleyId($journal)));
 			$dc11Description->addStatement('dc:relation', $relation);
 			unset($relation);
+		}
+		
+		// Revisions
+		$submissionDao = Application::getSubmissionDAO();
+		$submissionRevisions = $submissionDao->getSubmissionRevisions($article->getId());
+		
+		if ($submissionRevisions) {
+			foreach($submissionRevisions as $submissionRevision) {
+				$relation = Request::url($journal->getPath(), 'article', 'view', array('article', $article->getBestArticleId($journal), $submissionRevision));
+				$dc11Description->addStatement('dc:relation', $relation);
+				unset($relation);
+			}
+			
+			$driverVersion = 'info:eu-repo/semantics/updatedVersion'; // if there are previous revisions, add type "updated version"
+			$dc11Description->addStatement('dc:type', $driverVersion, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
 		}
 
 		// Public identifiers

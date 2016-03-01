@@ -143,6 +143,7 @@
 	<message key="article.return">Return to Article Details</message>
 	<message key="article.publishedIn">Published in {$issueLink}.</message>
 	<message key="article.publishedInWithSection">Published in the {$sectionTitle} section in {$issueLink}.</message>
+	<message key="article.revisions">Previous versions</message>
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.submissionEditing">Submission Editing</message>

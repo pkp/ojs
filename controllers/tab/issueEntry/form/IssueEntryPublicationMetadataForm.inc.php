@@ -44,7 +44,9 @@ class IssueEntryPublicationMetadataForm extends Form {
 	function IssueEntryPublicationMetadataForm($submissionId, $userId, $stageId = null, $formParams = null) {
 		parent::Form('controllers/tab/issueEntry/form/publicationMetadataFormFields.tpl');
 		$submissionDao = Application::getSubmissionDAO();
-		$this->_submission = $submissionDao->getById($submissionId);
+		
+		$revision = isset($formParams['revision']) ? $formParams['revision'] : null;
+		$this->_submission = $submissionDao->getById((int) $submissionId, null, false, $revision);
 
 		$this->_stageId = $stageId;
 		$this->_formParams = $formParams;
@@ -153,12 +155,17 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$copyrightHolder = $submission->getCopyrightHolder(null);
 		$copyrightYear = $submission->getCopyrightYear();
 		$licenseURL = $submission->getLicenseURL();
+		
+		$submissionDao = Application::getSubmissionDAO();
+		$latestRevisionId = $submissionDao->getLatestRevisionId($submission->getId());
 
 		$this->_data = array(
+			'publicArticleId' => $submission->getPubId('publisher-id'),
 			'copyrightHolder' => $submission->getDefaultCopyrightHolder(null), // Localized
 			'copyrightYear' => $submission->getDefaultCopyrightYear(),
 			'licenseURL' => $submission->getDefaultLicenseURL(),
 			'arePermissionsAttached' => !empty($copyrightHolder) || !empty($copyrightYear) || !empty($licenseURL),
+			'latestRevisionId' => $latestRevisionId,
 		);
 	}
 
@@ -281,7 +288,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 				$submission->setPages($this->getData('pages'));
 			}
 			if (!is_null($this->getData('publicArticleId'))) {
-				$articleDao->changePubId($submission->getId(), 'publisher-id', $this->getData('publicArticleId'));
+				$submission->setStoredPubId('publisher-id', $this->getData('publicArticleId'));
 			}
 
 			if ($issue) {
@@ -342,6 +349,18 @@ class IssueEntryPublicationMetadataForm extends Form {
 				$submission->setCopyrightHolder(null, null);
 				$submission->setLicenseURL(null);
 			}
+			
+			$submissionDao = Application::getSubmissionDAO();
+			if ($request->getUserVar('submissionRevision')) {
+				$revision = $request->getUserVar('submissionRevision');
+			} else {
+				$revision = $submissionDao->getLatestRevisionId($submission->getId());
+			}
+			
+			if ($request->getUserVar('saveAsRevision')) {
+				$revision++;
+			}
+			$submission->setData('submissionRevision', $revision);
 
 			// Resequence the articles.
 			$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $issueId);
