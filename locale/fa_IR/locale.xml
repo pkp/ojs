@@ -74,12 +74,8 @@
 	<message key="article.suppFiles">فایلهای مکمل</message>
 	<message key="article.suppFilesAbbrev">فایلهای مکمل</message>
 	<message key="article.discipline">رشته علمی</message>
-	<message key="article.subjectClassification">طبقه بندی موضوعی</message>
 	<message key="article.subject">موضوع</message>
 	<message key="article.coverage">پوشش</message>
-	<message key="article.coverageGeo">پوشش جغرافیایی</message>
-	<message key="article.coverageChron">پوشش تاریخی یا زمانی</message>
-	<message key="article.coverageSample">مثال برای نوع پوشش</message>
 	<message key="article.type">نوع مقاله</message>
 	<message key="article.language">زبان مقاله</message>
 	<message key="article.sectionEditor">SE</message>
@@ -759,8 +755,6 @@ http://journals.mui.ac.ir/index.php/index/index
  (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).
 	 </li>
 </ol>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[این مجله از یک سیستم طبقه بندی موضوعی موجود بر روی وب استفاده میکند.<br />
-عنوان سیستم طبقه بندی]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[چنانچه مایل باشید محتوای این مجله در یک سیستم گسترده از بانکهای اطلاعاتی پژوهشی اندکس شود ، ابتدا 
 <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">
 اقدامات لازم برای تبدیل شدن به یک فراهم کننده داده

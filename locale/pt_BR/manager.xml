@@ -149,13 +149,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">As instruções para edição de texto estarão disponíveis aos editores de texto, autores e editores de seção, no estágio de Edição da submissão. A seguir está um padrão de instruções em HTML, que pode ser modificado ou substituído pelo Editor-Gerente a qualquer momento (em HTML ou texto simples).</message>
 	<message key="manager.setup.copyrightNotice">Declaração de Direito Autoral</message>
 	<message key="manager.setup.coverage">Cobertura</message>
-	<message key="manager.setup.coverageChronExamples">(Ex.: Renascença Européia; Período Jurássico; Terceiro Trimestre; Modernismo)</message>
-	<message key="manager.setup.coverageChronProvideExamples">Informe exemplos relevantes de termos cronológicos ou históricos</message>
 	<message key="manager.setup.coverageDescription">Referente à cobertura geoespacial, cronológica ou histórica, e/ou características da pesquisa.</message>
-	<message key="manager.setup.coverageGeoExamples">(Ex.: Península Ibérica; Estratosfera; Floresta Boreal; Amazônia)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Informe exemplos de termos geoespaciais ou geográficos relevantes</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(Ex.: por idade; por sexo; por etnia; grau de instrução)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">Informe exemplos de características de pesquisa</message>
 	<message key="manager.setup.currentIssue">Edição atual</message>
 	<message key="manager.setup.customizingTheLook">Passo 5. Visual da revista</message>
 	<message key="manager.setup.customTags">Tags META personalizadas</message>
@@ -369,8 +363,6 @@ Exemplo:
 	<message key="manager.setup.sponsors">Agências de fomento</message>
 	<message key="manager.setup.sponsorsDescription">O nome das agências de fomento (ex.: instituições de ensino, departamentos de instituições de ensino superior, cooperativas, instituições de fomento à pesquisa científica, etc.) aparecerá na página Sobre a revista.</message>
 	<message key="manager.setup.stepsToJournalSite">Cinco passos para ter uma revista na Web</message>
-	<message key="manager.setup.subjectClassification">Classificação de assunto</message>
-	<message key="manager.setup.subjectClassificationExamples">(Ex.: Classificação de assuntos da Matemática; Classificação da Biblioteca do Congresso)</message>
 	<message key="manager.setup.subjectExamples">(Ex.: Fotossíntese; Buracos Negros; Arquitetura da Informação; Sistemas de Informação)</message>
 	<message key="manager.setup.subjectKeywordTopic">Palavras-chave</message>
 	<message key="manager.setup.subjectProvideExamples">Informe exemplos de palavras-chave ou tópicos para auxiliar o autor</message>
@@ -644,7 +636,6 @@ Exemplo:
 	<message key="manager.sections.confirmDelete">Deseja realmente exluir permanentemente esta seção?</message>
 	<message key="manager.sections.alertDelete">Antes de pode excluir esta seção, é necessário mover os artigos publicados nela para outras seções.</message>
 	<message key="manager.setup.journalThumbnail">Miniatura da publicação</message>
-	<message key="manager.setup.subjectClassificationURLValid">Informe um URL remoto (inclua o protocolo, por exemplo http://)</message>
 	<message key="manager.setup.useThumbnail">Miniatura</message>
 	<message key="manager.setup.categories">Categorias</message>
 	<message key="manager.setup.categories.description">Escolha a categoria mais apropria da lista apresentada. Leitores poderão navegar por categoria a partir do conjunto completo oferecido.</message>

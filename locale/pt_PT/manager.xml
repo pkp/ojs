@@ -149,13 +149,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">As Instruções de Edição de Texto estarão disponíveis aos Editores de Texto, Autores e Editores de Secção, no estágio de Edição de Submissão. A seguir apresenta-se um padrão de instruções em HTML, que pode ser modificado ou substituído pelo Editor-Gestor a qualquer momento (em HTML ou texto simples).</message>
 	<message key="manager.setup.copyrightNotice">Declaração de Direitos de Autor</message>
 	<message key="manager.setup.coverage">Cobertura</message>
-	<message key="manager.setup.coverageChronExamples">(Ex.: Renascimento Europeu; Período Jurássico; Terceiro Trimestre; Modernismo)</message>
-	<message key="manager.setup.coverageChronProvideExamples">Forneça exemplos relevantes de termos cronológicos ou históricos</message>
 	<message key="manager.setup.coverageDescription">Referente à cobertura geo-espacial, cronológica ou histórica, e/ou características da pesquisa.</message>
-	<message key="manager.setup.coverageGeoExamples">(Ex.: Península Ibérica; Estratosfera; Floresta Boreal; Amazónia)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Forneça exemplos de termos geo-espaciais ou geográficos relevantes</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(Ex.: por idade; por género; por etnia; grau de instrução)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">Forneça exemplos de características de pesquisa</message>
 	<message key="manager.setup.currentIssue">Edição Actual</message>
 	<message key="manager.setup.customizingTheLook">Passo 5. Visual da Revista</message>
 	<message key="manager.setup.customTags">Marcações Padronizadas</message>
@@ -366,8 +360,6 @@
 	<message key="manager.setup.sponsors">Instituições Patrocinadoras</message>
 	<message key="manager.setup.sponsorsDescription">O nome das instituições patrocinadoras (Ex.: instituições de ensino superior, instituições patrocinadoras à pesquisa científica, etc.) aparecerá na secção Sobre a Revista .</message>
 	<message key="manager.setup.stepsToJournalSite">Cinco passos para ter uma Revista na Web</message>
-	<message key="manager.setup.subjectClassification">Classificação de Assunto</message>
-	<message key="manager.setup.subjectClassificationExamples">(Ex.: Classificação de Assuntos da Matemática; Classificação da Biblioteca do Congresso)</message>
 	<message key="manager.setup.subjectExamples">(Ex.: Fotossíntese; Buracos Negros; Arquitectura da Informação; Sistemas de Informação)</message>
 	<message key="manager.setup.subjectKeywordTopic">Palavras-chave</message>
 	<message key="manager.setup.subjectProvideExamples">Forneça exemplos de palavras-chave ou tópicos para auxiliar o autor</message>

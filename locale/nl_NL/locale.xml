@@ -101,12 +101,8 @@
 	<message key="article.suppFiles">Aanvullende bestanden</message>
 	<message key="article.suppFilesAbbrev">Aanv. best.</message>
 	<message key="article.discipline">Academisch discipline en subdisciplines</message>
-	<message key="article.subjectClassification">Onderwerpsclassificatie</message>
 	<message key="article.subject">Trefwoorden</message>
 	<message key="article.coverage">Dekking</message>
-	<message key="article.coverageGeo">Geo-spatiale dekking</message>
-	<message key="article.coverageChron">Chronologische of historische dekking</message>
-	<message key="article.coverageSample">Steekproefkarakteristiek</message>
 	<message key="article.type">Type, methode of benadering</message>
 	<message key="article.language">Taal</message>
 	<message key="article.sectionEditor">SE</message>
@@ -351,8 +347,6 @@ Auteurs die publiceren bij dit tijdschrift onderschrijven de volgende voorwaarde
 	<li>Auteurs mogen separate, additionele contractuele overeenkomsten aangaan voor het niet-exclusief distribueren van de door het tijdschrift gepubliceerde versie van het werk (bv. plaatsing in een institutionele repository of publicatie in een boek), onder vermelding van de eerste publicatie in dit tijdschrift.</li>
 	<li>Auteurs hebben het recht en worden aangemoedigd om hun werk online beschikbaar te stellen (bv. in institutionele repositories of op hun website) voorafgaand aan en gedurende de inzending, aangezien dat kan leiden tot productieve discussies, en eerdere en meer citaties van het gepubliceerde werk (Zie <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[The tijdschrift gebruikt een onderwerpsclassificatie die beschikbaar is op het Internet.<br />
-Naam van het classificatiesysteem]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Om de inhoud van het tijdschrift geïndexeerd te krijgen in een wereldwijd netwerk van onderzoeksdatabases, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registreert</a> u de URL van uw tijdschrift bij de Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. Dit systeem verzamelt metadata van ieder geïndexeerd item in het tijdschrift, waardoor het mogelijk is om accuraat te zoeken binnen de gegevens van onderzoeksinstellingen die gebruik maken van het <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
 Merk op dat het tijdschrift automatisch geïndexeerd wordt als de sitebeheerder de site geregistreerd heeft bij de PKP Harvester. Het tijdschrift hoeft in dat geval niet apart geregistreerd te worden.

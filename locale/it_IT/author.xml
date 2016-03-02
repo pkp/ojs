@@ -61,7 +61,6 @@
 	<message key="author.submit.deleteAuthor">Cancella autore</message>
 	<message key="author.submit.submissionIndexingDescription">Fornisci i termini per indicizzare la proposta; separa i termini con un punto e virgola (termine1; termine2; termine3).</message>
 	<message key="author.submit.coverageInstructions">Riferimenti geografici, al periodo cronologico/storico e/o alle caratteristiche del campione della ricerca.</message>
-	<message key="author.submit.subjectClassInstructions">Utilizza il link al sistema di classificazione per selezionare i termini e, se necessario, i numeri di classificazione.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Italiano=it; Inglese=en; Francese=fr; Spagnolo=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Altri codici</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Inserisci almeno un autore.</message>
 	<message key="author.submit.form.authorRequiredFields">Inserisci nome, cognome e indirizzo email di ciascun autore.</message>

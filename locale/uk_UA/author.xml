@@ -74,7 +74,6 @@
        <message key="author.submit.submissionSupportingAgencies">Спонсоруючі організації</message>
        <message key="author.submit.submissionSupportingAgenciesDescription">Вкажіть установи, які надали фінансову підтримку для виконання дослідження, яке розглядається у цьому поданні.</message>
        <message key="author.submit.coverageInstructions">Охарактеризуйте власне дослідження в аспектах його географічних, хронологічних (історичних) або інших меж.</message>
-       <message key="author.submit.subjectClassInstructions">Використовуйте гіпертекстову класифікаційну систему для визначення класифікаційних термінів і, якщо можливо, номерів.</message>
        <message key="author.submit.languageInstructions"><![CDATA[Українська=uk; Русский=ru; English=en. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Додаткові коди</a>.]]></message>
        <message key="author.submit.form.authorRequired">Потрібний, принаймні, один автор.</message>
        <message key="author.submit.form.authorRequiredFields">Необхідно ввести ім'я, прізвище та адресу email кожного з авторів.</message>

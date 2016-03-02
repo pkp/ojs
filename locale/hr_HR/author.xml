@@ -59,7 +59,6 @@
 	<message key="author.submit.deleteAuthor">Izbriši autora</message>
 	<message key="author.submit.submissionIndexingDescription">Unesite pojmove koji adekvatno opisuju sadržaj priloga. Odijelite pojmove točka-zarezom (pojam1; pojam2; pojam3).</message>
 	<message key="author.submit.coverageInstructions">Odnosi se na  na geografsku rasprostranjenost lokacije, kronološki ili povijesni opseg , i/ili osobine istraživačkih uzoraka.</message>
-	<message key="author.submit.subjectClassInstructions">Koristite klasifikacijski sustav hiperveza da biste odabrali prikladne klasifikacijske pojmove ili možda prikladne brojeve.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Hrvatski=hr; Engleski=en; Francuski=fr; Španjolski=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Dodatni kôdovi</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Najmanje jedan autor je obavezan.</message>
 	<message key="author.submit.form.authorRequiredFields">Ime, prezime i adresa e-pošte svakog autora je obavezna.</message>

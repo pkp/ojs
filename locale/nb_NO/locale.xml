@@ -95,12 +95,8 @@
 	<message key="article.suppFiles">Tilleggsfil(er)</message>
 	<message key="article.suppFilesAbbrev">Tilleggsfil(er)</message>
 	<message key="article.discipline">Akademisk fag og felt</message>
-	<message key="article.subjectClassification">Emneklassifisering</message>
 	<message key="article.subject">Emneord (Nøkkelord)</message>
 	<message key="article.coverage">Dekning</message>
-	<message key="article.coverageGeo">Dekning i rom</message>
-	<message key="article.coverageChron">Dekning i tid</message>
-	<message key="article.coverageSample">Karakteristika ved materiale/utvalg</message>
 	<message key="article.type">Type, metode eller innfallsvinkel</message>
 	<message key="article.language">Språk</message>
 	<message key="article.sectionEditor">Seksjonsred.</message>
@@ -302,8 +298,6 @@ Merk at OAI-grensesnittet kan slås av for dette nettstedet ved å redigere OJS'
 Oppsetting av LOCKSS' støtte for Open Journal Systems trenger ikke skje før etter at publiseringen er godt i gang. Da gjøres det ved å følge disse to trinnene:]]></message>
 	
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Tidsskriftet vil bruke et emneklassifiseringssystem som er tilgjengelig på nettet.<br />
-Klassifiseringssystemets navn]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[For å få innholdet i dette tidsskriftet indeksert i et verdensomspennende system av forskningsdatabaser, les <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">the steps to becoming a data contributor</a> og registrer ditt tidsskrift hos det offisielle <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open Archives registeret</a>.  For å registrere tidsskriftet trenger du base-URLen til ditt arkiv: <span class="highlight">{$oaiUrl}</span>.  Etterpå kan du registrere tidsskriftet i <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI-registeret</a> og <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 <br /><br />
 Merk at om nettstedsadministratoren allerede har registrert nettstedet i disse tjenestene blir tidsskriftet automatisk indeksert og du trenger ikke å registrere det. 

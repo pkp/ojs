@@ -62,7 +62,6 @@
 	<message key="author.submit.submissionIndexingDescription">Lägg till relevanta sökord för indexering, separera orden med semikolon (ord1; ord2; ord3).</message>
 	<message key="author.submit.agencies">Organisationer eller motsvarande som har bidragit till manuskriptet</message>
 	<message key="author.submit.coverageInstructions">Refererar till geospatial, kronologisk eller historisk täckning, och/eller karakteristika av forskningsurvalet.</message>
-	<message key="author.submit.subjectClassInstructions">Använd klassificeringslänken för att ange ämnen.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Engelska=en; Franska=fr; Spanska=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Fler koder</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Man måste ange minst en författare.</message>
 	<message key="author.submit.form.authorRequiredFields">Man måste ange för-, efternamn och E-postadress till respektive författare.</message>

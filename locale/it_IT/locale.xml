@@ -99,12 +99,8 @@
 	<message key="article.suppFiles">File supplementari</message>
 	<message key="article.suppFilesAbbrev">Files supp.</message>
 	<message key="article.discipline">Settore scientifico-disciplinare (MIUR)</message>
-	<message key="article.subjectClassification">Classificazione</message>
 	<message key="article.subject">Keyword</message>
 	<message key="article.coverage">Ambito</message>
-	<message key="article.coverageGeo">Ambito geografico</message>
-	<message key="article.coverageChron">Ambito temporale/storico</message>
-	<message key="article.coverageSample">Caratteristiche del campione di ricerca</message>
 	<message key="article.type">Tipo, metodo o approccio</message>
 	<message key="article.language">Lingua</message>
 	<message key="article.sectionEditor">SE</message>
@@ -984,8 +980,6 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<message key="subscriptions.institutionalDescription">L'abbonamento istituzionale non richiede credenziali. Viene utilizzato il dominio o gli indirizzi IP dell'utente per accedere ai contenuti riservati.</message>
 	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>N.B.</strong> Gli abbonamenti istituzionali acquistati online richiedono l'approvazione del dominio o degli indirizzi IP per essere attivate.]]></message>
 	<message key="subscriptionManager.subscriptionTypes">Tipi di abbonamento</message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[La rivista utilizzerà uno schema di classificazione disponibile su Web.<br />
-Titolo dello schema di classificazione]]></message>
 	<message key="user.subscriptions.mySubscriptions">I miei abbonamenti</message>
 	<message key="user.subscriptions.individualSubscriptions">Abbonamenti individuali</message>
 	<message key="user.subscriptions.institutionalSubscriptions">Abbonamenti istituzionali</message>

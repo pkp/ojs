@@ -149,13 +149,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Instructies voor de tekstredactie worden in de inzendings-redactie fase beschikbaar gesteld aan de tekstredacteurs, auteurs en sectieredacteurs. Zie hieronder voor een set voorbeeldinstructies in HTML. Deze kunnen op ieder gewenst moment door de tijdschriftbeheerder gewijzigd of vervangen worden (in HTML of gewone tekst).</message>
 	<message key="manager.setup.copyrightNotice">Auteursrecht verklaring</message>
 	<message key="manager.setup.coverage">Bereik</message>
-	<message key="manager.setup.coverageChronExamples">(Bv. Europese renaissance; het Juras; Derde trimester; enz.)</message>
-	<message key="manager.setup.coverageChronProvideExamples">Geef voorbeelden van relevante chronologische of historische termen voor dit veld</message>
 	<message key="manager.setup.coverageDescription">Verwijst naar geo-spatiale locatie, chronologische of historische spreiding en/of steekproef-karakteristiek van het onderzoek.</message>
-	<message key="manager.setup.coverageGeoExamples">(Bv. Iberisch schiereiland; Stratosfeer; Naaldwoud enz.)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Geef voorbeelden van relevantie geo-spatiale of geografische termen voor dit veld</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(Bv. Leeftijd; Geslacht; Etniciteit; enz.)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">Geef voorbeelden van de onderzoeks-steekproef voor dit veld</message>
 	<message key="manager.setup.currentIssue">Huidig nummer</message>
 	<message key="manager.setup.customizingTheLook">Stap 5. Aanpassen van het uiterlijk</message>
 	<message key="manager.setup.customTags">Eigen tags</message>
@@ -364,8 +358,6 @@
 	<message key="manager.setup.sponsors">Sponsors</message>
 	<message key="manager.setup.sponsorsDescription">De naam van de organisaties (bv. beroepsverenigingen, faculteiten, samenwerkingsverbanden, enz.) die het tijdschrift sponsoren worden getoond bij Over dit tijdschrift en kunnen vergezeld gaan van een notitie.</message>
 	<message key="manager.setup.stepsToJournalSite">Een tijdschrift website in vijf stappen</message>
-	<message key="manager.setup.subjectClassification">Onderwerpsclassificatie</message>
-	<message key="manager.setup.subjectClassificationExamples">(bv. Mathematics Subject Classification; Library of Congress Classification)</message>
 	<message key="manager.setup.subjectExamples">(Bv. Fotosynthese; Zwarte gaten; Vier-kleuren kaart vraagstuk; Bayesiaanse Theorie)</message>
 	<message key="manager.setup.subjectKeywordTopic">Trefwoorden</message>
 	<message key="manager.setup.subjectProvideExamples">Geef voorbeelden van trefwoorden of onderwerpen om auteurs te helpen</message>
@@ -634,7 +626,6 @@
 	<message key="manager.setup.categories">Categorieën</message>
 	<message key="manager.setup.journalThumbnail">Miniatuur voor het tijdschrift</message>
 	<message key="manager.setup.useThumbnail">Miniatuur</message>
-	<message key="manager.setup.subjectClassificationURLValid">Geef een geldige remote URL (inclusief http://)</message>
 	<message key="manager.payment.giftFeesDescription">Een 'schenk abonnement' link zal getoond worden op de Abonnementen pagina in 'Over dit tijdschrift'  en bij de abonnementen-blok in de sidebarS</message>
 	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Dit activeert betalingen voor het schenken van abonnementen, waarmee lezers abonnementen kunne kopen om aan andere lezers te schenken.</message>
 	<message key="manager.plugins.wrongCategory">De geladen plugin is niet van dezelfde categorie als de op te waarderen plugin.</message>

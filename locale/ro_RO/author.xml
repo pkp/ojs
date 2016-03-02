@@ -68,7 +68,6 @@
 	<message key="author.submit.deleteAuthor">Şterge autor</message>
 	<message key="author.submit.submissionIndexingDescription">Furnizează termenii pentru indexarea propunerii; separă termenii cu punct şi virgulă (termen1; termen2; termen3).</message>
 	<message key="author.submit.coverageInstructions">Se referă la localizarea geo-spaţială, acoperirea cronologică şi istorică şi/sau caracteristicile mostrei de cercetare.</message>
-	<message key="author.submit.subjectClassInstructions">Utilizează sistemul de clasificare cu hiperlinkuri pentru a selecta termenii de clasificare iar dacă este necesar numerele asociate.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Engleză=en; Franceză=fr; Spaniolă=es; Română=ro. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Coduri suplimentare</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Este nevoie de cel puţin un autor.</message>
 	<message key="author.submit.form.authorRequiredFields">Sunt necesare numele, prenumele şi adresa de email pentru fiecare autor.</message>

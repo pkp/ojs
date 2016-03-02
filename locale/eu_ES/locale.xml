@@ -118,12 +118,8 @@
 	<message key="article.suppFiles">Fitxategi osagarria(k)</message>
 	<message key="article.suppFilesAbbrev">Fitxat. osag.</message>
 	<message key="article.discipline">Diziplina eta azpidiziplina akademikoak</message>
-	<message key="article.subjectClassification">Gaikako sailkapena</message>
 	<message key="article.subject">Gako-hitzak</message>
 	<message key="article.coverage">Estaldura</message>
-	<message key="article.coverageGeo">Estaldura geo-espaziala</message>
-	<message key="article.coverageChron">Estaldura kronologiko edo historikoa</message>
-	<message key="article.coverageSample"> Ikerketa-adibideen ezaugarriak</message>
 	<message key="article.type">Mota, metodoa edo hurbilketa</message>
 	<message key="article.language">Hizkuntza</message>
 	<message key="article.sectionEditor">AE</message>
@@ -390,8 +386,6 @@ Aldizkari honetan argitaratzen duten egileak ados daude baldintza hauekin:
 	 <li>Egileek beste kontratu-hitzarmen osagarri batzuk ere egin ditzakete aldizkarian argitaratutako bertsioaren banaketa ez-esklusiboa egiteko (adib., gordailu instituzional batean jartzeko, edo liburu batean argitaratzeko), betiere aldizkari honetan egindako lanaren hasierako argitalpena aitortuz.</li>
 	 <li>Egileek beren lana Interneten jartzeko baimena dute (adib., gordailu instituzionaletan edo beren webgunean), eta horretara animatzen dira gainera, bidalketa egin aurretik eta bidalketa-prozesuan zehar, elkartruke produktiboak sorraraz ditzakeelako eta lanaren aipamenak lehenago hasiko direlako eta ugariagoak izango direlako (Ikusi <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">Sarrera librearen eragina</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Interneten erabilgarri dagoen sistema bat erabiliko du aldizkariak gaika sailkatzeko.<br />
-Sailkapen-sistemaren titulua]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Aldizkari honen edukia datu-baseetan bilaketak egiteko sistema banatu batean indexatuta edukitzeko, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">erregistratu</a> zuen gunearen URLa Public Knowledge Project-en <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a> metadatu-biltzailean. Tresna horrek aldizkari honetako elementu indexatu guztien metadatuak bilduko ditu, bilaketa zehatzak eta kolektiboak egin ahal izateko <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a> protokoloari atxikitako bilaketa-guneen bitartez.
 <br /><br />
 Kontuan izan, zuen gune-administratzaileak dagoeneko gunea erregistratu badu PKP Harverster biltzailean, zuen aldizkaria automatikoki indexatuko dela eta ez daukazula aldizkaria erregistratu beharrik.

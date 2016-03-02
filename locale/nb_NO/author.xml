@@ -55,7 +55,6 @@
 	<message key="author.submit.deleteAuthor">Slett forfatter</message>
 	<message key="author.submit.submissionIndexingDescription">Velg de begrepene som best beskriver manuskriptets innhold, i samsvar med kategoriene som brukes av dette tidsskriftet, og eksemplene som er gitt av redaktøren. Skill termene med semikolon (term1; term2; term3). Bruk så langt det er mulig kategorier fra offentlige standarder, som for eksempel Universitets- og høgskolerådets "Oversikt over fagråd og faginndeling." (Eksempel: per 1/1 2007 inndeles hovedkategorien Utdanningsvitenskap  i underkategoriene: Allmennpedagogikk, Lærerutdanning, Spesialpedagogikk, Fagdidaktikk, Yrkespedagogikk og yrkesdidaktikk, Førskolelærerpedagogikk, og Andre pedagogiske fag.)</message>
 	<message key="author.submit.coverageInstructions">Viser til dekning i både tid og rom; geografisk, topologisk, kronologisk eller historisk dekning, og/eller karakteristika ved materialet/utvalget.</message>
-	<message key="author.submit.subjectClassInstructions">Bruk det lenkete klassifikasjonssystemet for å finne klassifikasjonstermer og koder.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Norsk=no; English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Flere koder</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Minst en forfatter er påkrevet.</message>
 	<message key="author.submit.form.authorRequiredFields">Fornavn, etternavn, og e-postadresse for hver forfatter er påkrevet.</message>

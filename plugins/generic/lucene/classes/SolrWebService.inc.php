@@ -1417,16 +1417,13 @@ class SolrWebService extends XmlWebService {
 		}
 
 		// Add subjects and subject classes.
-		$subjectClasses = $article->getSubjectClass(null);
 		$subjects = $article->getSubject(null);
-		if (!empty($subjectClasses) || !empty($subjects)) {
+		if (!empty($subjects)) {
 			$subjectList =& XMLCustomWriter::createElement($articleDoc, 'subjectList');
-			if (!is_array($subjectClasses)) $subjectClasses = array();
 			if (!is_array($subjects)) $subjects = array();
-			$locales = array_unique(array_merge(array_keys($subjectClasses), array_keys($subjects)));
+			$locales = array_keys($subjects);
 			foreach($locales as $locale) {
 				$subject = '';
-				if (isset($subjectClasses[$locale])) $subject .= $subjectClasses[$locale];
 				if (isset($subjects[$locale])) {
 					if (!empty($subject)) $subject .= ' ';
 					$subject .= $subjects[$locale];
@@ -1449,28 +1446,13 @@ class SolrWebService extends XmlWebService {
 		}
 
 		// Add coverage.
-		$coverageGeo = $article->getCoverageGeo(null);
-		$coverageChron = $article->getCoverageChron(null);
-		$coverageSample = $article->getCoverageSample(null);
-		if (!empty($coverageGeo) || !empty($coverageChron) || !empty($coverageSample)) {
+		$coverage = (array) $article->getCoverage(null);
+		if (!empty($coverage)) {
 			$coverageList =& XMLCustomWriter::createElement($articleDoc, 'coverageList');
-			if (!is_array($coverageGeo)) $coverageGeo = array();
-			if (!is_array($coverageChron)) $coverageChron = array();
-			if (!is_array($coverageSample)) $coverageSample = array();
-			$locales = array_unique(array_merge(array_keys($coverageGeo), array_keys($coverageChron), array_keys($coverageSample)));
-			foreach($locales as $locale) {
-				$coverage = '';
-				if (isset($coverageGeo[$locale])) $coverage .= $coverageGeo[$locale];
-				if (isset($coverageChron[$locale])) {
-					if (!empty($coverage)) $coverage .= '; ';
-					$coverage .= $coverageChron[$locale];
-				}
-				if (isset($coverageSample[$locale])) {
-					if (!empty($coverage)) $coverage .= '; ';
-					$coverage .= $coverageSample[$locale];
-				}
-				$coverageNode =& XMLCustomWriter::createChildWithText($articleDoc, $coverageList, 'coverage', $coverage);
+			foreach($coverage as $locale => $coverageLocalized) {
+				$coverageNode =& XMLCustomWriter::createChildWithText($articleDoc, $coverageList, 'coverage', $coverageLocalized);
 				XMLCustomWriter::setAttribute($coverageNode, 'locale', $locale);
+				unset($coverageNode);
 			}
 			XMLCustomWriter::appendChild($articleNode, $coverageList);
 		}

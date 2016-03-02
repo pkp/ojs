@@ -191,13 +191,7 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	
 	
 	<message key="manager.setup.coverage">Ambito</message>
-	<message key="manager.setup.coverageChronExamples">(Es. Rinascimento europeo; Periodo giurassico; Terzo trimestre; ecc.)</message>
-	<message key="manager.setup.coverageChronProvideExamples">Fornisci esempi di termini cronologici o storici rilevanti per questo settore</message>
 	<message key="manager.setup.coverageDescription">Si riferisce alla locazione geografica, all'ambito cronologico o storico, e/o alle caratteristiche del campione di ricerca.</message>
-	<message key="manager.setup.coverageGeoExamples">(Es. Penisola iberica; Stratosfera; Foresta boreale; ecc.)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Fornisci esempi di termini geografici e geospaziali rilevanti per questo settore</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(Es. Età; Sesso; Etnia; ecc.)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">Fornisci esempi di campioni di ricerca caratteristici per questo settore</message>
 	<message key="manager.setup.currentIssue">Fascicolo corrente</message>
 	<message key="manager.setup.customizingTheLook">Fase 5. Personalizzazione della grafica della rivista</message>
 	<message key="manager.setup.customTags">Marcatori personalizzati</message>
@@ -409,8 +403,6 @@ Al momento di concludere una revisione, ai revisori vengono presentate due box, 
 	<message key="manager.setup.sponsors">Sponsor</message>
 	<message key="manager.setup.sponsorsDescription">Il nome delle organizzazioni (es. associazioni scientifiche, dipartimenti universitari, cooperative ecc.) di supporto alla rivista comparirà nella pagina delle informazioni sulla rivista, con un'eventuale nota informativa.</message>
 	<message key="manager.setup.stepsToJournalSite">Cinque passaggi per creare il sito web della rivista</message>
-	<message key="manager.setup.subjectClassification">Classificazione</message>
-	<message key="manager.setup.subjectClassificationExamples">(Es. Classificazione dei soggetti matematici; Classificazione della Library of Congress)</message>
 	<message key="manager.setup.subjectExamples">(Es., Fotosintesi; Buchi neri; Teorie bayesiane; Semiotica)</message>
 	<message key="manager.setup.subjectKeywordTopic">Parole chiave</message>
 	<message key="manager.setup.subjectProvideExamples">Fornisci degli esempi di parole chiave o argomenti come guida per gli autori</message>
@@ -716,7 +708,6 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.payment.options.purchaseIssueFee">Acquista il fascicolo</message>
 	<message key="manager.plugins.settings">Impostazioni</message>
 	<message key="manager.sections.alertDelete">Prima di cancellare questa sezione, devi spostare in un'altra tutti gli articoli pubblicati che contiene.</message>
-	<message key="manager.setup.subjectClassificationURLValid">Inserisci una URL valida (includi http://).</message>
 	<message key="manager.payment.giftFees">Tariffe per i regali</message>
 	<message key="manager.payment.giftFeesDescription">Un link ad abbonamenti-dono apparirà nella pagina degli abbonamenti e come componente del blocco abbonamenti nella barra laterale</message>
 	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Attivare i pagamenti per abbonamenti-dono, permettendo ai lettori della rivista di acquistare abbonamenti-dono per altri lettori.</message>

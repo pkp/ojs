@@ -123,12 +123,8 @@
 	<message key="article.suppFiles">Fitxer(s) addicional(s)</message>
 	<message key="article.suppFilesAbbrev">Fitxers add.</message>
 	<message key="article.discipline">Disciplines i subdisciplines acadèmiques</message>
-	<message key="article.subjectClassification">Classificació per matèries</message>
 	<message key="article.subject">Paraules clau</message>
 	<message key="article.coverage">Cobertura</message>
-	<message key="article.coverageGeo">Cobertura geoespaial</message>
-	<message key="article.coverageChron">Cobertura cronològica o històrica</message>
-	<message key="article.coverageSample">Característiques de la mostra de recerca</message>
 	<message key="article.type">Tipus, mètode o enfocament</message>
 	<message key="article.language">Llengua</message>
 	<message key="article.sectionEditor">ES</message>
@@ -401,8 +397,6 @@ Els autors que publiquen en aquesta revista estan d’acord amb els termes segü
 	 <li>Els autors són lliures de fer acords contractuals addicionals independents per a la distribució no exclusiva de la versió de l’obra publicada a la revista (com ara la publicació en un repositori institucional o en un llibre), sempre que se’n reconegui la publicació inicial en aquesta revista.</li>
 	 li>S’encoratja els autors a publicar la seva obra en línia (en repositoris institucionals o a la seva pàgina web, per exemple) abans i durant el procés de tramesa, amb l’objectiu d’aconseguir intercanvis productius i fer que l’obra obtingui més citacions (vegeu <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>, en anglès).</li>
 </ol>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[La revista utilitzarà un sistema de classificació de matèries disponible al web.<br />
-Títol del sistema de classificació]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Per a indexar els continguts d’aquesta revista mitjançant un sistema de bases de dades de recerca distribuït globalment, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registreu</a> l’URL de la revista en el <a href="http://pkp.sfu.ca/harvester/" target="_blank">recopilador</a> de metadades del Public Knowledge Project. Aquesta eina recopila les metadades de tots els elements indexats a la revista, amb la qual cosa permet realitzar cerques precises i col·lectives en els llocs de recerca adherits a l’<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting (protocol de l’Open Archives Initiative per a la recopilació de dades)</a>.
 <br /><br />
 Noteu que si l’administrador del lloc web ja ha registrat aquest lloc amb el recopilador del PKP, la revista s’indexarà automàticament i no us caldrà registrar-la.

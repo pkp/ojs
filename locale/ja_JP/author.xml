@@ -59,7 +59,6 @@
 	<message key="author.submit.deleteAuthor">著者の削除</message>
 	<message key="author.submit.submissionIndexingDescription">投稿物の索引語を入力してください。各索引語は（索引語1;索引語2;索引語3）のようにセミコロンで区切ってください。</message>
 	<message key="author.submit.coverageInstructions">地理空間的・年代的・歴史的範囲または研究材料の特性を示してください。</message>
-	<message key="author.submit.subjectClassInstructions">分類語または（可能であれば）分類標数の選択にはハイパーリンク分類システムを使用してください。</message>
 	<message key="author.submit.form.authorRequired">少なくとも1人の著者が必須です。</message>
 	<message key="author.submit.form.authorRequiredFields">各著者の姓名、メールアドレスは必須です。</message>
 	<message key="author.submit.form.titleRequired">論文のタイトルを入力してください。</message>

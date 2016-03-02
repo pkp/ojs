@@ -585,17 +585,9 @@ class SolrWebServiceTest extends PKPTestCase {
 		$article->setDiscipline('Sozialwissenschaften', 'de_DE');
 		$article->setDiscipline('Social Sciences', 'en_US');
 		$article->setSubject('Thema', 'de_DE');
-		$article->setSubjectClass('Ein Themengebiet', 'de_DE');
 		$article->setSubject('subject', 'en_US');
-		$article->setSubjectClass('Uma classe de temas', 'pt_BR');
 		$article->setType('Typ', 'de_DE');
 		$article->setType('type', 'en_US');
-		$article->setCoverageGeo('Kaltes Kap', 'de_DE');
-		$article->setCoverageGeo('Cabo Frio', 'pt_BR');
-		$article->setCoverageChron('Sommer 2012', 'de_DE');
-		$article->setCoverageChron('Summer 2012', 'en_US');
-		$article->setCoverageSample('Alles', 'de_DE');
-		$article->setCoverageSample('everything', 'en_US');
 		$article->setDatePublished('2012-03-15 16:45:00');
 		$article->setLocale('de_DE');
 		return $article;

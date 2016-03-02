@@ -98,12 +98,8 @@
 	<message key="article.suppFiles">Fichero(s) adicional(es)</message>
 	<message key="article.suppFilesAbbrev">Ficheros ad.</message>
 	<message key="article.discipline">Disciplina académica y sub-disciplinas</message>
-	<message key="article.subjectClassification">Clasificación por materias</message>
 	<message key="article.subject">Palabras clave</message>
 	<message key="article.coverage">Cobertura</message>
-	<message key="article.coverageGeo">Cobertura geo-espacial</message>
-	<message key="article.coverageChron">Cobertura cronológica o histórica</message>
-	<message key="article.coverageSample">Características de los ejemplos de investigación</message>
 	<message key="article.type">Tipo, método o enfoque</message>
 	<message key="article.language">Idioma</message>
 	<message key="article.sectionEditor">ES</message>
@@ -967,8 +963,6 @@ La validación puede fallar en URLs de búsque que necesitan el envío de formul
 	<message key="payment.fastTrack.payFastTrack">Pagar Revisión Rápida</message>
 	<message key="payment.fastTrack.inFastTrack">En Revisión Rápida</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Esta página muestra actualizaciones importantes asociados a esta revista, como nuevos números o anuncios. Puedes suscribirte a estas notificaciones a través de nuestro RSS (haciendo clic en la imagen de la derecha), o  <a href="{$emailUrl}">a través de correo electrónico.</a>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[La revista utilizará un sistema de clasificación de tema disponible en la web. <br />
-Título del sistema de clasificación]]></message>
 	<message key="submission.layout.noLayoutFile">Ninguno (Antes de mandar la petición, subir versión final del corrector a modo de versión de maquetación)</message>
 	<message key="payment.alreadyPaidMessage">Selecciona esta caja si ya has enviado tu pago a la revista para terminar el proceso de presentación. La presentación no será revisada hasta recibir el pago. Haz clic donde pone PAGAR AHORA para ver las intrucciones de pago.</message>
 	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Declare cuándo o cuándo no tiene conflicto de intereses con respecto a esta investigación (ver <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Políticas&nbsp;CI</a>).]]></message>

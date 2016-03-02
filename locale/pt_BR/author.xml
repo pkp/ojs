@@ -61,7 +61,6 @@
 	<message key="author.submit.deleteAuthor">Excluir autor</message>
 	<message key="author.submit.submissionIndexingDescription">Digite termos que descrevam da melhor maneira o conteúdo da submissão, segundo as categorias utilizadas pela revista e os exemplos oferecidos pelo editor. Separe os termos com ponto-e-vírgula (termo1; termo2; termo3).</message>
 	<message key="author.submit.coverageInstructions">Refere-se à localização ou cobertura geográfica, cronológica ou histórica, e/ou às características de amostragem da pesquisa.</message>
-	<message key="author.submit.subjectClassInstructions">Use o sistema de classificação definido para escolher termos específicos da área do conhecimento e numeração se apropriado.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Português=pt; English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Códigos Adicionais</a>.]]></message>
 	<message key="author.submit.form.authorRequired">A submissão deve ter pelo menos um autor.</message>
 	<message key="author.submit.form.authorRequiredFields">São campos obrigatórios o primeiro nome (prénome), sobrenome e e-mail para cada autor.</message>

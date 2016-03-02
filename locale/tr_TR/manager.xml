@@ -184,13 +184,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Sayfa düzenleme yönergesi, baskı düzenlenme aşamasında sayfa düzenleyiciler, yazarlar ve bölüm editörlerine açıktır. Aşağıda yönergenin ön tanımlı biçimi HTML olarak verilmektedir. Dergi yöneticisi tarafından istenildiğinde değiştirilebilir. (HTML veya düz metin olarak).</message>
 	<message key="manager.setup.copyrightNotice">Telif Hakkı Bildirimi Duyurusu</message>
 	<message key="manager.setup.coverage">Kapsam</message>
-	<message key="manager.setup.coverageChronExamples">(Örneğin, Avrupa Rönesansı; Jeolojik Dönem; Üçüncü Üç Aylık Dönem; vb.)</message>
-	<message key="manager.setup.coverageChronProvideExamples">Bu konu için ilgili kronolojik veya tarihsel terim örnekleri ver.</message>
 	<message key="manager.setup.coverageDescription">Coğrafik yerleşim, kronolojik veya tarihsel süreç, ve/veya araştırma örneklerinin özelliklerine başvur.</message>
-	<message key="manager.setup.coverageGeoExamples">(Örneğin, Iber yarımadası; Stratosfer; Kuzey Ormanı; vb.)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Bu konuda ilgili coğrafik terim örnekleri ver.</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(Örneğin, Yaş; Cinsiyet; Etnik özellik; vb.)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">Bu alana özgü araştırma örnekleri ver.</message>
 	<message key="manager.setup.currentIssue">Son Sayı</message>
 	<message key="manager.setup.customizingTheLook">5. Basamak: Görünümün Özelleştirilmesi</message>
 	<message key="manager.setup.customTags">Özel etiketler</message>
@@ -404,8 +398,6 @@
 	<message key="manager.setup.sponsorNoteDescription">Buraya yazılan metin "Sponsorlar" başlığı altında, sponsor listelerinin üzerinde ve "Hakkında" sayfasındaki "Dergi Sponsorluğu" bağlantıları altında görüntülenir.</message>
 	<message key="manager.setup.sponsorsDescription">Dergiye sponsor olan organizasyonların adları (Örneğin;  akademik kuruluşlar, üniversite bölümleri, v.b.) Dergi Hakkında sayfasında sponsorluğu kabul ettiklerine dair bir notla birlikte görüntülenir.</message>
 	<message key="manager.setup.stepsToJournalSite">Bir Dergi Web Sitesi İçin Beş Adım</message>
-	<message key="manager.setup.subjectClassification">Konu Sınıflaması</message>
-	<message key="manager.setup.subjectClassificationExamples">(Örneğin; Konu Sınıflaması, Kongre Kütüphanesi Sınıflama Sistemi))</message>
 	<message key="manager.setup.subjectExamples">(Örneğin: Fotosentez; Kara Delikler; Dört Renkli Harita Sorunu; Bayes Kuramı)</message>
 	<message key="manager.setup.subjectKeywordTopic">Anahtar Kelimeler</message>
 	<message key="manager.setup.subjectProvideExamples">Yazarlar için anahtar kelime veya konu örnekleri verin.</message>
@@ -640,7 +632,6 @@
 	<message key="manager.plugins.settings">Ayarlar</message>
 	<message key="manager.setup.journalLogo.altText">Dergi Logosu</message>
 	<message key="manager.setup.journalThumbnail">Dergi Görseli (Küçük)</message>
-	<message key="manager.setup.subjectClassificationURLValid">Lütfen geçerli bir uzak URL adresi verin (http:// dahil).</message>
 	<message key="manager.setup.useThumbnail">Küçük Görsel</message>
 	<message key="manager.subscriptionTypes.form.institutionalValid">Lütfen verilen seçenekleri kullanınız.</message>
 	<message key="manager.setup.categories">Kategoriler</message>

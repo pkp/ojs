@@ -145,13 +145,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Upute za uređivanje lekture bit će dostupne lektorima, autorima i urednicima rubrika u fazi uređivanja priloga. Ovdje je priložen uobičajen skup uputa za lektore, koje glavni urednik prema potrebi može modificirati ili zamijeniti u bilo kojem trenutku (u HTML-u ili običnom tekstu).</message>
 	<message key="manager.setup.copyrightNotice">Obavijest o autorskim pravima</message>
 	<message key="manager.setup.coverage">Opseg</message>
-	<message key="manager.setup.coverageChronExamples">(Npr. europska renesansa; jura; treće tromjesečje; itd.)</message>
-	<message key="manager.setup.coverageChronProvideExamples">Navedite primjere relevantnih kronoloških ili povijesnih pojmova za područje ovog časopisa</message>
 	<message key="manager.setup.coverageDescription">Odnosi se na geoprostornu lokaciju, kronološki ili povijesni opseg, odnosno na osobine istraživačkog uzorka.</message>
-	<message key="manager.setup.coverageGeoExamples">(Npr. Iberijski poluotok; stratosfera; Francuska; itd.)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Navedite primjere relevantnih geoprostornih ili geografskih pojmova za područje ovog časopisa</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(Npr. starost; spol; etnička pripadnost; itd.)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">Navedite primjere osobina istraživačkog uzorka relevantne za područje ovog časopisa</message>
 	<message key="manager.setup.currentIssue">Trenutni broj časopisa</message>
 	<message key="manager.setup.customTags">Posebne HTML oznake</message>
 	<message key="manager.setup.customTagsDescription">Posebne HTML oznake zaglavlja bit će ubačene u zaglavlje svake stranice ovog časopisa (npr. META oznake).</message>
@@ -357,8 +351,6 @@
 	<message key="manager.setup.sponsors">Izdavači</message>
 	<message key="manager.setup.sponsorsDescription">Ime korporativnog tijela (npr. znanstvene ustanove, sveučilišnog odjela, itd.) koje pokreće izdavanja publikacije, a ne snosi troškove za njezinu izrade. Naziv izdavača bit će naveden u rubrici "o časopisu" i može biti popraćen dodatnom bilješkom.</message>
 	<message key="manager.setup.stepsToJournalSite">Postavljanje mrežne stranice časopisa u pet koraka</message>
-	<message key="manager.setup.subjectClassification">Predmetna klasifikacija</message>
-	<message key="manager.setup.subjectClassificationExamples">(Npr. Univerzalna decimalna klasifikacija - UDK; Journal of Economic Literature classification system - JEL)</message>
 	<message key="manager.setup.subjectExamples">(Npr. fotosinteza; crne rupe; mirovinska reforma; Bayesova teorija)</message>
 	<message key="manager.setup.subjectKeywordTopic">Ključne riječi</message>
 	<message key="manager.setup.subjectProvideExamples">Navedite relevantne primjere ključnih riječi ili tema za područje ovog časopisa</message>

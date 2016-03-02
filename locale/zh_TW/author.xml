@@ -54,7 +54,6 @@
 	<message key="author.submit.deleteAuthor">刪除作者</message>
 	<message key="author.submit.submissionIndexingDescription">依照本期刊所使用的領域類別以及編輯提供的範例，來選擇能夠最佳地說明此份稿件內容的詞彙。以分號(;)來分隔多個詞彙（如，詞彙1; 詞彙2; 詞彙3）。</message>
 	<message key="author.submit.coverageInstructions">地理空間位置、年代或歷史涵蓋範圍，以及＼或者研究樣本的特色。</message>
-	<message key="author.submit.subjectClassInstructions">使用有超連結的分類系統來選擇分類詞彙以及（如果適合的話）數字。</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; 繁體中文=zh<a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">其他代碼</a>.]]></message>
 	<message key="author.submit.form.authorRequired">至少需要一位作者</message>
 	<message key="author.submit.form.authorRequiredFields">需要每位作者的姓名與電子郵件地址</message>

@@ -178,13 +178,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">「文字编辑指引」会在「投稿编辑」阶段显示给文字编辑、作者和栏目编辑看到。下面是一组预设的HTML格式指南，期刊管理员可以在任何阶段进行修订或者代换（以纯文字或HTML的方式）。</message>
 	<message key="manager.setup.copyrightNotice">版权注意事项</message>
 	<message key="manager.setup.coverage">涵盖范围</message>
-	<message key="manager.setup.coverageChronExamples">(例如，欧洲文艺复兴时期、侏罗纪时代、下学期等等)</message>
-	<message key="manager.setup.coverageChronProvideExamples">在本栏位中提供相关的年代或者历史词汇</message>
 	<message key="manager.setup.coverageDescription">指涉地理空间上的位置、年代或者历史范围，以及＼或者研究样本的特征。</message>
-	<message key="manager.setup.coverageGeoExamples">(例如，依比利半岛、平流层、北方林地等等)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">在本栏位中提供相关的地理空间或者地理词汇</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(例如，基因、族群等等)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">在本栏位中提供研究样本的特征作为范例</message>
 	<message key="manager.setup.currentIssue">当期期刊</message>
 	<message key="manager.setup.customizingTheLook">步骤 5：自订外观。</message>
 	<message key="manager.setup.customTags">自订标签</message>
@@ -398,8 +392,6 @@
 	<message key="manager.setup.sponsorNoteDescription">这段文字描述显示在关于我们页面的期刊主管单位下的列表内。 </message>
 	<message key="manager.setup.sponsorsDescription">赞助发起这份期刊的组织单位名称（例如学会、大学系所、合作社等等）会出现在期刊的「期刊介绍」中，并且可以附加一个致谢的备注。</message>
 	<message key="manager.setup.stepsToJournalSite">创建一个期刊网站的5个步骤</message>
-	<message key="manager.setup.subjectClassification">主题类别</message>
-	<message key="manager.setup.subjectClassificationExamples">（例如，数学主题分类、国会图书馆分类）</message>
 	<message key="manager.setup.subjectExamples">(例如，光和作用、黑洞、四色地图问题、贝斯定理)</message>
 	<message key="manager.setup.subjectKeywordTopic">关键字</message>
 	<message key="manager.setup.subjectProvideExamples">提供关键字或者主旨的范例，以引导作者。</message>
@@ -638,7 +630,6 @@
 	<message key="manager.sections.confirmDelete">您确定要永久删除该栏目吗？</message>
 	<message key="manager.sections.alertDelete">在该栏目能够被删除之前，您必须将栏目中已经出版过的文章移动到另一个栏目中。</message>
 	<message key="manager.setup.journalThumbnail">期刊缩略图</message>
-	<message key="manager.setup.subjectClassificationURLValid">请提供有效的远程URL (含有 http://)。</message>
 	<message key="manager.setup.useThumbnail">缩略图</message>
 	<message key="manager.setup.categories">分类范畴</message>
 	<message key="manager.setup.categories.description">从上面的设置列表中选择最合适的类别。读者将能够从完整的期刊设置中依靠分类进行浏览。</message>

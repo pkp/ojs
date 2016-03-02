@@ -121,12 +121,8 @@
 	<message key="article.suppFiles">Ek Dosya(lar)</message>
 	<message key="article.suppFilesAbbrev">Ek Dosyalar</message>
 	<message key="article.discipline">Akademik Bölüm ve Alt-Bölümler</message>
-	<message key="article.subjectClassification">Konu Sınıflaması</message>
 	<message key="article.subject">Anahtar Kelimeler</message>
 	<message key="article.coverage">Kapsam</message>
-	<message key="article.coverageGeo">Coğrafik Kapsam</message>
-	<message key="article.coverageChron">Kronolojik veya tarihsel kapsam</message>
-	<message key="article.coverageSample">Araştırma örneklem karakteristikleri</message>
 	<message key="article.type">Tür, yöntem veya yaklaşım</message>
 	<message key="article.language">Dil</message>
 	<message key="article.sectionEditor">BE</message>
@@ -382,8 +378,6 @@ Not: Bu site için Açık Arşiv Sistemi arayüzü ADS ana düzenleme sayfasınd
 <br /><br />
 Açık Dergi Sistemleri için LOCKSS desteğini dergi tümüyle yayına geçmeden açmayınız, dergi tümüyle yayına başlayınca aşağıdaki iki adımı izleyiniz:]]></message>
 	
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Dergi webde mevcut konu sınıflama sistemi kullanır.<br />
-Sınıflama Sistemi Başlığı]]></message>
 <message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Dergi içeriğinin uluslararası erişimi olan veri tabanlarında dizinlenmesi ve <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank"> bu veri tabanlarına katkıda bulunmak</a> için bağlantıyı ziyaret ederek derginizi resmi <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Açık Arşiv</a>'e kayıt edebilirsiniz.  Kayıt yaptırmak için temel URL adresiniz gerekir: <span class="highlight">{$oaiUrl}</span>.  Daha sonra derginizi <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> ve <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>'e kayıt edebilirsiniz.
 <br /><br />
 Not: Site yöneticiniz PKP Harvester ile bu siteyi kayıt etti ise, derginiz otomatik olarak dizinlenecek ve dergi için özel bir kayıt gerekmeyecektir.]]></message>

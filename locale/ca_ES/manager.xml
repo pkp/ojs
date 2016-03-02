@@ -149,13 +149,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Les instruccions per a la correcció es faran arribar als correctors/es, autors/es i editors/es de secció durant l’etapa d’edició de trameses. A continuació s’ofereix un exemple d’instruccions en format HTML. L’administrador/a de la revista pot modificar o reemplaçar aquestes instruccions en qualsevol moment (en HTML o en text net).</message>
 	<message key="manager.setup.copyrightNotice">Avís de drets d’autoria</message>
 	<message key="manager.setup.coverage">Cobertura</message>
-	<message key="manager.setup.coverageChronExamples">(P. ex. renaixement europeu, període juràssic, tercer trimestre, etc.)</message>
-	<message key="manager.setup.coverageChronProvideExamples">Indiqueu exemples de termes cronològics o històrics rellevants per a aquest camp.</message>
 	<message key="manager.setup.coverageDescription">Fa referència a la ubicació geospacial, a la cobertura cronològica o històrica o a les característiques de la mostra de recerca.</message>
-	<message key="manager.setup.coverageGeoExamples">(P. ex. península Ibèrica; estratosfera; bosc boreal; etc.)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Indiqueu exemples de termes geoespacials o geogràfics rellevants per a aquest camp.</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(P. ex. edat, gènere, grup ètnic, etc.)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">Indiqueu exemples de característiques de la mostra de recerca per a aquest camp.</message>
 	<message key="manager.setup.currentIssue">Número actual</message>
 	<message key="manager.setup.customizingTheLook">Pas 5. Personalització de l’aparença</message>
 	<message key="manager.setup.customTags">Etiquetes personalitzades</message>
@@ -368,8 +362,6 @@
 	<message key="manager.setup.sponsors">Organitzacions patrocinadores</message>
 	<message key="manager.setup.sponsorsDescription"><![CDATA[Els noms de les organitzacions (associacions acadèmiques, departaments universitaris, cooperatives, etc.) que patrocinen la revista apareixeran a la secció &#171;Quant a la revista&#187; i podran incloure una nota d’agraïment.]]></message>
 	<message key="manager.setup.stepsToJournalSite">Cinc passos per a crear el lloc web d’una revista</message>
-	<message key="manager.setup.subjectClassification">Classificació per matèries</message>
-	<message key="manager.setup.subjectClassificationExamples">(P. ex. classificació per matèries de matemàtiques; classificació de la Biblioteca del Congrés)</message>
 	<message key="manager.setup.subjectExamples">(P. ex. fotosíntesi, forats negres, teorema dels quatre colors, teoria de Bayes)</message>
 	<message key="manager.setup.subjectKeywordTopic">Paraules clau</message>
 	<message key="manager.setup.subjectProvideExamples">Indiqueu exemples de paraules clau o temes que serviran de guia als autors.</message>

@@ -124,12 +124,8 @@
 	<message key="article.suppFiles">Fişier(e) suplimentar</message>
 	<message key="article.suppFilesAbbrev">Fiş. supl.</message>
 	<message key="article.discipline">Disciplină ştiinţifică şi subdisciplină</message>
-	<message key="article.subjectClassification">Clasificare pe domenii</message>
 	<message key="article.subject">Cuvinte cheie</message>
 	<message key="article.coverage">Domeniul pe care îl acoperă</message>
-	<message key="article.coverageGeo">Acoperire geospaţială</message>
-	<message key="article.coverageChron">Acoperire cronologică sau istorică</message>
-	<message key="article.coverageSample">Caracteristicile mostrei de cercetare</message>
 	<message key="article.type">Tip, metodă sau abordare</message>
 	<message key="article.language">Limbă</message>
 	<message key="article.sectionEditor">RS</message>
@@ -479,8 +475,6 @@ Autorii care publică în această revistă să fie de acord cu următoarele con
 
 
 </ol>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Revista va folosi un sistem de clasificare al disciplinelor existent pe web.<br />
-Titlul sistemului de clasificare]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Pentru a avea indexat conţinutul acestei reviste într-un sistem de baze de date pentru cercetare distribuite global, citiți <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">pașii care sunt necesari pentru a deveni un contribuitor de date</a> și înregistrați revista în registrul oficial pentru <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Arhive Deschise</a>. Pentru a vă înregistra este necesar URL-ul de bază al depozitului: <span class="highlight">{$oaiUrl}</span>. Apoi, puteți înregistra revista proprie în <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">registrul OAI al UIUC</a> și în <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 
 <br /><br />

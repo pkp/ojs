@@ -96,12 +96,8 @@
 	<message key="article.suppFiles">Dopunska/e datoteka/e</message>
 	<message key="article.suppFilesAbbrev">Dopunska datoteka</message>
 	<message key="article.discipline">Akademska disciplina i poddiscipline</message>
-	<message key="article.subjectClassification">Predmetna klasifikacija</message>
 	<message key="article.subject">Ključne riječi</message>
 	<message key="article.coverage">Opseg</message>
-	<message key="article.coverageGeo">Zemljopisni opseg</message>
-	<message key="article.coverageChron">Kronološki ili povijesni opseg</message>
-	<message key="article.coverageSample">Karakteristike korištenog uzorka</message>
 	<message key="article.type">Tip, metoda ili pristup</message>
 	<message key="article.language">Jezik</message>
 	<message key="article.sectionEditor">Ur.</message>
@@ -319,8 +315,6 @@ Aktivirani OAI protokol može biti isključen na razini čitave stranice promjen
 Postavljanje LOCKSS podrške za Open Journal Systems nije potrebno dok izdavanje elektroničke verzije časopisa nije doista pokrenuto, odnosno prvi broj objavljen ili pri izdavanju. Da bi se to učinilo, potrebno je slijediti ova dva koraka:]]></message>
 	
 	<!--  Setup Step 3  --><message key="manager.setup.guidingSubmissions">3. korak: Prijave priloga</message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Časopis će koristiti predmetnu klasifikaciju sustava dostupnu na mreži.<br />
-Naslov klasifikacijskog sustava]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Kako biste učinili sadržaj ovog časopisa indeksiranim unutar globalno distribuiranog sustava istraživačkih baza podataka, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrirajte</a> URL vašeg časopisa pri <a href="http://pkp.sfu.ca/harvester/" target="_blank">sakupljaču</a> metapodataka Public Knowledge Project-a. Ovaj alat sakuplja metapodatke iz svakog indeksiranog priloga u ovom časopisu, omogućujući precizno i kolektivno pretraživanje istraživačkih stranica koje sudjeluju u <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
 Ako je vaš administrator već registrirao ovu stranicu kod PKP sakupljača, vaš časopis će biti indeksiran automatski.

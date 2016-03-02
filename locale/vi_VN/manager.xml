@@ -149,13 +149,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Hướng dẫn Biên tập bản thảo sẽ được cung cấp cho BTV bản thảo, Tác giả, BTV chuyên mục ở bước Biên tập bài nộp. Dưới đây là bộ tài liệu hướng dẫn chuẩn ở định dạng HTML, Tổng biên tập có thể sửa hoặc thay thế bất kỳ thời điểm nào (ở dạng HTML hoặc văn bản thô).</message>
 	<message key="manager.setup.copyrightNotice">Thông báo về Bản quyền</message>
 	<message key="manager.setup.coverage">Phạm vi</message>
-	<message key="manager.setup.coverageChronExamples">(v.d., Thời kỳ Phục sinh của châu Âu; Kỷ Jura; Học kỳ thứ ba; v.v...)</message>
-	<message key="manager.setup.coverageChronProvideExamples">Cung cấp các ví dụ về thuật ngữ lịch sử hoặc thời gian phù hợp với trường này</message>
 	<message key="manager.setup.coverageDescription">Chỉ vị trí địa lý, phạm vi lịch sử hoặc thời gian, và/hoặc các đặc điểm của mẫu nghiên cứu.</message>
-	<message key="manager.setup.coverageGeoExamples">(v.d., Bán đảo Iberia; Stratosphere; Rừng Boreal; v.v...)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Cung cấp các ví dụ về thuật ngữ địa lý hoặc không gian địa lý phù hợp với trường này</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(v.d., Tuổi; Giới tính; Dân tộc; v.v...)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">Cung cấp các ví dụ về đặc điểm của mẫu nghiên cứu với trường này</message>
 	<message key="manager.setup.currentIssue">Số mới ra</message>
 	<message key="manager.setup.customizingTheLook">Bước 5. Sửa sang giao diện</message>
 	<message key="manager.setup.customTags">Các thẻ tự chế</message>
@@ -367,8 +361,6 @@
 	<message key="manager.setup.sponsors">Các đơn  vị tài trợ</message>
 	<message key="manager.setup.sponsorsDescription">Tên của các đơn vị (v.d., các hội học thuật, các khoa đào tạo, hợp tác xã, v.v...)tài trợ cho tạp chí này sẽ xuất hiện ở mục Giới thiệu Tạp chí và có thể kèm theo lời cảm tạ.</message>
 	<message key="manager.setup.stepsToJournalSite">Năm bước để thiết lập một Website tạp chí.</message>
-	<message key="manager.setup.subjectClassification">Phân loại chủ đề</message>
-	<message key="manager.setup.subjectClassificationExamples">(v.d., Khung phân loại chủ đề toán học; Khung phân loại của Thư viện Quốc hội Hoa Kỳ)</message>
 	<message key="manager.setup.subjectExamples">(v.d., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</message>
 	<message key="manager.setup.subjectKeywordTopic">Từ khóa</message>
 	<message key="manager.setup.subjectProvideExamples">Cung cấp các ví dụ về từ khóa hoặc chủ đề như là một chỉ dẫn cho tác giả</message>

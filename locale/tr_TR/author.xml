@@ -71,7 +71,6 @@
 	<message key="author.submit.submissionSupportingAgencies">Katkıda Bulunanlar ve Destekleyen Kuruluşlar</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Bu çalışmayı maddi ya da başka bir şekilde destekleyen kuruluşları (kişi, kurum veya servis) tanımlar. Destekleyenleri noktalı virgül ile ayırarak yazınız (Örneğin: Sönmez ÇELİK; Doğuş Üniversitesi; Doğuş Üniversitesi Kütüphanesi).</message>
 	<message key="author.submit.coverageInstructions">Araştırma materyalinin coğrafik konumları, kronolojik ya da tarihsel kapsamı ve/veya karekteristiği.</message>
-	<message key="author.submit.subjectClassInstructions">Sınıflandırma terimleri ve uygunsa numaralarını seçmek için bağlantı kurulmuş sınıflama sitemini kullanınız.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Türkçe = tr; İngilizce = en. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Diğer Kodlar</a>.]]></message>
 	<message key="author.submit.form.authorRequired">En az bir yazar gerekli.</message>
 	<message key="author.submit.form.authorRequiredFields">Her yazarın adı, soyadı ve e-posta adresi gereklidir.</message>

@@ -71,7 +71,6 @@
 	<message key="author.submit.submissionSupportingAgencies">Ustanove podrške</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Unesite ustanove koje su pružile podršku radovima koji su objavljeni u časopisu.</message>
 	<message key="author.submit.coverageInstructions">Odnosi se na geoprostorne lokacije, hronološki ili istorijski period i/ili karakteristike istraživačkog postupka.</message>
-	<message key="author.submit.subjectClassInstructions">Koristite hiperlinkovani klasifikacioni sistem da odaberete klasifikacione termine i, ako postoje, odgovarajuće brojeve.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Srpski=sr; Engleski=en; Francuski=fr; Španski=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Dodatni kodovi</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Morate navesti najmanje jednog autora.</message>
 	<message key="author.submit.form.authorRequiredFields">Ime, prezime i imejl adresa su neophodni za svakog autora.</message>

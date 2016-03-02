@@ -99,13 +99,8 @@
 
 	<message key="article.suppFilesAbbrev">Доп. файлы</message>
 	<message key="article.discipline">Академические дисциплины</message>
-	<message key="article.subjectClassification">Классификация</message>
 	<message key="article.subject">Ключ. слова</message>
 	<message key="article.coverage">Предм. область</message>
-	<message key="article.coverageGeo">География</message>
-
-	<message key="article.coverageChron">Хронология</message>
-	<message key="article.coverageSample">Примеры исслед. подхода</message>
 	<message key="article.type">Методика</message>
 	<message key="article.language">Язык</message>
 	<message key="article.sectionEditor">РР</message>

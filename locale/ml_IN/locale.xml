@@ -110,12 +110,8 @@
 	<message key="article.suppFiles">അനുബന്ധമായ ഫയല്‍ (സ് )</message>
 	<message key="article.suppFilesAbbrev">അനുബന്ധമായ ഫയലുകള്‍</message>
 	<message key="article.discipline">വിദ്യാഭ്യാസ വിജ്ഞാനശാഖയും ഉപശാഖകളും</message>
-	<message key="article.subjectClassification">വിഷയം തരം തിരിക്കല്‍</message>
 	<message key="article.subject">വാക്കുകളുടെ സാരാംശം</message>
 	<message key="article.coverage">ഉള്‍കൊള്ളുന്ന വിസ്തീര്‍ണ്ണം</message>
-	<message key="article.coverageGeo">ഭൂസ്ഥല വിസ്തീര്‍ണ്ണം സംബന്ധമായ</message>
-	<message key="article.coverageChron">ചരിത്രപരമായി ഉള്‍കൊള്ളുന്ന വിസ്തീര്‍ണ്ണം</message>
-	<message key="article.coverageSample">നൈസ്സര്‍ഗ്ഗിഗമായ ഗവേഷണ മാതൃക</message>
 	<message key="article.type">ഇനം,  ജോലി ചെയ്യുന്ന രീതി</message>
 	<message key="article.language">ഭാഷ</message>
 	<message key="article.sectionEditor">എസ്സ്  ഇ</message>

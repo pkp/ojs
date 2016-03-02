@@ -96,12 +96,8 @@
 	<message key="article.suppFiles">Fichier(s) supplémentaire(s)</message>
 	<message key="article.suppFilesAbbrev">Fichiers suppl.</message>
 	<message key="article.discipline">Discipline et sous-disciplines académiques</message>
-	<message key="article.subjectClassification">Classification par sujets</message>
 	<message key="article.subject">Mots-clés</message>
 	<message key="article.coverage">Couverture</message>
-	<message key="article.coverageGeo">Couverture géo-spatiale</message>
-	<message key="article.coverageChron">Couverture chronologique ou historique</message>
-	<message key="article.coverageSample">Caractéristiques de l'échantillon de recherche</message>
 	<message key="article.type">Type, méthode ou approche</message>
 	<message key="article.language">Langue</message>
 	<message key="article.sectionEditor">RR</message>
@@ -919,8 +915,6 @@ le droit de première publication, avec l’ouvrage disponible simultanément [S
 	<message key="subscriptionManager.institutionalSubscriptions">Abonnements institutionnels</message>
 	<message key="subscriptionManager.subscriptionTypes">Types d'abonnement</message>
 	<message key="manager.setup.reviewProcessEmailDescription">Les rédacteurs envoient aux évaluateurs la demande d'évaluation avec la soumission jointe au courriel. Les évaluateurs envoient par courriel leur acceptation (ou refus), ainsi que l'évaluation et la recommandation. Les rédacteurs inscrivent l'acceptation (ou refus) des évaluateurs, ainsi que l'évaluation et la recommandation sur la page d'évaluation de la soumission, afin de consigner le processus d'évaluation.</message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[La revue utilisera un système de classification sujet disponible sur le Web.<br />
-Titre du système de classification]]></message>
 	<message key="manager.setup.citations.enable">Permet aux auteurs de fournir séparément une liste structurée de références (citations) comme partie intégrante de leur soumission.</message>
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Étapes : Soumission en attente &gt; Soumission en évaluation &gt; Soumission en révision &gt; Table des matières.<br /><br />]]></message>
 	<message key="manager.people.confirmDisable">Désactiver cet utilisateur? Ceci empêchera l'utilisateur de se connecter au système. Vous pouvez optionnellement fournir à l'utilisateur une raison expliquant la désactivation de son compte.</message>

@@ -186,13 +186,7 @@
        <message key="manager.setup.copyeditInstructionsDescription">Інструкції з літературного редагування стануть доступними літературним редакторам, авторам та редакторам розділів на етапі редагування подань. Нижче подано стандартний набір інструкцій у форматі HTML. Менеджер журналу в будь-який час може змінювати або замінювати ці інструкції (у текстовому або гіпертекстовому форматі).</message>
        <message key="manager.setup.copyrightNotice">Положення про авторські права</message>
        <message key="manager.setup.coverage">Тематичне покриття</message>
-       <message key="manager.setup.coverageChronExamples">(наприклад, Європейське Відродження; Юрський період; Третій триместр)</message>
-       <message key="manager.setup.coverageChronProvideExamples">Наведіть приклади хронологічних або історичних термінів, які можуть застосовуватись у цьому полі</message>
        <message key="manager.setup.coverageDescription">Геопросторове, хронологічне або історичне покриття, та/або основні характеристики дослідження.</message>
-       <message key="manager.setup.coverageGeoExamples">(наприклад, Піренейський півострів; Стратосфера; Тайга)</message>
-       <message key="manager.setup.coverageGeoProvideExamples">Наведіть приклади геопросторових або географічних термінів, які можуть застосовуватись у цьому полі</message>
-       <message key="manager.setup.coverageResearchSampleExamples">(наприклад, Вік; Стать; Національність)</message>
-       <message key="manager.setup.coverageResearchSampleProvideExamples">Наведіть приклади термінів, що характеризують проаналізовану дослідниками вибірку</message>
        <message key="manager.setup.currentIssue">Поточний випуск</message>
        <message key="manager.setup.customizingTheLook">Крок 5. Налаштування вигляду</message>
        <message key="manager.setup.customTags">Власні теги</message>
@@ -406,8 +400,6 @@
        <message key="manager.setup.sponsorNoteDescription">Цей текст буде відображений у розділі "Фінансування журналу" сторінки "Про журнал" під заголовком "Спонсоруючі організації", вище списку назв та адрес URL.</message>
        <message key="manager.setup.sponsorsDescription">Назви організацій (наприклад, дослідних асоціацій, університетів та їх факультетів, комерційних установ тощо), які спонсорують журнал. Будуть вказані на сторінці "Про журнал", а також, за бажанням, спеціальною приміткою "Подяки".</message>
        <message key="manager.setup.stepsToJournalSite">П'ять кроків для створення веб-сайту журналу</message>
-       <message key="manager.setup.subjectClassification">Класифікаційна схема</message>
-       <message key="manager.setup.subjectClassificationExamples">(наприклад, Математична предметна класифікація; Класифікація Бібліотеки Конгресу)</message>
        <message key="manager.setup.subjectExamples">(наприклад, Фотосинтез; Чорні діри; Проблема чотирьох фарб; Теорема Баєса)</message>
        <message key="manager.setup.subjectKeywordTopic">Ключові слова</message>
        <message key="manager.setup.subjectProvideExamples">Наведіть приклади ключових слів або тематичних рубрик як керівництво для авторів</message>
@@ -633,7 +625,6 @@
 	<message key="manager.payment.options.purchaseIssueFee">Купити випуск</message>
 	<message key="manager.plugins.settings">Налаштування</message>
 	<message key="manager.setup.categories">Категорії</message>
-	<message key="manager.setup.subjectClassificationURLValid">Будь ласка, вкажіть коректну віддалену адресу URL (разом із http://).</message>
 	<message key="manager.payment.giftFees">Платежі за подарунки</message>
 	<message key="manager.payment.giftFeesDescription">Посилання на подарункові передплати з'явиться на сторінці "Передплати" розділу "Про журнал" разом з іншою інформацією стосовно передплат.</message>
 	<message key="manager.payment.options.acceptGiftSubscriptionPayments">У цьому пункті активуються платежі за подарункові передплати. Це дозволяє читачам журналу купувати передплати як подарунки іншим читачам.</message>

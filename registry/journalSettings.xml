@@ -260,4 +260,20 @@
 		<name>themePluginPath</name>
 		<value>default</value>
 	</setting>
+	<setting type="bool" locale="0">
+		<name>typeEnabledSubmission</name>
+		<value>1</value>
+	</setting>
+	<setting type="bool" locale="0">
+		<name>typeEnabledWorkflow</name>
+		<value>1</value>
+	</setting>
+	<setting type="bool" locale="0">
+		<name>keywordsEnabledSubmission</name>
+		<value>1</value>
+	</setting>
+	<setting type="bool" locale="0">
+		<name>keywordsEnabledWorkflow</name>
+		<value>1</value>
+	</setting>
 </journal_settings>

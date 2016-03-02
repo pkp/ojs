@@ -85,12 +85,8 @@
   <message key="article.suppFiles">補足ファイル</message>
   <message key="article.suppFilesAbbrev">補足ファイル</message>
   <message key="article.discipline">学術分野</message>
-  <message key="article.subjectClassification">主題分類</message>
   <message key="article.subject">キーワード</message>
   <message key="article.coverage">範囲</message>
-  <message key="article.coverageGeo">地理空間的範囲</message>
-  <message key="article.coverageChron">時代･歴史的範囲</message>
-  <message key="article.coverageSample">研究資料の特徴</message>
   <message key="article.type">種類、方法またはアプローチ</message>
   <message key="article.language">言語</message>
   <message key="article.sectionEditor">SE</message>
@@ -267,10 +263,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 オープン･ジャーナル･システムにおけるLOCKSSサポートの設定は、出版が完全に軌道に乗るまでは行う必要がありませんが、設定は次の2段階で行います。]]>
   </message>
   <!-- Setup Step 3 -->
-  <message key="manager.setup.subjectClassificationDescription">
-    <![CDATA[雑誌はWeb上で利用可能な主題分類システムを使用します。<br />
-分類システムの名称]]>
-  </message>
   <message key="manager.setup.registerJournalForIndexingDescription">
     <![CDATA[この雑誌のコンテンツを世界中に存在する研究情報データベースで検索できるようにするために、この雑誌のURLをパブリック･ナレッジ･プロジェクトのメタデータ<a href="http://pkp.sfu.ca/harvester/" target="_blank">ハーベスタ</a>に<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">登録</a>してください。ハーベスタはこの雑誌の各アイテムのメタデータを収集し、<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">OAI-PMH</a>に準拠する研究情報サイトで正確で総合的な検索を可能にします。
 <br /><br />

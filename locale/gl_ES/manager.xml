@@ -149,13 +149,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">As instruccións de corrección hanse por ao dispor de correctores/as, autores/as, e editores/as de sección na fase de edición do envío. A continuación móstranse unha serie de instruccións por defecto en HTML que poden ser modificadas ou substituídas polo/la administrador/a da revista en calquera intre (en HTML ou texto plano).</message>
 	<message key="manager.setup.copyrightNotice">Nota de copyright</message>
 	<message key="manager.setup.coverage">Cobertura</message>
-	<message key="manager.setup.coverageChronExamples">(p.e., Rexurdimento; Cuaternario; Primeiro trimestre; etc.)</message>
-	<message key="manager.setup.coverageChronProvideExamples">Fornece exemplos de termos históricos ou cronolóxicos relevantes para este campo</message>
 	<message key="manager.setup.coverageDescription">Refírese á localización xeo-espacial; cobertura histórica ou cronolóxica, e/ou características dos exemplos de investigación.</message>
-	<message key="manager.setup.coverageGeoExamples">(p.e., Lusofonía; Oosfera; floresta atlántica; etc.)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Fornece exemplos de termos xeo-espaciales ou xeográficos relevantes para este campo</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(p.e., idade; xénero; grupo étnico; etc.)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">Fornece exemplos de características de investigación para este campo</message>
 	<message key="manager.setup.currentIssue">Número en curso</message>
 	<message key="manager.setup.customizingTheLook">Paso 5. Personalizar o aspecto</message>
 	<message key="manager.setup.customTags">Etiquetas personalizadas</message>
@@ -366,8 +360,6 @@
 	<message key="manager.setup.sponsors">Patrocinadores/as</message>
 	<message key="manager.setup.sponsorsDescription">O nome das organizacións (p.e., asociaciones académicas, departamentos universitarios, cooperativas, asociacións culturais,concellos, fundacións, etc.) que patrocinan a revista aparecerán en Sobre a Revistae poderán incluir unha nota de agradecimento.</message>
 	<message key="manager.setup.stepsToJournalSite">Cinco pasos para crear unha revista</message>
-	<message key="manager.setup.subjectClassification">Clasificación por materias</message>
-	<message key="manager.setup.subjectClassificationExamples">(P.e., Clasificación por Materias en Filosofía; Clasificación da Library of Congress)</message>
 	<message key="manager.setup.subjectExamples">(P.e., lóxica; ética; xeometría euclidiana)</message>
 	<message key="manager.setup.subjectKeywordTopic">Palabras chave</message>
 	<message key="manager.setup.subjectProvideExamples">Fornece exemplos de palabras chave ou temas como guía</message>

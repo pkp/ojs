@@ -527,29 +527,6 @@ class DOIExportDom {
 	}
 
 	/**
-	 * Identify the article subject class and code.
-	 * @param $article PublishedArticle
-	 * @param $objectLocalePrecedence array
-	 * @return array The subject class and code.
-	 */
-	function getSubjectClass(&$article, $objectLocalePrecedence) {
-		$journal = $this->getJournal();
-		$subjectSchemeTitle = $this->getPrimaryTranslation($journal->getSetting('metaSubjectClassTitle', null), $objectLocalePrecedence);
-		$subjectSchemeUrl = $this->getPrimaryTranslation($journal->getSetting('metaSubjectClassUrl', null), $objectLocalePrecedence);
-		if (empty($subjectSchemeTitle)) {
-			$subjectSchemeName = $subjectSchemeUrl;
-		} else {
-			if (empty($subjectSchemeUrl)) {
-				$subjectSchemeName = $subjectSchemeTitle;
-			} else {
-				$subjectSchemeName = "$subjectSchemeTitle ($subjectSchemeUrl)";
-			}
-		}
-		$subjectCode = $this->getPrimaryTranslation($article->getSubjectClass(null), $objectLocalePrecedence);
-		return array($subjectSchemeName, $subjectCode);
-	}
-
-	/**
 	 * Try to identify the resource type of the
 	 * given article file.
 	 * @param $submissionFile SubmissionFile

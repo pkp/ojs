@@ -149,13 +149,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Instrukce pro redigování budou spřístupněny redaktorům, autorům a editorům sekcí ve fázi redigování příspěvku. Níže je uveden výchozí set instrukcí v HTML, který může být kdykoliv upraven nebo nahrazen manžerem časopisu (v HTML nebo prostý text).</message>
 	<message key="manager.setup.copyrightNotice">Oznámení o copyrightu</message>
 	<message key="manager.setup.coverage">Pokrytí</message>
-	<message key="manager.setup.coverageChronExamples">(např. evropská renezance; jurské období; druhý semestr; atd.)</message>
-	<message key="manager.setup.coverageChronProvideExamples">Poskytněte příklady relevantních chronologických nebo historických termínů pro tento obor</message>
 	<message key="manager.setup.coverageDescription">Odkazuje na zeměpisnou lokalitu, chronologické nebo historické pokrytí, a/nebo charakteristiky výzkumného souboru.</message>
-	<message key="manager.setup.coverageGeoExamples">(např. Iberský poloostrov; stratosféra; boreální prales; atd.)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Poskytněte příklady relevantních lokálních termínů pro tento obor</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(např. věk; pohlaví; národnost; atd.)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">Poskytněte příklady charakteristik výzkumného souboru pro tento obor</message>
 	<message key="manager.setup.currentIssue">Aktuální číslo</message>
 	<message key="manager.setup.customizingTheLook">Krok 5. Úprava vzhledu</message>
 	<message key="manager.setup.customTags">Uživatelské tagy</message>
@@ -366,8 +360,6 @@
 	<message key="manager.setup.sponsors">Sponzorující organizace</message>
 	<message key="manager.setup.sponsorsDescription">Jména organizací (např. školské asociace, univerzitní fakulty, podniky atd.) sponzorujících časopis budou uvedena v části O časopisu a mohou být doplněna poznámkou s poděkováním.</message>
 	<message key="manager.setup.stepsToJournalSite">Pět kroků k webové stránce časopisu</message>
-	<message key="manager.setup.subjectClassification">Klasifikace oborů</message>
-	<message key="manager.setup.subjectClassificationExamples">(např. Mathematics Subject Classification; Library of Congress Classification)</message>
 	<message key="manager.setup.subjectExamples">(např. fotosyntéza; černé díry; bayesova teorie; atd.)</message>
 	<message key="manager.setup.subjectKeywordTopic">Klíčová slova</message>
 	<message key="manager.setup.subjectProvideExamples">Poskytněte příklady klíčových slov jako vodítko pro autory</message>

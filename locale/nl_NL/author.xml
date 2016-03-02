@@ -57,7 +57,6 @@
 	<message key="author.submit.deleteAuthor">Auteur verwijderen</message>
 	<message key="author.submit.submissionIndexingDescription">Geef termen voor het indexeren van de inzendingen. Scheid de termen met een puntkomma (term1; term2; term3).</message>
 	<message key="author.submit.coverageInstructions">Refereert aan geo-spatiale locatie, chronologische of historische dekking en/of karakteristieken van het onderzoeksvoorbeeld.</message>
-	<message key="author.submit.subjectClassInstructions">Gebruik het classificatiesysteem met hyperlinks voor het selecteren van classificatietermen en, indien van toepassing, -nummers.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Engels=en; Frans=fr; Spaans=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Additionele codes</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Minimaal één auteur vereist.</message>
 	<message key="author.submit.form.authorRequiredFields">De voornaam, achtenaam en e-mailadres van iedere auteur zijn verplicht.</message>

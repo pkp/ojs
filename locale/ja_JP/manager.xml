@@ -138,13 +138,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">原稿整理の手引きは、投稿物編集段階においてコピーエディタ、著者、セクションエディタに公開されます。以下は、HTMLで書かれたデフォルトの指示内容です。雑誌編集者は、いつでもこれを変更したり、置き換えたりすることができます（プレーンテキストでもHTMLでも可）。</message>
 	<message key="manager.setup.copyrightNotice">著作権表示</message>
 	<message key="manager.setup.coverage">範囲</message>
-	<message key="manager.setup.coverageChronExamples">（例: ヨーロッパルネッサンス; ジュラ紀; 3学期）</message>
-	<message key="manager.setup.coverageChronProvideExamples">このフィールドで指定する年代的または歴史的用語の例を与えてください。</message>
 	<message key="manager.setup.coverageDescription">地理空間的・年代的・歴史的範囲または研究材料の性質を示してください。</message>
-	<message key="manager.setup.coverageGeoExamples">（例: イベリア半島; 成層圏; 北方林）</message>
-	<message key="manager.setup.coverageGeoProvideExamples">このフィールドで指定する地理空間的または地理的用語の例を与えてください。</message>
-	<message key="manager.setup.coverageResearchSampleExamples">（例: 年齢; 性別; 民族）</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">このフィールドで指定する研究材料の性質の例を与えてください。</message>
 	<message key="manager.setup.currentIssue">最新号</message>
 	<message key="manager.setup.customizingTheLook">ステップ 5. 外観のカスタマイズ</message>
 	<message key="manager.setup.customTags">カスタムタグ</message>
@@ -338,8 +332,6 @@
 	<message key="manager.setup.sponsors">スポンサー</message>
 	<message key="manager.setup.sponsorsDescription">雑誌をスポンサードする組織（例えば、学会や大学の部局、協同組合など）。その名称は「この雑誌について」ページに謝辞と共に表示されます。</message>
 	<message key="manager.setup.stepsToJournalSite">雑誌Webサイト完成までの5ステップ</message>
-	<message key="manager.setup.subjectClassification">主題分類</message>
-	<message key="manager.setup.subjectClassificationExamples">（例: 数学主題分類; 米国議会図書館分類）</message>
 	<message key="manager.setup.subjectExamples">（例: 光合成; ブラックホール; 地図の4色問題; ベイズの定理）</message>
 	<message key="manager.setup.subjectKeywordTopic">キーワード</message>
 	<message key="manager.setup.subjectProvideExamples">著者に示すキーワードまたはトピックの例を与えてください。</message>

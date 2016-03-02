@@ -103,12 +103,8 @@
 	<message key="article.suppFiles">File Tambahan</message>
 	<message key="article.suppFilesAbbrev">Singkatan File Tambahan</message>
 	<message key="article.discipline">Disiplin Ilmu dan Sub Disiplin</message>
-	<message key="article.subjectClassification">Klasifikasi Subjek</message>
 	<message key="article.subject">Kata Kunci</message>
 	<message key="article.coverage">Cakupan</message>
-	<message key="article.coverageGeo">Cakupan Ruang</message>
-	<message key="article.coverageChron">Cakupan historis atau kronologis</message>
-	<message key="article.coverageSample">Karakteristik contoh riset</message>
 	<message key="article.type">Tipe, Metode, atau Pendekatan</message>
 	<message key="article.language">Bahasa</message>
 	<message key="article.sectionEditor">SE</message>
@@ -407,8 +403,6 @@ Penulis yang menerbitkan dengan jurnal ini setuju pada persyaratan berikut ini:<
 	 <li>Penulis bisa memasukkan ke dalam penyusunan kontraktual tambahan terpisah untuk distribusi non-ekslusif versi kaya terbitan jurnal (contoh: mempostingnya ke repositori institusional atau menerbitkannya dalam sebuah buku), dengan pengakuan penerbitan awalnya di jurnal ini.</li>
 	 <li>Penulis diizinkan dan didorong untuk mem-posting karya mereka online (contoh: di repositori institusional atau di website mereka) sebelum dan selama proses penyerahan, karena dapat mengarahkan ke pertukaran produktif, seperti halnya sitiran yang lebih awal dan lebih hebat dari karya yang diterbitkan. (Lihat <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">Efek Akses Terbuka</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Jurnal akan menggunakan sistem klasifikasi subjek yang tersedia di web.<br />
-Judul Sistem Klasifikasi]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Untuk mengindeks konten jurnal kedalam sistem terdistribusi global dari database riset, baca <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">langkah-langkah untuk menjadi kontributor data</a> dan daftarkan jurnal Anda di<a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Pendaftaran Open Archives</a>.  Untuk mendaftar, Anda akan membutuhkan URL untuk repositori:<span class="highlight">{$oaiUrl}</span>. Setelah itu, Anda dapat mendaftarkan jurnal Anda di <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a>dan<a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 <br /><br />Perhatikan jika Administrator Situs Anda sudah mendaftarkan situs ini pada layanan ini, jurnal Anda akan diindeks secara otomatis dan Anda tidak perlu mendaftarkan lagi.]]></message>
 	<message key="manager.setup.citations.enable">Memungkinkan Bantuan Koreksi sitiran</message>

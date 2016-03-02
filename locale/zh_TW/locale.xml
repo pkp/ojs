@@ -105,12 +105,8 @@
 	<message key="article.suppFiles">補充檔案</message>
 	<message key="article.suppFilesAbbrev">補充檔案</message>
 	<message key="article.discipline">學術領域和次領域</message>
-	<message key="article.subjectClassification">主題分類</message>
 	<message key="article.subject">關鍵詞</message>
 	<message key="article.coverage">範圍</message>
-	<message key="article.coverageGeo">地理空間範圍</message>
-	<message key="article.coverageChron">時期或歷史範圍</message>
-	<message key="article.coverageSample"> 研究樣本的特徵</message>
 	<message key="article.type">類型、方法或途徑</message>
 	<message key="article.language">語言</message>
 	<message key="article.sectionEditor">文稿類型編者</message>
@@ -355,8 +351,6 @@
 除非日後的出版工作完全還在準備階段，否則不需要設定 LOCKSS以支持OJS；在此階段請遵循這兩個步驟：]]></message>
 	
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[期刊會使用一個可在網路上取得的主題分類系統。<br />
-分類系統的標題]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[要將這份期刊中所索引的內容收錄進一個全球性散佈的研究資料系統中，請<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">註冊</a> 您的期刊網址，進入「開放知識計畫」(Public Knowledge Project ; PKP)的後設資料 <a href="http://pkp.sfu.ca/harvester/" target="_blank">收集器</a>之中。這個工具會收集這份期刊中每個經索引的項目，使得在支持<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">開放典藏計畫後設資料收集協定(Open Archives Initiative Protocol for Metadata Harvesting)</a>的研究網站之間能夠有準確和豐富的搜尋結果。
 <br /><br />
 注意，如果您的網站管理員已經將本站註冊PKP收集器了，您的期刊會自動被索引，而您不需要再次註冊您的期刊。

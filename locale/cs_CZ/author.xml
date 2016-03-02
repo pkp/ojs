@@ -56,7 +56,6 @@
 	<message key="author.submit.deleteAuthor">Smazat autora</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Jmenujte agentury, které poskytly finance nebo jinak podpořily práci prezentovanou v tomto příspěvku.</message>
 	<message key="author.submit.coverageInstructions">Vztahuje se k zeměpisné oblasti, chronologickému nebo historickému záběru a/nebo charakteristikám výzkumného souboru.</message>
-	<message key="author.submit.subjectClassInstructions">Pro výběr klasifikačních termínů (a pokud je to vhodné i čísel) použijte hyperlinkový klasifikační systém.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Čeština=cs; angličtina=en; francouzština=fr; španělština=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Další kódy</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Je vyžadován alespoň jeden autor.</message>
 	<message key="author.submit.form.authorRequiredFields">Je vyžadováno jméno, příjmení a emailová adresa každého autora.</message>

@@ -385,11 +385,6 @@ class DataciteExportDom extends DOIExportDom {
 		if (!empty($keywords)) {
 			XMLCustomWriter::appendChild($subjectsElement, $this->_subjectElement($keywords));
 		}
-
-		list($subjectSchemeName, $subjectCode) = $this->getSubjectClass($object, $objectLocalePrecedence);
-		if (!(empty($subjectSchemeName) || empty($subjectCode))) {
-			XMLCustomWriter::appendChild($subjectsElement, $this->_subjectElement($subjectCode, $subjectSchemeName));
-		}
 		return $subjectsElement;
 	}
 
