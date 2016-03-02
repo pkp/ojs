@@ -151,13 +151,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">دستورالعمل ویراستاری در معرض دید ویراستاران ، نویسندگان ، و دبیران در هنگام ویرایش ساب میشن قرار میگیرد . متن زیر یک دستورالعمل ویراستاری پیشنهادی بصورت  HTML است. میتوانید هم اکنون و یا بعدا آنرا به دلخواه تغییر دهید.</message>
 	<message key="manager.setup.copyrightNotice">متن کپی رایت</message>
 	<message key="manager.setup.coverage">پوشش</message>
-	<message key="manager.setup.coverageChronExamples">مانند: رنسانس; دوره ژوراسیک; تریمستر سوم</message>
-	<message key="manager.setup.coverageChronProvideExamples">مثالهای بارزی برای پوشش زمانی یا تاریخی</message>
 	<message key="manager.setup.coverageDescription">پوشش جعرافیائی ، زمانی یا تاریخی و یا ویژگی های نمونه مورد پژوهش</message>
-	<message key="manager.setup.coverageGeoExamples">مانند: خلیج فارس; استراتوسفر; کویر لوت</message>
-	<message key="manager.setup.coverageGeoProvideExamples">مثالهای بارزی برای پوشش جعرافیائ</message>
-	<message key="manager.setup.coverageResearchSampleExamples">مانند: سن; جنس; نژاد; قومیت</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">مثالهای بارزی برای ویژگیهای نمونه پژوهش</message>
 	<message key="manager.setup.currentIssue">شماره جاری</message>
 	<message key="manager.setup.customizingTheLook">مرحله 5: تغییر دلخواه نمای ظاهری</message>
 	<message key="manager.setup.customTags">تگ های سفارشی</message>
@@ -366,8 +360,6 @@
 	<message key="manager.setup.sponsors">سازمانهای حمایت کننده</message>
 	<message key="manager.setup.sponsorsDescription">نام این سازمانها مانند انجمنهای علمی ، گروههای آموزشی و غیره در صفحه در باره مجله خواهد آمد</message>
 	<message key="manager.setup.stepsToJournalSite">مراحل پنج گانه نصب مجله</message>
-	<message key="manager.setup.subjectClassification">طبقه بندی موضوعی</message>
-	<message key="manager.setup.subjectClassificationExamples">مانند طبقه بندی موضوعی ریاضیات; طبقه بندی کتابخانه کنگره</message>
 	<message key="manager.setup.subjectExamples">مانند: فتوسنتز; سیاه چاله; مسئله نقشه چهاررنگ; تئوری بایز</message>
 	<message key="manager.setup.subjectKeywordTopic">کلید واژه ها</message>
 	<message key="manager.setup.subjectProvideExamples">مثالهای برای کلیدواژه به عنوان راهنمائی برای نویسنگان</message>

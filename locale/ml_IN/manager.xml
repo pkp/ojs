@@ -183,13 +183,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">കോപ്പി എഡിറ്റിങ്ങ് നിര്‍ദ്ദേശങ്ങള്‍ സബ്മിഷന്‍ എഡിറ്റിങ്ങ് സ്റ്റേജിലെ കോപ്പി എഡിറ്റര്‍സ്, ഗ്രന്ഥകര്‍ത്താകള്‍, സെക്ഷന്‍ എഡിറ്റര്‍സ് എന്നിവര്‍ക്ക് ലഭ്യമാക്കുന്നതാണ്. താഴെയായി ഡിഫാള്‍ട്ടായിട്ടുള്ള  നിര്‍ദ്ദേശങ്ങളും എച്ച്ടിഎംഎല്‍ -ല്‍ കാണാം അവ ഏതൊരു സന്ദര്‍ഭത്തിലും ജേണല്‍ മാനേജറിനു ഭേതഗതി വരുത്താനും പുനസ്ഥാപിക്കുവാനും സാധിക്കും (എച്ച്ടിഎംഎല്‍ -ലോ അഥവാ പ്ലേയ്ന്‍ ടെക്സ്റ്റിലോ)</message>
 	<message key="manager.setup.copyrightNotice">കോപ്പിറൈറ്റ് നോട്ടീസ്</message>
 	<message key="manager.setup.coverage">കവറേജ്</message>
-	<message key="manager.setup.coverageChronExamples">(ഉദാ: യുറോപ്യന്‍ റേനൈസ്സന്‍സ്; ജുറാസിക് പിരീഡ്; തെര്‍ഡ് ട്രിമെസ്റ്റര്‍; മുതലായവ)</message>
-	<message key="manager.setup.coverageChronProvideExamples">ഈ ഫീല്‍ഡിനു വേണ്ടി പ്രസക്തമായ ക്രോണോലോജിക്കല്‍ അഥവാ ഹിസ്റ്റോറിക്കല്‍ ടെംസ് ഉദാഹരണമായി നല്‍ക്കുക</message>
 	<message key="manager.setup.coverageDescription">ജിയോ സ്പേഷ്യയല്‍ ലോക്കേഷന്‍സ്, ക്രോണോലോജിക്കല്‍ അഥവാ ഹിസ്റ്റോറിക്കല്‍ കവറേജ്, പിന്നെ/അഥവാ റിസെര്‍ച്ച് സാമ്പിലിന്റെ കാരക്ടറിസ്റ്റിക്സ് എന്നിവ കാണുക.</message>
-	<message key="manager.setup.coverageGeoExamples">(ഉദാ: ഐബേറിയന്‍ പെനിന്‍സുല; സ്ട്രാറ്റോസ്പിയര്‍; ബോറിയല്‍ ഫോറസ്റ്റ്; എന്നിവ)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">ഈ ഫിള്‍ഡിനു വേണ്ടി പ്രസക്ത ജിയോ സ്പേഷ്യയല്‍ അഥവാ ജിയോഗ്രാഫിക്കല്‍ ടെംസ് എന്നിവയുടെ ഉദാഹരണങ്ങള്‍ നല്‍ക്കുക</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(ഉദാ:., വയസ്സ്; ലിംഗം; എതിനിസിറ്റി; മുതലായവ.)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">ഈ ഫിള്‍ഡിനു വേണ്ടി റിസെര്‍ച്ച് സാമ്പിലിന്റെ കാരക്ടറിസ്റ്റിക്സ് ഉദാഹരണമായി നല്‍ക്കുക</message>
 	<message key="manager.setup.currentIssue">നിലവിലുള്ള പതിപ്പ്</message>
 	<message key="manager.setup.customizingTheLook">സ്റ്റെപ്പ് 5. ലുക്ക് കസ്റ്റമൈസ് ചെയ്യുക</message>
 	<message key="manager.setup.customTags">കസ്റ്റം ടാഗ്സ്</message>
@@ -414,8 +408,6 @@
 	<message key="manager.setup.sponsorNoteDescription">ഈ ടെക്സ്റ്റ് "സ്പോണ്‍സര്‍" തലക്കെട്ടിനു താഴെ ലിസ്റ്റ് ഓഫ് സ്പോണ്‍സര്‍-നു മുകളിലും, യു.ആര്‍.എല്‍ "എബൗട്ട്" പേജില്‍ "ജേണല്‍ സ്പോണ്‍സര്‍ഷിപ്പ്"-നു താഴെയും പ്രത്യക്ഷപ്പെടും.</message>
 	<message key="manager.setup.sponsorsDescription">ജേണലിനെ സ്പോണ്‍സര്‍ ചെയ്യുന്ന സ്ഥാപനങ്ങളുടെ പേരുകള്‍ (ഉദാ: സ്കോളര്‍ലി അസോസിയേഷന്‍സ്, യൂണിവേഴ്സിറ്റി ഡിപ്പാര്‍ട്ടുമെന്റുകള്‍, കോപ്പറേറ്റിവ്സ് ) ജേണലിനെ സംബന്ധിച്ച വിവരങ്ങളില്‍ നന്ദി പ്രകാശനത്തോടൊപ്പം ഉണ്ടാവുന്നതാണ്.</message>
 	<message key="manager.setup.stepsToJournalSite">ജേണല്‍ വെബ് സൈറ്റിനായുള്ള 5 ഘട്ടങ്ങള്‍</message>
-	<message key="manager.setup.subjectClassification">സബ്ജക്ട് ക്ലാസിഫിക്കേഷന്‍</message>
-	<message key="manager.setup.subjectClassificationExamples">(ഉദാ: മാത്തമാറ്റിക്സ് സബ്ജക്ട് ക്ലാസിഫിക്കേഷന്‍; ലൈബ്രറി ഓഫ് കോണ്‍ഗ്രസ് ക്ലാസിഫിക്കേഷന്‍)</message>
 	<message key="manager.setup.subjectExamples">(ഉദാ:ഫോട്ടോസിന്തസിസ്; ബ്ലാക്ക് ഹോള്‍; ഫോര്‍ കളര്‍ മാപ്പ് പ്രോബ്ലം; ബയേസ്യന്‍ തിയറി)</message>
 	<message key="manager.setup.subjectKeywordTopic">കീ വേഡ്സ്</message>
 	<message key="manager.setup.subjectProvideExamples">ലേഖകര്‍ക്കുള്ള ഗൈഡായി കീവേഡ്സ് അല്ലെങ്കില്‍ ടോപ്പിക്സ് ഉദാഹരണങ്ങള്‍ നല്‍കുക</message>

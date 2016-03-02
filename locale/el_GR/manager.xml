@@ -142,13 +142,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Οι Οδηγίες επιμέλειας των κειμένων είναι διαθέσιμες για τους ΕΠιμελητές κειμένων, τους Συγγραφείς και τους Επιμελητές ενοτήτων στο στάδιο της επιμέλειας της υποβολής. Παρακάτω θα βρείτε σε μορφή HTML σετ οδηγιών πο μπορούν να τροποποιηθούν ή να αντικατασταθούν από τον Επιμελητή του περιοδικού ανά πάσα στιγμή (σε μορφή HTML ή απλού κειμένου).</message>
 	<message key="manager.setup.copyrightNotice">Δήλωση Πνευματικών Δικαιωμάτων</message>
 	<message key="manager.setup.coverage">Κάλυψη</message>
-	<message key="manager.setup.coverageChronExamples">(Π.χ., Ευρωπαϊκή Αναγέννηση; Ιουρασική περίδος; Τρίτο τρίμηνο; κτλ.)</message>
-	<message key="manager.setup.coverageChronProvideExamples">Παραθέστε μερικά παραδείγματα σχετικών χρονολογικών ή ιστορικών όρων για το συγκεκριμένο πεδίο</message>
 	<message key="manager.setup.coverageDescription">Αναφέρεται στη γεω-χωρική τοποθεσία, την χρονολογική ή ιστορική κάλυψη, ή/και τα χαρακτηριστικά του δείγματος της έρευνας.</message>
-	<message key="manager.setup.coverageGeoExamples">(Π.χ., Ιβηρική χερσόνησος; Στρατόσφαιρα; Αρκτικό δάσος; κτλ.)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Παραθέστε μερικά παραδείγματα σχετικών γεω-χωρικών ή γεωγραφικών όρων για το συγκεκριμένο πεδίο</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(Π.χ.,Ηλικία; Φύλο; Εθνικότητα; κτλ.)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples"> Παραθέστε μερικά παραδείγματα χαρακτηριστικών δείγματος αναζήτησης για το συγκεκριμένο πεδίο</message>
 	<message key="manager.setup.currentIssue">Τρέχον τεύχος</message>
 	<message key="manager.setup.customizingTheLook">Βήμα 5. Διαμόρφωση της όψης του περιοδικού</message>
 	<message key="manager.setup.customTags">Ειδικά προσαρμοσμένες καρτέλες</message>
@@ -356,8 +350,6 @@
 	<message key="manager.setup.sponsors">Οργανισμοί χορηγίας</message>
 	<message key="manager.setup.sponsorsDescription">Τα ονόματα των χορηγών (π.χ., φιλολογικές ενώσεις, πανεπιστημιακά τμήματα, συνεταιρισμοί, κτλ.) που αποτελούν τους χορηγούς του περιοδικού εμφανίζονται στο πεδίο Σχετικά με το Περιοδικό και ενδέχεται να συνοδεύονται και από ευχαριστήριο σημείωμα.</message>
 	<message key="manager.setup.stepsToJournalSite">Πέντε βήματα για την οργάνωση του περιοδικού</message>
-	<message key="manager.setup.subjectClassification">Σύστημα Θεματικής Ταξινόμησης</message>
-	<message key="manager.setup.subjectClassificationExamples">(Π.χ., Mathematics Subject Classification (MSC); Ταξινόμηση της Βιβλιοθήκης του Κογκρέσου)</message>
 	<message key="manager.setup.subjectExamples">(Π.χ., Φωτοσύνθεση; Μαύρες τρύπες; Οικονομική θεωρία; Θεωρία Bayes), Ανεργία</message>
 	<message key="manager.setup.subjectKeywordTopic">Λέξεις-κλειδιά</message>
 	<message key="manager.setup.subjectProvideExamples">Παραθέστε μερικά παραδείγματα λέξεων-κλειδιών ή θεμάτων για την καθοδήγηση των συγγραφέων</message>

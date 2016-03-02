@@ -121,12 +121,8 @@
 	<message key="article.suppFiles">补充文件</message>
 	<message key="article.suppFilesAbbrev">补充文件</message>
 	<message key="article.discipline">学科和分学科</message>
-	<message key="article.subjectClassification">学科分类</message>
 	<message key="article.subject">关键词</message>
 	<message key="article.coverage">覆盖</message>
-	<message key="article.coverageGeo">地理空间覆盖面</message>
-	<message key="article.coverageChron">按时间顺序或历史报道</message>
-	<message key="article.coverageSample"> 研究样本特征</message>
 	<message key="article.type">形式，方法或途径</message>
 	<message key="article.language">语言</message>
 	<message key="article.sectionEditor">栏目编辑</message>
@@ -517,8 +513,6 @@ Authors who publish with this journal agree to the following terms:
 	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
 	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[期刊会使用一个可在网路上取得的主题分类系统。<br />
-分类系统的标题]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[To have the contents of this journal indexed within a globally distributed system of research databases, please read <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">the steps to becoming a data contributor</a> and register your journal with the official <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open Archives registry</a>.  To register, you will need the base URL for your repository: <span class="highlight">{$oaiUrl}</span>.  Afterwards, you can register your journal at the <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> and <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 <br /><br />
 Note that if your site administrator has already registered this site with these services, your journal will be indexed automatically and you do not need to register your journal.]]></message>

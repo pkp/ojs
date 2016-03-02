@@ -73,7 +73,6 @@
 	<message key="author.submit.submissionSupportingAgencies">Contributors and Supporting Agencies</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Identify agencies (a person, an organization, or a service) that made contributions to the content or provided funding or support for the work presented in this submission. Separate them with a semi-colon (e.g. John Doe, Metro University; Master University, Department of Computer Science).</message>
 	<message key="author.submit.coverageInstructions">Refers to geo-spatial location, chronological or historical coverage, and/or characteristics of research sample.</message>
-	<message key="author.submit.subjectClassInstructions">Use the hyperlinked classification system to select classification terms and, if appropriate, numbers.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Additional codes</a>.]]></message>
 	<message key="author.submit.form.authorRequired">At least one author is required.</message>
 	<message key="author.submit.form.authorRequiredFields">The first name, last name, and email address of each author is required.</message>

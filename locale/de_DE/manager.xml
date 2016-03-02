@@ -185,13 +185,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Die Anweisungen werden den Lektor/innen, Autor/innen und Redakteur/innen mit dem zu bearbeitenden Beitrag übermittelt. Nachstehend finden Sie eine Reihe von Standardanweisungen im HTML-Format. Sie können jederzeit von der Zeitschriftenverwaltung ersetzt oder geändert werden (in HTML oder einfachem Text).</message>
 	<message key="manager.setup.copyrightNotice">Copyright-Vermerk</message>
 	<message key="manager.setup.coverage">Themenbereich</message>
-	<message key="manager.setup.coverageChronExamples">(z.B. Europäische Renaissance; Erdzeitalter Jura; Drittes Trimester usw.)</message>
-	<message key="manager.setup.coverageChronProvideExamples">Beispiele für den im Fachgebiet relevanten zeitlichen Bereich angeben.</message>
 	<message key="manager.setup.coverageDescription">Bezieht sich auf den räumlich-geografischen, auf den zeitlichen Bereich und auf die Eigenschaften des Fachgebiets.</message>
-	<message key="manager.setup.coverageGeoExamples">(z.B. iberische Halbinsel; Stratosphäre; nördliche Wälder usw.)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Beispiele für den im Fachgebiet relevanten räumlich-geografischen Bereich angeben.</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(z.B. Alter; Geschlecht; Ethnie usw.)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">Beispiele für im Fachgebiet relevante Forschungssamples</message>
 	<message key="manager.setup.currentIssue">Aktuelle Ausgabe</message>
 	<message key="manager.setup.customizingTheLook">5. Schritt: Individuelle Gestaltung der Zeitschrift</message>
 	<message key="manager.setup.customTags">Tags anpassen</message>
@@ -409,9 +403,6 @@
 	<message key="manager.setup.sponsorNoteDescription">Dieser Text erscheint unterhalb der Überschrift "Finanzielle Unterstützung" und über der Liste der Sponsor/innen-Namen und -URLs unter "Unterstützung" auf der "Über uns"-Seite.</message>
 	<message key="manager.setup.sponsorsDescription">Die Namen derjenigen Organisationen (z.B. wissenschaftliche Vereinigungen, Fakultäten, Arbeitszusammenhänge usw.), die die Zeitschrift finanziell unterstützen, erscheinen unter "Über uns". Eine Danksagung kann beigefügt werden.</message>
 	<message key="manager.setup.stepsToJournalSite">Fünf Schritte zu einer Zeitschrift</message>
-	<message key="manager.setup.subjectClassification">Schlagwortsystematik</message>
-	<message key="manager.setup.subjectClassificationExamples">(z.B. Mathematics Subject Classification; Library of Congress Classification)</message>
-	<message key="manager.setup.subjectClassificationURLValid">Bitte geben Sie eine gültige URL an (inklusive http://).</message>
 	<message key="manager.setup.subjectExamples">(z.B. Photosynthese; Schwarze Löcher; Vier-Farben-Theorem; Bayes' Theorie)</message>
 	<message key="manager.setup.subjectKeywordTopic">Schlagworte</message>
 	<message key="manager.setup.subjectProvideExamples">Geben Sie als Hilfestellung für die Autor/innen Beispiele für Schlagworte oder Themen an</message>

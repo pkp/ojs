@@ -120,12 +120,8 @@
 	<message key="article.suppFiles">Zusatzdatei(en)</message>
 	<message key="article.suppFilesAbbrev">Zus. Dateien</message>
 	<message key="article.discipline">Akademisches Fachgebiet und Untergebiete</message>
-	<message key="article.subjectClassification">Schlagwortsystematik</message>
 	<message key="article.subject">Schlagworte</message>
 	<message key="article.coverage">Bereich</message>
-	<message key="article.coverageGeo">Geografisch-räumlicher Bereich</message>
-	<message key="article.coverageChron">(Historischer) Zeitraum</message>
-	<message key="article.coverageSample">Forschungssample</message>
 	<message key="article.type">Forschungsansatz, -methode oder -verfahren</message>
 	<message key="article.language">Sprache</message>
 	<message key="article.sectionEditor">Rubrikredakteur/in</message>
@@ -413,8 +409,6 @@ Autor/innen, die in dieser Zeitschrift publizieren möchten, stimmen den folgend
 	<li>Die Autor/innen können zusätzliche Verträge für die nicht-exklusive Verbreitung der in der Zeitschrift veröffentlichten Version ihrer Arbeit unter Nennung der Erstpublikation in dieser Zeitschrift eingehen (z.B. sie in Sammelpublikation oder einem Buch veröffentlichen).</li>
 	<li>Die Autor/innen werden dazu ermutigt, ihre Arbeit parallel zur Einreichung bei dieser Zeitschrift online zu veröffentlichen (z.B. auf den Homepages von Institutionen oder auf ihrer eigenen Homepage), weil so produktive Austauschprozesse wie auch eine frühe und erweiterte Bezugnahme auf das veröffentlichte Werk gefördert werden (siehe <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Die Zeitschrift verwendet ein online verfügbares Klassifikationssystem.<br />
-Titel des Klassifikationssystems]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Damit der Inhalt dieser Zeitschrift in einem weltweiten System von Forschungsdatenbanken indiziert wird, lesen Sie bitte die <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">Schritte, um Daten zu liefern</a> und registrieren Sie Ihre Zeitschrift bei der offiziellen <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open-Archives-Registrierung</a>. Zum Registrieren benötigen Sie die Basis-URL für Ihr Repositorium: <span class="highlight">{$oaiUrl}</span>. Danach können Sie Ihre Zeitschrift bei der <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> und bei <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a> registrieren.
 <br /><br />
 Beachten Sie bitte, dass Ihre Zeitschrift bereits automatisch indiziert wird, wenn Ihr/e Website-Administrator/in die gesamte Installation bereits bei diesen Diensten registriert hat. In diesem Fall müssen Sie Ihre Zeitschrift nicht gesondert registrieren.]]></message>

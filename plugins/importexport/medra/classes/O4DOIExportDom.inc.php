@@ -997,12 +997,6 @@ class O4DOIExportDom extends DOIExportDom {
 			XMLCustomWriter::appendChild($contentItemElement, $this->_subjectElement(O4DOI_SUBJECT_SCHEME_PUBLISHER, $keywords));
 		}
 
-		// Subject class
-		list($subjectSchemeName, $subjectCode) = $this->getSubjectClass($article, $objectLocalePrecedence);
-		if (!(empty($subjectSchemeName) || empty($subjectCode))) {
-			XMLCustomWriter::appendChild($contentItemElement, $this->_subjectElement(O4DOI_SUBJECT_SCHEME_PROPRIETARY, $subjectCode, $subjectSchemeName));
-		}
-
 		return $contentItemElement;
 	}
 

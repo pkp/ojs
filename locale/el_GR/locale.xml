@@ -106,12 +106,8 @@
         <message key="article.suppFiles">Συμπληρωματικό (-ά) Αρχείο(-α)</message>
         <message key="article.suppFilesAbbrev">Συμπλ. αρχεία</message>
         <message key="article.discipline">Επιστημονικός κλάδος και υπο-κατηγορίες</message>
-        <message key="article.subjectClassification">Θεματική Ταξινόμηση</message>
         <message key="article.subject">Λέξεις κλειδιά</message>
         <message key="article.coverage">Κάλυψη</message>
-        <message key="article.coverageGeo">Χωροταξική κάλυψη</message>
-        <message key="article.coverageChron">Χρονολογική ή ιστορική κάλυψη</message>
-        <message key="article.coverageSample">Χαρακτηριστικά ερευνητικού δείγματος</message>
         <message key="article.type">Τύπος, μέθοδος ή προσέγγιση</message>
         <message key="article.language">Γλώσσα</message>
         <message key="article.sectionEditor">ΕΕ</message>
@@ -360,8 +356,6 @@
 	 <li>Οι Συγγραφείς μπορούν να συνάπτουν ξεχωριστές, και πρόσθετες συμβάσεις και συμφωνίες για την μη αποκλειστική διανομή της εργασίας όπως δημοσιεύτηκε στο περιοδικό αυτό (π.χ. κατάθεση σε ένα ακαδημαϊκό καταθετήριο ή δημοσίευση σε ένα βιβλίο), με την προϋπόθεση της αναγνώρισης και την αναφοράς της πρώτης δημοσίευσης σε αυτό το περιοδικό.</li>
 	 <li>Το περιοδικό επιτρέπει και ενθαρρύνει τους Συγγραφείς να καταθέτουν τις εργασίες τους online (π.χ. σε ένα ακαδημαϊκό καταθετήριο ή στους προσωπικές τους ιστοσελίδες) πριν και μετά από τις διαδικασίες της δημοσίευσης, καθώς αυτό μπορεί να οδηγήσει σε παραγωγικές ανταλλαγές ιδεών και σκέψεων καθώς επίσης και σε γρηγορότερη και μεγαλύτερη χρήση και ευρετηρίαση της δημοσιευμένης εργασίας (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
-        <message key="manager.setup.subjectClassificationDescription"><![CDATA[Το περιοδικό χρησιμοποιεί σύστημα θεματικής ταξινόμησης που είναι διαθέσιμο στον Παγκόσμιο Ιστό (web).<br /> 
-         Τίτλος συστήματος]]></message>
         <message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Για να ευρετηριάζοντα τα περιεχόμενα του περιοδικού σας εντός ενός παγκοσμίως κατανεμημένου συστήματος βάσεων δεδομένων αναζήτησης  , <a href="http://pkp.sfu.ca/harvester/add.php"  target="_blank">καταχωρίστε</a> το URL του περιοδικού στον Public Knowledge Project  metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. Το εργαλείο αυτό συλλέγει μεταδεδόμενα από κάθε ευρετηριασμένο τεκμήριο στο περιοδικό αυτό, παρέχοντας τη δυνατότητα ακριβούς και συλλογικής αναζήτησης στους ιστοτόπους αναζήτησης που τηρούν το <a  href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction"  target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.  
         <br /><br />  
         Λάβετε υπόψη σας ότι σε περίπτωση όπου ο διαχειριστής του ιστοτόπου έχει ήδη καταχωρίσει τον ιστότοπο αυτό στον PKP Harvester, το περιοδικό θα ευρετηριαστεί αυτόματα και δεν θα είναι απαραίτητη η καταχώριση του περιοδικού.  

@@ -85,13 +85,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">「校樣編輯指引」會在「投稿編輯」階段顯示給校樣編輯、作者和文稿類型編輯看到。下面是一組預設的HTML格式指南，期刊管理員可以在任何階段進行修訂或者代換（以純文字或HTML的方式）。</message>
 	<message key="manager.setup.copyrightNotice">版權注意事項</message>
 	<message key="manager.setup.coverage">涵蓋範圍</message>
-	<message key="manager.setup.coverageChronExamples">(例如，歐洲文藝復興時期、侏羅紀時代、下學期等等)</message>
-	<message key="manager.setup.coverageChronProvideExamples">在本欄位中提供相關的年代或者歷史詞彙</message>
 	<message key="manager.setup.coverageDescription">指涉地理空間上的位置、年代或者歷史範圍，以及＼或者研究樣本的特徵。</message>
-	<message key="manager.setup.coverageGeoExamples">(例如，依比利半島、平流層、北方林地等等)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">在本欄位中提供相關的地理空間或者地理詞彙</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(例如，基因、族群等等)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">在本欄位中提供研究樣本的特徵作為範例</message>
 	<message key="manager.setup.currentIssue">當期期刊</message>
 	<message key="manager.setup.customizingTheLook">步驟 5：自訂外觀。</message>
 	<message key="manager.setup.customTags">自訂標籤</message>
@@ -282,8 +276,6 @@
 	<message key="manager.setup.sponsors">贊助單位</message>
 	<message key="manager.setup.sponsorsDescription">贊助發起這份期刊的組織單位名稱（例如學會、大學系所、合作社等等）會出現在期刊的「期刊介紹」中，並且可以附加一個致謝的備註。</message>
 	<message key="manager.setup.stepsToJournalSite">建置一個期刊網站的5個步驟</message>
-	<message key="manager.setup.subjectClassification">主題類別</message>
-	<message key="manager.setup.subjectClassificationExamples">（例如，數學主題分類、國會圖書館分類）</message>
 	<message key="manager.setup.subjectExamples">(例如，光和作用、黑洞、四色地圖問題、貝斯定理)</message>
 	<message key="manager.setup.subjectKeywordTopic">關鍵字</message>
 	<message key="manager.setup.subjectProvideExamples">提供關鍵字或者主旨的範例，以引導作者。</message>

@@ -59,7 +59,6 @@
 	<message key="author.submit.deleteAuthor">حذف نویسنده</message>
 	<message key="author.submit.submissionIndexingDescription">واژه هائی برای اندکس مقاله، فاصله لغات سمی کولون بگذارید. مانند واژه۱;واژه۲;واژه۲</message>
 	<message key="author.submit.coverageInstructions">منظور پوشش جغرافیائی تاریخی یا زمانی است ویا نشان دهنده نمونه مورد تحقیق است.</message>
-	<message key="author.submit.subjectClassInstructions">از لینک سیستم طبقه بنده برای انتخاب واژه های طبقه بندی ویا اعداد مترادف آنها استفاده کنید.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">کدهای دیگر</a>.]]></message>
 	<message key="author.submit.form.authorRequired">حداقل یک نویسنده لازم است</message>
 	<message key="author.submit.form.authorRequiredFields">نام ، نام خانوادگی و ایمیل هر نویسنده لازم است</message>

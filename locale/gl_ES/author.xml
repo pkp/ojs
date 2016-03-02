@@ -63,7 +63,6 @@
 	<message key="author.submit.submissionSupportingAgencies">Axencias de apoio</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Identifica as axencias que achegan financiamento ou apoio para o traballo presentado neste envío.</message>
 	<message key="author.submit.coverageInstructions">Refírese á localización xeo-espacial, cronolóxica,cobertura histórica, e/ou características de casos de investigación.</message>
-	<message key="author.submit.subjectClassInstructions">Empregue o sistema de clasificación por hiperligazón para seleccionar termos de clasificación e, se é preciso, números.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Inglés=en; Francés=fr; Español=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Códigos adicionales</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Precísase, como mínimo, un/a autor/a.</message>
 	<message key="author.submit.form.authorRequiredFields">Precísase o primeiro nome, apelido e enderezo de correo electrónico de cada autor/a.</message>

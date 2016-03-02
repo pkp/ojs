@@ -149,13 +149,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Les directives pour la révision seront mises à la disposition des Réviseurs, Auteurs, et Rédacteurs de rubrique à l'étape de la révision de la soumission. Vous trouverez ci-dessous un ensemble d'instructions par défaut en HTML, qui peuvent être modifiées ou remplacées par le Directeur de la revue en tout temps (en HTML ou texte brut).</message>
 	<message key="manager.setup.copyrightNotice">Mention de droit d'auteur</message>
 	<message key="manager.setup.coverage">Couverture</message>
-	<message key="manager.setup.coverageChronExamples">(Par ex., Renaissance européenne; Période jurassique; Troisième trimestre; etc.)</message>
-	<message key="manager.setup.coverageChronProvideExamples">Proposer des exemples de termes chronologiques ou historiques pertinents pour ce domaine</message>
 	<message key="manager.setup.coverageDescription">Fait référence à l'emplacement géo-spatial, à la couverture historique ou chronologique, ou à des caractéristiques de l'échantillon de recherche.</message>
-	<message key="manager.setup.coverageGeoExamples">(Par ex., Péninsule ibérique; Stratosphère; Forêt boréale; etc.)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Proposer des exemples de termes géo-spatiaux ou géographiques pertinents pour ce domaine de recherche.</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(Par ex., Âge; Sexe; Origine ethnique; etc.)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">Proposer des exemples de caractéristiques d'échantillons de recherche dans ce domaine</message>
 	<message key="manager.setup.currentIssue">Numéro courant</message>
 	<message key="manager.setup.customizingTheLook">Étape 5. Personnalisation de l'apparence</message>
 	<message key="manager.setup.customTags">Étiquettes personnalisées</message>
@@ -365,8 +359,6 @@
 	<message key="manager.setup.siteAccess">Restrictions supplémentaires concernant l'accès à l'article et au site</message>
 	<message key="manager.setup.sponsorsDescription">Les noms des institutions (par ex., associations de chercheurs, départements universitaires, coopératives, etc.) soutenant la revue figureront dans À propos de la revue et pourraient être accompagnés des remerciements.</message>
 	<message key="manager.setup.stepsToJournalSite">Cinq étapes pour créer le site Web d'une revue</message>
-	<message key="manager.setup.subjectClassification">Classement par sujet</message>
-	<message key="manager.setup.subjectClassificationExamples">(Par ex., Mathématiques - Classification par sujet; Classification de la Library of Congress)</message>
 	<message key="manager.setup.subjectExamples">(Par ex., Photosynthèse; Trous noirs; Cartes en quadrichromie; Théorème de Bayes)</message>
 	<message key="manager.setup.subjectKeywordTopic">Mots-clés</message>
 	<message key="manager.setup.subjectProvideExamples">Donner des exemples de mots-clés ou de sujets comme guide pour les auteurs</message>

@@ -123,12 +123,8 @@
        <message key="article.suppFiles">Супровідні файли</message>
        <message key="article.suppFilesAbbrev">Супр. файли</message>
        <message key="article.discipline">Наукова дисципліна</message>
-       <message key="article.subjectClassification">Класифікаційна схема</message>
        <message key="article.subject">Ключові слова</message>
        <message key="article.coverage">Тематичне покриття</message>
-       <message key="article.coverageGeo">Геопросторове покриття</message>
-       <message key="article.coverageChron">Хронологічне та історичне покриття</message>
-       <message key="article.coverageSample">Вибірка дослідження</message>
        <message key="article.type">Методи та підходи</message>
        <message key="article.language">Мова</message>
        <message key="article.sectionEditor">SE</message>
@@ -417,8 +413,6 @@
        <li>Автори мають право укладати самостійні додаткові угоди щодо неексклюзивного розповсюдження роботи у тому вигляді, в якому вона була опублікована цим журналом (наприклад, розміщувати роботу в електронному сховищі установи або публікувати у складі монографії), за умови збереження посилання на першу публікацію роботи у цьому журналі.</li>
        <li>Політика журналу дозволяє і заохочує розміщення авторами в мережі Інтернет (наприклад, у сховищах установ або на особистих веб-сайтах) рукопису роботи, як до подання цього рукопису до редакції, так і під час його редакційного опрацювання, оскільки це сприяє виникненню продуктивної наукової дискусії та позитивно позначається на оперативності та динаміці цитування опублікованої роботи (див. <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
-       <message key="manager.setup.subjectClassificationDescription"><![CDATA[Журнал використовуватиме доступну у веб-середовищі класифікаційну систему.<br />
-Назва класифікаційної системи]]></message>
        <message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Для того, щоб зміст цього журналу відображався в глобальній розподіленій системі, що індексує наукові бази даних, будь ласка, прочитайте, <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">як стати постачальником даних</a>, та зареєструйте свій журнал у офіційному <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">реєстрі відкритих архівів</a>. Щоб зареєструватися, Вам потрібно буде вказати базовий URL свого сховища: <span class="highlight">{$oaiUrl}</span>.  Після цього Ви можете зареєструвати свій журнал також у <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> та <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 <br /><br />
 Зауважте, якщо цей сайт вже зареєстрований адміністратором у цих системах, Ваш журнал буде індексуватись автоматично, окремо реєструвати його непотрібно.]]></message>

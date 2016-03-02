@@ -70,9 +70,8 @@
 	<message key="author.submit.submissionSupportingAgencies">Lembaga Pendukung</message> 
 <message key="author.submit.submissionSupportingAgenciesDescription">Masukkan nama lembaga yang menyediakan dana atau dukungan untuk pekerjaan yang ditampilkan dalam jurnal.</message> 
 <message key="author.submit.coverageInstructions">Mengacu pada lokasi geo-spasial, liputan atau cakupan kronologis atau historis, dan/ atau karakteristik sampel riset.</message> 
-	<message key="author.submit.subjectClassInstructions"> Gunakan sistem klasifikasi hyperlink untuk memilih istilah klasifikasi dan, jika sesuai, nomor.</message> 
-<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Kode Tambahan</a>.]]></message>	<message key="author.submit.form.authorRequired">Setidaknya dibutuhkan satu penulis.</message>	
-<message key="author.submit.form.authorRequiredFields"> Nama pertama, Nama terakhir, dan alamat email masing-masing penulis dibutuhkan.</message> 
+	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Kode Tambahan</a>.]]></message>	<message key="author.submit.form.authorRequired">Setidaknya dibutuhkan satu penulis.</message>	
+	<message key="author.submit.form.authorRequiredFields"> Nama pertama, Nama terakhir, dan alamat email masing-masing penulis dibutuhkan.</message> 
 	<message key="author.submit.form.titleRequired">Masukkan judul artikel Anda.</message> 
 	<message key="author.submit.form.abstractRequired"> Masukkam sari artikel Anda.</message> 
 	<message key="author.submit.form.wordCountAlert"> Anda melampaui batas maksimal kata untuk sari.</message> 

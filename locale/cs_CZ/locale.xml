@@ -101,12 +101,8 @@
 	<message key="article.suppFiles">Doplňkové soubory</message>
 	<message key="article.suppFilesAbbrev">Doplň. soubory</message>
 	<message key="article.discipline">Akademická disciplína a subdisciplíny</message>
-	<message key="article.subjectClassification">Třídění podle předmětu</message>
 	<message key="article.subject">Klíčová slova</message>
 	<message key="article.coverage">Pokrytí</message>
-	<message key="article.coverageGeo">Zeměpisné pokrytí</message>
-	<message key="article.coverageChron">Chronologické nebo historické pokrytí</message>
-	<message key="article.coverageSample">Charakteristiky výzkumného souboru</message>
 	<message key="article.type">Typ, metoda nebo přístup</message>
 	<message key="article.language">Jazyk</message>
 	<message key="article.sectionEditor">ES</message>
@@ -357,8 +353,6 @@ Autoři, kteří publikují v tomto časopise, souhlasí s následujícími body
 	<li> Autoři mohou vstupovat do dalších samostatných smluvních dohod pro neexkluzivní šíření práce ve verzi, ve které byla publikována v časopise (například publikovat ji v knize), avšak s tím, že přiznají její první publikování v tomto časopisu.</li>
 	<li> Autorům je dovoleno a doporučováno, aby zpřístupnili svou práci online (například na svých webových stránkách) před a v průběhu redakčního řízení jejich příspěvku, protože takový postup může vést k produktivním výměnám názorů a také dřívější a vyšší citovanosti publikované práce (Viz <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">Efekt otevřeného přístupu</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Časopis bude používat systém klasifikace oborů dostupný na webu.<br />
-Název systému klasifikace]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Aby byl obsah tohoto časopisu indexován v celosvětově distribuovaném systému výzkumných databází, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">zaregistrujte</a> URL Vašeho časopisu do <a href="http://pkp.sfu.ca/harvester/" target="_blank">shromažďovače</a> metadat Public Knowledge Projektu. Tento nástroj sbírá metadata z každé indexované položky tohoto časopisu a umožňuje přesné a hromadné vyhledávání v rámci výzkumných stránek, které dodržují <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank"> protokol Iniciativy otevřených archivů pro shromažďování metadat </a> (Open Archives Initiative (OAI) Protocol for Metadata Harvesting).
 <br /><br />
 Vězte, že pokud již Váš administrátor stránek zaregistroval tyto stránky do PKP shromažďovače, Váš časopis bude indexován automaticky a Vy nemusíte časopis registrovat.

@@ -179,13 +179,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Instrucţiunile de (tehno)redactare vor fi disponibile redactorilor, autorilor şi redactorilor de secţiuni la etapa editării propunerii. Mai jos este un set de instrucţiuni în format HTML, care pot fi modificate sau înlocuite de managerul revistei în orice moment (în format HTML sau text simplu).</message>
 	<message key="manager.setup.copyrightNotice">Notă privind drepturile de autor</message>
 	<message key="manager.setup.coverage">Domeniu</message>
-	<message key="manager.setup.coverageChronExamples">(Ex. Renaşterea europeană; Perioada Jurasicului; Al Treilea Trimestru; etc.)</message>
-	<message key="manager.setup.coverageChronProvideExamples">Exemplificaţi termenii relevanţi d.p.d.v. cronologic sau istoric pentru acest domeniu</message>
 	<message key="manager.setup.coverageDescription">Se referă la localizarea geo-spaţială, acoperirea d.p.d.v. cronologic sau istoric şi/sau caracteristicile unei mostre ce cercetare.</message>
-	<message key="manager.setup.coverageGeoExamples">(Ex. Peninsula Iberică; Stratosfera; Pădurea boreală; etc.)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Exemplificaţi termeni geo-spaţiali şi geografici relevanţi pentru acest domeniu</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(Ex. vârstă; gen; etnie; etc.)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">Exemplificaţi caracteristicile pentru mostrele de cercetare pentru acest domeniu</message>
 	<message key="manager.setup.currentIssue">Număr curent</message>
 	<message key="manager.setup.customizingTheLook">Pasul 5. Modificarea aspectului revistei</message>
 	<message key="manager.setup.customTags">Etichete particularizate</message>
@@ -408,8 +402,6 @@
 	<message key="manager.setup.sponsorNoteDescription">Acest text va apărea sub colontitlul (headerul) „sponsori” și deasupra listei cu numele sponsorilor și al url-urilor de sub „sponsorii revistei” din pagina „despre”.</message>
 	<message key="manager.setup.sponsorsDescription">Numele organizaţiilor (ex. asociaţii ştiinţifice, departamente în cadrul universităţilor, cooperări, etc.) care sponsorizează revista vor apărea la secţiunea despre revistă şi pot fi acompaniate de o notă de recunoaştere.</message>
 	<message key="manager.setup.stepsToJournalSite">Cinci paşi spre siteul al unei reviste web</message>
-	<message key="manager.setup.subjectClassification">Clasificarea domeniilor</message>
-	<message key="manager.setup.subjectClassificationExamples">(Ex. Clasificarea disciplinelor matematice; Clasificarea Bibliotecii Congresului)</message>
 	<message key="manager.setup.subjectExamples">(Ex. Fotosinteză; Găurile negre; Problema diagramei cu patru culori; Teoria bayesiană)</message>
 	<message key="manager.setup.subjectKeywordTopic">Cuvinte cheie</message>
 	<message key="manager.setup.subjectProvideExamples">Exemplificaţi cuvintele cheie sau subiecte care să ghideze autorii</message>

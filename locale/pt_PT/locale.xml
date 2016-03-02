@@ -84,12 +84,8 @@
 	<message key="article.suppFiles">Documento(s) Suplementar(es)</message>
 	<message key="article.suppFilesAbbrev">Docs. Sup.</message>
 	<message key="article.discipline">Área e sub-área do Conhecimento Acadêmico</message>
-	<message key="article.subjectClassification">Classificação de Assunto</message>
 	<message key="article.subject">Palavras-chave</message>
 	<message key="article.coverage">Cobertura</message>
-	<message key="article.coverageGeo">Cobertura Geo-espacial</message>
-	<message key="article.coverageChron">Cobertura Cronológica ou Histórica</message>
-	<message key="article.coverageSample">Características da amostragem da pesquisa</message>
 	<message key="article.type">Tipo, método ou ponto de vista</message>
 	<message key="article.language">Idioma</message>
 	<message key="article.sectionEditor">ES</message>
@@ -301,8 +297,6 @@ Note que a interface OAI pode ser desactivada para este portal nas configuraçõ
 Configurar o suporte ao LOCKSS para o OJS é necessário somente após a publicação de uma edição estar quase completa, bastando seguir os passos a seguir:]]></message>
 	
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[A revista utiliza um sistema de classificação de assunto disponível na web.<br />
-Título do sistema de classificação:]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Para ter o conteúdo desta revista indexado dentro de um sistema global de distribuição de bases de pesquisa, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registe</a> o URL da revista no <a href="http://pkp.sfu.ca/harvester/" target="_blank">Colectador de Metadados</a> do Public Knowledge Project. Esta ferramenta recolha os recolha de cada item indexado desta revista, possibilitando pesquisas colectivas e precisas entre os portais de pesquisa que utilizam o protocolo de recolha de metadados do <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative, OAI-PMH</a>.
 <br /><br />
 Caso o administrador do portal já tenha registado a revista no portal do Colectador do PKP, a revista será automaticamente indexada, sem necessidade de registo individual.

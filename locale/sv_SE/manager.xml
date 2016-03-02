@@ -145,13 +145,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Instruktioner för manusredigering är tillgängligt för Manusredaktörer, Författare, och Sektionsredaktörer under Manusredigering. Nedan följer standardinstruktioner i HTML som kan ändras och ersättas av Tidskriftsansvarig när som helst (i HTML eller plain text).</message>
 	<message key="manager.setup.copyrightNotice">Upphovsrättsskydd</message>
 	<message key="manager.setup.coverage">Täckning</message>
-	<message key="manager.setup.coverageChronExamples">(T.ex., Europeisk renässans; Juraperioden; Tredje trimestern; etc.)</message>
-	<message key="manager.setup.coverageChronProvideExamples">Ange exempel på relevanta kronolgiska eller historiska termer för ämnesområdet</message>
 	<message key="manager.setup.coverageDescription">Hänvisar till geospatial, kronologisk eller historisk täckning, och/eller karakteristika av forskningsurvalet.</message>
-	<message key="manager.setup.coverageGeoExamples">(T.ex., Iberiska halvön; Stratosfär; Tempererade zoner; etc.)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Ange exempel på relevanta geospatiala eller geografiska termer för ämnesområdet.</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(T.ex. Ålder; Kön; Etnicitet; etc.)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">Ange exempel på forskningsurval för ämnesområdet</message>
 	<message key="manager.setup.currentIssue">Senaste numret</message>
 	<message key="manager.setup.customizingTheLook">Steg 5. Anpassa utseendet</message>
 	<message key="manager.setup.customTags">Anpassade märkord (tags)</message>
@@ -362,9 +356,6 @@
 	<message key="manager.setup.sponsors">Sponsorer</message>
 	<message key="manager.setup.sponsorsDescription">Namn på organisationer (ex. forskningsorganisationer, avdelningar inom universitet etc.) som stöttar tidskriften finns tillgängligt under Om tidskriften. Här kan även inkluderas ett tack från utgivare.</message>
 	<message key="manager.setup.stepsToJournalSite">Fem steg mot en tidskriftshemsida</message>
-	<message key="manager.setup.subjectClassification">Ämnesklassificering</message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Tidskriften använder ett klassificeringssystem som finns tillgängligt online: <br /> Title på klassifikationssystem]]></message>
-	<message key="manager.setup.subjectClassificationExamples">(T.ex., Mathematics Subject Classification; Library of Congress Classification)</message>
 	<message key="manager.setup.subjectExamples">(T.ex., Fotosyntes; Svarta hål; Zenons paradoxer)</message>
 	<message key="manager.setup.subjectKeywordTopic">Nyckelord</message>
 	<message key="manager.setup.subjectProvideExamples">Ange exempel på nyckelord eller ämnen</message>

@@ -170,13 +170,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Instruktionerne til manuskriptredigering gøres tilgængelige for manuskriptredaktører, forfattere og sektionsredaktører i manuskriptredigeringsfasen. Nedenfor findes et sæt standardinstruktioner i HTML-format, som til enhver tid kan redigeres eller erstattes af tidsskriftschefen (i HTML eller som almindelig tekst).</message>
 	<message key="manager.setup.copyrightNotice">Oplysninger om ophavsret</message>
 	<message key="manager.setup.coverage">Dækning</message>
-	<message key="manager.setup.coverageChronExamples">(F.eks. Europæisk renaissance; Juratiden; Tredje trimester; osv.)</message>
-	<message key="manager.setup.coverageChronProvideExamples">Angiv eksempler på relevante kronologiske eller historiske termer inden for dette felt</message>
 	<message key="manager.setup.coverageDescription">Henviser til geografisk placering, kronologisk eller historisk dækning og/eller karaktertræk ved forskningseksempel.</message>
-	<message key="manager.setup.coverageGeoExamples">(F.eks. Den Iberiske Halvø; Stratosfære; Boreal skov osv.)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Angiv eksempler på relevante rummiljørelaterede eller geografiske termer inden for dette felt</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(F.eks. Alder; Køn; Racetilhørsforhold osv.)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">Angiv eksempler på karaktertræk ved forskningseksempler inden for dette tidsskrift</message>
 	<message key="manager.setup.currentIssue">Aktuel udgave</message>
 	<message key="manager.setup.customizingTheLook">Trin 5. Tilpasning af udseendet</message>
 	<message key="manager.setup.customTags">Brugerdefinerede koder</message>
@@ -386,8 +380,6 @@ I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommenta
 	<message key="manager.setup.sponsors">Sponsororganisationer</message>
 	<message key="manager.setup.sponsorsDescription">Navnene på de organisationer (f.eks. videnskabelige foreninger, universitetsafdelinger, andelsforetagender osv.), der sponsorerer tidsskriftet, vises under Om tidsskriftet og kan være ledsaget af takord.</message>
 	<message key="manager.setup.stepsToJournalSite">Fem trin til et tidsskrifts websted</message>
-	<message key="manager.setup.subjectClassification">Emneklassificering</message>
-	<message key="manager.setup.subjectClassificationExamples">(F.eks. Mathematics Subject Classification; Library of Congress Classification)</message>
 	<message key="manager.setup.subjectExamples">(F.eks. Fotosyntese; Sorte huller; Firfarveproblemet; Bayesiansk teori)</message>
 	<message key="manager.setup.subjectKeywordTopic">Nøgleord</message>
 	<message key="manager.setup.subjectProvideExamples">Angiv eksempler på nøgleord eller emneområder som en hjælp til forfattere</message>

@@ -65,13 +65,6 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Внизу Вы видите детальный набор указаний в HTML, которые можно использовать в качестве примера. Издатель может изменить их в любой момент (используя HTML или простой текст).</message>
 	<message key="manager.setup.copyrightNotice">Авторское право</message>
 	<message key="manager.setup.coverage">Охват</message>
-	<message key="manager.setup.coverageChronExamples"></message>
-	<message key="manager.setup.coverageChronProvideExamples"></message>
-	<message key="manager.setup.coverageDescription"></message>
-	<message key="manager.setup.coverageGeoExamples"></message>
-	<message key="manager.setup.coverageGeoProvideExamples"></message>
-	<message key="manager.setup.coverageResearchSampleExamples"></message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples"></message>
 	<message key="manager.setup.currentIssue">Текущий выпуск</message>
 	<message key="manager.setup.customizingTheLook">Шаг 5. Настройки внешнего вида</message>
 	<message key="manager.setup.customTags">Собственные теги</message>
@@ -223,8 +216,6 @@
 	<message key="manager.setup.sponsors">Спонсоры</message>
 	<message key="manager.setup.sponsorsDescription">Название организации, оказывающей финансовую и иную поддержку журнала (напр. ученые общества, кафедры, объединения и т.д.).</message>
 	<message key="manager.setup.stepsToJournalSite">Пять шагов к установке журнала</message>
-	<message key="manager.setup.subjectClassification">Предметная классификация</message>
-	<message key="manager.setup.subjectClassificationExamples"></message>
 	<message key="manager.setup.subjectExamples"></message>
 	<message key="manager.setup.subjectKeywordTopic">Ключевые слова</message>
 	<message key="manager.setup.subjectProvideExamples"></message>

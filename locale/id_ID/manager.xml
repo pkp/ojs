@@ -185,13 +185,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription"> Instruksi Copyedit merupakan instruksi untuk copy editor, penulis, dan editor bagian di tahap pengeditan penyerahan.</message> 
 	<message key="manager.setup.copyrightNotice"> Pemberitahuan Hak Cipta </message> 
 	<message key="manager.setup.coverage"> Cakupan </message>  
-	<message key="manager.setup.coverageChronExamples">(Contoh, European Renaissance; Jurassic Period; Third Trimester; dll.)</message>
-	<message key="manager.setup.coverageChronProvideExamples"> Masukkan istilah-istilah historis atau kronologis yang relevan untuk bidang ini).</message> 
 	<message key="manager.setup.coverageDescription"> Mengacu ke lokasi geospasial, cakupan kronologis atau historis, dan/ atau karakteristik sampel riset.</message> 
-	<message key="manager.setup.coverageGeoExamples">(Contoh: Iberian Peninsula; Stratosphere; Boreal Forest; dll.)</message>
-	<message key="manager.setup.coverageGeoProvideExamples"> Masukkan istilah-istilah geografis atau geospasial yang relevan untuk bidang ini</message> 
-	<message key="manager.setup.coverageResearchSampleExamples"> (Contoh: Umur; jenis Kelamin; Suku; dll.)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples"> Masukkan karakteristik sampel riset untuk bidang ini</message>	
 	<message key="manager.setup.currentIssue"> Terbitan Terkini </message> 
 	<message key="manager.setup.customizingTheLook"> Langkah 5. Menyesuaikan Tampilan </message> 
 	<message key="manager.setup.customTags">Tag Khusus</message>
@@ -415,8 +409,6 @@
 	<message key="manager.setup.sponsorNoteDescription"> Teks ini akan ditampilkan di bawah judul "Sponsor" dan di atas nama dan url sponsor di bawah "Sponsor Jurnal" di halaman "Tentang Kami".</message>	
 <message key="manager.setup.sponsorsDescription"> Nama organisasi (contoh: asosiasi ilmiah, universitas, koperasi, dll) yang memberikan sponsor ke jurnal, akan ditampilkan di Tentang Kami dan bisa ditampilkan dengan catatan pemberitahuan.</message> 
 	<message key="manager.setup.stepsToJournalSite">5 Langkah ke Website Jurnal </message>
-	<message key="manager.setup.subjectClassification"> Klasifikasi Subjek</message> 
-	<message key="manager.setup.subjectClassificationExamples">(contoh: klasifikasi Subjek Matematika; klasifikasi Perpustakaan Kongres)</message> 
 	<message key="manager.setup.subjectExamples">(contoh: Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</message>	
 <message key="manager.setup.subjectKeywordTopic">Kata Kunci</message>	<message key="manager.setup.subjectProvideExamples"> Masukkan kata kunci atau topik sebagai petunjuk untuk Penulis</message>
 	<message key="manager.setup.submissionEmailLogging"> Menyimpan log tindakan yang berkaitan dengan naskah di halaman Sejarah.</message> 

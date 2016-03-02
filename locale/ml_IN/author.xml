@@ -72,7 +72,6 @@
 	<message key="author.submit.submissionSupportingAgencies">പിന്തുണയ്ക്കുന്ന ഏജന്‍സികള്‍</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">ഈ സമര്‍പ്പണത്തിന്റെ പ്രവര്‍ത്തനങ്ങളെ പിന്തുണയ്ക്കുന്ന അല്ലെങ്കില്‍ അതിനായി ധനനിക്ഷേപം നടത്തുന്ന ഏജന്‍സികളെ തിരിച്ചറിയുക.</message>
 	<message key="author.submit.coverageInstructions">ജിയോ-സ്പേഷ്യല്‍ ലൊക്കേഷന്‍,ക്രൊനോളജിക്കല്‍ അല്ലെങ്കില്‍ ഹിസ്റ്റോറിക്കല്‍ കവറേജ് അല്ലെങ്കില്‍ ഗവേഷണ മാതൃകയുടെ സ്വഭാവവിശേഷങ്ങള്‍ എന്നിവയെ സൂചിപ്പിക്കുന്നു.</message>
-	<message key="author.submit.subjectClassInstructions">ക്ലാസിഫിക്കേഷന്‍ ടേംസ് തിരഞ്ഞെടുക്കുന്നതിനായി ഹൈപ്പര്‍ലിങ്ക്ഡ് ക്ലാസിഫിക്കേഷന്‍ സിസ്റ്റം ഉപയോഗിക്കുക,ഉചിതമെങ്കില്‍ നമ്പരുകളും.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Additional codes</a>.]]></message>
 	<message key="author.submit.form.authorRequired">കുറഞ്ഞത് ഒരു ലേഖകനെങ്കിലും ആവശ്യമാണ്.</message>
 	<message key="author.submit.form.authorRequiredFields">ഒരോ ലേഖകന്റെയും ആദ്യനാമം, അവസാന നാമം, ഇ-മെയില്‍ അഡ്രസ്സ് എന്നിവ ആവശ്യമാണ്.</message>

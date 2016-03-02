@@ -91,9 +91,9 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 
 		// Subject
 		$subjects = array_merge_recursive(
-				(array) $article->getDiscipline(null),
-				(array) $article->getSubject(null),
-				(array) $article->getSubjectClass(null));
+			(array) $article->getDiscipline(null),
+			(array) $article->getSubject(null)
+		);
 		$this->_addLocalizedElements($dc11Description, 'dc:subject', $subjects);
 
 		// Description
@@ -219,11 +219,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		}
 
 		// Coverage
-		$coverage = array_merge_recursive(
-				(array) $article->getCoverageGeo(null),
-				(array) $article->getCoverageChron(null),
-				(array) $article->getCoverageSample(null));
-		$this->_addLocalizedElements($dc11Description, 'dc:coverage', $coverage);
+		$this->_addLocalizedElements($dc11Description, 'dc:coverage', (array) $article->getCoverage(null));
 
 		// Rights
 		$this->_addLocalizedElements($dc11Description, 'dc:rights', $journal->getSetting('copyrightNotice'));

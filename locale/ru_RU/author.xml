@@ -67,7 +67,6 @@
 	<message key="author.submit.deleteAuthor">Удалить автора</message>
 	<message key="author.submit.submissionIndexingDescription">Укажите ключевые слова для индексирования этой статьи, отделяя их друг от друга точками с запятой (слово1; слово2; слово3).</message>
 	<message key="author.submit.coverageInstructions">Опишите географический и исторический (временной) охват Вашего исследования.</message>
-	<message key="author.submit.subjectClassInstructions">Используйте классификационную схему, указанную под линком внизу, для выбора подходящей категории (или классификационного номера) для Вашего исследования.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Russian=ru. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Дополнительные коды</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Требуется минимум один автор.</message>
 	<message key="author.submit.form.authorRequiredFields">Нужно ввести имя, фамилию и электронный адрес каждого автора.</message>

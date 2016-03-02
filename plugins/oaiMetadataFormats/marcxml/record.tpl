@@ -82,19 +82,9 @@
 		<subfield code="a">{$language}</subfield>
 	</datafield>
 
-	{if $article->getCoverageGeo($journal->getPrimaryLocale())}
+	{if $article->getCoverage($journal->getPrimaryLocale())}
 		<datafield tag="500" ind1=" " ind2=" ">
-			<subfield code="a">{$article->getCoverageGeo($journal->getPrimaryLocale())|escape}</subfield>
-		</datafield>
-	{/if}
-	{if $article->getCoverageChron($journal->getPrimaryLocale())}
-		<datafield tag="500" ind1=" " ind2=" ">
-			<subfield code="a">{$article->getCoverageChron($journal->getPrimaryLocale())|escape}</subfield>
-		</datafield>
-	{/if}
-	{if $article->getCoverageSample($journal->getPrimaryLocale())}
-		<datafield tag="500" ind1=" " ind2=" ">
-			<subfield code="a">{$article->getCoverageSample($journal->getPrimaryLocale())|escape}</subfield>
+			<subfield code="a">{$article->getCoverage($journal->getPrimaryLocale())|escape}</subfield>
 		</datafield>
 	{/if}
 

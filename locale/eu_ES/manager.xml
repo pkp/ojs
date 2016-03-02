@@ -144,13 +144,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Zuzenketak egiteko instrukzioak eskuragarri izango dituzte Zuzentzaileek, Egileek, eta Ataleko editoreek Bidalketen edizioaren fasean. Behean ematen da instrukzio multzo lehenetsi bat, HTML formatuan. Edozein unetan aldatu edo ordeztu dezake Aldizkariaren kudeatzaileak (HTML formatuan nahiz testu arruntean).</message>
 	<message key="manager.setup.copyrightNotice">Copyright informazioa</message>
 	<message key="manager.setup.coverage">Estaldura</message>
-	<message key="manager.setup.coverageChronExamples">(Adib., Errenazimentua; Jurasikoa; Hirugarren hiruhilekoa; etab.)</message>
-	<message key="manager.setup.coverageChronProvideExamples">Eman eremu honi buruzko termino kronologiko edo historiko esanguratsuak</message>
 	<message key="manager.setup.coverageDescription">Kokapen geo-espaziala, garai kronologikoa edo historikoa, eta/edo ikerketaren ezaugarriak.</message>
-	<message key="manager.setup.coverageGeoExamples">(Adib.; Penintsula iberiarra; Estratosfera; Baso boreala; etab.)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Eman eremu honi buruzko termino geo-espazial edo geografiko esanguratsuak</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(Adib., Adina; Generoa; Etnia; etab.)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">Eman ikerketaren ezaugarrien adibideak</message>
 	<message key="manager.setup.currentIssue">Uneko zenbakia</message>
 	<message key="manager.setup.customizingTheLook">5. urratsa. Aldizkariaren itxura</message>
 	<message key="manager.setup.customTags">Etiketa pertsonalizatuak</message>
@@ -353,8 +347,6 @@
 	<message key="manager.setup.sponsors">Erakunde babesleak</message>
 	<message key="manager.setup.sponsorsDescription">Aldizkariari babesa eta laguntza ematen dioten erakundeen izena (adib., elkarte akademikoak, unibertsitateko sailak, kooperatibak, etab.) Aldizkariari buruz orrian agertuko da, nahi izanez gero, eskerrak emanez.</message>
 	<message key="manager.setup.stepsToJournalSite">Aldizkariaren webgunea konfiguratzeko bost urrats</message>
-	<message key="manager.setup.subjectClassification">Gaikako sailkapena</message>
-	<message key="manager.setup.subjectClassificationExamples">(Adib., Matematiken gaikako sailkapena; Kongresuko Liburutegiko sailkapena)</message>
 	<message key="manager.setup.subjectExamples">(Adib., Fotosintesia; Zulo beltzak; Lau koloretako maparen teorema; Bayes-en teorema)</message>
 	<message key="manager.setup.subjectKeywordTopic">Gako-hitzak</message>
 	<message key="manager.setup.subjectProvideExamples">Eman gako-hitzen edo gaien adibideak, egileentzako laguntza gisa</message>
@@ -638,7 +630,6 @@
 	<message key="manager.sections.confirmDelete">Ziur al zaude atal hau behin betiko ezabatu nahi duzula?</message>
 	<message key="manager.sections.alertDelete">Atal hau ezabatu aurretik, bertan argitaratutako artikuluak beste atal batzuetara mugitu behar dituzu.</message>
 	<message key="manager.setup.journalThumbnail">Aldizkariaren miniatura</message>
-	<message key="manager.setup.subjectClassificationURLValid">Mesedez, eman urruneko URL baliodun bat (sartu http://)</message>
 	<message key="manager.setup.useThumbnail">Miniatura</message>
 	<message key="manager.setup.categories">Kategoriak</message>
 	<message key="manager.setup.categories.description">Aukeratu kategoria egokienak goian zerrendatutako multzotik. Irakurleek kategoriaren arabera arakatu ahal izango dute aldizkari osotik.</message>

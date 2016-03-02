@@ -101,12 +101,8 @@
 	<message key="article.suppFiles">Supplerende fil(er)</message>
 	<message key="article.suppFilesAbbrev">Supp. filer</message>
 	<message key="article.discipline">Akademisk fagområde og underfagområder</message>
-	<message key="article.subjectClassification">Emneklassificering</message>
 	<message key="article.subject">Nøgleord</message>
 	<message key="article.coverage">Dækning</message>
-	<message key="article.coverageGeo">Geografisk dækning</message>
-	<message key="article.coverageChron">Kronologisk eller historisk dækning</message>
-	<message key="article.coverageSample">Karaktertræk ved forskningseksempel</message>
 	<message key="article.type">Type, metode eller fremgangsmåde</message>
 	<message key="article.language">Sprog</message>
 	<message key="article.sectionEditor">SE</message>
@@ -351,8 +347,6 @@ Forfattere, der publicerer deres værker via dette tidsskrift, accepterer følge
 	 <li>Forfattere kan indgå flere separate kontraktlige aftaler om ikke-eksklusiv distribution af tidsskriftets publicerede version af værket (f.eks. sende det til et institutionslager eller udgive det i en bog), med en anerkendelse af værkets første publicering i nærværende tidsskrift.</li>
 	 <li>Forfattere har ret til og opfordres til at publicere deres værker online (f.eks. i institutionslagre eller på deres websted) forud for og under manuskriptprocessen, da dette kan føre til produktive udvekslinger, samt tidligere og større citater fra publicerede værker (se <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Tidsskriftet bruger et emneklassificeringssystem, der findes på nettet.<br />
-Titel på klassificeringssystem]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Hvis indholdet af dette tidsskrift skal indekseres i et globalt distribueret system bestående af opslagsdatabaser, skal du <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrere</a> tidsskriftets URL-adresse i værktøjet Public Knowledge Project, der bruges til harvesting af metadata<a href="http://pkp.sfu.ca/harvester/" target="_blank"></a>. Dette værktøj indsamler metadata fra de enkelte indekserede elementer i dette tidsskrift, hvilket sikrer præcis og kollektiv søgning blandt de opslagswebsteder, der overholder protokollen <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
 Vær opmærksom på, at hvis webstedsadministratoren allerede har registreret dette websted i PKP Harvester, indekseres tidsskriftet automatisk, og du behøver ikke registrere tidsskriftet.

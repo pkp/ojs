@@ -71,7 +71,6 @@
 	<message key="author.submit.submissionSupportingAgencies">Mitwirkung und Unterstützung</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Benennen Sie Personen, Organisationen oder Einrichtungen, die zu der Ihrer Einreichung zugrundeliegenden Arbeit beigetragen haben oder die die zugrundeliegende Arbeit finanziert oder unterstützt haben. Trennen Sie mit einem Semikolon (z.B. John Doe, Metro University; Master University, Department of Computer Science).</message>
 	<message key="author.submit.coverageInstructions">Bezieht sich auf den räumlich-geographischen sowie den zeitlichen Bereich und auf die Eigenschaften des Forschungsgegenstandes.</message>
-	<message key="author.submit.subjectClassInstructions">Benutzen Sie die verlinkte Schlagwortsystematik zur Auswahl von Klassifizierungsbegriffen und, falls zutreffend, -nummern.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[deutsch=de; englisch=en; französisch=fr; spanisch=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">zusätzliche Kodierungen</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Es muss mindestens ein/e Autor/in angegeben werden.</message>
 	<message key="author.submit.form.authorRequiredFields">Vorname, Name und E-Mail-Adresse für jede/n Autor/in erforderlich</message>

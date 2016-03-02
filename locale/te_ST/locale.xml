@@ -224,7 +224,6 @@
 	<message key="article.suppFiles">ßüpplèmèñtårý Fîlè(þ)</message>
 	<message key="article.suppFilesAbbrev">ßüpp. fîlèþ</message>
 	<message key="article.discipline">Æçåðèmîç ðîþçîplîñè åñð þüb-ðîþçîplîñèþ</message>
-	<message key="article.subjectClassification">ßübjèçt çlåþþîfîçåtîóñ</message>
 	<message key="article.subject">Kèýwórðþ</message>
 	<message key="article.coverage">Çóvèrågè</message>
 	<message key="article.coverageGeo">Gèó-þpåtîål çóvèrågè</message>
@@ -854,10 +853,6 @@
 	<message key="manager.setup.disciplineDescription">Üþèfül whèñ jóürñål çróþþèþ ðîþçîplîñårý bóüñðårîèþ åñð/ór åüthórþ þübmît mültîðîþçîplîñårý îtèmþ.</message>
 	<message key="manager.setup.disciplineProvideExamples">Próvîðè èxåmplèþ óf rèlèvåñt åçåðèmîç ðîþçîplîñèþ fór thîþ jóürñål</message>
 	<message key="manager.setup.disciplineExamples">(É.g., Hîþtórý; Éðüçåtîóñ; ßóçîólógý; Pþýçhólógý; Çültürål ßtüðîèþ; Låw)</message>
-	<message key="manager.setup.subjectClassification">ßübjèçt Çlåþþîfîçåtîóñ</message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Jóürñål wîll üþè å þübjèçt çlåþþîfîçåtîóñ þýþtèm åvåîlåblè óñ thè wèb.<br />
-Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
-	<message key="manager.setup.subjectClassificationExamples">(É.g., Måthèmåtîçþ ßübjèçt Çlåþþîfîçåtîóñ; Lîbrårý óf Çóñgrèþþ Çlåþþîfîçåtîóñ)</message>
 	<message key="manager.setup.subjectKeywordTopic">Kèýwórðþ</message>
 	<message key="manager.setup.subjectProvideExamples">Próvîðè èxåmplèþ óf kèýwórðþ ór tópîçþ åþ å güîðè fór åüthórþ</message>
 	<message key="manager.setup.subjectExamples">(É.g., Phótóþýñthèþîþ; Blåçk Hólèþ; Fóür-Çólór Måp Próblèm; Båýèþîåñ Thèórý)</message>
@@ -1527,7 +1522,6 @@ Låtèþt îþ ðåtè óf móþt rèçèñtlý åççèptèð rèvîèw.<br/>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Îðèñtîfý ågèñçîèþ thåt próvîðèð füñðîñg ór þüppórt fór thè wórk prèþèñtèð îñ thîþ þübmîþþîóñ.</message>
 	<message key="author.submit.agencies">Ægèñçîèþ</message>
 	<message key="author.submit.coverageInstructions">Rèfèrþ tó gèó-þpåtîål lóçåtîóñ, çhróñólógîçål ór hîþtórîçål çóvèrågè, åñð/ór çhåråçtèrîþtîçþ óf rèþèårçh þåmplè.</message>
-	<message key="author.submit.subjectClassInstructions">Üþè thè hýpèrlîñkèð çlåþþîfîçåtîóñ þýþtèm tó þèlèçt çlåþþîfîçåtîóñ tèrmþ åñð, îf åppróprîåtè, ñümbèrþ.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Éñglîþh=èñ; Frèñçh=fr; ßpåñîþh=èþ. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Æððîtîóñål çóðèþ</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Æt lèåþt óñè åüthór îþ rèqüîrèð.</message>
 	<message key="author.submit.form.authorRequiredFields">Thè fîrþt ñåmè, låþt ñåmè, åñð èmåîl åððrèþþ óf èåçh åüthór îþ rèqüîrèð.</message>
@@ -2097,7 +2091,6 @@ Vålîðåtîóñ måý fåîl óñ þèårçh ÜRLþ thåt rèqüîrè póþtè
 	<message key="rt.metadata.pkp.primaryAuthor">Æüthór'þ ñåmè, åffîlîåtîóñ, çóüñtrý</message>
 	<message key="rt.metadata.pkp.discipline">Ðîþçîplîñè(þ)</message>
 	<message key="rt.metadata.pkp.subject">Kèýwórð(þ)</message>
-	<message key="rt.metadata.pkp.subjectClass">ßübjèçt çlåþþîfîçåtîóñ</message>
 	<message key="rt.metadata.pkp.abstract">Æbþtråçt</message>
 	<message key="rt.metadata.pkp.publisher">Òrgåñîzîñg ågèñçý, lóçåtîóñ</message>
 	<message key="rt.metadata.pkp.sponsors">ßpóñþór(þ)</message>
