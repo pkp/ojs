@@ -939,7 +939,7 @@ Aquesta prova pot contenir errors, per la qual cosa haureu de comprovar els URL 
 	 *
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished"><![CDATA[La tramesa no ha estat publicada anteriorment, ni tampoc no s’ha enviat anteriorment a una altra revista (o s’ha proporcionat una explicació a &#171;Comentaris a l’editor/a&#187;).]]></message>
-	<message key="default.journalSettings.checklist.fileFormat">El fitxer de la tramesa és en format Microsoft Word, RTF o WordPerfect.</message>
+	<message key="default.journalSettings.checklist.fileFormat">El fitxer de la tramesa és en format Microsoft Word, o RTF.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">S’han proporcionat els URL per a les referències sempre que ha estat possible.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">El text és en interlineat simple, utilitza un tipus de lletra de 12 punts i aplica cursiva en lloc de subratllat (excepte per a les adreces URL). Totes les il·lustracions, figures i taules s’han ubicat a la posició que els correspon, i no al final del text.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[El text compleix els requisits estilístics i bibliogràfics establerts a la secció &#171;<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Indicacions per als autors/es</a>&#187; de la pàgina &#171;Quant a la revista&#187;.]]></message>

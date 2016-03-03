@@ -916,7 +916,7 @@
 	 *預設-設定項目的預設設定
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">這份稿件之前尚未出版，也未曾有其他期刊考慮出版（或者在「給編者的意見」中已經給了一個說明）。</message>
-	<message key="default.journalSettings.checklist.fileFormat">稿件檔案是OpenOffice, Microsoft Word, RTF,或者WordPerfect的文件檔案格式</message>
+	<message key="default.journalSettings.checklist.fileFormat">稿件檔案是OpenOffice, Microsoft Word, 或者RTF的文件檔案格式</message>
 	<message key="default.journalSettings.checklist.addressesLinked"><![CDATA[如果可行的話，可提供線上閱讀參考文獻的網址，包括那些可開放閱讀版本的文獻。網址已經加上連結、可供點擊(例如，<a href="http://pkp.sfu.ca">http://pkp.sfu.ca</a>)。]]></message>
 	<message key="default.journalSettings.checklist.submissionAppearance">文字內容為單行行距；使用12pt字體大小；採用斜體而不用底線（除非是帶有網址）；而所有的圖解、圖示和表格都放在文中恰當位置，而非文末。</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[本文依循「期刊介紹」中<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">作者指引</a>所要求文體與書目格式。]]></message>
