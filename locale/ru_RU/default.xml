@@ -24,7 +24,7 @@
 	    *
 	    -->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Эта статья не была раньше опубликована, а также не представлена для рассмотрения и публикации в другом журнале (иначе объясните это в Примечаниях для Редактора).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Отправляемый материал представлен в формате OpenOffice, Microsoft Word, RTF или WordPerfect.</message>
+	<message key="default.journalSettings.checklist.fileFormat">Отправляемый материал представлен в формате OpenOffice, Microsoft Word или RTF.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">Интернет-ссылки представлены в виде полных URL.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Текст набран с одинарым межстрочным интервалом, шрифт Times New Roman, 12 pt; для выделения акцентов используется курсив, а не подчеркивание (кроме интернет-ссылок); все иллюстрации, графики и таблицы расположены в тексте там, где требуется по смыслу (а не в конце документа).</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Текст соответствует стилистическим и библиографческим требованиями <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Руководства для Авторов</a>, расположенном в разделе "О нас".]]></message>

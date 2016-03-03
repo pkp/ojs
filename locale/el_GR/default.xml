@@ -21,7 +21,7 @@
  
 <locale name="el_GR" full_name="ελληνικά">
         <message key="default.journalSettings.checklist.notPreviouslyPublished">Η υποβολή δεν έχει δημοσιευτεί εκ των προτέρων, ούτε έχει υποβληθεί σε άλλο περιοδικό για εξέταση (ή δεν έχει δοθεί εξήγηση στα Σχόλια προς τον επιμελητή).</message>
-        <message key="default.journalSettings.checklist.fileFormat">Το αρχείο υποβολής είναι σε μορφή αρχείου εγγράφου OpenOffice, Microsoft Word, RTF, ή WordPerfect.</message>
+        <message key="default.journalSettings.checklist.fileFormat">Το αρχείο υποβολής είναι σε μορφή αρχείου εγγράφου OpenOffice, Microsoft Word, ή RTF.</message>
         <message key="default.journalSettings.checklist.addressesLinked"><![CDATA[Όταν είναι διαθέσιμα, παρέχονται τα URL για πρόσβαση σε αναφορές online.]]></message>
         <message key="default.journalSettings.checklist.submissionAppearance">Το κείμενο έχει μονό διάκενο, χρησιμοποιεί γραμματοσειρά μεγέθους 12, χρησιμοποιεί όπου απαιτείται κείμενο σε πλάγια γραφή και όχι με υπογράμμιση (εκτός από τις διευθύνσεις URL) και όλες οι εικόνες, τα σχήματα και οι πίνακες τοποθετούνται εντός του κειμένου σε κατάλληλα σημεία, και όχι στο τέλος αυτού.</message>
         <message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Το κείμενο τηρεί τις στυλιστικές και βιβλιογραφικές απαιτήσεις που ορίζονται στις Οδηγίες πρους τους συγγραφείς <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">  </a>, που βρίσκονται στο μενού "Σχετικά με το περιοδικό".]]></message>         

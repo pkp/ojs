@@ -14,7 +14,7 @@
 
 <locale name="ja_JP" full_name="日本語">
   <message key="default.journalSettings.checklist.notPreviouslyPublished">投稿物はこれまでに出版されておらず、また、別の雑誌に投稿されてもいない（または、編集者へのコメント欄で事情を説明している）。</message>
-  <message key="default.journalSettings.checklist.fileFormat">投稿ファイルは、Microsoft Word、RTF、またはWordPerfect文書ファイルフォーマットのいずれかである。 </message>
+  <message key="default.journalSettings.checklist.fileFormat">投稿ファイルは、Microsoft Word、またはRTF文書ファイルフォーマットのいずれかである。 </message>
   <message key="default.journalSettings.checklist.addressesLinked">可能な場合、参考文献のURLが提供されている。</message>
   <message key="default.journalSettings.checklist.submissionAppearance">テキストはシングルスペースで書かれており、12ポイントのフォントサイズを使用しており、下線ではなくイタリック体を使用しており（URLアドレスを除く）、すべてのイラスト、図、表は最後にまとめて示すのではなく、テキスト中の適当な場所に埋め込んでいる。</message>
   <message key="default.journalSettings.checklist.bibliographicRequirements">

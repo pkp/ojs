@@ -23,7 +23,7 @@
 	 *
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Příspěvek nebyl dosud publikován ani není v současnosti zaslán do jiného časopisu pro posouzení (nebo bylo podáno vysvětlení v Komentářích pro editora).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Soubor příspěvku je ve formátu OpenOffice, Microsoft Word, RTF nebo WordPerfect.</message>
+	<message key="default.journalSettings.checklist.fileFormat">Soubor příspěvku je ve formátu OpenOffice, Microsoft Word nebo RTF.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">URL odkazy na reference jsou uvedeny všude, kde to bylo možné.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Text má řádkování 1; písmo má velikost 12; je použita spíše kurzíva než podtržení (kromě url adres);všechny ilustrace tabulky a obrázky jsou umístěny spíše v textu, než na konci.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Text odpovídá stylistickým a bibliografickým požadavkům uvedeným v <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Pokynech pro autory</a>, které se nachází na stránce O časopisu.]]></message>

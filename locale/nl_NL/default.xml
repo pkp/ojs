@@ -24,7 +24,7 @@
 	 *
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">De inzending is niet eerder gepubliceerd en is ook niet in overweging bij een ander tijdschrift (tenzij een uitleg is gegeven bij Opmerkingen voor de redacteur).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Het ingezonden bestand is in OpenOffice, Microsoft Word, RTF of WordPerfect document bestandsformaat.</message>
+	<message key="default.journalSettings.checklist.fileFormat">Het ingezonden bestand is in OpenOffice, Microsoft Word, of RTF document bestandsformaat.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">Waar beschikbaar zijn URLs voor de referenties toegevoegd</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">De tekst is enkelvoudig gespatieerd, gebruikt een 12-punts lettergrootte, gebruikt schuingedrukte tekst in plaats van onderstreepte (behalve bij URL adressen) en alle illustraties, figuren en tabellen staan op de juiste plek in de tekst en niet aan het einde.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[De tekst voldoet aan de stilistische en bibliografische eisen zoals geformuleerd in <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Richtlijnen voor auteurs</a>, te vinden bij Over dit tijdschrift.]]></message>

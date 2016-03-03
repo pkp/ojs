@@ -26,7 +26,7 @@
            *
            -->
        <message key="default.journalSettings.checklist.notPreviouslyPublished">Це подання раніше не було опубліковане і не надсилалося до розгляду редакціям інших журналів (або у коментарях для редактора нижче дані необхідні пояснення).</message>
-       <message key="default.journalSettings.checklist.fileFormat">Файл подання є документом у форматі Microsoft Word, OpenOffice, RTF або WordPerfect.</message>
+       <message key="default.journalSettings.checklist.fileFormat">Файл подання є документом у форматі Microsoft Word, OpenOffice, або RTF.</message>
        <message key="default.journalSettings.checklist.addressesLinked">Інтернет-посилання у тексті супроводжуються повними коректними адресами URL.</message>
        <message key="default.journalSettings.checklist.submissionAppearance">Текст набраний 12-м розміром кеглю з одинарним міжрядковим інтервалом; авторські акценти виділені курсивом, а не підкресленням (всюди, крім адрес URL); всі ілюстрації, графіки та таблиці розміщені безпосередньо у тексті, там, де вони повинні бути за змістом (а не у кінці документу).</message>
        <message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Текст відповідає вимогам до стилістики та бібліографії, викладеним у <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Керівництві для авторів</a> розділу "Про журнал".]]></message>

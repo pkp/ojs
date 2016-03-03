@@ -14,7 +14,7 @@
  
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">La soumission n'a pas déjà été publiée, et elle n'est pas considérée actuellement par une autre revue (ou une explication a été fournie dans Commentaires au rédacteur).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Le fichier de la soumission est dans un format de fichier de document OpenOffice, Microsoft Word, RTF, ou WordPerfect.</message>
+	<message key="default.journalSettings.checklist.fileFormat">Le fichier de la soumission est dans un format de fichier de document OpenOffice, Microsoft Word, ou RTF.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Le texte est à simple interligne; utilise une police à 12 points; employe l'italique plutôt que le souligné (sauf pour les adresses URL); et place toutes les illustrations, figures, et tableaux aux endroits appropriés dans le texte plutôt qu'à la fin.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Le texte se conforme aux exigences stylistiques et bibliographiques décrites dans <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Directives aux auteurs</a>, qui se trouve dans « À propos de la revue ».]]></message>
 	<message key="default.journalSettings.privacyStatement">Les noms et courriels saisis dans le site de cette revue seront utilisés exclusivement aux fins indiquées par cette revue et ne serviront à aucune autre fin, ni à toute autre partie.</message>

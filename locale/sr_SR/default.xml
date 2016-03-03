@@ -24,7 +24,7 @@
 	 *
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Rad koji prilažem nije ranije objavljivan, niti se nalazi u procesu razmatranja u drugom časopisu (ili je objašnjenje obezbeđeno u komentarima uredniku).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Fajl koji prilažem je u formatu OpenOffice, Microsoft Word, RTF, ili WordPerfect.</message>
+	<message key="default.journalSettings.checklist.fileFormat">Fajl koji prilažem je u formatu OpenOffice, Microsoft Word, ili RTF.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">Gde je moguće URL-ovi referenci su priloženi.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Tekst ima prored 1, korisi font veličine 12, koristi kurziv umesto podvlačenja (izuzev URL adresa) i ilustracije, tabele i prilozi su smešteni unutar teksta na odgovarajućim mestima na na kraju.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Tekst sa uputstvima vezanim za stil i bibliografske zahtevime je u <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Uputstva za autore</a>, koja se nalaze u sekciji "O časopisu".]]></message>

@@ -25,7 +25,7 @@
 	 *
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Propunerea nu a mai fost publicată şi nici nu a mai fost dată spre evaluare altei reviste (sau a fost dată o explicaţie la comentarii către editor).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Fişierul propunerii este în format Microsoft Word, RTF, sau WordPerfect.</message>
+	<message key="default.journalSettings.checklist.fileFormat">Fişierul propunerii este în format Microsoft Word, sau RTF.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">Acolo unde sunt disponibile, au fost puse URL-urile pentru referenţiere.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Textul este la un rând; font de 12; implică mai degrabă italice decât sublinieri (cu excepţia adreselor URL) iar toate ilustraţiile, figurile şi tabelele sunt plasate în corpul textului la punctele corespunzătoare decât la final.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Textul este conform cu cerinţele stilistice şi bibliografice descrise în <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">îndrumările pentru autori</a>, care pot fi găsite la secţiunea „despre” a revistei.]]></message>

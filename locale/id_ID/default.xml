@@ -16,7 +16,7 @@
 	<message key="section.default.abbrev">ART</message> 
 	<message key="section.default.policy"></message>
 	<message key="default.journalSettings.checklist.notPreviouslyPublished"> Penyerahan belum diterbitkan sebelumnya, atau sedang dalam pertimbangan jurnal lain (atau sebuah penjelasan belum disediakan dalam komentar kepada editor).</message> 
-	<message key="default.journalSettings.checklist.fileFormat"> File naskah dalam format file dokumen OpenOffice, Microsoft Word, RTF, atau WordPerfect.</message>
+	<message key="default.journalSettings.checklist.fileFormat"> File naskah dalam format file dokumen OpenOffice, Microsoft Word, atau RTF.</message>
 	<message key="default.journalSettings.checklist.addressesLinked"> Ketika tersedia, URLs untuk referensi telah disediakan.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance"> Teks 1 spasi; font 12; italic; tidak digaribawahi (kecuali alamat URL); dan semua ilustrasi, figur, dan tabel yang ditempatkan di dalam teks pada poin yang tepat, jangan di akhir.</message> 
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Teks yang mematuhi persyaratan mengenai perpustakaan dan gaya bahasa digambarkan secara garis besar di <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Petunjuk Penulis</a>, yang akan ditemukan dalam halaman Tentang Kami.]]></message> 

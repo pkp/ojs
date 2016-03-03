@@ -13,7 +13,7 @@
   -->
 
 <locale full_name="Farsi" name="fa_IR" >
-	<message key="default.journalSettings.checklist.fileFormat" >فایل ساب میشن به فرمات OpenOffice, Microsoft Word, RTF, یا WordPerfect میباشد.</message>
+	<message key="default.journalSettings.checklist.fileFormat" >فایل ساب میشن به فرمات OpenOffice, Microsoft Word, یا RTF میباشد.</message>
 	<message key="default.journalSettings.openAccessPolicy" >این مجله دستیابی فوری به محتوی خود بصورت آزاد دارا میباشد به این امید که پژوهشی که بصورت عمومی در دسترس باشد موجب تبادل بیشتر دانش در مقیاس جهانی میشود</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy" >نویسندگان مجازند و توصیه میشود که مقالات این مجله را  در سایت های شخصی یا سازمانی به نمایش بگذارند.البته به شرط ذکر جزئیات کامل مرجع آن</message>
 	<message key="default.journalSettings.copyeditInstructions" ><![CDATA[مرحله ویراستاری به منظور بهبود گرامر ، جمله نگاری ، وفرمات مقاله و روانی آن میباشد. این آخرین فرصت برای نویسنده نیز هست تا تغییرات حجیم در مقاله خود بدهد ، چرا که در مراحل بعدی فقط اجازه اصلاحات املائی و فرمات داده میشود. 

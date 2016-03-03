@@ -24,7 +24,7 @@
 	 *
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">该投稿还未被发表过，也没有被其他杂志接受(或者在评论中有一个解释已经提供给编辑）.</message>
-	<message key="default.journalSettings.checklist.fileFormat">投稿文件的文件格式可以是OpenOffice, Microsoft Word, RTF, 或者WordPerfect document.</message>
+	<message key="default.journalSettings.checklist.fileFormat">投稿文件的文件格式可以是OpenOffice, Microsoft Word, 或者RTF.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">在有条件的情况下，提供参考文献的URL.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">该文本为单倍行距;字号大小为12点; 采用斜体, 而不是强调 (除非获得URL 地址); 和所有的插图, 图片,以及表格被放置在文本在适当的位置而不是在结束.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[该文本符合<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">作者指南</a>里文体和书目的要求,作者指南可以在关于期刊里找到.]]></message>

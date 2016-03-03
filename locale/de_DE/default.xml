@@ -23,7 +23,7 @@
 	 *
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Der Beitrag ist bisher unveröffentlicht und wurde auch keiner anderen Zeitschrift vorgelegt (andernfalls ist eine Erklärung in "Kommentare für die Redaktion" beigefügt).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Die Datei liegt im Format Microsoft Word, RTF oder WordPerfect vor.</message>
+	<message key="default.journalSettings.checklist.fileFormat">Die Datei liegt im Format Microsoft Word, oder RTF vor.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">Soweit möglich, wurden den Literaturangaben URLs beigefügt.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Der Text liegt mit einfachem Zeilenabstand vor, Schriftgröße 12, gegebenenfalls kursiv, nicht unterstrichen (mit Ausnahme der URL-Adressen); alle Illustrationen, Grafiken und Tabellen sind an geeigneter Stelle im Text eingefügt und nicht am Textende.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Der Text folgt den stilistischen und bibliografischen Vorgaben in<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines"> Richtlinien für Autor/innen</a> , die unter "Über uns" zu finden sind.]]></message>

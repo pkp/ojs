@@ -14,7 +14,7 @@
  
 <locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Bài nộp chưa từng được xuất hoặc chưa từng được gửi cho tạp chí khác (hoặc được giải thích trong Lời bình gửi BTV).</message>
-	<message key="default.journalSettings.checklist.fileFormat">File bài nộp ở định dạng OpenOffice, Microsoft Word, RTF, or WordPerfect.</message>
+	<message key="default.journalSettings.checklist.fileFormat">File bài nộp ở định dạng OpenOffice, Microsoft Word, or RTF.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Tài liệu dùng khoảng cách dòng đơn; kích thước font 12 point; chữ in nghiêng thay cho gạch dưới (trừ trường hợp địa chỉ trên Internet); tất cả minh họa, biểu đồ và bảng được đặt ở các vị trí phù hợp trong bài thay vì đặt ở cuối bài viết.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Tài liệu đáp ứng các yêu cầu về phong cách và thư mục được nêu trong <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Hướng dẫn dành cho Tác giả</a>, ở phần Giới thiệu Tạp chí.]]></message>
 	<message key="default.journalSettings.privacyStatement">Tên và địa chỉ email được nhập vào các mẫu biểu trên tạp chí này chỉ được sử dụng vào các mục đích đã được tuyên bố rõ ràng và sẽ không được cung cấp cho bất kỳ bên thứ ba nào khác hay dùng vào bất kỳ mục đích nào khác.</message>

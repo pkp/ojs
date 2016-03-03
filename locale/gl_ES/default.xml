@@ -16,7 +16,7 @@
  
 <locale name="gl_ES" full_name="Galego">
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">A petición non foi publicada anteriormente, nen se presentou a outra revista (ou se achegou unha explicación en Comentarios ao editor).</message>
-	<message key="default.journalSettings.checklist.fileFormat">O ficheiro enviado está en formato OpenOffice, Microsoft Word, RTF, o WordPerfect.</message>
+	<message key="default.journalSettings.checklist.fileFormat">O ficheiro enviado está en formato OpenOffice, Microsoft Word, o RTF.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">O texto ten interliñado simple; o tamaño da fonte é 12 puntos; se usa letra cursiva en vez de suliñado (agás os enderezos URL); e todas as ilustracións, figuras e táboas están dentro do texto no lugar que lles corresponde e non ao final.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[O texto cumpre cos requisitos bibliográficos e de estilo asinalados nas <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Normas para autores/as</a>, que se poden achar en Sobre a revista.]]></message>
 	<message key="default.journalSettings.privacyStatement">Os nomes e enderezos de correo electrónicos inseridos nesta revista usaranse exclusive para as fins declaradas por esta revista e non estarán disponibeis para nengum outro propósito ou outra persoa.</message>

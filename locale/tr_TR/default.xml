@@ -24,7 +24,7 @@
 	 *
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Gönderilen yazı daha önceden yayınlanmamış ve yayımlanmak üzere herhangi bir dergiye değerlendirilmek üzere sunulmamıştır (Yazar Rehberi'nde detaylı açıklama verimiştir).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Gönderi dosyası OpenOffice, Microsoft Word, RTF veya WordPerfect dokümanı dosyası biçimindedir.</message>
+	<message key="default.journalSettings.checklist.fileFormat">Gönderi dosyası OpenOffice, Microsoft Word veya RTF dokümanı dosyası biçimindedir.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">Burada mevcut başvurular için URL'ler sağlanmıştır.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Metin tek satırlı, 10 punto, altı çizilme yerine italik olarak vurgulanmış (geçerli URL adresleri ile) ve tüm şekil, resim ve tablolar sayfa sonu yerien metin içinde uygun noktalara yerleştirilmiştir. Baskı için, resimlerin kaliteli kopyalarını ek dosya olarak gönderiniz. Gönderilen dosyanın boyutu çok fazla olur ise, sistem almayabilir. Böyle durumlarda yazıyı bölüp, diğer bölümleri ek dosya olarak tek, tek gönderebilirsiniz.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Buraya eklenen sitil ve bibliyografk gereksinimler Dergi Hakkında kısmındaki <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Yazar Rehberi</a>'nden görülebilir.]]></message>
