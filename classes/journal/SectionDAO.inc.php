@@ -258,8 +258,8 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $contextId int optional
 	 */
 	function deleteById($sectionId, $contextId = null) {
-		$sectionEditorsDao = DAORegistry::getDAO('SectionEditorsDAO');
-		$sectionEditorsDao->deleteBySectionId($sectionId, $contextId);
+		$subEditorsDao = DAORegistry::getDAO('SubEditorsDAO');
+		$subEditorsDao->deleteBySectionId($sectionId, $contextId);
 
 		// Remove articles from this section
 		$articleDao = DAORegistry::getDAO('ArticleDAO');

@@ -53,19 +53,19 @@ class SectionGridHandler extends SetupGridHandler {
 
 		// Elements to be displayed in the grid
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$sectionEditorsDao = DAORegistry::getDAO('SectionEditorsDAO');
+		$subEditorsDao = DAORegistry::getDAO('SubEditorsDAO');
 		$sectionIterator = $sectionDao->getByJournalId($journal->getId());
 
 		$gridData = array();
 		while ($section = $sectionIterator->next()) {
 			// Get the section editors data for the row
-			$assignedSectionEditors = $sectionEditorsDao->getBySectionId($section->getId(), $journal->getId());
-			if(empty($assignedSectionEditors)) {
+			$assignedSubEditors = $subEditorsDao->getBySectionId($section->getId(), $journal->getId());
+			if(empty($assignedSubEditors)) {
 				$editorsString = __('common.none');
 			} else {
 				$editors = array();
-				foreach ($assignedSectionEditors as $sectionEditor) {
-					$editors[] = $sectionEditor->getLastName();
+				foreach ($assignedSubEditors as $subEditor) {
+					$editors[] = $subEditor->getLastName();
 				}
 				$editorsString = implode(', ', $editors);
 			}

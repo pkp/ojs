@@ -114,7 +114,6 @@ class Application extends PKPApplication {
 			'RoleDAO' => 'classes.security.RoleDAO',
 			'ScheduledTaskDAO' => 'lib.pkp.classes.scheduledTask.ScheduledTaskDAO',
 			'SectionDAO' => 'classes.journal.SectionDAO',
-			'SectionEditorsDAO' => 'classes.journal.SectionEditorsDAO',
 			'StageAssignmentDAO' => 'lib.pkp.classes.stageAssignment.StageAssignmentDAO',
 			'SubmissionEventLogDAO' => 'classes.log.SubmissionEventLogDAO',
 			'SubmissionFileDAO' => 'classes.article.SubmissionFileDAO',
@@ -218,14 +217,6 @@ class Application extends PKPApplication {
 			}
 		}
 		return 'context_id';
-	}
-
-	/**
-	 * Get the DAO for ROLE_ID_SUB_EDITOR roles.
-	 * @return DAO
-	 */
-	static function getSubEditorsDAO() {
-		return DAORegistry::getDAO('SectionEditorsDAO');
 	}
 
 	/**
