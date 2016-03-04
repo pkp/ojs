@@ -12,7 +12,6 @@
   -->
 
 <locale name="en_US" full_name="U.S. English">
-	<message key="manager.workflow.contentIndexing">Indexing</message>
 	<message key="manager.website.archiving">Archiving</message>
 	<message key="manager.emails.confirmResetAll">Are you sure you want to reset all email templates in this journal? You will lose any customizations you have made.</message>
 	<message key="manager.files.note">Note: The Files Browser is an advanced feature that allows the files and directories associated with a journal to be viewed and manipulated directly.</message>
