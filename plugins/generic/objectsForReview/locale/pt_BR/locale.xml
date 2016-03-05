@@ -4,14 +4,16 @@
 <!--
   * @file plugins/generic/objectsForReview/locale/pt_BR/locale.xml
   *
-  * Copyright (c) 2013-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Objects for review plugin localization strings for the pt_BR (Português (Brasil)) locale.
   -->
 
 <locale name="pt_BR" full_name="Português (Brasil)">
+
+	<!-- Objects For Review Plug-In -->
 	<message key="plugins.generic.objectsForReview.displayName">Revisão de Objetos</message>
 	<message key="plugins.generic.objectsForReview.reminderTask.name">Lembrete de objetos para Revisão</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorAssigned">Autor designado para revisão do objeto.</message>
