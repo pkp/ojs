@@ -844,7 +844,7 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="sectionEditor.review.enrollReviewer">Cadastrar usuário existente como avaliador</message>
 	<message key="submission.layout.imageInvalid">Formato de imagem inválido. Formatos aceitáveis são .gif, .jpg ou .png.  Verifique as configurações de MimeType do servidor e permissões de pastas.</message>
 	<message key="reviewer.article.restrictedFileAccess">Os documentos poderão ser visualizados somente após assumir a tarefa de avaliação</message>
-	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Declare se há conflito de interesses com relação à esta submissão (veja a <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Política de Conflito de Interesses</a>).]]></message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Declare se há conflito de interesses com relação a esta submissão (veja a <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Política de conflito de interesses</a>).]]></message>
 	<message key="reviewer.competingInterests">Conflito de Interesses</message>
 	<message key="submission.layout.noLayoutFile">Nenhum (Enviar versão final da edição de texto como Versão de Prova antes de enviar a solicitação)</message>
 	<message key="submission.layout.referenceLinking">URLs para Referências</message>
@@ -929,6 +929,8 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="article.fontSize.medium.altText">Médio</message>
 	<message key="article.fontSize.large.altText">Maior</message>
 	<message key="journal.issn">ISSN</message>
+	<message key="journal.onlineIssn">e-ISSN</message>
+	<message key="journal.printIssn">ISSN impresso</message>
 	<message key="article.article">Artigo</message>
 	<message key="user.manageMySubscriptions">Gerenciar minhas assinaturas</message>
 	<message key="subscriptionTypes.currency">Moeda</message>
@@ -1116,27 +1118,36 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="common.journal">Periódico</message>
 	<message key="user.profile.profileImage">Imagem de perfil</message>
 	<message key="submission.permissions">Permissões</message>
-	<message key="submission.license">Licensa</message>
+	<message key="submission.license">Licença</message>
 	<message key="submission.copyright">Direitos autorais</message>
 	<message key="submission.copyrightHolder">Detentor dos direitos autorais</message>
 	<message key="submission.copyrightYear">Ano dos direitos autorais</message>
 	<message key="submission.copyrightStatement">Direitos autorais {$copyrightYear} {$copyrightHolder}</message>
 	<message key="submission.licenseURLValid">Informe uma URL válida  (inclua o http://).</message>
-	<message key="submission.licenseURL">URL da licensa</message>
-	<message key="submission.license.cc.by-nc-nd4">CC Atribuição-NãoComercial-SemDerivações 4.0</message>
-	<message key="submission.license.cc.by-nc4">CC Atribuição-NãoComercial 4.0</message>
-	<message key="submission.license.cc.by-nc-sa4">CC Atribuição-NãoComercial-CompartilhaIgual 4.0</message>
-	<message key="submission.license.cc.by-nd4">CC Atribuição-SemDerivações 4.0</message>
+	<message key="submission.licenseURL">URL da licença</message>
+	<message key="submission.license.cc.by-nc-nd4">CC Atribuição - Não Comercial - Sem Derivações 4.0</message>
+	<message key="submission.license.cc.by-nc4">CC Atribuição - Não Comercial 4.0</message>
+	<message key="submission.license.cc.by-nc-sa4">CC Atribuição - Não Comercial - Compartilhar Igual 4.0</message>
+	<message key="submission.license.cc.by-nd4">CC Atribuição - Sem Derivações 4.0</message>
 	<message key="submission.license.cc.by4">CC Atribuição 4.0</message>
-	<message key="submission.license.cc.by-sa4">CC Atribuição-CompartilhaIgual 4.0</message>
-	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Este obra está licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Atribuição-NãoComercial-SemDerivações 4.0 Internacional</a>.]]></message>
-	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Este obra está licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Atribuição-NãoComercial 4.0 Internacional</a>.]]></message>
-	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Este obra está licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional</a>.]]></message>
-	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />Este obra está licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Atribuição-SemDerivações 4.0 Internacional</a>.]]></message>
-	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Este obra está licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Atribuição 4.0 Internacional</a>.]]></message>
-	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Este obra está licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional</a>.]]></message>
+	<message key="submission.license.cc.by-sa4">CC Atribuição - Compartilhar Igual 4.0</message>
+	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Esta obra está licenciada sob uma licença <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Atribuição - Não comercial - Sem derivações 4.0 Internacional</a>.]]></message>
+	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Esta obra está licenciada sob uma licença <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Atribuição - NãoComercial 4.0 Internacional</a>.]]></message>
+	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Esta obra está licenciada sob uma licença <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Atribuição - Não comercial - Compartilhar igual 4.0 Internacional</a>.]]></message>
+	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />Esta obra está licenciada sob uma licença <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Atribuição - Sem derivações 4.0 Internacional</a>.]]></message>
+	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Esta obra está licenciada sob uma licença <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Atribuição 4.0 Internacional</a>.]]></message>
+	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Esta obra está licenciada sob uma licença <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Atribuição - Compartilhar igual 4.0 Internacional</a>.]]></message>
 	<message key="user.orcid">ORCID iD</message>
 	<message key="user.orcid.description"><![CDATA[O identificador ORCID pode ser obtido no <a href="http://orcid.org/" target="_blank">registro ORCID</a>. Você deve aceitar os padrões para apresentação de iD ORCID e incluir a URL completa (por exemplo: <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
 	<message key="user.profile.form.orcidInvalid">O identificador ORCID fornecido é inválido.</message>
 	<message key="manager.setup.preservationDescription"><![CDATA[O Open Journal Systems é compatível com o sistema <a href="http://www.lockss.org/" target="_blank"> LOCKSS </a> (Lots of Copies Keep Stuff Safe) para garantir a preservação segura e permanente de sua revista. Você tem várias opções para a inclusão da sua revista em uma rede LOCKSS:]]></message>
+	<message key="user.profile.implicitAuthChangePasswordInstructions">Caso tenha acessado o sistema por meio de sua conta Shibboleth, siga as instruções da sua organização para os processos de alteração de senha. Para cadastros locais no sistema, continue com o processo abaixo.</message>
+	<message key="user.login.implicitAuthLogin">Acesso via Shibboleth</message>
+	<message key="user.register.emailValidation">Validação de e-mail obrigatória</message>
+	<message key="user.register.emailValidationDescription">É obrigatório validar seu endereço de e-mail antes de continuar. Verifique sua caixa de correio para mais instruções. O acesso será permitido assim que o endereço for validado.</message>
+	<message key="user.register.implicitAuth">Acesso via Shibboleth com uma conta institucional existente</message>
+	<message key="about.purchaseIssue">Adquirir edição</message>
+	<message key="about.purchaseArticle">Adquirir artigo</message>
+	<message key="about.purchaseIssueDescription">Mesmo leitores sem uma assinatura podem adquirir edições avulsas. Estão disponíveis as seguintes opções de pagamento e taxas.</message>
+	<message key="about.purchaseArticleDescription">Mesmo leitores sem uma assinatura podem adquirir artigos avulsos. Estão disponíveis as seguintes opções de pagamento e taxas.</message>
 </locale>

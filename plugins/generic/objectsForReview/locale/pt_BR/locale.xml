@@ -4,27 +4,21 @@
 <!--
   * @file plugins/generic/objectsForReview/locale/pt_BR/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Objects for review plugin localization strings for the pt_BR (Português (Brasil)) locale.
   -->
 
 <locale name="pt_BR" full_name="Português (Brasil)">
-
-	<!-- Objects For Review Plug-In -->
 	<message key="plugins.generic.objectsForReview.displayName">Revisão de Objetos</message>
 	<message key="plugins.generic.objectsForReview.reminderTask.name">Lembrete de objetos para Revisão</message>
-	<message key="plugins.generic.objectsForReview.description">Solicitar revisão de objeto de interesse. Gerencie revisões de objetos e o processo de avaliação.</message>
-
-	<!--  Editor -->
-	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Revisão de objetos</message>
-
-	<!-- Object Types Management -->
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorAssigned">Autor designado para revisão do objeto.</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsBy">Palavras por</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.recipient">Destinatário</message>
+	<message key="plugins.generic.objectsForReview.description">Solicitar revisão de objeto de interesse. Gerencie revisões de objetos e o processo de avaliação.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Revisão de objetos</message>
 	<message key="plugins.generic.objectsForReview.editor.objectTypes">Tipos de objetos para revisão</message>
 	<message key="plugins.generic.objectsForReview.editor.objectTypes.description">Instale aqui os tipos padrão/pré-definidos de objetos para revisão. Caso necessário, atualize os já instalados ou crie seus próprios objetos.</message>
 	<message key="plugins.generic.objectsForReview.editor.objectTypes.name">Nome</message>
@@ -498,7 +492,6 @@
 	<message key="plugins.generic.objectsForReview.object.radioBroadcast.place">Local</message>
 	<message key="plugins.generic.objectsForReview.object.radioBroadcast.network">Rede</message>
 	<message key="plugins.generic.objectsForReview.object.radioBroadcast.runningTime">Duração</message>
-	<!-- Report -->
 	<message key="plugins.generic.objectsForReview.object.report">Relatório</message>
 	<message key="plugins.generic.objectsForReview.object.report.person.author">Autor</message>
 	<message key="plugins.generic.objectsForReview.object.report.person.contributor">Contribuidor</message>
@@ -510,7 +503,6 @@
 	<message key="plugins.generic.objectsForReview.object.report.seriesTitle">Título da série</message>
 	<message key="plugins.generic.objectsForReview.object.report.institution">Instituição</message>
 	<message key="plugins.generic.objectsForReview.object.report.pages">Páginas</message>
-	<!-- Statute -->
 	<message key="plugins.generic.objectsForReview.object.statute">Estatuto</message>
 	<message key="plugins.generic.objectsForReview.object.statute.person.author">Autor</message>
 	<message key="plugins.generic.objectsForReview.object.statute.person.contributor">Contribuidor</message>
@@ -521,7 +513,6 @@
 	<message key="plugins.generic.objectsForReview.object.statute.section">Seção</message>
 	<message key="plugins.generic.objectsForReview.object.statute.session">Sessão</message>
 	<message key="plugins.generic.objectsForReview.object.statute.history">Histórico</message>
-	<!-- Thesis -->
 	<message key="plugins.generic.objectsForReview.object.thesis">Tese</message>
 	<message key="plugins.generic.objectsForReview.object.thesis.person.author">Autor</message>
 	<message key="plugins.generic.objectsForReview.object.thesis.person.contributor">Contribuidor</message>
@@ -529,7 +520,6 @@
 	<message key="plugins.generic.objectsForReview.object.thesis.university">Universidade</message>
 	<message key="plugins.generic.objectsForReview.object.thesis.place">Local</message>
 	<message key="plugins.generic.objectsForReview.object.thesis.numberOfPages">Número de páginas</message>
-	<!-- TV Broadcast -->
 	<message key="plugins.generic.objectsForReview.object.tvBroadcast">Transmissão de TV</message>
 	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.director">Diretor</message>
 	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.castMember">Membro do elenco</message>
@@ -543,7 +533,6 @@
 	<message key="plugins.generic.objectsForReview.object.tvBroadcast.place">Local</message>
 	<message key="plugins.generic.objectsForReview.object.tvBroadcast.network">Rede</message>
 	<message key="plugins.generic.objectsForReview.object.tvBroadcast.runningTime">Duração</message>
-	<!-- Video Recording -->
 	<message key="plugins.generic.objectsForReview.object.videoRecording">Gravação de vídeo</message>
 	<message key="plugins.generic.objectsForReview.object.videoRecording.person.director">Diretor</message>
 	<message key="plugins.generic.objectsForReview.object.videoRecording.person.castMember">Membro do elenco</message>
@@ -559,7 +548,6 @@
 	<message key="plugins.generic.objectsForReview.object.videoRecording.studio">Estúdio</message>
 	<message key="plugins.generic.objectsForReview.object.videoRecording.runningTime">Duração</message>
 	<message key="plugins.generic.objectsForReview.object.videoRecording.isbn">ISBN</message>
-	<!-- Web Page -->
 	<message key="plugins.generic.objectsForReview.object.webPage">Página Web</message>
 	<message key="plugins.generic.objectsForReview.object.webPage.person.author">Autor</message>
 	<message key="plugins.generic.objectsForReview.object.webPage.person.contributor">Contribuidor</message>
