@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.block.hidesidebars.displayName">Alternar exibição das barras laterais</message>
 	<message key="plugins.block.hidesidebars.description">Este plugin permite alternar entre exibição ou não das barras laterais.</message>
 	<message key="plugins.block.hidesidebars.altText">Clique para exibir/ocultar barras laterais.</message>
