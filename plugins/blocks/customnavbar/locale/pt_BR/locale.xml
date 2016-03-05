@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.block.customnavbar.displayName">Menu principal lateral</message>
 	<message key="plugins.block.customnavbar.description">Este plugin oferece a exibição dos menus da navegação principal na barra lateral.</message>
 </locale>
