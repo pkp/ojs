@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.importexport.crossref.description">Export or register article metadata in CrossRef format.</message>
 	<message key="plugins.importexport.crossref.displayName">CrossRef Export/Registration Plugin</message>
 	<message key="plugins.importexport.crossref.requirements">Requirements</message>
