@@ -37,7 +37,6 @@ class DphillipsSubmissionTest extends ContentBaseTestCase {
 
 		$this->logOut();
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
-		$this->assignParticipant('Section editor', 'Stephanie Berardo');
 		$this->sendToReview();
 		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignReviewer('jjanssen', 'Julie Janssen');

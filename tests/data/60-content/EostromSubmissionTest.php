@@ -51,7 +51,6 @@ class EostromSubmissionTest extends ContentBaseTestCase {
 
 		$this->logOut();
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
-		$this->assignParticipant('Section editor', 'David Buskins');
 		$this->logOut();
 	}
 }
