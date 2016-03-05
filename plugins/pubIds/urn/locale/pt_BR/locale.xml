@@ -19,7 +19,7 @@
 	<message key="plugins.pubIds.urn.description">Este plugin habilita a atribuição de Nomes Uniformes de Recursos (URN) a objetos (edições, artigos, composições e arquivos suplementares) no OJS.</message>
 
 	<!-- URN manager options, setting -->
-	<message key="plugins.pubIds.urn.manager.settings.description">Execute os passos de configuração a seguir para poder gerenciar e usar URNs no OJS:</message>
+	<message key="plugins.pubIds.urn.manager.settings.description"><![CDATA[Execute os passos de configuração a seguir para poder gerenciar e usar URNs no OJS:]]></message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSettings">Configurações</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">Prefixo URN</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnPrefix.description">O prefixo URN é a parte fixa, inalterável do URN (ex.: "urn:nbn:de:0000-").</message>
@@ -42,6 +42,8 @@
 	<message key="plugins.pubIds.urn.manager.settings.namespace">Namespace</message>
 	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Escolha</message>
 	<message key="plugins.pubIds.urn.manager.settings.namespace.description">O namespace identificador persistente é normalmente necessário para registro (por exemplo, na Deutsche Nationalbibliothek).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver">URL do resolvedor</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(ex.: http://nbn-resolving.de/)</message>
 
 	<message key="plugins.pubIds.urn.manager.settings.journalContent">Conteúdo</message>
 	<message key="plugins.pubIds.urn.manager.settings.URNsForJournalContent">Escolha a quais objetos serão atribuídos URNs.</message>
@@ -56,6 +58,20 @@
 	<message key="plugins.pubIds.urn.urnSuffix.description">Sufixo URN personalizado para este artigo.</message>
 	<message key="plugins.pubIds.urn.calculateCheckNo">Calcular número de verificação</message>
 
+	<!-- metadata form -->
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">edição</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">artigo</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">composição</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">arquivo suplementar</message>
+	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">A seguir uma prévia do URN que pode estar incompleto. Um URN pode não ter sido gerado ainda. Publicar a edição e visualizando a página pública do objeto {$pubObjectType} gerará automaticamente um URN único para o objeto {$pubObjectType}.</message>
+	<message key="plugins.pubIds.urn.editor.excludePubObject">Excluir este objeto do tipo {$pubObjectType} de designar um URN.</message>
+	<message key="plugins.pubIds.urn.editor.urnClear">Limpar URN</message>
+	<message key="plugins.pubIds.urn.editor.urnClear.description">Marque esta opção para limpar os URN existentes para este objeto do tipo {$pubObjectType}.</message>
+	<message key="plugins.pubIds.urn.editor.excludeIssueObjectsURN">Excluir objetos da edição</message>
+	<message key="plugins.pubIds.urn.editor.excludeIssueObjectsURN.description">Clique no botão para não designar um URN aos objetos (artigos, composições finais e arquivos suplementares) atualmente agendados nesta edição. Note que os objetos que forem incluídos/agendados posteriormente não serão afetados. Será possível usar as opções de exclusão de objeto individual.</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN">Limpar URNs dos objetos da edição</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description">Clique no botão para limpar URNs de todos os objetos (artigos, composições finais e arquivos suplementares) atualmente agendados nesta edição.</message>
+
 	<!-- consider URNs at other places in the system -->
 	<message key="plugins.pubIds.urn.rt.metadata.urn">Nome Uniforme de Recurso</message>
 
@@ -68,16 +84,9 @@
 	<message key="plugins.pubIds.urn.manager.settings.form.urnGalleySuffixPatternRequired">Informe um padrão de sufixo URN para composições.</message>
 	<message key="plugins.pubIds.urn.manager.settings.form.urnSuppFileSuffixPatternRequired">Informe um padrão de sufixo URN para arquivos suplementares.</message>
 	<message key="plugins.pubIds.urn.manager.settings.form.namespaceRequired">Escolha o namespace.</message>
-
+	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Informe o endereço do resolvedor.</message>
+	
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">O sufixo URN informado já está em uso por outro item publicado. Informe um sufixo URN único para cada item.</message>
 	<message key="plugins.pubIds.urn.form.checkNoRequired">Número de verificação faltando.</message>
 
-	<message key="plugins.pubIds.urn.manager.settings.urnResolver">URL do resolvedor</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(ex.: http://nbn-resolving.de/)</message>
-	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">edição</message>
-	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">artigo</message>
-	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">composição</message>
-	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">arquivo suplementar</message>
-	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Informe o endereço do resolvedor.</message>
-	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">A seguir uma prévia do URN que pode estar incompleto. Um URN pode não ter sido gerado ainda. Publicar a edição e visualizando a página pública do objeto {$pubObjectType} gerará automaticamente um URN único para o objeto {$pubObjectType}.</message>
 </locale>
