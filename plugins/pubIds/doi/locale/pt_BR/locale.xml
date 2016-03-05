@@ -22,6 +22,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Conteúdo</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Escolha a quais objetos serão atribuídos DOIs.</message>
 	<message key="plugins.pubIds.doi.manager.settings.explainDois">Escolha os objetos publicados que terão Identificadores de Objeto Digital (DOI) atribuídos:</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>NOTA:</strong> Ao usar DOIs do <a href="http://www.crossref.org" target="_new">CrossRef</a>, é necessário escolher artigos. Artigos são vistos como trabalho, isto é, entidade de conteúdo intelectual e artístico. Logo, artigo é o objeto de publicação no qual está baseados exportação e registro do DOI CrossRef..]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Edições</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Artigos</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">Composições</message>
@@ -54,11 +55,18 @@
 
 	<!-- metadata form -->
 	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
+	<message key="plugins.pubIds.doi.editor.doi.issueObjects">DOIs para objetos da edição</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">edição</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">artigo</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">composição</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">arquivos suplementar</message>
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">O DOI não foi gerado ainda. Publicar a edição e visualizando a página pública do objeto {$pubObjectType} gerará automaticamente um DOI único para o objeto {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">O sufixo DOI informado já está em uso por outro item publicado. Informe um sufixo DOI único para cada item.</message>
-	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>NOTA:</strong> Ao usar DOIs do <a href="http://www.crossref.org" target="_new">CrossRef</a>, é necessário escolher artigos. Artigos são vistos como trabalho, isto é, entidade de conteúdo intelectual e artístico. Logo, artigo é o objeto de publicação no qual está baseados exportação e registro do DOI CrossRef..]]></message>
+	<message key="plugins.pubIds.doi.editor.excludePubObject">Não atribuir DOIs ao objeto do tipo {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign">Redesignar DOI</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign.description">Marque esta opção para limpar o DOI existente para este tipo de objeto {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi">Não designar DOIs a objetos da edição</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi.description">Use este botão para não atribuir DOIs a objetos (artigos, composições e arquivos suplementares) atualmente agendados para publicação nesta edição. Note que objetos incluídos/agendados depois não serão afetados. Ainda será possível usar as opções de remoção individual de objetos.</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Limpar DOIs de objetos da edição</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Use este botão para limpar DOIs de todos os objetos (artigos, composições e arquivos suplementares) atualmente agendados nesta edição.</message>
 </locale>

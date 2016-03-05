@@ -11,7 +11,7 @@
   * Localization strings for the pt_BR locale.
   *
   -->
- 
+
 <locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.importexport.native.displayName">XML de artigos e edições</message>
 	<message key="plugins.importexport.native.description">Permite importar e exportar artigos e edições em XML.</message>
@@ -85,7 +85,7 @@ Os seguintes formatos são aceitos:
 	<message key="plugins.importexport.native.import.error.galleyFileMissing">Falta um documento de composição do artigo "{$articleTitle}", da seção "{$sectionTitle}", da edição "{$issueTitle}".</message>
 
 	<message key="plugins.importexport.native.import.success">Importação de dados concluída com sucesso.</message>
-	<message key="plugins.importexport.native.import.success.description">A importação de dados ocorreu sem problemas. Os itens importados estão listados a seguir.</message>
+	<message key="plugins.importexport.native.import.success.description">Importação de dados concluída com sucesso. Os itens importados estão listados a seguir.</message>
 	<message key="plugins.importexport.native.import.error.issueTitleLocaleUnsupported">O título da edição ("{$issueTitle}") foi informado no idioma ("{$locale}"), não suportado por esta revista.</message>
 	<message key="plugins.importexport.native.import.error.issueDescriptionLocaleUnsupported">A descrição da edição "{$issueTitle}" foi informada no idioma ("{$locale}"), não suportado por esta revista.</message>
 	<message key="plugins.importexport.native.import.error.coverLocaleUnsupported">A capa da edição "{$issueTitle}" foi informada no idioma ("{$locale}"), não suportado por esta revista.</message>
