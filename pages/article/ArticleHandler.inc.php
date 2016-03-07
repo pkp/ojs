@@ -259,7 +259,7 @@ class ArticleHandler extends Handler {
 
 		// If this is an editorial user who can view unpublished/unscheduled
 		// articles, bypass further validation. Likewise for its author.
-		if (($publishedArticle) && $publishedArticle && $issueAction->allowedPrePublicationAccess($journal, $publishedArticle)) {
+		if ($publishedArticle && $issueAction->allowedPrePublicationAccess($journal, $publishedArticle)) {
 			return true;
 		}
 
