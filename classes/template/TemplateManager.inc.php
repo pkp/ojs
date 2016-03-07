@@ -116,6 +116,40 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('journalPaymentsEnabled', $paymentManager->isConfigured());
 
 				$this->assign('pageFooter', $journal->getLocalizedSetting('journalPageFooter'));
+
+				// Set variable for user roles
+				$roles = "";
+				if ((new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN)))->isValid()) {
+					$roles = $roles . "siteAdmin ";
+				}
+				if ((new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_JOURNAL_MANAGER)))->isValid()) {
+					$roles = $roles . "journalManager ";
+				}
+				if ((new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_EDITOR)))->isValid()) {
+					$roles = $roles . "editor ";
+				}
+				if ((new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SECTION_EDITOR)))->isValid()) {
+					$roles = $roles . "sectionEditor ";
+				}
+				if ((new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_LAYOUT_EDITOR)))->isValid()) {
+					$roles = $roles . "layoutEditor ";
+				}
+				if ((new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_REVIEWER)))->isValid()) {
+					$roles = $roles . "reviewer ";
+				}
+				if ((new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_COPYEDITOR)))->isValid()) {
+					$roles = $roles . "copyeditor ";
+				}
+				if ((new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_PROOFREADER)))->isValid()) {
+					$roles = $roles . "proofreader ";
+				}
+				if ((new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_AUTHOR)))->isValid()) {
+					$roles = $roles . "author ";
+				}
+				if ((new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_READER)))->isValid()) {
+					$roles = $roles . "reader ";
+				}
+				$this->assign("walkmeRoles", $roles);
 			} else {
 				// Add the site-wide logo, if set for this locale or the primary locale
 				$displayPageHeaderTitle = $site->getLocalizedPageHeaderTitle();
