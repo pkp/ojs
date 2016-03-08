@@ -117,7 +117,6 @@
 	<message key="manager.setup">Journal Settings</message>
 	<message key="manager.setup.masthead">Masthead</message>
 	<message key="manager.setup.masthead.description">The Masthead should contain a list of editors, managing directors, and other individuals associated with the journal. Information entered here will appear in About the Journal.</message>
-	<message key="manager.setup.sponsors.description">The name of the organizations (e.g., scholarly associations, university departments, cooperatives, etc.) sponsoring the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
 	<message key="manager.setup.homepageContent">Journal Homepage Content</message>
 	<message key="manager.setup.homepageContentDescription">The journal homepage consists of navigation links by default. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown.</message>
 	<message key="manager.setup.logo">Journal Logo</message>
@@ -147,16 +146,8 @@
 	<message key="manager.setup.announcementsIntroduction">Additional Information</message>
 	<message key="manager.setup.announcementsIntroductionDescription">Enter any additional information that should be displayed to readers on the Announcements page.</message>
 	<message key="manager.setup.appearInAboutJournal">(To appear in About the Journal) </message>
-	<message key="manager.setup.authorCopyrightNotice">Copyright Notice</message>
-	<message key="manager.setup.authorCopyrightNoticeAgree">Require authors to agree to Copyright Notice as part of the submission process.</message>
-	<message key="manager.setup.authorCopyrightNotice.description"><![CDATA[The Copyright Notice entered below will appear in About the Journal and in each published item's metadata. While it is up to the journal to determine the nature of its copyright agreement with authors, the Public Knowledge Project recommends the use of the <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a> license. To that end, it provides <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">sample Copyright Notice wording</a> that can be cut and pasted into the space below for journals that (a) offer open access, (b) offer delayed open access, or (c) do not offer open access.]]></message>
-	<message key="manager.setup.authorGuidelines.description"><![CDATA[Set out for authors the bibliographic and formatting standards used for items submitted to the journal (e.g., <em>Publication Manual of the American Psychological Association</em>, 5th edition, 2001). It is often helpful to provide examples of the common citation formats for journals and books to be used in submissions. Also identify the types of appropriate Supplementary Files (e.g., data-sets, research instruments, etc.) which authors should be encouraged to upload, in addition to their submission, to enhance readers' engagement with their work.]]></message>
 	<message key="manager.setup.competingInterests.requireAuthors">Require submitting Authors to file a Competing Interest (CI) statement with their submission.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Require Reviewers to file a CI statement with each peer review they submit.</message>
-	<message key="manager.setup.contributors.description">Additional agencies or organizations that provide financial or in-kind support for the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
-	<message key="manager.setup.contributors">Sources of Support</message>
-	<message key="manager.setup.contributorNoteDescription">This text will appear below the "Sources of Support" heading and above the list of names and urls for supporting organizations under "Journal Sponsorship" on the "About" page.</message>
-	<message key="manager.setup.contributorsDescription">Additional agencies or organizations that provide financial or in-kind support for the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
 	<message key="manager.setup.history">Journal History</message>
 	<message key="manager.setup.historyDescription">This text will appear in the "About" section of the journal website and can be used to describe changes in titles, editorial board, and other items of relevance to the journal's publication history.</message>
 	<message key="manager.setup.copyeditInstructions">Copyedit Instructions</message>
@@ -198,11 +189,7 @@
 	<message key="manager.setup.enableUserRegistration.reader">Readers (will receive notifications and be counted as equivalent to a subscriber)</message>
 	<message key="manager.setup.enableUserRegistration.reviewer">Reviewers (available for reviewing submissions)</message>
 	<message key="manager.setup.focusAndScope">Focus and scope</message>
-	<message key="manager.setup.focusAndScope.description">Enter a statement below, which will appear in About the Journal, that speaks to authors, readers, and librarians about the range of monographs and other items which the press will publish.</message>
-	<message key="manager.setup.focusAndScopeDescription">Enter a statement below, which will appear in About the Journal, that speaks to authors, readers, and librarians about the range of articles and other items which the journal will publish.</message>
-	<message key="manager.setup.focusAndScopeOfJournal">Focus and Scope of Journal</message>
-	<message key="manager.setup.focusScope">Focus and Scope</message>
-	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>EXAMPLE HTML DATA</strong>]]></message>
+	<message key="manager.setup.focusAndScope.description">Describe to authors, readers, and librarians the range of articles and other items the press will publish.</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">For Authors to Index Their Work</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Journal Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work.]]></message>
 	<message key="manager.setup.form.issnInvalid">The specified ISSN is not valid.</message>
@@ -281,7 +268,6 @@
 	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.setup.look">The Look</message>
 	<message key="manager.setup.look.description">Homepage header, content, journal header, footer, navigation bar, and style sheet.</message>
-	<message key="manager.setup.mailingAddressDescription">The journal's physical location and mailing address.</message>
 	<message key="manager.setup.management">Management</message>
 	<message key="manager.setup.management.description">Access and security, scheduling, announcements, copyediting, layout, and proofreading.</message>
 	<message key="manager.setup.managementOfBasicEditorialSteps">Management of Basic Editorial Steps</message>
@@ -303,22 +289,10 @@
 	<message key="manager.setup.onlineAccessManagement">Access to Journal Content</message>
 	<message key="manager.setup.onlineIssn">Online ISSN</message>
 	<message key="manager.setup.openAccess">The journal will provide open access to its contents.</message>
-	<message key="manager.setup.openAccessPolicy">Open Access Policy</message>
-	<message key="manager.setup.openAccessPolicy.description">If the journal will provide readers with immediate free access to all published content, enter an Open Access Policy which will appear in About the Journal under Policies.</message>
-	<message key="manager.setup.openAccessPolicyDescription">If the journal will provide readers with immediate free access to all published content, enter an Open Access Policy which will appear in About the Journal under Policies.</message>
 	<message key="manager.setup.pageNumberIdentifier">Page Number Option</message>
-	<message key="manager.setup.peerReview.description">Outline the journal's peer review policy and processes for readers and authors, including the number of reviewers typically used in reviewing a submission, the criteria by which reviewers are asked to judge submissions, typical time taken to conduct the reviews, and the principles for recruiting reviewers. This will appear in About the Journal.</message>
-	<message key="manager.setup.peerReviewPolicy">Peer Review</message>
-	<message key="manager.setup.peerReviewPolicy2">Peer review policy</message>
 	<message key="manager.setup.policies">Policies</message>
 	<message key="manager.setup.policies.description">Focus, peer review, sections, privacy, security, and additional about items.</message>
-	<message key="manager.setup.principalContact">Principal Contact</message>
-	<message key="manager.setup.principalContactDescription">This position, which can be treated as a principal editorship, managing editorship, or administrative staff position, will be listed on the homepage of the journal under Contact, along with the Technical Support Contact.</message>
 	<message key="manager.setup.printIssn">Print ISSN</message>
-	<message key="manager.setup.privacyStatement">Privacy Statement</message>
-	<message key="manager.setup.privacyStatement.description">This statement will appear in About the Journal, as well as on the Author Submission and Notification sign-up pages. Below is a recommended privacy policy, which can be revised at any point.</message>
-	<message key="manager.setup.privacyStatement2">Privacy statement</message>
-	<message key="manager.setup.privacyStatementDescription">This statement will appear in About the Journal, as well as on the Author Submission and Notification sign-up pages. Below is a recommended privacy policy, which can be revised at any point.</message>
 	<message key="manager.setup.proofingInstructions">Proofing Instructions</message>
 	<message key="manager.setup.proofingInstructionsDescription">The Proofreading Instructions will be made available to Proofreaders, Authors, Layout Editors, and Section Editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be edited or replaced by the Journal Manager at any point (in HTML or plain text).</message>
 	<message key="manager.setup.provideRefLinkInstructions">Provide Layout Editors with instructions.</message>
@@ -378,8 +352,6 @@
 	<message key="manager.setup.subscription">The journal will require subscriptions to access some or all of its contents.</message>
 	<message key="manager.setup.subscriptionDescription">This requires the assignment of a Subscription Manager who has access to the subscription module, which includes additional open access, self-archiving, and email notification options.</message>
 	<message key="manager.setup.noPublishing">OJS will not be used to publish the journal's contents online.</message>
-	<message key="manager.setup.technicalSupportContact">Technical Support Contact</message>
-	<message key="manager.setup.technicalSupportContactDescription">This person will be listed on the journal's Contact page for the use of editors, authors, and reviewers, and should have experience working through the system from the perspective of all of its roles. As this journal system requires very little technical support, this should be seen as a part-time assignment. There may be occasions, for example, when authors and reviewers have difficulties with the instructions or file formats, or there's a need to ensure that the journal is regularly backed up on the server.</message>
 	<message key="manager.setup.typeExamples">(E.g., Historical Inquiry; Quasi-Experimental; Literary Analysis; Survey/Interview)</message>
 	<message key="manager.setup.typeMethodApproach">Type (Method/Approach)</message>
 	<message key="manager.setup.typeProvideExamples">Provide examples of relevant research types, methods, and approaches for this field</message>
