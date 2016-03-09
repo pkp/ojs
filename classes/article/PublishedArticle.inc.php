@@ -111,18 +111,23 @@ class PublishedArticle extends Article {
 	}
 
 	/**
-	 * Get the approved galleys for an article.
+	 * Get the galleys for an article which are approved and which
+	 * have at least one approved file.
 	 * @return array ArticleGalley
 	 */
 	function getApprovedGalleys() {
-		$galleys = $this->getGalleys();
-		$approved_galleys = array();
-		foreach ($galleys as $galley) {
+		$approvedGalleys = array();
+		foreach ($this->getGalleys() as $galley) {
 			if ($galley->getIsApproved()) {
-				$approved_galleys[] = $galley;
+				foreach ($galley->getLatestGalleyFiles as $galleyFile) {
+					if ($galleyFile->getViewable()) {
+						$approvedGalleys[] = $galley;
+						break;
+					}
+				}
 			}
 		}
-		return $approved_galleys;
+		return $approvedGalleys;
 	}
 
 	/**
