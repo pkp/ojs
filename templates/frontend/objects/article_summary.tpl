@@ -52,7 +52,7 @@
 
 	<ul class="galleys_links">
 		{if $hasAccess || $showGalleyLinks}
-			{foreach from=$article->getGalleys() item=galley}
+			{foreach from=$article->getApprovedGalleys() item=galley}
 				<li>
 					{assign var="hasArticleAccess" value=$hasAccess}
 					{if ($article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN)}
