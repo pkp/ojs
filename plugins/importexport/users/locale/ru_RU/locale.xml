@@ -39,7 +39,7 @@
 	{$scriptName} {$pluginName} export myExportFile.xml myJournal reviewer
 ]]></message>
 	<message key="plugins.importexport.users.import.importUsers">Импортировать пользователей</message>
-	<message key="plugins.importexport.users.import.instructions"><![CDATA[Выберите файл данных XML, содержащий информацию о пользователях, для импорта в этот журнал. Подробности о формате этого файла смотрите в помощи журнала.<br /><br />Обратите внимание, что если импортируемый файл содержит имена пользователей или почтовые адреса уже существующие в системе, то данные для этих пользователей не будут импортированы, а все новые роли, которые должны были быть созданы, будут назначены существующим пользователям.]]></message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Выберите файл данных XML, содержащий информацию о пользователях, для импорта в этот журнал. Подробности о формате этого файла смотрите в помощи журнала.<br /><br />Обратите внимание, что если импортируемый файл содержит имена пользователей или почтовые адреса, уже существующие в системе, то данные для этих пользователей не будут импортированы, а все новые роли, которые должны были быть созданы, будут назначены существующим пользователям.]]></message>
 	<message key="plugins.importexport.users.import.failedToImportUser">Ошибка при импорте пользователя</message>
 	<message key="plugins.importexport.users.import.failedToImportRole">Ошибка при назначении пользователя на роль</message>
 	<message key="plugins.importexport.users.import.dataFile">Файл с данными пользователей</message>
