@@ -119,7 +119,7 @@ class PublishedArticle extends Article {
 		$approvedGalleys = array();
 		foreach ($this->getGalleys() as $galley) {
 			if ($galley->getIsApproved()) {
-				foreach ($galley->getLatestGalleyFiles as $galleyFile) {
+				foreach ($galley->getLatestGalleyFiles() as $galleyFile) {
 					if ($galleyFile->getViewable()) {
 						$approvedGalleys[] = $galley;
 						break;
