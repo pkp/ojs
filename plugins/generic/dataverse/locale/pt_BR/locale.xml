@@ -20,14 +20,18 @@
 	<!-- Set up Dataverse: DVN URL and authentication details -->
 	<message key="plugins.generic.dataverse.settings.connect">Conectar</message>
 	<message key="plugins.generic.dataverse.settings.dvnUri">URL Dataverse</message>
-	<message key="plugins.generic.dataverse.settings.dvnUriDescription">Root Dataverse URL</message>
-	<message key="plugins.generic.dataverse.settings.usernameRequired">Por favor insira um nome de usuário Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriDescription">URL raíz do Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.usernameDescription">Login ou token de API</message>
+	<message key="plugins.generic.dataverse.settings.passwordDescription">Senha. Não obrigatória para token de API.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriRequired">Endereço do Dataverse é obrigatório.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">Impossível conectar ao Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.usernameRequired">Informe um nome de usuário Dataverse.</message>
 
 	<!-- Set up Dataverse: select Dataverse -->
 	<message key="plugins.generic.dataverse.settings.selectDataverse">Selecione Dataverse</message>
 	<message key="plugins.generic.dataverse.settings.dataverse">Dataverse</message>
 	<message key="plugins.generic.dataverse.settings.dataverseDescription">Selecione Dataverse para armazenar arquivos de dados desta revista.</message>
-	<message key="plugins.generic.dataverse.settings.dataverseRequired">Por favor selecione um Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.dataverseRequired">Selecione um Dataverse.</message>
 
 	<!-- Plugin configuration: Settings -->
 	<message key="plugins.generic.dataverse.settings">Configurações</message>
@@ -35,7 +39,7 @@
 	<message key="plugins.generic.dataverse.settings.dataPoliciesDescription">Configurar políticas de dados.</message>
 	<message key="plugins.generic.dataverse.settings.dataAvailabilityPolicy">Política de Disponibilidade de Dados</message>
 	<message key="plugins.generic.dataverse.settings.dataAvailabilityPolicyDescription">Política geral sobre disponibilidade de dados para a revista. Isso será exibido na seção Sobre a Revista.</message>
-	<message key="plugins.generic.dataverse.settings.dataAvailabilityRequired">Por favor, forneça uma política de disponibilidade de dados.</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityRequired">Informe uma política de disponibilidade de dados.</message>
 	<message key="plugins.generic.dataverse.settings.sectionPoliciesDescription">Adicionar políticas de dados para seções específicas da revista.</message>
 	<message key="plugins.generic.dataverse.settings.authorGuidelinesDescription"><![CDATA[Editar <a href="{$authorGuidelinesUrl}" target="_blank"> Diretrizes para autores </a> para incluir diretrizes de envio e citação de dados.]]></message>
 	<message key="plugins.generic.dataverse.settings.checklistDescription"><![CDATA[Editar <a href="{$checklistUrl}" target="_blank"> a lista de checagem de submissão </a> para ajudar os autores a cumprirem as diretrizes de submissão e citação de dados.]]></message>
@@ -47,7 +51,7 @@
 	<message key="plugins.generic.dataverse.settings.termsOfUseDescription">Forneça os termos de uso para que os usuários devem concordar antes de depositar os arquivos de dados.</message>
 	<message key="plugins.generic.dataverse.settings.fetchTermsOfUse">Buscar os termos de uso do Dataverse criados para a revista.</message>
 	<message key="plugins.generic.dataverse.settings.defineTermsOfUse">Digite os termos de uso personalizados no campo abaixo.</message>
-	<message key="plugins.generic.dataverse.settings.dataverseTermsOfUseError">Não foi possível recuperar os termos de uso para o Dataverse configurado. Por favor, verifique as configurações de conexão.</message>
+	<message key="plugins.generic.dataverse.settings.dataverseTermsOfUseError">Não foi possível recuperar os termos de uso para o Dataverse configurado. Verifique as configurações de conexão.</message>
 	<message key="plugins.generic.dataverse.settings.metadata">Configurações de metadados</message>
 	<message key="plugins.generic.dataverse.settings.citationFormat">Formato de Citação</message>
 	<message key="plugins.generic.dataverse.settings.citationFormatDescription">Escolha o formato de citação exibido no estudo de catalogação de informação.</message>
@@ -63,47 +67,55 @@
 	<message key="plugins.generic.dataverse.settings.studyReleaseArticlePublished">Artigo é publicado</message>
 
 	<!-- Settings: default values -->
-	<message key="plugins.generic.dataverse.settings.default.dataAvailabilityPolicy"><![CDATA[{$journal} exige, como condição para a publicação, que os dados que sustentam os resultados no artigo devem ser arquivados em um arquivo público adequado. {$jornal} recomenda a <a href="http://thedata.harvard.edu/">Harvard Dataverse </a>, que é gratuito e aberto a todos os pesquisadores em todo o mundo para compartilhar, citar, reutilizar arquivos de dados de pesquisa.
-Os dados são produtos importantes do empreendimento científico, e eles devem ser preservados e utilizáveis por décadas no futuro. Os autores podem optar por ter os dados publicamente disponíveis no momento da publicação. Exceções podem ser concedidas a critério do editor, especialmente para informações sensíveis, tais como dados de sujeitos humanos ou a localização de espécies ameaçadas de extinção. Todas as exceções devem ser documentadas em um comunicado no artigo público. (Adaptado de <a href="http://datadryad.org/pages/jdap"> Joint Data Archiving Policy </a> (JDAP)).]]></message>
+	<message key="plugins.generic.dataverse.settings.default.dataAvailabilityPolicy"><![CDATA[{$journal} exige, como condição para a publicação, que os dados que sustentam os resultados no artigo devem ser arquivados em um arquivo público adequado. {$jornal} recomenda a <a href="http://thedata.harvard.edu/">Harvard Dataverse </a>, que é gratuito e aberto a todos os pesquisadores em todo o mundo para compartilhar, citar, reutilizar arquivos de dados de pesquisa. Os dados são produtos importantes do empreendimento científico, e eles devem ser preservados e utilizáveis por décadas no futuro. Os autores podem optar por ter os dados publicamente disponíveis no momento da publicação. Exceções podem ser concedidas a critério do editor, especialmente para informações sensíveis, tais como dados de sujeitos humanos ou a localização de espécies ameaçadas de extinção. Todas as exceções devem ser documentadas em um comunicado no artigo público. (Adaptado de <a href="http://datadryad.org/pages/jdap"> Joint Data Archiving Policy </a> (JDAP)).]]></message>
 	<message key="plugins.generic.dataverse.settings.default.authorGuidelines.extras">Exemplos de diretrizes para autores</message>
 	<message key="plugins.generic.dataverse.settings.default.authorGuidelines.extras.label">Mostrar exemplos de dados submetidos e diretrizes para citação</message>
 	<message key="plugins.generic.dataverse.settings.default.authorGuidelines"><![CDATA[<ol>
      <li>
        <p> Definição de dados que podem ser compartilhados:</p>
-       <P> Um "conjunto de dados mínimo" pode ser definida como consistindo do conjunto de dados usados ​​para chegar às conclusões tiradas no manuscrito, com metadados e métodos relacionados, e quaisquer outros dados necessários para replicar os resultados do estudo relatado na sua totalidade. Inclua informações suficientes para um pesquisador compreender os dados, e quaisquer citações de dados a partir do qual o conjunto de replicação é derivado. Dados descritivos principais, métodos e resultados do estudo devem ser incluídos no artigo principal, independentemente de deposição de dados. Autores que têm conjuntos de dados muito grandes para compartilhar via repositórios ou arquivos enviados devem entrar em contato com {$journal} para ajuda. (Adaptado de Política de Dados "PLOS <a href="http://www.plos.org/data-access-for-the-open-access-literatura-Ploss-dados-policy/"> </a>) </p>
+       <P> Um "conjunto de dados mínimo" pode ser definido como consistindo do conjunto de dados usados para chegar às conclusões relatadas no manuscrito, com metadados e métodos relacionados, e quaisquer outros dados necessários para replicar os resultados do estudo relatado na sua totalidade. Inclua informações suficientes para um pesquisador compreender os dados, e quaisquer citações de dados a partir do qual o conjunto de replicação é derivado. Dados descritivos principais, métodos e resultados do estudo devem ser incluídos no artigo principal, independentemente de deposição de dados. Autores que têm conjuntos de dados muito grandes para compartilhar via repositórios ou arquivos enviados devem entrar em contato com {$journal} para ajuda. (Adaptado de Política de Dados "PLOS <a href="http://www.plos.org/data-access-for-the-open-access-literatura-Ploss-dados-policy/"> </a>) </p>
      </li>
      <li>
        <p>Orientações sobre partilha de conjuntos de dados que derivam do trabalho envolvendo participantes humanos:</p>
-       <P> {$jornal} reconhece que há casos em que, por razões de privacidade, segurança nacional e de sigilo comercial, os dados completos não podem ser disponibilizados abertamente. Em tais casos, os pesquisadores devem partilhar a sua análise de dados em termos menos restritivas, de forma consistente com os requisitos legais, e cumprindo a ética em pesquisa e as diretrizes de sua comunidade. Isto deve incluir a abertura de dados não sensíveis, os dados de resumo, metadados e código; e facilitar o acesso se o proprietário dos dados originais concede permissão para outros pesquisadores a utilizar os dados. (Adaptado de de OKF <a href="http://openeconomics.net/principles/#sthash.MdxVXZlC.dpuf"> Open Economics Principles </a>) </p>
+       <P> {$journal} reconhece que há casos em que, por razões de privacidade, segurança nacional e de sigilo comercial, os dados completos não podem ser disponibilizados abertamente. Em tais casos, os pesquisadores devem partilhar a sua análise de dados em termos menos restritivas, de forma consistente com os requisitos legais, e cumprindo a ética em pesquisa e as diretrizes de sua comunidade. Isto deve incluir a abertura de dados não sensíveis, os dados de resumo, metadados e código; e facilitar o acesso se o proprietário dos dados originais concede permissão para outros pesquisadores a utilizar os dados. (Adaptado de de OKF <a href="http://openeconomics.net/principles/#sthash.MdxVXZlC.dpuf"> Open Economics Principles </a>) </p>
      </li>
      <li>
        <p> Orientação sobre citação de dados:</p>
        <p> Se os dados de pesquisa são depositado ao mesmo tempo que o seu manuscrito utilizando o formulário de submissão de artigos deste sistema, em seguida, a informação para citação dos dados será automaticamente gerada pela Harvard Dataverse. No entanto, se os dados da investigação já estão em um repositório, este é o formato de dados de citação sugerido a ser utilizado quando você enviar seu manuscrito: </p>
-       <p> Autor (es), Ano, Título do Conjunto de Dados, identificador persistente Global, Repositório de Dados ou Archive, versão e subconjunto. </p>
-       <P> Para mais informações sobre citação de dados e melhores práticas reveja <a href="http://www.force11.org/datacitation"> Force11's Data Citation Principles </a>. </p>
+       <p> Autor(es), Ano, Título do Conjunto de Dados, identificador persistente Global, Repositório de Dados ou Archive, versão e subconjunto. </p>
+       <P> Para mais informações sobre citação de dados e melhores práticas reveja <a href="http://www.force11.org/datacitation">os princípios para citação de dados da Force11</a>. </p>
      </li>
-   </ol>]]></message>
+   </ol>]]>
+ 
+	</message>
 	<message key="plugins.generic.dataverse.settings.default.checklist.extras">Exemplos da lista de verificação para preparação da submissão</message>
 	<message key="plugins.generic.dataverse.settings.default.checklist.extras.label">Mostrar exemplos de itens de verificação para as submissões com conjuntos de dados</message>
-	<message key="plugins.generic.dataverse.settings.default.checklist"><![CDATA[<ol> <li> <p> Se a intenção é compartilhar conjuntos de dados que derivam do trabalho envolvendo participantes humanos por favor veja as "Orientações sobre partilha de conjuntos de dados que derivam do trabalho envolvendo participantes humanos" acima. </p> </li>
-
-<li> <p> Prepare o conjunto de dados para depósito revisando as diretrizes de replicação: <a href="http://thedata.org/book/replication-guidelines">http://thedata.org/book/replication-guidelines</a></p></li>
-
-<li> <p> Se estiver depositando no Harvard Dataverse, você pode enviar o seu conjunto de dados no OJS ao mesmo tempo que o manuscrito em {$jornal}. Este será automaticamente depositado na Harvard Dataverse e irá gerar uma citação de dados com um URL persistente (DOI), que você poderá então, indicar a outras pessoas para citar seus dados quando o artigo for publicado. </p> </li>
-
-<li> <p> Se o seu conjunto de dados já está em um arquivo público recomendado, por favor inclua uma citação de dados com um URL persistente. Para obter diretrizes sobre dados de citação consulte as diretrizes de autor. </ P> </ li> </ ol>]]></message>
+	<message key="plugins.generic.dataverse.settings.default.checklist"><![CDATA[
+   <ol>
+   <li><p>Caso a intenção seja compartilhar conjuntos de dados que derivam de trabalho que envolve participantes humanos, veja o "Guia sobre compartilhamento de conjuntos de dados que derivam do trabalho envolvendo participantes humanos" acima.</p></li>
+   <li><p>Prepare o conjunto de dados para depósito verificando as diretrizes de replicação: <a href="http://thedata.org/book/replication-guidelines">http://thedata.org/book/replication-guidelines</a></p></li>
+  <li><p>Caso esteja depositando no Dataverse de Harvard, o conjunto de dados pode ser enviado junto com o manuscrito, durante a submissão no OJS do periódico {$journal}. Este será automaticamente depositado no Dataverse de Harvard e gerará uma citação de dados com um endereço persistente (DOI), que poderá ser indicado para citar seus dados quando o artigo for publicado.</p></li>
+<li> <p>Caso seu conjunto de dados já esteja em um arquivo público recomendado, inclua uma citação de dados com um endereço persistente. Para diretrizes sobre citação de dados, consulte as diretrizes de submissão.</p></li>
+	</ol>
+	]]>
+	</message>
 	<message key="plugins.generic.dataverse.settings.default.reviewPolicy.extras">Exemplos de política de revisão</message>
 	<message key="plugins.generic.dataverse.settings.default.reviewPolicy.extras.label">Mostrar exemplos de políticas de revisão para os conjuntos de dados</message>
 	<message key="plugins.generic.dataverse.settings.default.reviewPolicy"><![CDATA[<ul> <li> <p> Conjuntos de dados depositados devem ser tratados como parte do artigo, para efeitos de revisão por pares; OU </p> </li>
 <li> <p> Na aceitação, e antes da versão final do manuscrito, os dados subjacentes devem ser apresentados juntamente com uma descrição de como o conjunto de dados foi criado (incluindo quaisquer diferenças das versões anteriores, bem como o nome de todos os pacotes de software que foram utilizados). </p> </li>
 </ul>
-
 <p> A política de avaliação deve incluir uma declaração sobre conjuntos de dados provenientes de trabalhos envolvendo participantes humanos: </p> <ul>
- <li> <p> Os conjuntos de dados que derivam do trabalho envolvendo participantes humanos deve demonstrar que a privacidade dos participantes do estudo foi preservado como indicado na Política de disponibilidade de dados. Eles também devem atender preferencialmente o requisito do "conjunto de dados mínimo" descrito na Política de disponibilidade de dados. </p> </li>
-</ul>]]></message>
+ <li> <p> Os conjuntos de dados que derivam do trabalho envolvendo participantes humanos deve demonstrar que a privacidade dos participantes do estudo foi preservado como indicado na Política de disponibilidade de dados. Eles também devem atender preferencialmente o requisito do "conjunto de dados mínimo" descrito na Política de disponibilidade de dados.</p></li>
+   </ul>
+   ]]>
+	</message>
 	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines.extras">Exemplo de diretrizes de revisão</message>
 	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines.extras.label">Mostrar exemplos de orientações para a revisão de conjuntos de dados</message>
-	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines"><![CDATA[<p> No que se refere dados acompanhando um artigo, os revisores devem verificar se o artigo e o conjunto de dados cumprem a política de submissão de dados da revista, que os dados parecem consistentes com o artigo, e o artigo e sua documentação complementar são suficientes para compreender os dados fornecidos, como bem como as suas origens e a forma em que foram usados. </p>]]></message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines"><![CDATA[<p> No que se refere dados acompanhando um artigo, os revisores devem verificar se o artigo e o conjunto de dados cumprem a política de submissão de dados da revista, que os dados parecem consistentes com o artigo, e o artigo e sua documentação complementar são suficientes para compreender os dados fornecidos, como bem como as suas origens e a forma em que foram usados. </p>
+	]]>
+	
+	</message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions.extras">Exemplo de instruções para edição</message>
 	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions.extras.label">Mostrar exemplos de instruções para edição de texto sobre conjuntos de dados</message>
 	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions"><![CDATA[<ul>
 <li> <p> Editores de Texto verificaram se a política de citação de dados é seguida; OR </ p> </ li>
@@ -116,7 +128,7 @@ Os dados são produtos importantes do empreendimento científico, e eles devem s
 	<message key="plugins.generic.dataverse.notification.fileAdded">Arquivos suplementares foram depositados no repositório Dataverse.</message>
 	<message key="plugins.generic.dataverse.notification.fileDeleted">Arquivos suplementares foram removidos do repositório Dataverse.</message>
 	<message key="plugins.generic.dataverse.notification.studyDeleted">Dados da submissão removidos do Dataverse.</message>
-	<message key="plugins.generic.dataverse.notification.releaseDataverse">Os dados publicados no repositório Dataverse desta revista não estarão acessíveis até serem liberados. Por favor, faça o login no Dataverse da revista e libere-os.</message>
+	<message key="plugins.generic.dataverse.notification.releaseDataverse"><![CDATA[Os dados publicados no repositório Dataverse desta revista não estarão acessíveis até serem liberados. Faça o login no Dataverse da revista e libere-os.]]></message>
 	<message key="plugins.generic.dataverse.notification.studyReleased"><![CDATA[<p>Os dados da submissão foram publicados no repositório Dataverse:</p><p>{$dataCitation}</p>]]></message>
 	<message key="plugins.generic.dataverse.notification.error">Ocorreu um erro atualizar os dados deste submissão em Dataverse.</message>
 
@@ -134,8 +146,8 @@ Os dados são produtos importantes do empreendimento científico, e eles devem s
 	<message key="plugins.generic.dataverse.suppFile.studyDescription">Descrição do estudo</message>
 	<message key="plugins.generic.dataverse.suppFile.studyDescription.description">Forneça um resumo do propósito, natureza e âmbito dos dados do estudo.</message>
 	<message key="plugins.generic.dataverse.suppFile.externalDataCitation">Citação de Dados Externos</message>
-	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.description">Se os dados a serem publicados com esta submissão já estão em um outro repositório, por favor forneça uma citação de dados.</message>
-	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.error">Por favor, faça o upload dos arquivos para depositar no repositório de dados ou forneça uma citação de dados externa.</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.description">Se os dados a serem publicados com esta submissão já estão em um outro repositório, forneça uma citação de dados.</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.error">Faça o upload dos arquivos para depositar no repositório de dados ou forneça uma citação de dados externa.</message>
 
 	<!-- Terms of use -->
 	<message key="plugins.generic.dataverse.termsOfUse.title">Termos de uso</message>
