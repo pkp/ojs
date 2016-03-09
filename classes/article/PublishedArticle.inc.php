@@ -111,6 +111,21 @@ class PublishedArticle extends Article {
 	}
 
 	/**
+	 * Get the approved galleys for an article.
+	 * @return array ArticleGalley
+	 */
+	function getApprovedGalleys() {
+		$galleys = $this->getGalleys();
+		$approved_galleys = array();
+		foreach ($galleys as $galley) {
+			if ($galley->getIsApproved()) {
+				$approved_galleys[] = $galley;
+			}
+		}
+		return $approved_galleys;
+	}
+
+	/**
 	 * Get the localized galleys for an article.
 	 * @return array ArticleGalley
 	 */

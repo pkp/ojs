@@ -42,9 +42,9 @@
 		</ul>
 	{/if}
 
-	{if $article->getGalleys()}
+	{if $article->getApprovedGalleys()}
 		<ul class="galleys_links">
-			{foreach from=$article->getGalleys() item=galley}
+			{foreach from=$article->getApprovedGalleys() item=galley}
 				<li>
 					{include file="frontend/objects/galley_link.tpl" parent=$article}
 				</li>

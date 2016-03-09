@@ -37,7 +37,7 @@
 		{include file="frontend/objects/article_details.tpl"}
 
 		{* Display a legend describing the open/restricted access icons *}
-		{if $article->getGalleys()}
+		{if $article->getApprovedGalleys()}
 			{include file="frontend/components/accessLegend.tpl"}
 		{/if}
 	{/if}
