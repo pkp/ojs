@@ -76,7 +76,7 @@ class KeywordCloudBlockPlugin extends BlockPlugin {
 		$maxOccurs = array_shift(array_values($keywords));
 
 		// Now sort the array alphabetically
-		ksort($keywords);
+		uksort($keywords);
 
 		$templateMgr->assign_by_ref('cloudKeywords', $keywords);
 		$templateMgr->assign_by_ref('maxOccurs', $maxOccurs);
