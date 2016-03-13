@@ -13,5 +13,5 @@
 
 <locale name="eu_ES" full_name="Euskara">
 	<message key="plugins.generic.googleViewer.name">Googlen txertatutako ikustaile plugina</message>
-	<message key="plugins.generic.googleViewer.description"><![CDATA[Plugin honek <a href="https://docs.google.com/viewer">Google Docs Viewer</a> zerbitzua erabiltzen du PDFak txertatzeko artikulua bistaratzen den orrian.]]></message>
+	<message key="plugins.generic.googleViewer.description"><![CDATA[Plugin honek Google Docs Viewer zerbitzua erabiltzen du PDFak txertatzeko artikulua bistaratzen den orrian.]]></message>
 </locale>

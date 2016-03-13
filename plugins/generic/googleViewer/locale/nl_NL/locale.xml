@@ -13,5 +13,5 @@
 
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.generic.googleViewer.name">Google embedded viewer Plugin</message>
-	<message key="plugins.generic.googleViewer.description"><![CDATA[Deze plugin gebruikt de  <a href='https://docs.google.com/viewer'>Google Docs Viewer</a> om PDF's te tonen op de artikelpagina.]]></message>
+	<message key="plugins.generic.googleViewer.description"><![CDATA[Deze plugin gebruikt de Google Docs Viewer om PDF's te tonen op de artikelpagina.]]></message>
 </locale>

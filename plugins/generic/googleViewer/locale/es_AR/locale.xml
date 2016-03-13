@@ -13,5 +13,5 @@
 
 <locale name="es_AR" full_name="Español (Argentina)">
 	<message key="plugins.generic.googleViewer.name">Plugin de visor embebido de Google</message>
-	<message key="plugins.generic.googleViewer.description"><![CDATA[Este plugin usa el servicio <a href="https://docs.google.com/viewer">Google Docs Viewer</a> para embeber los PDF en la pagina de vista de artículo.]]></message>
+	<message key="plugins.generic.googleViewer.description"><![CDATA[Este plugin usa el servicio Google Docs Viewer para embeber los PDF en la pagina de vista de artículo.]]></message>
 </locale>
