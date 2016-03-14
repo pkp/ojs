@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 3.0.0_postupdate.xml
+  *
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 3.0.0 post database updates XML file.
+  -->
+<data>
+	<!-- Issue #1208: Remove signoffs. -->
+	<sql>
+		<query>DELETE FROM notifications WHERE assoc_type=1048582</query><!-- ASSOC_TYPE_SIGNOFF -->
+		<query>DROP TABLE signoffs</query>
+		<query>DELETE FROM notifications WHERE type = 16777226</query><!-- NOTIFICATION_TYPE_SIGNOFF_COPYEDIT -->
+		<query>DELETE FROM notifications WHERE type = 16777228</query><!-- NOTIFICATION_TYPE_SIGNOFF_PROOF -->
+	</sql>
+</data>

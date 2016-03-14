@@ -53,10 +53,6 @@ class UserAction {
 			$reviewAssignmentDao->updateObject($reviewAssignment);
 		}
 
-		// Transfer signoffs (e.g. copyediting, layout editing)
-		$signoffDao = DAORegistry::getDAO('SignoffDAO');
-		$signoffDao->transferSignoffs($oldUserId, $newUserId);
-
 		$articleEmailLogDao = DAORegistry::getDAO('SubmissionEmailLogDAO');
 		$articleEmailLogDao->changeUser($oldUserId, $newUserId);
 		$articleEventLogDao = DAORegistry::getDAO('SubmissionEventLogDAO');

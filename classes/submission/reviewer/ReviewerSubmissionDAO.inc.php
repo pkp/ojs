@@ -82,7 +82,7 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 
 	/**
 	 * Construct a new data object corresponding to this DAO.
-	 * @return SignoffEntry
+	 * @return ReviewerSubmission
 	 */
 	function newDataObject() {
 		return new ReviewerSubmission();
