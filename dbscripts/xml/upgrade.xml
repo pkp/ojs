@@ -16,56 +16,11 @@
 		<code function="abort" message="installer.unsupportedUpgradeError" />
 	</upgrade>
 
-	<upgrade minversion="2.3.0.0" maxversion="2.9.0.0"><!-- 2.9.0.0 is OJS 3.0a1 -->
+	<upgrade minversion="2.4.0.0" maxversion="2.9.0.0"><!-- 2.9.0.0 is OJS 3.0a1 -->
 		<code function="syncSeriesAssocType" />
 	</upgrade>
 
-	<!--
-	  - The 2.3.3 preupdate scripts have been broken into pieces because
-	  - the features they affect were added in different versions of OJS.
-	  -->
-	<upgrade minversion="2.3.0.0" maxversion="2.3.2.9">
-		<data file="dbscripts/xml/upgrade/2.3.3_preupdate1.xml" />
-	</upgrade>
-
-	<upgrade minversion="2.3.0.0" maxversion="2.3.2.9">
-		<data file="dbscripts/xml/upgrade/2.3.3_preupdate2.xml" /><!-- author_settings -->
-	</upgrade>
-
-	<upgrade minversion="2.3.0.0" maxversion="2.3.2.9">
-		<data file="dbscripts/xml/upgrade/2.3.3_preupdate3.xml" /><!-- review_forms -->
-	</upgrade>
-
-	<upgrade minversion="2.3.0.0" maxversion="2.3.3.9">
-		<!--
-		  - Not including 2.1.1, where user_settings first became available, because the 2.2.0_usersettings migration process
-		  - has renamed it to user_settings_old by this point.
-		  -->
-		<data file="dbscripts/xml/upgrade/2.3.3_preaffiliations1.xml" condition="return $installer->columnExists('users', 'affiliation');" />
-	</upgrade>
-
-	<upgrade minversion="2.3.0.0" maxversion="2.3.3.9">
-		<data file="dbscripts/xml/upgrade/2.3.3_preaffiliations2.xml" condition="return $installer->columnExists('authors', 'affiliation');" />
-	</upgrade>
-
-	<upgrade minversion="2.3.0.0" maxversion="2.3.9.9">
-		<!-- 2.x to 2.4 -->
-		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_article_files.xml" condition="return $installer->columnExists('article_files', 'type');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_emaillog.xml" condition="return $installer->columnExists('article_email_log', 'log_id');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_reviewrounds.xml" condition="return !$installer->columnExists('review_rounds', 'review_round_id');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_issues.xml" condition="return $installer->columnExists('issues', 'public_issue_id');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_articles.xml" condition="return $installer->columnExists('articles', 'doi');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_published_articles.xml" condition="return $installer->columnExists('published_articles', 'public_article_id');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_issue_galleys.xml" condition="return $installer->columnExists('issue_galleys', 'public_galley_id');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_article_galleys.xml" condition="return $installer->columnExists('article_galleys', 'public_galley_id');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_supp_files.xml" condition="return $installer->columnExists('article_supplementary_files', 'public_supp_file_id');" />
-	</upgrade>
-	
-	<upgrade minversion="2.3.0.0" maxversion="2.3.9.9">
-		<data file="dbscripts/xml/upgrade/2.4.0_notifications.xml" condition="return $installer->columnExists('notification_settings', 'setting_id');" />	
-	</upgrade>
-
-	<upgrade minversion="2.3.0.0" maxversion="2.8.9.9"><!-- 2.9.0.0 is OJS 3.0a1 -->
+	<upgrade minversion="2.4.0.0" maxversion="2.8.9.9"><!-- 2.9.0.0 is OJS 3.0a1 -->
 		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_usageStatistics.xml" condition="return $installer->columnExists('article_galleys', 'views');" />
 		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_usageStatistics_issueGalleys.xml" condition="return $installer->tableExists('issue_galleys');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_preupdate.xml" condition="return $installer->columnExists('edit_decisions', 'article_id');" />	
@@ -104,80 +59,7 @@
 	<!-- CLOB/Text indexes handled differently for MySQL and PostgreSQL -->
 	<data file="dbscripts/xml/indexes.xml" />
 
-	<upgrade minversion="2.3.0.0" maxversion="2.3.0.0">
-		<note file="docs/release-notes/README-2.3.1" />
-	</upgrade>
-
-	<upgrade minversion="2.3.0.0" maxversion="2.3.1.9">
-		<note file="docs/release-notes/README-2.3.2" />
-	</upgrade>
-
-	<upgrade minversion="2.3.0.0" maxversion="2.3.2.9">
-		<code function="installEmailTemplate" key="CITATION_EDITOR_AUTHOR_QUERY" locales="en_US" />
-		<code function="migrateReviewingInterests" />
-		<data file="dbscripts/xml/upgrade/2.3.3_update.xml" />
-		<note file="docs/release-notes/README-2.3.3" />
-	</upgrade>
-
-	<upgrade minversion="2.3.0.0" maxversion="2.3.3.9">
-		<!-- 2.x to 2.3.4 -->
-		<data file="dbscripts/xml/upgrade/2.3.4_update.xml" />
-		<note file="docs/release-notes/README-2.3.4" />
-	</upgrade>
-
-	<upgrade minversion="2.3.0.0" maxversion="2.3.4.9">
-		<!-- 2.x to 2.3.5 -->
-		<data file="dbscripts/xml/upgrade/2.3.5_update.xml" />
-		<note file="docs/release-notes/README-2.3.5" />
-	</upgrade>
-
-	<upgrade minversion="2.3.0.0" maxversion="2.3.5.9">
-		<note file="docs/release-notes/README-2.3.6" />
-	</upgrade>
-
-	<upgrade minversion="2.3.0.0" maxversion="2.3.6.9">
-		<code function="migrateReviewingInterests2" />
-		<data file="dbscripts/xml/upgrade/2.3.7_update.xml" />
-		<code function="removeAuthorRevisedFilesFromSignoffs" />
-		<note file="docs/release-notes/README-2.3.7" />
-	</upgrade>
-
-	<upgrade minversion="2.3.0.0" maxversion="2.3.2.0">
-		<!-- COUNTER - counter_monthly_log update.-->
-		<data file="plugins/generic/counter/counter_monthly_log_1_1.xml" />
-	</upgrade>
-
-	<upgrade minversion="2.3.0.0" maxversion="2.3.9.9">
-		<!-- 2.x to 2.4 -->
-
-		<!-- Newly introduced email templates -->
-		<code function="installEmailTemplate" key="GIFT_AVAILABLE" locales="en_US,de_DE,eu_ES,fa_IR,it_IT,nl_NL,pt_BR,tr_TR,uk_UA,zh_CN" />
-		<code function="installEmailTemplate" key="GIFT_USER_REGISTER" locales="en_US,de_DE,eu_ES,fa_IR,it_IT,nl_NL,pt_BR,tr_TR,uk_UA,zh_CN" />
-		<code function="installEmailTemplate" key="GIFT_USER_LOGIN" locales="en_US,de_DE,eu_ES,fa_IR,it_IT,nl_NL,pt_BR,tr_TR,uk_UA,zh_CN" />
-		<code function="installEmailTemplate" key="REVISED_VERSION_NOTIFY" locales="en_US,de_DE,eu_ES,it_IT,nl_NL,pt_BR,tr_TR,uk_UA,zh_CN" />
-		<code function="installEmailTemplate" key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT" locales="en_US,de_DE,eu_ES,it_IT,nl_NL,pt_BR,tr_TR,uk_UA,zh_CN" />
-		<code function="installEmailTemplate" key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT" locales="en_US,de_DE,eu_ES,it_IT,nl_NL,pt_BR,tr_TR,uk_UA,zh_CN" />
-		<code function="installEmailTemplate" key="REVIEW_REQUEST_SUBSEQUENT" locales="en_US,de_DE,eu_ES,it_IT,nl_NL,pt_BR,tr_TR,uk_UA,zh_CN" />
-
-		<!-- ID upgrade -->
-		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_article_galleys2.xml" condition="return $installer->tableExists('tmp_public_galley_ids');" />
-
-		<!-- Mutex helper table. -->
-		<data file="lib/pkp/xml/mutexData.xml" />
-
-		<!-- Misc. 2.4.0 updates -->
-		<data file="dbscripts/xml/upgrade/2.4.0_update.xml" />
-		<note file="docs/release-notes/README-2.4.0" />
-	</upgrade>
-
-	<upgrade minversion="2.3.0.0" maxversion="2.3.9.9">
-		<code function="migrateNotifications" condition="return $installer->tableExists('notifications_old');" />
-		<!-- Delete the notification*_old tables now that they have been migrated. -->
-		<data file="dbscripts/xml/upgrade/2.4.0_notifications2.xml" condition="return $installer->tableExists('notification_settings_old');" />
-		<!-- Update the notification emails (we have removed references to mailing list passwords) -->
-	</upgrade>
-
-	<upgrade minversion="2.3.0.0" maxversion="2.8.9.9"><!-- 2.9.0.0 is OJS 3.0a1 -->
+	<upgrade minversion="2.4.0.0" maxversion="2.8.9.9"><!-- 2.9.0.0 is OJS 3.0a1 -->
 		<data file="dbscripts/xml/upgrade/3.0.0_change_assoc_type.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_change_assoc_type_metrics.xml" condition="return $installer->tableExists('metrics');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_settings.xml" />
@@ -199,21 +81,14 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_postSubmissionFilesMigration.xml" condition="return $installer->tableExists('article_files_migration');" />
 	</upgrade>
 
-	<upgrade minversion="2.3.0.0" maxversion="2.8.9.9"><!-- 2.9.0.0 is OJS 3.0a1 -->
-		<note file="docs/release-notes/README-3.0a1" />
-	</upgrade>
-
-	<upgrade minversion="2.3.0.0" maxversion="2.9.9.9"><!-- 2.9.9.0 is OJS 3.0b -->
+	<upgrade minversion="2.4.0.0" maxversion="2.9.9.9"><!-- 2.9.9.0 is OJS 3.0b -->
 		<code function="fixReviewForms" />
 		<code function="htmlifyEmailTemplates" /><!-- Bug #8929 -->
-		<note file="docs/release-notes/README-3.0b" />
-	</upgrade>
-
-	<upgrade minversion="2.3.0.0" maxversion="3.0.0.9">
 		<note file="docs/release-notes/README-BEACON" />
 		<code function="installEmailTemplate" key="REVIEW_REQUEST_REMIND_AUTO" locales="ca_ES,cs_CZ,da_DK,de_DE,el_GR,en_US,es_ES,eu_ES,fr_IR,fr_CA,gl_ES,hr_HR,id_ID,it_IT,ja_JP,ml_IN,nb_NO,nl_NL,pt_BR,pr_PT,ro_RO,ru_RU,sr_SR,sv_SE,te_ST,tr_TR,uk_UA,vi_VN,zh_CN,zh_TW" />
 		<code function="installEmailTemplate" key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK" locales="ca_ES,cs_CZ,da_DK,de_DE,el_GR,en_US,es_ES,eu_ES,fr_IR,fr_CA,gl_ES,hr_HR,id_ID,it_IT,ja_JP,ml_IN,nb_NO,nl_NL,pt_BR,pr_PT,ro_RO,ru_RU,sr_SR,sv_SE,te_ST,tr_TR,uk_UA,vi_VN,zh_CN,zh_TW" />
 		<data file="dbscripts/xml/upgrade/3.0.0_scheduledTasks.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.0_postupdate.xml" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
