@@ -141,9 +141,9 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 			$matchedPage = htmlspecialchars(Core::cleanVar($matches[1]));
 			$response .= "\t\t\t\t<fpage>$matchedPage</fpage><lpage>$matchedPage</lpage>\n";
 			$pageCount = 1;
-		} elseif (PKPString::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)[ ]?-[ ]?([Pp][Pp]?[.]?[ ]?)?(\d+)$/', $article->getPages(), $matches)) {
+		} elseif (PKPString::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)[ ]?(-|–)[ ]?([Pp][Pp]?[.]?[ ]?)?(\d+)$/', $article->getPages(), $matches)) {
 			$matchedPageFrom = htmlspecialchars(Core::cleanVar($matches[1]));
-			$matchedPageTo = htmlspecialchars(Core::cleanVar($matches[3]));
+			$matchedPageTo = htmlspecialchars(Core::cleanVar($matches[4]));
 			$response .=
 				"\t\t\t\t<fpage>$matchedPageFrom</fpage>\n" .
 				"\t\t\t\t<lpage>$matchedPageTo</lpage>\n";
