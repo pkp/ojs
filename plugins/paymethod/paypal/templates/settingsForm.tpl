@@ -15,7 +15,7 @@
 	{fbvElement required="true" type="text" name="selleraccount" id="selleraccount" value=$selleraccount}
 {/fbvFormSection}
 {if !$isCurlInstalled}
-	<div class="description">
+	{fbvFormSection}
 		{translate key="plugins.paymethod.paypal.settings.curlNotInstalled"}
-	</div>
+	{/fbvFormSection}
 {/if}
