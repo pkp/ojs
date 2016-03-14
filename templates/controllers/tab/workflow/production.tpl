@@ -13,6 +13,7 @@
 
 	<div class="pkp_context_sidebar">
 		{include file="controllers/tab/workflow/stageParticipants.tpl"}
+		{help file="chapter_9_production.md"}
 	</div>
 
 	<div class="pkp_content_panel">
