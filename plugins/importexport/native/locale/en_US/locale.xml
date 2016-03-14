@@ -15,7 +15,7 @@
 	<message key="plugins.importexport.native.displayName">Native XML Plugin</message>
 	<message key="plugins.importexport.native.description">Import and export articles and issues in OJS's native XML format.</message>
 	<message key="plugins.importexport.native.import">Import</message>
-	<message key="plugins.importexport.native.import.instructions">Please select an XML file to upload and press "Start Upload". When the upload has completed, press "OK" to import the document into OJS.</message>
+	<message key="plugins.importexport.native.import.instructions">Upload XML file to import</message>
 	<message key="plugins.importexport.native.exportSubmissions">Export Articles</message>
 	<message key="plugins.importexport.native.exportIssues">Export Issues</message>
 	<message key="plugins.importexport.native.results">Results</message>

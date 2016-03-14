@@ -8,6 +8,6 @@
  * Form for manual payment settings.
  *}
 
-{fbvFormSection label="plugins.paymethod.manual.settings" for="manualInstructions" description="plugins.paymethod.manual.settings.instructions"}
-	{fbvElement required="true" type="textarea" name="manualInstructions" id="manualInstructions" value=$manualInstructions}
+{fbvFormSection title="plugins.paymethod.manual.settings"}
+	{fbvElement type="textarea" name="manualInstructions" id="manualInstructions" value=$manualInstructions}
 {/fbvFormSection}

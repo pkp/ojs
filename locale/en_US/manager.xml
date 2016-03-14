@@ -154,7 +154,7 @@
 	<message key="manager.setup.customTagsDescription">Custom HTML header tags to be inserted in the header of every page (e.g., META tags).</message>
 	<message key="manager.setup.details">Details</message>
 	<message key="manager.setup.details.description">Name of journal, ISSN, contacts, sponsors, and search engines.</message>
-	<message key="manager.setup.disableUserRegistration">Journal Manager registers all users, with Editors or Section Editors able to register Reviewers alone.</message>
+	<message key="manager.setup.disableUserRegistration">The Journal Manager will register all user accounts. Editors or Section Editors may register user accounts for reviewers.</message>
 	<message key="manager.setup.discipline">Academic Discipline and Sub-Disciplines</message>
 	<message key="manager.setup.disciplineDescription">Useful when journal crosses disciplinary boundaries and/or authors submit multidisciplinary items.</message>
 	<message key="manager.setup.disciplineExamples">(E.g., History; Education; Sociology; Psychology; Cultural Studies; Law)</message>
@@ -177,10 +177,7 @@
 	<message key="manager.setup.enablePublicGalleyId">Custom identifiers will be used to identify galleys (e.g. HTML or PDF files) for published items.</message>
 	<message key="manager.setup.enablePublicIssueId">Custom identifiers will be used to identify issues.</message>
 	<message key="manager.setup.enablePublicSuppFileId">Custom identifiers will be used to identify supplemental article files.</message>
-	<message key="manager.setup.enableUserRegistration">Users can register themselves with the journal in one or more of the following roles:</message>
-	<message key="manager.setup.enableUserRegistration.author">Authors (can submit materials to the journal)</message>
-	<message key="manager.setup.enableUserRegistration.reader">Readers (will receive notifications and be counted as equivalent to a subscriber)</message>
-	<message key="manager.setup.enableUserRegistration.reviewer">Reviewers (available for reviewing submissions)</message>
+	<message key="manager.setup.enableUserRegistration">Visitors can register a user account with the press.</message>
 	<message key="manager.setup.focusAndScope">Focus and scope</message>
 	<message key="manager.setup.focusAndScope.description">Describe to authors, readers, and librarians the range of articles and other items the press will publish.</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">For Authors to Index Their Work</message>
@@ -292,7 +289,6 @@
 	<message key="manager.setup.publisherDescription">The name of the organization publishing the journal will appear in About the Journal.</message>
 	<message key="manager.setup.referenceLinking">Reference Linking</message>
 	<message key="manager.setup.refLinkInstructions.description">Layout Instructions for Reference Linking</message>
-	<message key="manager.setup.registerForIndexing">Register Journal for Indexing (Metadata Harvesting)</message>
 	<message key="manager.setup.restrictArticleAccess">Users must be registered and log in to view open access content.</message>
 	<message key="manager.setup.restrictSiteAccess">Users must be registered and log in to view the journal site.</message>
 	<message key="manager.setup.reviewGuidelines">Review Guidelines</message>
@@ -312,7 +308,7 @@
 	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Provide links to <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Ensuring a Blind Review</a> on pages where authors and reviewers upload files.]]></message>
 	<message key="manager.setup.reviewPolicy">Review Policy</message>
 	<message key="manager.setup.searchEngineIndexing">Search Engine Indexing</message>
-	<message key="manager.setup.searchEngineIndexingDescription">To assist the users of search engines in discovering this journal, provide a brief description of the journal and relevant keywords (separated by semicolons).</message>
+	<message key="manager.setup.searchEngineIndexingDescription">Provide a brief description of the journal which search engines can display when listing the journal in search results.</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Sections and Section Editors</message>
 	<message key="manager.setup.sectionsDefaultSectionDescription">(If sections are not added, then items are submitted to the Articles section by default.)</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[To create or modify sections for the journal (e.g., Articles, Book Reviews, etc.), go to Section Management.<br /><br />Authors on submitting items to the journal will designate...]]></message>
