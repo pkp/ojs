@@ -105,7 +105,7 @@
 
 <!ELEMENT access_date (#PCDATA)>
 
-<!ELEMENT cover (caption?, image?)>
+<!ELEMENT cover (altText?, caption?, image?)>
 	<!ATTLIST cover
 		locale CDATA #IMPLIED>
 
