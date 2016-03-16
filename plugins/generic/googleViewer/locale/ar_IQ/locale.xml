@@ -13,5 +13,5 @@
 
 <locale name="ar_IQ" full_name="العربية">
 	<message key="plugins.generic.googleViewer.name">إضافة معاينة مضمنة من Google</message>
-	<message key="plugins.generic.googleViewer.description"><![CDATA[هذه الإضافة تستعمل خدمة <a href="https://docs.google.com/viewer">معاين الملفات من Google</a> لتضمين ملفات PDF في صفحة معاينة المقال.]]></message>
+	<message key="plugins.generic.googleViewer.description"><![CDATA[هذه الإضافة تستعمل خدمة معاين الملفات من Google لتضمين ملفات PDF في صفحة معاينة المقال.]]></message>
 </locale>

@@ -13,5 +13,5 @@
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.googleViewer.name">Eingebetteter Google-Viewer</message>
-	<message key="plugins.generic.googleViewer.description"><![CDATA[Dieses Plug-In benutzt den Dienst <a href="https://docs.google.com/viewer">Google Docs Viewer</a>, um PDF-Dateien in der Artikelansicht einzubinden.]]></message>
+	<message key="plugins.generic.googleViewer.description"><![CDATA[Dieses Plug-In benutzt den Dienst Google Docs Viewer, um PDF-Dateien in der Artikelansicht einzubinden.]]></message>
 </locale>
