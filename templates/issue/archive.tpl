@@ -34,7 +34,7 @@
 	{else}
 		{assign var="coverLocale" value="$primaryLocale"}
 	{/if}
-	{if $issue->getFileName($coverLocale) && $issue->getShowCoverPage($coverLocale) && !$issue->getHideCoverPageArchives($coverLocale)}
+	{if $issue->getFileName($coverLocale) && !$issue->getHideCoverPageArchives($coverLocale)}
 		<div class="issueCoverImage"><a href="{url op="view" path=$issue->getBestIssueId($currentJournal)}"><img src="{$coverPagePath|escape}{$issue->getFileName($coverLocale)|escape}"{if $issue->getCoverPageAltText($coverLocale) != ''} alt="{$issue->getCoverPageAltText($coverLocale)|escape}"{else} alt="{translate key="issue.coverPage.altText"}"{/if}/></a>
 		</div>
 		<h4><a href="{url op="view" path=$issue->getBestIssueId($currentJournal)}">{$issue->getIssueIdentification()|escape}</a></h4>
