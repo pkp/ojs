@@ -849,7 +849,7 @@ Caso não deseje mais receber as notificações, acesse {$unsubscribeLink}.<br /
 Foi tomada uma decisão sobre o artigo submetido à revista {$journalTitle},<br />
 &quot;{$submissionTitle}&quot;.<br />
 <br />
-A decisão é:<br />
+A decisão é: Submissão aceita.<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Esta é uma mensagem do Editor/Editor de Seção ao autor para notificá-lo da decisão editorial (final) tomada sobre a submissão.</description>
@@ -860,7 +860,7 @@ A decisão é:<br />
 <br />
 Foi tomada uma decisão sobre o artigo submetido à {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-A decisão é:<br />
+A decisão é: Revisões necessárias.<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Esta mensagem é enviada pelo do Editor/Editor de Seção ao autor, notificando-o da decisão final tomada sobre a submissão.</description>
@@ -871,7 +871,7 @@ A decisão é:<br />
 <br />
 Foi tomada uma decisão sobre o artigo enviado à revista {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-A decisão é:<br />
+A decisão é: Submeter novamente.<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Esta mensagem do Editor/Editor de Seção ao autor notifica sobre a decisão editorial final tomada sobre a submissão.</description>
@@ -882,7 +882,7 @@ A decisão é:<br />
 <br />
 Foi tomada uma decisão sobre o artigo submetido à revista {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-A decisão é:<br />
+A decisão é: Submissão rejeitada.<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Esta mensagem do Editor/Editor de Seção ao autor notifica sobre a decisão final tomada sobre a submissão.</description>
