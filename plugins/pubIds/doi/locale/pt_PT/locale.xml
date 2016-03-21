@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/pubIds/doi/locale/pt_PT/locale.xml
+  *
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DOI plugin localization strings
+  -->
+ 
+<locale name="pt_PT" full_name="Português (Portugal)">
+	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.description">Este plugin ativa a criação de Identificadores de Objetos Digitais a edições, artigos, números completos e ficheiros complementares.</message>
+
+	<!-- settings form -->
+	<message key="plugins.pubIds.doi.manager.settings.doiSettings">Configurações do Plugin DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.description">Configure o plugin DOI para gerir e usar DOIs na sua revista:</message>
+
+	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Conteúdo da Revista</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Escolha a que itens os DOI devem ser associados.</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainDois">Escolha os objetos da publicação que terão Identificadores de Objetos Digitais (DOI) associados:</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>NOTA:</strong> Se utilizar o DOI através da <a href="http://www.crossref.org" target="_new">CrossRef</a>, escolha artigos. O Artigo é visto como um trabalho (work), ou seja, uma entidade com conteúdo intelectual e/ou artístico. O artigo é o objeto usado no DOI da CrossRef para exportação e registo.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Números</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Artigos</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">Número Completo</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableSuppFileDoi">Ficheiros Suplementares</message>
+
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">Prefixo DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefixDescription"><![CDATA[O prefixo DOI é atribuído pelas agências de registo (ex: <a href="http://www.crossref.org" target="_new">CrossRef</a>) e é definido no formato 10.xxxx (ex. 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">O prefixo DOI é obrigatório e deve ser definido no formato 10.xxxx.</message>
+
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">Sufixo DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDescription">O sufixo DOI pode ter vários formatos, mas deve ser único para todos os objetos com o mesmo prefixo:</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Use o seguinte padrão para gerar os sufixos DOI. Use %j para as iniciais da revista, %v para o número do volume, %i para o número da edição, %Y para o ano, %a para o identificador dos artigos no OJS, %g para o identificador do número completo, %s para o identificador dos ficheiros suplementares, %p para o número de página e %x para o "identificador personalizado" (Deve estar ativo no ponto 4.3 da Configuração da revista).</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">para edições/números</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">para artigos</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys">para números completos</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.suppFiles">para ficheiros suplementares.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Por exemplo, vol%viss%ipp%p para criar um DOI tal como 10.1234/vol3iss2pp230</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Usar padrão por omissão.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i para edições/números<br />%j.v%vi%i.%a para artigos<br />%j.v%vi%i.%a.g%g para números completos <br />%j.v%vi%i.%a.s%s para ficheiros suplementares.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Inserir um sufixo DOI individual para cada item publicado. Aparecerá um campo adicional do DOI em cada página de metadados.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Insira o sufixo DOI padrão para edições/números.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Insira o sufixo DOI padrão para artigos.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Insira o sufixo DOI padrão para números completos.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuppFileSuffixPatternRequired">Insira o sufixo DOI padrão para ficheiros suplementares.</message>
+
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Reatribuir DOIs</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Se alterar a sua configuração do DOI, os objetos já atribuídos/registados não serão alterados. Assim que guardar a configuração do DOI, use este botão para remover as configurações anteriores e atribuir as novas que serão aplicadas aos trabalhos que ainda não foram registados.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Tem a certeza que pretende eliminar todos os DOIs?</message>
+
+
+	<!-- metadata form -->
+	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
+	<message key="plugins.pubIds.doi.editor.doi.issueObjects">Objetos DOI da Edição</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">edição/número</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">artigo</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">número completo</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">ficheiro suplementar</message>
+	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">O que visualiza é uma antevisão do DOI que pode estar imcompleta. O DOI ainda não foi gerado. Ao publicar um novo número da revista e ao ativar a página pública {$pubObjectType} vai gerar automaticamente um DOI único para {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">O sufixo DOI indicado já está utilizado por outro item publicado. Insira um sufixo DOI único para cada item.</message>
+	<message key="plugins.pubIds.doi.editor.excludePubObject">Excluir este tipo {$pubObjectType} da atribuição do DOI.</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign">Reatribuir DOIs</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign.description">Selecione esta caixa para limpar os DOIs atribuídos a {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi">Excluir Objetos da Edição</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi.description">Use este botão para excluir objetos (artigos, números completos, e ficheiros suplementares) atualmente agendados para que lhes seja atribuído um DOI. Os objetos que estão agendados posteriormetne não serão afetados. Poderá ainda usar a possibilidade de excluir individualmente os objectos da atribuição do DOI.</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Limpar Objetos DOI da Edição</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Use este botão para remover todos os DOIs de todos os objetos (artigos, número completos, e ficheiros suplementares) atualmetne agendados para esta edição/número.</message>
+</locale>
