@@ -10,11 +10,17 @@
  * @uses $purchaseArticleEnabled bool Can they buy access to single articles?
  *}
 <ul class="cmp_access_legend">
-	<li class="restricted">
-		{if $purchaseArticleEnabled}
-			{translate key="reader.subscriptionOrFeeAccess"}
-		{else}
-			{translate key="reader.subscriptionAccess"}
-		{/if}
-	</li>
+	{if $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN || ($article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_ISSUE_DEFAULT && $issue->getAccessStatus() == $smarty.const.ISSUE_ACCESS_OPEN}
+		<li class="open_access">
+			{translate key="reader.openAccess"}
+		</li>
+	{else}
+		<li class="restricted">
+			{if $purchaseArticleEnabled}
+				{translate key="reader.subscriptionOrFeeAccess"}
+			{else}
+				{translate key="reader.subscriptionAccess"}
+			{/if}
+		</li>
+	{/if}
 </ul>
