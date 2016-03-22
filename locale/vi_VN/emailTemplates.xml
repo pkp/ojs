@@ -295,12 +295,12 @@ Xin quý vị vui lòng khẳng định khả năng đóng góp hết sức quan
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Đề nghị biên tập bản thảo</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Tôi xin đề nghị quý vị biên tập bản thảo bài nộp, &quot;{$submissionTitle},&quot; cho tạp chí {$contextName}. Bài nộp có thể tìm thấy trên website của tạp chí cùng với Hướng dẫn biên tập bản thảo.<br />
 <br />
-Đường dẫn của bản thảo: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Bí danh: {$copyeditorUsername}<br />
+Đường dẫn của bản thảo: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Bí danh: {$participantUsername}<br />
 <br />
 Nếu quý vị không thể thực hiện công việc vào lúc này hoặc có bất kỳ câu hỏi nào, xin vui lòng liên hệ với tôi. Xin cảm ơn quý vị đã nhận lời thực hiện công việc quan trọng này của tạp chí.<br />
 <br />
@@ -314,11 +314,11 @@ Nếu quý vị không thể thực hiện công việc vào lúc này hoặc c�
 Tôi đã hoàn thành vòng biên tập bản thảo đầu tiên của bài nộp, &quot;{$submissionTitle},&quot; cho tạp chí {$contextName}. Bài nộp bây giờ đã sẵn sàng để tác giả và BTV chính xem lại những thay đổi và thắc mắc. <br />
 <br />
 Trân trọng cảm ơn,<br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Xác nhận biên tập bản thảo</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 			<br />
 Trân trọng cảm ơn quý vị đã biên tập bản thảo bài viết, &quot;{$submissionTitle},&quot; cho tạp chí {$contextName}. Công việc của quý vị góp phần rất quan trọng vào chất lượng của tạp chí.<br />
 <br />
@@ -333,7 +333,7 @@ Chúng tôi đã biên tập bài nộp của quý vị, &quot;{$submissionTitle
 <br />
 Đây là cơ hội cuối cùng để quý vị có thể sửa đổi lớn với bài viết. Quý vị sẽ được đề nghị đọc soát lỗi các bản bông, nhưng ở bước đó chúng tôi chỉ có thể sửa những lỗi đánh máy và lỗi trình bày nhỏ mà thôi.<br />
 <br />
-Đường dẫn tới bản thảo: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+Đường dẫn tới bản thảo: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
  <br />
 Nếu quý vị không thể thực hiện được công việc vào thời điểm này hoặc có bất kỳ câu hỏi nào, xin vui lòng liên hệ với tôi.  Trân trọng cảm ơn sự đóng góp của của quý vị cho tạp chí.<br />
 <br />
@@ -361,12 +361,12 @@ Cảm ơn quý vị vì đã duyệt biên tập bản thảo bài viết của 
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Duyệt biên tập bản thảo lần cuối</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Tác giả và BTV đã hoàn thành việc duyệt biên tập bản thảo bài viết, &quot;{$submissionTitle},&quot; cho tạp chí {$contextName}. Bản thảo cuối cùng &quot;sạch sẽ&quot; có thể sẵn sàng cho khâu trình bày.<br />
 <br />
-Đường dẫn tới bản thảo: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Bí danh: {$copyeditorUsername}<br />
+Đường dẫn tới bản thảo: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Bí danh: {$participantUsername}<br />
 <br />
 Thay mặt tạp chí xin trân trọng cảm ơn<br />
 <br />
@@ -379,12 +379,12 @@ Thay mặt tạp chí xin trân trọng cảm ơn<br />
 <br />
 Tôi đã chuẩn bị xong một bản thảo sạch lỗi, đã được biên tập của bài nộp, &quot;{$submissionTitle},&quot; cho tạp chí {$contextName}. Bản thảo này sẵn sàng cho trình bày và chuẩn bị các bản bông.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Email này từ BTV bản thảo gửi BTV chuyên mục thông báo rằng vòng biên tập bản thảo cuối cùng đã hoàn tất và quá trình trình bày có thể bắt đầu.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Xác nhận duyệt biên tập bản thảo lần cuối</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Cảm ơn quý vị đã hoàn thành việc biên tập bản thảo bài viết, &quot;{$submissionTitle},&quot; cho tạp chí {$contextName}. Việc chuẩn bị một bản thảo &quot;sạch&quot; để trình bày là một bước quan trọng trong quá trình biên tập.<br />
 <br />
@@ -393,12 +393,12 @@ Cảm ơn quý vị đã hoàn thành việc biên tập bản thảo bài viế
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Đề nghị chuẩn bị bản bông</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Tôi xin đề nghị quý vị chuẩn bị các bản bông cho bản thảo bài viết, &quot;{$submissionTitle},&quot; cho tạp chí {$contextName}.<br />
 <br />
 Đường dẫn của bản thảo: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Bí danh: {$layoutEditorUsername}<br />
+Bí danh: {$participantUsername}<br />
 <br />
 Nếu quý vị không thể thực hiện được công việc vào thời điểm này hoặc có bất kỳ câu hỏi nào, xin vui lòng liên hệ với tôi. Trân trọng cảm ơn sự đóng góp của của quý vị cho tạp chí.<br />
 <br />
@@ -413,12 +413,12 @@ Các bản bông đã được chuẩn bị cho bài viết, &quot;{$submissionT
 <br />
 Nếu quý vị có bất kỳ câu hỏi nào, xin vui lòng liên hệ với tôi.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Email này được BTV trình bày gửi cho BTV chuyên mục thông bảo rằng quá trình trình bày đã hoàn tất.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Xác nhận trình bày</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Cảm ơn quý vị đã chuẩn bị các bản bông cho bài viết, &quot;{$submissionTitle},&quot; cho tạp chí {$contextName}. Đây là một đóng góp quan trọng cho quá trình xuất bản.<br />
 <br />
@@ -492,12 +492,12 @@ Cảm ơn quý vị đã soát lỗi các bản bông của bài viết, &quot;{
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Đề nghị soát lỗi (BTV trình bày)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Chúng tôi xin đề nghị quý vị sửa bất kỳ lỗi nào cần thiết từ kết quả soát lỗi các bản bông của bài viết, &quot;{$submissionTitle},&quot; cho tạp chí {$contextName}.<br />
 <br />
 Đường dẫn tới bản thảo: {$submissionUrl}<br />
-Bí danh: {$layoutEditorUsername}<br />
+Bí danh: {$participantUsername}<br />
 <br />
 Nếu quý vị không thể thực hiện được công việc vào thời điểm này hoặc có bất kỳ câu hỏi nào, xin vui lòng liên hệ với tôi. Trân trọng cảm ơn sự đóng góp của của quý vị cho tạp chí.<br />
 <br />
@@ -509,12 +509,12 @@ Nếu quý vị không thể thực hiện được công việc vào thời đi
 		<body><![CDATA[{$editorialContactName}:<br />
 Dựa thao kết quả soát lỗi, các bản bông của bài viết, &quot;{$submissionTitle},&quot; cho tạp chí {$contextName} đã được sửa lỗi. Bản cuối cùng này đã sẵn sàng để xuất bản.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Email này được BTV trình bày gửi cho BTV chuyên mục thông báo rằng bước soát lỗi cuối cùng đã hoàn thành và bài viết sẵn sàng để xuất bản.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Xác nhận soát lỗi (BTV trình bày)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Cảm ơn quý vị đã hoàn thành việc sửa các lỗi đã soát cho các bản bông của bài viết, &quot;{$submissionTitle},&quot; cho tạp chí {$contextName}. Đây là một sự đóng góp quan trọng vào công việc của tạp chí.<br />
 <br />

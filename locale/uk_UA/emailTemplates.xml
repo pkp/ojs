@@ -409,7 +409,7 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 	</email_text>
        <email_text key="COPYEDIT_REQUEST">
                <subject>Запит на літературне редагування</subject>
-               <body><![CDATA[{$copyeditorName}:<br />
+               <body><![CDATA[{$participantName}:<br />
 <br />
 Я хотів би попросити Вас здійснити літературне редагування тексту &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;, виконавши наступні кроки.<br />
 1. Натисніть на вказаній нижче адресі URL подання.<br />
@@ -420,8 +420,8 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 6. Повідомте листом редактора про завершення роботи.<br />
 <br />
 URL видання &quot;{$contextName}&quot;: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL подання: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Ім'я користувача: {$copyeditorUsername}<br />
+URL подання: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Ім'я користувача: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
                <description>Цим листом редактор розділу просить літературного редактора розпочати процес літературного редагування подання. У листі міститься інформація про подання та про те, як отримати доступ до нього.</description>
@@ -445,11 +445,11 @@ URL рукопису: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}<
 Якщо зараз Ви не маєте можливості виконати цю роботу або маєте додаткові питання,<br />
 будь ласка, повідомте мені. Дякую за співпрацю з нашим журналом.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
        </email_text>
        <email_text key="COPYEDIT_ACK">
                <subject>Подяка за літературне редагування</subject>
-               <body><![CDATA[{$copyeditorName}:<br />
+               <body><![CDATA[{$participantName}:<br />
 <br />
 Дякую за літературне редагування рукопису &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Ви зробили важливий внесок у підвищення якості матеріалів, що публікуються цим журналом.<br />
 <br />
@@ -471,7 +471,7 @@ URL рукопису: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}<
 7. Натисніть на посиланні &quot;МЕТАДАНІ&quot;, щоб перевірити повноту та точність індексної інформації.<br />
 8. Натисніть на зображення поштового конверту під заголовком &quot;Завершення&quot;, щоб надіслати лист редактору та літературному редактору.<br />
 <br />
-URL подання: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL подання: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Зауважте, що це остання можливість внести серйозні зміни до тексту. На стадії коректури, після виготовлення гранки сатті, можна буде виправляти лише незначні друкарські помилки та опечатки.<br />
 <br />
@@ -501,7 +501,7 @@ URL подання: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditin
        </email_text>
        <email_text key="COPYEDIT_FINAL_REQUEST">
                <subject>Запит на остаточне літературне редагування</subject>
-               <body><![CDATA[{$copyeditorName}:<br />
+               <body><![CDATA[{$participantName}:<br />
 <br />
 Автор та редактор завершили перегляд редакційної версії подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;. &quot;Чиста копія&quot; тепер потребує підготовки до виготовлення верстки. Для цього необхідно зробити наступні дії.<br />
 1. Натисніть на вказаній нижче адресі URL подання.<br />
@@ -512,8 +512,8 @@ URL подання: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditin
 6. Натисніть на зображення поштового конверту під заголовком &quot;Завершення&quot;, щоб надіслати лист редактору.<br />
 <br />
 URL видання &quot;{$contextName}&quot;: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL подання: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Ім'я користувача: {$copyeditorUsername}<br />
+URL подання: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Ім'я користувача: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
                <description>Цим листом редактор розділу просить літературного редактора здійснити остаточний раунд літературного редагування подання перед початком процесу верстки.</description>
@@ -524,12 +524,12 @@ URL подання: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditin
 <br />
 Я підготував чисту, відредаговану версію рукопису &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Подання готове до початку процесу верстки та виготовлення гранок.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
                <description>Цим листом літературний редактор інформує редактора розділу, що остаточний раунд літературного редагування завершений і подання готове до процесу верстки.</description>
        </email_text>
        <email_text key="COPYEDIT_FINAL_ACK">
                <subject>Подяка за остаточне літературне редагування</subject>
-               <body><![CDATA[{$copyeditorName}:<br />
+               <body><![CDATA[{$participantName}:<br />
 <br />
 Дякую, що завершили літературне редагування рукопису &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Підготовка &quot;чистої копії&quot; для верстки - важливий крок редакційного процесу.<br />
 <br />
@@ -538,7 +538,7 @@ URL подання: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditin
        </email_text>
        <email_text key="LAYOUT_REQUEST">
                <subject>Запит на верстку</subject>
-               <body><![CDATA[{$layoutEditorName}:<br />
+               <body><![CDATA[{$participantName}:<br />
 <br />
 Подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot; потребує виготовлення верстки. Для цього потрібно виконати наступні дії.<br />
 1. Натисніть на вказаній нижче адресі URL подання.<br />
@@ -547,7 +547,7 @@ URL подання: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditin
 <br />
 URL видання &quot;{$contextName}&quot;: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL подання:  <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Ім'я користувача: {$layoutEditorUsername}<br />
+Ім'я користувача: {$participantUsername}<br />
 <br />
 Якщо зараз Ви не маєте можливості виконати цю роботу або маєте додаткові питання, будь ласка, повідомте мені. Дякую за працю для нашого журналу.<br />
 <br />
@@ -562,12 +562,12 @@ URL подання:  <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a>
 <br />
 Будь ласка, повідомте мені, якщо Ви маєте додаткові питання.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
                <description>Цим листом редактор верстки повідомляє редактора розділу про завершення процесу верстки.</description>
        </email_text>
        <email_text key="LAYOUT_ACK">
                <subject>Подяка за верстку</subject>
-               <body><![CDATA[{$layoutEditorName}:<br />
+               <body><![CDATA[{$participantName}:<br />
 <br />
 Дякую за підготовку гранок для рукопису &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Ви зробили важливий внесок у редакційний процес.<br />
 <br />
@@ -651,7 +651,7 @@ URL подання: {$submissionUrl}<br />
        </email_text>
        <email_text key="PROOFREAD_LAYOUT_REQUEST">
                <subject>Запит на коректуру (Редактор верстки)</subject>
-               <body><![CDATA[{$layoutEditorName}:<br />
+               <body><![CDATA[{$participantName}:<br />
 <br />
 Подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot; було вичитане автором та коректором, тепер потрібно застосувати всі запропоновані правки у гранках статті. Для цього зробіть наступне.<br />
 1. Натисніть на вказаній нижче адресі URL подання.<br />
@@ -661,7 +661,7 @@ URL подання: {$submissionUrl}<br />
 <br />
 URL видання {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL подання: {$submissionUrl}<br />
-Ім'я користувача: {$layoutEditorUsername}<br />
+Ім'я користувача: {$participantUsername}<br />
 <br />
 Якщо зараз Ви не маєте можливості виконати цю роботу або маєте додаткові питання, будь ласка, повідомте мені. Дякую за працю для нашого журналу.<br />
 <br />
@@ -674,12 +674,12 @@ URL подання: {$submissionUrl}<br />
 <br />
 Я виправив гранки рукопису &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot; у відповідності з коментарями коректора. Тепер цю статтю можна публікувати.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
                <description>Цим листом редактор верстки повідомляє редактору розділу, що стадія коректури завершена та стаття готова до публікації.</description>
        </email_text>
        <email_text key="PROOFREAD_LAYOUT_ACK">
                <subject>Подяка за коректуру (Редактор верстки)</subject>
-               <body><![CDATA[{$layoutEditorName}:<br />
+               <body><![CDATA[{$participantName}:<br />
 <br />
 Дякую, що завершили коригування гранок, асоційованих з рукописом &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Ви зробили важливу роботу для нашого журналу.<br />
 <br />

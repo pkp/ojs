@@ -384,12 +384,12 @@ Le rogamos nos confirme su disponibilidad para completar esta contribución vita
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Petición de corrección</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Me gustaría pedirle que llevara a cabo la corrección del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. En el sitio web de la revista puede encontrar el envío, así como las instrucciones de corrección.<br />
 <br />
-URL del manuscrito: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nombre de usuaria/o: {$copyeditorUsername}<br />
+URL del manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nombre de usuaria/o: {$participantUsername}<br />
 <br />
 Si no puede llevar a cabo este trabajo en este momento o tiene cualquier pregunta, póngase en contacto con nosotros/as. Gracias por aceptar llevar a cabo este importante trabajo para la revista.<br />
 <br />
@@ -403,11 +403,11 @@ Si no puede llevar a cabo este trabajo en este momento o tiene cualquier pregunt
 Acabo de finalizar la primera ronda de corrección del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Ya está preparado para que el/la autor/a y el/la editor/a revisen los cambios y consultas.<br />
 <br />
 Gracias,<br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Acuse de recibo de corrección</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Gracias por corregir el manuscrito {$submissionTitle},&quot; para {$contextName}. Supondrá una importante contribución a la calidad de la revista.<br />
 <br />
@@ -422,7 +422,7 @@ Acabamos de finalizar una corrección inicial de su manuscrito &quot;{$submissio
 <br />
 Esta es la última oportunidad que tendrá para hacer cambios sustanciales. Se le pedirá que revise las galeradas, pero en esa fase tan solo podrá corregir pequeños errores tipográficos y de maquetación.<br />
 <br />
-URL del manuscrito: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL del manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Si no puede llevar a cabo este trabajo en este momento o tiene cualquier pregunta, póngase en contacto con nosotros/as. Gracias por su contribución a la revista.<br />
 <br />
@@ -450,12 +450,12 @@ Gracias por revisar la corrección de su manuscrito &quot;{$submissionTitle},&qu
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Revisión final de corrección</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 El/la autor/a y el/la editor/a han completado su revisión de la corrección del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Ya se puede preparar para maquetación la &quot;copia limpia&quot; final.<br />
 <br />
-URL del manuscrito: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nombre de usuaria/o: {$copyeditorUsername}<br />
+URL del manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nombre de usuaria/o: {$participantUsername}<br />
 <br />
 Gracias en el nombre de la revista,<br />
 <br />
@@ -468,12 +468,12 @@ Gracias en el nombre de la revista,<br />
 <br />
 Acabo de preparar una versión limpia y corregida del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Está listo para su maquetación y la preparación de las galeradas.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Este correo es enviado del / de la corrector/a al / a la Editor/a de Sección para notificarle que la ronda final de corrección ha finalizado y que ya puede comenzar el proceso de maquetación.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Acuse de recibo de revisión final corregida</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Gracias por completar la revisión del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. La preparación de una &quot;copia limpia&quot; para maquetación es un paso importante en el proceso editorial.<br />
 <br />
@@ -482,12 +482,12 @@ Gracias por completar la revisión del manuscrito &quot;{$submissionTitle},&quot
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Solicitud de galeradas</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Le solicito que prepare las galeradas del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}.<br />
 <br />
 URL del manuscrito: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Nombre de usuaria/o: {$layoutEditorUsername}<br />
+Nombre de usuaria/o: {$participantUsername}<br />
 <br />
 Si no puede llevar a cabo este trabajo en este momento o tiene cualquier pregunta, póngase en contacto con nosotros/as. Gracias por su contribución a la revista.<br />
 <br />
@@ -502,12 +502,12 @@ Ya han sido preparadas las galeradas para el manuscrito &quot;{$submissionTitle}
 <br />
 Si tiene cualquier pregunta, no dude en contactar con nosotros/as.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Este correo es enviado por el/la Editor/a de Maquetación al / a la Editor/a de Sección notificándole que el proceso de maquetación ha finalizado.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Acuse de recibo de maquetación</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Gracias por prepara las galeradas para el manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Esta es una importante contribución al proceso de publicación.<br />
 <br />
@@ -581,12 +581,12 @@ Gracias por corregir las pruebas de las galeradas del manuscrito &quot;{$submiss
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Petición de corrección de pruebas (Editor/a de maquetación)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Le solicitamos que proceda a hacer las correcciones solicitadas una vez corregidas las pruebas de las galeradas del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}.<br />
 <br />
 URL del manuscrito: {$submissionUrl}<br />
-Nombre de usuaria/o: {$layoutEditorUsername}<br />
+Nombre de usuaria/o: {$participantUsername}<br />
 <br />
 Si no puede llevar a cabo esta tarea en este momento o tiene cualquier pregunta, póngase en contacto con nosotros/as. Gracias por su contribución a esta revista.<br />
 <br />
@@ -599,12 +599,12 @@ Si no puede llevar a cabo esta tarea en este momento o tiene cualquier pregunta,
 <br />
 Ya se han corregido las galeradas, una vez hechas las pruebas, del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Ya está listo para su publicación.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Este correo del / de la Editor/a de Maquetación al / a la Editor/a de Sección le notifica que la etapa final de corrección ha finalizado y que el artículo está listo para su publicación.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Acuse de recibo de corrección de pruebas (Editor/a de maquetación)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Gracias por completar la corrección de las pruebas de galeradas asociadas con el manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Esto representa una importante contribución al trabajo de esta revista.<br />
 <br />

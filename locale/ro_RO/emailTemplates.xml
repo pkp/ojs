@@ -415,7 +415,7 @@ Decizia noastră este:<br />
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Solicitare pentru (tehno)redactare</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Vă solicităm inițierea (tehno)redactării articolului intitulat &quot;{$submissionTitle}&quot; pentru {$contextName}, urmând următorii pași.<br />
 1. Clic pe URL-ul propunerii mai jos.<br />
@@ -426,8 +426,8 @@ Vă solicităm inițierea (tehno)redactării articolului intitulat &quot;{$submi
 6. Trimiteți un email complet cu toate neclaritățile redactorului.<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL-ul propunerii: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nume utilizator: {$copyeditorUsername}<br />
+URL-ul propunerii: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nume utilizator: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Acest email este trimis de redactorul de secțiune către (tehno)redactorul propunerii pentru a-i solicita inițierea procedurii. Sunt conținute informații privind propunerea și cum trebuie accesată aceasta.</description>
@@ -451,11 +451,11 @@ URL-ul manuscrisului: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}<
 Dacă nu puteți da un răspuns pozitiv pentru această sarcină sau aveți întrebări,<br />
 contactați-mă. Mulțumim pentru contribuția la revistă.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Confirmarea (tehno)redactării</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Mulțumim pentru (tehno)redactarea manuscrisului intitulat &quot;{$submissionTitle}&quot; pentru {$contextName}. Va fi o contribuție importantă la creșterea calității acestei reviste.<br />
 <br />
@@ -477,7 +477,7 @@ Propunerea dumneavoastră intitulată &quot;{$submissionTitle}&quot; pentru {$co
 7. Clic pe METADATA pentru a verifica informațiile de indexare pentru a revizui completitudinea și acuratețea.<br />
 8. Trimite emailul de ÎNCHEIERE către redactor și (tehno)redactor.<br />
 <br />
-URL-ul propunerii: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL-ul propunerii: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Aceasta este ultima șansă de a face modificări substanțiale de (tehno)redactare asupra propunerii. Etapa de corectură care este premergătoare pregătirii asamblării este limitată la corectarea erorilor tipografice și a celor de machetare.<br />
 <br />
@@ -507,7 +507,7 @@ Mulțumim pentru evaluarea (tehno)redactării manuscrisului intitulat &quot;{$su
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Revizuirea finală a (tehno)redactării</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Autorul și redactorul au încheiat revizuirea (tehno)redactării pentru articolul &quot;{$submissionTitle}&quot; trimis revistei {$contextName}. În acest moment este nevoie să fie pregătită o „copie curată” pentru machetare urmând următorii pași:<br />
 1. Clic pe URL-ul propunerii de mai jos.<br />
@@ -518,8 +518,8 @@ Autorul și redactorul au încheiat revizuirea (tehno)redactării pentru articol
 6. Trimite emailul de ÎNCHEIERE către redactor.<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL-ul propunerii: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nume utilizator: {$copyeditorUsername}<br />
+URL-ul propunerii: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nume utilizator: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Acest email este trimis ca răspuns al redactorului de secțiune la solicitările (tehno)redactorului pentru a începe sesiunea de finalizare a (tehno)redactării înainte de a intra la machetare.</description>
@@ -530,12 +530,12 @@ Nume utilizator: {$copyeditorUsername}<br />
 <br />
 Am pregătit o versiune curată de (tehno)redactare a manuscrisului intitulat &quot;{$submissionTitle}&quot; pentru {$contextName}. Versiunea este pregătită pentru machetare și gata de asamblare.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Acest email a fost trimis de (tehno)redactor către redactorul de secțiune înștiințându-l asupra faptului că sesiunea finală de (tehno)redactare a fost încheiată și că procesul de machetare poate fi inițiat.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Confirmarea de primire a reviziei finale pentru (tehno)redactare</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Mulțumim pentru încheierea (tehno)redactării manuscrisului inititulat &quot;{$submissionTitle}&quot; pentru {$contextName}. Pregătirea unei „copii curate” pentru machetare este un pas important în procesul editorial.<br />
 <br />
@@ -544,7 +544,7 @@ Mulțumim pentru încheierea (tehno)redactării manuscrisului inititulat &quot;{
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Solitare pentru asamblare</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Propunerea intitulată &quot;{$submissionTitle}&quot; făcută revistei {$contextName} are nevoie să fie asamblată urmând următorii pași:<br />
 1. Clic pe URL-ul propunerii de mai jos.<br />
@@ -553,7 +553,7 @@ Propunerea intitulată &quot;{$submissionTitle}&quot; făcută revistei {$contex
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL-ul propunerii: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Nume utilizator: {$layoutEditorUsername}<br />
+Nume utilizator: {$participantUsername}<br />
 <br />
 Dacă nu puteți îndeplini această sarcină în acest moment sau aveți întrebări, contactați-mă. Mulțumim pentru contribuția dumneavoastră la această revistă.<br />
 <br />
@@ -568,12 +568,12 @@ Asamblarea a fost pregătită pentru manuscrisul intitulat &quot;{$submissionTit
 <br />
 Dacă sunt întrebări, contactați-mă.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Acest email de la redactorul de machetă către redactorul de secțiune îl înștiințează pe acesta asupra încheierii procesului de machetare.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Confirmare privind machetarea</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Mulțumim pentru efortul de pregătire a asamblărilor pentru manuscrisul intitulat &quot;{$submissionTitle}&quot; propus {$contextName}. Aceasta este o contribuție importantă la procesul de publicare.<br />
 <br />
@@ -657,7 +657,7 @@ Mulțumesc pentru corecturile aduse asamblărilor pentru manuscrisul intitulat &
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Solicitare pentru corectură (redactorul machetei)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Propunerea intitulată &quot;{$submissionTitle}&quot; trimisă revistei {$contextName}, a fost corectată de către autor și corector iar oricare alte corecturi care ar trebui făcute, ar trebui să urmeze următorii pași.<br />
 1. Clic pe URL-ul propunerii de mai jos.<br />
@@ -667,7 +667,7 @@ Propunerea intitulată &quot;{$submissionTitle}&quot; trimisă revistei {$contex
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL-ul propunerii: {$submissionUrl}<br />
-Nume utilizatorilor: {$layoutEditorUsername}<br />
+Nume utilizatorilor: {$participantUsername}<br />
 <br />
 Dacă nu puteți îndeplini această sarcină în acest moment sau aveți întrebări, contactați-mă. Mulțumim pentru contribuția dumneavoastră la această revistă.<br />
 <br />
@@ -680,12 +680,12 @@ Dacă nu puteți îndeplini această sarcină în acest moment sau aveți între
 <br />
 Asamblările au fost corectate după ce au fost corectate pentru manuscrisul intitulat &quot;{$submissionTitle}&quot; pentru {$contextName}. Acest articol este gata pentru a fi publicat.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Acest email trimis de redactorul machetei pentru redactorul de secțiune, îl înștiințează pe acesta asupra faptului că a fost încheiată ultima etapă a corecturii și articolul este pregătit pentru publicare.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Confirmarea corecturii (redactorul de machetă)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Mulțumim pentru încheierea corecturilor pentru asamblările asociate cu manuscrisul intitulat &quot;{$submissionTitle}&quot; pentru {$contextName}. Mulțumim pentru contribuția dumneavoastră la această revistă.<br />
 <br />

@@ -349,13 +349,13 @@ Ti chiedo la cortesia di confermare al più presto la volontà di portare a term
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Assegnazione di copyediting</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Ti chiedo di prendere in carico il copyedit del manoscritto, &quot;{$submissionTitle},&quot; per {$contextName}.<br />
 Il documento si trova su sito web della rivista, insieme alle istruzioni per il copyedit.<br />
 <br />
-URL Manoscritto: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Username: {$copyeditorUsername}<br />
+URL Manoscritto: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Username: {$participantUsername}<br />
 <br />
 Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi.<br />
 <br />
@@ -370,12 +370,12 @@ Ho completato la prima tornata del copyediting del manoscritto, &quot;{$submissi
 <br />
 Ora è pronto per la revisione dell'autore e dell'editor.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description></description>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Ringraziamenti per copyediting</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Grazie per il copyediting del manoscritto, &quot;{$submissionTitle},&quot; per {$contextName}.<br />
 <br />
@@ -393,7 +393,7 @@ Dopo aver revisionato il file, lo ricarichi nella fase 2 e comunichi all'Editor 
 <br />
 Questa è l'ultima occasione che ha per fare cambiamenti sostanziali. Le sarà richiesto di correggere le bozze, ma in quella fase potremo correggere solo refusi e poco altro.<br />
 <br />
-URL manoscritto: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL manoscritto: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Se non può prendere in carico il lavoro in questo periodo o ha qualche domanda, mi contatti.<br />
 <br />
@@ -423,7 +423,7 @@ Aspettiamo solo di vedere il lavoro pubblicato.<br />
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Revisione finale copyediting</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 L'autore e l'editor hanno completato la revisione editoriale del manoscritto, &quot;{$submissionTitle},&quot; per {$contextName}.<br />
 La definitiva &quot;copia pulita&quot; può essere preparata per il layout di stampa/visualizzazione, seguendo queste indicazioni.<br />
@@ -435,8 +435,8 @@ La definitiva &quot;copia pulita&quot; può essere preparata per il layout di st
 5. Clicca su 'Rivedi i metadati' per controllare le informazioni inserite (salvando eventuali correzioni)<br />
 6. Comunica all'editor il completamento dell'attività.<br />
 <br />
-URL del manoscritto: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Username: {$copyeditorUsername}<br />
+URL del manoscritto: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Username: {$participantUsername}<br />
 <br />
 Grazie a nome della rivista,<br />
 <br />
@@ -449,12 +449,12 @@ Grazie a nome della rivista,<br />
 <br />
 Ho preparato una versione pulita e revisionata del manoscritto, &quot;{$submissionTitle},&quot; per {$contextName}, pronta per l'impaginazione e la preparazione delle bozze.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Questa email dal copyeditor al section editor notifica che l'ultima tornata del copyedit è stata completata e che il processo di layout può cominciare.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Ringraziamenti revisione finale copyedit</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Grazie per aver completato l'editing del manoscritto, &quot;{$submissionTitle}&quot;, per {$contextName}.<br />
 <br />
@@ -463,12 +463,12 @@ Grazie per aver completato l'editing del manoscritto, &quot;{$submissionTitle}&q
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Richiesta preparazione delle bozze</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Vorrei chiederti di preparare le bozze per il manoscritto &quot;{$submissionTitle}&quot; per {$contextName}.<br />
 <br />
 URL manoscritto: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Username: {$layoutEditorUsername}<br />
+Username: {$participantUsername}<br />
 <br />
 Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi. Grazie per il tuo contributo al journal.<br />
 <br />
@@ -483,12 +483,12 @@ Sono pronte le bozze dell'articolo, &quot;{$submissionTitle}&quot; per {$context
 <br />
 Per qualsiasi domanda, si prega di contattarmi.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Questa email dal layout editor al section editor notifica che il processo di layout è stato completato.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Ringraziamenti layout</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Grazie per aver preparato l'impaginato de manoscritto &quot;{$submissionTitle}&quot; per {$contextName}.<br />
 <br />
@@ -574,7 +574,7 @@ Grazie per la correzione delle bozze per il manoscritto, &quot;{$submissionTitle
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Modifiche da apportare alle bozze</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Le bozze del manoscritto &quot;{$submissionTitle}&quot; per {$contextName} sono state corrette dall'autore e dai correttori di bozze. Per apportare le correzioni segui queste istruzioni:<br />
 <br />
@@ -585,7 +585,7 @@ Le bozze del manoscritto &quot;{$submissionTitle}&quot; per {$contextName} sono 
 4. Invia all'editor la comunicazione di aver completato l'incarico, dal Passo n. 3 della correzione.<br />
 <br />
 URL manoscritto: {$submissionUrl}<br />
-Username: {$layoutEditorUsername}<br />
+Username: {$participantUsername}<br />
 <br />
 Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi. Grazie per il tuo contributo al journal.<br />
 <br />
@@ -599,12 +599,12 @@ Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda
 Le bozze dell'articolo &quot;{$submissionTitle},&quot; per {$contextName} sono state corrette.<br />
 L'articolo è ora pronto per essere pubblicato.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Questa email dal curatore del layout informa che la fase finale di correzione delle bozze è stata completata e l'articolo è pronto per essere pubblicato.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Ringraziamenti modifica delle bozze</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Grazie per aver completato la correzione delle bozze associate al manoscritto, &quot;{$submissionTitle},&quot; per {$contextName}.<br />
 <br />

@@ -329,7 +329,7 @@ URL Υποβολής: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Αίτημα επιμέλειας κειμένων</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Θα ήθελα να σας ζητήσω να αναλάβετε την επιμέλεια του κειμένου της εργασίας  &quot;{$submissionTitle}&quot; που υποβλήθηκε στο περιοδικό {$contextName} ακολουθώντας τα παρακάτω βήματα.<br />
 1. Κάντε κλικ στο URL υποβολής που βρίσκεται παρακάτω.<br />
@@ -340,8 +340,8 @@ URL Υποβολής: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a
 6. Αποστείλατε το σχετικό email ΟΛΟΚΛΗΡΩΣΗΣ στον επιμελητή.<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL Υποβολής: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Όνομα χρήστη: {$copyeditorUsername}<br />
+URL Υποβολής: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Όνομα χρήστη: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description> Το συγκεκριμένο μήνυμα ηλεκτρονικού ταχυδρομείου αποστέλλεται από τον Επιμελητή ενότητας σε κάποιον από τους υπεύθυνους διαμόρφωσης κειμένων της υποβολής για να ζητήσει την έναρξη της διαδικασίας διαμόρφωσης κειμένων. Παρέχει πληροφορίες σχετικά με την αξιολόγηση και τον τρόπο πρόσβασης σε αυτή.</description>
@@ -365,11 +365,11 @@ URL Χειρογράφου: <a href="{$submissionEditingUrl}">{$submissionEditin
 Εάν δεν μπορείτε να αναλάβετε την συγκεκριμένη εργασία αυτή τη στιγμή ή έχετε απορίες, επικοινωνήστε μαζί μας.<br />
 Ευχαριστούμε για τη συμβολή σας στο συγκεκριμένο περιοδικό.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Επιβεβαίωση λήψης επιμέλειας κειμένου</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Θα θέλαμε να σας ευχαριστήσουμε για την επμέλεια του κειμένου της εργασίας, {$submissionTitle},&quot; για το περιοδικό {$contextName} και για τη σημαντική συμβολή σας στην έκδοση του περιοδικού.<br />
 <br />
@@ -391,7 +391,7 @@ URL Χειρογράφου: <a href="{$submissionEditingUrl}">{$submissionEditin
 7. Κάντε κλικ στα ΜΕΤΑΔΕΔΟΜΕΝΑ για να ελέγξετε τις πληροφορίες ευρετηρίασης αναφορικά με την αρτιότητα και την ακρίβειά τους.<br />
 8. Αποστείλατε το μήνυμα ΟΛΟΚΛΗΡΩΜΕΝΟ στον επιμελητή και τον Επιμελητή κειμένων.<br />
 <br />
-URL Υποβολής: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL Υποβολής: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Αυτή είναι η τελευταία σας ευκαιρία για ουσιώδεις αλλαγές στο κείμενο της υποβολής σας. Σε επόμενο στάδιο θα σας ζητηθεί να πραγματοποιήσετε τις απαραίτητες διορθώσεις στα τυπογραφικά δοκίμια της υποβολής, αλλά στο σημείο εκείνο θα μπορείτε να διορθώσετε μόνο μικρά τυπογραφικά λάθη και λάθη που αφορούν τη διάταξη του κειμένου.<br />
 <br />
@@ -421,7 +421,7 @@ URL Υποβολής: <a href="{$submissionCopyeditingUrl}">{$submissionCopyedit
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Τελική επιμέλεια κειμένου</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Ο συγγραφέας και ο επιμελητής έχουν ολοκληρώσει την επισκόπηση των επιμελημένων κειμένων της εργασίας με τίτλο &quot;{$submissionTitle}&quot; για το περιοδικό {$contextName}. Το επόμενο βήμα είναι η δημιουργία ενός «καθαρού&quot; αντιγράφου του κειμένου για το στάδιο της Σελιδοποίησης, ακολουθώντας τα παρακάτω βήματα.<br />
 1. Κάντε κλικ στο URL υποβολής που βρίσκεται παρακάτω.<br />
@@ -432,8 +432,8 @@ URL Υποβολής: <a href="{$submissionCopyeditingUrl}">{$submissionCopyedit
 6. Αποστείλατε το μήνυμα ΟΛΟΚΛΗΡΩΜΕΝΟ στον επιμελητή.<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL Υποβολής: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Όνομα χρήστη: {$copyeditorUsername}<br />
+URL Υποβολής: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Όνομα χρήστη: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description> Το συγκεκριμένο μήνυμα αποστέλλεται από τον Επιμελητή ενότητας στον Επιμελητή κειμένου για να του ζητήσει να πραγματοποιήσει έναν τελικό γύρο επιμέλειας του κειμένου μιας υποβολής πριν η υποβολή προωθηθεί στη διαδικασία της σελιδοποίησης.</description>
@@ -444,12 +444,12 @@ URL Υποβολής: <a href="{$submissionCopyeditingUrl}">{$submissionCopyedit
 <br />
 Έχει πλέον δημιουργηθεί μια &quot;καθαρή&quot; επιμελημένη έκδοση της εργασίας με τίτλο &quot;{$submissionTitle},&quot; για το περιοδικό {$contextName}. Η εργασία είναι έτοιμη για την Σελιδοποίηση και την προετοιμασία των τυπογραφικών δοκιμίων.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description> Το συγκεκριμένο μήνυμα αποστέλλεται από τον Επιμελητή κειμένων στον Επιμελητή ενότητας που του γνωστοποιεί ότι η τελική φάση της επιμέλειας του κειμένου έχει ολοκληρωθεί και ότι η διαδικασία Σελιδοποίησης μπορεί να ξεκινήσει.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Επιβεβαίωση τελικής επιμέλειας κειμένων</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Θα θέλαμα να σας ευχαριστήσουμε για την ολοκλήρωση της επιμέλειας του κειμένου της εργασίας με τίτλο &quot;{$submissionTitle},&quot; για το περιοδικό {$contextName}. Όπως είναι γνωστό η δημιουργία ενός «καθαρού&quot; αντιγράφου της υποβολής για την διαδικασία Σελιδοποίησης είναι ένα σημαντικό βήμα στην όλη διαδικασία επιμέλειας της υποβολής.<br />
 <br />
@@ -458,7 +458,7 @@ URL Υποβολής: <a href="{$submissionCopyeditingUrl}">{$submissionCopyedit
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Αίτημα Σελιδοποίησης</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Στο στάδιο αυτό θα πρέπει να δημιουργηθούν τα κατάλληλα τυπογραφικά δοκίμια για την υποβολή με τίτλο &quot;{$submissionTitle}&quot; για το περιοδικό {$contextName}, ακολουθώντας τα παρακάτω βήματα:<br />
 1. Κάντε κλικ στο URL υποβολής που βρίσκεται παρακάτω.<br />
@@ -467,7 +467,7 @@ URL Υποβολής: <a href="{$submissionCopyeditingUrl}">{$submissionCopyedit
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL Υποβολής: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Όνομα χρήστη: {$layoutEditorUsername}<br />
+Όνομα χρήστη: {$participantUsername}<br />
 <br />
 Εάν δεν μπορείτε να αναλάβετε την συγκεκριμένη εργασία αυτή τη στιγμή ή έχετε απορίες, επικοινωνήστε μαζί μας. Ευχαριστούμε για την συμβολή σας στην έκδοση του περιοδικού.<br />
 <br />
@@ -482,12 +482,12 @@ URL Υποβολής: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a
 <br />
 Εάν έχετε απορίες, επικοινωνήστε μαζί μου.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description> Το συγκεκριμένο μήνυμα στέλνεται από τον Επιμελητή Σελιδοποίησης προς τον Επιμελητή ενότητας και τον ενημερώνει για την ολοκλήρωση της διαδικασίας σελιδοποίησης.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Επιβεβαίωση λήψης τυπογραφικών δοκιμίων</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Σας ευχαριστούμε ιδιαίτερα για τη δημιουργία των τυπογραφικών δοκιμίων της εργασίας με τίτλο, &quot;{$submissionTitle},&quot; για το περιοδικό  {$contextName}. Πρόκειται για σημαντική συμβολή στη συνολική διαδικασία δημοσίευσης της υποβολής.<br />
 <br />
@@ -571,7 +571,7 @@ URL χειρογράφου: {$submissionUrl}<br />
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject> Αίτημα επιμέλειας τυπογραφικών δοκιμίων (προς τον Επιμελητή Σελιδοποίησης)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Σας ενημερώνουμε όυι η επιμέλεια των τυπογραφικών δοκιμίων της υποβολής με τίτλο &quot;{$submissionTitle}&quot; για το περιοδικό {$contextName} από τον συγγραφέα και τον Επιμελητή Τυπογραφικών Δοκιμίων ολοκληρώθηκε και ότι οι απαραίτητες διοθρώσεις στα δοκίμια θα πρέπει να γίνουν ακολουθώντας τα παρακάτω βήματα:<br />
 1. Κάντε κλικ στο URL Υποβολής που βρίσκεται παρακάτω.<br />
@@ -581,7 +581,7 @@ URL χειρογράφου: {$submissionUrl}<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL Υποβολής: {$submissionUrl}<br />
-Όνομα χρήστη: {$layoutEditorUsername}<br />
+Όνομα χρήστη: {$participantUsername}<br />
 <br />
 Εάν δεν μπορείτε να αναλάβετε την συγκεκριμένη εργασία αυτή τη στιγμή ή έχετε απορίες, επικοινωνήστε μαζί μας. Ευχαριστούμε για την συμβολή σας στην έκδοση του περιοδικού.<br />
 <br />
@@ -594,12 +594,12 @@ URL Υποβολής: {$submissionUrl}<br />
 <br />
 Τα τυπογραφικά δοκίμια της εργασίας με τίτλο, &quot;{$submissionTitle},&quot; για το περιοδικό {$contextName} έχουν διορθωθεί. Το συγκεκριμένο άρθρο είναι έτοιμο για δημοσίευση.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description> Το συγκεκριμένο μήνυμα στέλνεται από τον Επιμελητή Σελιδοποίησης στον Επιμελητή ενότητας και τον ενημερώνει για την ολοκλήρωση του τελικού σταδίου της διόρθωσης τυπογραφικών δοκιμίων και ότι το άρθρο είναι έτοιμο για δημοσίευση.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Επιβεβαίωση επιμέλειας τυπογραφικών δοκιμίων (Layout Editor)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Σας ευχαριστούμε για την ολοκλήρωση των των τυπογραφικών δοκιμίων που σχετίζονται με την εργασία με τίτλο, &quot;{$submissionTitle},&quot; για το περιοδικό {$contextName}. Πρόκειται για σημαντική συνεισφορά στην εργασία του περιοδικού μας.<br />
 <br />

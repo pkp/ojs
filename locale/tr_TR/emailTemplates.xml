@@ -347,12 +347,12 @@ Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen o
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Sayfa düzeni için rica</subject>
-		<body><![CDATA[Sayın {$copyeditorName},<br />
+		<body><![CDATA[Sayın {$participantName},<br />
 <br />
 {$contextName} ileri sayılarında yayınlanmak üzere kabul edilen &quot;{$submissionTitle}&quot; başlıklı çalışmanın sayfa düzenini tamamlamanızı rica ederim. Dergi sitesinde yazıyı , sayfa düzeni konusundaki özel açıklamalar ile birlikte bulabilirsiniz. <br />
 <br />
-Yazı ulaşım adresi: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Kullanıcı adı: {$copyeditorUsername}<br />
+Yazı ulaşım adresi: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Kullanıcı adı: {$participantUsername}<br />
 <br />
 Lütfen eğer sayfa düzenini yapmanız konusunda bir sorun var ise bana bildiriniz.<br />
 DErgimizin kalitesini arttıran değerli katkılarınız için teşekkür ederiz.<br />
@@ -369,11 +369,11 @@ DErgimizin kalitesini arttıran değerli katkılarınız için teşekkür ederiz
 Yazar ve editörün değerlendirmesine hazırdır.<br />
 <br />
 Teşekkürler,<br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Sayfa düzeni için teşekkürler</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 {$contextName} için kabul edilen &quot;{$submissionTitle}&quot; başlıklı çalışmanın sayfa düzenini için teşekkür ederim.<br />
 <br />
@@ -388,7 +388,7 @@ Teşekkürler,<br />
 <br />
 Bu yazıda ciddi değişiklikler için son şansınızdır. Sonraki basamakta prova dizgi üzerinde küçük yazım hatası benzeri düzeltmeler dışında değiştirme yapma olasılığı yoktur.<br />
 <br />
-Sayfa düzeni kopyası için bağlantı: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+Sayfa düzeni kopyası için bağlantı: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
  <br />
 Eğer değerlendirmeyi yapamayacaksanız veya sorunuz olur ise bana yazmaya çekinmeyiniz. Dergimize katkılarınız için teşekkür ederiz.<br />
 <br />
@@ -415,12 +415,12 @@ Eğer değerlendirmeyi yapamayacaksanız veya sorunuz olur ise bana yazmaya çek
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Sayfa düzenini son biçimi</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 {$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanın sayfa düzenini yazar ve editörce gözden geçirilmiştir. Mizanpaja hazır son &quot;temiz kopya&quot; için ilginizi rica ederim.<br />
 <br />
-Sayfa düzeni kopyası için bağlantı: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Kullanıcı adı: {$copyeditorUsername}<br />
+Sayfa düzeni kopyası için bağlantı: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Kullanıcı adı: {$participantUsername}<br />
 <br />
 Dergimiz adına teşkkür ederiz,<br />
 <br />
@@ -433,12 +433,12 @@ Dergimiz adına teşkkür ederiz,<br />
 <br />
 {$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanın son sayfa düzenini tamamladım. Yazı mizanpaj için hazırdır.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Sayfa düzeninin son biçimini aldığını editöre bildirmek için kullanılır.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Sayfa düzenini son biçimi için teşekkür ederim.</subject>
-		<body><![CDATA[Sayın {$copyeditorName},<br />
+		<body><![CDATA[Sayın {$participantName},<br />
 <br />
 {$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanın son sayfa düzenini için teşkkür ederim. Sayenizde yazı sürecin en önemli basamaklarından birisini tamamladı.<br />
 <br />
@@ -447,12 +447,12 @@ Dergimiz adına teşkkür ederiz,<br />
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Prova dizgi rica olunur</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 {$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanın mizanpajının tamamlanarak, prova dizginin tarafımıza gönderilmesi için rica ederiz.<br />
 <br />
 Sayfa düzeni kopyası için bağlantı: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Kullanıcı adı: {$layoutEditorUsername}<br />
+Kullanıcı adı: {$participantUsername}<br />
 <br />
 İşin gerçekleştirilmesi ile ilgili bir sorununuz veya diğer sorularınız için bana yazabilirsiniz.<br />
 Dergimizin kalitesine katkılarınız için teşekkür ederiz..<br />
@@ -468,12 +468,12 @@ Dergimizin kalitesine katkılarınız için teşekkür ederiz..<br />
 <br />
 Sorunuz olur ise bana yazabilirsiniz.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Editöre prova dizginin tamamlandığını bildirir.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Dizgi için teşekkürler</subject>
-		<body><![CDATA[Sayın {$layoutEditorName},<br />
+		<body><![CDATA[Sayın {$participantName},<br />
 <br />
 {$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanın prova dizgisinin tamamlanması nedeni ile teşekkür ederim.<br />
 <br />
@@ -554,12 +554,12 @@ Dergimizin kalitesine katkılarınız için teşekkür ederiz.<br />
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Son mizanpaj kontrolü için rica</subject>
-		<body><![CDATA[sayın {$layoutEditorName},<br />
+		<body><![CDATA[sayın {$participantName},<br />
 <br />
 {$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanın prova dizgisi son biçimini almıştır. Tarafınızdan yayınlanmadan önceki son kontrolün yapılmasını rica ederim.<br />
 <br />
 Makaleye ulaşım bağlantısı: {$submissionUrl}<br />
-Kullanıcı adınız: {$layoutEditorUsername}<br />
+Kullanıcı adınız: {$participantUsername}<br />
 <br />
 İşin gerçekleştirilmesi ile ilgili bir sorununuz veya diğer sorularınız için bana yazabilirsiniz.<br />
 Dergimizin kalitesine katkılarınız için teşekkür ederiz.<br />
@@ -573,12 +573,12 @@ Dergimizin kalitesine katkılarınız için teşekkür ederiz.<br />
 <br />
 {$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanın dizgisi son biçimini almıştır. Yazı artık yayınlanmak üzere hazırdır.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Yayın öncesi son mizanpaj kontrolünün tamamlandığını, yazının yayına hazır olduğunu editöre bildiren mesaj .</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Son mizanpaj kontrolü için teşekkürler</subject>
-		<body><![CDATA[Sayın {$layoutEditorName},<br />
+		<body><![CDATA[Sayın {$participantName},<br />
 <br />
 {$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanın son biçimi için teşekkürler. Değerli katkılarınız dergimizin kalitesini yükseltmektedir.<br />
 <br />

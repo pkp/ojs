@@ -384,12 +384,12 @@ Pregámosche nos confirmes a túa disponibilidade para completar esta contribuci
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Petición de corrección</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Gostaría de pedirche que realices a corrección do manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Na páxina web da revista podes atopar o envío  e as instruccions de corrección.<br />
 <br />
-URL do manuscrito: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nome de usuaria/o: {$copyeditorUsername}<br />
+URL do manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nome de usuaria/o: {$participantUsername}<br />
 <br />
 Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta connosco. Benzóns por ter aceptado completar esta contribución vital para o traballo da revista. Agardamos as túas noticias.<br />
 <br />
@@ -403,11 +403,11 @@ Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta
 Veño de rematar a primeira rolda de corrección do manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Xa está preparado para que o/a autor/a e o/a editor/a revisen os cambios cambios e consultas. <br />
 <br />
 Benzóns,<br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Acuse de recibo de corrección</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Benzons por corrixir o manuscrito {$submissionTitle},&quot; para {$contextName}. Suporá un importante achega á calidade da revista.<br />
 <br />
@@ -422,7 +422,7 @@ Vimos de rematar unha corrección inicial do teu manuscrito &quot;{$submissionTi
 <br />
 Esta é a derradeira oportunidade que terás de facer cambios substanciais. Pediráseche que revises as probas, alén diso nesta fase só poderás corrixir pequenos erros tipográficos e de composición.<br />
 <br />
-URL do manuscrito: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL do manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
  <br />
 Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta connosco.Benzóns pola tú achega á revista.<br />
 <br />
@@ -450,12 +450,12 @@ Benzóns por revisar a corrección do teu manuscrito &quot;{$submissionTitle},&q
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Revisión final de corrección</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 O/a autor/a e o/a editor/a completaron a súa revisión da corrección do manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Xa se pode preparar para maquetaxe a &quot;copia limpa&quot; final.<br />
 <br />
-URL do manuscrito: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nome de usuaria/o: {$copyeditorUsername}<br />
+URL do manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nome de usuaria/o: {$participantUsername}<br />
 <br />
 Benzóns en nome da revista,<br />
 <br />
@@ -468,12 +468,12 @@ Benzóns en nome da revista,<br />
 <br />
 Veño de preparar unha versión limpa e corrixida do manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Está listo para composición e a preparación das probas de correción.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Este correo é enviado do / da corrector/a ao / a  Editor/a de Sección para notificarlle que rematou a rolda final de corrección e que  pode comezar o proceso de paxinación e composición.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Aviso de recibo de revisión final corrixida</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Benzóns por completar a revisión do manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. A preparación dunha &quot;copia limpa&quot; para maquetaxe é un paso importante no proceso editorial.<br />
 <br />
@@ -482,12 +482,12 @@ Benzóns por completar a revisión do manuscrito &quot;{$submissionTitle},&quot;
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Solicitud de galeradas</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Pregoche que prepares as probas do manuscrito con correccións (galeradas) &quot;{$submissionTitle},&quot; para {$contextName}.<br />
 <br />
 URL do manuscrito: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Nome de usuaria/o: {$layoutEditorUsername}<br />
+Nome de usuaria/o: {$participantUsername}<br />
 <br />
 Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta connosco. Benzóns pola túa achega á revista.<br />
 <br />
@@ -502,12 +502,12 @@ Xa foron preparadas as probas do manuscrito con correccións (galeradas)  &quot;
 <br />
 Se tes algunha dúbida, contacta connosco.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Este correo é enviado polo/a Editor/a de Maquetaxe ao / a  Editor/a de Sección notificándolle que o proceso de maquetaxe rematou.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Aviso de recibo de maquetaxe</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Benzóns por preparar as probas do manuscrito con correccións (galeradas) &quot;{$submissionTitle},&quot; para {$contextName}. Trátase dunha importante achega ao proceso de publicación.<br />
 <br />
@@ -581,12 +581,12 @@ Benzóns por corrixir as probas de corrección (galeradas)  do manuscrito &quot;
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Petición de corrección de probas (Editor/a de maquetaxe)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Pregámosche  que procedas a facer as correccións solicitadas unha vez corrixidas as probas de galeradas do manuscrito &quot;{$submissionTitle},&quot; para {$contextName}.<br />
 <br />
 URL do manuscrito: {$submissionUrl}<br />
-Nome de usuaria/o: {$layoutEditorUsername}<br />
+Nome de usuaria/o: {$participantUsername}<br />
 <br />
 Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta connosco. Benzóns pola túa achega á revista.<br />
 <br />
@@ -599,12 +599,12 @@ Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta
 <br />
 Xa se corrixiron as galeradas, una vez feitas as probas, do manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Xa está preparado para a súa publicación.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Este correo do / da Editor/a de Maquetaxe ao / a  Editor/a de Sección notifícalle que a etapa final de corrección rematou e que o artigo está preparado para a súa publicación.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Aviso de recibo de corrección de probas (Editor/a de maquetaxe)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Benzóns por rematar a corrección de probas de galeradas)  asociadas co manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Representa unha importante achega ao  traballo desta revista.<br />
 <br />

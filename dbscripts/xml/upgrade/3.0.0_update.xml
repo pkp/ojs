@@ -116,4 +116,23 @@
 	<sql><!-- Bug #8397 -->
 		<query>UPDATE submissions SET status=4 WHERE status=0</query><!-- STATUS_ARCHIVED to STATUS_DECLINED -->
 	</sql>
+
+	<!-- Issue #1296: clean up notification emails for participants grid -->
+	<sql>
+		<!-- submissionCopyeditingUrl to submissionUrl -->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$submissionCopyeditingUrl}', '{$submissionUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$submissionCopyeditingUrl}', '{$submissionUrl}')</query>
+		<!-- layoutEditorName to participantName -->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$layoutEditorName}', '{$participantName}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$layoutEditorName}', '{$participantName}')</query>
+		<!-- layoutEditorUsername to participantUsername -->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$layoutEditorUsername}', '{$participantUsername}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$layoutEditorUsername}', '{$participantUsername}')</query>
+		<!-- copyeditorName to participantName -->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$copyeditorName}', '{$participantName}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$copyeditorName}', '{$participantName}')</query>
+		<!-- copyeditorUsername to participantUsername -->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$copyeditorUsername}', '{$participantUsername}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$copyeditorUsername}', '{$participantUsername}')</query>
+	</sql>
 </data>

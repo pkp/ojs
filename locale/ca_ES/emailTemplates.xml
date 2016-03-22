@@ -336,7 +336,7 @@ Us agrairem que ens confirmeu la vostra disponibilitat per a completar aquesta c
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Sol·licitud de correcció</subject>
-		<body><![CDATA[Benvolgut/uda {$copyeditorName},<br />
+		<body><![CDATA[Benvolgut/uda {$participantName},<br />
 <br />
 M'agradaria demanar-vos que us encarreguéssiu de la revisió de &quot;{$submissionTitle}&quot; per a {$contextName}. Els passos que hauríeu de seguir són els següents:<br />
 <br />
@@ -348,8 +348,8 @@ M'agradaria demanar-vos que us encarreguéssiu de la revisió de &quot;{$submiss
 6. Envieu el missatge de correu electrònic COMPLET a l'editor.<br />
 <br />
 URL de {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL de la tramesa: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nom d'usuari: {$copyeditorUsername}<br />
+URL de la tramesa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nom d'usuari: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Aquest missatge de correu electrònic té un editor de secció com a remitent i s'envia al possible corrector d'una tramesa per a sol·licitar-li que comenci el procés de correcció. Proporciona informació sobre la tramesa i com s'hi ha d'accedir.</description>
@@ -374,12 +374,12 @@ Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte
 <br />
 Gràcies per la vostra contribució a aquesta revista.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description></description>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Justificant de recepció de la correcció</subject>
-		<body><![CDATA[Benvolgut/uda {$copyeditorName},<br />
+		<body><![CDATA[Benvolgut/uda {$participantName},<br />
 <br />
 Gràcies per haver corregit el manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. La vostra tasca és una contribució molt important a la qualitat d'aquesta revista.<br />
 <br />
@@ -401,7 +401,7 @@ S'ha completat la primera etapa de correcció de la vostra tramesa &quot;{$submi
 7. Feu clic a METADADES per a comprovar que la informació d'indexació sigui completa i correcta.<br />
 8. Envieu el missatge de correu electrònic COMPLET a l'editor i al corrector.<br />
 <br />
-URL de la tramesa: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL de la tramesa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Noteu que aquesta serà la darrera oportunitat que tindreu per a fer correccions substancials a la tramesa, atès que a l'etapa de correcció de proves, que segueix la preparació de les galerades, només es podran esmenar errors tipogràfics i de format.<br />
 <br />
@@ -434,7 +434,7 @@ Gràcies per haver revisat la correcció del vostre manuscrit &quot;{$submission
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Revisió final de la correcció</subject>
-		<body><![CDATA[Benvolgut/uda {$copyeditorName},<br />
+		<body><![CDATA[Benvolgut/uda {$participantName},<br />
 <br />
 L'autor i l'editor ja han acabat de revisar la correcció de &quot;{$submissionTitle}&quot; per a {$contextName}. Ara, doncs, ja es pot preparar una &quot;còpia neta&quot; de la tramesa per a la maquetació. Per a fer-ho, seguiu els passos següents:<br />
 1. Feu clic a l'URL de la tramesa que trobareu més endavant en aquest missatge.<br />
@@ -445,8 +445,8 @@ L'autor i l'editor ja han acabat de revisar la correcció de &quot;{$submissionT
 6. Envieu el missatge de correu electrònic COMPLET a l'editor.<br />
 <br />
 URL de {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL de la tramesa: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nom d'usuari: {$copyeditorUsername}<br />
+URL de la tramesa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nom d'usuari: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Aquest missatge de correu electrònic té l'editor de secció com a remitent i s'envia al corrector per a sol·licitar-li que s'encarregui de la ronda final de correcció d'una tramesa abans que entri en el procés de maquetació.</description>
@@ -457,12 +457,12 @@ Nom d'usuari: {$copyeditorUsername}<br />
 <br />
 He preparat una versió neta i corregida del manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. Aquesta versió ja és a punt per a entrar en el procés de maquetació i de preparació de les galerades.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Aquest missatge de correu electrònic té el corrector com a remitent i s'envia a l'editor de secció per a notificar-li que ha completat la ronda final de correcció i que el procés de maquetació ja pot començar.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Justificant de recepció de la revisió final de la correcció</subject>
-		<body><![CDATA[Benvolgut/uda {$copyeditorName},<br />
+		<body><![CDATA[Benvolgut/uda {$participantName},<br />
 <br />
 Gràcies per haver completat la correcció del manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. La preparació d’una &quot;còpia neta&quot; per a la maquetació és un pas molt important del procés editorial.<br />
 <br />
@@ -471,7 +471,7 @@ Gràcies per haver completat la correcció del manuscrit &quot;{$submissionTitle
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Sol·licitud de galerades</subject>
-		<body><![CDATA[Benvolgut/uda {$layoutEditorName},<br />
+		<body><![CDATA[Benvolgut/uda {$participantName},<br />
 <br />
 Us demanem que us encarregueu de preparar les galerades de la tramesa &quot;{$submissionTitle}&quot; per a {$contextName} seguint els passos següents:<br />
 <br />
@@ -481,7 +481,7 @@ Us demanem que us encarregueu de preparar les galerades de la tramesa &quot;{$su
 <br />
 URL de {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL de la tramesa: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Nom d'usuari: {$layoutEditorUsername}<br />
+Nom d'usuari: {$participantUsername}<br />
 <br />
 Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.<br />
 <br />
@@ -498,12 +498,12 @@ Ja he preparat les galerades del manuscrit &quot;{$submissionTitle}&quot; per a 
 <br />
 Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Aquest missatge té el maquetista com a remitent i s'envia a l'editor de secció per a notificar-li que s'ha completat el procés de maquetació.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Justificant de recepció de les galerades</subject>
-		<body><![CDATA[Benvolgut/uda {$layoutEditorName},<br />
+		<body><![CDATA[Benvolgut/uda {$participantName},<br />
 <br />
 Gràcies per haver preparat les galerades del manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. Aquesta tasca és una contribució molt important al procés de publicació.<br />
 <br />
@@ -591,7 +591,7 @@ Gràcies per haver fet la correcció de proves de les galerades per al manuscrit
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Sol·licitud de correcció de proves (maquetista)</subject>
-		<body><![CDATA[Benvolgut/uda {$layoutEditorName},<br />
+		<body><![CDATA[Benvolgut/uda {$participantName},<br />
 <br />
 L'autor i el corrector de proves ja han fet la correcció de proves de la tramesa &quot;{$submissionTitle}&quot; per a {$contextName} i, per tant, ara us hauríeu d'encarregar de corregir-la seguint els passos següents:<br />
 <br />
@@ -602,7 +602,7 @@ L'autor i el corrector de proves ja han fet la correcció de proves de la trames
 <br />
 URL de {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL de la tramesa: {$submissionUrl}<br />
-Nom d'usuari: {$layoutEditorUsername}<br />
+Nom d'usuari: {$participantUsername}<br />
 <br />
 Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.<br />
 <br />
@@ -617,12 +617,12 @@ Gràcies per la vostra contribució a aquesta revista.<br />
 <br />
 He acabat la correcció posterior a la correcció de proves de les galerades per al manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. Així, doncs, aquest article ja es pot publicar.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Aquest missatge de correu electrònic té el maquetista com a remitent i s'envia a l'editor de secció per a notificar-li que s'ha completat l'etapa final del procés de correcció de proves i que l'article ja es pot publicar.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Justificant de recepció de la correcció de proves (maquetista)</subject>
-		<body><![CDATA[Benvolgut/uda {$layoutEditorName},<br />
+		<body><![CDATA[Benvolgut/uda {$participantName},<br />
 <br />
 Gràcies per haver completat el procés de correcció de proves per a les galerades associades amb el manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. La vostra tasca és una contribució molt important a la qualitat d'aquesta revista.<br />
 <br />

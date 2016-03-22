@@ -315,12 +315,12 @@
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Copyediting Request</subject>
-		<body><![CDATA[{$copyeditorName}您好：<br />
+		<body><![CDATA[{$participantName}您好：<br />
 <br />
 我想請您為《{$contextName}》擔任稿件〈{$submissionTitle}〉的校樣編輯。您可以在網站上找到這份稿件，以及校樣編輯的工作指引。<br />
 <br />
-稿件網址：<a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-使用者名稱：{$copyeditorUsername}<br />
+稿件網址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
+使用者名稱：{$participantUsername}<br />
 <br />
 如果您目前無法進行這份工作，或者對這項工作有任何的疑問，請直接回信與我聯絡。非常感謝您同意為這份期刊進行這份重要的工作。<br />
 <br />
@@ -334,11 +334,11 @@
 我目前已經為《{$contextName}》完成稿件〈{$submissionTitle}〉初步的校樣工作。稿件已經備妥，可供作者與編輯複審修訂與疑問之處。<br />
 <br />
 謝謝您<br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>校樣編輯工作感謝函</subject>
-		<body><![CDATA[{$copyeditorName}您好：<br />
+		<body><![CDATA[{$participantName}您好：<br />
 <br />
 非常感謝您為《{$contextName}》完成稿件〈{$submissionTitle}〉的校樣工作。這對本期刊的品質有非常重要的貢獻。<br />
 <br />
@@ -355,7 +355,7 @@
 <br />
 這是您可以對稿件做出重大修改的最後機會。您還會被要求進行校對與排版複閱工作，不過在那些工作階段時您將只能夠修正一些打字與版面等小地方的錯誤而已。<br />
 <br />
-稿件網址：<a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+稿件網址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
  <br />
 如果您目前無法進行這份複閱的工作，或者對這份工作有任何的問題，請回信聯絡我們。非常感謝您對本期刊的貢獻。<br />
 <br />
@@ -383,12 +383,12 @@
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>校樣槁的最後複閱工作</subject>
-		<body><![CDATA[{$copyeditorName}您好：<br />
+		<body><![CDATA[{$participantName}您好：<br />
 <br />
 作者和編輯目前都已經完成了他們對投稿《{$contextName}》之稿件〈{$submissionTitle}〉的複閱工作。最終的「清樣版本」現在可以進行排版的工作了。<br />
 <br />
-稿件網址：<a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-使用者名稱：{$copyeditorUsername}<br />
+稿件網址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
+使用者名稱：{$participantUsername}<br />
 <br />
 我們代表本期刊向您致謝<br />
 <br />
@@ -401,12 +401,12 @@
 <br />
 我目前已經就投稿《{$contextName}》之稿件〈{$submissionTitle}〉，備妥了一份清樣版本。此稿件已經可以交給版面編輯，並準備進行排版工作。<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>這封電子郵件是由校樣編輯寄給區段編輯，通知他們最後一次的校樣工作已經完成，並且現在可以開始排版的流成。</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>校樣定稿感謝函</subject>
-		<body><![CDATA[{$copyeditorName}您好：<br />
+		<body><![CDATA[{$participantName}您好：<br />
 <br />
 非常感謝您完成了投稿《{$contextName}》之稿件〈{$submissionTitle}〉的校樣工作。這份為排版進行的「文字清理」預備工作在編輯流程中非常的重要。<br />
 <br />
@@ -417,12 +417,12 @@
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>請進行排版工作</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 我想請您為投稿《{$contextName}》之稿件〈{$submissionTitle}〉準備製版的工作。<br />
 <br />
 稿件網址：<a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-使用者名稱：{$layoutEditorUsername}<br />
+使用者名稱：{$participantUsername}<br />
 <br />
 如果您目前無法進行這份工作，或者對這份工作有任何問題，請回信聯絡我們。感謝您對本期刊的貢獻。<br />
 <br />
@@ -437,12 +437,12 @@
 <br />
 如果您有任何問題，請與我們聯絡。<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>這封電子郵件是由版面編輯寄發給區段編輯，通知他們排版流程已經完成。</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>排版工作致謝</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 感謝您為對投稿《{$contextName}》之稿件〈{$submissionTitle}〉完成了製版的工作。這份工作在出版的過程中有著相當重要的貢獻。<br />
 <br />
@@ -520,12 +520,12 @@
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>請版面編輯進行校對工作</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 我們想請您為投稿《{$contextName}》之稿件〈{$submissionTitle}〉進行任何必要的校對工作，作為最終的排版稿校對版本。<br />
 <br />
 稿件網址：{$submissionUrl}<br />
-使用者名稱：{$layoutEditorUsername}<br />
+使用者名稱：{$participantUsername}<br />
 <br />
 如果您目前無法進行這份工作，或者對這份工作有任何問題，請回信聯絡我們。感謝您對本期刊的貢獻。<br />
 <br />
@@ -538,12 +538,12 @@
 <br />
 投稿《{$contextName}》之稿件〈{$submissionTitle}〉的排版稿已經依照校對結果完成修訂。這篇文章現在已經可以出版了。<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>這封電子郵件是由版面編輯寄發給區段編輯，通知他們已經完成了最後的校對階段以及文章目前已經可以出版了。</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>版面編輯校對工作致謝</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 感謝您為您投稿《{$contextName}》之稿件〈{$submissionTitle}〉完成了校對修訂的工作。這份工作對本期刊的品質有著很重要的貢獻。<br />
 <br />

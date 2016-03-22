@@ -308,7 +308,7 @@ S.V.P. veuillez nous confirmer votre disponibilité à compléter cette contribu
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Demande de révision d'une soumission</subject>
-		<body><![CDATA[&lt;![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[&lt;![CDATA[{$participantName}:<br />
 <br />
 J'aimerais que vous effectuiez la révision du manuscrit intitulé « {$submissionTitle} » pour {$contextName} à l'aide des étapes suivantes.<br />
 1. Cliquer sur l'URL de la soumission ci-dessous.<br />
@@ -319,8 +319,8 @@ J'aimerais que vous effectuiez la révision du manuscrit intitulé « {$submissi
 6. Envoyer le courriel TERMINÉ au rédacteur.<br />
 <br />
 URL de {$contextName} : <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL de la soumission : <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nom d'utilisateur : {$copyeditorUsername}<br />
+URL de la soumission : <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nom d'utilisateur : {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]&gt;]]></body>
 		<description>Ce courriel est envoyé par le Rédacteur de rubrique à un Réviseur, pour lui demander de commencer le processus de révision. Il fournit l'information sur la soumission et comment accéder à celle-ci.</description>
@@ -343,12 +343,12 @@ URL de la soumission : <a href="{$submissionEditingUrl}">{$submissionEditingUrl}
 <br />
 Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec nous. Nous vous remercions de votre collaboration.<br />
 <br />
-{$copyeditorName}]]&gt;]]></body>
+{$participantName}]]&gt;]]></body>
 		<description></description>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Accusé de réception de la révision</subject>
-		<body><![CDATA[{$copyeditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 Nous vous remercions d'avoir révisé le manuscrit intitulé « {$submissionTitle} » pour {$contextName}. Votre collaboration contribue grandement à la qualité de la revue.<br />
 <br />
@@ -370,7 +370,7 @@ Nous avons maintenant terminé la révision initiale de votre manuscrit intitul�
 7. Cliquer sur MÉTADONNÉES pour vérifier l'information d'indexation afin de vous assurer que tout êtes exact et complet.<br />
 8. Envoyer le courriel TERMINÉ au rédacteur et au réviseur.<br />
 <br />
-URL de la soumission : <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL de la soumission : <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Il s'agit de votre dernière chance d'apporter des modifications importantes à votre soumission. À l'étape de la correction d'épreuves, vous ne pourrez changer que les erreurs typographiques et les problèmes de mise en page.<br />
 <br />
@@ -400,7 +400,7 @@ Nous vous remercions d'avoir bien voulu relire la version révisée de votre man
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Revue finale de la révision</subject>
-		<body><![CDATA[&lt;![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[&lt;![CDATA[{$participantName}:<br />
 <br />
 L'auteur et le rédacteur ont complété la revue de la révision de « {$submissionTitle} » pour {$contextName}. La version finale est maintenant prête pour la mise en page, qui sera effectuée en passant par les étapes suivantes.<br />
 1. Cliquer sur l'URL de la soumission ci-dessous.<br />
@@ -411,8 +411,8 @@ L'auteur et le rédacteur ont complété la revue de la révision de « {$submis
 6. Envoyer le courriel TERMINÉ au rédacteur.<br />
 <br />
 URL de {$contextName} : <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL de la soumission : <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nom d'utilisateur : {$copyeditorUsername}<br />
+URL de la soumission : <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nom d'utilisateur : {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]&gt;]]></body>
 		<description>Ce courriel venant du Rédacteur de rubrique au Réviseur lui demande de faire une révision finale de la soumission avant que celle-ci passe au processus de la mise en page.</description>
@@ -423,12 +423,12 @@ Nom d'utilisateur : {$copyeditorUsername}<br />
 <br />
 J'ai terminé la préparation de la version révisée finale du manuscrit intitulé « {$submissionTitle} » pour {$contextName}. Il est prêt pour la mise en page et la préparation des épreuves.<br />
 <br />
-{$copyeditorName}]]&gt;]]></body>
+{$participantName}]]&gt;]]></body>
 		<description>Ce courriel du Réviseur et adressé au Rédacteur de rubrique avise ce dernier que le dernier cycle de révision a été complété et que le processus de mise en page peut débuter.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Accusé de réception de la révision finale</subject>
-		<body><![CDATA[{$copyeditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 Nous vous remercions d'avoir effectué la révision du manuscrit intitulé « {$submissionTitle} » pour {$contextName}. La préparation de la version définitive avant la mise en page est une étape importante du processus de publication.<br />
 <br />
@@ -437,7 +437,7 @@ Nous vous remercions d'avoir effectué la révision du manuscrit intitulé « {
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Demande de mise en page des épreuves</subject>
-		<body><![CDATA[&lt;![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[&lt;![CDATA[{$participantName}:<br />
 <br />
 J'aimerais que vous prépariez les épreuves du manuscrit intitulé « {$submissionTitle} » pour {$contextName} à l'aide des étapes suivantes.<br />
 1. Cliquer sur l'URL de la soumission ci-dessous.<br />
@@ -446,7 +446,7 @@ J'aimerais que vous prépariez les épreuves du manuscrit intitulé « {$submiss
 <br />
 URL de {$contextName} : <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL du manuscrit : <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Nom d'utilisateur : {$layoutEditorUsername}<br />
+Nom d'utilisateur : {$participantUsername}<br />
 <br />
 Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec moi. Je vous remercie de votre collaboration.<br />
 <br />
@@ -461,12 +461,12 @@ Les épreuves du manuscrit intitulé « {$submissionTitle} » pour {$contextName
 <br />
 Si vous avez des questions, n'hésitez pas à communiquer avec moi.<br />
 <br />
-{$layoutEditorName}]]&gt;]]></body>
+{$participantName}]]&gt;]]></body>
 		<description>Ce courriel du Responsable de la mise en page au Rédacteur de rubrique l'avise que le processus de la mise en page est terminé.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Accusé de réception de la mise en page</subject>
-		<body><![CDATA[&lt;![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[&lt;![CDATA[{$participantName}:<br />
 <br />
 Nous vous remercions d'avoir accepté de préparer les épreuves pour le manuscrit intitulé « {$submissionTitle} » pour {$contextName}. Il s'agit d'une contribution importante au processus de publication.<br />
 <br />
@@ -547,7 +547,7 @@ Nous vous remercions d'avoir accepté de corriger les épreuves du manuscrit int
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Demande de correction d'épreuves (Responsable de la mise en page)</subject>
-		<body><![CDATA[&lt;![CDATA[{$layoutEditorName},<br />
+		<body><![CDATA[&lt;![CDATA[{$participantName},<br />
 <br />
 Nous aimerions que vous insériez les modifications nécessaires à la suite de la correction d'épreuves du manuscrit intitulé « {$submissionTitle} » pour {$contextName} à l'aide des étapes suivantes.<br />
 1. Cliquer sur l'URL de la soumission ci-dessous.<br />
@@ -557,7 +557,7 @@ Nous aimerions que vous insériez les modifications nécessaires à la suite de 
 <br />
 URL de {$contextName} : <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL du manuscrit : {$submissionUrl}<br />
-Nom d'utilisateur : {$layoutEditorUsername}<br />
+Nom d'utilisateur : {$participantUsername}<br />
 <br />
 Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec moi. Je vous remercie de votre collaboration.<br />
 <br />
@@ -570,12 +570,12 @@ Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des qu
 <br />
 Les corrections d'épreuves ont été effectuées dans le manuscrit intitulé « {$submissionTitle} » pour {$contextName}. Ce document est prêt à être publié.<br />
 <br />
-{$layoutEditorName}]]&gt;]]></body>
+{$participantName}]]&gt;]]></body>
 		<description>Ce courriel  du Responsable de la mise en page au Rédacteur de rubrique avise ce dernier que l'étape finale de correction d'épreuves est terminé et que l'article est maintenant prêt à être publié.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Accusé de réception de la correction d'épreuves (Responsable de la mise en page)</subject>
-		<body><![CDATA[&lt;![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[&lt;![CDATA[{$participantName}:<br />
 <br />
 Nous vous remercions d'avoir corrigé les épreuves du manuscrit intitulé « {$submissionTitle} » pour {$contextName}. Votre contribution est importante pour la revue.<br />
 <br />

@@ -428,7 +428,7 @@ Keputusan kami adalah:<br />
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Copyediting Request</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Saya meminta Anda bertanggungjawab atas proses copyediting  &quot;{$submissionTitle}&quot; untuk{$contextName} dengan mengikuti langkah-langkah berikut.<br />
 1. Klik URL Penyerahan di bawah ini.<br />
@@ -439,8 +439,8 @@ Saya meminta Anda bertanggungjawab atas proses copyediting  &quot;{$submissionTi
 6. Kirim email LENGKAP kepada editor.<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL Penyerahan: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nama pengguna Copy Editor: {$copyeditorUsername}<br />
+URL Penyerahan: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nama pengguna Copy Editor: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Email ini dikirim oleh Editor Bagian kepada Copyeditor naskah untuk meminta mereka memulai proses copyediting. Email ini memberikan informasi tentang naskah dan bagaimana mengaksesnya. </description>
@@ -463,11 +463,11 @@ URL Manuskrip: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br 
 <br />
 Jika Anda tidak dapat bertanggungjawab atas pekerjaan ini sekarang atau mempunyai pertanyaan apapun, silakan hubungi saya. Terima kasih untuk kontribusi Anda untuk jurnal ini. <br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Pernyataan Copyediting</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Terima kasih untuk meng-copyedit manuskrip, &quot;{$submissionTitle},&quot; untuk {$contextName}. Ini akan membuat kontribusi penting untuk kualitas jurnal ini. <br />
 <br />
@@ -488,7 +488,7 @@ Naskah Anda &quot;{$submissionTitle}&quot; untuk {$contextName} telah melewati l
 7. Klik di METADATA untuk mengecek informasi pengindeksan untuk kelengkapan dan keakuratan.<br />
 8. Kirim email LENGKAP kepada editor dan copyeditor.<br />
 <br />
-URL Penyerahan: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL Penyerahan: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Ini adalah kesempatan terbaik untuk membuat perubahan copyediting besar ke naskah. Tahap proofreading, yang mengikuti persiapa galley, terlarang untuk mengoreksi kesalahan layout dan tipografi. <br />
 <br />
@@ -518,7 +518,7 @@ Terima kasih telah mereview copyediting manuskrip Anda, &quot;{$submissionTitle}
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Review Final Copyediting</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Penulis dan editor telah menyelesaikan review copyediting mereka tentang &quot;{$submissionTitle}&quot; untuk {$contextName}. Salinan yang &quot;bersih&quot; perlu disiapkan untuk Layout dengan melewati langkah-langkah di bawah ini. <br />
 <br />
@@ -530,8 +530,8 @@ Penulis dan editor telah menyelesaikan review copyediting mereka tentang &quot;{
 6. Kirim email LENGKAP kepada editor.<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL Penyerahan: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nama pengguna Copy Editor: {$copyeditorUsername}<br />
+URL Penyerahan: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nama pengguna Copy Editor: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Email ini dari Editor Bagian kepada Copyeditor meminta mereka melakukan putaran terakhir copyediting pada naskah sebelum memasuki proses layout.</description>
@@ -542,12 +542,12 @@ Nama pengguna Copy Editor: {$copyeditorUsername}<br />
 <br />
 Saya telah menyiapkan versi copyedited manuskrip yang bersih, &quot;{$submissionTitle},&quot; untuk {$contextName}. Ini siap untuk galley persiapan dan layout. <br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Email ini dari Copyeditor kepada Editor Bagian yang memberitahu mereka bahwa putaran terakhir copyediting telah selesai dan proses layout boleh dimulai. </description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Pernyataan Review Final Copyediting</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Terima kasih telah menyelesaikan copyediting manuskrip, &quot;{$submissionTitle},&quot; untuk {$contextName}. Persiapan &quot;salinan bersih&quot; untuk layout adalah sebuah langkah penting di proses editorial. <br />
 <br />
@@ -556,7 +556,7 @@ Terima kasih telah menyelesaikan copyediting manuskrip, &quot;{$submissionTitle}
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Permintaan Galleys</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Naskah &quot;{$submissionTitle}&quot; ke {$contextName} sekarang membutuhkan galley yang dikeluarkan dengan langkah-langkah berikut ini. <br />
 1. Klik URL Penyerahan di bawah ini.<br />
@@ -565,7 +565,7 @@ Naskah &quot;{$submissionTitle}&quot; ke {$contextName} sekarang membutuhkan gal
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL Penyerahan: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Nama pengguna Layout Editor: {$layoutEditorUsername}<br />
+Nama pengguna Layout Editor: {$participantUsername}<br />
 <br />
 Jika Anda tidak bisa bertanggung jawab atas pekerjaan ini saat ini atau mempunyai pertanyaan apapub, silakan hubungi saya. Terima kasih untuk kontribusi Anda untuk jurnal ini. <br />
 <br />
@@ -580,12 +580,12 @@ Galley sekarang telah disiapkan untuk manuskrip, &quot;{$submissionTitle},&quot;
 <br />
 Jika Anda mempunyai pertanyaan, silakan hubungi saya.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Email ini dari Editor Layout untuk Editor Bagian yang memberitahu mereka bahwa proses layout telah selesai. </description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Pernyataan Layout</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Terima kasih untuk menyiapkan galley untuk manuskrip, &quot;{$submissionTitle},&quot; untuk {$contextName}. Ini adalah kontribusi penting untuk proses penerbitan. <br />
 <br />
@@ -669,7 +669,7 @@ Terima kasih telah mem-proofreading galley untuk manuskrip, &quot;{$submissionTi
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Permintaan Proofreading (Editor Layout)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Naskah &quot;{$submissionTitle}&quot; untuk {$contextName} telah diproofread oleh penulis dan proofreader, dan koreksi apapun harus dibuat dengan mengikuti langkah-langkah berikut ini. <br />
 1. Klik di URL Penyerahan di bawah ini. <br />
@@ -679,7 +679,7 @@ Naskah &quot;{$submissionTitle}&quot; untuk {$contextName} telah diproofread ole
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL Penyerahan: {$submissionUrl}<br />
-Nama pengguna Layout Editor: {$layoutEditorUsername}<br />
+Nama pengguna Layout Editor: {$participantUsername}<br />
 <br />
 Jika Anda tidak bisa bertanggung jawab atas pekerjaan ini saat ini atau mempunyai pertanyaan, silakan hubungi saya. Terima kasih atas kontribusi Anda untuk jurnal ini. <br />
 <br />
@@ -692,12 +692,12 @@ Jika Anda tidak bisa bertanggung jawab atas pekerjaan ini saat ini atau mempunya
 <br />
 Galley sekarang telah dikoreksi, mengikuti proofreading mereka, untuk manuskrip, &quot;{$submissionTitle},&quot; untuk {$contextName}. Bagian ini sekarang siap untuk diterbitkan.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Email ini dari Editor Layout untuk Editor Bagian yang memberitahu mereka bahwa tahap akhir proofreading telah selesai dan artikel sekarang siap untuk diterbitkan. </description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Pernyataan Proofreading (Editor Layout)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Terima kasih untuk menyelesaikan koreksi proofreading untuk galley yang diasosiasikan dengan manuskrip, &quot;{$submissionTitle},&quot; untuk {$contextName}. Ini mewakili kontribusi penting untuk karya jurnal ini. <br />
 <br />

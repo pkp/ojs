@@ -336,12 +336,12 @@
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>原稿整理のお願い</subject>
-		<body><![CDATA[{$copyeditorName} 殿:<br />
+		<body><![CDATA[{$participantName} 殿:<br />
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理作業をお願いいたしたくメールを差し上げました。投稿物は雑誌のWebサイトで見ることができます。原稿整理の手引きも用意しております。<br />
 <br />
-原稿のURL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-ユーザ名: {$copyeditorUsername}<br />
+原稿のURL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+ユーザ名: {$participantUsername}<br />
 <br />
 今回、この作業を引き受けていただけない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />
 <br />
@@ -358,11 +358,11 @@
 <br />
 よろしくお願いいたします。<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>原稿整理のお礼</subject>
-		<body><![CDATA[{$copyeditorName} 殿:<br />
+		<body><![CDATA[{$participantName} 殿:<br />
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理を行っていただき、ありがとうございました。<br />
 <br />
@@ -379,7 +379,7 @@
 <br />
 これは、大規模な変更を行うことができる最後のチャンスです。今後、ゲラの校正をお願いすることになりますが、その際は、ちょっとした文字やレイアウトの間違いしか修正することはできませんのでご注意ください。<br />
 <br />
-原稿のURL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+原稿のURL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 今回この作業を行うことができない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />
 <br />
@@ -412,12 +412,12 @@
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>最終の原稿整理のお願い</subject>
-		<body><![CDATA[{$copyeditorName} 殿:<br />
+		<body><![CDATA[{$participantName} 殿:<br />
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理版の著者と編集者によるチェックが終わりました。レイアウト作業のための最終の「クリーン版」を作成していただくようお願いいたします。<br />
 <br />
-原稿のURL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-ユーザ名: {$copyeditorUsername}<br />
+原稿のURL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+ユーザ名: {$participantUsername}<br />
 <br />
 よろしくお願いいたします。<br />
 <br />
@@ -432,12 +432,12 @@
 <br />
 よろしくお願いいたします。<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>このメールは、コピーエディタからセクションエディタに最終の原稿製作業が終了し、レイアウト作業を開始できることを通知するものです。</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>最終の原稿整理のお礼</subject>
-		<body><![CDATA[{$copyeditorName} 殿:<br />
+		<body><![CDATA[{$participantName} 殿:<br />
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理作業を行っていただき、ありがとうございました。レイアウト作業用の「クリーン版」の作成は、編集プロセスにとって重要なものです。<br />
 <br />
@@ -448,12 +448,12 @@
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>ゲラ作成のお願い</subject>
-		<body><![CDATA[{$layoutEditorName} 殿:<br />
+		<body><![CDATA[{$participantName} 殿:<br />
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの作成をお願いいたしたくメールを差し上げました。<br />
 <br />
 原稿のURL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-ユーザ名: {$layoutEditorUsername}<br />
+ユーザ名: {$participantUsername}<br />
 <br />
 今回、この作業を引き受けていただけない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />
 <br />
@@ -472,12 +472,12 @@
 <br />
 よろしくお願いいたします。<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>このメールは、レイアウトエディタからセクションエディタにレイアウト処理が終了したことを通知するものです。</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>レイアウト作業のお礼</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラを作成していただき、ありがとうございました。これは出版プロセスに対する大きな貢献です。<br />
 <br />
@@ -565,12 +565,12 @@
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>（レイアウトエディタ）校正のお願い</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の校正作業の結果、ゲラの修正をお願いすることになりました。<br />
 <br />
 原稿のURL: {$submissionUrl}<br />
-ユーザ名: {$layoutEditorUsername}<br />
+ユーザ名: {$participantUsername}<br />
 <br />
 今回この作業を行うことができない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />
 <br />
@@ -587,12 +587,12 @@
 <br />
 よろしくお願いいたします。<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>このメールは、レイアウトエディタからセクションエディタに最終の校正作業が終了し、論文を出版する用意ができたことを通知するものです。</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>（レイアウトエディタ）校正のお礼</subject>
-		<body><![CDATA[{$layoutEditorName} 殿:<br />
+		<body><![CDATA[{$participantName} 殿:<br />
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの校正結果に対する修正をしていただき、ありがとうございました。これは、本誌の品質の向上に重要な貢献をしていただいたことになります。<br />
 <br />

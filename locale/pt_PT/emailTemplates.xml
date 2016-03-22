@@ -454,7 +454,7 @@ Aguardando o seu contacto,<br />
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Pedido de edição de texto</subject>
-		<body><![CDATA[{$copyeditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 Solicito a edição do texto do manuscrito &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}, conforme os passos a seguir:<br />
 <br />
@@ -466,8 +466,8 @@ Solicito a edição do texto do manuscrito &quot;{$submissionTitle}&quot;, subme
 6. Envie o e-mail de CONCLUÍDO ao editor e ao editor de texto.<br />
 <br />
 URL da revista {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL da Submissão: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nome de utilizador: {$copyeditorUsername}<br />
+URL da Submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nome de utilizador: {$participantUsername}<br />
 <br />
 Caso não esteja disponível para assumir esta responsabilidade no momento, ou em caso de dúvidas, entre em contacto através deste email.<br />
 <br />
@@ -495,12 +495,12 @@ URL da submissão: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a>
 Caso não esteja disponível para realizar esta tarefa ou em caso de dúvidas, entre em contacto através deste email.<br />
 <br />
 Agradecendo a atenção dispensada,<br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Mensagem enviada pelo Editor de Texto ao Editor de Secção, informando da conclusão da tarefa editorial.</description>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Agradecimento pela edição de texto</subject>
-		<body><![CDATA[{$copyeditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 Agradecemos a conclusão da edição do texto do manuscrito &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}.<br />
 <br />
@@ -526,7 +526,7 @@ Concluímos a Edição de Texto inicial do seu manuscrito &quot;{$submissionTitl
 7. Clique em METADADOS para verificar a qualidade da indexação do documento.<br />
 8. Envie o e-mail de CONCLUÍDO ao editor e ao editor de texto.<br />
 <br />
-URL da submissão: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL da submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Esta é a última oportunidade para realizar alterações substanciais no documento. Em etapa posterior, lhe será solicitada a leitura de prova das composições finais, onde será possível solicitar apenas pequenas correcções de redacção e visual.<br />
 <br />
@@ -561,7 +561,7 @@ Agradecemos a sua avaliação da edição do texto do manuscrito &quot;{$submiss
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Avaliação da edição de texto final</subject>
-		<body><![CDATA[{$copyeditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 O autor e o editor concluíram a avaliação da edição do texto do manuscrito &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}. A versão final deeverá ser preparada para envio ao Layout, conforme os passos a seguir:<br />
 <br />
@@ -573,8 +573,8 @@ O autor e o editor concluíram a avaliação da edição do texto do manuscrito 
 6. Envie o email CONCLUÍDO ao editor.<br />
 <br />
 URL da revista {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL da submissão: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nome de utilizador: {$copyeditorUsername}<br />
+URL da submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nome de utilizador: {$participantUsername}<br />
 <br />
 Em nome da Equipe Editorial, agradeço a sua colaboração para a qualidade desta publicação,<br />
 <br />
@@ -587,12 +587,12 @@ Em nome da Equipe Editorial, agradeço a sua colaboração para a qualidade dest
 <br />
 Concluí a edição da versão final do manuscrito &quot;{$submissionTitle}&quot;, submetido a {$contextName}, a qual está pronta para preparação das composições.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Mensagem enviada pelo Editor de Texto ao Editor de Secção, solicitando que verifique o trabalho realizado pelo Editor de Texto, com informações sobre acesso e avisando que é a última chance de realizar modificações no texto.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Agradecimento pela avaliação final da edição de texto</subject>
-		<body><![CDATA[{$copyeditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 Agradecemos a conclusão da edição do texto do manuscrito &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}.<br />
 <br />
@@ -605,7 +605,7 @@ Agradecendo mais uma vez pela sua contribuição,<br />
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Pedido de composições</subject>
-		<body><![CDATA[{$layoutEditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 Solicito a preparação das composições do manuscrito &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}, conforme instruções a seguir:<br />
 <br />
@@ -615,7 +615,7 @@ Solicito a preparação das composições do manuscrito &quot;{$submissionTitle}
 <br />
 URL da revista {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL da Submissão: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Nome de utilizador: {$layoutEditorUsername}<br />
+Nome de utilizador: {$participantUsername}<br />
 <br />
 Caso não esteja disponível para assumir esta responsabilidade no momento, ou em caso de dúvidas, entre em contacto através deste email.<br />
 <br />
@@ -632,12 +632,12 @@ As composições do manuscrito &quot;{$submissionTitle}&quot;, submetido à revi
 <br />
 Em caso de dúvidas, entre em contacto através deste email.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Mensagem enviada pelo Editor de Layout ao Editor de Secção, informando sobre a conclusão das composições.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Agradecimento pelas composições</subject>
-		<body><![CDATA[{$layoutEditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 Agradecemos a preparação das composições do manuscrito &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}.<br />
 <br />
@@ -737,7 +737,7 @@ A sua contribuição é fundamental para a qualidade desta publicação.<br />
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Pedido de leitura de provas pelo Editor de Layout</subject>
-		<body><![CDATA[{$layoutEditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 O autor e o Leitor de Provas concluíram a leitura de provas do manuscrito &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}, as correcções devem agora ser incorporadas conforme as instruções a seguir:<br />
 <br />
@@ -748,7 +748,7 @@ O autor e o Leitor de Provas concluíram a leitura de provas do manuscrito &quot
 <br />
 URL da revista {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL da Submissão: {$submissionUrl}<br />
-Nome de utilizador: {$layoutEditorUsername}<br />
+Nome de utilizador: {$participantUsername}<br />
 <br />
 Caso não esteja disponível para assumir esta responsabilidade no momento, ou em caso de dúvidas, entre em contacto através deste email.<br />
 <br />
@@ -763,12 +763,12 @@ Agradecemos desde já a sua colaboração, fundamental para a qualidade da revis
 <br />
 As composições do manuscrito &quot;{$submissionTitle}&quot;, submetido à revista  {$contextName}, foram corrigidas, segundo as solicitações da Leitura de Provas, e estão prontas para publicação.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Mensagem enviada pelo Editor de Layout ao Editor de Secção, informando a conclusão das novas composições, após Leitura de Provas</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Agradecimento pela leitura de provas pelo Editor de Layout</subject>
-		<body><![CDATA[{$layoutEditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 Agradecemos a conclusão da leitura de provas e correcções realizadas às composições do manuscrito &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}.<br />
 <br />

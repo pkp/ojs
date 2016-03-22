@@ -319,11 +319,11 @@ Vi beder dig bekræfte, at du er i stand til at fuldføre dette vigtige bidrag t
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Forespørgsel om manuskriptredigering</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Jeg vil bede dig om at foretage manuskriptredigering af &quot;{$submissionTitle}&quot; til {$contextName} ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og klik på den fil, der vises i trin 1. 3. Se instruktionerne til manuskriptredigering, der findes på websiden. 4. Åbn den hentede fil, og rediger manuskriptet, idet du tilføjer forfatterforespørgsler efter behov. 5. Gem den manuskriptredigerede fil, og overfør den til trin 1 under Manuskriptredigering. 6. Send e-mailen under UDFØR til redaktøren.<br />
 <br />
-{$contextName} URL-adresse: <a href="{$contextUrl}">{$contextUrl}</a> Manuskriptets URL-adresse: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a> Brugernavn: {$copyeditorUsername}<br />
+{$contextName} URL-adresse: <a href="{$contextUrl}">{$contextUrl}</a> Manuskriptets URL-adresse: <a href="{$submissionUrl}">{$submissionUrl}</a> Brugernavn: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Denne e-mail sendes af en sektionsredaktør til manuskriptredaktøren for et manuskript og beder vedkommende om at påbegynde manuskriptredigeringsprocessen. Den indeholder oplysninger om manuskriptet og om, hvordan der oprettes adgang til det.</description>
@@ -342,11 +342,11 @@ Manuskriptets URL-adresse: <a href="{$submissionEditingUrl}">{$submissionEditing
 <br />
 Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunkt eller har spørgsmål, bedes du kontakte mig.<br />
  Tak for dit bidrag til dette tidsskrift.<br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Bekræftelse af manuskriptredigering</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Tak, fordi du har redigeret manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Det har stor betydning for kvaliteten af dette tidsskrift.<br />
 <br />
@@ -361,7 +361,7 @@ Dit manuskript &quot;{$submissionTitle}&quot; til {$contextName} har gennemgået
 <br />
 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og klik på den fil, der vises i trin 1. 3. Åbn det hentede manuskript. 4. Gennemgå teksten, herunder manuskriptredigeringsforslag og forfatterforespørgsler. 5. Foretag eventuelle ændringer, der vil forbedre teksten yderligere. 6. Overfør filen i trin 2, når du er færdig med at foretage ændringer. 7. Klik på METADATA for at kontrollere, at indekseringsoplysningerne er fuldstændige og præcise. 8. Send e-mailen under UDFØR til redaktøren og manuskriptredaktøren.<br />
 <br />
-Manuskriptets URL-adresse: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a>
+Manuskriptets URL-adresse: <a href="{$submissionUrl}">{$submissionUrl}</a>
 <br />
 Dette er din sidste mulighed for at foretage omfattende ændringer af manuskriptet. Korrekturlæsningsfasen, der følger efter forberedelsen af satsskibene, begrænser sig til rettelse af typografiske fejl og layoutfejl.<br />
 <br />
@@ -390,11 +390,11 @@ Tak, fordi du har gennemgået redigeringen af dit manuskript, &quot;{$submission
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Sidste gennemgang af manuskriptredigering</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Forfatteren og redaktøren har nu fuldført deres gennemgang af redigeringen af manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Der skal nu forberedes en &quot;ren kopi&quot; til layoutfasen ved at følge nedenstående trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og klik på den fil, der vises i trin 2. 3. Åbn den hentede fil, og indfør alle manuskriptredigeringer og forespørgselssvar. 4. Gem den rene fil, og overfør den til trin 3 under Manuskriptredigering. 5. Klik på METADATA for at kontrollere indekseringsoplysningerne (og gemme eventuelle rettelser). 6. Send e-mailen under UDFØR til redaktøren.<br />
 <br />
-{$contextName} URL-adresse: <a href="{$contextUrl}">{$contextUrl}</a> Manuskriptets URL-adresse: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a> Brugernavn: {$copyeditorUsername}<br />
+{$contextName} URL-adresse: <a href="{$contextUrl}">{$contextUrl}</a> Manuskriptets URL-adresse: <a href="{$submissionUrl}">{$submissionUrl}</a> Brugernavn: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>I denne e-mail fra sektionsredaktøren til manuskriptredaktøren bliver manuskriptredaktøren bedt om at foretage en sidste redigering af et manuskript, inden det går videre til layoutprocessen.</description>
@@ -405,12 +405,12 @@ Forfatteren og redaktøren har nu fuldført deres gennemgang af redigeringen af 
 <br />
 Jeg har nu forberedt en ren og redigeret version af manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Den er klar til layout og forberedelsen af satsskibene.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Denne e-mail fra manuskriptredaktøren til sektionsredaktøren underretter sektionsredaktøren om, at den sidste manuskriptredigeringsrunde er fuldført, og at layoutprocessen nu kan begynde.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Bekræftelse af sidste gennemgang af manuskriptredigering</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Tak, fordi du har fuldført redigeringen af manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Forberedelsen af en &quot;ren kopi&quot; til layout er et vigtigt trin i den redaktionelle proces.<br />
 <br />
@@ -419,11 +419,11 @@ Tak, fordi du har fuldført redigeringen af manuskriptet &quot;{$submissionTitle
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Forespørgsel om satsskibe</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Der skal nu opsættes satsskibe for manuskriptet &quot;{$submissionTitle}&quot; til {$contextName} ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og brug filen Layoutversion til at oprette satsskibene i henhold til tidsskriftets standarder. 3. Send e-mailen under UDFØR til redaktøren.<br />
 <br />
-{$contextName} URL-adresse: <a href="{$contextUrl}">{$contextUrl}</a> Manuskriptets URL-adresse: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a> Brugernavn: {$layoutEditorUsername}<br />
+{$contextName} URL-adresse: <a href="{$contextUrl}">{$contextUrl}</a> Manuskriptets URL-adresse: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a> Brugernavn: {$participantUsername}<br />
 <br />
 Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunkt eller har spørgsmål, bedes du kontakte mig.<br />
  Tak for dit bidrag til dette tidsskrift.<br />
@@ -438,12 +438,12 @@ Der er nu oprettet satsskibe til manuskriptet &quot;{$submissionTitle}&quot; til
 <br />
 Hvis du har spørgsmål, er du velkommen til at kontakte mig.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Denne e-mail fra layoutredaktøren til sektionsredaktøren underretter sektionsredaktøren om, at layoutprocessen er fuldført.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Bekræftelse af layout</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Tak, fordi du har oprettet satsskibene for manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Dette er et vigtigt bidrag til publiceringsprocessen.<br />
 <br />
@@ -514,11 +514,11 @@ Tak, fordi du har læst korrektur på satsskibene for manuskriptet &quot;{$submi
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Forespørgsel om korrekturlæsning (layoutredaktør)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Manuskriptet &quot;{$submissionTitle}&quot; til {$contextName} er blevet korrekturlæst af forfatteren og korrekturlæseren, og der skal nu foretages eventuelle rettelser ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og få vist Korrekturrettelser for at oprette korrigerede satsskibe. 3. Overfør de rettede satsskibe. 4. Send e-mailen under UDFØR i trin 3 under Korrekturlæsning til redaktøren.<br />
 <br />
-{$contextName} URL-adresse: <a href="{$contextUrl}">{$contextUrl}</a> Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$layoutEditorUsername}<br />
+{$contextName} URL-adresse: <a href="{$contextUrl}">{$contextUrl}</a> Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$participantUsername}<br />
 <br />
 Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunkt eller har spørgsmål, bedes du kontakte mig.<br />
  Tak for dit bidrag til dette tidsskrift.<br />
@@ -531,12 +531,12 @@ Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunk
 <br />
 Satsskibene er nu blevet rettet, efter korrekturlæsning af dem, for manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Artiklen er nu klar til at blive publiceret.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Denne e-mail fra layoutredaktøren til sektionsredaktøren underretter sektionsredaktøren om, at den sidste korrekturlæsningsfase er fuldført, og at artiklen nu er klar til at blive publiceret.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Bekræftelse af korrekturlæsning (layoutredaktør)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Tak, fordi du har indført korrekturrettelserne i de satsskibe, der er tilknyttet manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Dette er et vigtigt bidrag til arbejdet i forbindelse med dette tidsskrift.<br />
 <br />

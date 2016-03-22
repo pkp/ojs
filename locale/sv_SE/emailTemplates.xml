@@ -354,7 +354,7 @@ Vänligen kontakta mig om du har några frågor.<br />
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Begäran om Manusredigering</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Jag skulle vilja be dig om att genomföra manusredigering av manuskriptet &quot;{$submissionTitle}&quot; för {$contextName} genom att gå igenom följande steg.<br />
 1. Klicka på Manuskriptets URL nedan.<br />
@@ -365,8 +365,8 @@ Jag skulle vilja be dig om att genomföra manusredigering av manuskriptet &quot;
 6. Skicka COMPLETE-mailet till Redaktören.<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-Manuskriptets URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Användarnamn: {$copyeditorUsername}<br />
+Manuskriptets URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Användarnamn: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Det här meddelandet skickas från Sektionsredaktören till ett manuskripts Manusredaktör och innehåller information om Manusredigering.</description>
@@ -390,11 +390,11 @@ Manuskriptets URL: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a>
 Om du inte har möjlighet att göra manusredigeringen nu, eller om du har frågor,<br />
 vänligen kontakta mig.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Bekräftelse på Manusredigering</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Tack för att du har genomfört manusredigering av manuskriptet, &quot;{$submissionTitle},&quot; för {$contextName}. Ditt arbete innebär att vi kan bibehålla en hög kvalitet av tidskriften.<br />
 <br />
@@ -416,7 +416,7 @@ Ditt Manuskript &quot;{$submissionTitle}&quot; för {$contextName} har passerat 
 7. Klicka på METADATA för att kontrollera införd informationen.<br />
 8. Skicka COMPLETE mailet till Redaktör och Manusredaktör.<br />
 <br />
-Manuskriptets URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+Manuskriptets URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Det här är sista möjligheten att göra mer omfattande ändringar av manuskriptet. I korrekturskedet, som följer i redigeringsprocessen, finns endast möjlighet att gäöra typografiska ändringar av layouten.<br />
 <br />
@@ -446,7 +446,7 @@ Tack för att du har granskat den redigerade versionen av Manuskriptet, &quot;{$
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Manusredigering - sista omgången</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Författaren och Redaktören har nu avslutat redigering av manuskriptet &quot;{$submissionTitle}&quot; för {$contextName}. En &quot;tvättad version&quot; måste nu förberedas för Layoutprocessen. Följ stegen nedan.<br />
 1. Klicka på Manuskriptets URL nedan.<br />
@@ -457,8 +457,8 @@ Författaren och Redaktören har nu avslutat redigering av manuskriptet &quot;{$
 6. Skicka COMPLETE mailet till Redaktören.<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-Manuskriptets URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Användarnamn: {$copyeditorUsername}<br />
+Manuskriptets URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Användarnamn: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Det här meddelandet från Sektionsredaktören till Manusredaktören innehåller information om en avslutande redigeringsprocess innan manuskriptet skickas vidare till Layout.</description>
@@ -469,12 +469,12 @@ Användarnamn: {$copyeditorUsername}<br />
 <br />
 Jag har nu iordningställt en &quot;tvättad&quot; redigerad version av manuskriptet, &quot;{$submissionTitle},&quot; för {$contextName}. Versionen är redo för Layout och Korrektur.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Det här meddelandet från Manusredaktören till Sektionsredaktören innehåller information om att manusredigeringen är avslutad och att Layoutprocessen kan påbörjas.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Bekräftelse på avslutad Manusredigering</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Tack för att du har avslutat Manusredigeringen av, &quot;{$submissionTitle},&quot; för {$contextName}. Iordningställandet av en &quot;tvättad version&quot; för Layout är ett viktigt steg i den redaktionella processen.<br />
 <br />
@@ -483,7 +483,7 @@ Tack för att du har avslutat Manusredigeringen av, &quot;{$submissionTitle},&qu
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Begäran om Korrekturversion</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Manuskriptet &quot;{$submissionTitle}&quot; till {$contextName} behöver Korrekturversioner för Layoutprocessen. Gå igenom följande steg.<br />
 1. Klicka på Manuskriptets URL nedan.<br />
@@ -492,7 +492,7 @@ Manuskriptet &quot;{$submissionTitle}&quot; till {$contextName} behöver Korrekt
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Manuskriptets URL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Användarnamn: {$layoutEditorUsername}<br />
+Användarnamn: {$participantUsername}<br />
 <br />
 Om du inte har möjlighet att genomföra det här arbetet, eller om du har frågor, vänligen kontakta mig.<br />
 <br />
@@ -507,12 +507,12 @@ Korrekturversion har nu färdigställts för Manuskriptet, &quot;{$submissionTit
 <br />
 Om du har några frågor, vänligen kontakta mig.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Det här meddelandet från Layoutredaktör till Sektionsredaktör innehåller information om att Layoutprocessen är avslutad.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Bekräftelse på avslutad Layoutredigering</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Tack för att du har färdigställt Korrekturversion av Manuskriptet, &quot;{$submissionTitle},&quot; for {$contextName}. Ditt arbete har inneburit ett viktigt bidrag för publiceringsprocessen.<br />
 <br />
@@ -597,7 +597,7 @@ Tack för att du har korrekturläst manuskriptet, &quot;{$submissionTitle},&quot
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Begäran om Korrekturläsning (Layoutredaktör)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Manuskriptet &quot;{$submissionTitle}&quot; till {$contextName} har korrekturlästs av Författare och Korrekturläsare, och alla eventuella korrigeringar sker enligt följande steg:<br />
 1. Klicka på Manuskriptets URL nedan.<br />
@@ -607,7 +607,7 @@ Manuskriptet &quot;{$submissionTitle}&quot; till {$contextName} har korrekturlä
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Manuskriptets URL: {$submissionUrl}<br />
-Användarnamn: {$layoutEditorUsername}<br />
+Användarnamn: {$participantUsername}<br />
 <br />
 Om du inte har möjlighet att korrekturläsa manuskriptet för tillfället, eller om du har några frågor, vänligen kontakta mig.<br />
 <br />
@@ -620,12 +620,12 @@ Om du inte har möjlighet att korrekturläsa manuskriptet för tillfället, elle
 <br />
 Korrekturversionen av manuskriptet, &quot;{$submissionTitle},&quot; for {$contextName} har nu korrekturlästs och slutgiltigt korrigerats. Bidraget är klar för publicering.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Det här meddelanndet från Layoutredaktör till Sektionsredaktör meddelar att det avslutande delen av korrekturläsningen nu är genomförd och att bidraget är färdigt för publicering.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Bekräftelse av Korrekturläsning (Layoutredaktör)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Tack för att du har avslutat korrekturprocessen rörande manuskriptet, &quot;{$submissionTitle},&quot; för {$contextName}.<br />
 <br />

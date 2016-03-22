@@ -306,12 +306,12 @@ Srdačno,<br />
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Zamolba za lekturu</subject>
-		<body><![CDATA[Poštovana/i {$copyeditorName},<br />
+		<body><![CDATA[Poštovana/i {$participantName},<br />
 <br />
 željeli bismo vas zamoliti da prihvatite lekturu rukopisa &quot;{$submissionTitle}&quot; za časopis {$contextName}. Prijavljeni rukopis, kao i upute za lektoriranje možete pronaći na mrežnim stranicama časopisa.<br />
 <br />
-URL rukopisa: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Korisničko ime: {$copyeditorUsername}<br />
+URL rukopisa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Korisničko ime: {$participantUsername}<br />
 <br />
 U slučaju da trenutačno niste u mogućnosti preuzeti lekturu ili da imate bilo kakvih dodatnih pitanja, molimo vas da nam se obratite.<br />
 <br />
@@ -327,11 +327,11 @@ Srdačno,<br />
 prvi krug lekture rukopisa &quot;{$submissionTitle}&quot; za časopis {$contextName} je završen. Rukopis je sada spreman da autor i urednik na njemu izvrše pregled promjena i upita.<br />
 <br />
 Srdačno,<br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Zaprimljena lektura</subject>
-		<body><![CDATA[Poštovana/i {$copyeditorName},<br />
+		<body><![CDATA[Poštovana/i {$participantName},<br />
 <br />
 hvala vam što ste izvršili lekturu rukopisa &quot;{$submissionTitle}&quot; za časopis {$contextName}.<br />
 <br />
@@ -348,7 +348,7 @@ upravo smo napravili lekturu vašeg priloga &quot;{$submissionTitle}&quot; za č
 <br />
 Ovo je posljednja prilika da izvršite neke promjene u vašem prilogu. Tekst ćete moći još jednom pregledati u fazi korekture, međutim u toj fazi mogu se ispravljati samo manje tiskarske pogreške i pogreške u prijelomu.<br />
 <br />
-URL rukopisa: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL rukopisa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 U slučaju da trenutačno niste u mogućnosti pregledati svoj prilog ili ako imate bilo kakvih dodatnih upita, molimo vas da nam se obratite.<br />
 <br />
@@ -381,12 +381,12 @@ Srdačno,<br />
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Zamolba za završnu lekturu</subject>
-		<body><![CDATA[Poštovana/i {$copyeditorName},<br />
+		<body><![CDATA[Poštovana/i {$participantName},<br />
 <br />
 autor i urednik učinili su pregled lekture rukopisa &quot;{$submissionTitle}&quot; za časopis {$contextName}. Temeljem priloženih napomena molim vas da izradite konačnu, &quot;čistu verziju&quot;, koja će biti upućena u prijelom.<br />
 <br />
-URL rukopisa: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Korisničko ime: {$copyeditorUsername}<br />
+URL rukopisa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Korisničko ime: {$participantUsername}<br />
 <br />
 Srdačno,<br />
 {$editorialContactSignature}]]></body>
@@ -399,12 +399,12 @@ Srdačno,<br />
 pripremio/la sam čistu, lektoriranu verziju rukopisa &quot;{$submissionTitle}&quot; za časopis {$contextName}. Rukopis je sada spreman za pripremu prijeloma.<br />
 <br />
 Srdačno,<br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Ovim obrascem e-pošte lektor obavještava  urednika rubrike da je zadnji krug postupka lekture završen i da postupak prijeloma može početi.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Zaprimljena završna lektura</subject>
-		<body><![CDATA[Poštovana/i {$copyeditorName},<br />
+		<body><![CDATA[Poštovana/i {$participantName},<br />
 <br />
 hvala vam što ste završili lekturu rukopisa &quot;{$submissionTitle}&quot; za časopis {$contextName}.<br />
 <br />
@@ -414,12 +414,12 @@ Srdačno,<br />
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Zamolba za prijelom</subject>
-		<body><![CDATA[Poštovana/i {$layoutEditorName},<br />
+		<body><![CDATA[Poštovana/i {$participantName},<br />
 <br />
 molim vas da pripremite prijelom priloga &quot;{$submissionTitle}&quot; za časopis {$contextName}.<br />
 <br />
 URL rukopisa: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Korisničko ime: {$layoutEditorUsername}<br />
+Korisničko ime: {$participantUsername}<br />
 <br />
 U slučaju da trenutačno niste u mogućnosti preuzeti ovu obavezu ili ako imate bilo kakvih dodatnih pitanja, molim vas da mi se obratite.<br />
 <br />
@@ -435,13 +435,13 @@ prijelom priloga &quot;{$submissionTitle}&quot; za časopis {$contextName} je za
 U slučaju da imate bilo kakvih pitanja molim vas da mi se obratite.<br />
 <br />
 Srdačno,<br />
-{$layoutEditorName}<br />
+{$participantName}<br />
 ]]></body>
 		<description>Ova e-pošta urednika prijeloma uredniku rubrike obaviještava da je proces prijeloma završen.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Zaprimljen prijelom</subject>
-		<body><![CDATA[Poštovana/i {$layoutEditorName},<br />
+		<body><![CDATA[Poštovana/i {$participantName},<br />
 <br />
 zahvaljujem vam što ste pripremili prijelom priloga &quot;{$submissionTitle}&quot; za časopis {$contextName}.<br />
 <br />
@@ -522,12 +522,12 @@ Srdačno,<br />
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Zamolba za unos korekture (grafički urednik)</subject>
-		<body><![CDATA[Poštovana/i {$layoutEditorName},<br />
+		<body><![CDATA[Poštovana/i {$participantName},<br />
 <br />
 molimo vas da izvršite potrebne ispravke u prijelomu priloga &quot;{$submissionTitle}&quot; za časopis {$contextName} u skladu s priloženim korekturama.<br />
 <br />
 URL priloga: {$submissionUrl}<br />
-Korisničko ime: {$layoutEditorUsername}<br />
+Korisničko ime: {$participantUsername}<br />
 <br />
 U slučaju da trenutačno niste u mogućnosti izvršiti ove unose ili ako imate bilo kakva dodatna pitanja, molimo vas da nam se obratite.<br />
 <br />
@@ -542,12 +542,12 @@ Srdačno,<br />
 prijelom priloga &quot;{$submissionTitle}&quot; za časopis {$contextName} ispravljen je prema priloženim korektorskim uputama. Članak je sada spreman za objavljivanje.<br />
 <br />
 Srdačno,<br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Ovim obrascem e-pošte grafički urednik obavještava urednika rubrike da je unos korekture završen i da je članak spreman za objavljivanje.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Zaprimljena korektura (grafički urednik)</subject>
-		<body><![CDATA[Poštovana/i {$layoutEditorName},<br />
+		<body><![CDATA[Poštovana/i {$participantName},<br />
 <br />
 hvala vam što ste završili unos korektura u prijelom priloga &quot;{$submissionTitle}&quot; za časopis {$contextName}.<br />
 <br />

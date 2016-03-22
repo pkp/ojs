@@ -424,7 +424,7 @@ Our decision is to:<br />
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Copyediting Request</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 I would ask that you undertake the copyediting of &quot;{$submissionTitle}&quot; for {$contextName} by following these steps.<br />
 1. Click on the Submission URL below.<br />
@@ -435,8 +435,8 @@ I would ask that you undertake the copyediting of &quot;{$submissionTitle}&quot;
 6. Send the COMPLETE email to the editor.<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-Submission URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Username: {$copyeditorUsername}<br />
+Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Username: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>This email is sent by a Section Editor to a submission's Copyeditor to request that they begin the copyediting process. It provides information about the submission and how to access it.</description>
@@ -460,11 +460,11 @@ Manuscript URL: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br
 If you are unable to undertake this work at this time or have any questions,<br />
 please contact me. Thank you for your contribution to this journal.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Copyediting Acknowledgement</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Thank you for copyediting the manuscript, &quot;{$submissionTitle},&quot; for {$contextName}. It will make an important contribution to the quality of this journal.<br />
 <br />
@@ -486,7 +486,7 @@ Your submission &quot;{$submissionTitle}&quot; for {$contextName} has been throu
 7. Click on METADATA to check indexing information for completeness and accuracy.<br />
 8. Send the COMPLETE email to the editor and copyeditor.<br />
 <br />
-Submission URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 This is the last opportunity to make substantial copyediting changes to the submission. The proofreading stage, that follows the preparation of the galleys, is restricted to correcting typographical and layout errors.<br />
 <br />
@@ -516,7 +516,7 @@ Thank you for reviewing the copyediting of your manuscript, &quot;{$submissionTi
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Copyediting Final Review</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 The author and editor have now completed their copyediting review of &quot;{$submissionTitle}&quot; for {$contextName}. A &quot;clean copy&quot; now needs to be prepared for Layout by going through the following steps.<br />
 1. Click on the Submission URL below.<br />
@@ -527,8 +527,8 @@ The author and editor have now completed their copyediting review of &quot;{$sub
 6. Send the COMPLETE email to the editor.<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-Submission URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Username: {$copyeditorUsername}<br />
+Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Username: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>This email from the Section Editor to the Copyeditor requests that they perform a final round of copyediting on a submission before it enters the layout process.</description>
@@ -539,12 +539,12 @@ Username: {$copyeditorUsername}<br />
 <br />
 I have now prepared a clean, copyedited version of the manuscript, &quot;{$submissionTitle},&quot; for {$contextName}. It is ready for Layout and the preparation of the galleys.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>This email from the Copyeditor to the Section Editor notifies them that the final round of copyediting has been completed and that the layout process may now begin.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Copyediting Final Review Acknowledgement</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Thank you for completing the copyediting of the manuscript, &quot;{$submissionTitle},&quot; for {$contextName}. This preparation of a &quot;clean copy&quot; for Layout is an important step in the editorial process.<br />
 <br />
@@ -553,7 +553,7 @@ Thank you for completing the copyediting of the manuscript, &quot;{$submissionTi
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Request Galleys</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 The submission &quot;{$submissionTitle}&quot; to {$contextName} now needs galleys laid out by following these steps.<br />
 1. Click on the Submission URL below.<br />
@@ -562,7 +562,7 @@ The submission &quot;{$submissionTitle}&quot; to {$contextName} now needs galley
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Submission URL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Username: {$layoutEditorUsername}<br />
+Username: {$participantUsername}<br />
 <br />
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.<br />
 <br />
@@ -577,12 +577,12 @@ Galleys have now been prepared for the manuscript, &quot;{$submissionTitle},&quo
 <br />
 If you have any questions, please contact me.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>This email from the Layout Editor to the Section Editor notifies them that the layout process has been completed.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Layout Acknowledgement</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Thank you for preparing the galleys for the manuscript, &quot;{$submissionTitle},&quot; for {$contextName}. This is an important contribution to the publishing process.<br />
 <br />
@@ -666,7 +666,7 @@ Thank you for proofreading the galleys for the manuscript, &quot;{$submissionTit
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Proofreading Request (Layout Editor)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 The submission &quot;{$submissionTitle}&quot; to {$contextName} has been proofread by the author and proofreader, and any corrections should now be made by following these steps.<br />
 1. Click on the Submission URL below.<br />
@@ -676,7 +676,7 @@ The submission &quot;{$submissionTitle}&quot; to {$contextName} has been proofre
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Subnmission URL: {$submissionUrl}<br />
-Username: {$layoutEditorUsername}<br />
+Username: {$participantUsername}<br />
 <br />
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.<br />
 <br />
@@ -689,12 +689,12 @@ If you are unable to undertake this work at this time or have any questions, ple
 <br />
 The galleys have now been corrected, following their proofreading, for the manuscript, &quot;{$submissionTitle},&quot; for {$contextName}. This piece is now ready to publish.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>This email from the Layout Editor to the Section Editor notifies them that the final stage of proofreading has been completed and the article is now ready to publish.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Proofreading Acknowledgement (Layout Editor)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Thank you for completing the proofreading corrections for the galleys associated with the manuscript, &quot;{$submissionTitle},&quot; for {$contextName}. This represents an important contribution to the work of this journal.<br />
 <br />

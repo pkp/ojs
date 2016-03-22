@@ -329,7 +329,7 @@ Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori bu
 	</email_text>
 		<email_text key="COPYEDIT_REQUEST">
 		<subject>Zuzenketa egiteko eskaera</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren zuzenketa egitea eskatu nahi nizuke, urrats hauei jarraituz:<br />
 1. Egin klik behean, Artikuluaren URLan.<br />
@@ -340,8 +340,8 @@ Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori bu
 6. Bidali BUKATU duzula adierazteko mezua editoreari.<br />
 <br />
 {$contextName} aldizkariaren URLa: <a href="{$contextUrl}">{$contextUrl}</a><br />
-Artikuluaren URLa: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Erabiltzaile-izena: {$copyeditorUsername}<br />
+Artikuluaren URLa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Erabiltzaile-izena: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Mezu hau Ataleko editoreak Zuzentzaileari bidaltzen dio, artikuluaren zuzenketa-prozesua egin dezala eskatzeko. Artikuluari buruzko informazioa eta fitxategia hartzeko datuak ematen ditu.</description>
@@ -365,11 +365,11 @@ Eskuizkribuaren URLa: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}<
 Orain ezin badiozu lan honi heldu, edo galderaren bat egin nahi badiguzu,<br />
 jar zaitez harremanetan nirekin, mesedez. Eskerrik asko aldizkariari egiten diozun ekarpenagatik.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Zuzenketaren hartu-agiria</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Eskerrik asko {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; eskuizkribua zuzentzeagatik. Ekarpen bikaina da gure aldizkariaren kalitatea areagotzeko.<br />
 <br />
@@ -391,7 +391,7 @@ Eskerrik asko {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; eskuiz
 7. Egin klik METADATUetan, indexatzeko informazioa osoa eta zehatza dela ziurtatzeko.<br />
 8. Bidali BUKATU duzula adierazteko mezua editoreari eta zuzentzaileari.<br />
 <br />
-Artikuluaren URLa: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+Artikuluaren URLa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Hau da artikuluan aldaketak eta zuzenketak egiteko azkeneko aukera. Gero, proba-zuzenketan, galeradetan azaltzen diren tipografia eta konposizioko akatsak bakarrik zuzendu ahal izango dira.<br />
 <br />
@@ -421,7 +421,7 @@ Eskerrik asko {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Azken zuzenketak egiteko eskaera</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Egileak eta editoreak aztertu eta berrikusi dituzte {$contextName} aldizkariko &quot;{$submissionTitle}&quot; artikuluari egindako zuzenketak. Orain &quot;kopia garbi&quot; bat prestatu behar da Maketaziora bidaltzeko, urrats hauen eginez:<br />
 1. Egin klik behean, Artikuluaren URLan.<br />
@@ -432,8 +432,8 @@ Egileak eta editoreak aztertu eta berrikusi dituzte {$contextName} aldizkariko &
 6. Bidali BUKATU duzula adierazteko mezua editoreari.<br />
 <br />
 {$contextName} aldizkariaren URLa: <a href="{$contextUrl}">{$contextUrl}</a><br />
-Artikuluaren URLa: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Erabiltzaile-izena: {$copyeditorUsername}<br />
+Artikuluaren URLa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Erabiltzaile-izena: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Mezu hau Ataleko editoreak Zuzentzaileari bidaltzen dio, azken zuzenketak egin ditzan artikuluan, maketaziora bidali aurretik.</description>
@@ -444,12 +444,12 @@ Erabiltzaile-izena: {$copyeditorUsername}<br />
 <br />
 {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; eskuizkribuaren bertsio zuzendu garbia prestatu dut. Gertu dago Maketaziorako eta galeradak egiteko.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Mezu hau Zuzentzaileak Ataleko editoreari bidaltzen dio, azken zuzenketak eginda daudela eta maketatzen hasteko garaia dela adierazteko.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Azken zuzenketen hartu-agiria</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Eskerrik asko {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; eskuizkribuaren zuzenketa burutzeagatik. Maketaziorako &quot;kopia garbia&quot; prestatzea urrats garrantzitsua da prozesu editorialean.<br />
 <br />
@@ -458,7 +458,7 @@ Eskerrik asko {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; eskuiz
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Galeradak eskatzea</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren galeradak egin behar dira orain, urrats hauei jarraituz:<br />
 1. Egin klik behean, Artikuluaren URLan.<br />
@@ -467,7 +467,7 @@ Eskerrik asko {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; eskuiz
 <br />
 {$contextName} aldizkariaren URLa: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Artikuluaren URLa: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Erabiltzaile-izena: {$layoutEditorUsername}<br />
+Erabiltzaile-izena: {$participantUsername}<br />
 <br />
 Orain ezin badiozu lan honi heldu, edo galderaren bat egin nahi badiguzu, jar zaitez harremanetan nirekin, mesedez. Eskerrik asko aldizkariari egiten diozun ekarpenagatik.<br />
 <br />
@@ -482,12 +482,12 @@ Orain ezin badiozu lan honi heldu, edo galderaren bat egin nahi badiguzu, jar za
 <br />
 Galderaren bat baduzu, jar zaitez harremanetan nirekin, mesedez.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Mezu hau Maketatzaileak Ataleko editoreari bidaltzen dio, maketazioa eginda dagoela jakinarazteko.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Maketazioaren hartu-agiria</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Eskerrik asko {$contextName} aldizkariko &quot;{$submissionTitle}&quot; eskuizkribuaren galeradak prestatzeagatik. Ekarpen handia da argitaratze-prozesurako.<br />
 <br />
@@ -571,7 +571,7 @@ Eskerrik asko {$contextName} aldizkariko &quot;{$submissionTitle}&quot; eskuizkr
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Probak zuzentzeko eskaera (Maketatzaileari)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren probak zuzendu dituzte egileak eta proba-zuzentzaileak; hauek dira proposatutako zuzenketak egiteko urratsak:<br />
 1. Egin klik behean, Artikuluaren URLan.<br />
@@ -581,7 +581,7 @@ Eskerrik asko {$contextName} aldizkariko &quot;{$submissionTitle}&quot; eskuizkr
 <br />
 {$contextName} aldizkariaren URLa: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Artikuluaren URLa: {$submissionUrl}<br />
-Erabiltzaile-izena: {$layoutEditorUsername}<br />
+Erabiltzaile-izena: {$participantUsername}<br />
 <br />
 Orain ezin badiozu lan honi heldu, edo galderaren bat egin nahi badiguzu, jar zaitez harremanetan nirekin, mesedez. Eskerrik asko aldizkariari egiten diozun ekarpenagatik.<br />
 <br />
@@ -594,12 +594,12 @@ Orain ezin badiozu lan honi heldu, edo galderaren bat egin nahi badiguzu, jar za
 <br />
 {$contextName}aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren galeradak zuzenduta daude, proba-zuzenketan egindako proposamenei jarraituz. Lana argitaratzeko prest dago orain.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Mezu hau Maketatzaileak Ataleko editoreari bidaltzen dio, proba-zuzenketako azken zuzenketak eginda daudela eta artikulua argitaratzeko prest dagoela jakinarazteko.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Proba-zuzenketaren hartu-agiria (Maketatzaileari)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Eskerrik asko {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; eskuizkribuaren proba-zuzenketa burutzeagatik. Proba-zuzenketa oso garrantzitsua da aldizkariaren kalitatea segurtatzeko.<br />
 <br />

@@ -302,12 +302,12 @@ Vennligst bekreft om du fortsatt regner med å fullføre dette vurderingsoppdrag
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Forespørsel om manusredigering</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Jeg vil med dette be om at du påtar deg manusredigering av manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}. Du finner manuskriptet på tidsskriftets nettsted, sammen med vår Instruks for manusredigering.<br />
 <br />
-Manuskript URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Brukernavn: {$copyeditorUsername}<br />
+Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Brukernavn: {$participantUsername}<br />
 <br />
 Hvis du ikke har anledning til å påta deg dette oppdraget, eller har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil dessuten benytte denne anledningen til å takke deg for at du har sagt deg villig til å bidra til arbeidet vårt.<br />
 <br />
@@ -321,11 +321,11 @@ Hvis du ikke har anledning til å påta deg dette oppdraget, eller har ytterlige
 Jeg har nå fullført første runde med manusredigering av  manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}. Nå kan forfatter og redaktør gjennomgå mine spørsmål og forslag til endringer.<br />
 <br />
 Jeg vil samtidig benytte anledningen til å takke for oppdraget,<br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Bekrefter at du har fullført manusredigering</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Takk for at du har manusredigert manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}. Vi setter stor pris på at du på denne måten bidrar til å sikre kvaliteten i våre publikasjoner.<br />
 <br />
@@ -340,7 +340,7 @@ Vi har nå redigert ditt manuskript &quot;{$submissionTitle}&quot; for {$context
 <br />
 Vennligst merk deg at dette er din aller siste mulighet til å gjøre vesentlige endringer i manuskriptet. Riktignok vil du senere også bli bedt om å korrekturlese de ferdig oppsatte sidene, men i den produksjonsfasen er det bare formatfeil og typografiske feil som kan korrigeres.<br />
 <br />
-Manuskript URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.<br />
 <br />
@@ -368,12 +368,12 @@ Takk for at du har fullført gjennomgangen din av revisjonsforslagene til ditt m
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Manusredigering - siste gjennomgang</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Forfatteren og redaktøren har nå gått igjennom revisjonsforslagene til manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}. Nå er tiden inne til å gjøre klar manuskriptet i en &quot;renkopi&quot; for layout. Vi ber om at du foretar siste gjennomgang og rensing av manuskriptfilen, ved å bekrefte de endringene som er akseptert, og fjerne alle andre merknader, markeringer og overflødige formateringer. Manuskriptfilen som sendes til layoutredigering skal være så ren som mulig.<br />
 <br />
-Manuskript URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Brukernavn: {$copyeditorUsername}<br />
+Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Brukernavn: {$participantUsername}<br />
 <br />
 {$contextName} takker deg for innsatsen,<br />
 <br />
@@ -386,12 +386,12 @@ Brukernavn: {$copyeditorUsername}<br />
 <br />
 Jeg har nå gjort klar en ren og ferdig redigert filversjon av manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}. Manuskriptet er nå klart for layoutredigering.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Denne e-posten fra Manusredaktøren varsler Seksjonsredaktøren om at siste manusredigering av manuskriptet er fullført, og at layoutredigeringen kan settes i gang.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Bekrefter at siste manusgjennomgang er fullført</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Takk for at du har fullført siste manusredigering av manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}. Framstillingen av en slik god &quot;renkopi&quot; for layoutredigering er et viktig trinn i den redaksjonelle prosessen.<br />
 <br />
@@ -400,12 +400,12 @@ Takk for at du har fullført siste manusredigering av manuskriptet &quot;{$submi
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Forespørsel om layoutredigering - sideoppsett</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Jeg vil med dette be deg om å layoutredigere sideoppsettet for manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}.<br />
 <br />
 Manuskript URL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Brukernavn: {$layoutEditorUsername}<br />
+Brukernavn: {$participantUsername}<br />
 <br />
 Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.<br />
 <br />
@@ -420,12 +420,12 @@ Sidene til manuskriptet &quot;{$submissionTitle}&quot; er nå satt opp for {$con
 <br />
 Hvis du har spørsmål til arbeidet jeg har utført, ber jeg om at du kontakter meg.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Denne e-posten fra Layoutredaktøren til Seksjonsredaktøren varsler om at sideoppsettet er fullført.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Bekrefter at layoutredigering er fullført</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Takk for at du har satt opp sidene til manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}. Du har med dette gitt et viktig bidrag til publiseringsarbeidet vårt.<br />
 <br />
@@ -499,12 +499,12 @@ Takk for at du har gjennomført korrektur av manuskriptet &quot;{$submissionTitl
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Forespørsel om korrektur (Layoutredaktør)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Vi ber med dette om at du utfører de rettelsene korrekturlesningen har påpekt behov for, i manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}.<br />
 <br />
 Manuskript URL: {$submissionUrl}<br />
-Brukernavn: {$layoutEditorUsername}<br />
+Brukernavn: {$participantUsername}<br />
 <br />
 Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.<br />
 <br />
@@ -517,12 +517,12 @@ Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har 
 <br />
 Sidekorrekturen til manuskriptet &quot;{$submissionTitle}&quot; er nå ferdigstilt etter korrektur for {$contextName}. Manuskriptfilen er med dette klar til publisering.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Denne e-posten fra Layoutredaktøren til Seksjonsredaktøren varsler om at de siste korrigeringene i manuskriptfilen er gjennomført, og at den dermed er klar for publisering.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Bekrefter ferdigstilt korrektur (Layoutredaktør)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Takk for at du har ferdigstilt sidekorrekturen til manuskriptet &quot;{$submissionTitle}&quot; for publisering i {$contextName}. Med dette arbeidet har du gitt et viktig bidrag til publiseringsarbeidet vårt: takk for innsatsen.<br />
 <br />

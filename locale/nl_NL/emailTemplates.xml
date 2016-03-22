@@ -329,7 +329,7 @@ Wilt u uw beschikbaarheid voor het voltooien van deze voor het werk van het tijd
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Tekstredactie verzoek</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Ik wil u vragen om de teksredactie uit te voeren voor artikel &quot;{$submissionTitle}&quot; voor {$contextName} door deze stappen te volgen.<br />
 1. Klik op de inzendings-URL hieronder.<br />
@@ -340,8 +340,8 @@ Ik wil u vragen om de teksredactie uit te voeren voor artikel &quot;{$submission
 6. Stuur de GEREED e-mail naar de redacteur.<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL inzending: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Gerbruikersnaam: {$copyeditorUsername}<br />
+URL inzending: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Gerbruikersnaam: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Deze e-mail wordt door de sectieredacteur naar de tekstredacteur van een inzending gestuurd om te vragen het redactieproces te starten. Het bevat informatie over de inzending en hoe die te benaderen</description>
@@ -364,12 +364,12 @@ Manuscript URL: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br
 <br />
 Als u niet in staat bent op dit werk op dit moment te verrichten, of als u vragen heeft, neemt u dan alstublieft contact met me op. Dank u voor uw bijdrage aan dit tijdschrift.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description/>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Tekstredactie bevestiging</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Dank u voor de tekstredactie van manuscript &quot;{$submissionTitle}&quot; voor {$contextName}. Dit is een belangrijke bijdrage aan de kwaliteit van dit tijdschrift.<br />
 <br />
@@ -391,7 +391,7 @@ Uw inzending &quot;{$submissionTitle}&quot; voor {$contextName} is door de eerst
 7. Klik op METADATA om de om de indexeringsinformatie te controleren op volledigheid en accuratesse.<br />
 8. Stuur de COMPLEET e-mail naar de redacteur en tekstredacteur.<br />
 <br />
-URL inzending: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL inzending: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Dit is de laatste gelegenheid voor het doen van substantiële veranderingen aan de inzending De proefleesfase, die volgt op het maken van de proeven is beperkt tot het corrigeren van typografische en en opmaakfouten.<br />
 <br />
@@ -421,7 +421,7 @@ Dank u voor het reviewen van de tekstredactie van uw manuscript &quot;{$submissi
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Tekstredactie laatste review</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 De auteur en redacteur hebben de opmaak-review van &quot;{$submissionTitle}&quot; voor {$contextName} voltooid. Er moet nu een &quot;schone kopie&quot; voor opmaak voorbereid worden door.<br />
 1. Klik op de URL van de inzending hieronder.<br />
@@ -432,8 +432,8 @@ De auteur en redacteur hebben de opmaak-review van &quot;{$submissionTitle}&quot
 6. Stuur de GEREED e-mail naar de redacteur.<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL inzending: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Gebruikersnaam: {$copyeditorUsername}<br />
+URL inzending: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Gebruikersnaam: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Deze e-mail van de sectieredacteur naar de tekstredacteur vraagt om het uitvoeren van de laatste ronde tekstredactie op de inzending voordat die het opmaakproces ingaat.</description>
@@ -444,12 +444,12 @@ Gebruikersnaam: {$copyeditorUsername}<br />
 <br />
 Ik heb nu een schone geredigeerde versie van het manuscript &quot;{$submissionTitle}&quot; voor {$contextName} gereed, klaar voor Opmaak en het voorbereiden van de proeven.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Deze e-mail van de tekstredacteur aan de sectieredacteur bericht dat de laatste tekstredactieronde gereed is en dat de opmaak kan starten.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Tekstredactie laatste review bevestiging</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Dank u voor het voltooien van de tekstredactie van manuscript &quot;{$submissionTitle}&quot; voor {$contextName}. Het maken van de &quot;schone kopie&quot; is een belangrijke stap in het redactieproces.<br />
 <br />
@@ -458,7 +458,7 @@ Dank u voor het voltooien van de tekstredactie van manuscript &quot;{$submission
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Verzoek aanmaken proeven</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 De proeven van inzending &quot;{$submissionTitle}&quot; bij {$contextName} kunnen aangemaakt worden door de volgende stappen te doorlopen.<br />
 1. Klik op de inzendings-URL hieronder.<br />
@@ -467,7 +467,7 @@ De proeven van inzending &quot;{$submissionTitle}&quot; bij {$contextName} kunne
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL inzending: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Gebruikersnaam: {$layoutEditorUsername}<br />
+Gebruikersnaam: {$participantUsername}<br />
 <br />
 Als u op dit moment niet in staat bent om dit werk te doen of als u vragen heeft, neem dan contact met me op.<br />
 <br />
@@ -482,12 +482,12 @@ De proeven voor manuscript &quot;{$submissionTitle}&quot; voor {$contextName} zi
 <br />
 Neemt u alstublieft contact met me op als u vragen heeft.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Deze e-mail van de opmaakredacteur aan de sectieredacteur bericht dat het opmaakproces is voltooid.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Bevestiging opmaak</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Dank u voor het maken van de proeven van manuscript &quot;{$submissionTitle}&quot; voor {$contextName}. Dit is een belangrijke bijdrage aan het publicatieproces.<br />
 <br />
@@ -571,7 +571,7 @@ Dank u voor het proeflezen van de proeven van manuscript &quot;{$submissionTitle
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Verzoek voor proeflezen (opmaakredacteur)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 De inzending &quot;{$submissionTitle}&quot; bij {$contextName} is proefgelezen door auteur en proeflezer. Correcties kunnen nu aangebracht worden door de volgende stapen te volgen.<br />
 1. Klik op de URL van de inzending hieronder.<br />
@@ -581,7 +581,7 @@ De inzending &quot;{$submissionTitle}&quot; bij {$contextName} is proefgelezen d
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL inzending: {$submissionUrl}<br />
-Gebruikersnaam: {$layoutEditorUsername}<br />
+Gebruikersnaam: {$participantUsername}<br />
 <br />
 Als u momenteel niet in staat bent om dit werk uit te voeren of als u vragen heeft, neemt u dan contact met me op. Dank u voor uw bijdrage aan dit tijdschrift.<br />
 <br />
@@ -594,12 +594,12 @@ Als u momenteel niet in staat bent om dit werk uit te voeren of als u vragen hee
 <br />
 De proeven zijn gecorrigeerd na het proeflezen van het manuscript &quot;{$submissionTitle}&quot; voor {$contextName}. Dit stuk is gereed voor publicatie.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Deze e-mail van de opmaakredacteur aan de sectieredacteur meldt dat het laatste stadium van proeflezen is voltooid en dat het artikel gereed is voor publicatie.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Bevestiging proeflezen (opmaakredacteur)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Dank u voor het voltooien van de proeflees-correcties voor de proeven van manuscript &quot;{$submissionTitle}&quot; voor {$contextName}. Dit vertegenwoordigt een belangrijke bijdrage aan het werk van dit tijdschrift.<br />
 <br />

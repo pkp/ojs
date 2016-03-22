@@ -307,7 +307,7 @@ Thank you,<br />
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>درخواست انجام امور ویراستاری</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 از شما درخواست می شود که امور ویراستاری مقاله &quot;{$submissionTitle}&quot; مربوط به {$contextName} را برعهده بگیرید. شما می توانید فایل مربوطه به همراه مجموعه ای از دستورالعمل های نحوه ویراستاری مقاله را در وب سایت مجله دریافت کنید.<br />
 <br />
@@ -337,16 +337,16 @@ Manuscript URL: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br
 If you are unable to undertake this work at this time or have any questions,<br />
 please contact me. Thank you for your contribution to this journal.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>بررسی نهایی ویراستاری</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 مراحل ویراستاری مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName} توسط نویسنده و سردبیر مربوطه کامل شده است. هم اکنون نسخه بدون اشکال نهایی آماده انجام امور صفحه آرایی می باشد.<br />
 <br />
-آدرس مقاله: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-نام کاربری: {$copyeditorUsername}<br />
+آدرس مقاله: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+نام کاربری: {$participantUsername}<br />
 <br />
 <br />
 {$editorialContactSignature}]]></body>
@@ -358,17 +358,17 @@ please contact me. Thank you for your contribution to this journal.<br />
 <br />
 در حال حاضر، یک نسخه ویراستاری شده ی بدون اشکال از مقاله شما با عنوان {$submissionTitle}مربوط به {$contextName} آماده شده و آماده انجام امور صفحه آرایی و نسخه پیش از چاپ می باشد.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>This email from the Copyeditor to the Section Editor notifies them that the final round of copyediting has been completed and that the layout process may now begin.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>نسخه های پیش از چاپ مورد نیاز است</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 از شما درخواست می شود که نسخه های پیش از چاپ مقاله &quot;{$submissionTitle}&quot; مربوط به {$contextName} را آماده نمایید.<br />
 <br />
 آدرس مقاله: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-نام کاربری: {$layoutEditorUsername}<br />
+نام کاربری: {$participantUsername}<br />
 <br />
 چنانچه در حال حاضر قادر به انجام این امور نیستید و یا سوالی در این رابطه دارید با من تماس بگیرید. پیشاپیش از همکاری شما با این مجله سپاسگزارم.<br />
 <br />
@@ -383,12 +383,12 @@ please contact me. Thank you for your contribution to this journal.<br />
 لطفا چنانچه سوالی دارید، با من تماس بگیرید.<br />
 <br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>This email from the Layout Editor to the Section Editor notifies them that the layout process has been completed.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>قدردانی بخاطر انجام امور صفحه آرایی</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 از اینکه نسخه پیش از چاپ مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName} را آماده نمودید از شما متشکرم. بدیهی است این امر کمک شایانی در روند چاپ خواهد بود.<br />
 <br />
@@ -459,12 +459,12 @@ please contact me. Thank you for your contribution to this journal.<br />
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>درخواست بررسی نهایی از صفحه آرا</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 از شما درخواست میگردد که براساس نتایج بررسی های نهایی مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName}، اصلاحات لازم را ایجاد نمایید.<br />
 <br />
 آدرس مقاله: {$submissionUrl}<br />
-نام کاربری: {$layoutEditorUsername}<br />
+نام کاربری: {$participantUsername}<br />
 <br />
 چنانچه در حال حاضر قادر به انجام امور مذکور نیستید و یا جهت طرح سوالات خود، با من تماس بگیرید.<br />
 <br />
@@ -479,12 +479,12 @@ please contact me. Thank you for your contribution to this journal.<br />
 اصلاح نمونه های پیش از چاپ مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName} تمام شده است. هم اکنون این قسمت آماده چاپ می باشد.<br />
 <br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>This email from the Layout Editor to the Section Editor notifies them that the final stage of proofreading has been completed and the article is now ready to publish.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>قدردانی بخاطر بررسی نهایی مقاله (از صفحه آرا)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 به خاطر اصلاح نهایی نمونه های پیش از چاپ مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName} از شما متشکرم. این امر، کمک شایان توجهی درجهت ارتقاء سطح کیفی مجله می باشد.<br />
 <br />
@@ -579,7 +579,7 @@ jhvdo hkrqh: {$expiryDate}<br />
 	</email_text>
 		<email_text key="COPYEDIT_ACK">
 		<subject>تشکر بخاطر ویراستاری ({$submissionId})</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 از اینکه زحمت کشیده و مقاله &quot;{$submissionTitle},&quot; را برای مجله {$contextName} ویرایش کردید متشکرم.<br />
 این اقدام شما به منزله کمک بزرگی در راه ارتقا مجله میباشد.<br />
@@ -606,7 +606,7 @@ jhvdo hkrqh: {$expiryDate}<br />
 بر روی شکلک زیر عبارت کامل شد کلیک کرده و ایمیل باز شده را ارسال کنید. این ایمیل برای ویراستار و دبیر مقاله خواهد رفت<br />
 <br />
 آدزس مقاله:<br />
-<a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+<a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 لطفا توجه فرمائید که این آخرین فرصت برای شما جهت اعمال تغییرات قابل توجه در مقاله میباشد. در مرحله بازبینی که متعاقب صفحه آرائی خواهد آمد فقط امکان تغییرات جزئی وجود دارد.<br />
 <br />
@@ -643,7 +643,7 @@ jhvdo hkrqh: {$expiryDate}<br />
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>تشکر بخاطر انجام آخرین مرحله ویراستاری ({$submissionId})</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 &quot;{$submissionTitle}&quot;<br />
 {$contextName}<br />
