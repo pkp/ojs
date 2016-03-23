@@ -278,12 +278,12 @@ class SuppFileDAO extends DAO {
 				$this->dateToDB($suppFile->getDateCreated()), $this->datetimeToDB($suppFile->getDateSubmitted())),
 			array(
 				$suppFile->getRemoteURL(),
-				$suppFile->getFileId(),
-				$suppFile->getArticleId(),
+				(int) $suppFile->getFileId(),
+				(int) $suppFile->getArticleId(),
 				$suppFile->getType(),
 				$suppFile->getLanguage(),
-				$suppFile->getShowReviewers(),
-				$suppFile->getSequence()
+				$suppFile->getShowReviewers()?1:0,
+				(float) $suppFile->getSequence()
 			)
 		);
 		$suppFile->setId($this->getInsertSuppFileId());
@@ -310,12 +310,12 @@ class SuppFileDAO extends DAO {
 				$this->dateToDB($suppFile->getDateCreated())),
 			array(
 				$suppFile->getRemoteURL(),
-				$suppFile->getFileId(),
+				(int) $suppFile->getFileId(),
 				$suppFile->getType(),
 				$suppFile->getLanguage(),
-				$suppFile->getShowReviewers(),
-				$suppFile->getSequence(),
-				$suppFile->getId()
+				$suppFile->getShowReviewers()?1:0,
+				(float) $suppFile->getSequence(),
+				(int) $suppFile->getId()
 			)
 		);
 		$this->updateLocaleFields($suppFile);
