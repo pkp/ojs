@@ -59,6 +59,6 @@
 	<message key="submission.event.issueMetadataUpdated">The submission's issue metadata was updated.</message>
 
 	<message key="submission.upload.fileContents">Article Component</message>
-	<message key="submission.noCatalogEntry">Awaiting Approval</message>
-	<message key="submission.catalogEntry">Approved</message>
+	<message key="submission.complete">Approved</message>
+	<message key="submission.incomplete">Awaiting Approval</message>
 </locale>
