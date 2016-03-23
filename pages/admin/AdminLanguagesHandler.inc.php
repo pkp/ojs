@@ -199,7 +199,7 @@ class AdminLanguagesHandler extends AdminHandler {
 
 		if (in_array($locale, $site->getInstalledLocales())) {
 			$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
-			$emailTemplateDao->deleteDefaultEmailTemplatesByLocale($locale);
+			$emailTemplateDao->installEmailTemplates($emailTemplateDao->getMainEmailTemplatesFilename(), false, null, true);
 			$emailTemplateDao->installEmailTemplateData($emailTemplateDao->getMainEmailTemplateDataFilename($locale));
 
 			$user =& $request->getUser();
