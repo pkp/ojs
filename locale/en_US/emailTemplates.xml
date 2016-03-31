@@ -376,7 +376,7 @@ If you have any questions, please contact me.<br />
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
 		<subject>Able to Review</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Editors:<br />
 <br />
 I am able and willing to review the submission, &quot;{$submissionTitle},&quot; for {$contextName}. Thank you for thinking of me, and I plan to have the review completed by its due date, {$reviewDueDate}, if not before.<br />
 <br />
@@ -385,7 +385,7 @@ I am able and willing to review the submission, &quot;{$submissionTitle},&quot; 
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
 		<subject>Unable to Review</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Editors:<br />
 <br />
 I am afraid that at this time I am unable to review the submission, &quot;{$submissionTitle},&quot; for {$contextName}. Thank you for thinking of me, and another time feel free to call on me.<br />
 <br />
