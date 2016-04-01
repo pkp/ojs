@@ -178,7 +178,7 @@ class CopyAccessLogFileTool extends CommandLineTool {
 		if ($isCompressed) {
 			$fileMgr = new FileManager();
 			$errorMsg = null;
-			if (!$fileMgr->decompressFile($filePath, $errorMsg)) {
+			if (!$fileMgr->decompressFile($tmpFilePath, $errorMsg)) {
 				printf($errorMsg . "\n");
 				exit(1);
 			}
