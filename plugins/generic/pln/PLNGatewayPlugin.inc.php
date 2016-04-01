@@ -21,6 +21,9 @@ import('lib.pkp.classes.core.ArrayItemIterator');
 
 define('PLN_PLUGIN_PING_ARTICLE_COUNT', 12);
 
+// Archive/Tar.php may not be installed, so supress possible error.
+@include_once('Archive/Tar.php');
+
 class PLNGatewayPlugin extends GatewayPlugin {
 	/** @var $parentPluginName string Name of parent plugin */
 	var $parentPluginName;
@@ -138,7 +141,7 @@ class PLNGatewayPlugin extends GatewayPlugin {
 		if(function_exists('curl_version')) {
 			$versionArray = curl_version();
 			$curlVersion = $versionArray['version'];
-		}
+		}		
 		$prerequisites = array(
 			'phpVersion' => PHP_VERSION,
 			'curlVersion' => $curlVersion,
