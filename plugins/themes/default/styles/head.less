@@ -467,17 +467,18 @@
 }
 
 #notificationsToggle.expandedIndicator {
-	background: @bg;
+	background: @bg-shade;
 	color: @text;
 
 	.task-count,
 	&:hover .task-count {
-		background: @bg-shade;
+		background: @bg-base;
+		color: #fff;
 	}
 }
 
 // Tasks grid. Hacky workarounds for styling a grid...
-@tasks-border: 1px solid rgba(255,255,255,0.2);
+@tasks-border: 1px solid rgba(0,0,0,0.2);
 #notificationsPopover {
 	display: none;
 	position: absolute;
@@ -525,29 +526,28 @@
 
 	.gridPages {
 		padding: 0 @base;
+		background: @bg-shade;
+		border-bottom-left-radius: @radius;
+		border-bottom-right-radius: @radius;
 		text-align: right;
-		color: rgba(255,255,255,0.7);
 	}
 
 	.pkp_controllers_grid {
 
-		table {
-			margin: @base;
-		}
-
 		thead {
-			border-bottom: @tasks-border;
+			background: @bg-shade;
 			line-height: @triple;
 
 			th:first-child {
-				&:extend(.pkp_screen_reader);
+				text-indent: -9999px;
+				border-top-left-radius: @radius;
 			}
 		}
 
 		tbody {
 
 			a {
-				padding: @half 0;
+				padding: (@base + @half) 0;
 			}
 
 			tr {
