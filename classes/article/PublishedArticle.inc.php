@@ -65,15 +65,15 @@ class PublishedArticle extends Article {
 	 * Get sequence of article in table of contents.
 	 * @return float
 	 */
-	function getSeq() {
+	function getSequence() {
 		return $this->getData('seq');
 	}
 
 	/**
 	 * Set sequence of article in table of contents.
-	 * @param $sequence float
+	 * @param $seq float
 	 */
-	function setSeq($seq) {
+	function setSequence($seq) {
 		return $this->setData('seq', $seq);
 	}
 

@@ -940,7 +940,7 @@ class O4DOIExportDom extends DOIExportDom {
 		$contentItemElement =& XMLCustomWriter::createElement($this->getDoc(), 'ContentItem');
 
 		// Sequence number
-		$seq = $article->getSeq();
+		$seq = $article->getSequence();
 		assert(!empty($seq));
 		XMLCustomWriter::createChildWithText($this->getDoc(), $contentItemElement, 'SequenceNumber', $seq);
 

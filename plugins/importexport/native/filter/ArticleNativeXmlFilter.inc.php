@@ -69,7 +69,7 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
-		$publishedArticle ? $submissionNode->setAttribute('seq', $publishedArticle->getSeq()) : $submissionNode->setAttribute('seq', '0');
+		$publishedArticle ? $submissionNode->setAttribute('seq', $publishedArticle->getSequence()) : $submissionNode->setAttribute('seq', '0');
 		$publishedArticle ? $submissionNode->setAttribute('access_status', $publishedArticle->getAccessStatus()) : $submissionNode->setAttribute('access_status', '0');
 		return $submissionNode;
 	}
