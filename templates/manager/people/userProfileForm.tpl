@@ -73,7 +73,7 @@
 
 <h3>{if $userId}{translate key="manager.people.editProfile"}{else}{translate key="manager.people.createUser"}{/if}</h3>
 
-<form id="userForm" method="post" action="{url op="updateUser"}" onsubmit="enablePasswordFields()">
+<form id="userForm" method="post" action="{url op="updateUser"}" onsubmit="enablePasswordFields()" enctype="multipart/form-data">
 <input type="hidden" name="source" value="{$source|escape}" />
 {if $userId}
 <input type="hidden" name="userId" value="{$userId|escape}" />
@@ -247,6 +247,19 @@
 		<td class="label">{fieldLabel name="biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
 		<td class="value"><textarea name="biography[{$formLocale|escape}]" id="biography" rows="5" cols="40" class="textArea">{$biography[$formLocale]|escape}</textarea></td>
 	</tr>
+	{if $userId}
+		<tr valign="top">
+			<td class="label">{fieldLabel name="profileImage" key="user.profile.form.profileImage"}</td>
+			<td class="value">
+				<input type="file" id="profileImage" name="profileImage" class="uploadField" /> <input type="submit" name="uploadProfileImage" value="{translate key="common.upload"}" class="button" />
+				{if $profileImage}
+					{translate key="common.fileName"}: {$profileImage.name|escape} {$profileImage.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteProfileImage" value="{translate key="common.delete"}" class="button" />
+					<br />
+					<img src="{$sitePublicFilesDir}/{$profileImage.uploadName|escape:"url"}" width="{$profileImage.width|escape}" height="{$profileImage.height|escape}" style="border: 0;" alt="{translate key="user.profile.form.profileImage"}" />
+				{/if}
+			</td>
+		</tr>
+	{/if}
 	{if count($availableLocales) > 1}
 	<tr valign="top">
 		<td class="label">{translate key="user.workingLanguages"}</td>

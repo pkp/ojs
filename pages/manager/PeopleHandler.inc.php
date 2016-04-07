@@ -654,7 +654,18 @@ class PeopleHandler extends ManagerHandler {
 
 		$userForm->readInputData();
 
-		if ($userForm->validate()) {
+		$dataModified = false;
+		if ($request->getUserVar('uploadProfileImage')) {
+			if (!$userForm->uploadProfileImage()) {
+				$userForm->addError('profileImage', __('user.profile.form.profileImageInvalid'));
+			}
+			$dataModified = true;
+		} else if ($request->getUserVar('deleteProfileImage')) {
+			$userForm->deleteProfileImage();
+			$dataModified = true;
+		}
+
+		if (!$dataModified && $userForm->validate()) {
 			$userForm->execute();
 
 			if ($request->getUserVar('createAnother')) {
