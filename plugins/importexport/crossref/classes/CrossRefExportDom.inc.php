@@ -483,7 +483,10 @@ class CrossRefExportDom extends DOIExportDom {
 				XMLCustomWriter::appendChild($collectionNode, $itemNode);
 				$resourceNode = XMLCustomWriter::createElement($doc, 'resource');
 				XMLCustomWriter::appendChild($itemNode, $resourceNode);
-				XMLCustomWriter::setAttribute($resourceNode, 'mime_type', $galley->getFileType());
+				$remoteGalleyURL = $galley->getRemoteURL();
+				if (!$remoteGalleyURL) {
+					XMLCustomWriter::setAttribute($resourceNode, 'mime_type', $galley->getFileType());
+				}
 				$urlNode = XMLCustomWriter::createTextNode($doc, $request->url($journal->getPath(), 'article', 'viewFile', array($galley->getArticleId(), $galley->getBestGalleyId($journal))));
 				XMLCustomWriter::appendChild($resourceNode, $urlNode);
 			}
