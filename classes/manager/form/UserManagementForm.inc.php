@@ -55,6 +55,69 @@ class UserManagementForm extends Form {
 	}
 
 	/**
+	 * Deletes a profile image.
+	 */
+	function deleteProfileImage() {
+		if (isset($this->userId)) {
+			$userDao =& DAORegistry::getDAO('UserDAO');
+			$user =& $userDao->getById($this->userId);
+			$profileImage = $user->getSetting('profileImage');
+			if (!$profileImage) return false;
+
+			import('classes.file.PublicFileManager');
+			$fileManager = new PublicFileManager();
+			if ($fileManager->removeSiteFile($profileImage['uploadName'])) {
+				return $user->updateSetting('profileImage', null);
+			} else {
+				return false;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Uploads a profile image.
+	 */
+	function uploadProfileImage() {
+		if (isset($this->userId)) {
+			import('classes.file.PublicFileManager');
+			$fileManager = new PublicFileManager();
+
+			$userDao =& DAORegistry::getDAO('UserDAO');
+			$user =& $userDao->getById($this->userId);
+
+			$type = $fileManager->getUploadedFileType('profileImage');
+			$extension = $fileManager->getImageExtension($type);
+			if (!$extension) return false;
+
+			$uploadName = 'profileImage-' . (int) $user->getId() . $extension;
+			if (!$fileManager->uploadSiteFile('profileImage', $uploadName)) return false;
+
+			$filePath = $fileManager->getSiteFilesPath();
+			list($width, $height) = getimagesize($filePath . '/' . $uploadName);
+
+			if ($width > 150 || $height > 150 || $width <= 0 || $height <= 0) {
+				$userSetting = null;
+				$user->updateSetting('profileImage', $userSetting);
+				$fileManager->removeSiteFile($filePath);
+				return false;
+			}
+
+			$userSetting = array(
+					'name' => $fileManager->getUploadedFileName('profileImage'),
+					'uploadName' => $uploadName,
+					'width' => $width,
+					'height' => $height,
+					'dateUploaded' => Core::getCurrentDate()
+			);
+
+			$user->updateSetting('profileImage', $userSetting);
+			return true;
+		}
+		return false;
+	}
+
+	/**
 	 * Display the form.
 	 */
 	function display() {
@@ -69,6 +132,7 @@ class UserManagementForm extends Form {
 		if (isset($this->userId)) {
 			$user =& $userDao->getById($this->userId);
 			$templateMgr->assign('username', $user->getUsername());
+			$templateMgr->assign('profileImage', $user->getSetting('profileImage'));
 			$helpTopicId = 'journal.users.index';
 		} else {
 			$helpTopicId = 'journal.users.createNewUser';
