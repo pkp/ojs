@@ -42,7 +42,6 @@
 		<form id="importXmlForm" class="pkp_form" action="{plugin_url path="importBounce"}" method="post">
 			{fbvFormArea id="importForm"}
 				{* Container for uploaded file *}
-				<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
 				<p>{translate key="plugins.importexport.users.import.instructions"}</p>
 
 				<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
