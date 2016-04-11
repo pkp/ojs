@@ -46,7 +46,6 @@
         <name locale="en_US">PDF</name>
         <seq>0</seq>
         <submission_file_ref id="18" revision="1"/>
-        <remote_url/>
       </article_galley>
     </article>
     <article xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" locale="en_US" date_submitted="2016-02-11" stage="submission" date_published="2016-02-11" section_ref="REV" seq="1" access_status="0">
@@ -77,7 +76,6 @@
         <name locale="en_US">PDF</name>
         <seq>0</seq>
         <submission_file_ref id="2" revision="1"/>
-        <remote_url/>
       </article_galley>
     </article>
     <article xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" locale="en_US" date_submitted="2016-02-11" stage="submission" date_published="2016-02-11" section_ref="ART" seq="2" access_status="0">
@@ -109,7 +107,6 @@
         <name locale="en_US">PDF</name>
         <seq>0</seq>
         <submission_file_ref id="26" revision="1"/>
-        <remote_url/>
       </article_galley>
     </article>
     <article xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" locale="en_US" date_submitted="2016-02-11" stage="submission" date_published="2016-02-11" section_ref="REV" seq="2" access_status="0">
@@ -141,7 +138,6 @@
         <name locale="en_US">PDF</name>
         <seq>0</seq>
         <submission_file_ref id="37" revision="1"/>
-        <remote_url/>
       </article_galley>
     </article>
     <article xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" locale="en_US" date_submitted="2016-02-11" stage="submission" date_published="2016-02-11" section_ref="ART" seq="3" access_status="0">
@@ -173,7 +169,6 @@
         <name locale="en_US">PDF</name>
         <seq>0</seq>
         <submission_file_ref id="32" revision="1"/>
-        <remote_url/>
       </article_galley>
     </article>
     <article xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" locale="en_US" date_submitted="2016-02-11" stage="submission" date_published="2016-02-11" section_ref="ART" seq="4" access_status="0">
@@ -205,7 +200,6 @@
         <name locale="en_US">PDF</name>
         <seq>0</seq>
         <submission_file_ref id="40" revision="1"/>
-        <remote_url/>
       </article_galley>
     </article>
   </articles>
