@@ -345,8 +345,10 @@ class CrossRefExportDom extends DOIExportDom {
 		}
 
 		/* publication date of article */
-		if ($article->getDatePublished()) {
-			$publicationDateNode =& $this->_generatePublisherDateDom($doc, $article->getDatePublished());
+		// if there is no article publication date, take the issue publication date
+		$datePublished = $article->getDatePublished() ? $article->getDatePublished() : $issue->getDatePublished();
+		if ($datePublished) {
+			$publicationDateNode =& $this->_generatePublisherDateDom($doc, $datePublished);
 			XMLCustomWriter::appendChild($journalArticleNode, $publicationDateNode);
 		}
 

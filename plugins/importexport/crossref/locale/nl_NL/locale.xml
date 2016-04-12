@@ -33,7 +33,6 @@
 	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Geef de naam van de depositor.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Geef het e-mail adres van de deposito.</message>
 	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">Gebruik automatische registratie</message>
-	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">De publicatiedatum ontbreekt bij het artikel met ID {$param}.</message>
 	<message key="plugins.importexport.crossref.settings.description"><![CDATA[<a href="{$settingsUrl}">Configureer</a> de CrossRef export/registration plug-in voor u die de eerst keer gebruikt.]]></message>
 	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Als u DOIs bij CrossRef wilt registreren, volg dan de aanwijzingen op de
 		<a href="http://www.crossref.org" target="_blank">CrossRef homepage</a>

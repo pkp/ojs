@@ -39,5 +39,9 @@
 	<message key="plugins.importexport.crossref.export.unregistered">Artigos não registrados</message>
 	<message key="plugins.importexport.crossref.export.selectUnregistered">Selecionar artigos não registrados</message>
 	<message key="plugins.importexport.crossref.export.noUnregistered">Todos os artigos publicados já foram registrados (ou nenhum deles têm um DOI designado).</message>
-	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">A data de publicação está ausente para o artigo de ID {$param}.</message>
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Uso:
+{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register journal_path {issues|articles} objectId1 [objectId2] ...
+]]></message>
+	<message key="plugins.importexport.crossref.senderTask.name">Dados CrossRef do remetente</message>
 </locale>

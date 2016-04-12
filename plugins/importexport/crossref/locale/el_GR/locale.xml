@@ -46,5 +46,4 @@
 	<message key="plugins.importexport.crossref.export.unregistered">Μη εγγεγραμμένα άρθρα</message>
 	<message key="plugins.importexport.crossref.export.selectUnregistered">Επιλέξτε μη εγγεγραμμένα άρθρα</message>
 	<message key="plugins.importexport.crossref.export.noUnregistered">Όλα τα δημοσιευμένα άρθρα έχουν ήδη εγγραφεί (ή κανένα από αυτά δεν έχει ένα DOI)</message>
-	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">Η ημερομηνία δημοσίευσης του άρθρου με ID {$param} λείπει.</message>
 </locale>
