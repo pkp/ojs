@@ -39,5 +39,4 @@
 	<message key="plugins.importexport.crossref.export.unregistered">Artigos não Registados</message>
 	<message key="plugins.importexport.crossref.export.selectUnregistered">Seleccionar artigos não registados</message>
 	<message key="plugins.importexport.crossref.export.noUnregistered">Todos os artigos publicados foram registados (ou nenhum destes tem um DOI atribuído)</message>
-	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">Falta a data de publicação do artigo com o ID {$param}.</message>
 </locale>

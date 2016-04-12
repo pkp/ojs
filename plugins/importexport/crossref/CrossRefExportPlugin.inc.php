@@ -183,34 +183,24 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 	}
 
 	/**
-	 * The selected issue can be exported if it contains an article that has a DOI,
-	 * and the articles containing a DOI also have a date published.
-	 * The selected article can be exported if it has a DOI and a date published.
+	 * The selected issue can be exported if it contains an article that has a DOI.
+	 * The selected article can be exported if it has a DOI.
 	 * @param $foundObject Issue|PublishedArticle
 	 * @param $errors array
 	 * @return array|boolean
 	*/
 	function canBeExported($foundObject, &$errors) {
 		if (is_a($foundObject, 'Issue')) {
-			$export = false;
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 			$issueArticles =& $publishedArticleDao->getPublishedArticles($foundObject->getId());
 			foreach ($issueArticles as $issueArticle) {
-				if (!is_null($issueArticle->getPubId('doi'))) {
-					$export = true;
-					if (is_null($issueArticle->getDatePublished())) {
-						$errors[] = array('plugins.importexport.crossref.export.error.articleDatePublishedMissing', $issueArticle->getId());
-						return false;
-					}
+				// if just one article can be exported, than the issue can be exported
+				if (parent::canBeExported($issueArticle, $errors)) {
+					return true;
 				}
 			}
-			return $export;
 		}
 		if (is_a($foundObject, 'PublishedArticle')) {
-			if (is_null($foundObject->getDatePublished())) {
-				$errors[] = array('plugins.importexport.crossref.export.error.articleDatePublishedMissing', $foundObject->getId());
-				return false;
-			}
 			return parent::canBeExported($foundObject, $errors);
 		}
 		return false;

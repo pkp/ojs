@@ -39,5 +39,4 @@
 	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Tento plugin může být konfigurován pro automatickou registraci Digital Object Identifiers (DOIs) v rámci CrossRef. Budete potřebova uživatelské jméno a heslo (dostupné na <a href="http://www.crossref.org" target="_blank">CrossRef</a>). Pokud nemáte vlastní uživatelské jméno a heslo, můžete stále exportovat data do CrossRef XML formátu, ale nemůžete registrovat vaše DOIs do CrossRef přímo z OJS.]]></message>
 	<message key="plugins.importexport.crossref.settings.description"><![CDATA[Můžete <a href="{$settingsUrl}">zde konfigurovat export/registraci pro CrossRef</a>.]]></message>
 	<message key="plugins.importexport.crossref.export.noUnregistered">Všechny publikované články jsou již registrovány (nebo žádný z nich nemá přiřazeno DOI).</message>
-	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">Chybí datum publikace pro článek s ID {$param}.</message>
 </locale>
