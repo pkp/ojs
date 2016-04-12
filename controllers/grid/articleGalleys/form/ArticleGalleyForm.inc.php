@@ -110,6 +110,7 @@ class ArticleGalleyForm extends Form {
 				'publicGalleyId' => $this->_articleGalley->getStoredPubId('publisher-id'),
 				'galleyLocale' => $this->_articleGalley->getLocale(),
 				'galleyType' => $this->_articleGalley->getGalleyType(),
+				'remoteURL' => $this->_articleGalley->getRemoteURL(),
 			);
 		} else {
 			$this->_data = array();
@@ -126,6 +127,7 @@ class ArticleGalleyForm extends Form {
 				'publicGalleyId',
 				'galleyLocale',
 				'galleyType',
+				'remoteURL',
 			)
 		);
 	}
@@ -149,6 +151,7 @@ class ArticleGalleyForm extends Form {
 			}
 			$articleGalley->setLocale($this->getData('galleyLocale'));
 			$articleGalley->setGalleyType($this->getData('galleyType'));
+			$articleGalley->setRemoteURL($this->getData('remoteURL'));
 
 			// Update galley in the db
 			$articleGalleyDao->updateObject($articleGalley);
@@ -163,6 +166,7 @@ class ArticleGalleyForm extends Form {
 
 			$articleGalley->setLocale($this->getData('galleyLocale'));
 			$articleGalley->setGalleyType($this->getData('galleyType'));
+			$articleGalley->setRemoteURL($this->getData('remoteURL'));
 
 			// Insert new galley into the db
 			$articleGalleyDao->insertObject($articleGalley);

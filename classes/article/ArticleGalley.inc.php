@@ -146,22 +146,6 @@ class ArticleGalley extends Representation {
 	}
 
 	/**
-	 * Set remote URL of the galley.
-	 * @param $remoteURL string
-	 */
-	function setRemoteURL($remoteURL) {
-		return $this->setData('remoteURL', $remoteURL);
-	}
-
-	/**
-	 * Get remote URL of the galley.
-	 * @return string
-	 */
-	function getRemoteURL() {
-		return $this->getData('remoteURL');
-	}
-
-	/**
 	 * Set the type of this galley, which maps to an articleGalley plugin.
 	 * @param string $galleyType
 	 */
