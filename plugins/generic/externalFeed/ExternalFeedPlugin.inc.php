@@ -277,7 +277,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 					if ($direction != null) {
 						// moving with up or down arrow
 						$isDown = ($direction=='d');
-						$feed->setSeq($feed->getSeq()+($isDown?1.5:-1.5));
+						$feed->setSequence($feed->getSequence()+($isDown?1.5:-1.5));
 						$externalFeedDao->updateExternalFeed($feed);
 						$externalFeedDao->resequenceExternalFeeds($feed->getJournalId());
 					}

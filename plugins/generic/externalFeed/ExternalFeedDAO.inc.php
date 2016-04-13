@@ -71,7 +71,7 @@ class ExternalFeedDAO extends DAO {
 		$externalFeed->setId($row['feed_id']);
 		$externalFeed->setJournalId($row['journal_id']);
 		$externalFeed->setUrl($row['url']);
-		$externalFeed->setSeq($row['seq']);
+		$externalFeed->setSequence($row['seq']);
 		$externalFeed->setDisplayHomepage($row['display_homepage']);
 		$externalFeed->setDisplayBlock($row['display_block']);
 		$externalFeed->setLimitItems($row['limit_items']);
@@ -107,7 +107,7 @@ class ExternalFeedDAO extends DAO {
 			array(
 				$externalFeed->getJournalId(),
 				$externalFeed->getUrl(),
-				$externalFeed->getSeq(),
+				$externalFeed->getSequence(),
 				$externalFeed->getDisplayHomepage(),
 				$externalFeed->getDisplayBlock(),
 				$externalFeed->getLimitItems(),
@@ -159,7 +159,7 @@ class ExternalFeedDAO extends DAO {
 			array(
 				$externalFeed->getJournalId(),
 				$externalFeed->getUrl(),
-				$externalFeed->getSeq(),
+				$externalFeed->getSequence(),
 				$externalFeed->getDisplayHomepage(),
 				$externalFeed->getDisplayBlock(),
 				$externalFeed->getLimitItems(),

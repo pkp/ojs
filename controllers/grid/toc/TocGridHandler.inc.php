@@ -174,7 +174,7 @@ class TocGridHandler extends CategoryGridHandler {
 	 * @copydoc GridHandler::getDataElementSequence()
 	 */
 	function getDataElementInCategorySequence($categoryId, $publishedArticle) {
-		return $publishedArticle->getSeq();
+		return $publishedArticle->getSequence();
 	}
 
 	/**
@@ -185,7 +185,7 @@ class TocGridHandler extends CategoryGridHandler {
 		if ($sectionId != $publishedArticle->getSectionId()) {
 			$publishedArticle->setSectionId($sectionId);
 		}
-		$publishedArticle->setSeq($newSequence);
+		$publishedArticle->setSequence($newSequence);
 		$publishedArticleDao->updatePublishedArticle($publishedArticle);
 	}
 

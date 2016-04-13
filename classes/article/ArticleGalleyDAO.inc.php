@@ -238,7 +238,7 @@ class ArticleGalleyDAO extends RepresentationDAO {
 		$galley->setSubmissionId($row['submission_id']);
 		$galley->setLocale($row['locale']);
 		$galley->setLabel($row['label']);
-		$galley->setSeq($row['seq']);
+		$galley->setSequence($row['seq']);
 		$galley->setRemoteURL($row['remote_url']);
 		$galley->setIsApproved($row['is_approved']);
 		$galley->setGalleyType($row['galley_type']);
@@ -264,7 +264,7 @@ class ArticleGalleyDAO extends RepresentationDAO {
 				(int) $galley->getSubmissionId(),
 				$galley->getLabel(),
 				$galley->getLocale(),
-				$galley->getSeq() == null ? $this->getNextGalleySequence($galley->getSubmissionId()) : $galley->getSeq(),
+				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getSubmissionId()) : $galley->getSequence(),
 				$galley->getRemoteURL(),
 				$galley->getIsApproved()?1:0,
 				$galley->getGalleyType(),
@@ -296,7 +296,7 @@ class ArticleGalleyDAO extends RepresentationDAO {
 			array(
 				$galley->getLabel(),
 				$galley->getLocale(),
-				$galley->getSeq(),
+				$galley->getSequence(),
 				$galley->getRemoteURL(),
 				(int) $galley->getIsApproved(),
 				$galley->getGalleyType(),

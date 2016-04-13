@@ -80,15 +80,15 @@ class ExternalFeed extends DataObject {
 	 * Get feed display sequence.
 	 * @return float
 	 */
-	function getSeq() {
+	function getSequence() {
 		return $this->getData('seq');
 	}
 
 	/**
 	 * Set feed display sequence
-	 * @param $sequence float
+	 * @param $seq float
 	 */
-	function setSeq($seq) {
+	function setSequence($seq) {
 		return $this->setData('seq', $seq);
 	}
 

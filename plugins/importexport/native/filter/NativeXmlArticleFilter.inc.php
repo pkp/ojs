@@ -141,7 +141,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	function populatePublishedSubmission($submission, $node) {
 		$deployment = $this->getDeployment();
 		$issue = $deployment->getIssue();
-		$submission->setSeq($node->getAttribute('seq'));
+		$submission->setSequence($node->getAttribute('seq'));
 		$submission->setAccessStatus($node->getAttribute('access_status'));
 		$submission->setIssueId($issue->getId());
 		return $submission;
