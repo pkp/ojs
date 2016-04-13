@@ -68,7 +68,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_DISCIPLINE, (array) $article->getDiscipline(null));
 			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_SUBJECT, (array) $article->getSubject(null));
 			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_TYPE, $article->getType(null));
-			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_COVERAGE, (array) $article->getCoverage());
+			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_COVERAGE, (array) $article->getCoverage(null));
 			// FIXME Index sponsors too?
 		}
 	}
