@@ -8,6 +8,6 @@
  * Include reviewer recommendations for OJS review assignment responses.
  *}
 
-{fbvFormSection label="reviewer.article.recommendation" description="reviewer.article.selectRecommendation"}
-	{fbvElement type="select" id="recommendation" from=$reviewerRecommendationOptions selected=$reviewAssignment->getRecommendation() size=$fbvStyles.size.MEDIUM required=true disabled=$readOnly}
+{fbvFormSection label="reviewer.article.recommendation" description=$description|default:"reviewer.article.selectRecommendation"}
+	{fbvElement type="select" id="recommendation" from=$reviewerRecommendationOptions selected=$reviewAssignment->getRecommendation() size=$fbvStyles.size.MEDIUM required=$required|default:true disabled=$readOnly}
 {/fbvFormSection}
