@@ -1003,4 +1003,6 @@ Los autores que publican en esta revista están de acuerdo con los siguientes t�
 
 	<!-- Included here because it may be used in the navigation bar -->
 	<message key="editor.navigation.issues">Números</message>
+	<message key="search.cli.rebuildIndex.indexing">Indexación "{$journalName}"</message>
+	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">Esta implementación de búsqueda no permite la reindexación por revista.</message>
 </locale>

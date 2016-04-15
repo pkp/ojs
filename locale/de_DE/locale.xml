@@ -1106,4 +1106,7 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 
 	<!-- Included here because it may be used in the navigation bar -->
 	<message key="editor.navigation.issues">Ausgaben</message>
+	<message key="search.cli.rebuildIndex.indexing">Indiziere "{$journalName}"</message>
+	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">Diese Implementierung der Suche erlaubt keine Neuin
+dizierung auf Zeitschriftenebene.</message>
 </locale>

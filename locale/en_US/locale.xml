@@ -1148,4 +1148,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="grid.catalogEntry.approvedRepresentation.title">Galley Approval</message>
 	<message key="grid.catalogEntry.approvedRepresentation.message"><![CDATA[<p>Approve this galley for publication.</p>]]></message>
 	<message key="grid.catalogEntry.approvedRepresentation.removeMessage"><![CDATA[<p>Remove approval of this galley.</p>]]></message>
+	<message key="search.cli.rebuildIndex.indexing">Indexing "{$journalName}"</message>
+	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">This search implementation does not allow per-journ
+al re-indexing.</message>
 </locale>

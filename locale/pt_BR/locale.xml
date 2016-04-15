@@ -1078,4 +1078,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 
 	<!-- Included here because it may be used in the navigation bar -->
 	<message key="editor.navigation.issues">Edições</message>
+	<message key="search.cli.rebuildIndex.indexing">Indexando "{$journalName}"</message>
+	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">A implementação desta busca não permite a reindexação por revista.</message>
 </locale>
