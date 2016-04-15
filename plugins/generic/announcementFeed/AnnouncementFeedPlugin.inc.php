@@ -67,11 +67,17 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 		return false;
 	}
 
+	/**
+	 * Add links to the feeds.
+	 * @param $hookName string
+	 * @param $args array
+	 * @return boolean Hook processing status
+	 */
 	function callbackAddLinks($hookName, $args) {
 		$request =& $this->getRequest();
 		if ($this->getEnabled() && is_a($request->getRouter(), 'PKPPageRouter')) {
-			$templateManager =& $args[0];
-			$currentJournal =& $templateManager->get_template_vars('currentJournal');
+			$templateManager = $args[0];
+			$currentJournal = $templateManager->get_template_vars('currentJournal');
 			$announcementsEnabled = $currentJournal ? $currentJournal->getSetting('enableAnnouncements') : false;
 			$displayPage = $currentJournal ? $this->getSetting($currentJournal->getId(), 'displayPage') : null;
 			$requestedPage = $request->getRequestedPage();
@@ -93,50 +99,54 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Display verbs for the management interface.
+	 * @copydoc Plugin::getActions()
 	 */
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
-		if ($this->getEnabled()) {
-			$verbs[] = array('settings', __('plugins.generic.announcementfeed.settings'));
-		}
-		return $verbs;
+	function getActions($request, $verb) {
+		$router = $request->getRouter();
+		import('lib.pkp.classes.linkAction.request.AjaxModal');
+		return array_merge(
+			$this->getEnabled()?array(
+				new LinkAction(
+					'settings',
+					new AjaxModal(
+						$router->url($request, null, null, 'manage', null, array('verb' => 'settings', 'plugin' => $this->getName(), 'category' => 'generic')),
+						$this->getDisplayName()
+					),
+					__('manager.plugins.settings'),
+					null
+				),
+			):array(),
+			parent::getActions($request, $verb)
+		);
 	}
 
  	/**
-	 * @see Plugin::manage()
+	 * @copydoc Plugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
-		$request =& $this->getRequest();
-		switch ($verb) {
+	function manage($args, $request) {
+		switch ($request->getUserVar('verb')) {
 			case 'settings':
-				$journal = $request->getJournal();
+				$context = $request->getContext();
 
+				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 
 				$this->import('SettingsForm');
-				$form = new SettingsForm($this, $journal->getId());
+				$form = new SettingsForm($this, $context->getId());
 
 				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
-						return false;
-					} else {
-						$form->display($request);
+						return new JSONMessage(true);
 					}
 				} else {
 					$form->initData();
-					$form->display($request);
 				}
-				return true;
-			default:
-				// Unknown management verb
-				assert(false);
-				return false;
+				return new JSONMessage(true, $form->fetch($request));
 		}
+		return parent::manage($args, $request);
 	}
 }
 

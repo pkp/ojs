@@ -54,17 +54,15 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	 * Get the web feed plugin
 	 * @return object
 	 */
-	function &getAnnouncementFeedPlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
-		return $plugin;
+	function getAnnouncementFeedPlugin() {
+		return PluginRegistry::getPlugin('generic', $this->parentPluginName);
 	}
 
 	/**
 	 * Override the builtin to get the correct plugin path.
 	 */
 	function getPluginPath() {
-		$plugin =& $this->getAnnouncementFeedPlugin();
-		return $plugin->getPluginPath();
+		return $this->getAnnouncementFeedPlugin()->getPluginPath();
 	}
 
 	/**
@@ -72,8 +70,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	 * @return string
 	 */
 	function getTemplatePath() {
-		$plugin =& $this->getAnnouncementFeedPlugin();
-		return $plugin->getTemplatePath() . 'templates/';
+		return $this->getAnnouncementFeedPlugin()->getTemplatePath() . 'templates/';
 	}
 
 	/**
@@ -82,8 +79,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	 * @return boolean
 	 */
 	function getEnabled() {
-		$plugin =& $this->getAnnouncementFeedPlugin();
-		return $plugin->getEnabled(); // Should always be true anyway if this is loaded
+		return $this->getAnnouncementFeedPlugin()->getEnabled();
 	}
 
 	/**
@@ -107,7 +103,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 
 		// Make sure announcements and plugin are enabled
 		$announcementsEnabled = $journal->getSetting('enableAnnouncements');
-		$announcementFeedPlugin =& $this->getAnnouncementFeedPlugin();
+		$announcementFeedPlugin = $this->getAnnouncementFeedPlugin();
 		if (!$announcementsEnabled || !$announcementFeedPlugin->getEnabled()) return false;
 
 		// Make sure the feed type is specified and valid
@@ -125,17 +121,16 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 		if (!isset($typeMap[$type])) return false;
 
 		// Get limit setting, if any
-		$limitRecentItems = $announcementFeedPlugin->getSetting($journal->getId(), 'limitRecentItems');
 		$recentItems = (int) $announcementFeedPlugin->getSetting($journal->getId(), 'recentItems');
 
 		$announcementDao = DAORegistry::getDAO('AnnouncementDAO');
 		$journalId = $journal->getId();
-		if ($limitRecentItems && $recentItems > 0) {
+		if ($recentItems > 0) {
 			import('lib.pkp.classes.db.DBResultRange');
 			$rangeInfo = new DBResultRange($recentItems, 1);
-			$announcements =& $announcementDao->getAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journalId, $rangeInfo);
+			$announcements = $announcementDao->getAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journalId, $rangeInfo);
 		} else {
-			$announcements =& $announcementDao->getAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
+			$announcements =  $announcementDao->getAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
 		}
 
 		// Get date of most recent announcement
@@ -148,7 +143,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 				$dateUpdated = $lastDateUpdated;
 			}
 		} else {
-			$mostRecentAnnouncement =& $announcementDao->getMostRecentAnnouncementByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
+			$mostRecentAnnouncement = $announcementDao->getMostRecentAnnouncementByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
 			$dateUpdated = $mostRecentAnnouncement->getDatetimePosted();
 			if (empty($lastDateUpdated) || (strtotime($dateUpdated) > strtotime($lastDateUpdated))) {
 				$announcementFeedPlugin->updateSetting($journal->getId(), 'dateUpdated', $dateUpdated, 'string');

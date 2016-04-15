@@ -8,10 +8,6 @@
  * Announcement Feed plugin settings
  *
  *}
-{strip}
-{assign var="pageTitle" value="plugins.generic.announcementfeed.displayName"}
-{include file="common/header.tpl"}
-{/strip}
 <div id="announcementFeedSettings">
 <div id="description">{translate key="plugins.generic.announcementfeed.description"}</div>
 
@@ -22,52 +18,27 @@
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
-		$('#announcementFeedForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		$('#announcementFeedSettingsForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
 	{rdelim});
 </script>
-<form class="pkp_form" id="announcementFeedForm" method="post" action="{plugin_url path="settings"}">
+<form class="pkp_form" id="announcementFeedSettingsForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT op="manage" category="generic" plugin=$pluginName verb="settings" save=true}">
 {include file="common/formErrors.tpl"}
 
-<script>
-	{literal}
-	<!--
-		function toggleLimitRecentItems(form) {
-			form.recentItems.disabled = !form.recentItems.disabled;
-		}
-	// -->
-	{/literal}
-</script>
+{fbvFormArea id="webFeedSettingsFormArea"}
+	{fbvFormSection list=true}
+		{fbvElement type="radio" id="displayPage-all" name="displayPage" value="all" checked=$displayPage|compare:"all" label="plugins.generic.announcementfeed.settings.all"}
+		{fbvElement type="radio" id="displayPage-homepage" name="displayPage" value="homepage" checked=$displayPage|compare:"homepage" label="plugins.generic.announcementfeed.settings.homepage"}
+		{fbvElement type="radio" id="displayPage-announcement" name="displayPage" value="announcement" checked=$displayPage|compare:"announcement" label="plugins.generic.announcementfeed.settings.announcement"}
+	{/fbvFormSection}
 
-<table class="data">
-	<tr>
-		<td class="label" align="right"><input type="radio" name="displayPage" id="displayPage-all" value="all" {if $displayPage eq "all"}checked="checked" {/if}/></td>
-		<td class="value">{translate key="plugins.generic.announcementfeed.settings.all"}</td>
-	</tr>
-	<tr>
-		<td class="label" align="right"><input type="radio" name="displayPage" id="displayPage-homepage" value="homepage" {if $displayPage eq "homepage"}checked="checked" {/if}/></td>
-		<td class="value">{translate key="plugins.generic.announcementfeed.settings.homepage"}</td>
-	</tr>
-	<tr>
-		<td class="label" align="right"><input type="radio" name="displayPage" id="displayPage-announcement" value="announcement" {if $displayPage eq "announcement"}checked="checked" {/if}/></td>
-		<td class="value">{translate key="plugins.generic.announcementfeed.settings.announcement"}</td>
-	</tr>
-	<tr>
-		<td colspan="2"><div class="separator">&nbsp;</div></td>
-	</tr>
-	<tr>
-		<td class="label" align="right"><input type="checkbox" name="limitRecentItems" id="limitRecentItems" value="1" onclick="toggleLimitRecentItems(this.form)"{if $limitRecentItems} checked="checked"{/if}/></td>
-		<td class="value">
-		{translate key="plugins.generic.announcementfeed.settings.recentAnnouncements1"} <input type="text" name="recentItems" id="recentItems" value="{$recentItems|escape}" {if not $limitRecentItems}disabled="disabled"{/if} size="2" maxlength="90" class="textField" />
-		{translate key="plugins.generic.announcementfeed.settings.recentAnnouncements2"}</td>
-	</tr>
+	{fbvFormSection list=true}
+		{translate key="plugins.generic.announcementfeed.settings.recentAnnouncements1"}
+		{fbvElement type="text" id="recentItems" value=$recentItems label="plugins.generic.announcementfeed.settings.recentAnnouncements2" size=$fbvStyles.size.SMALL}
+	{/fbvFormSection}
+{/fbvFormArea}
 
-</table>
-
-<br/>
-
-<input type="submit" name="save" class="button defaultButton" value="{translate key="common.save"}"/> <input type="button" class="button" value="{translate key="common.cancel"}" onclick="history.go(-1)"/>
+	{fbvFormButtons}
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 </div>
-{include file="common/footer.tpl"}
