@@ -1051,4 +1051,5 @@ El paràgraf que comença per &#171;Aquest darrer tema...&#187; no està sagnat.
 	<message key="search.cli.rebuildIndex.indexing">Indexació «{$journalName}» </message>
 	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">Aquesta implementació de la cerca no permet la rein
 dexació per revista.</message>
+	<message key="search.cli.rebuildIndex.unknownJournal">La ruta «{$journalPath}» que heu proporcionat no condueix a cap revista.</message>
 </locale>

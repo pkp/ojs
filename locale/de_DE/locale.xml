@@ -1109,4 +1109,5 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 	<message key="search.cli.rebuildIndex.indexing">Indiziere "{$journalName}"</message>
 	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">Diese Implementierung der Suche erlaubt keine Neuin
 dizierung auf Zeitschriftenebene.</message>
+	<message key="search.cli.rebuildIndex.unknownJournal">Der angegebene Pfad "{$journalPath}" führt nicht zu einer Zeitschrift.</message>
 </locale>

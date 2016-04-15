@@ -999,4 +999,5 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="editor.navigation.issues">Numéros</message>
 	<message key="search.cli.rebuildIndex.indexing">Indexage de "{$journalName}"</message>
 	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">Cette application de recherche ne permet pas le ré-indexage par journal.</message>
+	<message key="search.cli.rebuildIndex.unknownJournal">Le chemin d'accès fourni "{$journalPath}" n'a pu être résolu à un journal.</message>
 </locale>

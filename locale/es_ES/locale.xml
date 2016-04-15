@@ -1005,4 +1005,5 @@ Los autores que publican en esta revista están de acuerdo con los siguientes t�
 	<message key="editor.navigation.issues">Números</message>
 	<message key="search.cli.rebuildIndex.indexing">Indexación "{$journalName}"</message>
 	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">Esta implementación de búsqueda no permite la reindexación por revista.</message>
+	<message key="search.cli.rebuildIndex.unknownJournal">La ruta de la revista proporcionada "{$journalPath}" no corresponde con ninguna revista.</message>
 </locale>
