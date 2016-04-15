@@ -71,7 +71,7 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('contextSettings', $context->getSettingsDAO()->getSettings($context->getId()));
 
 				// Assign stylesheets and footer
-				$contextStyleSheet = $context->getSetting('journalStyleSheet');
+				$contextStyleSheet = $context->getSetting('styleSheet');
 				if ($contextStyleSheet) {
 					$this->addStyleSheet($request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()) . '/' . $contextStyleSheet['uploadName'], STYLE_SEQUENCE_LAST);
 				}
