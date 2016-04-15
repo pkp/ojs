@@ -47,8 +47,8 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	 * Get the method name for inserting a published submission.
 	 * @return string
 	 */
-	function getPublishedSubmissionInsertMethod(){
-		return 'insertPublishedArticle';
+	function getPublishedSubmissionInsertMethod() {
+		return 'insertObject';
 	}
 
 	/**

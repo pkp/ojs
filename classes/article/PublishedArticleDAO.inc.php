@@ -558,7 +558,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param PublishedArticle object
 	 * @return pubId int
 	 */
-	function insertPublishedArticle($publishedArticle) {
+	function insertObject($publishedArticle) {
 		$this->update(
 			sprintf('INSERT INTO published_submissions
 				(submission_id, issue_id, date_published, seq, access_status)

@@ -304,7 +304,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 					$publishedArticle->setSequence(REALLY_BIG_NUMBER);
 					$publishedArticle->setAccessStatus($accessStatus);
 
-					$publishedArticleDao->insertPublishedArticle($publishedArticle);
+					$publishedArticleDao->insertObject($publishedArticle);
 
 					// If we're using custom section ordering, and if this is the first
 					// article published in a section, make sure we enter a custom ordering
