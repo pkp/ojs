@@ -45,11 +45,10 @@ class IndexHandler extends Handler {
 			}
 		}
 
+		$this->setupTemplate($request);
 		$router = $request->getRouter();
 		$templateMgr = TemplateManager::getManager($request);
 		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$this->setupTemplate($request);
-
 		if ($journal) {
 			// Assign header and content for home page
 			$templateMgr->assign('additionalHomeContent', $journal->getLocalizedSetting('additionalHomeContent'));
