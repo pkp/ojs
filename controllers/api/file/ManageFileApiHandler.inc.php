@@ -37,7 +37,7 @@ class ManageFileApiHandler extends PKPManageFileApiHandler {
 		if ($submissionFile->getFileStage() == SUBMISSION_FILE_PROOF) {
 			import('lib.pkp.classes.search.SubmissionSearch');
 			import('classes.search.ArticleSearchIndex');
-			MonographSearchIndex::deleteTextIndex($submission->getId(), SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile->getFileId());
+			ArticleSearchIndex::deleteTextIndex($submission->getId(), SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile->getFileId());
 		}
 	}
 
