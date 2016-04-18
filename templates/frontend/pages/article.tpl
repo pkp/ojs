@@ -57,9 +57,6 @@
 	{/if}
 
 	{call_hook name="Templates::Article::Footer::PageFooter"}
-	{if $pageFooter}
-		{$pageFooter}
-	{/if}
 
 </div><!-- .page -->
 
