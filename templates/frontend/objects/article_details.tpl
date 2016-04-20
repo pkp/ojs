@@ -100,6 +100,7 @@
 
 		<div class="entry_details">
 
+			{* Article Galleys *}
 			{if $article->getGalleys()}
 				<div class="item galleys">
 					<ul class="value galleys_links">
@@ -115,6 +116,7 @@
 			{* Keywords *}
 			{* @todo keywords not yet implemented *}
 
+			{* Article Subject *}
 			{if $article->getLocalizedSubject()}
 				<div class="item subject">
 					<h3 class="label">
@@ -126,20 +128,29 @@
 				</div>
 			{/if}
 
+			{* Issue article appears in *}
 			<div class="item issue">
-				<div class="value">
-					{capture assign="issueLink"}
+				<div class="sub_item">
+					<div class="label">
+						{translate key="issue.issue"}
+					</div>
+					<div class="value">
 						<a class="title" href="{url page="issue" op="view" path=$issue->getBestIssueId($currentJournal)}">
 							{$issue->getIssueIdentification()}
 						</a>
-					{/capture}
-
-					{if $section}
-						{translate key="article.publishedInWithSection" sectionTitle=$section->getLocalizedTitle()|escape issueLink=$issueLink}
-					{else}
-						{translate key="article.publishedIn" issueLink=$issueLink}
-					{/if}
+					</div>
 				</div>
+
+				{if $section}
+					<div class="sub_item">
+						<div class="label">
+							{translate key="section.section"}
+						</div>
+						<div class="value">
+							{$section->getLocalizedTitle()|escape}
+						</div>
+					</div>
+				{/if}
 			</div>
 
 			{* Citations *}
