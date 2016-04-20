@@ -42,6 +42,65 @@
 	}
 }
 
+// Add an icon to the button
+.cmp_button_icon( @icon ) {
+	position: relative;
+	padding-right: @triple + (@triple / 2);
+	border-right: none;
+
+	&:after {
+		&:extend(.fa);
+		content: @icon;
+		position: absolute;
+		top: -1px; // border;
+		right: 0;
+		width: @triple;
+		height: @triple;
+		border-top-right-radius: @radius;
+		border-bottom-right-radius: @radius;
+		line-height: @triple;
+		text-align: center;
+		background: @primary;
+		box-shadow: inset 0 -1em 1em rgba(0, 0, 0, 0.2);
+		color: #fff;
+	}
+
+	&:hover:after,
+	&:focus:after {
+		box-shadow: inset 0 1em 1em rgba(0, 0, 0, 0.2);
+		background: @primary-lift;
+	}
+}
+
+// Text button with an icon
+.cmp_button_text( @icon ) {
+	display: inline-block;
+	position: relative;
+	padding-right: @triple;
+	font-size: @font-sml;
+	font-weight: @bold;
+	line-height: @triple;
+	color: @primary;
+	text-decoration: none;
+
+	&:after {
+		&:extend(.fa);
+		content: @icon;
+		position: absolute;
+		top: 2px;
+		right: 0;
+		width: @triple;
+		height: @triple;
+		line-height: @triple;
+		text-align: center;
+	}
+
+	&:hover,
+	&:focus {
+		color: @primary-lift;
+	}
+}
+
 // Forms
 // These don't yet follow the component pattern on the frontend, but should
 // eventually once the login/registration templates are incorporated into the
@@ -319,4 +378,41 @@
 // Backlink used on error.tpl and message.tpl
 .cmp_back_link {
 	margin-top: @double;
+}
+
+// Announcements
+.cmp_announcements {
+	&:extend(.pkp_unstyled_list);
+	margin-left: -@base;
+	margin-right: -@base;
+
+	> li {
+		padding: @triple @base;
+		border-bottom: @bg-border;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	@media(min-width: @screen-phone) {
+		margin-left: -@double;
+		margin-right: -@double;
+
+		> li {
+			padding-left: @double;
+			padding-right: @double;
+		}
+	}
+
+	@media(min-width: @screen-desktop) {
+		margin-left: -@triple;
+		margin-right: -@triple;
+
+		> li {
+			padding-left: @triple;
+			padding-right: @triple;
+		}
+
+	}
 }
