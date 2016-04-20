@@ -223,36 +223,6 @@
 	}
 }
 
-// Access legend
-.cmp_access_legend {
-	margin: (@double * 2) 0;
-	padding: 0;
-	list-style: none;
-
-	&:last-child {
-		margin-bottom: 0;
-	}
-
-	li {
-		display: inline-block;
-		margin-right: 2em;
-		font-size: @font-sml;
-		line-height: @double;
-		color: @text-light;
-
-		&:before {
-			&:extend( .fa );
-			margin-right: 0.5em;
-			color: @text;
-		}
-	}
-
-	.restricted:before {
-		content: @fa-var-lock;
-		color: @offset;
-	}
-}
-
 // Pagination component
 // eg: 1-2 of 10 items
 .cmp_pagination {

@@ -48,11 +48,6 @@
 		{include file="frontend/components/breadcrumbs_issue.tpl" currentTitle=$issueIdentification}
 		{include file="frontend/objects/issue_toc.tpl"}
 
-		{* Display a legend describing the open/restricted access icons *}
-		{if $showGalleyLinks && $issueGalleys && $issue->getNumArticles()}
-			{include file="frontend/components/accessLegend.tpl"}
-		{/if}
-
 	{* Display an issue without a Table of Contents *}
 	{* @todo create an appropriate issue_cover.tpl object template for this *}
 	{else}
