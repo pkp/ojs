@@ -10,12 +10,12 @@
  *}
 {foreach from=$externalFeeds item=externalFeed}
 	<div class="pkp_block block_external_feed">
-		<span class="title">{$externalFeed.title|truncate:20:"..."}</span>
+		<span class="title">{$externalFeed.title|truncate:20}</span>
 		<div class="content">
 			<ul>
 			{foreach from=$externalFeed.items item=feedItem}
 				<li>
-					<a href="{$feedItem->get_permalink()}" target="_blank">{$feedItem->get_title()|truncate:40:"..."}</a>
+					<a href="{$feedItem->get_permalink()}" target="_blank">{$feedItem->get_title()|truncate:40}</a>
 				</li>
 			{/foreach}
 			</ul>
