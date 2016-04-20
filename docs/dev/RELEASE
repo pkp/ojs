@@ -50,7 +50,10 @@ OJS release:
 
 5. After committing any pending modifications, tag the release in git (both the
 OJS codebase and the PKP library to be distributed with it). DO NOT FORGET TO
-COMIT THE lib/pkp HASH FIRST.
+COMMIT THE lib/pkp HASH FIRST.
+
+WARNING: If the release is to have minified JS, set the default in
+config.TEMPLATE.inc.php and compile and commit the latest JS before tagging!
 
     cd lib/pkp
     git tag ojs-<MAJOR>_<MINOR>_<REVISION>-<BUILD>
