@@ -21,12 +21,35 @@
 		font-weight: @normal;
 	}
 
-	.authors,
-	.galleys_links,
-	.abstract,
-	.issue {
-		margin-top: @double * 2;
+	.row {
+		margin-top: @triple;
 	}
+
+	.item {
+		padding-top: @double;
+		padding-bottom: @double;
+	}
+
+	.sub_item {
+		margin-bottom: @double;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.main_entry {
+
+		.item {
+
+			.label {
+				margin: 0 0 @double;
+				font-size: @font-bump;
+				font-weight: @bold;
+			}
+		}
+	}
+
 
 	.authors {
 		&:extend(.pkp_unstyled_list);
@@ -54,14 +77,94 @@
 		}
 	}
 
-	.abstract {
+	.entry_details {
+		margin-left: -@double;
+		margin-right: -@double;
+		border-top: @bg-border;
 
-		h3 {
-			display: inline-block;
-			margin: 0;
-			border-bottom: 2px solid @text;
-			font-size: @base;
-			line-height: @double - 2;
+		.item {
+			padding: @double;
+			border-bottom: @bg-border;
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			.label {
+				font-size: @font-sml;
+				font-weight: @normal;
+				color: @text-light;
+			}
+		}
+	}
+
+	@media(min-width: @screen-phone) {
+
+		.entry_details {
+			margin-left: -@triple;
+			margin-right: -@triple;
+		}
+
+	}
+
+	@media(min-width: @screen-tablet) {
+
+		.row {
+			margin-left: -@double;
+			margin-right: -@double;
+			border-top: @bg-border;
+			border-bottom: @bg-border;
+		}
+
+		.main_entry {
+			float: left;
+			width: @screen-tablet-container - @sidebar-width;
+			border-right: @bg-border;
+		}
+
+		.item {
+			padding: @double;
+		}
+
+		.entry_details {
+			float: left;
+			width: @sidebar-width;
+			margin: 0 0 0 -1px; // border overlap with main content
+			border-top: none;
+			border-left: @bg-border;
+
+			.item {
+				margin-right: -1px; // border reach out to edge
+				border-bottom: @bg-border;
+
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+		}
+	}
+
+	@media(min-width: @screen-desktop) {
+
+		.row {
+			margin-left: -@triple;
+			margin-right: -@triple;
+		}
+
+		.main_entry {
+			width: @screen-desktop-container - (@sidebar-width * 2);
+		}
+
+		.item {
+			padding: @triple;
+		}
+	}
+
+
+	@media(min-width: @screen-lg-desktop) {
+
+		.main_entry {
+			width: @screen-lg-desktop-container - (@sidebar-width * 2);
 		}
 	}
 }
