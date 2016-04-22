@@ -23,5 +23,6 @@
 	<message key="plugins.reports.reviews.dateConfirmed">Date Confirmed</message>
 	<message key="plugins.reports.reviews.dateCompleted">Date Completed</message>
 	<message key="plugins.reports.reviews.dateReminded">Date Reminded</message>
+	<message key="plugins.reports.reviews.quality">Reviewer Quality</message>    
 </locale>
 
