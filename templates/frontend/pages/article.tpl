@@ -35,11 +35,6 @@
 	{else}
 		{* Show article overview *}
 		{include file="frontend/objects/article_details.tpl"}
-
-		{* Display a legend describing the open/restricted access icons *}
-		{if $article->getGalleys()}
-			{include file="frontend/components/accessLegend.tpl"}
-		{/if}
 	{/if}
 
 	{* Copyright and licensing *}
@@ -57,9 +52,6 @@
 	{/if}
 
 	{call_hook name="Templates::Article::Footer::PageFooter"}
-	{if $pageFooter}
-		{$pageFooter}
-	{/if}
 
 </div><!-- .page -->
 
