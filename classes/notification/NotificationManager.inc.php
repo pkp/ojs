@@ -175,6 +175,21 @@ class NotificationManager extends PKPNotificationManager {
 			default: return parent::getIconClass($notification);
 		}
 	}
+
+	/**
+         * @copydoc PKPNotificationManager::getMgrDelegate()
+         */
+        protected function getMgrDelegate($notificationType, $assocType, $assocId) {
+                switch ($notificationType) {
+                        case NOTIFICATION_TYPE_APPROVE_SUBMISSION:
+                        case NOTIFICATION_TYPE_VISIT_CATALOG:
+                                assert($assocType == ASSOC_TYPE_SUBMISSION && is_numeric($assocId));
+                                import('classes.notification.managerDelegate.ApproveSubmissionNotificationManager');
+                                return new ApproveSubmissionNotificationManager($notificationType);
+                }
+                // Otherwise, fall back on parent class
+                return parent::getMgrDelegate($notificationType, $assocType, $assocId);
+        }
 }
 
 ?>
