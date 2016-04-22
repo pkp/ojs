@@ -27,9 +27,11 @@
 		{translate key="article.view.interstitial" galleyUrl=$fileUrl}
 		<ul class="galleys_links">
 			{foreach from=$galley->getLatestGalleyFiles() item=galleyFile}
-				<li>
-                    <a class="obj_galley_link" href="{url op="download" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal):$galleyFile->getFileId() escape=false}">{$galleyFile->getLocalizedName()|escape}</a>
-                </li>
+				{if $galleyFile->isViewable()}
+					<li>
+						<a class="obj_galley_link" href="{url op="download" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal):$galleyFile->getFileId() escape=false}">{$galleyFile->getLocalizedName()|escape}</a>
+                			</li>
+				{/if}
 			{/foreach}
 		</ul>
 	{else}
