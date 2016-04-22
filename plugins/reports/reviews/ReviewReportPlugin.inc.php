@@ -95,7 +95,7 @@ class ReviewReportPlugin extends ReportPlugin {
 			'declined' => Locale::translate('submissions.declined'),
 			'cancelled' => Locale::translate('common.cancelled'),
 			'recommendation' => Locale::translate('reviewer.article.recommendation'),
-			'quality' => Locale::translate('reviewer.article.quality'),            
+			'quality' => Locale::translate('plugins.reports.reviews.quality'),            
 			'comments' => Locale::translate('comments.commentsOnArticle')
 		);
 		$yesNoArray = array('declined', 'cancelled');
