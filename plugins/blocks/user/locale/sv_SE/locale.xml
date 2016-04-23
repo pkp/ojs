@@ -14,10 +14,10 @@
   * Translation by per@funke.com 2009-11-27
   *
   -->
- 
+
 <locale name="sv_SE" full_name="Svenska">
-	<message key="plugins.block.user.displayName">Användar block</message>
-	<message key="plugins.block.user.description">Detta insticksprogram innehåller verktyg för användarkontohantering i sidokolumn (exempelvis in- och utloggning, profillänk osv.).</message>
+	<message key="plugins.block.user.displayName">Användarblock</message>
+	<message key="plugins.block.user.description">Detta insticksprogram tillhandahåller verktyg för användarkontohantering i sidomenyn (exempelvis in- och utloggning, profillänk osv.).</message>
 	<message key="plugins.block.user.loggedInAs">Du är inloggad som...</message>
 	<message key="plugins.block.user.notLoggedInAs">Du är inte inloggad! </message>
 	<message key="plugins.block.user.myJournals">Mina tidskrifter</message>
@@ -25,4 +25,5 @@
 	<message key="plugins.block.user.logout">Logga ut</message>
 	<message key="plugins.block.user.signOutAsUser">Logga ut som användare</message>
 	<message key="plugins.block.user.rememberMe">Kom ihåg mig</message>
+  <message key="plugins.block.user.implicitAuthLogin">Tidskriftsinloggning</message>
 </locale>

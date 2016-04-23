@@ -13,12 +13,12 @@
 
 <locale name="sv_SE" full_name="Svenska">
 	<message key="plugins.block.readingTools.displayName">Läsverktygsblocket</message>
-	<message key="plugins.block.readingTools.description">Det här pluginet visar ett block med läsverktyg i sidomenyn.</message>
+	<message key="plugins.block.readingTools.description">Det här tilägget visar ett block med läsverktyg i läsverktygssidomenyn.</message>
 	<message key="plugins.block.readingTools.title">Läsverktyg</message>
 	<message key="plugins.block.readingTools.aboutTheAuthor">Om författaren</message>
 	<message key="plugins.block.readingTools.aboutTheAuthors">Om författarna</message>
-	<message key="plugins.block.readingTools.articleTools">Verktyg</message>
-	<message key="plugins.block.readingTools.emailThisArticle">Maila artikel</message>
+	<message key="plugins.block.readingTools.articleTools">Artikelverktyg</message>
+	<message key="plugins.block.readingTools.emailThisArticle">Mejla artikel</message>
 	<message key="plugins.block.readingTools.loginRequired">Inloggning krävs</message>
 	<message key="plugins.block.readingTools.printThisArticle">Skriv ut artikel</message>
 	<message key="plugins.block.readingTools.postComment">Kommentera</message>

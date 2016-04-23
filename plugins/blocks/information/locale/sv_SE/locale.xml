@@ -4,7 +4,7 @@
 <!--
   * plugins/blocks/information/locale/sv_SE/locale.xml
   *
-  * Translated to sv_SE per@funke.com 2010-03-15
+  * Translated to sv_SE 2016-04-23
   *
   *
   * Copyright (c) 2013-2016 Simon Fraser University Library
@@ -14,9 +14,9 @@
   * Localization strings for the sv_SE (Svenska) locale.
   *
   -->
- 
+
 <locale name="sv_SE" full_name="Svenska">
-	<message key="plugins.block.information.displayName">Informatiosblock</message>
-	<message key="plugins.block.information.description">Det här tillägget lägger till en "Information"s-länk i en sidoram</message>
+	<message key="plugins.block.information.displayName">Informationsblock</message>
+	<message key="plugins.block.information.description">Det här tillägget tillhandahåller informationslänk i sidomenyn</message>
 	<message key="plugins.block.information.link">Information</message>
 </locale>
