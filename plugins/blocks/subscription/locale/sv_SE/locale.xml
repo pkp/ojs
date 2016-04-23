@@ -22,5 +22,5 @@
 	<message key="plugins.block.subscription.providedBy">Tillgång tillhandahålls av</message>
 	<message key="plugins.block.subscription.comingFromIP">från</message>
 	<message key="plugins.block.subscription.about">Prenumerationer</message>
-	<message key="plugins.block.subscription.loginToVerifySubscription">Logga inför att bekräfta prenumerationen</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Logga in för att bekräfta prenumerationen</message>
 </locale>
