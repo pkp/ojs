@@ -59,17 +59,18 @@ class ReviewerReportsPlugin extends ReportPlugin {
 		header('content-disposition: attachment; filename=reviews-' . date('Ymd') . '.csv');
 		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
 
-		$reviewReportDao =& DAORegistry::getDAO('ReviewReportDAO');
-		list($commentsIterator, $reviewsIterator) = $reviewReportDao->getReviewReport($journal->getId());
+		$reviewerReportsDao =& DAORegistry::getDAO('ReviewerReportsDAO');
+//		list($commentsIterator, $reviewsIterator) = $reviewReportsDao->getReviewerReports($journal->getId());
+		list($reviewsIterator) = $reviewReportsDao->getReviewerReports($journal->getId());
 
-		$comments = array();
-		while ($row =& $commentsIterator->next()) {
-			if (isset($comments[$row['article_id']][$row['author_id']])) {
-				$comments[$row['article_id']][$row['author_id']] .= "; " . $row['comments'];
-			} else {
-				$comments[$row['article_id']][$row['author_id']] = $row['comments'];
-			}
-		}
+//		$comments = array();
+//		while ($row =& $commentsIterator->next()) {
+//			if (isset($comments[$row['article_id']][$row['author_id']])) {
+//				$comments[$row['article_id']][$row['author_id']] .= "; " . $row['comments'];
+//			} else {
+//				$comments[$row['article_id']][$row['author_id']] = $row['comments'];
+//			}
+//		}
 
 		$yesnoMessages = array( 0 => Locale::translate('common.no'), 1 => Locale::translate('common.yes'));
 
@@ -95,8 +96,8 @@ class ReviewerReportsPlugin extends ReportPlugin {
 			'declined' => Locale::translate('submissions.declined'),
 			'cancelled' => Locale::translate('common.cancelled'),
 			'recommendation' => Locale::translate('reviewer.article.recommendation'),
-			'quality' => Locale::translate('plugins.reports.reviews.quality'),            
-			'comments' => Locale::translate('comments.commentsOnArticle')
+			'quality' => Locale::translate('plugins.reports.reviews.quality')            
+//			'comments' => Locale::translate('comments.commentsOnArticle')
 		);
 		$yesNoArray = array('declined', 'cancelled');
 

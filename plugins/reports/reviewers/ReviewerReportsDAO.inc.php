@@ -80,7 +80,8 @@ class ReviewerReportsDAO extends DAO {
 		);
 		$reviewerReturner = new DBRowIterator($result);
 
-		return array($commentsReturner, $reviewerReturner);
+//		return array($commentsReturner, $reviewerReturner);
+		return($reviewerReturner);
 	}
 }
 
