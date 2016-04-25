@@ -72,8 +72,8 @@ class ReviewerReportsDAO extends DAO {
 			ORDER BY count(*) desc',                       
 			array(
 				$locale, // Article title
-				'title',
-				'title',
+				//'title',
+				//'title',
 				$journalId,
 //				'affiliation'
 			)
