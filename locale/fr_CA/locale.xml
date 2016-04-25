@@ -1043,4 +1043,13 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="user.orcid.description"><![CDATA[ID ORCID peuvent seulement être assignés par <a href="http://orcid.org/" target="_blank">le registre ORCID</a>. Vous devez vous conformer à leur norme pour exprimer les iDs ORCID, et inclure l'URI entière (ex. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
 	<message key="user.profile.form.orcidInvalid">L'ID ORCID que vous avez spécifié est invalide.</message>
 	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems supporte le <a href="http://www.lockss.org/" target="_blank">système LOCKSS</a> (Lots of Copies Keep Stuff Safe)  pour assurer la préservation sécuritaire et pérenne de votre revue. Vous avez plusieurs options pour inclure votre revue dans le réseau LOCKSS:]]></message>
+	<message key="user.profile.implicitAuthChangePasswordInstructions">Si vous vous êtes connecté via Shibboleth, veuillez suivre les instructions de votre organisation si vous devez changer de mot de passe. Si vous avez un compte local, veuillez suivre les instructions ci-bas.</message>
+	<message key="user.login.implicitAuthLogin">Login via Shibboleth</message>
+	<message key="user.register.emailValidation">Validation par courriel requise</message>
+	<message key="user.register.emailValidationDescription">Vous devez valider votre adresse courriel avant de continuer</message>
+	<message key="user.register.implicitAuth">Connexion avec un compte organisationnel existant via Shibboleth</message>
+	<message key="about.purchaseIssue">Achat de numéro</message>
+	<message key="about.purchaseArticle">Achat d'article</message>
+	<message key="about.purchaseIssueDescription">Les lecteurs qui ne sont pas abonné pourront tout de même acheter des numéros à l'unité. Les modalités d'achat disponibles sont les suivantes:</message>
+	<message key="about.purchaseArticleDescription">Les lecteurs qui ne sont pas abonnés peuvent tout de même acheter des articles à l'unité. Les modalités d'achat disponibles sont les suivantes:</message>
 </locale>
