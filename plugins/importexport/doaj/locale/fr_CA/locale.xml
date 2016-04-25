@@ -20,4 +20,9 @@
 	<message key="plugins.importexport.doaj.export">Exporter les données de la revue vers DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contact">Communiquer avec DOAJ pour intégration</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">Pour que votre revue soit considérée pour une intégration dans le DOAJ, veuillez soumettre ce formulaire partiellement complété automatiquement au DOAJ, et remplir les informations incomplètes du mieux que vous pouvez.</message>
+	<message key="plugins.importexport.doaj.markRegistered.success">Les objets sélectionnés ont été enregistrés !</message>
+	<message key="plugins.importexport.doaj.export.issue">Exporter les numéros</message>
+	<message key="plugins.importexport.doaj.export.issueInfo">Exporter les numéros sélectionnés en XML</message>
+	<message key="plugins.importexport.doaj.export.article">Exporter les articles</message>
+	<message key="plugins.importexport.doaj.export.articleInfo">Exporter les articles sélectionnés en XML</message>
 </locale>
