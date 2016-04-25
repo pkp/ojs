@@ -67,7 +67,7 @@ class ReviewerReportsDAO extends DAO {
 				users.email AS email,
 				count(*) AS totalReviews
 			FROM review_assignments, articles, users
-			WHERE users.user_id=articles.user_id && review_assignments.submission_id = articles.article_id && articles.journal_id="$journalId" && review_assignments.date_completed !='NULL'
+			WHERE users.user_id=articles.user_id && review_assignments.submission_id = articles.article_id && articles.journal_id="$journalId" && review_assignments.date_completed !="NULL"
 			GROUP BY articles.user_id
 			ORDER BY count(*) desc',                       
 			array(
