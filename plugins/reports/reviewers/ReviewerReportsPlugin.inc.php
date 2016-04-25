@@ -61,7 +61,7 @@ class ReviewerReportsPlugin extends ReportPlugin {
 
 		$reviewerReportsDao =& DAORegistry::getDAO('ReviewerReportsDAO');
 //		list($commentsIterator, $reviewsIterator) = $reviewReportsDao->getReviewerReports($journal->getId());
-		list($reviewsIterator) = $reviewReportsDao->getReviewerReports($journal->getId());
+		$reviewerIterator = $reviewerReportsDao->getReviewerReports($journal->getId());
 
 //		$comments = array();
 //		while ($row =& $commentsIterator->next()) {
@@ -104,7 +104,7 @@ class ReviewerReportsPlugin extends ReportPlugin {
 		$fp = fopen('php://output', 'wt');
 		String::fputcsv($fp, array_values($columns));
 
-		while ($row =& $reviewsIterator->next()) {
+		while ($row =& $reviewerIterator->next()) {
 			foreach ($columns as $index => $junk) {
 				if (in_array($index, $yesNoArray)) {
 					$columns[$index] = $yesnoMessages[$row[$index]];
