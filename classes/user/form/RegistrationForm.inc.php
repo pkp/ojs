@@ -160,6 +160,10 @@ class RegistrationForm extends Form {
 		$this->setData('existingUser', $this->existingUser);
 		$this->setData('userLocales', array());
 		$this->setData('sendPassword', 0);
+		$this->setData('firstName', Request::getUserVar('firstName'));
+		$this->setData('lastName', Request::getUserVar('lastName'));
+		$this->setData('email', Request::getUserVar('email'));
+		$this->setData('orcid', Request::getUserVar('orcid'));
 	}
 
 	/**
