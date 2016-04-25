@@ -52,16 +52,7 @@ class ReviewerReportsDAO extends DAO {
 				u.first_name AS firstName,
 				u.middle_name AS middleName,
 				u.last_name AS lastName,
-				usl.setting_value AS affiliation,
-				r.date_assigned AS dateAssigned,
-				r.date_notified AS dateNotified,
-				r.date_confirmed AS dateConfirmed,
-				r.date_completed AS dateCompleted,
-				r.date_reminded AS dateReminded,
-				(r.declined=1) AS declined,
-				(r.cancelled=1) AS cancelled,
-				r.recommendation AS recommendation,
-  				r.quality AS quality              
+				u.email AS email
 			FROM	review_assignments r
 				LEFT JOIN articles a ON r.submission_id = a.article_id
 				LEFT JOIN article_settings asl ON (a.article_id=asl.article_id AND asl.locale=? AND asl.setting_name=?)

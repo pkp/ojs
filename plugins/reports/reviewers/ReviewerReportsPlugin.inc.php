@@ -78,25 +78,13 @@ class ReviewerReportsPlugin extends ReportPlugin {
 		$recommendations = ReviewAssignment::getReviewerRecommendationOptions();
 
 		$columns = array(
-			'round' => Locale::translate('plugins.reports.reviews.round'),
-			'article' => Locale::translate('article.articles'),
-			'articleid' => Locale::translate('article.submissionId'),
-			'articlestatus' => Locale::translate('article.status'),
-			'reviewerid' => Locale::translate('plugins.reports.reviews.reviewerId'),
+			'reviewerid' => Locale::translate('plugins.reports.reviewers.reviewerId'),
 			'reviewer' => Locale::translate('plugins.reports.reviews.reviewer'),
 			'firstname' => Locale::translate('user.firstName'),
 			'middlename' => Locale::translate('user.middleName'),
 			'lastname' => Locale::translate('user.lastName'),
-			'affiliation' =>Locale::translate('user.affiliations'),
-			'dateassigned' => Locale::translate('plugins.reports.reviews.dateAssigned'),
-			'datenotified' => Locale::translate('plugins.reports.reviews.dateNotified'),
-			'dateconfirmed' => Locale::translate('plugins.reports.reviews.dateConfirmed'),
-			'datecompleted' => Locale::translate('plugins.reports.reviews.dateCompleted'),
-			'datereminded' => Locale::translate('plugins.reports.reviews.dateReminded'),
-			'declined' => Locale::translate('submissions.declined'),
-			'cancelled' => Locale::translate('common.cancelled'),
-			'recommendation' => Locale::translate('reviewer.article.recommendation'),
-			'quality' => Locale::translate('plugins.reports.reviews.quality')            
+			'email' =>Locale::translate('user.email'),
+			'totalReviews' => Locale::translate('plugins.reports.reviewers.totalReviews')         
 //			'comments' => Locale::translate('comments.commentsOnArticle')
 		);
 		$yesNoArray = array('declined', 'cancelled');
