@@ -37,7 +37,7 @@
 	{/if}
 	
 {/foreach}
-  <li>&#187; <a href="">Reviewers: Total Completed Reviews, by Reviewer</a></li>
+  <li>&#187; <a href="">Total Completed Reviews, by Reviewer</a></li>
   <li>&#187; <a href="">Average Reviewer Ratings</a></li>
 </ul>
 </div>

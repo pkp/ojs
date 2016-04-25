@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.reports.reviews.displayName">Отчет о рецензентах</message>
+	<message key="plugins.reports.reviews.description">Этот модуль выдает отчет о рецензиях в формате CSV.</message>
+	<message key="plugins.reports.reviews.round">Круг</message>
+	<message key="plugins.reports.reviews.reviewerId">Reviewer ID</message>
+	<message key="plugins.reports.reviews.reviewer">Рецензент</message>
+	<message key="plugins.reports.reviews.dateAssigned">Дата назначения</message>
+	<message key="plugins.reports.reviews.dateNotified">Дата уведомления</message>
+	<message key="plugins.reports.reviews.dateConfirmed">Дата подтверждения</message>
+	<message key="plugins.reports.reviews.dateCompleted">Дата окончания</message>
+	<message key="plugins.reports.reviews.dateReminded">Дата напоминания</message>
+</locale>
+
