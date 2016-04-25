@@ -61,7 +61,7 @@ class ReviewerReportsDAO extends DAO {
 //				LEFT JOIN user_settings usl ON (u.user_id=usl.user_id)
 //			WHERE	u.user_id=r.reviewer_id AND a.journal_id= ? and usl.setting_name= ?
 //			ORDER BY article',           
-			'SELECT articles.user_id AS reviewerId,
+			'SELECT articles.user_id AS reviewerid,
 				users.last_name AS lastName,
 				users.first_name AS firstName,
 				users.email AS email,
