@@ -739,4 +739,6 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
 	<message key="manager.statistics.reports.filters.byLocation.description">Affiner les résultats par pays, région et/ou ville.</message>
 	<message key="manager.subscriptions.form.dateRemindedBefore">Rappel d'expiration prochaine envoyé</message>
 	<message key="manager.subscriptions.form.dateRemindedAfter">Rappel que la date d'expiration est dépassé, envoyé</message>
+	<message key="manager.statistics.reports.optionalColumns.description">Les items en italique et précédés d'un * représentent des mesures qui sont optionnelles. L'existence de ces mesures dépend de la configuration de votre plugiciel de statistiques.</message>
+	<message key="manager.statistics.reports.yesterday">Hier</message>
 </locale>
