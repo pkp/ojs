@@ -43,24 +43,33 @@ class ReviewerReportsDAO extends DAO {
 		$commentsReturner = new DBRowIterator($result);
 
 		$result =& $this->retrieve(
-			'SELECT r.round AS round,
-				COALESCE(asl.setting_value, aspl.setting_value) AS article,				
-				a.article_id AS articleId,				
-				CASE a.status WHEN "4" THEN "Rejected" WHEN "3" THEN "Published" WHEN "1" THEN "Pending" WHEN "0" THEN "Archived" ELSE "No Match" END AS articlestatus,
-				u.user_id AS reviewerId,
-				u.username AS reviewer,
-				u.first_name AS firstName,
-				u.middle_name AS middleName,
-				u.last_name AS lastName,
-				u.email AS email
-			FROM	review_assignments r
-				LEFT JOIN articles a ON r.submission_id = a.article_id
-				LEFT JOIN article_settings asl ON (a.article_id=asl.article_id AND asl.locale=? AND asl.setting_name=?)
-				LEFT JOIN article_settings aspl ON (a.article_id=aspl.article_id AND aspl.locale=a.locale AND aspl.setting_name=?),
-				users u
-				LEFT JOIN user_settings usl ON (u.user_id=usl.user_id)
-			WHERE	u.user_id=r.reviewer_id AND a.journal_id= ? and usl.setting_name= ?
-			ORDER BY article',
+//			'SELECT r.round AS round,
+//				COALESCE(asl.setting_value, aspl.setting_value) AS article,				
+//				a.article_id AS articleId,				
+//				CASE a.status WHEN "4" THEN "Rejected" WHEN "3" THEN "Published" WHEN "1" THEN "Pending" WHEN "0" THEN "Archived" ELSE "No Match" END AS articlestatus,
+//				u.user_id AS reviewerId,
+//				u.username AS reviewer,
+//				u.first_name AS firstName,
+//				u.middle_name AS middleName,
+//				u.last_name AS lastName,
+//				u.email AS email
+//			FROM	review_assignments r
+//				LEFT JOIN articles a ON r.submission_id = a.article_id
+//				LEFT JOIN article_settings asl ON (a.article_id=asl.article_id AND asl.locale=? AND asl.setting_name=?)
+//				LEFT JOIN article_settings aspl ON (a.article_id=aspl.article_id AND aspl.locale=a.locale AND aspl.setting_name=?),
+//				users u
+//				LEFT JOIN user_settings usl ON (u.user_id=usl.user_id)
+//			WHERE	u.user_id=r.reviewer_id AND a.journal_id= ? and usl.setting_name= ?
+//			ORDER BY article',           
+			'SELECT articles.user_id AS reviewerId,
+				users.last_name AS lastName,
+				users.first_name AS firstName,
+				users.email AS email,
+				count(*) AS totalReviews
+			FROM review_assignments, articles, users
+			WHERE users.user_id=articles.user_id && review_assignments.submission_id = articles.article_id && articles.journal_id="$journalId" && review_assignments.date_completed !='NULL'
+			GROUP BY articles.user_id
+			ORDER BY count(*) desc',                       
 			array(
 				$locale, // Article title
 				'title',
