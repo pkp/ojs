@@ -78,7 +78,7 @@ class ReviewerReportsPlugin extends ReportPlugin {
 		$recommendations = ReviewAssignment::getReviewerRecommendationOptions();
 
 		$columns = array(
-			'reviewerid' => Locale::translate('plugins.reports.reviewers.reviewerId'),
+			'reviewerId' => Locale::translate('plugins.reports.reviewers.reviewerId'),
 			'reviewer' => Locale::translate('plugins.reports.reviews.reviewer'),
 			'firstname' => Locale::translate('user.firstName'),
 			'middlename' => Locale::translate('user.middleName'),
