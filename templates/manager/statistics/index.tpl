@@ -37,8 +37,8 @@
 	{/if}
 	
 {/foreach}
-  <li><a href="">Reviewers: Total Completed Reviews, by Reviewer</a></li>
-  <li><a href="">Reviewer Ratings</a></li>
+  <li>&#187; <a href="">Reviewers: Total Completed Reviews, by Reviewer</a></li>
+  <li>&#187; <a href="">Average Reviewer Ratings</a></li>
 </ul>
 </div>
 {include file="common/footer.tpl"}
