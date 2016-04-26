@@ -78,11 +78,11 @@ class ReviewerReportsPlugin extends ReportPlugin {
 		$recommendations = ReviewAssignment::getReviewerRecommendationOptions();
 
 		$columns = array(
-			'reviewerId' => Locale::translate('plugins.reports.reviewers.reviewerId'),
-			'lastName' => Locale::translate('user.lastName'),
-			'firstName' => Locale::translate('user.firstName'),
+			'reviewerid' => Locale::translate('plugins.reports.reviewers.reviewerId'),
+			'lastname' => Locale::translate('user.lastName'),
+			'firstname' => Locale::translate('user.firstName'),
 			'email' =>Locale::translate('user.email'),
-			'totalReviews' => Locale::translate('plugins.reports.reviewers.totalReviews')         
+			'totalreviews' => Locale::translate('plugins.reports.reviewers.totalReviews')         
 		);
 		$yesNoArray = array('declined', 'cancelled');
 
