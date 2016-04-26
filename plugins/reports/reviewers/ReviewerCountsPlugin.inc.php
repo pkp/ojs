@@ -60,17 +60,8 @@ class ReviewerCountsPlugin extends ReportPlugin {
 		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
 
 		$reviewerCountsDao =& DAORegistry::getDAO('ReviewerCountsDAO');
-//		list($commentsIterator, $reviewsIterator) = $reviewReportsDao->getReviewerReports($journal->getId());
 		$reviewerIterator = $reviewerCountsDao->getReviewerCounts($journal->getId());
 
-//		$comments = array();
-//		while ($row =& $commentsIterator->next()) {
-//			if (isset($comments[$row['article_id']][$row['author_id']])) {
-//				$comments[$row['article_id']][$row['author_id']] .= "; " . $row['comments'];
-//			} else {
-//				$comments[$row['article_id']][$row['author_id']] = $row['comments'];
-//			}
-//		}
 
 		$yesnoMessages = array( 0 => Locale::translate('common.no'), 1 => Locale::translate('common.yes'));
 
