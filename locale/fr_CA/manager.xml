@@ -689,7 +689,7 @@
 	<message key="manager.setup.includeLicense">Afficher la licence avec l'oeuvre diffusée.</message>
 	<message key="manager.setup.resetPermissions">Réinitialiser les autorisations de l'article</message>
 	<message key="manager.setup.resetPermissions.description">La mention de droit d'auteur et l'information sur la licence seront attachées au contenu diffusé de façon permanente, afin d'assurer que les données restent telles quelles dans le cas d'un changement des politiques pour les nouvelles soumissions. Pour réinitialiser les autorisations stockées qui sont déjà attachées au contenu diffusé, utilisez le bouton ci-dessous.</message>
-	<message key="manager.setup.confirmResetLicense">Êtes-vous sûr de vouloir réinitialiser la licence et les informations de droits d'auteur attachés au contenu diffusé pour la licence paramétrée dans la configuration de la revue ?</message>
+	<message key="manager.setup.confirmResetLicense">Êtes-vous sûr de vouloir réinitialiser la licence et les informations de droits d'auteur attachés au contenu diffusé pour la licence paramétrée dans la configuration de la revue?</message>
 	<message key="manager.setup.confirmResetLicenseChanged">Vous avez changé la licence et les informations du droit d'auteur dans la configuration de la revue. Veuillez enregistrer les changements apportés avant de réinitialiser les autorisations.</message>
 	<message key="manager.setup.copyrightYearBasis">Baser l'année de mention de droit d'auteur du nouvel article sur</message>
 	<message key="manager.setup.copyrightYearBasis.Article">L'année par défaut sera prise de la date de publication de l'article, comme dans "publish-as-you-go".</message>
