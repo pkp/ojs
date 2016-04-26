@@ -61,4 +61,12 @@
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Ce que vous voyez est l'aperçu d'un DOI qui risque d'être incomplet. Un DOI n'a pas encore été généré. Publier ce numéro et regarder la page publique {$pubObjectType} générera automatiquement un DOI unique pour {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Ce DOI est déjà utilisé par un autre élément publié. Veuillez entrer un suffixe DOI unique pour chaque élément.</message>
 	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>NOTE:</strong> Lorsque vous utilisez les DOI de <a href="http://www.crossref.org" target="_new">CrossRef</a> veuillez sélectionner les articles. L'article est vu comme une oeuvre, ex. entité du contenu intellectuel et artistique. Par conséquent, l'article est l'objet de diffusion sur lequel est basé l'outil d'export/enregistrement des DOI de Crossref.]]></message>
+	<message key="plugins.pubIds.doi.editor.doi.issueObjects">Envoi des dépôts au PLN en cours.</message>
+	<message key="plugins.pubIds.doi.editor.excludePubObject">Passerelle PLN</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign">Réassigner DOI</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign.description">Cochez cette case pour supprimer le DOI existant pour cet {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi">Exclure tous les objets du numéro.</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi.description">Utilisez ce bouton pour exclure tous les objets (articles, épreuves et autres fichiers) actuellement prévus pour ce numéro de l'assignation d'un DOI. Notez que cela ne concerne pas les objets ajoutés/prévus plus tard. Vous aurez toujours la possibilité d'utiliser les options d'exclusion de ces objets par la suite.</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Supprimer les DOI des objets du numéro.</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Utilisez ce bouton pour supprimer les DOI de tous les objets (articles, épreuves et autres fichiers) actuellement prévus pour ce numéro.</message>
 </locale>
