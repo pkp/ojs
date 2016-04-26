@@ -71,7 +71,7 @@ class ReviewerReportsDAO extends DAO {
 			GROUP BY articles.user_id
 			ORDER BY count(*) desc',                       
 			array(
-				$journalId,
+				$journalId
 			)
 		);
 		$reviewerReturner = new DBRowIterator($result);
