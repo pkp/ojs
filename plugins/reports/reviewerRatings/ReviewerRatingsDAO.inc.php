@@ -34,11 +34,12 @@ class ReviewerRatingsDAO extends DAO {
 				users.last_name AS lastname,
 				users.first_name AS firstname,
 				users.email AS email,
+				ROUND(AVG(review_assignments.quality,1) AS averageRating,
 				count(*) AS totalreviews
 			FROM review_assignments, articles, users
 			WHERE users.user_id=articles.user_id && review_assignments.submission_id = articles.article_id && articles.journal_id=? && review_assignments.date_completed !="NULL"
 			GROUP BY articles.user_id
-			ORDER BY count(*) desc',                       
+			ORDER BY averageRating desc',                       
 			array(
 				$journalId
 			)

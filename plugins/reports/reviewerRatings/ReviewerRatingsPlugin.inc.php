@@ -73,7 +73,8 @@ class ReviewerRatingsPlugin extends ReportPlugin {
 			'lastname' => Locale::translate('user.lastName'),
 			'firstname' => Locale::translate('user.firstName'),
 			'email' =>Locale::translate('user.email'),
-			'totalreviews' => Locale::translate('plugins.reports.reviewers.totalReviews')         
+			'totalreviews' => Locale::translate('plugins.reports.reviewers.totalReviews'),
+			'averagerating' => Locale::translate('plugins.reports.reviewers.averageRating'),            
 		);
 		$yesNoArray = array('declined', 'cancelled');
 
