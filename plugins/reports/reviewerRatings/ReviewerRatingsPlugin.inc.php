@@ -45,11 +45,11 @@ class ReviewerRatingsPlugin extends ReportPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.reports.reviewers.displayName');
+		return Locale::translate('plugins.reports.reviewerRatings.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.reports.reviewers.description');
+		return Locale::translate('plugins.reports.reviewerRatings.description');
 	}
 
 	function display(&$args) {
