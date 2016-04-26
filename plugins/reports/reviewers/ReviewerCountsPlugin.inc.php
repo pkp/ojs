@@ -1,23 +1,23 @@
 <?php
 
 /**
- * @file ReviewerReportsPlugin.inc.php
+ * @file ReviewerCountsPlugin.inc.php
  *
  * Copyright (c) 2003-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  * 
- * @class ReviewerReportsPlugin
+ * @class ReviewerCountsPlugin
  * @ingroup plugins_reports_reviewer
- * @see ReviewerReportsDAO
+ * @see ReviewerCountsDAO
  *
- * @brief Reviewer reports plugin
+ * @brief Reviewer counts plugin
  */
 
 //$Id$
 
 import('classes.plugins.ReportPlugin');
 
-class ReviewerReportsPlugin extends ReportPlugin {
+class ReviewerCountsPlugin extends ReportPlugin {
 	/**
 	 * Called as a plugin is registered to the registry
 	 * @param $category String Name of category plugin was registered to
@@ -27,9 +27,9 @@ class ReviewerReportsPlugin extends ReportPlugin {
 	function register($category, $path) {
 		$success = parent::register($category, $path);
 		if ($success) {
-			$this->import('ReviewerReportsDAO');
-			$reviewerReportsDAO = new ReviewerReportsDAO();
-			DAORegistry::registerDAO('ReviewerReportsDAO', $reviewerReportsDAO);
+			$this->import('ReviewerCountsDAO');
+			$reviewerCountsDAO = new ReviewerCountsDAO();
+			DAORegistry::registerDAO('ReviewerCountsDAO', $reviewerCountsDAO);
 		}
 		$this->addLocaleData();
 		return $success;
@@ -41,7 +41,7 @@ class ReviewerReportsPlugin extends ReportPlugin {
 	 * @return String name of plugin
 	 */
 	function getName() {
-		return 'ReviewerReportsPlugin';
+		return 'ReviewerCountsPlugin';
 	}
 
 	function getDisplayName() {
@@ -59,9 +59,9 @@ class ReviewerReportsPlugin extends ReportPlugin {
 		header('content-disposition: attachment; filename=reviews-' . date('Ymd') . '.csv');
 		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
 
-		$reviewerReportsDao =& DAORegistry::getDAO('ReviewerReportsDAO');
+		$reviewerCountsDao =& DAORegistry::getDAO('ReviewerCountsDAO');
 //		list($commentsIterator, $reviewsIterator) = $reviewReportsDao->getReviewerReports($journal->getId());
-		$reviewerIterator = $reviewerReportsDao->getReviewerReports($journal->getId());
+		$reviewerIterator = $reviewerCountsDao->getReviewerCounts($journal->getId());
 
 //		$comments = array();
 //		while ($row =& $commentsIterator->next()) {

@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @file ReviewerReportsDAO.inc.php
+ * @file ReviewerCountsDAO.inc.php
  *
  * Copyright (c) 2003-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  * 
- * @class ReviewerReportsDAO
+ * @class ReviewerCountsDAO
  * @ingroup plugins_reports_reviewer
- * @see ReviewerReportsPlugin
+ * @see ReviewerCountsPlugin
  *
  * @brief Review report DAO
  */
@@ -19,13 +19,13 @@
 import('classes.article.ArticleComment');
 import('lib.pkp.classes.db.DBRowIterator');
 
-class ReviewerReportsDAO extends DAO {
+class ReviewerCountsDAO extends DAO {
 	/**
 	 * Get the reviewer report data.
 	 * @param $journalId int
 	 * @return array
 	 */
-	function getReviewerReports($journalId) {
+	function getReviewerCounts($journalId) {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
 
