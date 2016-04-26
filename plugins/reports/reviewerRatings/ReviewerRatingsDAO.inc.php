@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @file ReviewerCountsDAO.inc.php
+ * @file ReviewerRatingsDAO.inc.php
  *
  * Copyright (c) 2003-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  * 
- * @class ReviewerCountsDAO
+ * @class ReviewerRatingsDAO
  * @ingroup plugins_reports_reviewer
- * @see ReviewerCountsPlugin
+ * @see ReviewerRatingsPlugin
  *
  * @brief Review report DAO
  */
@@ -25,7 +25,7 @@ class ReviewerCountsDAO extends DAO {
 	 * @param $journalId int
 	 * @return array
 	 */
-	function getReviewerCounts($journalId) {
+	function getReviewerRatings($journalId) {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
 
