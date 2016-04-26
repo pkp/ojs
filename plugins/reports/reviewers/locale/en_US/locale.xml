@@ -13,7 +13,7 @@
   -->
 
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.reports.reviewers.displayName">Reviewer Reports</message>
+	<message key="plugins.reports.reviewers.displayName">Total Completed Reviews by Reviewer</message>
 	<message key="plugins.reports.reviewers.description">This plugin implements a CSV report containing a list of reviewers and their total completed reviews for a journal.</message>
 	<message key="plugins.reports.reviewers.reviewerId">Reviewer ID</message>
 	<message key="plugins.reports.reviewers.totalReviews">Total Reviews Completed</message>
