@@ -29,18 +29,18 @@ class ReviewerReportsDAO extends DAO {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
 
-		$result =& $this->retrieve(
-			'SELECT	article_id,
-				comments,
-				author_id
-			FROM	article_comments
-			WHERE	comment_type = ?',
-			array(
-				COMMENT_TYPE_PEER_REVIEW
-			)
-		);
-		import('lib.pkp.classes.db.DBRowIterator');
-		$commentsReturner = new DBRowIterator($result);
+//		$result =& $this->retrieve(
+//			'SELECT	article_id,
+//				comments,
+//				author_id
+//			FROM	article_comments
+//			WHERE	comment_type = ?',
+//			array(
+//				COMMENT_TYPE_PEER_REVIEW
+//			)
+//		);
+//		import('lib.pkp.classes.db.DBRowIterator');
+//		$commentsReturner = new DBRowIterator($result);
 
 		$result =& $this->retrieve(
 //			'SELECT r.round AS round,
@@ -67,15 +67,11 @@ class ReviewerReportsDAO extends DAO {
 				users.email AS email,
 				count(*) AS totalReviews
 			FROM review_assignments, articles, users
-			WHERE users.user_id=articles.user_id && review_assignments.submission_id = articles.article_id && articles.journal_id="$journalId" && review_assignments.date_completed !="NULL"
+			WHERE users.user_id=articles.user_id && review_assignments.submission_id = articles.article_id && articles.journal_id=? && review_assignments.date_completed !="NULL"
 			GROUP BY articles.user_id
 			ORDER BY count(*) desc',                       
 			array(
-				$locale, // Article title
-				//'title',
-				//'title',
 				$journalId,
-//				'affiliation'
 			)
 		);
 		$reviewerReturner = new DBRowIterator($result);
