@@ -19,7 +19,7 @@
 import('classes.article.ArticleComment');
 import('lib.pkp.classes.db.DBRowIterator');
 
-class ReviewerCountsDAO extends DAO {
+class ReviewerRatingsDAO extends DAO {
 	/**
 	 * Get the reviewer report data.
 	 * @param $journalId int
