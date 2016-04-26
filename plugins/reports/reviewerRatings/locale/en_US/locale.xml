@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.reports.reviewers.displayName">Total Completed Reviews by Reviewer</message>
+	<message key="plugins.reports.reviewers.description">This plugin implements a CSV report containing a list of reviewers and their total completed reviews for a journal.</message>
+	<message key="plugins.reports.reviewers.reviewerId">Reviewer ID</message>
+	<message key="plugins.reports.reviewers.totalReviews">Total Reviews Completed</message>
+</locale>
+

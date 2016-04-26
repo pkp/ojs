@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pt_BR locale.
+  *
+  * $Id$
+  -->
+
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<message key="plugins.reports.reviews.displayName">Relatórios de avaliação</message>
+	<message key="plugins.reports.reviews.description">Este plugin implementa um relatório no formato CSV (planilha eletrônica) contendo a lista de tarefas de avaliação para uma revista.</message>
+	<message key="plugins.reports.reviews.round">Rodada</message>
+	<message key="plugins.reports.reviews.reviewerId">ID do avaliador</message>
+	<message key="plugins.reports.reviews.reviewer">Avaliador</message>
+	<message key="plugins.reports.reviews.dateAssigned">Solicitação</message>
+	<message key="plugins.reports.reviews.dateNotified">Notificação</message>
+	<message key="plugins.reports.reviews.dateConfirmed">Confirmação de disponibilidade</message>
+	<message key="plugins.reports.reviews.dateCompleted">Conclusão</message>
+	<message key="plugins.reports.reviews.dateReminded">Lembrete</message>
+</locale>
