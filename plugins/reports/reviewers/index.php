@@ -17,8 +17,8 @@
 
 //$Id$
 
-require_once('ReviewerReportsPlugin.inc.php');
+require_once('ReviewerCountsPlugin.inc.php');
 
-return new ReviewerReportsPlugin();
+return new ReviewerCountsPlugin();
 
 ?>
