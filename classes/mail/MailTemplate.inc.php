@@ -87,16 +87,16 @@ class MailTemplate extends PKPMailTemplate {
 		// Default "From" to user if available, otherwise site/journal principal contact
 		$user =& Request::getUser();
 		if ($user) {
-			$this->setReplyTo($user->getEmail(), $user->getFullName());
-		}
-		if (is_null($journal) || is_null($journal->getSetting('contactEmail'))) {
-			$site =& Request::getSite();
-			$this->setFrom($site->getLocalizedContactEmail(), $site->getLocalizedContactName());
-
+			$this->setFrom($user->getEmail(), $user->getFullName());
 		} else {
-			$this->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
-		}
+			if (is_null($journal) || is_null($journal->getSetting('contactEmail'))) {
+				$site =& Request::getSite();
+				$this->setFrom($site->getLocalizedContactEmail(), $site->getLocalizedContactName());
 
+			} else {
+				$this->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+			}
+		}
 		if ($journal && !Request::getUserVar('continued')) {
 			$this->setSubject('[' . $journal->getLocalizedSetting('initials') . '] ' . $this->getSubject());
 		}
