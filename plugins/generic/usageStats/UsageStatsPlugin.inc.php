@@ -24,6 +24,35 @@ class UsageStatsPlugin extends PKPUsageStatsPlugin {
 	function UsageStatsPlugin() {
 		parent::PKPUsageStatsPlugin();
 	}
+
+	/**
+	 * Get the template path where the statistics should be displayed.
+	 * @return string
+	 */
+	function getStatisticsDisplayTemplate() {
+		return 'frontend/pages/article.tpl';
+	}
+
+	/**
+	 * Get the hook that should be used for the statistics display.
+	 * @return string
+	 */
+	function getStatisticsDisplayTemplateHook() {
+		return 'Templates::Article::Main';
+	}
+
+	/**
+	 * Get the publication object ID (from the template)
+	 * the statistics should be displayed for.
+	 * @param $smarty TemplateManager
+	 * @return integer
+	 */
+	function getPubObjectId($smarty) {
+		$pubObject =& $smarty->get_template_vars('article');
+		assert(is_a($pubObject, 'PublishedArticle'));
+		$pubObjectId = $pubObject->getId();
+		return $pubObjectId;
+	}
 }
 
 ?>
