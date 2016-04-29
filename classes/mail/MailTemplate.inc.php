@@ -88,15 +88,14 @@ class MailTemplate extends PKPMailTemplate {
 		$user =& Request::getUser();
 		if ($user) {
 			$this->setFrom($user->getEmail(), $user->getFullName());
-		} else {
-			if (is_null($journal) || is_null($journal->getSetting('contactEmail'))) {
-				$site =& Request::getSite();
-				$this->setFrom($site->getLocalizedContactEmail(), $site->getLocalizedContactName());
+		} elseif (is_null($journal) || is_null($journal->getSetting('contactEmail'))) {
+			$site =& Request::getSite();
+			$this->setFrom($site->getLocalizedContactEmail(), $site->getLocalizedContactName());
 
-			} else {
-				$this->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
-			}
+		} else {
+			$this->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		}
+
 		if ($journal && !Request::getUserVar('continued')) {
 			$this->setSubject('[' . $journal->getLocalizedSetting('initials') . '] ' . $this->getSubject());
 		}
@@ -145,24 +144,16 @@ class MailTemplate extends PKPMailTemplate {
 	 */
 	function send($clearAttachments = true) {
 		if (isset($this->journal)) {
-			//If {$templateSignature} and/or {$templateHeader}
-			// exist in the body of the message, replace them with
-			// the journal signature; otherwise just pre/append
-			// them. This is here to accomodate MIME-encoded
-			// messages or other cases where the signature cannot
-			// just be appended.
-			$header = $this->journal->getSetting('emailHeader');
-			if (strstr($this->getBody(), '{$templateHeader}') === false) {
-				$this->setBody($header . "\n" . $this->getBody());
+			//If {$templateSignature} exists in the body of the
+			// message, replace it with the journal signature;
+			// otherwise just append it. This is here to
+			// accomodate MIME-encoded messages or other cases
+			// where the signature cannot just be appended.
+			$searchString = '{$templateSignature}';
+			if (strstr($this->getBody(), $searchString) === false) {
+				$this->setBody($this->getBody() . "\n" . $this->journal->getSetting('emailSignature'));
 			} else {
-				$this->setBody(str_replace('{$templateHeader}', $header, $this->getBody()));
-			}
-
-			$signature = $this->journal->getSetting('emailSignature');
-			if (strstr($this->getBody(), '{$templateSignature}') === false) {
-				$this->setBody($this->getBody() . "\n" . $signature);
-			} else {
-				$this->setBody(str_replace('{$templateSignature}', $signature, $this->getBody()));
+				$this->setBody(str_replace($searchString, $this->journal->getSetting('emailSignature'), $this->getBody()));
 			}
 
 			$envelopeSender = $this->journal->getSetting('envelopeSender');

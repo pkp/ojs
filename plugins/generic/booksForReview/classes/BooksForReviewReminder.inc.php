@@ -48,7 +48,7 @@ class BooksForReviewReminder extends ScheduledTask {
 		import('classes.mail.MailTemplate');
 		$mail = new MailTemplate($emailKey);
 
-		$mail->setReplyTo($book->getEditorEmail(), $book->getEditorFullName());
+		$mail->setFrom($book->getEditorEmail(), $book->getEditorFullName());
 		$mail->addRecipient($book->getUserEmail(), $book->getUserFullName());
 		$mail->setSubject($mail->getSubject($journal->getPrimaryLocale()));
 		$mail->setBody($mail->getBody($journal->getPrimaryLocale()));

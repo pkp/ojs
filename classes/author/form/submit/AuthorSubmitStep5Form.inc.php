@@ -181,14 +181,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		// Send author notification email
 		import('classes.mail.ArticleMailTemplate');
 		$mail = new ArticleMailTemplate($article, 'SUBMISSION_ACK', null, null, null, false);
-
-		if (is_null($journal->getSetting('contactEmail'))) {
-			$site =& Request::getSite();
-			$mail->setFrom($site->getLocalizedContactEmail(), $site->getLocalizedContactName());
-		} else {
-			$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
-		}
-
+		$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		if ($mail->isEnabled()) {
 			$mail->addRecipient($user->getEmail(), $user->getFullName());
 			// If necessary, BCC the acknowledgement to someone.

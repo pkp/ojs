@@ -336,7 +336,7 @@ class RegistrationForm extends Form {
 
 				// Send email validation request to user
 				$mail = new MailTemplate('USER_VALIDATE');
-				$mail->setReplyTo(null);
+				$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 				$mail->assignParams(array(
 					'userFullName' => $user->getFullName(),
 					'activateUrl' => Request::url($journal->getPath(), 'user', 'activateUser', array($this->getData('username'), $accessKey))
@@ -348,7 +348,7 @@ class RegistrationForm extends Form {
 			if ($this->getData('sendPassword')) {
 				// Send welcome email to user
 				$mail = new MailTemplate('USER_REGISTER');
-				$mail->setReplyTo(null);
+				$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 				$mail->assignParams(array(
 					'username' => $this->getData('username'),
 					'password' => String::substr($this->getData('password'), 0, 30), // Prevent mailer abuse via long passwords
