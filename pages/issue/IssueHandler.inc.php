@@ -446,6 +446,7 @@ class IssueHandler extends Handler {
 				$templateMgr->assign('height', $issue->getHeight($coverLocale));
 				$templateMgr->assign('coverPageAltText', $issue->getCoverPageAltText($coverLocale));
 				$templateMgr->assign('originalFileName', $issue->getOriginalFileName($coverLocale));
+				$templateMgr->assign('coverLocale', $coverLocale);
 
 				$showToc = false;
 			} else {
