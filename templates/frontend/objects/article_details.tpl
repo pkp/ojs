@@ -100,6 +100,17 @@
 
 		<div class="entry_details">
 
+			{* Issue cover image *}
+			{if $issue->getLocalizedFileName()}
+				<div class="item cover_image">
+					<div class="sub_item">
+						<a href="{url page="issue" op="view" path=$issue->getBestIssueId($currentJournal)}">
+							<img src="{$publicFilesDir}/{$issue->getLocalizedFileName()|escape}" alt="{$issue->getLocalizedOriginalFileName()|escape}">
+						</a>
+					</div>
+				</div>
+			{/if}
+
 			{* Article Galleys *}
 			{if $article->getGalleys()}
 				<div class="item galleys">
@@ -110,21 +121,6 @@
 							</li>
 						{/foreach}
 					</ul>
-				</div>
-			{/if}
-
-			{* Keywords *}
-			{* @todo keywords not yet implemented *}
-
-			{* Article Subject *}
-			{if $article->getLocalizedSubject()}
-				<div class="item subject">
-					<h3 class="label">
-						{translate key="article.subject"}
-					</h3>
-					<div class="value">
-						{$article->getLocalizedSubject()|escape}
-					</div>
 				</div>
 			{/if}
 
@@ -152,6 +148,21 @@
 					</div>
 				{/if}
 			</div>
+
+			{* Keywords *}
+			{* @todo keywords not yet implemented *}
+
+			{* Article Subject *}
+			{if $article->getLocalizedSubject()}
+				<div class="item subject">
+					<h3 class="label">
+						{translate key="article.subject"}
+					</h3>
+					<div class="value">
+						{$article->getLocalizedSubject()|escape}
+					</div>
+				</div>
+			{/if}
 
 			{* Citations *}
 			{* @todo this hasn't been tested or styled *}

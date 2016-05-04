@@ -25,7 +25,6 @@
 			</a>
 		</div>
 	{/if}
-	{call_hook name="Templates::Issue::Issue::ArticleCoverImage"}
 
 	<div class="title">
 		<a href="{url page="article" op="view" path=$articlePath}">
@@ -50,8 +49,8 @@
 	</div>
 	{/if}
 
-	<ul class="galleys_links">
-		{if $hasAccess || $showGalleyLinks}
+	{if $hasAccess || $showGalleyLinks}
+		<ul class="galleys_links">
 			{foreach from=$article->getGalleys() item=galley}
 				<li>
 					{assign var="hasArticleAccess" value=$hasAccess}
@@ -61,8 +60,8 @@
 					{include file="frontend/objects/galley_link.tpl" parent=$article hasAccess=$hasArticleAccess}
 				</li>
 			{/foreach}
-		{/if}
-	</ul>
+		</ul>
+	{/if}
 
 	{call_hook name="Templates::Issue::Issue::Article"}
 </div>
