@@ -36,4 +36,40 @@
 	
 	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
 	<message key="plugins.reports.usageStats.metricType.full">Statistiques Open Journal Systems (COUNTER prêt)</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Options de confidentialité des données</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath">Chemin du fichier de salage</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath.invalid">Le fichier de salage n'est pas accessible en écriture</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements">Pour assurer la confidentialité des données, vous devez créer un fichier accessible en lecture et écriture par l'utilisateur web et contenant un salage généré aléatoirement. Afin d'assurer la confidentialité, ce fichier ne doit pas être archivé. Le salage est généré en utilisant une des techniques suivantes: la fonction mcrypt_create_iv, qui nécessite le module PHP mcrypt; la fonction openssl_random_pseudo_bytes, qui nécessite le module PHP openssl; le fichier /dev/urandom, qui ne fonctionne qu'avec les systèmes *nix; ou la fonction mt_rand, qui n'est cryptographiquement sécuritaire. Si vous utilisez un serveur Windows, assurez-vous d'installer le module mcrypt ou openssl afin d'obtenir un  salage cryptographiquement sécuritaire.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Activez cette option pour utiliser une version du plugiciel qui respecte qui est plus soucieuse du droit à la viie privée. Cette version chiffre les adresses IP avant de les journaliser, informe l'utilisateur des modalités de pistage et lui permet de ne pas être pisté.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requiresSalt">Un fichier de salage est nécessaire pour assurer la confidentialité des données.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesCity">Le champ « Ville » est obligatoire lorsque la confidentialité des données est activée</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesRegion">Le champ « Région » est obligatoire lorsque la confidentialité des données est activée</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Activer la confidentialité des données</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns">Statistiques optionnelles</message>
+	<message key="plugins.generic.usageStats.settings.archives">Archives</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives.description">Activer cette option afin de compresser les journaux archivés avec gzip (vous devrez configurer gzip dans le fichier config.inc.php). La compression vous permettra d'économiser de l'espace disque si votre site connaît un grand achalandage.</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives">Compresser les archives</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.description">Activer ou désactiver les mesures optionnelles suivante. Le choix des mesures aura un impact sur les rapports que vous pourrez générer et sur la taille de la base de données. NE PAS MODIFIER, à moins de savoir exactement ce que vous faites.</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.cityRequiresRegion">Le champ optionnel « Ville » nécessite le champ optionnel « Région »</message>
+	<message key="plugins.reports.usageStats.optout.displayName">Information sur la confidentialité des statistiques d'usages</message>
+	<message key="plugins.reports.usageStats.optout.description">Information sur la confidentialité des statistiques d'usages</message>
+	<message key="plugins.generic.usageStats.optout.title">Information sur les statistiques d'usages</message>
+	<message key="plugins.generic.usageStats.optout.shortDesc"><![CDATA[Nous enregistrons, de manière confidentielle et anonyme, des statistiques sur l'usage du site. Veuillez consulter les <a href="{$privacyInfo}">informations relatives à la protection de la vie privée</a> pour obtenir plus de détails.]]></message>
+	<message key="plugins.generic.usageStats.optout.description"><![CDATA[<h3>Information relatives à la protection de la vie privée</h3>
+		<p>Veuillez vous référer à notre <a href="{$privacyStatementUrl}">politique de confidentialité</a>.</p>
+		<h3>Statistiques sur les usages</h3>
+		<p>Afin d'analyser l'utilisation et l'impact de notre revue et de ses articles,  nous mesurons et enregistrons les accès à la page d'accueil de la revue, aux sommaires de numéros, aux articles et aux téléchargements. Toute information est enregistrée de manière anonyme. Aucune information personnelle ou permettant d'identifier un utilisateur n'est conservée. Les adresses IP sont anonymisées en était hachées avec <em>SHA 256</em> en utilisant un <em>salage sécuritaire de 64 caractères</em> qui est <em>re-généré aléatoirement à chaque jour</em>. Ainsi, il est impossible de reconstruire les adresses IP une fois qu'elles ont été hachées.</p>
+		<p>L'information suivante est enregistrée et associée aux adresses IP anonymisées:</p>
+		<ul>
+		<li>Type d'accès</li>
+		<li>Heure de la requête</li>
+		<li>Ressource demandée</li>
+		<li>Code de la réponse HTTP</li>
+		<li>Navigateur</li>
+		</ul>
+		<p>Les mesures sont enregistrées dans le seul but d'évaluer la qualité du service. À aucun moment une adresse IP est associée à un compte utilisateur. Il est impossible d'associer quelque mesure que ce soit à une adresse IP particulière.</p>]]></message>
+	<message key="plugins.generic.usageStats.optout.done"><![CDATA[<p>Vous avez choisi de vous retirer de la collecte de statistiques d'utilisation. La présence de ce message confirme qu'aucune mesure de votre utilisation du site ne sera prise. Cliquez sur le bouton ci-bas pour revenir sur votre décision.</p>]]></message>
+	<message key="plugins.generic.usageStats.optin">Option d'adhésion</message>
+	<message key="plugins.generic.usageStats.optout">Se retirer</message>
+	<message key="plugins.generic.usageStats.optout.cookie"><![CDATA[<p>Si vous le souhaitez, vous pouvez vous retirer de la collecte des données. En cliquant sur le bouton « Se retirer », vous pouvez refuser de participer à la collecte des données. Lorsque vous cliquez sur le bouton « Se retirer », cette décision est enregistrée dans votre système avec un cookie. Si, en raison de la configuration des options de confidentialité dans votre navigateur, les cookies sont supprimés automatiquement, vous devrer vous retirer de nouveau lors de votre prochaine consultation de cette revue. Le cookie n'est valide que pour un seul navigateur. Si vous utilisez un autre navigateur, vous devez vous retirer de nouveau. Aucune information permettant de vous identifier n'est enregistrée avec ce cookie. Ce cookie expirera un an après la date de votre dernier accès au site de la revue.</p>]]></message>
 </locale>
