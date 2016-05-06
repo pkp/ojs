@@ -184,4 +184,8 @@ ________________________________________________________________________<br/>]]>
 	<message key="default.genres.dataAnalysis">Data Analysis</message>
 	<message key="default.genres.dataSet">Data Set</message>
 	<message key="default.genres.sourceTexts">Source Texts</message>
+
+	<message key="default.groups.name.externalReviewer">Reviewer</message>
+	<message key="default.groups.plural.externalReviewer">Reviewers</message>
+	<message key="default.groups.abbrev.externalReviewer">R</message>
 </locale>
