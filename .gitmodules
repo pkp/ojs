@@ -21,4 +21,4 @@
 	url = https://github.com/asmecher/lensGalley
 [submodule "docs/manual"]
 	path = docs/manual
-	url = https://github.com/pkp/ojs-user-manual
+	url = https://github.com/pkp/ojs-user-guide
