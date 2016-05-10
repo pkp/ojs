@@ -75,7 +75,7 @@ class ReviewReportPlugin extends ReportPlugin {
 
 		$yesnoMessages = array( 0 => __('common.no'), 1 => __('common.yes'));
 
-		import('classes.submission.reviewAssignment.ReviewAssignment');
+		import('lib.pkp.classes.submission.reviewAssignment.ReviewAssignment');
 		$recommendations = array(
 			SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT => 'reviewer.article.decision.accept',
 			SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS => 'reviewer.article.decision.pendingRevisions',

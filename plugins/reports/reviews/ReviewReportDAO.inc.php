@@ -38,6 +38,7 @@ class ReviewReportDAO extends DAO {
 		);
 		import('lib.pkp.classes.db.DBRowIterator');
 		$commentsReturner = new DBRowIterator($result);
+		unset($result);
 
 		$result = $this->retrieve(
 			'SELECT r.round AS round,
@@ -71,6 +72,7 @@ class ReviewReportDAO extends DAO {
 			)
 		);
 		$reviewsReturner = new DBRowIterator($result);
+		unset($result);
 
 		return array($commentsReturner, $reviewsReturner);
 	}
