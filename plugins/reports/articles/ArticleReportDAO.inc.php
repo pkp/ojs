@@ -57,6 +57,7 @@ class ArticleReportDAO extends DAO {
 			)
 		);
 		$articlesReturner = new DBRowIterator($result);
+		unset($result);
 
 		$result = $this->retrieve(
 			'SELECT	MAX(d.date_decided) AS date_decided,
@@ -87,6 +88,7 @@ class ArticleReportDAO extends DAO {
 				)
 			);
 			$decisionsReturner[] = new DBRowIterator($result);
+			unset($result);
 		}
 
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
@@ -128,6 +130,7 @@ class ArticleReportDAO extends DAO {
 			);
 			$authorIterator = new DBRowIterator($result);
 			$authorsReturner[$article->getId()] = $authorIterator;
+			unset($result);
 			$index++;
 		}
 

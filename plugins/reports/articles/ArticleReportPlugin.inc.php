@@ -74,7 +74,7 @@ class ArticleReportPlugin extends ReportPlugin {
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
 
 		import('classes.article.Article');
-		import('classes.classes.workflow.EditorDecisionActionsManager');
+		import('classes.workflow.EditorDecisionActionsManager');
 		$decisionMessages = array(
 			SUBMISSION_EDITOR_DECISION_ACCEPT => __('editor.article.decision.accept'),
 			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => __('editor.article.decision.pendingRevisions'),
