@@ -49,8 +49,5 @@
 
 	{if !$formParams.hideSubmit}
 		{fbvFormButtons id="submissionMetadataFormSubmit" submitText="common.save"}
-	{else}
-		{fbvElement type="button" class="cancelFormButton" id="cancelFormButton" label="common.close"}
 	{/if}
-
 </form>
