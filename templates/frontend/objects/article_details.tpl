@@ -124,6 +124,17 @@
 				</div>
 			{/if}
 
+			{if $article->getDatePublished()}
+				<div class="item published">
+					<div class="label">
+						{translate key="submissions.published"}
+					</div>
+					<div class="value">
+						{$article->getDatePublished()|date_format}
+					</div>
+				</div>
+			{/if}
+
 			{* Issue article appears in *}
 			<div class="item issue">
 				<div class="sub_item">
