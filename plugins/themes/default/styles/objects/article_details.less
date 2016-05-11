@@ -28,6 +28,14 @@
 	.item {
 		padding-top: @double;
 		padding-bottom: @double;
+
+		> *:first-child {
+			margin-top: 0;
+		}
+
+		> *:last-child {
+			margin-bottom: 0;
+		}
 	}
 
 	.sub_item {
@@ -74,6 +82,15 @@
 
 		li {
 			display: inline-block;
+		}
+	}
+
+	.copyright {
+		font-size: @font-sml;
+		line-height: @line-sml;
+
+		a[rel="license"] + p {
+			margin-top: 0;
 		}
 	}
 

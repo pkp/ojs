@@ -10,7 +10,7 @@
  * @uses $article Article This article
  * @uses $issue Issue The issue this article is assigned to
  * @uses $section Section The journal section this article is assigned to
- * @uses $ccLicenseBadge @todo
+ * @uses $journal Journal The journal currently being viewed.
  *}
 {include file="frontend/components/header.tpl" pageTitleTranslated=$article->getLocalizedTitle()|escape}
 
@@ -35,20 +35,6 @@
 	{else}
 		{* Show article overview *}
 		{include file="frontend/objects/article_details.tpl"}
-	{/if}
-
-	{* Copyright and licensing *}
-	{* @todo has not been tested *}
-	{if $currentJournal->getSetting('includeCopyrightStatement')}
-		<div class="article_copyright">
-			{translate key="submission.copyrightStatement" copyrightYear=$article->getCopyrightYear()|escape copyrightHolder=$article->getLocalizedCopyrightHolder()|escape}
-		</div>
-	{/if}
-
-	{if $currentJournal->getSetting('includeLicense') && $ccLicenseBadge}
-		<div class="article_license">
-			{$ccLicenseBadge}
-		</div>
 	{/if}
 
 	{call_hook name="Templates::Article::Footer::PageFooter"}
