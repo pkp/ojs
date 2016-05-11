@@ -77,7 +77,7 @@
 	<message key="admin.mergeUsers.from.description">Select a user (or several) to merge into another user account (e.g., when someone has two user accounts). The account(s) selected first will be deleted and any submissions, assignments, etc. will be attributed to the second account.</message>
 	<message key="admin.mergeUsers.allUsers">All Enrolled Users</message>
 	<message key="admin.mergeUsers.confirm">Are you sure you wish to merge the selected {$oldAccountCount} account(s) into the account with the username "{$newUsername}"? The selected {$oldAccountCount} accounts will not exist afterwards. This action is not reversible.</message>
-	<message key="admin.mergerUsers.noneEnrolled">No enrolled users.</message>
+	<message key="admin.mergeUsers.noneEnrolled">No enrolled users.</message>
 
 	<!-- Categories -->
 	<message key="admin.categories">Categories</message>

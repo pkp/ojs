@@ -57,6 +57,6 @@
 	<message key="admin.mergeUsers.from.description">Seleccione una cuenta de usuario para combinar con otra cuenta de usuario (por ejemplo, si un usuario tiene 2 cuentas). La cuenta selecionada en primer lugar se borrará, pero sus datos (envíos, tareas, ..) se asignarán a la segunda cuenta de usuario.</message>
 	<message key="admin.mergeUsers.allUsers">Todos los usuarios asociados</message>
 	<message key="admin.mergeUsers.confirm">¿Confirma que desea combinar la cuenta de usuario "{$oldUsername}" en la cuenta de usuario "{$newUsername}"? La cuenta de usurio "{$oldUsername}" desaparecerá. Esta acción no es reversible.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Ningún usuario asociado</message>
+	<message key="admin.mergeUsers.noneEnrolled">Ningún usuario asociado</message>
 	<message key="admin.locale.maybeIncomplete">Las localizaciones seleccionadas pueden estar incompletas.</message>
 </locale>

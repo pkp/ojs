@@ -55,7 +55,7 @@
 	<message key="admin.mergeUsers.from.description">別のユーザアカウントにマージするユーザを選択してください（ユーザが2つのアカウントを持っている場合など）。最初に選択したアカウントが削除され、このアカウントによる投稿物、役割などは2番目のアカウントのものになります。</message>
 	<message key="admin.mergeUsers.allUsers">全登録ユーザ</message>
 	<message key="admin.mergeUsers.confirm">ユーザ名 "{$oldUsername}”のアカウントをユーザ名 "{$newUsername}" のアカウントにマージしてもよいですか。今後、ユーザ名 "{$oldUsername}" のアカウントは利用できなくなります。この処理は元に戻すことができません。</message>
-	<message key="admin.mergerUsers.noneEnrolled">登録されたユーザはいません。</message>
+	<message key="admin.mergeUsers.noneEnrolled">登録されたユーザはいません。</message>
 	<message key="admin.journals.redirect">OJS1 URLからOJS2 URLへマッピングするコードを生成</message>
 	<message key="admin.locale.maybeIncomplete">マークのあるロケールは完全ではありません。</message>
 	<message key="admin.systemConfigurationDescription">config.inc.phpに設定されている設定値。</message>

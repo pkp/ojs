@@ -57,6 +57,6 @@
 	<message key="admin.mergeUsers.from.description">Escolha um utilizador para juntar o registo com o de outra conta (quando um utilizador possui duas contas distintas, em vez de acumular funções editoriais). O registo seleccionado primeiro será excluído e as suas submissões e histórico de tarefas atribuídas ao segundo registo escolhido.</message>
 	<message key="admin.mergeUsers.allUsers">Todos os utilizadores</message>
 	<message key="admin.mergeUsers.confirm">Deseja realmente juntar o registo do utilizador "{$oldUsername}" no registo do utilizador "{$newUsername}"? O registo de "{$oldUsername}" será eliminado permanentemente. Esta acção é irreversível!</message>
-	<message key="admin.mergerUsers.noneEnrolled">Nenhum utilizador registado.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Nenhum utilizador registado.</message>
 	<message key="admin.locale.maybeIncomplete">Idiomas marcados podem estar incompletos.</message>
 </locale>

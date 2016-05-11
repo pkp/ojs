@@ -67,5 +67,5 @@
 	<message key="admin.mergeUsers.from.description">Odaberite korisnika kojeg ćete spojiti s drugim korisničkim računom (npr. u slučaju da neki korisnik posjeduje dva korisnička računa). Račun koji prvi odaberete bit će obrisan, a svi njegovi prilogzi, zaduženja itd. bit će pridruženi drugom računu.</message>
 	<message key="admin.mergeUsers.allUsers">Svi evidentirani korisnici</message>
 	<message key="admin.mergeUsers.confirm">Jeste li sigurni da želite spojiti račun korisnika "{$oldUsername}" s računom korisnika "{$newUsername}"? Račun korisničkog imena "{$oldUsername}" više neće postojati nakon toga. Ovo je nepovratna radnja.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Nema evidentiranih korisnika.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Nema evidentiranih korisnika.</message>
 </locale>

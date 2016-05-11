@@ -56,7 +56,7 @@
 	<message key="admin.mergeUsers.from.description">Hautatu erabiltzaile bat beste erabiltzaile-kontu batekin batzeko (adib., bi kontu dituen erabiltzaile bat denean). Lehenengo hautatutako kontua ezabatu egingo da, eta dituen bidalketak, esleipenak, etab. bigarren kontuari egotziko zaizkio.</message>
 	<message key="admin.mergeUsers.allUsers">Inskribatutako erabiltzaile guztiak</message>
 	<message key="admin.mergeUsers.confirm">Ziur zaude "{$oldUsername}" erabiltzaile-izena duen kontua ezabatu eta "{$newUsername}" erabiltzaile-izena duen kontuarekin batu nahi duzula? "{$oldUsername}" kontua galdu egingo da. Ekintza hau ezingo da desegin.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Inskribatutako erabiltzailerik ez.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Inskribatutako erabiltzailerik ez.</message>
 	<message key="admin.locale.maybeIncomplete">Markatutako localeak osatu gabe egon daitezke.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Hauta itzazu locale osagarriak sistema horretarako laguntzailea instalatzeko. Localeak aldizkari ostalariak erabili baino lehen instalatu behar dira. Ikusi OJS-ren dokumentazioa hizkuntza berrientzako laguntzaileak gehitzeari buruzko informazioa eskuratzeko.</message>
 	<message key="admin.settings.options">Aukerak</message>

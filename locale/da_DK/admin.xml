@@ -57,6 +57,6 @@
 	<message key="admin.mergeUsers.from.description">Vælg en bruger, som skal flettes til en anden brugerkonto (f.eks. hvis en person har to brugerkonti). Den først valgte konto slettes, og dens manuskripter, tildelinger osv. tilskrives den anden konto.</message>
 	<message key="admin.mergeUsers.allUsers">Alle tilmeldte brugere</message>
 	<message key="admin.mergeUsers.confirm">Er du sikker på, at du vil flette kontoen med brugernavnet {$oldAccountCount} til kontoen med brugernavnet "{$newUsername}"? Kontoen med brugernavnet {$oldAccountCount} vil derefter ophøre med at eksistere. Denne handling kan ikke fortrydes.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Ingen tilmeldte brugere.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Ingen tilmeldte brugere.</message>
 	<message key="admin.locale.maybeIncomplete">De markerede landestandarder kan være ufuldstændige</message>
 </locale>

@@ -60,7 +60,7 @@
        <message key="admin.mergeUsers.from.description">Оберіть користувача, якого потрібно включити до облікового запису іншого користувача (наприклад, якщо одна особа має два облікові записи). Перший визначений обліковий запис буде видалений, а його подання, редакційні призначення і т.і. будуть асоційовані з другим визначеним обліковим записом.</message>
        <message key="admin.mergeUsers.allUsers">Всі користувачі, які мають ролі</message>
        <message key="admin.mergeUsers.confirm">Ви впевнені, що хочете об'єднати обрані облікові записи ({$oldAccountCount}) у єдиний обліковий запис із іменем користувача "{$newUsername}"? Обрані {$oldAccountCount} облікових записів не будуть надалі існувати окремо. Це незворотна дія.</message>
-       <message key="admin.mergerUsers.noneEnrolled">Немає користувачів, які мають ролі.</message>
+       <message key="admin.mergeUsers.noneEnrolled">Немає користувачів, які мають ролі.</message>
 	<message key="admin.settings.journalsList.showDescription">Опис журналу</message>
 	<message key="admin.categories">Категорії</message>
 	<message key="admin.categories.disableCategories">Не організовувати журнали за категоріями.</message>

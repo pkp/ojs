@@ -62,7 +62,7 @@
 	<message key="admin.mergeUsers.from.description">Seleziona un utente da fondere sull'account di un altro utente (es. quando qualcuno ha due account da utente). L'account selezionato sarà cancellato e le sue submission, gli incarichi ecc. saranno attribuiti al secondo account.</message>
 	<message key="admin.mergeUsers.allUsers">Tutti gli utenti iscritti</message>
 	<message key="admin.mergeUsers.confirm">Sei sicuro di voler fondere {$oldAccountCount} account selezionato(i) con l'account con il nome utente "{$newUsername}"? I vecchi {$oldAccountCount} account non esisteranno più. Questa azione non è reversibile.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Non ci sono utenti iscritti</message>
+	<message key="admin.mergeUsers.noneEnrolled">Non ci sono utenti iscritti</message>
 	<message key="admin.locale.maybeIncomplete">I file marcati potrebbero essere incompleti.</message>
 	<message key="admin.settings.options">Opzioni</message>
 	<message key="admin.settings.journalsList.showThumbnail">Anteprima della rivista</message>

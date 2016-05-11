@@ -57,7 +57,7 @@
 	<message key="admin.mergeUsers.from.description">Escolha um usuário para mesclar o cadastro com o de outra conta (quando um usuário possui duas contas distintas, em vez de acumular papéis editoriais). O cadastro selecionado primeiro será excluído e suas submissões e histórico de tarefas atribuídas ao segundo cadastro escolhido.</message>
 	<message key="admin.mergeUsers.allUsers">Todos os usuários</message>
 	<message key="admin.mergeUsers.confirm">Deseja realmente mesclar os "{$oldAccountCount}" cadastro(s) selecionado(s) no cadastro do usuário "{$newUsername}"? Os "{$oldAccountCount}" serão excluídos permanentemente. Esta ação é irreversível!</message>
-	<message key="admin.mergerUsers.noneEnrolled">Nenhum usuário cadastrado.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Nenhum usuário cadastrado.</message>
 	<message key="admin.locale.maybeIncomplete">Idiomas marcados podem estar incompletos.</message>
 	<message key="admin.settings.options">Opções</message>
 	<message key="admin.settings.usePaging">Para sites com muitas publicações, quebrar a lista em várias páginas.</message>

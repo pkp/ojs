@@ -58,7 +58,7 @@
 	<message key="admin.mergeUsers.from.description">选择一个账户与另外一个账户合并（例如有的用户有2个账户），首先选择的庄户将被删除，与其相关的投稿，角色指派等将并入第二个账户。</message>
 	<message key="admin.mergeUsers.allUsers">所有的注册用户</message>
 	<message key="admin.mergeUsers.confirm">您确认将合并用户名为 "{$oldUsername}" 的帐户到用户名为 "{$newUsername}"的帐户里? 操作后用户名为 "{$oldUsername}"将不再存在. 这个操作不可撤销.</message>
-	<message key="admin.mergerUsers.noneEnrolled">没有登记的用户.</message>
+	<message key="admin.mergeUsers.noneEnrolled">没有登记的用户.</message>
 	<message key="admin.categories.confirmDelete">你确定要删除此类别吗？</message>
 	<message key="admin.categories.name">名称</message>
 	<message key="admin.categories.nameRequired">类别名称不能为空</message>

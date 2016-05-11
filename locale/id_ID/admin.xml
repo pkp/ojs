@@ -57,5 +57,5 @@
 	<message key="admin.mergeUsers.into.description"> Pilih pengguna yang akan menghubungkan kepenulisan pengguna sebelumnya, tugas pengeditan.</message>	<message key="admin.mergeUsers.from.description"> Pilih pengguna (atau beberapa pengguna) untuk digabungkan pada akun pengguna lainnya (contoh, ketika seseorang menggunakan dua akun).</message>	
 <message key="admin.mergeUsers.allUsers"> Semua Pengguna</message>	
 <message key="admin.mergeUsers.confirm"> Apakah Anda menginginkan untuk menggabungkan akun yang diseleksi {$oldAccountCount} akun kedalam akun dengan nama "{$newUsername}"? akun {$oldAccountCount} tidak akan ditampilkan lagi.</message>
-	<message key="admin.mergerUsers.noneEnrolled"> Tidak ada pengguna yang terdaftar.</message> 
+	<message key="admin.mergeUsers.noneEnrolled"> Tidak ada pengguna yang terdaftar.</message> 
 </locale>

@@ -68,5 +68,5 @@
 	<message key="admin.mergeUsers.from.description">Chọn một người dùng để hợp nhất vào một tài khoản người dùng khác (v.d., khi một người có 2 tài khoản. Tài khoản được lựa chọn trước sẽ bị xoá và các bài nộp, bài được giao,... sẽ được chuyển sang tài khoản thứ hai.</message>
 	<message key="admin.mergeUsers.allUsers">Tất cả người dùng đã bổ nhiệm</message>
 	<message key="admin.mergeUsers.confirm">Quý vị có chắc chắn muốn hợp nhất tài khoản có bí danh "{$oldUsername}" vào tài khoản có bí danh "{$newUsername}"? Tài khoản có bí danh "{$oldUsername}" sau đó sẽ không còn tồn tại. Tác vụ này không thể thay đổi lại.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Chưa có người dùng được bổ nhiệm</message>
+	<message key="admin.mergeUsers.noneEnrolled">Chưa có người dùng được bổ nhiệm</message>
 </locale>

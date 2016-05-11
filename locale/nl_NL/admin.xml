@@ -57,7 +57,7 @@
 	<message key="admin.mergeUsers.from.description">Kies de gebruiker wiens gevens overgeheveld moeten worden naar een ander gebruikersaccount (bijvoorbeeld wanneer iemand twee gebruikersaccounts heeft). Het geselceteerde account zal verwijderd worden en alle inzendingen, taken enzovoorts worden overgedragen naar het tweede account.</message>
 	<message key="admin.mergeUsers.allUsers">Alle ingeschreven gebruikers</message>
 	<message key="admin.mergeUsers.confirm">Weet u zeker dat u de geselecteerde {$oldAccountCount} account(s) wilt samenvoegen met gebruikersnaam "{$newUsername}"? de geselecteerde {$oldAccountCount} account(s) bestaan dan niet meer. Deze actie kan niet ongedaan gemaakt worden.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Geen gebruikers.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Geen gebruikers.</message>
 	<message key="admin.locale.maybeIncomplete">De gemarkeerde talen kunnen incompleet zijn.</message>
 	<message key="admin.categories.editTitle">Categorie bewerken</message>
 	<message key="admin.categories.name">Naam</message>

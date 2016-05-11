@@ -63,5 +63,5 @@
 	<message key="admin.mergeUsers.from.description">Välj användare för sammanslagning med annat användarkonto (ex. när samma användare har två användarkonton). Det konto du har valt först kommer att raderas och dess manuskript kommer att placeras under det andra kontot.</message>
 	<message key="admin.mergeUsers.allUsers">Alla existerande användare</message>
 	<message key="admin.mergeUsers.confirm">Är du säker på att du vill lägga samman användarkontot: "{$oldUsername}" med: "{$newUsername}"? Användarkontot: "{$oldUsername}" kommer då att raderas. Åtgärden kan inte ångras.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Inga existerande användare.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Inga existerande användare.</message>
 </locale>

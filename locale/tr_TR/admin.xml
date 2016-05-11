@@ -58,7 +58,7 @@
 	<message key="admin.mergeUsers.from.description">Bir hesabı başka bir hesap ile birleştirmek için bir (veya birkaç) üye seçiniz. Örneğin bir kişi birden fazla hesaba sahip olduğunda silinecek hesap(lar) öce seçilir ve birleştir komutundan sonra birleştirilecek hesap seçilerek onay verilir. İlk seçilen hesaplarla bağlantılı gönderiler, atamalar gibi her türlü işlem ve yetki birleştirilen hesaba aktarılır.</message>
 	<message key="admin.mergeUsers.allUsers">Tüm Kayıtlı Üyeler</message>
 	<message key="admin.mergeUsers.confirm">Seçilen {$oldAccountCount} hesap/hesapları "{$newUsername}" kullanıcı hesabında birleştirmek istediğinizen emin misiniz? Seçilen {$oldAccountCount} hesap daha sonra açılamaz. Bu işlem geri alınamaz.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Kayıtlı olmayan üyeler.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Kayıtlı olmayan üyeler.</message>
 	<message key="admin.settings.journalsList.description">Lütfen site sayfasında her bir dergi için listelenen dergi elemanlarını seçiniz.</message>
 	<message key="admin.categories.enable.description">Dergilerin geniş kümeler düzenlemenize yardımcı olmak için Site Yöneticisi burada kategorileri tanımlayarak bir dizi seçebilir. Dergi yöneticisi her bir dergi için bu kategorilerden birçoğunu seçebilir ve okuyucular dergi koleksiyonlarını katagorilere göre listeleyebilir.</message>
 	<message key="admin.categories.editTitle">Kategori Düzenle</message>

@@ -58,5 +58,5 @@
 	<message key="admin.mergeUsers.from.description">Odaberi korisnika ili više njih koji će se spojiti u novi korisnički nalog. Svi atributi korisnika pripisaće se drugom nalogu.</message>
 	<message key="admin.mergeUsers.allUsers">Svi korisnici koji imaju uloge</message>
 	<message key="admin.mergeUsers.confirm">Da li ste sigurni da želite da spojite korisničke naloge {$oldAccountCount} u nalog sa korisničkim imenom "{$newUsername}"? odabrani nalozi {$oldAccountCount} više neće postojati.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Nema korisnika sa dodeljenim ulogama.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Nema korisnika sa dodeljenim ulogama.</message>
 </locale>

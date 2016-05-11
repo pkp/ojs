@@ -67,5 +67,5 @@
 	<message key="admin.mergeUsers.from.description">Seleccioneu un usuari/usuària que vulgueu fusionar amb un altre compte d’usuari/usuària (p. ex, un usuari/usuària que tingui dos comptes d’usuari/usuària). El compte que seleccioneu en primer lloc se suprimirà i les seves trameses, assignacions, etc., s’atribuiran al segon compte.</message>
 	<message key="admin.mergeUsers.allUsers">Tots els usuaris/usuàries donats d’alta</message>
 	<message key="admin.mergeUsers.confirm">Esteu segur/a que voleu fusionar el compte amb nom d’usuari "{$oldUsername}" amb el compte amb nom d’usuari "{$newUsername}"? Si ho feu, el compte amb nom d’usuari "{$oldUsername}" deixarà d’existir. Aquesta acció és irreversible.</message>
-	<message key="admin.mergerUsers.noneEnrolled">No hi ha cap usuari/usuària donat d’alta.</message>
+	<message key="admin.mergeUsers.noneEnrolled">No hi ha cap usuari/usuària donat d’alta.</message>
 </locale>

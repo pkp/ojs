@@ -77,7 +77,7 @@
 	<message key="admin.mergeUsers.from.description">Bitte wählen Sie eine/n Benutzer/in aus, deren/dessen Daten in einem anderen Benutzer/innen-Konto zusammengefasst werden sollen (z.B. wenn jemand zwei Benutzer/innen-Zugänge besitzt). Der zuerst ausgewählte Zugang wird gelöscht und seine Beiträge, Aufgaben etc. werden dem zweiten Konto zugeordnet.</message>
 	<message key="admin.mergeUsers.allUsers">Alle registrierten Benutzer/innen</message>
 	<message key="admin.mergeUsers.confirm">Sind Sie sicher, dass Sie die ausgewählten {$oldAccountCount} Konten in dem Konto mit dem Benutzer/innennamen "{$newUsername}" zusammenführen wollen? Die ausgewählten {$oldAccountCount} Konten werden danach nicht mehr existieren. Diese Aktion kann nicht rückgängig gemacht werden.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Keine registrierten Benutzer/innen.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Keine registrierten Benutzer/innen.</message>
 
 	<!-- Kategorien -->
 	<message key="admin.categories">Kategorien</message>

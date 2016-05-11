@@ -56,7 +56,7 @@
 	<message key="admin.mergeUsers.from.description">Επιλέξτε έναν χρήστη για συγχώνευση σε έναν άλλο λογαριασμό χρήστη (π.χ., όταν κάποιος χρήστης έχει δύο λογαριασμούς). Ο λογαριασμός που θα επιλεγεί πρώτος θα δθιαγραφεί και οι υποβολές του καθώς και τα δικαιώματά του θα αποδοθούν στον δεύτερο λογαριασμό.</message>
 	<message key="admin.mergeUsers.allUsers">Όλοι οι εγγεγραμμένοι Χρήστες</message>
 	<message key="admin.mergeUsers.confirm">Είστε σίγουρος ότι επιθυμείτε να συγχωνεύσετε τον λογαριασμό με όνομα χρήστη  "{$oldUsername}" στον λογαριασμό με όνομα χρήστη "{$newUsername}"? Ο λογαριασμός  "{$oldUsername}" θα διαγραφεί. Αυτή η ενέργεια δεν είναι αναστρέψιμη.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Κανένας εγγεγραμμένος χρήστης.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Κανένας εγγεγραμμένος χρήστης.</message>
 	<message key="admin.journals.redirect">Δημιουργία κώδικα για την αντιστοίχηση OJS 1 URLs σε OJS 2 URLs</message>
 	<message key="admin.locale.maybeIncomplete">Οι επιλεγμένες τοπικές ρυθμίσεις μπορεί να μην είναι ολοκλήρωμένες</message>
 </locale>

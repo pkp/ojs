@@ -71,7 +71,7 @@
 	<message key="admin.mergeUsers.from.description">Vyberte uživatele, který má být sloučen s jiným uživatelským účtem (např., pokud má někdo dva uživatelské účty). Prvně zvolený účet bude vymazán a jeho příspěvky, úlohy atd. budou přiřazeny ke druhému účtu.</message>
 	<message key="admin.mergeUsers.allUsers">Všichni zaregistrovaní uživatelé</message>
 	<message key="admin.mergeUsers.confirm">Jste si jistý, že chcete sloučit účet s uživatelským jménem "{$oldUsername}" do účtu s uživatelským jménem "{$newUsername}"? Účet s uživatelským jménem "{$oldUsername}" poté přestane existovat. Tato akce je nevratná.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Žádní zapsaní uživatelé.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Žádní zapsaní uživatelé.</message>
 
 	<!-- Categories -->
 	<message key="admin.categories">Kategorie</message>
