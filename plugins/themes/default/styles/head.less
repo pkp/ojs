@@ -20,30 +20,10 @@
 }
 
 // Site logo/nav on same line on larger screens
-.has_site_logo {
+.has_site_logo .pkp_head_wrapper {
 
 	@media(min-width: @screen-desktop) {
-
-		.pkp_site_name_wrapper {
-			float: left;
-			width: 25%;
-		}
-
-		.pkp_navigation_primary_row {
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			width: 75%;
-			padding-bottom: @triple; // Manually centers it vertically. Assumes 80px tall logo
-		}
-
-		.pkp_site_name > a {
-			padding-right: @triple;
-		}
-
-		.pkp_head_wrapper .pkp_search.is_open {
-			border-radius: @radius;
-		}
+		padding-top: @triple;
 	}
 }
 
