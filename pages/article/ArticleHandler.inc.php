@@ -185,7 +185,16 @@ class ArticleHandler extends Handler {
 			$templateMgr->assign('fileId', $fileId);
 			$templateMgr->assign('defineTermsContextId', isset($defineTermsContextId)?$defineTermsContextId:null);
 
-			$templateMgr->assign('ccLicenseBadge', Application::getCCLicenseBadge($article->getLicenseURL()));
+			// Copyright and license info
+			if ($journal->getSetting('includeCopyrightStatement') && $journal->getLocalizedSetting('copyrightNotice')) {
+				$templateMgr->assign('copyright', $journal->getLocalizedSetting('copyrightNotice'));
+				$templateMgr->assign('copyrightHolder', $journal->getLocalizedSetting('copyrightHolder'));
+				$templateMgr->assign('copyrightYear', $journal->getSetting('copyrightYear'));
+			}
+			if ($journal->getSetting('includeLicense') && $article->getLicenseURL()) {
+				$templateMgr->assign('licenseUrl', $article->getLicenseURL());
+				$templateMgr->assign('ccLicenseBadge', Application::getCCLicenseBadge($article->getLicenseURL()));
+			}
 
 			$templateMgr->assign('articleSearchByOptions', array(
 				'query' => 'search.allFields',

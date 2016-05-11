@@ -55,6 +55,13 @@
  * @uses $keywords array List of keywords assigned to this article
  * @uses $citationFactory @todo
  * @uses $pubIdPlugins @todo
+ * @uses $copyright string Copyright notice. Only assigned if statement should
+ *   be included with published articles.
+ * @uses $copyrightHolder string Name of copyright holder
+ * @uses $copyrightYear string Year of copyright
+ * @uses $licenseUrl string URL to license. Only assigned if license should be
+ *   included with published articles.
+ * @uses $ccLicenseBadge string An image and text with details about the license
  *}
 <article class="obj_article_details">
 	<h1 class="page_title">
@@ -219,6 +226,26 @@
 					</div>
 				{/if}
 			{/foreach}
+
+			{* Licensing info *}
+			{if $copyright || $licenseUrl}
+				<div class="item copyright">
+					{if $licenseUrl}
+						{if $ccLicenseBadge}
+							{$ccLicenseBadge}
+						{else}
+							<a href="{$licenseUrl|escape}" class="copyright">
+								{if $copyrightHolder}
+									{translate key="submission.copyrightStatement" copyrightHolder=$copyrightHolder copyrightYear=$copyrightYear}
+								{else}
+									{translate key="submission.license"}
+								{/if}
+							</a>
+						{/if}
+					{/if}
+					{$copyright}
+				</div>
+			{/if}
 
 			{call_hook name="Templates::Article::Details"}
 
