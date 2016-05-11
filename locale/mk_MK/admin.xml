@@ -67,7 +67,7 @@
 	<message key="admin.mergeUsers.from.description">Изберете корисник (или повеќе) кои ќе се спојат во еден кориснички профил(на пр. кога некој има два кориснички профила).Профилот(профилите) кои се избрани први ќе бидат избришани и сите подесувања, задачи, итн ќе бидат префрлени во другиот профил.</message>
 	<message key="admin.mergeUsers.allUsers">Сите запишани корисници</message>
 	<message key="admin.mergeUsers.confirm">Дали сте сигурни дека сакате да се логирате на избраниот {$oldAccountCount} профил(профили) со корисничкото име "{$newUsername}"? Избраниот {$oldAccountCount} профил нема да постои потоа. Оваа акција не е двонасочна.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Не запишани корисници.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Не запишани корисници.</message>
 
 	<!-- Categories -->
 	<message key="admin.categories">Категории</message>
