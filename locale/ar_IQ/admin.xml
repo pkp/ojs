@@ -74,7 +74,7 @@
 	<message key="admin.mergeUsers.from.description">إختر مستخدماً واحداً (أو أكثر) ليتم ضمهم إلى حساب مستخدم آخر، (على سبيل المثال: عندما يكون لمستخدم واحد أكثر من حساب في الموقع). جميع الحسابات أو الحساب التي تم تحديدها بدءً سيتم حذفها، لذلك فإن طلبات التقديم والمهام... إلخ المتعلقة بها ستصير متعلقة بالحساب الثاني</message>
 	<message key="admin.mergeUsers.allUsers">كل المستخدمين المسجلين</message>
 	<message key="admin.mergeUsers.confirm">هل أنت متأكد من رغبتك في ضم المستخدمين المحددين البالغ عددهم {$oldAccountCount} ضمن حساب المستخدم ذو اسم الدخول "{$newUsername}"؟ إن جميع تلك الحسابات ستزول من الموقع بعد إتمام هذه العملية والتي لا سبيل إلى التراجع عنها لاحقاً. لاحظ أن عدد الحسابات المعنية بالضم هو {$oldAccountCount}</message>
-	<message key="admin.mergerUsers.noneEnrolled">لا أحد مسجل في الموقع بعد</message>
+	<message key="admin.mergeUsers.noneEnrolled">لا أحد مسجل في الموقع بعد</message>
 
 	<!-- Categories -->
 	<message key="admin.categories">الأصناف</message>
