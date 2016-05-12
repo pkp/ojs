@@ -292,22 +292,21 @@
 				padding-left: 0.5em;
 				padding-right: 180px; // try to stop before the search button, but this can change with different translations
 				border: none;
+				border-bottom: @bg-border;
 				font-size: @font-bump;
-				background: @bg-shade;
+				background: @bg;
 
-				&:hover {
-					background: @bg;
-				}
-
+				&:hover,
 				&:focus {
 					outline: 0;
-					background: @bg;
 				}
 			}
 
 			.search_prompt {
+				padding-bottom: @pkp_nav_primary_row_el_padding - 1;
 				background: @bg;
 				border-left: @bg-border;
+				border-bottom: 1px solid #ddd;
 				color: @primary;
 
 				&:hover,
