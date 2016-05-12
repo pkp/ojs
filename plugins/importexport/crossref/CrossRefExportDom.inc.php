@@ -206,18 +206,18 @@ class CrossRefExportDom {
 
 		/* publisher_item is the article pages */
 		if ($article->getPages() != '') {
-			$pageNode =& XMLCustomWriter::createElement($doc, 'pages');
 			// extract the first page for the first_page element, store the remaining bits in otherPages,
 			// after removing any preceding non-numerical characters.
 			if (preg_match('/^[^\d]*(\d+)\D*(.*)$/', $article->getPages(), $matches)) {
+				$pageNode =& XMLCustomWriter::createElement($doc, 'pages');
 				$firstPage = $matches[1];
 				$otherPages = $matches[2];
 				XMLCustomWriter::createChildWithText($doc, $pageNode, 'first_page', $firstPage);
 				if ($otherPages != '') {
 					XMLCustomWriter::createChildWithText($doc, $pageNode, 'other_pages', $otherPages);
 				}
+				XMLCustomWriter::appendChild($journalArticleNode, $pageNode);
 			}
-			XMLCustomWriter::appendChild($journalArticleNode, $pageNode);
 		}
 
 		// DOI data node
