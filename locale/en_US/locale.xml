@@ -781,7 +781,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 
 	<!-- About The Journal -->
 	<message key="about.statistics">Statistics</message>
-	<message key="about.journalContact">Journal Contact</message>
+	<message key="about.contact">Contact</message>
 	<message key="about.aboutTheJournal">About the Journal</message>
 	<message key="about.history">Journal History</message>
 	<message key="about.editorialTeam">Editorial Team</message>
