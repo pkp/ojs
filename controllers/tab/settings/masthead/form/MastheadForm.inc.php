@@ -30,11 +30,9 @@ class MastheadForm extends ContextSettingsForm {
 			'printIssn' => 'string',
 			'onlineIssn' => 'string',
 			'description' => 'string',
-			'mailingAddress' => 'string',
-			'journalEnabled' => 'bool',
-			'categories' => 'object',
 			'masthead' => 'string',
-			'history' => 'string'
+			'aboutJournal' => 'string',
+			'categories' => 'object',
 		);
 
 		parent::ContextSettingsForm($settings, 'controllers/tab/settings/masthead/form/mastheadForm.tpl', $wizardMode);
@@ -54,7 +52,7 @@ class MastheadForm extends ContextSettingsForm {
 	 * Get all locale field names
 	 */
 	function getLocaleFieldNames() {
-		return array('name', 'acronym', 'abbreviation', 'description', 'masthead', 'history');
+		return array('name', 'acronym', 'abbreviation', 'description', 'masthead', 'aboutJournal');
 	}
 
 	//

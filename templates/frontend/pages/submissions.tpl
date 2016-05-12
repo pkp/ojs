@@ -53,26 +53,6 @@
 		</div>
 	{/if}
 
-	{if $currentJournal->getLocalizedSetting('copyrightNotice')}
-		<div class="copyright">
-			<h2>
-				{translate key="about.copyrightNotice"}
-				{include file="frontend/components/editLink.tpl" page="management" op="settings" path="journal" anchor="policies" sectionTitleKey="about.copyrightNotice"}
-			</h2>
-			{$currentJournal->getLocalizedSetting('copyrightNotice')|nl2br}
-		</div>
-	{/if}
-
-	{if $currentJournal->getLocalizedSetting('privacyStatement')}
-		<div id="privacyStatement" class="privacy">
-			<h2>
-				{translate key="about.privacyStatement"}
-				{include file="frontend/components/editLink.tpl" page="management" op="settings" path="journal" anchor="policies" sectionTitleKey="about.privacyStatement"}
-			</h2>
-			{$currentJournal->getLocalizedSetting('privacyStatement')|nl2br}
-		</div>
-	{/if}
-
 </div><!-- .page -->
 
 {include file="common/frontend/footer.tpl"}

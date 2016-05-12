@@ -18,11 +18,9 @@
 
 switch($op) {
 	case 'index':
-	case 'subscriptions':
 	case 'editorialTeam':
 	case 'submissions':
-	case 'memberships':
-	case 'history':
+	case 'contact':
 		define('HANDLER_CLASS', 'AboutContextHandler');
 		import('pages.about.AboutContextHandler');
 		break;

@@ -51,6 +51,55 @@ class AboutContextHandler extends Handler {
 
 		$this->setupTemplate($request);
 		$templateMgr = TemplateManager::getManager($request);
+
+		$templateMgr->assign('journal', $context);
+		$templateMgr->assign('description', $context->getLocalizedSetting('description'));
+		$templateMgr->assign('aboutJournal', $context->getLocalizedSetting('aboutJournal'));
+
+		$templateMgr->display('frontend/pages/about.tpl');
+	}
+
+	/**
+	 * Display editorialTeam page.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function editorialTeam($args, $request) {
+		$this->setupTemplate($request);
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->display('frontend/pages/editorialTeam.tpl');
+	}
+
+	/**
+	 * Display submissions page.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function submissions($args, $request) {
+		$this->setupTemplate($request);
+
+		$context = $request->getContext();
+		$templateMgr = TemplateManager::getManager($request);
+		$submissionChecklist = $context->getLocalizedSetting('submissionChecklist');
+		if (!empty($submissionChecklist)) {
+			ksort($submissionChecklist);
+			reset($submissionChecklist);
+		}
+		$templateMgr->assign('submissionChecklist', $submissionChecklist);
+		$templateMgr->display('frontend/pages/submissions.tpl');
+	}
+
+	/**
+	 * Display contact page.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function contact($args, $request) {
+		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
+		$context = $request->getContext();
+
+		$this->setupTemplate($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$contextSettings = $settingsDao->getSettings($context->getId());
 		$templateMgr->assign('contextSettings', $contextSettings);
 
@@ -85,45 +134,7 @@ class AboutContextHandler extends Handler {
 		$templateMgr->assign('supportPhone', $supportPhone);
 		$templateMgr->assign('supportEmail', $supportEmail);
 
-		// Sponsorship details
-		$templateMgr->assign(array(
-			'contributorNote' => $context->getLocalizedSetting('contributorNote'),
-			'contributors' => $context->getSetting('contributors'),
-			'sponsorNote' => $context->getLocalizedSetting('sponsorNote'),
-			'sponsors' => $context->getSetting('sponsors'),
-		));
-
-		$templateMgr->display('frontend/pages/about.tpl');
-	}
-
-	/**
-	 * Display editorialTeam page.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function editorialTeam($args, $request) {
-		$this->setupTemplate($request);
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->display('frontend/pages/editorialTeam.tpl');
-	}
-
-	/**
-	 * Display submissions page.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function submissions($args, $request) {
-		$this->setupTemplate($request);
-
-		$context = $request->getContext();
-		$templateMgr = TemplateManager::getManager($request);
-		$submissionChecklist = $context->getLocalizedSetting('submissionChecklist');
-		if (!empty($submissionChecklist)) {
-			ksort($submissionChecklist);
-			reset($submissionChecklist);
-		}
-		$templateMgr->assign('submissionChecklist', $submissionChecklist);
-		$templateMgr->display('frontend/pages/submissions.tpl');
+		$templateMgr->display('frontend/pages/contact.tpl');
 	}
 
 	/**
