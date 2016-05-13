@@ -53,8 +53,8 @@
 		{fbvFormSection label="manager.masthead.title" for="masthead" description="manager.setup.masthead.description"}
 			{fbvElement type="textarea" multilingual=true name="masthead" id="masthead" value=$masthead rich=true}
 		{/fbvFormSection}
-		{fbvFormSection label="manager.setup.journalAbout" for="aboutJournal" description="manager.setup.journalAbout.description"}
-			{fbvElement type="textarea" multilingual=true name="aboutJournal" id="aboutJournal" value=$aboutJournal rich=true rows=30}
+		{fbvFormSection label="manager.setup.journalAbout" for="about" description="manager.setup.journalAbout.description"}
+			{fbvElement type="textarea" multilingual=true name="about" id="about" value=$about rich=true rows=30}
 		{/fbvFormSection}
 	{/fbvFormArea}
 

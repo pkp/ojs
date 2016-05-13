@@ -31,7 +31,7 @@ class MastheadForm extends ContextSettingsForm {
 			'onlineIssn' => 'string',
 			'description' => 'string',
 			'masthead' => 'string',
-			'aboutJournal' => 'string',
+			'about' => 'string',
 			'categories' => 'object',
 		);
 
@@ -52,7 +52,7 @@ class MastheadForm extends ContextSettingsForm {
 	 * Get all locale field names
 	 */
 	function getLocaleFieldNames() {
-		return array('name', 'acronym', 'abbreviation', 'description', 'masthead', 'aboutJournal');
+		return array('name', 'acronym', 'abbreviation', 'description', 'masthead', 'about');
 	}
 
 	//

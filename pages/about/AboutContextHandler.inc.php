@@ -46,15 +46,8 @@ class AboutContextHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function index($args, $request) {
-		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
-		$context = $request->getContext();
-
 		$this->setupTemplate($request);
 		$templateMgr = TemplateManager::getManager($request);
-
-		$templateMgr->assign('journal', $context);
-		$templateMgr->assign('description', $context->getLocalizedSetting('description'));
-		$templateMgr->assign('aboutJournal', $context->getLocalizedSetting('aboutJournal'));
 
 		$templateMgr->display('frontend/pages/about.tpl');
 	}
