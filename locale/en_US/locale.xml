@@ -790,8 +790,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="about.focusAndScope">Focus and Scope</message>
 	<message key="about.sectionPolicies">Section Policies</message>
 	<message key="about.submissions">Submissions</message>
-	<message key="about.sponsors">Sponsors</message>
-	<message key="about.contributors">Sources of Support</message>
 	<message key="about.onlineSubmissions">Online Submissions</message>
 	<message key="about.onlineSubmissions.login">Login</message>
 	<message key="about.onlineSubmissions.register">Register</message>
@@ -821,7 +819,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="about.subscriptionTypes.cost">Cost</message>
 	<message key="about.availableSubscriptionTypes">Subscription Types</message>
 	<message key="about.memberships">Memberships</message>
-	<message key="about.journalSponsorship">Sponsorship</message>
 	<message key="about.aboutThisPublishingSystem">About this Publishing System</message>
 	<message key="about.aboutThisPublishingSystem.altText">OJS Editorial and Publishing Process</message>
 	<message key="about.aboutOJSJournal"><![CDATA[This journal uses Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under the GNU General Public License.]]></message>
