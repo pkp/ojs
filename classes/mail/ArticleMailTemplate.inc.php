@@ -32,37 +32,12 @@ class ArticleMailTemplate extends SubmissionMailTemplate {
 		parent::SubmissionMailTemplate($article, $emailKey, $locale, $journal, $includeSignature);
 	}
 
+	/**
+	 * @copydoc SubmissionMailTemplate::assignParams()
+	 */
 	function assignParams($paramArray = array()) {
 		$paramArray['sectionName'] = strip_tags($this->submission->getSectionTitle());
 		parent::assignParams($paramArray);
-	}
-
-	/**
-	 *  Send this email to all assigned section editors in the given stage
-	 * @param $articleId int
-	 * @param $stageId int
-	 */
-	function toAssignedSectionEditors($articleId, $stageId) {
-		return $this->toAssignedSubEditors($articleId, $stageId);
-	}
-
-	/**
-	 *  CC this email to all assigned section editors in the given stage
-	 * @param $articleId int
-	 * @param $stageId int
-	 * @return array of Users
-	 */
-	function ccAssignedSectionEditors($articleId, $stageId) {
-		return $this->ccAssignedSubEditors($articleId, $stageId);
-	}
-
-	/**
-	 *  BCC this email to all assigned section editors in the given stage
-	 * @param $articleId int
-	 * @param $stageId int
-	 */
-	function bccAssignedSectionEditors($articleId, $stageId) {
-		return $this->bccAssignedSubEditors($articleId, $stageId);
 	}
 }
 

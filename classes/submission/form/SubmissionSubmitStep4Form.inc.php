@@ -81,7 +81,7 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 					$authorMail->addRecipient($author->getEmail(), $author->getFullName());
 				}
 			}
-			$mail->bccAssignedSectionEditors($submission->getId(), WORKFLOW_STAGE_ID_SUBMISSION);
+			$mail->bccAssignedSubEditors($submission->getId(), WORKFLOW_STAGE_ID_SUBMISSION);
 
 			$mail->assignParams(array(
 				'authorName' => $user->getFullName(),
