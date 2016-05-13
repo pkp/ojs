@@ -126,7 +126,6 @@
 	<message key="manager.setup.aboutItemContent">Content</message>
 	<message key="manager.setup.addAboutItem">Add About Item</message>
 	<message key="manager.setup.addChecklistItem">Add Checklist Item</message>
-	<message key="manager.setup.addContributor">Add Contributor</message>
 	<message key="manager.setup.addItem">Add Item</message>
 	<message key="manager.setup.addItemtoAboutJournal">Add Item to Appear in "About the Journal"</message>
 	<message key="manager.setup.addNavItem">Add Item</message>
@@ -320,9 +319,6 @@
 	<message key="manager.setup.selectSectionDescription">The journal section for which the item will be considered.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Always show galley links and indicate restricted access.</message>
 	<message key="manager.setup.siteAccess">Additional Site and Article Access Restrictions</message>
-	<message key="manager.setup.sponsors">Sponsoring Organizations</message>
-	<message key="manager.setup.sponsorNoteDescription">This text will appear below the "Sponsors" heading and above the list of sponsor names and urls under "Journal Sponsorship" on the "About" page.</message>
-	<message key="manager.setup.sponsorsDescription">The name of the organizations (e.g., scholarly associations, university departments, cooperatives, etc.) sponsoring the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
 	<message key="manager.setup.stepsToJournalSite">Five Steps to a Journal Web Site</message>
 	<message key="manager.setup.subjectExamples">(E.g., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</message>
 	<message key="manager.setup.subjectKeywordTopic">Keywords</message>

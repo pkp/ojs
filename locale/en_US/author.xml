@@ -69,8 +69,6 @@
 	<message key="author.submit.addAuthor">Add Author</message>
 	<message key="author.submit.deleteAuthor">Delete Author</message>
 	<message key="author.submit.submissionIndexingDescription">Provide terms for indexing the submission; separate terms with a semi-colon (term1; term2; term3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Contributors and Supporting Agencies</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Identify agencies (a person, an organization, or a service) that made contributions to the content or provided funding or support for the work presented in this submission. Separate them with a semi-colon (e.g. John Doe, Metro University; Master University, Department of Computer Science).</message>
 	<message key="author.submit.coverageInstructions">Refers to geo-spatial location, chronological or historical coverage, and/or characteristics of research sample.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Additional codes</a>.]]></message>
 	<message key="author.submit.form.authorRequired">At least one author is required.</message>
@@ -104,7 +102,6 @@
 	<message key="author.submit.suppFile.dataSet">Data Set</message>
 	<message key="author.submit.suppFile.sourceText">Source Text</message>
 	<message key="author.submit.suppFile.briefDescription">Brief description</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Contributor or sponsoring agency</message>
 	<message key="author.submit.suppFile.availableToPeers">Present file to reviewers (without metadata), as it will not compromise blind review.</message>
 	<message key="author.submit.suppFile.publisherDescription">Use only with formally published materials.</message>
 	<message key="author.submit.suppFile.dateDescription">Date when data was collected or instrument created.</message>
