@@ -54,7 +54,7 @@
 			{fbvElement type="textarea" multilingual=true name="masthead" id="masthead" value=$masthead rich=true}
 		{/fbvFormSection}
 		{fbvFormSection label="manager.setup.journalAbout" for="about" description="manager.setup.journalAbout.description"}
-			{fbvElement type="textarea" multilingual=true name="about" id="about" value=$about rich=true rows=30}
+			{fbvElement type="textarea" multilingual=true name="about" id="about" value=$about rich="extended" rows=30}
 		{/fbvFormSection}
 	{/fbvFormArea}
 
