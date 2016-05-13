@@ -30,15 +30,15 @@ class ReviewerRatingsDAO extends DAO {
 		$locale = Locale::getLocale();
 
 		$result =& $this->retrieve(
-			'SELECT articles.user_id AS reviewerid,
+			'SELECT users.user_id AS reviewerid,
 				users.last_name AS lastname,
 				users.first_name AS firstname,
 				users.email AS email,
 				ROUND(AVG(review_assignments.quality),1) AS averageRating,
 				count(*) AS totalreviews
 			FROM review_assignments, articles, users
-			WHERE users.user_id=articles.user_id && review_assignments.submission_id = articles.article_id && articles.journal_id=? && review_assignments.date_completed !="NULL"
-			GROUP BY articles.user_id
+			WHERE users.user_id=review_assignments.reviewer_id && review_assignments.submission_id = articles.article_id && articles.journal_id=? && review_assignments.date_completed !="NULL"
+			GROUP BY users.user_id
 			ORDER BY averageRating desc',                       
 			array(
 				$journalId

@@ -56,7 +56,7 @@ class ReviewerRatingsPlugin extends ReportPlugin {
 		$journal =& Request::getJournal();
 
 		header('content-type: text/comma-separated-values');
-		header('content-disposition: attachment; filename=reviews-' . date('Ymd') . '.csv');
+		header('content-disposition: attachment; filename=reviewerRatings-' . date('Ymd') . '.csv');
 		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
 
 		$reviewerRatingsDao =& DAORegistry::getDAO('ReviewerRatingsDAO');
