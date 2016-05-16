@@ -375,10 +375,8 @@
 		line-height: @line-sml;
 	}
 
-	> li > a:focus,
-	#userTasks > a:focus {
+	> li > a:focus {
 		outline: 0;
-		box-shadow: 0 0 1px @text-on-bg;
 	}
 
 	ul {
@@ -413,132 +411,48 @@
 			border-width: @half;
 		}
 	}
-}
 
-// Tasks panel
-#userTasks {
-	position: relative;
+	// Fix alignment issues in task-count
+	.profile > a {
+		text-align: right;
+	}
 
-	.task-count {
-		display: block;
-		float: right;
+	// Don't show the drop-down caret next to the task count
+	.profile > a:after {
+		display: none;
+	}
+
+	.task_count {
+		display: inline-block;
 		width: 20px;
 		height: 20px;
 		margin-left: 0.5em;
 		border-radius: 50%;
-		background: rgba(255,255,255,0.5);
+		background: rgba(255,255,255,0.3);
 		line-height: 20px;
-		color: @text;
 		text-align: center;
+		font-size: 12px; // helps visually center the number
+	}
 
-		&.hasTasks {
-			background: @text-on-bg;
+	> li > ul a {
+
+		.task_count {
+			background: #ddd;
+		}
+
+		&:hover .task_count,
+		&:focus .task_count {
+			background: #fff;
 		}
 	}
 
-	> a {
-		color: @text-on-bg;
-	}
+	.has_tasks {
 
-	> a:hover .task-count,
-	> a:focus .task-count {
-		background: @text-on-bg;
-	}
-}
-
-#notificationsToggle.expandedIndicator {
-	background: @bg-shade;
-	color: @text;
-
-	.task-count,
-	&:hover .task-count {
-		background: @bg-base;
-		color: #fff;
-	}
-}
-
-// Tasks grid. Hacky workarounds for styling a grid...
-@tasks-border: 1px solid rgba(0,0,0,0.2);
-#notificationsPopover {
-	display: none;
-	position: absolute;
-	top: @triple;
-	right: 0;
-	width: 30em;
-	background: @bg;
-	border-radius: @radius;
-	border-top-right-radius: 0;
-	z-index: 100;
-
-	.footer,
-	.gridPaging {
-		line-height: @triple;
-	}
-
-	.footer {
-		border-top: @tasks-border;
-	}
-
-	// Override .pkp_nav_list ul styles
-	.actions {
-		position: relative;
-		top: auto;
-		left: auto;
-		width: auto;
-		box-shadow: none;
-
-		> li {
-			display: inline-block;
-		}
-
-		a {
-			padding: 0 @base;
-			line-height: @triple;
-			border: none;
-
-			&:hover,
-			&:focus {
-				color: @primary-lift;
-				background: none;
-			}
-		}
-	}
-
-	.gridPages {
-		padding: 0 @base;
-		background: @bg-shade;
-		border-bottom-left-radius: @radius;
-		border-bottom-right-radius: @radius;
-		text-align: right;
-	}
-
-	.pkp_controllers_grid {
-
-		thead {
-			background: @bg-shade;
-			line-height: @triple;
-
-			th:first-child {
-				text-indent: -9999px;
-				border-top-left-radius: @radius;
-			}
-		}
-
-		tbody {
-
-			a {
-				padding: (@base + @half) 0;
-			}
-
-			tr {
-				border-bottom: 1px solid rgba(255,255,255,0.2);
-			}
-		}
-
-		.first_column {
-			padding-left: @base;
-			padding-right: @base;
-			min-width: @double + @base;
+		ul .task_count,
+		ul a:hover .task_count,
+		ul a:focus .task_count {
+			background: #f00;
+			color: #fff;
 		}
 	}
 }

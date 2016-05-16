@@ -54,7 +54,7 @@ class CreateJournalTest extends WebTestCase {
 		$this->open(self::$baseUrl);
 
 		// Management > Settings > Journal
-		$this->waitForElementPresent($selector='css=li.profile a:contains(\'Submissions\')');
+		$this->waitForElementPresent($selector='css=li.profile a:contains(\'Dashboard\')');
 		$this->clickAndWait($selector);
 		$this->waitForElementPresent($selector='css=ul#navigationPrimary a:contains(\'Journal\')');
 		$this->clickAndWait($selector);
