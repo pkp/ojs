@@ -48,6 +48,14 @@ class TemplateManager extends PKPTemplateManager {
 
 			$this->assign('siteCategoriesEnabled', $site->getSetting('categoriesEnabled'));
 
+			// Get a count of unread tasks.
+			if ($user = $request->getUser()) {
+				$notificationDao = DAORegistry::getDAO('NotificationDAO');
+				// Exclude certain tasks, defined in the notifications grid handler
+				import('lib.pkp.controllers.grid.notifications.TaskNotificationsGridHandler');
+				$this->assign('unreadNotificationCount', $notificationDao->getNotificationCount(false, $user->getId(), null, NOTIFICATION_LEVEL_TASK));
+			}
+
 			if (isset($context)) {
 
 				$this->assign('currentJournal', $context);
