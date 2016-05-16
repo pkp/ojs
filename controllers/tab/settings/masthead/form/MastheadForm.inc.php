@@ -16,8 +16,6 @@
 import('lib.pkp.classes.controllers.tab.settings.form.ContextSettingsForm');
 
 class MastheadForm extends ContextSettingsForm {
-	/** @var array Used to unpack categories listbuilder */
-	var $categories;
 
 	/**
 	 * Constructor.
@@ -32,7 +30,6 @@ class MastheadForm extends ContextSettingsForm {
 			'description' => 'string',
 			'masthead' => 'string',
 			'about' => 'string',
-			'categories' => 'object',
 		);
 
 		parent::ContextSettingsForm($settings, 'controllers/tab/settings/masthead/form/mastheadForm.tpl', $wizardMode);
@@ -81,7 +78,6 @@ class MastheadForm extends ContextSettingsForm {
 	function fetch($request, $params = null) {
 		$site = $request->getSite();
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('categoriesEnabled', $site->getSetting('categoriesEnabled'));
 		return parent::fetch($request, $params);
 	}
 
@@ -98,38 +94,7 @@ class MastheadForm extends ContextSettingsForm {
 			$journalDao->updateObject($journal);
 		}
 
-		// Save block plugins context positions.
-		import('lib.pkp.classes.controllers.listbuilder.ListbuilderHandler');
-		$this->categories = $journal->getSetting('categories');
-		ListbuilderHandler::unpack($request, $request->getUserVar('categories'));
-		$this->setData('categories', $this->categories);
-
 		parent::execute($request);
-	}
-
-	/**
-	 * @copydoc ListbuilderHandler::updateEntry()
-	 */
-	function updateEntry($request, $rowId, $newRowId) {
-		$this->deleteEntry($request, $rowId);
-		$this->insertEntry($request, $newRowId);
-		return true;
-	}
-
-	/**
-	 * @copydoc ListbuilderHandler::deleteEntry()
-	 */
-	function deleteEntry($request, $rowId) {
-		if (isset($this->categories[$rowId])) unset($this->categories[$rowId]);
-		return true;
-	}
-
-	/**
-	 * @copydoc ListbuilderHandler::insertEntry()
-	 */
-	function insertEntry($request, $rowId) {
-		$this->categories[$rowId['name']] = true;
-		return true;
 	}
 
 }

@@ -46,8 +46,6 @@ class TemplateManager extends PKPTemplateManager {
 			$siteStyleFilename = $publicFileManager->getSiteFilesPath() . '/' . $site->getSiteStyleFilename();
 			if (file_exists($siteStyleFilename)) $this->addStyleSheet($request->getBaseUrl() . '/' . $siteStyleFilename, STYLE_SEQUENCE_LAST);
 
-			$this->assign('siteCategoriesEnabled', $site->getSetting('categoriesEnabled'));
-
 			if (isset($context)) {
 
 				$this->assign('currentJournal', $context);
