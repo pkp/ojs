@@ -54,11 +54,7 @@ class IssueHandler extends Handler {
 			$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 			$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 			$journal = $request->getJournal();
-			if ($journal->getSetting('enablePublicGalleyId')) {
-				$galley = $galleyDao->getByBestId($galleyId, $issue->getId());
-			} else {
-				$galley = $galleyDao->getById($galleyId, $issue->getId());
-			}
+			$galley = $galleyDao->getByBestId($galleyId, $issue->getId());
 
 			// Invalid galley id, redirect to issue page
 			if (!$galley) $request->redirect(null, null, 'view', $issue->getId());

@@ -107,10 +107,6 @@
 	<message key="manager.setup.enableAnnouncements">Tillat redaksjonsledere å legge til tidsskriftsoppslag.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Vis de</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">nyeste oppslagene på tidsskriftets hjemmeside.</message>
-	<message key="manager.setup.enablePageNumber">Sidetall for elementene vil bli regnet ut og skrevet inn manuelt i innholdsoversikten (for eks. pp. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Tilpassete identifikatorer vil bli brukt for å identifisere publisert elementer.</message>
-	<message key="manager.setup.enablePublicIssueId">Tilpassete identifikatorer vil bli brukt for å identifisere utgaver.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Tilpassete identifikatorer vil bli brukt for å identifisere tilleggsfiler til artikler.</message>
 	<message key="manager.setup.enableUserRegistration">Tillat brukere å registrere selv på tidsskriftets nettsted som:</message>
 	<message key="manager.setup.focusAndScope">Hovedfokus og spennvidde</message>
 	<message key="manager.setup.focusAndScopeDescription">Skriv inn en erklæring nedenfor, som vil bli vist i Om tidsskriftet. Den skal forklare forfattere, lesere, og bibliotekarer hva slags artikler og andre elementer tidsskriftet kommer til å publisere.</message>
@@ -501,7 +497,6 @@
 	<message key="manager.setup.competingInterests.requireAuthors"><![CDATA[Krev at forfattere som sender inn manuskript samtidig sender inn en <I>Erklæring om interessekonflikter</I>.]]></message>
 	<message key="manager.setup.competingInterests.requireReviewers"><![CDATA[Krev at fagkonsulenter sender inn en <I>Erklæring om interessekonflikter</I> sammen med hver fagvurdering de sender inn.]]></message>
 	<message key="manager.setup.editorDecision">Redaktørens beslutning</message>
-	<message key="manager.setup.enablePublicGalleyId">Tilpassete identifikatorer vil bli brukt for å identifisere de ferdige sideoppsettene (f.eks. HTML eller PDF filer) for publiserte element.</message>
 	<message key="manager.setup.enableUserRegistration.author">Forfattere (kan sende inn bidrag og tilleggsmateriell til tidsskriftet)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Lesere (vil motta varslinger og bli tellet på linje med abonnenter)</message>
 	<message key="manager.setup.enableUserRegistration.reviewer">Fagkonsulenter (tilgjengelige for vurderingsoppdrag)</message>

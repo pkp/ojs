@@ -207,11 +207,6 @@
 	<message key="manager.setup.enableAnnouncements">Dergi yöneticilerinin dergilerine duyuru eklemelerini etkinleştir.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Göster</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">Dergi sayfasındaki en son duyurular.</message>
-	<message key="manager.setup.enablePageNumber">Öğeler için sayfa numaraları belirlendikten sonra İçindekiler tablosuna elle girilecektir (Örneğin: 13-26 gibi).</message>
-	<message key="manager.setup.enablePublicArticleId">Yayınlanan makaleler için özel tanımlayıcı kullanılacak.</message>
-	<message key="manager.setup.enablePublicGalleyId">Yayımlanmış öğerler için özel tanımlayıcılar dizgilerde  kullanılır (Örneğin: HTML veya PDF dosyalar).</message>
-	<message key="manager.setup.enablePublicIssueId">Sayılar için özel tanımlayıcı kullanılacaktır.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Ek dosyalar için özel tanımlayıcılar kullanılacaktır.</message>
 	<message key="manager.setup.enableUserRegistration">Kullanıcılar aşağıda belirtilen bir veya birden çok rol ile dergiye kendileri üye olabilirler.</message>
 	<message key="manager.setup.enableUserRegistration.author">Yazarlar (dergiye gönderi yapabilir)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Okuyucular (bildirim alırlar ve abonelere eşdeğer sayılır)</message>

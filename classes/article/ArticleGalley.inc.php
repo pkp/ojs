@@ -73,16 +73,12 @@ class ArticleGalley extends Representation {
 
 	/**
 	 * Return the "best" article ID -- If a public article ID is set,
-	 * use it; otherwise use the internal article Id. (Checks the journal
-	 * settings to ensure that the public ID feature is enabled.)
-	 * @param $journal Object the journal this galley is in
+	 * use it; otherwise use the internal article Id.
 	 * @return string
 	 */
-	function getBestGalleyId($journal) {
-		if ($journal->getSetting('enablePublicGalleyId')) {
-			$publicGalleyId = $this->getStoredPubId('publisher-id');
-			if (!empty($publicGalleyId)) return $publicGalleyId;
-		}
+	function getBestGalleyId() {
+		$publicGalleyId = $this->getStoredPubId('publisher-id');
+		if (!empty($publicGalleyId)) return $publicGalleyId;
 		return $this->getId();
 	}
 

@@ -216,11 +216,6 @@
 	<message key="manager.setup.enableAnnouncements">ജേണല്‍ മാനേജറിനു ജേണല്‍ അറിയിപ്പുകള്‍ നല്‍ക്കുന്നതിന് പ്രാപ്യമാക്കുക.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">പ്രദര്‍പ്പിക്കുക</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">ഹോം പേജില്‍ സമീപകാലത്ത് നല്‍കിയ അറിയിപ്പുകള്‍.</message>
-	<message key="manager.setup.enablePageNumber">ഉള്ളടക്ക പട്ടികയില്‍ ഐറ്റംസിന്റെ പേജ് നമ്പര്‍ സ്വയം തിട്ടപ്പെടുത്തുകയും അവ നല്‍ക്കുകയും വേണം  (ഉദാ:, pp. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">പ്രസിദ്ധീകരിച്ച ഐറ്റംസ് കണ്ടു പിടിക്കുന്നതിനായി കസ്റ്റം എഡന്റിഫയര്‍ ഉപയോഗിക്കുന്നു.</message>
-	<message key="manager.setup.enablePublicGalleyId">പ്രസിദ്ധീകരിച്ച ഐറ്റംസിന്റെ ഗ്യാലേസ് (ഉദാ: എച്ച്ടിഎംഎല്‍ അഥവാ പിഡിഎഫ് ഫയല്‍സ്) കണ്ടു പിടിക്കുന്നതിനായി കസ്റ്റം എഡന്റിഫയര്‍ ഉപയോഗിക്കുന്നു.</message>
-	<message key="manager.setup.enablePublicIssueId">പതിപ്പുകള്‍ കണ്ടു പിടിക്കുന്നതിനായി കസ്റ്റം എഡന്റിഫയര്‍ ഉപയോഗിക്കുന്നു.</message>
-	<message key="manager.setup.enablePublicSuppFileId">സപ്ലിമെന്റല്‍ ആര്‍ട്ടിക്കിള്‍ ഫയല്‍സ് കണ്ടു പിടിക്കുന്നതിനായി കസ്റ്റം എഡന്റിഫയര്‍ ഉപയോഗിക്കുന്നു.</message>
 	<message key="manager.setup.enableUserRegistration">താഴെ പറയുന്ന ഒന്നോ അതിലധികമോ ചുമതലകളുടെ അടിസ്ഥാനത്തില്‍ യൂസര്‍സിനു സ്വയം ജേണലില്‍ റജിസ്റ്റര്‍ ചെയ്യാവുന്നതാണ്:</message>
 	<message key="manager.setup.enableUserRegistration.author">ഗ്രന്ഥകര്‍ത്താക്കള്‍ (ജേണലില്‍ മെറ്റീരിയല്‍സ് സമര്‍പ്പിക്കാന്‍ സാധിക്കുന്നതാണ്)</message>
 	<message key="manager.setup.enableUserRegistration.reader">വായനക്കാര്‍ (നോട്ടിഫിക്കേഷന്‍സ് ലഭിക്കുന്നതോടോപ്പം അവ സബ്സ്ക്രൈബറിനെ പോലെ തിട്ടപ്പെടുത്തുന്നതാണ്)</message>

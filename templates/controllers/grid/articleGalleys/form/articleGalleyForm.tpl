@@ -26,9 +26,6 @@
 	{fbvFormArea id="galley"}
 		{fbvFormSection title="submission.layout.galleyFileData"}
 			{fbvElement type="text" label="submission.layout.galleyLabel" value=$label id="label" size=$fbvStyles.size.MEDIUM inline=true}
-			{if $enablePublicGalleyId}
-				{fbvElement type="text" label="submission.layout.publicGalleyId" value=$publicGalleyId id="publicGalleyId" size=$fbvStyles.size.MEDIUM inline=true}
-			{/if}
 		{/fbvFormSection}
 		{fbvFormSection}
 			{fbvElement type="select" id="galleyLocale" label="common.language" from=$supportedLocales selected=$galleyLocale|default:$formLocale size=$fbvStyles.size.MEDIUM translate=false inline=true}

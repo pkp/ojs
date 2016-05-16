@@ -55,9 +55,6 @@
 			{fbvElement type="text" label="issue.volume" id="volume" value=$volume maxlength="40" inline=true size=$fbvStyles.size.SMALL}
 			{fbvElement type="text" label="issue.number" id="number" value=$number maxlength="40" inline=true size=$fbvStyles.size.SMALL}
 			{fbvElement type="text" label="issue.year" id="year" value=$year maxlength="4" inline=true size=$fbvStyles.size.SMALL}
-			{if $enablePublicIssueId}
-				{fbvElement type="text" label="editor.issues.publicIssueIdentifier" id="publicIssueId" inline=true value=$publicIssueId size=$fbvStyles.size.SMALL}
-			{/if}
 		{/fbvFormSection}
 		{fbvFormSection}
 			{fbvElement type="text" label="issue.title" id="title" value=$title multilingual=true}

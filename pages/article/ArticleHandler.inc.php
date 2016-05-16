@@ -59,11 +59,7 @@ class ArticleHandler extends Handler {
 
 		$journal = $request->getContext();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		if ($journal->getSetting('enablePublicArticleId')) {
-			$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $journal->getId(), $articleId, true);
-		} else {
-			$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId((int) $articleId, (int) $journal->getId(), true);
-		}
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $journal->getId(), $articleId, true);
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		if (isset($publishedArticle)) {
@@ -76,18 +72,12 @@ class ArticleHandler extends Handler {
 			$this->article = $article;
 		}
 
-		if ($galleyId) {
-			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-			if ($journal->getSetting('enablePublicGalleyId')) {
-				$this->galley = $galleyDao->getByBestGalleyId($galleyId, $this->article->getId());
-			}
 
-			if (!$this->galley) {
-				$this->galley = $galleyDao->getById($galleyId, $this->article->getId());
-			}
-		}
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$this->galley = $galleyDao->getByBestGalleyId($galleyId, $this->article->getId());
 	}
 
+	}
 	/**
 	 * View Article. (Either article landing page or galley view.)
 	 * @param $args array
@@ -118,11 +108,9 @@ class ArticleHandler extends Handler {
 
 		// Fetch and assign the galley to the template
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		if ($journal->getSetting('enablePublicGalleyId')) $galley = $galleyDao->getByBestGalleyId($galleyId, $article->getId());
-		else $galley = $galleyDao->getById($galleyId, $article->getId());
+		$galley = $galleyDao->getByBestGalleyId($galleyId, $article->getId());
 		if ($galley && $galley->getRemoteURL()) $request->redirectUrl($galley->getRemoteURL());
 		$templateMgr->assign('galley', $galley);
-
 		// Copyright and license info
 		if ($journal->getSetting('includeCopyrightStatement') && $journal->getLocalizedSetting('copyrightNotice')) $templateMgr->assign(array(
 			'copyright' => $journal->getLocalizedSetting('copyrightNotice'),
@@ -222,7 +210,7 @@ class ArticleHandler extends Handler {
 
 			if (!HookRegistry::call('ArticleHandler::download', array($this->article, &$this->galley, &$fileId))) {
 				import('lib.pkp.classes.file.SubmissionFileManager');
-				$submissionFileManager = new SubmissionFileManager($this->article->getContextId(), $articleId);
+				$submissionFileManager = new SubmissionFileManager($this->article->getContextId(), $this->article->getId());
 				$submissionFileManager->downloadFile($fileId, null, $request->getUserVar('inline')?true:false);
 			}
 		}

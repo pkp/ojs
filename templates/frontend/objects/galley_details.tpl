@@ -18,7 +18,7 @@
 	<ul class="galleys_links">
 		{foreach from=$galley->getLatestGalleyFiles() item=galleyFile}
 			<li>
-				<a class="obj_galley_link" href="{url op="download" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal):$galleyFile->getFileId() escape=false}">{$galleyFile->getLocalizedName()|escape}</a>
+				<a class="obj_galley_link" href="{url op="download" path=$article->getBestArticleId()|to_array:$galley->getBestGalleyId():$galleyFile->getFileId() escape=false}">{$galleyFile->getLocalizedName()|escape}</a>
 			</li>
 		{/foreach}
 	</ul>

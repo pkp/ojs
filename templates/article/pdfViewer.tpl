@@ -10,10 +10,10 @@
 
 {* The target="_parent" is for the sake of iphones, which present scroll problems otherwise. *}
 <div id="pdfDownloadLinkContainer">
-	<a class="action pdf" id="pdfDownloadLink" target="_parent" href="{url op="download" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal)}">{translate key="article.pdf.download"}</a>
+	<a class="action pdf" id="pdfDownloadLink" target="_parent" href="{url op="download" path=$articleId|to_array:$galley->getBestGalleyId()}">{translate key="article.pdf.download"}</a>
 </div>
 
-{url|assign:"pdfUrl" op="viewFile" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal) escape=false}
+{url|assign:"pdfUrl" op="viewFile" path=$articleId|to_array:$galley->getBestGalleyId() escape=false}
 {translate|assign:"noPluginText" key='article.pdf.pluginMissing'}
 <script><!--{literal}
 	$(document).ready(function(){

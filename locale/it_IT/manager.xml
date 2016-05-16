@@ -216,11 +216,6 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.enableAnnouncements">Abilita gli amministratori della rivista ad aggiungere avvisi.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Mostra</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">avvisi recenti nella homepage della rivista.</message>
-	<message key="manager.setup.enablePageNumber">I numeri di pagina degli articoli vanno calcolati e inseriti manualmente (es. pp. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Gli identificatori personalizzati saranno apposti agli articoli pubblicati.</message>
-	<message key="manager.setup.enablePublicGalleyId">Gli identificatori personalizzati saranno apposti  a ciascun formato (es, HTML, PDF) di ciascun articolo pubblicato.</message>
-	<message key="manager.setup.enablePublicIssueId">Gli identificatori personalizzati saranno apposti ai fascicoli.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Gli identificatori personalizzati saranno apposti ai file supplementari degli articoli.</message>
 	<message key="manager.setup.enableUserRegistration">Gli utenti possono autoregistrarsi alla rivista con uno o più dei seguenti ruoli:</message>
 	<message key="manager.setup.enableUserRegistration.author">Autori (possomo inviare proposte alla rivista)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Lettori (riceveranno le notifiche e saranno calcolati come equivalenti agli abbonati)</message>

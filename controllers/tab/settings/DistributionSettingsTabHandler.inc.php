@@ -26,7 +26,6 @@ class DistributionSettingsTabHandler extends PKPDistributionSettingsTabHandler {
 			$this->getPageTabs(),
 			array(
 				'access' => 'controllers.tab.settings.access.form.AccessForm',
-				'identifiers' => 'controllers.tab.settings.identifiers.form.IdentifiersForm',
 				'permissions' => 'controllers.tab.settings.permissions.form.OJSPermissionSettingsForm',
 			)
 		));

@@ -147,17 +147,16 @@ class IssueGalleyGridHandler extends GridHandler {
 		}
 
 		// Public ID, if enabled
-		if ($journal->getSetting('enablePublicGalleyId')) {
-			$this->addColumn(
-				new GridColumn(
-					'publicGalleyId',
-					'submission.layout.publicGalleyId',
-					null,
-					null,
-					$issueGalleyGridCellProvider
-				)
-			);
-		}
+		$this->addColumn(
+			new GridColumn(
+				'publicGalleyId',
+				'submission.layout.publicGalleyId',
+				null,
+				null,
+				$issueGalleyGridCellProvider
+			)
+		);
+
 	}
 
 	/**

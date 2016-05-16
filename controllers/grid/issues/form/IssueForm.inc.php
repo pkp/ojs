@@ -58,7 +58,6 @@ class IssueForm extends Form {
 			ISSUE_ACCESS_SUBSCRIPTION => AppLocale::Translate('editor.issues.subscription')
 		));
 
-		$templateMgr->assign('enablePublicIssueId', $journal->getSetting('enablePublicIssueId'));
 		if ($this->issue) {
 			$templateMgr->assign('issue', $this->issue);
 			$templateMgr->assign('issueId', $this->issue->getId());
@@ -71,17 +70,6 @@ class IssueForm extends Form {
 	 * Validate the form
 	 */
 	function validate($request) {
-
-		// check if public issue ID has already been used
-		$journal = $request->getJournal();
-		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-
-		$publicIssueId = $this->getData('publicIssueId');
-		if ($this->issue && $publicIssueId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicIssueId, ASSOC_TYPE_ISSUE, $this->issue->getId())) {
-			$this->addError('publicIssueId', __('editor.publicIdentificationExists', array('publicIdentifier' => $publicIssueId)));
-			$this->addErrorField('publicIssueId');
-		}
-
 		if ($temporaryFileId = $this->getData('temporaryFileId')) {
 			$user = $request->getUser();
 			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
@@ -106,7 +94,6 @@ class IssueForm extends Form {
 				'year' => $this->issue->getYear(),
 				'datePublished' => $this->issue->getDatePublished(),
 				'description' => $this->issue->getDescription(null), // Localized
-				'publicIssueId' => $this->issue->getPubId('publisher-id'),
 				'accessStatus' => $this->issue->getAccessStatus(),
 				'openAccessDate' => $this->issue->getOpenAccessDate(),
 				'showVolume' => $this->issue->getShowVolume(),
@@ -150,7 +137,6 @@ class IssueForm extends Form {
 			'number',
 			'year',
 			'description',
-			'publicIssueId',
 			'accessStatus',
 			'enableOpenAccessDate',
 			'showVolume',
@@ -195,7 +181,6 @@ class IssueForm extends Form {
 			$issue->setDatePublished($this->getData('datePublished'));
 		}
 		$issue->setDescription($this->getData('description'), null); // Localized
-		$issue->setStoredPubId('publisher-id', $this->getData('publicIssueId'));
 		$issue->setShowVolume($this->getData('showVolume'));
 		$issue->setShowNumber($this->getData('showNumber'));
 		$issue->setShowYear($this->getData('showYear'));

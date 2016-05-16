@@ -46,7 +46,7 @@
 		<meta name="DC.Format" scheme="IMT" content="{$galleyFile->getFileType()|escape}"/>
 	{/foreach}
 {/foreach}{/if}
-	<meta name="DC.Identifier" content="{$article->getBestArticleId($currentJournal)|escape}"/>
+	<meta name="DC.Identifier" content="{$article->getBestArticleId()|escape}"/>
 {if $article->getPages()}
 	<meta name="DC.Identifier.pageNumber" content="{$article->getPages()|escape}"/>
 {/if}
@@ -60,7 +60,7 @@
 		<meta name="DC.Identifier.{$pubIdPlugin->getPubIdDisplayType()|escape}" content="{$pubId|escape}"/>
 	{/if}
 {/foreach}
-	<meta name="DC.Identifier.URI" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}"/>
+	<meta name="DC.Identifier.URI" content="{url page="article" op="view" path=$article->getBestArticleId()}"/>
 	<meta name="DC.Language" scheme="ISO639-1" content="{$article->getLanguage()|strip_tags|escape}"/>
 {* DC.Publisher (publishing institution) *}
 {* DC.Publisher.Address (email addr) *}

@@ -23,6 +23,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="issueGalleyForm" method="post" action="{url op="update" issueId=$issueId issueGalleyId=$issueGalleyId}">
+	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="publicationMetadataFormFieldsNotification"}
 	{fbvFormArea id="file"}
 		{fbvFormSection title="editor.issues.galley" required="true"}
 			{include file="controllers/fileUploadContainer.tpl" id="plupload"}
@@ -35,11 +36,9 @@
 		{fbvFormSection title="submission.layout.galleyLabel" required="true"}
 			{fbvElement type="text" value=$label id="label"}
 		{/fbvFormSection}
-		{if $enablePublicGalleyId}
 			{fbvFormSection title="submission.layout.publicGalleyId" required="true"}
 				{fbvElement type="text" value=$publicGalleyId id="publicGalleyId"}
 			{/fbvFormSection}
-		{/if}
 		{fbvFormSection title="common.language" required="true"}
 			{fbvElement type="select" id="galleyLocale" from=$supportedLocales selected=$galleyLocale|default:$formLocale translate=false}
 		{/fbvFormSection}

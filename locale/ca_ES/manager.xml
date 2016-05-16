@@ -174,11 +174,6 @@
 	<message key="manager.setup.enableAnnouncements">Permet als administradors/es de la revista que afegeixin avisos.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Mostra</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">dels avisos més recents a la pàgina inicial de la revista.</message>
-	<message key="manager.setup.enablePageNumber">Els números de pàgina per als elements es calcularan i s’introduiran al sumari de manera manual (per exemple, pàg. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">S’utilitzaran identificadors personalitzats per a identificar elements publicats.</message>
-	<message key="manager.setup.enablePublicGalleyId">S’utilitzaran identificadors personalitzats per a identificar galerades (com ara fitxers HTML o PDF) per a elements publicats.</message>
-	<message key="manager.setup.enablePublicIssueId">S’utilitzaran identificadors personalitzats per a identificar números.</message>
-	<message key="manager.setup.enablePublicSuppFileId">S’utilitzaran identificadors personalitzats per a identificar fitxers d’articles addicionals.</message>
 	<message key="manager.setup.enableUserRegistration">Els usuaris/usuàries es poden registrar a la revista per a un o més dels rols següents:</message>
 	<message key="manager.setup.enableUserRegistration.author">Autors/es (poden trametre materials a la revista).</message>
 	<message key="manager.setup.enableUserRegistration.reader">Lectors/es (rebran notificacions i es consideraran com a a equivalents dels subscriptors).</message>

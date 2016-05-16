@@ -173,11 +173,6 @@
 	<message key="manager.setup.enableAnnouncements">Permite a los gestores de la revista agregar anuncios.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Mostrar</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">de los anuncios mas recientes de esta revista.</message>
-	<message key="manager.setup.enablePageNumber">Se incluirán en la tabla de contenidos de la revista números de página para cada elemento publicado (p.e., pág. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Se usarán identificadores a medida para identificar los elementos publicados.</message>
-	<message key="manager.setup.enablePublicGalleyId">Identificadores personalizados serán usados para identificar galeras (e.g. ficheros HTML o PDF) para artículos publicados.</message>
-	<message key="manager.setup.enablePublicIssueId">Se usarán identificadores a medida para los números.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Se usarán identificadores a medida para identificar ficheros de artículo suplementarios.</message>
 	<message key="manager.setup.enableUserRegistration">Los usuarios pueden registrarse por sí mismos en el sistema en alguno de los siguientes roles:</message>
 	<message key="manager.setup.enableUserRegistration.author">Autores (pueden enviar artículos a la revista)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Lectores (pueden recibir notificaciones y se pueden contabilizar como suscriptores)</message>

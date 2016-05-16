@@ -70,10 +70,6 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$templateMgr->assign('context', $context);
 
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
-		$enablePublicArticleId = $journalSettingsDao->getSetting($context->getId(),'enablePublicArticleId');
-		$templateMgr->assign('enablePublicArticleId', $enablePublicArticleId);
-		$enablePageNumber = $journalSettingsDao->getSetting($context->getId(), 'enablePageNumber');
-		$templateMgr->assign('enablePageNumber', $enablePageNumber);
 		$templateMgr->assign('issueOptions', $this->getIssueOptions($context));
 
 		$publishedArticle = $this->getPublishedArticle();
@@ -206,7 +202,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$this->readUserVars(array(
 			'waivePublicationFee', 'markAsPaid', 'issueId',
 			'datePublished', 'accessStatus', 'pages',
-			'publicArticleId', 'copyrightYear', 'copyrightHolder',
+			'copyrightYear', 'copyrightHolder',
 			'licenseURL', 'attachPermissions',
 		));
 	}
@@ -281,9 +277,6 @@ class IssueEntryPublicationMetadataForm extends Form {
 			$articleDao = DAORegistry::getDAO('ArticleDAO');
 			if (!is_null($this->getData('pages'))) {
 				$submission->setPages($this->getData('pages'));
-			}
-			if (!is_null($this->getData('publicArticleId'))) {
-				$articleDao->changePubId($submission->getId(), 'publisher-id', $this->getData('publicArticleId'));
 			}
 
 			if ($issue) {

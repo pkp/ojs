@@ -210,11 +210,6 @@
 	<message key="manager.setup.enableAnnouncements">Permite managerilor revistei să adauge noutăți la revistă.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Afişarea</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">celor mai recente anunţuri pe pagina principală destinată anunțurilor.</message>
-	<message key="manager.setup.enablePageNumber">Numerotarea paginilor pentru articole va fi calculată şi introdusă manual în cuprins (ex. p. 14-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Pentru a identifica articolele publicate, vor fi utilizaţi identificatori creați special în acest scop.</message>
-	<message key="manager.setup.enablePublicGalleyId">Pentru a identifica diferitele asamblări, vor fi utilizaţi diferiţi identificatori (de ex. fişiere HTML sau PDF) pentru articolele publicate.</message>
-	<message key="manager.setup.enablePublicIssueId">Pentru a identifica numerele, vor fi folosiţi identificatori creați special în acest scop.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Pentru a identifica fişierele suplimentare necesare articolelor, vor fi utilizaţi identificatori creați special în acest scop.</message>
 	<message key="manager.setup.enableUserRegistration">Utilizatorii se pot înregistra la revistă, putând îndeplini unul din următoarele roluri:</message>
 	<message key="manager.setup.enableUserRegistration.author">Autorii (pot trimite propuneri revistei)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Cititorii (vor primi notificări şi poate fi socotit ca un abonat)</message>

@@ -167,10 +167,6 @@
 	<message key="manager.setup.enableAnnouncements">Ενεργοποίηση δυνατότητας προσθήκης ανακοινώσεων από τους  Διαχειριστές του περιοδικού.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Προβολή</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">των πιο πρόσφατων ανακοινώσεων στην αρχική σελίδα του περιοδικού.</message>
-	<message key="manager.setup.enablePageNumber">Οι αριθμοί σελίδας για τεκμήρια υπολογίζονται και καταχωρούνται χειρωνακτικά στον Πίνακα των περιεχομένων (π.χ., σσ. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId"> Θα  χρησιμοποιηθούν προσαρμοσμένα αναγνωριστικά για την αναγνώριση των δημοσιευμένων τεκμηρίων/άρθρων.</message>
-	<message key="manager.setup.enablePublicIssueId">Θα  χρησιμοποιηθούν προσαρμοσμένα αναγνωριστικά ούνται για την αναγνώριση των τευχών.</message>
-	<message key="manager.setup.enablePublicSuppFileId"> Θα  χρησιμοποιηθούν προσαρμοσμένα αναγνωριστικά για την αναγνώριση των συμπληρωματικών αρχείων των άρθρων.</message>
 	<message key="manager.setup.enableUserRegistration">Παροχή δυνατότητας σε χρήστες για εγγραφή στον ιστοτόπο του περιοδικού ως:</message>
 	<message key="manager.setup.enableUserRegistration.author">Συγγραφείς (μπορούν να υποβάλλουν άρθρα στο περιοδικό)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Αναγνώστες (θα λαμβάνουν ενημερώσεις και θα αντιμετωπίζονται όπως οι συνδρομητές)</message>
@@ -522,7 +518,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Σιγουρευτείτε ότι τουλάχιστον ένα checkbox έχει τσεκαριστεί για κάθε ανάθεση Επιμελητή Ενότητας.</message>
 	<message key="manager.sections.form.reviewFormId">Σιγουρευτείτε ότι έχετε επιλέξει μια έγκυρη φόρμα αξιολόγησης.</message>
 	<message key="manager.sections.hideTocAuthor">Παραλείψτε τα ονόματα των συγγραφέων για τεκμήρια ενοτήτων από τον πίνακα περιεχομένων του τεύχους</message>
-	<message key="manager.setup.enablePublicGalleyId">Προσαρμοσμένα αναγνωριστικά θα χρησιμοποιούνται για την αναγνώριση τυπογραφικών δοκιμίων (π.χ. HTML ή PDF αρχεία) δημοσιευμένων τεκμηρίων.</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Επικεφαλίδα Αρχικής Σελίδας Περιοδικού</message>
 	<message key="manager.setup.journalLogo.altText">Logo περιοδικού</message>
 	<message key="manager.subscriptionPolicies.expiry">Λήξη Συνδρομής</message>
