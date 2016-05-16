@@ -210,7 +210,7 @@
 	<message key="manager.setup.journalSummary">Journal Summary</message>
 	<message key="manager.setup.journalSummary.description">A brief description of your journal that can be displayed in lists of journals.</message>
 	<message key="manager.setup.journalAbout">About the Journal</message>
-	<message key="manager.setup.journalAbout.description">Include any information about your journal which may be of interest to readers, authors or reviewers. This could include your open access policy, the focus and scope of the journal, sponsorship disclosure, history of the journal, a privacy statement, and inclusion in any LOCKSS or CLOCKSS archival system.</message>
+	<message key="manager.setup.journalAbout.description">Include any information about your journal which may be of interest to readers, authors or reviewers. This could include your open access policy, the focus and scope of the journal, copyright notice, sponsorship disclosure, history of the journal, a privacy statement, and inclusion in any LOCKSS or CLOCKSS archival system.</message>
 	<message key="manager.setup.favicon">Journal Favicon</message>
 	<message key="manager.setup.faviconDescription">Add a favicon for this journal to display alongside the navigation bar when users are visiting your site.</message>
 	<message key="manager.setup.faviconInvalid">Invalid favicon format. Accepted formats are .ico, .png, and .gif.</message>
