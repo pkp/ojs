@@ -70,6 +70,7 @@ class CreateJournalTest extends WebTestCase {
 		$this->type('css=[id^=contactName-]', 'Ramiro Vaca');
 		$this->type('css=[id^=supportEmail-]', 'rvaca@mailinator.com');
 		$this->type('css=[id^=supportName-]', 'Ramiro Vaca');
+		$this->type('css=[id^=mailingAddress-]', "123 456th Street\nBurnaby, British Columbia\nCanada");
 		$this->click('//form[@id=\'contactForm\']//button[text()=\'Save\']');
 		$this->waitForTextPresent('Your changes have been saved.');
 	}
