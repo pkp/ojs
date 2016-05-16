@@ -88,7 +88,6 @@ class TemplateManager extends PKPTemplateManager {
 				// This allows us to reduce template duplication by using this
 				// variable in templates/common/header.tpl, instead of
 				// reproducing a lot of OMP/OJS-specific logic there.
-				$router = $request->getRouter();
 				$dispatcher = $request->getDispatcher();
 				$this->assign( 'contextSettingsUrl', $dispatcher->url($request, ROUTE_PAGE, null, 'management', 'settings', 'journal') );
 
