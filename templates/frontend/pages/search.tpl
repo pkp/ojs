@@ -195,7 +195,7 @@
 					{assign var="showAuthor" value=false}
 				{/if}
 				<li{if $galleys} class="has_galleys"{/if}>
-					<a class="title" href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)}">
+					<a class="title" href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId()}">
 						{$article->getLocalizedTitle()|strip_unsafe_html}
 					</a>
 					{if $showAuthor}
@@ -206,7 +206,7 @@
 					{if !$currentJournal}
 						<a class="journal" href="{url journal=$journal->getPath()}">{$journal->getLocalizedName()|escape}</a>
 					{/if}
-					<a class="issue" href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">{$issue->getIssueIdentification()|escape}</a>
+					<a class="issue" href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId()}">{$issue->getIssueIdentification()|escape}</a>
 					{if $galleys}
 						<ul class="galley_links">
 							{foreach from=$galleys item=galley}

@@ -217,11 +217,6 @@
 <message key="manager.setup.enableAnnouncements"> Memungkinkan manajer jurnal untuk menambahkan pengumuman jurnal.</message> 
 	<message key="manager.setup.enableAnnouncementsHomepage1"> Tampilan </message> 
 	<message key="manager.setup.enableAnnouncementsHomepage2"> pengumuman terkini di beranda jurnal.</message>	
-<message key="manager.setup.enablePageNumber"> Nomor halaman untuk item akan dijumlahkan dan dimasukkan secara manual di daftar isi (contoh: hal. 13-26).</message> 
-	<message key="manager.setup.enablePublicArticleId"> Custom identifier akan digunakan untuk mengidentifikasikan item yang diterbitkan.</message> 
-	<message key="manager.setup.enablePublicGalleyId"> Custom identifier akan digunakan untuk mengidentifikasikan galley.</message> 
-	<message key="manager.setup.enablePublicIssueId"> Custom identifier akan digunakan untuk mengidentifikasikan terbitan.</message> 
-	<message key="manager.setup.enablePublicSuppFileId"> Custom identifier akan digunakan untuk mengidentifikasikan file artikel tambahan.</message> 
 
 	<message key="manager.setup.enableUserRegistration"> Pengguna akan mendaftarkan diri mereka sendiri pada jurnal dalam satu peran atau lebih:</message> 
 	<message key="manager.setup.enableUserRegistration.author"> Penulis (dapat mengumpulkan bahan/ materi ke jurnal)</message>	

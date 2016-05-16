@@ -174,11 +174,6 @@
 	<message key="manager.setup.enableAnnouncements">Umožnit manažerům časopisu přidávat oznámení časopisu.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Zobrazit</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">z nejnovějších oznámení na domácí stránce časopisu.</message>
-	<message key="manager.setup.enablePageNumber">Čísla stránek pro položky budou spočítána a ručně vložena do obsahu časopisu (např., pp. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Pro identifikaci publikovaných položek budou použity uživatelské identifikátory.</message>
-	<message key="manager.setup.enablePublicGalleyId">Pro identifikaci sazebnic (např. HTML nebo PDF souborů) publikovaných položek budou použity uživatelské identifikátory.</message>
-	<message key="manager.setup.enablePublicIssueId">Pro identifikaci čísel časopisu budou použity uživatelské identifikátory.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Pro identifikaci doplňkových souborů článku budou použity uživatelské identifikátory.</message>
 	<message key="manager.setup.enableUserRegistration">Uživatelé se mohou do časopisu registrovat v jedné nebo více z následujících rolí:</message>
 	<message key="manager.setup.enableUserRegistration.author">Autoři (mohou zasílat materiály do časopisu)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Čtenáři (budou dostávat oznámení a budou bráni jako ekvivalent předplatitelů)</message>

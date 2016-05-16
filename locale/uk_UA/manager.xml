@@ -209,11 +209,6 @@
        <message key="manager.setup.enableAnnouncements">Дозволити менеджерам журналу додавати анонси журналу.</message>
        <message key="manager.setup.enableAnnouncementsHomepage1">Показати</message>
        <message key="manager.setup.enableAnnouncementsHomepage2">найновіших анонсів на домашній сторінці журналу.</message>
-       <message key="manager.setup.enablePageNumber">Номери сторінок для опублікованих одиниць будуть вручну вираховуватись та вводитись для відображення на сторінках змісту (наприклад, С. 13-26).</message>
-       <message key="manager.setup.enablePublicArticleId">Опубліковані матеріали матимуть власні унікальні ідентифікатори.</message>
-       <message key="manager.setup.enablePublicGalleyId">Гранки опублікованих статей (наприклад, файли HTML або PDF) матимуть власні унікальні ідентифікатори.</message>
-       <message key="manager.setup.enablePublicIssueId">Випуски матимуть власні унікальні ідентифікатори.</message>
-       <message key="manager.setup.enablePublicSuppFileId">Супровідні файли опублікованих статей матимуть власні унікальні ідентифікатори.</message>
        <message key="manager.setup.enableUserRegistration">Користувачі самостійно можуть реєструватися у журналі з однією або кількома наступними ролями:</message>
        <message key="manager.setup.enableUserRegistration.author">Автори (можуть надсилати рукописи до журналу)</message>
        <message key="manager.setup.enableUserRegistration.reader">Читачі (будуть отримувати сповіщення та враховуватись як еквівалент передплатників)</message>

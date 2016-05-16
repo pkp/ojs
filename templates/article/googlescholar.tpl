@@ -60,7 +60,7 @@
 		<meta name="citation_{$pubIdPlugin->getPubIdDisplayType()|escape|lower}" content="{$pubId|escape}"/>
 	{/if}
 {/foreach}
-	<meta name="citation_abstract_html_url" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}"/>
+	<meta name="citation_abstract_html_url" content="{url page="article" op="view" path=$article->getBestArticleId()}"/>
 {if $article->getLanguage()}
 	<meta name="citation_language" content="{$article->getLanguage()|strip_tags|escape}"/>
 {/if}
@@ -75,9 +75,9 @@
 	{foreach from=$article->getGalleys() item=gs_galley}
 		{foreach from=$gs_galley->getLatestGalleyFiles() item=galleyFile}
 			{if $galleyFile->getFileType()=="application/pdf"}
-				<meta name="citation_pdf_url" content="{url page="article" op="download" path=$article->getBestArticleId($currentJournal)|to_array:$gs_galley->getBestGalleyId($currentJournal)}"/>
+				<meta name="citation_pdf_url" content="{url page="article" op="download" path=$article->getBestArticleId()|to_array:$gs_galley->getBestGalleyId()}"/>
 			{else}
-				<meta name="citation_fulltext_html_url" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$gs_galley->getBestGalleyId($currentJournal)}"/>
+				<meta name="citation_fulltext_html_url" content="{url page="article" op="view" path=$article->getBestArticleId()|to_array:$gs_galley->getBestGalleyId()}"/>
 			{/if}
 		{/foreach}
 	{/foreach}

@@ -111,8 +111,8 @@ class PubMedExportDom {
 			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $matches[1]);
 		} else {
 			// we need to insert something, so use the best ID possible
-			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $article->getBestArticleId($journal));
-			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $article->getBestArticleId($journal));
+			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $article->getBestArticleId());
+			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $article->getBestArticleId());
 		}
 
 		/* --- DOI --- */

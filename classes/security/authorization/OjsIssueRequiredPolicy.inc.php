@@ -41,11 +41,7 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy {
 
 		// Make sure the issue belongs to the journal.
 		$issueDao = DAORegistry::getDAO('IssueDAO');
-		if ($this->journal->getSetting('enablePublicIssueId')) {
-			$issue = $issueDao->getByBestId($issueId,  $this->journal->getId());
-		} else {
-			$issue = $issueDao->getById((int) $issueId, null, true);
-		}
+		$issue = $issueDao->getByBestId($issueId,  $this->journal->getId());
 
 		if (!is_a($issue, 'Issue')) return AUTHORIZATION_DENY;
 

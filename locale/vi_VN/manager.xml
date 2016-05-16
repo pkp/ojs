@@ -174,11 +174,6 @@
 	<message key="manager.setup.enableAnnouncements">Cho phép Tổng biên tập thêm các thông báo của tạp chí.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Hiển thị</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">trong số những thông báo gần đây nhất lên trang chủ của tạp chí.</message>
-	<message key="manager.setup.enablePageNumber">Số trang của bài viết sẽ được tính và nhập bằng tay vào Mục lục (v.d., tr. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Các định danh riêng sẽ được dùng để định danh các bài viết được xuất bản.</message>
-	<message key="manager.setup.enablePublicGalleyId">Dấu hiệu tự đặt được dùng để xác đinh</message>
-	<message key="manager.setup.enablePublicIssueId">Các định danh riêng sẽ được dùng để định danh các số tạp chí.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Các định danh riêng sẽ được dùng để định danh các file phụ trợ.</message>
 	<message key="manager.setup.enableUserRegistration">Người dùng có thể tự đăng ký với tạp chí với một hoặc nhiều vai trò sau:</message>
 	<message key="manager.setup.enableUserRegistration.author">Tác giả (có thể gửi tài liệu cho tạp chí)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Độc giả (sẽ nhận được thông báo và được tính như là một thuê bao)</message>

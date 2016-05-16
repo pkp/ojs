@@ -208,11 +208,6 @@
 	<message key="manager.setup.enableAnnouncements">Erlauben Sie den Zeitschriftenverwalter/innen, Mitteilungen hinzuzufügen.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Anzeige der</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">neuesten Mitteilungen auf der Startseite der Zeitschrift</message>
-	<message key="manager.setup.enablePageNumber">Für jeden Beitrag werden Seitenzahlen berechnet und manuell im Inhaltsverzeichnis der Zeitschrift eingetragen (z.B. S. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Eindeutige Kennungen werden für Artikel verwendet.</message>
-	<message key="manager.setup.enablePublicGalleyId">Eindeutige Kennungen werden für Fahnen (z.B. HTML- oder PDF-Dateien) zu Artikeln verwendet.</message>
-	<message key="manager.setup.enablePublicIssueId">Eindeutige Kennungen werden für Ausgaben verwendet.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Eindeutige Kennungen werden für Zusatzdateien verwendet.</message>
 	<message key="manager.setup.enableUserRegistration.author">Autor/innen (können Beiträge bei der Zeitschrift einreichen)</message>
 	<message key="manager.setup.enableUserRegistration">Benutzer/innen können sich bei der Zeitschrift auf eine oder mehrere der folgenden Weisen registrieren:</message>
 	<message key="manager.setup.enableUserRegistration.reader">Leser/innen (erhalten Benachrichtigungen und sind gleichberechtigt mit den Abonnent/innen)</message>

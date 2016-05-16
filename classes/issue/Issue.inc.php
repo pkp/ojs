@@ -696,22 +696,12 @@ class Issue extends DataObject {
 
 	/**
 	 * Return the "best" issue ID -- If a public issue ID is set,
-	 * use it; otherwise use the internal issue Id. (Checks the journal
-	 * settings to ensure that the public ID feature is enabled.)
-	 * @param $journal object The journal this issue is in
+	 * use it; otherwise use the internal issue Id.
 	 * @return string
 	 */
-	function getBestIssueId($journal = null) {
-		// Retrieve the journal, if necessary.
-		if (!isset($journal)) {
-			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$journal = $journalDao->getById($this->getJournalId());
-		}
-
-		if ($journal->getSetting('enablePublicIssueId')) {
-			$publicIssueId = $this->getStoredPubId('publisher-id');
-			if (!empty($publicIssueId)) return $publicIssueId;
-		}
+	function getBestIssueId() {
+		$publicIssueId = $this->getStoredPubId('publisher-id');
+		if (!empty($publicIssueId)) return $publicIssueId;
 		return $this->getId();
 	}
 

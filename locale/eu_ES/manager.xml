@@ -167,11 +167,6 @@
 	<message key="manager.setup.enableAnnouncements">Gaitu Aldizkariaren kudeatzaileak aldizkarian anuntzioak gehitzeko.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Erakutsi</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">anuntzio berrienak aldizkariaren hasierako orrian.</message>
-	<message key="manager.setup.enablePageNumber">Lanen orrialde-zenbakiak eskuz kalkulatu eta sartuko dira Aurkibidean (adib., 13-26 orr.)</message>
-	<message key="manager.setup.enablePublicArticleId">Identifikatzaile pertsonalizatuak erabiliko dira argitaratutako lanak identifikatzeko.</message>
-	<message key="manager.setup.enablePublicGalleyId">Identifikatzaile pertsonalizatuak erabiliko dira argitaratutako lanen galeradak identifikatzeko (adib. HTML edo PDF fitxategiak).</message>
-	<message key="manager.setup.enablePublicIssueId">Identifikatzaile pertsonalizatuak erabiliko dira zenbakiak identifikatzeko.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Identifikatzaile pertsonalizatuak erabiliko dira artikuluen fitxategi osagarriak identifikatzeko.</message>
 	<message key="manager.setup.enableUserRegistration">Erabiltzaileek beren burua erregistra dezakete egunkarian funtzio hauetako batean edo gehiagotan:</message>
 	<message key="manager.setup.enableUserRegistration.author">Egile (aldizkarira materiala bidal dezakete)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Irakurle (jakinarazpenak jasoko dituzte eta harpidedun moduan hartuak izango dira)</message>
