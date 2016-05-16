@@ -306,67 +306,6 @@ class SearchHandler extends Handler {
 	}
 
 	/**
-	 * Display categories.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function categories($args, $request) {
-		$this->validate(null, $request);
-		$this->setupTemplate($request);
-
-		$site = $request->getSite();
-		$journal = $request->getJournal();
-
-		$categoryDao = DAORegistry::getDAO('CategoryDAO');
-		$cache = $categoryDao->getCache();
-
-		if ($journal || !$site->getSetting('categoriesEnabled') || !$cache) {
-			$request->redirect('index');
-		}
-
-		// Sort by category name
-		uasort($cache, create_function('$a, $b', '$catA = $a[\'category\']; $catB = $b[\'category\']; return strcasecmp($catA->getLocalizedName(), $catB->getLocalizedName());'));
-
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('categories', $cache);
-		$templateMgr->display('frontend/pages/searchCategories.tpl');
-	}
-
-	/**
-	 * Display category contents.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function category($args, $request) {
-		$categoryId = (int) array_shift($args);
-
-		$this->validate(null, $request);
-		$this->setupTemplate($request);
-
-		$site = $request->getSite();
-		$journal = $request->getJournal();
-
-		$categoryDao = DAORegistry::getDAO('CategoryDAO');
-		$cache = $categoryDao->getCache();
-
-		if ($journal || !$site->getSetting('categoriesEnabled') || !$cache || !isset($cache[$categoryId])) {
-			$request->redirect('index');
-		}
-
-		$journals =& $cache[$categoryId]['journals'];
-		$category =& $cache[$categoryId]['category'];
-
-		// Sort by journal name
-		uasort($journals, create_function('$a, $b', 'return strcasecmp($a->getLocalizedTitle(), $b->getLocalizedTitle());'));
-
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('journals', $journals);
-		$templateMgr->assign('category', $category);
-		$templateMgr->assign('journalFilesPath', $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/');
-		$templateMgr->display('frontend/pages/searchCategory.tpl');
-	}
-
-	/**
 	 * Setup common template variables.
 	 * @param $request PKPRequest
 	 */
