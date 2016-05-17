@@ -150,6 +150,7 @@
 
 	label {
 		display: block;
+		cursor: pointer;
 	}
 
 	.label {
@@ -195,6 +196,25 @@
 		color: #fff;
 	}
 
+	label > input[type="checkbox"],
+	label > input[type="radio"] {
+		margin-right: 0.25em;
+	}
+
+	.buttons {
+		.pkp_helpers_clear;
+
+		button {
+			&:extend(.cmp_button);
+		}
+
+		a {
+			font-size: @font-sml;
+			line-height: @triple;
+			margin-left: 1em;
+		}
+	}
+
 	@media(min-width: @screen-phone) {
 
 		input[type="text"],
@@ -226,7 +246,7 @@
 			&.tagit-choice {
 				margin-right: 0.5em;
 				padding-left: 0.5em;
-				background: @bg;
+				background: @bg-shade;
 				border-radius: @radius;
 				line-height: @double;
 			}
