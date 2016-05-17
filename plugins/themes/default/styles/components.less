@@ -332,13 +332,23 @@
 }
 
 // Notification
-// @todo needs work and styles for error/warning/notice instances
 .cmp_notification {
 	display: block;
 	width: 100%;
 	padding: @double;
-	background: @bg;
-	text-align: center;
+	margin-bottom: @quadruple;
+	background: @bg-shade;
+	border-left: @half solid @primary;
+	font-size: @font-base;
+	line-height: @line-base;
+
+	.success {
+		border-color: @yes;
+	}
+
+	.no {
+		border-color: @no;
+	}
 }
 
 // Breadcrumbs

@@ -678,9 +678,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="user.register.selectContext">Select a journal to register with:</message>
 	<message key="user.register.noJournals">There are no journals you may register with on this site.</message>
 	<message key="user.register.privacyStatement">Privacy Statement</message>
-	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Click here</a> if you are already registered with this or another journal on this site.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Click here</a> if you are <strong>not</strong> already registered with this or another journal on this site.]]></message>
-	<message key="user.register.loginToRegister">Enter your existing username and password to register with this journal.</message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Login here</a> if you have already registered with this or another journal on this site.]]></message>
 	<message key="user.register.registrationDisabled">This journal is currently not accepting user registrations.</message>
 	<message key="user.register.form.passwordLengthTooShort">The password you entered is not long enough.</message>
 	<message key="user.register.readerDescription">Notified by email on publication of an issue of the journal.</message>
