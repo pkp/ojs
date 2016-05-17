@@ -14,13 +14,51 @@
 		font-size: @font-sml;
 		line-height: @line-sml;
 		color: @text-light;
+		margin-bottom: @double;
 	}
 
-	.buttons {
-		.pkp_helpers_clear;
+	.fields .reviewer_interests {
+		max-height: 0;
+		padding-bottom: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition: all 0.3s;
 
-		button {
-			&:extend(.cmp_button all);
+		&.is_visible {
+			max-height: 400px;
+			overflow: visible;
+			padding-bottom: @triple;
+			opacity: 1;
+		}
+	}
+
+	.context_optin {
+
+		.contexts {
+			&:extend(.pkp_unstyled_list);
+
+			> li {
+				margin-bottom: 1em;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.roles {
+			padding: @half 0;
+
+			legend {
+				&:extend(.pkp_screen_reader);
+			}
+
+			label {
+				display: inline-block;
+				margin-right: 1em;
+				font-size: @font-sml;
+				line-height: @line-sml;
+			}
 		}
 	}
 
@@ -49,26 +87,6 @@
 			a {
 				color: #fff;
 			}
-		}
-	}
-
-	// Styles for user group panel, which is still tied to a template
-	// shared by the backend
-	.pkp_controllers_extrasOnDemand {
-		margin-top: @base;
-	}
-
-	.checkbox_and_radiobutton {
-		&:extend(.pkp_unstyled_list);
-	}
-
-	#interests {
-		margin-top: @double;
-
-		.sub_label {
-			font-size: @font-sml;
-			font-style: italic;
-			line-height: @double;
 		}
 	}
 
