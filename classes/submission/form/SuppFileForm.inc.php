@@ -135,7 +135,7 @@ class SuppFileForm extends Form {
 		$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 		$publicSuppFileId = $this->getData('publicSuppFileId');
-		if ($publicSuppFileId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicSuppFileId, ASSOC_TYPE_SUPP_FILE, $this->suppFileId)) {
+		if ($publicSuppFileId && (is_numeric($publicSuppFileId) || $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicSuppFileId, ASSOC_TYPE_SUPP_FILE, $this->suppFileId))) {
 			$this->addError('publicSuppFileId', __('editor.publicIdentificationExists', array('publicIdentifier' => $publicSuppFileId)));
 			$this->addErrorField('publicSuppFileId');
 		}

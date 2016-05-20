@@ -674,7 +674,7 @@ class IssueManagementHandler extends EditorHandler {
 				if (isset($publishedArticles[$articleId])) {
 					$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 					$publicArticleId = $publishedArticles[$articleId];
-					if ($publicArticleId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicArticleId, ASSOC_TYPE_ARTICLE, $articleId)) {
+					if ($publicArticleId && (is_numeric($publicArticleId) || $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicArticleId, ASSOC_TYPE_ARTICLE, $articleId))) {
 						// We are not in a form so we cannot send form errors.
 						// Let's at least send a notification to give some feedback
 						// to the user.

@@ -91,7 +91,7 @@ class IssueForm extends Form {
 		$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 		$publicIssueId = $this->getData('publicIssueId');
-		if ($publicIssueId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicIssueId, ASSOC_TYPE_ISSUE, $issueId)) {
+		if ($publicIssueId && (is_numeric($publicIssueId) || $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicIssueId, ASSOC_TYPE_ISSUE, $issueId))) {
 			$this->addError('publicIssueId', __('editor.publicIdentificationExists', array('publicIdentifier' => $publicIssueId)));
 			$this->addErrorField('publicIssueId');
 		}
