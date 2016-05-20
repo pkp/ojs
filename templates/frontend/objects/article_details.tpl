@@ -77,9 +77,9 @@
 	<div class="row">
 		<div class="main_entry">
 
-			{if $article->getAuthors()}
+			{if $article->getAuthors(false, $submissionRevision)}
 				<ul class="item authors">
-					{foreach from=$article->getAuthors() item=author}
+					{foreach from=$article->getAuthors(false, $submissionRevision) item=author}
 						<li>
 							<span class="name">
 								{$author->getFullName()|escape}

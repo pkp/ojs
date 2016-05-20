@@ -16,6 +16,10 @@
 				arePermissionsAttached: {if $arePermissionsAttached}true{else}false{/if}
 			{rdelim}
 		);
+		
+		$('#publicationMetadataEntryForm').pkpHandler(
+			'$.pkp.controllers.tab.issueEntry.SubmissionRevisionsHandler'
+		);
 	{rdelim});
 </script>
 
@@ -29,6 +33,8 @@
 	<input type="hidden" name="tab" value="publication" />
 	<input type="hidden" name="waivePublicationFee" value="0" />
 	<input type="hidden" name="markAsPaid" value="0" />
+	<input type="hidden" name="submissionRevision" value="{$formParams.revision|escape}" />
+	<input type="hidden" name="saveAsRevision" value="{$formParams.saveAsRevision|escape}" />
 
 	{if !$publicationFeeEnabled || $publicationPayment}
 		{fbvFormArea id="schedulingInformation" title="editor.article.scheduleForPublication"}
@@ -46,11 +52,6 @@
 			{fbvFormArea id="customExtras" title="editor.article.customJournalSettings"}
 				{fbvFormSection for="customExtras"}
 					{if $enablePublicArticleId}
-							{if $publishedArticle}
-								{assign var=publicArticleId value=$publishedArticle->getPubId('publisher-id')}
-							{else}
-								{assign var=publicArticleId value=0}
-							{/if}
 							{fbvElement type="text" id="publicArticleId" label="editor.issues.publicId" value=$publicArticleId inline=true size=$fbvStyles.size.MEDIUM}
 					{/if}
 					{if $enablePageNumber}
@@ -68,7 +69,7 @@
 		{if $publishedArticle}
 			{fbvFormArea id="schedulingInformation" title="editor.issues.published"}
 				{fbvFormSection for="publishedDate"}
-					{fbvElement type="text" required=true id="datePublished" value=$publishedArticle->getDatePublished()|date_format:$dateFormatShort translate=false label="editor.issues.published" inline=true size=$fbvStyles.size.MEDIUM}
+					{fbvElement type="text" required=true id="datePublished" value=$datePublished|date_format:$dateFormatShort translate=false label="editor.issues.published" inline=true size=$fbvStyles.size.MEDIUM}
 				{if $issueAccess && $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $context->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
 					{fbvElement type="select" id="accessStatus" required=true from=$accessOptions selected=$publishedArticle->getAccessStatus() translate=false label="editor.issues.access" inline=true size=$fbvStyles.size.MEDIUM}
 				{/if}

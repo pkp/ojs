@@ -134,6 +134,8 @@
 <script src="{$baseUrl}/js/controllers/tab/issueEntry/form/IssueEntryPublicationMetadataFormHandler.js"></script>
 <script src="{$baseUrl}/js/pages/search/SearchFormHandler.js"></script>
 <script src="{$baseUrl}/plugins/generic/lucene/js/LuceneAutocompleteHandler.js"></script>
+<script src="{$baseUrl}/js/controllers/tab/issueEntry/SubmissionRevisionsHandler.js"></script>
+<script src="{$baseUrl}/js/pages/ArticleDownloadHandler.js"></script>
 
 {* Our own plug-in (depends on classes) *}
 <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.pkp.js"></script>

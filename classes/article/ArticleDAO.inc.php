@@ -81,15 +81,15 @@ class ArticleDAO extends SubmissionDAO {
 	/**
 	 * Internal function to return an Article object from a row.
 	 * @param $row array
+	 * @param $submissionRevision int
 	 * @return Article
 	 */
-	function _fromRow($row) {
-		$article = parent::_fromRow($row);
+	function _fromRow($row, $submissionRevision = null) {
+		$article = parent::_fromRow($row, $submissionRevision);
 
 		$article->setSectionId($row['section_id']);
 		$article->setSectionTitle($row['section_title']);
 		$article->setSectionAbbrev($row['section_abbrev']);
-		$article->setCitations($row['citations']);
 		$article->setCurrentRound($row['current_round']);
 		$article->setPages($row['pages']);
 		$article->setFastTracked($row['fast_tracked']);
@@ -162,7 +162,6 @@ class ArticleDAO extends SubmissionDAO {
 					stage_id = ?,
 					language = ?,
 					comments_to_ed = ?,
-					citations = ?,
 					date_submitted = %s,
 					date_status_modified = %s,
 					last_modified = %s,
@@ -171,7 +170,8 @@ class ArticleDAO extends SubmissionDAO {
 					current_round = ?,
 					pages = ?,
 					fast_tracked = ?,
-					hide_author = ?
+					hide_author = ?,
+					hide_submission_revisions = ?
 				WHERE submission_id = ?',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
@@ -180,23 +180,26 @@ class ArticleDAO extends SubmissionDAO {
 				(int) $article->getStageId(),
 				$article->getLanguage(),
 				$article->getCommentsToEditor(),
-				$article->getCitations(),
 				(int) $article->getStatus(),
 				(int) $article->getSubmissionProgress(),
 				(int) $article->getCurrentRound(),
 				$article->getPages(),
 				(int) $article->getFastTracked(),
 				(int) $article->getHideAuthor(),
+				(int) $article->getHideSubmissionRevisions(),
 				(int) $article->getId()
 			)
 		);
 
 		$this->updateLocaleFields($article);
-
+		$contextId = Request::getContext()->getId();
+		$version = $article->getCurrentVersionId($contextId);
+		
 		// update authors for this article
-		$authors = $article->getAuthors();
+		$authors = $article->getAuthors(false, $version);
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
 			if ($authors[$i]->getId() > 0) {
+				$authors[$i]->setVersion($version);
 				$this->authorDao->updateObject($authors[$i]);
 			} else {
 				$this->authorDao->insertObject($authors[$i]);

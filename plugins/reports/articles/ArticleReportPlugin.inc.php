@@ -60,9 +60,9 @@ class ArticleReportPlugin extends ReportPlugin {
 		header('content-disposition: attachment; filename=articles-' . date('Ymd') . '.csv');
 
 		$articleReportDao = DAORegistry::getDAO('ArticleReportDAO');
-		list($articlesIterator, $authorsIterator, $decisionsIteratorsArray) = $articleReportDao->getArticleReport($journal->getId());
+		list($articlesIterator, $authorsArray, $decisionsIteratorsArray) = $articleReportDao->getArticleReport($journal->getId());
 
-		$maxAuthors = $this->getMaxAuthorCount($authorsIterator);
+		$maxAuthors = $this->getMaxAuthorCount($authorsArray);
 
 		$decisions = array();
 		foreach ($decisionsIteratorsArray as $decisionsIterator) {
@@ -85,6 +85,7 @@ class ArticleReportPlugin extends ReportPlugin {
 
 		$columns = array(
 			'submission_id' => __('article.submissionId'),
+			'version' => __('article.version'),
 			'title' => __('article.title'),
 			'abstract' => __('article.abstract')
 		);
@@ -117,7 +118,7 @@ class ArticleReportPlugin extends ReportPlugin {
 
 		$authorIndex = 0;
 		while ($row = $articlesIterator->next()) {
-			$authors = $this->mergeAuthors($authorsIterator[$row['submission_id']]->toArray());
+			$authors = $this->mergeAuthors($authorsArray[$row['submission_id']][$row['version']]);
 
 			foreach ($columns as $index => $junk) {
 				if ($index == 'editor_decision') {
@@ -150,15 +151,17 @@ class ArticleReportPlugin extends ReportPlugin {
 
 	/**
 	 * Get the highest author count for any article (to determine how many columns to set)
-	 * @param $authorsIterator DBRowIterator
+	 * @param $authorsArray array
 	 * @return int
 	 */
-	function getMaxAuthorCount($authorsIterator) {
-		$maxAuthors = 0;
-		foreach ($authorsIterator as $authorIterator) {
-			$maxAuthors = $authorIterator->getCount() > $maxAuthors ? $authorIterator->getCount() : $maxAuthors;
+	function getMaxAuthorCount($authorsArray) {
+		$authorCount = array();
+		foreach($authorsArray as $submissionId => $versions) {
+			foreach($versions as $version) {
+				$authorCount[] = count($version);
+			}
 		}
-		return $maxAuthors;
+		return max($authorCount);
 	}
 
 	/**

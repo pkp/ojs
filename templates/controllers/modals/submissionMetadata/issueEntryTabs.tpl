@@ -22,6 +22,20 @@
 				{rdelim});
 	{rdelim});
 </script>
+{if not $hideHelp}<p class="pkp_help">{translate key="issue.manage.entryDescription"}</p>{/if}
+<form id='submissionSettingsRevisionForm' class='pkp_form'>
+	{if $submissionSettingsRevisions|@count > 1}
+		{fbvFormSection  for="submissionSettingsRevision"}
+			{fbvElement type="select" name="submissionSettingsRevision" id="submissionSettingsRevision" from=$submissionSettingsRevisions translate=false selected=$currentSubmissionSettingsRevision}
+		{/fbvFormSection}
+	{/if}
+	{if $isPublished}
+		{fbvFormSection list=true}
+			{fbvElement type="checkbox" id="saveAsRevision" name="saveAsRevision" label="submission.saveAsRevision"}
+		{/fbvFormSection}
+	{/if}
+</form>
+<br /><br />
 <div id="newIssueEntryTabs">
 	<ul>
 		<li>

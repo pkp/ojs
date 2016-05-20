@@ -202,6 +202,54 @@ class ArticleGalley extends Representation {
 
 		return null;
 	}
+	
+	/**
+	 * Retrieve not the first, but all other revisions assigned to this submission file.
+	 * @param $fileId int
+	 * @param $fileStage int (optional)
+	 * @param $submissionId int (optional)
+	 * @param $submissionRevision int (optional)
+	 * @return Array
+	 */
+	function getOtherRevisions($fileId, $fileStage = null, $submissionId = null, $submissionRevision = null) {
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$submissionFiles = $submissionFileDao->getAllRevisions($fileId, $fileStage, $submissionId);
+		array_shift($submissionFiles);
+		
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$submissionSettingsRevisions = $articleDao->getSubmissionRevisions($submissionId, null, true, true);
+		
+		$otherSubmissionFiles = array();
+		foreach($submissionFiles as $submissionFile) {
+			$revision = $submissionFile->getRevision();
+			$fileName = $submissionFile->getOriginalFileName();
+			$submissionSettingsRevision = $submissionFile->getSubmissionSettingsRevision();
+
+			// just retrieve files where the submission_settings_revision ID of the file corresponds to the version of the current submission
+			if ($submissionRevision && ($submissionRevision != $submissionSettingsRevision)) continue;
+			
+			$submissionTitle = $submissionSettingsRevisions[$submissionSettingsRevision];
+			$otherSubmissionFiles[$revision] = $fileName . ': ' . $submissionTitle;
+		}
+
+		return $otherSubmissionFiles;
+	}
+	
+	/**
+	 * Checks whether there are submission files associated to the current galley having a particular submission_settings_revision
+	 * @param $submissionRevision int
+	 * @return boolean
+	 */
+	function hasFilesPerSubmissionRevision($submissionRevision) {
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$submissionFiles = $submissionFileDao->getAllRevisionsByAssocId(ASSOC_TYPE_GALLEY, $this->getId());
+
+		foreach($submissionFiles as $submissionFile) {
+			if ($submissionFile->getSubmissionSettingsRevision() == $submissionRevision) return true;
+		}
+
+		return false;
+	}
 }
 
 ?>
