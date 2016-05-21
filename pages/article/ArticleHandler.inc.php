@@ -76,13 +76,15 @@ class ArticleHandler extends Handler {
 			$this->article = $article;
 		}
 
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		if ($this->journal->getSetting('enablePublicGalleyId')) {
-			$this->galley = $galleyDao->getByBestGalleyId($galleyId, $this->article->getId());
-		}
+		if ($galleyId) {
+			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+			if ($this->journal->getSetting('enablePublicGalleyId')) {
+				$this->galley = $galleyDao->getByBestGalleyId($galleyId, $this->article->getId());
+			}
 
-		if (!$this->galley) {
-			$this->galley = $galleyDao->getById($galleyId, $this->article->getId());
+			if (!$this->galley) {
+				$this->galley = $galleyDao->getById($galleyId, $this->article->getId());
+			}
 		}
 	}
 
@@ -208,9 +210,6 @@ class ArticleHandler extends Handler {
 			$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 			$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
 
-			// load Article galley plugins
-			PluginRegistry::loadCategory('viewableFiles', true);
-
 			if (!HookRegistry::call('ArticleHandler::view::galley', array(&$request, &$issue, &$galley, &$article))) {
 				return $templateMgr->display('frontend/pages/article.tpl');
 			}
@@ -229,7 +228,7 @@ class ArticleHandler extends Handler {
 
 		if ($this->userCanViewGalley($request, $articleId, $galleyId)) {
 			if (!$fileId) {
-				$submissionFile = $this->galley->getFirstGalleyFile();
+				$submissionFile = $this->galley->getFile();
 				if ($submissionFile) {
 					$fileId = $submissionFile->getFileId();
 					// The file manager expects the real article id.  Extract it from the submission file.

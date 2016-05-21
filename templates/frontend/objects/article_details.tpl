@@ -119,12 +119,14 @@
 			{/if}
 
 			{* Article Galleys *}
-			{if $article->getGalleys()}
+
+			{assign var=galleys value=$article->getGalleys()}
+			{if $galleys}
 				<div class="item galleys">
 					<ul class="value galleys_links">
-						{foreach from=$article->getGalleys() item=galley}
+						{foreach from=$galleys item=galley}
 							<li>
-								{include file="frontend/objects/galley_link.tpl" parent=$article}
+								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley}
 							</li>
 						{/foreach}
 					</ul>

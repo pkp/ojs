@@ -110,9 +110,6 @@ class IssueHandler extends Handler {
 			// Otherwise redirect to download issue galley page
 			$galley = $this->getGalley();
 
-			// load Article galley plugins
-			PluginRegistry::loadCategory('viewableFiles', true);
-
 			$templateMgr->assign('pdfTitle', $issue->getIssueIdentification());
 			$templateMgr->assign('parent', $issue);
 			$templateMgr->assign('galley', $galley);

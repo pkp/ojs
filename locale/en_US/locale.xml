@@ -526,7 +526,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="layoutEditor.galley.replaceGalley">Replace File</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Upload supplementary file</message>
 	<message key="submission.layout.imageInvalid">Invalid image format. Accepted formats are .gif, .jpg, and .png.</message>
-	<message key="submission.layout.galleyType">Galley Type</message>
 	<message key="submission.layout.galley.remotelyHostedContent">This galley will be available at a separate website.</message>
 	<message key="submission.layout.galley.remoteURL">URL of remotely-hosted content</message>
 

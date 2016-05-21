@@ -22,7 +22,7 @@ class ArticleGalleyDAO extends RepresentationDAO {
 	 * Constructor.
 	 */
 	function ArticleGalleyDAO() {
-		parent::RepresentationDAO();
+		parent::DAO();
 	}
 
 	/**
@@ -42,12 +42,15 @@ class ArticleGalleyDAO extends RepresentationDAO {
 		if ($contextId) $params[] = (int) $contextId;
 
 		$result = $this->retrieve(
-			'SELECT	g.*
+			'SELECT	g.*, sf.*
 			FROM	submission_galleys g
-			' . ($contextId?' JOIN submissions s ON (s.submission_id = g.submission_id)':'') . '
-			WHERE	g.galley_id = ?' .
-			($submissionId !== null?' AND g.submission_id = ?':'') .
-			($contextId?' AND s.context_id = ?':''),
+				' . ($contextId?' JOIN submissions s ON (s.submission_id = g.submission_id)':'') . '
+				LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
+				LEFT JOIN submission_files nsf ON (nsf.file_id = g.file_id AND nsf.revision > sf.revision)
+			WHERE	g.galley_id = ?
+				AND nsf.file_id IS NULL ' .
+				($submissionId !== null?' AND g.submission_id = ?':'') .
+				($contextId?' AND s.context_id = ?':''),
 			$params
 		);
 
@@ -153,12 +156,15 @@ class ArticleGalleyDAO extends RepresentationDAO {
 
 		return new DAOResultFactory(
 			$this->retrieve(
-				'SELECT g.*
-				FROM submission_galleys g ' .
-				($contextId?'INNER JOIN submissions s ON (g.submission_id = s.submission_id) ':'') .
-				'WHERE g.submission_id = ? ' .
-				($contextId?' AND s.context_id = ? ':'') .
-				'ORDER BY g.seq',
+				'SELECT g.*, sf.*
+				FROM submission_galleys g
+				' . ($contextId?'INNER JOIN submissions s ON (g.submission_id = s.submission_id) ':'') . '
+				LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
+				LEFT JOIN submission_files nsf ON (nsf.file_id = g.file_id AND nsf.revision > sf.revision)
+				WHERE g.submission_id = ?
+					AND nsf.file_id IS NULL
+					' . ($contextId?' AND s.context_id = ? ':'') . '
+				ORDER BY g.seq',
 				$params
 			),
 			$this, '_fromRow'
@@ -172,10 +178,13 @@ class ArticleGalleyDAO extends RepresentationDAO {
 	 */
 	function getByJournalId($journalId) {
 		$result = $this->retrieve(
-			'SELECT	g.*
+			'SELECT	g.*, sf.*
 			FROM	submission_galleys g
-			INNER JOIN submissions a ON (g.submission_id = a.submission_id)
-			WHERE	a.context_id = ?',
+				INNER JOIN submissions a ON (g.submission_id = a.submission_id)
+				LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
+				LEFT JOIN submission_files nsf ON (nsf.file_id = g.file_id AND nsf.revision > sf.revision)
+			WHERE	a.context_id = ?
+				AND nsf.file_id IS NULL',
 			(int) $journalId
 		);
 
@@ -240,8 +249,7 @@ class ArticleGalleyDAO extends RepresentationDAO {
 		$galley->setLabel($row['label']);
 		$galley->setSequence($row['seq']);
 		$galley->setRemoteURL($row['remote_url']);
-		$galley->setIsApproved($row['is_approved']);
-		$galley->setGalleyType($row['galley_type']);
+		$galley->setFileId($row['file_id']);
 
 		$this->getDataObjectSettings('submission_galley_settings', 'galley_id', $row['galley_id'], $galley);
 
@@ -257,17 +265,16 @@ class ArticleGalleyDAO extends RepresentationDAO {
 	function insertObject($galley) {
 		$this->update(
 			'INSERT INTO submission_galleys
-				(submission_id, label, locale, seq, remote_url, is_approved, galley_type)
+				(submission_id, label, locale, seq, remote_url, file_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?)',
 			array(
 				(int) $galley->getSubmissionId(),
 				$galley->getLabel(),
 				$galley->getLocale(),
 				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getSubmissionId()) : $galley->getSequence(),
 				$galley->getRemoteURL(),
-				$galley->getIsApproved()?1:0,
-				$galley->getGalleyType(),
+				$galley->getFileId(),
 			)
 		);
 		$galley->setId($this->getInsertId());
@@ -286,20 +293,18 @@ class ArticleGalleyDAO extends RepresentationDAO {
 		$this->update(
 			'UPDATE submission_galleys
 				SET
-					label = ?,
 					locale = ?,
+					label = ?,
 					seq = ?,
 					remote_url = ?,
-					is_approved = ?,
-					galley_type = ?
+					file_id = ?
 				WHERE galley_id = ?',
 			array(
-				$galley->getLabel(),
 				$galley->getLocale(),
-				$galley->getSequence(),
+				$galley->getLabel(),
+				(float) $galley->getSequence(),
 				$galley->getRemoteURL(),
-				(int) $galley->getIsApproved(),
-				$galley->getGalleyType(),
+				(int) $galley->getFileId(),
 				(int) $galley->getId(),
 			)
 		);

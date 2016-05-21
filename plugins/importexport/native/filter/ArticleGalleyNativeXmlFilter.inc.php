@@ -48,7 +48,6 @@ class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter {
 	function createRepresentationNode($doc, $representation) {
 		$representationNode = parent::createRepresentationNode($doc, $representation);
 		$representationNode->setAttribute('approved', $representation->getIsApproved()?'true':'false');
-		$representationNode->setAttribute('galley_type', $representation->getGalleyType());
 
 		$submission = $this->getDeployment()->getSubmission();
 

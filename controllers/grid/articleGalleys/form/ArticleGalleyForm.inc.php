@@ -61,25 +61,16 @@ class ArticleGalleyForm extends Form {
 	function fetch($request) {
 		$journal = $request->getJournal();
 		$templateMgr = TemplateManager::getManager($request);
+		if ($this->_articleGalley) $templateMgr->assign(array(
+			'representationId' => $this->_articleGalley->getId(),
+			'articleGalley' => $this->_articleGalley,
+		));
+		$templateMgr->assign(array(
+			'supportedLocales' => $journal->getSupportedLocaleNames(),
+			'enablePublicGalleyId' => $journal->getSetting('enablePublicGalleyId'),
+			'submissionId' => $this->_submission->getId(),
+		));
 
-		$templateMgr->assign('submissionId', $this->_submission->getId());
-		if ($this->_articleGalley) {
-			$templateMgr->assign('representationId', $this->_articleGalley->getId());
-			$templateMgr->assign('articleGalley', $this->_articleGalley);
-			$templateMgr->assign('galleyType', $this->_articleGalley->getGalleyType());
-		}
-		$templateMgr->assign('supportedLocales', $journal->getSupportedLocaleNames());
-		$templateMgr->assign('enablePublicGalleyId', $journal->getSetting('enablePublicGalleyId'));
-
-		// load the Article Galley plugins.
-		$plugins = PluginRegistry::loadCategory('viewableFiles');
-		$enabledPlugins = array();
-		foreach ($plugins as $plugin) {
-			if ($plugin->getEnabled()) { // plugins must be enabled to be used by article galleys.
-				$enabledPlugins[$plugin->getName()] = $plugin->getDisplayName();
-			}
-		}
-		$templateMgr->assign('enabledPlugins', $enabledPlugins);
 		return parent::fetch($request);
 	}
 
@@ -109,7 +100,6 @@ class ArticleGalleyForm extends Form {
 				'label' => $this->_articleGalley->getLabel(),
 				'publicGalleyId' => $this->_articleGalley->getStoredPubId('publisher-id'),
 				'galleyLocale' => $this->_articleGalley->getLocale(),
-				'galleyType' => $this->_articleGalley->getGalleyType(),
 				'remoteURL' => $this->_articleGalley->getRemoteURL(),
 			);
 		} else {
@@ -126,7 +116,6 @@ class ArticleGalleyForm extends Form {
 				'label',
 				'publicGalleyId',
 				'galleyLocale',
-				'galleyType',
 				'remoteURL',
 			)
 		);
@@ -135,7 +124,7 @@ class ArticleGalleyForm extends Form {
 	/**
 	 * Save changes to the galley.
 	 * @param $request PKPRequest
-	 * @return int the galley ID
+	 * @return ArticleGalley The resulting article galley.
 	 */
 	function execute($request) {
 		import('classes.file.IssueFileManager');
@@ -150,7 +139,6 @@ class ArticleGalleyForm extends Form {
 				$articleGalley->setStoredPubId('publisher-id', $this->getData('publicGalleyId'));
 			}
 			$articleGalley->setLocale($this->getData('galleyLocale'));
-			$articleGalley->setGalleyType($this->getData('galleyType'));
 			$articleGalley->setRemoteURL($this->getData('remoteURL'));
 
 			// Update galley in the db
@@ -165,7 +153,6 @@ class ArticleGalleyForm extends Form {
 			}
 
 			$articleGalley->setLocale($this->getData('galleyLocale'));
-			$articleGalley->setGalleyType($this->getData('galleyType'));
 			$articleGalley->setRemoteURL($this->getData('remoteURL'));
 
 			// Insert new galley into the db
@@ -173,7 +160,7 @@ class ArticleGalleyForm extends Form {
 			$this->_articleGalley = $articleGalley;
 		}
 
-		return $this->_articleGalley->getId();
+		return $articleGalley;
 	}
 }
 

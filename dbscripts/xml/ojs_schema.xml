@@ -587,6 +587,7 @@
 			<NOTNULL/>
 		</field>
 		<field name="label" type="C2" size="32"/>
+		<field name="file_id" type="I8"/>
 		<field name="seq" type="F">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
@@ -595,9 +596,6 @@
 		<field name="is_approved" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="galley_type" type="C2" size="255">
-			<NOTNULL/>
 		</field>
 		<descr>Submission galleys</descr>
 		<index name="submission_galleys_submission_id">
