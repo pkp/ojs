@@ -88,7 +88,10 @@ class ArticleGalleyForm extends Form {
 		$publicGalleyId = $this->getData('publicGalleyId');
 		if ($publicGalleyId) {
 			$galleyWithPublicGalleyId = $galleyDao->getGalleyByPubId('publisher-id', $publicGalleyId, $this->articleId);
-			if ($galleyWithPublicGalleyId && $galleyWithPublicGalleyId->getId() != $this->galleyId) {
+			if (is_numeric($publicGalleyId)) {
+				$this->addError('publicGalleyId', __('editor.publicIdentificationExists', array('publicIdentifier' => $publicGalleyId)));
+				$this->addErrorField('publicGalleyId');
+			} elseif ($galleyWithPublicGalleyId && $galleyWithPublicGalleyId->getId() != $this->galleyId) {
 				$this->addError('publicGalleyId', __('editor.publicGalleyIdentificationExists', array('publicIdentifier' => $publicGalleyId)));
 				$this->addErrorField('publicGalleyId');
 			}
