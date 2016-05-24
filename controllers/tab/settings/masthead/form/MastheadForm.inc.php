@@ -16,8 +16,6 @@
 import('lib.pkp.classes.controllers.tab.settings.form.ContextSettingsForm');
 
 class MastheadForm extends ContextSettingsForm {
-	/** @var array Used to unpack categories listbuilder */
-	var $categories;
 
 	/**
 	 * Constructor.
@@ -30,11 +28,8 @@ class MastheadForm extends ContextSettingsForm {
 			'printIssn' => 'string',
 			'onlineIssn' => 'string',
 			'description' => 'string',
-			'mailingAddress' => 'string',
-			'journalEnabled' => 'bool',
-			'categories' => 'object',
 			'masthead' => 'string',
-			'history' => 'string'
+			'about' => 'string',
 		);
 
 		parent::ContextSettingsForm($settings, 'controllers/tab/settings/masthead/form/mastheadForm.tpl', $wizardMode);
@@ -54,7 +49,7 @@ class MastheadForm extends ContextSettingsForm {
 	 * Get all locale field names
 	 */
 	function getLocaleFieldNames() {
-		return array('name', 'acronym', 'abbreviation', 'description', 'masthead', 'history');
+		return array('name', 'acronym', 'abbreviation', 'description', 'masthead', 'about');
 	}
 
 	//
@@ -67,7 +62,6 @@ class MastheadForm extends ContextSettingsForm {
 		parent::initData($request);
 
 		$journal = $request->getContext();
-		$this->setData('enabled', (int) $journal->getEnabled());
 		if ($this->getData('acronym') == null) {
 			$acronym = array();
 			foreach (array_keys($this->supportedLocales) as $locale) {
@@ -83,57 +77,8 @@ class MastheadForm extends ContextSettingsForm {
 	function fetch($request, $params = null) {
 		$site = $request->getSite();
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('categoriesEnabled', $site->getSetting('categoriesEnabled'));
 		return parent::fetch($request, $params);
 	}
-
-	/**
-	 * @copydoc ContextSettingsForm::execute()
-	 * @param $request Request
-	 */
-	function execute($request) {
-		$journal = $request->getContext();
-
-		if ($journal->getEnabled() !== $this->getData('journalEnabled')) {
-			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$journal->setEnabled($this->getData('journalEnabled'));
-			$journalDao->updateObject($journal);
-		}
-
-		// Save block plugins context positions.
-		import('lib.pkp.classes.controllers.listbuilder.ListbuilderHandler');
-		$this->categories = $journal->getSetting('categories');
-		ListbuilderHandler::unpack($request, $request->getUserVar('categories'));
-		$this->setData('categories', $this->categories);
-
-		parent::execute($request);
-	}
-
-	/**
-	 * @copydoc ListbuilderHandler::updateEntry()
-	 */
-	function updateEntry($request, $rowId, $newRowId) {
-		$this->deleteEntry($request, $rowId);
-		$this->insertEntry($request, $newRowId);
-		return true;
-	}
-
-	/**
-	 * @copydoc ListbuilderHandler::deleteEntry()
-	 */
-	function deleteEntry($request, $rowId) {
-		if (isset($this->categories[$rowId])) unset($this->categories[$rowId]);
-		return true;
-	}
-
-	/**
-	 * @copydoc ListbuilderHandler::insertEntry()
-	 */
-	function insertEntry($request, $rowId) {
-		$this->categories[$rowId['name']] = true;
-		return true;
-	}
-
 }
 
 ?>

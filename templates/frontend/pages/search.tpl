@@ -48,13 +48,13 @@
 
 		{* Main search input *}
 		<h2 class="pkp_screen_reader">
-			{translate key="search.searchAllCategories"}
+			{translate key="search.searchFor"}
 		</h2>
 		<fieldset class="search_all">
 			{* Repeat the label text just so that screen readers have a clear
 			   label/input relationship *}
 			<label class="pkp_screen_reader" for="query">
-				{translate key="search.searchAllCategories"}
+				{translate key="search.searchFor"}
 			</label>
 			<input type="text" id="query" name="query" value="{$query|escape}" class="query">
 
@@ -99,9 +99,6 @@
 			{if $hasEmptyFilters}
 				{capture assign="emptyFilters"}
 						{if empty($authors) || empty($title) || empty($abstract) || empty($galleyFullText)}
-							<h3>
-								{translate key="search.searchCategories"}
-							</h3>
 							{include file="frontend/components/searchFilter.tpl" displayIf="emptyFilter" filterName="authors" filterValue=$authors key="search.author"}
 							{include file="frontend/components/searchFilter.tpl" displayIf="emptyFilter" filterName="title" filterValue=$title key="article.title"}
 							{include file="frontend/components/searchFilter.tpl" displayIf="emptyFilter" filterName="abstract" filterValue=$abstract key="search.abstract"}

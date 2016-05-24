@@ -116,7 +116,7 @@
 	<message key="manager.sections.wordCountInstructions">Limit abstract word counts for this section (0 for no limit)</message>
 	<message key="manager.setup">Journal Settings</message>
 	<message key="manager.setup.masthead">Masthead</message>
-	<message key="manager.setup.masthead.description">The Masthead should contain a list of editors, managing directors, and other individuals associated with the journal. Information entered here will appear in About the Journal.</message>
+	<message key="manager.setup.masthead.description">List editors, managing directors, and other individuals associated with the journal.</message>
 	<message key="manager.setup.homepageContent">Journal Homepage Content</message>
 	<message key="manager.setup.homepageContentDescription">The journal homepage consists of navigation links by default. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown.</message>
 	<message key="manager.setup.layout">Journal Layout</message>
@@ -126,7 +126,6 @@
 	<message key="manager.setup.aboutItemContent">Content</message>
 	<message key="manager.setup.addAboutItem">Add About Item</message>
 	<message key="manager.setup.addChecklistItem">Add Checklist Item</message>
-	<message key="manager.setup.addContributor">Add Contributor</message>
 	<message key="manager.setup.addItem">Add Item</message>
 	<message key="manager.setup.addItemtoAboutJournal">Add Item to Appear in "About the Journal"</message>
 	<message key="manager.setup.addNavItem">Add Item</message>
@@ -208,8 +207,10 @@
 	<message key="manager.setup.itemsPerPage">Items per page</message>
 	<message key="manager.setup.journalAbbreviation">Journal Abbreviation</message>
 	<message key="manager.setup.journalArchiving">Journal Archiving</message>
-	<message key="manager.setup.journalDescription">Journal Description</message>
-	<message key="manager.setup.journalDescriptionDescription">Add a brief 20-25 word description in text/HTML which will appear just below the navigation links.</message>
+	<message key="manager.setup.journalSummary">Journal Summary</message>
+	<message key="manager.setup.journalSummary.description">A brief description of your journal that can be displayed in lists of journals.</message>
+	<message key="manager.setup.journalAbout">About the Journal</message>
+	<message key="manager.setup.journalAbout.description">Include any information about your journal which may be of interest to readers, authors or reviewers. This could include your open access policy, the focus and scope of the journal, copyright notice, sponsorship disclosure, history of the journal, a privacy statement, and inclusion in any LOCKSS or CLOCKSS archival system.</message>
 	<message key="manager.setup.favicon">Journal Favicon</message>
 	<message key="manager.setup.faviconDescription">Add a favicon for this journal to display alongside the navigation bar when users are visiting your site.</message>
 	<message key="manager.setup.faviconInvalid">Invalid favicon format. Accepted formats are .ico, .png, and .gif.</message>
@@ -243,12 +244,13 @@
 	<message key="manager.setup.layoutTemplates.title">Title</message>
 	<message key="manager.setup.lists">Lists</message>
 	<message key="manager.setup.listsDescription">Limit the number of items (for example, submissions, users, or editing assignments) to show in a list before showing subsequent items in another page. Also, limit the number of links to display to subsequent pages of the list.</message>
+	<message key="manager.setup.enableArchive">Enable Archiving</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page.]]></message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[A LOCKSS license will appear in About the Journal under Archiving: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">LOCKSS License Description</message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identify 6-10 libraries that will register and cache the journal. For example, turn to institutions where editors or Board members work and/or institutions already participating in LOCKSS. See <a href="http://www.lockss.org/community/" target="_blank">the LOCKSS community</a>. Use the prepared invitations for (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">libraries participating in LOCKSS</a> or (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">libraries not yet participating in LOCKSS</a>.]]></message>
 	<message key="manager.setup.lockssTitle">LOCKSS</message>
-	<message key="manager.setup.clockssEnable"><![CDATA[Enable CLOCKSS to store and distribute journal content at participating libraries via a CLOCKSS <a href="{$clockssUrl}" target="_blank">Publisher Manifest</a> page. :]]></message>
+	<message key="manager.setup.clockssEnable"><![CDATA[Enable CLOCKSS to store and distribute journal content at participating libraries via a CLOCKSS <a href="{$clockssUrl}" target="_blank">Publisher Manifest</a> page.]]></message>
 	<message key="manager.setup.clockssLicenseDescription"><![CDATA[A CLOCKSS license will appear in About the Journal under Archiving: <a href="http://clockss.org/" target="_blank">CLOCKSS License</a>]]></message>
 	<message key="manager.setup.clockssLicenseLabel">CLOCKSS License Description</message>
 	<message key="manager.setup.clockssRegister"><![CDATA[Sign up for the CLOCKSS service by visiting <a href="http://clockss.org/" target="_blank">the CLOCKSS website</a>.]]></message>
@@ -285,7 +287,6 @@
 	<message key="manager.setup.publicationScheduling">Publication Scheduling</message>
 	<message key="manager.setup.publicIdentifier">Identification of Journal Content</message>
 	<message key="manager.setup.publisher">Publisher</message>
-	<message key="manager.setup.publisherNoteDescription">This text will appear below the "Publisher" heading and above the publisher name/url under "Journal Sponsorship" on the "About" page.</message>
 	<message key="manager.setup.publisherDescription">The name of the organization publishing the journal will appear in About the Journal.</message>
 	<message key="manager.setup.referenceLinking">Reference Linking</message>
 	<message key="manager.setup.refLinkInstructions.description">Layout Instructions for Reference Linking</message>
@@ -318,9 +319,6 @@
 	<message key="manager.setup.selectSectionDescription">The journal section for which the item will be considered.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Always show galley links and indicate restricted access.</message>
 	<message key="manager.setup.siteAccess">Additional Site and Article Access Restrictions</message>
-	<message key="manager.setup.sponsors">Sponsoring Organizations</message>
-	<message key="manager.setup.sponsorNoteDescription">This text will appear below the "Sponsors" heading and above the list of sponsor names and urls under "Journal Sponsorship" on the "About" page.</message>
-	<message key="manager.setup.sponsorsDescription">The name of the organizations (e.g., scholarly associations, university departments, cooperatives, etc.) sponsoring the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
 	<message key="manager.setup.stepsToJournalSite">Five Steps to a Journal Web Site</message>
 	<message key="manager.setup.subjectExamples">(E.g., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</message>
 	<message key="manager.setup.subjectKeywordTopic">Keywords</message>

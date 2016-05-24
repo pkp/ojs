@@ -46,8 +46,6 @@ class TemplateManager extends PKPTemplateManager {
 			$siteStyleFilename = $publicFileManager->getSiteFilesPath() . '/' . $site->getSiteStyleFilename();
 			if (file_exists($siteStyleFilename)) $this->addStyleSheet($request->getBaseUrl() . '/' . $siteStyleFilename, STYLE_SEQUENCE_LAST);
 
-			$this->assign('siteCategoriesEnabled', $site->getSetting('categoriesEnabled'));
-
 			// Get a count of unread tasks.
 			if ($user = $request->getUser()) {
 				$notificationDao = DAORegistry::getDAO('NotificationDAO');
@@ -55,7 +53,6 @@ class TemplateManager extends PKPTemplateManager {
 				import('lib.pkp.controllers.grid.notifications.TaskNotificationsGridHandler');
 				$this->assign('unreadNotificationCount', $notificationDao->getNotificationCount(false, $user->getId(), null, NOTIFICATION_LEVEL_TASK));
 			}
-
 			if (isset($context)) {
 
 				$this->assign('currentJournal', $context);

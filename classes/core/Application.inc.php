@@ -93,7 +93,6 @@ class Application extends PKPApplication {
 			'ArticleGalleyDAO' => 'classes.article.ArticleGalleyDAO',
 			'ArticleSearchDAO' => 'classes.search.ArticleSearchDAO',
 			'AuthorDAO' => 'classes.article.AuthorDAO',
-			'CategoryDAO' => 'classes.journal.categories.CategoryDAO',
 			'EditorSubmissionDAO' => 'classes.submission.editor.EditorSubmissionDAO',
 			'EmailTemplateDAO' => 'classes.mail.EmailTemplateDAO',
 			'GiftDAO' => 'classes.gift.GiftDAO',
