@@ -62,7 +62,6 @@ class MastheadForm extends ContextSettingsForm {
 		parent::initData($request);
 
 		$journal = $request->getContext();
-		$this->setData('enabled', (int) $journal->getEnabled());
 		if ($this->getData('acronym') == null) {
 			$acronym = array();
 			foreach (array_keys($this->supportedLocales) as $locale) {
@@ -80,23 +79,6 @@ class MastheadForm extends ContextSettingsForm {
 		$templateMgr = TemplateManager::getManager($request);
 		return parent::fetch($request, $params);
 	}
-
-	/**
-	 * @copydoc ContextSettingsForm::execute()
-	 * @param $request Request
-	 */
-	function execute($request) {
-		$journal = $request->getContext();
-
-		if ($journal->getEnabled() !== $this->getData('journalEnabled')) {
-			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$journal->setEnabled($this->getData('journalEnabled'));
-			$journalDao->updateObject($journal);
-		}
-
-		parent::execute($request);
-	}
-
 }
 
 ?>
