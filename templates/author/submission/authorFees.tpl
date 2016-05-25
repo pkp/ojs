@@ -11,7 +11,7 @@
 <div id="authorFees">
 <h3>{translate key="payment.authorFees"}</h3>
 <table width="100%" class="data">
-{if $currentJournal->getSetting('submissionFeeEnabled')}
+{if $showSubmissionFee}
 	<tr>
 		<td width="20%">{$currentJournal->getLocalizedSetting('submissionFeeName')|escape}</td>
 	{if $submissionPayment}
@@ -22,7 +22,7 @@
 	{/if}
 	</tr>
 {/if}
-{if $currentJournal->getSetting('fastTrackFeeEnabled')}
+{if $showFastTrackFee}
 	<tr>
 		<td width="20%">{$currentJournal->getLocalizedSetting('fastTrackFeeName')|escape}: 
 	{if $fastTrackPayment}
@@ -31,9 +31,9 @@
 		<td width="30%">{$currentJournal->getSetting('fastTrackFee')|string_format:"%.2f"} {$currentJournal->getSetting('currency')}</td>
 		<td width="50%"><a class="action" href="{url op="payFastTrackFee" path=$submission->getId()}">{translate key="payment.payNow"}</a></td>
 	{/if}
-	</tr>	
+	</tr>
 {/if}
-{if $currentJournal->getSetting('publicationFeeEnabled')}
+{if $showPublicationFee}
 	<tr>
 		<td width="20%">{$currentJournal->getLocalizedSetting('publicationFeeName')|escape}</td>
 	{if $publicationPayment}
@@ -42,7 +42,7 @@
 		<td width="30%">{$currentJournal->getSetting('publicationFee')|string_format:"%.2f"} {$currentJournal->getSetting('currency')}</td>
 		<td width="50%"><a class="action" href="{url op="payPublicationFee" path=$submission->getId()}">{translate key="payment.payNow"}</a></td>
 	{/if}
-	</tr>	
+	</tr>
 {/if}
 </table>
 </div>

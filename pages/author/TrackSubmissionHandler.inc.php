@@ -125,23 +125,38 @@ class TrackSubmissionHandler extends AuthorHandler {
 		// Set up required Payment Related Information
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
-		if ( $paymentManager->submissionEnabled() || $paymentManager->fastTrackEnabled() || $paymentManager->publicationEnabled()) {
-			$templateMgr->assign('authorFees', true);
-			$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+		$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+		$submissionStatus = $submission->getSubmissionStatus();
+		$authorFees = false;
 
-			if ($paymentManager->submissionEnabled()) {
-				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDao->getSubmissionCompletedPayment ($journal->getId(), $articleId));
-			}
-
-			if ($paymentManager->fastTrackEnabled()) {
-				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDao->getFastTrackCompletedPayment ($journal->getId(), $articleId));
-			}
-
-			if ($paymentManager->publicationEnabled()) {
-				$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDao->getPublicationCompletedPayment ($journal->getId(), $articleId));
+		if ($paymentManager->submissionEnabled()) {
+			if (($submissionPayment = $completedPaymentDao->getSubmissionCompletedPayment($journal->getId(), $articleId))
+				|| ($submissionStatus == STATUS_QUEUED_UNASSIGNED) || ($submissionStatus == STATUS_QUEUED_REVIEW)) {
+				$templateMgr->assign_by_ref('submissionPayment', $submissionPayment);
+				$templateMgr->assign('showSubmissionFee', true);
+				$authorFees = true;
 			}
 		}
 
+		if ($paymentManager->fastTrackEnabled()) {
+			if (($fastTrackPayment = $completedPaymentDao->getFastTrackCompletedPayment($journal->getId(), $articleId))
+				|| ($submissionStatus == STATUS_QUEUED_UNASSIGNED) || ($submissionStatus == STATUS_QUEUED_REVIEW)) {
+				$templateMgr->assign_by_ref('fastTrackPayment', $fastTrackPayment);
+				$templateMgr->assign('showFastTrackFee', true);
+				$authorFees = true;
+			}
+		}
+
+		if ($paymentManager->publicationEnabled()) {
+			if (($publicationPayment = $completedPaymentDao->getPublicationCompletedPayment($journal->getId(), $articleId))
+				|| ($submissionStatus == STATUS_QUEUED_EDITING)) {
+				$templateMgr->assign_by_ref('publicationPayment', $publicationPayment);
+				$templateMgr->assign('showPublicationFee', true);
+				$authorFees = true;
+			}
+		}
+
+		$templateMgr->assign('authorFees', $authorFees);
 		$templateMgr->assign('helpTopicId','editorial.authorsRole');
 
 		$initialCopyeditSignoff = $submission->getSignoff('SIGNOFF_COPYEDITING_INITIAL');
