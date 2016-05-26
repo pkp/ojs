@@ -120,7 +120,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				$articleIds = array();
 				while ($article = $articleIterator->next()) {
 					// Check whether there is a DOI.
-					if ($article->getSotredPubId('doi')) {
+					if ($article->getStoredPubId('doi')) {
 						$articleIds[] = $article->getId();
 					}
 				}

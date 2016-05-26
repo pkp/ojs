@@ -16,8 +16,9 @@
 
 import('classes.article.ArticleGalley');
 import('lib.pkp.classes.submission.RepresentationDAO');
+import('lib.pkp.classes.plugins.PKPPubIdPluginDAO');
 
-class ArticleGalleyDAO extends RepresentationDAO {
+class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	/**
 	 * Constructor.
 	 */
@@ -60,36 +61,6 @@ class ArticleGalleyDAO extends RepresentationDAO {
 		}
 		$result->Close();
 		HookRegistry::call('ArticleGalleyDAO::getById', array(&$galleyId, &$submissionId, &$returner));
-		return $returner;
-	}
-
-	/**
-	 * Checks if public identifier exists (other than for the specified
-	 * galley ID, which is treated as an exception).
-	 * @param $pubIdType string One of the NLM pub-id-type values or
-	 * 'other::something' if not part of the official NLM list
-	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-	 * @param $pubId string
-	 * @param $galleyId int An ID to be excluded from the search.
-	 * @param $journalId int
-	 * @return boolean
-	 */
-	function pubIdExists($pubIdType, $pubId, $galleyId, $journalId) {
-		$result = $this->retrieve(
-			'SELECT COUNT(*)
-			FROM submission_galley_settings sgs
-				INNER JOIN submission_galleys sg ON sgs.galley_id = sg.galley_id
-				INNER JOIN submissions s ON sg.submission_id = s.submission_id
-			WHERE sgs.setting_name = ? AND sgs.setting_value = ? AND sgs.galley_id <> ? AND s.context_id = ?',
-			array(
-				'pub-id::'.$pubIdType,
-				$pubId,
-				(int) $galleyId,
-				(int) $journalId
-			)
-		);
-		$returner = $result->fields[0] ? true : false;
-		$result->Close();
 		return $returner;
 	}
 
@@ -409,12 +380,29 @@ class ArticleGalleyDAO extends RepresentationDAO {
 	}
 
 	/**
-	 * Change the public ID of a galley.
-	 * @param $galleyId int
-	 * @param $pubIdType string One of the NLM pub-id-type values or
-	 * 'other::something' if not part of the official NLM list
-	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-	 * @param $pubId string
+	 * @copydoc PKPPubIdPluginDAO::pubIdExists()
+	 */
+	function pubIdExists($pubIdType, $pubId, $galleyId, $journalId) {
+		$result = $this->retrieve(
+			'SELECT COUNT(*)
+			FROM submission_galley_settings sgs
+				INNER JOIN submission_galleys sg ON sgs.galley_id = sg.galley_id
+				INNER JOIN submissions s ON sg.submission_id = s.submission_id
+			WHERE sgs.setting_name = ? AND sgs.setting_value = ? AND sgs.galley_id <> ? AND s.context_id = ?',
+			array(
+				'pub-id::'.$pubIdType,
+				$pubId,
+				(int) $galleyId,
+				(int) $journalId
+			)
+		);
+		$returner = $result->fields[0] ? true : false;
+		$result->Close();
+		return $returner;
+	}
+
+	/**
+	 * @copydoc PKPPubIdPluginDAO::changePubId()
 	 */
 	function changePubId($galleyId, $pubIdType, $pubId) {
 		$idFields = array(
@@ -431,11 +419,7 @@ class ArticleGalleyDAO extends RepresentationDAO {
 	}
 
 	/**
-	 * Delete the public ID of a galley.
-	 * @param $galleyId int
-	 * @param $pubIdType string One of the NLM pub-id-type values or
-	 * 'other::something' if not part of the official NLM list
-	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @copydoc PKPPubIdPluginDAO::deletePubId()
 	 */
 	function deletePubId($galleyId, $pubIdType) {
 		$settingName = 'pub-id::'.$pubIdType;
@@ -450,11 +434,7 @@ class ArticleGalleyDAO extends RepresentationDAO {
 	}
 
 	/**
-	 * Delete the public IDs of all galleys in a journal.
-	 * @param $journalId int
-	 * @param $pubIdType string One of the NLM pub-id-type values or
-	 * 'other::something' if not part of the official NLM list
-	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @copydoc PKPPubIdPluginDAO::deleteAllPubIds()
 	 */
 	function deleteAllPubIds($journalId, $pubIdType) {
 		$journalId = (int) $journalId;

@@ -24,15 +24,6 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 		parent::PKPPubIdPlugin();
 	}
 
-	//
-	// Implement template methods from Plugin
-	//
-	/**
-	 * @copydoc Plugin::register()
-	 */
-	function register($category, $path) {
-		return parent::register($category, $path);
-	}
 
 	//
 	// Protected template methods from PKPPlubIdPlugin
@@ -73,6 +64,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 				$representations = $representationDao->getByJournalId($contextId);
 				$objectsToCheck = array();
 				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
+				import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_... constants
 				while ($representation = $representations->next()) {
 					$objectsToCheck = array_merge($objectsToCheck, $submissionFileDao->getAllRevisionsByAssocId(ASSOC_TYPE_REPRESENTATION, $representation->getId(), SUBMISSION_FILE_PROOF));
 				}
@@ -180,7 +172,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 
 				if ($submissionFile) {
 					// %f - file id
-					$pubIdSuffix = PKPString::regexp_replace('/%f/', $submissionFile->getId(), $pubIdSuffix);
+					$pubIdSuffix = PKPString::regexp_replace('/%f/', $submissionFile->getFileId(), $pubIdSuffix);
 				}
 
 				break;
@@ -203,7 +195,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 				}
 
 				if ($submissionFile) {
-					$pubIdSuffix .= '.f' . $submissionFile->getId();
+					$pubIdSuffix .= '.f' . $submissionFile->getFileId();
 				}
 		}
 		if (empty($pubIdSuffix)) return null;
@@ -234,8 +226,6 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 		$representationDao = Application::getRepresentationDAO();
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 		import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_... constants
-		import('lib.pkp.classes.submission.SubmissionFileDAODelegate');
-		$submissionFileDaoDelegate = new SubmissionFileDAODelegate();
 
 		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
 		foreach ($publishedArticles as $publishedArticle) {
@@ -251,7 +241,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 					if ($filePubIdEnabled) { // Does this option have to be enabled here for?
 						$articleProofFiles = $submissionFileDao->getAllRevisionsByAssocId(ASSOC_TYPE_REPRESENTATION, $representation->getId(), SUBMISSION_FILE_PROOF);
 						foreach ($articleProofFiles as $articleProofFile) {
-							$submissionFileDaoDelegate->deletePubId($articleProofFile->getFileId(), $pubIdType);
+							$submissionFileDao->deletePubId($articleProofFile->getFileId(), $pubIdType);
 						}
 					}
 				}
@@ -264,14 +254,11 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 	 * @copydoc PKPPubIdPlugin::getDAOs()
 	 */
 	function getDAOs() {
-		$representationDao = Application::getRepresentationDAO();
-		import('lib.pkp.classes.submission.SubmissionFileDAODelegate');
-		$submissionFileDAODelegete = new SubmissionFileDAODelegate();
 		return  array(
 			'Issue' => DAORegistry::getDAO('IssueDAO'),
 			'Article' => DAORegistry::getDAO('ArticleDAO'),
-			'Representation' => $representationDao,
-			'SubmissionFile' => $submissionFileDAODelegete,
+			'Representation' => Application::getRepresentationDAO(),
+			'SubmissionFile' => DAORegistry::getDAO('SubmissionFileDAO'),
 		);
 	}
 

@@ -25,7 +25,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$this->addRoleAssignment(
 			array(ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER),
 			array(
-				'publicationMetadata', 'savePublicationMetadata', 'identifiers', 'clearPubId', 'updateIdentifiers',
+				'publicationMetadata', 'identifiers', 'clearPubId', 'updateIdentifiers',
 			)
 		);
 	}
@@ -52,23 +52,6 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 
 		$issueEntryPublicationMetadataForm->initData();
 		return new JSONMessage(true, $issueEntryPublicationMetadataForm->fetch($request));
-	}
-
-	/**
-	 * Show the publication metadata form.
-	 * @param $args array
-	 * @param $request Request
-	 * @return JSONMessage JSON object
-	 */
-	function savePublicationMetadata($args, $request) {
-		$json = parent::saveForm($args, $request);
-		$submission = $this->getSubmission();
-		$stageId = $this->getStageId();
-		$router = $request->getRouter();
-		$dispatcher = $router->getDispatcher();
-		$url = $dispatcher->url($request, ROUTE_COMPONENT, null, $this->_getHandlerClassPath(), 'fetch', null, array('submissionId' => $submission->getId(), 'stageId' => $stageId, 'tabPos' => 2, 'hideHelp' => true));
-		$json->setAdditionalAttributes(array('reloadContainer' => true, 'tabsUrl' => $url));
-		return $json;
 	}
 
 	/**
@@ -115,7 +98,15 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$form->readInputData();
 		if ($form->validate($request)) {
 			$form->execute($request);
-			return DAO::getDataChangedEvent($submission->getId());
+			$json = new JSONMessage();
+			if ($request->getUserVar('displayedInContainer')) {
+				$router = $request->getRouter();
+				$dispatcher = $router->getDispatcher();
+				$url = $dispatcher->url($request, ROUTE_COMPONENT, null, $this->_getHandlerClassPath(), 'fetch', null, array('submissionId' => $submission->getId(), 'stageId' => $stageId, 'tabPos' => $this->getTabPosition(), 'hideHelp' => true));
+				$json->setAdditionalAttributes(array('reloadContainer' => true, 'tabsUrl' => $url));
+				$json->setContent(true); // prevents modal closure
+			}
+			return $json;
 		} else {
 			return new JSONMessage(true, $form->fetch($request));
 		}
