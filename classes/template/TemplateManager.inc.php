@@ -60,7 +60,7 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('publicFilesDir', $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()));
 
 				$this->assign('primaryLocale', $context->getPrimaryLocale());
-				$this->assign('alternateLocales', $context->getSetting('alternateLocales'));
+				$this->assign('supportedLocales', $context->getSupportedLocaleNames());
 
 				// Assign page header
 				$this->assign('displayPageHeaderTitle', $context->getLocalizedPageHeaderTitle());
@@ -100,6 +100,7 @@ class TemplateManager extends PKPTemplateManager {
 
 				$this->assign('siteTitle', $site->getLocalizedTitle());
 				$this->assign('primaryLocale', $site->getPrimaryLocale());
+				$this->assign('supportedLocales', $site->getSupportedLocaleNames());
 			}
 		}
 	}
