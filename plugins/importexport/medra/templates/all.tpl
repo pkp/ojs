@@ -67,7 +67,7 @@
 			{/foreach}
 			{foreach from=$articles item=articleData}
 				{assign var=article value=$articleData.article}
-				{if $article->getSotredPubId('doi')}
+				{if $article->getStoredPubId('doi')}
 					{assign var=noObjects value=false}
 					{assign var=issue value=$articleData.issue}
 					<tr>

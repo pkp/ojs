@@ -393,7 +393,7 @@ class IssueGridHandler extends GridHandler {
 			$confirmationText = __('editor.issues.confirmPublish');
 			import('lib.pkp.controllers.grid.pubIds.form.PKPAssignPublicIdentifiersForm');
 			$formTemplate = $this->getAssignPublicIdentifiersFormTemplate();
-			$assignPublicIdentifiersForm = new PKPAssignPublicIdentifiersForm($formTemplate, $issue, 1, $confirmationText);
+			$assignPublicIdentifiersForm = new PKPAssignPublicIdentifiersForm($formTemplate, $issue, true, $confirmationText);
 			if (!$request->getUserVar('confirmed')) {
 				// Display assign pub ids modal
 				$assignPublicIdentifiersForm->initData($args, $request);
@@ -510,7 +510,7 @@ class IssueGridHandler extends GridHandler {
 	}
 
 	/**
-	 * Get the teplate for the assign public identifiers form.
+	 * Get the template for the assign public identifiers form.
 	 * @return string
 	 */
 	function getAssignPublicIdentifiersFormTemplate() {

@@ -167,14 +167,12 @@ class JournalDAO extends ContextDAO {
 	function anyPubIdExists($journalId, $pubIdType, $pubId,
 			$assocType = ASSOC_TYPE_ANY, $assocId = 0, $forSameType = false) {
 
-		import('lib.pkp.classes.submission.SubmissionFileDAODelegate');
-		$submissionFileDAODelegete = new SubmissionFileDAODelegate();
 		$pubObjectDaos = array(
 			ASSOC_TYPE_ISSUE => DAORegistry::getDAO('IssueDAO'),
 			ASSOC_TYPE_ARTICLE => Application::getSubmissionDAO(),
 			ASSOC_TYPE_GALLEY => Application::getRepresentationDAO(),
 			ASSOC_TYPE_ISSUE_GALLEY => DAORegistry::getDAO('IssueGalleyDAO'),
-			ASSOC_TYPE_SUBMISSION_FILE => $submissionFileDAODelegete
+			ASSOC_TYPE_SUBMISSION_FILE => DAORegistry::getDAO('SubmissionFileDAO')
 		);
 		if ($forSameType) {
 			$dao = $pubObjectDaos[$assocType];

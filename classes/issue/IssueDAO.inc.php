@@ -15,8 +15,10 @@
  */
 
 import ('classes.issue.Issue');
+import('lib.pkp.classes.plugins.PKPPubIdPluginDAO');
 
-class IssueDAO extends DAO {
+
+class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	var $caches;
 
 	/**
@@ -222,29 +224,6 @@ class IssueDAO extends DAO {
 		$this->flushCache();
 	}
 
-
-	/**
-	 * Change the public ID of an issue.
-	 * @param $issueId int
-	 * @param $pubIdType string One of the NLM pub-id-type values or
-	 * 'other::something' if not part of the official NLM list
-	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-	 * @param $pubId string
-	 */
-	function changePubId($issueId, $pubIdType, $pubId) {
-		$idFields = array(
-			'issue_id', 'locale', 'setting_name'
-		);
-		$updateArray = array(
-			'issue_id' => (int) $issueId,
-			'locale' => '',
-			'setting_name' => 'pub-id::'.$pubIdType,
-			'setting_type' => 'string',
-			'setting_value' => (string)$pubId
-		);
-		$this->replace('issue_settings', $updateArray, $idFields);
-		$this->flushCache();
-	}
 
 	/**
 	 * Construct a new data object.
@@ -512,35 +491,6 @@ class IssueDAO extends DAO {
 	}
 
 	/**
-	 * Checks if public identifier exists (other than for the specified
-	 * issue ID, which is treated as an exception).
-	 * @param $pubIdType string One of the NLM pub-id-type values or
-	 * 'other::something' if not part of the official NLM list
-	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-	 * @param $pubId string
-	 * @param $issueId int An ID to be excluded from the search.
-	 * @param $journalId int
-	 * @return boolean
-	 */
-	function pubIdExists($pubIdType, $pubId, $issueId, $journalId) {
-		$result = $this->retrieve(
-			'SELECT COUNT(*)
-			FROM issue_settings ist
-				INNER JOIN issues i ON ist.issue_id = i.issue_id
-			WHERE ist.setting_name = ? AND ist.setting_value = ? AND i.issue_id <> ? AND i.journal_id = ?',
-			array(
-				'pub-id::'.$pubIdType,
-				$pubId,
-				(int) $issueId,
-				(int) $journalId
-			)
-		);
-		$returner = $result->fields[0] ? true : false;
-		$result->Close();
-		return $returner;
-	}
-
-	/**
 	 * Get issue by article id
 	 * @param articleId int
 	 * @param journalId int optional
@@ -752,11 +702,61 @@ class IssueDAO extends DAO {
 	}
 
 	/**
-	 * Delete the public IDs of all issues of a journal.
-	 * @param $journalId int
-	 * @param $pubIdType string One of the NLM pub-id-type values or
-	 * 'other::something' if not part of the official NLM list
-	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @copydoc PKPPubIdPluginDAO::pubIdExists()
+	 */
+	function pubIdExists($pubIdType, $pubId, $issueId, $journalId) {
+		$result = $this->retrieve(
+			'SELECT COUNT(*)
+			FROM issue_settings ist
+				INNER JOIN issues i ON ist.issue_id = i.issue_id
+			WHERE ist.setting_name = ? AND ist.setting_value = ? AND i.issue_id <> ? AND i.journal_id = ?',
+			array(
+				'pub-id::'.$pubIdType,
+				$pubId,
+				(int) $issueId,
+				(int) $journalId
+			)
+		);
+		$returner = $result->fields[0] ? true : false;
+		$result->Close();
+		return $returner;
+	}
+
+	/**
+	 * @copydoc PKPPubIdPluginDAO::changePubId()
+	 */
+	function changePubId($issueId, $pubIdType, $pubId) {
+		$idFields = array(
+			'issue_id', 'locale', 'setting_name'
+		);
+		$updateArray = array(
+			'issue_id' => (int) $issueId,
+			'locale' => '',
+			'setting_name' => 'pub-id::'.$pubIdType,
+			'setting_type' => 'string',
+			'setting_value' => (string)$pubId
+		);
+		$this->replace('issue_settings', $updateArray, $idFields);
+		$this->flushCache();
+	}
+
+	/**
+	 * @copydoc PKPPubIdPluginDAO::deletePubId()
+	 */
+	function deletePubId($issueId, $pubIdType) {
+		$settingName = 'pub-id::'.$pubIdType;
+		$this->update(
+			'DELETE FROM issue_settings WHERE setting_name = ? AND issue_id = ?',
+			array(
+				$settingName,
+				(int)$issueId
+			)
+		);
+		$this->flushCache();
+	}
+
+	/**
+	 * @copydoc PKPPubIdPluginDAO::deleteAllPubIds()
 	 */
 	function deleteAllPubIds($journalId, $pubIdType) {
 		$journalId = (int) $journalId;
@@ -773,25 +773,6 @@ class IssueDAO extends DAO {
 				)
 			);
 		}
-		$this->flushCache();
-	}
-
-	/**
-	 * Delete the public ID of an issue.
-	 * @param $issueId int
-	 * @param $pubIdType string One of the NLM pub-id-type values or
-	 * 'other::something' if not part of the official NLM list
-	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-	 */
-	function deletePubId($issueId, $pubIdType) {
-		$settingName = 'pub-id::'.$pubIdType;
-		$this->update(
-			'DELETE FROM issue_settings WHERE setting_name = ? AND issue_id = ?',
-			array(
-				$settingName,
-				(int)$issueId
-			)
-		);
 		$this->flushCache();
 	}
 
