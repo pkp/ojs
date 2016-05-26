@@ -22,7 +22,6 @@
 				{rdelim});
 	{rdelim});
 </script>
-{if not $hideHelp}<p class="pkp_help">{translate key="issue.manage.entryDescription"}</p>{/if}
 <div id="newIssueEntryTabs">
 	<ul>
 		<li>
