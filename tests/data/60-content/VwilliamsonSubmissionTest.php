@@ -26,7 +26,6 @@ class VwilliamsonSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Williamson',
 			'affiliation' => 'University of Windsor',
 			'country' => 'Canada',
-			'roles' => array('Author'),
 		));
 
 		$title = 'Self-Organization in Multi-Level Institutions in Networked Environments';

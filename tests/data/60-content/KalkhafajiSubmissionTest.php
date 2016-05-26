@@ -26,7 +26,6 @@ class KalkhafajiSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Al-Khafaji',
 			'affiliation' => 'Stanford University',
 			'country' => 'United States',
-			'roles' => array('Author'),
 		));
 
 		$this->createSubmission(array(

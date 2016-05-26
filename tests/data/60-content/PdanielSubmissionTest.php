@@ -26,7 +26,6 @@ class PdanielSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Daniel',
 			'affiliation' => 'University of Wolverhampton',
 			'country' => 'United Kingdom',
-			'roles' => array('Author'),
 		));
 
 		$this->createSubmission(array(
