@@ -32,7 +32,6 @@
 	<message key="submission.issueEntry.modalTitle">Submission and Publication Metadata</message>
 	<message key="submission.issueEntry.submissionMetadata">Submission</message>
 	<message key="submission.issueEntry.publicationMetadata">Publication</message>
-	<message key="issue.manage.entryDescription">Detailed help test for managing a journal's metadata should go here.</message>
 	<message key="submission.issueEntry.confirm">Create an issue entry for this article based on the metadata below.</message>
 
 	<!-- events -->
