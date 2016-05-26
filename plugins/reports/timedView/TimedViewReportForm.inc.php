@@ -142,7 +142,7 @@ class TimedViewReportForm extends Form {
 
 		foreach ($reportStats as $record) {
 			$articleId = $record[STATISTICS_DIMENSION_SUBMISSION_ID];
-		
+
 			// Retrieve article and galleys data related to the
 			// working article id.
 			$assocType = $record[STATISTICS_DIMENSION_ASSOC_TYPE];
@@ -176,24 +176,25 @@ class TimedViewReportForm extends Form {
 				}
 				$galleyId = $record[STATISTICS_DIMENSION_ASSOC_ID];
 				$galley =& $galleyDao->getGalley($galleyId, null, true);
-				if (!$galley) continue;
-				$label = $galley->getLabel();
-				$i = array_search($label, $galleyLabels);
-				if ($i === false) {
-					$i = count($galleyLabels);
-					$galleyLabels[] = $label;
+				if ($galley) {
+					$label = $galley->getLabel();
+					$i = array_search($label, $galleyLabels);
+					if ($i === false) {
+						$i = count($galleyLabels);
+						$galleyLabels[] = $label;
+					}
+
+					// Make sure the array is the same size as in previous iterations
+					// so that we insert values into the right location
+					$galleyViews[$articleId] = array_pad($galleyViews[$articleId], count($galleyLabels), '');
+
+					$views = $record[STATISTICS_METRIC];
+					$galleyViews[$articleId][$i] = $views;
+					if (!isset($galleyViewTotal)) $galleyViewTotal = 0;
+					$galleyViewTotal += $views;
 				}
-
-				// Make sure the array is the same size as in previous iterations
-				// so that we insert values into the right location
-				$galleyViews[$articleId] = array_pad($galleyViews[$articleId], count($galleyLabels), '');
-
-				$views = $record[STATISTICS_METRIC];
-				$galleyViews[$articleId][$i] = $views;
-				if (!isset($galleyViewTotal)) $galleyViewTotal = 0;
-				$galleyViewTotal += $views;
 			}
-					
+
 			// Check if we got all article galley stats, if yes, add
 			// the total galley views info.
 			$nextRecord = next($reportStats);
