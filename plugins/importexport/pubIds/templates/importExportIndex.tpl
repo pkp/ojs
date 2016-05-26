@@ -13,23 +13,23 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<br/>
+<div class="pkp_page_content pkp_page_importexport">
+	<h3>{translate key="plugins.importexport.pubIds.export"}</h3>
+	<ul>
+		<li><a href="{plugin_url path="selectIssue"}">{translate key="plugins.importexport.pubIds.export.forIssues"}</a></li>
+	</ul>
 
-<h3>{translate key="plugins.importexport.pubIds.export"}</h3>
-<ul>
-	<li><a href="{plugin_url path="selectIssue"}">{translate key="plugins.importexport.pubIds.export.forIssues"}</a></li>
-</ul>
-
-<h3>{translate key="plugins.importexport.pubIds.import"}</h3>
-<p>{translate key="plugins.importexport.pubIds.import.description"}</p>
-<script>
-	$(function() {ldelim}
-		// Attach the form handler.
-		$('#pubIdsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
-	{rdelim});
-</script>
-<form class="pkp_form" id="pubIdsForm" action="{plugin_url path="import"}" method="post" enctype="multipart/form-data">
-<input type="file" class="uploadField" name="importFile" id="import" /> <input name="import" type="submit" class="button" value="{translate key="common.import"}" />
-</form>
+	<h3>{translate key="plugins.importexport.pubIds.import"}</h3>
+	<p>{translate key="plugins.importexport.pubIds.import.description"}</p>
+	<script>
+		$(function() {ldelim}
+			// Attach the form handler.
+			$('#pubIdsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		{rdelim});
+	</script>
+	<form class="pkp_form" id="pubIdsForm" action="{plugin_url path="import"}" method="post" enctype="multipart/form-data">
+	<input type="file" class="uploadField" name="importFile" id="import" /> <input name="import" type="submit" class="button" value="{translate key="common.import"}" />
+	</form>
+</div>
 
 {include file="common/footer.tpl"}
