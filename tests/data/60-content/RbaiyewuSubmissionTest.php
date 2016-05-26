@@ -26,7 +26,6 @@ class RbaiyewuSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Baiyewu',
 			'affiliation' => 'University of Nairobi',
 			'country' => 'Kenya',
-			'roles' => array('Author'),
 		));
 
 		$title = 'Yam diseases and its management in Nigeria';

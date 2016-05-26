@@ -26,7 +26,6 @@ class LkumiegaSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Kumiega',
 			'affiliation' => 'University of Cape Town',
 			'country' => 'South Africa',
-			'roles' => array('Author'),
 		));
 
 		$title = 'Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions';

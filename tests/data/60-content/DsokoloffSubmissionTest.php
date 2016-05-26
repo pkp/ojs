@@ -26,7 +26,6 @@ class DsokoloffSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Sokoloff',
 			'affiliation' => 'University College Cork',
 			'country' => 'Ireland',
-			'roles' => array('Author'),
 		));
 
 		$title = 'Developing efficacy beliefs in the classroom';

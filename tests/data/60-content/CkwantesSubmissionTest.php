@@ -26,7 +26,6 @@ class CkwantesSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Kwantes',
 			'affiliation' => 'University of Windsor',
 			'country' => 'Canada',
-			'roles' => array('Author'),
 		));
 
 		$title = 'The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence';
