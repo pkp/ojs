@@ -26,7 +26,6 @@ class JmwandengaSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Mwandenga',
 			'affiliation' => 'University of Cape Town',
 			'country' => 'South Africa',
-			'roles' => array('Author'),
 		));
 
 		$title = 'Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence';

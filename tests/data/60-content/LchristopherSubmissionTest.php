@@ -26,7 +26,6 @@ class LchristopherSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Christopher',
 			'affiliation' => 'Australian National University',
 			'country' => 'Australia',
-			'roles' => array('Author'),
 		));
 
 		$title = 'Sodium butyrate improves growth performance of weaned piglets during the first period after weaning';

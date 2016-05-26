@@ -26,7 +26,6 @@ class DdioufSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Diouf',
 			'affiliation' => 'Alexandria University',
 			'country' => 'Egypt',
-			'roles' => array('Author'),
 		));
 
 		$title = 'Genetic transformation of forest trees';

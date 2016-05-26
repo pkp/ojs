@@ -26,7 +26,6 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Karbasizaed',
 			'affiliation' => 'University of Tehran',
 			'country' => 'Iran, Islamic Republic of',
-			'roles' => array('Author'),
 		));
 
 		$title = 'Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran';

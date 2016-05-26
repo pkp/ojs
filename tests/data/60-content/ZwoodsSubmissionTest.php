@@ -26,7 +26,6 @@ class ZwoodsSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Woods',
 			'affiliation' => 'CUNY',
 			'country' => 'United States',
-			'roles' => array('Author'),
 		));
 
 		$title = 'Finocchiaro: Arguments About Arguments';
