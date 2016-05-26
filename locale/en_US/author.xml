@@ -53,8 +53,6 @@
 	<message key="submission.submit.selectSection">Please select a section...</message>
 	<message key="author.submit.submissionLocale">Submission Language</message>
 	<message key="author.submit.submissionLocaleDescription">This journal accepts submissions in several languages. Choose the primary language of the submission from the pulldown below.</message>
-	<message key="submission.submit.submissionChecklist">Submission Checklist</message>
-	<message key="submission.submit.submissionChecklistDescription">You must read and acknowledge that you've completed the requirements below before proceeding.</message>
 	<message key="author.submit.verifyChecklist">You must make sure all items in the submission checklist are satisfied before continuing.</message>
 	<message key="author.submit.copyrightNoticeAgree">The authors agree to the terms of this Copyright Notice, which will apply to this submission if and when it is published by this journal (comments to the editor can be added below).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">You must agree to the terms of the Copyright Notice before continuing.</message>
