@@ -13,12 +13,12 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<br/>
-
-<h3>{translate key="plugins.importexport.pubmed.export"}</h3>
-<ul>
-	<li><a href="{plugin_url path="issues"}">{translate key="plugins.importexport.pubmed.export.issues"}</a></li>
-	<li><a href="{plugin_url path="articles"}">{translate key="plugins.importexport.pubmed.export.articles"}</a></li>
-</ul>
+<div class="pkp_page_content pkp_page_importexport_pubmed">
+	<h3>{translate key="plugins.importexport.pubmed.export"}</h3>
+	<ul>
+		<li><a href="{plugin_url path="issues"}">{translate key="plugins.importexport.pubmed.export.issues"}</a></li>
+		<li><a href="{plugin_url path="articles"}">{translate key="plugins.importexport.pubmed.export.articles"}</a></li>
+	</ul>
+</div>
 
 {include file="common/footer.tpl"}
