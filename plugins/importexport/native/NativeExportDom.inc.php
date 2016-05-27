@@ -277,6 +277,7 @@ class NativeExportDom {
 		}
 
 		XMLCustomWriter::createChildWithText($doc, $root, 'pages', $article->getPages(), false);
+		XMLCustomWriter::createChildWithText($doc, $root, 'citations', $article->getCitations(), false);
 
 		$node = XMLCustomWriter::createChildWithText($doc, $root, 'date_published', NativeExportDom::formatDate($article->getDatePublished()), false);
 		if (!$node) {
