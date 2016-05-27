@@ -1097,8 +1097,11 @@ class IssueManagementHandler extends EditorHandler {
 			if($request->getUserVar('sendToMailList')) {
 				$mailList = $notificationMailListDao->getMailList($journal->getId());
 				foreach ($mailList as $mailListRecipient) {
-					if ($recipient instanceof User && $recipient->getDisabled()) continue;
-					$email->addRecipient($mailListRecipient);
+					$emailAddress = $mailListRecipient['email'];
+					if (!isset($emails[$emailAddress])) {
+						$email->addRecipient($emailAddress);
+						$emails[$emailAddress] = 1;
+					}
 				}
 			}
 
