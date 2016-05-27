@@ -132,7 +132,7 @@
   *  - Locale attribute value must correspond to the journal's
   *    additional locales, if enabled, otherwise an error will be displayed.
   -->
-<!ELEMENT article (id*, title+, abstract*, indexing?, sponsor*, author+, cover?, pages?, date_published, open_access?, permissions?, (galley?, htmlgalley?)+, supplemental_file*)>
+<!ELEMENT article (id*, title+, abstract*, indexing?, sponsor*, author+, cover?, pages?, citations?, date_published, open_access?, permissions?, (galley?, htmlgalley?)+, supplemental_file*)>
 	<!ATTLIST article
 		public_id CDATA #IMPLIED
 		locale CDATA #IMPLIED
@@ -171,7 +171,7 @@
 		locale CDATA #IMPLIED>
 
 <!ELEMENT pages (#PCDATA)>
-
+<!ELEMENT citations (#PCDATA)>
 <!ELEMENT indexing (discipline*, type*, subject*, subject_class*, coverage?)>
 
 <!ELEMENT discipline (#PCDATA)>
