@@ -2,45 +2,45 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/generic/objectsForReview/locale/en_US/locale.xml
+  * @file plugins/generic/objectsForReview/locale/it_IT/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Objects for review plugin localization strings for the en_US (U.S. English) locale.
+  * Objects for review plugin localization strings for the it_IT (Italian) locale.
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italian">
 
 	<!-- Objects For Review Plug-In -->
-	<message key="plugins.generic.objectsForReview.displayName">Objects For Review</message>
-	<message key="plugins.generic.objectsForReview.reminderTask.name">Objects for review reminder</message>
-	<message key="plugins.generic.objectsForReview.description">Solicit reviews for objects of interest. Manage review objects and the review process.</message>
+	<message key="plugins.generic.objectsForReview.displayName">Oggetti in recensione</message>
+	<message key="plugins.generic.objectsForReview.reminderTask.name">Promemoria recensione</message>
+	<message key="plugins.generic.objectsForReview.description">Sollecita recensioni. Gestisci gli oggetti e il processo di recensione.</message>
 
 	<!--  Editor -->
-	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Objects For Review</message>
+	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Oggetti in recensione</message>
 
 	<!-- Object Types Management -->
-	<message key="plugins.generic.objectsForReview.editor.objectTypes">Review Object Types</message>
-	<message key="plugins.generic.objectsForReview.editor.objectTypes.description">Here you can install the default/predefined review objects types, if necessary update the installed ones or create your own review object types.</message>
-	<message key="plugins.generic.objectsForReview.editor.objectTypes.name">Name</message>
-	<message key="plugins.generic.objectsForReview.editor.objectTypes.none">None</message>
-	<message key="plugins.generic.objectsForReview.editor.objectType.persons">Persons</message>
-	<message key="plugins.generic.objectsForReview.editor.objectType.persons.description">Please define all possible person roles that are important for this review object (e.g. Author, Contributor, etc.). You won't be able to change them or add a role later.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes">Tipologie di oggetti in recensione</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.description">Qui puoi installare le tipologie di oggetti in recensione di default/predefinite.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.name">Nome</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.none">Nessuno</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.persons">Persona</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.persons.description">Definisci tutti i possibili ruoli importanti per questo tipo di oggetto (es. Autore, Contributore etc.). Non potrai modificarli o aggiungere ruoli in un secondo momento.</message>
 
-	<message key="plugins.generic.objectsForReview.editor.objectType">Review Object Type</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType">Tipo di oggetto da recensire</message>
 	<message key="plugins.generic.objectsForReview.editor.objectType.confirmDelete">This will also delete all existing objects for review of this type. Are you sure you wish to delete the review object type?</message>
-	<message key="plugins.generic.objectsForReview.editor.objectType.create">Create Review Object Type</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.create">Crea tipo di oggetto da recensire</message>
 	<message key="plugins.generic.objectsForReview.editor.objectType.edit">Edit Review Object Type</message>
-	<message key="plugins.generic.objectsForReview.editor.objectTypes.update">Update</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.update">Aggiorna</message>
 	<message key="plugins.generic.objectsForReview.editor.objectTypes.updateLocales">Update locale data for the above selected objects:</message>
-	<message key="plugins.generic.objectsForReview.editor.objectTypes.install">Install</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.install">Installa</message>
 	<message key="plugins.generic.objectsForReview.editor.objectTypes.installObjects">Install the missing review objects - choose the types and the locales and press the install button:</message>
-	<message key="plugins.generic.objectsForReview.editor.objectType.name">Name</message>
-	<message key="plugins.generic.objectsForReview.editor.objectType.description">Description and Instructions</message>
-	<message key="plugins.generic.objectsForReview.editor.objectType.metadata">Metadata</message>
-	<message key="plugins.generic.objectsForReview.editor.objectType.preview">Preview</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.name">Nome</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.description">Descrizione e istruzioni</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.metadata">Metadati</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.preview">Anteprima</message>
 
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata">Review Object metadata</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.none">None</message>
