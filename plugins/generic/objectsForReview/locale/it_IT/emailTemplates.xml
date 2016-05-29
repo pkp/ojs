@@ -2,121 +2,120 @@
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
 
 <!--
-  * @file plugins/generic/objectsForReview/locale/en_US/emailTemplates.xml
+  * @file plugins/generic/objectsForReview/locale/it_IT/emailTemplates.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Objects for review email template localized default text.
   *
   -->
-<email_texts locale="en_US">
+<email_texts locale="it_IT">
 	<email_text key="OFR_REVIEW_REMINDER">
-		<subject>Object for Review: Due Date Reminder</subject>
-		<body>Dear {$authorName}:
+		<subject>Recenzione: promemoria data di scadenza</subject>
+		<body>Gentile {$authorName},
 
-This is a friendly reminder that your object review of {$objectForReviewTitle} is due {$objectForReviewDueDate}.
+Questo è un promemoria per la recensione di {$objectForReviewTitle} in scadenza il {$objectForReviewDueDate}.
 
-To submit your object review, please log into the journal website and complete the online article submission process. For your convenience, a submission URL has been provided below.
+Per inviare la tua recensione, accedi al sito della rivista e completa il processo di submission. 
+Per tua praticità puoi utilizzare direttamente questo indirizzo: 
+{$submissionUrl}
 
-Submission URL: {$submissionUrl}
+Contattaci senza indugi per qualsiasi dubbio o questione riguardante questa recensione.
 
-Please feel free to contact me if you have any questions or concerns about this object review.
-
-Thank you for your contribution to the journal and I look forward to receiving your submission.
+Grazie per il tuo contributo, attendo la tua recensione.
 
 {$editorialContactSignature}</body>
-		<description>This is an automatically generated email that is sent to an object for review author as a reminder that the due date for the review is approaching.</description>
+		<description>Messaggio generato automaticamente e inviato all'autore di una recensione all'approssimarsi della data di scadenza.</description>
 	</email_text>
 	<email_text key="OFR_REVIEW_REMINDER_LATE">
-		<subject>Object for Review: Review Due</subject>
-		<body>Dear {$authorName}:
+		<subject>Recensione scaduta</subject>
+		<body>Gentile {$authorName}:
 
-This is a friendly reminder that your object review of {$objectForReviewTitle} was due {$objectForReviewDueDate} but has not been received yet.
+Questo è un promemoria per la recensione di {$objectForReviewTitle} in scadenza il {$objectForReviewDueDate}, che non abbiamo ancora ricevuto.
 
-To submit your object review, please log into the journal website and complete the online article submission process. For your convenience, a submission URL has been provided below.
+Per inviare la tua recensione, accedi al sito della rivista e completa il processo di submission. 
+Per tua praticità puoi utilizzare direttamente questo indirizzo: 
+{$submissionUrl}
 
-Submission URL: {$submissionUrl}
+Contattaci senza indugi per qualsiasi dubbio o questione riguardante questa recensione.
 
-Please feel free to contact me if you have any questions or concerns about this object review.
-
-Thank you for your contribution to the journal and I look forward to receiving your submission.
+Grazie per il tuo contributo, attendo la tua recensione.
 
 {$editorialContactSignature}</body>
-		<description>This is an automatically generated email that is sent to an object for review author after the review due date has passed.</description>
+		<description>Messaggio generato automaticamente e inviato all'autore di una recensione quando la data di scadenza è superata.</description>
 	</email_text>
 	<email_text key="OFR_OBJECT_ASSIGNED">
-		<subject>Object for Review: Object Assigned</subject>
-		<body>Dear {$authorName}:
+		<subject>Assegnazione recensione</subject>
+		<body>Gentile {$authorName}:
 
-This email confirms that {$objectForReviewTitle} has been assigned to you for an object review to be completed by {$objectForReviewDueDate}.
+Questo messaggio conferma l'assegnazione di {$objectForReviewTitle} per una recensione da completare entro il {$objectForReviewDueDate}.
 
-Please ensure that your mailing address in your online user profile is up-to-date. This address will be used to mail a copy of the object to you for the review.
+Assicurati che l'indirizzo postale presente nel tuo profilo sia aggiornato; tale indirizzo verrà usato per inviarti una copia dell'oggetto della tua revisione.
 
-The mailing address that we currently have on file is:
+Il tuo indirizzo postale attualmente definito è:
 {$authorMailingAddress}
 
-If this address is incomplete or you are no longer at this address, please use the following user profile URL to update your address:
+Se questo indirizzo è incompleto o sbagliato, utilizza questo link per aggiornarlo:
 
-User Profile URL: {$userProfileUrl}
+Modifica il tuo profilo: {$userProfileUrl}
  
-To submit your object review, please log into the journal website and complete the online article submission process.
+Per inviare la tua recensione, accedi al sito della rivista e completa il processo di submission a questo indirizzo:
+{$submissionUrl}
 
-Submission URL: {$submissionUrl}
-
-Please feel free to contact me if you have any questions or concerns about this object review.
+Contattaci senza indugi per qualsiasi dubbio o questione riguardante questa recensione.
 
 {$editorialContactSignature}</body>
-		<description>This email is sent by an editor to an object review author when an editor assigns the object for review to the author.</description>
+		<description>Questo messaggio viene inviato dall'editor all'autore di una recensione al momento dell'assegnazione dell'incarico.</description>
 	</email_text>
 	<email_text key="OFR_OBJECT_DENIED">
-		<subject>Object for Review</subject>
-		<body>Dear {$authorName}:
+		<subject>Recensione</subject>
+		<body>Gentile {$authorName},
 
-Unfortunately, I am not able to assign {$objectForReviewTitle} to you at this time for an object review.
+Non posso assegnarti, sfortunatamente, la recensione di {$objectForReviewTitle}.
 
-I hope you consider reviewing another object from our listing, either at this time or in the future.
+Spero che tu sia disponibile a recensire altro, sia oggi sia in futuro.
 
 {$editorialContactSignature}</body>
-		<description>This email is sent by an editor to an interested author when an object is no longer available for review.</description>
+		<description>Questa email viene inviata dall'editor a un autoree interessato quando l'oggetto della recensione non è più disponibile.</description>
 	</email_text>
 	<email_text key="OFR_OBJECT_REQUESTED">
-		<subject>Object for Review: Object Requested</subject>
-		<body>Dear {$editorName}:
+		<subject>Recensione: Richiesta di un oggetto</subject>
+		<body>Gentile {$editorName},
 
-I am interested in writing an object review of {$objectForReviewTitle}.
+Sono interessato a recensire {$objectForReviewTitle}.
 
-Can you please confirm whether this object is still available for review?
+Potresti confermarmi che l'oggetto è ancora disponibile?
 
 {$authorContactSignature}</body>
-		<description>This email is sent to an editor by an author interested in writing an object review for a listed object.</description>
+		<description>Questa email viene inviata all'editor da un autore interessato a recensire un elemento della lista.</description>
 	</email_text>
 	<email_text key="OFR_OBJECT_MAILED">
-		<subject>Object for Review: Object Mailed</subject>
-		<body>Dear {$authorName}:
+		<subject>Volume inviato per recensione</subject>
+		<body>Gentile {$authorName},
 
-This email confirms that I have mailed a copy of {$objectForReviewTitle} to the following mailing address from your online user profile:
+Ti confermo di aver inviato copia di {$objectForReviewTitle} a questo indirizzo postale presente nel tuo profilo:
 {$authorMailingAddress}
  
-To submit your object review, please log into the journal website and complete the online article submission process.
+Per inviare la tua recensione, accedi al sito della rivista e completa il processo di submission. 
+Per tua praticità puoi utilizzare direttamente questo indirizzo: 
+{$submissionUrl}
 
-Submission URL: {$submissionUrl}
-
-Please feel free to contact me if you have any questions or concerns about this object review.
+Contattaci senza indugi per qualsiasi dubbio o questione riguardante questa recensione.
 
 {$editorialContactSignature}</body>
-		<description>This email is sent by an editor to an object review author when the editor has mailed a copy of the object to the author.</description>
+		<description>Questa email viene inviata dall'editor all'autore della recensione a conferma dell'invio dell'oggetto da recensire.</description>
 	</email_text>
 	<email_text key="OFR_REVIEWER_REMOVED">
-		<subject>Object for Review</subject>
-		<body>Dear {$authorName}:
+		<subject>Recensione</subject>
+		<body>Gentile {$authorName},
 
-This email confirms that you have been removed as the object reviewer for {$objectForReviewTitle}.
+Ti informo di averti rimosso come recensore di {$objectForReviewTitle}.
 
-I hope you consider reviewing another object from our listing, either at this time or in the future.
+Spero che tu sia disponibile a recensire altro, sia oggi sia in futuro.
 
 {$editorialContactSignature}</body>
-		<description>This email is sent by an editor to an interested author when an object is no longer available for review.</description>
+		<description>Questa email è inviata dall'editor all'autore di una recensione quando la recensione è cancellata.</description>
 	</email_text>
 </email_texts>
