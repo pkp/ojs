@@ -133,7 +133,6 @@
 	<message key="submission.scheduling">Programmazione</message>
 	<message key="submission.scheduledIn">In pubblicazione sul fascicolo {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(TBA)</message>
-
 	<message key="submissions.sec">Sez.</message>
 	<message key="submissions.step1">Passo 1</message>
 	<message key="submissions.step3">Passo 3</message>
@@ -218,7 +217,6 @@
 	<message key="submission.event.editor.submissionArchived">Proposta archiviata</message>
 	<message key="submission.event.editor.submissionRestored">Proposta ripristinata dall'archivio</message>
 
-
 	<message key="submission.event.copyedit.copyeditorAssigned">Copyeditor assegnato alla proposta</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">Copyeditor tolto dalla proposta</message>
 	<message key="submission.event.copyedit.copyeditInitiated">Avviato l'incarico di copyedit</message>
@@ -252,17 +250,13 @@
 	<message key="comments.authenticated"><![CDATA[da <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
 	<!-- Site Administration -->
-
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Per indicizzare gli articoli delle riviste contenute in questo sito in un sistema globalmente distribuito di database di ricerca, <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">registra</a> l'URL del vostro sito al Public Knowledge Project metadata <a href="http://www.pkp.ubc.ca/harvester/" target="_blank">harvester</a>. Questo strumento raccoglie i metadata da ogni articolo indicizzato delle riviste, permettendo in questo modo una ricerca accurata tra tutti i siti che aderiscono alla <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
 <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">Fai click qui</a> e inserisci <span class="highlight">{$siteUrl}</span> <strong>come URL del sito</strong>, e <span class="highlight">{$oaiUrl}</span> <strong>come baseURL per l'archivio OAI</strong>.
 <br /><br />
 Da notare che l'interfaccia OAI può essere disabilitata per l'intero sito dal file di configurazione di OJS. Nelle prossime versioni di OJS sarà possibile abilitare o disabilitare l'interfaccia OAI per le singole riviste.]]></message>
 
-
-
 	<!-- Languages -->
-
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Specificare una fonte di autenticazione di  default fuori da  OJS ha i seguenti effetti:</p>
 <ul>
 	<li>Se un utente cerca di registrare un nuovo account con questo sito con una username che esiste nella fonte di autenticazione (ma non nel database di OJS), il tentativo di registrazione &egrave; permesso solo se la password fornita per quell'account dell'utente.</li>
@@ -286,6 +280,9 @@ Da notare che l'interfaccia OAI può essere disabilitata per l'intero sito dal f
 	<message key="plugins.categories.auth.description">I plugin per le modalità di autenticazione consentono a Open Journal Systems di delegare ad altri sistemi (es. server LDAP) il compiti di gestire l'autenticazione degli utenti.</message>
 	<message key="plugins.categories.citationFormats.description">Citation format plugins provide users with various formats in which to access article citations.</message>
 	<message key="plugins.categories.generic.description">I plugin generici sono usati per estendere Open Journal Systems con un'ampia serie di funzionalità aggiuntive.</message>
+	<message key="plugins.categories.implicitAuth">Plugin per l'autenticazione centralizzata</message>
+	<message key="plugins.categories.implicitAuth.description">I plugin per l'autenticazione centralizzata permettono l'autenticazione degli utenti attraverso le intestazioni http.</message>
+
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->
@@ -295,19 +292,11 @@ Da notare che l'interfaccia OAI può essere disabilitata per l'intero sito dal f
 
 
 	<!-- Setup Step 2 -->
-
-
 	<message key="manager.setup.reviewProcessEmailDescription">Gli editor inviano ai revisori la richiesta di revisione allegando la submission  all'email. I Revisori rispondono con un messaggio agli editor esprimendo il loro assenso (o rifiuto), e poi il parere e i suggerimenti sulla proposta. Gli editor inseriscono l'assenso (o rifiuto) dei revisori, e poi la loro decisione e i loro suggerimenti, nella pagina della proposta, per tenere tracciare il processo editoriale.</message>
-
-
-
-
-
-
-
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems supporta <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) per garantire un'archiviazione permanente della rivista. LOCKSS &#x00E8; un software open source sviluppato alla Stanford University Library che consente alle biblioteche di conservare le riviste elettroniche visitando regolarmente i siti web delle riviste registrate alla ricerca delle nuove pubblicazioni per archiviarle. Ogni archivio viene continuamente confrontato con i depositi presso le altre biblioteche del sistema e, se il contenuto risulta essere compromesso, viene ripristinato a partire da uno degli altri archivi di deposito.
+	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems supporta <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) per assicurare la conservazione a lungo termine dei contenuti della tua rivista. Ci sono diversi modi per includere la rivista in una rete LOCKSS.]]></message>
+	<message key="manager.setup.lockssDescription"><![CDATA[<strong>Altre reti LOCKSS</strong>
 <br /><br />
-L'impostare del supporto LOCKSS per Open Journal Systems non deve avvenire fino a che la pubblicazione non &#x00E8; già completamente in corso, a questo punto seguire questi due passi:]]></message>
+Se pensi di avere accesso a una o più reti LOCKSS elencate <a href="http://www.lockss.org/community/networks/" target="_blank">qui</a>, contatta l'amministratore della lista appropriata per richiedere l'inclusione. Completando il modulo sotto permetterai l'inclusione della rivista in tali network.. <em>Nessuno contentuo, tuttavia, verrà avviato alla conservazione se prima non avrai preso accordi con il network più appropriato</em>.]]></message>
 
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[<p>Per permettere l'indicizzazione dei contenuti della rivista all'interno di un sistema di database di ricerca globale  e distribuito , <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">registra</a> l'URL della rivista sull'<a href="http://www.pkp.ubc.ca/harvester/" target="_blank">harvester</a> del Public Knowledge Project. Questo strumento raccoglie i metadati di ogni articolo pubblicato dalla rivista, permettendo cos&#x00EC; una ricerca accurata e globale tra i siti che aderiscono all'<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>. </p><p>Nota: se l'amministratore ha gi&#x00E0; registrato il sito all'interno del PKP Harvster, la vostra rivista sar&#x00E0; indicizzata automaticamente e non avrete bisogno di effettuare la registrazione.</p><p>Fai <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">click qui</a> e inserisci <span class="highlight">{$siteUrl}</span> come <strong>URL del sito</strong>, e <span class="highlight">{$oaiUrl}</span> come <strong>base-URL</strong> dell'archivio OAI.</p><p>Utilizzando le medesime URL è possibile registrarsi su tutti i <em>service provider OAI</em>.</p>]]></message>
@@ -342,7 +331,7 @@ L'impostare del supporto LOCKSS per Open Journal Systems non deve avvenire fino 
 
 
 
-		<!-- Email Management -->
+	<!-- Email Management -->
 
 	<!-- Subscription Policy Management -->
 
@@ -360,9 +349,6 @@ L'impostare del supporto LOCKSS per Open Journal Systems non deve avvenire fino 
 
 
 	<!-- Editor -->
-
-
-
 	<message key="editor.submissionReview.notes">
         <![CDATA[<ol>
         <li>Gli elementi evidenziati richiedono l'attenzione dell'editor, per i motivi indicati sotto:
@@ -414,7 +400,6 @@ L'impostare del supporto LOCKSS per Open Journal Systems non deve avvenire fino 
 	<message key="sectionEditor.author.confirmRenotify">Un'altra notifica a questo autore farà ricominciare da capo il loro incarico. Sei sicuro di voler fare questo?</message>
 	<message key="sectionEditor.layout.confirmRenotify">Un'altra notifica a questo editor di layout farà ricominciare da capo l'incarico. Sei sicuro di voler fare questo?</message>
 	<message key="sectionEditor.proofreader.confirmRenotify">Un'altra notifica a questo correttore di bozze farà ricominciare da capo il loro incarico. Sei sicuro di voler fare questo?</message>
-
 	<message key="sectionEditor.regrets.breadcrumb">Ripensamenti</message>
 	<message key="sectionEditor.regrets.title"><![CDATA[#{$articleId} Round precedenti, rifiuti & cancellazioni]]></message>
 	<message key="sectionEditor.regrets">Rifiutato</message>
@@ -458,29 +443,28 @@ L'impostare del supporto LOCKSS per Open Journal Systems non deve avvenire fino 
 	<message key="reviewer.article.uploadedFile">File caricati</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Versione caricata  dal reviewer</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Se vuoi inserire nel file delle note per l'editor, salvalo  e successivamente utilizzate l'opzione Sfoglia/Invia per caricarlo.)</message>
-        <message key="reviewer.article.schedule.request">Richiesta dell'editor</message>
-        <message key="reviewer.article.schedule.response">Accettazione incarico</message>
-        <message key="reviewer.article.schedule.submitted">Data di invio del parere</message>
-        <message key="reviewer.article.schedule.due">Scadenza dell'incarico</message>
+    <message key="reviewer.article.schedule.request">Richiesta dell'editor</message>
+    <message key="reviewer.article.schedule.response">Accettazione incarico</message>
+    <message key="reviewer.article.schedule.submitted">Data di invio del parere</message>
+    <message key="reviewer.article.schedule.due">Scadenza dell'incarico</message>
 	<message key="reviewer.article.decision.accept">Accettare la proposta</message>
 	<message key="reviewer.article.decision.pendingRevisions">Richiedere correzioni</message>
 	<message key="reviewer.article.decision.resubmitHere">Inviare di nuovo in revisione</message>
-        <message key="reviewer.article.decision.resubmitElsewhere">Suggerire di proporre altrove</message>
+    <message key="reviewer.article.decision.resubmitElsewhere">Suggerire di proporre altrove</message>
 	<message key="reviewer.article.decision.decline">Rifiutare la proposta</message>
 	<message key="reviewer.article.decision.seeComments">Vedere i commenti</message>
 	<message key="reviewer.article.schedule">Attività</message>
-
-        <message key="reviewer.article.submissionToBeReviewed">Proposta da revisionare</message>
-        <message key="reviewer.article.reviewSchedule">Scadenze per questa revisione</message>
-        <message key="reviewer.article.reviewSteps">Fasi della revisione</message>
-        <message key="reviewer.article.reviewerGuidelines">Linee guida per i revisori</message>
-        <message key="reviewer.article.notifyEditorA">Comunica all'editor di questa proposta</message>
-        <message key="reviewer.article.notifyEditorB">se sei disponibile o meno ad accettare l'incarico di revisore.</message>
-        <message key="reviewer.article.consultGuidelines">Se hai deciso di effettuare la revisione, consulta le linee guida sottostanti.</message>
-        <message key="reviewer.article.downloadSubmission">Fai click sul nome dei file per scaricarli ed effettuare la revisione (su schermo o dopo averli stampati).</message>
-        <message key="reviewer.article.enterReviewA">Fai click sull'icona per inserire il commento a questa proposta.</message>
-        <message key="reviewer.article.uploadFile">È possibile, inoltre, caricare file da sottoporre all'editor e/o all'autore.</message>
-        <message key="reviewer.article.selectRecommendation">Seleziona un parere conclusivo e invialo all'editor per completare questa fase. Devi inserire un commento o caricare un file prima di poter scegliere il parere.</message>
+    <message key="reviewer.article.submissionToBeReviewed">Proposta da revisionare</message>
+    <message key="reviewer.article.reviewSchedule">Scadenze per questa revisione</message>
+    <message key="reviewer.article.reviewSteps">Fasi della revisione</message>
+    <message key="reviewer.article.reviewerGuidelines">Linee guida per i revisori</message>
+    <message key="reviewer.article.notifyEditorA">Comunica all'editor di questa proposta</message>
+    <message key="reviewer.article.notifyEditorB">se sei disponibile o meno ad accettare l'incarico di revisore.</message>
+    <message key="reviewer.article.consultGuidelines">Se hai deciso di effettuare la revisione, consulta le linee guida sottostanti.</message>
+    <message key="reviewer.article.downloadSubmission">Fai click sul nome dei file per scaricarli ed effettuare la revisione (su schermo o dopo averli stampati).</message>
+    <message key="reviewer.article.enterReviewA">Fai click sull'icona per inserire il commento a questa proposta.</message>
+    <message key="reviewer.article.uploadFile">È possibile, inoltre, caricare file da sottoporre all'editor e/o all'autore.</message>
+    <message key="reviewer.article.selectRecommendation">Seleziona un parere conclusivo e invialo all'editor per completare questa fase. Devi inserire un commento o caricare un file prima di poter scegliere il parere.</message>
 	<message key="reviewer.article.mustSelectDecision">Non è stato selezionato alcun parere. Devi scegliere un parere da inviare.</message>
 	<message key="reviewer.article.confirmDecision">Una volta che la tua decisione è stata registrata non sarai più in grado in modificarla. Sei sicuro di continuare?</message>
 	<message key="reviewer.article.ensuringBlindReview">Come assicurare una revisione cieca</message>
@@ -667,6 +651,9 @@ L'impostare del supporto LOCKSS per Open Journal Systems non deve avvenire fino 
 	<message key="about.submissionPreparationChecklist">Lista di controllo per l'invio di una proposta</message>
 	<message key="about.submissionPreparationChecklist.description">Gli autori devono controllare la rispondenza della loro proposta di contributo alle richieste seguenti, pena il rifiuto delle proposte che non aderiscano a queste linee guida.</message>
 	<message key="about.copyrightNotice">Diritti degli autori</message>
+	<message key="manager.setup.copyrightYearBasis">Fissa per default i diritti d'autore dei nuovi articoli su</message>
+	<message key="manager.setup.copyrightYearBasis.Article">L'anno verrà tratto dalla data di pubblicazione dei singoli articoli; consigliato per le riviste che pubblicano in maniera più fluida</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">L'anno verrà tratto dalla data di pubblicazione del fascicolo
 	<message key="about.privacyStatement">Informazioni sulla privacy</message>
 	<message key="about.peerReviewProcess">Peer review</message>
 	<message key="about.publicationFrequency">Frequenza di pubblicazione</message>

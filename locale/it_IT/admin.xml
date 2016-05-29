@@ -65,6 +65,8 @@
 	<message key="admin.settings.security">Sicurezza</message>
 	<message key="admin.settings.security.plugins">Impedisci journal managers di installare, aggiornare o cancellare i plugin.</message>
 	<message key="admin.settings.options">Opzioni</message>
+	<message key="admin.settings.security">Sicurezza</message>
+	<message key="admin.settings.security.plugins">Impedisci agli amministratori delle riviste di installare, aggiornare e cancellare i plugin.</message>
 	<message key="admin.settings.journalsList.showThumbnail">Anteprima della rivista</message>
 	<message key="admin.settings.journalsList.showTitle">Titolo della rivista</message>
 	<message key="admin.settings.journalsList.showDescription">Descrizione della rivista</message>

@@ -216,6 +216,8 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.emailBounceAddressDescription">Nel caso l'invio di un messaggio di posta elettronica non dovesse andare a buon fine, verrà inviata una notifica di errore a questo indirizzo.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Nota:</strong> per attivare questa opzione, l'amministratore del sito deve abilitare l'opzione <tt>allow_envelope_sender</tt>  nel file di configurazione di OJS. Configurazioni aggiuntive del server possono essere necessarie per supportare questa funzione (che potrebbe non essere disponibile su tutti i server), come indicato nella documentazione di OJS.]]></message>
 	<message key="manager.setup.emails">Firma delle email</message>
+	<message key="manager.setup.emailHeader">Intestazione delle email</message>
+	<message key="manager.setup.emailHeaderDescription">I messaggi inviati dal sistema per conto della rivista presenteranno la seguente intestazione. Tutte queste email, infatti, avranno come mittente il contatto principale della rivista; quindi è importante chiarire che tale mittente potrebbe non essere il responsabile del contenuto del messaggio, che potrebbe essere stato inviato per conto di un altro utente.</message>
 	<message key="manager.setup.emailSignature">Firma</message>
 	<message key="manager.setup.emailSignatureDescription">Le email inviate in automatico dal sistema avranno la seguente firma alla fine del messaggio. Il contenuto di queste email può essere modificato nella sezione di amministrazione della rivista.</message>
 	<message key="manager.setup.enableAnnouncements">Abilita gli amministratori della rivista ad aggiungere avvisi.</message>
@@ -439,8 +441,11 @@ Al momento di concludere una revisione, ai revisori vengono presentate due box, 
 	<message key="manager.setup.userRegistration">Registrazione utenti</message>
 	<message key="manager.setup.useTextTitle">Testo del titolo</message>
 	<message key="manager.setup.volumePerYear">Volumi per anno</message>
+	<message key="manager.statistics.city">Città</message>
+	<message key="manager.statistics.region">Regione</message>
 	<message key="manager.statistics.reports">Generatore di report</message>
 	<message key="manager.statistics.reports.aggregationColumns">Aggrega le statistiche per:</message>
+	<message key="manager.statistics.reports.optionalColumns.description">Gli elementi in corsivo e contrassegnati da * rappresenano dati opzionali per il metodo corrente di calcolo delle statistiche in OJS (metric type). Potresti avere quei dati o meno, secondo la configurazione del plugin per le statistiche.</message>
 	<message key="manager.statistics.reports.defaultReportTemplates">Modello di report di default</message>
 	<message key="manager.statistics.reports.defaultReport.articleDownloads">Download degli articoli</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">Viste delle pagine degli abstract</message>
@@ -460,6 +465,7 @@ Al momento di concludere una revisione, ai revisori vengono presentate due box, 
 	<message key="manager.statistics.reports.objectId">Id oggetto</message>
 	<message key="manager.statistics.reports.objectId.label">Indica uno o più ID, separati da virgola (es. 1,2,3,4,5).</message>
 	<message key="manager.statistics.reports.today">Oggi</message>
+	<message key="manager.statistics.reports.yesterday">Ieri</message>
 	<message key="manager.statistics.reports.currentMonth">Mese corrente</message>
 	<message key="manager.statistics.reports.orderBy">Ordina per</message>
 	<message key="manager.statistics.reports.orderDir">Direzione</message>
