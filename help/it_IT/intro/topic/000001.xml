@@ -46,17 +46,17 @@
 	<section title="2. Where can I find technical support, pose bugs, and suggest improvements in using OJS?">
 		<![CDATA[
 <p>Il Public Knowledge Project gestisce un <a href="http://forum.pkp.sfu.ca/" target="_blank">Forum di supporto</a>. Se ciò non dovesse bastare, è possibile inviare richieste a <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>. Segnalazioni di bug dovrebbero essere inviate tramite il <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github issues</a> di PKP.</p>
-<p>Parte della documentazione è disponibile anche in lingua italiana, sul sito del <a href="http://www.aepic.it/ojs.php" target="_blank">Team Aepic-CILEA</a>; a loro puoi rivolgerti anche per consulenza e supporto nella gestione di OJS.</p>
+<p>Parte della documentazione è disponibile anche in lingua italiana.</p>
 		]]>
 	</section>
 	<section title="3. How would I go about translating OJS in another language?">
 		<![CDATA[
-<p>Le istruzioni sono fornite nel file docs/README  che &#x00E8; incluso nel download di OJS. Informazioni aggiuntive su problemi comuni di traduzione possono inoltre essere trovati nel <a href="http://forum.pkp.sfu.ca/" target="_blank">PKP Support Forum</a>.</p>
+<p>Le istruzioni sono fornite nel file docs/README  che &#x00E8; incluso nel download di OJS. Informazioni aggiuntive su problemi comuni di traduzione possono inoltre essere reperite nel <a href="http://forum.pkp.sfu.ca/" target="_blank">PKP Support Forum</a>.</p>
 		]]>
 	</section>
 	<section title='4. Why are authors getting the message that the journal is "not accepting submissions at this time"?'>
 		<![CDATA[
-<p>Se il Journal Manager deve ancora creare tutte le sezioni (e.g., Articoli, Rassegne di libri, etc.) per la rivista, allora gli autori riceveranno questo messaggio. Inoltre, se il Journal Manager ha selezionato l'opzione , "Gli articoli per questa sezione possono essere proposti solo dagli editor" per tutte le sezioni create, allora solo gli editor potranno fare la submission.</p>
+<p>Se il Journal Manager deve ancora creare tutte le sezioni (per esempio, Articoli, Rassegne di libri etc.) per la rivista, allora gli autori riceveranno questo messaggio. Inoltre, se il Journal Manager ha selezionato l'opzione , "Gli articoli per questa sezione possono essere proposti solo dagli editor" per tutte le sezioni create, allora solo gli editor potranno fare la submission.</p>
 		]]>
 	</section>
 	<section title='5. What can we do if we want to provide access to manuscripts that are under review or at the "pre-print" stage prior to being published by the journal?'>

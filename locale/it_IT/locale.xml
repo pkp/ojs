@@ -164,7 +164,7 @@
 
 	<!-- User -->
 	<message key="user.showAllJournals">Mostra le mie riviste</message>
-	<message key="user.registerForOtherJournals">Registrati su un'altra rivista</message>
+	<message key="user.registerForOtherJournals">Registrati a un'altra rivista</message>
 	<message key="user.myJournals">Le mie riviste</message>
 
 	<!-- Roles -->
@@ -259,7 +259,7 @@ Da notare che l'interfaccia OAI può essere disabilitata per l'intero sito dal f
 	<!-- Languages -->
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Specificare una fonte di autenticazione di  default fuori da  OJS ha i seguenti effetti:</p>
 <ul>
-	<li>Se un utente cerca di registrare un nuovo account con questo sito con una username che esiste nella fonte di autenticazione (ma non nel database di OJS), il tentativo di registrazione &egrave; permesso solo se la password fornita per quell'account dell'utente.</li>
+	<li>Se un utente cerca di registrare un nuovo account con questo sito con una username che esiste nella fonte di autenticazione (ma non nel database di OJS), il tentativo di registrazione &egrave; permesso solo se la password fornita per quell'account dell'utente è corretta.</li>
 </ul>]]></message>
 
 	<!-- System Information -->
@@ -278,7 +278,7 @@ Da notare che l'interfaccia OAI può essere disabilitata per l'intero sito dal f
 
 	<!-- General plugin information -->
 	<message key="plugins.categories.auth.description">I plugin per le modalità di autenticazione consentono a Open Journal Systems di delegare ad altri sistemi (es. server LDAP) il compiti di gestire l'autenticazione degli utenti.</message>
-	<message key="plugins.categories.citationFormats.description">Citation format plugins provide users with various formats in which to access article citations.</message>
+	<message key="plugins.categories.citationFormats.description">I plugin per i formati citazionaliprovide users with various formats in which to access article citations.</message>
 	<message key="plugins.categories.generic.description">I plugin generici sono usati per estendere Open Journal Systems con un'ampia serie di funzionalità aggiuntive.</message>
 	<message key="plugins.categories.implicitAuth">Plugin per l'autenticazione centralizzata</message>
 	<message key="plugins.categories.implicitAuth.description">I plugin per l'autenticazione centralizzata permettono l'autenticazione degli utenti attraverso le intestazioni http.</message>
@@ -324,7 +324,7 @@ Se pensi di avere accesso a una o più reti LOCKSS elencate <a href="http://www.
 	<message key="manager.people.confirmDisable">Disabilitare l'utente? In questo modo non potrà più entrare nel sistema. Se vuoi, puoi fornire all'utente una motivazione per la disattivazione dell'account.</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[Spiacente, non hai i diritti di amministrazione su questo utente. Questo potrebbe accadere perchè:
 		<ul>
-			<li>l'utente è l'amministratore del sito</li>
+			<li>l'utente è amministratore del sito</li>
 			<li>l'utente è attivo anche in riviste che non gestisci direttamente</li>
 		</ul>
 	Questo compito deve essere svolto dall'amministratore del sito.]]></message>
@@ -491,7 +491,7 @@ Se pensi di avere accesso a una o più reti LOCKSS elencate <a href="http://www.
 	<message key="author.submit.uploadInstructions"><![CDATA[<p>Per caricare un manoscritto in questa rivista, segui queste istruzioni:</p>
 <ol>
 <li>In questa pagina, clicca sul bottone 'Sfoglia' (o 'Scegli file'), che aprirà una finestra per cercare il file nel tuo PC.</li>
-<li>Localizza il file che hai deciso di sottomettere e selezionalo.</li>
+<li>Localizza il file che hai deciso di sottoporre e selezionalo.</li>
 <li>Clicca su Apri nella finestra 'Scegli File', e il nome del file verr&#x00E0; copiato in questa pagina.</li>
 <li>Clicca su 'Carica'; questa operazione permette di caricare il file dal proprio comupter al sito web della rivista e lo rinomina  automaticamente secondo le convenzioni della rivista.</li>
 <li>Una volta che il file &#x00E8; stato caricato, clicca su 'Salva e continua' in fondo a questa pagina.</li>
@@ -529,7 +529,7 @@ Se pensi di avere accesso a una o più reti LOCKSS elencate <a href="http://www.
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Commenti del correttore di bozze</message>
 
-	<message key="submission.proofread.corrections">Correzioni dei correttori di bozze</message>
+	<message key="submission.proofread.corrections">Correzioni da parte dei correttori di bozze</message>
 	<message key="submission.proofread.instructions">Istruzioni dei correttori di bozze</message>
 
 	<!-- Submission History -->
@@ -547,39 +547,39 @@ Se pensi di avere accesso a una o più reti LOCKSS elencate <a href="http://www.
 	<!-- Submission Email Log -->
 
 	<!-- Submission Comments -->
-	<message key="submission.comments.editorAuthorCorrespondence">Corrispondenza editor/Autore</message>
+	<message key="submission.comments.editorAuthorCorrespondence">Corrispondenza Editor/Autore</message>
 	<message key="submission.comments.copyeditComments">Commenti di copyedit</message>
 	<message key="submission.comments.viewableDescription"><![CDATA[Questi commenti possono essere condivisi con gli autori.<br />
 (Dopo aver salvato, possono essere aggiunti ulteriori commenti.)]]></message>
-	<message key="submission.comments.canShareWithAuthor">Per  autore ed editor</message>
-	<message key="submission.comments.cannotShareWithAuthor">Per editor</message>
+	<message key="submission.comments.canShareWithAuthor">Per l'autore e per l'editor</message>
+	<message key="submission.comments.cannotShareWithAuthor">Per il solo editor</message>
 	<message key="submission.comments.blindCcReviewers">Dopo l'invio, presenta una copia BCC modificabile da inviare ai revisori.</message>
-	<message key="submission.comments.forAuthorEditor">Per autore ed editor</message>
-	<message key="submission.comments.forEditor">Per editor</message>
-	<message key="submission.comments.saveAndEmailAuthor">Salva e manda una Email all'autore</message>
-	<message key="submission.comments.saveAndEmailEditor">Salva e manda una Email all'editor</message>
+	<message key="submission.comments.forAuthorEditor">Per l'autore e per l'editor</message>
+	<message key="submission.comments.forEditor">Per il solo editor</message>
+	<message key="submission.comments.saveAndEmailAuthor">Salva e invia un'email all'autore</message>
+	<message key="submission.comments.saveAndEmailEditor">Salva e invia un'email all'editor</message>
 
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Non sei già utente di questo sito? Vai alla registrazione</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Per ragioni di sicurezza, questo sistema manda una email con una password per risettare agli utenti registrati, piuttosto che  richiamare la password corrente.
-<br /><br />Inserisci sotto il tuo indirizzo email per risettare la password. Ti verr&#x00E0; inviata la conferma a questo indirizzo  email.]]></message>
+	<message key="user.login.registerNewAccount">Non sei ancora utente di questo sito? Vai alla registrazione</message>
+	<message key="user.login.resetPasswordInstructions"><![CDATA[Per ragioni di sicurezza, questo sistema ti invierà un messaggio di posta elettronica un link per reimpostare la password dimenticata.
+<br /><br />Inserisci sotto il tuo indirizzo email per reimpostare la password. Quando riceverai il messaggio, clicca sul link che contiene per reimpostare la password.]]></message>
 
 	<!-- Profile -->
 
 
 	<!-- Registration -->
-	<message key="user.register.selectJournal">Seleziona una rivista a cui registrarsi</message>
+	<message key="user.register.selectJournal">Seleziona la rivista alla quale vuoi registrarti</message>
 	<message key="user.register.noJournals">Non ci sono riviste a cui ti puoi registrare in questo sito.</message>
 	<message key="user.register.privacyStatement">Tutela della privacy</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clicca qui</a> se sei già iscritto a questa o a un'altra rivista su questo sito.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clicca qui</a> Se <strong>non</strong> sei gi&#x00E0; registrato a questo o un'altra rivista su questo sito.]]></message>
-	<message key="user.register.loginToRegister">Inserisci la tua username e la password per registrarti a questa rivista.</message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clicca qui</a> Se <strong>non</strong> sei ancora registrato a questa o un'altra rivista su questo sito.]]></message>
+	<message key="user.register.loginToRegister">Inserisci la tua username e la password per registrarti alla rivista.</message>
 	<message key="user.register.registrationDisabled">Questa rivista attualmente non sta accettando registrazioni di utenti.</message>
-	<message key="user.register.form.passwordLengthTooShort">La password Che hai inserito non è abbastanza lunga.</message>
-	<message key="user.register.readerDescription">Notificato con una email sulla pubblicazione di una uscita della rivista.</message>
-	<message key="user.register.openAccessNotificationDescription">Avvisato con una email quando una nuova uscita del journal diventa open access.</message>
-	<message key="user.register.authorDescription">Abilitato a sottomettere items nella rivista.</message>
-	<message key="user.register.reviewerDescriptionNoInterests">Voler condurre una peer review della submissions alla rivista.</message>
+	<message key="user.register.form.passwordLengthTooShort">La password che hai inserito non è abbastanza lunga.</message>
+	<message key="user.register.readerDescription">Avvisato con una email sulla pubblicazione di una uscita della rivista.</message>
+	<message key="user.register.openAccessNotificationDescription">Avvisato con una email quando una nuova uscita della rivista diventa disponibile ad accesso aperto.</message>
+	<message key="user.register.authorDescription">Abilitato a sottoporre contributi alla rivista.</message>
+	<message key="user.register.reviewerDescriptionNoInterests">Disponibile a condurre revisioni dei contributi sottoposti alla rivista.</message>
 	<message key="user.register.reviewerDescription">Voler condurre una peer review delle submissions alla rivista. Identifica interessi di revisione (aree sostanziali e metodi di ricerca).</message>
 
 
