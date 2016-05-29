@@ -12,12 +12,12 @@
   *
   -->
 
-<topic id="editorial/topic/000044" locale="it_IT" title="Assicurare una peer review cienca" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">
+<topic id="editorial/topic/000044" locale="it_IT" title="Assicurare una peer review cieca" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">
 	<section>
-		<![CDATA[<p>Per assicurare una peer review cieca (blind peer review) delle proposte inviate a questa rivista, si utilizza ogni metodo per mantenere sconosciute le identit&#224; di autori e revisori. Per assicurare una peer review cieca è necessario che:
-<ol><li>Gli autori abbiano cancellato i loro nomi dal testo del file, utilizzando stringhe varie (in bibliografia e nelle note) al posto del nome dell'autore, del titolo dell'articolo etc.</li>
-<li>Nei documenti di Microsoft Office vanno inoltre rimossi gli elementi di identificazione presenti nelle propriet&#224; del file (menu File in MSWord).</li>
-<li>Con i PDF, i nomi degli autori dovrebbero essere rimossi anche dalle propriet&#224; del documento nel menu File di Adobe Acrobat.</li>
+		<![CDATA[<p>Per assicurare una peer review cieca (blind peer review) delle proposte inviate a questa rivista, si utilizza ogni metodo per mantenere sconosciute le identità di autori e revisori. Per assicurare una peer review cieca è necessario che:
+<ol><li>Gli autori abbiano cancellato i loro nomi dal testo del file, utilizzando stringhe varie (in bibliografia e nelle note) al posto del nome dell'autore, dal titolo dell'articolo etc</li>
+<li>Nei documenti di Microsoft Office vanno inoltre rimossi gli elementi di identificazione presenti nelle proprietà del file.</li>
+<li>Con i PDF, i nomi degli autori dovrebbero essere rimossi anche dalle proprietà del documento nel menu File di Adobe Acrobat.</li>
 </ol></p>]]>
 	</section>
 </topic>
