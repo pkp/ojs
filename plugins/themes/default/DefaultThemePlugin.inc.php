@@ -17,6 +17,16 @@ import('lib.pkp.classes.plugins.ThemePlugin');
 
 class DefaultThemePlugin extends ThemePlugin {
 	/**
+	 * Initialize the theme's styles, scripts and hooks. This is only run for
+	 * the currently active theme.
+	 *
+	 * @return null
+	 */
+	public function init() {
+		$this->addStyle('default', 'styles/index.less');
+		$this->addScript('default', 'js/main.js');
+	}
+	/**
 	 * Constructor
 	 */
 	function DefaultThemePlugin() {
@@ -57,13 +67,6 @@ class DefaultThemePlugin extends ThemePlugin {
 	 */
 	function getDescription() {
 		return __('plugins.themes.default.description');
-	}
-
-	/**
-	 * @see ThemePlugin::getLessStylesheet
-	 */
-	function getLessStylesheet() {
-		return 'styles/index.less';
 	}
 
 	/**
