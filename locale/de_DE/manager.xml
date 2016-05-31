@@ -180,6 +180,7 @@
 	<message key="manager.setup.contributorsDescription">Weitere Einrichtungen oder Organisationen, die die Zeitschrift finanziell oder materiell unterstützen, sind unter "Über uns" zu finden. Eine Danksagung kann beigefügt werden.</message>
 	<message key="manager.setup.history">Zeitschriften-Geschichte</message>
 	<message key="manager.setup.historyDescription">Dieser Text erscheint auf der "Über uns"-Seite der Zeitschrift und kann genutzt werden, um Änderungen des Titels, in der Besetzung des Beirats und in anderen wesentlichen Belangen der Zeitschriftengeschichte zu beschreiben.</message>
+	<message key="manager.setup.contextName">Name der Zeitschrift</message>
 	<message key="manager.setup.copyediting">Lektor/in</message>
 	<message key="manager.setup.copyeditInstructions">Anweisungen für das Lektorat</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Die Anweisungen werden den Lektor/innen, Autor/innen und Redakteur/innen mit dem zu bearbeitenden Beitrag übermittelt. Nachstehend finden Sie eine Reihe von Standardanweisungen im HTML-Format. Sie können jederzeit von der Zeitschriftenverwaltung ersetzt oder geändert werden (in HTML oder einfachem Text).</message>
@@ -250,6 +251,7 @@
 	<message key="manager.setup.initialIssueDescription">Geben Sie der Startausgabe (je nach gewähltem Format) eine eindeutige Bezeichnung:</message>
 	<message key="manager.setup.institution">Institution</message>
 	<message key="manager.setup.issnDescription"><![CDATA[Die ISSN (International Standard Serial Number) ist eine achtstellige Zahl, die periodischen Veröffentlichungen (einschließlich der elektronischen) zugeordnet ist. Die Verwaltung obliegt einem weltweiten Netzwerk nationaler Einrichtungen, das von einem internationalen Zentrum in Paris koordiniert und durch die UNESCO und die französische Regierung unterstützt wird. Eine Nummer erhalten Sie auf der <a href="http://www.issn.org" target="_new">ISSN-Website</a>. Sie kann jederzeit beantragt werden.]]></message>
+	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.setup.issuePerVolume">Ausgaben pro Band</message>
 	<message key="manager.setup.itemsDescription">Es können jederzeit Einträge in die Navigationsleiste (Standard: "Startseite", "Über uns", "Benutzer/innen") am Kopf der Seite hinzugefügt werden</message>
 	<message key="manager.setup.itemsPerPage">Einträge pro Seite </message>
@@ -257,9 +259,13 @@
 	<message key="manager.setup.journalArchiving">Archivierung der Zeitschrift</message>
 	<message key="manager.setup.journalDescription">Beschreibung der Zeitschrift</message>
 	<message key="manager.setup.journalDescriptionDescription">Geben Sie eine kurze Beschreibung (20-25 Wörter) in HTML oder reinem Text ein, die direkt unterhalb der Navigationslinks erscheint. </message>
+	<message key="manager.setup.journalSummary">Zusammenfassung der Zeitschrift</message>
+	<message key="manager.setup.journalSummary.description">Geben Sie eine kurze Zusammenfassung in HTML oder reinem Text ein, die in der Lister der Zeitschriften erscheint.</message>
 	<message key="manager.setup.favicon">Zeitschriften-Favicon</message>
 	<message key="manager.setup.faviconDescription">Fügen Sie ein Favicon für diese Zeitschrift hinzu, das in der Menüleiste angezeigt wird, wenn Nutzer/innen Ihre Seite besuchen.</message>
 	<message key="manager.setup.faviconInvalid">Ungültiges Favicon-Format. Gültige Formate sind .ico, .png und .gif.</message>
+	<message key="manager.setup.journalAbout">Über diese Zeitschrift</message>
+	<message key="manager.setup.journalAbout.description">Stellen Sie hier alle Informationen über diese Zeitschrift zusammen, die für die Leser, Autoren oder Gutachter von Interesse sein könnte. Dies könnte auch die Open-Access-Richtlinien, das Konzept der Zeitschrift, den Copyright-Vermerk, die finanzielle Unterstützung, die Geschichte der Zeitschrift, die Datenschutzbestimmungen und die Einbeziehung in ein LOCKSS oder CLOCKSS Archivsystem beinhalten.</message>
 	<message key="manager.setup.journalHomepageContentDescription">Standardmäßig besteht die Eingangsseite nur aus Navigationslinks. Zusätzlicher Inhalt kann mit einer der folgenden Optionen hinzugefügt werden. Er erscheint in der Reihenfolge der Optionen. Bitte beachten Sie, dass die aktuelle Ausgabe der Zeitschrift immer über den "Aktuelle Ausgabe"-Link in der Navigationsleiste zu erreichen ist.</message>
 	<message key="manager.setup.journalHomepageContent">Inhalt der Eingangsseite der Zeitschrift</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Kopfzeile der Startseite der Zeitschrift</message>
@@ -303,6 +309,8 @@
 	<message key="manager.setup.managementOfBasicEditorialSteps">Grundlegende Schritte bei der redaktionellen Arbeit</message>
 	<message key="manager.setup.managingPublishingSetup">Einstellungen zur Zeitschriftenverwaltung</message>
 	<message key="manager.setup.managingTheJournal">4. Schritt: Die Zeitschrift verwalten</message>
+	<message key="manager.setup.masthead">Titelkopf</message>
+	<message key="manager.setup.masthead.description">Nennen Sie hier die Editoren, die Geschäftsführer/Vorstandsvorsitzenden und andere mit dieser Zeitschrift assoziierte Personen.</message>
 	<message key="manager.setup.navigationBar">Navigationsleiste</message>
 	<message key="manager.setup.navigationBarDescription">Löschen Sie Einträge in der Navigationsleiste oder fügen Sie Einträge hinzu.</message>
 	<message key="manager.setup.navItemIsAbsolute">Die URL ist ein absolute Adresse (z.B. " http://www.example.com"), keine relative URL (z.B."/manager/setup")</message>
@@ -430,6 +438,7 @@
 	<message key="manager.setup.useLayoutEditors">Ein/e Layouter/in wird damit beauftragt, die HTML-, PDF- oder sonstigen Dateien für die elektronische Publikation vorzubereiten.</message>
 	<message key="manager.setup.useProofreaders">Jeder Beitrag wird einer Korrekturlektorin/einem Korrekturlektor zugeteilt, die/der (zusammen mit der Autorin/dem Autor) die Fahnen vor der Veröffentlichung überprüft.</message>
 	<message key="manager.setup.userRegistration">Registrierung von Benutzer/innen</message>
+	<message key="manager.setup.useStyleSheet">Style sheet der Zeitschrif</message>
 	<message key="manager.setup.useTextTitle">Titeltext</message>
 	<message key="manager.setup.volumePerYear">Bände pro Jahr</message>
 	<message key="manager.statistics.defaultMetricDescription">
