@@ -175,6 +175,7 @@ ________________________________________________________________________]]></mes
 	<message key="default.groups.abbrev.subscriptionManager">AboV</message>
 
 	<!-- Genre Defaults -->
+	<message key="default.genres.article">Artikel</message>
 	<message key="default.genres.researchInstrument">Forschungsinstrument</message>
 	<message key="default.genres.researchMaterials">Forschungsmaterial</message>
 	<message key="default.genres.researchResults">Forschungsergebnisse</message>

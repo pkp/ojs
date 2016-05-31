@@ -15,6 +15,7 @@
 	<message key="author.submit">Neuer Beitrag</message>
 	<message key="author.track">Beiträge im Begutachtungsverfahren</message>
 	<message key="author.competingInterests"><![CDATA[<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Richtlinie</a> für Interessenkonflikte]]></message>
+	<message key="author.submit.nextSteps">Nächste Schritte</message>
 	<message key="author.submit.submitArticle">Einen Artikel einreichen</message>
 	<message key="author.submit.stepsToSubmit">Fünf Schritte zur Einreichung</message>
 	<message key="author.submit.startHereTitle">Beginnen Sie eine neue Einreichung</message>
