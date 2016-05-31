@@ -23,5 +23,8 @@
         <!-- MH-6-STEP: Add this back in when ready to reveal Step 6
         <li id="step6" {if $setupStep == 6} class="current"{/if}><a href="{url op="setup" path="6"}">6. Public Site</a></li>
         -->
+        <!-- MH-7-STEP: Add this back in when ready to reveal Step 7
+        <li id="step7" {if $setupStep == 7} class="current"{/if}><a href="{url op="setup" path="6"}">7. Batch import/export</a></li>
+        -->
 </ul>
 

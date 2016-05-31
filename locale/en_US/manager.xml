@@ -186,6 +186,7 @@
 	<message key="manager.sections.wordCount">Word Count</message>
 	<message key="manager.sections.wordCountInstructions">Limit abstract word counts for this section (0 for no limit): </message>
 	<!-- MH-6-STEP: Change to 6 -->
+	<!-- MH-7-STEP: Change to 7 -->
 	<message key="manager.setup">5-Step Journal Setup</message>
 	<message key="manager.setup.aboutItemContent">Content</message>
 	<message key="manager.setup.addAboutItem">Add About Item</message>
@@ -240,6 +241,7 @@
 	<message key="manager.setup.currentIssue">Current issue</message>
 	<message key="manager.setup.customizingTheLook">Step 5. Customizing the Look</message>
 	<message key="manager.setup.customizingEScholarshipBrand">Step 6. Public-facing Site Setup</message>
+	<message key="manager.setup.batchImportExport">Step 7. Batch import/export</message>
 	<message key="manager.setup.customTags">Custom tags</message>
 	<message key="manager.setup.customTagsDescription">Custom HTML header tags to be inserted in the header of every page (e.g., META tags).</message>
 	<message key="manager.setup.details">Details</message>

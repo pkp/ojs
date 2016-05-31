@@ -48,6 +48,13 @@
 		&nbsp;
 	</li>
 	-->
+	<!-- MH-7-STEP add this in when ready to reveal Step 7
+	<li>
+		<h4><a href="{url op="setup" path="7"}">Batch import/export</a></h4>
+		Export all metadata; import new articles or revisions.<br/>
+		&nbsp;
+	</li>
+	-->
 </ol>
 
 {include file="common/footer.tpl"}
