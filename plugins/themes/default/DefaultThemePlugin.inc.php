@@ -17,8 +17,8 @@ import('lib.pkp.classes.plugins.ThemePlugin');
 
 class DefaultThemePlugin extends ThemePlugin {
 	/**
-	 * Initialize the theme's styles, scripts and hooks. This is only run for
-	 * the currently active theme.
+	 * Initialize the theme's styles, scripts and hooks. This is run on the
+	 * currently active theme and it's parent themes.
 	 *
 	 * @return null
 	 */
