@@ -1,3 +1,5 @@
+.DS_Store
+*_crossref.xml
 config.inc.php
 config.inc.php.*
 build
