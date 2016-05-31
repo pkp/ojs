@@ -1,21 +1,21 @@
 <?php
 
 /**
- * @file plugins/viewableFiles/htmlArticleGalley/HtmlArticleGalleyPlugin.inc.php
+ * @file plugins/generic/htmlArticleGalley/HtmlArticleGalleyPlugin.inc.php
  *
  * Copyright (c) 2014-2016 Simon Fraser University Library
  * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class HtmlArticleGalleyPlugin
- * @ingroup plugins_viewableFiles_htmlArticleGalley
+ * @ingroup plugins_generic_htmlArticleGalley
  *
  * @brief Class for HtmlArticleGalley plugin
  */
 
-import('classes.plugins.ViewableFilePlugin');
+import('lib.pkp.classes.plugins.GenericPlugin');
 
-class HtmlArticleGalleyPlugin extends ViewableFilePlugin {
+class HtmlArticleGalleyPlugin extends GenericPlugin {
 	/**
 	 * @see Plugin::register()
 	 */
@@ -42,14 +42,14 @@ class HtmlArticleGalleyPlugin extends ViewableFilePlugin {
 	 * @return String
 	 */
 	function getDisplayName() {
-		return __('plugins.viewableFiles.htmlArticleGalley.displayName');
+		return __('plugins.generic.htmlArticleGalley.displayName');
 	}
 
 	/**
 	 * Get a description of the plugin.
 	 */
 	function getDescription() {
-		return __('plugins.viewableFiles.htmlArticleGalley.description');
+		return __('plugins.generic.htmlArticleGalley.description');
 	}
 
 	/**
