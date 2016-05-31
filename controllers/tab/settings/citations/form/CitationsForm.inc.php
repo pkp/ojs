@@ -36,9 +36,9 @@ class CitationsForm extends ContextSettingsForm {
 
 		// Add extra java script required for ajax components
 		// FIXME: Must be removed after OMP->OJS backporting
-		$templateMgr->addJavaScript('lib/pkp/js/functions/citation.js');
-		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.min.js');
-		$templateMgr->addJavaScript('lib/pkp/js/functions/jqueryValidatorI18n.js');
+		$templateMgr->addJavaScript('lib/pkp/js/functions/citation.js', STYLE_SEQUENCE_NORMAL, array('backend'));
+		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.min.js', STYLE_SEQUENCE_NORMAL, array('backend'));
+		$templateMgr->addJavaScript('lib/pkp/js/functions/jqueryValidatorI18n.js', STYLE_SEQUENCE_NORMAL, array('backend'));
 
 		//
 		// Citation editor filter configuration
