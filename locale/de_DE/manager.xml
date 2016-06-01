@@ -12,6 +12,8 @@
   -->
 
 <locale name="de_DE" full_name = "Deutsch (Deutschland)">
+	<message key="manager.distribution.access">Zugang</message>
+	<message key="manager.distribution.identifiers">Kennzeichnung</message>
 	<message key="manager.emails.confirmResetAll">Sind Sie sicher, dass Sie alle E-Mail-Vorlagen dieser Zeitschrift zurücksetzen wollen? Sie verlieren damit alle speziellen Einstellungen, die Sie vorgenommen haben.</message>
 	<message key="manager.files.note">Anmerkung: Der Dateinavigator ermöglicht die unmittelbare Betrachtung und Bearbeitung der mit einer Zeitschrift verbundenen Dateien und Verzeichnisse.</message>
 	<message key="manager.groups">Impressum</message>
@@ -94,6 +96,7 @@
 	<message key="manager.people.mergeUsers.into.description">Wählen Sie ein Benutzer/innen-Konto, dem die Autor/innenschaft, die Aufgaben usw. der/des vorherigen Benutzer/in zugeschrieben werden sollen. </message>
 	<message key="manager.people.roleEnrollment">{$role} eintragen</message>
 	<message key="manager.people.syncUserDescription">Mit der Synchronisierung werden alle in einer anderen Zeitschrift in einer bestimmten Funktion eingeschriebenen Benutzer/innen in dieser Zeitschrift mit eben dieser Funktion eingetragen. So können Zeitschriften eine bestimmte Benutzer/innen-Gruppe (z.B. Gutachter/innen) miteinander abgleichen.</message>
+	<message key="manager.publication.library">Verlag</message>
 	<message key="manager.reviewFormElement.changeType">Ändern des Typs des Formularelements...</message>
 	<message key="manager.reviewFormElements">Formularelemente</message>
 	<message key="manager.reviewFormElements.addResponseItem">Eine Auswahl hinzufügen</message>
@@ -178,6 +181,8 @@
 	<message key="manager.setup.contributors">Weitere Unterstützung</message>
 	<message key="manager.setup.contributorNoteDescription">Dieser Text erscheint unterhalb der Überschrift "Weitere Unterstützung" und über einer Liste mit Namen und URLs unterstützender Einrichtungen unter "Unterstützung" auf der "Über uns"-Seite.</message>
 	<message key="manager.setup.contributorsDescription">Weitere Einrichtungen oder Organisationen, die die Zeitschrift finanziell oder materiell unterstützen, sind unter "Über uns" zu finden. Eine Danksagung kann beigefügt werden.</message>
+	<message key="manager.setup.copyrightYearBasis.article">Artikel: Jahr wird aus dem Publikationsdatum des Artikels entnommen, wie in "publish-as-you-go".</message>
+	<message key="manager.setup.copyrightYearBasis.issue">Nummer: Jahr wird aus dem Publikationsdatum der Ausgabe entnommen.</message>
 	<message key="manager.setup.history">Zeitschriften-Geschichte</message>
 	<message key="manager.setup.historyDescription">Dieser Text erscheint auf der "Über uns"-Seite der Zeitschrift und kann genutzt werden, um Änderungen des Titels, in der Besetzung des Beirats und in anderen wesentlichen Belangen der Zeitschriftengeschichte zu beschreiben.</message>
 	<message key="manager.setup.contextName">Name der Zeitschrift</message>
@@ -203,7 +208,9 @@
 	<message key="manager.setup.emailBounceAddress">Antwortadresse</message>
 	<message key="manager.setup.emailBounceAddressDescription">Jede E-Mail, die nicht zugestellt werden kann, erzeugt eine Fehlermeldung, die an diese Adresse geschickt wird.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Anmerkung:</strong> Die Website-Administrator/in muss in der OJS-Konfigurationsdatei die Option <tt>allow_envelope_sender</tt> aktivieren, um dies zu ermöglichen. Weitere Servereinstellungen können erforderlich sein (und sind nicht unbedingt auf allen Servern verfügbar). Siehe OJS-Dokumentation.]]></message>
-	<message key="manager.setup.emails">E-Mail-Kennzeichnung </message>
+	<message key="manager.setup.emailHeader">E-Mail Kopf</message>
+	<message key="manager.setup.emailHeaderDescription">Alle E-Mail-Vorlagen, die vom System im Namen der Zeitschrift verschickt werden, beginnen mit dem folgender Einleitung. Diese E-Mails werden im Namen des Hauptkontakts versendet. Deshalb ist es wichtig klarzustellen, dass der Hauptkontakt nicht zwangsläufig für den Inhalt der E-Mail verantwortlich ist, da diese E-Mails auch im Auftrag eines anderen Nutzers verschickt worden sein können.</message>
+<message key="manager.setup.emails">E-Mail-Kennzeichnung </message>
 	<message key="manager.setup.emailSignatureDescription">Alle E-Mail-Vorlagen, die vom System im Namen der Zeitschrift verschickt werden, tragen die folgende Signatur. Die E-Mail-Vorlagen können unter "Zeitschriftenverwaltung" bearbeitet werden.</message>
 	<message key="manager.setup.emailSignature">Signatur</message>
 	<message key="manager.setup.enableAnnouncements">Erlauben Sie den Zeitschriftenverwalter/innen, Mitteilungen hinzuzufügen.</message>
