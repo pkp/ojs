@@ -52,8 +52,8 @@
 	 * @param {Event} event The triggering event.
 	 * @param {string} rowId The row ID that triggered the event.
 	 */
-	$.pkp.controllers.grid.articleGalleys.ArticleGalleyGridHandler
-			.prototype.uploadFileHandler_ = function(sourceElement, event, rowId) {
+	$.pkp.controllers.grid.articleGalleys.ArticleGalleyGridHandler.
+			prototype.uploadFileHandler_ = function(sourceElement, event, rowId) {
 
 		// FIXME: Inter-widget messaging is needed here.
 		setTimeout(function() {
