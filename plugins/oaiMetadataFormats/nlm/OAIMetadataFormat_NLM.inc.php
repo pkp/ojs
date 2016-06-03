@@ -203,7 +203,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		$galleys = $article->getGalleys();
 
 		// Give precedence to HTML galleys, as they're quickest to parse
-		usort($galleys, create_function('$a, $b', 'return $a->isHtmlGalley()?-1:1;'));
+		usort($galleys, create_function('$a, $b', 'return $a->getFileType()==\'text/html\')?-1:1;'));
 
 		// Determine any access limitations. If there are, do not
 		// provide the full-text.
@@ -219,7 +219,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 				$parser->close();
 			}
 
-			if ($galley->isHtmlGalley()) $text = strip_tags($text);
+			if ($galley->getFileType()=='text/html') $text = strip_tags($text);
 			unset($galley);
 			// Use the first parseable galley.
 			if (!empty($text)) break;
