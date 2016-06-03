@@ -137,6 +137,8 @@
 	<message key="article.fontSize.medium.altText">Medium</message>
 	<message key="article.fontSize.large.altText">Large</message>
 	<message key="article.return">Return to Article Details</message>
+	<message key="article.revisions">Previous versions</message>
+	<message key="article.version">Version</message>
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.submissionEditing">Submission Editing</message>

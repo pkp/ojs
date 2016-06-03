@@ -32,6 +32,7 @@
 	<message key="submission.issueEntry.modalTitle">Submission and Publication Metadata</message>
 	<message key="submission.issueEntry.submissionMetadata">Submission</message>
 	<message key="submission.issueEntry.publicationMetadata">Publication</message>
+	<message key="issue.manage.entryDescription">It's also possible to save the changes as a new version or to view metadata of previous versions.</message>
 	<message key="submission.issueEntry.confirm">Create an issue entry for this article based on the metadata below.</message>
 
 	<!-- events -->

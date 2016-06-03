@@ -49,7 +49,12 @@
 {/if}
 
 {* Don't be frightened. This is just a link *}
-<a class="obj_galley_link {$type}{if $restricted} restricted{/if}" href="{url page=$page op="view" path=$parentId|to_array:$galley->getBestGalleyId($currentJournal)}">
+{if $submissionRevision > 0}
+	{assign var=galleyLink value="galley"|to_array:$parentId:$galley->getBestGalleyId($currentJournal):$submissionRevision}
+{else}
+	{assign var=galleyLink value="galley"|to_array:$parentId:$galley->getBestGalleyId($currentJournal)}
+{/if}
+<a class="obj_galley_link {$type}{if $restricted} restricted{/if}" href="{url page=$page op="view" path=$galleyLink}">
 
 	{* Add some screen reader text to indicate if a galley is restricted *}
 	{if $restricted}

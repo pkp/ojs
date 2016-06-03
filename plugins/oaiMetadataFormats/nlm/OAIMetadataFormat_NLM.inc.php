@@ -158,13 +158,21 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 			(($s = Application::getCCLicenseBadge($article->getLicenseURL()))?"\t\t\t\t\t<license-p>" . strip_tags($s) . "</license-p>\n":'') .
 			"\t\t\t\t</license>\n" .
 			"\t\t\t</permissions>\n" .
-			"\t\t\t<self-uri xlink:href=\"" . htmlspecialchars(Core::cleanVar(Request::url($journal->getPath(), 'article', 'view', $article->getBestArticleId()))) . "\" />\n";
+			"\t\t\t<self-uri xlink:href=\"" . htmlspecialchars(Core::cleanVar(Request::url($journal->getPath(), 'article', 'view', array('article', $article->getBestArticleId())))) . "\" />\n";
 
 		// Include galley links
 		foreach ($article->getGalleys() as $galley) {
-			$response .= "\t\t\t<self-uri content-type=\"" . htmlspecialchars(Core::cleanVar($galley->getFileType())) . "\" xlink:href=\"" . htmlspecialchars(Core::cleanVar(Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId(), $galley->getId())))) . "\" />\n";
+			$response .= "\t\t\t<self-uri content-type=\"" . htmlspecialchars(Core::cleanVar($galley->getFileType())) . "\" xlink:href=\"" . htmlspecialchars(Core::cleanVar(Request::url($journal->getPath(), 'article', 'view', array('galley', $article->getBestArticleId(), $galley->getId())))) . "\" />\n";
 		}
+		
+		// Revisions of submission metadata
+		$submissionDao = Application::getSubmissionDAO();
+		$submissionRevisions = $submissionDao->getSubmissionRevisions($article->getId(), $journal->getId());
 
+		foreach($submissionRevisions as $submissionRevision) {
+			$response .= "\t\t\t<self-uri xlink:href=\"" . htmlspecialchars(Core::cleanVar(Request::url($journal->getPath(), 'article', 'view', array('article', $article->getBestArticleId(), $submissionRevision)))) . "\" />\n";
+		}
+		
 		// Include abstract(s)
 		$abstract = htmlspecialchars(Core::cleanVar(strip_tags($article->getLocalizedAbstract())));
 		if (!empty($abstract)) {

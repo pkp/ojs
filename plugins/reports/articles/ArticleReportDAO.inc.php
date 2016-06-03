@@ -31,7 +31,8 @@ class ArticleReportDAO extends DAO {
 				COALESCE(asl2.setting_value, aspl2.setting_value) AS abstract,
 				COALESCE(sl.setting_value, spl.setting_value) AS section_title,
 				a.status AS status,
-				a.language AS language
+				a.language AS language,
+				aspl1.submission_revision AS version
 			FROM	submissions a
 				LEFT JOIN submission_settings aspl1 ON (aspl1.submission_id=a.submission_id AND aspl1.setting_name = ? AND aspl1.locale = a.locale)
 				LEFT JOIN submission_settings asl1 ON (asl1.submission_id=a.submission_id AND asl1.setting_name = ? AND asl1.locale = ?)
@@ -41,6 +42,9 @@ class ArticleReportDAO extends DAO {
 				LEFT JOIN section_settings sl ON (sl.section_id=a.section_id AND sl.setting_name = ? AND sl.locale = ?)
 			WHERE	a.context_id = ? AND
 				a.submission_progress = 0
+				AND aspl1.submission_revision = asl1.submission_revision 
+				AND aspl1.submission_revision = aspl2.submission_revision 
+				AND aspl1.submission_revision = asl2.submission_revision
 			ORDER BY a.submission_id',
 			array(
 				'title', // Article title
@@ -104,7 +108,8 @@ class ArticleReportDAO extends DAO {
 					aa.country AS country,
 					aa.url AS url,
 					COALESCE(aasl.setting_value, aas.setting_value) AS biography,
-					COALESCE(aaasl.setting_value, aaas.setting_value) AS affiliation
+					COALESCE(aaasl.setting_value, aaas.setting_value) AS affiliation,
+					aa.version AS version
 				FROM	authors aa
 					JOIN submissions a ON (aa.submission_id = a.submission_id)
 					LEFT JOIN author_settings aas ON (aa.author_id = aas.author_id AND aas.setting_name = ? AND aas.locale = ?)
@@ -114,7 +119,11 @@ class ArticleReportDAO extends DAO {
 				WHERE
 					a.context_id = ? AND
 					a.submission_progress = 0 AND
-					aa.submission_id = ?',
+					aa.submission_id = ?
+					AND aa.version = aas.version 
+					AND aa.version = aasl.version 
+					AND aa.version = aaas.version 
+					AND aa.version = aaasl.version',
 				array(
 					'biography',
 					$primaryLocale,
@@ -129,7 +138,18 @@ class ArticleReportDAO extends DAO {
 				)
 			);
 			$authorIterator = new DBRowIterator($result);
-			$authorsReturner[$article->getId()] = $authorIterator;
+			$authors = $authorIterator->toArray();
+			$versions = $articleDao->getSubmissionRevisions($article->getId(), $journalId, true);
+
+			foreach($versions as $version) {
+				foreach($authors as $author) {
+					$authorVersion = $author['version'];
+					if ($version == $authorVersion) {
+						$authorsReturner[$article->getId()][$version][] = $author;
+					}
+				}
+			}
+			
 			unset($result);
 			$index++;
 		}

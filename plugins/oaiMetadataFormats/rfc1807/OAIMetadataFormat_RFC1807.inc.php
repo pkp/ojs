@@ -58,8 +58,17 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 
 		// Coverage
 		$coverage = $article->getCoverage(null);
+		
+		// Revisions of submission metadata
+		$submissionDao = Application::getSubmissionDAO();
+		$submissionRevisions = $submissionDao->getSubmissionRevisions($article->getId(), $journal->getId());
+		$revisionTags = '';
+		foreach($submissionRevisions as $submissionRevision) {
+			$revisionUrl = 'url:' . Request::url($journal->getPath(), 'article', 'view', array('article', $article->getBestArticleId(), $submissionRevision));
+			$revisionTags .= $this->formatElement('other_access', $revisionUrl);
+		}
 
-		$url = Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()));
+		$url = Request::url($journal->getPath(), 'article', 'view', array('article', $article->getBestArticleId()));
 		$response = "<rfc1807\n" .
 			"\txmlns=\"http://info.internet.isi.edu:80/in-notes/rfc/files/rfc1807.txt\"\n" .
 			"\txmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n" .
@@ -78,6 +87,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 			($article->getDatePublished()?$this->formatElement('date', $article->getDatePublished()):'') .
 			$this->formatElement('copyright', strip_tags($journal->getLocalizedSetting('copyrightNotice'))) .
 			$this->formatElement('other_access', "url:$url") .
+			(strlen($revisionTags) > 0 ? $revisionTags : '') .
 			$this->formatElement('keyword', $subject) .
 			$this->formatElement('period', $coverage) .
 			$this->formatElement('monitoring', $article->getLocalizedSponsor()) .

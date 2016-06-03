@@ -20,6 +20,10 @@
 				trackFormChanges: true
 			{rdelim}
 		);
+		
+		$('#{$submissionMetadataViewFormId}').pkpHandler(
+			'$.pkp.controllers.tab.issueEntry.SubmissionRevisionsHandler'
+		);
 	{rdelim});
 </script>
 
