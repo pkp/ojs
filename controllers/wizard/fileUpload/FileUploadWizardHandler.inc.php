@@ -81,6 +81,24 @@ class FileUploadWizardHandler extends PKPFileUploadWizardHandler {
 
 		return parent::authorize($request, $args, $roleAssignments);
 	}
+
+	/**
+	 * @copydoc PKPFileUploadWizardHandler::_attachEntities
+	 */
+	protected function _attachEntities($submissionFile) {
+		parent::_attachEntities($submissionFile);
+
+		switch ($submissionFile->getFileStage()) {
+			case SUBMISSION_FILE_PROOF:
+				$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+				assert($submissionFile->getAssocType() == ASSOC_TYPE_REPRESENTATION);
+				$galley = $galleyDao->getById($submissionFile->getAssocId(), $submissionFile->getSubmissionId());
+				if ($galley) {
+					$galley->setFileId($submissionFile->getFileId());
+					$galleyDao->updateObject($galley);
+				}
+		}
+	}
 }
 
 ?>

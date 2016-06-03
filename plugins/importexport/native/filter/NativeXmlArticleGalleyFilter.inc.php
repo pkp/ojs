@@ -65,12 +65,15 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
 		$submission = $deployment->getSubmission();
 		assert(is_a($submission, 'Submission'));
 
+		$submissionFileRefNodes = $node->getElementsByTagName('submission_file_ref');
+		assert($submissionFileRefNodes->length == 1);
+		$fileNode = $submissionFileRefNodes->item(0);
+		$fileId = $fileNode->getAttribute('id');
+		$revisionId = $fileNode->getAttribute('revision');
+		$dbFileId = $deployment->getFileDBId($fileId, $revisionId);
+		assert($dbFileId);
+
 		$representation = parent::handleElement($node);
-
-		if ($node->getAttribute('approved') == 'true') $representation->setIsApproved(true);
-
-		$galleyType = $node->getAttribute('galley_type');
-		$representation->setGalleyType($galleyType);
 
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) if (is_a($n, 'DOMElement')) switch($n->tagName) {
 			case 'name':
@@ -78,18 +81,18 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
 				$representation->setLabel($n->textContent);
 				$representation->setLocale($n->getAttribute('locale'));
 				break;
-
 		}
 
 		$representationDao = Application::getRepresentationDAO();
+		$representation->setFileId($dbFileId);
 		$representationDao->insertObject($representation);
 
-		// Handle submission_file_ref after the insertObject() call because it depends on a representation id.
-		$submissionFileRefNodes = $node->getElementsByTagName('submission_file_ref');
-		if ($submissionFileRefNodes->length > 0) {
-			assert($submissionFileRefNodes->length == 1);
-			$this->_processFileRef($submissionFileRefNodes->item(0), $deployment, $representation);
-		}
+		// Update the submission file.
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$submissionFile = $submissionFileDao->getRevision($dbFileId, $revisionId);
+		$submissionFile->setAssocType(ASSOC_TYPE_REPRESENTATION);
+		$submissionFile->setAssocId($representation->getId());
+		$submissionFileDao->updateObject($submissionFile);
 
 		// representation proof files
 		return $representation;
@@ -102,17 +105,6 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
 	 * @param $representation ArticleGalley
 	 */
 	function _processFileRef($node, $deployment, $representation) {
-		$fileId = $node->getAttribute('id');
-		$revisionId = $node->getAttribute('revision');
-		$DBId = $deployment->getFileDBId($fileId, $revisionId);
-		if ($DBId) {
-			// Update the submission file.
-			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-			$submissionFile = $submissionFileDao->getRevision($DBId, $revisionId);
-			$submissionFile->setAssocType(ASSOC_TYPE_REPRESENTATION);
-			$submissionFile->setAssocId($representation->getId());
-			$submissionFileDao->updateObject($submissionFile);
-		}
 	}
 }
 
