@@ -178,11 +178,11 @@ class ArticleHandler extends Handler {
 
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		if ($this->journal->getSetting('enablePublicGalleyId')) {
-			$this->galley = $galleyDao->getByBestGalleyId($this->galleyId, $this->articleId);
+			$this->galley = $galleyDao->getByBestGalleyId($this->galleyId, $publishedArticle->getId());
 		}
 
 		if (!$this->galley) {
-			$this->galley = $galleyDao->getById($this->galleyId, $this->articleId);
+			$this->galley = $galleyDao->getById($this->galleyId, $publishedArticle->getId());
 		}
 	}
 
@@ -338,7 +338,7 @@ class ArticleHandler extends Handler {
 
 			if (!HookRegistry::call('ArticleHandler::download', array($this->article, &$this->galley, &$this->fileId))) {
 				import('lib.pkp.classes.file.SubmissionFileManager');
-				$submissionFileManager = new SubmissionFileManager($this->article->getContextId(), $this->articleId);
+				$submissionFileManager = new SubmissionFileManager($this->article->getContextId(), $this->article->getId());
 				$submissionFileManager->downloadFile($this->fileId, $this->fileRevision, $request->getUserVar('inline')?true:false);
 			}
 		}
