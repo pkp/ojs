@@ -22,6 +22,9 @@
 import('classes.issue.IssueFile');
 
 class IssueGalley extends IssueFile {
+	/** @var IssueFile */
+	var $_issueFile;
+
 
 	/**
 	 * Constructor.
@@ -190,6 +193,19 @@ class IssueGalley extends IssueFile {
 		}
 		return $this->getId();
 	}
+
+	/**
+	 * Get the submission file corresponding to this galley.
+	 * @return SubmissionFile
+	 */
+	function getFile() {
+		if (!isset($this->_issueFile)) {
+			$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
+			$this->_issueFile = $issueFileDao->getById($this->getFileId());
+		}
+		return $this->_issueFile;
+	}
+
 }
 
 ?>

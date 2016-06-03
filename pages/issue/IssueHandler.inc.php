@@ -99,23 +99,18 @@ class IssueHandler extends Handler {
 
 	/**
 	 * View an issue.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function view($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$this->setupTemplate($request);
 		$templateMgr = TemplateManager::getManager($request);
+		$journal = $request->getJournal();
 
 		if ($galley = $this->getGalley()) {
-			// Ensure we have PDF galley for inline viewing
-			// Otherwise redirect to download issue galley page
-			$galley = $this->getGalley();
-
-			$templateMgr->assign('pdfTitle', $issue->getIssueIdentification());
-			$templateMgr->assign('parent', $issue);
-			$templateMgr->assign('galley', $galley);
-
 			if (!HookRegistry::call('IssueHandler::view::galley', array(&$request, &$issue, &$galley))) {
-				return $templateMgr->display('frontend/pages/issueInterstitial.tpl');
+				$request->redirect(null, null, 'download', array($issue->getBestIssueId($journal), $galley->getBestGalleyId($journal)));
 			}
 		} else {
 			$this->_setupIssueTemplate($request, $issue, $request->getUserVar('showToc') ? true : false);

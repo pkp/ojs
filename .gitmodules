@@ -13,12 +13,10 @@
 [submodule "plugins/generic/tinymce"]
 	path = plugins/generic/tinymce
 	url = https://github.com/pkp/tinymce.git
-[submodule "plugins/generic/pdfJsViewer"]
-	path = plugins/generic/pdfJsViewer
-	url = https://github.com/pkp/pdfJsViewer
-[submodule "plugins/generic/lensGalley"]
-	path = plugins/generic/lensGalley
-	url = https://github.com/asmecher/lensGalley
 [submodule "docs/manual"]
 	path = docs/manual
 	url = https://github.com/pkp/ojs-user-guide
+[submodule "plugins/generic/lensGalley"]
+	path = plugins/generic/lensGalley
+	url = https://github.com/asmecher/lensGalley
+	branch = i1472-fix
