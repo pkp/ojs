@@ -128,7 +128,7 @@ class CommentForm extends Form {
 			if ($this->reCaptchaEnabled) {
 				import('lib.pkp.lib.recaptcha.recaptchalib');
 				$publicKey = Config::getVar('captcha', 'recaptcha_public_key');
-				$useSSL = Config::getVar('security', 'force_ssl')?true:false;
+				$useSSL = Config::getVar('security', 'force_ssl')||Request::getProtocol()=='https'?true:false;
 				$reCaptchaHtml = recaptcha_get_html($publicKey, null, $useSSL);
 				$templateMgr->assign('reCaptchaHtml', $reCaptchaHtml);
 				$templateMgr->assign('captchaEnabled', $this->captchaEnabled);
