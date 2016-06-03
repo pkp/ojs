@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @file controllers/grid/queries/ArticleGalleyGridRow.inc.php
+ * @file controllers/grid/articleGalleys/ArticleGalleyGridRow.inc.php
  *
  * Copyright (c) 2016 Simon Fraser University Library
  * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyGridRow
- * @ingroup controllers_grid_queries
+ * @ingroup controllers_grid_articleGalleys
  *
  * @brief Representation of an article galley grid row.
  */

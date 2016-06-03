@@ -1,16 +1,16 @@
 <?php
 
 /**
- * @file controllers/grid/queries/ArticleGalleyGridCellProvider.inc.php
+ * @file controllers/grid/articleGalleys/ArticleGalleyGridCellProvider.inc.php
  *
  * Copyright (c) 2016 Simon Fraser University Library
  * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyGridCellProvider
- * @ingroup controllers_grid_users_author
+ * @ingroup controllers_grid_articleGalleys
  *
- * @brief Base class for a cell provider that can retrieve labels for queries.
+ * @brief Base class for a cell provider for article galleys.
  */
 
 import('lib.pkp.classes.controllers.grid.DataObjectGridCellProvider');
@@ -23,8 +23,6 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 	/**
 	 * Constructor
 	 * @param $submission Submission
-	 * @param $stageId int
-	 * @param $queriesAccessHelper QueriesAccessHelper
 	 */
 	function ArticleGalleyGridCellProvider($submission) {
 		parent::DataObjectGridCellProvider();
@@ -35,11 +33,7 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 	// Template methods from GridCellProvider
 	//
 	/**
-	 * Extracts variables for a given column from a data element
-	 * so that they may be assigned to template before rendering.
-	 * @param $row GridRow
-	 * @param $column GridColumn
-	 * @return array
+	 * @copydoc GridCellProvider::getTemplateVarsFromRowColumn()
 	 */
 	function getTemplateVarsFromRowColumn($row, $column) {
 		$element = $row->getData();
