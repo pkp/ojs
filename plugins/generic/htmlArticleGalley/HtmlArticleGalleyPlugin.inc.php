@@ -22,7 +22,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
-				HookRegistry::register('TemplateManager::display', array($this, 'headerCallback'));
+				HookRegistry::register('ArticleHandler::view::galley', array($this, 'articleCallback'));
 			}
 			return true;
 		}
@@ -57,28 +57,31 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	 * @param string $hookName
 	 * @param array $args
 	 */
-	function headerCallback($hookName, $args) {
-		$templateMgr = $args[0];
-		$template = $args[1];
-		$request = Application::getRequest();
-		$router = $request->getRouter();
+	function articleCallback($hookName, $args) {
+		$request =& $args[0];
+		$issue =& $args[1];
+		$galley =& $args[2];
+		$article =& $args[3];
 
-		if ($template == 'article/article.tpl') {
+		$templateMgr = TemplateManager::getManager($request);
+		if ($galley && $galley->getFileType() == 'text/html') {
+			$templateMgr->assign(array(
+				'pluginTemplatePath' => $this->getTemplatePath(),
+				'pluginUrl' => $request->getBaseUrl() . '/' . $this->getPluginPath(),
+				'galleyFile' => $galley->getFile(),
+				'issue' => $issue,
+				'article' => $article,
+				'galley' => $galley,
+				'htmlGalleyContents' => $this->_getHTMLContents($request, $galley),
+			));
+			$templateMgr->display($this->getTemplatePath() . '/display.tpl');
 
-			$galley = $templateMgr->get_template_vars('galley'); // set in ArticleHandler
-			$fileId = $templateMgr->get_template_vars('fileId');
+			return true;
+		}
 
-			if ($galley && $galley->getGalleyType() == $this->getName()) {
-				if (!$fileId) {
-					$file = $galley->getFirstGalleyFile('text/html');
-					if ($file) {
-						$fileId = $file->getFileId();
-					} else {
-						assert(false); // No HTML file in this HTML Article galley?
-						return false; // return from the callback and continue.
-					}
-				}
+		return false;
 
+	/** FIXME STYLESHEETS
 				$journal = $request->getJournal();
 				$styleFiles = $this->_getStyleFiles($galley, $fileId, $journal);
 				if (is_array($styleFiles)) {
@@ -93,53 +96,26 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 					}
 				}
 			}
-		}
-	}
-
-	/**
-	 * @see ViewableFilePlugin::displayArticleGalley
-	 */
-	function displayArticleGalley($templateMgr, $request, $params) {
-		$journal = $request->getJournal();
-
-		if (!$journal) return '';
-		$fileId = (isset($params['fileId']) && is_numeric($params['fileId'])) ? (int) $params['fileId'] : null;
-
-		$galley = $templateMgr->get_template_vars('galley'); // set in ArticleHandler
-		$templateMgr->assign('htmlGalleyContents', $this->_getHTMLContents($request, $galley, $fileId));
-		return parent::displayArticleGalley($templateMgr, $request, $params);
+		} */
 	}
 
 	/**
 	 * Return string containing the contents of the HTML file.
 	 * This function performs any necessary filtering, like image URL replacement.
-	 * @param $fileId int optional file id, otherwise the 'best' file will be chosen.
+	 * @param $request PKPRequest
+	 * @param $galley ArticleGalley
 	 * @return string
 	 */
-	function _getHTMLContents($request, $galley, $fileId = null) {
+	function _getHTMLContents($request, $galley) {
 		import('lib.pkp.classes.file.SubmissionFileManager');
 		$fileManager = new SubmissionFileManager($request->getContext()->getId(), $galley->getSubmissionId());
-		if (!$fileId) {
-
-			// Note: Some HTML file uploads may be stored with incorrect file_type settings
-			// due to incorrect finfo or mime.magic entries.  As such, we examine the file extension
-			// of the original file name for 'htm'. This will match .html, .htm, .xhtml, etc.
-			// The file_type isn't important since the plugin includes the HTML content inline rather
-			// than including a URL loaded in an iframe.
-			$file = $galley->getFirstGalleyFile('htm');
-			if ($file) {
-				$fileId = $file->getFileId();
-			} else {
-				assert(false); // No HTML file in this HTML Article galley?
-				return false;
-			}
-		}
-		$contents = $fileManager->readFile($fileId);
+		$contents = $fileManager->readFile($galley->getFile()->getFileId());
+print_r($galley->getFile()->getFileId());
 
 		$journal = $request->getJournal();
 
 		// Replace media file references
-		$images = $this->_getImageFiles($galley, $fileId, $journal);
+		$images = array(); /** FIXME GET IMAGES $this->_getImageFiles($galley, $fileId, $journal); */
 
 		foreach ($images as $image) {
 			$imageUrl = $request->url(null, 'article', 'viewFile', array($galley->getSubmissionId(), $galley->getBestGalleyId($journal), $image->getFileId()));

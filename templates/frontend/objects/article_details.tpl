@@ -53,7 +53,6 @@
  * @uses $issue Issue The issue this article is assigned to
  * @uses $section Section The journal section this article is assigned to
  * @uses $keywords array List of keywords assigned to this article
- * @uses $citationFactory @todo
  * @uses $pubIdPlugins @todo
  * @uses $copyright string Copyright notice. Only assigned if statement should
  *   be included with published articles.
@@ -180,25 +179,6 @@
 					</h3>
 					<div class="value">
 						{$article->getLocalizedSubject()|escape}
-					</div>
-				</div>
-			{/if}
-
-			{* Citations *}
-			{* @todo this hasn't been tested or styled *}
-			{if $citationFactory->getCount()}
-				<div class="item citations">
-					<h3 class="label">
-						{translate key="submission.citations"}
-					</h3>
-					<div class="value">
-						<ul>
-							{iterate from=citationFactory item=citation}
-								<li>
-									{$citation->getRawCitation()|strip_unsafe_html}
-								</li>
-							{/iterate}
-						</ul>
 					</div>
 				</div>
 			{/if}
