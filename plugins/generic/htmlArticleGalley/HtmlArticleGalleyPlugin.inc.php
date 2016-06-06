@@ -80,23 +80,6 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		}
 
 		return false;
-
-	/** FIXME STYLESHEETS
-				$journal = $request->getJournal();
-				$styleFiles = $this->_getStyleFiles($galley, $fileId, $journal);
-				if (is_array($styleFiles)) {
-					foreach ($styleFiles as $file) {
-						$styleUrl = $router->url($request, null, 'article', 'viewFile', array(
-							$galley->getSubmissionId(),
-							$galley->getBestGalleyId($journal),
-							$file->getFileId()
-						));
-
-						$templateMgr->addStyleSheet($styleUrl);
-					}
-				}
-			}
-		} */
 	}
 
 	/**
@@ -107,37 +90,39 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	 * @return string
 	 */
 	function _getHTMLContents($request, $galley) {
-		import('lib.pkp.classes.file.SubmissionFileManager');
-		$fileManager = new SubmissionFileManager($request->getContext()->getId(), $galley->getSubmissionId());
-		$contents = $fileManager->readFile($galley->getFile()->getFileId());
-print_r($galley->getFile()->getFileId());
-
 		$journal = $request->getJournal();
+		$submissionFile = $galley->getFile();
+		$contents = file_get_contents($submissionFile->getFilePath());
 
 		// Replace media file references
-		$images = array(); /** FIXME GET IMAGES $this->_getImageFiles($galley, $fileId, $journal); */
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		import('lib.pkp.classes.submission.SubmissionFile'); // Constants
+		$embeddableFiles = array_merge(
+			$submissionFileDao->getLatestRevisions($submissionFile->getSubmissionId(), SUBMISSION_FILE_PROOF),
+			$submissionFileDao->getLatestRevisions($submissionFile->getSubmissionId(), SUBMISSION_FILE_DEPENDENT)
+		);
 
-		foreach ($images as $image) {
-			$imageUrl = $request->url(null, 'article', 'viewFile', array($galley->getSubmissionId(), $galley->getBestGalleyId($journal), $image->getFileId()));
-			$pattern = preg_quote($image->getOriginalFileName());
+		foreach ($embeddableFiles as $embeddableFile) {
+			$fileUrl = $request->url(null, 'article', 'viewFile', array($galley->getSubmissionId(), $galley->getBestGalleyId($journal), $embeddableFile->getFileId()));
+			$pattern = preg_quote($embeddableFile->getOriginalFileName());
 
 			$contents = preg_replace(
 					'/([Ss][Rr][Cc]|[Hh][Rr][Ee][Ff]|[Dd][Aa][Tt][Aa])\s*=\s*"([^"]*' . $pattern . ')"/',
-					'\1="' . $imageUrl . '"',
+					'\1="' . $fileUrl . '"',
 					$contents
 			);
 
 			// Replacement for Flowplayer
 			$contents = preg_replace(
 					'/[Uu][Rr][Ll]\s*\:\s*\'(' . $pattern . ')\'/',
-					'url:\'' . $imageUrl . '\'',
+					'url:\'' . $fileUrl . '\'',
 					$contents
 			);
 
 			// Replacement for other players (ested with odeo; yahoo and google player won't work w/ OJS URLs, might work for others)
 			$contents = preg_replace(
 					'/[Uu][Rr][Ll]=([^"]*' . $pattern . ')/',
-					'url=' . $imageUrl ,
+					'url=' . $fileUrl ,
 					$contents
 			);
 
@@ -241,56 +226,6 @@ print_r($galley->getFile()->getFileId());
 				break;
 		}
 		return $matchArray[1] . $url . $matchArray[3];
-	}
-
-	/**
-	 * Retrieves the images associated with this HTML galley by looking at the submission_file genre.
-	 * @return array SubmissionFiles
-	 */
-	function _getImageFiles($galley, $fileId, $journal) {
-		$genreDao = DAORegistry::getDAO('GenreDAO');
-		$imageGenres = $genreDao->getByCategory(GENRE_CATEGORY_ARTWORK, $journal->getId());
-		$genreIds = array_keys($imageGenres->toAssociativeArray());
-
-		$images = array();
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-		$dependentFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $fileId, $galley->getSubmissionId(), SUBMISSION_FILE_DEPENDENT);
-
-		foreach ($dependentFiles as $file) {
-			if (in_array($file->getGenreId(), $genreIds)) {
-				$images[] = $file;
-			}
-		}
-
-		return $images;
-	}
-
-	/**
-	 * Retrieves the CSS/style files associated with this HTML galley by looking at the submission_file genre.
-	 * @param ArticleGalley $galley
-	 * @param Journal $journal
-	 * @return array SubmissionFiles
-	 */
-	function _getStyleFiles($galley, $fileId, $journal) {
-		$genreDao = DAORegistry::getDAO('GenreDAO');
-		$styleGenre = $genreDao->getByType('STYLE', $journal->getId());
-
-		$styleFiles = array();
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-		$dependentFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $fileId, $galley->getSubmissionId(), SUBMISSION_FILE_DEPENDENT);
-
-		foreach ($dependentFiles as $file) {
-
-			if ($file->getGenreId() == $styleGenre->getId()) {
-				if ($file->getFileType() != 'text/css' && preg_match('/\.css$/', $file->getOriginalFileName())) {
-					$file->setFileType('text/css');
-					$submissionFileDao->updateObject($file);
-				}
-				$styleFiles[] = $file;
-			}
-		}
-
-		return $styleFiles;
 	}
 }
 

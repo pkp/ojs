@@ -41,5 +41,10 @@
 		{/fbvFormSection}
 	{/fbvFormArea}
 
+	{if $articleGalleyFile && $articleGalleyFile->getFileType()=='text/html'}
+		{url|assign:dependentFilesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.files.dependent.DependentFilesGridHandler" op="fetchGrid" submissionId=$submissionId fileId=$articleGalleyFile->getFileId() stageId=$smarty.const.WORKFLOW_STAGE_ID_PRODUCTION escape=false}
+		{load_url_in_div id="dependentFilesGridDiv" url=$dependentFilesGridUrl}
+	{/if}
+
 	{fbvFormButtons submitText="common.save"}
 </form>
