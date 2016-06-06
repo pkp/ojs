@@ -815,7 +815,7 @@ class NativeImportDom {
 		
 		$citationDao =& DAORegistry::getDAO('CitationDAO');
 		$request =& Application::getRequest(); 
-		$citationDao->importCitations($request, ASSOC_TYPE_ARTICLE, $article->getId(), $article->getCitations()); 
+		if (!($request->getDispatcher() == NULL)) $citationDao->importCitations($request, ASSOC_TYPE_ARTICLE, $article->getId(), $article->getCitations()); 
 		
 		// Create submission mangement records
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
