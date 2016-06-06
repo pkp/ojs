@@ -195,8 +195,8 @@ class IssueGalley extends IssueFile {
 	}
 
 	/**
-	 * Get the submission file corresponding to this galley.
-	 * @return SubmissionFile
+	 * Get the file corresponding to this galley.
+	 * @return IssueFile
 	 */
 	function getFile() {
 		if (!isset($this->_issueFile)) {
