@@ -38,7 +38,9 @@
 					{foreach from=$galley->getLatestGalleyFiles() item=galleyFile}
 						<li>
 							{assign var=downloadLink value="file"|to_array:$article->getBestArticleId($currentJournal):$galley->getBestGalleyId($currentJournal):$submissionRevision:$galleyFile->getFileId()}
-							<a class="obj_galley_link" href="{url op="download" path=$downloadLink escape=false}">{$galleyFile->getLocalizedName()|escape}</a>
+							{if $galleyFile->getSubmissionSettingsRevision() == $submissionRevision}
+								<a class="obj_galley_link" href="{url op="download" path=$downloadLink escape=false}">{$galleyFile->getLocalizedName()|escape}</a>
+							{/if}
 							{assign var=otherRevisions value=$galley->getOtherRevisions($galleyFile->getFileId(), null, $galleyFile->getSubmissionId(), $submissionRevision)}
 							{if $otherRevisions && !$galleyFile->getHideFileRevisions()}
 							<div class="revisions">
