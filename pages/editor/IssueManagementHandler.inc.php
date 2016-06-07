@@ -811,7 +811,7 @@ class IssueManagementHandler extends EditorHandler {
 					 $articleDOI = str_replace("/","%2F", $articleDOI);
 					 $journalPath = $journal->getPath();
 					 //needs to be updated with each journal using DOIs
-					 $campusOwner = array("uciem_westjem"=>'cdllib', "cjpp"=>'ucblibrary');
+					 $owner = array("uciem_westjem"=>'cdllib', "cjpp"=>'ucblibrary', "irows_cliodynamics"=>'ucr-jclio', "bling_proceedings"=>' ucb-bls');
 					 error_log("Campus Owner: $campusOwner[$journalPath]");
 					 $ezidIdentifier = 'https://ezid.cdlib.org/id/doi:' . $articleDOI;
 					 error_log("EZID IDENTIFIER $ezidIdentifier");
@@ -823,7 +823,7 @@ class IssueManagementHandler extends EditorHandler {
 					   //error_log("Cleaned CrossRefFile $crossRefXML");
 					   error_log("crossRefXML is not empty so sending to EZID using create operation");
                        
-					  $input = "_crossref: yes\n" . "_profile: crossref\n" . "_target: $escholURL\n" ."_coowners: $campusOwner[$journalPath]\n" . "crossref: $crossRefXML";
+					  $input = "_crossref: yes\n" . "_profile: crossref\n" . "_target: $escholURL\n" ."_owner: $owner[$journalPath]\n" . "crossref: $crossRefXML";
                         $ch = curl_init();
                         curl_setopt($ch, CURLOPT_URL, $ezidIdentifier);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
