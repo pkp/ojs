@@ -62,7 +62,6 @@ class URNSettingsForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'urnIssueSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnIssueSuffixPatternRequired', create_function('$urnIssueSuffixPattern,$form', 'if ($form->getData(\'urnSuffix\') == \'pattern\' && $form->getData(\'enableIssueURN\')) return $urnIssueSuffixPattern != \'\';return true;'), array($this)));
 		$this->addCheck(new FormValidatorCustom($this, 'urnArticleSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnArticleSuffixPatternRequired', create_function('$urnArticleSuffixPattern,$form', 'if ($form->getData(\'urnSuffix\') == \'pattern\' && $form->getData(\'enableArticleURN\')) return $urnArticleSuffixPattern != \'\';return true;'), array($this)));
 		$this->addCheck(new FormValidatorCustom($this, 'urnRepresentationSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnRepresentationSuffixPatternRequired', create_function('$urnRepresentationSuffixPattern,$form', 'if ($form->getData(\'urnSuffix\') == \'pattern\' && $form->getData(\'enableRepresentationURN\')) return $urnRepresentationSuffixPattern != \'\';return true;'), array($this)));
-		$this->addCheck(new FormValidatorCustom($this, 'urnSubmissionFileSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnSubmissionFileSuffixPatternRequired', create_function('$urnSubmissionFileSuffixPattern,$form', 'if ($form->getData(\'urnSuffix\') == \'pattern\' && $form->getData(\'enableSubmissionFileURN\')) return $urnSubmissionFileSuffixPattern != \'\';return true;'), array($this)));
 		$this->addCheck(new FormValidatorUrl($this, 'urnResolver', 'required', 'plugins.pubIds.urn.manager.settings.form.urnResolverRequired'));
 		$this->addCheck(new FormValidatorPost($this));
 
@@ -142,13 +141,11 @@ class URNSettingsForm extends Form {
 			'enableIssueURN' => 'bool',
 			'enableArticleURN' => 'bool',
 			'enableRepresentationURN' => 'bool',
-			'enableSubmissionFileURN' => 'bool',
 			'urnPrefix' => 'string',
 			'urnSuffix' => 'string',
 			'urnIssueSuffixPattern' => 'string',
 			'urnArticleSuffixPattern' => 'string',
 			'urnRepresentationSuffixPattern' => 'string',
-			'urnSubmissionFileSuffixPattern' => 'string',
 			'urnCheckNo' => 'bool',
 			'urnNamespace' => 'string',
 			'urnResolver' => 'string',

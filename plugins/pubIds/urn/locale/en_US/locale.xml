@@ -13,7 +13,7 @@
 
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.pubIds.urn.displayName">URN</message>
-	<message key="plugins.pubIds.urn.description">This plugin enables the assignment of the Uniform Resource Names to the issues, articles and files in OJS.</message>
+	<message key="plugins.pubIds.urn.description">This plugin enables the assignment of the Uniform Resource Names to the issues, articles and galleys in OJS.</message>
 
 	<!-- settings form -->
 	<message key="plugins.pubIds.urn.manager.settings.description">Please configure the URN plug-in to be able to manage and use URNs in OJS:</message>
@@ -24,7 +24,6 @@
 	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">Issues</message>
 	<message key="plugins.pubIds.urn.manager.settings.enableArticleURN">Articles</message>
 	<message key="plugins.pubIds.urn.manager.settings.enableRepresentationURN">Galleys</message>
-	<message key="plugins.pubIds.urn.manager.settings.enableSubmissionFileURN">Files</message>
 
 	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">URN Prefix</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnPrefix.description"><![CDATA[The URN prefix is the fix, never changing part of the URN (e.g. "urn:nbn:de:0000-").]]></message>
@@ -37,13 +36,11 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues">for issues</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.articles">for articles</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations">for galleys</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissionFiles">for files</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired">Please enter the URN suffix pattern for issues.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnArticleSuffixPatternRequired">Please enter the URN suffix pattern for articles.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired">Please enter the URN suffix pattern for galleys.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSubmissionFileSuffixPatternRequired">Please enter the URN suffix pattern for files.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault">Use default patterns.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"><![CDATA[%j.v%vi%i for issues<br />%j.v%vi%i.%a for articles<br />%j.v%vi%i.%a.g%g for galleys<br />%j.v%vi%i.%a.f%f for files.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"><![CDATA[%j.v%vi%i for issues<br />%j.v%vi%i.%a for articles<br />%j.v%vi%i.%a.g%g for galleys.]]></message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier">Enter an individual URN suffix for each published item. You'll find an additional URN input field on each item's metadata page.</message>
 	<message key="plugins.pubIds.urn.manager.settings.checkNo">Check Number</message>
 	<message key="plugins.pubIds.urn.manager.settings.checkNo.label">The check number will be automatically calculated and added at the end, as the last digit of an URN.</message>
@@ -63,14 +60,13 @@
 	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">issue</message>
 	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">article</message>
 	<message key="plugins.pubIds.urn.editor.urnObjectTypeRepresentation">galley</message>
-	<message key="plugins.pubIds.urn.editor.urnObjectTypeSubmissionFile">file</message>
 	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">What you see is a preview of the URN that may be incomplete. A URN has not yet been generated.</message>
 	<message key="plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique">The given URN suffix is already in use for another published item. Please enter a unique URN suffix for each item.</message>
 	<message key="plugins.pubIds.urn.editor.clearObjectsURN">Clear URN</message>
 	<message key="plugins.pubIds.urn.editor.clearObjectsURN.confirm">Are you sure you wish to delete the existing URN?</message>
 	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN">Clear Issue Objects URNs</message>
 	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm">Are you sure you wish to delete the existing issue objects URNs?</message>
-	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description">Use the following option to clear URNs of all objects (articles, galleys, files) currently scheduled for this issue.</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description">Use the following option to clear URNs of all objects (articles and galleys) currently scheduled for this issue.</message>
 	<message key="plugins.pubIds.urn.editor.addCheckNo">Add Check Number</message>
 	<!-- assignment form -->
 	<message key="plugins.pubIds.urn.editor.assignURN">Assign the URN {$pubId} to this {$pubObjectType}</message>

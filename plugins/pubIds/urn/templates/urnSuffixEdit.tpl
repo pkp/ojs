@@ -50,8 +50,7 @@
 {if $pubObjectType == 'Issue'}
 	{assign var=enableArticleURN value=$pubIdPlugin->getSetting($currentJournal->getId(), "enableArticleURN")}
 	{assign var=enableRepresentationURN value=$pubIdPlugin->getSetting($currentJournal->getId(), "enableRepresentationURN")}
-	{assign var=enableSubmissionFileURN value=$pubIdPlugin->getSetting($currentJournal->getId(), "enableSubmissionFileURN")}
-	{if $enableArticleURN || $enableRepresentationURN || $enableSubmissionFileURN}
+	{if $enableArticleURN || $enableRepresentationURN}
 		{if !$formArea}
 			{assign var="formAreaTitle" value="plugins.pubIds.urn.editor.urn"}
 		{else}

@@ -26,7 +26,6 @@
 			{fbvElement type="checkbox" id="enableIssueDoi" label="plugins.pubIds.doi.manager.settings.enableIssueDoi" maxlength="40" checked=$enableIssueDoi|compare:true}
 			{fbvElement type="checkbox" id="enableArticleDoi" label="plugins.pubIds.doi.manager.settings.enableArticleDoi" maxlength="40" checked=$enableArticleDoi|compare:true}
 			{fbvElement type="checkbox" id="enableRepresentationDoi" label="plugins.pubIds.doi.manager.settings.enableRepresentationDoi" maxlength="40" checked=$enableRepresentationDoi|compare:true}
-			{fbvElement type="checkbox" id="enableSubmissionFileDoi" label="plugins.pubIds.doi.manager.settings.enableSubmissionFileDoi" maxlength="40" checked=$enableSubmissionFileDoi|compare:true}
 		{/fbvFormSection}
 	{/fbvFormArea}
 	{fbvFormArea id="doiPrefixFormArea" title="plugins.pubIds.doi.manager.settings.doiPrefix"}
@@ -65,7 +64,6 @@
 			{fbvElement type="text" id="doiIssueSuffixPattern" value=$doiIssueSuffixPattern label="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues" maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
 			{fbvElement type="text" id="doiArticleSuffixPattern" value=$doiArticleSuffixPattern label="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles" maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
 			{fbvElement type="text" id="doiRepresentationSuffixPattern" value=$doiRepresentationSuffixPattern label="plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations" maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
-			{fbvElement type="text" id="doiSubmissionFileSuffixPattern" value=$doiSubmissionFileSuffixPattern label="plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissionFiles" maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
 		{/fbvFormSection}
 	{/fbvFormArea}
 	{fbvFormArea id="doiReassignFormArea" title="plugins.pubIds.doi.manager.settings.doiReassign"}

@@ -19,11 +19,6 @@
 </script>
 {if $pubObject instanceof Issue}
 	<form class="pkp_form" id="assignPublicIdentifierForm" method="post" action="{url component="grid.issues.FutureIssueGridHandler" op="publishIssue" issueId=$pubObject->getId() confirmed=true escape=false}">
-{elseif $pubObject instanceof Representation}
-	<form class="pkp_form" id="assignPublicIdentifierForm" method="post" action="{url component="grid.articleGalleys.ArticleGalleyGridHandler" op="setApproved" submissionId=$pubObject->getSubmissionId() representationId=$pubObject->getId() newApprovedState=$approval confirmed=true escape=false}">
-		{assign var=remoteObject value=$pubObject->getRemoteURL()}
-{elseif $pubObject instanceof SubmissionFile}
-	<form class="pkp_form" id="assignPublicIdentifierForm" method="post" action="{url component="grid.articleGalleys.ArticleGalleyGridHandler" op="setProofFileCompletion" fileId=$pubObject->getFileId() revision=$pubObject->getRevision() submissionId=$pubObject->getSubmissionId() approval=$approval confirmed=true escape=false}">
 {/if}
 {fbvFormArea id="confirmationText"}
 	<p>{$confirmationText}</p>

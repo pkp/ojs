@@ -115,7 +115,8 @@ class ArticleGalley extends Representation {
 	 * @return string MIME type
 	 */
 	function getFileType() {
-		return $this->getFile()->getFileType();
+		$galleyFile = $this->getFile();
+		return isset($galleyFile) ? $galleyFile->getFileType() : null;
 	}
 
 	/**

@@ -150,7 +150,7 @@
 						{translate key="issue.issue"}
 					</div>
 					<div class="value">
-			<a class="title" href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
+						<a class="title" href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
 							{$issue->getIssueIdentification()}
 						</a>
 					</div>

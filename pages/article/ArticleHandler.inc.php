@@ -72,12 +72,10 @@ class ArticleHandler extends Handler {
 			$this->article = $article;
 		}
 
-
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->galley = $galleyDao->getByBestGalleyId($galleyId, $this->article->getId());
 	}
 
-	}
 	/**
 	 * View Article. (Either article landing page or galley view.)
 	 * @param $args array

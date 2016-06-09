@@ -31,7 +31,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		parent::GridHandler();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
-			array('fetchGrid', 'fetchRow', 'addGalley', 'editGalley', 'updateGalley', 'deleteGalley'));
+			array('fetchGrid', 'fetchRow', 'addGalley', 'editGalley', 'editGalleyTab', 'updateGalley', 'deleteGalley', 'identifiers', 'updateIdentifiers', 'clearPubId'));
 	}
 
 
@@ -161,6 +161,68 @@ class ArticleGalleyGridHandler extends GridHandler {
 	// Public Galley Grid Actions
 	//
 	/**
+	 * Edit article galley pub ids
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function identifiers($args, $request) {
+		$submission = $this->getSubmission();
+		$representationDao = Application::getRepresentationDAO();
+		$representation = $representationDao->getById(
+			$request->getUserVar('representationId'),
+			$submission->getId()
+		);
+		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
+		$form = new PublicIdentifiersForm($representation);
+		$form->initData($request);
+		return new JSONMessage(true, $form->fetch($request));
+	}
+
+	/**
+	 * Update article galley pub ids
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function updateIdentifiers($args, $request) {
+		$submission = $this->getSubmission();
+		$representationDao = Application::getRepresentationDAO();
+		$representation = $representationDao->getById(
+			$request->getUserVar('representationId'),
+			$submission->getId()
+		);
+		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
+		$form = new PublicIdentifiersForm($representation);
+		$form->readInputData();
+		if ($form->validate($request)) {
+			$form->execute($request);
+			return DAO::getDataChangedEvent();
+		} else {
+			return new JSONMessage(true, $form->fetch($request));
+		}
+	}
+
+	/**
+	 * Clear galley pub id
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function clearPubId($args, $request) {
+		$submission = $this->getSubmission();
+		$representationDao = Application::getRepresentationDAO();
+		$representation = $representationDao->getById(
+			$request->getUserVar('representationId'),
+			$submission->getId()
+		);
+		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
+		$form = new PublicIdentifiersForm($representation);
+		$form->clearPubId($request->getUserVar('pubIdPlugIn'));
+		return new JSONMessage(true);
+	}
+
+	/**
 	 * Add a galley
 	 * @param $args array
 	 * @param $request PKPRequest
@@ -175,8 +237,6 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$galleyForm->initData();
 		return new JSONMessage(true, $galleyForm->fetch($request, $this->getRequestArgs()));
 	}
-
-
 
 	/**
 	 * Delete a galley.
@@ -203,12 +263,30 @@ class ArticleGalleyGridHandler extends GridHandler {
 	}
 
 	/**
-	 * Edit a galley
+	 * Edit a galley metadata modal
 	 * @param $args array
 	 * @param $request PKPRequest
 	 * @return JSONMessage JSON object
 	 */
 	function editGalley($args, $request) {
+		$galley = $this->getGalley();
+		// Check if this is a remote galley
+		$remoteURL = isset($galley) ? $galley->getRemoteURL() : null;
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign('submissionId', $this->getSubmission()->getId());
+		//$templateMgr->assign('representationId', $request->getUserVar('representationId'));
+		$templateMgr->assign('representationId', $galley->getId());
+		$templateMgr->assign('remoteRepresentation', $remoteURL);
+		return new JSONMessage(true, $templateMgr->fetch('controllers/grid/articleGalleys/editFormat.tpl'));
+	}
+
+	/**
+	 * Edit a galley
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function editGalleyTab($args, $request) {
 		// Form handling
 		import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
 		$galleyForm = new ArticleGalleyForm(
@@ -239,7 +317,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		}
 		return new JSONMessage(true, $galleyForm->fetch());
 	}
-	
+
 	/**
 	 * @copydoc GridHandler::fetchRow()
 	 */

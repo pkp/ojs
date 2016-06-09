@@ -191,8 +191,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		return  array(
 			'Issue' => 'doiIssueSuffixPattern',
 			'Article' => 'doiArticleSuffixPattern',
-			'Representation' => 'doiRepresentationSuffixPattern',
-			'SubmissionFile' => 'doiSubmissionFileSuffixPattern',
+			'Representation' => 'doiRepresentationSuffixPattern'
 		);
 	}
 

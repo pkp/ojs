@@ -63,7 +63,6 @@ class DOISettingsForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'doiIssueSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired', create_function('$doiIssueSuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableIssueDoi\')) return $doiIssueSuffixPattern != \'\';return true;'), array($this)));
 		$this->addCheck(new FormValidatorCustom($this, 'doiArticleSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired', create_function('$doiArticleSuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableArticleDoi\')) return $doiArticleSuffixPattern != \'\';return true;'), array($this)));
 		$this->addCheck(new FormValidatorCustom($this, 'doiRepresentationSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired', create_function('$doiRepresentationSuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableRepresentationDoi\')) return $doiRepresentationSuffixPattern != \'\';return true;'), array($this)));
-		$this->addCheck(new FormValidatorCustom($this, 'doiSubmissionFileSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiSubmissionFileSuffixPatternRequired', create_function('$doiSubmissionFileSuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableSubmissionFileDoi\')) return $doiSubmissionFileSuffixPattern != \'\';return true;'), array($this)));
 		$this->addCheck(new FormValidatorPost($this));
 
 		// for DOI reset requests
@@ -126,13 +125,11 @@ class DOISettingsForm extends Form {
 			'enableIssueDoi' => 'bool',
 			'enableArticleDoi' => 'bool',
 			'enableRepresentationDoi' => 'bool',
-			'enableSubmissionFileDoi' => 'bool',
 			'doiPrefix' => 'string',
 			'doiSuffix' => 'string',
 			'doiIssueSuffixPattern' => 'string',
 			'doiArticleSuffixPattern' => 'string',
 			'doiRepresentationSuffixPattern' => 'string',
-			'doiSubmissionFileSuffixPattern' => 'string',
 		);
 	}
 }

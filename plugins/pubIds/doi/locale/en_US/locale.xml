@@ -13,7 +13,7 @@
  
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
-	<message key="plugins.pubIds.doi.description">This plugin enables the assignment of the Digital Object Identifiers to issues, articles and files in OJS.</message>
+	<message key="plugins.pubIds.doi.description">This plugin enables the assignment of the Digital Object Identifiers to issues, articles and galleys in OJS.</message>
 
 	<!-- settings form -->
 	<message key="plugins.pubIds.doi.manager.settings.description">Please configure the DOI plug-in to be able to manage and use DOIs in OJS:</message>
@@ -24,7 +24,6 @@
 	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Issues</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Articles</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">Galleys</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableSubmissionFileDoi">Files</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">DOI Prefix</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.description"><![CDATA[The DOI Prefix is assigned by registration agencies (e.g. <a href="http://www.crossref.org" target="_new">CrossRef</a>) and is in the format 10.xxxx (e.g. 10.1234):]]></message>
@@ -37,14 +36,12 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">for issues</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">for articles</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations">for galleys</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissionFiles">for files</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Use default patterns.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i for issues<br />%j.v%vi%i.%a for articles<br />%j.v%vi%i.%a.g%g for galleys<br />%j.v%vi%i.%a.f%f for files.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i for issues<br />%j.v%vi%i.%a for articles<br />%j.v%vi%i.%a.g%g for galleys.]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Enter an individual DOI suffix for each published item. You'll find an additional DOI input field on each item's meta-data page.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Please enter the DOI suffix pattern for issues.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Please enter the DOI suffix pattern for articles.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired">Please enter the DOI suffix pattern for galleys.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSubmissionFileSuffixPatternRequired">Please enter the DOI suffix pattern for files.</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Reassign DOIs</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">If you change your DOI configuration, DOIs that have already been assigned will not be affected. Once the DOI configuration is saved, use this button to clear all existing DOIs so that the new settings will take effect with existing objects.</message>
@@ -56,14 +53,13 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">issue</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">article</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeRepresentation">galley</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmissionFile">file</message>
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">What you see is a preview of the DOI that may be incomplete. A DOI has not yet been generated.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">The given DOI suffix is already in use for another published item. Please enter a unique DOI suffix for each item.</message>
 	<message key="plugins.pubIds.doi.editor.clearObjectsDoi">Clear DOI</message>
 	<message key="plugins.pubIds.doi.editor.clearObjectsDoi.confirm">Are you sure you wish to delete the existing DOI?</message>
 	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Clear Issue Objects DOIs</message>
 	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm">Are you sure you wish to delete the existing issue objects DOIs?</message>
-	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Use the following option to clear DOIs of all objects (articles, files) currently scheduled for this issue.</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Use the following option to clear DOIs of all objects (articles and galleys) currently scheduled for this issue.</message>
 	<!-- assignment form -->
 	<message key="plugins.pubIds.doi.editor.assignDoi">Assign the DOI {$pubId} to this {$pubObjectType}</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.emptySuffix">The DOI cannot be assigned because the custom suffix is missing.</message>

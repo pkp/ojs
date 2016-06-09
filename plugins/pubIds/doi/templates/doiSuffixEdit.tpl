@@ -46,8 +46,7 @@
 {if $pubObjectType == 'Issue'}
 	{assign var=enableArticleDoi value=$pubIdPlugin->getSetting($currentJournal->getId(), "enableArticleDoi")}
 	{assign var=enableRepresentationDoi value=$pubIdPlugin->getSetting($currentJournal->getId(), "enableRepresentationDoi")}
-	{assign var=enableSubmissionFileDoi value=$pubIdPlugin->getSetting($currentJournal->getId(), "enableSubmissionFileDoi")}
-	{if $enableArticleDoi || $enableRepresentationDoi || $enableSubmissionFileDoi}
+	{if $enableArticleDoi || $enableRepresentationDoi}
 		{if !$formArea}
 			{assign var="formAreaTitle" value="plugins.pubIds.doi.editor.doi"}
 		{else}
