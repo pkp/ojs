@@ -200,7 +200,6 @@ class URNPubIdPlugin extends PubIdPlugin {
 			'Issue' => 'urnIssueSuffixPattern',
 			'Article' => 'urnArticleSuffixPattern',
 			'Representation' => 'urnRepresentationSuffixPattern',
-			'SubmissionFile' => 'urnSubmissionFileSuffixPattern',
 		);
 	}
 
