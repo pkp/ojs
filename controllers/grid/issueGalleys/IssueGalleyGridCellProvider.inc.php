@@ -35,13 +35,13 @@ class IssueGalleyGridCellProvider extends GridCellProvider {
 		$columnId = $column->getId();
 		assert (is_a($issueGalley, 'IssueGalley'));
 		assert(!empty($columnId));
-		
+
 		switch ($columnId) {
 			case 'label': return array('label' => $issueGalley->getLabel());
 			case 'locale':
 				$allLocales = AppLocale::getAllLocales();
 				return array('label' => $allLocales[$issueGalley->getLocale()]);
-			case 'publicGalleyId': return array('label' => $issueGalley->getPubId('publisher-id'));
+			case 'publicGalleyId': return array('label' => $issueGalley->getStoredPubId('publisher-id'));
 			default: assert(false); break;
 		}
 	}

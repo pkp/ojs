@@ -447,15 +447,15 @@ class O4DOIExportDom extends DOIExportDom {
 		switch ($this->_getSchema()) {
 			case O4DOI_ISSUE_AS_WORK:
 			case O4DOI_ISSUE_AS_MANIFESTATION:
-				$url = $router->url($request, null, 'issue', 'view', $issue->getBestIssueId($journal));
+				$url = $router->url($request, null, 'issue', 'view', $issue->getBestIssueId());
 				break;
 
 			case O4DOI_ARTICLE_AS_WORK:
-				$url = $router->url($request, null, 'article', 'view', $article->getBestArticleId($journal));
+				$url = $router->url($request, null, 'article', 'view', $article->getBestArticleId());
 				break;
 
 			case O4DOI_ARTICLE_AS_MANIFESTATION:
-				$url = $router->url($request, null, 'article', 'view', array($article->getBestArticleId($journal), $galley->getBestGalleyId($journal)));
+				$url = $router->url($request, null, 'article', 'view', array($article->getBestArticleId(), $galley->getBestGalleyId()));
 				break;
 		}
 		assert(!empty($url));
@@ -1134,7 +1134,7 @@ class O4DOIExportDom extends DOIExportDom {
 	 * @return string
 	 */
 	function _getDoi(&$object) {
-		$doi = $object->getPubId('doi');
+		$doi = $object->getStoredPubId('doi');
 		if (!empty($doi) && $this->getTestMode()) {
 			$doi = PKPString::regexp_replace('#^[^/]+/#', MEDRA_WS_TESTPREFIX . '/', $doi);
 		}

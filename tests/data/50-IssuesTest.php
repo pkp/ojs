@@ -43,7 +43,7 @@ class IssuesTest extends WebTestCase {
 		// Publish first issue
 		$this->waitForElementPresent($selector='//a[text()=\'Publish Issue\']');
 		$this->click($selector);
-		$this->waitForElementPresent($selector='//a[text()=\'OK\']');
+		$this->waitForElementPresent($selector='css=[id^=submitFormButton-]');
 		$this->click($selector);
 		$this->waitJQuery();
 	}

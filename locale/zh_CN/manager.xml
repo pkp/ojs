@@ -201,11 +201,6 @@
 	<message key="manager.setup.enableAnnouncements">让期刊管理员可以增加期刊公告。</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">显示</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">之期刊首页最近公告。</message>
-	<message key="manager.setup.enablePageNumber">项目页码将会以手动方式填入目录里(例如：页 13-26)。</message>
-	<message key="manager.setup.enablePublicArticleId">自订的识别码将会被用来识别出版项目。</message>
-	<message key="manager.setup.enablePublicGalleyId">自订的识别码将会被用来识别出版项目的版面。（如HTML或者PDF格式文件）</message>
-	<message key="manager.setup.enablePublicIssueId">自订的识别码将会被用来识别期数。</message>
-	<message key="manager.setup.enablePublicSuppFileId">自订的识别码将会被用来识别论文的补充文件。</message>
 	<message key="manager.setup.enableUserRegistration">允设用户在本期刊网站注册为：</message>
 	<message key="manager.setup.enableUserRegistration.author">作者（可以投稿）</message>
 	<message key="manager.setup.enableUserRegistration.reader">读者（可以收到通知，被统计到订阅者行列）</message>

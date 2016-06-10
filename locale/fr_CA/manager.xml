@@ -174,11 +174,6 @@
 	<message key="manager.setup.enableAnnouncements">Permettre aux Directeurs de revues d'ajouter des annonces relatives à la revue.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Afficher les</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">annonces les plus récentes dans la page d'accueil de la revue.</message>
-	<message key="manager.setup.enablePageNumber">La pagination pour les articles sera calculée et saisie manuellement dans le sommaire de cette revue (par ex., p. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Des identifiants personnalisés seront utilisés pour identifier les articles publiés.</message>
-	<message key="manager.setup.enablePublicGalleyId">Des identifiants personnalisés seront utilisés pour identifier les épreuves (par ex., des fichiers HTML ou PDF) pour les éléments publiés.</message>
-	<message key="manager.setup.enablePublicIssueId">Des identifiants personnalisés seront utilisés pour identifier les numéros.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Des identifiants personnalisés seront utilisés pour identifier les fichiers supplémentaires de l'article.</message>
 	<message key="manager.setup.enableUserRegistration">Les utilisateurs peuvent s'inscrire à la revue dans l'un ou plusieurs des rôles suivants :</message>
 	<message key="manager.setup.enableUserRegistration.author">Auteurs (peut soumettre des documents à la revue)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Lecteurs (recevra des avis et sera considéré de la même façon qu'un abonné)</message>

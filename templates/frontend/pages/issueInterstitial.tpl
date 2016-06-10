@@ -15,10 +15,10 @@
 
 {* Get the Id of the parent object *}
 {if $parent instanceOf Issue}
-	{assign var="parentId" value=$parent->getBestIssueId($currentJournal)}
+	{assign var="parentId" value=$parent->getBestIssueId()}
 	{url|assign:"parentUrl" op="view" path=$parentId}
 {else}
-	{assign var="parentId" value=$parent->getBestArticleId($currentJournal)}
+	{assign var="parentId" value=$parent->getBestArticleId()}
 	{url|assign:"parentUrl" page="article" op="view" path=$parentId}
 {/if}
 
@@ -53,7 +53,7 @@
 			{$pdfTitle}
 		</a>
 
-		<a href="{url page="issue" op="download" path=$parentId|to_array:$galley->getBestGalleyId($currentJournal)}" class="download" download>
+		<a href="{url page="issue" op="download" path=$parentId|to_array:$galley->getBestGalleyId()}" class="download" download>
 			<span class="label">
 				{translate key="common.download"}
 			</span>
@@ -64,7 +64,7 @@
 
 	</header>
 
-	<iframe class="pdf" src="{url page="issue" op="download" path=$parentId|to_array:$galley->getBestGalleyId($currentJournal)}"></iframe>
+	<iframe class="pdf" src="{url page="issue" op="download" path=$parentId|to_array:$galley->getBestGalleyId()}"></iframe>
 
 	{call_hook name="Templates::Common::Footer::PageFooter"}
 

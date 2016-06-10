@@ -21,9 +21,9 @@
 	{if $issue}
 		{foreach from=$pubIdPlugins item=pubIdPlugin}
 			{if $issue->getPublished()}
-				{assign var=pubId value=$pubIdPlugin->getPubId($issue)}
+				{assign var=pubId value=$issue->getStoredPubId($pubIdPlugin->getPubIdType())}
 			{else}
-				{assign var=pubId value=$pubIdPlugin->getPubId($issue, true)}{* Preview rather than assign a pubId *}
+				{assign var=pubId value=$pubIdPlugin->getPubId($issue)}{* Preview pubId *}
 			{/if}
 			{if $pubId}
 				{$pubIdPlugin->getPubIdDisplayType()|escape}:

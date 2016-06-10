@@ -174,11 +174,6 @@
 	<message key="manager.setup.enableAnnouncements">Activar notícias a Editores-Gestores.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Exibir</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">das notícias mais recentes na página inicial da revista.</message>
-	<message key="manager.setup.enablePageNumber">A numeração de páginas para cada item publicado pode ser incluída manualmente no Sumário da revista(Ex.: p. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Identificadores Personalizados serão utilizados para identificar itens publicados.</message>
-	<message key="manager.setup.enablePublicGalleyId">Identificadores personalizados serão utilizados para identificar composições finais (ex.: documentos HTML ou PDF) de itens publicados.</message>
-	<message key="manager.setup.enablePublicIssueId">Identificadores Personalizados serão utilizados para identificar as edições.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Identificadores personalizados serão utilizados para identificar documentos suplementares da submissão.</message>
 	<message key="manager.setup.enableUserRegistration">Utilizadores podem se registar numa revista, assumindo um ou mais papéis, listados a seguir:</message>
 	<message key="manager.setup.enableUserRegistration.author">Autores (podem submeter documentos à revista)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Leitores (recebem notificações e podem ser considerados assinantes)</message>

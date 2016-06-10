@@ -117,7 +117,7 @@ class IssueGalleyDAO extends DAO {
 			WHERE	gs.setting_name = ? AND
 				gs.setting_value = ? AND
 				g.issue_id = ?',
-			array('pub-id::'.$pubIdType, $pubId, (int) $issueId)
+			array('pub-id::'.$pubIdType, (string) $pubId, (int) $issueId)
 		);
 
 		$returner = null;

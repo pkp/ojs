@@ -259,33 +259,6 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * Get a public ID for this issue.
-	 * @param $pubIdType string One of the NLM pub-id-type values or
-	 * 'other::something' if not part of the official NLM list
-	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-	 * @param $preview boolean If true, generate a non-persisted preview only.
-	 */
-	function getPubId($pubIdType, $preview = false) {
-		// FIXME: Move publisher-id to PID plug-in.
-		if ($pubIdType === 'publisher-id') {
-			$pubId = $this->getStoredPubId($pubIdType);
-			return ($pubId ? $pubId : null);
-		}
-
-		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $this->getJournalId());
-		foreach ($pubIdPlugins as $pubIdPlugin) {
-			if ($pubIdPlugin->getPubIdType() === $pubIdType) {
-				// If we already have an assigned ID, use it.
-				$storedId = $this->getStoredPubId($pubIdType);
-				if (!empty($storedId)) return $storedId;
-
-				return $pubIdPlugin->getPubId($this, $preview);
-			}
-		}
-		return null;
-	}
-
-	/**
 	 * Get stored public ID of the issue.
 	 * @param $pubIdType string One of the NLM pub-id-type values or
 	 * 'other::something' if not part of the official NLM list
@@ -723,22 +696,12 @@ class Issue extends DataObject {
 
 	/**
 	 * Return the "best" issue ID -- If a public issue ID is set,
-	 * use it; otherwise use the internal issue Id. (Checks the journal
-	 * settings to ensure that the public ID feature is enabled.)
-	 * @param $journal object The journal this issue is in
+	 * use it; otherwise use the internal issue Id.
 	 * @return string
 	 */
-	function getBestIssueId($journal = null) {
-		// Retrieve the journal, if necessary.
-		if (!isset($journal)) {
-			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$journal = $journalDao->getById($this->getJournalId());
-		}
-
-		if ($journal->getSetting('enablePublicIssueId')) {
-			$publicIssueId = $this->getPubId('publisher-id');
-			if (!empty($publicIssueId)) return $publicIssueId;
-		}
+	function getBestIssueId() {
+		$publicIssueId = $this->getStoredPubId('publisher-id');
+		if (!empty($publicIssueId)) return $publicIssueId;
 		return $this->getId();
 	}
 

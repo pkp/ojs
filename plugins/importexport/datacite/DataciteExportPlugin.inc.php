@@ -119,7 +119,7 @@ class DataciteExportPlugin extends DOIExportPlugin {
 		$object =& $objects[0];
 
 		// Get the DOI and the URL for the object.
-		$doi = $object->getPubId('doi');
+		$doi = $object->getStoredPubId('doi');
 		assert(!empty($doi));
 		if ($this->isTestMode($request)) {
 			$doi = PKPString::regexp_replace('#^[^/]+/#', DATACITE_API_TESTPREFIX . '/', $doi);
@@ -218,15 +218,15 @@ class DataciteExportPlugin extends DOIExportPlugin {
 		$url = null;
 		switch (true) {
 			case is_a($object, 'Issue'):
-				$url = $router->url($request, null, 'issue', 'view', $object->getBestIssueId($journal));
+				$url = $router->url($request, null, 'issue', 'view', $object->getBestIssueId());
 				break;
 
 			case is_a($object, 'PublishedArticle'):
-				$url = $router->url($request, null, 'article', 'view', $object->getBestArticleId($journal));
+				$url = $router->url($request, null, 'article', 'view', $object->getBestArticleId());
 				break;
 
 			case is_a($object, 'ArticleGalley'):
-				$url = $router->url($request, null, 'article', 'view', array($article->getBestArticleId($journal), $object->getBestGalleyId($journal)));
+				$url = $router->url($request, null, 'article', 'view', array($article->getBestArticleId(), $object->getBestGalleyId()));
 				break;
 		}
 

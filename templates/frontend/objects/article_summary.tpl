@@ -12,7 +12,7 @@
  *       context may be an issue or an article
  * @uses $showGalleyLinks bool Show galley links to users without access?
  *}
-{assign var=articlePath value=$article->getBestArticleId($currentJournal)}
+{assign var=articlePath value=$article->getBestArticleId()}
 {if (!$section.hideAuthor && $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_DEFAULT) || $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_SHOW}
 	{assign var="showAuthor" value=true}
 {/if}

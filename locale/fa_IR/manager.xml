@@ -175,11 +175,6 @@
 	<message key="manager.setup.enableAnnouncements">مدیر مجله بتواند اطلاعیه صادر کند.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">نمایش</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">جدیدترین اطلاعیه ها در صفحه خانگی مجله.</message>
-	<message key="manager.setup.enablePageNumber">شماره صفحات سصورت دستی  برای هر مقاله محاسبه و در فهرست مطالب وارد میشود.</message>
-	<message key="manager.setup.enablePublicArticleId">شناسه های دلخواه برای ناسائی مقالات چاپ شده بکار خواهد رفت.</message>
-	<message key="manager.setup.enablePublicGalleyId">کد های شناسائی ویژه برای شناسائی هر نوع گالی بکار میرود</message>
-	<message key="manager.setup.enablePublicIssueId">شناسه های دلخواه برای ناسائی شماره های مجله بکار خواهد رفت.</message>
-	<message key="manager.setup.enablePublicSuppFileId">شناسه های دلخواه برای ناسائی فایلهای الحاقی مقاله بکار خواهد رفت.</message>
 	<message key="manager.setup.enableUserRegistration">کاربران بتوانند با عناوین زیر ثبت نام کنند::</message>
 	<message key="manager.setup.enableUserRegistration.author">نویسنده (میتواند مقاله ساب میت کند)</message>
 	<message key="manager.setup.enableUserRegistration.reader">خواننده (ایمیل خبری در ارتفاط با انتشار شماره جدید دریافت کند)</message>

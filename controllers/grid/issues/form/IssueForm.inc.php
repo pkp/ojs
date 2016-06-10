@@ -58,14 +58,10 @@ class IssueForm extends Form {
 			ISSUE_ACCESS_SUBSCRIPTION => AppLocale::Translate('editor.issues.subscription')
 		));
 
-		$templateMgr->assign('enablePublicIssueId', $journal->getSetting('enablePublicIssueId'));
 		if ($this->issue) {
 			$templateMgr->assign('issue', $this->issue);
 			$templateMgr->assign('issueId', $this->issue->getId());
 		}
-
-		// consider public identifiers
-		$templateMgr->assign('pubIdPlugins', PluginRegistry::loadCategory('pubIds', true));
 
 		return parent::fetch($request);
 	}
@@ -74,17 +70,6 @@ class IssueForm extends Form {
 	 * Validate the form
 	 */
 	function validate($request) {
-
-		// check if public issue ID has already been used
-		$journal = $request->getJournal();
-		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-
-		$publicIssueId = $this->getData('publicIssueId');
-		if ($this->issue && $publicIssueId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicIssueId, ASSOC_TYPE_ISSUE, $this->issue->getId())) {
-			$this->addError('publicIssueId', __('editor.publicIdentificationExists', array('publicIdentifier' => $publicIssueId)));
-			$this->addErrorField('publicIssueId');
-		}
-
 		if ($temporaryFileId = $this->getData('temporaryFileId')) {
 			$user = $request->getUser();
 			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
@@ -93,11 +78,6 @@ class IssueForm extends Form {
 				$this->addError('styleFile', __('editor.issues.invalidStyleFormat'));
 			}
 		}
-
-		// Verify additional fields from public identifer plug-ins.
-		import('classes.plugins.PubIdPluginHelper');
-		$pubIdPluginHelper = new PubIdPluginHelper();
-		$pubIdPluginHelper->validate($journal->getId(), $this, $this->issue);
 
 		return parent::validate();
 	}
@@ -114,7 +94,6 @@ class IssueForm extends Form {
 				'year' => $this->issue->getYear(),
 				'datePublished' => $this->issue->getDatePublished(),
 				'description' => $this->issue->getDescription(null), // Localized
-				'publicIssueId' => $this->issue->getPubId('publisher-id'),
 				'accessStatus' => $this->issue->getAccessStatus(),
 				'openAccessDate' => $this->issue->getOpenAccessDate(),
 				'showVolume' => $this->issue->getShowVolume(),
@@ -124,11 +103,6 @@ class IssueForm extends Form {
 				'styleFileName' => $this->issue->getStyleFileName(),
 				'originalStyleFileName' => $this->issue->getOriginalStyleFileName()
 			);
-			// consider the additional field names from the public identifer plugins
-			import('classes.plugins.PubIdPluginHelper');
-			$pubIdPluginHelper = new PubIdPluginHelper();
-			$pubIdPluginHelper->init($this, $this->issue);
-
 			parent::initData();
 		} else {
 			$journal = $request->getJournal();
@@ -163,7 +137,6 @@ class IssueForm extends Form {
 			'number',
 			'year',
 			'description',
-			'publicIssueId',
 			'accessStatus',
 			'enableOpenAccessDate',
 			'showVolume',
@@ -172,10 +145,6 @@ class IssueForm extends Form {
 			'showTitle',
 			'temporaryFileId'
 		));
-		// consider the additional field names from the public identifer plugins
-		import('classes.plugins.PubIdPluginHelper');
-		$pubIdPluginHelper = new PubIdPluginHelper();
-		$pubIdPluginHelper->readInputData($this);
 
 		$this->readUserDateVars(array('datePublished', 'openAccessDate'));
 
@@ -212,7 +181,6 @@ class IssueForm extends Form {
 			$issue->setDatePublished($this->getData('datePublished'));
 		}
 		$issue->setDescription($this->getData('description'), null); // Localized
-		$issue->setStoredPubId('publisher-id', $this->getData('publicIssueId'));
 		$issue->setShowVolume($this->getData('showVolume'));
 		$issue->setShowNumber($this->getData('showNumber'));
 		$issue->setShowYear($this->getData('showYear'));
@@ -221,11 +189,6 @@ class IssueForm extends Form {
 		$issue->setAccessStatus($this->getData('accessStatus') ? $this->getData('accessStatus') : ISSUE_ACCESS_OPEN); // See bug #6324
 		if ($this->getData('enableOpenAccessDate')) $issue->setOpenAccessDate($this->getData('openAccessDate'));
 		else $issue->setOpenAccessDate(null);
-
-		// consider the additional field names from the public identifer plugins
-		import('classes.plugins.PubIdPluginHelper');
-		$pubIdPluginHelper = new PubIdPluginHelper();
-		$pubIdPluginHelper->execute($this, $issue);
 
 		// if issueId is supplied, then update issue otherwise insert a new one
 		if (!$isNewIssue) {

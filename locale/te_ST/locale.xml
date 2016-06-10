@@ -915,11 +915,7 @@
 	<message key="manager.setup.publicIdentifier">Îðèñtîfîçåtîóñ óf Jóürñål Çóñtèñt</message>
 	<message key="manager.setup.uniqueIdentifier">Üñîqüè Îðèñtîfîèr</message>
 	<message key="manager.setup.uniqueIdentifierDescription">Ærtîçlèþ åñð îþþüèþ çåñ bè tåggèð wîth åñ îðèñtîfîçåtîóñ ñümbèr ór þtrîñg, èmplóýîñg å règîþtråtîóñ þýþtèm þüçh åþ thè Ðîgîtål Òbjèçt Îðèñtîfîèr ßýþtèm (ÐÒÎ).</message>
-	<message key="manager.setup.enablePublicIssueId">Çüþtóm îðèñtîfîèrþ wîll bè üþèð tó îðèñtîfý îþþüèþ.</message>
-	<message key="manager.setup.enablePublicArticleId">Çüþtóm îðèñtîfîèrþ wîll bè üþèð tó îðèñtîfý püblîþhèð îtèmþ.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Çüþtóm îðèñtîfîèrþ wîll bè üþèð tó îðèñtîfý þüpplèmèñtål årtîçlè fîlèþ.</message>
 	<message key="manager.setup.pageNumberIdentifier">Pågè Ñümbèr Òptîóñ</message>
-	<message key="manager.setup.enablePageNumber">Pågè ñümbèrþ fór îtèmþ wîll bè çålçülåtèð åñð èñtèrèð måñüållý îñ thè Tåblè óf Çóñtèñtþ (è.g., pp. 13-26).</message>
 	<message key="manager.setup.openAccess">Thè jóürñål wîll próvîðè ópèñ åççèþþ tó îtþ çóñtèñtþ.</message>
 	<message key="manager.setup.openAccessPolicy">Òpèñ Æççèþþ Pólîçý</message>
 	<message key="manager.setup.openAccessPolicyDescription">Éñtèr å þtåtèmèñt óñ thè jóürñål'þ ópèñ åççèþþ pólîçý thåt wîll åppèår îñ Æbóüt thè Jóürñål.</message>

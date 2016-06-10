@@ -14,10 +14,12 @@
  * @brief Handle the DOI Settings form.
  */
 (function($) {
+
 	/** @type {Object} */
 	$.pkp.plugins.pubIds.doi =
 			$.pkp.plugins.pubIds.doi ||
 			{ js: { } };
+
 
 
 	/**
@@ -47,15 +49,10 @@
 	 * Callback to replace the element's content.
 	 *
 	 * @private
-	 *
-	 * @param {HTMLElement} sourceElement The element that triggered
-	 *  the event.
-	 * @param {Event} event The triggered event.
-	 * @param {Object} ui The tabs ui data.
 	 */
 	$.pkp.plugins.pubIds.doi.js.DOISettingsFormHandler.prototype.
 			updatePatternFormElementStatus_ =
-			function(sourceElement, event, ui) {
+			function() {
 		var $element = this.getHtmlElement(), pattern, $journalContentChoices;
 		if ($('[id^="doiSuffix"]').filter(':checked').val() == 'pattern') {
 			$journalContentChoices = $element.find(':checkbox');
