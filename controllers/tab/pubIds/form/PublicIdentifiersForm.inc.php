@@ -50,9 +50,14 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm {
 			$pubObjectId = $pubObject->getFileId();
 		}
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-		if ($publisherId && $journalDao->anyPubIdExists($this->getContextId(), 'publisher-id', $publisherId, $assocType, $pubObjectId, true)) {
-			$this->addError('publisherId', __('editor.publicIdentificationExistsForTheSameType', array('publicIdentifier' => $publisherId)));
-			$this->addErrorField('$publisherId');
+		if ($publisherId) {
+			if (is_numeric($publisherId)) {
+				$this->addError('publisherId', __('editor.publicIdentificationNumericNotAllowed', array('publicIdentifier' => $publisherId)));
+				$this->addErrorField('$publisherId');
+			} elseif ($journalDao->anyPubIdExists($this->getContextId(), 'publisher-id', $publisherId, $assocType, $pubObjectId, true)) {
+				$this->addError('publisherId', __('editor.publicIdentificationExistsForTheSameType', array('publicIdentifier' => $publisherId)));
+				$this->addErrorField('$publisherId');
+			}
 		}
 		return parent::validate();
 	}

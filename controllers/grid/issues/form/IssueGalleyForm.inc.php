@@ -86,9 +86,14 @@ class IssueGalleyForm extends Form {
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 		$publicGalleyId = $this->getData('publicGalleyId');
-		if ($publicGalleyId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId, ASSOC_TYPE_ISSUE_GALLEY, $this->_issueGalley?$this->_issueGalley->getId():null, true)) {
-			$this->addError('publicGalleyId', __('editor.publicIdentificationExistsForTheSameType', array('publicIdentifier' => $publicGalleyId)));
-			$this->addErrorField('publicGalleyId');
+		if ($publicGalleyId) {
+			if (is_numeric($publicGalleyId)) {
+				$this->addError('publicGalleyId', __('editor.publicIdentificationNumericNotAllowed', array('publicIdentifier' => $publicGalleyId)));
+				$this->addErrorField('publicGalleyId');
+			} elseif ($journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId, ASSOC_TYPE_ISSUE_GALLEY, $this->_issueGalley?$this->_issueGalley->getId():null, true)) {
+				$this->addError('publicGalleyId', __('editor.publicIdentificationExistsForTheSameType', array('publicIdentifier' => $publicGalleyId)));
+				$this->addErrorField('publicGalleyId');
+			}
 		}
 
 		return parent::validate();
