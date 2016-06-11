@@ -17,12 +17,14 @@ import('lib.pkp.classes.plugins.ThemePlugin');
 
 class DefaultThemePlugin extends ThemePlugin {
 	/**
-	 * Constructor
+	 * Initialize the theme's styles, scripts and hooks. This is run on the
+	 * currently active theme and it's parent themes.
+	 *
+	 * @return null
 	 */
-	function DefaultThemePlugin() {
-		parent::ThemePlugin();
-
-		HookRegistry::register('Templates::Common::Footer::PageFooter', array($this, 'printJavascript'));
+	public function init() {
+		$this->addStyle('default', 'styles/index.less');
+		$this->addScript('default', 'js/main.js');
 	}
 
 	/**
@@ -57,25 +59,6 @@ class DefaultThemePlugin extends ThemePlugin {
 	 */
 	function getDescription() {
 		return __('plugins.themes.default.description');
-	}
-
-	/**
-	 * @see ThemePlugin::getLessStylesheet
-	 */
-	function getLessStylesheet() {
-		return 'styles/index.less';
-	}
-
-	/**
-	 * Print JavaScript file into the footer
-	 * @param $hookName string
-	 * @param $args array
-	 * @return boolean Normal hook handling conventions.
-	 */
-	function printJavascript() {
-		$request = Registry::get('request');
-		echo '<script src="' . $request->getBaseUrl() . '/' . $this->getPluginPath() . '/js/main.js" type="text/javascript"></script>';
-		return false;
 	}
 }
 
