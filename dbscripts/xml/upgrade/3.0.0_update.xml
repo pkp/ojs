@@ -39,22 +39,26 @@
 	<sql>
 		<!-- attachment files -->
 		<query>UPDATE submission_files SET file_stage = '13' WHERE file_stage = '9'</query>
-		<!-- supplement files -->
-		<query>UPDATE submission_files SET file_stage = '16' WHERE file_stage = '6'</query>
+		<!-- supplement files (no longer have supplement files in PKP-lib) -->
+		<query>UPDATE submission_files SET file_stage = '13' WHERE file_stage = '6'</query>
 		<!-- layout files -->
 		<query>UPDATE submission_files SET file_stage = '10' WHERE file_stage = '5'</query>
 		<!-- copyedit files -->
 		<query>UPDATE submission_files SET file_stage = '9' WHERE file_stage = '4'</query>
-		<!-- editor files -->
-		<query>UPDATE submission_files SET file_stage = '8' WHERE file_stage = '3'</query>
+		<!-- editor files temp -->
+		<query>UPDATE submission_files SET file_stage = '8000' WHERE file_stage = '3'</query>
 		<!-- review files -->
 		<query>UPDATE submission_files SET file_stage = '4' WHERE file_stage = '2'</query>
 		<!-- submission files -->
 		<query>UPDATE submission_files SET file_stage = '2' WHERE file_stage = '1'</query>
 		<!-- public files -->
 		<query>UPDATE submission_files SET file_stage = '1' WHERE file_stage = '7'</query>
-		<!-- note files -->
-		<query>UPDATE submission_files SET file_stage = '3' WHERE file_stage = '8'</query>
+		<!-- note files temp -->
+		<query>UPDATE submission_files SET file_stage = '3000' WHERE file_stage = '8'</query>
+		<!-- editor files real -->
+		<query>UPDATE submission_files SET file_stage = '8' WHERE file_stage = '8000'</query>
+		<!-- note files real -->
+		<query>UPDATE submission_files SET file_stage = '3' WHERE file_stage = '3000'</query>
 	</sql>
 	<!-- Bug #8212: Refactor MailTemplate code into PKP lib -->
 	<sql>
