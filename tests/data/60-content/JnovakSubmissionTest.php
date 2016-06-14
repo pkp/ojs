@@ -26,7 +26,6 @@ class JnovakSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Novak',
 			'affiliation' => 'Aalborg University',
 			'country' => 'Denmark',
-			'roles' => array('Author'),
 		));
 
 		$title = 'Condensing Water Availability Models to Focus on Specific Water Management Systems';

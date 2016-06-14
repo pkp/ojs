@@ -194,6 +194,11 @@
 	<message key="user.profile.profileImage">Profile Image</message>
 	<message key="user.showAllJournals">Show My Journals</message>
 	<message key="user.registerForOtherJournals">Register for Other Journals</message>
+	<message key="user.reviewerPrompt">Would you be willing to review submissions to this journal?</message>
+	<message key="user.reviewerPrompt.userGroup">Yes, request the {$userGroup} role.</message>
+	<message key="user.register.contextsPrompt">Which journals on this site would you like to register with?</message>
+	<message key="user.register.otherContextRoles">Request the following roles.</message>
+	<message key="user.register.noContextReviewerInterests">If you requested to be a reviewer on any journal, please enter your subject interests.</message>
 	<message key="user.myJournals">My Journals</message>
 	<message key="user.manageMySubscriptions">Manage My Subscriptions</message>
 	<message key="user.noRoles.chooseJournal">Your account is not currently associated with any journals. Please choose a journal:</message>
@@ -678,9 +683,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="user.register.selectContext">Select a journal to register with:</message>
 	<message key="user.register.noJournals">There are no journals you may register with on this site.</message>
 	<message key="user.register.privacyStatement">Privacy Statement</message>
-	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Click here</a> if you are already registered with this or another journal on this site.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Click here</a> if you are <strong>not</strong> already registered with this or another journal on this site.]]></message>
-	<message key="user.register.loginToRegister">Enter your existing username and password to register with this journal.</message>
 	<message key="user.register.registrationDisabled">This journal is currently not accepting user registrations.</message>
 	<message key="user.register.form.passwordLengthTooShort">The password you entered is not long enough.</message>
 	<message key="user.register.readerDescription">Notified by email on publication of an issue of the journal.</message>

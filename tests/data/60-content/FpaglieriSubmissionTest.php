@@ -26,7 +26,6 @@ class FpaglieriSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Paglieri',
 			'affiliation' => 'University of Rome',
 			'country' => 'Italy',
-			'roles' => array('Author'),
 		));
 
 		$title = 'Hansen & Pinto: Reason Reclaimed';

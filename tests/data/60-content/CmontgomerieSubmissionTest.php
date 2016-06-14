@@ -26,7 +26,6 @@ class CmontgomerieSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Montgomerie',
 			'affiliation' => 'University of Alberta',
 			'country' => 'Canada',
-			'roles' => array('Author'),
 		));
 
 		$this->createSubmission(array(

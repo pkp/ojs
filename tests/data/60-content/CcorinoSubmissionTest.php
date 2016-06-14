@@ -26,7 +26,6 @@ class CcorinoSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Corino',
 			'affiliation' => 'University of Bologna',
 			'country' => 'Italy',
-			'roles' => array('Author'),
 		));
 
 		$title = 'The influence of lactation on the quantity and quality of cashmere production';
