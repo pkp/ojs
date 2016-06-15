@@ -73,17 +73,13 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 
 				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 				import('lib.pkp.classes.submission.SubmissionFile');
-				$submissionFiles = $submissionFileDao->getLatestRevisionsByAssocId(
-					ASSOC_TYPE_REPRESENTATION, $element->getId(),
-					$this->_submission->getId(),
-					SUBMISSION_FILE_PROOF
+				$submissionFile = $submissionFileDao->getLatestRevision(
+					$element->getFileId(),
+					SUBMISSION_FILE_PROOF,
+					$element->getSubmissionId()
 				);
 				import('lib.pkp.controllers.api.file.linkAction.DownloadFileLinkAction');
-				$actions = array();
-				foreach ($submissionFiles as $submissionFile) {
-					$actions[] = new DownloadFileLinkAction($request, $submissionFile, $request->getUserVar('stageId'), $element->getLabel());
-				}
-				return $actions;
+				return array(new DownloadFileLinkAction($request, $submissionFile, $request->getUserVar('stageId'), $element->getLabel()));
 		}
 		return parent::getCellActions($request, $row, $column);
 	}
