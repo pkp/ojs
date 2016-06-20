@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
+<!--
+  * @file plugins/generic/objectsForReview/locale/it_IT/emailTemplates.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Objects for review email template localized default text.
+  *
+  -->
+<email_texts locale="it_IT">
+	<email_text key="OFR_REVIEW_REMINDER">
+		<subject>Recenzione: promemoria data di scadenza</subject>
+		<body>Gentile {$authorName},
+
+Questo è un promemoria per la recensione di {$objectForReviewTitle} in scadenza il {$objectForReviewDueDate}.
+
+Per inviare la tua recensione, accedi al sito della rivista e completa il processo di submission. 
+Per tua praticità puoi utilizzare direttamente questo indirizzo: 
+{$submissionUrl}
+
+Contattaci senza indugi per qualsiasi dubbio o questione riguardante questa recensione.
+
+Grazie per il tuo contributo, attendo la tua recensione.
+
+{$editorialContactSignature}</body>
+		<description>Messaggio generato automaticamente e inviato all'autore di una recensione all'approssimarsi della data di scadenza.</description>
+	</email_text>
+	<email_text key="OFR_REVIEW_REMINDER_LATE">
+		<subject>Recensione scaduta</subject>
+		<body>Gentile {$authorName}:
+
+Questo è un promemoria per la recensione di {$objectForReviewTitle} in scadenza il {$objectForReviewDueDate}, che non abbiamo ancora ricevuto.
+
+Per inviare la tua recensione, accedi al sito della rivista e completa il processo di submission. 
+Per tua praticità puoi utilizzare direttamente questo indirizzo: 
+{$submissionUrl}
+
+Contattaci senza indugi per qualsiasi dubbio o questione riguardante questa recensione.
+
+Grazie per il tuo contributo, attendo la tua recensione.
+
+{$editorialContactSignature}</body>
+		<description>Messaggio generato automaticamente e inviato all'autore di una recensione quando la data di scadenza è superata.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_ASSIGNED">
+		<subject>Assegnazione recensione</subject>
+		<body>Gentile {$authorName}:
+
+Questo messaggio conferma l'assegnazione di {$objectForReviewTitle} per una recensione da completare entro il {$objectForReviewDueDate}.
+
+Assicurati che l'indirizzo postale presente nel tuo profilo sia aggiornato; tale indirizzo verrà usato per inviarti una copia dell'oggetto della tua revisione.
+
+Il tuo indirizzo postale attualmente definito è:
+{$authorMailingAddress}
+
+Se questo indirizzo è incompleto o sbagliato, utilizza questo link per aggiornarlo:
+
+Modifica il tuo profilo: {$userProfileUrl}
+ 
+Per inviare la tua recensione, accedi al sito della rivista e completa il processo di submission a questo indirizzo:
+{$submissionUrl}
+
+Contattaci senza indugi per qualsiasi dubbio o questione riguardante questa recensione.
+
+{$editorialContactSignature}</body>
+		<description>Questo messaggio viene inviato dall'editor all'autore di una recensione al momento dell'assegnazione dell'incarico.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_DENIED">
+		<subject>Recensione</subject>
+		<body>Gentile {$authorName},
+
+Non posso assegnarti, sfortunatamente, la recensione di {$objectForReviewTitle}.
+
+Spero che tu sia disponibile a recensire altro, sia oggi sia in futuro.
+
+{$editorialContactSignature}</body>
+		<description>Questa email viene inviata dall'editor a un autoree interessato quando l'oggetto della recensione non è più disponibile.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_REQUESTED">
+		<subject>Recensione: Richiesta di un oggetto</subject>
+		<body>Gentile {$editorName},
+
+Sono interessato a recensire {$objectForReviewTitle}.
+
+Potresti confermarmi che l'oggetto è ancora disponibile?
+
+{$authorContactSignature}</body>
+		<description>Questa email viene inviata all'editor da un autore interessato a recensire un elemento della lista.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_MAILED">
+		<subject>Volume inviato per recensione</subject>
+		<body>Gentile {$authorName},
+
+Ti confermo di aver inviato copia di {$objectForReviewTitle} a questo indirizzo postale presente nel tuo profilo:
+{$authorMailingAddress}
+ 
+Per inviare la tua recensione, accedi al sito della rivista e completa il processo di submission. 
+Per tua praticità puoi utilizzare direttamente questo indirizzo: 
+{$submissionUrl}
+
+Contattaci senza indugi per qualsiasi dubbio o questione riguardante questa recensione.
+
+{$editorialContactSignature}</body>
+		<description>Questa email viene inviata dall'editor all'autore della recensione a conferma dell'invio dell'oggetto da recensire.</description>
+	</email_text>
+	<email_text key="OFR_REVIEWER_REMOVED">
+		<subject>Recensione</subject>
+		<body>Gentile {$authorName},
+
+Ti informo di averti rimosso come recensore di {$objectForReviewTitle}.
+
+Spero che tu sia disponibile a recensire altro, sia oggi sia in futuro.
+
+{$editorialContactSignature}</body>
+		<description>Questa email è inviata dall'editor all'autore di una recensione quando la recensione è cancellata.</description>
+	</email_text>
+</email_texts>

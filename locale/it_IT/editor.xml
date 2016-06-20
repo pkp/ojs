@@ -13,7 +13,7 @@
   -->
 
 <locale name="it_IT" full_name = "Italiano">
-	<message key="editor.article.reviewForms">Moduli di revisione</message>
+	<message key="editor.article.reviewForms">Moduli per le revisioni</message>
 	<message key="editor.article.selectReviewForm">Seleziona il modulo di revisione</message>
 	<message key="editor.article.clearReviewForm">Cancella il modulo di revisione</message>
 	<message key="editor.article.confirmChangeReviewForm">Modificare il modulo di revisione rimuoverà tutte le risposte che i revisori abbiano dato sinora. Vuoi continuare?</message>
@@ -30,13 +30,13 @@
 	<message key="editor.submissionArchive.saveChanges">Salva le modifiche effettuate nell'archivio delle proposte? I contributi che hai selezionato saranno cancellati definitivamente dal sistema.</message>
 	<message key="editor.submissionArchive.confirmDelete">Sei sicuro di cancellare definitivamente questa proposta?</message>
 	<message key="editor.submissionReview.confirmDecision">Sei sicuro di registrare questa decisione?</message>
-	<message key="editor.submissionReview.emailWillArchive">Questa proposta sarà archiviata dopo che la email di notifica all'autore sarà sia inviata o sia che il tasto 'Salta email' sarà cliccato.</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Prima di inviare questo contributo per il copyediting, assicurati che una revisione sia disponibile e che l'autore sia stato informato della decisione utilizzando il link Notifica l'autore sopra.</message>
+	<message key="editor.submissionReview.emailWillArchive">Dopo aver inviato l'email di notifica all'autore o che avrai cliccato il tasto 'Salta email' questa proposta verrà immediatamente archiviata.</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Assicurati che una revisione sia disponibile e che l'autore sia stato informato della decisione dell'editor (utilizzando il link Notifica l'autore qui sopra) prima di inviare questo contributo al copyediting.</message>
 	<message key="editor.notifyUsers">Notifica utenti</message>
 	<message key="editor.notifyUsers.inProgress">Notificare gli utenti...</message>
 	<message key="editor.usersNotified">Utenti notificati</message>
 	<message key="editor.notifyUsers.allUsers">Tutti gli utenti della rivista ({$count} utenti).</message>
-	<message key="editor.notifyUsers.interestedUsers">Utenti della rivista che hanno esplicitamente indicato di ricevere gli aggiornamenti ({$count} utenti).</message>
+	<message key="editor.notifyUsers.interestedUsers">Utenti della rivista che hanno esplicitamente chiesto di ricevere gli aggiornamenti ({$count} utenti).</message>
 	<message key="editor.notifyUsers.includeToc">Includi il sommario del fascicolo:</message>
 	<message key="editor.editorAdministration">Amministrazione</message>
 	<message key="editor.issues.createIssue">Crea un fascicolo</message>
@@ -45,7 +45,7 @@
 	<message key="editor.issues.futureIssues">Fascicoli futuri</message>
 	<message key="editor.issues.currentIssue">Fascicolo corrente</message>
 	<message key="editor.issues.numArticles">N° articoli</message>
-	<message key="editor.issues.noArticles">Nessun articolo è attualmente programmato per questo fascicolo.</message>
+	<message key="editor.issues.noArticles">Per questo fascicolo non è stato ancora programmato alcun articolo.</message>
 	<message key="editor.issues.confirmDelete">Sei sicuro di cancellare definitivamente questo fascicolo?</message>
 	<message key="editor.issues.published">Data di pubblicazione</message>
 	<message key="editor.issues.unpublished">Non pubblicati</message>
@@ -53,9 +53,9 @@
 	<message key="editor.issues.numberRequired">Inserire il numero (deve essere un valore numerico, positivo).</message>
 	<message key="editor.issues.yearRequired">Inserire l'anno (deve essere un valore numerico, positivo).</message>
 	<message key="editor.issues.titleRequired">È necessario un titolo per il fascicolo.</message>
-	<message key="editor.issues.issueIdentificationRequired">È necessario poter numerare il fascicolo. Selezionare almeno una delle opzioni di numerazione.</message>
+	<message key="editor.issues.issueIdentificationRequired">È necessario numerare il fascicolo. Selezionare almeno una delle opzioni di numerazione.</message>
 	<message key="editor.issues.issueIdentification">Numerazione del fascicolo</message>
-	<message key="editor.issues.publicIssueIdentifier">Identificativo pubblico del fascicolo</message>
+	<message key="editor.issues.publicIssueIdentifier">Identificatore pubblico del fascicolo</message>
 	<message key="editor.issues.description">Descrizione</message>
 	<message key="editor.issues.accessStatus">Tipo di accesso</message>
 	<message key="editor.issues.accessDate">Data di fine embargo</message>
@@ -68,7 +68,7 @@
 	<message key="editor.issues.removeCoverPage">Eliminare l'immagine della copertina?</message>
 	<message key="editor.issues.invalidCoverPageFormat">Formato dell'immagine di copertina non valido. I formati validi sono .gif, .jpg, o .png.</message>
 	<message key="editor.issues.styleFile">Foglio di stile</message>
-	<message key="editor.issues.invalidStyleFormat">Formato non valido per il foglio di stile. Assicurarsi che il file caricato sia un CSS valido. (da notare che i fogli di stile con commenti all'inizio potrebbero essere respinti.)</message>
+	<message key="editor.issues.invalidStyleFormat">Formato non valido per il foglio di stile. Assicurarsi che il file caricato sia un CSS valido (nota che i fogli di stile con commenti all'inizio potrebbero essere respinti).</message>
 	<message key="editor.issues.removeStyleFile">Eliminare il foglio di stile?</message>
 	<message key="editor.issues.coverPageCaption">Didascalia della copertina</message>
 	<message key="editor.issues.showCoverPage">Crea una copertina per il fascicolo con i seguenti elementi</message>
@@ -80,7 +80,7 @@
 	<message key="editor.issues.identification">Numerazione</message>
 	<message key="editor.issues.access">Accesso</message>
 	<message key="editor.issues.cover">Copertina</message>
-	<message key="editor.issues.confirmIssueDelete">Tutti gli articoli saranno rimessi nella coda di editing e tutti i file associati saranno rimossi in maniera permanente.  Sei sicuro di voler rimuovere questo fascicolo?</message>
+	<message key="editor.issues.confirmIssueDelete">Tutti gli articoli saranno riportati nella coda di editing e tutti i file associati saranno rimossi in maniera permanente.  Sei sicuro di voler rimuovere questo fascicolo?</message>
 	<message key="editor.issues.resetIssueOrder"><![CDATA[Questa rivista utilizza un ordinamento personalizzato dei fascicoli. <a href="{$url}" class="action">Ripristina l'ordinamento di default</a>]]></message>
 	<message key="editor.issues.resetSectionOrder"><![CDATA[Questo fascicolo utilizza un ordinamento personalizzato degli articoli. <a href="{$url}" class="action">Ripristina l'ordinamento di default</a>]]></message>
 	<message key="editor.issues.issueData">Dati del fascicolo</message>
@@ -134,16 +134,16 @@
 	<message key="editor.article.dueDateFormat">Formato: AAAA-MM-GG</message>
 	<message key="editor.article.numberOfWeeks">Numero di settimane</message>
 	<message key="editor.article.selectCopyeditor">Assegna copyeditor</message>
-	<message key="editor.article.replaceCopyeditor">Sostituisci copyeditor</message>
+	<message key="editor.article.replaceCopyeditor">Cambia copyeditor</message>
 	<message key="editor.article.editorsCopyedit">Copyedit effettuato dall'editor</message>
 	<message key="editor.article.showAuthor">Permetti agli autori di vedere i file</message>
 	<message key="editor.article.showCopyeditor">Mostra la versione al copyeditor</message>
 	<message key="editor.article.rateReviewer">Valutazione del revisore</message>
-	<message key="editor.article.reviewerRating.veryGood">5 Alto</message>
+	<message key="editor.article.reviewerRating.veryGood">5 - Alto</message>
 	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3 Medio</message>
+	<message key="editor.article.reviewerRating.average">3 - Medio</message>
 	<message key="editor.article.reviewerRating.poor">2</message>
-	<message key="editor.article.reviewerRating.veryPoor">1 Basso</message>
+	<message key="editor.article.reviewerRating.veryPoor">1 - Basso</message>
 	<message key="editor.article.comments">Commenti</message>
 	<message key="editor.article.commentsRequired">Il campo per i commenti è necessario.</message>
 	<message key="editor.article.saveRating">Salva la valutazione</message>
@@ -160,13 +160,13 @@
 	<message key="editor.article.decision.resubmit">Inviare nuovamente in revisione</message>
 	<message key="editor.article.decision.decline">Rifiutare la proposta</message>
 	<message key="editor.article.selectLayoutEditor">Seleziona l'editor del layout</message>
-	<message key="editor.article.replaceLayoutEditor">Sostituisci l'editor del layout</message>
+	<message key="editor.article.replaceLayoutEditor">Cambia l'editor del layout</message>
 	<message key="editor.article.reviewSubmission">Revisione della proposta</message>
 	<message key="editor.article.resubmitForReview">Invia di nuovo il file in revisione</message>
 	<message key="editor.article.resubmitFileForPeerReview">Invia di nuovo in revisione il file selezionato</message>
 	<message key="editor.article.sendToCopyedit">Invia i file al copyediting</message>
 	<message key="editor.article.selectProofreader">Assegna il correttore di bozze</message>
-	<message key="editor.article.replaceProofreader">Sostituisci il correttore di bozze</message>
+	<message key="editor.article.replaceProofreader">Cambia il correttore di bozze</message>
 	<message key="editor.article.authorComments">Commenti dell'autore</message>
 	<message key="editor.article.proofreaderComments">Commenti del correttore di bozze</message>
 	<message key="editor.article.layoutEditorFinal">Layout Editor Definitivo</message>
@@ -191,7 +191,7 @@
 	<message key="editor.article.hideTocAuthorHide">Ometti</message>
 	<message key="editor.article.hideTocAuthorShow">Mostra</message>
 	<message key="editor.article.cover">Copertina</message>
-	<message key="editor.article.showCoverPage">Crea  una copertina per questo articolo con i seguenti elementi.</message>
+	<message key="editor.article.showCoverPage">Crea una copertina per questo articolo con i seguenti elementi.</message>
 	<message key="editor.article.coverPageDisplay">Visualizza</message>
 	<message key="editor.article.hideCoverPageToc">Non visualizzare l'immagine della copertina nell'indice.</message>
 	<message key="editor.article.hideCoverPageAbstract">Non visualizzare l'immagine della copertina nella vista dell'abstract dell'articolo.</message>
@@ -209,7 +209,7 @@
 	<message key="editor.notifyUsers.allIndividualSubscribers">Tutti gli abbonati persona ({$count} utenti)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Tutti gli abbonati enti ({$count} utenti)</message>
 	<message key="editor.reassign">Riassegna</message>
-	<message key="editor.publicIdentificationExists">L'identificatore pubblico  '{$publicIdentifier}' già esiste per un altro oggetto (fascicoli, articolo o file). Definisci identificatori unici nella rivista.</message>
+	<message key="editor.publicIdentificationExists">L'identificatore pubblico '{$publicIdentifier}' già esiste per un altro oggetto (fascicoli, articolo o file). Definisci identificatori unici nella rivista.</message>
 	<message key="editor.issues.galleys">Gabbie del fascicolo</message>
 	<message key="editor.issues.galley">Gabbia del fascicolo</message>
 	<message key="editor.issues.viewingGalley">Vedi la bozza del fascicolo</message>

@@ -22,6 +22,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Contenuto della rivista</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Scegli gli oggetti ai quali assegnare DOI.</message>
 	<message key="plugins.pubIds.doi.manager.settings.explainDois">Seleziona gli oggetti che avranno un DOI:</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>NOTA:</strong> Utilizzando i DOI <a href="http://www.crossref.org" target="_new">CrossRef</a>, seleziona Articoli. Gli articoli sono considerati come opera, cioè un'entità di contenuto artistico o intellettuale. Gli articoli sono quindi la pubblicazione sulla quale si basano esportazione e registrazione dei DOI.]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Fascicoli</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Articoli</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">File principali degli articoli</message>

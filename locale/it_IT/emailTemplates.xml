@@ -20,18 +20,18 @@
 Se non hai fatto questa richiesta, ignora pure questo messaggio e la password non sar&#224; modificata.
 Se invece hai fatto tu la richiesta e desideri generare una nuova password, clicca sul link qui sotto.
 
-Reset password: {$url}
+Rigenera password: {$url}
 
 {$principalContactSignature}]]></body>
-		<description>Questa email viene mandata ad un utente registrato quando questi indica che ha dimenticato la sua password o non riesce a fare il log in. Fornisce una URL per il reset della password.</description>
+		<description>Questa email viene mandata a un utente registrato quando questi indica che ha dimenticato la sua password o non riesce a fare il log in. Fornisce una URL per il reset della password.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET">
 		<subject>Password modificata</subject>
 		<body><![CDATA[La tua password per {$siteTitle} &#232; stata modificata con successo.
-Qui sotto trovi il tuo username e la nuova password.
+Qui sotto trovi la tua username e la nuova password.
 
-La tua username: {$username}
-La tua nuova password: {$password}
+Username: {$username}
+Password: {$password}
 
 {$principalContactSignature}]]></body>
 		<description>Questa email viene mandata ad un utente registrato quando ha resettato la password seguendo il processo descritto nella email PASSWORD_RESETTA_CONFERMA.</description>
@@ -39,12 +39,12 @@ La tua nuova password: {$password}
 	<email_text key="USER_REGISTER">
 		<subject>Registrazione nuovo utente</subject>
 		<body>Grazie per esserti registrato a {$journalName}.
-Qui sotto trovi lo username e la password che dovrai utilizzare per accedere e lavorare alla rivista. Puoi contattarmi in ogni momento per richiedere di essere rimosso dall'elenco degli utenti della rivista.
+Qui sotto trovi username e password che potrai utilizzare per accedere e lavorare alla rivista. Puoi contattarmi in ogni momento per richiedere di essere rimosso dall'elenco degli utenti della rivista.
 
 Username: {$username}
 Password: {$password}
 
-Puoi richiedere in ogni momento la rimozione del tuo account mandandomi un email.
+Puoi richiedere in ogni momento la rimozione del tuo account mandandomi una email.
 
 Grazie,
 {$principalContactSignature}</body>
@@ -62,13 +62,13 @@ Grazie per l'interesse dimostratoci,
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>Notifica di abbonamento</subject>
-		<body><![CDATA[Gentile{$subscriberName}:
+		<body><![CDATA[Gentile {$subscriberName},
 
-il tuo abbonamento a {$journalName} &#232; stato attivato con le seguenti caratteristiche:
+&#232; stato attivato il tuo abbonamento a {$journalName} con le seguenti caratteristiche:
 
 {$subscriptionType}
 
-Per accedere al contenuto riservato agli abbonati, effettua semplicemente il log in al sistema con il tuo username, "{$username}".
+Per accedere al contenuto riservato agli abbonati, ti basta accedere con il tuo username, "{$username}".
 
 Una volta effettuato il log in potrai modificare in ogni momento i dettagli del profilo e la password.
 
@@ -112,38 +112,38 @@ Grazie,
 		<description>Questa email incoraggia il destinatario a partecipare all'iniziativa LOCKSS e a includere questo journal nell'archivio. Questa fornisce informazioni sull'iniziativa LOCKSS e sui modi per farne parte.</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK">
-		<subject>Submission completata</subject>
+		<subject>Proposta completata</subject>
 		<body>Gentile {$authorName},
 
-Grazie per aver inviato la proposta dal titolo "{$articleTitle}" a {$journalName}. Attraverso l'interfaccia web potrà seguire i vari passi della submission attraverso il processo di revisione utlizzando la sua login al sito:
+Grazie per aver sottoposto il contributo dal titolo "{$articleTitle}" a {$journalName}. Attraverso l'interfaccia web potrà seguire i vari passi della proposta attraverso il processo di revisione accedendo con le sue credenziali all'indirizzo:
 
-URL della submission: {$submissionUrl}
+URL della proposta: {$submissionUrl}
 Username: {$authorUsername}
 
 Per qualsiasi domanda non esiti a contattarmi.
 La ringrazio per la preferenza espressa nei confronti di {$journalName}.
 
 {$editorialContactSignature}</body>
-		<description>Questa email, quando è abilitata, viene mandata automaticamente ad un autore quando lui o lei completa il processo di sottomissione del manoscritto al journal. Fornisce informazioni su come rintracciare la submission attraverso il processo e ringrazia l'autore per la submission.</description>
+		<description>Questa email, quando è abilitata, viene mandata automaticamente ad un autore quando lui o lei completa il processo di sottomissione del manoscritto a {$journalName}. Fornisce informazioni su come rintracciare la proposta attraverso il processo e ringrazia l'autore per la proposta.</description>
 	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Submission non idonea</subject>
-		<body>{$authorName}:
+		<subject>Proposta non idonea</subject>
+		<body>Gentile {$authorName},
 
-Una revisione iniziale di "{$articleTitle}" ha rilevato che questa submission non rientra nello scopo e nel focus di {$journalName}. Le suggerisco di consultare meglio la sezione delle informazioni della rivista, per saperne di più sul genere di contributi che pubblichiamo.
-Può comunque considerare di proporre la submission ad altra rivista più idonea.
+Una revisione iniziale di "{$articleTitle}" ha rilevato che questa proposta non rientra nello scopo e nel focus di {$journalName}. Le suggerisco di consultare meglio la pagina delle informazioni della rivista, per saperne di più sul genere di contributi che pubblichiamo.
+Può comunque considerare di sottoporre il contributo ad altra rivista più idonea.
 
 {$editorialContactSignature}</body>
 		<description></description>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
-		<subject>Commento alla submission </subject>
-		<body>{$name}:
+		<subject>Commento al contributo </subject>
+		<body>Gentile {$name},
 
-{$commentName} ha aggiunto un commento alla submission, "{$articleTitle}" in {$journalName}:
+{$commentName} ha aggiunto un commento alla contributo, "{$articleTitle}" in {$journalName},
 
 {$comments}</body>
-		<description>Questa email notifica a varie persone coinvolte nel processo editoriale di una submission  che è stato aggiunto un nuovo commento.</description>
+		<description>Questa email notifica a varie persone coinvolte nel processo editoriale di un contributo che è stato aggiunto un nuovo commento.</description>
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
 		<subject>Decisione su "{$articleTitle}"</subject>
@@ -163,7 +163,7 @@ Grazie ancora per il tuo contributo.
 		<subject>Assegnazione  della proposta</subject>
 		<body>Gentile {$editorialContactName},
 
-La submission, "{$articleTitle}," a {$journalName} ti è stata assegnata come Section Editor.
+La proposta "{$articleTitle}" ti è stata assegnata in qualità di Section Editor di {$journalName}.
 
 Submission URL: {$submissionUrl}
 Username: {$editorUsername}
@@ -176,10 +176,11 @@ Grazie,
 		<subject>Richiesta di revisione della proposta</subject>
 		<body>Gentile {$reviewerName},
 
-Ti propongo la revisione del manoscritto "{$articleTitle}," che è stato proposto a {$journalName}. L'abstract della submission  è inserito qui sotto. Spero che vorrai prendere in carico questo compito.
+Ti propongo la revisione del manoscritto "{$articleTitle}" che è stato proposto a {$journalName}; più sotto trovi l'abstract del contributo. 
+Spero che tu sia disponibile a portare a termine questo incarico.
 
-Ti chiedo quindi di effettuare il log in al sito web della rivista entro il {$weekLaterDate} per indicare se prenderai in carico la revisione o meno.
-Potrai poi accedere alla submission e inviare il tuo parere. Il sito web è {$journalUrl}
+Ti chiedo quindi di effettuare il log in al sito web della rivista entro il {$weekLaterDate} per indicare se accetti l'incarico di revisione o meno.
+Potrai poi accedere al contributo e trasmettermi il tuo parere. Il sito web è {$journalUrl}
 
 La data di scadenza per la revisione è fissata al {$reviewDueDate}.
 
@@ -201,17 +202,19 @@ Abstract
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>Richiesta di revisione della proposta</subject>
-		<body>Gentile {$reviewerName}:
+		<body>Gentile {$reviewerName},
 
-Ti propongo la revisione del manoscritto "{$articleTitle}," che è stato inviato a {$journalName}. L'abstract della proposta è più sotto. Spero che vorrai prendere in carico questo compito.
+Ti propongo la revisione del manoscritto "{$articleTitle}" che è stato proposto a {$journalName}; più sotto trovi l'abstract del contributo. 
+Spero che tu sia disponibile a portare a termine questo incarico.
 
-Ti chiedo quindi di effettuare il log in al sito web della rivista entro il {$weekLaterDate} per indicare se prenderai in carico la revisione o meno. Potrai poi accedere alla submission e inviare il tuo parere.
+Ti chiedo quindi di effettuare il log in al sito web della rivista entro il {$weekLaterDate} per indicare se accetti l'incarico di revisione o meno.
+Potrai poi accedere al contributo e trasmettermi il tuo parere. Il sito web è {$journalUrl}
 
 La data di scadenza per la revisione è fissata al {$reviewDueDate}.
 
 Submission URL: {$submissionReviewUrl}
 
-Grazie per la tua collaborazione
+Grazie per la tua collaborazione.
 
 {$editorialContactSignature}
 
@@ -227,7 +230,7 @@ Abstract
 		<subject>Richiesta di revisione della proposta</subject>
 		<body>Gentile {$reviewerName},
 
-Ti propongo la revisione del manoscritto "{$articleTitle}," che è stato proposto a {$journalName}. L'abstract della submission  è inserito qui sotto. Spero che vorrai prendere in carico questo compito.
+Ti propongo la revisione del manoscritto "{$articleTitle}" che è stato proposto a {$journalName}. L'abstract della submission  è inserito qui sotto. Spero che vorrai prendere in carico questo compito.
 
 Ti chiedo quindi di effettuare il log in al sito web della rivista entro il {$weekLaterDate} per indicare se prenderai in carico la revisione o meno.
 Potrai poi accedere alla submission e inviare il tuo parere. Il sito web è {$journalUrl}
@@ -252,9 +255,9 @@ Abstract
 	</email_text>
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
 		<subject>Richiesta di revisione della proposta</subject>
-		<body>Gentile {$reviewerName}:
+		<body>Gentile {$reviewerName},
 
-Ti propongo la revisione del manoscritto "{$articleTitle}," che è stato inviato a {$journalName}. L'abstract della proposta è più sotto. Spero che vorrai prendere in carico questo compito.
+Ti propongo la revisione del manoscritto "{$articleTitle}" che è stato inviato a {$journalName}. L'abstract della proposta è più sotto. Spero che vorrai prendere in carico questo compito.
 
 Ti chiedo quindi di effettuare il log in al sito web della rivista entro il {$weekLaterDate} per indicare se prenderai in carico la revisione o meno. Potrai poi accedere alla submission e inviare il tuo parere.
 
@@ -276,7 +279,7 @@ Abstract
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Richiesta di revisione della proposta</subject>
-		<body>{$reviewerName}:
+		<body>Gentile {$reviewerName},
 
 Ti propongo la revisione del manoscritto "{$articleTitle}".
 Le linee guida per la revisione sono indicate sotto e il file della submission è allegato.
@@ -298,11 +301,11 @@ Linee guida per le revisioni
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
 		<subject>Cancellazione richiesta di revisione</subject>
-		<body>Gentile {$reviewerName}:
+		<body>Gentile {$reviewerName},
 
-Abbiamo deciso di cancellare la nostra richiesta di revisione della submission, "{$articleTitle}," per {$journalName}.
+Abbiamo deciso di cancellare la nostra richiesta di revisione della proposta, "{$articleTitle}" per {$journalName}.
 
-Ci scusiamo per qualsiasi disturbo possiamo aver causato speriamo di poter contare su di te in una prossima occasione.
+Ci scusiamo per qualsiasi disturbo possiamo aver causato e speriamo di poter contare su di te in una prossima occasione.
 
 Se hai qualche domanda, ti prego di contattarmi.
 
@@ -311,54 +314,54 @@ Se hai qualche domanda, ti prego di contattarmi.
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
 		<subject>Accettazione incarico di revisione</subject>
-		<body>{$editorialContactName}:
+		<body>Gentile {$editorialContactName},
 
-Accetto l'incarico di revisionare "{$articleTitle}," per {$journalName}.
-Penso di completare la revisione per la data che mi avete comunicato, {$reviewDueDate}, se non prima.
+Accetto l'incarico di revisionare il contributo dal titolo"{$articleTitle}" per {$journalName}.
+Penso di completare la revisione entro la data che mi avete comunicato, {$reviewDueDate}, se non prima.
 
 {$reviewerName}</body>
 		<description>Questa email viene mandata dal revisore  al section editor in risposta a una richiesta di revisione per far sapere a quest'ultimo che la richiesta è stata accettata e sarà completata alla data specificata.</description>
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
 		<subject>Rifiuto incarico di revisione</subject>
-		<body>{$editorialContactName}:
+		<body>Gentile {$editorialContactName},
 
-Sono spiacente di non poter revisionare la submission, "{$articleTitle}," per {$journalName}. Spero che ci siano future occasioni di collaborazione.
+Sono spiacente di non poter revisionare la proposta, "{$articleTitle}" per {$journalName}. Spero che ci siano future occasioni di collaborazione.
 
 {$reviewerName}</body>
 		<description>Questa email viene mandata dal revisore al section editor in risposta a una richiesta di revisione per far sapere a quest'ultimo che la richiesta è stata declinata.</description>
 	</email_text>
 	<email_text key="REVIEW_COMPLETE">
 		<subject>Revisione completata</subject>
-		<body>{$editorialContactName}:
+		<body>Gentile {$editorialContactName},
 
-Ho completato la revisione di "{$articleTitle}" per {$journalName}, e indicato il mio parere, "{$recommendation}."
+Ho completato la revisione del contributo dal titolo "{$articleTitle}" per {$journalName} e indicato il mio parere, "{$recommendation}."
 
 {$reviewerName}</body>
 		<description>Questa email viene mandata dal revisore al section editor per fargli sapere che la revisione è stata completata e i commenti e le raccomandazioni sono state registrate nel sito web della rivista.</description>
 	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Ringraziamenti per la revisione</subject>
-		<body>Gentile {$reviewerName}:
+		<body>Gentile {$reviewerName},
 
-Grazie per aver completato la revisione della submission, "{$articleTitle}," per {$journalName}.
+Grazie per aver completato la revisione della proposta "{$articleTitle}".
 
-Apprezziamo il tuo contributo nel mantenere alta la qualità della rivista.
+Apprezziamo il tuo contributo, che ci permette di mantenere alta la qualità di {$journalName}.
 
 {$editorialContactSignature}</body>
 		<description>Questa email viene inviata dal section editor per confermare la ricezione di una revisione completata e per ringraziare i revisori per i loro contributi.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
 		<subject>Promemoria revisione in attesa</subject>
-		<body>Gentile {$reviewerName}:
+		<body>Gentile {$reviewerName},
 
-Ti ricordo la richiesta di revisione della submission, "{$articleTitle}," per {$journalName}. La data di scadenza prevista è {$reviewDueDate}.
+Ti ricordo la richiesta di revisione del contributo dal titolo "{$articleTitle}" per {$journalName}. La data di scadenza prevista è {$reviewDueDate}.
 
 Se non hai una username and password per il sito web della rivista, puoi usare questo link per resettare la  password (che ti sarà quindi mandata per email insieme con la username). {$passwordResetUrl}
 
 Submission URL: {$submissionReviewUrl}
 
-Ti chiedo la cortesia di di confermare la volontà di portare a termine l'incarico.
+Ti chiedo la cortesia di confermare al più presto la volontà di portare a termine l'incarico o meno.
 
 {$editorialContactSignature}</body>
 		<description>Questa email viene mandata da un section editor per ricordare al revisore che è attesa la revisione.</description>
@@ -367,7 +370,7 @@ Ti chiedo la cortesia di di confermare la volontà di portare a termine l'incari
 		<subject>Promemoria revisione in attesa</subject>
 		<body>Gentile {$reviewerName},
 
-Ti ricordo la richiesta di revisione della submission, "{$articleTitle}," per {$journalName}. La data di scadenza prevista è {$reviewDueDate}.
+Ti ricordo la richiesta di revisione del contributo dal titolo "{$articleTitle}" per {$journalName}. La data di scadenza prevista è {$reviewDueDate}.
 
 Submission URL: {$submissionReviewUrl}
 
@@ -380,7 +383,7 @@ Ti chiedo la cortesia di confermare al più presto la tua disponibilità a porta
 		<subject>Promemoria automatico revisione in attesa</subject>
 		<body>Gentile {$reviewerName},
 
-Questo è un promemoria automatico della richiesta di revisione della submission, "{$articleTitle}," per {$journalName}.
+Questo è un promemoria automatico della richiesta di revisione del contributo dal titolo "{$articleTitle}" per {$journalName}.
 
 Scadenza prevista:  {$reviewDueDate}.
 
@@ -397,7 +400,7 @@ Ti chiedo la cortesia di confermare al più presto la volontà di portare a term
 		<subject>Promemoria automatico revisione in attesa</subject>
 		<body>Gentile {$reviewerName},
 
-Questo è un promemoria automatico della richiesta di revisione della submission, "{$articleTitle}," per {$journalName}.
+Questo è un promemoria automatico della richiesta di revisione del contributo dal titolo "{$articleTitle}" per {$journalName}.
 
 Scadenza prevista:  {$reviewDueDate}.
 
@@ -410,9 +413,9 @@ Ti chiedo la cortesia di confermare al più presto la volontà di portare a term
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Assegnazione di copyediting</subject>
-		<body>{$copyeditorName}:
+		<body>Gentile {$copyeditorName},
 
-Ti chiedo di prendere in carico il copyedit del manoscritto, "{$articleTitle}," per {$journalName}.
+Ti chiedo di prendere in carico il copyedit del manoscritto, "{$articleTitle}" per {$journalName}.
 Il documento si trova su sito web della rivista, insieme alle istruzioni per il copyedit.
 
 URL Manoscritto: {$submissionCopyeditingUrl}
@@ -425,9 +428,9 @@ Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda
 	</email_text>
 	<email_text key="COPYEDIT_COMPLETE">
 		<subject>Copyedit completato</subject>
-		<body>{$editorialContactName}:
+		<body>Gentile {$editorialContactName},
 
-Ho completato la prima tornata del copyediting del manoscritto, "{$articleTitle}," per {$journalName}.
+Ho completato la prima tornata del copyediting del manoscritto, "{$articleTitle}" per {$journalName}.
 
 Ora è pronto per la revisione dell'autore e dell'editor.
 
@@ -436,16 +439,16 @@ Ora è pronto per la revisione dell'autore e dell'editor.
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Ringraziamenti per copyediting</subject>
-		<body>{$copyeditorName}:
+		<body>Gentile {$copyeditorName},
 
-Grazie per il copyediting del manoscritto, "{$articleTitle}," per {$journalName}.
+Grazie per il copyediting del manoscritto, "{$articleTitle}" per {$journalName}.
 
 {$editorialContactSignature}</body>
 		<description>Questa email viene, mandata dal section editor al copyeditor della submission per riconoscere che il copyeditor ha completato con successo il processo di copyedit e e rimgraziarlo per il contributo.</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_REQUEST">
 		<subject>Richiesta revisione copyediting</subject>
-		<body>{$authorName}:
+		<body>Gentile {$authorName},
 
 Abbiamo effettuato la revisione editoriale dell'articolo "{$articleTitle}" per {$journalName}.
 Per revisionare i cambiamenti proposti, si prega di effettuare il log in al sito web della rivista usando il link sotto.
@@ -464,9 +467,9 @@ Se non può prendere in carico il lavoro in questo periodo o ha qualche domanda,
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
 		<subject>Revisione del copyedit completata</subject>
-		<body>{$editorialContactName}:
+		<body>Gentile {$editorialContactName},
 
-Ho revisionato il  copyedituing del manoscritto, "{$articleTitle}," per {$journalName}, ed è pronto per l'ultima tornata del copyedit e per la preparazione del Layout.
+Ho revisionato il  copyedituing del manoscritto, "{$articleTitle}" per {$journalName}, ed è pronto per l'ultima tornata del copyedit e per la preparazione del Layout.
 
 Grazie per le modifiche apportate al mio lavoro,
 {$authorName}</body>
@@ -474,9 +477,9 @@ Grazie per le modifiche apportate al mio lavoro,
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_ACK">
 		<subject>Ringraziamenti revisore copyedit</subject>
-		<body>{$authorName}:
+		<body>Gentile {$authorName},
 
-Grazie per aver revisionato il copyediting del manoscritto, "{$articleTitle}," per {$journalName}.
+Grazie per aver revisionato il copyediting del manoscritto, "{$articleTitle}" per {$journalName}.
 
 Aspettiamo solo di vedere il lavoro pubblicato.
 
@@ -485,9 +488,9 @@ Aspettiamo solo di vedere il lavoro pubblicato.
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Revisione finale copyediting</subject>
-		<body>{$copyeditorName}:
+		<body>Gentile {$copyeditorName},
 
-L'autore e l'editor hanno completato la revisione editoriale del manoscritto, "{$articleTitle}," per {$journalName}.
+L'autore e l'editor hanno completato la revisione editoriale del manoscritto, "{$articleTitle}" per {$journalName}.
 La definitiva "copia pulita" può essere preparata per il layout di stampa/visualizzazione, seguendo queste indicazioni.
 
 1. Clicca sulla URL del manoscritto, qui sotto
@@ -507,16 +510,16 @@ Grazie a nome della rivista,
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_COMPLETE">
 		<subject>Revisione finale copyediting completata</subject>
-		<body>{$editorialContactName}:
+		<body>Gentile {$editorialContactName},
 
-Ho preparato una versione pulita e revisionata del manoscritto, "{$articleTitle}," per {$journalName}, pronta per l'impaginazione e la preparazione delle bozze.
+Ho preparato una versione pulita e revisionata del manoscritto, "{$articleTitle}" per {$journalName}, pronta per l'impaginazione e la preparazione delle bozze.
 
 {$copyeditorName}</body>
 		<description>Questa email dal copyeditor al section editor notifica che l'ultima tornata del copyedit è stata completata e che il processo di layout può cominciare.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Ringraziamenti revisione finale copyedit</subject>
-		<body>{$copyeditorName}:
+		<body>Gentile {$copyeditorName},
 
 Grazie per aver completato l'editing del manoscritto, "{$articleTitle}", per {$journalName}.
 
@@ -525,21 +528,21 @@ Grazie per aver completato l'editing del manoscritto, "{$articleTitle}", per {$j
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Richiesta preparazione delle bozze</subject>
-		<body>{$layoutEditorName}:
+		<body>Gentile {$layoutEditorName},
 
 Vorrei chiederti di preparare le bozze per il manoscritto "{$articleTitle}" per {$journalName}.
 
 URL manoscritto: {$submissionLayoutUrl}
 Username: {$layoutEditorUsername}
 
-Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi. Grazie per il tuo contributo al journal.
+Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi. Grazie per il tuo contributo a {$journalName}.
 
 {$editorialContactSignature}</body>
 		<description>Questa email dal section editor al layout editor notifica che è stato assegnato loro il compito di curare il layout di una submission. Questa fornisce informazioni sulla submission e su come accedervi.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
 		<subject>Bozze pronte</subject>
-		<body>{$editorialContactName}:
+		<body>Gentile {$editorialContactName},
 
 Sono pronte le bozze dell'articolo, "{$articleTitle}" per {$journalName}, a disposizione per i correttori di bozze.
 
@@ -550,7 +553,7 @@ Per qualsiasi domanda, si prega di contattarmi.
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Ringraziamenti layout</subject>
-		<body>{$layoutEditorName}:
+		<body>Gentile {$layoutEditorName},
 
 Grazie per aver preparato l'impaginato de manoscritto "{$articleTitle}" per {$journalName}.
 
@@ -559,7 +562,7 @@ Grazie per aver preparato l'impaginato de manoscritto "{$articleTitle}" per {$jo
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_REQUEST">
 		<subject>Correzione bozze dell'autore</subject>
-		<body>{$authorName}:
+		<body>Gentile {$authorName},
 
 E' necessario correggere le bozze del tuo contributo "{$articleTitle}". Puoi farlo seguendo queste istruzioni:
 
@@ -578,17 +581,17 @@ Username: {$authorUsername}
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_COMPLETE">
 		<subject>Correzione bozze dell'autore completata</subject>
-		<body>{$editorialContactName}:
+		<body>Gentile {$editorialContactName},
 
-Ho completato la correzione delle bozze del mio manoscritto, "{$articleTitle}," for {$journalName}.
+Ho completato la correzione delle bozze del mio manoscritto, "{$articleTitle}" for {$journalName}.
 {$authorName}</body>
 		<description></description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_ACK">
 		<subject>Ringraziamenti correzione delle bozze (Autore)</subject>
-		<body>{$authorName}:
+		<body>Gentile {$authorName},
 
-Grazie per aver corretto le bozze dell'articolo, "{$articleTitle}," in {$journalName}.
+Grazie per aver corretto le bozze dell'articolo, "{$articleTitle}" in {$journalName}.
 Aspettiamo solo di pubblicare il lavoro a breve.
 
 Se sottoscrivi il nostro servizio notifiche, riceverai una email non appena il fascicolo verrà pubblicato. Per qualsiasi domanda, contattami liberamente.
@@ -600,7 +603,7 @@ Se sottoscrivi il nostro servizio notifiche, riceverai una email non appena il f
 		<subject>Richiesta correzione di bozze</subject>
 		<body>Gentile {$proofreaderName},
 
-Vorrei chiederti di corregere le bozze per l'articolo, "{$articleTitle}," per {$journalName}, seguendo queste indicazioni:
+Vorrei chiederti di corregere le bozze per l'articolo, "{$articleTitle}" per {$journalName}, seguendo queste indicazioni:
 
 1. Clicca sulla URL del manoscritto
 2. Entra nella rivista e leggi le istruzioni per la correzione delle bozze
@@ -619,25 +622,25 @@ Grazie per il tuo contributo,
 	</email_text>
 	<email_text key="PROOFREAD_COMPLETE">
 		<subject>Correzione delle bozze completata</subject>
-		<body>{$editorialContactName}:
+		<body>Gentile {$editorialContactName},
 
-Ho completato la correzione delle bozze del contributo "{$articleTitle}," per {$journalName}.
+Ho completato la correzione delle bozze del contributo "{$articleTitle}" per {$journalName}.
 
 {$proofreaderName}</body>
 		<description>Questa email dal correttore di bozze al section editor notifica che il correttore di bozze ha completato il processo di correzione.</description>
 	</email_text>
 	<email_text key="PROOFREAD_ACK">
 		<subject>Ringraziamenti correzione di bozze</subject>
-		<body>{$proofreaderName}:
+		<body>Gentile {$proofreaderName},
 
-Grazie per la correzione delle bozze per il manoscritto, "{$articleTitle}," per {$journalName}. Questo lavoro da un contributo importante alla qualità della rivista.
+Grazie per la correzione delle bozze per il manoscritto, "{$articleTitle}" per {$journalName}. Questo lavoro da un contributo importante alla qualità della rivista.
 
 {$editorialContactSignature}</body>
 		<description>Questa email dal section editor al correttore di bozze conferma il completamento del processo di correzione do bozze e ringrazia per il contributo.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Modifiche da apportare alle bozze</subject>
-		<body>{$layoutEditorName}:
+		<body>Gentile {$layoutEditorName},
 
 Le bozze del manoscritto "{$articleTitle}" per {$journalName} sono state corrette dall'autore e dai correttori di bozze. Per apportare le correzioni segui queste istruzioni:
 
@@ -650,16 +653,16 @@ Le bozze del manoscritto "{$articleTitle}" per {$journalName} sono state corrett
 URL manoscritto: {$submissionUrl}
 Username: {$layoutEditorUsername}
 
-Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi. Grazie per il tuo contributo al journal.
+Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi. Grazie per il tuo contributo a {$journalName}.
 
 {$editorialContactSignature}</body>
 		<description>Questa email dal section editor al curatore di layout  informa che le bozze di un articolo sono pronte per la correzione finale. Fornisce informazioni sull'articolo su come accedervi.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>Modifica alle bozze completata</subject>
-		<body>{$editorialContactName}:
+		<body>Gentile {$editorialContactName},
 
-Le bozze dell'articolo "{$articleTitle}," per {$journalName} sono state corrette.
+Le bozze dell'articolo "{$articleTitle}" per {$journalName} sono state corrette.
 L'articolo è ora pronto per essere pubblicato.
 
 {$layoutEditorName}</body>
@@ -667,9 +670,9 @@ L'articolo è ora pronto per essere pubblicato.
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Ringraziamenti modifica delle bozze</subject>
-		<body>{$layoutEditorName}:
+		<body>Gentile {$layoutEditorName},
 
-Grazie per aver completato la correzione delle bozze associate al manoscritto, "{$articleTitle}," per {$journalName}.
+Grazie per aver completato la correzione delle bozze associate al manoscritto, "{$articleTitle}" per {$journalName}.
 
 {$editorialContactSignature}</body>
 		<description>Questa email dal section editor al layout editor riconosce il completamento della fase finale della correzione delle bozze e ringrazia per il contributo.</description>
@@ -695,7 +698,7 @@ Grazie per l'interesse dimolstrato nei nostri confronti,
 	</email_text>
 	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
 		<subject>Avviso di abbonamento in scadenza</subject>
-		<body>Gentile {$subscriberName}:
+		<body>Gentile {$subscriberName},
 
 Il suo abbonamento a {$journalName} sta per scadere.
 
@@ -711,7 +714,7 @@ Per qualsiasi domanda e ulteriore informazione, non esiti a contattarmi.
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
 		<subject>Abbonamento scaduto</subject>
-		<body>Gentile {$subscriberName}:
+		<body>Gentile {$subscriberName},
 
 Il suo abbonamento a  {$journalName} è scaduto.
 
@@ -727,7 +730,7 @@ Per qualsiasi domanda e ulteriore informazione, non esiti a contattarmi.
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
 		<subject>Abbonamento scaduto - Ultimo avviso</subject>
-		<body>{$subscriberName}:
+		<body>Gentile {$subscriberName},
 
 Il suo abbonamento a  {$journalName} è scaduto.
 Questo è l'ultimo avviso che le inviamo.
@@ -745,7 +748,7 @@ Per qualsiasi domanda e ulteriore informazione, non esiti a contattarmi.
 	</email_text>
 	<email_text key="USER_VALIDATE">
 		<subject>Convalida il tuo account</subject>
-		<body>{$userFullName}
+		<body>Gentile {$userFullName}
 
 Hai creato un account in {$journalName}, ma prima di usarlo, devi convalidare il tuo indirizzo email.
 
@@ -778,7 +781,7 @@ Grazie,
 	</email_text>
 	<email_text key="NOTIFICATION">
 		<subject>Nuova notifica da {$siteTitle}</subject>
-		<body>Hai ricevuto una nuova notifica da  {$siteTitle}:
+		<body>Hai ricevuto una nuova notifica da  {$siteTitle},
 
 {$notificationContents}
 
@@ -788,7 +791,7 @@ Link: {$url}
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
 		<subject>Nuova notifica da {$journalName}</subject>
-		<body>Hai ricevuto una notifica da  {$journalName}:
+		<body>Hai ricevuto una notifica da  {$journalName},
 --
 {$notificationContents}
 
@@ -812,9 +815,9 @@ Se non vuoi ricevere email di notifica, vai alla pagina {$unsubscribeLink} per c
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Decisione dell'editor</subject>
-		<body><![CDATA[{$authorName}:
+		<body><![CDATA[Gentile {$authorName},
 
-Abbiamo raggiunto una decisione riguardo alla Sua submission a {$journalTitle}, "{$articleTitle}".
+Abbiamo raggiunto una decisione riguardo al contributo dal titolo "{$articleTitle}" che ha sottoposto a {$journalTitle}.
 
 La decisione &#232;:
 
@@ -823,9 +826,9 @@ La decisione &#232;:
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
 		<subject>Decisione dell'editor</subject>
-		<body><![CDATA[{$authorName}:
+		<body><![CDATA[Gentile {$authorName},
 
-Abbiamo raggiunto una decisione sulla Sua submission a {$journalTitle}, "{$articleTitle}".
+Abbiamo raggiunto una decisione riguardo al contributo dal titolo "{$articleTitle}" che ha sottoposto a {$journalTitle}.
 
 La nostra decisione &#232;:
 
@@ -919,9 +922,9 @@ Per vedere o modificare i dettagli dell'abbonamento, vai alla pagina: {$subscrip
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
 		<subject>Decisione dell'editor</subject>
-		<body>{$authorName}:
+		<body>Gentile {$authorName},
 
-Abbiamo raggiunto una decisione riguardo alla Sua submission a {$journalTitle}, "{$articleTitle}".
+Abbiamo raggiunto una decisione riguardo al contributo dal titolo "{$articleTitle}" che ha sottoposto a {$journalTitle}.
 
 La decisione è:
 
@@ -930,9 +933,9 @@ La decisione è:
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
 		<subject>Decisione dell'editor</subject>
-		<body>{$authorName}:
+		<body>Gentile {$authorName},
 
-Abbiamo raggiunto una decisione riguardo alla Sua submission a {$journalTitle}, "{$articleTitle}".
+Abbiamo raggiunto una decisione riguardo al contributo dal titolo "{$articleTitle}" che ha sottoposto a {$journalTitle}.
 
 {$editorialContactSignature}</body>
 		<description></description>
@@ -941,7 +944,7 @@ Abbiamo raggiunto una decisione riguardo alla Sua submission a {$journalTitle}, 
 		<subject>Richiesta di verifica delle citazioni</subject>
 		<body>Gentile {$authorFirstName},
 
-Ti chiedo la cortesia di verificare la correttezza delle citazioni contenute nell'articolo  {$articleTitle}:
+Ti chiedo la cortesia di verificare la correttezza delle citazioni contenute nell'articolo  {$articleTitle},
 
 {$rawCitation}
 
@@ -953,7 +956,7 @@ Copy-Editor, {$journalName}</body>
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Caricamento di versione revisionata</subject>
-		<body>{$editorialContactName}:
+		<body>Gentile {$editorialContactName},
 
 L'autore {$authorName} ha caricato una versione revisionata di "{$articleTitle}".
 
@@ -966,7 +969,7 @@ Submission URL: {$submissionUrl}
 		<subject>Utilizza il tuo regalo: dettagli di accesso</subject>
 		<body>Gentile {$recipientFirstName},
 
-{$buyerFullName} ha un regalo per te che riguarda {$giftJournalName}:
+{$buyerFullName} ha un regalo per te che riguarda {$giftJournalName},
 
 {$giftDetails}
 
@@ -982,7 +985,7 @@ Speriamo che tu abbia gradito il regalo!</body>
 		<subject>Utilizza il tuo regalo: dettagli di accesso</subject>
 		<body>Gentile {$recipientFirstName},
 
-{$buyerFullName} ti ha fatto un regalo che riguarda {$giftJournalName}:
+{$buyerFullName} ti ha fatto un regalo che riguarda {$giftJournalName},
 
 {$giftDetails}
 
@@ -997,7 +1000,7 @@ Password: {$password}</body>
 		<subject>{$giftNoteTitle}</subject>
 		<body>Gentile {$recipientFirstName},
 
-{$buyerFullName} ha un regalo per te che riguarda {$giftJournalName}:
+{$buyerFullName} ha un regalo per te che riguarda {$giftJournalName},
 
 {$giftDetails}
 
@@ -1010,9 +1013,9 @@ Riceverai un ulteriore messaggio con i dettagli per utilizzare il tuo regalo.</b
 	</email_text>
 	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
 		<subject>Article Review Request</subject>
-		<body>Gentile {$reviewerName}:
+		<body>Gentile {$reviewerName},
 
-ti scrivo riguardo alla proposta "{$articleTitle}," che è in revisione per essere pubblicato da {$journalName}.
+ti scrivo riguardo alla proposta "{$articleTitle}" che è in revisione per essere pubblicato da {$journalName}.
 
 Seguendo i suggerimenti emersi in precedenza, l'autore ha modificato il manoscritto e inviato una nuova versione. Ti sarei grato se volessi aiutarci a valutarla.
 
@@ -1038,9 +1041,9 @@ Ti ringrazio della considerazione
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
 		<subject>Richiesta di revisione di un articolo</subject>
-		<body>Gentile {$reviewerName}:
+		<body>Gentile {$reviewerName},
 
-Ti scrivo riguardo al manoscritto "{$articleTitle}," in corso di revisione per eventuale pubblicazione in {$journalName}.
+Ti scrivo riguardo al manoscritto "{$articleTitle}" in corso di revisione per eventuale pubblicazione in {$journalName}.
 
 L'autore ha inviato una nuova versione, modificata secondo i suggerimenti ricevuti dai revisori. Tu sarei grato se volessi aiutarci a valutarla.
 
@@ -1064,9 +1067,9 @@ Ti ringrazio per la disponibilità
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
 		<subject>Richiesta di revisione di un articolo</subject>
-		<body>Gentile {$reviewerName}:
+		<body>Gentile {$reviewerName},
 
-Ti scrivo riguardo al manoscritto "{$articleTitle}," proposto per la pubblicazione a {$journalName}.
+Ti scrivo riguardo al manoscritto "{$articleTitle}" proposto per la pubblicazione a {$journalName}.
 
 Seguendo i suggerimenti ricevuti dai revisori, lautore ha inviato una nuova versione modificata. Ti sarei grato se ci aiutassi a valutarla.
 
