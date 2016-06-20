@@ -114,7 +114,7 @@ class DepositObjectDAO extends DAO {
 				break;
 			case PLN_PLUGIN_DEPOSIT_OBJECT_ISSUE:
 				$result =& $this->retrieve(
-					'SELECT DISTINCT pdo.deposit_object_id, i.last_modified as issue_modified, max(a.last_modified) as article_modified
+					'SELECT pdo.deposit_object_id, MAX(i.last_modified) as issue_modified, MAX(a.last_modified) as article_modified
 					FROM issues i
 					LEFT JOIN pln_deposit_objects pdo ON pdo.object_id = i.issue_id
 					LEFT JOIN published_articles pa ON pa.issue_id = i.issue_id
