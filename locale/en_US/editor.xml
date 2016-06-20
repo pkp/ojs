@@ -23,8 +23,6 @@
 	<message key="editor.allEditors">All Editors</message>
 	<message key="editor.me">Me</message>
 	<message key="editor.publicIdentificationExists">The public identifier '{$publicIdentifier}' already exists for another object (issue, article, galley or file). Please choose unique identifiers within your journal.</message>
-	<message key="editor.publicIdentificationExistsForTheSameType">The public identifier '{$publicIdentifier}' already exists for another object of the same type. Please choose unique identifiers for the objects of the same type within your journal.</message>
-	<message key="editor.publicIdentificationNumericNotAllowed">The public identifier '{$publicIdentifier}' must not be a number.</message>
 	<message key="editor.submissionArchive.noSubmissions">No submissions in the archive.</message>
 	<message key="editor.submissionArchive.saveChanges">Save changes to archived submissions? Submissions marked for deletion will be permanently deleted from the system.</message>
 	<message key="editor.submissionArchive.confirmDelete">Are you sure you want to permanently delete this submission?</message>

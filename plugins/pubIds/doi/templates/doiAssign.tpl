@@ -9,7 +9,7 @@
  *}
 
 {assign var=pubObjectType value=$pubIdPlugin->getPubObjectType($pubObject)}
-{assign var=enableObjectDoi value=$pubIdPlugin->getSetting($currentJournal->getId(), "enable`$pubObjectType`Doi")}
+{assign var=enableObjectDoi value=$pubIdPlugin->getSetting($currentContext->getId(), "enable`$pubObjectType`Doi")}
 {if $enableObjectDoi}
 	{if $pubObject->getStoredPubId($pubIdPlugin->getPubIdType())}
 		{fbvFormSection}

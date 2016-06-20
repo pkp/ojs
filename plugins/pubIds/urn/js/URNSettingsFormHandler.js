@@ -53,11 +53,11 @@
 	$.pkp.plugins.pubIds.urn.js.URNSettingsFormHandler.prototype.
 			updatePatternFormElementStatus_ =
 			function() {
-		var $element = this.getHtmlElement(), pattern, $journalContentChoices;
+		var $element = this.getHtmlElement(), pattern, $contentChoices;
 		if ($('[id^="urnSuffix"]').filter(':checked').val() == 'pattern') {
-			$journalContentChoices = $element.find(':checkbox');
+			$contentChoices = $element.find(':checkbox');
 			pattern = new RegExp('enable(.*)URN');
-			$journalContentChoices.each(function() {
+			$contentChoices.each(function() {
 				var patternCheckResult = pattern.exec($(this).attr('name')),
 						$correspondingTextField = $element.find('[id*="' +
 						patternCheckResult[1] + 'SuffixPattern"]').

@@ -24,42 +24,7 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm {
 	 * @param $formParams array
 	 */
 	function PublicIdentifiersForm($pubObject, $stageId = null, $formParams = null) {
-		parent::PKPPublicIdentifiersForm('controllers/tab/pubIds/form/publicIdentifiersForm.tpl', $pubObject, $stageId, $formParams);
-		$this->setData('publisherId', $pubObject->getStoredPubId('publisher-id'));
-	}
-
-	/**
-	 * @copydoc Form::validate()
-	 */
-	function validate() {
-		$pubObject = $this->getPubObject();
-		// check if public issue ID has already been used
-		$assocType = null;
-		if (is_a($pubObject, 'Article')) {
-			$assocType = ASSOC_TYPE_ARTICLE;
-		} elseif (is_a($pubObject, 'Representation')) {
-			$assocType = ASSOC_TYPE_REPRESENTATION;
-		} elseif (is_a($pubObject, 'SubmissionFile')) {
-			$assocType = ASSOC_TYPE_SUBMISSION_FILE;
-		} elseif (is_a($pubObject, 'Issue')) {
-			$assocType = ASSOC_TYPE_ISSUE;
-		}
-		$publisherId = $this->getData('publisherId');
-		$pubObjectId = $pubObject->getId();
-		if ($assocType == ASSOC_TYPE_SUBMISSION_FILE) {
-			$pubObjectId = $pubObject->getFileId();
-		}
-		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-		if ($publisherId) {
-			if (is_numeric($publisherId)) {
-				$this->addError('publisherId', __('editor.publicIdentificationNumericNotAllowed', array('publicIdentifier' => $publisherId)));
-				$this->addErrorField('$publisherId');
-			} elseif ($journalDao->anyPubIdExists($this->getContextId(), 'publisher-id', $publisherId, $assocType, $pubObjectId, true)) {
-				$this->addError('publisherId', __('editor.publicIdentificationExistsForTheSameType', array('publicIdentifier' => $publisherId)));
-				$this->addErrorField('$publisherId');
-			}
-		}
-		return parent::validate();
+		parent::PKPPublicIdentifiersForm($pubObject, $stageId, $formParams);
 	}
 
 	/**
@@ -88,6 +53,16 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm {
 				}
 			}
 		}
+	}
+
+	/**
+	 * @copydoc PKPPublicIdentifiersForm::execute()
+	 */
+	function getAssocType($pubObject) {
+		if (is_a($pubObject, 'Issue')) {
+			return ASSOC_TYPE_ISSUE;
+		}
+		return parent::getAssocType($pubObject);
 	}
 
 }
