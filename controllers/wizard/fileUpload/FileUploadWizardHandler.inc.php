@@ -97,6 +97,7 @@ class FileUploadWizardHandler extends PKPFileUploadWizardHandler {
 					$galley->setFileId($submissionFile->getFileId());
 					$galleyDao->updateObject($galley);
 				}
+				break;
 		}
 	}
 }
