@@ -99,6 +99,9 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		if ($form->validate($request)) {
 			$form->execute($request);
 			$json = new JSONMessage();
+			import('lib.pkp.classes.log.SubmissionLog');
+			import('classes.log.SubmissionEventLogEntry'); // Log consts
+			SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_ISSUE_METADATA_UPDATE, 'submission.event.publicIdentifiers');
 			if ($request->getUserVar('displayedInContainer')) {
 				$router = $request->getRouter();
 				$dispatcher = $router->getDispatcher();
@@ -129,11 +132,6 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 					import('lib.pkp.classes.log.SubmissionLog');
 					import('classes.log.SubmissionEventLogEntry'); // Log consts
 					SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_ISSUE_METADATA_UPDATE, 'submission.event.issueMetadataUpdated');
-					break;
-				case 'identifiers':
-					import('controllers.tab.pubIds.form.PublicIdentifiersForm');
-					$form = new PublicIdentifiersForm($submission, $this->getStageId(), array('displayedInContainer' => true, 'tabPos' => $this->getTabPosition()));
-					$notificationKey = 'common.changesSaved';
 					break;
 			}
 		}
