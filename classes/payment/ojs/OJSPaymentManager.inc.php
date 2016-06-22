@@ -426,7 +426,7 @@ class OJSPaymentManager extends PaymentManager {
 
 				import('classes.mail.MailTemplate');
 				$mail = new MailTemplate('GIFT_AVAILABLE', $giftLocale);
-				$mail->setReplyTo(null);
+				$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 				$mail->assignParams(array(
 					'giftJournalName' => $giftJournalName,
 					'giftNoteTitle' => $giftNoteTitle,
@@ -459,7 +459,7 @@ class OJSPaymentManager extends PaymentManager {
 					$mail = new MailTemplate('GIFT_USER_LOGIN', $giftLocale);
 				}
 
-				$mail->setReplyTo(null);
+				$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 				$mail->assignParams($params);
 				$mail->addRecipient($recipientEmail, $user->getFullName());
 				$mail->send();

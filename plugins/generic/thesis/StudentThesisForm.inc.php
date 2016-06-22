@@ -286,10 +286,10 @@ class StudentThesisForm extends Form {
 
 			import('classes.mail.MailTemplate');
 			$mail = new MailTemplate('THESIS_ABSTRACT_CONFIRM');
-			$mail->setReplyTo($thesisEmail, $thesisName);
+			$mail->setFrom($thesisEmail, $thesisName);
 			$mail->assignParams($paramArray);
-			$mail->addRecipient($thesis->getSupervisorEmail(), $supervisorName);
-			$mail->addCc($thesis->getStudentEmail(), $studentName);
+			$mail->addRecipient($thesis->getSupervisorEmail(), "\"" . $supervisorName . "\"");
+			$mail->addCc($thesis->getStudentEmail(), "\"" . $studentName . "\"");
 			$mail->send();
 		}
 

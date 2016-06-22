@@ -42,7 +42,7 @@ class OpenAccessNotification extends ScheduledTask {
 			$email = new MailTemplate('OPEN_ACCESS_NOTIFY', $journal->getPrimaryLocale(), false, $journal, false, true);
 
 			$email->setSubject($email->getSubject($journal->getPrimaryLocale()));
-			$email->setReplyTo(null);
+			$email->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 			$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 
 			$paramArray = array(
