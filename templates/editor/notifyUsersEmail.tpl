@@ -1,5 +1,3 @@
-{literal}{$templateHeader}{/literal}
-
 {$body}
 
 {$journal->getLocalizedTitle()|strip_tags}
@@ -11,7 +9,6 @@
 {if $section.title}{$section.title}{/if}
 
 --------
-{literal}{$templateHeader}{/literal}
 {foreach from=$section.articles item=article}
 {$article->getLocalizedTitle()|strip_tags}{if $article->getPages()} ({$article->getPages()}){/if}
 

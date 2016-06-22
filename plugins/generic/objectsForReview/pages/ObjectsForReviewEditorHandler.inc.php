@@ -1136,7 +1136,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 				);
 			}
 			$email->addRecipient($userEmail, $userFullName);
-			$email->setReplyTo($editorEmail, $editorFullName);
+			$email->setFrom($editorEmail, $editorFullName);
 			$email->assignParams($paramArray);
 		}
 		$email->displayEditForm($returnUrl);

@@ -53,7 +53,7 @@ class ObjectsForReviewReminder extends ScheduledTask {
 
 		import('classes.mail.MailTemplate');
 		$mail = new MailTemplate($emailKey);
-		$mail->setReplyTo($editor->getEmail(), $editor->getFullName());
+		$mail->setFrom($editor->getEmail(), $editor->getFullName());
 		$mail->addRecipient($author->getEmail(), $author->getFullName());
 		$mail->setSubject($mail->getSubject($journal->getPrimaryLocale()));
 		$mail->setBody($mail->getBody($journal->getPrimaryLocale()));
