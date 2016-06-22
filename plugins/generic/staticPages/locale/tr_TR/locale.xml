@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name = "Turkish">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.generic.staticPages.displayName">Sabit Sayflar Eklentisi</message>
 	<message key="plugins.generic.staticPages.description">Bu eklenti Sabit İçerik Yönetimini sağlar.</message>
 	<message key="plugins.generic.staticPages.pageTitle">Başlık</message>

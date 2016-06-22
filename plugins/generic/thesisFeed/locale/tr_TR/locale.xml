@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name = "Turkish">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.generic.thesisfeed.displayName">Tez Besleme Eklenti Özetleri</message>
 	<message key="plugins.generic.thesisfeed.description">Bu eklenti tez özetleri için RSS/Atom web sendikasyon beslemeleri üretir.</message>
 

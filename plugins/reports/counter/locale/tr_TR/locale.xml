@@ -30,5 +30,11 @@
 	<message key="plugins.reports.counter.1a.ytdPdf">Bu Güne Kadar Yıllık PDF</message>
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Tüm dergiler için toplam</message>
 	<message key="plugins.reports.counter.1a.anonymous">anonim</message>
-	<message key="plugins.reports.counter.legacyStats">The links below generate reports using the old COUNTER plugin data. If you want to generate COUNTER reports using the new OJS COUNTER metric type, use the links above.</message>
+	<message key="plugins.reports.counter.release">COUNTER Sürümü</message>
+	<message key="plugins.reports.counter.olderReports">Eski Site Raporları</message>
+	<message key="plugins.reports.counter.error.badParameters">Rapor parametreleri geçersiz.</message>
+	<message key="plugins.reports.counter.error.badRequest">Rapor isteği geçersiz.</message>
+	<message key="plugins.reports.counter.error.noResults">Bu rapor için hiç bir sonuç bulunamadı.</message>
+	<message key="plugins.reports.counter.allCustomers">Tüm Müşteriler</message>
+	<message key="plugins.reports.counter.error.noXML">Sonuçlar XML olarak biçimlendirilemedi.</message>
 </locale>

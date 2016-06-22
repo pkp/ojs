@@ -38,5 +38,4 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.siteDisable">Aktif ayarları site ana sayfasında kapat</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.disabled">Kapatıldı</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.siteUnchanged">Site ana sayfa ayarlarını olduğu gibi bırak</message>
-	<message key="plugins.generic.googleAnalytics.manager.settings.enableSiteInstructions">These settings can be applied when users browse at the site level as well.  If no settings are applied at the site level, Google Analytics will only be active at the journal level.</message>
 </locale>
