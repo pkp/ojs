@@ -328,8 +328,10 @@ class DepositPackage {
 		// create the bag
 		$bag->package($packageFile,'zip');
 		
-		// remove the temporary bag directory
+		// remove the temporary bag directory and temp files
 		$fileManager->rmtree($bagDir);
+		$fileManager->deleteFile($exportFile);
+		$fileManager->deleteFile($termsFile);
 		
 		return $packageFile;
 	}
