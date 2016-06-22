@@ -639,7 +639,7 @@ class PLNPlugin extends GenericPlugin {
 	function cronEnabled() {
 		$application =& PKPApplication::getApplication();
 		$products =& $application->getEnabledProducts('plugins.generic');
-		return isset($products['acron']) || Config::getVar('scheduled_tasks', false);
+		return isset($products['acron']) || Config::getVar('general', 'scheduled_tasks', false);
 	}
 		
 	/**

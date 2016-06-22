@@ -108,9 +108,9 @@ class LoginHandler extends PKPLoginHandler {
 		
 		// Set the sender based on the current context
 		if ($journal && $journal->getSetting('supportEmail')) {
-			$mail->setReplyTo($journal->getSetting('supportEmail'), $journal->getSetting('supportName'));
+			$mail->setFrom($journal->getSetting('supportEmail'), $journal->getSetting('supportName'));
 		} else { 
-			$mail->setReplyTo($site->getLocalizedContactEmail(), $site->getLocalizedContactName());
+			$mail->setFrom($site->getLocalizedContactEmail(), $site->getLocalizedContactName());
 		}
 	}
 
