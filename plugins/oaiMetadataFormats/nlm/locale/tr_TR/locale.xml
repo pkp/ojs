@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name = "Turkish">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.oaiMetadata.nlm.displayName">NLM Üst Veri Biçimi</message>
 	<message key="plugins.oaiMetadata.nlm.description">Üst veri yapısı bir bakıma NLM Dergi Makalesi biçimi ile  tutarlı olmanın yoludur.</message>
 </locale>

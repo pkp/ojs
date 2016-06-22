@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name = "Turkish">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.generic.translator.name">Çeviri Eklentisi</message>
 	<message key="plugins.generic.translator.description">Bu eklenti çeviri dosyaları için web tabanlı düzenleme sağlar.</message>
 	<message key="plugins.generic.translator.longdescription">Bu alan Site Yöneticisi'nin ADS dil dosyalarının çevirilerini değiştirebileceği,  kontrol edebileceği ve  güncelleme yapabilceği alandır. Bu site geniş ve tek bir ADS dergisini özelleştirmek için kullanılmamalıdır. Eğer gelecek sürümler için bir çeviri düzeltmesi yaprsanız veya oluşturursanız lütfen bu çalışmalarınızı Public Knowledge Project gönderiniz.</message>
