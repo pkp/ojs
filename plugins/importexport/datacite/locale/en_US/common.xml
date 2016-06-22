@@ -63,4 +63,6 @@
 	<message key="plugins.importexport.common.notification.exportSuccessful">Successfully exported selected objects to '{$param}'</message>
  
 	<message key="plugins.importexport.common.cliError">ERROR:</message>
+
+	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">DOI prefix is missing for the journal with the path {$path}.</message>
 </locale>
