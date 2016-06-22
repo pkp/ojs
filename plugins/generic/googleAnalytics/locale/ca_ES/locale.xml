@@ -7,7 +7,7 @@
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
   *
   * Google Analytics plugin localization strings for the ca_ES (Català) locale.
   -->
@@ -33,4 +33,9 @@
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">Per fer un seguiment amb el Google Analytics del nombre total de lectors/ores d'un article publicat, introduïu un número de compte aquí (p. ex. UA-xxxxxx-x).</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Un o més números de compte de Google Analytics enviats per als autors/ores de les trameses no són vàlids.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">Nou codi de seguiment per Universal Analytics (analytics.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.enableSite">Pàgina d'inici</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteEnable">Activa la configuració de la revista a la pàgina d'inici</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteDisable">Desactiva la configuració existent a la pàgina d'inici</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteUnchanged">Surt de la configuració de la pàgina d'inici sense guardar els canvis</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.disabled">Inhabilitat</message>
 </locale>

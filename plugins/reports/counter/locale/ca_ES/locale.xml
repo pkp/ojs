@@ -7,7 +7,7 @@
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
   *
   * Localization strings for the ca_ES (Català) locale.
   -->
@@ -28,4 +28,8 @@
 	<message key="plugins.reports.counter.1a.ytdPdf">PDF de l'any en curs</message>
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Total per a totes les revistes</message>
 	<message key="plugins.reports.counter.legacyStats">Els enllaços següents generen informes utilitzant dades de l'antic mòdul COUNTER. Si voleu generar informes COUNTER utilitzant la nova mètrica OJS COUNTER, utilitzeu els enllaços superiors.</message>
+	<message key="plugins.reports.counter.release">Llançament de COUNTER</message>
+	<message key="plugins.reports.counter.olderReports">Informes de llocs antics</message>
+	<message key="plugins.reports.counter.1a.xml">versió XML</message>
+	<message key="plugins.reports.counter.1a.anonymous">anònim</message>
 </locale>
