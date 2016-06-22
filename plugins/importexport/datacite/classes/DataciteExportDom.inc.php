@@ -164,7 +164,10 @@ class DataciteExportDom extends DOIExportDom {
 		if ($sizesElement) XMLCustomWriter::appendChild($rootElement, $sizesElement);
 
 		// Formats
-		if (!empty($articleFile)) XMLCustomWriter::appendChild($rootElement, $this->_formatsElement($articleFile));
+		if (!empty($articleFile)) {
+			$formatsElement =& $this->_formatsElement($articleFile);
+			if ($formatsElement) XMLCustomWriter::appendChild($rootElement, $formatsElement);
+		}
 
 		// Rights
 		$rightsURL = $article?$article->getLicenseURL():$journal->getSetting('licenseURL');
