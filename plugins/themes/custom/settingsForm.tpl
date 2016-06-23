@@ -61,9 +61,9 @@
 	</tr>
 </table>
 
-<br/>
+<br />
 
-{if !$canSave}{translate key="plugins.theme.custom.notWritable" stylesheetFileLocation=$stylesheetFileLocation}<br/>{/if}
+{if !$canSave}{translate key="plugins.theme.custom.notWritable" stylesheetFileLocation=$stylesheetFileLocation}<br />{/if}
 
 <input type="submit" {if !$canSave}disabled="disabled" {/if}name="save" class="button defaultButton" value="{translate key="common.save"}"/><input type="button" class="button" value="{translate key="common.cancel"}" onclick="history.go(-1)"/>
 </form>

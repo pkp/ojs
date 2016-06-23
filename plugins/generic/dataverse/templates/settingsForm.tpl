@@ -106,7 +106,7 @@
 		<h3>{translate key="plugins.generic.dataverse.settings.termsOfUse"}</h3>
 		<div>
 			<p>{translate key="plugins.generic.dataverse.settings.termsOfUseDescription"}</p>
-			<input type="radio" name="fetchTermsOfUse" id="fetchTermsOfUse-true"	value="1" {if $fetchTermsOfUse}checked="checked" {/if} /> {translate key="plugins.generic.dataverse.settings.fetchTermsOfUse"}<br/>
+			<input type="radio" name="fetchTermsOfUse" id="fetchTermsOfUse-true"	value="1" {if $fetchTermsOfUse}checked="checked" {/if} /> {translate key="plugins.generic.dataverse.settings.fetchTermsOfUse"}<br />
 			<input type="radio" name="fetchTermsOfUse" id="fetchTermsOfUse-false" value="0" {if not $fetchTermsOfUse}checked="checked" {/if}/> {translate key="plugins.generic.dataverse.settings.defineTermsOfUse"}
 		</div>
 		<div style="margin: 1em 0">

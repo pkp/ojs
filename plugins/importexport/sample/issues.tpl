@@ -14,7 +14,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<br/>
+<br />
 
 <div id="issues">
 <table width="100%" class="listing">

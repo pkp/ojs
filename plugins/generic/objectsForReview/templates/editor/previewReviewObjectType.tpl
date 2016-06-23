@@ -20,7 +20,7 @@
 	<li class="current"><a href="{url op="previewReviewObjectType" path=$typeId}">{translate key="plugins.generic.objectsForReview.editor.objectType.preview"}</a></li>
 </ul>
 
-<br/>
+<br />
 
 <h3>{$reviewObjectType->getLocalizedName()|escape}</h3>
 <p>{$reviewObjectType->getLocalizedDescription()|escape}</p>
@@ -39,7 +39,7 @@
 					{foreach name=options from=$possibleOptions key=optionId item=optionItem}
 						<option>{$optionItem.content|escape}</option>
 					{/foreach}
-				</select><br/>
+				</select><br />
 			</td>
 		</tr>
 		<tr valign="top">
@@ -96,16 +96,16 @@
 				{foreach name=options from=$possibleOptions key=optionId item=optionItem}
 					<input id="check-{$optionItem.order|escape}" type="checkbox"/>
 					<label for="check-{$optionItem.order|escape}">{$optionItem.content|escape}</label>
-					<br/>
+					<br />
 				{/foreach}
 			{elseif $metadata->getMetadataType() == REVIEW_OBJECT_METADATA_TYPE_RADIO_BUTTONS}
 				{assign var=possibleOptions value=$metadata->getLocalizedPossibleOptions()}
 				{foreach name=options from=$possibleOptions key=optionId item=optionItem}
 					<input name="radio" id="radio-{$optionItem.order|escape}" type="radio"/>
 					<label for="radio-{$optionItem.order|escape}">{$optionItem.content|escape}</label>
-					<br/>
+					<br />
 				{/foreach}
-				<input name="radio" id="radio-0" type="radio"/>{fieldLabel name="radio-0" key="plugins.generic.objectsForReview.editor.objectForReview.noAnswer"}<br/>
+				<input name="radio" id="radio-0" type="radio"/>{fieldLabel name="radio-0" key="plugins.generic.objectsForReview.editor.objectForReview.noAnswer"}<br />
 			{elseif $metadata->getMetadataType() == REVIEW_OBJECT_METADATA_TYPE_DROP_DOWN_BOX}
 				<select size="1" class="selectMenu">
 					<option label="{translate key="plugins.generic.objectsForReview.editor.objectForReview.chooseOption"}" value="">{translate key="plugins.generic.objectsForReview.editor.objectForReview.chooseOption"}</option>
@@ -126,7 +126,7 @@
 </table>
 </div>
 
-<br/>
+<br />
 
 <form id="previewReviewObjectType" method="post" action="{url op="editReviewObjectType" path=$typeId}">
 	<p><input type="submit" value="{translate key="common.close"}" class="button defaultButton" /></p>

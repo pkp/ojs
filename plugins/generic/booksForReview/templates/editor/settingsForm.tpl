@@ -103,7 +103,7 @@
 </p>
 
 {if !$scheduledTasksEnabled}
-	<br/>
+	<br />
 	{translate key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"}
 {/if}
 </div>
@@ -129,7 +129,7 @@
 </table>
 </div>
 
-<br/>
+<br />
 
 <input type="submit" name="save" class="button defaultButton" value="{translate key="common.save"}"/>&nbsp;<input type="button" class="button" value="{translate key="common.cancel"}" onclick="history.go(-1)"/>
 </form>

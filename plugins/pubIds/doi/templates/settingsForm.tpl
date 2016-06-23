@@ -41,7 +41,7 @@
 			<tr valign="top">
 				<td width="20%" class="label">{fieldLabel name="doiPrefix" required="true" key="plugins.pubIds.doi.manager.settings.doiPrefix"}</td>
 				<td width="80%" class="value">
-					<span class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiPrefixDescription"}</span><br/>
+					<span class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiPrefixDescription"}</span><br />
 					<br />
 					<input type="text" name="doiPrefix" value="{$doiPrefix|escape}" size="8" maxlength="8" id="doiPrefix" class="textField" />
 				</td>
@@ -121,13 +121,13 @@
 			<tr valign="top">
 				<td class="label">&nbsp;</td>
 				<td class="value">
-					<span class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiReassign.description"}</span><br/>
+					<span class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiReassign.description"}</span><br />
 					<input type="submit" name="clearPubIds" value="{translate key="plugins.pubIds.doi.manager.settings.doiReassign"}" onclick="return confirm('{translate|escape:"jsparam" key="plugins.pubIds.doi.manager.settings.doiReassign.confirm"}')" class="action" />
 				</td>
 			</tr>
 		</table>
 
-		<br/>
+		<br />
 
 		<input type="submit" name="save" class="button defaultButton" value="{translate key="common.save"}"/>
 		<input type="button" class="button" value="{translate key="common.cancel"}" onclick="history.go(-1)"/>

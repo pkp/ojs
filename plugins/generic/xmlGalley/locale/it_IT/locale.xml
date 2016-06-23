@@ -26,7 +26,7 @@
 	<message key="plugins.generic.xmlGalley.settings.notAvailable">Non disponibile</message>
 
 	<message key="plugins.generic.xmlGalley.settings.externalXSLT">Interprete esterno della linea di comando  XSLT (es. Xalan)</message>
-	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Inserisci l'indirizzo completo dello strumento interprete XSLT, con ogni argomento necessario.  Usa %xsl per sostituire la posizione del file del foglio di stile XSL, e %xml per sostituire la posizione del file sorgente XML; es: <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Inserisci l'indirizzo completo dello strumento interprete XSLT, con ogni argomento necessario.  Usa %xsl per sostituire la posizione del file del foglio di stile XSL, e %xml per sostituire la posizione del file sorgente XML; es: <br /><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">Test XSLT</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">Test XSLT esterno riuscito.</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">Test XSLT esterno fallito.</message>
@@ -36,7 +36,7 @@
 	<message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM Journal Publishing DTD</a> &rarr; XHTML]]></message>
 
 	<message key="plugins.generic.xmlGalley.settings.xslFOP">Abilita la generazione della gabbia PDF usando XSL-FO (es. FOP)</message>
-	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Inserisci l'indirizzo completo del processore FO, con ogni argomento necessario.  Usa %fo per sostituire la posizione del file XSL-FO, e %pdf per sostituire la posizione del file PDF; es: <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Inserisci l'indirizzo completo del processore FO, con ogni argomento necessario.  Usa %fo per sostituire la posizione del file XSL-FO, e %pdf per sostituire la posizione del file PDF; es: <br /><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired">Un processore FO esterno della linea di comando deve essere specificato.</message>
 
 	<message key="plugins.generic.xmlGalley.settings.customXSL">Foglio di stile XSL personalizzato</message>

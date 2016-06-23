@@ -49,18 +49,18 @@
 			<input type="hidden" name="changes[]" value="{$key|escape}" />
 			{if $localeContents != null}{assign var=value value=$localeContents.$key}{else}{assign var=value value=''}{/if}
 			{if ($value|explode:"\n"|@count > 1) || (strlen($value) > 80) || ($referenceValue|explode:"\n"|@count > 1) || (strlen($referenceValue) > 80)}
-				{translate key="plugins.generic.customLocale.file.reference"}<br/>
+				{translate key="plugins.generic.customLocale.file.reference"}<br />
 				<textarea name="junk[]" class="textArea" rows="5" cols="50" onkeypress="return (event.keyCode >= 37 && event.keyCode <= 40);">
 {$referenceValue|escape}
 </textarea>
-				{translate key="plugins.generic.customLocale.file.custom"}<br/>
+				{translate key="plugins.generic.customLocale.file.custom"}<br />
 				<textarea name="changes[]" class="textArea" rows="5" cols="50">
 {$value|escape}
 </textarea>
 			{else}
-				{translate key="plugins.generic.customLocale.file.reference"}<br/>
-				<input name="junk[]" class="textField" class="textField" type="text" size="50" onkeypress="return (event.keyCode >= 37 && event.keyCode <= 40);" value="{$referenceValue|escape}" /><br/>
-				{translate key="plugins.generic.customLocale.file.custom"}<br/>
+				{translate key="plugins.generic.customLocale.file.reference"}<br />
+				<input name="junk[]" class="textField" class="textField" type="text" size="50" onkeypress="return (event.keyCode >= 37 && event.keyCode <= 40);" value="{$referenceValue|escape}" /><br />
+				{translate key="plugins.generic.customLocale.file.custom"}<br />
 				<input name="changes[]" class="textField" class="textField" type="text" size="50" value="{$value|escape}" />
 			{/if}
 		</td>

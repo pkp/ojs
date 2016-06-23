@@ -87,7 +87,7 @@ function SubmitIfAnyIsChecked() {
 	</tr>
 </table>
 
-<br/>
+<br />
 
 <table width="100%" class="listing">
 	<tr>

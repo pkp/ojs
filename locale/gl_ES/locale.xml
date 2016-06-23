@@ -392,10 +392,10 @@ Opcionalmente  pódeche indicar o motivo polo que se  desactivou a conta de subs
 	<!-- Navigation sidebar menu -->
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[O nome enlaza enlaza co perfil de / da revisor/a.<br/>
-A puntuación é sobre 5 (excelente).<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[O nome enlaza enlaza co perfil de / da revisor/a.<br />
+A puntuación é sobre 5 (excelente).<br />
 Semanas refírese ao periodo de tempo medio empregado para rematar unha revisión.<br />
-A última data é a da revisión aceptada máis recente.<br/>
+A última data é a da revisión aceptada máis recente.<br />
 Activas é o número de revisións que neste momento están consideradas como en proceso.]]></message>
 	
 	
@@ -817,8 +817,8 @@ Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</stron
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Posiblemente se mostran a continuación  URLs non válidas para sitios de busca.<br/>
-Deberías verificar manualmente as URLs marcadas como nno válidas, xa que esta proba non é infalibel ao 100%.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Posiblemente se mostran a continuación  URLs non válidas para sitios de busca.<br />
+Deberías verificar manualmente as URLs marcadas como nno válidas, xa que esta proba non é infalibel ao 100%.<br />
 A validación pode fallar en URLs de pescuda que precisan o envío de formularios de dados.]]></message>
 	
 	<!-- RT Entities -->

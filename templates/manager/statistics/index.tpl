@@ -13,13 +13,13 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<br/>
+<br />
 
 {include file="manager/statistics/statistics.tpl"}
 
 <div class="separator">&nbsp;</div>
 
-<br/>
+<br />
 
 <div id="reports">
 	<h3>{translate key="manager.statistics.reports"}</h3>

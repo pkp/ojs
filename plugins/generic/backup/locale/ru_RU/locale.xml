@@ -21,7 +21,7 @@
 	<message key="plugins.generic.backup.db">База данных</message>
 	<message key="plugins.generic.backup.files">Файлы</message>
 	<message key="plugins.generic.backup.code">Код</message>
-	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>ВНИМАНИЕ:</strong> Инструмент создания дампа базы данных не был сконфигурирован в конфигурационном файле config.inc.php. Настройка будет зависеть от настройки вашего сервера и типа используемой вами базы данных. Она должна быть указана в секции [cli], в параметре dump. Для MySQL используйте инструмент mysqldump, то есть:<br/>
+	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>ВНИМАНИЕ:</strong> Инструмент создания дампа базы данных не был сконфигурирован в конфигурационном файле config.inc.php. Настройка будет зависеть от настройки вашего сервера и типа используемой вами базы данных. Она должна быть указана в секции [cli], в параметре dump. Для MySQL используйте инструмент mysqldump, то есть:<br />
 <pre>[cli]
 dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
 </pre>
@@ -31,10 +31,10 @@ dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
 	<li>Пароль пользователя базы данных</li>
 	<li>Имя базы данных</li>
 </ol>
-Обратите внимание, что эта возможность требует указания пароля пользователя базы данных в командной строке, что может быть проблемой безопасности.<br/><br/>]]></message>
-	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>ВНИМАНИЕ:</strong> Инструмент tar не был сконфигурирован в конфигурационном файле config.inc.php. Настройка будет зависеть от настройки вашего сервера. Она должна быть указана в секции [cli], в параметре tar, задавая путь к утилите tar, то есть:<br/>
+Обратите внимание, что эта возможность требует указания пароля пользователя базы данных в командной строке, что может быть проблемой безопасности.<br /><br/>]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>ВНИМАНИЕ:</strong> Инструмент tar не был сконфигурирован в конфигурационном файле config.inc.php. Настройка будет зависеть от настройки вашего сервера. Она должна быть указана в секции [cli], в параметре tar, задавая путь к утилите tar, то есть:<br />
 <pre>[cli]
 tar = "/bin/tar"
-</pre><br/>]]></message>
+</pre><br />]]></message>
 	<message key="plugins.generic.backup.failure"><![CDATA[<strong>ВНИМАНИЕ: </strong>В процессе создания резервной копии могла произойти ошибка. Наиболее вероятная причина — отстутствие разрешений на доступ к файлам.]]></message>
 </locale>

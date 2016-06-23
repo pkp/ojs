@@ -49,7 +49,7 @@
 		</table>
 		<span class="instruct">{translate key="admin.languages.supportedLocalesInstructions"}</span>
 		{if $incompleteLocaleFound}
-			<br/>
+			<br />
 			<span class="formError">*</span>&nbsp;{translate key="admin.locale.maybeIncomplete"}
 		{/if}{* $incompleteLocaleFound *}
 	</td>

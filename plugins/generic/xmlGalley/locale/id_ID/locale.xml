@@ -26,7 +26,7 @@
 	<message key="plugins.generic.xmlGalley.settings.notAvailable">Tidak Tersedia</message>
 
 	<message key="plugins.generic.xmlGalley.settings.externalXSLT">External command-line XSLT renderer (contoh: Xalan)</message>
-	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Masukkan jalan yang lengkap ke XSLT renderer tool, dengan argumen apapun yang dibutuhkan. Gunakan %xsl untuk menggantikan lokasi XSL stylesheet file, dan %xml untuk menggantikan lokasi XML source file; contoh: <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Masukkan jalan yang lengkap ke XSLT renderer tool, dengan argumen apapun yang dibutuhkan. Gunakan %xsl untuk menggantikan lokasi XSL stylesheet file, dan %xml untuk menggantikan lokasi XML source file; contoh: <br /><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">Tes XSLT</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">Tes XSLT eksternal sukses.</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">Tes XSLT eksternal gagal.</message>
@@ -36,7 +36,7 @@
 	<message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM Journal Publishing DTD</a> &rarr; XHTML]]></message>
 
 	<message key="plugins.generic.xmlGalley.settings.xslFOP">Memungkinkan pengiriman PDF galley menggunakan XSL-FO (contoh: FOP)</message>
-	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Masukkan jalan lengkap ke FO processor, dengan argumen apapun yang dibutuhkan. Gunakan  %fo untuk menggantikan lokasi XSL-FO file, dan %pdf untuk menggantikan lokasi PDF file; contoh: <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Masukkan jalan lengkap ke FO processor, dengan argumen apapun yang dibutuhkan. Gunakan  %fo untuk menggantikan lokasi XSL-FO file, dan %pdf untuk menggantikan lokasi PDF file; contoh: <br /><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired">Prosesor FO command-line eksternal harus ditentukan.</message>
 
 	<message key="plugins.generic.xmlGalley.settings.customXSL">Custom XSL stylesheet</message>

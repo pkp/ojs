@@ -409,10 +409,10 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[O nome é o atalho para o perfil do avaliador.<br/>
-Classificação vai até 5 (Excelente).<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[O nome é o atalho para o perfil do avaliador.<br />
+Classificação vai até 5 (Excelente).<br />
 Dias refere-se ao tempo médio para concluir uma avaliação.<br />
-Última é a data da última aceitação de avaliação,<br/>
+Última é a data da última aceitação de avaliação,<br />
 Ativo indica avaliação em consideração ou andamento.]]></message>
 
 
@@ -819,8 +819,8 @@ O servidor atualmente tem suporte a mbstring: <strong>{$supportsMBString}</stron
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[URLs possivelmente inválidas para os sistemas de busca online exibidos a seguir.<br/>
-É necessário verificar manualmente as URLs marcadas como inválidas, pois o teste não é 100% preciso.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[URLs possivelmente inválidas para os sistemas de busca online exibidos a seguir.<br />
+É necessário verificar manualmente as URLs marcadas como inválidas, pois o teste não é 100% preciso.<br />
 A validação pode falhar em URLs para pesquisa que requeiram dados via método POST.]]></message>
 
 	<!-- RT Entities -->

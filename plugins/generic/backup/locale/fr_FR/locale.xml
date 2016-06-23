@@ -21,7 +21,7 @@
 	<message key="plugins.generic.backup.db">Base de données</message>
 	<message key="plugins.generic.backup.files">Fichiers</message>
 	<message key="plugins.generic.backup.code">Code</message>
-	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>ATTENTION :</strong> L'outil de sauvegarde de la base de données n'a pas été configuré dans le fichier de configuration config.inc.php. La configuration dépend de la configuration de votre base de données et du type de base de données. Cela devrait être précisé dans une section appelée [cli], dans l'option de configuration appelée "dump". Pour MySQL, utiliser l'outil mysqldump, i.e.:<br/>
+	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>ATTENTION :</strong> L'outil de sauvegarde de la base de données n'a pas été configuré dans le fichier de configuration config.inc.php. La configuration dépend de la configuration de votre base de données et du type de base de données. Cela devrait être précisé dans une section appelée [cli], dans l'option de configuration appelée "dump". Pour MySQL, utiliser l'outil mysqldump, i.e.:<br />
 <pre>[cli]
 dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
 </pre>
@@ -31,10 +31,10 @@ Les "%s" jetons seront remplacés par, dans l'ordre :<ol>
 	<li>Database password</li>
 	<li>Database name</li>
 </ol>
-Notez que cela implique de spécifier le mot de passe de la base de données dans la ligne de commande, et donc peut être poser un problème de sécurité<br/><br/>]]></message>
-	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>ATTENTION :</strong> L'outil "tar" n'a pas été configuré dans le fichier de configuration config.inc.php configuration file. La configuration dépend de la configuration de votre base de données et du type de base de données. Cela devrait être précisé dans une section appelée [cli], dans l'option de configuration appelée "tar", précisant le chemin vers l'utilitaire "tar", i.e.:<br/>
+Notez que cela implique de spécifier le mot de passe de la base de données dans la ligne de commande, et donc peut être poser un problème de sécurité<br /><br/>]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>ATTENTION :</strong> L'outil "tar" n'a pas été configuré dans le fichier de configuration config.inc.php configuration file. La configuration dépend de la configuration de votre base de données et du type de base de données. Cela devrait être précisé dans une section appelée [cli], dans l'option de configuration appelée "tar", précisant le chemin vers l'utilitaire "tar", i.e.:<br />
 <pre>[cli]
 tar = "/bin/tar"
-</pre><br/>]]></message>
+</pre><br />]]></message>
 	<message key="plugins.generic.backup.failure"><![CDATA[<strong>ATTENTION : </strong>Une erreur a pu se produire pendant le processus de sauvegarde. La cause la plus fréquente se trouve dans les permissions de fichiers.]]></message>
 </locale>

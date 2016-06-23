@@ -20,7 +20,7 @@
 	<message key="plugins.generic.backup.db">Databáze</message>
 	<message key="plugins.generic.backup.files">Soubory</message>
 	<message key="plugins.generic.backup.code">Kód</message>
-	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>VAROVÁNÍ:</strong> V kofiguračním souboru config.inc.php není nastaven nástroj pro dump (zálohu) databáze. Kofigurace bude záviset na konfiguraci vašeho serveru a typu databáze, kterou užíváte. Nastavení by mělo být specifikováno v části, nazvané [cli], v konfigurační volbě zvané "dump". Pro MySQL použijte nástroj mysqldump, např.:<br/>
+	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>VAROVÁNÍ:</strong> V kofiguračním souboru config.inc.php není nastaven nástroj pro dump (zálohu) databáze. Kofigurace bude záviset na konfiguraci vašeho serveru a typu databáze, kterou užíváte. Nastavení by mělo být specifikováno v části, nazvané [cli], v konfigurační volbě zvané "dump". Pro MySQL použijte nástroj mysqldump, např.:<br />
 <pre>[cli]
 dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
 </pre>
@@ -30,10 +30,10 @@ dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
 	<li>Heslo databáze</li>
 	<li>Jméno databáze</li>
 </ol>
-Mějte na paměti, že to vyžaduje zadání hesla databáze v příkazovém řádku, což může představovat bezpečnostní riziko.<br/><br/>]]></message>
-	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>VAROVÁNÍ:</strong>  V kofiguračním souboru config.inc.php není nastaven nástroj "tar". Kofigurace bude záviset na konfiguraci vašeho serveru. Nastavení by mělo být specifikováno v části, nazvané [cli], v konfigurační volbě zvané "tar", kde musí být specifikována cesta ke službě "tar", např.:<br/>
+Mějte na paměti, že to vyžaduje zadání hesla databáze v příkazovém řádku, což může představovat bezpečnostní riziko.<br /><br/>]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>VAROVÁNÍ:</strong>  V kofiguračním souboru config.inc.php není nastaven nástroj "tar". Kofigurace bude záviset na konfiguraci vašeho serveru. Nastavení by mělo být specifikováno v části, nazvané [cli], v konfigurační volbě zvané "tar", kde musí být specifikována cesta ke službě "tar", např.:<br />
 <pre>[cli]
 tar = "/bin/tar"
-</pre><br/>]]></message>
+</pre><br />]]></message>
 	<message key="plugins.generic.backup.failure"><![CDATA[<strong>VAROVÁNÍ: </strong>Během procesu zálohování může vzniknout chyba. Nejčastější příčinou chyby jsou špatně nastavená přístupová práva k souborům.]]></message>
 </locale>

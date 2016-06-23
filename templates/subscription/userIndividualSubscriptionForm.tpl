@@ -14,7 +14,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<br/>
+<br />
 
 {if $subscriptionId}
 <form method="post" id="subscriptionForm" action="{url op="payPurchaseSubscription" path="individual"|to_array:$subscriptionId}">

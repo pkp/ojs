@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<br/>
+<br />
 
 <h3>{translate key="plugins.importexport.native.export"}</h3>
 <ul>

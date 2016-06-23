@@ -26,9 +26,9 @@
 	<message key="plugins.generic.sword.depositPoints.type.optionalFixed">Opcional; Fixo</message>
 	<message key="plugins.generic.sword.depositPoints.type.manager">Somente Editor-Gestor</message>
 	<message key="plugins.generic.sword.depositPoints.type.description"><![CDATA[<h4>Tipos de Pontos de Depósito:</h4>
-<p><strong>Automatic</strong>: O depósito ocorrer automaticamente. O ponto de depósito SWORD é especificado. Tem de ser indicado um nome de utilizador e senha. O depósito ocorre após notificação do autor sobre a aceitação.<br/>
-<strong>Opcional; Flexível</strong>: O autor pode escolher se pretende depositar ou não. O URL especificado indica um serviço documental, e o autor pode escolher choose qual o ponto específico do depósito a ser usado do documento. O depósito ocorre após notificação do autor sobre a aceitação.<br/>
-<strong>Opcional; Fixo</strong>: O autor pode escolher se pretende depositar ou não. O URL indica o específico ponto de depósito SWORD. O depósito ocorre após notificação do autor sobre a aceitação.<br/>
+<p><strong>Automatic</strong>: O depósito ocorrer automaticamente. O ponto de depósito SWORD é especificado. Tem de ser indicado um nome de utilizador e senha. O depósito ocorre após notificação do autor sobre a aceitação.<br />
+<strong>Opcional; Flexível</strong>: O autor pode escolher se pretende depositar ou não. O URL especificado indica um serviço documental, e o autor pode escolher choose qual o ponto específico do depósito a ser usado do documento. O depósito ocorre após notificação do autor sobre a aceitação.<br />
+<strong>Opcional; Fixo</strong>: O autor pode escolher se pretende depositar ou não. O URL indica o específico ponto de depósito SWORD. O depósito ocorre após notificação do autor sobre a aceitação.<br />
 <strong>Somente Editor-Gestor</strong>: Apenas o Editor-Gestor pode usar este ponto de depósito. O URL indica um serviço documental. O depósito é manualmente operado pelo Editor-Gestor usando a interface Importar/Exportar da Administração da Revista.
 </p>]]></message>
 	<message key="plugins.generic.sword.depositPoints.password.description">Se não especificar uma senha aqui, você e/ou o autor serão interpelados novamente quando ocorrer o depósito. Note que esta senha será vísivel a todos os Editores-Gestor e será armazenada sem qualquer encripetação na base de dados.</message>
