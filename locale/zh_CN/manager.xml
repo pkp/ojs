@@ -29,7 +29,7 @@
 	<message key="manager.language.forms">表单</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">这将替换在此区域下您已经设定的任何指定区域的期刊设置。</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">恢复默认设置</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS可以让用户使用几种受到支持的语言介面。同时，OJS可以当作一个部分多语化的系统，让用户在每个页面中可以切换语言，并允许某些资料以额外的两种语言进行输入。<br /><br/>如果一个受到OJS支持的语言没有列在下表，请您的网站管理员从网站管理介面来安装该项语系。新增支持新语系的指引说明，请见OJS的文件。]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS可以让用户使用几种受到支持的语言介面。同时，OJS可以当作一个部分多语化的系统，让用户在每个页面中可以切换语言，并允许某些资料以额外的两种语言进行输入。<br /><br />如果一个受到OJS支持的语言没有列在下表，请您的网站管理员从网站管理介面来安装该项语系。新增支持新语系的指引说明，请见OJS的文件。]]></message>
 	<message key="manager.languages.noneAvailable">抱歉，没有额外的语言可供使用。如果您希望在这份期刊中使用额外的语系，请联系您的网站管理者。</message>
 	<message key="manager.languages.primaryLocaleInstructions">这将会是期刊网站的预设语言</message>
 	<message key="manager.managementPages">网页管理</message>

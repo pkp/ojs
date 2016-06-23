@@ -21,11 +21,11 @@
 {/strip}
 
 {if $subscriptionTypeCreated}
-<br/>
+<br />
 {translate key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"}<br />
 {/if}
 
-<br/>
+<br />
 
 <form id="subscriptionType" method="post" action="{url op="updateSubscriptionType"}">
 {if $typeId}

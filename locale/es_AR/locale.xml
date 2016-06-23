@@ -336,10 +336,10 @@ Opcionalmente le puede indicar el motivo por el que se le ha desactivado la cuet
 </ol>]]></message>
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[El nombre enlaza con el perfil de / de la revisor/a.<br/>
-La puntuación es sobre 5 (excelente).<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[El nombre enlaza con el perfil de / de la revisor/a.<br />
+La puntuación es sobre 5 (excelente).<br />
 Semanas se refiere al periodo de tiempo medio empleado para completar una revisión.<br />
-La última fecha es la de la revisión aceptada más reciente.<br/>
+La última fecha es la de la revisión aceptada más reciente.<br />
 Activas es el número de revisiones que en este momento están consideradas como en proceso.]]></message>
 
 	<!-- Section Editor -->
@@ -731,8 +731,8 @@ Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</stron
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Posiblemente a continuación se muestran URLs no válidas para sitios de búsqueda.<br/>
-Debería verificar manualmente las URLs marcadas como no válidas, ya que esta prueba no es infalible al 100%.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Posiblemente a continuación se muestran URLs no válidas para sitios de búsqueda.<br />
+Debería verificar manualmente las URLs marcadas como no válidas, ya que esta prueba no es infalible al 100%.<br />
 La validación puede fallar en URLs de búsque que necesitan el envío de formularios de datos.]]></message>
 
 	<!-- RT Entities -->

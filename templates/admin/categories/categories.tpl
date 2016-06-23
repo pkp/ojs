@@ -20,12 +20,12 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveCategory"); });
 {/literal}
 </script>
 
-<br/>
+<br />
 
 <form action="{url op="setCategoriesEnabled"}" method="post">
-	{translate key="admin.categories.enable.description"}<br/>
-	<input type="radio" id="categoriesEnabledOff" {if !$categoriesEnabled}checked="checked" {/if}name="categoriesEnabled" value="0"/>&nbsp;<label for="categoriesEnabledOff">{translate key="admin.categories.disableCategories"}</label><br/>
-	<input type="radio" id="categoriesEnabledOn" {if $categoriesEnabled}checked="checked" {/if}name="categoriesEnabled" value="1"/>&nbsp;<label for="categoriesEnabledOn">{translate key="admin.categories.enableCategories"}</label><br/>
+	{translate key="admin.categories.enable.description"}<br />
+	<input type="radio" id="categoriesEnabledOff" {if !$categoriesEnabled}checked="checked" {/if}name="categoriesEnabled" value="0"/>&nbsp;<label for="categoriesEnabledOff">{translate key="admin.categories.disableCategories"}</label><br />
+	<input type="radio" id="categoriesEnabledOn" {if $categoriesEnabled}checked="checked" {/if}name="categoriesEnabled" value="1"/>&nbsp;<label for="categoriesEnabledOn">{translate key="admin.categories.enableCategories"}</label><br />
 	<input type="submit" value="{translate key="common.record"}" class="button defaultButton"/>
 </form>
 

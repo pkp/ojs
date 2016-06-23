@@ -15,7 +15,7 @@
 {/strip}
 
 {if $subscriptionCreated}
-<br/>{translate key="manager.subscriptions.subscriptionCreatedSuccessfully"}<br/>
+<br />{translate key="manager.subscriptions.subscriptionCreatedSuccessfully"}<br/>
 {/if}
 
 <p>{translate key="manager.subscriptions.selectSubscriber.desc"}</p>

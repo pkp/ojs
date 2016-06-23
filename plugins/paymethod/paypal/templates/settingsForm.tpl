@@ -13,15 +13,15 @@
 	<tr valign="top">
 		<td class="label" width="20%">{fieldLabel name="paypalurl" required="true" key="plugins.paymethod.paypal.settings.paypalurl"}</td>
 		<td class="value" width="80%">
-			<input type="text" class="textField" name="paypalurl" id="paypalurl" size="50" value="{$paypalurl|escape}" /><br/>
-			{translate key="plugins.paymethod.paypal.settings.paypalurl.description"}<br/>
+			<input type="text" class="textField" name="paypalurl" id="paypalurl" size="50" value="{$paypalurl|escape}" /><br />
+			{translate key="plugins.paymethod.paypal.settings.paypalurl.description"}<br />
 			&nbsp;
 		</td>
 	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">{fieldLabel name="selleraccount" required="true" key="plugins.paymethod.paypal.settings.selleraccount"}</td>
 		<td class="value" width="80%">
-			<input type="text" class="textField" name="selleraccount" id="selleraccount" value="{$selleraccount|escape}" /><br/>
+			<input type="text" class="textField" name="selleraccount" id="selleraccount" value="{$selleraccount|escape}" /><br />
 			{translate key="plugins.paymethod.paypal.settings.selleraccount.description"}
 		</td>
 	</tr>

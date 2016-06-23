@@ -18,27 +18,27 @@
 <ol>
 	<li>
 		<h4><a href="{url op="setup" path="1"}">{translate key="manager.setup.details"}</a></h4>
-		{translate key="manager.setup.details.description"}<br/>
+		{translate key="manager.setup.details.description"}<br />
 		&nbsp;
 	</li>
 	<li>
 		<h4><a href="{url op="setup" path="2"}">{translate key="manager.setup.policies"}</a></h4>
-		{translate key="manager.setup.policies.description"}<br/>
+		{translate key="manager.setup.policies.description"}<br />
 		&nbsp;
 	</li>
 	<li>
 		<h4><a href="{url op="setup" path="3"}">{translate key="manager.setup.submissions"}</a></h4>
-		{translate key="manager.setup.submissions.description"}<br/>
+		{translate key="manager.setup.submissions.description"}<br />
 		&nbsp;
 	</li>
 	<li>
 		<h4><a href="{url op="setup" path="4"}">{translate key="manager.setup.management"}</a></h4>
-		{translate key="manager.setup.management.description"}<br/>
+		{translate key="manager.setup.management.description"}<br />
 		&nbsp;
 	</li>
 	<li>
 		<h4><a href="{url op="setup" path="5"}">{translate key="manager.setup.look"}</a></h4>
-		{translate key="manager.setup.look.description"}<br/>
+		{translate key="manager.setup.look.description"}<br />
 		&nbsp;
 	</li>
 </ol>

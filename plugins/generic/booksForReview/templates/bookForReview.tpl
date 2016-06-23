@@ -11,7 +11,7 @@
 {assign var="pageTitle" value=plugins.generic.booksForReview.public.bookDetails}
 {include file="common/header.tpl"}
 
-<br/>
+<br />
 
 <div id="bookForReviewDetails">
 

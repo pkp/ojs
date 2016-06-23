@@ -1342,10 +1342,10 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="editor.article.enterReviewerRecommendation">Éñtèr Rèvîèwèr Rèçómmèñðåtîóñ</message>
 	<message key="editor.article.recommendation">Rèçómmèñðåtîóñ</message>
 	<message key="editor.article.selectReviewer">ßèlèçt Rèvîèwèr</message>
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Ñåmè lîñkþ tó rèvîèwèr'þ prófîlè.<br/>
-Råtîñgþ îþ óüt óf 5 (Éxçèllèñt).<br/>
-Wèèkþ rèfèrþ tó åvèrågè pèrîóð óf tîmè tó çómplètè å rèvîèw.<br/>
-Låtèþt îþ ðåtè óf móþt rèçèñtlý åççèptèð rèvîèw.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Ñåmè lîñkþ tó rèvîèwèr'þ prófîlè.<br />
+Råtîñgþ îþ óüt óf 5 (Éxçèllèñt).<br />
+Wèèkþ rèfèrþ tó åvèrågè pèrîóð óf tîmè tó çómplètè å rèvîèw.<br />
+Låtèþt îþ ðåtè óf móþt rèçèñtlý åççèptèð rèvîèw.<br />
 Æçtîvè îþ hów måñý rèvîèwþ årè çürrèñtlý bèîñg çóñþîðèrèð ór üñðèrwåý.]]></message>
 	<message key="editor.article.replaceReviewer">Rèplåçè Rèvîèwèr</message>
 	<message key="editor.article.editorToEnter">Éðîtór tó èñtèr rèçómmèñðåtîóñ/çómmèñtþ fór rèvîèwèr</message>
@@ -2050,8 +2050,8 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.searches.confirmDelete">Ærè ýóü þürè ýóü wîþh tó ðèlètè thîþ ßèårçh?</message>
 	<message key="rt.admin.searches.createSearch">Çrèåtè ßèårçh</message>
 	<message key="rt.admin.validateUrls">Vålîðåtè ÜRLþ fór Rèåðîñg Tóólþ</message>
-	<message key="rt.admin.validateUrls.description"><![CDATA[Póþþîblý îñvålîð ÜRLþ fór þèårçh þîtèþ årè ðîþplåýèð bèlów.<br/>
-Ýóü þhóülð måñüållý vèrîfý åñý ÜRLþ mårkèð åþ îñvålîð, åþ thîþ tèþt îþ ñót 100% åççüråtè.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Póþþîblý îñvålîð ÜRLþ fór þèårçh þîtèþ årè ðîþplåýèð bèlów.<br />
+Ýóü þhóülð måñüållý vèrîfý åñý ÜRLþ mårkèð åþ îñvålîð, åþ thîþ tèþt îþ ñót 100% åççüråtè.<br />
 Vålîðåtîóñ måý fåîl óñ þèårçh ÜRLþ thåt rèqüîrè póþtèð fórm ðåtå.]]></message>
 	<message key="rt.admin.validateUrls.validate">Vålîðåtè</message>
 	<message key="rt.admin.validateUrls.urlIsInvalid">{$url} îþ ñót vålîð.</message>
@@ -2398,7 +2398,7 @@ Authors who publish with this journal agree to the following terms:
 	<message key="manager.setup.layout.leftSidebar">Left Sidebar</message>
 	<message key="manager.setup.layout.unselected">Unselected</message>
 	<message key="manager.setup.layout.rightSidebar">Right Sidebar</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br />If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
 	<message key="manager.languages.alternateLocaleInstructions">This system optionally allows certain critical information to be entered in several additional languages. To use this feature, select alternate locales and choose from the options listed below.</message>
 	<message key="manager.groups.create">Create Position Title</message>
 	<message key="manager.groups.enableBoard.description"><![CDATA[Under <a href="{$aboutEditorialTeamUrl}">People</a> in About the Journal:]]></message>
@@ -2464,7 +2464,7 @@ Authors who publish with this journal agree to the following terms:
 	<message key="payment.membership.ends">Ends</message>
 	<message key="payment.subscription.renew">Renew Subscription</message>
 	<message key="payment.subscription.expires">Expires</message>
-	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>WARNING: Your current version of PHP does not meet the minimum requirements for installation. It is recommended to upgrade to a more recent release of PHP.</strong>]]></message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br /><strong>WARNING: Your current version of PHP does not meet the minimum requirements for installation. It is recommended to upgrade to a more recent release of PHP.</strong>]]></message>
 	<message key="installer.connectionCharsetInstructions"><![CDATA[The encoding to use for data sent to and received from the database. This should be the same as the client character set. Note that this capability is only supported with MySQL >= 4.1.1 or PostgreSQL >= 7.1. Select "Not applicable" if your database server does not meet these requirements.]]></message>
 	<message key="installer.databaseCharsetInstructions"><![CDATA[The encoding to use for data stored in the database. Note that this capability is only supported with MySQL >= 4.1.1 or PostgreSQL >= 7.1. Select "Not applicable" if your database server does not meet these requirements.]]></message>
 	<message key="rt.admin.settings.printerFriendly">Print version (provides a printer-friendly version of an item).</message>

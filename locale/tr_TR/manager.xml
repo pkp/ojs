@@ -30,7 +30,7 @@
 	<message key="manager.language.forms">Formlar</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">Belirtmiş olduğunuz dil herhangi bir dile özgü dergi ayarlarını değiştirecektir.</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Varsayılan ayarları çağır</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[ADS desteklenen dillerden herhangi biriyle kullanılabilir. ADS çok dilli bir sistem yapısına sahiptir ve her sayfada diller arasında geçiş yapabilme özelliği ile kullanıcıların istedikleri dilde veri girmesini sağlar.<br /><br/>ADS tarafından desteklenen bir dil aşağıdaki listede yoksa, site yönetim arayüzünden dili yüklemek için site yöneticinize başvurun. Yeni dil desteği eklemek için ilgili talimatlar ve ADS belgelerine bakınız.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[ADS desteklenen dillerden herhangi biriyle kullanılabilir. ADS çok dilli bir sistem yapısına sahiptir ve her sayfada diller arasında geçiş yapabilme özelliği ile kullanıcıların istedikleri dilde veri girmesini sağlar.<br /><br />ADS tarafından desteklenen bir dil aşağıdaki listede yoksa, site yönetim arayüzünden dili yüklemek için site yöneticinize başvurun. Yeni dil desteği eklemek için ilgili talimatlar ve ADS belgelerine bakınız.]]></message>
 	<message key="manager.languages.noneAvailable">Üzgünüz, başka bir ek dil kullanılamaz. Bu dergide ek bir dil kullanmak istiyorsanız site yöneticinize başvurunuz.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Bu dergi sitesi için varsayılan dil olacaktır.</message>
 	<message key="manager.managementPages">Yönetim Sayfaları</message>

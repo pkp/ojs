@@ -21,7 +21,7 @@
 	<message key="plugins.generic.backup.db">Base de dados</message>
 	<message key="plugins.generic.backup.files">Arquivos</message>
 	<message key="plugins.generic.backup.code">Código fonte</message>
-	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>AVISO:</strong> A ferramenta de dump da base de dados não foi configurada no arquivo config.inc.php. A ferramenta depende da configuração do servidor e do tipo de base de dados em uso. A ferramenta deve ser especificada na seção [cli], nas opções de "dump". Para MySQL, use a ferramenta mysqldump, conforme exemplo:<br/>
+	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>AVISO:</strong> A ferramenta de dump da base de dados não foi configurada no arquivo config.inc.php. A ferramenta depende da configuração do servidor e do tipo de base de dados em uso. A ferramenta deve ser especificada na seção [cli], nas opções de "dump". Para MySQL, use a ferramenta mysqldump, conforme exemplo:<br />
 <pre>[cli]
 dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
 </pre>
@@ -31,10 +31,10 @@ Os parâmetros "%s" serão substituídos, na ordem, por:<ol>
 	<li>Senha de acesso à base de dados</li>
 	<li>Nome da base de dados</li>
 </ol>
-Note que isto envolve informar dados de acesso à base de dados via linha de comando, o que pode ser considerado um risco de segurança.<br/><br/>]]></message>
-	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>AVISO:</strong> A ferramenta "tar" não foi configurada no arquivo config.inc.php. A ferramenta depende da configuração do servidor. A ferramenta deve ser especificada na seção [cli], nas opções de "tar", informando o caminho físico para o utilitário "tar", conforme exemplo:<br/>
+Note que isto envolve informar dados de acesso à base de dados via linha de comando, o que pode ser considerado um risco de segurança.<br /><br/>]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>AVISO:</strong> A ferramenta "tar" não foi configurada no arquivo config.inc.php. A ferramenta depende da configuração do servidor. A ferramenta deve ser especificada na seção [cli], nas opções de "tar", informando o caminho físico para o utilitário "tar", conforme exemplo:<br />
 <pre>[cli]
 tar = "/bin/tar"
-</pre><br/>]]></message>
+</pre><br />]]></message>
 	<message key="plugins.generic.backup.failure"><![CDATA[<strong>AVISO: </strong>Pode ter ocorrido um erro durante o processo de criação da cópia de segurança. A causa mais provável é de permissão de arquivo.]]></message>
 </locale>

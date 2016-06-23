@@ -31,7 +31,7 @@ function togglePossibleResponses(newValue, multipleResponsesElementTypesString) 
 {/literal}
 </script>
 
-<br/>
+<br />
 <form id="reviewFormElementForm" method="post" action="{url op="updateReviewFormElement" anchor="possibleResponses"}">
 	<input type="hidden" name="reviewFormId" value="{$reviewFormId}"/>
 	<input type="hidden" name="reviewFormElementId" value="{$reviewFormElementId}"/>
@@ -98,7 +98,7 @@ function togglePossibleResponses(newValue, multipleResponsesElementTypesString) 
 		{if $notFirstResponseItem}
 				</table>
 		{/if}
-		<br/>
+		<br />
 		<input type="submit" name="addResponse" value="{translate key="manager.reviewFormElements.addResponseItem"}" class="button" {if not in_array($elementType, $multipleResponsesElementTypes)}disabled="disabled"{/if}/>
 	</td>
 </tr>

@@ -26,7 +26,7 @@
 	<message key="plugins.generic.xmlGalley.settings.notAvailable">Nije dostupno</message>
 
 	<message key="plugins.generic.xmlGalley.settings.externalXSLT">Spoljašnje XSLT renderovnje putem command-line (npr. Xalan)</message>
-	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Unesite putanju do XSLT aplikacije za renderovanje sa svim neophodnim argumentima. Koristite %xsl da biste zamenili lokaciju XSL stylesheet fajla i %xml da biste zamenili lokaciju XML izvornog fajla; npr: <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Unesite putanju do XSLT aplikacije za renderovanje sa svim neophodnim argumentima. Koristite %xsl da biste zamenili lokaciju XSL stylesheet fajla i %xml da biste zamenili lokaciju XML izvornog fajla; npr: <br /><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">Testiraj XSLT</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">Test spoljašnjeg XSLT je uspešno završen.</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">Test spoljašnjeg XSLT NIJE uspešno završen.</message>
@@ -36,7 +36,7 @@
 	<message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM Journal Publishing DTD</a> &rarr; XHTML]]></message>
 
 	<message key="plugins.generic.xmlGalley.settings.xslFOP">Omogući renderovanje PDF prikaza korišćenjem XSL-FO (npr. FOP)</message>
-	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Unesite putanju do  FO procesora sa svim potrebnim argumentima. Koristite %fo da zamenite lokaciju XSL-FO fajla, i %pdf da zamenite lokaciju PDF fajla; npr: <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Unesite putanju do  FO procesora sa svim potrebnim argumentima. Koristite %fo da zamenite lokaciju XSL-FO fajla, i %pdf da zamenite lokaciju PDF fajla; npr: <br /><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired">Spoljašnji command-line FO procesor mora biti definisan.</message>
 
 	<message key="plugins.generic.xmlGalley.settings.customXSL">Prilagođeni XSL stylesheet</message>

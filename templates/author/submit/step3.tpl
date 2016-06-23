@@ -105,7 +105,7 @@ function moveAuthor(dir, authorIndex) {
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-affiliation" key="user.affiliation"}</td>
 	<td width="80%" class="value">
-		<textarea name="authors[{$authorIndex|escape}][affiliation][{$formLocale|escape}]" class="textArea" id="authors-{$authorIndex|escape}-affiliation" rows="5" cols="40">{$author.affiliation[$formLocale]|escape}</textarea><br/>
+		<textarea name="authors[{$authorIndex|escape}][affiliation][{$formLocale|escape}]" class="textArea" id="authors-{$authorIndex|escape}-affiliation" rows="5" cols="40">{$author.affiliation[$formLocale]|escape}</textarea><br />
 		<span class="instruct">{translate key="user.affiliation.description"}</span>
 	</td>
 </tr>
@@ -142,7 +142,7 @@ function moveAuthor(dir, authorIndex) {
 	<td width="80%" class="value" colspan="2"><input type="radio" name="primaryContact" value="{$authorIndex|escape}"{if $primaryContact == $authorIndex} checked="checked"{/if} /> <label for="primaryContact">{translate key="author.submit.selectPrincipalContact"}</label> <input type="submit" name="delAuthor[{$authorIndex|escape}]" value="{translate key="author.submit.deleteAuthor"}" class="button" /></td>
 </tr>
 <tr>
-	<td colspan="2"><br/></td>
+	<td colspan="2"><br /></td>
 </tr>
 {/if}
 </table>
@@ -178,7 +178,7 @@ function moveAuthor(dir, authorIndex) {
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-0-affiliation" key="user.affiliation"}</td>
 	<td width="80%" class="value">
-		<textarea name="authors[0][affiliation][{$formLocale|escape}]" class="textArea" id="authors-0-affiliation" rows="5" cols="40"></textarea><br/>
+		<textarea name="authors[0][affiliation][{$formLocale|escape}]" class="textArea" id="authors-0-affiliation" rows="5" cols="40"></textarea><br />
 		<span class="instruct">{translate key="user.affiliation.description"}</span>
 	</td>
 </tr>

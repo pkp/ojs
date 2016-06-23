@@ -823,8 +823,8 @@ Il vostro server supporta mbstring: <strong>{$supportsMBString}</strong>]]></mes
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Sono elencati di seguito gli URL che probabilmente non sono validi per la ricerca nei siti.<br/>
-&#x00C8; necessario verificare manualmente gli URL segnati come non validi, in quanto questo test non &#x00E8; accurato al 100%.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Sono elencati di seguito gli URL che probabilmente non sono validi per la ricerca nei siti.<br />
+&#x00C8; necessario verificare manualmente gli URL segnati come non validi, in quanto questo test non &#x00E8; accurato al 100%.<br />
 Il processo di validazione pu&#x00F2; non funzionare sugli URL di ricerca che richiedono dati inviati tramite form.]]></message>
 
 	<!-- RT Entities -->

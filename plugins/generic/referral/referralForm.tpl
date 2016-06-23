@@ -18,7 +18,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<br/>
+<br />
 
 <form name="referral" method="post" action="{url op="updateReferral"}">
 {if $referralId}

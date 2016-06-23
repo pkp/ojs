@@ -107,7 +107,7 @@ function moveAuthor(dir, authorIndex) {
 	<tr valign="top">
 		<td class="label">{fieldLabel name="authors-$authorIndex-affiliation" key="user.affiliation"}</td>
 		<td class="value">
-			<textarea name="authors[{$authorIndex|escape}][affiliation][{$formLocale|escape}]" class="textArea" id="authors-{$authorIndex|escape}-affiliation" rows="5" cols="40">{$author.affiliation[$formLocale]|escape}</textarea><br/>
+			<textarea name="authors[{$authorIndex|escape}][affiliation][{$formLocale|escape}]" class="textArea" id="authors-{$authorIndex|escape}-affiliation" rows="5" cols="40">{$author.affiliation[$formLocale]|escape}</textarea><br />
 			<span class="instruct">{translate key="user.affiliation.description"}</span>
 		</td>
 	</tr>
@@ -181,7 +181,7 @@ function moveAuthor(dir, authorIndex) {
 	<tr valign="top">
 		<td class="label">{fieldLabel name="authors-0-affiliation" key="user.affiliation"}</td>
 		<td class="value">
-			<textarea name="authors[0][affiliation][{$formLocale|escape}]" class="textArea" id="authors-0-affiliation" rows="5" cols="40"></textarea><br/>
+			<textarea name="authors[0][affiliation][{$formLocale|escape}]" class="textArea" id="authors-0-affiliation" rows="5" cols="40"></textarea><br />
 			<span class="instruct">{translate key="user.affiliation.description"}</span>
 		</td>
 	</tr>

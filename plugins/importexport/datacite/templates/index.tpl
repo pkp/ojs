@@ -12,7 +12,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<br/>
+<br />
 
 <h3>{translate key="plugins.importexport.common.settings"}</h3>
 {if !empty($configurationErrors)}

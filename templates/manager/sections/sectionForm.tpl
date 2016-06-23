@@ -97,7 +97,7 @@ function checkEditorAssignments() {
 <tr valign="top">
 	<td rowspan="4" class="label">{fieldLabel suppressId="true" key="submission.indexing"}</td>
 	<td class="value">
-		{translate key="manager.section.submissionsToThisSection"}<br/>
+		{translate key="manager.section.submissionsToThisSection"}<br />
 		<input type="checkbox" name="metaReviewed" id="metaReviewed" value="1" {if $metaReviewed}checked="checked"{/if} />
 		{fieldLabel name="metaReviewed" key="manager.sections.submissionReview"}
 	</td>

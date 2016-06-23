@@ -115,7 +115,7 @@
 		<td class="value"><input type="file" name="upload" class="uploadField" /></td>
 	</tr>
 	</table>
-	<br/>
+	<br />
 	<input type="submit" class="button defaultButton" value="{translate key="submission.notes.createNewNote"}" />
 	</form>
 {else}

@@ -19,7 +19,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<br/>
+<br />
 
 <form id="bookForReviewForm" method="post" action="{url op="updateBookForReview"}" enctype="multipart/form-data">
 {if $bookId}

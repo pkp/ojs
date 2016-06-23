@@ -377,10 +377,10 @@ Quý vị có thể cho người dùng biết lý do tại sao tài khoản củ
 	<!-- Navigation sidebar menu -->
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Tên có liên kết sẽ dẫn tới hồ sơ của người phản biện.<br/>
-Đánh giá có giá trị trong khoảng 5 (Xuất sắc).<br/>
-Số tuần chỉ khoảng thời gian hoàn thành phản biện.<br/>
-Mới nhất là ngày ngày bài phản biện gần nhất được chấp nhận.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Tên có liên kết sẽ dẫn tới hồ sơ của người phản biện.<br />
+Đánh giá có giá trị trong khoảng 5 (Xuất sắc).<br />
+Số tuần chỉ khoảng thời gian hoàn thành phản biện.<br />
+Mới nhất là ngày ngày bài phản biện gần nhất được chấp nhận.<br />
 Đang xử lý là số người phản biện đang được cân nhắc hoặc tiến hành.]]></message>
 
 
@@ -799,8 +799,8 @@ Máy chủ của quý vị hiện có hỗ trợ mbstring: <strong>{$supportsMBS
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[URLs của các website tìm kiếm có khả năng không còn hoạt động được hiển thị dưới đây.<br/>
-Quý vị nên tự kiểm tra các URL được đánh dấu là không hoạt động vì kiểm tra trên đây không hoàn toàn chính xác.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[URLs của các website tìm kiếm có khả năng không còn hoạt động được hiển thị dưới đây.<br />
+Quý vị nên tự kiểm tra các URL được đánh dấu là không hoạt động vì kiểm tra trên đây không hoàn toàn chính xác.<br />
 Việc xác thực có thể không thành công đối với các website tìm kiếm đòi phải dữ liệu phải được gửi đi ở dạng mẫu biểu (form).]]></message>
 	
 	<!-- RT Entities -->

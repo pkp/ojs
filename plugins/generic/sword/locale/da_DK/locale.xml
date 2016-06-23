@@ -26,9 +26,9 @@
 	<message key="plugins.generic.sword.depositPoints.type.optionalFixed">Valgfri; Fastlagt</message>
 	<message key="plugins.generic.sword.depositPoints.type.manager">Kun for tidsskriftschef</message>
 	<message key="plugins.generic.sword.depositPoints.type.description"><![CDATA[<h4>Type deponeringssteder:</h4>
-<p><strong>Automatisk</strong>: Deponeringsstedet fremkommer automatisk. Hele SWARD deponeringsstedet er specificeret. Brugernavn og adgangskode skal angives. Deponeringsstedet fremkommer efter at godkendelsens forfatter er blevet  underrettet.<br/>
-<strong>Valgfri; Fleksibel</strong>: Forfatteren kan selv vælge om artiklen skal deponeres. Den angivne  URL  viser hen til et servicedokument, og forfatteren kan, udfra dette dokument, vælge et specifikt deponeringssted. Deponeringsstedet fremkommer efter at godkendelsens forfatter er blevet  underrettet.<br/>
-<strong>Valgfri; Fastlagt</strong>: Forfatteren kan selv vælge om artiklen skal deponeres. URL’en angiver det specifikke SWARD deponeringssted. Deponeringsstedet fremkommer efter at godkendelsens forfatter er blevet  underrettet.<br/>
+<p><strong>Automatisk</strong>: Deponeringsstedet fremkommer automatisk. Hele SWARD deponeringsstedet er specificeret. Brugernavn og adgangskode skal angives. Deponeringsstedet fremkommer efter at godkendelsens forfatter er blevet  underrettet.<br />
+<strong>Valgfri; Fleksibel</strong>: Forfatteren kan selv vælge om artiklen skal deponeres. Den angivne  URL  viser hen til et servicedokument, og forfatteren kan, udfra dette dokument, vælge et specifikt deponeringssted. Deponeringsstedet fremkommer efter at godkendelsens forfatter er blevet  underrettet.<br />
+<strong>Valgfri; Fastlagt</strong>: Forfatteren kan selv vælge om artiklen skal deponeres. URL’en angiver det specifikke SWARD deponeringssted. Deponeringsstedet fremkommer efter at godkendelsens forfatter er blevet  underrettet.<br />
 <strong> Kun for tidsskriftschef</strong>: Kun tidsskriftschefen må anvende dette deponeringssted. Den angivne  URL  viser hen til et servicedokument. Deponeringen foretages manuelt af tidsskriftschefen under anvendelse af Import/Eksport  grænsefladen under ’Administration af tidsskriftet’.
 </p>]]></message>
 	<message key="plugins.generic.sword.depositPoints.password.description">Såfremt adgangskode ikke angives her vil du og/eller forfatteren blive afkrævet en sådan så snart deponeringsstedet fremkommer. Bemærk at denne adgangskode kan aflæses af tidsskriftscheferne og at den vil blive gemt ukrypteret.</message>

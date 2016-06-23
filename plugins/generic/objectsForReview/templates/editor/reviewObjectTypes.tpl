@@ -96,7 +96,7 @@ function toggleChecked() {
 {/if}
 </form>
 
-<br/>
+<br />
 <p><a class="action" href="{url op="createReviewObjectType"}">{translate key="plugins.generic.objectsForReview.editor.objectType.create"}</a></p>
 
 </div>

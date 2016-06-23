@@ -26,7 +26,7 @@
 	<message key="plugins.generic.xmlGalley.settings.notAvailable">Недоступно</message>
 
 	<message key="plugins.generic.xmlGalley.settings.externalXSLT">Внешний преобразователь XSLT, работающий в режиме командной строки (например, Xalan)</message>
-	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Введите полный путь к утилите преобразования XSLT, включая все требуемые аргументы.  Используйте %xsl для подстановки размещения стилевого файла XSL и %xml для подстановки размещения исходного XML-файла; например, <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Введите полный путь к утилите преобразования XSLT, включая все требуемые аргументы.  Используйте %xsl для подстановки размещения стилевого файла XSL и %xml для подстановки размещения исходного XML-файла; например, <br /><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">Проверить XSLT</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">Тест внешнего XSLT прошел успешно.</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">Тест внешнего XSLT завершился с ошибкой.</message>
@@ -36,7 +36,7 @@
 	<message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM Journal Publishing DTD</a> &rarr; XHTML]]></message>
 
 	<message key="plugins.generic.xmlGalley.settings.xslFOP">Включить генерацию PDF-гранок с использованием XSL-FO (например, FOP)</message>
-	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Введите полный путь к процессору FO, включая все требуемые аргументы.  Используйте %fo для подстановки размещения файла XSL-FO и %pdf для подстановки размещения PDF-файла; например, <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Введите полный путь к процессору FO, включая все требуемые аргументы.  Используйте %fo для подстановки размещения файла XSL-FO и %pdf для подстановки размещения PDF-файла; например, <br /><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired">Необходимо указать внешний процессор FO, работающий в режиме командной строки.</message>
 
 	<message key="plugins.generic.xmlGalley.settings.customXSL">Пользовательская таблица стилей XSL</message>
