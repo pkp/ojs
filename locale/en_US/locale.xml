@@ -540,10 +540,10 @@ You may optionally provide the user with a reason for disabling their account.</
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to reviewer's profile.<br/>
-Ratings is out of 5 (Excellent).<br/>
-Weeks refers to average period of time to complete a review.<br/>
-Latest is date of most recently accepted review.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to reviewer's profile.<br />
+Ratings is out of 5 (Excellent).<br />
+Weeks refers to average period of time to complete a review.<br />
+Latest is date of most recently accepted review.<br />
 Active is how many reviews are currently being considered or underway.]]></message>
 
 
@@ -1129,8 +1129,8 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Possibly invalid URLs for search sites are displayed below.<br/>
-You should manually verify any URLs marked as invalid, as this test is not 100% accurate.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Possibly invalid URLs for search sites are displayed below.<br />
+You should manually verify any URLs marked as invalid, as this test is not 100% accurate.<br />
 Validation may fail on search URLs that require posted form data.]]></message>
 
 	<!-- RT Entities -->

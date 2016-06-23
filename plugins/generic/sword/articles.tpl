@@ -55,7 +55,7 @@ function changeDepositPoint() {
 {/literal}
 </script>
 
-<br/>
+<br />
 <form action="{plugin_url path="deposit"}" method="post" id="articles">
 
 <div id="settings">

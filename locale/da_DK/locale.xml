@@ -361,10 +361,10 @@ Du kan vælge at give brugeren en begrundelse for deaktiveringen af kontoen.</me
 </ol>]]></message>
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Navngiv links til bedømmers profil.<br/>
-Klassificeringerne går fra 5 (Fremragende) og nedefter.<br/>
-Uger refererer til den gennemsnitlige tid, det tager at foretage en bedømmelse.<br/>
-Senest er datoen for den seneste accepterede bedømmelse.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Navngiv links til bedømmers profil.<br />
+Klassificeringerne går fra 5 (Fremragende) og nedefter.<br />
+Uger refererer til den gennemsnitlige tid, det tager at foretage en bedømmelse.<br />
+Senest er datoen for den seneste accepterede bedømmelse.<br />
 Aktiv er antallet af bedømmelser, der i øjeblikket overvejes eller er forestående.]]></message>
 
 	<!-- Section Editor -->
@@ -813,8 +813,8 @@ Serveren understøtter i øjeblikket mbstring: <strong>{$supportsMBString}</stro
 	<message key="rt.admin.settings.addComment.unauthenticated">Brugere skal ikke være registreret for at sende, og anonymitet er tilladt.</message>
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Eventuelt ugyldige URL-adresser på opslagswebsteder er vist nedenfor.<br/>
-Du bør manuelt kontrollere alle de URL-adresser, der er markeret som ugyldige, da denne test ikke er 100% nøjagtig.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Eventuelt ugyldige URL-adresser på opslagswebsteder er vist nedenfor.<br />
+Du bør manuelt kontrollere alle de URL-adresser, der er markeret som ugyldige, da denne test ikke er 100% nøjagtig.<br />
 Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver sendte formulardata.]]></message>
 
 	<!-- RT Entities -->

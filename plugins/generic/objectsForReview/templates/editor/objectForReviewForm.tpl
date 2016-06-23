@@ -10,7 +10,7 @@
  *}
 {include file="common/header.tpl"}
 
-<br/>
+<br />
 <form id="objectForReviewForm" method="post" action="{url op="updateObjectForReview"}" enctype="multipart/form-data">
 <input type="hidden" name="objectId" value="{$objectId|escape}" />
 <input type="hidden" name="reviewObjectTypeId" value="{$reviewObjectType->getId()|escape}" />
@@ -160,14 +160,14 @@ function movePerson(dir, personIndex) {
 					{foreach name=options from=$possibleOptions key=optionId item=optionItem}
 						<input type="checkbox" name="ofrSettings[{$metadataId|escape}][]" id="ofrSettings-{$metadataId|escape}-{$optionItem.order|escape}" value="{$optionItem.order|escape}"{if !empty($ofrSettingValue) && in_array($optionItem.order, $ofrSettingValue)} checked="checked"{/if} />
 						<label for="ofrSettings-{$metadataId|escape}-{$optionItem.order|escape}">{$optionItem.content|escape}</label>
-						<br/>
+						<br />
 					{/foreach}
 				{elseif $metadata->getMetadataType() == REVIEW_OBJECT_METADATA_TYPE_RADIO_BUTTONS}
 					{assign var=possibleOptions value=$metadata->getLocalizedPossibleOptions()}
 					{foreach name=options from=$possibleOptions key=optionId item=optionItem}
-						<input type="radio" name="ofrSettings[{$metadataId|escape}]" id="ofrSettings-{$metadataId|escape}-{$optionItem.order|escape}" value="{$optionItem.order|escape}"{if $optionItem.order == $ofrSettingValue} checked="checked"{/if}/><label for="ofrSettings-{$metadataId|escape}-{$optionItem.order|escape}">{$optionItem.content|escape}</label><br/>
+						<input type="radio" name="ofrSettings[{$metadataId|escape}]" id="ofrSettings-{$metadataId|escape}-{$optionItem.order|escape}" value="{$optionItem.order|escape}"{if $optionItem.order == $ofrSettingValue} checked="checked"{/if}/><label for="ofrSettings-{$metadataId|escape}-{$optionItem.order|escape}">{$optionItem.content|escape}</label><br />
 					{/foreach}
-					<input type="radio" name="ofrSettings[{$metadataId|escape}]" id="ofrSettings-{$metadataId|escape}-0" value=""{if 0 == $ofrSettingValue} checked="checked"{/if}/><label for="ofrSettings-{$metadataId|escape}-0">{translate key="plugins.generic.objectsForReview.editor.objectForReview.noAnswer"}</label><br/>
+					<input type="radio" name="ofrSettings[{$metadataId|escape}]" id="ofrSettings-{$metadataId|escape}-0" value=""{if 0 == $ofrSettingValue} checked="checked"{/if}/><label for="ofrSettings-{$metadataId|escape}-0">{translate key="plugins.generic.objectsForReview.editor.objectForReview.noAnswer"}</label><br />
 				{elseif $metadata->getMetadataType() == REVIEW_OBJECT_METADATA_TYPE_LANG_DROP_DOWN_BOX}
 					<select name="ofrSettings[{$metadataId|escape}][]" id="ofrSettings-{$metadataId|escape}" size="5" class="selectMenu" multiple="multiple">
 						{html_options options=$validLanguages selected=$ofrSettingValue}

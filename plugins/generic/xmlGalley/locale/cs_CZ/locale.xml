@@ -26,7 +26,7 @@
 	<message key="plugins.generic.xmlGalley.settings.notAvailable">Není dostupné</message>
 
 	<message key="plugins.generic.xmlGalley.settings.externalXSLT">Externí renderovač XSLT z příkazového řádku (např.: Xalan)</message>
-	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Vložte úplnou cestu k renderovacímu nástroji XSLT spolu s požadovanými argumenty. Použijte %xsl pro nahrazení umístění souboru XSL stylesheetu a %xml pro nahrazení umístění zdrojového XML souboru; např.: <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Vložte úplnou cestu k renderovacímu nástroji XSLT spolu s požadovanými argumenty. Použijte %xsl pro nahrazení umístění souboru XSL stylesheetu a %xml pro nahrazení umístění zdrojového XML souboru; např.: <br /><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">Test XSLT</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">Test externího XSLT úspěšný.</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">Externí XSLT test selhal.</message>
@@ -36,7 +36,7 @@
 	<message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM Journal Publishing DTD</a> → XHTML]]></message>
 
 	<message key="plugins.generic.xmlGalley.settings.xslFOP">Povolit renderování PDF sazebnic s použitím XSL-FO (např.: FOP)</message>
-	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Vložte kompletní cestu k FO procesoru spolu s požadovanými argumenty. Použijte %fo pro nahrazení umístění souboru XSL-FO a %pdf pro nahrazení umístění PDF souboru; např.: <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Vložte kompletní cestu k FO procesoru spolu s požadovanými argumenty. Použijte %fo pro nahrazení umístění souboru XSL-FO a %pdf pro nahrazení umístění PDF souboru; např.: <br /><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired">Externí procesor FO příkazového řádku musí být specifikován.</message>
 
 	<message key="plugins.generic.xmlGalley.settings.customXSL">Přizpůsobený XSL stylesheet</message>

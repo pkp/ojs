@@ -28,7 +28,7 @@
        <message key="plugins.generic.xmlGalley.settings.notAvailable">Недоступно</message>
 
        <message key="plugins.generic.xmlGalley.settings.externalXSLT">Зовнішній консольний візуалізатор XSLT (наприклад, Xalan)</message>
-       <message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Введіть повний шлях до інструменту рендерінгу XSLT з усіма необхідними аргументами.  Використовуйте %xsl для позначення місця знаходження файлу з таблицею XSL та %xml для позначення місця знаходження файлу XML-джерела; наприклад: <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+       <message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Введіть повний шлях до інструменту рендерінгу XSLT з усіма необхідними аргументами.  Використовуйте %xsl для позначення місця знаходження файлу з таблицею XSL та %xml для позначення місця знаходження файлу XML-джерела; наприклад: <br /><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
        <message key="plugins.generic.xmlGalley.settings.externalXSLTTest">Тестувати XSLT</message>
        <message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">Зовнішній тест XSLT успішний.</message>
        <message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">Зовнішній тест XSLT не вдався.</message>
@@ -38,7 +38,7 @@
        <message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM Journal Publishing DTD</a> &rarr; XHTML]]></message>
 
        <message key="plugins.generic.xmlGalley.settings.xslFOP">Дозволити рендерінг гранок PDF galleys з використанням XSL-FO (наприклад, FOP)</message>
-       <message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Введіть повний шлях до процесора FO з усіма необхідними аргументами.  Використовуйте %fo для позначення місця знаходження файлу XSL-FO та %pdf для позначення місця знаходження файлу PDF; наприклад: <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+       <message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Введіть повний шлях до процесора FO з усіма необхідними аргументами.  Використовуйте %fo для позначення місця знаходження файлу XSL-FO та %pdf для позначення місця знаходження файлу PDF; наприклад: <br /><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
        <message key="plugins.generic.xmlGalley.settings.xslFOPRequired">Має бути визначений зовнішній консольний процесор FO.</message>
 
        <message key="plugins.generic.xmlGalley.settings.customXSL">Власна таблиця стилю XSL</message>

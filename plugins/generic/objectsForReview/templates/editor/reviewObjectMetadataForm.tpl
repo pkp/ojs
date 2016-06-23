@@ -32,7 +32,7 @@ function togglePossibleOptions(newValue, multipleOptionsTypesString) {
 {/literal}
 </script>
 
-<br/>
+<br />
 <form id="reviewObjectMetadataForm" method="post" action="{url op="updateReviewObjectMetadata" anchor="possibleOptions"}">
 <input type="hidden" name="reviewObjectTypeId" value="{$reviewObjectTypeId|escape}"/>
 <input type="hidden" name="metadataId" value="{$metadataId|escape}"/>
@@ -98,7 +98,7 @@ function togglePossibleOptions(newValue, multipleOptionsTypesString) {
 		{if $notFirstOptionItem}
 				</table>
 		{/if}
-		<br/>
+		<br />
 		<input type="submit" name="addOption" value="{translate key="plugins.generic.objectsForReview.editor.objectMetadata.addOptionItem"}" class="button" {if not in_array($metadataType, $multipleOptionsTypes)}disabled="disabled"{/if}/>
 	</td>
 </tr>

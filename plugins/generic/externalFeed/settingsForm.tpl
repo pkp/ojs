@@ -46,10 +46,10 @@
 
 {if $externalFeedStyleSheet}
 {translate key="common.fileName"}: <a href="{$publicFilesDir}/{$externalFeedStyleSheet.uploadName|escape:"url"}" class="file">{$externalFeedStyleSheet.name|escape}</a> {$externalFeedStyleSheet.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteStyleSheet" value="{translate key="common.delete"}" class="button" />
-<br/>
+<br />
 {/if}
 
-<br/>
+<br />
 
 <input type="submit" name="save" class="button defaultButton" value="{translate key="common.save"}"/><input type="button" class="button" value="{translate key="common.cancel"}" onclick="history.go(-1)"/>
 </form>

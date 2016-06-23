@@ -209,7 +209,7 @@
 	<td>{translate key="rt.metadata.dublinCore.coverage"}</td>
 	<td>{translate key="rt.metadata.pkp.coverage"}</td>
 	<td>
-		{if $article->getLocalizedCoverageGeo()}{$article->getLocalizedCoverageGeo()|escape}{assign var=notFirstItem value=1}{/if}{if $article->getLocalizedCoverageChron()}{if $notFirstItem}, <br/>{/if}{$article->getLocalizedCoverageChron()|escape}{assign var=notFirstItem value=1}{/if}{if $article->getLocalizedCoverageSample()}{if $notFirstItem}, <br/>{/if}{$article->getLocalizedCoverageSample()|escape}{assign var=notFirstItem value=1}{/if}
+		{if $article->getLocalizedCoverageGeo()}{$article->getLocalizedCoverageGeo()|escape}{assign var=notFirstItem value=1}{/if}{if $article->getLocalizedCoverageChron()}{if $notFirstItem}, <br />{/if}{$article->getLocalizedCoverageChron()|escape}{assign var=notFirstItem value=1}{/if}{if $article->getLocalizedCoverageSample()}{if $notFirstItem}, <br/>{/if}{$article->getLocalizedCoverageSample()|escape}{assign var=notFirstItem value=1}{/if}
 	</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
@@ -218,7 +218,7 @@
 	<td>{translate key="rt.metadata.dublinCore.rights"}</td>
 	<td>{translate key="rt.metadata.pkp.copyright"}</td>
 	<td>
-		{translate key="submission.copyrightStatement" copyrightHolder=$article->getLocalizedCopyrightHolder()|escape copyrightYear=$article->getCopyrightYear()|escape}<br/>
+		{translate key="submission.copyrightStatement" copyrightHolder=$article->getLocalizedCopyrightHolder()|escape copyrightYear=$article->getCopyrightYear()|escape}<br />
 		{if $ccLicenseBadge}
 			{$ccLicenseBadge}
 		{elseif $article->getLicenseURL()}

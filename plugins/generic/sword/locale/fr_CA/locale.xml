@@ -26,9 +26,9 @@
 	<message key="plugins.generic.sword.depositPoints.type.optionalFixed">Optionnel; fixé</message>
 	<message key="plugins.generic.sword.depositPoints.type.manager">Directeur uniquement</message>
 	<message key="plugins.generic.sword.depositPoints.type.description"><![CDATA[<h4>Types de point de dépôt :</h4>
-<p><strong>Automatique</strong> : le dépôt survient automatiquement. Le point de dépôt SWORD est spécifié intégralement. Un non d'utilisateur et mot de passe doit être spécifié. Le dépôt survient après avoir aviser l'auteur de son acceptation.<br/>
-<strong>Optionnel; flexible</strong> : l'auteur peut choisir ou non d'effectuer un dépôt. L'URL spécifiée indique un document de service, et l'auteur peut choisir que point de dépôt spécifique utiliser à partir de ce document. Le dépôt survient après avoir avisé l'auteur de son acceptation.<br/>
-<strong>Optionnel; fixé</strong> : l'auteur peut choisir ou non d'effecteur un dépôt. L'URL spécifie le point de dépôt SWORD spécifique. Le dépôt survient après avoir avisé l'auteur de son acceptation.<br/>
+<p><strong>Automatique</strong> : le dépôt survient automatiquement. Le point de dépôt SWORD est spécifié intégralement. Un non d'utilisateur et mot de passe doit être spécifié. Le dépôt survient après avoir aviser l'auteur de son acceptation.<br />
+<strong>Optionnel; flexible</strong> : l'auteur peut choisir ou non d'effectuer un dépôt. L'URL spécifiée indique un document de service, et l'auteur peut choisir que point de dépôt spécifique utiliser à partir de ce document. Le dépôt survient après avoir avisé l'auteur de son acceptation.<br />
+<strong>Optionnel; fixé</strong> : l'auteur peut choisir ou non d'effecteur un dépôt. L'URL spécifie le point de dépôt SWORD spécifique. Le dépôt survient après avoir avisé l'auteur de son acceptation.<br />
 <strong>Directeur uniquement</strong> : seulement le directeur de la revue peut utiliser ce point de dépôt. L'URL indique un document de service. Le dépôt est effectué manuellement par le directeur de la revue en utilisant l'interface "Importer/Exporter" dans "Gestion de la revue".]]></message>
 	<message key="plugins.generic.sword.depositPoints.password.description">Si vous ne spécifiez pas un mot de passe ici, vous et/ou l'auteur sera(ez) invité(s) à en spécifiez un quand le dépôt surviendra. À noter que ce mot de passe sera visible à tous les Directeurs de revue et sera stocké non chiffré dans la base de données.</message>
 	<message key="plugins.generic.sword.depositPoints.name">Nom</message>

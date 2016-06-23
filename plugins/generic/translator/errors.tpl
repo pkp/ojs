@@ -18,7 +18,7 @@
 	<li class="current"><a href="{url op="check" path=$locale}">{translate key="plugins.generic.translator.check"}</a></li>
 </ul>
 
-<br/>
+<br />
 
 <form action="{url op="saveLocaleChanges" path=$locale}" method="post">
 <input type="hidden" name="redirectUrl" value="{url page="translate"}" />
@@ -73,14 +73,14 @@
 				<input type="hidden" name="stack[]" value="{$error.key|escape}" />
 				<br />
 				{if ($defaultValue|explode:"\n"|@count > 1) || (strlen($defaultValue) > 80)}
-					{translate key="plugins.generic.translator.file.reference"}<br/>
-					<textarea name="junk[]" class="textArea" cols="80" readonly="true" rows="5">{$defaultValue|escape}</textarea><br/>
-					{translate key="plugins.generic.translator.file.translation"}<br/>
+					{translate key="plugins.generic.translator.file.reference"}<br />
+					<textarea name="junk[]" class="textArea" cols="80" readonly="true" rows="5">{$defaultValue|escape}</textarea><br />
+					{translate key="plugins.generic.translator.file.translation"}<br />
 					<textarea name="stack[]" class="textArea" cols="80" rows="5"></textarea>
 				{else}
-					{translate key="plugins.generic.translator.file.reference"}<br/>
-					<input type="text" class="textField" name="junk[]" size="80" readonly="true" value="{$defaultValue|escape}" /><br/>
-					{translate key="plugins.generic.translator.file.translation"}<br/>
+					{translate key="plugins.generic.translator.file.reference"}<br />
+					<input type="text" class="textField" name="junk[]" size="80" readonly="true" value="{$defaultValue|escape}" /><br />
+					{translate key="plugins.generic.translator.file.translation"}<br />
 					<input type="text" class="textField" name="stack[]" size="80" value="" />
 				{/if}
 				<br />&nbsp;

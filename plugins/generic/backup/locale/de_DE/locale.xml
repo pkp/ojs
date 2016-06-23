@@ -21,7 +21,7 @@
 	<message key="plugins.generic.backup.db">Datenbank</message>
 	<message key="plugins.generic.backup.files">Dateien</message>
 	<message key="plugins.generic.backup.code">Code</message>
-	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>WARNUNG:</strong> Das Werkzeug für einen Datenbank-Dump ist nicht in der Konfigurationsdatei config.inc.php konfiguriert worden. Die Konfiguration hängt von Ihrer Serverkonfiguration und von dem benutzten Datenbank-Typ ab. Sie sollte in einer Rubrik namens [cli] spezifiziert werden, in einer Konfigurationseinstellung namens "dump". Für MySQL benutzen Sie bitte mysqldump, d.h.:<br/>
+	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>WARNUNG:</strong> Das Werkzeug für einen Datenbank-Dump ist nicht in der Konfigurationsdatei config.inc.php konfiguriert worden. Die Konfiguration hängt von Ihrer Serverkonfiguration und von dem benutzten Datenbank-Typ ab. Sie sollte in einer Rubrik namens [cli] spezifiziert werden, in einer Konfigurationseinstellung namens "dump". Für MySQL benutzen Sie bitte mysqldump, d.h.:<br />
 <pre>[cli]
 dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
 </pre>
@@ -31,10 +31,10 @@ Die "%s"-Platzhalter werden in dieser Reihenfolge ersetzt:<ol>
 	<li>Database password</li>
 	<li>Database name</li>
 </ol>
-Bitte beachten Sie, dass Sie dafür das Datenbank-Passwort in der Kommandozeile angeben müssen, was ein Sicherheitsrisiko darstellt.<br/><br/>]]></message>
-	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>WARNUNG:</strong> Das "tar"-Werkzeug ist nicht in der Konfigurationsdatei config.inc.php konfiguriert worden. Die Konfiguration hängt von Ihrer Serverkonfiguration ab. Sie sollte in einer Rubrik namens [cli] spezifiziert werden, in einer Konfigurationseinstellung namens "tar", so dass sie den Pfad zu "tar" enthält, d.h.:<br/>
+Bitte beachten Sie, dass Sie dafür das Datenbank-Passwort in der Kommandozeile angeben müssen, was ein Sicherheitsrisiko darstellt.<br /><br/>]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>WARNUNG:</strong> Das "tar"-Werkzeug ist nicht in der Konfigurationsdatei config.inc.php konfiguriert worden. Die Konfiguration hängt von Ihrer Serverkonfiguration ab. Sie sollte in einer Rubrik namens [cli] spezifiziert werden, in einer Konfigurationseinstellung namens "tar", so dass sie den Pfad zu "tar" enthält, d.h.:<br />
 <pre>[cli]
 tar = "/bin/tar"
-</pre><br/>]]></message>
+</pre><br />]]></message>
 	<message key="plugins.generic.backup.failure"><![CDATA[<strong>WARNUNG: </strong>Ein Fehler könnte während des Backups aufgetreten sein. Die häufigste Fehlerursache sind fehlende Dateiberechtigungen.]]></message>
 </locale>

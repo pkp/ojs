@@ -17,10 +17,10 @@
 
 	<input type="radio" name="publishData" id="publishData-none" value="none" {if $publishData eq "none"}checked="checked" {/if}/>
 	<label for="publishData-none">{translate key="plugins.generic.dataverse.suppFile.publishDataNone"}</label>
-	<br/>
+	<br />
 	<input type="radio" name="publishData" id="publishData-dataverse" value="dataverse" {if $publishData eq "dataverse"}checked="checked" {/if}/>
 	<label for="publishData-dataverse">{translate key="plugins.generic.dataverse.suppFile.publishDataDataverse" dataverseTermsOfUseUrl=$dataverseTermsOfUseUrl}</label>
-	<br/>
+	<br />
 	{if $dataCitation}
 		<p style="margin-left: 25px;">{translate key="plugins.generic.dataverse.suppFile.dataCitationDescription"}</p>
 		<p style="margin-left: 25px;">{$dataCitation|strip_unsafe_html}</p>

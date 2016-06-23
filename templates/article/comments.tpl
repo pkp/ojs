@@ -24,7 +24,7 @@
 			{translate key="comments.nReplies" num=$comment->getChildCommentCount()}
 		{/if}
 
-		<br/>
+		<br />
 
 		{if $poster}
 			{url|assign:"publicProfileUrl" page="user" op="viewPublicProfile" path=$poster->getId()}
@@ -49,7 +49,7 @@
 	{if $needsSeparator}
 		&nbsp;|&nbsp;
 	{else}
-		<br/><br/>
+		<br /><br/>
 	{/if}
 	<a class="action" href="{url page="comment" op="add" path=$article->getId()|to_array:$galleyId}" target="_parent">{translate key="rt.addComment"}</a>
 {/if}

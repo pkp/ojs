@@ -24,7 +24,7 @@
 	}
 {/literal}</script>
 
-<br/>
+<br />
 
 <div id="suppFiles">
 	<form action="{plugin_url path="process"}" method="post" id="suppFilesForm">

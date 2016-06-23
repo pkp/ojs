@@ -60,9 +60,9 @@ $(document).ready(function() { setupTableDND("#dragTable",
 		</tr>
 	{/if}
 	</table>
-<br/>
+<br />
 
-<a href="{url op="createContext" path=$version->getVersionId()}" class="action">{translate key="rt.admin.contexts.createContext"}</a><br/>
+<a href="{url op="createContext" path=$version->getVersionId()}" class="action">{translate key="rt.admin.contexts.createContext"}</a><br />
 </div>
 
 {include file="common/footer.tpl"}

@@ -26,9 +26,9 @@
 	<message key="plugins.generic.sword.depositPoints.type.optionalFixed">Volitelný; Pevný</message>
 	<message key="plugins.generic.sword.depositPoints.type.manager">Pouze manažer</message>
 	<message key="plugins.generic.sword.depositPoints.type.description"><![CDATA[<h4>Typy bodu ukládání:</h4>
-<p><strong>Automatický</strong>: Úložiště se objevuje automaticky. Je plně definováno místo SWORD úložiště. Musí být zadány login a heslo. Místo uložení se objeví po upozornění autora o přijetí.<br/>
-<strong>Volitelné; Flexibilní</strong>: Autor se může rozhodnout, zda uložit, či ne. URL ukazuje servisní dokument a autor se může rozhodnout, které specifické místo uložení použije. Místo uložení se objeví po upozornění autora o přijetí.<br/>
-<strong>Volitelný; Pevný</strong>: Autor se může rozhodnou, zda uložit, či ne. URL určuje specifické místo SWORD úložiště. Místo uložení se objeví po upozornění autora o přijetí.<br/>
+<p><strong>Automatický</strong>: Úložiště se objevuje automaticky. Je plně definováno místo SWORD úložiště. Musí být zadány login a heslo. Místo uložení se objeví po upozornění autora o přijetí.<br />
+<strong>Volitelné; Flexibilní</strong>: Autor se může rozhodnout, zda uložit, či ne. URL ukazuje servisní dokument a autor se může rozhodnout, které specifické místo uložení použije. Místo uložení se objeví po upozornění autora o přijetí.<br />
+<strong>Volitelný; Pevný</strong>: Autor se může rozhodnou, zda uložit, či ne. URL určuje specifické místo SWORD úložiště. Místo uložení se objeví po upozornění autora o přijetí.<br />
 <strong>Pouze manažer</strong>: Pouze manažer časopisu může používat toto ukládací místo. URL indikuje servisní dokument. Uložení je prováděno manuálně manažerem časopisu pomocí rozhraní Import/Export interface ve Správě časopisu.
 </p>]]></message>
 	<message key="plugins.generic.sword.depositPoints.password.description">Pokud zde nevložíte heslo, vy a/nebo autor bude tázán na heslo vždy když se objeví místo pro ukládání. Vemte na vědomí, že heslo bude viditelné všem manažerům časopisu a bude uloženo v databázi nezašifrované.</message>

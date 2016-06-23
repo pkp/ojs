@@ -31,14 +31,14 @@
 			{foreach name=responses from=$possibleResponses key=responseId item=responseItem}
 				<input id="check-{$responseId|escape}" type="checkbox"/>
 				<label for="check-{$responseId|escape}">{$responseItem.content}</label>
-				<br/>
+				<br />
 			{/foreach}
 		{elseif $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_RADIO_BUTTONS}
 			{assign var=possibleResponses value=$reviewFormElement->getLocalizedPossibleResponses()}
 			{foreach name=responses from=$possibleResponses key=responseId item=responseItem}
 				<input id="radio-{$responseId|escape}" name="{$reviewFormElement->getId()}" type="radio">
 				<label for="radio-{$responseId|escape}">{$responseItem.content}</label>
-				<br/>
+				<br />
 			{/foreach}
 		{elseif $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_DROP_DOWN_BOX}
 			<select size="1" class="selectMenu">
@@ -51,7 +51,7 @@
 	</p>
 {/foreach}
 
-<br/>
+<br />
 
 <form id="previewReviewForm" method="post" action="{url op="selectReviewForm" path=$articleId|to_array:$reviewId}">
 	<p><input type="submit" value="{translate key="common.close"}" class="button defaultButton" /></p>

@@ -27,7 +27,7 @@ function toggleChecked() {
 {/literal}
 </script>
 
-<br/>
+<br />
 
 <div id="issues">
 <form action="{plugin_url path="importIssues"}" method="post" id="issues">

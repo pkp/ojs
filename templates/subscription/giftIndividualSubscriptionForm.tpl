@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<br/>
+<br />
 
 <form method="post" id="subscriptionGiftForm" action="{url op="payPurchaseGiftSubscription"}">
 

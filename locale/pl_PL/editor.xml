@@ -110,7 +110,7 @@ Przed przesłaniem tekstu do redakcji techniczne, powiadom autora o decyzji i wy
 	<message key="editor.navigation.createIssue">Stwórz nowy numer</message>
 	<message key="editor.navigation.issueArchive">Archiwalne numery</message>
 	<message key="editor.article.designateReviewVersion">Oznacz tekst jako zrecenzowany</message>
-	<message key="editor.article.uploadReviewVersion"><![CDATA[Wyślij tekst pozbawiony informacji o autorach, przeznaczony do recenzji<br/>]]></message>
+	<message key="editor.article.uploadReviewVersion"><![CDATA[Wyślij tekst pozbawiony informacji o autorach, przeznaczony do recenzji<br />]]></message>
 	<message key="editor.article.showSuppFile">Przedstaw tekst recenzentom</message>
 	<message key="editor.article.layoutAndProof">Wersja finalna</message>
 	<message key="editor.article.clear">Czyść</message>

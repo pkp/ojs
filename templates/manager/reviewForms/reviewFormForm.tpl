@@ -20,7 +20,7 @@
 	</ul>
 {/if}
 
-<br/>
+<br />
 
 <form id="reviewFormForm" method="post" action="{url op="updateReviewForm"}">
 {if $reviewFormId}

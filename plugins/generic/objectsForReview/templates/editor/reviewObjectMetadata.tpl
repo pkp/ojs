@@ -43,7 +43,7 @@ function toggleChecked() {
 	<li><a href="{url op="previewReviewObjectType" path=$typeId}">{translate key="plugins.generic.objectsForReview.editor.objectType.preview"}</a></li>
 </ul>
 
-<br/>
+<br />
 
 <div id="reviewObjectMetadata">
 <form id='reviewObjectMetadataForm' action="{url op="copyOrUpdateReviewObjectMetadata" path=$typeId}" method="post">

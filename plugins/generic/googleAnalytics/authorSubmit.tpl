@@ -14,7 +14,7 @@
 		{fieldLabel name="authors-$authorIndex-gs" key="plugins.generic.googleAnalytics.authorAccount"}
 	</td>
 	<td class="value">
-		<input type="text" name="authors[{$authorIndex|escape}][gs]" id="authors-{$authorIndex|escape}-gs" value="{$author.gs|escape}" size="30" maxlength="90" class="textField" /><br/>
+		<input type="text" name="authors[{$authorIndex|escape}][gs]" id="authors-{$authorIndex|escape}-gs" value="{$author.gs|escape}" size="30" maxlength="90" class="textField" /><br />
 		<span class="instruct">{translate key="plugins.generic.googleAnalytics.authorAccount.description"}</span>
 	</td>
 </tr>

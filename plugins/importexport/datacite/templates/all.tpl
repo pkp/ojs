@@ -24,7 +24,7 @@
 	}
 {/literal}</script>
 
-<br/>
+<br />
 
 <div id="allUnregistered">
 	<form action="{plugin_url path="process"}" method="post" id="exportAllForm">

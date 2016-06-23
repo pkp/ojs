@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<br/>
+<br />
 
 <div id="versions">
 <table class="listing" width="100%">
@@ -45,14 +45,14 @@
 	{/if}
 	</table>
 </div>	
-<br/>
+<br />
 
-<a href="{url op="createVersion"}" class="action">{translate key="rt.admin.versions.createVersion"}</a><br/>
+<a href="{url op="createVersion"}" class="action">{translate key="rt.admin.versions.createVersion"}</a><br />
 
 <a href="{url op="restoreVersions"}" onclick="return confirm('{translate|escape:"jsparam" key="rt.admin.versions.confirmRestore"}')" class="action">{translate key="rt.admin.versions.restoreVersions"}</a>
 
-<br/>
-<br/>
+<br />
+<br />
 
 <form method="post" action="{url op="importVersion"}" enctype="multipart/form-data">
 	<input type="file" class="uploadField" name="versionFile" />

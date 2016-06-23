@@ -480,10 +480,10 @@ Pilih model untuk menangani aspek proses editorial ni. (Untuk menunjuk Editor Pe
 	<!-- Navigation sidebar menu -->
 	
 	<!-- digunakan oleh editor dalam review naskah/ pengeditan -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[tautan nama ke profil Reviewer. <br/>
-Penilaian adalah dari 5 (Bagus sekali).<br/>
-Minggu mengacu ke periode waktu rata-rata untuk menyelesaikan review.<br/>
-Yang terbaru adalah tanggal review paling baru yang diterima.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[tautan nama ke profil Reviewer. <br />
+Penilaian adalah dari 5 (Bagus sekali).<br />
+Minggu mengacu ke periode waktu rata-rata untuk menyelesaikan review.<br />
+Yang terbaru adalah tanggal review paling baru yang diterima.<br />
 Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berlangsung.]]></message>
 	
 	<!-- Editor Bagian -->
@@ -1006,7 +1006,7 @@ Server Anda sekarang support mbstring: <strong>{$supportsMBString}</strong>]]></
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[URL invalid yang mungkin untuk situs pencari ditampilkan di bawah ini.<br/>Anda harus memverifikasi secara manual URL apapun yang ditandai sebagai invalid, karena tes ini tidak 100% akurat.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[URL invalid yang mungkin untuk situs pencari ditampilkan di bawah ini.<br />Anda harus memverifikasi secara manual URL apapun yang ditandai sebagai invalid, karena tes ini tidak 100% akurat.<br/>
 Validasi mungkin gagal dalam pencarian URL memerlukan form data yang diposting.]]></message>
 	
 	<!-- RT Entities -->

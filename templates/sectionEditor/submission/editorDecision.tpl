@@ -96,7 +96,7 @@
 				{if !($editorRevisionExists or $authorRevisionExists or $reviewVersionExists) or !$submission->getMostRecentEditorDecisionComment()}{assign var=copyeditingUnavailable value=1}{else}{assign var=copyeditingUnavailable value=0}{/if}
 				<input type="submit" {if $copyeditingUnavailable}disabled="disabled" {/if}name="setCopyeditFile" value="{translate key="editor.submissionReview.sendToCopyediting"}" class="button" />
 				{if $copyeditingUnavailable}
-					<br/>
+					<br />
 					<span class="instruct">{translate key="editor.submissionReview.cannotSendToCopyediting"}</span>
 				{/if}
 			</td>

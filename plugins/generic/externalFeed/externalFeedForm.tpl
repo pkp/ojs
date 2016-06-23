@@ -18,7 +18,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<br/>
+<br />
 
 <form id="externalFeed" method="post" action="{plugin_url path="update"}">
 {if $feedId}

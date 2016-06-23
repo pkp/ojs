@@ -58,7 +58,7 @@
 				{include file="search/searchFilter.tpl" displayIf="activeFilter" filterName="indexTerms" filterValue=$indexTerms key="search.indexTermsLong"}
 			{/if}
 		</table>
-		<br/>
+		<br />
 		{if $hasEmptyFilters}
 			{capture assign="emptyFilters"}
 				<table class="data">
