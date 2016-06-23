@@ -585,7 +585,7 @@
 	<message key="admin.saveSystemConfig">ßåvè Çóñfîgüråtîóñ</message>
 	<message key="admin.displayNewSystemConfig">Ðîþplåý Ñèw Çóñfîgüråtîóñ</message>
 	<message key="admin.systemConfigFileReadError"><![CDATA[Thè çóñfîgüråtîóñ fîlè <tt>çóñfîg.îñç.php</tt> ðóèþ ñót èxîþt, îþ ñót rèåðåblè, ór îþ îñvålîð.]]></message>
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ÑÒTÉ!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ÑÒTÉ!</h4>
 <p>Thè þýþtèm çóülð ñót åütómåtîçållý óvèrwrîtè thè çóñfîgüråtîóñ fîlè. Tó åpplý ýóür çóñfîgüråtîóñ çhåñgèþ ýóü müþt ópèñ <tt>çóñfîg.îñç.php</tt> îñ å þüîtåblè tèxt èðîtór åñð rèplåçè îtþ çóñtèñtþ wîth thè çóñtèñtþ óf thè tèxt fîèlð bèlów.</p>]]></message>
 	<message key="admin.displayConfigFileInstructions"><![CDATA[Thè çóñtèñtþ óf ýóür üpðåtèð çóñfîgüråtîóñ årè ðîþplåýèð bèlów. Tó åpplý thè çóñfîgüråtîóñ çhåñgèþ ýóü müþt ópèñ <tt>çóñfîg.îñç.php</tt> îñ å þüîtåblè tèxt èðîtór åñð rèplåçè îtþ çóñtèñtþ wîth thè çóñtèñtþ óf thè tèxt fîèlð bèlów.]]></message>
 	<message key="admin.configFileUpdatedInstructions"><![CDATA[Ýóür çóñfîgüråtîóñ fîlè håþ bèèñ þüççèþþfüllý üpðåtèð. Plèåþè ñótè thåt îf ýóür þîtè ñó lóñgèr füñçtîóñþ çórrèçtlý ýóü måý ñèèð tó måñüållý fîx ýóür çóñfîgüråtîóñ bý èðîtîñg <tt>çóñfîg.îñç.php</tt> ðîrèçtlý.]]></message>

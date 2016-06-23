@@ -269,7 +269,7 @@ Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuraci�
 </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>¡ATENCIÓN!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>¡ATENCIÓN!</h4>
 <p>El sistema no pudo sobreescribir automáticamente el archivo de configuración. Para aplicar los cambios a la configuración es necesario que abra el archivo <tt>config.inc.php</tt> en un editor de texto y reemplace el texto existente con el que le mostramos abajo.</p>]]></message>
 
 	<!-- Subscription Management -->
