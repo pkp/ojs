@@ -13,14 +13,11 @@
  
 <locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.generic.piwik.displayName">Piwik Eklentisi</message>
-	<message key="plugins.generic.piwik.description"><![CDATA[Integrate OJS with Piwik, a free and open source web site traffic analysis application. Requires that Piwik is already installed. Please see the <a href="http://piwik.org/" title="piwik site">Piwik site</a> for more information.]]></message>
 	<message key="plugins.generic.piwik.manager.settings">Ayarlar</message>
 	<message key="plugins.generic.piwik.manager.piwikSettings">Piwik Ayarları</message>
-	<message key="plugins.generic.piwik.manager.settings.description"><![CDATA[<p>With this plugin enabled Piwik may be used to collect and analyze web site usage and traffic for this journal. Please note that this plugin requires that Piwik is already installed. Please see the <a href="http://piwik.org/" title="Piwik site">Piwik site</a> for more information.</p>]]></message>
 	<message key="plugins.generic.piwik.manager.settings.piwikUrl">Pwik Url</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikUrlInstructions">Pwik kurulumunuz için tam rul (Örneğin: http://myserver.net/piwik).</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikUrlRequired">Lütfen http:// dahil geçerli bir url giriniz.</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikSiteId">Site Prufil S.N.</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"><![CDATA[Within Piwik, click on Settings -> Websites. The site profile ID is displayed next to your site profile name.]]></message>
 	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired">Lütfen bir site profil N.S.'sı giriniz.</message>
 </locale>

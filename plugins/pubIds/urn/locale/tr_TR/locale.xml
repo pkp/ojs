@@ -22,7 +22,6 @@
 	<message key="plugins.pubIds.urn.manager.settings.description">ADS içinde URN'leri yönetmek ve kullanmak için aşağıdaki kurulum adımlarını yapınız:</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSettings">URN Ayarları</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">URN Ön Eki</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnPrefix.description">The URN prefix is the fix, never changing part of the URN (e.g. "urn:nbn:de:0000-").</message>
 	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Seç</message>
 	<message key="plugins.pubIds.urn.manager.settings.journalContent">Dergi İçeriği</message>
 
@@ -43,12 +42,10 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">URN Son Eki</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default">Varsayılan şablonları kullan.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default.description"><![CDATA[sayılar için%j.v%vi%i <br />makaleler için %j.v%vi%i.%a <br />dizgiler için %j.v%vi%i.%a.g%g <br />Ek dosyalar için %j.v%vi%i.%a.s%s.]]></message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern">Use the pattern entered below to generate URN suffixes. Use %j for journal initials, %v for the volume number, %i for the issue number, %Y for the year, %a for the OJS article ID, %g for the OJS galley ID, %s for the OJS supplementary file ID and %p for the page number.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.issues">sayılar için</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.articles">makaleler için</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.galleys">dizgiler için</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">ek dosyalar için</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Enter an individual URN suffix for each published item independent and different from the "Custom Identifier" mentioned in the previous option. You'll find an additional URN input field on each item's metadata page.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs">URN'leri temizle</message>
 
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.confirm">Açık URN'leri silemek istediğinizden emin misiniz?</message>
@@ -63,4 +60,7 @@
 	<message key="plugins.pubIds.urn.editor.excludeIssueObjectsURN">Sayı öğelerini hariç tut</message>
 	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN">URN'lerin Sayı Öğelerini Temizle</message>
 	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description">Bu sayı için şu halde belirlenmiş tüm öğelerin (makale, baskı ve ek dosyalar) URN'lerini temizlemek için bu butonu kullanabilirsiniz.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.journalContentRequired">Lütfen atanabilecek URN öğelerini seçiniz.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver">Çözümleyici URL</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(ör. http://nbn-resolving.de/)</message>
 </locale>

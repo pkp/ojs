@@ -22,7 +22,6 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Dergi İçeriği</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Lütfen DOI'lerin atanacağı nesneleri seçiniz.</message>
 	<message key="plugins.pubIds.doi.manager.settings.explainDois">Lütfen Dijital Nesne Belirleyici (DOI) atanacak yayımlanmış nesneleri seçiniz:</message>
-	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>NOTE:</strong> When using the <a href="http://www.crossref.org" target="_new">CrossRef</a> DOIs, please select articles. Article is seen as work, i.e. entity of intellectual and artistic content. Thus, article is the publishing object the CrossRef DOI export and registration is based upon.]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Sayılar</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Makaleler</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">Dizgiler</message>
@@ -65,7 +64,7 @@
 	<message key="plugins.pubIds.doi.editor.doiReassign">Yeniden DOI Ata</message>
 	<message key="plugins.pubIds.doi.editor.doiReassign.description">{$pubObjectType} seçeneği için var olan DOI'leri kaldırmak üzere bu kutuyu işaretleyin.</message>
 	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi">Sayı Nesnelerini Hariç Tut</message>
-	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi.description">Use this button to exclude the objects (articles, galleys, and supp files) currently scheduled for this issue from assigning them a DOI. Note that the objects that are added/scheduled later will not be affected. You will still have the possibility to use the single object exclusion options.</message>
 	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Sayı öğelerinin DOI'lerini temizle</message>
 	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Bu sayı için şu halde belirlenmiş tüm öğelerin (makale, baskı ve ek dosyalar) DOI'lerini temizlemek için bu butonu kullanabilirsiniz.</message>
+	<message key="plugins.pubIds.doi.editor.doi.issueObjects">Sayı Öğelerine ait DOI'ler</message>
 </locale>

@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name = "Turkish">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.gateways.metsGateway.displayName">METS Geçit Eklentisi</message>
 	<message key="plugins.gateways.metsGateway.settings">Ayarlar</message>
 	<message key="plugins.gateways.metsGateway.description"><![CDATA[Bu eklenti belirli bir dergi için METS biçiminde ham (raw) XML verisi sağlar. <strong> NOT: Bu eklenti etkinleştirildiğinde XML biçiminde (içeriği base64 olarak kodlanmıştır) dergiye sınırsız erişim sağlayan bir güvenlik sorunu oluşur ve web hizmetlerinin kullanımına yöneliktir.</ strong>]]></message>

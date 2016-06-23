@@ -18,4 +18,9 @@
 	<message key="plugins.importexport.doaj.export">Exporta les dades de la revista al DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contact">Contacta amb el DOAJ per a l'inclusió</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">Perquè la vostra revista consti al DOAJ, envieu-hi aquest formulari parcialment emplenat de manera automàtica i completeu-lo amb la resta d'informació que pugueu aportar.</message>
+	<message key="plugins.importexport.doaj.markRegistered.success">Els objectes seleccionats han estat marcats com a registrats!</message>
+	<message key="plugins.importexport.doaj.export.issue">Exporta números</message>
+	<message key="plugins.importexport.doaj.export.issueInfo">Exporta els números seleccionats en XML</message>
+	<message key="plugins.importexport.doaj.export.article">Exporta articles</message>
+	<message key="plugins.importexport.doaj.export.articleInfo">Exporta els articles seleccionats en XML</message>
 </locale>

@@ -37,20 +37,9 @@ Yönetim:
 	<message key="plugins.importexport.duracloud.export">Veri İhracı</message>
 	<message key="plugins.importexport.duracloud.export.issues">Sayı İhracı</message>
 	<message key="plugins.importexport.duracloud.export.results">Sonuç İhracı</message>
-	<message key="plugins.importexport.duracloud.export.results.description">Here are the results of the export action for each of the selected issues.</message>
-	<message key="plugins.importexport.duracloud.export.results.success"><![CDATA[{$issueIdentification} was successfully exported to <a href="{$targetLocation}">{$targetLocationEscaped}</a>.]]></message>
-	<message key="plugins.importexport.duracloud.export.results.failure">{$issueIdentification} could not be exported.</message>
 	<message key="plugins.importexport.duracloud.import.results">Sonuçları Al</message>
-	<message key="plugins.importexport.duracloud.import.results.description">Here are the results of the import action for each of the selected issues.</message>
-	<message key="plugins.importexport.duracloud.import.results.success">{$issueIdentification} was successfully imported from "{$contentId}".</message>
-	<message key="plugins.importexport.duracloud.import.results.failure">{$contentId} could not be imported.</message>
 	<message key="plugins.importexport.duracloud.selectIssue">Sayı Seç</message>
 	<message key="plugins.importexport.duracloud.import.issues">Sayıları Al</message>
-	<message key="plugins.importexport.duracloud.import.description"><![CDATA[This plugin supports data import based on the native.dtd Document Type Definition. Supported root nodes are &lt;article&gt;, &lt;articles&gt;, &lt;issue&gt;, and &lt;issues&gt;.]]></message>
 	<message key="plugins.importexport.duracloud.import.error">Veri Alma Hatası</message>
-	<message key="plugins.importexport.duracloud.import.error.description">One or more errors occurred during import. Please check to ensure that the format of the import file correctly matches the specification. Specific details of the import errors are listed below.</message>
 	<message key="plugins.importexport.duracloud.cliError">HATA:</message>
-	<message key="plugins.importexport.duracloud.export.error.couldNotWrite">Could not write to the file "{$fileName}".</message>
-	<message key="plugins.importexport.duracloud.import.success">Import Successful</message>
-	<message key="plugins.importexport.duracloud.import.success.description">The import was successful. Successfully-imported items are listed below.</message>
 </locale>
