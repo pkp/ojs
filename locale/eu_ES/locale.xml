@@ -327,7 +327,7 @@ Kontuan izan OAI interfazea desgaitu daitekeela gune honetarako, OJS sistema-kon
 	
 	<!-- System Information -->
 	<message 
-key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ABISUA!</div>
+key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ABISUA!</h4>
 <p>Sistemak ezin izan du automatikoki gainidatzi konfigurazio-fitxategia. Konfigurazio-aldaketak aplikatzeko, testu-editore egoki batekin ireki beharko duzu <tt>config.inc.php</tt> eta bertako edukia aldatu beheko testu-eremuaren edukiarekin.</p>]]></message>
 
 	<!-- Site Administrator Merge Users -->	

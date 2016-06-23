@@ -384,7 +384,7 @@
 </ul>]]></message>
 
 	<!-- Информация системы -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ВНИМАНИЕ!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ВНИМАНИЕ!</h4>
 <p>Система не сможет автоматически перезаписать конфигурационный файл. Чтобы применить Ваши измененные настройки конфигурации, Вам нужно открыть <tt>config.inc.php</tt> в подходящем текстовом редакторе и заменить его содержимое содержимым текстового поля ниже.</p>]]></message>
 
 

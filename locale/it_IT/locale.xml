@@ -269,7 +269,7 @@ Da notare che l'interfaccia OAI può essere disabilitata per l'intero sito dal f
 </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTA!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTA!</h4>
 <p>Il sistema non &#x00E8; riuscito a sovrascrivere il file di configurazione. Per effettuare delle modifiche &#x00E8; necessario aprire il file <tt>config.inc.php</tt> con un editor di testo e sostituirne il contenuto con il testo della form sottostante.</p>]]></message>
 
 

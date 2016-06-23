@@ -357,7 +357,7 @@
 </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ЗАБЕЛЕШКА!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ЗАБЕЛЕШКА!</h4>
 <p>Системот не може автоматски да запишува врз конфигурациската датотека.За да се применуваат конфигурациските промени мора да ја отворите <tt>config.inc.php</tt> во соодветен текст едитор и да ја замени нејзината содржина со содржината на полето за текст подолу.</p>]]></message>
 
 

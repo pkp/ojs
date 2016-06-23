@@ -244,7 +244,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   </message>
   <!-- System Information -->
   <message key="admin.overwriteConfigFileInstructions">
-    <![CDATA[<h4>注意</div>
+    <![CDATA[<h4>注意</h4>
 <p>設定ファイルを更新できませんでした。設定の変更を適用するためには、<tt>config.inc.php</tt>をエディタで開いて、以下の内容に置き換える必要があります。</p>]]>
   </message>
   <!-- Subscription Management -->

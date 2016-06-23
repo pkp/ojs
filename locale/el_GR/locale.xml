@@ -281,7 +281,7 @@
         </ul>]]></message>
 
         <!-- System Information -->
-        <message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ΣΗΜΕΙΩΣΗ!</div>
+        <message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ΣΗΜΕΙΩΣΗ!</h4>
         <p>Δεν ήταν δυνατή η αυτόματη αντικατάσταση του αρχείου ρυθμίσεων από το σύστημα. Για να εφαρμόσετε τις αλλαγές στις ρυθμίσεις πρέπει να ανοίξετε το <tt>config.inc.php</tt> με έναν κατάλληλο επεξεργαστή κειμένου και να αντικαταστήσετε τα περιεχόμενά του με τα περιεχόμενου του παρακάτω πεδίου κειμένου.</p>]]></message>
 
 	<!-- Site Administrator Merge Users -->

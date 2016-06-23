@@ -279,7 +279,7 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>LƯU Ý!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>LƯU Ý!</h4>
 <p>Hệ thống không thể tự động ghi đè lên file cấu hình. Để thực hiện những thay đổi cấu hình quý vị phải mở file <tt>config.inc.php</tt> bằng phần mềm soạn thảo text phù hợp và thay nội dung file bằng nội dung dưới đây.</p>]]></message>
 
 	

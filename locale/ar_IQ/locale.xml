@@ -383,7 +383,7 @@
 	</ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ملاحظة!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ملاحظة!</h4>
 	<p>لا يتمكن النظام من تعديل ملف الإعدادات تلقائياً. لتتمكن من تغيير إعداداتك، عليك بفتح الملف <tt>config.inc.php</tt> مستعملاً أي برنامج مناسب لتحرير النصوص، واستبدل محتوياته بالمحتوى الظاهر في الخانة النصية أدناه.</p>]]></message>
 
 
