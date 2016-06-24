@@ -965,7 +965,7 @@ class O4DOIExportDom extends DOIExportDom {
 		}
 
 		// Extent (for article-as-manifestation only)
-		if (is_a($galley, 'ArticleGalley')) {
+		if (is_a($galley, 'ArticleGalley') && !$galley->getRemoteURL()) {
 			XMLCustomWriter::appendChild($contentItemElement, $this->_extentElement($galley));
 		}
 
