@@ -693,17 +693,27 @@ class DOIExportPlugin extends ImportExportPlugin {
 			return $errors;
 		}
 
+		$arrayResult = array();
+		$falseResult = false; // medra can return also false
 		// Register DOIs and their meta-data.
 		foreach($exportFiles as $exportFile => $objects) {
 			$result = $this->registerDoi($request, $journal, $objects, $exportFile);
 			if ($result !== true) {
-				$this->cleanTmpfiles($exportPath, array_keys($exportFiles));
-				return $result;
+				if (is_array($result)) {
+					$arrayResult = array_merge($arrayResult, $result);
+				} elseif ($result == false) {
+					$falseResult = true;
+				}
 			}
 		}
 
 		// Remove all temporary files.
 		$this->cleanTmpfiles($exportPath, array_keys($exportFiles));
+
+		if (!empty($arrayResult)) {
+			return $arrayResult;
+		}
+		if ($falseResult) return false;
 
 		return true;
 	}
