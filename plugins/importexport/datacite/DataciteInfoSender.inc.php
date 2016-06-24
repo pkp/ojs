@@ -108,9 +108,19 @@ class DataciteInfoSender extends ScheduledTask {
 				$exportSpec[DOI_EXPORT_SUPPFILES] = $unregisteredSuppFileIds;
 				$register = true;
 			}
-
 			if ($register) {
-				$plugin->registerObjects($request, $exportSpec, $journal);
+				$result = $plugin->registerObjects($request, $exportSpec, $journal);
+				if ($result !== true) {
+					if (is_array($result)) {
+						foreach($result as $error) {
+							assert(is_array($error) && count($error) >= 1);
+							$this->addExecutionLogEntry(
+								__($error[0], array('param' => (isset($error[1]) ? $error[1] : null))),
+								SCHEDULED_TASK_MESSAGE_TYPE_WARNING
+							);
+						}
+					}
+				}
 			}
 		}
 		return true;
