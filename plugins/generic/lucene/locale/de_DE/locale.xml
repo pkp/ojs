@@ -99,6 +99,8 @@
 	<message key="plugins.generic.lucene.settings.simdocs">Mehr davon (einen Link "ähnliche Dokumente" für jedes Suchergebnis anzeigen)</message>
 	<message key="plugins.generic.lucene.settings.solrServerSettings">Solr-Server-Einstellungen</message>
 	<message key="plugins.generic.lucene.settings.spellcheck">Alternative Schreibweisen vorschlagen (alternative Suchbegriffe anzeigen)</message>
+	<message key="plugins.generic.lucene.settings.useProxySettings">Proxy-Einstellungen</message>
+	<message key="plugins.generic.lucene.settings.useProxySettingsInstructions">Für die Solr-Webdienstanfragen die Proxy-Einstellungen aus der Datei config.inc.php benutzen.</message>
 	<message key="plugins.generic.lucene.settings.username">Benutzer/innenname</message>
 	<message key="plugins.generic.lucene.settings.usernameInstructions">Der Solr-Suchserver benutzt HTTP BASIC authentication. Bitte geben Sie den Benutzer/innennamen an.</message>
 	<message key="plugins.generic.lucene.settings.usernameRequired">Bitte geben Sie einen gültigen Benutzer/innennamen an, um auf den Solr-Suchserver zuzugreifen (Doppelpunkte sind nicht zulässig).</message>
