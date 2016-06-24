@@ -66,10 +66,10 @@ Tak. {$principalContactSignature}</body>
 		<description>Denne e-mail sendes til netop registrerede bedømmere for at byde dem velkommen til systemet og for at oplyse dem om deres brugernavn og adgangskode.</description>
 	</email_text>
 	<email_text key="PUBLISH_NOTIFY">
-		<subject>Ny udgave er blevet publiceret</subject>
+		<subject>Nyt nummer er blevet publiceret</subject>
 		<body>Læsere:
 
-{$journalName} har lige publiceret den seneste udgave på {$journalUrl}. Vi inviterer dig til at gennemse indholdsfortegnelsen her og derefter besøge vores websted, hvor du kan gennemse artikler og elementer, der har din interesse.
+{$journalName} har lige publiceret det seneste nummer på {$journalUrl}. Vi inviterer dig til at gennemse indholdsfortegnelsen her og derefter besøge vores websted, hvor du kan gennemse artikler, der har din interesse.
 
 Tak for din fortsatte interesse i vores arbejde. {$editorialContactSignature}</body>
 		<description>Denne e-mail sendes til registrerede læsere via linket "Underret brugere" på redaktørens brugerstartside. Den underretter læsere om en ny udgave og inviterer dem til at besøge tidsskriftet på en angiven URL-adresse.</description>
