@@ -344,7 +344,7 @@ Not: Bu site için Açık Arşiv Sistemi arayüzü ADS ana düzenleme sayfasınd
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOT!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOT!</h4>
 <p>Sistem otomatik olarak yapılanma dosyasının üzerine yazamaz. Yapılanma değişikliklerini uygulayabilmek için <tt>config.inc.php</tt> dosyasını uygun bir yazı düzenleyicide açmak ve içeriğini aşağıdaki yazı alanında belirtilen içerikle değiştirmeniz gerekir. </p>]]></message>
 
 	<!-- Site Administrator Merge Users -->	

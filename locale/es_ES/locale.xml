@@ -344,7 +344,7 @@
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Establecer como fuente de autenticación predeterminada otra diferente a OJS conllevará lo siguiente:</p> <ul> <li>Si un usuario/a intenta registrar una cuenta nueva en este sitio utilizando un nombre de usuario ya existente en la fuente de autenticación (pero no en la base de datos OJS), el intento de registro sólo será permitido si la contraseña proporcionada es válida para esa cuenta de usuario.</li> </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>¡NOTA!</div> <p>El sistema no puede sobrescribir automáticamente el archivo de configuración. Para aplicar los cambios de configuración es necesario abrir <tt>config.inc.php</tt> en un editor de texto adecuado y reemplazar los contenidos por los del campo de texto que se muestran a continuación.</p>]]></message>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>¡NOTA!</h4> <p>El sistema no puede sobrescribir automáticamente el archivo de configuración. Para aplicar los cambios de configuración es necesario abrir <tt>config.inc.php</tt> en un editor de texto adecuado y reemplazar los contenidos por los del campo de texto que se muestran a continuación.</p>]]></message>
 
 
 	<!-- Site Administrator Merge Users -->

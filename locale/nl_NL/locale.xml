@@ -278,7 +278,7 @@ Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de con
 </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>Attentie!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>Attentie!</h4>
 <p>Het systeem kon het instellingenbestand niet overschrijven. Om uw wijzigingen te effectueren moet u <tt>config.inc.php</tt> openen in een geschikte teksteditor en de inhoud van het bestand vervangen door de inhoud van het tekstveld hieronder.</p>]]></message>
 
 

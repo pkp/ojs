@@ -287,7 +287,7 @@ Vær opmærksom på, at OAI-grænsefladen kan deaktiveres for dette websted ved 
 </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>BEMÆRK!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>BEMÆRK!</h4>
 <p>Systemet kunne ikke automatisk overskrive konfigurationsfilen. Hvis du vil aktivere konfigurationsændringerne, skal du åbne filen <tt>config.inc.php</tt> i en passende teksteditor og erstatte dens indhold med indholdet i tekstfeltet nedenfor.</p>]]></message>
 
 
