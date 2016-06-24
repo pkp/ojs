@@ -61,4 +61,14 @@
 	<message key="submission.upload.fileContents">Article Component</message>
 	<message key="submission.complete">Approved</message>
 	<message key="submission.incomplete">Awaiting Approval</message>
+	<message key="submission.submit.form.localeRequired">Please select a submission language.</message>
+	<message key="submission.submit.submissionChecklist">Submission Checklist</message>
+	<message key="submission.submit.submissionChecklistDescription">You must read and acknowledge that you've completed the requirements below before proceeding.</message>
+	<message key="submission.submit.privacyStatement">Privacy Statement</message>
+	<message key="submission.submit.contributorRole">Contributor's role</message>
+	<message key="submission.submit.form.authorRequired">At least one author is required.</message>
+	<message key="submission.submit.form.authorRequiredFields">The first name, last name, and email address of each author is required.</message>
+	<message key="submission.submit.form.titleRequired">Please enter the title of your article.</message>
+	<message key="submission.submit.form.abstractRequired">Please enter your article's abstract.</message>
+	<message key="submission.submit.form.contributorRoleRequired">Please select the contributor's role.</message>
 </locale>
