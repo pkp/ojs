@@ -64,4 +64,6 @@
 	<message key="plugins.importexport.common.notification.exportSuccessful">Успешно экспортированы выбранные объекты в «{$param}»</message>
  
 	<message key="plugins.importexport.common.cliError">ОШИБКА:</message>
+
+	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">Отсутствует префикс DOI для журнала с адресом {$path}.</message>
 </locale>
