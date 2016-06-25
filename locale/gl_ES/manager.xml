@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="gl_ES" full_name = "Galego">
+<locale name="gl_ES" full_name="Galego">
 	<message key="manager.emails.confirmResetAll">Tes a certeza de que queres restaurar todas os modelos de correo-e desta revista? Perderád calquera personalización que teñas realizado.</message>
 	<message key="manager.files.note">Nota: o visor de ficheiros é unha ferramenta avanzada que permete ver e administrar directamente os ficheiros e directorios asociados con unha revista.</message>
 	<message key="manager.groups">Equipo de traballo</message>

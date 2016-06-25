@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="el_GR" full_name = "Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="editor.home">Αρχική σελίδα Επιμελητή Περιοδικού</message>
 	<message key="editor.submissionsAndPublishing">Υποβολές και δημοσίευση</message>
 	<message key="editor.submissionQueue">Υποβολές σε αναμονή</message>

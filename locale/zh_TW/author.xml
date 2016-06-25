@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="zh_TW" full_name = "繁體中文">
+<locale name="zh_TW" full_name="繁體中文">
 	<message key="author.submit">新稿件</message>
 	<message key="author.track">進行中的稿件</message>
 	<message key="author.submit.submitArticle">送出一篇文章</message>

@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="eu_ES" full_name = "Basque (Euskara)">
+<locale name="eu_ES" full_name="Euskara">
 	<message key="author.submit">Bidalketa berria</message>
 	<message key="author.track">Bidalketa aktiboak</message>
 	<message key="author.competingInterests"><![CDATA[Interes-gatazka <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Interes-gatazketako politika</a> ]]></message>

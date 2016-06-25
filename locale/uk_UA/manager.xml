@@ -14,7 +14,7 @@
   * V. I. Vernadsky National Library of Ukraine
   -->
 
-<locale name="uk_UA" full_name = "Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <message key="manager.emails.confirmResetAll">Ви впевнені, що хочете скинути всі шаблони листів цього журналу? Всі зміни, зроблені у шаблонах листів, будуть втрачені.</message>
        <message key="manager.files.note">Примітка: Браузер файлів - потужний інструмент для прямої маніпуляції файлами та теками, асоційованими з журналом.</message>
        <message key="manager.groups">Шапка</message>

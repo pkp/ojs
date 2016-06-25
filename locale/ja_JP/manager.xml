@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="ja_JP" full_name = "日本語">
+<locale name="ja_JP" full_name="日本語">
 	<message key="manager.emails.confirmResetAll">この雑誌のメールテンプレートをリセットしてもよいですか。実行すると、カスタマイズしたメールが失われることになります。</message>
 	<message key="manager.files.note">注: ファイルブラウザは、雑誌に関係するファイルやディレクトリを直接、閲覧・操作するための新機能です。</message>
 	<message key="manager.groups">編集委員会</message>

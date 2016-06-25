@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="gl_ES" full_name = "Galego (Galiza)">
+<locale name="gl_ES" full_name="Galego">
 	<message key="author.submit">Novo envío</message>
 	<message key="author.track">Envíos activos</message>
 	<message key="author.competingInterests"><![CDATA[Conflito de&nbsp;intereses <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></message>

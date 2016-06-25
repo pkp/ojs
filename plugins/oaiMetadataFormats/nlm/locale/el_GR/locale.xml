@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="el_GR" full_name = "Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.oaiMetadata.nlm.displayName">Σχήμα Μεταδεδομένων NLM</message>
 	<message key="plugins.oaiMetadata.nlm.description">Μορφοποιεί τα μεταδεδομένα ώστε να είναι συμβατά με τη μορφή άρθρων περιοδικού NLM.</message>
 </locale>

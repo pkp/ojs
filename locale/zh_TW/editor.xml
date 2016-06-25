@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="zh_TW" full_name = "繁體中文">
+<locale name="zh_TW" full_name="繁體中文">
 	<message key="editor.home">編輯首頁</message>
 	<message key="editor.submissionsAndPublishing">投稿與出版</message>
 	<message key="editor.submissionQueue">投稿稿件列表</message>

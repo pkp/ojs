@@ -12,7 +12,7 @@
   * With updates from Pavel Pisklakov (revising translation). 
   -->
 
-<locale name="ru_RU" full_name = "Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="author.submit">Новая статья</message>
 	<message key="author.track">Статьи в работе</message>
 	<message key="author.competingInterests"><![CDATA[Конфликт&nbsp;интересов <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Руководство по заполнению Декларации о конфликте интересов</a>]]></message>

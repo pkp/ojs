@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="es_AR" full_name = "Español (Argentina)">
+<locale name="es_AR" full_name="Español (Argentina)">
 	<message key="manager.emails.confirmResetAll">¿Seguro que quiere restaurar todas las plantillas de correo-e de esta revista? Perderá cualquier personalización que haya realizado.</message>
 	<message key="manager.files.note">Nota: el visor de archivos es una herramienta avanzada que permite ver y manipular directamente los archivos y directorios asociados con una revista.</message>
 	<message key="manager.groups">Equipo de trabajo</message>

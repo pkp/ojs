@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="ml_IN" full_name = "Malayalam">
+<locale name="ml_IN" full_name="മലയാളം">
 	<message key="plugins.generic.translator.name">തര്‍ജ്ജമ ചെയ്യുന്ന പ്ലഗിന്‍</message>
 	<message key="plugins.generic.translator.description">തര്‍ജ്ജമ ചെയുന്ന ഫയലിന്റെ വെബ് അടിസ്ഥാനമായുള്ള പരിപാലനത്തിനു ഈ പ്ലഗിന്‍ അനുമതി നല്‍ക്കുന്നു.</message>
 	<message key="plugins.generic.translator.longdescription">This area allows the Site Administrator to build, modify and check translations of OJS. This is site-wide and should not be used to customize a single OJS journal. If you correct or create a translation, please consider submitting it to the Public Knowledge Project for distribution with future releases.</message>

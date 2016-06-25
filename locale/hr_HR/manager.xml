@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="hr_HR" full_name = "Hrvatski">
+<locale name="hr_HR" full_name="Hrvatski">
 	<message key="manager.emails.confirmResetAll">Jeste li sigurni da želite vratiti izvorno sve predloške e-pošte u ovom časopisu? Izgubit ćete sva podešenja koja ste napravili.</message>
 	<message key="manager.files.note">Napomena: Preglednik datoteka je napredna funkcija sustava koja omogućuje direktno pregledavanje i uređivanje datoteka i direktorija koje časopis koristi.</message>
 	<message key="manager.groups">Uredništvo</message>

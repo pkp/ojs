@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="ml_IN" full_name = "Malayalam">
+<locale name="ml_IN" full_name="മലയാളം">
 	<message key="plugins.block.navigation.displayName">നാവിഗേഷന്‍ ബ്ലോക്ക്</message>
 	<message key="plugins.block.navigation.description">ഈ പ്ലഗിന്‍ സൈഡ്ബാറിലെ നാവിഗേഷന്‍ ലിങ്ക് ലഭ്യമാക്കുന്നു.</message>
 	<message key="plugins.block.navigation.journalContent">ജര്‍ണലിന്റെ ഉള്ളടക്കം</message>

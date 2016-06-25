@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="nl_NL" full_name = "Nederlands">
+<locale name="nl_NL" full_name="Nederlands">
 	<message key="manager.emails.confirmResetAll">Weet u zeker dat u alle e-mail sjablonen wilt terugzetten op hun standaardwaarden? Alle aanpassingen die u hebt gemaakt gaan verloren.</message>
 	<message key="manager.files.note">Noot: De bestandenbrowser is een geavanceerde functie waarmee u de bestanden en mappen van dit tijdschrift direct kunt bekijken en manipuleren.</message>
 	<message key="manager.groups">Redactieteam</message>

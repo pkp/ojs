@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="pt_PT" full_name = "Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="manager.emails.confirmResetAll">Deseja realmente restaurar todos os e-mails para o padrão original desta revista? Todas as personalizações serão perdidas.</message>
 	<message key="manager.files.note">Aviso: o Navegador de Ficheiros é uma ferramenta avançada que permite visualização e manipulação directa de documentos e pastas associadas à revista.</message>
 	<message key="manager.groups">Pessoal</message>

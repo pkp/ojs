@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="zh_CN" full_name = "China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="manager.emails.confirmResetAll">您确定您要重设这份期刊中所有的电子邮件模板为预设值？您将会失去您曾自订过的所有配置。</message>
 	<message key="manager.files.note">请注意：文件浏览器是一项高阶的功能，它允许一个期刊内的文件和目录直接被浏览和作。</message>
 	<message key="manager.groups">编辑团队管理</message>

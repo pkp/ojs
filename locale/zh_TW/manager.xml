@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="zh_TW" full_name = "繁體中文">
+<locale name="zh_TW" full_name="繁體中文">
 	<message key="manager.emails.confirmResetAll">您確定您要重設這份期刊中所有的電子郵件樣版為預設值？您將會失去您曾自訂過的所有設定.</message>
 	<message key="manager.files.note">請注意：檔案瀏覽器是一項高階的功能，它允許一個期刊內的檔案和目錄直接被瀏覽和作。</message>
 	<message key="manager.groups">編輯團隊</message>
