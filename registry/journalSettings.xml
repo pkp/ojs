@@ -276,4 +276,12 @@
 		<name>keywordsEnabledWorkflow</name>
 		<value>1</value>
 	</setting>
+	<setting type="bool" locale="0">
+		<name>includeCopyrightStatement</name>
+		<value>1</value>
+	</setting>
+	<setting type="bool" locale="0">
+		<name>includeLicense</name>
+		<value>1</value>
+	</setting>
 </journal_settings>
