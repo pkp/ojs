@@ -11,7 +11,7 @@
   * locale information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_%28pt_BR%29
   -->
 
-<locale name="pt_BR" full_name = "Português (Brasil)">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="manager.emails.confirmResetAll">Deseja realmente restaurar todos os e-mails para o padrão original para esta revista? Todas as personalizações serão perdidas.</message>
 	<message key="manager.files.note">Aviso: o navegador de arquivos é uma ferramenta avançada que permite visualização e manipulação direta de documentos e diretórios associados à revista.</message>
 	<message key="manager.groups">Expediente</message>

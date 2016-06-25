@@ -11,7 +11,7 @@
   * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
   -->
  
-<locale name="de_DE" full_name = "Deutsch (Deutschland)">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
 	<message key="plugins.generic.openAIRE.description">Das OpenAIRE-PLug-In fügt das projectID-Element zu den Metadaten eines Artikels hinzu und erweitert die OAI-PMH-Schnittstelle gemäß den OpenAIRE Guidelines 1.1, um auf diese Weise OJS-Zeitschriften dabei zu unterstützen, OpenAIRE-konform zu werden.</message>
 	<message key="plugins.generic.openAIRE.projectID">ProjectID</message>

@@ -10,7 +10,7 @@
   *
   -->
 
-<locale name="pl_PL" full_name = "Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="author.submit">Prześlij tekst do opublikowania</message>
 	<message key="author.track">Przesłane teksty</message>
 	<message key="author.competingInterests"><![CDATA[<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Zbieżne zainteresowania</a>]]></message>

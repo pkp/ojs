@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="eu_ES" full_name = "Basque (Euskara)">
+<locale name="eu_ES" full_name="Euskara">
 	<message key="manager.emails.confirmResetAll">Ziur zaude aldizkariko mezu-txantiloi guztiak berrezarri nahi dituzula? Egin dituzun aukera pertsonal guztiak galduko dituzu</message>
 	<message key="manager.files.note">Oharra: Fitxategi-arakatzailea, aldizkari bateko fitxategiak eta direktorioak zuzenean ikusi eta manipulatzeko aukera ematen duen eginbide aurreratu bat da.</message>
 	<message key="manager.groups">Lantaldea</message>

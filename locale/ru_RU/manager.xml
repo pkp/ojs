@@ -12,7 +12,7 @@
   * With updates from Pavel Pisklakov (revising translation). 
   -->
 
-<locale name="ru_RU" full_name = "Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="manager.emails.confirmResetAll">Вы уверены, что хотите заменить все шаблоны писем для данного журнала на шаблоны по умолчанию? Вы потеряете все изменения, которые вы сделали.</message>
 	<message key="manager.files.note">Внимание: файловый менеджер — это дополнительная возможность, которая позволяет напрямую просматривать и управлять файлами и каталогами, связанными с этим журналом.</message>
 	<message key="manager.groups">Сведения об издании</message>

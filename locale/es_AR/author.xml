@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="es_ES" full_name = "Español (Argentina)">
+<locale name="es_AR" full_name="Español (Argentina)">
 	<message key="author.submit">Nuevo envío</message>
 	<message key="author.track">Envíos activos</message>
 	<message key="author.competingInterests"><![CDATA[Conflicto de&nbsp;intereses <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></message>

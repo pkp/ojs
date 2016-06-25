@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name = "Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="admin.hostedJournals">Host Jurnal</message>
 	<message key="admin.settings.journalRedirect">Pengalihan Jurnal</message> 
 	<message key="admin.settings.journalRedirectInstructions"> Permintaan ke situs utama akan dialihkan ke jurnal ini. Hal ini mungkin berguna jika hosting merupakan jurnal tunggal.</message>	

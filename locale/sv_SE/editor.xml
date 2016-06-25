@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="sv_SE" full_name = "Swedish">
+<locale name="sv_SE" full_name="Svenska">
 	<message key="editor.home">Redaktör</message>
 	<message key="editor.submissionsAndPublishing">Manuskript och publicering.</message>
 	<message key="editor.submissionQueue">Manuskriptprocess</message>

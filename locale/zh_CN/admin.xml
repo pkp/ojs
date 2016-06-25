@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="zh_CN" full_name = "China .PR">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="admin.hostedJournals">主办期刊</message>
 	<message key="admin.settings.journalRedirect">期刊重定向</message>
 	<message key="admin.settings.journalRedirectInstructions">到本站的请求将重定向到这本期刊，如果网站只有一本主办期刊的时候这个功能很有用。</message>

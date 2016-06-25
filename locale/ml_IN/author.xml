@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="ml_IN" full_name = "Malayalam">
+<locale name="ml_IN" full_name="മലയാളം">
 	<message key="author.submit">പുതിയ സമര്‍പ്പണം</message>
 	<message key="author.track">സജീവമായ സമര്‍പ്പണങ്ങള്‍</message>
 	<message key="author.competingInterests"><![CDATA[Competing&nbsp;interests <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></message>

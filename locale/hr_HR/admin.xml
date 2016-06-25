@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="hr_HR" full_name = "Hrvatski">
+<locale name="hr_HR" full_name="Hrvatski">
 	<message key="admin.hostedJournals">Časopisi u sustavu</message>
 	<message key="admin.settings.journalRedirect">Izravno preusmjeravanje na časopis</message>
 	<message key="admin.settings.journalRedirectInstructions">Svi upiti i posjeti glavnoj stranici bit će preusmjereni na odabrani časopis. To može biti izuzetno korisno ako je na sustavu postavljen samo jedan časopis.</message>

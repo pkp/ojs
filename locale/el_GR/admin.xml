@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="el_GR" full_name = "Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="admin.hostedJournals">Φιλοξενούμενα Περιοδικά</message>
 	<message key="admin.settings.journalRedirect">Προώθηση σε URL Περιοδικού</message>
 	<message key="admin.settings.journalRedirectInstructions">Αιτήματα πρόσβασης στον κυρίως ιστότοπο του συστήματος θα προωθούνται στην ιστοσελίδα αυτού του περιοδικού. Αυτό μπορεί να φανεί χρήσιμο αν ο ιστότοπος φιλοξενεί, για παράδειγμα, μόνο ένα περιοδικό.</message>

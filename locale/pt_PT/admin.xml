@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="pt_PT" full_name = "Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="admin.hostedJournals">Revistas Hospedadas</message>
 	<message key="admin.settings.journalRedirect">Redireccionamento para revista hospedada</message>
 	<message key="admin.settings.journalRedirectInstructions">Os pedidos realizados no Portal Principal serão direccionados a esta revista. Esta opção pode ser útil caso o Portal hospede apenas uma revista.</message>

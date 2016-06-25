@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="ml_IN" full_name = "Malayalam">
+<locale name="ml_IN" full_name="മലയാളം">
 	<message key="admin.hostedJournals">ഹോസ്റ്റഡ് ജേണല്‍സ്</message>
 	<message key="admin.settings.journalRedirect">ജേണല്‍ റീഡയറക്റ്റ്</message>
 	<message key="admin.settings.journalRedirectInstructions">പ്രധാന സൈറ്റിലേക്കുള്ള അഭ്യര്‍ത്ഥനകള്‍ ഈ ജേണലിലേക്ക് റീ ഡയറക്റ്റ് ചെയ്യപ്പെടും.ഉദാഹരണത്തിന്,ഈ സൈറ്റ് ഒരു ജേണലിനെ മാത്രം ഹോസ്റ്റ് ചെയ്യുകയാണെങ്കില്‍ ഇത് ഉപകാരപ്രദമാണ്.</message>

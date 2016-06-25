@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="eu_ES" full_name = "Basque (Euskara)">
+<locale name="eu_ES" full_name="Euskara">
 	<message key="editor.article.reviewForms">Ebaluazio-inprimakiak</message>
 	<message key="editor.article.selectReviewForm">Hautatu ebaluazio-inprimakia</message>
 	<message key="editor.article.clearReviewForm">Garbitu ebaluazio-Inprimakia</message>
