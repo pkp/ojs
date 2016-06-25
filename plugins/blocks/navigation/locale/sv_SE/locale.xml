@@ -11,10 +11,10 @@
   * Localization strings for the sv_SE (Svenska) locale.
   *
   -->
- 
+
 <locale name="sv_SE" full_name="Svenska">
 	<message key="plugins.block.navigation.displayName">Navigationblock</message>
-	<message key="plugins.block.navigation.description">Det här tillägget skapar en navigationslänk i en sidoram</message>
+	<message key="plugins.block.navigation.description">Det här tillägget tillhandahåller navigationslänkar i sidomenyn</message>
 	<message key="plugins.block.navigation.journalContent">Publikationens innehåll</message>
-	<message key="plugins.block.navigation.searchScope">Sök i fält</message>
+	<message key="plugins.block.navigation.searchScope">Sökomfång</message>
 </locale>
