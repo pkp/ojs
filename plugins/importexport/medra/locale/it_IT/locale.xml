@@ -24,7 +24,10 @@
 	
 	<message key="plugins.importexport.medra.settings.form.description">Configura il plugin di export per mEDRA</message>
 	<message key="plugins.importexport.medra.settings.form.username">Username</message>
-	<message key="plugins.importexport.medra.settings.form.usernameRequired">Please enter your mEDRA username. The username may not contain colons.</message>
+	<message key="plugins.importexport.medra.settings.form.usernameRequired">Inserisci il tuo username mEDRA.</message>
+	<message key="plugins.importexport.medra.settings.form.passwordRequired">Inserisci la password ricevuta da mEDRA.</message>
+	<message key="plugins.importexport.medra.settings.form.automaticRegistration">Registra DOI automaticamente</message>
+	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description"><![CDATA[OJS depositerà i DOI automaticamente su mEDRA dopo la pubblicazione degli articoli. Potrebbe occorrere un certo tempo dopo la pubblicazione degli articoli. Puoi verificare i DOI in attesa di essere registrati nella <a href="{$unregisteredURL}">lista degli articoli non registrati</a>.]]></message>
 	<message key="plugins.importexport.medra.settings.form.registrantName">Istituzione registrata con mEDRA</message>	
 	<message key="plugins.importexport.medra.settings.form.registrantNameRequired">Inserisci il nome dell'istituzione registrata con mEDRA</message>
 	<message key="plugins.importexport.medra.settings.form.fromFields">Persona che verrà contattata da mEDRA in caso di problemi tecnici</message>
@@ -44,7 +47,10 @@
 	
 	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: I DOI assegnati agli articoli verranno esportati in mEDRA come <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'opere'</a>. I DOI assegnati ai file principali degli articoli verranno esportati come <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestazioni'</a>.]]></message>
 		
-	<message key="plugins.importexport.medra.cliUsage">Uso: 
+	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Uso: 
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys} objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...</message>
+{$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...
+]]></message>
+	<message key="plugins.importexport.medra.senderTask.name">Registrazione automatica DOI mEDRA</message>
+	<message key="plugins.importexport.medra.senderTask.warning.noDOIprefix">Alla rivista con path {$path} manca il prefisso DOI.</message>
 </locale>
