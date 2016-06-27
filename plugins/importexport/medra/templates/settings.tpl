@@ -91,6 +91,14 @@
 					<input type="password" name="password" value="{$password|escape}" size="20" maxlength="50" id="password" class="textField" />
 				</td>
 			</tr>
+ 			<tr><td colspan="2">&nbsp;</td></tr>
+ 			<tr valign="top">
+ 				<td width="20%" class="label">{fieldLabel name="automaticRegistration" key="plugins.importexport.medra.settings.form.automaticRegistration"}</td>
+ 				<td width="80%" class="value">
+ 					<input type="checkbox" name="automaticRegistration" id="automaticRegistration" value="1" {if $automaticRegistration} checked="checked"{/if} />&nbsp;{translate key="plugins.importexport.medra.settings.form.automaticRegistration.description" unregisteredURL=$unregisteredURL}
+ 				</td>
+ 			</tr>
+ 			<tr><td colspan="2">&nbsp;</td></tr>
 		</table>
 
 		<p><span class="formRequired">{translate key="common.requiredField"}</span></p>

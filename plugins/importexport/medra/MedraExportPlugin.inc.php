@@ -146,6 +146,14 @@ class MedraExportPlugin extends DOIExportPlugin {
 		return $result;
 	}
 
+	/**
+	 * @see AcronPlugin::parseCronTab()
+	 */
+	function callbackParseCronTab($hookName, $args) {
+		$taskFilesPath =& $args[0];
+		$taskFilesPath[] = $this->getPluginPath() . DIRECTORY_SEPARATOR . 'scheduledTasks.xml';
+		return false;
+	}
 
 	//
 	// Private helper methods
