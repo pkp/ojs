@@ -32,8 +32,9 @@ See [Wiki][wiki-dev] for more complete development guide.
 
 Specific requirements : [PHPunit][php-unit]. Installing with pear for example :
 
-    pear channel-discover pear.phpunit.de
-    pear install phpunit/PHPUnit
+    wget https://phar.phpunit.de/phpunit.phar
+    chmod +x phpunit.phar
+    sudo mv phpunit.phar /usr/local/bin/phpunit
 
 Setting up test environment :
 
