@@ -669,8 +669,6 @@
 	<message key="manager.subscriptionTypes.name">Abonelik türü</message>
 	<message key="manager.subscriptionTypes.noneCreated">Herhangi bir abonelik türü oluşturulmadı.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Abonelik türü başarıyla oluşturuldu.</message>
-	<message key="manager.payment.giftFeesDescription">A gift subscriptions link will appear on the Subscriptions page in About the Journal and as part of the subscriptions sidebar block.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">This will activate payments for gift subscriptions, allowing journal readers to buy gift subscriptions for other readers.</message>
 	<message key="manager.plugins.wrongName">Yüklenen version.xml eklentisi yükseltilmiş eklenti adına sığmayan bir eklenti adı içeriyor.</message>
 	<message key="manager.sections.alertDelete">Bu bölümü silmeden önce yayımlanmış makaleleri diğer bölümlere taşımalısınız.</message>
 	<message key="manager.setup.categories.description">Yukarıda listelenen kümelerden uygun kategorileri seçiniz. Okuyucular tamamlanmış dergi kümelerinden kategoriye göre listeleme yapabilirler.</message>

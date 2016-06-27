@@ -84,14 +84,6 @@
 	<message key="admin.copyAccessLogFileTool.error.acessingFile">Errore: File {$filePath} non esiste o non è accessibile.</message>
 	<message key="admin.copyAccessLogFileTool.error.copyingFile">Errore: impossibile copiare il file da {$filePath} a {$tmpFilePath}</message>
 	<message key="admin.copyAccessLogFileTool.error.deletingFile">Errore: impossibile cancellare il file {$tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.usage">Copy the passed apache access log file(s), filtering the entries related with this installation,
-to the current files directory, inside the UsageStatsPlugin stage directory. Must run under user with enough privilegies to read access apache log files.
-
-This tool will only copy files that aren't already inside the usageStats file loader directories (stage, processing, archive, reject).
-
-Uso: {$scriptName} path/to/apache/log/file.log
-Uso (processing all files inside a directory): {$scriptName} path/to/apache/directory
-Usage (processing all files inside a directory that starts with the passed string): {$scriptName} path/to/apache/directory starts_with_string</message>
 	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Errore: impossibile creare la cartella temporanea {$tmpDir}</message>
 	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Attenzione: il file {$filePath} esiste già nella cartella delle statistiche di utilizzo.</message>
 	<message key="admin.copyAccessLogFileTool.success">Successo: {$filePath} a {$destinationPath}</message>

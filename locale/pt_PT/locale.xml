@@ -993,15 +993,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="issue.viewIssueDescription">Ver ou download o número completo</message>
 	<message key="plugins.categories.pubIds">Identificadores Públicos de Plugins</message>
 	<message key="plugins.categories.pubIds.description">Estes plugins implementam o suporte ao identificador público.</message>
-	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
-	<li>Highlighted items indicate action is required by an editor, labelled as follows:
-		<ul>
-			<li class="highlightCopyediting">An action is required in the copyediting stage</li>
-			<li class="highlightLayoutEditing">An action is required in the layout editing stage</li>
-			<li class="higlightProofreading">An action is required in the proofreading stage</li>
-		</ul>
-	</li>
-</ol>]]></message>
 	<message key="site.noJournals">Não existem revistas.</message>
 	<message key="gifts.buyer">De</message>
 	<message key="gifts.buyerDescription">Quem oferece o donativo?</message>
