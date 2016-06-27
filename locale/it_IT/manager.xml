@@ -13,7 +13,7 @@
   *
   -->
 
-<locale name="it_IT" full_name = "Italiano">
+<locale name="it_IT" full_name="Italiano">
 	<message key="manager.emails.confirmResetAll">Sei sicuro di voler ripristinare tutti i modelli di email di questa rivista? In questo modo verranno perse tutte le personalizzazioni effettuate.</message>
 	<message key="manager.files.note">Nota: La navigazione tra i file è una funzione avanzata che permette di vedere e manipolare direttamente i file e le directory associate a una rivista.</message>
 	<message key="manager.groups">Redazione</message>

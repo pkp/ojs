@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="pt_PT" full_name = "Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="editor.article.reviewForms">Formulários de revisão</message>
 	<message key="editor.article.selectReviewForm">Escolher formulário de revisão</message>
 	<message key="editor.article.clearReviewForm">Limpar formulário de revisão</message>

@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="zh_CN" full_name = "China .PR">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="editor.article.reviewForms">评审表单</message>
 	<message key="editor.article.selectReviewForm">选择评审表单</message>
 	<message key="editor.article.clearReviewForm">清除评审表单</message>

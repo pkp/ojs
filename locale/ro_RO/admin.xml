@@ -13,7 +13,7 @@
   *
   -->
 
-<locale name="ro_RO" full_name = "Romanian">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="admin.hostedJournals">Revistele găzduite</message>
 	<message key="admin.settings.journalRedirect">Redirectare către revistă</message>
 	<message key="admin.settings.journalRedirectInstructions">Cererile către siteul principal vor fi redirectare către această revistă. Acest lucru poate fi util dacă siteul găzduieşte doar o singură revistă.</message>

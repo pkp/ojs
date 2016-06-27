@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="vi_VN" full_name = "Tiếng Việt">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="manager.emails.confirmResetAll">Quỹ vị có muốn phục hồi tất cả các mẫu thư của tạp chí này không? Quý vị sẽ mất những tùy biến đã làm với mẫu thư.</message>
 	<message key="manager.files.note">Lưu ý: công cụ Duyệt File là một tính năng cao cấp cho phép các file và thư mục gắn với một tạp chí được xem và chỉnh sửa trực tiếp.</message>
 	<message key="manager.groups">Ban biên tập</message>

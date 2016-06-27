@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="no_NO" full_name = "Norwegian">
+<locale name="no_NO" full_name="Norsk">
 	<message key="admin.hostedJournals">Nettstedets tidsskrift</message>
 	<message key="admin.settings.journalRedirect">Tidsskriftomdirigering</message>
 	<message key="admin.settings.journalRedirectInstructions">Henvendelser til hovednettstedet vil bli omdirigert til dette tidsskriftet. Dette er nyttig hvis nettstedet for eksempel bare er vert for ett tidsskrift.</message>

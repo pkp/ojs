@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="nl_NL" full_name = "Nederlands">
+<locale name="nl_NL" full_name="Nederlands">
 	<message key="editor.article.reviewForms">Reviewformulieren</message>
 	<message key="editor.article.selectReviewForm">Kies reviewformulier</message>
 	<message key="editor.article.clearReviewForm">Wis reviewformulier</message>

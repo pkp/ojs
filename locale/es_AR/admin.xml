@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="es_AR" full_name = "Español (Argentina)">
+<locale name="es_AR" full_name="Español (Argentina)">
 	<message key="admin.hostedJournals">Revistas alojadas</message>
 	<message key="admin.settings.journalRedirect">Redirección a la revista</message>
 	<message key="admin.settings.journalRedirectInstructions">Las peticiones serán redirigidas a esta revista. Esto puede ser útil, por ejemplo, si sólo hay una revista alojada.</message>

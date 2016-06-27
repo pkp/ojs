@@ -13,7 +13,7 @@
   *
   -->
 
-<locale name="it_IT" full_name = "Italiano">
+<locale name="it_IT" full_name="Italiano">
 	<message key="admin.hostedJournals">Riviste</message>
 	<message key="admin.settings.journalRedirect">Redirect</message>
 	<message key="admin.settings.journalRedirectInstructions">Prevede un redirect dal sito principale a una rivista. Può essere utile, ad esempio, se il sito ospita solo una rivista.</message>

@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="sv_SE" full_name = "Swedish">
+<locale name="sv_SE" full_name="Svenska">
 	<message key="admin.hostedJournals">Tillgängliga tidskrifter</message>
 	<message key="admin.settings.journalRedirect">Omdirigering</message>
 	<message key="admin.settings.journalRedirectInstructions">Anropningar till huvudsidan kommer omdirigeras till den här tidskriften. Om sidan endast är värd för en tidskrift är detta en mer användbar lösning.</message>

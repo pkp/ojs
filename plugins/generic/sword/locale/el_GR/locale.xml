@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="el_GR" full_name = "Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.generic.sword.displayName">Πρόσθετο SWORD</message>
 	<message key="plugins.generic.sword.description">Επιτρέπει στους διαχειριστές περιοδικού και (προαιρετικά) στους συγγραφείς να καταθέτουν άρθρα μέσω του πρωτοκόλλου SWORD.</message>
 	<message key="plugins.generic.sword.enabled">Το πρόσθετο SWORD ενεργοποιήθηκε.</message>

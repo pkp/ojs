@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="vi_VN" full_name = "Tiếng Việt">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="admin.hostedJournals">Các tạp chí trên Website</message>
 	<message key="admin.settings.journalRedirect">Chuyển hướng tạp chí</message>
 	<message key="admin.settings.journalRedirectInstructions">Website chính sẽ được chuyển hướng sáng tạp chí này. Điều này hữu ích khi website chỉ có một tạp chí.</message>

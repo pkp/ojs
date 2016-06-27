@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="el_GR" full_name = "Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.block.relatedItems.displayName">Δομική Μονάδα Συναφών Τεκμηρίων</message>
 	<message key="plugins.block.relatedItems.description">Αυτό το πρόσθετο εμφανίζει μια δομική μονάδα, που περιέχει συναφή τεκμήρια, στην πλαϊνή μπάρα των εργαλείων μελέτης.</message>
 	<message key="plugins.block.relatedItems.title">Συναφή Τεκμήρια</message>

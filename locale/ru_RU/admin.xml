@@ -12,7 +12,7 @@
   * With updates from Pavel Pisklakov (revising translation). 
   -->
 
-<locale name="ru_RU" full_name = "Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="admin.hostedJournals">Журналы на сайте</message>
 	<message key="admin.settings.journalRedirect">Перенаправить</message>
 	<message key="admin.settings.security">Безопасность</message>

@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="sv_SE" full_name = "Swedish">
+<locale name="sv_SE" full_name="Svenska">
 	<message key="manager.emails.confirmResetAll">Är du säker på att du vill återställa alla tidskriftens E-postmallar till ursprungligt utseende? Egna inställningar kommer att raderas</message>
 	<message key="manager.files.note">Observera: Filutforskaren är en funktion som gör det möjligt att ändra och visa en tidskrifts katalog och filer direkt.</message>
 	<message key="manager.groups">Redaktion</message>

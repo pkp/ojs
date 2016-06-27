@@ -13,8 +13,8 @@
   * Localization strings for the sv_SE (Svenska) locale.
   *
   -->
- 
+
 <locale name="sv_SE" full_name="Svenska">
 	<message key="plugins.block.role.displayName">Rollspecifikt block</message>
-	<message key="plugins.block.role.description">Det här tillägget bidrar med ett block i endera sidoramen innehållande rollspecifik information som t. ex. antalet inlämnade bidrag och snabblänkar för redaktörer, författare etc.</message>
+	<message key="plugins.block.role.description">Det här tillägget tillhandahåller ett block i endera sidomeny med rollspecifik information som t. ex. antalet inlämnade bidrag och snabblänkar för redaktörer, författare etc.</message>
 </locale>

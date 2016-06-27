@@ -11,7 +11,7 @@
   * Localization strings for the fr_FR (Français (France)) locale.
   -->
 
-<locale name="fr_FR" full_name = "Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="manager.emails.confirmResetAll">Êtes-vous certain de vouloir réinitialiser tous les modèles de courriels dans cette revue? Vous allez perdre toutes les personnalisations que vous avez effectuées.</message>
 	<message key="manager.files.note">Note: L'explorateur de fichiers est une fonction avancée qui permet aux fichiers et aux répertoires associés à une revue d'être affichés et manipulés directement.</message>
 	<message key="manager.groups">Bloc générique</message>

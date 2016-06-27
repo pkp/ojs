@@ -627,7 +627,7 @@
 	<message key="admin.mergeUsers.from.description">ßèlèçt å üþèr tó mèrgè îñtó åñóthèr üþèr åççóüñt (è.g., whèñ þómèóñè håþ twó üþèr åççóüñtþ). Thè åççóüñt þèlèçtèð fîrþt wîll bè ðèlètèð åñð îtþ þübmîþþîóñþ, åþþîgñmèñtþ, ètç. wîll bè åttrîbütèð tó thè þèçóñð åççóüñt.</message>
 	<message key="admin.mergeUsers.allUsers">Æll Éñróllèð Üþèrþ</message>
 	<message key="admin.mergeUsers.confirm">Ærè ýóü þürè ýóü wîþh tó mèrgè thè åççóüñt wîth thè üþèrñåmè "{$oldUsername}" îñtó thè åççóüñt wîth thè üþèrñåmè "{$newUsername}"? Thè åççóüñt wîth thè üþèrñåmè "{$oldUsername}" wîll ñót èxîþt åftèrwårðþ. Thîþ åçtîóñ îþ ñót rèvèrþîblè.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Ñó èñróllèð üþèrþ.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Ñó èñróllèð üþèrþ.</message>
 	<message key="subscriptionManager.subscriptionManagement">ßübþçrîptîóñ Måñågèmèñt</message>
 	<message key="manager.journalManagement">Jóürñål Måñågèmèñt</message>
 	<message key="manager.setup">ßètüp</message>

@@ -13,7 +13,7 @@
   *
   -->
 
-<locale name="ro_RO" full_name = "Romanian">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="manager.emails.confirmResetAll">Eşti sigur că doreşti să resetezi toate şabloanele pentru emailurile revistei? Veţi pierde toate adaptările făcute.</message>
 	<message key="manager.files.note">Notă: Browserul de fişiere este o funcţionalitate avansată care permite ca fişierele şi directoarele asociate cu o revistă să fie văzute şi manipulate în mod direct.</message>
 	<message key="manager.groups">Caseta editorială</message>

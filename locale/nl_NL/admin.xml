@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="nl_NL" full_name = "Nederlands">
+<locale name="nl_NL" full_name="Nederlands">
 	<message key="admin.hostedJournals">Tijdschriften</message>
 	<message key="admin.settings.journalRedirect">Doorsturen naar tijdschrift</message>
 	<message key="admin.settings.journalRedirectInstructions">Bezoekers van de hoofdsite worden doorgestuurd naar dit tijdschrift. Dit kan handig zijn als de site maar één tijdschrift bevat.</message>

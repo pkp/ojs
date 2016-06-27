@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="ml_IN" full_name = "Malayalam">
+<locale name="ml_IN" full_name="മലയാളം">
 	<message key="plugins.block.user.displayName">യൂസര്‍ ബ്ലോക്ക്</message>
 	<message key="plugins.block.user.description">ഈ പ്ലഗിന്‍ യൂസര്‍ അക്കൗണ്ട് ടൂള്‍സ് ലഭ്യമാക്കുന്നു  (ഉദാ. ലോഗിന്‍, ലോഗൗട്ട്, പ്രൊഫൈല്‍ ലിങ്ക്, മുതലായവ).</message>
 	<message key="plugins.block.user.loggedInAs">താങ്കള്‍ ലോഗിന്‍ ചെയ്തിരിക്കുന്നത്...</message>

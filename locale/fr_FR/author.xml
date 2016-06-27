@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="fr_FR" full_name = "Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="author.submit">Nouvelle soumission</message>
 	<message key="author.track">Soumissions actives</message>
 	<message key="author.competingInterests"><![CDATA[Conflits&nbsp;d'intérêts <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Politique de CI</a>]]></message>

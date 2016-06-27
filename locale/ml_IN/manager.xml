@@ -11,7 +11,7 @@
   * Localization strings for the ml_IN (മലയാളം) locale.
   -->
 
-<locale name="ml_IN" full_name = "Malayalam">
+<locale name="ml_IN" full_name="മലയാളം">
 	<message key="manager.emails.confirmResetAll">ഈ ജേണലിലുള്ള ഇ-മെയില്‍ ടെംപ്ലേറ്റുകളെല്ലാം പുന:സ്ഥാപിക്കണമെന്ന് താങ്കള്‍ക്ക് ഉറപ്പാണോ? താങ്കള്‍ ചെയ്ത ഏതെങ്കിലും കസ്റ്റമൈസേഷനുകള്‍ നഷ്ടപ്പെടും.</message>
 	<message key="manager.files.note">കുറിപ്പ്: ഫയലുകള്‍ക്ക് അനുമതി നല്‍ക്കുന്ന ഫയല്‍  ബ്രൗസര്‍ നൂതന സവിശേഷതകള്‍ ഉള്‍ക്കൊണ്ടവയാണ്. അതുപോലെ ഡയറക്ടറിയുമായി ചേര്‍ന്നു പ്രവര്‍ത്തിക്കുന്ന ജേണലിനെ വീക്ഷിക്കുകയും നേരിട്ടു കൈകാര്യം ചെയ്യുന്നതുമാണ്.</message>
 	<message key="manager.groups">Masthead</message>
