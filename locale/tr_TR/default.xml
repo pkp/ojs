@@ -104,54 +104,7 @@ Yeni dosyada <strong>[silinmiş sözcük]</strong> değiştirilmiş bölümler k
 &bull; [silinen sözcükler] Köşeli parantez içine alınmış metin tümü ile silinecek metindir.
 &bull; Köşeli parantez içinde YORUM: biçiminde başlayan ifadeler editöre görüş bildirmeki için kullanılır.]]></message>
 
-<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Tasarım sürecine referans bağlama ekle</h4>
-	<p>Bir gönderiyi HTML veya PDF dönüştürüken gönderideki tüm bağlantıların aktif olduğundan emin olun.</p>
-	<h4>A. Yazar referansla birlikte bir bağlantı sağladığında</h4>
-	<ol>
-	<li>While the submission is still in its word processing format (e.g., Word), add the phrase VIEW ITEM to the end of the reference that has a URL.</li>
-	<li>Turn that phrase into a hyperlink by highlighting it and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
-	</ol>
-	<h4>B. Referanslar için Google Akademik Aramada Okuyucu Etkinleştir.</h4>
-	<ol>
-		<li>While the submission is still in its word processing format (e.g., Word), copy the title of the work referenced in the References list (if it appears to be too common a title—e.g., "Peace"—then copy author and title).</li>
-		<li>Paste the reference's title between the %22's, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search.</li>
 
-	<li>Add the phrase GS SEARCH to the end of each citation in the submission's References list.</li>
-	<li>Turn that phrase into a hyperlink by highlighting it and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
-	</ol>
-	<h4>C. Enabling Readers to Search for References with a DOI</h4>
-	<ol>
-	<li>While the submission is still in Word, copy a batch of references into CrossRef Text Query http://www.crossref.org/freeTextQuery/.</li>
-	<li>Paste each DOI that the Query provides in the following URL (between = and &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI.</li>
-	<li>Add the phrase CrossRef to the end of each citation in the submission's References list.</li>
-	<li>Turn that phrase into a hyperlink by highlighting the phrase and using Word's Insert Hyperlink tool and the appropriate URL prepared in #2.</li>
-	</ol>]]></message>
-
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>The proofreading stage is intended to catch any errors in the galley's spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF, and other available file formats used in publishing this item.</p>
-	<h4>For Spelling and Grammar Errors</h4>
-
-	<p>Copy the problem word or groups of words and paste them into the Proofreading Corrections box with "CHANGE-TO" instructions to the editor as follows:</p>
-
-	<pre>1. CHANGE...
-	then the others
-	TO...
-	than the others</pre>
-	<br />
-	<pre>2. CHANGE...
-	Malinowsky
-	TO...
-	Malinowski</pre>
-	<br />
-
-	<h4>Biçimlendirme hataları için</h4>
-	
-	<p>Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title "FORMATTING" as follows:</p>
-	<br />
-	<pre>3. FORMATTING
-	The numbers in Table 3 are not aligned in the third column.</pre>
-	<br />
-	<pre>4. FORMATTING
-	The paragraph that begins "This last topic..." is not indented.</pre>]]></message>
 
 	<message key="default.journalSettings.emailSignature">________________________________________________________________________
 {$journalName}

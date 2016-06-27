@@ -725,42 +725,6 @@ Eğer bu bildirimi almak istemiyorsanız, lütfen tıklayınız {$unsubscribeLin
 {$principalContactSignature}</body>
 		<description>Bu e-posta bildirim listesindeki kayıtsız kullanıcılar tarafından gönderilir.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Welcome to the the {$journalName} mailing list!</subject>
-		<body>You have signed up to receive notifications from {$journalName}.
-
-Please click on this link to confirm your request and add your email address to the mailing list: {$confirmLink}
-
-If you wish to stop receiving notification emails, please go to {$unsubscribeLink}.
-
-{$principalContactSignature}</body>
-		<description>This email is sent to an unregistered user who just registered with the notification mailing list.</description>
-	</email_text>
-	<email_text key="USER_VALIDATE">
-		<subject>Validate Your Account</subject>
-		<body>{$userFullName}
-
-You have created an account with {$journalName}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:
-
-{$activateUrl}
-
-Thank you,
-{$principalContactSignature}</body>
-		<description>Bu e-posta sisteme yeni kayıt olan kullanıcılara gönderilir ve sisteme hoşgeldin mesajı ile birlikte kullanıcı adı ve şifre bilgilerini de içerir.</description>
-	</email_text>
-	<email_text key="REVIEWER_REGISTER">
-		<subject>Registration as Reviewer with {$journalName}</subject>
-		<body>In light of your expertise, we have taken the liberty of registering your name in the reviewer database for {$journalName}. This does not entail any form of commitment on your part, but simply enables us to approach you with a submission to possibly review. On being invited to review, you will have an opportunity to see the title and abstract of the paper in question, and you'll always be in a position to accept or decline the invitation. You can also ask at any point to have your name removed from this reviewer list.
-
-We are providing you with a username and password, which is used in all interactions with the journal through its website. You may wish, for example, to update your profile, including your reviewing interests.
-
-Username: {$username}
-Password: {$password}
-
-Thank you,
-{$principalContactSignature}</body>
-		<description>Bu e-posta sisteme yeni kayıt olan kullanıcılara gönderilir ve sisteme hoşgeldin mesajı ile birlikte kullanıcı adı ve şifre bilgilerini de içerir.</description>
-	</email_text>
 	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
 		<subject>Makale Değerlendirme İsteği 2. Tur</subject>
 		<body>{$reviewerName},
