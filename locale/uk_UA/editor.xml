@@ -14,7 +14,7 @@
   * V. I. Vernadsky National Library of Ukraine
   -->
 
-<locale name="uk_UA" full_name = "Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <message key="editor.article.reviewForms">Форми рецензування</message>  
        <message key="editor.article.selectReviewForm">Обрати форму рецензування</message>
        <message key="editor.article.clearReviewForm">Очистити форму рецензування</message>

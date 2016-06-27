@@ -20,14 +20,14 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveGroup"); });
 {/literal}
 </script>
 
-<br/>
+<br />
 
 <form action="{url op="setBoardEnabled"}" method="post">
 	{url|assign:"aboutEditorialTeamUrl" page="about" op="editorialTeam"}
 	{url|assign:"peopleManagementUrl" page="manager" op="people" path="all"}
-	{translate key="manager.groups.enableBoard.description" aboutEditorialTeamUrl=$aboutEditorialTeamUrl}<br/>
-	<input type="radio" id="boardEnabledOff" {if !$boardEnabled}checked="checked" {/if}name="boardEnabled" value="0"/>&nbsp;<label for="boardEnabledOff">{translate key="manager.groups.disableBoard"}</label><br/>
-	<input type="radio" id="boardEnabledOn" {if $boardEnabled}checked="checked" {/if}name="boardEnabled" value="1"/>&nbsp;<label for="boardEnabledOn">{translate key="manager.groups.enableBoard"}</label><br/>
+	{translate key="manager.groups.enableBoard.description" aboutEditorialTeamUrl=$aboutEditorialTeamUrl}<br />
+	<input type="radio" id="boardEnabledOff" {if !$boardEnabled}checked="checked" {/if}name="boardEnabled" value="0"/>&nbsp;<label for="boardEnabledOff">{translate key="manager.groups.disableBoard"}</label><br />
+	<input type="radio" id="boardEnabledOn" {if $boardEnabled}checked="checked" {/if}name="boardEnabled" value="1"/>&nbsp;<label for="boardEnabledOn">{translate key="manager.groups.enableBoard"}</label><br />
 	<input type="submit" value="{translate key="common.record"}" class="button defaultButton"/>
 </form>
 

@@ -383,7 +383,7 @@ Bitte beachten Sie, dass die OAI-Schnittstelle für diese Website in der OJS-Sys
 </ul>]]></message>
 
 	<!-- Systeminformationen -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>Beachten Sie:</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>Beachten Sie:</h4>
 <p>Das System konnte die Konfigurationsdatei nicht automatisch überschreiben. Öffnen Sie <tt>config.inc.php</tt> mit einem geeigneten Texteditor und ersetzen Sie den Inhalt durch den Text im nachstehenden Textfeld.</p>]]></message>
 
 

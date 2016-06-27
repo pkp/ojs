@@ -39,11 +39,11 @@
 		{foreach from=$sections item=section}
 			<option {if in_array($section->getId(), $sectionIds)}selected="selected" {/if}value="{$section->getId()}">{$section->getLocalizedTitle()}</option>
 		{/foreach}
-	</select><br/>&nbsp;<br/>
+	</select><br />&nbsp;<br/>
 	<input type="submit" value="{translate key="common.record"}" class="button defaultButton"/>
 </form>
 </div>
-<br/>
+<br />
 
 <form action="{url op="savePublicStatisticsList"}" method="post">
 <table width="100%" class="data">
@@ -131,7 +131,7 @@
 </table>
 <p>{translate key="manager.statistics.statistics.note"}</p>
 
-{translate key="manager.statistics.statistics.makePublic"}<br/>
+{translate key="manager.statistics.statistics.makePublic"}<br />
 <input type="submit" class="button defaultButton" value="{translate key="common.record"}"/>
 </form>
 </div>

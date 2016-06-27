@@ -141,7 +141,6 @@
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.notesInstructions">للمحرر فقط. غير منشور كجزء من مكون للتحكيم.</message>
 
 	<!-- Objects For Review Assignments Management by Editor -->
-	<message key="plugins.generic.objectsForReview.editor.objectsForReview">مكونات للتحكيم</message>
 	<message key="plugins.generic.objectsForReview.editor.assignments">مهام التحكيم</message>
 	<!--  Actions -->
 	<message key="plugins.generic.objectsForReview.editor.select">إختر</message>

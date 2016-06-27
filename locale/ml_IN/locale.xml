@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="ml_IN" full_name = "Malayalam">
+<locale name="ml_IN" full_name="മലയാളം">
 	<!--
 	 * This file is organized into several major sections, separated
 	 * by comments like this one. These sections are called:
@@ -364,7 +364,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="admin.editSystemConfigInstructions"><![CDATA[Use this form to modify your system configuration (the <tt>config.inc.php</tt> file). Click Save to save your new configuration, or "Display" to simply display the updated configuration file and not modify your existing configuration.
 <br /><br />
 <span class="formError">Warning: Modifying these settings can potentially leave your site in an inaccessible state (requiring your configuration file to be manually fixed). It is strongly recommended that you do not make any changes unless you know exactly what you are doing.</span>]]></message>
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</h4>
 <p>The system could not automatically overwrite the configuration file. To apply your configuration changes you must open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>]]></message>
 	
 
@@ -512,10 +512,10 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<!-- Navigation sidebar menu -->
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to reviewer's profile.<br/>
-Ratings is out of 5 (Excellent).<br/>
-Weeks refers to average period of time to complete a review.<br/>
-Latest is date of most recently accepted review.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to reviewer's profile.<br />
+Ratings is out of 5 (Excellent).<br />
+Weeks refers to average period of time to complete a review.<br />
+Latest is date of most recently accepted review.<br />
 Active is how many reviews are currently being considered or underway.]]></message>
 
 
@@ -1055,8 +1055,8 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Possibly invalid URLs for search sites are displayed below.<br/>
-You should manually verify any URLs marked as invalid, as this test is not 100% accurate.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Possibly invalid URLs for search sites are displayed below.<br />
+You should manually verify any URLs marked as invalid, as this test is not 100% accurate.<br />
 Validation may fail on search URLs that require posted form data.]]></message>
 	
 	<!-- RT Entities -->

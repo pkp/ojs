@@ -10,7 +10,7 @@
  *}
 {include file="common/header.tpl"}
 
-<br/>
+<br />
 
 <form id="objectForReviewAssignmentForm" method="post" action="{url op="updateObjectForReviewAssignment"}" enctype="multipart/form-data">
 <input type="hidden" name="assignmentId" value="{$objectForReviewAssignment->getId()|escape}" />

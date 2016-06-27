@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="vi_VN" full_name = "Tiếng Việt">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="author.submit">Nộp bài mới</message>
 	<message key="author.track">Bài đang nộp dở</message>
 	<message key="author.competingInterests"><![CDATA[Lợi&nbsp;ích&nbsp;xung&nbsp;đột <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Chính&nbsp;sách&nbsp;CI</a>]]></message>

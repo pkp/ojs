@@ -27,7 +27,7 @@ function toggleChecked() {
 {/literal}
 </script>
 
-<br/>
+<br />
 <p>{translate key="plugins.importexport.pubIds.export.selectIssue.description"}</p>
 
 <div id="issues">

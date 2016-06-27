@@ -14,7 +14,7 @@
   * V. I. Vernadsky National Library of Ukraine
   -->
 
-<locale name="uk_UA" full_name = "Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <!-- Section default -->
        <message key="section.default.title">Статті</message>
        <message key="section.default.abbrev">ART</message>

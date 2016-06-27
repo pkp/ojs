@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name = "Turkish">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.generic.referral.name">Referral Eklentisi</message>
 	<message key="plugins.generic.referral.description">Referral Eklentisi makaleler için dışarıdan gelen refbeck URL'lerini izler (Örneğin; bir okuyucu dış kaynaklı bir makale bağlantısını takip edince). Yazarların bir makale için otomatik-güncelleştirilmiş bir Refbacks listesi tutmasını ve potansiyel olarak yayınlamasını sağlar.</message>
 	
@@ -33,9 +33,7 @@
 	<message key="plugins.generic.referral.nameRequired">Bir refback başlığı gerekiyor.</message>
 	<message key="plugins.generic.referral.urlRequired">Bir refback URL'si gerekiyor.</message>
 	<message key="plugins.generic.referral.settings">Referral Eklentisi Ayarları</message>
-	<message key="plugins.generic.referral.settings.description">The Referral Plugin captures URLs that link to articles published within this journal so that they can be curated by the author and optionally published. This form allows the Journal Manager to control how these links are captured.</message>
 	<message key="plugins.generic.referral.excusions">Hariç Tutma</message>
-	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Enter a list of regular expression patterns, one per line, to be treated as exclusions for referral logging. This can be used to prevent search engine requests from cluttering the list of referrals. For more information on regular expressions, see <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>.]]></message>
 	<message key="plugins.generic.referral.status.accepted">Yayımlanmış</message>
 	<message key="plugins.generic.referral.status.declined">Yok Sayılan</message>
 	<message key="plugins.generic.referral.status.accept.confirm">Seçilmiş RefBack'leri yayımlamak istediğinizden emin misiniz?</message>

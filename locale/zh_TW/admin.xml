@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="zh_TW" full_name = "繁體中文">
+<locale name="zh_TW" full_name="繁體中文">
 	<message key="admin.hostedJournals">期刊建置</message>
 	<message key="admin.settings.journalRedirect">期刊重新導向</message>
 	<message key="admin.settings.journalRedirectInstructions">讓主站重新導向至這份期刊。比方說，如果這個網站只有唯一一份期刊的話，這個選項就很有用。</message>

@@ -40,7 +40,7 @@
 
 {if $currentJournal}
 	{if $currentJournal->getSetting('includeCopyrightStatement')}
-		<br/><br/>
+		<br /><br/>
 		{translate key="submission.copyrightStatement" copyrightYear=$article->getCopyrightYear()|escape copyrightHolder=$article->getLocalizedCopyrightHolder()|escape}
 	{/if}
 	{if $currentJournal->getSetting('includeLicense')}

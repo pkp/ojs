@@ -383,7 +383,7 @@
 	</ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ملاحظة!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ملاحظة!</h4>
 	<p>لا يتمكن النظام من تعديل ملف الإعدادات تلقائياً. لتتمكن من تغيير إعداداتك، عليك بفتح الملف <tt>config.inc.php</tt> مستعملاً أي برنامج مناسب لتحرير النصوص، واستبدل محتوياته بالمحتوى الظاهر في الخانة النصية أدناه.</p>]]></message>
 
 
@@ -540,10 +540,10 @@
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[الاسم يرتبط بالملف التعريفي للمحكم.<br/>
-التقييم من 5 نقط (ممتاز).<br/>
-عدد الأسابيع يشير على معدل فترة إكمال التحكيم.<br/>
-الأخير هو تاريخ قبول التحكيم الأخير.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[الاسم يرتبط بالملف التعريفي للمحكم.<br />
+التقييم من 5 نقط (ممتاز).<br />
+عدد الأسابيع يشير على معدل فترة إكمال التحكيم.<br />
+الأخير هو تاريخ قبول التحكيم الأخير.<br />
 نشط يؤشر عدد التحكيمات التي هي قيد النظر أو في طريقها لذلك.]]></message>
 
 
@@ -1129,8 +1129,8 @@
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[الروابط الخاطئة إحتمالاً لمواقع البحث مبينة أدناه.<br/>
-عليك التحقق يدوياً من أي رابط معلم بأنه غير صحيح، حيث أن هذا الإختبار ليس مضمون الدقة 100% .<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[الروابط الخاطئة إحتمالاً لمواقع البحث مبينة أدناه.<br />
+عليك التحقق يدوياً من أي رابط معلم بأنه غير صحيح، حيث أن هذا الإختبار ليس مضمون الدقة 100% .<br />
 التحقق قد يفشل بالنسبة لروابط البحث التي تتطلب نماذج إدراج للبيانات.]]></message>
 
 	<!-- RT Entities -->

@@ -327,7 +327,7 @@ Kontuan izan OAI interfazea desgaitu daitekeela gune honetarako, OJS sistema-kon
 	
 	<!-- System Information -->
 	<message 
-key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ABISUA!</div>
+key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ABISUA!</h4>
 <p>Sistemak ezin izan du automatikoki gainidatzi konfigurazio-fitxategia. Konfigurazio-aldaketak aplikatzeko, testu-editore egoki batekin ireki beharko duzu <tt>config.inc.php</tt> eta bertako edukia aldatu beheko testu-eremuaren edukiarekin.</p>]]></message>
 
 	<!-- Site Administrator Merge Users -->	
@@ -466,10 +466,10 @@ Nahi baduzu, kontua zergatik desgaitu diozun azal diezaiokezu erabiltzaileari.</
 	<!-- Navigation sidebar menu -->
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Izena ebaluatzailearen profilerako esteka da.<br/>
-Balorazio-eskala: 1-5 (Bikaina).<br/>
-Asteak: ebaluazioa egiteko batez besteko denbora. <br/>
-Azkena: azkeneko onartutako ebaluazioaren data.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Izena ebaluatzailearen profilerako esteka da.<br />
+Balorazio-eskala: 1-5 (Bikaina).<br />
+Asteak: ebaluazioa egiteko batez besteko denbora. <br />
+Azkena: azkeneko onartutako ebaluazioaren data.<br />
 Aktibo: une honetan kontsideratzen edo egiten ari diren ebaluazioen kopurua.]]></message>
 
 
@@ -958,8 +958,8 @@ artikuluaren probak zuzentzeko.</message>
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Behean erakusten dira bilaketa egiteko guneen URL baliogabeak ematen dutenak.<br/>
-Eskuz egiaztatu beharko dituzu baliogabeko gisa markatutako URLak, proba hau ez delako % 100 fidagarria.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Behean erakusten dira bilaketa egiteko guneen URL baliogabeak ematen dutenak.<br />
+Eskuz egiaztatu beharko dituzu baliogabeko gisa markatutako URLak, proba hau ez delako % 100 fidagarria.<br />
 Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatzen duten URLetan.]]></message>
 	
 	<!-- RT Entities -->

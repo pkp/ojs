@@ -281,7 +281,7 @@ Ten en conta que a interface OAI pódese desactivar editando a configuración de
 	<message key="admin.editSystemConfigInstructions"><![CDATA[Emprega este formulario para modificar a configuración do teu sistema (o ficheiro <tt>config.inc.php</tt>). Clica en "gardar" para gardar a nova configuración, o en "mostrar" para  mostrar o ficheiro de configuración actualizado sen modificar a configuración actual.
 <br /><br />
 <span class="formError">Advertencia: a modificación destes valores pode provocar que o seu su sitio fique inaccesible (sendo preciso arranxar manualmente o ficheiro de configuración). Recoméndase que no realices nengun cambio se non sabes exactamente o que estás a facer.</span>]]></message>
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>¡ATENCIÓN!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>¡ATENCIÓN!</h4>
 <p>O sistema non puido sobreescribir automáticamente o ficheiro de configuración. Para aplicar os cambios á configuración compre abrir o ficheiro <tt>config.inc.php</tt>  nun editor de texto e substituir o texto existente co texto que aparece abaixo.</p>]]></message>
 	
 	
@@ -392,10 +392,10 @@ Opcionalmente  pódeche indicar o motivo polo que se  desactivou a conta de subs
 	<!-- Navigation sidebar menu -->
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[O nome enlaza enlaza co perfil de / da revisor/a.<br/>
-A puntuación é sobre 5 (excelente).<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[O nome enlaza enlaza co perfil de / da revisor/a.<br />
+A puntuación é sobre 5 (excelente).<br />
 Semanas refírese ao periodo de tempo medio empregado para rematar unha revisión.<br />
-A última data é a da revisión aceptada máis recente.<br/>
+A última data é a da revisión aceptada máis recente.<br />
 Activas é o número de revisións que neste momento están consideradas como en proceso.]]></message>
 	
 	
@@ -817,8 +817,8 @@ Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</stron
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Posiblemente se mostran a continuación  URLs non válidas para sitios de busca.<br/>
-Deberías verificar manualmente as URLs marcadas como nno válidas, xa que esta proba non é infalibel ao 100%.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Posiblemente se mostran a continuación  URLs non válidas para sitios de busca.<br />
+Deberías verificar manualmente as URLs marcadas como nno válidas, xa que esta proba non é infalibel ao 100%.<br />
 A validación pode fallar en URLs de pescuda que precisan o envío de formularios de dados.]]></message>
 	
 	<!-- RT Entities -->

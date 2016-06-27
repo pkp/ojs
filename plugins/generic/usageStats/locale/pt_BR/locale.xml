@@ -35,5 +35,42 @@
 	<message key="plugins.generic.usageStats.pluginDisabled">O plugin de estatísticas de uso está desativado. Nenhum arquivo de log processado.</message>
 	<message key="plugins.generic.usageStats.processingPathNotEmpty">O diretório {$directory} não está vazio. Isto pode indicar um processo que falhou anteriormente, ou um processo atualmente em execução. Este arquivo será reprocessado automaticamente se você estiver usando o scheduledTasksAutoStage.xml, caso contrário, você precisará mover manualmente quaisquer arquivos órfãos :( deixados no diretório de processamento de volta para o diretório de estagiamento (preprocessamento).</message>
 	<message key="plugins.generic.usageStats.noCounterBotList">A lista de bot do COUNTER não pôde ser encontrado, ou mais de uma lista está presente. O arquivo {$file} não pôde ser processado.</message>
-	<message key="plugins.generic.usageStats.failedCounterBotList">A lista de bot do COUNTER não pôde ser encontrado. O arquivo {$file} não pôde ser processado.</message>
+	<message key="plugins.generic.usageStats.failedCounterBotList">Impossível encontrar a lista de bots {$botlist} do COUNTER. O arquivo {$file} não pôde ser processado.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Opção de privacidade de dados</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements">Para ativar esta opção, o arquivo onde a chave de criptografia está armazenada precisa ser configurado: Inclua a seção '[usageStats]' no arquivo config.inc.php e defina a variável 'salt_path'. O arquivo deve existir e deve ter permissão de escrita pelo usuário Web. Para mais detalhes sobre os requisitos desta opção veja o arquivo README do plugin.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Ative esta opção para usar uma versão de plugin que respeita legislação sobre privacidade, isto é, que registra os IPs de modo oculto, informa os usuários sobre o rastreamento e oferece opção de rejeitar. Nota: ao usar esta opção, não será possível usar as funcionalidades geográficas do plugin.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Respeitar privacidade de dados</message>
+	<message key="plugins.reports.usageStats.optout.displayName">Informação sobre privacidade de estatísticas de uso</message>
+	<message key="plugins.reports.usageStats.optout.description">Informações sobre privacidade de estatísticas de uso</message>
+	<message key="plugins.generic.usageStats.optout.title">Informações sobre estatísticas de uso</message>
+	<message key="plugins.generic.usageStats.optout.shortDesc"><![CDATA[São registradas de forma anônima estatísticas de uso. Saiba mais em <a href="{$privacyInfo}">privacy information</a>.]]></message>
+	<message key="plugins.generic.usageStats.optout.description"><![CDATA[<h3>Informações gerais sobre privacidade</h3>
+		<p>Veja nossa <a href="{$privacyStatementUrl}">política geral de privacidade</a>.</p>
+		<h3>Estatísticas de uso</h3>
+		<p>Para permitir a análise de uso e impacto do periódico e dos artigos publicados, são coletados e registrados os acessos as páginas: página inicial, edições, artigos, composições finais e arquivos suplementares. No processo de coleta, todos os dados são tornados anônimos. Nenhuma informação pessoal é registrada. Os endereços de IP são obfuscados por meio de uma criptografia (usando <em>SHA 256</em>) combinada com uma <em>chave de segurança de 64 caracteres</em> que é <em>gerada randomicamente e alterada diariamente</em> de forma automática. Portanto, não há como reconstruir os endereços de IP.</p>
+		<p>As seguintes informações são coletadas, além do endereço de IP a ser obfuscado:</p>
+		<ul>
+		<li>Tipo de acesso (administração, leitura, etc.)</li>
+		<li>Hora da acessoo</li>
+		<li>Endereço acessado</li>
+		<li>Código de status HTTP</li>
+		<li>Navegador</li>
+		</ul>
+		<p>Os dados coletados são usados apenas para propósitos de avaliação. Nenhum endereço de IP é mapeado a IDs de usuário. É tecnicamente impossível rastrear um conjunto específicos de dados a um IP específico.</p>]]></message>
+	<message key="plugins.generic.usageStats.optin">Aceitar</message>
+	<message key="plugins.generic.usageStats.optout">Rejeitar</message>
+	<message key="plugins.generic.usageStats.optout.done"><![CDATA[<p>Recusa à coleta de estatísticas de uso realizada com sucesso. Enquanto esta mensagem estiver sendo apresentada, nenhuma estatística será coletada pelo sistema. Clique no botão a seguir para reverter essa decisão.</p>]]></message>
+	<message key="plugins.generic.usageStats.optout.cookie"><![CDATA[<p>Caso deseje é permitido rejeitar o processo de coleta de dados. Ao clicar no botão de rejeição a seguir, pode ativamente decidir não participar na análise estatística. Ao clicar no botão, um <em>cookie</em> está sendo gravado no seu computador registrando a decisão. Caso as configurações de privacidade do navegador eliminem <em>cookies</em>automaticamente, será necessário tomar a decisão no próximo acesso. O <em>cookie</em> é válido apenas para um navegador. Caso use mais de um, terá que fazer a escolha individualmente, para cada navegador desejado. Nenhuma informação pessoal é gravado no <em>cookie</em>. Este <em>cookie</em> tem a validade de um ano após seu último acesso.</p>
+<p>Note que registros de atividade do servidor de hospedagem não são afetados por esta decisão, sendo específicas para este sistema. Veja nossa <a href="{$privacyStatementUrl}">política de privacidade</a>.</p>]]></message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath">Caminho do arquivo para chave de anonimato</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath.invalid">Impossível escrever no arquivo de anonimato.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requiresSalt">Habilitar privacidade de dados exige um arquivo de chave.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesCity">Habilitar privacidade de dados exclui Cidade como estatística opcional.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesRegion">Habilitar privacidade de dados excluir Região como estatística opcional.</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns">Informações estatísticas opcionais</message>
+	<message key="plugins.generic.usageStats.settings.archives">Arquivos</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives.description">Habilite esta opção para compressão de arquivos de registro de atividades usando a ferramenta gzip (será necessário configurar o gzip no arquivo config.inc.php). Caso tenha tráfego intenso é uma boa opção habilitar, para preservar espaço em disco.</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives">Compressão de arquivos</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.description">Habilite ou desabilite a coleta das seguintes informações opcionais. Isto influenciara nos possíveis relatórios estatísticos produzidos, além de impactar no tamanho da base de dados. NÃO ALTERE a menos que tenha certeza do que está fazendo.</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.cityRequiresRegion">A coluna opcional "Cidade" exige a coluna opcional "Região".</message>
 </locale>

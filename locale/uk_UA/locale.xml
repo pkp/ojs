@@ -14,7 +14,7 @@
   * V. I. Vernadsky National Library of Ukraine
   -->
 
-<locale name="uk_UA" full_name = "Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <!--
         * This file is organized into several major sections, separated
         * by comments like this one. These sections are called:
@@ -353,7 +353,7 @@
 </ul>]]></message>
        
        <!-- System Information -->
-       <message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>УВАГА!</div>
+       <message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>УВАГА!</h4>
 <p>Система не може автоматично перейменувати файл конфігурації. Для застосування змін у конфігурації Ви повинні відкрити <tt>config.inc.php</tt> у текстовому редакторі та замінити його зміст змістом текстового поля, наведеного нижче.</p>]]></message>
 
        <!-- Site Administrator Merge Users --> 
@@ -495,10 +495,10 @@
        <!-- Navigation sidebar menu -->
        
        <!-- Used by editor in submission review / editing -->
-       <message key="editor.article.selectReviewerNotes"><![CDATA[Імена є посиланнями на профілі рецензентів.<br/>
-Шкала рейтингу п'ятибальна. Оцінка 5 (Відмінно).<br/>
-Кількість тижнів визначає середній час, необхідний рецензенту для завершення роботи.<br/>
-У полі "Остання" вказана дата прийняття останнього запиту на рецензування.<br/>
+       <message key="editor.article.selectReviewerNotes"><![CDATA[Імена є посиланнями на профілі рецензентів.<br />
+Шкала рейтингу п'ятибальна. Оцінка 5 (Відмінно).<br />
+Кількість тижнів визначає середній час, необхідний рецензенту для завершення роботи.<br />
+У полі "Остання" вказана дата прийняття останнього запиту на рецензування.<br />
 У полі "Активні" вказується кількість робіт, які зараз рецензуються користувачем.]]></message>
 
        
@@ -1028,8 +1028,8 @@
 
        <!-- RT Searches -->
 
-       <message key="rt.admin.validateUrls.description"><![CDATA[Нижче відображені адреси URL пошукових сайтів, які, ймовірно, не є коректними.<br/>
-Оскільки цей тест не дає 100% гарантії, вам треба вручну перевірити всі адреси URL, які були помічені як некоректні.<br/>
+       <message key="rt.admin.validateUrls.description"><![CDATA[Нижче відображені адреси URL пошукових сайтів, які, ймовірно, не є коректними.<br />
+Оскільки цей тест не дає 100% гарантії, вам треба вручну перевірити всі адреси URL, які були помічені як некоректні.<br />
 Негативні результати перевірки можуть бути пов'язані з тим, що сайт вимагає надсилання даних у формі.]]></message>
        
        <!-- RT Entities -->

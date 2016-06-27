@@ -59,7 +59,7 @@
 	</tr>
 </table>
 {if $isEditor}
-	<a href="{url page="editor" op="clearSubmissionEventLog" path=$submission->getId()|to_array:$logEntry->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.event.confirmDeleteLogEntry"}')" class="action">{translate key="submission.event.deleteLogEntry"}</a><br/>
+	<a href="{url page="editor" op="clearSubmissionEventLog" path=$submission->getId()|to_array:$logEntry->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.event.confirmDeleteLogEntry"}')" class="action">{translate key="submission.event.deleteLogEntry"}</a><br />
 {/if}
 </div>
 <a class="action" href="{url op="submissionEventLog" path=$submission->getId()}">{translate key="submission.event.backToEventLog"}</a>

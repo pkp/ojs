@@ -15,8 +15,8 @@
 
 <div id="description">{translate key="plugins.generic.thesis.form.introduction"}</div>
 
-<br/>
-<br/>
+<br />
+<br />
 
 <form method="post" action="{url op="save"}">
 

@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="da_DK" full_name = "Danish">
+<locale name="da_DK" full_name="Dansk">
 	<message key="admin.hostedJournals">Tilknyttede tidsskrifter</message>
 	<message key="admin.settings.journalRedirect">Omdirigering af tidsskrift</message>
 	<message key="admin.settings.journalRedirectInstructions">Forespørgsler til hovedwebstedet omdirigeres til dette tidsskrift. Dette kan f.eks. være nyttigt, hvis webstedet kun er vært for et enkelt tidsskrift.</message>

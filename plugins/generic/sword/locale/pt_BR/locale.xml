@@ -26,9 +26,9 @@
 	<message key="plugins.generic.sword.depositPoints.type.optionalFixed">Opcional; Fixo</message>
 	<message key="plugins.generic.sword.depositPoints.type.manager">Apenas gerentes</message>
 	<message key="plugins.generic.sword.depositPoints.type.description"><![CDATA[<h4>Tipos de pontos de depósito:</h4>
-<p><strong>Automático</strong>: O depósito ocorre de forma automática. Um ponto de depósito SWORD completo é especificado. Um login e e uma senha devem ser definidos. O depósito ocorre após notificação de aceitação ao autor.<br/>
-<strong>Opcional; Flexível</strong>: O autor pode escolher entre depositar ou não. A URL especificada indica um documento de serviço, e o autor pode escolher qual ponto de depósito específico usar a partir desse documento. O depósito ocorre após notificação de aceitação ao autor.<br/>
-<strong>Opcional; Fixo</strong>: O autor pode escolher entre depositar ou não. A URL informada indica um ponto SWORD específico. O depósito ocorre após notificação de aceitação ao autor.<br/>
+<p><strong>Automático</strong>: O depósito ocorre de forma automática. Um ponto de depósito SWORD completo é especificado. Um login e e uma senha devem ser definidos. O depósito ocorre após notificação de aceitação ao autor.<br />
+<strong>Opcional; Flexível</strong>: O autor pode escolher entre depositar ou não. A URL especificada indica um documento de serviço, e o autor pode escolher qual ponto de depósito específico usar a partir desse documento. O depósito ocorre após notificação de aceitação ao autor.<br />
+<strong>Opcional; Fixo</strong>: O autor pode escolher entre depositar ou não. A URL informada indica um ponto SWORD específico. O depósito ocorre após notificação de aceitação ao autor.<br />
 <strong>Apenas gerentes</strong>: Apenas o editor gerente pode usar este ponto de depósito. A URL especificada indica um documento de serviço. O depósito é realizado manualmente pelo editor gerente por meio da interface de Importação/Exportação na administração da revista.
 </p>]]></message>
 	<message key="plugins.generic.sword.depositPoints.password.description">Caso não especifique uma senha aqui, será solicitada uma senha a você e/ou ao autor quando ocorrer o depósito. Note que esta senha será visível a todos os editores-gerentes, e será armazenada sem criptografia de segurança na base de dados.</message>

@@ -21,7 +21,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<br/>
+<br />
 
 <form method="post" id="subscriptionForm" action="{url op="updateSubscription" path="institutional"}">
 {if $subscriptionId}

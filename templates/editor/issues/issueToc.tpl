@@ -55,7 +55,7 @@ $(document).ready(function() {
 
 <h3>{translate key="issue.toc"}</h3>
 {url|assign:"url" op="resetSectionOrder" path=$issueId}
-{if $customSectionOrderingExists}{translate key="editor.issues.resetSectionOrder" url=$url}<br/>{/if}
+{if $customSectionOrderingExists}{translate key="editor.issues.resetSectionOrder" url=$url}<br />{/if}
 <form method="post" action="{url op="updateIssueToc" path=$issueId}" onsubmit="return confirm('{translate|escape:"jsparam" key="editor.issues.saveChanges"}')">
 
 {assign var=numCols value=5}

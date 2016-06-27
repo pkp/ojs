@@ -7,12 +7,11 @@
   * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
   * Localization strings for the pt_BR (Português (Brasil)) locale.
-  *
+  * locale information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_%28pt_BR%29
   -->
 
-<locale name="pt_BR" full_name = "Português (Brasil)">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="manager.emails.confirmResetAll">Deseja realmente restaurar todos os e-mails para o padrão original para esta revista? Todas as personalizações serão perdidas.</message>
 	<message key="manager.files.note">Aviso: o navegador de arquivos é uma ferramenta avançada que permite visualização e manipulação direta de documentos e diretórios associados à revista.</message>
 	<message key="manager.groups">Expediente</message>
@@ -684,8 +683,6 @@ Exemplo:
 	<message key="manager.setup.journalThumbnail">Miniatura da publicação</message>
 	<message key="manager.setup.subjectClassificationURLValid">Informe um URL remoto (inclua o protocolo, por exemplo http://)</message>
 	<message key="manager.setup.useThumbnail">Miniatura</message>
-	<message key="manager.setup.categories">Categorias</message>
-	<message key="manager.setup.categories.description">Escolha a categoria mais apropria da lista apresentada. Leitores poderão navegar por categoria a partir do conjunto completo oferecido.</message>
 	<message key="manager.statistics.defaultMetricDescription">O periódico está configurado para registrar mais de uma métrica de uso. Estatísticas de uso serão exibidas em vários contextos.
 Poderão ser usados estatísticas individuais de uso, por exemplo, para exibir uma lista ordenada dos artigos mais usados ou para classificar resultados de pesquisa. Escolha uma das métricas configuradas como padrão.</message>
 	<message key="manager.statistics.reports.aggregationColumns">Agregar estatísticas por:</message>
@@ -706,7 +703,6 @@ Poderão ser usados estatísticas individuais de uso, por exemplo, para exibir u
 	<message key="manager.statistics.reports.objectType">Tipo de objeto</message>
 	<message key="manager.statistics.reports.objectId">ID do objeto</message>
 	<message key="manager.statistics.reports.objectId.label">Defina um ou mais IDs de objetos, separados por vírgula (ex.: 1,2,3,4,5).</message>
-	<message key="manager.statistics.reports.today">Hoje</message>
 	<message key="manager.statistics.reports.currentMonth">Mês atual</message>
 	<message key="manager.statistics.reports.orderBy">Ordenar por</message>
 	<message key="manager.statistics.reports.orderDir">Ordem</message>
@@ -743,4 +739,10 @@ Poderão ser usados estatísticas individuais de uso, por exemplo, para exibir u
 	<message key="manager.setup.copyrightYearBasis.Issue">O ano padrão será deduzido da data de publicação da edição.</message>
 	<message key="manager.setup.emailHeader">Cabeçalho do email</message>
 	<message key="manager.setup.emailHeaderDescription">Os e-mails predefinidos que são enviados pelo sistema em nome da revista começarão com este cabeçalho. Esses e-mails serão endereçados a partir do contato principal, por isso é importante esclarecer que o contato principal não é necessariamente o responsável pelo conteúdo da mensagem, que pode ser enviado em nome de um usuário diferente.</message>
+	<message key="manager.statistics.reports.optionalColumns.description">Itens em itálico e marcados com asterísco (*) representam dados opcionais à forma atual de contagem de estatísticas no OJS (tipo de métrica). Os dados podem ou não existir, dependendo das configurações do plugin de estatísticas.</message>
+	<message key="manager.statistics.reports.yesterday">Ontem</message>
+
+	<!-- Categories -->
+	<message key="manager.setup.categories">Categorias</message>
+	<message key="manager.setup.categories.description">Escolha a categoria mais apropria da lista apresentada. Leitores poderão navegar por categoria a partir do conjunto completo oferecido.</message>
 </locale>

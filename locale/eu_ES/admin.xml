@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="eu_ES" full_name = "Basque (Euskara)">
+<locale name="eu_ES" full_name="Euskara">
 	<message key="admin.hostedJournals">Aldizkari ostatatuak</message>
 	<message key="admin.settings.journalRedirect">Aldizkarira birbideratu</message>
 	<message key="admin.settings.journalRedirectInstructions">Gune nagusira egindako eskaerak aldizkari honetara birbideratuko dira. Praktikoa da guneak aldizkari bakarra ostatatzen badu, esate baterako.</message>

@@ -7,7 +7,7 @@
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
   *
   * Localization strings for the ca_ES (Català) locale.
   -->
@@ -26,7 +26,7 @@
 	<message key="plugins.generic.xmlGalley.settings.notAvailable">No disponible</message>
 
 	<message key="plugins.generic.xmlGalley.settings.externalXSLT">Renderitzador XSLT amb línia d'ordres externa (p. ex. Xalan)</message>
-	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Introduïu la ruta completa a l'eina de renderització XSLT, juntament amb els arguments requerits. Utilitzeu %xsl per substituir la ubicació del full d'estil XSL, i %xml per substituir la ubicació del fitxer XML font. Per exemple: <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Introduïu la ruta completa a l'eina de renderització XSLT, juntament amb els arguments requerits. Utilitzeu %xsl per substituir la ubicació del full d'estil XSL, i %xml per substituir la ubicació del fitxer XML font. Per exemple: <br /><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">Prova XSLT</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">La prova XSLT externa s'ha fet correctament.</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">S'ha produït un error en fer la prova XSLT externa.</message>
@@ -36,7 +36,7 @@
 	<message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM Publicació de la Revista DTD</a> &rarr; XHTML]]></message>
 
 	<message key="plugins.generic.xmlGalley.settings.xslFOP">Habilita la renderització de galerades en PDF mitjançant XSL-FO (p. ex. FOP)</message>
-	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Introduïu la ruta completa per al processador FO, juntament amb els arguments requerits. Utilitzeu %fo per substituir la ubicació del fitxer XSL-FO, i %pdf per substituir la ubicació del fitxer PDF. Per exemple: <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Introduïu la ruta completa per al processador FO, juntament amb els arguments requerits. Utilitzeu %fo per substituir la ubicació del fitxer XSL-FO, i %pdf per substituir la ubicació del fitxer PDF. Per exemple: <br /><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired">Heu d'especificar un processador FO amb línia d'ordres externa.</message>
 
 	<message key="plugins.generic.xmlGalley.settings.customXSL">Full d'estil XSL personalitzat</message>

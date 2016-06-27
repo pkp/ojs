@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="ja_JP" full_name = "日本語">
+<locale name="ja_JP" full_name="日本語">
 	<message key="editor.home">編集者ホーム</message>
 	<message key="editor.submissionsAndPublishing">投稿物と出版</message>
 	<message key="editor.submissionQueue">作業待ち投稿物</message>

@@ -71,10 +71,10 @@
 			{assign var=enableSuppFileURN value=$pubIdPlugin->getSetting($currentJournal->getId(), "enableSuppFileURN")}
 			{if $enableArticleURN || $enableGalleyURN || $enableSuppFileURN}
 				<br />
-				<span class="instruct">{translate key="plugins.pubIds.urn.editor.excludeIssueObjectsURN.description"}</span><br/>
+				<span class="instruct">{translate key="plugins.pubIds.urn.editor.excludeIssueObjectsURN.description"}</span><br />
 				<input type="submit" name="excludeIssueObjects_{$pubIdPlugin->getPubIdType()|escape}" value="{translate key="plugins.pubIds.urn.editor.excludeIssueObjectsURN"}" class="action" /><br />
 				<br />
-				<span class="instruct">{translate key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description"}</span><br/>
+				<span class="instruct">{translate key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description"}</span><br />
 				<input type="submit" name="clearIssueObjects_{$pubIdPlugin->getPubIdType()|escape}" value="{translate key="plugins.pubIds.urn.editor.clearIssueObjectsURN"}" class="action" /><br />
 			{/if}
 		{/if}

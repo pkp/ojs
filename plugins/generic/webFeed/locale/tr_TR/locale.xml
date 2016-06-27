@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name = "Turkish">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.generic.webfeed.displayName">Web Besleme Eklentisi</message>
 	<message key="plugins.generic.webfeed.description">Bu eklenti son sayı için RSS/Atom web sendikasyon beslemelerini üretir.</message>
 

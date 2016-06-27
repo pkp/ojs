@@ -231,9 +231,9 @@
 	<message key="user.noRoles.chooseJournal">Ваша учетная запись сейчас не связана ни с одним журналом. Пожалуйста, выберите журнал:</message>
 	<message key="user.noRoles.noRolesForJournal">Вашей учетной записи сейчас в этом журнале не задана ни одна роль. Пожалуйста, выберите одно из предложенных ниже действий:</message>
 	<message key="user.noRoles.submitArticle">Отправить предложение</message>
-	<message key="user.noRoles.submitArticleRegClosed">Отправить статью: регистрация авторов сейчас отключена.</message>
+	<message key="user.noRoles.submitArticleRegClosed">Отправить статью: регистрация авторов сейчас закрыта.</message>
 	<message key="user.noRoles.regReviewer">Зарегистрироваться в качестве рецензента</message>
-	<message key="user.noRoles.regReviewerClosed">Зарегистрироваться в качестве рецензента: регистрация рецензентов сейчас отключена.</message>
+	<message key="user.noRoles.regReviewerClosed">Зарегистрироваться в качестве рецензента: регистрация рецензентов сейчас закрыта.</message>
 	<message key="user.orcid">ORCID iD</message>
 	<message key="user.orcid.description"><![CDATA[ORCID iD могут быть присвоен только <a href="http://orcid.org/" target="_blank">Регистром ORCID</a>. Вы должны соответствовать их стандартам для формирования ORCID iD и добавить полный адрес URI (например, <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
 	<message key="user.profile.form.orcidInvalid">Указанный вами ORCID iD является неправильным.</message>
@@ -313,7 +313,7 @@
 
 	<message key="submission.event.author.authorRevision">Автор прислал исправленную версию</message>
 
-	<message key="submission.event.general.authorRevision">Файл версии авторская обновлен</message>
+	<message key="submission.event.general.authorRevision">Файл авторской правки обновлен</message>
 
 	<message key="submission.event.editor.editorAssigned">Назначен редактор для статьи</message>
 	<message key="submission.event.editor.editorUnassigned">Отозван редактор для статьи</message>
@@ -362,7 +362,7 @@
 
 	<!-- Администрирование сайта -->
 
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Чтобы контент всех журналов, размещенных на этом сайте, индексировался в голобальной распределенной системе баз данных исследований, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">зарегистрируйте</a> адрес Вашего сайта в <a href="http://pkp.sfu.ca/harvester/" target="_blank">сборщике</a> метаданных Public Knowledge Project. Этот инструмент собирает метаданные каждого проиндексированного элемента из этого журнала, обеспечивая точный и коллективный поиск по исследовательским сайтам, которые поддерживают <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">протокол сбора метаданных Open Archives Initiative</a>.
+	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Чтобы контент всех журналов, размещенных на этом сайте, индексировался в глобальной распределенной системе баз данных исследований, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">зарегистрируйте</a> адрес Вашего сайта в <a href="http://pkp.sfu.ca/harvester/" target="_blank">сборщике</a> метаданных Public Knowledge Project. Этот инструмент собирает метаданные каждого проиндексированного элемента из этого журнала, обеспечивая точный и коллективный поиск по исследовательским сайтам, которые поддерживают <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">протокол сбора метаданных Open Archives Initiative</a>.
 <br /><br />
 <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Щелкните здесь</a> и  введите <span class="highlight">{$siteUrl}</span> в поле <strong>«Site URL»</strong>, и <span class="highlight">{$oaiUrl}</span> в поле <strong>«Base URL for OAI Archive»</strong>.
 <br /><br />
@@ -384,7 +384,7 @@
 </ul>]]></message>
 
 	<!-- Информация системы -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ВНИМАНИЕ!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ВНИМАНИЕ!</h4>
 <p>Система не сможет автоматически перезаписать конфигурационный файл. Чтобы применить Ваши измененные настройки конфигурации, Вам нужно открыть <tt>config.inc.php</tt> в подходящем текстовом редакторе и заменить его содержимое содержимым текстового поля ниже.</p>]]></message>
 
 
@@ -439,7 +439,7 @@
 Авторы, которые публикуются в данном журнале, соглашаются со следующими условиями:
 <ol type="a">
 	<li>Авторы сохраняют за собой авторские права на работу и передают журналу право первой публикации вместе с работой, одновременно лицензируя ее на условиях <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a>, которая позволяет другим распространять данную работу с обязательным указанием авторства данной работы и ссылкой на оригинальную публикацию в этом журнале.</li>
-	<li>Авторы сохраняют право заключать отдельные, дополнительные контрактные соглашения на неэксклюзивное распространение версии работы, опубликованной этим журналом (например, разместить ее в университетском хранилище или опубликовать ее в книге), со ссылкой на оригинальную публикацию в этом журнале.</li>
+	<li>Авторы сохраняют право заключать отдельные, дополнительные контрактные соглашения на неисключительное распространение версии работы, опубликованной этим журналом (например, разместить ее в университетском хранилище или опубликовать ее в книге), со ссылкой на оригинальную публикацию в этом журнале.</li>
 	<li>Авторам разрешается размещать их работу в сети Интернет (например, в университетском хранилище или на их персональном веб-сайте) до и во время процесса рассмотрения ее данным журналом, так как это может привести к продуктивному обсуждению, а также к большему количеству ссылок на данную опубликованную работу (Смотри <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>
 
@@ -541,10 +541,10 @@
 	<!-- Меню навигации боковой панели -->
 
 	<!-- Используются редактором в процессе рецензирования / редактирования статьи -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Имя является ссылкой на профиль рецензента.<br/>
-Высшая оценка в рейтинге — 5 (Отлично).<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Имя является ссылкой на профиль рецензента.<br />
+Высшая оценка в рейтинге — 5 (Отлично).<br />
 Недель — показывает средний срок выполнения рецензии рецензентом.<br />
-Последняя — дата последней принятой рецензии от данного рецензента,<br/>
+Последняя — дата последней принятой рецензии от данного рецензента,<br />
 Активны — количество рецензий, запросы на которые сейчас рассматривает или выполняет рецензент.]]></message>
 
 
@@ -563,7 +563,7 @@
 
 	<message key="sectionEditor.regrets.breadcrumb">Отказы</message>
 	<message key="sectionEditor.regrets.title">#{$articleId} Отказы рецензентов, отмены и предыдущие раунды</message>
-	<message key="sectionEditor.regrets">Отказ</message>
+	<message key="sectionEditor.regrets">Отказы</message>
 	<message key="sectionEditor.regrets.link">Просмотреть отказы, отмены и предыдущие раунды</message>
 	<message key="sectionEditor.regrets.reviewRound">Рецензирование, раунд {$round}</message>
 	<message key="sectionEditor.regrets.decisionRound">Решение редактора, раунд {$round}</message>
@@ -721,7 +721,7 @@
 (После сохранения могут быть добавлены дополнительные комментарии.)]]></message>
 	<message key="submission.comments.canShareWithAuthor">Для автора и редактора</message>
 	<message key="submission.comments.cannotShareWithAuthor">Для редактора</message>
-	<message key="submission.comments.blindCcReviewers">После отправки предоставить редактируемую, подготовленную для слепого рецензирования копию для отправки рецензентам.</message>
+	<message key="submission.comments.blindCcReviewers">После отправки предоставить копию решения редакции для отправки рецензентам.</message>
 	<message key="submission.comments.forAuthorEditor">Для автора и редактора</message>
 	<message key="submission.comments.forEditor">Для редактора</message>
 	<message key="submission.comments.saveAndEmailAuthor">Сохранить и отправить автору</message>
@@ -812,7 +812,7 @@
 <li>Используйте <strong>*</strong> в качестве специального символа, заменяющего любую последовательность символов, например, <em>соц* мораль</em> найдет документы, содержащие «социальная» или «социологическая»</li>
 </ul>]]></message>
 
-	<!-- Промежуточная страницв для PDF -->
+	<!-- Промежуточная страница для PDF -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.pdf.download">Скачать этот файл PDF</message>
 	<message key="article.pdf.pluginMissing"><![CDATA[<p>Выбранный файл PDF должен загрузиться здесь, если в вашем веб-браузере установлен плагин для чтения PDF (например, последняя версия <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Если вам нужна дополнительная информация о том, как распечатать, сохранить и работать с PDF-файлами, у издательства Highwire Press на сайте размещен полезный материал <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">«Frequently Asked Questions about PDFs»</a>.</p> <p>В качестве альтернативы, вы можете скачать файл PDF на свой компьютер, на котором файл может быть открыт любой программой для просмотра PDF. Для скачивания файла PDF щелкните на ссылке «Скачать» выше.</p>]]></message>
@@ -820,7 +820,7 @@
 
 	<!-- Промежуточная страница для гранок в форматах, отличных от PDF и HTML -->
 	<message key="article.nonpdf.title">Скачать статью</message>
-	<message key="article.nonpdf.note"><![CDATA[Выбранный файл должен начать скачиваться автоматически. Если это не произошло, щелкните на ссылке ниже. Обратите внимание, что этот файл может потребовать специальной программы или плагина для просмотра.<br /><br />Если файл не начао скачиваться автоматически, <a href="{$url}">щелкните здесь</a>.]]></message>
+	<message key="article.nonpdf.note"><![CDATA[Выбранный файл должен начать скачиваться автоматически. Если это не произошло, щелкните на ссылке ниже. Обратите внимание, что этот файл может потребовать специальной программы или плагина для просмотра.<br /><br />Если файл не начал скачиваться автоматически, <a href="{$url}">щелкните здесь</a>.]]></message>
 
 	<!-- Индекс сайта -->
 	<message key="site.journalsHosted">Журналы, размещенные на этом сайте</message>
@@ -1033,13 +1033,13 @@
 	<message key="installer.maxFileUploadSize"><![CDATA[Ваш сервер сейчас разрешает максимальный размер загружаемого файла, равный: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="installer.localeInstructions">Основной язык, который будет использоваться для этой системы. Пожалуйста, обратитесь к документации OJS, если вы заинтересованы в поддержке языков, отстуствующих в этом списке.</message>
 	<message key="installer.additionalLocalesInstructions">Выберите любые дополнительные языки, которые будут поддерживаться в этой системе. Эти языки будут доступны для использования с журналами, размещенными на сайте. Дополнительные языки могут также быть установлены в любой момент из интерфейса администрирования сайта.</message>
-	<message key="installer.filesDirInstructions"><![CDATA[Введите польный путь к существующему каталогу, в котором будут храниться загруженные файлы. Этот каталог не должен быть напрямую доступен через сеть Интернет. <strong>Пожалуйста, убедитесь, что каталог существует и доступен для записи перед установкой.</strong> Пути к каталогам в Windows должны использовать прямые слэши, например, «C:/myjournal/files».]]></message>
+	<message key="installer.filesDirInstructions"><![CDATA[Введите полный путь к существующему каталогу, в котором будут храниться загруженные файлы. Этот каталог не должен быть напрямую доступен через сеть Интернет. <strong>Пожалуйста, убедитесь, что каталог существует и доступен для записи перед установкой.</strong> Пути к каталогам в Windows должны использовать прямые слэши, например, «C:/myjournal/files».]]></message>
 	<message key="installer.databaseSettingsInstructions">OJS для хранения своих данных требует доступ к базе данных, поддерживающей язык SQL. Выше, в требованиях к системе, указаны поддерживаемые базы данных. В полях ниже укажите настройки, которые будут использованы для соединения с базой данных.</message>
 	<message key="installer.installApplication">Установить Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Обновить Open Journal Systems</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Предупреждение:</strong> Если установка завершится неудачей в процессе установки базы данных, вам может потребоваться удалить вашу базу данных OJS или таблицы из базы данных, после чего предпринять попытку переустановить базу данных.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>ВАЖНО!</h4>
-<p>Установщик не смог автоматически перезаписать файл конфигурации. Прежде чем попытаться воспользоваться системой, пожалуйста откройте <tt>config.inc.php</tt> в подходящем текстовом редакторе и заменить его содержимое содержимым текстового поля ниже.</p>]]></message>
+<p>Установщик не смог автоматически перезаписать файл конфигурации. Прежде чем попытаться воспользоваться системой, пожалуйста откройте <tt>config.inc.php</tt> в подходящем текстовом редакторе и замените его содержимое содержимым текстового поля ниже.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>Установка OJS была успешно завершена.</p>
 <p>Чтобы начать использовать систему, <a href="{$loginUrl}">войдите в систему</a> с именем пользователя и паролем, который вы ввели на предыдущей странице.</p>
 <p>Если вы хотите получать новости и обновления, вы можете:</p>
@@ -1077,7 +1077,7 @@
 	<message key="log.review.reviewAcceptedByProxy">Редактор {$userName} внес согласие дать рецензию на {$round}-м раунде рецензирования для статьи {$articleId} по поручению рецензента ({$reviewerName}).</message>
 	<message key="log.review.reviewFileByProxy">Редактор {$userName} загрузил файл рецензии на {$round}-м раунде рецензирования статьи {$articleId} по поручению рецензента {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Файл рецензента был загружен на сайт.</message>
-	<message key="log.editor.decision">Решение редактора ({$decision}) для статьи {$articleId} было введено редактором ({$editorName}).</message>
+	<message key="log.editor.decision">Решение редактора ({$decision}) по статье {$articleId} было введено редактором ({$editorName}).</message>
 
 
 	<message key="log.copyedit.initiate">Литературное редактирование статьи {$articleId} было начато литературным редактором ({$copyeditorName}).</message>
@@ -1092,7 +1092,7 @@
 	<message key="log.layout.layoutEditorUnassigned">Верстальщик {$editorName} был освобожден от верстки статьи {$articleId}.</message>
 	<message key="log.layout.layoutEditComplete">Верстальщик {$editorName} завершил верстку статьи {$articleId}.</message>
 
-	<message key="log.editor.metadataModified">Метаданные для этой статьи были были изменены редактором ({$editorName}).</message>
+	<message key="log.editor.metadataModified">Метаданные для этой статьи были изменены редактором ({$editorName}).</message>
 	<message key="log.editor.editorFile">Версия статьи, исправленная редактором, была загружена на сайт.</message>
 	<message key="log.editor.archived">Статья {$articleId} была перемещена в архив.</message>
 	<message key="log.editor.restored">Статья {$articleId} была восстановлена из архива в очередь статей.</message>
@@ -1110,7 +1110,7 @@
 	<!-- Настройки инструментов читателя -->
 	<message key="rt.admin.settings">Настройки инструментов читателя</message>
 
-	<message key="rt.admin.settings.description">Инструменты читателя появляются в области рядом с опубликованными статьями в разделах журнала, которые были указаны для рецензирования. Инструменты читателя состоят из нижеперечисленного набора дополнительных инструментов для опубликованного материала, и набора инструментов, осуществляющих доступ к связанным материалам, организованным в соответствии с областью науки и дисциплиной.</message>
+	<message key="rt.admin.settings.description">Инструменты читателя появляются в области рядом с опубликованными статьями в разделах журнала, которые были указаны для индексирования. Инструменты читателя состоят из нижеперечисленного набора дополнительных инструментов для опубликованного материала, и набора инструментов, осуществляющих доступ к связанным материалам, организованным в соответствии с областью науки и дисциплиной.</message>
 	<message key="rt.admin.settings.enableReadingTools">Включить инструменты читателя для указанных разделов журнала.</message>
 	<message key="rt.admin.settings.relatedItems">Область науки</message>
 	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Смотрите <a href="{$relatedItemsLink}" class="action">Наборы связанных материалов</a> для просмотра, добавления, изменения и удаления связанных материалов для каждой области.]]></message>
@@ -1130,8 +1130,8 @@
 
 	<!-- Поисковые системы в инструментах читателя -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Ниже показаны возможно неправильные адреса (URL) сайтов для поиска.<br/>
-Вам необходимо вручную проверить все адреса (URL), которые помечены как неправильные, так как этот тест не является точным на 100%.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Ниже показаны потенциально неправильные адреса (URL) сайтов для поиска.<br />
+Вам необходимо вручную проверить все адреса (URL), которые помечены как неправильные, так как этот тест не является точным на 100%.<br />
 Проверка может оказываться неудачной на адресах сайтов для поиска, которые требуют заполнения формы поиска.]]></message>
 
 	<!-- Сущности в инструментах читателя -->
@@ -1165,7 +1165,7 @@
 	<message key="notification.type.copyeditComment">Литературный редактор оставил комментарий о статье «{$title}».</message>
 	<message key="notification.type.editing">События редактирования</message>
 	<message key="notification.type.editorDecisionComment">Добавлен комментарий о решении редактора по статье «{$title}».</message>
-	<message key="notification.type.galleyModified">Изменены гранки для статьи «{$title}».</message>
+	<message key="notification.type.galleyModified">Изменена гранка для статьи «{$title}».</message>
 	<message key="notification.type.issuePublished">Опубликован новый выпуск.</message>
 	<message key="notification.type.layoutComment">Добавлен комментарий о верстке статьи «{$title}».</message>
 	<message key="notification.type.metadataModified">Изменены метаданные для статьи «{$title}».</message>

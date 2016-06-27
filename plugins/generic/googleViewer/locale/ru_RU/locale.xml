@@ -14,5 +14,5 @@
 
 <locale name="ru_RU" full_name="Русский">
 	<message key="plugins.generic.googleViewer.name">Плагин «Встроенный просмотр Google»</message>
-	<message key="plugins.generic.googleViewer.description"><![CDATA[Этот плагин использует службу <a href="https://docs.google.com/viewer">«Средство просмотра Google Документы»</a> для встраивания PDF-файлов на страницу просмотра статьи.]]></message>
+	<message key="plugins.generic.googleViewer.description"><![CDATA[Этот плагин использует службу «Средство просмотра Google Документы» для встраивания PDF-файлов на страницу просмотра статьи.]]></message>
 </locale>

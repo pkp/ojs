@@ -21,7 +21,7 @@
 	</ul>
 {/if}
 
-<br/>
+<br />
 
 <form id="groupForm" method="post" action="{url op="updateGroup"}">
 {if $group}

@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="ja_JP" full_name = "日本語">
+<locale name="ja_JP" full_name="日本語">
 	<message key="author.submit">新規投稿</message>
 	<message key="author.track">投稿物一覧</message>
 	<message key="author.competingInterests"><![CDATA[利害の競合<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CIポリシー</a>]]></message>

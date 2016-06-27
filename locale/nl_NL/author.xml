@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="nl_NL" full_name = "Nederlands">
+<locale name="nl_NL" full_name="Nederlands">
 	<message key="author.submit">Nieuwe inzending</message>
 	<message key="author.track">Actieve inzendingen</message>
 	<message key="author.competingInterests"><![CDATA[Strijdige belangen <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">SB beleid</a>]]></message>

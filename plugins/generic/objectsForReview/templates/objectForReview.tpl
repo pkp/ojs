@@ -11,7 +11,7 @@
 {assign var="pageTitle" value=plugins.generic.objectsForReview.public.objectForReview}
 {include file="common/header.tpl"}
 
-<br/>
+<br />
 
 <div id="objectForReviewDetails">
 

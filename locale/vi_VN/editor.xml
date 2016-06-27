@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="vi_VN" full_name = "Tiếng Việt">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="editor.article.reviewForms">Mẫu phiếu Phản biện</message>
 	<message key="editor.article.selectReviewForm">Chọn Mẫu phiếu Phản biện</message>
 	<message key="editor.article.clearReviewForm">Xóa Mẫu phiếu Phản biện</message>

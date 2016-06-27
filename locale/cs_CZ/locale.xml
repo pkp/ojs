@@ -382,7 +382,7 @@ Vězte, že rozhraní OAI může být pro tuto stránku vypnuto editací konfigu
 </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>POZNÁMKA!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>POZNÁMKA!</h4>
 <p>Systém nemohl automaticky přepsat konfigurační soubor. K provedení změn konfigurace musíte otevřít <tt>config.inc.php</tt> ve vhodném textovém editoru a nahradit jeho obsah obsahem textového pole níže.</p>]]></message>
 
 
@@ -539,10 +539,10 @@ Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet z
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Jméno odkazuje k profilu recenzenta.<br/>
-Hodnocení je až 5 (Výborný).<br/>
-Týdny udávají průměrnou dobu potřebnou pro zhotovení recenze.<br/>
-Poslední udává datum poslední akceptované recenze.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Jméno odkazuje k profilu recenzenta.<br />
+Hodnocení je až 5 (Výborný).<br />
+Týdny udávají průměrnou dobu potřebnou pro zhotovení recenze.<br />
+Poslední udává datum poslední akceptované recenze.<br />
 Aktivní udává kolik recenzí je právě zvažováno nebo zpracováváno.]]></message>
 
 
@@ -1121,8 +1121,8 @@ Váš server aktuálně podporuje mbstring: <strong>{$supportsMBString}</strong>
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[URL adresy, které jsou možná neplatné pro vyhledávací stránky, jsou zobrazeny níže.<br/>
-Měli byste ručně ověřit každou adresu URL označenou jako neplatnou, protože tento test není 100% přesný.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[URL adresy, které jsou možná neplatné pro vyhledávací stránky, jsou zobrazeny níže.<br />
+Měli byste ručně ověřit každou adresu URL označenou jako neplatnou, protože tento test není 100% přesný.<br />
 Ověřování může selhat při vyhledávání URL, které vyžadují "posted form data".]]></message>
 
 	<!-- RT Entities -->

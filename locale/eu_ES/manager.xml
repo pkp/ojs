@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="eu_ES" full_name = "Basque (Euskara)">
+<locale name="eu_ES" full_name="Euskara">
 	<message key="manager.emails.confirmResetAll">Ziur zaude aldizkariko mezu-txantiloi guztiak berrezarri nahi dituzula? Egin dituzun aukera pertsonal guztiak galduko dituzu</message>
 	<message key="manager.files.note">Oharra: Fitxategi-arakatzailea, aldizkari bateko fitxategiak eta direktorioak zuzenean ikusi eta manipulatzeko aukera ematen duen eginbide aurreratu bat da.</message>
 	<message key="manager.groups">Lantaldea</message>
@@ -23,7 +23,7 @@
 	<message key="manager.journalManagement">Aldizkariaren kudeaketa</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">Locale honentzat zehaztu dituzun aldizkari-ezarpen guztiak ordeztuko ditu ekintza honek.</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Birkargatu locale hizkuntza-paketearen ezarpen lehenetsiak.</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS hainbat  hizkuntzatan jar daiteke erabilgarri erabiltzaileentzat. Gainera, hizkuntza anitzeko sistema ere eskain dezake, erabiltzaileei orri bakoitzean hizkuntza aldatzeko eta datu batzuk hainbat hizkuntzatan sartzeko aukera emanez.<br /><br/>OJSk onartzen duen hizkuntzaren bat beheko zerrendan ez badago, esan gune-administratzaileari instala dezala gune-administratzailearen interfazetik. Beste hizkuntza batzuk gehitzeko instrukzioak OJS dokumentazioan aurkituko dituzu.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS hainbat  hizkuntzatan jar daiteke erabilgarri erabiltzaileentzat. Gainera, hizkuntza anitzeko sistema ere eskain dezake, erabiltzaileei orri bakoitzean hizkuntza aldatzeko eta datu batzuk hainbat hizkuntzatan sartzeko aukera emanez.<br /><br />OJSk onartzen duen hizkuntzaren bat beheko zerrendan ez badago, esan gune-administratzaileari instala dezala gune-administratzailearen interfazetik. Beste hizkuntza batzuk gehitzeko instrukzioak OJS dokumentazioan aurkituko dituzu.]]></message>
 	<message key="manager.languages.noneAvailable">Ez dago beste hizkuntzarik erabilgarri. Aldizkari honetan hizkuntza gehiago erabili nahi badituzu, galdetu gune-administratzaileari.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Hau izango da aldizkariaren webguneko hizkuntza lehenetsia.</message>
 	<message key="manager.managementPages">Kudeaketako orriak</message>

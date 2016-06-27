@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name = "Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 
 	<!-- review froms start -->
 
@@ -337,7 +337,7 @@ Perhatikan bahwa OAI antarmuka dapat dinonaktifkan dengan mengedit konfigurasi s
 	<!-- Informasi Sistem -->
 	<message key="admin.editSystemConfigInstructions"><![CDATA[Gunakan form ini untuk memodifikasi konfigurasi sistem Anda yang ada pada file (<tt>config.inc.php</tt>). Klik "Simpan Konfigurasi" untuk menyimpan konfigurasi baru Anda, atau "Tampilkan Konfigurasi Baru" untuk menampilkan file konfigurasi yang telah diupdate dan tidak memodifikasi konfigurasi yang sudah ada. <br /><br />
 <span class="formError">Peringatan: Mengubah pengaturan ini berpotensi membuat situs Anda dalam keadaan tidak dapat diakses (memerlukan file konfigurasi untuk diperbaiki secara manual). Sangat dianjurkan untuk tidak melakukan perubahan apapun kecuali Anda tahu persis apa yang Anda lakukan.</span>]]></message>
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>Catatan!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>Catatan!</h4>
 <p>Sistem tidak dapat secara otomatis menimpa file konfigurasi. Untuk menerapkan perubahan konfigurasi Anda, Anda harus membuka <tt>config.inc.php</tt> di text editor yang cocok dan mengganti isinya dengan isi text field di bawah ini.</p>]]></message>
 	
 
@@ -480,10 +480,10 @@ Pilih model untuk menangani aspek proses editorial ni. (Untuk menunjuk Editor Pe
 	<!-- Navigation sidebar menu -->
 	
 	<!-- digunakan oleh editor dalam review naskah/ pengeditan -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[tautan nama ke profil Reviewer. <br/>
-Penilaian adalah dari 5 (Bagus sekali).<br/>
-Minggu mengacu ke periode waktu rata-rata untuk menyelesaikan review.<br/>
-Yang terbaru adalah tanggal review paling baru yang diterima.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[tautan nama ke profil Reviewer. <br />
+Penilaian adalah dari 5 (Bagus sekali).<br />
+Minggu mengacu ke periode waktu rata-rata untuk menyelesaikan review.<br />
+Yang terbaru adalah tanggal review paling baru yang diterima.<br />
 Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berlangsung.]]></message>
 	
 	<!-- Editor Bagian -->
@@ -1006,7 +1006,7 @@ Server Anda sekarang support mbstring: <strong>{$supportsMBString}</strong>]]></
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[URL invalid yang mungkin untuk situs pencari ditampilkan di bawah ini.<br/>Anda harus memverifikasi secara manual URL apapun yang ditandai sebagai invalid, karena tes ini tidak 100% akurat.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[URL invalid yang mungkin untuk situs pencari ditampilkan di bawah ini.<br />Anda harus memverifikasi secara manual URL apapun yang ditandai sebagai invalid, karena tes ini tidak 100% akurat.<br/>
 Validasi mungkin gagal dalam pencarian URL memerlukan form data yang diposting.]]></message>
 	
 	<!-- RT Entities -->

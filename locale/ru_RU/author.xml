@@ -12,7 +12,7 @@
   * With updates from Pavel Pisklakov (revising translation). 
   -->
 
-<locale name="ru_RU" full_name = "Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="author.submit">Новая статья</message>
 	<message key="author.track">Статьи в работе</message>
 	<message key="author.competingInterests"><![CDATA[Конфликт&nbsp;интересов <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Руководство по заполнению Декларации о конфликте интересов</a>]]></message>
@@ -55,7 +55,7 @@
 	<message key="author.submit.submissionLocaleDescription">Этот журнал принимает статьи на нескольких языках. Выберите основной язык отправляемой статьи из раскрывающегося списка ниже.</message>
 	<message key="author.submit.submissionChecklist">Контрольный список подготовки статьи к отправке</message>
 	<message key="author.submit.submissionChecklistDescription">Подтвердите, что отправляемая статья готова для рассмотрения этим журналом, отметив следующие пункты (комментарии для редактора могут быть добавлены ниже).</message>
-	<message key="author.submit.verifyChecklist">Перед продолжением отправки вы должны убедиться, что все пункты в контрольном списке отправки выполнены</message>
+	<message key="author.submit.verifyChecklist">Перед продолжением отправки вы должны убедиться, что выполнены все пункты в контрольном списке подготовки статьи к отправке.</message>
 	<message key="author.submit.copyrightNoticeAgree">Авторы согласны с Условиями передачи авторских прав, которые будут применены к этой статье в случае, если эта статья будет опубликована этим журналом (комментарии для редактора могут быть добавлены ниже).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Перед продолжением отправки вы должны принять Условия передачи авторских прав.</message>
 	<message key="author.submit.commentsForEditor">Комментарии для редактора</message>
@@ -63,7 +63,7 @@
 	<message key="author.submit.form.sectionRequired">Пожалуйста, выберите подходящий раздел журнала для этой статьи</message>
 	<message key="author.submit.form.localeRequired">Пожалуйста, выберите язык отправляемой статьи.</message>
 	<message key="author.submit.privacyStatement">Заявление журнала о конфиденциальности</message>
-	<message key="author.submit.reorderInstructions">Переставьте имена авторов в том порядке, в котором они будут указаны в публикации.</message>
+	<message key="author.submit.reorderInstructions">Переставьте имена авторов в том порядке, в котором они должны быть указаны в публикации.</message>
 	<message key="author.submit.reorder">Переставить имена авторов</message>
 	<message key="author.submit.selectPrincipalContact">Основной автор для переписки с редакцией.</message>
 	<message key="author.submit.addAuthor">Добавить автора</message>
@@ -72,7 +72,7 @@
 	<message key="author.submit.submissionSupportingAgencies">Благодарность и поддержка</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Укажите агентства (лицо, организацию или службу), которые внесли свой вклад в содержание, обеспечили финансирование или поддержку работы, представленной в этой статье. Разделяйте их точками с запятой (например, Иван Иванов, Университет Метро; Master University, Department of Computer Science).</message>
 	<message key="author.submit.coverageInstructions">Опишите геопространственный, хронологический или исторический охват вашего исследования и/или характеристики исследуемого объекта.</message>
-	<message key="author.submit.subjectClassInstructions">Используйте гиперссылки в системе классификации для выбора подходящих классификационных категорий и их номеров (если эти номера существуют).</message>
+	<message key="author.submit.subjectClassInstructions">Используйте систему классификации с гиперссылками для выбора подходящих классификационных категорий и их номеров (если эти номера существуют).</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es; Russian=ru. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Дополнительные коды</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Минимум один автор обязателен.</message>
 	<message key="author.submit.form.authorRequiredFields">Для каждого автора обязательно нужно ввести имя, фамилию и адрес электронной почты.</message>

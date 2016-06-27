@@ -17,7 +17,13 @@
 	<message key="plugins.importexport.doaj.description">Exportar revista para o DOAJ, incluindo dados da revista para inclusão.</message>
 
 	
+	<message key="plugins.importexport.doaj.markRegistered.success">Os objetos selecionados foram marcados como registrado!</message>
 	<message key="plugins.importexport.doaj.export">Exportar dados da revista para DOAJ</message>
+	<message key="plugins.importexport.doaj.export.issue">Exportar edições</message>
+	<message key="plugins.importexport.doaj.export.issueInfo">Exportar edições selecionadas como XML</message>
+	<message key="plugins.importexport.doaj.export.article">Exportar artigos</message>
+	<message key="plugins.importexport.doaj.export.articleInfo">Exportar artigos selecionados como XML</message>
 	<message key="plugins.importexport.doaj.export.contact">Solicitar inclusão ao DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">Para que seu periódico seja considerado para inclusão no DOAJ, preencha este formulário da forma mais completa possível, que foi previamente preenchido com dados parciais, e encaminhe ao DOAJ.</message>
+
 </locale>

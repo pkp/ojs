@@ -7,7 +7,7 @@
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
   *
   * Localization strings for the ca_ES (Català) locale.
   -->
@@ -25,7 +25,7 @@
 	<message key="plugins.generic.sword.depositPoints.type.optionalSelection">Opcional; Flexible</message>
 	<message key="plugins.generic.sword.depositPoints.type.optionalFixed">Opcional; Fix</message>
 	<message key="plugins.generic.sword.depositPoints.type.manager">Només per a l'administrador/a</message>
-	<message key="plugins.generic.sword.depositPoints.type.description"><![CDATA[<h4>Tipus de punt de dipòsit:</h4> <p><strong>Automàtic</strong>: El dipòsit es produeix de forma automàtica. S'indica el punt de dipòsit SWORD complet. Ha d'indicar un nom d'usuari/ària i una contrasenya. El dipòsit es produeix després de notificar la confirmació a l'autor/a.<br/> <strong>Opcional; Flexible</strong>: L'autor/a pot decidir si voleu dipositar o no. L'URL facilitat ofereix un document de servei i l'autor/a pot decidir quin punt de dipòsit concret utilitzar d'aquest document. El dipòsit es produeix després de notificar la confirmació a l'autor/a.<br/> <strong>Opcional; Fix</strong>: L'autor/a pot decidir si vol dipositar o no. L'URL indica el punt de dipòsit SWORD concret. El dipòsit es produeix després de notificar la confirmació a l'autor/a.<br/> <strong>Només per a l'administrador/a</strong>: Només l'administrador de la revista pot usar aquest punt de dipòsit. L'URL indica un document de servei. L'administrador de la revista realitza el dipòsit manualment utilitzant la interfície d'Importació/Exportació de la gestió de la revista.</p>]]></message>
+	<message key="plugins.generic.sword.depositPoints.type.description"><![CDATA[<h4>Tipus de punt de dipòsit:</h4> <p><strong>Automàtic</strong>: El dipòsit es produeix de forma automàtica. S'indica el punt de dipòsit SWORD complet. Ha d'indicar un nom d'usuari/ària i una contrasenya. El dipòsit es produeix després de notificar la confirmació a l'autor/a.<br /> <strong>Opcional; Flexible</strong>: L'autor/a pot decidir si voleu dipositar o no. L'URL facilitat ofereix un document de servei i l'autor/a pot decidir quin punt de dipòsit concret utilitzar d'aquest document. El dipòsit es produeix després de notificar la confirmació a l'autor/a.<br/> <strong>Opcional; Fix</strong>: L'autor/a pot decidir si vol dipositar o no. L'URL indica el punt de dipòsit SWORD concret. El dipòsit es produeix després de notificar la confirmació a l'autor/a.<br/> <strong>Només per a l'administrador/a</strong>: Només l'administrador de la revista pot usar aquest punt de dipòsit. L'URL indica un document de servei. L'administrador de la revista realitza el dipòsit manualment utilitzant la interfície d'Importació/Exportació de la gestió de la revista.</p>]]></message>
 	<message key="plugins.generic.sword.depositPoints.password.description">Si no indica aquí una contrasenya, se us demanarà quan vostè o l'autor/a realitzeu el dipòsit. Aquesta contrasenya serà visible per a tots els administradors/oresde la revista i es guardarà sense encriptar a la base de dades.</message>
 	<message key="plugins.generic.sword.depositPoints.name">Nom</message>
 	<message key="plugins.generic.sword.automaticDepositComplete">L'element "{$itemTitle}" s'ha dipositat automàticament al dipòsit "{$repositoryName}".</message>

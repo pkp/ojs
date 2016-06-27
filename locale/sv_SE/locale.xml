@@ -332,7 +332,7 @@ Observera att OAI-gränssnittet kan avaktiveras från sidan om man redigerar OJS
 <br /><br />
 <span class="formError">Varning: Om du ändrar de här inställningarna kan sidan bli oåtkomlig (i så fall måste konfigureringsfilerna repareras manuellt.). Ändra ingenting om du inte vet exakt vad
  du gör.</span>]]></message>
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>OBSERVERA!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>OBSERVERA!</h4>
 <p>Systemet kunde inte automatiskt skriva över konfiguationsfilen. För att spara dina ändringar, öppna <tt>config.inc.php</tt> i ett lämpligt textredigeringsprogram och ersätt innehållet med informationen i textfältet nedan.</p>]]></message>
 
 
@@ -494,10 +494,10 @@ Du kan välja att ge användaren en förklaring till varför kontot har upphört
 	<!-- Navigation sidebar menu -->
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Namnlänkar till granskarprofilen.<br/>
-Granskning sker på en skala från 1-5 där 5 är högsta betyg.<br/>
-Veckor visar på den genomsnittliga tiden det tar att granska ett manus.<br/>
-Senast visar datumet för den senast accepterade granskningen.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Namnlänkar till granskarprofilen.<br />
+Granskning sker på en skala från 1-5 där 5 är högsta betyg.<br />
+Veckor visar på den genomsnittliga tiden det tar att granska ett manus.<br />
+Senast visar datumet för den senast accepterade granskningen.<br />
 Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></message>
 
 
@@ -980,8 +980,8 @@ Din server stöttas för tillfället av mbstring: <strong>{$supportsMBString}</s
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Förmodat ogiltiga URL:er för söksidor visas nedan.<br/>
-Du bör verifiera de URL:er som är markerade som ogiltiga manuellt, eftersom urvalet inte kan garanteras till 100%.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Förmodat ogiltiga URL:er för söksidor visas nedan.<br />
+Du bör verifiera de URL:er som är markerade som ogiltiga manuellt, eftersom urvalet inte kan garanteras till 100%.<br />
 Validering av URL:er kan misslyckas på sökningar som kräver inskickad data.]]></message>
 	
 	<!-- RT Entities -->

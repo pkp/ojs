@@ -173,7 +173,6 @@
 
 	<!-- Books For Review -->
 	<message key="plugins.generic.booksForReview.displayName">Değerlendirme İçin Kitap</message>
-	<message key="plugins.generic.booksForReview.description">Solicit reviews for books of interest or received from publishers. Manage book reviewers and book review process.</message>
 	<message key="plugins.generic.booksForReview.headerLink"><![CDATA[Kitaplar&nbsp;İçin&nbsp;Değerlendirme]]></message>
 	<message key="plugins.generic.booksForReview.status.available">Mevcut</message>
 	<message key="plugins.generic.booksForReview.status.requested">İstendi</message>

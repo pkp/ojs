@@ -13,5 +13,5 @@
 
 <locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.generic.googleViewer.name">Google gömülü görüntüleme eklentisi</message>
-	<message key="plugins.generic.googleViewer.description"><![CDATA[Bu eklenti makale görüntüleme sayfasında <a href="https://docs.google.com/viewer">Google Docs Viewer</a> gömülü PDF hizmetini sunar.]]></message>
+	<message key="plugins.generic.googleViewer.description"><![CDATA[Bu eklenti makale görüntüleme sayfasında Google Docs Viewer gömülü PDF hizmetini sunar.]]></message>
 </locale>

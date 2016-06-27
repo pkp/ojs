@@ -16,7 +16,7 @@
         <li class="current"><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
 </ul>
 
-<br/>
+<br />
 
 <a name="issues"></a>
 

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
 <!--
-  * plugins/generic/objectsForReview/locale/pt_BR/emailTemplateData.xml
+  * @file plugins/generic/objectsForReview/locale/pt_BR/emailTemplates.xml
   *
   * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localized email templates XML file.
+  * Objects for review email template localized default text.
   *
   -->
 <email_texts locale="pt_BR">
@@ -44,5 +44,88 @@ Obrigado pela sua contribuição para a revista, estamos ansiosos para receber s
 
 {$editorialContactSignature}</body>
 		<description>Este é um e-mail gerado automaticamente enviado para o autor após a data de vencimento de revisão.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_ASSIGNED">
+		<subject>Revisão de objeto: objeto designado</subject>
+		<body>Prezada/o {$authorName},
+
+Esta mensagem confirma que o objeto {$objectForReviewTitle} lhe foi designado para revisão, que deve ser concluída até {$objectForReviewDueDate}.
+
+Certifique-se que seu endereço postal esteja atualizado no nosso sistema, pois será o endereço usado para enviar por correio cópia do objeto para revisão, caso necessário.
+
+O endereço atualmente cadastrado é:
+{$authorMailingAddress}
+
+Caso esteja incompleto ou incorreto, corrija-o na sua página de perfil por meio do endereço a seguir.
+
+Endereço da página de perfil: {$userProfileUrl}
+ 
+Para submeter sua revisão, entre no sistema com o papel de autor e conclua o processo de submissão padrão.
+
+Endereço para submissão: {$submissionUrl}
+
+Entre em contato, caso tenha dúvidas ou preocupações com este processo.
+
+Atenciosamente, 
+
+{$editorialContactSignature}</body>
+		<description>Mensagem enviada pelo editor de um objeto ao autor da revisão, ao designar o objeto para revisão ao autor.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_DENIED">
+		<subject>Revisão de objeto</subject>
+		<body>Prezada/o {$authorName},
+
+Infelizmente, não será possível designar o objeto {$objectForReviewTitle} para revisão neste momento.
+
+Esperamos poder contar com seu apoio para a revisão de outros objetos em nossa lista, agora ou em outro momento.
+
+Atenciosamente,
+
+{$editorialContactSignature}</body>
+		<description>Mensagem enviada pelo editor ao autor interessado em realizar uma revisão, quando o objeto não está mais disponível.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_REQUESTED">
+		<subject>Revisão de objeto: solicitação</subject>
+		<body>Prezado editor {$editorName},
+
+Estou interessado em realizar uma revisão do objeto {$objectForReviewTitle}.
+
+Solicito confirmação de disponibilidade ou não do objeto para revisão.
+
+Atenciosamente,
+
+{$authorContactSignature}</body>
+		<description>Mensagem enviada pelo autor ao editor, mostrando interesse em realizar uma revisão de objeto e solicitando confirmação de in/disponibilidade.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_MAILED">
+		<subject>Revisão de objeto: objeto enviado</subject>
+		<body>Prezado {$authorName},
+
+Esta mensagem confirma que um exemplar do objeto {$objectForReviewTitle} foi enviada ao endereço que consta em nossos cadastros:
+{$authorMailingAddress}
+
+Para submeter sua revisão, acesse o sistema com o papel de autor e conclua o processo de submissão padrão de um artigo.
+
+Endereço para submissão: {$submissionUrl}
+
+Caso tenha dúvidas ou questões com relação ao processo, entre em contato.
+
+Atenciosamente, 
+
+{$editorialContactSignature}</body>
+		<description>Mensagem enviada pelo editor ao autor interessado, confirmando o envio pelo correio físico de um exemplar do objeto para revisão.</description>
+	</email_text>
+	<email_text key="OFR_REVIEWER_REMOVED">
+		<subject>Revisão de objeto</subject>
+		<body>Prezado {$authorName},
+
+Esta mensagem confirma que não será mais necessário realizar a revisão do objeto {$objectForReviewTitle}.
+
+Esperamos poder contar com seu apoio na revisão de outros objetos em nossa lista, agora ou em outro momento oportuno.
+
+Atenciosamente,
+
+{$editorialContactSignature}</body>
+		<description>Mensagem enviada pelo editor ao autor interessado, liberando o autor da revisão de um objeto indisponível.</description>
 	</email_text>
 </email_texts>

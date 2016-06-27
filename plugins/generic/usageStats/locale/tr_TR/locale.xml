@@ -42,6 +42,9 @@
 
 	<message key="plugins.reports.usageStats.metricType">ADS/COUNTER</message>
 	<message key="plugins.reports.usageStats.metricType.full">Açık Dergi Sistemleri istatistikleri (COUNTER uyumlu)</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns">İsteğe bağlı istatistik bilgisi</message>
+	<message key="plugins.generic.usageStats.settings.archives">Arşivler</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives">Sıkıştırılmış arşivler</message>
 </locale>
 
 

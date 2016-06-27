@@ -294,7 +294,7 @@ function updateAbstractRequired() {
 				<td width="70%" class="value" colspan="2"><input type="radio" id="primaryContact" name="primaryContact" value="{$authorIndex|escape}"{if $primaryContact == $authorIndex} checked="checked"{/if} /> {fieldLabel name="primaryContact" key="author.submit.selectPrincipalContact"} <input type="submit" name="delAuthor[{$authorIndex|escape}]" value="{translate key="author.submit.deleteAuthor"}" class="button" /></td>
 			</tr>
 			<tr>
-				<td colspan="2"><br/></td>
+				<td colspan="2"><br /></td>
 			</tr>
 			{/if}
 			</table>

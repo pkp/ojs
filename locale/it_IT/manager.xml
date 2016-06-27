@@ -13,7 +13,7 @@
   *
   -->
 
-<locale name="it_IT" full_name = "Italiano">
+<locale name="it_IT" full_name="Italiano">
 	<message key="manager.emails.confirmResetAll">Sei sicuro di voler ripristinare tutti i modelli di email di questa rivista? In questo modo verranno perse tutte le personalizzazioni effettuate.</message>
 	<message key="manager.files.note">Nota: La navigazione tra i file è una funzione avanzata che permette di vedere e manipolare direttamente i file e le directory associate a una rivista.</message>
 	<message key="manager.groups">Redazione</message>
@@ -28,7 +28,7 @@
 	<message key="manager.journalManagement">Gestione della rivista</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">Questo sostituirà qualunque personalizzazione fatta per la rivista</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Ricarica i settaggi di default locali</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS permette di offrire agli utenti della rivista un'interfaccia multilingue. Gli utenti potranno scegliere fra le lingue disponibili per la visualizzazione delle pagine; anche i dati, inseriti in più lingue, potranno essere visualizzati in lingue diverse.<br /><br/>Se hai bisogno di utilizzare una lingua, supportata da OJS  ma non elencata nella lista qui sotto, chiedi all'amministratore del sito di installarla. Per ulteriori informazioni, consultare la documentazione di OJS.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS permette di offrire agli utenti della rivista un'interfaccia multilingue. Gli utenti potranno scegliere fra le lingue disponibili per la visualizzazione delle pagine; anche i dati, inseriti in più lingue, potranno essere visualizzati in lingue diverse.<br /><br />Se hai bisogno di utilizzare una lingua, supportata da OJS  ma non elencata nella lista qui sotto, chiedi all'amministratore del sito di installarla. Per ulteriori informazioni, consultare la documentazione di OJS.]]></message>
 	<message key="manager.languages.noneAvailable">Non è disponibile alcuna lingua aggiuntiva. Contattare l'amministratore del sito per utilizzare un'altra lingua per questa rivista.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Questa sarà la lingua di default di questa rivista.</message>
 	<message key="manager.managementPages">Amministrazione</message>

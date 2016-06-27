@@ -262,7 +262,7 @@
 </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</h4>
 <p>Le système n'a pu modifier automatiquement le fichier de configuration. Pour appliquer les changements à votre fichier de configuration, vous devez ouvrir <tt>config.inc.php</tt> dans un éditeur de texte approprié et remplacer son contenu par le contenu de la zone de texte ci-dessous.</p>]]></message>
 
 
@@ -292,10 +292,10 @@ Prendre note que si votre administrateur de site a déjà inscrit ce site auprè
 	Cette tâche doit être effectuée par un administrateur de site.]]></message>
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Nom des liens vers le profil de l'évaluateur.<br/>
-Notation est sur 5 (Excellent).<br/>
-Semaines réfèrent au temps moyen nécessaire pour compléter une évaluation.<br/>
-Dernière est la date de la plus récente évaluation acceptée.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Nom des liens vers le profil de l'évaluateur.<br />
+Notation est sur 5 (Excellent).<br />
+Semaines réfèrent au temps moyen nécessaire pour compléter une évaluation.<br />
+Dernière est la date de la plus récente évaluation acceptée.<br />
 Active indique combien d'évaluations sont présentement considérées ou en cours.]]></message>
 
 	<!-- Section Editor -->
@@ -918,8 +918,8 @@ Titre du système de classification]]></message>
 	<message key="payment.subscription.purchase">Souscrire à un abonnement</message>
 	<message key="installer.installApplication">Installer Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Mettre à jour Open Journal Systems</message>
-	<message key="rt.admin.validateUrls.description"><![CDATA[Des URLs de sites de recherche possiblement invalides sont affichés ci-dessous.<br/>
-Vous devriez vérifier manuellement tous les URLs indentifiés comme invalides, car ce test n'est pas fiable à 100%.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Des URLs de sites de recherche possiblement invalides sont affichés ci-dessous.<br />
+Vous devriez vérifier manuellement tous les URLs indentifiés comme invalides, car ce test n'est pas fiable à 100%.<br />
 La validation peut échouer sur les URL de recherche qui nécessitent des formulaires de données enregistrés.]]></message>
 	<message key="notification.mailListDescription">Saisir votre adresse de courriel pour être avisé immédiatement de tout nouveau contenu important ajouté à la revue.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Cette page montre les mises à jour importantes associées avec cette revue tel que les nouvelles parutions et les annonces. Vous pouvez vous abonner à ces avis par l'intermédiaire des flux RSS (en cliquant sur les images à droite), ou <a href="{$emailUrl}">par courriel.</a>]]></message>

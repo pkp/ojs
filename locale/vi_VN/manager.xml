@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="vi_VN" full_name = "Tiếng Việt">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="manager.emails.confirmResetAll">Quỹ vị có muốn phục hồi tất cả các mẫu thư của tạp chí này không? Quý vị sẽ mất những tùy biến đã làm với mẫu thư.</message>
 	<message key="manager.files.note">Lưu ý: công cụ Duyệt File là một tính năng cao cấp cho phép các file và thư mục gắn với một tạp chí được xem và chỉnh sửa trực tiếp.</message>
 	<message key="manager.groups">Ban biên tập</message>
@@ -27,7 +27,7 @@
 	<message key="manager.journalManagement">Quản lý Tạp chí</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">Tác vụ này sẽ thay thế bất kỳ tham số nào bạn đã đặt cho ngôn ngữ này</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Tải lại tham số mặc định theo ngôn ngữ</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[Người dùng có thể sử dụng OJS ở bất kỳ ngôn ngữ nào trong số các ngôn ngữ có trong phần mềm. Ngoài ra, OJS còn hoạt động như một phần mềm đa ngôn ngữ, cho phép người dùng chuyển đổi giữa các ngôn ngữ trên mỗi trang, và cho phép một số dữ liệu nhất định được nhập vào ở nhiều ngôn ngữ khác nhau.<br/><br/>Nếu một ngôn ngữ mà OS hỗ trợ mà không được liệt kê dưới đây, hãy đề nghị người quản trị website cài đặt ngôn ngữ đó từ giao diện quản trị. Về các chỉ dẫn cài đặt thêm ngôn ngữ mới, vui lòng xem tài liệu hướng dẫn sử dụng OJS.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[Người dùng có thể sử dụng OJS ở bất kỳ ngôn ngữ nào trong số các ngôn ngữ có trong phần mềm. Ngoài ra, OJS còn hoạt động như một phần mềm đa ngôn ngữ, cho phép người dùng chuyển đổi giữa các ngôn ngữ trên mỗi trang, và cho phép một số dữ liệu nhất định được nhập vào ở nhiều ngôn ngữ khác nhau.<br /><br/>Nếu một ngôn ngữ mà OS hỗ trợ mà không được liệt kê dưới đây, hãy đề nghị người quản trị website cài đặt ngôn ngữ đó từ giao diện quản trị. Về các chỉ dẫn cài đặt thêm ngôn ngữ mới, vui lòng xem tài liệu hướng dẫn sử dụng OJS.]]></message>
 	<message key="manager.languages.noneAvailable">Xin lỗi, không có thêm ngôn ngữ nào sẵn sàng. Vui lòng liên hệ với người quản trị website nếu bạn muốn có thêm ngôn ngữ cho tạp chí.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Đây sẽ là ngôn ngữ mặc định trên trang web tạp chí.</message>
 	<message key="manager.managementPages">Các công cụ quản lý</message>

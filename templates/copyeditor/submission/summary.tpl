@@ -42,7 +42,7 @@
 						({translate key="submission.review"})
 					{/if}
 				{/if}
-				<br/>
+				<br />
 			{foreachelse}
 				{translate key="common.noneAssigned"}
 			{/foreach}

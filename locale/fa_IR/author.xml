@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="fa_IR" full_name = "Persian">
+<locale name="fa_IR" full_name="فارسی">
 	<message key="author.submit">ساب میشن جدید</message>
 	<message key="author.track">ساب میشن های جاری</message>
 	<message key="author.submit.submitArticle">ساب میت مقاله</message>

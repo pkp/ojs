@@ -24,7 +24,7 @@
 	}
 {/literal}</script>
 
-<br/>
+<br />
 
 <div id="articles">
 	<p>{translate key="plugins.importexport.medra.workOrProduct"}</p>

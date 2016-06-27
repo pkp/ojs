@@ -7,10 +7,42 @@
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
   *
   * Shared localization strings
   -->
 
 <locale name="ca_ES" full_name="Català">
+	<message key="plugins.importexport.common.settings">Configuració</message>
+	<message key="plugins.importexport.common.settings.form.passwordRequired">Introduïu la contrasenya</message>
+	<message key="plugins.importexport.common.register">Registra</message>
+	<message key="plugins.importexport.common.register.success">Registre correcte!</message>
+	<message key="plugins.importexport.common.markRegistered">Marca registrada</message>
+	<message key="plugins.importexport.common.update">Actualitza</message>
+	<message key="plugins.importexport.common.export">Exporta les dades</message>
+	<message key="plugins.importexport.common.export.issues">Exporta els números</message>
+	<message key="plugins.importexport.common.export.selectIssue">Selecciona els números</message>
+	<message key="plugins.importexport.common.export.articles">Exporta els articles</message>
+	<message key="plugins.importexport.common.export.selectArticle">Selecciona els articles</message>
+	<message key="plugins.importexport.common.export.galleys">Exporta les galerades</message>
+	<message key="plugins.importexport.common.cliError">ERROR:</message>
+	<message key="plugins.importexport.common.settings.form.password">Contrasenya</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Per utilitzar aquest mòdul heu d'anar a la categoria de mòduls "Identificador públic", activar i configurar el mòdul DOI i especificar-hi un prefix DOI vàlid.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">El mòdul no està configurat completament.</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Heu de tenir en compte que la contrasenya serà guardada en text sense format, p. ex. no encriptada.</message>
+	<message key="plugins.importexport.common.registerDescription">Feu clic en aquest botó per registrar aquest element amb l'agència de registre per primer cop. Això només funciona si no heu registrat l'esmentat element abans!</message>
+	<message key="plugins.importexport.common.registerDescription.multi">Feu clic en aquest botó per registrar o actualitzar les metadades de l'element seleccionat amb l'agència de registre.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">El registre no es correcte! El servidor de registre del DOI ha retornat un error: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.warning">Registrar molts elements a la vegada pot trigar bastant, per tant sigueu pacient després de fer clic al botó "Registre". Sereu notificat quan el registre s'hagi completat.</message>
+	<message key="plugins.importexport.common.register.noCredentials"><![CDATA[El registre directe està actualment desactivat. Si us plau, <a href="{$settingsUrl}">configure</a> un nom d'usuari i una contrasenya per poder registrar elements directament amb l'agència de registre.]]></message>
+	<message key="plugins.importexport.common.markRegisteredDescription">Feu clic en aquest botó per marcar els elements com a registrats (p. ex. si han estat registrats anteriorment o manualment).</message>
+	<message key="plugins.importexport.common.updateDescription">Feu clic en aquest botó per actualitzar les metadades d'aquest element amb l'agència de registre. Això només funciona si heu registrat anteriorment l'element amb èxit!</message>
+	<message key="plugins.importexport.common.export.unAvailable">L'exportació de dades no està disponible actualment. Reviseu els requisits del mòdul.</message>
+	<message key="plugins.importexport.common.export.unregistered">Exporta tots els números, articles i galerades sense registrar</message>
+	<message key="plugins.importexport.common.export.selectUnregistered">Selecciona els números, articles i galerades sense registrar</message>
+	<message key="plugins.importexport.common.export.noUnregistered">Tots els números, articles i galerades publicats ja han estat registrats (o cap d'ells té un DOI assignat).</message>
+	<message key="plugins.importexport.common.export.noIssues">Cap número té actualment un DOI assignat.</message>
+	<message key="plugins.importexport.common.export.noArticles">Cap article té actualment un DOI assignat.</message>
+	<message key="plugins.importexport.common.export.selectGalley">Selecciona les galerades</message>
+	<message key="plugins.importexport.common.export.noGalleys">Cap galerada té actualment un DOI assignat.</message>
 </locale>

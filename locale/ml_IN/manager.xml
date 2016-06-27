@@ -11,7 +11,7 @@
   * Localization strings for the ml_IN (മലയാളം) locale.
   -->
 
-<locale name="ml_IN" full_name = "Malayalam">
+<locale name="ml_IN" full_name="മലയാളം">
 	<message key="manager.emails.confirmResetAll">ഈ ജേണലിലുള്ള ഇ-മെയില്‍ ടെംപ്ലേറ്റുകളെല്ലാം പുന:സ്ഥാപിക്കണമെന്ന് താങ്കള്‍ക്ക് ഉറപ്പാണോ? താങ്കള്‍ ചെയ്ത ഏതെങ്കിലും കസ്റ്റമൈസേഷനുകള്‍ നഷ്ടപ്പെടും.</message>
 	<message key="manager.files.note">കുറിപ്പ്: ഫയലുകള്‍ക്ക് അനുമതി നല്‍ക്കുന്ന ഫയല്‍  ബ്രൗസര്‍ നൂതന സവിശേഷതകള്‍ ഉള്‍ക്കൊണ്ടവയാണ്. അതുപോലെ ഡയറക്ടറിയുമായി ചേര്‍ന്നു പ്രവര്‍ത്തിക്കുന്ന ജേണലിനെ വീക്ഷിക്കുകയും നേരിട്ടു കൈകാര്യം ചെയ്യുന്നതുമാണ്.</message>
 	<message key="manager.groups">Masthead</message>
@@ -30,7 +30,7 @@
 	<message key="manager.language.forms">ഫോമുകള്‍</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">ഈ ലൊക്കേലിനായി താങ്കളുടെ പക്കലുള്ള ഏതെങ്കിലും ലൊക്കേല്‍-സ്പെസിഫിക് ജേണല്‍ ക്രമീകരണങ്ങളെ ഇത് പുന:സ്ഥാപിക്കും.</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">റീലോഡ് ഡീഫാള്‍ട്ട്സ്</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br />If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
 	<message key="manager.languages.noneAvailable">ക്ഷമിക്കണം,അധികമായുള്ള ഭാഷകളൊന്നും ലഭ്യമല്ല.ഈ ജേണലില്‍ അധികമായ ഭാഷകള്‍ ഉപയോഗിക്കണം എന്നുണ്ടെങ്കില്‍ സൈറ്റ് അഡ്മിനിസ്ട്രേറ്ററുമായി ബന്ധപ്പെടുക.</message>
 	<message key="manager.languages.primaryLocaleInstructions">ഈ ജേണല്‍ സൈറ്റിന്റെ നിശ്ചിതമായ ഭാഷ ഇതായിരിക്കും.</message>
 	<message key="manager.managementPages">മാനേജ്മെന്റ് പേജുകള്‍</message>

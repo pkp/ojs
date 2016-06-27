@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name = "Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="manager.emails.confirmResetAll"> Apakah Anda yakin Anda ingin mengatur ulang seluruh template email di jurnal ini? Anda akan kehilangan semua penyesuaian yang sudah Anda buat.</message> 
 	<message key="manager.files.note">Catatan: Berkas Penelusuran adalah fitur canggih yang memungkinkan file dan direktori yang terkait dengan jurnal untuk dilihat dan dimanipulasi secara langsung. </message> 
 	<message key="manager.groups"> Dewan Redaksi </message> 
@@ -30,7 +30,7 @@
 	<message key="manager.language.forms"> Form </message> 
 	<message key="manager.language.confirmDefaultSettingsOverwrite"> Ini akan menggantikan pengaturan jurnal bahasa khusus apapun yang Anda miliki untuk bahasa ini</message> 
 	<message key="manager.language.reloadLocalizedDefaultSettings"> Reload default </message> 
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS dapat digunakan dalam bahasa apa pun yang tersedia (bahasa yang didukung oleh OJS). OJS juga dapat beroperasi sebagai sistem multilingual yang memungkinkan pengguna untuk berpindah dari satu bahasa ke bahasa lain pada halaman yang sama, dan memungkinkan data tertentu untuk dimasukkan ke dalam beberapa bahasa tambahan.<br /><br/>Jika bahasa yang didukung oleh OJS tidak terdaftar di bawah ini, tanya Administrator Situs Anda untuk menginstal bahasa pendukung tersebut dari antarmuka administrasi situs. Untuk instruksi penambahan dukungan untuk bahasa baru, berkonsultasilah dengan dokumentasi OJS]]></message> 
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS dapat digunakan dalam bahasa apa pun yang tersedia (bahasa yang didukung oleh OJS). OJS juga dapat beroperasi sebagai sistem multilingual yang memungkinkan pengguna untuk berpindah dari satu bahasa ke bahasa lain pada halaman yang sama, dan memungkinkan data tertentu untuk dimasukkan ke dalam beberapa bahasa tambahan.<br /><br />Jika bahasa yang didukung oleh OJS tidak terdaftar di bawah ini, tanya Administrator Situs Anda untuk menginstal bahasa pendukung tersebut dari antarmuka administrasi situs. Untuk instruksi penambahan dukungan untuk bahasa baru, berkonsultasilah dengan dokumentasi OJS]]></message> 
 	<message key="manager.languages.noneAvailable"> Maaf, tidak tersedia bahasa tambahan dalam situs ini. Hubungi administrator situs Anda jika Anda ingin menggunakan bahasa pendukung untuk jurnal ini.</message>	
 <message key="manager.languages.primaryLocaleInstructions"> Bahasa default untuk situs jurnal.</message> 
 	<message key="manager.managementPages"> Halaman Manajemen

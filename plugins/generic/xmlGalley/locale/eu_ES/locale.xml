@@ -26,7 +26,7 @@
 	<message key="plugins.generic.xmlGalley.settings.notAvailable">Ez dago erabilgarri</message>
 
 	<message key="plugins.generic.xmlGalley.settings.externalXSLT">Kanpoko komando-lerroko errendatzailea (adib., Xalan)</message>
-	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Idatzi XSLT errendatzailearen bide-izen osoa, behar diren argumentuekin.  Erabili %xsl XSL estilo-orri fitxategiaren kokalekuaren ordez, eta %xsl XML iturburu-fitxategiaren kokalekuaren ordez; adib.: <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Idatzi XSLT errendatzailearen bide-izen osoa, behar diren argumentuekin.  Erabili %xsl XSL estilo-orri fitxategiaren kokalekuaren ordez, eta %xsl XML iturburu-fitxategiaren kokalekuaren ordez; adib.: <br /><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">Probatu XSLT</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">Kanpoko XSLT proba ondo egin da.</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">Kanpoko XSLT probak huts egin du.</message>
@@ -36,7 +36,7 @@
 	<message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM aldizkariak argitaratzeko DTD</a> &rarr; XHTML]]></message>
 
 	<message key="plugins.generic.xmlGalley.settings.xslFOP">Gaitu PDF galeradak XSL-FO-rekin errendatzea (adib., FOP)</message>
-	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Idatzi FO prozesatzailearen bide-izen osoa, behar diren argumentuekin.  Erabili %fo XSL -FO fitxategiaren kokalekuaren ordez, eta %pdf PDF fitxategiaren kokalekuaren ordez; adib.: <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Idatzi FO prozesatzailearen bide-izen osoa, behar diren argumentuekin.  Erabili %fo XSL -FO fitxategiaren kokalekuaren ordez, eta %pdf PDF fitxategiaren kokalekuaren ordez; adib.: <br /><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired">Kanpoko komando-lerroko FO prozesadore bat zehaztu behar da.</message>
 
 	<message key="plugins.generic.xmlGalley.settings.customXSL">XSL estilo-orri pertsonalizatua</message>

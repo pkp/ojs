@@ -10,10 +10,10 @@
 {assign var="pageTitle" value="plugins.reports.timedView.displayName"}
 {include file="common/header.tpl"}
 
-<br/>
+<br />
 {translate key="plugins.reports.timedView.form.largeSetOfDataIssue"}
-<br/>
-<br/>
+<br />
+<br />
 
 <form method="post" action="{url path='TimedViewReportPlugin'}">
 	{include file="common/formErrors.tpl"}

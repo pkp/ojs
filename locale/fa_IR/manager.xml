@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="fa_IR" full_name = "Persian">
+<locale name="fa_IR" full_name="فارسی">
 	<message key="manager.emails.confirmResetAll">آیا میخواهید تمام قالبها را به حالت نخست برگردانید؟ تغییرات ایجاد شده در قالب های ایمیل ها از بین خواهد رفت</message>
 	<message key="manager.files.note">توجه: با مرور گر فایل میتوانید به فایلها یا پوشه های یک مجله  مستقیما دسترسی داشته باشید</message>
 	<message key="manager.groups">تیم ادیتوریال</message>
@@ -27,7 +27,7 @@
 	<message key="manager.journalManagement">مدیریت ژورنال</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">این عمل تنظیمات وابسته به زبان را جایگزین میکند</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">بارکردن مجدد تنظیمات پیش فرض وابسته به زبان</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS میتواند در دسترس کاربران زبانهائی که توسط سیستم حمایت میشود قرار گیرد. همچنین OJS میتواند به عنوان یک سیستم نسبتا چند زبانی عمل کند و امکان تغییر زبان توسط کاربران در هر صفحه را فراهم کند. همچنین داده های خاصی را ممکن است بتوان حداکثر به دو زبان وارد کرد.<br /><br/>چنانچه یک زبان مود حمایت OJS در لیست زیر موجود نباشد از مدیر سایت بخواهید تا آن زبان را نصب کند. برای اطلاع از نحوه افزودن حمایت برای یک زبان جدید به مستندات OJS مراجعه کنید.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS میتواند در دسترس کاربران زبانهائی که توسط سیستم حمایت میشود قرار گیرد. همچنین OJS میتواند به عنوان یک سیستم نسبتا چند زبانی عمل کند و امکان تغییر زبان توسط کاربران در هر صفحه را فراهم کند. همچنین داده های خاصی را ممکن است بتوان حداکثر به دو زبان وارد کرد.<br /><br />چنانچه یک زبان مود حمایت OJS در لیست زیر موجود نباشد از مدیر سایت بخواهید تا آن زبان را نصب کند. برای اطلاع از نحوه افزودن حمایت برای یک زبان جدید به مستندات OJS مراجعه کنید.]]></message>
 	<message key="manager.languages.noneAvailable">متاسفانه زبان دیگری موجود نیست. در صورت تمایل از مدیر سایت بخواهید تا نسبت به نصب آنها اقدام کند.</message>
 	<message key="manager.languages.primaryLocaleInstructions">این زبان پیش فرض سایت مجله خواهد بود.</message>
 	<message key="manager.managementPages">صفحات مدیریتی</message>

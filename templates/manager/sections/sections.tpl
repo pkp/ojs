@@ -19,7 +19,7 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveSection"); });
 {/literal}
 </script>
 
-<br/>
+<br />
 
 <div id="sections">
 <table width="100%" class="listing" id="dragTable">

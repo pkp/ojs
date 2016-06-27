@@ -13,7 +13,7 @@
   *
   -->
 
-<locale name="ro_RO" full_name = "Romanian">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="editor.article.reviewForms">Formularele pentru evaluare</message>
 	<message key="editor.article.selectReviewForm">Selectează formularul pentru evaluare</message>
 	<message key="editor.article.clearReviewForm">Șterge conținutul formularul pentru evaluare</message>
