@@ -3,7 +3,7 @@
 /**
  * @file plugins/importexport/medra/classes/form/MedraSettingsForm.inc.php
  *
- * Copyright (c) 2013-2016 Simon Fraser University Library
+ * Copyright (c) 2014-2016 Simon Fraser University Library
  * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -41,7 +41,9 @@ class MedraSettingsForm extends DOIExportSettingsForm {
 		$this->addCheck(new FormValidatorInSet($this, 'publicationCountry', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.medra.settings.form.publicationCountry', array_keys($this->_getCountries())));
 		// The username is used in HTTP basic authentication and according to RFC2617 it therefore may not contain a colon.
 		$this->addCheck(new FormValidatorRegExp($this, 'username', FORM_VALIDATOR_OPTIONAL_VALUE, 'plugins.importexport.medra.settings.form.usernameRequired', '/^[^:]+$/'));
-	}
+		$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'plugins.importexport.datacite.settings.form.usernameRequired', create_function('$username,$form', 'if ($form->getData(\'automaticRegistration\') && empty($username)) { return false; } return true;'), array(&$this)));
+ 		$this->addCheck(new FormValidatorCustom($this, 'password', 'required', 'plugins.importexport.datacite.settings.form.passwordRequired', create_function('$password,$form', 'if ($form->getData(\'automaticRegistration\') && empty($password)) { return false; } return true;'), array(&$this)));
+  	}
 
 
 	//
@@ -50,8 +52,10 @@ class MedraSettingsForm extends DOIExportSettingsForm {
 	/**
 	 * @see Form::display()
 	 */
-	function display() {
-		$templateMgr =& TemplateManager::getManager();
+	function display($request) {
+		$templateMgr =& TemplateManager::getManager($request);
+		$plugin = $this->_plugin;
+		$templateMgr->assign('unregisteredURL', $request->url(null, null, 'importexport', array('plugin', $plugin->getName(), 'all')));
 
 		// Issue export options.
 		$exportIssueOptions = array(
@@ -61,8 +65,8 @@ class MedraSettingsForm extends DOIExportSettingsForm {
 		$templateMgr->assign('exportIssueOptions', $exportIssueOptions);
 
 		// Countries.
-		$templateMgr->assign_by_ref('countries', $this->_getCountries());
-		parent::display();
+		$templateMgr->assign('countries', $this->_getCountries());
+		parent::display($request);
 	}
 
 
@@ -81,10 +85,17 @@ class MedraSettingsForm extends DOIExportSettingsForm {
 			'publicationCountry' => 'string',
 			'exportIssuesAs' => 'int',
 			'username' => 'string',
-			'password' => 'string'
+			'password' => 'string',
+			'automaticRegistration' => 'bool'
 		);
 	}
 
+	/**
+	 * @see DOIExportSettingsForm::isOptional()
+	 */
+	function isOptional($settingName) {
+		return in_array($settingName, array('username', 'password', 'automaticRegistration'));
+	}
 
 	//
 	// Private helper methods
@@ -94,7 +105,7 @@ class MedraSettingsForm extends DOIExportSettingsForm {
 	 * @return array
 	 */
 	function &_getCountries() {
-		$countryDao =& DAORegistry::getDAO('CountryDAO'); /* @var $countryDao CountryDAO */
+		$countryDao = DAORegistry::getDAO('CountryDAO'); /* @var $countryDao CountryDAO */
 		$countries =& $countryDao->getCountries();
 		return $countries;
 	}

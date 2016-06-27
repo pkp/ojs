@@ -1,0 +1,150 @@
+<?php
+
+/**
+ * @file plugins/importexport/medra/MedraciteInfoSender.php
+ *
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @class MedraInfoSender
+ * @ingroup plugins_importexport_medra
+ *
+ * @brief Scheduled task to register DOIs to the Medra server.
+ */
+
+import('lib.pkp.classes.scheduledTask.ScheduledTask');
+import('lib.pkp.classes.core.JSONManager');
+
+
+class MedraInfoSender extends ScheduledTask {
+	/** @var $_plugin MedraExportPlugin */
+	var $_plugin;
+
+	/**
+	 * Constructor.
+	 * @param $argv array task arguments
+	 */
+	function MedraiteInfoSender($args) {
+		PluginRegistry::loadCategory('importexport');
+		$plugin =& PluginRegistry::getPlugin('importexport', 'MedraExportPlugin'); /* @var $plugin CrossRefExportPlugin */
+		$this->_plugin =& $plugin;
+
+		if (is_a($plugin, 'MedraExportPlugin')) {
+			$plugin->addLocaleData();
+		}
+
+		parent::ScheduledTask($args);
+	}
+
+	/**
+	 * @see ScheduledTask::getName()
+	 */
+	function getName() {
+		return __('plugins.importexport.medra.senderTask.name');
+	}
+
+	/**
+	 * @see ScheduledTask::executeActions()
+	 */
+	function executeActions() {
+		if (!$this->_plugin) return false;
+
+		$plugin = $this->_plugin;
+
+		$journals = $this->_getJournals();
+		$request =& Application::getRequest();
+
+		foreach ($journals as $journal) {
+			if ($plugin->getSetting($journal->getId(), 'automaticRegistration')) {
+				$unregisteredIssues = $plugin->_getUnregisteredIssues($journal);
+				$unregisteredArticles = $plugin->_getUnregisteredArticles($journal);
+				$unregisteredGalleys = $plugin->_getUnregisteredGalleys($journal);
+				$unregisteredSuppFiles = $plugin->_getUnregisteredSuppFiles($journal);
+
+				$unregisteredIssueIds = array();
+				foreach ($unregisteredIssues as $issue) {
+					$unregisteredIssueIds[$issue->getId()] = $issue;
+				}
+				$unregisteredArticlesIds = array();
+				foreach ($unregisteredArticles as $articleData) {
+					$article = $articleData['article'];
+					if (is_a($article, 'PublishedArticle')) {
+						$unregisteredArticlesIds[$article->getId()] = $article;
+					}
+				}
+				$unregisteredGalleyIds = array();
+				foreach ($unregisteredGalleys as $galleyData) {
+					$galley = $galleyData['galley'];
+					$unregisteredGalleyIds[$galley->getId()] = $galley;
+				}
+				$unregisteredSuppFileIds = array();
+				foreach ($unregisteredSuppFiles as $suppFileData) {
+					$suppFile = $suppFileData['suppFile'];
+					$unregisteredSuppFileIds[$suppFile->getId()] = $suppFile;
+				}
+
+				// If there are unregistered DOIs and we want automatic deposits
+				$exportSpec = array();
+				$register = false;
+				if (count($unregisteredIssueIds)) {
+					$exportSpec[DOI_EXPORT_ISSUES] = $unregisteredIssueIds;
+					$register = true;
+				}
+				if (count($unregisteredArticles)) {
+					$exportSpec[DOI_EXPORT_ARTICLES] = $unregisteredArticlesIds;
+					$register = true;
+				}
+				if (count($unregisteredGalleyIds)) {
+					$exportSpec[DOI_EXPORT_GALLEYS] = $unregisteredGalleyIds;
+					$register = true;
+				}
+				if (count($unregisteredSuppFileIds)) {
+					$exportSpec[DOI_EXPORT_SUPPFILES] = $unregisteredSuppFileIds;
+					$register = true;
+				}
+
+				if ($register) {
+					$plugin->registerObjects($request, $exportSpec, $journal);
+				}
+			}
+
+		}
+
+	}
+
+	/**
+	 * Get all journals that meet the requirements to have
+	 * their articles DOIs sent to Medra.
+	 * @return array
+	 */
+	function _getJournals() {
+		$plugin =& $this->_plugin;
+		$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+		$journalFactory =& $journalDao->getJournals(true);
+
+		$journals = array();
+		while($journal =& $journalFactory->next()) {
+			$journalId = $journal->getId();
+			if (!$plugin->getSetting($journalId, 'enabled') || !$plugin->getSetting($journalId, 'automaticRegistration')) continue;
+
+			$doiPrefix = null;
+			$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $journalId);
+			if (isset($pubIdPlugins['DOIPubIdPlugin'])) {
+				$doiPubIdPlugin =& $pubIdPlugins['DOIPubIdPlugin'];
+				$doiPrefix = $doiPubIdPlugin->getSetting($journalId, 'doiPrefix');
+			}
+
+			if ($doiPrefix) {
+				$journals[] =& $journal;
+			} else {
+				$this->notify(SCHEDULED_TASK_MESSAGE_TYPE_WARNING,
+					__('plugins.importexport.crossref.senderTask.warning.noDOIprefix', array('path' => $journal->getPath())));
+			}
+			unset($journal);
+		}
+
+		return $journals;
+	}
+}
+?>
