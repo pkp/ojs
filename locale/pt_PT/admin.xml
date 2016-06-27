@@ -83,13 +83,6 @@
 	<message key="admin.categories.confirmDelete">Tem a certeza que pretende eliminar esta categoria?</message>
 	<message key="admin.categories.name">Nome</message>
 	<message key="admin.categories.nameRequired">É obrigatório indicar um nome da categoria</message>
-	<message key="admin.copyAccessLogFileTool.usage">Copy the passed apache access log file(s), filtering the entries related with this installation,
-to the current files directory, inside the UsageStatsPlugin stage directory. Must run under user with enough privilegies to read access apache log files.
-
-This tool will only copy files that aren't already inside the usageStats file loader directories (stage, processing, archive, reject).
-
-Usage: {$scriptName} path/to/apache/log/file.log
-Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory</message>
 	<message key="admin.copyAccessLogFileTool.error.creatingFolder">ERRO: impossível criar uma pasta temporária {$tmpDir}</message>
 	<message key="admin.copyAccessLogFileTool.error.acessingFile">ERRO: Ficheiro {$filePath} não existe ou não está acessível.</message>
 	<message key="admin.copyAccessLogFileTool.error.copyingFile">ERRO: não é possível copiar ficheiro de {$filePath} para {$tmpFilePath}</message>
