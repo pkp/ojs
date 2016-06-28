@@ -71,7 +71,8 @@ Dopo che avete finito con le vostre revisioni, rinominare il file da NomeAutoreQ
 &bull; Frase aggiunta in risposta al QA. Il grassetto indica aggiunta di testo nuovo
 &bull; [parola cancellata] indica l'omissione di "completamente"
 &bull; Il commento contiene una risposta alla QA dell'editor]]></message>
-
+	<message key="default.journalSettings.emailHeader">Il seguente messaggio è stato spedito per conto di {$journalName}.
+________________________________________________________________________</message>
 	<message key="default.journalSettings.emailSignature">---
 {$journalName}
 {$indexUrl}/{$journalPath}</message>
