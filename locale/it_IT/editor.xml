@@ -58,6 +58,7 @@
 	<message key="editor.issues.publicIssueIdentifier">Identificativo pubblico del fascicolo</message>
 	<message key="editor.issues.description">Descrizione</message>
 	<message key="editor.issues.accessStatus">Tipo di accesso</message>
+	<message key="editor.issues.resetArticlePublicationDates">Resetta la data di pubblicazione dell'articolo</message>
 	<message key="editor.issues.accessDate">Data di fine embargo</message>
 	<message key="editor.issues.invalidAccessDate">Data di accesso non valida.</message>
 	<message key="editor.issues.coverPage">Immagine di copertina</message>
