@@ -13,33 +13,23 @@
  
 <locale name="en_US" full_name="U.S. English">
 
-	<message key="plugins.importexport.common.error.DOIsNotAvailable">In order to use this plug-in please go to the "Public Identifier" plug-in category, enable and configure the DOI plug-in and specify a valid DOI prefix there.</message>
-	<message key="plugins.importexport.common.error.pluginNotConfigured">The plug-in is not fully set up.</message>
-
-	<message key="plugins.importexport.common.settings">Settings</message>
-
 	<message key="plugins.importexport.common.settings.form.password">Password</message>
 	<message key="plugins.importexport.common.settings.form.passwordRequired">Please enter a password.</message>
 	
 	<message key="plugins.importexport.common.register">Register</message>
 	<message key="plugins.importexport.common.registerDescription">Click this button to register this object with the registration agency for the first time. This only works when you've never registered the object before!</message>
 	<message key="plugins.importexport.common.registerDescription.multi">Click this button to register or update the meta-data of the selected object(s) with the registration agency.</message>
-	<message key="plugins.importexport.common.register.error.mdsError">Registration was not successful! The DOI registration server returned an error: '{$param}'.</message>
-	<message key="plugins.importexport.common.register.success">Registration successful!</message>
 	<message key="plugins.importexport.common.register.warning">Registering many objects can take a long time. So please be patient after clicking the "Register" button. You'll be notified when registration is complete.</message>
 	<message key="plugins.importexport.common.register.noCredentials"><![CDATA[Direct registration is currently disabled. Please <a href="{$settingsUrl}">configure</a> a username and password to be able to register objects directly with the registration agency.]]></message>
 
 	<message key="plugins.importexport.common.update">Update</message>
 	<message key="plugins.importexport.common.updateDescription">Click this button to update the meta-data of this object with the registration agency. This only works if you successfully registered the object before!</message>
 		
-	<message key="plugins.importexport.common.export">Export Data</message>
 	<message key="plugins.importexport.common.export.unregistered">Export all unregistered issues, articles and galleys</message>
 	<message key="plugins.importexport.common.export.selectUnregistered">Select unregistered Issues, Articles and Galleys</message>
 	<message key="plugins.importexport.common.export.noUnregistered">All published issues, articles and galleys have already been registered (or none of them has a DOI assigned).</message>
-	<message key="plugins.importexport.common.export.issues">Export issues</message>
 	<message key="plugins.importexport.common.export.selectIssue">Select Issues</message>
 	<message key="plugins.importexport.common.export.noIssues">No issues currently have DOIs assigned.</message>
-	<message key="plugins.importexport.common.export.articles">Export articles</message>
 	<message key="plugins.importexport.common.export.selectArticle">Select Articles</message>
 	<message key="plugins.importexport.common.export.noArticles">No articles currently have DOIs assigned.</message>
 	<message key="plugins.importexport.common.export.galleys">Export galleys</message>
