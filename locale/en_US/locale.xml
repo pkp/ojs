@@ -1149,4 +1149,35 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">This search implementation does not allow per-journ
 al re-indexing.</message>
 	<message key="search.cli.rebuildIndex.unknownJournal">The given journal path "{$journalPath}" could not be resolved to a journal.</message>
+
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<!-- plugin tabs -->
+	<message key="plugins.importexport.common.settings">Settings</message>
+	<message key="plugins.importexport.common.settings.DOIPluginSettings">DOI Plugin Settings</message>
+	<message key="plugins.importexport.common.export.articles">Articles</message>
+	<message key="plugins.importexport.common.export.issues">Issues</message>
+	<!-- settings form -->
+	<message key="plugins.importexport.common.missingRequirements">Plugin requirements not met</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">In order to use this plugin please go to the "Public Identifier" plugin category, enable and configure the DOI plug-in and specify a valid DOI prefix there.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">The plugin is not fully set up.</message>
+	<message key="plugins.importexport.common.settings.form.password">Password</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Please note that the password will be saved as plain text, i.e. not encrypted.</message>
+	<!-- export filter -->
+	<message key="plugins.importexport.common.filter.issue">Any Issue</message>
+	<message key="plugins.importexport.common.status.any">Any Status</message>
+	<message key="plugins.importexport.common.status.notDeposited">Not Deposited</message>
+	<message key="plugins.importexport.common.status.markedRegistered">Marked registered</message>
+	<!-- actions -->
+	<message key="plugins.importexport.common.action">Action</message>
+	<message key="plugins.importexport.common.export">Export</message>
+	<message key="plugins.importexport.common.markRegistered">Mark registered</message>
+	<message key="plugins.importexport.common.register">Register</message>
+	<message key="plugins.importexport.common.checkStatus">Check status</message>
+	<!--  notifications and errors -->
+	<message key="plugins.importexport.common.error.noObjectsSelected">No objects selected.</message>
+	<message key="plugins.importexport.common.error.validation">Could not convert selected objects.</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">The output file {$param} is not writable.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Registration was not successful! The DOI registration server returned an error: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Registration successful!</message>
+
 </locale>

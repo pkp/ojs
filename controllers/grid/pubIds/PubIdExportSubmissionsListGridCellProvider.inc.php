@@ -1,0 +1,158 @@
+<?php
+
+/**
+ * @file controllers/grid/pubIds/PubIdExportSubmissionsListGridCellProvider.inc.php
+ *
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @class PubIdExportSubmissionsListGridCellProvider
+ * @ingroup controllers_grid_pubIds
+ *
+ * @brief Class for a cell provider that can retrieve labels from submissions with pub ids
+ */
+
+import('lib.pkp.classes.controllers.grid.DataObjectGridCellProvider');
+
+
+class PubIdExportSubmissionsListGridCellProvider extends DataObjectGridCellProvider {
+	/** @var ImportExportPlugin */
+	var $_plugin;
+
+	/**
+	 * Constructor
+	 */
+	function PubIdExportSubmissionsListGridCellProvider($plugin, $authorizedRoles = null) {
+		$this->_plugin  = $plugin;
+		if ($authorizedRoles) {
+			$this->_authorizedRoles = $authorizedRoles;
+		}
+		parent::DataObjectGridCellProvider();
+	}
+
+	//
+	// Template methods from GridCellProvider
+	//
+	/**
+	 * Get cell actions associated with this row/column combination
+	 *
+	 * @copydoc GridCellProvider::getCellActions()
+	 */
+	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
+		$publishedSubmission = $row->getData();
+		$columnId = $column->getId();
+		assert(is_a($publishedSubmission, 'PublishedArticle') && !empty($columnId));
+
+		import('lib.pkp.classes.linkAction.request.RedirectAction');
+		switch ($columnId) {
+			case 'title':
+				$this->_titleColumn = $column;
+				$title = $publishedSubmission->getLocalizedTitle();
+				if (empty($title)) $title = __('common.untitled');
+				$authorsInTitle = $publishedSubmission->getShortAuthorString();
+				$title = $authorsInTitle . '; ' . $title;
+				import('lib.pkp.controllers.grid.submissions.SubmissionsListGridCellProvider');
+				return array(
+					new LinkAction(
+						'itemWorkflow',
+						new RedirectAction(
+							SubmissionsListGridCellProvider::getUrlByUserRoles($request, $publishedSubmission)
+						),
+						$title
+					)
+				);
+				break;
+			case 'issue':
+				$contextId = $publishedSubmission->getContextId();
+
+				$issueId = $publishedSubmission->getIssueId();
+				$issueDao = DAORegistry::getDAO('IssueDAO');
+				$issue = $issueDao->getById($issueId, $contextId);
+				// Link to the issue edit modal
+				$application = PKPApplication::getApplication();
+				$dispatcher = $application->getDispatcher();
+				import('lib.pkp.classes.linkAction.request.AjaxModal');
+				return array(
+					new LinkAction(
+						'edit',
+						new AjaxModal(
+							$dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.issues.BackIssueGridHandler', 'editIssue', null, array('issueId' => $issue->getId())),
+							__('plugins.importexport.common.settings.DOIPluginSettings')
+						),
+						$issue->getIssueIdentification(),
+						null
+					)
+				);
+				break;
+			case 'status':
+				$status = $publishedSubmission->getData($this->_plugin->getDepositStatusSettingName());
+				$statusNames = $this->_plugin->getStatusNames();
+				$statusActions = $this->_plugin->getStatusActions($publishedSubmission);
+				if ($status && array_key_exists($status, $statusActions)) {
+					assert(array_key_exists($status, $statusNames));
+					return array(
+						new LinkAction(
+							'edit',
+							new RedirectAction(
+								$statusActions[$status],
+								'_blank'
+							),
+							$statusNames[$status]
+						)
+					);
+				}
+				break;
+		}
+		return parent::getCellActions($request, $row, $column, $position);
+	}
+
+	/**
+	 * Extracts variables for a given column from a data element
+	 * so that they may be assigned to template before rendering.
+	 *
+	 * @copydoc DataObjectGridCellProvider::getTemplateVarsFromRowColumn()
+	 */
+	function getTemplateVarsFromRowColumn($row, $column) {
+		$publishedSubmission = $row->getData();
+		$columnId = $column->getId();
+		assert(is_a($publishedSubmission, 'PublishedArticle') && !empty($columnId));
+
+		switch ($columnId) {
+			case 'id':
+				return array('label' => $publishedSubmission->getId());
+				break;
+			case 'title':
+				return array('label' => '');
+				break;
+			case 'author':
+				return array('label' => $publishedSubmission->getAuthorString(true));
+				break;
+			case 'issue':
+				return array('label' => '');
+				break;
+			case 'pubId':
+				return array('label' => $publishedSubmission->getStoredPubId($this->_plugin->getPubIdType()));
+				break;
+			case 'status':
+				$status = $publishedSubmission->getData($this->_plugin->getDepositStatusSettingName());
+				$statusNames = $this->_plugin->getStatusNames();
+				$statusActions = $this->_plugin->getStatusActions($publishedSubmission);
+				if ($status) {
+					if (array_key_exists($status, $statusActions)) {
+						$label = '';
+					} else {
+						assert(array_key_exists($status, $statusNames));
+						$label = $statusNames[$status];
+					}
+				} else {
+					$label = $statusNames[DOI_EXPORT_STATUS_NOT_DEPOSITED];
+				}
+				return array('label' => $label);
+				break;
+		}
+	}
+
+}
+
+?>
