@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/pln/locale/it_IT/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+  *
+  * PLN plugin localization strings
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.generic.pln">Plugin PKP PLN</message>
+	<message key="plugins.generic.pln.description">Il plugin PKP PLN cura il versamento dei contenuti pubblicati dalla rivista nella PKP Private LOCKSS Network a fini di conservazione a lungo termine.</message>
+	<message key="plugins.generic.pln.manager.setup.description"><![CDATA[<strong>PKP Private LOCKSS Network</strong><br /><br />Leggi la <a href="https://pkp.sfu.ca/pkp-lockss/" target="_blank">panoramica sulla PKP PLN</a> e completa <a href="{$plnPluginURL}">questo semplice modulo</a>. Questa opzione permette l'inclusione della tua rivista nella Public Knowledge Project Private LOCKSS Network (PKP PLN).]]></message>
+	<message key="plugins.generic.pln.enabled">Il plugin PKP PLN è stato abilitato.</message>
+	<message key="plugins.generic.pln.disabled">Il plugin PKP PLN è stato disabilitato.</message>
+	<message key="plugins.generic.pln.settings_page">Plugin PKP PLN - Impostazioni</message>
+	<message key="plugins.generic.pln.settings">Impostazioni</message>
+	<message key="plugins.generic.pln.settings.acron_required">Il plugin PLN richiede il plugin Acron o l'abilitazione dei tool pianificati, per esempio in 'cron.'</message>
+	<message key="plugins.generic.pln.settings.saved">Impostazioni PKP PLN salvate.</message>
+	<message key="plugins.generic.pln.settings.terms_of_use">Condizioni d'uso</message>
+	<message key="plugins.generic.pln.settings.terms_of_use_help">Come contatto principale, Io, sotto la mia responsabilità, accetto e confermo i seguenti termini e condizioni per la partecipazione alla Public Knowledge Project's Private LOCKSS Network (PKP-PLN):</message>
+	<message key="plugins.generic.pln.settings.terms_of_use_agree">Confermo</message>
+	<message key="plugins.generic.pln.settings.journal_uuid">Identificatore della rivista</message>
+	<message key="plugins.generic.pln.settings.journal_uuid_help">Questo è l'identificatore unico della rivista per la PKP PLN. Potresti doverlo comunicare agli amministratori della PKP PLN nelle richieste di supporto.</message>
+	<message key="plugins.generic.pln.settings.refresh">Aggiorna</message>
+	<message key="plugins.generic.pln.settings.refresh_help">Se per qualsiasi motivo i termini elencati sopra non fossero visibili oppure fossero da aggiornare, clicca su Aggiorna.</message>
+	<message key="plugins.generic.pln.required.object_type">Scegli gli oggetti da versare.</message>
+	<message key="plugins.generic.pln.required.object_threshold">Scegli una soglia di versamento per gli oggetti.</message>
+	<message key="plugins.generic.pln.required.terms_of_use_agreement">Per versare nella PLN devi accettare le condizioni d'uso.</message>
+	
+	<message key="plugins.generic.pln.objects.article">Articoli</message>
+	<message key="plugins.generic.pln.objects.issue">Fascicoli</message>
+
+	<message key="plugins.generic.pln.status_page">PKP PLN Plugin - Stato</message>
+	<message key="plugins.generic.pln.status.network_status">Stato della rete: {$networkStatusMessage}</message>
+	<message key="plugins.generic.pln.status.deposits">Versamenti</message>
+	<message key="plugins.generic.pln.status">Stato</message>
+
+	<!-- status page table headers -->	
+	<message key="plugins.generic.pln.status.docs"><![CDATA[I diversi <a href="{$statusDocsUrl}">stati di versamento in PLN sono descritti qui</a>.]]></message>
+	<message key="plugins.generic.pln.status.id">ID</message>
+	<message key="plugins.generic.pln.status.type">Tipo</message>
+	<message key="plugins.generic.pln.status.items">Elementi</message>
+	<message key="plugins.generic.pln.status.checked">Verificato</message>
+	<message key="plugins.generic.pln.status.local_status">Stato locale</message>
+	<message key="plugins.generic.pln.status.processing_status">Stato di processo</message>
+	<message key="plugins.generic.pln.status.lockss_status">Stato LOCKSS</message>
+	<message key="plugins.generic.pln.status.complete">Completo</message>
+	<message key="plugins.generic.pln.status.confirmReset">Vuoi davvero aggiornare questo versamento? Verrà reimpacchettato e rispedito nuovamente al server PKP PLN.</message>
+	
+	<!-- entries in the status page table -->
+	<message key="plugins.generic.pln.status.unknown">Sconosciuto</message>
+	<message key="plugins.generic.pln.status.new">Nuovo</message>
+	<message key="plugins.generic.pln.status.packaged">Impacchettato</message>
+	<message key="plugins.generic.pln.status.transferred">Trasferito</message>
+	<message key="plugins.generic.pln.status.received">Ricevuto</message>
+	<message key="plugins.generic.pln.status.validated">Validato</message>
+	<message key="plugins.generic.pln.status.sent">Inviato a  LOCKSS</message>	
+	<message key="plugins.generic.pln.status.syncing">Sincronizzazione in corso</message>
+	<message key="plugins.generic.pln.status.agreement">Sincronizzato</message>
+	<message key="plugins.generic.pln.status.updated">Aggiornato</message>
+	<message key="plugins.generic.pln.status.local_failure">Errore locale</message>
+	<message key="plugins.generic.pln.status.remote_failure">Errore remoto</message>
+
+	<message key="plugins.generic.pln.depositorTask.name">Attività del versante in PKP PLN</message>
+	<message key="plugins.generic.pln.notifications.processing_for">Versamento in corso per {$title}.</message>
+	<message key="plugins.generic.pln.notifications.getting_servicedocument">Getting service document.</message>
+	<message key="plugins.generic.pln.notifications.pln_not_accepting">La PKP PLN al momento non accetta versamenti.</message>
+	<message key="plugins.generic.pln.notifications.pln_accepting">La PKP PLN è aperta ai versamenti.</message>
+	<message key="plugins.generic.pln.notifications.check_status">Verifica lo stato dei tuoi versamenti.</message>
+	<message key="plugins.generic.pln.notifications.issn_missing">La rivista deve avere un ISSN per poter versare i propri contenuti nella PKP PLN.</message>
+	<message key="plugins.generic.pln.notifications.http_error">Si è verificato un errore di connessione con la PKP PLN - contatta l'amministratore di sistema.</message>
+	<message key="plugins.generic.pln.notifications.terms_updated">Le condizioni d'uso della PKP PLN sono state aggiornate. Devi accettare le nuove condizioni per poter continuare a versare.</message>
+	<message key="plugins.generic.pln.notifications.curl_missing">Per continuare devi abilitare il supporto CURL.</message>
+	<message key="plugins.generic.pln.notifications.zip_missing">Per continuare devi abilitare il supporto ZipArchive.</message>
+	<message key="plugins.generic.pln.notifications.issn_setting">La tua rivista deve avere un ISSN definito, prima di accettare le condizioni d'uso. Puoi inserire l'ISSN nella pagina del setup della rivista. Una volta che tu abbia inserito l'ISSN, le condizioni d'uso saranno visualizzate qui sotto.</message>
+	<message key="plugins.generic.pln.notifications.tar_missing">Il sistema deve avere un eseguibile tar.</message>
+	<message key="plugins.generic.pln.notifications.archive_tar_missing">Devi installare l'estensione Archive_Tar PHP per poter abilitare la PKP PLN.</message>
+	<message key="plugins.generic.pln.notifications.php5_missing">La PKP PLN richiede PHP 5 o superiore.</message>
+
+	<message key="plugins.generic.pln.error.include.bagit">La libreria BagIt, già compresa in OJS, non può essere caricata, probabilmente a causa di qualche requisito mancante.</message>
+	<message key="plugins.generic.pln.error.network.servicedocument">Errore di rete {$error} connettendosi alla PLN per ricevere il service document.</message>
+	<message key="plugins.generic.pln.error.network.deposit">Errore di rete {$error} connettendosi alla PLN per la trasmissione del versamento</message>
+	<message key="plugins.generic.pln.error.network.swordstatement">Errore di rete {$error} connettendosi alla PLN per ricevere gli aggiornamenti sullo stato del versamento.</message>
+	<message key="plugins.generic.pln.error.http.servicedocument">Il server PLN ha restituito un errore HTTP {$error} cercando di ricavere il service document.</message>
+	<message key="plugins.generic.pln.error.http.deposit">Il server PLN ha restituito un errore HTTP {$error} durante l'invio di un versamento.</message>
+	<message key="plugins.generic.pln.error.http.swordstatement">Il server PLN ha restituito un errore HTTP {$error} durante il controllo dello stato di un versamento.</message>
+	<message key="plugins.generic.pln.error.depositor.missingpackage">Non rieso a trovate il file del pacchetto {$file}.</message>
+	<message key="plugins.generic.pln.error.depositor.export.articles.error">Si è verificato un errore durante l'esportazione di un fascicolo. Nel log degli errori del server potrebbero esserci maggiori informazioni.</message>
+	<message key="plugins.generic.pln.error.depositor.export.issue.error">Si è verificato un errore durante l'esportazione di un fascicolo. Nel log degli errori del server potrebbero esserci maggiori informazioni.</message>
+	<message key="plugins.generic.pln.error.handler.uuid.invalid">L'identificativo richiesto non è valido o non è correttamente formato.</message>
+	<message key="plugins.generic.pln.error.handler.uuid.notfound">Non esistono versamenti per l'identificativo richiesto.</message>
+	<message key="plugins.generic.pln.error.handler.file.notfound">Il file del versamento non è stato trovato. Potrebbe non essere ancora stato impacchettato oppure il pacchetto potrebbe essere stato rimosso.</message>
+
+	<message key="plugins.generic.pln.depositor.statusupdates">Stati di versamento in corso di aggiornamento.</message>
+	<message key="plugins.generic.pln.depositor.updatedcontent">Contenuti aggiornati in lavorazione.</message>
+	<message key="plugins.generic.pln.depositor.newcontent">Nuovi contenuti in lavorazione.</message>
+	<message key="plugins.generic.pln.depositor.packagingdeposits">Impacchettamento dei contenuti per il versamento.</message>
+	<message key="plugins.generic.pln.depositor.transferringdeposits">Invio del versamento alla PLN in corso.</message>
+
+	<message key="plugins.generic.plngateway.displayName">Gateway PLN</message>
+	<message key="plugins.generic.plngateway.description">Mostra lo stato della PLN e i titoli degli articoli recenti in preparazione per il deposito.</message>
+	<message key="plugins.generic.plnblock.preservedin">Conservato nella PKP|PLN</message>
+	<message key="plugins.generic.plnblock.name">Blocco "Conservato in"</message>
+	<message key="plugins.generic.plnblock.description">Questo plugin genera il blocco "Conservato in".</message>
+</locale>
