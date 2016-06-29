@@ -68,13 +68,17 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('displayPageHeaderLogoAltText', $context->getLocalizedSetting('pageHeaderLogoImageAltText'));
 				$this->assign('displayFavicon', $context->getLocalizedFavicon());
 				$this->assign('faviconDir', $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()));
-				$this->assign('metaSearchDescription', $context->getLocalizedSetting('searchDescription'));
 				$this->assign('metaCustomHeaders', $context->getLocalizedSetting('customHeaders'));
 				$this->assign('numPageLinks', $context->getSetting('numPageLinks'));
 				$this->assign('itemsPerPage', $context->getSetting('itemsPerPage'));
 				$this->assign('enableAnnouncements', $context->getSetting('enableAnnouncements'));
 				$this->assign('contextSettings', $context->getSettingsDAO()->getSettings($context->getId()));
 				$this->assign('disableUserReg', $context->getSetting('disableUserReg'));
+
+				// Assign meta tags
+				if ((empty($request->getRequestedPage()) || $request->getRequestedPage() == 'index') && $context->getLocalizedSetting('searchDescription')) {
+					$this->addHeader('<meta name="description" content="' . $context->getLocalizedSetting('searchDescription') . '">');
+				}
 
 				// Assign stylesheets and footer
 				$contextStyleSheet = $context->getSetting('styleSheet');
