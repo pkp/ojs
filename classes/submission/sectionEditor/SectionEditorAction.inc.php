@@ -2020,17 +2020,17 @@ class SectionEditorAction extends Action {
 
 		$copyeditor = $sectionEditorSubmission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL');
 
-		if ($decisionConst == SUBMISSION_EDITOR_DECISION_DECLINE) {
-			// If the most recent decision was a decline,
-			// archive the submission.
-			$sectionEditorSubmission->setStatus(STATUS_ARCHIVED);
-			$sectionEditorSubmission->stampStatusModified();
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
-		}
-
 		if ($send && !$email->hasErrors()) {
 			HookRegistry::call('SectionEditorAction::emailEditorDecisionComment', array(&$sectionEditorSubmission, &$send, &$request));
 			$email->send($request);
+
+			if ($decisionConst == SUBMISSION_EDITOR_DECISION_DECLINE) {
+				// If the most recent decision was a decline,
+				// archive the submission.
+				$sectionEditorSubmission->setStatus(STATUS_ARCHIVED);
+				$sectionEditorSubmission->stampStatusModified();
+				$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+			}
 
 			$articleComment = new ArticleComment();
 			$articleComment->setCommentType(COMMENT_TYPE_EDITOR_DECISION);
