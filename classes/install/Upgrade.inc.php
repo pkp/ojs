@@ -905,7 +905,7 @@ class Upgrade extends Installer {
 		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$contexts = $contextDao->getAll();
 		while ($context = $contexts->next()) {
-			foreach (array('emailHeader', 'emailFooter', 'emailSignature') as $settingName) {
+			foreach (array('emailFooter', 'emailSignature') as $settingName) {
 				$settingsDao->updateSetting(
 					$context->getId(),
 					$settingName,
