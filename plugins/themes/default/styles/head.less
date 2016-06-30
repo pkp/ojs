@@ -117,8 +117,8 @@
 		}
 	}
 
-	.has_submenu a:focus,
-	.has_submenu a:hover {
+	[aria-haspopup] a:focus,
+	[aria-haspopup] a:hover {
 		border-color: transparent;
 	}
 
@@ -132,8 +132,8 @@
 		}
 	}
 
-	.has_submenu  ul a:focus,
-	.has_submenu  ul a:hover {
+	[aria-haspopup]  ul a:focus,
+	[aria-haspopup]  ul a:hover {
 		border-color: @primary;
 	}
 
@@ -404,12 +404,8 @@
 	}
 
 	// Offset the linking arrow a bit to compensate for short menu height
-	.has_submenu {
-
-		&:hover:before,
-		&.in_focus:before {
-			border-width: @half;
-		}
+	[aria-expanded="true"]:before {
+		border-width: @half;
 	}
 
 	// Fix alignment issues in task-count

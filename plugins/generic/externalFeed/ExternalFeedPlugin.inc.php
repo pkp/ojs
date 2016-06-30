@@ -33,7 +33,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 
 			$request = $this->getRequest();
 			$templateMgr = TemplateManager::getManager($request);
-			$templateMgr->addStyleSheet($request->getBaseUrl() . '/' . $this->getStyleSheetFile());
+			$templateMgr->addStyleSheet('externalFeed', $request->getBaseUrl() . '/' . $this->getStyleSheetFile());
 
 			// Journal home page display
 			HookRegistry::register('TemplateManager::display', array($this, 'displayHomepage'));

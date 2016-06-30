@@ -23,7 +23,37 @@ class DefaultThemePlugin extends ThemePlugin {
 	 * @return null
 	 */
 	public function init() {
-		$this->addStyle('default', 'styles/index.less');
+
+		// Load Noto Sans font from Google Font CDN
+		// To load extended latin or other character sets, see:
+		// https://www.google.com/fonts#UsePlace:use/Collection:Noto+Sans
+		if (Config::getVar('general', 'enable_cdn')) {
+			$this->addStyle(
+				'fontNotoSans',
+				'//fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic',
+				array('baseUrl' => '')
+			);
+		}
+
+		// Load primary stylesheet
+		$this->addStyle('stylesheet', 'styles/index.less');
+
+		// Load jQuery from a CDN or, if CDNs are disabled, from a local copy.
+		$min = Config::getVar('general', 'enable_minified') ? '.min' : '';
+		if (Config::getVar('general', 'enable_cdn')) {
+			$jquery = '//ajax.googleapis.com/ajax/libs/jquery/' . CDN_JQUERY_VERSION . '/jquery' . $min . '.js';
+			$jqueryUI = '//ajax.googleapis.com/ajax/libs/jqueryui/' . CDN_JQUERY_UI_VERSION . '/jquery-ui' . $min . '.js';
+		} else {
+			// Use OJS's built-in jQuery files
+			$request = Application::getRequest();
+			$jquery = $request->getBaseUrl() . '/lib/pkp/lib/vendor/components/jquery/jquery' . $min . '.js';
+			$jqueryUI = $request->getBaseUrl() . '/lib/pkp/lib/vendor/components/jqueryui/jquery-ui' . $min . '.js';
+		}
+		// Use an empty `baseUrl` argument to prevent the theme from looking for
+		// the files within the theme directory
+		$this->addScript('jQuery', $jquery, array('baseUrl' => ''));
+
+		// Load custom JavaScript for this theme
 		$this->addScript('default', 'js/main.js');
 	}
 

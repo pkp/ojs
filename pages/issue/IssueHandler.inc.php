@@ -364,6 +364,7 @@ class IssueHandler extends Handler {
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
 			$templateMgr->addStyleSheet(
+				'issueStylesheet' . $issue->getId(),
 				$request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/' . $styleFileName
 			);
 		}

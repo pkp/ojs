@@ -94,9 +94,27 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 				$contexts = 'frontend-' . $displayPage;
 			}
 
-			$templateManager->addHeader('<link rel="alternate" type="application/atom+xml" href="' . $request->url(null, 'gateway', 'plugin', array('AnnouncementFeedGatewayPlugin', 'atom')) . '">', STYLE_SEQUENCE_NORMAL, $contexts);
-			$templateManager->addHeader('<link rel="alternate" type="application/rdf+xml" href="'. $request->url(null, 'gateway', 'plugin', array('AnnouncementFeedGatewayPlugin', 'rss')) . '">', STYLE_SEQUENCE_NORMAL, $contexts);
-			$templateManager->addHeader('<link rel="alternate" type="application/rss+xml" href="'. $request->url(null, 'gateway', 'plugin', array('AnnouncementFeedGatewayPlugin', 'rss2')) . '">', STYLE_SEQUENCE_NORMAL, $contexts);
+			$templateManager->addHeader(
+				'announcementsAtom+xml',
+				'<link rel="alternate" type="application/atom+xml" href="' . $request->url(null, 'gateway', 'plugin', array('AnnouncementFeedGatewayPlugin', 'atom')) . '">',
+				array(
+					'contexts' => $contexts,
+				)
+			);
+			$templateManager->addHeader(
+				'announcementsRdf+xml',
+				'<link rel="alternate" type="application/rdf+xml" href="'. $request->url(null, 'gateway', 'plugin', array('AnnouncementFeedGatewayPlugin', 'rss')) . '">',
+				array(
+					'contexts' => $contexts,
+				)
+			);
+			$templateManager->addHeader(
+				'announcementsRss+xml',
+				'<link rel="alternate" type="application/rss+xml" href="'. $request->url(null, 'gateway', 'plugin', array('AnnouncementFeedGatewayPlugin', 'rss2')) . '">',
+				array(
+					'contexts' => $contexts,
+				)
+			);
 		}
 
 		return false;
