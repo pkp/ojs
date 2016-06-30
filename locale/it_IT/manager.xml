@@ -209,8 +209,6 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.emailBounceAddressDescription">Nel caso l'invio di un messaggio di posta elettronica non dovesse andare a buon fine, verrà inviata una notifica di errore a questo indirizzo.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Nota:</strong> per attivare questa opzione, l'amministratore del sito deve abilitare l'opzione <tt>allow_envelope_sender</tt>  nel file di configurazione di OJS. Configurazioni aggiuntive del server possono essere necessarie per supportare questa funzione (che potrebbe non essere disponibile su tutti i server), come indicato nella documentazione di OJS.]]></message>
 	<message key="manager.setup.emails">Firma delle email</message>
-	<message key="manager.setup.emailHeader">Intestazione delle email</message>
-	<message key="manager.setup.emailHeaderDescription">I messaggi email inviati dal sistema per conto della rivista inizieranno con la seguente intestazione. Il contatto principale apparirà come mittente di queste email, quindi è importante chiarire che il contatto principale non è necessariamente responsabile per il contenuto del messaggio, che potrebbe essere inviato per conto di un utente differente.</message>
 	<message key="manager.setup.emailSignature">Firma</message>
 	<message key="manager.setup.emailSignatureDescription">Le email inviate in automatico dal sistema avranno la seguente firma alla fine del messaggio. Il contenuto di queste email può essere modificato nella sezione di amministrazione della rivista.</message>
 	<message key="manager.setup.enableAnnouncements">Abilita gli amministratori della rivista ad aggiungere avvisi.</message>

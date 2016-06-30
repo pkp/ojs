@@ -129,8 +129,6 @@ Befolgen Sie bitte den folgenden Ablauf, um Ihr Manuskript elektronisch zu bearb
 	<pre>4. FORMATIERUNG
 	Der Absatz, der mit "Dieses Thema schließlich ..." beginnt, ist nicht eingerückt.</pre>]]></message>
 	
-	<message key="default.journalSettings.emailHeader"><![CDATA[Die folgende Nachricht wird im Namen von {$ldelim}$contextName{$rdelim} übermittelt.
-________________________________________________________________________]]></message>
 	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
 <a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
 </message>

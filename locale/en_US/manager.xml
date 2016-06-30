@@ -164,8 +164,6 @@
 	<message key="manager.setup.emailBounceAddressDescription">Any undeliverable emails will result in an error message to this address.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>allow_envelope_sender</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
 	<message key="manager.setup.emails">Email Identification</message>
-	<message key="manager.setup.emailHeader">Email Header</message>
-	<message key="manager.setup.emailHeaderDescription">The prepared emails that are sent by the system on behalf of the journal will begin with the following header. These emails will be addressed from the Principal Contact, so it's important to clarify that the Primary Contact is not necessarily responsible for the message content, which may be sent on behalf of a different user.</message>
 	<message key="manager.setup.emailSignature">Signature</message>
 	<message key="manager.setup.emailSignatureDescription">The prepared emails that are sent by the system on behalf of the journal will have the following signature added to the end.</message>
 	<message key="manager.setup.enableAnnouncements">Enable Journal Managers to add journal announcements.</message>
