@@ -10,7 +10,7 @@
  * @class PubIdExportIssuesListGridHandler
  * @ingroup controllers_grid_pubIds
  *
- * @brief Handle exportable submissions with pub ids list grid requests.
+ * @brief Handle exportable issues with pub ids list grid requests.
  */
 
 import('lib.pkp.classes.controllers.grid.GridHandler');
@@ -18,9 +18,6 @@ import('lib.pkp.classes.controllers.grid.GridHandler');
 import('controllers.grid.pubIds.PubIdExportIssuesListGridCellProvider');
 
 class PubIdExportIssuesListGridHandler extends GridHandler {
-	/** @var boolean true if the current user has a managerial role */
-	var $_isManager;
-
 	/** @var ImportExportPlugin */
 	var $_plugin;
 
@@ -42,8 +39,15 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
-		import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
-		$this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
+		import('lib.pkp.classes.security.authorization.PolicySet');
+		$rolePolicy = new PolicySet(COMBINING_PERMIT_OVERRIDES);
+
+		import('lib.pkp.classes.security.authorization.RoleBasedHandlerOperationPolicy');
+		foreach($roleAssignments as $role => $operations) {
+			$rolePolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, $role, $operations));
+		}
+		$this->addPolicy($rolePolicy);
+
 		return parent::authorize($request, $args, $roleAssignments);
 	}
 
@@ -58,19 +62,17 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 
 		// Load submission-specific translations.
 		AppLocale::requireComponents(
-			LOCALE_COMPONENT_APP_COMMON,
-			LOCALE_COMPONENT_APP_SUBMISSION,
-			LOCALE_COMPONENT_PKP_SUBMISSION,
-			LOCALE_COMPONENT_APP_EDITOR
+			LOCALE_COMPONENT_APP_EDITOR, // date grid column
+			LOCALE_COMPONENT_APP_MANAGER
 		);
-
-		// Fetch the authorized roles and determine if the user is a manager.
-		$authorizedRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
-		$this->_isManager = in_array(ROLE_ID_MANAGER, $authorizedRoles);
 
 		$pluginCategory = $request->getUserVar('category');
 		$pluginPathName = $request->getUserVar('plugin');
 		$this->_plugin = PluginRegistry::loadPlugin($pluginCategory, $pluginPathName);
+		assert(isset($this->_plugin));
+
+		// Fetch the authorized roles.
+		$authorizedRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
 
 		// Grid columns.
 		$cellProvider = new PubIdExportIssuesListGridCellProvider($this->_plugin, $authorizedRoles);
@@ -173,11 +175,13 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 	 */
 	function renderFilter($request, $filterData = array()) {
 		$statusNames = $this->_plugin->getStatusNames();
-		$filterData = array(
-			'status' => $statusNames,
-			'gridId' => $this->getId(),
-		);
-		return parent::renderFilter($request, $filterData);
+		$allFilterData = array_merge(
+			$filterData,
+			array(
+				'status' => $statusNames,
+				'gridId' => $this->getId(),
+			));
+		return parent::renderFilter($request, $allFilterData);
 	}
 
 	/**
@@ -223,6 +227,7 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 		}
 		return array($statusId);
 	}
+
 }
 
 ?>

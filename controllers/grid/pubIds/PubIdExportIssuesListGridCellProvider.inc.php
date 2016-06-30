@@ -60,7 +60,6 @@ class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider {
 						null
 					)
 				);
-				break;
 			case 'status':
 				$status = $publishedIssue->getData($this->_plugin->getDepositStatusSettingName());
 				$statusNames = $this->_plugin->getStatusNames();
@@ -79,7 +78,6 @@ class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider {
 						)
 					);
 				}
-				break;
 		}
 		return parent::getCellActions($request, $row, $column, $position);
 	}
@@ -98,13 +96,10 @@ class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider {
 		switch ($columnId) {
 			case 'identification':
 				return array('label' => '');
-				break;
 			case 'published':
 				return array('label' => $publishedIssue->getDatePublished());
-				break;
 			case 'pubId':
 				return array('label' => $publishedIssue->getStoredPubId($this->_plugin->getPubIdType()));
-				break;
 			case 'status':
 				$status = $publishedIssue->getData($this->_plugin->getDepositStatusSettingName());
 				$statusNames = $this->_plugin->getStatusNames();
@@ -120,7 +115,6 @@ class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider {
 					$label = $statusNames[DOI_EXPORT_STATUS_NOT_DEPOSITED];
 				}
 				return array('label' => $label);
-				break;
 		}
 	}
 

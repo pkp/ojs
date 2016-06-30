@@ -62,7 +62,6 @@ class PubIdExportSubmissionsListGridCellProvider extends DataObjectGridCellProvi
 						$title
 					)
 				);
-				break;
 			case 'issue':
 				$contextId = $publishedSubmission->getContextId();
 
@@ -84,7 +83,6 @@ class PubIdExportSubmissionsListGridCellProvider extends DataObjectGridCellProvi
 						null
 					)
 				);
-				break;
 			case 'status':
 				$status = $publishedSubmission->getData($this->_plugin->getDepositStatusSettingName());
 				$statusNames = $this->_plugin->getStatusNames();
@@ -102,7 +100,6 @@ class PubIdExportSubmissionsListGridCellProvider extends DataObjectGridCellProvi
 						)
 					);
 				}
-				break;
 		}
 		return parent::getCellActions($request, $row, $column, $position);
 	}
@@ -121,19 +118,14 @@ class PubIdExportSubmissionsListGridCellProvider extends DataObjectGridCellProvi
 		switch ($columnId) {
 			case 'id':
 				return array('label' => $publishedSubmission->getId());
-				break;
 			case 'title':
 				return array('label' => '');
-				break;
 			case 'author':
 				return array('label' => $publishedSubmission->getAuthorString(true));
-				break;
 			case 'issue':
 				return array('label' => '');
-				break;
 			case 'pubId':
 				return array('label' => $publishedSubmission->getStoredPubId($this->_plugin->getPubIdType()));
-				break;
 			case 'status':
 				$status = $publishedSubmission->getData($this->_plugin->getDepositStatusSettingName());
 				$statusNames = $this->_plugin->getStatusNames();
@@ -149,7 +141,6 @@ class PubIdExportSubmissionsListGridCellProvider extends DataObjectGridCellProvi
 					$label = $statusNames[DOI_EXPORT_STATUS_NOT_DEPOSITED];
 				}
 				return array('label' => $label);
-				break;
 		}
 	}
 

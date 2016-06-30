@@ -93,7 +93,7 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 				} else {
 					return new JSONMessage(true, $form->fetch($request));
 				}
-			default:
+			case 'index':
 				$form->initData();
 				return new JSONMessage(true, $form->fetch($request));
 		}
@@ -130,10 +130,10 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	 */
 	function getActionNames() {
 		return array(
-			DOI_EXPORT_ACTION_EXPORT => __('plugins.importexport.common.export'),
-			DOI_EXPORT_ACTION_MARKREGISTERED => __('plugins.importexport.common.markRegistered'),
-			DOI_EXPORT_ACTION_DEPOSIT => __('plugins.importexport.common.register'),
-			DOI_EXPORT_ACTION_CHECKSTATUS => __('plugins.importexport.common.checkStatus'),
+			DOI_EXPORT_ACTION_DEPOSIT => __('plugins.importexport.common.action.register'),
+			DOI_EXPORT_ACTION_CHECKSTATUS => __('plugins.importexport.common.action.checkStatus'),
+			DOI_EXPORT_ACTION_EXPORT => __('plugins.importexport.common.action.export'),
+			DOI_EXPORT_ACTION_MARKREGISTERED => __('plugins.importexport.common.action.markRegistered'),
 		);
 	}
 
@@ -141,7 +141,7 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	 * Get the plugin ID used as plugin settings prefix.
 	 * @return string
 	 */
-	abstract function getPluginId();
+	abstract function getPluginSettingsPreffix();
 
 	/**
 	 * Return the class name of the plugin's settings form.
@@ -194,7 +194,7 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	 *  errors if something went wrong.
 	 */
 	function getExportPath() {
-		$exportPath = Config::getVar('files', 'files_dir') . '/' . $this->getPluginId();
+		$exportPath = Config::getVar('files', 'files_dir') . '/' . $this->getPluginSettingsPreffix();
 		if (!file_exists($exportPath)) {
 			$fileManager = new FileManager();
 			$fileManager->mkdir($exportPath);
@@ -237,9 +237,9 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	 * id so that we do not get name clashes
 	 * when several DOI registration plug-ins
 	 * are active at the same time.
-	 * @parem $request Request
+	 * @param $request Request
 	 * @param $object Issue|PublishedArticle
-	 * @parem $testPrefix string
+	 * @param $testPrefix string
 	 */
 	function saveRegisteredDoi($request, $object, $testPrefix = '10.1234') {
 		$registeredDoi = $object->getStoredPubId('doi');
@@ -247,7 +247,7 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 		if ($this->isTestMode($request)) {
 			$registeredDoi = String::regexp_replace('#^[^/]+/#', $testPrefix . '/', $registeredDoi);
 		}
-		$object->setData($this->getPluginId() . '::' . DOI_EXPORT_REGISTERED_DOI, $registeredDoi);
+		$object->setData($this->getPluginSettingsPreffix() . '::' . DOI_EXPORT_REGISTERED_DOI, $registeredDoi);
 		$this->updateObject($object);
 	}
 
@@ -309,9 +309,9 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	function getAdditionalFieldNames($hookName, $args) {
 		assert(count($args) == 2);
 		$dao =& $args[0];
-		$returner =& $args[1];
-		assert(is_array($returner));
-		$returner[] = $this->getPluginId() . '::' . DOI_EXPORT_REGISTERED_DOI;
+		$additionalFields =& $args[1];
+		assert(is_array($additionalFields));
+		$additionalFields[] = $this->getPluginSettingsPreffix() . '::' . DOI_EXPORT_REGISTERED_DOI;
 	}
 
 	/**
@@ -324,7 +324,7 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * @see AcronPlugin::parseCronTab()
+	 * @copydoc AcronPlugin::parseCronTab()
 	 */
 	function callbackParseCronTab($hookName, $args) {
 		$taskFilesPath =& $args[0];
@@ -346,7 +346,7 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 			null,
 			null,
 			null,
-			$this->getPluginId(). '::' . DOI_EXPORT_REGISTERED_DOI,
+			$this->getPluginSettingsPreffix(). '::' . DOI_EXPORT_REGISTERED_DOI,
 			null,
 			null
 		);
@@ -361,21 +361,21 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	function getUnregisteredIssues($context) {
 		// Retrieve all issues that have not yet been registered.
 		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		$issues = $issueDao->getByPubIdType(
+		$issuesFactory = $issueDao->getByPubIdType(
 			$this->getPubIdType(),
 			$context?$context->getId():null,
-			$this->getPluginId(). '::' . DOI_EXPORT_REGISTERED_DOI,
+			$this->getPluginSettingsPreffix(). '::' . DOI_EXPORT_REGISTERED_DOI,
 			null,
 			null
 		);
+		$issues = $issuesFactory->toArray();
 		// Cache issues.
-		$nullVar = null;
 		$cache = $this->getCache();
 		foreach ($issues as $issue) {
-			$cache->add($issue, $nullVar);
+			$cache->add($issue, null);
 			unset($issue);
 		}
-		return $issues->toArray();
+		return $issues;
 	}
 
 
@@ -387,7 +387,7 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * @see PKPImportExportPlugin::executeCLI()
+	 * @copydoc PKPImportExportPlugin::executeCLI()
 	 */
 	function executeCLI($scriptName, &$args) {
 		fatalError('Not implemented');

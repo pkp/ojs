@@ -36,6 +36,7 @@
 	<message key="plugins.importexport.crossref.status.completed">Deposited</message>
 	<message key="plugins.importexport.crossref.status.failed">Failed</message>
 	<message key="plugins.importexport.crossref.status.registered">Active</message>
+	<message key="plugins.importexport.crossref.status.markedRegistered">Marked active</message>
 	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[
 		<p>Deposit status:</p>
 		<p>
@@ -44,12 +45,14 @@
 		- Deposited: the DOI has been deposited to Crossref, but may not be active yet.<br />
 		- Active: the DOI has been deposited, and is resolving correctly.<br />
 		- Failed: the DOI deposit has failed.<br />
-		- Marked registered: the DOI was manually marked as registered.
+		- Marked active: the DOI was manually marked as active.
 		</p>
 		<p>Only the status of the last deposit attempt is displayed.</p>
 		<p>If a deposit has failed, please solve the problem and try to register the DOI again.</p>]]></message>
 	<!-- actions -->
-	<message key="plugins.importexport.crossref.export">Download XML</message>
+	<message key="plugins.importexport.crossref.action.export">Download XML</message>
+	<message key="plugins.importexport.crossref.action.markRegistered">Mark active</message>
+	<message key="plugins.importexport.crossref.action.register">Submit</message>
 	<!-- scheduled task -->
 	<message key="plugins.importexport.crossref.senderTask.name">CrossRef automatic registration task</message>
 	<message key="plugins.importexport.crossref.senderTask.warning.noDOIprefix">DOI prefix is missing for the journal with the path {$path}.</message>

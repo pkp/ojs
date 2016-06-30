@@ -567,4 +567,34 @@
 	<message key="grid.genres.title.short">Components</message>
 	<message key="grid.genres.title">Article Components</message>
 	<message key="grid.genres.description">These components are used for file-naming purposes and are presented in a pull-down menu on uploading files. The genres designated ## allow the user to associate the file with either the whole submission 99Z or a particular component by number (e.g., 02).</message>
+
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<!-- plugin tabs -->
+	<message key="plugins.importexport.common.settings">Settings</message>
+	<message key="plugins.importexport.common.settings.DOIPluginSettings">DOI Plugin Settings</message>
+	<message key="plugins.importexport.common.export.articles">Articles</message>
+	<message key="plugins.importexport.common.export.issues">Issues</message>
+	<!-- settings form -->
+	<message key="plugins.importexport.common.missingRequirements">Plugin requirements not met</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">In order to use this plugin please go to the "Public Identifier" plugin category, enable and configure the DOI plug-in and specify a valid DOI prefix there.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">The plugin is not fully set up.</message>
+	<message key="plugins.importexport.common.settings.form.password">Password</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Please note that the password will be saved as plain text, i.e. not encrypted.</message>
+	<!-- export filter -->
+	<message key="plugins.importexport.common.filter.issue">Any Issue</message>
+	<message key="plugins.importexport.common.status.any">Any Status</message>
+	<message key="plugins.importexport.common.status.notDeposited">Not Deposited</message>
+	<message key="plugins.importexport.common.status.markedRegistered">Marked registered</message>
+	<!-- actions -->
+	<message key="plugins.importexport.common.action">Action</message>
+	<message key="plugins.importexport.common.action.export">Export</message>
+	<message key="plugins.importexport.common.action.markRegistered">Mark registered</message>
+	<message key="plugins.importexport.common.action.register">Register</message>
+	<message key="plugins.importexport.common.action.checkStatus">Check status</message>
+	<!--  notifications and errors -->
+	<message key="plugins.importexport.common.error.noObjectsSelected">No objects selected.</message>
+	<message key="plugins.importexport.common.error.validation">Could not convert selected objects.</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">The output file {$param} is not writable.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Registration was not successful! The DOI registration server returned an error: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Registration successful!</message>
 </locale>

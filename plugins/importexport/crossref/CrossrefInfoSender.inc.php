@@ -37,14 +37,14 @@ class CrossrefInfoSender extends ScheduledTask {
 	}
 
 	/**
-	 * @see ScheduledTask::getName()
+	 * @copydoc ScheduledTask::getName()
 	 */
 	function getName() {
 		return __('plugins.importexport.crossref.senderTask.name');
 	}
 
 	/**
-	 * @see ScheduledTask::executeActions()
+	 * @copydoc ScheduledTask::executeActions()
 	 */
 	function executeActions() {
 		if (!$this->_plugin) return false;
