@@ -44,7 +44,15 @@ class TemplateManager extends PKPTemplateManager {
 			$this->assign('publicFilesDir', $siteFilesDir); // May be overridden by journal
 
 			$siteStyleFilename = $publicFileManager->getSiteFilesPath() . '/' . $site->getSiteStyleFilename();
-			if (file_exists($siteStyleFilename)) $this->addStyleSheet($request->getBaseUrl() . '/' . $siteStyleFilename, STYLE_SEQUENCE_LAST);
+			if (file_exists($siteStyleFilename)) {
+				$this->addStyleSheet(
+					'siteStylesheet',
+					$request->getBaseUrl() . '/' . $siteStyleFilename,
+					array(
+						'priority' => STYLE_SEQUENCE_LATE
+					)
+				);
+			}
 
 			// Get a count of unread tasks.
 			if ($user = $request->getUser()) {
@@ -66,9 +74,6 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('displayPageHeaderTitle', $context->getLocalizedPageHeaderTitle());
 				$this->assign('displayPageHeaderLogo', $context->getLocalizedPageHeaderLogo());
 				$this->assign('displayPageHeaderLogoAltText', $context->getLocalizedSetting('pageHeaderLogoImageAltText'));
-				$this->assign('displayFavicon', $context->getLocalizedFavicon());
-				$this->assign('faviconDir', $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()));
-				$this->assign('metaCustomHeaders', $context->getLocalizedSetting('customHeaders'));
 				$this->assign('numPageLinks', $context->getSetting('numPageLinks'));
 				$this->assign('itemsPerPage', $context->getSetting('itemsPerPage'));
 				$this->assign('enableAnnouncements', $context->getSetting('enableAnnouncements'));
@@ -76,14 +81,22 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('disableUserReg', $context->getSetting('disableUserReg'));
 
 				// Assign meta tags
-				if ((empty($request->getRequestedPage()) || $request->getRequestedPage() == 'index') && $context->getLocalizedSetting('searchDescription')) {
-					$this->addHeader('<meta name="description" content="' . $context->getLocalizedSetting('searchDescription') . '">');
+				$favicon = $context->getLocalizedFavicon();
+				if (!empty($favicon)) {
+					$faviconDir = $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId());
+					$this->addHeader('favicon', '<link rel="icon" href="' . $faviconDir . '/' . $favicon['uploadName'] . '">');
 				}
 
 				// Assign stylesheets and footer
 				$contextStyleSheet = $context->getSetting('styleSheet');
 				if ($contextStyleSheet) {
-					$this->addStyleSheet($request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()) . '/' . $contextStyleSheet['uploadName'], STYLE_SEQUENCE_LAST);
+					$this->addStyleSheet(
+						'contextStylesheet',
+						$request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()) . '/' . $contextStyleSheet['uploadName'],
+						array(
+							'priority' => STYLE_SEQUENCE_LATE
+						)
+					);
 				}
 
 				// Get a link to the settings page for the current context.

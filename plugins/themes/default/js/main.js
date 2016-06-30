@@ -9,6 +9,16 @@
  */
 (function($) {
 
+	// Update nav menu ARIA states on focus, blur and mouse over/out events
+	$('.navDropdownMenu ul').on('focus.default  mouseenter.default', '[aria-haspopup="true"]', function (e) {
+		$(e.currentTarget).attr('aria-expanded', true);
+	});
+
+	$('.navDropdownMenu ul').on('blur.default  mouseleave.default', '[aria-haspopup="true"]', function (e) {
+		$(e.currentTarget).attr('aria-expanded', false);
+	});
+
+
 	// Register click handlers for the search panel
 	var headerSearchPanelIsClosing = false,
 	    headerSearchForm = $('#headerNavigationContainer .pkp_search'),

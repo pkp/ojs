@@ -32,7 +32,7 @@
 			</li>
 		{/if}
 
-		<li class="has_submenu">
+		<li aria-haspopup="true" aria-expanded="false">
 			<a href="{url router=$smarty.const.ROUTE_PAGE page="about"}">
 				{translate key="navigation.about"}
 			</a>

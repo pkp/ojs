@@ -15,7 +15,7 @@
 // supports nested lists that will be displayed on hover/focus.
 //
 // <ul class="pkp_nav_list">
-//   <li class="has_submenu">
+//   <li aria-haspopup="true" aria-expanded="false">
 //     <a href="#">1</a>
 //     <ul>
 //       <li>
@@ -84,15 +84,12 @@
 		}
 	}
 
-	li:hover > ul,
-	li:focus > ul,
-	li.in_focus > ul {
-		left: 0;
-	}
-
 	// Arrow linking top-level menu items with submenus
-	.has_submenu:hover,
-	.has_submenu.in_focus {
+	[aria-expanded="true"] {
+
+		> ul {
+			left: 0;
+		}
 
 		&:before {
 			content: '';
@@ -109,35 +106,33 @@
 			vertical-align: middle;
 			z-index: 1001;
 		}
-	}
 
-	// Ensure a dropdown doesn't open beyond the edge of the screen by aligning
-	// such dropdowns to the right rather than the left.
-	li.align_right:hover > ul,
-	li.align_right:focus > ul,
-	li.align_right.in_focus > ul {
-		left: auto;
-		// Position in center on very small screens to prevent if from flying
-		// off to the left. Not a perfect solution, but should suffice for the
-		// overwhelming majority of cases
-		width: 10em;
-		right: 50%;
-		.transform(translateX(50%));
+		// Ensure a dropdown doesn't open beyond the edge of the screen by aligning
+		// such dropdowns to the right rather than the left.
+		&.align_right > ul {
+			left: auto;
+			// Position in center on very small screens to prevent it from flying
+			// off to the left. Not a perfect solution, but should suffice for the
+			// overwhelming majority of cases
+			width: 10em;
+			right: 50%;
+			.transform(translateX(50%));
 
-		@media(min-width: @screen-phone) {
-			right: 0;
-			.transform(none);
-			width: 15em;
+			@media(min-width: @screen-phone) {
+				right: 0;
+				.transform(none);
+				width: 15em;
+			}
 		}
 	}
 
 	// Dropdown caret indicating submenus
 	// @todo these can probably abstracted into reusable components
-	.has_submenu a:first-child {
+	[aria-haspopup] a:first-child {
 		margin-right: 0;
 	}
 
-	.has_submenu > a:after {
+	[aria-haspopup] > a:after {
 		position: relative;
 		display: inline-block;
 		content: '';
@@ -151,16 +146,14 @@
 		overflow: hidden;
 	}
 
-	ul .has_submenu > a:after {
+	ul [aria-haspopup] > a:after {
 		border-left: 4px solid;
 		border-top: 4px solid transparent;
 		border-bottom: 4px solid transparent;
 		border-right: 4px solid transparent;
 	}
 
-	.has_submenu:hover > a:after,
-	.has_submenu:focus > a:after,
-	.has_submenu.in_focus > a:after {
+	[aria-expanded="true"] > a:after {
 		opacity: 0;
 	}
 }

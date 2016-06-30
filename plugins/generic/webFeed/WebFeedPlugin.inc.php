@@ -112,9 +112,27 @@ class WebFeedPlugin extends GenericPlugin {
 			$contexts = 'frontend-issue';
 		}
 
-		$templateManager->addHeader('<link rel="alternate" type="application/atom+xml" href="' . $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'atom')) . '">', STYLE_SEQUENCE_NORMAL, $contexts);
-		$templateManager->addHeader('<link rel="alternate" type="application/rdf+xml" href="'. $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss')) . '">', STYLE_SEQUENCE_NORMAL, $contexts);
-		$templateManager->addHeader('<link rel="alternate" type="application/rss+xml" href="'. $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss2')) . '">', STYLE_SEQUENCE_NORMAL, $contexts);
+		$templateManager->addHeader(
+			'webFeedAtom+xml',
+			'<link rel="alternate" type="application/atom+xml" href="' . $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'atom')) . '">',
+			array(
+				'contexts' => $contexts,
+			)
+		);
+		$templateManager->addHeader(
+			'webFeedRdf+xml',
+			'<link rel="alternate" type="application/rdf+xml" href="'. $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss')) . '">',
+			array(
+				'contexts' => $contexts,
+			)
+		);
+		$templateManager->addHeader(
+			'webFeedRss+xml',
+			'<link rel="alternate" type="application/rss+xml" href="'. $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss2')) . '">',
+			array(
+				'contexts' => $contexts,
+			)
+		);
 
 		return false;
 	}
