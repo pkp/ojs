@@ -8,8 +8,7 @@
  * List of operations this plugin can perform
  *}
 {strip}
-{assign var="pageTitle" value="plugins.importexport.crossref.displayName"}
-{include file="common/header.tpl"}
+{include file="common/header.tpl" pageTitle="plugins.importexport.crossref.displayName"}
 {/strip}
 
 {if !empty($configurationErrors) || !$currentContext->getSetting('publisherInstitution')|escape || (!$exportArticles && !$exportIssues)}
@@ -22,7 +21,6 @@
 	// Attach the JS file tab handler.
 	$(function() {ldelim}
 		$('#importExportTabs').pkpHandler('$.pkp.controllers.TabHandler');
-		//$('#importExportTabs').tabs('option', 'cache', true);
 	{rdelim});
 </script>
 <div id="importExportTabs">
@@ -56,7 +54,7 @@
 			</div>
 		{/if}
 
-		{url|assign:crossrefSettingsGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.settings.plugins.settingsPluginGridHandler" op="manage" plugin="CrossRefExportPlugin" category="importexport" escape=false}
+		{url|assign:crossrefSettingsGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.settings.plugins.settingsPluginGridHandler" op="manage" plugin="CrossRefExportPlugin" category="importexport" verb="index" escape=false}
 		{load_url_in_div id="crossrefSettingsGridContainer" url=$crossrefSettingsGridUrl}
 	</div>
 
@@ -66,18 +64,22 @@
 				<script type="text/javascript">
 					$(function() {ldelim}
 						// Attach the form handler.
-						$('#exportSubmissionXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+						$('#exportSubmissionXmlForm').pkpHandler('$.pkp.controllers.form.DOIPubIdExportFormHandler');
 					{rdelim});
 				</script>
 				<form id="exportSubmissionXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
 					{fbvFormArea id="submissionsXmlForm"}
 						{url|assign:submissionsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportSubmissionsListGridHandler" op="fetchGrid" plugin="crossref" category="importexport" escape=false}
 						{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
-						{fbvFormSection}
-							{foreach from=$actions key=action item=actionName}
-								{fbvElement type="submit" label=$actionName name="$action" id="$action" value="1" translate=false inline=true}
-							{/foreach}
-						{/fbvFormSection}
+						{if !empty($linkActions)}
+							<ul class="pubids_export_actions">
+								{foreach from=$linkActions item=linkAction}
+									<li {if $linkAction->getId() == $smarty.const.DOI_EXPORT_ACTION_DEPOSIT}class="pkp_button_primary"{else}class="pkp_button_link"{/if}>
+										{include file="linkAction/linkAction.tpl" action=$linkAction class="pkp_button_primary"}
+									</li>
+								{/foreach}
+							</ul>
+						{/if}
 					{/fbvFormArea}
 				</form>
 				<p>{translate key="plugins.importexport.crossref.statusLegend"}</p>
@@ -88,7 +90,7 @@
 				<script type="text/javascript">
 					$(function() {ldelim}
 						// Attach the form handler.
-						$('#exportIssueXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+						$('#exportIssueXmlForm').pkpHandler('$.pkp.controllers.form.DOIPubIdExportFormHandler');
 					{rdelim});
 				</script>
 				<p>{translate key="plugins.importexport.crossref.issues.description"}</p>
@@ -96,11 +98,15 @@
 					{fbvFormArea id="issuesXmlForm"}
 						{url|assign:issuesListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportIssuesListGridHandler" op="fetchGrid" plugin="crossref" category="importexport" escape=false}
 						{load_url_in_div id="issuesListGridContainer" url=$issuesListGridUrl}
-						{fbvFormSection}
-							{foreach from=$actions key=action item=actionName}
-								{fbvElement type="submit" label=$actionName name="$action" id="$action" translate=false inline=true}
-							{/foreach}
-						{/fbvFormSection}
+						{if !empty($linkActions)}
+							<ul class="pubids_export_actions">
+								{foreach from=$linkActions item=linkAction}
+									<li {if $linkAction->getId() == $smarty.const.DOI_EXPORT_ACTION_DEPOSIT}class="pkp_button_primary"{else}class="pkp_button_link"{/if}>
+										{include file="linkAction/linkAction.tpl" action=$linkAction class="pkp_button_primary"}
+									</li>
+								{/foreach}
+							</ul>
+						{/if}
 					{/fbvFormArea}
 				</form>
 				<p>{translate key="plugins.importexport.crossref.statusLegend"}</p>

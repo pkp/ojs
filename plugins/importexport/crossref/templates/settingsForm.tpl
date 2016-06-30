@@ -15,11 +15,13 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="crossrefSettingsForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT op="manage" plugin="CrossRefExportPlugin" category="importexport" verb="save"}">
-	{fbvFormArea id="doiPluginSettingsLink"}
-		{fbvFormSection}
-			{include file="linkAction/linkAction.tpl" action=$doiPluginSettingsLinkAction contextId="doiPluginSettingsLink"}
-		{/fbvFormSection}
-	{/fbvFormArea}
+	{if $doiPluginSettingsLinkAction}
+		{fbvFormArea id="doiPluginSettingsLink"}
+			{fbvFormSection}
+				{include file="linkAction/linkAction.tpl" action=$doiPluginSettingsLinkAction}
+			{/fbvFormSection}
+		{/fbvFormArea}
+	{/if}
 	{fbvFormArea id="crossrefSettingsFormArea"}
 		<p class="pkp_help">{translate key="plugins.importexport.crossref.settings.depositorIntro"}</p>
 		{fbvFormSection}

@@ -59,20 +59,23 @@ class CrossRefSettingsForm extends Form {
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
 		// DOI plugin settings action link
-		$application = PKPApplication::getApplication();
-		$request = $application->getRequest();
-		$dispatcher = $application->getDispatcher();
-		import('lib.pkp.classes.linkAction.request.AjaxModal');
-		$doiPluginSettingsLinkAction = new LinkAction(
-			'settings',
-			new AjaxModal(
-				$dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'manage', null, array('plugin' => 'doipubidplugin', 'category' => 'pubIds')),
-				__('plugins.importexport.common.settings.DOIPluginSettings')
-			),
-			__('plugins.importexport.common.settings.DOIPluginSettings'),
-			null
-		);
-		$this->setData('doiPluginSettingsLinkAction', $doiPluginSettingsLinkAction);
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
+		if (isset($pubIdPlugins['doipubidplugin'])) {
+			$application = PKPApplication::getApplication();
+			$request = $application->getRequest();
+			$dispatcher = $application->getDispatcher();
+			import('lib.pkp.classes.linkAction.request.AjaxModal');
+			$doiPluginSettingsLinkAction = new LinkAction(
+				'settings',
+				new AjaxModal(
+					$dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'manage', null, array('plugin' => 'doipubidplugin', 'category' => 'pubIds')),
+					__('plugins.importexport.common.settings.DOIPluginSettings')
+				),
+				__('plugins.importexport.common.settings.DOIPluginSettings'),
+				null
+			);
+			$this->setData('doiPluginSettingsLinkAction', $doiPluginSettingsLinkAction);
+		}
 
 		// Add form validation checks.
 		$this->addCheck(new FormValidator($this, 'depositorName', 'required', 'plugins.importexport.crossref.settings.form.depositorNameRequired'));

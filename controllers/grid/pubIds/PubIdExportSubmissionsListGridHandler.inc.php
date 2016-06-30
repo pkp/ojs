@@ -19,9 +19,6 @@ import('lib.pkp.controllers.grid.submissions.exportableSubmissions.ExportableSub
 import('controllers.grid.pubIds.PubIdExportSubmissionsListGridCellProvider');
 
 class PubIdExportSubmissionsListGridHandler extends GridHandler {
-	/** @var boolean true if the current user has a managerial role */
-	var $_isManager;
-
 	/** @var ImportExportPlugin */
 	var $_plugin;
 
@@ -43,8 +40,15 @@ class PubIdExportSubmissionsListGridHandler extends GridHandler {
 	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
-		import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
-		$this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
+		import('lib.pkp.classes.security.authorization.PolicySet');
+		$rolePolicy = new PolicySet(COMBINING_PERMIT_OVERRIDES);
+
+		import('lib.pkp.classes.security.authorization.RoleBasedHandlerOperationPolicy');
+		foreach($roleAssignments as $role => $operations) {
+			$rolePolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, $role, $operations));
+		}
+		$this->addPolicy($rolePolicy);
+
 		return parent::authorize($request, $args, $roleAssignments);
 	}
 
@@ -60,18 +64,18 @@ class PubIdExportSubmissionsListGridHandler extends GridHandler {
 
 		// Load submission-specific translations.
 		AppLocale::requireComponents(
-			LOCALE_COMPONENT_APP_COMMON,
-			LOCALE_COMPONENT_APP_SUBMISSION,
-			LOCALE_COMPONENT_PKP_SUBMISSION
+			LOCALE_COMPONENT_APP_SUBMISSION, // title filter
+			LOCALE_COMPONENT_PKP_SUBMISSION, // authors filter
+			LOCALE_COMPONENT_APP_MANAGER
 		);
-
-		// Fetch the authorized roles and determine if the user is a manager.
-		$authorizedRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
-		$this->_isManager = in_array(ROLE_ID_MANAGER, $authorizedRoles);
 
 		$pluginCategory = $request->getUserVar('category');
 		$pluginPathName = $request->getUserVar('plugin');
 		$this->_plugin = PluginRegistry::loadPlugin($pluginCategory, $pluginPathName);
+		assert(isset($this->_plugin));
+
+		// Fetch the authorized roles.
+		$authorizedRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
 
 		// Grid columns.
 		$cellProvider = new PubIdExportSubmissionsListGridCellProvider($this->_plugin, $authorizedRoles);
@@ -196,13 +200,15 @@ class PubIdExportSubmissionsListGridHandler extends GridHandler {
 		ksort($issueOptions);
 		$statusNames = $this->_plugin->getStatusNames();
 		$filterColumns = $this->getFilterColumns();
-		$filterData = array(
-			'columns' => $filterColumns,
-			'issues' => $issueOptions,
-			'status' => $statusNames,
-			'gridId' => $this->getId(),
-		);
-		return parent::renderFilter($request, $filterData);
+		$allFilterData = array_merge(
+			$filterData,
+			array(
+				'columns' => $filterColumns,
+				'issues' => $issueOptions,
+				'status' => $statusNames,
+				'gridId' => $this->getId(),
+			));
+		return parent::renderFilter($request, $allFilterData);
 	}
 
 	/**

@@ -89,7 +89,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 				// Check for configuration errors:
 				$configurationErrors = array();
 				// 1) missing DOI prefix
-				$doiPrefix = null;
+				$doiPrefix = $exportArticles = $exportIssues = null;
 				$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 				if (isset($pubIdPlugins['doipubidplugin'])) {
 					$doiPlugin = $pubIdPlugins['doipubidplugin'];
@@ -111,13 +111,18 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 						break;
 					}
 				}
-				// Actions
-				$actions = array(DOI_EXPORT_ACTION_MARKREGISTERED, DOI_EXPORT_ACTION_EXPORT);
+				// Add link actions
+				$actions = array(DOI_EXPORT_ACTION_EXPORT, DOI_EXPORT_ACTION_MARKREGISTERED, );
 				if ($this->getSetting($context->getId(), 'username') && $this->getSetting($context->getId(), 'password')) {
-					array_push($actions, DOI_EXPORT_ACTION_DEPOSIT, DOI_EXPORT_ACTION_CHECKSTATUS);
+					array_unshift($actions, DOI_EXPORT_ACTION_DEPOSIT, DOI_EXPORT_ACTION_CHECKSTATUS);
 				}
 				$actionNames = array_intersect_key($this->getActionNames(), array_flip($actions));
-				$templateMgr->assign('actions', $actionNames);
+				import('lib.pkp.classes.linkAction.request.NullAction');
+				$linkActions = array();
+				foreach ($actionNames as $action => $actionName) {
+					$linkActions[] = new LinkAction($action, new NullAction(), $actionName);
+				}
+				$templateMgr->assign('linkActions', $linkActions);
 				$templateMgr->assign('configurationErrors', $configurationErrors);
 				$templateMgr->assign('exportArticles', $exportArticles);
 				$templateMgr->assign('exportIssues', $exportIssues);
@@ -208,6 +213,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 			CROSSREF_STATUS_COMPLETED => __('plugins.importexport.crossref.status.completed'),
 			CROSSREF_STATUS_REGISTERED => __('plugins.importexport.crossref.status.registered'),
 			CROSSREF_STATUS_FAILED => __('plugins.importexport.crossref.status.failed'),
+			DOI_EXPORT_STATUS_MARKEDREGISTERED => __('plugins.importexport.crossref.status.markedRegistered'),
 		));
 	}
 
@@ -226,7 +232,14 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	 * @copydoc DOIExportPlugin::getActionNames()
 	 */
 	function getActionNames() {
-		return array_merge(parent::getActionNames(), array(DOI_EXPORT_ACTION_EXPORT => __('plugins.importexport.crossref.export')));
+		return array_merge(
+			parent::getActionNames(),
+			array(
+				DOI_EXPORT_ACTION_DEPOSIT => __('plugins.importexport.crossref.action.register'),
+				DOI_EXPORT_ACTION_EXPORT => __('plugins.importexport.crossref.action.export'),
+				DOI_EXPORT_ACTION_MARKREGISTERED => __('plugins.importexport.crossref.action.markRegistered'),
+			)
+		);
 	}
 
 	/**
@@ -247,9 +260,9 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc DOIPubIdExportPlugin::getPluginId()
+	 * @copydoc DOIPubIdExportPlugin::getPluginSettingsPreffix()
 	 */
-	function getPluginId() {
+	function getPluginSettingsPreffix() {
 		return 'crossref';
 	}
 
@@ -425,10 +438,10 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 					// set the status, because we will need to check it for the automatic registration
 					$object->setData($this->getDepositStatusSettingName(), $lastStatus);
 				}
-				if ($object->getData($this->getPluginId() . '::' . DOI_EXPORT_REGISTERED_DOI)) {
+				if ($object->getData($this->getPluginSettingsPreffix() . '::' . DOI_EXPORT_REGISTERED_DOI)) {
 					// apparently there was a new registreation i.e. update
 					// remove the setting defining the article as registered, for the article to be considered for automatic status updates
-					$object->setData($this->getPluginId() . '::' . DOI_EXPORT_REGISTERED_DOI, null);
+					$object->setData($this->getPluginSettingsPreffix() . '::' . DOI_EXPORT_REGISTERED_DOI, null);
 				}
 				// Update the object
 				$this->updateObject($object);
@@ -443,7 +456,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	 * @return string
 	 */
 	function getDepositStatusSettingName() {
-		return $this->getPluginId().'::status';
+		return $this->getPluginSettingsPreffix().'::status';
 	}
 
 	/**
@@ -451,7 +464,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	 * @return string
 	 */
 	function getDepositStatusUrlSettingName() {
-		return $this->getPluginId().'::statusUrl';
+		return $this->getPluginSettingsPreffix().'::statusUrl';
 	}
 
 	/**
@@ -459,7 +472,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	 * @return string
 	 */
 	function getDepositBatchIdSettingName() {
-		return $this->getPluginId().'::batchId';
+		return $this->getPluginSettingsPreffix().'::batchId';
 	}
 
 	/**

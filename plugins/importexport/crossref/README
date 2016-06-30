@@ -4,7 +4,6 @@
 === Author: Bozana Bokan <bozana.bokan@posteo.net>
 === Author: Juan Pablo Alperin <juan@alperin.ca>
 === Author: James MacGregor <jmacgreg@gmail.com>
-=== Last update: July 2016
 ================================
 
 About
@@ -33,11 +32,3 @@ The export functionality can then be accessed through:
 Contact/Support
 ---------------
 For support, bugfixes, or comments please use PKP-LIB GitHub issues: https://github.com/pkp/pkp-lib/issues
-
-Version History
----------------
-1.0	- Initial Release
-1.1	- Updated to support CrossRef 4.3.0 schema (by Alec Smecher)
-1.2 - Register from within OJS
-2.0 - Update of plugin to include automatic registration
-2.1 - Initial Release for OJS 3
