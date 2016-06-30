@@ -126,9 +126,8 @@
 	}
 
 	.fields {
-		&:extend(.pkp_unstyled_list);
 
-		> li {
+		> div {
 			position: relative;
 			padding-bottom: @triple; // Contain errors
 
@@ -151,6 +150,7 @@
 
 	label {
 		display: block;
+		cursor: pointer;
 	}
 
 	.label {
@@ -196,6 +196,25 @@
 		color: #fff;
 	}
 
+	label > input[type="checkbox"],
+	label > input[type="radio"] {
+		margin-right: 0.25em;
+	}
+
+	.buttons {
+		.pkp_helpers_clear;
+
+		button {
+			&:extend(.cmp_button);
+		}
+
+		a {
+			font-size: @font-sml;
+			line-height: @triple;
+			margin-left: 1em;
+		}
+	}
+
 	@media(min-width: @screen-phone) {
 
 		input[type="text"],
@@ -227,7 +246,7 @@
 			&.tagit-choice {
 				margin-right: 0.5em;
 				padding-left: 0.5em;
-				background: @bg;
+				background: @bg-shade;
 				border-radius: @radius;
 				line-height: @double;
 			}
@@ -333,13 +352,23 @@
 }
 
 // Notification
-// @todo needs work and styles for error/warning/notice instances
 .cmp_notification {
 	display: block;
 	width: 100%;
 	padding: @double;
-	background: @bg;
-	text-align: center;
+	margin-bottom: @quadruple;
+	background: @bg-shade;
+	border-left: @half solid @primary;
+	font-size: @font-base;
+	line-height: @line-base;
+
+	.success {
+		border-color: @yes;
+	}
+
+	.no {
+		border-color: @no;
+	}
 }
 
 // Breadcrumbs

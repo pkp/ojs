@@ -25,7 +25,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$this->addRoleAssignment(
 			array(ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER),
 			array(
-				'publicationMetadata',
+				'publicationMetadata', 'identifiers', 'clearPubId', 'updateIdentifiers',
 			)
 		);
 	}
@@ -37,8 +37,8 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 
 	/**
 	 * Show the publication metadata form.
-	 * @param $request Request
 	 * @param $args array
+	 * @param $request Request
 	 * @return JSONMessage JSON object
 	 */
 	function publicationMetadata($args, $request) {
@@ -52,6 +52,67 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 
 		$issueEntryPublicationMetadataForm->initData();
 		return new JSONMessage(true, $issueEntryPublicationMetadataForm->fetch($request));
+	}
+
+	/**
+	 * Edit article pub ids
+	 * @param $args array
+	 * @param $request Request
+	 * @return JSONMessage JSON object
+	 */
+	function identifiers($args, $request) {
+		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
+		$submission = $this->getSubmission();
+		$stageId = $this->getStageId();
+		$identifiersForm = new PublicIdentifiersForm($submission, $stageId, array('displayedInContainer' => true));
+		$identifiersForm->initData();
+		return new JSONMessage(true, $identifiersForm->fetch($request));
+	}
+
+	/**
+	 * Clear article pub id.
+	 * @param $args array
+	 * @param $request Request
+	 * @return JSONMessage JSON object
+	 */
+	function clearPubId($args, $request) {
+		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
+		$submission = $this->getSubmission();
+		$stageId = $this->getStageId();
+		$identifiersForm = new PublicIdentifiersForm($submission, $stageId, array('displayedInContainer' => true));
+		$identifiersForm->clearPubId($request->getUserVar('pubIdPlugIn'));
+		return new JSONMessage(true);
+	}
+
+	/**
+	 * Update article pub ids.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function updateIdentifiers($args, $request) {
+		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
+		$submission = $this->getSubmission();
+		$stageId = $this->getStageId();
+		$form = new PublicIdentifiersForm($submission, $stageId, array('displayedInContainer' => true));
+		$form->readInputData();
+		if ($form->validate($request)) {
+			$form->execute($request);
+			$json = new JSONMessage();
+			import('lib.pkp.classes.log.SubmissionLog');
+			import('classes.log.SubmissionEventLogEntry'); // Log consts
+			SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_ISSUE_METADATA_UPDATE, 'submission.event.publicIdentifiers');
+			if ($request->getUserVar('displayedInContainer')) {
+				$router = $request->getRouter();
+				$dispatcher = $router->getDispatcher();
+				$url = $dispatcher->url($request, ROUTE_COMPONENT, null, $this->_getHandlerClassPath(), 'fetch', null, array('submissionId' => $submission->getId(), 'stageId' => $stageId, 'tabPos' => $this->getTabPosition(), 'hideHelp' => true));
+				$json->setAdditionalAttributes(array('reloadContainer' => true, 'tabsUrl' => $url));
+				$json->setContent(true); // prevents modal closure
+			}
+			return $json;
+		} else {
+			return new JSONMessage(true, $form->fetch($request));
+		}
 	}
 
 	/**

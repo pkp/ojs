@@ -26,7 +26,6 @@ class DphillipsSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Phillips',
 			'affiliation' => 'University of Toronto',
 			'country' => 'Canada',
-			'roles' => array('Author'),
 		));
 
 		$title = 'Investigating the Shared Background Required for Argument: A Critique of Fogelin’s Thesis on Deep Disagreement';

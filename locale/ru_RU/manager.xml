@@ -81,9 +81,6 @@
 	<message key="manager.setup.emails"></message>
 	<message key="manager.setup.emailSignature">Подпись</message>
 	<message key="manager.setup.emailSignatureDescription"></message>
-	<message key="manager.setup.enablePageNumber">Страницы вводятся в Содержание дбя саждого отдельного материала (напр. с. 13-26, или просто с. 13).</message>
-	<message key="manager.setup.enablePublicArticleId">Статьи будут отмечаться своими идентификаторами.</message>
-	<message key="manager.setup.enablePublicIssueId">Выпуски будут отмечаться своими идентификаторами.</message>
 	<message key="manager.setup.focusAndScope">Область и цели</message>
 	<message key="manager.setup.focusAndScopeDescription"></message>
 	<message key="manager.setup.focusAndScopeOfJournal">Предметная область и цели журнала</message>
@@ -434,8 +431,6 @@
 	<message key="manager.setup.enableAnnouncements">Разрешить менеджерам журнала добавление обьявлений.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Показать</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">наиболее свежих обьявлений на домашней странице журнала.</message>
-	<message key="manager.setup.enablePublicGalleyId">Собственные идентификаторы будут использованы для идентификации гранок (т.е. HTML и PDF файлов) опубликованных статей.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Собственные идентификаторы будут использованы идентификации дополнительных файлов к статьям.</message>
 	<message key="manager.setup.enableUserRegistration">Пользователи могут зарегистрироваться с журналом в одной или более из следующих ролей:</message>
 	<message key="manager.setup.enableUserRegistration.author">Авторы (могут подавать рукописи на рассмотрение)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Читатели (будут получать уведомления; фактически эквивалентно "подписчикам")</message>

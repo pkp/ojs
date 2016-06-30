@@ -208,7 +208,6 @@
 	<message key="editor.article.scheduleForPublication">Zur Veröffentlichung vorsehen in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Muss noch zugewiesen werden</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Die Veröffentlichungsgebühr für diesen Artikel wurde noch nicht bezahlt. Sie können den Artikel zur Veröffentlichung einplanen, sobald die Gebühr bezahlt ist.</message>
-	<message key="editor.article.customJournalSettings">Benutzerdefinierte Kennungen und Seiteninformationen</message>
 	<message key="editor.article.display">Anzeigen</message>
 	<message key="editor.article.hideTocAuthorDescription">Autor/innennamen nicht im Inhaltsverzeichnis der Ausgabe anzeigen</message>
 	<message key="editor.article.hideTocAuthorDefault">Voreinstellung</message>

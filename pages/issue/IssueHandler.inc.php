@@ -54,11 +54,7 @@ class IssueHandler extends Handler {
 			$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 			$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 			$journal = $request->getJournal();
-			if ($journal->getSetting('enablePublicGalleyId')) {
-				$galley = $galleyDao->getByBestId($galleyId, $issue->getId());
-			} else {
-				$galley = $galleyDao->getById($galleyId, $issue->getId());
-			}
+			$galley = $galleyDao->getByBestId($galleyId, $issue->getId());
 
 			// Invalid galley id, redirect to issue page
 			if (!$galley) $request->redirect(null, null, 'view', $issue->getId());
@@ -99,26 +95,18 @@ class IssueHandler extends Handler {
 
 	/**
 	 * View an issue.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function view($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$this->setupTemplate($request);
 		$templateMgr = TemplateManager::getManager($request);
+		$journal = $request->getJournal();
 
 		if ($galley = $this->getGalley()) {
-			// Ensure we have PDF galley for inline viewing
-			// Otherwise redirect to download issue galley page
-			$galley = $this->getGalley();
-
-			// load Article galley plugins
-			PluginRegistry::loadCategory('viewableFiles', true);
-
-			$templateMgr->assign('pdfTitle', $issue->getIssueIdentification());
-			$templateMgr->assign('parent', $issue);
-			$templateMgr->assign('galley', $galley);
-
 			if (!HookRegistry::call('IssueHandler::view::galley', array(&$request, &$issue, &$galley))) {
-				return $templateMgr->display('frontend/pages/issueInterstitial.tpl');
+				$request->redirect(null, null, 'download', array($issue->getBestIssueId($journal), $galley->getBestGalleyId($journal)));
 			}
 		} else {
 			$this->_setupIssueTemplate($request, $issue, $request->getUserVar('showToc') ? true : false);

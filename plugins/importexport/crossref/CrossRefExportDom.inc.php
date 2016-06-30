@@ -156,8 +156,8 @@ class CrossRefExportDom {
 
 		XMLCustomWriter::createChildWithText($doc, $journalIssueNode, 'issue', $issue->getNumber());
 
-		if ($issue->getDatePublished() && $issue->getPubId('doi')) {
-			$issueDoiNode = CrossRefExportDom::generateDOIdataDom($doc, $issue->getPubId('doi'), Request::url(null, 'issue', 'view', $issue->getBestIssueId($journal)));
+		if ($issue->getDatePublished() && $issue->getStoredPubId('doi')) {
+			$issueDoiNode = CrossRefExportDom::generateDOIdataDom($doc, $issue->getStoredPubId('doi'), Request::url(null, 'issue', 'view', $issue->getBestIssueId()));
 			XMLCustomWriter::appendChild($journalIssueNode, $issueDoiNode);
 		}
 
@@ -222,7 +222,7 @@ class CrossRefExportDom {
 
 		// DOI data node
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getPubId('doi'), Request::url(null, 'article', 'view', $article->getBestArticleId()), $articleGalleyDao->getGalleysByArticle($article->getId()));
+		$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getStoredPubId('doi'), Request::url(null, 'article', 'view', $article->getBestArticleId()), $articleGalleyDao->getGalleysByArticle($article->getId()));
 		XMLCustomWriter::appendChild($journalArticleNode, $DOIdataNode);
 
 		/* Component list (supplementary files) */
@@ -271,7 +271,7 @@ class CrossRefExportDom {
 				$resourceNode = XMLCustomWriter::createElement($doc, 'resource');
 				XMLCustomWriter::appendChild($itemNode, $resourceNode);
 				XMLCustomWriter::setAttribute($resourceNode, 'mime_type', $galley->getFileType());
-				$urlNode = XMLCustomWriter::createTextNode($doc, $request->url(null, 'article', 'viewFile', array($galley->getArticleId(), $galley->getBestGalleyId($journal))));
+				$urlNode = XMLCustomWriter::createTextNode($doc, $request->url(null, 'article', 'viewFile', array($galley->getArticleId(), $galley->getBestGalleyId())));
 				XMLCustomWriter::appendChild($resourceNode, $urlNode);
 			}
 		}

@@ -42,14 +42,14 @@
 {assign var=journal value=$result.journal}
 <tr>
 	{if !$currentJournal}<td><a href="{url journal=$journal->getPath()}">{$journal->getLocalizedName()|escape}</a></td>{/if}
-	<td>{if $issueAvailable}<a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">{/if}{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}{if $issueAvailable}</a>{/if}</td>
+	<td>{if $issueAvailable}<a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId()}">{/if}{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}{if $issueAvailable}</a>{/if}</td>
 	<td>{$article->getLocalizedTitle()|strip_unsafe_html}</td>
 	<td align="right">
-			<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)}" class="file">{if $article->getLocalizedAbstract()}{translate key="article.abstract"}{else}{translate key="article.details"}{/if}</a>
+			<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId()}" class="file">{if $article->getLocalizedAbstract()}{translate key="article.abstract"}{else}{translate key="article.details"}{/if}</a>
 		{if $issueAvailable}
 		{foreach from=$publishedArticle->getGalleys() item=galley name=galleyList}
 			&nbsp;
-			<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)|to_array:$galley->getBestGalleyId($journal)}" class="file">{$galley->getGalleyLabel()|escape}</a>
+			<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId()|to_array:$galley->getBestGalleyId()}" class="file">{$galley->getGalleyLabel()|escape}</a>
 		{/foreach}
 		{/if}
 	</td>

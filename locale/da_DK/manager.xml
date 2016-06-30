@@ -193,11 +193,6 @@
 	<message key="manager.setup.enableAnnouncements">Gør det muligt for tidsskriftschefer at tilføje tidsskriftsmeddelelser.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Visning</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">af de seneste meddelelser på tidsskriftets hjemmeside.</message>
-	<message key="manager.setup.enablePageNumber">Elementers sidetal beregnes og angives manuelt i indholdsfortegnelsen (f.eks. s. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Brugerdefinerede id'er benyttes til at identificere publicerede elementer.</message>
-	<message key="manager.setup.enablePublicGalleyId">Redigerbare identifikationsmarkører bruges til at identificere korrekturer (f.eks. HTML eller PDF filer) for publicerede elementer.</message>
-	<message key="manager.setup.enablePublicIssueId">Brugerdefinerede id'er benyttes til at identificere udgaver.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Brugerdefinerede id'er benyttes til at identificere supplerende artikelfiler.</message>
 	<message key="manager.setup.enableUserRegistration">Brugere kan lade sig registrere hos tidsskriftet i en eller flere af følgende roller:</message>
 	<message key="manager.setup.enableUserRegistration.author">Forfattere (kan fremsende materiale til tidsskriftet)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Læsere (modtager beskeder og regnes for at være på lige fod med en abonnent)</message>

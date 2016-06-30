@@ -26,7 +26,6 @@ class RrossiSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Rossi',
 			'affiliation' => 'Barcelona University',
 			'country' => 'Spain',
-			'roles' => array('Author'),
 		));
 
 		$title = 'Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat';

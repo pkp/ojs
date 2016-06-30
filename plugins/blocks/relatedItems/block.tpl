@@ -12,9 +12,23 @@
 {if $journalRt && $journalRt->getEnabled() && $journalRt->getDefineTerms() && $version}
 
 <script>
-	{literal}initRelatedItems();{/literal}
+	{literal}
+	$(document).ready(function(){
+		$("#relatedItems").hide();
+		$("#toggleRelatedItems").show();
+	    $("#hideRelatedItems").click(function() {
+			$("#relatedItems").hide('slow');
+			$("#hideRelatedItems").hide();
+			$("#showRelatedItems").show();
+		});
+		$("#showRelatedItems").click(function() {
+			$("#relatedItems").show('slow');
+			$("#showRelatedItems").hide();
+			$("#hideRelatedItems").show();
+		});
+	});
+	{/literal}
 </script>
-
 
 <div class="pkp_block block_rt_related_items">
 	<span class="title">{translate key="plugins.block.relatedItems.title"}</span>

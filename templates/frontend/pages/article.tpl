@@ -22,16 +22,8 @@
 	{/if}
 
 	{if $galley}
-		<h1 class="page_title">{$article->getLocalizedTitle()|escape}</h1>
-
-		{translate key="article.view.interstitial" galleyUrl=$fileUrl}
-		<ul class="galleys_links">
-			{foreach from=$galley->getLatestGalleyFiles() item=galleyFile}
-				<li>
-                    <a class="obj_galley_link" href="{url op="download" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal):$galleyFile->getFileId() escape=false}">{$galleyFile->getLocalizedName()|escape}</a>
-                </li>
-			{/foreach}
-		</ul>
+		{* Show galley overview *}
+		{include file="frontend/objects/galley_details.tpl"}
 	{else}
 		{* Show article overview *}
 		{include file="frontend/objects/article_details.tpl"}

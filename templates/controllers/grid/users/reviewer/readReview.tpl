@@ -12,4 +12,11 @@
 	{include file="reviewer/review/reviewerRecommendations.tpl" description="reviewer.article.selectRecommendation.byEditor" required=false}
 {/capture}
 
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#readReviewForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
+	{rdelim});
+</script>
+
 {include file="core:controllers/grid/users/reviewer/readReview.tpl"}

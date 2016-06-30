@@ -36,16 +36,12 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy {
 	 * @see DataObjectRequiredPolicy::dataObjectEffect()
 	 */
 	function dataObjectEffect() {
-		$issueId = (int)$this->getDataObjectId();
+		$issueId = $this->getDataObjectId();
 		if (!$issueId) return AUTHORIZATION_DENY;
 
 		// Make sure the issue belongs to the journal.
 		$issueDao = DAORegistry::getDAO('IssueDAO');
-		if ($this->journal->getSetting('enablePublicIssueId')) {
-			$issue = $issueDao->getByBestId($issueId,  $this->journal->getId());
-		} else {
-			$issue = $issueDao->getById((int) $issueId, null, true);
-		}
+		$issue = $issueDao->getByBestId($issueId,  $this->journal->getId());
 
 		if (!is_a($issue, 'Issue')) return AUTHORIZATION_DENY;
 
@@ -67,6 +63,31 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy {
 		// Save the issue to the authorization context.
 		$this->addAuthorizedContextObject(ASSOC_TYPE_ISSUE, $issue);
 		return AUTHORIZATION_PERMIT;
+	}
+
+	/**
+	 * @copydoc DataObjectRequiredPolicy::getDataObjectId()
+	 * Considers a not numeric public URL identifier
+	 */
+	function getDataObjectId() {
+		// Identify the data object id.
+		$router = $this->_request->getRouter();
+		switch(true) {
+			case is_a($router, 'PKPPageRouter'):
+				if ( ctype_digit((string) $this->_request->getUserVar($this->_parameterName)) ) {
+					// We may expect a object id in the user vars
+					return (int) $this->_request->getUserVar($this->_parameterName);
+				} else if (isset($this->_args[0])) {
+					// Or the object id can be expected as the first path in the argument list
+					return $this->_args[0];
+				}
+				break;
+
+			default:
+				return parent::getDataObjectId();
+		}
+
+		return false;
 	}
 }
 

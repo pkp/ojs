@@ -31,7 +31,7 @@
 
 <ul>
 {iterate from=issues item=issue}
-	<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId($journal)}">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></li>
+	<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></li>
 {/iterate}
 </ul>
 

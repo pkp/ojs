@@ -69,6 +69,7 @@ class IssueGridRow extends GridRow {
 
 			import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
 			if ($issue->getDatePublished()) {
+				import('lib.pkp.classes.linkAction.request.AjaxModal');
 				$this->addAction(
 					new LinkAction(
 						'unpublish',
@@ -86,12 +87,12 @@ class IssueGridRow extends GridRow {
 				$this->addAction(
 					new LinkAction(
 						'publish',
-						new RemoteActionConfirmationModal(
-							__('editor.issues.confirmPublish'),
-							__('editor.issues.publishIssue'),
-							$router->url($request, null, null, 'publishIssue', null, array('issueId' => $issueId)),
-							'modal_confirm'
-						),
+						new AjaxModal(
+							$router->url(
+								$request, null, null, 'publishIssue', null, array('issueId' => $issueId)),
+								__('editor.issues.publishIssue'),
+								'modal_confirm'
+							),
 						__('editor.issues.publishIssue'),
 						'advance'
 					)

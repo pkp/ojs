@@ -169,11 +169,6 @@
 	<message key="manager.setup.enableAnnouncements">Omogući glavnim urednicima da postavljaju obavijesti.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Prikaz</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">posljednje objavljene obavijesti na naslovnoj stranici časopisa.</message>
-	<message key="manager.setup.enablePageNumber">Brojevi stranica mogu se postaviti uz svaki pojedini prilog u izdanju. Brojevi stranica trebaju se ručno izračunati i unijeti u kazalo sadržaja (npr. str. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Časopis koristi posebne identifikatore za identifikaciju objavljenih priloga.</message>
-	<message key="manager.setup.enablePublicGalleyId">Časopis koristi posebne identifikatore za identifikaciju datoteka prijeloma (npr. HTML ili PDF) objavljenih priloga.</message>
-	<message key="manager.setup.enablePublicIssueId">Časopis koristi posebne identifikatore za identifikaciju brojeva časopisa.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Časopis koristi posebne identifikatore za identifikaciju dopunskih datoteka priloženih uz članke.</message>
 	<message key="manager.setup.enableUserRegistration">Korisnici se mogu sami registrirati na stranicama časopisa u jednoj ili više od sljedećih uloga:</message>
 	<message key="manager.setup.enableUserRegistration.author">Autori (mogu prijavljivati rukopise)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Čitatelji (dobivaju obavijesti i računaju se kao ekvivalent pretplatniku)</message>

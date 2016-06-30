@@ -194,7 +194,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		// Relation
 		// full text URLs
 		foreach ($galleys as $galley) {
-			$relation = Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId($journal), $galley->getBestGalleyId($journal)));
+			$relation = Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId(), $galley->getBestGalleyId()));
 			$dc11Description->addStatement('dc:relation', $relation);
 			unset($relation);
 		}
@@ -202,16 +202,16 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		// Public identifiers
 		$pubIdPlugins = (array) PluginRegistry::loadCategory('pubIds', true, $journal->getId());
 		foreach ($pubIdPlugins as $pubIdPlugin) {
-			if ($pubIssueId = $pubIdPlugin->getPubId($issue)) {
+			if ($pubIssueId = $issue->getStoredPubId($pubIdPlugin->getPubIdType())) {
 				$dc11Description->addStatement('dc:source', $pubIssueId, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
 				unset($pubIssueId);
 			}
-			if ($pubArticleId = $pubIdPlugin->getPubId($article)) {
+			if ($pubArticleId = $article->getStoredPubId($pubIdPlugin->getPubIdType())) {
 				$dc11Description->addStatement('dc:identifier', $pubArticleId);
 				unset($pubArticleId);
 			}
 			foreach ($galleys as $galley) {
-				if ($pubGalleyId = $pubIdPlugin->getPubId($galley)) {
+				if ($pubGalleyId = $galley->getStoredPubId($pubIdPlugin->getPubIdType())) {
 					$dc11Description->addStatement('dc:relation', $pubGalleyId);
 					unset($pubGalleyId);
 				}

@@ -17,7 +17,7 @@
 
 	{* Show cover image and use cover description *}
 	{if $issue->getLocalizedFileName() && $issue->getShowCoverPage($currentLocale) && !$issue->getHideCoverPageArchives($currentLocale)}
-		<a class="cover" href="{url op="view" path=$issue->getBestIssueId($currentJournal)}">
+		<a class="cover" href="{url op="view" path=$issue->getBestIssueId()}">
 			<img src="{$coverPagePath|escape}{$issue->getFileName($currentLocale)|escape}"{if $issue->getCoverPageAltText($currentLocale) != ''} alt="{$issue->getCoverPageAltText($currentLocale)|escape}"{else} alt="{translate key="issue.coverPage.altText"}"{/if}/>
 		</a>
 		{assign var="issueDescription" value=$issue->getLocalizedCoverPageDescription()}
@@ -25,7 +25,7 @@
 		{assign var="issueDescription" value=$issue->getLocalizedDescription()}
 	{/if}
 
-	<a class="title" href="{url op="view" path=$issue->getBestIssueId($currentJournal)}">
+	<a class="title" href="{url op="view" path=$issue->getBestIssueId()}">
 		{if $issueTitle}
 			{$issueTitle|escape}
 		{else}

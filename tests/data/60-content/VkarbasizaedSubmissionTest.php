@@ -26,7 +26,6 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Karbasizaed',
 			'affiliation' => 'University of Tehran',
 			'country' => 'Iran, Islamic Republic of',
-			'roles' => array('Author'),
 		));
 
 		$title = 'Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran';
@@ -50,17 +49,11 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 		$this->assignParticipant('Proofreader', 'Catherine Turner');
 
 		// Create a galley
-		$this->waitForElementPresent($selector='css=[id^=component-grid-articlegalleys-articlegalleygrid-addFormat-button-]');
+		$this->waitForElementPresent($selector='css=[id^=component-grid-articlegalleys-articlegalleygrid-addGalley-button-]');
 		$this->click($selector);
 		$this->waitForElementPresent('css=[id^=label-]');
 		$this->type('css=[id^=label-]', 'PDF');
-		$this->select('id=galleyType', 'PDF.JS PDF Viewer');
 		$this->click('//button[text()=\'Save\']');
-		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
-
-		// Upload a galley file
-		$this->waitForElementPresent($selector='//table[contains(@id,\'component-grid-articlegalleys-articlegalleygrid-\')]//span[contains(.,\'PDF\')]/../a[contains(@id,\'-name-addFile-button-\')]');
-		$this->click($selector);
 		$this->uploadWizardFile('PDF');
 
 		$this->logOut();

@@ -26,7 +26,6 @@ class EostromSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Ostrom',
 			'affiliation' => 'Indiana University',
 			'country' => 'United States',
-			'roles' => array('Author'),
 		));
 
 		$title = 'Traditions and Trends in the Study of the Commons';

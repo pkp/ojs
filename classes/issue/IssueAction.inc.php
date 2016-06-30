@@ -88,12 +88,10 @@ class IssueAction {
 			$journalId = $journal->getId();
 			$userId = $user->getId();
 
-			if (Validation::isAuthor($journalId)) {
-				$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
-				$stageAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($article->getId(), ROLE_ID_AUTHOR, null, $userId);
-				$stageAssignment = $stageAssignments->next();
-				if ($stageAssignment) return true;
-			}
+			$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+			$stageAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($article->getId(), ROLE_ID_AUTHOR, null, $userId);
+			$stageAssignment = $stageAssignments->next();
+			if ($stageAssignment) return true;
 		}
 		return false;
 	}

@@ -243,7 +243,7 @@ class DataciteExportDom extends DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_identifierElement(&$object) {
-		$doi = $object->getPubId('doi');
+		$doi = $object->getStoredPubId('doi');
 		if (empty($doi)) {
 			$this->_addError('plugins.importexport.common.export.error.noDoiAssigned', $object->getId());
 			return $falseVar;
@@ -605,7 +605,7 @@ class DataciteExportDom extends DOIExportDom {
 	 *  has not been assigned to the given object.
 	 */
 	function &_relatedIdentifierElement(&$object, $relationType) {
-		$id = $object->getPubId('doi');
+		$id = $object->getStoredPubId('doi');
 
 		if (empty($id)) {
 			return $nullVar;

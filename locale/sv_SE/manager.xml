@@ -170,11 +170,6 @@
 	<message key="manager.setup.enableAnnouncements">Möjliggör för tidskriftsansvariga att lägga till tillkännagivanden.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Visning</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">av tidskriftens senaste tillkännagivanden.</message>
-	<message key="manager.setup.enablePageNumber">Sidnumrering bestäms och förs in manuellt i Innehållsförteckningen (ex., pp. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Anpassade identifierare används för att identifiera tidskriftens publicerade innehåll.</message>
-	<message key="manager.setup.enablePublicGalleyId">Anpassade identifierare används för att identifiera sidkorrektur (t ex HTML eller PDF filer) för publicerade enheter.</message>
-	<message key="manager.setup.enablePublicIssueId">Anpassade identifierare används för att identifiera tidskriftens nummer.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Anpassade identifierare används för att identifiera kompletterande artikelfiler.</message>
 	<message key="manager.setup.enableUserRegistration">Användare kan registrera sig på tidskriften som en eller flera av följande fuktioner:</message>
 	<message key="manager.setup.enableUserRegistration.author">Författare (Kan skicka manuskript till tidskriften.)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Läsare (Fungerar som abonnent, får meddelanden om tidskriften etc.)</message>

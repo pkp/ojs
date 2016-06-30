@@ -43,7 +43,7 @@
         </revision>
       </submission_file>
       <article_galley xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" approved="true" galley_type="pdfarticlegalleyplugin" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
-        <name locale="en_US">PDF</name>
+	<name locale="en_US">PDF</name>
         <seq>0</seq>
         <submission_file_ref id="18" revision="1"/>
       </article_galley>
@@ -73,7 +73,7 @@
         </revision>
       </submission_file>
       <article_galley xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" approved="true" galley_type="pdfarticlegalleyplugin" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
-        <name locale="en_US">PDF</name>
+	<name locale="en_US">PDF</name>
         <seq>0</seq>
         <submission_file_ref id="2" revision="1"/>
       </article_galley>
@@ -104,7 +104,7 @@
         </revision>
       </submission_file>
       <article_galley xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" approved="true" galley_type="pdfarticlegalleyplugin" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
-        <name locale="en_US">PDF</name>
+	<name locale="en_US">PDF</name>
         <seq>0</seq>
         <submission_file_ref id="26" revision="1"/>
       </article_galley>
@@ -135,7 +135,7 @@
         </revision>
       </submission_file>
       <article_galley xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" approved="true" galley_type="pdfarticlegalleyplugin" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
-        <name locale="en_US">PDF</name>
+	<name locale="en_US">PDF</name>
         <seq>0</seq>
         <submission_file_ref id="37" revision="1"/>
       </article_galley>
@@ -166,7 +166,7 @@
         </revision>
       </submission_file>
       <article_galley xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" approved="true" galley_type="pdfarticlegalleyplugin" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
-        <name locale="en_US">PDF</name>
+	<name locale="en_US">PDF</name>
         <seq>0</seq>
         <submission_file_ref id="32" revision="1"/>
       </article_galley>
@@ -197,7 +197,7 @@
         </revision>
       </submission_file>
       <article_galley xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" approved="true" galley_type="pdfarticlegalleyplugin" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
-        <name locale="en_US">PDF</name>
+	<name locale="en_US">PDF</name>
         <seq>0</seq>
         <submission_file_ref id="40" revision="1"/>
       </article_galley>

@@ -21,10 +21,10 @@
 					{foreach from=$article->getAuthors() item=author}
 						{$author->getFullName()|escape},
 					{/foreach}
-					<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)}">
+					<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId()}">
 						{$article->getLocalizedTitle()|strip_unsafe_html}
 					</a>,
-					<a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">
+					<a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId()}">
 						{$journal->getLocalizedName()|escape}: {$issue->getIssueIdentification()|escape}
 					</a>
 				</li>
