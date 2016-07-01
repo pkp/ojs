@@ -4,14 +4,14 @@
 <!--
   * locale/de_DE/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
   * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
   -->
 
-<locale name="de_DE" full_name = "Deutsch (Deutschland)">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="author.submit">Neuer Beitrag</message>
 	<message key="author.track">Beiträge im Begutachtungsverfahren</message>
 	<message key="author.competingInterests"><![CDATA[<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Richtlinie</a> für Interessenkonflikte]]></message>
@@ -25,11 +25,11 @@
 	<message key="author.submit.step4">Schritt 4. Zusatzdateien hochladen</message>
 	<message key="author.submit.step4a">Schritt 4a. Zusatzdatei hinzufügen</message>
 	<message key="author.submit.step5">Schritt 5. Einreichung bestätigen</message>
-	<message key="author.submit.start">Beginn</message>
-	<message key="author.submit.upload">Beitrag hochladen</message>
-	<message key="author.submit.metadata">Metadaten eingeben</message>
-	<message key="author.submit.supplementaryFiles">Zusatzdateien hochladen</message>
-	<message key="author.submit.confirmation">Bestätigung</message>
+	<message key="author.submit.start">1. Beginn</message>
+	<message key="author.submit.upload">2. Beitrag hochladen</message>
+	<message key="author.submit.metadata">3. Metadaten eingeben</message>
+	<message key="author.submit.supplementaryFiles">4. Zusatzdateien hochladen</message>
+	<message key="author.submit.confirmation">5. Bestätigung</message>
 	<message key="author.submit.cancelSubmission">Sie können die Einreichung auch später fertigstellen, indem Sie "Aktuelle Beiträge" auf der Autor/innenstartseite auswählen.</message>
 	<message key="author.submit.notAccepting">Die Zeitschrift nimmt zur Zeit keine Beiträge an.</message>
 	<message key="author.submit.requestWaiver">Gebührenverzicht beantragen</message>
@@ -49,19 +49,19 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Sind Schwierigkeiten aufgetreten? Kontaktieren Sie <a href="mailto:{$supportEmail}">{$supportName}</a>.]]></message>
 	<message key="author.submit.journalSection">Zeitschriftenrubrik</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Wählen Sie die passende Rubrik für diesen Beitrag aus (Siehe Rubriken und Richtlinien in <a href="{$aboutUrl}" target="_new">Über uns</a>).]]></message>
-	<message key="submission.submit.selectSection">Wählen Sie eine Rubrik aus...</message>
+	<message key="author.submit.selectSection">Wählen Sie eine Rubrik aus...</message>
 	<message key="author.submit.submissionLocale">Beitragssprache</message>
 	<message key="author.submit.submissionLocaleDescription">Diese Zeitschrift nimmt Beiträge in verschiedenen Sprachen entgegen. Wählen Sie die primäre Sprache des Beitrags aus dem Auswahlmenü unten.</message>
-	<message key="submission.submit.submissionChecklist">Checkliste für Beiträge</message>
-	<message key="submission.submit.submissionChecklistDescription">Stellen Sie sicher, dass der Beitrag in einer Form vorliegt, in der er von der Zeitschrift in Betracht gezogen werden kann, indem Sie die folgende Liste abhaken. (Kommentare für die Redaktion können weiter unten angefügt werden.)</message>
+	<message key="author.submit.submissionChecklist">Checkliste für Beiträge</message>
+	<message key="author.submit.submissionChecklistDescription">Stellen Sie sicher, dass der Beitrag in einer Form vorliegt, in der er von der Zeitschrift in Betracht gezogen werden kann, indem Sie die folgende Liste abhaken. (Kommentare für die Redaktion können weiter unten angefügt werden.)</message>
 	<message key="author.submit.verifyChecklist">Stellen Sie sicher, dass alle Punkte der Checkliste erfüllt sind, bevor Sie fortfahren. </message>
 	<message key="author.submit.copyrightNoticeAgree">Die Autor/innen stimmen den Bestimmungen dieser Copyright-Regelungen zu, die für diesen Beitrag im Falle einer Veröffentlichung Anwendung finden. (Kommentare für die Redaktion können weiter unten angefügt werden.)</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Sie müssen den Copyright-Regelungen zustimmen, bevor Sie fortfahren.</message>
-	<message key="submission.submit.coverNote">Kommentare für die Redaktion</message>
+	<message key="author.submit.commentsForEditor">Kommentare für die Redaktion</message>
 	<message key="author.submit.comments">Text eingeben (optional)</message>
 	<message key="author.submit.form.sectionRequired">Wählen Sie eine passende Rubrik für diesen Beitrag aus.</message>
 	<message key="author.submit.form.localeRequired">Bitte wählen Sie eine Beitragssprache.</message>
-	<message key="submission.submit.privacyStatement">Erklärung zum Schutz persönlicher Daten in dieser Zeitschrift</message>
+	<message key="author.submit.privacyStatement">Erklärung zum Schutz persönlicher Daten in dieser Zeitschrift</message>
 	<message key="author.submit.reorderInstructions">Gruppieren Sie die Autor/innen um, so dass sie in der Reihenfolge stehen, in der sie in der Veröffentlichung auftauchen werden.</message>
 	<message key="author.submit.reorder">Autor/innennamen umordnen</message>
 	<message key="author.submit.selectPrincipalContact">Hauptkontakt für die redaktionelle Korrespondenz</message>
@@ -71,6 +71,7 @@
 	<message key="author.submit.submissionSupportingAgencies">Mitwirkung und Unterstützung</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Benennen Sie Personen, Organisationen oder Einrichtungen, die zu der Ihrer Einreichung zugrundeliegenden Arbeit beigetragen haben oder die die zugrundeliegende Arbeit finanziert oder unterstützt haben. Trennen Sie mit einem Semikolon (z.B. John Doe, Metro University; Master University, Department of Computer Science).</message>
 	<message key="author.submit.coverageInstructions">Bezieht sich auf den räumlich-geographischen sowie den zeitlichen Bereich und auf die Eigenschaften des Forschungsgegenstandes.</message>
+	<message key="author.submit.subjectClassInstructions">Benutzen Sie die verlinkte Schlagwortsystematik zur Auswahl von Klassifizierungsbegriffen und, falls zutreffend, -nummern.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[deutsch=de; englisch=en; französisch=fr; spanisch=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">zusätzliche Kodierungen</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Es muss mindestens ein/e Autor/in angegeben werden.</message>
 	<message key="author.submit.form.authorRequiredFields">Vorname, Name und E-Mail-Adresse für jede/n Autor/in erforderlich</message>

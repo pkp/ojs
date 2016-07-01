@@ -4,17 +4,20 @@
 <!--
   * locale/de_DE/admin.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
   * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
   -->
 
-<locale name="de_DE" full_name = "Deutsch (Deutschland)">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="admin.hostedJournals">Zeitschriften auf dieser Website</message>
 	<message key="admin.settings.journalRedirect">Umleitung zu der Zeitschrift</message>
+	<message key="admin.settings.security">Sicherheit</message>
+	<message key="admin.settings.security.plugins">Unterbinde das Installieren, Aktualisieren oder Löschen von Plug-Ins durch Zeitschriftenverwalter/innen.</message>
 	<message key="admin.settings.options">Optionen</message>
+	<message key="admin.settings.useAlphalist">Zeige bei Installationen mit mehreren Zeitschriften eine alphabetische Liste auf der Startseite, um eine schnelle alphabetische Navigation zwischen den Zeitschriften zu ermöglichen.</message>
 	<message key="admin.settings.usePaging">Teile bei Installationen mit mehreren Zeitschriften die Liste der Zeitschriften auf mehrere Seiten auf.</message>
 	<message key="admin.settings.journalRedirectInstructions">Anfragen bei der Startseite werden zu dieser Zeitschrift umgeleitet. Dies kann hilfreich sein, wenn auf der Website z.B. nur eine einzige Zeitschrift angeboten wird.</message>
 	<message key="admin.settings.noJournalRedirect">Nicht umleiten</message>
@@ -28,22 +31,16 @@
 		Es gibt Fälle, in denen eine einzige Nutzungsstatistik benutzt werden muss, z.B. wenn eine sortierte Liste der am häufigsten genutzten Artikel angezeigt werden soll oder um
 		Suchergebnisse zu gewichten. Bitte wählen Sie eine der Nutzungsmetriken als Standard aus.
 	</message>
-	<message key="admin.languages.confirmDisable">Sind Sie sicher, dass Sie diese Regionaleinstellung deaktivieren möchten? Dies wird alle gehosteten Zeitschriften betreffen, die diese Regionaleinstellung momentan benutzen.</message>
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Das Herunterladen von Regionalpaketen von dem Webserver des Public Knowledge Projects ist momentan nicht möglich, da:</p>
-	<ul>
-		<li>Ihr Server verfügt nicht über das Werkzeug GNU "tar" oder erlaubt nicht dessen Ausführung.</li>
-		<li>OJS kann die Registrierungsdatei für Regionaleinstellungen nicht verändern, typischerweise "registry/locales.xml".</li>
-	</ul>
-<p>Regionalpakete können manuell von der <a href="http://pkp.sfu.ca">PKP-Website</a> heruntergeladen werden.</p>]]></message>
-
 	<message key="admin.languages.primaryLocaleInstructions">Diese Regionaleinstellung wird die Standardeinstellung der Website und aller ihrer Zeitschriften.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Wählen Sie alle Regionaleinstellungen aus, die die Website anbieten soll. Die gewählten Parameter können von allen Zeitschriften, die auf der Website angeboten werden, verwendet werden und erscheinen auch im Sprachenmenü auf jeder Seite der Website (die Seiten bestimmter Zeitschriften können davon ausgenommen werden). Wenn nur eine Regionaleinstellung ausgewählt wird, erscheint das Sprachenmenü nicht, und den Zeitschriften stehen keine erweiterten Spracheinstellungen zur Verfügung.</message>
 	<message key="admin.locale.maybeIncomplete">Gekennzeichnete Lokaleinstellungen können unvollständig sein.</message>	
 	<message key="admin.languages.confirmUninstall">Sind Sie sicher, dass Sie diese Regionaleinstellung deinstallieren wollen? Jede Zeitschrift, die diesen Datensatz verwendet, wird davon betroffen sein.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Wählen Sie zusätzliche Regionaleinstellungen, die dieses System unterstützen soll. Die Regionaleinstellungen müssen installiert sein, bevor sie von den angebotenen Zeitschriften verwendet werden können. Weitere Informationen zum Hinzufügen neuer Regionaleinstellungen finden Sie in der OJS-Dokumentation.</message>
+	<message key="admin.languages.downloadLocales">Regionaleinstellungen herunterladen</message>
 	<message key="admin.languages.downloadFailed">Das Herunterladen der Regionaleinstellung ist fehlgeschlagen. Die Fehlernachricht(en) weiter unten beschreiben den Fehler.</message>
 	<message key="admin.languages.localeInstalled">Die Regionaleinstellung "{$locale}" wurde installiert.</message>
 	<message key="admin.languages.download">Regionaleinstellung herunterladen</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Standard-E-Mail-Vorlagen neu laden</message>
 	<message key="admin.languages.download.cannotOpen">Die Sprachbeschreibung von der PKP-Webseite kann nicht geöffnet werden.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Die neue Regionaleinstellung kann nicht zu der Registrierungsdatei für Regionaleinstellungen (üblicherweise "registry/locales.xml") hinzugefügt werden.</message>
 	<message key="admin.auth.ojs">OJS-Benutzer/innen-Datenbank</message>
@@ -53,16 +50,16 @@
 	<message key="admin.systemVersion">OJS-Version</message>
 	<message key="admin.systemConfiguration">OJS-Konfiguration</message>
 	<message key="admin.systemConfigurationDescription"><![CDATA[OJS-Konfigurationsdatei <tt>config.inc.php</tt>.]]></message>
-	<message key="admin.journals.createInstructions">Sie werden automatisch als Zeitschriftenverwalter/in dieser Zeitschrift eingetragen. Nachdem Sie eine neue Zeitschrift angelegt haben, werden Sie zu deren Einstellungsassistenten weitergeleitet, damit Sie die Einrichtung abschließen können.</message>
 	<message key="admin.journals.journalSettings">Zeitschriften-Einstellungen</message>
 	<message key="admin.journals.noneCreated">Es wurde keine Zeitschrift eingerichtet.</message>
-	<message key="admin.contexts.confirmDelete">Sind Sie sicher, dass Sie diese Zeitschrift mitsamt ihrem gesamten Inhalt endgültig löschen möchten?</message>
-	<message key="admin.contexts.create">Eine Zeitschrift einrichten</message>
+	<message key="admin.journals.confirmDelete">Sind Sie sicher, dass Sie diese Zeitschrift mitsamt ihrem gesamten Inhalt endgültig löschen möchten?</message>
+	<message key="admin.journals.create">Eine Zeitschrift einrichten</message>
+	<message key="admin.journals.createInstructions">Sie werden automatisch als Redakteur/in dieser Zeitschrift eingetragen. Nachdem Sie eine neue Zeitschrift eingerichtet haben, loggen Sie sich dort als Redakteur/in ein, fahren Sie mit der Konfiguration fort und tragen Sie Benutzer/innen ein.</message>
 	<message key="admin.journals.urlWillBe"><![CDATA[Die URL der Zeitschrift ist {$sampleUrl}]]></message>
-	<message key="admin.contexts.form.titleRequired">Ein Titel ist erforderlich.</message>
-	<message key="admin.contexts.form.pathRequired">Ein Zugangspfad ist erforderlich.</message>
-	<message key="admin.contexts.form.pathAlphaNumeric">Der Zugangspfad darf nur Buchstaben und Zahlen, Unterstriche und Bindestriche enthalten und muss mit einem Buchstaben oder einer Zahl beginnen und enden.</message>
-	<message key="admin.contexts.form.pathExists">Der gewählte Zugangspfad wird bereits für eine andere Zeitschrift verwendet.</message>
+	<message key="admin.journals.form.titleRequired">Ein Titel ist erforderlich.</message>
+	<message key="admin.journals.form.pathRequired">Ein Zugangspfad ist erforderlich.</message>
+	<message key="admin.journals.form.pathAlphaNumeric">Der Zugangspfad darf nur Buchstaben und Zahlen, Unterstriche und Bindestriche enthalten und muss mit einem Buchstaben oder einer Zahl beginnen und enden.</message>
+	<message key="admin.journals.form.pathExists">Der gewählte Zugangspfad wird bereits für eine andere Zeitschrift verwendet.</message>
 	<message key="admin.journals.enableJournalInstructions">Ermöglichen Sie, dass diese Zeitschrift öffentlich auf der Website auftaucht.</message>
 	<message key="admin.journals.journalDescription">Beschreibung der Zeitschrift </message>
 	<message key="admin.journal.pathImportInstructions">Existierender oder einzurichtender Zugangspfad zur Zeitschrift (z.B. "ojs").</message>
@@ -91,5 +88,20 @@
 	<message key="admin.categories.confirmDelete">Sind Sie sicher, dass Sie diese Kategorie löschen wollen?</message>
 	<message key="admin.categories.name">Name</message>
 	<message key="admin.categories.nameRequired">Ein Kategorienname ist notwendig.</message>
-	<message key="admin.presses.createInstructions">Sie werden automatisch als Zeitschriftenverwalter/in dieser Zeitschrift eingetragen. Nachdem Sie eine neue Zeitschrift angelegt haben, werden Sie zu deren Einstellungsassistenten weitergeleitet, damit Sie die Einrichtung abschließen können.</message>
+
+	<message key="admin.copyAccessLogFileTool.usage">Kopiere die übergebenen Apache-Zugriffsdatei(en), woraus die mit dieser Installation zusammenhängenden Einträge ausgewählt werden,
+in das aktuelle Dateiverzeichnis innerhalb des Vorbereitungs-Verzeichnisses des UsageStats-Plug-Ins. Muss unter einem Benutzer mit ausreichenden Rechten für den Lesezugriff auf Apache-Log-Dateien ausgeführt werden.
+
+Dieses Werkzeug wird nur Dateien kopieren, die nicht bereits in den usageStats-Verzeichnissen (Vorbereitung, Bearbeitung, Archiv, zurückgewiesen) sind.
+
+Benutzung: {$scriptName} path/to/apache/log/file.log
+Benutzung (verarbeite alle Dateien eines Verzeichnisses): {$scriptName} path/to/apache/directory
+Benutzung (verarbeite alle Dateien eines Verzeichnisses, die mit der übergebenen Zeichenkette beginnen): {$scriptName} path/to/apache/directory starts_with_string  
+	</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Fehler: kann temporären Ordner {$tmpDir} nicht anlegen</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Fehler: Datei {$filePath} existiert nicht, oder es kann nicht auf sie zugegriffen werden.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Fehler: kann Datei nicht von {$filePath} nach {$tmpFilePath} kopieren</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Fehler: kann Datei {$tmpFilePath} nicht löschen</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Warnung: Datei {$filePath} gibt es bereits im Verzeichnis der Nutzungsstatistiken.</message>
+	<message key="admin.copyAccessLogFileTool.success">Erfolgreich kopiert: {$filePath} nach {$destinationPath}</message>
 </locale>

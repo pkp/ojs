@@ -4,7 +4,7 @@
 <!--
   * locale/de_DE/default.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
@@ -23,10 +23,11 @@
 	 *
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Der Beitrag ist bisher unveröffentlicht und wurde auch keiner anderen Zeitschrift vorgelegt (andernfalls ist eine Erklärung in "Kommentare für die Redaktion" beigefügt).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Die Datei liegt im Format Microsoft Word, oder RTF vor.</message>
+	<message key="default.journalSettings.checklist.fileFormat">Die Datei liegt im Format Microsoft Word, RTF oder WordPerfect vor.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">Soweit möglich, wurden den Literaturangaben URLs beigefügt.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Der Text liegt mit einfachem Zeilenabstand vor, Schriftgröße 12, gegebenenfalls kursiv, nicht unterstrichen (mit Ausnahme der URL-Adressen); alle Illustrationen, Grafiken und Tabellen sind an geeigneter Stelle im Text eingefügt und nicht am Textende.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Der Text folgt den stilistischen und bibliografischen Vorgaben in<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines"> Richtlinien für Autor/innen</a> , die unter "Über uns" zu finden sind.]]></message>
+	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Falls der Beitrag für eine Rubrik eingereicht wird, die Peer Review vorsieht, werden die Hinweise <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Eine anonyme Begutachtung sicherstellen</a>) beachtet.]]></message>
 	<message key="default.journalSettings.privacyStatement">Namen und E-Mail-Adressen, die auf den Webseiten der Zeitschrift eingegeben werden, werden ausschließlich zu den angegebenen Zwecken verwendet und nicht an Dritte weitergegeben.</message>
 	<message key="default.journalSettings.openAccessPolicy">Diese Zeitschrift bietet freien Zugang (Open Access) zu ihren Inhalten, entsprechend der Grundannahme, dass die freie öffentliche Verfügbarkeit von Forschung einem weltweiten Wissensaustausch zugute kommt.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">Die Autor/innen werden dazu ermutigt, ihre bei dieser Zeitschrift eingereichten Beiträge parallel auf ihren persönlichen Homepages oder den Homepages von Institutionen zu veröffentlichen, wobei Sie in den bibliografischen Angaben ggf. auf die Veröffentlichung in dieser Zeitschrift hinweisen.</message>
@@ -85,7 +86,7 @@ Befolgen Sie bitte den folgenden Ablauf, um Ihr Manuskript elektronisch zu bearb
 	<h4>A. Autor/in liefert einen Link zum Literaturverweis</h4>
 	<ol>
 	<li>Während der Beitrag noch im Textverarbeitungsformat ist (z.B. Word), fügen Sie die Worte ANZEIGEN am Ende des Literaturverweises ein.</li>
-<li>Verwandeln Sie diese Worte in einen Hyperlink, indem Sie mit den Mitteln des Textverarbeitungsprogramms die übermittelte URL hinzufügen.</li>
+	<li>Verwandeln Sie diese Worte in einen Hyperlink, indem Sie mit den Mitteln des Textverarbeitungsprogramms die übermittelte URL hinzufügen.</li>
 	</ol>
 	<h4>B. Leser/innen ermöglichen, nach Verweisen in Google Scholar zu suchen</h4>
 	<ol>
@@ -123,20 +124,20 @@ Befolgen Sie bitte den folgenden Ablauf, um Ihr Manuskript elektronisch zu bearb
 
 	<p>Geben Sie "FORMAT" in das Feld für Korrekturlektorat-Korrekturen ein, gefolgt von einer Beschreibung von Stelle und die Art des Problems.</p>
 	<br />
-	<pre>3. FORMATIERUNG
-	Die Zahlen in Tabelle 3 sind in der dritten Spalte nicht bündig.</pre>
+	<pre>3. FORMAT
+	Die Zahlen in Tabelle 3 sind in der dritten Spalte nicht rechtsbündig.</pre>
 	<br />
-	<pre>4. FORMATIERUNG
+	<pre>4. FORMAT
 	Der Absatz, der mit "Dieses Thema schließlich ..." beginnt, ist nicht eingerückt.</pre>]]></message>
-	
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
-</message>
+
+
+	<message key="default.journalSettings.emailSignature">________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Wir empfehlen unseren Leser/innen, sich für die Benachrichtigung bei neuen Veröffentlichungen dieser Zeitschrift einzutragen. Verwenden Sie den <a href="{$indexUrl}/{$journalPath}/user/register">Registrieren</a>-Link oben auf der Startseite der Zeitschrift. Angemeldete Leser/innen erhalten zu jeder neuen Ausgabe der Zeitschrift die Inhaltsangabe per E-Mail zugeschickt. Die Anmeldung ermöglicht es gleichzeitig der Zeitschrift, einen gewissen Grad an Unterstützung oder eine gewisse Leser/innenschaft zu belegen. Siehe die Regelungen zum <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Schutz persönlicher Daten</a> der Zeitschrift, die sicherstellen, dass weder Namen noch E-Mail-Adressen registrierter Benutzer/innen zu anderen Zwecken verwendet werden.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Haben Sie Interesse, einen Beitrag bei dieser Zeitschrift einzureichen? Wir möchten Sie auf <a href="{$indexUrl}/{$journalPath}/about">Über uns</a>, wo Sie die Richtlinien der Zeitschrift einsehen können, und auf <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Richtlinien für Autor/innen</a> verweisen. Autor/innen müssen sich <a href="{$indexUrl}/{$journalPath}/user/register">registrieren</a>, bevor Sie einen Beitrag bei der Zeitschrift einreichen können. Falls Sie bereits angemeldet sind, einfach <a href="{$indexUrl}/{$journalPath}/login">einloggen</a> und die "Fünf Schritte zur Einreichung" abarbeiten.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Wir ermutigen Forschungsbibliotheken, diese Zeitschrift in die Liste ihrer elektronischen Zeitschriften aufzunehmen. Darüber hinaus bietet das Open Source Veröffentlichungssystem dieser Zeitschrift Bibliotheken die Möglichkeit, Zeitschriften, an denen Mitglieder ihrer Fakultät mitarbeiten, online bereitzustellen. Siehe <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Diese Zeitschrift verwendet das LOCKSS-System, um mit Hilfe der teilnehmenden Bibliotheken ein dezentralen Achivierungssystem zu schaffen, bei dem diese Bibliotheken die Zeitschrift zu Aufbewahrungs- und Wiederherstellungszwecken permanent archivieren. <a href="http://www.lockss.org/">Mehr...</a>]]></message>
-	<message key="default.journalSettings.clockssLicense"><![CDATA[Diese Zeitschrift verwendet das CLOCKSS-System, um mit Hilfe der teilnehmenden Bibliotheken ein dezentralen Achivierungssystem zu schaffen, bei dem diese Bibliotheken die Zeitschrift zu Aufbewahrungs- und Wiederherstellungszwecken permanent archivieren. <a href="http://clockss.org/">Mehr...</a>]]></message>
 
 	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.submissionFee">Beitragseinreichung</message>
@@ -154,30 +155,4 @@ Befolgen Sie bitte den folgenden Ablauf, um Ihr Manuskript elektronisch zu bearb
 	<message key="default.journalSettings.membershipFeeDescription">Durch Zahlung dieser Gebühr werden Sie für ein Jahr Mitglied. Während dieser Zeit haben Sie kostenlosen Zugang zu dieser Zeitschrift.</message>
 	<message key="default.journalSettings.donationFee">Spenden an die Zeitschrift</message>
 	<message key="default.journalSettings.donationFeeDescription">Spenden jeglicher Höhe an diese Zeitschrift werden dankend angenommen. Sie ermöglichen es den Redakteur/innen, weiterhin eine Zeitschrift von höchster Qualität für ihre Leser/innen bereitzustellen.</message>
-
-	<!-- Group defaults -->
-	<message key="default.groups.name.manager">Zeitschriftenverwalter/in</message>
-	<message key="default.groups.plural.manager">Zeitschriftenverwalter/innen</message>
-	<message key="default.groups.abbrev.manager">ZV</message>
-	<message key="default.groups.name.editor">Zeitschriftenredakteur/in</message>
-	<message key="default.groups.plural.editor">Zeitschriftenredakteur/innen</message>
-	<message key="default.groups.abbrev.editor">ZR</message>
-	<message key="default.groups.name.guestEditor">Gastredakteur/in</message>
-	<message key="default.groups.plural.guestEditor">Gastredakteur/innen</message>
-	<message key="default.groups.abbrev.guestEditor">GastR</message>
-	<message key="default.groups.name.sectionEditor">Rubrikredakteur/in</message>
-	<message key="default.groups.plural.sectionEditor">Rubrikredakteur/innen</message>
-	<message key="default.groups.abbrev.sectionEditor">RubR</message>
-	<message key="default.groups.name.subscriptionManager">Abonnementverwalter/in</message>
-	<message key="default.groups.plural.subscriptionManager">Abonnementverwalter/innen</message>
-	<message key="default.groups.abbrev.subscriptionManager">AboV</message>
-
-	<!-- Genre Defaults -->
-	<message key="default.genres.researchInstrument">Forschungsinstrument</message>
-	<message key="default.genres.researchMaterials">Forschungsmaterial</message>
-	<message key="default.genres.researchResults">Forschungsergebnisse</message>
-	<message key="default.genres.transcripts">Transkripte</message>
-	<message key="default.genres.dataAnalysis">Datenanalyse</message>
-	<message key="default.genres.dataSet">Datensatz</message>
-	<message key="default.genres.sourceTexts">Quelltexte</message>
 </locale>
