@@ -83,13 +83,5 @@
 	<message key="admin.categories.name">Name</message>
 	<message key="admin.categories.nameRequired">Ein Kategorienname ist notwendig.</message>
 
-	<message key="admin.copyAccessLogFileTool.usage">Kopiere die übergebenen Apache-Zugriffsdatei(en), woraus die mit dieser Installation zusammenhängenden Einträge ausgewählt werden,
-in das aktuelle Dateiverzeichnis innerhalb des Vorbereitungs-Verzeichnisses des UsageStats-Plug-Ins. Muss unter einem Benutzer mit ausreichenden Rechten für den Lesezugriff auf Apache-Log-Dateien ausgeführt werden.
-
-Dieses Werkzeug wird nur Dateien kopieren, die nicht bereits in den usageStats-Verzeichnissen (Vorbereitung, Bearbeitung, Archiv, zurückgewiesen) sind.
-
-Benutzung: {$scriptName} path/to/apache/log/file.log
-Benutzung (verarbeite alle Dateien eines Verzeichnisses): {$scriptName} path/to/apache/directory
-Benutzung (verarbeite alle Dateien eines Verzeichnisses, die mit der übergebenen Zeichenkette beginnen): {$scriptName} path/to/apache/directory starts_with_string  
-</message>
+	
 </locale>
