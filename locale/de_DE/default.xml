@@ -173,6 +173,7 @@ Befolgen Sie bitte den folgenden Ablauf, um Ihr Manuskript elektronisch zu bearb
 	<message key="default.groups.abbrev.subscriptionManager">AboV</message>
 
 	<!-- Genre Defaults -->
+	<message key="default.genres.article">Artikel</message>
 	<message key="default.genres.researchInstrument">Forschungsinstrument</message>
 	<message key="default.genres.researchMaterials">Forschungsmaterial</message>
 	<message key="default.genres.researchResults">Forschungsergebnisse</message>
