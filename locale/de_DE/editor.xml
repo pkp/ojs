@@ -12,11 +12,7 @@
 -->
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="editor.article.reviewForms">Begutachtungsformulare</message>
-	<message key="editor.article.selectReviewForm">Wählen Sie ein Begutachtungsformular</message>
-	<message key="editor.article.clearReviewForm">Begutachtungsformular zurücksetzen</message>
 	<message key="editor.home">Startseite der Redakteurin/des Redakteurs</message>
-	<message key="editor.article.confirmChangeReviewForm">Achtung: Das Ändern des Begutachtungsformulars wird alle Antworten beeinflussen, die Gutachter/innen bei der Benutzung dieses Formulars eingegeben haben. Sind Sie sicher, dass Sie fortfahren möchten?</message>
 	<message key="editor.reassign">Wieder zuweisen</message>
 	<message key="editor.submissionsAndPublishing">Beiträge und Veröffentlichungen</message>
 	<message key="editor.submissionQueue">Liste der Beiträge</message>
@@ -27,7 +23,6 @@
 	<message key="editor.allEditors">Alle Redakteur/innen</message>
 	<message key="editor.me">Ich</message>
 	<message key="editor.publicIdentificationExists">Die Kennzeichnung '{$publicIdentifier}' existiert bereits für ein anderes Objekt (Ausgabe, Artikel, Fahne oder Zusatzdatei). Bitte wählen Sie eindeutige Kennzeichnungen innerhalb Ihrer Zeitschrift.</message>
-	<message key="editor.publicGalleyIdentificationExists">Die Kennzeichnung '{$publicIdentifier}' existiert bereits für eine andere Fahne dieses Artikels. Bitte wählen Sie eine innerhalb dieses Artikels eindeutige Fahnenkennzeichnung.</message>
 	<message key="editor.submissionArchive.noSubmissions">Kein Beitrag im Archiv</message>
 	<message key="editor.submissionArchive.saveChanges">Änderungen der archivierten Beiträge speichern? Beiträge, die als zu löschend gekennzeichnet sind, werden dadurch engültig aus dem System gelöscht.</message>
 	<message key="editor.submissionArchive.confirmDelete">Sind Sie sicher, dass Sie diesen Beitrag endgültig löschen wollen?</message>
@@ -41,7 +36,6 @@
 	<message key="editor.notifyUsers.allAuthors">Alle veröffentlichten Autor/innen ({$count} Nutzer/innen)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Alle individuellen Abonnent/innen ({$count} Nutzer/innen)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Alle institutionellen Abonnent/innen ({$count} Nutzer/innen)</message>
-	<message key="editor.notifyUsers.allMailingList">Alle E-Mail-Adressen auf der Mailing-Liste einschließen ({$count} E-Mail-Adr)</message>
 	<message key="editor.notifyUsers.inProgress">Benutzer/innen werden benachrichtigt…</message>
 	<message key="editor.usersNotified">Benutzer/innen benachrichtigt</message>
 	<message key="editor.notifyUsers.allUsers">Mitteilung an allen Benutzer/innen der Zeischrift ({$count} Benutzer/innen) senden</message>
@@ -66,7 +60,6 @@
 	<message key="editor.issues.publicIssueIdentifier">Öffentliche Ausgabenkennzeichnung </message>
 	<message key="editor.issues.description">Beschreibung</message>
 	<message key="editor.issues.accessStatus">Zugangsstatus</message>
-	<message key="editor.issues.resetArticlePublicationDates">Publikationsdatum zurücksetzen</message>
 	<message key="editor.issues.accessDate">Datum für freien Zugang</message>
 	<message key="editor.issues.enableOpenAccessDate">Verzögerten freien Zugang aktivieren</message>
 	<message key="editor.issues.coverPage">Titelbild</message>
@@ -118,9 +111,7 @@
 	<message key="editor.issues.backToIssueGalleys">Zurück zu den Ausgabenfahnen</message>
 	<message key="editor.issues.viewingGalley">Ausgabenfahne ansehen</message>
 	<message key="editor.issues.confirmDeleteGalley">Sind Sie sicher, dass Sie diese Ausgabenfahne löschen möchten?</message>
-	<message key="editor.navigation.issues">Ausgaben</message>
 	<message key="editor.navigation.futureIssues">Zukünftige Ausgaben</message>
-	<message key="editor.navigation.createIssue">Ausgabe erstellen</message>
 	<message key="editor.navigation.issueArchive">Frühere Ausgaben</message>
 	<message key="editor.article.designateReviewVersion">Die ursprüngliche Datei zur Begutachtungsversion machen</message>
 	<message key="editor.article.uploadReviewVersion">Eine überarbeitete Begutachtungsversion hochladen</message>

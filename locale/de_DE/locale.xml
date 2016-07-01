@@ -28,7 +28,6 @@
 	<!-- review froms start -->
 
 	<!-- common -->
-	<message key="common.journal">Zeitschrift</message>
 
 	<!-- Journal Management -->
 
@@ -37,30 +36,8 @@
 	<message key="navigation.categories.browse">Durchblättern</message>
 
 	<!-- peer review -->
-	<message key="submission.reviewForm">Begutachtungsformular</message>
-	<message key="submission.reviewFormResponse">Antwort zum Begutachtungsformular</message>
 
 	<!-- Permissions -->
-	<message key="submission.permissions">Rechte</message>
-	<message key="submission.license">Lizenz</message>
-	<message key="submission.copyright">Copyright</message>
-	<message key="submission.copyrightHolder">Copyright-Inhaber/in</message>
-	<message key="submission.copyrightYear">Copyright-Jahr</message>
-	<message key="submission.copyrightStatement">Copyright (c) {$copyrightYear} {$copyrightHolder}</message>
-	<message key="submission.licenseURLValid">Bitte geben Sie einen gültigen URL (außerhalb der Zeitschrift) an (inklusive http://).</message>
-	<message key="submission.licenseURL">Lizenz-URL</message>
-	<message key="submission.license.cc.by-nc-nd4">CC Namensnennung - Nicht kommerziell - Keine Bearbeitungen 4.0</message>
-	<message key="submission.license.cc.by-nc4">CC Namensnennung - Nicht kommerziell 4.0</message>
-	<message key="submission.license.cc.by-nc-sa4">CC Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0</message>
-	<message key="submission.license.cc.by-nd4">CC Namensnennung - Keine Bearbeitungen 4.0</message>
-	<message key="submission.license.cc.by4">CC Namensnennung 4.0</message>
-	<message key="submission.license.cc.by-sa4">CC Namensnennung - Weitergabe unter gleichen Bedingungen 4.0</message>
-	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Dieses Werk steht unter der <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Lizenz Creative Commons Namensnennung - Nicht-kommerziell - Keine Bearbeitungen 4.0 International</a>.]]></message>
-	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Dieses Werk steht unter der <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Lizenz Creative Commons Namensnennung - Nicht-kommerziell 4.0 International</a>.]]></message>
-	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Dieses Werk steht unter der <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Lizenz Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 International</a>.]]></message>
-	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />Dieses Werk steht unter der <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Lizenz Creative Commons Namensnennung - Keine Bearbeitungen 4.0 International</a>.]]></message>
-	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Dieses Werk steht unter der <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Lizenz Creative Commons Namensnennung 4.0 International</a>.]]></message>
-	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Dieses Werk steht unter der <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Lizenz Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International</a>.]]></message>
 
 	<message key="reviewer.article.enterReviewForm">Klicken Sie auf das Symbol, um das Begutachtungsformular auszufüllen.</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Bitte füllen Sie die benötigten Felder aus.</message>
@@ -78,7 +55,6 @@
 	<message key="common.confirmComplete">Sind Sie sicher, dass Sie diese Aufgabe als beendet markieren wollen? Später können möglicherweise keine Änderungen mehr vorgenommen werden.</message>
 	<message key="common.payment">Zahlung</message>
 	<message key="common.payments">Zahlungen</message>
-	<message key="common.pageHeader.altText">Kopfzeile</message>
 	<message key="common.homePageHeader.altText">Kopfzeile der Startseite</message>
 	<message key="common.journalHomepageImage.altText">Bild auf der Startseite der Zeitschrift</message>
 
@@ -92,7 +68,6 @@
 
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Navigationshilfe</message>
-	<message key="navigation.archives">Archiv</message>
 	<message key="navigation.current">Aktuelle Ausgabe</message>
 	<message key="navigation.otherJournals">Andere Zeitschriften</message>
 	<message key="navigation.browseByIssue">Nach Ausgabe</message>
@@ -145,12 +120,8 @@
 	<message key="article.suppFiles">Zusatzdatei(en)</message>
 	<message key="article.suppFilesAbbrev">Zus. Dateien</message>
 	<message key="article.discipline">Akademisches Fachgebiet und Untergebiete</message>
-	<message key="article.subjectClassification">Schlagwortsystematik</message>
 	<message key="article.subject">Schlagworte</message>
 	<message key="article.coverage">Bereich</message>
-	<message key="article.coverageGeo">Geografisch-räumlicher Bereich</message>
-	<message key="article.coverageChron">(Historischer) Zeitraum</message>
-	<message key="article.coverageSample">Forschungssample</message>
 	<message key="article.type">Forschungsansatz, -methode oder -verfahren</message>
 	<message key="article.language">Sprache</message>
 	<message key="article.sectionEditor">Rubrikredakteur/in</message>
@@ -233,27 +204,11 @@
 	<message key="user.noRoles.submitArticleRegClosed">Einen Vorschlag einreichen: Registrierung als Autor/in ist momentan ausgeschaltet.</message>
 	<message key="user.noRoles.regReviewer">Als Gutachter/in registrieren</message>
 	<message key="user.noRoles.regReviewerClosed">Als Gutachter/in registrieren: Die Registrierung als Gutachter/in ist momentan ausgeschaltet..</message>
-<message key="user.orcid">ORCID-iD</message>
-	<message key="user.orcid.description"><![CDATA[ORCID-iDs können nur durch <a href="http://orcid.org/" target="_blank">die ORCID-Registrierung</a> vergeben werden. Sie müssen deren Vorgabe zum Schreiben von ORCID-iDs beachten und den vollen URI (eg. <em>http://orcid.org/0000-0002-1825-0097</em>) verwenden.]]></message>
-	<message key="user.profile.form.orcidInvalid">Die angegebene ORCID-iD ist ungültig.</message>
-	<message key="user.profile.implicitAuthChangePasswordInstructions">Wenn Sie sich via Shibboleth eingeloggt haben, befolgen Sie bitte die Vorgaben Ihrer Organisation, um Ihr Passwort dort zu ändern. Nutzer/innen, die direkt auf diesem OJS-System angemeldet sind, folgen bitte den untern aufgeführten Schritten.</message>
-
 	<!-- Funktionen -->
 	<message key="user.role.manager">Zeitschriftenverwalter/in</message>
-	<message key="user.role.editor">Redakteur/in</message>
 	<message key="user.role.sectionEditor">Rubrikredakteur/in</message>
-	<message key="user.role.layoutEditor">Layouter/in</message>
-	<message key="user.role.copyeditor">Lektor/in</message>
-	<message key="user.role.proofreader">Korrekturlektor/in</message>
-	<message key="user.role.author">Autor/in</message>
 	<message key="user.role.subscriptionManager">Abonnementverwalter/in</message>
 	<message key="user.role.managers">Zeitschriftenverwalter/innen</message>
-	<message key="user.role.editors">Redakteur/innen</message>
-	<message key="user.role.sectionEditors">Rubrikredakteur/innen</message>
-	<message key="user.role.layoutEditors">Layouter/innen</message>
-	<message key="user.role.copyeditors">Lektor/innen</message>
-	<message key="user.role.proofreaders">Korrekturlektor/innen</message>
-	<message key="user.role.authors">Autor/innen</message>
 	<message key="user.role.subscriptionManagers">Abonnementverwalter/innen</message>
 
 	<!-- Allgemeine Begriffe: Ausgabe -->
@@ -272,7 +227,6 @@
 	<message key="issue.fullIssue">Komplette Ausgabe</message>
 	<message key="issue.nonpdf.title">Ausgaben-Download</message>
 	<message key="issue.viewIssue">Ausgabe ansehen</message>
-	<message key="issue.viewIssueDescription">Komplette Ausgabe ansehen oder herunterladen</message>
 
 	<!-- Allgemeine Begriffe: Abonnementarten -->
 	<message key="subscriptionTypes.currency">Währung</message>
@@ -305,7 +259,6 @@
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">Neuzugang</message>
-	<message key="submission.event.general.articleSubmitted">Artikel eingegangen</message>
 	<message key="submission.event.general.issueScheduled">Beitrag an die Warteliste für die Ausgabenplanung geschickt</message>
 	<message key="submission.event.general.issueAssigned">Beitrag einer Ausgabe zugewiesen</message>
 	<message key="submission.event.general.articlePublished">Artikel veröffentlicht</message>
@@ -409,10 +362,6 @@ Bitte beachten Sie, dass die OAI-Schnittstelle für diese Website in der OJS-Sys
 	<message key="plugins.categories.generic.description">Generische Plugins werden zur Erweiterung von Open Journal Systems in einer Vielzahl von Wegen genutzt, die nicht durch die anderen Plug-In-Kategorien bereitgestellt werden.</message>
 	<message key="plugins.categories.implicitAuth">Plug-Ins zur impliziten Authentifizierung</message>
 	<message key="plugins.categories.implicitAuth.description">Plug-Ins zur impliziten Authentifizierung stellen Mittel zur Verfügung, um Nutzer/innen anhand ihrer HTTP-Header zu authentifizieren.</message>
-	<message key="plugins.categories.oaiMetadataFormats">Plug-In für OAI-Metadaten-Format</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Diese Format-Plug-Ins beziehen sich auf Metadaten für die OAI-Kommunikation</message>
-	<message key="plugins.categories.pubIds">Plug-Ins für öffentliche Kennungen</message>
-	<message key="plugins.categories.pubIds.description">Diese Plug-Ins liefern Unterstützung für öffentliche Kennungen (public identifiers).</message>
 
 	<!-- Dateinavigator -->
 
@@ -427,7 +376,6 @@ Bitte beachten Sie, dass die OAI-Schnittstelle für diese Website in der OJS-Sys
 	Gutachter/innen die Bitte um Begutachtung, indem sie den eingereichten Beitrag an die E-Mail anhängen. Gutachter/innen mailen den Redakteur/innen ihr Einverständnis (oder einen abschlägigen Bescheid), außerdem das Gutachten und ihre Empfehlung. Redakteur/innen können das Einverständnis der Gutachter/innen (oder deren abschlägigen Bescheid) sowie das Gutachten und die Empfehlung auf der "In Begutachtung"-Seite des Beitrags einsehen, um den Begutachtungsprozess zu verfolgen.</message>
 
 
-	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems unterstützt das System <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) um sichere und dauerhafte Archivierung Ihrer Zeitschrift zu gewährleisten. Ihnen stehen mehrere Möglichkeiten zur Verfügung, Ihre Zeitschrift in ein LOCKSS-Netzwerk aufzunehmen:]]></message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[<strong>Andere LOCKSS-Netzwerke</strong>
 <br /><br />
@@ -454,7 +402,6 @@ Titel des Klassifikationssystems]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Damit der Inhalt dieser Zeitschrift in einem weltweiten System von Forschungsdatenbanken indiziert wird, lesen Sie bitte die <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">Schritte, um Daten zu liefern</a> und registrieren Sie Ihre Zeitschrift bei der offiziellen <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open-Archives-Registrierung</a>. Zum Registrieren benötigen Sie die Basis-URL für Ihr Repositorium: <span class="highlight">{$oaiUrl}</span>. Danach können Sie Ihre Zeitschrift bei der <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> und bei <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a> registrieren.
 <br /><br />
 Beachten Sie bitte, dass Ihre Zeitschrift bereits automatisch indiziert wird, wenn Ihr/e Website-Administrator/in die gesamte Installation bereits bei diesen Diensten registriert hat. In diesem Fall müssen Sie Ihre Zeitschrift nicht gesondert registrieren.]]></message>
-	<message key="manager.setup.citations">Den Zitationsauszeichnungsassistenten aktivieren.</message>
 
 	<!-- 4. Einrichtungsschritt -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Schritte: Liste der eingegangenen Beiträge &gt; Begutachtung der Beiträge &gt; Redaktion der Beiträge &gt; Inhaltsverzeichnis<br /><br />
@@ -727,19 +674,12 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="submission.comments.saveAndEmailEditor">Speichern und E-Mail an Redakteur/in senden</message>
 
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Noch kein/e Benutzer/in? Registrieren Sie sich.</message>
 	<message key="user.login.resetPasswordInstructions"><![CDATA[Aus Sicherheitsgründen schickt das System den registrierten Benutzer/innen ein neues Passwort statt des aktuellen Passworts per E-Mail. <br /><br />
 Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. Eine Bestätigung geht an diese E-Mail-Adresse.]]></message>
-	<message key="user.login.implicitAuthLogin">Via Shibboleth einloggen</message>
 
 	<!-- Registrierung -->
-	<message key="user.register.emailValidation">Validierung der E-Mail-Adresse erforderlich</message>
-	<message key="user.register.emailValidationDescription">Sie müssen Ihre E-Mail-Adresse bestätigen, bevor Sie fortfahren können. Bitte prüfen Sie Ihren E-Mail-Eingang für weitere Hinweise. Nachdem Sie Ihren Account validiert haben, können Sie sich einloggen..</message>
-	<message key="user.register.selectJournal">Wählen Sie die Zeitschrift aus, für die Sie sich registrieren wollen</message>
 	<message key="user.register.noJournals">Auf dieser Seite gibt es keine Zeitschriften, bei denen Sie sich eintragen könnten.</message>
 	<message key="user.register.privacyStatement">Schutz persönlicher Daten</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Hier klicken</a>, wenn Sie bereits für diese oder eine andere Zeitschrift auf dieser Site registriert sind.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Hier klicken</a>, wenn Sie sich <strong>noch nicht</strong> für diese oder eine andere Zeitschrift auf dieser Site registriert haben.]]></message>
 	<message key="user.register.loginToRegister">Tragen Sie bitte Ihren bestehenden Benutzer/innen-Namen und Ihr aktuelles Passwort ein, um sich für diese Zeitschrift zu registrieren.</message>
 	<message key="user.register.registrationDisabled">Gegenwärtig nimmt diese Zeitschrift keine Registrierung von Benutzer/innen entgegen.</message>
 	<message key="user.register.form.passwordLengthTooShort">Das eingetragene Passwort ist zu kurz.</message>
@@ -749,7 +689,6 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<message key="user.register.reviewerDescriptionNoInterests">Sie sind bereit, bei der Zeitschrift eingereichte Beiträge im Peer Review zu begutachten.</message>
 	<message key="user.register.reviewerDescription">Sie sind bereit, bei der Website eingereichte Beiträge im Rahmen des Peer Review zu begutachten.</message>
 	<message key="user.register.reviewerInterests">Bitte geben Sie Begutachtungsinteressen an (Wissenschaftsbereiche und Forschungsmethoden):</message>
-	<message key="user.register.implicitAuth">Einloggen via Shibboleth mit einem existierenden Account bei einer Organisation</message>
 
 	<!-- Abonnements -->
 	<message key="user.subscriptions.mySubscriptions">Meine Abonnements</message>
@@ -813,8 +752,6 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 
 	<!-- Einschubseite für PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.download">Diese PDF-Datei herunterladen</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Die PDF-Datei, die Sie ausgewählt haben, sollte hier geöffnet werden, wenn für Ihren Webbrowser ein PDF-Lese-Plug-In installiert ist (zum Beispiel eine aktuelle Version des <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Falls Sie mehr Informationen über das Drucken, Speichern und Arbeiten von und mit PDF-Dateien erhalten möchten, bietet Highwire Press hilfreiche <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p> <p>Alternativ können Sie die PDF-Datei direkt auf Ihren Computer laden, von wo aus sie in einem PDF-Leseprogramm geöffnet werden kann. Um die PDF-Datei herunterzuladen, klicken Sie auf den Download-Link unten.</p>]]></message>
 
 
 	<!-- Einschubseite für Fahnen, die weder PDF noch HTML sind -->
@@ -840,8 +777,6 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 
 	<!-- Über uns -->
 	<message key="about.statistics">Statistiken</message>
-	<message key="about.journalContact">Kontakt zur Zeitschrift</message>
-	<message key="about.aboutTheJournal">Über uns</message>
 	<message key="about.history">Zeitschriften-Geschichte</message>
 	<message key="about.editorialTeam">Redaktion</message>
 	<message key="about.editorialTeam.biography">Biografie</message>
@@ -849,13 +784,8 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<message key="about.focusAndScope">Konzept</message>
 	<message key="about.sectionPolicies">Rubriken-Richtlinien</message>
 	<message key="about.submissions">Beitragseinreichung</message>
-	<message key="about.sponsors">Finanzielle Unterstützung</message>
-	<message key="about.contributors">Weitere Unterstützung</message>
 	<message key="about.onlineSubmissions">Elektronische Beitragseinreichung</message>
-	<message key="about.onlineSubmissions.haveAccount">Haben Sie bereits einen Benutzer/innen-Namen und ein Passwort für {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Zum Login</message>
-	<message key="about.onlineSubmissions.needAccount">Benötigen Sie einen Benutzer/innen-Namen und ein Passwort?</message>
-	<message key="about.onlineSubmissions.registration">Zur Registrierung</message>
 	<message key="about.onlineSubmissions.registrationRequired">Um Beiträge online einzureichen oder den aktuellen Status eines eingereichten Beitrags zu überprüfen, müssen Sie registriert und eingeloggt sein.</message>
 	<message key="about.authorGuidelines">Richtlinien für Autor/innen</message>
 	<message key="about.submissionPreparationChecklist">Checkliste für Beitragseinreichungen</message>
@@ -881,12 +811,7 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<message key="about.subscriptionTypes.duration">Dauer</message>
 	<message key="about.subscriptionTypes.cost">Kosten</message>
 	<message key="about.availableSubscriptionTypes">Typen von Abonnements</message>
-	<message key="about.purchaseIssue">Kauf einer Ausgabe</message>
-	<message key="about.purchaseArticle">Kauf eines Artikels</message>
-	<message key="about.purchaseIssueDescription">Leserinnen und Leser ohne Abonnement können einzelne Ausgaben erwerben. Die folgenden Zahlungsmöglichkeiten und Kosten können gewählt werden.</message>
-	<message key="about.purchaseArticleDescription">Leserinnen und Leser ohne Abonnement können einzelne Artikel erwerben. Die folgenden Zahlungsmöglichkeiten und Kosten können gewählt werden.</message>
 	<message key="about.memberships">Mitgliedschaften</message>
-	<message key="about.journalSponsorship">Unterstützung</message>
 	<message key="about.aboutThisPublishingSystem">Über dieses Publikationssystem</message>
 	<message key="about.aboutThisPublishingSystem.altText">Redaktions- und Veröffentlichungsprozess mit OJS</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Diese Zeitschrift verwendet Open Journal Systems {$ojsVersion}, eine Open-Source-Zeitschriften- und Publikationsmanagement-Software. Sie wird unter der GNU General Public License entwickelt, dokumentiert und kostenlos vertrieben durch das <a href="http://pkp.sfu.ca/">Public Knowledge Project</a>.]]></message>
@@ -1059,7 +984,6 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 	<!-- Protokolle - Beiträge -->
 	<message key="log.author.submitted">{$authorName} hat einen neuen Beitrag eingereicht, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} hat den Artikel bearbeitet {$articleId}. Die neue Datei-ID ist {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">Der Beitrag {$articleId} wurde {$reviewerName} zur Begutachtung im Durchgang {$round} zugewiesen.</message>
 	<message key="log.review.reviewerUnassigned">Der Beitrag {$articleId} wird nicht länger von {$reviewerName} im Durchgang {$round} begutachtet.</message>
 	<message key="log.review.reviewInitiated">Durchgang {$round} der Begutachtung von Beitrag {$articleId} durch {$reviewerName} hat begonnen.</message>
 	<message key="log.review.reviewReinitiated">Durchgang {$round} der Begutachtung von Beitrag {$articleId} durch {$reviewerName} wurde erneut begonnen.</message>
@@ -1096,7 +1020,6 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 	<message key="log.editor.archived">Beitrag {$articleId} wurde archiviert.</message>
 	<message key="log.editor.restored">Beitrag {$articleId} wurde wieder auf die Liste gesetzt.</message>
 	<message key="log.editor.editorAssigned">Beitrag {$articleId} wurde Redakteur/in {$editorName} zugewiesen.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} hat den Redaktionsprozess für Beitrag {$articleId} beschleunigt.</message>
 
 	<message key="log.proofread.assign">{$assignerName} hat Beitrag {$articleId} {$proofreaderName} zum Korrekturlektorat zugewiesen.</message>
 	<message key="log.proofread.complete">{$proofreaderName} hat Beitrag {$articleId} auf den Zeitplan gesetzt.</message>
@@ -1161,22 +1084,16 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 	<message key="notification.notificationsPublicDescription"><![CDATA[Auf dieser Seite finden Sie Updates wie neue Ausgaben oder Ankündigungen. Sie können diese Benachrichtigungen als RSS-Feed abonnieren (indem Sie auf die Abbildungen rechts klicken) oder <a href="{$emailUrl}">via E-Mail.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">Ein neuer Beitrag, "{$title}", wurde eingereicht.</message>
-	<message key="notification.type.copyeditComment">Ein Lektor/eine Lektorin hat einen Kommentar zu "{$title}" hinterlassen.</message>
 	<message key="notification.type.editing">Redaktionelle Ereignisse</message>
 	<message key="notification.type.editorDecisionComment">Ein Kommentar zur Entscheidung des Redakteur/der Redaktuerin über "{$title}" wurde hinterlassen.</message>
 	<message key="notification.type.galleyModified">Für "{$title}" wurde eine Korrekturfahne geändert.</message>
 	<message key="notification.type.issuePublished">Eine Ausgabe wurde veröffentlicht.</message>
-	<message key="notification.type.layoutComment">Zum Layout von "{$title}" wurde ein Kommentar hinterlassen.</message>
-	<message key="notification.type.metadataModified">Die Metadaten von "{$title}" wurden verändert.</message>
 	<message key="notification.type.newAnnouncement">Eine neue Ankündigung wurde erstellt.</message>
-	<message key="notification.type.proofreadComment">Ein/e Korrekturlektor/in hat einen Kommentar zu "{$title}" hinterlassen.</message>
-	<message key="notification.type.reviewerComment">Ein/e Gutachter/in hat "{$title}" kommentiert.</message>
 	<message key="notification.type.reviewerFormComment">Für "{$title}" wurde ein Begutachtungsformular eingereicht.</message>
 	<message key="notification.type.reviewing">Begutachtungsereignisse</message>
 	<message key="notification.type.site">Site-Ereignisse</message>
 	<message key="notification.type.submissionComment">Ein/e Redakteur/in hat "{$title}" kommentiert.</message>
 	<message key="notification.type.submissions">Einreichungsereignisse</message>
-	<message key="notification.type.suppFileModified">Die Zusatzdatei(en) zu "{$title}" wurden verändert.</message>
 	<message key="notification.type.userComment">Ein/e Leser/in hat "{$title}" kommentiert.</message>
 
 	<!--
@@ -1186,14 +1103,11 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 	-->
 	<!-- Authorisierung -->
 	<message key="user.authorization.copyeditorAssignmentMissing">Zugriff verweigert! Sie sind nicht als Lektor/in für diesen Artikel eingeteilt worden.</message>
-	<message key="user.authorization.noJournal">Keine Zeitschrift im Kontext!</message>
 	<message key="user.authorization.sectionAssignment">Sie versuchen auf einen Artikel zuzugreifen, der nicht Teil Ihrer Rubrik ist.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Ungültige Lektor/innenfassung oder keine Lektor/innenfassung angefordert!</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">Ungültige Rubrikredakteur/innenfassung oder keine Rubrikredakteur/innenfassung angefordert!</message>
 
 	<!-- Symbole: Standard "alt" Text -->
 
 	<!-- Meldungen: Fehlerbehebung -->
 	<message key="debug.notes.currencyListLoad">Währungsliste "{$filename}" aus XML geladen</message>
-	<message key="debug.notes.helpMappingLoad">Auf der Suche nach {$id} wurde die XML-Hilfedatei {$filename} erneut geladen.</message>
 </locale>

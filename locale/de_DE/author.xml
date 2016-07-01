@@ -53,7 +53,6 @@
 	<message key="author.submit.submissionLocale">Beitragssprache</message>
 	<message key="author.submit.submissionLocaleDescription">Diese Zeitschrift nimmt Beiträge in verschiedenen Sprachen entgegen. Wählen Sie die primäre Sprache des Beitrags aus dem Auswahlmenü unten.</message>
 	<message key="author.submit.submissionChecklist">Checkliste für Beiträge</message>
-	<message key="submission.submit.submissionChecklistDescription">Stellen Sie sicher, dass der Beitrag in einer Form vorliegt, in der er von der Zeitschrift in Betracht gezogen werden kann, indem Sie die folgende Liste abhaken. (Kommentare für die Redaktion können weiter unten angefügt werden.)</message>
 	<message key="author.submit.verifyChecklist">Stellen Sie sicher, dass alle Punkte der Checkliste erfüllt sind, bevor Sie fortfahren. </message>
 	<message key="author.submit.copyrightNoticeAgree">Die Autor/innen stimmen den Bestimmungen dieser Copyright-Regelungen zu, die für diesen Beitrag im Falle einer Veröffentlichung Anwendung finden. (Kommentare für die Redaktion können weiter unten angefügt werden.)</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Sie müssen den Copyright-Regelungen zustimmen, bevor Sie fortfahren.</message>
@@ -68,10 +67,7 @@
 	<message key="author.submit.addAuthor">Autor/in hinzufügen</message>
 	<message key="author.submit.deleteAuthor">Autor/in löschen</message>
 	<message key="author.submit.submissionIndexingDescription">Stellen Sie Begriffe für die Indizierung des Beitrags zusammen; trennen Sie diese Begriffe durch ein Semikolon (Begriff1; Begriff2; Begriff3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Mitwirkung und Unterstützung</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Benennen Sie Personen, Organisationen oder Einrichtungen, die zu der Ihrer Einreichung zugrundeliegenden Arbeit beigetragen haben oder die die zugrundeliegende Arbeit finanziert oder unterstützt haben. Trennen Sie mit einem Semikolon (z.B. John Doe, Metro University; Master University, Department of Computer Science).</message>
 	<message key="author.submit.coverageInstructions">Bezieht sich auf den räumlich-geographischen sowie den zeitlichen Bereich und auf die Eigenschaften des Forschungsgegenstandes.</message>
-	<message key="author.submit.subjectClassInstructions">Benutzen Sie die verlinkte Schlagwortsystematik zur Auswahl von Klassifizierungsbegriffen und, falls zutreffend, -nummern.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[deutsch=de; englisch=en; französisch=fr; spanisch=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">zusätzliche Kodierungen</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Es muss mindestens ein/e Autor/in angegeben werden.</message>
 	<message key="author.submit.form.authorRequiredFields">Vorname, Name und E-Mail-Adresse für jede/n Autor/in erforderlich</message>
@@ -104,7 +100,6 @@
 	<message key="author.submit.suppFile.dataSet">Datensatz</message>
 	<message key="author.submit.suppFile.sourceText">Quellentext</message>
 	<message key="author.submit.suppFile.briefDescription">Kurze Beschreibung</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Weitere Mitwirkende oder Unterstützer/innen </message>
 	<message key="author.submit.suppFile.availableToPeers">Datei (ohne Metadaten) den Gutachter/innen übermitteln, da dies die Anonymität der Begutachtung nicht beeinträchtigen wird.</message>
 	<message key="author.submit.suppFile.publisherDescription">Nur bei offiziell veröffentlichtem Material angeben</message>
 	<message key="author.submit.suppFile.dateDescription">Datum der Datenerhebung oder der Erstellung des Forschungsinstruments</message>
@@ -121,7 +116,6 @@
 	<message key="author.submit.filesSummary">Zusammenfassung</message>
 	<message key="author.submit.finishSubmission">Einreichung abschließen</message>
 	<message key="author.submit.submissionComplete">Die Einreichung ist abgeschlossen. Vielen Dank für Ihr Interesse an einer Veröffentlichung bei {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Falls der Beitrag in einer Form vorliegt, in der er ohne weitere Begutachtung, Bearbeitung oder Layoutänderungen veröffentlicht werden kann, kann er direkt in die letzte Phase der Redaktionsliste eingefügt werden: <a href="{$expediteUrl}" class="action">Hier klicken</a>. (Achtung: Nur Redakteur/innen der Zeitschrift haben diese Möglichkeit für ihre eigenen Beiträge.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Autor/innenversion hochladen</message>
 	<message key="author.article.copyeditedFile">Lektorierte Datei</message>
 	<message key="author.article.authorRevisedFile">Autor/innendatei</message>
