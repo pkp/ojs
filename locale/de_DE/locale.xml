@@ -218,7 +218,7 @@
 	<message key="journal.currentIssue">Aktuelle Ausgabe</message>
 	<message key="journal.journals">Zeitschriften</message>
 	<message key="journal.path">Zugangspfad</message>
-	<message key="journal.journal">Zeitschrift</message>
+	<message key="context.context">Zeitschrift</message>
 	<message key="journal.issn">ISSN</message>
 
 	<!-- Benutzer/in -->
