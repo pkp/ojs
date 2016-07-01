@@ -523,7 +523,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="layoutEditor.activeEditorialAssignments">Bestehende Redaktionsaufgaben</message>
 	<message key="layoutEditor.completedEditorialAssignments">Beendete Redaktionsaufgaben</message>
 	<message key="layoutEditor.noActiveAssignments">Keine redaktionellen Aufgaben zugewiesen</message>
-	<message key="layoutEditor.layoutEditingAssignments">Layoutaufgaben </message>
+	<message key="layoutEditor.layoutEditingAssignments">Layoutaufgaben</message>
 	<message key="layoutEditor.galley.uploadGalleyFormat">Fahnenformat hochladen</message>
 	<message key="layoutEditor.galley.replaceGalley">Datei ersetzen</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Zusatzdatei hochladen</message>
@@ -562,7 +562,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="reviewer.article.decision.decline">Beitrag ablehnen</message>
 	<message key="reviewer.article.decision.seeComments">Siehe Kommentare</message>
 	<message key="reviewer.article.schedule">Zeitplan</message>
-	<message key="reviewer.article.submissionToBeReviewed">Beitrag zur Begutachtung </message>
+	<message key="reviewer.article.submissionToBeReviewed">Beitrag zur Begutachtung</message>
 	<message key="reviewer.article.reviewSchedule">Zeitplan der Begutachtung</message>
 	<message key="reviewer.article.reviewSteps">Begutachtungsschritte</message>
 	<message key="reviewer.article.reviewerGuidelines">Richtlinien für die Gutachter/innen</message>
@@ -637,7 +637,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="submission.layout.assignLayoutEditor">Beitrag einer Layouterin/einem Layouter zuweisen</message>
 	<message key="submission.layout.replaceLayoutEditor">Layouter/in ersetzen</message>
 	<message key="submission.layout.layoutComments">Layout - Kommentare</message>
-	<message key="submission.layout.instructions">Layoutrichtlinien </message>
+	<message key="submission.layout.instructions">Layoutrichtlinien</message>
 	<message key="submission.layout.referenceLinking">Verlinkung von Literaturververweisen</message>
 
 
@@ -684,7 +684,7 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<message key="user.register.registrationDisabled">Gegenwärtig nimmt diese Zeitschrift keine Registrierung von Benutzer/innen entgegen.</message>
 	<message key="user.register.form.passwordLengthTooShort">Das eingetragene Passwort ist zu kurz.</message>
 	<message key="user.register.readerDescription">Sie werden per E-Mail über neue Ausgaben der Zeitschrift informiert.</message>
-	<message key="user.register.openAccessNotificationDescription">Sie werden per E-Mail benachrichtigt, wenn eine Ausgabe der Zeitschrift frei zugänglich gemacht wird. </message>
+	<message key="user.register.openAccessNotificationDescription">Sie werden per E-Mail benachrichtigt, wenn eine Ausgabe der Zeitschrift frei zugänglich gemacht wird.</message>
 	<message key="user.register.authorDescription">Sie können Beiträge bei der Zeitschrift einreichen</message>
 	<message key="user.register.reviewerDescriptionNoInterests">Sie sind bereit, bei der Zeitschrift eingereichte Beiträge im Peer Review zu begutachten.</message>
 	<message key="user.register.reviewerDescription">Sie sind bereit, bei der Website eingereichte Beiträge im Rahmen des Peer Review zu begutachten.</message>
