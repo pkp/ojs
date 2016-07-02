@@ -427,7 +427,7 @@ Nota che l'interfaccia OAI può essere disabilitata per questo sito modificando 
 
 	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems supporta il sistema <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) per assicurare la conservazione a lungo termine della rivista. Ci sono diverse modalità per includere la rivista in una rete LOCKSS:]]></message>
 
-	<message key="manager.setup.lockssDescription"><![CDATA[<strong>Altre reti LOCKSS</strong>
+	<message key="manager.setup.lockssDescription"><![CDATA[<strong>Other LOCKSS Networks</strong>
 <br /><br />
 Se ritieni di aver accesso a una o pià reti LOCKSS elencate <a href="http://www.lockss.org/community/networks/" target="_blank">qui</a>, contatta l'amministratore della rete di tuo interesse per richiedere l'inclusione. Il completamento del modulo qui sotto permetterà l'inclusione della rivista nella rete. <em>Non verrà conservato alcun contenuto prima che tu avverta il gestore della rete di tuo interesse</em>.]]></message>
 	<!-- Setup Step 3 -->
@@ -904,9 +904,9 @@ Attive indica quante revisioni sono attualmente in corso.]]></message>
 	<message key="gifts.thankYou">Grazie</message>
 	<message key="gifts.thankYouMessage">L'acquisto del tuo dono si è concluso. Riceverai una copia del messaggio email inviato al destinatario del dono non appena verrà completato il pagamento.</message>
 	<message key="gifts.purchaseGiftIndividualSubscription">Regala un abbonamento</message>
-	<message key="gifts.subscriptionFormIntroduction">Compila il modulo sottostante. Le informazioni di contatto fornite, insieme alle note sul dono, verranno utilizzate per informare il destinatario via posta elettronica del nuovo abbonamento in dono (anche tu riceverai copia di questa email).</message>
+	<message key="gifts.subscriptionFormIntroduction">Compila il modulo sottostante. The provided contact information, along with your gift note, will be used to email the recipient and inform them of their new gift subscription (you will also receive a copy of this email).</message>
 	<message key="gifts.details">Dettagli del dono</message>
-	<message key="gifts.detailsDescription">Seleziona il dono qui sotto e includi un messaggio personalizzato che verrà inviato per posta elettronica al destinatario (anche tu riceverai copia di questa email).</message>
+	<message key="gifts.detailsDescription">Please select the gift below and include a personalized message that will be emailed to the recipient (you will receive a copy of this email).</message>
 	<message key="gifts.gift">Dono</message>
 	<message key="gifts.noteTitle">Titolo</message>
 	<message key="gifts.note">Note</message>
