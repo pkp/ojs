@@ -4,7 +4,7 @@
 <!--
   * locale/sv_SE/manager.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2000-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="sv_SE" full_name = "Swedish">
+<locale name="sv_SE" full_name="Svenska">
 	<message key="manager.emails.confirmResetAll">Är du säker på att du vill återställa alla tidskriftens E-postmallar till ursprungligt utseende? Egna inställningar kommer att raderas</message>
 	<message key="manager.files.note">Observera: Filutforskaren är en funktion som gör det möjligt att ändra och visa en tidskrifts katalog och filer direkt.</message>
 	<message key="manager.groups">Redaktion</message>
@@ -26,7 +26,7 @@
 	<message key="manager.groups.noneCreated">Inget Redaktionslag har skapats.</message>
 	<message key="manager.journalManagement">Hantera tidskrift</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Ladda upp lokal-specifika standard-inställningar</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS kan översättas till flera olika språk och fungerar dessutom som ett flerspråkigt system där användaren kan växla mellan språk på de olika sidorna.<br /><br/> Om ett språk som stöds av OJS inte finns listad nedan, be huvudadministratören att installera språket. För instruktioner om hur man lägger till fler språk, vänligen se OJS-dokumentationen.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS kan översättas till flera olika språk och fungerar dessutom som ett flerspråkigt system där användaren kan växla mellan språk på de olika sidorna.<br /><br /> Om ett språk som stöds av OJS inte finns listad nedan, be huvudadministratören att installera språket. För instruktioner om hur man lägger till fler språk, vänligen se OJS-dokumentationen.]]></message>
 	<message key="manager.languages.noneAvailable">Tyvärr, det finns inga ytterligare språk tillgängliga. Kontakta huvudadministratören om du vill lägga till språk i den här tidskriften.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Detta blir standardspråket för tidskriftens hemsida.</message>
 	<message key="manager.managementPages">Administrationssidor</message>
@@ -85,6 +85,17 @@
 	<message key="manager.people.roleEnrollment">{$roll} Lägg till</message>
 	<message key="manager.people.syncUserDescription">Synkroniserad inläggning innebär att samtliga användare inom en specifik tidskrift kan tilldelas samma roll/funktion. Den här funktionen möjliggör att en vald grupp av användare/funktioner (ex., Granskare) kan synkroniseras mellan olika tidskrifter.</message>
 	<message key="manager.plugins.description">På den här sidan kan tidskriftsansvariga konfigurera installerade plugins. Plugins är uppdelade i kategorier baserade på dess funktioner. Kategorierna listas nedan och intill varje kategori tillhörande plugins.</message>
+	<message key="manager.reviewFormElements">Komponenter</message>
+	<message key="manager.reviewForms">Granskningsformulär </message>
+	<message key="manager.reviewForms.completed">Avslutade</message>
+	<message key="manager.reviewForms.create">Skapa granskningsformulär</message>
+	<message key="manager.reviewForms.description">Beskrivning och instruktion</message>
+	<message key="manager.reviewForms.edit">Formulär</message>
+	<message key="manager.reviewForms.inReview">Under granskning</message>
+	<message key="manager.reviewForms.list.description">Granskningsformulären som skapas här kommer bli tillgängliga för Granskare att och ersätta standardformuläret som består av två text-rutor, den ena för både Författare och Redaktör och den andra för enbart Redaktör. Granskningsformulär kan utformas för en speciell tidskriftssektion och Redaktörer har möjlighet att välja vilket formulär som skall användas när Granskare allokeras.  I båda fall, har Redaktörer möjlighet att inkludera rapporten i korrespondensen med Författaren.</message>
+	<message key="manager.reviewForms.noneChosen">Ingen/Standard granskningsformulär</message>
+	<message key="manager.reviewForms.preview">Förhandsgranska</message>
+	<message key="manager.reviewForms.title">Titel</message>
 	<message key="manager.sections.abstractsNotRequired">Kräver inte abstract</message>
 	<message key="manager.sections.assigned">Den här sektionens redaktörer</message>
 	<message key="manager.sections.create">Skapa sektion</message>
@@ -98,12 +109,12 @@
 	<message key="manager.sections.hideTocTitle">Utelämna titeln på den här sektionen från numrets innehållsförteckning.</message>
 	<message key="manager.sections.identifyType">Som metadata ska varje komponent i den här sektionen anges i obestämd form</message>
 	<message key="manager.sections.identifyTypeExamples">(T.ex.:, "Sakkunnigbedömd/granskad artikel", "Icke-granskad artikel", "Inbjudet material", etc.)</message>
-	<message key="manager.sections.indexed">Indexerad</message>
+	<message key="manager.sections.indexed">Indexeras</message>
 	<message key="manager.sections.noneCreated">Inga sektioner har skapats.</message>
 	<message key="manager.sections.open">Bidrag mottas</message>
 	<message key="manager.sections.policy">Sektionspolicies</message>
 	<message key="manager.sections.readingTools">Läsverktyg</message>
-	<message key="manager.sections.reviewed">Granskad/Sakkunnigbedömd</message>
+	<message key="manager.sections.reviewed">Granskas/Sakkunnigbedöms</message>
 	<message key="manager.sections.submissionIndexing">Kommer inte omfattas av indexeringen av tidskriften</message>
 	<message key="manager.sections.submissionReview">Kommer inte att granskas</message>
 	<message key="manager.section.submissionsToThisSection">Manuskript inskickade till den här sektionen</message>
@@ -126,7 +137,7 @@
 	<message key="manager.setup.announcementsDescription">Tillkännagivanden publiceras för att informera tidskriftens läsare om nyheter och olika händelser. Publicerade tillkännagivanden kommer att synas under Tillkännagivanden.</message>
 	<message key="manager.setup.announcementsIntroduction">Ytterligare information</message>
 	<message key="manager.setup.announcementsIntroductionDescription">Lägg till ytterligare information som som ska visas för läsare under under Tillkännagivanden.</message>
-	<message key="manager.setup.appearInAboutJournal">(Kommer att synas under "Om tidskriften") </message>
+	<message key="manager.setup.appearInAboutJournal">(Kommer att synas under "Om tidskriften")</message>
 	<message key="manager.setup.authorCopyrightNotice">Upphovsrättsskydd</message>
 	<message key="manager.setup.authorCopyrightNoticeAgree">Författare måste acceptera avtal om upphovsrätt i samband med att manuskriptet skickas in.</message>
 	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Information om upphovsrättsskydd kommer att synas under "Om tidskriften" och i varje publicerat dokuments metadata. Det är upp till respektive tidskrift att avgöra de upphovsrättsliga avtalen mellan författare och tidskrift, the Public Knowledge Project rekommenderar att man använder <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a> licens. För detta infogas <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">sample Copyright Notice </a> Avtalet kan kopieras och klistras in i fältet nedan för tidskrifter som (a) är Open Access (b) 'Försenad' Open Access, eller (c) inte är Open Access.]]></message>
@@ -145,7 +156,13 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Instruktioner för manusredigering är tillgängligt för Manusredaktörer, Författare, och Sektionsredaktörer under Manusredigering. Nedan följer standardinstruktioner i HTML som kan ändras och ersättas av Tidskriftsansvarig när som helst (i HTML eller plain text).</message>
 	<message key="manager.setup.copyrightNotice">Upphovsrättsskydd</message>
 	<message key="manager.setup.coverage">Täckning</message>
+	<message key="manager.setup.coverageChronExamples">(T.ex., Europeisk renässans; Juraperioden; Tredje trimestern; etc.)</message>
+	<message key="manager.setup.coverageChronProvideExamples">Ange exempel på relevanta kronolgiska eller historiska termer för ämnesområdet</message>
 	<message key="manager.setup.coverageDescription">Hänvisar till geospatial, kronologisk eller historisk täckning, och/eller karakteristika av forskningsurvalet.</message>
+	<message key="manager.setup.coverageGeoExamples">(T.ex., Iberiska halvön; Stratosfär; Tempererade zoner; etc.)</message>
+	<message key="manager.setup.coverageGeoProvideExamples">Ange exempel på relevanta geospatiala eller geografiska termer för ämnesområdet.</message>
+	<message key="manager.setup.coverageResearchSampleExamples">(T.ex. Ålder; Kön; Etnicitet; etc.)</message>
+	<message key="manager.setup.coverageResearchSampleProvideExamples">Ange exempel på forskningsurval för ämnesområdet</message>
 	<message key="manager.setup.currentIssue">Senaste numret</message>
 	<message key="manager.setup.customizingTheLook">Steg 5. Anpassa utseendet</message>
 	<message key="manager.setup.customTags">Anpassade märkord (tags)</message>
@@ -161,6 +178,12 @@
 	<message key="manager.setup.doiPrefix">DOI prefix</message>
 	<message key="manager.setup.doiPrefixDescription"><![CDATA[ DOI (Digital Object Identifier) prefixet tilldelas av <a href="http://www.crossref.org" target="_new">CrossRef</a> i formatet 10.xxxx (ex. 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Redaktörens beslut</message>
+	<message key="manager.setup.editorialMembers">Gå till Medlemmar i Redaktionen och lägg till Redaktion och/eller redaktionsråd för granskning. Det här kan göras närsonhelst under installationen av tidskriften.</message>
+	<message key="manager.setup.editorialProcess1">En eller flera redaktörer hanterar de grundläggande stegen utan fördefinierade roller.</message>
+	<message key="manager.setup.editorialProcess2">Redaktionsledaren administrerar inskickade manuskript och innehållsförteckning, Sektionsredaktören administrerar manusgranskning och manusredigering.</message>
+	<message key="manager.setup.editorialProcess3">Redaktionsledaren administrerar inskickade manuskript, manusredigering, och innehållsförteckning, Sektionsredaktören administrerar manusgranskning.</message>
+	<message key="manager.setup.editorialReviewBoard">Redaktion och redaktionsråd för granskning</message>
+	<message key="manager.setup.editorialReviewBoardDescription">Redaktionen ansvarar för tidskriftsarbetets redaktionella riktning, deltar i utnämning av redaktörer samt går i god för tidkriftens rykte och rennommé, Redaktionsrådet för granskning har en liknande funktion men leder dessutom granskningsprocessen. Medlemmar i redaktionsrådet för granskning har inte tillgång till tidskriftens administrativa del men ingår på listan för granskare.</message>
 	<message key="manager.setup.emailBounceAddress">Felaktig adress</message>
 	<message key="manager.setup.emailBounceAddressDescription">Felmeddelande för E-post som inte kan levereras skickas till den här adressen.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<<strong>Observera:</strong> För att göra det här valet måste sidadministratören aktivera <tt>allow_envelope_sender</tt> i OJS konfigureringsfil. Ytterligare serverkonfigurering kan komma att bli nödvändig (något som inte alla servrar tillåter, se OJS-dokumentationen för info.)]]></message>
@@ -170,6 +193,11 @@
 	<message key="manager.setup.enableAnnouncements">Möjliggör för tidskriftsansvariga att lägga till tillkännagivanden.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Visning</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">av tidskriftens senaste tillkännagivanden.</message>
+	<message key="manager.setup.enablePageNumber">Sidnumrering bestäms och förs in manuellt i Innehållsförteckningen (ex., 13-26).</message>
+	<message key="manager.setup.enablePublicArticleId">Anpassade identifierare används för att identifiera tidskriftens publicerade innehåll.</message>
+	<message key="manager.setup.enablePublicGalleyId">Anpassade identifierare används för att identifiera sidkorrektur (t ex HTML eller PDF filer) för publicerade enheter.</message>
+	<message key="manager.setup.enablePublicIssueId">Anpassade identifierare används för att identifiera tidskriftens nummer.</message>
+	<message key="manager.setup.enablePublicSuppFileId">Anpassade identifierare används för att identifiera kompletterande artikelfiler.</message>
 	<message key="manager.setup.enableUserRegistration">Användare kan registrera sig på tidskriften som en eller flera av följande fuktioner:</message>
 	<message key="manager.setup.enableUserRegistration.author">Författare (Kan skicka manuskript till tidskriften.)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Läsare (Fungerar som abonnent, får meddelanden om tidskriften etc.)</message>
@@ -198,7 +226,6 @@
 	<message key="manager.setup.homepageImage">Hemsidebild</message>
 	<message key="manager.setup.homepageImageDescription">Lägg till en bild till mitten av sidan</message>
 	<message key="manager.setup.htmlSetupInstructions"><![CDATA[HTML kan användas i fälten för textredigering (fontstorlek, färg etc.), observera att "return" behandlas som <tt>&lt;br&gt;</tt>; HTML redigerare fungerar med Firefox.]]></message>
-	<message key="manager.setup.includeCreativeCommons">För tidskrifter som stöder omedelbar eller försenad Open Access, lägg till en Creatice Commons-licens till publikationerna.</message>
 	<message key="manager.setup.information">Information</message>
 	<message key="manager.setup.information.description">En kortfattad beskrivning av tidskriftens innehåll för bibliotekarier, potentiella författare och läsare finns under "Information" i sidomenyn.</message>
 	<message key="manager.setup.information.forAuthors">För författare</message>
@@ -225,6 +252,8 @@
 	<message key="manager.setup.journalLogo">Tidskriftens logo</message>
 	<message key="manager.setup.journalPageFooter">Tidskriftens sidfot</message>
 	<message key="manager.setup.journalPageFooterDescription">Det här är tiskriftens sidfot. För att ändra eller uppdatera sidfoten, klistra in HTML-koden i rutan nedan. (T.ex. räknare, ytterligare navigeringsfält etc.) Sidfoten kommer att synas på varje sida.</message>
+	<message key="manager.setup.journalPageHeader">Tidskriftens sidhuvud</message>
+	<message key="manager.setup.journalPageHeaderDescription">En grafisk representation av tidskriftens titel och logo (.gif, .jpg, eller .png file), förslagsvis en mindre version av den som används på hemsidan, kan laddas upp till sidhuvudet och ersätta den text som syns i annat fall.</message>
 	<message key="manager.setup.journalPolicies">Step 2. Tidskriftens policy</message>
 	<message key="manager.setup.journalSetup">Installation av tidskriften</message>
 	<message key="manager.setup.journalSetupUpdated">Tidskriftsinstallationen har uppdaterats.</message>
@@ -275,7 +304,7 @@
 	<message key="manager.setup.openAccessPolicy">Open Access Policy</message>
 	<message key="manager.setup.openAccessPolicyDescription">Om tidskriften erbjuder omedelbar Open Access av allt innehåll, lägg till en Open Access Policy. Policyn kommer att synas i Om tidskriften under Policies.</message>
 	<message key="manager.setup.pageNumberIdentifier">Alternativ för sidnumrering</message>
-	<message key="manager.setup.peerReviewDescription">Ange tidskriftens granskningspolicy och dess processer, ex. antal sakkuniga som används vid granskning av en artikel, kriterium för granskning av en artikel, tidåtgång per granskad artikel, och hur rekrytering av granskare ser ut. Den här informationen syns under Om tidskriften.</message>
+	<message key="manager.setup.peerReviewDescription">Ange tidskriftens granskningspolicy och dess processer, ex. antal sakkunniga som används vid granskning av en artikel, kriterium för granskning av en artikel, tidåtgång per granskad artikel, och hur rekrytering av granskare ser ut. Den här informationen syns under Om tidskriften.</message>
 	<message key="manager.setup.peerReviewPolicy">Granskning</message>
 	<message key="manager.setup.peerReviewPolicy2">Policy för granskning</message>
 	<message key="manager.setup.policies">Policies</message>
@@ -351,6 +380,9 @@
 	<message key="manager.setup.sponsors">Sponsorer</message>
 	<message key="manager.setup.sponsorsDescription">Namn på organisationer (ex. forskningsorganisationer, avdelningar inom universitet etc.) som stöttar tidskriften finns tillgängligt under Om tidskriften. Här kan även inkluderas ett tack från utgivare.</message>
 	<message key="manager.setup.stepsToJournalSite">Fem steg mot en tidskriftshemsida</message>
+	<message key="manager.setup.subjectClassification">Ämnesklassificering</message>
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Tidskriften använder ett klassificeringssystem som finns tillgängligt online: <br /> Title på klassifikationssystem]]></message>
+	<message key="manager.setup.subjectClassificationExamples">(T.ex., Mathematics Subject Classification; Library of Congress Classification)</message>
 	<message key="manager.setup.subjectExamples">(T.ex., Fotosyntes; Svarta hål; Zenons paradoxer)</message>
 	<message key="manager.setup.subjectKeywordTopic">Nyckelord</message>
 	<message key="manager.setup.subjectProvideExamples">Ange exempel på nyckelord eller ämnen</message>
@@ -413,13 +445,8 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">månad(er)efter att ett nummer har publicerats.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Vänligen välj en giltig tidsperiod.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Följande Försenad Open Access-Policy kommer att synas under Policies under Om tidskriften.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Vänligen klicka i obligatorisk checkbox.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Meddela abonnenter via E-post</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">månad(er) kvar av abonnemanget.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Meddela abonnenter via E-post</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">vecka/veckor kvar av abonnemanget.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Meddela abonnenter via E-post</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">månad(er) innan abonnemanget upphör.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Meddela abonnenter via E-post</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">vecka/veckor innan abonnemanget upphör.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Påminnelse om upphörande av abonnemang</message>
@@ -531,4 +558,16 @@
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">En abonnemangsform har skapats.</message>
 	<message key="manager.subscriptionTypes.year">år</message>
 	<message key="manager.subscriptionTypes.years">år</message>
+	<message key="manager.people.showNoRole">Visa användare utan tilldelad roll</message>
+	<message key="manager.language.ui">Gränssnitt</message>
+	<message key="manager.language.submissions">Bidrag</message>
+	<message key="manager.language.forms">Formulär</message>
+	<message key="manager.setup.history">Utgivningshistorik</message>
+	<message key="manager.setup.historyDescription">Den här texten visas under rubriken "Om tidskriften" och är till för att beskriva exempelvis förändringar av titel, redaktionens sammansättning, eller andra relevanta detaljer rörande tidskriftens utgivningshistorik.</message>
+	<message key="manager.setup.noPublishing">OJS kommer inte användas för att publicera tidskriftens innehåll online.</message>
+	<message key="manager.setup.journalThumbnail">Miniatyrbild</message>
+	<message key="manager.setup.useThumbnail">Miniatyrbild</message>
+	<message key="manager.setup.journalFavicon">Tidskriftens favicon</message>
+	<message key="manager.setup.journalFaviconDescription">Lägg till en favicon (favorites icon) för tidskriften. Den kommer att visas bredvid webbläsarens navigationsruta när en användare är inne på sidan.</message>
+	<message key="manager.setup.journalFaviconInvalid">Felaktigt favicon-format. Godkända format är .ico, .png och .gif.</message>
 </locale>

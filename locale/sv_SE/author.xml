@@ -4,7 +4,7 @@
 <!--
   * locale/sv_SE/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2000-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="sv_SE" full_name = "Swedish">
+<locale name="sv_SE" full_name="Svenska">
 	<message key="author.submit">Nya manuskript</message>
 	<message key="author.track">Aktiva manuskript</message>
 	<message key="author.competingInterests"><![CDATA[Competing&nbsp;interests <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></message>
@@ -26,11 +26,11 @@
 	<message key="author.submit.step4">Steg 4. Ladda upp eventuella komplementerande filer</message>
 	<message key="author.submit.step4a">Steg 4a. Lägg till en komplementerande fil</message>
 	<message key="author.submit.step5">Steg 5. Bekräfta manusinlämning</message>
-	<message key="author.submit.start">Starta</message>
-	<message key="author.submit.metadata">Ange Metadata</message>
-	<message key="author.submit.upload">Ladda upp manuskriptet</message>
-	<message key="author.submit.supplementaryFiles">Ladda upp komplementerande filer</message>
-	<message key="author.submit.confirmation">Bekräfta</message>
+	<message key="author.submit.start">1. Starta</message>
+	<message key="author.submit.metadata">2. Ange Metadata</message>
+	<message key="author.submit.upload">3. Ladda upp manuskriptet</message>
+	<message key="author.submit.supplementaryFiles">4. Ladda upp komplementerande filer</message>
+	<message key="author.submit.confirmation">5. Bekräfta</message>
 	<message key="author.submit.cancelSubmission">Du kan göra klart manusinlämningen vid ett senare tillfälle genom att välja Aktiva manuskript under Din Författarsida.</message>
 	<message key="author.submit.notAccepting">Den här tidskriften tar för tillfället inte emot några manuskript.</message>
 	<message key="author.submit.requestWaiver">Begär avsägelse</message>
@@ -45,16 +45,16 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Stöter du på problem? Kontakta <a href="mailto:{$supportEmail}">{$supportName}</a> för hjälp.]]></message>
 	<message key="author.submit.journalSection">Tidskriftssektion</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Välj lämplig sektion för det här manuskriptet (se Sektioner och Policies under <a href="{$aboutUrl}" target="_new">Om</a> Tidskriften).]]></message>
-	<message key="submission.submit.selectSection">Vänligen välj en sektion...</message>
-	<message key="submission.submit.submissionChecklist">Checklista för manusinlämning</message>
-	<message key="submission.submit.submissionChecklistDescription">Bekräftar att manuskriptet är klart för granskning i tidskriften genom att kryssa för följande (kommentarer till redaktören kan läggas till nedan).</message>
+	<message key="author.submit.selectSection">Vänligen välj en sektion...</message>
+	<message key="author.submit.submissionChecklist">Checklista för manusinlämning</message>
+	<message key="author.submit.submissionChecklistDescription">Bekräftar att manuskriptet är klart för granskning i tidskriften genom att kryssa för följande (kommentarer till redaktören kan läggas till nedan).</message>
 	<message key="author.submit.verifyChecklist">Alla moment i Checklistan för manusinlämning måste vara genomförda och förkryssade innan du kan gå vidare.</message>
 	<message key="author.submit.copyrightNoticeAgree">Författarna samtycker till upphovsrättsvillkoren för manuskriptet om och när texten blir accepterad för publicering. (Kommentarer till redaktören kan lämnas nedan).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Du måste samtycka till upphovsrättsvillkoren innan du kan fortsätta.</message>
-	<message key="submission.submit.coverNote">Kommentarer till redaktören</message>
+	<message key="author.submit.commentsForEditor">Kommentarer till redaktören</message>
 	<message key="author.submit.comments">Skriv in text (frivilligt)</message>
 	<message key="author.submit.form.sectionRequired">Välj en lämplig tidskriftssektion för manuskriptet.</message>
-	<message key="submission.submit.privacyStatement">Tidskriftens sekretesspolicy</message>
+	<message key="author.submit.privacyStatement">Tidskriftens sekretesspolicy</message>
 	<message key="author.submit.reorderInstructions">Sortera författarna så att de hamnar i rätt ordning enligt publikationen.</message>
 	<message key="author.submit.selectPrincipalContact">Huvudkontakt för korrespondens med redaktören.</message>
 	<message key="author.submit.addAuthor">Lägg till författare</message>
@@ -62,6 +62,7 @@
 	<message key="author.submit.submissionIndexingDescription">Lägg till relevanta sökord för indexering, separera orden med semikolon (ord1; ord2; ord3).</message>
 	<message key="author.submit.agencies">Organisationer eller motsvarande som har bidragit till manuskriptet</message>
 	<message key="author.submit.coverageInstructions">Refererar till geospatial, kronologisk eller historisk täckning, och/eller karakteristika av forskningsurvalet.</message>
+	<message key="author.submit.subjectClassInstructions">Använd klassificeringslänken för att ange ämnen.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Engelska=en; Franska=fr; Spanska=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Fler koder</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Man måste ange minst en författare.</message>
 	<message key="author.submit.form.authorRequiredFields">Man måste ange för-, efternamn och E-postadress till respektive författare.</message>
@@ -115,4 +116,13 @@
 	<message key="author.article.copyeditedFile">Manusredigerad fil</message>
 	<message key="author.article.authorRevisedFile">Författarfil</message>
 	<message key="author.submit.authorSubmitLoginMessage">Man måste registrera ett användarkonto för att skicka in bidrag till tidskriften. Detta för att våra granskare ska kunna arbeta med inlagda manuskript och kunna kontakta författare när statusen på inskickat material förändras.</message>
+	<message key="author.submissions.queuedReviewSubsequent">Granskas, vända {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">Granskas: revidering nödvändig</message>
+	<message key="author.submissions.queuedEditingCopyedit">Redigeras: manusredigering begärd</message>
+	<message key="author.submissions.queuedEditingProofread">Redigeras: Korrekturläsning begärd</message>
+	<message key="author.submit.submissionLocale">Bidragets språk</message>
+	<message key="author.submit.submissionSupportingAgencies">Organisationer eller kollegor som stöttat eller medfinansierat forskningen</message>
+	<message key="author.submit.submissionLocaleDescription">Den här tidskriften tar emot bidrag på fler än ett språk. Välj bidragets huvudsakliga språk från listan nedan.</message>
+	<message key="author.submit.form.localeRequired">Vänligen välj ett språk för bidraget</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Om det finns personer, institutioner eller tjänster som har bidragit till innehållet eller stöttat föreliggande arbete kan du ange det här. Om flera, separera dessa med semikolon (t.ex. Anna Andersson; Grönköpings universitet; Department of Computer Science, Metro University).</message>
 </locale>
