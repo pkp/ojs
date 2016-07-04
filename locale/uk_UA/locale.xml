@@ -488,7 +488,7 @@
        <message key="sectionEditor.proofreader.confirmRenotify">Повторне сповіщення цього коректора повторить процедуру його призначення. Ви впевнені, що хочете зробити це?</message>
 
        <message key="sectionEditor.regrets.breadcrumb">Вибачення</message>
-       <message key="sectionEditor.regrets.title">#{$articleId} Вибачення рецензентів, припинення та попередні раунди</message>
+       <message key="sectionEditor.regrets.title">#{$submissionId} Вибачення рецензентів, припинення та попередні раунди</message>
        <message key="sectionEditor.regrets">Вибачення</message>
        <message key="sectionEditor.regrets.link">Подивитися вибачення, припинення, попередні раунди</message>
        <message key="sectionEditor.regrets.reviewRound">Наукове рецензування, раунд {$round}</message>
@@ -919,47 +919,47 @@
 
        <!-- Article Logs -->
        <message key="log.author.submitted">{$authorName} зробив нове подання, ID {$submissionId}.</message>
-       <message key="log.author.documentRevised">{$authorName} виправив статтю {$articleId}. Новий ID файла {$fileId}.</message>
-             <message key="log.review.reviewerUnassigned">{$reviewerName} був звільнений від рецензування подання {$articleId} на {$round} раунді.</message>
-       <message key="log.review.reviewInitiated">Був розпочатий {$round} раунд рецензування подання {$articleId} фахівцем {$reviewerName}.</message>
-       <message key="log.review.reviewReinitiated">Був повторно розпочатий {$round} раунд рецензування подання {$articleId} фахівцем {$reviewerName}.</message>
-       <message key="log.review.reviewCancelled">Був припинений {$round} раунд рецензування подання {$articleId} фахівцем {$reviewerName}.</message>
-       <message key="log.review.reviewCleared">Були скасовані дані про {$round} раунд рецензування подання {$articleId} фахівцем {$reviewerName}.</message>
-       <message key="log.review.reviewerRated">{$reviewerName} був оцінений за раунд {$round} рецензування подання {$articleId}.</message>
-       <message key="log.review.reviewDueDateSet">Дата кінцевого терміну {$round} раунду рецензування подання {$articleId} фахівцем {$reviewerName} була призначена на {$dueDate}.</message>
-       <message key="log.review.reviewRecommendationSet">Була визначена рекомендація {$round} раунду рецензування подання {$articleId} фахівцем {$reviewerName}.</message>
-       <message key="log.review.reviewRecommendationSetByProxy">Рекомендація {$round} раунду рецензування подання {$articleId} була визначена редактором {$editorName} від імені рецензента {$reviewerName}.</message>
-       <message key="log.review.resubmit">Подання {$articleId} було повторно надіслано для рецензування.</message>
-       <message key="log.review.reviewDeclined">{$reviewerName} не прийняв {$round} раунд рецензування подання {$articleId}.</message>
-       <message key="log.review.reviewAccepted">{$reviewerName} прийняв {$round} раунд рецензування подання {$articleId}.</message>
-       <message key="log.review.reviewDeclinedByProxy">{$userName} не прийняв {$round} раунд рецензування подання {$articleId} від імені фахівця {$reviewerName}.</message>
-       <message key="log.review.reviewAcceptedByProxy">{$userName} прийняв {$round} раунд рецензування подання {$articleId} від імені фахівця {$reviewerName}.</message>
-       <message key="log.review.reviewFileByProxy">Редактор {$userName} вивантажив файл рецензії для {$round} раунду рецензування подання {$articleId} від імені рецензента {$reviewerName}.</message>
+       <message key="log.author.documentRevised">{$authorName} виправив статтю {$submissionId}. Новий ID файла {$fileId}.</message>
+             <message key="log.review.reviewerUnassigned">{$reviewerName} був звільнений від рецензування подання {$submissionId} на {$round} раунді.</message>
+       <message key="log.review.reviewInitiated">Був розпочатий {$round} раунд рецензування подання {$submissionId} фахівцем {$reviewerName}.</message>
+       <message key="log.review.reviewReinitiated">Був повторно розпочатий {$round} раунд рецензування подання {$submissionId} фахівцем {$reviewerName}.</message>
+       <message key="log.review.reviewCancelled">Був припинений {$round} раунд рецензування подання {$submissionId} фахівцем {$reviewerName}.</message>
+       <message key="log.review.reviewCleared">Були скасовані дані про {$round} раунд рецензування подання {$submissionId} фахівцем {$reviewerName}.</message>
+       <message key="log.review.reviewerRated">{$reviewerName} був оцінений за раунд {$round} рецензування подання {$submissionId}.</message>
+       <message key="log.review.reviewDueDateSet">Дата кінцевого терміну {$round} раунду рецензування подання {$submissionId} фахівцем {$reviewerName} була призначена на {$dueDate}.</message>
+       <message key="log.review.reviewRecommendationSet">Була визначена рекомендація {$round} раунду рецензування подання {$submissionId} фахівцем {$reviewerName}.</message>
+       <message key="log.review.reviewRecommendationSetByProxy">Рекомендація {$round} раунду рецензування подання {$submissionId} була визначена редактором {$editorName} від імені рецензента {$reviewerName}.</message>
+       <message key="log.review.resubmit">Подання {$submissionId} було повторно надіслано для рецензування.</message>
+       <message key="log.review.reviewDeclined">{$reviewerName} не прийняв {$round} раунд рецензування подання {$submissionId}.</message>
+       <message key="log.review.reviewAccepted">{$reviewerName} прийняв {$round} раунд рецензування подання {$submissionId}.</message>
+       <message key="log.review.reviewDeclinedByProxy">{$userName} не прийняв {$round} раунд рецензування подання {$submissionId} від імені фахівця {$reviewerName}.</message>
+       <message key="log.review.reviewAcceptedByProxy">{$userName} прийняв {$round} раунд рецензування подання {$submissionId} від імені фахівця {$reviewerName}.</message>
+       <message key="log.review.reviewFileByProxy">Редактор {$userName} вивантажив файл рецензії для {$round} раунду рецензування подання {$submissionId} від імені рецензента {$reviewerName}.</message>
        <message key="log.review.reviewerFile">Файл рецензента був вивантажений.</message>
-       <message key="log.editor.decision">Рішення редактора ({$decision}) щодо статті {$articleId} було записане редактором {$editorName}.</message>
+       <message key="log.editor.decision">Рішення редактора ({$decision}) щодо статті {$submissionId} було записане редактором {$editorName}.</message>
 
-       <message key="log.copyedit.initiate">Літературне редагування подання {$articleId} було розпочате редактором {$copyeditorName}.</message>
+       <message key="log.copyedit.initiate">Літературне редагування подання {$submissionId} було розпочате редактором {$copyeditorName}.</message>
        <message key="log.copyedit.copyeditFileSet">Файл базової редакційної версії був визначений.</message>
-       <message key="log.copyedit.initialEditComplete">{$copyeditorName} завершив початкове літературне редагування подання {$articleId}.</message>
-       <message key="log.copyedit.finalEditComplete">{$copyeditorName} завершив остаточне літературне редагування подання {$articleId}.</message>
-       <message key="log.copyedit.copyeditorAssigned">{$copyeditorName} був призначений для літературного редагування подання {$articleId}.</message>
+       <message key="log.copyedit.initialEditComplete">{$copyeditorName} завершив початкове літературне редагування подання {$submissionId}.</message>
+       <message key="log.copyedit.finalEditComplete">{$copyeditorName} завершив остаточне літературне редагування подання {$submissionId}.</message>
+       <message key="log.copyedit.copyeditorAssigned">{$copyeditorName} був призначений для літературного редагування подання {$submissionId}.</message>
        <message key="log.copyedit.copyeditorFile">Версія літературного редактора файлу подання була вивантажена.</message>
        <message key="log.copyedit.authorFile">Версія файлу подання, відредагована автором, була вивантажена.</message>
 
-       <message key="log.layout.layoutEditorAssigned">{$editorName} був призначений редактором верстки подання {$articleId}.</message>
-       <message key="log.layout.layoutEditorUnassigned">{$editorName} був звільнений від роботи над версткою подання {$articleId}.</message>
-       <message key="log.layout.layoutEditComplete">{$editorName} завершив верстку подання {$articleId}.</message>
+       <message key="log.layout.layoutEditorAssigned">{$editorName} був призначений редактором верстки подання {$submissionId}.</message>
+       <message key="log.layout.layoutEditorUnassigned">{$editorName} був звільнений від роботи над версткою подання {$submissionId}.</message>
+       <message key="log.layout.layoutEditComplete">{$editorName} завершив верстку подання {$submissionId}.</message>
 
        <message key="log.editor.metadataModified">Метадані цієї статті були змінені редактором {$editorName}.</message>
        <message key="log.editor.editorFile">Файл редакційної версії подання був вивантажений.</message>
-       <message key="log.editor.archived">Подання {$articleId} було надіслане до архіву.</message>
-       <message key="log.editor.restored">Подання {$articleId} було відновлене у редакційній черзі.</message>
-       <message key="log.editor.editorAssigned">{$editorName} був призначений редактором подання {$articleId}.</message>
+       <message key="log.editor.archived">Подання {$submissionId} було надіслане до архіву.</message>
+       <message key="log.editor.restored">Подання {$submissionId} було відновлене у редакційній черзі.</message>
+       <message key="log.editor.editorAssigned">{$editorName} був призначений редактором подання {$submissionId}.</message>
       
-       <message key="log.proofread.assign">{$assignerName} призначив фахівця {$proofreaderName} коректором подання {$articleId}.</message>
-       <message key="log.proofread.complete">{$proofreaderName} надіслав подання {$articleId} для включення до графіку публікації.</message>
+       <message key="log.proofread.assign">{$assignerName} призначив фахівця {$proofreaderName} коректором подання {$submissionId}.</message>
+       <message key="log.proofread.complete">{$proofreaderName} надіслав подання {$submissionId} для включення до графіку публікації.</message>
 
-       <message key="log.imported">{$userName} імпортував статтю {$articleId}.</message>
+       <message key="log.imported">{$userName} імпортував статтю {$submissionId}.</message>
 
        <!-- Reading Tools entries -->
 
