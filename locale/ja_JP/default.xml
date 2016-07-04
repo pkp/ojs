@@ -14,15 +14,15 @@
 
 <locale name="ja_JP" full_name="日本語">
   <message key="default.journalSettings.checklist.notPreviouslyPublished">投稿物はこれまでに出版されておらず、また、別の雑誌に投稿されてもいない（または、編集者へのコメント欄で事情を説明している）。</message>
-  <message key="default.journalSettings.checklist.fileFormat">投稿ファイルは、Microsoft Word、RTF、またはWordPerfect文書ファイルフォーマットのいずれかである。 </message>
+  <message key="default.journalSettings.checklist.fileFormat">投稿ファイルは、Microsoft Word、RTF、またはWordPerfect文書ファイルフォーマットのいずれかである。</message>
   <message key="default.journalSettings.checklist.addressesLinked">可能な場合、参考文献のURLが提供されている。</message>
   <message key="default.journalSettings.checklist.submissionAppearance">テキストはシングルスペースで書かれており、12ポイントのフォントサイズを使用しており、下線ではなくイタリック体を使用しており（URLアドレスを除く）、すべてのイラスト、図、表は最後にまとめて示すのではなく、テキスト中の適当な場所に埋め込んでいる。</message>
   <message key="default.journalSettings.checklist.bibliographicRequirements">
     <![CDATA[テキストは、「この雑誌について」ページにある<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">執筆要項</a>で示された書式要件および書誌記述要件を順守している。]]>
-  </message>
+ </message>
   <message key="default.journalSettings.checklist.anonymous">
     <![CDATA[査読を行う雑誌セクションに投稿する場合、<a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">ブラインド審査を保証する</a>ための指示に従っている。]]>
-  </message>
+ </message>
   <message key="default.journalSettings.privacyStatement">本雑誌サイトに入力された名前およびメールアドレスは、本雑誌で述べた目的にのみ使用し、他の目的で使用したり、他のいかなる団体にも公開することはありません。</message>
   <message key="default.journalSettings.openAccessPolicy">本雑誌は、知の全世界的な流通を支援するために研究成果を自由に利用できるようにするという原則に基づいて、そのコンテンツを直ちにオープンアクセスで提供します。</message>
   <message key="default.journalSettings.authorSelfArchivePolicy">著者には、（出版に関する書誌的情報を提供する限り）本雑誌に投稿したアイテムを個人または機関のWebサイトに出版に先立って、あるいは出版後に掲載することを許可し、奨励します。</message>
@@ -90,25 +90,25 @@
 &bull; QAに応えてセンテンスが追加されました。太字のテキストは新しいテキストが追加されたことを示しています
 &bull; [単語を削除] は単語「全面的に」を削除したことを示しています
 &bull; コメントは編集者のQAに対する回答を含んでいます]]>
-  </message>
+ </message>
   <message key="default.journalSettings.emailSignature">
     <![CDATA[________________________________________________________________________
 {$journalName}
 {$indexUrl}/{$journalPath}
 ]]>
-  </message>
+ </message>
   <message key="default.journalSettings.forReaders">
     <![CDATA[読者には、この雑誌の出版通知サービスへの登録をお薦めします。雑誌ホームページの上部にある<a href="{$indexUrl}/{$journalPath}/user/register">登録</a>リンクをクリックして登録してください。このサービスは、登録した雑誌に新しい号が出版されるたびに、目次情報をメールでお知らせするものです。登録者リストは、この雑誌のサポートや読者数のレベルを主張することを可能にします。登録読者の名前とメールアドレスは、その他の目的では使用いたしません。この雑誌の<a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">プライバシー情報の扱いについて</a>を参照してください。]]>
-  </message>
+ </message>
   <message key="default.journalSettings.forAuthors">
     <![CDATA[この雑誌に論文を投稿することに興味はありませんか。この雑誌のセクションポリシーを示す<a href="{$indexUrl}/{$journalPath}/about">この雑誌について</a>および<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">執筆要項</a>をご覧になることをお薦めします。論文を投稿するにはあらかじめこの雑誌に<a href="{$indexUrl}/{$journalPath}/user/register">登録</a>する必要があります。登録済みの方は<a href="{$indexUrl}/{$journalPath}/login">ログイン</a>して、5ステップの投稿処理を開始するだけです。]]>
-  </message>
+ </message>
   <message key="default.journalSettings.forLibrarians">
     <![CDATA[研究図書館の方には、この雑誌を電子ジャーナルリストに追加することをお薦めします。また、この雑誌が使用しているオープンソースの出版システムが、図書館が所属の教員が編集委員をしている雑誌を運用するために提供するシステムとしてふさわしいことも注目に値するでしょう（<a href="http://pkp.sfu.ca/ojs">オープン･ジャーナル･システム</a>のホームページを参照してください）。]]>
-  </message>
+ </message>
   <message key="default.journalSettings.lockssLicense">
     <![CDATA[この雑誌は、参加図書館による分散型アーカイブシステムを構築するLOCKSSシステムを使用しています。このシステムの参加図書館が保存および障害復旧の目的でこの雑誌の恒久的アーカイブを作成することを許可します。<a href="http://www.lockss.org/">さらなる情報</a>はここを参照してください。]]>
-  </message>
+ </message>
 	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>レイアウトプロセスに参照リンキングを追加する方法</h4>
 	<p>投稿物をHTMLやPDFに変換する際、投稿物にある全てのハイパーリンクが生きていることを確認してください。</p>
 	<h4>A. 著者が参考文献にリンクをつける場合</h4>

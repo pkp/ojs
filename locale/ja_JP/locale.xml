@@ -217,19 +217,19 @@
 登録するには、<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">ここをクリック</a>して<strong>サイトURL</strong>欄に<span class="highlight">{$siteUrl}</span>を、<strong>OAIアーカイブのBase URL</strong>の欄に<span class="highlight">{$oaiUrl}</span>を入力してください。
 <br /><br />
 OJSのシステム設定を変更することにより、OAIインターフェースを無効にすることができます。ただし、現在はサイト全体の設定だけです。将来的には、雑誌毎にOAIインターフェースの有効･無効を設定できるようにする予定です。]]>
-  </message>
+ </message>
   <!-- Languages -->
   <message key="admin.auth.defaultSourceDescription">
     <![CDATA[<p>OJSユーザデータベース以外の認証システムをデフォルトの認証システムに指定すると、次のような効果があります。</p>
 <ul>
 	<li>ユーザが、（OJSデータベースには存在しないが）その認証システムには存在するユーザ名でこのサイトに新規アカウントを登録しようとした場合、指定されたパスワードがそのユーザアカウントのパスワードとして正しい場合のみ登録が許可される。</li>
 </ul>]]>
-  </message>
+ </message>
   <!-- System Information -->
   <message key="admin.overwriteConfigFileInstructions">
     <![CDATA[<h4>注意</h4>
 <p>設定ファイルを更新できませんでした。設定の変更を適用するためには、<tt>config.inc.php</tt>をエディタで開いて、以下の内容に置き換える必要があります。</p>]]>
-  </message>
+ </message>
   <!-- Subscription Management -->
   <message key="subscriptionManager.subscriptionManagement">購読管理</message>
   <!-- Journal Management -->
@@ -248,12 +248,12 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="manager.setup.lockssDescription">
     <![CDATA[オープン･ジャーナル･システムは、雑誌の安全で永続的なアーカイブを保証する<a href="http://www.lockss.org/" target="_blank">LOCKSS</a>（Lots of Copies Keep Stuff Safe）システムをサポートしています。LOCKSSはスタンフォード大学図書館で開発されたオープンソースのソフトウェアです。あらかじめ選択･登録したWeb雑誌で新たに公開されたコンテンツを定期的にチェックしてアーカイブすることにより、雑誌の保存を可能にします。各アーカイブは常に他の図書館のキャッシュと比較され、コンテンツの破損や不足が見つかった場合は、他のキャッシュや雑誌を使ってそれを修復します。<br /><br />
 オープン･ジャーナル･システムにおけるLOCKSSサポートの設定は、出版が完全に軌道に乗るまでは行う必要がありませんが、設定は次の2段階で行います。]]>
-  </message>
+ </message>
   <!-- Setup Step 3 -->
   <message key="manager.setup.subjectClassificationDescription">
     <![CDATA[雑誌はWeb上で利用可能な主題分類システムを使用します。<br />
 分類システムの名称]]>
-  </message>
+ </message>
   <message key="manager.setup.registerJournalForIndexingDescription">
     <![CDATA[この雑誌のコンテンツを世界中に存在する研究情報データベースで検索できるようにするために、この雑誌のURLをパブリック･ナレッジ･プロジェクトのメタデータ<a href="http://pkp.sfu.ca/harvester/" target="_blank">ハーベスタ</a>に<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">登録</a>してください。ハーベスタはこの雑誌の各アイテムのメタデータを収集し、<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">OAI-PMH</a>に準拠する研究情報サイトで正確で総合的な検索を可能にします。
 <br /><br />
@@ -261,7 +261,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 <br /><br />
 <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">ここをクリック</a>して<strong>Site URL</strong>欄に<span class="highlight">{$siteUrl}</span>を、<strong>Base URL for OAI Archive</strong>欄に<span class="highlight">{$oaiUrl}</span>を入力してください。
 ]]>
-  </message>
+ </message>
   <!-- Setup Step 4 -->
   <message key="manager.setup.basicEditorialStepsDescription"><![CDATA[ステップ: 受付 &gt; 査読 &gt; 編集 &gt; 目次。<br /><br />
 これらの編集ステップを担当するモデルを選択してください。（編集長およびセクションエディタを任命するには、雑誌管理ページの編集者機能を使用してください。）]]></message>
