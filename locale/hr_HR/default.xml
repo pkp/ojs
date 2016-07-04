@@ -19,7 +19,6 @@
 	<message key="default.journalSettings.checklist.addressesLinked">URL adrese za mrežno dostupne bibliografske čestice su priložene.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Tekst sadrži jednostruki razmak; koristi se font 12; preferira se kurziv(italic), radije nego podcrtavanje (prihvaća se za URL adrese); i sve ilustracije, slike i tablice su smještene na prikladnim mjestima u tekstu, radije nego na njegovom kraju.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Tekst ispunjava stilske i bibliografske zahtjeve navedene u <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Smjernice za autore</a>, koje se nalaze u rubrici "o časopisu".]]></message>
-	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Ako predajete za stručno recenziranu rubriku časopisa, upute u <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Kako osigurati anonimnost recenzije</a> se moraju slijediti.]]></message>
 
 	<message key="default.journalSettings.privacyStatement">Imena i adrese e-pošte registrirane na ovim stranicama koristit će se isključivo u navedene svrhe časopisa i neće biti dostupne niti jednoj drugoj stranci.</message>
 	<message key="default.journalSettings.openAccessPolicy">Ovaj časopis omogućuje trenutni otvoren pristup svojem cjelokupnom sadržaju u skladu s uvjerenjem kako javna dostupnost istraživačkih spoznaja potiče veću razmjenu znanja i ideja.</message>

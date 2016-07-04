@@ -13,9 +13,6 @@
   -->
 
 <locale name="hr_HR" full_name="Hrvatski">
-	<message key="editor.article.reviewForms">Recenzijski obrasci</message>
-	<message key="editor.article.selectReviewForm">Odaberite recenzijski obrazac</message>
-	<message key="editor.article.clearReviewForm">Očistite sadržaj recenzijskog obrasca</message>
 	<message key="editor.submissionsAndPublishing">Prijave i objavljivanja</message>
 	<message key="editor.submissionQueue">Red čekanja prijave</message>
 	<message key="editor.submissionArchive">Arhiva prijava</message>
@@ -89,7 +86,6 @@
 	<message key="editor.issues.open">Otvori</message>
 	<message key="editor.issues.pages">Stranice</message>
 	<message key="editor.navigation.futureIssues">Budući brojevi časopisa</message>
-	<message key="editor.navigation.createIssue">Kreiraj broj časopisa</message>
 	<message key="editor.navigation.issueArchive">Prošli brojevi časopisa</message>
 	<message key="editor.article.uploadReviewVersion">Revidirana verzija za recenziju</message>
 	<message key="editor.article.showSuppFile">Omogući recenzentima pristup datoteci</message>
@@ -189,26 +185,21 @@
 	<message key="editor.article.uploaded">Priložena</message>
 	<message key="editor.article.removeCoverPage">Želite li ukloniti sliku naslovne stranice?</message>
 	<message key="editor.article.remove">Ukloni</message>
-	<message key="editor.article.confirmChangeReviewForm">Promjena recenzijskog obrasca će izbrisati sve odgovore...</message>
 	<message key="editor.notifyUsers.allReaders">Svi čitatelji  ({$count} korisnika)</message>
 	<message key="editor.notifyUsers.allAuthors">Svi objavljeni autori ({$count} korisnika)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Svi individualni pretplatnici ({$count} korisnika)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Svi institucionalni pretplatnici ({$count} korisnika)</message>
 	<message key="editor.issues.published">Objavljeno</message>
 	<message key="editor.issues.volumeRequired">Volum je obavezan i mora bitiožnačen pozitivnom brojčanom vrijednosti.</message>
-	<message key="editor.issues.resetArticlePublicationDates">Vrati na početno stanje nadnevak objavljivanja članka</message>
 	<message key="editor.issues.unpublishIssue">Opozovi objavljivanje izdanja</message>
 	<message key="editor.issues.confirmUnpublish">Da li ste sigurni da želite poništiti objavljivanje ovog izdanja?</message>
-	<message key="editor.navigation.issues">Izdanja</message>
 	<message key="editor.article.archiveSubmission">Odbij i arhiviraj podnesak članka</message>
 	<message key="editor.home">Urednička strana</message>
 	<message key="editor.issues.issueData">Podaci o izdanju</message>
-	<message key="editor.notifyUsers.allMailingList">Uključi sve poruke u dopisnoj listi  ({$count} e-poruka)</message>
 	<message key="editor.editorAdministration">Administracija urednika</message>
 	<message key="editor.issues.enableOpenAccessDate">Omogući zakašnjeli otvoren pristup</message>
 	<message key="editor.article.designateReviewVersion">Odredi izvornu datoteku kao  Recenzijsku verziju</message>
 	<message key="editor.publicIdentificationExists">Ovaj javni identifikator '{$publicIdentifier}' već postoji za drugi objekt (izdanje, članak, korekturna kopija ili dopunska datoteka). ODaberite druge jedinstvene identifikatore za ovaj časopis.</message>
-	<message key="editor.publicGalleyIdentificationExists">Ovaj javni identifikator '{$publicIdentifier}' već postoji za drugu korekturnu kopiju ovog članka. Odaberite jedinstven identifikator u ovom članku.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Prije nego počaljete članak za urednika iskoristite Obavijesti autora vezu i informirajte autora o odluci i odaberite verziju koju ćete poslati.</message>
 	<message key="editor.submissionReview.sendToCopyediting">Pošalji uredniku</message>
 	<message key="editor.issues.galleys">Korekturne kopije izdanja</message>

@@ -45,7 +45,6 @@
 	<message key="author.submit.journalSectionDescription"><![CDATA[Odaberite prikladnu rubriku za vaš prilog (pogledajte rubrike i uređivačka politika na <a href="{$aboutUrl}" target="_new">O časopisu</a>).]]></message>
 	<message key="submission.submit.selectSection">Molimo odaberite rubriku...</message>
 	<message key="author.submit.submissionChecklist">Uvjeti za predaju priloga</message>
-	<message key="submission.submit.submissionChecklistDescription">Potvrdite da je vaš prilog spreman za ulazak u uređivački postupak time što zadovoljava sljedeće uvjete (komentare uredniku možete priložiti na dnu stranice).</message>
 	<message key="author.submit.verifyChecklist">Da biste nastavili s prijavom, morate označiti da vaš rad zadovoljava sve navedene uvijete predaje priloga.</message>
 	<message key="author.submit.copyrightNoticeAgree">Autori su suglasni s time da se navedeni uvjeti primijene i na ovu prijavu ako i kada bude objavljena u časopisu (posebne napomene uredniku možete priložiti na dnu stranice).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Da biste nastavili s prijavom, morate se suglasiti sa uvjetima vezanim uz autorska prava.</message>
@@ -59,7 +58,6 @@
 	<message key="author.submit.deleteAuthor">Izbriši autora</message>
 	<message key="author.submit.submissionIndexingDescription">Unesite pojmove koji adekvatno opisuju sadržaj priloga. Odijelite pojmove točka-zarezom (pojam1; pojam2; pojam3).</message>
 	<message key="author.submit.coverageInstructions">Odnosi se na  na geografsku rasprostranjenost lokacije, kronološki ili povijesni opseg , i/ili osobine istraživačkih uzoraka.</message>
-	<message key="author.submit.subjectClassInstructions">Koristite klasifikacijski sustav hiperveza da biste odabrali prikladne klasifikacijske pojmove ili možda prikladne brojeve.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Hrvatski=hr; Engleski=en; Francuski=fr; Španjolski=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Dodatni kôdovi</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Najmanje jedan autor je obavezan.</message>
 	<message key="author.submit.form.authorRequiredFields">Ime, prezime i adresa e-pošte svakog autora je obavezna.</message>
@@ -89,7 +87,6 @@
 	<message key="author.submit.suppFile.dataSet">Baza podataka</message>
 	<message key="author.submit.suppFile.sourceText">Izvorni tekst</message>
 	<message key="author.submit.suppFile.briefDescription">Kratak opis</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Donator ili pokroviteljska ustanova</message>
 	<message key="author.submit.suppFile.availableToPeers">Želim ovu datoteku (bez metapodataka) učiniti dostupnom recenzentima, budući da neće ugroziti anonimnost recenzije.</message>
 	<message key="author.submit.suppFile.publisherDescription">Koristite samo sa službeno objavljenim materijalima.</message>
 	<message key="author.submit.suppFile.dateDescription">Datum prikupljanja podataka ili izrade instrumenta.</message>
@@ -106,7 +103,6 @@
 	<message key="author.submit.filesSummary">Kratak pregled datoteke</message>
 	<message key="author.submit.finishSubmission">Dovrši prijavu</message>
 	<message key="author.submit.submissionComplete">Prijava priloga je uspješno završena. Hvala Vam na vašem zanimanju za objavljivanje u časopisu {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Ako je ova prijava u formatu u kojem je spremna da bude objavljena, bez daljnje recenzije, uređivanja ili rada na izgledu, može biti poslana direktno u zadnju fazu unutar rasporeda reda čekanja prijave preko  <a href="{$expediteUrl}" class="action">Kliknite ovdje</a>. (Obavijest: Samo urednici časopisa imaju ovu mogućnost za svoje prijave.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Predajte prepravljenu verziju priloga</message>
 	<message key="author.article.copyeditedFile">Lektorirana datoteka</message>
 	<message key="author.article.authorRevisedFile">Datoteka autora</message>
@@ -117,11 +113,9 @@
 	<message key="author.submit.form.localeRequired">ODaberite jezik podnošenja članka.</message>
 	<message key="author.submit.reorder">Promijeni redoslijed autorovog imena</message>
 	<message key="author.submit.howToSubmit"><![CDATA[Imate poteškoće? Kontaktirajte <a href="mailto:{$supportEmail}">{$supportName}</a> za asistenciju. ({$supportPhone}).]]></message>
-	<message key="author.submit.submissionSupportingAgencies">Učesnici i organižacije koje daju podršku</message>
 	<message key="author.submit.addSupplementaryFile">Dodaj dopunsku datoteku</message>
 	<message key="author.submissions.queuedReviewSubsequent">U recenziji krug {$round}</message>
 	<message key="author.submissions.queuedReviewRevisions">U recenziji: Potrebne revizije</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Navedite druge strane (osoba, organizacija, usluga) koje su imale učešće u sadržaju ili su dale novčanu podršku za rad predstavljen u ovom podnesku.  Odvojite ih točka zarezom  (npr. Ivan Petrović,  Filozofski fakultet; Pravni fakultet, Odjel za znanstveni rad).</message>
 	<message key="author.submit.form.wordCountAlert">Prekoračili ste ograničenje za maksimalan broj riječi za sažetak u ovoj rubrici.</message>
 	<message key="author.submit.supplementaryFilesInstructions">Ovaj neobavezan korak omogućava dodati Dopunske datoteke u ovom podnesku. Datoteke, koje mogu biti u bilo kojem formatu, mogu uključiti (a) istraživačke instrumente, (b) podatkovne nizove koji su u skladu sa etičkim pravilima studijskog istraživanja, (c) izvore koji na drugi način ne bibilidostupni čitateljima, (d) brojeve i tabele koji se nisu mogli integrirati u sam tekst ili druge materijale koji daju podršku radu.</message>
 	<message key="author.submit.mustEnterWaiverReason">Ako tražite zahtijev za odricanje morate unijeti razlog u prikazanom prostoru.</message>
