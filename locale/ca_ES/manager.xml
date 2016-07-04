@@ -112,7 +112,7 @@
 	<message key="manager.section.submissionsToThisSection">Trameses fetes a aquesta secció de la revista</message>
 	<message key="manager.sections.unassigned">Editors/ores de secció disponibles</message>
 	<message key="manager.sections.wordCount">Recompte de paraules</message>
-	<message key="manager.sections.wordCountInstructions">Limita el recompte de paraules dels resums per a aquesta secció (0 si no el voleu limitar): </message>
+	<message key="manager.sections.wordCountInstructions">Limita el recompte de paraules dels resums per a aquesta secció (0 si no el voleu limitar):</message>
 	<message key="manager.setup">Configuració</message>
 	<message key="manager.setup.aboutItemContent">Contingut</message>
 	<message key="manager.setup.addAboutItem">Afegeix un element «Sobre...»</message>
@@ -128,7 +128,7 @@
 	<message key="manager.setup.announcementsDescription">És possible publicar avisos per informar els lectors/ores sobre notícies i esdeveniments relacionats amb la revista. Els avisos publicats apareixen a la pàgina «Avisos».</message>
 	<message key="manager.setup.announcementsIntroduction">Informació addicional</message>
 	<message key="manager.setup.announcementsIntroductionDescription">Introduïu la informació addicional que vulgueu que vegin els lectors/ores a la pàgina «Avisos».</message>
-	<message key="manager.setup.appearInAboutJournal">(Apareixerà a «Sobre la revista») </message>
+	<message key="manager.setup.appearInAboutJournal">(Apareixerà a «Sobre la revista»)</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Demana als autors/ores que presentin una declaració de conflictes d’interessos (CI) juntament amb la tramesa.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Demana als revisors/ores que incloguin una declaració de CI per cada avaluació d'experts/ertes que trametin.</message>
 	<message key="manager.setup.history">Història de la revista</message>
