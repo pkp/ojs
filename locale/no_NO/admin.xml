@@ -34,7 +34,6 @@
 	<message key="admin.contexts.create">Opprett tidsskrift</message>
 	<message key="admin.journals.createInstructions">Du vil automatisk bli vervet som redaksjonsleder for dette tidsskriftet. Etter å ha opprettet et nytt tidsskrift, må du logge inn som redaksjonsleder for å fortsette med  oppsett og brukerverving.</message>
 	<message key="admin.journals.urlWillBe">Dette bør være ett enkelt kort ord eller akronym som identifiserer tidsskriftet. Tidsskriftets URL vil bli {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">En tittel er påkrevet.</message>
 	<message key="admin.contexts.form.pathRequired">En filsti er påkrevet.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Filstien kan bare inneholde alfanumeriske tegn, understrek og bindestrek, og må begynne og slutte med et alfanumerisk tegn.</message>
 	<message key="admin.contexts.form.pathExists">Den valgte filstien er allerede tatt i bruk av et annet tidsskrift.</message>
@@ -45,11 +44,9 @@
 	<message key="admin.journals.transcode">Artikkelens Transcode-metadata fra ISO8859-1</message>
 	<message key="admin.journals.form.importPathRequired">Filsti for import er påkrevet.</message>
 	<message key="admin.journals.importErrors">Importeringen var ikke vellykket</message>
-	<message key="admin.languages.downloadLocales">Last ned oversatte lokalfiler</message>
 	<message key="admin.languages.downloadFailed">Noe gikk galt med nedlastingen av oversatte lokalfiler. Se feilmeldingen(e) nedenfor.</message>
 	<message key="admin.languages.localeInstalled">Den oversatte lokalfilen "{$locale}" ble installert.</message>
 	<message key="admin.languages.download">Last ned oversatte lokalfiler</message>
-	<message key="admin.languages.reloadDefaultEmailTemplates">Last standard e-postmaler</message>
 	<message key="admin.languages.download.cannotOpen">Språkdeskriptoren fra PKP-nettstedet lar seg ikke åpne.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Kan ikke legge til de oversatte lokalfilene i registerfilen for lokalfiler, som vanligvis heter "registry/locales.xml".</message>
 	<message key="admin.journals.redirect">Generer kode for å oversette OJS 1 URLs to OJS 2 URLs</message>
@@ -72,7 +69,6 @@
 	<message key="admin.categories.create">Lag ny kategori</message>
 	<message key="admin.categories.noneCreated">Ingen kategorier er laget.</message>
 	<message key="admin.settings.options">Valg</message>
-	<message key="admin.settings.useAlphalist">For nettsted med mange tidsskrift: Vis en alfabetisk liste på hjemmesiden, slik at man lett kan navigere mellom tidsskriftene.</message>
 	<message key="admin.settings.usePaging">Dersom nettstedet har mange tidsskrift: Bryt tidsskrift listen opp over flere sider.</message>
 	<message key="admin.settings.journalsList">Tidsskriftelementer</message>
 	<message key="admin.settings.journalsList.description">Velg de tidsskriftelementer som skal vises for hvert tidsskrift på nettstedet.</message>

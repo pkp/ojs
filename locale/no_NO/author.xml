@@ -41,7 +41,6 @@
 	<message key="author.submit.journalSectionDescription"><![CDATA[Velg en passende seksjon for dette manuskriptet (Se Seksjoner og Retningslinjer i <a href="{$aboutUrl}">Om</a> tidsskriftet).]]></message>
 	<message key="submission.submit.selectSection">Vennligst velg en seksjon ...</message>
 	<message key="author.submit.submissionChecklist">Sjekkliste for klargjøring av manuskript</message>
-	<message key="submission.submit.submissionChecklistDescription">Bekreft at manuskriptet du sender inn er klargjort for vurdering hos dette tidsskriftet, ved å krysse av for følgende (øvrige kommentarer til redaktøren kan legges til nedenfor).</message>
 	<message key="author.submit.verifyChecklist">Du må sørge for at alle momentene i sjekklisten for klargjøring av manuskript er utført og krysset av, før du går videre.</message>
 	<message key="author.submit.copyrightNoticeAgree">Forfatteren aksepterer med dette at vilkårene i denne erklæringen om copyright gjøres gjeldende for dette manuskriptet, hvis og når det publiseres av dette tidsskriftet (øvrige kommentarer til redaktøren kan legges til nedenfor).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Du må bekrefte vilkårene i erklæringen om copyright før du går videre.</message>
@@ -55,7 +54,6 @@
 	<message key="author.submit.deleteAuthor">Slett forfatter</message>
 	<message key="author.submit.submissionIndexingDescription">Velg de begrepene som best beskriver manuskriptets innhold, i samsvar med kategoriene som brukes av dette tidsskriftet, og eksemplene som er gitt av redaktøren. Skill termene med semikolon (term1; term2; term3). Bruk så langt det er mulig kategorier fra offentlige standarder, som for eksempel Universitets- og høgskolerådets "Oversikt over fagråd og faginndeling." (Eksempel: per 1/1 2007 inndeles hovedkategorien Utdanningsvitenskap  i underkategoriene: Allmennpedagogikk, Lærerutdanning, Spesialpedagogikk, Fagdidaktikk, Yrkespedagogikk og yrkesdidaktikk, Førskolelærerpedagogikk, og Andre pedagogiske fag.)</message>
 	<message key="author.submit.coverageInstructions">Viser til dekning i både tid og rom; geografisk, topologisk, kronologisk eller historisk dekning, og/eller karakteristika ved materialet/utvalget.</message>
-	<message key="author.submit.subjectClassInstructions">Bruk det lenkete klassifikasjonssystemet for å finne klassifikasjonstermer og koder.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Norsk=no; English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Flere koder</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Minst en forfatter er påkrevet.</message>
 	<message key="author.submit.form.authorRequiredFields">Fornavn, etternavn, og e-postadresse for hver forfatter er påkrevet.</message>
@@ -84,7 +82,6 @@
 	<message key="author.submit.suppFile.dataSet">Datasett</message>
 	<message key="author.submit.suppFile.sourceText">Kildetekst</message>
 	<message key="author.submit.suppFile.briefDescription">Kort beskrivelse</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Bidragsyter eller kilde til støtte</message>
 	<message key="author.submit.suppFile.availableToPeers">Vis fram filen til fagkonsulenter (uten metadata), siden det ikke vil kompromittere anonym fagfellevurdering.</message>
 	<message key="author.submit.suppFile.publisherDescription">Bruk bare for formelt publiserte materials.</message>
 	<message key="author.submit.suppFile.dateDescription">Dato når data ble samlet inn eller instrument framstilt.</message>
@@ -101,7 +98,6 @@
 	<message key="author.submit.filesSummary">Filopplasting: Oppsummering</message>
 	<message key="author.submit.finishSubmission">Bekreft innsending</message>
 	<message key="author.submit.submissionComplete">Innsendingen er fullført. Takk for at du vil publisere hos {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Hvis dette manuskriptet er i et format som er klart for publisering uten ytterligere vurdering eller redigering, kan det sendes rett til det siste stadiet i manuskriptarbeidskøen ved å <a href="{$expediteUrl}" class="action">Klikke her</a>. (NB: Bare ansvarlig redaktør har denne valgmuligheten for sin manuskriptbehandling.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Last opp forfatterens versjon</message>
 	<message key="author.article.copyeditedFile">Manusredigert fil</message>
 	<message key="author.article.authorRevisedFile">Forfatterfil</message>

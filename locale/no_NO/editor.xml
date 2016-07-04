@@ -80,9 +80,7 @@
 	<message key="editor.issues.noLiveIssues">Ingen akive Utgaver</message>
 	<message key="editor.issues.open">Nå åpent</message>
 	<message key="editor.issues.pages">Sider</message>
-	<message key="editor.navigation.issues">Utgaver</message>
 	<message key="editor.navigation.futureIssues">Framtidige utgaver</message>
-	<message key="editor.navigation.createIssue">Opprett utgave</message>
 	<message key="editor.navigation.issueArchive">Tidligere utgaver</message>
 	<message key="editor.article.designateReviewVersion">Registrer originalfilen som fagvurderingsversjon</message>
 	<message key="editor.article.uploadReviewVersion">Last opp en omarbeidet fagvurderingsversjon</message>
@@ -164,10 +162,6 @@
 	<message key="editor.submissions.lastCompleted">Siste utført</message>
 	<message key="editor.article.scheduleForPublication">Planlegg for publisering i</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Skal oppnevnes</message>
-	<message key="editor.article.reviewForms">Vurderingsskjemaer</message>
-	<message key="editor.article.selectReviewForm">Velg vurderingsskjema</message>
-	<message key="editor.article.clearReviewForm">Tøm vurderingsskjema</message>
-	<message key="editor.article.confirmChangeReviewForm"><![CDATA[<b>Advarsel:</b> Hvis du endrer dette vurderingsskjemaet vil dette virke tilbake på alle svar som allerede er lagt inn av fagkonsulenter i dette skjemaet. Er du sikker på at du vil fortsette?]]></message>
 	<message key="editor.allEditors">Alle redaktører</message>
 	<message key="editor.me">Meg</message>
 	<message key="editor.submissionReview.emailWillArchive">Dette innsendte manuskriptet vil bli overført til arkivet så snart e-post til forfatteren er sendt eller kansellert.</message>
