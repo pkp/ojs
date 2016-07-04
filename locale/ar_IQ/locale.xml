@@ -508,7 +508,7 @@
 	<message key="sectionEditor.proofreader.confirmRenotify">إشعار مصحح القراءة هذا  مرة أخرى سيؤدي إلى إعادة تعيين مهمته من البدء. هل أنت متأكد من رغبتك في عمل ذلك؟</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">إعتذارات</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} إعتذارات عن التحكيم، إلغاءات، وجولات سابقة</message>
+	<message key="sectionEditor.regrets.title">#{$submissionId} إعتذارات عن التحكيم، إلغاءات، وجولات سابقة</message>
 	<message key="sectionEditor.regrets">الإعتذارات</message>
 	<message key="sectionEditor.regrets.link">معاينة الإعتذارات، الإلغاءات، الجولات السابقة</message>
 	<message key="sectionEditor.regrets.reviewRound">التحكيم المناظر، الجولة {$round}</message>
@@ -982,48 +982,48 @@
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} قد أدخل طلب نشر جديد، رقمه التعريفي ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} قام بتنقيح المؤلَّف {$articleId}. رمز الملف الجديد ID {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} قد تم فكه من تحكيم طلب النشر {$articleId} خلال جولة التحكيم {$round}.</message>
-	<message key="log.review.reviewInitiated">جولة التحكيم {$round} من قبل {$reviewerName} للمؤلَّف {$articleId} قد بوشر بها.</message>
-	<message key="log.review.reviewReinitiated">جولة التحكيم {$round} من قبل {$reviewerName} للمؤلَّف {$articleId} قد أعيد الشروع بها.</message>
-	<message key="log.review.reviewCancelled">جولة التحكيم {$round} من قبل {$reviewerName} للمؤلَّف {$articleId} قد ألغيت.</message>
-	<message key="log.review.reviewCleared">The round {$round} review by {$reviewerName} for submission {$articleId} has been cleared.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} قد تم تقييمه خلال الجولة {$round} من تحكيم المؤلَّف {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">تأريخ استيجاب التحكيم للجولة {$round} من تحكيم المؤلَّف {$articleId} من قبل {$reviewerName}تم ضبطها إلى {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">تم وضع توصية التحكيم في الجولة {$round} من تحكيم المؤلَّف {$articleId} من قبل {$reviewerName}.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">تم وضع التوصية في الجولة {$round} من تحكيم المؤلَّف {$articleId} من قبل المحرر {$editorName}، نيابة عن المحكم {$reviewerName}.</message>
-	<message key="log.review.resubmit">طلب النشر {$articleId} قد أعيد تقديمه للتحكيم.</message>
-	<message key="log.review.reviewDeclined">المحكم {$reviewerName} إعتذر خلال الجولة {$round} من تحكيم المؤلَّف {$articleId}.</message>
-	<message key="log.review.reviewAccepted">المحكم {$reviewerName} وافق خلال الجولة {$round} لتحكيم المؤلَّف {$articleId}.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} إعتذر خلال الجولة {$round} من تحكيم المؤلَّف {$articleId} نيابة عن المحكم{$reviewerName}.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} وافق خلال الجولة {$round} لتحكيم المؤلَّف {$articleId} نيابة عن المحكم {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">المحرر {$userName}، قام برفع ملف للتحكيم للجولة {$round} للمؤلَّف {$articleId} نيابة عن المحكم {$reviewerName}.</message>
+	<message key="log.author.documentRevised">{$authorName} قام بتنقيح المؤلَّف {$submissionId}. رمز الملف الجديد ID {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} قد تم فكه من تحكيم طلب النشر {$submissionId} خلال جولة التحكيم {$round}.</message>
+	<message key="log.review.reviewInitiated">جولة التحكيم {$round} من قبل {$reviewerName} للمؤلَّف {$submissionId} قد بوشر بها.</message>
+	<message key="log.review.reviewReinitiated">جولة التحكيم {$round} من قبل {$reviewerName} للمؤلَّف {$submissionId} قد أعيد الشروع بها.</message>
+	<message key="log.review.reviewCancelled">جولة التحكيم {$round} من قبل {$reviewerName} للمؤلَّف {$submissionId} قد ألغيت.</message>
+	<message key="log.review.reviewCleared">The round {$round} review by {$reviewerName} for submission {$submissionId} has been cleared.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} قد تم تقييمه خلال الجولة {$round} من تحكيم المؤلَّف {$submissionId}.</message>
+	<message key="log.review.reviewDueDateSet">تأريخ استيجاب التحكيم للجولة {$round} من تحكيم المؤلَّف {$submissionId} من قبل {$reviewerName}تم ضبطها إلى {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">تم وضع توصية التحكيم في الجولة {$round} من تحكيم المؤلَّف {$submissionId} من قبل {$reviewerName}.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">تم وضع التوصية في الجولة {$round} من تحكيم المؤلَّف {$submissionId} من قبل المحرر {$editorName}، نيابة عن المحكم {$reviewerName}.</message>
+	<message key="log.review.resubmit">طلب النشر {$submissionId} قد أعيد تقديمه للتحكيم.</message>
+	<message key="log.review.reviewDeclined">المحكم {$reviewerName} إعتذر خلال الجولة {$round} من تحكيم المؤلَّف {$submissionId}.</message>
+	<message key="log.review.reviewAccepted">المحكم {$reviewerName} وافق خلال الجولة {$round} لتحكيم المؤلَّف {$submissionId}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} إعتذر خلال الجولة {$round} من تحكيم المؤلَّف {$submissionId} نيابة عن المحكم{$reviewerName}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} وافق خلال الجولة {$round} لتحكيم المؤلَّف {$submissionId} نيابة عن المحكم {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">المحرر {$userName}، قام برفع ملف للتحكيم للجولة {$round} للمؤلَّف {$submissionId} نيابة عن المحكم {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">تم رفع ملف أحد المحكمين.</message>
-	<message key="log.editor.decision">تم تسجيل قرار المحرر الآتي: ({$decision}) للمؤلَّف {$articleId} من قبل {$editorName}.</message>
+	<message key="log.editor.decision">تم تسجيل قرار المحرر الآتي: ({$decision}) للمؤلَّف {$submissionId} من قبل {$editorName}.</message>
 
 
-	<message key="log.copyedit.initiate">تم الشروع بتدقيق المؤلَّف {$articleId} من قبل {$copyeditorName}.</message>
+	<message key="log.copyedit.initiate">تم الشروع بتدقيق المؤلَّف {$submissionId} من قبل {$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">تم اختيار ملف التدقيق الإفتراضي.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} قد أكمل مرحلة التدقيق الأولي للمؤلَّف {$articleId}.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} قد أكمل مرحلة التدقيق النهائي للمؤلَّف {$articleId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} قد تم تعيينه لتدقيق المؤلَّف {$articleId}.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} قد أكمل مرحلة التدقيق الأولي للمؤلَّف {$submissionId}.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} قد أكمل مرحلة التدقيق النهائي للمؤلَّف {$submissionId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} قد تم تعيينه لتدقيق المؤلَّف {$submissionId}.</message>
 	<message key="log.copyedit.copyeditorFile">تم رفع نسخة مدققة من ملف طلب نشر إلى الموقع.</message>
 	<message key="log.copyedit.authorFile">تم رفع نسخة مدققة من ملف طلب نشر إلى الموقع من قبل المؤلف.</message>
 
-	<message key="log.layout.layoutEditorAssigned">{$editorName} قد تم تعيينه كمصمم طباعي للمؤلَّف {$articleId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} قد تم فك تعيينه كمصمم طباعي من المؤلَّف {$articleId}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} قد أكمل مهمة التصميم طباعي للمؤلَّف {$articleId}.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} قد تم تعيينه كمصمم طباعي للمؤلَّف {$submissionId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} قد تم فك تعيينه كمصمم طباعي من المؤلَّف {$submissionId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} قد أكمل مهمة التصميم طباعي للمؤلَّف {$submissionId}.</message>
 
 	<message key="log.editor.metadataModified">تم تعديل البيانات الوصفية للمؤلَّف من قبل {$editorName}.</message>
 	<message key="log.editor.editorFile">تم رفع نسخة المحرر من ملف طلب نشر إلى الموقع.</message>
-	<message key="log.editor.archived">المؤلَّف {$articleId} قد تم حفظه.</message>
-	<message key="log.editor.restored">المؤلَّف {$articleId} قد تمت استعادته إلى طابور التحرير.</message>
-	<message key="log.editor.editorAssigned">{$editorName} قد تم تعيينه كمحرر لطلب النشر {$articleId}.</message>
+	<message key="log.editor.archived">المؤلَّف {$submissionId} قد تم حفظه.</message>
+	<message key="log.editor.restored">المؤلَّف {$submissionId} قد تمت استعادته إلى طابور التحرير.</message>
+	<message key="log.editor.editorAssigned">{$editorName} قد تم تعيينه كمحرر لطلب النشر {$submissionId}.</message>
 
-	<message key="log.proofread.assign">{$assignerName} قد عين {$proofreaderName} لمهمة القراءة التصحيحية للمؤلَّف {$articleId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} قد قدم {$articleId} للجدولة.</message>
+	<message key="log.proofread.assign">{$assignerName} قد عين {$proofreaderName} لمهمة القراءة التصحيحية للمؤلَّف {$submissionId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} قد قدم {$submissionId} للجدولة.</message>
 
-	<message key="log.imported">{$userName} قد استورد المؤلَّف {$articleId}.</message>
+	<message key="log.imported">{$userName} قد استورد المؤلَّف {$submissionId}.</message>
 
 	<!-- Reading Tools entries -->
 
