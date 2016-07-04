@@ -4,7 +4,7 @@
 <!--
   * /locale/da_DK/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,23 +12,23 @@
   *
   -->
 
-<locale name="da_DK" full_name = "Danish">
+<locale name="da_DK" full_name="Dansk">
 	<message key="author.submit">Nyt manuskript</message>
 	<message key="author.track">Aktive manuskripter</message>
 	<message key="author.competingInterests"><![CDATA[Konkurrerende interesser <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></message>
 	<message key="author.submit.submitArticle">Fremsend en artikel</message>
 	<message key="author.submit.stepsToSubmit">Manuskriptprocessens fem trin</message>
-	<message key="author.submit.startHereTitle">Start et nyt manuskript</message>
-	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Klik her</a> for at gå til trin 1 af de fem trin, som manuskriptprocessen består af.]]></message>
-	<message key="author.submit.step1">Trin 1. Start af manuskriptet</message>
+	<message key="author.submit.startHereTitle">Start en ny indsendelse</message>
+	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Klik her</a> for at gå til trin 1 af de fem trin, som indsendelsesprocessen består af.]]></message>
+	<message key="author.submit.step1">Trin 1. Start indsendelsen</message>
 	<message key="author.submit.step4">Trin 4. Overførsel af supplerende filer</message>
 	<message key="author.submit.step4a">Trin 4a. Tilføj en supplerende fil</message>
-	<message key="author.submit.step5">Trin 5. Bekræftelse af manuskriptet</message>
+	<message key="author.submit.step5">Trin 5. Bekræft indsendelsen</message>
 	<message key="author.submit.start">1. Start</message>
 	<message key="author.submit.supplementaryFiles">4. Overfør supplerende filer</message>
 	<message key="author.submit.confirmation">5. Bekræftelse</message>
-	<message key="author.submit.cancelSubmission">Du kan fuldføre dette manuskript på et senere tidspunkt ved at vælge Aktive manuskripter på startsiden for forfattere.</message>
-	<message key="author.submit.notAccepting">Dette tidsskrift accepterer ikke manuskripter på nuværende tidspunkt.</message>
+	<message key="author.submit.cancelSubmission">Du kan fuldføre denne indsendelse på et senere tidspunkt ved at vælge Aktive indsendelser på startsiden for forfattere.</message>
+	<message key="author.submit.notAccepting">Dette tidsskrift accepterer ikke indsendelser på nuværende tidspunkt.</message>
 	<message key="author.submit.requestWaiver">Anmod om afkald</message>
 	<message key="author.submit.qualifyForWaiver">Overvej at give afkald på artikelmanuskriptgebyret for denne artikel</message>
 	<message key="author.submit.addReasonsForWaiver">Angiv, hvorfor der skal gives afkald på gebyrer, i kommentarfeltet nedenfor.</message>
@@ -41,22 +41,25 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Er du stødt på vanskeligheder? Kontakt <a href="mailto:{$supportEmail}">{$supportName}</a> for at få hjælp.]]></message>
 	<message key="author.submit.journalSection">Tidsskriftssektion</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Vælg den relevante sektion til dette manuskript (se Sektioner og Politikker under <a href="{$aboutUrl}" target="_new">Om</a> tidsskriftet).]]></message>
-	<message key="submission.submit.selectSection">Vælg en sektion...</message>
-	<message key="submission.submit.submissionChecklist">Manuskripttjekliste</message>
-	<message key="submission.submit.submissionChecklistDescription">Angiv, at dette manuskript er klar til at blive vurderet af dette tidsskrift ved at afkrydse følgende (kommentarer til redaktøren kan tilføjes nedenfor).</message>
+	<message key="author.submit.selectSection">Vælg en sektion...</message>
+	<message key="author.submit.submissionChecklist">Manuskripttjekliste</message>
+	<message key="author.submit.submissionChecklistDescription">Angiv, at dette manuskript er klar til at blive vurderet af dette tidsskrift ved at afkrydse følgende (kommentarer til redaktøren kan tilføjes nedenfor).</message>
 	<message key="author.submit.verifyChecklist">Du skal sikre, at alle elementer på manuskripttjeklisten er opfyldt, inden du fortsætter.</message>
 	<message key="author.submit.copyrightNoticeAgree">Forfatterne accepterer vilkårene under Oplysninger om ophavsret, der vil finde anvendelse på dette manuskript, hvis og når det publiceres af dette tidsskrift (kommentarer til redaktøren kan tilføjes nedenfor).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Du skal acceptere vilkårene under Oplysninger om ophavsret, inden du fortsætter.</message>
-	<message key="submission.submit.coverNote">Kommentarer til redaktøren</message>
+	<message key="author.submit.commentsForEditor">Kommentarer til redaktøren</message>
 	<message key="author.submit.comments">Angiv tekst (valgfri)</message>
 	<message key="author.submit.form.sectionRequired">Vælg en relevant tidsskriftssektion til dette manuskript.</message>
-	<message key="submission.submit.privacyStatement">Tidsskriftets erklæring om beskyttelse af personlige oplysninger</message>
+	<message key="author.submit.privacyStatement">Tidsskriftets erklæring om beskyttelse af personlige oplysninger</message>
 	<message key="author.submit.reorderInstructions">Omroker forfattere, så de vises i den rækkefølge, de vil være angivet i ved publiceringen.</message>
 	<message key="author.submit.selectPrincipalContact">Primær kontaktperson for redaktionel korrespondance.</message>
 	<message key="author.submit.addAuthor">Tilføj forfatter</message>
 	<message key="author.submit.deleteAuthor">Slet forfatter</message>
 	<message key="author.submit.submissionIndexingDescription">Angiv termer for indeksering af manuskriptet, og adskil termerne med et semikolon (term1; term2; term3).</message>
+	<message key="author.submit.submissionSupportingAgencies">Støtteinstanser</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Identificer instanser, der yder finansiering eller support til det værk, der præsenteres i dette manuskript.</message>
 	<message key="author.submit.coverageInstructions">Henviser til geografisk placering, kronologisk eller historisk dækning og/eller karaktertræk ved forskningseksempel.</message>
+	<message key="author.submit.subjectClassInstructions">Brug klassificeringssystemet med hyperlinks til at vælge klassificeringstermer og eventuelt numre.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Engelsk=en; Fransk=fr; Spansk=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Flere koder</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Mindst én forfatter er påkrævet.</message>
 	<message key="author.submit.form.authorRequiredFields">Fornavnet, efternavnet og e-mail-adressen på hver enkelt forfatter er påkrævet.</message>
@@ -104,7 +107,7 @@
 	<message key="author.submit.noFiles">Der er ikke vedhæftet nogen filer til dette manuskript.</message>
 	<message key="author.submit.filesSummary">Filresumé</message>
 	<message key="author.submit.finishSubmission">Afslut manuskript</message>
-	<message key="author.submit.submissionComplete">Manuskriptet er fuldført. Tak, fordi du er interesseret i at publicere din artikel i {$journalTitle}.</message>
+	<message key="author.submit.submissionComplete">Indsendelsen er fuldført. Tak, fordi du er interesseret i at publicere din artikel i {$journalTitle}.</message>
 	<message key="author.submit.expedite"><![CDATA[Hvis manuskriptet er i et format, der er klar til at blive publiceret uden yderligere bedømmelse, redigering eller layout, kan du placere det direkte i den sidste fase af redigeringskøen ved at <a href="{$expediteUrl}" class="action">klikke her</a>. (Bemærk! Det er kun tidsskriftsredaktører, der har denne mulighed med hensyn til deres manuskripter).]]></message>
 	<message key="author.article.uploadAuthorVersion">Overfør forfatterversion</message>
 	<message key="author.article.copyeditedFile">Manuskriptredigeret fil</message>
@@ -112,8 +115,8 @@
 	<message key="author.submit.authorSubmitLoginMessage">Der kræves en brugerkonto for at kunne fremsende et manuskript til dette tidsskrift. Dette gør det muligt for vores redaktører at registrere dine manuskripter og kontakte dig, når dit manuskripts status ændrer sig, eller hvis du skal angive yderligere oplysninger.</message>
 	<message key="author.submit.step2">Trin 2. Upload af indleveret manuskript</message>
 	<message key="author.submit.step3">Trin 3. Indtastning af metadata for det indleverede manuskript</message>
-	<message key="author.submit.upload">Upload indleveret manuskript</message>
-	<message key="author.submit.metadata">Indtast metadata</message>
+	<message key="author.submit.upload">2. Upload indleveret manuskript</message>
+	<message key="author.submit.metadata">3. Indtast metadata</message>
 	<message key="author.submit.mustEnterWaiverReason">Hvis du ønsker at melde fra, skal du angive en årsag i det dertil hørende felt.</message>
 	<message key="author.submissions.queuedReviewSubsequent">I bedømmelsesrunde {$round}</message>
 	<message key="author.submissions.queuedReviewRevisions">Under bedømmelse: Rettelser påkrævet</message>
@@ -123,5 +126,5 @@
 	<message key="author.submit.submissionLocaleDescription">Dette tidsskrift accepterer indleverede manuskripter på en række sprog. Vælg det primære sprog for indleveringen i rullemenuen.</message>
 	<message key="author.submit.form.localeRequired">Vælg et indleveringssprog.</message>
 	<message key="author.submit.reorder">Genbestil forfatternavn</message>
-	<message key="author.submit.form.wordCountAlert">Du har overskredet grænsen for det maksimale antal ord for abstrakter i denne sektion.</message>
+	<message key="author.submit.form.wordCountAlert">Du har overskredet grænsen for det maksimale antal ord for resuméer i denne sektion.</message>
 </locale>

@@ -4,7 +4,7 @@
 <!--
   * locale/da_DK/editor.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="da_DK" full_name = "Danish">
+<locale name="da_DK" full_name="Dansk">
 	<message key="editor.article.reviewForms">Review formularer</message>
 	<message key="editor.article.selectReviewForm">Vælg review formular</message>
 	<message key="editor.article.clearReviewForm">Nulstil review formular</message>
@@ -22,7 +22,7 @@
 	<message key="editor.submissionQueue">Manuskriptkø</message>
 	<message key="editor.submissionArchive">Manuskriptarkiv</message>
 	<message key="editor.publishing">Publicering</message>
-	<message key="editor.publishedIssues">Publicerede udgaver</message>
+	<message key="editor.publishedIssues">Publicerede numre</message>
 	<message key="editor.allSections">Alle sektioner</message>
 	<message key="editor.allEditors">Alle redaktører</message>
 	<message key="editor.me">Me</message>
@@ -36,24 +36,24 @@
 	<message key="editor.usersNotified">Underrettede brugere</message>
 	<message key="editor.notifyUsers.allUsers">Send denne meddelelse til alle brugere, der er tilknyttet dette tidsskrift ({$count} brugere)</message>
 	<message key="editor.notifyUsers.interestedUsers">Send denne meddelelse til de brugere, der er tilknyttet dette tidsskrift, og der har indikeret, at de ønsker at modtage opdateringer ({$count} brugere)</message>
-	<message key="editor.notifyUsers.includeToc">Medtag indholdsfortegnelsen fra denne udgave:</message>
+	<message key="editor.notifyUsers.includeToc">Medtag indholdsfortegnelsen fra dette nummer:</message>
 	<message key="editor.editorAdministration">Administration af redaktører</message>
-	<message key="editor.issues.createIssue">Opret udgave</message>
-	<message key="editor.issues.backIssues">Tidligere udgaver</message>
-	<message key="editor.issues.futureIssues">Fremtidige udgaver</message>
-	<message key="editor.issues.currentIssue">Aktuel udgave</message>
-	<message key="editor.issues.numArticles">Elementer</message>
-	<message key="editor.issues.noArticles">Der er i øjeblikket ikke planlagt nogen elementer til denne udgave.</message>
-	<message key="editor.issues.confirmDelete">Er du sikker på, at du vil slette denne udgave permanent?</message>
+	<message key="editor.issues.createIssue">Opret nummer</message>
+	<message key="editor.issues.backIssues">Tidligere numre</message>
+	<message key="editor.issues.futureIssues">Fremtidige numre</message>
+	<message key="editor.issues.currentIssue">Aktuelt nummer</message>
+	<message key="editor.issues.numArticles">Artikler</message>
+	<message key="editor.issues.noArticles">Der er i øjeblikket ikke planlagt nogen artikler til dette nummer.</message>
+	<message key="editor.issues.confirmDelete">Er du sikker på, at du vil slette dette nummer permanent?</message>
 	<message key="editor.issues.published">Publiceret</message>
 	<message key="editor.issues.unpublished">Ikke-publiceret</message>
 	<message key="editor.issues.volumeRequired">Årgang er påkrævet og skal være en positiv, numerisk værdi.</message>
 	<message key="editor.issues.numberRequired">Nummer er påkrævet og skal være en positiv, numerisk værdi.</message>
 	<message key="editor.issues.yearRequired">År er påkrævet og skal være en positiv, numerisk værdi.</message>
-	<message key="editor.issues.titleRequired">Titel er påkrævet for denne udgave.</message>
-	<message key="editor.issues.issueIdentificationRequired">Udgaveidentifikation er påkrævet. Vælg mindst en af indstillingerne for udgaveidentifikation.</message>
-	<message key="editor.issues.issueIdentification">Udgaveidentifikation</message>
-	<message key="editor.issues.publicIssueIdentifier">Offentligt udgave-id</message>
+	<message key="editor.issues.titleRequired">Titel er påkrævet for dette nummer.</message>
+	<message key="editor.issues.issueIdentificationRequired">Nummeridentifikation er påkrævet. Vælg mindst en af indstillingerne for udgaveidentifikation.</message>
+	<message key="editor.issues.issueIdentification">Nummeridentifikation</message>
+	<message key="editor.issues.publicIssueIdentifier">Offentligt nummer-id</message>
 	<message key="editor.issues.description">Beskrivelse</message>
 	<message key="editor.issues.accessStatus">Adgangsstatus</message>
 	<message key="editor.issues.accessDate">Dato for Open Access</message>
@@ -69,7 +69,7 @@
 	<message key="editor.issues.invalidStyleFormat">Ugyldigt format for typografiark. Kontroller, at den fremsendte fil er en gyldig CSS. (Vær opmærksom på, at typografiark med kommentarer i begyndelsen kan blive afvist).</message>
 	<message key="editor.issues.removeStyleFile">Vil du fjerne typografiarket?</message>
 	<message key="editor.issues.coverPageCaption">Billedtekst til forside</message>
-	<message key="editor.issues.showCoverPage">Opret en forside til denne udgave med følgende elementer.</message>
+	<message key="editor.issues.showCoverPage">Opret en forside til dette nummer med følgende artikler.</message>
 	<message key="editor.issues.coverPageDisplay">Vis</message>
 	<message key="editor.issues.hideCoverPageArchives">Vis ikke forsidebillede thumbnail i liste over numre</message>
 	<message key="editor.issues.hideCoverPageCover">vis ikke forsidebillede før indholdsfortegnelse</message>
@@ -78,25 +78,26 @@
 	<message key="editor.issues.identification">Identifikation</message>
 	<message key="editor.issues.access">Adgang</message>
 	<message key="editor.issues.cover">Forside</message>
-	<message key="editor.issues.confirmIssueDelete">Alle artikler returneres til redigeringskøen, og alle tilknyttede filer fjernes permanent. Er du sikker på, at du vil fjerne denne udgave?</message>
-	<message key="editor.issues.resetIssueOrder"><![CDATA[Dette tidsskrift anvender brugerdefineret udgavesortering. <a href="{$url}" class="action">Nulstil til standarder</a>]]></message>
-	<message key="editor.issues.resetSectionOrder"><![CDATA[Denne udgave anvender brugerdefineret sektionssortering. <a href="{$url}" class="action">Nulstil til standarder</a>]]></message>
-	<message key="editor.issues.issueData">Udgavedata</message>
+	<message key="editor.issues.confirmIssueDelete">Alle artikler returneres til redigeringskøen, og alle tilknyttede filer fjernes permanent. Er du sikker på, at du vil fjerne dette nummer?</message>
+	<message key="editor.issues.resetIssueOrder"><![CDATA[Dette tidsskrift anvender brugerdefineret nummersortering. <a href="{$url}" class="action">Nulstil til standarder</a>]]></message>
+	<message key="editor.issues.resetSectionOrder"><![CDATA[Dette nummer anvender brugerdefineret sektionssortering. <a href="{$url}" class="action">Nulstil til standarder</a>]]></message>
+	<message key="editor.issues.issueData">Nummerdata</message>
 	<message key="editor.issues.saveChanges">Vil du gemme ændringerne til indholdsfortegnelsen?</message>
 	<message key="editor.issues.default">Standard</message>
 	<message key="editor.issues.order">Rækkefølge</message>
 	<message key="editor.issues.publicId">Offentligt id</message>
-	<message key="editor.issues.publishIssue">Publicer udgave</message>
-	<message key="editor.issues.previewIssue">Vis udgave</message>
+	<message key="editor.issues.publishIssue">Publicer nummer</message>
+	<message key="editor.issues.previewIssue">Vis nummer</message>
 	<message key="editor.issues.preview">(Eksempel)</message>
-	<message key="editor.issues.confirmPublish">Er du sikker på, at du vil publicere den nye udgave?</message>
+	<message key="editor.issues.confirmPublish">Er du sikker på, at du vil publicere det nye nummer?</message>
 	<message key="editor.issues.publicArticleIdExists">Det er ikke muligt at gemme offentligt id til artikel:</message>
-	<message key="editor.issues.noLiveIssues">Ingen Live-udgaver</message>
+	<message key="editor.issues.noLiveIssues">Ingen Live-numre</message>
 	<message key="editor.issues.open">Åbn</message>
 	<message key="editor.issues.pages">Sider</message>
-	<message key="editor.navigation.futureIssues">Fremtidige udgaver</message>
-	<message key="grid.action.addIssue">Opret udgave</message>
-	<message key="editor.navigation.issueArchive">Tidligere udgaver</message>
+	<message key="editor.navigation.issues">Numre</message>
+	<message key="editor.navigation.futureIssues">Fremtidige numre</message>
+	<message key="editor.navigation.createIssue">Opret nummer</message>
+	<message key="editor.navigation.issueArchive">Tidligere numre</message>
 	<message key="editor.article.designateReviewVersion">Angiv den oprindelige fil som Bedømmelsesversion</message>
 	<message key="editor.article.uploadReviewVersion">Overfør en revideret bedømmelsesversion</message>
 	<message key="editor.article.showSuppFile">Præsenter fil for bedømmere</message>
@@ -206,4 +207,17 @@
 	<message key="editor.issues.unpublishIssue">Træk udgivet nummer tilbage</message>
 	<message key="editor.issues.confirmUnpublish">Er du sikker på, at du vil trække dette udgivne nummer tilbage?</message>
 	<message key="editor.article.archiveSubmission">Afvis og arkiver indlevering</message>
+	<message key="editor.issues.galleys">Hele numre</message>
+	<message key="editor.issues.galley">Hele numre</message>
+	<message key="editor.issues.viewingGalley">Se hele nummeret</message>
+	<message key="editor.issues.issueGalleysDescription">Publicér fil med hele nummerets indhold</message>
+	<message key="editor.issues.noneIssueGalleys">Ingen fil med hele nummeret er blevet publiceret</message>
+	<message key="editor.issues.galleyLabelRequired">En nummerbetegnelse er nødvendig</message>
+	<message key="editor.issues.galleyLocaleRequired">En nummersprogkode er nødvendig</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">Nummerbetegnelsen er allerede publiceret</message>
+	<message key="editor.issues.backToIssueGalleys">Tilbage til hele numre</message>
+	<message key="editor.issues.confirmDeleteGalley">Er du sikker på, at du vil slette dette nummer?</message>
+	<message key="editor.reassign">Overfør</message>
+	<message key="editor.publicIdentificationExists">Filnavnet '{$publicIdentifier}' eksisterer allerede i forbindelse med andet materiale (nummer, artikel, publiceringsversion eller supplerende filer). Vælg et unikt filnavn inden for dit tidsskrift.</message>
+	<message key="editor.notifyUsers.allMailingList">Inkludér alle e-mails på mailinglisten  ({$count} e-mails)</message>
 </locale>
