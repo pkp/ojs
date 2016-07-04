@@ -24,11 +24,11 @@
 	<message key="author.submit.step4">مرحله چهارم: آپلود فایلهای الحاقی</message>
 	<message key="author.submit.step4a">مرحله چهارم آ: افزودن یک فایل الحاقی</message>
 	<message key="author.submit.step5">مرحله پنجم: تایید ساب میشن</message>
-	<message key="author.submit.start">1. شروع</message>
-	<message key="author.submit.upload">2. آپلود ساب میشن</message>
-	<message key="author.submit.metadata">3. وارد کردن متاداده</message>
-	<message key="author.submit.supplementaryFiles">4. آپلود فایلهای الحاقی</message>
-	<message key="author.submit.confirmation">5. تایید</message>
+	<message key="author.submit.start">شروع</message>
+	<message key="author.submit.upload">آپلود ساب میشن</message>
+	<message key="author.submit.metadata">وارد کردن متاداده</message>
+	<message key="author.submit.supplementaryFiles">آپلود فایلهای الحاقی</message>
+	<message key="author.submit.confirmation">تایید</message>
 	<message key="author.submit.cancelSubmission">میتوانید این ساب میشن را در وقتی دیگر کامل کنید. برای این کار به صفحه خانگی نویسنده رفته و ساب میشن های جاری را انتخاب کنید</message>
 	<message key="author.submit.notAccepting">این مجله در حال حاضر ساب میشن نمی پذیرد</message>
 	<message key="author.submit.requestWaiver">درخواست تخفیف</message>
@@ -43,16 +43,16 @@
 {$supportName} تماس بگیرید. شماره تماس ({$supportPhone}</message>
 	<message key="author.submit.journalSection">نوع مقاله</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[نوع مقاله را انتخاب کنید. باری اطلاعات بیشتر به انواع مقالات و سیاست گذاری در <a href="{$aboutUrl}">درباره </a> مجله مراجعه کنید.]]></message>
-	<message key="author.submit.selectSection">لطفا نوع مقاله را انتخاب کنید.</message>
+	<message key="submission.submit.selectSection">لطفا نوع مقاله را انتخاب کنید.</message>
 	<message key="author.submit.submissionChecklist">چک لیست ساب میشن</message>
-	<message key="author.submit.submissionChecklistDescription">با پر کردن چک لیست زیر اعلام کنید که این ساب میشن برای بررسی دفتر مجله آماده اشت. در قسمت پائین این صفحه می توانید نقطه نظرات دلخواه خود را به اطلاع سردبیر برسانید.</message>
+	<message key="submission.submit.submissionChecklistDescription">با پر کردن چک لیست زیر اعلام کنید که این ساب میشن برای بررسی دفتر مجله آماده اشت. در قسمت پائین این صفحه می توانید نقطه نظرات دلخواه خود را به اطلاع سردبیر برسانید.</message>
 	<message key="author.submit.verifyChecklist">قبل از ادامه کار اطمینان حاصل کنید که تمام موارد لازم برای ساب میشن که در چک لیست آمده است را رعایت کرده اید.</message>
 	<message key="author.submit.copyrightNoticeAgree">نویسنگان این مقاله موافقت خودشان را با این بیانیه کپی رایت اعلام می گنند. این بیانیه در صورت چاپ شدن این مقاله در این مجله قابل اعمال است. در قسمت پائین این صفحه نقطه نظرات دلخواه خود را به اطلاع سردبیر برسانید</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">قبل از ادامه ، می بایست با بیانیه کپی رایت موافقت کنید.</message>
-	<message key="author.submit.commentsForEditor">اعلام نقطه نظراتتان به سردبیر</message>
+	<message key="submission.submit.coverNote">اعلام نقطه نظراتتان به سردبیر</message>
 	<message key="author.submit.comments">متن نامه. اختیاری</message>
 	<message key="author.submit.form.sectionRequired">لطفا نوع مقاله خود را انتخاب کنید</message>
-	<message key="author.submit.privacyStatement">بیانیه محرمانگی اطلاعات مجله</message>
+	<message key="submission.submit.privacyStatement">بیانیه محرمانگی اطلاعات مجله</message>
 	<message key="author.submit.reorderInstructions">با استفاده از فلش ها ترتیب نام نویسندگان را تغییر دهید.</message>
 	<message key="author.submit.selectPrincipalContact">آدرس مرجع مکاتبات</message>
 	<message key="author.submit.addAuthor">افزودن نویسنده</message>

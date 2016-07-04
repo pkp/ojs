@@ -129,7 +129,7 @@
 <!-- یاداشت های ساب میشن --><!-- واژه های رایج مجله -->  <message key="journal.currentIssue">شماره کنونی</message>
 	<message key="journal.journals">مجلات</message>
 	<message key="journal.path">مسیر</message>
-	<message key="journal.journal">مجله</message>
+	<message key="context.context">مجله</message>
 <!-- کاربر -->	<message key="user.showAllJournals">مجلات مرا نشان بده</message>
 	<message key="user.registerForOtherJournals">ثبت نام برای دیگر مجلات</message>
 	<message key="user.myJournals">مجلات من</message>
