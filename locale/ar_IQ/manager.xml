@@ -111,7 +111,7 @@
 	<message key="manager.section.submissionsToThisSection">طلبات النشر المقدمة إلى هذا القسم من المجلة:</message>
 	<message key="manager.sections.unassigned">محررو القسم المتوفرون</message>
 	<message key="manager.sections.wordCount">عدد الكلمات</message>
-	<message key="manager.sections.wordCountInstructions">قيد عدد كلمات الملخص في هذا القسم (الصفر يعني بلا قيد): </message>
+	<message key="manager.sections.wordCountInstructions">قيد عدد كلمات الملخص في هذا القسم (الصفر يعني بلا قيد):</message>
 	<message key="manager.setup">التهيئة</message>
 	<message key="manager.setup.aboutItemContent">المحتوى</message>
 	<message key="manager.setup.addAboutItem">أضف فقرة (عن)</message>
@@ -127,7 +127,7 @@
 	<message key="manager.setup.announcementsDescription">يمكن نشر الإعلانات لإعلام قراء المجلة عن الأخبار والأحداث. الإعلانات المنشورة ستظهر على صفحة الإعلانات.</message>
 	<message key="manager.setup.announcementsIntroduction">معلومات إضافية</message>
 	<message key="manager.setup.announcementsIntroductionDescription">أدخل أي معلومات إضافية ينبغي عرضها للقراء على صفحة الإعلانات.</message>
-	<message key="manager.setup.appearInAboutJournal">(لتظهر في "عن المجلة") </message>
+	<message key="manager.setup.appearInAboutJournal">(لتظهر في "عن المجلة")</message>
 	<message key="manager.setup.competingInterests.requireAuthors">يتطلب تقديم المؤلفين لبيان المصالح المتنافسة (CI) مع طلبات النشر الخاصة بهم.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">يتطلب من المحكمين تقديم بيان المصالح المتنافسة (CI) مع كل تحكيم مناظر يقوموم به.</message>
 	<message key="manager.setup.history">تأريخ المجلة</message>
