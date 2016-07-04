@@ -27,7 +27,7 @@
 	<message key="manager.payment.authorFees">قیمت ها برای نویسنده</message>
 	<message key="manager.payment.authorFeesDescription">گزینه های انتخابی همراه با شرح و قیمت های آن (که در ایت قسمت قابل ویرایش است) در مرحله ۱ ساب میشن و در قسمت &quot;در باره مجله&quot; تحت قسمت ساب میشن, و همچنین هر جا که پرداخت لازم باشد, خواهد آمد.</message>
 	<message key="manager.payment.currency">واحد پولی</message>
-	<message key="manager.payment.currencymessage">هیچ تبدیل واحد پولی را انجام نمی دهد. چنانچه پرداخت برای اشتراکها را قبول می کنید باید از تطابق واحد پولی پرداختها از آنچه در اینجا ذکر شده اطمینان حاصل کنید OJS </message>
+	<message key="manager.payment.currencymessage">هیچ تبدیل واحد پولی را انجام نمی دهد. چنانچه پرداخت برای اشتراکها را قبول می کنید باید از تطابق واحد پولی پرداختها از آنچه در اینجا ذکر شده اطمینان حاصل کنید OJS</message>
 	<message key="manager.payment.description">توصیف</message>
 	<message key="manager.payment.details">جزئیات</message>
 	<message key="manager.payment.editSubscription">ویرایش اشتراک</message>
@@ -92,7 +92,7 @@
 	<message key="manager.sections.hideAbout">در قسمت &quot;درباره&quot; مجله ظاهر نشود.</message>
 	<message key="manager.sections.hideTocAuthor">در فهرست مقالات هر شماره مجله نام نویسندگان برای مقالات از این نوع آورده نشود</message>
 	<message key="manager.sections.hideTocTitle">عنوان این قسمت در فهرست مطالب شماره های مجله ظاهر نشود.</message>
-	<message key="manager.sections.identifyType">از نظر متا داده این نوع مقالات  در نظر بگیر به عنوان </message>
+	<message key="manager.sections.identifyType">از نظر متا داده این نوع مقالات  در نظر بگیر به عنوان</message>
 	<message key="manager.sections.identifyTypeExamples">مثلا مقالات کارشناسی شده ، مقالاه کارشناسی نشده ، ، مقالات دعوت شده و غیره.</message>
 	<message key="manager.sections.indexed">اندکس شده</message>
 	<message key="manager.sections.noneCreated">هیچ نوع مقاله تعریف نشده است.</message>

@@ -95,7 +95,7 @@
 	<message key="submission.reviewersVersion">نسخه حاشیه نویسی شده کارشناس</message>
 	<message key="submission.postReviewVersion">نسخه پس از کارشناسی</message>
 	<message key="submission.editorVersion">نسخه دبیر</message>
-	<message key="submission.authorsRevisedVersion">نسخه بازبینی شده نویسنده </message>
+	<message key="submission.authorsRevisedVersion">نسخه بازبینی شده نویسنده</message>
 	<message key="submission.authorVersion">نسخه نویسنده</message>
 	<message key="submission.copyediting">ویرایش</message>
 	<message key="submission.copyedit">ویرایش</message>
@@ -258,7 +258,7 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="sectionEditor.regrets.link">مشاده موارد عدم تمایل به انجام کارشناسی ، موارد کنسل ، دورهای قبل.</message>
 	<message key="sectionEditor.regrets.reviewRound">دور کارشناسی {$round}</message>
 	<message key="sectionEditor.regrets.decisionRound">تصمیم دبیر, دور: {$round}</message>
-	<message key="sectionEditor.regrets.regretsAndCancels">موارد عدم تمایل به انجام کارشناسی و موارد کنسل </message>
+	<message key="sectionEditor.regrets.regretsAndCancels">موارد عدم تمایل به انجام کارشناسی و موارد کنسل</message>
 	<message key="sectionEditor.regrets.result">نتیجه</message>
 	<message key="sectionEditor.review.enrollReviewer">اعطای رل کارشناس به کاربران موجود</message>
 	<message key="sectionEditor.review.createReviewer">ایجاد کارشناس جدید</message>
@@ -589,7 +589,7 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="gifts.thankYou">تشکر</message>
 	<message key="gifts.thankYouMessage">‎خرید اهدایی شما با موفقیت انجام شد. به محض دریافت پرداختی نسخه ای از ایمیلی که به دریافت کننده این هدیه اشتراک فرستاده میشود، برای شما نیز ارسال خواهد شد.</message>
 	<message key="gifts.purchaseGiftIndividualSubscription">اشتراک اهدایی</message>
-	<message key="gifts.subscriptionFormIntroduction">‎لطفا فرم زیر را پر کنید. ما از اطلاعات تماس و پیغام شخصی که شما در اختیار ما میگذارید اسفتاده میکنیم تا برای دریافت کننده هدیه اشتراک ایمیل بفرستیم و دریافت این هدیه از طرف شما را به آنها اطلاع دهیم. شما نیز نسخه ای از این ایمیل را دریافت خواهید کرد. </message>
+	<message key="gifts.subscriptionFormIntroduction">‎لطفا فرم زیر را پر کنید. ما از اطلاعات تماس و پیغام شخصی که شما در اختیار ما میگذارید اسفتاده میکنیم تا برای دریافت کننده هدیه اشتراک ایمیل بفرستیم و دریافت این هدیه از طرف شما را به آنها اطلاع دهیم. شما نیز نسخه ای از این ایمیل را دریافت خواهید کرد.</message>
 	<message key="gifts.details">ج‌زئیات اهدایی</message>
 	<message key="gifts.detailsDescription">لطفا هدیه مورد نظر را انتخاب کرده و پیغام شخصی که برای دریافت کننده فرستاده میشود را بنویسید (شما نیز نسخه ای از آن ایمیل را دریافت خواهید کرد).</message>
 	<message key="gifts.gift">هدیه</message>
