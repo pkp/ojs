@@ -26,11 +26,11 @@
 	<message key="author.submit.step4">Korak 4. Dodavanje dodatnih fajlova</message>
 	<message key="author.submit.step4a">Korak 4a. Dodavanje dodatnih fajlova</message>
 	<message key="author.submit.step5">Korak 5. Potvrda predaje</message>
-	<message key="author.submit.start">1. početak</message>
-	<message key="author.submit.upload">2. Dodavanje rada</message>
-	<message key="author.submit.metadata">3. Unos metapodataka</message>
-	<message key="author.submit.supplementaryFiles">4. Dodavanje dodatnih fajlova</message>
-	<message key="author.submit.confirmation">5. Potvrda</message>
+	<message key="author.submit.start">početak</message>
+	<message key="author.submit.upload">Dodavanje rada</message>
+	<message key="author.submit.metadata">Unos metapodataka</message>
+	<message key="author.submit.supplementaryFiles">Dodavanje dodatnih fajlova</message>
+	<message key="author.submit.confirmation">Potvrda</message>
 	<message key="author.submit.cancelSubmission">Možete završiti predaju kasnije odabirom "Aktivnih predaja" u autorskom nalogu.</message>
 	<message key="author.submit.notAccepting">Časopis trenutno ne prihvata predaje radova.</message>
 	<message key="author.submit.requestWaiver">Zahtevaj oslobađanje</message>
@@ -49,19 +49,19 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Imate preoblema? Kontaktirajute <a href="mailto:{$supportEmail}">{$supportName}</a> za pomoć ({$supportPhone}).]]></message>
 	<message key="author.submit.journalSection">Sekcije časopisa</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Odaberite odgovarajuću sekciju u časopisu (pogledajte sekcije i pravila u <a href="{$aboutUrl}" target="_new">O časopisu</a>).]]></message>
-	<message key="author.submit.selectSection">Odaberite sekciju...</message>
+	<message key="submission.submit.selectSection">Odaberite sekciju...</message>
 	<message key="author.submit.submissionLocale">Jezik predaje</message>
 	<message key="author.submit.submissionLocaleDescription">Ovaj časopis prihvata radove ne nekoliko jezika. Odaberite primarni jezik rada iz menija.</message>
 	<message key="author.submit.submissionChecklist">Spisak predaja</message>
-	<message key="author.submit.submissionChecklistDescription">Ukažite da je ova predaja spremna za razmatranje od strane časopisa isključivanjem sledećeg (komentare za urednika može ispod dodat).</message>
+	<message key="submission.submit.submissionChecklistDescription">Ukažite da je ova predaja spremna za razmatranje od strane časopisa isključivanjem sledećeg (komentare za urednika može ispod dodat).</message>
 	<message key="author.submit.verifyChecklist">Morate biti sigurni da su sve stavke u predaji zadovoljene pre nastavka.</message>
 	<message key="author.submit.copyrightNoticeAgree">Autor se slaže sa autorskim pravima koja će biti primenjena na ovaj rad ako i kada bude objavljen u časopisu (komentare za urednika može ispod dodat).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Morate se složiti sa Autorskim pravima pre nastavka.</message>
-	<message key="author.submit.commentsForEditor">Komentari za urednika</message>
+	<message key="submission.submit.coverNote">Komentari za urednika</message>
 	<message key="author.submit.comments">Unesite tekst (opciono)</message>
 	<message key="author.submit.form.sectionRequired">Odaberite odgovarajuću sekciju časopisa za rad.</message>
 	<message key="author.submit.form.localeRequired">Odaberite jezik rada.</message>
-	<message key="author.submit.privacyStatement">Izjava o privatnosti</message>
+	<message key="submission.submit.privacyStatement">Izjava o privatnosti</message>
 	<message key="author.submit.reorderInstructions">Redosled kojim će autori biti prikazani u časopisu.</message>
 	<message key="author.submit.reorder">Redosled imena autora</message>
 	<message key="author.submit.selectPrincipalContact">Contakt direktora za uredničku korespodenciju.</message>
