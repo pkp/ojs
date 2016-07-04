@@ -72,8 +72,6 @@ Dopo che avete finito con le vostre revisioni, rinominare il file da NomeAutoreQ
 &bull; [parola cancellata] indica l'omissione di "completamente"
 &bull; Il commento contiene una risposta alla QA dell'editor]]></message>
 
-	<message key="default.journalSettings.emailHeader"><![CDATA[Messaggio inviato per conto di {$ldelim}$contextName{$rdelim}.<br/>
-	________________________________________________________________________]]></message>
 	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
 <a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
 </message>
