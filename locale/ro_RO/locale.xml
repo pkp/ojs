@@ -202,7 +202,7 @@
 	<message key="journal.currentIssue">Numărul curent</message>
 	<message key="journal.journals">Reviste</message>
 	<message key="journal.path">Calea</message>
-	<message key="journal.journal">Journal</message>
+	<message key="context.context">Journal</message>
 	<message key="journal.issn">ISSN</message>
 
 	<!-- User -->
