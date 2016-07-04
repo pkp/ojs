@@ -104,7 +104,7 @@
 	<message key="manager.sections.unassigned">Editores/as de sección dispoñíbeis</message>
 	<message key="manager.setup">Configuración</message>
 	<message key="manager.setup.aboutItemContent">Contido</message>
-	<message key="manager.setup.addAboutItem">Engadir elemento Sobre a revista </message>
+	<message key="manager.setup.addAboutItem">Engadir elemento Sobre a revista</message>
 	<message key="manager.setup.addChecklistItem">Engadiir elemento á listaxe</message>
 	<message key="manager.setup.addItem">Engadir elemento</message>
 	<message key="manager.setup.addItemtoAboutJournal">Engadir elemento a "Sobre a Revista"</message>
