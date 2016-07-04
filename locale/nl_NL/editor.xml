@@ -4,7 +4,7 @@
 <!--
   * locale/nl_NL/editor.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="nl_NL" full_name = "Nederlands">
+<locale name="nl_NL" full_name="Nederlands">
 	<message key="editor.article.reviewForms">Reviewformulieren</message>
 	<message key="editor.article.selectReviewForm">Kies reviewformulier</message>
 	<message key="editor.article.clearReviewForm">Wis reviewformulier</message>
@@ -94,8 +94,9 @@
 	<message key="editor.issues.noLiveIssues">Geen actuele nummers</message>
 	<message key="editor.issues.open">Open</message>
 	<message key="editor.issues.pages">Pagina's</message>
+	<message key="editor.navigation.issues">Issues</message>
 	<message key="editor.navigation.futureIssues">Toekomstige nummers</message>
-	<message key="grid.action.addIssue">Nummer aanmaken</message>
+	<message key="editor.navigation.createIssue">Nummer aanmaken</message>
 	<message key="editor.navigation.issueArchive">Oude nummers</message>
 	<message key="editor.article.designateReviewVersion">Wijs het originele bestand aan als de reviewversie</message>
 	<message key="editor.article.uploadReviewVersion">Laad een herziene reviewversie</message>
@@ -218,4 +219,7 @@
 	<message key="editor.issues.galleyLocaleRequired">Een nummer-proef taalkode is verplicht.</message>
 	<message key="editor.issues.galleyPublicIdentificationExists">Publieke identificatie van de nummer-proef bestaat al</message>
 	<message key="editor.publicIdentificationExists">De publieke identificatie '{$publicIdentifier}' bestaat al voor een ander object (nummer, artikel, proef of aanvullend bestand). Kies een unieke identificatie.</message>
+	<message key="editor.notifyUsers.allMailingList">Neem alle e-mails op in de maillijst({$count} e-mails)</message>
+	<message key="editor.issues.resetArticlePublicationDates">Herstel artikel publicatie datums</message>
+	<message key="editor.publicGalleyIdentificationExists">De publieke identificatie '{$publicIdentifier}' bestaat al voor een andere proef van dit artikel. Kies een unieke identificatie voor dit artikel.</message>
 </locale>

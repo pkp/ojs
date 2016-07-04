@@ -4,7 +4,7 @@
 <!--
   * locale/nl_NL/manager.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="nl_NL" full_name = "Nederlands">
+<locale name="nl_NL" full_name="Nederlands">
 	<message key="manager.emails.confirmResetAll">Weet u zeker dat u alle e-mail sjablonen wilt terugzetten op hun standaardwaarden? Alle aanpassingen die u hebt gemaakt gaan verloren.</message>
 	<message key="manager.files.note">Noot: De bestandenbrowser is een geavanceerde functie waarmee u de bestanden en mappen van dit tijdschrift direct kunt bekijken en manipuleren.</message>
 	<message key="manager.groups">Redactieteam</message>
@@ -87,9 +87,44 @@
 	<message key="manager.people.roleEnrollment">{$role} Inschrijving</message>
 	<message key="manager.people.syncUserDescription">Synchronisatie zorgt ervoor dat alle gebruikers die ingeschreven staan in het gekozen tijdschrift in dezelfde rol ingeschreven worden in dit tijdschrift. Deze functie maakt het mogelijk om dezelfde groep gebruikers (bv. reviewers) te synchroniseren tussen tijdschriften</message>
 	<message key="manager.plugins.description">Deze pagina geeft de tijdschriftbeheerder de mogelijkheid om de plugins die momenteel geïnstalleerd zijn te bekijken en eventueel te configureren. Plugins zijn onderverdeeld in categorieën, afhankelijk van hun functies. De categorieën worden hieronder getoond met de bijbehorende plugins.</message>
+	<message key="manager.reviewFormElement.changeType">Waarschuwing: Het veranderen van elementtype van het reviewformulier van multiple-choice naar open vraag zal resulteren in het verwijderen van de multiple-choice opties.</message>
+	<message key="manager.reviewFormElements">Formulieritems</message>
+	<message key="manager.reviewFormElements.addResponseItem">Selectie toevoegen</message>
+	<message key="manager.reviewFormElements.checkboxes">Aankruisvelden (u kunt één of meer velden aankruisen)</message>
+	<message key="manager.reviewFormElements.chooseType">Kies itemtype</message>
+	<message key="manager.reviewFormElements.confirmDelete">Bevestig het verwijderen van een gepubliceerd item...</message>
+	<message key="manager.reviewFormElements.copyTo">Kopieer naar</message>
+	<message key="manager.reviewFormElements.create">Maak nieuw item</message>
+	<message key="manager.reviewFormElements.dropdownbox">Uitklapmenu</message>
+	<message key="manager.reviewFormElements.edit">Bewerk formulieritem</message>
+	<message key="manager.reviewFormElements.elementType">Elementtype</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">Een elementtype is verplicht voor een formulierelement</message>
+	<message key="manager.reviewFormElements.form.questionRequired">En vraag is verplicht bij een formulierelement</message>
+	<message key="manager.reviewFormElements.noneCreated">Er zijn geen items aangemaakt</message>
+	<message key="manager.reviewFormElements.possibleResponse">Selectie</message>
+	<message key="manager.reviewFormElements.question">Item</message>
+	<message key="manager.reviewFormElements.radiobuttons">Radioknoppen (u kunt er slechts één kiezen)</message>
+	<message key="manager.reviewFormElements.required">Reviewers moeten dit item afronden</message>
+	<message key="manager.reviewFormElements.smalltextfield">Tekstveld voor één woord</message>
+	<message key="manager.reviewFormElements.textarea">Uitgebreid tekstveld</message>
+	<message key="manager.reviewFormElements.textfield">Tekstveld voor één regel</message>
+	<message key="manager.reviewForms">Reviewformulieren</message>
+	<message key="manager.reviewForms.completed">Afgerond</message>
+	<message key="manager.reviewForms.confirmDeleteUnpublished">Bevestig het verwijderen van een niet-gepubliceerd reviewformulier...</message>
+	<message key="manager.reviewForms.create">Maak reviewformulier aan</message>
+	<message key="manager.reviewForms.description">Beschrijving en instructies</message>
+	<message key="manager.reviewForms.edit">Reviewformulier</message>
+	<message key="manager.reviewForms.form.titleRequired">Een titel is verplicht voor het reviewformulier</message>
+	<message key="manager.reviewForms.inReview">Onder review</message>
+	<message key="manager.reviewForms.list.description">Hier aangemaakte reviewformulieren worden aangeboden aan reviewers om verder in te vullen. Ze komen in de plaats van het standaardformulier dat uit twee tekstvelden bestaat, het eerste "voor auteur en redacteur"  en het tweede "voor redacteur". Reviewformulieren kunnen ontworpen worden voor een specifieke sectie van het tijdschrift. Redacteuren kunnen kiezen welk formulier gebruikt moet worden bij het toekennen van de review. In alle gevallen hebben redacteuren de mogelijkheid om de reviews op te nemen in de correspondentie met de auteur.</message>
+	<message key="manager.reviewForms.noneChosen">Geen / Vrije vorm review</message>
+	<message key="manager.reviewForms.noneCreated">Er zijn geen reviewformulieren aangemaakt</message>
+	<message key="manager.reviewForms.preview">Voorvertoningsformulier</message>
+	<message key="manager.reviewForms.title">Titel</message>
 	<message key="manager.sections.abstractsNotRequired">Samenvattingen niet verplicht stellen</message>
 	<message key="manager.sections.assigned">De redacteuren van deze sectie</message>
 	<message key="manager.sections.create">Sectie aanmaken</message>
+	<message key="manager.sections.disableComments">Lezerscommentaren uitschakelen voor deze sectie.</message>
 	<message key="manager.section.sectionEditorInstructions">Voeg een sectieredacteur toe aan deze sectie. Bepaal na het toevoegen of de sectieredacteur de REVIEW (peer review) en/of REDACTIE (tekstbewerken, opmaak en proeflezen) gaat regelen voor inzendingen voor deze sectie. Sectieredacteuren worden toegevoegd door te klikken op Sectieredacteuren bij Rollen in Tijdschriftbeheer.</message>
 	<message key="manager.sections.editorRestriction">Items kunnen alleen door redacteuren en sectieredacteuren ingezonden worden.</message>
 	<message key="manager.sections.editors">Sectieredacteuren</message>
@@ -149,7 +184,13 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Instructies voor de tekstredactie worden in de inzendings-redactie fase beschikbaar gesteld aan de tekstredacteurs, auteurs en sectieredacteurs. Zie hieronder voor een set voorbeeldinstructies in HTML. Deze kunnen op ieder gewenst moment door de tijdschriftbeheerder gewijzigd of vervangen worden (in HTML of gewone tekst).</message>
 	<message key="manager.setup.copyrightNotice">Auteursrecht verklaring</message>
 	<message key="manager.setup.coverage">Bereik</message>
+	<message key="manager.setup.coverageChronExamples">(Bv. Europese renaissance; het Juras; Derde trimester; enz.)</message>
+	<message key="manager.setup.coverageChronProvideExamples">Geef voorbeelden van relevante chronologische of historische termen voor dit veld</message>
 	<message key="manager.setup.coverageDescription">Verwijst naar geo-spatiale locatie, chronologische of historische spreiding en/of steekproef-karakteristiek van het onderzoek.</message>
+	<message key="manager.setup.coverageGeoExamples">(Bv. Iberisch schiereiland; Stratosfeer; Naaldwoud enz.)</message>
+	<message key="manager.setup.coverageGeoProvideExamples">Geef voorbeelden van relevantie geo-spatiale of geografische termen voor dit veld</message>
+	<message key="manager.setup.coverageResearchSampleExamples">(Bv. Leeftijd; Geslacht; Etniciteit; enz.)</message>
+	<message key="manager.setup.coverageResearchSampleProvideExamples">Geef voorbeelden van de onderzoeks-steekproef voor dit veld</message>
 	<message key="manager.setup.currentIssue">Huidig nummer</message>
 	<message key="manager.setup.customizingTheLook">Stap 5. Aanpassen van het uiterlijk</message>
 	<message key="manager.setup.customTags">Eigen tags</message>
@@ -163,6 +204,12 @@
 	<message key="manager.setup.disciplineProvideExamples">Geef voorbeelden van relevante academische disciplins voor dit tijdschrift</message>
 	<message key="manager.setup.displayCurrentIssue">De inhoudsopgave van het huidige nummer toevoegen (indien beschikbaar).</message>
 	<message key="manager.setup.editorDecision">Beslissing redacteur</message>
+	<message key="manager.setup.editorialMembers">Ga naar Teamleden en voeg redactie- en/of beoordelingsteamleden toe. Dit kan op ieder gewenst moment gebeuren.</message>
+	<message key="manager.setup.editorialProcess1">Een of meer redacteuren voeren de stappen uit zonder vooraf bepaalde rollen.</message>
+	<message key="manager.setup.editorialProcess2">De eindredacteur behandelt de inzendings-wachtrij en de inhoudsopgave, de sectieredacteuren behandelen de reviews en redactie van de inzendingen.</message>
+	<message key="manager.setup.editorialProcess3">De eindredacteur behandelt de inzendings-wachtrij, de redactie van de inzendingen en de inhoudsopgave, de sectieredacteuren doen de reviews.</message>
+	<message key="manager.setup.editorialReviewBoard">Redactie / Review team</message>
+	<message key="manager.setup.editorialReviewBoardDescription">Tijdschriften hebben een redactieteam om de redactionele richting van het tijdschrift te beoordelen, deel te nemen in het benoemen van redacteuren, en door middel van de reputatie van de leden van het redactieteam, het tijdschrift aanzicht in het veld te geven. Reviewteams hebben een soortgelijke rol maar leiden bovendien de reviewprocedure. Reviewteam leden hebben geen toegang tot het administratieve systeem van het tijdschrift maar worden toegevoegd aan de lijst van beschikbare reviewers.</message>
 	<message key="manager.setup.emailBounceAddress">Retouradres voor onbestelbare e-mail</message>
 	<message key="manager.setup.emailBounceAddressDescription">E-mails die niet afgeleverd kunnen worden, resulteren in een foutbericht op dit adres.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Noot:</strong> Om deze optie te activeren moet de beheerder de <tt>allow_envelope_sender</tt> optie in het OJS configuratiebestand inschakelen. Additionale server configuratie kan noodzakelijk zijn om deze optie te gebruiken (die niet op alle servers ondersteund wordt) zoals aangegeven in de OJS documentatie.]]></message>
@@ -172,6 +219,11 @@
 	<message key="manager.setup.enableAnnouncements">Geef tijdschriftbeheerders de mogelijkheid om nieuwsberichten bij het tijdschrift te plaatsen</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Toon</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">van de nieuwste berichten op de homepage van het tijdschrift</message>
+	<message key="manager.setup.enablePageNumber">Paginanummers worden handmatig opgenomen in de inhoudsopgave (bv. 13-26).</message>
+	<message key="manager.setup.enablePublicArticleId">Er worden aangepaste identificaties gebruikt voor het identificeren van gepubliceerde artikelen.</message>
+	<message key="manager.setup.enablePublicGalleyId">Aangepaste identificaties gebruiken voor het identificeren van proefdrukken (bv. HTML of PDF bestanden) van gepubliceerde artikelen</message>
+	<message key="manager.setup.enablePublicIssueId">Er worden aangepaste identificaties gebruikt voor het identificeren van nummers.</message>
+	<message key="manager.setup.enablePublicSuppFileId">Er worden aangepaste identificaties gebruikt voor het identificeren van aanvullende bestanden die bij artikelen horen.</message>
 	<message key="manager.setup.enableUserRegistration">Gebruikers kunnen zichzelf registreren bij het tijdschrift in een of meer van de volgende rollen:</message>
 	<message key="manager.setup.enableUserRegistration.author">Auteurs (kunnen materiaal inzenden)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Lezers (krijgen notificaties en tellen mee als abonnee)</message>
@@ -199,7 +251,6 @@
 	<message key="manager.setup.guidingSubmissions">Stap 3. Richtlijnen voor inzendingen</message>
 	<message key="manager.setup.homepageImage">Afbeelding voor de homepage</message>
 	<message key="manager.setup.homepageImageDescription">Voeg een afbeelding of grafisch bestand toe aan het midden van de pagina.</message>
-	<message key="manager.setup.includeCreativeCommons">Voeg bij al het werk dat gepubliceerd wordt in  tijdschriften met onmiddellijke of vertraagde Open Access een Creative Commons licentie toe.</message>
 	<message key="manager.setup.information">Informatie</message>
 	<message key="manager.setup.information.description">Korte beschrijvingen van het tijdschrift voor bibliothecarissen en mogelijke auteurs en lezers zijn beschikbaar in de "Informatie" sectie van de sidebar.</message>
 	<message key="manager.setup.information.forAuthors">Voor auteurs</message>
@@ -228,6 +279,8 @@
 	<message key="manager.setup.journalLogo.altText">Tijdschrift logo</message>
 	<message key="manager.setup.journalPageFooter">Tijdschriftpagina voettekst</message>
 	<message key="manager.setup.journalPageFooterDescription">Dit is de voettekst van uw tijdschrift. De voettekst kan veranderd worden door de HTML code ervan in het tekstvak hieronder in te voeren. Voorbeelden van een voettekst zijn een navigatiebalk, een teller, enz. Deze voettekst verschijnt op iedere pagina.</message>
+	<message key="manager.setup.journalPageHeader">Paginakop</message>
+	<message key="manager.setup.journalPageHeaderDescription">Een grafische versie (als .gif, .jpg of .png bestand) van de titel en het logo van het tijdschrift, wellicht een kleinere versie van degene op de homepage staat, kan als kop gebruikt worden op de andere tijdschriftpagina's. Deze vervangt de tekstversie die daar anders staat.</message>
 	<message key="manager.setup.journalPolicies">Stap 2. Beleid van het tijdschrift</message>
 	<message key="manager.setup.journalSetup">Tijdschrift inrichten</message>
 	<message key="manager.setup.journalSetupUpdated">De instellingen van uw tijdschrift zijn bijgewerkt.</message>
@@ -353,6 +406,8 @@
 	<message key="manager.setup.sponsors">Sponsors</message>
 	<message key="manager.setup.sponsorsDescription">De naam van de organisaties (bv. beroepsverenigingen, faculteiten, samenwerkingsverbanden, enz.) die het tijdschrift sponsoren worden getoond bij Over dit tijdschrift en kunnen vergezeld gaan van een notitie.</message>
 	<message key="manager.setup.stepsToJournalSite">Een tijdschrift website in vijf stappen</message>
+	<message key="manager.setup.subjectClassification">Onderwerpsclassificatie</message>
+	<message key="manager.setup.subjectClassificationExamples">(bv. Mathematics Subject Classification; Library of Congress Classification)</message>
 	<message key="manager.setup.subjectExamples">(Bv. Fotosynthese; Zwarte gaten; Vier-kleuren kaart vraagstuk; Bayesiaanse Theorie)</message>
 	<message key="manager.setup.subjectKeywordTopic">Trefwoorden</message>
 	<message key="manager.setup.subjectProvideExamples">Geef voorbeelden van trefwoorden of onderwerpen om auteurs te helpen</message>
@@ -413,19 +468,14 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">maand(en) nadat een nummer is gepubliceerd.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Kies een geldige duur.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">De volgende open access verklaring wordt geplaatst in Over dit tijdschrift onder Verklaringen</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Gebruik het aankruisvak.</message>
 	<message key="manager.subscriptionPolicies.expiry">Afloop van het abonnement</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Als het abonnement afloopt kunnen gebruikers de toegang tot alle inhoud verliezen of toegang houden tot de de inhoud voorafgaand aan de afloopdatum.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Volledig verlopen</message>
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Lezers krijgen geen enkele toegang tot de inhoud als het abonnement afloopt.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Gedeeltelijke verlopen</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Lezers krijgen geen toegang meer tot nieuw gepubliceerde inhoud, maar houden de toegang tot de inhoud die is gepubliceerd vóór de afloopdatum</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Herinner abonnees per e-mail</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">maand(en) na afloop van het abonnement.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Herinner abonnees per e-mail</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">we(e)k(en) na afloop van het abonnement.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Herinner abonnees per e-mail</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">maand(en) voor afloop van het abonnement.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Herinner abonnees per e-mail</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">we(e)k(en) voor afloop van het abonnement.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Herinneringen bij afloop van het abonnement</message>
@@ -574,6 +624,7 @@
 	<message key="manager.language.ui">UI</message>
 	<message key="manager.language.forms">Formulieren</message>
 	<message key="manager.people.showNoRole">Toon gebruikers zonder rol</message>
+	<message key="manager.plugins.install">Installeer een nieuwe plugin</message>
 	<message key="manager.plugins.upgrade">Plugin opwaarderen</message>
 	<message key="manager.plugins.delete">Plugin verwijderen</message>
 	<message key="manager.plugins.deleteSuccess">Plugin met succes verwijderd</message>
@@ -584,7 +635,8 @@
 	<message key="manager.plugins.installFailed">Installatie mislukt</message>
 	<message key="manager.plugins.upgradeFailed">Opwaarderen mislukt</message>
 	<message key="manager.sections.wordCount">Aantal woorden</message>
-	<message key="manager.setup.favicon">Favicon van het tijdschrift</message>
+	<message key="manager.setup.journalFavicon">Favicon van het tijdschrift</message>
+	<message key="manager.plugins.installDescription">Dit formulier maakt het mogelijk om een nieuwe plugin te laden en installeren. Vergewis u ervan dat de plugin is gecomprimeerd als .tar.gz bestand.</message>
 	<message key="manager.plugins.upgradeDescription">Dit formulier maakt het mogelijk om een plugin op te waarderen. Vergewis u ervan dat de plugin is gecomprimeerd als .tar.gz bestand.</message>
 	<message key="manager.plugins.deleteDescription">Door op verwijder te klikken, verwijdert u de plugin uit het systeem.</message>
 	<message key="manager.plugins.deleteConfirm">Weet u zeker dat u deze plugin uit het systeem wilt verwijderen?</message>
@@ -600,8 +652,8 @@
 	<message key="manager.setup.contributorNoteDescription">Deze tekst verschijnt onder de kop "Ondersteunende organisaties"  en boven de lijst met ondersteunende organisaties bij "Sponsors" op de pagina "Over het tijdschrift".</message>
 	<message key="manager.setup.history">Geschiedenis van het tijdschrift</message>
 	<message key="manager.setup.historyDescription">Deze tekst verschijnt in de "Over" sectie van de website van het tijdschrift en kan gebruikt worden om de veranderingen in het tijdschrift, de redactie en andere relevante historische feiten te beschrijven.</message>
-	<message key="manager.setup.faviconDescription">Voeg een favicon toe aan dit tijdschrift. Dat wordt bij de adresbalk getoond van gebruikers die uw site bezoeken.</message>
-	<message key="manager.setup.faviconInvalid">Onjuist favicon formaat. Geldige formaten zijn .ico, .png en .gif.</message>
+	<message key="manager.setup.journalFaviconDescription">Voeg een favicon toe aan dit tijdschrift. Dat wordt bij de adresbalk getoond van gebruikers die uw site bezoeken.</message>
+	<message key="manager.setup.journalFaviconInvalid">Onjuist favicon formaat. Geldige formaten zijn .ico, .png en .gif.</message>
 	<message key="manager.setup.noPublishing">OJS zal niet gebruikt worden om de inhoud van het tijdschrift online te publiceren.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Berichten over online betalingen</message>
 	<message key="manager.setup.publisherNoteDescription">Deze tekst wordt getoond onder de kop "uitgever" en boven de naam/url van de uitgever onder "Sponsors"  op de pagina "Over het tijdschrift".</message>
@@ -621,6 +673,7 @@
 	<message key="manager.setup.categories">Categorieën</message>
 	<message key="manager.setup.journalThumbnail">Miniatuur voor het tijdschrift</message>
 	<message key="manager.setup.useThumbnail">Miniatuur</message>
+	<message key="manager.setup.subjectClassificationURLValid">Geef een geldige remote URL (inclusief http://)</message>
 	<message key="manager.payment.giftFeesDescription">Een 'schenk abonnement' link zal getoond worden op de Abonnementen pagina in 'Over dit tijdschrift'  en bij de abonnementen-blok in de sidebarS</message>
 	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Dit activeert betalingen voor het schenken van abonnementen, waarmee lezers abonnementen kunne kopen om aan andere lezers te schenken.</message>
 	<message key="manager.plugins.wrongCategory">De geladen plugin is niet van dezelfde categorie als de op te waarderen plugin.</message>
@@ -628,4 +681,62 @@
 	<message key="manager.sections.alertDelete">Voordat u deze sectie kunt verwijderen, moet u de erin gepubliceerde artikelen verplaatsen naar andere secties.</message>
 	<message key="manager.setup.categories.description">Kies de meest toepasselijke categorieën uit de hierboven getoonde set. Lezers kunnen op categorie door de tijdschriften bladeren.</message>
 	<message key="manager.payment.giftFees">Gift kosten</message>
+	<message key="manager.setup.permissions.display">Toon</message>
+	<message key="manager.setup.includeLicense">Toon de licentie bij het gepubliceerde werk.</message>
+	<message key="manager.statistics.reports.filters">Filters</message>
+	<message key="manager.statistics.reports.today">Vandaag</message>
+	<message key="manager.statistics.reports.currentMonth">Deze maand</message>
+	<message key="manager.statistics.reports.orderBy">Rangschik naar</message>
+	<message key="manager.statistics.reports.orderDir">Richting</message>
+	<message key="manager.statistics.reports.orderDir.asc">Oplopend</message>
+	<message key="manager.statistics.reports.orderDir.desc">Aflopend</message>
+	<message key="manager.statistics.reports.month.label">Gebruik het YYYYMM formaat</message>
+	<message key="manager.statistics.reports.day.label">Gebruik het YYYYMMDD formaat</message>
+	<message key="manager.statistics.reports.cities.label">Een of meer namen van stecen, gescheiden door een komma(bv. Stad 1, Stad 2)</message>
+	<message key="manager.statistics.reports.form.columnsRequired">U moet minstens één kolom selecteren om het rapport te maken.</message>
+	<message key="manager.statistics.reports.reportUrl">Rapport URL</message>
+	<message key="manager.setup.permissions.priorAgreement">Eerdere overeenkomst</message>
+	<message key="manager.setup.licenseURLDescription">Geef de URL voor de webpagina van de licentie, indien beschikbaar.</message>
+	<message key="manager.setup.includeCopyrightStatement">Toon het copyright statement met inhoud (aan te raden als de auteur het copyright heeft).</message>
+	<message key="manager.setup.resetPermissions">Artikel-toestemmingen terugzetten</message>
+	<message key="manager.setup.resetPermissions.description">Het copyright statement en de licentie-informatie zullen permanent gekoppeld zijn aan de gepubliceerde inhoud, wat garandeert dat deze informatie niet wijzigt als het tijdschrift zijn beleid voor nieuwe inzendingen zou wijzigen. Klik op de knop hieronder om de reeds opgeslagen toestemmingen te terug te zetten</message>
+	<message key="manager.setup.confirmResetLicense">Weet u zeker dat u de licentie en copyright informatie van de gepubliceerde inhoud terug wilt zetten naar de licentie zoals die is vastgelegd bij de tijdschriftinstellingen?</message>
+	<message key="manager.statistics.defaultMetricDescription">Uw tijdschrift is geconfigureerd voor meer dan een gebruiksmeting Gebruiksstatistieken zullen getoond worden in verschillende contexten.
+		Er zijn situaties waar een enkele statistiek gebruikt moet worden, bv. om een geordende lijst van meestgebruikte artikelen te tonen of om
+		zoekresultaten te ranngschikken. Kies een van de hieronder getoonde metrieken als standaard.</message>
+	<message key="manager.statistics.reports.aggregationColumns">Aggregeer statistieken per:</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">Standaard rapportagesjablonen</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">Artikel bestandsdownloads</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Atrikel samenvatting views</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Artikel samenvatting en downloads</message>
+	<message key="manager.statistics.reports.defaultReport.issueDownloads">Nummer bestandsdownloads</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContents">Views van de inhoudsopgave van een nummer</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">Inhoudsopgave en downloads</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Tijschrift voorpagina views</message>
+	<message key="manager.statistics.reports.generateReport">Genereer aangepast rapport</message>
+	<message key="manager.statistics.reports.advancedOptions">Geavanceerde opties</message>
+	<message key="manager.statistics.reports.advancedOptions.label">Kolommen aanpassen, fiter en sorteeropties. Het veranderen van deze opties kan het resultaat van het rapportsjabloon doen veranderen.</message>
+	<message key="manager.statistics.reports.columns">Kolommen</message>
+	<message key="manager.statistics.reports.objectType">Object type</message>
+	<message key="manager.statistics.reports.objectId">Object id</message>
+	<message key="manager.statistics.reports.objectId.label">Geef een of meer object id's, gescheiden door een komma (bv. 1,2,3,4,5).</message>
+	<message key="manager.statistics.reports.columns.description">Definieer de kolommen die in het rapport gebruikt worden. De kolommen die u kiest definiëren niet alleen welke gegevens getoond worden maar ook het aggregatieniveau van de statistiek. Bijvoorbeeld, als u de ID, type en maand kolommen kiest, zal het rapport alle views van een object in een maand optellen en dat in een rij tonen. Als u dag kiest in plaats van maand, zal ieder object een rij voor iedere dag hebben.</message>
+	<message key="manager.statistics.reports.reportUrl.label">De volgende URL kan gebruikt worden om het rapport met de huidige instellingen te genereren. Kopieer het en plak heit n uw browser. U kunt uw favorieten gebruiken om het te bewaren.</message>
+	<message key="manager.statistics.reports.filters.byContext">Naar context</message>
+	<message key="manager.statistics.reports.filters.byContext.description">Verfijn resultaten naar context (nummer en/of artikel).</message>
+	<message key="manager.statistics.reports.filters.byObject">Naar objecttype en/of object id</message>
+	<message key="manager.statistics.reports.filters.byObject.description">Verfijn de resultaten naar objecttype (tijdschrift, nummer, artikel, pdf proeven, andere proeven) en/of een of meerdere object id(s).</message>
+	<message key="manager.statistics.reports.filters.byTime">Kies rapportage reeks</message>
+	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">Of kies reeks per:</message>
+	<message key="manager.statistics.reports.filters.byLocation">Per geolocatie</message>
+	<message key="manager.statistics.reports.filters.byLocation.description">Verfijn resultaten naar land, regio en/of stad.</message>
+	<message key="manager.subscriptions.form.dateRemindedBefore">Herinnering voorafgaand aan aflopen verstuurd</message>
+	<message key="manager.subscriptions.form.dateRemindedAfter">Herinnering na aflopen verstuurd</message>
+	<message key="manager.statistics.reports.objectNotFound">Object niet gevonden in de database</message>
+	<message key="manager.setup.confirmResetLicenseChanged">U heeft de licentie en auteursrechten-informatie veranderd in de tijdschriftinstellingen. Sla deze wijzigingen op voor u de permissies herstelt.</message>
+	<message key="manager.setup.copyrightYearBasis">Baseer het jaartal voor het auteursrecht van nieuwe artikelen op</message>
+	<message key="manager.setup.copyrightYearBasis.Article">Standaard wordt het jaar afgeleid van de publicatiedatum van het artikel, zoals bij "publish as you go".</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">Standaard wordt het jaar afgeleid van de publicatiedatum van het nummer.</message>
+	<message key="manager.setup.emailHeader">E-mail koptekst</message>
+	<message key="manager.setup.emailHeaderDescription">De voorbereide e-mails die namens het tijdschrift door het systeem worden verstuurd beginnen met de volgende tekst. Deze e-mails worden verstuurd namens de eerste contactpersoon. Het is belangrijk om duidelijk te maken dat deze persoon het bericht niet zelf verstuurt.</message>
 </locale>

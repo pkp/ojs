@@ -4,7 +4,7 @@
 <!--
   * locale/nl_NL/admin.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="nl_NL" full_name = "Nederlands">
+<locale name="nl_NL" full_name="Nederlands">
 	<message key="admin.hostedJournals">Tijdschriften</message>
 	<message key="admin.settings.journalRedirect">Doorsturen naar tijdschrift</message>
 	<message key="admin.settings.journalRedirectInstructions">Bezoekers van de hoofdsite worden doorgestuurd naar dit tijdschrift. Dit kan handig zijn als de site maar één tijdschrift bevat.</message>
@@ -36,13 +36,14 @@
 	<message key="admin.systemConfigurationDescription"><![CDATA[OJS instellingen uit <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.journals.journalSettings">Instellingen tijdschrift</message>
 	<message key="admin.journals.noneCreated">Er zijn geen tijdschriften aangemaakt.</message>
-	<message key="admin.contexts.confirmDelete">Weet u zeker dat u dit tijdschrift en de inhoud daarvan wilt verwijderen?</message>
-	<message key="admin.contexts.create">Creëer tijdschrift</message>
+	<message key="admin.journals.confirmDelete">Weet u zeker dat u dit tijdschrift en de inhoud daarvan wilt verwijderen?</message>
+	<message key="admin.journals.create">Creëer tijdschrift</message>
+	<message key="admin.journals.createInstructions">U wordt automatisch ingesteld als tijdschriftbeheerder. Log in als beheerder als het tijdschrift is aangemaakt om verder te gaan met het inrichten en om gebruikers toe te voegen.</message>
 	<message key="admin.journals.urlWillBe">De URL van dit tijdschrift wordt {$sampleUrl}</message>
-	<message key="admin.contexts.form.titleRequired">Een titel is verplicht.</message>
-	<message key="admin.contexts.form.pathRequired">Een pad is verplicht.</message>
-	<message key="admin.contexts.form.pathAlphaNumeric">Het pad mag alleen alfanumerieke tekens, liggende streepjes en koppeltekens bevatten en moet beginnen en eindigen met een alfanuermiek teken.</message>
-	<message key="admin.contexts.form.pathExists">Het opgegeven pad is al in gebruik voor een ander tijdschrift.</message>
+	<message key="admin.journals.form.titleRequired">Een titel is verplicht.</message>
+	<message key="admin.journals.form.pathRequired">Een pad is verplicht.</message>
+	<message key="admin.journals.form.pathAlphaNumeric">Het pad mag alleen alfanumerieke tekens, liggende streepjes en koppeltekens bevatten en moet beginnen en eindigen met een alfanuermiek teken.</message>
+	<message key="admin.journals.form.pathExists">Het opgegeven pad is al in gebruik voor een ander tijdschrift.</message>
 	<message key="admin.journals.enableJournalInstructions">Toon dit tijdschrift op de site</message>
 	<message key="admin.journals.journalDescription">Beschrijving tijdschrift</message>
 	<message key="admin.journal.pathImportInstructions">Bestaand tijdschrift-pad of te creëren pad (bijvoorbeeld "ojs").</message>
@@ -77,4 +78,24 @@
 	<message key="admin.settings.journalsList">Tijdschriftelementen</message>
 	<message key="admin.settings.journalsList.description">Kies de tijdschriftelementen die voor ieder tijdschrift getoond worden op de pagina van de site</message>
 	<message key="admin.settings.journalsList.showThumbnail">Miniatuur van het tijdschrift</message>
+	<message key="admin.settings.useAlphalist">Toon een alfabetische lijst op de homepagina, om bij sites met veel tijdschriften snel op alfabet te kunnen navigeren.</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Fout: kan tijdelijke map niet aanmaken {$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Fout: bestand {$filePath} bestaat niet of is niet toegankelijk.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Fout: can bestand niet kopiëren van {$filePath} naar {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Fout: kan bestand niet weggooien {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Waarschuwing: bestand {$filePath} bestaat al in de map met gebruiksstatistieken</message>
+	<message key="admin.copyAccessLogFileTool.success">Success: {$filePath} naar {$destinationPath}</message>
+	<message key="admin.settings.defaultMetricDescription">Uw OJS installatie geconfigureerd voor meer dan een gebruiksmeting. Gebruiksstatistieken worden in verschillende contexten getoond.
+		Soms wordt een enkele statistiek getoond, bv, om een lijst van meestgebruikte artikelen te tonen of om
+		zoekresultaten te wegen. Kies een van de methodes als standaard.</message>
+	<message key="admin.copyAccessLogFileTool.usage">Kopieer de doorgegeven apace logbestanden, met een filter op de regelt voor deze installatie,
+naar de map met huidige bestanden in de  UsageStatsPlugin stage map. Moet draaien onder een gebruiker met genoeg rechten om de apache acces log bestanden te lezen.
+
+Dit gereedschap kopieert alleen bestanden die niet al in de usageStats mappen zitten  (stage, processing, archive, reject).
+
+Gebruik: {$scriptName} path/to/apache/log/file.log
+Gebruik (verwerk alle bestanden in een map): {$scriptName} path/to/apache/directory</message>
+	<message key="admin.settings.security">Veiligheid</message>
+	<message key="admin.settings.security.plugins">Voorkom dat tijdschriftbeheerders plugins installeren, bijwerken of verwijderen.</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Standaard email sjablonen terugzetten</message>
 </locale>

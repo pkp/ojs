@@ -4,7 +4,7 @@
 <!--
   * locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,7 +13,7 @@
   * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
   *
   -->
- 
+
 <locale name="nl_NL" full_name="Nederlands">
 	<!--
 	 * This file is organized into several major sections, separated
@@ -40,14 +40,6 @@
 	<message key="common.payment">Betaling</message>
 	<message key="common.payments">Betalingen</message>
 
-	<!-- Common Form Messages -->
-	
-	<!-- Common Email Messages -->
-
-	<!-- Common Localization Terms -->
-
-	<!-- Common Error Messages -->
-		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Tijdschrift help</message>
 	<message key="navigation.archives">Archief</message>
@@ -60,7 +52,7 @@
 	<message key="navigation.competingInterestGuidelines">Richtlijnen voor belangenconflicten</message>
 	<message key="navigation.infoForAuthors.long">Informatie voor auteurs</message>
 	<message key="navigation.infoForLibrarians.long">Informatie voor bibliothecarissen</message>
-	
+
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Niet toegekend</message>
 	<message key="common.queue.short.submissionsUnassigned">Niet toegekend</message>
@@ -74,7 +66,7 @@
 	<message key="common.queue.short.active">Actief</message>
 	<message key="common.queue.long.completed">Archief</message>
 	<message key="common.queue.short.completed">Archief</message>
-	
+
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
@@ -101,8 +93,12 @@
 	<message key="article.suppFiles">Aanvullende bestanden</message>
 	<message key="article.suppFilesAbbrev">Aanv. best.</message>
 	<message key="article.discipline">Academisch discipline en subdisciplines</message>
+	<message key="article.subjectClassification">Onderwerpsclassificatie</message>
 	<message key="article.subject">Trefwoorden</message>
 	<message key="article.coverage">Dekking</message>
+	<message key="article.coverageGeo">Geo-spatiale dekking</message>
+	<message key="article.coverageChron">Chronologische of historische dekking</message>
+	<message key="article.coverageSample">Steekproefkarakteristiek</message>
 	<message key="article.type">Type, methode of benadering</message>
 	<message key="article.language">Taal</message>
 	<message key="article.sectionEditor">SE</message>
@@ -133,7 +129,7 @@
 	<message key="submission.scheduling">Inplannen</message>
 	<message key="submission.scheduledIn">Ingepland voor publicatie in  {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(TBA)</message>
-	
+
 	<message key="submissions.sec">Sec</message>
 	<message key="submissions.step1">Step 1</message>
 	<message key="submissions.step3">Stap 3</message>
@@ -156,18 +152,18 @@
 	<message key="submissions.proofreadingComplete">Proefgelezen</message>
 
 	<!-- Submission Notes -->
-	
+
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Huidig nummer</message>
 	<message key="journal.journals">Tijdschriften</message>
 	<message key="journal.path">Pad</message>
-	<message key="context.context">Tijdschrift</message>
+	<message key="journal.journal">Tijdschrift</message>
 
 	<!-- User -->
 	<message key="user.showAllJournals">Toon mijn tijdschriften</message>
 	<message key="user.registerForOtherJournals">Registreren voor andere tijdschriften</message>
 	<message key="user.myJournals">Mijn tijdschriften</message>
-	
+
 	<!-- Roles -->
 	<message key="user.role.manager">Tijdschriftbeheerder</message>
 	<message key="user.role.editor">Redacteur</message>
@@ -179,13 +175,13 @@
 	<message key="user.role.subscriptionManager">Abonnementenbeheerder</message>
 	<message key="user.role.managers">Tijdschriftbeheerders</message>
 	<message key="user.role.editors">Redacteurs</message>
-	<message key="user.role.subEditors">Sectieredacteurs</message>
+	<message key="user.role.sectionEditors">Sectieredacteurs</message>
 	<message key="user.role.layoutEditors">Eindredacteurs</message>
 	<message key="user.role.copyeditors">Tekstredacteurs</message>
 	<message key="user.role.proofreaders">Proeflezers</message>
 	<message key="user.role.authors">Auteurs</message>
 	<message key="user.role.subscriptionManagers">Abonnementenbeheerders</message>
-	
+
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Nummer</message>
 	<message key="issue.issues">Nummers</message>
@@ -205,7 +201,7 @@
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">Inzending</message>
-	<message key="submission.event.submissionSubmitted">Artikel ingezonden</message>
+	<message key="submission.event.general.articleSubmitted">Artikel ingezonden</message>
 	<message key="submission.event.general.issueScheduled">Inzending in nummer-wachtrij geplaatst.</message>
 	<message key="submission.event.general.issueAssigned">Inzending toegekend aan nummer</message>
 	<message key="submission.event.general.articlePublished">Artikel gepubliceerd</message>
@@ -213,15 +209,15 @@
 	<message key="submission.event.author.authorRevision">Revisie door auteur ingezonden</message>
 
 	<message key="submission.event.general.authorRevision">Bestand door de auteur gereviseerd</message>
-	
+
 	<message key="submission.event.editor.editorAssigned">Redacteur toegekend aan de inzending</message>
 	<message key="submission.event.editor.editorUnassigned">Toekenning redacteur ingetrokken</message>
 	<message key="submission.event.editor.editorDecision">Beslissing van de redacteur ingezonden</message>
 	<message key="submission.event.editor.editorFile">Bestand van de redacteur bijgewerkt</message>
 	<message key="submission.event.editor.submissionArchived">Inzending naar archief verstuurd</message>
 	<message key="submission.event.editor.submissionRestored">Inzending teruggehaald uit archief</message>
-	
-	
+
+
 	<message key="submission.event.copyedit.copyeditorAssigned">Tekstredacteur toegekend aan inzending</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">Toewijzing tekstredacteur ingetrokken</message>
 	<message key="submission.event.copyedit.copyeditInitiated">Tekstredactie gestart</message>
@@ -229,13 +225,13 @@
 	<message key="submission.event.copyedit.copyeditInitialCompleted">Eerste tekstredactie gereed</message>
 	<message key="submission.event.copyedit.copyeditFinalCompleted">Laatste tekstredactier gereed</message>
 	<message key="submission.event.copyedit.copyeditSetFile">Bestand tekstredactie bijgewerkt</message>
-	
+
 	<message key="submission.event.proofread.proofreaderAssigned">Proeflezer toegekend aan de inzending</message>
 	<message key="submission.event.proofread.proofreaderUnassigned">Toekenning proeflezer ingetrokken</message>
 	<message key="submission.event.proofread.proofreadInitiated">Proeflezen gestart</message>
 	<message key="submission.event.proofread.proofreadRevision">Bestand met revisies proeflezer bijgewerkt</message>
 	<message key="submission.event.proofread.proofreadCompleted">Proeflezen gereed</message>
-	
+
 	<message key="submission.event.layout.layoutEditorAssigned">Eindredacteur toegekend aan de inzending</message>
 	<message key="submission.event.layout.layoutEditorUnassigned">Toekenning eindredacteur ingetrokken</message>
 	<message key="submission.event.layout.layoutInitiated">Eindredactie gestart</message>
@@ -250,7 +246,7 @@
 
 	<!-- Reader article view -->
 	<message key="reader.subscribersOnly">Alleen voor abonnees</message>
-	<message key="reader.subscriptionRequiredLoginText">Abonnement vereist om toegang te krijgen. Log in om uw abonnement te verifiëren.</message>  
+	<message key="reader.subscriptionRequiredLoginText">Abonnement vereist om toegang te krijgen. Log in om uw abonnement te verifiëren.</message>
 	<message key="reader.openAccess">Vrij toegankelijk</message>
 	<message key="reader.subscriptionAccess">Toegankelijk voor abonnees</message>
 	<message key="reader.subscriptionOrFeeAccess">Toegankelijk voor abonnees of na betaling</message>
@@ -267,8 +263,7 @@
 <br /><br />
 Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de configuratie van het OJS systeem te wijzigen. In toekomstige versies van het OJS systeem zal het mogelijk zijn de OAI interface voor afzonderlijke tijdschriften binnen de site aan of uit te zetten.]]></message>
 
-	
-	
+
 	<!-- Languages -->
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Het binnenhalen van taalbestanden van de Public Knowledge Project website is momenteel niet mogelijk omdat:</p>
 	<ul>
@@ -281,28 +276,16 @@ Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de con
 <ul>
 	<li>Wanneer een gebruiker een nieuw account probeert te registreren  met een gebruikersnaam die al bestaat in het externe systeem (maar niet in OJS), zal de registratie alleen lukken als het wachtwoord geldig is voor dat account.</li>
 </ul>]]></message>
-	
+
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>Attentie!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>Attentie!</h4>
 <p>Het systeem kon het instellingenbestand niet overschrijven. Om uw wijzigingen te effectueren moet u <tt>config.inc.php</tt> openen in een geschikte teksteditor en de inhoud van het bestand vervangen door de inhoud van het tekstveld hieronder.</p>]]></message>
 
 
-	<!-- Site Administrator Merge Users -->	
+	<!-- Site Administrator Merge Users -->
 
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Abonneebeheer</message>
-	
-	<!-- Journal Management -->
-
-	<!-- Statistics & Reports -->
-
-	<!-- Plugin Management -->
-	
-	<!-- Payment Management -->
-
-
-		
-
 
 	<!-- General plugin information -->
 	<message key="plugins.categories.generic.description">Generieke plugins worden gebruikt om Open Journal Systems uit te breiden op manieren die niet ondersteund worden in de andere plugin-categorieën.</message>
@@ -312,24 +295,10 @@ Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de con
 
 	<message key="plugins.categories.citationFormats.description">Citatieformaat plugins leveren de gebruikers verschillende formaten voor arikelcitaties.</message>
 
-
-
-
-	<!-- Files Browser -->
-
-	<!-- Journal Setup -->
-	
-	<!-- Setup Step 1 -->
-
-	<!-- Setup Step 2 -->
-
-
-
-
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems ondersteunt het <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) systeem om een permanent archief van het tijdschrift te verzekeren. LOCKSS is open source software, ontwikkeld door Stanford University Library, die bibliotheken in staat stelt om geselecteerde internet-tijdschriften te archiveren door die tijdschriften regelmatig  te onderzoeken op nieuwe inhoud en die dan te archiveren. Ieder archief wordt continue gevalideerd tegen archieven in andere bibliotheken. Verloren of beschadigd materiaal wordt uit de andere archieven hersteld.
 <br /><br />
 Het inrichten van LOCKSS ondersteuning voor Open Journal Systems hoeft pas te gebeuren als publicatie plaatsvindt. Volg dan deze twee stappen:]]></message>
-	
+
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Voorgestelde Creative Commons auteursrecht verklaringen</h3>
 <h4>1. Concept beleid voor Open Access tijdschriften</h4>
@@ -347,6 +316,8 @@ Auteurs die publiceren bij dit tijdschrift onderschrijven de volgende voorwaarde
 	<li>Auteurs mogen separate, additionele contractuele overeenkomsten aangaan voor het niet-exclusief distribueren van de door het tijdschrift gepubliceerde versie van het werk (bv. plaatsing in een institutionele repository of publicatie in een boek), onder vermelding van de eerste publicatie in dit tijdschrift.</li>
 	<li>Auteurs hebben het recht en worden aangemoedigd om hun werk online beschikbaar te stellen (bv. in institutionele repositories of op hun website) voorafgaand aan en gedurende de inzending, aangezien dat kan leiden tot productieve discussies, en eerdere en meer citaties van het gepubliceerde werk (Zie <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[The tijdschrift gebruikt een onderwerpsclassificatie die beschikbaar is op het Internet.<br />
+Naam van het classificatiesysteem]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Om de inhoud van het tijdschrift geïndexeerd te krijgen in een wereldwijd netwerk van onderzoeksdatabases, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registreert</a> u de URL van uw tijdschrift bij de Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. Dit systeem verzamelt metadata van ieder geïndexeerd item in het tijdschrift, waardoor het mogelijk is om accuraat te zoeken binnen de gegevens van onderzoeksinstellingen die gebruik maken van het <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
 Merk op dat het tijdschrift automatisch geïndexeerd wordt als de sitebeheerder de site geregistreerd heeft bij de PKP Harvester. Het tijdschrift hoeft in dat geval niet apart geregistreerd te worden.
@@ -363,18 +334,6 @@ Kies een model voor deze aspecten van het redactieproces. (Voor het aanwijzen va
 	<li><strong>Links opnemen in referenties</strong><p>De opmaakredacteur kan een link toevoegen naar referenties die online gevonden kunnen worden door de volgende instructies te volgen (die aangepast kunnen worden).</p></li>
 </ol>]]></message>
 
-	<!-- Setup Step 5 -->
-
-	<!-- Languages -->
-	
-	
-	<!-- Section Management -->
-	<!-- Import/Export -->
-
-	<!-- Groups / Editorial Team -->
-
-
-
 	<!-- People Management -->
 	<message key="manager.people.confirmDisable">Deze gebruiker blokkeren?. De gebruiker kan dan niet meer inloggen op het systeem
 
@@ -386,47 +345,18 @@ Eventueel kunt u de gebruiker een reden voor het blokkeren geven.</message>
 		</ul>
 	Deze taak moet uitgevoerd worden door een sitebeheerder.]]></message>
 
-
-	
-	<!-- Email Management -->
-
-	<!-- Subscription Policy Management -->
-
-	<!-- Subscription Type Management -->
-
-	<!-- Subscription Management -->
-
-	<!-- Announcement Type Management -->
-
-	<!-- Announcements Management -->
-
-	<!-- Editor -->
 	<message key="editor.submissionReview.notes"><![CDATA[<ol>
 	<li>Onderdelen worden geaccentueerd als de redacteur actie moet ondernemen.</li>
 	<li>"Verloopt"  is ingevuld als de reviewer het verzoek tot beoordelen accepteert, het geeft het aantal weken aan voordat de review binnen moet zijn of  (-) het aantal weken dat die overtijd is.</li>
 </ol>]]></message>
 
-	<!-- Editor Index Page -->
-
-	<!-- Back Issues -->
-
-	<!-- Create Issue / Issue Data -->
-
-	<!-- Live Issues -->
-
-	<!-- Navigation sidebar menu -->
-	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[De naam is een link naar het profiel van de reviewer.<br/>
-Oordeel is van 1 tot  5 (Uitstekend).<br/>
-Weken refereert aan de gemiddelde tijdsduur voor een complete review.<br/>
-Laatste is de datum van de laatst geaccepteerde review.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[De naam is een link naar het profiel van de reviewer.<br />
+Oordeel is van 1 tot  5 (Uitstekend).<br />
+Weken refereert aan de gemiddelde tijdsduur voor een complete review.<br />
+Laatste is de datum van de laatst geaccepteerde review.<br />
 Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]></message>
 
-
-
-
-	
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Actieve redactietaken</message>
 	<message key="sectionEditor.completedEditorialAssignments">Voltooide redactietaken</message>
@@ -437,7 +367,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="sectionEditor.proofreader.confirmRenotify">Deze proeflezer opieuw berichten zal de taak herstarten. Weet u zeker dat u dit wilt doen?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Spijtopties</message>
-	<message key="sectionEditor.regrets.title"><![CDATA[#{$submissionId} Reviewer spijtopties, terugtrekkingen & eerdere rondes]]></message>
+	<message key="sectionEditor.regrets.title"><![CDATA[#{$articleId} Reviewer spijtopties, terugtrekkingen & eerdere rondes]]></message>
 	<message key="sectionEditor.regrets">Spijtopties</message>
 	<message key="sectionEditor.regrets.link">Toon spijtopties, terugtrekkingen, eerdere rondes</message>
 	<message key="sectionEditor.regrets.reviewRound">Peer review, ronde {$round}</message>
@@ -457,12 +387,12 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="layoutEditor.galley.replaceGalley">Vervang bestand</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Aanvullend bestand laden</message>
 	<message key="submission.layout.imageInvalid">Ongeldig afbeeldingsformaat. Toegestaan zijn .gif, .jpg, en .png.</message>
-	
+
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Artikelen in afwachting van review</message>
 	<message key="reviewer.completedReviews">Gereed</message>
 	<message key="reviewer.averageQuality">Beoordeling</message>
-	
+
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">Bestand moet beoordeeld worden</message>
 	<message key="reviewer.article.notifyTheEditor">Bericht de redacteur</message>
@@ -478,7 +408,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="reviewer.article.recommendation">Aanbeveling</message>
 	<message key="reviewer.article.submitReview">Stuur review naar redacteur</message>
 	<message key="reviewer.article.reviewerComments">Comentaar</message>
-	<message key="reviewer.article.uploadedFile">Geladen bestanden</message>	
+	<message key="reviewer.article.uploadedFile">Geladen bestanden</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Door de reviewer geladen versie</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Als u het bestand wilt annoteren voor de redacteur, bewaar het op uw harde schijf en gebruik bladeren/laden.)</message>
         <message key="reviewer.article.schedule.request">Verzoek van de redacteur</message>
@@ -514,7 +444,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="copyeditor.article.copyeditorFile">Bestand voor tekstredacteur</message>
 	<message key="copyeditor.article.uploadedFile">Geladen bestand</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Bestand voor tekstredacteur</message>
-	
+
 	<!-- Proofreader -->
 	<message key="proofreader.noProofreadingAssignments">Geen proefleestaken</message>
 
@@ -523,9 +453,9 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 
 	<!-- Article Submission Step 1 -->
 
-	
+
 	<!-- Article Submission Step 2 -->
-	
+
 	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[<p>Doorloop de volgende stappen om een manuscript in het tijdschrift te laden.</p>
 <ol>
@@ -535,11 +465,11 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 <li>Klik Laden op deze pagina, waarna het bestand van uw computer in de website van het tijdschrift wordt geladen. Het bestand krijgt een naam volgens de conventies van het tijdschrift</li>
 <li>Als de inzending geladen is, klik dan op Bewaren en Doorgaan onderaan de pagina.</li>
 </ol>]]></message>
-	
+
 	<!-- Article Submission Step 4 -->
-	
+
 	<!-- Article Submission Step 4a: Supplementary Files -->
-	
+
 	<!-- Article Submission Step 5 -->
 
 	<!-- Used in submission review / editing -->
@@ -557,7 +487,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="submission.copyedit.useFile">Gebruik bestand</message>
 	<message key="submission.copyedit.copyeditComments">Opmerkingen tekstredactie</message>
 	<message key="submission.copyedit.instructions">Instructies voor tekstredactie</message>
-	
+
 	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.layout.noLayoutFile">Geen (laad de laatste tekstredactieversie als opmaakversie voorafgaand aan het versturen van het verzoek)</message>
 	<message key="submission.layout.assignLayoutEditor">Opmaakredacteur toekennen</message>
@@ -565,15 +495,15 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="submission.layout.layoutComments">Commentaren opmaak</message>
 	<message key="submission.layout.instructions">Opmaakinstructies</message>
 	<message key="submission.layout.referenceLinking">Linken naar referenties</message>
-	
-	
+
+
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Proeflees-commentaren</message>
 	<message key="submission.proofread.corrections">Proeflezen correcties</message>
 	<message key="submission.proofread.instructions">Proeflees-instructies</message>
 
 	<!-- Submission History -->
-	
+
 	<message key="submission.logType.article">Artikel</message>
 	<message key="submission.logType.author">Auteur</message>
 	<message key="submission.logType.editor">Redacteur</message>
@@ -581,11 +511,11 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="submission.logType.copyedit">Tekstredactie</message>
 	<message key="submission.logType.layout">Opmaak</message>
 	<message key="submission.logType.proofread">Proeflezen</message>
-	
+
 	<!-- Submission Event Log -->
 
 	<!-- Submission Email Log -->
-	
+
 	<!-- Submission Comments -->
 	<message key="submission.comments.editorAuthorCorrespondence">Redacteur/auteur correspondentie</message>
 	<message key="submission.comments.copyeditComments">Tekstredactie commentaren</message>
@@ -598,19 +528,19 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="submission.comments.forEditor">Voor redacteur</message>
 	<message key="submission.comments.saveAndEmailAuthor">Bewaar en e-mail auteur</message>
 	<message key="submission.comments.saveAndEmailEditor">Bewaar en e-mail redacteur</message>
-	
+
 	<!-- Login -->
 	<message key="user.login.registerNewAccount">Geen gebruiker? Registreer u bij deze site</message>
 	<message key="user.login.resetPasswordInstructions"><![CDATA[Om redenen van veiligheid e-mailt het systeem een nieuw wachtwoord naar geregistreerde gebruikers in plaats van het bestaande wachtwoord.<br /><br />Geef uw e-mail adres om uw wachtwoord terug te zetten. Er wordt een bevestiging naar dit e-mail adres gestuurd.]]></message>
-	
+
 	<!-- Profile -->
-	
+
 	<!-- Registration -->
 	<message key="user.register.selectJournal">Kies een tijdschrift om u bij te registreren</message>
 	<message key="user.register.noJournals">Deze site heeft geen tijdschriften waarbij u zich kunt registreren.</message>
 	<message key="user.register.privacyStatement">Privacyverklaring</message>
-	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klik hier</a> als u reeds geregistreerd bent bij dit of een ander tijdschrift op deze site.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klik hier</a> als u <b>niet</b> al geregistreerd bent bij deze site.]]></message>
+	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klik hier</a> als u reeds geregistreerd bent bij dit of een ander tijdschrift op deze site.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klik hier</a> als u <b>niet</b> al geregistreerd bent bij deze site.]]></message>
 	<message key="user.register.loginToRegister">Geef uw bestaande gebruikersnaam en wachtwoord om u voor dit tijdschrift te registreren.</message>
 	<message key="user.register.registrationDisabled">Dit tijdschrift accepteert momenteel geen registraties.</message>
 	<message key="user.register.form.passwordLengthTooShort">Het ingevoerde wachtwoord is niet lang genoeg.</message>
@@ -630,7 +560,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="search.allJournals">Alle Tijdschriften</message>
 	<message key="search.authorIndex">Blader door de auteursindex</message>
 	<message key="search.authorDetails">Auteursdetails</message>
-	<message key="search.syntaxInstructions"><![CDATA[Zoektips: <ul> 
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Zoektips: </h4><ul>
 <li>Zoektermen zijn niet hoofdlettergevoelig</li>
 <li>Veelvoorkomende woorden worden genegeerd</li>
 <li>Standaard worden alleen artikelen getoond waarin <em>alle</em> zoektermen voorkomen (<i>EN</i> is impliciet)</li>
@@ -641,12 +571,19 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 <li>Gebruik <b>*</b> in een zoekterm als joker voor een willekeurige reeks tekens. bv. <i>soci* moraal</i> vindt documenten met  "sociologisch" of "sociaal"</li>
 </ul>]]></message>
 
+	<!-- Interstitial page for PDFs -->
+	<message key="article.pdf.title">Portable Document Format (PDF)</message>
+
+	<!-- Interstitial page for non-PDF non-HTML galleys -->
+	<message key="article.nonpdf.title">Artikel download</message>
+	<message key="article.nonpdf.note"><![CDATA[Het bestand dat u gekozen hebt, zou automatisch op uw computer geladen moeten worden. Als dat niet gebeurt, klik op de link hieronder. Het bestand vereist mogelijk een programma of plugin om te bekijken<br /><br />Als de download niet vanzelf start, <a href="{$url}">klik hier</a>.]]></message>
+
 	<!-- Site index -->
 	<message key="site.journalsHosted">Tijdschriften op deze site</message>
 	<message key="site.journalView">Bekijk tijdschrift</message>
 	<message key="site.journalRegister">Registreren</message>
 	<message key="site.journalCurrent">Huidig nummer</message>
-	
+
 
 	<!-- Current index -->
 	<message key="current.current">Huidig</message>
@@ -657,7 +594,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="archive.archives">Archieven</message>
 	<message key="archive.browse">Blader door oudere nummers</message>
 	<message key="archive.issueUnavailable">Nummer niet beschikbaar</message>
-	
+
 	<!-- About The Journal -->
 	<message key="about.statistics">Statistieken</message>
 	<message key="about.journalContact">Contactpersoon tijdschrift</message>
@@ -699,22 +636,22 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="about.aboutThisPublishingSystem">Over dit publicatiesysteem</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Dit tijdschrift gebruikt Open Journal Systems {$ojsVersion}, open source software voor het beheren en publiceren van een tijdschrift, ondersteund en gratis geleverd door het <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> onder de GNU General Public License.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[Deze site gebruikt Open Journal Systems {$ojsVersion}, open source software voor het beheren en publiceren van een tijdschrift, ondersteund en gratis geleverd door het <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> onder de GNU General Public License.]]></message>
-	
+
 	<!-- Announcement -->
 
 	<!-- Help -->
 	<message key="help.ojsHelp">Open Journal Systems Help</message>
-	<message key="help.ojsHelpAbbrev">OJS Help</message>	
+	<message key="help.ojsHelpAbbrev">OJS Help</message>
 
 	<!-- Donations -->
 	<message key="donations.thankYou">Dank u</message>
 	<message key="donations.thankYouMessage">Dank u voor uw bijdrage. Uw bijdage wordt zeer gewaardeerd.</message>
-	
+
 	<!-- Payments -->
 	<message key="payment.loginRequired">U moet ingelogd zijn om een betaling te kunnen doen.</message>
 	<message key="payment.loginRequired.forArticle">Abonnement of aankoop van het artikel benodigd voor toegang tot het item. Log in om uw abonnement te controleren, toegang te krijgen tot aankopen of nieuwe aankopen te doen</message>
 	<message key="payment.loginRequired.forDonation">U moet ingelogd zijn om een donatie te doen.</message>
-	
+
 	<message key="payment.paid">Betaald</message>
 	<message key="payment.payNow">Betaal nu</message>
 	<message key="payment.waive">Kwijtschelden</message>
@@ -728,30 +665,75 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="payment.type.membership">Kosten voor individueel lidmaatschap</message>
 	<message key="payment.type.subscription">Abonnementskosten</message>
 	<message key="payment.type.donation">Donaties</message>
-	
+
 	<message key="payment.donation.makeDonation">Doe een donatie</message>
-	
+
 	<message key="payment.submission.paySubmission">Betaal inzendingskosten</message>
 	<message key="payment.fastTrack.payFastTrack">Betaal voor snelle beoordeling</message>
 	<message key="payment.fastTrack.inFastTrack">In snelle beoordeling</message>
 	<message key="payment.publication.payPublication">Betaal om te publiceren</message>
 	<message key="payment.publication.publicationPaid">Publicatiekosten betaald</message>
-	
+
 	<message key="payment.membership.buyMembership">Koop individueel lidmaatschap</message>
-	<message key="payment.membership.renewMembership">Vernieuw individueel lidmaatschap</message>	
+	<message key="payment.membership.renewMembership">Vernieuw individueel lidmaatschap</message>
 	<message key="payment.membership.ends">Loopt af op</message>
 
 	<message key="payment.subscription.renew">Vernieuw abonnement</message>
-	<message key="payment.subscription.expires">Verloopt</message>	
+	<message key="payment.subscription.expires">Verloopt</message>
 
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">OJS Installatie</message>
 	<message key="installer.ojsUpgrade">OJS Upgrade</message>
+	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Versie {$version}</h4>
+
+<p>Dank u voor het downloaden van <strong>Open Journal Systems</strong> van het Public Knowledge Project. Lees voor u verdergaat eerst het <a href="{$baseUrl}/docs/README">README</a> bestand van de software. Voor meer informatie over het Public Knowledge Project en zijn software projecten, zie de <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Als u problemen wilt melden of technische vragen wilt stellen over Open Journal Systems, zie het <a href="http://forum.pkp.sfu.ca">support forum</a> of bezoek PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">probleemrapportage systeem</a>. Hoewel het support forum de voorkeur heeft kun u het team ook e-mailen op <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+
+<h4>Upgrade</h4>
+
+<p>Wanneer u een upgrade doet van een bestaande installatie van OJS 2.x, <a href="{$upgradeUrl}">klik hier</a> om verder te gaan.</p>
+
+<h4>Systeemeisen</h4>
+
+<ul>
+	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (inclusief PHP 5.x), u gebruikt nu PHP {$phpVersion}{$wrongPhpText}</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 of <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (inclusief PostgreSQL 8.x)</li>
+	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x of Microsoft IIS 6</li>
+	<li>Operating system: Ieder OS dat de bovengenoemde software onderstent, inclusief <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+</ul>
+
+<p>Aangezien PKP niet de middelen heeft om iedere combinatie van softwareversies en platforms te testen, impliceert dit geen garanties voor correcte werking of ondersteuning.</p>
+
+<p>Deze instellingen kunnen na installatie gewijzigd worden door het bestand <tt>config.inc.php</tt> in de  OJS map aan te passen of met de sitebeheer web interface.</p>
+
+<h4>Ondersteunde database systemen</h4>
+
+<p>OJS is momenteel alleen getest met MySQL en PostgreSQL, hoewel andere database management systemen die ondersteund worden door <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> kunnen werken (geheel of gedeeltelijk). Compatibiliteistrappporen en/of aanpassingen in de code voor alernatieve DBMS-en kunnen naar het OJS team gestuurd worden.</p>
+
+<h4>Pre-Installatie Stappen</h4>
+
+<p>1. De volgende bestanden en mappen (en hun inhoud) moeten wijzigbaar gemaakt worden:</p>
+<ul>
+	<li><tt>config.inc.php</tt> is wijzigbaar (optioneel): {$writable_config}</li>
+	<li><tt>public/</tt> is wijzigbaar: {$writable_public}</li>
+	<li><tt>cache/</tt> is wijzigbaar: {$writable_cache}</li>
+	<li><tt>cache/t_cache/</tt> is wijzigbaar: {$writable_templates_cache}</li>
+	<li><tt>cache/t_compile/</tt> is wijzigbaar: {$writable_templates_compile}</li>
+	<li><tt>cache/_db</tt> is wijzigbaar: {$writable_db_cache}</li>
+</ul>
+
+<p>2. Een map om ingestuurde bestanden op te slaan moet aangemaakt worden en schrijfbaar zijn (Zie "Bestandsinstellingen" hieronder).</p>
+
+<h4>Handmatige installatie</h4>
+
+<p>Kies <strong>Handmatige installatie</strong> om de  SQL commando's te tonen voor het aanmaken van het OJS database schema en de initiële gegevens zodat de database installatie met de hand uitgevoerd kan worden. Deze optie is handig voor het localiseren van installatieproblemen, in het bijzonder op niet-ondersteunde platforms. Merk op dat deze installatie niet probeert om de database of tabellen aan te maken, hoewel het configuratiebestand met de opgegeven database instellingen wel wordt weggeschreven.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS Versie {$version}</h4>
-	
+
 <p>Dank u voor het downloaden van  Public Knowledge Project's <strong>Open Journal Systems</strong>. Lees voor u verdergaat de <a href="{$baseUrl}/docs/README">README</a> en <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> bestanden bij deze software. Bezoek voor meer informatie over het Public Knowledge Project en zijn software projecten de <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Voor het melden van fouten  en het verkrijgen van technische ondersteuning voor Open Journal Systems kunt u terecht op het <a href="http://forum.pkp.sfu.ca">support forum</a> of bezoek PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">fout rapportage systeem</a>. Hoewel het forum de voorkeur heeft kunt u het team ook e-mailen op <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>Het is <strong>sterk aanbevolen</strong> dat u een backup maakt van uw databank, bestanden-map en OJS installatiemap voor u verder gaat.</p>
 <p>Als u draait in <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, verzeker u er dan van dat de max_execution_timeout in uw php.ini op een hoge waarde staat. Als deze of een andere tijdslimiet (bv. Apache's "Timeout" waarde) bereikt wordt en het upgrade proces onderbroken wordt, is handmatige interventie noodzakelijk.</p>]]></message>
+	<message key="installer.localeSettingsInstructions"><![CDATA[Kies UTF-8 voor alle karakterset-instellingen als u volledige Unicode (UTF-8) ondersteuning wilt. Merk op dat dit momenteel een MySQL >= 4.1.1 of PostgreSQL >= 7.1 database vereist. Merk ook op dat volledige Unicode ondersteuning  PHP >= 4.3.0 gecompileerd met ondersteuning van de <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> bibliotheek vereist (standaard ingeschakeld in de meeste recente PHP installaties). Als uw server niet aan deze eisen voldoet kunnen er problemen ontstaan met het gebruik van uitgebreide karaktersets.
+<br /><br />
+Uw server ondersteunt momenteel mbstring: <strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.localeInstructions">De primaire taal voor gebruik in dit systeem. Zie de OJS documentatie voor ondersteuning van hier niet genoemde talen.</message>
 	<message key="installer.additionalLocalesInstructions">Selecteer de additionele talen voor gebruik in dit systeem. Deze talen kunnen gebruikt worden door de tijdschriften in deze site. Additionele talen kunnen op ieder gewenst moment  geïnstalleerd worden bij sitebeheer.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Geef het volledige pad naar een bestaande map waar geladen bestanden bewaard moeten worden. Deze map moet niet direct vanaf het web benaderbaar zijn. <strong>Verzeker u ervan dat de map bestaat en erin geschreven mag worden.</strong> Gebruik voor Windows pad-namen voorwaartse schuine strepen, bv. "C:/myjournal/files".]]></message>
@@ -769,49 +751,50 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} heeft een nieuwe inzending gedaan, ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} heeft artikel {$submissionId} herzien. Het nieuwe bestands-ID is {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} is teruggetrokken als reviewer van inzending {$submissionId} voor reviewronde {$round}.</message>
-	<message key="log.review.reviewInitiated">De review voor ronde {$round} door {$reviewerName} voor inzending {$submissionId} is gestart.</message>
-	<message key="log.review.reviewReinitiated">De review voor ronde {$round} door {$reviewerName} voor inzending {$submissionId} is opnieuw gestart.</message>
-	<message key="log.review.reviewCancelled">De review voor ronde {$round} door {$reviewerName} voor inzending {$submissionId} is ingetrokken.</message>
-	<message key="log.review.reviewCleared">De review voor ronde {$round} door {$reviewerName} voor inzending {$submissionId} is gewist.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} is beoordeeld voor reviewronde {$round} van inzeinding {$submissionId}.</message>
-	<message key="log.review.reviewDueDateSet">De afloopdatum voor de review voor ronde {$round} van inzending {$submissionId} door {$reviewerName} staat op {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">De aanbeveling voor de review voor ronde {$round} van inzending {$submissionId} door {$reviewerName} is vastgelegd.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">De aanbeveling voor de review voor ronde {$round} van inzending {$submissionId} is vastgelegd door redacteur, {$editorName} namens reviewer {$reviewerName}.</message>
-	<message key="log.review.resubmit">Inzending {$submissionId} is opnieuw ingezonden voor review.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} heeft de review voor ronde {$round} van inzending {$submissionId} geweigerd.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} heeft de review voor ronde {$round} van inzending {$submissionId} geaccepteerd.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} heeft de review voor ronde {$round} van inzending {$submissionId} namens {$reviewerName} geweigerd.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} heeft de review voor ronde  {$round} van inzending {$submissionId} namens {$reviewerName} geaccepteerd.</message>
-	<message key="log.review.reviewFileByProxy">Redacteur, {$userName}, heeft een reviewbestand geladen voor ronde {$round} van inzending {$submissionId} namens reviewer {$reviewerName}.</message>
+	<message key="log.author.documentRevised">{$authorName} heeft artikel {$articleId} herzien. Het nieuwe bestands-ID is {$fileId}.</message>
+	<message key="log.review.reviewerAssigned">{$reviewerName} is toegekend voor het reviewen van inzending {$articleId} voor reviewronde {$round}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} is teruggetrokken als reviewer van inzending {$articleId} voor reviewronde {$round}.</message>
+	<message key="log.review.reviewInitiated">De review voor ronde {$round} door {$reviewerName} voor inzending {$articleId} is gestart.</message>
+	<message key="log.review.reviewReinitiated">De review voor ronde {$round} door {$reviewerName} voor inzending {$articleId} is opnieuw gestart.</message>
+	<message key="log.review.reviewCancelled">De review voor ronde {$round} door {$reviewerName} voor inzending {$articleId} is ingetrokken.</message>
+	<message key="log.review.reviewCleared">De review voor ronde {$round} door {$reviewerName} voor inzending {$articleId} is gewist.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} is beoordeeld voor reviewronde {$round} van inzeinding {$articleId}.</message>
+	<message key="log.review.reviewDueDateSet">De afloopdatum voor de review voor ronde {$round} van inzending {$articleId} door {$reviewerName} staat op {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">De aanbeveling voor de review voor ronde {$round} van inzending {$articleId} door {$reviewerName} is vastgelegd.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">De aanbeveling voor de review voor ronde {$round} van inzending {$articleId} is vastgelegd door redacteur, {$editorName} namens reviewer {$reviewerName}.</message>
+	<message key="log.review.resubmit">Inzending {$articleId} is opnieuw ingezonden voor review.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} heeft de review voor ronde {$round} van inzending {$articleId} geweigerd.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} heeft de review voor ronde {$round} van inzending {$articleId} geaccepteerd.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} heeft de review voor ronde {$round} van inzending {$articleId} namens {$reviewerName} geweigerd.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} heeft de review voor ronde  {$round} van inzending {$articleId} namens {$reviewerName} geaccepteerd.</message>
+	<message key="log.review.reviewFileByProxy">Redacteur, {$userName}, heeft een reviewbestand geladen voor ronde {$round} van inzending {$articleId} namens reviewer {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Een reviewbestand is geladen.</message>
-	<message key="log.editor.decision">Een redacteursbeslissing ({$decision}) voor artikel {$submissionId} is vastgelegd door {$editorName}.</message>
+	<message key="log.editor.decision">Een redacteursbeslissing ({$decision}) voor artikel {$articleId} is vastgelegd door {$editorName}.</message>
 
 
-	<message key="log.copyedit.initiate">Tekstredactie voor inzending  {$submissionId} is gestart door {$copyeditorName}.</message>
+	<message key="log.copyedit.initiate">Tekstredactie voor inzending  {$articleId} is gestart door {$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">Het standaard tekstredactiebestand is gekozen.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} heeft de initiële tekstredactie van inzending {$submissionId} voltooid.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} heeft de definitieve tekstredactie van inzending {$submissionId} voltooid.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} heeft de tekstredactie van inzending {$submissionId} toegewezen gekregen.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} heeft de initiële tekstredactie van inzending {$articleId} voltooid.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} heeft de definitieve tekstredactie van inzending {$articleId} voltooid.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} heeft de tekstredactie van inzending {$articleId} toegewezen gekregen.</message>
 	<message key="log.copyedit.copyeditorFile">Een tekstredacteurs-versie van de inzending is geladen.</message>
 	<message key="log.copyedit.authorFile">Een versie van de inzending die door de auteur geredigeerd is, is geladen.</message>
 
-	<message key="log.layout.layoutEditorAssigned">{$editorName} is als opmaakredacteur toegewezen aan inzending {$submissionId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} is niet langer de opmaakredacteur van inzending {$submissionId}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} heeft de opmaak van inzending {$submissionId} afgerond.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} is als opmaakredacteur toegewezen aan inzending {$articleId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} is niet langer de opmaakredacteur van inzending {$articleId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} heeft de opmaak van inzending {$articleId} afgerond.</message>
 
 	<message key="log.editor.metadataModified">De metadata voor deze inzending is gewijzigd door {$editorName}.</message>
 	<message key="log.editor.editorFile">Een redactieversie van de inzending is geladen.</message>
-	<message key="log.editor.archived">Inzending {$submissionId} is gearchiveerd.</message>
-	<message key="log.editor.restored">Inzending {$submissionId} staat weer in de wachtrij.</message>
-	<message key="log.editor.editorAssigned">{$editorName} is als redacteur toegekend aan de inzending {$submissionId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} heeft het redactieproces van artikel {$submissionId} versneld.</message>
+	<message key="log.editor.archived">Inzending {$articleId} is gearchiveerd.</message>
+	<message key="log.editor.restored">Inzending {$articleId} staat weer in de wachtrij.</message>
+	<message key="log.editor.editorAssigned">{$editorName} is als redacteur toegekend aan de inzending {$articleId}.</message>
+	<message key="log.editor.submissionExpedited">{$editorName} heeft het redactieproces van artikel {$articleId} versneld.</message>
 
-	<message key="log.proofread.assign">{$assignerName} heeft {$proofreaderName} aangwezen voor het proeflezen van inzending {$submissionId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} heeft {$submissionId} ingezonden voor inplannen.</message>
+	<message key="log.proofread.assign">{$assignerName} heeft {$proofreaderName} aangwezen voor het proeflezen van inzending {$articleId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} heeft {$articleId} ingezonden voor inplannen.</message>
 
-	<message key="log.imported">{$userName} heeft artikel {$submissionId} geïmporteerd.</message>
+	<message key="log.imported">{$userName} heeft artikel {$articleId} geïmporteerd.</message>
 
 	<!-- Reading Tools entries -->
 
@@ -839,10 +822,10 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Mogelijk ongeldige URL's van zoeksites worden hieronder getoond.<br/>
-Verifieer de als ongeldig gemerkte URL's met de hand, aangezien deze test niet 100% accuraat is.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Mogelijk ongeldige URL's van zoeksites worden hieronder getoond.<br />
+Verifieer de als ongeldig gemerkte URL's met de hand, aangezien deze test niet 100% accuraat is.<br />
 Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
-	
+
 	<!-- RT Entities -->
 
 
@@ -855,7 +838,7 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="rt.beNotifiedWhen">Bericht als...</message>
 
 	<message key="rt.thisJournal">Doorzoek tijdschrift</message>
-	
+
 
 	<message key="rt.context.authorTermsDescription">Laat bij items met meer dan één auteur alle namen aangevinkt voor het zoeken naar werk met soortgelijke co-auteurs, of zoek naar één tegelijk door slechts één naam aan te vinken. Klik op OVER voor meer informatie over de doorzochte bronnen. Deze bronnen zijn uitgekozen vanwege hun relevantie en open (gratis) toegang tot alle of een gedeelte van hun inhoud.</message>
 
@@ -868,6 +851,7 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<!-- Icons: Default "alt" text -->
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Lijst munteenheden "{$filename}" uit XML geladen</message>
+	<message key="debug.notes.helpMappingLoad">XML help mapping bestand {$filename} opnieuw geladen op zoek naar {$id}.</message>
 
 	<!--
 	 *
@@ -880,8 +864,11 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="payment.type.purchaseArticle">Prijs van dit artikel</message>
 	<message key="submission.layout.publicGalleyId">Publieke proefdruk identiicatie</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Publieke proefdruk identificatie bestaat al.</message>
+	<message key="submission.reviewForm">Reviewformulier</message>
+	<message key="submission.reviewFormResponse">Reactie reviewformulier</message>
 	<message key="reviewer.article.enterReviewForm">Klik op het ikoon om het reviewformulier in te vullen</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Gelieve de verplichte velden in te vullen</message>
+	<message key="common.pageHeader.altText">Paginakop</message>
 	<message key="common.homePageHeader.altText">Home-pagina kop</message>
 	<message key="common.journalHomepageImage.altText">Tijdschrift home-pagina afbeelding</message>
 	<message key="article.coverPage.altText">Omslagafbeelding</message>
@@ -927,8 +914,10 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="subscriptionManager.individualSubscriptions">Individuele abonnementen</message>
 	<message key="subscriptionManager.institutionalSubscriptions">Institutionele abonnementen</message>
 	<message key="subscriptionManager.subscriptionTypes">Abonnementsoorten</message>
+	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata formaat plugins</message>
+	<message key="subscriptions.individualDescription">Bij individuele abonnementen is inloggen nodig om teogang te krijgen tot de inhoud.</message>
 	<message key="subscriptions.institutionalDescription">Voor institutionele abonnementen is inloggen niet nodig.Toegang tot de inhoud wordt geregeld aan de hand van het domein en/of het IP-adres van de gebruiker.</message>
-	<message key="manager.setup.citations.enable">Sta auteurs toe om afzonderlijk een geformatteerde lijst met referenties (citaties) mee te leveren als onderdeel van hun inzending.</message>
+	<message key="manager.setup.citations">Sta auteurs toe om afzonderlijk een geformatteerde lijst met referenties (citaties) mee te leveren als onderdeel van hun inzending.</message>
 	<message key="user.subscriptions.mySubscriptions">Mijn abonnementen</message>
 	<message key="user.subscriptions.individualSubscriptions">Individueel abonnement</message>
 	<message key="user.subscriptions.institutionalSubscriptions">Institutionele abonnementen</message>
@@ -986,9 +975,13 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="notification.type.submissionComment">Een redacteur heeft "{$title}" van commentaar voorzien.</message>
 	<message key="reviewer.article.reviewGuidelinesDescription">De richtlijnen voor review geven reviewers criteria voor het beoordelen van de geschiktheid van een inzending voor publicatie in het tijdschrift. Ze kunnen instructies bevatten voor het maken een effectief en behulpzaam review. Bij het uitvoeren van een review krijgen reviewers twee tekstvelden, de eerste "voor redacteur en auteur" en de tweede "voor redacteur". De tijdschriftbeheerder kan ook een peer review formulier aanmaken bij revieuwformulieren, In alle gevallen hebben de redacteuren de mogelijkheid om de reviews op te nemen in de correspondentie met de auteur.</message>
 	<message key="notification.type.articleSubmitted">Een nieuw artikel, "{$title}", is ingestuurd.</message>
+	<message key="notification.type.copyeditComment">Een tekstredacteur heeft een opmerking gemaakt bij "{$title}" .</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Deze pagina toont belangrijke berichten over dit tijdschrift zoals nieuwe nummers of nieuwsberichten. U kunt zich op deze berichten abonneren via RSS feeds (door op de afbeeldingen rechts te klikken) of   <a href="{$emailUrl}">via e-mail.</a>]]></message>
 	<message key="notification.type.editing">Redactieberichten</message>
+	<message key="notification.type.layoutComment">Er is een opmerking geplaatst over de layout van ""{$title}.</message>
+	<message key="notification.type.proofreadComment">Een proeflezer heeft een opmerking geplaatst bij "{$title}".</message>
 	<message key="notification.type.userComment">Een lezer heeft een opmerking geplaatst bij "{$title}"</message>
+	<message key="notification.type.suppFileModified">Aanvullende bestanden van "{$title}" zijn gewijzigd.</message>
 	<message key="user.subscriptions.subscriptionStatus">Abonnementsstatus</message>
 	<message key="user.subscriptions.statusDescription">Beschrijving</message>
 	<message key="user.subscriptions.status">Status</message>
@@ -996,9 +989,11 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="user.subscriptions.status.needsApprovalDescription">Het abonnement moet beoordeeld worden voor het geactiveerd kan worden</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Handmatige betaling is gestart, maar nog niet ontvangen</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Een online betaling is gestart, maar gestopt of niet voltooid</message>
+	<message key="article.pdf.download">Dit PDF bestand downloaden</message>
 	<message key="user.subscriptions.statusInformation">Actieve en verlopen abonnementen worden hieronder met hun afloopdatum getoond. De volgende aanvullende informatie kan bij de abonnementen opgenomen worden.</message>
 	<message key="payment.authorFees">Kosten auteurs</message>
 	<message key="user.register.reviewerInterests">Geef review-interesses (kennisgebieden en onderzoeksmethodes)</message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>Het PDF bestand dat u gekozen hebt zal hier geladen worden als uw webbrowser een plugin voor het lezen  van PDF's geïnstalleerd heeft (bijvoorbeeld een recente versie van <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>U kunt het PDF bestand ook direct naar uw computer downloaden en het openen in een PDF-lezer. Om een PDF de downloaden, klik op de download-link hieronder.</p> <p>Als u meer informatie wilt over het afdrukken, bewaren en werken met PDF's, Highwire Press heeft een handige <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[Er is een nieuwe versie van OJS beschikbaar! U gebruikt momenteel OJS versie {$currentVersion}. De meest recente versie is OJS {$latestVersion}. Bezoek <a href="http://pkp.sfu.ca/ojs_download" target="_new">deze pagina</a> om de meest recente versie op te halen en voor installatieinstructies.]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[Er is een nieuwe versie van OJS beschikbaar! U gebruikt momenteel OJS versie {$currentVersion}. De meest recente versie is OJS {$latestVersion}. Neem contact op met uw sitebeheerder ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) om die te wijzen op de nieuwe versie. Meer informatie <a href="http://pkp.sfu.ca/ojs_download" target="_new">hier</a>.]]></message>
 	<message key="user.authorization.copyeditorAssignmentMissing">Geen toegang! U bent niet de tekstredacteur voor dit artikel.</message>
@@ -1016,6 +1011,7 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="installer.allowFileUploads"><![CDATA[Uw server staat momenteel het laden van bestanden toe: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Uw server staat momenteel het laden toe van bestanden met een maximale grootte van: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="user.authorization.invalidCopyditorSubmission">Onjuiste tekstredacteur inzending of geen tekstredacteur inzending gevraagd!</message>
+	<message key="user.authorization.invalidSectionEditorSubmission">Onjuiste sectieredacteur inzending of geen sectieredacteur inzending gevraagd!</message>
 	<message key="gifts.purchaseGiftSubscription">Schenk een abonnement</message>
 	<message key="gifts.giftSubscriptionsAvailable">U kunt ook een abonnement geven. Giften kunnen op ieder moment ingewisseld worden door de ontvanger en zijn een goede manier om dit tijdschrift te steunen.</message>
 	<message key="gifts.subscriptionTypeNotValid">De abonnementsoort voor deze gift is niet geldig. Neem contact op met de abonnementenbeheerder.</message>
@@ -1063,7 +1059,30 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 		</ul>
 	</li>
 </ol>]]></message>
-
-	<!-- Included here because it may be used in the navigation bar -->
-	<message key="editor.navigation.issues">Issues</message>
+	<message key="common.journal">Tijdschrift</message>
+	<message key="submission.permissions">Rechten</message>
+	<message key="submission.license">Licentie</message>
+	<message key="submission.copyright">Auteursrecht</message>
+	<message key="submission.copyrightHolder">Auteursrechthebbende</message>
+	<message key="submission.copyrightYear">Jaar van het auteursrecht</message>
+	<message key="user.profile.profileImage">Profielafbeelding</message>
+	<message key="user.orcid">ORCID iD</message>
+	<message key="submission.licenseURL">Licentie URL</message>
+	<message key="submission.license.cc.by-nc-nd4">CC Attribution-NonCommercial-NoDerivatives 4.0</message>
+	<message key="submission.license.cc.by-nc4">CC Attribution-NonCommercial 4.0</message>
+	<message key="submission.copyrightStatement">Copyright (c) {$copyrightYear} {$copyrightHolder}</message>
+	<message key="submission.licenseURLValid">Geef een geldige URL (inclusief http://).</message>
+	<message key="submission.license.cc.by-nc-sa4">CC Attribution-NonCommercial-ShareAlike 4.0</message>
+	<message key="submission.license.cc.by-nd4">CC Attribution-NoDerivatives 4.0</message>
+	<message key="submission.license.cc.by4">CC Attribution 4.0</message>
+	<message key="submission.license.cc.by-sa4">CC Attribution-ShareAlike 4.0</message>
+	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.]]></message>
+	<message key="user.profile.form.orcidInvalid">Het opgegeven ORCID ID is niet geldig</message>
+	<message key="user.orcid.description"><![CDATA[ORCID iDs kunnen alleen toegekend worden door <a href="http://orcid.org/" target="_blank">the ORCID Registry</a>. U moet hun standaarden voor het uitdrukken van ORCID iDs volgen, en de volledige URI opnemen (bv. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
+	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems ondersteunt het <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) systeem voor veilige en permanente beschikbaarheid van uw tijdschrift. Er zijn verschillende opties om uw tijdschrift op te nemen in een LOCKSS netwerk:]]></message>
 </locale>
