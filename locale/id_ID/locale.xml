@@ -180,7 +180,7 @@
 	<message key="journal.currentIssue">Terbitan Terkini</message>
 	<message key="journal.journals">Jurnal</message>
 	<message key="journal.path">Path</message>
-	<message key="journal.journal">Jurnal</message>
+	<message key="context.context">Jurnal</message>
 	<message key="journal.issn">ISSN</message>
 
 	<!-- User -->

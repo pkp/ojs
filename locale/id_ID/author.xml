@@ -25,10 +25,10 @@
 <message key="author.submit.step4">Langkah 4. Mengunggah File Tambahan</message> 
 <message key="author.submit.step4a"> Langkah 4a. Menambah File Tambahan</message>
 <message key="author.submit.step5">Langkah 5. Mengonfirmasi Penyerahan Naskah</message> 
-<message key="author.submit.start">1. Mulai</message> 
-<message key="author.submit.upload">2. Unggah Naskah</message>
- <message key="author.submit.metadata">3. Masukkan Metadata </message> <message key="author.submit.supplementaryFiles">4. Unggah File Tambahan </message> 
-<message key="author.submit.confirmation">5. Konfirmasi</message>	
+<message key="author.submit.start">Mulai</message> 
+<message key="author.submit.upload">Unggah Naskah</message>
+ <message key="author.submit.metadata">Masukkan Metadata </message> <message key="author.submit.supplementaryFiles">Unggah File Tambahan </message> 
+<message key="author.submit.confirmation">Konfirmasi</message>	
 <message key="author.submit.cancelSubmission"> Anda dapat melengkapi naskah ini kapan saja dengan memilih Naskah Aktif dari Beranda Penulis.</message> 
 	<message key="author.submit.notAccepting"> Jurnal ini tidak menerima penyerahan naskah saat ini.</message>	
 <message key="author.submit.requestWaiver">Permintaan surat pernyataan melepaskan tuntutan</message>
@@ -47,19 +47,19 @@
 <message key="author.submit.howToSubmitNoPhone"><![CDATA[Menghadapi kesulitan? kontak<a href="mailto:{$supportEmail}">{$supportName}</a> untuk bantuan.]]></message> 
 	<message key="author.submit.journalSection">Bagian Jurnal</message> 
 	<message key="author.submit.journalSectionDescription"><![CDATA[Pilih bagian yang tepat untuk naskah ini (lihat Bagian dan Kebijakan di <a href="{$aboutUrl}" target="_new">Tentang</a> Kami).]]></message>	
-<message key="author.submit.selectSection">Silah pilih bagian...</message> 
+<message key="submission.submit.selectSection">Silah pilih bagian...</message> 
 	<message key="author.submit.submissionLocale">Bahasa Naskah</message> 
 	<message key="author.submit.submissionLocaleDescription">Jurnal ini menerima naskah dari beberapa bahasa. Pilih bahasa utama naskah dari menu di bawah ini.</message>	
 <message key="author.submit.submissionChecklist">Checklist Naskah</message> 
-	<message key="author.submit.submissionChecklistDescription"> Menunjukkan bahwa naskah ini siap untuk dipertimbangkan oleh jurnal dengan mengecek hal-hal di bawah ini (komentar untuk editor dapat ditambahkan di bawah).</message>	
+	<message key="submission.submit.submissionChecklistDescription"> Menunjukkan bahwa naskah ini siap untuk dipertimbangkan oleh jurnal dengan mengecek hal-hal di bawah ini (komentar untuk editor dapat ditambahkan di bawah).</message>	
 <message key="author.submit.verifyChecklist">Anda harus memastikan semua artikel tercantum dalam daftar nama naskah yang memuaskan sebelum dilanjutkan.</message>	
 <message key="author.submit.copyrightNoticeAgree">Penulis setuju dengan persyaratan hak cipta, yang akan berlaku pada penyerahan ini dan saat diterbitkan oleh jurnal (komentar untuk editor dapat ditambahkan dibawah).</message>
 <message key="author.submit.copyrightNoticeAgreeRequired">Anda harus setuju dengan persyaratan hak cipta sebelum melanjutkan</message>
-<message key="author.submit.commentsForEditor">Komentar untuk Editor</message> 
+<message key="submission.submit.coverNote">Komentar untuk Editor</message> 
 	<message key="author.submit.comments">Masukkan Teks(pilihan)</message> 
 	<message key="author.submit.form.sectionRequired">Pilih bagian jurnal yang sesuai untuk penyerahan ini.</message>	
 <message key="author.submit.form.localeRequired">Pilih bahasa penyeraha.</message> 
-	<message key="author.submit.privacyStatement">Pernyataan Privasi Jurnal</message>
+	<message key="submission.submit.privacyStatement">Pernyataan Privasi Jurnal</message>
 	<message key="author.submit.reorderInstructions">Mengurutkan nama penulis agar ditampilkan seperti urutan di daftar dalam penerbitan.</message> 
 	<message key="author.submit.reorder">Mengurutkan nama penulis</message> 
 	<message key="author.submit.selectPrincipalContact">Kontak Utama untuk Korespondensi Editorial.</message>	
