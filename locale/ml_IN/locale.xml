@@ -198,7 +198,7 @@
 	<message key="journal.currentIssue">നിലവിലിരിക്കുന്ന പ്രസിദ്ധീകരണം</message>
 	<message key="journal.journals">ജേണല്‍സ്</message>
 	<message key="journal.path">പാത്ത്</message>
-	<message key="journal.journal">ജേണല്‍</message>
+	<message key="context.context">ജേണല്‍</message>
 	<message key="journal.issn">ഐ എസ് എസ് എന്‍</message>
 
 	<!-- User -->
