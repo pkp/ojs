@@ -26,11 +26,11 @@
 	<message key="author.submit.step4">步骤4. 上传附件</message>
 	<message key="author.submit.step4a">步骤4a. 添加一个附件</message>
 	<message key="author.submit.step5">步骤5. 确认投稿</message>
-	<message key="author.submit.start">1. 开始</message>
-	<message key="author.submit.upload">2. 上传稿件</message>
-	<message key="author.submit.metadata">3. 输入元数据</message>
-	<message key="author.submit.supplementaryFiles">4. 上传附件</message>
-	<message key="author.submit.confirmation">5. 确认</message>
+	<message key="author.submit.start">开始</message>
+	<message key="author.submit.upload">上传稿件</message>
+	<message key="author.submit.metadata">输入元数据</message>
+	<message key="author.submit.supplementaryFiles">上传附件</message>
+	<message key="author.submit.confirmation">确认</message>
 	<message key="author.submit.cancelSubmission">您可以在以后的时间通过选择在作者首页的处理中投稿来完成本次投稿.</message>
 	<message key="author.submit.notAccepting">这个杂志是在这个时候不接受投稿.</message>
 	<message key="author.submit.requestWaiver">申请免费</message>
@@ -50,16 +50,16 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[遇到困难? 联系<a href="mailto:{$supportEmail}">{$supportName}</a> 活得帮助.]]></message>
 	<message key="author.submit.journalSection">期刊栏目</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[选择投稿的栏目 (参看在 <a href="{$aboutUrl}" target="_new">关于期刊</a> 的栏目与政策).]]></message>
-	<message key="author.submit.selectSection">请选择一个栏目...</message>
+	<message key="submission.submit.selectSection">请选择一个栏目...</message>
 	<message key="author.submit.submissionChecklist">投稿清单</message>
-	<message key="author.submit.submissionChecklistDescription">勾选下列项目以确定这份稿件已慎重考虑投稿本期刊（可以在下面加上给编辑的意见）</message>
+	<message key="submission.submit.submissionChecklistDescription">勾选下列项目以确定这份稿件已慎重考虑投稿本期刊（可以在下面加上给编辑的意见）</message>
 	<message key="author.submit.verifyChecklist">您必须确定已经完成检查表中的所有的项目，才能继续下一步.</message>
 	<message key="author.submit.copyrightNoticeAgree">作者同意这份版权注意事项的内容，并同意在这份期刊出版此稿件时适用于这份稿件（可以在下面加上给编辑的意见）.</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">您必须同意的条款版权公告，然后继续.</message>
-	<message key="author.submit.commentsForEditor">给编辑的注释</message>
+	<message key="submission.submit.coverNote">给编辑的注释</message>
 	<message key="author.submit.comments">输入文本(可选)</message>
 	<message key="author.submit.form.sectionRequired">请选择一个合适的期刊投稿.</message>
-	<message key="author.submit.privacyStatement">杂志的隐私声明</message>
+	<message key="submission.submit.privacyStatement">杂志的隐私声明</message>
 	<message key="author.submit.reorderInstructions">重新排列作者在发表时候的顺序.</message>
 	<message key="author.submit.reorder">重新排序作者姓名</message>
 	<message key="author.submit.selectPrincipalContact">编辑信件的主要联系方式.</message>

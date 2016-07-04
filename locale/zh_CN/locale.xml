@@ -196,7 +196,7 @@
 	<message key="journal.currentIssue">最新一期</message>
 	<message key="journal.journals">期刊</message>
 	<message key="journal.path">路径</message>
-	<message key="journal.journal">期刊</message>
+	<message key="context.context">期刊</message>
 	<message key="journal.issn">ISSN</message>
 
 	<!-- User -->
