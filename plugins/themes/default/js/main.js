@@ -9,6 +9,15 @@
  */
 (function($) {
 
+	// Update nav menu ARIA states on focus, blur and mouse over/out events
+	$('.navDropdownMenu ul').on('focus.default  mouseenter.default', '[aria-haspopup="true"]', function (e) {
+		$(e.currentTarget).attr('aria-expanded', true);
+	});
+
+	$('.navDropdownMenu ul').on('blur.default  mouseleave.default', '[aria-haspopup="true"]', function (e) {
+		$(e.currentTarget).attr('aria-expanded', false);
+	});
+
 	// Register click handlers for the search panel
 	var headerSearchPanelIsClosing = false,
 	    headerSearchForm = $('#headerNavigationContainer .pkp_search'),
@@ -87,6 +96,12 @@
 			headerSearchInput.val('');
 		},300)
 	}
+
+	// Modify the Chart.js display options used by UsageStats plugin
+	document.addEventListener('usageStatsChartOptions.pkp', function(e) {
+		e.chartOptions.elements.line.backgroundColor = 'rgba(0, 122, 178, 0.6)';
+		e.chartOptions.elements.rectangle.backgroundColor = 'rgba(0, 122, 178, 0.6)';
+	});
 
 	// Initialize tag-it components
 	//

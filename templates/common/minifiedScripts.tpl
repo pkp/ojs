@@ -13,6 +13,12 @@
  *}
 
 {* External jQuery plug-ins to be minified *}
+<script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/validate/jquery.validate{if $useMinifiedJavaScript}.min{/if}.js"></script>
+{if in_array($currentLocale, array('pt_PT', 'pt_BR'))}
+    <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/validate/localization/messages_{$currentLocale|regex_replace:"/(.*)_(.*)/":"\\1\\2"|strtolower}.js"></script>
+{elseif in_array(substr($currentLocale,0,2), array('ar', 'bg', 'cn', 'cs', 'da', 'de', 'es', 'fa', 'fi', 'fr', 'hu', 'it', 'kk', 'nl', 'no', 'pl', 'ro', 'ru', 'se', 'sk', 'tr', 'tw', 'ua'))}
+    <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/validate/localization/messages_{$currentLocale|regex_replace:"/(.*)_(.*)/":"\\1"|strtolower}.js"></script>
+{/if}
 <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.form.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.tag-it.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.sortElements.js"></script>
@@ -21,8 +27,23 @@
 <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.jlabel-1.3.min.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.selectBox.min.js"></script>
 
+{* PlUpload component *}
+<script src="{$baseUrl}/lib/pkp/lib/vendor/moxiecode/plupload/js/plupload.full.min.js"></script>
+<script src="{$baseUrl}/lib/pkp/lib/vendor/moxiecode/plupload/js/jquery.ui.plupload/jquery.ui.plupload.js"></script>
+{if in_array($currentLocale, array('pt_BR'))}
+	{* Locale files of the form aa-bb.js *}
+	<script src="{$baseUrl}/lib/pkp/lib/vendor/moxiecode/plupload/js/i18n/{$currentLocale|regex_replace:"/(.*)_(.*)/":"\\1-\\2"|strtolower}.js"></script>
+{elseif in_array(substr($currentLocale,0,2), array('ar', 'da', 'et', 'hr', 'ja', 'lt', 'pl', 'sq', 'tr', 'az', 'de', 'fa', 'hu', 'ka', 'lv', 'sr', 'bs', 'el', 'fi', 'hy', 'kk', 'mn', 'ro', 'cs', 'en', 'fr', 'id', 'km', 'ms', 'ru', 'sv', 'cy', 'es', 'he', 'it', 'ko', 'nl', 'sk'))}
+	{* Locale files of the form aa.js *}
+	<script src="{$baseUrl}/lib/pkp/lib/vendor/moxiecode/plupload/js/i18n/{$currentLocale|substr:0:2}.js"></script>
+{/if}
+
 {* JSON library *}
 <script src="{$baseUrl}/lib/pkp/js/lib/json/json2.js"></script>
+
+{* Pines Notify build/cache *}
+<script src="{$baseUrl}/lib/pkp/js/lib/pnotify/pnotify.core.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/lib/pnotify/pnotify.buttons.js"></script>
 
 {* Our own functions (depend on plug-ins) *}
 <script src="{$baseUrl}/lib/pkp/js/functions/general.js"></script>
