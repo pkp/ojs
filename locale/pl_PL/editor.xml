@@ -117,7 +117,7 @@ Przed przesłaniem tekstu do redakcji techniczne, powiadom autora o decyzji i wy
 	<message key="editor.article.decision">Decyzja</message>
 	<message key="editor.article.noEditorSelected">Nie wybrano redaktora</message>
 	<message key="editor.article.recordDecision">Zapisz</message>
-	<message key="editor.article.cannotRecord">??Redaktor działu nie został zapisany lub tekst nie został zrecenzowany. </message>
+	<message key="editor.article.cannotRecord">??Redaktor działu nie został zapisany lub tekst nie został zrecenzowany.</message>
 	<message key="editor.article.reviewersSeeAuthorsVersion">Recenzenci widzą oryginalny tekst</message>
 	<message key="editor.article.designateDueDate">Zaznacz termin wykonania recenzji</message>
 	<message key="editor.article.designateDueDateDescription">Wpisz datę lub liczbę tygodni dla nowego terminu.</message>

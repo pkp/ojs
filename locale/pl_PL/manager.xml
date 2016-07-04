@@ -92,7 +92,7 @@
 	<message key="manager.setup.announcementsDescription">Mogą zostać opublikowane w celu powiadomienia czytelników czasopisma o nowościach i wydarzeniach. Będą widoczne na stronie powiadomień.</message>
 	<message key="manager.setup.announcementsIntroduction">Dodatkowe informacje.</message>
 	<message key="manager.setup.announcementsIntroductionDescription">Dodaj dodatkowe informacje jakie powinny się znaleźć na stronie głównej ogłoszeń.</message>
-	<message key="manager.setup.appearInAboutJournal">(Widoczne na stronie o czasopiśmie) </message>
+	<message key="manager.setup.appearInAboutJournal">(Widoczne na stronie o czasopiśmie)</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Wymagaj od autorów oświadczenia o zbieżności zainteresowań.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Wymagaj od recenzentów oświadczenia o zbieżności zainteresowań.</message>
 	<message key="manager.setup.history">Historia</message>
