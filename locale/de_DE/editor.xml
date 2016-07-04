@@ -9,14 +9,10 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
   * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
-  -->
+-->
 
-<locale name="de_DE" full_name = "Deutsch (Deutschland)">
-	<message key="editor.article.reviewForms">Begutachtungsformulare</message>
-	<message key="editor.article.selectReviewForm">Wählen Sie ein Begutachtungsformular</message>
-	<message key="editor.article.clearReviewForm">Begutachtungsformular zurücksetzen</message>
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="editor.home">Startseite der Redakteurin/des Redakteurs</message>
-	<message key="editor.article.confirmChangeReviewForm">Achtung: Das Ändern des Begutachtungsformulars wird alle Antworten beeinflussen, die Gutachter/innen bei der Benutzung dieses Formulars eingegeben haben. Sind Sie sicher, dass Sie fortfahren möchten?</message>
 	<message key="editor.reassign">Wieder zuweisen</message>
 	<message key="editor.submissionsAndPublishing">Beiträge und Veröffentlichungen</message>
 	<message key="editor.submissionQueue">Liste der Beiträge</message>
@@ -26,7 +22,7 @@
 	<message key="editor.allSections">Alle Rubriken</message>
 	<message key="editor.allEditors">Alle Redakteur/innen</message>
 	<message key="editor.me">Ich</message>
-	<message key="editor.publicIdentificationExists">Die Ausgabenkennzeichnung '{$publicIdentifier}' existiert bereits für ein anderes Objekt (Ausgabe, Artikel, Fahne oder Zusatzdatei). Bitte wählen Sie eindeutige Kennzeichnungen innerhalb Ihrer Zeitschrift.</message>
+	<message key="editor.publicIdentificationExists">Die Kennzeichnung '{$publicIdentifier}' existiert bereits für ein anderes Objekt (Ausgabe, Artikel, Fahne oder Zusatzdatei). Bitte wählen Sie eindeutige Kennzeichnungen innerhalb Ihrer Zeitschrift.</message>
 	<message key="editor.submissionArchive.noSubmissions">Kein Beitrag im Archiv</message>
 	<message key="editor.submissionArchive.saveChanges">Änderungen der archivierten Beiträge speichern? Beiträge, die als zu löschend gekennzeichnet sind, werden dadurch engültig aus dem System gelöscht.</message>
 	<message key="editor.submissionArchive.confirmDelete">Sind Sie sicher, dass Sie diesen Beitrag endgültig löschen wollen?</message>
@@ -40,7 +36,6 @@
 	<message key="editor.notifyUsers.allAuthors">Alle veröffentlichten Autor/innen ({$count} Nutzer/innen)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Alle individuellen Abonnent/innen ({$count} Nutzer/innen)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Alle institutionellen Abonnent/innen ({$count} Nutzer/innen)</message>
-<message key="editor.notifyUsers.allMailingList">Alle E-Mail-Adressen auf der Mailing-Liste einschließen ({$count} E-Mail-Adr)</message>
 	<message key="editor.notifyUsers.inProgress">Benutzer/innen werden benachrichtigt…</message>
 	<message key="editor.usersNotified">Benutzer/innen benachrichtigt</message>
 	<message key="editor.notifyUsers.allUsers">Mitteilung an allen Benutzer/innen der Zeischrift ({$count} Benutzer/innen) senden</message>
@@ -48,7 +43,6 @@
 	<message key="editor.notifyUsers.includeToc">Das Inhaltsverzeichnis dieser Ausgabe anfügen:</message>
 	<message key="editor.editorAdministration">Redaktionsaufgaben</message>
 	<message key="editor.issues.createIssue">Ausgabe erstellen</message>
-	<message key="editor.issues.editIssue">Ausgabenverwaltung: {$issueIdentification}</message>
 	<message key="editor.issues.backIssues">Frühere Ausgaben</message>
 	<message key="editor.issues.futureIssues">Zukünftige Ausgaben</message>
 	<message key="editor.issues.currentIssue">Aktuelle Ausgabe</message>
@@ -63,7 +57,7 @@
 	<message key="editor.issues.titleRequired">Die Angabe "Titel" ist erforderlich.</message>
 	<message key="editor.issues.issueIdentificationRequired">Eine Kennzeichnung der Ausgabe ist erforderlich. Bitte wählen Sie zumindest eine der Optionen zur Ausgabenkennzeichnung aus.</message>
 	<message key="editor.issues.issueIdentification">Ausgabenkennzeichnung</message>
-	<message key="editor.issues.publicIssueIdentifier">Öffentliche Ausgabenkennzeichnung </message>
+	<message key="editor.issues.publicIssueIdentifier">Öffentliche Ausgabenkennzeichnung</message>
 	<message key="editor.issues.description">Beschreibung</message>
 	<message key="editor.issues.accessStatus">Zugangsstatus</message>
 	<message key="editor.issues.accessDate">Datum für freien Zugang</message>
@@ -88,7 +82,7 @@
 	<message key="editor.issues.identification">Identifizierung</message>
 	<message key="editor.issues.access">Zugang</message>
 	<message key="editor.issues.cover">Titelseite</message>
-	<message key="editor.issues.confirmIssueDelete">Sind Sie sicher, dass Sie diese Ausgabe entfernen wollen? Alle Beiträge gehen dadurch zurück in die Liste der zur Veröffentlichung anstehenden Beiträge und alle Zusatzdateien werden endgültig gelöscht. </message>
+	<message key="editor.issues.confirmIssueDelete">Sind Sie sicher, dass Sie diese Ausgabe entfernen wollen? Alle Beiträge gehen dadurch zurück in die Liste der zur Veröffentlichung anstehenden Beiträge und alle Zusatzdateien werden endgültig gelöscht.</message>
 	<message key="editor.issues.resetSectionOrder"><![CDATA[Diese Ausgabe hat eine spezielle Rubrikreihenfolge. <a href="{$url}" class="action">Auf den Standard zurücksetzen</a>]]></message>
 	<message key="editor.issues.resetIssueOrder"><![CDATA[Diese Zeitschrift benutzt eine spezielle Ausgabensortierung. <a href="{$url}" class="action">Standard wiederherstellen</a>]]></message>
 	<message key="editor.issues.issueData">Daten der Ausgabe</message>
@@ -118,10 +112,6 @@
 	<message key="editor.issues.viewingGalley">Ausgabenfahne ansehen</message>
 	<message key="editor.issues.confirmDeleteGalley">Sind Sie sicher, dass Sie diese Ausgabenfahne löschen möchten?</message>
 	<message key="editor.navigation.futureIssues">Zukünftige Ausgaben</message>
-	<message key="grid.action.addIssue">Ausgabe erstellen</message>
-	<message key="grid.action.viewIssue">Ausgabe ansehen</message>
-	<message key="grid.action.previewIssue">Voransicht</message>
-	<message key="grid.action.addIssueGalley">Ausgabenfahne anlegen</message>
 	<message key="editor.navigation.issueArchive">Frühere Ausgaben</message>
 	<message key="editor.article.designateReviewVersion">Die ursprüngliche Datei zur Begutachtungsversion machen</message>
 	<message key="editor.article.uploadReviewVersion">Eine überarbeitete Begutachtungsversion hochladen</message>
@@ -148,7 +138,7 @@
 	<message key="editor.article.decision">Entscheidung</message>
 	<message key="editor.article.noEditorSelected">Kein/e Redakteur/in ausgewählt.</message>
 	<message key="editor.article.recordDecision">Entscheidung protokollieren</message>
-	<message key="editor.article.cannotRecord">Bisher kein/e Rubrikredakteur/in festgelegt, oder es ist keine Begutachtungsfassung vorhanden. </message>
+	<message key="editor.article.cannotRecord">Bisher kein/e Rubrikredakteur/in festgelegt, oder es ist keine Begutachtungsfassung vorhanden.</message>
 	<message key="editor.article.reviewersSeeAuthorsVersion">Gutachter/innen, denen die Autor/innenversion zugeht</message>
 	<message key="editor.article.designateDueDate">Abgabetermin festlegen</message>
 	<message key="editor.article.designateDueDateDescription">Geben Sie ein Datum oder eine Anzahl von Wochen für den neuen Abgabetermin ein.</message>
@@ -162,7 +152,7 @@
 	<message key="editor.article.showAuthor">Autor/in die Datei zeigen</message>
 	<message key="editor.article.showCopyeditor">Version der Lektorin/dem Lektor zeigen</message>
 	<message key="editor.article.rateReviewer">Gutachter/in bewerten</message>
-	<message key="editor.article.reviewerRating.veryGood">5 Hoch </message>
+	<message key="editor.article.reviewerRating.veryGood">5 Hoch</message>
 	<message key="editor.article.reviewerRating.good">4</message>
 	<message key="editor.article.reviewerRating.average">3</message>
 	<message key="editor.article.reviewerRating.poor">2</message>
@@ -222,13 +212,6 @@
 	<message key="editor.article.coverPageInstructions">(Erlaubte Formate: .gif, .jpg oder .png)</message>
 	<message key="editor.article.uploaded">Hochgeladen</message>
 	<message key="editor.article.removeCoverPage">Titelbild entfernen?</message>
-	<message key="grid.action.removeArticle">Artikel aus Ausgabe entfernen</message>
 	<message key="editor.article.remove">Entfernen</message>
-	<message key="editor.article.remove.confirm">Sind Sie sicher, dass Sie diesen Artikel aus der Ausgabe entfernen möchten? Der Artikel kann dann für eine andere Ausgabe eingeteilt werden.</message>
 	<message key="editor.issues.invalidAccessDate">Zugangsdatum ungültig.</message>
-	<message key="editor.issues.editIssueGalley">Ausgabenfahne bearbeiten</message>
-	<message key="editor.externalReview.introduction">In der Externen Begutachtung weist die/der Redakteur/in zeitschriftenexternen Gutachter/innen die Beitragsdateien zu und wertet die eintreffenden Gutachten aus, bevor sie/er die angemessene Aktion auswählt (inklusive der Benachrichtigung der/des Autor/in): Überarbeitung erforderlich (Überarbeitungen werden nur von der Redakteurin/dem Redakteur gesichtet); Erneut zur Begutachtung einreichen (Überarbeitungen führen zu einer erneuten Begutachtungsrunde); Beitrag annehmen (führt zur Auswahl von Dateien für die Lektoratsphase) oder Beitrag ablehnen (Redakteur/in verschiebt die Einreichung ins Archiv).</message>
-	<message key="editor.submission.introduction">Unter Einreichungen wählt die/der Redakteur/in nach der Sichtung der eingereichten Dateien die angemessene Aktion (inklusive der Benachrichtigung der/des Autor/in): In die Externe Begutachtung schicken (führt zu der Auswahl von Dateien für die Externe Begutachtung); Beitrag annehmen (führt zur Auswahl von Dateien für die Lektoratsphase) oder Beitrag ablehnen (Redakteur/in verschiebt die Einreichung ins Archiv).</message>
-	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[Der/die Layouter/in bereitet diese Dateien für alle Fahnen vor und lädt dann die entsprechenden <span class="pkp_help_title">Korrekturfahnen</span> für das Korrekturlektorat hoch.]]></message>
-	<message key="editor.submission.selectGalleyFiles">Fahnendateien auswählen</message>
 </locale>

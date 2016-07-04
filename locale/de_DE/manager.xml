@@ -11,25 +11,14 @@
   * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
   -->
 
-<locale name="de_DE" full_name = "Deutsch (Deutschland)">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="manager.emails.confirmResetAll">Sind Sie sicher, dass Sie alle E-Mail-Vorlagen dieser Zeitschrift zurücksetzen wollen? Sie verlieren damit alle speziellen Einstellungen, die Sie vorgenommen haben.</message>
 	<message key="manager.files.note">Anmerkung: Der Dateinavigator ermöglicht die unmittelbare Betrachtung und Bearbeitung der mit einer Zeitschrift verbundenen Dateien und Verzeichnisse.</message>
-	<message key="manager.groups">Impressum</message>
-	<message key="manager.groups.publishEmails">Veröffentlichen der E-Mail-Adressen der Mitglieder</message>
-	<message key="manager.groups.context.editorialTeam">Lassen Sie die Funktionen unter "Redaktion" in der Rubrik "Über uns" "Personen" (z.B. Redakteur/in) erscheinen.</message>
-	<message key="manager.groups.context.editorialTeam.short">Redaktion</message>
-	<message key="manager.groups.context.people">Lassen Sie die Funktionen als eigenständige Kategorien unter der Rubrik "Personen" (z.B. Redaktion) erscheinen.</message>
-	<message key="manager.groups.create">Position erstellen</message>
-	<message key="manager.groups.disableBoard">OJS führt die Mitglieder der Redaktion unter ihren jeweiligen Funktionen auf (Zeitschriftenverwalter/in, Lektor/in etc.)</message>
-	<message key="manager.groups.enableBoard">Die/der Zeitschriftenverwalter/in erstellt Funktionen und weist diesen Funktionen Personen zu.</message>
-	<message key="manager.groups.enableBoard.description"><![CDATA[Unter <a href="{$aboutEditorialTeamUrl}">Personen</a> in "Über uns":]]></message>
-	<message key="manager.groups.noneCreated">Es wurden keine Positionen innerhalb der Redaktion angelegt.</message>
 	<message key="manager.journalManagement">Zeitschriftenverwaltung</message>
 	<message key="manager.language.ui">UI</message>
 	<message key="manager.language.submissions">Beiträge</message>
 	<message key="manager.language.forms">Formulare</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">Dies wird alle Einstellungen, die Sie für diese Regionaleinstellung gewählt hatten, ersetzen.</message>
-	<message key="manager.language.reloadLocalizedDefaultSettings">Die Standardeinstellungen für diese Regionaleinstellung wiederherstellen</message>
 	<message key="manager.languages.languageInstructions"><![CDATA[OJS steht den Benutzer/innen in jeder der unterstützten Sprachen zur Verfügung. Außerdem kann OJS als ein mehrsprachiges System arbeiten, wodurch den Benutzer/innen die Möglichkeit gegeben wird, auf jeder einzelnen Seite zwischen den Sprachen hin und her zu springen und bestimmte Daten in zusätzlichen Sprachen einzugeben.<br /><br />Sollte eine von OJS unterstützte Sprache nicht nachfolgend aufgelistet werden, bitten Sie Ihre/n Website-Administrator/in, die Sprache von der Administrationsoberfläche aus zu installieren. Konsultieren Sie die OJS-Dokumentation für Anweisungen bezüglich der Unterstützung weiterer Sprachen. ]]></message>
 	<message key="manager.languages.noneAvailable">Leider ist keine weitere Sprache verfügbar. Setzen Sie sich mit Ihrer Administratorin/Ihrem Administrator in Verbindung, wenn Sie in der Zeitschrift weitere Sprachen verwenden möchten.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Dies ist die Standardsprache der Zeitschriften-Website.</message>
@@ -91,31 +80,9 @@
 	<message key="manager.people.enrollExistingUser">Eine/n bereits existierende/n Benutzer/in eintragen.</message>
 	<message key="manager.people.enrollSyncJournal">Mit der Zeitschrift</message>
 	<message key="manager.people.mergeUsers.from.description">Wählen Sie eine/n Benutzer/in aus, deren/dessen Daten in einem anderen Konto zusammengeführt werden sollen (wenn jemand z.B. zwei Konten hat). Das zuerst ausgewählte Konto wird gelöscht, seine Beiträge, Aufgaben usw. werden dem zweiten Konto zugeschrieben.</message>
-	<message key="manager.people.mergeUsers.into.description">Wählen Sie ein Benutzer/innen-Konto, dem die Autor/innenschaft, die Aufgaben usw. der/des vorherigen Benutzer/in zugeschrieben werden sollen. </message>
+	<message key="manager.people.mergeUsers.into.description">Wählen Sie ein Benutzer/innen-Konto, dem die Autor/innenschaft, die Aufgaben usw. der/des vorherigen Benutzer/in zugeschrieben werden sollen.</message>
 	<message key="manager.people.roleEnrollment">{$role} eintragen</message>
 	<message key="manager.people.syncUserDescription">Mit der Synchronisierung werden alle in einer anderen Zeitschrift in einer bestimmten Funktion eingeschriebenen Benutzer/innen in dieser Zeitschrift mit eben dieser Funktion eingetragen. So können Zeitschriften eine bestimmte Benutzer/innen-Gruppe (z.B. Gutachter/innen) miteinander abgleichen.</message>
-	<message key="manager.reviewFormElement.changeType">Ändern des Typs des Formularelements...</message>
-	<message key="manager.reviewFormElements">Formularelemente</message>
-	<message key="manager.reviewFormElements.addResponseItem">Eine Auswahl hinzufügen</message>
-	<message key="manager.reviewFormElements.checkboxes">Kontrollkästchen (man kann eines oder mehrere auswählen)</message>
-	<message key="manager.reviewFormElements.chooseType">Wählen Sie den Typ des Elements</message>
-	<message key="manager.reviewFormElements.confirmDelete">Bestätigen Sie das Löschen eines veröffentlichten Formularelements</message>
-	<message key="manager.reviewFormElements.copyTo">Kopie an:</message>
-	<message key="manager.reviewFormElements.create">Neues Element anlegen</message>
-	<message key="manager.reviewFormElements.dropdownbox">Auswahlfeld</message>
-	<message key="manager.reviewFormElements.edit">Formularelement bearbeiten</message>
-	<message key="manager.reviewFormElements.elementType">Typ des Elements</message>
-	<message key="manager.reviewFormElements.form.elementTypeRequired">Für das Formularelement ist ein Elementtyp erforderlich.</message>
-	<message key="manager.reviewFormElements.form.questionRequired">Für das Formularelement ist eine Frage erforderlich.</message>
-	<message key="manager.reviewFormElements.noneCreated">Es wurden keine Formularelemente angelegt.</message>
-	<message key="manager.reviewFormElements.possibleResponse">Auswahl</message>
-	<message key="manager.reviewFormElements.question">Element</message>
-	<message key="manager.reviewFormElements.radiobuttons">Auswahlknopf (man kann nur einen auswählen)</message>
-	<message key="manager.reviewFormElements.required">Gutachter/innen müssen das Element ausfüllen</message>
-	<message key="manager.reviewFormElements.included">In Nachricht an Autor/in aufgenommen</message>
-	<message key="manager.reviewFormElements.smalltextfield">Textfeld für ein Wort</message>
-	<message key="manager.reviewFormElements.textarea">Erweitertes Textfeld</message>
-	<message key="manager.reviewFormElements.textfield">Textfeld für eine Zeile</message>
 	<message key="manager.sections.abstractsNotRequired">Benötigt keine Abstracts.</message>
 	<message key="manager.sections.assigned">Rubrikredakteur/innen dieser Rubrik</message>
 	<message key="manager.sections.confirmDelete">Sind Sie sicher, dass Sie diese Rubrik endgültig entfernen wollen?</message>
@@ -149,11 +116,8 @@
 	<message key="manager.setup.aboutItemContent">Inhalt</message>
 	<message key="manager.setup.addAboutItem">Über-uns-Abschnitt hinzufügen</message>
 	<message key="manager.setup.addChecklistItem">Der Checkliste einen Punkt hinzufügen</message>
-	<message key="manager.setup.addContributor">Unterstützende Organisation hinzufügen</message>
 	<message key="manager.setup.addItem">Einen Punkt hinzufügen</message>
-	<message key="manager.setup.addItemtoAboutJournal">Text einfügen, der unter "Über uns" erscheinen soll </message>
-	<message key="manager.setup.additionalContent">Weiterer Inhalt </message>
-	<message key="manager.setup.additionalContentDescription">Fügen Sie einen Text (in reinem Text oder HTML) an, der unterhalb der Grafik auf der Startseite der Zeitschrift erscheint, sofern Sie eine Grafik hochgeladen haben.</message>
+	<message key="manager.setup.addItemtoAboutJournal">Text einfügen, der unter "Über uns" erscheinen soll</message>
 	<message key="manager.setup.addNavItem">Einen Eintrag hinzufügen</message>
 	<message key="manager.setup.addReviewerDatabaseLink">Neuen Datenbank-Link hinzufügen</message>
 	<message key="manager.setup.addSponsor">Eine Organisation hinzufügen</message>
@@ -163,27 +127,17 @@
 	<message key="manager.setup.announcementsIntroductionDescription">Geben Sie zusätzliche Informationen ein, die den Leser/innen auf der Mitteilungsseite angezeigt werden.</message>
 	<message key="manager.setup.announcementsIntroduction">Zusätzliche Informationen</message>
 	<message key="manager.setup.announcements">Mitteilungen</message>
-	<message key="manager.setup.appearInAboutJournal">(Erscheint unter "Über uns") </message>
-	<message key="manager.setup.authorCopyrightNoticeAgree">Fordern Sie die Autor/innen dazu auf, der Copyright-Lizenz als Teil des Einreichungsverfahrens zuzustimmen.</message>
-	<message key="manager.setup.authorCopyrightNotice">Copyright-Vermerk</message>
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Der hier angegebene Copyright-Vermerk erscheint in der "Über uns"-Sektion und in den Metadaten jedes publizierten Beitrags. Natürlich steht es jeder Zeitschrift frei, mit ihren Autor/innen je eigene Vereinbarungen zu treffen. Das Public Knowledge Project empfiehlt jedoch die Verwendung der <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a>-Lizenz. Zu diesem Zweck bietet das Projekt <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">beispielhafte Copyright-Formulierungen</a> an, die in das Feld unten eingefügt werden können. Sie richten sich an Zeitschriften (a) mit Open Access, (b) mit verzögertem Open Access oder (c) ohne Open Access.]]></message>
-	<message key="manager.setup.authorGuidelines">Richtlinien für Autor/innen</message>
-	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Bibliografische und Formatstandards für die Autor/innen (z.B. <em>Publication Manual of the American Psychological Association</em>, 5. Auflage 2001). Beispiele der wichtigsten Zitationsstandards für Zeitschriften und Bücher sind oft eine Hilfe. Ebenso Angaben zu infrage kommenden Zusatzdateien (z.B. Datensätze, Forschungsinstrumente, Grafiken usw.), die Autor/innen zu ihren Beiträgen hochladen sollten, wenn das Interesse der Leser/innen auf diese Weise gefördert wird.]]></message>
-	<message key="manager.setup.competingInterests">Interessenkonflikte</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedizinische Zeitschriften verlangen üblicherweise von ihren Autor/innen und Gutachter/innen, dass sie erklären, ob sie sich bezüglich ihrer Forschung in einem Interessenskonflikt befinden (siehe <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoS Policy</a>).]]></message>
-	<message key="manager.setup.competingInterests.guidelines">Richtlinien für die Formulierung einer Erklärung zu Interessenkonflikten</message>
+	<message key="manager.setup.appearInAboutJournal">(Erscheint unter "Über uns")</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Verlangen Sie von Autor/innen, die einen Beitrag einreichen wollen, zusätzlich eine Erklärung zu möglicherweise bestehenden Interessenkonflikten.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Verlangen Sie von Gutachter/innen zusammen mit jeder Begutachtung eine Erklärung zu möglicherweise bestehenden Interessenkonflikten.</message>
-	<message key="manager.setup.contributor">Weitere Unterstützung</message>
-	<message key="manager.setup.contributors">Weitere Unterstützung</message>
-	<message key="manager.setup.contributorNoteDescription">Dieser Text erscheint unterhalb der Überschrift "Weitere Unterstützung" und über einer Liste mit Namen und URLs unterstützender Einrichtungen unter "Unterstützung" auf der "Über uns"-Seite.</message>
-	<message key="manager.setup.contributorsDescription">Weitere Einrichtungen oder Organisationen, die die Zeitschrift finanziell oder materiell unterstützen, sind unter "Über uns" zu finden. Eine Danksagung kann beigefügt werden.</message>
 	<message key="manager.setup.history">Zeitschriften-Geschichte</message>
 	<message key="manager.setup.historyDescription">Dieser Text erscheint auf der "Über uns"-Seite der Zeitschrift und kann genutzt werden, um Änderungen des Titels, in der Besetzung des Beirats und in anderen wesentlichen Belangen der Zeitschriftengeschichte zu beschreiben.</message>
-	<message key="manager.setup.copyediting">Lektor/in</message>
 	<message key="manager.setup.copyeditInstructions">Anweisungen für das Lektorat</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Die Anweisungen werden den Lektor/innen, Autor/innen und Redakteur/innen mit dem zu bearbeitenden Beitrag übermittelt. Nachstehend finden Sie eine Reihe von Standardanweisungen im HTML-Format. Sie können jederzeit von der Zeitschriftenverwaltung ersetzt oder geändert werden (in HTML oder einfachem Text).</message>
+	<message key="manager.setup.resetPermissions">Rechte zum Artikel zurücksetzen</message>
+	<message key="manager.setup.resetPermissions.description">Copyright-Vermerk und Lizenzinformation werden dauerhaft mit dem Inhalt verbunden, damit sie nicht geändert werden, wenn eine Zeitschrift die Regeln für neue Einreichungen ändert. Um bereits zusammen mit den veröffentlichten Inhalten gespeicherte Angaben zu den Rechten zurückzusetzen, benutzen Sie bitte den Knopf unten.</message>
 	<message key="manager.setup.copyrightNotice">Copyright-Vermerk</message>
+	<message key="manager.setup.copyrightYearBasis">Bestimme das Copyright-Jahr neuer Artikel anhand von</message>
 	<message key="manager.setup.coverage">Themenbereich</message>
 	<message key="manager.setup.coverageDescription">Bezieht sich auf den räumlich-geografischen, auf den zeitlichen Bereich und auf die Eigenschaften des Fachgebiets.</message>
 	<message key="manager.setup.currentIssue">Aktuelle Ausgabe</message>
@@ -202,21 +156,19 @@
 	<message key="manager.setup.emailBounceAddress">Antwortadresse</message>
 	<message key="manager.setup.emailBounceAddressDescription">Jede E-Mail, die nicht zugestellt werden kann, erzeugt eine Fehlermeldung, die an diese Adresse geschickt wird.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Anmerkung:</strong> Die Website-Administrator/in muss in der OJS-Konfigurationsdatei die Option <tt>allow_envelope_sender</tt> aktivieren, um dies zu ermöglichen. Weitere Servereinstellungen können erforderlich sein (und sind nicht unbedingt auf allen Servern verfügbar). Siehe OJS-Dokumentation.]]></message>
-	<message key="manager.setup.emails">E-Mail-Kennzeichnung </message>
+	<message key="manager.setup.emails">E-Mail-Kennzeichnung</message>
 	<message key="manager.setup.emailSignatureDescription">Alle E-Mail-Vorlagen, die vom System im Namen der Zeitschrift verschickt werden, tragen die folgende Signatur. Die E-Mail-Vorlagen können unter "Zeitschriftenverwaltung" bearbeitet werden.</message>
 	<message key="manager.setup.emailSignature">Signatur</message>
 	<message key="manager.setup.enableAnnouncements">Erlauben Sie den Zeitschriftenverwalter/innen, Mitteilungen hinzuzufügen.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Anzeige der</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">neuesten Mitteilungen auf der Startseite der Zeitschrift</message>
-	<message key="manager.setup.enableUserRegistration.author">Autor/innen (können Beiträge bei der Zeitschrift einreichen)</message>
+	<message key="manager.setup.enablePageNumber">Für jeden Beitrag werden Seitenzahlen berechnet und manuell im Inhaltsverzeichnis der Zeitschrift eingetragen (z.B. 13-26).</message>
+	<message key="manager.setup.enablePublicArticleId">Eindeutige Kennungen werden für Artikel verwendet.</message>
+	<message key="manager.setup.enablePublicGalleyId">Eindeutige Kennungen werden für Fahnen (z.B. HTML- oder PDF-Dateien) zu Artikeln verwendet.</message>
+	<message key="manager.setup.enablePublicIssueId">Eindeutige Kennungen werden für Ausgaben verwendet.</message>
+	<message key="manager.setup.enablePublicSuppFileId">Eindeutige Kennungen werden für Zusatzdateien verwendet.</message>
 	<message key="manager.setup.enableUserRegistration">Benutzer/innen können sich bei der Zeitschrift auf eine oder mehrere der folgenden Weisen registrieren:</message>
-	<message key="manager.setup.enableUserRegistration.reader">Leser/innen (erhalten Benachrichtigungen und sind gleichberechtigt mit den Abonnent/innen)</message>
-	<message key="manager.setup.enableUserRegistration.reviewer">Gutachter/innen (stehen für die Begutachtung von eingereichten Beiträgen zur Verfügung)</message>
 	<message key="manager.setup.focusAndScope">Konzept</message>
-	<message key="manager.setup.focusAndScopeDescription">Geben Sie hier eine Beschreibung der Zeitschrift ein, die unter "Über uns" erscheinen soll, und die Autor/innen, Leser/innen und Bibliothekar/innen die Bandbreite der Artikel und anderer Beiträge der Zeitschrift näher bringt.</message>
-	<message key="manager.setup.focusAndScopeOfJournal">Konzept</message>
-	<message key="manager.setup.focusScope">Konzept</message>
-	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>BEISPIEL FÜR HTML-DATEN</strong>]]></message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Indizierung von Arbeiten für Autor/innen</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS unterstützt das Protocol for Metadata Harvesting der <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a>, das den Zugang zu gut katalogisierten Forschungsquellen weltweit eröffnet. Die Autor/innen veröffentlichen Metadaten ihrer Beiträge nach einer ähnlichen Vorlage. Die Zeitschriftenverwalterin/der Zeitschriftenverwalter sollte die Kategorien für die Indizierung auswählen und den Autor/innen passende Beispiele an die Hand geben, die die Indizierung ihrer Arbeit erleichtern, wobei die Begriffe durch Semikolon getrennt werden (z.B. Begriff1; Begriff2). Die Einträge sollten als Beispiele (mit "z.B." oder "zum Beispiel") gekennzeichnet sein.]]></message>
 	<message key="manager.setup.form.contactEmailRequired">Die E-Mail-Adresse des Hauptkontakts ist erforderlich.</message>
@@ -226,16 +178,10 @@
 	<message key="manager.setup.form.numReviewersPerSubmission">Die Zahl der Gutachter/innen pro Beitrag wird benötigt.</message>
 	<message key="manager.setup.form.supportEmailRequired">Die E-Mail-Adresse des Kontakts bei technischen Fragen ist erforderlich.</message>
 	<message key="manager.setup.form.supportNameRequired">Der Name des Kontakts bei technischen Fragen ist erforderlich</message>
-	<message key="manager.setup.frequencyOfPublication">Beginn und Erscheinungsfrequenz </message>
-	<message key="manager.setup.frequencyOfPublicationDescription">Legen Sie Startnummer und Jahr für die erste Veröffentlichung fest und geben Sie die geplante Frequenz der Zeitschrift an.</message>
-	<message key="manager.setup.frequencyOfPublicationNote">Anmerkung: Lassen Sie die Angaben frei, die für Ihre Zeitschrift nicht verwendet werden. Redakteur/innen können die Nummerierung später verändern.</message>
 	<message key="manager.setup.generalInformation">Allgemeine Informationen</message>
 	<message key="manager.setup.gettingDownTheDetails">1. Schritt: Angaben zur Zeitschrift festlegen</message>
 	<message key="manager.setup.guidelines">Richtlinien</message>
 	<message key="manager.setup.guidingSubmissions">3. Schritt: Beitragseinreichung</message>
-	<message key="manager.setup.homepageImage">Startseitengrafik </message>
-	<message key="manager.setup.homepageImageDescription">Fügen Sie in die Mitte der Seite ein Bild oder eine Grafikdatei ein.</message>
-	<message key="manager.setup.includeCreativeCommons">Für Zeitschriften, die sofortigen oder verzögerten freien Zugang (Open Access) zu ihren Inhalten anbieten: Fügen Sie allen Beiträgen eine Creative-Commons-Lizenz zum entsprechenden Beitrag bei.</message>
 	<message key="manager.setup.information">Informationen</message>
 	<message key="manager.setup.information.description">Kurzbeschreibungen der Zeitschrift für Bibliothekar/innen, potentielle Autor/innen und Leser/innen finden sich unter "Informationen" in der Seitenleiste.</message>
 	<message key="manager.setup.information.forAuthors">Für Autor/innen</message>
@@ -245,27 +191,21 @@
 	<message key="manager.setup.initialIssueDescription">Geben Sie der Startausgabe (je nach gewähltem Format) eine eindeutige Bezeichnung:</message>
 	<message key="manager.setup.institution">Institution</message>
 	<message key="manager.setup.issnDescription"><![CDATA[Die ISSN (International Standard Serial Number) ist eine achtstellige Zahl, die periodischen Veröffentlichungen (einschließlich der elektronischen) zugeordnet ist. Die Verwaltung obliegt einem weltweiten Netzwerk nationaler Einrichtungen, das von einem internationalen Zentrum in Paris koordiniert und durch die UNESCO und die französische Regierung unterstützt wird. Eine Nummer erhalten Sie auf der <a href="http://www.issn.org" target="_new">ISSN-Website</a>. Sie kann jederzeit beantragt werden.]]></message>
-	<message key="manager.setup.issuePerVolume">Ausgaben pro Band</message>
 	<message key="manager.setup.itemsDescription">Es können jederzeit Einträge in die Navigationsleiste (Standard: "Startseite", "Über uns", "Benutzer/innen") am Kopf der Seite hinzugefügt werden</message>
-	<message key="manager.setup.itemsPerPage">Einträge pro Seite </message>
+	<message key="manager.setup.itemsPerPage">Einträge pro Seite</message>
 	<message key="manager.setup.journalAbbreviation">Abkürzung des Zeitschriftennamens</message>
 	<message key="manager.setup.journalArchiving">Archivierung der Zeitschrift</message>
-	<message key="manager.setup.journalDescription">Beschreibung der Zeitschrift</message>
-	<message key="manager.setup.journalDescriptionDescription">Geben Sie eine kurze Beschreibung (20-25 Wörter) in HTML oder reinem Text ein, die direkt unterhalb der Navigationslinks erscheint. </message>
-	<message key="manager.setup.favicon">Zeitschriften-Favicon</message>
-	<message key="manager.setup.faviconDescription">Fügen Sie ein Favicon für diese Zeitschrift hinzu, das in der Menüleiste angezeigt wird, wenn Nutzer/innen Ihre Seite besuchen.</message>
-	<message key="manager.setup.faviconInvalid">Ungültiges Favicon-Format. Gültige Formate sind .ico, .png und .gif.</message>
-	<message key="manager.setup.journalHomepageContentDescription">Standardmäßig besteht die Eingangsseite nur aus Navigationslinks. Zusätzlicher Inhalt kann mit einer der folgenden Optionen hinzugefügt werden. Er erscheint in der Reihenfolge der Optionen. Bitte beachten Sie, dass die aktuelle Ausgabe der Zeitschrift immer über den "Aktuelle Ausgabe"-Link in der Navigationsleiste zu erreichen ist.</message>
 	<message key="manager.setup.journalHomepageContent">Inhalt der Eingangsseite der Zeitschrift</message>
+	<message key="manager.setup.journalHomepageContentDescription">Standardmäßig besteht die Eingangsseite nur aus Navigationslinks. Zusätzlicher Inhalt kann mit einer der folgenden Optionen hinzugefügt werden. Er erscheint in der Reihenfolge der Optionen. Bitte beachten Sie, dass die aktuelle Ausgabe der Zeitschrift immer über den "Aktuelle Ausgabe"-Link in der Navigationsleiste zu erreichen ist.</message>
+	<message key="manager.setup.journalHomepageHeader">Kopfzeile der Startseite</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Kopfzeile der Startseite der Zeitschrift</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Grafische Versionen von Zeitschriftentitel und -logo (als .gif-, .jpg- oder .png-Dateien) können für die Startseite hochgeladen werden (ansonsten erscheint eine Textversion).</message>
-	<message key="manager.setup.journalHomepageHeader">Kopfzeile der Startseite </message>
 	<message key="manager.setup.journalInitials">Kürzel der Zeitschrift</message>
 	<message key="manager.setup.journalLayout">Zeitschriftenlayout</message>
 	<message key="manager.setup.journalLayoutDescription">Entscheiden Sie sich für eine Designvorlage für Ihre Zeitschrift und wählen Sie hier mögliche Layout-Bestandteile aus. Sie können auch ein Zeitschriften-Style Sheet hochladen, mit dessen Hilfe Sie die durch die System- und Themen-Style Sheets vorgegebenen Einstellungen ersetzen können.</message>
 	<message key="manager.setup.journalLogo">Logo der Zeitschrift</message>
 	<message key="manager.setup.journalLogo.altText">Logo der Zeitschrift</message>
-	<message key="manager.setup.journalPageFooter">Fußzeile der Zeitschrift </message>
+	<message key="manager.setup.journalPageFooter">Fußzeile der Zeitschrift</message>
 	<message key="manager.setup.journalPageFooterDescription">Dies ist die Fußzeile Ihrer Zeitschrift. Sollten Sie sie ändern oder aktualisieren wollen, kopieren Sie den neuen HTML-Text in das nachstehende Textfeld. Beispiele könnten eine zusätzliche Navigationszeile oder ein Zähler sein. Diese Fußzeile wird auf allen Seiten erscheinen.</message>
 	<message key="manager.setup.journalPolicies">2. Schritt: Zeitschriftenrichtlinien und Publikationsprozess</message>
 	<message key="manager.setup.journalSetup">Einrichten der Zeitschrift</message>
@@ -275,7 +215,6 @@
 	<message key="manager.setup.journalThumbnail">Vorschaubild der Zeitschrift</message>
 	<message key="manager.setup.journalTitle">Titel der Zeitschrift</message>
 	<message key="manager.setup.labelName">Seitenbenennung</message>
-	<message key="manager.setup.layoutAndGalleys">Layouter/innen</message>
 	<message key="manager.setup.layoutInstructions">Anweisungen für das Layout</message>
 	<message key="manager.setup.layoutInstructionsDescription">Anweisungen für die Formatierung zu veröffentlichender Beiträge können nachfolgend in HTML oder einfachem Text eingegeben werden. Sie werden den Layouter/innen und Rubrikredakteur/innen auf der Redaktionsseite jedes Beitrags zur Verfügung gestellt. (Da jede Zeitschrift ihre eigenen Layoutstrukturen, Formate, bibliografischen Standards, Style Sheets usw. haben kann, sind hier keine Standardanweisungen vorgesehen.)</message>
 	<message key="manager.setup.layoutTemplates">Layoutvorlagen</message>
@@ -284,15 +223,10 @@
 	<message key="manager.setup.layoutTemplates.title">Titel</message>
 	<message key="manager.setup.lists">Listen</message>
 	<message key="manager.setup.listsDescription">Maximalzahl der Elemente auf jeder Listenseite (z.B. Beiträge, Benutzer/innen oder redaktionelle Aufgaben) festlegen sowie die Anzahl der Links, die auf jeder Seite erscheinen sollen.</message>
-	<message key="manager.setup.lockssEnable"><![CDATA[Aktivieren Sie LOCKSS und verteilen und lagern Sie den Inhalt der Zeitschrift bei den an LOCKSS teilnehmenden Bibliotheken über eine LOCKSS-<a href="{$lockssUrl}" target="_blank">Redakteur/innen-Erklärung-</a>Seite. Es erscheint dann eine Lizenz von LOCKSS im "Über uns" der Zeitschrift unter "Archiv":]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[Siehe <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">andere Versionen einer LOCKSS-Lizenz</a>.]]></message>
-	<message key="manager.setup.lockssRegister"><![CDATA[Benennen Sie 6 bis 10 Bibliotheken, die die Zeitschrift registrieren und archivieren sollen. Wenden Sie sich zum Beispiel an Einrichtungen, in denen Mitglieder der Redaktion oder des Beirats arbeiten und/oder Einrichtungen, die bereits an LOCKSS beteiligt sind. Siehe <a href="http://www.lockss.org/community/" target="_blank">Teilnehmende Bibliotheken</a>. Verwenden Sie die vorgefertigten Anfragen für (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">an LOCKSS teilnehmende Bibliotheken</a> oder für (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">an LOCKSS noch nicht teilnehmende Bibliotheken</a>.]]></message>
-	<message key="manager.setup.clockssEnable"><![CDATA[Aktivieren Sie CLOCKSS und verteilen und lagern Sie den Inhalt der Zeitschrift bei den an CLOCKSS teilnehmenden Bibliotheken über eine CLOCKSS-<a href="{$clockssUrl}" target="_blank">Redakteur/innen-Erklärung-</a>Seite. Es erscheint dann eine Lizenz von CLOCKSS im "Über uns" der Zeitschrift unter "Archiv":]]></message>
-	<message key="manager.setup.clockssLicenses"><![CDATA[Siehe <a href="http://clockss.org/"target="_blank">andere Versionen einer CLOCKSS-Lizenz</a>.]]></message>
-	<message key="manager.setup.clockssRegister"><![CDATA[Registrieren Sie sich bei dem CLOCKSS-Dienst, indem Sie <a href="http://clockss.org/" target="_blank">die CLOCKSS-Website</a> besuchen.]]></message>
+	<message key="manager.setup.lockssEnable"><![CDATA[Aktivieren Sie LOCKSS und verteilen und lagern Sie den Inhalt der Zeitschrift bei den an LOCKSS teilnehmenden Bibliotheken über eine LOCKSS <a href="{$lockssUrl}" target="_blank">Redakteur/innen-Erklärung-</a>Seite. Es erscheint dann eine Lizenz von LOCKSS im "Über uns" der Zeitschrift unter "Archiv":]]></message>
+	<message key="manager.setup.lockssRegister"><![CDATA[Identifizieren Sie 6 bis 10 Bibliotheken, die die Zeitschrift registrieren und archivieren sollen. Wenden Sie sich zum Beispiel an Einrichtungen, in denen Mitglieder der Redaktion oder des Beirats arbeiten und/oder Einrichtungen, die bereits an LOCKSS beteiligt sind. Siehe <a href="http://www.lockss.org/community/" target="_blank">The Community</a>. Verwenden Sie die vorgefertigten Anfragen für (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">an LOCKSS teilnehmende Bibliotheken</a> oder für (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">an LOCKSS noch nicht teilnehmende Bibliotheken</a>.]]></message>
 	<message key="manager.setup.look">Gestaltung</message>
 	<message key="manager.setup.look.description">Titel der Startseite, Inhalt, Kopfzeile der Zeitschrift, Fußzeile, Navigationsleiste und Style Sheet.</message>
-	<message key="manager.setup.mailingAddressDescription">Ort und Postanschrift der Zeitschrift</message>
 	<message key="manager.setup.management">Management</message>
 	<message key="manager.setup.management.description">Zugang und Sicherheit, Planung, Ankündigungen, Lektorat, Layout und Korrekturlektorat.</message>
 	<message key="manager.setup.managementOfBasicEditorialSteps">Grundlegende Schritte bei der redaktionellen Arbeit</message>
@@ -305,84 +239,44 @@
 	<message key="manager.setup.noImageFileUploaded">Keine Grafikdatei hochgeladen.</message>
 	<message key="manager.setup.noStyleSheetUploaded">Kein Style Sheet hochgeladen.</message>
 	<message key="manager.setup.note">Anmerkung</message>
-	<message key="manager.setup.notifications">Bestätigung der Beitragseinreichung durch die Autor/innen</message>
-	<message key="manager.setup.notifications.copyPrimaryContact">Schicken Sie eine Kopie an den in Schritt 1 festgelegten Hauptkontakt der Zeitschrift. </message>
-	<message key="manager.setup.notifications.copySpecifiedAddress">Schicken Sie eine Kopie an diese E-Mail-Adresse:</message>
-	<message key="manager.setup.notifications.description">Nach Abschluss des Einreichungsverfahrens erhalten die Autor/innen eine E-Mail, die ihnen den Eingang des Beitrags bestätigt (sie kann unter "E-Mail-Vorlagen" eingesehen und bearbeitet werden). Darüber hinaus kann eine Kopie der Bestätigungs-E-Mail wie folgt versandt werden:</message>
 	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>Anmerkung:</strong> Die Funktion "Eingangsbestätigung per E-Mail" ist deaktiviert. Aktivieren Sie "SUBMISSION_ACK email" in <a class="action" href="{$preparedEmailsUrl}">E-Mail-Vorlagen</a>.]]></message>
-	<message key="manager.setup.notifyAllAuthorsOnDecision">Wenn Sie die E-Mail-Vorlage "Autor/in benachrichtigen" verwenden, benachrichtigen Sie bei Beiträgen mit mehreren Autor/innen alle Co-Autor/innen, nicht nur die Person, die den Beitrag eingereicht hat.</message>
-	<message key="manager.setup.noUseCopyeditors">Das Lektorat wird von einer/einem Redakteur/in oder Rubrikredakteur/in übernommen.</message>
-	<message key="manager.setup.noUseLayoutEditors">Ein/e Redakteur/in oder Rubrikredakteur/in wird die HTML-, PDF- oder sonstigen Dateien für die elektronische Publikation vorbereiten.</message>
-	<message key="manager.setup.noUseProofreaders">Das Korrekturlektorat wird von einer/einem Redakteur/in oder Rubrikredakteur/in übernommen.</message>
 	<message key="manager.setup.numPageLinks">Links</message>
 	<message key="manager.setup.onlineAccessManagement">Zugang zum Zeitschrifteninhalt</message>
 	<message key="manager.setup.onlineIssn">ISSN Internet</message>
 	<message key="manager.setup.openAccess">Die Zeitschrift bietet freien Zugang (Open Access) zu ihren Inhalten.</message>
-	<message key="manager.setup.openAccessPolicy">Open-Access-Richtlinien</message>
-	<message key="manager.setup.openAccessPolicyDescription">Wenn die Zeitschrift ihren Leser/innen sofortigen freien Zugang (Open Access) zu allen veröffentlichten Inhalten gewährt, geben Sie eine Open-Access-Richtlinie ein, die in "Über uns" der Zeitschrift unter "Open-Access-Richtlinie" erscheint.</message>
-	<message key="manager.setup.pageNumberIdentifier">Seitenzahl-Option </message>
-	<message key="manager.setup.peerReviewDescription">Skizzieren Sie die Peer-Review-Richtlinien und -verfahren für Leser/innen und Autor/innen (inkl. der Anzahl von Gutachter/innen, die üblicherweise mit der Begutachtung eines Beitrags betraut sind, der Kriterien, an denen die Gutachter/innen ihre Bewertung ausrichten sollen, der Zeitspanne, die üblicherweise für eine Begutachtung benötigt wird, und der Grundsätze, nach denen die Gutachter/innen ausgewählt werden). Dieser Text erscheint dann unter "Über uns".</message>
-	<message key="manager.setup.peerReviewPolicy">Peer Review</message>
-	<message key="manager.setup.peerReviewPolicy2">Peer-Review-Richtlinien</message>
+	<message key="manager.setup.pageNumberIdentifier">Seitenzahl-Option</message>
 	<message key="manager.setup.policies">Zur Zeitschrift</message>
 	<message key="manager.setup.policies.description">Schwerpunkt, Begutachtung, Rubriken, Schutz persönlicher Daten, Sicherheit und andere Themen.</message>
-	<message key="manager.setup.principalContactDescription">Der Hauptkontakt kann mit der Hauptredakion, mit leitenden Redaktions- oder mit Verwaltungsaufgaben betraut sein. Er erscheint auf der Startseite der Zeitschrift unter "Kontakt", zusammen mit dem Kontakt bei technischen Fragen.</message>
-	<message key="manager.setup.principalContact">Hauptkontakt</message>
 	<message key="manager.setup.printIssn">ISSN Druck</message>
-	<message key="manager.setup.privacyStatement2">Erklärung zum Schutz persönlicher Daten</message>
-	<message key="manager.setup.privacyStatementDescription">Die Erklärung zum Schutz persönlicher Daten erscheint unter "Über uns" und auf den Seiten, auf denen sich Autor/innen für das Einreichen von Beiträgen und für die Benachrichtigung eintragen müssen. Die nachfolgenden Richtlinien zum Schutz persönlicher Daten stellen eine Empfehlung dar, die jederzeit modifiziert werden kann. </message>
-	<message key="manager.setup.privacyStatement">Erklärung zum Schutz persönlicher Daten</message>
 	<message key="manager.setup.proofingInstructions">Anweisungen für das Korrekturlektorat</message>
-	<message key="manager.setup.proofingInstructionsDescription">Die Anweisungen für das Korrekturlektorat werden den Korrekturlektor/innen, Autor/innen, Layouter/innen und Rubrikredakteur/innen während der redaktionellen Bearbeitung des Beitrags übermittelt. Nachstehend finden Sie einen Standardsatz von Anweisungen in HTML-Format, die jederzeit von der Zeitschriftenverwaltung geändert werden können (in HTML oder einfachem Text). </message>
-	<message key="manager.setup.proofreading">Korrekturlektor/innen</message>
+	<message key="manager.setup.proofingInstructionsDescription">Die Anweisungen für das Korrekturlektorat werden den Korrekturlektor/innen, Autor/innen, Layouter/innen und Rubrikredakteur/innen während der redaktionellen Bearbeitung des Beitrags übermittelt. Nachstehend finden Sie einen Standardsatz von Anweisungen in HTML-Format, die jederzeit von der Zeitschriftenverwaltung geändert werden können (in HTML oder einfachem Text).</message>
 	<message key="manager.setup.provideRefLinkInstructions">Layouter/innen Anweisungen geben</message>
-	<message key="manager.setup.publicationFormat">Format</message>
-	<message key="manager.setup.publicationFormatDescription">Die Zeitschrift wird die folgenden Angaben zur Kennzeichnung ihrer Ausgaben verwenden (bei einzelnen Ausgaben kann von diesen Vorgaben abgewichen werden):</message>
-	<message key="manager.setup.publicationFormatNumber">Nummer</message>
-	<message key="manager.setup.publicationFormatTitle">Titel</message>
-	<message key="manager.setup.publicationFormatVolume">Band</message>
-	<message key="manager.setup.publicationFormatYear">Jahr</message>
-	<message key="manager.setup.publicationSchedule">Terminkalender der Veröffentlichung </message>
+	<message key="manager.setup.publicationSchedule">Terminkalender der Veröffentlichung</message>
 	<message key="manager.setup.publicationScheduleDescription"><![CDATA[Die Beiträge der Zeitschrift können zusammen veröffentlicht werden, als Teil einer Ausgabe mit eigenem Inhaltsverzeichnis. Es können auch einzelne fertige Artikel durch Anfügen an das Inhaltsverzeichnis der "aktuellen Ausgabe" veröffentlicht werden. Erläutern Sie den Leser/innen unter "Über uns" das Veröffentlichungssystem und die vorgesehene Erscheinungsfrequenz der Zeitschrift.]]></message>
-	<message key="manager.setup.publicationScheduling">Veröffentlichungstermine festlegen </message>
+	<message key="manager.setup.publicationScheduling">Veröffentlichungstermine festlegen</message>
 	<message key="manager.setup.publicIdentifier">Kennung des Inhalts der Zeitschrift</message>
 	<message key="manager.setup.publisher">Verlag, Organisation</message>
-	<message key="manager.setup.publisherNoteDescription">Dieser Text erscheint unterhalb der Überschrift "Verlag, Organisation" und über dem Namen/URL des Verlags/der Organisation unter "Unterstützung" auf der "Über uns"-Seite.</message>
 	<message key="manager.setup.publisherDescription">Der Name der Organisation, die die Zeitschrift herausgibt, erscheint unter "Über uns".</message>
 	<message key="manager.setup.referenceLinking">Verlinkung von Literaturverweisen</message>
 	<message key="manager.setup.refLinkInstructions.description">Layout-Anweisungen für das Verlinken von Literaturverweisen</message>
-	<message key="manager.setup.registerJournalForIndexing">Die Zeitschrift für die Indizierung registrieren (Metadaten-Harvesting)</message>
 	<message key="manager.setup.restrictArticleAccess">Benutzer/innen müssen registriert und angemeldet sein, um Open-Access-Inhalte aufrufen zu können.</message>
 	<message key="manager.setup.restrictSiteAccess">Benutzer/innen müssen registriert und angemeldet sein, um die Zeitschriftenseite aufrufen zu können.</message>
-	<message key="manager.setup.reviewerDatabaseLink">Datenbank möglicher Gutachter/innen</message>
-	<message key="manager.setup.reviewerDatabaseLink.desc">Fügen Sie zur "Gutachter/in auswählen"-Seite einen Link zu Literatur-Datenbanken hinzu, die nach potenziellen Gutachter/innen durchsucht werden können und die Redakteur/innen ohne Abonnement zugänglich sind.</message>
 	<message key="manager.setup.reviewGuidelines">Begutachtungsrichtlinien</message>
 	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[Die Begutachtungsrichtlinien liefern Gutachter/innen Kriterien für die Beurteilung der Eignung einer Einreichung für die Veröffentlichung in der Zeitschrift und können spezielle Hinweise, um ein wirksames und hilfreiches Gutachten zu verfassen. Den Gutachter/innen werden während der Anfertigung des Gutachtens zwei Freitextfelder angeboten, das erste "für Autor/in und Redakteur/in", das zweite "für Redakteur/in". Alternativ kann der/die Zeitschriftenverwalter/in ein Begutachtungsformular unter <a href="{$reviewFormsUrl}" class="action">Review Forms</a> anlegen. In jedem Fall werden Redakteur/innen die Möglichkeit haben, die Gutachten in die Korrespondenz mit dem/der Autor/in aufzunehmen.]]></message>
 	<message key="manager.setup.reviewOptions">Optionen für die Begutachtung</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">Automatische Erinnerung der Gutachter/innen per E-Mail (aus den OJS-Standard-E-Mails) kann an zwei Stellen erfolgen. Die Redakteurin/der Redakteur kann hingegen den Gutachter/innen zu jeder Zeit direkt eine E-Mail schicken</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Anmerkung:</strong> Hierfür muss die/der Website-Administrator/in die <tt>scheduled_tasks</tt>-Option in der Konfigurationsdatei von OJS aktivieren. Weitere Servereinstellungen können erforderlich sein (und sind nicht unbedingt auf allen Servern verfügbar). Siehe OJS-Dokumentation.]]></message>
 	<message key="manager.setup.reviewOptions.blindReview">Anonyme Begutachtung</message>
-	<message key="manager.setup.reviewOptions.noteOnModification">Kann im Verlauf der redaktionellen Bearbeitung verändert werden.</message>
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">Vorgesehener Zeitaufwand für eine Begutachtung</message>
 	<message key="manager.setup.reviewOptions.onQuality">Redakteur/innen bewerten die Gutachter/innen nach jeder Begutachtung auf einer fünfstufigen Skala.</message>
-	<message key="manager.setup.reviewOptions.remindForInvite1">Falls die Gutachterin/der Gutachter auf die Anfrage nicht innerhalb von </message>
-	<message key="manager.setup.reviewOptions.remindForInvite2">Tagen antwortet.</message>
-	<message key="manager.setup.reviewOptions.remindForSubmit1">Falls die Gutachterin/der Gutachter das Gutachten nicht innerhalb von</message>
-	<message key="manager.setup.reviewOptions.remindForSubmit2">Tagen nach Ablauf der Begutachtungsfrist vorgelegt hat.</message>
 	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">Erst wenn Sie der Übernahme der Begutachtung zugestimmt haben, erhalten Gutachter/innen Zugriff auf die jeweilige Beitragsdatei.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">Zugang für Gutachter/innen</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">One-Click-Zugang für Gutachter/innen aktiviert.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Anmerkung:</strong> Die Einladungs-E-Mail an die Gutachter/innen enthält eine URL, die direkt zur Begutachtungsseite für den Beitrag (mit Zugang zu allen anderen Seiten, die ein Einloggen voraussetzen) führt. Aus Sicherheitsgründen können die Redakteur/innen vor dem Absenden der Einladung weder E-Mail-Adressen verändern noch CC- oder BCC-Empfänger/innen hinzufügen.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Bewertung der Gutachterin/des Gutachters</message>
-	<message key="manager.setup.reviewOptions.reviewerReminders">Erinnerung für Gutachter/innen </message>
-	<message key="manager.setup.reviewOptions.reviewTime">Zeitaufwand der Begutachtung</message>
+	<message key="manager.setup.reviewOptions.reviewerReminders">Erinnerung für Gutachter/innen</message>
 	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Bietet Links zu <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Anonyme Begutachtung sicherstellen</a> auf den Seiten, auf denen Autor/innen und Gutachter/innen Dateien hochladen.]]></message>
-	<message key="manager.setup.reviewPolicy">Richtlinien für die Begutachtung</message>
-	<message key="manager.setup.reviewProcess">Begutachtungsverfahren</message>
-	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS unterstützt zwei Modelle für die Verwaltung des Begutachtungsverfahrens. Es empfiehlt sich, das Standardbegutachtungsverfahren zu wählen, weil es die Gutachter/innen Schritt für Schritt durch das Verfahren führt und somit einen vollständigen Begutachtungsverlauf für jeden Beitrag garantiert. Außerdem enthält es eine automatische Erinnerungsfunktion sowie Standardempfehlungen zu den Beiträgen (Beitrag annehmen; Überarbeitung erforderlich; Erneut zur Begutachtung einreichen; Anderswo erneut einreichen; Beitrag ablehnen; Siehe Kommentare).<br /><br /> Wählen Sie unter den folgenden:]]></message>
-	<message key="manager.setup.reviewProcessEmail">Begutachtungsverfahren über E-Mail-Anhänge</message>
-	<message key="manager.setup.reviewProcessStandardDescription">Redakteur/innen schicken ausgewählten Gutachter/innen den Titel und Abstract des Beitrags und laden sie dazu ein, sich für die Begutachtung auf der Website der Zeitschrift einzuloggen. Über die Website erklären die Gutacher/innen ihr Einverständnis zur Übernahme der Begutachtung, laden die Beiträge herunter, reichen ihre Kommentare ein und entscheiden sich für eine Empfehlung.</message>
-	<message key="manager.setup.reviewProcessStandard">Standardbegutachtungsverfahren</message>
+	<message key="manager.setup.reviewPolicy">Begutachtungsgrundsätze</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Damit die Nutzer/innen von Suchmaschinen die Zeitschrift einfacher finden, stellen Sie bitte eine kurze Beschreibung der Zeitschrift und charakteristische Schlagworte (durch Semikolon getrennt) zusammen.</message>
 	<message key="manager.setup.searchEngineIndexing">Für Suchmaschinen indizieren</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Rubriken und Rubrikredakteur/innen</message>
@@ -394,9 +288,6 @@
 	<message key="manager.setup.selectSectionDescription">Die Rubrik der Zeitschrift, für die der Beitrag in Frage kommt</message>
 	<message key="manager.setup.showGalleyLinksDescription">Links auf die Fahne immer anzeigen und beschränkten Zugang kennzeichnen.</message>
 	<message key="manager.setup.siteAccess">Zusätzliche Beschränkungen des Zugriffs auf Seiten und Artikel</message>
-	<message key="manager.setup.sponsors">Finanzielle Unterstützung</message>
-	<message key="manager.setup.sponsorNoteDescription">Dieser Text erscheint unterhalb der Überschrift "Finanzielle Unterstützung" und über der Liste der Sponsor/innen-Namen und -URLs unter "Unterstützung" auf der "Über uns"-Seite.</message>
-	<message key="manager.setup.sponsorsDescription">Die Namen derjenigen Organisationen (z.B. wissenschaftliche Vereinigungen, Fakultäten, Arbeitszusammenhänge usw.), die die Zeitschrift finanziell unterstützen, erscheinen unter "Über uns". Eine Danksagung kann beigefügt werden.</message>
 	<message key="manager.setup.stepsToJournalSite">Fünf Schritte zu einer Zeitschrift</message>
 	<message key="manager.setup.subjectExamples">(z.B. Photosynthese; Schwarze Löcher; Vier-Farben-Theorem; Bayes' Theorie)</message>
 	<message key="manager.setup.subjectKeywordTopic">Schlagworte</message>
@@ -409,57 +300,28 @@
 	<message key="manager.setup.subscription">Einige oder alle Inhalte der Zeitschrift sind nur für Abonnent/innen zugänglich.</message>
 	<message key="manager.setup.subscriptionDescription">Die Einrichtung der Funktion einer Abonnementverwaltung ist in diesem Fall nötig. Diese hat Zugang zu den Abonnement-Modulen, was auch frei zugängliche Angebote, Selbst-Archivierung und Benachrichtigungen per E-Mail beinhaltet.</message>
 	<message key="manager.setup.noPublishing">OJS wird nicht verwandt, um die Zeitschrifteninhalte online zu veröffentlichen.</message>
-	<message key="manager.setup.technicalSupportContact">Kontakt bei technischen Fragen</message>
-	<message key="manager.setup.technicalSupportContactDescription">Diese Person erscheint auf der "Kontakt"-Seite der Zeitschrift und kann von Redakteur/innen, Autor/innen und Gutachter/innen genutzt werden. Sie sollte mit der Handhabung des Systems aus all diesen Perspektiven vertraut sein. Da dieses Zeitschriftensystem nur sehr geringe technische Unterstützung benötigt, handelt es sich um eine Teilzeitaufgabe. Es könnte zum Beispiel vorkommen, dass Autor/innen und Gutachter/innen Schwierigkeiten mit den Anweisungen oder den Dateiformaten haben. Außerdem muss eine regelmäßige Sicherung der Zeitschriftendaten auf dem Server gewährleistet sein.</message>
 	<message key="manager.setup.typeExamples">(z.B. historische Untersuchung; quasi-experimentell; Literaturanalyse; Umfrage/Interview)</message>
 	<message key="manager.setup.typeMethodApproach">Forschungsansatz, -methode oder -verfahren</message>
 	<message key="manager.setup.typeProvideExamples">Beispiele für im Fachgebiet relevante Forschungsansätze, -methoden oder -verfahren angeben.</message>
 	<message key="manager.setup.uniqueIdentifier">Eindeutige Kennung</message>
 	<message key="manager.setup.uniqueIdentifierDescription">Artikel und Ausgaben können mit einer Identifikationsnummer oder einer Zeichenkette gekennzeichnet werden, wobei ein System, z.B. das DOI (Digital Object Identifier)-System, verwendet werden sollte.</message>
-	<message key="manager.setup.useCopyeditors">Jeder Beitrag wird einer Lektorin/einem Lektor zugeteilt.</message>
 	<message key="manager.setup.useEditorialReviewBoard">Die Zeitschrift hat eine Redaktion/ein Herausgeber/innen- und Gutachter/innengremium.</message>
-	<message key="manager.setup.useImageLogo">Logo-Grafik</message>
 	<message key="manager.setup.useThumbnail">Vorschaubild</message>
 	<message key="manager.setup.useImageTitle">Titelgrafik</message>
 	<message key="manager.setup.useJournalStyleSheet">Style Sheet für die Zeitschrift</message>
-	<message key="manager.setup.useLayoutEditors">Ein/e Layouter/in wird damit beauftragt, die HTML-, PDF- oder sonstigen Dateien für die elektronische Publikation vorzubereiten.</message>
-	<message key="manager.setup.useProofreaders">Jeder Beitrag wird einer Korrekturlektorin/einem Korrekturlektor zugeteilt, die/der (zusammen mit der Autorin/dem Autor) die Fahnen vor der Veröffentlichung überprüft.</message>
 	<message key="manager.setup.userRegistration">Registrierung von Benutzer/innen</message>
 	<message key="manager.setup.useTextTitle">Titeltext</message>
-	<message key="manager.setup.volumePerYear">Bände pro Jahr</message>
 	<message key="manager.statistics.defaultMetricDescription">
 		Ihre OJS-Installation ist so eingestellt, dass sie mehr als eine Nutzungsstatistik aufzeichnet. Nutzungsstatistiken werden in verschiedenen Kontexten angezeigt.
 		Es gibt Fälle, in denen eine einzige Nutzungsstatistik benutzt werden muss, z.B. wenn eine sortierte Liste der am häufigsten genutzten Artikel angezeigt werden soll oder um
-		Suchergebnisse zu gewichten. Bitte wählen Sie eine der Nutzungsmetriken als Standard aus.</message>
-	<message key="manager.statistics.reports">Berichterstellung</message>
-	<message key="manager.statistics.reports.description">OJS erstellt Berichte, die die Details der Verarbeitung von Beiträgen aus der Perspektive von Beiträgen, Redakteur/innen, Gutachter/innen sowie Rubriken über einen festgelegten Zeitraum nachzeichnen. Die Berichte werden im CSV-Format erstellt, die mit einer Tabellenkalkulation betrachtet werden können.</message>
-	<message key="manager.statistics.reports.generateReport">Benutzerdefinierten Bericht erzeugen</message>
-	<message key="manager.statistics.reports.columns">Spalten</message>
-	<message key="manager.statistics.reports.columns.description">Definieren Sie die Spalten, die zum Erzeugen des Berichts benutzt werden. Die Spalten, die Sie auswählen legen nicht nur fest, welche Daten im Bericht angzeigt werden, sondern definieren auch die Aggregationsstufe der Statistik. Wenn Sie zum Beispiel die Spalten ID, Typ und Monat auswählen, wird der Repurt alle Aufrufe eines Objekts in einem Monat summieren und diese Information in einer Zeile anzeigen. Wenn Sie stattdessen Tag statt Monat auswählen, wird jedes Objekt eine Zeile für jeden Tag erhalten.</message>
-	<message key="manager.statistics.reports.filters">Filter</message>
-	<message key="manager.statistics.reports.objectType">Objekttyp</message>
-	<message key="manager.statistics.reports.objectId">Objekt-ID</message>
-	<message key="manager.statistics.reports.objectId.label">Definieren Sie eine oder mehrere Objekt-ID, jeweils mit Komma getrennt (z.B. 1,2,3,4,5).</message>
-	<message key="manager.statistics.reports.today">Heute</message>
-	<message key="manager.statistics.reports.currentMonth">Aktueller Monat</message>
-	<message key="manager.statistics.reports.orderBy">Sortieren nach</message>
-	<message key="manager.statistics.reports.orderDir">Richtung</message>
-	<message key="manager.statistics.reports.orderDir.asc">Aufsteigend</message>
-	<message key="manager.statistics.reports.orderDir.desc">Absteigend</message>
-	<message key="manager.statistics.reports.month.label">Benutzen Sie das YYYYMM-Format.</message>
-	<message key="manager.statistics.reports.day.label">Benutzen Sie das YYYYMMDD-Format.</message>
-	<message key="manager.statistics.reports.cities.label">Ein oder mehrere Städtenamen, jeweils mit Komma getrennt (z.B. Stadt 1,Stadt2)</message>
-	<message key="manager.statistics.reports.form.columnsRequired">Sie müssen mindestens eine Spalte auswählen, um den Bericht zu erzeugen.</message>
-	<message key="manager.statistics.reports.reportUrl">Bericht-URL</message>
-	<message key="manager.statistics.reports.reportUrl.label">Die folgende URL kann benutzt werden, um den Bericht mit diesen aktuellen Einstellungen zu erzeugen. Kopieren Sie ihn einfach und geben Sie ihn in Ihren Browser ein. Sie können die URL zur Berichterzeugung in Ihren Bookmarks speichern.</message>
-	<message key="manager.statistics.reports.filters.byContext">Nach Kontext</message>
-	<message key="manager.statistics.reports.filters.byContext.label">Ergebnisse nach Kontext filtern (Ausgabe und/oder Artikel).</message>
-	<message key="manager.statistics.reports.filters.byObject">Nach Objekttyp oder Objekt-ID</message>
-	<message key="manager.statistics.reports.filters.byObject.label">Ergenisse nach Objekttyp (Zeitschrift, Ausgabe, Artikel, PDF-Fahne, andere Fahnen) und/oder nach einer oder mehrerer Objekt-ID filtern.</message>
-	<message key="manager.statistics.reports.filters.byTime">Nach Zeit</message>
-	<message key="manager.statistics.reports.filters.byTime.label">Ergenisse nach einer bestimmten Zeit oder Periode (Monat oder Tag) filtern.</message>
-	<message key="manager.statistics.reports.filters.byLocation">Nach Standort</message>
-	<message key="manager.statistics.reports.filters.byLocation.label">Ergebnisse nach Land, Region und/oder Stadt filtern..</message>
+		Suchergebnisse zu gewichten. Bitte wählen Sie eine der Nutzungsmetriken als Standard aus.
+</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">Downloads von Artikeldateien</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Aufrufe der Abstractseiten von Artikeln</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Abstractseiten und Downloads</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Startseiten-Aufrufe</message>
+	<message key="manager.statistics.reports.filters.byContext.description">Ergebnisse nach Kontext filtern (Ausgabe und/oder Artikel).</message>
+	<message key="manager.statistics.reports.filters.byObject.description">Ergebnisse nach Objekttyp (Zeitschrift, Ausgabe, Artikel, PDF-Fahne, andere Fahnen) und/oder nach einer oder mehrerer Objekt-ID filtern.</message>
 	<message key="manager.statistics.statistics">Zeitschriftenstatistik</message>
 	<message key="manager.statistics.statistics.articleViews">Artikel angesehen (nur für Autor/innen)</message>
 	<message key="manager.statistics.statistics.count.accept">Annehmen</message>
@@ -491,19 +353,14 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">Monat(e) nach Erscheinen frei zugänglich</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Bitte wählen Sie eine gültige Frist.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Die folgenden Richtlinien zu verzögertem Open Access erscheinen im "Über uns" unter "Zur Zeitschrift".</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Bitte ankreuzen</message>
 	<message key="manager.subscriptionPolicies.expiry">Ende des Abonnements</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Zum Ende des Abonnements kann den Leser/innen der Zugang zu sämtlichen Abonnement-Inhalten verwehrt werden, oder sie können weiterhin Zugang zu Abonnement-Inhalten erhalten, die vor dem Abonnement-Ende veröffentlicht wurden.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Volles Abonnement-Ende</message>
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Leser/innen wird der Zugang zu sämtlichen Abonnement-Inhalten verwehrt, wenn ihr Abonnement endet.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Teilweises Abonnement-Ende</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Leser/innen wird der Zugang zu aktuell veröffentlichten Abonnement-Inhalten verwehrt, aber sie erhalten weiterhin Zugriff auf Abonnement-Inhalte, die vor ihrem Abonnement-Ende veröffentlicht wurden.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Erinnerung per E-Mail </message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">Monat(e) nach Ablauf des Abonnements.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Erinnerung per E-Mail</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">Woche(n) nach Ablauf des Abonnements.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Erinnerung per E-Mail </message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">Monat(e) vor Ablauf des Abonnements.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Erinnerung per E-Mail</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">Woche(n) vor Ablauf des Abonnements.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Erinnerung an das Auslaufen des Abonnements</message>
@@ -640,10 +497,10 @@
 	<message key="manager.subscriptionTypes.form.individual">Individuell (Benutzer/innen erhalten ihren Zugang durch Einloggen)</message>
 	<message key="manager.subscriptionTypes.form.institutional">Abonnent/innen sollten über eine Domain oder einen IP-Bereich identifizierbar sein.</message>
 	<message key="manager.subscriptionTypes.form.institutionalValid">Bitte im Kästchen ankreuzen.</message>
-	<message key="manager.subscriptionTypes.form.membership">Abonnent/innen müssen Mitglieder eines Verbands oder einer Organisation sein.</message>
+	<message key="manager.subscriptionTypes.form.membership"><![CDATA[Abonnent/innen müssen Mitglieder eines Verbands oder einer Organisation sein.]]></message>
 	<message key="manager.subscriptionTypes.form.membershipValid">Bitte im Kästchen ankreuzen.</message>
 	<message key="manager.subscriptionTypes.form.options">Optionen</message>
-	<message key="manager.subscriptionTypes.form.public">Dieser Abonnementtyp ist nicht öffentlich sichtbar (z.B. unter "Abonnements" im "Über uns").</message>
+	<message key="manager.subscriptionTypes.form.public"><![CDATA[Dieser Abonnementtyp ist nicht öffentlich sichtbar (z.B. unter "Abonnements" im "Über uns").]]></message>
 	<message key="manager.subscriptionTypes.form.publicValid">Bitte im Kästchen ankreuzen.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">Speichern und weiteren Typ erstellen</message>
 	<message key="manager.subscriptionTypes.form.typeName">Name des Abonnementtyps</message>
@@ -653,7 +510,7 @@
 	<message key="manager.subscriptionTypes.noneCreated">Es wurden keine neuen Abonnementtypen erstellt.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Abonnementtyp erfolgreich erstellt.</message>
 
-	<!-- Kategorien -->
+	<!-- Categories -->
 	<message key="manager.setup.categories">Kategorien</message>
 	<message key="manager.setup.categories.description">Wählen Sie die passendsten Kategorien aus der oben angezeigten Menge. Leser/innen können die gesamte Zeitschriftenmenge dann nach Kategorien durchsehen.</message>
 </locale>
