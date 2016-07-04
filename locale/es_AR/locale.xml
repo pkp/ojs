@@ -162,7 +162,7 @@
 	<message key="journal.currentIssue">Número en curso</message>
 	<message key="journal.journals">Revistas</message>
 	<message key="journal.path">Ruta</message>
-	<message key="journal.journal">Revista</message>
+	<message key="context.context">Revista</message>
 
 	<!-- User -->
 	<message key="user.showAllJournals">Mostrar mis revistas</message>
