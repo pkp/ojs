@@ -48,7 +48,6 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Axuda do sistema</message>
-	<message key="navigation.archives">Arquivos</message>
 	<message key="navigation.current">Actual</message>
 	<message key="navigation.otherJournals">Outras revistas</message>
 	<message key="navigation.browseByIssue">Por edición</message>
@@ -98,12 +97,8 @@
 	<message key="article.suppFiles">Ficheiro(s) complementar(es)</message>
 	<message key="article.suppFilesAbbrev">Ficheiros ad.</message>
 	<message key="article.discipline">Disciplina académica e sub-disciplinas</message>
-	<message key="article.subjectClassification">Clasificación por materias</message>
 	<message key="article.subject">Palabras clave</message>
 	<message key="article.coverage">Cobertura</message>
-	<message key="article.coverageGeo">Cobertura xeo-espacial</message>
-	<message key="article.coverageChron">Cobertura cronolóxica ou histórica</message>
-	<message key="article.coverageSample">Características dos exemplos de investigación</message>
 	<message key="article.type">Tipo, método ou enfoque</message>
 	<message key="article.language">Idioma</message>
 	<message key="article.sectionEditor">ES</message>
@@ -170,20 +165,9 @@
 	
 	<!-- Roles -->
 	<message key="user.role.manager">Administrador/a de revistas</message>
-	<message key="user.role.editor">Editor/a</message>
 	<message key="user.role.sectionEditor">Editor/a de sección</message>
-	<message key="user.role.layoutEditor">Editor/a de composición</message>
-	<message key="user.role.copyeditor">Corrector/a</message>
-	<message key="user.role.proofreader">Corrector/a de probas</message>
-	<message key="user.role.author">Autor/a</message>
 	<message key="user.role.subscriptionManager">Administrador de subscrición</message>
 	<message key="user.role.managers">Administradores/as de revistas</message>
-	<message key="user.role.editors">Editores/as</message>
-	<message key="user.role.sectionEditors">Editores/as de sección</message>
-	<message key="user.role.layoutEditors">Editores/as de composición</message>
-	<message key="user.role.copyeditors">Correctores/as</message>
-	<message key="user.role.proofreaders">Correctores</message>
-	<message key="user.role.authors">Autoras/es</message>
 	<message key="user.role.subscriptionManagers">Administradores/as de subscrición</message>
 	
 	<!-- Common Issue Terms -->
@@ -211,7 +195,6 @@
 	<message key="submission.event.logLevel.error">Erro</message>
 	
 	<message key="submission.event.general.defaultEvent">Evento de envío</message>
-	<message key="submission.event.general.articleSubmitted">Artigo enviado</message>
 	<message key="submission.event.general.issueScheduled">Envío axendado para publicación</message>
 	<message key="submission.event.general.issueAssigned">Envío asignado a número</message>
 	<message key="submission.event.general.articlePublished">Artigo publicado</message>
@@ -569,7 +552,6 @@ Activas é o número de revisións que neste momento están consideradas como en
 	<message key="submission.comments.saveAndEmailEditor">Gardar e enviar correo ao autor</message>
 	
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Ainda non te rexistraches? Faino agora</message>
 	<message key="user.login.resetPasswordInstructions"><![CDATA[Por razóns de seguridade, este sistema envia por correo-e un novo contrasinal aos/as usuarios/as rexistrados, en vez de lembrar
 o contrasinal actual.<br /><br />Insire o teu enderezo de correo elecrónico para mudar o contrasinal. Hase enviar a confirmación a este mesmo enderezo.]]></message>
 	
@@ -578,11 +560,8 @@ o contrasinal actual.<br /><br />Insire o teu enderezo de correo elecrónico par
 	
 	<!-- Registration -->
 	<message key="user.register.repeatPassword">Repite o contrasinal</message>
-	<message key="user.register.selectJournal">Selecciona unha revista para rexistrarte</message>
 	<message key="user.register.noJournals">Neste sitio non hai revistas nas que te poidas rexistrar.</message>
 	<message key="user.register.privacyStatement">Declaración de privacidade</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clica aquí</a> se xa estás registrada/o nesta ou calquera outra revista desta web.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clica aquí</a> se <strong>no</strong> xa estás rexistra con esta ou calquera outra revista desta web.]]></message>
 	<message key="user.register.loginToRegister">Insire o teu nome de usuaria/o e contrasinal actual para rexistrarte nesta revista.</message>
 	<message key="user.register.registrationDisabled">Neste intre non és posibel rexistrarse nesta revista.</message>
 	<message key="user.register.form.passwordLengthTooShort">O contrasinal que introduciches non é longa de abondo.</message>
@@ -638,21 +617,14 @@ o contrasinal actual.<br /><br />Insire o teu enderezo de correo elecrónico par
 	<message key="archive.issueUnavailable">Número non disponibel</message>
 	
 	<!-- About The Journal -->
-	<message key="about.journalContact">Contacto da revista</message>
-	<message key="about.aboutTheJournal">Sobre a revista</message>
 	<message key="about.editorialTeam">Equipo editorial</message>
 	<message key="about.editorialTeam.biography">Biografía</message>
 	<message key="about.editorialPolicies">Política editorial</message>
 	<message key="about.focusAndScope">Temática e alcance</message>
 	<message key="about.sectionPolicies">Política de seccions</message>
 	<message key="about.submissions">Envíos</message>
-	<message key="about.sponsors">Patrocinadores</message>
-	<message key="about.contributors">Fontes de financiamento</message>
 	<message key="about.onlineSubmissions">Envíos en liña</message>
-	<message key="about.onlineSubmissions.haveAccount">Xa tes nome de usuaria/o e contrasinal para {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Vai a identificación</message>
-	<message key="about.onlineSubmissions.needAccount"> Precisas un nome de usuario/a e contrasinal?</message>
-	<message key="about.onlineSubmissions.registration">Vai a rexistro</message>
 	<message key="about.onlineSubmissions.registrationRequired">Compre rexistrarse e identificarse para poder enviar artíigos en liña e para comprobar o estado dos envíos.</message>
 	<message key="about.authorGuidelines">Normas para autores/as</message>
 	<message key="about.submissionPreparationChecklist">Listaxe de comprobación de preparación de envíos</message>
@@ -665,7 +637,6 @@ o contrasinal actual.<br /><br />Insire o teu enderezo de correo elecrónico par
 	<message key="about.subscriptions">Subscripcións</message>
 	<message key="about.subscriptionsContact">Contacto de subscricións</message>
 	<message key="about.availableSubscriptionTypes">Tipos de subscrición</message>
-	<message key="about.journalSponsorship">Patrocinio da revista</message>
 	<message key="about.aboutThisPublishingSystem">Sobre este sistema de publicación</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Esta revista usa Open Journal Systems  {$ojsVersion}, que é software libre de administración e publicación de revistas desenvolvido, suportado, e libremente distribuido polo <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> baixo Licencia Pública General GNU.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[Esta revista usa Open Journal Systems {$ojsVersion}, que é software libre de administración e publicación de revistas desenvolvido, suportado, e libremente distribuido polo <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> baixo Licencia Pública General GNU.]]></message>
@@ -754,7 +725,6 @@ Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</stron
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} realizouse un novo envío, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} revisouse o artigo {$articleId}. O novo ID do ficheiro é {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} foi asignado/a para revisar o envío {$articleId} na rolda de revisión {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} foi desasignado/a da revisión de envíos {$articleId} na  rolda de revisión {$round}.</message>
 	<message key="log.review.reviewInitiated">Comezou a rolda {$round} de revisión por {$reviewerName} para o envío {$articleId}.</message>
 	<message key="log.review.reviewReinitiated">Reiniciouse a rolda {$round} de revisión por {$reviewerName} para o envío {$articleId}.</message>
@@ -789,7 +759,6 @@ Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</stron
 	<message key="log.editor.archived">Arquivouse o envío {$articleId}.</message>
 	<message key="log.editor.restored">O envío {$articleId} voltou para a cola.</message>
 	<message key="log.editor.editorAssigned">Asignouse a {$editorName} como editor/a para o envío {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} acelerouse o proceso de edición para o artigo {$articleId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} asignouse a {$proofreaderName} para corrigir as probas do envío {$articleId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} enviou {$articleId} a planificación.</message>
@@ -851,12 +820,8 @@ A validación pode fallar en URLs de pescuda que precisan o envío de formulario
 	<!-- Debug messages -->
 
 
-	<message key="debug.notes.helpMappingLoad">Ficheiro de axuda de mapeo XML {$filename} recargado ao buscar {$id}.</message>
-	<message key="submission.reviewForm">Formulario de revisión</message>
-	<message key="submission.reviewFormResponse">Resposta ao Formulario de Revisión</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Por favor preenche os campos que se precisan</message>
 	<message key="reviewer.article.enterReviewForm">Fai "clic" no ícono para preencher o formulario de revisión</message>
-	<message key="common.pageHeader.altText">Título de páxina</message>
 	<message key="common.homePageHeader.altText">Título (Páxina de Inicio)</message>
 	<message key="common.journalHomepageImage.altText">Imaxe da Páxina Inicial da Revista</message>
 	<message key="article.coverPage.altText">Imaxe da capa</message>
@@ -1002,32 +967,23 @@ A validación pode fallar en URLs de pescuda que precisan o envío de formulario
 	<message key="notification.type.galleyModified">Unha galerada foi modificada para "{$param}".</message>
 	<message key="notification.type.issuePublished">Unha consulta foi publicada.</message>
 	<message key="notification.type.newAnnouncement">Creouse un novo anuncio.</message>
-	<message key="notification.type.reviewerComment">Un revisor comentou en "{$param}".</message>
 	<message key="notification.type.reviewing">Eventos de Revisión</message>
 	<message key="notification.type.site">Eventos do Sitio</message>
 	<message key="notification.type.submissionComment">Un editor comentou en "{$param}".</message>
 	<message key="notification.type.submissions">Eventos de Envío</message>
 	<message key="notification.type.userComment">Un lector fixo un comentario en "{$param}"</message>
-	<message key="manager.setup.citations">Permeter aos autores proporcionar por separado unha listaxe formateada de referencias (citas) como parte da súa presentación.</message>
 	<message key="payment.loginRequired.forArticle">Precísase unha subscrición ou pagamento do artigo para acceder ao ítem. Para verificar a subscrición, acceder a pagamentos previos, ou mercar o artigo, identifíquese na revista.</message>
 	<message key="payment.loginRequired.forDonation">Ten que estar autenticado para facer unha doazón.</message>
 	<message key="navigation.competingInterestGuidelines">Directrices en conflitos de intereses</message>
 	<message key="plugins.categories.citationFormats.description">Os plugins de formatos de citación fornecen aos usuarios de varios formatos cos que acceder a citas de artigos.</message>
-	<message key="plugins.categories.oaiMetadataFormats">Plugins de Formato de Metadados de OAI</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Estes plugin de formato expresan metadados en comunicacións OAI</message>
 	<message key="payment.membership.ends">Termo</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} non permitiu a rolda {$round} de revisión para a presentación do artigo {$articleId} en nome de {$reviewerName}.</message>
 	<message key="log.editor.decision">Unha decisión ({$decision}) dun editor para o artigo {$articleId} vai ser rexistrada por {$editorName}.</message>
 	<message key="rt.admin.settings.addComment">Angadir comentario (habilita aos lectores a enviar comentarios, co Administrador daa Revista con competencia para borralos).</message>
 	<message key="rt.metadata.pkp.doi">Identificador de Obxecto Digital</message>
 	<message key="notification.mailListDescription">Insire o teu enderezo de correo electrónico para recibir notificacións inmediatas de novo contido engadido á revista.</message>
-	<message key="notification.type.copyeditComment">Un corrector de estilo deixou un comentario en "{$param}".</message>
 	<message key="notification.type.editorDecisionComment">Fíxose un comentario como decisión do editor para "{$param}".</message>
-	<message key="notification.type.layoutComment">Fíxose un comentario sobre el deseño de "{$param}".</message>
-	<message key="notification.type.metadataModified">Modificouse o metadado de "{$param}".</message>
-	<message key="notification.type.proofreadComment">Fíxose un comentario sobre "{$param}" polo corrector de probas .</message>
 	<message key="notification.type.reviewerFormComment">Enviouse unha revisión de formulario de revisión para "{$param}"</message>
-	<message key="notification.type.suppFileModified">Ficheiros suplementares de "{$param}" foron modificados.</message>
 	<message key="debug.notes.currencyListLoad">Cargada listaxe de moedas "{$filename}" dende XML</message>
 	<message key="reviewer.article.selectRecommendation">Seleccionar unha recomendación e enviar a revisión para completar o proceso. Tes que inserir unha revisión ou subir un ficheiro antes de seleccionar unha recomendación.</message>
 	<message key="submission.layout.referenceLinking">Ligazón para a referéncia</message>
@@ -1048,19 +1004,16 @@ Título del sistema de clasificación]]></message>
 	<li><strong>Insertar enlaces en las referencias</strong><p>O Editor de deseño pode engadir unha ligazón ás  referencias que se pode atopar online utilizando as seguintes instrucións (que poden ser editadas).</p></li>
 </ol>]]></message>
 	<message key="reviewer.article.reviewGuidelinesDescription">As Directrices de Revisión proporcionarán aos revisores criterios para julgar la idoneidade dunha presentación para ser publicada na revista, e pode incluir instruccións especiais para realizar unha revisión efectiva e útil. Na realización da revisión, os revisores son presentados con dúas caixas de texto abertas, a primeira "para autor e editor" , e la segunda "para o editor". De xeito alternativo,o Adminsitrador da Revista pode crear unha revisión de expertos. Os editores sempre terán a opción de compartir os comentarios oportunos co Autor.</message>
-	<message key="manager.setup.reviewProcessEmailDescription">Os Editores envían aos Revisores a solicitude de revisión da presentación incluida no correo electrónico. Os revisores envían un email aos editores coa súa aprobación ou  rexeito junto a revisión e as recomendacións. Os editores aproban ou rexeitan a presentación e introducen a revisión e recomendacións na páxina de revisión da presentación, para completar o proceso de revisión.</message>
 	<message key="user.subscriptions.subscriptionStatus">Estado da Subscrición</message>
 	<message key="user.subscriptions.status">Estado</message>
 	<message key="user.subscriptions.statusDescription">Descrición</message>
 	<message key="user.register.reviewerInterests">Identificar os intereses da revisión (áreas substantivas e métodos de investigación):</message>
 	<message key="user.subscriptions.status.needsInformationDescription">Precísase información suplementar antes de que se poida activar a subscrición</message>
 	<message key="user.subscriptions.status.needsApprovalDescription">A subscrición debe ser revisada antes de poder ser activada</message>
-	<message key="article.pdf.download">Descargar este ficheiro PDF</message>
 	<message key="payment.authorFees">Taxas Autor</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Iniciouse un pagamento online porén foi cancelado ou non completado.</message>
 	<message key="user.subscriptions.statusInformation">As subscricións activas e vencidas móstranse a seguir canda a data de caducidade. A máis, a seguinte información de estado pódese incluir en cada subscrición.</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Iniciouse un pagamento manual, mais ainda non se recebeu.</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>O arquivo PDF que seleccionou débese cargar aquí se o teu navegador Web ten un lector de PDF plug-in instalado (por exemplo, unha versión recente de <a href = "http://www.adobe.com/products/acrobat/ readstep2.html "> Adobe Acrobat Reader </a>).</p> Se o quiseres, tamén podes descargar o arquivo PDF directamente ao teu ordenador, dende onde se pode abrir usando un lector de PDF. Para descargar o PDF, clica na ligazón de descarga. </p><p> Se desexas obter máis información sobre como imprimir, gardar e traballar con arquivos PDF, Highwire Press proporciona unha ligazón de <a href="http://highwire.stanford.edu/help/pdf-faq.dtl"> Preguntas máis frecuentes sobre os arquivos PDF </a>.</p>]]></message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
 <h4>1. Política proposta para Revistas que fornecen Acceso Aberto</h4>
 Os autores que publican nesta revista están de acordo cos termos a seguir:

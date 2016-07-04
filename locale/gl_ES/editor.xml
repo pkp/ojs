@@ -13,9 +13,6 @@
   -->
 
 <locale name="gl_ES" full_name="Galego">
-	<message key="editor.article.reviewForms">Formularios de Revisión</message>
-	<message key="editor.article.selectReviewForm">Escoller Formulario de Revisión</message>
-	<message key="editor.article.clearReviewForm">Limpar Formulario de Revisión</message>
 	<message key="editor.home">Home de editor/a</message>
 	<message key="editor.submissionsAndPublishing">Envíos e publicación</message>
 	<message key="editor.submissionQueue">Cola de envíos</message>
@@ -94,9 +91,7 @@
 	<message key="editor.issues.noLiveIssues">Non hai números en curso</message>
 	<message key="editor.issues.open">Aberto</message>
 	<message key="editor.issues.pages">Páxinas</message>
-	<message key="editor.navigation.issues">Números</message>
 	<message key="editor.navigation.futureIssues">Edicións futuras</message>
-	<message key="editor.navigation.createIssue">Crear edición</message>
 	<message key="editor.navigation.issueArchive">Edicións anteriores</message>
 	<message key="editor.article.designateReviewVersion">Designar o ficheiro orixinal como a versión de revisión</message>
 	<message key="editor.article.uploadReviewVersion">Subir unha versión de Revisión revisada</message>
@@ -197,7 +192,6 @@
 	<message key="editor.article.uploaded">Ficheiro enviado</message>
 	<message key="editor.article.removeCoverPage">Eliminar a imaxe da capa?</message>
 	<message key="editor.article.remove">Eliminar</message>
-	<message key="editor.article.confirmChangeReviewForm">Cambiar o formulario de revisión eliminará as respostas...</message>
 	<message key="editor.issues.enableOpenAccessDate">Habilitado acceso aberto retardado</message>
 	<message key="editor.issues.unpublishIssue">Despublicar edición</message>
 	<message key="editor.issues.confirmUnpublish">Tes a certeza de que queres despublicar esta edición publicada?</message>
