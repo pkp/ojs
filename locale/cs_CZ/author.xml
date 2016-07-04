@@ -4,14 +4,14 @@
 <!--
   * locale/cs_CZ/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings.
+  * Localization strings for the cs_CZ (Čeština) locale.
+  * locale information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_%28cs_CZ%29
   -->
 
-<locale name="cs_CZ" full_name = "Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="author.submit">Nový příspěvek</message>
 	<message key="author.track">Aktivní příspěvky</message>
 	<message key="author.competingInterests"><![CDATA[Střet&nbsp;zájmů <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Pravidla upravující střet zájmů</a>]]></message>
@@ -29,39 +29,40 @@
 	<message key="author.submit.cancelSubmission">Odeslání tohoto příspěvku můžete dokončit později tím, že na domácí sránce pro autora vyberete Aktivní příspěvky.</message>
 	<message key="author.submit.notAccepting">Tento časopis aktuálně nepřijímá příspěvky.</message>
 	<message key="author.submit.requestWaiver">Požádat o prominutí</message>
-	<message key="author.submit.qualifyForWaiver">Prosím, zvažte prominutí platby Poplatku za zaslání příspěvku pro tento článek</message>
-	<message key="author.submit.addReasonsForWaiver">Použijte prosím níže umístěné pole pro komentář a uveďte, proč by Vám měl být poplatek prominut.</message>
+	<message key="author.submit.qualifyForWaiver">Zvažte, prosím, prominutí platby poplatku za zaslání příspěvku pro tento článek</message>
+	<message key="author.submit.addReasonsForWaiver">Použijte, prosím, níže umístěné pole pro komentář a uveďte, proč by Vám měl být poplatek prominut.</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Nahrát redigovanou verzi</message>
 	<message key="author.submissions.proofreadingCorrections">Korekturní opravy</message>
 	<message key="author.submissions.confirmDelete">Jste si jistý, že chcete smazat tento nedokončený příspěvek?</message>
 	<message key="author.submissions.viewStatus">Zobrazit stav</message>
 	<message key="author.submissions.noSubmissions">Žádné příspěvky.</message>
-	<message key="author.submit.howToSubmit"><![CDATA[Potýkáte se s obtížemi? Kontaktujte <a href="mailto:{$supportEmail}">{$supportName}</a> pro asistenci ({$supportPhone}).]]></message>
-	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Potýkáte se s obtížemi? Kontaktujte <a href="mailto:{$supportEmail}">{$supportName}</a> pro asistenci.]]></message>
+	<message key="author.submit.howToSubmit"><![CDATA[Potýkáte se s obtížemi? Kontaktujte <a href="mailto:{$supportEmail}">{$supportName}</a> pro pomoc ({$supportPhone}).]]></message>
+	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Potýkáte se s obtížemi? Kontaktujte <a href="mailto:{$supportEmail}">{$supportName}</a> pro pomoc.]]></message>
 	<message key="author.submit.journalSection">Sekce časopisu</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Zvolte vhodnou sekci pro tento příspěvek (viz Sekce a Pravidla v části <a href="{$aboutUrl}" target="_new">O časopisu</a>).]]></message>
-	<message key="submission.submit.selectSection">Prosím zvolte sekci...</message>
-	<message key="submission.submit.submissionChecklist">Zaškrtávací seznam příspěvku</message>
-	<message key="submission.submit.submissionChecklistDescription">Zaškrtnutím následujících položek potvrďte, že tento příspěvek je připraven pro posouzení tímto časopisem (níže je možné přidat komentář pro editora).</message>
+	<message key="author.submit.selectSection">Prosím zvolte sekci...</message>
+	<message key="author.submit.submissionChecklist">Zaškrtávací seznam příspěvku</message>
+	<message key="author.submit.submissionChecklistDescription">Zaškrtnutím následujících položek potvrďte, že tento příspěvek je připraven pro posouzení tímto časopisem (níže je možné přidat komentář pro editora).</message>
 	<message key="author.submit.verifyChecklist">Než budete pokračovat, musíte zajistit splnění všech položek zaškrtávacího seznamu.</message>
 	<message key="author.submit.copyrightNoticeAgree">Autoři souhlasí s podmínkami uvedenými v Oznámení o copyrightu, které budou aplikovány na tento příspěvek, jakmile bude publikován tímto časopisem (níže je možné přidat komentář pro editora).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Než budete pokračovat, musíte souhlasit s podmínkami uvedenými v Oznámení o copyrightu.</message>
-	<message key="submission.submit.coverNote">Komentář pro editora</message>
+	<message key="author.submit.commentsForEditor">Komentář pro editora</message>
 	<message key="author.submit.comments">Vložte text (nepovinné)</message>
 	<message key="author.submit.form.sectionRequired">Vyberte prosím vhodnou sekci časopisu pro tento příspěvek.</message>
-	<message key="submission.submit.privacyStatement">Prohlášení o soukromí pro tento časopis</message>
+	<message key="author.submit.privacyStatement">Prohlášení o soukromí pro tento časopis</message>
 	<message key="author.submit.reorderInstructions">Přeuspořádejte autory tak, aby byli zobrazeni ve stejném pořadí, v jakém mají být uvedeni v publikaci.</message>
 	<message key="author.submit.selectPrincipalContact">Hlavní kontakt pro korespondenci s editory.</message>
 	<message key="author.submit.addAuthor">Přidat autora</message>
 	<message key="author.submit.deleteAuthor">Smazat autora</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Jmenujte agentury, které poskytly finance nebo jinak podpořily práci prezentovanou v tomto příspěvku.</message>
 	<message key="author.submit.coverageInstructions">Vztahuje se k zeměpisné oblasti, chronologickému nebo historickému záběru a/nebo charakteristikám výzkumného souboru.</message>
+	<message key="author.submit.subjectClassInstructions">Pro výběr klasifikačních termínů (a pokud je to vhodné i čísel) použijte hyperlinkový klasifikační systém.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Čeština=cs; angličtina=en; francouzština=fr; španělština=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Další kódy</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Je vyžadován alespoň jeden autor.</message>
 	<message key="author.submit.form.authorRequiredFields">Je vyžadováno jméno, příjmení a emailová adresa každého autora.</message>
-	<message key="author.submit.form.titleRequired">Vložte prosím název vašeho článku.</message>
-	<message key="author.submit.form.abstractRequired">Vložte prosím abstrakt vašeho článku.</message>
-	<message key="author.submit.submissionFile">Soubor příspěvku</message>
+	<message key="author.submit.form.titleRequired">Vložte, prosím, název vašeho článku.</message>
+	<message key="author.submit.form.abstractRequired">Vložte, prosím, abstrakt vašeho článku.</message>
+	<message key="author.submit.submissionFile">Soubor s příspěvkem</message>
 	<message key="author.submit.uploadSubmissionFile">Nahrát soubor příspěvku</message>
 	<message key="author.submit.replaceSubmissionFile">Nahradit soubor příspěvku</message>
 	<message key="author.submit.noSubmissionFile">Nebyl nahrán žádný soubor příspěvku.</message>
@@ -76,10 +77,10 @@
 	<message key="author.submit.addSupplementaryFile">Přidat doplňkový soubor</message>
 	<message key="author.submit.editSupplementaryFile">Upravit doplňkový soubor</message>
 	<message key="author.submit.supplementaryFileData">Metadata doplňkového souboru</message>
-	<message key="author.submit.supplementaryFileDataDescription">Pro indexaci dohoto doplňkového materiálu udeďte následující metadata pro nahraný doplňkový soubor.</message>
+	<message key="author.submit.supplementaryFileDataDescription">Pro indexaci dohoto doplňkového materiálu uveďte následující metadata pro nahraný doplňkový soubor.</message>
 	<message key="author.submit.supplementaryFileUpload">Doplňkový soubor</message>
 	<message key="author.submit.suppFile.createrOrOwner">Tvůrce (nebo vlastník) souboru</message>
-	<message key="author.submit.suppFile.researchInstrument">Výzkumný instrument</message>
+	<message key="author.submit.suppFile.researchInstrument">Výzkumný nástroj</message>
 	<message key="author.submit.suppFile.researchMaterials">Výzkumné materiály</message>
 	<message key="author.submit.suppFile.researchResults">Výsledky výzkumu</message>
 	<message key="author.submit.suppFile.transcripts">Transkripty</message>
@@ -90,16 +91,16 @@
 	<message key="author.submit.suppFile.contributorOrSponsor">Přispěvatel nebo sponzorující agentura</message>
 	<message key="author.submit.suppFile.availableToPeers">Poskytnout soubor recenzentům (bez metadat), aby nebyly narušeny anonymní recenze.</message>
 	<message key="author.submit.suppFile.publisherDescription">Použít pouze s formálně publikovanými materiály.</message>
-	<message key="author.submit.suppFile.dateDescription">Datum, kdy byla posbírána data nebo vytvořen instrument.</message>
+	<message key="author.submit.suppFile.dateDescription">Datum, kdy byla posbírána data nebo vytvořen nástroj.</message>
 	<message key="author.submit.suppFile.sourceDescription">Název studie nebo jiné určení původu.</message>
 	<message key="author.submit.suppFile.specifyOtherType">Specifikujte jiný</message>
 	<message key="author.submit.suppFile.noFile">Nebyl nahrán žádný soubor.</message>
-	<message key="author.submit.suppFile.form.titleRequired">Vložte prosím název tohoto doplňkového souboru.</message>
+	<message key="author.submit.suppFile.form.titleRequired">Vložte, prosím, název tohoto doplňkového souboru.</message>
 	<message key="author.submit.suppFile.form.subjectRequired">Vložte prosím předmět.</message>
-	<message key="author.submit.suppFile.form.descriptionRequired">Vložte prosím popis.</message>
-	<message key="author.suppFile.suppFilePublicIdentificationExists">Identifikace veřejného doplňkového souboru již existuje.</message>
-	<message key="author.suppFile.publicSuppFileIdentifier">Identifikátor veřejného doplňkového souboru</message>
-	<message key="author.submit.confirmationDescription">Pro odeslání vašeho příspěvku do {$journalTitle} klikněte na Dokončit přípsěvek. Hlavní kontakt příspěvku obdrží emailem oznámení a bude moci po příhlášení na stránky časopisu sledovat postup příspěvku redakčním řízením. Děkujeme za Váš zájem publikovat v {$journalTitle}.</message>
+	<message key="author.submit.suppFile.form.descriptionRequired">Vložte, prosím, popis.</message>
+	<message key="author.suppFile.suppFilePublicIdentificationExists">Veřejný identifikátor doplňkového souboru již existuje.</message>
+	<message key="author.suppFile.publicSuppFileIdentifier">Veřejný identifikátor doplňkového souboru</message>
+	<message key="author.submit.confirmationDescription">Pro odeslání vašeho příspěvku do {$journalTitle} klikněte na Dokončit příspěvek. Hlavní kontakt příspěvku obdrží e-mailem oznámení a bude moci po příhlášení na stránky časopisu sledovat postup příspěvku redakčním řízením. Děkujeme za Váš zájem publikovat v {$journalTitle}.</message>
 	<message key="author.submit.noFiles">K příspěvku nebyly připojeny žádné soubory.</message>
 	<message key="author.submit.filesSummary">Přehled souborů</message>
 	<message key="author.submit.finishSubmission">Dokončit příspěvek</message>
@@ -108,16 +109,21 @@
 	<message key="author.article.uploadAuthorVersion">Nahrát verzi od autora</message>
 	<message key="author.article.copyeditedFile">Redigovaný soubor</message>
 	<message key="author.article.authorRevisedFile">Soubor od autora</message>
-	<message key="author.submit.authorSubmitLoginMessage">Pro přispívání do tohoto časopisu je vyžadován uživatelský účet. To umožní našim editorům sledovat Vaše příspěvky a kontaktovat Vás v případě, že se změní stav Vašeho příspěvku nebo pokud od Vás budou vyžadovány další informace.</message>
+	<message key="author.submit.authorSubmitLoginMessage">Pro přispívání do tohoto časopisu je vyžadován uživatelský účet. To umožní našim editorům sledovat vaše příspěvky a kontaktovat Vás v případě, že se změní stav vašeho příspěvku nebo pokud od vás budou vyžadovány další informace.</message>
 	<message key="author.submissions.queuedReviewSubsequent">V recenzním kole {$round}</message>
 	<message key="author.submit.step2">Krok 2. Nahrání příspěvku</message>
 	<message key="author.submit.step3">Krok 3. Vložení metadat příspěvku</message>
-	<message key="author.submit.upload">Nahrát příspěvek</message>
-	<message key="author.submit.metadata">Vložit metadata</message>
-	<message key="author.submit.mustEnterWaiverReason">Pokud žádáte o prominutí platby, musíte do přílušného místa uvést důvod.</message>
+	<message key="author.submit.upload">2. Nahrát příspěvek</message>
+	<message key="author.submit.metadata">3. Vložit metadata</message>
+	<message key="author.submit.mustEnterWaiverReason">Pokud žádáte o prominutí platby, musíte do příslušného místa uvést důvod.</message>
 	<message key="author.submissions.queuedReviewRevisions">V recenzním řízení: Vyžaduje přepracování</message>
 	<message key="author.submissions.queuedEditingCopyedit">Redakční úravy: Vyžádáno redigování</message>
 	<message key="author.submissions.queuedEditingProofread">Redakční úpravy: Vyžádána korektura</message>
 	<message key="author.submit.reorder">Přeuspořádat jméno autora</message>
-	<message key="author.submit.form.wordCountAlert">Překročil jste maximální limit slov pro abstrakta v této sekci.</message>
+	<message key="author.submit.form.wordCountAlert">Překročil jste maximální limit slov pro abstrakt v této sekci.</message>
+	<message key="author.submit.submissionLocale">Jazyk příspěvku</message>
+	<message key="author.submit.submissionLocaleDescription">Tento časopis přijímá příspěvky v několika jazycích. Zvolte si primární jazyk vašeho příspěvku z následujícího rozbalovacícho menu.</message>
+	<message key="author.submit.form.localeRequired">Zvolte si, prosím, jazyk příspěvku.</message>
+	<message key="author.submit.submissionIndexingDescription">Doplňte, prosím, klíčová slova pro indexování příspěvku: oddělte jednotlivá klíčová slova středníkem (klíčové slovo1; klíčové slovo 2; klíčové slovo 3)</message>
+	<message key="author.submit.submissionSupportingAgencies">Přispívající a podporující agentury.</message>
 </locale>

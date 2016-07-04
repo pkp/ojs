@@ -4,39 +4,39 @@
 <!--
   * locale/cs_CZ/editor.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings.
+  * Localization strings for the cs_CZ (Čeština) locale.
+  * locale information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_%28cs_CZ%29
   -->
 
-<locale name="cs_CZ" full_name = "Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="editor.article.reviewForms">Formuláře posudků</message>
 	<message key="editor.article.selectReviewForm">Vybrat formulář posudku</message>
 	<message key="editor.article.clearReviewForm">Vyčistit formulář posudku</message>
-	<message key="editor.article.confirmChangeReviewForm">Změna formuláře posudku odstraní odpovědi...</message>
+	<message key="editor.article.confirmChangeReviewForm">Varování: Změna formuláře posudku ovlivní všechny odpovědi recenzentů, kteří použili tento formulář. Jste si jisti, že chcete pokračovat?</message>
 	<message key="editor.home">Domácí stránka editora</message>
 	<message key="editor.submissionsAndPublishing">Příspěvky a publikování</message>
-	<message key="editor.submissionQueue">Řada příspěvků</message>
+	<message key="editor.submissionQueue">Fronta příspěvků</message>
 	<message key="editor.submissionArchive">Archiv příspěvků</message>
 	<message key="editor.publishing">Publikování</message>
 	<message key="editor.publishedIssues">Publikovaná čísla</message>
 	<message key="editor.allSections">Všechny sekce</message>
 	<message key="editor.allEditors">Všichni editoři</message>
 	<message key="editor.me">Já</message>
-	<message key="editor.submissionArchive.noSubmissions">6ádné příspěvky v archivu.</message>
+	<message key="editor.submissionArchive.noSubmissions">V archivu nejsou žádné příspěvky.</message>
 	<message key="editor.submissionArchive.saveChanges">Uložit změny v archivovaných příspěvcích? Příspěvky označené pro smazání budou trvale odstraněny ze systému.</message>
-	<message key="editor.submissionArchive.confirmDelete">Jste si jistý, že chcete trvale smazat tento příspěvek?</message>
-	<message key="editor.submissionReview.confirmDecision">Jste si jistý, že chcete zaznamenat toto rozhodnutí?</message>
-	<message key="editor.submissionReview.emailWillArchive">Tento příspěvek bude archivován poté, co bude odeslán email Informovat autora nebo bude kliknuto na tlačítko přeskočit email.</message>
+	<message key="editor.submissionArchive.confirmDelete">Jste si jisti, že chcete trvale smazat tento příspěvek?</message>
+	<message key="editor.submissionReview.confirmDecision">Jste si jisti, že chcete zaznamenat toto rozhodnutí?</message>
+	<message key="editor.submissionReview.emailWillArchive">Tento příspěvek bude archivován poté, co bude odeslán e-mail Informovat autora nebo bude kliknuto na tlačítko přeskočit e-mail.</message>
 	<message key="editor.notifyUsers">Informovat uživatele</message>
 	<message key="editor.notifyUsers.inProgress">Probíhá informování uživatelů...</message>
 	<message key="editor.usersNotified">Uživatelé byli informováni</message>
 	<message key="editor.notifyUsers.allUsers">Poslat tuto zprávu všem uživatelům spojeným s tímto časopisem ({$count} uživatelů)</message>
 	<message key="editor.notifyUsers.interestedUsers">Poslat tuto zprávu uživatelům spojeným s tímto časopisem, kteří uvedli, že si přejí dostávat nejnovější informace ({$count} uživatelů)</message>
 	<message key="editor.notifyUsers.includeToc">Připojit obsah tohoto čísla:</message>
-	<message key="editor.editorAdministration">Administrace editorem</message>
+	<message key="editor.editorAdministration">Editorská administrace</message>
 	<message key="editor.issues.createIssue">Vytvořit číslo</message>
 	<message key="editor.issues.backIssues">Minulá čísla</message>
 	<message key="editor.issues.futureIssues">Budoucí čísla</message>
@@ -44,20 +44,19 @@
 	<message key="editor.issues.numArticles">Položky</message>
 	<message key="editor.issues.noArticles">Pro toto číslo nejsou aktuálně naplánovány žádné položky.</message>
 	<message key="editor.issues.confirmDelete">Jste si jistý, že chcete trvale smazat toto číslo?</message>
-	<message key="editor.issues.published">Publikovaná</message>
-	<message key="editor.issues.unpublished">Nepublikovaná</message>
-	<message key="editor.issues.volumeRequired">Je vyžadován ročník. Musí to být kladná číselná hodnota.</message>
-	<message key="editor.issues.numberRequired">Je vyžadováno číslo. Musí to být kladná číselná hodnota.</message>
-	<message key="editor.issues.yearRequired">Je vyžadován rok. Musí to být kladná číselná hodnota.</message>
+	<message key="editor.issues.published">Publikováno</message>
+	<message key="editor.issues.unpublished">Nepublikováno</message>
+	<message key="editor.issues.volumeRequired">Je vyžadován ročník. Musí to být kladné číslo.</message>
+	<message key="editor.issues.numberRequired">Je vyžadováno číslo. Musí to být kladné číslo.</message>
+	<message key="editor.issues.yearRequired">Je vyžadován rok. Musí to být kladné číslo.</message>
 	<message key="editor.issues.titleRequired">Je vyžadová název čísla.</message>
 	<message key="editor.issues.issueIdentificationRequired">Je vyžadována identifikace čísla. Zvolte prosím nejméně jednu z možností identifikace čísla.</message>
 	<message key="editor.issues.issueIdentification">Identifikace čísla</message>
-	<message key="editor.issues.publicIssueIdentifier">Identifikátor veřejného čísla</message>
+	<message key="editor.issues.publicIssueIdentifier">Veřejný identifikátor čísla</message>
 	<message key="editor.issues.description">Popis</message>
 	<message key="editor.issues.accessStatus">Stav přístupu</message>
 	<message key="editor.issues.accessDate">Datum otevřeného přístupu</message>
 	<message key="editor.issues.invalidAccessDate">Datum přístupu není platné.</message>
-	<message key="editor.issues.issuePublicIdentificationExists">Identifikace veřejného čísla již existuje.</message>
 	<message key="editor.issues.coverPage">Titulní obrázek</message>
 	<message key="editor.issues.coverPageInstructions">(Povolené formáty: .gif, .jpg nebo .png )</message>
 	<message key="editor.issues.uploaded">Nahrané</message>
@@ -65,9 +64,9 @@
 	<message key="editor.issues.proofed">Schválené</message>
 	<message key="editor.issues.removeCoverPage">Odstranit obrázek titulní stránky?</message>
 	<message key="editor.issues.invalidCoverPageFormat">Neplatný formát titulní stránky. Podporované formáty jsou .gif, .jpg nebo .png.</message>
-	<message key="editor.issues.styleFile">Stylesheet</message>
-	<message key="editor.issues.invalidStyleFormat">Neplatný formát stylesheetu. Přesvědčte se, že odeslaný soubor je platný CSS. (Vězte že stylesheety s komentářem na začátku mohou být odmítnuty.)</message>
-	<message key="editor.issues.removeStyleFile">Odstranit stylesheet?</message>
+	<message key="editor.issues.styleFile">Soubor stylu</message>
+	<message key="editor.issues.invalidStyleFormat">Neplatný formát souboru stylu. Přesvědčte se, že odeslaný soubor je platný CSS. (Vězte že soubory stylu s komentářem na začátku mohou být odmítnuty.)</message>
+	<message key="editor.issues.removeStyleFile">Odstranit soubor stylu?</message>
 	<message key="editor.issues.coverPageCaption">Legenda k titulní stránce</message>
 	<message key="editor.issues.showCoverPage">Vytvořit titulní stránku pro toto číslo s následujícími prvky.</message>
 	<message key="editor.issues.coverPageDisplay">Zobrazit</message>
@@ -78,8 +77,8 @@
 	<message key="editor.issues.identification">Identifikace</message>
 	<message key="editor.issues.access">Přístup</message>
 	<message key="editor.issues.cover">Titulní strana</message>
-	<message key="editor.issues.confirmIssueDelete">Všechny články budou navráceny do fronty a všechny asociované soubory budou trvale odstraněny. Jste si jistý, že chcete odstranit toto číslo?</message>
-	<message key="editor.issues.resetIssueOrder"><![CDATA[Tento časopis používá obvyklé řazení čísel. <a href="{$url}" class="action">Resetovat na výchozí</a>]]></message>
+	<message key="editor.issues.confirmIssueDelete">Všechny články budou navráceny do fronty a všechny asociované soubory budou trvale odstraněny. Jste si jisti, že chcete odstranit toto číslo?</message>
+	<message key="editor.issues.resetIssueOrder"><![CDATA[Tento časopis používá přizpůsobené řazení čísel. <a href="{$url}" class="action">Resetovat na výchozí</a>]]></message>
 	<message key="editor.issues.resetSectionOrder"><![CDATA[Toto číslo používá obvyklé řazení sekcí. <a href="{$url}" class="action">Resetovat na výchozí</a>]]></message>
 	<message key="editor.issues.issueData">Data čísla</message>
 	<message key="editor.issues.saveChanges">Uložit změny do obsahu?</message>
@@ -89,18 +88,19 @@
 	<message key="editor.issues.publishIssue">Publikovat číslo</message>
 	<message key="editor.issues.previewIssue">Náhled čísla</message>
 	<message key="editor.issues.preview">(Náhled)</message>
-	<message key="editor.issues.confirmPublish">Jste si jistý, že chcete publikovat nové číslo?</message>
+	<message key="editor.issues.confirmPublish">Jste si jisti, že chcete publikovat nové číslo?</message>
 	<message key="editor.issues.publicArticleIdExists">Nebylo možné uložit veřejné ID pro článek:</message>
 	<message key="editor.issues.noLiveIssues">Žádná živá čísla</message>
 	<message key="editor.issues.open">Otevřít</message>
 	<message key="editor.issues.pages">Stránky</message>
+	<message key="editor.navigation.issues">Čísla</message>
 	<message key="editor.navigation.futureIssues">Budoucí čísla</message>
-	<message key="grid.action.addIssue">Vytvořit číslo</message>
+	<message key="editor.navigation.createIssue">Vytvořit číslo</message>
 	<message key="editor.navigation.issueArchive">Minulá čísla</message>
 	<message key="editor.article.designateReviewVersion">Označit původní soubor za verzi pro recenzi</message>
 	<message key="editor.article.uploadReviewVersion">Nahrát revidovanou verzi pro recenzi</message>
 	<message key="editor.article.showSuppFile">Poskytnout soubor recenzentům</message>
-	<message key="editor.article.layoutAndProof">Vzheld &amp; Korektura</message>
+	<message key="editor.article.layoutAndProof"><![CDATA[Vzheld & Korektura]]></message>
 	<message key="editor.article.clear">Odebrat</message>
 	<message key="editor.article.clearReviewer">Odebrat recenzenta</message>
 	<message key="editor.article.changeSection">Změnit sekci</message>
@@ -122,9 +122,9 @@
 	<message key="editor.article.decision">Rozhodnutí</message>
 	<message key="editor.article.noEditorSelected">Nebyl zvolen žádný editor.</message>
 	<message key="editor.article.recordDecision">Zaznamenat rozhodnutí</message>
-	<message key="editor.article.cannotRecord">Editor sekce nezaznamenán.</message>
+	<message key="editor.article.cannotRecord">Editor sekce nezaznamenán, nebo není k dispozici soubor pro recenzi.</message>
 	<message key="editor.article.reviewersSeeAuthorsVersion">Recenzenti vidí autorovu verzi</message>
-	<message key="editor.article.designateDueDate">Vymezit datum termínu splnění</message>
+	<message key="editor.article.designateDueDate">Stanovit datum termínu splnění</message>
 	<message key="editor.article.designateDueDateDescription">Vložte datum nebo počet týdnů pro nové datum termínu splnění.</message>
 	<message key="editor.article.todaysDate">Dnešní datum</message>
 	<message key="editor.article.requestedByDate">Vyžadováno do data</message>
@@ -142,7 +142,7 @@
 	<message key="editor.article.reviewerRating.poor">2</message>
 	<message key="editor.article.reviewerRating.veryPoor">1 nízké</message>
 	<message key="editor.article.comments">Komentáře</message>
-	<message key="editor.article.commentsRequired">Je vyžadováno políčko pro komentáře.</message>
+	<message key="editor.article.commentsRequired">Je vyžadováno pole pro komentáře.</message>
 	<message key="editor.article.saveRating">Uložit hodnocení</message>
 	<message key="editor.article.noneSelected">Nebyl vybrán žádný</message>
 	<message key="editor.article.authorProofing">Kontrola autorem</message>
@@ -152,7 +152,7 @@
 	<message key="editor.article.selectEditor">Zvolit {$roleName}</message>
 	<message key="editor.article.selectDecision">Vybrat rozhodnutí</message>
 	<message key="editor.article.decision.accept">Přijmout příspěvek</message>
-	<message key="editor.article.decision.pendingRevisions">Požadovat přepracování</message>
+	<message key="editor.article.decision.pendingRevisions">Požadovat přepracování (malé změny)</message>
 	<message key="editor.article.decision.resubmit">Znovu předložit k recenzi</message>
 	<message key="editor.article.decision.decline">Odmítnout příspěvek</message>
 	<message key="editor.article.selectLayoutEditor">Zvolit typografa</message>
@@ -192,12 +192,33 @@
 	<message key="editor.article.hideCoverPageToc">Nezobrazovat náhled titulního obrázku v obsahu.</message>
 	<message key="editor.article.hideCoverPageAbstract">Nezobrazovat titulní obrázek při zobrazení abstraktu článku.</message>
 	<message key="editor.article.coverPage">Titulní obrázek</message>
-	<message key="editor.article.coverPageInstructions">(povolené formáty: .gif, .jpg neho .png)</message>
+	<message key="editor.article.coverPageInstructions">(Povolené formáty: .gif, .jpg neho .png)</message>
 	<message key="editor.article.uploaded">Nahráno</message>
 	<message key="editor.article.removeCoverPage">Odstranit titulní obrázek?</message>
 	<message key="editor.article.remove">Odstranit</message>
 	<message key="editor.issues.enableOpenAccessDate">Povolit zpožděný otevřený přístup</message>
 	<message key="editor.issues.unpublishIssue">Zrušit vydání čísla</message>
-	<message key="editor.issues.confirmUnpublish">Jste si jistý, že chcete zrušit vydání tohoto vydaného čísla?</message>
+	<message key="editor.issues.confirmUnpublish">Jste si jisti, že chcete zrušit vydání tohoto vydaného čísla?</message>
 	<message key="editor.article.archiveSubmission">Odmítnout a archivovat příspěvek</message>
+	<message key="editor.reassign">Nové přidělení</message>
+	<message key="editor.publicIdentificationExists">Veřejný identifikátor '{$publicIdentifier}' již existuje pro jiný objekt (vydání, článek, sazebnice či doplňkový soubor). Zvolte si, prosím, unikátní edentifikátor v rámci celého časopisu.</message>
+	<message key="editor.notifyUsers.allReaders">Všem čtenářům ({$count} uživatelů)</message>
+	<message key="editor.notifyUsers.allAuthors">Všem autorům článků ({$count} uživatelů)</message>
+	<message key="editor.notifyUsers.allIndividualSubscribers">Všem individuálním předplatitelům ({$count} uživatelů)</message>
+	<message key="editor.notifyUsers.allInstitutionalSubscribers">Všem institucionálnám předplatitelům ({$count} uživatelů)</message>
+	<message key="editor.notifyUsers.allMailingList">Zahrnout na e-mailový rozesílací seznam všechny e-maily ({$count} uživatelů)</message>
+	<message key="editor.submissionReview.sendToCopyediting">Poslat k redigování</message>
+	<message key="editor.issues.galleys">Sazebnice čísla</message>
+	<message key="editor.issues.galley">Sazebnice čísla</message>
+	<message key="editor.issues.viewingGalley">Prohlédnout sazebnici čísla</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Před odesláním příspěvku k redigování, použijte odkaz Upozornit autora, abyste informovali autora o rozhodnutí a vyberte, která verze má být odeslána.</message>
+	<message key="editor.issues.issueGalleysDescription">Publikovat sazebnice s obsahem celého čísla.</message>
+	<message key="editor.issues.noneIssueGalleys">Nebyly publikovány žádné sazebnice čísla.</message>
+	<message key="editor.issues.galleyLabelRequired">Je vyžadováno označení sazebnice čísla.</message>
+	<message key="editor.issues.galleyLocaleRequired">Je vyžadována jazyková lokalizace sazebnice čísla.</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">Veřejný identifikátor sazebnice čísla již existuje.</message>
+	<message key="editor.issues.backToIssueGalleys">Zpět na sazebnice čísla</message>
+	<message key="editor.issues.confirmDeleteGalley">Jste si jisti, že chcete smazat tuto sazebnici čísla?</message>
+	<message key="editor.publicGalleyIdentificationExists">Veřejný identifikátor '{$publicIdentifier}'  je již použit pro jinou sazebnici tohoto článku. Zvolte si, prosím, jedinečný identifikátor v rámci tohoto článku.</message>
+	<message key="editor.issues.resetArticlePublicationDates">Resetovat data zveřejnění</message>
 </locale>

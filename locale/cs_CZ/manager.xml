@@ -2,39 +2,38 @@
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * /locale/cs_CZ/manager.xml
+  * locale/cs_CZ/manager.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
   * Localization strings for the cs_CZ (Čeština) locale.
-  *
+  * locale information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_%28cs_CZ%29
   -->
 
-<locale name="cs_CZ" full_name = "Czech">
-	<message key="manager.emails.confirmResetAll">Jste si jistý, že chcete resetovat všechny šablony emailů v tomto časopisu? Ztratíte tak veškerá přizpůsobení, která jste dopsud udělal.</message>
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="manager.emails.confirmResetAll">Jste si jisti, že chcete resetovat všechny šablony e-mailů v tomto časopisu? Ztratíte tak veškerá přizpůsobení, která jste dopsud udělali.</message>
 	<message key="manager.files.note">Poznámka: Prohlížeč souborů je pokročilý nástroj, který umožňuje zobrazení a přímou manipulaci se soubory a adresáři souvisejícími s časopisem.</message>
 	<message key="manager.groups">Tiráž</message>
 	<message key="manager.groups.context.editorialTeam">Zobrazit název pod Edičním týmem na stránce O časopisu v sekci Lidé (např. Editor)</message>
-	<message key="manager.groups.context.editorialTeam.short">Ediční tým</message>
+	<message key="manager.groups.context.editorialTeam.short">Redakce</message>
 	<message key="manager.groups.context.people">Zobrazit název jako vlastní kategorii pod Lidé (e.g. Redakční rada)</message>
 	<message key="manager.groups.create">Vytvořit název pozice</message>
-	<message key="manager.groups.disableBoard">OJS vypisuje seznam lidí v edičním týmu podle přiřazených rolí (manažer časopisu, redaktor atd.)</message>
+	<message key="manager.groups.disableBoard">OJS vypisuje seznam lidí v redakci podle přiřazených rolí (manažer časopisu, redaktor atd.)</message>
 	<message key="manager.groups.enableBoard">Manažer časopisu vytváří názvy a přidává lidi pod každý název.</message>
 	<message key="manager.groups.enableBoard.description"><![CDATA[Pod <a href="{$aboutEditorialTeamUrl}">Lidé</a> v O časopisu:]]></message>
-	<message key="manager.groups.noneCreated">Nebyly vytvořeny žádné pozice edičního týmu.</message>
+	<message key="manager.groups.noneCreated">Nebyly vytvořeny žádné pozice redakce.</message>
 	<message key="manager.journalManagement">Správa časopisu</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">Toto nahradí všechna nastavení časopisu specifická pro lokalizaci, které jste měl pro tuto lokalizaci</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Znovu načíst výchozí nastavení specifická pro lokalizaci</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS může být uživatelům zpřístupněn v kterémkoliv z podporovaných jazyků. Stejně tak může OJS fungovat jako vícejazyčný systém, který uživatelům umožňuje přepínat na každé stránce mezi jazyky a zadávat určitá data v několika dalších jazycích. <br /><br/>Pokud některý jazyk podporovaný OJS není uveden níže, požádejte svého administrátora stránek, aby z rozhraní administrátora požadovaný jazyk nainstaloval. Instrukce pro přidání podpory nových jazyků naleznete v OJS dokumentaci.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS může být uživatelům zpřístupněn v kterémkoliv z podporovaných jazyků. Stejně tak může OJS fungovat jako vícejazyčný systém, který uživatelům umožňuje přepínat na každé stránce mezi jazyky a zadávat určitá data v několika dalších jazycích. <br /><br />Pokud některý jazyk podporovaný OJS není uveden níže, požádejte svého administrátora stránek, aby z rozhraní administrátora požadovaný jazyk nainstaloval. Instrukce pro přidání podpory nových jazyků naleznete v OJS dokumentaci.]]></message>
 	<message key="manager.languages.noneAvailable">Promiňte, žádné další jazyky nejsou dostupné. Pokud chcete s tímto časopisem používat další jazyky, kontaktujte svého administrátora stránek.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Toto bude výchozí jazyk pro stránky vašeho časopisu.</message>
 	<message key="manager.managementPages">Stránky pro správu</message>
 	<message key="manager.payment.action">Akce</message>
 	<message key="manager.payment.addPayment">Přidat platbu</message>
 	<message key="manager.payment.amount">Částka</message>
-	<message key="manager.payment.authorFees">Poplatky autorů</message>
+	<message key="manager.payment.authorFees">Autorské poplatky</message>
 	<message key="manager.payment.authorFeesDescription">Vybrané možnosti spolu s jejich popisem a poplatkem (lze editovat níže) se objeví v Kroku 1 při odesílání příspěvku a v části O časopise pod Příspěvky a dále na místech, kde je platba vyžadována.</message>
 	<message key="manager.payment.currency">Měna</message>
 	<message key="manager.payment.currencymessage">OJS neprovádí žádné měnové převody. Pokud přijímáte platbu za předplatné, musíte zajistit, že měna předplatného odpovídá měně zde specifikované.</message>
@@ -58,15 +57,15 @@
 	<message key="manager.payment.options.feeDescription">Popis poplatku</message>
 	<message key="manager.payment.options.feeName">Název poplatku</message>
 	<message key="manager.payment.options.membershipFee">Členství v asociaci</message>
-	<message key="manager.payment.options.onlypdf">Pouze omezit přístup k PDF verzím článků</message>
+	<message key="manager.payment.options.onlypdf">Pouze omezit přístup k PDF verzím čísel a článků</message>
 	<message key="manager.payment.options.publicationFee">Pulikování článku</message>
 	<message key="manager.payment.options.purchaseArticleFee">Koupit článek</message>
 	<message key="manager.payment.options.submissionFee">Odeslání článku</message>
-	<message key="manager.payment.options.text">popis metody platby</message>
-	<message key="manager.payment.options.waiverPolicy">Pravidla zřeknutí se</message>
+	<message key="manager.payment.options.text">Popis metody platby</message>
+	<message key="manager.payment.options.waiverPolicy">Pravidla odpuštění plateb</message>
 	<message key="manager.payment.paymentId">ID platby</message>
 	<message key="manager.payment.paymentMethod">Způsob platby</message>
-	<message key="manager.payment.paymentMethod.description">Z této obrazovky můžete konfigurovat všechny následující plug-iny pro způsob platby.</message>
+	<message key="manager.payment.paymentMethod.description">Z této obrazovky můžete konfigurovat všechny následující pluginy pro způsob platby.</message>
 	<message key="manager.payment.paymentMethods">Způsoby platby poplatku</message>
 	<message key="manager.payment.paymentType">Typ platby</message>
 	<message key="manager.payment.readerFees">Poplatky čtenářů</message>
@@ -87,21 +86,58 @@
 	<message key="manager.people.roleEnrollment">{$role} Zapsání</message>
 	<message key="manager.people.syncUserDescription">Synchronizací zapsání uživatelů zapíšete všechny uživatele zapsané do určité role v určitém časopisu do stejné role i v tomto časopisu. Tato funkce umožňuje, aby byly běžné sady uživatelů (např. Recenzentů) synchronizovány mezi časopisy.</message>
 	<message key="manager.plugins.description">Tato stránka umožňuje manažerovi časopisu prohlížet a případně konfigurovat plug-iny, které jsou aktuálně nainstalované. Plug-iny jsou rozdělené do kategorií podle jejich funkcí. Níže jsou vypsané kategorie a v rámci každé z nich aktuální skupina plug-inů.</message>
-	<message key="manager.sections.abstractsNotRequired">Nepožadovat abstrakta</message>
+	<message key="manager.reviewFormElement.changeType">Varování: Změna formuláře recenzí z prvku výběru více možností na otevřené odpovědi bude mít za důsledek smazání odpovědí na více možností</message>
+	<message key="manager.reviewFormElements">Položky formuláře</message>
+	<message key="manager.reviewFormElements.addResponseItem">Přidat výběr</message>
+	<message key="manager.reviewFormElements.checkboxes">Zaškrtávací políčka (můžete vybrat jedno nebo více)</message>
+	<message key="manager.reviewFormElements.chooseType">Vybraz typ položky</message>
+	<message key="manager.reviewFormElements.confirmDelete">Potvrdit smazání publikované položky formuláře...</message>
+	<message key="manager.reviewFormElements.copyTo">Kopírovat do:</message>
+	<message key="manager.reviewFormElements.create">Vytvořit novou položku</message>
+	<message key="manager.reviewFormElements.dropdownbox">Rozbalovací pole</message>
+	<message key="manager.reviewFormElements.edit">Editovat položku formuláře</message>
+	<message key="manager.reviewFormElements.elementType">Typ položky</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">Pro položku formuláře je požadován typ položky.</message>
+	<message key="manager.reviewFormElements.form.questionRequired">Pro položku je vyžadována otázka.</message>
+	<message key="manager.reviewFormElements.noneCreated">Nebyly vytvořeny žádné položky formuláře.</message>
+	<message key="manager.reviewFormElements.possibleResponse">Výběr</message>
+	<message key="manager.reviewFormElements.question">Položka</message>
+	<message key="manager.reviewFormElements.radiobuttons">Přepínače (můžete vybrat pouze jeden)</message>
+	<message key="manager.reviewFormElements.required">Recenzenti musí vyplnit položku</message>
+	<message key="manager.reviewFormElements.smalltextfield">Textové pole pro jedno slovo</message>
+	<message key="manager.reviewFormElements.textarea">Rozšířené textové pole</message>
+	<message key="manager.reviewFormElements.textfield">Jednořádkové textové pole</message>
+	<message key="manager.reviewForms">Formuláře posudků</message>
+	<message key="manager.reviewForms.completed">Dokončeno</message>
+	<message key="manager.reviewForms.confirmDeleteUnpublished">Potvrdit smazání nepublikovaného formuláře posudku...</message>
+	<message key="manager.reviewForms.create">Vytvořit formulář posudku</message>
+	<message key="manager.reviewForms.description">Popis a pokyny</message>
+	<message key="manager.reviewForms.edit">Formulář posudku</message>
+	<message key="manager.reviewForms.form.titleRequired">Pro formulář posudku je vyžadován název.</message>
+	<message key="manager.reviewForms.inReview">V recenzi</message>
+	<message key="manager.reviewForms.list.description">Zde vytvořené formuláře posudků budou předloženy recenzetům k vyplnění namísto výchozího formuláře, který obsahuje dvě otevřená pole - první "pro autora a editora" a druhé "pro editora". Formuláře posudků mohou být vyhrazeny pro jednotlivé sekce a editoři budou mít možnost zvolit, který formulář použít při přidělování recenze. V každém případě budou mít editoři možnost zahrnout recenze do korespondence s autorem.</message>
+	<message key="manager.reviewForms.noneChosen">Žádný / Nepodléhá recenzování</message>
+	<message key="manager.reviewForms.noneCreated">Nebyly vytvořeny žádné formuláře posudků.</message>
+	<message key="manager.reviewForms.preview">Náhled formuláře</message>
+	<message key="manager.reviewForms.title">Název</message>
+	<message key="manager.sections.abstractsNotRequired">Nepožadovat abstrakty</message>
 	<message key="manager.sections.assigned">Editoři této sekce</message>
 	<message key="manager.sections.create">Vytvořit sekci</message>
-	<message key="manager.section.sectionEditorInstructions">Vyberte z dostupných editorů sekcí a "Přidělte editora" této sekci.</message>
+	<message key="manager.sections.disableComments">Zakázat komentáře čtenářů pro tuto sekci.</message>
+	<message key="manager.section.sectionEditorInstructions">Vyberte z dostupných editorů sekcí pro tuto sekci, aby byli sekční editoři automaticky přidělováni. (Jinak budete muset sekční editory přidělovat později manuálně). Pokud je sekční editor přidán, můžete zvolit, zda bude automaticky přiřazeni k řízení RECENZNÍHO a/nebo EDITAČNÍHO procesu (redigování, rozložení a korektury) procesu příspěvků v této sekci. Editoři sekcí jsou tvořeni kliknutím na "Editoři sekcí" v Rolích správy časopisu.
+
+ a "Přidělte editora" této sekci.</message>
 	<message key="manager.sections.editorRestriction">Položky mohou být zaslány pouze editory a editory sekcí.</message>
 	<message key="manager.sections.editors">Editoři sekce</message>
 	<message key="manager.sections.form.abbrevRequired">Je vyžadován zkrácený název pro tuto sekci</message>
-	<message key="manager.sections.form.mustAllowPermission">Ujistěte se prosím, že je zaškrtnuté alespoň jedno políčko pro každý úkol editora sekce.</message>
+	<message key="manager.sections.form.mustAllowPermission">Ujistěte se, prosím, že je zaškrtnuté alespoň jedno políčko pro každý úkol editora sekce.</message>
 	<message key="manager.sections.form.reviewFormId">Ujistěte se prosím, že jste vybral platný formulář posudku.</message>
 	<message key="manager.sections.form.titleRequired">Je vyžadován název pro tuto sekci.</message>
 	<message key="manager.sections.hideAbout">Vypustit tuto sekci z "O časopisu".</message>
 	<message key="manager.sections.hideTocAuthor">Vypustit jména autorů pro položky sekce z obsahu čísla.</message>
 	<message key="manager.sections.hideTocTitle">Vypustit název této sekce z obsahu čísla.</message>
 	<message key="manager.sections.identifyType">Pro účely sběru metadat označte každou položku v této sekci jako</message>
-	<message key="manager.sections.identifyTypeExamples">(Například "Recenzovaný článek", "Neposuzovaný článek", "Pozvaný článek", etc.)</message>
+	<message key="manager.sections.identifyTypeExamples">(Například "Recenzovaný článek", "Neposuzovaný článek", "Pozvaný komentář", apod.)</message>
 	<message key="manager.sections.indexed">Indexované</message>
 	<message key="manager.sections.noneCreated">Nebyly vytvořeny žádné sekce.</message>
 	<message key="manager.sections.open">Otevřené příspěvky</message>
@@ -130,15 +166,15 @@
 	<message key="manager.setup.announcementsDescription">Mohou být publikována oznámení informující čtenáře o událostech a novinkách spojených s časopisem. Vydaná oznámení se zobrazí na stránce Oznámení.</message>
 	<message key="manager.setup.announcementsIntroduction">Doplňující informace</message>
 	<message key="manager.setup.announcementsIntroductionDescription">Vložte jakékoliv doplňující informace, které by měly být zobrazeny čtenářům na stránce Oznámení.</message>
-	<message key="manager.setup.appearInAboutJournal">(K zobrazení v části O časopisu) </message>
+	<message key="manager.setup.appearInAboutJournal">(K zobrazení v části O časopisu)</message>
 	<message key="manager.setup.authorCopyrightNotice">Oznámení o copyrightu</message>
 	<message key="manager.setup.authorCopyrightNoticeAgree">Vyžadovat od autorů souhlas s Oznámením o copyrightu jako součást procesu odesílání příspěvku.</message>
 	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Oznámení o copyrightu vložené níže se zobrazí v části O časopisu a v metadatech každé publikované položky. I když je stanovení dohody o copyrightu s autory věcí časopisu, Public Knowledge Project doporučuje použití licence <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a>. Za tímto účelem poskytuje <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">příklad formulace Oznámení o copyrightu</a>, které může být zkopírováno a vloženo do prostoru níže. Je dostupné pro časopisy, které (a) nabízejí otevřený přístup, (b) nabízejí zpožděný otevřený přístup nebo (c) nenabízí otevřený přístup.]]></message>
-	<message key="manager.setup.authorGuidelines">Instrukce autorům</message>
+	<message key="manager.setup.authorGuidelines">Pokyny pro autory</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Stanovte pro autory bibliografický standard a standard pro formátování textu, které mají použít ve svých příspěvcích do časopisu (například <i>Publication Manual of the American Psychological Association</i>, 5th edition, 2001). Většinou je užitečné, pokud poskytnete příklady běžných způsobů citování časopisů a knih, které budou v příspěvcích použity. Také vymezte patřičné typy doplňkových souborů (například souborů s daty, výzkumné nástroje atd.), k jejichž nahrání společně s příspěvkem by měli být autoři motivováni, aby ve větší míře zpřístupnili čtenářům svou práci.]]></message>
 	<message key="manager.setup.competingInterests">Střet zájmů</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedicínské časopisy obvykle požadují od autorů a recenzentů prohlášení o střetu zájmů ohledně jejich výzkumu (viz <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoS Policy</a>).]]></message>
-	<message key="manager.setup.competingInterests.guidelines">Instrukce pro zasílání prohlášení o střetu zájmů</message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedicínské časopisy obvykle požadují od autorů a recenzentů prohlášení o střetu zájmů ohledně jejich výzkumu (viz <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.guidelines">Pokyny pro zasílání prohlášení o střetu zájmů</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Požadovat od autorů, aby spolu s příspěvkem zaslali soubor s prohlášením o střetu zájmů.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Požadovat od recenzentů, aby s každým svým posudkem zasílali soubor s prohlášením o střetu zájmů.</message>
 	<message key="manager.setup.contributor">Přispěvatel</message>
@@ -149,10 +185,16 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Instrukce pro redigování budou spřístupněny redaktorům, autorům a editorům sekcí ve fázi redigování příspěvku. Níže je uveden výchozí set instrukcí v HTML, který může být kdykoliv upraven nebo nahrazen manžerem časopisu (v HTML nebo prostý text).</message>
 	<message key="manager.setup.copyrightNotice">Oznámení o copyrightu</message>
 	<message key="manager.setup.coverage">Pokrytí</message>
+	<message key="manager.setup.coverageChronExamples">(např. evropská renezance; jurské období; druhý semestr; atd.)</message>
+	<message key="manager.setup.coverageChronProvideExamples">Poskytněte příklady relevantních chronologických nebo historických termínů pro tento obor</message>
 	<message key="manager.setup.coverageDescription">Odkazuje na zeměpisnou lokalitu, chronologické nebo historické pokrytí, a/nebo charakteristiky výzkumného souboru.</message>
+	<message key="manager.setup.coverageGeoExamples">(např. Iberský poloostrov; stratosféra; boreální prales; atd.)</message>
+	<message key="manager.setup.coverageGeoProvideExamples">Poskytněte příklady relevantních lokálních termínů pro tento obor</message>
+	<message key="manager.setup.coverageResearchSampleExamples">(např. věk; pohlaví; národnost; atd.)</message>
+	<message key="manager.setup.coverageResearchSampleProvideExamples">Poskytněte příklady charakteristik výzkumného souboru pro tento obor</message>
 	<message key="manager.setup.currentIssue">Aktuální číslo</message>
 	<message key="manager.setup.customizingTheLook">Krok 5. Úprava vzhledu</message>
-	<message key="manager.setup.customTags">Uživatelské tagy</message>
+	<message key="manager.setup.customTags">Uživatelské tagy (štítky)</message>
 	<message key="manager.setup.customTagsDescription">Uživatelské HTML tagy pro záhlaví, které mají být vloženy do záhlaví každé stránky (například META tagy).</message>
 	<message key="manager.setup.details">Detaily</message>
 	<message key="manager.setup.details.description">Název časopisu, ISSN, kontakty, sponzoři a vyhledávací stroje.</message>
@@ -162,18 +204,27 @@
 	<message key="manager.setup.disciplineExamples">(Např. Historie; Pedagogika; Sociologie; Psychologie; Právo)</message>
 	<message key="manager.setup.disciplineProvideExamples">Poskytněte příklady relevantních akademických oborů pro tento časopis</message>
 	<message key="manager.setup.displayCurrentIssue">Přidat obsah aktuálního čísla (pokud je dostupné).</message>
-	<message key="manager.setup.doiPrefix">DOI Prefix</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[DOI (Digital Object Identifier) prefix je přidělován <a href="http://www.crossref.org" target="_new">CrossRef</a> a má formát 10.xxxx (například 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Rozhodnutí editora</message>
+	<message key="manager.setup.editorialMembers">Přejděte k části Členové redakční rady a přidejte členy redakční rady a/nebo recenzní rady. Můžete to provést v kterémkoliv bodě fungování časopisu.</message>
+	<message key="manager.setup.editorialProcess1">Jeden nebo více editorů obsluhuje základní kroky aniž by měli podrobněji stanoveny své role.</message>
+	<message key="manager.setup.editorialProcess2">Editor obsluhuje frontu příspěvků, editování příspěvků a obsah čísla, zatímco editoři sekcí obsluhují recenze příspěvků a redigování příspěvků.</message>
+	<message key="manager.setup.editorialProcess3">Editor obsluhuje frontu příspěvků, redigování příspěvků a obsah obsah čísla, zatímco editoři sekcí obsluhují recenze příspěvků.</message>
+	<message key="manager.setup.editorialReviewBoard">Redakční / recenzní rada</message>
+	<message key="manager.setup.editorialReviewBoardDescription">Časopisy mají redakční rady, aby dohlížely na redakční směřování časopisu, účastnily se editorských úkolů a na základě reputace členů rady určovaly pozici časopisu v oboru. Recenzní rada hraje podobnou roli, ale navíc vede recenzní řízení. Členové recenzní rady nebudou mít přístup do administrativního systému časopisu, ale budou přidáni do seznamu osob, které jsou k dispozici pro vypracovávání recenzí.</message>
 	<message key="manager.setup.emailBounceAddress">Adresa pro nedoručitelné zprávy</message>
 	<message key="manager.setup.emailBounceAddressDescription">Jakékoliv nedoručitelné e-maily povedou k zaslání chybové zprávy na tuto adresu.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Poznámka</strong> Pro aktivaci této možnosti musí administrátor stránky povolit možnost <tt>allow_envelope_sender</tt> v konfiguračním souboru OJS. Pro podporu této funkce může být vyžadována další konfigurace serveru (která nemusí být možná na všech serverech), jak je naznačeno v dokumentaci OJS.]]></message>
 	<message key="manager.setup.emails">E-mailová identifikace</message>
 	<message key="manager.setup.emailSignature">Podpis</message>
-	<message key="manager.setup.emailSignatureDescription">Připravené e-maily, které jsou systémem posílány ve jménu časopisu budou mít na konci přidaný následující podpis. Obsah připravených emailů je možné editovat v části Správa časopisu.</message>
+	<message key="manager.setup.emailSignatureDescription">Připravené e-maily, které jsou systémem posílány ve jménu časopisu budou mít na konci přidán následující podpis. Obsah připravených e-mailů je možné editovat v části Správa časopisu.</message>
 	<message key="manager.setup.enableAnnouncements">Umožnit manažerům časopisu přidávat oznámení časopisu.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Zobrazit</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">z nejnovějších oznámení na domácí stránce časopisu.</message>
+	<message key="manager.setup.enablePageNumber">Čísla stránek pro položky budou spočítána a ručně vložena do obsahu časopisu (např., ss. 13-26).</message>
+	<message key="manager.setup.enablePublicArticleId">Pro identifikaci publikovaných položek budou použity uživatelské identifikátory.</message>
+	<message key="manager.setup.enablePublicGalleyId">Pro identifikaci sazebnic (např. HTML nebo PDF souborů) publikovaných položek budou použity uživatelské identifikátory.</message>
+	<message key="manager.setup.enablePublicIssueId">Pro identifikaci čísel časopisu budou použity uživatelské identifikátory.</message>
+	<message key="manager.setup.enablePublicSuppFileId">Pro identifikaci doplňkových souborů článku budou použity uživatelské identifikátory.</message>
 	<message key="manager.setup.enableUserRegistration">Uživatelé se mohou do časopisu registrovat v jedné nebo více z následujících rolí:</message>
 	<message key="manager.setup.enableUserRegistration.author">Autoři (mohou zasílat materiály do časopisu)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Čtenáři (budou dostávat oznámení a budou bráni jako ekvivalent předplatitelů)</message>
@@ -201,7 +252,6 @@
 	<message key="manager.setup.guidingSubmissions">Krok 3. Instrukce pro příspěvky</message>
 	<message key="manager.setup.homepageImage">Obrázek domácí stránky</message>
 	<message key="manager.setup.homepageImageDescription">Přidat obrázek na střed stránky.</message>
-	<message key="manager.setup.includeCreativeCommons">Přiřaďte v časopisech, které nabízejí okamžitý nebo zpožděný otevřený přístup, v patřičném čase veškeré publikované práce pod Creative Common licenci.</message>
 	<message key="manager.setup.information">Informace</message>
 	<message key="manager.setup.information.description">Stručné popisy časopisu pro knihovníky, případné autory a čtenáře jsou dostupné v sekci "Informace" postranního panelu.</message>
 	<message key="manager.setup.information.forAuthors">Pro autory</message>
@@ -225,15 +275,17 @@
 	<message key="manager.setup.journalHomepageHeaderDescription">Pro domácí stránku můžete nahrát grafickou verzi názvu a logo časopisu (jako soubory typu .gif, .jpg, nebo .png), které nahradí jinak zobrazovanou textovou verzi.</message>
 	<message key="manager.setup.journalInitials">Iniciály časopisu</message>
 	<message key="manager.setup.journalLayout">Rozložení časopisu</message>
-	<message key="manager.setup.journalLayoutDescription">Zde vyberte téma vzhledu časopisu a komponenty grafického uspořádání. Je také možné nahrát style sheet časopisu, který může potlačit data stylů platných pro celý systém a styl tématu vzhhledu (pokud bylo téma zvoleno).</message>
+	<message key="manager.setup.journalLayoutDescription">Zde vyberte téma vzhledu časopisu a komponenty grafického uspořádání. Je také možné nahrát soubor stylu časopisu, který může potlačit standardní soubor stylu stránek a soubor stylu tématu (pokud bylo téma zvoleno).</message>
 	<message key="manager.setup.journalLogo">Logo časopisu</message>
 	<message key="manager.setup.journalLogo.altText">Logo časopisu</message>
 	<message key="manager.setup.journalPageFooter">Zápatí stránky časopisu</message>
 	<message key="manager.setup.journalPageFooterDescription">Toto je zápatí vašeho časopisu. Pro změnu nebo aktualizaci zápatí vložte HTML kód do textového pole níže. Může jít například o další navigační panel, počítadlo atd. Toto zápatí se objeví na každé stránce.</message>
+	<message key="manager.setup.journalPageHeader">Hlavička stránky časopisu</message>
+	<message key="manager.setup.journalPageHeaderDescription">Pro stránky časopisu můžete nahrát grafickou verzi názvu časopisu a logo - pokud možno v menší verzi než byla použita pro domácí stránku - (jako soubory typu .gif, .jpg, nebo .png), které nahradí jinak zobrazovanou textovou verzi.</message>
 	<message key="manager.setup.journalPolicies">Krok 2. Pravidla časopisu</message>
 	<message key="manager.setup.journalSetup">Nastavení časopisu</message>
 	<message key="manager.setup.journalSetupUpdated">Nastavení časopisu bylo aktualizováno.</message>
-	<message key="manager.setup.journalStyleSheetInvalid">Neplatný formát stylesheetu časopisu. Podporovaný formát je .css.</message>
+	<message key="manager.setup.journalStyleSheetInvalid">Neplatný formát souboru stylu časopisu. Podporovaný formát je .css.</message>
 	<message key="manager.setup.journalTheme">Téma vzhledu časopisu</message>
 	<message key="manager.setup.journalTitle">Název časopisu</message>
 	<message key="manager.setup.labelName">Název popisku</message>
@@ -245,10 +297,10 @@
 	<message key="manager.setup.layoutTemplates.file">Soubor šablony</message>
 	<message key="manager.setup.layoutTemplates.title">Název</message>
 	<message key="manager.setup.lists">Seznamy</message>
-	<message key="manager.setup.listsDescription">Zadejte maximální počet položek (například příspěvků, uživatelů nebo úkolů), které se zobrzí na každé stránce seznamu a počet odkazů na stránky zobrazených na každé stránce.</message>
+	<message key="manager.setup.listsDescription">Zadejte maximální počet položek (například příspěvků, uživatelů nebo úkolů), které se zobrazí na každé stránce seznamu a počet odkazů na stránky zobrazených na každé stránce.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Umožněte technologii LOCKSS ukládat a distribuovat obsah časopisu v zúčastněných knihovnách přes LOCKSS stránku <a href="{$lockssUrl}" target="_blank">Seznam vydavatelů</a>. LOCKSS licence se zobrazí v části O časopisu – Archivování:]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[Viz <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">další verze LOCKSS licence</a>.]]></message>
-	<message key="manager.setup.lockssRegister"><![CDATA[Identifikujte 6–10 knihoven, které budou registrovat a uskladňovat časopis. Například se obraťte na instituce, kde pracují editoři nebo členové redakční rady a/nebo na instituce, které se již účastní LOCKSS. Viz <a href="http://www.lockss.org/community/" target="_blank">zúčastněné knihovny</a>. Využijte připravená pozvání pro (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">knihovny účastnící se LOCKSS</a> nebo (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">knihovny, které ještě nejsou zapojené v LOCKSS</a>.]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[Viz <a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">další verze LOCKSS licence</a>.]]></message>
+	<message key="manager.setup.lockssRegister"><![CDATA[Identifikujte 6–10 knihoven, které budou registrovat a uskladňovat časopis. Například se obraťte na instituce, kde pracují editoři nebo členové redakční rady a/nebo na instituce, které se již účastní LOCKSS. Viz <a href="http://lockss.org/lockss/Libraries" target="_blank">zúčastněné knihovny</a>. Využijte připravená pozvání pro (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">knihovny účastnící se LOCKSS</a> nebo (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">knihovny, které ještě nejsou zapojené v LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">Vzhled</message>
 	<message key="manager.setup.look.description">Záhlaví domácí stránky, obsah, záhlaví časopisu, zápatí, navigační panel a kaskádové styly.</message>
 	<message key="manager.setup.mailingAddressDescription">Zeměpisné umístění časopisu a poštovní adresa.</message>
@@ -262,13 +314,13 @@
 	<message key="manager.setup.navItemIsAbsolute">URL je spíše absolutní URL (např.: "http://www.example.com") než relativní odkaz na stránku (např.: "/manager/setup")</message>
 	<message key="manager.setup.navItemIsLiteral">Hodnotou popisku je spíše textový řetězec (např.: "Nastavení časopisu") než lokalizační klíč (např.: "manager.setup")</message>
 	<message key="manager.setup.noImageFileUploaded">Nebyl nahrán žádný soubor s obrázkem.</message>
-	<message key="manager.setup.noStyleSheetUploaded">Nebyl nahrán žádný style sheet.</message>
+	<message key="manager.setup.noStyleSheetUploaded">Nebyl nahrán žádný soubor stylu.</message>
 	<message key="manager.setup.note">Poznámka</message>
 	<message key="manager.setup.notifications">Oznámení o zaslání příspěvku</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Zaslat kopii na adresu hlavního kontaktu časopisu stanoveného v Kroku 1.</message>
 	<message key="manager.setup.notifications.copySpecifiedAddress">Zaslat kopii na tuto e-mailovou adresu:</message>
 	<message key="manager.setup.notifications.description">V okamžiku dokončení procesu odesílání příspěvku je autorům automaticky zasílán e-mail s poděkováním (který lze prohlížet a editovat v Připravených e-mailech). Navíc může být kopie děkovného e-mailu odeslána následovně:</message>
-	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>Poznámka:</strong> E-mail s poděkováním za příspěvek je v současnoti zakázán. Pro použití této funkce, povolte PRISPEVEK_DIK e-mail v <a class="action" href="{$preparedEmailsUrl}">Připravených e-mailech</a>.]]></message>
+	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>Poznámka:</strong> E-mail s poděkováním za příspěvek je v současnoti zakázán. Pro použití této funkce, povolte SUBMISSION_ACK e-mail v <a class="action" href="{$preparedEmailsUrl}">Připravených e-mailech</a>.]]></message>
 	<message key="manager.setup.notifyAllAuthorsOnDecision">Při použití e-mailu Informovat autora zahrnout v případě příspěvků s více autory e-mailové adresy všech spoluautorů, ne pouze uživatele, který poslal příspěvek.</message>
 	<message key="manager.setup.noUseCopyeditors">Redigování provede editor nebo editor sekce, kterému byl příspěvek přidělen.</message>
 	<message key="manager.setup.noUseLayoutEditors">HTML, PDF atd. soubory připraví editor nebo editor sekce, jemuž byl příspěvek přidělen.</message>
@@ -291,8 +343,8 @@
 	<message key="manager.setup.privacyStatement">Prohlášení o soukromí</message>
 	<message key="manager.setup.privacyStatement2">Prohlášení o soukromí</message>
 	<message key="manager.setup.privacyStatementDescription">Toto prohlášení bude zobrazeno v části O Časopisu a také na přihlašovacích stránkách pro příspěvky autora a pro oznámení. Níže je uvedeno doporučené prohlášení o soukromí, které lze kdikoliv zrevidovat.</message>
-	<message key="manager.setup.proofingInstructions">Instrukce pro korekce</message>
-	<message key="manager.setup.proofingInstructionsDescription">Instrukce pro korekce budou zpřístupněny, korektorům, autorům, typografům a editorům sekcí ve fázi editování příspěvku. Níže je uveden výchozí set instrukcí v HTML, který může být kdykoliv upraven nebo nahrazen manžerem časopisu (v HTML nebo prostý text).</message>
+	<message key="manager.setup.proofingInstructions">Instrukce pro korektury</message>
+	<message key="manager.setup.proofingInstructionsDescription">Instrukce pro korektury budou zpřístupněny, korektorům, autorům, typografům a editorům sekcí ve fázi editování příspěvku. Níže je uveden výchozí set instrukcí v HTML, který může být kdykoliv upraven nebo nahrazen manažerem časopisu (v HTML nebo prostý text).</message>
 	<message key="manager.setup.proofreading">Korektoři</message>
 	<message key="manager.setup.provideRefLinkInstructions">Poskytnout instrukce typografům.</message>
 	<message key="manager.setup.publicationFormat">Formát</message>
@@ -302,7 +354,7 @@
 	<message key="manager.setup.publicationFormatVolume">Ročník</message>
 	<message key="manager.setup.publicationFormatYear">Rok</message>
 	<message key="manager.setup.publicationSchedule">Plán publikací</message>
-	<message key="manager.setup.publicationScheduleDescription"><![CDATA[Práce mohou být v časopisu publikovány hromadně jako součást jednoho čísla s vlastním obsahem. Alternativně mohou být jednotlivé práce publikovány jakmile jsou k tomu připraveny, tak že budou přidány do obsahu "aktuálního" čísla. Poskytněte čtenářům v části O časopisu informace o systému, který tento časopis bude používat a o předpokládané frekvenci publikování.]]></message>
+	<message key="manager.setup.publicationScheduleDescription">Práce mohou být v časopisu publikovány hromadně jako součást jednoho čísla s vlastním obsahem. Alternativně mohou být jednotlivé práce publikovány jakmile jsou k tomu připraveny, tak že budou přidány do obsahu "aktuálního" čísla. Poskytněte čtenářům v části O časopisu informace o systému, který tento časopis bude používat a o předpokládané frekvenci publikování.</message>
 	<message key="manager.setup.publicationScheduling">Plánování publikací</message>
 	<message key="manager.setup.publicIdentifier">Identifikace obsahu časopisu</message>
 	<message key="manager.setup.publisher">Vydavatel</message>
@@ -315,7 +367,7 @@
 	<message key="manager.setup.reviewerDatabaseLink">Databáze potenciálních recenzentů</message>
 	<message key="manager.setup.reviewerDatabaseLink.desc">Přidat na stránku Výběr recenzenta odkaz na databázi relevantní literatury, která může být prohledána ve snaze najít potencionální recenzenty a je otevřená editorům bez předplatného.</message>
 	<message key="manager.setup.reviewGuidelines">Instrukce pro recenzování</message>
-	<message key="manager.setup.reviewGuidelinesDescription">Instrukce pro recenzování udávají recenzentům kritéria pro posuzování adekvátnosti příspěvků pro publikování v časopisu, stejně tak jakékoliv další instrukce pro přípravu efektivní a nápomocné recenze.</message>
+	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[Instrukce pro recenzování udávají recenzentům kritéria pro posuzování adekvátnosti příspěvků pro publikování v časopisu, stejně tak jakékoliv další instrukce pro přípravu efektivní a nápomocné recenze. Během provádění recenze jsou recenzentům nabídnuty dva textové rámce, první "pro autora a edotira" a druhý "pro editora". Případně může správce časopisu vytvořit formulář pro recenzenty <a href="{$reviewFormsUrl}" class="action">Formuláře pro recenzenty</a>. Ve všech případech budou mít editoři možnost zahrnout recenzentovy poznámky do korespondence s autorem.]]></message>
 	<message key="manager.setup.reviewOptions">Možnosti recenzí</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">Automatická e-mailová připomenutí (dostupná ve výchozích e-mailech OJS) mohou být posílána recenzentům ve dvou bodech (editor přitom vždy také může zaslat e-mail přímo recenzentovi)</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Poznámka:</strong> Pro aktivování těchto možností musí administrátor stránky povolit možnost <tt>scheduled_tasks</tt> v konfiguračním souboru OJS. Pro podporu těchto funkcí může být nutná další konfigurace serveru (což nemusí být možné na všech serverech), jak je naznačeno v OJS dokumentaci.]]></message>
@@ -355,14 +407,14 @@
 	<message key="manager.setup.sponsors">Sponzorující organizace</message>
 	<message key="manager.setup.sponsorsDescription">Jména organizací (např. školské asociace, univerzitní fakulty, podniky atd.) sponzorujících časopis budou uvedena v části O časopisu a mohou být doplněna poznámkou s poděkováním.</message>
 	<message key="manager.setup.stepsToJournalSite">Pět kroků k webové stránce časopisu</message>
+	<message key="manager.setup.subjectClassification">Klasifikace oborů</message>
+	<message key="manager.setup.subjectClassificationExamples">(např. Mathematics Subject Classification; Library of Congress Classification)</message>
 	<message key="manager.setup.subjectExamples">(např. fotosyntéza; černé díry; bayesova teorie; atd.)</message>
 	<message key="manager.setup.subjectKeywordTopic">Klíčová slova</message>
 	<message key="manager.setup.subjectProvideExamples">Poskytněte příklady klíčových slov jako vodítko pro autory</message>
-	<message key="manager.setup.submissionEmailLogging">Zachovávat záznam všech emailů poslaných ve vztahu k příspěvku na jeho stránce Historie.</message>
-	<message key="manager.setup.submissionEventLogging">Zachovávat záznam všech akcí provedených s příspěvkem na jeho stránce Historie.</message>
 	<message key="manager.setup.submissionGuidelines">Instrukce pro příspěvky</message>
 	<message key="manager.setup.submissionPreparationChecklist">Zaškrtávací seznam pro přípravu příspěvku</message>
-	<message key="manager.setup.submissionPreparationChecklistDescription">V průběhu odesílání příspěvku do časopisu jsou autoři nejdříve požádáni, aby zaškrtli všechny položky v Zaškrtávacím seznamu pro přípravu příspěvku a potvrdili tak jejich splnění; poté mohou postupovat dále. Zaškrtávací seznam je také zobrazen v Instrukcích autorům v části O časopisu. Seznam můžete upravit níže, pamatujte ale, že aby autoři mohli pokračovat dále v odesílání svého příspěvku, budou muset zaškrtnutím potvrdit všechny položky tohoto seznamu.</message>
+	<message key="manager.setup.submissionPreparationChecklistDescription">V průběhu podávání příspěvku do časopisu jsou autoři nejdříve požádáni, aby zaškrtli všechny položky v Zaškrtávacím seznamu pro přípravu příspěvku a potvrdili tak jejich splnění; poté mohou postupovat dále. Zaškrtávací seznam je také zobrazen v Pokyny autorům v části O časopisu. Seznam můžete upravit níže, pamatujte ale, že aby autoři mohli pokračovat dále v odesílání svého příspěvku, budou muset zaškrtnutím potvrdit všechny položky tohoto seznamu.</message>
 	<message key="manager.setup.submissions">Příspěvky</message>
 	<message key="manager.setup.submissions.description">Instrukce pro autory, copyright a indexace (včetně registrace).</message>
 	<message key="manager.setup.subscription">Časopis bude vyžadovat pro přístup k některým částem nebo k celému obsahu předplatné.</message>
@@ -417,23 +469,18 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">měsíc(ů) poté, co bylo číslo publikováno.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Vyberte prosím platnou dobu trvání.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Následující Pravidla zpožděného otevřeného přístupu budou uvedena na stránce O časopisu pod Pravidly.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Použijte prosím poskytnuté zaškrtávací políčko.</message>
 	<message key="manager.subscriptionPolicies.expiry">Vypršení předplatného</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Po vypršení předplatného může být čtenářům zamítnut přístup k veškerému placenému obsahu nebo si mohou zachovat přístup k předplacenému obsahu, který byl publikován před vypršením předplatného.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Úplné vypršení</message>
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Čtenářům je po vypršení předplatného zakázan přístup k veškerému předplacenému obsahu.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Částečné vypršení</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Čtenáři mají zakázaný přístup k nově publikovanému předplacenému obsahu, ale zůstává jim povolen přístup k předplacenému obsahu vydanému před datem vypršení předplatného.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Upozornit předplatitele emailem</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">měsíc(e) po vypršení předplatného.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Upozornit předplatitele emailem</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Upozornit předplatitele e-mailem</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">týden(týdny) po vypršení předplatného.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Upozornit předplatitele emailem</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">měsíc(e) před vypršením předplatného.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Upozornit předplatitele emailem</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">týden(týdny) před vypršením předplatného.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Připomenutí vypršení předplatného</message>
-	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Předplatitelům mohou být automaticky zasílány emailové připomínky (dostupné manažerům časopisu pro úpravy v předpřipravených emailech OJS) před tím i poté, co předplatné vypršelo.</message>
+	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Předplatitelům mohou být automaticky zasílány e-mailové připomínky (dostupné manažerům časopisu pro úpravy v předpřipravených emailech OJS) před tím i poté, co předplatné vypršelo.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Poznámka:</strong> Pro aktivování této možnosti musí administrátor stránek povolit volbu <tt>scheduled_tasks</tt> v konfiguračním souboru OJS. Podpora těchto funkcí může vyžadovat dodatečnou konfiguraci serveru (nemusí být realizovatelná na všech serverech) tak, jak je uvedeno v OJS documentaci.]]></message>
 	<message key="manager.subscriptionPolicies.expirySelectOne">Zvolte jednu z následujících možností:</message>
 	<message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[HTML lze použít v textových polích (pro font size, color atd.), přičemž s "vracenými hodnotami" ja nakládáno jako s <tt>&lt;br&gt;</tt>; HTML editor funguje s prohlížečem Firefox.]]></message>
@@ -441,7 +488,7 @@
 	<message key="manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid">Vyberte prosím platnou hodnotu pro počet měsíců před vypršením předplatného.</message>
 	<message key="manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid">Vyberte prosím platnou hodnotu pro počet týdnů po vypršení předplatného.</message>
 	<message key="manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid">Vyberte prosím platnou hodnotu pro počet týdnů před vypršením předplatného.</message>
-	<message key="manager.subscriptionPolicies.openAccessNotificationDescription">Registrovaní čtenáři budou mít možnost obdržet emailem obsah čísla v okamžiku, kdy k danému číslu bude umožněn otevřený přístup.</message>
+	<message key="manager.subscriptionPolicies.openAccessNotificationDescription">Registrovaní čtenáři budou mít možnost obdržet e-mailem obsah čísla v okamžiku, kdy k danému číslu bude umožněn otevřený přístup.</message>
 	<message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>Poznámka:</strong> Pro aktivování této možnosti musí administrátor stránek povolit volbu <tt>scheduled_tasks</tt> v konfiguračním souboru OJS. Podpora těchto funkcí může vyžadovat dodatečnou konfiguraci serveru (nemusí být realizovatelná na všech serverech) tak, jak je uvedeno v OJS documentaci.]]></message>
 	<message key="manager.subscriptionPolicies.openAccessOptions">Možnosti otevřeného přístupu pro časpisy s předplatným</message>
 	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Časopisy s předplatným mohou poskytovat "zpožděný otevřený přístup" ke svému publikovanému obsahu, stejně jako povolovat "sebe-archivování autora" (což v obou případech zvyšuje čtenost a citovanost obsahu).</message>
@@ -449,10 +496,10 @@
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">Typy předplatného a struktura poplatku bude automaticky umístěna pod položku Předplatné na stránce O časopisu společně se jménem a kontaktem na manažera předplatného. Mohou sem být vloženy doplňující informace o předplatném jako např. způsob platby nebo forma podpory předplatitelů z rozvojových zemí.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContact">Manažer předplatného</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Kontakt uvedený pod položkou Předplatné v O časopisu.</message>
-	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Vložte prosím platný email.</message>
+	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Vložte prosím platný e-mail.</message>
 	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Vaše nastavení pravidel předplatného bylo aktualizováno.</message>
 	<message key="manager.subscriptions">Předplatné</message>
-	<message key="manager.subscriptions.confirmDelete">Jste si jistý, že chcete smazat toto předplatné?</message>
+	<message key="manager.subscriptions.confirmDelete">Jste si jisti, že chcete smazat toto předplatné?</message>
 	<message key="manager.subscriptions.create">Vytvořit nové předplatné</message>
 	<message key="manager.subscriptions.createTitle">Vytvořit</message>
 	<message key="manager.subscriptions.dateEnd">Konec</message>
@@ -481,11 +528,11 @@
 	<message key="manager.subscriptions.form.notifyEmail">Poslat uživateli email s uživatelským jménem a detaily předplatného.</message>
 	<message key="manager.subscriptions.form.notifyEmailValid">Použijte prosím nabízené zaškrtávací políčko.</message>
 	<message key="manager.subscriptions.form.saveAndCreateAnother">Uložit a vytvořit další</message>
-	<message key="manager.subscriptions.form.subscriptionContactRequired">Aby bylo možné zaslat uživateli notifikační email, musí být v nastavení časopisu specifikováno jméno kontaktu pro předplatné a emailová adresa.</message>
+	<message key="manager.subscriptions.form.subscriptionContactRequired">Aby bylo možné zaslat uživateli notifikační email, musí být v Nastavení časopisu specifikováno jméno kontaktu pro předplatné a E-mailová adresa.</message>
 	<message key="manager.subscriptions.form.subscriptionExists">Tento uživatel již má pro tento časopis předplatné.</message>
 	<message key="manager.subscriptions.form.typeId">Typ předplatného</message>
 	<message key="manager.subscriptions.form.typeIdRequired">Je vyžadován typ předplatného.</message>
-	<message key="manager.subscriptions.form.typeIdValid">Zvolte prosím platný typ předplatného.</message>
+	<message key="manager.subscriptions.form.typeIdValid">Zvolte, prosím, platný typ předplatného.</message>
 	<message key="manager.subscriptions.form.userId">Uživatel</message>
 	<message key="manager.subscriptions.form.userIdRequired">Je vyžadován uživatel.</message>
 	<message key="manager.subscriptions.form.userIdValid">Zvolte prosím platného uživatele.</message>
@@ -498,7 +545,7 @@
 	<message key="manager.subscriptions.subscriptionType">Typ předplatného</message>
 	<message key="manager.subscriptions.user">Uživatel</message>
 	<message key="manager.subscriptionTypes">Typy předplatného</message>
-	<message key="manager.subscriptionTypes.confirmDelete">Varování! Všechna předplatné s tímto typem předplatného budou rovněž smazána. Jste si jistý, že chcete pokračovat a smazat tento typ předplatného?</message>
+	<message key="manager.subscriptionTypes.confirmDelete">Varování! Všechna předplatné s tímto typem předplatného budou rovněž smazána. Jste si jisti, že chcete pokračovat a smazat tento typ předplatného?</message>
 	<message key="manager.subscriptionTypes.cost">Cena</message>
 	<message key="manager.subscriptionTypes.create">Vytvořit nový typ předplatného</message>
 	<message key="manager.subscriptionTypes.createTitle">Vytvořit</message>
@@ -522,10 +569,10 @@
 	<message key="manager.subscriptionTypes.form.formatValid">Vyberte prosím platný formát typu předplatného.</message>
 	<message key="manager.subscriptionTypes.form.institutional">Předplatitelé by měli být ověřováni prostřednictvím domény nebo IP autentifikace.</message>
 	<message key="manager.subscriptionTypes.form.institutionalValid">Použijte prosím poskytnuté zaškrtávací políčko.</message>
-	<message key="manager.subscriptionTypes.form.membership">Předplatitelé musí být čelny asociace nebo organizace.</message>
-	<message key="manager.subscriptionTypes.form.membershipValid">Použijte prosím poskytnuté zaškrtávací políčko.</message>
-	<message key="manager.subscriptionTypes.form.public">Tento typ předplatného nebude veřejně viditelný (např. pod položkou Předplatné v části O časopisu).</message>
-	<message key="manager.subscriptionTypes.form.publicValid">Použijte prosím poskytnuté zaškrtávací políčko.</message>
+	<message key="manager.subscriptionTypes.form.membership"><![CDATA[Předplatné vyžaduje informaci o členství<br />(např. v asociaci nebo organizaci či konzorciu atd.)]]></message>
+	<message key="manager.subscriptionTypes.form.membershipValid">Použijte prosím poskytnuté políčko.</message>
+	<message key="manager.subscriptionTypes.form.public"><![CDATA[Tento typ předplatného nebude veřejně viditelný <br />(např. pod položkou Předplatné v části O časopisu).]]></message>
+	<message key="manager.subscriptionTypes.form.publicValid">Použijte prosím zaškrtávací políčko.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">Uložit a vytvořit další</message>
 	<message key="manager.subscriptionTypes.form.typeName">Název typu</message>
 	<message key="manager.subscriptionTypes.form.typeNameExists">Typ předplatného s tímto názvem již existuje.</message>
@@ -533,14 +580,14 @@
 	<message key="manager.subscriptionTypes.name">Typ předplatného</message>
 	<message key="manager.subscriptionTypes.noneCreated">Nebyly vytvořeny žádné typy předplatného.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Typ předplatného byl úspěšně vytvořen.</message>
-	<message key="manager.plugins.upgrade">Opgradovat plugin</message>
+	<message key="manager.plugins.install">Instalovat nový plugin</message>
+	<message key="manager.plugins.upgrade">Upgradovat plugin</message>
 	<message key="manager.plugins.delete">Smazat plugin</message>
 	<message key="manager.plugins.uploadPluginDir">Zvolte soubor pluginu</message>
 	<message key="manager.plugins.uploadError">Chyba při nahrávání souboru</message>
 	<message key="manager.plugins.installFailed">Instalace selhala</message>
 	<message key="manager.plugins.upgradeFailed">Upgrade selhal</message>
-	<message key="manager.setup.doiSuffix">DOI přípona</message>
-	<message key="manager.setup.favicon">Favicon časopisu</message>
+	<message key="manager.setup.journalFavicon">Favicon časopisu</message>
 	<message key="manager.subscriptions.renew">Obnovit</message>
 	<message key="manager.subscriptions.form.status">Stav</message>
 	<message key="manager.subscriptions.form.userContact">Kontakt</message>
@@ -558,11 +605,11 @@
 	<message key="manager.language.forms">Formuláře</message>
 	<message key="manager.people.showNoRole">Zobrazit uživatele bez žádné role</message>
 	<message key="manager.plugins.deleteSuccess">Plugin úspěšně smazán</message>
-	<message key="manager.plugins.fileSelectError">Nejprve zvolte soubor prosím</message>
-	<message key="manager.plugins.copyError">Plugin nebyl úspěšně zkopírován</message>
+	<message key="manager.plugins.fileSelectError">Nejprve zvolte soubor, prosím</message>
+	<message key="manager.plugins.copyError">Plugin nebyl úspěšně zkopírován. To může být díky problému s právy k zápisu na disk. Ujistěte se, zda má server právo zapisovat do knihovny pluginů (včetně podknihoven), ale nezapomeňte je znovu zabezpečit.</message>
 	<message key="manager.plugins.doesNotExist">Plugin neexistuje</message>
 	<message key="manager.setup.history">Historie časopisu</message>
-	<message key="manager.setup.faviconInvalid">Neplatný formát favicony. Akceptované formáty jsou .ico, .png a .gif.</message>
+	<message key="manager.setup.journalFaviconInvalid">Neplatný formát faviconu. Akceptované formáty jsou .ico, .png a .gif.</message>
 	<message key="manager.individualSubscriptions">Individuální předplatné</message>
 	<message key="manager.institutionalSubscriptions">Institucionální předplatné</message>
 	<message key="manager.subscriptions.summary">Souhrn předplatného</message>
@@ -581,38 +628,33 @@
 	<message key="manager.subscriptions.institutionName">Název instituce</message>
 	<message key="manager.subscriptionTypes.form.nonExpiring.expiresAfter">Vyprší po</message>
 	<message key="manager.subscriptionTypes.form.subscriptions">Předplatné</message>
+	<message key="manager.plugins.installDescription">Tento formulář vám umožňuje nahrát a nainstalovat nový plugin. Ujistěte se prosím, že plugin je zkomprimovaný jako .tar.gz soubor.</message>
 	<message key="manager.plugins.upgradeDescription">Tento formulář vám umožňuje aktualizovat plugin. Ujistěte se prosím, že plugin je zkomprimovaný jako .tar.gz soubor.</message>
 	<message key="manager.plugins.deleteDescription">Kliknutím na smazat smažete plugin ze systému souborů serveru.</message>
-	<message key="manager.plugins.deleteConfirm">Jste si jistý, že chete odstranit tento plugin ze systému?</message>
+	<message key="manager.plugins.deleteConfirm">Jste si jisti, že chete odstranit tento plugin ze systému?</message>
 	<message key="manager.plugins.versionFileNotFound">Version.xml nebyl nalezen v adresáři pluginu</message>
-	<message key="manager.plugins.pleaseUpgrade">Plugin již existuje, ale je novější než instalovaná verze. Prosím proveďte místo toho aktualizaci</message>
+	<message key="manager.plugins.pleaseUpgrade">Plugin již existuje, ale je novější než instalovaná verze. Prosím, proveďte místo toho aktualizaci</message>
 	<message key="manager.plugins.installedVersionOlder">Plugin již existuje a je starší nebo shodný s instalovanou verzí</message>
 	<message key="manager.plugins.installedVersionNewer">Plugin již existuje a je novější nebo shodný s instalovanou verzí</message>
-	<message key="manager.plugins.pleaseInstall">Plugin neexistuje. Prosím proveďte místo toho instalaci</message>
-	<message key="manager.plugins.deleteError">Plugin nemohl být odstraněn ze systému souborů</message>
+	<message key="manager.plugins.pleaseInstall">Plugin neexistuje. Prosím, proveďte místo toho instalaci</message>
+	<message key="manager.plugins.deleteError">Plugin nemohl být odstraněn ze systému souborů. To může být způsobeno problémem s oprávněním přístupu na disk. Ujistěte se, že webový server má právo zapisovat do knihovny pluginů (včetně podknihoven), ale nezapomeňte na pozdější zabezpečení.</message>
 	<message key="manager.plugins.installSuccessful">Úspěšně nainstalovaná verze</message>
 	<message key="manager.plugins.upgradeSuccessful">Úspěšně aktualizováno na verzi</message>
 	<message key="manager.sections.wordCount">Počet slov</message>
 	<message key="manager.sections.wordCountInstructions">Omezit počet slov abstraktu pro tuto sekci na (0 pro žádný limit):</message>
 	<message key="manager.setup.contributorNoteDescription">Tento text se zobrazí pod hlavičkou "Zdroje podpory" a nad seznamem jmen a url podporujících organizací pod "Sponzoři časopisu" na stránce "O časopisu".</message>
 	<message key="manager.setup.historyDescription">Tento text se zobrazí v části "O časopisu" webových stránek časopisu a může být použit pro popis změn v názvu, redakční radě a dalších položkách souvisejících s historií časopisu.</message>
-	<message key="manager.setup.doiSuffixDefault">Použít výchozí vzorec (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Použijte níže vložený vzorec pro generování DOI přípon. Použijte %j pro inciály časopisu, %v pro číslo ročníku, %i pro číslo čísla, %a pro ID OJS článku a %p pro číslo stránky.</message>
-	<message key="manager.setup.doiSuffixPattern.example">Například vol%viss%ipp%p by mohlo vytvořit DOI jako 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">DOI přípona může mít jakýkoliv formát, ale musí být jedinečná pro každou publikovanou položku.</message>
-	<message key="manager.setup.doiSuffixPublisherId">Použít "Uživatelský identifikátor" pro publikované položky jako DOI příponu (musí být povoleno v Kroku 4).</message>
-	<message key="manager.setup.form.doiPrefixPattern">DOI vzorec musí být ve formátu 10.xxxx.</message>
-	<message key="manager.setup.faviconDescription">Přidat faviconu pro tento časopis, která se bude zobrazovat vedle navigační lišty, když uživatelé navštíví vaše stránky.</message>
+	<message key="manager.setup.journalFaviconDescription">Přidat faviconu pro tento časopis, která se bude zobrazovat vedle navigační lišty, když uživatelé navštíví vaše stránky.</message>
 	<message key="manager.setup.publisherNoteDescription">Tento text se zobrazí pod hlavičkou "Vydavatel" a nad jménem/url vydavatele pod "Sponzorování časopisu" na stránce "O časopisu".</message>
 	<message key="manager.setup.sponsorNoteDescription">Tento text se zobrazí pod hlavičkou "Sponzoři" a nad seznamem jmen a url sponzorů pod "Sponzorování časopisu" na stránce "O časopisu".</message>
 	<message key="manager.setup.noPublishing">OJS nebude používán pro online publikování obsahu časopisu.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Oznámení o online platbě</message>
-	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Automatická emailová oznámení (dostupná pro editaci manažerovi časopisu v Připravených emailech OJS) mohou být zasílána manažerovi předplatného po provedení online platby předplatného.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">Informovat manažera předplatného emailem po provedení online koupě individuálního předplatného.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">Informovat manažera předplatného emailem po provedení online koupě institucionálního předplatného (doporučeno).</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual">Informovat manažera předplatného emailem po provedení online obnovy individuálního předplatného.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional">Informovat manažera předplatného emailem po provedení online obnovy institucionálního předplatného.</message>
-	<message key="manager.subscriptionTypes.form.nonExpiringValid">Použijte prosím poskytované možnosti.</message>
+	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Automatická e-mailová oznámení (dostupná pro editaci manažerovi časopisu v Připravených emailech OJS) mohou být zasílána manažerovi předplatného po provedení online platby předplatného.</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">Informovat manažera předplatného e-mailem po provedení online koupě individuálního předplatného.</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">Informovat manažera předplatného e-mailem po provedení online koupě institucionálního předplatného (doporučeno).</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual">Informovat manažera předplatného e-mailem po provedení online obnovy individuálního předplatného.</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional">Informovat manažera předplatného e-mailem po provedení online obnovy institucionálního předplatného.</message>
+	<message key="manager.subscriptionTypes.form.nonExpiringValid">Použijte, prosím, nabízené možnosti.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>Poznámka:</strong> Institucionální předplatné zakoupené online vyžaduje schválení uvedené domény a IP rozsahu a aktivaci předplatného manažerem předplatného.]]></message>
 	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Poznámka:</strong> Pro zapnutí těchto možností musí manažer časopisu zapnout modul pro online platby včetně online plateb předplatného pod Čtenářskými poplatky.]]></message>
 	<message key="manager.subscriptions.form.userProfileInstructions">Poznámka: Všechny níže provedené změny se týkají profilu uživatele v celém systému.</message>
@@ -620,4 +662,82 @@
 	<message key="manager.subscriptions.selectContact">Zvolte kontakt pro předplatné</message>
 	<message key="manager.subscriptionTypes.form.nonExpiring.months">měsíce (např.: 12)</message>
 	<message key="manager.subscriptionTypes.form.individual">Individuální (uživatelé jsou ověřování pomocí přihlášení)</message>
+	<message key="manager.reviewFormElements.included">Vloženo do zprávy pro autora</message>
+	<message key="manager.sections.confirmDelete">Jste si jisti, že chcete natrvalo vymazat tuto sekci?</message>
+	<message key="manager.sections.alertDelete">Než budete moci smazat tuto sekci, musíte přesunout všechny články z této sekce do jiných sekcí.</message>
+	<message key="manager.setup.subjectClassificationURLValid">Vložte, prosím, platné vzdálené URL (včetně http://).</message>
+	<message key="manager.statistics.reports.today">Dnes</message>
+	<message key="manager.statistics.reports.currentMonth">V tomto měsíci</message>
+	<message key="manager.statistics.reports.orderBy">Seřadit podle</message>
+	<message key="manager.statistics.reports.orderDir">Směr</message>
+	<message key="manager.statistics.reports.orderDir.asc">Rostoucí</message>
+	<message key="manager.statistics.reports.orderDir.desc">Klesající</message>
+	<message key="manager.statistics.reports.month.label">Použijte formát RRRRMM.</message>
+	<message key="manager.statistics.reports.day.label">Použijte formát RRRRMMDD.</message>
+	<message key="manager.setup.permissions.display">Zobrazit</message>
+	<message key="manager.setup.licenseURLDescription">URL pro stránku s licencí, pokud je dostupná</message>
+	<message key="manager.setup.includeCopyrightStatement">Zobrazení informací o autorských právech (vhodné, pokud je autorské právo drženo autory)</message>
+	<message key="manager.setup.includeLicense">Zobrazovat licenci s publikovaným dílem.</message>
+	<message key="manager.setup.resetPermissions">Resetovat práva k článku</message>
+	<message key="manager.setup.journalThumbnail">Náhled časopisu</message>
+	<message key="manager.setup.useThumbnail">Náhled</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Počet přečtení stránky abstraktu daného článku</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Abstrakty článku a stažení</message>
+	<message key="manager.statistics.reports.defaultReport.issueDownloads">Počet stažení souborů daného čísla</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContents">Tabulka s počty přečtení stránek obsahu</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">Tabulka s obsahem čísla a soubory ke stažení</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Počet přečtení hlavní stránky časopisu</message>
+	<message key="manager.statistics.reports.generateReport">Vytvořit vlastní zprávu</message>
+	<message key="manager.statistics.reports.advancedOptions">Rozšířené možnosti</message>
+	<message key="manager.statistics.reports.columns">Sloupce</message>
+	<message key="manager.statistics.reports.filters">Filtry</message>
+	<message key="manager.statistics.reports.objectNotFound">Objekt nebyl v databázi nalezen</message>
+	<message key="manager.statistics.reports.objectType">Typ objektu</message>
+	<message key="manager.statistics.reports.objectId">Id objektu</message>
+	<message key="manager.statistics.reports.objectId.label">Definujte jedno, nebo více id objektů, oddělte je čárkami (např. 1, 2, 3, 4, 5).</message>
+	<message key="manager.statistics.reports.aggregationColumns">Agregace statistiky podle:</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">Standardní šablony zprávy</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">Stažení souborů článku</message>
+	<message key="manager.statistics.reports.cities.label">Jedno, nebo více jmen měst, oddělených čárkami (např. Horní Dolní, Dolní Horní)</message>
+	<message key="manager.statistics.reports.form.columnsRequired">Je třeba vybrat alespoň jeden sloupec k vytvoření zprávy.</message>
+	<message key="manager.statistics.reports.reportUrl">URL zprávy</message>
+	<message key="manager.statistics.reports.filters.byContext">Podle obsahu</message>
+	<message key="manager.statistics.reports.filters.byContext.description">Zúžení výsledků podle kontextu (vydání a/nebo článek).</message>
+	<message key="manager.statistics.reports.filters.byObject">Podle typu objektu a/nebo id objektu</message>
+	<message key="manager.statistics.reports.filters.byTime">Vyberte rozsah zprávy</message>
+	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">Nebo vyberte rozsah podle:</message>
+	<message key="manager.statistics.reports.filters.byLocation">Podle geo lokace</message>
+	<message key="manager.statistics.reports.filters.byLocation.description">Zúžení výsledků hledání podle země, oblasti a/nebo města.</message>
+	<message key="manager.subscriptions.form.dateRemindedBefore">Připomínka před vypršením odeslána</message>
+	<message key="manager.subscriptions.form.dateRemindedAfter">Připomínka po vypršení odeslána</message>
+	<message key="manager.groups.publishEmails">Publikovat e-mailové adresy členů</message>
+	<message key="manager.language.submissions">Příspěvky</message>
+	<message key="manager.payment.giftFees">Darovací poplatek</message>
+	<message key="manager.payment.options.purchaseIssueFee">Zakoupit přístup k číslu</message>
+	<message key="manager.plugins.invalidPluginArchive">Archiv nahraného pluginu neobsahuje složku, která odpovídá jménu pluginu.</message>
+	<message key="manager.plugins.wrongCategory">Nahraný plugin neodpovídá kategirii upgradovaného pluginu.</message>
+	<message key="manager.plugins.wrongName">Soubor version.xml v nahrávaném pluginu obsahuje jméno pluginu, které neodpovídá jménu upgradovaného pluginu.</message>
+	<message key="manager.plugins.settings">Nastavení</message>
+	<message key="manager.plugins.tarCommandNotFound">Příkaz tar není dostupný. Nakonfigurujte, prosím, správně váš soubor "config.inc.php".</message>
+	<message key="manager.plugins.versionFileInvalid">Soubor version.xml v knihovně pluginu obsahuje neplatná data.</message>
+	<message key="manager.setup.permissions.priorAgreement">Předchozí smlouva</message>
+	<message key="manager.setup.resetPermissions.description">Informace o autorský právech a licenci budou stále připojeny k publikovanému obsahu a budou zajišťovat, že se nezmění ani v případě, že časopis změní autorská práva nových příspěvků. K změně autorských práv na standardní hodnostu použijte tlačítko níže.</message>
+	<message key="manager.setup.confirmResetLicense">Jste si jisti, že chcete změnit licenci a informaci o autorských právech na standardní hodnoty nastavené v Nastavení časopisu?</message>
+	<message key="manager.setup.confirmResetLicenseChanged">Změnili jste licenci a autorská práva v Nastavení časopisu. Uložte, prosím, tyto změny před resetování těchto práv.</message>
+	<message key="manager.setup.copyrightYearBasis">Založit rok copyrightu nového článku na</message>
+	<message key="manager.setup.copyrightYearBasis.Article">Standardní rok bude převzat z data publikace článku jako v režimu "publish-as-you-go".</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">Standardní rok bude převzat z data publikace čísla.</message>
+	<message key="manager.statistics.defaultMetricDescription">Váš časopis je nakonfigurován k využívaní více metrik. Statistiky čtenosti budou zobrazovány ve více souvislostech. Jsou případy, kdy musí být zobrazovány jednotlivé statistiky, např. pro zobrazení seznamu nejčtenějších článků, nebo pro zobrazení rozsahu vyhledávání. Vyberte si, prosím, jednu z nakonfigurovaných metrik jako standardní.</message>
+	<message key="manager.statistics.reports.advancedOptions.label">Přizpůsobte si sloupce, filtry a řazení. Změna kteréhokoliv z těchto parametrů může způsobit změnu očekávané šablony výsledků.</message>
+	<message key="manager.statistics.reports.columns.description">Definujte sloupce, které budou využity ve zprávě. Sloupce, které si zde zvolíte, budou nejen definovat data v rámci zprávy, ale budou také definovat úroveň agregace statistik. Například, když si zvolíte sloupce ID, Typ a měsíc, ve zprávě budou obsaženy součty ze všech objektů v daném měsíci a zobrazí tato data v jedné řádce. Když si zvolíte místo Měsíce sloupec Den, dostanete tento řádek pro každý den.</message>
+	<message key="manager.statistics.reports.reportUrl.label">Následující URL použijte pro vytvoření zprávy s těmito aktuálními nastaveními zprávy. Stačí okopírovat odkaz a vložit ho do vašeho prohlížeče a stisknout ENTER. Můžete použít "oblíbené položky" ve vašem prohlížeči k uložení trvalých odkazů na tyto uživatelsky přizpůsobené zprávy.</message>
+	<message key="manager.statistics.reports.filters.byObject.description">Upřesněte výsledy podle typu objektu (časopis, číslo, článek, pdf sazebnice, ostatní sazebnice) a/nebo podle jednoho, nebo více id.</message>
+	<message key="manager.payment.giftFeesDescription">Odkaz na dárkové předplatné se objeví v sekci Předplatné na stránce O časopise a také jako součást postranního bloku Předplatné.</message>
+	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Toto aktivuje platby pro dárkové předplatné a umožní čtenářům časopisu zakoupit dárkové předplatné pro jiné čtenáře.</message>
+
+	<!-- Categories -->
+	<message key="manager.setup.categories">Kategorie</message>
+	<message key="manager.setup.categories.description">Zvolte nejvíce vhodné kategorie z nabídky výše. Čtenáři boudou moci procházet podle těchto kategorií z kompletní sady časopisů.</message>
+	<message key="manager.setup.emailHeader">Hlavička e-mailu</message>
+	<message key="manager.setup.emailHeaderDescription">Připravené e-maily, které jsou zasílány systémem jménem časopisu budou mít následující záhlaví. Tyto e-maily budou zasílány jménem Hlavního kontaktu, je proto důležité vyjasnit, že Hlavní kontakt není nutně zodpovědný za obsah zprávy, která jeho jménem může být poslána různým uživatelům.</message>
 </locale>
