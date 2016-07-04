@@ -435,7 +435,7 @@
 	<message key="sectionEditor.proofreader.confirmRenotify">Si torneu a trametre aquesta notificació al corrector/a de proves, es reiniciarà la seva assignació. Esteu segur/a que voleu fer aquesta acció?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Encàrrecs rebutjats</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} Encàrrecs rebutjats, encàrrecs cancel·lats i rondes anteriors del revisor/a</message>
+	<message key="sectionEditor.regrets.title">#{$submissionId} Encàrrecs rebutjats, encàrrecs cancel·lats i rondes anteriors del revisor/a</message>
 	<message key="sectionEditor.regrets">Encàrrecs rebutjats</message>
 	<message key="sectionEditor.regrets.link">Visualitza els encàrrecs rebutjats, els cancel·lats i les rondes anteriors</message>
 	<message key="sectionEditor.regrets.reviewRound">Avaluació d'experts/ertes, ronda {$round}</message>
@@ -837,48 +837,48 @@
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} ha introduït una tramesa nova amb l’identificador {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} ha revisat l’article {$articleId}. El nou identificador per al fitxer és {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} s'ha desassignat de la tramesa de revisió {$articleId} per a la ronda de revisió {$round}.</message>
-	<message key="log.review.reviewInitiated">S’ha començat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$articleId}.</message>
-	<message key="log.review.reviewReinitiated">S’ha reiniciat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$articleId}.</message>
-	<message key="log.review.reviewCancelled">S’ha cancel·lat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$articleId}.</message>
-	<message key="log.review.reviewCleared">S’ha esborrat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$articleId}.</message>
-	<message key="log.review.reviewerRated">.{$reviewerName} s'ha puntuat per a la ronda {$round} de revisió de la tramesa {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">S’ha definit la data de venciment per a la ronda {$round} de revisió de la tramesa {$articleId} feta per {$reviewerName}: {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">S’ha definit la recomanació per a la ronda {$round} de revisió de la tramesa {$articleId} feta per {$reviewerName}.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">En nom del revisor/a, {$reviewerName}, l’editor/a {$editorName} ha definit la recomanació per a la ronda {$round} de revisió de la tramesa {$articleId}.</message>
-	<message key="log.review.resubmit">La tramesa {$articleId} s’ha tornat a trametre per a la revisió.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} ha rebutjat la ronda {$round} de revisió per a la tramesa {$articleId}.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} ha acceptat la ronda {$round} de revisió per a la tramesa {$articleId}.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} ha rebutjat en nom de {$reviewerName} la ronda {$round} de revisió per a la tramesa {$articleId}.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} ha acceptat en nom de {$reviewerName} la ronda {$round} de revisió per a la tramesa {$articleId}.</message>
-	<message key="log.review.reviewFileByProxy">L’editor/a, {$userName}, ha carregat un fitxer de revisió per a la ronda {$round} de la tramesa {$articleId} en nom del revisor/a, {$reviewerName}.</message>
+	<message key="log.author.documentRevised">{$authorName} ha revisat l’article {$submissionId}. El nou identificador per al fitxer és {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} s'ha desassignat de la tramesa de revisió {$submissionId} per a la ronda de revisió {$round}.</message>
+	<message key="log.review.reviewInitiated">S’ha començat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$submissionId}.</message>
+	<message key="log.review.reviewReinitiated">S’ha reiniciat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$submissionId}.</message>
+	<message key="log.review.reviewCancelled">S’ha cancel·lat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$submissionId}.</message>
+	<message key="log.review.reviewCleared">S’ha esborrat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$submissionId}.</message>
+	<message key="log.review.reviewerRated">.{$reviewerName} s'ha puntuat per a la ronda {$round} de revisió de la tramesa {$submissionId}.</message>
+	<message key="log.review.reviewDueDateSet">S’ha definit la data de venciment per a la ronda {$round} de revisió de la tramesa {$submissionId} feta per {$reviewerName}: {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">S’ha definit la recomanació per a la ronda {$round} de revisió de la tramesa {$submissionId} feta per {$reviewerName}.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">En nom del revisor/a, {$reviewerName}, l’editor/a {$editorName} ha definit la recomanació per a la ronda {$round} de revisió de la tramesa {$submissionId}.</message>
+	<message key="log.review.resubmit">La tramesa {$submissionId} s’ha tornat a trametre per a la revisió.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} ha rebutjat la ronda {$round} de revisió per a la tramesa {$submissionId}.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} ha acceptat la ronda {$round} de revisió per a la tramesa {$submissionId}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} ha rebutjat en nom de {$reviewerName} la ronda {$round} de revisió per a la tramesa {$submissionId}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} ha acceptat en nom de {$reviewerName} la ronda {$round} de revisió per a la tramesa {$submissionId}.</message>
+	<message key="log.review.reviewFileByProxy">L’editor/a, {$userName}, ha carregat un fitxer de revisió per a la ronda {$round} de la tramesa {$submissionId} en nom del revisor/a, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">S’ha carregat un fitxer del revisor/a.</message>
-	<message key="log.editor.decision">{$editorName} ha registrat una decisió d'editor/a ({$decision}) per a l'article {$articleId}.</message>
+	<message key="log.editor.decision">{$editorName} ha registrat una decisió d'editor/a ({$decision}) per a l'article {$submissionId}.</message>
 
 
-	<message key="log.copyedit.initiate">{$copyeditorName} ha començat la revisió de la tramesa {$articleId}.</message>
+	<message key="log.copyedit.initiate">{$copyeditorName} ha començat la revisió de la tramesa {$submissionId}.</message>
 	<message key="log.copyedit.copyeditFileSet">S’ha triat el fitxer de correcció d’originals per defecte.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} ha acabat la correcció d’originals inicial de la tramesa {$articleId}.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} ha acabat la correcció d’originals final de la tramesa {$articleId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} s'ha assignat a la tramesa de correcció d’originals {$articleId}.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} ha acabat la correcció d’originals inicial de la tramesa {$submissionId}.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} ha acabat la correcció d’originals final de la tramesa {$submissionId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} s'ha assignat a la tramesa de correcció d’originals {$submissionId}.</message>
 	<message key="log.copyedit.copyeditorFile">S’ha carregat una versió del corrector/a d’originals per al fitxer de la tramesa.</message>
 	<message key="log.copyedit.authorFile">S’ha carregat una versió del fitxer de la tramesa corregida per l’autor/a.</message>
 
-	<message key="log.layout.layoutEditorAssigned">{$editorName} s'ha assignat com a maquetista de la tramesa {$articleId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} s'ha desassignat com a maquetista de la tramesa {$articleId}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} ha acabat la maquetació per a la tramesa {$articleId}.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} s'ha assignat com a maquetista de la tramesa {$submissionId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} s'ha desassignat com a maquetista de la tramesa {$submissionId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} ha acabat la maquetació per a la tramesa {$submissionId}.</message>
 
 	<message key="log.editor.metadataModified">{$editorName} ha modificat les metadades d’aquest article.</message>
 	<message key="log.editor.editorFile">S’ha carregat una versió de l’editor/a per a aquest fitxer de tramesa.</message>
-	<message key="log.editor.archived">S’ha arxivat la tramesa {$articleId}.</message>
-	<message key="log.editor.restored">La tramesa {$articleId} s’ha restaurat a la cua.</message>
-	<message key="log.editor.editorAssigned">{$editorName} s'ha assignat com a editor/a de la tramesa {$articleId}.</message>
+	<message key="log.editor.archived">S’ha arxivat la tramesa {$submissionId}.</message>
+	<message key="log.editor.restored">La tramesa {$submissionId} s’ha restaurat a la cua.</message>
+	<message key="log.editor.editorAssigned">{$editorName} s'ha assignat com a editor/a de la tramesa {$submissionId}.</message>
 
-	<message key="log.proofread.assign">{$assignerName} ha assignat {$proofreaderName} per a la correcció de proves de la tramesa {$articleId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} ha tramès {$articleId} per a la planificació.</message>
+	<message key="log.proofread.assign">{$assignerName} ha assignat {$proofreaderName} per a la correcció de proves de la tramesa {$submissionId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} ha tramès {$submissionId} per a la planificació.</message>
 
-	<message key="log.imported">{$userName} ha importat l’article {$articleId}.</message>
+	<message key="log.imported">{$userName} ha importat l’article {$submissionId}.</message>
 
 	<!-- Reading Tools entries -->
 
