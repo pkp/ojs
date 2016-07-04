@@ -21,11 +21,9 @@
 	<message key="admin.languages.supportedLocalesInstructions">Välj språk som sidan ska stödja. Valda språk kommer finnas tillgängliga för sidans alla tidskrifter, och även finnas tillgänglig på sidans språkmeny, (som kan tas bort på enskilda tidskriftsspecifika sidor). Om endast ett språk är valt, kommer språkmenyn inte synas och utökade språkinställningar kommer inte finnas tillgängliga.</message>
 	<message key="admin.languages.confirmUninstall">Är du säker på att du vill avinstallera språket? Det kan komma att påverka de tidskrifter som stödjs av språket.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Välj ytterligare språk som ska stödjas i systemet. Språken måste installeras innan de kan användas av tidskrifterna. Se OJS-dokumentationen för information om hur man lägger till nya språk.</message>
-	<message key="admin.languages.downloadLocales">Ladda ner språk</message>
 	<message key="admin.languages.downloadFailed">Nedladdnigen av språket misslyckades. Se felmeddelanden nedan för information.</message>
 	<message key="admin.languages.localeInstalled">"{$locale}" Språket har installerats. </message>
 	<message key="admin.languages.download">Ladda ner språk</message>
-	<message key="admin.languages.reloadDefaultEmailTemplates">Ladda standard e-mallar</message>
 	<message key="admin.languages.download.cannotOpen">Kan ej öppna språkbeskrivning från PKP:s hemsida.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Kan ej lägga till nya språk till språkregistreringsfilen, ex. "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">OJS Användardatabas</message>
@@ -41,7 +39,6 @@
 	<message key="admin.contexts.create">Skapa tidskrift</message>
 	<message key="admin.journals.createInstructions">Du kommer automatiskt att läggas till som tidskriftsansvarig. När du har skapat en ny tidskrift, logga in som tidskriftsansvarig för att fortsätta installation och aktivering av användare.</message>
 	<message key="admin.journals.urlWillBe">Tidskriftens URL kommer att vara: {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">Titelfältet är obligatoriskt.</message>
 	<message key="admin.contexts.form.pathRequired">Sökvägsfältet är obligatoriskt.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Sökvägen får endast innehålla alfanumeriska tecken, understreck, och bindestreck, samt måste inledas och avslutas med ett alfanumeriskt tecken.</message>
 	<message key="admin.contexts.form.pathExists">Vald sökväg används redan av en annan tidskrift.</message>

@@ -91,9 +91,7 @@
 	<message key="editor.issues.noLiveIssues">Inga aktiva nummer</message>
 	<message key="editor.issues.open">Öppen</message>
 	<message key="editor.issues.pages">Sidor</message>
-	<message key="editor.navigation.issues">Nummer</message>
 	<message key="editor.navigation.futureIssues">Kommande nummer</message>
-	<message key="editor.navigation.createIssue">Skapa nummer</message>
 	<message key="editor.navigation.issueArchive">Äldre nummer</message>
 	<message key="editor.article.designateReviewVersion">Registrera originalfilen som granskningsversion</message>
 	<message key="editor.article.uploadReviewVersion">Ladda upp en omarbetad version för granskning.</message>
@@ -195,9 +193,6 @@
 	<message key="editor.article.uploaded">Uppladdad</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Innan du skickar manuskriptet för redigering, kontrollera att det finns tillgängliga granskare och att författaren meddelas om granskning med hjälp av Meddela Författaren-länken ovan.</message>
 	<message key="editor.article.sendFileToCopyedit">Välj fil för Manusredigering</message>
-	<message key="editor.article.reviewForms">Granskningsformulär</message>
-	<message key="editor.article.selectReviewForm">Välj granskningsformulär</message>
-	<message key="editor.article.clearReviewForm">Nollställ granskningsformulär</message>
 	<message key="editor.submissionReview.sendToCopyediting">Skicka till manusredigering</message>
 	<message key="editor.issues.galleys">Korrekturversion nummer</message>
 	<message key="editor.issues.galley">Numrets korrekturversion</message>

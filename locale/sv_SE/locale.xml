@@ -57,7 +57,7 @@
 	<message key="plugins.generic.staticPages.editInstructions">Använd formuläret nedan för att lägga till eller redigera innehåll</message> 
 	<message key="plugins.generic.staticPages.content">Innehåll</message> 
 	<message key="reviewer.article.enter.ReviewForm">Klicka på ikonen för att komma till Granskningsformuläret</message> 
-	<message key="submission.reviewForm">Granskningsformulär</message> 
+
 	<message key="article.fontSize">Fontstorlek</message>
 	<message key="editor.article.ShowCoverPage">Skapa ett omslag för den här artikeln med följande element</message>
 
@@ -79,7 +79,6 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Hjälp</message>
-	<message key="navigation.archives">Arkiv</message>
 	<message key="navigation.current">Senaste</message>
 	<message key="navigation.otherJournals">Andra tidskrifter</message>
 	<message key="navigation.browseByIssue"> Per nummer</message>
@@ -134,12 +133,8 @@
 	<message key="article.suppFiles">Tilläggsfil (er)</message>
 	<message key="article.suppFilesAbbrev">Tilläggsfil (er)</message>
 	<message key="article.discipline">Ämnen och underdicipliner</message>
-	<message key="article.subjectClassification">Ämnesklassificering</message>
 	<message key="article.subject">Nyckelord</message>
 	<message key="article.coverage">Täckning</message>
-	<message key="article.coverageGeo">Täckning (rum)</message>
-	<message key="article.coverageChron">Täckning (tid)</message>
-	<message key="article.coverageSample">Karakteristika av forskningsurvalet</message>
 	<message key="article.type">Typ, metod eller infallsvinkel</message>
 	<message key="article.language">Språk</message>
 	<message key="article.sectionEditor">Sektionsredaktör</message>
@@ -207,20 +202,9 @@
 	
 	<!-- Roles -->
 	<message key="user.role.manager">Tidskriftsansvarig</message>
-	<message key="user.role.editor">Redaktör</message>
 	<message key="user.role.sectionEditor">Sektionsredaktör</message>
-	<message key="user.role.layoutEditor">Layoutredaktör</message>
-	<message key="user.role.copyeditor">Manusredaktör</message>
-	<message key="user.role.proofreader">Korrekturläsare</message>
-	<message key="user.role.author">Författare</message>
 	<message key="user.role.subscriptionManager">Abonnemangsansvarig</message>
 	<message key="user.role.managers">Tidskriftsansvariga</message>
-	<message key="user.role.editors">Redaktörer</message>
-	<message key="user.role.sectionEditors">Sektionsredaktörer</message>
-	<message key="user.role.layoutEditors">Layoutredaktörer</message>
-	<message key="user.role.copyeditors">Manusredaktörer</message>
-	<message key="user.role.proofreaders">Korrekturläsare</message>
-	<message key="user.role.authors">Författare</message>
 	<message key="user.role.subscriptionManagers">Abonnemangsansvariga</message>
 	
 	<!-- Common Issue Terms -->
@@ -248,7 +232,6 @@
 	<message key="submission.event.logLevel.error">Fel</message>
 	
 	<message key="submission.event.general.defaultEvent">Manuskriptstatus</message>
-	<message key="submission.event.general.articleSubmitted">Artikel inskickad</message>
 	<message key="submission.event.general.issueScheduled">Manuskript placerad i kö för kommande nummer</message>
 	<message key="submission.event.general.issueAssigned">Manuskript planerat för nummer</message>
 	<message key="submission.event.general.articlePublished">Artikel publicerad</message>
@@ -679,18 +662,13 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="submission.comments.saveAndEmailEditor">Spara, och E-post till Redaktör</message>
 	
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Saknar du inloggningsuppgifter? Registrera dig här</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Av säkerhetsskäl skickar systemet E-post med ett nytt lösenord till registrerade användare istället för att aktivera det gamla. Bekräftelse kommer att skickas till den här E -postadressen.]]></message>
 	
 	<!-- Profile -->
 	
 	<!-- Registration -->
 	<message key="user.register.repeatPassword">Upprepa lösenord</message>
-	<message key="user.register.selectJournal">Välj tidskrift du vill registrera dig hos</message>
 	<message key="user.register.noJournals">Det finns inga tidskrifter att registrera sig hos på den här sidan.</message>
 	<message key="user.register.privacyStatement">Sekretesspolicy</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klicka här</a> om du redan har registrerat dig hos den här tidskriften eller annan tidskrift på den här sidan.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klicka här</a> om du <b>inte</b> har registrerat dig hos den här tidskriften, eller annan tidskrift på den här sidan.]]></message>
 	<message key="user.register.loginToRegister">Ange ditt aktuella användarnamn och lösenord för att registrera dig hos den här tidskriften.</message>
 	<message key="user.register.registrationDisabled">Den här tidskriften accepterar för tillfället inga registreringar.</message>
 	<message key="user.register.form.passwordLengthTooShort">Angett lösenord innehåller inte tillräckligt många tecken.</message>
@@ -747,21 +725,14 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	
 	<!-- About The Journal -->
 	<message key="about.statistics">Statistik</message>
-	<message key="about.journalContact">Kontaktperson för tidskriften</message>
-	<message key="about.aboutTheJournal">Om Tidskriften</message>
 	<message key="about.editorialTeam">Redaktion</message>
 	<message key="about.editorialTeam.biography">Biografi</message>
 	<message key="about.editorialPolicies">Redaktionella policies</message>
 	<message key="about.focusAndScope">Ämne och fokus</message>
 	<message key="about.sectionPolicies">Sektionspolicies</message>
 	<message key="about.submissions">Manuskript</message>
-	<message key="about.sponsors">Sponsorer</message>
-	<message key="about.contributors">Andra sponsorer eller bidragande organisationer/personer</message>
 	<message key="about.onlineSubmissions">Online-inlämning av manuskript</message>
-	<message key="about.onlineSubmissions.haveAccount">Har du redan användarnamn och lösenord för {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Gå till Login</message>
-	<message key="about.onlineSubmissions.needAccount">Behöver du ett användarnamn/lösenord?</message>
-	<message key="about.onlineSubmissions.registration">Gå till Registrering</message>
 	<message key="about.onlineSubmissions.registrationRequired">För att skicka in bidrag och följa deras status krävs registrering.</message>
 	<message key="about.authorGuidelines">Författarriktlinjer</message>
 	<message key="about.submissionPreparationChecklist">Checklista för inskickande av manuskript</message>
@@ -782,7 +753,6 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="about.subscriptionsContact">Kontakt för frågor rörande abonnemangsformer</message>
 	<message key="about.availableSubscriptionTypes">Typer av abonnemang</message>
 	<message key="about.memberships">Medlemskap</message>
-	<message key="about.journalSponsorship">Tidskriftssponsorer</message>
 	<message key="about.aboutThisPublishingSystem">Om det här publiceringssystemet</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Den här tidskriften använder Open Journal Systems {$ojsVersion}, ett open source-system för tidskriftshantering och programvara för publicering utvecklad, stöttat och fritt distribuerat av <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under GNU General Public License.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[Den här sidan använder Open Journal Systems {$ojsVersion}, ett open source-system för tidskriftshantering och programvara för publicering utvecklad, stöttat och fritt distribuerat av <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under GNU General Public License.]]></message>
@@ -909,7 +879,6 @@ Din server stöttas för tillfället av mbstring: <strong>{$supportsMBString}</s
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} har lämnat ett nytt manuskript, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} har omarbetat artikeln {$articleId}. Nytt fil-ID är {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} har tilldelats ett manuskript att granska {$articleId} för granskningsomgång {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} har avlösts som granskare för manuskript {$articleId} för granskningsomgång {$round}.</message>
 	<message key="log.review.reviewInitiated">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$articleId} har påbörjats.</message>
 	<message key="log.review.reviewReinitiated">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$articleId} har åter påbörjats.</message>
@@ -946,7 +915,6 @@ Din server stöttas för tillfället av mbstring: <strong>{$supportsMBString}</s
 	<message key="log.editor.archived">Manuskriptet {$articleId} har arkiverats.</message>
 	<message key="log.editor.restored">Manuskriptet {$articleId} har återplacerats i kö.</message>
 	<message key="log.editor.editorAssigned">{$editorName} har utsetts till redaktör för manuskriptet {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} har utfört redigeringsprocessen för artikel {$articleId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} has utsett {$proofreaderName} att korrekturläsa manuskriptet {$articleId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} har skickat {$articleId} for planläggning.</message>
@@ -1019,7 +987,6 @@ Validering av URL:er kan misslyckas på sökningar som kräver inskickad data.]]
 	
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Laddad valutalista "{$filename}" från XML</message>
-	<message key="debug.notes.helpMappingLoad">Ladda XML hjälpmappningsfil {$filename} för att söka på {$id}.</message>
 
 	<!--
 	 *
@@ -1170,7 +1137,6 @@ The paragraph that begins "This last topic..." is not indented.</pre>]]></messag
 	<message key="subscriptions.status.other">Övrigt, se meddelanden</message>
 	<message key="user.subscriptions.form.deleteIpRange">Radera</message>
 	<message key="user.subscriptions.form.addIpRange">Lägg till</message>
-	<message key="article.pdf.download">Ladda ned PDF-filen</message>
 	<message key="about.history">Tidskriftens historik</message>
 	<message key="about.subscriptionTypes.name">Namn</message>
 	<message key="about.subscriptionTypes.format">Format</message>
@@ -1221,7 +1187,6 @@ The paragraph that begins "This last topic..." is not indented.</pre>]]></messag
 	<message key="issue.fullIssue">Helt nummer</message>
 	<message key="issue.nonpdf.title">Ladda ned nummer</message>
 	<message key="issue.viewIssue">Visa nummer</message>
-	<message key="issue.viewIssueDescription">Visa eller ladda ned hela numret</message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
 	<li>Följande markeringar indikerar redigeringsbehov:
 		<ul>
@@ -1231,10 +1196,5 @@ The paragraph that begins "This last topic..." is not indented.</pre>]]></messag
 		</ul>
 	</li>
 </ol>]]></message>
-	<message key="manager.setup.citations">Använd citeringsassistenten</message>
 	<message key="user.register.reviewerInterests">Intresseområden vid granskning (huvudämnen och forskningsmetod):</message>
-	<message key="submission.reviewFormResponse">Granskningsformulär</message>
-	<message key="user.orcid">ORCID-ID</message>
-	<message key="user.orcid.description"><![CDATA[ORCID-ID:n delas endast ut av <a href="http://orcid.org/" target="_blank">ORCID-registret</a>. ORCID-ID måste anges enligt den fastslagna standarden och inkludera hela URI:n (t.ex. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
-	<message key="user.profile.form.orcidInvalid">ORCID-ID:t du angav är ogiltigt.</message>
 </locale>
