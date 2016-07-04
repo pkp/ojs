@@ -4,7 +4,7 @@
 <!--
   * locale/zh_CN/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="zh_CN" full_name = "China .PR">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="author.submit">新投稿</message>
 	<message key="author.track">处理中的投稿</message>
 	<message key="author.competingInterests"><![CDATA[利益冲突 <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;政策</a>]]></message>
@@ -26,11 +26,11 @@
 	<message key="author.submit.step4">步骤4. 上传附件</message>
 	<message key="author.submit.step4a">步骤4a. 添加一个附件</message>
 	<message key="author.submit.step5">步骤5. 确认投稿</message>
-	<message key="author.submit.start">开始</message>
-	<message key="author.submit.upload">上传稿件</message>
-	<message key="author.submit.metadata">输入元数据</message>
-	<message key="author.submit.supplementaryFiles">上传附件</message>
-	<message key="author.submit.confirmation">确认</message>
+	<message key="author.submit.start">1. 开始</message>
+	<message key="author.submit.upload">2. 上传稿件</message>
+	<message key="author.submit.metadata">3. 输入元数据</message>
+	<message key="author.submit.supplementaryFiles">4. 上传附件</message>
+	<message key="author.submit.confirmation">5. 确认</message>
 	<message key="author.submit.cancelSubmission">您可以在以后的时间通过选择在作者首页的处理中投稿来完成本次投稿.</message>
 	<message key="author.submit.notAccepting">这个杂志是在这个时候不接受投稿.</message>
 	<message key="author.submit.requestWaiver">申请免费</message>
@@ -50,16 +50,16 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[遇到困难? 联系<a href="mailto:{$supportEmail}">{$supportName}</a> 活得帮助.]]></message>
 	<message key="author.submit.journalSection">期刊栏目</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[选择投稿的栏目 (参看在 <a href="{$aboutUrl}" target="_new">关于期刊</a> 的栏目与政策).]]></message>
-	<message key="submission.submit.selectSection">请选择一个栏目...</message>
-	<message key="submission.submit.submissionChecklist">投稿清单</message>
-	<message key="submission.submit.submissionChecklistDescription">勾选下列项目以确定这份稿件已慎重考虑投稿本期刊（可以在下面加上给编辑的意见）</message>
+	<message key="author.submit.selectSection">请选择一个栏目...</message>
+	<message key="author.submit.submissionChecklist">投稿清单</message>
+	<message key="author.submit.submissionChecklistDescription">勾选下列项目以确定这份稿件已慎重考虑投稿本期刊（可以在下面加上给编辑的意见）</message>
 	<message key="author.submit.verifyChecklist">您必须确定已经完成检查表中的所有的项目，才能继续下一步.</message>
 	<message key="author.submit.copyrightNoticeAgree">作者同意这份版权注意事项的内容，并同意在这份期刊出版此稿件时适用于这份稿件（可以在下面加上给编辑的意见）.</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">您必须同意的条款版权公告，然后继续.</message>
-	<message key="submission.submit.coverNote">给编辑的注释</message>
+	<message key="author.submit.commentsForEditor">给编辑的注释</message>
 	<message key="author.submit.comments">输入文本(可选)</message>
 	<message key="author.submit.form.sectionRequired">请选择一个合适的期刊投稿.</message>
-	<message key="submission.submit.privacyStatement">杂志的隐私声明</message>
+	<message key="author.submit.privacyStatement">杂志的隐私声明</message>
 	<message key="author.submit.reorderInstructions">重新排列作者在发表时候的顺序.</message>
 	<message key="author.submit.reorder">重新排序作者姓名</message>
 	<message key="author.submit.selectPrincipalContact">编辑信件的主要联系方式.</message>
@@ -67,6 +67,7 @@
 	<message key="author.submit.deleteAuthor">删除作者</message>
 	<message key="author.submit.submissionIndexingDescription">依照本期刊所使用的领域类别以及编辑提供的范例，来选择能够最佳地说明此份稿件内容的词汇。以分号(;)来分隔多个词汇（如，词汇1; 词汇2; 词汇3）。</message>
 	<message key="author.submit.coverageInstructions">地理空间位置、年代或历史涵盖范围，以及＼或者研究样本的特色.</message>
+	<message key="author.submit.subjectClassInstructions">使用有超链接的分类系统来选择分类词汇以及（如果适合的话）数字.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; 中文=zh<a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">其他代码</a>.]]></message>
 	<message key="author.submit.form.authorRequired">至少一个作者是必须的.</message>
 	<message key="author.submit.form.authorRequiredFields">姓名和每个作者的电子邮件是必须的.</message>

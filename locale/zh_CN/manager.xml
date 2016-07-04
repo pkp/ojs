@@ -4,7 +4,7 @@
 <!--
   * locale/zh_CN/manager.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="zh_CN" full_name = "China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="manager.emails.confirmResetAll">您确定您要重设这份期刊中所有的电子邮件模板为预设值？您将会失去您曾自订过的所有配置。</message>
 	<message key="manager.files.note">请注意：文件浏览器是一项高阶的功能，它允许一个期刊内的文件和目录直接被浏览和作。</message>
 	<message key="manager.groups">编辑团队管理</message>
@@ -29,7 +29,7 @@
 	<message key="manager.language.forms">表单</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">这将替换在此区域下您已经设定的任何指定区域的期刊设置。</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">恢复默认设置</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS可以让用户使用几种受到支持的语言介面。同时，OJS可以当作一个部分多语化的系统，让用户在每个页面中可以切换语言，并允许某些资料以额外的两种语言进行输入。<br /><br/>如果一个受到OJS支持的语言没有列在下表，请您的网站管理员从网站管理介面来安装该项语系。新增支持新语系的指引说明，请见OJS的文件。]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS可以让用户使用几种受到支持的语言介面。同时，OJS可以当作一个部分多语化的系统，让用户在每个页面中可以切换语言，并允许某些资料以额外的两种语言进行输入。<br /><br />如果一个受到OJS支持的语言没有列在下表，请您的网站管理员从网站管理介面来安装该项语系。新增支持新语系的指引说明，请见OJS的文件。]]></message>
 	<message key="manager.languages.noneAvailable">抱歉，没有额外的语言可供使用。如果您希望在这份期刊中使用额外的语系，请联系您的网站管理者。</message>
 	<message key="manager.languages.primaryLocaleInstructions">这将会是期刊网站的预设语言</message>
 	<message key="manager.managementPages">网页管理</message>
@@ -52,7 +52,6 @@
 	<message key="manager.payment.noPayments">无支付记录</message>
 	<message key="manager.payment.notFound">没有找到</message>
 	<message key="manager.payment.options">支付选项管理</message>
-	<message key="manager.payment.options.acceptSubscriptionPayments">This will activate payments for Subscriptions, where types, cost, duration and subscriptions are managed by the Journal (Subscription) Manager.</message>
 	<message key="manager.payment.options.donationFee">捐赠费</message>
 	<message key="manager.payment.options.enablePayments">点击这里启用支付模块.你必须填写下面的支付配置表单  注意：用户必须登录到付款.</message>
 	<message key="manager.payment.options.fastTrackFee">加急费</message>
@@ -72,7 +71,6 @@
 	<message key="manager.payment.paymentMethods">支付方法管理</message>
 	<message key="manager.payment.paymentType">支付类型</message>
 	<message key="manager.payment.readerFees">读者费用</message>
-	<message key="manager.payment.readerFeesDescription">Selected options, along with their descriptions and fees (which can be edited below), will appear in About the Journal under Policies, as well as at points where payment is required.</message>
 	<message key="manager.payment.records">支付记录</message>
 	<message key="manager.payments">支付管理</message>
 	<message key="manager.payment.userName">支付ID</message>
@@ -90,6 +88,8 @@
 	<message key="manager.people.roleEnrollment">{$role}注册</message>
 	<message key="manager.people.syncUserDescription">角色同步化会在这份期刊中指派「在特定期刊中已经有特定角色的用户」同样的角色。这个功能允许一组常见的用户（例如，审稿人）在期刊之间进行同步化。</message>
 	<message key="manager.plugins.description">此页面允许期刊管理员审查和配置当前已经安装的插件。插件根据他们的功能被分成不同的类别。类别以及插件当前的配置在下面被列出：</message>
+	<message key="manager.plugins.install">安装一个新的插件</message>
+	<message key="manager.plugins.installDescription">该表格允许上传并安装一个新插件。请确保该插件是一个压缩的.tar.gz文件。</message>
 	<message key="manager.plugins.upgrade">升级插件</message>
 	<message key="manager.plugins.upgradeDescription">该表格允许升级一个插件，请确保该插件是一个压缩的.tar.gz文件。</message>
 	<message key="manager.plugins.delete">删除插件</message>
@@ -111,9 +111,44 @@
 	<message key="manager.plugins.upgradeSuccessful">成功升级到版本</message>
 	<message key="manager.plugins.installFailed">安装失败</message>
 	<message key="manager.plugins.upgradeFailed">升级失败</message>
+	<message key="manager.reviewFormElement.changeType">警告：将审稿表单元素类型从一个多选修改为开放式类型，会导致多选选项被删除。</message>
+	<message key="manager.reviewFormElements">表单项目</message>
+	<message key="manager.reviewFormElements.addResponseItem">添加选择</message>
+	<message key="manager.reviewFormElements.checkboxes">多选框(你可以选择一个或者多个)</message>
+	<message key="manager.reviewFormElements.chooseType">选择项目类型</message>
+	<message key="manager.reviewFormElements.confirmDelete">您确认删除正在使用中的审稿表单元素?</message>
+	<message key="manager.reviewFormElements.copyTo">复制到:</message>
+	<message key="manager.reviewFormElements.create">创建新项目</message>
+	<message key="manager.reviewFormElements.dropdownbox">下拉框</message>
+	<message key="manager.reviewFormElements.edit">编辑表单项目</message>
+	<message key="manager.reviewFormElements.elementType">项目类型</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">要求一个项目类型</message>
+	<message key="manager.reviewFormElements.form.questionRequired">要求一个问题</message>
+	<message key="manager.reviewFormElements.noneCreated">没有表单项目被创建</message>
+	<message key="manager.reviewFormElements.possibleResponse">选择</message>
+	<message key="manager.reviewFormElements.question">项目</message>
+	<message key="manager.reviewFormElements.radiobuttons">单选框 (你只能选择一个)</message>
+	<message key="manager.reviewFormElements.required">R要求审稿人完成项目</message>
+	<message key="manager.reviewFormElements.smalltextfield">单字文本框</message>
+	<message key="manager.reviewFormElements.textarea">扩展文本框</message>
+	<message key="manager.reviewFormElements.textfield">单行文本框</message>
+	<message key="manager.reviewForms">审稿表单管理</message>
+	<message key="manager.reviewForms.completed">完成</message>
+	<message key="manager.reviewForms.confirmDeleteUnpublished">你确定要删除这个未使用的审稿表单吗？</message>
+	<message key="manager.reviewForms.create">创建审阅表单</message>
+	<message key="manager.reviewForms.description">描述</message>
+	<message key="manager.reviewForms.edit">审稿表单</message>
+	<message key="manager.reviewForms.form.titleRequired">审稿表单的标题是必须的。</message>
+	<message key="manager.reviewForms.inReview">审阅中</message>
+	<message key="manager.reviewForms.list.description">在这里创建的审稿表单是专门为审稿人准备的。在这里可以创建专门为期刊的某个栏目而设计的审稿表单，编辑可以在指派审稿的时候选择不同的表单。所有的表单都提供了一个选择功能，让编辑可以根据需要把审稿表单的内容与作者分享。</message>
+	<message key="manager.reviewForms.noneChosen">None / Free Form Review</message>
+	<message key="manager.reviewForms.noneCreated">无已创建表单</message>
+	<message key="manager.reviewForms.preview">预览表单</message>
+	<message key="manager.reviewForms.title">名称</message>
 	<message key="manager.sections.abstractsNotRequired">不要求文章摘要</message>
 	<message key="manager.sections.assigned">此栏目的编辑</message>
 	<message key="manager.sections.create">新增栏目</message>
+	<message key="manager.sections.disableComments">这个栏目禁止读者评论</message>
 	<message key="manager.section.sectionEditorInstructions">添加一个栏目编辑到这个栏目用于投稿自动指派. (另外，栏目编辑也可以在投稿到来后被手动指派.)当添加后，栏目编辑可以自动指派有监督审稿和（或）编辑该栏目内的投稿，栏目编辑可以通过点击期刊管理的角色来创建.</message>
 	<message key="manager.sections.editorRestriction">只有编辑和栏目编辑可以发送项目。</message>
 	<message key="manager.sections.editors">栏目编辑</message>
@@ -178,7 +213,13 @@
 	<message key="manager.setup.copyeditInstructionsDescription">「文字编辑指引」会在「投稿编辑」阶段显示给文字编辑、作者和栏目编辑看到。下面是一组预设的HTML格式指南，期刊管理员可以在任何阶段进行修订或者代换（以纯文字或HTML的方式）。</message>
 	<message key="manager.setup.copyrightNotice">版权注意事项</message>
 	<message key="manager.setup.coverage">涵盖范围</message>
+	<message key="manager.setup.coverageChronExamples">(例如，欧洲文艺复兴时期、侏罗纪时代、下学期等等)</message>
+	<message key="manager.setup.coverageChronProvideExamples">在本栏位中提供相关的年代或者历史词汇</message>
 	<message key="manager.setup.coverageDescription">指涉地理空间上的位置、年代或者历史范围，以及＼或者研究样本的特征。</message>
+	<message key="manager.setup.coverageGeoExamples">(例如，依比利半岛、平流层、北方林地等等)</message>
+	<message key="manager.setup.coverageGeoProvideExamples">在本栏位中提供相关的地理空间或者地理词汇</message>
+	<message key="manager.setup.coverageResearchSampleExamples">(例如，基因、族群等等)</message>
+	<message key="manager.setup.coverageResearchSampleProvideExamples">在本栏位中提供研究样本的特征作为范例</message>
 	<message key="manager.setup.currentIssue">当期期刊</message>
 	<message key="manager.setup.customizingTheLook">步骤 5：自订外观。</message>
 	<message key="manager.setup.customTags">自订标签</message>
@@ -192,6 +233,12 @@
 	<message key="manager.setup.disciplineProvideExamples">提供这份期刊相关的学科领域作为范例</message>
 	<message key="manager.setup.displayCurrentIssue">.为当期期刊新增一份目录（如果可以的话）</message>
 	<message key="manager.setup.editorDecision">编辑决策</message>
+	<message key="manager.setup.editorialMembers">前往「委员会成员」并新增「编辑委员会」以及/或者「审稿委员会」成员。在期刊运作的任何阶段都可以做到这件事情。</message>
+	<message key="manager.setup.editorialProcess1">一个或多个编辑处理这些基本步骤，但并没有特别分配预定的角色。</message>
+	<message key="manager.setup.editorialProcess2">编辑处理稿件顺序、目录，而栏目编辑处理稿件审稿与编辑。</message>
+	<message key="manager.setup.editorialProcess3">编辑处理稿件顺序、目录，而栏目编辑处理稿件审稿。</message>
+	<message key="manager.setup.editorialReviewBoard">编辑/审稿委员会</message>
+	<message key="manager.setup.editorialReviewBoardDescription">各期刊设有编辑顾问监督期刊的编辑方针，提供编辑建言，并基于顾问成员的学术声望赋予该期刊某些学术地位。审稿委员会则扮演一个类似但额外的角色：他们负责审稿的过程。审稿委员会成员将不会进入期刊的管理系统，不过会被加入到可以进行审稿工作的人员清单中。</message>
 	<message key="manager.setup.emailBounceAddress">退信邮箱</message>
 	<message key="manager.setup.emailBounceAddressDescription">如有任何退回的电子邮件，都会发送一封错误信息到这个地址。</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>注意：</strong>要启用这个选项，网站管理员必须启用OJS配置文件中的 <tt>allow_envelope_sender</tt>选项。可能会需要额外的服务器配置才能支持使用这个功能（可能不是所有服务器上都能用），请见上述的OJS文件。]]></message>
@@ -201,6 +248,11 @@
 	<message key="manager.setup.enableAnnouncements">让期刊管理员可以增加期刊公告。</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">显示</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">之期刊首页最近公告。</message>
+	<message key="manager.setup.enablePageNumber">项目页码将会以手动方式填入目录里(例如：页 13-26)。</message>
+	<message key="manager.setup.enablePublicArticleId">自订的识别码将会被用来识别出版项目。</message>
+	<message key="manager.setup.enablePublicGalleyId">自订的识别码将会被用来识别出版项目的版面。（如HTML或者PDF格式文件）</message>
+	<message key="manager.setup.enablePublicIssueId">自订的识别码将会被用来识别期数。</message>
+	<message key="manager.setup.enablePublicSuppFileId">自订的识别码将会被用来识别论文的补充文件。</message>
 	<message key="manager.setup.enableUserRegistration">允设用户在本期刊网站注册为：</message>
 	<message key="manager.setup.enableUserRegistration.author">作者（可以投稿）</message>
 	<message key="manager.setup.enableUserRegistration.reader">读者（可以收到通知，被统计到订阅者行列）</message>
@@ -228,7 +280,6 @@
 	<message key="manager.setup.guidingSubmissions">步骤 3：投稿导引</message>
 	<message key="manager.setup.homepageImage">首页图像</message>
 	<message key="manager.setup.homepageImageDescription">加一个图片到网页中。</message>
-	<message key="manager.setup.includeCreativeCommons">对于那些提供直接开放存取或者延后开放存取的期刊，包含一个Creative Commons license.</message>
 	<message key="manager.setup.information">信息</message>
 	<message key="manager.setup.information.description">给图书馆馆员、未来的作者和读者的简要说明，在侧边栏的「信息」区段中显示。</message>
 	<message key="manager.setup.information.forAuthors">给作者</message>
@@ -245,9 +296,9 @@
 	<message key="manager.setup.journalArchiving">期刊存档</message>
 	<message key="manager.setup.journalDescription">期刊说明</message>
 	<message key="manager.setup.journalDescriptionDescription">以HTML或纯文字的方式，加入简短的 20-25字数说明；这会出现在导航栏的正下方。</message>
-	<message key="manager.setup.favicon">杂志图标</message>
-	<message key="manager.setup.faviconDescription">添加的图标显示在导航栏旁边</message>
-	<message key="manager.setup.faviconInvalid">无效的图标格式。接受的格式有.ico,.png,和.gif。</message>
+	<message key="manager.setup.journalFavicon">杂志图标</message>
+	<message key="manager.setup.journalFaviconDescription">添加的图标显示在导航栏旁边</message>
+	<message key="manager.setup.journalFaviconInvalid">无效的图标格式。接受的格式有.ico,.png,和.gif。</message>
 	<message key="manager.setup.journalHomepageContent">期刊首页内容</message>
 	<message key="manager.setup.journalHomepageContentDescription">根据预设，首页由导航链接所组成。您可以使用下面一个或所有的选项来增添额外的首页内容，会以所见的顺序来显示。注意，当期期刊永远都可以透过导航栏中的「当期期刊」链接来阅读</message>
 	<message key="manager.setup.journalHomepageHeader">期刊首页标题</message>
@@ -260,6 +311,8 @@
 	<message key="manager.setup.journalLogo.altText">期刊标志</message>
 	<message key="manager.setup.journalPageFooter">期刊网页页尾</message>
 	<message key="manager.setup.journalPageFooterDescription">这是您的期刊的页尾。要变更或更新页尾，在下面的文字框中贴上HTML代码。比方说，可以是另一个导航栏、一个计数器等等。这个页尾会显示在所有的页面中。</message>
+	<message key="manager.setup.journalPageHeader">期刊网页标题</message>
+	<message key="manager.setup.journalPageHeaderDescription">可以上传一个图形版本的期刊标题和图标，可能是一个比首页图标还要小一点的版本，当作期刊页面的标题显示，会替换文字版本的标题。</message>
 	<message key="manager.setup.journalPolicies">步骤 2：期刊方针</message>
 	<message key="manager.setup.journalSetup">期刊配置</message>
 	<message key="manager.setup.journalSetupUpdated">您的期刊配置已经更新。</message>
@@ -387,6 +440,8 @@
 	<message key="manager.setup.sponsorNoteDescription">这段文字描述显示在关于我们页面的期刊主管单位下的列表内。 </message>
 	<message key="manager.setup.sponsorsDescription">赞助发起这份期刊的组织单位名称（例如学会、大学系所、合作社等等）会出现在期刊的「期刊介绍」中，并且可以附加一个致谢的备注。</message>
 	<message key="manager.setup.stepsToJournalSite">创建一个期刊网站的5个步骤</message>
+	<message key="manager.setup.subjectClassification">主题类别</message>
+	<message key="manager.setup.subjectClassificationExamples">（例如，数学主题分类、国会图书馆分类）</message>
 	<message key="manager.setup.subjectExamples">(例如，光和作用、黑洞、四色地图问题、贝斯定理)</message>
 	<message key="manager.setup.subjectKeywordTopic">关键字</message>
 	<message key="manager.setup.subjectProvideExamples">提供关键字或者主旨的范例，以引导作者。</message>
@@ -397,7 +452,6 @@
 	<message key="manager.setup.submissions.description">作者指引、版权和索引(包括注册)。</message>
 	<message key="manager.setup.subscription">>这份期刊需要订阅之后才能阅读某些或所有的内容。</message>
 	<message key="manager.setup.subscriptionDescription">「订阅管理」模组需要指派「订阅管理员」，存取这个模组，包括额外的开放阅读、自行存档和电子邮件通知选项。</message>
-	<message key="manager.setup.noPublishing">OJS will not be used to publish the journal's contents online.</message>
 	<message key="manager.setup.technicalSupportContact">技术支持联系人</message>
 	<message key="manager.setup.technicalSupportContactDescription">这个人会被列在期刊的「联系信息」页面中，负责编辑、作者和审稿人的使用问题，并且应该具有从所有角色的观点来进行系统操作的经验。这个期刊系统需要很少的技术支持，这或许该是个兼职性的工作。有可能会需要这样的职位，比方说，当作者和审稿人对于操作指南或者文件格式有疑问时，或者说，有需要去确保期刊定期在服务器上进行备份时。</message>
 	<message key="manager.setup.typeExamples">(例如，历史研究、准实验、文学分析、调查＼访谈等等)</message>
@@ -448,19 +502,14 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">个月以后</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">请选择一个有效的时间长度</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">下列的说明会发布在「期刊介绍」之中的「稍后开放阅读」下面</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">请使用所提供之检查框</message>
 	<message key="manager.subscriptionPolicies.expiry">订阅到期</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">订阅期满后，读者可能会被拒绝进入所有订阅内容或可继续保留访问前发表的订阅内容到订阅的终止日期。</message>
 	<message key="manager.subscriptionPolicies.expiryFull">全部到期</message>
 	<message key="manager.subscriptionPolicies.expiryFullDescription">读者无法获得所有收费期满后订阅内容。</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">部分到期</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">读者无法获得最近出版的订阅内容，但保留访问那些在订阅终止时间先前所发表的订阅内容。</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">以电子邮件通知订阅者</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">订阅期满后几个月</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">以电子邮件通知订阅者</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">订阅期满后几周</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">以电子邮件通知订阅者</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">订阅期满前几个月</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">以电子邮件通知订阅者</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">订阅期满前几周</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">订阅期满提醒函</message>
@@ -471,17 +520,9 @@
 	<message key="manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid">请选择一个订阅期满之后有多少月数的有效值。</message>
 	<message key="manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid">请选择一个订阅期满之前有多少月数的有效值。</message>
 	<message key="manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid">.请选择一个订阅期满之后有多少周数的有效值。</message>
-	<message key="manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid">Please select a valid value for the number of weeks before subscription expiry.</message>
 	<message key="manager.subscriptionPolicies.openAccessNotificationDescription">已注册之读者将可以选择在一期期刊开放阅读之时，透过电子邮件收到目录通知。</message>
 	<message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>注意：</strong>要启用这些选项，这个网站的管理员必须启用OJS配置文件中的<tt>scheduled_tasks</tt> 选项。（可能无法在所有的服务器上面执行），就在上面指出的OJS文件当中]]></message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">在线支付通知</message>
-	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Automated email notifications (available for editing by Journal Managers in OJS's Prepared Emails) can be sent to the Subscription Manager upon the completion of subscription online payments.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">Notify Subscription Manager by email upon online purchase of an Individual subscription.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">Notify Subscription Manager by email upon online purchase of an Institutional subscription (recommended).</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual">Notify Subscription Manager by email upon online renewal of an Individual subscription.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional">Notify Subscription Manager by email upon online renewal of an Institutional subscription.</message>
-	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>Note:</strong> Institutional subscriptions purchased online require approval of the provided domain and IP ranges and activation of the subscription by the Subscription Manager.]]></message>
-	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Note:</strong> To enable these options, the Journal Manager must enable the online payments module, including online payments for subscriptions, under Reader Fees.]]></message>
 	<message key="manager.subscriptionPolicies.openAccessOptions">开放阅读选项来订阅期刊</message>
 	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">需订阅之期刊可以提供「稍后开放阅读」以及＼或者「作者自行存档」（增加读者和内容的引用数）两种方式。被选择的方案会出现在「期刊介绍」之中。</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">订阅信息</message>
@@ -491,10 +532,7 @@
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">请输入一个有效的电子邮件地址</message>
 	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">您的订阅方针配置已经被更新</message>
 	<message key="manager.subscriptions">订阅</message>
-	<message key="manager.individualSubscriptions">Individual Subscriptions</message>
-	<message key="manager.institutionalSubscriptions">Institutional Subscriptions</message>
 	<message key="manager.subscriptions.confirmDelete">您确定您要删除掉这个订户？</message>
-	<message key="manager.subscriptions.summary">Subscriptions Summary</message>
 	<message key="manager.subscriptions.create">建立新的订户</message>
 	<message key="manager.subscriptions.createTitle">建立</message>
 	<message key="manager.subscriptions.renew">Renew</message>
@@ -505,8 +543,6 @@
 	<message key="manager.subscriptions.domain">域名</message>
 	<message key="manager.subscriptions.edit">编辑订户</message>
 	<message key="manager.subscriptions.editTitle">编辑</message>
-	<message key="manager.subscriptions.withStatus">With Status</message>
-	<message key="manager.subscriptions.allStatus">All</message>
 	<message key="manager.subscriptions.form.status">状态</message>
 	<message key="manager.subscriptions.form.statusRequired">一个订阅状态是必须的。</message>
 	<message key="manager.subscriptions.form.statusValid">请选择一个有效的订阅状态。</message>
@@ -529,7 +565,6 @@
 	<message key="manager.subscriptions.form.notifyEmailValid">请使用复选框</message>
 	<message key="manager.subscriptions.form.membership">会员</message>
 	<message key="manager.subscriptions.form.referenceNumber">参考号码</message>
-	<message key="manager.subscriptions.form.membershipInstructions">Enter membership information if the subscription type requires that subscribers belong to an association or organization.</message>
 	<message key="manager.subscriptions.form.membershipRequired">选定的订阅类型需要会员信息.</message>
 	<message key="manager.subscriptions.form.notes">注释</message>
 	<message key="manager.subscriptions.form.domain">域名</message>
@@ -625,7 +660,65 @@
 	<message key="manager.sections.confirmDelete">您确定要永久删除该栏目吗？</message>
 	<message key="manager.sections.alertDelete">在该栏目能够被删除之前，您必须将栏目中已经出版过的文章移动到另一个栏目中。</message>
 	<message key="manager.setup.journalThumbnail">期刊缩略图</message>
+	<message key="manager.setup.subjectClassificationURLValid">请提供有效的远程URL (含有 http://)。</message>
 	<message key="manager.setup.useThumbnail">缩略图</message>
 	<message key="manager.setup.categories">分类范畴</message>
 	<message key="manager.setup.categories.description">从上面的设置列表中选择最合适的类别。读者将能够从完整的期刊设置中依靠分类进行浏览。</message>
+	<message key="manager.statistics.reports.advancedOptions">高级选项</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">文章摘要页面浏览量</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">文章摘要和下载</message>
+	<message key="manager.statistics.reports.generateReport">生成自定义报告</message>
+	<message key="manager.statistics.reports.objectType">对象类型</message>
+	<message key="manager.statistics.reports.objectId">对象id</message>
+	<message key="manager.statistics.reports.today">今日</message>
+	<message key="manager.statistics.reports.currentMonth">当月</message>
+	<message key="manager.statistics.reports.orderDir.asc">升序</message>
+	<message key="manager.statistics.reports.orderDir.desc">降序</message>
+	<message key="manager.statistics.reports.cities.label">一个或多个城市名称，用逗号隔开（如：城市名称1，城市名称2）</message>
+	<message key="manager.statistics.reports.reportUrl">报表URL</message>
+	<message key="manager.setup.permissions.priorAgreement">事前协议</message>
+	<message key="manager.setup.permissions.display">展开</message>
+	<message key="manager.statistics.reports.aggregationColumns">统计方式</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">默认的报告模板</message>
+	<message key="manager.statistics.reports.filters">过滤器</message>
+	<message key="manager.statistics.reports.objectId.label">定义一个或多个对象ID，用逗号隔开（如：1,2,3,4,5）。</message>
+	<message key="manager.statistics.reports.month.label">使用年-月格式</message>
+	<message key="manager.statistics.reports.day.label">使用年-月-日格式</message>
+	<message key="manager.statistics.reports.filters.byContext">根据上下文</message>
+	<message key="manager.statistics.reports.filters.byLocation">按地理位置</message>
+	<message key="manager.statistics.reports.filters.byLocation.description">按国家，区域/或城市缩小结果范围。</message>
+	<message key="manager.subscriptions.form.dateRemindedBefore">到期前发送提醒</message>
+	<message key="manager.subscriptions.form.dateRemindedAfter">到期后发送提醒</message>
+	<message key="manager.setup.licenseURLDescription">如果可以的话，请提供许可协议网页的URL。</message>
+	<message key="manager.setup.resetPermissions">重设文章权限</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">文章文件下载</message>
+	<message key="manager.statistics.reports.columns">专栏</message>
+	<message key="manager.statistics.reports.filters.byObject">通过目标类型/或者目标 id</message>
+	<message key="manager.setup.includeCopyrightStatement">显示版权声明的内容（主张作者持有版权）</message>
+	<message key="manager.statistics.reports.defaultReport.issueDownloads">期次文件下载</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContents">期次内容页面访问量</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">期次内容和下载</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">期刊主要页面访问量</message>
+	<message key="manager.statistics.reports.orderBy">排序</message>
+	<message key="manager.statistics.reports.orderDir">方向</message>
+	<message key="manager.statistics.reports.form.columnsRequired">你必须选择至少一个栏目来生成报告。</message>
+	<message key="manager.statistics.reports.filters.byContext.description">通过上下文（期次/或者文章）缩小结果范围</message>
+	<message key="manager.statistics.reports.filters.byObject.description">通过目标类型（期刊，期次，pdf格式样稿，其他样稿）/或者一个或多个目标id（s）缩小结果范围</message>
+	<message key="manager.statistics.reports.filters.byTime">选择报告的范围</message>
+	<message key="manager.setup.includeLicense">显示发表作品的知识共享许可协议。</message>
+	<message key="manager.statistics.reports.advancedOptions.label">自定义栏目，过滤器和排序选项。更改任何一个选项都会改变预期的报告模版结果。</message>
+	<message key="manager.setup.resetPermissions.description">版权信息和许可协议信息将和发表的内容永久地连接在一起，这样可以保证这些数据不会因为期刊文章提交的新方针而改变。 如果您想要重新设置出版内容的权限信息，使用下面的按钮。</message>
+	<message key="manager.setup.confirmResetLicense">您确定在期刊设置一栏中重新设置出版内容的许可协议和版权信息？</message>
+	<message key="manager.statistics.defaultMetricDescription">您的期刊使用多个度量标准。 这些度量标准的使用统计将在许多上下文中出现。
+在某些情况下，期刊应包含一个使用统计，例如： 显示常用文章的顺序列表或者搜索结果排名。请选择其中一个度量标准作为默认值。</message>
+	<message key="manager.statistics.reports.reportUrl.label">以下网址可以生成当前形式设置的报告。只须复制，在浏览器中粘贴然后点击进入。您可以把自定义报告的网址放在收藏夹里。</message>
+	<message key="manager.statistics.reports.columns.description">指定生成报告的项目。该项目不仅可以使报告显示数据也可以衡量统计的总体水平。例如：如果您选择ID，类型和月份作为指定的项目，报告将编辑每个目标和每个月，然后显示有一行相关的数据。如果你选择天而不是月份作为指定项目，那么每个目标将有相应的一行日期。</message>
+	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">或者通过以下选择范围：</message>
+	<message key="manager.setup.confirmResetLicenseChanged">您在期刊设置部分已变更许可证和版权信息。在重新设置权限前，请保存这些更改。</message>
+	<message key="manager.setup.copyrightYearBasis">根据新期刊的版权</message>
+	<message key="manager.setup.copyrightYearBasis.Article">年份的默认值根据文章的发表日期，如在“发表日期”</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">年份的默认值根据期次的发表日期。</message>
+	<message key="manager.statistics.reports.objectNotFound">在数据库里未发现目标</message>
+	<message key="manager.setup.emailHeader">邮件标题</message>
+	<message key="manager.setup.emailHeaderDescription">由系统代表期刊发送准备好的电子邮件将以下面的标题开头。这些信件由主要联系人处理，所以必须弄清楚主要联系人并不一定是负责信息内容，而是代表其他用户发送。</message>
 </locale>
