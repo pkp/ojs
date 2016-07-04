@@ -24,11 +24,11 @@
 	<message key="author.submit.step4">Krok 4. Prześlij dodatkowe pliki</message>
 	<message key="author.submit.step4a">Krok 4a. Dodaj plik</message>
 	<message key="author.submit.step5">Krok 5. Potwierdź</message>
-	<message key="author.submit.start">1. Start</message>
-	<message key="author.submit.upload">2. Prześlij plik</message>
-	<message key="author.submit.metadata">3. Wprowadź metadane</message>
-	<message key="author.submit.supplementaryFiles">4. Prześlij dodatkowe pliki</message>
-	<message key="author.submit.confirmation">5. Potwierdź</message>
+	<message key="author.submit.start">Start</message>
+	<message key="author.submit.upload">Prześlij plik</message>
+	<message key="author.submit.metadata">Wprowadź metadane</message>
+	<message key="author.submit.supplementaryFiles">Prześlij dodatkowe pliki</message>
+	<message key="author.submit.confirmation">Potwierdź</message>
 	<message key="author.submit.cancelSubmission">Możesz uzupełnić swoje zgłoszenie w późniejszym terminie, przechodząc do "Zgłoszone teksty" w zakładce "Moje konto".</message>
 	<message key="author.submit.notAccepting">Czasopismo nie przyjmuje obecnie nowych zgłoszeń.</message>
 	<message key="author.submit.requestWaiver">Prośba o umorzenie płatności za publikację</message>
@@ -47,19 +47,19 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Napotkałeś trudności? <a href="mailto:{$supportEmail}">{$supportName}</a> służy pomocą.]]></message>
 	<message key="author.submit.journalSection">Dział czasopisma</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Wybierz docelowy dział dla przesyłanego tekstu (informacje o działach znajdziesz na stronie <a href="{$aboutUrl}" target="_new">O czasopiśmie</a>).]]></message>
-	<message key="author.submit.selectSection">Wybierz dział...</message>
+	<message key="submission.submit.selectSection">Wybierz dział...</message>
 	<message key="author.submit.submissionLocale">Język przesyłanego tekstu</message>
 	<message key="author.submit.submissionLocaleDescription">Czasopismo akceptuje teksty napisane w różnych językach. Wybierz w jakim języku został napisany tekst.</message>
 	<message key="author.submit.submissionChecklist">Sprawdzenie tekstu przed wysłaniem</message>
-	<message key="author.submit.submissionChecklistDescription">Przed wysłaniem, sprawdź czy tekst spełnia następujące kryteria (ewentualny komenatrz dla redaktora można wpisać poniżej).</message>
+	<message key="submission.submit.submissionChecklistDescription">Przed wysłaniem, sprawdź czy tekst spełnia następujące kryteria (ewentualny komenatrz dla redaktora można wpisać poniżej).</message>
 	<message key="author.submit.verifyChecklist">Aby kontynuować, upewnij się, że wszystkie elementy listy zostały zaznaczone.</message>
 	<message key="author.submit.copyrightNoticeAgree">Zapoznałem się z prawami autorskimi dotyczącymi przesyłanego tekstu (ewentualny komenatrz dla redaktora można wpisać poniżej).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Aby kontynuować, upewnij się, że zapoznałeś się z prawami autorskimi.</message>
-	<message key="author.submit.commentsForEditor">Komentarz dla redaktora</message>
+	<message key="submission.submit.coverNote">Komentarz dla redaktora</message>
 	<message key="author.submit.comments">Wpisz komentarz dla redaktora (opcjonalne)</message>
 	<message key="author.submit.form.sectionRequired">Aby kontynuować, upewnij się, że wybrałeś poprawny dział czasopisma dla przesyłanego tekstu.</message>
 	<message key="author.submit.form.localeRequired">Aby kontynuować, wybierz język w jakim został napisany tekst.</message>
-	<message key="author.submit.privacyStatement">Polityka prywatności</message>
+	<message key="submission.submit.privacyStatement">Polityka prywatności</message>
 	<message key="author.submit.reorderInstructions">Zmień kolejność wyświetlania autorów.</message>
 	<message key="author.submit.reorder">Zmień kolejnośc wyświetlania autorów</message>
 	<message key="author.submit.selectPrincipalContact">Główna osoba do kontaktu.</message>

@@ -196,7 +196,7 @@
 	<message key="journal.currentIssue">Aktualny numer</message>
 	<message key="journal.journals">Czasopisma</message>
 	<message key="journal.path">Ścieżka</message>
-	<message key="journal.journal">Czasopismo</message>
+	<message key="context.context">Czasopismo</message>
 	<message key="journal.issn">ISSN</message>
 
 	<!-- User -->
