@@ -379,7 +379,7 @@ Aktive er hvor mange fagfellevurderinger som for øyeblikket er bestilt eller un
 	<message key="sectionEditor.proofreader.confirmRenotify">Ved å varsle denne korrekturleseren igjen, kommer du til å sette oppdraget i gang på nytt. Er du sikker på at du vil gjøre dette?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Avslag</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} Fagkonsulent avslag, avbrutte og tidligere runder</message>
+	<message key="sectionEditor.regrets.title">#{$submissionId} Fagkonsulent avslag, avbrutte og tidligere runder</message>
 	<message key="sectionEditor.regrets">Avslag</message>
 	<message key="sectionEditor.regrets.link">Vis avslag, avbrutt, tidligere runder</message>
 	<message key="sectionEditor.regrets.reviewRound">Fagfellevurdering, runde {$round}</message>
@@ -698,46 +698,46 @@ Din server støtter for øyeblikket mbstring: <strong>{$supportsMBString}</stron
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} har levert et nytt manuskript, ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} har omarbeidet artikkel {$articleId}. Den nye filens ID er {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} er avløst fra vurdering av manuskriptet {$articleId} for vurderingsrunde {$round}.</message>
-	<message key="log.review.reviewInitiated">Vurderingsrunde {$round} av manuskriptet {$articleId} ved {$reviewerName} er igangsatt.</message>
-	<message key="log.review.reviewReinitiated">Vurderingsrunde {$round} av manuskript {$articleId} ved {$reviewerName}  er igangsatt på nytt.</message>
-	<message key="log.review.reviewCancelled">Vurderingsrunde {$round} av manuskript {$articleId} ved {$reviewerName} er avbrutt.</message>
-	<message key="log.review.reviewCleared">Vurderingsrunde {$round} av manuskript {$articleId} ved {$reviewerName}  er fjernet.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} er rangert for vurderingsrunde {$round} av manuskriptet {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">Ventet-datoen for vurderingsrunde {$round}  av manuskriptet {$articleId} ved {$reviewerName} er satt til {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">Anbefalingen for runde {$round} vurdering av manuskriptet {$articleId} ved {$reviewerName} er satt.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">Anbefalingen for runde {$round} vurdering av manuskriptet {$articleId} er satt av redaktøren, {$editorName}, på vegne av fagkonsulenten, {$reviewerName}.</message>
-	<message key="log.review.resubmit">Manuskriptet {$articleId} er gjeninnsendt for vurdering.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} har avslått runde {$round} vurdering av manuskript {$articleId}.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} har akseptert runde {$round} vurdering av manuskript {$articleId}.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} har akseptert runde {$round} vurdering av manuskript {$articleId} på vegne av {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">Redaktøren, {$userName}, har lastet opp en vurderingsfil for runde {$round} for manuskriptet {$articleId} på vegne av fagkonsulenten, {$reviewerName}.</message>
+	<message key="log.author.documentRevised">{$authorName} har omarbeidet artikkel {$submissionId}. Den nye filens ID er {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} er avløst fra vurdering av manuskriptet {$submissionId} for vurderingsrunde {$round}.</message>
+	<message key="log.review.reviewInitiated">Vurderingsrunde {$round} av manuskriptet {$submissionId} ved {$reviewerName} er igangsatt.</message>
+	<message key="log.review.reviewReinitiated">Vurderingsrunde {$round} av manuskript {$submissionId} ved {$reviewerName}  er igangsatt på nytt.</message>
+	<message key="log.review.reviewCancelled">Vurderingsrunde {$round} av manuskript {$submissionId} ved {$reviewerName} er avbrutt.</message>
+	<message key="log.review.reviewCleared">Vurderingsrunde {$round} av manuskript {$submissionId} ved {$reviewerName}  er fjernet.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} er rangert for vurderingsrunde {$round} av manuskriptet {$submissionId}.</message>
+	<message key="log.review.reviewDueDateSet">Ventet-datoen for vurderingsrunde {$round}  av manuskriptet {$submissionId} ved {$reviewerName} er satt til {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">Anbefalingen for runde {$round} vurdering av manuskriptet {$submissionId} ved {$reviewerName} er satt.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">Anbefalingen for runde {$round} vurdering av manuskriptet {$submissionId} er satt av redaktøren, {$editorName}, på vegne av fagkonsulenten, {$reviewerName}.</message>
+	<message key="log.review.resubmit">Manuskriptet {$submissionId} er gjeninnsendt for vurdering.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} har avslått runde {$round} vurdering av manuskript {$submissionId}.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} har akseptert runde {$round} vurdering av manuskript {$submissionId}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} har akseptert runde {$round} vurdering av manuskript {$submissionId} på vegne av {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">Redaktøren, {$userName}, har lastet opp en vurderingsfil for runde {$round} for manuskriptet {$submissionId} på vegne av fagkonsulenten, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">En fagkonsulentfil er lastet opp.</message>
 
 
-	<message key="log.copyedit.initiate">Manusredigering av manuskript {$articleId} er utført av {$copyeditorName}.</message>
+	<message key="log.copyedit.initiate">Manusredigering av manuskript {$submissionId} er utført av {$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">Default manusredigeringsfil er valgt.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} har ferdigstilt første manusredigering av manuskriptet {$articleId}.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} har ferdigstilt siste manusredigering av manuskriptet {$articleId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} er oppnevnt for manusredigering av manuskriptet {$articleId}.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} har ferdigstilt første manusredigering av manuskriptet {$submissionId}.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} har ferdigstilt siste manusredigering av manuskriptet {$submissionId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} er oppnevnt for manusredigering av manuskriptet {$submissionId}.</message>
 	<message key="log.copyedit.copyeditorFile">En manusredaktørversjon av manuskriptfilen er lastet opp.</message>
 	<message key="log.copyedit.authorFile">En versjon av manuskriptfilen bearbeidet av forfatteren er lastet opp.</message>
 
-	<message key="log.layout.layoutEditorAssigned">{$editorName} er oppnevnt som layoutredaktør for manuskriptet {$articleId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} er avløst som layoutredaktør for manuskriptet {$articleId}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} har ferdigstilt layoutredigering av manuskriptet {$articleId}.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} er oppnevnt som layoutredaktør for manuskriptet {$submissionId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} er avløst som layoutredaktør for manuskriptet {$submissionId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} har ferdigstilt layoutredigering av manuskriptet {$submissionId}.</message>
 
 	<message key="log.editor.metadataModified">Metadata for denne artikkelen ble endret av {$editorName}.</message>
 	<message key="log.editor.editorFile">En redaktørversjon av manuskriptfilen er lastet opp.</message>
-	<message key="log.editor.archived">Manuskriptet {$articleId} er arkivert.</message>
-	<message key="log.editor.restored">Manuskriptet {$articleId} er hentet tilbake til arbeidsplanen.</message>
-	<message key="log.editor.editorAssigned">{$editorName} er oppnevnt som redaktør for manuskriptet {$articleId}.</message>
+	<message key="log.editor.archived">Manuskriptet {$submissionId} er arkivert.</message>
+	<message key="log.editor.restored">Manuskriptet {$submissionId} er hentet tilbake til arbeidsplanen.</message>
+	<message key="log.editor.editorAssigned">{$editorName} er oppnevnt som redaktør for manuskriptet {$submissionId}.</message>
 
-	<message key="log.proofread.assign">{$assignerName} har oppnevnt {$proofreaderName} til å korrigere manuskriptet {$articleId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} har sendt inn {$articleId} for planlegging.</message>
+	<message key="log.proofread.assign">{$assignerName} har oppnevnt {$proofreaderName} til å korrigere manuskriptet {$submissionId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} har sendt inn {$submissionId} for planlegging.</message>
 
-	<message key="log.imported">{$userName} har importert artikkel {$articleId}.</message>
+	<message key="log.imported">{$userName} har importert artikkel {$submissionId}.</message>
 
 	<!-- Reading Tools entries -->
 
@@ -895,8 +895,8 @@ Valideringen kan for eksempel svikte på søkesteder som krever utfylling av skj
 	<message key="payment.subscription.renew">Forny abonnement</message>
 	<message key="payment.subscription.expires">Utløper</message>
 	<message key="installer.databaseSettingsInstructions">OJS krever tilgang til en SQL-database for lagring av data. Se listen over databaser som støttes i systemkravene ovenfor. Skriv inn innstillingene som skal brukes for å opprette forbindelsen med databasen i feltene nedenfor.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} har avslått å utføre fagvurdering i {$round}. runde for manuskriptet{$articleId} på vegne av {$reviewerName}.</message>
-	<message key="log.editor.decision">Redaktørbeslutningen ({$decision}) for artikkelen {$articleId} ble journalført av {$editorName}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} har avslått å utføre fagvurdering i {$round}. runde for manuskriptet{$submissionId} på vegne av {$reviewerName}.</message>
+	<message key="log.editor.decision">Redaktørbeslutningen ({$decision}) for artikkelen {$submissionId} ble journalført av {$editorName}.</message>
 	<message key="rt.admin.settings.addComment.authenticated">Brukeren må være registrert og innlogget før innsending; anonym innsending tillates ikke.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Brukeren må være registrert og innlogget før innsending; anonym innsending tillates.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Brukeren trenger ikke være registrert før innsending; anonym innsending tillates.</message>
