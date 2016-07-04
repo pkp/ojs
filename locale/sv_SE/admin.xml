@@ -22,7 +22,7 @@
 	<message key="admin.languages.confirmUninstall">Är du säker på att du vill avinstallera språket? Det kan komma att påverka de tidskrifter som stödjs av språket.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Välj ytterligare språk som ska stödjas i systemet. Språken måste installeras innan de kan användas av tidskrifterna. Se OJS-dokumentationen för information om hur man lägger till nya språk.</message>
 	<message key="admin.languages.downloadFailed">Nedladdnigen av språket misslyckades. Se felmeddelanden nedan för information.</message>
-	<message key="admin.languages.localeInstalled">"{$locale}" Språket har installerats. </message>
+	<message key="admin.languages.localeInstalled">"{$locale}" Språket har installerats.</message>
 	<message key="admin.languages.download">Ladda ner språk</message>
 	<message key="admin.languages.download.cannotOpen">Kan ej öppna språkbeskrivning från PKP:s hemsida.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Kan ej lägga till nya språk till språkregistreringsfilen, ex. "registry/locales.xml".</message>

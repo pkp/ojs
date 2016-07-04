@@ -292,7 +292,7 @@
 	<message key="manager.setup.useImageTitle">Namn (bild)</message>
 	<message key="manager.setup.useJournalStyleSheet">Style sheet för tidskriften</message>
 	<message key="manager.setup.userRegistration">Användarregistrering</message>
-	<message key="manager.setup.useTextTitle">Namn (text) </message>
+	<message key="manager.setup.useTextTitle">Namn (text)</message>
 	<message key="manager.statistics.statistics">Tidskriftsstatistik</message>
 	<message key="manager.statistics.statistics.articleViews">Antal visningar av artikeln (endast för författare)</message>
 	<message key="manager.statistics.statistics.count.accept">Accepterat</message>

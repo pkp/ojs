@@ -783,7 +783,7 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="payment.type.publication">Publiceringsavgift</message>
 	<message key="payment.type.fastTrack">Snabbspår för granskningsavgift</message>
 	<message key="payment.type.membership">Avgift för individuellt medlemskap</message>
-	<message key="payment.type.payPerView">Avgift för Artikel-Pay-Per-View </message>
+	<message key="payment.type.payPerView">Avgift för Artikel-Pay-Per-View</message>
 	<message key="payment.type.subscription">Abonnemangsavgift</message>
 	<message key="payment.type.donation">Donationer</message>
 	
