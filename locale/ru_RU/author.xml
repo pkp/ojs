@@ -4,121 +4,127 @@
 <!--
   * locale/ru_RU/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ru_RU (Русский) locale.
-  *
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
 
-<locale name="ru_RU" full_name = "Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="author.submit">Новая статья</message>
-	<message key="author.track">Статьи в процессе Отправки</message>
-	<message key="author.competingInterests"><![CDATA[<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Политика</a> разрешения&nbsp;конфликта&nbsp;интересов]]></message>
+	<message key="author.track">Статьи в работе</message>
+	<message key="author.competingInterests"><![CDATA[Конфликт&nbsp;интересов <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Руководство по заполнению Декларации о конфликте интересов</a>]]></message>
 	<message key="author.submit.submitArticle">Отправить статью</message>
 	<message key="author.submit.stepsToSubmit">Пять шагов к отправке</message>
-	<message key="author.submit.startHereTitle">Начать новую Отправку</message>
-	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Нажмите здесь</a>, чтобы вернуться к первому шагу процесса отправки.]]></message>
+	<message key="author.submit.startHereTitle">Начать отправку новой статьи</message>
+	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Нажмите здесь</a>, чтобы перейти к первому из пяти шагов процесса отправки.]]></message>
 	<message key="author.submit.step1">Шаг 1. Начало отправки</message>
-	<message key="author.submit.step2">Шаг 2. Загрузить статью</message>
+	<message key="author.submit.step2">Шаг 2. Загрузка статьи</message>
 	<message key="author.submit.step3">Шаг 3. Ввод метаданных</message>
-	<message key="author.submit.step4">Шаг 4. Загрузить дополн. файлы</message>
-	<message key="author.submit.step4a">Шаг 4a. Загрузить дополн. файл</message>
-	<message key="author.submit.step5">Шаг 5. Подтверждение</message>
-	<message key="author.submit.start">Старт</message>
-	<message key="author.submit.upload">Загрузить статью</message>
-	<message key="author.submit.metadata">Ввести метаданные</message>
-	<message key="author.submit.supplementaryFiles">Загрузить дополн. файлы</message>
-	<message key="author.submit.confirmation">Подтверждение</message>
-	<message key="author.submit.cancelSubmission">Вы можете закончить эту отправку позже, выбрав "Статьи в процессе Отправки" на своей домашней странице.</message>
-	<message key="author.submit.notAccepting">Этот журнал сейчас не принимает статей.</message>
-	<message key="author.submit.requestWaiver">Запросить Исключение</message>
-	<message key="author.submit.qualifyForWaiver">Пожалуйста рассмотрите возможность сделать исключение и отменить Плату за Отправку для этой статьи</message>
-	<message key="author.submit.addReasonsForWaiver">Пожалуйста используйте поле комментариев ниже для указания причин, почему плата должна быть отменена.</message>
-	<message key="author.submit.mustEnterWaiverReason">Если Вы просите отменить плату за отправку, необходимо указать причину.</message>
-	<message key="author.submissions.queuedReviewSubsequent">Рецензируется: ({$round} раунд)</message>
-	<message key="author.submissions.queuedReviewRevisions">Рецензируется: Требуются Изменения</message>
-	<message key="author.submissions.queuedEditingCopyedit">Редактируется: Требуется Редактирование</message>
-	<message key="author.submissions.queuedEditingProofread">Редактируется: Требуется Вычитка</message>
-	<message key="author.submissions.uploadCopyeditedVersion">Загрузить Редактированный файл</message>
-	<message key="author.submissions.proofreadingCorrections">Исправления</message>
-	<message key="author.submissions.confirmDelete">Хотите стереть эту неполную статью?</message>
+	<message key="author.submit.step4">Шаг 4. Загрузка дополнительных файлов</message>
+	<message key="author.submit.step4a">Шаг 4a. Добавить дополнительный файл</message>
+	<message key="author.submit.step5">Шаг 5. Подтверждение отправки</message>
+	<message key="author.submit.start">1. Начало</message>
+	<message key="author.submit.upload">2. Статья</message>
+	<message key="author.submit.metadata">3. Метаданные</message>
+	<message key="author.submit.supplementaryFiles">4. Дополнительные файлы</message>
+	<message key="author.submit.confirmation">5. Подтверждение</message>
+	<message key="author.submit.cancelSubmission">Вы можете закончить эту отправку позже, выбрав «Статьи в работе» на домашней странице автора.</message>
+	<message key="author.submit.notAccepting">Этот журнал сейчас не принимает статьи.</message>
+	<message key="author.submit.requestWaiver">Запрос отмены оплаты</message>
+	<message key="author.submit.qualifyForWaiver">Пожалуйста рассмотрите возможность сделать исключение и отменить плату за отправку данной статьи</message>
+	<message key="author.submit.addReasonsForWaiver">Пожалуйста, используйте поле комментариев ниже для указания причин, почему плата должна быть отменена.</message>
+	<message key="author.submit.mustEnterWaiverReason">Если Вы просите отменить плату за отправку, вы должны указать причину в имеющемся поле.</message>
+	<message key="author.submissions.queuedReviewSubsequent">На рецензии: (раунд {$round})</message>
+	<message key="author.submissions.queuedReviewRevisions">На рецензии: Требуются изменения</message>
+	<message key="author.submissions.queuedEditingCopyedit">На редакции: Требуется литературное редактирование</message>
+	<message key="author.submissions.queuedEditingProofread">На редакции: Требуется вычитка</message>
+	<message key="author.submissions.uploadCopyeditedVersion">Загрузить версию с литературной редакцией</message>
+	<message key="author.submissions.proofreadingCorrections">Исправления при вычитке</message>
+	<message key="author.submissions.confirmDelete">Вы уверены, что хотите удалить эту не завершенную отправку статьи?</message>
 	<message key="author.submissions.viewStatus">Посмотреть статус</message>
-	<message key="author.submissions.noSubmissions">Нет статей.</message>
-	<message key="author.submit.howToSubmit"><![CDATA[Проблемы? Свяжитесь с <a href="mailto:{$supportEmail}">{$supportName}</a>, чтобы получить помощь ({$supportPhone}).]]></message>
-	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Проблемы? Свяжитесь с <a href="mailto:{$supportEmail}">{$supportName}</a>, чтобы получить помощь.]]></message>
+	<message key="author.submissions.noSubmissions">Нет отправленных статей.</message>
+	<message key="author.submit.howToSubmit"><![CDATA[Столкнулись с трудностями? Свяжитесь с <a href="mailto:{$supportEmail}">{$supportName}</a>, чтобы получить помощь ({$supportPhone}).]]></message>
+	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Столкнулись с трудностями? Свяжитесь с <a href="mailto:{$supportEmail}">{$supportName}</a>, чтобы получить помощь.]]></message>
 	<message key="author.submit.journalSection">Раздел журнала</message>
-	<message key="author.submit.journalSectionDescription"><![CDATA[Выберите подходящий раздел для этой статьи (см. список разделов в <a href="{$aboutUrl}" target="_new">Описании</a> Журнала).]]></message>
-	<message key="submission.submit.selectSection">Выберите раздел...</message>
-	<message key="submission.submit.submissionChecklist">Требования к статье</message>
-	<message key="submission.submit.submissionChecklistDescription">Авторы должны подтвердить, что их материал соответствует всем приведенным ниже условиям. Только в этом случае они могут перейти к следующему этапу депонирования статьи (Шаг 2).</message>
-	<message key="author.submit.verifyChecklist">Отметьте все указанные условия</message>
-	<message key="author.submit.copyrightNoticeAgree">Авторы согласны с Условиями Передачи Прав на Копирование и Распространение материалов этой статьи, которые будут применены кода (и если) статья будет опубликована (ниже можно оставить комментарии для редактора).</message>
-	<message key="author.submit.copyrightNoticeAgreeRequired">Вы должны согласиться с Условиями Передачи Прав перед тем как продолжить.</message>
-	<message key="submission.submit.coverNote">Комментарии для Редакторов</message>
-	<message key="author.submit.comments">Введите текст (по желанию)</message>
-	<message key="author.submit.form.sectionRequired">Пожалуйста выберите подходящий для этой статьи раздел журнала</message>
-	<message key="submission.submit.privacyStatement">Заявление о Конфиденциальности</message>
-	<message key="author.submit.reorderInstructions">Переставьте имена авторов в порядке, как они будут указаны в публикации.</message>
+	<message key="author.submit.journalSectionDescription"><![CDATA[Выберите подходящий раздел для этой статьи (смотрите «Политика разделов журнала» на странице <a href="{$aboutUrl}" target="_new">«О журнале»</a>).]]></message>
+	<message key="author.submit.selectSection">Пожалуйста, выберите раздел...</message>
+	<message key="author.submit.submissionLocale">Язык отправляемой статьи</message>
+	<message key="author.submit.submissionLocaleDescription">Этот журнал принимает статьи на нескольких языках. Выберите основной язык отправляемой статьи из раскрывающегося списка ниже.</message>
+	<message key="author.submit.submissionChecklist">Контрольный список подготовки статьи к отправке</message>
+	<message key="author.submit.submissionChecklistDescription">Подтвердите, что отправляемая статья готова для рассмотрения этим журналом, отметив следующие пункты (комментарии для редактора могут быть добавлены ниже).</message>
+	<message key="author.submit.verifyChecklist">Перед продолжением отправки вы должны убедиться, что выполнены все пункты в контрольном списке подготовки статьи к отправке.</message>
+	<message key="author.submit.copyrightNoticeAgree">Авторы согласны с Условиями передачи авторских прав, которые будут применены к этой статье в случае, если эта статья будет опубликована этим журналом (комментарии для редактора могут быть добавлены ниже).</message>
+	<message key="author.submit.copyrightNoticeAgreeRequired">Перед продолжением отправки вы должны принять Условия передачи авторских прав.</message>
+	<message key="author.submit.commentsForEditor">Комментарии для редактора</message>
+	<message key="author.submit.comments">Введите текст (не обязательно)</message>
+	<message key="author.submit.form.sectionRequired">Пожалуйста, выберите подходящий раздел журнала для этой статьи</message>
+	<message key="author.submit.form.localeRequired">Пожалуйста, выберите язык отправляемой статьи.</message>
+	<message key="author.submit.privacyStatement">Заявление журнала о конфиденциальности</message>
+	<message key="author.submit.reorderInstructions">Переставьте имена авторов в том порядке, в котором они должны быть указаны в публикации.</message>
 	<message key="author.submit.reorder">Переставить имена авторов</message>
-	<message key="author.submit.selectPrincipalContact">Лицо (автор) для связи с редактором.</message>
+	<message key="author.submit.selectPrincipalContact">Основной автор для переписки с редакцией.</message>
 	<message key="author.submit.addAuthor">Добавить автора</message>
 	<message key="author.submit.deleteAuthor">Удалить автора</message>
-	<message key="author.submit.submissionIndexingDescription">Укажите ключевые слова для индексирования этой статьи, отделяя их друг от друга точками с запятой (слово1; слово2; слово3).</message>
-	<message key="author.submit.coverageInstructions">Опишите географический и исторический (временной) охват Вашего исследования.</message>
-	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Russian=ru. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Дополнительные коды</a>.]]></message>
-	<message key="author.submit.form.authorRequired">Требуется минимум один автор.</message>
-	<message key="author.submit.form.authorRequiredFields">Нужно ввести имя, фамилию и электронный адрес каждого автора.</message>
-	<message key="author.submit.form.titleRequired">Введите название Вашей статьи</message>
-	<message key="author.submit.form.abstractRequired">Пожалуйста введите тезисы (abstract) вашей статьи.</message>
-	<message key="author.submit.form.wordCountAlert">Превышено максимальное количество слов для тезисов в этом разделе.</message>
-	<message key="author.submit.submissionFile">Файл статьи</message>
-	<message key="author.submit.uploadSubmissionFile">Загрузить файл</message>
-	<message key="author.submit.replaceSubmissionFile">Заменить файл</message>
-	<message key="author.submit.noSubmissionFile">Нет загруженных файлов</message>
-	<message key="author.submit.noSubmissionConfirm">Уверены, что хотите продолжить без загрузки файла статьи?</message>
-	<message key="author.submit.supplementaryFilesInstructions">Этот необязательный шаг позволяет добавить к статье Дополнительные Файлы. Файлы, которые могут быть в любом формате, могут включать в себя (a) использованные оригинальные программы, (b) наборы данных, в соответствии с принятыми правилам этики, (c) источники, которые иначе не были бы доступны читателям, (d) картинки и таблицы, которые нельзя вставить в текст, или другие материалы, которые добавляют ценности работе.</message>
-	<message key="author.submit.supplementaryFiles.saveToUpload">Нажмите "Сохранить", чтобы загрузить файл (после этого можно будет загрузить другие файлы).</message>
-	<message key="author.submit.forgottenSubmitSuppFile">Уверены, что хотите продолжить без загрузки дополнительных файлов, которые Вы собирались загрузить?</message>
-	<message key="author.submit.noSupplementaryFiles">Нет дополнительных файлов к этой статье.</message>
-	<message key="author.submit.backToSupplementaryFiles">Обратно к дополнительным файлам</message>
-	<message key="author.submit.confirmDeleteSuppFile">Стереть этот дополнительный файл?</message>
+	<message key="author.submit.submissionIndexingDescription">Укажите ключевые слова для индексирования этой статьи; ключевые слова разделяйте точками с запятой (слово1; слово2; слово3).</message>
+	<message key="author.submit.submissionSupportingAgencies">Благодарность и поддержка</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Укажите агентства (лицо, организацию или службу), которые внесли свой вклад в содержание, обеспечили финансирование или поддержку работы, представленной в этой статье. Разделяйте их точками с запятой (например, Иван Иванов, Университет Метро; Master University, Department of Computer Science).</message>
+	<message key="author.submit.coverageInstructions">Опишите геопространственный, хронологический или исторический охват вашего исследования и/или характеристики исследуемого объекта.</message>
+	<message key="author.submit.subjectClassInstructions">Используйте систему классификации с гиперссылками для выбора подходящих классификационных категорий и их номеров (если эти номера существуют).</message>
+	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es; Russian=ru. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Дополнительные коды</a>.]]></message>
+	<message key="author.submit.form.authorRequired">Минимум один автор обязателен.</message>
+	<message key="author.submit.form.authorRequiredFields">Для каждого автора обязательно нужно ввести имя, фамилию и адрес электронной почты.</message>
+	<message key="author.submit.form.titleRequired">Пожалуйста, введите название вашей статьи.</message>
+	<message key="author.submit.form.abstractRequired">Пожалуйста, введите аннотацию вашей статьи.</message>
+	<message key="author.submit.form.wordCountAlert">Вы превысили максимальное количество слов для аннотации в этом разделе.</message>
+	<message key="author.submit.submissionFile">Отправляемый файл статьи</message>
+	<message key="author.submit.uploadSubmissionFile">Загрузить файл для отправки</message>
+	<message key="author.submit.replaceSubmissionFile">Заменить файл для отправки</message>
+	<message key="author.submit.noSubmissionFile">Файл для отправки не загружен.</message>
+	<message key="author.submit.noSubmissionConfirm">Вы уверены, что хотите продолжить без загрузки файла отправляемой статьи?</message>
+	<message key="author.submit.supplementaryFilesInstructions">Этот шаг не обязателен, он позволяет добавить к вашей статье дополнительные файлы. Файлы, которые могут быть в любом формате, могут включать в себя (a) использованные для проведения исследования программы, (b) наборы данных, которые построены в соответствии с принятыми правилами этики исследований, (c) источники, которые иным способом были бы недоступны читателям, (d) рисунки и таблицы, которые нельзя вставить в сам текст, или другие материалы, которые добавляют ценности работе.</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">Нажмите «Сохранить», чтобы загрузить файл (после этого можно будет загрузить другие файлы).</message>
+	<message key="author.submit.forgottenSubmitSuppFile">Вы уверены, что хотите продолжить без загрузки дополнительного файла, который вы выбрали?</message>
+	<message key="author.submit.noSupplementaryFiles">Дополнительные файлы не были добавлены к этой статье.</message>
+	<message key="author.submit.backToSupplementaryFiles">Назад к Дополнительным файлам</message>
+	<message key="author.submit.confirmDeleteSuppFile">Вы уверены, что хотите удалить этот дополнительный файл?</message>
 	<message key="author.submit.uploadSuppFile">Загрузить дополнительный файл</message>
 	<message key="author.submit.addSupplementaryFile">Добавить дополнительный файл</message>
 	<message key="author.submit.editSupplementaryFile">Редактировать дополнительный файл</message>
 	<message key="author.submit.supplementaryFileData">Метаданные дополнительного файла</message>
-	<message key="author.submit.supplementaryFileDataDescription">Для индексации дополнительного материала нужна следующая информация.</message>
+	<message key="author.submit.supplementaryFileDataDescription">Для индексации дополнительного материала укажите следующие метаданные для загруженного дополнительного файла.</message>
 	<message key="author.submit.supplementaryFileUpload">Дополнительный файл</message>
-	<message key="author.submit.suppFile.createrOrOwner">Автор (собственник) файла</message>
-	<message key="author.submit.suppFile.researchInstrument">Исследовательские инструменты</message>
+	<message key="author.submit.suppFile.createrOrOwner">Создатель (или владелец) файла</message>
+	<message key="author.submit.suppFile.researchInstrument">Инструмент исследования</message>
 	<message key="author.submit.suppFile.researchMaterials">Материалы исследования</message>
 	<message key="author.submit.suppFile.researchResults">Результаты исследования</message>
 	<message key="author.submit.suppFile.transcripts">Транскрипты</message>
 	<message key="author.submit.suppFile.dataAnalysis">Анализ данных</message>
-	<message key="author.submit.suppFile.dataSet">Данные</message>
-	<message key="author.submit.suppFile.sourceText">Чистый текст</message>
+	<message key="author.submit.suppFile.dataSet">Набор данных</message>
+	<message key="author.submit.suppFile.sourceText">Исходный текст</message>
 	<message key="author.submit.suppFile.briefDescription">Краткое описание</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Спонсор</message>
-	<message key="author.submit.suppFile.availableToPeers">Представить чистый текст (без метаданных) рецензентам, чтобы статья могла быть рецензирована анонимно.</message>
-	<message key="author.submit.suppFile.publisherDescription">Описание: Использовать только для официально опубликованных материалов.</message>
-	<message key="author.submit.suppFile.dateDescription">Дата создания инструмента.</message>
+	<message key="author.submit.suppFile.contributorOrSponsor">Предоставивший материал или спонсор</message>
+	<message key="author.submit.suppFile.availableToPeers">Предоставить файл рецензентам (без метаданных), так как он не нарушает требования слепого рецензирования.</message>
+	<message key="author.submit.suppFile.publisherDescription">Использовать только для официально опубликованных материалов.</message>
+	<message key="author.submit.suppFile.dateDescription">Дата сбора данных или создания инструмента.</message>
 	<message key="author.submit.suppFile.sourceDescription">Название исследования или других источников.</message>
-	<message key="author.submit.suppFile.specifyOtherType">Уточнить какие</message>
-	<message key="author.submit.suppFile.noFile">Нет загруженных материалов</message>
-	<message key="author.submit.suppFile.form.titleRequired">Введите название дополнительного файла</message>
-	<message key="author.submit.suppFile.form.subjectRequired">Введите предмет</message>
-	<message key="author.submit.suppFile.form.descriptionRequired">Введите описание</message>
-	<message key="author.suppFile.suppFilePublicIdentificationExists">Идентификаторы дополнительных файлов уже заданы.</message>
-	<message key="author.suppFile.publicSuppFileIdentifier">Идентификатор дополнительного файла</message>
-	<message key="author.submit.confirmationDescription">Нажмите "Завершить Отправку", чтобы отправить Вашу статью в журнал {$journalTitle}. Автор, который указан в качестве контакта для связи с редакцией, получит подтверждение по электронной почте и получит возможность следить за продвижением статьи через редакционный процесс на сайте журнала. Спасибо за интерес к публикации в журнале {$journalTitle}.</message>
-	<message key="author.submit.noFiles">У этой статьи нет прикрепленных файлов</message>
-	<message key="author.submit.filesSummary">Резюме файлов</message>
+	<message key="author.submit.suppFile.specifyOtherType">Задать другой</message>
+	<message key="author.submit.suppFile.noFile">Ни один файл не загружен.</message>
+	<message key="author.submit.suppFile.form.titleRequired">Пожалуйста, введите название этого дополнительного файла.</message>
+	<message key="author.submit.suppFile.form.subjectRequired">Пожалуйста, введите тему.</message>
+	<message key="author.submit.suppFile.form.descriptionRequired">Пожалуйста, введите описание.</message>
+	<message key="author.suppFile.suppFilePublicIdentificationExists">Открытая идентификация дополнительного файла уже задана.</message>
+	<message key="author.suppFile.publicSuppFileIdentifier">Открытый идентификатор дополнительного файла</message>
+	<message key="author.submit.confirmationDescription">Нажмите «Завершить отправку», чтобы отправить вашу статью в журнал «{$journalTitle}». Основной автор, указанный для переписки с редакцией, получит подтверждение по электронной почте и будет иметь возможность следить за прохождением статьи через редакционный процесс на веб-сайте журнала. Спасибо за интерес к публикации в журнале «{$journalTitle}».</message>
+	<message key="author.submit.noFiles">Ни один файл не был прикреплен к этой отправке статьи.</message>
+	<message key="author.submit.filesSummary">Сведения о файлах</message>
 	<message key="author.submit.finishSubmission">Завершить отправку</message>
-	<message key="author.submit.submissionComplete">Статья отправлена. Спасибо за интерес к публикации в журнале {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Если эта статья уже в готовом для публикации формате и не требует рецензии, редактирования и форматированя, ее можно поместить непосредственно на последнюю стадию процесс Редактирования <a href="{$expediteUrl}" class="action">нажав здесь</a>. (заметьте: только редакторы журнала могут воспользоваться этой возможностью.)]]></message>
-	<message key="author.article.uploadAuthorVersion">Загрузить Авторскую Версию</message>
-	<message key="author.article.copyeditedFile">Редактированный Файл</message>
-	<message key="author.article.authorRevisedFile">Авторский Файл</message>
-	<message key="author.submit.authorSubmitLoginMessage">Для отправки статьи в этот журнал требуется регистрация. Это позволяет нашим редакторам связаться с Вами, когда статус Ваших статей меняется или требуется дополнительная информация.</message>
+	<message key="author.submit.submissionComplete">Статья отправлена. Спасибо за интерес к публикации в журнале «{$journalTitle}».</message>
+	<message key="author.submit.expedite"><![CDATA[Если эта статья уже представлена в формате, готовом для публикации, и не требует  рецензирования, редактирования или форматирования, ее можно поместить непосредственно на последнюю стадию процесса редактирования, <a href="{$expediteUrl}" class="action">нажав на эту ссылку</a>. (Замечание: только редакторы журнала могут воспользоваться этой возможностью для своих статей.)]]></message>
+	<message key="author.article.uploadAuthorVersion">Загрузить авторскую версию</message>
+	<message key="author.article.copyeditedFile">Файл после литературного редактирования</message>
+	<message key="author.article.authorRevisedFile">Файл автора</message>
+	<message key="author.submit.authorSubmitLoginMessage">Для отправки статьи в этот журнал требуется учетная запись. Это позволит нашим редакторам отслеживать отправленные вами статьи и связаться с вами, когда статус статьи меняется или от вас требуется дополнительная информация.</message>
 </locale>
