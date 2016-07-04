@@ -415,7 +415,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="sectionEditor.proofreader.confirmRenotify">Ponowne powiadomienie korektora spowoduje zresetowanie jego przydziału.</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Odmowy</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} Odmowy recenzentów, anulowania, wcześniejsze etapy</message>
+	<message key="sectionEditor.regrets.title">#{$submissionId} Odmowy recenzentów, anulowania, wcześniejsze etapy</message>
 	<message key="sectionEditor.regrets">Odmowy</message>
 	<message key="sectionEditor.regrets.link">Odmowy, anulowania, wcześniejsze etapy</message>
 	<message key="sectionEditor.regrets.reviewRound">Recenzja, etap {$round}</message>
@@ -697,48 +697,48 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} wysłał nowy tekst, ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} dokonał edycji tekstu {$articleId}. Nowy identyfikator pliku to {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} nie recenzuje tekstu {$articleId} w etapie {$round}.</message>
-	<message key="log.review.reviewInitiated">Recenzja {$reviewerName} tekstu {$articleId} w etapie {$round} została rozpoczęta.</message>
-	<message key="log.review.reviewReinitiated">Recenzja {$reviewerName} tekstu {$articleId} w etapie {$round} została ponownie rozpoczęta.</message>
-	<message key="log.review.reviewCancelled">Recenzja {$reviewerName} tekstu {$articleId} w etapie {$round} została anulowana.</message>
-	<message key="log.review.reviewCleared">Recenzja {$reviewerName} tekstu {$articleId} w etapie {$round} została usunięta.</message>
-	<message key="log.review.reviewerRated">Recenzent {$reviewerName} został oceniony w etapie {$round} dla recenzowanego tekstu {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">Termin ukończenia recenzji w etapie {$round} dla tekstu {$articleId} recenzowanego przez {$reviewerName} został ustalony na {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">Rekomendacje dla etapu {$round} recenzji tekstu {$articleId} wykonywanej przez {$reviewerName} zostały ustalone.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">Rekomendacje dla etapu {$round} recenzji tekstu {$articleId} zostały ustalone przez redaktora {$editorName}, w imieniu recenzenta {$reviewerName}.</message>
-	<message key="log.review.resubmit">Tekst {$articleId} został przesłany ponownie do recenzji.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} odmówił recenzji tekstu {$articleId} w etapie {$round}.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} zaakceptował wykonanie recenzji tekstu {$articleId} dla rundy {$round}.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} niezaaakceptował recenzji w etapie {$round} dla tekstu {$articleId}, w imieniu recenzenta {$reviewerName}.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} zaakceptował recenzję w etapie {$round} dla tekstu {$articleId}, w imieniu {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">Redaktor {$userName} przesłał plik recenzji w etapie {$round} tekstu {$articleId} w imieniu recenzenta {$reviewerName}.</message>
+	<message key="log.author.documentRevised">{$authorName} dokonał edycji tekstu {$submissionId}. Nowy identyfikator pliku to {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} nie recenzuje tekstu {$submissionId} w etapie {$round}.</message>
+	<message key="log.review.reviewInitiated">Recenzja {$reviewerName} tekstu {$submissionId} w etapie {$round} została rozpoczęta.</message>
+	<message key="log.review.reviewReinitiated">Recenzja {$reviewerName} tekstu {$submissionId} w etapie {$round} została ponownie rozpoczęta.</message>
+	<message key="log.review.reviewCancelled">Recenzja {$reviewerName} tekstu {$submissionId} w etapie {$round} została anulowana.</message>
+	<message key="log.review.reviewCleared">Recenzja {$reviewerName} tekstu {$submissionId} w etapie {$round} została usunięta.</message>
+	<message key="log.review.reviewerRated">Recenzent {$reviewerName} został oceniony w etapie {$round} dla recenzowanego tekstu {$submissionId}.</message>
+	<message key="log.review.reviewDueDateSet">Termin ukończenia recenzji w etapie {$round} dla tekstu {$submissionId} recenzowanego przez {$reviewerName} został ustalony na {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">Rekomendacje dla etapu {$round} recenzji tekstu {$submissionId} wykonywanej przez {$reviewerName} zostały ustalone.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">Rekomendacje dla etapu {$round} recenzji tekstu {$submissionId} zostały ustalone przez redaktora {$editorName}, w imieniu recenzenta {$reviewerName}.</message>
+	<message key="log.review.resubmit">Tekst {$submissionId} został przesłany ponownie do recenzji.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} odmówił recenzji tekstu {$submissionId} w etapie {$round}.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} zaakceptował wykonanie recenzji tekstu {$submissionId} dla rundy {$round}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} niezaaakceptował recenzji w etapie {$round} dla tekstu {$submissionId}, w imieniu recenzenta {$reviewerName}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} zaakceptował recenzję w etapie {$round} dla tekstu {$submissionId}, w imieniu {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">Redaktor {$userName} przesłał plik recenzji w etapie {$round} tekstu {$submissionId} w imieniu recenzenta {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Plik recenzenta został wysłany.</message>
-	<message key="log.editor.decision">Decyzja redaktora ({$decision}) dla artykułu {$articleId} została zapisana przez {$editorName}.</message>
+	<message key="log.editor.decision">Decyzja redaktora ({$decision}) dla artykułu {$submissionId} została zapisana przez {$editorName}.</message>
 
 
-	<message key="log.copyedit.initiate">Redakcja techniczna tekstu {$articleId} została rozpoczęta przez {$copyeditorName}.</message>
+	<message key="log.copyedit.initiate">Redakcja techniczna tekstu {$submissionId} została rozpoczęta przez {$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">Domyślny, zredagowany plik został wybrany.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} ukończył wstępną redakcję tekstu {$articleId}.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} ukończył finalną redakcję tekstu {$articleId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} został przydzielony do wykonania prac redaktorskich tekstu {$articleId}.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} ukończył wstępną redakcję tekstu {$submissionId}.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} ukończył finalną redakcję tekstu {$submissionId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} został przydzielony do wykonania prac redaktorskich tekstu {$submissionId}.</message>
 	<message key="log.copyedit.copyeditorFile">Zredagowana wersja pliku została przesłana.</message>
 	<message key="log.copyedit.authorFile">Wersja pliku zredagowana przez autora została przesłana.</message>
 
-	<message key="log.layout.layoutEditorAssigned">{$editorName} został przydzielony do artykułu {$articleId} jako specjalista DTP.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} nie jest już przydzielony do artykułu {$articleId} jako specjalista DTP.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} ukończył prace DTP dla artykułu {$articleId}.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} został przydzielony do artykułu {$submissionId} jako specjalista DTP.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} nie jest już przydzielony do artykułu {$submissionId} jako specjalista DTP.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} ukończył prace DTP dla artykułu {$submissionId}.</message>
 
 	<message key="log.editor.metadataModified">Metadane tekstu zostały zmienione przez {$editorName}.</message>
 	<message key="log.editor.editorFile">Wersja redaktorska pliku została wysłana.</message>
-	<message key="log.editor.archived">Tekst {$articleId} został zarchiwizowany.</message>
-	<message key="log.editor.restored">Tekst {$articleId} został przywrócony do kolejki.</message>
-	<message key="log.editor.editorAssigned">{$editorName} został przydzielony jako redaktor do tekstu {$articleId}.</message>
+	<message key="log.editor.archived">Tekst {$submissionId} został zarchiwizowany.</message>
+	<message key="log.editor.restored">Tekst {$submissionId} został przywrócony do kolejki.</message>
+	<message key="log.editor.editorAssigned">{$editorName} został przydzielony jako redaktor do tekstu {$submissionId}.</message>
 
-	<message key="log.proofread.assign">{$assignerName} przydzielił korektora {$proofreaderName} do korekty tekstu {$articleId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} przesłał tekst {$articleId} do publikacji.</message>
+	<message key="log.proofread.assign">{$assignerName} przydzielił korektora {$proofreaderName} do korekty tekstu {$submissionId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} przesłał tekst {$submissionId} do publikacji.</message>
 
-	<message key="log.imported">{$userName} ukończył importowanie artykułu {$articleId}.</message>
+	<message key="log.imported">{$userName} ukończył importowanie artykułu {$submissionId}.</message>
 
 	<!-- Reading Tools entries -->
 
