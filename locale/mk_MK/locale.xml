@@ -196,7 +196,7 @@
 	<message key="journal.currentIssue">Тековно издание</message>
 	<message key="journal.journals">Списанија</message>
 	<message key="journal.path">Патека</message>
-	<message key="journal.journal">Списание</message>
+	<message key="context.context">Списание</message>
 	<message key="journal.issn">ISSN</message>
 
 	<!-- User -->

@@ -25,11 +25,11 @@
 	<message key="author.submit.step4">Чекор 4. Прикачување на дополнителни датотеки</message>
 	<message key="author.submit.step4a">Чекор 4а. Додај дополнителна датотека</message>
 	<message key="author.submit.step5">Чекор 5. Потврда за поднесувањето</message>
-	<message key="author.submit.start">1. Почеток</message>
-	<message key="author.submit.upload">2. Прикачи датотека</message>
-	<message key="author.submit.metadata">3. Внеси метаподатоци</message>
-	<message key="author.submit.supplementaryFiles">4. Прикачи дополнителни датотеки</message>
-	<message key="author.submit.confirmation">5. Потврда</message>
+	<message key="author.submit.start">Почеток</message>
+	<message key="author.submit.upload">Прикачи датотека</message>
+	<message key="author.submit.metadata">Внеси метаподатоци</message>
+	<message key="author.submit.supplementaryFiles">Прикачи дополнителни датотеки</message>
+	<message key="author.submit.confirmation">Потврда</message>
 	<message key="author.submit.cancelSubmission">Поднесувањето може да го завршите подоцна со избирање на „Активни поднесувања“ од почетната страна.</message>
 	<message key="author.submit.notAccepting">Ова списание моментално не прифаќа поднесување на документи.</message>
 	<message key="author.submit.requestWaiver">Барање за откажување</message>
@@ -49,19 +49,19 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Имате проблем? Контактирајте не <a href="mailto:{$supportEmail}">{$supportName}</a> за помош.]]></message>
 	<message key="author.submit.journalSection">Оддел за списание</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Селектирајте го соодветниот оддел за ова поднесување (Види Оддел и Правила во<a href="{$aboutUrl}" target="_new">За</a> списанието).]]></message>
-	<message key="author.submit.selectSection">Ве молиме изберете оддел...</message>
+	<message key="submission.submit.selectSection">Ве молиме изберете оддел...</message>
 	<message key="author.submit.submissionLocale">Јазик на датотеката</message>
 	<message key="author.submit.submissionLocaleDescription">Системот прифаќа датотеки на неколку јазици. Изберете го основниот јазик на датотеката на паѓачкото мени подолу.</message>
 	<message key="author.submit.submissionChecklist">Список за проверка на поднесувањето</message>
-	<message key="author.submit.submissionChecklistDescription">Обележете дека ова поднесување е подготвено да се смета од страна на системот со проверка на следниве ( коментари до уредникот може да се дадат подолу ).</message>
+	<message key="submission.submit.submissionChecklistDescription">Обележете дека ова поднесување е подготвено да се смета од страна на системот со проверка на следниве ( коментари до уредникот може да се дадат подолу ).</message>
 	<message key="author.submit.verifyChecklist">Мора да бидете сигурни дека сите ставки во доставувањето се исполнети пред да продолжите понатаму.</message>
 	<message key="author.submit.copyrightNoticeAgree">Авторите се согласуваат со авторските права кои ќе бидат применети на овој труд, ако и кога ќе биде објавен ( коментарите до уредникот може да се дадат подолу ).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Мора да се согласите со Авторските права пред да продолжите.</message>
-	<message key="author.submit.commentsForEditor">Коментари за уредникот</message>
+	<message key="submission.submit.coverNote">Коментари за уредникот</message>
 	<message key="author.submit.comments">Внеси текст ( опционално )</message>
 	<message key="author.submit.form.sectionRequired">Ве молиме одберете секција која ќе одговара за вашето поднесување.</message>
 	<message key="author.submit.form.localeRequired">Ве молиме изберете јазик на документот</message>
-	<message key="author.submit.privacyStatement">Изјава за приватност</message>
+	<message key="submission.submit.privacyStatement">Изјава за приватност</message>
 	<message key="author.submit.reorderInstructions">Редослед по кој авторите ќе се прикажуваат</message>
 	<message key="author.submit.reorder">Промена на редоследот на имињата на авторите</message>
 	<message key="author.submit.selectPrincipalContact">Главен контакт на уредувачкиот дописник</message>
