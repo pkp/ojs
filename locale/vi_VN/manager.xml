@@ -98,7 +98,7 @@
 	<message key="manager.sections.readingTools">Công cụ đọc</message>
 	<message key="manager.sections.reviewed">Đã phản biện chuyên gia</message>
 	<message key="manager.sections.submissionIndexing">Sẽ không được đưa vào chỉ mục của tạp chí</message>
-	<message key="manager.sections.submissionReview">Sẽ không được phản biện chuyên gia </message>
+	<message key="manager.sections.submissionReview">Sẽ không được phản biện chuyên gia</message>
 	<message key="manager.section.submissionsToThisSection">Bài nộp cho chuyên mục này trên tạp chí</message>
 	<message key="manager.sections.unassigned">Các BTV chuyên mục hiện có</message>
 	<message key="manager.setup">Thiết lập</message>
@@ -116,7 +116,7 @@
 	<message key="manager.setup.announcementsDescription">Các thông báo có thể được công bố để thông tin cho bạn đọc về tin tức và sự kiện của tạp chí. Các thông báo được công bố sẽ xuất hiện ở trang Thông báo.</message>
 	<message key="manager.setup.announcementsIntroduction">Thông tin bổ sung</message>
 	<message key="manager.setup.announcementsIntroductionDescription">Nhập bất kỳ thông tin bổ sung nào cần cung cấp cho bạn đọc trên trang Thông báo.</message>
-	<message key="manager.setup.appearInAboutJournal">(Sẽ hiển thị ở mục Giới thiệu Tạp chí) </message>
+	<message key="manager.setup.appearInAboutJournal">(Sẽ hiển thị ở mục Giới thiệu Tạp chí)</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Đòi hỏi các Tác giả nộp bài phải nộp một bản cáo bạch về Những lợi ích xung đột kèm theo bài nộp của minh.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Yêu cầu những Người phản biện nộp một bản cáo bạch về xung đột lợi ích kèm theo mỗi bài phản biện chuyên gia.</message>
 	<message key="manager.setup.copyeditInstructions">Hướng dẫn Biên tập bản thảo</message>
@@ -200,7 +200,7 @@
 	<message key="manager.setup.journalTheme">Tông giao diện tạp chí</message>
 	<message key="manager.setup.journalTitle">Tên tạp chí</message>
 	<message key="manager.setup.labelName">Tên nhãn</message>
-	<message key="manager.setup.layoutInstructions">Hướng dẫn Trình bày </message>
+	<message key="manager.setup.layoutInstructions">Hướng dẫn Trình bày</message>
 	<message key="manager.setup.layoutInstructionsDescription">Có thể xây dựng Hướng dẫn Trình bày cho việc định dạng các bài viết xuất bản trong tạp chí và được nhập dưới đây dưới dạng HTML hoặc text. Hướng dẫn này sẽ được cung cấp cho BTV trình bày và BTV chuyên mục ở trang Biên tập dành cho mỗi bìa nộp. (Vì mỗi tạp chí có thể sử dụng định dạng file riêng, tiêu chuẩn thư mục riêng, trang định dạng riêng, v.v.., vị vậy bộ tài liệu hướng dẫn chuẩn không được cung cấp.)</message>
 	<message key="manager.setup.layoutTemplates">Mẫu trình bày</message>
 	<message key="manager.setup.layoutTemplatesDescription">Các mẫu trình bày có thể được tải lên ở phần Trình bày cho từng định dạng trong các định dạng chuẩn được xuất bản trong tạp chí (v.d., bài viết, điểm sách,...) sử dụng bất kỳ định đạng file nào (v.d., pdf, doc, ...) cùng với chú thích cụ thể về font chữ, kích thước, lề, v.v.. như là một hướng dẫn cho BTV trình bày và Người soát lỗi.</message>
