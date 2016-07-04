@@ -16,7 +16,6 @@
 	<message key="admin.hostedJournals">Revistes allotjades</message>
 	<message key="admin.settings.journalRedirect">Redirecció a la revista</message>
 	<message key="admin.settings.options">Opcions</message>
-	<message key="admin.settings.useAlphalist">A llocs web que contenen moltes revistes, mostra a la portada una llista ordenada alfabèticament que permet la navegació ràpida entre revistes.</message>
 	<message key="admin.settings.usePaging">A llocs web que contenen moltes revistes, divideix la llista de revistes en vàries pàgines.</message>
 	<message key="admin.settings.journalRedirectInstructions">Les peticions al lloc web principal són redireccionades a aquesta revista. Això pot ser útil si el lloc web únicament allotja una sola revista, per exemple.</message>
 	<message key="admin.settings.noJournalRedirect">No redireccionis</message>
@@ -31,7 +30,6 @@
 	<message key="admin.locale.maybeIncomplete">Les configuracions regionals marcades poden estar incompletes.</message>
 	<message key="admin.languages.confirmUninstall">Esteu segurs que voleu suprimir aquesta configuració regional? Aquesta acció pot afectar les revistes allotjades que fan servir aquesta configuració regional.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Seleccioneu les llengües addicionals que vulgueu utilitzar en aquest sistema. Cal que instal·leu les configuracions regionals abans que les revistes allotjades les puguin fer servir. Consulteu la documentació de l'OJS per obtenir més informació sobre com instal·lar llengües addicionals.</message>
-	<message key="admin.languages.downloadLocales">Descarrega configuracions regionals</message>
 	<message key="admin.languages.downloadFailed">La descàrrega de la configuració regional ha fallat. El missatge d'error a continuació descriu el problema.</message>
 	<message key="admin.languages.localeInstalled">La configuració regional "{$locale}" s'ha instal·lat.</message>
 	<message key="admin.languages.download">Descarrega la configuració regional</message>
@@ -50,7 +48,6 @@
 	<message key="admin.contexts.create">Crea una revista</message>
 	<message key="admin.journals.createInstructions">Rebreu automàticament el rol de director d'aquesta revista. Després de crear una revista nova, entreu-hi com a administradors per continuar amb la configuració i l'alta d'usuaris/àries.</message>
 	<message key="admin.journals.urlWillBe">Introduïu una paraula curta o un acrònim que identifiqui la revista. L'URL de la revista és {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">Cal que introduïu un títol.</message>
 	<message key="admin.contexts.form.pathRequired">Cal que introduïu una ruta.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">La ruta només pot contenir caràcters alfanumèrics, guions baixos i guionets i ha de començar i acabar amb un caràcter alfanumèric.</message>
 	<message key="admin.contexts.form.pathExists">Ja hi ha una altra revista que utilitza la ruta seleccionada.</message>
@@ -83,21 +80,5 @@
 	<message key="admin.categories.name">Nom</message>
 	<message key="admin.categories.nameRequired">Cal que introduïu un nom de categoria.</message>
 	
-	<message key="admin.copyAccessLogFileTool.usage">Copia els fitxers d'accés d'Apache al directori de fitxers actual dins del directori UsageStatsPlugin i filtra les entrades relacionades amb la instal·lació. Cal que l'executi un usuari/ària que tingui permisos de lectura per als fitxers de registre d'Apache.
-
-Aquesta eina només copia fitxers que no són encara dins dels directoris d'estadístiques d'utilització de càrrega de fitxers (preparació, en procés, arxivat, rebutjat).
-
-Utilització: {$scriptName} ruta/al/registre/apache/fitxer.log
-Utilització (processament dels fitxers dins d'un directori): {$scriptName} ruta/apache/al/directori
-Utilització (processament dels fitxers dins d'un directori amb cadena d'inici): {$scriptName} ruta/apache/al/directori cadena_inici
-	</message>
-	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Error: no s'ha pogut crear el directori temporal {$tmpDir}</message>
-	<message key="admin.copyAccessLogFileTool.error.acessingFile">Error: El fitxer {$filePath} no existeix o no s'hi pot accedir.</message>
-	<message key="admin.copyAccessLogFileTool.error.copyingFile">Error: no s'ha pogut copiar l'arxiu de {$filePath} a {$tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.error.deletingFile">Error: no s'ha pogut esborrar l'arxiu {$tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Avís: el fitxer {$filePath} ja es troba dins del directori d'estadístiques d'utilització.</message>
-	<message key="admin.copyAccessLogFileTool.success">Èxit: {$filePath} a {$destinationPath}</message>
-	<message key="admin.settings.security">Seguretat</message>
-	<message key="admin.settings.security.plugins">Impedir que els/les gestors/es de la revista puguin instalar, actualitzar o suprimir mòduls.</message>
-	<message key="admin.languages.reloadDefaultEmailTemplates">Recarregar les plantilles de correu per defecte</message>
+	
 </locale>

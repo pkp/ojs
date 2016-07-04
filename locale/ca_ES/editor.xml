@@ -13,11 +13,7 @@
   -->
 
 <locale name="ca_ES" full_name="Català">
-	<message key="editor.article.reviewForms">Formularis de revisió</message>
-	<message key="editor.article.selectReviewForm">Selecciona un formulari de revisió</message>
-	<message key="editor.article.clearReviewForm">Esborra el formulari de revisió</message>
 	<message key="editor.home">Pàgina inicial de l’editor/a</message>
-	<message key="editor.article.confirmChangeReviewForm">Avís: Canviar el formulari de revisió afectarà les respostes dels revisors/ores en aquest formulari. Esteu segur/a que voleu continuar?</message>
 	<message key="editor.reassign">Reassignació</message>
 	<message key="editor.submissionsAndPublishing">Trameses i publicació</message>
 	<message key="editor.submissionQueue">Cua de trameses</message>
@@ -41,7 +37,6 @@
 	<message key="editor.notifyUsers.allAuthors">Tots els autors/ores publicats ({$count} usuaris/àries)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Tots els subscriptors/ores individuals ({$count} usuaris/àries)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Tots els subscriptors/ores institucionals ({$count} usuaris/àries)</message>
-	<message key="editor.notifyUsers.allMailingList">Inclou tots els correus electrònics a la llista de correu ({$count} correus electrònics)</message>
 	<message key="editor.notifyUsers.inProgress">S’està notificant als usuaris/àries...</message>
 	<message key="editor.usersNotified">S'ha notificat als usuaris/àries</message>
 	<message key="editor.notifyUsers.allUsers">Envia aquest missatge a tots els usuaris/àries associats amb aquesta revista ({$count} usuaris/àries)</message>
@@ -117,9 +112,7 @@
 	<message key="editor.issues.backToIssueGalleys">Torna a les galerades del número</message>
 	<message key="editor.issues.viewingGalley">Visualitza la galerada del número</message>
 	<message key="editor.issues.confirmDeleteGalley">Esteu segur/a que voleu suprimir aquesta galerada del número?</message>
-	<message key="editor.navigation.issues">Números</message>
 	<message key="editor.navigation.futureIssues">Propers números</message>
-	<message key="editor.navigation.createIssue">Crea un número</message>
 	<message key="editor.navigation.issueArchive">Números anteriors</message>
 	<message key="editor.article.designateReviewVersion">Designa el fitxer original com a versió de revisió</message>
 	<message key="editor.article.uploadReviewVersion">Carrega una versió de revisió revisada</message>
@@ -222,6 +215,4 @@
 	<message key="editor.article.removeCoverPage">Voleu eliminar la imatge de la portada?</message>
 	<message key="editor.article.remove">Elimina</message>
 	<message key="editor.issues.invalidAccessDate">La data d’accés no és vàlida.</message>
-	<message key="editor.publicGalleyIdentificationExists">L'identificador públic '{$publicIdentifier}' ja existeix per a una altra galerada d'aquest article. Trieu un identificador de galerada únic per a aquest article.</message>
-	<message key="editor.issues.resetArticlePublicationDates">Restabliu les dates de publicació de l'article</message>
 </locale>

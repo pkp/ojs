@@ -54,7 +54,6 @@
 	<message key="author.submit.submissionLocale">Llengua de la tramesa</message>
 	<message key="author.submit.submissionLocaleDescription">Aquesta revista accepta trameses en diverses llengües. Trieu la llengua principal de la tramesa al menú desplegable que hi ha a continuació.</message>
 	<message key="author.submit.submissionChecklist">Llista de verificació de tramesa</message>
-	<message key="submission.submit.submissionChecklistDescription">Per indicar que aquesta tramesa ja està llesta perquè la consideri la revista, comproveu els punts següents (podeu incloure comentaris per a l’editor/a a continuació).</message>
 	<message key="author.submit.verifyChecklist">Abans de continuar, comproveu que es compleixen tots els punts de la llista de verificació de la tramesa.</message>
 	<message key="author.submit.copyrightNoticeAgree">Els autors/ores accepten les condicions d’aquest avís de drets d'autor/a, que s’aplicarà quan aquesta tramesa es publiqui en aquesta revista (podeu incloure comentaris per a l’editor/a a continuació).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Abans de continuar, accepteu les condicions de l’avís de drets d'autor/a.</message>
@@ -69,10 +68,7 @@
 	<message key="author.submit.addAuthor">Afegeix un autor/a</message>
 	<message key="author.submit.deleteAuthor">Suprimeix l’autor/a</message>
 	<message key="author.submit.submissionIndexingDescription">Proporcioneu els termes per a la indexació de la tramesa i separeu-los amb punt i coma (terme1; terme2; terme3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Patrocinadors i organismes col·laboradors</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Identifiqueu els organismes (una persona, una organització o un servei) que han contribuït al contingut o que han aportat finançament o suport per a l’obra presentada en aquesta tramesa. Separeu-los amb un punt i coma (p. ex. John Doe, Metro University; Master University, Departament de Ciència Computacional).</message>
 	<message key="author.submit.coverageInstructions">Fa referència a la ubicació geospacial, a la cobertura cronològica o històrica o a les característiques de la mostra de recerca.</message>
-	<message key="author.submit.subjectClassInstructions">Utilitzeu el sistema de classificació enllaçat per seleccionar els termes de classificació i, si escau, els números.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Anglès=en; francès=fr; castellà=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Codis addicionals</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Heu d’introduir un autor/a com a mínim.</message>
 	<message key="author.submit.form.authorRequiredFields">Heu d’introduir el nom, els cognoms i l'adreça de correu electrònic de cada autor/a.</message>
@@ -105,7 +101,6 @@
 	<message key="author.submit.suppFile.dataSet">Conjunt de dades</message>
 	<message key="author.submit.suppFile.sourceText">Text original</message>
 	<message key="author.submit.suppFile.briefDescription">Descripció breu</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Agència col·laboradora o patrocinadora</message>
 	<message key="author.submit.suppFile.availableToPeers">Presenteu el fitxer als revisors/ores (sense metadades), ja que això no comprometrà l'avaluació anònima.</message>
 	<message key="author.submit.suppFile.publisherDescription">Utilitzeu-lo només amb materials publicats formalment.</message>
 	<message key="author.submit.suppFile.dateDescription">Data de la recopilació de les dades o de la creació de l’instrument.</message>
@@ -122,7 +117,6 @@
 	<message key="author.submit.filesSummary">Resum dels fitxers</message>
 	<message key="author.submit.finishSubmission">Finalitza la tramesa</message>
 	<message key="author.submit.submissionComplete">S’ha completat la tramesa. Us agraïm el vostre interès per publicar a {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Si aquesta tramesa té un format que es pugui publicar sense fer-hi cap revisió, edició o maquetació, la podeu assignar directament a la darrera etapa de la cua d’edició si <a href="{$expediteUrl}" class="action">feu clic aquí</a>. (Nota: Només els editors/ores de la revista poden utilitzar aquesta opció per a les trameses.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Carrega la versió de l’autor/a</message>
 	<message key="author.article.copyeditedFile">Fitxer corregit</message>
 	<message key="author.article.authorRevisedFile">Fitxer de l'autor/a</message>

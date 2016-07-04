@@ -29,7 +29,6 @@
 	<!-- review froms start -->
 
 	<!-- common -->
-	<message key="common.journal">Revista</message>
 
 	<!-- Journal Management -->
 
@@ -38,8 +37,6 @@
 	<message key="navigation.categories.browse">Navega</message>
 
 	<!--  peer review -->
-	<message key="submission.reviewForm">Formulari de revisió</message>
-	<message key="submission.reviewFormResponse">Resposta al formulari de revisió</message>
 
 
 	<message key="reviewer.article.enterReviewForm">Feu clic a la icona per emplenar el formulari de revisió.</message>
@@ -58,7 +55,6 @@
 	<message key="common.confirmComplete">Esteu segur/a que voleu marcar aquesta tasca com a completa? Si ho feu, no hi podreu fer canvis més endavant.</message>
 	<message key="common.payment">Pagament</message>
 	<message key="common.payments">Pagaments</message>
-	<message key="common.pageHeader.altText">Capçalera de la pàgina</message>
 	<message key="common.homePageHeader.altText">Capçalera de la pàgina inicial</message>
 	<message key="common.journalHomepageImage.altText">Imatge per a la pàgina inicial de la revista</message>
 
@@ -72,7 +68,6 @@
 
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Ajuda de la revista</message>
-	<message key="navigation.archives">Arxius</message>
 	<message key="navigation.current">Últim número</message>
 	<message key="navigation.otherJournals">Altres revistes</message>
 	<message key="navigation.browseByIssue">Per número</message>
@@ -125,12 +120,8 @@
 	<message key="article.suppFiles">Fitxer(s) addicional(s)</message>
 	<message key="article.suppFilesAbbrev">Fitxers add.</message>
 	<message key="article.discipline">Disciplines i subdisciplines acadèmiques</message>
-	<message key="article.subjectClassification">Classificació per temes</message>
 	<message key="article.subject">Paraules clau</message>
 	<message key="article.coverage">Cobertura</message>
-	<message key="article.coverageGeo">Cobertura geoespacial</message>
-	<message key="article.coverageChron">Cobertura cronològica o històrica</message>
-	<message key="article.coverageSample"> Característiques de la mostra de recerca</message>
 	<message key="article.type">Tipus, mètode o enfocament</message>
 	<message key="article.language">Llengua</message>
 	<message key="article.sectionEditor">ES</message>
@@ -216,20 +207,9 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Administrador/a de la revista</message>
-	<message key="user.role.editor">Editor/a</message>
 	<message key="user.role.sectionEditor">Editor/a de secció</message>
-	<message key="user.role.layoutEditor">Maquetista</message>
-	<message key="user.role.copyeditor">Corrector/a d’originals</message>
-	<message key="user.role.proofreader">Corrector/a de proves</message>
-	<message key="user.role.author">Autor/a</message>
 	<message key="user.role.subscriptionManager">Administrador/a de subscripcions</message>
 	<message key="user.role.managers">Administradors/ores de revistes</message>
-	<message key="user.role.editors">Editors/ores</message>
-	<message key="user.role.sectionEditors">Editors/ores de secció</message>
-	<message key="user.role.layoutEditors">Maquetistes</message>
-	<message key="user.role.copyeditors">Correctors/ores d’originals</message>
-	<message key="user.role.proofreaders">Correctors/ores de proves</message>
-	<message key="user.role.authors">Autors/ores</message>
 	<message key="user.role.subscriptionManagers">Administradors/ores de subscripcions</message>
 
 	<!-- Common Issue Terms -->
@@ -248,7 +228,6 @@
 	<message key="issue.fullIssue">Número complet</message>
 	<message key="issue.nonpdf.title">Descarrega el número</message>
 	<message key="issue.viewIssue">Visualitza el número</message>
-	<message key="issue.viewIssueDescription">Visualitza o descarrega el número complet</message>
 
 	<!-- Common Subscription Type Terms -->
 	<message key="subscriptionTypes.currency">Moneda</message>
@@ -281,7 +260,6 @@
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">Esdeveniment de tramesa</message>
-	<message key="submission.event.general.articleSubmitted">S'ha tramès l'article</message>
 	<message key="submission.event.general.issueScheduled">S'ha enviat la tramesa a la cua de planificació de números</message>
 	<message key="submission.event.general.issueAssigned">S'ha assignat la tramesa a un número</message>
 	<message key="submission.event.general.articlePublished">S'ha publicat l'article</message>
@@ -342,7 +320,6 @@
 
 
 	<!-- Languages -->
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>La baixada de paquets de llengua des del servidor web del Public Knowledge Project no està disponible pels motius següents:</p> <ul> <li>El vostre servidor no disposa de la utilitat GNU "tar", o bé no n’admet l’execució.</li> <li>L’OJS no pot modificar el fitxer de registre de configuració regional (habitualment, "registry/locales.xml").</li> </ul> <p>Podeu descarregar manualment els paquets de llengua des del <a href="http://pkp.sfu.ca">lloc web PKP</a>.</p>]]></message>
 
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Si indiqueu una font d’autenticació predeterminada que no sigui l’OJS es pot produir l’efecte següent:</p> <ul> <li>Si un usuari/ària intenta registrar un compte nou en aquest lloc web amb un nom d’usuari/ària que ja existeixi a la font d’autenticació (però no a la base de dades de l’OJS), l’intent de registre només s’admetrà si la contrasenya indicada és vàlida per a aquest compte d’usuari/ària.</li> </ul>]]></message>
 
@@ -372,10 +349,6 @@
 	<message key="plugins.categories.generic.description">Els mòduls genèrics s’utilitzen per ampliar les funcionalitats de l’Open Journal Systems no incloses en altres categories de mòduls.</message>
 	<message key="plugins.categories.implicitAuth">Mòduls d’autenticació implícita</message>
 	<message key="plugins.categories.implicitAuth.description">Els mòduls d’autenticació implícita implementen la compatibilitat amb l’autenticació d'usuaris/àries basada en capçaleres http.</message>
-	<message key="plugins.categories.oaiMetadataFormats">Mòduls de format de metadades OAI</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Aquests mòduls de format expressen metadades en les comunicacions OAI.</message>
-	<message key="plugins.categories.pubIds">Mòduls d'identificació pública</message>
-	<message key="plugins.categories.pubIds.description">Aquests mòduls implementen la compatibilitat amb identificadors públics.</message>
 
 	<!-- Files Browser -->
 
@@ -386,16 +359,12 @@
 	<!-- Setup Step 2 -->
 
 
-	<message key="manager.setup.reviewProcessEmailDescription">Els editors/ores envien als revisors/ores la sol·licitud de revisió amb la tramesa adjunta al correu electrònic. Els revisors/ores envien un correu electrònic amb el seu consentiment (o els encàrrecs rebutjats), la revisió i la recomanació als editors/ores. Els editors/ores introdueixen el consentiment dels revisors/ores (o els encàrrecs rebutjats), així com la revisió i la recomanació a la pàgina de revisió de la tramesa per tal d'enregistrar el procés de revisió.</message>
 
 
 	<message key="manager.setup.lockssDescription"><![CDATA[L’Open Journal Systems admet l’ús del sistema <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) per assegurar que es manté un arxivament segur i permanent de la revista. El LOCKSS és una aplicació de codi font obert desenvolupada a la biblioteca de la Universitat de Stanford que permet als bibliotecaris/àries mantenir les revistes electròniques seleccionades mitjançant el sondeig dels llocs web de les revistes registrades per recopilar-ne els nous continguts publicats i arxivar-los. Cada arxiu es valida contínuament amb la memòria cau d’altres biblioteques i si el seu contingut es malmet o es perd, s’utilitzen les altres memòries cau de la revista per restaurar-lo.<br /><br /> No caldrà configurar la compatibilitat del LOCKSS amb l’Open Journal Systems fins que comenci la publicació, punt en què haureu de seguir aquests dos passos:]]></message>
 
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Propostes d’avisos de drets d’autoria de Creative Commons</h3> <h4>1. Proposta de política per a revistes que ofereixen accés lliure</h4> Els autors/ores que publiquen en aquesta revista accepten els termes següents: <ol type="a"> <li>Els autors/ores conserven els drets d'autor i concedeixen a la revista el dret de primera publicació de l'obra, registrada sota una <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">llicència de reconeixement de Creative Commons</a>, que permet que se'n faci difusió reconeixent-ne l'autoria i la primera publicació en aquesta revista.</li> <li>Els autors/ores poden establir, independentment, altres disposicions contractuals que permetin la publicació de la versió publicada en aquesta revista en altres mitjans (per exemple, en un repositori institucional o en un llibre), amb el reconeixement de la publicació inicial en aquesta revista.</li> <li>Els autors/ores tenen permís per publicar la seva obra en línia i se'ls proposa de fer-ho (per exemple, en repositoris institucionals o a la seva pàgina web) abans i durant el procés de tramesa, perquè pot produir bons resultats i fer que l'obra publicada rebi més citacions (Vegeu <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li> </ol> <h4>2. Proposta de política per a revistes que ofereixen accés lliure diferit</h4> Els autors/ores que publiquen en aquesta revista accepten els termes següents: <ol type="a"> <li>Els autors/ores conserven els drets d'autor i concedeixen a la revista el dret de primera publicació de l'obra, que durant [ESPECIFIQUEU UN PERÍODE DE TEMPS] després de la publicació queda simultàniament registrada sota una <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">llicència de reconeixement de Creative Commons</a>, que permet que se'n faci difusió reconeixent-ne l'autoria i la primera publicació en aquesta revista.</li> <li>Els autors/ores poden establir, independentment, altres disposicions contractuals que permetin la publicació de la versió publicada en aquesta revista en altres mitjans (per exemple, en un repositori institucional o en un llibre), amb el reconeixement de la publicació inicial en aquesta revista.</li> <li>Els autors/ores tenen permís per publicar la seva obra en línia i se'ls proposa de fer-ho (per exemple, en repositoris institucionals o a la seva pàgina web) abans i durant el procés de tramesa, perquè pot produir bons resultats i fer que l'obra publicada rebi més citacions (Vegeu <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li> </ol>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[La revista utilitza un sistema de classificació per temes disponible en línia.<br /> Títol del sistema de classificació]]></message>
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Per tenir indexats els continguts d'aquesta revista dins d'un sistema globalment distribuït de bases de dades de recerca, llegiu <a href="http://www.oaister.org/dataproviders.html" target="_blank">els passos per tal d'esdevenir un contribuent de dades</a> i registreu la vostra revista amb el <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">&nbsp;registre obert d'arxius</a> oficial. Per registrar-vos, necessitareu un URL base per al vostre repositori: &nbsp;<span class="highlight">{$oaiUrl}</span>. &nbsp;Després, podeu registrar la vostra revista al <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">registre de UIUC OAI</a>&nbsp;i&nbsp;<a href="http://www.oaister.org/" target="_blank">OAIster</a>. <br /><br /> Si l'administrador/ora del lloc web ja ha registrat aquest lloc amb aquests serveis, la revista s'indexarà automàticament i no haureu de registrar-la.]]></message>
-	<message key="manager.setup.citations">Habilita l'assistent de marcatge de citació.</message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Passos: Cua de trameses &gt; Revisió de trameses &gt; Edició de trameses &gt; Taula de continguts.<br /><br /> Seleccioneu un model per a la gestió d’aquests aspectes del procés editorial. (Per designar un secretari/ària de redacció i els editors/ores de secció, aneu a la secció «Editors/ores» a l'Administració de la revista).]]></message>
@@ -624,15 +593,10 @@
 	<message key="submission.comments.saveAndEmailEditor">Desa’ls i envia’ls per correu electrònic a l’editor/a</message>
 
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">No sou usuari/ària d’aquest lloc? Registreu-vos-hi.</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Per motius de seguretat, aquest sistema envia per correu electrònic una contrasenya nova, en lloc de recordar l’actual.<br /><br />Introduïu la vostra adreça electrònica a continuació per a canviar la contrasenya. Us hi arribarà una confirmació.]]></message>
 
 	<!-- Registration -->
-	<message key="user.register.selectJournal">Seleccioneu una revista per registrar-vos-hi</message>
 	<message key="user.register.noJournals">Aquest lloc web no conté cap revista en la qual us pugueu registrar.</message>
 	<message key="user.register.privacyStatement">Declaració de privacitat</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Feu clic aquí</a> si ja esteu registrats/ades en aquesta revista o en alguna altra d’aquest lloc.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Feu clic aquí</a> si <strong>no</strong>esteu registrats/ades en aquesta revista ni en cap altra d’aquest lloc.]]></message>
 	<message key="user.register.loginToRegister">Introduïu el vostre nom d’usuari/ària i la vostra contrasenya per a registrar-vos en aquesta revista.</message>
 	<message key="user.register.registrationDisabled">Actualment aquesta revista no accepta registres d’usuaris/àries.</message>
 	<message key="user.register.form.passwordLengthTooShort">La contrasenya que heu introduït és massa curta.</message>
@@ -696,8 +660,6 @@
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.download">Descarrega aquest fitxer PDF</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>El fitxer PDF que heu seleccionat es carregarà si el vostre navegador web té un mòdul de lectura d'arxius PDF instal·lat (per exemple, una versió recent d' <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Si voleu més informació sobre com imprimir, desar i editar arxius PDF, Highwire Press us ofereix una bona secció de <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Preguntes freqüents sobre PDF</a>.</p> <p>O si ho preferiu, també podeu descarregar-vos l’arxiu PDF directament al vostre ordinador i obrir-lo amb un lector PDF. Per descarregar l'arxiu PDF, feu clic a l'enllaç de descàrrega de més amunt.</p>]]></message>
 
 
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
@@ -723,8 +685,6 @@
 
 	<!-- About The Journal -->
 	<message key="about.statistics">Estadístiques</message>
-	<message key="about.journalContact">Contacte de la revista</message>
-	<message key="about.aboutTheJournal">Sobre la revista</message>
 	<message key="about.history">Història de la revista</message>
 	<message key="about.editorialTeam">Equip editorial</message>
 	<message key="about.editorialTeam.biography">Biografia</message>
@@ -732,13 +692,8 @@
 	<message key="about.focusAndScope">Focus i abast</message>
 	<message key="about.sectionPolicies">Política de seccions</message>
 	<message key="about.submissions">Trameses</message>
-	<message key="about.sponsors">Patrocinadors/ores</message>
-	<message key="about.contributors">Fonts de suport</message>
 	<message key="about.onlineSubmissions">Trameses en línia</message>
-	<message key="about.onlineSubmissions.haveAccount">Ja teniu un nom d'usuari/ària i una contrasenya per a {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Vés a l’inici de sessió</message>
-	<message key="about.onlineSubmissions.needAccount">Necessiteu un nom d'usuari/ària i una contrasenya?</message>
-	<message key="about.onlineSubmissions.registration">Vés al registre</message>
 	<message key="about.onlineSubmissions.registrationRequired">Necessiteu registrar-vos i iniciar la sessió per poder trametre elements en línia i consultar l’estat de les trameses en curs.</message>
 	<message key="about.authorGuidelines">Directrius per a l’autor/a</message>
 	<message key="about.submissionPreparationChecklist">Llista de verificació per preparar trameses</message>
@@ -765,7 +720,6 @@
 	<message key="about.subscriptionTypes.cost">Cost</message>
 	<message key="about.availableSubscriptionTypes">Tipus de subscripcions</message>
 	<message key="about.memberships">Afiliacions</message>
-	<message key="about.journalSponsorship">Patrocini de la revista</message>
 	<message key="about.aboutThisPublishingSystem">Sobre aquest sistema de publicació</message>
 	<message key="about.aboutThisPublishingSystem.altText">Procés editorial i de publicació de l’OJS</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Aquesta revista utilitza l’Open Journal Systems {$ojsVersion}, un programari de codi obert per a la gestió i la publicació de revistes que ha estat desenvolupat, impulsat i distribuït lliurement pel <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> sota la Llicència Pública General GNU.]]></message>
@@ -884,7 +838,6 @@
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} ha introduït una tramesa nova amb l’identificador {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} ha revisat l’article {$articleId}. El nou identificador per al fitxer és {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} s'ha assignat a la tramesa de revisió {$articleId} per a la ronda de revisió {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} s'ha desassignat de la tramesa de revisió {$articleId} per a la ronda de revisió {$round}.</message>
 	<message key="log.review.reviewInitiated">S’ha començat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$articleId}.</message>
 	<message key="log.review.reviewReinitiated">S’ha reiniciat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$articleId}.</message>
@@ -921,7 +874,6 @@
 	<message key="log.editor.archived">S’ha arxivat la tramesa {$articleId}.</message>
 	<message key="log.editor.restored">La tramesa {$articleId} s’ha restaurat a la cua.</message>
 	<message key="log.editor.editorAssigned">{$editorName} s'ha assignat com a editor/a de la tramesa {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} ha accelerat el procés d’edició per a la tramesa {$articleId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} ha assignat {$proofreaderName} per a la correcció de proves de la tramesa {$articleId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} ha tramès {$articleId} per a la planificació.</message>
@@ -973,22 +925,16 @@
 	<message key="notification.notificationsPublicDescription"><![CDATA[  <a href="{$emailUrl}">per correu electrònic.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">S'ha tramès un nou article: "{$title}".</message>
-	<message key="notification.type.copyeditComment">Un corrector/a d'originals ha fet un comentari a "{$title}".</message>
 	<message key="notification.type.editing">Esdeveniments d'edició</message>
 	<message key="notification.type.editorDecisionComment">S'ha fet un comentari a la decisió de l'editor/a a "{$title}".</message>
 	<message key="notification.type.galleyModified">S'ha modificat una galerada a "{$title}".</message>
 	<message key="notification.type.issuePublished">S'ha publicat un número.</message>
-	<message key="notification.type.layoutComment">S'ha fet un comentari sobre la maquetació de "{$title}".</message>
-	<message key="notification.type.metadataModified">Les metadades de "{$title}" s'han modificat.</message>
 	<message key="notification.type.newAnnouncement">S'ha creat un nou avís.</message>
-	<message key="notification.type.proofreadComment">Un corrector/a de proves ha fet un comentari a "{$title}".</message>
-	<message key="notification.type.reviewerComment">Un revisor/a ha comentat "{$title}".</message>
 	<message key="notification.type.reviewerFormComment">S'ha tramès la revisió del formulari de revisió de "{$title}".</message>
 	<message key="notification.type.reviewing">Esdeveniments de revisió</message>
 	<message key="notification.type.site">Esdeveniments del lloc</message>
 	<message key="notification.type.submissionComment">Un editor/a ha fet un comentari a "{$title}".</message>
 	<message key="notification.type.submissions">Esdeveniments de tramesa</message>
-	<message key="notification.type.suppFileModified">Els fitxers addicionals de "{$title}" s'han modificat.</message>
 	<message key="notification.type.userComment">Un lector/a ha fet un comentari a "{$title}".</message>
 
 	<!--
@@ -998,47 +944,11 @@
 	-->
 	<!-- Authorization -->
 	<message key="user.authorization.copyeditorAssignmentMissing">Accés denegat. No us han assignat com a corrector/a d'originals per a aquest article.</message>
-	<message key="user.authorization.noJournal">Cap revista en context.</message>
 	<message key="user.authorization.sectionAssignment">Esteu intentant accedir a un article que no forma part de la vostra secció.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Tramesa del corrector/a d'originals invàlida o cap tramesa sol·licitada.</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">Tramesa de l'editor/a de la secció invàlida o cap tramesa sol·licitada.</message>
 
 	<!-- Icons: Default "alt" text -->
 
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">S’ha carregat la llista de monedes "{$filename}" des d’XML.</message>
-	<message key="debug.notes.helpMappingLoad">S’ha tornat a carregar el fitxer de mapatge d’ajuda XML {$filename} a la cerca de {$id}.</message>
-	<message key="submission.permissions">Permisos</message>
-	<message key="submission.license">Llicència</message>
-	<message key="submission.copyright">Copyright</message>
-	<message key="submission.copyrightHolder">Titular del copyright</message>
-	<message key="submission.copyrightYear">Any del copyright</message>
-	<message key="submission.copyrightStatement">Copyright (c) {$copyrightYear} {$copyrightHolder}</message>
-	<message key="submission.licenseURLValid">Si us plau, proporciona una URL remota vàlida (inclou http://).</message>
-	<message key="submission.licenseURL">URL de la llicència</message>
-	<message key="submission.license.cc.by-nc-nd4">CC Reconeixement-NoComercial-SenseObraDerivada 4.0</message>
-	<message key="submission.license.cc.by-nc4">CC Reconeixement-NoComercial 4.0</message>
-	<message key="submission.license.cc.by-nc-sa4">CC Reconeixement-NoComercial-CompartirIgual 4.0</message>
-	<message key="submission.license.cc.by-nd4">CC Reconeixement-SenseObraDerivada 4.0</message>
-	<message key="submission.license.cc.by4">CC Reconeixement 4.0</message>
-	<message key="submission.license.cc.by-sa4">CC Reconeixement-CompartirIgual 4.0</message>
-	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Llicència de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Aquesta obra està subjecta a una llicència de <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Reconeixement-NoComercial-SenseObraDerivada 4.0 Internacional de Creative Commons</a>]]></message>
-	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Llicència de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Aquesta obra està subjecta a una llicència de <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Reconeixement-NoComercial 4.0 Internacional de Creative Commons</a>]]></message>
-	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Llicència de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Aquesta obra està subjecta a una llicència de <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Reconeixement-NoComercial-CompartirIgual 4.0 Internacional de Creative Commons</a>]]></message>
-	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Llicència de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />Aquesta obra està subjecta a una llicència de <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Reconeixement-SenseObraDerivada 4.0 Internacional de Creative Commons</a>]]></message>
-	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Llicència de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Aquesta obra està subjecta a una llicència de <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Reconeixement 4.0 Internacional de Creative Commons</a>]]></message>
-	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Llicència de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Aquesta obra està subjecta a una llicència de <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Reconeixement-CompartirIgual 4.0 Internacional de Creative Commons</a>]]></message>
-	<message key="user.orcid">ORCID iD</message>
-	<message key="user.orcid.description"><![CDATA[ORCID iDs només pot ser assignat pel <a href="http://orcid.org/" target="_blank">Registre ORCID</a>. Has de complir amb els seus estàndards per a a disposar d'un ORCID iDs i has d'incloure la teva URI complerta (pe. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
-	<message key="user.profile.form.orcidInvalid">L'ORCID iD que ha especificat és invàlida.</message>
-	<message key="user.profile.implicitAuthChangePasswordInstructions">Si heu iniciat sessió via Shibboleth, seguiu el procés de la vostra organització si necessiteu canviar la contrasenya. Per a usuaris locals continueu a sota.</message>
-	<message key="user.login.implicitAuthLogin">Inicia sessió via Shibboleth</message>
-	<message key="user.register.emailValidation">Es necessita validar el correu</message>
-	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems és compatible amb el sistema <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) per garantir la seguretat i la protecció permanent de la revista. Teniu diferents opcions per incloure la revista en una xarxa LOCKSS:]]></message>
-	<message key="user.register.emailValidationDescription">Necessiteu validar l'adreça de correu electrònic abans de continuar. Si us plau, reviseu el vostre compte de correu per a més informació. Un cop hagueu validat el compte podreu iniciar sessió.</message>
-	<message key="user.register.implicitAuth">Inicia sessió via Shibboleth amb un compte d'empresa existent</message>
-	<message key="about.purchaseIssue">Compra la revista</message>
-	<message key="about.purchaseArticle">Compra l'article</message>
-	<message key="about.purchaseIssueDescription">Els lectors sense subscripció poden comprar números de revista individuals. Estan disponibles les següents tarifes i opcions de pagament.</message>
-	<message key="about.purchaseArticleDescription">Els lectors sense subscripció poden comprar números de revista individuals. Estan disponibles les següents tarifes i opcions de pagament.</message>
 </locale>
