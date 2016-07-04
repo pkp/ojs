@@ -196,7 +196,7 @@
 	<message key="journal.currentIssue">Uneko zenbakia</message>
 	<message key="journal.journals">Aldizkariak</message>
 	<message key="journal.path">Bidea</message>
-	<message key="journal.journal">Aldizkaria</message>
+	<message key="context.context">Aldizkaria</message>
 	<message key="journal.issn">ISSN</message>
 
 	<!-- User -->
