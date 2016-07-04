@@ -15,11 +15,9 @@
   -->
 
 <locale name="uk_UA" full_name="Українська">
-       <message key="editor.article.reviewForms">Форми рецензування</message>  
-       <message key="editor.article.selectReviewForm">Обрати форму рецензування</message>
-       <message key="editor.article.clearReviewForm">Очистити форму рецензування</message>
-       <message key="editor.home">Тека редактора</message>
-       <message key="editor.article.confirmChangeReviewForm">Попередження: Зміна форми рецензування вплине на всі рецензії, які вже були зроблені з використанням поточної форми рецензування. Ви справді хочете продовжити?</message> 
+       
+                   <message key="editor.home">Тека редактора</message>
+      
        <message key="editor.submissionsAndPublishing">Подання та публікація</message>
        <message key="editor.submissionQueue">Редакційна черга</message>
        <message key="editor.submissionArchive">Архів подань</message>
@@ -114,10 +112,8 @@
        <message key="editor.issues.noLiveIssues">Немає опублікованих випусків</message>
        <message key="editor.issues.open">Відкритий</message>
        <message key="editor.issues.pages">Сторінки</message>
-       <message key="editor.navigation.issues">Випуски</message>
-       <message key="editor.navigation.futureIssues">Майбутні випуски</message>
-       <message key="editor.navigation.createIssue">Створити випуск</message>
-       <message key="editor.navigation.issueArchive">Попередні випуски</message>
+             <message key="editor.navigation.futureIssues">Майбутні випуски</message>
+             <message key="editor.navigation.issueArchive">Попередні випуски</message>
        <message key="editor.article.designateReviewVersion">Позначити оригінальний файл як версію для рецензування</message>
        <message key="editor.article.uploadReviewVersion">Вивантажити відредаговану версію для рецензування</message>
        <message key="editor.article.showSuppFile">Надати рецензентам доступ до файлу</message>

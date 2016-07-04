@@ -24,12 +24,10 @@
        <message key="admin.locale.maybeIncomplete">Підтримка відмічених мов може бути неповною.</message>
        <message key="admin.languages.confirmUninstall">Ви впевнені, що бажаєте демонтувати локалізацію? Це зміна торкнеться всіх журнілів, які зараз її використовують.</message>
        <message key="admin.languages.installNewLocalesInstructions">Оберіть будь-які додаткові локалізації, на підтримку яких Ви хочете налаштувати систему. Локалізації мають бути встановлені перш ніж вони зможуть використовуватись журналами. Дивіться документацію OJS для інформації щодо додавання підтримки нових мов.</message>
-       <message key="admin.languages.downloadLocales">Завантажити локалізації</message>
-       <message key="admin.languages.downloadFailed">Завантаження локалізації невдале. Причини невдачі деталізовані у списку нижче.</message>
+             <message key="admin.languages.downloadFailed">Завантаження локалізації невдале. Причини невдачі деталізовані у списку нижче.</message>
        <message key="admin.languages.localeInstalled">"{$locale}" локалізація була встановлена.</message>
        <message key="admin.languages.download">Завантажити локалізацію</message>
-       <message key="admin.languages.reloadDefaultEmailTemplates">Перезавантаження шаблони листів за замовчуванням</message>
-       <message key="admin.languages.download.cannotOpen">Не вдається відкрити мовний дескриптор з веб-сайту PKP.</message>
+             <message key="admin.languages.download.cannotOpen">Не вдається відкрити мовний дескриптор з веб-сайту PKP.</message>
        <message key="admin.languages.download.cannotModifyRegistry">Не вдається додати нову локалізацію до реєстраційного файлу локалізацій, типово "registry/locales.xml".</message>
        <message key="admin.auth.ojs">База даних користувачів OJS</message>
        <message key="admin.auth.enableSyncProfiles">Включити синхронізацію облікових записів користувачів (якщо підтримується модулем аутентифікації). Коли користувач буде заходити до системи, інформація його облікового запису автоматично оновлюватиметься з віддаленого джерела, а всі зміни (в тому числі, зміни паролю), зроблені у обліковому записі OJS, будуть автоматично оновлені також на віддаленому джерелі. Якщо ця опція відключена, інформація облікового запису OJS зберігатиметься окремо від зовнішнього джерела.</message>
@@ -44,8 +42,7 @@
        <message key="admin.contexts.create">Створити журнал</message>
        <message key="admin.journals.createInstructions">Вам буде автоматично надана роль менеджера цього журналу. Після створення нового журналу, продовжуйте його створення як менеджер, зробіть необхідні налаштування та розподіліть ролі користувачів.</message>
        <message key="admin.journals.urlWillBe">Це повинно бути коротке слово або акронім, який ідентифікуватиме цей журнал. URL-адресою журналу буде {$sampleUrl}</message>
-       <message key="admin.journals.form.titleRequired">Необхідна назва.</message>
-       <message key="admin.contexts.form.pathRequired">Необхідний шлях.</message>
+             <message key="admin.contexts.form.pathRequired">Необхідний шлях.</message>
        <message key="admin.contexts.form.pathAlphaNumeric">Шлях може містити лише літери, цифри, дефіси та символи підкреслення; він повинен починатися та закінчуватися символом літери або цифри.</message>
        <message key="admin.contexts.form.pathExists">Обраний шлях вже використовується іншим журналом.</message>
        <message key="admin.journals.enableJournalInstructions">Дозволити цьому журналу з'явитися на сайті</message>
@@ -63,7 +60,6 @@
        <message key="admin.mergeUsers.allUsers">Всі користувачі, які мають ролі</message>
        <message key="admin.mergeUsers.confirm">Ви впевнені, що хочете об'єднати обрані облікові записи ({$oldAccountCount}) у єдиний обліковий запис із іменем користувача "{$newUsername}"? Обрані {$oldAccountCount} облікових записів не будуть надалі існувати окремо. Це незворотна дія.</message>
        <message key="admin.mergeUsers.noneEnrolled">Немає користувачів, які мають ролі.</message>
-	<message key="admin.settings.useAlphalist">Відображати на домашній сторінці сайту алфавіт для швидкої навігації між журналами (корисно для сайтів з багатьма журналами).</message>
 	<message key="admin.settings.journalsList.showDescription">Опис журналу</message>
 	<message key="admin.categories">Категорії</message>
 	<message key="admin.categories.disableCategories">Не організовувати журнали за категоріями.</message>
