@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * ojs2-devel/locale/es_AR/admin.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the es_AR (Español (Argentina)) locale.
+  *
+  -->
+
+<locale name="es_AR" full_name="Español (Argentina)">
+	<message key="admin.hostedJournals">Revistas alojadas</message>
+	<message key="admin.settings.journalRedirect">Redirección a la revista</message>
+	<message key="admin.settings.journalRedirectInstructions">Las peticiones serán redirigidas a esta revista. Esto puede ser útil, por ejemplo, si sólo hay una revista alojada.</message>
+	<message key="admin.settings.noJournalRedirect">No redireccionar</message>
+	<message key="admin.languages.primaryLocaleInstructions">Este será el idioma por defecto para el sitio y cualquier revista alojada.</message>
+	<message key="admin.languages.supportedLocalesInstructions">Seleccione todas las localizaciones que soportará el sitio. Las localizaciones seleccionados estarán disponibles para cualquier revista, también aparecerán en un menú de selección de idioma en todas las páginas (puede ser eliminado en páginas específicas de una revista). Si no se seleccionan múltiples localizaciones, el menú de selección de idioma no aparecerá y no se estarán disponibles las funciones de idiomas adicionales para las revistas.</message>
+	<message key="admin.languages.confirmUninstall">¿Seguro que quiere desinstalar esta localización? Esta acción puede afectar a cualquier revista que use este localización.</message>
+	<message key="admin.languages.installNewLocalesInstructions">Seleccione localizaciones adicionales a las que quiere dar soporte en este sistema. Es necesario instalar las localizaciones antes de poder ser usadas por las revistas. Consulte la documentación de OJS para obtener información acerca de cómo añadir soporte a nuevos idiomas.</message>
+	<message key="admin.languages.downloadLocales">Descargar localizaciones</message>
+	<message key="admin.languages.downloadFailed">Falló la descarga del archivo de localizaciones. El mensaje de error siguiente describe el fallo.</message>
+	<message key="admin.languages.localeInstalled">El archivo de localización "{$locale}" ha sido instalado.</message>
+	<message key="admin.languages.download">Descargar archivo de localización</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Actualizar Defecto Plantillas de correo electrónico</message>
+	<message key="admin.languages.download.cannotOpen">No es posible abrir el descriptor del idioma desde la web de PKP.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">No se puede añadir el nuevo archivo de traducción al directorio de registro de idiomas, normalmente en "registry/locales.xml".</message>
+	<message key="admin.auth.ojs">Base de datos usuarios/as OJS</message>
+	<message key="admin.auth.enableSyncProfiles">Activar la sincronización de perfiles de usuario/a (si está soportado por este plugin de autentificación). La información del perfil de usuario se actualizará automáticamente desde la fuente remota cuando un/a usuario/a se identifica, y los cambios en el perfil (incluyendo cambios en la contraseña) realizados en OJS se actualizarán automáticamente en la fuente remota. Si no se activa esta opción, la información del perfil de OJS se mantendrá separada del perfil remoto.</message>
+	<message key="admin.auth.enableSyncPasswords">Permitir la modificación de contraseñas de usuarios/as (si está soportado por este plugin de autentificación). Al activar esta opción se permite a las/os usuarias/os modificar su contraseña de OJS y usar la opción "he olvidado mi contraseña" para restablecer una contraseña olvidada. Estas funciones no estarán disponibles para las/os usuarias/os con esta fuente de autentificación si no está activada esta opción.</message>
+	<message key="admin.auth.enableCreateUsers">Permitir la creación de usuarias/os (si está soportada por este plugin de autentificación). Los/as usuarios/as creados dentro de OJS con esta fuente de autentificación se añadirán automáticamente a la fuente de autentificación remota si no existen ya. Además, si esta es la fuente de autentificación por defecto, también se añadirán a la fuente de autentificación remota las cuentas de OJS creadas a través del registro de usuaria/o.</message>
+	<message key="admin.systemVersion">Versión de OJS</message>
+	<message key="admin.systemConfiguration">Configuración de OJS</message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[Configuración de OJS de <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.journals.journalSettings">Configuración de la revista</message>
+	<message key="admin.journals.noneCreated">No se han creado revistas.</message>
+	<message key="admin.journals.confirmDelete">¿Seguro que quiere eliminar permanentemente esta revista y todos sus contenidos?</message>
+	<message key="admin.journals.create">Crear revista</message>
+	<message key="admin.journals.createInstructions">Automáticamente será añadido/a como gestor/a de esta revista. Tras crear una nueva revista, identifíquese como gestor/a para continuar con su configuración y alta de usuarios/as.</message>
+	<message key="admin.journals.urlWillBe">Debería ser una única palabra corta o acrónimo que identifique la revista. La URL de la revista será {$sampleUrl}</message>
+	<message key="admin.journals.form.titleRequired">Se requiere un título.</message>
+	<message key="admin.journals.form.pathRequired">Se requiere la ruta.</message>
+	<message key="admin.journals.form.pathAlphaNumeric">La ruta sólo puede contener caracteres alfanuméricos, guiones y guiones bajos, comenzando y terminado con un carácter alfanumérico.</message>
+	<message key="admin.journals.form.pathExists">Ha seleccionado una ruta que ya usa otra revista.</message>
+	<message key="admin.journals.enableJournalInstructions">Permitir que esta revista aparezca públicamente en el sitio</message>
+	<message key="admin.journals.journalDescription">Descripción de la revista</message>
+	<message key="admin.journal.pathImportInstructions">Ruta de la revista existente o ruta a crear (p.e., "ojs").</message>
+	<message key="admin.journals.importSubscriptions">Importar suscripciones</message>
+	<message key="admin.journals.transcode">Artículos transcode de metadatos de ISO8859-1</message>
+	<message key="admin.journals.redirect">Generar código para mapear los URL de OJS 1 con os URLs de OJS 2</message>
+	<message key="admin.journals.form.importPathRequired">La ruta de importación es necesaria.</message>
+	<message key="admin.journals.importErrors">La importación no se ha podido completar.</message>
+	<message key="admin.mergeUsers">Combinar usuarios</message>
+	<message key="admin.mergeUsers.mergeUser">Combinar usuario</message>
+	<message key="admin.mergeUsers.into.description">Seleccione un usuario al que atribuir las características (artículos, tareas, ...) del usuario anterior.</message>
+	<message key="admin.mergeUsers.from.description">Seleccione una cuenta de usuario para combinar con otra cuenta de usuario (por ejemplo, si un usuario tiene 2 cuentas). La cuenta selecionada en primer lugar se borrará, pero sus datos (envíos, tareas, ..) se asignarán a la segunda cuenta de usuario.</message>
+	<message key="admin.mergeUsers.allUsers">Todos los usuarios asociados</message>
+	<message key="admin.mergeUsers.confirm">¿Confirma que desea combinar la cuenta de usuario "{$oldUsername}" en la cuenta de usuario "{$newUsername}"? La cuenta de usurio "{$oldUsername}" desaparecerá. Esta acción no es reversible.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Ningún usuario asociado</message>
+	<message key="admin.locale.maybeIncomplete">Las localizaciones seleccionadas pueden estar incompletas.</message>
+	<message key="admin.settings.options">Opciones</message>
+	<message key="admin.settings.useAlphalist">Para sitios con muchas revistas, muestra una lista por orden alfabético de las páginas principales de cada una, permitiendo la búsqueda alfabética rápida entre revistas.</message>
+	<message key="admin.settings.usePaging">Para sitios con muchas revistas, separa la lista de revistas en varias páginas.</message>
+	<message key="admin.settings.journalsList">Elemenos de la Revista</message>
+	<message key="admin.settings.journalsList.description">Por favor escoja los elementos de la revista que van a ser mostrados para cada revista en la lista del de la página principal del sitio.</message>
+	<message key="admin.settings.journalsList.showThumbnail">Imagen miniatura de la Revista</message>
+	<message key="admin.settings.journalsList.showTitle">Título de la Revista</message>
+	<message key="admin.settings.journalsList.showDescription">Descripción de la Revista</message>
+	<message key="admin.categories">Categorías</message>
+	<message key="admin.categories.enable.description">El administrador del sitio puede, si lo desea, definir un conjunto de categorías aquí, para ayudar a organizar un conjunto amplio de revistas. Los gestores de las revistas pueden, entonces, escoger algunas categorías para cada revista, y los lectores buscar estas revistas por categorías.</message>
+	<message key="admin.categories.disableCategories">No organizar revistas en categorías</message>
+	<message key="admin.categories.enableCategories">Permitir que los gestores de las revistas las organicen en categorías</message>
+	<message key="admin.categories.editTitle">Editar categoría</message>
+	<message key="admin.categories.createTitle">Crear categoría</message>
+	<message key="admin.categories.create">Crear una nueva Categoría</message>
+	<message key="admin.categories.noneCreated">No hay categorías creadas por el momento</message>
+	<message key="admin.categories.confirmDelete">¿Está seguro de querer eliminar esta categoría?</message>
+	<message key="admin.categories.name">Nombre</message>
+	<message key="admin.categories.nameRequired">Un nombre de categoría es requerido</message>
+	<message key="admin.settings.defaultMetricDescription">Su instalación de OJS está configurada para registrar más de una estadística de uso. Las estadísticas de uso serán mostradas en numerosos contextos. 
+Hay casos en los que una sola estadísitica de uso debe ser usada, por ej. para mostrar una lista ordenada de los artículos más usados o para rankear resultados de búsqueda. Por favor seleccione una de la métricas como por defecto.</message>
+	<message key="admin.copyAccessLogFileTool.usage">Copiar el archivo de log de acceso de apache, filtrando las entradas relacionadas con esta instalación, hacia el directorio de archivos actual, dentro del directorio UsageStatsPlugin. Debe ejecutarse con un usuario con suficientes privilegios para leer archivos de logs de accesos de apache.
+Esta herramiente sólo copiará archivos que no están ya dentro del directorio cargador de archivos usageStast (etapa, procesamiento, archiviado, rechazado)
+Uso: {$scriptName} ruta/al/archivo/de/log/de/apache.log
+Uso (procesamiento de todos los archivos en un directorio): {$scriptName} ruta/al/directorio/de/apache</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Error: no se puede crear la carpeta temportal {$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Error: Archivo {$filePath} no existe o no se puede acceder</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Error: no se puede copiar el archivo desde {$filePath} hacia {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Error: no se puede eliminar el archivo {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Alerta: el archivo {$filePath} ya existe dentro del directorio de estadísticas de uso.</message>
+	<message key="admin.copyAccessLogFileTool.success">Éxito: {$filePath} hacia {$destinationPath}</message>
+	<message key="admin.settings.security">Seguridad</message>
+	<message key="admin.settings.security.plugins">Prevee que el gestor de la revista pueda instalar, actualizar o borrar plugins</message>
+</locale>
