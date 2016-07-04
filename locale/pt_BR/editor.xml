@@ -12,9 +12,6 @@
   -->
 
 <locale name="pt_BR" full_name="Português (Brasil)">
-	<message key="editor.article.reviewForms">Formulários de avaliação</message>
-	<message key="editor.article.selectReviewForm">Escolher formulário de avaliação</message>
-	<message key="editor.article.clearReviewForm">Retirar formulário designado</message>
 	<message key="editor.home">Página Inicial do Editor</message>
 	<message key="editor.submissionsAndPublishing">Submissões e Publicações</message>
 	<message key="editor.submissionQueue">Fila de submissões</message>
@@ -92,9 +89,7 @@
 	<message key="editor.issues.noLiveIssues">Nenhuma edição em produção</message>
 	<message key="editor.issues.open">Aberto</message>
 	<message key="editor.issues.pages">Páginas</message>
-	<message key="editor.navigation.issues">Edições</message>
 	<message key="editor.navigation.futureIssues">Edições futuras</message>
-	<message key="editor.navigation.createIssue">Incluir edição</message>
 	<message key="editor.navigation.issueArchive">Edições anteriores</message>
 	<message key="editor.article.designateReviewVersion">Designar documento original como versão para avaliação</message>
 	<message key="editor.article.uploadReviewVersion">Enviar atualização da versão para avaliação</message>
@@ -195,7 +190,6 @@
 	<message key="editor.article.uploaded">Enviado</message>
 	<message key="editor.article.removeCoverPage">Excluir capa?</message>
 	<message key="editor.article.remove">Excluir</message>
-	<message key="editor.article.confirmChangeReviewForm">Aviso: Alterações no formulário de avaliação removerão todas as respostas dos avaliadores que usaram o mesmo. Deseja realmente continuar?</message>
 	<message key="editor.issues.enableOpenAccessDate">Habilitar acesso livre adiado</message>
 	<message key="editor.issues.unpublishIssue">Despublicar edição</message>
 	<message key="editor.issues.confirmUnpublish">Deseja realmente despublicar esta edição?</message>
@@ -218,7 +212,4 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">Identificação pública de composição final de edição já existe.</message>
 	<message key="editor.issues.backToIssueGalleys">Voltar para composições de edição</message>
 	<message key="editor.issues.confirmDeleteGalley">Deseja realmente excluir esta composição?</message>
-	<message key="editor.notifyUsers.allMailingList">Incluir todas as mensagens na lista de correio ({$count} mensagens)</message>
-	<message key="editor.publicGalleyIdentificationExists">O identificador público '{$publicIdentifier}' já existe para outra composição deste artigo. Por favor, escolha um identificador único no âmbito deste artigo.</message>
-	<message key="editor.issues.resetArticlePublicationDates">Redefinir as datas de publicação de artigo</message>
 </locale>
