@@ -4,14 +4,14 @@
 <!--
   * locale/id_ID/editor.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name = "Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="editor.article.reviewForms"> Form Review </message> 
 	<message key="editor.article.selectReviewForm"> Seleksi Form Review </message> 
 	<message key="editor.article.clearReviewForm"> Hapus Form Review </message> 
@@ -101,8 +101,9 @@
 	<message key="editor.issues.noLiveIssues"> Tidak Ada Terbitan Terbaru </message> 
 	<message key="editor.issues.open"> Buka </message> 
 	<message key="editor.issues.pages"> Halaman </message> 
+	<message key="editor.navigation.issues">Terbitan</message> 
 	<message key="editor.navigation.futureIssues">Terbitan Akan Datang</message> 
-	<message key="grid.action.addIssue">Buat Terbitan Baru</message>	<message key="editor.navigation.issueArchive">Terbitan Terdahulu</message>
+	<message key="editor.navigation.createIssue">Buat Terbitan Baru</message>	<message key="editor.navigation.issueArchive">Terbitan Terdahulu</message>
 	<message key="editor.article.designateReviewVersion"> Merancang file asli sebagai Versi Review</message>	
 <message key="editor.article.uploadReviewVersion"> Unggah versi review yang sudah direvisi</message>	
 <message key="editor.article.showSuppFile"> Tampilkan file untuk direview</message> 

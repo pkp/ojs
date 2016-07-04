@@ -4,14 +4,14 @@
 <!--
   * locale/id_ID/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name = "Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="author.submit">Penyerahan Naskah Baru</message>	
 <message key="author.track">Penyerahan Aktif</message> 
 <message key="author.competingInterests"><![CDATA[Competing&nbsp;interests <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></message>
@@ -19,19 +19,18 @@
 	<message key="author.submit.stepsToSubmit">Lima Langkah Penyerahkan Naskah</message> 
 	<message key="author.submit.startHereTitle">Memulai Penyerahan Naskah Baru</message> 
 	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Klik Disini</a> Masuk ke langkah pertama dari lima langkah proses penyerahan naskah.]]></message>	
-	<message key="author.submit.step1">Langkah 1. Memulai Penyerahan Naskah</message> 
-	<message key="author.submit.step2">Langkah 2. Mengunggah Naskah</message> 
-	<message key="author.submit.step3">Langkah 3. Memasukkan Metadata Naskah</message> 
-	<message key="author.submit.step4">Langkah 4. Mengunggah File Tambahan</message> 
-	<message key="author.submit.step4a"> Langkah 4a. Menambah File Tambahan</message>
-	<message key="author.submit.step5">Langkah 5. Mengonfirmasi Penyerahan Naskah</message> 
-	<message key="author.submit.start">Mulai</message> 
-	<message key="author.submit.upload">Unggah Naskah</message>
-	<message key="author.submit.metadata">Masukkan Metadata</message>
-	<message key="author.submit.supplementaryFiles">Unggah File Tambahan</message> 
-	<message key="author.submit.confirmation">Konfirmasi</message>	
-	<message key="author.submit.cancelSubmission">Anda dapat melengkapi naskah ini kapan saja dengan memilih Naskah Aktif dari Beranda Penulis.</message> 
-	<message key="author.submit.notAccepting">Jurnal ini tidak menerima penyerahan naskah saat ini.</message>	
+<message key="author.submit.step1">Langkah 1. Memulai Penyerahan Naskah</message> 
+<message key="author.submit.step2">Langkah 2. Mengunggah Naskah</message> 
+<message key="author.submit.step3">Langkah 3. Memasukkan Metadata Naskah</message> 
+<message key="author.submit.step4">Langkah 4. Mengunggah File Tambahan</message> 
+<message key="author.submit.step4a"> Langkah 4a. Menambah File Tambahan</message>
+<message key="author.submit.step5">Langkah 5. Mengonfirmasi Penyerahan Naskah</message> 
+<message key="author.submit.start">1. Mulai</message> 
+<message key="author.submit.upload">2. Unggah Naskah</message>
+ <message key="author.submit.metadata">3. Masukkan Metadata </message> <message key="author.submit.supplementaryFiles">4. Unggah File Tambahan </message> 
+<message key="author.submit.confirmation">5. Konfirmasi</message>	
+<message key="author.submit.cancelSubmission"> Anda dapat melengkapi naskah ini kapan saja dengan memilih Naskah Aktif dari Beranda Penulis.</message> 
+	<message key="author.submit.notAccepting"> Jurnal ini tidak menerima penyerahan naskah saat ini.</message>	
 <message key="author.submit.requestWaiver">Permintaan surat pernyataan melepaskan tuntutan</message>
 	<message key="author.submit.qualityForWaiver">Pertimbangkan menghilangkan  Biaya Penyerahan Artikel untuk artikel ini</message> 
 	<message key="author.submit.addReasonsForWaiver">Gunakan kotak komentar di bawah ini untuk mengindikasikan mengapa biaya harus dihilangkan.</message>	
@@ -48,19 +47,19 @@
 <message key="author.submit.howToSubmitNoPhone"><![CDATA[Menghadapi kesulitan? kontak<a href="mailto:{$supportEmail}">{$supportName}</a> untuk bantuan.]]></message> 
 	<message key="author.submit.journalSection">Bagian Jurnal</message> 
 	<message key="author.submit.journalSectionDescription"><![CDATA[Pilih bagian yang tepat untuk naskah ini (lihat Bagian dan Kebijakan di <a href="{$aboutUrl}" target="_new">Tentang</a> Kami).]]></message>	
-<message key="submission.submit.selectSection">Silah pilih bagian...</message> 
+<message key="author.submit.selectSection">Silah pilih bagian...</message> 
 	<message key="author.submit.submissionLocale">Bahasa Naskah</message> 
 	<message key="author.submit.submissionLocaleDescription">Jurnal ini menerima naskah dari beberapa bahasa. Pilih bahasa utama naskah dari menu di bawah ini.</message>	
-<message key="submission.submit.submissionChecklist">Checklist Naskah</message> 
-	<message key="submission.submit.submissionChecklistDescription"> Menunjukkan bahwa naskah ini siap untuk dipertimbangkan oleh jurnal dengan mengecek hal-hal di bawah ini (komentar untuk editor dapat ditambahkan di bawah).</message>	
+<message key="author.submit.submissionChecklist">Checklist Naskah</message> 
+	<message key="author.submit.submissionChecklistDescription"> Menunjukkan bahwa naskah ini siap untuk dipertimbangkan oleh jurnal dengan mengecek hal-hal di bawah ini (komentar untuk editor dapat ditambahkan di bawah).</message>	
 <message key="author.submit.verifyChecklist">Anda harus memastikan semua artikel tercantum dalam daftar nama naskah yang memuaskan sebelum dilanjutkan.</message>	
 <message key="author.submit.copyrightNoticeAgree">Penulis setuju dengan persyaratan hak cipta, yang akan berlaku pada penyerahan ini dan saat diterbitkan oleh jurnal (komentar untuk editor dapat ditambahkan dibawah).</message>
 <message key="author.submit.copyrightNoticeAgreeRequired">Anda harus setuju dengan persyaratan hak cipta sebelum melanjutkan</message>
-<message key="submission.submit.coverNote">Komentar untuk Editor</message> 
+<message key="author.submit.commentsForEditor">Komentar untuk Editor</message> 
 	<message key="author.submit.comments">Masukkan Teks(pilihan)</message> 
 	<message key="author.submit.form.sectionRequired">Pilih bagian jurnal yang sesuai untuk penyerahan ini.</message>	
 <message key="author.submit.form.localeRequired">Pilih bahasa penyeraha.</message> 
-	<message key="submission.submit.privacyStatement">Pernyataan Privasi Jurnal</message>
+	<message key="author.submit.privacyStatement">Pernyataan Privasi Jurnal</message>
 	<message key="author.submit.reorderInstructions">Mengurutkan nama penulis agar ditampilkan seperti urutan di daftar dalam penerbitan.</message> 
 	<message key="author.submit.reorder">Mengurutkan nama penulis</message> 
 	<message key="author.submit.selectPrincipalContact">Kontak Utama untuk Korespondensi Editorial.</message>	
@@ -70,8 +69,9 @@
 	<message key="author.submit.submissionSupportingAgencies">Lembaga Pendukung</message> 
 <message key="author.submit.submissionSupportingAgenciesDescription">Masukkan nama lembaga yang menyediakan dana atau dukungan untuk pekerjaan yang ditampilkan dalam jurnal.</message> 
 <message key="author.submit.coverageInstructions">Mengacu pada lokasi geo-spasial, liputan atau cakupan kronologis atau historis, dan/ atau karakteristik sampel riset.</message> 
-	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Kode Tambahan</a>.]]></message>	<message key="author.submit.form.authorRequired">Setidaknya dibutuhkan satu penulis.</message>	
-	<message key="author.submit.form.authorRequiredFields"> Nama pertama, Nama terakhir, dan alamat email masing-masing penulis dibutuhkan.</message> 
+	<message key="author.submit.subjectClassInstructions"> Gunakan sistem klasifikasi hyperlink untuk memilih istilah klasifikasi dan, jika sesuai, nomor.</message> 
+<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Kode Tambahan</a>.]]></message>	<message key="author.submit.form.authorRequired">Setidaknya dibutuhkan satu penulis.</message>	
+<message key="author.submit.form.authorRequiredFields"> Nama pertama, Nama terakhir, dan alamat email masing-masing penulis dibutuhkan.</message> 
 	<message key="author.submit.form.titleRequired">Masukkan judul artikel Anda.</message> 
 	<message key="author.submit.form.abstractRequired"> Masukkam sari artikel Anda.</message> 
 	<message key="author.submit.form.wordCountAlert"> Anda melampaui batas maksimal kata untuk sari.</message> 
