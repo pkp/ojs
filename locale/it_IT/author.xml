@@ -47,7 +47,6 @@
 	<message key="author.submit.journalSectionDescription"><![CDATA[Scegli la sezione più adatta alla tua proposta (Vedi le politiche delle sezioni in <a href="{$aboutUrl}" target="_new">Info</a> ).]]></message>
 	<message key="submission.submit.selectSection">Scegli una sezione...</message>
 	<message key="author.submit.submissionChecklist">Lista di controllo della proposta</message>
-	<message key="submission.submit.submissionChecklistDescription">Gli autori, prima di passare alla fase successiva, devono indicare con una spunta se la loro proposta risponde a ognuno dei requisiti indicati.</message>
 	<message key="author.submit.verifyChecklist">Assicurati di aver spuntato tutte le voci della lista prima di continuare</message>
 	<message key="author.submit.copyrightNoticeAgree">Gli autori acconsentono ai termini di questa nota sul Copyright, che sarà applicata al loro contributo se e quando verrà pubblicato (commenti per l'editor possono essere aggiunti sotto).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Devi accettare i termini della nota di Copyright prima di continuare.</message>
@@ -61,7 +60,6 @@
 	<message key="author.submit.deleteAuthor">Cancella autore</message>
 	<message key="author.submit.submissionIndexingDescription">Fornisci i termini per indicizzare la proposta; separa i termini con un punto e virgola (termine1; termine2; termine3).</message>
 	<message key="author.submit.coverageInstructions">Riferimenti geografici, al periodo cronologico/storico e/o alle caratteristiche del campione della ricerca.</message>
-	<message key="author.submit.subjectClassInstructions">Utilizza il link al sistema di classificazione per selezionare i termini e, se necessario, i numeri di classificazione.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Italiano=it; Inglese=en; Francese=fr; Spagnolo=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Altri codici</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Inserisci almeno un autore.</message>
 	<message key="author.submit.form.authorRequiredFields">Inserisci nome, cognome e indirizzo email di ciascun autore.</message>
@@ -93,7 +91,6 @@
 	<message key="author.submit.suppFile.dataSet">Set di dati</message>
 	<message key="author.submit.suppFile.sourceText">Testo della fonte</message>
 	<message key="author.submit.suppFile.briefDescription">Breve descrizione</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Organizzazione finanziatrice o sostenitrice</message>
 	<message key="author.submit.suppFile.availableToPeers">Mostra il file ai revisori (senza metadati), in quanto non comprometterà la blind review.</message>
 	<message key="author.submit.suppFile.publisherDescription">Utilizza solo con materiali ufficialmente pubblicati.</message>
 	<message key="author.submit.suppFile.dateDescription">Data di creazione dello strumento o di raccolta dei dati.</message>
@@ -110,7 +107,6 @@
 	<message key="author.submit.filesSummary">Riepilogo dei file</message>
 	<message key="author.submit.finishSubmission">Completa la proposta</message>
 	<message key="author.submit.submissionComplete">Invio della proposta completato. Grazie per l'interesse che dimostri nel voler pubblicare su {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Se questa proposta &#x00E8; in un formato pronto per la pubblicazione senza ulteriori processi di revisione, editing, o impaginazione, pu&#x00F2; essere messa direttamente nel'ultima fase della coda di lavorazione <a href="{$expediteUrl}" class="action">Cliccando qui</a>. (Nota: solo gli editor hanno questa possibilit&#x00E0; per i loro contributi.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Carica la versione dell'autore</message>
 	<message key="author.article.copyeditedFile">Copyedited File</message>
 	<message key="author.article.authorRevisedFile">File dell'autore</message>
@@ -126,6 +122,4 @@
 	<message key="author.submit.form.localeRequired">Seleziona una lingua per la proposta.</message>
 	<message key="author.submit.submissionLocale">Lingua della proposta</message>
 	<message key="author.submit.submissionLocaleDescription"><![CDATA[Questa rivista accetta contributi in diverse lingue. Seleziona la lingua della proposta dal men&#249; a tendina.]]></message>
-	<message key="author.submit.submissionSupportingAgencies">Agenzie di supporto e finanziamento</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Identifica agenzie (una persona, un'organizzazione o un servizio) che contribuiscono al contenuto o provvedono finanziamento o supporto al lavoro presentato in questa proposta. Inseriscili separandoli con punti e virgola (es. John Doe, Metro University; Master University, Department of Computer Science).</message>
 </locale>

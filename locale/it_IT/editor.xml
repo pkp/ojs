@@ -13,10 +13,6 @@
   -->
 
 <locale name="it_IT" full_name="Italiano">
-	<message key="editor.article.reviewForms">Moduli di revisione</message>
-	<message key="editor.article.selectReviewForm">Seleziona il modulo di revisione</message>
-	<message key="editor.article.clearReviewForm">Cancella il modulo di revisione</message>
-	<message key="editor.article.confirmChangeReviewForm">Modificare il modulo di revisione rimuoverà tutte le risposte che i revisori abbiano dato sinora. Vuoi continuare?</message>
 	<message key="editor.home">Cruscotto dell'editor</message>
 	<message key="editor.submissionsAndPublishing">Proposte e pubblicazioni</message>
 	<message key="editor.submissionQueue">Coda delle proposte</message>
@@ -58,7 +54,6 @@
 	<message key="editor.issues.publicIssueIdentifier">Identificativo pubblico del fascicolo</message>
 	<message key="editor.issues.description">Descrizione</message>
 	<message key="editor.issues.accessStatus">Tipo di accesso</message>
-	<message key="editor.issues.resetArticlePublicationDates">Resetta la data di pubblicazione dell'articolo</message>
 	<message key="editor.issues.accessDate">Data di fine embargo</message>
 	<message key="editor.issues.invalidAccessDate">Data di accesso non valida.</message>
 	<message key="editor.issues.coverPage">Immagine di copertina</message>
@@ -97,9 +92,7 @@
 	<message key="editor.issues.noLiveIssues">Nessun numero attivo</message>
 	<message key="editor.issues.open">Aperto</message>
 	<message key="editor.issues.pages">Paginazione</message>
-	<message key="editor.navigation.issues">Fascicoli</message>
 	<message key="editor.navigation.futureIssues">Fascicoli futuri</message>
-	<message key="editor.navigation.createIssue">Crea un fascicolo</message>
 	<message key="editor.navigation.issueArchive">Fascicoli pubblicati</message>
 	<message key="editor.article.designateReviewVersion">Imposta il file originale come versione di revisione</message>
 	<message key="editor.article.uploadReviewVersion">Carica un file modificato da mandare in revisione</message>
@@ -221,5 +214,4 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">Esiste già un identificatore della gabbia del fascicolo</message>
 	<message key="editor.issues.backToIssueGalleys">Torna alle gabbie del fascicolo</message>
 	<message key="editor.issues.confirmDeleteGalley">Sei sicuro di cancellare questa gabbia del fascicolo?</message>
-	<message key="editor.notifyUsers.allMailingList">Includi tutti gli indirizzi della lista ({$count} email)</message>
 </locale>
