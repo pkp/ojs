@@ -350,7 +350,7 @@ Aktivnih prikazuje na koliko je recenzija recenzent trenutno angažiran.]]></mes
 	<message key="sectionEditor.proofreader.confirmRenotify">Obavještavanje ovog korektora će ponovno pokrenuti njegovu dodjelu. Jeste li sigurni da to želite?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Isprika</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} recenzentova isprika, otkazivanje i raniji krugovi</message>
+	<message key="sectionEditor.regrets.title">#{$submissionId} recenzentova isprika, otkazivanje i raniji krugovi</message>
 	<message key="sectionEditor.regrets">Isprike</message>
 	<message key="sectionEditor.regrets.link">Pregled odbijenih, otkazanih i ranijih recenzija</message>
 	<message key="sectionEditor.regrets.reviewRound">Stručna recenzija, {$round}. krug</message>
@@ -649,46 +649,46 @@ Vaš poslužitelj trenutno podržava mbstring: <strong>{$supportsMBString}</stro
 
 
 	<!-- Article Logs --><message key="log.author.submitted">{$authorName} je prijavio novi prilog, ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} je revidirao svoj prilog {$articleId}. ID nove datoteke je {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} je povučen(a) iz recenzijskog postupka priloga {$articleId} u {$round}. krugu recenzije.</message>
-	<message key="log.review.reviewInitiated">Recenzent {$reviewerName} pokrenuo je  {$round}. krug recenzije priloga {$articleId}.</message>
-	<message key="log.review.reviewReinitiated">{$round}. krug recenzije recenzenta {$reviewerName} za prilog {$articleId} je iznova pokrenut.</message>
-	<message key="log.review.reviewCancelled">Recenzija {$round}. kruga recenzenta {$reviewerName} za prilog {$articleId} je poništena.</message>
-	<message key="log.review.reviewCleared">Recenzija {$round}. kruga recenzenta {$reviewerName} za prilog {$articleId} je izbrisana.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} je ocijenjen za {$round}. krug recenzije priloga {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">Krajnji rok za {$round}. krug recenzije za prilog {$articleId} za recenzenta {$reviewerName} je izmijenjen na {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">Recenzent {$reviewerName} je postavio preporuku za {$round}. krug recenzije priloga {$articleId}.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">{$editorName} je unio u ime recenzenta {$reviewerName} preporuku za {$round}. krug recenzije za prilog {$articleId}.</message>
-	<message key="log.review.resubmit">Prilog {$articleId} je iznova podnesen za recenziju.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} je odbio izraditi {$round}. krug recenzije za prilog {$articleId}.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} je prihvatio izraditi {$round}. krug recenzije za prilog {$articleId}.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} je prihvatio {$round}. krug recenzije za prilog {$articleId} u ime {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">Urednik {$userName} je u ime recenzenta {$reviewerName} priložio datoteku s recenzijom za {$round} krug recenzije priloga {$articleId}.</message>
+	<message key="log.author.documentRevised">{$authorName} je revidirao svoj prilog {$submissionId}. ID nove datoteke je {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} je povučen(a) iz recenzijskog postupka priloga {$submissionId} u {$round}. krugu recenzije.</message>
+	<message key="log.review.reviewInitiated">Recenzent {$reviewerName} pokrenuo je  {$round}. krug recenzije priloga {$submissionId}.</message>
+	<message key="log.review.reviewReinitiated">{$round}. krug recenzije recenzenta {$reviewerName} za prilog {$submissionId} je iznova pokrenut.</message>
+	<message key="log.review.reviewCancelled">Recenzija {$round}. kruga recenzenta {$reviewerName} za prilog {$submissionId} je poništena.</message>
+	<message key="log.review.reviewCleared">Recenzija {$round}. kruga recenzenta {$reviewerName} za prilog {$submissionId} je izbrisana.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} je ocijenjen za {$round}. krug recenzije priloga {$submissionId}.</message>
+	<message key="log.review.reviewDueDateSet">Krajnji rok za {$round}. krug recenzije za prilog {$submissionId} za recenzenta {$reviewerName} je izmijenjen na {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">Recenzent {$reviewerName} je postavio preporuku za {$round}. krug recenzije priloga {$submissionId}.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">{$editorName} je unio u ime recenzenta {$reviewerName} preporuku za {$round}. krug recenzije za prilog {$submissionId}.</message>
+	<message key="log.review.resubmit">Prilog {$submissionId} je iznova podnesen za recenziju.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} je odbio izraditi {$round}. krug recenzije za prilog {$submissionId}.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} je prihvatio izraditi {$round}. krug recenzije za prilog {$submissionId}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} je prihvatio {$round}. krug recenzije za prilog {$submissionId} u ime {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">Urednik {$userName} je u ime recenzenta {$reviewerName} priložio datoteku s recenzijom za {$round} krug recenzije priloga {$submissionId}.</message>
 	<message key="log.review.reviewerFile">Recenzent je poslao datoteku.</message>
 
 
-	<message key="log.copyedit.initiate">{$copyeditorName} je započeo lekturu priloga {$articleId}</message>
+	<message key="log.copyedit.initiate">{$copyeditorName} je započeo lekturu priloga {$submissionId}</message>
 	<message key="log.copyedit.copyeditFileSet">Verzija teksta za lekturu je odabrana.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} je završio početnu lekturu priloga {$articleId}.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} je završio konačnu lekturu priloga {$articleId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} je dodijeljena lektura priloga {$articleId}.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} je završio početnu lekturu priloga {$submissionId}.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} je završio konačnu lekturu priloga {$submissionId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} je dodijeljena lektura priloga {$submissionId}.</message>
 	<message key="log.copyedit.copyeditorFile">Inicijalna lektura priloga je zaprimljena.</message>
 	<message key="log.copyedit.authorFile">Autorska revizija lekture je zaprimljena.</message>
 
-	<message key="log.layout.layoutEditorAssigned">{$editorName} je dodijeljen kao grafički urednik za prilog {$articleId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} je razriješen uloge grafičkog urednika za prilog {$articleId}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} je završio uređivanje prijeloma za prilog {$articleId}.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} je dodijeljen kao grafički urednik za prilog {$submissionId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} je razriješen uloge grafičkog urednika za prilog {$submissionId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} je završio uređivanje prijeloma za prilog {$submissionId}.</message>
 
 	<message key="log.editor.metadataModified">{$editorName} je modificirao metapodatke ovog priloga.</message>
 	<message key="log.editor.editorFile">Zaprimljena je urednikova verzija teksta priloga.</message>
-	<message key="log.editor.archived">Prijava {$articleId} je arhivirana.</message>
-	<message key="log.editor.restored">Prijava {$articleId} je vraćena u uređivački postupak.</message>
-	<message key="log.editor.editorAssigned">{$editorName} je dodijeljen kao urednik prloga {$articleId}.</message>
+	<message key="log.editor.archived">Prijava {$submissionId} je arhivirana.</message>
+	<message key="log.editor.restored">Prijava {$submissionId} je vraćena u uređivački postupak.</message>
+	<message key="log.editor.editorAssigned">{$editorName} je dodijeljen kao urednik prloga {$submissionId}.</message>
 
-	<message key="log.proofread.assign">Korektura priloga {$articleId} dodijeljena je {$proofreaderName} od strane {$assignerName} je dodijelio.</message>
-	<message key="log.proofread.complete">{$proofreaderName} je postavio prilog {$articleId} u raspored za izdavanje.</message>
+	<message key="log.proofread.assign">Korektura priloga {$submissionId} dodijeljena je {$proofreaderName} od strane {$assignerName} je dodijelio.</message>
+	<message key="log.proofread.complete">{$proofreaderName} je postavio prilog {$submissionId} u raspored za izdavanje.</message>
 
-	<message key="log.imported">{$userName} je unio članak {$articleId}.</message>
+	<message key="log.imported">{$userName} je unio članak {$submissionId}.</message>
 
 	<!-- Reading Tools entries -->	<!-- RT Settings --><message key="rt.admin.settings">Opcije alata za čitanje</message>
 
@@ -816,8 +816,8 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="payment.subscription.renew">Obnovite pretplatu</message>
 	<message key="payment.subscription.expires">Istječe</message>
 	<message key="installer.databaseSettingsInstructions">OJS sa spremanje svojih podataka zahtjeva pristup SQL bazi. Pregledajte gorenavedene sistemske zahtjeve za popis baza koje OJS podržava. U niže priloženim poljima navedite postavke koje će se koristiti za povezivanje s bazom.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} je odbio/la {$round} recenziju priloga {$articleId} u ime {$reviewerName}.</message>
-	<message key="log.editor.decision">{$editorName} je evidentirao uredničku odluku ({$decision}) za članak {$articleId}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} je odbio/la {$round} recenziju priloga {$submissionId} u ime {$reviewerName}.</message>
+	<message key="log.editor.decision">{$editorName} je evidentirao uredničku odluku ({$decision}) za članak {$submissionId}.</message>
 	<message key="rt.admin.settings.addComment.authenticated">Anonimni komentari nisu dozvoljeni. Korisnici moraju biti registrirani i prijavljeni da bi mogli ostavljati komentare.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Anonimni komentari su dozvoljeni, ali korisnici moraju biti registrirani i prijavljeni kako bi ostavili komentar.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Anonimni komentari su dopušteni, a korisnici se ne trebaju registrirati da bi ih ostavljali.</message>
