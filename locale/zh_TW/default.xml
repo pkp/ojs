@@ -4,7 +4,7 @@
 <!--
   * locale/zh_TW/default.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -14,10 +14,11 @@
  
 <locale name="zh_TW" full_name="繁體中文">
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">這份稿件之前尚未出版，也未曾有其他期刊考慮出版（或者在「給編者的意見」中已經給了一個說明）。</message>
-	<message key="default.journalSettings.checklist.fileFormat">稿件檔案是OpenOffice, Microsoft Word, 或者RTF的文件檔案格式</message>
+	<message key="default.journalSettings.checklist.fileFormat">稿件檔案是OpenOffice, Microsoft Word, RTF,或者WordPerfect的文件檔案格式</message>
 	<message key="default.journalSettings.checklist.addressesLinked"><![CDATA[如果可行的話，可提供線上閱讀參考文獻的網址，包括那些可開放閱讀版本的文獻。網址已經加上連結、可供點擊(例如，<a href="http://pkp.sfu.ca">http://pkp.sfu.ca</a>)。]]></message>
 	<message key="default.journalSettings.checklist.submissionAppearance">文字內容為單行行距；使用12pt字體大小；採用斜體而不用底線（除非是帶有網址）；而所有的圖解、圖示和表格都放在文中恰當位置，而非文末。</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[本文依循「期刊介紹」中<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">作者指引</a>所要求文體與書目格式。]]></message>
+	<message key="default.journalSettings.checklist.anonymous"><![CDATA[如果要投稿到需審查的期刊文稿類型，本文遵守<a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">確保匿名審查</a>的說明指南。]]></message>
 	<message key="default.journalSettings.privacyStatement">在本期刊網站所輸入的姓名與電子郵件地址只會基於本期刊指定的目的加以使用，而不會用於其他目的或其他部分。</message>
 	<message key="default.journalSettings.openAccessPolicy">這份期刊基於讓研究成果自由授與公眾來支持更全面的知識交流的原則，而提供直接開放閱讀的內容。</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">在出版之前與之後，作者都被允許和鼓勵將投稿到本期刊的文章項目發佈到個人的或者所屬單位的網站上（同時提供該出版品的圖書細目）。</message>
@@ -110,9 +111,10 @@ Malinowski
 
 4. 格式化
 以「這個最新主題...」開頭的段落沒有縮排]]></message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
-</message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}
+]]></message>
 	<message key="default.journalSettings.forReaders"><![CDATA[我們鼓勵讀者使用本期刊的出版通知服務。請使用首頁上方的<a href="{$indexUrl}/{$journalPath}/user/register">註冊</a> 連結在本期刊註冊。這個註冊動作會讓讀者以電子郵件的方式收到每份當期期刊的目錄。這份清單也讓本期刊顯示出某種支持度或讀者群。請見本期刊的<a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">隱私權聲明</a>， 保障讀者的姓名和電子郵件地址不會用於其他用途。]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[ 對這份期刊感興趣嗎？我們建議您看一下<a href="{$indexUrl}/{$journalPath}/about">期刊介紹</a>頁面，以瞭解期刊的文稿類型方針；也請同時看一下 <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">作者指引</a>。作者在進行投稿之前必須在本期刊<a href="{$indexUrl}/{$journalPath}/user/register">註冊</a>，而如果已經註冊的話，可以簡單地<a href="{$indexUrl}/{$journalPath}/login">登入</a>並且開始五個步驟的投稿流程。]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[我們鼓勵圖書館員將這份期刊加入其圖書館的電子期刊資料庫之中。同時，這份期刊的開源碼出版系統或許會適合圖書館放置他們的職員正在編輯的期刊。(請見<a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>

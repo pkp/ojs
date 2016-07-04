@@ -4,7 +4,7 @@
 <!--
   * locale/zh_TW/editor.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="zh_TW" full_name = "繁體中文">
+<locale name="zh_TW" full_name="繁體中文">
 	<message key="editor.home">編輯首頁</message>
 	<message key="editor.submissionsAndPublishing">投稿與出版</message>
 	<message key="editor.submissionQueue">投稿稿件列表</message>
@@ -82,8 +82,9 @@
 	<message key="editor.issues.noLiveIssues">沒有進行中的期數</message>
 	<message key="editor.issues.open">開放</message>
 	<message key="editor.issues.pages">頁面</message>
+	<message key="editor.navigation.issues">期數</message>
 	<message key="editor.navigation.futureIssues">未來期數</message>
-	<message key="grid.action.addIssue">建立期數</message>
+	<message key="editor.navigation.createIssue">建立期數</message>
 	<message key="editor.navigation.issueArchive">過往期數</message>
 	<message key="editor.article.designateReviewVersion">指派作為審訂版本的原始檔案</message>
 	<message key="editor.article.uploadReviewVersion">上傳一份修訂過的審查版本</message>
