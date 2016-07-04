@@ -424,7 +424,7 @@
 	<message key="sectionEditor.proofreader.confirmRenotify">Al contactar de nuevo con este corrector/a de pruebas se reiniciará su asignación. ¿Está seguro/a de que desea continuar?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Rechazos</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} Rechazados por el revisor/a, cancelaciones y rondas previas</message>
+	<message key="sectionEditor.regrets.title">#{$submissionId} Rechazados por el revisor/a, cancelaciones y rondas previas</message>
 	<message key="sectionEditor.regrets">Rechazos</message>
 	<message key="sectionEditor.regrets.link">Ver rechazos, cancelaciones, rondas previas</message>
 	<message key="sectionEditor.regrets.reviewRound">Evaluación por pares, ronda {$round}</message>
@@ -826,48 +826,48 @@
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} introdujo un nuevo envío, Id. {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} revisó el artículo {$articleId}. El Id. del nuevo archivo es {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">Se excluyó a {$reviewerName} de la revisión del envío {$articleId} en la ronda de revisión {$round}.</message>
-	<message key="log.review.reviewInitiated">{$reviewerName} inició la ronda de revisión {$round} del envío {$articleId}.</message>
-	<message key="log.review.reviewReinitiated">{$reviewerName} reinició la ronda de revisión {$round} del envío {$articleId}.</message>
-	<message key="log.review.reviewCancelled">La ronda {$round} que {$reviewerName} revisaba para el envío {$articleId} se canceló.</message>
-	<message key="log.review.reviewCleared">La ronda {$round} que {$reviewerName} revisa para el envío {$articleId} se eliminó.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} ha sido clasificado/a para la ronda de revisión {$round} del envío {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">La fecha límite para la ronda de revisión {$round} del envío {$articleId} de {$reviewerName} se estableció para {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">La recomendación para la ronda de revisión {$round} del envío {$articleId} se estableció por el revisor/a {$reviewerName}.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">El editor/a {$editorName} fijó la recomendación para la ronda de revisión {$round} del envío {$articleId} en nombre del revisor/a {$reviewerName}.</message>
-	<message key="log.review.resubmit">Se reenvió {$articleId} para su revisión.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} rechazó la ronda de revisión {$round} para el envío {$articleId}.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} aceptó la ronda de revisión {$round} para el envío {$articleId}.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} rechazó la ronda {$round} de revisión para el envío {$articleId} en nombre de {$reviewerName}.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} aceptó la ronda de revisión {$round} para el envío {$articleId} en nombre de {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">El editor/a {$userName} subió un archivo de revisión para la ronda {$round} del envío {$articleId} en nombre del revisor {$reviewerName}.</message>
+	<message key="log.author.documentRevised">{$authorName} revisó el artículo {$submissionId}. El Id. del nuevo archivo es {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">Se excluyó a {$reviewerName} de la revisión del envío {$submissionId} en la ronda de revisión {$round}.</message>
+	<message key="log.review.reviewInitiated">{$reviewerName} inició la ronda de revisión {$round} del envío {$submissionId}.</message>
+	<message key="log.review.reviewReinitiated">{$reviewerName} reinició la ronda de revisión {$round} del envío {$submissionId}.</message>
+	<message key="log.review.reviewCancelled">La ronda {$round} que {$reviewerName} revisaba para el envío {$submissionId} se canceló.</message>
+	<message key="log.review.reviewCleared">La ronda {$round} que {$reviewerName} revisa para el envío {$submissionId} se eliminó.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} ha sido clasificado/a para la ronda de revisión {$round} del envío {$submissionId}.</message>
+	<message key="log.review.reviewDueDateSet">La fecha límite para la ronda de revisión {$round} del envío {$submissionId} de {$reviewerName} se estableció para {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">La recomendación para la ronda de revisión {$round} del envío {$submissionId} se estableció por el revisor/a {$reviewerName}.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">El editor/a {$editorName} fijó la recomendación para la ronda de revisión {$round} del envío {$submissionId} en nombre del revisor/a {$reviewerName}.</message>
+	<message key="log.review.resubmit">Se reenvió {$submissionId} para su revisión.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} rechazó la ronda de revisión {$round} para el envío {$submissionId}.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} aceptó la ronda de revisión {$round} para el envío {$submissionId}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} rechazó la ronda {$round} de revisión para el envío {$submissionId} en nombre de {$reviewerName}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} aceptó la ronda de revisión {$round} para el envío {$submissionId} en nombre de {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">El editor/a {$userName} subió un archivo de revisión para la ronda {$round} del envío {$submissionId} en nombre del revisor {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Se subió un archivo de revisión.</message>
-	<message key="log.editor.decision">{$editorName} registró una decisión ({$decision}) editorial para el artículo {$articleId}.</message>
+	<message key="log.editor.decision">{$editorName} registró una decisión ({$decision}) editorial para el artículo {$submissionId}.</message>
 
 
-	<message key="log.copyedit.initiate">{$copyeditorName} inició la corrección de originales en el envío {$articleId}.</message>
+	<message key="log.copyedit.initiate">{$copyeditorName} inició la corrección de originales en el envío {$submissionId}.</message>
 	<message key="log.copyedit.copyeditFileSet">Se seleccionó el archivo de corrección de originales por defecto.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} completó la corrección inicial del envío {$articleId}.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} completó la corrección final del envío {$articleId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} ha sido asignado/a para la corrección del envío {$articleId}.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} completó la corrección inicial del envío {$submissionId}.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} completó la corrección final del envío {$submissionId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} ha sido asignado/a para la corrección del envío {$submissionId}.</message>
 	<message key="log.copyedit.copyeditorFile">Se subió una versión del corrector/a de originales del archivo de envío.</message>
 	<message key="log.copyedit.authorFile">Se subió una versión del archivo de envío corregido por el autor/a.</message>
 
-	<message key="log.layout.layoutEditorAssigned">Se asignó a {$editorName} como maquetador/a para el envío {$articleId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">Se destituyó a {$editorName} como maquetador/a para el envío {$articleId}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} ha completado la edición de maquetación para el envío {$articleId}.</message>
+	<message key="log.layout.layoutEditorAssigned">Se asignó a {$editorName} como maquetador/a para el envío {$submissionId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">Se destituyó a {$editorName} como maquetador/a para el envío {$submissionId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} ha completado la edición de maquetación para el envío {$submissionId}.</message>
 
 	<message key="log.editor.metadataModified">{$editorName} modificó los metadatos para este artículo.</message>
 	<message key="log.editor.editorFile">Se subió una versión del editor/a del archivo de envío.</message>
-	<message key="log.editor.archived">El envío {$articleId} se archivó.</message>
-	<message key="log.editor.restored">El envío {$articleId} se volvió a poner en cola.</message>
-	<message key="log.editor.editorAssigned">{$editorName} ha sido asignado/a como editor/a para el envío {$articleId}.</message>
+	<message key="log.editor.archived">El envío {$submissionId} se archivó.</message>
+	<message key="log.editor.restored">El envío {$submissionId} se volvió a poner en cola.</message>
+	<message key="log.editor.editorAssigned">{$editorName} ha sido asignado/a como editor/a para el envío {$submissionId}.</message>
 
-	<message key="log.proofread.assign">{$assignerName} asignó a {$proofreaderName} la corrección de pruebas del envío {$articleId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} envió {$articleId} a planificación.</message>
+	<message key="log.proofread.assign">{$assignerName} asignó a {$proofreaderName} la corrección de pruebas del envío {$submissionId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} envió {$submissionId} a planificación.</message>
 
-	<message key="log.imported">{$userName} importó el artículo {$articleId}.</message>
+	<message key="log.imported">{$userName} importó el artículo {$submissionId}.</message>
 
 
 	<!-- Reading Tools entries -->
