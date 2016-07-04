@@ -510,7 +510,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="sectionEditor.proofreader.confirmRenotify">ഈ പ്രൂഫ് റീഡര്‍ അവരുടെ അസൈന്‍മെന്റെ വീണ്ടും റീസ്റ്റാര്‍ട്ട് ചെയ്യുകയാണെന്ന് അറിയിക്കുക. താങ്കള്‍ക്ക് ഇത് തുടരണമെന്ന് ഉറപ്പാണ്ണോ?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">റെഗ്രേറ്റ്സ്</message>
-	<message key="sectionEditor.regrets.title"><![CDATA[#{$articleId} റിവ്യൂവര്‍ റെഗ്രേറ്റ്സ്, കാന്‍സലേഷന്‍സ് & ഏര്‍ലിയര്‍ റൗണ്ട്സ്]]></message>
+	<message key="sectionEditor.regrets.title"><![CDATA[#{$submissionId} റിവ്യൂവര്‍ റെഗ്രേറ്റ്സ്, കാന്‍സലേഷന്‍സ് & ഏര്‍ലിയര്‍ റൗണ്ട്സ്]]></message>
 	<message key="sectionEditor.regrets">റെഗ്രേറ്റ്സ്</message>
 	<message key="sectionEditor.regrets.link"><![CDATA[വ്യൂ റെഗ്രേറ്റ്സ്, കാന്‍സേല്‍സ് & പ്രിവിയസ് റൗണ്ട്സ്]]></message>
 	<message key="sectionEditor.regrets.reviewRound">പീര്‍ റിവ്യൂ, റൗണ്ട്  {$round}</message>
@@ -947,48 +947,48 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} has entered a new submission, ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} has revised article {$articleId}. The new file ID is {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} has been unassigned from reviewing submission {$articleId} for review round {$round}.</message>
-	<message key="log.review.reviewInitiated">The round {$round} review by {$reviewerName} for submission {$articleId} has been initiated.</message>
-	<message key="log.review.reviewReinitiated">The round {$round} review by {$reviewerName} for submission {$articleId} has been reinitiated.</message>
-	<message key="log.review.reviewCancelled">The round {$round} review by {$reviewerName} for submission {$articleId} has been cancelled.</message>
-	<message key="log.review.reviewCleared">The round {$round} review by {$reviewerName} for submission {$articleId} has been cleared.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} has been rated for the round {$round} review of submission {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">The due date for the round {$round} review of submission {$articleId} by {$reviewerName} has been set to {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">The recommendation for the round {$round} review of submission {$articleId} by {$reviewerName} has been set.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">The recommendation for the round {$round} review of submission {$articleId} has been set by the editor, {$editorName}, on behalf of the reviewer, {$reviewerName}.</message>
-	<message key="log.review.resubmit">The submission {$articleId} has been resubmitted for review.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} has declined the round {$round} review for submission {$articleId}.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} has accepted the round {$round} review for submission {$articleId}.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} has declined the round {$round} review for submission {$articleId} on behalf of {$reviewerName}.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} has accepted the round {$round} review for submission {$articleId} on behalf of {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">The Editor, {$userName}, has uploaded a review file for round {$round} of submission {$articleId} on behalf of the reviewer, {$reviewerName}.</message>
+	<message key="log.author.documentRevised">{$authorName} has revised article {$submissionId}. The new file ID is {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} has been unassigned from reviewing submission {$submissionId} for review round {$round}.</message>
+	<message key="log.review.reviewInitiated">The round {$round} review by {$reviewerName} for submission {$submissionId} has been initiated.</message>
+	<message key="log.review.reviewReinitiated">The round {$round} review by {$reviewerName} for submission {$submissionId} has been reinitiated.</message>
+	<message key="log.review.reviewCancelled">The round {$round} review by {$reviewerName} for submission {$submissionId} has been cancelled.</message>
+	<message key="log.review.reviewCleared">The round {$round} review by {$reviewerName} for submission {$submissionId} has been cleared.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} has been rated for the round {$round} review of submission {$submissionId}.</message>
+	<message key="log.review.reviewDueDateSet">The due date for the round {$round} review of submission {$submissionId} by {$reviewerName} has been set to {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">The recommendation for the round {$round} review of submission {$submissionId} by {$reviewerName} has been set.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">The recommendation for the round {$round} review of submission {$submissionId} has been set by the editor, {$editorName}, on behalf of the reviewer, {$reviewerName}.</message>
+	<message key="log.review.resubmit">The submission {$submissionId} has been resubmitted for review.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} has declined the round {$round} review for submission {$submissionId}.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} has accepted the round {$round} review for submission {$submissionId}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} has declined the round {$round} review for submission {$submissionId} on behalf of {$reviewerName}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} has accepted the round {$round} review for submission {$submissionId} on behalf of {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">The Editor, {$userName}, has uploaded a review file for round {$round} of submission {$submissionId} on behalf of the reviewer, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">ഒരു റിവ്യൂവറിന്റെ ഫയല്‍ അപ് ലോഡ് ചെയ്തിരിക്കുന്നു</message>
-	<message key="log.editor.decision">An editor decision ({$decision}) for article {$articleId} was recorded by {$editorName}.</message>
+	<message key="log.editor.decision">An editor decision ({$decision}) for article {$submissionId} was recorded by {$editorName}.</message>
 
 
-	<message key="log.copyedit.initiate">Copyediting on submission {$articleId} has been commenced by {$copyeditorName}.</message>
+	<message key="log.copyedit.initiate">Copyediting on submission {$submissionId} has been commenced by {$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">ഡിഫാള്‍ട്ട് ആയിട്ടുള്ള കോപ്പി എഡിറ്റ് ഫയല്‍ തിരഞ്ഞെടുക്കപ്പെട്ടിരിക്കുന്നു.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} has completed the initial copy edit of submission {$articleId}.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} has completed the final copy edit of submission {$articleId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} has been assigned to copyedit submission {$articleId}.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} has completed the initial copy edit of submission {$submissionId}.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} has completed the final copy edit of submission {$submissionId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} has been assigned to copyedit submission {$submissionId}.</message>
 	<message key="log.copyedit.copyeditorFile">സബ്മിഷന്‍ ഫയലിന്റെ കോപ്പി എഡിറ്റര്‍ വേര്‍ഷന്‍ അപ് ലോഡ് ചെയ്തിരിക്കുന്നു.</message>
 	<message key="log.copyedit.authorFile">ഗ്രന്ഥകര്‍ത്താവ് കോപ്പി എഡിറ്റ് ചെയ്ത സബ്മിഷന്‍ ഫയലിന്റെ ഒരു വേര്‍ഷന്‍ അപ് ലോഡ് ചെയ്തിരിക്കുന്നു.</message>
 
-	<message key="log.layout.layoutEditorAssigned">{$editorName} has been assigned as layout editor for submission {$articleId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} has been unassigned as layout editor for submission {$articleId}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} has completed layout editing for submission {$articleId}.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} has been assigned as layout editor for submission {$submissionId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} has been unassigned as layout editor for submission {$submissionId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} has completed layout editing for submission {$submissionId}.</message>
 
 	<message key="log.editor.metadataModified">The metadata for this article was modified by {$editorName}.</message>
 	<message key="log.editor.editorFile">സമര്‍പ്പിച്ച ഫയലിന്റെ എഡിറ്റര്‍ വേര്‍ഷന്‍ അപ്-ലോഡ് ചെയ്തു.</message>
-	<message key="log.editor.archived">The submission {$articleId} has been archived.</message>
-	<message key="log.editor.restored">The submission {$articleId} has been restored to the queue.</message>
-	<message key="log.editor.editorAssigned">{$editorName} has been assigned as editor to submission {$articleId}.</message>
+	<message key="log.editor.archived">The submission {$submissionId} has been archived.</message>
+	<message key="log.editor.restored">The submission {$submissionId} has been restored to the queue.</message>
+	<message key="log.editor.editorAssigned">{$editorName} has been assigned as editor to submission {$submissionId}.</message>
 
-	<message key="log.proofread.assign">{$assignerName} has assigned {$proofreaderName} to proofread submission {$articleId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} has submitted {$articleId} for scheduling.</message>
+	<message key="log.proofread.assign">{$assignerName} has assigned {$proofreaderName} to proofread submission {$submissionId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} has submitted {$submissionId} for scheduling.</message>
 
-	<message key="log.imported">{$userName} has imported article {$articleId}.</message>
+	<message key="log.imported">{$userName} has imported article {$submissionId}.</message>
 
 	<!-- Reading Tools entries -->
 
