@@ -24,11 +24,11 @@
 	<message key="author.submit.step4">步驟 4. 上傳補充檔案</message>
 	<message key="author.submit.step4a">步驟 4a. 新增一個補充檔案</message>
 	<message key="author.submit.step5">步驟 5. 確認投稿</message>
-	<message key="author.submit.start">1. 開始</message>
-	<message key="author.submit.upload">2. 上傳稿件</message>
-	<message key="author.submit.metadata">3.  輸入後設資料</message>
-	<message key="author.submit.supplementaryFiles">4. 上傳補充檔案</message>
-	<message key="author.submit.confirmation">5. 確認</message>
+	<message key="author.submit.start">開始</message>
+	<message key="author.submit.upload">上傳稿件</message>
+	<message key="author.submit.metadata"> 輸入後設資料</message>
+	<message key="author.submit.supplementaryFiles">上傳補充檔案</message>
+	<message key="author.submit.confirmation">確認</message>
 	<message key="author.submit.cancelSubmission">您可以在「作者」角色的使用者首頁中選擇「進行中的稿件」以在稍後任一個時間點完成此投稿程序。</message>
 	<message key="author.submit.notAccepting">這份期刊此時不接受投稿</message>
 	<message key="author.submissions.uploadCopyeditedVersion">上傳校樣編輯過後的版本</message>
@@ -38,16 +38,16 @@
 	<message key="author.submissions.noSubmissions">沒有任何稿件</message>
 	<message key="author.submit.howToSubmit"><![CDATA[作者透過這個網站的五步驟程序，上傳初稿和相關資訊（選擇是否同時上傳補充檔案，像是調查資料和使用設備），投稿各項目到這份期刊。如果在這個程序中碰到困難，請聯絡<a href="mailto:{$supportEmail}">{$supportName}</a> ，透過電子郵件或電話{$supportPhone}取得協助。]]></message>
 	<message key="author.submit.journalSection">期刊文稿類型</message>
-	<message key="author.submit.selectSection">請選擇一個文稿類型...</message>
+	<message key="submission.submit.selectSection">請選擇一個文稿類型...</message>
 	<message key="author.submit.submissionChecklist">投稿檢查表</message>
-	<message key="author.submit.submissionChecklistDescription">勾選下列項目以確定這份稿件已慎重考慮投稿本期刊（可以在下面加上給編輯的意見）</message>
+	<message key="submission.submit.submissionChecklistDescription">勾選下列項目以確定這份稿件已慎重考慮投稿本期刊（可以在下面加上給編輯的意見）</message>
 	<message key="author.submit.verifyChecklist">您必須確定已經完成檢查表中的所有的項目，才能繼續下一步。</message>
 	<message key="author.submit.copyrightNoticeAgree">作者同意這份版權注意事項的內容，並同意在這份期刊出版此稿件時適用於這份稿件（可以在下面加上給編輯的意見）。</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">您必須同意「版權注意事項」的內容才能夠繼續下一步。</message>
-	<message key="author.submit.commentsForEditor">給編輯的意見</message>
+	<message key="submission.submit.coverNote">給編輯的意見</message>
 	<message key="author.submit.comments">輸入文字 (選填)</message>
 	<message key="author.submit.form.sectionRequired">請為這份稿件選擇一個恰當的期刊文稿類型。</message>
-	<message key="author.submit.privacyStatement">期刊的隱私權聲明</message>
+	<message key="submission.submit.privacyStatement">期刊的隱私權聲明</message>
 	<message key="author.submit.selectPrincipalContact">編輯通信的固定聯絡人</message>
 	<message key="author.submit.addAuthor">新增作者</message>
 	<message key="author.submit.deleteAuthor">刪除作者</message>

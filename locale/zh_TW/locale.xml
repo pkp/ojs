@@ -169,7 +169,7 @@
 	<message key="journal.currentIssue">最新一期</message>
 	<message key="journal.journals">期刊</message>
 	<message key="journal.path">路徑</message>
-	<message key="journal.journal">期刊</message>
+	<message key="context.context">期刊</message>
 
 	<!-- User 使用者 -->
 	<message key="user.showAllJournals">顯示我的期刊</message>
