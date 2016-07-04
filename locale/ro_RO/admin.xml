@@ -23,11 +23,9 @@
 	<message key="admin.locale.maybeIncomplete">Localizarea bifată poate să nu fie completă.</message>
 	<message key="admin.languages.confirmUninstall">Eşti sigur că doreşti să dezinstalezi această localizare? Acest lucru poate afecta revistele găzduite şi care folosesc această localizare.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Selectează localizări suplimentare pentru a instala suport în cadrul sistemului. Localizările trebuie să fie înstalate înainte de a fi utilizate de revistele găzduite. Vezi documentaţia OJS pentru informaţii privind suportul pentru limbi noi.</message>
-	<message key="admin.languages.downloadLocales">Descarcă localizări</message>
 	<message key="admin.languages.downloadFailed">Descărcarea localizării a dat eroare. Mesajul(ele) de mai jos descriu ce s-a întâmplat.</message>
 	<message key="admin.languages.localeInstalled">Localizarea "{$locale}" a fost instalată. </message>
 	<message key="admin.languages.download">Descarcă localizări</message>
-	<message key="admin.languages.reloadDefaultEmailTemplates">Reîncarcă template-uri prestabilite de e-mail</message>
 	<message key="admin.languages.download.cannotOpen">Nu pot deschide descriptorul de limbă de pe siteul PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Nu pot adăuga noul fişier registru al localizării, de regulă "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">Baza de de date cu utilizatori OJS</message>
@@ -43,7 +41,6 @@
 	<message key="admin.contexts.create">Creează o revistă</message>
 	<message key="admin.journals.createInstructions">Vei fi desemnat automat ca manager al acestei reviste. După crearea unei noi reviste, intră ca manager pentru a continua cu desemnarea şi atribuirea rolurilor.</message>
 	<message key="admin.journals.urlWillBe">Aici trebuie pus un cuvânt scurt sau un acronim care să identifice unic revista. URL-ul revistei va fi {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">Este nevoie de un titlu.</message>
 	<message key="admin.contexts.form.pathRequired">Este necesară o cale.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Calea poate conţine doar caractere alfanumerice, linii jos, linii şi trebuie să înceapă şi să se temine cu un caracter alfanumeric.</message>
 	<message key="admin.contexts.form.pathExists">Calea selectată este deja folosită de o altă revistă.</message>

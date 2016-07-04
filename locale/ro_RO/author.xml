@@ -53,7 +53,6 @@
 	<message key="author.submit.journalSectionDescription"><![CDATA[Selectează secţiunea corespunzătoare pentru această propunere (vezi secţiunile şi politicile la secţiunea <a href="{$aboutUrl}" target="_new">despre</a> revistă).]]></message>
 	<message key="submission.submit.selectSection">Selectează o secţiune...</message>
 	<message key="author.submit.submissionChecklist">Lista de verificare pentru propunere</message>
-	<message key="submission.submit.submissionChecklistDescription">Indică faptul că această propunere este gata să fie luată în considerare de revistă prin verificarea următoarelor (comentariile către editor pot fi adăugate mai jos).</message>
 	<message key="author.submit.verifyChecklist">Trebuie să te asiguri că toate elementele din lista de verificare sunt îndeplinite pentru a continua.</message>
 	<message key="author.submit.copyrightNoticeAgree">Autorii sunt de acord cu termenii acestei note privind drepturile de autor, care se va aplica acestei propuneri dacă şi când este publicată de către această revistă (comentariile către editor pot fi adăugate mai jos).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Trebuie să fii de acord cu termenii privind drepturile de autor înainte de a continua.</message>
@@ -68,7 +67,6 @@
 	<message key="author.submit.deleteAuthor">Şterge autor</message>
 	<message key="author.submit.submissionIndexingDescription">Furnizează termenii pentru indexarea propunerii; separă termenii cu punct şi virgulă (termen1; termen2; termen3).</message>
 	<message key="author.submit.coverageInstructions">Se referă la localizarea geo-spaţială, acoperirea cronologică şi istorică şi/sau caracteristicile mostrei de cercetare.</message>
-	<message key="author.submit.subjectClassInstructions">Utilizează sistemul de clasificare cu hiperlinkuri pentru a selecta termenii de clasificare iar dacă este necesar numerele asociate.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Engleză=en; Franceză=fr; Spaniolă=es; Română=ro. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Coduri suplimentare</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Este nevoie de cel puţin un autor.</message>
 	<message key="author.submit.form.authorRequiredFields">Sunt necesare numele, prenumele şi adresa de email pentru fiecare autor.</message>
@@ -101,7 +99,6 @@
 	<message key="author.submit.suppFile.dataSet">Seturi de date</message>
 	<message key="author.submit.suppFile.sourceText">Texte sursă</message>
 	<message key="author.submit.suppFile.briefDescription">Descriere sumară</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Contributor sau agenţie sponsor</message>
 	<message key="author.submit.suppFile.availableToPeers">Supune fişierul atenţiei evaluatorilor (fără metadate) atâta vreme cât nu va compromite evaluarea oarbă.</message>
 	<message key="author.submit.suppFile.publisherDescription">Folosește doar cu materiale publicate anterior.</message>
 	<message key="author.submit.suppFile.dateDescription">Data colectării datelor sau a creării instrumentelor.</message>
@@ -118,7 +115,6 @@
 	<message key="author.submit.filesSummary">Sumarul fişierelor</message>
 	<message key="author.submit.finishSubmission">Finalizează propunerea</message>
 	<message key="author.submit.submissionComplete">Depunerea propunerii s-a încheiat. Mulţumim pentru dorința de a publica în revista {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Dacă această propunere este într-un format care este gata deja de a fi publicat fără o evaluare ulterioară, redactare sau machetare, acesta poate fi pus direct în ultima etapă a listei de redactare apăsând <a href="{$expediteUrl}" class="action">aici</a>. (Notă: Doar redactorii revistei au această opţiune pentru propunerile lor.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Încarcă versiunea autorului</message>
 	<message key="author.article.copyeditedFile">Fişier redactat</message>
 	<message key="author.article.authorRevisedFile">Fişierul autorului</message>

@@ -39,8 +39,6 @@
 
 
 	<!--  peer review -->
-	<message key="submission.reviewForm">Formular de Evaluare</message>
-	<message key="submission.reviewFormResponse">Formular de răspuns la evaluare</message>
 
 
 	<message key="reviewer.article.enterReviewForm">Dă clic pe pictogramă pentru a completa formularul de evaluare.</message>	
@@ -59,7 +57,6 @@
 	<message key="common.confirmComplete">Eşti sigur că vrei să marchezi această sarcină ca fiind încheiată? Nu vei mai putea face modificări după.</message>
 	<message key="common.payment">Plată</message>
 	<message key="common.payments">Plăţi</message>
-	<message key="common.pageHeader.altText">Colontitlul paginii (header)</message>
 	<message key="common.homePageHeader.altText">Colontitlul paginii principale</message>
 	<message key="common.journalHomepageImage.altText">Imaginea din pagina principală a revistei</message>
 
@@ -75,7 +72,6 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Sistemul de asistenţă al revistei</message>
-	<message key="navigation.archives">Arhive</message>
 	<message key="navigation.current">Numărul curent</message>
 	<message key="navigation.otherJournals">Alte reviste</message>
 	<message key="navigation.browseByIssue">După număr</message>
@@ -128,12 +124,8 @@
 	<message key="article.suppFiles">Fişier(e) suplimentar</message>
 	<message key="article.suppFilesAbbrev">Fiş. supl.</message>
 	<message key="article.discipline">Disciplină ştiinţifică şi subdisciplină</message>
-	<message key="article.subjectClassification">Clasificare pe domenii</message>
 	<message key="article.subject">Cuvinte cheie</message>
 	<message key="article.coverage">Domeniul pe care îl acoperă</message>
-	<message key="article.coverageGeo">Acoperire geospaţială</message>
-	<message key="article.coverageChron">Acoperire cronologică sau istorică</message>
-	<message key="article.coverageSample">Caracteristicile mostrei de cercetare</message>
 	<message key="article.type">Tip, metodă sau abordare</message>
 	<message key="article.language">Limbă</message>
 	<message key="article.sectionEditor">RS</message>
@@ -221,20 +213,9 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Manager de revistă</message>
-	<message key="user.role.editor">Redactor</message>
 	<message key="user.role.sectionEditor">Redactor de secţiune</message>
-	<message key="user.role.layoutEditor">Redactor al machetei</message>
-	<message key="user.role.copyeditor">(Tehno)redactor</message>
-	<message key="user.role.proofreader">Corector</message>
-	<message key="user.role.author">Autor</message>
 	<message key="user.role.subscriptionManager">Manager pentru abonamente</message>
 	<message key="user.role.managers">Managerii revistei</message>
-	<message key="user.role.editors">Redactori</message>
-	<message key="user.role.sectionEditors">Redactori de secţiune</message>
-	<message key="user.role.layoutEditors">Redactori de machetă</message>
-	<message key="user.role.copyeditors">(Tehno)redactori</message>
-	<message key="user.role.proofreaders">Corectori</message>
-	<message key="user.role.authors">Autori</message>
 	<message key="user.role.subscriptionManagers">Manageri abonamente</message>
 	
 	<!-- Common Issue Terms -->
@@ -288,7 +269,6 @@
 	<message key="submission.event.logLevel.error">Eroare</message>
 	
 	<message key="submission.event.general.defaultEvent">Depunere de propunere</message>
-	<message key="submission.event.general.articleSubmitted">Articol propus</message>
 	<message key="submission.event.general.issueScheduled">Propunere trimisă pentru a genera lista cu programări</message>
 	<message key="submission.event.general.issueAssigned">Propunere alipită la un număr</message>
 	<message key="submission.event.general.articlePublished">Articol publicat</message>
@@ -421,8 +401,6 @@ Trebuie remarcat faptul că interfaţa OAI poate fi deazactivată pentru acest s
 	<message key="plugins.categories.implicitAuth.description">Modulele inițiale de autentificare au implementat suportul pentru autentificarea utilizatorilor bazată pe headerele http.</message>
 
 
-	<message key="plugins.categories.oaiMetadataFormats">Module pentru formatarea metadatelor conform OAI</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Aceste module de formatare oferă metadate în cazul comunicarii de date prin OAI.</message>
 
 
  
@@ -491,7 +469,6 @@ Titlul sistemului de clasificare]]></message>
 
 <br /><br />
 Trebuie spus că în cazul în care administratorul siteului l-a înregistrat la aceste servicii, revista va fi indexată automat și nu va mai trebui să procedați la încă o înregistrare.]]></message>
-	<message key="manager.setup.citations">Permiteți autorilor să ofere separat o listă formatată de referințe bibliografice (citări) ca parte a procesului de depunere a propunerii.</message>
 	
 
 
@@ -777,18 +754,14 @@ Activ însemnă câte evaluări sunt în prezent luate în considerare sau în d
 	
 
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Nu eşti utilizator? Înregistrează-te pe site!</message>
 	<message key="user.login.resetPasswordInstructions"><![CDATA[Din motive de securitate acest sistem trimite o parolă de resetare prin email utilizatorilor înregistraţi şi nu trimite 
 parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta parola. Va fi trimisă o confirmare către această adresă de email.]]></message>
 
 
 
 	<!-- Registration -->
-	<message key="user.register.selectJournal">Selectează o revistă la care să te înscrii</message>
 	<message key="user.register.noJournals">Nu există reviste la care să te poţi înscrie pe acest site.</message>
 	<message key="user.register.privacyStatement">Declaraţie de confidenţialitate</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Apasă aici</a> dacă eşti deja înregistrat la această revistă sau la altă revistă de pe acest site.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Apasă aici</a> dacă <strong>nu</strong> eşti deja înregistrat la această revistă sau la o altă revistă de pe acest site.]]></message>
 	<message key="user.register.loginToRegister">Introdu numele şi parola existentă pentru a te autentifica la această revistă.</message>
 	<message key="user.register.registrationDisabled">Această revistă nu acceptă înscrieri de utilizatori în acest moment.</message>
 	<message key="user.register.form.passwordLengthTooShort">Parola introdusă nu este îndeajuns de lungă.</message>
@@ -883,8 +856,6 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	
 	<!-- About The Journal -->
 	<message key="about.statistics">Statistici</message>
-	<message key="about.journalContact">Contactul principal pentru revistă</message>
-	<message key="about.aboutTheJournal">Despre revistă</message>
 	<message key="about.history">Istoricul revistei</message>
 	<message key="about.editorialTeam">Colectivul de redacţie</message>
 	<message key="about.editorialTeam.biography">Biografie</message>
@@ -892,13 +863,8 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<message key="about.focusAndScope">Obiective și acoperire</message>
 	<message key="about.sectionPolicies">Regulamentele secțiunilor</message>
 	<message key="about.submissions">Propuneri</message>
-	<message key="about.sponsors">Sponsori</message>
-	<message key="about.contributors">Surse pentru asistență</message>
 	<message key="about.onlineSubmissions">Propuneri online</message>
-	<message key="about.onlineSubmissions.haveAccount">Ai deja un nume de utilizator şi o parolă pentru {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Mergi la autentificare</message>
-	<message key="about.onlineSubmissions.needAccount">Ai nevoie de un nume de utilizator şi o parolă?</message>
-	<message key="about.onlineSubmissions.registration">Mergi la înregistrare</message>
 	<message key="about.onlineSubmissions.registrationRequired">Înregistrarea şi autentificarea sunt necesare pentru a propune articole online şi pentru a verifica starea propunerilor existente.</message>
 	<message key="about.authorGuidelines">Îndrumări pentru autori</message>
 	<message key="about.submissionPreparationChecklist">Listă de verificare pentru pregătirea propunerilor</message>
@@ -926,7 +892,6 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<message key="about.subscriptionTypes.cost">Cost</message>
 	<message key="about.availableSubscriptionTypes">Tipuri de abonamente</message>
 	<message key="about.memberships">Afilieri</message>
-	<message key="about.journalSponsorship">Sponsorii revistei</message>
 	<message key="about.aboutThisPublishingSystem">Despre acest sistem de publicare</message>
 	<message key="about.aboutThisPublishingSystem.altText">Procesul editorial și de publicare al OJS</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Această revistă foloseşte Open Journal Systems {$ojsVersion}, care este un software cu sursă deschisă pentru managementul şi publicarea unei reviste întreținut şi distribuit liber de <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> sub GNU General Public License.]]></message>
@@ -1072,7 +1037,6 @@ Serverul în acest moment suportă supports mbstring: <strong>{$supportsMBString
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} a introdus o nouă propunere cu ID-ul {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} a revizuit articolul {$articleId}. Noul ID al fişierului este {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} a fost angajat în evaluarea propunerii {$articleId} pentru sesiunea de evaluare {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} a fost dezangajat din evaluarea propunerii {$articleId} pentru sesiunea de evaluare {$round}.</message>
 	<message key="log.review.reviewInitiated">Sesiunea {$round} de evaluare făcută de {$reviewerName} pentru propunerea {$articleId} a fost iniţializată.</message>
 	<message key="log.review.reviewReinitiated">Sesiunea {$round} de evaluare făcută de {$reviewerName} pentru propunerea {$articleId} a fost reiniţializată.</message>
@@ -1109,7 +1073,6 @@ Serverul în acest moment suportă supports mbstring: <strong>{$supportsMBString
 	<message key="log.editor.archived">Propunerea {$articleId} a fost arhivată.</message>
 	<message key="log.editor.restored">Propunerea {$articleId} a fost restaurată în lista de prelucrare.</message>
 	<message key="log.editor.editorAssigned">{$editorName} a fost angajat ca redactor al propunerii {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} a urgentat procesul de redactare pentru articolul {$articleId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} l-a angajat pe {$proofreaderName} să corecteze propunerea {$articleId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} a trimis {$articleId} pentru programare.</message>
@@ -1187,22 +1150,16 @@ Validarea poate eşua pe URL-urile de căutare care necesită date postate într
 	<message key="notification.notificationsPublicDescription">Această pagină indică actualizările importante asociate cu această revistă precum noilenumere sau anunțurile. Te poți înscrie pentru a primi aceste anunțuri prin intermediul fluxurilor RSS (dând clic pe imaginea din dreapta) sau <![CDATA[  <a href="{$emailUrl}">prin email.</a>]]></message>
 	
 	<message key="notification.type.articleSubmitted">Un articol nou, "{$param}", a fost introdus ca propunere.</message>
-	<message key="notification.type.copyeditComment">Un (tehno)redactor a lăsat un comentariu la "{$param}".</message>
 	<message key="notification.type.editing">Editarea evenimentelor</message>
 	<message key="notification.type.editorDecisionComment">A fost lăsat un comentariu la decizia redactorului pentru "{$param}".</message>
 	<message key="notification.type.galleyModified">A fost modificată o asamblare pentru "{$param}".</message>
 	<message key="notification.type.issuePublished">A fost publicat un nou număr.</message>
-	<message key="notification.type.layoutComment">A fost lăsat un comentariu la macheta "{$param}".</message>
-	<message key="notification.type.metadataModified">Metadatele "{$param}" au fost modificate.</message>
 	<message key="notification.type.newAnnouncement">A fost creat un anunț nou.</message>	
-	<message key="notification.type.proofreadComment">A fost lăsat un comentariu de către un corector pentru "{$param}".</message>
-	<message key="notification.type.reviewerComment">Un evaluator a comentat la "{$param}".</message>
 	<message key="notification.type.reviewerFormComment">A fost trimis un formular de evaluare pentru "{$param}".</message>
 	<message key="notification.type.reviewing">Evenimente la evaluare</message>
 	<message key="notification.type.site">Evenimente privind siteul</message>
 	<message key="notification.type.submissionComment">Un redactor a făcut un comentariu la "{$param}".</message>
 	<message key="notification.type.submissions">Evenimente privind propunerea</message>
-	<message key="notification.type.suppFileModified">Fișierele suplimentare ale "{$param}" au fost modificate.</message>
 	<message key="notification.type.userComment">Un cititor a făcut un comentariu la "{$param}"</message>
 
 
@@ -1215,7 +1172,6 @@ Validarea poate eşua pe URL-urile de căutare care necesită date postate într
 	
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Lista de monede "{$filename}" a fost încărcată din XML</message>
-	<message key="debug.notes.helpMappingLoad">Fişierul XML de mapare a sistemului de asistenţă {$filename} a fost reîncărcat în căutarea lui {$id}.</message>
 	<message key="user.register.reviewerInterests">Identificarea intereselor în contextul evaluării (zone ale subiectelor de studiu și metodele de cercetare):</message>
 	<message key="user.subscriptions.subscriptionStatus">Starea propunerii</message>
 	<message key="user.subscriptions.statusInformation">Abonamentele active și cele care au expirat sunt afișate mai jos împreună cu data expirării. Suplimentar, informațiile privind starea, pot fi incluse cu fiecare abonament.</message>
@@ -1225,7 +1181,5 @@ Validarea poate eşua pe URL-urile de căutare care necesită date postate într
 	<message key="user.subscriptions.status.needsApprovalDescription">Propunerea trebuie să fie evaluată înainte de a fi activată</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">A fost inițiată plata manuală, dar nu a fost primită încă</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">A fost inițiată plata online dar nu a fost încheiată</message>
-	<message key="article.pdf.download">Descarcă acest fișier PDF</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Fișierul PDF pe care l-ai selectat ar trebui încărcat aici dacă browserul web are un modul specific instalat (de exemplu, o versiune recentă <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Poți descărca fișierul direct pe computerul propriu, de unde pot fi deschise. Pentru a descărca PDF-ul, clic pe linkul pentru descărcare de mai jos.</p> <p>Dacă doriți informații mai multe despre cum puteți printa, salva și lucra cu PDF-urile, Highwire Press oferă un util <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions privind PDF-urile</a>.</p>]]></message>
 	<message key="payment.authorFees">Taxe pentru autori</message>
 </locale>
