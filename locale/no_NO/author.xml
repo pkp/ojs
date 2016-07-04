@@ -24,11 +24,11 @@
 	<message key="author.submit.step4">Trinn 4. Last opp tilleggsfiler</message>
 	<message key="author.submit.step4a">Trinn 4a. Legg til en tilleggsfil</message>
 	<message key="author.submit.step5">Trinn 5. Bekreft innsendingen</message>
-	<message key="author.submit.start">1. Start</message>
-	<message key="author.submit.upload">2. Last opp manuskript</message>
-	<message key="author.submit.metadata">3. Skriv inn metadata</message>
-	<message key="author.submit.supplementaryFiles">4. Last opp tilleggsfiler</message>
-	<message key="author.submit.confirmation">5. Bekreftelse</message>
+	<message key="author.submit.start">Start</message>
+	<message key="author.submit.upload">Last opp manuskript</message>
+	<message key="author.submit.metadata">Skriv inn metadata</message>
+	<message key="author.submit.supplementaryFiles">Last opp tilleggsfiler</message>
+	<message key="author.submit.confirmation">Bekreftelse</message>
 	<message key="author.submit.cancelSubmission">Du kan fullføre denne innsendingen senere, ved å velge Aktive manus fra forfattersiden din.</message>
 	<message key="author.submit.notAccepting">Dette tidsskriftet tar for øyeblikket ikke imot bidrag.</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Last opp manuskript i redigert versjon</message>
@@ -39,16 +39,16 @@
 	<message key="author.submit.howToSubmit"><![CDATA[Forfattere skal sende inn bidragene til dette tidsskriftet på nettet, gjennom en femtrinns prosess for opplasting av manuskript og annen relevant informasjon (med mulighet for også å laste opp tilleggsfiler, som for eksempel forskningsdata og -instrument). Hvis det oppstår problemer med denne prosessen, vennligst kontakt teknisk kontaktperson (<a href="mailto:{$supportEmail}">{$supportName}</a>) med e-post, eller på telefon {$supportPhone}, for å få hjelp.]]></message>
 	<message key="author.submit.journalSection">Tidsskriftseksjon</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Velg en passende seksjon for dette manuskriptet (Se Seksjoner og Retningslinjer i <a href="{$aboutUrl}">Om</a> tidsskriftet).]]></message>
-	<message key="author.submit.selectSection">Vennligst velg en seksjon ...</message>
+	<message key="submission.submit.selectSection">Vennligst velg en seksjon ...</message>
 	<message key="author.submit.submissionChecklist">Sjekkliste for klargjøring av manuskript</message>
-	<message key="author.submit.submissionChecklistDescription">Bekreft at manuskriptet du sender inn er klargjort for vurdering hos dette tidsskriftet, ved å krysse av for følgende (øvrige kommentarer til redaktøren kan legges til nedenfor).</message>
+	<message key="submission.submit.submissionChecklistDescription">Bekreft at manuskriptet du sender inn er klargjort for vurdering hos dette tidsskriftet, ved å krysse av for følgende (øvrige kommentarer til redaktøren kan legges til nedenfor).</message>
 	<message key="author.submit.verifyChecklist">Du må sørge for at alle momentene i sjekklisten for klargjøring av manuskript er utført og krysset av, før du går videre.</message>
 	<message key="author.submit.copyrightNoticeAgree">Forfatteren aksepterer med dette at vilkårene i denne erklæringen om copyright gjøres gjeldende for dette manuskriptet, hvis og når det publiseres av dette tidsskriftet (øvrige kommentarer til redaktøren kan legges til nedenfor).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Du må bekrefte vilkårene i erklæringen om copyright før du går videre.</message>
-	<message key="author.submit.commentsForEditor">Kommentarer til redaktøren</message>
+	<message key="submission.submit.coverNote">Kommentarer til redaktøren</message>
 	<message key="author.submit.comments">Skriv inn tekst (valgfritt)</message>
 	<message key="author.submit.form.sectionRequired">Vennligst velg en passende tidsskriftseksjon for dette manuskriptet.</message>
-	<message key="author.submit.privacyStatement">Tidsskriftets erklæring om personopplysninger</message>
+	<message key="submission.submit.privacyStatement">Tidsskriftets erklæring om personopplysninger</message>
 	<message key="author.submit.reorderInstructions">Bruk pilene for å endre rekkefølgen forfatternavnene skal vises i.</message>
 	<message key="author.submit.selectPrincipalContact">Hovedkontakt for redaksjonell korrespondanse.</message>
 	<message key="author.submit.addAuthor">Legg til forfatter</message>

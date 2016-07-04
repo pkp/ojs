@@ -183,7 +183,7 @@
 	<message key="journal.currentIssue">Nyeste utgave</message>
 	<message key="journal.journals">Tidsskrift</message>
 	<message key="journal.path">Filsti</message>
-	<message key="journal.journal">Tidsskrift</message>
+	<message key="context.context">Tidsskrift</message>
 
 	<!-- User -->
 	<message key="user.profile.profileImage">Profilbilde</message>
