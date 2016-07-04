@@ -26,11 +26,11 @@
 	<message key="author.submit.step4">Шаг 4. Загрузка дополнительных файлов</message>
 	<message key="author.submit.step4a">Шаг 4a. Добавить дополнительный файл</message>
 	<message key="author.submit.step5">Шаг 5. Подтверждение отправки</message>
-	<message key="author.submit.start">1. Начало</message>
-	<message key="author.submit.upload">2. Статья</message>
-	<message key="author.submit.metadata">3. Метаданные</message>
-	<message key="author.submit.supplementaryFiles">4. Дополнительные файлы</message>
-	<message key="author.submit.confirmation">5. Подтверждение</message>
+	<message key="author.submit.start">Начало</message>
+	<message key="author.submit.upload">Статья</message>
+	<message key="author.submit.metadata">Метаданные</message>
+	<message key="author.submit.supplementaryFiles">Дополнительные файлы</message>
+	<message key="author.submit.confirmation">Подтверждение</message>
 	<message key="author.submit.cancelSubmission">Вы можете закончить эту отправку позже, выбрав «Статьи в работе» на домашней странице автора.</message>
 	<message key="author.submit.notAccepting">Этот журнал сейчас не принимает статьи.</message>
 	<message key="author.submit.requestWaiver">Запрос отмены оплаты</message>
@@ -50,19 +50,19 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Столкнулись с трудностями? Свяжитесь с <a href="mailto:{$supportEmail}">{$supportName}</a>, чтобы получить помощь.]]></message>
 	<message key="author.submit.journalSection">Раздел журнала</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Выберите подходящий раздел для этой статьи (смотрите «Политика разделов журнала» на странице <a href="{$aboutUrl}" target="_new">«О журнале»</a>).]]></message>
-	<message key="author.submit.selectSection">Пожалуйста, выберите раздел...</message>
+	<message key="submission.submit.selectSection">Пожалуйста, выберите раздел...</message>
 	<message key="author.submit.submissionLocale">Язык отправляемой статьи</message>
 	<message key="author.submit.submissionLocaleDescription">Этот журнал принимает статьи на нескольких языках. Выберите основной язык отправляемой статьи из раскрывающегося списка ниже.</message>
 	<message key="author.submit.submissionChecklist">Контрольный список подготовки статьи к отправке</message>
-	<message key="author.submit.submissionChecklistDescription">Подтвердите, что отправляемая статья готова для рассмотрения этим журналом, отметив следующие пункты (комментарии для редактора могут быть добавлены ниже).</message>
+	<message key="submission.submit.submissionChecklistDescription">Подтвердите, что отправляемая статья готова для рассмотрения этим журналом, отметив следующие пункты (комментарии для редактора могут быть добавлены ниже).</message>
 	<message key="author.submit.verifyChecklist">Перед продолжением отправки вы должны убедиться, что выполнены все пункты в контрольном списке подготовки статьи к отправке.</message>
 	<message key="author.submit.copyrightNoticeAgree">Авторы согласны с Условиями передачи авторских прав, которые будут применены к этой статье в случае, если эта статья будет опубликована этим журналом (комментарии для редактора могут быть добавлены ниже).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Перед продолжением отправки вы должны принять Условия передачи авторских прав.</message>
-	<message key="author.submit.commentsForEditor">Комментарии для редактора</message>
+	<message key="submission.submit.coverNote">Комментарии для редактора</message>
 	<message key="author.submit.comments">Введите текст (не обязательно)</message>
 	<message key="author.submit.form.sectionRequired">Пожалуйста, выберите подходящий раздел журнала для этой статьи</message>
 	<message key="author.submit.form.localeRequired">Пожалуйста, выберите язык отправляемой статьи.</message>
-	<message key="author.submit.privacyStatement">Заявление журнала о конфиденциальности</message>
+	<message key="submission.submit.privacyStatement">Заявление журнала о конфиденциальности</message>
 	<message key="author.submit.reorderInstructions">Переставьте имена авторов в том порядке, в котором они должны быть указаны в публикации.</message>
 	<message key="author.submit.reorder">Переставить имена авторов</message>
 	<message key="author.submit.selectPrincipalContact">Основной автор для переписки с редакцией.</message>

@@ -219,7 +219,7 @@
 	<message key="journal.currentIssue">Текущий выпуск</message>
 	<message key="journal.journals">Журналы</message>
 	<message key="journal.path">Путь</message>
-	<message key="journal.journal">Журнал</message>
+	<message key="context.context">Журнал</message>
 	<message key="journal.issn">ISSN</message>
 
 	<!-- Пользователь -->
