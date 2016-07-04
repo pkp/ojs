@@ -26,11 +26,11 @@
 	<message key="author.submit.step4">Étape 4. Télécharger les fichiers supplémentaires</message>
 	<message key="author.submit.step4a">Étape 4a. Ajouter un fichier supplémentaire</message>
 	<message key="author.submit.step5">Étape 5. Confirmer la soumission</message>
-	<message key="author.submit.start">1. Commencer</message>
-	<message key="author.submit.upload">2. Télécharger la soumission</message>
-	<message key="author.submit.metadata">3. Saisir les métadonnées</message>
-	<message key="author.submit.supplementaryFiles">4. Télécharger les fichiers supplémentaires</message>
-	<message key="author.submit.confirmation">5. Confirmer la soumission</message>
+	<message key="author.submit.start">Commencer</message>
+	<message key="author.submit.upload">Télécharger la soumission</message>
+	<message key="author.submit.metadata">Saisir les métadonnées</message>
+	<message key="author.submit.supplementaryFiles">Télécharger les fichiers supplémentaires</message>
+	<message key="author.submit.confirmation">Confirmer la soumission</message>
 	<message key="author.submit.cancelSubmission">Vous pouvez terminer cette soumission plus tard en sélectionnant Soumissions actives à la Page d'accueil de l'auteur.</message>
 	<message key="author.submit.notAccepting">Cette revue n'accepte pas de soumissions pour le moment.</message>
 	<message key="author.submit.requestWaiver">Demande d'exemption</message>
@@ -45,16 +45,16 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Vous éprouvez des difficultés? Communiquez avec <a href="mailto:{$supportEmail}">{$supportName}</a> pour obtenir de l'aide.]]></message>
 	<message key="author.submit.journalSection">Rubrique de la revue</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Sélectionner la rubrique de la revue la plus appropriée pour cette soumission (voir Rubriques et politiques dans <a href="{$aboutUrl}" target="_new">À propos</a>de la revue).]]></message>
-	<message key="author.submit.selectSection">Veuillez sélectionner une rubrique...</message>
+	<message key="submission.submit.selectSection">Veuillez sélectionner une rubrique...</message>
 	<message key="author.submit.submissionChecklist">Liste de vérification de la soumission</message>
-	<message key="author.submit.submissionChecklistDescription">Indiquer que cette soumission est prête à être évaluée par la revue en sélectionnant tous les éléments suivants (des commentaires au rédacteur peuvent être ajoutés ci-dessous).</message>
+	<message key="submission.submit.submissionChecklistDescription">Indiquer que cette soumission est prête à être évaluée par la revue en sélectionnant tous les éléments suivants (des commentaires au rédacteur peuvent être ajoutés ci-dessous).</message>
 	<message key="author.submit.verifyChecklist">Vous devez vous assurer que tous les éléments de la liste de vérification de la soumission sont satisfaits avant de continuer</message>
 	<message key="author.submit.copyrightNoticeAgree">Les auteurs acceptent les conditions de l'Avis de droit d'auteur, qui s'appliqueront à cette soumission si et quand elle sera publiée par cette revue (des commentaires au rédacteur peuvent être ajoutés ci-dessous).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Vous devez accepter les conditions de l'Avis de droit d'auteur avant de pouvoir continuer.</message>
-	<message key="author.submit.commentsForEditor">Commentaires pour le Rédacteur</message>
+	<message key="submission.submit.coverNote">Commentaires pour le Rédacteur</message>
 	<message key="author.submit.comments">Saisir du texte (optionnel)</message>
 	<message key="author.submit.form.sectionRequired">Veuillez sélectionner une rubrique de la revue appropriée pour cette soumission.</message>
-	<message key="author.submit.privacyStatement">Déclaration de confidentialité de la revue</message>
+	<message key="submission.submit.privacyStatement">Déclaration de confidentialité de la revue</message>
 	<message key="author.submit.reorderInstructions">Réordonner les auteurs pour qu'ils paraissent dans l'ordre dans lequel ils seront listés lors de la publication.</message>
 	<message key="author.submit.selectPrincipalContact">Contact principal pour la correspondance éditoriale.</message>
 	<message key="author.submit.addAuthor">Ajouter un auteur</message>

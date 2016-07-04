@@ -159,7 +159,7 @@
 	<message key="journal.currentIssue">Numéro courant</message>
 	<message key="journal.journals">Revues</message>
 	<message key="journal.path">Chemin</message>
-	<message key="journal.journal">Revue</message>
+	<message key="context.context">Revue</message>
 
 	<!-- User -->
 	<message key="user.showAllJournals">Afficher mes revues</message>
