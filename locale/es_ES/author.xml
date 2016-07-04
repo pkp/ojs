@@ -1,127 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * locale/es_ES/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español (España)) locale.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   *
+  * Localization strings.
   -->
 
-<locale name="es_ES" full_name = "Español (España)">
+<locale name="es_ES" full_name="Español (España)">
 	<message key="author.submit">Nuevo envío</message>
 	<message key="author.track">Envíos activos</message>
-	<message key="author.competingInterests"><![CDATA[Conflicto de&nbsp;intereses <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></message>
+	<message key="author.competingInterests"><![CDATA[Conflicto&nbsp;de intereses <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></message>
 	<message key="author.submit.submitArticle">Enviar un artículo</message>
-	<message key="author.submit.stepsToSubmit">Cinco pasos para enviar</message>
-	<message key="author.submit.startHereTitle">Comenzar un nuevo envío</message>
-	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Pulse aquí</a> para ir al primer paso del proceso de envío (5 pasos).]]></message>
-	<message key="author.submit.step1">Paso 1. Comenzar el envío</message>
-	<message key="author.submit.step2">Paso 2. Subir el envío</message>
-	<message key="author.submit.step3">Paso 3. Introducción de los metadatos del envío</message>
-	<message key="author.submit.step4">Paso 4. Subir ficheros complementarios</message>
-	<message key="author.submit.step4a">Paso 4a. Añadir un fichero suplementario</message>
+	<message key="author.submit.stepsToSubmit">Enviar un artículo en cinco pasos</message>
+	<message key="author.submit.startHereTitle">Empezar un nuevo envío</message>
+	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Haga clic aquí</a> para ir al primer paso del proceso de envío en cinco pasos.]]></message>
+	<message key="author.submit.step1">Paso 1. Empezar el envío</message>
+	<message key="author.submit.step2">Paso 2. Cargar el envío</message>
+	<message key="author.submit.step3">Paso 3. Introducir los metadatos del envío</message>
+	<message key="author.submit.step4">Paso 4. Cargar los archivos complementarios</message>
+	<message key="author.submit.step4a">Paso 4a. Añadir un archivo complementario</message>
 	<message key="author.submit.step5">Paso 5. Confirmar el envío</message>
-	<message key="author.submit.start">Comienzo</message>
-	<message key="author.submit.upload">Subir envío</message>
-	<message key="author.submit.metadata">Introducir los metadatos</message>
-	<message key="author.submit.supplementaryFiles">Subir ficheros complementarios</message>
-	<message key="author.submit.confirmation">Confirmación</message>
-	<message key="author.submit.cancelSubmission">Puede completar este envío más tarde seleccionando Envíos Activos en la home de autor/a.</message>
-	<message key="author.submit.notAccepting">Esta revista no acepta envíos en este momento.</message>
-	<message key="author.submit.requestWaiver">Solicitar exención de pago</message>
-	<message key="author.submit.qualifyForWaiver">Por favor, considere eliminar la tarifa de envío de artículo en este caso</message>
-	<message key="author.submit.addReasonsForWaiver">Por favor, indique a continuación los motivos por los que solicita la exención de pago.</message>
-	<message key="author.submissions.uploadCopyeditedVersion">Subir versión corregida</message>
-	<message key="author.submissions.proofreadingCorrections">Corrección de pruebas</message>
-	<message key="author.submissions.confirmDelete">¿Seguro que quiere elmininar este envío incompleto?</message>
+	<message key="author.submit.start">1. Inicio</message>
+	<message key="author.submit.upload">2. Cargar el envío</message>
+	<message key="author.submit.metadata">3. Introducir los metadatos</message>
+	<message key="author.submit.supplementaryFiles">4. Cargar los archivos complementarios</message>
+	<message key="author.submit.confirmation">5. Confirmación</message>
+	<message key="author.submit.cancelSubmission">Puede completar este envío en otro momento seleccionando Envíos activos desde la página de inicio del autor/a.</message>
+	<message key="author.submit.notAccepting">La revista no acepta envíos en este momento.</message>
+	<message key="author.submit.requestWaiver">Solicitud de exención de cuotas</message>
+	<message key="author.submit.qualifyForWaiver">Considere la posibilidad de exención de la cuota de envío para este artículo.</message>
+	<message key="author.submit.addReasonsForWaiver">Deje un comentario en la casilla que encontrará a continuación para indicar por qué no se deberían aplicar las cuotas.</message>
+	<message key="author.submit.mustEnterWaiverReason">Si solicita una exención de cuotas, deberá introducir un motivo en el espacio que se le proporciona.</message>
+	<message key="author.submissions.queuedReviewSubsequent">En ronda de revisión {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">En revisión: Publicable con modificaciones</message>
+	<message key="author.submissions.queuedEditingCopyedit">En edición: Se requiere corrección de originales</message>
+	<message key="author.submissions.queuedEditingProofread">En edición: Se requiere corrección de pruebas</message>
+	<message key="author.submissions.uploadCopyeditedVersion">Cargar la versión corregida</message>
+	<message key="author.submissions.proofreadingCorrections">Modificaciones de la corrección de pruebas</message>
+	<message key="author.submissions.confirmDelete">¿Está seguro/a de que desea eliminar el envío incompleto?</message>
 	<message key="author.submissions.viewStatus">Ver estado</message>
-	<message key="author.submissions.noSubmissions">No hay envíos.</message>
-	<message key="author.submit.howToSubmit"><![CDATA[¿Tiene problemas? Póngase en contacto con <a href="mailto:{$supportEmail}">{$supportName}</a> para solicitar ayuda ({$supportPhone}).]]></message>
-	<message key="author.submit.howToSubmitNoPhone"><![CDATA[¿Tiene problemas? Póngase en contacto con <a href="mailto:{$supportEmail}">{$supportName}</a> para solicitar ayuda.]]></message>
+	<message key="author.submissions.noSubmissions">Sin envíos.</message>
+	<message key="author.submit.howToSubmit"><![CDATA[¿Necesita ayuda? Póngase en contacto con <a href="mailto:{$supportEmail}">{$supportName}</a> para recibir asistencia ({$supportPhone}).]]></message>
+	<message key="author.submit.howToSubmitNoPhone"><![CDATA[¿Necesita ayuda? Póngase en contacto con <a href="mailto:{$supportEmail}">{$supportName}</a> para recibir asistencia.]]></message>
 	<message key="author.submit.journalSection">Sección de la revista</message>
-	<message key="author.submit.journalSectionDescription"><![CDATA[Seleccione una sección apropiada para el envío (vea Secciones y Políticas en <a href="{$aboutUrl}" target="_new">Sobre</a> la revista).]]></message>
-	<message key="submission.submit.selectSection">Seleccione una sección ...</message>
-	<message key="submission.submit.submissionChecklist">Lista de comprobación de envío</message>
-	<message key="submission.submit.submissionChecklistDescription">Indica que este envío está listo para ser considerado por esta revista marcando los siguientes puntos (a continuación se pueden enviar comentarios al / a la editor/a).</message>
-	<message key="author.submit.verifyChecklist">Debe asegurarse de que cumple todos los requisitos de la lista antes de continuar</message>
-	<message key="author.submit.copyrightNoticeAgree">Los/as autores/as están de acuerdo con los términos de esta nota de copyright, que se aplicará a su envío si y cuando sea publicado por esta revista (a continuación se pueden hacer comentarios al / a la editor/a).</message>
-	<message key="author.submit.copyrightNoticeAgreeRequired">Antes de continuar debe aceptar los términos de la nota de copyright.</message>
-	<message key="submission.submit.coverNote">Comentarios para el/la editor/a</message>
-	<message key="author.submit.comments">Introduzca el texto (opcional)</message>
-	<message key="author.submit.form.sectionRequired">Por favor, seleccione una sección apropiada de la revista para el envío.</message>
-	<message key="submission.submit.privacyStatement">Política de privacidad de la revista</message>
-	<message key="author.submit.reorderInstructions">Reordenar autores/as por orden de aparición en el artículo.</message>
-	<message key="author.submit.selectPrincipalContact">Contacto principal para correspondencia editorial.</message>
+	<message key="author.submit.journalSectionDescription"><![CDATA[Seleccione la sección adecuada para el envío (ver Secciones y Política en <a href="{$aboutUrl}" target="_new">Acerca de</a> la revista).]]></message>
+	<message key="author.submit.selectSection">Seleccione una sección...</message>
+	<message key="author.submit.submissionLocale">Idioma del envío</message>
+	<message key="author.submit.submissionLocaleDescription">Esta revista acepta envíos en varios idiomas. Elija el idioma principal del envío en el menú desplegable.</message>
+	<message key="author.submit.submissionChecklist">Lista de comprobación del envío</message>
+	<message key="author.submit.submissionChecklistDescription">Marque los siguientes elementos para indicar que este envío está preparado para que la revista lo examine (más abajo se pueden añadir comentarios al editor/a).</message>
+	<message key="author.submit.verifyChecklist">Antes de continuar, debe asegurarse de que se cumplen todos los requisitos de la lista de comprobación.</message>
+	<message key="author.submit.copyrightNoticeAgree">Los autores/as se comprometen a aceptar las condiciones de este aviso de derechos de autor/a, que se aplicarán a este envío siempre y cuando se publique en esta revista (más abajo se pueden añadir comentarios al editor/a).</message>
+	<message key="author.submit.copyrightNoticeAgreeRequired">Debe aceptar las condiciones del aviso de derechos de autor/a antes de continuar.</message>
+	<message key="author.submit.commentsForEditor">Comentarios para el editor/a</message>
+	<message key="author.submit.comments">Introduzca texto (opcional)</message>
+	<message key="author.submit.form.sectionRequired">Seleccione la sección adecuada de la revista para este envío.</message>
+	<message key="author.submit.form.localeRequired">Seleccione el idioma del envío.</message>
+	<message key="author.submit.privacyStatement">Declaración de privacidad de la revista</message>
+	<message key="author.submit.reorderInstructions">Reordenar a los autores/as para que aparezcan en el orden en el que serán enumerados en la publicación.</message>
+	<message key="author.submit.reorder">Reordenar el nombre del autor/a</message>
+	<message key="author.submit.selectPrincipalContact">Contacto principal para la correspondencia editorial.</message>
 	<message key="author.submit.addAuthor">Añadir autor/a</message>
-	<message key="author.submit.deleteAuthor">Borrar autor/a</message>
-	<message key="author.submit.submissionIndexingDescription">Proporcione palabras clave para indexar el envío; separe los términos con punto y coma (término1; término2; término3).</message>
-	<message key="author.submit.coverageInstructions">Se refiere a la localización geo-espacial, cronológica o cobertura histórica, y/o características de ejemplos de investigación.</message>
-	<message key="author.submit.languageInstructions"><![CDATA[Inglés=en; Francés=fr; Español=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Códigos adicionales</a>.]]></message>
-	<message key="author.submit.form.authorRequired">Es necesario, como mínimo, un/a autor/a.</message>
-	<message key="author.submit.form.authorRequiredFields">Es necesario el primer nombre, apellido y dirección de correo-e de cada autor/a.</message>
-	<message key="author.submit.form.titleRequired">Por favor, introduzca el título del artículo.</message>
-	<message key="author.submit.form.abstractRequired">Por favor, escriba el resumen (abstract) del artículo.</message>
-	<message key="author.submit.submissionFile">Fichero</message>
-	<message key="author.submit.uploadSubmissionFile">Subir fichero</message>
-	<message key="author.submit.replaceSubmissionFile">Reemplazar fichero</message>
-	<message key="author.submit.noSubmissionFile">No se ha subido ningún fichero.</message>
-	<message key="author.submit.noSubmissionConfirm">¿Seguro que quiere continuar sin enviar un fichero?</message>
-	<message key="author.submit.supplementaryFilesInstructions">Este paso es opcional y permite el envío de ficheros adicionales, como pueden ser imágenes, tablas, hojas de cálculo, programas u otros materiales que acompañen al artículo.</message>
-	<message key="author.submit.supplementaryFiles.saveToUpload">Pulse "Guardar" para subir el fichero (podrá subir más ficheros a continuación).</message>
-	<message key="author.submit.forgottenSubmitSuppFile">¿Confirma que desea continuar sin subir el fichero complementario que seleccionó?</message>
-	<message key="author.submit.noSupplementaryFiles">No se han añadido ficheros complementarios a este envío.</message>
-	<message key="author.submit.backToSupplementaryFiles">Volver a ficheros complementarios</message>
-	<message key="author.submit.confirmDeleteSuppFile">¿Seguro que quiere eliminar este fichero complementario?</message>
-	<message key="author.submit.uploadSuppFile">Subir fichero complementario</message>
-	<message key="author.submit.addSupplementaryFile">Añadir fichero complementario</message>
-	<message key="author.submit.editSupplementaryFile">Editar fichero complementario</message>
-	<message key="author.submit.supplementaryFileData">Metadatos de fichero complementario</message>
-	<message key="author.submit.supplementaryFileDataDescription">Para indexar este material suplementario, proporcione los siguientes metadatos para cada fichero complementario subido.</message>
-	<message key="author.submit.supplementaryFileUpload">Subir fichero complementario</message>
-	<message key="author.submit.suppFile.createrOrOwner">Creador/a (o dueño/a) del fichero</message>
-	<message key="author.submit.suppFile.researchInstrument">Instrumento de investigación</message>
+	<message key="author.submit.deleteAuthor">Eliminar autor/a</message>
+	<message key="author.submit.submissionIndexingDescription">Proporcione términos para indexar el envío y sepárelos con un punto y coma (término1; término2; término3).</message>
+	<message key="author.submit.submissionSupportingAgencies">Organismos colaboradores</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Mencione los organismos (persona, organización o servicio) que contribuyeron, financiaron o respaldaron el trabajo presentado en este envío. Sepárelos con un punto y coma (p. ej.: Fulanito de Tal, Universidad Metro; Universidad Máster, Departamento de Ciencia Computacional).</message>
+	<message key="author.submit.coverageInstructions">Se refiere a la localización geográfica, a la cobertura cronológica o histórica o a las características de la muestra de investigación.</message>
+	<message key="author.submit.subjectClassInstructions">Utilice los hipervínculos del sistema de clasificación para seleccionar los términos de clasificación y, si es necesario, los números.</message>
+	<message key="author.submit.languageInstructions"><![CDATA[Inglés=en; francés=fr; español=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Códigos adicionales</a>.]]></message>
+	<message key="author.submit.form.authorRequired">Inserte al menos un autor/a.</message>
+	<message key="author.submit.form.authorRequiredFields">Inserte el nombre, apellidos y dirección de correo electrónico de cada autor/a.</message>
+	<message key="author.submit.form.titleRequired">Introduzca el título del artículo.</message>
+	<message key="author.submit.form.abstractRequired">Introduzca el resumen del artículo.</message>
+	<message key="author.submit.form.wordCountAlert">Ha superado el límite máximo de palabras para resúmenes en esta sección.</message>
+	<message key="author.submit.submissionFile">Archivo de envío</message>
+	<message key="author.submit.uploadSubmissionFile">Cargar el archivo de envío</message>
+	<message key="author.submit.replaceSubmissionFile">Reemplazar el archivo de envío</message>
+	<message key="author.submit.noSubmissionFile">No se ha cargado ningún archivo de envío.</message>
+	<message key="author.submit.noSubmissionConfirm">¿Está seguro/a de que desea continuar sin cargar un archivo de envío?</message>
+	<message key="author.submit.supplementaryFilesInstructions">Este paso opcional permite añadir archivos complementarios al envío. Estos archivos, que pueden estar en cualquier formato, pueden incluir (a) herramientas de investigación; (b) conjuntos de datos que cumplan con los términos establecidos por la revisión ética de la investigación; (c) fuentes que de otro modo no estarían disponibles para los lectores/as, (d) figuras y tablas que no se puedan integrar en el texto u otros materiales que se añadan a la contribución del trabajo.</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">Haga clic en Guardar para cargar el archivo (después se podrán cargar los archivos adicionales).</message>
+	<message key="author.submit.forgottenSubmitSuppFile">¿Está seguro/a de que desea continuar sin cargar el archivo complementario que ha seleccionado?</message>
+	<message key="author.submit.noSupplementaryFiles">No se han añadido archivos complementarios a este envío.</message>
+	<message key="author.submit.backToSupplementaryFiles">Volver a Archivos complementarios</message>
+	<message key="author.submit.confirmDeleteSuppFile">¿Está seguro/a de que desea eliminar este archivo complementario?</message>
+	<message key="author.submit.uploadSuppFile">Cargar archivo complementario</message>
+	<message key="author.submit.addSupplementaryFile">Añadir un archivo complementario</message>
+	<message key="author.submit.editSupplementaryFile">Editar un archivo complementario</message>
+	<message key="author.submit.supplementaryFileData">Metadatos de archivos complementarios</message>
+	<message key="author.submit.supplementaryFileDataDescription">Para indexar el material complementario proporcione los siguientes metadatos del archivo complementario que ha cargado:</message>
+	<message key="author.submit.supplementaryFileUpload">Archivo complementario</message>
+	<message key="author.submit.suppFile.createrOrOwner">Creador/a (o propietario/a) del archivo</message>
+	<message key="author.submit.suppFile.researchInstrument">Herramienta de investigación</message>
 	<message key="author.submit.suppFile.researchMaterials">Materiales de investigación</message>
-	<message key="author.submit.suppFile.researchResults">Resultados de investigación</message>
+	<message key="author.submit.suppFile.researchResults">Resultados de la investigación</message>
 	<message key="author.submit.suppFile.transcripts">Transcripciones</message>
-	<message key="author.submit.suppFile.dataAnalysis">Análisis de datos</message>
-	<message key="author.submit.suppFile.dataSet">Conjuntos de datos</message>
+	<message key="author.submit.suppFile.dataAnalysis">Análisis de los datos</message>
+	<message key="author.submit.suppFile.dataSet">Conjunto de datos</message>
 	<message key="author.submit.suppFile.sourceText">Texto fuente</message>
-	<message key="author.submit.suppFile.briefDescription">Breve descripción</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Agencia colaboradora o financiadora</message>
-	<message key="author.submit.suppFile.availableToPeers">Mostrar fichero a los/as revisores/as (sin metadatos), ya que no comprometerá la evaluación ciega.</message>
-	<message key="author.submit.suppFile.publisherDescription">Usar sólo con materiales formalmente publicados.</message>
-	<message key="author.submit.suppFile.dateDescription">Fecha en que los datos fueron recogidos o los instrumentos creados.</message>
+	<message key="author.submit.suppFile.briefDescription">Descripción breve</message>
+	<message key="author.submit.suppFile.contributorOrSponsor">Institución contribuyente o patrocinadora</message>
+	<message key="author.submit.suppFile.availableToPeers">Presentar el archivo (sin metadatos) a los revisores/as para asegurar que el archivo sea objeto de evaluación anónima.</message>
+	<message key="author.submit.suppFile.publisherDescription">Utilizar sólo con materiales publicados formalmente.</message>
+	<message key="author.submit.suppFile.dateDescription">Fecha en la que se recopilaron los datos o se creó el instrumento.</message>
 	<message key="author.submit.suppFile.sourceDescription">Nombre del estudio u otro punto de origen.</message>
-	<message key="author.submit.suppFile.specifyOtherType">Especificar otro</message>
-	<message key="author.submit.suppFile.noFile">No se ha subido ningún fichero.</message>
-	<message key="author.submit.suppFile.form.titleRequired">Por favor, introduzca el título de este fichero complementario.</message>
-	<message key="author.submit.suppFile.form.subjectRequired">Por favor, introduzca la materia.</message>
-	<message key="author.submit.suppFile.form.descriptionRequired">Por favor, introduzca una descripción.</message>
-	<message key="author.suppFile.suppFilePublicIdentificationExists">Ya existen ficheros de identificación públicos adicionales.</message>
-	<message key="author.suppFile.publicSuppFileIdentifier">Identificador de fichero de identificación público</message>
-	<message key="author.submit.confirmationDescription">Para enviar su artículo a {$journalTitle} pulse "Finalizar Envío". La persona de contacto recibirá un mensaje de confirmación y podrá seguir el proceso de revisión en este mismo sistema de gestión de envíos. Muchas gracias por su interés en publicar en {$journalTitle}.</message>
-	<message key="author.submit.noFiles">No se han adjuntado ficheros a este envío.</message>
-	<message key="author.submit.filesSummary">Resumen de ficheros</message>
+	<message key="author.submit.suppFile.specifyOtherType">Especificar otros</message>
+	<message key="author.submit.suppFile.noFile">No se ha cargado ningún archivo.</message>
+	<message key="author.submit.suppFile.form.titleRequired">Introduzca el título del archivo complementario.</message>
+	<message key="author.submit.suppFile.form.subjectRequired">Introduzca un tema.</message>
+	<message key="author.submit.suppFile.form.descriptionRequired">Introduzca una descripción.</message>
+	<message key="author.suppFile.suppFilePublicIdentificationExists">La identificación pública del archivo complementario ya existe.</message>
+	<message key="author.suppFile.publicSuppFileIdentifier">Identificador público del archivo complementario</message>
+	<message key="author.submit.confirmationDescription">Para enviar su manuscrito a {$journalTitle} haga clic en Finalizar envío. El contacto principal del envío recibirá un acuse de recibo por correo electrónico y podrá ver el progreso del envío a través del proceso editorial iniciando sesión en el sitio web de la revista. Gracias por su publicación en {$journalTitle}.</message>
+	<message key="author.submit.noFiles">No se han adjuntado archivos a este envío.</message>
+	<message key="author.submit.filesSummary">Resumen del archivo</message>
 	<message key="author.submit.finishSubmission">Finalizar envío</message>
-	<message key="author.submit.submissionComplete">Envío completado. Gracias por su interés en publicar en {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Si este envío está en un formato listo para ser publicado, sin necesidad de más revisiones, edición, o maquetación, se puede enviar directamente a la cola de Planificación de Envíos <a href="{$expediteUrl}" class="action">pinchando aquí</a>. (Nota: Sólo los/as editores/as de revista cuentan con esta opción para sus envíos.)]]></message>
-	<message key="author.article.uploadAuthorVersion">Subir versión de autor/a</message>
-	<message key="author.article.copyeditedFile">Fichero corregido</message>
-	<message key="author.article.authorRevisedFile">Fichero de autor/a</message>
-	<message key="author.submit.authorSubmitLoginMessage">Es necesaria una cuenta de usuario/a para realizar envíos. Esto permitirá a los/as editores/as asociar el envío a su cuenta y contactar con usted cuando proceda.</message>
-	<message key="author.submissions.queuedReviewRevisions">En Revisión: Se Requieren Revisiones</message>
-	<message key="author.submit.mustEnterWaiverReason">Si usted está solicitando una dispensa, tiene que introducir una razón en el espacio proporcionado.</message>
-	<message key="author.submissions.queuedReviewSubsequent">En Revisión, Ronda {$round}</message>
-	<message key="author.submissions.queuedEditingCopyedit">En Edición: Corrección de estilo requerida</message>
-	<message key="author.submissions.queuedEditingProofread">En edición: Revisión requerida</message>
-	<message key="author.submit.reorder">Reclasificar nombre del autor</message>
-	<message key="author.submit.form.wordCountAlert">Ha excedido el número máximo de palabras para el resúmen.</message>
-	<message key="author.submit.submissionLocale">Idioma Presentación</message>
-	<message key="author.submit.form.localeRequired">Escoja un idioma de presentación</message>
-	<message key="author.submit.submissionLocaleDescription">Esta revista acepta presentaciones en diversos idiomas. Escoja el idioma principal de la presentación en el desplegable de abajo.</message>
+	<message key="author.submit.submissionComplete">Envío completado. Gracias por su publicación en {$journalTitle}.</message>
+	<message key="author.submit.expedite"><![CDATA[Si el envío tiene un formato que puede publicarse sin necesidad de revisión, edición o maquetación, se puede cargar directamente en el último paso de la lista de Edición <a href="{$expediteUrl}" class="action">haciendo clic aquí</a>. (Nota: Sólo los editores/as de la revista disponen de esta opción para sus envíos).]]></message>
+	<message key="author.article.uploadAuthorVersion">Cargar la versión del autor/a</message>
+	<message key="author.article.copyeditedFile">Archivo corregido</message>
+	<message key="author.article.authorRevisedFile">Archivo del autor/a</message>
+	<message key="author.submit.authorSubmitLoginMessage">Es necesario disponer de una cuenta de usuario/a para realizar envíos a la revista. Esto permite que nuestros editores/as hagan un seguimiento de sus envíos y puedan contactarle cuando cambie el estado de los mismos o si es necesario proporcionar información adicional.</message>
 </locale>
