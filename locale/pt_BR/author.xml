@@ -25,11 +25,11 @@
 	<message key="author.submit.step4">Passo 4. Transferência de documentos suplementares</message>
 	<message key="author.submit.step4a">Passo 4a. Incluir documento suplementar</message>
 	<message key="author.submit.step5">Passo 5. Confirmação da submissão</message>
-	<message key="author.submit.start">1. Início</message>
-	<message key="author.submit.upload">2. Transferência do manuscrito</message>
-	<message key="author.submit.metadata">3. Inclusão de metadados</message>
-	<message key="author.submit.supplementaryFiles">4. Transferência de documentos suplementares</message>
-	<message key="author.submit.confirmation">5. Confirmação</message>
+	<message key="author.submit.start">Início</message>
+	<message key="author.submit.upload">Transferência do manuscrito</message>
+	<message key="author.submit.metadata">Inclusão de metadados</message>
+	<message key="author.submit.supplementaryFiles">Transferência de documentos suplementares</message>
+	<message key="author.submit.confirmation">Confirmação</message>
 	<message key="author.submit.cancelSubmission">A submissão pode ser concluída em uma data posterior, clicando em Submissões Ativas nas opções da sua página de autor.</message>
 	<message key="author.submit.notAccepting">A revista não está aceitando submissões neste momento.</message>
 	<message key="author.submit.requestWaiver">Solicitar isenção de taxas</message>
@@ -44,16 +44,16 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Em caso de dificuldades com o processo, entre em contato com <a href="mailto:{$supportEmail}">{$supportName}</a> via e-mail para suporte.]]></message>
 	<message key="author.submit.journalSection">Seção</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Escolha a seção apropriada para a submissão (leia Seções e Políticas na página <a href="{$aboutUrl}">Sobre</a> a revista).]]></message>
-	<message key="author.submit.selectSection">Escolha uma seção...</message>
+	<message key="submission.submit.selectSection">Escolha uma seção...</message>
 	<message key="author.submit.submissionChecklist">Condições para submissão</message>
-	<message key="author.submit.submissionChecklistDescription">Confirme que a submissão está em conformidade com as condições seguintes, marcando as caixas de seleção, para prosseguir ao Passo 2 do processo.</message>
+	<message key="submission.submit.submissionChecklistDescription">Confirme que a submissão está em conformidade com as condições seguintes, marcando as caixas de seleção, para prosseguir ao Passo 2 do processo.</message>
 	<message key="author.submit.verifyChecklist">Todas as condições devem ser satisfeitas antes de continuar.</message>
 	<message key="author.submit.copyrightNoticeAgree">Os autores concordam com os termos da Declaração de Direito Autoral, que se aplicará a esta submissão caso seja publicada nesta revista (comentários ao editor podem ser incluídos a seguir).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">É obrigatório aceitar a Declaração de Direito Autoral para continuar!</message>
-	<message key="author.submit.commentsForEditor">Comentários para o editor</message>
+	<message key="submission.submit.coverNote">Comentários para o editor</message>
 	<message key="author.submit.comments">Digite o texto (opcional)</message>
 	<message key="author.submit.form.sectionRequired">Escolha a seção apropriada para a submissão.</message>
-	<message key="author.submit.privacyStatement">Política de Privacidade</message>
+	<message key="submission.submit.privacyStatement">Política de Privacidade</message>
 	<message key="author.submit.reorderInstructions">Utilize as setas para alterar a ordem em que os nomes dos autores aparecerão na publicação.</message>
 	<message key="author.submit.selectPrincipalContact">Contato principal para correspondência.</message>
 	<message key="author.submit.addAuthor">Incluir autor</message>

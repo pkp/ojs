@@ -199,7 +199,7 @@
 	<message key="journal.currentIssue">Edição atual</message>
 	<message key="journal.journals">Revistas</message>
 	<message key="journal.path">Caminho</message>
-	<message key="journal.journal">Revista</message>
+	<message key="context.context">Revista</message>
 
 	<!-- User -->
 	<message key="user.showAllJournals">Mostrar Revistas</message>
