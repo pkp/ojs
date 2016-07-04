@@ -49,7 +49,6 @@
 	<message key="author.submit.submissionLocale">സമര്‍പ്പണ ഭാഷ</message>
 	<message key="author.submit.submissionLocaleDescription">വിവിധ ഭാഷകളിലുള്ള സമര്‍പ്പണങ്ങള്‍ ഈ ജേണല്‍ സ്വീകരിക്കും.സമര്‍പ്പണത്തിന്റെ പ്രഥമ ഭാഷ താഴെ കാണുന്ന പുള്‍ ഡൗണ്‍ ഉപയോഗിച്ച് തിരഞ്ഞെടുക്കുക.</message>
 	<message key="author.submit.submissionChecklist">സബ്മിഷന്‍ ചെക്ക് ലിസ്റ്റ്</message>
-	<message key="submission.submit.submissionChecklistDescription">താഴെ കാണുന്ന വിവരങ്ങള്‍ പരിശോധിച്ചുകൊണ്ട് ജേണല്‍ ഈ സമര്‍പ്പണത്തെ പരിഗണിക്കുന്നതിന് തയ്യാറാണെന്നതിനെ സൂചിപ്പിക്കുന്നു (ലേഖകനുള്ള അഭിപ്രായങ്ങള്‍ താഴെ ചേര്‍ക്കാവുന്നതാണ്).</message>
 	<message key="author.submit.verifyChecklist">തുടരുന്നതിനു മുന്‍പ് സബ്മിഷന്‍ ചെക്ക് ലിസ്റ്റിലുള്ള എല്ലാ ഇനങ്ങളും തൃപ്തികരമാണെന്ന് ഉറപ്പു വരുത്തുക.</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">തുടരുന്നതിനു മുന്‍പ് കോപ്പി റൈറ്റ് നോട്ടീസിന്റെ സംജ്ഞകളുമായി താങ്കള്‍ അനുകൂലിക്കേണ്ടതുണ്ട്.</message>
 	<message key="submission.submit.coverNote">ലേഖകനായുള്ള അഭിപ്രായങ്ങള്‍</message>
@@ -63,10 +62,7 @@
 	<message key="author.submit.addAuthor">ലേഖകനെ ചേര്‍ക്കുക</message>
 	<message key="author.submit.deleteAuthor">ലേഖകനെ നീക്കുക</message>
 	<message key="author.submit.submissionIndexingDescription">സമര്‍പ്പണം ഇന്‍ഡക്സ് ചെയ്യുന്നതിനായി ടേംസ് നല്‍കുക; അര്‍ദ്ധവിരാമം ഉപയോഗിച്ച് ടേംസ് വേര്‍തിരിക്കുക (ടേം1;ടേം2;ടേം3).</message>
-	<message key="author.submit.submissionSupportingAgencies">പിന്തുണയ്ക്കുന്ന ഏജന്‍സികള്‍</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">ഈ സമര്‍പ്പണത്തിന്റെ പ്രവര്‍ത്തനങ്ങളെ പിന്തുണയ്ക്കുന്ന അല്ലെങ്കില്‍ അതിനായി ധനനിക്ഷേപം നടത്തുന്ന ഏജന്‍സികളെ തിരിച്ചറിയുക.</message>
 	<message key="author.submit.coverageInstructions">ജിയോ-സ്പേഷ്യല്‍ ലൊക്കേഷന്‍,ക്രൊനോളജിക്കല്‍ അല്ലെങ്കില്‍ ഹിസ്റ്റോറിക്കല്‍ കവറേജ് അല്ലെങ്കില്‍ ഗവേഷണ മാതൃകയുടെ സ്വഭാവവിശേഷങ്ങള്‍ എന്നിവയെ സൂചിപ്പിക്കുന്നു.</message>
-	<message key="author.submit.subjectClassInstructions">ക്ലാസിഫിക്കേഷന്‍ ടേംസ് തിരഞ്ഞെടുക്കുന്നതിനായി ഹൈപ്പര്‍ലിങ്ക്ഡ് ക്ലാസിഫിക്കേഷന്‍ സിസ്റ്റം ഉപയോഗിക്കുക,ഉചിതമെങ്കില്‍ നമ്പരുകളും.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Additional codes</a>.]]></message>
 	<message key="author.submit.form.authorRequired">കുറഞ്ഞത് ഒരു ലേഖകനെങ്കിലും ആവശ്യമാണ്.</message>
 	<message key="author.submit.form.authorRequiredFields">ഒരോ ലേഖകന്റെയും ആദ്യനാമം, അവസാന നാമം, ഇ-മെയില്‍ അഡ്രസ്സ് എന്നിവ ആവശ്യമാണ്.</message>
@@ -98,7 +94,6 @@
 	<message key="author.submit.suppFile.dataSet">ഡേറ്റാ സെറ്റ്</message>
 	<message key="author.submit.suppFile.sourceText">സോഴ്സ് ടെക്സ്റ്റ്</message>
 	<message key="author.submit.suppFile.briefDescription">ചുരുങ്ങിയ വിവരണം</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">സംഭാവകന്‍ അല്ലെങ്കില്‍ സ്പോണ്‍സറിങ്ങ് ഏജന്‍സി</message>
 	<message key="author.submit.suppFile.availableToPeers">വിവേകശൂന്യമായ അവലോകനം ഇല്ലാത്തതിനാല്‍ ഫയല്‍(മെറ്റാഡേറ്റ ഇല്ലാത്തവ) നിരൂപകര്‍ക്ക് സമര്‍പ്പിക്കുക.</message>
 	<message key="author.submit.suppFile.publisherDescription">ഔപചാരികമായി പ്രസിദ്ധീകരിച്ച സാമഗ്രികള്‍ക്കൊപ്പം മാത്രം ഉപയോഗിക്കുക.</message>
 	<message key="author.submit.suppFile.dateDescription">ഡേറ്റ ശേഖരിച്ച അല്ലെങ്കില്‍ ഉപകരണം സൃഷ്ടിച്ച തിയതി.</message>

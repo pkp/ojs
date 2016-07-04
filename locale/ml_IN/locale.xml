@@ -38,8 +38,6 @@
 
 
 	<!--  peer review -->
-	<message key="submission.reviewForm">അവലോകനാരൂപം</message>
-	<message key="submission.reviewFormResponse">അവലോകനാരൂപത്തിന്റെ പ്രതികരണം</message>
 
 
 	<message key="reviewer.article.enterReviewForm">അവലോകനാരൂപം പൂരിപ്പിക്കാന്‍ ഐകണില്‍ ക്ലിക്ക് ചെയ്യുക</message>	
@@ -58,7 +56,6 @@
 	<message key="common.confirmComplete">ഈ ജോലി പൂര്‍ത്തിയായതായി അടയാളപ്പെടുത്താന്‍ നിങ്ങള്‍ ആഗ്രഹിക്കുന്നു   ? നിങ്ങള്‍ക്ക് പിന്നീട് വ്യത്യാസം വരുതാന്‍ കഴിയില്ല.</message>
 	<message key="common.payment">പണം കൊടുക്കല്‍</message>
 	<message key="common.payments">പണം  ഒടുക്കല്‍</message>
-	<message key="common.pageHeader.altText">താളിന്റെ ഹെഡര്‍</message>
 	<message key="common.homePageHeader.altText">Homepage Header</message>
 	<message key="common.journalHomepageImage.altText">Journal Homepage Image</message>
 
@@ -72,7 +69,6 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">ജേണല്‍ ഹെല്പ്</message>
-	<message key="navigation.archives">റിക്കോര്‍ഡുകള്‍ സൂക്ഷിക്കുന്ന സ്ഥലം</message>
 	<message key="navigation.current">നിലവിലുള്ള</message>
 	<message key="navigation.otherJournals">മറ്റ് ജേണല്‍സ്</message>
 	<message key="navigation.browseByIssue">പ്രസിദ്ധീകരണത്തിനായി</message>
@@ -125,12 +121,8 @@
 	<message key="article.suppFiles">അനുബന്ധമായ ഫയല്‍ (സ് )</message>
 	<message key="article.suppFilesAbbrev">അനുബന്ധമായ ഫയലുകള്‍</message>
 	<message key="article.discipline">വിദ്യാഭ്യാസ വിജ്ഞാനശാഖയും ഉപശാഖകളും</message>
-	<message key="article.subjectClassification">വിഷയം തരം തിരിക്കല്‍</message>
 	<message key="article.subject">വാക്കുകളുടെ സാരാംശം</message>
 	<message key="article.coverage">ഉള്‍കൊള്ളുന്ന വിസ്തീര്‍ണ്ണം</message>
-	<message key="article.coverageGeo">ഭൂസ്ഥല വിസ്തീര്‍ണ്ണം സംബന്ധമായ</message>
-	<message key="article.coverageChron">ചരിത്രപരമായി ഉള്‍കൊള്ളുന്ന വിസ്തീര്‍ണ്ണം</message>
-	<message key="article.coverageSample">നൈസ്സര്‍ഗ്ഗിഗമായ ഗവേഷണ മാതൃക</message>
 	<message key="article.type">ഇനം,  ജോലി ചെയ്യുന്ന രീതി</message>
 	<message key="article.language">ഭാഷ</message>
 	<message key="article.sectionEditor">എസ്സ്  ഇ</message>
@@ -216,20 +208,9 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">ജേണല്‍ മാനേജര്‍</message>
-	<message key="user.role.editor">ഗ്രന്ധപരിശോധകന്‍</message>
 	<message key="user.role.sectionEditor">വകുപ്പ് എഡിറ്റര്‍</message>
-	<message key="user.role.layoutEditor">ലേഔട്ട് എഡിറ്റര്‍</message>
-	<message key="user.role.copyeditor">കോപ്പി എഡിറ്റര്‍</message>
-	<message key="user.role.proofreader">അച്ചടിപ്പിഴ തിരുത്തുക</message>
-	<message key="user.role.author">ഗ്രന്ധകര്‍ത്താവ്</message>
 	<message key="user.role.subscriptionManager">സബ്സ്ക്രിപ്ഷന്‍ മാനേജര്‍</message>
 	<message key="user.role.managers">ജേണല്‍ മാനേജര്‍സ്</message>
-	<message key="user.role.editors">ഗ്രന്ധപരിശോധകര്‍</message>
-	<message key="user.role.sectionEditors">വകുപ്പ് എഡിറ്റേര്‍സ്</message>
-	<message key="user.role.layoutEditors">ലേഔട്ട്  എഡിറ്റേര്‍സ്</message>
-	<message key="user.role.copyeditors">കോപ്പി എഡിറ്റേര്‍സ്</message>
-	<message key="user.role.proofreaders">അച്ചടിപ്പിഴ തിരുത്തുന്നവര്‍</message>
-	<message key="user.role.authors">ഗ്രന്ധകര്‍ത്താക്കള്‍</message>
 	<message key="user.role.subscriptionManagers">സബ്സ്ക്രിപ്ഷന്‍ മാനേജര്‍സ്</message>
 	
 	<!-- Common Issue Terms -->
@@ -283,7 +264,6 @@
 	<message key="submission.event.logLevel.error">തെറ്റ്</message>
 	
 	<message key="submission.event.general.defaultEvent">സബ്മിഷന്‍ ഇവന്റ്</message>
-	<message key="submission.event.general.articleSubmitted">ലേഖനം സബ്മിറ്റ് ചെയ്തു</message>
 	<message key="submission.event.general.issueScheduled">സബ്മിഷന്‍ ഇഷ്യൂ ഷെഡ്യൂലിങ്ങ് ക്യൂവിലേക്ക് അയച്ചിരിക്കുന്നു</message>
 	<message key="submission.event.general.issueAssigned">സബ്മിഷന്‍ ഇഷ്യുവിലേക്ക് അസൈന്‍ ചെയ്തു കൊടുത്തത്</message>
 	<message key="submission.event.general.articlePublished">ലേഖനം പ്രസിദ്ധീകരിച്ചിരിക്കുന്നു</message>
@@ -402,8 +382,6 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="plugins.categories.implicitAuth.description">എച്ച്ടിടിപി ഹെഡേര്‍സ് അടിസ്ഥാനമാക്കിയുള്ള ആതേന്റിക്കേറ്റിങ്ങ് യൂസര്‍സിനെ അനുക്കൂലിച്ച് കൊണ്ടുള്ള ഇംപ്ലിസിറ്റ് ആതേന്റിക്കേഷന്‍ പ്ലഗിന്‍സ് ഇംപ്ലിമെന്റ് ചെയ്യുന്നു.</message>
 
 
-	<message key="plugins.categories.oaiMetadataFormats">ഒഎഐ മെറ്റാഡാറ്റ ഫോര്‍മാറ്റ് പ്ലഗിന്‍സ്</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">ഈ ഫോര്‍മാറ്റില്‍ ഉള്ള പ്ലഗിന്‍സ് ഒഎഐ കമ്യൂണിക്കേസ്കനില്‍ ഉള്ള മെറ്റാഡാറ്റയെ എക്സ് പ്രസ്സ് ചെയ്യുന്നു.</message>
 
 
  
@@ -447,7 +425,6 @@ Title of classification system]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[To have the contents of this journal indexed within a globally distributed system of research databases, please read <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">the steps to becoming a data contributor</a> and register your journal with the official <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open Archives registry</a>.  To register, you will need the base URL for your repository: <span class="highlight">{$oaiUrl}</span>.  Afterwards, you can register your journal at the <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> and <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 <br /><br />
 Note that if your site administrator has already registered this site with these services, your journal will be indexed automatically and you do not need to register your journal.]]></message>
-	<message key="manager.setup.citations">ഈ ഫോര്‍മാറ്റില്‍ ഉള്ള പ്ലഗിന്‍സ് ഒഎഐ കമ്യൂണിക്കേസ്കനില്‍ ഉള്ള മെറ്റാഡാറ്റയെ എക്സ് പ്രസ്സ് ചെയ്യുന്നു  സൈറ്റെഷന്‍ന്റെ മാര്ക്ക് അപ് അസിസ്റ്റന്റിനെ പ്രാബല്യത്തിലാക്കുക</message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Steps: Submission Queue &gt; Submission Review &gt; Submission Editing &gt; Table of Contents.<br /><br />
@@ -698,17 +675,13 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="submission.comments.saveAndEmailEditor">സേവ് ചെയ്ത ശേഷം ഗ്രന്ധപരിശോധകനു ഇ-മെയില്‍ ചെയ്യുക</message>
 	
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">യൂസര്‍ അല്ലെങ്കില്‍ ഈ സൈറ്റില്‍ രജിസ്റ്റര്‍ ചെയ്യുക</message>
 	<message key="user.login.resetPasswordInstructions"><![CDATA[For security reasons, this system emails a reset password to registered users, rather than recalling the 
 current password.<br /><br />Enter your email address below to reset your password. A confirmation will be sent to this email address.]]></message>
 	
 	<!-- Registration -->
 	<message key="user.register.repeatPassword">പാസ്സ് വേര്‍ഡ് ആവര്‍ത്തിക്കുക</message>
-	<message key="user.register.selectJournal">റജിസ്റ്റര്‍ ചെയ്യുന്നതിനായി ഒരു ജര്‍ണല്‍ തിരഞ്ഞെടുക്കുക</message>
 	<message key="user.register.noJournals">ഈ സൈറ്റില്‍ താങ്കള്‍ ഒരു ജര്‍ണലും റജിസ്റ്റര്‍ ചെയ്തിട്ടില്ല.</message>
 	<message key="user.register.privacyStatement">പ്രൈവസി സ്റ്റേറ്റ്മെന്റ്</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Click here</a> if you are already registered with this or another journal on this site.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Click here</a> if you are <strong>not</strong> already registered with this or another journal on this site.]]></message>
 	<message key="user.register.loginToRegister">ഈ ജര്‍ണലില്‍ റജിസ്റ്റര്‍ ചെയ്യുന്നതിനായി താങ്കളുടെ നിലവിലുള്ള യൂസര്‍നേമും പാസ്സ് വേര്‍ഡും എന്റര്‍ ചെയ്യുക.</message>
 	<message key="user.register.registrationDisabled">ഈ ജര്‍ണല്‍ ഇപ്പോ യൂസര്‍ റജിസ്ട്രേഷനുകള്‍ ഒന്നും സ്വീകരിക്കുന്നില്ല.</message>
 	<message key="user.register.form.passwordLengthTooShort">താങ്കള്‍ നല്‍കിയ പാസ്സ് വേര്‍ഡ് ദൈര്‍ഘ്യമുള്ളതല്ല.</message>
@@ -781,8 +754,6 @@ current password.<br /><br />Enter your email address below to reset your passwo
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">പോര്‍ട്ടബിള്‍ ഡോക്യുമെന്റ് ഫോര്‍മാറ്റ് (പിഡിഎഫ് )</message>
-	<message key="article.pdf.download">ഈ പിഡിഎഫ് ഫയല്‍ ഡൗണ്‍ലോഡ് ചെയ്യുക</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>The PDF file you selected should load here if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Alternatively, you can also download the PDF file directly to your computer, from where it can be opened using a PDF reader. To download the PDF, click the Download link below.</p> <p>If you would like more information about how to print, save, and work with PDFs, Highwire Press provides a helpful <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p>]]></message>
 
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
@@ -808,8 +779,6 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	
 	<!-- About The Journal -->
 	<message key="about.statistics">സ്റ്റാറ്റിസ്റ്റിക്സ്</message>
-	<message key="about.journalContact">ജേണല്‍ കോണ്‍ടാക്റ്റ്</message>
-	<message key="about.aboutTheJournal">ജേണലിനെ സംബന്ധിച്ച്</message>
 	<message key="about.history">ജേണല്‍ ചരിത്രം</message>
 	<message key="about.editorialTeam">എഡിറ്റോറിയല്‍ ടീം</message>
 	<message key="about.editorialTeam.biography">ബയോഗ്രഫി</message>
@@ -817,13 +786,8 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="about.focusAndScope"><![CDATA[ഫോക്കസ് & സ്കോപ്പ്]]></message>
 	<message key="about.sectionPolicies">തിരഞ്ഞെടുപ്പ് പോളിസികള്‍</message>
 	<message key="about.submissions">സമര്‍പ്പണങ്ങള്‍</message>
-	<message key="about.sponsors">നിര്‍മ്മാതാക്കള്‍</message>
-	<message key="about.contributors">പിന്താങ്ങുന്ന സ്രോതസ്സുകള്‍</message>
 	<message key="about.onlineSubmissions">ഓണ്‍ലൈന്‍ സമര്‍പ്പണങ്ങള്‍</message>
-	<message key="about.onlineSubmissions.haveAccount">{$journalTitle} നു വേണ്ടി നേരത്തെ തന്നെ ഒരു യൂസര്‍ നാമം/പാസ്-വേഡ് ഉണ്ടോ?</message>
 	<message key="about.onlineSubmissions.login">ലോഗിനിലേക്ക് പോകുക</message>
-	<message key="about.onlineSubmissions.needAccount">യൂസര്‍ നാമം/പാസ്-വേഡ് വേണോ?</message>
-	<message key="about.onlineSubmissions.registration">രജിസ്ട്രേഷനിലേക്ക് പോകുക</message>
 	<message key="about.onlineSubmissions.registrationRequired">നിലവിലുള്ള സമര്‍പ്പണങ്ങളുടെ സ്റ്റാറ്റസ് പരിശോധിക്കാനും ഓണ്‍ലൈനായി ഐറ്റംസ് സമര്‍പ്പിക്കാനും രജിസ്ട്രേഷന്‍,ലോഗിന്‍ എന്നിവ ആവശ്യമാണ്.</message>
 	<message key="about.authorGuidelines">ഓതര്‍ ഗൈഡ്ലൈന്‍സ്</message>
 	<message key="about.submissionPreparationChecklist">സമര്‍പ്പണം തയ്യാറാക്കുന്നതിനുള്ള ചെക്ക് ലിസ്റ്റ്</message>
@@ -850,7 +814,6 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="about.subscriptionTypes.cost">മൂല്യം</message>
 	<message key="about.availableSubscriptionTypes">സബ്സ്ക്രിപ്ഷന്‍ ടൈപ്പ്സ്</message>
 	<message key="about.memberships">മെമ്പര്‍ഷിപ്പ്സ്</message>
-	<message key="about.journalSponsorship">ജര്‍ണലിന്റെ സ്പോണ്‍സര്‍ഷിപ്പ്</message>
 	<message key="about.aboutThisPublishingSystem">ഈ പബ്ലിഷിങ്ങ് സിസ്റ്റത്തെക്കുറിച്ച്</message>
 	<message key="about.aboutThisPublishingSystem.altText">ഒജെഎസ് എഡിറ്റോറിയലും പ്രസിദ്ധീകരണ പ്രക്രിയയും</message>
 	<message key="about.aboutOJSJournal"><![CDATA[This journal uses Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under the GNU General Public License.]]></message>
@@ -985,7 +948,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} has entered a new submission, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} has revised article {$articleId}. The new file ID is {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} has been assigned to review submission {$articleId} for review round {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} has been unassigned from reviewing submission {$articleId} for review round {$round}.</message>
 	<message key="log.review.reviewInitiated">The round {$round} review by {$reviewerName} for submission {$articleId} has been initiated.</message>
 	<message key="log.review.reviewReinitiated">The round {$round} review by {$reviewerName} for submission {$articleId} has been reinitiated.</message>
@@ -1022,7 +984,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.editor.archived">The submission {$articleId} has been archived.</message>
 	<message key="log.editor.restored">The submission {$articleId} has been restored to the queue.</message>
 	<message key="log.editor.editorAssigned">{$editorName} has been assigned as editor to submission {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} has expedited the editing process for article {$articleId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} has assigned {$proofreaderName} to proofread submission {$articleId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} has submitted {$articleId} for scheduling.</message>
@@ -1088,22 +1049,16 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[This page shows important updates associated with this journal such as new issues or announcements.  You may subscribe to these notifications through RSS feeds (by clicking on the images to the right), or   <a href="{$emailUrl}">through email.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">ഒരു പുതിയ പ്രബന്ധം "{$param}"സമര്‍പ്പിച്ചിരിക്കുന്നു</message>
-	<message key="notification.type.copyeditComment">ഒരു കോപ്പി എഡിറ്റര്‍  "{$param}" ല്‍ ഒരു കമന്റ് നല്‍കിയിരിക്കുന്നു.</message>
 	<message key="notification.type.editing">എഡിറ്റിങ്ങ് ഈവന്റ്സ്</message>
 	<message key="notification.type.editorDecisionComment">"{$param}"-നു വേണ്ടി എഡിറ്റര്‍ ഡിസിഷനില്‍ ഒരു കമന്റ് കൊടുത്തിരിക്കുന്നു.</message>
 	<message key="notification.type.galleyModified">"{$param}"-നു വേണ്ടി ഒരു ഗ്യാലേ പരിഷ്കരിച്ചിരിക്കുന്നു.</message>
 	<message key="notification.type.issuePublished">ഒരു പതിപ്പ് പ്രസിദ്ധീകരിച്ചിരിക്കുന്നു.</message>
-	<message key="notification.type.layoutComment">"{$param}"-ന്റെ ലേ ഔട്ടിനെപ്പട്ടി ഒരു കമന്റ് കൊടുത്തിരിക്കുന്നു.</message>
-	<message key="notification.type.metadataModified">"{$param}"-ന്റെ മെറ്റാഡേറ്റ പരിഷ്കരിച്ചിരിക്കുന്നു.</message>
 	<message key="notification.type.newAnnouncement">ഒരു പുതിയ അറിയിപ്പ് സൃഷ്ടിച്ചിരിക്കുന്നു.</message>	
-	<message key="notification.type.proofreadComment">പ്രൂഫ് റീഡര്‍ "{$param}"ല്‍ ഒരു കമന്റ് നല്‍കിയിരിക്കുന്നു.</message>
-	<message key="notification.type.reviewerComment">റിവ്യൂവര്‍ "{$param}"ല്‍ കമന്റ് ചെയ്തു.</message>
 	<message key="notification.type.reviewerFormComment">ഒരു റിവ്യൂ ഫോം അവലോകനം"{$param}"നു വേണ്ടി സമര്‍പ്പിച്ചിരിക്കുന്നു.</message>
 	<message key="notification.type.reviewing">റിവ്യൂവിങ്ങ് ഈവന്റ്സ്</message>
 	<message key="notification.type.site">സൈറ്റ് ഈവന്റ്സ്</message>
 	<message key="notification.type.submissionComment">എഡിറ്റര്‍ "{$param}"ല്‍ ഒരു കമന്റ് ചെയ്തിരിക്കുന്നു.</message>
 	<message key="notification.type.submissions">സബ്മിഷന്‍ ഈവന്റ്സ്</message>
-	<message key="notification.type.suppFileModified">"{$param}"ന്റെ സപ്ലിമെന്ററി ഫയല്‍(ഫയലുകള്‍) പരിഷ്ക്കരിച്ചിരിക്കുന്നു</message>
 	<message key="notification.type.userComment">വായനക്കാരന്‍ "{$param}"ല്‍ ഒരു കമന്റ് നല്‍കിയിരിക്കുന്നു.</message>
 
 	<!--
@@ -1113,14 +1068,11 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	-->
 	<!-- Authorization -->
 	<message key="user.authorization.copyeditorAssignmentMissing">അക്സസ് നിഷേധിച്ചിരിക്കുന്നു:ഈ ലേഖനത്തില്‍ ഒരു കോപ്പി എഡിറ്ററായി താങ്കളെ അസ്സൈന്‍ ചെയ്തിട്ടില്ല.</message>
-	<message key="user.authorization.noJournal">കണ്‍ടെക്സില്‍ ജേണല്‍ ഒന്നുമില്ല!</message>
 	<message key="user.authorization.sectionAssignment">താങ്കളുടെ സെക്ഷന്റെ ഭാഗമായ ഒരു ലേഖനം അക്സസ് ചെയ്യാനാണ് താങ്കള്‍ ശ്രമിക്കുന്നത്.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">അസാധുവായ കോപ്പി എഡിറ്റര്‍ സബ്മിഷന്‍ അല്ലെങ്കില്‍ കോപ്പി എഡിറ്റര്‍ സബ്മിഷന്‍ അപേക്ഷിച്ചിട്ടില്ല!</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">അസാധുവായ സിലക്ഷന്‍ എഡിറ്റര്‍ സബ്മിഷന്‍ അല്ലെങ്കില്‍ സിലക്ഷന്‍ എഡിറ്റര്‍ സബ്മിഷന്‍ അപേക്ഷിച്ചിട്ടില്ല!</message>
 	
 	<!-- Icons: Default "alt" text -->
 	
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">XML-ല്‍ നിന്നും കറന്‍സി ലിസ്റ്റ് "{$filename}"  ലോഡ് ചെയ്തിരിക്കുന്നു</message>
-	<message key="debug.notes.helpMappingLoad">{$id} തിരയുന്നതിനായി XML ഹെല്‍പ്പ് മാപ്പിങ്ങ് ഫയല്‍ {$filename} റീലോഡ് ചെയ്തിരിക്കുന്നു</message>
 </locale>
