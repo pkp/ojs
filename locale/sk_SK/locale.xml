@@ -91,7 +91,7 @@
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Aktuálne číslo</message>
-	<message key="journal.journal">Časopis</message>
+	<message key="context.context">Časopis</message>
 
 	<!-- User -->
 	<message key="user.myJournals">Moje časopisy</message>
