@@ -28,7 +28,6 @@
 	<!-- review froms start -->
 
 	<!-- common -->
-	<message key="common.journal">المجلة</message>
 
 	<!-- Journal Management -->
 
@@ -37,30 +36,8 @@
 	<message key="navigation.categories.browse">تصفح</message>
 
 	<!--  peer review -->
-	<message key="submission.reviewForm">نموذج التحكيم</message>
-	<message key="submission.reviewFormResponse">استجابة نموذج التحكيم</message>
 
 	<!-- Permissions -->
-	<message key="submission.permissions">الصلاحيات</message>
-	<message key="submission.license">الرخصة</message>
-	<message key="submission.copyright">الحقوق الفكرية</message>
-	<message key="submission.copyrightHolder">مالك الحقوق الفكرية</message>
-	<message key="submission.copyrightYear">سنة الحقوق الفكرية</message>
-	<message key="submission.copyrightStatement">الحقوق الفكرية (c) {$copyrightYear} {$copyrightHolder}</message>
-	<message key="submission.licenseURLValid">لطفاً، زودنا برابط خارجي صحيح (متضمناً http://).</message>
-	<message key="submission.licenseURL">رابط الرخصة</message>
-	<message key="submission.license.cc.by-nc-nd4">CC Attribution-NonCommercial-NoDerivatives 4.0</message>
-	<message key="submission.license.cc.by-nc4">CC Attribution-NonCommercial 4.0</message>
-	<message key="submission.license.cc.by-nc-sa4">CC Attribution-NonCommercial-ShareAlike 4.0</message>
-	<message key="submission.license.cc.by-nd4">CC Attribution-NoDerivatives 4.0</message>
-	<message key="submission.license.cc.by4">CC Attribution 4.0</message>
-	<message key="submission.license.cc.by-sa4">CC Attribution-ShareAlike 4.0</message>
-	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />هذا العمل مرخص حسب <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.]]></message>
-	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />هذا العمل مرخص حسب <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.]]></message>
-	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />هذا العمل مرخص حسب <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.]]></message>
-	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />هذا العمل مرخص حسب <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.]]></message>
-	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />هذا العمل مرخص حسب <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.]]></message>
-	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />هذا العمل مرخص حسب <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.]]></message>
 
 	<message key="reviewer.article.enterReviewForm">أنقر الإيقونة لملئ نموذج التحكيم</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">لطفاً، عليك بإملاء الحقول المطلوبة</message>
@@ -78,7 +55,6 @@
 	<message key="common.confirmComplete">هل أنت متأكد من رغبتك في تأشير هذه المهمة على أنها منجزة؟ قد لا تتمكن من إجراء تعديلات بعدها</message>
 	<message key="common.payment">دفع مال</message>
 	<message key="common.payments">أجور مدفوعة</message>
-	<message key="common.pageHeader.altText">رأس الصفحة</message>
 	<message key="common.homePageHeader.altText">رأس الصفحة الرئيسية</message>
 	<message key="common.journalHomepageImage.altText">صورة الصفحة الرئيسية للمجلة</message>
 
@@ -92,7 +68,6 @@
 
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">مساعدة</message>
-	<message key="navigation.archives">المحفوظات</message>
 	<message key="navigation.current">الحالي</message>
 	<message key="navigation.otherJournals">المجلات الأخرى</message>
 	<message key="navigation.browseByIssue">حسب العدد</message>
@@ -145,12 +120,8 @@
 	<message key="article.suppFiles">الملف/الملفات التكميلية</message>
 	<message key="article.suppFilesAbbrev">ملفات تكميلية</message>
 	<message key="article.discipline">الإلتزام الأكاديمي والتخصصات الفرعية</message>
-	<message key="article.subjectClassification">تصنيف الموضوع</message>
 	<message key="article.subject">الكلمات المفتاحية</message>
 	<message key="article.coverage">التغطية</message>
-	<message key="article.coverageGeo">التغطية الجغرافية المكانية</message>
-	<message key="article.coverageChron">التغطية الزمانية أو التأريخية</message>
-	<message key="article.coverageSample">خصائص عينة البحث</message>
 	<message key="article.type">النوع، الطريقة، الأسلوب</message>
 	<message key="article.language">اللغة</message>
 	<message key="article.sectionEditor">مح قس</message>
@@ -233,27 +204,12 @@
 	<message key="user.noRoles.submitArticleRegClosed">قدم مؤلَّفاً: تسجيل المؤلف معطل حالياً</message>
 	<message key="user.noRoles.regReviewer">سجل بصفة محكم</message>
 	<message key="user.noRoles.regReviewerClosed">التسجيل بصفة محكم: تسجيل المحكم معطل حالياً</message>
-	<message key="user.orcid">ORCID iD</message>
-	<message key="user.orcid.description"><![CDATA[ORCID iDs يمكن تعيينها حصراً من قبل <a href="http://orcid.org/" target="_blank">the ORCID Registry</a>. عليك أن تخضع لمعاييرهم لتستخلص ORCID iDs، وأن تُضَمِّن الرابط الكامل (مثلاً <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
-	<message key="user.profile.form.orcidInvalid">إن معرَّف ORCID iD الذي حددته غير صحيح</message>
-    	<message key="user.profile.implicitAuthChangePasswordInstructions">لو سبق لك الدخول عبر المعطيات الخاصة بك، إتبع منهج مؤسستك لو أردت تغيير كلمة مرورك. بالنسبة للمستخدمين المحليين، يمكن الاستمرار أدناه.</message>
-
+    
 	<!-- Roles -->
 	<message key="user.role.manager">رئيس التحرير</message>
-	<message key="user.role.editor">مدير التحرير</message>
 	<message key="user.role.sectionEditor">محرر القسم</message>
-	<message key="user.role.layoutEditor">المصمم الطباعي</message>
-	<message key="user.role.copyeditor">المدقق</message>
-	<message key="user.role.proofreader">المصحح الطباعي</message>
-	<message key="user.role.author">المؤلف</message>
 	<message key="user.role.subscriptionManager">مدير الاشتراكات</message>
 	<message key="user.role.managers">المدراء</message>
-	<message key="user.role.editors">المحررون</message>
-	<message key="user.role.sectionEditors">محررو الأقسام</message>
-	<message key="user.role.layoutEditors">المصممون الطباعيون</message>
-	<message key="user.role.copyeditors">المدققون</message>
-	<message key="user.role.proofreaders">مصححو القراءة</message>
-	<message key="user.role.authors">المؤلفون</message>
 	<message key="user.role.subscriptionManagers">مدراء الاشتراكات</message>
 
 	<!-- Common Issue Terms -->
@@ -272,7 +228,6 @@
 	<message key="issue.fullIssue">إصدار كامل</message>
 	<message key="issue.nonpdf.title">تنزيل الإصدار</message>
 	<message key="issue.viewIssue">معاينة الإصدار</message>
-	<message key="issue.viewIssueDescription">معاينة أو تنزيل الإصدار بالكامل</message>
 
 	<!-- Common Subscription Type Terms -->
 	<message key="subscriptionTypes.currency">العملة</message>
@@ -305,7 +260,6 @@
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">حالة طلب النشر</message>
-	<message key="submission.event.general.articleSubmitted">المؤلَّف مقدم</message>
 	<message key="submission.event.general.issueScheduled">طلب النشر مجدول ضمن طابور الإصدار</message>
 	<message key="submission.event.general.issueAssigned">المؤلَّف معين إلى الإصدار</message>
 	<message key="submission.event.general.articlePublished">المؤلَّف منشور</message>
@@ -409,10 +363,6 @@
 	<message key="plugins.categories.generic.description">الإضافات العامة تستعمل لتعزيز نظام المجلات المفتوحة في مجالات شتى غير مدعومة ضمن فئات الإضافات الأخرى</message>
 	<message key="plugins.categories.implicitAuth">إضافات المصادقة الضمنية</message>
 	<message key="plugins.categories.implicitAuth.description">إضافات المصادقة الضمنية تقدم الدعم لحصول المستخدمين على المصادقة استناداً إلى عناوين رؤوس http </message>
-	<message key="plugins.categories.oaiMetadataFormats">إضافات تنسيق البيانات الوصفية لأنظمة بروتوكول مبادرة المحفوظات المفتوحة لحصد البيانات الوصفية OAI</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">هذه الإضافات التنسيقية تقدم البيانات الوصفية في الاتصالات المتعلقة بالبروتوكول المذكور</message>
-	<message key="plugins.categories.pubIds">إضافات المعرَّف العام</message>
-	<message key="plugins.categories.pubIds.description">هذه الإضافات تقدم الدعم للمعرَّف العام</message>
 
 	<!-- Files Browser -->
 
@@ -423,10 +373,8 @@
 	<!-- Setup Step 2 -->
 
 
-	<message key="manager.setup.reviewProcessEmailDescription">يلتمس المحررون من المحكمين مراجعة وتنقيح طلب النشر المرفق بالرسالة الالكترونية المعنونة إليهم. المحكمون يراسلون المحررين معربين عن قبولهم (أو اعتذارهم)، فضلاً عن التنقيحات والتوصيات. يقوم المحررون بإدخال موافقات المحكمين (أو اعتذاراتهم) فضلاً عن نتيجة التحكيم وتوصياته في صفحة التحكيم المتعلقة بطلب النشر، كل ذلك من أجل توثيق عملية التحكيم.</message>
 
 
-	<message key="manager.setup.preservationDescription"><![CDATA[إن نظام المجلات المفتوحة يدعم <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> نظام (Lots of Copies Keep Stuff Safe) ليضمن حفظاً دائماً وأميناً لمجلتك. لديك العديد من الخيارات بشأن تضمين مجلتك في شبكة LOCKSS:]]></message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[<strong>شبكات LOCKSS أخرى</strong>
 <br /><br />
@@ -454,7 +402,6 @@
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[لتجعل محتويات هذه المجلة مفهرسة ضمن نظام متوزع عالمياً من قواعد البيانات البحثية، لطفاً إقرأ <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">خطوات أن تصير مشاركاً للبيانات</a> ثم سجل مجلتك في الموقع الرسمي <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">تسجيل المحفوظات المفتوحة</a>. للتسجيل، تحتاج إلى الرابط الأساسي لمخزنك: <span class="highlight">{$oaiUrl}</span>. بعدها، بإمكانك تسجيل مجلتك في <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">سجل UIUC OAI </a> و <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 <br /><br />
 لاحظ أنه فيما لو سبق لمدير الموقع تسجيل هذا الموقع في تلك الخدمات، فإن مجلتك ستحصل على الفهرسة تلقائياً ولا يعود من داعٍ لتسجيلها.]]></message>
-	<message key="manager.setup.citations">مكِّن مساعد توصيف الاقتباس</message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[الخطوات: طابور طلبات النشر &gt; تحكيم طلب النشر &gt; تحرير طلب النشر &gt; جدول المحتويات.<br /><br />
@@ -727,18 +674,10 @@
 	<message key="submission.comments.saveAndEmailEditor">إحفظ وأرسل إلى المحرر</message>
 
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">ألست مسجلاً في الموقع؟ سجل فيه الآن</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[لأسباب أمنية، هذا النظام يرسل للمستخدمين رسالة لإعادة ضبط كلمة المرور بدلاً من قيامه باستدعائها.<br /><br />أدخل عنوان بريدك الالكتروني أدناه لإعادة ضبط كلمة مرورك. رسالة تأكيد ستُرسل إلى هذا العنوان البريدي.]]></message>
-    	<message key="user.login.implicitAuthLogin">الدخول عبر المعطيات</message>
-    
+        
 	<!-- Registration -->
-    	<message key="user.register.emailValidation">مصادقة عنوان البريد الالكتروني مطلوبة</message>
-    	<message key="user.register.emailValidationDescription">عليك أن تثبت صحة عنوان بريدك الالكتروني قبل المتابعة. لطفاً، راجع حسابك البريدي للمزيد من التعليمات. بمجرد مصادقة حسابك البريدي، سيكون بمقدورك دخول الموقع.</message>
-    	<message key="user.register.selectJournal">إختر مجلةً لتُسجل نفسك فيها</message>
-	<message key="user.register.noJournals">ليس من مجلة متاحة للتسجيل فيها ضمن هذا الموقع</message>
+            	<message key="user.register.noJournals">ليس من مجلة متاحة للتسجيل فيها ضمن هذا الموقع</message>
 	<message key="user.register.privacyStatement">بيان الخصوصية</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">أنقر هنا</a> إن سبق لك التسجيل في هذه المجلة أو غيرها ضمن هذا الموقع.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">أنقر هنا</a> إن <strong>لم يسبق</strong> لك التسجيل في هذه المجلة أو غيرها ضمن هذا الموقع.]]></message>
 	<message key="user.register.loginToRegister">أدخل اسم الدخول وكلمة المرور الخاصين بك للتسجيل في هذه المجلة.</message>
 	<message key="user.register.registrationDisabled">هذه المجلة لا تتيح حالياً التسجيل فيها.</message>
 	<message key="user.register.form.passwordLengthTooShort">كلمة المرور التي أدخلتها ليست طويلة بما يكفي.</message>
@@ -748,8 +687,7 @@
 	<message key="user.register.reviewerDescriptionNoInterests">راغبٌ في إجراء تحكيم مناظر لطلبات النشر في المجلة.</message>
 	<message key="user.register.reviewerDescription">راغبٌ في إجراء تحكيم مناظر لطلبات النشر في الموقع.</message>
 	<message key="user.register.reviewerInterests">عرِّف إهتمامات التحكيم (مجالاته الثابتة وطرق البحث):</message>
-    	<message key="user.register.implicitAuth">الدخول عبر المعطيات باستعمال حساب مؤسسي موجود</message>
-    
+        
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">اشتراكاتي</message>
 	<message key="user.subscriptions.subscriptionStatus">حالة الاشتراك</message>
@@ -812,8 +750,6 @@
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">صيغة الملف المحمول (PDF)</message>
-	<message key="article.pdf.download">قم بتنزيل ملف PDF هذا</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>ملف PDF الذي اخترته ينبغي تحميله هنا إن كان مستعرض الإنترنت الذي تستعمله متضمناً لقارئ ملفات PDF مضافاً إليه (على سبيل المثال، آخر نسخة من <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>لو أردت معرفة المزيد عن كيفية طباعة، حفظ أو العمل مع ملفات بصيغة PDF، فإن موقع Highwire Press يقدم المساعدة عبر <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">أسئلة مطروقة عن ملفات PDF</a>.</p> <p>أو كبديل، بإمكانك تنزيل ملفات PDF مباشرة إلى حاسبتك، ومن هناك فتحها مستعملاً برنامج قارئ لصيغة PDF. لتنزيل الملف، أنقر رابط التنزيل أعلاه.</p>]]></message>
 
 
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
@@ -839,8 +775,6 @@
 
 	<!-- About The Journal -->
 	<message key="about.statistics">إحصائيات</message>
-	<message key="about.journalContact">للتواصل مع المجلة</message>
-	<message key="about.aboutTheJournal">عن المجلة</message>
 	<message key="about.history">تأريخ المجلة</message>
 	<message key="about.editorialTeam">هيئة التحرير</message>
 	<message key="about.editorialTeam.biography">السيرة</message>
@@ -848,13 +782,8 @@
 	<message key="about.focusAndScope">التركيز ومجال العمل</message>
 	<message key="about.sectionPolicies">سياسات القسم</message>
 	<message key="about.submissions">طلبات النشر</message>
-	<message key="about.sponsors">الرعاة</message>
-	<message key="about.contributors">مصادر الدعم</message>
 	<message key="about.onlineSubmissions">طلبات النشر عبر الإنترنت</message>
-	<message key="about.onlineSubmissions.haveAccount">سبق لك الحصول على اسم دخول/كلمة مرور في {$journalTitle}؟</message>
 	<message key="about.onlineSubmissions.login">إذهب إلى صفحة الولوج</message>
-	<message key="about.onlineSubmissions.needAccount">أتريد اسم دخول/كلمة مرور؟</message>
-	<message key="about.onlineSubmissions.registration">إذهب إلى صفحة التسجيل</message>
 	<message key="about.onlineSubmissions.registrationRequired">التسجيل في المجلة والدخول في الموقع مطلوبان لتقديم طلبات النشر عبر الإنترنت وللتحقق من حالة طلب النشر ومتابعة مراحله</message>
 	<message key="about.authorGuidelines">إرشادات المؤلف</message>
 	<message key="about.submissionPreparationChecklist">متطلبات تحضير طلب النشر</message>
@@ -880,12 +809,7 @@
 	<message key="about.subscriptionTypes.duration">المدة</message>
 	<message key="about.subscriptionTypes.cost">الكلفة</message>
 	<message key="about.availableSubscriptionTypes">أنواع الاشتراكات</message>
-    	<message key="about.purchaseIssue">شراء العدد</message>
-	<message key="about.purchaseArticle">شراء المؤلَّف</message>
-    	<message key="about.purchaseIssueDescription">بوسع القراء غير المشتركين شراء أعداد منفردة.أدناه، خيارات الدفع المالي ورسومها المتاحة .</message>
-    	<message key="about.purchaseArticleDescription">بوسع القراء غير المشتركين شراء مؤلفات منفردة.أدناه، خيارات الدفع المالي ورسومها المتاحة.</message>
-    	<message key="about.memberships">العضوية</message>
-	<message key="about.journalSponsorship">كفالة المجلة</message>
+                	<message key="about.memberships">العضوية</message>
 	<message key="about.aboutThisPublishingSystem">عن نظام النشر هذا</message>
 	<message key="about.aboutThisPublishingSystem.altText">عملية التحرير والنشر لنظام المجلات المفتوحة</message>
 	<message key="about.aboutOJSJournal"><![CDATA[هذه المجلة تستعمل نظام المجلات المفتوحة {$ojsVersion}، والذي هو نظام مفتوح المصدر لإدارة النشر مطور ومدعوم وموزع مجاناً عبر الرابط <a href="http://pkp.sfu.ca/">مشروع المعرفة العامة</a> تحت رخصة GNU General Public License.]]></message>
@@ -1059,7 +983,6 @@
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} قد أدخل طلب نشر جديد، رقمه التعريفي ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} قام بتنقيح المؤلَّف {$articleId}. رمز الملف الجديد ID {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} قد تم تعيينه لتحكيم طلب النشر {$articleId} لجولة التحكيم {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} قد تم فكه من تحكيم طلب النشر {$articleId} خلال جولة التحكيم {$round}.</message>
 	<message key="log.review.reviewInitiated">جولة التحكيم {$round} من قبل {$reviewerName} للمؤلَّف {$articleId} قد بوشر بها.</message>
 	<message key="log.review.reviewReinitiated">جولة التحكيم {$round} من قبل {$reviewerName} للمؤلَّف {$articleId} قد أعيد الشروع بها.</message>
@@ -1096,7 +1019,6 @@
 	<message key="log.editor.archived">المؤلَّف {$articleId} قد تم حفظه.</message>
 	<message key="log.editor.restored">المؤلَّف {$articleId} قد تمت استعادته إلى طابور التحرير.</message>
 	<message key="log.editor.editorAssigned">{$editorName} قد تم تعيينه كمحرر لطلب النشر {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} قد سرَّع عملية التحرير للمؤلَّف {$articleId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} قد عين {$proofreaderName} لمهمة القراءة التصحيحية للمؤلَّف {$articleId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} قد قدم {$articleId} للجدولة.</message>
@@ -1161,22 +1083,16 @@
 	<message key="notification.notificationsPublicDescription">هذه الصفحة تظهر التحديثات الهامة المتعلقة بهذه المجلة، مثل الإصدارات والإعلانات الجديدة. بإمكانك الاشتراك للحصول على تلك الاشعارات عبر مغذي RSS (عبر النقر على الصورة يساراً)، أو <![CDATA[  <a href="{$emailUrl}">عبر البريد الالكتروني.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">تم تقديم مؤلَّف جديد بعنوان "{$title}".</message>
-	<message key="notification.type.copyeditComment">ترك أحد المدققين تعليقاً على المؤلَّف "{$title}".</message>
 	<message key="notification.type.editing">أحداث التحرير</message>
 	<message key="notification.type.editorDecisionComment">تم وضع تعليق على قرار المحرر المتعلق بالمؤلَّف "{$title}".</message>
 	<message key="notification.type.galleyModified">تم تعديل لوح الطباعة للمؤلَّف "{$title}".</message>
 	<message key="notification.type.issuePublished">أصدرت المجلة عدداً جديداً.</message>
-	<message key="notification.type.layoutComment">تم وضع تعليق على التصميم الطباعي للمؤلَّف "{$title}".</message>
-	<message key="notification.type.metadataModified">البيانات الوصفية للمؤلَّف"{$title}" قد تم تعديلها.</message>
 	<message key="notification.type.newAnnouncement">تم إنشاء إعلان جديد.</message>
-	<message key="notification.type.proofreadComment">تم وضع تعليق من قبل مصحح القراءة على المؤلَّف "{$title}".</message>
-	<message key="notification.type.reviewerComment">تم وضع تعليق من قبل المحكم على المؤلَّف "{$title}".</message>
 	<message key="notification.type.reviewerFormComment">تم تقديم نموذج تحكيم للمؤلَّف "{$title}".</message>
 	<message key="notification.type.reviewing">أحداث التحكيم</message>
 	<message key="notification.type.site">أحداث الموقع</message>
 	<message key="notification.type.submissionComment">وضع المحرر تعليقاً عن المؤلَّف "{$title}".</message>
 	<message key="notification.type.submissions">أحداث طلب النشر</message>
-	<message key="notification.type.suppFileModified">الملفات التكميلية للمؤلَّف "{$title}" تم تعديلها.</message>
 	<message key="notification.type.userComment">وضع قارئ تعليقاً عن المؤلَّف "{$title}"</message>
 
 	<!--
@@ -1186,14 +1102,11 @@
 	-->
 	<!-- Authorization -->
 	<message key="user.authorization.copyeditorAssignmentMissing">الوصول متعذر! لم يتم تعيينك كمدقق لهذا المؤلَّف.</message>
-	<message key="user.authorization.noJournal">لا مجلة ضمن هذا السياق!</message>
 	<message key="user.authorization.sectionAssignment">أنت تحاول الوصول إلى مؤلَّف ليس ضمن القسم الخاص بك.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">تقديم المدقق غير صحيح، أو لم تتم المطالبة به!</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">تقديم محرر القسم غير صحيح، أو لم تتم المطالبة به!</message>
 
 	<!-- Icons: Default "alt" text -->
 
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">قائمة العملات المحملة "{$filename}" من ملف بصيغة XML</message>
-	<message key="debug.notes.helpMappingLoad">ملف مخطط المساعدة بصيغة {$filename} المعاد تحميله للبحث عن {$id}.</message>
 </locale>

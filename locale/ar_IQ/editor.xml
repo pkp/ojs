@@ -12,11 +12,7 @@
   -->
 
 <locale name="ar_IQ" full_name="العربية">
-	<message key="editor.article.reviewForms">نماذج التحكيم</message>
-	<message key="editor.article.selectReviewForm">إختر أحد نماذج التحكيم</message>
-	<message key="editor.article.clearReviewForm">تصفير نموذج التحكيم</message>
 	<message key="editor.home">صفحة المحرر الرئيسية</message>
-	<message key="editor.article.confirmChangeReviewForm">تحذير: تعديل نموذج التحكيم سيؤثر على جميع الإجابات التي قدمها المحكمون سابقاً مستعملين هذا النموذج. هل أنت متأكد من رغبتك في المتابعة؟</message>
 	<message key="editor.reassign">إعادة تعيين</message>
 	<message key="editor.submissionsAndPublishing">الطلبات والنشر</message>
 	<message key="editor.submissionQueue">طابور طلبات النشر</message>
@@ -27,8 +23,7 @@
 	<message key="editor.allEditors">كل أعضاء هيئة التحرير</message>
 	<message key="editor.me">أنا</message>
 	<message key="editor.publicIdentificationExists">المعرَّف العام '{$publicIdentifier}' موجود مسبقاً لشيء آخر (قضية، مقالة، كيان أو ملف تكميلي). لطفاً، إختر معرَّفاً فريداً لمكونات مجلتك</message>
-    <message key="editor.publicGalleyIdentificationExists">المعرَّف العام '{$publicIdentifier}' موجود مسبقاً للوح طباعي آخر تابع لهذا المؤلَّف. لطفاً، إختر معرَّفاً فريداً لهذا اللوح الطباعي ضمن هذا المؤلَّف.</message>
-    <message key="editor.submissionArchive.noSubmissions">لا توجد طلبات للنشر في الأرشيف</message>
+       <message key="editor.submissionArchive.noSubmissions">لا توجد طلبات للنشر في الأرشيف</message>
 	<message key="editor.submissionArchive.saveChanges">هل تريد حفظ التعديلات على طلبات النشر المحفوظة؟ الطلبات المؤشر عليها بأن تحذف ستحذف نهائياً من النظام</message>
 	<message key="editor.submissionArchive.confirmDelete">هل أنت متأكد من رغبتك في حذف طلب النشر هذا نهائياً؟</message>
 	<message key="editor.submissionReview.confirmDecision">هل أنت متأكد من رغبتك في تسجيل هذا القرار؟</message>
@@ -41,7 +36,6 @@
 	<message key="editor.notifyUsers.allAuthors">جميع المؤلفين والبالغ عددهم ({$count} مؤلف)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">جميع المشتركين المنفردين والبالغ عددهم ({$count} مشترك)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">جميع المؤسسات المشتركة والبالغ عددها ({$count} مؤسسة)</message>
-	<message key="editor.notifyUsers.allMailingList">إشمل جميع عناوين البريد الالكتروني التي في قائمة عناوين البريد والبالغ عددها ({$count} عنوان)</message>
 	<message key="editor.notifyUsers.inProgress">أعلم المستخدمين...</message>
 	<message key="editor.usersNotified">تم إعلام المستخدمين</message>
 	<message key="editor.notifyUsers.allUsers">أرسل هذه الرسالة لجميع المستخدمين المرتبطين بهذه المجلة والبالغ عددهم ({$count} مستخدم)</message>
@@ -66,8 +60,7 @@
 	<message key="editor.issues.publicIssueIdentifier">معرَّف العدد العام</message>
 	<message key="editor.issues.description">الوصف</message>
 	<message key="editor.issues.accessStatus">موقف الوصول</message>
-    <message key="editor.issues.resetArticlePublicationDates">إعادة تعيين تواريخ نشر المؤلفات</message>
-    <message key="editor.issues.accessDate">تاريخ الوصول المفتوح</message>
+       <message key="editor.issues.accessDate">تاريخ الوصول المفتوح</message>
 	<message key="editor.issues.enableOpenAccessDate">مكن تأخير الوصول المفتوح</message>
 	<message key="editor.issues.coverPage">صورة الغلاف</message>
 	<message key="editor.issues.coverPageInstructions">(الصيغ المتاحة: .gif, .jpg, or .png )</message>
@@ -118,9 +111,7 @@
 	<message key="editor.issues.backToIssueGalleys">العودة إلى تنضيدات العدد</message>
 	<message key="editor.issues.viewingGalley">معاينة تنضيد العدد</message>
 	<message key="editor.issues.confirmDeleteGalley">هل أنت متأكد من رغبتك في حذف هذا التنضيد؟</message>
-	<message key="editor.navigation.issues">الأعداد</message>
 	<message key="editor.navigation.futureIssues">الأعداد القادمة</message>
-	<message key="editor.navigation.createIssue">أنشئ عدداً</message>
 	<message key="editor.navigation.issueArchive">الأعداد السابقة</message>
 	<message key="editor.article.designateReviewVersion">إعتبر الملف الأصلي بمثابة النسخة المنقحة أو المحكمة</message>
 	<message key="editor.article.uploadReviewVersion">إرفع نسخة معدة للتحكيم</message>

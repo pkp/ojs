@@ -53,7 +53,6 @@
 	<message key="author.submit.submissionLocale">لغة طلب النشر</message>
 	<message key="author.submit.submissionLocaleDescription">هذه المجلة تتقبل طلبات النشر بعدة لغات. إختر لغة الطلب الأساسية من القائمة المنسدلة أدناه</message>
 	<message key="author.submit.submissionChecklist">مرجعيات طلب النشر</message>
-	<message key="submission.submit.submissionChecklistDescription">أعلم المجلة بأن طلب النشر هذا جاهز للنظر به من قبل هيئة تحريرها عبر وضع التأشيرات لكل مما يأتي (الملاحظات إلى هيئة التحرير يمكن إضافتها أدناه):</message>
 	<message key="author.submit.verifyChecklist">عليك التأكد من أن كل فقرات نموذج التقديم تمت تلبيتها قبل المتابعة</message>
 	<message key="author.submit.copyrightNoticeAgree">المؤلف أو المؤلفون يوافقون على فقرات إشعار الحقوق الفكرية، والتي تنطبق على طلب النشر هذا إذا أو عند تحقق النشر عبر هذه المجلة (الملاحظات إلى هيئة التحرير يمكن إضافتها أدناه)</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">عليك أن توافق على فقرات إشعار الحقوق الفكرية لتتمكن من المتابعة</message>
@@ -68,10 +67,7 @@
 	<message key="author.submit.addAuthor">أضف مؤلفاً</message>
 	<message key="author.submit.deleteAuthor">إحذف مؤلفاً</message>
 	<message key="author.submit.submissionIndexingDescription">أضف عبارات لفهرسة طلب النشر، إفصل بين العبارات بفارزة منقوطة (بالحرف الإنجليزي رجاءً) لتظهر بالشكل: (عبارة1; عبارة2; عبارة3)</message>
-	<message key="author.submit.submissionSupportingAgencies">الجهات المساهمة والساندة</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">عرف تلك الجهات: (شخص، منظمة، خدمة... إلخ.) والتي ساهمت في المؤَلَّف سواءً في محتواه، أو عبر الدعم المالي أو المعنوي للعمل الخاص بطلب النشر. إفصل بين الفقرات المتعددة بفارزة منقوطة (بالحرف الإنجليزي رجاءً) على سبيل المثال: (عامر عاصم، جامعة الموصل; قسم هندسة السيطرة والنظم، الجامعة التكنولوجية)</message>
 	<message key="author.submit.coverageInstructions">إشارات إلى المواقع الجغرافية أو الأحداث التاريخية المتتابعة زمانياً و /أو خصائص عينات البحث</message>
-	<message key="author.submit.subjectClassInstructions">استعمل نظام الروابط المصنفة لاختيار عبارات تصنيفية مع (إن كان ذلك ملائماً) أرقام</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">رموز لغات أخرى</a>.]]></message>
 	<message key="author.submit.form.authorRequired">مؤلف واحد على الأقل مطلوب حتماً</message>
 	<message key="author.submit.form.authorRequiredFields">بيانات: (الاسم الأول، الاسم الأخير، عنوان البريد الالكتروني) لكل مؤلف مطلوبة حتماً</message>
@@ -104,7 +100,6 @@
 	<message key="author.submit.suppFile.dataSet">مجموعة بيانات</message>
 	<message key="author.submit.suppFile.sourceText">نص مصدر</message>
 	<message key="author.submit.suppFile.briefDescription">وصف موجز</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">جهة مساهمة أو راعية</message>
 	<message key="author.submit.suppFile.availableToPeers">قدم الملف إلى المحكمين (بدون البيانات الوصفية)، إذ أن ذلك لا يتعارض مع التحكيم السري</message>
 	<message key="author.submit.suppFile.publisherDescription">يستعمل مع المواد المنشورة رسمياً فقط</message>
 	<message key="author.submit.suppFile.dateDescription">أرخ لجمع البيانات أو لإنشاء الأدوات</message>
@@ -121,7 +116,6 @@
 	<message key="author.submit.filesSummary">ملخص ملفات طلب النشر</message>
 	<message key="author.submit.finishSubmission">إنهاء التقديم</message>
 	<message key="author.submit.submissionComplete">التقديم قد إكتمل. نشكر لك إهتمامك بالنشر في {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[ إذا كان هذا التقديم في وضع يسمح له بالنشر مباشرة دون الحاجة إلى تحكيم أو مراجعة أو معالجة أو تنضيد، يمكن له أن يوضع الآن في المرحلة الأخيرية من مراحل التحرير <a href="{$expediteUrl}" class="action">عبر النقر هنا</a>. (تنويه: عضو هيئة تحرير المجلة حصراً، له أن يختار ذلك الأمر بالنسبة إلى ما يقدمه للنشر شخصياً)]]></message>
 	<message key="author.article.uploadAuthorVersion">إرفع نسخة المؤلف</message>
 	<message key="author.article.copyeditedFile">ملف النسخة المحررة</message>
 	<message key="author.article.authorRevisedFile">ملف المؤلف</message>
