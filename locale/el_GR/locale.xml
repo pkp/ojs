@@ -367,7 +367,7 @@
         <message key="sectionEditor.proofreader.confirmRenotify">Ενημερώνοντας ξανά τον συγκεκριμένο επιμελητή τυπογραφικών δοκιμίων, θα επανεκκινηθεί η ανάθεση των εργασιών του. Είστε βέβαιοι ότι επιθυμείτε να προχωρήσετε;</message>
 
         <message key="sectionEditor.regrets.breadcrumb">Αδυναμία αποδοχής</message>
-        <message key="sectionEditor.regrets.title"><![CDATA[#{$articleId} Αδυναμία αποδοχής από αξιολογητή,  Ακυρώσεις & Αρχικά Στάδια]]></message>
+        <message key="sectionEditor.regrets.title"><![CDATA[#{$submissionId} Αδυναμία αποδοχής από αξιολογητή,  Ακυρώσεις & Αρχικά Στάδια]]></message>
         <message key="sectionEditor.regrets">Αδυναμία αποδοχής</message>
         <message key="sectionEditor.regrets.link">Προβολή αδυναμιών αποδοχής, ακυρώσεων, προηγούμενων σταδίων</message>
         <message key="sectionEditor.regrets.reviewRound">Ομότιμη Αξιολόγηση, γύρος {$round}</message>
@@ -727,48 +727,48 @@
 
         <!-- Article Logs -->
         <message key="log.author.submitted">O/H {$authorName} καταχώρισε μια νέα υποβολή, ID {$submissionId}.</message>
-        <message key="log.author.documentRevised">O/H {$authorName} αναθεώρησε το άρθρο {$articleId}. Το νεό ID του αρχείου είναι {$fileId}.</message>
-               <message key="log.review.reviewerUnassigned">Έχει ακυρωθεί η ανάθεση της αξιολόγησης της υποβολής {$articleId} στον/ην {$reviewerName} για το γύρο αξιολόγησης {$round}.</message>
-        <message key="log.review.reviewInitiated">Ξεκίνησε ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$articleId}.</message>
-        <message key="log.review.reviewReinitiated">Ξεκίνησε εκ νέου ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$articleId}.</message>
-        <message key="log.review.reviewCancelled">Ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$articleId} ακυρώθηκε.</message>
-        <message key="log.review.reviewCleared">Εκκαθαρίστηκε ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$articleId}.</message>
-        <message key="log.review.reviewerRated">Ο/Η {$reviewerName} βαθμολογήθηκε για τον γύρο αξιολόγησης {$round} της υποβολής {$articleId}.</message>
-        <message key="log.review.reviewDueDateSet">Ως ημερομηνία προθεσμίας για τον γύρο αξιολόγησης {$round} της υποβολής {$articleId} από τον/ην {$reviewerName} έχει οριστεί η {$dueDate}.</message>
-        <message key="log.review.reviewRecommendationSet">Η εισήγηση για τον γύρο αξιολόγησης {$round} της υποβολής {$articleId} από τον/ην {$reviewerName} έχει οριστεί.</message>
-        <message key="log.review.reviewRecommendationSetByProxy">Έχει οριστεί η εισήγηση για τον γύρο αξιολόγησης {$round} της υποβολής {$articleId} από τον επιμελητή {$editorName}, για λογαριασμό του αξιολογητή {$reviewerName}.</message>
-        <message key="log.review.resubmit">Το {$articleId} υποβλήθηκε ξανά για αξιολόγηση.</message>
-        <message key="log.review.reviewDeclined">Ο/Η {$reviewerName} έχει απορρίψει τον γύρο αξιολόγησης {$round} για την υποβολή {$articleId}.</message>
-        <message key="log.review.reviewAccepted">Ο/Η {$reviewerName} έχει αποδεχτεί τον γύρο αξιολόγησης {$round} για την υποβολή {$articleId}.</message>
-				<message key="log.review.reviewDeclinedByProxy">Ο/Η {$userName} έχει απορρίψει τον γύρο αξιολόγησης {$round} για την υποβολή {$articleId} για λογαριασμό του/της {$reviewerName}.</message>
-        <message key="log.review.reviewAcceptedByProxy">Ο/Η {$userName} έχει αποδεκτεί τον γύρο  {$round} της αξιολόγησης για την υποβολή  {$articleId} για λογαριασμό του/της {$reviewerName}.</message>
-        <message key="log.review.reviewFileByProxy">Ο επιλητής του περιοδικού {$userName}, έχει μεταφορτώσει ένα αναθεωρημένο αρχείο αξιολόγησης για τον γύρο {$round} της υποβολής {$articleId} για λογαριασμό του αξιολογητή, {$reviewerName}.</message>
+        <message key="log.author.documentRevised">O/H {$authorName} αναθεώρησε το άρθρο {$submissionId}. Το νεό ID του αρχείου είναι {$fileId}.</message>
+               <message key="log.review.reviewerUnassigned">Έχει ακυρωθεί η ανάθεση της αξιολόγησης της υποβολής {$submissionId} στον/ην {$reviewerName} για το γύρο αξιολόγησης {$round}.</message>
+        <message key="log.review.reviewInitiated">Ξεκίνησε ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$submissionId}.</message>
+        <message key="log.review.reviewReinitiated">Ξεκίνησε εκ νέου ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$submissionId}.</message>
+        <message key="log.review.reviewCancelled">Ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$submissionId} ακυρώθηκε.</message>
+        <message key="log.review.reviewCleared">Εκκαθαρίστηκε ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$submissionId}.</message>
+        <message key="log.review.reviewerRated">Ο/Η {$reviewerName} βαθμολογήθηκε για τον γύρο αξιολόγησης {$round} της υποβολής {$submissionId}.</message>
+        <message key="log.review.reviewDueDateSet">Ως ημερομηνία προθεσμίας για τον γύρο αξιολόγησης {$round} της υποβολής {$submissionId} από τον/ην {$reviewerName} έχει οριστεί η {$dueDate}.</message>
+        <message key="log.review.reviewRecommendationSet">Η εισήγηση για τον γύρο αξιολόγησης {$round} της υποβολής {$submissionId} από τον/ην {$reviewerName} έχει οριστεί.</message>
+        <message key="log.review.reviewRecommendationSetByProxy">Έχει οριστεί η εισήγηση για τον γύρο αξιολόγησης {$round} της υποβολής {$submissionId} από τον επιμελητή {$editorName}, για λογαριασμό του αξιολογητή {$reviewerName}.</message>
+        <message key="log.review.resubmit">Το {$submissionId} υποβλήθηκε ξανά για αξιολόγηση.</message>
+        <message key="log.review.reviewDeclined">Ο/Η {$reviewerName} έχει απορρίψει τον γύρο αξιολόγησης {$round} για την υποβολή {$submissionId}.</message>
+        <message key="log.review.reviewAccepted">Ο/Η {$reviewerName} έχει αποδεχτεί τον γύρο αξιολόγησης {$round} για την υποβολή {$submissionId}.</message>
+				<message key="log.review.reviewDeclinedByProxy">Ο/Η {$userName} έχει απορρίψει τον γύρο αξιολόγησης {$round} για την υποβολή {$submissionId} για λογαριασμό του/της {$reviewerName}.</message>
+        <message key="log.review.reviewAcceptedByProxy">Ο/Η {$userName} έχει αποδεκτεί τον γύρο  {$round} της αξιολόγησης για την υποβολή  {$submissionId} για λογαριασμό του/της {$reviewerName}.</message>
+        <message key="log.review.reviewFileByProxy">Ο επιλητής του περιοδικού {$userName}, έχει μεταφορτώσει ένα αναθεωρημένο αρχείο αξιολόγησης για τον γύρο {$round} της υποβολής {$submissionId} για λογαριασμό του αξιολογητή, {$reviewerName}.</message>
         <message key="log.review.reviewerFile">Έχει μεταφορτωθεί αρχείο αξιολογητή.</message>
-				<message key="log.editor.decision">Μια απόφαση επιμελητή ({$decision}) για το άρθρο  {$articleId} καταχωρήθηκε από τον/την  {$editorName}.</message>
+				<message key="log.editor.decision">Μια απόφαση επιμελητή ({$decision}) για το άρθρο  {$submissionId} καταχωρήθηκε από τον/την  {$editorName}.</message>
 
 
-        <message key="log.copyedit.initiate">Η επιμέλεια των κειμένων στην υποβολή {$articleId} έχει ξεκινήσει από τον/την {$copyeditorName}.</message>
+        <message key="log.copyedit.initiate">Η επιμέλεια των κειμένων στην υποβολή {$submissionId} έχει ξεκινήσει από τον/την {$copyeditorName}.</message>
         <message key="log.copyedit.copyeditFileSet">Το προεπιλεγμένο αρχείο επιμέλειας κειμένων έχει επιλεχθεί.</message>
-        <message key="log.copyedit.initialEditComplete">Ο/Η {$copyeditorName} έχει ολοκληρώσει την αρχική επιμέλεια του κειμένου της υποβολής {$articleId}.</message>
-        <message key="log.copyedit.finalEditComplete">Ο/Η {$copyeditorName} έχει ολοκληρώσει την τελική επιμέλεια του κειμένου της υποβολής {$articleId}.</message>
-        <message key="log.copyedit.copyeditorAssigned">Ο/Η {$copyeditorName} έχει αναλάβει την επιμέλεια του κειμένου της υποβολής {$articleId}.</message>
+        <message key="log.copyedit.initialEditComplete">Ο/Η {$copyeditorName} έχει ολοκληρώσει την αρχική επιμέλεια του κειμένου της υποβολής {$submissionId}.</message>
+        <message key="log.copyedit.finalEditComplete">Ο/Η {$copyeditorName} έχει ολοκληρώσει την τελική επιμέλεια του κειμένου της υποβολής {$submissionId}.</message>
+        <message key="log.copyedit.copyeditorAssigned">Ο/Η {$copyeditorName} έχει αναλάβει την επιμέλεια του κειμένου της υποβολής {$submissionId}.</message>
         <message key="log.copyedit.copyeditorFile">Μια έκδοση του επιμελητή κειμένων για το αρχείο της υποβολής έχει μεταφορτωθεί.</message>
         <message key="log.copyedit.authorFile">Μια έκδοση του αρχείου της υποβολής, με κείμενα διορθωμένα από τον συγγραφέα έχει μεταφορτωθεί.</message>
 
-        <message key="log.layout.layoutEditorAssigned">Ο/Η {$editorName} έχει αναλάβει την επιμέλεια σελιδοποίησης της υποβολής {$articleId}.</message>
-        <message key="log.layout.layoutEditorUnassigned">Έχει ακυρωθεί η ανάθεση της επιμέλειας σελιδοποίησης της υποβολής {$articleId} στον/ην {$editorName}.</message>
-        <message key="log.layout.layoutEditComplete">Ο/Η {$editorName} έχει ολοκληρώσει την επιμέλεια σελιδοποίησης για την υποβολή {$articleId}.</message>
+        <message key="log.layout.layoutEditorAssigned">Ο/Η {$editorName} έχει αναλάβει την επιμέλεια σελιδοποίησης της υποβολής {$submissionId}.</message>
+        <message key="log.layout.layoutEditorUnassigned">Έχει ακυρωθεί η ανάθεση της επιμέλειας σελιδοποίησης της υποβολής {$submissionId} στον/ην {$editorName}.</message>
+        <message key="log.layout.layoutEditComplete">Ο/Η {$editorName} έχει ολοκληρώσει την επιμέλεια σελιδοποίησης για την υποβολή {$submissionId}.</message>
 
         <message key="log.editor.metadataModified">Τα μεταδεδομένα για το συγκεκριμένο άρθρο τροποποιήθηκαν από τον/την {$editorName}.</message>
         <message key="log.editor.editorFile">Έχει μεταφορτωθεί μια έκδοση του αρχείου υποβολής από τον επιμελητή του περιοδικού.</message>
-        <message key="log.editor.archived">Η υποβολή {$articleId} αρχειοθετήθηκε.</message>
-        <message key="log.editor.restored">Η υποβολή {$articleId} επανατοποθετήθηκε στη σειρά αναμονής.</message>
-        <message key="log.editor.editorAssigned">Ο/Η {$editorName} έχει αναλάβει ως επιμελητής της υποβολής {$articleId}.</message>
+        <message key="log.editor.archived">Η υποβολή {$submissionId} αρχειοθετήθηκε.</message>
+        <message key="log.editor.restored">Η υποβολή {$submissionId} επανατοποθετήθηκε στη σειρά αναμονής.</message>
+        <message key="log.editor.editorAssigned">Ο/Η {$editorName} έχει αναλάβει ως επιμελητής της υποβολής {$submissionId}.</message>
        
-        <message key="log.proofread.assign">Ο/Η {$assignerName} ανέθεσε στον/ην {$proofreaderName} την επιμέλεια του τυπογραφικού δοκιμίου της υποβολής {$articleId}.</message>
-        <message key="log.proofread.complete">Ο/Η {$proofreaderName} υπέβαλλε το {$articleId} για προγραμματισμό.</message>
+        <message key="log.proofread.assign">Ο/Η {$assignerName} ανέθεσε στον/ην {$proofreaderName} την επιμέλεια του τυπογραφικού δοκιμίου της υποβολής {$submissionId}.</message>
+        <message key="log.proofread.complete">Ο/Η {$proofreaderName} υπέβαλλε το {$submissionId} για προγραμματισμό.</message>
 
-        <message key="log.imported">Ο/Η {$userName} έχει εισάγει το άρθρο {$articleId}.</message>
+        <message key="log.imported">Ο/Η {$userName} έχει εισάγει το άρθρο {$submissionId}.</message>
 
         <!-- Reading Tools entries -->
 
