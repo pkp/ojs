@@ -37,8 +37,6 @@
 
 
 	<!--  peer review -->
-	<message key="submission.reviewForm">Ebaluazio-inprimakia</message>
-	<message key="submission.reviewFormResponse">Ebaluazio-inprimakiaren erantzuna</message>
 
 
 	<message key="reviewer.article.enterReviewForm">Egin klik ikono batean ebaluazio-inprimakia betetzeko.</message>	
@@ -57,7 +55,6 @@
 	<message key="common.confirmComplete">Ziur zaude bukatutako gisa markatu nahi duzula zeregin hau? Gero ezingo duzu aldaketarik egin.</message>
 	<message key="common.payment">Ordainketa</message>
 	<message key="common.payments">Ordainketak</message>
-	<message key="common.pageHeader.altText">Orri-burua</message>
 	<message key="common.homePageHeader.altText">Hasierako orriaren goiburua</message>
 	<message key="common.journalHomepageImage.altText">Aldizkariaren hasierako orriko irudia</message>
 
@@ -71,7 +68,6 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Aldizkariaren laguntza</message>
-	<message key="navigation.archives">Artxiboak</message>
 	<message key="navigation.current">Unekoa</message>
 	<message key="navigation.otherJournals">Beste aldizkari batzuk</message>
 	<message key="navigation.browseByIssue">Zenbakiz</message>
@@ -122,12 +118,8 @@
 	<message key="article.suppFiles">Fitxategi osagarria(k)</message>
 	<message key="article.suppFilesAbbrev">Fitxat. osag.</message>
 	<message key="article.discipline">Diziplina eta azpidiziplina akademikoak</message>
-	<message key="article.subjectClassification">Gaikako sailkapena</message>
 	<message key="article.subject">Gako-hitzak</message>
 	<message key="article.coverage">Estaldura</message>
-	<message key="article.coverageGeo">Estaldura geo-espaziala</message>
-	<message key="article.coverageChron">Estaldura kronologiko edo historikoa</message>
-	<message key="article.coverageSample"> Ikerketa-adibideen ezaugarriak</message>
 	<message key="article.type">Mota, metodoa edo hurbilketa</message>
 	<message key="article.language">Hizkuntza</message>
 	<message key="article.sectionEditor">AE</message>
@@ -212,20 +204,9 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Aldizkariaren kudeatzailea</message>
-	<message key="user.role.editor">Editorea</message>
 	<message key="user.role.sectionEditor">Ataleko editorea</message>
-	<message key="user.role.layoutEditor">Maketatzailea</message>
-	<message key="user.role.copyeditor">Zuzentzailea</message>
-	<message key="user.role.proofreader">Proba-zuzentzailea</message>
-	<message key="user.role.author">Egilea</message>
 	<message key="user.role.subscriptionManager">Harpidetza-kudeatzailea</message>
 	<message key="user.role.managers">Aldizkariaren kudeatzaileak</message>
-	<message key="user.role.editors">Editoreak</message>
-	<message key="user.role.sectionEditors">Ataleko editoreak</message>
-	<message key="user.role.layoutEditors">Maketatzaileak</message>
-	<message key="user.role.copyeditors">Zuzentzaileak</message>
-	<message key="user.role.proofreaders">Proba-zuzentzaileak</message>
-	<message key="user.role.authors">Egileak</message>
 	<message key="user.role.subscriptionManagers">Harpidetza-kudeatzaileak</message>
 	
 	<!-- Common Issue Terms -->
@@ -248,7 +229,6 @@
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">Bidalketako gertaera</message>
-	<message key="submission.event.general.articleSubmitted">Artikulua bidali</message>
 	<message key="submission.event.general.issueScheduled">Artikulua argitaratzera bidali</message>
 	<message key="submission.event.general.issueAssigned">Artikulua zenbaki batera esleitu</message>
 	<message key="submission.event.general.articlePublished">Artikulua argitaratu</message>
@@ -652,16 +632,11 @@ da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen eraba
 	<message key="submission.comments.saveAndEmailEditor">Gorde eta bidali mezua Editoreari</message>
 	
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Ez zara erabiltzailea? Erregistratu gune honetan</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Segurtasunagatik, lehengo pasahitza gogorarazi beharrean, mezu elektronikoan bidaltzen zaie pasahitz berria erabiltzaile erregistratuei.<br /><br />Idatzi zure helbide elektronikoa behean, pasahitz berria jasotzeko. Berrespen bat bidaliko da helbide elektroniko horretara.]]></message>
 	
 	<!-- Profile -->
 	<!-- Registration -->
-	<message key="user.register.selectJournal">Hautatu zein aldizkaritan erregistratu nahi duzun</message>
 	<message key="user.register.noJournals">Gune honetan ez dago zu erregistratzeko moduko aldizkaririk.</message>
 	<message key="user.register.privacyStatement">Pribatutasun-deklarazioa</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[Aldizkari honetan edo gune honetako beste aldizkariren baten erregistratuta bazaude, <a href="{$registerUrl}">egin klik hemen</a>.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[Aldizkari honetan edo gune honetako beste aldizkariren baten erregistratuta <strong>ez</strong> bazaude, <a href="{$registerUrl}">egin klik hemen</a>.]]></message>
 	<message key="user.register.loginToRegister">Aldizkari honetan erregistratzeko, sartu zure oraingo erabiltzaile-izena eta pasahitza.</message>
 	<message key="user.register.registrationDisabled">Aldizkari honek ez du erabiltzaile berriak erregistratzeko aukerarik ematen orain.</message>
 	<message key="user.register.form.passwordLengthTooShort">Sartu duzun pasahitza laburregia da.</message>
@@ -718,21 +693,14 @@ da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen eraba
 	
 	<!-- About The Journal -->
 	<message key="about.statistics">Estatistikak</message>
-	<message key="about.journalContact">Aldizkariko kontaktua</message>
-	<message key="about.aboutTheJournal">Aldizkariari buruz</message>
 	<message key="about.editorialTeam">Talde editoriala</message>
 	<message key="about.editorialTeam.biography">Biografia</message>
 	<message key="about.editorialPolicies">Politika editoriala</message>
 	<message key="about.focusAndScope">Orientazioa eta esparrua</message>
 	<message key="about.sectionPolicies">Atalen politika</message>
 	<message key="about.submissions">Bidalketak</message>
-	<message key="about.sponsors">Babesleak</message>
-	<message key="about.contributors">Sostengatzaileak</message>
 	<message key="about.onlineSubmissions">Lineako bidalketak</message>
-	<message key="about.onlineSubmissions.haveAccount">Badaukazu  {$journalTitle} aldizkarian sartzeko izen eta pasahitzik?</message>
 	<message key="about.onlineSubmissions.login">Joan saioa hastera</message>
-	<message key="about.onlineSubmissions.needAccount">Erabiltzaile-izena eta Pasahitza behar dituzu?</message>
-	<message key="about.onlineSubmissions.registration">Joan erregistratzera</message>
 	<message key="about.onlineSubmissions.registrationRequired">Lanak linean bidaltzeko eta bidalitako lanen egoera ikusteko, erregistratuta egon behar da eta saioa hasi behar da.</message>
 	<message key="about.authorGuidelines">Egileentzako gidalerroak</message>
 	<message key="about.submissionPreparationChecklist">Bidalketa prestatzeko zerrenda</message>
@@ -753,7 +721,6 @@ da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen eraba
 	<message key="about.subscriptionsContact">Harpidetzen kontaktua</message>
 	<message key="about.availableSubscriptionTypes">Harpidetza motak</message>
 	<message key="about.memberships">Kidetzak</message>
-	<message key="about.journalSponsorship">Aldizkariaren babesleak</message>
 	<message key="about.aboutThisPublishingSystem">Argitalpen-sistema honi buruz</message>
 	<message key="about.aboutThisPublishingSystem.altText">OJSren 
 Prozesu editoriala eta argitaratze-prozesua</message>
@@ -924,7 +891,6 @@ artikulua ebaluatzeko {$round}. bueltan.</message>
 	<message key="log.editor.archived">{$articleId} artikulua artxibatu da.</message>
 	<message key="log.editor.restored">{$articleId} artikulua ilarara itzuli da.</message>
 	<message key="log.editor.editorAssigned">{$editorName} editoreari esleitu zaio {$articleId} artikulua.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} editoreak bizkortu egin du {$articleId} artikuluaren edizio-prozesua.</message>
 
 	<message key="log.proofread.assign">{$assignerName} editoreak {$proofreaderName} izendatu du {$articleId} 
 artikuluaren probak zuzentzeko.</message>
@@ -988,7 +954,6 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">{$filename} moneta-zerrenda XMLtik kargatu da</message>
-	<message key="debug.notes.helpMappingLoad">Laguntza mapatzeko {$filename} XML fitxategia birkargatu da {$id} bilatzean.</message>
 
 	<!--
 	 *
@@ -1022,9 +987,6 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	<message key="subscriptionManager.individualSubscriptions">Harpidetza indibidualak</message>
 	<message key="subscriptionManager.institutionalSubscriptions">Harpidetza instituzionalak</message>
 	<message key="subscriptionManager.subscriptionTypes">Harpidetza motak</message>
-	<message key="plugins.categories.oaiMetadataFormats">OAI Metadatuen Formatuen Pluginak</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Formatuen plugin horiek metadatuak adierazten dituzte OAI komunikazioetan.</message>
-	<message key="manager.setup.citations">Gaitu Aipuak Markatzeko Laguntzailea</message>
 	<message key="reviewer.article.reviewGuidelinesDescription">Ebaluatzaileen Gidalerroak hainbat irizpide eskainiko dizkie ebaluatzaileei, aldizkarian argitaratzeko aurkezpenak duen egokitasunari buruz erabakiak hartzeko, eta zenbait jarraibide berezi izan dituzte ebaluazio eraginkorra eta lagungarria prestatzeko. Ebaluazioa egiteko, ebaluatzaileei bi testu-koadro irekitzen zaizkie: lehenengoa “Egilearentzat eta editorearentzat”; eta, bigarrena, “Editorearentzat”. Osterantzean, aldizkariaren kudeatzaileak adituen ebaluazio-inprimaki bat sor dezake, “Ebaluazio Inprimakiak” atalean. Nolanahi ere, editoreek aukera izango dute ebaluazioak sartzeko egileekin bat datozenean.</message>
 	<message key="user.register.reviewerInterests">Identifikatu interesak ebaluatzen (arlo eta ikerketa-metodo garrantzitsuak):</message>
 	<message key="user.subscriptions.mySubscriptions">Nire harpidetzak</message>
@@ -1065,8 +1027,6 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	<message key="user.subscriptions.form.ipRangeValid">Mesedez, sartu baliozko IP barruti bat.</message>
 	<message key="user.subscriptions.form.deleteIpRange">Ezabatu</message>
 	<message key="user.subscriptions.form.addIpRange">Gehitu</message>
-	<message key="article.pdf.download">Deskargatu PDF fitxategi hau.</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p> Hautatu duzun PDF fitxategia hemen kargatu beharko litzateke, zure web arakatzaileak PDF formatua duten testuak irakurtzeko plugina instalatuta badu (adibidez, <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader </a>irakurlearen bertsio berri bat).</p> <p>Osterantzean, PDF artxiboa zuzenean deskargatu dezakezu zure ordenagailura, eta bertan PDF irakurle bat erabiliz ireki dezakezu. PDFa deskargatzeko, egin klik beheko “Deskargatu” estekan. </p> <p>PDFak inprimatzeari, godetzeari eta horiekin lan egiteari buruzko informazio gehiago nahi baduzu, Highwire Press-ek PDFei buruz <a href="http://highwire.stanford.edu/help/pdf-faq.dtl"> maiz egiten diren galdera (FAQ) lagungarriak eskaintzen ditu </a>.</p>]]></message>
 	<message key="about.history">Aldizkariaren historia</message>
 	<message key="about.subscriptions.individual">Harpidetza indibidualak</message>
 	<message key="about.subscriptions.institutional">Harpidetza instituzionalak</message>
@@ -1081,28 +1041,20 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	<message key="notification.mailListDescription">Sartu zure helbide eletkronikoa aldizkariari gehitu zaizkion eduki berri garrantzitsuen jakinarazpenak berehala jasotzeko.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Orri honek aldizkariarekin lotutako eguneraketa garrantzitsuak erakusten ditu, hala nola gai edo anuntzio berriak. Jakinarazpen horietan izen-eman dezakezu, bai RSS jarioekin (eskuineko irudietan klik eginez), bai <a href="{$emailUrl}">posta elektronikoz. </a>]]></message>
 	<message key="notification.type.articleSubmitted">Artikulu berri bat, "{$param}", aurkeztu da.</message>
-	<message key="notification.type.copyeditComment">Zuzentzaile batek iruzkin bat utzi du "{$param}" artikuluan.</message>
 	<message key="notification.type.editing">Gertaerak editatzen</message>
 	<message key="notification.type.editorDecisionComment">Editoreak erabakitzeko iruzkin bat utzi da "{$param}" artikuluan.</message>
 	<message key="notification.type.galleyModified">Galerada bat aldatu da "{$param}" artikuluan.</message>
 	<message key="notification.type.issuePublished">Gai bat argitaratu da.</message>
-	<message key="notification.type.layoutComment">Iruzkin bat utzi da "{$param}" artikuluaren diseinuari buruz.</message>
-	<message key="notification.type.metadataModified">"{$param}" artikuluaren metadatuak aldatu dira.</message>
 	<message key="notification.type.newAnnouncement">Jakinarazpen berria sortu da.</message>
-	<message key="notification.type.proofreadComment">Proba-zuzentzaileak iruzkin bat utzi du "{$param}" artikuluan.</message>
-	<message key="notification.type.reviewerComment">Ebaluatzaile batek "{$param}" artikuluari buruzko iruzkina egin du.</message>
 	<message key="notification.type.reviewerFormComment">Ebaluazio-inprimaki baten ebaluazioa bidali da "{$param}" artikuluarentzat.</message>
 	<message key="notification.type.reviewing">Gertaerak ebaluatzen</message>
 	<message key="notification.type.site">Guneko gertaerak</message>
 	<message key="notification.type.submissionComment">Editore batek iruzkin bat egin du "{$param}" artikuluari buruz.</message>
 	<message key="notification.type.submissions">Aurkezpenen gertaerak</message>
-	<message key="notification.type.suppFileModified">"{$param}'s" artikuluaren fitxategi osagarriak aldatu dira.</message>
 	<message key="notification.type.userComment">Irakurle batek iruzkin bat egin du  "{$param}" artikuluari buruz.</message>
 	<message key="user.authorization.copyeditorAssignmentMissing">Sarbidea ukatuta! Ez zaizu esleitu artikulu honen zuzenketa egitea.</message>
-	<message key="user.authorization.noJournal">Ez dago aldizkaririk testuinguruan!</message>
 	<message key="user.authorization.sectionAssignment">Zure atalekoa ez den artikulu batean sartu nahi duzu.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Zuzentzailearen aurkezpena ez da baliozkoa edo ez da kontsultatu zuzentzailearen aurkezpenik!</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">Ataleko editorearen aurkezpena ez da baliozkoa edo ez da kontsultatu Ataleko editorearen aurkezpenik!</message>
 	<message key="gifts.recipientDescription">Norentzat da opari hau?</message>
 	<message key="gifts.thankYou">Mila esker</message>
 	<message key="gifts.details">Opariaren xehetasunak</message>
@@ -1115,9 +1067,6 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	<message key="issue.fullIssue">Edizio osoa</message>
 	<message key="issue.nonpdf.title">Edizioa jaistea</message>
 	<message key="issue.viewIssue">Ikus edizioa</message>
-	<message key="issue.viewIssueDescription">Ikus edo kargatu edizio osoa</message>
-	<message key="plugins.categories.pubIds">Identifikatzaile publikoaren pluginak</message>
-	<message key="plugins.categories.pubIds.description">Plugin hauek laguntza inplementatzen dute identifikatzaile publiko batentzat</message>
 	<message key="site.noJournals">Ez dago aldizkaririk eskuragarri.</message>
 	<message key="gifts.buyer">Nondik</message>
 	<message key="gifts.buyerDescription">Norentzat da opari hau?</message>

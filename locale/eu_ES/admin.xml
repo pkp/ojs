@@ -20,7 +20,6 @@
 	<message key="admin.languages.primaryLocaleInstructions">Hau izango da gunearen eta bertan ostatatutako aldizkarien hizkuntza lehenetsia.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Hautatu gunean onartu nahi dituzun hizkuntza-pakete guztiak. Hautatutako hizkuntza-paketeak erabilgarri egongo dira gunean ostatatutako aldizkari guztietan erabiltzeko eta guneko orri guztietan azalduko dira, hizkuntza aukeratzeko menuan (nahi izanez gero, orri batzuetatik ken daiteke). Hizkuntza bakarra hautatzen bada, hizkuntza aldatzeko menua ez da azalduko eta hizkuntza-ezarpen hedatuak ere ez dira erabilgarri egongo aldizkarietan.</message>
 	<message key="admin.languages.confirmUninstall">Ziur zaude hizkuntza hau desinstalatu nahi duzula? Eragina izango du hizkuntza hau erabiltzen duten aldizkari ostatatu guztietan.</message>
-	<message key="admin.languages.downloadLocales">Deskargatu hizkuntzak</message>
 	<message key="admin.languages.downloadFailed">Hizkuntza deskargatzeak huts egin du. Beheko errore-mezuan azaltzen da hutsegitea.</message>
 	<message key="admin.languages.localeInstalled">"{$locale}" hizkuntza instalatu da. </message>
 	<message key="admin.languages.download">Deskargatu hizkuntza-paketea</message>
@@ -38,7 +37,6 @@
 	<message key="admin.contexts.confirmDelete">Ziur zaude betiko ezabatu nahi dituzula aldizkari hau eta bere eduki osoa?</message>
 	<message key="admin.contexts.create">Sortu aldizkaria</message>
 	<message key="admin.journals.urlWillBe">Aldizkariaren URLa {$sampleUrl} izango da.</message>
-	<message key="admin.journals.form.titleRequired">Titulu bat eman behar da.</message>
 	<message key="admin.contexts.form.pathRequired">Bidea zehaztu behar da.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Bide-izenean alfazenbakizko karaktereak, azpimarra eta marratxoak bakarrik onartzen dira, eta lehen karakterea eta azkena alfazenbakizkoak izan behar dira.</message>
 	<message key="admin.contexts.form.pathExists">Hautatutako bidea beste aldizkari batek erabiltzen du.</message>
@@ -61,7 +59,6 @@
 	<message key="admin.languages.installNewLocalesInstructions">Hauta itzazu locale osagarriak sistema horretarako laguntzailea instalatzeko. Localeak aldizkari ostalariak erabili baino lehen instalatu behar dira. Ikusi OJS-ren dokumentazioa hizkuntza berrientzako laguntzaileak gehitzeari buruzko informazioa eskuratzeko.</message>
 	<message key="admin.journals.createInstructions">Aldizkari honen kudeatzaile gisa emango duzu izena automatikoki. Aldizkari berria sortu ondoren, bertara kudeatzaile gisa sartu haren ezarpenarekin eta erabiltzailearen izen-ematearekin jarraitzeko.</message>
 	<message key="admin.settings.options">Aukerak</message>
-	<message key="admin.settings.useAlphalist">Aldizkari bat baino gehiago duten webguneetan, erakutsi hasierako orrian zerrenda alfabetiko bat, aldizkarien artean nabigazio alfabetiko bizkorra egiteko.</message>
 	<message key="admin.settings.usePaging">Aldizkari ugari dituzten webguneetan, banatu aldizkarien zerrenda hainbat orritan.</message>
 	<message key="admin.settings.journalsList">Aldizkariaren elementuak</message>
 	<message key="admin.settings.journalsList.description">Mesedez, aukeratu webgunean aldizkari bakoitzak bistaratuko dituen aldizkariaren elementuak.</message>

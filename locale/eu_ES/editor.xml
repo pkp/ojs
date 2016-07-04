@@ -13,10 +13,6 @@
   -->
 
 <locale name="eu_ES" full_name="Euskara">
-	<message key="editor.article.reviewForms">Ebaluazio-inprimakiak</message>
-	<message key="editor.article.selectReviewForm">Hautatu ebaluazio-inprimakia</message>
-	<message key="editor.article.clearReviewForm">Garbitu ebaluazio-Inprimakia</message>
-	<message key="editor.article.confirmChangeReviewForm">Kontuz: Ebaluazio-inprimakia aldatzen baduzu, eragina izango du ebaluatzaileek inprimaki honen bidez eman dituzten erantzunetan. Ziur zaude jarraitu nahi duzula?</message>
 	<message key="editor.home">Editorearen hasierako orria</message>
 	<message key="editor.submissionsAndPublishing">Bidalketak eta argitalpena</message>
 	<message key="editor.submissionQueue">Bidalketen ilara</message>
@@ -93,9 +89,7 @@
 	<message key="editor.issues.noLiveIssues">Ez dago hasitako zenbakirik</message>
 	<message key="editor.issues.open">Irekia</message>
 	<message key="editor.issues.pages">Orrialdeak</message>
-	<message key="editor.navigation.issues">Zenbakiak</message>
 	<message key="editor.navigation.futureIssues">Etorkizuneko zenbakiak</message>
-	<message key="editor.navigation.createIssue">Sortu zenbakia</message>
 	<message key="editor.navigation.issueArchive">Aurreko zenbakiak</message>
 	<message key="editor.article.designateReviewVersion">Izendatu jatorrizko fitxategia Ebaluazio-bertsio gisa</message>
 	<message key="editor.article.uploadReviewVersion">Kargatu berrikusitako Ebaluazio-bertsio bat</message>
