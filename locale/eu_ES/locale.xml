@@ -467,7 +467,7 @@ Aktibo: une honetan kontsideratzen edo egiten ari diren ebaluazioen kopurua.]]><
 	<message key="sectionEditor.proofreader.confirmRenotify">Proba-zuzentzaile honi berriz jakinarazteak esleipena berrabiaraziko du. Ziur zaude hori egin nahi duzula?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Desenkusa</message>
-	<message key="sectionEditor.regrets.title">{$articleId} Ebaluatzailearen desenkusak, ezerezteak eta aurreko bueltak</message>
+	<message key="sectionEditor.regrets.title">{$submissionId} Ebaluatzailearen desenkusak, ezerezteak eta aurreko bueltak</message>
 	<message key="sectionEditor.regrets">Desenkusa</message>
 	<message key="sectionEditor.regrets.link">Ikusi Desenkusak, Ezerezteak, Aurreko bueltak</message>
 	<message key="sectionEditor.regrets.reviewRound">Adituen ebaluazioa, {$round}. buelta.</message>
@@ -850,53 +850,53 @@ Zure zerbitzariak mbstring hau onartzen du: <strong>{$supportsMBString}</strong>
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} egileak bidalketa berri bat sartu du. ID: {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} egileak {$articleId} artikulua berrikusi du. Fitxategi ID berria {$fileId} da.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} izendatu da {$articleId} 
+	<message key="log.author.documentRevised">{$authorName} egileak {$submissionId} artikulua berrikusi du. Fitxategi ID berria {$fileId} da.</message>
+	<message key="log.review.reviewerAssigned">{$reviewerName} izendatu da {$submissionId} 
 artikulua ebaluatzeko {$round}. bueltan.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} ebaluatzaileari {$articleId} artikulua ebaluatzeko esleipena kendu zaio {$round}. bueltan.</message>
-	<message key="log.review.reviewInitiated">{$reviewerName} {$articleId} artikula {$round}. bueltan ebaluatzen hasi da.</message>
-	<message key="log.review.reviewReinitiated">{$reviewerName} berriro hasi da {$articleId} artikulua {$round}. bueltan ebaluatzen.</message>
-	<message key="log.review.reviewCancelled">{$reviewerName} ebaluatzailearen {$articleId} artikuluaren 
+	<message key="log.review.reviewerUnassigned">{$reviewerName} ebaluatzaileari {$submissionId} artikulua ebaluatzeko esleipena kendu zaio {$round}. bueltan.</message>
+	<message key="log.review.reviewInitiated">{$reviewerName} {$submissionId} artikula {$round}. bueltan ebaluatzen hasi da.</message>
+	<message key="log.review.reviewReinitiated">{$reviewerName} berriro hasi da {$submissionId} artikulua {$round}. bueltan ebaluatzen.</message>
+	<message key="log.review.reviewCancelled">{$reviewerName} ebaluatzailearen {$submissionId} artikuluaren 
 {$round}. ebaluazio-buelta bertan behera utzi da.</message>
-	<message key="log.review.reviewCleared">{$reviewerName} ebaluatzailearen {$articleId} artikuluaren {$round}. ebaluazio-buelta ezabatu egin da.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} {$articleId} artikuluaren {$round}. ebaluazio-bueltarako baloratu da.</message>
-	<message key="log.review.reviewDueDateSet">{$reviewerName} ebaluatzailearen {$articleId} artikuluaren {$round}. ebaluazio-bueltaren mugaeguna {$dueDate} izango da.</message>
-	<message key="log.review.reviewRecommendationSet">{$reviewerName} ebaluatzailearen {$articleId} artikuluaren {$round}. ebaluazio-bueltako gomendioa ezarri da.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">{$articleId} artikuluaren {$round}. ebaluazio-bueltako gomendioa {$editorName} editoreak ezarri du, {$reviewerName} ebaluatzailearen izenean.</message>
-	<message key="log.review.resubmit">{$articleId} artikulua berriro bidali da ebaluatzeko.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} ebaluatzaileak ez du onartu {$articleId} artikuluaren {$round}. ebaluazio-buelta egitea.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} ebaluatzaileak {$articleId} artikuluaren {$round}. ebaluazio-buelta egitea onartu du.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$reviewerName} ebaluatzailearen izenean, {$userName}(e)k ez du onartu {$articleId} artikuluaren {$round}. ebaluazio-buelta egitea.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$reviewerName} ebaluatzailearen izenean, {$userName}(e)k {$articleId} artikuluaren {$round}. ebaluazio-buelta egitea onartu du.</message>
-	<message key="log.review.reviewFileByProxy">{$userName} editoreak {$articleId} artikuluaren {$round}. bueltako ebaluazio-fitxategia kargatu du, {$reviewerName} ebaluatzailearen izenean.</message>
+	<message key="log.review.reviewCleared">{$reviewerName} ebaluatzailearen {$submissionId} artikuluaren {$round}. ebaluazio-buelta ezabatu egin da.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} {$submissionId} artikuluaren {$round}. ebaluazio-bueltarako baloratu da.</message>
+	<message key="log.review.reviewDueDateSet">{$reviewerName} ebaluatzailearen {$submissionId} artikuluaren {$round}. ebaluazio-bueltaren mugaeguna {$dueDate} izango da.</message>
+	<message key="log.review.reviewRecommendationSet">{$reviewerName} ebaluatzailearen {$submissionId} artikuluaren {$round}. ebaluazio-bueltako gomendioa ezarri da.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">{$submissionId} artikuluaren {$round}. ebaluazio-bueltako gomendioa {$editorName} editoreak ezarri du, {$reviewerName} ebaluatzailearen izenean.</message>
+	<message key="log.review.resubmit">{$submissionId} artikulua berriro bidali da ebaluatzeko.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} ebaluatzaileak ez du onartu {$submissionId} artikuluaren {$round}. ebaluazio-buelta egitea.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} ebaluatzaileak {$submissionId} artikuluaren {$round}. ebaluazio-buelta egitea onartu du.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$reviewerName} ebaluatzailearen izenean, {$userName}(e)k ez du onartu {$submissionId} artikuluaren {$round}. ebaluazio-buelta egitea.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$reviewerName} ebaluatzailearen izenean, {$userName}(e)k {$submissionId} artikuluaren {$round}. ebaluazio-buelta egitea onartu du.</message>
+	<message key="log.review.reviewFileByProxy">{$userName} editoreak {$submissionId} artikuluaren {$round}. bueltako ebaluazio-fitxategia kargatu du, {$reviewerName} ebaluatzailearen izenean.</message>
 	<message key="log.review.reviewerFile">Ebaluazio-fitxategi bat kargatu da.</message>
-	<message key="log.editor.decision">{$editorName} editoreak {$articleId} artikuluari buruzko erabakia ({$decision}) grabatu du.</message>
+	<message key="log.editor.decision">{$editorName} editoreak {$submissionId} artikuluari buruzko erabakia ({$decision}) grabatu du.</message>
 
 
-	<message key="log.copyedit.initiate">{$copyeditorName} hasi da {$articleId} artikulua zuzentzen.</message>
+	<message key="log.copyedit.initiate">{$copyeditorName} hasi da {$submissionId} artikulua zuzentzen.</message>
 	<message key="log.copyedit.copyeditFileSet">Zuzenketa-fitxategi lehenetsia aukeratu da.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} zuzentzaileak amaitu du {$articleId} artikuluaren lehenengo zuzenketa.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} zuzentzaileak amaitu du {$articleId} artikuluaren azken zuzenketa.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} zuzentzaileari esleitu zaio {$articleId} artikuluaren zuzenketa.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} zuzentzaileak amaitu du {$submissionId} artikuluaren lehenengo zuzenketa.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} zuzentzaileak amaitu du {$submissionId} artikuluaren azken zuzenketa.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} zuzentzaileari esleitu zaio {$submissionId} artikuluaren zuzenketa.</message>
 
 	<message key="log.copyedit.copyeditorFile">Bidalketa-fitxategiaren zuzenketa-bertsio bat kargatu da.</message>
 	<message key="log.copyedit.authorFile">Egileak zuzendutako bidalketa-fitxategiaren bertsio bat kargatu da.</message>
 
-	<message key="log.layout.layoutEditorAssigned">{$editorName} maketatzaileari esleitu zaio {$articleId} artikuluaren maketazioa.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} maketatzaileari kendu egin zaio {$articleId} artikuluaren maketazioa egiteko esleipena.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} maketatzaileak bukatu du {$articleId} artikuluaren maketazioa.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} maketatzaileari esleitu zaio {$submissionId} artikuluaren maketazioa.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} maketatzaileari kendu egin zaio {$submissionId} artikuluaren maketazioa egiteko esleipena.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} maketatzaileak bukatu du {$submissionId} artikuluaren maketazioa.</message>
 
 	<message key="log.editor.metadataModified">{$editorName} editoreak artikulu honen metadatuak aldatu ditu.</message>
 	<message key="log.editor.editorFile">Bidalketa-fitxategiaren edizio-bertsio bat kargatu da.</message>
-	<message key="log.editor.archived">{$articleId} artikulua artxibatu da.</message>
-	<message key="log.editor.restored">{$articleId} artikulua ilarara itzuli da.</message>
-	<message key="log.editor.editorAssigned">{$editorName} editoreari esleitu zaio {$articleId} artikulua.</message>
+	<message key="log.editor.archived">{$submissionId} artikulua artxibatu da.</message>
+	<message key="log.editor.restored">{$submissionId} artikulua ilarara itzuli da.</message>
+	<message key="log.editor.editorAssigned">{$editorName} editoreari esleitu zaio {$submissionId} artikulua.</message>
 
-	<message key="log.proofread.assign">{$assignerName} editoreak {$proofreaderName} izendatu du {$articleId} 
+	<message key="log.proofread.assign">{$assignerName} editoreak {$proofreaderName} izendatu du {$submissionId} 
 artikuluaren probak zuzentzeko.</message>
-	<message key="log.proofread.complete">{$proofreaderName} proba-zuzentzaileak programatzeko bidali du {$articleId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} proba-zuzentzaileak programatzeko bidali du {$submissionId}.</message>
 
-	<message key="log.imported">{$userName} erabiltzaileak {$articleId} artikulua inportatu du.</message>
+	<message key="log.imported">{$userName} erabiltzaileak {$submissionId} artikulua inportatu du.</message>
 
 	<!-- Reading Tools entries -->
 
