@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/sk_SK/author.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2000-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sk_SK (Slovenčina) locale.
+  *
+  -->
+
+<locale name="sk_SK" full_name="Slovenčina">
+	<message key="author.submit">Nový príspevok</message>
+</locale>
