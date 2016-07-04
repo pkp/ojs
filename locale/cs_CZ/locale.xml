@@ -509,7 +509,7 @@ Aktivní udává kolik recenzí je právě zvažováno nebo zpracováváno.]]></
 	<message key="sectionEditor.proofreader.confirmRenotify">Opětovným informováním tohoto korektora znovu zahájíte jeho úkoly. Určitě si přejete to udělat?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Odmítnutí</message>
-	<message key="sectionEditor.regrets.title"><![CDATA[#{$articleId} Odmítnutí recenzenty, zrušení & předchozí kola]]></message>
+	<message key="sectionEditor.regrets.title"><![CDATA[#{$submissionId} Odmítnutí recenzenty, zrušení & předchozí kola]]></message>
 	<message key="sectionEditor.regrets">Odmítnutí</message>
 	<message key="sectionEditor.regrets.link">Zobrazit odmítnutí, zrušení, předchozí kola</message>
 	<message key="sectionEditor.regrets.reviewRound">Recenze, kolo {$round}</message>
@@ -985,48 +985,48 @@ Váš server aktuálně podporuje mbstring: <strong>{$supportsMBString}</strong>
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} vložil nový příspěvek, ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} pozměnil článek {$articleId}. Nové ID souboru je {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} byl odebrán z recenzování příspěvku {$articleId} v recenzním kole {$round}.</message>
-	<message key="log.review.reviewInitiated">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$articleId} bylo zahájeno.</message>
-	<message key="log.review.reviewReinitiated">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$articleId} bylo znovu zahájeno.</message>
-	<message key="log.review.reviewCancelled">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$articleId} bylo zrušeno.</message>
-	<message key="log.review.reviewCleared">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$articleId} bylo vyčíštěno.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} byl ohodnocen pro recenzní kolo {$round} příspěvku {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">Termín splnění recenzního kola {$round} příspěvku {$articleId} recenzenta {$reviewerName} byl nastaven na {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">Doporučení pro recenzní kolo {$round} příspěvku {$articleId} od recenzenta {$reviewerName} bylo stanoveno.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">Doporučení pro recenzní kolo {$round} příspěvku {$articleId} bylo stanoveno editorem, {$editorName}, v zastoupení recenzenta {$reviewerName}.</message>
-	<message key="log.review.resubmit">Příspěvek {$articleId} byl znovu odeslán k recenzi.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} odmítl recenzní kolo {$round} pro příspěvek {$articleId}.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} přijal recenzní kolo {$round} pro příspěvek {$articleId}.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} odmítl recenzní kolo {$round} pro příspěvek {$articleId} v zastoupení recenzenta {$reviewerName}.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} přijal recenzní kolo {$round} pro příspěvek {$articleId} v zastoupení recenzenta {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">Editor, {$userName}, nahrál soubor s recenzí pro kolo {$round} příspěvku {$articleId} v zastoupení recenzenta {$reviewerName}.</message>
+	<message key="log.author.documentRevised">{$authorName} pozměnil článek {$submissionId}. Nové ID souboru je {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} byl odebrán z recenzování příspěvku {$submissionId} v recenzním kole {$round}.</message>
+	<message key="log.review.reviewInitiated">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$submissionId} bylo zahájeno.</message>
+	<message key="log.review.reviewReinitiated">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$submissionId} bylo znovu zahájeno.</message>
+	<message key="log.review.reviewCancelled">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$submissionId} bylo zrušeno.</message>
+	<message key="log.review.reviewCleared">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$submissionId} bylo vyčíštěno.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} byl ohodnocen pro recenzní kolo {$round} příspěvku {$submissionId}.</message>
+	<message key="log.review.reviewDueDateSet">Termín splnění recenzního kola {$round} příspěvku {$submissionId} recenzenta {$reviewerName} byl nastaven na {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">Doporučení pro recenzní kolo {$round} příspěvku {$submissionId} od recenzenta {$reviewerName} bylo stanoveno.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">Doporučení pro recenzní kolo {$round} příspěvku {$submissionId} bylo stanoveno editorem, {$editorName}, v zastoupení recenzenta {$reviewerName}.</message>
+	<message key="log.review.resubmit">Příspěvek {$submissionId} byl znovu odeslán k recenzi.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} odmítl recenzní kolo {$round} pro příspěvek {$submissionId}.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} přijal recenzní kolo {$round} pro příspěvek {$submissionId}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} odmítl recenzní kolo {$round} pro příspěvek {$submissionId} v zastoupení recenzenta {$reviewerName}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} přijal recenzní kolo {$round} pro příspěvek {$submissionId} v zastoupení recenzenta {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">Editor, {$userName}, nahrál soubor s recenzí pro kolo {$round} příspěvku {$submissionId} v zastoupení recenzenta {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Soubor recenzenta byl nahrán.</message>
-	<message key="log.editor.decision">Rozhodnutí editora ({$decision}) pro článek {$articleId} zaznamenal {$editorName}.</message>
+	<message key="log.editor.decision">Rozhodnutí editora ({$decision}) pro článek {$submissionId} zaznamenal {$editorName}.</message>
 
 
-	<message key="log.copyedit.initiate">Redigování příspěvku {$articleId} zahájil {$copyeditorName}.</message>
+	<message key="log.copyedit.initiate">Redigování příspěvku {$submissionId} zahájil {$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">Byl vybrán výchozí soubor pro redigování.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} dokončil úvodní redigování příspěvku {$articleId}.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} dokončil závěrečné redigování příspěvku {$articleId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} byl přidělen pro redigování příspěvku {$articleId}.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} dokončil úvodní redigování příspěvku {$submissionId}.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} dokončil závěrečné redigování příspěvku {$submissionId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} byl přidělen pro redigování příspěvku {$submissionId}.</message>
 	<message key="log.copyedit.copyeditorFile">Redaktorova verze souboru s příspěvkem byla nahrána.</message>
 	<message key="log.copyedit.authorFile">Byla nahrána autorem redigovaná verze souboru s příspěvkem.</message>
 
-	<message key="log.layout.layoutEditorAssigned">{$editorName} byl přidělen jako typograf pro příspěvek {$articleId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} byl odebrán z pozice typografa pro příspěvek {$articleId}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} dokončil typografické úpravy příspěvku {$articleId}.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} byl přidělen jako typograf pro příspěvek {$submissionId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} byl odebrán z pozice typografa pro příspěvek {$submissionId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} dokončil typografické úpravy příspěvku {$submissionId}.</message>
 
 	<message key="log.editor.metadataModified">Metadata tohoto článku pozměnil {$editorName}.</message>
 	<message key="log.editor.editorFile">Editorova verze souboru s příspěvkem byla nahrána.</message>
-	<message key="log.editor.archived">Příspěvek {$articleId} byl archivován.</message>
-	<message key="log.editor.restored">Příspěvek {$articleId} byl obnoven do fronty.</message>
-	<message key="log.editor.editorAssigned">{$editorName} byl přidělen jako editor příspěvku {$articleId}.</message>
+	<message key="log.editor.archived">Příspěvek {$submissionId} byl archivován.</message>
+	<message key="log.editor.restored">Příspěvek {$submissionId} byl obnoven do fronty.</message>
+	<message key="log.editor.editorAssigned">{$editorName} byl přidělen jako editor příspěvku {$submissionId}.</message>
 
-	<message key="log.proofread.assign">{$assignerName} přidělil {$proofreaderName} pro zpracování korektur příspěvku {$articleId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} odeslal {$articleId} do plánování.</message>
+	<message key="log.proofread.assign">{$assignerName} přidělil {$proofreaderName} pro zpracování korektur příspěvku {$submissionId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} odeslal {$submissionId} do plánování.</message>
 
-	<message key="log.imported">{$userName} importoval článek {$articleId}.</message>
+	<message key="log.imported">{$userName} importoval článek {$submissionId}.</message>
 
 	<!-- Reading Tools entries -->
 
