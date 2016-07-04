@@ -18,7 +18,6 @@
 		$(e.currentTarget).attr('aria-expanded', false);
 	});
 
-
 	// Register click handlers for the search panel
 	var headerSearchPanelIsClosing = false,
 	    headerSearchForm = $('#headerNavigationContainer .pkp_search'),
@@ -97,6 +96,12 @@
 			headerSearchInput.val('');
 		},300)
 	}
+
+	// Modify the Chart.js display options used by UsageStats plugin
+	document.addEventListener('usageStatsChartOptions.pkp', function(e) {
+		e.chartOptions.elements.line.backgroundColor = 'rgba(0, 122, 178, 0.6)';
+		e.chartOptions.elements.rectangle.backgroundColor = 'rgba(0, 122, 178, 0.6)';
+	});
 
 	// Initialize tag-it components
 	//
