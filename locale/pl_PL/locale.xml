@@ -36,8 +36,6 @@
 
 
 	<!--  peer review -->
-	<message key="submission.reviewForm">Formularz recenzji</message>
-	<message key="submission.reviewFormResponse">Formularz recenzji</message>
 
 
 	<message key="reviewer.article.enterReviewForm">Kliknij aby wypełnić formularz recenzji.</message>	
@@ -56,7 +54,6 @@
 	<message key="common.confirmComplete">Czy na pewno chcesz oznaczyc zadania jako wykonane? Po oznaczeniu edycja nie będzie dostępna.</message>
 	<message key="common.payment">Płatność</message>
 	<message key="common.payments">Płatności</message>
-	<message key="common.pageHeader.altText">Nagłowek strony</message>
 	<message key="common.homePageHeader.altText">Nagłówek strony głównej</message>
 	<message key="common.journalHomepageImage.altText">Baner</message>
 
@@ -70,7 +67,6 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Pomoc</message>
-	<message key="navigation.archives">Archiwum</message>
 	<message key="navigation.current">Aktualny numer</message>
 	<message key="navigation.otherJournals">Inne czasopisma</message>
 	<message key="navigation.browseByIssue">wg numeru</message>
@@ -123,12 +119,8 @@
 	<message key="article.suppFiles">Pliki pomocnicze</message>
 	<message key="article.suppFilesAbbrev">Pliki pomocnicze</message>
 	<message key="article.discipline">Dyscypliny i subdyscypliny akademickie</message>
-	<message key="article.subjectClassification">Klasyfikacja przedmiotu</message>
 	<message key="article.subject">Słowa kluczowe</message>
 	<message key="article.coverage">Zasięg</message>
-	<message key="article.coverageGeo">Zasięg geograficzny</message>
-	<message key="article.coverageChron">Zasięg chronologiczny i historyczny</message>
-	<message key="article.coverageSample">Charakterystyka badawcza</message>
 	<message key="article.type">Metoda badawcza</message>
 	<message key="article.language">Język</message>
 	<message key="article.sectionEditor">Redaktor działu</message>
@@ -213,20 +205,9 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Administrator czasopisma</message>
-	<message key="user.role.editor">Redaktor czasopisma</message>
 	<message key="user.role.sectionEditor">Redaktor działu</message>
-	<message key="user.role.layoutEditor">Specjalista DTP</message>
-	<message key="user.role.copyeditor">Redaktor techniczny</message>
-	<message key="user.role.proofreader">Korektor</message>
-	<message key="user.role.author">Autor</message>
 	<message key="user.role.subscriptionManager">Administrator subskrypcji</message>
 	<message key="user.role.managers">Administratorzy czasopisma</message>
-	<message key="user.role.editors">Redaktorzy</message>
-	<message key="user.role.sectionEditors">Redaktorzy działu</message>
-	<message key="user.role.layoutEditors">Specjaliści DTP</message>
-	<message key="user.role.copyeditors">Redaktorzy techniczni</message>
-	<message key="user.role.proofreaders">Korektorzy</message>
-	<message key="user.role.authors">Autorzy</message>
 	<message key="user.role.subscriptionManagers">Administratorzy subskrypcji</message>
 	
 	<!-- Common Issue Terms -->
@@ -274,7 +255,6 @@
 	<message key="submission.event.logLevel.error">Błąd</message>
 	
 	<message key="submission.event.general.defaultEvent">Akcja</message>
-	<message key="submission.event.general.articleSubmitted">Artykuł przesłany</message>
 	<message key="submission.event.general.issueScheduled">Artykuł przesłany do kolejki</message>
 	<message key="submission.event.general.issueAssigned">Artykuły przypisany do wydania</message>
 	<message key="submission.event.general.articlePublished">Artykuł opublikowany</message>
@@ -361,7 +341,6 @@
 	<!-- Setup Step 2 -->
 
 
-	<message key="manager.setup.reviewProcessEmailDescription">Redaktor przesyła recenzentowi zaproszenie do wykonania recenzji wraz z  załączonym tekstem. W odpowiedzi, recenzent przesyła redaktorowi swoją recenzję oraz rekomendację.  Następnie redaktor wprowadza dane nadesłane przez recenzenta do systemu.</message>
 	
 	<!-- Setup Step 3 -->
 
@@ -598,16 +577,11 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="submission.comments.saveAndEmailEditor">Zapisz i wyślij e-mail do redaktora czasopisma</message>
 	
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Nie jesteś użytkownikiem? Zarejestruj się na stronie</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Ze względów bezpieczeństwa, system przesyła nowe hasło.<br /><br />Podaj swój adres e-mail aby otrzymać nowe hasło.]]></message>
 	
 	<!-- Registration -->
 	<message key="user.register.repeatPassword">Powtórz hasło</message>
-	<message key="user.register.selectJournal">Zaznacz czasopismo dla którego chcesz się zarejestrować</message>
 	<message key="user.register.noJournals">Brak czasopism.</message>
 	<message key="user.register.privacyStatement">Polityka prywatności</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Kliknij tutaj</a> jeżeli jesteś zarejestrowany w innym czasopiśmie.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Kliknij tutaj</a> jeżeli <strong>nie jesteś</strong> zarejestrowany w innym czasopiśmie na stronie.]]></message>
 	<message key="user.register.loginToRegister">Podaj swoją istniejącą nazwę użytkownika oraz hasło.</message>
 	<message key="user.register.registrationDisabled">To czasopismo aktualnie nie prowadzi rejestracji.</message>
 	<message key="user.register.form.passwordLengthTooShort">Hasło, które podałeś jest zbyt krótkie.</message>
@@ -639,8 +613,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.download">Pobierz plik PDF</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>PDF powinien wyświetlić się w przeglądarce, jeżeli posiadasz zainstalowaną wtyczkę Adobe Reader (najnowsza wersja dostępna jest na stronie <a href="https://get.adobe.com/reader/">adobe.com</a>).</p> <p>Możesz również pobrać plik na dysk i otworzyć go lokalnie. Aby pobrać plik PDF, kliknij w łącze widoczne poniżej.</p>]]></message>
 
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
@@ -666,8 +638,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	
 	<!-- About The Journal -->
 	<message key="about.statistics">Staystyki</message>
-	<message key="about.journalContact">Kontakt</message>
-	<message key="about.aboutTheJournal">O czasopiśmie</message>
 	<message key="about.history">Historia czasopisma</message>
 	<message key="about.editorialTeam">Zespół redakcyjny</message>
 	<message key="about.editorialTeam.biography">Biogram</message>
@@ -675,13 +645,8 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="about.focusAndScope">Cel i zakres tematyczny czasopisma</message>
 	<message key="about.sectionPolicies">Działy</message>
 	<message key="about.submissions">Przesyłanie tekstów</message>
-	<message key="about.sponsors">Sponsorzy</message>
-	<message key="about.contributors">Wydawca</message>
 	<message key="about.onlineSubmissions">Przesyłanie tekstów</message>
-	<message key="about.onlineSubmissions.haveAccount">Posiadasz nazwę użytkownika oraz hasło do zalogowania się na stronie czasopisma {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Przejdź do logowania</message>
-	<message key="about.onlineSubmissions.needAccount">Nie posiadasz nazwy użytkownika oraz hasła</message>
-	<message key="about.onlineSubmissions.registration">Przejdź do rejestracji</message>
 	<message key="about.onlineSubmissions.registrationRequired">Rejestracja oraz logowanie są niezbędne do wysyłania tekstów oraz sprawdzania ich aktualnego statusu.</message>
 	<message key="about.authorGuidelines">Wytyczne dla autorów</message>
 	<message key="about.submissionPreparationChecklist">Sprawdzenie tekstu przed wysłaniem</message>
@@ -708,7 +673,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="about.subscriptionTypes.cost">Koszt</message>
 	<message key="about.availableSubscriptionTypes">Rodzaje subskrypcji</message>
 	<message key="about.memberships">Członkowstwa</message>
-	<message key="about.journalSponsorship">Wydawca</message>
 	<message key="about.aboutThisPublishingSystem">O systemie</message>
 	<message key="about.aboutThisPublishingSystem.altText">Proces redakcyjny</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Strona zbudowana jest w oparciu o Open Journal Systems {$ojsVersion}, otwarty (open source) system zarządzania treścią dostarczany, rozwijany i dystrybuowany bezpłatnie przez <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> na licencji GNU GPL.]]></message>
@@ -734,7 +698,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} wysłał nowy tekst, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} dokonał edycji tekstu {$articleId}. Nowy identyfikator pliku to {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} został przydzielony do wykonania recenzji tekstu {$articleId} w etapie {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} nie recenzuje tekstu {$articleId} w etapie {$round}.</message>
 	<message key="log.review.reviewInitiated">Recenzja {$reviewerName} tekstu {$articleId} w etapie {$round} została rozpoczęta.</message>
 	<message key="log.review.reviewReinitiated">Recenzja {$reviewerName} tekstu {$articleId} w etapie {$round} została ponownie rozpoczęta.</message>
@@ -816,21 +779,15 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="notification.notificationsPublicDescription">Ta strona zawiera informacje o ważnych aktualizacjach treści czasopisma, takich jak nowe numery lub ogłoszenia. Możesz subskrybować powiadomienia za pomocą czytnika RSS (klikając w ikonę), lub <![CDATA[  <a href="{$emailUrl}">przez e-mail.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">Nowy artykuł, "{$param}", został wysłany.</message>
-	<message key="notification.type.copyeditComment">Redaktor techniczny napisał uwagi dla "{$param}".</message>
 	<message key="notification.type.editing">Edycja wydarzeń</message>
 	<message key="notification.type.editorDecisionComment">Dostępne są nowe uwagi do decyzji redaktora dla "{$param}".</message>
 	<message key="notification.type.galleyModified">Plik z publikacją dla "{$param}" został zmodyfikowany.</message>
 	<message key="notification.type.issuePublished">Nowy numer został opublikowany.</message>
-	<message key="notification.type.layoutComment">Dostępne są nowe uwagi dotyczące składu "{$param}."</message>
-	<message key="notification.type.metadataModified">Metadane dla "{$param}'s" zostały zmodyfikowane.</message>
 	<message key="notification.type.newAnnouncement">Nowe ogłoszenie zostało utworzone.</message>	
-	<message key="notification.type.proofreadComment">Dostępne są nowe uwagi korektora dla "{$param}".</message>
-	<message key="notification.type.reviewerComment">Dostępne są nowe uwagi recenzenta dla "{$param}".</message>
 	<message key="notification.type.reviewing">Wydarzenia dotyczące procesu recenzji</message>
 	<message key="notification.type.site">Wydarzenia dotyczące strony</message>
 	<message key="notification.type.submissionComment">Dostępne są nowe uwagi redaktora dla "{$param}".</message>
 	<message key="notification.type.submissions">Wydarzenia dotyczące wysłanych tekstów</message>
-	<message key="notification.type.suppFileModified">Dodatkowe pliki dla "{$param}" zostały zmodyfikowane.</message>
 	<message key="notification.type.userComment">Dostępne są nowe uwagi czytelnika dla "{$param}"</message>
 
 	<!--
@@ -840,10 +797,8 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	-->
 	<!-- Authorization -->
 	<message key="user.authorization.copyeditorAssignmentMissing">Dostęp zabroniony! Nie zostałeś przydzielony jako redaktor techniczny dla tego tekstu.</message>
-	<message key="user.authorization.noJournal">Nie przydzielono czasopisma!</message>
 	<message key="user.authorization.sectionAssignment">Próbujesz uzyskać dostęp do artykułu, który nie znajduje się w twoim dziale.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Niepoprawny tekst recenzenta technicznego lub błędne żądanie.</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">Niepoprawny tekst redaktora lub błędne żądanie.</message>
 	
 	<!-- Icons: Default "alt" text -->
 	

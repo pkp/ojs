@@ -20,11 +20,9 @@
 	<message key="admin.locale.maybeIncomplete">Zaznaczone języki mogą nie być przetłumaczone w pełni.</message>
 	<message key="admin.languages.confirmUninstall">Odinstalować język?.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Wybierz dodatkowe języki do zainstalowania w systemie.</message>
-	<message key="admin.languages.downloadLocales">Pobierz tłumaczenia</message>
 	<message key="admin.languages.downloadFailed">Pobieranie plików lokalizacyjnych nie udało się. Komunikat błędu znajduje się poniżej.</message>
 	<message key="admin.languages.localeInstalled">Język "{$locale}" został zainstalowany.</message>
 	<message key="admin.languages.download">Pobierz tłumaczenie</message>
-	<message key="admin.languages.reloadDefaultEmailTemplates">Odśwież domyślne szablony e-mail</message>
 	<message key="admin.languages.download.cannotOpen">Nie można otworzyć pliku opisu dostępnych języków ze strony PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Błąd, nie można dodać nowego języka do lokalnego rejestru.</message>
 	<message key="admin.auth.ojs">Baza danych użytkowników OJS</message>
@@ -40,7 +38,6 @@
 	<message key="admin.contexts.create">Utwórz czasopismo</message>
 	<message key="admin.journals.createInstructions">Zostaniesz automatycznie przydzielony jako administrator tego czasopisma. Po utworzeniu czasopisma, zaloguj się jako administrator w celu dokończenia procesu konfiguracji.</message>
 	<message key="admin.journals.urlWillBe">Krótkie słowo lub akronim identyfikujące czasopismo. Adres będzie miał postać {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">Tytuł jest wymagany.</message>
 	<message key="admin.contexts.form.pathRequired">Ścieżka jest wymagana.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Ścieżka może posiadać jedynie znaki alfanumeryczne, podkreślniki oraz znak (-). Musi zaczynać się i kończyć znakiem alfanumerycznym.</message>
 	<message key="admin.contexts.form.pathExists">Wybrana ścieżka jest w użyciu przez inne czasopismo.</message>

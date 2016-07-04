@@ -51,7 +51,6 @@
 	<message key="author.submit.submissionLocale">Język przesyłanego tekstu</message>
 	<message key="author.submit.submissionLocaleDescription">Czasopismo akceptuje teksty napisane w różnych językach. Wybierz w jakim języku został napisany tekst.</message>
 	<message key="author.submit.submissionChecklist">Sprawdzenie tekstu przed wysłaniem</message>
-	<message key="submission.submit.submissionChecklistDescription">Przed wysłaniem, sprawdź czy tekst spełnia następujące kryteria (ewentualny komenatrz dla redaktora można wpisać poniżej).</message>
 	<message key="author.submit.verifyChecklist">Aby kontynuować, upewnij się, że wszystkie elementy listy zostały zaznaczone.</message>
 	<message key="author.submit.copyrightNoticeAgree">Zapoznałem się z prawami autorskimi dotyczącymi przesyłanego tekstu (ewentualny komenatrz dla redaktora można wpisać poniżej).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Aby kontynuować, upewnij się, że zapoznałeś się z prawami autorskimi.</message>
@@ -66,10 +65,7 @@
 	<message key="author.submit.addAuthor">Dodaj autora</message>
 	<message key="author.submit.deleteAuthor">Usuń autora</message>
 	<message key="author.submit.submissionIndexingDescription">Podaj słowa kluczowe dla zgłoszonego tekstu. Poszczególne słowa kluczowe oddziel za pomocą średnika (np. psychologia nauczania; kinezjologia; pedeutologia).</message>
-	<message key="author.submit.submissionSupportingAgencies">Osoby oraz instytucje wspierające</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Podaj osoby lub instytucje, które zapewniły finansowanie i wsparcie dla powstania tekstu (np. Jan Kowalski, Dolnośląska Szkoła Wyższa).</message>
 	<message key="author.submit.coverageInstructions">Określa zasięg geograficzny, chronologiczny i historyczny przedmiotu badań.</message>
-	<message key="author.submit.subjectClassInstructions">Wykorzystaj system klasyfikacji terminów oparty o hiperłącza.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Angielski=en; Polski=pl. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Pozostałe kody</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Przynajmniej jeden autor jest wymagany.</message>
 	<message key="author.submit.form.authorRequiredFields">Imię, nazwisko oraz adres e-mail każdego z autorów są wymagane.</message>
@@ -102,7 +98,6 @@
 	<message key="author.submit.suppFile.dataSet">Zbiory danych</message>
 	<message key="author.submit.suppFile.sourceText">Tekst źródłowy</message>
 	<message key="author.submit.suppFile.briefDescription">Krótki opis</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Osoba lub instytucja wspierająca</message>
 	<message key="author.submit.suppFile.availableToPeers">Udostępnij plik recenzentom (bez metadanych), jeżeli jego udostępnienie nie wpłynie negatywnie na proces ślepej recenzji.</message>
 	<message key="author.submit.suppFile.publisherDescription">Użyj tylko z opublikowanymi materiałami.</message>
 	<message key="author.submit.suppFile.dateDescription">Data zebrania danych lub utworzenia narzędzia badawczego.</message>
@@ -119,7 +114,6 @@
 	<message key="author.submit.filesSummary">Podsumowanie</message>
 	<message key="author.submit.finishSubmission">Zakończ</message>
 	<message key="author.submit.submissionComplete">Przesyłanie ukończone. Dziękujemy za zainteresowanie opublikowaniem tekstu w czasopiśmie {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Jeżeli przesyłany tekst posiada formę zredagowaną, gotową do opublikowania (finalną), może zostać umieszczony bezpośrednio w ostatniej fazie redakcyjnej poprzez <a href="{$expediteUrl}" class="action">kliknięcie tutaj</a>. (Uwaga: opcja widoczna tylko dla administratorów czasopisma)]]></message>
 	<message key="author.article.uploadAuthorVersion">Prześlij wersję autora</message>
 	<message key="author.article.copyeditedFile">Plik po korekcie</message>
 	<message key="author.article.authorRevisedFile">Plik autora</message>

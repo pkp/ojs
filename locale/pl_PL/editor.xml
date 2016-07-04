@@ -11,12 +11,8 @@
   -->
 
 <locale name="pl_PL" full_name="Język Polski">
-	<message key="editor.article.reviewForms">Formularze recenzji</message>
-	<message key="editor.article.selectReviewForm">Wybierz formularz recenzji</message>
-	<message key="editor.article.clearReviewForm">Wyczyść formularz recenzji</message>
 	<message key="editor.home">Redaktor czasopisma</message>
-	 <message key="editor.article.confirmChangeReviewForm">Uwaga: Poprzez zmianę formularza recenzji wpływasz na odpowiedzi udzielane przez recenzentów. Czy na pewno chcesz kontynuować?</message>
-	<message key="editor.submissionsAndPublishing">Przesyłanie i publikowanie (???)</message>
+		<message key="editor.submissionsAndPublishing">Przesyłanie i publikowanie (???)</message>
 	<message key="editor.submissionQueue">Kolejka przesłanych tekstów</message>
 	<message key="editor.submissionArchive">Archiwum przesłanych tekstów</message>
 	<message key="editor.publishing">Publikowanie</message>
@@ -94,9 +90,7 @@ Przed przesłaniem tekstu do redakcji techniczne, powiadom autora o decyzji i wy
 	<message key="editor.issues.noLiveIssues">Brak numerów</message>
 	<message key="editor.issues.open">Otwórz</message>
 	<message key="editor.issues.pages">Strony</message>
-	<message key="editor.navigation.issues">Numery czasopisma</message>
 	<message key="editor.navigation.futureIssues">Planowane numery</message>
-	<message key="editor.navigation.createIssue">Stwórz nowy numer</message>
 	<message key="editor.navigation.issueArchive">Archiwalne numery</message>
 	<message key="editor.article.designateReviewVersion">Oznacz tekst jako zrecenzowany</message>
 	<message key="editor.article.uploadReviewVersion"><![CDATA[Wyślij tekst pozbawiony informacji o autorach, przeznaczony do recenzji<br />]]></message>
