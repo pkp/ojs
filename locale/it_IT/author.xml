@@ -4,7 +4,7 @@
 <!--
   * locale/it_IT/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2000-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,7 +13,7 @@
   *
   -->
 
-<locale name="it_IT" full_name = "Italiano">
+<locale name="it_IT" full_name="Italiano">
 	<message key="author.submit">Nuova proposta</message>
 	<message key="author.track">Proposte attive</message>
 	<message key="author.competingInterests"><![CDATA[Interessi&nbsp;concorrenziali vedi la policy sul<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Conflitto d'interessi</a>]]></message>
@@ -45,22 +45,23 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Stai incontrando difficoltà? Contatta <a href="mailto:{$supportEmail}">{$supportName}</a> per assistenza.]]></message>
 	<message key="author.submit.journalSection">Sezione della rivista</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Scegli la sezione più adatta alla tua proposta (Vedi le politiche delle sezioni in <a href="{$aboutUrl}" target="_new">Info</a> ).]]></message>
-	<message key="submission.submit.selectSection">Scegli una sezione...</message>
-	<message key="submission.submit.submissionChecklist">Lista di controllo della proposta</message>
-	<message key="submission.submit.submissionChecklistDescription">Gli autori, prima di passare alla fase successiva, devono indicare con una spunta se la loro proposta risponde a ognuno dei requisiti indicati.</message>
+	<message key="author.submit.selectSection">Scegli una sezione...</message>
+	<message key="author.submit.submissionChecklist">Lista di controllo della proposta</message>
+	<message key="author.submit.submissionChecklistDescription">Gli autori, prima di passare alla fase successiva, devono indicare con una spunta se la loro proposta risponde a ognuno dei requisiti indicati.</message>
 	<message key="author.submit.verifyChecklist">Assicurati di aver spuntato tutte le voci della lista prima di continuare</message>
 	<message key="author.submit.copyrightNoticeAgree">Gli autori acconsentono ai termini di questa nota sul Copyright, che sarà applicata al loro contributo se e quando verrà pubblicato (commenti per l'editor possono essere aggiunti sotto).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Devi accettare i termini della nota di Copyright prima di continuare.</message>
-	<message key="submission.submit.coverNote">Commenti per l'Editor</message>
+	<message key="author.submit.commentsForEditor">Commenti per l'Editor</message>
 	<message key="author.submit.comments">Inserisci il testo (opzionale)</message>
 	<message key="author.submit.form.sectionRequired">Devi scegliere la sezione per il tuo contributo.</message>
-	<message key="submission.submit.privacyStatement">Tutela della privacy</message>
+	<message key="author.submit.privacyStatement">Tutela della privacy</message>
 	<message key="author.submit.reorderInstructions">Ordina gli autori nel modo in cui vuoi che appaiano sulla pubblicazione.</message>
 	<message key="author.submit.selectPrincipalContact">Contatto di corrispondenza con la redazione.</message>
 	<message key="author.submit.addAuthor">Aggiungi un autore</message>
 	<message key="author.submit.deleteAuthor">Cancella autore</message>
 	<message key="author.submit.submissionIndexingDescription">Fornisci i termini per indicizzare la proposta; separa i termini con un punto e virgola (termine1; termine2; termine3).</message>
 	<message key="author.submit.coverageInstructions">Riferimenti geografici, al periodo cronologico/storico e/o alle caratteristiche del campione della ricerca.</message>
+	<message key="author.submit.subjectClassInstructions">Utilizza il link al sistema di classificazione per selezionare i termini e, se necessario, i numeri di classificazione.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Italiano=it; Inglese=en; Francese=fr; Spagnolo=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Altri codici</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Inserisci almeno un autore.</message>
 	<message key="author.submit.form.authorRequiredFields">Inserisci nome, cognome e indirizzo email di ciascun autore.</message>

@@ -4,7 +4,7 @@
 <!--
   * locale/it_IT/admin.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2000-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,10 +13,8 @@
   *
   -->
 
-<locale name="it_IT" full_name = "Italiano">
+<locale name="it_IT" full_name="Italiano">
 	<message key="admin.hostedJournals">Riviste</message>
-	<message key="admin.settings.security">Sicurezza</message>
-	<message key="admin.settings.security.plugins">Impedisci agli amministratori delle riviste di installare, aggiornare e cancellare i plugin.</message>
 	<message key="admin.settings.journalRedirect">Redirect</message>
 	<message key="admin.settings.journalRedirectInstructions">Prevede un redirect dal sito principale a una rivista. Può essere utile, ad esempio, se il sito ospita solo una rivista.</message>
 	<message key="admin.settings.noJournalRedirect">Nessun redirect</message>
@@ -40,14 +38,14 @@
 	<message key="admin.systemConfigurationDescription"><![CDATA[Impostazioni di configurazione di OJS prese da <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.journals.journalSettings">Impostazioni della rivista</message>
 	<message key="admin.journals.noneCreated">Non è stata creata nessuna rivista.</message>
-	<message key="admin.contexts.confirmDelete">Sei sicuro di voler cancellare definitivamente questa rivista e tutti i suoi contenuti?</message>
-	<message key="admin.contexts.create">Crea una nuova rivista</message>
+	<message key="admin.journals.confirmDelete">Sei sicuro di voler cancellare definitivamente questa rivista e tutti i suoi contenuti?</message>
+	<message key="admin.journals.create">Crea una nuova rivista</message>
 	<message key="admin.journals.createInstructions">Sarai automaticamente registrato come manager di questa rivista. Dopo aver creato una nuova rivista, effettua il log in come manager per continuare il setup e registrare gli utenti.</message>
 	<message key="admin.journals.urlWillBe">Utilizzare un termine breve o un acronimo. La URL della rivista sarà {$sampleUrl}</message>
-	<message key="admin.contexts.form.titleRequired">Inserire un titolo</message>
-	<message key="admin.contexts.form.pathRequired">Inserire un path.</message>
-	<message key="admin.contexts.form.pathAlphaNumeric">Il path può contenere solo caratteri alfanumerici, underscore e trattini. Deve iniziare e finire con un carattere alfanumerico e non può contenere spazi.</message>
-	<message key="admin.contexts.form.pathExists">Il path indicato è già utilizzato da un'altra rivista.</message>
+	<message key="admin.journals.form.titleRequired">Inserire un titolo</message>
+	<message key="admin.journals.form.pathRequired">Inserire un path.</message>
+	<message key="admin.journals.form.pathAlphaNumeric">Il path può contenere solo caratteri alfanumerici, underscore e trattini. Deve iniziare e finire con un carattere alfanumerico e non può contenere spazi.</message>
+	<message key="admin.journals.form.pathExists">Il path indicato è già utilizzato da un'altra rivista.</message>
 	<message key="admin.journals.enableJournalInstructions">Mostra pubblicamente la rivista sul sito</message>
 	<message key="admin.journals.journalDescription">Descrizione della rivista</message>
 	<message key="admin.journal.pathImportInstructions">Path di una rivista esistente o path da creare (es. "ojs").</message>
@@ -64,6 +62,8 @@
 	<message key="admin.mergeUsers.confirm">Sei sicuro di voler fondere {$oldAccountCount} account selezionato(i) con l'account con il nome utente "{$newUsername}"? I vecchi {$oldAccountCount} account non esisteranno più. Questa azione non è reversibile.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Non ci sono utenti iscritti</message>
 	<message key="admin.locale.maybeIncomplete">I file marcati potrebbero essere incompleti.</message>
+	<message key="admin.settings.security">Sicurezza</message>
+	<message key="admin.settings.security.plugins">Impedisci journal managers di installare, aggiornare o cancellare i plugin.</message>
 	<message key="admin.settings.options">Opzioni</message>
 	<message key="admin.settings.journalsList.showThumbnail">Anteprima della rivista</message>
 	<message key="admin.settings.journalsList.showTitle">Titolo della rivista</message>
@@ -86,14 +86,12 @@
 	<message key="admin.copyAccessLogFileTool.error.acessingFile">Errore: File {$filePath} non esiste o non è accessibile.</message>
 	<message key="admin.copyAccessLogFileTool.error.copyingFile">Errore: impossibile copiare il file da {$filePath} a {$tmpFilePath}</message>
 	<message key="admin.copyAccessLogFileTool.error.deletingFile">Errore: impossibile cancellare il file {$tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.usage">Copy the passed apache access log file(s), filtering the entries related with this installation,
-to the current files directory, inside the UsageStatsPlugin stage directory. Must run under user with enough privilegies to read access apache log files.
-
-This tool will only copy files that aren't already inside the usageStats file loader directories (stage, processing, archive, reject).
-
-Uso: {$scriptName} path/to/apache/log/file.log
-Uso (processing all files inside a directory): {$scriptName} path/to/apache/directory
-Usage (processing all files inside a directory that starts with the passed string): {$scriptName} path/to/apache/directory starts_with_string</message>
+	<message key="admin.copyAccessLogFileTool.usage"><![CDATA[Copia gli access log di apache, filtrando le righe relative a questa installazione, alla directory dei file corrente, nella directory stage del plugin UsageStatsPlugin. Deve girare con un utente che abbia privilegi sufficienti a leggere gli access logo di apache.<br /> 
+	Questo tool copierà solamente i file che non sono già nella directory di caricamento dei file di usageStats (stage, processing, archive, reject).<br />
+	<ul><li>Uso: {$scriptName} path/to/apache/log/file.log</li>
+	<li>Uso (processare tutti i file all'interno di una directory): {$scriptName} path/to/apache/directory</li>
+	<li>Uso (processare tutti i file all'interno di una directory che iniziano con una certa stringa): {$scriptName} path/to/apache/directory starts_with_string</li>
+	</ul>]]></message>
 	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Errore: impossibile creare la cartella temporanea {$tmpDir}</message>
 	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Attenzione: il file {$filePath} esiste già nella cartella delle statistiche di utilizzo.</message>
 	<message key="admin.copyAccessLogFileTool.success">Successo: {$filePath} a {$destinationPath}</message>

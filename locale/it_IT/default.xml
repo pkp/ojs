@@ -4,7 +4,7 @@
 <!--
   * locale/it_IT/default.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -15,7 +15,7 @@
  
 <locale name="it_IT" full_name="Italiano">
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">La submission non è stata precedentemente pubblicata, né proposta a un'altra rivista (oppure si fornisce una spiegazione all'editor nei commenti).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Il file di submission è in un formato OpenOffice, Microsoft Word, o RTF.</message>
+	<message key="default.journalSettings.checklist.fileFormat">Il file di submission è in un formato OpenOffice, Microsoft Word, RTF, o WordPerfect.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Il testo ha spaziatura singola; usa un font 12 punti ; impiega il corsivo invece della sottolineatura (eccetto con gli indirizzi URL); e tutte le illustrazioni, figure, e tabelle sono posizionate  all'interno del testo nei punti appropriati, piuttosto che alla fine.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Il testo aderisce alle richieste stilistiche e bibliografiche riassunte nelle <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">linee guida dell'autore</a>, che si trova nella pagina di informazioni sulla rivista.]]></message>
 	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Se si sta facendo la submission a una sezione peer-reviewed della rivista, seguire le istruzioni su <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Come assicurare una revisione cieca</a>.]]></message>
@@ -71,10 +71,11 @@ Dopo che avete finito con le vostre revisioni, rinominare il file da NomeAutoreQ
 &bull; Frase aggiunta in risposta al QA. Il grassetto indica aggiunta di testo nuovo
 &bull; [parola cancellata] indica l'omissione di "completamente"
 &bull; Il commento contiene una risposta alla QA dell'editor]]></message>
-
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
-</message>
+	<message key="default.journalSettings.emailHeader">Il seguente messaggio è stato spedito per conto di {$journalName}.
+________________________________________________________________________</message>
+	<message key="default.journalSettings.emailSignature">---
+{$journalName}
+{$indexUrl}/{$journalPath}</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Incoraggiamo i lettori a iscriversi al servizio di notifica di questa rivista. Usa il link <a href="{$indexUrl}/{$journalPath}/user/register">Registra</a> in alto alla  homepage della rivista. Con questa registrazione il lettore ricever&#x00E0; l'indice per email di ogni nuova uscita della rivista.  Vedi la <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">dichiarazione sulla privacy</a> della rivista che assicura il lettori che il loro nome e indirizzo email non sar&#x00E0; usato per altri fini.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Interessato a proporre contributi a questa rivista? Raccomandiamo di rivedere la pagina <a href="{$indexUrl}/{$journalPath}/about">Info</a>, in particolare le politiche delle sezioni della  rivista, e le <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">linee guida per l'autore</a>. Gli autori devono <a href="{$indexUrl}/{$journalPath}/user/register">registrarsi</a> per  effettuare la prima submission alla rivista, o se gi&#x00E0; registrato pu&#x00F9; semplicemente fare il <a href="{$indexUrl}/index/login">log in</a> e cominciare il processo guidato in 5 fasi.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Suggeriamo ai bibliotecari di aggiungere questa rivista nel loro sistema di reference linking. Inoltre, segnaliamo che il sistema open source utilizzato per la pubblicazione di questa rivista potrebbe essere proposto anche per la gestione di riviste nelle quali i bibliotecari siano coinvolti (vedi <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a> per ulteriori dettagli).]]></message>

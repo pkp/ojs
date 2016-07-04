@@ -4,7 +4,7 @@
 <!--
   * locale/it_IT/manager.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2000-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,7 +13,7 @@
   *
   -->
 
-<locale name="it_IT" full_name = "Italiano">
+<locale name="it_IT" full_name="Italiano">
 	<message key="manager.emails.confirmResetAll">Sei sicuro di voler ripristinare tutti i modelli di email di questa rivista? In questo modo verranno perse tutte le personalizzazioni effettuate.</message>
 	<message key="manager.files.note">Nota: La navigazione tra i file è una funzione avanzata che permette di vedere e manipolare direttamente i file e le directory associate a una rivista.</message>
 	<message key="manager.groups">Redazione</message>
@@ -28,7 +28,7 @@
 	<message key="manager.journalManagement">Gestione della rivista</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">Questo sostituirà qualunque personalizzazione fatta per la rivista</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Ricarica i settaggi di default locali</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS permette di offrire agli utenti della rivista un'interfaccia multilingue. Gli utenti potranno scegliere fra le lingue disponibili per la visualizzazione delle pagine; anche i dati, inseriti in più lingue, potranno essere visualizzati in lingue diverse.<br /><br/>Se hai bisogno di utilizzare una lingua, supportata da OJS  ma non elencata nella lista qui sotto, chiedi all'amministratore del sito di installarla. Per ulteriori informazioni, consultare la documentazione di OJS.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS permette di offrire agli utenti della rivista un'interfaccia multilingue. Gli utenti potranno scegliere fra le lingue disponibili per la visualizzazione delle pagine; anche i dati, inseriti in più lingue, potranno essere visualizzati in lingue diverse.<br /><br />Se hai bisogno di utilizzare una lingua, supportata da OJS  ma non elencata nella lista qui sotto, chiedi all'amministratore del sito di installarla. Per ulteriori informazioni, consultare la documentazione di OJS.]]></message>
 	<message key="manager.languages.noneAvailable">Non è disponibile alcuna lingua aggiuntiva. Contattare l'amministratore del sito per utilizzare un'altra lingua per questa rivista.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Questa sarà la lingua di default di questa rivista.</message>
 	<message key="manager.managementPages">Amministrazione</message>
@@ -126,6 +126,7 @@
 	<message key="manager.sections.assigned">Editor di questa sezione</message>
 	<message key="manager.sections.confirmDelete">Sei sicuro di voler cancellare definitivamente questa sezione? Se sì dovrete ripubblicare tutti gli articoli attualmente presenti.</message>
 	<message key="manager.sections.create">Crea una sezione</message>
+	<message key="manager.sections.disableComments">Disabilita i commenti dei lettori per questa sezione</message>
 	<message key="manager.section.sectionEditorInstructions">Aggiungi un Section Editor a questa sezione per assegnargli automaticamente le proposte inviate a questa sezione (comunque potrai sempre assegnare manualmente un SE, quando arriva ciascuna proposta).
 Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della REVISIONE (peer review) e/o dell'EDITING (copyediting, layout e correzione delle bozze) delle submission di questa sezione. I SE vengono creati cliccando 'Section editor' nel menù dei ruoli nella pagina di gestione della rivista.</message>
 	<message key="manager.sections.editorRestriction">Solo editor e section editor possono proporre contributi da pubblicare in questa sezione</message>
@@ -184,14 +185,17 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.copyeditInstructions">Istruzioni per il copyedit</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Le istruzioni per il copyedit saranno rese disponibili ai copyeditor, agli autori e ai section editor nella fase di Editing delle Submission. Di seguito sono presenti una serie di istruzioni in HTML, che possono essere modificate in qualsiasi momento dall'amministratore (in HTML o in testo semplice).</message>
 	<message key="manager.setup.copyrightNotice">Nota di copyright</message>
-	
-	<message key="manager.setup.copyrightYearBasis">Basa la data di pubblicazione dei nuovi articoli su:</message>
-	<message key="manager.setup.copyrightYearBasis.Article">L'anno di default è quello della data di pubblicazione dello specifico articolo, poiché la rivista pubblica in modalità "liquida".</message>
-	<message key="manager.setup.copyrightYearBasis.Issue">L'anno di default è quello della data di pubblicazione del fascicolo in cui l'articolo è pubblicato.</message>
-	
-	
+	<message key="manager.setup.copyrightYearBasis">Fissa per default i diritti d'autore dei nuovi articoli su</message>
+	<message key="manager.setup.copyrightYearBasis.Article">L'anno verrà tratto dalla data di pubblicazione dei singoli articoli; consigliato per le riviste che pubblicano in maniera più fluida</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">L'anno verrà tratto dalla data di pubblicazione del fascicolo</message>
 	<message key="manager.setup.coverage">Ambito</message>
+	<message key="manager.setup.coverageChronExamples">(Es. Rinascimento europeo; Periodo giurassico; Terzo trimestre; ecc.)</message>
+	<message key="manager.setup.coverageChronProvideExamples">Fornisci esempi di termini cronologici o storici rilevanti per questo settore</message>
 	<message key="manager.setup.coverageDescription">Si riferisce alla locazione geografica, all'ambito cronologico o storico, e/o alle caratteristiche del campione di ricerca.</message>
+	<message key="manager.setup.coverageGeoExamples">(Es. Penisola iberica; Stratosfera; Foresta boreale; ecc.)</message>
+	<message key="manager.setup.coverageGeoProvideExamples">Fornisci esempi di termini geografici e geospaziali rilevanti per questo settore</message>
+	<message key="manager.setup.coverageResearchSampleExamples">(Es. Età; Sesso; Etnia; ecc.)</message>
+	<message key="manager.setup.coverageResearchSampleProvideExamples">Fornisci esempi di campioni di ricerca caratteristici per questo settore</message>
 	<message key="manager.setup.currentIssue">Fascicolo corrente</message>
 	<message key="manager.setup.customizingTheLook">Fase 5. Personalizzazione della grafica della rivista</message>
 	<message key="manager.setup.customTags">Marcatori personalizzati</message>
@@ -205,15 +209,28 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.disciplineProvideExamples">Fornisci esempi di discipline accademiche rilevanti per questa rivista</message>
 	<message key="manager.setup.displayCurrentIssue">Mostra il sommario del fascicolo corrente (se disponibile).</message>
 	<message key="manager.setup.editorDecision">Decisione dell'editor</message>
+	<message key="manager.setup.editorialMembers">Vai ai membri del consiglio ed aggiungi uno o più membri al consiglio editoriale o a quello di review. Questo può essere fatto in qualsiasi momento del ciclo di vita della rivista.</message>
+	<message key="manager.setup.editorialProcess1">Uno o più editor gestiranno le fasi principali, senza bisogno di nessun ruolo definito.</message>
+	<message key="manager.setup.editorialProcess2">Il l'editor gestisce la coda delle proposte, quella della programmazione e l'indice dei fascicoli, mentre i Section Editor gestiscono il processo di revisione e di editing delle proposte.</message>
+	<message key="manager.setup.editorialProcess3">Il l'editor gestisce la coda delle proposte, quella della programmazione e l'indice dei fascicoli, mentre i Section Editor gestiscono il processo di revisione delle proposte.</message>
+	<message key="manager.setup.editorialReviewBoard">Editorial board</message>
+	<message key="manager.setup.editorialReviewBoardDescription">Le riviste hanno i consigli editoriali per supervisionare la direzione della rivista, partecipare alle riunioni con gli editor, e, grazie alla reputazione dei membri del consiglio, aumentare la reputazione della rivista nel proprio settore. I consigli di review hanno un ruolo simile, ed inoltre guidano il processo di peer-review. I membri del consiglio di review non avranno accesso al sistema di amministrazione di OJS, ma saranno aggiunti alla lista degli utenti in grado di effettuare la peer-review.</message>
 	<message key="manager.setup.emailBounceAddress">Indirizzo per i messaggi respinti</message>
 	<message key="manager.setup.emailBounceAddressDescription">Nel caso l'invio di un messaggio di posta elettronica non dovesse andare a buon fine, verrà inviata una notifica di errore a questo indirizzo.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Nota:</strong> per attivare questa opzione, l'amministratore del sito deve abilitare l'opzione <tt>allow_envelope_sender</tt>  nel file di configurazione di OJS. Configurazioni aggiuntive del server possono essere necessarie per supportare questa funzione (che potrebbe non essere disponibile su tutti i server), come indicato nella documentazione di OJS.]]></message>
 	<message key="manager.setup.emails">Firma delle email</message>
+	<message key="manager.setup.emailHeader">Intestazione delle email</message>
+	<message key="manager.setup.emailHeaderDescription">I messaggi inviati dal sistema per conto della rivista presenteranno la seguente intestazione. Tutte queste email, infatti, avranno come mittente il contatto principale della rivista; quindi è importante chiarire che tale mittente potrebbe non essere il responsabile del contenuto del messaggio, che potrebbe essere stato inviato per conto di un altro utente.</message>
 	<message key="manager.setup.emailSignature">Firma</message>
 	<message key="manager.setup.emailSignatureDescription">Le email inviate in automatico dal sistema avranno la seguente firma alla fine del messaggio. Il contenuto di queste email può essere modificato nella sezione di amministrazione della rivista.</message>
 	<message key="manager.setup.enableAnnouncements">Abilita gli amministratori della rivista ad aggiungere avvisi.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Mostra</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">avvisi recenti nella homepage della rivista.</message>
+	<message key="manager.setup.enablePageNumber">I numeri di pagina degli articoli vanno calcolati e inseriti manualmente (es. 13-26).</message>
+	<message key="manager.setup.enablePublicArticleId">Gli identificatori personalizzati saranno apposti agli articoli pubblicati.</message>
+	<message key="manager.setup.enablePublicGalleyId">Gli identificatori personalizzati saranno apposti  a ciascun formato (es, HTML, PDF) di ciascun articolo pubblicato.</message>
+	<message key="manager.setup.enablePublicIssueId">Gli identificatori personalizzati saranno apposti ai fascicoli.</message>
+	<message key="manager.setup.enablePublicSuppFileId">Gli identificatori personalizzati saranno apposti ai file supplementari degli articoli.</message>
 	<message key="manager.setup.enableUserRegistration">Gli utenti possono autoregistrarsi alla rivista con uno o più dei seguenti ruoli:</message>
 	<message key="manager.setup.enableUserRegistration.author">Autori (possomo inviare proposte alla rivista)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Lettori (riceveranno le notifiche e saranno calcolati come equivalenti agli abbonati)</message>
@@ -269,6 +286,8 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.journalLogo.altText">Logo della rivista</message>
 	<message key="manager.setup.journalPageFooter">Pie' di pagina</message>
 	<message key="manager.setup.journalPageFooterDescription">Questo è il pie' di pagina della rivista. Per cambiarlo o aggiornarlo, inserire del codice HTML nella box sottostante. È possibile, per esempio, inserire un'altra barra di navigazione, un contatore ecc. Questo pie' di pagina apparirà su ogni pagina della rivista.</message>
+	<message key="manager.setup.journalPageHeader">Testata della rivista</message>
+	<message key="manager.setup.journalPageHeaderDescription">È possibile caricare un'immagine con il titolo ed il logo della rivista (in formato .gif, .jpg, o .png). Questa immagine  potrebbe essere una versione più piccola di quella inserita per l'homepage, e sostituirà il testo che eventualmente compaia.</message>
 	<message key="manager.setup.journalPolicies">Fase 2. Politiche della rivista</message>
 	<message key="manager.setup.journalSetup">Setup della rivista</message>
 	<message key="manager.setup.journalSetupUpdated">Il setup della rivista è stato aggiornato.</message>
@@ -396,6 +415,8 @@ Al momento di concludere una revisione, ai revisori vengono presentate due box, 
 	<message key="manager.setup.sponsors">Sponsor</message>
 	<message key="manager.setup.sponsorsDescription">Il nome delle organizzazioni (es. associazioni scientifiche, dipartimenti universitari, cooperative ecc.) di supporto alla rivista comparirà nella pagina delle informazioni sulla rivista, con un'eventuale nota informativa.</message>
 	<message key="manager.setup.stepsToJournalSite">Cinque passaggi per creare il sito web della rivista</message>
+	<message key="manager.setup.subjectClassification">Classificazione</message>
+	<message key="manager.setup.subjectClassificationExamples">(Es. Classificazione dei soggetti matematici; Classificazione della Library of Congress)</message>
 	<message key="manager.setup.subjectExamples">(Es., Fotosintesi; Buchi neri; Teorie bayesiane; Semiotica)</message>
 	<message key="manager.setup.subjectKeywordTopic">Parole chiave</message>
 	<message key="manager.setup.subjectProvideExamples">Fornisci degli esempi di parole chiave o argomenti come guida per gli autori</message>
@@ -423,8 +444,11 @@ Al momento di concludere una revisione, ai revisori vengono presentate due box, 
 	<message key="manager.setup.userRegistration">Registrazione utenti</message>
 	<message key="manager.setup.useTextTitle">Testo del titolo</message>
 	<message key="manager.setup.volumePerYear">Volumi per anno</message>
+	<message key="manager.statistics.city">Città</message>
+	<message key="manager.statistics.region">Regione</message>
 	<message key="manager.statistics.reports">Generatore di report</message>
 	<message key="manager.statistics.reports.aggregationColumns">Aggrega le statistiche per:</message>
+	<message key="manager.statistics.reports.optionalColumns.description">Gli elementi in corsivo e contrassegnati da * rappresenano dati opzionali per il metodo corrente di calcolo delle statistiche in OJS (metric type). Potresti avere quei dati o meno, secondo la configurazione del plugin per le statistiche.</message>
 	<message key="manager.statistics.reports.defaultReportTemplates">Modello di report di default</message>
 	<message key="manager.statistics.reports.defaultReport.articleDownloads">Download degli articoli</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">Viste delle pagine degli abstract</message>
@@ -445,6 +469,7 @@ Al momento di concludere una revisione, ai revisori vengono presentate due box, 
 	<message key="manager.statistics.reports.objectId.label">Indica uno o più ID, separati da virgola (es. 1,2,3,4,5).</message>
 	<message key="manager.statistics.reports.today">Oggi</message>
 	<message key="manager.statistics.reports.currentMonth">Mese corrente</message>
+	<message key="manager.statistics.reports.yesterday">Ieri</message>
 	<message key="manager.statistics.reports.orderBy">Ordina per</message>
 	<message key="manager.statistics.reports.orderDir">Direzione</message>
 	<message key="manager.statistics.reports.orderDir.asc">Ascendente</message>
@@ -635,7 +660,7 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.sections.wordCount">Conteggio delle parole</message>
 	<message key="manager.sections.wordCountInstructions">Limita la lunghezza degli abstract per gli articoli di questa sezione (0 per illimitate)</message>
 	<message key="manager.setup.history">Storia della rivista</message>
-	<message key="manager.setup.favicon">Favicon della rivista</message>
+	<message key="manager.setup.journalFavicon">Favicon della rivista</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Notifiche di pagamenti manuali</message>
 	<message key="manager.subscriptions.renew">Rinnova</message>
 	<message key="manager.subscriptions.withStatus">Con status</message>
@@ -659,7 +684,7 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.subscriptionTypes.form.subscriptions">Abbonamenti</message>
 	<message key="manager.subscriptionTypes.form.individual">Individuale (gli utenti sono autenticati con username/password)</message>
 	<message key="manager.subscriptionTypes.form.options">Opzioni</message>
-	<message key="manager.setup.faviconInvalid">Formato non valido. I formati accettati sono .ico, .png, e .gif.</message>
+	<message key="manager.setup.journalFaviconInvalid">Formato non valido. I formati accettati sono .ico, .png, e .gif.</message>
 	<message key="manager.setup.noPublishing">OJS non viene utilizzato per pubblicare on line i contenuti della rivista</message>
 	<message key="manager.individualSubscriptions">Abbonamento individuale</message>
 	<message key="manager.institutionalSubscriptions">Abbonamento istituzionale</message>
@@ -674,7 +699,7 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.subscriptions.selectUser">Seleziona un utente</message>
 	<message key="manager.subscriptions.contact">Nome del contatto</message>
 	<message key="manager.subscriptions.institutionName">Nome dell'ente</message>
-	<message key="manager.setup.faviconDescription">Aggiungi una favicon alla rivista, da mostrare sulla barra degli indirizzi degli utenti che visitano il sito.</message>
+	<message key="manager.setup.journalFaviconDescription">Aggiungi una favicon alla rivista, da mostrare sulla barra degli indirizzi degli utenti che visitano il sito.</message>
 	<message key="manager.setup.publisherNoteDescription">Questo testo apparirà sotto l'intestazione "Editore" e sopra il nome/URL dell'editore, nel sttore "Sponsorship" della pagina "Informazioni sulla rivista".</message>
 	<message key="manager.setup.sponsorNoteDescription">Questo testo apparirà sotto l'intestazione "Sponsor" e sopra il nome/URL dell'editore, nel sttore "Sponsorship" della pagina "Informazioni sulla rivista".</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">Notifica via email al responsabile degli abbonamenti l'acquisto online di un abbonamento individuale.</message>
@@ -701,6 +726,7 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.payment.options.purchaseIssueFee">Acquista il fascicolo</message>
 	<message key="manager.plugins.settings">Impostazioni</message>
 	<message key="manager.sections.alertDelete">Prima di cancellare questa sezione, devi spostare in un'altra tutti gli articoli pubblicati che contiene.</message>
+	<message key="manager.setup.subjectClassificationURLValid">Inserisci una URL valida (includi http://).</message>
 	<message key="manager.payment.giftFees">Tariffe per i regali</message>
 	<message key="manager.payment.giftFeesDescription">Un link ad abbonamenti-dono apparirà nella pagina degli abbonamenti e come componente del blocco abbonamenti nella barra laterale</message>
 	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Attivare i pagamenti per abbonamenti-dono, permettendo ai lettori della rivista di acquistare abbonamenti-dono per altri lettori.</message>
