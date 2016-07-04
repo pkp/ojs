@@ -4,7 +4,7 @@
 <!--
   * locale/el_GR/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,31 +12,30 @@
   *
   -->
 
-<locale name="el_GR" full_name = "Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="author.submit">Νέα υποβολή</message>
 	<message key="author.track">Ενεργές Υποβολές</message>
-	<message key="author.competingInterests"><![CDATA[Συγκρουόμενα&nbsp;συμφέροντα <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></message>
+	<message key="author.competingInterests"><![CDATA[Συγκρουόμενα&nbsp;συμφέροντα <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Πολιτική Συγκρουόμενων Συμφερόντων</a>]]></message>
 	<message key="author.submit.submitArticle">Υποβολή άρθρου</message>
 	<message key="author.submit.stepsToSubmit">Πέντε βήματα για την υποβολή</message>
-	<message key="author.submit.startHereTitle">Έναρξη νέας υποβολής </message>
+	<message key="author.submit.startHereTitle">Έναρξη νέας υποβολής</message>
 	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Πατήστε εδώ</a> για να πάτε στο Βήμα 1 από τα 5 συνολικά βήματα της διαδικασίας υποβολής.]]></message>
 	<message key="author.submit.step1">Βήμα 1. Έναρξη της υποβολής</message>
-	<message key="author.submit.step2">Βήμα 2. Φόρτωση της υποβολής</message>
-	<message key="author.submit.step3">Βήμα 3. Καταχώριση των μεταδεδομένων </message>
-	<message key="author.submit.step4">Βήμα 4. Φόρτωση των συμπληρωματικών αρχείων</message>
+	<message key="author.submit.step2">Βήμα 2. Μεταφόρτωση της υποβολής</message>
+	<message key="author.submit.step3">Βήμα 3. Εισαγωγή μεταδεδομένων</message>
+	<message key="author.submit.step4">Βήμα 4. Μεταφόρτωση συμπληρωματικών αρχείων</message>
 	<message key="author.submit.step4a">Βήμα 4α. Προσθήκη συμπληρωματικού αρχείου</message>
 	<message key="author.submit.step5">Βήμα 5. Επιβεβαίωση της υποβολής</message>
-	<message key="author.submit.start">Έναρξη</message>
-	<message key="author.submit.upload">Φορτώστε την υποβολή</message>
-	<message key="author.submit.metadata">Καταχωρίστε τα μεταδεδομένα</message>
-	<message key="author.submit.supplementaryFiles">Φορτώστε τα συμπληρωματικά αρχεία (αν υπάρχουν)</message>
-	<message key="author.submit.confirmation">Επιβεβαίωση</message>
-	<message key="author.submit.cancelSubmission">Μπορείτε να ολοκληρώσετε την υποβολή αργότερα επιλέγοντας "Ενεργές Υποβολές" από την αρχική σελίδα του συγγραφέα.</message>
-	<message key="author.submit.notAccepting">Το συγκεκριμένο περιοδικό δεν αποδέχεται υποβολές τη συγκεκριμένη χρονική στιγμή.</message>
+	<message key="author.submit.start">1. Έναρξη</message>
+	<message key="author.submit.upload">2. Μεταφορτώστε την υποβολή</message>
+	<message key="author.submit.metadata">3. Εισάγετε τα μεταδεδομένα</message>
+	<message key="author.submit.supplementaryFiles">4. Μεταφορτώστε τα συμπληρωματικά αρχεία (αν υπάρχουν)</message>
+	<message key="author.submit.confirmation">5. Επιβεβαίωση</message>
+	<message key="author.submit.cancelSubmission">Μπορείτε να ολοκληρώσετε αυτή την υποβολή αργότερα επιλέγοντας "Ενεργές Υποβολές" από την αρχική σελίδα του συγγραφέα.</message>
+	<message key="author.submit.notAccepting">Αυτό το περιοδικό δεν δέχεται υποβολές τη συγκεκριμένη χρονική στιγμή.</message>
 	<message key="author.submit.requestWaiver">Αίτηση Παράβλεψης Εισφοράς Συγγραφέα</message>
-	<message key="author.submit.qualifyForWaiver">Παρακαλούμε εξετάστε την περίπτωση παράβλεψης της Εισφοράς του Συγγραφέα για την υποβολή αυτού του άρθρου</message>
-	<message key="author.submit.addReasonsForWaiver">Σας παρακαλούμε χρησιμοποιήστε το κουτί σχολίων παρακάτω για να προσδιορίσετε τους λόγους για τους οποίους αιτήστε την παράβλεση καταβολής της εισφοράς συγγραφέα για την συγκεκριμένη υποβολή.</message>
-	<message key="author.submissions.uploadCopyeditedVersion">Φόρτωση έκδοσης με Επιμελημένο Κείμενο</message>
+	<message key="author.submit.addReasonsForWaiver">Σας παρακαλούμε χρησιμοποιήστε το πλαίσιο σχολίων παρακάτω για να προσδιορίσετε τους λόγους για τους οποίους η καταβολή της εισφοράς συγγραφέα πρέπει να παραβλεφθεί.</message>
+	<message key="author.submissions.uploadCopyeditedVersion">Μεταφόρτωση έκδοσης με Επιμελημένο Κείμενο</message>
 	<message key="author.submissions.proofreadingCorrections">Διορθώσεις επιμελητή τυπογραφικών δοκιμίων</message>
 	<message key="author.submissions.confirmDelete">Είστε βέβαιοι ότι επιθυμείτε να διαγράψετε οριστικά τη συγκεκριμένη ανολοκλήρωτη υποβολή;</message>
 	<message key="author.submissions.viewStatus">Προβολή κατάστασης</message>
@@ -44,44 +43,47 @@
 	<message key="author.submit.howToSubmit"><![CDATA[Αντιμετωπίζετε δυσκολίες; Επικοινωνήστε με τον/την <a href="mailto:{$supportEmail}">{$supportName}</a> για παροχή βοήθειας {$supportPhone}.]]></message>
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Αντιμετωπίζετε δυσκολίες; Επικοινωνήστε με τον/την <a href="mailto:{$supportEmail}">{$supportName}</a> για παροχή βοήθειας.]]></message>
 	<message key="author.submit.journalSection">Ενότητα περιοδικού</message>
-	<message key="author.submit.journalSectionDescription"><![CDATA[Επιλέξτε την κατάλληλη ενότητα για τη συγκεκριμένη υποβολή (συμβουλευτείτε τις σελίδες "Ενότητες και Πολιτικές" στο μενού <a  href="{$aboutUrl}">Σχετικά με</a> το περιοδικό).]]></message>
-	<message key="submission.submit.selectSection">Επιλέξτε ενοτήτα...</message>
-	<message key="submission.submit.submissionChecklist">Πίνακας ελέγχου υποβολής</message>
-	<message key="submission.submit.submissionChecklistDescription">Προσδιορίστε εάν η συγκεκριμένη υποβολή είναι έτοιμη για εξέταση από αυτό το περιοδικό ελέγχοντας τα ακόλουθα (προσθήκη σχολίων προς τον επιμελητή υπάρχουν παρακάτω).</message>
-	<message key="author.submit.verifyChecklist">Πρέπει να βεβαιωθείτε ότι όλες οι απαιτήσεις του πίνακα ελέγχου της υποβολής έχουν εκπληρωθεί πριν συνεχίσετε.</message>
-	<message key="author.submit.copyrightNoticeAgree">Οι συγγραφείς αποδέχονται τους όρους της Δήλωσης Πνευματικών Δικαιωμάτων, που θα εφαρμοστούν στην συγκεκριμένη υποβολή εάν και όταν αυτή δημοσιευτεί από το περιοδικό (προσθήκη σχολίων προς τον επιμελητή μπορούν να προστεθούν παρακάτω).</message>
-	<message key="author.submit.copyrightNoticeAgreeRequired">Πρέπει να συμφωνήσετε με τους όρους της Δήλωσης Πνευματικών Δικαιωμάτων πριν  συνεχίσετε.</message>
-	<message key="submission.submit.coverNote">Σχόλια για τον Επιμελητή του Περιοδικού</message>
+	<message key="author.submit.journalSectionDescription"><![CDATA[Επιλέξτε την κατάλληλη ενότητα για τη συγκεκριμένη υποβολή (συμβουλευτείτε τις σελίδες "Ενότητες και Πολιτικές" στην σελίδα <a  href="{$aboutUrl}">Σχετικά</a> με το περιοδικό).]]></message>
+	<message key="author.submit.selectSection">Επιλέξτε ενοτήτα...</message>
+	<message key="author.submit.submissionChecklist">Λίστα ελέγχου υποβολής</message>
+	<message key="author.submit.submissionChecklistDescription">Προσδιορίστε εάν η συγκεκριμένη υποβολή είναι έτοιμη για εξέταση από αυτό το περιοδικό ελέγχοντας τα ακόλουθα (σχόλια προς τον επιμελητή μπορούν να προστεθούν παρακάτω).</message>
+	<message key="author.submit.verifyChecklist">Πρέπει να βεβαιωθείτε ότι όλες οι απαιτήσεις της λίστας ελέγχου υποβολής ικανοποιούνται πριν συνεχίσετε.</message>
+	<message key="author.submit.copyrightNoticeAgree">Οι συγγραφείς αποδέχονται τους όρους της Δήλωσης Πνευματικών Δικαιωμάτων, που θα εφαρμοστούν στην συγκεκριμένη υποβολή εάν και όταν αυτή δημοσιευτεί από το περιοδικό (σχολίων προς τον επιμελητή μπορούν να προστεθούν παρακάτω).</message>
+	<message key="author.submit.copyrightNoticeAgreeRequired">Πρέπει να συμφωνήσετε με τους όρους της Δήλωσης Πνευματικών Δικαιωμάτων πριν συνεχίσετε.</message>
+	<message key="author.submit.commentsForEditor">Σχόλια για τον Επιμελητή του Περιοδικού</message>
 	<message key="author.submit.comments">Εισαγωγή κειμένου (προαιρετικό)</message>
-	<message key="author.submit.form.sectionRequired">Παρακαλώ επιλέξτε κατάλληλη ενότητα περιοδικού για τη συγκεκριμένη υποβολή.</message>
-	<message key="submission.submit.privacyStatement">Δήλωση απορρήτου περιοδικού</message>
-	<message key="author.submit.reorderInstructions">Διαμορφώστε κατάλληλα την σειρά με την οποία τα ονόματα των συγγραφέων θα εμφανίζονται κατά την δημοσίευση του άρθρου.</message>
+	<message key="author.submit.form.sectionRequired">Παρακαλώ επιλέξτε μια κατάλληλη ενότητα του περιοδικού για τη συγκεκριμένη υποβολή.</message>
+	<message key="author.submit.privacyStatement">Δήλωση προστασίας προσωπικών δεδομένων του περιοδικού</message>
+	<message key="author.submit.reorderInstructions">Αναδιατάξτε τα ονόματα των συγγραφέων σύμφωνα με τη σειρά που θα εμφανίζονται κατά την δημοσίευση του άρθρου.</message>
 	<message key="author.submit.selectPrincipalContact">Κύριος υπεύθυνος επικοινωνίας για την αλληλογραφία με τους επιμελητές.</message>
 	<message key="author.submit.addAuthor">Προσθήκη συγγραφέα</message>
 	<message key="author.submit.deleteAuthor">Διαγραφή συγγραφέα</message>
-	<message key="author.submit.submissionIndexingDescription">Επιλέξτε τους όρους που περιγράφουν καλύτερα το περιεχόμενο της υποβολής με βάση τις κατηγορίες που χρησιμοποιούνται από το περιοδικό αυτό, και τα παραδείγματα που παρέχονται από τον επιμελητή. Διαχωρίστε τους όρους με το σύμβολο του ερωτηματικού  (όρος1; όρος2; όρος3).</message>
-	<message key="author.submit.coverageInstructions"> Αναφέρεται στη γεω-χωρική τοποθεσία, την χρονολογική ή ιστορική κάλυψη, ή/και τα χαρακτηριστικά του δείγματος της έρευνας.</message>
-	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr;  Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html"  target="_blank">Additional codes</a>.]]></message>
+	<message key="author.submit.submissionIndexingDescription">Εισάγετε όρους που θα χρησιμοποιηθούν για την ευρετηρίαση της υποβολής (όροι που περιγράφουν καλύτερα το περιεχόμενο της υποβολής). Διαχωρίστε τους όρους με το σύμβολο του ερωτηματικού  (όρος1; όρος2; όρος3).</message>
+	<message key="author.submit.submissionSupportingAgencies">Φορείς υποστήριξης/χρηματοδότησης</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Καθορίστε τους φορείς (πρόσωπα, οργανισμούς ή υπηρεσίες) που συνείσφεραν στον περιεχόμενο, παρείχαν χρηματοδότηση ή και υποστήριξη για την υλοποίησης του έργου που παρουσιάζεται στην υποβολή αυτή.</message>
+	<message key="author.submit.coverageInstructions">Αναφέρεται στη γεω-χωρική τοποθεσία, την χρονολογική ή ιστορική κάλυψη, ή/και τα χαρακτηριστικά του δείγματος της έρευνας.</message>
+	<message key="author.submit.subjectClassInstructions">Χρησιμοποιήστε το σύστημα ταξινόμησης με σύνδεση υπερκειμένου για να επιλέξετε όρους ταξινόμησης και, εάν είναι κατάλληλο, αριθμούς.</message>
+	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr;  Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html"  target="_blank">Επιπρόσθετοι κωδικοί/a>.]]></message>
 	<message key="author.submit.form.authorRequired">Απαιτείται τουλάχιστον ένας συγγραφέας.</message>
-	<message key="author.submit.form.authorRequiredFields">Απαιτούνται το όνομα, το επώνυμο και η διεύθυνση ηλεκτρονικού ταχυδρομείου του κάθε συγγραφέα.</message>
-	<message key="author.submit.form.titleRequired">Εισάγετε τον τίτλο του άρθρου σας.</message>
-	<message key="author.submit.form.abstractRequired">Εισάγετε την περίληψη του άρθρου σας.</message>
+	<message key="author.submit.form.authorRequiredFields">Απαιτούνται το όνομα, το επώνυμο και η διεύθυνση email του κάθε συγγραφέα.</message>
+	<message key="author.submit.form.titleRequired">Παρακαλούμε εισάγετε τον τίτλο του άρθρου σας.</message>
+	<message key="author.submit.form.abstractRequired">Παρακαλούμε εισάγετε την περίληψη του άρθρου σας.</message>
 	<message key="author.submit.submissionFile">Αρχείο υποβολής</message>
-	<message key="author.submit.uploadSubmissionFile">Φόρτωση αρχείου υποβολής</message>
-	<message key="author.submit.replaceSubmissionFile">Αντικατάσταση αρχείου υποβολής </message>
-	<message key="author.submit.noSubmissionFile">Δεν έχει φορτωθεί αρχείο υποβολής.</message>
-	<message key="author.submit.noSubmissionConfirm">Είστε βέβαιοι ότι επιθυμείτε να προχωρήσετε χωρίς να φορτώσετε ένα αρχείο υποβολής;</message>
-	<message key="author.submit.supplementaryFilesInstructions">Το προαιρετικό αυτό βήμα κατά τη διαδικασία υποβολής επιτρέπει την προσθήκη αρχείων στην υποβολή για βελτίωση και ενίσχυση του έργου της υποβολής. Τα συμπληρωματικά αρχεία ενδέχεται να περιλαμβάνουν (α) όργανα έρευνας,(β) σύνολα δεδομένων που συμμορφώνονται προς τους όρους της ανασκόπησης ηθικής ερευνών που διέπει τη μελέτη,(γ) πηγές που σε διαφορετική περίπτωση δεν θα ήταν διαθέσιμες στους χρήστες ή (δ) αριθμούς ή πίνακες που δεν μπορούν να ενσωματωθούν στο ίδιο το κείμενο. </message>
-	<message key="author.submit.supplementaryFiles.saveToUpload">Πατήστε Αποθήκευση για να φορτωθεί το αρχείο (μετά θα μπορείτε να φορτώσετε πρόσθετα αρχεία).</message>
-	<message key="author.submit.forgottenSubmitSuppFile">Είστε βέβαιοι ότι επιθυμείτε να προχωρήσετε χωρίς να φορτώσετε τα συμπληρωματικά αρχεία που έχετε επιλέξει;</message>
-	<message key="author.submit.noSupplementaryFiles">Δεν έχει πραγματοποιηθεί προσθήκη συμπληρωματικών αρχείων στη συγκεκριμένη υποβολή.</message>
-	<message key="author.submit.backToSupplementaryFiles">Επιστροφή σε Συμπληρωματικά Αρχεία</message>
-	<message key="author.submit.confirmDeleteSuppFile">Είστε βέβαιοι ότι επιθυμείτε να διαγράψετε το συμπληρωματικό αυτό αρχείο;</message>
-	<message key="author.submit.uploadSuppFile">Φόρτωση συμπληρωματικού αρχείου</message>
+	<message key="author.submit.uploadSubmissionFile">Μεταφόρτωση αρχείου υποβολής</message>
+	<message key="author.submit.replaceSubmissionFile">Αντικατάσταση αρχείου υποβολής</message>
+	<message key="author.submit.noSubmissionFile">Δεν έχει μεταφορτωθεί αρχείο υποβολής.</message>
+	<message key="author.submit.noSubmissionConfirm">Είστε βέβαιοι ότι επιθυμείτε να προχωρήσετε χωρίς να μεταφορτώσετε ένα αρχείο υποβολής;</message>
+	<message key="author.submit.supplementaryFilesInstructions">Το προαιρετικό αυτό βήμα επιτρέπει την προσθήκη συμπληρωματικών αρχείων στην υποβολή για βελτίωση και ενίσχυση του έργου της υποβολής. Τα συμπληρωματικά αρχεία, τα οποία μπορούν να είναι σε οποιαδήποτε μορφή, ενδέχεται να περιλαμβάνουν (α) όργανα έρευνας,(β) σύνολα δεδομένων που συμμορφώνονται προς τους όρους της ανασκόπησης ηθικής ερευνών που διέπει τη μελέτη,(γ) πηγές που, σε διαφορετική περίπτωση, δεν θα ήταν διαθέσιμες στους αναγνώστες, (δ) σχήματα και πίνακες που δεν μπορούν να ενσωματωθούν στο ίδιο το κείμενο, ή οτιδήποτε άλλο υλικό θα μπορούσε να συνεισφέρει στην εργασία αυτή.</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">Πατήστε "Αποθήκευση" για να μεταφορτωθεί το αρχείο (μετά μπορείτε να μεταφορτώσετε και επιπλέον αρχεία, αν το επιθυμείτε).</message>
+	<message key="author.submit.forgottenSubmitSuppFile">Είστε βέβαιοι ότι επιθυμείτε να προχωρήσετε χωρίς να μεταφορτώσετε το συμπληρωματικό αρχείο που έχετε επιλέξει;</message>
+	<message key="author.submit.noSupplementaryFiles">Δεν έχουν προστεθεί συμπληρωματικά αρχεία στη συγκεκριμένη υποβολή.</message>
+	<message key="author.submit.backToSupplementaryFiles">Επιστροφή στα Συμπληρωματικά Αρχεία</message>
+	<message key="author.submit.confirmDeleteSuppFile">Είστε βέβαιοι ότι θέλετε να διαγράψετε το συμπληρωματικό αυτό αρχείο;</message>
+	<message key="author.submit.uploadSuppFile">Μεταφόρτωση συμπληρωματικού αρχείου</message>
 	<message key="author.submit.addSupplementaryFile">Προσθήκη συμπληρωματικού αρχείου</message>
-	<message key="author.submit.editSupplementaryFile">Διαμόρφωση συμπληρωματικού αρχείου</message>
+	<message key="author.submit.editSupplementaryFile">Επεξεργασία συμπληρωματικού αρχείου</message>
 	<message key="author.submit.supplementaryFileData">Μεταδεδομένα συμπληρωματικού αρχείου</message>
-	<message key="author.submit.supplementaryFileDataDescription">Για την ευρετηρίαση του συμπληρωματικού υλικού, είναι απαραίτητα τα ακόλουθα μεταδεδομενα για το συμπληρωματικό αρχείο που έχει φορτωθεί.</message>
+	<message key="author.submit.supplementaryFileDataDescription">Για την ευρετηρίαση του συμπληρωματικού αυτού υλικού, εισάγετε τα ακόλουθα μεταδεδομένα για το συμπληρωματικό αρχείο που έχει φορτωθεί.</message>
 	<message key="author.submit.supplementaryFileUpload">Συμπληρωματικό αρχείο</message>
 	<message key="author.submit.suppFile.createrOrOwner">Δημιουργός (ή ιδιοκτήτης) αρχείου</message>
 	<message key="author.submit.suppFile.researchInstrument">Όργανο έρευνας</message>
@@ -94,34 +96,35 @@
 	<message key="author.submit.suppFile.briefDescription">Σύντομη περιγραφή</message>
 	<message key="author.submit.suppFile.contributorOrSponsor">Φορεάς χορηγίας</message>
 	<message key="author.submit.suppFile.availableToPeers">Παρουσίαση αρχείου σε αξιολογητές (χωρίς μεταδεδομένα), από τη στιγμή που δεν δημιουργεί προβλήματα στην "τυφλή" αξιολόγηση.</message>
-	<message key="author.submit.suppFile.publisherDescription">Χρησιμοποιείτε αποκλειστικά επίσημα δημοσιευμένο υλικό.</message>
-	<message key="author.submit.suppFile.dateDescription">Ημερομηνία κατά την οποία έγινε συλλογή δεδομένων ή δημιουργία οργάνου.</message>
+	<message key="author.submit.suppFile.publisherDescription">Χρησιμοποιείτε αποκλειστικά για επίσημα δημοσιευμένο υλικό.</message>
+	<message key="author.submit.suppFile.dateDescription">Ημερομηνία κατά την οποία έγινε η συλλογή δεδομένων ή η δημιουργία οργάνου.</message>
 	<message key="author.submit.suppFile.sourceDescription">Όνομα μελέτης ή άλλη πηγή προέλευσης.</message>
 	<message key="author.submit.suppFile.specifyOtherType">Καθορισμός άλλου</message>
-	<message key="author.submit.suppFile.noFile">Δεν έχει φορτωθεί αρχείο.</message>
+	<message key="author.submit.suppFile.noFile">Δεν έχει μεταφορτωθεί αρχείο.</message>
 	<message key="author.submit.suppFile.form.titleRequired">Εισάγετε τον τίτλο του συγκεκριμένου συμπληρωματικού αρχείου.</message>
-	<message key="author.submit.suppFile.form.subjectRequired">Εισάγετε θέμα.</message>
-	<message key="author.submit.suppFile.form.descriptionRequired">Εισάγετε περιγραφή</message>
-	<message key="author.suppFile.suppFilePublicIdentificationExists">Υπάρχει ήδη δημόσιο αναγνωριστικό του συμπληρωματικού αρχείου.</message>
+	<message key="author.submit.suppFile.form.subjectRequired">Παρακαλούμε εισάγετε κάποιο θέμα.</message>
+	<message key="author.submit.suppFile.form.descriptionRequired">Παρακαλούμε εισάγετε μια περιγραφή</message>
+	<message key="author.suppFile.suppFilePublicIdentificationExists">Το δημόσιο αναγνωριστικό του συμπληρωματικού αρχείου υπάρχει ήδη.</message>
 	<message key="author.suppFile.publicSuppFileIdentifier">Δημόσιο αναγνωριστικό συμπληρωματικού αρχείου.</message>
-	<message key="author.submit.confirmationDescription">Μετά από την ολοκλήρωση των προαναφερόμενων τεσσάρων βημάτων, κάντε κλικ στην επιλογή Ολοκλήρωση υποβολής για υποβολή του χειρογράφου σε{$journalTitle}. Θα λάβετε ένα επιβεβαιωτικό μήνυμα ηλεκτρονικού ταχυδρομείου και θα μπορείτε να παρακολουθείτε την πρόοδο της υποβολής μέσω της διαδικασίας επιμέλειας πραγματοποιώντας σύνδεση στον ιστότοπο του περιοδικού. Σας ευχαριστούμε για την εκδήλωση ενδιαφέροντος δημοσίευσης με {$journalTitle}.</message>
+	<message key="author.submit.confirmationDescription">Για την υποβολή του χειρόγραφου στο {$journalTitle} πατήστε "Ολοκλήρωση Υποβολής". Η κύριος υπεύθυνος επικοινωνίας της υποβολής θα λάβει ένα email επιβεβαίωσης και θα μπορεί να παρακολουθεί την πρόοδο της υποβολής μέσω της συντακτικής διαδικασίας πραγματοποιώντας σύνδεση στον ιστότοπο του περιοδικού. Σας ευχαριστούμε για το ενδιαφέρον σας να δημοσιεύσετε στο {$journalTitle}.</message>
 	<message key="author.submit.noFiles">Δεν έχουν επισυναφθεί αρχεία στη συγκεκριμένη υποβολή.</message>
 	<message key="author.submit.filesSummary">Σύνοψη αρχείου</message>
 	<message key="author.submit.finishSubmission">Ολοκλήρωση υποβολής</message>
 	<message key="author.submit.submissionComplete">Η υποβολή ολοκληρώθηκε. Σας ευχαριστούμε για το ενδιαφέρον σας για δημοσίευση στο περιοδικό {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Εάν η συγκεκριμένη υποβολή βρίσκεται σε μορφή έτοιμη για δημοσίευση χωρίς περαιτέρω αξιολόγηση, επιμέλεια ή διόρθωση διάταξης, μπορεί να καταχωρηθεί άμεσα στο τελευταίο στάδιο της σειράς αναμονής για επιμέλεια <a  href="{$expediteUrl}" class="action">κάνοντας κλικ εδώ</a>. (Σημείωση: Μόνο οι επιμελητές του περιοδικού έχουν τη συγκεκριμένη επιλογή για τις υποβολές τους.)]]></message>
-	<message key="author.article.uploadAuthorVersion">Φόρτωση έκδοσης συγγραφέα</message>
-	<message key="author.article.copyeditedFile">Αρχείο που έχει διορθωθεί</message>
+	<message key="author.submit.expedite"><![CDATA[Εάν η συγκεκριμένη υποβολή βρίσκεται σε μορφή έτοιμη για δημοσίευση χωρίς περαιτέρω αξιολόγηση, επιμέλεια ή εργασίες σελιδοποίησης, μπορεί να τοποθετηθεί άμεσα στο τελευταίο στάδιο της συντακτικής διαδικασίας <a  href="{$expediteUrl}" class="action">κάνοντας κλικ εδώ</a>. (Σημείωση: Μόνο οι επιμελητές του περιοδικού έχουν τη συγκεκριμένη επιλογή για τις υποβολές τους.)]]></message>
+	<message key="author.article.uploadAuthorVersion">Μεταφόρτωση έκδοσης συγγραφέα</message>
+	<message key="author.article.copyeditedFile">Αρχείο με διορθωμένα κείμενα</message>
 	<message key="author.article.authorRevisedFile">Αρχείο συγγραφέα</message>
-	<message key="author.submit.authorSubmitLoginMessage">Για την υποβολή άρθρων στο περιοδικό απαιτείται η δημιουργία ενός λογαριασμού χρήστη. Αυτό επιτρέπει στους Επιμελητές του Περιοδικού να ανιχνεύουν και να διαχειρίζονται τις υποβολές των άρθρων σας και να επικοινωνούν μαζί σας σχετικά με την κατάσταση της υποβολής σας ή όταν απαιτούνται πρόσθετες πληροφορίες από εσάς.</message>
-	<message key="author.submit.mustEnterWaiverReason">Αν αιτήστε για μια Παράβλεψη Εισφοράς, θα πρέπει να εισάγετε τους σχετικούς λόγους στο παρεχόμενο διάστημα.</message>
+	<message key="author.submit.authorSubmitLoginMessage">Για την υποβολή άρθρων στο περιοδικό απαιτείται η δημιουργία ενός λογαριασμού χρήστη. Αυτό επιτρέπει στους Επιμελητές του Περιοδικού να παρακολουθούν τις υποβολές των άρθρων σας και να επικοινωνούν μαζί σας όταν η κατάσταση της υποβολής σας μεταβάλλεται ή όταν απαιτούνται πρόσθετες πληροφορίες από εσάς.</message>
+	<message key="author.submit.mustEnterWaiverReason">Αν αιτήστε για Παράβλεψη Εισφοράς, θα πρέπει να εισάγετε τους σχετικούς λόγους στον παρεχόμενο χώρο.</message>
 	<message key="author.submissions.queuedReviewSubsequent">Γύρος Αξιολόγησης {$round}</message>
-	<message key="author.submissions.queuedReviewRevisions">Προς Αξιολόγηση: Απαιτούνται Αναθεωρήσεις</message>
-	<message key="author.submissions.queuedEditingCopyedit">Προς Επιμέλεια: Έχει γίνει αίτημα για Επιμέλεια Κειμένου</message>
-	<message key="author.submissions.queuedEditingProofread">Προς Επιμέλεια: Έχει γίνει αίτημα για Επιμέλεια Τυπογραφικού Δοκιμίου</message>
+	<message key="author.submissions.queuedReviewRevisions">Υπό Αξιολόγηση: Απαιτούνται Αναθεωρήσεις</message>
+	<message key="author.submissions.queuedEditingCopyedit">Σε Επιμέλεια: Έχει γίνει αίτημα για Επιμέλεια Κειμένου</message>
+	<message key="author.submissions.queuedEditingProofread">Σε Επιμέλεια: Έχει γίνει αίτημα για Επιμέλεια Τυπογραφικού Δοκιμίου</message>
 	<message key="author.submit.reorder">Αναδιάτασξη ονόματος συγγραφέα</message>
 	<message key="author.submit.form.wordCountAlert">Έχετε ξεπεράσει το μέγιστο αριθμό λέξεων για περιλήψεις αυτής της ενότητας.</message>
 	<message key="author.submit.submissionLocale">Γλώσσα υποβολής</message>
-	<message key="author.submit.submissionLocaleDescription">Το περιοδικό δέχεται υποβολές σε πολλές γλώσσεες. Επιλέξτε την κύρια γλώσσα της υποβολής από το παρακάτω μενού.</message>
+	<message key="author.submit.submissionLocaleDescription">Το περιοδικό δέχεται υποβολές σε πολλές γλώσσες. Επιλέξτε την κύρια γλώσσα της υποβολής από το παρακάτω μενού.</message>
 	<message key="author.submit.form.localeRequired">Παρακαλούμε επιλέξτε μια γλώσσα υποβολής.</message>
+	<message key="author.submit.qualifyForWaiver">Παρακαλούμε εξετάστε την εξαίρεση του Κόστους Υποβολής Άρθρου για αυτό το άρθρο.</message>
 </locale>
