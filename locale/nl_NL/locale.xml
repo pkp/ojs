@@ -157,7 +157,7 @@
 	<message key="journal.currentIssue">Huidig nummer</message>
 	<message key="journal.journals">Tijdschriften</message>
 	<message key="journal.path">Pad</message>
-	<message key="journal.journal">Tijdschrift</message>
+	<message key="context.context">Tijdschrift</message>
 
 	<!-- User -->
 	<message key="user.showAllJournals">Toon mijn tijdschriften</message>

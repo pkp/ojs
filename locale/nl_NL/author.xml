@@ -24,9 +24,9 @@
 	<message key="author.submit.step4">Stap 4. Aanvullende bestanden laden</message>
 	<message key="author.submit.step4a">Stap 4a. Een aanvullend bestand toevoegen</message>
 	<message key="author.submit.step5">Stap 5. De inzending bevestigen</message>
-	<message key="author.submit.start">1. Start</message>
-	<message key="author.submit.supplementaryFiles">4. Aanvullende bestanden laden</message>
-	<message key="author.submit.confirmation">5. Bevestiging</message>
+	<message key="author.submit.start">Start</message>
+	<message key="author.submit.supplementaryFiles">Aanvullende bestanden laden</message>
+	<message key="author.submit.confirmation">Bevestiging</message>
 	<message key="author.submit.cancelSubmission">U kunt deze inzending op een later tijdstip voltooien door Actieve inzendingen te kiezen op de homepage voor auteurs.</message>
 	<message key="author.submit.notAccepting">Dit tijdschrift accepteert momenteel geen inzendingen.</message>
 	<message key="author.submit.requestWaiver">Kwijtschelding vragen</message>
@@ -41,16 +41,16 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Problemen? Neem contact op met <a href="mailto:{$supportEmail}">{$supportName}</a> voor assistentie.]]></message>
 	<message key="author.submit.journalSection">Tijdschriftsectie</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Kies de juiste sectie voor deze inzending (Zie Secties en beleid in <a href="{$aboutUrl}" target="_new">Over</a> het tijdschrift).]]></message>
-	<message key="author.submit.selectSection">Kies een sectie...</message>
+	<message key="submission.submit.selectSection">Kies een sectie...</message>
 	<message key="author.submit.submissionChecklist">Checklist voor inzending</message>
-	<message key="author.submit.submissionChecklistDescription">Aangeven dat de inzending gereed is om bekeken te worden door het tijdschrift door de volgende aan te vinken (opmerkingen voor de redacteur kunnen hieronder later toegevoegd worden).</message>
+	<message key="submission.submit.submissionChecklistDescription">Aangeven dat de inzending gereed is om bekeken te worden door het tijdschrift door de volgende aan te vinken (opmerkingen voor de redacteur kunnen hieronder later toegevoegd worden).</message>
 	<message key="author.submit.verifyChecklist">U moet zich ervan verzekeren dat alle onderdelen van de inzendings-checklist zijn afgewerkt voordat u verdergaat.</message>
 	<message key="author.submit.copyrightNoticeAgree">De auteurs verklaren zich akkoord met de voorwaarden van deze auteursrecht verklaring die van toepassing is op deze inzending als het gepubliceerd wordt door dit tijdschrift (opmerkingen voor de redacteur kunnen hieronder later toegevoegd worden).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">U moet akkoord gaan met de voorwaarden van de auteursrecht verklaring voor u door kunt gaan.</message>
-	<message key="author.submit.commentsForEditor">Opmerkingen voor de redacteur</message>
+	<message key="submission.submit.coverNote">Opmerkingen voor de redacteur</message>
 	<message key="author.submit.comments">Tekst opgeven (optioneel)</message>
 	<message key="author.submit.form.sectionRequired">Kies een geschikte tijdschriftsectie voor deze inzending.</message>
-	<message key="author.submit.privacyStatement">Privacybeleid van dit tijdschrift</message>
+	<message key="submission.submit.privacyStatement">Privacybeleid van dit tijdschrift</message>
 	<message key="author.submit.reorderInstructions">Verander de volgorde van de auteurs naar de volgorde zoals ze getoond worden bij de publicatie.</message>
 	<message key="author.submit.selectPrincipalContact">Eerste contactpersoon voor redactionele correspondentie.</message>
 	<message key="author.submit.addAuthor">Auteur toevoegen</message>
@@ -113,8 +113,8 @@
 	<message key="author.submit.authorSubmitLoginMessage">U heeft een account nodig om in te kunnen zenden bij dit tijdschrift. Dit geeft onze redacteuren de mogelijkheid om uw inzendingen te volgen en contact met u op te nemen als de status van uw inzending verandert of als er additionele informatie van u nodig is.</message>
 	<message key="author.submit.step2">Stap 2. De inzending laden</message>
 	<message key="author.submit.step3">Stap 3. De metadata van de inzending invoeren</message>
-	<message key="author.submit.upload">2. Inzending laden</message>
-	<message key="author.submit.metadata">3. Metadata invoeren</message>
+	<message key="author.submit.upload">Inzending laden</message>
+	<message key="author.submit.metadata">Metadata invoeren</message>
 	<message key="author.submissions.queuedReviewSubsequent">In review ronde {$round}</message>
 	<message key="author.submissions.queuedReviewRevisions">In review: revisies gevraagd</message>
 	<message key="author.submit.mustEnterWaiverReason">Als u om kwijtschelding vraagt, moet u een reden opgeven.</message>
