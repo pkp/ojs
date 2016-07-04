@@ -50,7 +50,6 @@
 
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Hjælp til tidsskrift</message>
-	<message key="navigation.archives">Arkiver</message>
 	<message key="navigation.current">Nyeste</message>
 	<message key="navigation.otherJournals">Andre tidsskrifter</message>
 	<message key="navigation.browseByIssue">Efter nummer</message>
@@ -101,12 +100,8 @@
 	<message key="article.suppFiles">Supplerende fil(er)</message>
 	<message key="article.suppFilesAbbrev">Supp. filer</message>
 	<message key="article.discipline">Akademisk fagområde og underfagområder</message>
-	<message key="article.subjectClassification">Emneklassificering</message>
 	<message key="article.subject">Nøgleord</message>
 	<message key="article.coverage">Dækning</message>
-	<message key="article.coverageGeo">Geografisk dækning</message>
-	<message key="article.coverageChron">Kronologisk eller historisk dækning</message>
-	<message key="article.coverageSample">Karaktertræk ved forskningseksempel</message>
 	<message key="article.type">Type, metode eller fremgangsmåde</message>
 	<message key="article.language">Sprog</message>
 	<message key="article.sectionEditor">SE</message>
@@ -174,20 +169,9 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Tidsskriftschef</message>
-	<message key="user.role.editor">Redaktør</message>
 	<message key="user.role.sectionEditor">Sektionsredaktør</message>
-	<message key="user.role.layoutEditor">Layoutredaktør</message>
-	<message key="user.role.copyeditor">Manuskriptredaktør</message>
-	<message key="user.role.proofreader">Korrekturlæser</message>
-	<message key="user.role.author">Forfatter</message>
 	<message key="user.role.subscriptionManager">Abonnementschef</message>
 	<message key="user.role.managers">Tidsskriftschefer</message>
-	<message key="user.role.editors">Redaktører</message>
-	<message key="user.role.sectionEditors">Sektionsredaktører</message>
-	<message key="user.role.layoutEditors">Layoutredaktører</message>
-	<message key="user.role.copyeditors">Manuskriptredaktører</message>
-	<message key="user.role.proofreaders">Korrekturlæsere</message>
-	<message key="user.role.authors">Forfattere</message>
 	<message key="user.role.subscriptionManagers">Abonnementschefer</message>
 
 	<!-- Common Issue Terms -->
@@ -209,7 +193,6 @@
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">Manuskripthændelse</message>
-	<message key="submission.event.general.articleSubmitted">Artiklen er fremsendt</message>
 	<message key="submission.event.general.issueScheduled">Manuskriptet er sendt til køen for nummerplanlægning</message>
 	<message key="submission.event.general.issueAssigned">Manuskriptet er tildelt nummer</message>
 	<message key="submission.event.general.articlePublished">Artiklen er publiceret</message>
@@ -526,18 +509,14 @@ Aktiv er antallet af bedømmelser, der i øjeblikket overvejes eller er forestå
 	<message key="submission.comments.saveAndEmailEditor">Gem og send e-mail til redaktør</message>
 
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Er du ikke bruger? Registrer dig på dette websted</message>
 	<message key="user.login.resetPasswordInstructions"><![CDATA[Af sikkerhedshensyn sender dette system registrerede brugere en e-mail med en nulstillet adgangskode i stedet for at tilbagekalde den
 aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulstille din adgangskode. Der sendes en bekræftelse til denne e-mail-adresse.]]></message>
 
 	<!-- Profile -->
 
 	<!-- Registration -->
-	<message key="user.register.selectJournal">Vælg et tidsskrift, du vil registreres hos</message>
 	<message key="user.register.noJournals">Der findes ingen tidsskrifter, du kan blive registreret hos, på dette websted.</message>
 	<message key="user.register.privacyStatement">Erklæring om beskyttelse af personlige oplysninger</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klik her</a>, hvis du allerede er registreret hos dette eller et andet tidsskrift på dette websted.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klik her</a>, hvis du <b>ikke</b> allerede er registreret hos dette eller et andet tidsskrift på dette websted.]]></message>
 	<message key="user.register.loginToRegister">Angiv dit eksisterende brugernavn og din eksisterende adgangskode for at registrere hos dette tidsskrift.</message>
 	<message key="user.register.registrationDisabled">Dette tidsskrift accepterer i øjeblikket ikke brugerregistreringer.</message>
 	<message key="user.register.form.passwordLengthTooShort">Den angivne adgangskode er for kort.</message>
@@ -594,21 +573,14 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 
 	<!-- About The Journal -->
 	<message key="about.statistics">Statistikker</message>
-	<message key="about.journalContact">Kontaktperson for tidsskrift</message>
-	<message key="about.aboutTheJournal">Om tidsskriftet</message>
 	<message key="about.editorialTeam">Redaktionsgruppe</message>
 	<message key="about.editorialTeam.biography">Biografi</message>
 	<message key="about.editorialPolicies">Redaktionelle politikker</message>
 	<message key="about.focusAndScope">Fokus og område</message>
 	<message key="about.sectionPolicies">Sektionspolitikker</message>
 	<message key="about.submissions">Manuskripter</message>
-	<message key="about.sponsors">Sponsorer</message>
-	<message key="about.contributors">Støttekilder</message>
 	<message key="about.onlineSubmissions">Onlinemanuskripter</message>
-	<message key="about.onlineSubmissions.haveAccount">Har du allerede et brugernavn/en adgangskode til {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Gå til logon</message>
-	<message key="about.onlineSubmissions.needAccount">Har du brug for et brugernavn/en adgangskode?</message>
-	<message key="about.onlineSubmissions.registration">Gå til registrering</message>
 	<message key="about.onlineSubmissions.registrationRequired">Du skal være registreret og logget på for at kunne fremsende elementer online og for at kontrollere de aktuelle manuskripters status.</message>
 	<message key="about.authorGuidelines">Retningslinjer for forfattere</message>
 	<message key="about.submissionPreparationChecklist">Tjekliste til forberedelse af manuskript</message>
@@ -629,7 +601,6 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 	<message key="about.subscriptionsContact">Kontaktperson for abonnementer</message>
 	<message key="about.availableSubscriptionTypes">Abonnementstyper</message>
 	<message key="about.memberships">Medlemskaber</message>
-	<message key="about.journalSponsorship">Tidsskriftssponsorat</message>
 	<message key="about.aboutThisPublishingSystem">Om dette publiceringssystem</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Dette tidsskrift anvender Open Journal Systems {$ojsVersion}, som er open source-software til administration og publicering af tidsskrifter, der er udviklet , understøttet og gratis distribueret af <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> i henhold til GNU General Public License.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[Dette websted anvender Open Journal Systems {$ojsVersion}, som er open source-software til administration og publicering af tidsskrifter, der er udviklet , understøttet og gratis distribueret af <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> i henhold til GNU General Public License.]]></message>
@@ -749,7 +720,6 @@ Serveren understøtter i øjeblikket mbstring: <strong>{$supportsMBString}</stro
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} har angivet et nyt manuskript, Id {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} har revideret artikel {$articleId}. Det nye fil-id er {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} er blevet tildelt til at bedømme manuskriptet {$articleId} for bedømmelsesrunde {$round}.</message>
 	<message key="log.review.reviewerUnassigned">Tildelingen af {$reviewerName} til bedømmelse af manuskriptet {$articleId} for bedømmelsesrunde {$round} er fjernet.</message>
 	<message key="log.review.reviewInitiated">Rundebedømmelsen {$round}, der foretages af {$reviewerName}, for manuskriptet {$articleId} er startet.</message>
 	<message key="log.review.reviewReinitiated">Rundebedømmelsen {$round}, der foretages af {$reviewerName}, for manuskriptet {$articleId} er startet igen.</message>
@@ -786,7 +756,6 @@ Serveren understøtter i øjeblikket mbstring: <strong>{$supportsMBString}</stro
 	<message key="log.editor.archived">Manuskriptet {$articleId} er arkiveret.</message>
 	<message key="log.editor.restored">Manuskriptet {$articleId} er gendannet til køen.</message>
 	<message key="log.editor.editorAssigned">{$editorName} er blevet tildelt som redaktør for manuskriptet {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} har fremskyndet redigeringsprocessen for manuskriptet {$articleId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} har tildelt {$proofreaderName} at læse korrektur på manuskriptet {$articleId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} har fremsendt {$articleId} med henblik på planlægning.</message>
@@ -837,7 +806,6 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	--> <!-- Icons: Default "alt" text -->
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Valutalisten "{$filename}" er indlæst fra XML</message>
-	<message key="debug.notes.helpMappingLoad">XML-hjælptilknytningsfilen {$filename} blev genindlæst under søgning efter {$id}.</message>
 
 	<!--
 	 *
@@ -845,11 +813,8 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	 *
 	-->
 	<!-- Default settings for payment items. -->
-	<message key="submission.reviewForm">Review formular</message>
-	<message key="submission.reviewFormResponse">Review formular respons</message>
 	<message key="reviewer.article.enterReviewForm">Klik på ikonet for at udfylde review formularen.</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Udfyld de obligatoriske felter.</message>
-	<message key="common.pageHeader.altText">Sidehovede</message>
 	<message key="common.homePageHeader.altText">Hjemmesidehovede</message>
 	<message key="common.journalHomepageImage.altText">Tidsskriftets hjemmesidebillede</message>
 	<message key="article.coverPage.altText">Forsidebillede</message>
@@ -903,10 +868,6 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="subscriptionManager.individualSubscriptions">Individuelle abonnementer</message>
 	<message key="subscriptionManager.institutionalSubscriptions">Institutionsabonnementer</message>
 	<message key="subscriptionManager.subscriptionTypes">Abonnementstyper</message>
-	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata Format Plugins</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Disse format-plugins udtrykker metadata i OAI-kommunikationer.</message>
-	<message key="manager.setup.reviewProcessEmailDescription">Redaktører sender bedømmere en anmodning om at bedømme og vedhæfter det indleverede manuskript til e-mailen. Bedømmerne sender en e-mail til redaktørerne med deres accept (eller afvisning) samt bedømmelse og anbefalinger. Redaktørerne angiver bedømmernes accept (eller afvisning) samt bedømmelse og anbefalinger på bedømmelsessiden for indlevering af manuskriptet for at registrere hele bedømmelsesprocessen.</message>
-	<message key="manager.setup.citations">Aktiver Citationsmarkeringsværktøjet</message>
 	<message key="reviewer.article.reviewGuidelinesDescription">Retningslinjerne for bedømmelse opstiller de kriterier, som bedømmerne skal anvende til at vurdere, om et indleveret manuskript egner sig til at blive udgivet i tidsskriftet, og kan indeholde særlige instruktioner for, hvordan man udarbejder en effektiv og anvendelig bedømmelse. Under udførelsen af bedømmelsen præsenteres bedømmerne for to åbne tekstfelter – det første er "til forfatter og redaktør", og det andet er "til redaktør". Alternativt kan tidsskriftschefen oprette en peer review-formular under bedømmelsesformularer. Under alle omstændigheder har redaktører mulighed for at inkludere bedømmelserne i deres korrespondance med forfatteren.</message>
 	<message key="user.register.reviewerInterests">Identificer bedømmers interesser (hovedområder og researchmetoder):</message>
 	<message key="user.subscriptions.mySubscriptions">Mine abonnementer</message>
@@ -947,8 +908,6 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="user.subscriptions.form.ipRangeValid">Indtast et gyldigt IP-område.</message>
 	<message key="user.subscriptions.form.deleteIpRange">Slet</message>
 	<message key="user.subscriptions.form.addIpRange">Tilføj</message>
-	<message key="article.pdf.download">Download denne pdf-fil</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Den valgte pdf-fil vil blive indlæst her, hvis din browser har en PDF reader-plugin installeret (for eksempel en nyere version af <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Du kan også downloade pdf-filen direkte til din computer, hvorfra den kan åbnes med en PDF reader. Klik på Download-linket herunder for at downloade pdf-filen.</p> <p>Hvis du ønsker yderligere information om, hvordan du printer, gemmer og arbejder med pdf-filer, kan du få hjælp på Highwire Press' side <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p>]]></message>
 	<message key="about.history">Tidsskriftshistorik</message>
 	<message key="about.subscriptions.individual">Individuelle abonnementer</message>
 	<message key="about.subscriptions.institutional">Institutionsabonnementer</message>
@@ -963,35 +922,24 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="notification.mailListDescription">Indtast din e-mail-adresse for at modtage meddelelser om vigtigt nyt indhold, så snart det bliver tilføjet i tidsskriftet.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Denne side viser vigtige opdateringer vedrørende dette tidsskrift, fx nye numre eller meddelelser.  Du kan abonnere på disse meddelelser via RSS feeds (ved at klikke på billederne til højre) eller <a href="{$emailUrl}">via e-mail.</a>]]></message>
 	<message key="notification.type.articleSubmitted">En ny artikel, "{$title}", er blevet indleveret.</message>
-	<message key="notification.type.copyeditComment">En manuskriptredaktør har skrevet en kommentar vedrørende "{$title}".</message>
 	<message key="notification.type.editing">Redigeringshændelser</message>
 	<message key="notification.type.editorDecisionComment">Der er blevet skrevet en kommentar til redaktørens beslutning vedrørende "{$title}".</message>
 	<message key="notification.type.galleyModified">Der er foretaget en ændring af et publiceringsformatet til "{$title}".</message>
 	<message key="notification.type.issuePublished">Der er blevet udgivet et nummer.</message>
-	<message key="notification.type.layoutComment">Der er blevet skrevet en kommentar vedrørende "{$title}s" layout.</message>
-	<message key="notification.type.metadataModified">"{$title}s" metadata er blevet ændret.</message>
 	<message key="notification.type.newAnnouncement">Der er blevet oprettet en ny meddelelse.</message>
-	<message key="notification.type.proofreadComment">En korrekturlæser har skrevet en kommentar vedrørende "{$title}".</message>
-	<message key="notification.type.reviewerComment">En bedømmer har skrevet en kommentar vedrørende "{$title}".</message>
 	<message key="notification.type.reviewerFormComment">Der er blevet indsendt en bedømmelsesformular vedrørende "{$title}".</message>
 	<message key="notification.type.reviewing">Bedømmelseshændelser</message>
 	<message key="notification.type.site">Websted-hændelser</message>
 	<message key="notification.type.submissionComment">En redaktør har skrevet en kommentar vedrørende "{$title}".</message>
 	<message key="notification.type.submissions">Indleveringshændelser</message>
-	<message key="notification.type.suppFileModified">"{$title}s" supplerende fil(er) er blevet ændret.</message>
 	<message key="notification.type.userComment">En læser har skrevet en kommentar vedrørende "{$title}".</message>
 	<message key="user.authorization.copyeditorAssignmentMissing">Adgang nægtet! Du er ikke blevet tildelt rollen som manuskriptredaktør på denne artikel.</message>
-	<message key="user.authorization.noJournal">Intet tidsskrift i denne kontekst!</message>
 	<message key="user.authorization.sectionAssignment">Du forsøger at få adgang til en artikel, som ikke er en del af din sektion.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Ugyldig manuskriptredaktør-indlevering eller ingen anmodning om manuskriptredaktør-indlevering!</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">Ugyldig sektionsredaktør-indlevering eller ingen anmodning om sektionsredaktør-indlevering!</message>
 	<message key="navigation.categories">Kategorier</message>
 	<message key="navigation.categories.browse">Browse</message>
 	<message key="issue.fullIssue">Hele nummeret</message>
 	<message key="issue.nonpdf.title">Nummerdownload</message>
-	<message key="issue.viewIssueDescription">Se eller download hele nummeret</message>
-	<message key="plugins.categories.pubIds">Public Identifier plug-ins</message>
-	<message key="plugins.categories.pubIds.description">Disse plug-ins gør det muligt at koble sig til en 'public identifier'.</message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
 	<![CDATA[<ol>
 	<li>Markerede punkter indikerer, at der skal foretages en tilretning af en redaktør med betegnelsen:
@@ -1046,33 +994,4 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="installer.maxFileUploadSize"><![CDATA[Din server tillader på nuværende tidspunkt upload af dokument på maksimumstørrelse: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[Der er en ny OJS-udgave tilgængelig! Du anvender i øjeblikket {$currentVersion}. Den nyeste OJS-udgave er {$latestVersion}. Besøg <a href="http://pkp.sfu.ca/ojs_download" target="_new">this page</a> og download den nyeste version og se opgraderingsinstruktionerne.]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[Der er en ny OJS-udgave tilgængelig! Du anvender i øjeblikket {$currentVersion}. Den nyeste OJS-udgave er {$latestVersion}. Kontakt din webstedsadministrator  ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) for at gøre ham opmærksom på den nye version. Få mere information <a href="http://pkp.sfu.ca/ojs_download" target="_new">her</a>.]]></message>
-	<message key="common.journal">Tidsskrift</message>
-	<message key="submission.permissions">Ophavsret</message>
-	<message key="submission.license">Licens</message>
-	<message key="submission.copyright">Copyright</message>
-	<message key="submission.copyrightHolder">Ophavsretsindehaveren</message>
-	<message key="submission.copyrightYear">Copyright-år</message>
-	<message key="submission.copyrightStatement">Copyright (c) {$copyrightYear} {$copyrightHolder}</message>
-	<message key="submission.licenseURLValid">Angiv en gyldig URL (inkludér http://).</message>
-	<message key="submission.licenseURL">Licens-URL</message>
-	<message key="submission.license.cc.by-nc-nd4">CC - Navngivelse - Ikke-kommerciel - Ingen Bearbejdede Værker (by-nc-nd)</message>
-	<message key="submission.license.cc.by-nc4">CC - Navngivelse - Ikke-kommerciel (by-nc)</message>
-	<message key="submission.license.cc.by-nc-sa4">CC - Navngivelse - Ikke-kommerciel - Del på samme vilkår (ShareAlike) (by-nc-sa)</message>
-	<message key="submission.license.cc.by-nd4">CC - Navngivelse - Ingen bearbejdelser (by-nd)</message>
-	<message key="submission.license.cc.by4">CC - Navngivelset (by)</message>
-	<message key="submission.license.cc.by-sa4">CC - Del på samme vilkår (ShareAlike) (by-sa)</message>
-	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Dette manuskript er licenseret under en <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Navngivelse - Ikke-kommerciel - Ingen Bearbejdede Værker (by-nc-nd) international licens</a>.]]></message>
-	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Dette manuskript er licenseret under en <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Navngivelse - Ikke-kommerciel (by-nc)</a>.]]></message>
-	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Dette manuskript er licenseret under en <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Navngivelse - Ikke-kommerciel - Del på samme vilkår (ShareAlike) (by-nc-sa)</a>.]]></message>
-	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />Dette manuskript er licenseret under en <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Navngivelse - Ingen bearbejdelse (by-nd) international licens</a>.]]></message>
-	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Dette manuskript er licenseret under en <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Navngivelse (by) international licens</a>.]]></message>
-	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Dette manuskript er licenseret under en <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Del samme vilkåt (ShareAlike) (by-sa) internationel licens</a>.]]></message>
-	<message key="user.orcid">ORCID iD</message>
-	<message key="user.orcid.description"><![CDATA[Et ORCID iD kan kun tildeles af <a href="http://orcid.org/" target="_blank">the ORCID Registry</a>. Det er vigtigt at overholde denne standard, og inkludere den fulde URI (fx. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
-	<message key="user.profile.form.orcidInvalid">Den indsatte ORCID iD er ikke gyldig.</message>
-	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems understøtter <a href="http://www.lockss.org/" target="_blank">LOCKSS</a>-systemet (Lots of Copies Keep Stuff Safe) for at sikre en pålidelig og permanent arkivering af tidsskriftet. I har flere muligheder for at lade jeres tidsskrift indgå i LOCKSS-netværket:]]></message>
-	<message key="about.purchaseIssue">Nummerkøb</message>
-	<message key="about.purchaseArticle">Artikelkøb</message>
-	<message key="about.purchaseIssueDescription">Læsere uden abonnement kan stadig købe enkelte numre. Følgende betalingsmuligheder og gebyrer foreligger.</message>
-	<message key="about.purchaseArticleDescription">Læsere uden abonnement kan stadig købe enkelte artikler. Følgende betalingsmuligheder og gebyrer foreligger.</message>
 </locale>

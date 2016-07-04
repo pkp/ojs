@@ -13,10 +13,6 @@
   -->
 
 <locale name="da_DK" full_name="Dansk">
-	<message key="editor.article.reviewForms">Review formularer</message>
-	<message key="editor.article.selectReviewForm">Vælg review formular</message>
-	<message key="editor.article.clearReviewForm">Nulstil review formular</message>
-	<message key="editor.article.confirmChangeReviewForm">Hvis du skifter review formular slettes responsen...</message>
 	<message key="editor.home">Startside for redaktør</message>
 	<message key="editor.submissionsAndPublishing">Manuskripter og publicering</message>
 	<message key="editor.submissionQueue">Manuskriptkø</message>
@@ -94,9 +90,7 @@
 	<message key="editor.issues.noLiveIssues">Ingen Live-numre</message>
 	<message key="editor.issues.open">Åbn</message>
 	<message key="editor.issues.pages">Sider</message>
-	<message key="editor.navigation.issues">Numre</message>
 	<message key="editor.navigation.futureIssues">Fremtidige numre</message>
-	<message key="editor.navigation.createIssue">Opret nummer</message>
 	<message key="editor.navigation.issueArchive">Tidligere numre</message>
 	<message key="editor.article.designateReviewVersion">Angiv den oprindelige fil som Bedømmelsesversion</message>
 	<message key="editor.article.uploadReviewVersion">Overfør en revideret bedømmelsesversion</message>
@@ -219,5 +213,4 @@
 	<message key="editor.issues.confirmDeleteGalley">Er du sikker på, at du vil slette dette nummer?</message>
 	<message key="editor.reassign">Overfør</message>
 	<message key="editor.publicIdentificationExists">Filnavnet '{$publicIdentifier}' eksisterer allerede i forbindelse med andet materiale (nummer, artikel, publiceringsversion eller supplerende filer). Vælg et unikt filnavn inden for dit tidsskrift.</message>
-	<message key="editor.notifyUsers.allMailingList">Inkludér alle e-mails på mailinglisten  ({$count} e-mails)</message>
 </locale>
