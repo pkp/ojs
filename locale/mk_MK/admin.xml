@@ -23,7 +23,7 @@
 	<message key="admin.settings.journalsList.showThumbnail">Слика на списанието</message>
 	<message key="admin.settings.journalsList.showTitle">Наслов на списанието</message>
 	<message key="admin.settings.journalsList.showDescription">Опис на списанието</message>
-	<message key="admin.languages.primaryLocaleInstructions">Ова ќе биде стандарден јазик за страницата и за секое поставено списание. </message>
+	<message key="admin.languages.primaryLocaleInstructions">Ова ќе биде стандарден јазик за страницата и за секое поставено списание.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Изберете ги сите локации за подршка на страницата. Избраните локации ќе бидат достапни за употреба од страна на сите списанија поставени на оваа страница, и исто така ќе се појавуваат во избирачкото мени за јазик на секоја страница. Ако не се избрани повеќе локации, менито за јазик нема да се појавува и проширените јазични подесувања нема да бидат достапни за списанијата.</message>
 	<message key="admin.locale.maybeIncomplete">Означените локации може да се нецелосни.</message>
 	<message key="admin.languages.confirmUninstall">Дали сте сигурни дека сакате да ја деинсталирате оваа локација?Ова може да влијае на било кое моментално поставено списание кое ја користи оваа локација.</message>
@@ -38,7 +38,7 @@
 	<message key="admin.auth.enableSyncPasswords">Овозможете промена на лозинката на корисникот(ако е подржано од додатокот за проверка). Овозможувањето на оваа опција им овозможува на корисниците да ги променат нивните лозинки внатре во OJS и да ја користат OJS "изгубена лозинка" функцијата за да ги ресетираат заборавените лозинки. Овие функции ќе бидат недостапни за корисниците со овој код за проверка ако оваа опција не е овозможена.</message>
 	<message key="admin.auth.enableCreateUsers">Овозможете му на корисникот да создава(ако е подржано од додатокот за проверка). Корисниците создадени во рамките на OJS со овој код за проверка ќе бидат автоматски додадени на далечински код за проверка ако тие веќе не постојат. Покрај тоа, ако овој код е стандарден код за проверка, OJS профилите создадени преку регистрација на корисниците ќе бидат додадени на далечински код за проверка.</message>
 	<message key="admin.systemVersion">OJS верзија</message>
-	<message key="admin.systemConfiguration">OJS конфигурација </message>
+	<message key="admin.systemConfiguration">OJS конфигурација</message>
 	<message key="admin.systemConfigurationDescription"><![CDATA[OJS конфигурациски поставки од<tt>config.inc.php</tt>.]]></message>
 	<message key="admin.journals.journalSettings">Подесувања на списание</message>
 	<message key="admin.journals.noneCreated">Не се креирани списанија.</message>

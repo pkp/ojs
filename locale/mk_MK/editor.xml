@@ -94,7 +94,7 @@
 	<message key="editor.issues.unpublishIssue">Необјавувај издание</message>
 	<message key="editor.issues.previewIssue">Прегледај издание</message>
 	<message key="editor.issues.preview">(Преглед)</message>
-	<message key="editor.issues.confirmPublish">Дали си сигурен дека сакаш да објавиш ново издание? </message>
+	<message key="editor.issues.confirmPublish">Дали си сигурен дека сакаш да објавиш ново издание?</message>
 	<message key="editor.issues.confirmUnpublish">Дали си сигурен дека сакаш отстраниш ова објавено издание?</message>
 	<message key="editor.issues.publicArticleIdExists">Не може да се зачуваат јавните id за статијата:</message>
 	<message key="editor.issues.noLiveIssues">Нема јавни изданија</message>
@@ -150,7 +150,7 @@
 	<message key="editor.article.replaceCopyeditor">Замени едитор за уредување</message>
 	<message key="editor.article.editorsCopyedit">Уредник на едитор за уредување</message>
 	<message key="editor.article.showAuthor">Дозволете авторот да ги гледа датотеките</message>
-	<message key="editor.article.showCopyeditor">Прикажете ја верзијата на едиторот за уредување </message>
+	<message key="editor.article.showCopyeditor">Прикажете ја верзијата на едиторот за уредување</message>
 	<message key="editor.article.rateReviewer">Преглед на оцени</message>
 	<message key="editor.article.reviewerRating.veryGood">5 Највисока</message>
 	<message key="editor.article.reviewerRating.good">4</message>
@@ -173,7 +173,7 @@
 	<message key="editor.article.decision.resubmit">Пратете повторно за преглед</message>
 	<message key="editor.article.decision.decline">Одбиј поднесување</message>
 	<message key="editor.article.selectLayoutEditor">Изберете уредник на изгледот</message>
-	<message key="editor.article.replaceLayoutEditor">Повторно изберете уредник на изгледот </message>
+	<message key="editor.article.replaceLayoutEditor">Повторно изберете уредник на изгледот</message>
 	<message key="editor.article.reviewSubmission">Прегледај поднесување</message>
 	<message key="editor.article.resubmitForReview">Пратете повторно датотека за преглед</message>
 	<message key="editor.article.resubmitFileForPeerReview">Пратете ја повторно избраната датотека за рецензија</message>

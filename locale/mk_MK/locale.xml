@@ -792,12 +792,12 @@
 	<message key="about.copyrightNotice">Авторски права</message>
 	<message key="about.privacyStatement">Изјава за доверливост</message>
 	<message key="about.authorFees">Давачки на авторот</message>
-	<message key="about.authorFeesMessage">Ова списание ги наплаќа следниве давачки на авторот. </message>
+	<message key="about.authorFeesMessage">Ова списание ги наплаќа следниве давачки на авторот.</message>
 	<message key="about.peerReviewProcess">Процес на рецензија</message>
 	<message key="about.publicationFrequency">Фреквенција на објавување</message>
 	<message key="about.openAccessPolicy">Приватност на отворен пристап</message>
 	<message key="about.delayedOpenAccess">Одложен отворен пристап</message>
-	<message key="about.delayedOpenAccessDescription1"> Содржината на ова списание ќе биде достапна во формат со отворен пристап </message>
+	<message key="about.delayedOpenAccessDescription1"> Содржината на ова списание ќе биде достапна во формат со отворен пристап</message>
 	<message key="about.delayedOpenAccessDescription2">месец(и) откако ова издание е објавено.</message>
 	<message key="about.authorSelfArchive">Сопствено архивирање на авторот</message>
 	<message key="about.archiving">Архивирање</message>
@@ -834,7 +834,7 @@
 	<message key="gifts.recipientDescription">За кого е овој подарок?</message>
 	<message key="gifts.thankYou">Благодарам</message>
 	<message key="gifts.thankYouMessage">Вашата членарина за подароци е завршена. Ќе добиете копија од емаилот за подарок пратен до примачот откако вашата исплата ќе биде обработена.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Членарина за подароци </message>
+	<message key="gifts.purchaseGiftIndividualSubscription">Членарина за подароци</message>
 	<message key="gifts.subscriptionFormIntroduction">Ве молам потполнете ја формата подолу. Предвидени информации за контакт, заедно со вашата белешка за подарокот, ќе се користат за да се испрати е-мејл на примачот и за да ве информираат за нови подарок претплати (исто така ќе добиете копија од овој емаил/од оваа порака).</message>
 	<message key="gifts.details">Детали за подарокот</message>
 	<message key="gifts.detailsDescription">Ве молам изберете подарок подолу и вклучете ја вашата персонална порака која ќе биде испратена до примачот (ќе добиете копија од оваа порака).</message>
@@ -889,7 +889,7 @@
 
 	<message key="payment.donation.makeDonation">Донирај</message>
 
-	<message key="payment.submission.paySubmission">Плаќање на надомест за поднесување </message>
+	<message key="payment.submission.paySubmission">Плаќање на надомест за поднесување</message>
 	<message key="payment.fastTrack.payFastTrack">Плаќаат за FastTrack</message>
 	<message key="payment.fastTrack.inFastTrack">во FastTrack</message>
 	<message key="payment.publication.payPublication">Плаќаат за објавување</message>
@@ -957,7 +957,7 @@
 	<message key="installer.localeInstructions">Мајчиниот јазик да се користи за овој систем. Ве молиме консултирајте се со OJS документацијата, ако сте заинтересирани за поддршка за јазици кои не се наведени тука.</message>
 	<message key="installer.additionalLocalesInstructions">Одберете ги додатните јазици за поддршка на овој систем. Овие јазици ќе бидат достапни за употреба од страна на списанија хостирани на сајт. Дополнителните јазици, исто така, можат да бидат инсталирани во било кое време од страна на сајт администрациониот интерфејс.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Внесете ја целосната патека на постоечкиот директориумот каде прикачените датотеки треба да се чуваат. Овој директориум не треба да биде директно веб-достапен. <strong>Ве молам осигурајте се дека овој директориум постои и може да запишува пред инсталацијата.</strong> Windows имињата на патеките треба да користат однапред коси црти, e.g. "C:/myjournal/files".]]></message>
-	<message key="installer.databaseSettingsInstructions">OJS бараат пристап до SQL базата на податоци за чување на податоците. Види ги системските барања погоре на листата на поддржани бази на податоци. Во полињата подолу, обезбедите подесувањата да се користат за да се поврзете со базата на податоци. </message>
+	<message key="installer.databaseSettingsInstructions">OJS бараат пристап до SQL базата на податоци за чување на податоците. Види ги системските барања погоре на листата на поддржани бази на податоци. Во полињата подолу, обезбедите подесувањата да се користат за да се поврзете со базата на податоци.</message>
 	<message key="installer.installApplication">Инсталирај го Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Надгради го Open Journal Systems</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Предупредување:</strong>Ако инсталацијата не успее делумно преку инсталацијата на базата на податоци можеби ќе треба да ја отфрлите вашиот OJS база на податоци или табелите на базата на податоци пред да се обидете одново да инсталирате база на податоци.]]></message>

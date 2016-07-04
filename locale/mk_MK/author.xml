@@ -38,7 +38,7 @@
 	<message key="author.submit.mustEnterWaiverReason">Доколку се пријавувате за откажување, мора да ја наведете причината во предвидениот простор.</message>
 	<message key="author.submissions.queuedReviewSubsequent">Процес на прегледување {$round}</message>
 	<message key="author.submissions.queuedReviewRevisions">Прегледување: Ревизиите се задолжителни</message>
-	<message key="author.submissions.queuedEditingCopyedit">Уредување: Барање за лекторирање </message>
+	<message key="author.submissions.queuedEditingCopyedit">Уредување: Барање за лекторирање</message>
 	<message key="author.submissions.queuedEditingProofread">Уредување: Барање за приспособување</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Прикачи лекторирана верзија</message>
 	<message key="author.submissions.proofreadingCorrections">Корекции на лекторирањето</message>

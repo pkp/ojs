@@ -47,7 +47,7 @@
 	<message key="manager.payment.options.acceptSubscriptionPayments">Ова ќе ја активира исплатата на претплатниците, каде типот, цената, времетраењето и претплатите се управувани од страна на Менаџерот на списанието.</message>
 	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Ова ќе ја активира исплатата на додатните претплатниците, овозможувајќи им на читателите на списанието да купат додатните претплати за други читатели.</message>
 	<message key="manager.payment.options.donationFee">Донации за списание</message>
-	<message key="manager.payment.options.enablePayments">Кликни тука за да се овозможи модулот за плаќања. Мора да ги конфигурирате поставувањата за плаќања со пополнување на формуларот подолу. Забелешка: Корисниците ќе мораат да се најават за да вршат плаќања. </message>
+	<message key="manager.payment.options.enablePayments">Кликни тука за да се овозможи модулот за плаќања. Мора да ги конфигурирате поставувањата за плаќања со пополнување на формуларот подолу. Забелешка: Корисниците ќе мораат да се најават за да вршат плаќања.</message>
 	<message key="manager.payment.options.fastTrackFee">Брз преглед</message>
 	<message key="manager.payment.options.fee">Надоместок</message>
 	<message key="manager.payment.options.feeDescription">Опис на надоместокот</message>
@@ -80,7 +80,7 @@
 	<message key="manager.people.enrollExistingUser">Запишување на постоечки корисник</message>
 	<message key="manager.people.enrollSyncJournal">Со списанието</message>
 	<message key="manager.people.mergeUsers.from.description">Изберете корисник (или неколку) и спојте ги во еден кориснички профил (на пр.кога некој има два кориснички профила). Профилот(профилите) избран прв ќе бидат избришан и сите поднесоци, задачи и сл. ќе бидат дадени на другиот профил.</message>
-	<message key="manager.people.mergeUsers.into.description">Изберете корисник на кого ќе му ги дадете правата, уредувањата ..итн од претходниот корисник. </message>
+	<message key="manager.people.mergeUsers.into.description">Изберете корисник на кого ќе му ги дадете правата, уредувањата ..итн од претходниот корисник.</message>
 	<message key="manager.people.roleEnrollment">{$role} Запишувања</message>
 	<message key="manager.people.syncUserDescription">Синхронизацијата ќе ги запише сите корисници запишани во одредена улога во одредено списание во иста улога во ова списание. Оваа функција овозможува заеднички сет на корисници (на пр.рецензенти) да бидат синхронизирани помеѓу списанијата.</message>
 	<message key="manager.sections.abstractsNotRequired">Не е потребно апстракт</message>
@@ -111,7 +111,7 @@
 	<message key="manager.section.submissionsToThisSection">Поднесувања направени на овој дел на списанието</message>
 	<message key="manager.sections.unassigned">Достапни уредници на дел</message>
 	<message key="manager.sections.wordCount">Бројач на зборови</message>
-	<message key="manager.sections.wordCountInstructions">Ограничи го бројачот на зборови во апстрактот за овој дел (0 кога нема ограничување): </message>
+	<message key="manager.sections.wordCountInstructions">Ограничи го бројачот на зборови во апстрактот за овој дел (0 кога нема ограничување):</message>
 	<message key="manager.setup">Поднесувања</message>
 	<message key="manager.setup.aboutItemContent">Содржина</message>
 	<message key="manager.setup.addAboutItem">Додади за ставката</message>
@@ -127,7 +127,7 @@
 	<message key="manager.setup.announcementsDescription">Соопштенијата можат да бидат објавени за да се информираат читателите за вестите и настаните на списанието. Објавените соопштенија ќе се појави на страницата за Соопштенија.</message>
 	<message key="manager.setup.announcementsIntroduction">Дополнителни информации</message>
 	<message key="manager.setup.announcementsIntroductionDescription">Внесете дополнителни информации кои треба да бидат прикажани за читателите на оваа страница за Соопштенија.</message>
-	<message key="manager.setup.appearInAboutJournal">(Да се ​​појави во За списанието) </message>
+	<message key="manager.setup.appearInAboutJournal">(Да се ​​појави во За списанието)</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Барање за внесување на автори во датотеки за (CI) состојба со нивното поднесување.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Потребенно е рецензентите да поднесат изјава за CI со секој преглед.</message>
 	<message key="manager.setup.history">Историја на списанието</message>
