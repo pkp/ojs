@@ -5,7 +5,7 @@
   * locale/zh_TW/locale.xml
   *
   * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky 
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the zh_TW (繁體中文) locale.
@@ -47,7 +47,6 @@
 	<message key="navigation.journalHelp">期刊協助資訊</message>
 	<message key="navigation.loggedInAs">您是以下列使用者名稱登入：</message>
 	<message key="navigation.logout">登出</message>
-	<message key="navigation.archives">過期期刊</message>
 	<message key="navigation.current">當期期刊</message>
 	<message key="navigation.otherJournals">其它期刊</message>
 	<message key="navigation.myProfile">我的資料</message>
@@ -175,20 +174,9 @@
 	
 	<!-- Roles 角色 -->
 	<message key="user.role.manager">期刊管理員</message>
-	<message key="user.role.editor">編輯</message>
 	<message key="user.role.sectionEditor">文稿類型編輯</message>
-	<message key="user.role.layoutEditor">版面編輯</message>
-	<message key="user.role.copyeditor">校樣編輯</message>
-	<message key="user.role.proofreader">校對者</message>
-	<message key="user.role.author">作者</message>
 	<message key="user.role.subscriptionManager">訂閱管理員</message>
 	<message key="user.role.managers">期刊管理員</message>
-	<message key="user.role.editors">編輯</message>
-	<message key="user.role.subEditors">文稿類型編輯</message>
-	<message key="user.role.layoutEditors">版面編輯</message>
-	<message key="user.role.copyeditors">校樣編輯</message>
-	<message key="user.role.proofreaders">校對者</message>
-	<message key="user.role.authors">作者</message>
 	<message key="user.role.subscriptionManagers">訂閱管理員</message>
 	
 	<!-- Common Issue Terms -->
@@ -216,7 +204,6 @@
 	<message key="submission.event.logLevel.error">錯誤</message>
 	
 	<message key="submission.event.general.defaultEvent">投稿事件</message>
-	<message key="submission.event.submissionSubmitted">投稿稿件</message>
 	<message key="submission.event.general.issueScheduled">已送到期數排序的稿件</message>
 	<message key="submission.event.general.issueAssigned">已指派給某期的稿件</message>
 	<message key="submission.event.general.articlePublished">已刊出的論文</message>
@@ -286,7 +273,7 @@
 </ul>]]></message>
 	
 	<!-- System Information 系統資訊 -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>注意！</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>注意！</h4>
 <p>系統無法自動覆寫這個設定檔。要應用您的設定變更，您必須以適合的編輯器開啟<tt>config.inc.php</tt>，並以下列文字欄位中的內容來取代其內容。</p>]]></message>
 
 	
@@ -351,6 +338,8 @@
 除非日後的出版工作完全還在準備階段，否則不需要設定 LOCKSS以支持OJS；在此階段請遵循這兩個步驟：]]></message>
 	
 	<!-- Setup Step 3 -->
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[期刊會使用一個可在網路上取得的主題分類系統。<br />
+分類系統的標題]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[要將這份期刊中所索引的內容收錄進一個全球性散佈的研究資料系統中，請<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">註冊</a> 您的期刊網址，進入「開放知識計畫」(Public Knowledge Project ; PKP)的後設資料 <a href="http://pkp.sfu.ca/harvester/" target="_blank">收集器</a>之中。這個工具會收集這份期刊中每個經索引的項目，使得在支持<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">開放典藏計畫後設資料收集協定(Open Archives Initiative Protocol for Metadata Harvesting)</a>的研究網站之間能夠有準確和豐富的搜尋結果。
 <br /><br />
 注意，如果您的網站管理員已經將本站註冊PKP收集器了，您的期刊會自動被索引，而您不需要再次註冊您的期刊。
@@ -377,7 +366,7 @@
 
 	<!-- Languages 語言-->
 	<message key="manager.languages.languageInstructions"><![CDATA[
-	OJS可以讓使用者使用幾種受到支持的語言介面。同時，OJS可以當作一個部分多語化的系統，讓使用者在每個頁面中可以切換語言，並允許某些資料以額外的兩種語言進行輸入。<br /><br/>如果一個受到OJS支持的語言沒有列在下表，請您的網站管理員從網站管理介面來安裝該項語系。新增支援新語系的指引說明，請見OJS的文件。]]></message>
+	OJS可以讓使用者使用幾種受到支持的語言介面。同時，OJS可以當作一個部分多語化的系統，讓使用者在每個頁面中可以切換語言，並允許某些資料以額外的兩種語言進行輸入。<br /><br />如果一個受到OJS支持的語言沒有列在下表，請您的網站管理員從網站管理介面來安裝該項語系。新增支援新語系的指引說明，請見OJS的文件。]]></message>
 	<message key="manager.languages.alternateLocale1">額外的語言設定#1</message>
 	<message key="manager.languages.alternateLocale2">額外的語言設定#2</message>
 	<message key="manager.languages.alternativeLanguageOptions">語言選項</message>
@@ -441,10 +430,10 @@
 	<!-- Navigation sidebar menu 導覽側邊欄選單-->
 	
 	<!-- Used by editor in submission review / editing 由編輯在稿件審查＼編輯時使用-->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[姓名連結到審查人帳號。<br/>
-從5(極佳)開始評分。<br/>
-「週數」意指完成一份審查工作的平均時期<br/>
-「最新」是指最近接受的審查工作日期<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[姓名連結到審查人帳號。<br />
+從5(極佳)開始評分。<br />
+「週數」意指完成一份審查工作的平均時期<br />
+「最新」是指最近接受的審查工作日期<br />
 「進行中」是指有多少審查工作目前正待考慮或者正在進行。]]></message>
 	<message key="editor.article.emailAuthorOnArchive">寄發電子郵件告知作者要典藏這份稿件？</message>
 
@@ -633,18 +622,13 @@
 	<message key="submission.comments.saveAndEmailEditor">存檔並電郵編輯</message>
 	
 	<!-- Login 登入 -->
-	<message key="user.login.registerNewAccount">尚未是一個使用者嗎？請在本站註冊。</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[基於安全性的理由，這個系統將一個重新設定的密碼寄發給註冊使用者，而不是取回目前的密碼。<br /><br />請在下面輸入您的電子郵件地址以重新設定您的密碼。系統會寄發一封確認信到這個地址去。]]></message>
 	<message key="user.login.rememberMe">記得我</message>
 	
 	<!-- Profile 帳號 -->
 	
 	<!-- Registration 註冊 -->
-	<message key="user.register.selectJournal">選擇一份期刊進行註冊</message>
 	<message key="user.register.noJournals">本站目前尚無任何期刊可供註冊，</message>
 	<message key="user.register.privacyStatement">隱私權聲明</message>
-	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[如果您已經在本站上的任何一份期刊上註冊過了，請<a href="{$registerUrl}">點擊這裡</a>。]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[如果您 <strong>尚未</strong> 在本站上的任何一份期刊上註冊過，請<a href="{$registerUrl}">點擊這裡</a>。]]></message>
 	<message key="user.register.loginToRegister">要註冊這份期刊，請輸入您現有的使用者名稱以及密碼</message>
 	<message key="user.register.registrationDisabled">這份期刊目前不接受使用者註冊。</message>
 	<message key="user.register.form.passwordLengthTooShort">您輸入的密碼不夠長.</message>
@@ -664,7 +648,7 @@
 	<message key="search.allJournals">所有期刊</message>
 	<message key="search.authorIndex">瀏覽作者索引</message>
 	<message key="search.authorDetails">作者履歷</message>
-	<message key="search.syntaxInstructions"><![CDATA[搜尋技巧： <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>搜尋技巧： </h4><ul>
 <li>搜尋的語詞不要有大小寫之別</li>
 <li>常用的語詞會被略過</li>
 <li>預設只會傳回包含有<em>全部</em>搜尋詞彙的文章 (也就是說，預設以<em>AND</em>連接各項目)。</li>
@@ -675,6 +659,13 @@
 <li>在一個詞彙中使用<strong>*</strong>當作萬用字元，以搜尋符合任何字串的結果。例如：<em>soci* morality</em> 會找到包含 "sociological" 或者"societal"的文章。</li>
 </ul>]]></message>
 
+	<!-- Interstitial page for PDFs 插入PDF頁面 -->
+	<message key="article.pdf.title">可攜式文件格式(Portable Document Format; PDF)</message>
+	
+	<!-- Interstitial page for non-PDF non-HTML galleys 非PDF、非HTML排版樣式的插入頁面-->
+	<message key="article.nonpdf.title">文章下載</message>
+	<message key="article.nonpdf.note"><![CDATA[您選擇的檔案應該會被自動下載到您的電腦上。如果沒有的話，請點擊下面的連結。請注意，這個檔案可能會需要一個特定的閱讀器或者外掛程式才能被檢視。<a href="{$url}">點擊這裡</a>.]]></message>
+	
 	<!-- Site index 網站索引 -->
 	<message key="site.journalsHosted">這個網站上的各種期刊</message>
 	<message key="site.journalView">瀏覽期刊</message>
@@ -694,21 +685,14 @@
 	
 	<!-- About The Journal -->
 	<message key="about.statistics">統計</message>
-	<message key="about.journalContact">期刊聯絡人</message>
-	<message key="about.aboutTheJournal">期刊介紹</message>
 	<message key="about.editorialTeam">編輯團隊</message>
 	<message key="about.editorialTeam.biography">履歷</message>
 	<message key="about.editorialPolicies">編輯方針</message>
 	<message key="about.focusAndScope">收稿範圍</message>
 	<message key="about.sectionPolicies">文稿類型</message>
 	<message key="about.submissions">投稿</message>
-	<message key="about.sponsors">贊助單位</message>
-	<message key="about.contributors">贊助來源</message>
 	<message key="about.onlineSubmissions">線上投稿</message>
-	<message key="about.onlineSubmissions.haveAccount">您已經在{$journalTitle}中有了一份使用者名稱＼密碼了嗎？</message>
 	<message key="about.onlineSubmissions.login">請登入本期刊</message>
-	<message key="about.onlineSubmissions.needAccount">您需要一份使用者名稱＼密碼嗎？</message>
-	<message key="about.onlineSubmissions.registration">請進行註冊</message>
 	<message key="about.onlineSubmissions.registrationRequired">線上投稿以及查詢稿件當前處理狀態，需要您事先進行註冊和登入的動作。</message>
 	<message key="about.authorGuidelines">投稿須知暨撰稿凡例</message>
 	<message key="about.submissionPreparationChecklist">投稿檢查表</message>
@@ -726,7 +710,6 @@
 	<message key="about.subscriptions">投稿</message>
 	<message key="about.subscriptionsContact">期刊訂閱聯絡人</message>
 	<message key="about.availableSubscriptionTypes">訂閱方案</message>
-	<message key="about.journalSponsorship">期刊贊助單位</message>
 	<message key="about.aboutThisPublishingSystem">關於這個出版系統</message>
 	<message key="about.aboutOJSJournal"><![CDATA[這份期刊使用「開放期刊系統」(Open Journal Systems {$ojsVersion})，此系統是一個開源碼的期刊管理與出版軟體，由<a href="http://pkp.sfu.ca/">公共知識計畫(PKP; Public Knowledge Project)</a>研發與支持，並且以通用公共許可證(GNU; General Public License)自由流通。]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[這個網站使用「開放期刊系統」(Open Journal Systems {$ojsVersion})，此系統是一個開源碼的期刊管理與出版軟體，由<a href="http://pkp.sfu.ca/">公共知識計畫(PKP; Public Knowledge Project)</a>研發與支持，並且以通用公共許可證(GNU; General Public License)自由流通。]]></message>
@@ -752,7 +735,7 @@
 
 <ul>
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x (包括 PHP 5.x)</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (包括 PostgreSQL 8.x)</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x 或 Microsoft IIS 6</li>
 	<li>作業系統：任何支援上述軟體的作業系統，包括<a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
@@ -787,6 +770,8 @@
 <p>謝謝您下載公共知識計畫(Public Knowledge Project)的 <strong>開放期刊系統(Open Journal Systems)</strong>。在進行下一步之前，請先閱讀這份軟體中的<a href="{$baseUrl}/docs/README">README</a>檔案。想瞭解更多關於公共知識計畫以及其軟體計畫，請見：<a href="http://pkp.sfu.ca/" target="_blank">PKP網站</a>。如果您要回報關於開放期刊系統的錯誤資訊或者有相關的技術支援問題，請見：<a href="http://forum.pkp.sfu.ca">支援討論區</a>，或者請見PKP的線上<a href="https://github.com/pkp/pkp-lib#issues" target="_blank">錯誤回報系統</a>。雖然我們比較希望以討論區做為聯絡的管道，不過您也可以寄信給技術團隊：<a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>。</p>
 <p>我們<strong>強烈地建議您</strong>在繼續下一步之前，請備份您的資料庫、檔案目錄以及OJS的安裝目錄</p>
 <p>如果您正在執行<a href="http://www.php.net/features.safe-mode" target="_blank">PHP安全模式</a>， 請確保在您的 php.ini 設定檔中設定max_execution_time指令一個高額的上限。如果這個或者其他的時間上限（例如Apache的 "Timeout"指令）已到，而升級程序遭到中斷，您必須以手動的方式介入。</p>]]></message>
+	<message key="installer.localeSettingsInstructions"><![CDATA[為了完整支援Unicode (UTF-8)編碼，請選擇以UTF-8作為編碼字元。注意，這項支援目前需要一個MySQL >= 4.1.1或者PostgreSQL >= 7.1 的資料庫伺服器。也請注意，完整的Unicode編碼需要PHP >= 4.3.0搭配支援<a href="http://www.php.net/mbstring" target="_blank">mbstring</a>庫 (最新版本的PHP安裝過程已經預設啟動)。如果您的伺服器沒有滿足這些條件的話，您可能在使用額外的字符集時會碰到問題<br /><br />
+您的伺服器目前對mbstring的支援性：<strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.localeInstructions">使用本系統的主要語言。如果您有意支援不列在這裡的語系，請參見OJS的說明文件。</message>
 	<message key="installer.additionalLocalesInstructions">選擇額外的語系以支援本系統。這些語言可以被本站的期刊所使用。也可以在任何時間點透過網站管理介面來安裝額外的語系。</message>
 	<message key="installer.filesDirInstructions"><![CDATA[輸入一個儲存上傳檔案的既存目錄的完整路徑名稱。這個目錄不應該直接透過網頁存取。<strong>請確定這個目錄存在而且可寫入</strong> Windows路徑名稱應該使用右斜線，例如："C:/myjournal/files".]]></message>
@@ -840,7 +825,6 @@
 	<message key="log.editor.archived">稿件{$submissionId}已經被典藏。</message>
 	<message key="log.editor.restored">稿件{$submissionId}已經被復原至列表中。</message>
 	<message key="log.editor.editorAssigned">{$editorName}被指派為稿件{$submissionId}的編輯。</message>
-	<message key="log.editor.submissionExpedited">{$editorName}已經在進行稿件{$submissionId}的編輯流程。</message>
 
 	<message key="log.proofread.assign">{$assignerName} 已經被指派為{$proofreaderName}進行對稿件{$submissionId}的校對。</message>
 	<message key="log.proofread.complete">{$proofreaderName}已經提交稿件 {$submissionId}進行排程出版。.</message>
@@ -871,8 +855,8 @@
 
 	<!-- RT Searches 閱讀工具搜尋 -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[下面列出可能是無效的搜尋網站網址。<br/>
-您應該手動查證被標記成無效的任何網址，因為這個測試並非完全準確。<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[下面列出可能是無效的搜尋網站網址。<br />
+您應該手動查證被標記成無效的任何網址，因為這個測試並非完全準確。<br />
 驗證需要遞交表單資料的搜尋網址可能會失敗。]]></message>
 	
 	<!-- RT Entities 閱讀工具項目 -->
@@ -916,10 +900,11 @@
 	 *預設-設定項目的預設設定
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">這份稿件之前尚未出版，也未曾有其他期刊考慮出版（或者在「給編者的意見」中已經給了一個說明）。</message>
-	<message key="default.journalSettings.checklist.fileFormat">稿件檔案是OpenOffice, Microsoft Word, 或者RTF的文件檔案格式</message>
+	<message key="default.journalSettings.checklist.fileFormat">稿件檔案是OpenOffice, Microsoft Word, RTF,或者WordPerfect的文件檔案格式</message>
 	<message key="default.journalSettings.checklist.addressesLinked"><![CDATA[如果可行的話，可提供線上閱讀參考文獻的網址，包括那些可開放閱讀版本的文獻。網址已經加上連結、可供點擊(例如，<a href="http://pkp.sfu.ca">http://pkp.sfu.ca</a>)。]]></message>
 	<message key="default.journalSettings.checklist.submissionAppearance">文字內容為單行行距；使用12pt字體大小；採用斜體而不用底線（除非是帶有網址）；而所有的圖解、圖示和表格都放在文中恰當位置，而非文末。</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[本文依循「期刊介紹」中<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">作者指引</a>所要求文體與書目格式。]]></message>
+	<message key="default.journalSettings.checklist.anonymous"><![CDATA[如果要投稿到需審查的期刊文稿類型，本文遵守<a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">確保匿名審查</a>的說明指南。]]></message>
 	<message key="default.journalSettings.privacyStatement">在本期刊網站所輸入的姓名與電子郵件地址只會基於本期刊指定的目的加以使用，而不會用於其他目的或其他部分。</message>
 	<message key="default.journalSettings.openAccessPolicy">這份期刊基於讓研究成果自由授與公眾來支持更全面的知識交流的原則，而提供直接開放閱讀的內容。</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">在出版之前與之後，作者都被允許和鼓勵將投稿到本期刊的文章項目發佈到個人的或者所屬單位的網站上（同時提供該出版品的圖書細目）。</message>
@@ -1021,6 +1006,4 @@ Malinowski
 	<message key="default.journalSettings.forLibrarians"><![CDATA[我們鼓勵圖書館員將這份期刊加入其圖書館的電子期刊資料庫之中。同時，這份期刊的開源碼出版系統或許會適合圖書館放置他們的職員正在編輯的期刊。(請見<a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[這份期刊使用LOCKSS系統建立一份在參與之圖書館之間流通的典藏系統，並且允許那些圖書館基於保存和儲藏的目的，建立本期刊的永久性典藏檔案<a href="http://www.lockss.org/">更多資訊...</a>]]></message>
 
-	<!-- Included here because it may be used in the navigation bar -->
-	<message key="editor.navigation.issues">期數</message>
 </locale>

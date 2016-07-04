@@ -4,7 +4,7 @@
 <!--
   * locale/fr_CA/editor.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="fr_CA" full_name = "Français (Canada)">
+<locale name="fr_CA" full_name="Français (Canada)">
 	<message key="editor.home">Page d'accueil du rédacteur</message>
 	<message key="editor.submissionsAndPublishing">Soumissions et publication</message>
 	<message key="editor.submissionQueue">Soumission en attente</message>
@@ -54,7 +54,6 @@
 	<message key="editor.issues.accessStatus">Statut d'accès</message>
 	<message key="editor.issues.accessDate">Date d'accès libre</message>
 	<message key="editor.issues.invalidAccessDate">La date d'accès n'est pas valide.</message>
-	<message key="editor.issues.issuePublicIdentificationExists">Le numéro d'identification publique existe déjà.</message>
 	<message key="editor.issues.coverPage">Image de la page couverture</message>
 	<message key="editor.issues.coverPageInstructions">(Formats acceptés : .gif, .jpg, ou .png)</message>
 	<message key="editor.issues.uploaded">Téléchargé</message>
@@ -84,16 +83,14 @@
 	<message key="editor.issues.order">Classer</message>
 	<message key="editor.issues.publicId">Identifiant public</message>
 	<message key="editor.issues.publishIssue">Publier le numéro</message>
-	<message key="editor.issues.previewIssue">Prévisualiser du numéro</message>
+	<message key="editor.issues.previewIssue">Prévisualiser le numéro</message>
 	<message key="editor.issues.preview">(Prévisualiser)</message>
 	<message key="editor.issues.confirmPublish">Êtes-vous certain de vouloir publier le nouveau numéro?</message>
 	<message key="editor.issues.publicArticleIdExists">Impossible d'enregistrer l'identifiant public pour cet article :</message>
-	<message key="editor.issues.galleyPublicIdentificationExists">L'identification des épreuves publiées du numéro existe déjà.</message>	
 	<message key="editor.issues.noLiveIssues">Aucun numéro en ligne</message>
 	<message key="editor.issues.open">Ouvert</message>
 	<message key="editor.issues.pages">Pages</message>
 	<message key="editor.navigation.futureIssues">Numéros à venir</message>
-	<message key="grid.action.addIssue">Créer un numéro</message>
 	<message key="editor.navigation.issueArchive">Numéros précédents</message>
 	<message key="editor.article.designateReviewVersion">Désigner le fichier original comme le fichier d'évaluation</message>
 	<message key="editor.article.uploadReviewVersion">Télécharger la version d'évaluation révisée</message>
@@ -194,9 +191,8 @@
 	<message key="editor.article.uploaded">Téléchargé</message>
 	<message key="editor.article.removeCoverPage">Supprimer l'image de la page couverture?</message>
 	<message key="editor.article.remove">Supprimer</message>
-	<message key="editor.article.confirmChangeReviewForm">Avertissement : Changer le formulaire d'évaluation supprimera toutes les réponses que les évaluateurs ont fait en utilisant ce formulaire. Êtes-vous certain que vous souhaitez poursuivre?</message>
 	<message key="editor.issues.enableOpenAccessDate">Activer l'accès libre différé</message>
-	<message key="editor.issues.unpublishIssue">Numéro non publié</message>
+	<message key="editor.issues.unpublishIssue">Dépublier le numéro</message>
 	<message key="editor.issues.confirmUnpublish">Êtes-vous certain que vous souhaitez retirer ce numéro publié?</message>
 	<message key="editor.article.archiveSubmission">Rejeter et archiver la soumission</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Avant d'envoyer une soumission en Révision, utiliser le lien Aviser l'auteur pour informer l'auteur de la décision et sélectionner la version à envoyer.</message>
@@ -205,4 +201,16 @@
 	<message key="editor.notifyUsers.allAuthors">Tous les auteurs publiés ({$count} utilisateurs)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Tous les abonnés individuels ({$count} utilisateurs)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Tous les abonnés institutionnels ({$count} utilisateurs)</message>
+	<message key="editor.reassign">Réassigner</message>
+	<message key="editor.publicIdentificationExists">L'identifiant public '{$publicIdentifier}' existe déjà pour un autre objet (numéro, article, épreuves ou fichier complémentaire). Veuillez choisir des identifiants uniques au sein de votre revue.</message>
+	<message key="editor.issues.galleys">Épreuves du numéro</message>
+	<message key="editor.issues.galley">Épreuves du numéro</message>
+	<message key="editor.issues.viewingGalley">Voir les épreuves du numéro</message>
+	<message key="editor.issues.issueGalleysDescription">Publier les épreuves de l'ensemble du numéro.</message>
+	<message key="editor.issues.noneIssueGalleys">Les épreuves du numéro n'ont pas été publiées.</message>
+	<message key="editor.issues.galleyLabelRequired">Veuillez attribuer une étiquette aux épreuves du numéro.</message>
+	<message key="editor.issues.galleyLocaleRequired">Veuillez préciser la langue utilisée dans les épreuves du numéro.</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">L'identification des épreuves publiées du numéro existe déjà???</message>
+	<message key="editor.issues.backToIssueGalleys">Retourner aux épreuves du numéro</message>
+	<message key="editor.issues.confirmDeleteGalley">Voulez-vous vraiment supprimer les épreuves de ce numéro?</message>
 </locale>

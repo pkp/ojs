@@ -4,14 +4,14 @@
 <!--
   * locale/id_ID/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name = "Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 
 	<!-- review froms start -->
 
@@ -19,6 +19,7 @@
 
 	<!-- Journal Management -->
 
+	<!--  peer review -->
 
 
 	<message key="reviewer.article.enterReviewForm">Klik di ikon untuk mengisi form review.</message>	
@@ -50,7 +51,6 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Bantuan Jurnal</message>
-	<message key="navigation.archives">Arsip</message>
 	<message key="navigation.current">Terkini</message>
 	<message key="navigation.otherJournals">Jurnal Lain</message>
 	<message key="navigation.browseByIssue">Berdasarkan Terbitan</message>
@@ -189,20 +189,9 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Manajer Jurnal</message>
-	<message key="user.role.editor">Editor</message>
 	<message key="user.role.sectionEditor">Editor Bagian</message>
-	<message key="user.role.layoutEditor">Editor Layout</message>
-	<message key="user.role.copyeditor">Copy editor</message>
-	<message key="user.role.proofreader">Proofreader</message>
-	<message key="user.role.author">Penulis</message>
 	<message key="user.role.subscriptionManager">Manajer Langganan</message>
 	<message key="user.role.managers">Manajer Jurnal</message>
-	<message key="user.role.editors">Editor</message>
-	<message key="user.role.subEditors">Editor Bagian</message>
-	<message key="user.role.layoutEditors">Editor Layout</message>
-	<message key="user.role.copyeditors">Copy editor</message>
-	<message key="user.role.proofreaders">Proofreader</message>
-	<message key="user.role.authors">Penulis</message>
 	<message key="user.role.subscriptionManagers">Manajer Langganan</message>
 	
 	<!-- Common Issue Terms -->
@@ -256,7 +245,6 @@
 	<message key="submission.event.logLevel.error">Kesalahan</message>
 	
 	<message key="submission.event.general.defaultEvent">Acara Penyerahan</message>
-	<message key="submission.event.submissionSubmitted">Artikel yang diserahkan</message>
 	<message key="submission.event.general.issueScheduled">Naskah dikirimkan ke antrian penjadwalan terbitan</message>
 	<message key="submission.event.general.issueAssigned">Naskah yang ditugaskan ke terbitan</message>
 	<message key="submission.event.general.articlePublished">Artikel yang terbit</message>
@@ -329,7 +317,7 @@ Perhatikan bahwa OAI antarmuka dapat dinonaktifkan dengan mengedit konfigurasi s
 	<!-- Informasi Sistem -->
 	<message key="admin.editSystemConfigInstructions"><![CDATA[Gunakan form ini untuk memodifikasi konfigurasi sistem Anda yang ada pada file (<tt>config.inc.php</tt>). Klik "Simpan Konfigurasi" untuk menyimpan konfigurasi baru Anda, atau "Tampilkan Konfigurasi Baru" untuk menampilkan file konfigurasi yang telah diupdate dan tidak memodifikasi konfigurasi yang sudah ada. <br /><br />
 <span class="formError">Peringatan: Mengubah pengaturan ini berpotensi membuat situs Anda dalam keadaan tidak dapat diakses (memerlukan file konfigurasi untuk diperbaiki secara manual). Sangat dianjurkan untuk tidak melakukan perubahan apapun kecuali Anda tahu persis apa yang Anda lakukan.</span>]]></message>
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>Catatan!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>Catatan!</h4>
 <p>Sistem tidak dapat secara otomatis menimpa file konfigurasi. Untuk menerapkan perubahan konfigurasi Anda, Anda harus membuka <tt>config.inc.php</tt> di text editor yang cocok dan mengganti isinya dengan isi text field di bawah ini.</p>]]></message>
 	
 
@@ -380,7 +368,6 @@ Perhatikan bahwa OAI antarmuka dapat dinonaktifkan dengan mengedit konfigurasi s
 	<!-- Setup Langkah 2 -->
 
 
-	<message key="manager.setup.reviewProcessEmailDescription">Editor mengirimkan permintaan kepada Reviewer untuk mereview naskah yang dilampirkan di email. Reviewer mengirimkan editor persetujuan atau penolakan, seperti halnya review dan rekomendasi di halaman review naskah, untuk mencatat proses review.</message>
 
 
 	<message key="manager.setup.lockssDescription"><![CDATA[OJS support <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe). Sebuah sistem untuk mengarsipkan jurnal secara permanen dan aman. LOCKSS adalah perangkat lunak open source yang dikembangkan di Library of Stanford University yang memungkinkan perpustakaan untuk menjaga website jurnal yang dipilih dengan mengumpulkan backup data secara teratur dari website jurnal yang terdaftar untuk konten yang baru diterbitkan dan mengarsipkannya. Tiap arsip divalidasi secara terus menerus terhadap library caches yang lain, dan jika konten ditemukan dalam keadaan rusak atau hilang, caches atau jurnal yang lain digunakan untuk menyimpan ulang.
@@ -403,9 +390,10 @@ Penulis yang menerbitkan dengan jurnal ini setuju pada persyaratan berikut ini:<
 	 <li>Penulis bisa memasukkan ke dalam penyusunan kontraktual tambahan terpisah untuk distribusi non-ekslusif versi kaya terbitan jurnal (contoh: mempostingnya ke repositori institusional atau menerbitkannya dalam sebuah buku), dengan pengakuan penerbitan awalnya di jurnal ini.</li>
 	 <li>Penulis diizinkan dan didorong untuk mem-posting karya mereka online (contoh: di repositori institusional atau di website mereka) sebelum dan selama proses penyerahan, karena dapat mengarahkan ke pertukaran produktif, seperti halnya sitiran yang lebih awal dan lebih hebat dari karya yang diterbitkan. (Lihat <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">Efek Akses Terbuka</a>).</li>
 </ol>]]></message>
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Jurnal akan menggunakan sistem klasifikasi subjek yang tersedia di web.<br />
+Judul Sistem Klasifikasi]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Untuk mengindeks konten jurnal kedalam sistem terdistribusi global dari database riset, baca <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">langkah-langkah untuk menjadi kontributor data</a> dan daftarkan jurnal Anda di<a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Pendaftaran Open Archives</a>.  Untuk mendaftar, Anda akan membutuhkan URL untuk repositori:<span class="highlight">{$oaiUrl}</span>. Setelah itu, Anda dapat mendaftarkan jurnal Anda di <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a>dan<a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 <br /><br />Perhatikan jika Administrator Situs Anda sudah mendaftarkan situs ini pada layanan ini, jurnal Anda akan diindeks secara otomatis dan Anda tidak perlu mendaftarkan lagi.]]></message>
-	<message key="manager.setup.citations.enable">Memungkinkan Bantuan Koreksi sitiran</message>
 
 	<!-- Setup Langkah 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Langkah: Antrian Penyerahan &gt; Review Naskah &gt; Pengediatan Naskah &gt; Daftar Isi.<br /><br />
@@ -468,10 +456,10 @@ Pilih model untuk menangani aspek proses editorial ni. (Untuk menunjuk Editor Pe
 	<!-- Navigation sidebar menu -->
 	
 	<!-- digunakan oleh editor dalam review naskah/ pengeditan -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[tautan nama ke profil Reviewer. <br/>
-Penilaian adalah dari 5 (Bagus sekali).<br/>
-Minggu mengacu ke periode waktu rata-rata untuk menyelesaikan review.<br/>
-Yang terbaru adalah tanggal review paling baru yang diterima.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[tautan nama ke profil Reviewer. <br />
+Penilaian adalah dari 5 (Bagus sekali).<br />
+Minggu mengacu ke periode waktu rata-rata untuk menyelesaikan review.<br />
+Yang terbaru adalah tanggal review paling baru yang diterima.<br />
 Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berlangsung.]]></message>
 	
 	<!-- Editor Bagian -->
@@ -493,7 +481,7 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="sectionEditor.regrets.regret">Penyesalan</message>
 	<message key="sectionEditor.regrets.result">Hasil</message>
 	<message key="sectionEditor.review.enrollReviewer">Mendaftarkan Pengguna yang sudah ada sebagai Reviewer</message>
-	<message key="sectionEditor.review.createReviewer">Buat Reviewer Baru </message>
+	<message key="sectionEditor.review.createReviewer">Buat Reviewer Baru</message>
 
 	<!-- Editor Layout -->
 	<message key="layoutEditor.activeEditorialAssignments">Tugas Editorial Aktif</message>
@@ -523,10 +511,10 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="reviewer.article.automatic">(Auto)</message>
 	<message key="reviewer.article.recommendation">Rekomendasi</message>
 	<message key="reviewer.article.submitReview">Serahkan Review kepada Editor</message>
-	<message key="reviewer.article.reviewerComments">Komentar </message>
+	<message key="reviewer.article.reviewerComments">Komentar</message>
 	<message key="reviewer.article.uploadedFile">File yang diunggah</message>	
 	<message key="reviewer.article.reviewersAnnotatedVersion">Versi yang diunggah Reviewer</message>
-	<message key="reviewer.article.reviewersAnnotatedVersionDescription"> (Jika Anda ingin menambahkan penjelasan lebih lanjut pada file, untuk editor, simpan di hard drive dan gunakan Telusuri/ Unggah.) </message>
+	<message key="reviewer.article.reviewersAnnotatedVersionDescription"> (Jika Anda ingin menambahkan penjelasan lebih lanjut pada file, untuk editor, simpan di hard drive dan gunakan Telusuri/ Unggah.)</message>
         <message key="reviewer.article.schedule.request">Permintaan Editor</message>
         <message key="reviewer.article.schedule.response">Respon Anda</message>
         <message key="reviewer.article.schedule.submitted">Review Dikumpulkan</message>
@@ -650,16 +638,11 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="submission.comments.saveAndEmailEditor">Simpan dan email Penulis</message>
 	
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Bukan Pengguna? Daftar di situs ini</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Untuk alasan keamanan, sistem ini akan mengirimkan kata sandi yang bisa diatur ulang oleh pengguna melalui email.<br /><br />Masukkan alamat email Anda di bawah ini untuk mengatur ulang kata sandi Anda. Konfirmasi akan dikirim ke alamat email.]]></message>
 		
 	<!-- Registration -->
 	<message key="user.register.repeatPassword">Ulangi Kata Sandi</message>
-	<message key="user.register.selectJournal">Pilih sebuah jurnal untuk mendaftar</message>
 	<message key="user.register.noJournals">Tidak ada jurnal untuk Anda mendaftar di situs ini.</message>
 	<message key="user.register.privacyStatement">Pernyataan Privasi</message>
-	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klik di sini</a> Jika Anda sudah terdaftar di jurnal ini atau jurnal lain di situs ini.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klik di sini</a> Jika Anda <strong>belum</strong> terdaftar di jurnal ini atau jurnal lain di situs ini.]]></message>
 	<message key="user.register.loginToRegister">Masukkan nama pengguna dan kata sandi Anda untuk login di jurnal ini.</message>
 	<message key="user.register.registrationDisabled">Jurnal sedang tidak menerima pendaftaran pengguna.</message>
 	<message key="user.register.form.passwordLengthTooShort">Kata Sandi yang Anda masukkan tidak cukup panjang.</message>
@@ -719,7 +702,7 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="search.allJournals">Semua Jurnal</message>
 	<message key="search.authorIndex">Menelusuri Indeks Penulis</message>
 	<message key="search.authorDetails">Rincian Penulis</message>
-	<message key="search.syntaxInstructions"><![CDATA[Tip Pencarian: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Tip Pencarian: </h4><ul>
 <li>Istilah pencarian tidak mempedulikan besar-kecilnya huruf</li>
 <li>Kata-kata umum diabaikan</li>
 <li>Secara default hanya artikel yang berisi semua istilah query akan muncul (contoh: <em>dan</em>)</li>
@@ -731,6 +714,14 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 
 </ul>]]></message>
 
+	<!-- Interstitial page for PDFs -->
+	<message key="article.pdf.title">Portable Document Format (PDF)</message>
+
+	
+	<!-- Interstitial page for non-PDF non-HTML galleys -->
+	<message key="article.nonpdf.title">Unduh Artikel</message>
+	<message key="article.nonpdf.note"><![CDATA[File yang Anda pilih dapat meng-unggah secara otomatis. Jika tidak, klik tautan dibawah ini. Perhatikan file ini mungkin memerlukan plugin untuk dilihat.<br /><br />Jika file tidak meng-unggah secara otomatis <a href="{$url}">klik disini</a>.]]></message>
+	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Jurnal yang dimasukkan di situs ini</message>
 	<message key="site.journalView">Lihat Jurnal</message>
@@ -750,8 +741,6 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	
 	<!-- About The Journal -->
 	<message key="about.statistics">Statistik</message>
-	<message key="about.journalContact">Kontak Jurnal</message>
-	<message key="about.aboutTheJournal">Tentang Kami</message>
 	<message key="about.history">Visi dan Tujuan Jurnal</message>
 	<message key="about.editorialTeam">Dewan Editorial</message>
 	<message key="about.editorialTeam.biography">Biografi</message>
@@ -759,13 +748,8 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="about.focusAndScope">Fokus dan Ruang Lingkup</message>
 	<message key="about.sectionPolicies">Kebijakan Bagian</message>
 	<message key="about.submissions">Penyerahan</message>
-	<message key="about.sponsors">Sponsor</message>
-	<message key="about.contributors">Kontributor</message>
 	<message key="about.onlineSubmissions">Penyerahan Online</message>
-	<message key="about.onlineSubmissions.haveAccount">Sudahkah memiliki nama pengguna dan kata sandi untuk {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Ke Login</message>
-	<message key="about.onlineSubmissions.needAccount">Butuh nama pengguna dan kata sandi?</message>
-	<message key="about.onlineSubmissions.registration">Ke registrasi</message>
 	<message key="about.onlineSubmissions.registrationRequired">Registrasi dan login dibutuhkan untuk memasukkan naskah dan kelengkapannya secara online dan untuk mengecek status naskah saat ini.</message>
 	<message key="about.authorGuidelines">Petunjuk Penulis</message>
 	<message key="about.submissionPreparationChecklist">Petunjuk Untuk Penulis</message>
@@ -792,7 +776,6 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="about.subscriptionTypes.cost">Biaya</message>
 	<message key="about.availableSubscriptionTypes">Tipe Langganan</message>
 	<message key="about.memberships">Keanggotaan</message>
-	<message key="about.journalSponsorship">Sponsor Jurnal</message>
 	<message key="about.aboutThisPublishingSystem">Tentang Sistem Penerbitan</message>
 	<message key="about.aboutThisPublishingSystem.altText">Editorial OJS dan Proses Penerbitan</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Jurnal ini menggunakan Open Journal Systems {$ojsVersion}, merupakan perangkat lunak open source untuk manajemen jurnal dan penerbitan yang dikembangkan, didukung, dan bebas didistribusikan oleh <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> di bawah GNU General Public License.]]></message>
@@ -849,11 +832,53 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">Instalasi OJS</message>
 	<message key="installer.ojsUpgrade">Updgrade OJS</message>
+	<message key="installer.installationInstructions"><![CDATA[<h4>Versi OJS {$version}</h4>
+
+<p>Terima kasih telah mengunduh <strong>Open Journal Systems</strong>. Sebelum melanjutkan, silahkan membaca <a href="{$baseUrl}/docs/README">README</a>. Berkas disertakan dalam perangkat lunak ini. Untuk informasi lebih lanjut tentang Public Knowledge Project dan perangkat lunak ini, silahkan kunjungi <a href="http://pkp.sfu.ca/" target="_blank">web site PKP</a>. Jika Anda memiliki laporan bug atau butuh dukungan teknis mengenai OJS, lihat <a href="http://forum.pkp.sfu.ca" target="_blank">forum dukungan</a> atau kunjungi PKP online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Laporkan bug sistem</a>.Selain itu Anda dapat mengontak tim pengembang OJS melalui <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<h4>Upgrade</h4>
+
+<p>Jika Anda ingin mengupgrade instalasi yang sudah ada OJS 1.x, <a href="{$upgradeUrl}">klik disini</a> untuk proses.</p>
+
+<h4>Persyaratan Sistem</h4>
+
+<ul>
+	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (termasuk PHP 5.x); saat ini Anda menggunakan PHP {$phpVersion}{$wrongPhpText}</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 atau <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (termasuk PostgreSQL 8.x)</li>
+	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x atau >= 2.0.4x atau Microsoft IIS 6</li>
+	<li>Sistem operasi: Semua sistem operasi support OJS, termasuk <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+</ul>
+
+<p>Upgrade OJS dapat dilakukan setelah instalasi dengan mengedit file <tt>config.inc.php</tt> di direktori OJS, atau menggunakan antarmuka Administrasi Situs.</p>
+
+<h4>Sistem Database</h4>
+
+<p>OJS dapat bekerja dengan baik di sistem database MySQL dan PostgreSQL. OJS juga dapat bekerja baik secara utuh ataupun sebagian pada sistem database lain yang didukung <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a>. Laporan kompabilitas dan patch kode DBMS dapat dikirimkan ke web site PKP.</p>
+
+<h4>Pra-Instalasi</h4>
+
+<p>1. Berkas-berkas berikut dan direktori (beserta isinya) harus dibuat "dapat ditulis":</p>
+<ul>
+	<li><tt>config.inc.php</tt> dapat ditulis (opsional): {$writable_config}</li>
+	<li><tt>public/</tt> dapat ditulis: {$writable_public}</li>
+	<li><tt>cache/</tt> dapat ditulis: {$writable_cache}</li>
+	<li><tt>cache/t_cache/</tt> dapat ditulis: {$writable_templates_cache}</li>
+	<li><tt>cache/t_compile/</tt> dapat ditulis: {$writable_templates_compile}</li>
+	<li><tt>cache/_db</tt> dapat ditulis: {$writable_db_cache}</li>
+</ul>
+
+<p>2. Buat direktori khusus untuk menyimpan berkas unggahan dan buat "dapat ditulis" (lihat Pengaturan Berkas dibawah ini)</p>
+
+<h4>Instalasi Manual</h4>
+
+<p>Pilih <strong>Install Manual</strong> untuk menampilkan pernyataan SQL yang diperlukan untuk membuat skema database OJS dan data awal sehingga instalasi database dapat dilakukan secara manual. Opsi ini berguna ketika terdapat debug saat instalasi, terutama karena platform yang tidak support. Perhatikan bahwa opsi instalasi ini tidak membuat database atau tabel secara otomatis, meskipun file konfigurasi masih akan ditulis dengan pengaturan database yang tersedia.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Versi OJS {$version}</h4>
 	
 <p>Terima kasih telah mengunduh <strong>Open Journal Systems</strong>. Sebelum melanjutkan, silahkan membaca <a href="{$baseUrl}/docs/README">README</a>. Berkas disertakan dalam perangkat lunak ini. Untuk informasi lebih lanjut tentang Public Knowledge Project dan perangkat lunak ini, silahkan kunjungi <a href="http://pkp.sfu.ca/" target="_blank">web site PKP</a>. Jika Anda memiliki laporan bug atau butuh dukungan teknis mengenai OJS, lihat <a href="http://forum.pkp.sfu.ca" target="_blank">forum dukungan</a> atau kunjungi PKP online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Laporkan bug sistem</a>.Selain itu Anda dapat mengontak tim pengembang OJS melalui <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p><strong>Sangat disarankan agar</strong> Anda memback up database Anda, direktori berkas, dan direktori instalasi OJS sebelum melanjutkan.</p>
 <p>Jika Anda sudah menjalankan <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, pastikan perintah waktu eksekusi maksimal di berkas konfigurasi php.ini diatur hingga batas tinggi. Jika batas ini atau batas lain (contoh: perintah Apache's "Timeout") telah tercapai dan proses upgrade terganggu, interfensi manual akan dibutuhkan.</p>]]></message>
+	<message key="installer.localeSettingsInstructions"><![CDATA[Untuk melengkapi dukungan Unicode (UTF-8), pilih UTF-8 untuk semua pengaturan karakter set. Perhatikan bahwa dukungan ini membutuhkan server database MySQL >= 4.1.1 atau PostgreSQL >= 7.1. Perhatikan juga bahwa dukungan Unicode penuh membutuhkan PHP >= 4.3.0 dengan dukungan untuk <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> (secara default tersedia pada instalasi PHP terbaru). Anda mungkin akan menemui masalah saat menggunakan rangkaian karakter ini jika server Anda tidak memenuhi persyaratan.
+<br /><br />
+Server Anda sekarang support mbstring: <strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.localeInstructions">Bahasa utama yang digunakan untuk sistem ini.</message>
 	<message key="installer.additionalLocalesInstructions">Centang bahasa tambahan yang support sistem ini.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Masukkan path name lengkap ke direktori untuk menyimpan file yang diunggah. Direktori ini seharusnya tidak bisa diakses melalui web secara langsung. <strong>Pastikan direktori ini ada dan dapat ditulis sebelum instalasi.</strong> Jendela path name seharusnya menggunakan tanda miring di depan, contoh "C:/myjournal/files".]]></message>
@@ -910,7 +935,6 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="log.editor.archived">Naskah {$submissionId} telah diarsipkan.</message>
 	<message key="log.editor.restored">Naskah {$submissionId} telah disimpan ulang di antrian.</message>
 	<message key="log.editor.editorAssigned">{$editorName} telah ditugaskan sebagai editor untuk naskah {$submissionId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} telah mempercepat proses pengeditan untuk artikel {$submissionId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} telah menugaskan {$proofreaderName} untuk proofread naskah  {$submissionId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} telah menyerahkan {$submissionId} untuk penjadwalan.</message>
@@ -941,7 +965,7 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[URL invalid yang mungkin untuk situs pencari ditampilkan di bawah ini.<br/>Anda harus memverifikasi secara manual URL apapun yang ditandai sebagai invalid, karena tes ini tidak 100% akurat.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[URL invalid yang mungkin untuk situs pencari ditampilkan di bawah ini.<br />Anda harus memverifikasi secara manual URL apapun yang ditandai sebagai invalid, karena tes ini tidak 100% akurat.<br/>
 Validasi mungkin gagal dalam pencarian URL memerlukan form data yang diposting.]]></message>
 	
 	<!-- RT Entities -->
@@ -977,9 +1001,7 @@ Validasi mungkin gagal dalam pencarian URL memerlukan form data yang diposting.]
 	<message key="notification.type.editorDecisionComment">Komentar telah ditinggalkan di keputusan editor untuk "{$param}".</message>
 	<message key="notification.type.galleyModified">Galley telah dimodifikasi untuk "{$param}".</message>
 	<message key="notification.type.issuePublished">Sebuah terbitan telah terbit.</message>
-	<message key="notification.type.metadataModified">"{$param}'s" metadata telah di modifikasi.</message>
 	<message key="notification.type.newAnnouncement">Pengumuman baru telah dibuat.</message>	
-	<message key="notification.type.reviewerComment">Reviewer telah berkomentar di "{$param}".</message>
 	<message key="notification.type.reviewerFormComment">Form review telah diserahkan untuk "{$param}".</message>
 	<message key="notification.type.reviewing">Events Review</message>
 	<message key="notification.type.site">Event Situs</message>
@@ -994,7 +1016,6 @@ Validasi mungkin gagal dalam pencarian URL memerlukan form data yang diposting.]
 	-->
 	<!-- Authorization -->
 	<message key="user.authorization.copyeditorAssignmentMissing">Akses ditolak! Anda belum ditugaskan sebagai copy editor untuk artikel ini.</message>
-	<message key="user.authorization.noJournal">Tidak ada jurnal di konteks!</message>
 	<message key="user.authorization.sectionAssignment">Anda mencoba mengakses artikel yang bukan bagian Anda.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Penyerahan copy editor invalid atau tidak ada permintaan penyerahan copy editor!</message>
 	
@@ -1002,7 +1023,4 @@ Validasi mungkin gagal dalam pencarian URL memerlukan form data yang diposting.]
 	
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Memuat daftar mata uang "{$filename}" dari XML</message>
-
-	<!-- Included here because it may be used in the navigation bar -->
-	<message key="editor.navigation.issues">Terbitan</message> 
 </locale>

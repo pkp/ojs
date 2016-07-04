@@ -4,23 +4,22 @@
 <!--
   * locale/id_ID/default.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name = "Indonesia">
-	<message key="section.default.title"> Artikel </message> 
+<locale name="id_ID" full_name="Bahasa Indonesia">
+	<message key="section.default.title"> Artikel</message> 
 	<message key="section.default.abbrev">ART</message> 
 	<message key="section.default.policy"></message>
 	<message key="default.journalSettings.checklist.notPreviouslyPublished"> Penyerahan belum diterbitkan sebelumnya, atau sedang dalam pertimbangan jurnal lain (atau sebuah penjelasan belum disediakan dalam komentar kepada editor).</message> 
-	<message key="default.journalSettings.checklist.fileFormat"> File naskah dalam format file dokumen OpenOffice, Microsoft Word, atau RTF.</message>
+	<message key="default.journalSettings.checklist.fileFormat"> File naskah dalam format file dokumen OpenOffice, Microsoft Word, RTF, atau WordPerfect.</message>
 	<message key="default.journalSettings.checklist.addressesLinked"> Ketika tersedia, URLs untuk referensi telah disediakan.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance"> Teks 1 spasi; font 12; italic; tidak digaribawahi (kecuali alamat URL); dan semua ilustrasi, figur, dan tabel yang ditempatkan di dalam teks pada poin yang tepat, jangan di akhir.</message> 
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Teks yang mematuhi persyaratan mengenai perpustakaan dan gaya bahasa digambarkan secara garis besar di <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Petunjuk Penulis</a>, yang akan ditemukan dalam halaman Tentang Kami.]]></message> 
-	<message key="default.journalSettings.privacyStatement"> Nama dan alamat email yang dimasukkan di situs jurnal hanya akan digunakan untuk tujuan yang sudah disebutkan, tidak akan disalahgunakan untuk tujuan lain atau untuk pihak lain.</message> 
+	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Teks yang mematuhi persyaratan mengenai perpustakaan dan gaya bahasa digambarkan secara garis besar di <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Petunjuk Penulis</a>, yang akan ditemukan dalam halaman Tentang Kami.]]></message> 	<message key="default.journalSettings.privacyStatement"> Nama dan alamat email yang dimasukkan di situs jurnal hanya akan digunakan untuk tujuan yang sudah disebutkan, tidak akan disalahgunakan untuk tujuan lain atau untuk pihak lain.</message> 
 	<message key="default.journalSettings.openAccessPolicy"> Jurnal ini menyediakan akses terbuka yang pada prinsipnya membuat riset tersedia secara gratis untuk publik dan akan mensupport pertukaran pengetahuan global terbesar.</message> 
 	<message key="default.journalSettings.authorSelfArchivePolicy"> Jurnal ini memberi izin dan mendorong penulis untuk memposting item yang diserahkan ke jurnal di website personal atau repositori institusional sebelum dan sesudah penerbitan, sementara itu menyediakan detail bibliografi yang akan memberikan kredit, jika bisa diterapkan, penerbitannya di jurnal ini.</message> 
 	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Tahap Copyediting dimaksudkan untuk meningkatkan aliran, kejelasan, tata bahasa, kata-kata, dan pemformatan artikel. Tahap ini mewakili kesempatan terakhir untuk penulis untu membuat perubahan substansial apapun pada teks karena tahap selanjutnya terlarang untuk koreksi format dan kesalahan penulisan. File untuk dicopyedit ada dalam format word atau .rtf dan maka dari itu bisa diedit dengan mudah sebagai dokumen yang diproses menggunakan word. Satu set instruksi yang ditampilkan di sini mengusulkan dua pendekatan untuk copyediting. Satu berdasarkan fitur Perubahan Alur Microsoft Word dan meminta copy editor, editor dan penulis memiliki akses ke program ini. Sistem kedua, yang perangkat lunak independent dikembangkan oleh pengembang tanpa terikat pihak manapun, telah meminjam tanpa permisi, dari Review Pendidikan Harvard. Editor Jurnal bisa memodifikasi instruksi ini, jadi saran bisa dibuat untuk meningkatkan proses jurnal ini.
@@ -109,26 +108,26 @@ Ikuti protokol untuk membuat revisi elekronik untuk manuskrip Anda:
 	<pre>4. PEMFORMATAN
 	Paragraf yang dimulai dengan "Topik terakhir ini…" tidak indented.</pre>]]></message>
 	
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
-</message>
+	<message key="default.journalSettings.emailSignature">________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Kami mendorong pembaca untuk sign up untuk pelayanan notifikasi penerbitan untuk jurnal ini. Gunakan tautan <a href="{$indexUrl}/{$journalPath}/user/register">Daftar</a> di bagian atas home page untuk jurnal. Pendaftaran ini akan berakibat pembaca mendapatkan Daftar Isi oleh email untuk tiap terbitan jurnal baru. Daftar ini juga memudahkan jurnal untuk mengklaim level tertentu dukungan atau jumlah pembaca. Lihat jurnal <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement"> Pernyataan Pribadi </a>, yang meyakinkan pembaca bahwa nama mereka dan alamat email tidak akan digunakan untuk tujuan lain.]]></message> 
 	<message key="default.journalSettings.forAuthors"><![CDATA[Tertarik menerbitkan jurnal? Kami merekomendasikan Anda mereview halaman <a href="{$indexUrl}/{$journalPath}/about"> Tentang Kami </a> untuk kebijakan bagian jurnal serta <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines"> Petunjuk Penulis </a>. Penulis perlu <a href="{$indexUrl}/{$journalPath}/user/register"> Mendaftar </a> dengan jurnal sebelum menyerahkan atau jika sudah terdaftar <a href="{$indexUrl}/index/login">login</a> dan mulai proses lima langkah.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Kami mendorong pustakawan riset untuk mendaftar jurnal diantara pemegang jurnal eletronik perpustakaan. Begitu juga, ini mungkin berharga bahwa sistem penerbitan sumber terbuka jurnal cocok untuk perpustakaan untuk menjadi tuan rumah untuk anggota fakultas untuk menggunakan jurnal saat mereka terlibat dalam proses editing. (Lihat <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message> 
 	<message key="default.journalSettings.lockssLicense"><![CDATA[OJS sistem LOCKSS berfungsi sebagai sistem pengarsipan terdistribusi antar-perpustakaan yang menggunakan sistem ini dengan tujuan membuat arsip permanen (untuk preservasi dan restorasi). <a href="http://www.lockss.org/">Lanjut...</a>]]></message> 
 	
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFee"> Penyerahan artikel </message> 
+	<message key="default.journalSettings.submissionFee"> Penyerahan artikel</message> 
 	<message key="default.journalSettings.submissionFeeDescription"> Penulis diminta untuk membayar biaya penyerahan artikel sebagai bagian dari proses penyerahan untuk berkontribusi pada biaya review.</message> 
-	<message key="default.journalSettings.fastTrackFee"> Fast-Track Review </message> 
+	<message key="default.journalSettings.fastTrackFee"> Fast-Track Review</message> 
 	<message key="default.journalSettings.fastTrackFeeDescription"> Dengan pembayaran biaya ini, review, keputusan editorial, dan notifikasi penulis di manuskrip ini dijamin dalam 4 minggu.</message>
-	<message key="default.journalSettings.publicationFee"> Penerbitan artikel </message> 
+	<message key="default.journalSettings.publicationFee"> Penerbitan artikel</message> 
 	<message key="default.journalSettings.publicationFeeDescription"> Jika naskah ini diterbitkan, Anda akan dikenakan penerbitan artikel.</message> 
 	<message key="default.journalSettings.waiverPolicy"> Jika Anda tidak mempunyai dana untuk membayar biaya penerbitan, kami akan membebaskan Anda dari biaya apapun. Kami tidak ingin biaya menghambat penerbitan karya yang berharga.</message> 
 	<message key="default.journalSettings.purchaseArticleFee"> Membeli Artikel</message> 
 	<message key="default.journalSettings.purchaseArticleFeeDescription"> Pembayaran biaya ini akan memudahkan Anda untuk melihat, mengunduh, dan menge-print artikel ini.</message> 
-	<message key="default.journalSettings.membershipFee"> Keanggotaan Asosiasi </message> 
+	<message key="default.journalSettings.membershipFee"> Keanggotaan Asosiasi</message> 
 	<message key="default.journalSettings.membershipFeeDescription"> Pembayaran biaya ini akan mendaftarkan Anda sebagai anggota di asosiasi ini untuk satu tahun dan memberikan akses gratis ke jurnal ini.</message> 
-	<message key="default.journalSettings.donationFee"> Donasi untuk jurnal </message> 
+	<message key="default.journalSettings.donationFee"> Donasi untuk jurnal</message> 
 	<message key="default.journalSettings.donationFeeDescription"> Donasi berapa pun jumlahnya untuk jurnal ini sangat diterima karena membantu dan menyediakan sarana bagi editor untuk menyediakan jurnal dengan kualitas terbaik untuk para pembaca.</message> 
 </locale>

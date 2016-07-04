@@ -4,14 +4,13 @@
 <!--
   * locale/fr_CA/admin.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_CA (Français (Canada)) locale.
   *
   -->
-
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="admin.hostedJournals">Revues hébergées</message>
 	<message key="admin.settings.journalRedirect">Réacheminement vers la revue</message>
@@ -21,7 +20,6 @@
 	<message key="admin.languages.supportedLocalesInstructions">Sélectionner toutes les langues qui doivent être prises en charge sur le site. Les langues sélectionnées seront disponibles pour toutes les revues hébergées sur le site, et vont également apparaître dans un menu de sélection de langue présent sur chaque page (qui peut être désactivé pour les pages spécifiques à une revue). S'il n'y a qu'une seule langue qui est sélectionnée, le menu de sélection de langue n'apparaîtra pas et les paramètres d'extension de langues ne seront pas disponibles aux revues.</message>
 	<message key="admin.languages.confirmUninstall">Êtes-vous sûr de vouloir désinstaller cette langue? Ceci affectera toute revue actuellement hébergée utilisant cette langue.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Sélectionner toute langue supplémentaire pour la prise en charge sur ce système. Les langues doivent être installées avant qu'elles ne puissent être utilisées pas les revues hébergées. Lire la documentation d'OJS pour plus d'information sur la prise en charge de nouvelles langues.</message>
-	<message key="admin.languages.downloadLocales">Télécharger les langues</message>
 	<message key="admin.languages.downloadFailed">Le téléchargement de la langue a échoué. Des explications sont contenues dans le message d'erreur ci-dessous.</message>
 	<message key="admin.languages.localeInstalled">La langue "{$locale}" a été installée.</message>
 	<message key="admin.languages.download">Télécharger la langue</message>
@@ -38,8 +36,8 @@
 	<message key="admin.journals.noneCreated">Aucune revue n'a été créée.</message>
 	<message key="admin.contexts.confirmDelete">Êtes-vous certain de vouloir supprimer définitivement cette revue et tout son contenu?</message>
 	<message key="admin.contexts.create">Créer une revue</message>
+	<message key="admin.journals.createInstructions">Vous serez inscrit automatiquement en tant que responsable de cette revue. Après avoir créé une nouvelle revue, entrez-y à titre de responsable pour poursuivre sa configuration et pour l'inscription à des rôles des utilisateurs.</message>
 	<message key="admin.journals.urlWillBe">Ça devrait être un mot court ou un acronyme qui identifie la revue. L'URL de la revue sera {$sampleUrl}</message>
-	<message key="admin.contexts.form.titleRequired">Le titre est obligatoire.</message>
 	<message key="admin.contexts.form.pathRequired">Le chemin est obligatoire.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Le chemin ne peut contenir que des caractères alphanumériques, des caractères de soulignement, et des tirets, et doit commencer et finir par un caractère alphanumérique.</message>
 	<message key="admin.contexts.form.pathExists">Le chemin sélectionné est déjà utilisé par une autre revue.</message>
@@ -59,4 +57,24 @@
 	<message key="admin.mergeUsers.confirm">Êtes-vous certain de vouloir fusionner le compte portant le nom d'utilisateur "{$oldUsername}" avec le compte portant le nom d'utilisateur "{$newUsername}"? Le compte portant le nom d'utilisateur "{$oldUsername}" sera supprimé. Cette action n'est pas réversible.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Aucun utilisateur inscrit.</message>
 	<message key="admin.locale.maybeIncomplete">Les langues sélectionnées peuvent être incomplètes.</message>
+	<message key="admin.settings.options">Options</message>
+	<message key="admin.settings.usePaging">Sur les sites qui rassemblent un grand nombre de revues, fragmentez la liste de titres en plusieurs pages.</message>
+	<message key="admin.settings.journalsList">Éléments de la revue</message>
+	<message key="admin.settings.journalsList.description">Veuillez choisir pour chaque revue les éléments que vous souhaitez présenter sur la page du site.</message>
+	<message key="admin.settings.journalsList.showThumbnail">Vignette de la revue</message>
+	<message key="admin.settings.journalsList.showTitle">Titre de la revue</message>
+	<message key="admin.settings.journalsList.showDescription">Description de la revue</message>
+	<message key="admin.categories">Catégories</message>
+	<message key="admin.categories.enable.description">S'il le veut, l'administrateur de site peut ici définir un ensemble de catégories visant à optimiser la gestion d'un grand nombre de titres. Les directeurs de revue pourront alors rattacher leur publication à plusieurs de ces catégories, et les lecteurs pourront consulter les revues disponibles par type de catégorie.</message>
+	<message key="admin.categories.disableCategories">Ne pas classer les revues par catégorie.</message>
+	<message key="admin.categories.enableCategories">Permettre aux directeurs de classer les revues par catégorie.</message>
+	<message key="admin.categories.editTitle">Modifier une catégorie</message>
+	<message key="admin.categories.createTitle">Créer une catégorie</message>
+	<message key="admin.categories.create">Créer une nouvelle catégorie</message>
+	<message key="admin.categories.noneCreated">Pas de catégories créées.</message>
+	<message key="admin.categories.confirmDelete">Voulez-vous vraiment supprimer cette catégorie?</message>
+	<message key="admin.categories.name">Nom</message>
+	<message key="admin.categories.nameRequired">Un nom de catégorie est requis.</message>
+	<message key="admin.settings.defaultMetricDescription">Votre installation OJS est paramétrée pour enregistrer plus d'une mesure d'utilisation. Les statistiques d'utilisation seront affichées dans plusieurs contextes. Il y a des cas où seulement une statistique d'utilisation doit être utilisée, ex. pour afficher une liste ordonnée des articles les plus utilisés ou classer les résultats de recherche. Veuillez sélectionnez l'une des mesures comme celle par défaut.</message>
+	
 </locale>

@@ -4,7 +4,7 @@
 <!--
   * locale/vi_VN/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="vi_VN" full_name = "Tiếng Việt">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="author.submit">Nộp bài mới</message>
 	<message key="author.track">Bài đang nộp dở</message>
 	<message key="author.competingInterests"><![CDATA[Lợi&nbsp;ích&nbsp;xung&nbsp;đột <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Chính&nbsp;sách&nbsp;CI</a>]]></message>
@@ -46,8 +46,7 @@
 	<message key="author.submit.journalSection">Chuyên mục tạp chí</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Lựa chọn chuyên mục phù hợp cho bài nộp này (xem Chuyên mục và Chính sách trong trang <a href="{$aboutUrl}" target="_new">Giới thiệu</a> Tạp chí).]]></message>
 	<message key="submission.submit.selectSection">Chọn một chuyên mục...</message>
-	<message key="submission.submit.submissionChecklist">Danh mục kiểm tra bài nộp</message>
-	<message key="submission.submit.submissionChecklistDescription">Thể hiện rằng bài viết đã sẵn sàng để duyệt bằng cách đánh dấu vào các mục dưới đây (lời nhắn gửi BTV chính có thể được bổ sung ở phía dưới).</message>
+	<message key="author.submit.submissionChecklist">Danh mục kiểm tra bài nộp</message>
 	<message key="author.submit.verifyChecklist">Tác giả cần đảm bảo rằng tất cả các mục đều đã thỏa mãn yêu cầu trước khi tiếp tục.</message>
 	<message key="author.submit.copyrightNoticeAgree">Tác giả nhất trí với các điều khoản trong Thỏa thuận về Bản quyền sẽ áp dụng cho bài nộp này nếu và khi nó được xuất bản trên tạp chí(lời nhắn dành cho BTV chính có thể được bổ sung ở phía dưới).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Tác giả phải nhất trí với những điều khoản của Thỏa thuận về Bản quyền trước khi tiếp tục.</message>
@@ -92,7 +91,6 @@
 	<message key="author.submit.suppFile.dataSet">Tập hợp dữ liệu</message>
 	<message key="author.submit.suppFile.sourceText">Văn bản (text) nguồn</message>
 	<message key="author.submit.suppFile.briefDescription">Mô tả tóm tắt</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Người đóng góp hoặc cơ quan bảo trợ</message>
 	<message key="author.submit.suppFile.availableToPeers">Cung cấp file này cho những người phản biện (không kèm theo dữ liệu mô tả), vì nó sẽ không vi phạm phản biện khuyết danh.</message>
 	<message key="author.submit.suppFile.publisherDescription">Chỉ sử dụng những tài liệu đã xuất bản chính thức.</message>
 	<message key="author.submit.suppFile.dateDescription">Ngày dữ liệu được thu thập hoặc công cụ nghiên cứu được thiết lập.</message>
@@ -109,7 +107,6 @@
 	<message key="author.submit.filesSummary">Tóm tắt file</message>
 	<message key="author.submit.finishSubmission">Kết thúc nộp bài</message>
 	<message key="author.submit.submissionComplete">Quá trình nộp bài đã hoàn thành. Cảm ơn quý vị đã quan tâm xuất bản bài viết của mình trên Tạp chí {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Nếu bài nộp này ở định dạng sẵn sàng để xuất bản mà không cần phản biện, biên tập hoặc trình bày gì thêm, có thể xếp ngay bài nộp vào bước cuối cùng của quá trình biên tập bằng cách <a href="{$expediteUrl}" class="action">Nhấp chuột vào đây</a>. (Ghi chú: Chỉ các BTV của tạp chí mới có lựa chọn này cho các bài nộp của mình.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Tải lên Phiên bản của Tác giả</message>
 	<message key="author.article.copyeditedFile">File đã biên tập bản thảo</message>
 	<message key="author.article.authorRevisedFile">File của Tác giả</message>

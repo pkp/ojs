@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/mk_MK/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="mk_MK" full_name="Македонски јазик">
+	<!--
+	 * This file is organized into several major sections, separated
+	 * by comments like this one. These sections are called:
+	 *  COMMON - Contains frequently-used words
+	 *  ENTITIES - Contains terms pertaining to the system's major
+	 *             entities, e.g. Article, Journal, Section
+	 *  INTERFACE - Contains phrases organized by the section of the
+	 *              user interface they appear in.
+	 *  LOG - Contains phrases related to log entries
+	 *  MISC - Entries that don't belong elsewhere.
+	 *  DEFAULT - Default settings for configuration items.
+	-->
+
+	<!-- review froms start -->
+
+	<!-- common -->
+
+	<!-- Journal Management -->
+
+	<!-- Categories -->
+	<message key="navigation.categories">Категории</message>
+	<message key="navigation.categories.browse">Прегледај</message>
+
+	<!--  peer review -->
+
+
+	<message key="reviewer.article.enterReviewForm">Кликнете на иконата за да ја пополните формата за прегледување.</message>
+	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Ве молиме пополнете ги задолжителните полиња.</message>
+
+	<!-- review forms end -->
+
+	<!--
+	 *
+	 * COMMON - This section contains the most frequently-used words
+	 *
+	-->
+
+	<!-- Common Messages -->
+	<message key="common.openJournalSystems">Open Journal Systems</message>
+	<message key="common.confirmComplete">Дали сте сигурни дека сакате да ја одбележете оваа задача како завршена? Нема да бидете во можност да направите промени подоцна.</message>
+	<message key="common.payment">Плаќање</message>
+	<message key="common.payments">Исплати</message>
+	<message key="common.homePageHeader.altText">Наслов на почетната страница</message>
+	<message key="common.journalHomepageImage.altText">Слика на почетната страница</message>
+
+	<!-- Common Form Messages -->
+
+	<!-- Common Email Messages -->
+
+	<!-- Common Localization Terms -->
+
+	<!-- Common Error Messages -->
+
+	<!-- Navigation -->
+	<message key="navigation.journalHelp">Помош</message>
+	<message key="navigation.current">Тековен број</message>
+	<message key="navigation.otherJournals">Останати</message>
+	<message key="navigation.browseByIssue">По број</message>
+	<message key="navigation.browseByAuthor">По автор</message>
+	<message key="navigation.infoForAuthors">За авторите</message>
+	<message key="navigation.infoForLibrarians">За библиотекарите</message>
+	<message key="navigation.competingInterestGuidelines">Упатство за конкурентски интереси</message>
+	<message key="navigation.infoForAuthors.long">Информации за авторите</message>
+	<message key="navigation.infoForLibrarians.long">Информации за библиотекарите</message>
+
+	<!-- Article Queues -->
+	<message key="common.queue.long.submissionsUnassigned">Некласифицирани</message>
+	<message key="common.queue.short.submissionsUnassigned">Некласифицирани</message>
+	<message key="common.queue.long.submissionsInEditing">Поднесувања во уредување</message>
+	<message key="common.queue.short.submissionsInEditing">Во уредување</message>
+	<message key="common.queue.long.submissionsInReview">Поднесувања во прегледување</message>
+	<message key="common.queue.short.submissionsInReview">Во прегледување</message>
+	<message key="common.queue.long.submissionsArchives">Архива</message>
+	<message key="common.queue.short.submissionsArchives">Архива</message>
+	<message key="common.queue.long.active">Активни поднесувања</message>
+	<message key="common.queue.short.active">Активни</message>
+	<message key="common.queue.long.completed">Архива</message>
+	<message key="common.queue.short.completed">Архива</message>
+
+	<!--
+	 *
+	 * ENTITIES - This section contains terms pertaining to the system's
+	 *            major entities, e.g. Article, Journal, Section
+	 *
+	-->
+
+	<!-- Common Section Terms -->
+	<message key="section.section">Секција</message>
+	<message key="section.sections">Секција на списанието</message>
+	<message key="section.title">Име на секцијата</message>
+	<message key="section.abbreviation">Кратенка</message>
+	<message key="section.abbreviation.example">(На пример, Articles=ART)</message>
+
+	<!-- Common Article Terms -->
+	<message key="article.article">Артикал</message>
+	<message key="article.articles">Артикли</message>
+	<message key="article.submissionId">ID на поднесувањето</message>
+	<message key="article.title">Наслов</message>
+	<message key="article.authors">Автори</message>
+	<message key="article.indexingInformation">Индексирање на информации</message>
+	<message key="article.metadata">Метаподатоци</message>
+	<message key="article.journalSection">Секција</message>
+	<message key="article.file">Датотека</message>
+	<message key="article.suppFile">Дополнителна датотека</message>
+	<message key="article.suppFiles">Дополнителни датотеки</message>
+	<message key="article.suppFilesAbbrev">Доп. датотеки</message>
+	<message key="article.discipline">Академска дисциплина и под-дисциплини</message>
+	<message key="article.subject">Клучни зборови</message>
+	<message key="article.coverage">Покриеност</message>
+	<message key="article.type">Тип, метод или пристап</message>
+	<message key="article.language">Јазик</message>
+	<message key="article.sectionEditor">SE</message>
+	<message key="article.commentsToEditor">Коментари на авторот</message>
+	<message key="article.submission">Поднесување</message>
+	<message key="article.submissions">Поднесувања</message>
+	<message key="article.details">Детали</message>
+	<message key="article.abstract">Апстракт</message>
+	<message key="article.coverPage.altText">Насловна слика</message>
+	<message key="article.accessLogoOpen.altText">Отворен пристап</message>
+	<message key="article.accessLogoRestricted.altText">Ограничен пристап</message>
+	<message key="article.comments.sectionDefault">Стандардно</message>
+	<message key="article.comments.disable">Оневозможи</message>
+	<message key="article.comments.enable">Овозможи</message>
+	<message key="article.fontSize">Големина на фонт</message>
+	<message key="article.fontSize.small.altText">Мал</message>
+	<message key="article.fontSize.medium.altText">Среден</message>
+	<message key="article.fontSize.large.altText">Голем</message>
+
+	<!-- Submission Tracking - Common -->
+	<message key="submission.submissionEditing">Уредување на поднесувањето</message>
+	<message key="submission.changeSection">Промена на</message>
+	<message key="submission.sent">Испрати</message>
+	<message key="submission.editorDecision">Одлука на уредникот</message>
+	<message key="submission.round">Круг&amp;nbsp;{$round}</message>
+	<message key="submission.editorReview">Преглед од уредникот</message>
+	<message key="submission.notifyAuthor">Извесување за авторот</message>
+	<message key="submission.notifyEditor">Извесување за уредникот</message>
+	<message key="submission.editorAuthorRecord">Уредник/Евиденција на пошта за авторот</message>
+	<message key="submission.reviewersVersion">Додатна верзија на датотеката од рецезентот</message>
+	<message key="submission.postReviewVersion">Преглед за верзија на датотеката</message>
+	<message key="submission.editorVersion">Верзија на едиторот</message>
+	<message key="submission.authorsRevisedVersion">Ревидирана верзија на датотеката од авторот</message>
+	<message key="submission.authorVersion">Верзија на авторот</message>
+	<message key="submission.copyediting">Copyediting</message>
+	<message key="submission.copyedit">Copyedit</message>
+	<message key="submission.proofreading">Лекторирање</message>
+	<message key="submission.scheduling">Закажување</message>
+	<message key="submission.scheduledIn">Закажано за објавување во {$issueName}.</message>
+	<message key="submission.scheduledIn.tba">(TBA)</message>
+	<message key="submissions.sec">Sec</message>
+	<message key="submissions.step1">Чекор 1</message>
+	<message key="submissions.step3">Чекор 3</message>
+	<message key="submissions.queuedReview">За преглед</message>
+	<message key="submissions.scheduled">Закажано</message>
+	<message key="submissions.published">Објавено</message>
+	<message key="submissions.initial">Почетна</message>
+	<message key="submissions.proofread">Лекторирани</message>
+	<message key="submissions.initialProof">Почетна коректура</message>
+	<message key="submissions.postAuthor">Пост-Автор</message>
+	<message key="submissions.reviewRound">Разгледување</message>
+	<message key="submissions.proof">Коректура</message>
+	<message key="submissions.editorDecision">Одлука на уредникот</message>
+	<message key="submissions.editorRuling">Одлука на уредникот</message>
+	<message key="submission.eventLog">Логови од настанот</message>
+
+	<!-- Submission list search engine -->
+	<message key="submissions.copyeditComplete">Copyedited</message>
+	<message key="submissions.layoutComplete">Уредуван изглед</message>
+	<message key="submissions.proofreadingComplete">Лекторирани</message>
+
+	<!-- Submission Notes -->
+
+	<!-- Common Journal Terms -->
+	<message key="journal.currentIssue">Тековно издание</message>
+	<message key="journal.journals">Списанија</message>
+	<message key="journal.path">Патека</message>
+	<message key="context.context">Списание</message>
+	<message key="journal.issn">ISSN</message>
+
+	<!-- User -->
+	<message key="user.profile.profileImage">Слика на профилот</message>
+	<message key="user.showAllJournals">Покажи ги моите списанија</message>
+	<message key="user.registerForOtherJournals">Регистрирај се за други списанија</message>
+	<message key="user.myJournals">Моите списанија</message>
+	<message key="user.manageMySubscriptions">Управување на моето членство</message>
+	<message key="user.noRoles.chooseJournal">Вашиот профил во моментов не е поврзан со било кои списанија. Ве молиме изберете списание:</message>
+	<message key="user.noRoles.noRolesForJournal">Вашиот профил во моментов нема било какви улоги за ова списание. Ве молиме изберете од поставувањето подолу:</message>
+	<message key="user.noRoles.submitArticle">Поднеси предлог</message>
+	<message key="user.noRoles.submitArticleRegClosed">Поднеси статија: Поднеси статија: регистрацијата на авторот е моментално оневозможена.</message>
+	<message key="user.noRoles.regReviewer">Регистрирај се како рецезент</message>
+	<message key="user.noRoles.regReviewerClosed">Регистрирај се како рецезент: Оваа регистрација е моментално оневозможена.</message>
+
+	<!-- Roles -->
+	<message key="user.role.manager">Менаџер на списанието</message>
+	<message key="user.role.sectionEditor">Дел за уредникот</message>
+	<message key="user.role.subscriptionManager">Менаџер на претплатувањето</message>
+	<message key="user.role.managers">Менаџери на списание</message>
+	<message key="user.role.subscriptionManagers">Менаџер на претплатувањето</message>
+
+	<!-- Common Issue Terms -->
+	<message key="issue.issue">Издание</message>
+	<message key="issue.issues">Изданија</message>
+	<message key="issue.title">Наслов</message>
+	<message key="issue.volume">Volume</message>
+	<message key="issue.number">Број</message>
+	<message key="issue.vol">Vol</message>
+	<message key="issue.no">No</message>
+	<message key="issue.year">Година</message>
+	<message key="issue.noIssues">Нема изданија</message>
+	<message key="issue.toc">Содржина</message>
+	<message key="issue.abstract">Апстракт</message>
+	<message key="issue.coverPage.altText">Насловна страна</message>
+	<message key="issue.fullIssue">Целосно издание</message>
+	<message key="issue.nonpdf.title">Преземете издание</message>
+	<message key="issue.viewIssue">Разгледај издание</message>
+
+	<!-- Common Subscription Type Terms -->
+	<message key="subscriptionTypes.currency">Currency</message>
+	<message key="subscriptionTypes.year">година</message>
+	<message key="subscriptionTypes.years">години</message>
+	<message key="subscriptionTypes.month">месец</message>
+	<message key="subscriptionTypes.months">месеци</message>
+	<message key="subscriptionTypes.nonExpiring">Не истекува</message>
+	<message key="subscriptionTypes.format">Формат</message>
+	<message key="subscriptionTypes.format.online">Онлајн</message>
+	<message key="subscriptionTypes.format.print">Печати</message>
+	<message key="subscriptionTypes.format.printOnline">Печати и онлајн</message>
+
+	<!-- Common Subscription Terms -->
+	<message key="subscriptions.inactive">Неактивен</message>
+	<message key="subscriptions.status">Статус</message>
+	<message key="subscriptions.status.active">Активен</message>
+	<message key="subscriptions.status.needsInformation">Потребни информации</message>
+	<message key="subscriptions.status.needsApproval">Потребно одобрување</message>
+	<message key="subscriptions.status.awaitingManualPayment">Очекување на рачно плаќање</message>
+	<message key="subscriptions.status.awaitingOnlinePayment">Очекување на онлајн плаќање</message>
+	<message key="subscriptions.status.other">Друго, види забелешки</message>
+	<message key="subscriptions.individualDescription">Индивидуалните претплати бараат најава за пристап до содржината.</message>
+	<message key="subscriptions.institutionalDescription">Институционалните претплати не бараат најава. Доменот на корисникот и / или IP адреса се корисат за да се обезбеди пристап до содржината.</message>
+	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Note:</strong> Институционалните претплати купуваат онлајн барања за одобрување на домен и IP се движи пред претплатата да е активирана.]]></message>
+
+	<!--
+	 *
+	 * LOG - This section contains entries related to log entries.
+	 *
+	-->
+	<message key="submission.event.general.defaultEvent">Процес на доставување</message>
+	<message key="submission.event.general.issueScheduled">Трудот е доставен на листата на чекање за да се додаде во списанието</message>
+	<message key="submission.event.general.issueAssigned">Трудот е додаден во списанието</message>
+	<message key="submission.event.general.articlePublished">Статијата е објавена</message>
+
+	<message key="submission.event.author.authorRevision">Авторската ревизија е поднесена</message>
+
+	<message key="submission.event.general.authorRevision">Авторската датотека за ревизија е ажурирана</message>
+
+	<message key="submission.event.editor.editorAssigned">Пријавата е испратена до уредникот</message>
+	<message key="submission.event.editor.editorUnassigned">Уредникот е некласифициран од поднесувањето</message>
+	<message key="submission.event.editor.editorDecision">Одлуката на уредникот е евидентирана</message>
+	<message key="submission.event.editor.editorFile">Датотеката на уредникот е прикачена</message>
+	<message key="submission.event.editor.submissionArchived">Поднесувањето е испратено во архива</message>
+	<message key="submission.event.editor.submissionRestored">Поднесувањето е повлечено од архивата</message>
+
+
+	<message key="submission.event.copyedit.copyeditorAssigned">Лектор е доделен на поднесувањето</message>
+	<message key="submission.event.copyedit.copyeditorUnassigned">Лекторот е повлечен од пријавеното поднесување</message>
+	<message key="submission.event.copyedit.copyeditInitiated">Покренато е доделување на лектура</message>
+	<message key="submission.event.copyedit.copyeditRevision">Ажурирана е уредничката датотека</message>
+	<message key="submission.event.copyedit.copyeditInitialCompleted">Почетната лектура е завршена</message>
+	<message key="submission.event.copyedit.copyeditFinalCompleted">Завршната лектура е завршена</message>
+	<message key="submission.event.copyedit.copyeditSetFile">Датотеката за уредување е ажурирана</message>
+
+	<message key="submission.event.proofread.proofreaderAssigned">Пријавениот труд е доделен на уредувачот</message>
+	<message key="submission.event.proofread.proofreaderUnassigned">Уредувачот е повлечен од пријавениот труд</message>
+	<message key="submission.event.proofread.proofreadInitiated">Започната е задача за лекторирање</message>
+	<message key="submission.event.proofread.proofreadRevision">Корегираната датотека од лекторот е ажурирана</message>
+	<message key="submission.event.proofread.proofreadCompleted">Лекторските дополнувања на датотеката се завршени</message>
+
+	<message key="submission.event.layout.layoutEditorAssigned">Пријавениот труд е доделен на графичкиот уредник</message>
+	<message key="submission.event.layout.layoutEditorUnassigned">Гррафичкиот уредник е повлечен од пријавениот труд</message>
+	<message key="submission.event.layout.layoutInitiated">Изгледот на поставувањето е започнато</message>
+	<message key="submission.event.layout.layoutGalleyCreated">Изгледот на коректурата е ажуриран</message>
+	<message key="submission.event.layout.layoutComplete">Изгледот на поставувањето е завршено</message>
+	<!--
+	 *
+	 * INTERFACE - Contains phrases organized by the section of the
+	 *             user interface they appear in.
+	 *
+	-->
+
+	<!-- Reader article view -->
+	<message key="reader.subscribersOnly">Само за потписници</message>
+	<message key="reader.subscriptionRequiredLoginText">Потребна е претплата за пристап до содржината. За да се потврди претплатата, најавете се на системот.</message>
+	<message key="reader.openAccess">Отворен пристап</message>
+	<message key="reader.subscriptionAccess">Претплатнички пристап</message>
+	<message key="reader.subscriptionOrFeeAccess">Претплата или надоместок за пристап</message>
+
+	<!-- Reader Comments -->
+	<message key="comments.commentsOnArticle">Коментари за овој артикал</message>
+	<message key="comments.authenticated"><![CDATA[by <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
+
+	<!-- Site Administration -->
+
+	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[За да се направи содржината на сите списанија кои се објавени во рамките на овој веб сајт и индексирани во рамките на глобалниот дистрибуирачки систем за истражување бази на податоци,<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">регистрирајте</a> го линкот на вашата веб страна на<a href="http://pkp.sfu.ca/harvester/" target="_blank">колекционерот</a>на метаподатоците Public Knowledge Project. Оваа алатка собира метаподатоци од секоја индексирана ставка во ова списание, овозможувајќи им точно и колективно пребарувањето меѓу истражувачките сајтови кои се придржуваат кон <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
+<br /><br />
+За регистрирање во PKP системот<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">кликните овде</a> и внесите <span class="highlight">{$siteUrl}</span> во <strong>Site URL</strong>, и <span class="highlight">{$oaiUrl}</span> во <strong>Base URL for OAI Archive</strong>.
+<br /><br />
+Активиран OAI протокол може да биде исклучен на целиот сајт со менување на системската конфигурација OJS. Идните верзии на OJS ќе му овозможи на OAI интерфејсот  да биде овозможен или оневозможен за индивидуални списанија во рамките на овој сајт.]]></message>
+
+
+
+	<!-- Languages -->
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Симнувањето на јазичните пакети од Public Knowledge Project веб серверот не е во моментов на располагање, бидејќи:</p>
+	<ul>
+		<li>Вешиот сервер нема или не дозволува извршување на GNU "tar" услугата</li>
+		<li>OJS не е во можност да ја менува локацијата да регистарскиот фајл, вообичаено "registry/locales.xml".</li>
+	</ul>
+<p>Јазичните пакети може рачно да се симнат од<a href="http://pkp.sfu.ca">веб страната на PKP</a>.</p>]]></message>
+
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Специфицирањето на стандарден автентикациски извор освен OJS ги има следниве ефекти:</p>
+<ul>
+	<li>Ако корисникот се обидува да регистрирате нова сметка на овој сајт со корисничко име кое постои во автентикацискиот код (но не и во OJS базата на податоци), обидот за регистрација е дозволен само ако безбедната лозинка е валидна за таа корисничка сметка.</li>
+</ul>]]></message>
+
+	<!-- System Information -->
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ЗАБЕЛЕШКА!</h4>
+<p>Системот не може автоматски да запишува врз конфигурациската датотека.За да се применуваат конфигурациските промени мора да ја отворите <tt>config.inc.php</tt> во соодветен текст едитор и да ја замени нејзината содржина со содржината на полето за текст подолу.</p>]]></message>
+
+
+	<!-- Site Administrator Merge Users -->
+
+	<!-- Subscription Management -->
+	<message key="subscriptionManager.subscriptionManagement">Управување со зачленувањето</message>
+	<message key="subscriptionManager.individualSubscriptions">Поединечно зачленување</message>
+	<message key="subscriptionManager.institutionalSubscriptions">Институционално зачленување</message>
+	<message key="subscriptionManager.subscriptionTypes">Типови на членства</message>
+
+	<!-- Journal Management -->
+
+	<!-- Statistics & Reports -->
+
+	<!-- Plugin Management -->
+
+	<!-- Payment Management -->
+
+	<!-- General plugin information -->
+	<message key="plugins.categories.auth.description">Овластувачките додатоци овозможуваат Open Journal Systems да делегира корисничка автенкација на други системи, како LDAP сервери.</message>
+	<message key="plugins.categories.citationFormats.description">Цитат формат додатоци им овозможуваат на корисниците со различни формати да пристапат до статиите.</message>
+	<message key="plugins.categories.generic.description">Генеричките додатоци се користат за да се прошири Open Journal Systems во различни начини кои не се поддржани од страна на други категории.</message>
+	<message key="plugins.categories.implicitAuth">Имплицитна проверка на додатоците за автентичност</message>
+	<message key="plugins.categories.implicitAuth.description">Имплицитна проверка на додатоците за автентичност имплементираат поддршка за автенкација на корисниците врз основа на HTTP headers.</message>
+
+	<!-- Files Browser -->
+
+	<!-- Journal Setup -->
+
+	<!-- Setup Step 1 -->
+
+	<!-- Setup Step 2 -->
+
+
+
+
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems поддржува <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) систем за да се обезбеди сигурна и постојана архива за списанието. LOCKSS е софтвер со отворен код развиен на Stanford University Library која им овозможува на библиотеките да ги зачуваат избраните веб списанија со редовно избирачки регистрирани списание веб-сајтови за ново објавените содржини и архивирање на неа. Секоја архива е постојано потврдена против другите библиотетични кешови, и ако содржината е резултат да бидат оштетени или изгубени, другите кешови или списание се користи за да ја врати.
+<br /><br />
+Поставувањето на LOCKSS поддршка за Open Journal Systems не треба да се одржи до по објавувањето е целосно во тек, на која точка ги следат овие два чекори:]]></message>
+
+	<!-- Setup Step 3 -->
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Предложени креативни заеднички содржини за авторско право</h3>
+<h4>1. Предложена приватност за списанија кои нудат отворен пристап</h4>
+Авторите кои го објавуваат ова списание се согласуваат со следниве термини:
+<ol type="a">
+	<li>Авторите ги задржуваат авторските права да му дадат на списанието право на прво објавување со работа истовремено лиценцирани според лиценцата на <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> која им овозможува на другите да ја споделат работата со признание за авторство и почетно објавување во ова списание.</li>
+	<li>Авторите се во можност да влезат во посебни, дополнителни договорни аранжмани за не-ексклузивна дистрибуција на објавени верзии на списанието на работата (на пример, да ја објавите на институционалното складиште или го објави тоа во една книга), со потврда од нејзините заеднички објави во ова списание.</li>
+	<li>Авторите ќе бидат дозволени и охрабрени да ја објават нивната работа на интернет (на пример, во институционални складишта или на нивниот веб-сајт) пред и за време на поднесувачкиот процес, како што тоа може да доведе до продуктивна размена, како и претходен и поголем цитат на објавените работи (Види <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
+</ol>
+
+<h4>Предложена приватност за списанија кои нудат одложен отворен пристап</h4>
+Авторите кои објавуваат во ова списание се согласуваат со следниве термини:
+<ol type="a">
+	<li>Авторите го задржуваат авторското право да му дадат на списанието право на прво објавување, со работа [НАВЕДИ ГО ПРЕИОДОТ НА ВРЕМЕ] по истовременото објавување на лиценцирани според лиценцата на <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> која им овозможува на другите да ја споделат работата со признание за авторство на работата и почетно објавување во ова списание.</li>
+	 <li>Авторите се во можност да влезат во посебни, дополнителни договорни аранжмани за не-ексклузивна дистрибуција на објавени верзии на списанието на работата (на пример, да ја објавите на институционалното складиште или го објави тоа во една книга), со потврда од нејзините заеднички објавувачи во ова списание.</li>
+	 <li>Авторите ќе бидат дозволени и охрабрени да ја објават нивната работа на интернет (на пример, во институционални складишта или на нивниот веб-сајт) пред и за време на поднесувакиот процес, како што тоа може да доведе до продуктивна размена, како и претходен и поголем цитат на објавените работи (Види <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
+</ol>]]></message>
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Списанието ќе го користи системот за предмет класификација достапен на интернет.<br />
+Наслов на системот за класификација]]></message>
+	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[За да ја имате содржината на ова списание индексирано во рок од глобално дистрибуиран систем на истражување бази на податоци, прочитајте <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">чекори за станете придонесувач на податоците</a> и да се регистрирате во списанието со официјалните <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open Archives registry</a>.  За да се регистрирате, ќе ви треба URL за базата на вашето складиште: <span class="highlight">{$oaiUrl}</span>.  Потоа, можете да се регистрирате во вашето списание на <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> и <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
+<br /><br />
+Напомена, ако вашиот сајт администратор е веќе регистриран на овој сајт со овие услуги, вашето списание ќе биде индексирано автоматски и вие не треба да се регистрирате.]]></message>
+
+	<!-- Setup Step 4 -->
+	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Чекори: Поднесување на задачата &gt; Преглед на поднесувањето &gt; Уредување на поднесувањето &gt; Содржина.<br /><br />
+Изберете модел за справување со овие аспекти на уредувачкиот процес. (За да назначите главен уредник и дел од уредници одете на Уредувачи во Journal Management.)]]></message>
+	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>За да им овозможите на читателите да лоцираат онлајн верзии на работата цитирани од страна на авторот, следните опции се достапни.</p>
+
+<ol>
+	<li><strong>Додаете алатка за читање</strong><p> Journal Manager може да додаде "Find References" во алатката за читање кои го придружуваат објавена предмети, која им овозможува на читателите да постават наслов референца, а потоа се бараат претходно избраните научни бази на податоци за цитираните работи.</p></li>
+	<li><strong>Вградување на линкови во референци</strong><p>Графичкиот уредник може да додаде врска кон референците кои може да се најдат на интернет со користење на следните инструкции (што може да се уредува).</p></li>
+</ol>]]></message>
+
+	<!-- Setup Step 5 -->
+
+	<!-- Languages -->
+
+	<!-- Section Management -->
+
+	<!-- Import/Export -->
+
+	<!-- Groups / Editorial Team -->
+
+
+
+	<!-- People Management -->
+	<message key="manager.people.confirmDisable">Оневозможи го овој корисник? Ова ќе го спречи корисникот да влезе во системот.
+
+Може опционално да се обезбеди корисникот со причина да му се оневозможи неговата сметка.</message>
+	<message key="manager.people.noAdministrativeRights"><![CDATA[Жал ми е, вие немате административни права за овој корисник. Ова може да биде затоа што:
+		<ul>
+			<li>Корисникот е сајт администратор</li>
+			<li>Корисникот е активен во списанија со кои вие не управувате</li>
+		</ul>
+	Оваа задача мора да биде изведена од страна на сајт администраторот.
+	]]></message>
+
+
+
+	<!-- Email Management -->
+
+	<!-- Subscription Policy Management -->
+
+	<!-- Subscription Type Management -->
+
+	<!-- Subscription Management -->
+
+	<!-- Announcement Type Management -->
+
+	<!-- Announcements Management -->
+
+	<!-- Editor -->
+	<message key="editor.submissionReview.notes">
+	<![CDATA[<ol>
+	<li>Означените објекти укажуваат на акција која е потребна од уредник, етикетирани како што следува:
+		<ul>
+			<li class="highlightReviewerNotNotified">Рецензентот е доделен но не е известен преку е-маил</li>
+			<li class="highlightNoDecision">Сите рецензенти ги вратија своите коментари, но нема евидентирано одлука.</li>
+			<li class="highlightRevisedCopyUploaded">Авторот има прикачено ревидиран ракопис</li>
+			<li class="highlightReviewerConfirmationOverdue">Рецензент доцни за да ја потврди поканата за рецензија</li>
+			<li class="highlightReviewerCompletionOverdue">Рецензентот доцни за завршување на прегледот</li>
+		</ul>
+	</li>
+	<li>"Due" се пополнува кога рецензентот го прифаќа барањето да ги прегледа, тоа го прикажува бројот на недели за да одредениот датум за преглед или (-) недели дека тоа е задоцнето.</li>
+</ol>]]></message>
+	<message key="editor.submissionEditing.notes">
+	<![CDATA[<ol>
+	<li>Означените објекти укажуваат на акција која е потребна од уредник, етикетирани како што следува:
+		<ul>
+			<li class="highlightCopyediting">Се бара акција во фазата за уредување</li>
+			<li class="highlightLayoutEditing">Акција е потребна во уредувањето на изгледот на страницата</li>
+			<li class="higlightProofreading">Акција се бара во лекторската фаза</li>
+		</ul>
+	</li>
+</ol>]]></message>
+
+	<!-- Editor Index Page -->
+
+	<!-- Back Issues -->
+
+	<!-- Create Issue / Issue Data -->
+
+	<!-- Live Issues -->
+
+	<!-- Navigation sidebar menu -->
+
+	<!-- Used by editor in submission review / editing -->
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Име на линкови до профилот на рецезентот.<br />
+Рејтингот е повеќе од 5 (Одлично).<br />
+Неделите се однесуваат на просечниот период на време за да се заврши прегледот.<br />
+Последен е датумот на повеќето неодамна прифатени прегледи.<br />
+Активно е колку прегледувачи во моментов се разгледуваат или се во тек.]]></message>
+
+
+
+
+
+
+	<!-- Section Editor -->
+	<message key="sectionEditor.activeEditorialAssignments">Активни уреднички задачи</message>
+	<message key="sectionEditor.completedEditorialAssignments">Завршени уреднички задачи</message>
+	<message key="sectionEditor.noneAssigned">Нема поднесени трудови.</message>
+	<message key="sectionEditor.copyedit.confirmRenotify">Известувањето на овој лектор повторно ќе ги започне неговите задачи. Дали сте сигурни дека сакате да го направите ова?</message>
+	<message key="sectionEditor.author.confirmRenotify">Известувањето на овој автор повторно ќе ги започне неговите задачи. Дали сте сигурни дека сакате да го направите ова?</message>
+	<message key="sectionEditor.layout.confirmRenotify">Известувањето на овој графички уредник повторно ќе ги започне неговите задачи. Дали сте сигурни дека сакате да го направите ова?</message>
+	<message key="sectionEditor.proofreader.confirmRenotify">Известувањето на овој коректор повторно ќе ги започне неговите задачи. Дали сте сигурни дека сакате да го направите ова?</message>
+
+	<message key="sectionEditor.regrets.breadcrumb">Извинување</message>
+	<message key="sectionEditor.regrets.title">#{$submissionId} рецензирано извинување, откажување и&amp; претходни кругови</message>
+	<message key="sectionEditor.regrets">Извинување</message>
+	<message key="sectionEditor.regrets.link">Преглед на извинувања, откажани, и претходните рецензии</message>
+	<message key="sectionEditor.regrets.reviewRound">Стручна рецензија, круг {$round}</message>
+	<message key="sectionEditor.regrets.decisionRound">Уредничка одлука, круг {$round}</message>
+	<message key="sectionEditor.regrets.regretsAndCancels">Рецезентово извинување &amp; Откажување</message>
+	<message key="sectionEditor.regrets.regret">Извинување</message>
+	<message key="sectionEditor.regrets.result">Резултати</message>
+	<message key="sectionEditor.review.enrollReviewer">Запиши постоечки корисник како рецезент</message>
+	<message key="sectionEditor.review.createReviewer">Креирај нов рецезент</message>
+
+	<!-- Layout Editor -->
+	<message key="layoutEditor.activeEditorialAssignments">Активни задачи на уредникот</message>
+	<message key="layoutEditor.completedEditorialAssignments">Завршени задачи на уредникот</message>
+	<message key="layoutEditor.noActiveAssignments">Нема активни задачи.</message>
+	<message key="layoutEditor.layoutEditingAssignments">Активни задачи на графичкиот уредник</message>
+	<message key="layoutEditor.galley.uploadGalleyFormat">Прикачи формат за коректура</message>
+	<message key="layoutEditor.galley.replaceGalley">Замени ја датотеката</message>
+	<message key="layoutEditor.galley.uploadSuppFile">Внеси дополнителна датотека</message>
+	<message key="submission.layout.imageInvalid">Невалиден формат на слика. Прифатените формати се .gif, .jpg, and .png.</message>
+
+	<!-- Reviewer -->
+	<message key="reviewer.pendingReviews">Членови чија рецензија е во тек</message>
+	<message key="reviewer.completedReviews">Завршено</message>
+	<message key="reviewer.averageQuality">Оцена</message>
+
+	<!-- Used in submission review -->
+	<message key="reviewer.article.fileToBeReviewed">Фајл за рецензија</message>
+	<message key="reviewer.article.notifyTheEditor">Известете го уредникот</message>
+	<message key="reviewer.article.canDoReview">Ќе го извршам прегледот</message>
+	<message key="reviewer.article.cannotDoReview">Не сум во можност да извршам преглед</message>
+	<message key="reviewer.article.restrictedFileAccess">Поднесувањета ќе бидат ставени на располагање, ако и кога рецензентот се согласува да го преземе прегледот</message>
+	<message key="reviewer.article.submissionEditor">Уредник на поставувањата</message>
+	<message key="reviewer.article.reviewerCommentsDescription">Внесете ги овде коментарите за рецензија</message>
+	<message key="reviewer.article.editorToEnter">Внесете го уредувачот</message>
+	<message key="reviewer.article.sendReminder">Испрати потсетник</message>
+	<message key="reviewer.article.automatic">(Auto)</message>
+	<message key="reviewer.article.recommendation">Препорака</message>
+	<message key="reviewer.article.submitReview">Достави преглед за уредникот</message>
+	<message key="reviewer.article.reviewerComments">Коментари</message>
+	<message key="reviewer.article.uploadedFile">Прикачени фајлови</message>
+	<message key="reviewer.article.reviewersAnnotatedVersion">Верзија поставена од рецезентот</message>
+	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Ако сакате да го објасните фајлот, за уредникот,снимете го на вашиот хард диск и користете Browse/Upload.)</message>
+        <message key="reviewer.article.schedule.request">Барање на уредникот</message>
+        <message key="reviewer.article.schedule.response">Вашиот одговор</message>
+        <message key="reviewer.article.schedule.submitted">Преглед на поднесени</message>
+        <message key="reviewer.article.schedule.due">Рок за рецензија</message>
+	<message key="reviewer.article.decision.accept">Прифати поднесување</message>
+	<message key="reviewer.article.decision.pendingRevisions">Проверките се задолжителни</message>
+	<message key="reviewer.article.decision.resubmitHere">Поднесете повторно за преглед</message>
+        <message key="reviewer.article.decision.resubmitElsewhere">Поднесете на друго место</message>
+	<message key="reviewer.article.decision.decline">Одбивање на поднесувањето</message>
+	<message key="reviewer.article.decision.seeComments">Види коментари</message>
+	<message key="reviewer.article.schedule">Распоред</message>
+        <message key="reviewer.article.submissionToBeReviewed">Поднесувањето да биде прегледано</message>
+        <message key="reviewer.article.reviewSchedule">Преглед на распоредот</message>
+        <message key="reviewer.article.reviewSteps">Преглед на чекорите</message>
+        <message key="reviewer.article.reviewerGuidelines">Упатство за преглед</message>
+	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[Упатството за прегледување ќе им овозможи на прегледувачите критериуми за соодветно прегледување на поднесувањата поставени во системот, и може да вклучува било какви специјални инструкции за подготовка на ефикасен и корисен преглед. Во спроведувањето на прегледот, прегледувачите се претставени со две отворени текст кутии, првата "за авторот и уредникот," и втората "за уредникот.". Алтернативно, менаџерот може да создаде форма за рецензија во формите за преглед.  Во сите случаи, уредниците ќе имаат можност за вклучување на прегледувачите соодветно со авторите.]]></message>
+        <message key="reviewer.article.notifyEditorA">Извести го уредникот на поднесувањето</message>
+        <message key="reviewer.article.notifyEditorB">за тоа дали ќе го превземе прегледот.</message>
+        <message key="reviewer.article.consultGuidelines">Ако го вршите прегледот, консултирајте се со Водичот за прегледување подолу.</message>
+        <message key="reviewer.article.downloadSubmission">Кликнете на имињата на датотеките да ги преземете и да ги видите (на екранот или со печатење) датотеките поврзани со ова поднесување.</message>
+        <message key="reviewer.article.enterCompetingInterests"><![CDATA[Изјаснете се дали имате или немате конкурентски интереси во однос на ова истражување (види <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Приватност</a>).]]></message>
+	<message key="reviewer.competingInterests">Конкурентски интереси</message>
+        <message key="reviewer.article.enterReviewA">Кликнете на иконата за да влезете и да го прегледате ова поднесување.</message>
+        <message key="reviewer.article.uploadFile">Во прилог, можете да испратите датотека за уредникот и / или авторот за да се консултирате.</message>
+        <message key="reviewer.article.selectRecommendation">Изберете препорака и доставете ја на разгледување за да го завршите процесот. Мора да внесете преглед или испратите датотека пред изборот на препорака.</message>
+	<message key="reviewer.article.mustSelectDecision">Нема избрано препорака. Мора да изберете препорака за да доставите.</message>
+	<message key="reviewer.article.confirmDecision">Откако ќе одберете одлука повеќе нема да бидете во можност да направите промени во овој преглед. Дали сте сигурни дека сакате да продолжите?</message>
+	<message key="reviewer.article.ensuringBlindReview">Обезбедување на Blind Review</message>
+
+	<!-- Used in submission editing -->
+	<message key="copyeditor.article.fileToCopyedit">Фајл на C/E</message>
+	<message key="copyeditor.article.copyeditorFile">Copyeditor фајл</message>
+	<message key="copyeditor.article.uploadedFile">Прикачени датотеки</message>
+	<message key="copyeditor.article.copyeditorFinalFile">Copyeditor фајл</message>
+
+	<!-- Proofreader -->
+	<message key="proofreader.noProofreadingAssignments">Нема исправување на задачите</message>
+
+	<!-- Author -->
+
+
+	<!-- Article Submission Step 1 -->
+
+
+	<!-- Article Submission Step 2 -->
+
+	<!-- Article Submission Step 3 -->
+	<message key="author.submit.uploadInstructions"><![CDATA[
+<p>За да испратите ракопис во ова списание, пополнете ги следните чекори.</p>
+<ol>
+<li>На оваа страница, кликнете Browse (или изберете Датотека), која отвора Choose File прозорец за лоцирање на датотека на хард дискот на вашиот компјутер.</li>
+<li>Пронајдете го фајлот што сакате да го поднесете и нагласете го тоа.</li>
+<li>Кликнете Open на Choose File, што го става името на датотеката на оваа страница.</li>
+<li>Кликнете Upload на оваа страница, која ги прикачува датотеките од компјутерот во системот и ги преименува по следниве конвенции на списанието.</li>
+<li>Откако поднесувањето е прикачени, кликнете Save and Continue на крајот од страницата</li>
+</ol>]]></message>
+
+	<!-- Article Submission Step 4 -->
+
+	<!-- Article Submission Step 4a: Supplementary Files -->
+
+	<!-- Article Submission Step 5 -->
+
+	<!-- Used in submission review / editing -->
+	<message key="submission.review.mustUploadFileForReview">Барање за email не може да биде испратено се додека постои верзија за прегледување.</message>
+
+	<!-- Submission Tracking - Copyedit Specific -->
+	<message key="submission.copyedit.mustUploadFileForInitialCopyedit">Барање за email не може да биде испратено се додека фајлот е селектиран за уредникот за копирање во Одлука на уредникот, преглед страница.</message>
+	<message key="submission.copyedit.mustUploadFileForCopyedit">Барање за email не може да биде испратено се додека фајлот е селектиран за уредникот.</message>
+	<message key="submission.copyedit.initialCopyedit">Првобитен Copyedit</message>
+	<message key="submission.copyedit.editorsCopyedit">Copyedit уредник</message>
+	<message key="submission.copyedit.editorAuthorReview">Copyedit автор</message>
+	<message key="submission.copyedit.finalCopyedit">Краен Copyedit</message>
+	<message key="submission.copyedit.copyeditVersion">C/E верзија</message>
+	<message key="submission.copyedit.selectCopyeditor">Додели Copyeditor</message>
+	<message key="submission.copyedit.useFile">Користете датотека</message>
+	<message key="submission.copyedit.copyeditComments">Copyedit коментари</message>
+	<message key="submission.copyedit.instructions">Copyedit инструкции</message>
+
+	<!-- Submission Tracking - Layout Specific -->
+	<message key="submission.layout.noLayoutFile">Прикачи конечна copyedit верзија или дизајн верзија пред испраќање на барање</message>
+	<message key="submission.layout.publicGalleyId">Јавен galley идентификатор</message>
+	<message key="submission.layout.galleyPublicIdentificationExists">Јавен galley идентификатор постои.</message>
+	<message key="submission.layout.assignLayoutEditor">Додели дизајн уредник</message>
+	<message key="submission.layout.replaceLayoutEditor">Замени дизајн уредник</message>
+	<message key="submission.layout.layoutComments">Дизајн коментари</message>
+	<message key="submission.layout.instructions">Дизајн инструкции</message>
+	<message key="submission.layout.referenceLinking">Референци за поврзување</message>
+
+
+	<!-- Submission Tracking - Proofread Specific -->
+	<message key="submission.proofreadingComments">Лекторирање на коментарите</message>
+	<message key="submission.proofread.corrections">Лекторирање на корекции</message>
+	<message key="submission.proofread.instructions">Проверка на инструкции</message>
+
+	<!-- Submission History -->
+
+	<message key="submission.logType.article">Артикал</message>
+	<message key="submission.logType.author">Автор</message>
+	<message key="submission.logType.editor">Уредник</message>
+	<message key="submission.logType.review">Преглед</message>
+	<message key="submission.logType.copyedit">Copyedit</message>
+	<message key="submission.logType.layout">Дизајн</message>
+	<message key="submission.logType.proofread">Лекторирање</message>
+
+	<!-- Submission Event Log -->
+
+	<!-- Submission Email Log -->
+
+	<!-- Submission Comments -->
+	<message key="submission.comments.editorAuthorCorrespondence">Усогласување на Уредник / Автор</message>
+	<message key="submission.comments.copyeditComments">Copyedit коментари</message>
+	<message key="submission.comments.viewableDescription"><![CDATA[Овие коментари може да бидат споделени со авторот.<br />
+(После снимањето,дополнителни коментари можат да се додадат.)]]></message>
+	<message key="submission.comments.canShareWithAuthor">За авторот и уредникот</message>
+	<message key="submission.comments.cannotShareWithAuthor">За уредникот</message>
+	<message key="submission.comments.blindCcReviewers">По испраќањето, претставува едитирање на BCC копија за да се испрати до рецензенти.</message>
+	<message key="submission.comments.forAuthorEditor">За авторот и уредникот</message>
+	<message key="submission.comments.forEditor">За уредникот</message>
+	<message key="submission.comments.saveAndEmailAuthor">Зачувај и испрати е-маил на авторот</message>
+	<message key="submission.comments.saveAndEmailEditor">Зачувај и испрати е-маил на авторот</message>
+
+	
+	<!-- Login -->
+	<message key="user.login.resetPasswordInstructions"><![CDATA[Поради безбедносни причини, овој систем на пораки врши ресетирање на лозинка за регистрираните корисници, наместо да се повикува на  
+тековната лозинка.<br /><br />Внесете ја вашата e-mail адреса подолу, за да ја ресетирате вашата лозинка. Потврда ќе биде испратени на оваа email адреса.]]></message>
+
+	<!-- Registration -->
+	<message key="user.register.noJournals">Нема списанија со кои можете да се регистрирате на овој сајт.</message>
+	<message key="user.register.privacyStatement">Изјава за приватност</message>
+	<message key="user.register.loginToRegister">Внесете ги вашите постоечки корисничко име и лозинка за да се регистрирате со ова списание.</message>
+	<message key="user.register.registrationDisabled">Ова списание во моментов не прифаќа кориснички регистрации.</message>
+	<message key="user.register.form.passwordLengthTooShort">Лозинката која ја внесовте не е доволно долга.</message>
+	<message key="user.register.readerDescription">Известување преку е-маил за објавување на издание на списанието.</message>
+	<message key="user.register.openAccessNotificationDescription">Известување преку е-маил кога изданието на списанието е направено за отворен пристап.</message>
+	<message key="user.register.authorDescription">Можност да достават ставки во списанието.</message>
+	<message key="user.register.reviewerDescriptionNoInterests">Подготвени да спроведат рецензија на поднесоци до списанието.</message>
+	<message key="user.register.reviewerDescription">Подготвени да спроведат рецензија на поднесоци на сајтот.</message>
+	<message key="user.register.reviewerInterests">Идентификуваат преглед на интереси (суштински области и истражувачки методи):</message>
+
+	<!-- Subscriptions -->
+	<message key="user.subscriptions.mySubscriptions">Моите членства</message>
+	<message key="user.subscriptions.subscriptionStatus">Претплатнички статус</message>
+	<message key="user.subscriptions.statusInformation">Активните и истечените претплати се прикажани подолу, заедно со нивните датуми на истекување. Во дополнение, следните информации за статусот може да бидат вклучени со секоја претплата.</message>
+	<message key="user.subscriptions.status">Статус</message>
+	<message key="user.subscriptions.statusDescription">Опис</message>
+	<message key="user.subscriptions.status.needsInformationDescription">Дополнителни информации се потребни пред претплатата да може да се активира</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">Претплатата мора да биде разгледана пред да се активира</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Рачно плаќањето е иницирано, но се уште не е добиено</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Онлајн плаќање е иницирано но откажано или не е завршено</message>
+	<message key="user.subscriptions.individualSubscriptions">Индивидуална претплата</message>
+	<message key="user.subscriptions.institutionalSubscriptions">Институционална претплата</message>
+	<message key="user.subscriptions.renew">Обнови</message>
+	<message key="user.subscriptions.purchase">Купување</message>
+	<message key="user.subscriptions.purchaseNewSubscription">Купување нови претплати</message>
+	<message key="user.subscriptions.purchaseIndividualSubscription">Купување на индивидуална претплата</message>
+	<message key="user.subscriptions.purchaseInstitutionalSubscription">Купување на институционална претплата</message>
+	<message key="user.subscriptions.expires">Истекува</message>
+	<message key="user.subscriptions.expired">Истечен</message>
+	<message key="user.subscriptions.viewSubscriptionTypes">Преглед на достапните типови на претплата</message>
+	<message key="user.subscriptions.form.typeId">Типови на претплата</message>
+	<message key="user.subscriptions.form.membership">Членство</message>
+	<message key="user.subscriptions.form.membershipRequired">Избраниот тип на претплата бара информации за членство.</message>
+	<message key="user.subscriptions.form.typeIdValid">Ве молам изберете валиден тип на претплата.</message>
+	<message key="user.subscriptions.form.subscriptionExists">Овој корисник веќе има индивидуална претплата.</message>
+	<message key="user.subscriptions.form.membershipInstructions">Информации за членство ако се потребни за избраниот тип на претплата.</message>
+	<message key="user.subscriptions.form.institutionName">Име на институцијата</message>
+	<message key="user.subscriptions.form.institutionNameRequired">Се бара име на институцијата.</message>
+	<message key="user.subscriptions.form.institutionMailingAddress">Поштенска адреса</message>
+	<message key="user.subscriptions.form.domain">Домен</message>
+	<message key="user.subscriptions.form.domainInstructions"><![CDATA[Ако доменот е внесен овде, IP опсезите се опционалени.<br />Валидните вредности се имиња на домени (e.g. lib.sfu.ca).]]></message>
+	<message key="user.subscriptions.form.domainIPRangeRequired">Избраниот тип на претплата бара домен и/или IP опсег за автентикација на претплата.</message>
+	<message key="user.subscriptions.form.domainValid">Ве молам внесете валиден домен.</message>
+	<message key="user.subscriptions.form.ipRange">IP опсези</message>
+	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
+	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[Ако IP опсезите се внесени овде, доменот е опционален.<br /> Валидните вредности вклучуваат IP адреси (e.g. 142.58.103.1), IP опсег (e.g. 142.58.103.1 - 142.58.103.4), IP опсег со ѕвездичка '*' (e.g. 142.58.*.*), и IP опсег со CIDR (e.g. 142.58.100.0/24).]]></message>
+	<message key="user.subscriptions.form.ipRangeValid">Ве молиме внесете валиден IP опсег.</message>
+	<message key="user.subscriptions.form.deleteIpRange">Избриши</message>
+	<message key="user.subscriptions.form.addIpRange">Додади</message>
+
+
+	<!-- Search -->
+	<message key="search.browseAuthorIndex">Барајте го авторот по индекс</message>
+	<message key="search.searchFor">Барај статии за</message>
+	<message key="search.author">Автори</message>
+	<message key="search.withinJournal">Во рамките на</message>
+	<message key="search.allJournals">Сите списанија</message>
+	<message key="search.authorIndex">Барајте го авторот по индекс</message>
+	<message key="search.authorDetails">Детали за авторот</message>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Search tips: </h4><ul>
+<li>Термините за пребарување препознаваат големи букви</li>
+<li>Заедничките зборови се игнорираат</li>
+<li>Стандардно само статиите кои ги содржат <em>сите</em> термини во барањето се враќаат(односно, <em>AND</em> е имплицирано))</li>
+<li>Комбинирајте повеќе зборови со <em>ИЛИ</em> за да ги најдете статиите кои содржат рок; на пример, <em>образование или истражување</em></li>
+<li>Користете загради за создавање на посложени пребарувања, на пример, <em>архива ((весник ИЛИ конференција) НЕ тези)</em></li>
+<li>Пребарање за точната фраза со ставање во наводници; на пример, <em>"отворен пристап за објавување"</em></li>
+<li>Исклучување на еден збор од префикс со <strong>-</strong> или <em>НЕ</em>; на пример <em>онлајн-политика</em> или <em>онлајн НЕ политика</em></li>
+<li>Користење <strong>*</strong> во термин како симбол за да одговара на било кој редослед на карактери; на пример,<em>општество * морал</em> ќе одговара на документи кои содржат "социолошки" или "социјален" 0</li>
+</ul>]]></message>
+
+	<!-- Interstitial page for PDFs -->
+	<message key="article.pdf.title">Portable Document Format (PDF)</message>
+
+
+	<!-- Interstitial page for non-PDF non-HTML galleys -->
+	<message key="article.nonpdf.title">Превземи статија</message>
+	<message key="article.nonpdf.note"><![CDATA[Датотеката која ја избравте може да се преземе автоматски. Ако не сака, кликнете на линкот подолу. Забележете дека оваа датотека можеби бара специјален прегледувач или додаток за да ја видите.<br /><br />Ако датотеката не може да се преземе автоматски, <a href="{$url}">кликнете овде</a>.]]></message>
+
+	<!-- Site index -->
+	<message key="site.journalsHosted">Списанија поставени на оваа страница</message>
+	<message key="site.journalView">Види списание</message>
+	<message key="site.journalRegister">Регистрирај се</message>
+	<message key="site.journalCurrent">Тековно издание</message>
+	<message key="site.noJournals">Нема достапни списанија.</message>
+
+	<!-- Current index -->
+	<message key="current.current">Тековно</message>
+	<message key="current.noCurrentIssue">Нема тековно издание</message>
+	<message key="current.noCurrentIssueDesc">Ова списание нема објавено било какво издание.</message>
+
+	<!-- Archive index -->
+	<message key="archive.archives">Архива</message>
+	<message key="archive.browse">Пребарувај низ старите изданија</message>
+	<message key="archive.issueUnavailable">Недостапно издание</message>
+
+	<!-- About The Journal -->
+	<message key="about.statistics">Статистика</message>
+	<message key="about.history">Историја на списанието</message>
+	<message key="about.editorialTeam">Уреднички тим</message>
+	<message key="about.editorialTeam.biography">Биографија</message>
+	<message key="about.editorialPolicies">Приватност на уредување</message>
+	<message key="about.focusAndScope">Фокусирање и опсег</message>
+	<message key="about.sectionPolicies">Дел приватност</message>
+	<message key="about.submissions">Поднесувања</message>
+	<message key="about.onlineSubmissions">Онлајн поднесување</message>
+	<message key="about.onlineSubmissions.login">Одете да се најавите</message>
+	<message key="about.onlineSubmissions.registrationRequired">Регистрација и најава се потребни за да се поднесе ставка онлине и да се провери статусот на тековните поднесоци.</message>
+	<message key="about.authorGuidelines">Насоки за авторот</message>
+	<message key="about.submissionPreparationChecklist">Поднесување на список за подготовка</message>
+	<message key="about.submissionPreparationChecklist.description">As part of the submission process, authors are required to check off their submission's compliance with all of the following items, and submissions may be returned to authors that do not adhere to these guidelines.</message>
+	<message key="about.copyrightNotice">Авторски права</message>
+	<message key="about.privacyStatement">Изјава за доверливост</message>
+	<message key="about.authorFees">Давачки на авторот</message>
+	<message key="about.authorFeesMessage">Ова списание ги наплаќа следниве давачки на авторот.</message>
+	<message key="about.peerReviewProcess">Процес на рецензија</message>
+	<message key="about.publicationFrequency">Фреквенција на објавување</message>
+	<message key="about.openAccessPolicy">Приватност на отворен пристап</message>
+	<message key="about.delayedOpenAccess">Одложен отворен пристап</message>
+	<message key="about.delayedOpenAccessDescription1"> Содржината на ова списание ќе биде достапна во формат со отворен пристап</message>
+	<message key="about.delayedOpenAccessDescription2">месец(и) откако ова издание е објавено.</message>
+	<message key="about.authorSelfArchive">Сопствено архивирање на авторот</message>
+	<message key="about.archiving">Архивирање</message>
+	<message key="about.subscriptions">Членства</message>
+	<message key="about.subscriptions.individual">Индивидуални членства</message>
+	<message key="about.subscriptions.institutional">Институционални членства</message>
+	<message key="about.subscriptionsContact">Контакт на членовите</message>
+	<message key="about.subscriptionTypes.name">Име</message>
+	<message key="about.subscriptionTypes.format">Формат</message>
+	<message key="about.subscriptionTypes.duration">Времетраење</message>
+	<message key="about.subscriptionTypes.cost">Чинење</message>
+	<message key="about.availableSubscriptionTypes">Тип на членство</message>
+	<message key="about.memberships">Членови</message>
+	<message key="about.aboutThisPublishingSystem"> За овој Publishing System</message>
+	<message key="about.aboutThisPublishingSystem.altText">OJS Уредувачки и издавачки процес</message>
+	<message key="about.aboutOJSJournal"><![CDATA[Ова списание користи Open Journal Systems {$ojsVersion},кој е отворен код за управување со списание и објавување на развиен софтвер, поддржан, и слободно распространлив од страна на <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> под GNU Општата Јавна Лиценца.]]></message>
+	<message key="about.aboutOJSSite"><![CDATA[Оваа страница користи Open Journal Systems {$ojsVersion}, кој е отворен код за управување со списание и објавување на развиен софтвер, поддржан, и слободно распространлив од страна на <a href="http://pkp.sfu.ca/">Public Knowledge Project</a>  под GNU Општата Јавна Лиценца.]]></message>
+
+	<!-- Announcement -->
+
+	<!-- Help -->
+	<message key="help.ojsHelp">Open Journal Systems Помош</message>
+	<message key="help.ojsHelpAbbrev">OJS Помош</message>
+	<message key="help.searchReturnResults">Врати се на Search Results</message>
+
+	<!-- Donations -->
+	<message key="donations.thankYou">Ви благодариме</message>
+	<message key="donations.thankYouMessage"> Ви благодариме за правењето на придонес. Вашиот допринос е многу ценет.</message>
+
+	<!-- Gifts -->
+	<message key="gifts.buyer">Од</message>
+	<message key="gifts.buyerDescription">Од кого е овој подарок?</message>
+	<message key="gifts.recipient">За</message>
+	<message key="gifts.recipientDescription">За кого е овој подарок?</message>
+	<message key="gifts.thankYou">Благодарам</message>
+	<message key="gifts.thankYouMessage">Вашата членарина за подароци е завршена. Ќе добиете копија од емаилот за подарок пратен до примачот откако вашата исплата ќе биде обработена.</message>
+	<message key="gifts.purchaseGiftIndividualSubscription">Членарина за подароци</message>
+	<message key="gifts.subscriptionFormIntroduction">Ве молам потполнете ја формата подолу. Предвидени информации за контакт, заедно со вашата белешка за подарокот, ќе се користат за да се испрати е-мејл на примачот и за да ве информираат за нови подарок претплати (исто така ќе добиете копија од овој емаил/од оваа порака).</message>
+	<message key="gifts.details">Детали за подарокот</message>
+	<message key="gifts.detailsDescription">Ве молам изберете подарок подолу и вклучете ја вашата персонална порака која ќе биде испратена до примачот (ќе добиете копија од оваа порака).</message>
+	<message key="gifts.gift">Подарок</message>
+	<message key="gifts.noteTitle">Наслов</message>
+	<message key="gifts.note">Белешка за подарокот</message>
+	<message key="gifts.noteTitleRequired">Ве молам внесете наслов на вашата персонална порака.</message>
+	<message key="gifts.noteRequired">Ве молам наведете персонална порака.</message>
+	<message key="gifts.localeRequired">Ве молам изберете јазик за вашата персонална порака.</message>
+	<message key="gifts.myGifts">Мои подароци</message>
+	<message key="gifts.manageMyGifts">Управување со моите подароци</message>
+	<message key="gifts.redeemGift">Размени подароци</message>
+	<message key="gifts.status.notRedeemed">Достапни</message>
+	<message key="gifts.status.redeemed">Размени</message>
+	<message key="gifts.status.redeemGift">Размени подарок</message>
+	<message key="gifts.subscriptions">Членства/претплати</message>
+	<message key="gifts.subscriptionsDescription">Претплата за разменетиот подарок ќе ја замени вашата постоечка претплата (ако ја имате).Претплатата ќе започне на датумот на размената и ќе биде валидна во времетраењето на типот на претплатата.</message>
+	<message key="gifts.purchaseGiftSubscription">Претплата за подарок</message>
+	<message key="gifts.giftSubscriptionsAvailable">Претплатите за подарок се исто така валидни. Претплатите за подароци  можат да бидат разменети во секое време од страна на примачот и се одличен начин да се поддржи ова списание</message>
+	<message key="gifts.noSubscriptions">Нема претплати за подарок</message>
+	<message key="gifts.giftRedeemed">Подарокот беше успешно разменет.</message>
+	<message key="gifts.noGiftToRedeem">Овој подарокот не е достапен за да биде разменет</message>
+	<message key="gifts.giftAlreadyRedeemed">Овој подарок е веќе разменет.</message>
+	<message key="gifts.giftNotValid">Овој подарок не е валиден и не може да биде разменет.</message>
+	<message key="gifts.subscriptionTypeNotValid">Типот на претплатата за овој подарок не е валиден. Контактирајте го менаџерот за претплата.</message>
+	<message key="gifts.subscriptionNonExpiring">Овој подарок не се разменува бидејќи веќе имате не-истекувачка претплата со ова списание.</message>
+
+	<!-- Payments -->
+	<message key="payment.loginRequired">Мора да бидете најавени за да направите исплата.</message>
+	<message key="payment.loginRequired.forArticle">Претплата или купување на статијата е потребно за пристап до одредена ставка. За да се ​​потврди претплата, да се пристапи до претходното купување, или купување на статијата, логирајте се во списанието.</message>
+	<message key="payment.loginRequired.forIssue">Претплата или купување на издание е потребно за пристап до одредена ставка. За да се ​​потврди претплата, да се пристапи до претходното купување, или купување на издание, логирајте се во списанието.</message>
+	<message key="payment.loginRequired.forDonation">Мора да бидете најавени за да донирате.</message>
+
+	<message key="payment.paid">Платено</message>
+	<message key="payment.payNow">Плати сега</message>
+	<message key="payment.waive">Се откажува</message>
+	<message key="payment.alreadyPaid">Веќе платено</message>
+	<message key="payment.alreadyPaidMessage">Изберете го ова поле ако веќе сте ја испратиле вашата исплата за списанието со цел да се заврши процесот на поднесување. Поднесувањата нема да бидат разгледани додека средствата не пристигнат. Кликнете плати сега погоре за да ги видите инструкциите за плаќање.</message>
+	<message key="payment.paymentReceived">Плаќањето е добиено</message>
+	<message key="payment.paymentSent">Исплата е веќе испратена</message>
+	<message key="payment.authorFees">Давачки на авторот</message>
+	<message key="payment.type.submission">Давачки за поднесувања</message>
+	<message key="payment.type.publication">Давачки за објавувања</message>
+	<message key="payment.type.fastTrack">Fast Track преглед на надомест</message>
+	<message key="payment.type.membership">Давачки за индивидуално членство</message>
+	<message key="payment.type.purchaseArticle">Давачки за купување на статија</message>
+	<message key="payment.type.purchaseIssue">Давачки за купување на издание</message>
+	<message key="payment.type.subscription">Претплата</message>
+	<message key="payment.type.donation">Донации</message>
+	<message key="payment.type.gift">Подароци</message>
+	<message key="payment.type.gift.subscription">Зачленување</message>
+
+	<message key="payment.donation.makeDonation">Донирај</message>
+
+	<message key="payment.submission.paySubmission">Плаќање на надомест за поднесување</message>
+	<message key="payment.fastTrack.payFastTrack">Плаќаат за FastTrack</message>
+	<message key="payment.fastTrack.inFastTrack">во FastTrack</message>
+	<message key="payment.publication.payPublication">Плаќаат за објавување</message>
+	<message key="payment.publication.publicationPaid">Објавување на платен надомест</message>
+
+	<message key="payment.membership.buyMembership">Купи индивидуално членство</message>
+	<message key="payment.membership.renewMembership">Обнови индивидуално членство</message>
+	<message key="payment.membership.ends">Заврши</message>
+
+	<message key="payment.subscription.purchase">Плати зачленување</message>
+	<message key="payment.subscription.renew">Обнови зачленување</message>
+	<message key="payment.subscription.expires">Истекување</message>
+
+	<!-- Installer -->
+	<message key="installer.ojsInstallation">OJS Инсталација</message>
+	<message key="installer.ojsUpgrade">OJS Надградба</message>
+	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Верзија{$version}</h4>
+
+<p>Благодарам што го предземавте Public Knowledge Project's <strong>Open Journal Systems</strong>. Пред да продолжите, прочитајте го <a href="{$baseUrl}/docs/README">README</a> фајлот вклучен во овој софтвер. За повеќе информации за Public Knowledge Project и неговите софтверски проекти, посетете ја <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Ако имате пријава за грешка или  прашања за техничка поддршка за Open Journal Systems, погледнете го <a href="http://forum.pkp.sfu.ca" target="_blank">форумот за поддршка </a> или посетете го PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">системот за пријава на грешка</a>. Исто така форумот за поддршка е префериран метод за контакт, исто така може да пратите е-маил на тимот на <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+
+<h4>Надградба</h4>
+
+<p>Ако вршите надградба на постоечка инсталација на OJS 2.x, <a href="{$upgradeUrl}">кликнете овде</a> за да продолжите.</p>
+
+<h4>Препорачани системски барања</h4>
+
+<ul>
+	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (including PHP 5.x); моментално користите PHP {$phpVersion}{$wrongPhpText}</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (including PostgreSQL 8.x)</li>
+	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x или Microsoft IIS 6</li>
+	<li>Оперативен систем: Било кој оперативен систем кој што го поддржува горенаведените софтвер, вклучувајќи <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+</ul>
+
+<p>Како што PKP немаат ресурси за тестирање на секоја можна комбинација на софтверски верзии и платформи,без гаранција за правилно функционирање или поддршка се подразбира.</p>
+
+<p>Промена на овие подесувања може да се направи после инсталацијата со уредување на датотеки <tt>config.inc.php</tt> во основниот OJS директориум, или со користење на сајт администрацискиот веб интерфејс.</p>
+
+<h4>Поддржани системи на бази на податоци </h4>
+
+<p>OJS во моментот е само тестиран на MySQL и PostgreSQL, иако други системи за управување со бази на податоци поддржани од страна на <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> може да работат (во целост или делумно). Извештаите за компатибилност и / или кодот за закрпи за алтернативни DBMSs може да бидат испратени до OJS тимот.</p>
+
+<h4>Пред-инсталациски чекори</h4>
+
+<p>1. Следниве датотеки и директориуми (и нивните содржини) мора да можат да запишуваат:</p>
+<ul>
+	<li><tt>config.inc.php</tt> може да запишува (optional): {$writable_config}</li>
+	<li><tt>public/</tt> може да запишува: {$writable_public}</li>
+	<li><tt>cache/</tt> може да запишува: {$writable_cache}</li>
+	<li><tt>cache/t_cache/</tt> може да запишува: {$writable_templates_cache}</li>
+	<li><tt>cache/t_compile/</tt> може да запишува: {$writable_templates_compile}</li>
+	<li><tt>cache/_db</tt> може да запишува: {$writable_db_cache}</li>
+</ul>
+
+<p>2. Директориум кој чува прикачени датотеки мора да се креира и исто така кој ќе може да запишува (види "File Settings" подолу).</p>]]></message>
+	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS Верзија {$version}</h4>
+
+<p>Ви благодарам за преземањето на Public Knowledge Project's <strong>Open Journal Systems</strong>. Пред да продолжите, прочитајте го  <a href="{$baseUrl}/docs/README">README</a> и <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> фајловите вклучени во овој софтвер. За повеќе информации за Public Knowledge Project и неговите софтверски проекти, посетете ја <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Ако имате пријава за грешка или  прашања за техничка поддршка за Open Journal Systems, погледнете го  <a href="http://forum.pkp.sfu.ca" target="_blank">форумот за поддршка</a> или посетете го PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank"> системот за пријава на грешка </a>.Исто така форумот за поддршка е префериран метод за контакт, исто така може да пратите е-маил на тимот на <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Строго <strong>се препорачува</strong> дека треба да направите копија на вашата база на податоци, датотеки, директориуми, и OJS инсталациониот директориум пред да продолжите.</p>
+<p>Ако работите во <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, осигурајте се дека директивата на max_извршно_време во вашиот php.ini конфигурациски фајл е поставен до највисоко ограничување. Ако ова или било кое друго временско ограничување(e.g. Apache's "Timeout" директива) е достигнато и процесот на надградба е прекинат, рачна интервенција ќе биде потребна.</p>]]></message>
+	<message key="installer.localeSettingsInstructions"><![CDATA[За целосна Unicode (UTF-8) поддршка, изберете UTF-8 за целото множество на поднесувања. Забележете дека оваа поддршка моментално бара MySQL >= 4.1.1 или PostgreSQL >= 7.1 сервер за бази на податоци. Исто така забележете дека целосната Unicode поддршка бара PHP >= 4.3.0 составен со поддршка за <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> библиотека (овозможен стандардно во најновите PHP инсталации). Може да имате проблем со користење на продолжен сет на знаци ако Вашиот сервер не ги исполнува овие барања.
+<br /><br />
+Вашиот сервер моментално поддржува mbstring: <strong>{$supportsMBString}</strong>]]></message>
+	<message key="installer.allowFileUploads"><![CDATA[Вашиот сервер моментално дозволува прикачување на фајлови: <strong>{$allowFileUploads}</strong>]]></message>
+	<message key="installer.maxFileUploadSize"><![CDATA[Вашиот сервер моментално дозволува  максимална големина на фајловите за прикачување од: <strong>{$maxFileUploadSize}</strong>]]></message>
+	<message key="installer.localeInstructions">Мајчиниот јазик да се користи за овој систем. Ве молиме консултирајте се со OJS документацијата, ако сте заинтересирани за поддршка за јазици кои не се наведени тука.</message>
+	<message key="installer.additionalLocalesInstructions">Одберете ги додатните јазици за поддршка на овој систем. Овие јазици ќе бидат достапни за употреба од страна на списанија хостирани на сајт. Дополнителните јазици, исто така, можат да бидат инсталирани во било кое време од страна на сајт администрациониот интерфејс.</message>
+	<message key="installer.filesDirInstructions"><![CDATA[Внесете ја целосната патека на постоечкиот директориумот каде прикачените датотеки треба да се чуваат. Овој директориум не треба да биде директно веб-достапен. <strong>Ве молам осигурајте се дека овој директориум постои и може да запишува пред инсталацијата.</strong> Windows имињата на патеките треба да користат однапред коси црти, e.g. "C:/myjournal/files".]]></message>
+	<message key="installer.databaseSettingsInstructions">OJS бараат пристап до SQL базата на податоци за чување на податоците. Види ги системските барања погоре на листата на поддржани бази на податоци. Во полињата подолу, обезбедите подесувањата да се користат за да се поврзете со базата на податоци.</message>
+	<message key="installer.installApplication">Инсталирај го Open Journal Systems</message>
+	<message key="installer.upgradeApplication">Надгради го Open Journal Systems</message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Предупредување:</strong>Ако инсталацијата не успее делумно преку инсталацијата на базата на податоци можеби ќе треба да ја отфрлите вашиот OJS база на податоци или табелите на базата на податоци пред да се обидете одново да инсталирате база на податоци.]]></message>
+	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>ВАЖНО!</h4>
+<p>Инсталерот не може автоматски да запишува врз конфигурациската датотека. Пред да се обидете да го користите системот, Ве молиме да го отворите <tt>config.inc.php</tt> во соодветен текст едитор и да ја замени неговата содржина со содржината на полето за текст подолу.</p>]]></message>
+	<message key="installer.installationComplete"><![CDATA[<p>Инсталацијата на OJS завршила успешно.</p>
+<p>За да започнете со користење на системот, <a href="{$loginUrl}">login</a> со корисничкото име и лозинката влезете на претходната страница.</p>
+<p>Ако сакате да добивате новости и надградби, можете :</p>
+<ol>
+	<li><a href="http://pkp.sfu.ca/ojs/register" target="_new">Регистрирајте го </a> вашето списание, конференција, or harvester и добивајте ги промените на софтверските надградби, безбедносните закрпи, и повеќе.</li>
+	<li>Придружите се на нашата<a href="http://pkp.sfu.ca/informed" target="_new">листа за дискусии</a> за OJS, OCS, the Harvester, Lemon8-XML, OMP, или сите од горенаведените.</li>
+	<li>Зачленете се за <a href="http://pkp.sfu.ca/blog" target="_new">PKP блог</a> <a href="http://pkp.sfu.ca/blog/feed" target="_new">RSS feed</a>.</li>
+</ol>
+<p>Ако имате прашања или коментари, посетете го <a href="http://forum.pkp.sfu.ca" target="_new">форумот за поддршка</a>.</p>]]></message>
+	<message key="installer.upgradeComplete"><![CDATA[<p>Надградбата на OJS во верзија {$version} е завршена успешно.</p>
+<p>Не заборавајте да ги поставите "installed" подесувањата во вашата config.inc.php конфигурациска датотека назад кон <em>на</em>.</p>
+<p>Ако уште не сте регистрирани и сакате да добивате новости и надградби, <strong>регистрирајте се на <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Ако имате прашања или коментари, посетете го <a href="http://forum.pkp.sfu.ca" target="_new">форумот за поддршка</a>.</p>]]></message>
+
+	<!-- Installation upgrade warnings -->
+	<message key="site.upgradeAvailable.admin"><![CDATA[Овде е достапна новата верзија на OJS ! Во моментот ја користите OJS {$currentVersion}. Најновата верзија е OJS {$latestVersion}. Посетете ја <a href="http://pkp.sfu.ca/ojs_download" target="_new">оваа страница</a> за да ја преземете најновата верзија и да се најдете инструкции за надградба.]]></message>
+	<message key="site.upgradeAvailable.manager"><![CDATA[Овде е достапна новата верзија на OJS! Во моментот ја користите OJS {$currentVersion}. Најновата верзија е OJS {$latestVersion}. Контактирајте го вашиот администратор на страницата ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) за да го известите за оваа нова порака. Повеќе информации може да најдете овде <a href="http://pkp.sfu.ca/ojs_download" target="_new">here</a>.]]></message>
+
+	<!-- Article Logs -->
+	<message key="log.author.submitted">{$authorName} внесе ново поднесување, ID {$submissionId}.</message>
+	<message key="log.author.documentRevised">{$authorName} изврши ревизија на статијата {$submissionId}. ID-то на новиот фајл е {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} не му е доделена улога за преглед на поднесувањето {$submissionId} во рундата за преглед {$round}.</message>
+	<message key="log.review.reviewInitiated">Рундата {$round} е прегледана од {$reviewerName} за поднесувањето {$submissionId} е иницирана.</message>
+	<message key="log.review.reviewReinitiated">Рундата {$round} е прегледана од {$reviewerName} за поднесувањето {$submissionId} не е иницирана.</message>
+	<message key="log.review.reviewCancelled">Рундата {$round} е прегледана од {$reviewerName} за поднесувањето {$submissionId} е откажано.</message>
+	<message key="log.review.reviewCleared">Рундата {$round} е прегледана од {$reviewerName} за поднесувањето {$submissionId} е избришано.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} беше оценето за рундата{$round} за преглед на поднесувањето {$submissionId}.</message>
+	<message key="log.review.reviewDueDateSet">Одредениот датум за рундата {$round} за преглед на поднесувањето {$submissionId} од {$reviewerName} е поставен на {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">Препораката за рундата{$round} за преглед на поднесувањето {$submissionId} од {$reviewerName} е поставен на {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">Препораката за рундата{$round} за преглед на поднесувањето {$submissionId} е поставена од едиторот, {$editorName}, во име на рецензентот, {$reviewerName}.</message>
+	<message key="log.review.resubmit">Поднесувањето {$submissionId} е повторно вратено за прегледување.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} ја одби рундата {$round} за преглед на поднесувањето {$submissionId}.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} ја прифати рундата {$round} за преглед на поднесувањето {$submissionId}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} ја одби рундата {$round} за преглед на поднесувањето {$submissionId} во име на {$reviewerName}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} ја прифати рундата {$round} за преглед на поднесувањето {$submissionId} во име на {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">Уредникот, {$userName}, прикачи фајл за преглед за рундата {$round} за поднесување {$submissionId} во име на рецензентот, {$reviewerName}.</message>
+	<message key="log.review.reviewerFile">Прегледаниот фајл е прикачен.</message>
+	<message key="log.editor.decision">Одлука на уредникот ({$decision}) за ставката {$submissionId} е евидентирана од {$editorName}.</message>
+
+
+	<message key="log.copyedit.initiate">Едитирање на копијата на поднесувањето {$submissionId} е коментирана од {$copyeditorName}.</message>
+	<message key="log.copyedit.copyeditFileSet">Стандардниот едитиран копија фајл е избран.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} ја завршил почетната едитирана копија на поднесувањето {$submissionId}.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} ја завршил финалната едитирана копија на поднесувањето{$submissionId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} му е доделена улога да врши едитирање на копија на поднесувањето {$submissionId}.</message>
+	<message key="log.copyedit.copyeditorFile"> Верзијата на уредникот на копија за поднесениот фајл е прикачена.</message>
+	<message key="log.copyedit.authorFile">Верзијата на поднесениот фајл едитиран од авторот е прикачена.</message>
+
+	<message key="log.layout.layoutEditorAssigned">{$editorName} му е доделена улога на едитор за изглед на поднесувањето {$submissionId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} не му е доделена улога на едитор за изглед на поднесувањето {$submissionId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} го заврши едитирањето на изгледот на поднесувањето {$submissionId}.</message>
+
+	<message key="log.editor.metadataModified">Метаподатоците за оваа ставка беа променети од {$editorName}.</message>
+	<message key="log.editor.editorFile">Верзијата на уредникот за поднесениот фајл е прикачена.</message>
+	<message key="log.editor.archived">Поднесениот фајл {$submissionId} е архивиран.</message>
+	<message key="log.editor.restored">Поднесениот фајл{$submissionId} е вратен на листата на чекање.</message>
+	<message key="log.editor.editorAssigned">{$editorName} е назначен како уредник на поднесувањето{$submissionId}.</message>
+
+	<message key="log.proofread.assign">{$assignerName} е назначен {$proofreaderName} да ги лекторира поднесувањата {$submissionId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} има поднесено {$submissionId} за распоред.</message>
+
+	<message key="log.imported">{$userName} има внесено статија {$submissionId}.</message>
+
+	<!-- Reading Tools entries -->
+
+
+	<!-- RT Settings -->
+	<message key="rt.admin.settings">Опции на алатки за читање</message>
+
+	<message key="rt.admin.settings.description">Алатките за читање се појавуваат во рамка покрај објавените ставки во деловите на списанието кои што се наменети за индексирање. Алатките за читање се состојат од група на опционални алатки поврзани со објавените ставки, наведени подолу, и група на алатки кои обезбедуваат пристап до поврзани ставки, организирани по област и дисциплина.</message>
+	<message key="rt.admin.settings.enableReadingTools">Овозможи алатки за читање за одредени делови на списанието.</message>
+	<message key="rt.admin.settings.relatedItems">Поле</message>
+	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Погледнете го <a href="{$relatedItemsLink}" class="action">сетот на поврзани теми</a> за да видите, додадете, корегирате или избришете поврзани елементи за секоја област. ]]></message>
+
+	<message key="rt.admin.options">Алатки за ставки на списасние</message>
+	<message key="rt.admin.relatedItems">Алатки за поврзани ставки</message>
+
+	<message key="rt.admin.settings.addComment">Додади коментар (овозможи читателите да оставаат коментари, со Journal Manager кој може да брише).</message>
+	<message key="rt.admin.settings.addComment.authenticated">Корисниците мора да бидат регистрирани и најавени за да објавуваат, анонимност не е дозволена.</message>
+	<message key="rt.admin.settings.addComment.anonymous">Корисниците мора да бидат регистрирани и најавени за да објавуваат, дозволена е и анонимност.</message>
+	<message key="rt.admin.settings.addComment.unauthenticated">Корисниците не мора да бидат регистрирани за да објавуваат, дозволена е и анонимност.</message>
+
+
+	<!-- RT Versions -->
+
+	<!-- RT Contexts -->
+
+	<!-- RT Searches -->
+
+	<message key="rt.admin.validateUrls.description"><![CDATA[Можно е невалидни URLs за страници за пребарување да се прикажани подолу.<br />
+Можете рачно да ги проверите сите URL-а означени како неважечки, иако овој тест не е 100% точен.<br />
+Валидација може да не успее од пребарувањето на URL адресите кои бараат објавена форма на податоци.]]></message>
+
+	<!-- RT Entities -->
+
+
+
+
+	<message key="rt.metadata.dublinCore.primaryAuthor">Создавач</message>
+
+	<message key="rt.metadata.pkp.primaryAuthor">Име на авторот, припадност, земја</message>
+	<message key="rt.metadata.pkp.peerReviewed">Рецензирана статија</message>
+
+
+
+
+
+	<message key="rt.beNotifiedWhen">Бидете известени кога...</message>
+
+	<message key="rt.thisJournal">Барај списание</message>
+
+
+	<message key="rt.context.authorTermsDescription">За статии со повеќе од еден автор, оставете ги сите имиња за проверка за да барате слични ко-авторски дела, или барајте по еден во одредено време со проверка на само едно име. За да дознаете повеќе за ресурс за пребарување, кликнете на ABOUT. Овие ресурси се избрани поради нивната релевантност и нивниот отворен (бесплатен) пристап до сите или до дел од нивната содржина.</message>
+
+
+
+	<!-- Notification Types -->
+	<message key="notification.mailListDescription">Внесете ја вашата е-маил адреса за да добивате известувања за важни нови содржини  додадени во списанието.</message>
+	<message key="notification.notificationsPublicDescription">Оваа страна покажува важни новости поврзани со ова списание како што се нови прашања или соопштенија. Може да се претплатите на овие известувања преку RSS канали (со клик на сликата на десно), или <![CDATA[  <a href="{$emailUrl}">преку е-маил.</a>]]></message>
+
+	<message key="notification.type.articleSubmitted">Нова статија, "{$title}", е доставена.</message>
+	<message key="notification.type.editing">Уредување на настани</message>
+	<message key="notification.type.editorDecisionComment">Оставен е коментар на одлуката на уредникот за "{$title}".</message>
+	<message key="notification.type.galleyModified">A galley е модифицирана за "{$title}".</message>
+	<message key="notification.type.issuePublished">Прашањето е објавено.</message>
+	<message key="notification.type.newAnnouncement">Креирано е ново соопштение.</message>
+	<message key="notification.type.reviewerFormComment">Формата за преглед review е поднесена за "{$title}".</message>
+	<message key="notification.type.reviewing">Преглед на настани</message>
+	<message key="notification.type.site">Настани на страницата</message>
+	<message key="notification.type.submissionComment">Уредникот оставил коментар за"{$title}".</message>
+	<message key="notification.type.submissions">Поднесување на настани</message>
+	<message key="notification.type.userComment">Читателот оставил коментар за "{$title}"</message>
+
+	<!--
+	 *
+	 * MISC - Entries that do not belong in the other sections.
+	 *
+	-->
+	<!-- Authorization -->
+	<message key="user.authorization.copyeditorAssignmentMissing">Пристапот е одбиен! Не ви била доделена улога на едитор на копија за оваа статија.</message>
+	<message key="user.authorization.sectionAssignment">Се обидувате да пристапите до статија што не е дел од вашата секција.</message>
+	<message key="user.authorization.invalidCopyditorSubmission">Невалидни поднесувања на едитирот на копија или не постојат барања за поднесувања за едитирот на копија !</message>
+
+	<!-- Icons: Default "alt" text -->
+
+	<!-- Debug messages -->
+	<message key="debug.notes.currencyListLoad">Вчитана е валутната листа "{$filename}" од XML</message>
+</locale>

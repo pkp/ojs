@@ -4,307 +4,154 @@
 <!--
   * locale/ru_RU/default.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ru_RU (Русский) locale.
-  *
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
-
+ 
 <locale name="ru_RU" full_name="Русский">
-	<!-- Section default -->
+	<!-- Раздел по умолчанию -->
 	<message key="section.default.title">Статьи</message>
-	<message key="section.default.abbrev">Статьи</message>
+	<message key="section.default.abbrev">СТ</message>
 	<message key="section.default.policy"></message>
-	
+
 	<!--
-	    *
-	    * DEFAULT - Default settings for setup items.
-	    *
-	    -->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">Эта статья не была раньше опубликована, а также не представлена для рассмотрения и публикации в другом журнале (иначе объясните это в Примечаниях для Редактора).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Отправляемый материал представлен в формате OpenOffice, Microsoft Word или RTF.</message>
-	<message key="default.journalSettings.checklist.addressesLinked">Интернет-ссылки представлены в виде полных URL.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Текст набран с одинарым межстрочным интервалом, шрифт Times New Roman, 12 pt; для выделения акцентов используется курсив, а не подчеркивание (кроме интернет-ссылок); все иллюстрации, графики и таблицы расположены в тексте там, где требуется по смыслу (а не в конце документа).</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Текст соответствует стилистическим и библиографческим требованиями <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Руководства для Авторов</a>, расположенном в разделе "О нас".]]></message>
-	<message key="default.journalSettings.privacyStatement">Имена и адреса, указанные Вами при регистрации на этом сайте, будут использованы исключительно для технических целей: контакта с Вами или с рецензентами (редакторами) в процессе подготовки Вашей статьи к публикации. Они ни в коем случае не будут предоставляться другим лицам и организациям.</message>
-	<message key="default.journalSettings.openAccessPolicy">Статьи этого журнала непосредственно доступны всем желающим, исходя из принципа, что свободный открытый доступ к результатам исследований способствует увеличению всеобщего знания.</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Этот журнал разрешает и даже рекомендует авторам размещать статьи, отправленные сюда для публикации, на персональных страницах в сети Интернет и на Институтских Серверах Препринтов как до, так и после публикации, со ссылкой, если возможно, на оригинал публикации здесь.</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Редактирование призвано улучшить стиль, ясность изложения, грамматику, выбор слов и форматирование статьи. Это последний шанс для автора внести в текст существенные изменения, поскольку на следующем этапе изменения органичены лишь устранением опечаток и форматированием. 
+	 *
+	 * ПО УМОЛЧАНИЮ - Значения по умолчанию для элементов настройки журнала.
+	 *
+	-->
+	<message key="default.journalSettings.checklist.notPreviouslyPublished">Эта статья ранее не была опубликована, а также не представлена для рассмотрения и публикации в другом журнале (или дано объяснение этого в Комментариях для редактора).</message>
+	<message key="default.journalSettings.checklist.fileFormat">Файл отправляемой статьи представлен в формате документа OpenOffice, Microsoft Word, RTF или WordPerfect.</message>
+	<message key="default.journalSettings.checklist.addressesLinked">Приведены полные интернет-адреса (URL) для ссылок там, где это возможно.</message>
+	<message key="default.journalSettings.checklist.submissionAppearance">Текст набран с одинарным межстрочным интервалом; используется кегль шрифта в 12 пунктов; для выделения используется курсив, а не подчеркивание (за исключением URL-адресов); все иллюстрации, графики и таблицы расположены в соответствующих местах в тексте, а не в конце документа.</message>
+	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Текст соответствует стилистическим и библиографческим требованиям, описанным в <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Руководстве для авторов</a>, расположенном на странице «О журнале».]]></message>
+	<message key="default.journalSettings.privacyStatement">Имена и адреса электронной почты, введенные на сайте этого журнала, будут использованы исключительно для целей, обозначенных этим журналом, и не будут использованы для каких-либо других целей или предоставлены другим лицам и организациям.</message>
+	<message key="default.journalSettings.openAccessPolicy">Этот журнал предоставляет непосредственный открытый доступ к своему контенту, исходя из следующего принципа: свободный открытый доступ к результатам исследований способствует увеличению глобального обмена знаниями.</message>
+	<message key="default.journalSettings.authorSelfArchivePolicy">Этот журнал разрешает и даже рекомендует авторам размещать статьи, отправленные в этот журнал для публикации, на своих персональных веб-сайтах или в других репозиториях как до, так и после публикации статьи, указывая в библиографическом описании, по возможности, ссылку на публикацию в этом журнале.</message>
+	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Стадия литературного редактирования призвана улучшить стиль, ясность изложения, грамматику, выбор слов и форматирование статьи. Этот этап — последний шанс для автора внести в текст существенные изменения, поскольку на следующем этапе изменения будут ограничены лишь устранением опечаток и корректировкой форматирования. 
 
-Файл, который требуется отредактивовать представлен в формате Microsoft Word или .rtf и может быть легко отредактирован в любом, поддерживающем эти форматы, редакторе. Здесь мы предлагаем Вам воспользоваться одним из двух подходов к редактированию. Первый основывается на функции Microsoft Word по отслеживанию изменений в документе и требует, чтобы технический редактор, редактор и автор использовали эту программу. Другой подход не зависит от используемого программного обеспечения и позаимствован нами (с разрешением) из Harvard Educational Review. Редакция журнала может изменить эти инструкции и открыта к пожеланиям по улучшению процесса редактирования. 
-										
-<h4>Подходы к редактированию</h4>
+Файл для литературного редактирования представлен в формате Microsoft Word или .rtf и может быть легко отредактирован в любом редакторе, поддерживающем эти форматы. Представленный здесь набор инструкций предлагает два возможных подхода к литературному редактированию. Первый основывается на функции Microsoft Word по отслеживанию исправлений в документе и требует, чтобы литературный редактор, редактор и автор имели доступ к этой программе. Вторая схема не зависит от используемого программного обеспечения и заимствована нами (с разрешения) из Harvard Educational Review. Редактор журнала может изменить эти инструкции, сделав предложения по улучшению редакционного процесса для этого журнала. 
 
-<strong>1. Track Changes в Microsoft Word</strong>
 
-Включение Track Changes в меню Tools позволяет техническому редактору вставлять (текст выделяется цветом) и удалять (текст становится перечеркнутым), он также может вставлять (заключая в квадратные скобки) аннотации, представляющие собой вопросы к Автору или Редактору. Отредактированная версия затем возвращается редактору, который просматривает результат и передает его автору. 
+<h4>Схемы литературного редактирования</h4>
 
-Редактор и автор оставляют те изменения, с которыми они согласны. Если нужно дополнительное редактирование, редактор  автор могут вносить измения в начальные изменения и дополнения, а так же могут делать новые. Авторы и редакторы должны ответить на все адресованные им вопросы, помещая свои ответы в квадратных скобках. 
+<strong>1. Отслеживание исправлений в Microsoft Word</strong>
 
-После просмотра текста редактором и автором, технический редактор сделает второй, окончательный проход по тексту статьи, внося изменения, необходимые для подготовки перехода к раскладке текста и созданию гранок. 
+Включение записи исправлений на вкладке «Рецензирование» в Microsoft Word 2007 (выбор пункта меню «Исправления» в меню «Сервис» Microsoft Word 2003 и более ранних версий) позволяет литературному редактору вставлять текст (этот текст выделяется цветом) и удалять (текст отображается зачеркнутым и выделяется цветом или помечается на полях как удаленный). Литературный редактор также может добавлять вопросы по тексту автору или редактору, вставляя их как примечания (отображаются в квадратных скобках). Отредактированная версия затем загружается на сайт, о чем редактор получает уведомление. После этого редактор просматривает текст и уведомляет автора. 
+
+Редактор и автор должны оставить те изменения, с которыми они согласны. Если нужно дополнительное редактирование, редактор и автор могут вносить изменения в исходные вставки или удаления, а так же могут делать новые вставки и удаления в других местах текста. Авторы и редакторы должны ответить на все адресованные им вопросы, помещая свои ответы в те же примечания, которые отображаются в квадратных скобках. 
+
+После просмотра текста редактором и автором литературный редактор будет выполнять окончательный проход по тексту статьи, принимая изменения и готовя текст к стадии верстки и создания гранок.
 
 
 <strong>2. Harvard Educational Review </strong>
 
-<strong>Инструкции по внесению электронных изменений</strong>
+<strong>Инструкции по выполнению электронных исправлений в рукописи</strong>
 
-Пожалуйста, руководствуйтесь следующими правилам при внесении изменений в текст статьи:
+Пожалуйста, следуйте следующим правилам при выполнении электронных исправлений в рукописи:
 
-<strong>Как реагировать на предложенные изменения ?</strong>
-&nbsp; Снимите выделение жирным шрифтом с каждого изменения с которым Вы согласны
-&nbsp; Для изменений, с которыми Вы не согласны, введите еще раз исходный текст и выделите его <strong>жирным шрифтом</strong>
+<strong>Реакция на предложенные изменения.</strong>
+&nbsp; Для каждого из предложенных исправлений, с которым вы согласны, снимите выделение жирным шрифтом.
+&nbsp; Для каждого из предложенных исправлений, с которым вы не согласны, снова введите исходный текст и выделите его <strong>жирным шрифтом</strong>.
 
-<strong>Дополнения и удаления</strong>
-&nbsp; Выделяйте вставляемый текст <strong>жирным шрифтом</strong>
-&nbsp; Заменяйте удаленный текст: <strong>[deleted text]</strong>
-&nbsp; Если удаляете предложение или больше, сделайте пометку об этом, напр. <strong>[deleted 2 sentences]</strong>
+<strong>Выполнение вставок и удалений.</strong>
+&nbsp; Обозначайте вставки нового текста, выделяя его <strong>жирным шрифтом</strong>.
+&nbsp; Заменяйте удаленный текст фразой <strong>[удаленный текст]</strong>
+&nbsp; Если вы удаляете одно предложение или больше, пожалуйста, обозначьте это с пометкой, например, <strong>[удалены 2 предложения]</strong>.
 
-<strong>Как отвечать на Вопросы Автору (QA)</strong>
-&nbsp; Оставляйте все вопросы в исходном виде, помеченными жирным шрифтом. Не удаляйте их
-&nbsp; Чтобы ответить на вопрос (QA), добавьте комментарий сразу за ним. Комментарии нужно выделять в виде:
-<strong>[Comment:</strong>]
-&nbsp; например, <strong>[Comment: Дополнил обсуждения методики, как Вы просили]</strong>
+<strong>Ответы на вопросы автору.</strong>
+&nbsp; Оставляйте все вопросы автору в исходном виде, выделенными жирным шрифтом. Не удаляйте их.
+&nbsp; Чтобы ответить на вопрос автору, добавьте комментарий сразу после вопроса. Комментарии должны быть выделены следующим образом:
+<strong>[Комментарий:]</strong>
+&nbsp; например, <strong>[Комментарий: Методика обсуждена более подробно, как предлагали вы]</strong>.
 
-<strong>Добавление комментариев</strong>
-&nbsp; Используйте комментарии, чтобы обьяснить глобальные изменения в организации текста статьи и крупные дополнения
-&nbsp; например, <strong>[Comment: Переместил два предыдущих абзаца со стр. 5 на стр. 7]</strong>
-&nbsp; NB: Когда ссылаетесь на номера страниц, используйте номера из исходной версии в том виде, как Вы получили ее из редакции. Это важно, поскольку номера страниц могт измениться в процессе редактирования.
+<strong>Добавление комментариев.</strong>
+&nbsp; Используйте комментарии, чтобы обьяснить структурные изменения в тексте статьи или крупные исправления
+&nbsp; например, <strong>[Комментарий: Перемещен предыдущий абзац со стр. 5 на стр. 7]</strong>.
+&nbsp; Замечание: Когда ссылаетесь на номера страниц, пожалуйста, используйте номера из печатной версии рукописи, которая была отправлена вам. Это важно, поскольку номера страниц могут измениться, так как документ исправляется в электронном виде.
 
-<h4>Пример редактирования статьи</h4>
+<h4>Пример электронных исправлений</h4>
 
-<strong>Исходный файл "manuscript"</strong>
+<ol>
+<li><strong>Первоначальное литературное редактирование.</strong> Литературный редактор журнала будет редактировать текст, улучшая стиль, ясность изложения, грамматику, выбор слов и форматирование статьи, а также добавляя вопросы автору при необходимости. Как только первоначальное редактирование будет завершено, литературный редактор загрузит исправленный документ на веб-сайт журнала и уведомит автора, что отредактированная рукопись доступна для просмотра.</li>
+<li><strong>Авторское литературное редактирование.</strong> Перед выполнением значительных изменений в структуре и организации отредактированной рукописи авторы должны связаться с редакторами, которые работают над этой статьей. Авторы должны принять/отклонить те изменения, которые были сделаны на этапе первончального редактирования (если это возможно), и ответить на все вопросы автору. После окончания исправлений, авторы должны переименовать файл из ИмяАвтораQA.doc в ИмяАвтораQAR.doc (например, из ИвановQA.docx в ИвановQAR.docx) и загрузить исправленный документ через веб сайт журнала в соответствии с указаниями.</li>
+<li><strong>Финальное литературное редактирование.</strong> Литературный редактор журнала будет проверять все изменения, сделанные автором, и учитывать все ответы на вопросы автору, чтобы создать окончательный вариант рукописи. После окончания, литературный редактор будет загружать финальный документ на веб-сайт журнала и уведомлять редактора макета для выполнения форматирования и верстки.</li>
+</ol>]]></message>
 
-Before making dramatic departures from the structure and organization of your original manuscript, please check in with the co-chairs of your piece. After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the completely revised and renamed word processing file.
-
-
-<strong>Manuscript returned to the author with queries and suggestions</strong>
-
-Before making dramatic departures from the structure and organization of <strong>the manuscript that we are returning to you</strong>, please check in with the <strong>editors who are co-chairing</strong> your piece. After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the completely revised and renamed word processing file. <strong>[QA: In this paragraph, it might help to stress the importance of following carefully the instructions for making electronic revisions. Otherwise the editing process may be slowed considerably]</strong>
-
-<strong>Исправленная версия статьи, отправленная в ответ</strong>
-
-Before making dramatic departures from the structure and organization of the manuscript that we are returning to you, please check in with the editors who are co-chairing your piece. <strong>Please understand that failure to follow the following instructions may significantly delay the publication of your manuscript.</strong>
-
-After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the <strong>[deleted word]</strong> revised and renamed word processing file. <strong>[QA: In this paragraph, it might help to stress the importance of following carefully the instructions for making electronic revisions. Otherwise the editing process may be slowed considerably] [Comment: I added a sentence in response to your suggestion.]</strong>
-
-<strong>Примечания:</strong>
-&bull; Снятый жирный шрифт обозначает согласия с изменениями в первом предложении
-&bull; В ответ на QA добавлено предложение. Жирный шрифт выделяет новый текст
-&bull; [deleted word] обозначает удаление "completely"
-&bull; Комментарий содержит ответ на QA редактора]]>></message>
-
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Использование гиперссылок</h4>
-	<p>Во время преобразования в HTML или PDF, убедитесь, что все гиперссылки в документе являются активными.</p>
-	<h4>A. Когда автор предоставляет гиперссылку как часть ссылки</h4>
+	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Добавление гиперссылок на источники в процессе верстки</h4>
+	<p>Во время преобразования полученной статьи в HTML или PDF, убедитесь, что все гиперссылки в статье являются активными.</p>
+	<h4>A. Когда автор предоставляет гиперссылку вместе с указанием источника</h4>
 	<ol>
-		<li>Когда статье еще в формате текстового процессора (напр., Word), добавьте фразу VIEW ITEM в конец ссылки, содержащей гиперссылку (URL).</li>
-		<li>Преобразуйте эту фразу в гиперссылку, выделив ее и использовав команду Insert Hyperlink текстового процессора введите ссылку, подготовленную на   этапе #2.</li>
+		<li>Когда статья еще находится в формате текстового процессора (напр., Word), добавьте фразу ПРОСМОТРЕТЬ ССЫЛКУ в конец ссылки, содержащей гиперссылку (URL).</li>
+		<li>Преобразуйте эту фразу в гиперссылку, выделив ее и использовав команду «Гиперссылка» на вкладке «Вставка» в Microsoft Word 2007 (команду «Гиперссылка» в меню «Вставка» Microsoft Word 2003 и ранее) и URL, заданный ранее.</li>
 	</ol>
-	<h4>B. Включение возможности поиска ссылок в системе Google Scholar</h4>
+	<h4>B. Добавление для читателей возможности поиска ссылок в системе «Академия Google»</h4>
 	<ol>
-		<li>Когда статье еще в формате текстового процессора (напр., Word), скопируйте название работы, на которую производится ссылка в списке использованной литературы (если название слишком общо – например, "Метафизика" – тогда скопируйте имя автора и название).</li>
-		<li>Вставьте этот текст между строкам %22, помещая + вместо пробела между словами: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search</li>
-		<li>Добавьте фразу GS SEARCH в конец каждой ссылки списка литературы.</li>
-		<li>Превратите эту фразу в гиперссылку, используя функцию Insert Hyperlink текстового процессора и ссылку, полученную на этапе #2.</li>
+		<li>Когда статья еще находится в формате текстового процессора (напр., Word), скопируйте название работы, указанной в списке литературы (если заголовок является слишком общим — например, "Мир" — тогда скопируйте имя автора и название).</li>
+		<li>Вставьте название ссылки между символами %22, добавляя + вместо пробела между словами: http://scholar.google.com/scholar?q=%22ВСТАВЬТЕ+ЗАГОЛОВОК+СЮДА%22</li>
+		<li>Добавьте фразу ПОИСК В АКАДЕМИИ GOOGLE в конец каждого источника в списке литературы в статье.</li>
+		<li>Преобразуйте эту фразу в гиперссылку, выделив ее и использовав команду «Гиперссылка» на вкладке «Вставка» в Microsoft Word 2007 (команду «Гиперссылка» в меню «Вставка» Microsoft Word 2003 и ранее) и URL, подготовленный на шаге 2.</li>
 	</ol>
-	<h4>C. Включение возможности поиска ссылок в системе DOI</h4>
+	<h4>C. Добавление для читателей возможности поиска ссылок с помощью DOI</h4>
 	<ol>
-		<li>Когда статье еще в формате текстового процессора (напр., Word), скопируйте список использованной литературы в CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
-		<li>Вставьте каждый возвращенный идентификатор DOI в следующую гиперссылку (между = и &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI</li>
-		<li>Добавьте фразу CrossRef в конец каждой ссылки в списке использованной литературы.</li>
-		<li>Преобразуйте эту фразу в гиперссылку, используя функцию Insert Hyperlink текстового процессора и ссылку, подготовленную на этапе #2.</li>
+		<li>Когда статья еще находится в формате текстового процессора (напр., Word), скопируйте список использованной литературы в CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
+		<li>Вставьте каждый идентификатор DOI, который будет выдан системой, в следующую гиперссылку (между знаками = и &): http://www.cmaj.ca/cgi/external_ref?access_num=ВСТАВЬТЕ DOI#СЮДА&link_type=DOI</li>
+		<li>Добавьте фразу CrossRef в конец каждого источника в списке литературы в статье.</li>
+		<li>Преобразуйте эту фразу в гиперссылку, выделив ее и использовав команду «Гиперссылка» на вкладке «Вставка» в Microsoft Word 2007 (команду «Гиперссылка» в меню «Вставка» Microsoft Word 2003 и ранее) и URL, подготовленный на шаге 2.</li>
 	</ol>]]></message>
 
-<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>The proofreading stage is intended to catch any errors in the galley's spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF and other available file formats used in publishing this item.</p>
-	<h4>For Spelling and Grammar Errors</h4>
-	
-	<p>Copy the problem word or groups of words and paste them into the Proofreading Corrections box with "CHANGE-TO" instructions to the editor as follows...</p>
-	
-	<pre>1. CHANGE...
-		then the others
-		TO...
-		than the others</pre>
+	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Стадия корректуры предназначена для обнаружения в гранках любых ошибок в орфографии, грамматике и пунктуации. Более значительные изменения не могут быть сделаны на этой стадии, кроме случая, когда это было обсуждено с редактором раздела. В разделе «Верстка» щелкните на «ПОКАЗАТЬ ГРАНКУ», чтобы увидеть HTML, PDF и другие доступные форматы файлов, которые использованы при публикации данной статьи.</p>
+	<h4>Для орфографических и грамматических ошибок</h4>
+	<p>Скопируйте проблемное слово или группу слов и вставьте их в поле «Корректорские правки» с инструкциями «ИЗМЕНИТЬ-НА» для редактора следующим образом:</p>
+
+	<pre>1. ИЗМЕНИТЬ...
+	then the others
+	НА...
+	than the others</pre>
 	<br />
-	<pre>2. CHANGE...
-		Malinowsky
-		TO...
-		Malinowski</pre>
+	<pre>2. ИЗМЕНИТЬ...
+	Malinowsky
+	НА...
+	Malinowski</pre>
 	<br />
 	
-	<h4>For Formatting Errors</h4>
+	<h4>Для ошибок форматирования</h4>
 	
-	<p>Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title "FORMATTING" as follows...</p>
+	<p>Опишите место и суть проблемы в поле «Корректорские правки» после заголовка «ОТФОРМАТИРОВАТЬ» следующим образом:</p>
 	<br />
-	<pre>3. FORMATTING
-		The numbers in Table 3 are not aligned in the third column.</pre>
+	<pre>3. ОТФОРМАТИРОВАТЬ
+	Числа в Таблице 3 не выравнены в третьей колонке.</pre>
 	<br />
-	<pre>4. FORMATTING
-The paragraph that begins "This last topic..." is not indented.</pre>]]></message>
+	<pre>4. ОТФОРМАТИРОВАТЬ
+	Абзац, начинающийся фразой «Эта последняя тема...», не имеет красной строки.</pre>]]></message>
 
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>To Add Reference Linking to the Layout Process</h4>
-	<p>When turning a submission into HTML or PDF, make sure that all hyperlinks in the submission are active.</p>
-	<h4>A. When the Author Provides a Link with the Reference</h4>
-	<ol>
-	<li>While the submission is still in its word processing format (e.g., Word), add the phrase VIEW ITEM to the end of the reference that has a URL.</li>
-	<li>Turn that phrase into a hyperlink by highlighting it, and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
-	</ol>
-	<h4>B. Enabling Readers to Search Google Scholar For References</h4>
-	<ol>
-	<li>While the submission is still in its word processing format (e.g., Word), copy the title of the work referenced in the References list (if it appears to be too common a title – e.g., "Peace" – then copy author and title).</li>
-	<li>Paste the reference's title between the %22's, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search</li>
-	<li>Add the phrase GS SEARCH to the end of each citation in the submission's References list.</li>
-	<li>Turn that phrase into a hyperlink by highlighting it, and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
-	</ol>
-	<h4>C. Enabling Readers to Search for References with a DOI</h4>
-	<ol>
-	<li>While the submission is still in Word, copy a batch of references into CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
-	<li>Paste each DOI that the Query provides in the following URL (between = and &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI</li>
-	<li>Add the phrase CrossRef to the end of each citation in the submission's References list.</li>
-	<li>Turn that phrase into a hyperlink by highlighting the phrase and using Word's Insert Hyperlink tool and the appropriate URL prepared in #2.</li>
-	</ol>]]></message>
+	<message key="default.journalSettings.emailHeader">Следующее сообщение отправлено Вам по поручению журнала «{$journalName}».
+________________________________________________________________________</message>
+	<message key="default.journalSettings.emailSignature">________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}</message>
+	<message key="default.journalSettings.forReaders"><![CDATA[Мы приглашаем наших читателей подписаться на уведомления о выходе номеров этого журнала. Используйте ссылку <a href="{$indexUrl}/{$journalPath}/user/register">РЕГИСТРАЦИЯ</a> в верхней части главной страницы журнала. Эта регистрация будет позволять читателю получать на электронную почту содержание каждого нового номера журнала. Этот список также позволяет журналу говорить об определенном уровне поддержки или количестве читателей. Посмотрите также страницу <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Заявление о конфиденциальности</a>, которая убеждает читателей в том, что их имя и адрес электронной почты не будут использованы для других целей.]]></message>
+	<message key="default.journalSettings.forAuthors"><![CDATA[Вы хотите отправить статью для публикации в этом журнале? Рекомендуем вам посмотреть раздел <a href="{$indexUrl}/{$journalPath}/about">«О журнале»</a>, где Вы сможете ознакомиться с редакционной политикой, а также с <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Руководством для автора</a>. Авторам нужно <a href="{$indexUrl}/{$journalPath}/user/register">зарегистрироваться</a> в журнале перед отправкой материалов, или, если вы уже зарегистрированы, можно просто <a href="{$indexUrl}/{$journalPath}/login">войти</a> со своей учетной записью и начать процесс отправки, состоящий из пяти шагов.]]></message>
+	<message key="default.journalSettings.forLibrarians"><![CDATA[Мы надеемся, что сотрудники библиотек внесут этот журнал в список электронных журналов своей библиотеки. Следует отметить, что открытая издательская система этого журнала также подходит для того, чтобы библиотеки могли разместить собственные электронные журналы, в редактировании которых участвуют преподаватели и научные работники (подробнее можно посмотреть на <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>.]]></message>
+	<message key="default.journalSettings.lockssLicense"><![CDATA[Этот журнал использует систему LOCKSS для создания распределенной архивной системы между участвующими в этой системе библиотеками и разрешает этим библиотекам создавать постоянные архивы журнала в целях сохранения и восстановления. <a href="http://www.lockss.org/">Подробнее...</a>]]></message>
 
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>The proofreading stage is intended to catch any errors in the galley's spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF and other available file formats used in publishing this item.</p>
-<h4>For Spelling and Grammar Errors</h4>
-
-<p>Copy the problem word or groups of words and paste them into the Proofreading Corrections box with "CHANGE-TO" instructions to the editor as follows...</p>
-
-<pre>1. CHANGE...
-then the others
-TO...
-than the others</pre>
-<br />
-<pre>2. CHANGE...
-Malinowsky
-TO...
-Malinowski</pre>
-<br />
-
-<h4>For Formatting Errors</h4>
-
-<p>Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title "FORMATTING" as follows...</p>
-<br />
-<pre>3. FORMATTING
-The numbers in Table 3 are not aligned in the third column.</pre>
-<br />
-<pre>4. FORMATTING
-The paragraph that begins "This last topic..." is not indented.</pre>]]></message>
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>To Add Reference Linking to the Layout Process</h4>
-	<p>When turning a submission into HTML or PDF, make sure that all hyperlinks in the submission are active.</p>
-	<h4>A. When the Author Provides a Link with the Reference</h4>
-	<ol>
-	<li>While the submission is still in its word processing format (e.g., Word), add the phrase VIEW ITEM to the end of the reference that has a URL.</li>
-	<li>Turn that phrase into a hyperlink by highlighting it, and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
-	</ol>
-	<h4>B. Enabling Readers to Search Google Scholar For References</h4>
-	<ol>
-	<li>While the submission is still in its word processing format (e.g., Word), copy the title of the work referenced in the References list (if it appears to be too common a title – e.g., "Peace" – then copy author and title).</li>
-	<li>Paste the reference's title between the %22's, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search</li>
-	<li>Add the phrase GS SEARCH to the end of each citation in the submission's References list.</li>
-	<li>Turn that phrase into a hyperlink by highlighting it, and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
-	</ol>
-	<h4>C. Enabling Readers to Search for References with a DOI</h4>
-	<ol>
-	<li>While the submission is still in Word, copy a batch of references into CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
-	<li>Paste each DOI that the Query provides in the following URL (between = and &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI</li>
-	<li>Add the phrase CrossRef to the end of each citation in the submission's References list.</li>
-	<li>Turn that phrase into a hyperlink by highlighting the phrase and using Word's Insert Hyperlink tool and the appropriate URL prepared in #2.</li>
-	</ol>]]></message>
-
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>The proofreading stage is intended to catch any errors in the galley's spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF and other available file formats used in publishing this item.</p>
-<h4>For Spelling and Grammar Errors</h4>
-
-<p>Copy the problem word or groups of words and paste them into the Proofreading Corrections box with "CHANGE-TO" instructions to the editor as follows...</p>
-
-<pre>1. CHANGE...
-then the others
-TO...
-than the others</pre>
-<br />
-<pre>2. CHANGE...
-Malinowsky
-TO...
-Malinowski</pre>
-<br />
-
-<h4>For Formatting Errors</h4>
-
-<p>Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title "FORMATTING" as follows...</p>
-<br />
-<pre>3. FORMATTING
-The numbers in Table 3 are not aligned in the third column.</pre>
-<br />
-<pre>4. FORMATTING
-The paragraph that begins "This last topic..." is not indented.</pre>]]></message>
-
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>To Add Reference Linking to the Layout Process</h4>
-	<p>When turning a submission into HTML or PDF, make sure that all hyperlinks in the submission are active.</p>
-	<h4>A. When the Author Provides a Link with the Reference</h4>
-	<ol>
-	<li>While the submission is still in its word processing format (e.g., Word), add the phrase VIEW ITEM to the end of the reference that has a URL.</li>
-	<li>Turn that phrase into a hyperlink by highlighting it, and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
-	</ol>
-	<h4>B. Enabling Readers to Search Google Scholar For References</h4>
-	<ol>
-	<li>While the submission is still in its word processing format (e.g., Word), copy the title of the work referenced in the References list (if it appears to be too common a title – e.g., "Peace" – then copy author and title).</li>
-	<li>Paste the reference's title between the %22's, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search</li>
-	<li>Add the phrase GS SEARCH to the end of each citation in the submission's References list.</li>
-	<li>Turn that phrase into a hyperlink by highlighting it, and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
-	</ol>
-	<h4>C. Enabling Readers to Search for References with a DOI</h4>
-	<ol>
-	<li>While the submission is still in Word, copy a batch of references into CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
-	<li>Paste each DOI that the Query provides in the following URL (between = and &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI</li>
-	<li>Add the phrase CrossRef to the end of each citation in the submission's References list.</li>
-	<li>Turn that phrase into a hyperlink by highlighting the phrase and using Word's Insert Hyperlink tool and the appropriate URL prepared in #2.</li>
-	</ol>]]></message>
-
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>The proofreading stage is intended to catch any errors in the galley's spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF and other available file formats used in publishing this item.</p>
-<h4>For Spelling and Grammar Errors</h4>
-
-<p>Copy the problem word or groups of words and paste them into the Proofreading Corrections box with "CHANGE-TO" instructions to the editor as follows...</p>
-
-<pre>1. CHANGE...
-then the others
-TO...
-than the others</pre>
-<br />
-<pre>2. CHANGE...
-Malinowsky
-TO...
-Malinowski</pre>
-<br />
-
-<h4>For Formatting Errors</h4>
-
-<p>Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title "FORMATTING" as follows...</p>
-<br />
-<pre>3. FORMATTING
-The numbers in Table 3 are not aligned in the third column.</pre>
-<br />
-<pre>4. FORMATTING
-The paragraph that begins "This last topic..." is not indented.</pre>]]></message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
-</message>
-	<message key="default.journalSettings.forReaders"><![CDATA[Мы приглашаем наших читателей подписаться на рассылки с последними новостями. Для этого нужно <a href="{$indexUrl}/{$journalPath}/user/register">зарегистрироваться</a>. Регистрация позволить Вам выбрать роль автора, а также подписаться на журнальные рассылки с содержанием последнего выпуска журнала. Таким образом издатели журнала получат обратную информацию о читательском интересе. Посмотрите также страницу <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Конфиденциальность</a>.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Вы хотите отправить Ваши материалы для публикации в этом журнале? Просмотрите, пожалуйста, раздел <a href="{$indexUrl}/{$journalPath}/about">О нас</a>, где Вы сможете ознакомиться с редакционной политикой и<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">требованиями к авторам</a>. Будущим авторам нужно <a href="{$indexUrl}/{$journalPath}/user/register">зарегистрироваться</a> в роли Автора, <a href="{$indexUrl}/{$journalPath}/login">войти</a> в свой акаунт и <a href="{$indexUrl}/author/submit">заполнить</a> форму отправки статей.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[Мы надеемся, что сотрудники библиотек впишут этот журнал в их список электронных журналов. Данная издательская система создана для того, чтобы дать возможность академическим и научным библиотекам организовать собственные электронные журналы для преподователей и научных работников. Больше об этих возможностей, см. сайт разработчиков <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
-
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Этот журнал использует систему LOCKSS для создания общих архивов участвующих библиотек и издателей с тем, чтобы повысить надежность и доступность публикаций. Больше об этом, см. <a href="http://www.lockss.org/">здесь</a>.]]></message>
-	<message key="default.journalSettings.submissionFee">Подача рукописи</message>
-	<message key="default.journalSettings.submissionFeeDescription">Авторы оплачивают подачу рукописи для компенсации затрат по организации рецензии.</message>
-	<message key="default.journalSettings.fastTrackFee">Ускоренное Рецензирование</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">При оплате гарантируется, что рецензия, редакционное решение и оповещение автора об этой статье произойдут в течении 4-х недель.</message>
+	<!-- Значения по умолчанию для элементов оплаты. -->
+	<message key="default.journalSettings.submissionFee">Отправка статьи</message>
+	<message key="default.journalSettings.submissionFeeDescription">Авторы должны оплатить отправку статьи в процессе подачи ее в журнал для компенсации затрат по организации рассмотрения статьи.</message>
+	<message key="default.journalSettings.fastTrackFee">Ускоренное рассмотрение</message>
+	<message key="default.journalSettings.fastTrackFeeDescription">Оплата этой суммы гарантирует, что рецензирование, принятие решения редакцией и уведомление автора по этой статье пройдут в течение 4-х недель.</message>
 	<message key="default.journalSettings.publicationFee">Публикация статьи</message>
-	<message key="default.journalSettings.publicationFeeDescription">В случае принятия статьи к публикации, Вам потребуется внести плату за публикацию, которая покрывает издательские расходы.</message>
-	<message key="default.journalSettings.waiverPolicy">Если у Вас не фондов для этих платежей, есть возможности их отмены. Мы не хотим, чтобы платежи стали барьером для публикации хорошей работы.</message>
-	<message key="default.journalSettings.purchaseArticleFee">Приобрести статью</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Оплата этой услуги позволит Вам просматривать, скачивать и печатать данную статью.</message>
-	<message key="default.journalSettings.membershipFee">Ассоциированное Членство</message>
-	<message key="default.journalSettings.membershipFeeDescription">Оплата позволит Вас стать членом данной ассоциации сроком на один год и со свободным доступом к этому журналу.</message>
-	<message key="default.journalSettings.donationFee">Добровольные пожертвования</message>
-	<message key="default.journalSettings.donationFeeDescription">Мы с благодарностью принимаем пожертвования, которые дадут редакции больше свободы в повышении качества журнала для своих читателей.</message>
+	<message key="default.journalSettings.publicationFeeDescription">Если статья будет принята к публикации, вас попросят внести оплату за публикацию статьи для покрытия издательских расходов.</message>
+	<message key="default.journalSettings.waiverPolicy">Если у Вас нет финансовой возможности внести эти платежи, вы можете обратиться с просьбой об отмене каждого из этих платежей. Мы не хотим, чтобы платежи стали барьером для публикации достойной работы.</message>
+	<message key="default.journalSettings.purchaseArticleFee">Купить статью</message>
+	<message key="default.journalSettings.purchaseArticleFeeDescription">Оплата этой суммы позволит вам просматривать, скачивать и печатать данную статью.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Купить выпуск</message>
+	<message key="default.journalSettings.purchaseIssueFeeDescription">Оплата этой суммы позволит вам просматривать, скачивать и печатать данный выпуск.</message>
+	<message key="default.journalSettings.membershipFee">Ассоциированное членство</message>
+	<message key="default.journalSettings.membershipFeeDescription">Оплата этой суммы включит вас в список членов данной ассоциации сроком на один год и даст свободный доступ к этому журналу.</message>
+	<message key="default.journalSettings.donationFee">Добровольные пожертвования журналу</message>
+	<message key="default.journalSettings.donationFeeDescription">Мы с благодарностью принимаем любые суммы пожертвования этому журналу, они дают возможность редакторам поддерживать высокое качество журнала для своих читателей.</message>
 </locale>

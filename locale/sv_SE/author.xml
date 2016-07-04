@@ -4,7 +4,7 @@
 <!--
   * locale/sv_SE/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2000-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="sv_SE" full_name = "Swedish">
+<locale name="sv_SE" full_name="Svenska">
 	<message key="author.submit">Nya manuskript</message>
 	<message key="author.track">Aktiva manuskript</message>
 	<message key="author.competingInterests"><![CDATA[Competing&nbsp;interests <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></message>
@@ -27,8 +27,8 @@
 	<message key="author.submit.step4a">Steg 4a. Lägg till en komplementerande fil</message>
 	<message key="author.submit.step5">Steg 5. Bekräfta manusinlämning</message>
 	<message key="author.submit.start">Starta</message>
-	<message key="author.submit.metadata">Ange Metadata</message>
-	<message key="author.submit.upload">Ladda upp manuskriptet</message>
+	<message key="author.submit.metadata">2. Ange Metadata</message>
+	<message key="author.submit.upload">3. Ladda upp manuskriptet</message>
 	<message key="author.submit.supplementaryFiles">Ladda upp komplementerande filer</message>
 	<message key="author.submit.confirmation">Bekräfta</message>
 	<message key="author.submit.cancelSubmission">Du kan göra klart manusinlämningen vid ett senare tillfälle genom att välja Aktiva manuskript under Din Författarsida.</message>
@@ -46,8 +46,7 @@
 	<message key="author.submit.journalSection">Tidskriftssektion</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Välj lämplig sektion för det här manuskriptet (se Sektioner och Policies under <a href="{$aboutUrl}" target="_new">Om</a> Tidskriften).]]></message>
 	<message key="submission.submit.selectSection">Vänligen välj en sektion...</message>
-	<message key="submission.submit.submissionChecklist">Checklista för manusinlämning</message>
-	<message key="submission.submit.submissionChecklistDescription">Bekräftar att manuskriptet är klart för granskning i tidskriften genom att kryssa för följande (kommentarer till redaktören kan läggas till nedan).</message>
+	<message key="author.submit.submissionChecklist">Checklista för manusinlämning</message>
 	<message key="author.submit.verifyChecklist">Alla moment i Checklistan för manusinlämning måste vara genomförda och förkryssade innan du kan gå vidare.</message>
 	<message key="author.submit.copyrightNoticeAgree">Författarna samtycker till upphovsrättsvillkoren för manuskriptet om och när texten blir accepterad för publicering. (Kommentarer till redaktören kan lämnas nedan).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Du måste samtycka till upphovsrättsvillkoren innan du kan fortsätta.</message>
@@ -93,7 +92,6 @@
 	<message key="author.submit.suppFile.dataSet">Forskningsdata</message>
 	<message key="author.submit.suppFile.sourceText">Källtext</message>
 	<message key="author.submit.suppFile.briefDescription">Kort beskrivning</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Övriga medverkande eller eventuell sponsrande organisation</message>
 	<message key="author.submit.suppFile.availableToPeers">Visa filen för granskare (utan metadata), så att anonym granskning kan garanteras.</message>
 	<message key="author.submit.suppFile.publisherDescription">Använd endast för formellt publicerat material.</message>
 	<message key="author.submit.suppFile.dateDescription">Datum när data samlades in ellet när instrumentet skapades.</message>
@@ -110,9 +108,15 @@
 	<message key="author.submit.filesSummary">Sammanfattning av uppladdning av filer</message>
 	<message key="author.submit.finishSubmission">Avsluta inlämning</message>
 	<message key="author.submit.submissionComplete">Inlämning avslutad. Tack för visat intresse för publicering i {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Om det inlämnade manuskriptet är färdigt för publicering utan fortsatt granskning, redigering eller layoutändringar så kan manuskriptet placeras direkt i det sista redigeringsmomentet före publicering av <a href="{$expediteUrl}" class="action">Klicka här</a>. (OBS: Endast aktiverade redaktörer har möjlighet att göra det här valet.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Ladda upp författarversion</message>
 	<message key="author.article.copyeditedFile">Manusredigerad fil</message>
 	<message key="author.article.authorRevisedFile">Författarfil</message>
 	<message key="author.submit.authorSubmitLoginMessage">Man måste registrera ett användarkonto för att skicka in bidrag till tidskriften. Detta för att våra granskare ska kunna arbeta med inlagda manuskript och kunna kontakta författare när statusen på inskickat material förändras.</message>
+	<message key="author.submissions.queuedReviewSubsequent">Granskas, vända {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">Granskas: revidering nödvändig</message>
+	<message key="author.submissions.queuedEditingCopyedit">Redigeras: manusredigering begärd</message>
+	<message key="author.submissions.queuedEditingProofread">Redigeras: Korrekturläsning begärd</message>
+	<message key="author.submit.submissionLocale">Bidragets språk</message>
+	<message key="author.submit.submissionLocaleDescription">Den här tidskriften tar emot bidrag på fler än ett språk. Välj bidragets huvudsakliga språk från listan nedan.</message>
+	<message key="author.submit.form.localeRequired">Vänligen välj ett språk för bidraget</message>
 </locale>

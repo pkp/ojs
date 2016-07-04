@@ -4,7 +4,7 @@
 <!--
   * locale/ro_RO/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,7 +13,7 @@
   *
   -->
 
-<locale name="ro_RO" full_name = "Romanian">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="author.submit">Propunere nouă</message>
 	<message key="author.track">Propuneri active</message>
 	<message key="author.competingInterests"><![CDATA[Conflict&nbsp;de interese <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Politica&nbsp;CI</a>]]></message>
@@ -52,8 +52,7 @@
 	<message key="author.submit.journalSection">Secţiune de revistă</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Selectează secţiunea corespunzătoare pentru această propunere (vezi secţiunile şi politicile la secţiunea <a href="{$aboutUrl}" target="_new">despre</a> revistă).]]></message>
 	<message key="submission.submit.selectSection">Selectează o secţiune...</message>
-	<message key="submission.submit.submissionChecklist">Lista de verificare pentru propunere</message>
-	<message key="submission.submit.submissionChecklistDescription">Indică faptul că această propunere este gata să fie luată în considerare de revistă prin verificarea următoarelor (comentariile către editor pot fi adăugate mai jos).</message>
+	<message key="author.submit.submissionChecklist">Lista de verificare pentru propunere</message>
 	<message key="author.submit.verifyChecklist">Trebuie să te asiguri că toate elementele din lista de verificare sunt îndeplinite pentru a continua.</message>
 	<message key="author.submit.copyrightNoticeAgree">Autorii sunt de acord cu termenii acestei note privind drepturile de autor, care se va aplica acestei propuneri dacă şi când este publicată de către această revistă (comentariile către editor pot fi adăugate mai jos).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Trebuie să fii de acord cu termenii privind drepturile de autor înainte de a continua.</message>
@@ -100,7 +99,6 @@
 	<message key="author.submit.suppFile.dataSet">Seturi de date</message>
 	<message key="author.submit.suppFile.sourceText">Texte sursă</message>
 	<message key="author.submit.suppFile.briefDescription">Descriere sumară</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Contributor sau agenţie sponsor</message>
 	<message key="author.submit.suppFile.availableToPeers">Supune fişierul atenţiei evaluatorilor (fără metadate) atâta vreme cât nu va compromite evaluarea oarbă.</message>
 	<message key="author.submit.suppFile.publisherDescription">Folosește doar cu materiale publicate anterior.</message>
 	<message key="author.submit.suppFile.dateDescription">Data colectării datelor sau a creării instrumentelor.</message>
@@ -117,7 +115,6 @@
 	<message key="author.submit.filesSummary">Sumarul fişierelor</message>
 	<message key="author.submit.finishSubmission">Finalizează propunerea</message>
 	<message key="author.submit.submissionComplete">Depunerea propunerii s-a încheiat. Mulţumim pentru dorința de a publica în revista {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Dacă această propunere este într-un format care este gata deja de a fi publicat fără o evaluare ulterioară, redactare sau machetare, acesta poate fi pus direct în ultima etapă a listei de redactare apăsând <a href="{$expediteUrl}" class="action">aici</a>. (Notă: Doar redactorii revistei au această opţiune pentru propunerile lor.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Încarcă versiunea autorului</message>
 	<message key="author.article.copyeditedFile">Fişier redactat</message>
 	<message key="author.article.authorRevisedFile">Fişierul autorului</message>

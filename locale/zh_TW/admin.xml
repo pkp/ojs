@@ -4,7 +4,7 @@
 <!--
   * locale/zh_TW/admin.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="zh_TW" full_name = "繁體中文">
+<locale name="zh_TW" full_name="繁體中文">
 	<message key="admin.hostedJournals">期刊建置</message>
 	<message key="admin.settings.journalRedirect">期刊重新導向</message>
 	<message key="admin.settings.journalRedirectInstructions">讓主站重新導向至這份期刊。比方說，如果這個網站只有唯一一份期刊的話，這個選項就很有用。</message>
@@ -32,8 +32,8 @@
 	<message key="admin.journals.noneCreated">沒有期刊被設置。</message>
 	<message key="admin.contexts.confirmDelete">您確定要永遠刪除這種期刊和它所有的內容？</message>
 	<message key="admin.contexts.create">建置期刊</message>
+	<message key="admin.journals.createInstructions">您會自動被指派成為這個期刊的管理員。建立一個新期刊之後，可用管理員的身份登入，繼續設定期刊和指派角色給其他使用者。</message>
 	<message key="admin.journals.urlWillBe">期刊的網址將會是 {$sampleUrl}</message>
-	<message key="admin.contexts.form.titleRequired">需要期刊名稱。</message>
 	<message key="admin.contexts.form.pathRequired">需要一個路徑。</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">這個路徑只能含有英文字母和數字符號，底線(_)和連字號(-)，而且一定要以英文字母和數字符號當做開頭和結尾</message>
 	<message key="admin.contexts.form.pathExists">所選的路徑已經被其它期刊所使用。</message>

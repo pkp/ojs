@@ -4,7 +4,7 @@
 <!--
   * locale/ml_IN/editor.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,13 +12,9 @@
   *
   -->
 
-<locale name="ml_IN" full_name = "Malayalam">
-	<message key="editor.article.reviewForms">അവലോകന ഫോം</message>
-	<message key="editor.article.selectReviewForm">അവലോകന ഫോം തിരഞ്ഞെടുക്കൂ</message>
-	<message key="editor.article.clearReviewForm">അവലോകന ഫോം നീക്കം ചെയ്യൂ</message>
+<locale name="ml_IN" full_name="മലയാളം">
 	<message key="editor.home">എഡിറ്റര്‍ ഹോം</message>
-	 <message key="editor.article.confirmChangeReviewForm">മുന്നറിയിപ്പ്:അവലോകന ഫോമില്‍ മാറ്റം വരുത്തുന്നത്,ഈ ഫോം ഉപയോഗിച്ച് നിരൂപകന്‍ നല്‍കിയ ഉത്തരങ്ങളെ ബാധിക്കാം.തുടരണമെന്ന് താങ്കള്‍ക്ക് ഉറപ്പാണോ?</message>
-	<message key="editor.submissionsAndPublishing">സമര്‍പ്പണവും പ്രസിദ്ധീകരിക്കലും</message>
+		<message key="editor.submissionsAndPublishing">സമര്‍പ്പണവും പ്രസിദ്ധീകരിക്കലും</message>
 	<message key="editor.submissionQueue">സമര്‍പ്പണ വരി</message>
 	<message key="editor.submissionArchive">സമര്‍പ്പണ രേഖകള്‍</message>
 	<message key="editor.publishing">പ്രസിദ്ധീകരിക്കല്‍</message>
@@ -105,7 +101,6 @@
 	<message key="editor.issues.open">ഓപ്പണ്‍</message>
 	<message key="editor.issues.pages">പേജുകള്‍</message>
 	<message key="editor.navigation.futureIssues">വരാനുള്ള പതിപ്പുകള്‍</message>
-	<message key="grid.action.addIssue">പതിപ്പ് സൃഷ്ടിക്കുക</message>
 	<message key="editor.navigation.issueArchive">കഴിഞ്ഞ പതിപ്പുകള്‍</message>
 	<message key="editor.article.designateReviewVersion">റിവ്യൂ വേര്‍ഷനായി ഒറിജിനല്‍ ഫയല്‍ നിയോഗിക്കുക</message>
 	<message key="editor.article.uploadReviewVersion">നവീകരിച്ച റിവ്യൂ വേര്‍ഷന്‍ അപ് ലോഡ് ചെയ്യുക</message>

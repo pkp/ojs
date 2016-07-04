@@ -4,15 +4,14 @@
 <!--
   * locale/pt_BR/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
   * Localization strings for the pt_BR (Português (Brasil)) locale.
-  *
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   -->
 
-<locale name="pt_BR" full_name = "Português (Brasil)">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="author.submit">Nova submissão</message>
 	<message key="author.track">Submissões ativas</message>
 	<message key="author.competingInterests"><![CDATA[<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Política  de Conflito de Interesses</a>]]></message>
@@ -46,8 +45,7 @@
 	<message key="author.submit.journalSection">Seção</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Escolha a seção apropriada para a submissão (leia Seções e Políticas na página <a href="{$aboutUrl}">Sobre</a> a revista).]]></message>
 	<message key="submission.submit.selectSection">Escolha uma seção...</message>
-	<message key="submission.submit.submissionChecklist">Condições para submissão</message>
-	<message key="submission.submit.submissionChecklistDescription">Confirme que a submissão está em conformidade com as condições seguintes, marcando as caixas de seleção, para prosseguir ao Passo 2 do processo.</message>
+	<message key="author.submit.submissionChecklist">Condições para submissão</message>
 	<message key="author.submit.verifyChecklist">Todas as condições devem ser satisfeitas antes de continuar.</message>
 	<message key="author.submit.copyrightNoticeAgree">Os autores concordam com os termos da Declaração de Direito Autoral, que se aplicará a esta submissão caso seja publicada nesta revista (comentários ao editor podem ser incluídos a seguir).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">É obrigatório aceitar a Declaração de Direito Autoral para continuar!</message>
@@ -92,7 +90,6 @@
 	<message key="author.submit.suppFile.dataSet">Conjunto de Dados</message>
 	<message key="author.submit.suppFile.sourceText">Texto Original</message>
 	<message key="author.submit.suppFile.briefDescription">Descrição</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Contribuidor ou agência de fomento</message>
 	<message key="author.submit.suppFile.availableToPeers">Apresentar documento aos avaliadores (sem metadados), pois não irá comprometer a avaliação pelos pares cega.</message>
 	<message key="author.submit.suppFile.publisherDescription">Utilizar somente com material publicado formalmente.</message>
 	<message key="author.submit.suppFile.dateDescription">Data de coleta de dados ou criação do instrumento.</message>
@@ -109,7 +106,6 @@
 	<message key="author.submit.filesSummary">Resumo de documentos</message>
 	<message key="author.submit.finishSubmission">Concluir submissão</message>
 	<message key="author.submit.submissionComplete">Submissão concluída. Agradecemos seu interesse em contribuir com seu trabalho para a revista {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Caso a submissão já esteja em um formato pronto para publicação, sem a necessidade de revisão, edição ou layout, ela pode ser enviada diretamente para o último passo, a Edição da submissão <a href="{$expediteUrl}" class="action">clicando aqui!</a>. (Aviso: Apenas Editores da revista possuem esta opção para suas submissões.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Transferir Versão do Autor</message>
 	<message key="author.article.copyeditedFile">Documento editado</message>
 	<message key="author.article.authorRevisedFile">Versão do Autor</message>
@@ -124,6 +120,4 @@
 	<message key="author.submit.submissionLocale">Idioma da submissão</message>
 	<message key="author.submit.form.localeRequired">Escolha um idioma para a submissão.</message>
 	<message key="author.submit.submissionLocaleDescription">Este periódico aceita submissões em vários idiomas. Escolha o idioma principal da submissão a partir do menu dropdown a seguir.</message>
-	<message key="author.submit.submissionSupportingAgencies">Contribuidores e Agências de fomento</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Identifique agências (pessoas, organizações, ou serviços) que contribuíram para o conteúdo ou ofereceram apoio financeiro ou logístico para o trabalho apresentado nesta submissão. Separe os agentes por ponto-e-vírgula (ex.: Carlos Silva, Universidade Estadual; Universidade Federal do Estado, Departamento de Ciência da Informação).</message>
 </locale>

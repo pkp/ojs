@@ -4,7 +4,7 @@
 <!--
   * locale/zh_CN/editor.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,12 +12,8 @@
   *
   -->
 
-<locale name="zh_CN" full_name = "China .PR">
-	<message key="editor.article.reviewForms">评审表单</message>
-	<message key="editor.article.selectReviewForm">选择评审表单</message>
-	<message key="editor.article.clearReviewForm">清除评审表单</message>
+<locale name="zh_CN" full_name="简体中文">
 	<message key="editor.home">编辑首页</message>
-	 <message key="editor.article.confirmChangeReviewForm">警告：改变评审表单将影响到所有使用这个表单回复的审稿人，您确认继续吗?</message>
 	<message key="editor.submissionsAndPublishing">投稿与出版</message>
 	<message key="editor.submissionQueue">投稿队列</message>
 	<message key="editor.submissionArchive">投稿存档</message>
@@ -98,7 +94,6 @@
 	<message key="editor.issues.open">开放</message>
 	<message key="editor.issues.pages">页</message>
 	<message key="editor.navigation.futureIssues">计划中刊期</message>
-	<message key="grid.action.addIssue">创建刊期</message>
 	<message key="editor.navigation.issueArchive">过刊</message>
 	<message key="editor.article.designateReviewVersion">指定原始文件作为审阅版本</message>
 	<message key="editor.article.uploadReviewVersion">一个上传的修订的审阅版本</message>

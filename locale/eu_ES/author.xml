@@ -4,7 +4,7 @@
 <!--
   * locale/eu_ES/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="eu_ES" full_name = "Basque (Euskara)">
+<locale name="eu_ES" full_name="Euskara">
 	<message key="author.submit">Bidalketa berria</message>
 	<message key="author.track">Bidalketa aktiboak</message>
 	<message key="author.competingInterests"><![CDATA[Interes-gatazka <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Interes-gatazketako politika</a> ]]></message>
@@ -27,8 +27,8 @@
 	<message key="author.submit.step4a">4a. urratsa Fitxategi osagarri bat gehitu</message>
 	<message key="author.submit.step5">5. urratsa. Bidalketa berretsi</message>
 	<message key="author.submit.start">Hasi</message>
-	<message key="author.submit.metadata">Metadatuak sartu</message>
-	<message key="author.submit.upload">Bidalketa kargatu</message>
+	<message key="author.submit.metadata">2. Metadatuak sartu</message>
+	<message key="author.submit.upload">3. Bidalketa kargatu</message>
 	<message key="author.submit.supplementaryFiles">Fitxategi osagarriak kargatu</message>
 	<message key="author.submit.confirmation">Berretsi</message>
 	<message key="author.submit.cancelSubmission">Bidalketa hau geroago osa dezakezu, Egilearen hasierako orrian Bidalketa aktiboak hautatuta.</message>
@@ -45,8 +45,7 @@
 	<message key="author.submit.journalSection">Aldizkariaren atala</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Hautatu zein Ataletara bidali nahi duzun (ikusi Atalak eta Politikak <a href="{$aboutUrl}" target="_new">Aldizkariari buruz</a> orrian).]]></message>
 	<message key="submission.submit.selectSection">Hautatu atal bat.</message>
-	<message key="submission.submit.submissionChecklist">Bidalketa prestatzeko zerrenda</message>
-	<message key="submission.submit.submissionChecklistDescription">Bidalketa aldizkariari helarazteko prest dagoela adierazteko, markatu zerrendako puntu guztiak (editorearentzako oharrak ondoren gehi daitezke).</message>
+	<message key="author.submit.submissionChecklist">Bidalketa prestatzeko zerrenda</message>
 	<message key="author.submit.verifyChecklist">Jarraitu ahal izateko, bidalketa prestatzeko zerrendako puntu guztiak osatuta daudela ziurtatu behar duzu.</message>
 	<message key="author.submit.copyrightNoticeAgree">Egileek onartzen dituzte Copyright informazio honetako baldintza guztiak. Baldintza horiek artikulua aldizkari honetan argitaratzen denean, argitaratzen bada, aplikatuko dira (editorearentzako oharrak behean gehi daitezke).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Jarraitu ahal izateko, Copyright informazioko baldintzak onartu behar dituzu.</message>
@@ -89,7 +88,6 @@
 	<message key="author.submit.suppFile.dataSet">Datu multzoa</message>
 	<message key="author.submit.suppFile.sourceText">Iturburu-testua</message>
 	<message key="author.submit.suppFile.briefDescription">Azalpen laburra</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Diru-emaileak edo erakunde babesleak</message>
 	<message key="author.submit.suppFile.availableToPeers">Aurkeztu fitxategia ebaluatzaileei (metadaturik gabe), ez du arriskurik ebaluazio anonimoarentzat.</message>
 	<message key="author.submit.suppFile.publisherDescription">Formalki argitaratutako materialekin bakarrik erabili.</message>
 	<message key="author.submit.suppFile.dateDescription">Datuak bildu ziren edo tresna sortu zen eguna.</message>
@@ -106,7 +104,6 @@
 	<message key="author.submit.filesSummary">Fitxategi-laburpena</message>
 	<message key="author.submit.finishSubmission">Amaitu bidalketa</message>
 	<message key="author.submit.submissionComplete">Bidalketa osatu da. Eskerrik asko {$journalTitle} aldizkarian argitaratzeko duzun interesagatik.</message>
-	<message key="author.submit.expedite"><![CDATA[Bidalketa dagoeneko argitaratzeko prest badago, gehiagoko ebaluazio, edizio edo maketazio lanik gabe, zuzenean jar daiteke Edizio-ilarako azkeneko fasean, <a href="{$expediteUrl}" class="action">hemen klik eginda</a>. (Oharra: Aldizkariko editoreek bakarrik egin dezakete hori beren bidalketekin).]]></message>
 	<message key="author.article.uploadAuthorVersion">Kargatu Egilearen bertsioa</message>
 	<message key="author.article.copyeditedFile">Zuzendutako fitxategia</message>
 	<message key="author.article.authorRevisedFile">Egilearen fitxategia</message>
@@ -124,6 +121,4 @@
 	<message key="author.submit.form.wordCountAlert">Laburpenetarako gehienezko hitz kopurua gainditu duzu atal honetan.</message>
 	<message key="author.submit.supplementaryFilesInstructions">Aukerako pauso honek aurkezpenari Fitxategi Osagarriak gehitzeko aukera ematen du. Artxiboak zeinahi formatutan egon daitezke, eta hauek izan ditzakete, besteak beste: (a)bilaketa-tresnak, (b) datu multzoak, ikerlanaren bilaketaren ebaluazio etikoa betetzen duena, (c) irakurlearentzat beste edozein modutara eskuragarri egongo ez liratekeen iturriak, (d) irudiak eta taulak ezin dira sartu testuan bertan, ezta lanari ekarpenak egiteko beste materialak ere.</message>
 	<message key="author.submit.supplementaryFiles.saveToUpload">Egin klik “Gorde” botoian fitxategia kargatzeko (horren ondoren fitxategi osagarriak kargatu daitezke).</message>
-	<message key="author.submit.submissionSupportingAgencies">Laguntzaileak eta agentzia babesleak</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Identifikatu edukiari ekarpenak egin dizkioten agentziak (pertsona bat, erakunde bat edo zerbitzu bat) edo edizio honetan aurkeztu den lanari babesa eman diotenak. Bereizi puntu eta koma batekin (adib., John Doe, Metro University; Master University, Informatika Saila).</message>
 </locale>

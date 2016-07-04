@@ -4,7 +4,7 @@
 <!--
   * locale/hr_HR/admin.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="hr_HR" full_name = "Hrvatski">
+<locale name="hr_HR" full_name="Hrvatski">
 	<message key="admin.hostedJournals">Časopisi u sustavu</message>
 	<message key="admin.settings.journalRedirect">Izravno preusmjeravanje na časopis</message>
 	<message key="admin.settings.journalRedirectInstructions">Svi upiti i posjeti glavnoj stranici bit će preusmjereni na odabrani časopis. To može biti izuzetno korisno ako je na sustavu postavljen samo jedan časopis.</message>
@@ -21,7 +21,6 @@
 	<message key="admin.languages.supportedLocalesInstructions">Izaberite sve jezike za koje želite da budu podržani na stranici. Izabrane prijevode bit će moguće koristiti sa svim časopisima postavljenim u sustavu, te će se na svakoj stranici prikazivati i izbornik jezika (što se može uključiti ili isključiti na razini pojedinog časopisa). Ako je izabran samo jedan jezik, jezični izbornik se neće prikazivati, niti će glavnim urednicima pojedinih časopisa biti na raspolaganu jezične postavke.</message>
 	<message key="admin.languages.confirmUninstall">Jeste li sigurni da želite deinstalirati ovaj prijevod? To može utjecati na časopise koji trenutno koriste taj prijevod.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Izaberite bilo koji od ispod navedenih prijevoda kako biste instalirali podršku za taj jezik u sustavu. Prijevodi moraju biti instalirani prije nego što se mogu aktivirati i koristiti u pojedinim časopisima. Pogledajte OJS dokumentaciju za informacije o dodavanju podrške za nove jezike.</message>
-	<message key="admin.languages.downloadLocales">Preuzmi lokalizacije</message>
 	<message key="admin.languages.downloadFailed">Preuzimanje lokalizacije nije uspjelo. Ispod priložena poruka opisuje grešku.</message>
 	<message key="admin.languages.localeInstalled">Lokalizacija "{$locale}" je uspješno postavljena.</message>
 	<message key="admin.languages.download">Preuzmi lokalizaciju</message>
@@ -37,25 +36,14 @@
 	<message key="admin.journals.noneCreated">Nema kreiranih časopisa.</message>
 	<message key="admin.contexts.confirmDelete">Jeste li sigurni da želite trajno izbrisati ovaj časopis i sav njegov sadržaj?</message>
 	<message key="admin.contexts.create">Kreiraj časopis</message>
+	<message key="admin.journals.createInstructions">Automatski ćete biti evidentirani  kao glavni urednik ovog časopisa. Po kreiranju novog časopisa, pristupite mu kao glavni urednik kako biste nastavili s podešavanjem i upisom korisnika.</message>
 	<message key="admin.journals.urlWillBe">URL časopisa će biti {$sampleUrl}</message>
-	<message key="admin.contexts.form.titleRequired">Naslov je obavezan.</message>
 	<message key="admin.contexts.form.pathRequired">Putanja je obavezna.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Putanja smije sadržavati samo alfanumeričke znakove, podvlačenja i povlake, mora početi, a i završiti s alfanumeričkim znakom.</message>
 	<message key="admin.contexts.form.pathExists">Odabrana putanja je već u korištenju drugog časopisa.</message>
 	<message key="admin.journals.enableJournalInstructions">Omogućite ovom časopisu da se pojavi javno na stranici.</message>
 	<message key="admin.journals.journalDescription">Opis časopisa</message>
-	<message key="admin.journals.importOJS1">Prijenos iz OJS 1</message>
-	<message key="admin.journals.importOJS1.success">Prijenos podataka iz starije verzije sustava uspješno je završen.</message>
-	<message key="admin.journals.importOJS1.editMigratedJournal">Uredi premješteni časopis</message>
-	<message key="admin.journals.importOJS1.redirect.desc">Da biste preusmjerili OJS 1 URL-ove na OJS 2 URL-ove, kreirajte sljedeće PHP datoteke koristeći niže priloženi sadržaj. Te se datoteke tada mogu postaviti u OJS 1 filesystem path, ili za instalacije sa samo jednim časopisom, u OJS 2 filesystem path.</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1root">Postavi u stari OJS 1 filesystem path (t.j. /var/www/ojs1).</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Postavi u stari OJS 1 filesystem path (t.j. /var/www/ojs1) ili, za instalacije sa samo jednim časopisom, u novi OJS 2 filesystem path (t.j. /var/www/ojs2)</message>
-	<message key="admin.journals.importOJS1.conflict.desc">Neki korisnički računi imaju proturječne informacije. OJS 1.x dozvoljava višestrukim korisničkim računima da dijele istu adresu e-pošte, dok OJS 2.x to ne dozvoljava. U listi ispod, drugi račun na listi imao je privremeno dodijeljen račun e-pošte. To bi trebalo biti ručno ispravljeno dodijeljivanjem drugog računa e-pošte ili udruživanjem računa.</message>
-	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) i {$secondUsername} ({$secondName})</message>
-	<message key="admin.journals.importOJS1Instructions">Za detaljnije informacije o migraciji podataka s OJS 1 na OJS 2 pročitajte dokument UPGRADE koji se nalazi među datotekama distribucije OJS-a.</message>
 	<message key="admin.journal.pathImportInstructions">Postojeća putanja časopisa ili putanja koju treba kreirati (npr. "ojs").</message>
-	<message key="admin.journal.importPath">OJS 1 putanja</message>
-	<message key="admin.journal.importPathInstructions">Cjelovita putanja lokalnog datotečnog sustava na kojoj se nalazi OJS 1 instalacija koju prenosite (npr. "/var/www/ojs").</message>
 	<message key="admin.journals.importSubscriptions">Prenesi pretplate i pretplatnike</message>
 	<message key="admin.journals.transcode">Prekodiraj metapodatke prenesenih članaka iz ISO8859-1</message>
 	<message key="admin.journals.redirect">Generiraj kod koji će mapirati OJS 1 URL-ove u OJS 2 URL-ove</message>
@@ -68,4 +56,28 @@
 	<message key="admin.mergeUsers.allUsers">Svi evidentirani korisnici</message>
 	<message key="admin.mergeUsers.confirm">Jeste li sigurni da želite spojiti račun korisnika "{$oldUsername}" s računom korisnika "{$newUsername}"? Račun korisničkog imena "{$oldUsername}" više neće postojati nakon toga. Ovo je nepovratna radnja.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Nema evidentiranih korisnika.</message>
+	<message key="admin.settings.options">Mogućnosti</message>
+	<message key="admin.settings.usePaging">Podijeli stranu sa listom časopisa na nekoliko strana kod sajtova gdje ima više časopisa.</message>
+	<message key="admin.settings.journalsList">Elementi časopisa</message>
+	<message key="admin.settings.journalsList.showTitle">Naziv časopisa</message>
+	<message key="admin.settings.journalsList.showDescription">Opis časopisa</message>
+	<message key="admin.locale.maybeIncomplete">Označeni prijevodi su možda nezavršeni.</message>
+	<message key="admin.systemVersion">OJS verzija</message>
+	<message key="admin.categories">Kategorije</message>
+	<message key="admin.categories.disableCategories">Ne organiziraj časopise u kategorije.</message>
+	<message key="admin.categories.editTitle">Uredi kategoriju</message>
+	<message key="admin.categories.createTitle">Napravi kategoriju</message>
+	<message key="admin.categories.create">Napravi novu kategoriju</message>
+	<message key="admin.categories.noneCreated">Nema napravljenih kategorija.</message>
+	<message key="admin.categories.confirmDelete">Da li ste sigurni da želite izbrisati ovu kategoriju?</message>
+	<message key="admin.categories.name">Ime</message>
+	<message key="admin.categories.nameRequired">Obavezno je ime kategorije.</message>
+	<message key="admin.settings.journalsList.description">Odaberite elemente časopisa koji će biti objavljeni za svaki časopis na internet stranici.</message>
+	<message key="admin.settings.journalsList.showThumbnail">Umanjena slika časopisa</message>
+	<message key="admin.settings.defaultMetricDescription">Vaš časopis je podešen tako da bilježi više od jednog načina mjerenja upotrebe stranica. Statistika upotrebe stranica će biti prikazana u nekoliko konteksta.
+Ima slučajeva kad je potrebno uzeti jedan način mjerenja npr. za prikaz liste sa rangiranjem najčešće preuzetih članaka ili za rangiranje rezultata pretrage.
+Odaberite jedan od podešenih načina mjerenja kao pretpostavljeni.</message>
+	<message key="admin.categories.enableCategories">Dozvoli Ravnateljima časopisa organizirati časopise u kategorije</message>
+	<message key="admin.categories.enable.description">Administrator internet mjesta može odrediti kategorije kako i lakše organizirati brojne nizove časopisa. Ravnatelji časopisa mogu odabrati nekoliko od tih kategorija  za svaki časopis kako bi čitatelji pregledavali kolekcije časopisa po kategorijama.</message>
+	
 </locale>

@@ -4,15 +4,14 @@
 <!--
   * locale/pt_BR/editor.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
   * Localization strings for the pt_BR (Português (Brasil)) locale.
-  *
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   -->
 
-<locale name="pt_BR" full_name = "Português (Brasil)">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="editor.home">Página Inicial do Editor</message>
 	<message key="editor.submissionsAndPublishing">Submissões e Publicações</message>
 	<message key="editor.submissionQueue">Fila de submissões</message>
@@ -91,7 +90,6 @@
 	<message key="editor.issues.open">Aberto</message>
 	<message key="editor.issues.pages">Páginas</message>
 	<message key="editor.navigation.futureIssues">Edições futuras</message>
-	<message key="grid.action.addIssue">Incluir edição</message>
 	<message key="editor.navigation.issueArchive">Edições anteriores</message>
 	<message key="editor.article.designateReviewVersion">Designar documento original como versão para avaliação</message>
 	<message key="editor.article.uploadReviewVersion">Enviar atualização da versão para avaliação</message>
@@ -192,7 +190,6 @@
 	<message key="editor.article.uploaded">Enviado</message>
 	<message key="editor.article.removeCoverPage">Excluir capa?</message>
 	<message key="editor.article.remove">Excluir</message>
-	<message key="editor.article.confirmChangeReviewForm">Aviso: Alterações no formulário de avaliação removerão todas as respostas dos avaliadores que usaram o mesmo. Deseja realmente continuar?</message>
 	<message key="editor.issues.enableOpenAccessDate">Habilitar acesso livre adiado</message>
 	<message key="editor.issues.unpublishIssue">Despublicar edição</message>
 	<message key="editor.issues.confirmUnpublish">Deseja realmente despublicar esta edição?</message>

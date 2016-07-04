@@ -4,7 +4,7 @@
 <!--
   * locale/gl_ES/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -48,7 +48,6 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Axuda do sistema</message>
-	<message key="navigation.archives">Arquivos</message>
 	<message key="navigation.current">Actual</message>
 	<message key="navigation.otherJournals">Outras revistas</message>
 	<message key="navigation.browseByIssue">Por edición</message>
@@ -166,20 +165,9 @@
 	
 	<!-- Roles -->
 	<message key="user.role.manager">Administrador/a de revistas</message>
-	<message key="user.role.editor">Editor/a</message>
 	<message key="user.role.sectionEditor">Editor/a de sección</message>
-	<message key="user.role.layoutEditor">Editor/a de composición</message>
-	<message key="user.role.copyeditor">Corrector/a</message>
-	<message key="user.role.proofreader">Corrector/a de probas</message>
-	<message key="user.role.author">Autor/a</message>
 	<message key="user.role.subscriptionManager">Administrador de subscrición</message>
 	<message key="user.role.managers">Administradores/as de revistas</message>
-	<message key="user.role.editors">Editores/as</message>
-	<message key="user.role.subEditors">Editores/as de sección</message>
-	<message key="user.role.layoutEditors">Editores/as de composición</message>
-	<message key="user.role.copyeditors">Correctores/as</message>
-	<message key="user.role.proofreaders">Correctores</message>
-	<message key="user.role.authors">Autoras/es</message>
 	<message key="user.role.subscriptionManagers">Administradores/as de subscrición</message>
 	
 	<!-- Common Issue Terms -->
@@ -207,7 +195,6 @@
 	<message key="submission.event.logLevel.error">Erro</message>
 	
 	<message key="submission.event.general.defaultEvent">Evento de envío</message>
-	<message key="submission.event.submissionSubmitted">Artigo enviado</message>
 	<message key="submission.event.general.issueScheduled">Envío axendado para publicación</message>
 	<message key="submission.event.general.issueAssigned">Envío asignado a número</message>
 	<message key="submission.event.general.articlePublished">Artigo publicado</message>
@@ -277,7 +264,7 @@ Ten en conta que a interface OAI pódese desactivar editando a configuración de
 	<message key="admin.editSystemConfigInstructions"><![CDATA[Emprega este formulario para modificar a configuración do teu sistema (o ficheiro <tt>config.inc.php</tt>). Clica en "gardar" para gardar a nova configuración, o en "mostrar" para  mostrar o ficheiro de configuración actualizado sen modificar a configuración actual.
 <br /><br />
 <span class="formError">Advertencia: a modificación destes valores pode provocar que o seu su sitio fique inaccesible (sendo preciso arranxar manualmente o ficheiro de configuración). Recoméndase que no realices nengun cambio se non sabes exactamente o que estás a facer.</span>]]></message>
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>¡ATENCIÓN!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>¡ATENCIÓN!</h4>
 <p>O sistema non puido sobreescribir automáticamente o ficheiro de configuración. Para aplicar os cambios á configuración compre abrir o ficheiro <tt>config.inc.php</tt>  nun editor de texto e substituir o texto existente co texto que aparece abaixo.</p>]]></message>
 	
 	
@@ -388,10 +375,10 @@ Opcionalmente  pódeche indicar o motivo polo que se  desactivou a conta de subs
 	<!-- Navigation sidebar menu -->
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[O nome enlaza enlaza co perfil de / da revisor/a.<br/>
-A puntuación é sobre 5 (excelente).<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[O nome enlaza enlaza co perfil de / da revisor/a.<br />
+A puntuación é sobre 5 (excelente).<br />
 Semanas refírese ao periodo de tempo medio empregado para rematar unha revisión.<br />
-A última data é a da revisión aceptada máis recente.<br/>
+A última data é a da revisión aceptada máis recente.<br />
 Activas é o número de revisións que neste momento están consideradas como en proceso.]]></message>
 	
 	
@@ -565,7 +552,6 @@ Activas é o número de revisións que neste momento están consideradas como en
 	<message key="submission.comments.saveAndEmailEditor">Gardar e enviar correo ao autor</message>
 	
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Ainda non te rexistraches? Faino agora</message>
 	<message key="user.login.resetPasswordInstructions"><![CDATA[Por razóns de seguridade, este sistema envia por correo-e un novo contrasinal aos/as usuarios/as rexistrados, en vez de lembrar
 o contrasinal actual.<br /><br />Insire o teu enderezo de correo elecrónico para mudar o contrasinal. Hase enviar a confirmación a este mesmo enderezo.]]></message>
 	
@@ -574,11 +560,8 @@ o contrasinal actual.<br /><br />Insire o teu enderezo de correo elecrónico par
 	
 	<!-- Registration -->
 	<message key="user.register.repeatPassword">Repite o contrasinal</message>
-	<message key="user.register.selectJournal">Selecciona unha revista para rexistrarte</message>
 	<message key="user.register.noJournals">Neste sitio non hai revistas nas que te poidas rexistrar.</message>
 	<message key="user.register.privacyStatement">Declaración de privacidade</message>
-	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Clica aquí</a> se xa estás registrada/o nesta ou calquera outra revista desta web.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Clica aquí</a> se <strong>no</strong> xa estás rexistra con esta ou calquera outra revista desta web.]]></message>
 	<message key="user.register.loginToRegister">Insire o teu nome de usuaria/o e contrasinal actual para rexistrarte nesta revista.</message>
 	<message key="user.register.registrationDisabled">Neste intre non és posibel rexistrarse nesta revista.</message>
 	<message key="user.register.form.passwordLengthTooShort">O contrasinal que introduciches non é longa de abondo.</message>
@@ -598,7 +581,7 @@ o contrasinal actual.<br /><br />Insire o teu enderezo de correo elecrónico par
 	<message key="search.allJournals">Todas as revistas</message>
 	<message key="search.authorIndex">Consultar índice de autoras/es</message>
 	<message key="search.authorDetails">Detalles de autor/a</message>
-	<message key="search.syntaxInstructions"><![CDATA[Consellos de pescuda: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Consellos de pescuda: </h4><ul>
 <li>Os termos de busca non distinguen minúsculas/MAYÚSCULAS</li>
 <li>Ignóranse as palabras comúns</li>
 <li>Por defecto só se recuperan os artigos  que conteñen <em>todos</em> os termos de busca (úsase por defecto o operador <strong>AND</strong>)</li>
@@ -608,6 +591,13 @@ o contrasinal actual.<br /><br />Insire o teu enderezo de correo elecrónico par
 <li>Se queres excluir unha palabra pona como prefixo <strong>-</strong> o <strong>NOT</strong>; p.e. <em>online -política</em> or <em>online NOT política</em></li>
 <li>Usa <strong>*</strong> un termo como comodín (curinga) para atopar calquera secuencia de caracteres; p.e., <em>moralidade psi* </em> acharía documentos que conteñan "psicolóxico", "psiquiatria ou "psicanálise"</li>
 </ul>]]></message>
+	
+	<!-- Interstitial page for PDFs -->
+	<message key="article.pdf.title">Portable Document Format (PDF)</message>
+	
+	<!-- Interstitial page for non-PDF non-HTML galleys -->
+	<message key="article.nonpdf.title">Descargar artigo</message>
+	<message key="article.nonpdf.note"><![CDATA[O ficheiro que seleccionou debería comezar a descargarse automáticamente. Se non o fai Clica na ligazón a seguir. Ten en conta que este ficheiro pode precisar un visor especial ou un plug-in.<br /><br />Si el fichero no se descarga automáticamente, <a href="{$url}">haga click aquí</a>.]]></message>
 	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Revistas aloxadas neste servidor</message>
@@ -627,21 +617,14 @@ o contrasinal actual.<br /><br />Insire o teu enderezo de correo elecrónico par
 	<message key="archive.issueUnavailable">Número non disponibel</message>
 	
 	<!-- About The Journal -->
-	<message key="about.journalContact">Contacto da revista</message>
-	<message key="about.aboutTheJournal">Sobre a revista</message>
 	<message key="about.editorialTeam">Equipo editorial</message>
 	<message key="about.editorialTeam.biography">Biografía</message>
 	<message key="about.editorialPolicies">Política editorial</message>
 	<message key="about.focusAndScope">Temática e alcance</message>
 	<message key="about.sectionPolicies">Política de seccions</message>
 	<message key="about.submissions">Envíos</message>
-	<message key="about.sponsors">Patrocinadores</message>
-	<message key="about.contributors">Fontes de financiamento</message>
 	<message key="about.onlineSubmissions">Envíos en liña</message>
-	<message key="about.onlineSubmissions.haveAccount">Xa tes nome de usuaria/o e contrasinal para {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Vai a identificación</message>
-	<message key="about.onlineSubmissions.needAccount"> Precisas un nome de usuario/a e contrasinal?</message>
-	<message key="about.onlineSubmissions.registration">Vai a rexistro</message>
 	<message key="about.onlineSubmissions.registrationRequired">Compre rexistrarse e identificarse para poder enviar artíigos en liña e para comprobar o estado dos envíos.</message>
 	<message key="about.authorGuidelines">Normas para autores/as</message>
 	<message key="about.submissionPreparationChecklist">Listaxe de comprobación de preparación de envíos</message>
@@ -654,7 +637,6 @@ o contrasinal actual.<br /><br />Insire o teu enderezo de correo elecrónico par
 	<message key="about.subscriptions">Subscripcións</message>
 	<message key="about.subscriptionsContact">Contacto de subscricións</message>
 	<message key="about.availableSubscriptionTypes">Tipos de subscrición</message>
-	<message key="about.journalSponsorship">Patrocinio da revista</message>
 	<message key="about.aboutThisPublishingSystem">Sobre este sistema de publicación</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Esta revista usa Open Journal Systems  {$ojsVersion}, que é software libre de administración e publicación de revistas desenvolvido, suportado, e libremente distribuido polo <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> baixo Licencia Pública General GNU.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[Esta revista usa Open Journal Systems {$ojsVersion}, que é software libre de administración e publicación de revistas desenvolvido, suportado, e libremente distribuido polo <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> baixo Licencia Pública General GNU.]]></message>
@@ -675,11 +657,56 @@ o contrasinal actual.<br /><br />Insire o teu enderezo de correo elecrónico par
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">Instalación de OJS</message>
 	<message key="installer.ojsUpgrade">Actualización de OJS</message>
+	<message key="installer.installationInstructions"><![CDATA[<h4>Versión de OJS {$version}</h4>
+
+<p>Grazas por descargar o <strong>Open Journal Systems</strong> de the Public Knowledge Project's. Antes de continuar pregamoche leas o ficheiro <a href="{$baseUrl}/docs/README">README</a> que se inclue co software. Para obter máis información sobre o Public Knowledge Project e os seus proxectos de software, visita o <a href="http://pkp.sfu.ca/" target="_blank">sitio web do PKP</a> (en inglés). Se tes informes de fallos ou preguntas de suporte técnico sobre Open Journal Systems, visita o <a href="http://forum.pkp.sfu.ca">foro de soporte</a> ou o <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">sistema de notificación de erros en liña</a> de PKP. Ainda que o método de contacto preferido é  foro de axuda, tamén  podes poñerte en contacto co equipo por correo-e en <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+
+<h4>Actualización</h4>
+
+<p>Se está actualizando unha versión existente de OJS 2.x, <a href="{$upgradeUrl}">clica aquí</a> para continuar.</p>
+
+<h4>Requerimentos de sistema recomendados</h4>
+
+<ul>
+	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x (incluye PHP 5.x)</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 o <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1</li>
+	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x o >= 2.0.4x  o Microsoft IIS 6</li>
+	<li>Sistema operativo: Calquera SO que suporte o software mencionado, incluindo <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+</ul>
+
+<p>Como PKP non conta cons recursos para probar cualquera combinación posibel de software e plataformas, no se ofrece garantía de correcto funcionamiento nen suporte técnico.</p>
+
+<p>Pódense facer cambios a esta configuración despois da instalación editando o ficheiro <tt>config.inc.php</tt> no directorio base de OJS, ou ben através da interface web de administración.</p>
+
+<h4>Gestores de bases de dados suportados</h4>
+
+<p>Até o de agora, OJS só se provou con MySQL e PostgreSQL, porén hai outros gestores de bases de datos suportados por <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> que poderían funcionar (total o parcialmente). Pódense enviar informes de compatibilidade e/ou parches para gestores de bases de datos alternativos ao equipo OJS.</p>
+
+<h4>Pasos pre-instalación</h4>
+
+<p>1. Os seguintes ficheiros e directorios (e o seu contido) deben ter permiso de escrita:</p>
+<ul>
+	<li><tt>config.inc.php</tt> ten permisos de escrita (opcional): {$writable_config}</li>
+	<li><tt>public/</tt> ten permisos de escrita: {$writable_public}</li>
+	<li><tt>cache/</tt> ten permisos de escrita: {$writable_cache}</li>
+	<li><tt>cache/t_cache/</tt> ten permisos de escrita: {$writable_templates_cache}</li>
+	<li><tt>cache/t_compile/</tt> ten permisos de escrita: {$writable_templates_compile}</li>
+	<li><tt>cache/_db/</tt> ten permisos de escrita: {$writable_db_cache}</li>
+</ul>
+
+<p>2. É preciso crear un directorio para almacenar os ficheiros subidos e que teña permiso de escrita (véxase "Configuración dos ficheiros" máis abaixo).</p>
+
+<h4>Instalación manual</h4>
+
+<p>Selecciona <strong>Instalación manual</strong> para mostrar as sentencias SQL necesarias para crear a estructura da base de datos de OJS e os dados iniciais, de maneira que a instalación da base de datos se poida realizar manualmente. Esta opción é útil para depurar problemas de instalación, especialmente en plataformas non soportadas. Ten en conta que este método de instalación non tentará crear nengunha  base de datos o táboa, ainda que o ficheiro de configuración será modificado cos parámetros de conexión á base de dados subministrados.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Versión de OJS {$version}</h4>
 	
 <p>Benzóns por descargar o <strong>Open Journal Systems</strong> de the Public Knowledge Project's. Antes de continuar pregámosche que leas o ficheiro <a href="{$baseUrl}/docs/README">README</a> que se adxunta ao software. Para obter máis información sobre o Public Knowledge Project e os seus proxectos de software, visita o <a href="http://pkp.sfu.ca/" target="_blank">sitio web do PKP</a> (en inglés). Se tes informes de fallos ou preguntas de suporte técnico sobre Open Journal Systems, visita o <a href="http://forum.pkp.sfu.ca">foro de soporte</a> ou o <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">sistema de notificación de erros en liña</a> de PKP. Ainda que ol método de contacto preferido é o foro de axuda, tamén podes contactar co equipo por correo electrónico en <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p></message>
 <p>Se <strong>recomenda encarecidamente</strong> que fagas unha copia de seguridade da túa base de dados, directorio de ficheiros, e directorio de instalación de OJS antes de continuar.</p>
 <p>Se está navegando en <a href="http://www.php.net/features.safe-mode" target="_blank">Modo Seguro de PHP</a>, asegúrate de que a directiva max_execution_time no teu ficheiro de configuración php.ini ten un límite alto. Se este, ou cualquera outro límite de tiempo (p.e. a directiva  "Timeout" de Apache) se acada e o proceso de actualización se interrumpe, precisará intervención manual.</p>]]></message>
+	<message key="installer.localeSettingsInstructions"><![CDATA[Para suporte unicode completo (UTF-8), selecciona UTF-8 para todas as configuracións de xogos de caracteres. Ten en conta que para suportarlo necesítase MySQL >= 4.1.1 o PostgreSQL >= 7.1. Repara tamén que o suporte completo de unicode necesita PHP >= 4.3.0 compilado con suporte para a libraría <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> (activado por defecto nas instalacions máis recentes de PHP). Podes ter problemas usando conxuntos de caracteres extendidos se o teu servidor non cumpre estes requisitos.
+<br /><br />
+Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.localeInstructions">O idioma primario deste sistema. Por favor, consulta a documentación de OJS se estás interesado no suporte de idiomas que non aparecen aquí.</message>
 	<message key="installer.additionalLocalesInstructions">Seleccione outros idiomas adicionais para suportar neste sistema. Estes idiomas hanse disponibilizar para as revistas aloxadas neste sitio web. Pódense instalar idiomas adicionais en calquera intre dende a interface administrativa.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Introduce o roteiro completo a un directorio existente onde se han subir os ficheiros. Este directorio non debería ser accesible por web. <strong>Asegúrate que este directorio existe e que tes permisos de escrita antes de proceder coa instalación</strong>. Las rutas en windows compre indicalas coa barra invertida, p.e. "C:/amiñarevista/ficheiros".]]></message>
@@ -732,7 +759,6 @@ o contrasinal actual.<br /><br />Insire o teu enderezo de correo elecrónico par
 	<message key="log.editor.archived">Arquivouse o envío {$submissionId}.</message>
 	<message key="log.editor.restored">O envío {$submissionId} voltou para a cola.</message>
 	<message key="log.editor.editorAssigned">Asignouse a {$editorName} como editor/a para o envío {$submissionId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} acelerouse o proceso de edición para o artigo {$submissionId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} asignouse a {$proofreaderName} para corrigir as probas do envío {$submissionId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} enviou {$submissionId} a planificación.</message>
@@ -760,8 +786,8 @@ o contrasinal actual.<br /><br />Insire o teu enderezo de correo elecrónico par
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Posiblemente se mostran a continuación  URLs non válidas para sitios de busca.<br/>
-Deberías verificar manualmente as URLs marcadas como nno válidas, xa que esta proba non é infalibel ao 100%.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Posiblemente se mostran a continuación  URLs non válidas para sitios de busca.<br />
+Deberías verificar manualmente as URLs marcadas como nno válidas, xa que esta proba non é infalibel ao 100%.<br />
 A validación pode fallar en URLs de pescuda que precisan o envío de formularios de dados.]]></message>
 	
 	<!-- RT Entities -->
@@ -941,13 +967,11 @@ A validación pode fallar en URLs de pescuda que precisan o envío de formulario
 	<message key="notification.type.galleyModified">Unha galerada foi modificada para "{$param}".</message>
 	<message key="notification.type.issuePublished">Unha consulta foi publicada.</message>
 	<message key="notification.type.newAnnouncement">Creouse un novo anuncio.</message>
-	<message key="notification.type.reviewerComment">Un revisor comentou en "{$param}".</message>
 	<message key="notification.type.reviewing">Eventos de Revisión</message>
 	<message key="notification.type.site">Eventos do Sitio</message>
 	<message key="notification.type.submissionComment">Un editor comentou en "{$param}".</message>
 	<message key="notification.type.submissions">Eventos de Envío</message>
 	<message key="notification.type.userComment">Un lector fixo un comentario en "{$param}"</message>
-	<message key="manager.setup.citations.enable">Permeter aos autores proporcionar por separado unha listaxe formateada de referencias (citas) como parte da súa presentación.</message>
 	<message key="payment.loginRequired.forArticle">Precísase unha subscrición ou pagamento do artigo para acceder ao ítem. Para verificar a subscrición, acceder a pagamentos previos, ou mercar o artigo, identifíquese na revista.</message>
 	<message key="payment.loginRequired.forDonation">Ten que estar autenticado para facer unha doazón.</message>
 	<message key="navigation.competingInterestGuidelines">Directrices en conflitos de intereses</message>
@@ -959,7 +983,6 @@ A validación pode fallar en URLs de pescuda que precisan o envío de formulario
 	<message key="rt.metadata.pkp.doi">Identificador de Obxecto Digital</message>
 	<message key="notification.mailListDescription">Insire o teu enderezo de correo electrónico para recibir notificacións inmediatas de novo contido engadido á revista.</message>
 	<message key="notification.type.editorDecisionComment">Fíxose un comentario como decisión do editor para "{$param}".</message>
-	<message key="notification.type.metadataModified">Modificouse o metadado de "{$param}".</message>
 	<message key="notification.type.reviewerFormComment">Enviouse unha revisión de formulario de revisión para "{$param}"</message>
 	<message key="debug.notes.currencyListLoad">Cargada listaxe de moedas "{$filename}" dende XML</message>
 	<message key="reviewer.article.selectRecommendation">Seleccionar unha recomendación e enviar a revisión para completar o proceso. Tes que inserir unha revisión ou subir un ficheiro antes de seleccionar unha recomendación.</message>
@@ -969,6 +992,8 @@ A validación pode fallar en URLs de pescuda que precisan o envío de formulario
 	<message key="payment.fastTrack.payFastTrack">Pagar Revisión Rápida</message>
 	<message key="payment.fastTrack.inFastTrack">En Revisión Rápida</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Esta páxina mostra actualizacións importantes asociados a esta revista, como novos números ou anuncios. Podes subscribirte a estas notificacións a través do noso RSS (hacendo clic na imaxe da dereita), o  <a href="{$emailUrl}">a través de correo electrónico.</a>]]></message>
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[La revista utilizará un sistema de clasificación de tema disponible en la web. <br />
+Título del sistema de clasificación]]></message>
 	<message key="submission.layout.noLayoutFile">Nengún (Antes de enviar a petición, subir versión final do corrector a modo de versión de maquetación)</message>
 	<message key="payment.alreadyPaidMessage">Selecciona esta caixa se xa enviaches o teu pagamento á revista para rematar o proceso de presentación. A presentación non ha ser revisada até receber o pagamento. Clica onde pon PAGAR AGORA para ver as intruccións de pagamento.</message>
 	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Declara cando ou cando non ten conflito de intereses com respeito a esta investigación (ver <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Políticas&nbsp;CI</a>).]]></message>
@@ -979,7 +1004,6 @@ A validación pode fallar en URLs de pescuda que precisan o envío de formulario
 	<li><strong>Insertar enlaces en las referencias</strong><p>O Editor de deseño pode engadir unha ligazón ás  referencias que se pode atopar online utilizando as seguintes instrucións (que poden ser editadas).</p></li>
 </ol>]]></message>
 	<message key="reviewer.article.reviewGuidelinesDescription">As Directrices de Revisión proporcionarán aos revisores criterios para julgar la idoneidade dunha presentación para ser publicada na revista, e pode incluir instruccións especiais para realizar unha revisión efectiva e útil. Na realización da revisión, os revisores son presentados con dúas caixas de texto abertas, a primeira "para autor e editor" , e la segunda "para o editor". De xeito alternativo,o Adminsitrador da Revista pode crear unha revisión de expertos. Os editores sempre terán a opción de compartir os comentarios oportunos co Autor.</message>
-	<message key="manager.setup.reviewProcessEmailDescription">Os Editores envían aos Revisores a solicitude de revisión da presentación incluida no correo electrónico. Os revisores envían un email aos editores coa súa aprobación ou  rexeito junto a revisión e as recomendacións. Os editores aproban ou rexeitan a presentación e introducen a revisión e recomendacións na páxina de revisión da presentación, para completar o proceso de revisión.</message>
 	<message key="user.subscriptions.subscriptionStatus">Estado da Subscrición</message>
 	<message key="user.subscriptions.status">Estado</message>
 	<message key="user.subscriptions.statusDescription">Descrición</message>
@@ -1006,7 +1030,4 @@ Os autores que publican nesta revista están de acordo cos termos a seguir
 	 <li>Os autores poden establecer por separado acordos suplementares para a distribución non exclusiva da versión da obra publicada na revista (por exemplo, situalo nun repositorio institucional ou publicalo nun libro), cun recoñecimento da súa publicación inicial nesta revista.</li>
 	 <li>Permítese e anímase aos autores a difundir os seus traballos en formato electrónico (por exemplo, en repositorios institucionais ou na súa própria páxina web) antes e durante o proceso de envío, xa que pode dar lugar a intercambios produtivos, así como a una citación maior e máis temperán dos traballos publicados (Véxase <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>) (en inglés).</li>
 </ol>]]></message>
-
-	<!-- Included here because it may be used in the navigation bar -->
-	<message key="editor.navigation.issues">Números</message>
 </locale>

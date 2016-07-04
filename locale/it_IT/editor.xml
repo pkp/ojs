@@ -4,7 +4,7 @@
 <!--
   * locale/it_IT/editor.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2000-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,11 +12,7 @@
   * Contributed by Andrea Marchitelli - CINECA.
   -->
 
-<locale name="it_IT" full_name = "Italiano">
-	<message key="editor.article.reviewForms">Moduli di revisione</message>
-	<message key="editor.article.selectReviewForm">Seleziona il modulo di revisione</message>
-	<message key="editor.article.clearReviewForm">Cancella il modulo di revisione</message>
-	<message key="editor.article.confirmChangeReviewForm">Modificare il modulo di revisione rimuoverà tutte le risposte che i revisori abbiano dato sinora. Vuoi continuare?</message>
+<locale name="it_IT" full_name="Italiano">
 	<message key="editor.home">Cruscotto dell'editor</message>
 	<message key="editor.submissionsAndPublishing">Proposte e pubblicazioni</message>
 	<message key="editor.submissionQueue">Coda delle proposte</message>
@@ -96,9 +92,7 @@
 	<message key="editor.issues.noLiveIssues">Nessun numero attivo</message>
 	<message key="editor.issues.open">Aperto</message>
 	<message key="editor.issues.pages">Paginazione</message>
-	<message key="editor.navigation.issues">Fascicoli</message>
 	<message key="editor.navigation.futureIssues">Fascicoli futuri</message>
-	<message key="editor.navigation.createIssue">Crea un fascicolo</message>
 	<message key="editor.navigation.issueArchive">Fascicoli pubblicati</message>
 	<message key="editor.article.designateReviewVersion">Imposta il file originale come versione di revisione</message>
 	<message key="editor.article.uploadReviewVersion">Carica un file modificato da mandare in revisione</message>

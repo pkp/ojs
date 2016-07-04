@@ -4,7 +4,7 @@
 <!--
   * locale/ro_RO/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -38,6 +38,7 @@
 
 
 
+	<!--  peer review -->
 
 
 	<message key="reviewer.article.enterReviewForm">Dă clic pe pictogramă pentru a completa formularul de evaluare.</message>	
@@ -71,7 +72,6 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Sistemul de asistenţă al revistei</message>
-	<message key="navigation.archives">Arhive</message>
 	<message key="navigation.current">Numărul curent</message>
 	<message key="navigation.otherJournals">Alte reviste</message>
 	<message key="navigation.browseByIssue">După număr</message>
@@ -213,20 +213,9 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Manager de revistă</message>
-	<message key="user.role.editor">Redactor</message>
 	<message key="user.role.sectionEditor">Redactor de secţiune</message>
-	<message key="user.role.layoutEditor">Redactor al machetei</message>
-	<message key="user.role.copyeditor">(Tehno)redactor</message>
-	<message key="user.role.proofreader">Corector</message>
-	<message key="user.role.author">Autor</message>
 	<message key="user.role.subscriptionManager">Manager pentru abonamente</message>
 	<message key="user.role.managers">Managerii revistei</message>
-	<message key="user.role.editors">Redactori</message>
-	<message key="user.role.subEditors">Redactori de secţiune</message>
-	<message key="user.role.layoutEditors">Redactori de machetă</message>
-	<message key="user.role.copyeditors">(Tehno)redactori</message>
-	<message key="user.role.proofreaders">Corectori</message>
-	<message key="user.role.authors">Autori</message>
 	<message key="user.role.subscriptionManagers">Manageri abonamente</message>
 	
 	<!-- Common Issue Terms -->
@@ -280,7 +269,6 @@
 	<message key="submission.event.logLevel.error">Eroare</message>
 	
 	<message key="submission.event.general.defaultEvent">Depunere de propunere</message>
-	<message key="submission.event.submissionSubmitted">Articol propus</message>
 	<message key="submission.event.general.issueScheduled">Propunere trimisă pentru a genera lista cu programări</message>
 	<message key="submission.event.general.issueAssigned">Propunere alipită la un număr</message>
 	<message key="submission.event.general.articlePublished">Articol publicat</message>
@@ -365,7 +353,7 @@ Trebuie remarcat faptul că interfaţa OAI poate fi deazactivată pentru acest s
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTĂ!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTĂ!</h4>
 <p>Sistemul nu a putut suprascrie automat fişierul de configurare. Pentru a aplica modificările, trebuie să deschizi <tt>config.inc.php</tt> într-un editor de text şi să înlocuieşti conţinutul cu cel din câmpul de text de mai jos.</p>]]></message>
 
 
@@ -475,11 +463,12 @@ Autorii care publică în această revistă să fie de acord cu următoarele con
 
 
 </ol>]]></message>
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Revista va folosi un sistem de clasificare al disciplinelor existent pe web.<br />
+Titlul sistemului de clasificare]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Pentru a avea indexat conţinutul acestei reviste într-un sistem de baze de date pentru cercetare distribuite global, citiți <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">pașii care sunt necesari pentru a deveni un contribuitor de date</a> și înregistrați revista în registrul oficial pentru <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Arhive Deschise</a>. Pentru a vă înregistra este necesar URL-ul de bază al depozitului: <span class="highlight">{$oaiUrl}</span>. Apoi, puteți înregistra revista proprie în <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">registrul OAI al UIUC</a> și în <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 
 <br /><br />
 Trebuie spus că în cazul în care administratorul siteului l-a înregistrat la aceste servicii, revista va fi indexată automat și nu va mai trebui să procedați la încă o înregistrare.]]></message>
-	<message key="manager.setup.citations.enable">Permiteți autorilor să ofere separat o listă formatată de referințe bibliografice (citări) ca parte a procesului de depunere a propunerii.</message>
 	
 
 
@@ -558,10 +547,10 @@ Opţional, poţi trimite utilizatorului motivul pentru care i-a fost deazactivat
 	<!-- Navigation sidebar menu -->
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Linkuri către profilul evaluatorului.<br/>
-Nota este peste 5 (Excelent).<br/>
-Săptămânile se referă la perioada medie de timp pentru a încheia o evaluare.<br/>
-Ultima este data celei mai recent aşteptate evaluări.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Linkuri către profilul evaluatorului.<br />
+Nota este peste 5 (Excelent).<br />
+Săptămânile se referă la perioada medie de timp pentru a încheia o evaluare.<br />
+Ultima este data celei mai recent aşteptate evaluări.<br />
 Activ însemnă câte evaluări sunt în prezent luate în considerare sau în desfăşurare.]]></message>
 
 
@@ -765,18 +754,14 @@ Activ însemnă câte evaluări sunt în prezent luate în considerare sau în d
 	
 
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Nu eşti utilizator? Înregistrează-te pe site!</message>
 	<message key="user.login.resetPasswordInstructions"><![CDATA[Din motive de securitate acest sistem trimite o parolă de resetare prin email utilizatorilor înregistraţi şi nu trimite 
 parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta parola. Va fi trimisă o confirmare către această adresă de email.]]></message>
 
 
 
 	<!-- Registration -->
-	<message key="user.register.selectJournal">Selectează o revistă la care să te înscrii</message>
 	<message key="user.register.noJournals">Nu există reviste la care să te poţi înscrie pe acest site.</message>
 	<message key="user.register.privacyStatement">Declaraţie de confidenţialitate</message>
-	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Apasă aici</a> dacă eşti deja înregistrat la această revistă sau la altă revistă de pe acest site.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Apasă aici</a> dacă <strong>nu</strong> eşti deja înregistrat la această revistă sau la o altă revistă de pe acest site.]]></message>
 	<message key="user.register.loginToRegister">Introdu numele şi parola existentă pentru a te autentifica la această revistă.</message>
 	<message key="user.register.registrationDisabled">Această revistă nu acceptă înscrieri de utilizatori în acest moment.</message>
 	<message key="user.register.form.passwordLengthTooShort">Parola introdusă nu este îndeajuns de lungă.</message>
@@ -827,7 +812,7 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<message key="search.allJournals">Toate revistele</message>
 	<message key="search.authorIndex">Parcurge indexul de autori</message>
 	<message key="search.authorDetails">Detalii autor</message>
-	<message key="search.syntaxInstructions"><![CDATA[Ponturi de căutare: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Ponturi de căutare: </h4><ul>
 <li>N-are importanță dacă termenii de căutare sunt cu majuscule</li>
 <li>Cuvintele des întânite sunt ignorate</li>
 <li>Implicit toate articole ce conţin <em>toţi</em> termenii din interogare sunt returnate (ie. <em>AND</em> este luat pus implicit)</li>
@@ -845,6 +830,13 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 
 </ul>]]></message>
 
+	<!-- Interstitial page for PDFs -->
+	<message key="article.pdf.title">Portable Document Format (PDF)</message>
+	<!-- Interstitial page for non-PDF non-HTML galleys -->
+	<message key="article.nonpdf.title">Descarcă articolul</message>
+	
+	<message key="article.nonpdf.note"><![CDATA[Fişierul selectat ar trebui să înceapă să se descarce automat. Dacă nu, apasă pe linkul de mai jos. Trebuie remarcat că acest fişier ar putea avea nevoie de un cititor sau modul special pentru a fi vizualizat.<br /><br />Dacă fişierul nu se descarcă automat, <a href="{$url}">apăsaţi aici</a>.]]></message>
+	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Revistele găzduite pe acest site</message>
 	<message key="site.journalView">Vezi revista</message>
@@ -864,8 +856,6 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	
 	<!-- About The Journal -->
 	<message key="about.statistics">Statistici</message>
-	<message key="about.journalContact">Contactul principal pentru revistă</message>
-	<message key="about.aboutTheJournal">Despre revistă</message>
 	<message key="about.history">Istoricul revistei</message>
 	<message key="about.editorialTeam">Colectivul de redacţie</message>
 	<message key="about.editorialTeam.biography">Biografie</message>
@@ -873,13 +863,8 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<message key="about.focusAndScope">Obiective și acoperire</message>
 	<message key="about.sectionPolicies">Regulamentele secțiunilor</message>
 	<message key="about.submissions">Propuneri</message>
-	<message key="about.sponsors">Sponsori</message>
-	<message key="about.contributors">Surse pentru asistență</message>
 	<message key="about.onlineSubmissions">Propuneri online</message>
-	<message key="about.onlineSubmissions.haveAccount">Ai deja un nume de utilizator şi o parolă pentru {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Mergi la autentificare</message>
-	<message key="about.onlineSubmissions.needAccount">Ai nevoie de un nume de utilizator şi o parolă?</message>
-	<message key="about.onlineSubmissions.registration">Mergi la înregistrare</message>
 	<message key="about.onlineSubmissions.registrationRequired">Înregistrarea şi autentificarea sunt necesare pentru a propune articole online şi pentru a verifica starea propunerilor existente.</message>
 	<message key="about.authorGuidelines">Îndrumări pentru autori</message>
 	<message key="about.submissionPreparationChecklist">Listă de verificare pentru pregătirea propunerilor</message>
@@ -907,7 +892,6 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<message key="about.subscriptionTypes.cost">Cost</message>
 	<message key="about.availableSubscriptionTypes">Tipuri de abonamente</message>
 	<message key="about.memberships">Afilieri</message>
-	<message key="about.journalSponsorship">Sponsorii revistei</message>
 	<message key="about.aboutThisPublishingSystem">Despre acest sistem de publicare</message>
 	<message key="about.aboutThisPublishingSystem.altText">Procesul editorial și de publicare al OJS</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Această revistă foloseşte Open Journal Systems {$ojsVersion}, care este un software cu sursă deschisă pentru managementul şi publicarea unei reviste întreținut şi distribuit liber de <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> sub GNU General Public License.]]></message>
@@ -978,7 +962,7 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 
 <ul>
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (incluzând PHP 5.x); în acest moment foloseşti PHP {$phpVersion}{$wrongPhpText}</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 sau <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 sau <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (incluzând PostgreSQL 8.x)</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x sau Microsoft IIS 6</li>
 	<li>Sistem de operare: orice OS care suportă softwareul de mai sus, incluzând <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
@@ -1011,6 +995,14 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 <p>Vă mulţumim pentru descărcarea lui <strong>Open Journal Systems</strong> de la Public Knowledge Project. Înainte de a continua, vă rog să citiţi documentul <a href="{$baseUrl}/docs/README">README</a> şi documentul <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> care sunt încluse în acest pachet software. Pentru mai multe informaţii despre Public Knowledge Project şi proiectele sale software, vizitaţi <a href="http://pkp.sfu.ca/" target="_blank">siteul web PKP</a>. Dacă aveţi rapoarte privind bugurile sau nelămuriri de natură tehnică privind Open Journal System, consultaţi <a href="http://forum.pkp.sfu.ca">forumul pentru asistenţă</a> sau vizitaţi online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">sistemul de raportare al bugurilor</a> de la PKP. Chiar dacă metoda preferată de contact este forumul de asistenţă, puteţi să trimiteţi şi un email echipei la <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
 <p>Se recomandă <strong>cu insistenţă</strong> să faceţi o copie de siguranţă la baza de date, la sistemul de directoare şi a directorului de instalare mai înainte de a începe.</p>
 <p>Dacă rulaţi în <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, asiguraţi-vă că directiva  max_execution_time există în fişierul de configurare php.ini şi că este setat la valoare maximă. Dacă această limită de timp este depăşită sau oricare altă limită de timp (ex. directiva "Timeout" de la Apache) iar procesul de actualizare este intreupt, va fi necesară intervenţia manuală.</p>]]></message>
+	
+
+
+
+
+	<message key="installer.localeSettingsInstructions"><![CDATA[Pentru suport complet Unicode (UTF-8), selectaţi UTF-8 pentru toate setările seturilor de caractere. Trebuie spus că este necesar suport pentru bazele de date MySQL >= 4.1.1 sau PostgreSQL >= 7.1. Trebuie notat, de asemenea că suportul complet pentru Unicode necesită PHP >= 4.3.0 compilat cu suport pentru pachetul <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> (activat implicit la cele mai recente instalări PHP). E posibil să experimentaţi probleme în folosirea seturile de caractere extinse dacă serverul nu întruneşte toate cerinţele.
+<br /><br />
+Serverul în acest moment suportă supports mbstring: <strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.localeInstructions">Limba primară a sistemului. Consultaţi documentaţia OJS dacă sunteţi interesat de localizări în alte limbi decât cele menţionate aici.</message>
 	<message key="installer.additionalLocalesInstructions">Selectează oricare limbi suplimentare care trebuie să fie suportate de sistem. Aceste limbi vor fi disponibile pentru uzul revistelor găzduite pe acest site. Limbile suplimentare pot fi instalate suplimentar în oricare moment din interfaţa de administrare a siteului.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Întrodu calea completă la un director existent unde vor fi ţinute fişierele. Acest director nu ar trebui să poată fi direct accesibil prin web. <strong>Asiguraţi-vă că acest director există şi este neprotejat la scriere înainte de a face instalarea.</strong> În cazul instalărilor Windows atenţie la scrierea căilor, unde se folosesc slashurile, ex. "C:/myjournal/files".]]></message>
@@ -1081,7 +1073,6 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<message key="log.editor.archived">Propunerea {$submissionId} a fost arhivată.</message>
 	<message key="log.editor.restored">Propunerea {$submissionId} a fost restaurată în lista de prelucrare.</message>
 	<message key="log.editor.editorAssigned">{$editorName} a fost angajat ca redactor al propunerii {$submissionId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} a urgentat procesul de redactare pentru articolul {$submissionId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} l-a angajat pe {$proofreaderName} să corecteze propunerea {$submissionId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} a trimis {$submissionId} pentru programare.</message>
@@ -1123,8 +1114,8 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Mai jos sunt afişate posibile URL-uri invalide pentru siteurile de căutare.<br/>
-Ar trebui să verifici manual orice URL marcat ca invalid pentru că acest test nu este 100% exact.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Mai jos sunt afişate posibile URL-uri invalide pentru siteurile de căutare.<br />
+Ar trebui să verifici manual orice URL marcat ca invalid pentru că acest test nu este 100% exact.<br />
 Validarea poate eşua pe URL-urile de căutare care necesită date postate într-un formular.]]></message>
 	
 
@@ -1163,9 +1154,7 @@ Validarea poate eşua pe URL-urile de căutare care necesită date postate într
 	<message key="notification.type.editorDecisionComment">A fost lăsat un comentariu la decizia redactorului pentru "{$param}".</message>
 	<message key="notification.type.galleyModified">A fost modificată o asamblare pentru "{$param}".</message>
 	<message key="notification.type.issuePublished">A fost publicat un nou număr.</message>
-	<message key="notification.type.metadataModified">Metadatele "{$param}" au fost modificate.</message>
 	<message key="notification.type.newAnnouncement">A fost creat un anunț nou.</message>	
-	<message key="notification.type.reviewerComment">Un evaluator a comentat la "{$param}".</message>
 	<message key="notification.type.reviewerFormComment">A fost trimis un formular de evaluare pentru "{$param}".</message>
 	<message key="notification.type.reviewing">Evenimente la evaluare</message>
 	<message key="notification.type.site">Evenimente privind siteul</message>
@@ -1193,7 +1182,4 @@ Validarea poate eşua pe URL-urile de căutare care necesită date postate într
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">A fost inițiată plata manuală, dar nu a fost primită încă</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">A fost inițiată plata online dar nu a fost încheiată</message>
 	<message key="payment.authorFees">Taxe pentru autori</message>
-
-	<!-- Included here because it may be used in the navigation bar -->
-	<message key="editor.navigation.issues">Numere de revistă</message>
 </locale>

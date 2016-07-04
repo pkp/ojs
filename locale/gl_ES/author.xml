@@ -4,7 +4,7 @@
 <!--
   * locale/gl_ES/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="gl_ES" full_name = "Galego (Galiza)">
+<locale name="gl_ES" full_name="Galego">
 	<message key="author.submit">Novo envío</message>
 	<message key="author.track">Envíos activos</message>
 	<message key="author.competingInterests"><![CDATA[Conflito de&nbsp;intereses <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></message>
@@ -46,8 +46,7 @@
 	<message key="author.submit.journalSection">Sección da revista</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Escolle unha sección axeitada para o envio (vexa Seccións e Políticas en <a href="{$aboutUrl}" target="_new">Sobre</a> la revista).]]></message>
 	<message key="submission.submit.selectSection">Escolle unha sección ...</message>
-	<message key="submission.submit.submissionChecklist">Listaxe de comprobación de envío</message>
-	<message key="submission.submit.submissionChecklistDescription">Indica que este envío está listo para ser considerado por esta revista marcando los siguientes puntos (a seguir podes facer comentarios ao/á editor/a).</message>
+	<message key="author.submit.submissionChecklist">Listaxe de comprobación de envío</message>
 	<message key="author.submit.verifyChecklist">Debe asegurarse de que cumpre todos os requisitos de la lista antes de continuar</message>
 	<message key="author.submit.copyrightNoticeAgree">Os/as autores/as están de acordo cos termos desta nota de copyright, que se han aplicar ao teu envío se for publicado por esta revista (a seguir podes facer comentarios ao/á editor/a).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Antes de continuar debes aceptar os termos da nota de copyright.</message>
@@ -60,8 +59,6 @@
 	<message key="author.submit.addAuthor">Engadir autor/a</message>
 	<message key="author.submit.deleteAuthor">Borrar autor/a</message>
 	<message key="author.submit.submissionIndexingDescription">Achega palabras chave para indexar o envío; separa os termos con punto e coma (termo1; termo2; termo3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Axencias de apoio</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Identifica as axencias que achegan financiamento ou apoio para o traballo presentado neste envío.</message>
 	<message key="author.submit.coverageInstructions">Refírese á localización xeo-espacial, cronolóxica,cobertura histórica, e/ou características de casos de investigación.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Inglés=en; Francés=fr; Español=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Códigos adicionales</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Precísase, como mínimo, un/a autor/a.</message>
@@ -94,7 +91,6 @@
 	<message key="author.submit.suppFile.dataSet">Conxuntos de dados</message>
 	<message key="author.submit.suppFile.sourceText">Texto fonte</message>
 	<message key="author.submit.suppFile.briefDescription">Breve descrición</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Axencia colaboradora o financiadora</message>
 	<message key="author.submit.suppFile.availableToPeers">Amosar ficheiro ós/ás revisores/as (sen metadados), xa que no comprometerá a avaliación cega.</message>
 	<message key="author.submit.suppFile.publisherDescription">Empregar só con materiais formalmente publicados.</message>
 	<message key="author.submit.suppFile.dateDescription">Data en que os dados foron recollidos ou os instrumentos creados.</message>
@@ -111,7 +107,6 @@
 	<message key="author.submit.filesSummary">Resumo de ficheiros</message>
 	<message key="author.submit.finishSubmission">Rematar envío</message>
 	<message key="author.submit.submissionComplete">Envío completado. Grazas polo teu interese en publicar en {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Se este envío está nun formato  para ser publicado, sen necesidade de máis revisións, edición, ou maquetación, pódese enviar directamente á cola de Planificación de Envíos <a href="{$expediteUrl}" class="action">pinchando aquí</a>. (Nota: Sólo los/as editores/as de revista cuentan con esta opción para sus envíos.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Subir versión de autor/a</message>
 	<message key="author.article.copyeditedFile">Ficheiro corrixido</message>
 	<message key="author.article.authorRevisedFile">Ficheiro de autor/a</message>

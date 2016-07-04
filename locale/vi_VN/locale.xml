@@ -4,7 +4,7 @@
 <!--
   * locale/vi_VN/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -45,7 +45,6 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Hướng dẫn</message>
-	<message key="navigation.archives">Số cũ</message>
 	<message key="navigation.current">Số mới ra</message>
 	<message key="navigation.otherJournals">Các tạp chí khác</message>
 	<message key="navigation.browseByIssue">Theo Số tạp chí</message>
@@ -167,20 +166,9 @@
 	
 	<!-- Roles -->
 	<message key="user.role.manager">Tổng biên tập</message>
-	<message key="user.role.editor">BTV chính</message>
 	<message key="user.role.sectionEditor">BTV chuyên mục</message>
-	<message key="user.role.layoutEditor">BTV trình bày</message>
-	<message key="user.role.copyeditor">BTV bản thảo</message>
-	<message key="user.role.proofreader">Người soát lỗi</message>
-	<message key="user.role.author">Tác giả</message>
 	<message key="user.role.subscriptionManager">Phụ trách phát hành</message>
 	<message key="user.role.managers">Tổng biên tập</message>
-	<message key="user.role.editors">BTV chính</message>
-	<message key="user.role.subEditors">BTV chuyên mục</message>
-	<message key="user.role.layoutEditors">BTV trình bày</message>
-	<message key="user.role.copyeditors">BTV bản thảo</message>
-	<message key="user.role.proofreaders">BTV soát lỗi</message>
-	<message key="user.role.authors">Tác giả</message>
 	<message key="user.role.subscriptionManagers">Phụ trách phát hành</message>
 	
 	<!-- Common Issue Terms -->
@@ -208,7 +196,6 @@
 	<message key="submission.event.logLevel.error">Lỗi</message>
 	
 	<message key="submission.event.general.defaultEvent">Sự kiện về bài viết</message>
-	<message key="submission.event.submissionSubmitted">Bài viết đã nộp</message>
 	<message key="submission.event.general.issueScheduled">Bài nộp đã được chuyển sang chờ xếp bài</message>
 	<message key="submission.event.general.issueAssigned">Bài nộp đã được xếp vào số tạp chí</message>
 	<message key="submission.event.general.articlePublished">Bài viết đã xuất bản</message>
@@ -275,7 +262,7 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>LƯU Ý!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>LƯU Ý!</h4>
 <p>Hệ thống không thể tự động ghi đè lên file cấu hình. Để thực hiện những thay đổi cấu hình quý vị phải mở file <tt>config.inc.php</tt> bằng phần mềm soạn thảo text phù hợp và thay nội dung file bằng nội dung dưới đây.</p>]]></message>
 
 	
@@ -306,11 +293,10 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Phần mềm OJS hỗ trợ hệ thống <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Nhiều bản sao giữ cho tài liệu được an toàn - Lots of Copies Keep Stuff Safe) nhằm đảm bảo lưu giữ an toàn và vĩnh viễn kho bài viết của tạp chí. LOCKSS là một phần mềm mã nguồn mở được phát triển ở Thư viện Đại học Stanford cho phép các thư viện bảo quản những tạp chí trên web chọn lọc bằng cách thu thập thường xuyên từ những website đăng ký nội dung mới xuất bản và lưu kho nội dung này. Mỗi kho sẽ liên tục được kiểm tra so với các nơi lưu trữ ngoài của thư viện, và nếu dữ liệu được tìm thấy bị hỏng hoặc mất, những nơi lưu giữ khác hoặc bản thân tạp chí này sẽ được dùng về phục hồi lại.
-<br /><br />
-Setting up LOCKSS support for Open Journal Systems does not need to take place until after publishing is fully underway, at which point follow these two steps:]]></message>
 	
 	<!-- Setup Step 3 -->
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Tạp chí sẽ sử dụng một hệ thống phân loại chủ đề có sẵn trên mạng.<br />
+Tên của hệ thống phân loại]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Để nội dung của tạp chí này được đưa vào chỉ mục trong một hệ thống các CSDL nghiên cứu rải rác trên toàn cầu, hãy <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">đăng ký</a> đường dẫn URL của tạp chí với <a href="http://pkp.sfu.ca/harvester/" target="_blank">công cụ gặt hái</a> siêu dữ liệu của dự án Public Knowledge Project. Công cụ này thu thập dữ liệu mô tả (siêu dữ liệu) từ mỗi một bài viết được lập chỉ mục trên tạp chí này, cho phép tìm kiếm chính xác và đồng loạt trên các website phục vụ nghiên cứu tuân theo <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Giao thức Open Archives Initiative về gặt hái siêu dữ liệu</a>.
 <br /><br />
 Lưu ý rằng nếu người quản trị website của quý vị đã đăng ký với Công cụ gặt hái dữ liệu PHKP, tạp chí của quý vị sẽ được lập chỉ mục tự động và quý vị không cần đăng ký cho tạp chí của mình.
@@ -371,10 +357,10 @@ Quý vị có thể cho người dùng biết lý do tại sao tài khoản củ
 	<!-- Navigation sidebar menu -->
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Tên có liên kết sẽ dẫn tới hồ sơ của người phản biện.<br/>
-Đánh giá có giá trị trong khoảng 5 (Xuất sắc).<br/>
-Số tuần chỉ khoảng thời gian hoàn thành phản biện.<br/>
-Mới nhất là ngày ngày bài phản biện gần nhất được chấp nhận.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Tên có liên kết sẽ dẫn tới hồ sơ của người phản biện.<br />
+Đánh giá có giá trị trong khoảng 5 (Xuất sắc).<br />
+Số tuần chỉ khoảng thời gian hoàn thành phản biện.<br />
+Mới nhất là ngày ngày bài phản biện gần nhất được chấp nhận.<br />
 Đang xử lý là số người phản biện đang được cân nhắc hoặc tiến hành.]]></message>
 
 
@@ -549,17 +535,12 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="submission.comments.saveAndEmailEditor">Ghi và gửi email cho BTV</message>
 	
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Quý vị chưa có bí danh? Xin vui lòng đăng ký</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Vì lý do an ninh, hệ thống sẽ gửi cho quý vị qua email một mật khẩu mới thay vì gửi lại mật khẩu hiện tại.<br /><br />Nhập địa chỉ email dưới đây để tạo mật khẩu mới. Địa chỉ này sẽ nhận được email khẳng định từ hệ thống.]]></message>
 	
 	<!-- Profile -->
 	
 	<!-- Registration -->
-	<message key="user.register.selectJournal">Chọn một tạp chí muốn đăng ký</message>
 	<message key="user.register.noJournals">Không có tạp chí nào quý vị có thể đăng ký trên web site này.</message>
 	<message key="user.register.privacyStatement">Tuyên bố về bí mật cá nhân</message>
-	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Nhấp chuột vào đây</a> nếu quý vị đã đăng ký với tạp chí này hoặc tạp chí khác trên web site này.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Nhấp chuột vào đây</a> nếu quý vị <strong>chưa</strong> đăng ký tạp chí này hoặc các tạp chí khác trên web site này.]]></message>
 	<message key="user.register.loginToRegister">Nhập bí danh và mật khẩu hiện dùng để đăng ký với tạp chí này.</message>
 	<message key="user.register.registrationDisabled">Tạp chí này hiện không nhận đăng ký người dùng.</message>
 	<message key="user.register.form.passwordLengthTooShort">Mật khẩu quý vị nhập chưa đủ dài.</message>
@@ -577,7 +558,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="search.allJournals">Tất cả các tạp chí</message>
 	<message key="search.authorIndex">Duyệt Chỉ mục Tác giả</message>
 	<message key="search.authorDetails">Chi tiết về Tác giả</message>
-	<message key="search.syntaxInstructions"><![CDATA[Mẹo tìm kiếm: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Mẹo tìm kiếm: </h4><ul>
 <li>Từ khóa tìm kiếm có phân biệt chữ thường/hoa</li>
 <li>Các từ thông dụng được bỏ qua</li>
 <li>Theo mặc định, hệ thống chỉ tìm những bài viết có <em>tất cả</em> các thuật ngữ trong thao tác tìm kiếm (có nghĩa là, toán tử <em>AND</em> được áp dụng)</li>
@@ -588,6 +569,13 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 <li>Dùng dấu <strong>*</strong> trong một thuật ngữ như là ký tự đại diện; thí dụ, <em>soci*</em> sẽ tìm các từ "sociological" hoặc "societal"</li>
 </ul>]]></message>
 
+	<!-- Interstitial page for PDFs -->
+	<message key="article.pdf.title">Định dạng file PDF (PDF)</message>
+	
+	<!-- Interstitial page for non-PDF non-HTML galleys -->
+	<message key="article.nonpdf.title">Tải bài viết</message>
+	<message key="article.nonpdf.note"><![CDATA[File quý vị đã chọn sẽ bắt đầu tự động tải xuống. Nếu không, nhấp chuột vào đường dẫn dưới đây. Lưu ý là file này có thể cần phải có một phần mềm xem đặc biệt.<br /><br />Nếu fil không tự động tải xuống, <a href="{$url}">nhấp chuột vào đây</a>.]]></message>
+	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Các tạp chí có trên Web site</message>
 	<message key="site.journalView">Xem tạp chí</message>
@@ -607,21 +595,14 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	
 	<!-- About The Journal -->
 	<message key="about.statistics">Thống kê</message>
-	<message key="about.journalContact">Liên hệ tạp chí</message>
-	<message key="about.aboutTheJournal">Giới thiệu tạp chí</message>
 	<message key="about.editorialTeam">Ban biên tập</message>
 	<message key="about.editorialTeam.biography">Tiểu sử</message>
 	<message key="about.editorialPolicies">Chính sách biên tập</message>
 	<message key="about.focusAndScope">Trọng tâm và phạm vi</message>
 	<message key="about.sectionPolicies">Chính sách về chuyên mục</message>
 	<message key="about.submissions">Gửi bài</message>
-	<message key="about.sponsors">Nhà tài trợ</message>
-	<message key="about.contributors">Nguồn hỗ trợ</message>
 	<message key="about.onlineSubmissions">Gửi bài trực tuyến</message>
-	<message key="about.onlineSubmissions.haveAccount">Đã có Bí danh/Mật khẩu dành cho {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Đến trang Đăng nhập</message>
-	<message key="about.onlineSubmissions.needAccount">Quý vị cần Bí danh/Mật khẩu?</message>
-	<message key="about.onlineSubmissions.registration">Chuyển đến trang Đăng ký</message>
 	<message key="about.onlineSubmissions.registrationRequired">Quý vị cần Đăng ký và Đăng nhập để gửi bài viết trực tuyến và kiểm tra trạng thái biên tập những bài viết mà quý vị đã gửi.</message>
 	<message key="about.authorGuidelines">Hướng dẫn dành cho Tác giả</message>
 	<message key="about.submissionPreparationChecklist">Danh mục chuẩn bị gửi bài</message>
@@ -639,7 +620,6 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="about.subscriptions">Đặt tạp chí</message>
 	<message key="about.subscriptionsContact">Liên hệ đặt tạp chí</message>
 	<message key="about.availableSubscriptionTypes">Hình thức đặt tạp chí</message>
-	<message key="about.journalSponsorship">Tài trợ tạp chí</message>
 	<message key="about.aboutThisPublishingSystem">Giới thiệu hệ thống phần mềm xuất bản tạp chí này</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Tạp chí này sử dụng phần mềm Open Journal Systems {$ojsVersion}, một phần mềm xuất bản và quản lý tạp chí mã nguồn mở do <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> phát triển, hỗ trợ và cung cấp miễn phí theo giấy phép GNU General Public License.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[Web site này sử dụng phần mềm Open Journal Systems {$ojsVersion}, một phần mềm xuất bản và quản lý tạp chí mã nguồn mở do <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> phát triển, hỗ trợ và cung cấp miễn phí theo giấy phép GNU General Public License.]]></message>
@@ -665,7 +645,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 
 <ul>
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x (gồm cả PHP 5.x)</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 hoặc <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 hoặc <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (gồm cả PostgreSQL 8.x)</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x hoặc Microsoft IIS 6</li>
 	<li>Hệ điều hành: Bất kỳ HĐH nào hỗ trợ các phần mềm trên đây, bao gồm <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
@@ -700,6 +680,9 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 <p>Cảm ơn đã tải về Phần mềm Tạp chí Mở<strong>Open Journal Systems</strong> của Dự án Tri thức Công cộng (Public Knowledge Project). Trước khi tiếp tục, vui lòng đọc các tài liệu <a href="{$baseUrl}/docs/README">Giới thiệu</a> và <a href="{$baseUrl}/docs/UPGRADE">Nâng cấp </a> đi kèm với phần mềm này. Để biết thêm thông tin về Dự án Tri thức Công cộng và các phần mềm của dự án, vui lòng ghé thăm <a href="http://pkp.sfu.ca/" target="_blank">Website của PKP</a>. Nếu quý vị phát hiện lỗi hoặc có yêu cầu hỗ trợ kỹ thuật, xem <a href="http://forum.pkp.sfu.ca">Diễn đàn hỗ trợ</a> hoặc mở <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">hệ thống báo lỗi trực tuyến</a> của PKP. Mặc dù tham khảo diễn đàn hỗ trợ là cách tốt nhất, quý vị vẫn có thể liên hệ với nhóm phát triển phần mềm này ở địa chỉ email: <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>Chúng tôi <strong>hết sức khuyến nghị</strong> rằng quý vị sao lưu CSDL, thư mục file và thư mục cài đặt OJS trước khi tiếp tục.</p>
 <p>Nếu máy chủ của quý vị chạy ở chế độ <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, vui lòng đảm bảo rằng chỉ thị max_execution_time trong file cấu hình php.ini được đặt ở giới hạn cao. Nếu chỉ số đạt tới giới hạn này hoặc bất kỳ giới hạn thời gian nào ( (v.d. chỉ thị "Timeout" Apache) và quá trình nâng cấp bị gián đoạn, quý vị sẽ cần phải can thiệp bằng tay.</p>]]></message>
+	<message key="installer.localeSettingsInstructions"><![CDATA[Để hỗ trợ toàn toàn đối với Unicode (UTF-8), lựa chọn UTF-8 cho tất cả các cài đặt bộ mã ký tự (character set). Lưu ý hỗ trợ này đòi hỏi phải có phiên bản phần mềm CSDL MySQL >= 4.1.1 hoặc PostgreSQL >= 7.1. Cũng xin lưu ý rằng hỗ trợ Unicode hoàn toàn cần có phiên bản PHP >= 4.3.0 được biên dịch với <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> library (được kích hoạt sẵn trong các bộ cài đặt PHP). Quý vị có thể gặp phải lỗi khi sử dụng các bộ mã ký tự nếu máy chủ của quý vị không đáp ứng những yêu cầu này.
+<br /><br />
+Máy chủ của quý vị hiện có hỗ trợ mbstring: <strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.localeInstructions">Ngôn ngữ chủ đạo dùng cho phần mềm này. Vui lòng tham khảo tài liệu hướng dẫn OJS nến quý vị quan tâm tới việc hỗ trợ các ngôn ngữ khác không liệt kê ở đây.</message>
 	<message key="installer.additionalLocalesInstructions">Lựa chọn bất kỳ ngôn ngữ nào khác sẽ hỗ trợ trong phần mềm này. Những ngôn ngữ được lựa chọn sẽ được dùng cho các tạp chí đặt trên website này. Các ngôn ngữ bổ sung có thể được cài đặt bất kỳ lúc nào trên giao diện quản trị website.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Nhập đường dẫn đầy đủ dẫn tới một thư mục đã có sẵn dùng để lưu giữ các file được tải lên. Thư mục này không nên là thư mục truy cập được trực tiếp từ web. <strong>Vui lòng đảm bảo rằng thư mục này có sẵn và ghi được trước khi cài đặt.</strong> Trong hệ điều hành Windows, đường dẫn cần sử dụng dấu "/", v.d. "C:/myjournal/files".]]></message>
@@ -754,7 +737,6 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="log.editor.archived">Bài nộp {$submissionId} đã được lưu kho.</message>
 	<message key="log.editor.restored">Bài nộp {$submissionId} đã được đưa lại danh sách đang xử lý.</message>
 	<message key="log.editor.editorAssigned">BTV {$editorName} đã được giao biên mục bài nộp {$submissionId}.</message>
-	<message key="log.editor.submissionExpedited">BTV {$editorName} làm tắt quá trình biên tập đối với bài nộp {$submissionId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} đã giao {$proofreaderName} soát lỗi bài nộp {$submissionId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} đã gửi bài nộp {$submissionId} đi xếp bài.</message>
@@ -782,8 +764,8 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[URLs của các website tìm kiếm có khả năng không còn hoạt động được hiển thị dưới đây.<br/>
-Quý vị nên tự kiểm tra các URL được đánh dấu là không hoạt động vì kiểm tra trên đây không hoàn toàn chính xác.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[URLs của các website tìm kiếm có khả năng không còn hoạt động được hiển thị dưới đây.<br />
+Quý vị nên tự kiểm tra các URL được đánh dấu là không hoạt động vì kiểm tra trên đây không hoàn toàn chính xác.<br />
 Việc xác thực có thể không thành công đối với các website tìm kiếm đòi phải dữ liệu phải được gửi đi ở dạng mẫu biểu (form).]]></message>
 	
 	<!-- RT Entities -->
@@ -821,9 +803,10 @@ Việc xác thực có thể không thành công đối với các website tìm 
 	 *
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Bài nộp chưa từng được xuất hoặc chưa từng được gửi cho tạp chí khác (hoặc được giải thích trong Lời bình gửi BTV).</message>
-	<message key="default.journalSettings.checklist.fileFormat">File bài nộp ở định dạng OpenOffice, Microsoft Word, or RTF.</message>
+	<message key="default.journalSettings.checklist.fileFormat">File bài nộp ở định dạng OpenOffice, Microsoft Word, RTF, or WordPerfect.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Tài liệu dùng khoảng cách dòng đơn; kích thước font 12 point; chữ in nghiêng thay cho gạch dưới (trừ trường hợp địa chỉ trên Internet); tất cả minh họa, biểu đồ và bảng được đặt ở các vị trí phù hợp trong bài thay vì đặt ở cuối bài viết.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Tài liệu đáp ứng các yêu cầu về phong cách và thư mục được nêu trong <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Hướng dẫn dành cho Tác giả</a>, ở phần Giới thiệu Tạp chí.]]></message>
+	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Nếu nộp bài cho một chuyên mục tạp chí có phản biện chuyên gia các hướng dẫn ở mục <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Đảm bảo phản biện khuyết danh</a>) đã được tuân thủ.]]></message>
 	<message key="default.journalSettings.privacyStatement">Tên và địa chỉ email được nhập vào các mẫu biểu trên tạp chí này chỉ được sử dụng vào các mục đích đã được tuyên bố rõ ràng và sẽ không được cung cấp cho bất kỳ bên thứ ba nào khác hay dùng vào bất kỳ mục đích nào khác.</message>
 	<message key="default.journalSettings.openAccessPolicy">Tạp chí này cho phép truy cập tự do ngay khi xuất bản đối với các nội dung của tạp chí với triết lý rằng việc cung cấp cho công chúng sử dụng tự do các kết quả nghiên cứu sẽ thúc đẩy trao đổi kiến thức trên toàn cầu ngày càng mạnh mẽ.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">Các tác giả được phép và được khuyến khích xuất bản các bài viết đã nộp cho tạp chí này trên các website cá nhân hoặc tổ chức, trước và sau khi xuất bản (với điều kiện cung cấp các chi tiết về thư mục của ấn phẩm đó).</message>
@@ -917,30 +900,6 @@ Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành
 	</ul>
 <p>Có thể tự tải các gói ngôn ngữ từ website của <a href="http://pkp.sfu.ca">PKP</a>.</p>]]></message>
 	<message key="plugins.categories.citationFormats.description">Phụ trợ định dạng Trích dẫn tài liệu tham khảo cung cấp cho người dùng các định dạng khác nhau khi trích dẫn một bài viết.</message>
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Thông báo về Bản quyền đề xuất theo Creative Commons</h3>
-<h4>1. Chính sách đề xuất dành cho Tạp chí cho Truy cập Tự do</h4>
-Tác giả xuất bản bài viết của mình trên tạp chí này đồng ý với những điều khoản sau:
-<ol type="a">
-	<li>Tác giả vẫn giữ bản quyền và trao cho tạp chí quyền xuất bản lần đầu tiên đồng thời phát hành tác phẩm theo giấy phép <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> cho phép những người khác chia sẻ tác phẩm đó với điều kiện nêu rõ tác giả và nơi xuất bản đầu tiên.</li>
-	<li>Tác giả có thể ký kết những thỏa thuận riêng rẻ khác mang tính hợp đồng đối với việc phát hành không độc quyền phiên bản của tác phẩm in trên tạp chí này (v.d., đưa vào một kho dữ liệu của một cơ quan hoặc đưa vào một cuốn sách), với điều kiện nêu rõ nơi xuất bản đầu tiên.</li>
-	<li>Tác giả được phép và được khuyến khích đưa bài viết của mình lên mạng (v.d., trong các kho dữ liệu cơ quan hoặc website của tác giả) trước và trong quá trình nộp bài viết vì nó có thể đưa lại những trao đổi hiệu quả cũng như giúp tác phẩm có nhiều địa chỉ trích dẫn hơn (Xem <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">Hiệu lực của Truy cập Tự do</a>).</li>
-</ol>
-
-<h4>1. Chính sách đề xuất dành cho Tạp chí cho Truy cập Tự do Trễ thời gian</h4>
-Tác giả xuất bản bài viết của mình trên tạp chí này đồng ý với những điều khoản sau:
-<ol type="a">
-	<li>Tác giả vẫn giữ bản quyền và trao cho tạp chí quyền xuất bản lần đầu tiên và sau [số tháng] phát hành tác phẩm theo giấy phép <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a>cho phép những người khác chia sẻ tác phẩm đó với điều kiện nêu rõ tác giả và nơi xuất bản đầu tiên.</li>
-	<li>Tác giả có thể ký kết những thỏa thuận riêng rẻ khác mang tính hợp đồng đối với việc phát hành không độc quyền phiên bản của tác phẩm in trên tạp chí này (v.d., đưa vào một kho dữ liệu của một cơ quan hoặc đưa vào một cuốn sách), với điều kiện nêu rõ nơi xuất bản đầu tiên.</li>
-	<li>Tác giả được phép và được khuyến khích đưa bài viết của mình lên mạng (v.d., trong các kho dữ liệu cơ quan hoặc website của tác giả) trước và trong quá trình nộp bài viết vì nó có thể đưa lại những trao đổi hiệu quả cũng như giúp tác phẩm có nhiều địa chỉ trích dẫn hơn (Xem <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">Hiệu lực của Truy cập Tự do</a>).</li>
-</ol>
-
-<h4>Proposed Policy for Journals That Offer Delayed Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
-</ol>]]></message>
 	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Nhằm giúp bạn đọc tìm các phiên bản trên mạng của tác phẩm được một tác giả trích dẫn, có các lựa chọn sau.</p>
 <ol>
 <li><strong>Thêm một Công cụ đọc</strong><p>Tổng biên tập có thể thêm "Tìm các bài trích dẫn" vào các Công cụ đọc đi kèm với bài viết được xuất bản, giúp cho bạn đọc dùng tiêu đề của một bài viết được trích dẫn để tìm bài viết đó trong các cơ sở dữ liệu đã được lựa chọn trước</p></li>
@@ -1077,7 +1036,4 @@ Các số ở Bảng 3 không thẳng hàng trong cột thứ ba.</pre>
 <br />
 <pre>4. ĐỊNH DẠNG
 Đoạn bắt đầu bằng "Chủ đề cuối cùng này..." chưa được lùi vào.</pre>]]></message>
-
-	<!-- Included here because it may be used in the navigation bar -->
-	<message key="editor.navigation.issues">Các số tạp chí</message>
 </locale>

@@ -4,14 +4,14 @@
 <!--
   * locale/zh_CN/default.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
   *
   -->
- 
+
 <locale name="zh_CN" full_name="简体中文">
 	<!-- Section default -->
 	<message key="section.default.title">论文</message>
@@ -24,7 +24,7 @@
 	 *
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">该投稿还未被发表过，也没有被其他杂志接受(或者在评论中有一个解释已经提供给编辑）.</message>
-	<message key="default.journalSettings.checklist.fileFormat">投稿文件的文件格式可以是OpenOffice, Microsoft Word, 或者RTF.</message>
+	<message key="default.journalSettings.checklist.fileFormat">投稿文件的文件格式可以是OpenOffice, Microsoft Word, RTF, 或者WordPerfect document.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">在有条件的情况下，提供参考文献的URL.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">该文本为单倍行距;字号大小为12点; 采用斜体, 而不是强调 (除非获得URL 地址); 和所有的插图, 图片,以及表格被放置在文本在适当的位置而不是在结束.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[该文本符合<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">作者指南</a>里文体和书目的要求,作者指南可以在关于期刊里找到.]]></message>
@@ -33,33 +33,33 @@
 	<message key="default.journalSettings.authorSelfArchivePolicy">在出版之前与之后，作者都被允许和鼓励将投稿到本期刊的文章项目发布到个人的或者所属单位的网站上（同时提供该出版品的图书细目）.</message>
 	<message key="default.journalSettings.copyeditInstructions"><![CDATA[
 		文字编辑的目的在于改进文章的流畅度、清晰度、文法、用字和格式。作者在这个阶段有最后的机会对文章内容去做出任何实质的修改，而下一阶段则被限制在排印与格式化的校正。
-		<br/>要校样的文件得是Word或者.rtf 的格式，因此是可以容易编辑的文字处理文件。这里所显示的一套指南，建立了两个校样的取向。一个取向是基于Microsoft Word的「追踪修订」功能，需要文字编辑、编辑和作者都能使用这个程序。第二种系统，无关乎软件，是经过许可、借用Harvard Educational Review。期刊编辑有权限可以修订这些指南，所以可以提供建议，促进这份期刊的编辑流程。
+		<br />要校样的文件得是Word或者.rtf 的格式，因此是可以容易编辑的文字处理文件。这里所显示的一套指南，建立了两个校样的取向。一个取向是基于Microsoft Word的「追踪修订」功能，需要文字编辑、编辑和作者都能使用这个程序。第二种系统，无关乎软件，是经过许可、借用Harvard Educational Review。期刊编辑有权限可以修订这些指南，所以可以提供建议，促进这份期刊的编辑流程。
 		<h4>文字编辑系统</h4>
 		<h5>1. Microsoft Word的追踪修订</h5>
 		在选单工具列的「工具」中，「追踪修订」的功能让文字编辑可以插入（以有颜色的字型）和删除文字（文字外观以有色的删除线标记）。文字编辑可以在检阅方框中插入问题，询问作者（作者问题）和编者（编者问题）两人。接着上传校模板本，并通知编辑。编辑随后审稿文字内容，并通知作者。
-		<br/>编辑和作者应该满足这些变更处。如果需要进一步的修订，编辑和作者可以接受初始的插入和删除项目，同时在文章的其他地方进行插入和删除的动作。作者和编辑应该以置放在检阅方框中的内容回应每个对他们提出的问题。
+		<br />编辑和作者应该满足这些变更处。如果需要进一步的修订，编辑和作者可以接受初始的插入和删除项目，同时在文章的其他地方进行插入和删除的动作。作者和编辑应该以置放在检阅方框中的内容回应每个对他们提出的问题。
 		在文章内容经过编辑和作者的审稿过后，文字编辑会做出一个最终的版本，接受所有的内容修以转被接受版面和排版样式的阶段。
 		<h5>2. Harvard Educational Review </h5>
-		<strong>电子修订本转换打字稿指南</strong><br/>
+		<strong>电子修订本转换打字稿指南</strong><br />
 		请依循下列的协定将电子修订本转换成您的打字稿。
-		<strong>回应建议的修订</strong><br/>
+		<strong>回应建议的修订</strong><br />
 		<ul>
 		<li>&nbsp; 针对每个您接受的修订处，取消文字的粗体格式。</li>
 		<li>&nbsp; 针对您不接受的每个修订处，重新输入原文并且<strong>改成粗体字</strong>。</li>
 		</ul>
-		<strong>增添与删除内容</strong><br/>
+		<strong>增添与删除内容</strong><br />
 		<ul>
 		<li>&nbsp; 以<strong>粗体字</strong>标明新的文字内容</li>
 		<li>&nbsp; 以<strong>[被删除的文字]</strong>替换删除的栏目</li>
 		<li>&nbsp; 如果您删除了一个句子或更多地方，请以一个注解加以指明，例如：<strong>[删除了 2 个句子]</strong></li>
 		</ul>
-		<strong>回应给作者的问题(QAs)</strong><br/>
+		<strong>回应给作者的问题(QAs)</strong><br />
 		<ul>
 		<li>&nbsp; 保持所有的OAs原封不动，并将文字改成粗体字。不要删除掉它们。</li>
 		<li>&nbsp; 要回应一个QA，请在其后新增一个评论。评论应该要使用中括号画界：<strong>[评论：</strong>]</li>
 		<li>&nbsp;例如，<strong>[评语：补充讨论您所建议的方法论。]</strong></li>
 		</ul>
-		<strong>做评论</strong><br/>
+		<strong>做评论</strong><br />
 		&nbsp; 使用评论以说明组织上的变更或者主要修订处。
 		&nbsp; 例如：<strong>[评语：将上一段从第五页移至第七页]</strong>
 		&nbsp; 注意，当涉及页数时，请使用寄给您之打字稿的印刷页数。这很重要，因为一份文件在经过电子修订之后页数可能会改变。
@@ -85,29 +85,6 @@
 		&bull; 附加语句以回应QA。粗体字表示新增的文字内容。
 		&bull; [被删除的文字]表示「全部」删掉。
 		&bull; 评语包含一份对于编者QA的回复。]]></message>
-
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[
-		<h4>添加参考文献链接到页面的步骤</h4>
-		<p>当转换一篇稿件到HTML或者PDF的时候，需要确认所有超级链接是否可以存取。</p>
-		<h4>A. 当作者提供的是参考文献的链接的时候</h4>
-		<ol>
-		<li>While the submission is still in its word processing format (e.g., Word), add the phrase VIEW ITEM to the end of the reference that has a URL.</li>
-		<li>Turn that phrase into a hyperlink by highlighting it, and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
-		</ol>
-		<h4>B. 激活Google学术搜索</h4>
-		<ol>
-		<li>While the submission is still in its word processing format (e.g., Word), copy the title of the work referenced in the References list (if it appears to be too common a title – e.g., "Peace" – then copy author and title).</li>
-		<li>Paste the reference's title between the %22's, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search</li>
-		<li>Add the phrase GS SEARCH to the end of each citation in the submission's References list.</li>
-		<li>Turn that phrase into a hyperlink by highlighting it, and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
-		</ol>
-		<h4>C. 激活DOI检索功能</h4>
-		<ol>
-		<li>While the submission is still in Word, copy a batch of references into CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
-		<li>Paste each DOI that the Query provides in the following URL (between = and &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI</li>
-		<li>Add the phrase CrossRef to the end of each citation in the submission's References list.</li>
-		<li>Turn that phrase into a hyperlink by highlighting the phrase and using Word's Insert Hyperlink tool and the appropriate URL prepared in #2.</li>
-		</ol>]]></message>
 
 	<message key="default.journalSettings.proofingInstructions"><![CDATA[
 		校对阶段的目的在于，找出校模板的拼字、文法和格式上的错误。这个阶段不能再做出比较根本性的修订，除非与栏目编辑讨论过。在「版面」页面，点击「查看校对」以浏览用来出版这个项目的HTML、PDF和其他可用之文件格式。
@@ -135,12 +112,12 @@
 		表格3的数字在第三列没有对齐。
 
 		4. 格式化
-		以「这个最新主题...」开头的段落没有缩排]]></message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
-</message>
-	<message key="default.journalSettings.forReaders"><![CDATA[我们鼓励读者注册该期刊的出版通知服务。使用在期刊首页顶端的<a href="{$indexUrl}/{$journalPath}/user/register">Register</a>链接。注册后可以使读者通过电子邮件收到该期刊每期的出版内容。该列表也可以允许期刊获取一定程度的支持和读者群。参阅期刊的<a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Privacy Statement</a>,其将确保读者的名称和邮件地址不会用于其它目的。]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[ 
+		以「这个最新主题...」开头的段落没有缩排]]</message>
+	<message key="default.journalSettings.emailSignature">________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}</message>
+	<message key="default.journalSettings.forReaders"><![CDATA[我们鼓励读者订阅期刊出版通知服务。 在期刊主页的顶部使用<a href="{$index Url}/{$journal Path}/user/register">注册</a>链接。完成注册后，读者可以接收到期刊每一期内容的目录表的电子邮件。这样期刊可以获得一定水平度额支持和读者群。期刊上的<a href="{$index Url}/{$journal Path}/about/submissions#privacyStatement">隐私声明</A>保证读者的姓名和电子邮件地址不会被用于其他用途。]]></message>
+	<message key="default.journalSettings.forAuthors"><![CDATA[
 		对这份期刊感兴趣吗？我们建议您看一下<a href="{$indexUrl}/{$journalPath}/about">期刊介绍</a>页面，以了解期刊的栏目方针；也请同时看一下 <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">作者指引</a>。作者在进行投稿之前必须在本期刊<a href="{$indexUrl}/{$journalPath}/user/register">注册</a>，而如果已经注册的话，可以简单地<a href="{$indexUrl}/index/login">登入</a>并且开始五个步骤的投稿流程。]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[
 		我们鼓励图书馆员将这份期刊加入其图书馆的电子期刊数据库之中。同时，这份期刊的开源码出版系统或许会适合图书馆放置他们的职员正在编辑的期刊。(请见<a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
@@ -165,4 +142,6 @@
 	<message key="default.journalSettings.donationFeeDescription">对本期刊任何数额的捐赠将感激地接受，您将为编辑提供一个继续提供高质量的杂志给读者的机会.</message>
 	<message key="default.journalSettings.purchaseIssueFee">购买期次</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">支付该项费用后您可以查看、下载和打印该期文章。</message>
+	<message key="default.journalSettings.emailHeader">下面的信息以期刊{$journalName}的名义发出。
+________________________________________________________________________</message>
 </locale>

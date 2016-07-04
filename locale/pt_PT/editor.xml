@@ -4,7 +4,7 @@
 <!--
   * locale/pt_PT/editor.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,10 +12,7 @@
   *
   -->
 
-<locale name="pt_PT" full_name = "Português">
-	<message key="editor.article.reviewForms">Formulários de revisão</message>
-	<message key="editor.article.selectReviewForm">Escolher formulário de revisão</message>
-	<message key="editor.article.clearReviewForm">Limpar formulário de revisão</message>
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="editor.home">Página Inicial do Editor</message>
 	<message key="editor.submissionsAndPublishing">Submissões e Publicações</message>
 	<message key="editor.submissionQueue">Fila de Submissão</message>
@@ -57,7 +54,6 @@
 	<message key="editor.issues.accessStatus">Tipo de Acesso</message>
 	<message key="editor.issues.accessDate">Data para Acesso Livre</message>
 	<message key="editor.issues.invalidAccessDate">A data para acesso é inválida.</message>
-	<message key="editor.issues.issuePublicIdentificationExists">O Identificador Público de edição já existe.</message>
 	<message key="editor.issues.coverPage">Capa</message>
 	<message key="editor.issues.coverPageInstructions">(Formatos aceitáveis: .gif, .jpg ou .png )</message>
 	<message key="editor.issues.uploaded">Enviado</message>
@@ -95,7 +91,6 @@
 	<message key="editor.issues.open">Aberto</message>
 	<message key="editor.issues.pages">Páginas</message>
 	<message key="editor.navigation.futureIssues">Edições Futuras</message>
-	<message key="grid.action.addIssue">Criar Edição</message>
 	<message key="editor.navigation.issueArchive">Edições Anteriores</message>
 	<message key="editor.article.designateReviewVersion">Designar documento original como Versão para Revisão</message>
 	<message key="editor.article.uploadReviewVersion">Enviar Versão para Revisão actualizada</message>
@@ -196,7 +191,6 @@
 	<message key="editor.article.uploaded">Enviado</message>
 	<message key="editor.article.removeCoverPage">Eliminar imagem de capa?</message>
 	<message key="editor.article.remove">Eliminar</message>
-	<message key="editor.article.confirmChangeReviewForm">Aviso: Alterações no formulário de revisão removerá todas as respostas dos revisores que usaram o mesmo. Deseja realmente continuar?</message>
 	<message key="editor.issues.enableOpenAccessDate">Activar acesso livre adiado</message>
 	<message key="editor.issues.unpublishIssue">Despublicar edição</message>
 	<message key="editor.issues.confirmUnpublish">Deseja realmente despublicar esta edição?</message>
@@ -207,4 +201,16 @@
 	<message key="editor.notifyUsers.allAuthors">Todos os autores publicados ({$count} utilizadores)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Todos os assinantes individuais ({$count} utilizadores)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Todos os assinantes institucionais ({$count} utilizadores)</message>
+	<message key="editor.reassign">Re-atribuir</message>
+	<message key="editor.publicIdentificationExists">O identificador público '{$ publicIdentifier}' já existe para outro objecto (número, artigo, galleys do número ou ficheiro suplementar). Por favor, escolha identificadores únicos que pertençam à sua revista.</message>
+	<message key="editor.issues.galleys">Galleys Número</message>
+	<message key="editor.issues.galley">Galley Número</message>
+	<message key="editor.issues.viewingGalley">Visualizando Galley do Número</message>
+	<message key="editor.issues.issueGalleysDescription">Publicar galleys com todos os conteúdos do número.</message>
+	<message key="editor.issues.noneIssueGalleys">Nenhum galley do número publicado.</message>
+	<message key="editor.issues.galleyLabelRequired">É obrigatório indicar uma categoria para o galley do número</message>
+	<message key="editor.issues.galleyLocaleRequired">É obrigatório indicar um galley local do número.</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">A identificação pública do galley já existe.</message>
+	<message key="editor.issues.backToIssueGalleys">Voltar ao galley dos números</message>
+	<message key="editor.issues.confirmDeleteGalley">Tem a certeza que pretende eliminar este galley do número?</message>
 </locale>
