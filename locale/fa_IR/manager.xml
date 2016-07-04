@@ -4,7 +4,7 @@
 <!--
   * locale/fa_IR/manager.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="fa_IR" full_name = "Persian">
+<locale name="fa_IR" full_name="فارسی">
 	<message key="manager.emails.confirmResetAll">آیا میخواهید تمام قالبها را به حالت نخست برگردانید؟ تغییرات ایجاد شده در قالب های ایمیل ها از بین خواهد رفت</message>
 	<message key="manager.files.note">توجه: با مرور گر فایل میتوانید به فایلها یا پوشه های یک مجله  مستقیما دسترسی داشته باشید</message>
 	<message key="manager.groups">تیم ادیتوریال</message>
@@ -27,7 +27,7 @@
 	<message key="manager.journalManagement">مدیریت ژورنال</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">این عمل تنظیمات وابسته به زبان را جایگزین میکند</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">بارکردن مجدد تنظیمات پیش فرض وابسته به زبان</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS میتواند در دسترس کاربران زبانهائی که توسط سیستم حمایت میشود قرار گیرد. همچنین OJS میتواند به عنوان یک سیستم نسبتا چند زبانی عمل کند و امکان تغییر زبان توسط کاربران در هر صفحه را فراهم کند. همچنین داده های خاصی را ممکن است بتوان حداکثر به دو زبان وارد کرد.<br /><br/>چنانچه یک زبان مود حمایت OJS در لیست زیر موجود نباشد از مدیر سایت بخواهید تا آن زبان را نصب کند. برای اطلاع از نحوه افزودن حمایت برای یک زبان جدید به مستندات OJS مراجعه کنید.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS میتواند در دسترس کاربران زبانهائی که توسط سیستم حمایت میشود قرار گیرد. همچنین OJS میتواند به عنوان یک سیستم نسبتا چند زبانی عمل کند و امکان تغییر زبان توسط کاربران در هر صفحه را فراهم کند. همچنین داده های خاصی را ممکن است بتوان حداکثر به دو زبان وارد کرد.<br /><br />چنانچه یک زبان مود حمایت OJS در لیست زیر موجود نباشد از مدیر سایت بخواهید تا آن زبان را نصب کند. برای اطلاع از نحوه افزودن حمایت برای یک زبان جدید به مستندات OJS مراجعه کنید.]]></message>
 	<message key="manager.languages.noneAvailable">متاسفانه زبان دیگری موجود نیست. در صورت تمایل از مدیر سایت بخواهید تا نسبت به نصب آنها اقدام کند.</message>
 	<message key="manager.languages.primaryLocaleInstructions">این زبان پیش فرض سایت مجله خواهد بود.</message>
 	<message key="manager.managementPages">صفحات مدیریتی</message>
@@ -90,9 +90,41 @@
 	<message key="manager.people.roleEnrollment">اعطای نقش {$role}</message>
 	<message key="manager.people.syncUserDescription">هماهنگی اعطای نقش موجب میشود تا تمام کاربران در یک نقش خاص در یک مجله خاص با همان نقشها وارد این مجله شوند. این اقدام موجب پیدایش مجموعه مشترکی از کاربران خواهد شد.</message>
 	<message key="manager.plugins.description">این صفحه به مدیر ژورنال این امکان را می دهد که پلاگین های نصب شده فعلی را مشاهده کرده و یا آنها را پیکره بندی کند . پلاگین ها با توجه به کاربردشان به دسته های مختلف تقسیم می شوند . دسته ها در زیر لیست شده اند و در هر دسته مجموعه پلاگین های آن دسته</message>
+	<message key="manager.reviewFormElements">آیتم های فرم</message>
+	<message key="manager.reviewFormElements.addResponseItem">افزودن گزینه</message>
+	<message key="manager.reviewFormElements.checkboxes">جعبه چک مارک: یک یا چند گزینه قابل انتخاب است</message>
+	<message key="manager.reviewFormElements.chooseType">انتخاب نوع آیتم</message>
+	<message key="manager.reviewFormElements.copyTo">کپی به:</message>
+	<message key="manager.reviewFormElements.create">ایجاد آیتم جدید</message>
+	<message key="manager.reviewFormElements.dropdownbox">جعبه منوی کرکره ای</message>
+	<message key="manager.reviewFormElements.edit">ویرایش آیتم فرم</message>
+	<message key="manager.reviewFormElements.elementType">نوع آیتم</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">تعیین نوع آیتم برای آیتم فرم اجباری است</message>
+	<message key="manager.reviewFormElements.form.questionRequired">این آیتم یک پرسش لازم دارد</message>
+	<message key="manager.reviewFormElements.noneCreated">هنوز آیتمی برای این فرم ایجاد نشده است</message>
+	<message key="manager.reviewFormElements.possibleResponse">گزینه</message>
+	<message key="manager.reviewFormElements.question">آیتم</message>
+	<message key="manager.reviewFormElements.radiobuttons">دکمه رادیوئی: فقط یک گزینه قابل انتخاب است</message>
+	<message key="manager.reviewFormElements.required">پاسخ به این آیتم توسط کارشناسان الزامی است</message>
+	<message key="manager.reviewFormElements.smalltextfield">جعبه متن یک کلمه ای</message>
+	<message key="manager.reviewFormElements.textarea">جعبه متن طویل</message>
+	<message key="manager.reviewFormElements.textfield">جعبه متن یک سطری</message>
+	<message key="manager.reviewForms">فرم های کارشناسی</message>
+	<message key="manager.reviewForms.completed">موارد تکمیل شده</message>
+	<message key="manager.reviewForms.create">ایجاد فرم کارشناسی</message>
+	<message key="manager.reviewForms.description">تعاریف و دستورالعمل ها</message>
+	<message key="manager.reviewForms.edit">فرم کارشناسی</message>
+	<message key="manager.reviewForms.form.titleRequired">عنوان فرم کارشناسی الزامی است</message>
+	<message key="manager.reviewForms.inReview">در حال کارشناسی</message>
+	<message key="manager.reviewForms.list.description">این فرم های کارشناسی به جای فرم پیش فرض در اختیار کارشناسان قرار میگیرند. فزم پیش فرض فقط دارای دو جعبه متن یکی برای وارد کردن نظراتی که فقط دبیر مقاله باید ببیند و دیگری برای دبیر مقاله و نویسنده مقاله. فرمهای کارشناسی را میتوان برای نوع خاصی از مقالات در نظر گرفت - به علاوه دبیر مقاله این اختیار را دارد که کدام فرم یا فرمهای کارشناسی برای کدام کارشناس برود. در تمامی این حالات دبیر مقاله مختار است که ماحصل این فرم های کارشناسی را در اختیار نویسنده مقاله قرار بدهد یا خیر.</message>
+	<message key="manager.reviewForms.noneChosen">هیچکدام / فرم کارشناسی آزاد</message>
+	<message key="manager.reviewForms.noneCreated">هیچ فرم کارشناسی تولید نشده است</message>
+	<message key="manager.reviewForms.preview">فرم کارشناسی</message>
+	<message key="manager.reviewForms.title">عنوان</message>
 	<message key="manager.sections.abstractsNotRequired">نیاز به چکیده ندارد</message>
 	<message key="manager.sections.assigned">دبیر این نوع مقاله</message>
 	<message key="manager.sections.create">ایجاد نوع مقاله</message>
+	<message key="manager.sections.disableComments">غیر فعال کردن ارائه نظر توسط خوانندگان برای این نوع مقاله</message>
 	<message key="manager.section.sectionEditorInstructions">از بین دبیران یک نفر را انتخاب و به عنوان دبیر این نوع مقاله انتخاب کنید.</message>
 	<message key="manager.sections.editorRestriction">این نوع مقاله فقط توسط دبیران قابل ارسال است.</message>
 	<message key="manager.sections.editors">دبیران نوع مقاله</message>
@@ -151,7 +183,13 @@
 	<message key="manager.setup.copyeditInstructionsDescription">دستورالعمل ویراستاری در معرض دید ویراستاران ، نویسندگان ، و دبیران در هنگام ویرایش ساب میشن قرار میگیرد . متن زیر یک دستورالعمل ویراستاری پیشنهادی بصورت  HTML است. میتوانید هم اکنون و یا بعدا آنرا به دلخواه تغییر دهید.</message>
 	<message key="manager.setup.copyrightNotice">متن کپی رایت</message>
 	<message key="manager.setup.coverage">پوشش</message>
+	<message key="manager.setup.coverageChronExamples">مانند: رنسانس; دوره ژوراسیک; تریمستر سوم</message>
+	<message key="manager.setup.coverageChronProvideExamples">مثالهای بارزی برای پوشش زمانی یا تاریخی</message>
 	<message key="manager.setup.coverageDescription">پوشش جعرافیائی ، زمانی یا تاریخی و یا ویژگی های نمونه مورد پژوهش</message>
+	<message key="manager.setup.coverageGeoExamples">مانند: خلیج فارس; استراتوسفر; کویر لوت</message>
+	<message key="manager.setup.coverageGeoProvideExamples">مثالهای بارزی برای پوشش جعرافیائ</message>
+	<message key="manager.setup.coverageResearchSampleExamples">مانند: سن; جنس; نژاد; قومیت</message>
+	<message key="manager.setup.coverageResearchSampleProvideExamples">مثالهای بارزی برای ویژگیهای نمونه پژوهش</message>
 	<message key="manager.setup.currentIssue">شماره جاری</message>
 	<message key="manager.setup.customizingTheLook">مرحله 5: تغییر دلخواه نمای ظاهری</message>
 	<message key="manager.setup.customTags">تگ های سفارشی</message>
@@ -166,6 +204,12 @@
 	<message key="manager.setup.displayCurrentIssue">افزودن فهرست مطالب شماره جاری در صورت موجود بودن.</message>
 	<message key="manager.setup.doiPrefix">DOI پیشوند</message>
 	<message key="manager.setup.editorDecision">تصمیم دبیر</message>
+	<message key="manager.setup.editorialMembers">به قسمت اعضای شورا رفته و اعضای شورای نویسندگان یا کارشناسان را کم یا زیاد کنید. این کار را در هر زمانی در طول حیات آن لاین مجله میتوان انجام داد.</message>
+	<message key="manager.setup.editorialProcess1">یک یا چند دبیر مراحل پایه ای را بدون انتصاب رل انجام میدهند.</message>
+	<message key="manager.setup.editorialProcess2">دبیر ااداره کننده به نوبت ساب میشن و فهرست مطالب رسیدگی میکند و کارشناسی ساب میشن و ویرایش آن ها به عهده دبیران دیگر خواهد بود.</message>
+	<message key="manager.setup.editorialProcess3">دبیر ااداره کننده به نوبت ساب میشن ، ویرایش آنها و فهرست مطالب رسیدگی میکند و کارشناسی ساب میشن به عهده دبیران دیگر خواهد بود.</message>
+	<message key="manager.setup.editorialReviewBoard">شورای نویسندگان و کارشناسان</message>
+	<message key="manager.setup.editorialReviewBoardDescription">شورای نویسندگان امور دبیری را سرپرستی میکند ، دبیر هر مقاله را تعیین می کند ، و با کمک شهرت دبیران موجب شهرت مجله میشود. شورای کارشناسی نقش مشابهی دارد ، به علاوه کارشناسی را نیز به عهده دارند. اعضای شورای کارشناسا ن به قسمت های مدیریتی سیستم دسترسی ندارند بلکه توسط دبیران برای انجام کارشناسی منصوب می شوند.</message>
 	<message key="manager.setup.emailBounceAddress">آدرس برگشت</message>
 	<message key="manager.setup.emailBounceAddressDescription">اگر ایمیلی برگشت بخورد پیغامی به این ادرس ارسال می شود</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>توجه:</strong> برای فعال ساختن این گزینه مدیر سایت میبایست گزینه <tt>allow_envelope_sender</tt> در فایل تنظیمات OJS فعال سازد. همچنین ممکن است ویژگی خاص سرور نیز لازم باشد که ممکن است همه سرور ها آن را نداشته باشند. برای اطلاعات بیشتر به مستندات OJS مراجعه کنید.]]></message>
@@ -175,6 +219,11 @@
 	<message key="manager.setup.enableAnnouncements">مدیر مجله بتواند اطلاعیه صادر کند.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">نمایش</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">جدیدترین اطلاعیه ها در صفحه خانگی مجله.</message>
+	<message key="manager.setup.enablePageNumber">شماره صفحات سصورت دستی  برای هر مقاله محاسبه و در فهرست مطالب وارد میشود.</message>
+	<message key="manager.setup.enablePublicArticleId">شناسه های دلخواه برای ناسائی مقالات چاپ شده بکار خواهد رفت.</message>
+	<message key="manager.setup.enablePublicGalleyId">کد های شناسائی ویژه برای شناسائی هر نوع گالی بکار میرود</message>
+	<message key="manager.setup.enablePublicIssueId">شناسه های دلخواه برای ناسائی شماره های مجله بکار خواهد رفت.</message>
+	<message key="manager.setup.enablePublicSuppFileId">شناسه های دلخواه برای ناسائی فایلهای الحاقی مقاله بکار خواهد رفت.</message>
 	<message key="manager.setup.enableUserRegistration">کاربران بتوانند با عناوین زیر ثبت نام کنند::</message>
 	<message key="manager.setup.enableUserRegistration.author">نویسنده (میتواند مقاله ساب میت کند)</message>
 	<message key="manager.setup.enableUserRegistration.reader">خواننده (ایمیل خبری در ارتفاط با انتشار شماره جدید دریافت کند)</message>
@@ -202,7 +251,6 @@
 	<message key="manager.setup.guidingSubmissions">مرجله 3: ساب میشن ها</message>
 	<message key="manager.setup.homepageImage">تصویر صفحه خانگی</message>
 	<message key="manager.setup.homepageImageDescription">افزودن یک تصویر در وسط صفحه</message>
-	<message key="manager.setup.includeCreativeCommons">برای مجلاتی که دسترسی آزاد فوری یا تاخیری دارند, لیسانس Creative Commons license جهت مقالات چاپ شده آنها نشان بده</message>
 	<message key="manager.setup.information">اطلاعات</message>
 	<message key="manager.setup.information.description"> توصیف مختصر مجله برای کتابداران ، نویسندگان ، و خوانندگان که تحت قسمت اطلاعات حاشیه کنار صفحات ظاهر میشود.</message>
 	<message key="manager.setup.information.forAuthors">برای نویسندگان</message>
@@ -230,6 +278,8 @@
 	<message key="manager.setup.journalLogo.altText">لوگوی مجله</message>
 	<message key="manager.setup.journalPageFooter">پاورقی صفحات مجله</message>
 	<message key="manager.setup.journalPageFooterDescription">این قسمت پاورقی صفحات مجله را نشان میدهد. برای تغییر یا بروزرسانی آن ، متن HTML دلخواه خود را در جعبه متن زیر وارد کنید. به عنوان مثال میتوانید یک منوی گشت و گذار دیر ، یک شمارشگر بازدید کننده ها و غیره میتواند باشد. این پاورقی در تمام صفحات ظاهر میشود.</message>
+	<message key="manager.setup.journalPageHeader">هدر صفحات مجله</message>
+	<message key="manager.setup.journalPageHeaderDescription">یک نسخه گرافیک عنوان و لوگوی مجله بصورت فایل .gif, .jpg, یا .png که بهتر است نسخه ای کوچک ت از نسخه بکاررفته در صفحه خانگی باشد را میتوان آپلود کرد تا به عنوان هدر در تمام صفحات مجله ظاهر شود. در غیر این صورت نسخه متنی بکار خواهد رفت.</message>
 	<message key="manager.setup.journalPolicies">مرحله 2: سیاست گذاری</message>
 	<message key="manager.setup.journalSetup">نصب مجله</message>
 	<message key="manager.setup.journalSetupUpdated">نصب مجله بروزرسانی شد</message>
@@ -355,6 +405,8 @@
 	<message key="manager.setup.sponsors">سازمانهای حمایت کننده</message>
 	<message key="manager.setup.sponsorsDescription">نام این سازمانها مانند انجمنهای علمی ، گروههای آموزشی و غیره در صفحه در باره مجله خواهد آمد</message>
 	<message key="manager.setup.stepsToJournalSite">مراحل پنج گانه نصب مجله</message>
+	<message key="manager.setup.subjectClassification">طبقه بندی موضوعی</message>
+	<message key="manager.setup.subjectClassificationExamples">مانند طبقه بندی موضوعی ریاضیات; طبقه بندی کتابخانه کنگره</message>
 	<message key="manager.setup.subjectExamples">مانند: فتوسنتز; سیاه چاله; مسئله نقشه چهاررنگ; تئوری بایز</message>
 	<message key="manager.setup.subjectKeywordTopic">کلید واژه ها</message>
 	<message key="manager.setup.subjectProvideExamples">مثالهای برای کلیدواژه به عنوان راهنمائی برای نویسنگان</message>
@@ -417,19 +469,14 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">ماه بعد از انتشار یک شماره مجله</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">لطفا مدت زمان صحیحی را انتخاب کنید.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">متن زیر در قسمت درباره مجله تحت عنوان دسترسی آزاد تاخیری نمایش داده خواهد شد.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">لطفا چک بزنید</message>
 	<message key="manager.subscriptionPolicies.expiry">انقضای اشتراک</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">در صورت انقضای اشتراک دسترسی خوانندگان به تمام مقالات ویا به مقالاتی که بعد از انقضا منتشر شده است بسته میشود</message>
 	<message key="manager.subscriptionPolicies.expiryFull">انقضای کامل</message>
 	<message key="manager.subscriptionPolicies.expiryFullDescription">دسترسی خوانندگان به تمامی مقالات غیر آزاد بسته است</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">انقضای نسبی</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">دسترسی به مقالات مربوط به بعد از تاریخ انقضا بسته است</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">اطلاع به مشترکین با ایمیل</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">ماه بعد از انقضای اشتراک</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">اطلاع به مشترکین با ایمیل</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">هفته بعد از انقضای اشتراک</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">اطلاع به مشترک با ایمیل</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">ماه قبل از انقضای اشتراک</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">اطلاع به مشترکین با ایمیل</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">هفته قبل از انقضای اشتراک</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">یادآور انقضای اشتراک</message>
@@ -539,6 +586,8 @@
 	<message key="manager.language.ui">UI</message>
 	<message key="manager.language.forms">فرم ها</message>
 	<message key="manager.people.showNoRole">کاربران فاقد رل را نشان بده</message>
+	<message key="manager.plugins.install">نصب یک پلاگین جدید</message>
+	<message key="manager.plugins.installDescription">با این فرم میتوانید یک پلاگین جدید را آپلود و نصب کنید. ابتدا مطمئن شوید که نوع فشرده سازی آن بصورت فایل .tar.gz میباشد.</message>
 	<message key="manager.plugins.upgrade">بروز رسانی پلاگین</message>
 	<message key="manager.plugins.upgradeDescription">با این فرم میتوانید یک پلاگین را بروزرسانی کنید.  ابتدا مطمئن شوید که نوع فشرده سازی آن بصورت فایل .tar.gz میباشد.</message>
 	<message key="manager.plugins.delete">حذف پلاگین</message>
@@ -582,9 +631,9 @@
 	<message key="manager.setup.issnDescription"><![CDATA[شابن یا شماره استاندارد بین المللی نشریه یه عدد هشت رقمی است که مشخصه انتشارات ادواری میباشد . شامل ادواری های الکترونیکی نیز میشود. اداره آن توسط شبکه کسترده ای از مراکز ملی است که توسط یک مرکز بین المللی در پاریس هماهنگ میگردند. پشتیبان آن یونسکو و دولت فرانسه است. شابن را میتوان از 
 <a href="http://www.issn.org" target="_new">وب سایت شابن</a>
 بدست آورد.]]></message>
-	<message key="manager.setup.favicon">فاویکون مجله</message>
-	<message key="manager.setup.faviconDescription">افزودن فاویکون برای این مجله تا در خط آدرس مرورگر هنگام بازدید از سایت ظاهر شود.</message>
-	<message key="manager.setup.faviconInvalid">فرمات فاویکون بکار رفته نا معتبر است. فرماتهای مورد قبول عبارتند از .ico, .png, and .gif.</message>
+	<message key="manager.setup.journalFavicon">فاویکون مجله</message>
+	<message key="manager.setup.journalFaviconDescription">افزودن فاویکون برای این مجله تا در خط آدرس مرورگر هنگام بازدید از سایت ظاهر شود.</message>
+	<message key="manager.setup.journalFaviconInvalid">فرمات فاویکون بکار رفته نا معتبر است. فرماتهای مورد قبول عبارتند از .ico, .png, and .gif.</message>
 	<message key="manager.setup.publisherNoteDescription">این متن در پائین قسمت عنوان ناشر و بالاتر از نام و آدرس ناشر تحت عنوان اسپانسر مجله ظاهر میشود.</message>
 	<message key="manager.setup.sponsorNoteDescription">این متن پائین تر از عنوان اسپانسرها و بالاتر از نام و آدرسهای اسپانسر ها تحت عنوان اسپانسر مجله ظاهر میشود.</message>
 	<message key="manager.setup.noPublishing">از او ج اس برای انتشار آن لاین محتوای مجله استفاده نخواهد شد.</message>

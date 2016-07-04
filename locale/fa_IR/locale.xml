@@ -4,7 +4,7 @@
 <!--
   * locale/fa_IR/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * تحت مجوزGNU GPL v2 منتشرشد. برای دیدن متن کامل فایل docs/COPYING را ببینید.
   *
@@ -74,8 +74,12 @@
 	<message key="article.suppFiles">فایلهای مکمل</message>
 	<message key="article.suppFilesAbbrev">فایلهای مکمل</message>
 	<message key="article.discipline">رشته علمی</message>
+	<message key="article.subjectClassification">طبقه بندی موضوعی</message>
 	<message key="article.subject">موضوع</message>
 	<message key="article.coverage">پوشش</message>
+	<message key="article.coverageGeo">پوشش جغرافیایی</message>
+	<message key="article.coverageChron">پوشش تاریخی یا زمانی</message>
+	<message key="article.coverageSample">مثال برای نوع پوشش</message>
 	<message key="article.type">نوع مقاله</message>
 	<message key="article.language">زبان مقاله</message>
 	<message key="article.sectionEditor">SE</message>
@@ -125,7 +129,7 @@
 <!-- یاداشت های ساب میشن --><!-- واژه های رایج مجله -->  <message key="journal.currentIssue">شماره کنونی</message>
 	<message key="journal.journals">مجلات</message>
 	<message key="journal.path">مسیر</message>
-	<message key="context.context">مجله</message>
+	<message key="journal.journal">مجله</message>
 <!-- کاربر -->	<message key="user.showAllJournals">مجلات مرا نشان بده</message>
 	<message key="user.registerForOtherJournals">ثبت نام برای دیگر مجلات</message>
 	<message key="user.myJournals">مجلات من</message>
@@ -139,7 +143,7 @@
 	<message key="user.role.subscriptionManager">مدیر اشتراک</message>
 	<message key="user.role.managers">مدیران</message>
 	<message key="user.role.editors">دبیران</message>
-	<message key="user.role.subEditors">دبیران مقاله</message>
+	<message key="user.role.sectionEditors">دبیران مقاله</message>
 	<message key="user.role.layoutEditors">صفحه آراها</message>
 	<message key="user.role.copyeditors">ویراستاران</message>
 	<message key="user.role.proofreaders">بازبین ها</message>
@@ -165,7 +169,7 @@
 	<message key="submission.event.logLevel.warning">اخطار</message>
 	<message key="submission.event.logLevel.error">خطا</message>
 	<message key="submission.event.general.defaultEvent">واقعه پیش فرض</message>
-	<message key="submission.event.submissionSubmitted">مقاله سابمیت شد.</message>
+	<message key="submission.event.general.articleSubmitted">مقاله سابمیت شد.</message>
 	<message key="submission.event.general.issueScheduled">سابمیشن در نوبت چاپ قرار گرفت.</message>
 	<message key="submission.event.general.issueAssigned">سابمیشن در نوبت چاپ قرار گرفت.</message>
 	<message key="submission.event.general.articlePublished">مقاله چاپ شد</message>
@@ -267,7 +271,7 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="sectionEditor.author.confirmRenotify">چنانچه بخواهید دوباره به این نویسنده اطلاع دهید عمل انتصاب وی از نو شروع خواهد شد. آیا مطمئن هستید که این کار را میخواهید انجام دهید؟</message>
 	<message key="sectionEditor.layout.confirmRenotify">چنانچه بخواهید دوباره به این صفحه آرا اطلاع دهید عمل انتصاب وی از نو شروع خواهد شد. آیا مطمئن هستید که این کار را میخواهید انجام دهید؟</message>
 	<message key="sectionEditor.proofreader.confirmRenotify">چنانچه بخواهید دوباره به این چک کننده نهائی اطلاع دهید عمل انتصاب وی از نو شروع خواهد شد. آیا مطمئن هستید که این کار را میخواهید انجام دهید؟</message>
-	<message key="sectionEditor.regrets.title">#{$submissionId} موارد عدم تمایل برای کارشناسی ، موارد کنسل &amp; دورهای قبلی</message>
+	<message key="sectionEditor.regrets.title">#{$articleId} موارد عدم تمایل برای کارشناسی ، موارد کنسل &amp; دورهای قبلی</message>
 	<message key="sectionEditor.regrets.link">مشاده موارد عدم تمایل به انجام کارشناسی ، موارد کنسل ، دورهای قبل.</message>
 	<message key="sectionEditor.regrets.reviewRound">دور کارشناسی {$round}</message>
 	<message key="sectionEditor.regrets.decisionRound">تصمیم دبیر, دور: {$round}</message>
@@ -375,8 +379,8 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="user.register.selectJournal">مجله ای را برای ثبت نام انتخاب کنید.</message>
 	<message key="user.register.noJournals">مجله ای برای ثبت نام در این سایت وجود ندارد.</message>
 	<message key="user.register.privacyStatement">بیانیه محرمانگی</message>
-	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[چنانچه قبلا برای این مجله و یا مجله ای دیگر در این سایت ثبت نام کرده اید <a href="{$registerUrl}">اینجا</a>  را کلیک کنید]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[چنانچه قبلا برای این مجله و یا مجله ای دیگر در این سایت ثبت نام <b>نکرده اید</b> <a href="{$registerUrl}">اینجا</a> را کلیک کنید]]></message>
+	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[چنانچه قبلا برای این مجله و یا مجله ای دیگر در این سایت ثبت نام کرده اید <a href="{$registerUrl}">اینجا</a>  را کلیک کنید]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[چنانچه قبلا برای این مجله و یا مجله ای دیگر در این سایت ثبت نام <b>نکرده اید</b> <a href="{$registerUrl}">اینجا</a> را کلیک کنید]]></message>
 	<message key="user.register.loginToRegister">نام کاربری و رمز عبور جاری  خود را وارد کنید تا برای این مجله ثبت نام کنید</message>
 	<message key="user.register.registrationDisabled">این مجله در حال حاضر ثبت نام کاربر نمی پذیرد</message>
 	<message key="user.register.form.passwordLengthTooShort">طول رمز عبور انتخاب شده کافی نیست</message>
@@ -392,7 +396,7 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="search.allJournals">تمام مجلات</message>
 	<message key="search.authorIndex">مرور اندکس نویسندگان</message>
 	<message key="search.authorDetails">جزئیات نویسندگان</message>
-	<message key="search.syntaxInstructions"><![CDATA[نکاتی در مورد جستجو: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>نکاتی در مورد جستجو: </h4><ul>
 <li>حروف کوچک وبزرگ فرقی ندارند</li>
 <li>کلمات رایج در عبارت جستجو نادیده گرفته میشوند</li>
 <li>بصورت پیش فرض فقط مقالاتی که دارای <i>همه</i> کلمات جستجو هستند برگردانده میشوند. مثل وقتی که عملگر <i>AND</i> اعمال میشود</li>
@@ -402,7 +406,10 @@ http://journals.mui.ac.ir/index.php/index/index
 <li>برای حذف یک کلمه از جستجو به نحوی که حاصل جستجو فاقد آن کلمه باشد ، قبل از آن کلمه <b>-</b> یا <i>NOT</i> بیاورید مانند  <i>online -politics</i> یا <i>online NOT politics</i></li>
 <li>از ستاره یعنی <b>*</b> در کلمات به عنوان علامت سرکش استفاده کنید تا جایگزین هر تعداد حروف شود. مثلا  <i>soci* morality</i> معادل  "sociological" یا "societal" میباشد</li>
 </ul>]]></message>
-	<message key="site.journalsHosted">لیست مجلات موجود بر روی این سایت</message>
+<!-- صفحه بینابینی PDF ها-->  <message key="article.pdf.title">فايل پی دی اف</message>
+<!-- صفحه بینابینی برای گالی های غیر PDF و غیر  HTML-->  <message key="article.nonpdf.title">دان لود مقاله</message>
+	<message key="article.nonpdf.note"><![CDATA[فایل انتخاب شده بصورت اتوماتیک دان لود خواهد شد. در غیر این صورت بر روی لینک زیر کلیک کنید. توجه داشته باشید که برای دیدن محتویات این فایل ممکن است ابزار خاصی احتیاج داشته باشید.<br /><br />چنانچه فایل بصورت اتوماتیک دان لود نشد ، <a href="{$url}">اینجا</a> را کلیک کنید.]]></message>
+<!-- اندکس سایت -->  <message key="site.journalsHosted">لیست مجلات موجود بر روی این سایت</message>
 	<message key="site.journalView">مشاهده مجله</message>
 	<message key="site.journalRegister">ثبت نام</message>
 	<message key="site.journalCurrent">شماره جاری</message>
@@ -453,11 +460,55 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="help.ojsHelpAbbrev">راهنمای OJS</message>
 <!-- نصب کننده -->  <message key="installer.ojsInstallation">نصب OJS</message>
 	<message key="installer.ojsUpgrade">بروز رسانی OJS</message>
+	<message key="installer.installationInstructions"><![CDATA[<h4>OJS نسخه {$version}</h4>
+
+<p>از دانلود <strong>سیستم مجلات آزاد </strong> پروژه دانش عمومی تشکر میکنیم. قبل از ادامه لطفا متن فایل  <a href="{$baseUrl}/docs/README">README</a> همراه با این نرم افزار را مطالعه بفرمائید. برای اطلاعات بیشتر در مورد پروژه دانش عمومی و پروژه های نرم افزاری آن لطفا از <a href="http://pkp.sfu.ca/" target="_blank">وب سایت PKP</a> بازدید بفرمائید. اگر میخواهید گزارش اشکال بدهید ویا بدنبال حمایت تکنیکی برای سیستم مجلات آزاد هستید به <a href="http://forum.pkp.sfu.ca">فوروم حمایت</a> مراجعه و یا از  <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">سیستم گزارش اشکال </a> آن لاین PKP بازدید کنید. اگرچه فوروم حمایت متد ترجیحی تماس میباشد ، شما میتوانید به تیم حمایت کننده به آدررس <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> ایمیل بزنید. </p>
+
+<h4>بروزرسانی</h4>
+
+<p>چنانچه میخواهید نسخه OJS 2.x موجود را ارتقا دهید  <a href="{$upgradeUrl}">اینجا را کلیک </a> کنید.</p>
+
+<h4>ملزومات توصیه شده سیستم</h4>
+
+<ul>
+	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x شامل PHP 5.x</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 یا <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 شامل PostgreSQL 8.x</li>
+	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x یا >= 2.0.4x یا Microsoft IIS 6</li>
+	<li>سیستم عامل: هر سیستم عاملی که نرم افزار های فوق را حمایت کند قابل استفاده است. شامل  <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a> میباشد.</li>
+</ul>
+
+<p>از آنجا که PKP  دارای تمام امکانات برای تست کردن بر روی هر گونه ترکیب احتمالی  از نسخه های مختلف نرم افزارهای فوق و سیستم های عامل نیست ، هیچگونه تضمینی در مورد عملکرد صحیح و یا حمایت از آن را نمیتوانیم عهده دار شویم</p>
+
+<p>پس از خاتمه نصب برنامه میتوانید این تنظیمات را از طریق ویرایش فایل  <tt>config.inc.php</tt> در شاخه اصلی OJS ، ویا از طریق صفحه مدیریت سایت تغییر دهید.</p>
+
+<h4>سیستم های بانک اطلاعاتی مورد پشتیبانی</h4>
+
+<p>OJS در حال حاضر بر روی MySQL و PostgreSQL تست شده است. با سایر سیستم های بانک اطلاعاتی که توسط <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> حمایت میشوند نیز ممکن است بصورت نسبی یا تمام عیار کار کند. گزارشات سازکاری ویا کد های وصله ای برای سایر سیستم های بانک اطلاعاتی را میتوانید به تیم OJS بفرستید</p>
+
+<h4>مراحل قبل از نصب</h4>
+
+<p>1. فایلها و پوشه های زیر و محتویات آنها میبایست قابل نوشتن باشد:</p>
+<ul>
+	<li><tt>config.inc.php</tt> قابل نوشتن است. البته این مورد اختیاری است: {$writable_config}</li>
+	<li><tt>public/</tt> قابل نوشتن است: {$writable_public}</li>
+	<li><tt>cache/</tt> قابل نوشتن است: {$writable_cache}</li>
+	<li><tt>cache/t_cache/</tt> قابل نوشتن است: {$writable_templates_cache}</li>
+	<li><tt>cache/t_compile/</tt> قابل نوشتن است: {$writable_templates_compile}</li>
+	<li><tt>cache/_db</tt> قابل نوشتن است: {$writable_db_cache}</li>
+</ul>
+
+<p>2. یک پوشه برای ذخیره فایلهای آپلود شده میبایست ایجاد شده و قابل نوشتن شود. به "File Settings" در قسمت پائین این صفحه نگاه کنید.</p>
+
+<h4>نصب دستی</h4>
+
+<p> <strong>نصب دستی</strong> را انتخاب کنید تا جملات SQL لازم برای ایجاد ساختار بانک اطلاعاتی و داده های مقدماتی را مشاهده کنید. بدین وسیله نصب بانک اطلاعاتی میتواند بصورت دستی صورت گیرد. این گزینه مخصوصا موقعی مفید است که بخواهید مشکلات نصب را اشکال زدائی کنید ، مخصوصا هنگام نصب بر روی سیستمهای عاملی که هنوز حمایت نشده اند. اگرچه با این روش فایل تنظیمات با مقادیر داده شده بانک اطلاعاتی نوشته میشود ولی توجه داشته باشید که با این متد ، بانک اطلاعاتی ایجاد نمیشود.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS نسخه {$version}</h4>
 	
 <p>با تشکر بخاطر دان لود  <strong>سیستم مجلات آزاد</strong> پروژه دانش عمومی قبل از ادامه ، فایل  <a href="{$baseUrl}/docs/README">README</a> و فایل <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> همراه با این نرم افزار را مطالعه بفرمائید. برای اطلاعات بیشتر در مورد پروژه دانش عمومی و و پروژههای نرم افزاری آن از  <a href="http://pkp.sfu.ca/" target="_blank">وب سایت PKP</a> دیدن فرمائید. چنانچه میخواهید گزارش اشکال بدهید ویا بدنبال حمایت تکنیکی در مورد سیستم مجلات آزاد هستید به  <a href="http://forum.pkp.sfu.ca">فوروم حمایت</a> بروید و یا از  <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">سیستم گزارش اشکال </a> آنلاین PKP بازدید کنید. اگرچه فوروم حمایت روش ترجیحی تماس است همچنین میتواید به آدرس ایمیل  <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p> پیغام بفرستید. <strong>شدیدا توصیه میشود</strong>  که از بانک اطلاعاتی و پوشه فایلها و پوشه نصب OJS نسخه پشتیبان تهیه کنید.</p>
 <p>چنانچه در  <a href="http://www.php.net/features.safe-mode" target="_blank">مد امن PHP</a> اجرا میکنید ، لطفا توجه کنید که گزینه  max_execution_time را در فایل تنظیمات  php.ini برابر با مقدار بالائی گذاشته شود. چنانچه زمان از این مقدار و یا سایر محدوده ها مانند مقدار Apache's "Timeout"  بیشتر شود و روند بروزرسانی قطع شوددخالت دستی لازم میشود.</p>]]></message>
+	<message key="installer.localeSettingsInstructions"><![CDATA[برای حمایت کامل یونی کد UTF-8 ، برای تمام تنظیمات مجموعه کاراکتری  UTF-8 را انتخاب کنید.  توجه کنید که این نوع حمایت نیاز به  MySQL >= 4.1.1 یا PostgreSQL >= 7.1 دارد. همچنین توجه کنید که حمایت کامل یونی کد نیاز به PHP >= 4.3.0 که همرا با حمایت کتابخانه <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> کمپایل شده باشد دارد. حمایت کتابخانه mbstring بصورت پیش فرض در نسخه های جدید نصب PHP فعال است. چنانچه سرور شما از این ملزومات پشتیبانی نکند شما ممکن است هنگام استفاده از مجموعه های کاراکتری توسعه یافته مشکلاتی را تجربه کنید.<br /><br />
+سرور شما در حال حاضر mbstring را حمایت میکند: <strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.localeInstructions">زبان اولیه برای استفاده با این سیستم. در صورتی که به داشتن حمایت برای زبان دیگری علاقه مند هستید به مستندات OJS مراجعه کنید.</message>
 	<message key="installer.additionalLocalesInstructions">زبانهای اضافی را که مایلید این سیستم پشتیبانی کند انتخاب کنید. این زبانها در دسترس مجلات این سایت برای استفاده قرار خواهند گرفت. البته زبانهای اضافی را در زمانهای دیگر نیز میتوانید از طریق صفحه مدیریت سایت نصب کنید.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[آدرس کامل پوشه ای که قرار است فایل های آپلود شده را نگه دارد. بهتر اشت این پوشه مستقیما قابل دستیابی از طریق وب نباشد.  <strong>لطفا قبل از نصب برنامه اطمینان حاصل کنید که این پوشه وجود دارد و قابل نوشتن است.</strong> مسیر های آدرس برای سیستم عامل ویندوز باید اسلاش رو به جلو بکار ببرد.مانند "C:/myjournal/files".]]></message>
@@ -471,41 +522,42 @@ http://journals.mui.ac.ir/index.php/index/index
 <p>فراموش نکنید که مقدار "installed" را در فایل تنظیمات  config.inc.php را دوباره به <i>On</i> برگردانید.</p>
 <p>چنانچه تا کنون ثبت نام نکرده اید و مایل هستید تا اخبار و تازه ها را دریافت کنید ، <strong>لطفا در سایت  <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a> ثبت نام کنید.</strong>  چنانچه سوال ویا نظری دارید لطفا از  <a href="http://forum.pkp.sfu.ca" target="_new">فوروم حمایت </a> دیدن کنید.</p>]]></message>
 <!-- لاگ مقالات -->  <message key="log.author.submitted">{$authorName} یک ساب میشن جدید وارد کرد ، ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} مقاله  {$submissionId} را اصلاح کرد. ID فایل جدید  {$fileId} میباشد.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} از کارشناسی مقاله {$submissionId} برای درو  {$round} معزول شد.</message>
-	<message key="log.review.reviewInitiated">درور  {$round} کارشناسی {$reviewerName} برای مقاله  {$submissionId} شروع شد.</message>
-	<message key="log.review.reviewReinitiated">دور {$round} کارشناسی {$reviewerName} برای مقاله  {$submissionId} از نو شروع شد.</message>
-	<message key="log.review.reviewCancelled">دور {$round} کارشناسی  {$reviewerName} برای مقاله {$submissionId} کنسل شد.</message>
-	<message key="log.review.reviewCleared">دور {$round} کارشناسی {$reviewerName} برای مقاله {$submissionId} پاک شد.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} برای دور  {$round} کارشناسی مقاله {$submissionId} امتیاز داده شد.</message>
-	<message key="log.review.reviewDueDateSet">مهلت کارشناسی دور  {$round} مقاله  {$submissionId} توسط {$reviewerName} به  {$dueDate} تغییر یافت.</message>
-	<message key="log.review.reviewRecommendationSet">توصیه کارشناسی دور  {$round} مقاله  {$submissionId} توسط  {$reviewerName} وارد شد.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">توصیه کارشناسی دور  {$round} مقاله  {$submissionId} توسط دبیر مقاله, {$editorName} ، از طرف  {$reviewerName} وارد شد.</message>
-	<message key="log.review.resubmit">مقاله {$submissionId} برای کارشناسی مجددا ساب میت شد.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} از انجام کارشناسی دور  {$round} برای مقاله  {$submissionId} سر باز زد.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} برای کارشناسی دور  {$round}  مقاله  {$submissionId} اظهار آمادگی کرد.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} برای کارشناسی دور  {$round} مقاله  {$submissionId} از طرف  {$reviewerName} اظهار آمادگی کرد.</message>
-	<message key="log.review.reviewFileByProxy">دبیر  ، {$userName} ، یک فایل کارشناسی برای دور  {$round} مقاله  {$submissionId} از طرف کارشناس ،  {$reviewerName} آپلود کرد.</message>
+	<message key="log.author.documentRevised">{$authorName} مقاله  {$articleId} را اصلاح کرد. ID فایل جدید  {$fileId} میباشد.</message>
+	<message key="log.review.reviewerAssigned">{$reviewerName} برای کارشناسی مقاله  {$articleId} در دور {$round} اول کارشناسی انتساب یافت.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} از کارشناسی مقاله {$articleId} برای درو  {$round} معزول شد.</message>
+	<message key="log.review.reviewInitiated">درور  {$round} کارشناسی {$reviewerName} برای مقاله  {$articleId} شروع شد.</message>
+	<message key="log.review.reviewReinitiated">دور {$round} کارشناسی {$reviewerName} برای مقاله  {$articleId} از نو شروع شد.</message>
+	<message key="log.review.reviewCancelled">دور {$round} کارشناسی  {$reviewerName} برای مقاله {$articleId} کنسل شد.</message>
+	<message key="log.review.reviewCleared">دور {$round} کارشناسی {$reviewerName} برای مقاله {$articleId} پاک شد.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} برای دور  {$round} کارشناسی مقاله {$articleId} امتیاز داده شد.</message>
+	<message key="log.review.reviewDueDateSet">مهلت کارشناسی دور  {$round} مقاله  {$articleId} توسط {$reviewerName} به  {$dueDate} تغییر یافت.</message>
+	<message key="log.review.reviewRecommendationSet">توصیه کارشناسی دور  {$round} مقاله  {$articleId} توسط  {$reviewerName} وارد شد.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">توصیه کارشناسی دور  {$round} مقاله  {$articleId} توسط دبیر مقاله, {$editorName} ، از طرف  {$reviewerName} وارد شد.</message>
+	<message key="log.review.resubmit">مقاله {$articleId} برای کارشناسی مجددا ساب میت شد.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} از انجام کارشناسی دور  {$round} برای مقاله  {$articleId} سر باز زد.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} برای کارشناسی دور  {$round}  مقاله  {$articleId} اظهار آمادگی کرد.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} برای کارشناسی دور  {$round} مقاله  {$articleId} از طرف  {$reviewerName} اظهار آمادگی کرد.</message>
+	<message key="log.review.reviewFileByProxy">دبیر  ، {$userName} ، یک فایل کارشناسی برای دور  {$round} مقاله  {$articleId} از طرف کارشناس ،  {$reviewerName} آپلود کرد.</message>
 	<message key="log.review.reviewerFile">یک فایل کارشناسی آپلود شد</message>
-	<message key="log.copyedit.initiate">ویراستار مقاله  {$submissionId} توسط  {$copyeditorName} شروع شد.</message>
+	<message key="log.copyedit.initiate">ویراستار مقاله  {$articleId} توسط  {$copyeditorName} شروع شد.</message>
 	<message key="log.copyedit.copyeditFileSet">فایل پیش فرض ویراستاری انتخاب شد.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} ویراستاری اولیه مقاله   {$submissionId} را تمام کرد.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} ویراستاری نهائی مقاله  {$submissionId} را تمام کرد.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} برای ویراستاری مقاله  {$submissionId} انتخاب شد.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} ویراستاری اولیه مقاله   {$articleId} را تمام کرد.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} ویراستاری نهائی مقاله  {$articleId} را تمام کرد.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} برای ویراستاری مقاله  {$articleId} انتخاب شد.</message>
 	<message key="log.copyedit.copyeditorFile">یک نسخه ویراستاری فایل ساب میشن آپلود شد.</message>
 	<message key="log.copyedit.authorFile">یک نسخه فایل ساب میشن ویراستاری شده توسط نویسنده آپلود شد.</message>
-	<message key="log.layout.layoutEditorAssigned">{$editorName} به عنوان صفحه آرای مقاله  {$submissionId} انتخاب شد.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} از صفحه آرائی مقاله  {$submissionId} عزل شد.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} صفحه آرائی مقاله  {$submissionId} را کامل کرد.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} به عنوان صفحه آرای مقاله  {$articleId} انتخاب شد.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} از صفحه آرائی مقاله  {$articleId} عزل شد.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} صفحه آرائی مقاله  {$articleId} را کامل کرد.</message>
 	<message key="log.editor.metadataModified">متاداده این مقاله توسط  {$editorName} تغییر یافت.</message>
 	<message key="log.editor.editorFile">یک نسخه دبیری فایل ساب میشن آپلود شد.</message>
-	<message key="log.editor.archived">مقاله  {$submissionId} بایگانی شد.</message>
-	<message key="log.editor.restored">مقاله {$submissionId} به نوبت جاری بازگشت</message>
-	<message key="log.editor.editorAssigned">{$editorName} به عنوان دبیر مقاله  {$submissionId} انتخاب شد.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} روند دبیری مقاله  {$submissionId} بصورت جهشی انجام داد.</message>
-	<message key="log.proofread.assign">{$assignerName} ، {$proofreaderName} برای چک نهائی مقاله  {$submissionId} انتخاب کرد.</message>
-	<message key="log.proofread.complete">{$proofreaderName} مقاله {$submissionId} برای نوبت چاپ ساب میت کرد.</message>
-	<message key="log.imported">{$userName} مقاله  {$submissionId} وارد کرد.</message>
+	<message key="log.editor.archived">مقاله  {$articleId} بایگانی شد.</message>
+	<message key="log.editor.restored">مقاله {$articleId} به نوبت جاری بازگشت</message>
+	<message key="log.editor.editorAssigned">{$editorName} به عنوان دبیر مقاله  {$articleId} انتخاب شد.</message>
+	<message key="log.editor.submissionExpedited">{$editorName} روند دبیری مقاله  {$articleId} بصورت جهشی انجام داد.</message>
+	<message key="log.proofread.assign">{$assignerName} ، {$proofreaderName} برای چک نهائی مقاله  {$articleId} انتخاب کرد.</message>
+	<message key="log.proofread.complete">{$proofreaderName} مقاله {$articleId} برای نوبت چاپ ساب میت کرد.</message>
+	<message key="log.imported">{$userName} مقاله  {$articleId} وارد کرد.</message>
 <!-- ابزارهای خواندن --><!-- تنظیمات اخ -->  <message key="rt.admin.settings">گزینه های ابزار خواندن</message>
 	<message key="rt.admin.settings.description">ابزارهای خواندن در کادر کنار مقالات چاپ شده در قسمتی از مجله که برای اندکس انتخاب شده است ظاهر میشود. ابزارهای خواندن مشتمل بر یک مجموعه از ابزارهای اختیاری مربوط به مقالات چاپ شده  است که در زیر لیست شده است و همچنین شامل مجموعه ای از ابزارهائی است که دسترسی به موارد مشابه را بر جسب زمینه مورد نظر و تخصص مربوطه فراهم میکند.</message>
 	<message key="rt.admin.settings.enableReadingTools">فعال ساختن ابزارهای خواندن برای مقالات مورد نظر مجله.</message>
@@ -626,14 +678,18 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="payment.subscription.expires">منقضی میشود</message>
 	<message key="installer.databaseSettingsInstructions">او ج اس برای ذخیره داده های خود نیاز به دسترسی به یک بانک اطلاعاتی اس کیو ال دارد. لطفا شرایط مورد لزوم ذکر شده در بالای این صفحه را برای دیدن لیست بانک های اطلاعاتی سازگار ببینید. سپس در قسمت زیر تنظیمات لازم برای ایجاد ارتباط با بانک اطلاعاتی را وارد کنید</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} از طرف {$reviewerName} از قبول دعوت کارشناسی در راند {$round} خودداری کرده است</message>
-	<message key="log.editor.decision">یک تصمیم ادیتوریال ({$decision}) برای مقاله {$submissionId} توسط {$editorName} اتخاذ گردید.</message>
+	<message key="log.editor.decision">یک تصمیم ادیتوریال ({$decision}) برای مقاله {$articleId} توسط {$editorName} اتخاذ گردید.</message>
 	<message key="rt.admin.settings.addComment.authenticated">برای ارسال نظر خود لازم است که ثبت نام کرده و سپی وارد شوید. ارسال بصورت گمنام مقدور نیست</message>
 	<message key="rt.admin.settings.addComment.anonymous">برای ارسال نظر خود بصورت گمنام لازم است که ثبت نام کرده و سپی وارد شوید.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">برای ارسال نظرات بضورت گمنام احتیاج به ثبت نام نیست</message>
 	<message key="rt.metadata.pkp.doi">شناسه دیژیتال شیئ</message>
 	<message key="debug.notes.currencyListLoad">لیست واحد پولهای لود شده از فایل ایکس ام ال &quot;{$filename}&quot;</message>
+	<message key="debug.notes.helpMappingLoad">فایل ری لود شده نگاشت راهنما از فایل {$filename} در جستجوی {$id}</message>
+	<message key="submission.reviewForm">فرم کارشناسی</message>
+	<message key="submission.reviewFormResponse">پاسخ فرم کارشناسی</message>
 	<message key="reviewer.article.enterReviewForm">لطفا بر روی  شکلک کلیک کنید تا به فرم کارشناسی بروید</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">لطفا فیلد های الزامی را پر کنید</message>
+	<message key="common.pageHeader.altText">هدر صفحه</message>
 	<message key="common.homePageHeader.altText">هدر صفحه خانگی</message>
 	<message key="common.journalHomepageImage.altText">تصویر صفحه خانگی مجله</message>
 	<message key="article.coverPage.altText">تصویر روی جلد</message>
@@ -711,6 +767,8 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="subscriptionManager.individualSubscriptions">اشتراکات شخصی</message>
 	<message key="subscriptionManager.institutionalSubscriptions">اشتراکات سازمانی</message>
 	<message key="subscriptionManager.subscriptionTypes">انواع اشتراک</message>
+	<message key="plugins.categories.oaiMetadataFormats">پلاگین فرمات فراداده او ای آی</message>
+	<message key="plugins.categories.oaiMetadataFormats.description">این پلاگین های فرمات، فراداه را در ارتباطات او ای آی بیان میکنند.</message>
 	<message key="manager.setup.reviewProcessEmailDescription">دبیر درخواست کارشناسی را همرا با ساب میشن با ایمیل برای کارشناس میفرستد. کارشناسان موافقت یا عدم موافقت خود را با ایمیل برای دبیر میفرستند و در صورت موافقت حاصل کارشناسی و توصیه نهائی خود را نیز میفرستند. دبیر موافقت یا عدم موافقت کارشناس را شخصا در سایت وارد میکند و پس از دریافت نهائی حاصل کارشناسی از طریق ایمیل، آنرا نیز شخصا وارد سایت میکند.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>
 بیانیه کپی رایت پیشنهادی کراتیو کامانز
@@ -748,13 +806,15 @@ http://journals.mui.ac.ir/index.php/index/index
 بوده که اجازه میدهد دیگران از مقاله بشرط ذکر منبع نویسنده و مجله در کار خود استفاده کنند.
     </li>
 	 <li>
-	 	نویسندگان میتوانند بطور مستقل ترتیبی اتخاذ کنند تا در قالب قرار داد بصورت غیر صریح مقاله چاپ شده توسط مجله را منتشر کنند، یعنی آنرا به ذخیره مقالات سازمان متبوعه فرستاده و یا انرا در یک کتاب چاپ کنند. البته میبایست منبع چاپ اولیه در این مجله را ذکر کنند.
+		نویسندگان میتوانند بطور مستقل ترتیبی اتخاذ کنند تا در قالب قرار داد بصورت غیر صریح مقاله چاپ شده توسط مجله را منتشر کنند، یعنی آنرا به ذخیره مقالات سازمان متبوعه فرستاده و یا انرا در یک کتاب چاپ کنند. البته میبایست منبع چاپ اولیه در این مجله را ذکر کنند.
     </li>
 	 <li>
-	 	نویسنگان اجازه دارند و توصیه میشود که کارهای خود را قبل یا هنگام ارسال به این مجله، بصورت آن لاین به جاهائی مانند سایت دخائر علمی سازمان منتبوعه و یا بر روی وب سایت شخصی خود قرار دهند. این عمل موجب تبادلات علمی و ارجاع دهی زودتر به مقاله خواهد شد. نگاه کنید به مقاله 
+		نویسنگان اجازه دارند و توصیه میشود که کارهای خود را قبل یا هنگام ارسال به این مجله، بصورت آن لاین به جاهائی مانند سایت دخائر علمی سازمان منتبوعه و یا بر روی وب سایت شخصی خود قرار دهند. این عمل موجب تبادلات علمی و ارجاع دهی زودتر به مقاله خواهد شد. نگاه کنید به مقاله 
  (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).
 	 </li>
 </ol>]]></message>
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[این مجله از یک سیستم طبقه بندی موضوعی موجود بر روی وب استفاده میکند.<br />
+عنوان سیستم طبقه بندی]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[چنانچه مایل باشید محتوای این مجله در یک سیستم گسترده از بانکهای اطلاعاتی پژوهشی اندکس شود ، ابتدا 
 <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">
 اقدامات لازم برای تبدیل شدن به یک فراهم کننده داده
@@ -773,7 +833,7 @@ http://journals.mui.ac.ir/index.php/index/index
 ثبت نام کنید.
 <br /><br />
 البته چنانچه ادمین سایت قبلا کل سایت را در این سرویس ها ثبت کرده باشد، دیگر نیازی به این اقدام ندارید.]]></message>
-	<message key="manager.setup.citations.enable">به عنوان قسمتی از عمل ساب میشن اجازه دهید که نویسنده لیست فرمات شده رفرانس های مقاله را بصورت جداگانه ساب میت کند.</message>
+	<message key="manager.setup.citations">به عنوان قسمتی از عمل ساب میشن اجازه دهید که نویسنده لیست فرمات شده رفرانس های مقاله را بصورت جداگانه ساب میت کند.</message>
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[مرحله: نوبت ساب میشن &gt; کارشناسی ساب میشن &gt;  ویرایش ساب میشن &gt; فهرست مقالت.<br /><br />
 انتخال مدلی برای اداره این جوانب روند دبیری. برای انتصاب یک مدیر دبیری و مدیر قسمت به قسمت دبیران در اداره مجله بروید.]]></message>
 	<message key="editor.submissionReview.notes"><![CDATA[<ol>
@@ -848,18 +908,22 @@ lib.sfu.ca]]></message>
 	<message key="notification.mailListDescription">آدرس ایمیل خود را وارد کنید تا بدین وسیله از چاپ مطالب جدید باخبر شوید.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[این صفحه نشان دهنده موارد مهم بروزرسانی میباشد که در این مجله اتفاق افتاده است مانند شماره های جدید مجله و یا اطلاعیه ها. میتوانید از طریق RSS برای این اطلاع رسانی ها ثبت نام کنید. برای این کار بر روی تصویر سمت راست کلیک کنید. ویا از <a href="{$emailUrl}"> طریق ایمیل</a> اقدام کنید.]]></message>
 	<message key="notification.type.articleSubmitted">یک مقاله جدید، "{$param}"، ساب میت شد.</message>
+	<message key="notification.type.copyeditComment">یکی از ویراستاران یاداشتی در مورد "{$param}" بر جا کذاشته اشت</message>
 	<message key="notification.type.editing">رویدادهای ویرایش</message>
 	<message key="notification.type.editorDecisionComment">نقطه نظری در خصوص تصمیم دبیر در باره "{$param}" برجا گذاشته شده است.</message>
 	<message key="notification.type.galleyModified">یک گالی در مورد "{$param}" تغییر یافته است.</message>
 	<message key="notification.type.issuePublished">یک شماره مجله منتشر شده است</message>
+	<message key="notification.type.layoutComment">نظری در خصوص "{$param}" مربوط به صفحه آرائی ایراد شده است</message>
 	<message key="notification.type.metadataModified">فراداده "{$param}" تغییر یافته است.</message>
 	<message key="notification.type.newAnnouncement">یک اطلاعیه جدید ایجاد شده است</message>
+	<message key="notification.type.proofreadComment">نقطه نظری در خصوص "{$param}" توسط بازبین گذاشته شده است.</message>
 	<message key="notification.type.reviewerComment">یک کارشناس در مورد "{$param}" نظر داده است</message>
 	<message key="notification.type.reviewerFormComment">یک فرم کارشناسی در خصوص "{$param}" ساب میت شده است</message>
 	<message key="notification.type.reviewing">رودادهای کارشناسی</message>
 	<message key="notification.type.site">رویدادهای سایت</message>
 	<message key="notification.type.submissionComment">یک دبیر نظری در مورد "{$param}" داده است.</message>
 	<message key="notification.type.submissions">رویدادهای ساب میشن</message>
+	<message key="notification.type.suppFileModified">فایل الحاقی مربوط به "{$param}" تغییر یافت.</message>
 	<message key="notification.type.userComment">یک خواننده نظری در مورد "{$param}" داده است</message>
 	<message key="user.register.reviewerInterests">تشخیص علائق کارشناسی: زمینه ها و روشهای پژوهشی مهم</message>
 	<message key="user.subscriptions.subscriptionStatus">وضعیت اشتراک</message>
@@ -870,8 +934,18 @@ lib.sfu.ca]]></message>
 	<message key="user.subscriptions.status.needsApprovalDescription">قبل از فعال سازی اشتراک می بایست مرور گردد</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">پرداخت دستی راه اندازی شده است ولی هنوز وصول نشده است</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">پرداخت آن لاین شورع شده است ولی کامل نشده است</message>
+	<message key="article.pdf.download">دانلود این فایل پی دی اف</message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>
+در صورتی که مرورگر شما پلاگین خواندن پی دی اف را داشته باشد فایل پی دی اف خود را می تواندی در اینجا لود کنید. به عنوان مثال نسخه اخیر
+(<a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>)
+</p>
+<p>
+همچنین می توانید فایل پی دی اف را دالود کرده و با یک برنامه مخصوص خواندن فایلهای پی دی اف آن را باز کنید. برای دان لود فایل پی دی اف بر روی لینک دانلود کلیک گنید.
+</p>
+<p>
+جنانچه نیاز به اطلاعات بیشتر در مورد چگونگی چاپ، ذخیره و کار کردن با فایل های پی دی اف داشته باشید سایت های وایر
+<a href="http://highwire.stanford.edu/help/pdf-faq.dtl">سؤالات متداولی در باره پی دی اف </a>
+دارد
+</P>]]></message>
 	<message key="payment.authorFees">نرخ نویسنده</message>
-
-	<!-- Included here because it may be used in the navigation bar -->
-	<message key="editor.navigation.issues">شماره های مجله</message>
 </locale>

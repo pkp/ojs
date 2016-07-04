@@ -4,7 +4,7 @@
 <!--
   * locale/fa_IR/editor.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="fa_IR" full_name = "Persian">
+<locale name="fa_IR" full_name="فارسی">
 	<message key="editor.article.reviewForms">فرم های کارشناسی</message>
 	<message key="editor.article.selectReviewForm">انتخاب فرم کارشناسی</message>
 	<message key="editor.article.clearReviewForm">حذف فرم کارشناسی</message>
@@ -93,8 +93,9 @@
 	<message key="editor.issues.noLiveIssues">هیچ شماره مجله ای وجود ندارد</message>
 	<message key="editor.issues.open">باز کردن</message>
 	<message key="editor.issues.pages">صفحات</message>
+	<message key="editor.navigation.issues">شماره های مجله</message>
 	<message key="editor.navigation.futureIssues">ضماره های آتی مجله</message>
-	<message key="grid.action.addIssue">ایجاد شماره مجله</message>
+	<message key="editor.navigation.createIssue">ایجاد شماره مجله</message>
 	<message key="editor.navigation.issueArchive">شماره های گذشته مجله</message>
 	<message key="editor.article.designateReviewVersion">تعیین فایل اصلی به عنوان نسخه کارشناسی</message>
 	<message key="editor.article.uploadReviewVersion">آپلود کردن یک نسخه کارشناسی اصلاح شده</message>
