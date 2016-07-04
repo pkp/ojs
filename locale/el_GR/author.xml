@@ -46,7 +46,6 @@
 	<message key="author.submit.journalSectionDescription"><![CDATA[Επιλέξτε την κατάλληλη ενότητα για τη συγκεκριμένη υποβολή (συμβουλευτείτε τις σελίδες "Ενότητες και Πολιτικές" στην σελίδα <a  href="{$aboutUrl}">Σχετικά</a> με το περιοδικό).]]></message>
 	<message key="submission.submit.selectSection">Επιλέξτε ενοτήτα...</message>
 	<message key="author.submit.submissionChecklist">Λίστα ελέγχου υποβολής</message>
-	<message key="submission.submit.submissionChecklistDescription">Προσδιορίστε εάν η συγκεκριμένη υποβολή είναι έτοιμη για εξέταση από αυτό το περιοδικό ελέγχοντας τα ακόλουθα (σχόλια προς τον επιμελητή μπορούν να προστεθούν παρακάτω).</message>
 	<message key="author.submit.verifyChecklist">Πρέπει να βεβαιωθείτε ότι όλες οι απαιτήσεις της λίστας ελέγχου υποβολής ικανοποιούνται πριν συνεχίσετε.</message>
 	<message key="author.submit.copyrightNoticeAgree">Οι συγγραφείς αποδέχονται τους όρους της Δήλωσης Πνευματικών Δικαιωμάτων, που θα εφαρμοστούν στην συγκεκριμένη υποβολή εάν και όταν αυτή δημοσιευτεί από το περιοδικό (σχολίων προς τον επιμελητή μπορούν να προστεθούν παρακάτω).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Πρέπει να συμφωνήσετε με τους όρους της Δήλωσης Πνευματικών Δικαιωμάτων πριν συνεχίσετε.</message>
@@ -59,10 +58,7 @@
 	<message key="author.submit.addAuthor">Προσθήκη συγγραφέα</message>
 	<message key="author.submit.deleteAuthor">Διαγραφή συγγραφέα</message>
 	<message key="author.submit.submissionIndexingDescription">Εισάγετε όρους που θα χρησιμοποιηθούν για την ευρετηρίαση της υποβολής (όροι που περιγράφουν καλύτερα το περιεχόμενο της υποβολής). Διαχωρίστε τους όρους με το σύμβολο του ερωτηματικού  (όρος1; όρος2; όρος3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Φορείς υποστήριξης/χρηματοδότησης</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Καθορίστε τους φορείς (πρόσωπα, οργανισμούς ή υπηρεσίες) που συνείσφεραν στον περιεχόμενο, παρείχαν χρηματοδότηση ή και υποστήριξη για την υλοποίησης του έργου που παρουσιάζεται στην υποβολή αυτή.</message>
 	<message key="author.submit.coverageInstructions">Αναφέρεται στη γεω-χωρική τοποθεσία, την χρονολογική ή ιστορική κάλυψη, ή/και τα χαρακτηριστικά του δείγματος της έρευνας.</message>
-	<message key="author.submit.subjectClassInstructions">Χρησιμοποιήστε το σύστημα ταξινόμησης με σύνδεση υπερκειμένου για να επιλέξετε όρους ταξινόμησης και, εάν είναι κατάλληλο, αριθμούς.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr;  Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html"  target="_blank">Επιπρόσθετοι κωδικοί/a>.]]></message>
 	<message key="author.submit.form.authorRequired">Απαιτείται τουλάχιστον ένας συγγραφέας.</message>
 	<message key="author.submit.form.authorRequiredFields">Απαιτούνται το όνομα, το επώνυμο και η διεύθυνση email του κάθε συγγραφέα.</message>
@@ -94,7 +90,6 @@
 	<message key="author.submit.suppFile.dataSet">Σύνολο δεδομένων</message>
 	<message key="author.submit.suppFile.sourceText">Πηγαίο κείμενο</message>
 	<message key="author.submit.suppFile.briefDescription">Σύντομη περιγραφή</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Φορεάς χορηγίας</message>
 	<message key="author.submit.suppFile.availableToPeers">Παρουσίαση αρχείου σε αξιολογητές (χωρίς μεταδεδομένα), από τη στιγμή που δεν δημιουργεί προβλήματα στην "τυφλή" αξιολόγηση.</message>
 	<message key="author.submit.suppFile.publisherDescription">Χρησιμοποιείτε αποκλειστικά για επίσημα δημοσιευμένο υλικό.</message>
 	<message key="author.submit.suppFile.dateDescription">Ημερομηνία κατά την οποία έγινε η συλλογή δεδομένων ή η δημιουργία οργάνου.</message>
@@ -111,7 +106,6 @@
 	<message key="author.submit.filesSummary">Σύνοψη αρχείου</message>
 	<message key="author.submit.finishSubmission">Ολοκλήρωση υποβολής</message>
 	<message key="author.submit.submissionComplete">Η υποβολή ολοκληρώθηκε. Σας ευχαριστούμε για το ενδιαφέρον σας για δημοσίευση στο περιοδικό {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Εάν η συγκεκριμένη υποβολή βρίσκεται σε μορφή έτοιμη για δημοσίευση χωρίς περαιτέρω αξιολόγηση, επιμέλεια ή εργασίες σελιδοποίησης, μπορεί να τοποθετηθεί άμεσα στο τελευταίο στάδιο της συντακτικής διαδικασίας <a  href="{$expediteUrl}" class="action">κάνοντας κλικ εδώ</a>. (Σημείωση: Μόνο οι επιμελητές του περιοδικού έχουν τη συγκεκριμένη επιλογή για τις υποβολές τους.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Μεταφόρτωση έκδοσης συγγραφέα</message>
 	<message key="author.article.copyeditedFile">Αρχείο με διορθωμένα κείμενα</message>
 	<message key="author.article.authorRevisedFile">Αρχείο συγγραφέα</message>

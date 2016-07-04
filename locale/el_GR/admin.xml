@@ -21,11 +21,9 @@
 	<message key="admin.languages.supportedLocalesInstructions">Επιλέξτε όλες τις γλώσσες που θέλετε να υποστηρίζονται στον ιστότοπο. Οι επιλεγμένες γλώσσες  θα είναι διαθέσιμες για χρήση από όλα τα περιοδικά του ιστοτόπου, και θα εμφανίζονται σε ένα Μενού Επιλογής Γλώσσας σε κάθε σελίδα του ιστοτόπου (η δυνατότητα αυτή μπορεί να αλλάξει από αντίστοιχες ρυθμίσεις που μπορούν να γίνουν σε επίπεδο περιοδικού). Εάν δεν επιλεχθούν πολλαπλές γλώσσες , το Μενού Επιλογής Γλώσσας δεν θα εμφανίζεται και συνεπώς δεν θα υπάρχουν οι αντίστοιχες ρυθμίσεις γλωσσών σε επίπεδο περιοδικού.</message>
 	<message key="admin.languages.confirmUninstall">Είστε σίγουρος ότι θέλετε να απεγκαταστήσετε αυτή τη γλώσσα; Αυτό θα επηρεάσει όσα περιοδικά χρησιμοποιούν τη συγκεκριμένη γλώσσα.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Επιλέξτε τις επιπρόσθετες γλώσσες που θέλετε να εγκαταστήσετε για να τις υποστηρίζει το σύστημα. Οι γλώσσες πρέπει να εγκατασταθούν πριν χρησιμοποιηθούν από κάποιο περιοδικό. Δείτε την τεκμηρίωση του OJS για πληροφορίες σχετικά με την προσθήκη υποστήριξης για νέες γλώσσες.</message>
-	<message key="admin.languages.downloadLocales">Μεταφόρτωση γλωσσών</message>
 	<message key="admin.languages.downloadFailed">Η μεταφόρτωση της γλώσσας απέτυχε. Το παρακάτω μήνυμα σφάλματος περιγράφει την αιτία της αποτυχίας.</message>
 	<message key="admin.languages.localeInstalled">Η γλώσσα "{$locale}" εγκαταστάθηκε.</message>
 	<message key="admin.languages.download">Μεταφόρτωση γλώσσας</message>
-	<message key="admin.languages.reloadDefaultEmailTemplates">Ανανέωση προεπιλεγμένα πρότυπα ηλεκτρονικού ταχυδρομείου</message>
 	<message key="admin.languages.download.cannotOpen">Το άνοιγμα της περιγραφής της γλώσσας από τον ιστότοπο του PKP δεν ήταν εφικτό.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Η νέα γλώσσα δεν μπορεί να προστεθεί στο μητρώο γλωσσικών ρυθμίσεων, συνήθως το "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">Βάση Δεδομένων Χρηστών του OJS</message>
@@ -41,7 +39,6 @@
 	<message key="admin.contexts.create">Δημιουργία Περιοδικού</message>
 	<message key="admin.journals.createInstructions">Θα σας αποδοθεί αυτόματα ο ρόλος του Διαχειριστή Περιοδικού για αυτό το περιοδικό. Μόλις δημιουργήσετε  ένα νέο περιοδικό, συνδεθείτε σε αυτό ως Διαχειριστής Περιοδικού για να συνεχίσετε με  τις απαραίτητες ρυθμίσεις και τις υπόλοιπες αναθέσεις ρόλων.</message>
 	<message key="admin.journals.urlWillBe">Αυτή πρέπει να είναι μια απλή και σύντομη λέξη, ή ακρωνύμιο, που θα ταυτοποιεί το περιοδικό. Το URL του περιοδικού θα  είναι {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">Η συμπλήρωση του τίτλου περιοδικού είναι υποχρεωτική.</message>
 	<message key="admin.contexts.form.pathRequired">Η συμπλήρωση του πεδίου της διαδρομής είναι υποχρεωτική.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Η διαδρομή μπορεί να περιέχει μόνο αλφαριθμητικούς  χαρακτήρες και παύλες και πρέπει να αρχίζει και να τελειώνει με έναν αλφαριθμητικό χαρακτήρα.</message>
 	<message key="admin.contexts.form.pathExists">Η διαδρομή που επιλέξατε χρησιμοποιείται ήδη από ένα  άλλο περιοδικό.</message>
@@ -72,23 +69,8 @@
 	<message key="admin.categories.create">Δημιουργία μιας νέας Κατηγορίας</message>
 	<message key="admin.categories.noneCreated">Δεν έχουν δημιουργηθεί κατηγορίες</message>
 	<message key="admin.categories.confirmDelete">Εϊστε σίγουροι ότι επιθυμείτε να διαγράψετε αυτή την κατηγορία;</message>
-	<message key="admin.copyAccessLogFileTool.usage">Αντιγράψτε το αρχείο καταγραφής του apache πρόσβαση (s),  φιλτράροντας τις εγγραφές που συνδέονται με αυτήν την εγκατάσταση, στον κατάλογο με τα τρέχοντα αρχεία, μέσα στον κατάλογο στάδιο UsageStatsPlugin. Πρέπει να τρέξει κάτω από το χρήστη με αρκετά privilegies να διαβάσει αρχεία πρόσβασης Apache.
-
-Το εργαλείο αυτό θα αντιγράψει μόνο τα αρχεία που δεν βρίσκονται ήδη στους φακέλλους τους usageStats file loader (στάδιο, επεξεργασία, αρχείο, απόρριψη).
-
-Usage: {$scriptName} path/to/apache/log/file.log
-Usage (processing all files of a directory): {$scriptName} path/to/apache/directory
-Usage (processing all files of a directory whose names start with the passed string): {$scriptName} path/to/apache/directory starts_with_string</message>
-	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Σφάλμα: δεν μπορεί να δημιουργηθεί προσωρινός φάκελλος  {$tmpDir}</message>
-	<message key="admin.copyAccessLogFileTool.error.acessingFile">Σφάλμα: Το αρχείο {$filePath} δεν υπάρχει ή δεν μπορεί να προσπελαστεί</message>
-	<message key="admin.copyAccessLogFileTool.error.copyingFile">Σφάλμα: δεν μπορεί να αντιγραφεί το αρχείο από {$filePath} στο {$tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.error.deletingFile">Σφάλμα: δεν μπορείτε να διαγράψετε το αρχείο {$tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Προειδοποίηση: το αρχείο {$filePath} υπάρχει ήδη μέσα στο φάκελο των στατιστικών χρήσης.</message>
-	<message key="admin.copyAccessLogFileTool.success">Επιτυχία: {$filePath} σε {$destinationPath}</message>
-	<message key="admin.settings.security">Ασφάλεια</message>
+	
 	<message key="admin.settings.options">Επιλογές</message>
-	<message key="admin.settings.security.plugins">Αποτρέψτε τους διαχειριστές περιοδικού από να εγκαταστούν, αναβαθμίζουν ή να διαγράφουν plugins.</message>
-	<message key="admin.settings.useAlphalist">Για ιστότοπους με πολλά περιοδικά, προβάλλετε μια αλφαβητική λίστα στην αρχική σελίδα για την γρήγορη αλφαβητική πλοήγηση μεταξύ των περιοδικών.</message>
 	<message key="admin.settings.usePaging">Για ιστοτόπους με πολλά περιοδικά, σάστε τη λίστα των περιοδικών σε πολλαπλές σελίδες.</message>
 	<message key="admin.settings.journalsList">Στοιχεία περιοδικού</message>
 	<message key="admin.settings.journalsList.description">Παρακαλούμε επιλέξτε τα στοιχεία του περιοδικού που θα εμφανίζονται για κάθε περιοδικό στην ιστοσελίδα του.</message>
