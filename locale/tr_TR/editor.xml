@@ -13,11 +13,7 @@
   -->
 
 <locale name="tr_TR" full_name="Türkçe">
-	<message key="editor.article.reviewForms">Değerlendirme Formları</message>
-	<message key="editor.article.selectReviewForm">Değerlendirme Formu Seç</message>
-	<message key="editor.article.clearReviewForm">Değerlendirme Formunu Temizle</message>
 	<message key="editor.home">Editör Ana Sayfa</message>
-	<message key="editor.article.confirmChangeReviewForm">Uyarı: İnceleme formunu değiştirdiğinizde hakemlerin bu formu kullanarak verdiği tüm cevaplar etkilenecektir. Devam etmek istediğinizden emin misiniz?</message>
 	<message key="editor.submissionsAndPublishing">Gönderiler ve Yayımlama</message>
 	<message key="editor.submissionQueue">Gönderi Kuyruğu</message>
 	<message key="editor.submissionArchive">Gönderi Arşivi</message>
@@ -103,9 +99,7 @@
 	<message key="editor.issues.noLiveIssues">Yayınlanan Sayı Yok</message>
 	<message key="editor.issues.open">Aç</message>
 	<message key="editor.issues.pages">Sayfalar</message>
-	<message key="editor.navigation.issues">Sayılar</message>
 	<message key="editor.navigation.futureIssues">Gelecek Sayılar</message>
-	<message key="editor.navigation.createIssue">Sayı Çıkar</message>
 	<message key="editor.navigation.issueArchive">Önceki Sayılar</message>
 	<message key="editor.article.designateReviewVersion">Orjinal dosyayı Değerlendirme Sürümü olarak belirle</message>
 	<message key="editor.article.uploadReviewVersion">Düzeltilmiş değerlendirme dosyası yükle</message>
@@ -220,7 +214,4 @@
 	<message key="editor.issues.backToIssueGalleys">Sayı dizgilerine geri dön</message>
 	<message key="editor.issues.confirmDeleteGalley">Bu sayı dizgisini silmek istediğinizden emin misiniz?</message>
 	<message key="editor.article.remove">Kaldır</message>
-	<message key="editor.notifyUsers.allMailingList">Posta listesinde tüm e-postalar dahil ({$count} e-posta)</message>
-	<message key="editor.issues.resetArticlePublicationDates">Makale yayın tarihlerini sıfırla</message>
-	<message key="editor.publicGalleyIdentificationExists">Bu makale için '{$publicIdentifier}' genel belirleyicisi zaten başka bir baskı için verilmiş. Lütfen bu makale için tekil bir baskı belirleyicisi seçiniz.</message>
 </locale>

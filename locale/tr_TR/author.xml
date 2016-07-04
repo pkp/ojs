@@ -53,7 +53,6 @@
 	<message key="author.submit.submissionLocale">Gönderi Dili</message>
 	<message key="author.submit.submissionLocaleDescription">Bu dergi çeşitli dillerde başvuru kabul eder. Açılabilir menüden birincil olarak kullanmak istediğiniz dili seçiniz.</message>
 	<message key="author.submit.submissionChecklist">Başvuru Kontrol Listesi</message>
-	<message key="submission.submit.submissionChecklistDescription">Yazarlar gönderiye devam edebilmek için Başvuru Kontrol Listesi'ndeki gerekliliklerin hepsini yerine getirdiklerini belirtmelidir.</message>
 	<message key="author.submit.verifyChecklist">Devam etmeden önce başvuru kontrol listesindeki her öğenin tamalanmış olduğundan emin olmalısınız.</message>
 	<message key="author.submit.copyrightNoticeAgree">Yazarlar bu dergi tarafından yayımlanan gönderiler için Telif Hakkı koşullarını kabul etmiş sayılır. Telif Hakkı koşulları bu gönderi için de geçerli olacaktır (editöre iletmek istediğiniz yorumları aşağıya yazabilirsiniz).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Devam etmeden önce telif hakkı ile ilgili koşulları kabul etmeniz gerekmektedir.</message>
@@ -68,10 +67,7 @@
 	<message key="author.submit.addAuthor">Yazar Ekle</message>
 	<message key="author.submit.deleteAuthor">Yazarı Sil</message>
 	<message key="author.submit.submissionIndexingDescription">Gönderinin dizinlenmesi için anahtar kelime giriniz. Anahtar kelimeler arasında noktalı virgül kullanınız (Örneğin: Anahtar Kelime 1; Anahtar Kelie 2; ...).</message>
-	<message key="author.submit.submissionSupportingAgencies">Katkıda Bulunanlar ve Destekleyen Kuruluşlar</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Bu çalışmayı maddi ya da başka bir şekilde destekleyen kuruluşları (kişi, kurum veya servis) tanımlar. Destekleyenleri noktalı virgül ile ayırarak yazınız (Örneğin: Sönmez ÇELİK; Doğuş Üniversitesi; Doğuş Üniversitesi Kütüphanesi).</message>
 	<message key="author.submit.coverageInstructions">Araştırma materyalinin coğrafik konumları, kronolojik ya da tarihsel kapsamı ve/veya karekteristiği.</message>
-	<message key="author.submit.subjectClassInstructions">Sınıflandırma terimleri ve uygunsa numaralarını seçmek için bağlantı kurulmuş sınıflama sitemini kullanınız.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Türkçe = tr; İngilizce = en. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Diğer Kodlar</a>.]]></message>
 	<message key="author.submit.form.authorRequired">En az bir yazar gerekli.</message>
 	<message key="author.submit.form.authorRequiredFields">Her yazarın adı, soyadı ve e-posta adresi gereklidir.</message>
@@ -104,7 +100,6 @@
 	<message key="author.submit.suppFile.dataSet">Veri Seti</message>
 	<message key="author.submit.suppFile.sourceText">Kaynak Metin</message>
 	<message key="author.submit.suppFile.briefDescription">Kısa açıklama</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Katkıda Bulunanlar ve Destekleyen Kuruluşlar</message>
 	<message key="author.submit.suppFile.availableToPeers">Kör hakemlikten taviz vermeden dosyayı hakemlerin görmesine izin ver (Üst veri hariç)</message>
 	<message key="author.submit.suppFile.publisherDescription">Sadece basılı materyalde kullanınız.</message>
 	<message key="author.submit.suppFile.dateDescription">Lütfen verinin toplandığı ya da aracın yapıldığı tarihi belirtiniz.</message>
@@ -121,7 +116,6 @@
 	<message key="author.submit.filesSummary">Dosya Özeti</message>
 	<message key="author.submit.finishSubmission">Gönderiyi Bitir</message>
 	<message key="author.submit.submissionComplete">Gönderi tamamlanmıştır. {$journalTitle} adlı dergimize makale gönderdiğiniz için teşekkür ederiz. Makaleniz ile ilgili işlem sürecini kullanıcı adı ve şifrenizle giriş yaparak takip edebilirsiniz.</message>
-	<message key="author.submit.expedite"><![CDATA[Eğer başvuru ile ilgili herhangi bir editöryal işlem gerekmiyor ve yazı gönderilen biçimi ile yayına hazır durumda ise, doğrudan yayınlanmayı bekleme kuyruğuna eklenebilir. Eğer yazı bu durumda ise <a href="{$expediteUrl}" class="action">yayınlanma kuyruğuna eklemek için tıklayın</a>. (Not: Yalnızca dergi editörlerinin gönderdikleri yazılar için bu seçenek uygulanır).]]></message>
 	<message key="author.article.uploadAuthorVersion">Yazar Sürümünü Yükle</message>
 	<message key="author.article.copyeditedFile">Sayfa Düzenlemesi Yapılmış Dosya</message>
 	<message key="author.article.authorRevisedFile">Yazar Dosyası</message>

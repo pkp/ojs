@@ -22,11 +22,9 @@
 	<message key="admin.locale.maybeIncomplete">İşaretlenmiş diller tamamlanmamış olabilir.</message>
 	<message key="admin.languages.confirmUninstall">Bu dili kulanımdan kaldırmak istediğinizden emin misiniz? Dil kaldırılınca bu dili kullanan dergilerde sorun olabilir.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Sisteme eklemek üzere yeni bir dil seçiniz. Sitedeki dergiler kullanmaya başlamadan önce, diller sisteme yüklenmelidir. Yeni dil eklenmesi konusunda ADS belgelerinde daha fazla bilgi bulabilirsiniz.</message>
-	<message key="admin.languages.downloadLocales">Dil İndir</message>
 	<message key="admin.languages.downloadFailed">Dil indirme başarısız. Hata mesaj(lar)ı aşağıda belirtilmiştir.</message>
 	<message key="admin.languages.localeInstalled">"{$locale}" dili yüklendi.</message>
 	<message key="admin.languages.download">Dil İndir</message>
-	<message key="admin.languages.reloadDefaultEmailTemplates">Varsayılan e-posta şablonları güncelle</message>
 	<message key="admin.languages.download.cannotOpen">PKP web sitesinden dil tanımlayıcısı açılamıyor.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Dil kayıt dosyasına yeni dil eklenemiyor, tipik "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">ADS Üye Veri Tabanı</message>
@@ -42,7 +40,6 @@
 	<message key="admin.contexts.create">Dergi Oluştur</message>
 	<message key="admin.journals.createInstructions">Otomatik olarak bu derginin yöneticisi olarak kaydedileceksiniz. Yeni bir dergi oluşturduktan sonra, ayarları ile devam edebilmek ve kullanıcı kaydı yapabilmek için yönetici olarak girin.</message>
 	<message key="admin.journals.urlWillBe">Bu dergiyi tanımlayan kısa bir kelime ya da kısaltma olmalıdır. Derginin URL adresi {$sampleUrl} şeklinde olabilir.</message>
-	<message key="admin.journals.form.titleRequired">Bir başlık gerekli.</message>
 	<message key="admin.contexts.form.pathRequired">Bir yol gerekli.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Yol sadece alfanümerik karekterler, alt çizgi, tire içerebilir ve bir alfanümerik karekterle başlamak ve bitmek zorundadır.</message>
 	<message key="admin.contexts.form.pathExists">Seçilen yol bir başka dergi tarafından kullanılmaktadır.</message>
@@ -61,7 +58,6 @@
 	<message key="admin.mergeUsers.allUsers">Tüm Kayıtlı Üyeler</message>
 	<message key="admin.mergeUsers.confirm">Seçilen {$oldAccountCount} hesap/hesapları "{$newUsername}" kullanıcı hesabında birleştirmek istediğinizen emin misiniz? Seçilen {$oldAccountCount} hesap daha sonra açılamaz. Bu işlem geri alınamaz.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Kayıtlı olmayan üyeler.</message>
-	<message key="admin.settings.useAlphalist">Birden çok dergi olan siteler için, dergiler arasında hızlı yönlendirmeyi sağlayan alfabetik liste göstermektedir.</message>
 	<message key="admin.settings.journalsList.description">Lütfen site sayfasında her bir dergi için listelenen dergi elemanlarını seçiniz.</message>
 	<message key="admin.categories.enable.description">Dergilerin geniş kümeler düzenlemenize yardımcı olmak için Site Yöneticisi burada kategorileri tanımlayarak bir dizi seçebilir. Dergi yöneticisi her bir dergi için bu kategorilerden birçoğunu seçebilir ve okuyucular dergi koleksiyonlarını katagorilere göre listeleyebilir.</message>
 	<message key="admin.categories.editTitle">Kategori Düzenle</message>
@@ -80,12 +76,4 @@
 	<message key="admin.categories.noneCreated">Herhangi bir kategori oluşturulamadı.</message>
 	<message key="admin.categories.confirmDelete">Bu kategoriyi silmek istediğinize emin misiniz?</message>
 	<message key="admin.categories.nameRequired">Bir kategori adı gerekli.</message>
-	<message key="admin.copyAccessLogFileTool.error.acessingFile">Hata: {$filePath} geçici klasörü oluşturamıyor.</message>
-	<message key="admin.copyAccessLogFileTool.error.copyingFile">Hata: {$tmpFilePath} için {$filePath} geçici dosyası kopyalanamaz</message>
-	<message key="admin.copyAccessLogFileTool.error.deletingFile">Hata: {$tmpFilePath} dosyası silinemez</message>
-	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Uyarı: {$filePath} dosyası kullanıcı istatisikleri dizininde zaten var.</message>
-	<message key="admin.copyAccessLogFileTool.success">Başarı: {$destinationPath} kaynağından {$filePath} hedefine</message>
-	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Hata: {$tmpDir} geçici klasörü oluşturuşamıyor</message>
-	<message key="admin.settings.security">Güvenlik</message>
-	<message key="admin.settings.security.plugins">Dergi yöneticilerinin güncelleme veya eklentileri silmesini engelle.</message>
 </locale>
