@@ -4,7 +4,7 @@
 <!--
   * locale/eu_ES/manager.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="eu_ES" full_name = "Basque (Euskara)">
+<locale name="eu_ES" full_name="Euskara">
 	<message key="manager.emails.confirmResetAll">Ziur zaude aldizkariko mezu-txantiloi guztiak berrezarri nahi dituzula? Egin dituzun aukera pertsonal guztiak galduko dituzu</message>
 	<message key="manager.files.note">Oharra: Fitxategi-arakatzailea, aldizkari bateko fitxategiak eta direktorioak zuzenean ikusi eta manipulatzeko aukera ematen duen eginbide aurreratu bat da.</message>
 	<message key="manager.groups">Lantaldea</message>
@@ -23,7 +23,7 @@
 	<message key="manager.journalManagement">Aldizkariaren kudeaketa</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">Locale honentzat zehaztu dituzun aldizkari-ezarpen guztiak ordeztuko ditu ekintza honek.</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Birkargatu locale hizkuntza-paketearen ezarpen lehenetsiak.</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS hainbat  hizkuntzatan jar daiteke erabilgarri erabiltzaileentzat. Gainera, hizkuntza anitzeko sistema ere eskain dezake, erabiltzaileei orri bakoitzean hizkuntza aldatzeko eta datu batzuk hainbat hizkuntzatan sartzeko aukera emanez.<br /><br/>OJSk onartzen duen hizkuntzaren bat beheko zerrendan ez badago, esan gune-administratzaileari instala dezala gune-administratzailearen interfazetik. Beste hizkuntza batzuk gehitzeko instrukzioak OJS dokumentazioan aurkituko dituzu.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS hainbat  hizkuntzatan jar daiteke erabilgarri erabiltzaileentzat. Gainera, hizkuntza anitzeko sistema ere eskain dezake, erabiltzaileei orri bakoitzean hizkuntza aldatzeko eta datu batzuk hainbat hizkuntzatan sartzeko aukera emanez.<br /><br />OJSk onartzen duen hizkuntzaren bat beheko zerrendan ez badago, esan gune-administratzaileari instala dezala gune-administratzailearen interfazetik. Beste hizkuntza batzuk gehitzeko instrukzioak OJS dokumentazioan aurkituko dituzu.]]></message>
 	<message key="manager.languages.noneAvailable">Ez dago beste hizkuntzarik erabilgarri. Aldizkari honetan hizkuntza gehiago erabili nahi badituzu, galdetu gune-administratzaileari.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Hau izango da aldizkariaren webguneko hizkuntza lehenetsia.</message>
 	<message key="manager.managementPages">Kudeaketako orriak</message>
@@ -82,9 +82,44 @@
 	<message key="manager.people.roleEnrollment">{$role} inskribatzea</message>
 	<message key="manager.people.syncUserDescription">Inskripzioak sinkronizatzean, zehaztutako aldizkarian daukaten funtzio bera emango zaie erabiltzaileei aldizkari honetan. Erabiltzaile multzoak (adib., Ebaluatzaileak) aldizkari batetik bestera sinkronizatzeko erabiltzen da.</message>
 	<message key="manager.plugins.description">Orri honetan, instalatuta dauden pluginak aztertu eta, nahi izanez gero, konfiguratu egin ditzake aldizkariaren kudeatzaileak. Pluginak bi kategoriatan banatzen dira, egiten duten funtzioaren arabera. Kategoriak behean azaltzen dira, kategoria bakoitzeko plugin multzoa zehaztuz.</message>
+	<message key="manager.reviewFormElement.changeType">Kontuz: Ebaluazio-inprimakiko elementu mota aldatzen baduzu aukera multzo bat izatetik irekia izatera, aukera multzoa ezabatu egingo da.</message>
+	<message key="manager.reviewFormElements">Inprimakiko elementuak</message>
+	<message key="manager.reviewFormElements.addResponseItem">Gehitu hautapena</message>
+	<message key="manager.reviewFormElements.checkboxes">Kontrol-laukiak (bat edo gehiago aukera daitezke)</message>
+	<message key="manager.reviewFormElements.chooseType">Aukeratu elementu mota</message>
+	<message key="manager.reviewFormElements.confirmDelete">Ziur zaude ebaluazio-inprimaki argitaratu bateko elementu bat ezabatu nahi duzula?</message>
+	<message key="manager.reviewFormElements.copyTo">Kopiatu hona:</message>
+	<message key="manager.reviewFormElements.create">Sortu elementu berria</message>
+	<message key="manager.reviewFormElements.dropdownbox">Goitibehera</message>
+	<message key="manager.reviewFormElements.edit">Editatu inprimaki-elementua</message>
+	<message key="manager.reviewFormElements.elementType">Elementu mota</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">Inprimaki-elementu honek elementu mota bat behar du.</message>
+	<message key="manager.reviewFormElements.form.questionRequired">Inprimaki-elementu honek galdera bat behar du.</message>
+	<message key="manager.reviewFormElements.noneCreated">Ez da inprimaki-elementurik sortu</message>
+	<message key="manager.reviewFormElements.possibleResponse">Hautapena</message>
+	<message key="manager.reviewFormElements.question">Elementua</message>
+	<message key="manager.reviewFormElements.radiobuttons">Aukera-botoiak (bakarra aukera daiteke)</message>
+	<message key="manager.reviewFormElements.required">Ebaluatzaileek bete egin behar dute elementua</message>
+	<message key="manager.reviewFormElements.smalltextfield">Hitz bakarreko testu-koadroa</message>
+	<message key="manager.reviewFormElements.textarea">Testu-koadro hedatua</message>
+	<message key="manager.reviewFormElements.textfield">Lerro bakarreko testu-koadroa</message>
+	<message key="manager.reviewForms">Ebaluazio-inprimakiak</message>
+	<message key="manager.reviewForms.completed">Bukatuta</message>
+	<message key="manager.reviewForms.confirmDeleteUnpublished">Ziur zaude argitaratu gabeko ebaluazio-inprimaki hau ezabatu nahi duzula?</message>
+	<message key="manager.reviewForms.create">Sortu Ebaluazio-inprimakia</message>
+	<message key="manager.reviewForms.description">Azalpena eta Instrukzioak</message>
+	<message key="manager.reviewForms.edit">Ebaluazio-inprimakia</message>
+	<message key="manager.reviewForms.form.titleRequired">Titulua eman behar zaio ebaluazio-inprimakiari.</message>
+	<message key="manager.reviewForms.inReview">Ebaluatzen</message>
+	<message key="manager.reviewForms.list.description">Hemen sortzen diren ebaluazio-inprimakiak emango zaizkie adituei ebaluazioa egiteko, bi testu-koadroz ("egilearentzat eta editorearentzat" lehenengoa eta "editorearentzat" bigarrena) osatutako inprimaki lehenetsiaren ordez. Ebaluazio-inprimakiak aldizkariaren atal jakin batean erabiltzeko jar daitezke, eta ataleko editoreek zein inprimaki erabili aukeratu ahal izango dute ebaluazioa esleitzean. Kasu guzietan, editoreek ebaluazio-txostenak sartzeko aukera izango dute egilearekin izaten duten korrespondentzian.</message>
+	<message key="manager.reviewForms.noneChosen">Bat ere ez / Inprimaki librea</message>
+	<message key="manager.reviewForms.noneCreated">Ez da ebaluazio-inprimakirik sortu</message>
+	<message key="manager.reviewForms.preview">Inprimakiaren aurrebista</message>
+	<message key="manager.reviewForms.title">Titulua</message>
 	<message key="manager.sections.abstractsNotRequired">Ez zaie eskatuko laburpenik</message>
 	<message key="manager.sections.assigned">Atal honetako editoreak</message>
 	<message key="manager.sections.create">Sortu atala</message>
+	<message key="manager.sections.disableComments">Desgaitu irakurleen iruzkinak atal honetarako.</message>
 	<message key="manager.section.sectionEditorInstructions">Gehitu Ataleko editore bat, atal honetara iristen diren bidalketak automatikoki esleitzeko Ataleko editore horri. (Bestela, Ataleko editorea eskuz esleitu ahal izango da, bidalketa bat iristen den bakoitzean). Editore bat gehitzen bada, automatikoki esleitu ahal izango zaio atal honetarako bidaltzen diren lanen EBALUAZIOA (adituen ebaluazioa) eta/edo EDIZIOA (zuzenketa, maketazioa eta proba-zuzenketa) gainbegiratzea. Ataleko editoreak sortzeko, Aldizkariaren kudeaketako Funtzioetan, Ataleko editoreak esteka sakatu behar da. </message>
 	<message key="manager.sections.editorRestriction">Editoreek eta Ataleko editoreek bakarrik bidal ditzakete lanak.</message>
 	<message key="manager.sections.editors">Ataleko editoreak</message>
@@ -144,7 +179,13 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Zuzenketak egiteko instrukzioak eskuragarri izango dituzte Zuzentzaileek, Egileek, eta Ataleko editoreek Bidalketen edizioaren fasean. Behean ematen da instrukzio multzo lehenetsi bat, HTML formatuan. Edozein unetan aldatu edo ordeztu dezake Aldizkariaren kudeatzaileak (HTML formatuan nahiz testu arruntean).</message>
 	<message key="manager.setup.copyrightNotice">Copyright informazioa</message>
 	<message key="manager.setup.coverage">Estaldura</message>
+	<message key="manager.setup.coverageChronExamples">(Adib., Errenazimentua; Jurasikoa; Hirugarren hiruhilekoa; etab.)</message>
+	<message key="manager.setup.coverageChronProvideExamples">Eman eremu honi buruzko termino kronologiko edo historiko esanguratsuak</message>
 	<message key="manager.setup.coverageDescription">Kokapen geo-espaziala, garai kronologikoa edo historikoa, eta/edo ikerketaren ezaugarriak.</message>
+	<message key="manager.setup.coverageGeoExamples">(Adib.; Penintsula iberiarra; Estratosfera; Baso boreala; etab.)</message>
+	<message key="manager.setup.coverageGeoProvideExamples">Eman eremu honi buruzko termino geo-espazial edo geografiko esanguratsuak</message>
+	<message key="manager.setup.coverageResearchSampleExamples">(Adib., Adina; Generoa; Etnia; etab.)</message>
+	<message key="manager.setup.coverageResearchSampleProvideExamples">Eman ikerketaren ezaugarrien adibideak</message>
 	<message key="manager.setup.currentIssue">Uneko zenbakia</message>
 	<message key="manager.setup.customizingTheLook">5. urratsa. Aldizkariaren itxura</message>
 	<message key="manager.setup.customTags">Etiketa pertsonalizatuak</message>
@@ -158,6 +199,12 @@
 	<message key="manager.setup.disciplineProvideExamples">Eman aldizkarian tratatzen diren diziplina akademikoen adibideak</message>
 	<message key="manager.setup.displayCurrentIssue">Gehitu uneko zenbakiaren aurkibidea (baldin badago).</message>
 	<message key="manager.setup.editorDecision">Editorearen erabakia</message>
+	<message key="manager.setup.editorialMembers">Joan Kontseilukideetara, eta gehitu Kontseilu editorialeko eta/edo Adituen kontseiluko kideak. Aldizkariaren edozein fasetan egin daiteke.</message>
+	<message key="manager.setup.editorialProcess1">Editore batek edo gehiagok egiten dituzte oinarrizko urratsak, funtzio zehatzik izendatu gabe.</message>
+	<message key="manager.setup.editorialProcess2">Editore nagusi bat (Zuzendaria) arduratzen da Bidalketen ilaraz eta Aurkibideaz eta Ataleko editoreak arduratzen dira Bidalketen ebaluazioaz eta Bidalketen edizioaz.</message>
+	<message key="manager.setup.editorialProcess3">Editore nagusia (Zuzendaria) arduratzen da Bidalketen ilaraz, Bidalketen Edizioaz eta Aurkibideaz eta Ataleko editoreak arduratzen dira Bidalketen ebaluazioaz.</message>
+	<message key="manager.setup.editorialReviewBoard">Kontseilu editoriala / Adituen kontseilua</message>
+	<message key="manager.setup.editorialReviewBoardDescription">Aldizkariek Kontseilu editorialak izaten dituzte, aldizkariaren zuzendaritza editoriala gainbegiratzeko, editoreen izendapenean parte hartzeko, eta, kontseiluko kideen ospeari esker, aldizkariari bere esparruan izen ona emateko. Adituen kontseiluek antzeko funtzioa izaten dute baina, gainera, adituen ebaluazio-prozesua zuzentzen dute. Adituen kontseiluko kideek ez dute aldizkariaren administrazio-sistemarako sarbiderik izango baina adituen ebaluazioa egiteko erabilgarri daudenen zerrendan sartuko dira.</message>
 	<message key="manager.setup.emailBounceAddress">Erreboteko helbidea</message>
 	<message key="manager.setup.emailBounceAddressDescription">Mezu bat bidali ezinda geratzen den bakoitzean, errore-mezu bat iritsiko da helbide honetara.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Oharra:</strong> Aukera hau aktibatzeko, gune-administratzaileak <tt>allow_envelope_sender</tt> aukera gaitu behar du konfigurazio-fitxategian. Funtzionalitate hau erabili ahal izateko, zerbitzari-konfigurazio gehiago egin beharko dira seguru asko (eta zerbitzari guztietan ezin izango da), OJS dokumentazioan adierazten den bezala.]]></message>
@@ -167,6 +214,11 @@
 	<message key="manager.setup.enableAnnouncements">Gaitu Aldizkariaren kudeatzaileak aldizkarian anuntzioak gehitzeko.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Erakutsi</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">anuntzio berrienak aldizkariaren hasierako orrian.</message>
+	<message key="manager.setup.enablePageNumber">Lanen orrialde-zenbakiak eskuz kalkulatu eta sartuko dira Aurkibidean (adib., 13-26 orr.)</message>
+	<message key="manager.setup.enablePublicArticleId">Identifikatzaile pertsonalizatuak erabiliko dira argitaratutako lanak identifikatzeko.</message>
+	<message key="manager.setup.enablePublicGalleyId">Identifikatzaile pertsonalizatuak erabiliko dira argitaratutako lanen galeradak identifikatzeko (adib. HTML edo PDF fitxategiak).</message>
+	<message key="manager.setup.enablePublicIssueId">Identifikatzaile pertsonalizatuak erabiliko dira zenbakiak identifikatzeko.</message>
+	<message key="manager.setup.enablePublicSuppFileId">Identifikatzaile pertsonalizatuak erabiliko dira artikuluen fitxategi osagarriak identifikatzeko.</message>
 	<message key="manager.setup.enableUserRegistration">Erabiltzaileek beren burua erregistra dezakete egunkarian funtzio hauetako batean edo gehiagotan:</message>
 	<message key="manager.setup.enableUserRegistration.author">Egile (aldizkarira materiala bidal dezakete)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Irakurle (jakinarazpenak jasoko dituzte eta harpidedun moduan hartuak izango dira)</message>
@@ -192,7 +244,6 @@
 	<message key="manager.setup.guidingSubmissions">3. urratsa. Bidalketak egiteko gidalerroak</message>
 	<message key="manager.setup.homepageImage">Hasierako orriko irudia</message>
 	<message key="manager.setup.homepageImageDescription">Gehitu irudi bat edo grafiko bat orriaren erdian.</message>
-	<message key="manager.setup.includeCreativeCommons">Sarrera libre berehalakoa edo geroratua ematen duten aldizkarietan, erantsi Creative Commons lizentzia bat argitaratutako lan guztiekin, behar den garaian.</message>
 	<message key="manager.setup.information">Informazioa</message>
 	<message key="manager.setup.information.description">Alboko barrako "Informazioa" sailean aldizkariaren azalpen labur bat ematen da liburuzainentzat eta egile eta irakurleentzat.</message>
 	<message key="manager.setup.information.forAuthors">Egileentzat</message>
@@ -221,6 +272,8 @@
 	<message key="manager.setup.journalLogo.altText">Aldizkariaren logoa</message>
 	<message key="manager.setup.journalPageFooter">Aldizkariko orri-oina</message>
 	<message key="manager.setup.journalPageFooterDescription">Hau da zure aldizkariko orri-oina. Aldatu nahi baduzu, idatzi orri-oinaren HTML kodea beheko testu-koadroan. Adibidez, beste nabigazio-barra bat, kontagailu bat, etab. Orri-oina orrialde guztietan agertuko da.</message>
+	<message key="manager.setup.journalPageHeader">Aldizkariko orri-burua</message>
+	<message key="manager.setup.journalPageHeaderDescription">Aldizkariaren tituluaren eta logoaren bertsio grafikoa (.gif, .jpg, edo .png fitxategi bat), hasierako orrian jarri dena baino txikiagoa normalean, karga daiteke aldizkariko orri-buru bezala ager dadin, bestela agertuko litzatekeen testu-bertsioaren ordez.</message>
 	<message key="manager.setup.journalPolicies">2. urratsa. Aldizkariaren politika</message>
 	<message key="manager.setup.journalSetup">Aldizkariaren konfigurazioa</message>
 	<message key="manager.setup.journalSetupUpdated">Zure aldizkariaren konfigurazioa eguneratu da.</message>
@@ -342,6 +395,8 @@
 	<message key="manager.setup.sponsors">Erakunde babesleak</message>
 	<message key="manager.setup.sponsorsDescription">Aldizkariari babesa eta laguntza ematen dioten erakundeen izena (adib., elkarte akademikoak, unibertsitateko sailak, kooperatibak, etab.) Aldizkariari buruz orrian agertuko da, nahi izanez gero, eskerrak emanez.</message>
 	<message key="manager.setup.stepsToJournalSite">Aldizkariaren webgunea konfiguratzeko bost urrats</message>
+	<message key="manager.setup.subjectClassification">Gaikako sailkapena</message>
+	<message key="manager.setup.subjectClassificationExamples">(Adib., Matematiken gaikako sailkapena; Kongresuko Liburutegiko sailkapena)</message>
 	<message key="manager.setup.subjectExamples">(Adib., Fotosintesia; Zulo beltzak; Lau koloretako maparen teorema; Bayes-en teorema)</message>
 	<message key="manager.setup.subjectKeywordTopic">Gako-hitzak</message>
 	<message key="manager.setup.subjectProvideExamples">Eman gako-hitzen edo gaien adibideak, egileentzako laguntza gisa</message>
@@ -402,19 +457,14 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">hilabetera egongo dira erabilgarri sarrera libreko formatuan.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Hautatu baliozko denbora bat.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Ondorengo Sarrera libre geroratuko politika hau azalduko da Aldizkariari buruz orrian, Politikak izenburuan . </message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Erabili horretarako dagoen kontrol-laukia.</message>
 	<message key="manager.subscriptionPolicies.expiry">Harpidetzaren amaiera</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Harpidetza amaitutakoan, irakurleek ez dute inolako aukerarik izango harpidetza bidezko edukia ikusteko, edo harpidetza amaitu baino lehenago argitaratutako lanak ikusteko aukera izango dute.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Erabat amaitu harpidetza</message>
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Harpidetza amaitutakoan, irakurleek ezingo dute ikusi harpidetza-bidezko edukirik.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Zati batean amaitu harpidetza</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Harpidetza amaitutakoan, irakurleek ezingo dute ikusi harpidetza bidezko eduki berririk, baina lehenago argitaratuko lanak ikusi ahal izango dituzte.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Harpidetza amaitu eta handik </message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">hilabetera bidali mezua harpidedunei.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Harpidetza amaitu eta handik </message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">astera bidali mezua harpidedunei.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Harpidetza amaitu baino </message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">hilabete lehenago bidali mezua harpidedunei.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Harpidetza amaitu baino </message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">aste lehenago bidali mezua harpidedunei.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Harpidetza-amaierako oroigarriak</message>
@@ -536,6 +586,8 @@
 	<message key="manager.plugins.deleteSuccess">Plugina ondo ezabatu da</message>
 	<message key="manager.plugins.doesNotExist">Plugina ez da existitzen</message>
 	<message key="manager.plugins.fileSelectError">Mesedez, lehenengo hautatu fitxategi bat</message>
+	<message key="manager.plugins.install">Instalatu plugin berri bat</message>
+	<message key="manager.plugins.installDescription">Inprimaki honek plugin berri bat kargatzeko eta instalatzeko aukera ematen du. Mesedez, ziurtatu plugina .tar.gz fitxategi gisa konprimatuta dagoela.</message>
 	<message key="manager.plugins.installedVersionNewer">Plugina existitzen da dagoeneko, eta instalatuta dagoen bertsioaren berdina edo berriagoa da.</message>
 	<message key="manager.plugins.installedVersionOlder">Plugina existitzen da dagoeneko, eta instalatuta dagoen bertsioaren berdina edo zaharragoa da.</message>
 	<message key="manager.plugins.installFailed">Instalazioak huts egin du</message>
@@ -560,9 +612,9 @@
 	<message key="manager.setup.historyDescription">Testua aldizkariaren web orriko “Aldizkariari buruz” atalean agertuko da, eta tituluetan, talde editorialean eta aldizkariaren argitalpen-historian garrantzitsuak diren beste zenbait elementutan egindako aldaketak deskribatzeko erabili daiteke.</message>
 	<message key="manager.setup.enableUserRegistration.reviewer">Ebaluatzaileak (aurkezpenak ebaluatzeko moduan daudenak)</message>
 	<message key="manager.setup.frequencyOfPublicationNote">Oharra: utzi elementuen hutsunea aldizkari honekin erabili ez bada, eta editoreek zenbakiak berrezarriko dituzte argitalpen-prozesuan.</message>
-	<message key="manager.setup.favicon">Aldizkariaren Favicon-a</message>
-	<message key="manager.setup.faviconDescription">Gehitu favicon bat aldizkari honentzat, nabigazio-barrarekin batera azaltzeko, erabiltzaileak zure orria bisitatzen ari direnean.</message>
-	<message key="manager.setup.faviconInvalid">Favicon-ak ez du baliozko formatua. Hauek dira onartzen diren formatuak: .ico, .png, and .gif.</message>
+	<message key="manager.setup.journalFavicon">Aldizkariaren Favicon-a</message>
+	<message key="manager.setup.journalFaviconDescription">Gehitu favicon bat aldizkari honentzat, nabigazio-barrarekin batera azaltzeko, erabiltzaileak zure orria bisitatzen ari direnean.</message>
+	<message key="manager.setup.journalFaviconInvalid">Favicon-ak ez du baliozko formatua. Hauek dira onartzen diren formatuak: .ico, .png, and .gif.</message>
 	<message key="manager.setup.principalContactDescription">Kokaleku hau editore nagusiaren, editore-kontseilariaren edo administrazioko langileen kokalekutzat har daiteke. Kokalekua aldizkariaren orri nagusian jarriko da, “Kontaktua” atalaren azpian, eta “Laguntza Teknikoko foroa” atalarekin batera.</message>
 	<message key="manager.setup.publisherNoteDescription">Testu hau “Aldizkariari buruz” orrian agertuko da, “Argitaratzailea” tituluaren azpian eta argitaratzailearen izena/url-aren gainean agertuko da, “Aldizkariaren babesleak” atalaren azpian.</message>
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">Ebaluazioak egiteko uzten den ohiko denbora</message>
@@ -625,6 +677,7 @@
 	<message key="manager.sections.confirmDelete">Ziur al zaude atal hau behin betiko ezabatu nahi duzula?</message>
 	<message key="manager.sections.alertDelete">Atal hau ezabatu aurretik, bertan argitaratutako artikuluak beste atal batzuetara mugitu behar dituzu.</message>
 	<message key="manager.setup.journalThumbnail">Aldizkariaren miniatura</message>
+	<message key="manager.setup.subjectClassificationURLValid">Mesedez, eman urruneko URL baliodun bat (sartu http://)</message>
 	<message key="manager.setup.useThumbnail">Miniatura</message>
 	<message key="manager.setup.categories">Kategoriak</message>
 	<message key="manager.setup.categories.description">Aukeratu kategoria egokienak goian zerrendatutako multzotik. Irakurleek kategoriaren arabera arakatu ahal izango dute aldizkari osotik.</message>

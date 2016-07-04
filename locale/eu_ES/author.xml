@@ -4,7 +4,7 @@
 <!--
   * locale/eu_ES/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="eu_ES" full_name = "Basque (Euskara)">
+<locale name="eu_ES" full_name="Euskara">
 	<message key="author.submit">Bidalketa berria</message>
 	<message key="author.track">Bidalketa aktiboak</message>
 	<message key="author.competingInterests"><![CDATA[Interes-gatazka <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Interes-gatazketako politika</a> ]]></message>
@@ -26,11 +26,11 @@
 	<message key="author.submit.step4">4. urratsa. Fitxategi osagarriak kargatu</message>
 	<message key="author.submit.step4a">4a. urratsa Fitxategi osagarri bat gehitu</message>
 	<message key="author.submit.step5">5. urratsa. Bidalketa berretsi</message>
-	<message key="author.submit.start">Hasi</message>
-	<message key="author.submit.metadata">Metadatuak sartu</message>
-	<message key="author.submit.upload">Bidalketa kargatu</message>
-	<message key="author.submit.supplementaryFiles">Fitxategi osagarriak kargatu</message>
-	<message key="author.submit.confirmation">Berretsi</message>
+	<message key="author.submit.start">1. Hasi</message>
+	<message key="author.submit.metadata">2. Metadatuak sartu</message>
+	<message key="author.submit.upload">3. Bidalketa kargatu</message>
+	<message key="author.submit.supplementaryFiles">4. Fitxategi osagarriak kargatu</message>
+	<message key="author.submit.confirmation">5. Berretsi</message>
 	<message key="author.submit.cancelSubmission">Bidalketa hau geroago osa dezakezu, Egilearen hasierako orrian Bidalketa aktiboak hautatuta.</message>
 	<message key="author.submit.notAccepting">Aldizkariak ez du bidalketarik onartzen orain.</message>
 	<message key="author.submit.requestWaiver">Eskatu salbuespena</message>
@@ -44,22 +44,23 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Zailtasunik baduzu,  <a href="mailto:{$supportEmail}">{$supportName}</a> da laguntza emateko kontaktua ]]></message>
 	<message key="author.submit.journalSection">Aldizkariaren atala</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Hautatu zein Ataletara bidali nahi duzun (ikusi Atalak eta Politikak <a href="{$aboutUrl}" target="_new">Aldizkariari buruz</a> orrian).]]></message>
-	<message key="submission.submit.selectSection">Hautatu atal bat.</message>
-	<message key="submission.submit.submissionChecklist">Bidalketa prestatzeko zerrenda</message>
-	<message key="submission.submit.submissionChecklistDescription">Bidalketa aldizkariari helarazteko prest dagoela adierazteko, markatu zerrendako puntu guztiak (editorearentzako oharrak ondoren gehi daitezke).</message>
+	<message key="author.submit.selectSection">Hautatu atal bat.</message>
+	<message key="author.submit.submissionChecklist">Bidalketa prestatzeko zerrenda</message>
+	<message key="author.submit.submissionChecklistDescription">Bidalketa aldizkariari helarazteko prest dagoela adierazteko, markatu zerrendako puntu guztiak (editorearentzako oharrak ondoren gehi daitezke).</message>
 	<message key="author.submit.verifyChecklist">Jarraitu ahal izateko, bidalketa prestatzeko zerrendako puntu guztiak osatuta daudela ziurtatu behar duzu.</message>
 	<message key="author.submit.copyrightNoticeAgree">Egileek onartzen dituzte Copyright informazio honetako baldintza guztiak. Baldintza horiek artikulua aldizkari honetan argitaratzen denean, argitaratzen bada, aplikatuko dira (editorearentzako oharrak behean gehi daitezke).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Jarraitu ahal izateko, Copyright informazioko baldintzak onartu behar dituzu.</message>
-	<message key="submission.submit.coverNote">Editorearentzako oharrak</message>
+	<message key="author.submit.commentsForEditor">Editorearentzako oharrak</message>
 	<message key="author.submit.comments">Idatzi testua (aukerakoa)</message>
 	<message key="author.submit.form.sectionRequired">Hautatu bidalketari dagokion atala.</message>
-	<message key="submission.submit.privacyStatement">Aldizkariaren Pribatutasun-deklarazioa</message>
+	<message key="author.submit.privacyStatement">Aldizkariaren Pribatutasun-deklarazioa</message>
 	<message key="author.submit.reorderInstructions">Berrordenatu egileak argitalpenean zerrendatuko diren ordena berean azaltzeko.</message>
 	<message key="author.submit.selectPrincipalContact">Korrespondentzia editorialerako kontaktu nagusia.</message>
 	<message key="author.submit.addAuthor">Gehitu egilea</message>
 	<message key="author.submit.deleteAuthor">Ezabatu egilea</message>
 	<message key="author.submit.submissionIndexingDescription">Sartu bidalketa indexatzeko hitzak edo terminoak, puntu eta komaz bereizita (1terminoa; 2terminoa; 3terminoa).</message>
 	<message key="author.submit.coverageInstructions">Kokapen geo-espaziala, garai kronologikoa edo historikoa, eta/edo ikerketaren ezaugarriak.</message>
+	<message key="author.submit.subjectClassInstructions">Erabili hiperestekatutako sailkapen-sistema bidalketa sailkatzeko terminoak eta, egoki bada, zenbakiak hautatzeko.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[euskara=eu; ingelesa=en; frantsesa=fr; gaztelania=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Kode gehiago</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Egile bat behintzat adierazi behar da.</message>
 	<message key="author.submit.form.authorRequiredFields">Egile bakoitzaren izena, abizena eta helbide elektronikoa eman behar dira.</message>
