@@ -4,21 +4,19 @@
 <!--
   * locale/pt_BR/default.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
   * Localization strings for the pt_BR (Português (Brasil)) locale.
-  * Translation by Desenvolvimento Web, Ibict/MCT
-  * Ramón Martins Sodoma da Fonseca (ramon@ibict.br)
-  *
+  * locale information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_%28pt_BR%29
   -->
- 
+
 <locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">A contribuição é original e inédita, e não está sendo avaliada para publicação por outra revista; caso contrário, deve-se justificar em "Comentários ao editor".</message>
 	<message key="default.journalSettings.checklist.fileFormat">O arquivo da submissão está em formato Microsoft Word, OpenOffice ou RTF.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">O texto está em espaço simples; usa uma fonte de 12-pontos; emprega itálico em vez de sublinhado (exceto em endereços URL); as figuras e tabelas estão inseridas no texto, não no final do documento na forma de anexos.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[O texto segue os padrões de estilo e requisitos bibliográficos descritos em <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Diretrizes para Autores</a>, na página Sobre a Revista.]]></message>
+	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Em caso de submissão a uma seção com avaliação pelos pares (ex.: artigos), as instruções disponíveis em <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Assegurando a avaliação pelos pares cega</a> foram seguidas.]]></message>
 	<message key="default.journalSettings.privacyStatement">Os nomes e endereços informados nesta revista serão usados exclusivamente para os serviços prestados por esta publicação, não sendo disponibilizados para outras finalidades ou a terceiros.</message>
 	<message key="default.journalSettings.openAccessPolicy">Esta revista oferece acesso livre imediato ao seu conteúdo, seguindo o princípio de que disponibilizar gratuitamente o conhecimento científico ao público proporciona maior democratização mundial do conhecimento.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">Autores tem permissão e são encorajados a submeter seus documentos a páginas pessoais ou portais institucionais, antes e após sua publicação neste periódico (sempre oferecendo a referência bibliográfica do item).</message>
@@ -52,11 +50,11 @@ Siga o seguinte protocolo para fazer revisões eletrônicas em seu manuscrito:
 <strong>Respondendo a dúvidas para o autor (DAs)</strong>
 &nbsp; Mantenha todas as DAs intactas e em negrito dentro do texto. Não as remova.
 &nbsp; Para responder a uma DA, insira um comentário após a dúvida. Delimite comentários da seguinte forma:
-<strong>[Comentário: ]</strong> 
+<strong>[Comentário: ]</strong>
 &nbsp; Ex.: <strong>[Comentário: Maior desenvolvimento da discussão da metodologia, como sugerido]</strong>
 
 <strong>Incluindo Comentários</strong>
-&nbsp; Use comentários para explicar alterações organizacionais ou revisões mais importantes 
+&nbsp; Use comentários para explicar alterações organizacionais ou revisões mais importantes
 &nbsp; Ex.: <strong>[Comentário: Parágrafo acima movido da p. 5 para a p. 7]</strong>
 &nbsp; Aviso: Ao se referir a numeração de páginas, use a numeração da cópia impressa enviada, pois a numeração pode ser alterada nas revisões eletrônicas.
 
@@ -68,9 +66,9 @@ Siga o seguinte protocolo para fazer revisões eletrônicas em seu manuscrito:
 <li><strong>Edição de texto final.</strong> O editor de texto verificará as alterções realizadas pelo autor, e incorporará as respostas do autor para produzir o documento final. Após concluir, o editor de texto enviará sua versão final por meio do sistema e notificará o editor de layout para produção da versão para publicação.</li>
 </ol>]]></message>
 
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
-</message>
+	<message key="default.journalSettings.emailSignature">________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Convidamos os leitores a se cadastrarem no serviço de notificação de publicação da revista. Clique em <a href="{$indexUrl}/{$journalPath}/user/register">Cadastro</a> no menu superior da página. O cadastro permitirá ao leitor receber o sumário via e-mail a cada nova edição. A lista procura também reivindicar um nível básico de apoio ou de leitura da revista. Leia a <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Política de privacidade</a>, que assegura aos leitores que seus nomes e endereços informados não serão utilizados para outros fins.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Deseja enviar contribuições à revista? Convidamos todos a conferir a seção <a href="{$indexUrl}/{$journalPath}/about">Sobre a revista</a> e ler as políticas das seções disponíveis, bem como as <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Diretrizes para autores</a>. É necessário que os autores se <a href="{$indexUrl}/{$journalPath}/user/register">cadastrem</a> no sistema  antes de submeter um artigo; caso já tenha se cadastrado basta <a href="{$indexUrl}/{$journalPath}/login">acessar</a> o sistema e iniciar o processo de 5 passos de submissão.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Convidamos as bibliotecas a listar revistas de Acesso Livre em seus catálogos de revistas eletrônicas. Este sistema de publicação é desenvolvido também para ser hospedado e operado por bibliotecas, em apoio ao trabalho de publicação das revistas do seu corpo acadêmico (saiba mais acessando a página oficial do <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
@@ -140,4 +138,6 @@ Siga o seguinte protocolo para fazer revisões eletrônicas em seu manuscrito:
 	<message key="section.default.policy">Política padrão de seção</message>
 	<message key="default.journalSettings.purchaseIssueFee">Adquirir edição</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">O pagamento desta taxa permite ver, baixar e imprimir esta edição.</message>
+	<message key="default.journalSettings.emailHeader">A seguinte mensagem será entregue em nome da {$journalName}.
+________________________________________________________________________</message>
 </locale>
