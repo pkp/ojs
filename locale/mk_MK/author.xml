@@ -53,7 +53,6 @@
 	<message key="author.submit.submissionLocale">Јазик на датотеката</message>
 	<message key="author.submit.submissionLocaleDescription">Системот прифаќа датотеки на неколку јазици. Изберете го основниот јазик на датотеката на паѓачкото мени подолу.</message>
 	<message key="author.submit.submissionChecklist">Список за проверка на поднесувањето</message>
-	<message key="submission.submit.submissionChecklistDescription">Обележете дека ова поднесување е подготвено да се смета од страна на системот со проверка на следниве ( коментари до уредникот може да се дадат подолу ).</message>
 	<message key="author.submit.verifyChecklist">Мора да бидете сигурни дека сите ставки во доставувањето се исполнети пред да продолжите понатаму.</message>
 	<message key="author.submit.copyrightNoticeAgree">Авторите се согласуваат со авторските права кои ќе бидат применети на овој труд, ако и кога ќе биде објавен ( коментарите до уредникот може да се дадат подолу ).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Мора да се согласите со Авторските права пред да продолжите.</message>
@@ -68,10 +67,7 @@
 	<message key="author.submit.addAuthor">Додади Автор</message>
 	<message key="author.submit.deleteAuthor">Избриши Автор</message>
 	<message key="author.submit.submissionIndexingDescription">Внесите термини за индексирање на поднесувањето, одделете ги термините со ; (термин1; термин2; термин3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Оддел за поддршка</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Внесете ги институциите (лица, организации итн) кои имаат придонес за содржината или обезбедиле финансирање за работата претставена во вашиот труд. Одделете ги со точка-запирка (пр.  John Doe,Metro University; Master University, Department of Computer Science).</message>
 	<message key="author.submit.coverageInstructions">Се однесува на гео-просторна локација, хронолошка и историска покриеност, и / или карактеристики на испитаниците.</message>
-	<message key="author.submit.subjectClassInstructions">Користете хиперлинкуван систем за класификација за да изберете класификациони термини и бројки, доколку постојат.Use the hyperlinked classification system to select classification terms and, if appropriate, numbers.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Македонски=mk; Англиски=en; Француски=fr; Шпански=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Дополнителни кодови</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Потребно е да наведете најмалку еден автор.</message>
 	<message key="author.submit.form.authorRequiredFields">Името, Презимето и е-маил адресата се задолжителни за секој автор.</message>
@@ -104,7 +100,6 @@
 	<message key="author.submit.suppFile.dataSet">Збирка на податоци</message>
 	<message key="author.submit.suppFile.sourceText">Изворен текст</message>
 	<message key="author.submit.suppFile.briefDescription">Краток опис</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Соработник или спонзорска организација</message>
 	<message key="author.submit.suppFile.availableToPeers">Презентирајте ја датотеката на рецезенти (без метаподатоци), што нема да го загрози „слепиот преглед“.</message>
 	<message key="author.submit.suppFile.publisherDescription">Користете само формално објавени материјали.</message>
 	<message key="author.submit.suppFile.dateDescription">Датум кога податоците се собрани или инструментот креиран.</message>
@@ -121,7 +116,6 @@
 	<message key="author.submit.filesSummary">Преглед на датотеката</message>
 	<message key="author.submit.finishSubmission">Заврши поднесување</message>
 	<message key="author.submit.submissionComplete">Поднесувањето е извршено. Ви благодариме за вашиот интерес во издаваштвото со {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Ако ова поднесување е во формат кој е подготвен за објавување без понатамошно разгледување, може да се стави директно во последната фаза на уредување со <a href="{$expediteUrl}" class="action">Кликање овде</a>. (Забелешка: Само уредниците ја имаат оваа опција за нивните поднесувања.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Прикачи верзија на авторот</message>
 	<message key="author.article.copyeditedFile">Лекторирана датотека</message>
 	<message key="author.article.authorRevisedFile">Авторска датотека</message>

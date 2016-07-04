@@ -15,7 +15,6 @@
 	<message key="admin.hostedJournals">Домаќин списание</message>
 	<message key="admin.settings.journalRedirect">Пренасочување на списание</message>
 	<message key="admin.settings.options">Опции</message>
-	<message key="admin.settings.useAlphalist">За страница со многу списанија,  прикажи листа на почетната страница овозможувајќи брза алфабетска навигација помеѓу списанијата. </message>
 	<message key="admin.settings.usePaging">За страница со многу списанија, подели ја листата на списанија на неколку страници.</message>
 	<message key="admin.settings.journalRedirectInstructions">Барањата на главната страница ќе бидат пренасочени на ова списание. Ова може да биде корисно ако страницата е домаќин на само едно списание, на пример.</message>
 	<message key="admin.settings.noJournalRedirect">Без пренасочување</message>
@@ -29,11 +28,9 @@
 	<message key="admin.locale.maybeIncomplete">Означените локации може да се нецелосни.</message>
 	<message key="admin.languages.confirmUninstall">Дали сте сигурни дека сакате да ја деинсталирате оваа локација?Ова може да влијае на било кое моментално поставено списание кое ја користи оваа локација.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Одберете ги додатните локации за да инсталирате подршка за овој систем. Локациите мора да бидат инсталирани пред да може да се користат од страна на поставените списанија. Види ја OJS документацијата за информации за додавање на поддршка за новите јазици.</message>
-	<message key="admin.languages.downloadLocales">Преземи ја локацијата</message>
 	<message key="admin.languages.downloadFailed">Преземањето на локацијата не е успешно.Пораката за грешка подолу го опишува неуспехот.</message>
 	<message key="admin.languages.localeInstalled"> "{$locale}" локацијата е инсталирана.</message>
 	<message key="admin.languages.download">Преземи ја локацијата</message>
-	<message key="admin.languages.reloadDefaultEmailTemplates">Вчитај стандардно е-мејл шаблони</message>
 	<message key="admin.languages.download.cannotOpen">Не може да се отвори опишувачот за јазик од PKP веб страната.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Не можете да вметнете нова локација во локалниот регистар на датотеки, вообичаено "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">OJS корисник на базата на податоци</message>
@@ -49,7 +46,6 @@
 	<message key="admin.contexts.create">Креирај списание</message>
 	<message key="admin.journals.createInstructions">Автоматски ќе бидете додадени како управник на ова списание. По создавање на ново списание, треба да се внесете како управник за да продолжите со својата поставеност и  запишување на корисници.</message>
 	<message key="admin.journals.urlWillBe">Ова треба да биде еден краток збор или акроним кој го идентификува списанието. URL-то на списанието ќе биде{$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">Наслов е потребен.</message>
 	<message key="admin.contexts.form.pathRequired">Патека е потребна.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Патеката може да содржи само алфанумерички карактери, долни црти, и тире, и мора да започне и заврши со алфанумерички карактер.</message>
 	<message key="admin.contexts.form.pathExists">Селектираната патека е веќе во употреба од друго списание.</message>

@@ -12,11 +12,7 @@
   -->
 
 <locale name="mk_MK" full_name="Македонски јазик">
-	<message key="editor.article.reviewForms">Форми за преглед</message>
-	<message key="editor.article.selectReviewForm">Избери форма за преглед</message>
-	<message key="editor.article.clearReviewForm">Избриши ја формата за преглед</message>
 	<message key="editor.home">Уредник на насловна</message>
-	<message key="editor.article.confirmChangeReviewForm">Предупредување: Промената на формата за преглед ќе влијае на секој лекториран одговор направен со користење на овој образец. Дали сте сигурни дека сакате да продолжите?</message>
 	<message key="editor.reassign">Повторно именување</message>
 	<message key="editor.submissionsAndPublishing">Поднесувања и издаваштво</message>
 	<message key="editor.submissionQueue">Редица на поднесувања</message>
@@ -115,9 +111,7 @@
 	<message key="editor.issues.backToIssueGalleys">Врати се во издание galleys</message>
 	<message key="editor.issues.viewingGalley">Преглед на издание Galley</message>
 	<message key="editor.issues.confirmDeleteGalley">Дали си сигурен дека сакаш да ја избришеш оваа издание galley?</message>
-	<message key="editor.navigation.issues">Изданија</message>
 	<message key="editor.navigation.futureIssues">Идни изданија</message>
-	<message key="editor.navigation.createIssue">Креирај издание</message>
 	<message key="editor.navigation.issueArchive">Претходно издание</message>
 	<message key="editor.article.designateReviewVersion">Назначување на оригиналната датотека како верзија за преглед</message>
 	<message key="editor.article.uploadReviewVersion">Прикачи ревидирана верзија за преглед</message>
