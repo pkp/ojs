@@ -26,11 +26,11 @@
 	<message key="author.submit.step4">Βήμα 4. Μεταφόρτωση συμπληρωματικών αρχείων</message>
 	<message key="author.submit.step4a">Βήμα 4α. Προσθήκη συμπληρωματικού αρχείου</message>
 	<message key="author.submit.step5">Βήμα 5. Επιβεβαίωση της υποβολής</message>
-	<message key="author.submit.start">1. Έναρξη</message>
-	<message key="author.submit.upload">2. Μεταφορτώστε την υποβολή</message>
-	<message key="author.submit.metadata">3. Εισάγετε τα μεταδεδομένα</message>
-	<message key="author.submit.supplementaryFiles">4. Μεταφορτώστε τα συμπληρωματικά αρχεία (αν υπάρχουν)</message>
-	<message key="author.submit.confirmation">5. Επιβεβαίωση</message>
+	<message key="author.submit.start">Έναρξη</message>
+	<message key="author.submit.upload">Μεταφορτώστε την υποβολή</message>
+	<message key="author.submit.metadata">Εισάγετε τα μεταδεδομένα</message>
+	<message key="author.submit.supplementaryFiles">Μεταφορτώστε τα συμπληρωματικά αρχεία (αν υπάρχουν)</message>
+	<message key="author.submit.confirmation">Επιβεβαίωση</message>
 	<message key="author.submit.cancelSubmission">Μπορείτε να ολοκληρώσετε αυτή την υποβολή αργότερα επιλέγοντας "Ενεργές Υποβολές" από την αρχική σελίδα του συγγραφέα.</message>
 	<message key="author.submit.notAccepting">Αυτό το περιοδικό δεν δέχεται υποβολές τη συγκεκριμένη χρονική στιγμή.</message>
 	<message key="author.submit.requestWaiver">Αίτηση Παράβλεψης Εισφοράς Συγγραφέα</message>
@@ -44,16 +44,16 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Αντιμετωπίζετε δυσκολίες; Επικοινωνήστε με τον/την <a href="mailto:{$supportEmail}">{$supportName}</a> για παροχή βοήθειας.]]></message>
 	<message key="author.submit.journalSection">Ενότητα περιοδικού</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Επιλέξτε την κατάλληλη ενότητα για τη συγκεκριμένη υποβολή (συμβουλευτείτε τις σελίδες "Ενότητες και Πολιτικές" στην σελίδα <a  href="{$aboutUrl}">Σχετικά</a> με το περιοδικό).]]></message>
-	<message key="author.submit.selectSection">Επιλέξτε ενοτήτα...</message>
+	<message key="submission.submit.selectSection">Επιλέξτε ενοτήτα...</message>
 	<message key="author.submit.submissionChecklist">Λίστα ελέγχου υποβολής</message>
-	<message key="author.submit.submissionChecklistDescription">Προσδιορίστε εάν η συγκεκριμένη υποβολή είναι έτοιμη για εξέταση από αυτό το περιοδικό ελέγχοντας τα ακόλουθα (σχόλια προς τον επιμελητή μπορούν να προστεθούν παρακάτω).</message>
+	<message key="submission.submit.submissionChecklistDescription">Προσδιορίστε εάν η συγκεκριμένη υποβολή είναι έτοιμη για εξέταση από αυτό το περιοδικό ελέγχοντας τα ακόλουθα (σχόλια προς τον επιμελητή μπορούν να προστεθούν παρακάτω).</message>
 	<message key="author.submit.verifyChecklist">Πρέπει να βεβαιωθείτε ότι όλες οι απαιτήσεις της λίστας ελέγχου υποβολής ικανοποιούνται πριν συνεχίσετε.</message>
 	<message key="author.submit.copyrightNoticeAgree">Οι συγγραφείς αποδέχονται τους όρους της Δήλωσης Πνευματικών Δικαιωμάτων, που θα εφαρμοστούν στην συγκεκριμένη υποβολή εάν και όταν αυτή δημοσιευτεί από το περιοδικό (σχολίων προς τον επιμελητή μπορούν να προστεθούν παρακάτω).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Πρέπει να συμφωνήσετε με τους όρους της Δήλωσης Πνευματικών Δικαιωμάτων πριν συνεχίσετε.</message>
-	<message key="author.submit.commentsForEditor">Σχόλια για τον Επιμελητή του Περιοδικού</message>
+	<message key="submission.submit.coverNote">Σχόλια για τον Επιμελητή του Περιοδικού</message>
 	<message key="author.submit.comments">Εισαγωγή κειμένου (προαιρετικό)</message>
 	<message key="author.submit.form.sectionRequired">Παρακαλώ επιλέξτε μια κατάλληλη ενότητα του περιοδικού για τη συγκεκριμένη υποβολή.</message>
-	<message key="author.submit.privacyStatement">Δήλωση προστασίας προσωπικών δεδομένων του περιοδικού</message>
+	<message key="submission.submit.privacyStatement">Δήλωση προστασίας προσωπικών δεδομένων του περιοδικού</message>
 	<message key="author.submit.reorderInstructions">Αναδιατάξτε τα ονόματα των συγγραφέων σύμφωνα με τη σειρά που θα εμφανίζονται κατά την δημοσίευση του άρθρου.</message>
 	<message key="author.submit.selectPrincipalContact">Κύριος υπεύθυνος επικοινωνίας για την αλληλογραφία με τους επιμελητές.</message>
 	<message key="author.submit.addAuthor">Προσθήκη συγγραφέα</message>

@@ -162,7 +162,7 @@
         <message key="journal.currentIssue">Τρέχον Τεύχος</message>
         <message key="journal.journals">Περιοδικά</message>
         <message key="journal.path">Διαδρομή</message>
-        <message key="journal.journal">Περιοδικό</message>
+        <message key="context.context">Περιοδικό</message>
 
         <!-- User -->
         <message key="user.showAllJournals">Τα περιοδικά μου</message>
