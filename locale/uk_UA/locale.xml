@@ -199,7 +199,7 @@
        <message key="journal.currentIssue">Поточний номер</message>
        <message key="journal.journals">Журнали</message>
        <message key="journal.path">Шлях</message>
-       <message key="journal.journal">Журнал</message>
+       <message key="context.context">Журнал</message>
        <message key="journal.issn">ISSN</message>
 
        <!-- User -->
