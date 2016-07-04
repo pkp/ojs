@@ -42,7 +42,6 @@
 	<message key="author.submit.journalSectionDescription"><![CDATA[Zvolte vhodnou sekci pro tento příspěvek (viz Sekce a Pravidla v části <a href="{$aboutUrl}" target="_new">O časopisu</a>).]]></message>
 	<message key="submission.submit.selectSection">Prosím zvolte sekci...</message>
 	<message key="author.submit.submissionChecklist">Zaškrtávací seznam příspěvku</message>
-	<message key="submission.submit.submissionChecklistDescription">Zaškrtnutím následujících položek potvrďte, že tento příspěvek je připraven pro posouzení tímto časopisem (níže je možné přidat komentář pro editora).</message>
 	<message key="author.submit.verifyChecklist">Než budete pokračovat, musíte zajistit splnění všech položek zaškrtávacího seznamu.</message>
 	<message key="author.submit.copyrightNoticeAgree">Autoři souhlasí s podmínkami uvedenými v Oznámení o copyrightu, které budou aplikovány na tento příspěvek, jakmile bude publikován tímto časopisem (níže je možné přidat komentář pro editora).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Než budete pokračovat, musíte souhlasit s podmínkami uvedenými v Oznámení o copyrightu.</message>
@@ -54,9 +53,7 @@
 	<message key="author.submit.selectPrincipalContact">Hlavní kontakt pro korespondenci s editory.</message>
 	<message key="author.submit.addAuthor">Přidat autora</message>
 	<message key="author.submit.deleteAuthor">Smazat autora</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Jmenujte agentury, které poskytly finance nebo jinak podpořily práci prezentovanou v tomto příspěvku.</message>
 	<message key="author.submit.coverageInstructions">Vztahuje se k zeměpisné oblasti, chronologickému nebo historickému záběru a/nebo charakteristikám výzkumného souboru.</message>
-	<message key="author.submit.subjectClassInstructions">Pro výběr klasifikačních termínů (a pokud je to vhodné i čísel) použijte hyperlinkový klasifikační systém.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Čeština=cs; angličtina=en; francouzština=fr; španělština=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Další kódy</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Je vyžadován alespoň jeden autor.</message>
 	<message key="author.submit.form.authorRequiredFields">Je vyžadováno jméno, příjmení a emailová adresa každého autora.</message>
@@ -88,7 +85,6 @@
 	<message key="author.submit.suppFile.dataSet">Datový soubor</message>
 	<message key="author.submit.suppFile.sourceText">Zdrojový text</message>
 	<message key="author.submit.suppFile.briefDescription">Stručný popis</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Přispěvatel nebo sponzorující agentura</message>
 	<message key="author.submit.suppFile.availableToPeers">Poskytnout soubor recenzentům (bez metadat), aby nebyly narušeny anonymní recenze.</message>
 	<message key="author.submit.suppFile.publisherDescription">Použít pouze s formálně publikovanými materiály.</message>
 	<message key="author.submit.suppFile.dateDescription">Datum, kdy byla posbírána data nebo vytvořen nástroj.</message>
@@ -105,7 +101,6 @@
 	<message key="author.submit.filesSummary">Přehled souborů</message>
 	<message key="author.submit.finishSubmission">Dokončit příspěvek</message>
 	<message key="author.submit.submissionComplete">Odeslání příspěvku dokončeno. Děkujeme za Váš zájem publikovat v {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Pokud je tento příspěvek ve formátu, který je připraven pro publikování bez dalších recenzí, redigování nebo typografických úprav, může být umístěn přímo do poslední fáze redakčního procesu <a href="{$expediteUrl}" class="action">kliknutím zde</a>. (Poznámka: Tuto možnost mají pouze editoři časopisu pro své příspěvky.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Nahrát verzi od autora</message>
 	<message key="author.article.copyeditedFile">Redigovaný soubor</message>
 	<message key="author.article.authorRevisedFile">Soubor od autora</message>
@@ -125,5 +120,4 @@
 	<message key="author.submit.submissionLocaleDescription">Tento časopis přijímá příspěvky v několika jazycích. Zvolte si primární jazyk vašeho příspěvku z následujícího rozbalovacícho menu.</message>
 	<message key="author.submit.form.localeRequired">Zvolte si, prosím, jazyk příspěvku.</message>
 	<message key="author.submit.submissionIndexingDescription">Doplňte, prosím, klíčová slova pro indexování příspěvku: oddělte jednotlivá klíčová slova středníkem (klíčové slovo1; klíčové slovo 2; klíčové slovo 3)</message>
-	<message key="author.submit.submissionSupportingAgencies">Přispívající a podporující agentury.</message>
 </locale>

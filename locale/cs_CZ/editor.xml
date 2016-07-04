@@ -12,10 +12,6 @@
   -->
 
 <locale name="cs_CZ" full_name="Čeština">
-	<message key="editor.article.reviewForms">Formuláře posudků</message>
-	<message key="editor.article.selectReviewForm">Vybrat formulář posudku</message>
-	<message key="editor.article.clearReviewForm">Vyčistit formulář posudku</message>
-	<message key="editor.article.confirmChangeReviewForm">Varování: Změna formuláře posudku ovlivní všechny odpovědi recenzentů, kteří použili tento formulář. Jste si jisti, že chcete pokračovat?</message>
 	<message key="editor.home">Domácí stránka editora</message>
 	<message key="editor.submissionsAndPublishing">Příspěvky a publikování</message>
 	<message key="editor.submissionQueue">Fronta příspěvků</message>
@@ -93,9 +89,7 @@
 	<message key="editor.issues.noLiveIssues">Žádná živá čísla</message>
 	<message key="editor.issues.open">Otevřít</message>
 	<message key="editor.issues.pages">Stránky</message>
-	<message key="editor.navigation.issues">Čísla</message>
 	<message key="editor.navigation.futureIssues">Budoucí čísla</message>
-	<message key="editor.navigation.createIssue">Vytvořit číslo</message>
 	<message key="editor.navigation.issueArchive">Minulá čísla</message>
 	<message key="editor.article.designateReviewVersion">Označit původní soubor za verzi pro recenzi</message>
 	<message key="editor.article.uploadReviewVersion">Nahrát revidovanou verzi pro recenzi</message>
@@ -206,7 +200,6 @@
 	<message key="editor.notifyUsers.allAuthors">Všem autorům článků ({$count} uživatelů)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Všem individuálním předplatitelům ({$count} uživatelů)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Všem institucionálnám předplatitelům ({$count} uživatelů)</message>
-	<message key="editor.notifyUsers.allMailingList">Zahrnout na e-mailový rozesílací seznam všechny e-maily ({$count} uživatelů)</message>
 	<message key="editor.submissionReview.sendToCopyediting">Poslat k redigování</message>
 	<message key="editor.issues.galleys">Sazebnice čísla</message>
 	<message key="editor.issues.galley">Sazebnice čísla</message>
@@ -219,6 +212,4 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">Veřejný identifikátor sazebnice čísla již existuje.</message>
 	<message key="editor.issues.backToIssueGalleys">Zpět na sazebnice čísla</message>
 	<message key="editor.issues.confirmDeleteGalley">Jste si jisti, že chcete smazat tuto sazebnici čísla?</message>
-	<message key="editor.publicGalleyIdentificationExists">Veřejný identifikátor '{$publicIdentifier}'  je již použit pro jinou sazebnici tohoto článku. Zvolte si, prosím, jedinečný identifikátor v rámci tohoto článku.</message>
-	<message key="editor.issues.resetArticlePublicationDates">Resetovat data zveřejnění</message>
 </locale>

@@ -28,7 +28,6 @@
 	<!-- review froms start -->
 
 	<!-- common -->
-	<message key="common.journal">Časopis</message>
 
 	<!-- Journal Management -->
 
@@ -37,30 +36,8 @@
 	<message key="navigation.categories.browse">Procházet</message>
 
 	<!--  peer review -->
-	<message key="submission.reviewForm">Formulář recenze</message>
-	<message key="submission.reviewFormResponse">Odpovědi na formulář recenze</message>
 
 	<!-- Permissions -->
-	<message key="submission.permissions">Oprávnění</message>
-	<message key="submission.license">Licence příspěvku</message>
-	<message key="submission.copyright">Autorské právo příspěvku</message>
-	<message key="submission.copyrightHolder">Držitel autorského práva příspěvku</message>
-	<message key="submission.copyrightYear">Rok autorského práva příspěvku</message>
-	<message key="submission.copyrightStatement">Copyright (c) {$copyrightYear} {$copyrightHolder}</message>
-	<message key="submission.licenseURLValid">Uveďte, prosím, platné vzdálené URL (včetně http://).</message>
-	<message key="submission.licenseURL">URL autorské licence</message>
-	<message key="submission.license.cc.by-nc-nd4">CC Attribution-NonCommercial-NoDerivatives 4.0</message>
-	<message key="submission.license.cc.by-nc4">CC Attribution-NonCommercial 4.0</message>
-	<message key="submission.license.cc.by-nc-sa4">CC Attribution-NonCommercial-ShareAlike 4.0</message>
-	<message key="submission.license.cc.by-nd4">CC Attribution-NoDerivatives 4.0</message>
-	<message key="submission.license.cc.by4">CC Attribution 4.0</message>
-	<message key="submission.license.cc.by-sa4">CC Attribution-ShareAlike 4.0</message>
-	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Tato práce je licencována pro licencí <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.]]></message>
-	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Tato práce je licencována pro licencí <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.]]></message>
-	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Tato práce je licencována pro licencí <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.]]></message>
-	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />Tato práce je licencována pro licencí <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.]]></message>
-	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Tato práce je licencována pro licencí <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.]]></message>
-	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Tato práce je licencována pro licencí <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.]]></message>
 
 	<message key="reviewer.article.enterReviewForm">Pro vyplnění formuláře recenze klikněte na ikonu.</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Vyplňte prosím požadované položky.</message>
@@ -78,7 +55,6 @@
 	<message key="common.confirmComplete">Jste si jisti, že chcete označit tento úkol jako dokončený? Poté nebudete mít možnost provést změny.</message>
 	<message key="common.payment">Platba</message>
 	<message key="common.payments">Platby</message>
-	<message key="common.pageHeader.altText">Záhlaví stránky</message>
 	<message key="common.homePageHeader.altText">Záhlaví domácí stránky</message>
 	<message key="common.journalHomepageImage.altText">Obrázek domácí stránky časopisu</message>
 
@@ -92,7 +68,6 @@
 
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Nápověda časopisu</message>
-	<message key="navigation.archives">Archiv</message>
 	<message key="navigation.current">Aktuální</message>
 	<message key="navigation.otherJournals">Další časopisy</message>
 	<message key="navigation.browseByIssue">Podle čísla</message>
@@ -145,12 +120,8 @@
 	<message key="article.suppFiles">Doplňkový/é soubor/y</message>
 	<message key="article.suppFilesAbbrev">Doplň. soubory</message>
 	<message key="article.discipline">Akademická disciplína a subdisciplíny</message>
-	<message key="article.subjectClassification">Třídění podle předmětu</message>
 	<message key="article.subject">Klíčová slova</message>
 	<message key="article.coverage">Dosah</message>
-	<message key="article.coverageGeo">Zeměpisný dosah</message>
-	<message key="article.coverageChron">Chronologický nebo historický dosah</message>
-	<message key="article.coverageSample">Charakteristiky výzkumného vzorku</message>
 	<message key="article.type">Typ, metoda nebo přístup</message>
 	<message key="article.language">Jazyk</message>
 	<message key="article.sectionEditor">ES</message>
@@ -233,26 +204,12 @@
 	<message key="user.noRoles.submitArticleRegClosed">Poslat článek: registrace autorů je aktuálně zakázána.</message>
 	<message key="user.noRoles.regReviewer">Registrovat se jako recenzent</message>
 	<message key="user.noRoles.regReviewerClosed">Registrovat se jako recenzent: registrace recenzentů je aktuálně zakázána.</message>
-	<message key="user.orcid">Odkaz na ORCID iD autora</message>
-	<message key="user.orcid.description"><![CDATA[ORCID iD je jednoznačná identifikace autora v databázi ORCID (Open Researcher and Contributor ID), kterou může každý autor získat po registraci zdarma na <a href="http://orcid.org/" target="_blank"> na stránkách ORCID</a>. V tomto formuláři musí být ORCID iD uveden v plném tvaru, včetně URL - tedy např. <em>http://orcid.org/0000-0003-1825-0097</em>.]]></message>
-	<message key="user.profile.form.orcidInvalid">Vámi zadané ORCID iD je neplatné.</message>
 
 	<!-- Roles -->
 	<message key="user.role.manager">Manažer časopisu</message>
-	<message key="user.role.editor">Editor</message>
 	<message key="user.role.sectionEditor">Editor sekce</message>
-	<message key="user.role.layoutEditor">Typograf</message>
-	<message key="user.role.copyeditor">Redaktor</message>
-	<message key="user.role.proofreader">Korektor</message>
-	<message key="user.role.author">Autor</message>
 	<message key="user.role.subscriptionManager">Manažer předplatného</message>
 	<message key="user.role.managers">Manažeři časopisu</message>
-	<message key="user.role.editors">Editoři</message>
-	<message key="user.role.sectionEditors">Editoři sekcí</message>
-	<message key="user.role.layoutEditors">Typografové</message>
-	<message key="user.role.copyeditors">Redaktoři</message>
-	<message key="user.role.proofreaders">Korektoři</message>
-	<message key="user.role.authors">Autoři</message>
 	<message key="user.role.subscriptionManagers">Manažeři předplatného</message>
 
 	<!-- Common Issue Terms -->
@@ -271,7 +228,6 @@
 	<message key="issue.fullIssue">Celé číslo</message>
 	<message key="issue.nonpdf.title">Stažení čísla</message>
 	<message key="issue.viewIssue">Prohlédnout číslo</message>
-	<message key="issue.viewIssueDescription">Prohlédnout, nebo stáhnout celé číslo</message>
 
 	<!-- Common Subscription Type Terms -->
 	<message key="subscriptionTypes.currency">Měna</message>
@@ -304,7 +260,6 @@
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">Událost příspěvku</message>
-	<message key="submission.event.general.articleSubmitted">Článek odeslán</message>
 	<message key="submission.event.general.issueScheduled">Příspěvek odeslán do fronty pro naplánování publikace</message>
 	<message key="submission.event.general.issueAssigned">Příspěvek zařazen do čísla</message>
 	<message key="submission.event.general.articlePublished">Článek publikován</message>
@@ -408,10 +363,6 @@ Vězte, že rozhraní OAI může být pro tuto stránku vypnuto editací konfigu
 	<message key="plugins.categories.generic.description">Obecné pluginy se používají k rozšíření OJS různými způsoby, které nejsou podporovány jinými kategoriemi pluginů.</message>
 	<message key="plugins.categories.implicitAuth">Výchozí autentifikační pluginy</message>
 	<message key="plugins.categories.implicitAuth.description">Výchozí autentifikační pluginy zavádí podporu autentifikace uživatelů založenou na http záhlavích.</message>
-	<message key="plugins.categories.oaiMetadataFormats">Plugin pro OAI formát metadat</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Tento formátovací plugin poskytuje data pro OAI komunikace.</message>
-	<message key="plugins.categories.pubIds">Plugin veřejného identifikátoru</message>
-	<message key="plugins.categories.pubIds.description">Tento plugin poskytuje podporu pro veřejný identifikátor.</message>
 
 	<!-- Files Browser -->
 
@@ -426,7 +377,6 @@ Vězte, že rozhraní OAI může být pro tuto stránku vypnuto editací konfigu
 	e-mailem recenzentům žádost o recenzi s příspěvkem v příloze e-mailu. Recenzenti zašlou e-mailem editorům svůj souhlas (nebo nesouhlas) s provedením recenze, stejně jako recenzi a doporučení. Editoři zadají souhlas (nebo nesouhlas) recenzentů a dále recenzi a doporučení na příslušné webové recenzní stránce příspěvku, aby byl postup recenzního řízení zaznamenán.</message>
 
 
-	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal System podporuje systém <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) pro zajištění a stálou ochranu vašeho časopisu. Máte několik možností, jak začlenit váš časopis do sítě LOCKSS:]]></message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[OJS podporuje technologii <a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) systém, aby zajistil bezpečnou a stálou archivaci časopisu. LOCKSS je open source software vyvinutý v Stanford University Library, který umožňuje knihovnám zabezpečovat vybrané webové časopisy tím, že se pravidelně dotazuje webových stránek časopisu na nově publikovaný obsah a archivuje ho. Každý archív je neustále kontrolován porovnáváním oproti archívům dalších knihoven, a pokud je zjištěno jeho poškození nebo ztráta jsou tyto archívy použity k jeho obnovení.
 <br /><br />
@@ -453,7 +403,6 @@ Název systému klasifikace]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Aby byl obsah tohoto časopisu indexován v celosvětově distribuovaném systému výzkumných databází, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">zaregistrujte</a> URL Vašeho časopisu do <a href="http://pkp.sfu.ca/harvester/" target="_blank">shromažďovače</a> metadat Public Knowledge Projektu. Tento nástroj sbírá metadata z každé indexované položky tohoto časopisu a umožňuje přesné a hromadné vyhledávání v rámci výzkumných stránek, které dodržují <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank"> protokol Iniciativy otevřených archivů pro shromažďování metadat </a> (Open Archives Initiative (OAI) Protocol for Metadata Harvesting).
 <br /><br />
 Vězte, že pokud již Váš administrátor stránek zaregistroval tyto stránky do PKP shromažďovače, Váš časopis bude indexován automaticky a Vy nemusíte časopis registrovat.<br /><br /><a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klikněte zde</a> a vložte <span class="highlight">{$siteUrl}</span> pod <strong>URL stránky</strong> a <span class="highlight">{$oaiUrl}</span> pod <strong>Základní URL pro OAI Archív</strong>.]]></message>
-	<message key="manager.setup.citations">Povolit pomocníka pro zpracování citací</message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Kroky: Fronta příspěvků &gt; Recenze příspěvku &gt; Editování příspěvku &gt; Obsah.<br /><br />
@@ -726,16 +675,12 @@ Aktivní udává kolik recenzí je právě zvažováno nebo zpracováváno.]]></
 	<message key="submission.comments.saveAndEmailEditor">Uložit a zaslat e-mailem editorovi</message>
 
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Nejste uživatel? Zaregistrujte se na těchto stránkách</message>
 	<message key="user.login.resetPasswordInstructions"><![CDATA[Tento systém zasílá z bezpečnostních důvodů registrovaným uživatelům resetované heslo namísto obnovení
 současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Vaši e-mailovou adresu. Na tuto e-mailovou adresu bude zasláno potvrzení.]]></message>
 
 	<!-- Registration -->
-	<message key="user.register.selectJournal">Zvolte časopis, do kterého se chcete zaregistrovat</message>
 	<message key="user.register.noJournals">Na této stránce nejsou žádné časopisy, do kterých byste se mohl zaregistrovat.</message>
 	<message key="user.register.privacyStatement">Prohlášení o soukromí</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klikněte zde</a>, pokud jste již registrovaný do tohoto nebo jiného časopisu na této stránce.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klikněte zde</a>, pokud ještě <strong>nejste</strong> registrovaný do tohoto nebo jiného časopisu na těchto stránkách.]]></message>
 	<message key="user.register.loginToRegister">Pro zaregistrování do tohoto časopisu vložte Vaše existující uživatelské jméno a heslo.</message>
 	<message key="user.register.registrationDisabled">Tento časopis v současnosti nepřijímá žádné registrace uživatelů.</message>
 	<message key="user.register.form.passwordLengthTooShort">Heslo, které jste vložil není dostatečně dlouhé.</message>
@@ -808,8 +753,6 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.download">Stažení tohoto PDF souboru</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>PDF soubor,  který jste vybrali, by se měl otevřít zde ve vašem prohlížeči, pokud v něm máte nainstalovánu čtečku PDF (například, aktuální verzi <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Pokud chcete najít více informací o tom jak tisknout, ukládat a pracovat s PDF, informace najdete například na Highwire Press <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p> <p>Případně můžete PDF soubor stáhnout přímo do vašeho počítače a podé ho otevřít programem na čtení PDF. Ke stažení PDF souboru, klikněte na odkaz "Stažení PDF souboru" .</p>]]></message>
 
 
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
@@ -835,8 +778,6 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 
 	<!-- About The Journal -->
 	<message key="about.statistics">Statistiky</message>
-	<message key="about.journalContact">Kontakt na časopis</message>
-	<message key="about.aboutTheJournal">O časopisu</message>
 	<message key="about.history">Historie časopisu</message>
 	<message key="about.editorialTeam">Editorský tým</message>
 	<message key="about.editorialTeam.biography">Biografie</message>
@@ -844,13 +785,8 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 	<message key="about.focusAndScope">Zaměření a záběr</message>
 	<message key="about.sectionPolicies">Pravidla sekcí</message>
 	<message key="about.submissions">Příspěvky</message>
-	<message key="about.sponsors">Sponzoři</message>
-	<message key="about.contributors">Zdroje podpory</message>
 	<message key="about.onlineSubmissions">Online příspěvky</message>
-	<message key="about.onlineSubmissions.haveAccount">Máte již uživatelské jméno/heslo pro {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Jít na přihlášení</message>
-	<message key="about.onlineSubmissions.needAccount">Potřebujete uživatelské jméno/heslo?</message>
-	<message key="about.onlineSubmissions.registration">Jít na registraci</message>
 	<message key="about.onlineSubmissions.registrationRequired">Registrace a přihlášení je zapotřebí pro online zasílání příspěvků a kontrolu jejich aktuálního stavu.</message>
 	<message key="about.authorGuidelines">Pokyny pro autory</message>
 	<message key="about.submissionPreparationChecklist">Kontrolní seznam pro přípravu příspěvku</message>
@@ -877,7 +813,6 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 	<message key="about.subscriptionTypes.cost">Cena</message>
 	<message key="about.availableSubscriptionTypes">Typy předplatného</message>
 	<message key="about.memberships">Členství</message>
-	<message key="about.journalSponsorship">Sponzorování časopisu</message>
 	<message key="about.aboutThisPublishingSystem">O tomto publikačním systému</message>
 	<message key="about.aboutThisPublishingSystem.altText">OJS ediční a vydavatelský proces</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Tento časopis používá Open Journal Systems {$ojsVersion}, což je open source software pro správu a publikování časopisů vyvinutý, podporovaný a volně šířený v rámci projektu <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> pod GNU General Public licencí.]]></message>
@@ -1051,7 +986,6 @@ Váš server aktuálně podporuje mbstring: <strong>{$supportsMBString}</strong>
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} vložil nový příspěvek, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} pozměnil článek {$articleId}. Nové ID souboru je {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} byl přidělen pro recenzování příspěvku {$articleId} v recenzním kole {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} byl odebrán z recenzování příspěvku {$articleId} v recenzním kole {$round}.</message>
 	<message key="log.review.reviewInitiated">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$articleId} bylo zahájeno.</message>
 	<message key="log.review.reviewReinitiated">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$articleId} bylo znovu zahájeno.</message>
@@ -1088,7 +1022,6 @@ Váš server aktuálně podporuje mbstring: <strong>{$supportsMBString}</strong>
 	<message key="log.editor.archived">Příspěvek {$articleId} byl archivován.</message>
 	<message key="log.editor.restored">Příspěvek {$articleId} byl obnoven do fronty.</message>
 	<message key="log.editor.editorAssigned">{$editorName} byl přidělen jako editor příspěvku {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} urychleně vyřídil redakční proces příspěvku {$articleId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} přidělil {$proofreaderName} pro zpracování korektur příspěvku {$articleId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} odeslal {$articleId} do plánování.</message>
@@ -1153,22 +1086,16 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 	<message key="notification.notificationsPublicDescription"><![CDATA[Na této stránce jsou zobrazeny důležité aktuality tohoto časopisu jako vydání nového čísla, nebo oznámení. Můžete si objednat zasílání těchto upozornění pomocí RSS feeds (kliknutím na obrázek vpravo), nebo   <a href="{$emailUrl}">e-mailem.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">Byl vložen nový článek s názvem "{$title}".</message>
-	<message key="notification.type.copyeditComment">Redaktor přidal poznámku k článku "{$title}".</message>
 	<message key="notification.type.editing">Editace událostí</message>
 	<message key="notification.type.editorDecisionComment">Byla vložena poznámka k rozhodnutí editora o článku "{$title}".</message>
 	<message key="notification.type.galleyModified">Byla změněna sazebnice článku "{$title}".</message>
 	<message key="notification.type.issuePublished">Bylo publikováno číslo.</message>
-	<message key="notification.type.layoutComment">Byla vložena poznámka o rozložení článku "{$title}".</message>
-	<message key="notification.type.metadataModified">Metadata článku "{$title}" byla změněna.</message>
 	<message key="notification.type.newAnnouncement">Bylo vytvořeno nové oznámení.</message>
-	<message key="notification.type.proofreadComment">Korektorem byla vložena nová poznámka k článku "{$title}".</message>
-	<message key="notification.type.reviewerComment">Recenzent vložil novou poznámku k článku "{$title}".</message>
 	<message key="notification.type.reviewerFormComment">Byl vyplněn recenzní formulář k článku "{$title}".</message>
 	<message key="notification.type.reviewing">Události recenzního procesu</message>
 	<message key="notification.type.site">Události stránek</message>
 	<message key="notification.type.submissionComment">Editor vložil poznámku k článku "{$title}".</message>
 	<message key="notification.type.submissions">Události příspěvku</message>
-	<message key="notification.type.suppFileModified">Doplňkový soubor článku "{$title}" byl změněn.</message>
 	<message key="notification.type.userComment">Čtenář vložil poznámku k článku "{$title}".</message>
 
 	<!--
@@ -1178,14 +1105,11 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 	-->
 	<!-- Authorization -->
 	<message key="user.authorization.copyeditorAssignmentMissing">Přístup není povolen! Nebyl/a vám přiřazena úloha lektora tohoto článku.</message>
-	<message key="user.authorization.noJournal">Žádný časopis neodpovídá!</message>
 	<message key="user.authorization.sectionAssignment">Snažíte se přistoupit k článku, který není součástí této sekce.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Špatný příspěvek redaktora, nebo příspěvek redaktora není vyžadován!</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">Špatný příspěvek sekčního editora, nebo příspěvek sekčního editora není požadován!</message>
 
 	<!-- Icons: Default "alt" text -->
 
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Nahraný seznam měn "{$filename}" z XML</message>
-	<message key="debug.notes.helpMappingLoad">Znovunahraný soubor XML mapující nápovědu {$filename} při hledání {$id}.</message>
 </locale>

@@ -20,11 +20,9 @@
 	<message key="admin.languages.supportedLocalesInstructions">Vyberte všechny jazykové lokalizace, které mají být podporovány na této stránce. Vybrané lokalizace budou dostupné pro použití ve všech časopisech hostovaných na této stránce a objeví se také v menu pro výběr jazyka na všech stránkách (toto nastavení může být přepsáno na stránkách specifických stránkách daného časopisu). Pokud není vybráno více jazykových lokalizací, menu pro výběr jazyka se na stránkách neobjeví a rozšířené jazykové nastavení nebude pro časopisy dostupné.</message>
 	<message key="admin.languages.confirmUninstall">Jste si jistý, že chcete odinstalovat tuto jazykovou lokalizaci? Může to ovlivnit všechny časopisy zde hostované, které aktuálně tuto jazykovou lokalizaci používají.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Vyberte další jazykové lokalizace, pro které má být do systému nainstalována podpora. Aby mohly být lokalizace využity hostovanými časopisy, musí být nejprve nainstalovány. Pro informace o přidání nových jazyků viz dokumentaci k OJS.</message>
-	<message key="admin.languages.downloadLocales">Stáhnout jazykové lokalizace</message>
 	<message key="admin.languages.downloadFailed">Stahování jazykové lokalizace selhalo. Níže uvedené chybové hlášení popisuje selhání.</message>
 	<message key="admin.languages.localeInstalled">Tato "{$locale}" lokalizace byla nainstalována.</message>
 	<message key="admin.languages.download">Stáhnout jazykovou lokalizaci</message>
-	<message key="admin.languages.reloadDefaultEmailTemplates">Znovu nahrát výchozí e-mailové šablony</message>
 	<message key="admin.languages.download.cannotOpen">Nelze otevřít popisovač jazyka z webové stránky PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Nelze přidat novou jazykovou lokalizaci do registračního souboru lokalizací - typicky "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">Databáze OJS uživatelů</message>
@@ -40,7 +38,6 @@
 	<message key="admin.contexts.create">Vytvořit časopis</message>
 	<message key="admin.journals.createInstructions">Budete automaticky zaregistrován jako manažer tohoto časopisu. Poté, co vytvoříte nový časopis, vstupte do něj jako manažer a pokračujte v jeho nastavení a zápisu uživatelů.</message>
 	<message key="admin.journals.urlWillBe">Toto má být krátké slovo nebo akronym, které identifikuje časopis. URL časopisu bude {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">Je vyžadován název.</message>
 	<message key="admin.contexts.form.pathRequired">Je vyžadována cesta.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Cesta může obsahovat pouze alfanumerické znaky, podtržítka a pomlčky a musí začínat a končit alfanumerickým znakem.</message>
 	<message key="admin.contexts.form.pathExists">Zvolená cesta již je využívána jiným časopisem.</message>
@@ -73,26 +70,11 @@
 	<message key="admin.settings.journalsList.showTitle">Název časopisu</message>
 	<message key="admin.settings.journalsList.showDescription">Popis časopisu</message>
 	<message key="admin.categories.nameRequired">Je požadováno jméno kategorie.</message>
-	<message key="admin.settings.security">Zabezpečení</message>
-	<message key="admin.settings.security.plugins">Zabránit manažerům časopisů instalovat, updatovat a mazat pluginy.</message>
 	<message key="admin.settings.usePaging">Pro stránky s mnoha časopisy je vhodné rozdělit seznam časopisů na několik stránek.</message>
 	<message key="admin.settings.journalsList">Prvky časopisu</message>
-	<message key="admin.settings.useAlphalist">Pro strany s mnoha časopisy, umožňuje abecední výběr na úvodní stránce rychlou navigaci mezi časopisy.</message>
 	<message key="admin.settings.journalsList.description">Zvolte prvky časopisu, které budou zobrazeny pro každý časopis na úvodní stránce.</message>
 	<message key="admin.settings.defaultMetricDescription">Vaše instalace OJS je konfigurována k zaznamenávání více metrik. Statistiky čtenosti budou zobrazeny ve více kontextech. V některých případech musí být použita jedna statistika čtenosti, např. při zobrazování seznamu nejčtenějších článků, nebo při zobrazení rozsahu hledání. Vyberte si, prosím, jednu z následujících metrik jako standardní.</message>
 	<message key="admin.categories.enable.description">Administrátor webu se může rozhodnout definovat sadu kategorií, aby mohlo být zorganizováno více časopisů. Manažer časopisu se pak může rozhodnou pro jednu či více kategorií, do kterých časopis spadá.</message>
 	<message key="admin.categories.confirmDelete">Přejete si smazat tuto kategorii?</message>
-	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Chyba: nelze vytvořit dočasnou složku {$tmpDir}</message>
-	<message key="admin.copyAccessLogFileTool.error.acessingFile">Chyba: Soubor {$filePath} neexistuje, nebo k němu není povolen přístup.</message>
-	<message key="admin.copyAccessLogFileTool.error.copyingFile">Chyba: nelze kopírovat soubor z {$filePath} do {$tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.error.deletingFile">Chyba: nelze smazat soubor {$tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Varování: soubor {$filePath} již existuje ve složce statistik čtenosti.</message>
-	<message key="admin.copyAccessLogFileTool.success">Úspěch: {$filePath} do {$destinationPath}</message>
-	<message key="admin.copyAccessLogFileTool.usage">Kopíruje vložený soubor přístupových logů za apache s vyfiltrovanými vstupy, které patří pro tuto instalaci do knihovny souborů v UsageStatsPlugin knihovny. Musíte mít dostatečná uživatelská práva, abyste mohli číst soubor logu přístupů v apache.
-
-Tento nástroj okopíruje pouze soubory, které doposud nejsou v knihovnách nástroje na nahrávání soborů usageStats (etapa, zpracování, archiv, odmítnutí).
-
-Použití: {$scriptName} path/to/apache/log/file.log
-Použití (zpracování všech soborů v knihovně): {$scriptName} path/to/apache/directory
-Použití (zpracování všech souborů v knihovně, jejichž jména začínají zadaným řetězcem): {$scriptName} path/to/apache/directory starts_with_string</message>
+	
 </locale>
