@@ -4,7 +4,7 @@
 <!--
   * locale/uk_UA/manager.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -14,7 +14,7 @@
   * V. I. Vernadsky National Library of Ukraine
   -->
 
-<locale name="uk_UA" full_name = "Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <message key="manager.emails.confirmResetAll">Ви впевнені, що хочете скинути всі шаблони листів цього журналу? Всі зміни, зроблені у шаблонах листів, будуть втрачені.</message>
        <message key="manager.files.note">Примітка: Браузер файлів - потужний інструмент для прямої маніпуляції файлами та теками, асоційованими з журналом.</message>
        <message key="manager.groups">Шапка</message>
@@ -33,7 +33,7 @@
        <message key="manager.language.forms">Форми</message>
        <message key="manager.language.confirmDefaultSettingsOverwrite">Ця дія скасує всі особисті налаштування журналу, залежні від цієї локалізації</message>
        <message key="manager.language.reloadLocalizedDefaultSettings">Перевантажити мовні налаштування до стандартних</message>
-       <message key="manager.languages.languageInstructions"><![CDATA[OJS може бути доступним користувачам будь-якою з мов, що підтримуються. Крім того, OJS може функціонувати як багатомовна система, забезпечуючи користувачам можливість зміни мови з будь-якої сторінки сайту, а також надаючи можливість заповнення деяких даних кількома додатковими мовами.<br /><br/>Якщо необхідна мова підтримується OJS, але Ви не знаходите її у списку нижче, зверніться до адміністратора сайту з проханням встановити цю мову за допомогою інтерфейсу адміністратора. Для отримання інструкцій щодо додавання підтримки нових мов, будь ласка, консультуйтеся з документацією OJS.]]></message>
+       <message key="manager.languages.languageInstructions"><![CDATA[OJS може бути доступним користувачам будь-якою з мов, що підтримуються. Крім того, OJS може функціонувати як багатомовна система, забезпечуючи користувачам можливість зміни мови з будь-якої сторінки сайту, а також надаючи можливість заповнення деяких даних кількома додатковими мовами.<br /><br />Якщо необхідна мова підтримується OJS, але Ви не знаходите її у списку нижче, зверніться до адміністратора сайту з проханням встановити цю мову за допомогою інтерфейсу адміністратора. Для отримання інструкцій щодо додавання підтримки нових мов, будь ласка, консультуйтеся з документацією OJS.]]></message>
        <message key="manager.languages.noneAvailable">Вибачте, зараз не доступно жодних додаткових мов. Якщо Ви хочете використовувати додаткові мови у цьому журналі, повідомте про це адміністратору сайту.</message>
        <message key="manager.languages.primaryLocaleInstructions">Це буде основна мова сайту журналу.</message>
        <message key="manager.managementPages">Сторінки менеджменту</message>
@@ -102,6 +102,8 @@
        <message key="manager.plugins.description">Ця сторінка дозволяє менеджеру журналу переглядати та, потенційно, змінювати встановлені модулі (plugins). Модулі системи об'єднані у категорії за їх функціональністю. Нижче наведено список категорій, усередині кожної категорії наведено набір встановлених модулів.</message>
        <message key="manager.plugins.doesNotExist">Модуль не існує</message>
        <message key="manager.plugins.fileSelectError">Будь ласка, спочатку вкажіть файл</message>
+       <message key="manager.plugins.install">Встановити новий модуль</message>
+       <message key="manager.plugins.installDescription">Ця форма дозволяє вивантажити та встановити новий модуль. Будь ласка, переконайтеся, що модуль заархівований у файл формату .tar.gz.</message>
        <message key="manager.plugins.installedVersionNewer">Модуль вже встановлений і його версія більш нова або така ж, як і вивантажена</message>
        <message key="manager.plugins.installedVersionOlder">Модуль вже встановлений і його версія більш стара або така ж, як і вивантажена</message>
        <message key="manager.plugins.installFailed">Встановлення не вдалося</message>
@@ -118,10 +120,46 @@
        <message key="manager.plugins.uploadError">Помилка вивантаження файлу</message>
        <message key="manager.plugins.versionFileNotFound">У теці модуля не знайдений файл version.xml.</message>
        <message key="manager.plugins.versionFileInvalid">Файл version.xml у теці модуля містить некоректні дані.</message>
+       <message key="manager.reviewFormElement.changeType">Попередження: Зміна типу елементу форми рецензування з закритого (список з варіантами відповіді) на відкритий (текстове поле) матиме наслідком знищення створених списків варіантів відповіді.</message>
+       <message key="manager.reviewFormElements">Елементи форми</message>
+       <message key="manager.reviewFormElements.addResponseItem">Додати варіант відповіді</message>
+       <message key="manager.reviewFormElements.checkboxes">Прапорці (вибір одного або кількох варіантів з запропонованих)</message>
+       <message key="manager.reviewFormElements.chooseType">Оберіть тип елемента</message>
+       <message key="manager.reviewFormElements.confirmDelete">Ви впевнені, що хочете видалити елемент опублікованої форми рецензування?</message>
+       <message key="manager.reviewFormElements.copyTo">Копіювати до:</message>
+       <message key="manager.reviewFormElements.create">Створити новий елемент</message>
+       <message key="manager.reviewFormElements.dropdownbox">Випадаючий список</message>
+       <message key="manager.reviewFormElements.edit">Редагувати елемент форми</message>
+       <message key="manager.reviewFormElements.elementType">Тип елементу</message>
+       <message key="manager.reviewFormElements.form.elementTypeRequired">Необхідно вказати тип елементу форми.</message>
+       <message key="manager.reviewFormElements.form.questionRequired">Необхідно вказати питання, що відповідає елементу форми.</message>
+       <message key="manager.reviewFormElements.noneCreated">Жодних елементів форми не було створено.</message>
+       <message key="manager.reviewFormElements.possibleResponse">Варіант відповіді</message>
+       <message key="manager.reviewFormElements.question">Питання</message>
+       <message key="manager.reviewFormElements.radiobuttons">Радіокнопка (вибір одного варіанту з запропонованих)</message>
+       <message key="manager.reviewFormElements.required">Рецензент зобов'язаний відповісти на питання</message>
+       <message key="manager.reviewFormElements.included">Включити відповідь до листа автору</message>
+       <message key="manager.reviewFormElements.smalltextfield">Текстове поле для одного слова</message>
+       <message key="manager.reviewFormElements.textarea">Розширене текстове поле</message>
+       <message key="manager.reviewFormElements.textfield">Текстове поле з одним рядком</message>
+       <message key="manager.reviewForms">Форми рецензування</message>
+       <message key="manager.reviewForms.completed">Завершено</message>
+       <message key="manager.reviewForms.confirmDeleteUnpublished">Ви впевнені, що хочете видалити цю неопубліковану форму рецензування?</message>
+       <message key="manager.reviewForms.create">Створити форму рецензування</message>
+       <message key="manager.reviewForms.description">Опис та інструкції</message>
+       <message key="manager.reviewForms.edit">Форма рецензування</message>
+       <message key="manager.reviewForms.form.titleRequired">Необхідно вказати назву форми рецензування.</message>
+       <message key="manager.reviewForms.inReview">Рецензується</message>
+       <message key="manager.reviewForms.list.description">Створені тут форми рецензування будуть запропоновані рецензентам для заповнення, замість стандартної форми з двома текстовими блоками: "для автора та редактора" та "лише для редактора". Форми рецензування можуть розроблятись для окремих розділів журналу, таким чином редактори матимуть змогу в процесі рецензування обирати, яку форму має заповнити рецензент. В будь-якому випадку, редактори матимуть можливість включати рецензії до кореспонденції з автором.</message>
+       <message key="manager.reviewForms.noneChosen">Жодної / Вільна форма рецензії</message>
+       <message key="manager.reviewForms.noneCreated">Жодної форми рецензування не було створено.</message>
+       <message key="manager.reviewForms.preview">Попередній перегляд форми</message>
+       <message key="manager.reviewForms.title">Назва</message>
        <message key="manager.sections.abstractsNotRequired">Можуть бути без анотацій</message>
        <message key="manager.sections.assigned">Редактори цього розділу</message>
        <message key="manager.sections.confirmDelete">Ви впевнені, що хочете назавжди видалити цей розділ? Всі публікації цього розділу потрібно буде перепублікувати.</message>
        <message key="manager.sections.create">Створити розділ</message>
+       <message key="manager.sections.disableComments">Заборонити коментарі читачів для цього розділу.</message>
        <message key="manager.section.sectionEditorInstructions">Додайте для цього розділу редактора, який автоматично буде призначатися для роботи з поданнями. У іншому випадку, редакторів розділу, відповідальних за кожне окреме подання, потрібно буде призначати вручну. Доданий редактор розділу автоматично ставатиме відповідальним за нагляд за процесами наукового рецензування та редакційної обробки (літературного редагування, верстки та коректури) рукописів, поданих для публікації у цьому розділі. Створити нових редакторів розділів можна, натиснувши посилання "Редактори розділів" у розділі "Ролі" сторінки "Менеджмент журналу".</message>
        <message key="manager.sections.editorRestriction">Об'єкти можуть надсилатись лише Редакторами та Редакторами розділів.</message>
        <message key="manager.sections.editors">Редактори розділу</message>
@@ -186,7 +224,13 @@
        <message key="manager.setup.copyeditInstructionsDescription">Інструкції з літературного редагування стануть доступними літературним редакторам, авторам та редакторам розділів на етапі редагування подань. Нижче подано стандартний набір інструкцій у форматі HTML. Менеджер журналу в будь-який час може змінювати або замінювати ці інструкції (у текстовому або гіпертекстовому форматі).</message>
        <message key="manager.setup.copyrightNotice">Положення про авторські права</message>
        <message key="manager.setup.coverage">Тематичне покриття</message>
+       <message key="manager.setup.coverageChronExamples">(наприклад, Європейське Відродження; Юрський період; Третій триместр)</message>
+       <message key="manager.setup.coverageChronProvideExamples">Наведіть приклади хронологічних або історичних термінів, які можуть застосовуватись у цьому полі</message>
        <message key="manager.setup.coverageDescription">Геопросторове, хронологічне або історичне покриття, та/або основні характеристики дослідження.</message>
+       <message key="manager.setup.coverageGeoExamples">(наприклад, Піренейський півострів; Стратосфера; Тайга)</message>
+       <message key="manager.setup.coverageGeoProvideExamples">Наведіть приклади геопросторових або географічних термінів, які можуть застосовуватись у цьому полі</message>
+       <message key="manager.setup.coverageResearchSampleExamples">(наприклад, Вік; Стать; Національність)</message>
+       <message key="manager.setup.coverageResearchSampleProvideExamples">Наведіть приклади термінів, що характеризують проаналізовану дослідниками вибірку</message>
        <message key="manager.setup.currentIssue">Поточний випуск</message>
        <message key="manager.setup.customizingTheLook">Крок 5. Налаштування вигляду</message>
        <message key="manager.setup.customTags">Власні теги</message>
@@ -200,6 +244,12 @@
        <message key="manager.setup.disciplineProvideExamples">Наведіть приклади академічних дисциплін, відповідних проблематиці цього журналу</message>
        <message key="manager.setup.displayCurrentIssue">Додати сторінку змісту поточного випуску (якщо він наявний).</message>
        <message key="manager.setup.editorDecision">Рішення редактора</message>
+       <message key="manager.setup.editorialMembers">Перейти до налаштувань редакційних рад та додати членів редколегії та/або ради рецензентів. Це можна зробити на будь-якому етапі видання журналу.</message>
+       <message key="manager.setup.editorialProcess1">Всі основні кроки будуть виконуватись одним або кількома редакторами без додаткового розподілу ролей.</message>
+       <message key="manager.setup.editorialProcess2">Відповідальний редактор контролює редакційну чергу та створює сторінки змісту випусків, а редактори розділів відповідають за процеси рецензування та редагування подань.</message>
+       <message key="manager.setup.editorialProcess3">Відповідальний редактор контролює редакційну чергу, керує редагуванням подань та створює сторінки змісту випусків, а редактори розділів відповідають за процеси рецензування подань.</message>
+       <message key="manager.setup.editorialReviewBoard">Редколегія / Рада рецензентів</message>
+       <message key="manager.setup.editorialReviewBoardDescription">Журнали мають редакційні колегії, які слідкують за редакційною політикою журналу, беруть участь у призначенні редакторів, крім того, репутація та статус членів редколегії важливі для затвердження репутації журналу в межах наукової спільноти. Ради рецензентів відіграють таку ж роль, але крім цього, вони очолюють процес наукового рецензування. Члени ради рецензентів не будуть мати доступу до системи адміністрування журналу, але вони будуть додані до списку доступних рецензентів.</message>
        <message key="manager.setup.emailBounceAddress">Адреса повернення</message>
        <message key="manager.setup.emailBounceAddressDescription">На цю адресу будуть надсилатися повідомлення про всі недоставлені листи.</message>
        <message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Примітка:</strong> Щоб активувати цю опцію, адміністратор повинен дозволити директиву <tt>allow_envelope_sender</tt> у файлі конфігурації OJS. Крім того, як зазначено у документації OJS, налаштування цієї опції може вимагати також додаткових конфігурацій (що можливо не на всіх серверах).]]></message>
@@ -209,6 +259,11 @@
        <message key="manager.setup.enableAnnouncements">Дозволити менеджерам журналу додавати анонси журналу.</message>
        <message key="manager.setup.enableAnnouncementsHomepage1">Показати</message>
        <message key="manager.setup.enableAnnouncementsHomepage2">найновіших анонсів на домашній сторінці журналу.</message>
+       <message key="manager.setup.enablePageNumber">Номери сторінок для опублікованих одиниць будуть вручну вираховуватись та вводитись для відображення на сторінках змісту (наприклад, С. 13-26).</message>
+       <message key="manager.setup.enablePublicArticleId">Опубліковані матеріали матимуть власні унікальні ідентифікатори.</message>
+       <message key="manager.setup.enablePublicGalleyId">Гранки опублікованих статей (наприклад, файли HTML або PDF) матимуть власні унікальні ідентифікатори.</message>
+       <message key="manager.setup.enablePublicIssueId">Випуски матимуть власні унікальні ідентифікатори.</message>
+       <message key="manager.setup.enablePublicSuppFileId">Супровідні файли опублікованих статей матимуть власні унікальні ідентифікатори.</message>
        <message key="manager.setup.enableUserRegistration">Користувачі самостійно можуть реєструватися у журналі з однією або кількома наступними ролями:</message>
        <message key="manager.setup.enableUserRegistration.author">Автори (можуть надсилати рукописи до журналу)</message>
        <message key="manager.setup.enableUserRegistration.reader">Читачі (будуть отримувати сповіщення та враховуватись як еквівалент передплатників)</message>
@@ -236,7 +291,6 @@
        <message key="manager.setup.guidingSubmissions">Крок 3. Керівництва щодо подань</message>
        <message key="manager.setup.homepageImage">Зображення для домашньої сторінки</message>
        <message key="manager.setup.homepageImageDescription">Додайте графічний файл зображення для середини сторінки.</message>
-       <message key="manager.setup.includeCreativeCommons">Для журналів, які пропонують відкритий доступ (негайний або з затримкою), включати ліцензію Creative Commons до сторінок всіх опублікованих робіт під час їх появи у відкритому доступі.</message>
        <message key="manager.setup.information">Інформація</message>
        <message key="manager.setup.information.description">Короткий опис журналу для бібліотекарів, потенційних авторів та читачів, який буде доступний на бічній панелі у розділі "Інформація".</message>
        <message key="manager.setup.information.forAuthors">Для авторів</message>
@@ -253,9 +307,9 @@
        <message key="manager.setup.journalArchiving">Архівування журналу</message>
        <message key="manager.setup.journalDescription">Опис журналу</message>
        <message key="manager.setup.journalDescriptionDescription">Додайте короткий опис (20-25 слів у форматі text/HTML), який буде відображений безпосередньо під посиланням на журнал.</message>
-       <message key="manager.setup.favicon">Піктограма для бразузера</message>
-       <message key="manager.setup.faviconDescription">Додати Favicon-піктограму логотипу журналу для відображення у адресному рядку браузерів відвідувачів сайту.</message>
-       <message key="manager.setup.faviconInvalid">Неприпустимий формат Favicon-піктограми. Припустимими форматами є .ico, .png та .gif.</message>
+       <message key="manager.setup.journalFavicon">Піктограма для бразузера</message>
+       <message key="manager.setup.journalFaviconDescription">Додати Favicon-піктограму логотипу журналу для відображення у адресному рядку браузерів відвідувачів сайту.</message>
+       <message key="manager.setup.journalFaviconInvalid">Неприпустимий формат Favicon-піктограми. Припустимими форматами є .ico, .png та .gif.</message>
        <message key="manager.setup.journalHomepageContent">Зміст домашньої сторінки журналу</message>
        <message key="manager.setup.journalHomepageContentDescription">За замовчуванням, на домашній сторінці розміщені лише навігаційні посилання. Використовуючи наступні опції можливо налаштувати домашню сторінку на відображення певного додаткового змісту. Зауважте, що зміст поточного випуску журналу завжди доступний за посиланням "Поточний випуск" на навігаційній панелі.</message>
        <message key="manager.setup.journalHomepageHeader">Заголовок домашньої сторінки</message>
@@ -268,6 +322,8 @@
        <message key="manager.setup.journalLogo.altText">Логотип журналу</message>
        <message key="manager.setup.journalPageFooter">Нижній колонтитул сторінки</message>
        <message key="manager.setup.journalPageFooterDescription">Це нижній колонтитул сторінок Вашого журналу. Щоб змінити або оновити нижній колонтитул, вставте код HTML у поле нижче. Наприклад, у нижньому колонтитулі може розміщуватись ще одна навігаційна панель, лічильник тощо. Нижній колонтитул з'явиться на всіх сторінках сайту журналу.</message>
+       <message key="manager.setup.journalPageHeader">Заголовок сторінки</message>
+       <message key="manager.setup.journalPageHeaderDescription">Замість тексту, який відображається на сторінках сайту за замовчуванням, можна вивантажити графічну версію назви та логотипу журналу (як файл формату .gif, .jpg або .png). Ця графічна версія може бути такою ж, як і вивантажена для заголовку домашньої сторінки, але може і відрізнятися від неї.</message>
        <message key="manager.setup.journalPolicies">Крок 2. Політика журналу</message>
        <message key="manager.setup.journalSetup">Налаштування журналу</message>
        <message key="manager.setup.journalSetupUpdated">Налаштування Вашого журналу оновлені.</message>
@@ -395,6 +451,8 @@
        <message key="manager.setup.sponsorNoteDescription">Цей текст буде відображений у розділі "Фінансування журналу" сторінки "Про журнал" під заголовком "Спонсоруючі організації", вище списку назв та адрес URL.</message>
        <message key="manager.setup.sponsorsDescription">Назви організацій (наприклад, дослідних асоціацій, університетів та їх факультетів, комерційних установ тощо), які спонсорують журнал. Будуть вказані на сторінці "Про журнал", а також, за бажанням, спеціальною приміткою "Подяки".</message>
        <message key="manager.setup.stepsToJournalSite">П'ять кроків для створення веб-сайту журналу</message>
+       <message key="manager.setup.subjectClassification">Класифікаційна схема</message>
+       <message key="manager.setup.subjectClassificationExamples">(наприклад, Математична предметна класифікація; Класифікація Бібліотеки Конгресу)</message>
        <message key="manager.setup.subjectExamples">(наприклад, Фотосинтез; Чорні діри; Проблема чотирьох фарб; Теорема Баєса)</message>
        <message key="manager.setup.subjectKeywordTopic">Ключові слова</message>
        <message key="manager.setup.subjectProvideExamples">Наведіть приклади ключових слів або тематичних рубрик як керівництво для авторів</message>
@@ -456,19 +514,14 @@
        <message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">місяців після дати публікації випуску.</message>
        <message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Будь ласка, визначте коректний період.</message>
        <message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Викладене нижче положення щодо відкритого доступу з затримкою буде розміщене у розділі "Політика" сторінки "Про журнал".</message>
-       <message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Для визначення опцій нагадувань, будь ласка, користуйтеся відповідним прапорцем.</message>
        <message key="manager.subscriptionPolicies.expiry">Завершення передплати</message>
        <message key="manager.subscriptionPolicies.expiryDescription">Після завершення передплати читачі можуть втратити доступ до всього передплатного змісту або вони можуть продовжувати мати доступ до змісту, опублікованого до дати завершення передплати.</message>
        <message key="manager.subscriptionPolicies.expiryFull">Повне завершення</message>
        <message key="manager.subscriptionPolicies.expiryFullDescription">Після завершення передплати читачі втратитимуть доступ до всього передплатного змісту.</message>
        <message key="manager.subscriptionPolicies.expiryPartial">Часткове завершення</message>
        <message key="manager.subscriptionPolicies.expiryPartialDescription">Після завершення передплати читачі втрачатимуть доступ до нового передплатного змісту, але продовжуватимуть мати доступ до змісту, опублікованого до дати завершення передплати.</message>
-       <message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Сповіщати передплатників поштою через</message>
-       <message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">місяців після завершення передплати.</message>
        <message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Сповіщати передплатників поштою через</message>
        <message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">тижнів після завершення передплати.</message>
-       <message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Сповіщати передплатників поштою за</message>
-       <message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">місяців до завершення передплати.</message>
        <message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Сповіщати передплатників поштою за</message>
        <message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">тижнів до завершення передплати.</message>
        <message key="manager.subscriptionPolicies.expiryReminders">Нагадування про завершення передплати</message>
@@ -620,6 +673,7 @@
 	<message key="manager.payment.options.purchaseIssueFee">Купити випуск</message>
 	<message key="manager.plugins.settings">Налаштування</message>
 	<message key="manager.setup.categories">Категорії</message>
+	<message key="manager.setup.subjectClassificationURLValid">Будь ласка, вкажіть коректну віддалену адресу URL (разом із http://).</message>
 	<message key="manager.payment.giftFees">Платежі за подарунки</message>
 	<message key="manager.payment.giftFeesDescription">Посилання на подарункові передплати з'явиться на сторінці "Передплати" розділу "Про журнал" разом з іншою інформацією стосовно передплат.</message>
 	<message key="manager.payment.options.acceptGiftSubscriptionPayments">У цьому пункті активуються платежі за подарункові передплати. Це дозволяє читачам журналу купувати передплати як подарунки іншим читачам.</message>

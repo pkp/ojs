@@ -4,7 +4,7 @@
 <!--
   * locale/uk_UA/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -14,7 +14,7 @@
   * V. I. Vernadsky National Library of Ukraine
   -->
 
-<locale name="uk_UA" full_name = "Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <!--
         * This file is organized into several major sections, separated
         * by comments like this one. These sections are called:
@@ -39,6 +39,9 @@
 
 
 
+       <!--  peer review -->
+       <message key="submission.reviewForm">Форма рецензування</message>
+       <message key="submission.reviewFormResponse">Заповнена форма рецензування</message>
 
 
        <message key="reviewer.article.enterReviewForm">Щоб заповнити форму рецензування, натисніть на зображення.</message>    
@@ -57,6 +60,7 @@
        <message key="common.confirmComplete">Ви впевнені, що хочете позначити це завдання як завершене? Після цього, ймовірно, ви не матимете можливості вносити зміни.</message>
        <message key="common.payment">Платіж</message>
        <message key="common.payments">Платежі</message>
+       <message key="common.pageHeader.altText">Заголовок сторінки</message>
        <message key="common.homePageHeader.altText">Заголовок домашньої сторінки</message>
        <message key="common.journalHomepageImage.altText">Зображення домашньої сторінки журналу</message>
 
@@ -123,8 +127,12 @@
        <message key="article.suppFiles">Супровідні файли</message>
        <message key="article.suppFilesAbbrev">Супр. файли</message>
        <message key="article.discipline">Наукова дисципліна</message>
+       <message key="article.subjectClassification">Класифікаційна схема</message>
        <message key="article.subject">Ключові слова</message>
        <message key="article.coverage">Тематичне покриття</message>
+       <message key="article.coverageGeo">Геопросторове покриття</message>
+       <message key="article.coverageChron">Хронологічне та історичне покриття</message>
+       <message key="article.coverageSample">Вибірка дослідження</message>
        <message key="article.type">Методи та підходи</message>
        <message key="article.language">Мова</message>
        <message key="article.sectionEditor">SE</message>
@@ -191,7 +199,7 @@
        <message key="journal.currentIssue">Поточний номер</message>
        <message key="journal.journals">Журнали</message>
        <message key="journal.path">Шлях</message>
-       <message key="context.context">Журнал</message>
+       <message key="journal.journal">Журнал</message>
        <message key="journal.issn">ISSN</message>
 
        <!-- User -->
@@ -217,7 +225,7 @@
        <message key="user.role.subscriptionManager">Менеджер передплати</message>
        <message key="user.role.managers">Менеджери журналів</message>
        <message key="user.role.editors">Редактори</message>
-       <message key="user.role.subEditors">Редактори розділів</message>
+       <message key="user.role.sectionEditors">Редактори розділів</message>
        <message key="user.role.layoutEditors">Редактори верстки</message>
        <message key="user.role.copyeditors">Літературні редактори</message>
        <message key="user.role.proofreaders">Коректори</message>
@@ -269,7 +277,7 @@
         *
        -->
        <message key="submission.event.general.defaultEvent">Подія з поданням</message>
-       <message key="submission.event.submissionSubmitted">Стаття надіслана</message>
+       <message key="submission.event.general.articleSubmitted">Стаття надіслана</message>
        <message key="submission.event.general.issueScheduled">Подання включене до графіку публікації</message>
        <message key="submission.event.general.issueAssigned">Подання включене до випуску</message>
        <message key="submission.event.general.articlePublished">Стаття опублікована</message>
@@ -345,7 +353,7 @@
 </ul>]]></message>
        
        <!-- System Information -->
-       <message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>УВАГА!</div>
+       <message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>УВАГА!</h4>
 <p>Система не може автоматично перейменувати файл конфігурації. Для застосування змін у конфігурації Ви повинні відкрити <tt>config.inc.php</tt> у текстовому редакторі та замінити його зміст змістом текстового поля, наведеного нижче.</p>]]></message>
 
        <!-- Site Administrator Merge Users --> 
@@ -379,6 +387,8 @@
        <message key="plugins.categories.implicitAuth">Модулі неявної аутентифікації</message>
        <message key="plugins.categories.implicitAuth.description">Модулі неявної аутентифікації дозволяють підтримку аутентифікації користувачів за заголовками http.</message>
        
+       <message key="plugins.categories.oaiMetadataFormats">Модулі форматів метаданих OAI</message>
+       <message key="plugins.categories.oaiMetadataFormats.description">Ці модулі дозволяють генерувати метадані для OAI-комунікації.</message>
 
        <!-- Files Browser -->
 
@@ -413,10 +423,12 @@
        <li>Автори мають право укладати самостійні додаткові угоди щодо неексклюзивного розповсюдження роботи у тому вигляді, в якому вона була опублікована цим журналом (наприклад, розміщувати роботу в електронному сховищі установи або публікувати у складі монографії), за умови збереження посилання на першу публікацію роботи у цьому журналі.</li>
        <li>Політика журналу дозволяє і заохочує розміщення авторами в мережі Інтернет (наприклад, у сховищах установ або на особистих веб-сайтах) рукопису роботи, як до подання цього рукопису до редакції, так і під час його редакційного опрацювання, оскільки це сприяє виникненню продуктивної наукової дискусії та позитивно позначається на оперативності та динаміці цитування опублікованої роботи (див. <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
+       <message key="manager.setup.subjectClassificationDescription"><![CDATA[Журнал використовуватиме доступну у веб-середовищі класифікаційну систему.<br />
+Назва класифікаційної системи]]></message>
        <message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Для того, щоб зміст цього журналу відображався в глобальній розподіленій системі, що індексує наукові бази даних, будь ласка, прочитайте, <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">як стати постачальником даних</a>, та зареєструйте свій журнал у офіційному <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">реєстрі відкритих архівів</a>. Щоб зареєструватися, Вам потрібно буде вказати базовий URL свого сховища: <span class="highlight">{$oaiUrl}</span>.  Після цього Ви можете зареєструвати свій журнал також у <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> та <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 <br /><br />
 Зауважте, якщо цей сайт вже зареєстрований адміністратором у цих системах, Ваш журнал буде індексуватись автоматично, окремо реєструвати його непотрібно.]]></message>
-       <message key="manager.setup.citations.enable">Дозволити Помічник розмітки цитат</message>
+       <message key="manager.setup.citations">Дозволити Помічник розмітки цитат</message>
 
        <!-- Setup Step 4 -->
        <message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Кроки: Редакційна черга &gt; Рецензування подання &gt; Редагування подання &gt; Сторінка змісту.<br /><br />
@@ -483,10 +495,10 @@
        <!-- Navigation sidebar menu -->
        
        <!-- Used by editor in submission review / editing -->
-       <message key="editor.article.selectReviewerNotes"><![CDATA[Імена є посиланнями на профілі рецензентів.<br/>
-Шкала рейтингу п'ятибальна. Оцінка 5 (Відмінно).<br/>
-Кількість тижнів визначає середній час, необхідний рецензенту для завершення роботи.<br/>
-У полі "Остання" вказана дата прийняття останнього запиту на рецензування.<br/>
+       <message key="editor.article.selectReviewerNotes"><![CDATA[Імена є посиланнями на профілі рецензентів.<br />
+Шкала рейтингу п'ятибальна. Оцінка 5 (Відмінно).<br />
+Кількість тижнів визначає середній час, необхідний рецензенту для завершення роботи.<br />
+У полі "Остання" вказана дата прийняття останнього запиту на рецензування.<br />
 У полі "Активні" вказується кількість робіт, які зараз рецензуються користувачем.]]></message>
 
        
@@ -500,7 +512,7 @@
        <message key="sectionEditor.proofreader.confirmRenotify">Повторне сповіщення цього коректора повторить процедуру його призначення. Ви впевнені, що хочете зробити це?</message>
 
        <message key="sectionEditor.regrets.breadcrumb">Вибачення</message>
-       <message key="sectionEditor.regrets.title">#{$submissionId} Вибачення рецензентів, припинення та попередні раунди</message>
+       <message key="sectionEditor.regrets.title">#{$articleId} Вибачення рецензентів, припинення та попередні раунди</message>
        <message key="sectionEditor.regrets">Вибачення</message>
        <message key="sectionEditor.regrets.link">Подивитися вибачення, припинення, попередні раунди</message>
        <message key="sectionEditor.regrets.reviewRound">Наукове рецензування, раунд {$round}</message>
@@ -672,8 +684,8 @@
        <message key="user.register.selectJournal">Оберіть журнал, користувачем якого Ви хочете бути</message>
        <message key="user.register.noJournals">На цьому сайті немає журналів, у яких Ви можете зареєструватись.</message>
        <message key="user.register.privacyStatement">Положення про конфіденційність</message>
-       <message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Натисніть сюди</a>, якщо Ви вже зареєстровані у одному з журналів на цьому сайті.]]></message>
-       <message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Натисніть сюди</a>, якщо Ви <strong>не</strong> зареєстровані у жодному з журналів на цьому сайті.]]></message>
+       <message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Натисніть сюди</a>, якщо Ви вже зареєстровані у одному з журналів на цьому сайті.]]></message>
+       <message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Натисніть сюди</a>, якщо Ви <strong>не</strong> зареєстровані у жодному з журналів на цьому сайті.]]></message>
        <message key="user.register.loginToRegister">Щоб зареєструватися для цього журналу вкажіть існуюче ім'я користувача та пароль.</message>
        <message key="user.register.registrationDisabled">Зараз цей журнал не дозволяє реєстрацію користувачів.</message>
        <message key="user.register.form.passwordLengthTooShort">Введений Вами пароль занадто короткий.</message>
@@ -733,7 +745,7 @@
        <message key="search.allJournals">Всі журнали</message>
        <message key="search.authorIndex">Перегляд списку авторів</message>
        <message key="search.authorDetails">Інформація про автора</message>
-       <message key="search.syntaxInstructions"><![CDATA[Пошукові нотатки: <ul>
+       <message key="search.syntaxInstructions"><![CDATA[<h4>Пошукові нотатки: </h4><ul>
 <li>Пошукові терміни незалежні від регістру</li>
 <li>Слова загального вжитку ігноруються</li>
 <li>За замовчуванням повертаються лише ті статті, які містять <em>всі</em> терміни запиту (тобто застосовується оператор <em>AND</em>)</li>
@@ -744,6 +756,16 @@
 <li>Використовуйте у термінах символ <strong>*</strong> як метасимвол, що позначає будь-яку послідовність символів; наприклад, за запитом <em>соці*</em> будуть знайдені документи, що містять слова "соціальний", "соціалістичний", "соціологічний" тощо</li>
 </ul>]]></message>
 
+       <!-- Interstitial page for PDFs -->
+       <message key="article.pdf.title">Portable Document Format (PDF)</message>
+       <message key="article.pdf.download">Завантажити цей PDF-файл</message>
+       <message key="article.pdf.pluginMissing"><![CDATA[<p>Якщо у Вашому браузері встановлений модуль читання PDF-файлів (наприклад, остання версія <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>), то обраний Вами файл PDF завантажиться у це вікно.</p> <p>Крім того, Ви можете завантажити PDF-файл безпосередньо на свій комп'ютер, де його можна буде відкрити за допомогою програми читання PDF-файлів. Щоб завантажити PDF-файл, натисніть посилання "Завантажити" нижче.</p> <p>Якщо Ви хочете отримати більше інформації про те, як працювати з PDF-файлами, роздруковувати та зберігати їх, рекомендуємо корисну статтю Highwire Press <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p>]]></message>
+
+       
+       <!-- Interstitial page for non-PDF non-HTML galleys -->
+       <message key="article.nonpdf.title">Завантаження статті</message>
+       <message key="article.nonpdf.note"><![CDATA[Обраний Вами файл почне завантажуватись автоматично. Зауважте, що для перегляду цього файлу може знадобитись спеціалізоване програмне забезпечення.<br /><br />Якщо файл не завантажився автоматично, <a href="{$url}">натисніть сюди</a>.]]></message>
+       
        <!-- Site index -->
        <message key="site.journalsHosted">Журнали, розміщені на цьому сайті</message>
        <message key="site.journalView">Перегляд журналу</message>
@@ -873,7 +895,7 @@
 
 <ul>
        <li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (в тому числі, PHP 5.x); наразі Ви використовуєте PHP {$phpVersion}{$wrongPhpText}</li>
-       <li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 або <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>
+       <li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 або <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (в тому числі, PostgreSQL 8.x)</li>
        <li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x або >= 2.0.4x, або Microsoft IIS 6</li>
        <li>Операційна система: Будь-яка ОС, що підтримує вказане вище програмне забезпечення, в тому числі, <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
@@ -908,6 +930,9 @@
 <p>Дякуємо, що завантажили <strong>Open Journal Systems</strong> виробництва Public Knowledge Project. Перед тим, як продовжити, будь ласка, прочитайте файли <a href="{$baseUrl}/docs/README">README</a> та <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a>, включені до цього дистрибутиву. Для того, щоб дізнатися більше про Public Knowledge Project та розроблені ним програмні пакети, будь ласка, завітайте на <a href="http://pkp.sfu.ca/" target="_blank">веб-сайт PKP</a>. Якщо Ви маєте звіти про помилки або запити до служби підтримки Open Journal Systems, дивіться <a href="http://forum.pkp.sfu.ca" target="_blank">форум підтримки</a> або завітайте до онлайнової служби PKP <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">система звітування про помилки</a>. Хоча форум підтримки є пріоритетним методом контактів з розробниками, Ви можете також написати розробникам листа на адресу <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>Перед тим, як продовжити, <strong>настійно рекомендуємо</strong> зробити резервну копію Вашої бази даних, файлових тек та теки інсталяції OJS.</p>
 <p>Якщо Ви працюєте у режимі <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, будь ласка, переконайтеся, що значення параметру max_execution_time у Вашому файлі конфігурації php.ini має найвище припустиме значення. Якщо цей або будь-який інший ліміт часу (наприклад, параметр "Timeout" налаштувань Apache) буде перевищений, процес оновлення буде перерваний і знадобиться ручне втручання.</p>]]></message>
+       <message key="installer.localeSettingsInstructions"><![CDATA[Для повної підтримки формату Unicode (UTF-8), оберіть UTF-8 у всіх налаштуваннях таблиць кодування. Зауважте, що повна підтримка наразі вимагає СУБД MySQL >= 4.1.1 або PostgreSQL >= 7.1. Крім того, будь ласка, зауважте, що повна підтримка Unicode також вимагає PHP >= 4.3.0 з підтримкою бібліотеки <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> (у більшості сучасних інсталяцій PHP включена за замовчуванням). Якщо Ваш сервер не відповідає цим вимогам, Ви можете зустрітись з проблемами під час використання розширених таблиць кодування.
+<br /><br />
+Зараз Ваш сервер має підтримку mbstring: <strong>{$supportsMBString}</strong>]]></message>
        <message key="installer.localeInstructions">Основна мова для цієї системи. Якщо Вам необхідна підтримка мови, не вказаної тут, будь ласка, звертайтеся до документації OJS.</message>
        <message key="installer.additionalLocalesInstructions">Оберіть будь-які додаткові мови, які будуть підтримуватись цією системою. Ці мови будуть доступні для використання журналами, розміщеними на цьому сайті. Додаткові мови можуть встановлюватись у будь-який час з інтерфейсу адміністратора сайту.</message>
        <message key="installer.filesDirInstructions"><![CDATA[Вкажіть повний шлях до існуючої теки, де повинні зберігатися вивантажені файли. Ця тека не повинна бути безпосередньо доступна з мережі. <strong>Перед інсталяцією, будь ласка, переконайтеся, що тека існує і відкрита для запису.</strong> У шляхах файлів Windows застосовуються зворотні слеші, наприклад, "C:/myjournal/files".]]></message>
@@ -933,48 +958,49 @@
 
        <!-- Article Logs -->
        <message key="log.author.submitted">{$authorName} зробив нове подання, ID {$submissionId}.</message>
-       <message key="log.author.documentRevised">{$authorName} виправив статтю {$submissionId}. Новий ID файла {$fileId}.</message>
-       <message key="log.review.reviewerUnassigned">{$reviewerName} був звільнений від рецензування подання {$submissionId} на {$round} раунді.</message>
-       <message key="log.review.reviewInitiated">Був розпочатий {$round} раунд рецензування подання {$submissionId} фахівцем {$reviewerName}.</message>
-       <message key="log.review.reviewReinitiated">Був повторно розпочатий {$round} раунд рецензування подання {$submissionId} фахівцем {$reviewerName}.</message>
-       <message key="log.review.reviewCancelled">Був припинений {$round} раунд рецензування подання {$submissionId} фахівцем {$reviewerName}.</message>
-       <message key="log.review.reviewCleared">Були скасовані дані про {$round} раунд рецензування подання {$submissionId} фахівцем {$reviewerName}.</message>
-       <message key="log.review.reviewerRated">{$reviewerName} був оцінений за раунд {$round} рецензування подання {$submissionId}.</message>
-       <message key="log.review.reviewDueDateSet">Дата кінцевого терміну {$round} раунду рецензування подання {$submissionId} фахівцем {$reviewerName} була призначена на {$dueDate}.</message>
-       <message key="log.review.reviewRecommendationSet">Була визначена рекомендація {$round} раунду рецензування подання {$submissionId} фахівцем {$reviewerName}.</message>
-       <message key="log.review.reviewRecommendationSetByProxy">Рекомендація {$round} раунду рецензування подання {$submissionId} була визначена редактором {$editorName} від імені рецензента {$reviewerName}.</message>
-       <message key="log.review.resubmit">Подання {$submissionId} було повторно надіслано для рецензування.</message>
-       <message key="log.review.reviewDeclined">{$reviewerName} не прийняв {$round} раунд рецензування подання {$submissionId}.</message>
-       <message key="log.review.reviewAccepted">{$reviewerName} прийняв {$round} раунд рецензування подання {$submissionId}.</message>
-       <message key="log.review.reviewDeclinedByProxy">{$userName} не прийняв {$round} раунд рецензування подання {$submissionId} від імені фахівця {$reviewerName}.</message>
-       <message key="log.review.reviewAcceptedByProxy">{$userName} прийняв {$round} раунд рецензування подання {$submissionId} від імені фахівця {$reviewerName}.</message>
-       <message key="log.review.reviewFileByProxy">Редактор {$userName} вивантажив файл рецензії для {$round} раунду рецензування подання {$submissionId} від імені рецензента {$reviewerName}.</message>
+       <message key="log.author.documentRevised">{$authorName} виправив статтю {$articleId}. Новий ID файла {$fileId}.</message>
+       <message key="log.review.reviewerAssigned">{$reviewerName} був призначений для проведення {$round} раунду рецензування подання {$articleId}.</message>
+       <message key="log.review.reviewerUnassigned">{$reviewerName} був звільнений від рецензування подання {$articleId} на {$round} раунді.</message>
+       <message key="log.review.reviewInitiated">Був розпочатий {$round} раунд рецензування подання {$articleId} фахівцем {$reviewerName}.</message>
+       <message key="log.review.reviewReinitiated">Був повторно розпочатий {$round} раунд рецензування подання {$articleId} фахівцем {$reviewerName}.</message>
+       <message key="log.review.reviewCancelled">Був припинений {$round} раунд рецензування подання {$articleId} фахівцем {$reviewerName}.</message>
+       <message key="log.review.reviewCleared">Були скасовані дані про {$round} раунд рецензування подання {$articleId} фахівцем {$reviewerName}.</message>
+       <message key="log.review.reviewerRated">{$reviewerName} був оцінений за раунд {$round} рецензування подання {$articleId}.</message>
+       <message key="log.review.reviewDueDateSet">Дата кінцевого терміну {$round} раунду рецензування подання {$articleId} фахівцем {$reviewerName} була призначена на {$dueDate}.</message>
+       <message key="log.review.reviewRecommendationSet">Була визначена рекомендація {$round} раунду рецензування подання {$articleId} фахівцем {$reviewerName}.</message>
+       <message key="log.review.reviewRecommendationSetByProxy">Рекомендація {$round} раунду рецензування подання {$articleId} була визначена редактором {$editorName} від імені рецензента {$reviewerName}.</message>
+       <message key="log.review.resubmit">Подання {$articleId} було повторно надіслано для рецензування.</message>
+       <message key="log.review.reviewDeclined">{$reviewerName} не прийняв {$round} раунд рецензування подання {$articleId}.</message>
+       <message key="log.review.reviewAccepted">{$reviewerName} прийняв {$round} раунд рецензування подання {$articleId}.</message>
+       <message key="log.review.reviewDeclinedByProxy">{$userName} не прийняв {$round} раунд рецензування подання {$articleId} від імені фахівця {$reviewerName}.</message>
+       <message key="log.review.reviewAcceptedByProxy">{$userName} прийняв {$round} раунд рецензування подання {$articleId} від імені фахівця {$reviewerName}.</message>
+       <message key="log.review.reviewFileByProxy">Редактор {$userName} вивантажив файл рецензії для {$round} раунду рецензування подання {$articleId} від імені рецензента {$reviewerName}.</message>
        <message key="log.review.reviewerFile">Файл рецензента був вивантажений.</message>
-       <message key="log.editor.decision">Рішення редактора ({$decision}) щодо статті {$submissionId} було записане редактором {$editorName}.</message>
+       <message key="log.editor.decision">Рішення редактора ({$decision}) щодо статті {$articleId} було записане редактором {$editorName}.</message>
 
-       <message key="log.copyedit.initiate">Літературне редагування подання {$submissionId} було розпочате редактором {$copyeditorName}.</message>
+       <message key="log.copyedit.initiate">Літературне редагування подання {$articleId} було розпочате редактором {$copyeditorName}.</message>
        <message key="log.copyedit.copyeditFileSet">Файл базової редакційної версії був визначений.</message>
-       <message key="log.copyedit.initialEditComplete">{$copyeditorName} завершив початкове літературне редагування подання {$submissionId}.</message>
-       <message key="log.copyedit.finalEditComplete">{$copyeditorName} завершив остаточне літературне редагування подання {$submissionId}.</message>
-       <message key="log.copyedit.copyeditorAssigned">{$copyeditorName} був призначений для літературного редагування подання {$submissionId}.</message>
+       <message key="log.copyedit.initialEditComplete">{$copyeditorName} завершив початкове літературне редагування подання {$articleId}.</message>
+       <message key="log.copyedit.finalEditComplete">{$copyeditorName} завершив остаточне літературне редагування подання {$articleId}.</message>
+       <message key="log.copyedit.copyeditorAssigned">{$copyeditorName} був призначений для літературного редагування подання {$articleId}.</message>
        <message key="log.copyedit.copyeditorFile">Версія літературного редактора файлу подання була вивантажена.</message>
        <message key="log.copyedit.authorFile">Версія файлу подання, відредагована автором, була вивантажена.</message>
 
-       <message key="log.layout.layoutEditorAssigned">{$editorName} був призначений редактором верстки подання {$submissionId}.</message>
-       <message key="log.layout.layoutEditorUnassigned">{$editorName} був звільнений від роботи над версткою подання {$submissionId}.</message>
-       <message key="log.layout.layoutEditComplete">{$editorName} завершив верстку подання {$submissionId}.</message>
+       <message key="log.layout.layoutEditorAssigned">{$editorName} був призначений редактором верстки подання {$articleId}.</message>
+       <message key="log.layout.layoutEditorUnassigned">{$editorName} був звільнений від роботи над версткою подання {$articleId}.</message>
+       <message key="log.layout.layoutEditComplete">{$editorName} завершив верстку подання {$articleId}.</message>
 
        <message key="log.editor.metadataModified">Метадані цієї статті були змінені редактором {$editorName}.</message>
        <message key="log.editor.editorFile">Файл редакційної версії подання був вивантажений.</message>
-       <message key="log.editor.archived">Подання {$submissionId} було надіслане до архіву.</message>
-       <message key="log.editor.restored">Подання {$submissionId} було відновлене у редакційній черзі.</message>
-       <message key="log.editor.editorAssigned">{$editorName} був призначений редактором подання {$submissionId}.</message>
-       <message key="log.editor.submissionExpedited">{$editorName} прискорив редакційне опрацювання статті {$submissionId}.</message>
+       <message key="log.editor.archived">Подання {$articleId} було надіслане до архіву.</message>
+       <message key="log.editor.restored">Подання {$articleId} було відновлене у редакційній черзі.</message>
+       <message key="log.editor.editorAssigned">{$editorName} був призначений редактором подання {$articleId}.</message>
+       <message key="log.editor.submissionExpedited">{$editorName} прискорив редакційне опрацювання статті {$articleId}.</message>
 
-       <message key="log.proofread.assign">{$assignerName} призначив фахівця {$proofreaderName} коректором подання {$submissionId}.</message>
-       <message key="log.proofread.complete">{$proofreaderName} надіслав подання {$submissionId} для включення до графіку публікації.</message>
+       <message key="log.proofread.assign">{$assignerName} призначив фахівця {$proofreaderName} коректором подання {$articleId}.</message>
+       <message key="log.proofread.complete">{$proofreaderName} надіслав подання {$articleId} для включення до графіку публікації.</message>
 
-       <message key="log.imported">{$userName} імпортував статтю {$submissionId}.</message>
+       <message key="log.imported">{$userName} імпортував статтю {$articleId}.</message>
 
        <!-- Reading Tools entries -->
 
@@ -1002,8 +1028,8 @@
 
        <!-- RT Searches -->
 
-       <message key="rt.admin.validateUrls.description"><![CDATA[Нижче відображені адреси URL пошукових сайтів, які, ймовірно, не є коректними.<br/>
-Оскільки цей тест не дає 100% гарантії, вам треба вручну перевірити всі адреси URL, які були помічені як некоректні.<br/>
+       <message key="rt.admin.validateUrls.description"><![CDATA[Нижче відображені адреси URL пошукових сайтів, які, ймовірно, не є коректними.<br />
+Оскільки цей тест не дає 100% гарантії, вам треба вручну перевірити всі адреси URL, які були помічені як некоректні.<br />
 Негативні результати перевірки можуть бути пов'язані з тим, що сайт вимагає надсилання даних у формі.]]></message>
        
        <!-- RT Entities -->
@@ -1029,18 +1055,22 @@
        <message key="notification.notificationsPublicDescription"><![CDATA[На цій сторінці відображаються важливі новини, пов'язані з цим журналом, наприклад, інформація про нові випуски або анонси. Ви можете передплатити ці сповіщення як стрічку RSS (натисніть на зображенні праворуч) або як   <a href="{$emailUrl}">поштову передплату</a>.]]></message>
 
        <message key="notification.type.articleSubmitted">Надіслана нова стаття: "{$title}".</message>
+       <message key="notification.type.copyeditComment">Літературний редактор залишив коментар щодо статті"{$title}".</message>
        <message key="notification.type.editing">Події редакційного процесу</message>
        <message key="notification.type.editorDecisionComment">Залишений коментар на рішення видавця щодо статті"{$title}".</message>
        <message key="notification.type.galleyModified">Змінена гранка статті "{$title}".</message>
        <message key="notification.type.issuePublished">Опублікований випуск.</message>
+       <message key="notification.type.layoutComment">Залишений коментар щодо гранки статті "{$title}".</message>
        <message key="notification.type.metadataModified">Змінені метадані подання "{$title}".</message>
        <message key="notification.type.newAnnouncement">Створений новий анонс.</message>       
+       <message key="notification.type.proofreadComment">Коректор залишив коментар щодо подання "{$title}".</message>
        <message key="notification.type.reviewerComment">Рецензент прокоментував подання "{$title}".</message>
        <message key="notification.type.reviewerFormComment">Надіслана форма рецензування для подання "{$title}".</message>
        <message key="notification.type.reviewing">Події процесу рецензування</message>
        <message key="notification.type.site">Події сайту</message>
        <message key="notification.type.submissionComment">Редактор зробив коментар на подання "{$title}".</message>
        <message key="notification.type.submissions">Події з рукописами</message>
+       <message key="notification.type.suppFileModified">Змінений супровідний файл подання "{$title}".</message>
        <message key="notification.type.userComment">Читач залишив коментар на статтю "{$title}"</message>
 
        <!--
@@ -1053,11 +1083,13 @@
        <message key="user.authorization.noJournal">Немає асоціації з журналом!</message>
        <message key="user.authorization.sectionAssignment">Ви намагаєтеся отримати доступ до статті, яка не належить до Вашого розділу.</message>
        <message key="user.authorization.invalidCopyditorSubmission">Помилка призначення літературного редактора подання або запиту на літературне редагування!</message>
+       <message key="user.authorization.invalidSectionEditorSubmission">Помилка призначення редактора розділу подання або запиту до редактора розділу!</message>
        
        <!-- Icons: Default "alt" text -->
        
        <!-- Debug messages -->
        <message key="debug.notes.currencyListLoad">З XML-файлу завантажений список валют "{$filename}"</message>
+       <message key="debug.notes.helpMappingLoad">Перевантажений файл XML {$filename} довідки у пошуку {$id}.</message>
 	<message key="navigation.categories">Категорії</message>
 	<message key="issue.viewIssue">Дивитися випуск</message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
@@ -1119,7 +1151,4 @@
 	<message key="installer.allowFileUploads"><![CDATA[Ваш сервер зараз дозволяє вивантаження файлів: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Ваш сервер зараз дозволяє вивантаження файлів розміром не більше: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="submissions.editorRuling">Правила редактора</message>
-
-	<!-- Included here because it may be used in the navigation bar -->
-       <message key="editor.navigation.issues">Випуски</message>
 </locale>

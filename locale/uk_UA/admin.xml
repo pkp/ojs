@@ -4,7 +4,7 @@
 <!--
   * locale/uk_UA/admin.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -14,7 +14,7 @@
   * V. I. Vernadsky National Library of Ukraine
   -->
 
-<locale name="uk_UA" full_name = "Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <message key="admin.hostedJournals">Журнали на платформі</message>
        <message key="admin.settings.journalRedirect">Перенаправлення до журналу</message>
        <message key="admin.settings.journalRedirectInstructions">Запити до головного сайту будуть перенаправлятися до цього журналу. Це може бути корисним, наприклад, якщо на сайті представлений єдиний журнал.</message>
@@ -28,6 +28,7 @@
        <message key="admin.languages.downloadFailed">Завантаження локалізації невдале. Причини невдачі деталізовані у списку нижче.</message>
        <message key="admin.languages.localeInstalled">"{$locale}" локалізація була встановлена.</message>
        <message key="admin.languages.download">Завантажити локалізацію</message>
+       <message key="admin.languages.reloadDefaultEmailTemplates">Перезавантаження шаблони листів за замовчуванням</message>
        <message key="admin.languages.download.cannotOpen">Не вдається відкрити мовний дескриптор з веб-сайту PKP.</message>
        <message key="admin.languages.download.cannotModifyRegistry">Не вдається додати нову локалізацію до реєстраційного файлу локалізацій, типово "registry/locales.xml".</message>
        <message key="admin.auth.ojs">База даних користувачів OJS</message>
@@ -39,13 +40,14 @@
        <message key="admin.systemConfigurationDescription"><![CDATA[Налаштування конфігурації OJS з <tt>config.inc.php</tt>.]]></message>
        <message key="admin.journals.journalSettings">Налаштування журналу</message>
        <message key="admin.journals.noneCreated">Журналів не було створено.</message>
-       <message key="admin.contexts.confirmDelete">Ви впевнені, що бажаєте назавжди видалити цей журнал і весь його зміст?</message>
-       <message key="admin.contexts.create">Створити журнал</message>
+       <message key="admin.journals.confirmDelete">Ви впевнені, що бажаєте назавжди видалити цей журнал і весь його зміст?</message>
+       <message key="admin.journals.create">Створити журнал</message>
+       <message key="admin.journals.createInstructions">Вам буде автоматично надана роль менеджера цього журналу. Після створення нового журналу, продовжуйте його створення як менеджер, зробіть необхідні налаштування та розподіліть ролі користувачів.</message>
        <message key="admin.journals.urlWillBe">Це повинно бути коротке слово або акронім, який ідентифікуватиме цей журнал. URL-адресою журналу буде {$sampleUrl}</message>
-       <message key="admin.contexts.form.titleRequired">Необхідна назва.</message>
-       <message key="admin.contexts.form.pathRequired">Необхідний шлях.</message>
-       <message key="admin.contexts.form.pathAlphaNumeric">Шлях може містити лише літери, цифри, дефіси та символи підкреслення; він повинен починатися та закінчуватися символом літери або цифри.</message>
-       <message key="admin.contexts.form.pathExists">Обраний шлях вже використовується іншим журналом.</message>
+       <message key="admin.journals.form.titleRequired">Необхідна назва.</message>
+       <message key="admin.journals.form.pathRequired">Необхідний шлях.</message>
+       <message key="admin.journals.form.pathAlphaNumeric">Шлях може містити лише літери, цифри, дефіси та символи підкреслення; він повинен починатися та закінчуватися символом літери або цифри.</message>
+       <message key="admin.journals.form.pathExists">Обраний шлях вже використовується іншим журналом.</message>
        <message key="admin.journals.enableJournalInstructions">Дозволити цьому журналу з'явитися на сайті</message>
        <message key="admin.journals.journalDescription">Опис журналу</message>
        <message key="admin.journal.pathImportInstructions">Існуючий шлях журналу або шлях, що має бути створений (наприклад, "ojs").</message>
@@ -61,6 +63,7 @@
        <message key="admin.mergeUsers.allUsers">Всі користувачі, які мають ролі</message>
        <message key="admin.mergeUsers.confirm">Ви впевнені, що хочете об'єднати обрані облікові записи ({$oldAccountCount}) у єдиний обліковий запис із іменем користувача "{$newUsername}"? Обрані {$oldAccountCount} облікових записів не будуть надалі існувати окремо. Це незворотна дія.</message>
        <message key="admin.mergeUsers.noneEnrolled">Немає користувачів, які мають ролі.</message>
+	<message key="admin.settings.useAlphalist">Відображати на домашній сторінці сайту алфавіт для швидкої навігації між журналами (корисно для сайтів з багатьма журналами).</message>
 	<message key="admin.settings.journalsList.showDescription">Опис журналу</message>
 	<message key="admin.categories">Категорії</message>
 	<message key="admin.categories.disableCategories">Не організовувати журнали за категоріями.</message>

@@ -4,7 +4,7 @@
 <!--
   * locale/uk_UA/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -14,7 +14,7 @@
   * V. I. Vernadsky National Library of Ukraine
   -->
 
-<locale name="uk_UA" full_name = "Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <message key="author.submit">Нове подання</message>
        <message key="author.track">Активні подання</message>
        <message key="author.competingInterests"><![CDATA[<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Політика</a> щодо&nbsp;конфлікту&nbsp;інтересів]]></message>
@@ -28,11 +28,11 @@
        <message key="author.submit.step4">Крок 4. Вивантаження супровідних файлів</message>
        <message key="author.submit.step4a">Крок 4a. Додати супровідний файл</message>
        <message key="author.submit.step5">Крок 5. Підтвердження подання</message>
-       <message key="author.submit.start">Початок</message>
-       <message key="author.submit.upload">Вивантаження подання</message>
-       <message key="author.submit.metadata">Введення метаданих</message>
-       <message key="author.submit.supplementaryFiles">Вивантаження супровідних файлів</message>
-       <message key="author.submit.confirmation">Підтвердження</message>
+       <message key="author.submit.start">1. Початок</message>
+       <message key="author.submit.upload">2. Вивантаження подання</message>
+       <message key="author.submit.metadata">3. Введення метаданих</message>
+       <message key="author.submit.supplementaryFiles">4. Вивантаження супровідних файлів</message>
+       <message key="author.submit.confirmation">5. Підтвердження</message>
        <message key="author.submit.cancelSubmission">Ви можете завершити це подання пізніше, вибравши його у списку "Активні подання" на своїй домашній сторінці.</message>
        <message key="author.submit.notAccepting">Цей журнал в даний час не приймає рукописів від авторів.</message>
        <message key="author.submit.requestWaiver">Запит виключення</message>
@@ -52,19 +52,19 @@
        <message key="author.submit.howToSubmitNoPhone"><![CDATA[Виникли труднощі? Допомогу може надати <a href="mailto:{$supportEmail}">{$supportName}</a>.]]></message>
        <message key="author.submit.journalSection">Розділ журналу</message>
        <message key="author.submit.journalSectionDescription"><![CDATA[Оберіть відповідний розділ для цього подання (див. Розділи та Політика на сторінці <a href="{$aboutUrl}" target="_new">Про журнал</a>).]]></message>
-       <message key="submission.submit.selectSection">Будь ласка, оберіть розділ...</message>
+       <message key="author.submit.selectSection">Будь ласка, оберіть розділ...</message>
        <message key="author.submit.submissionLocale">Мова подання</message>
        <message key="author.submit.submissionLocaleDescription">Цей журнал приймає подання кількома мовами. Оберіть основну мову подання з запропонованих нижче.</message>
-       <message key="submission.submit.submissionChecklist">Вимоги до подання</message>
-       <message key="submission.submit.submissionChecklistDescription">Необхідно підтвердити, що це подання відповідає нормам, прийнятим у журналі. Підтвердіть всі пункти вимог (нижче можна додати коментарі для редактора).</message>
+       <message key="author.submit.submissionChecklist">Вимоги до подання</message>
+       <message key="author.submit.submissionChecklistDescription">Необхідно підтвердити, що це подання відповідає нормам, прийнятим у журналі. Підтвердіть всі пункти вимог (нижче можна додати коментарі для редактора).</message>
        <message key="author.submit.verifyChecklist">Перед тим, як продовжити, Ви повинні підтвердити всі пункти вимог.</message>
        <message key="author.submit.copyrightNoticeAgree">Автори погоджуються з Положенням про авторські права, норми якого будуть застосовані до цього подання, коли і якщо воно буде опубліковане у цьому журналі (нижче можна додати коментарі для редактора).</message>
        <message key="author.submit.copyrightNoticeAgreeRequired">Перед тим, як продовжити, Ви повинні погодитися з нормами Положення про авторські права.</message>
-       <message key="submission.submit.coverNote">Коментарі для редактора</message>
+       <message key="author.submit.commentsForEditor">Коментарі для редактора</message>
        <message key="author.submit.comments">Введіть текст (за бажанням)</message>
        <message key="author.submit.form.sectionRequired">Будь ласка, оберіть відповідний розділ журналу для цього подання.</message>
        <message key="author.submit.form.localeRequired">Будь ласка, оберіть мову подання.</message>
-       <message key="submission.submit.privacyStatement">Положення про конфіденційність</message>
+       <message key="author.submit.privacyStatement">Положення про конфіденційність</message>
        <message key="author.submit.reorderInstructions">Відсортуйте авторів у тому порядку, як вони мають бути вказані у публікації.</message>
        <message key="author.submit.reorder">Відсортувати імена авторів</message>
        <message key="author.submit.selectPrincipalContact">Основна контактна особа для редакторів.</message>
@@ -74,6 +74,7 @@
        <message key="author.submit.submissionSupportingAgencies">Спонсоруючі організації</message>
        <message key="author.submit.submissionSupportingAgenciesDescription">Вкажіть установи, які надали фінансову підтримку для виконання дослідження, яке розглядається у цьому поданні.</message>
        <message key="author.submit.coverageInstructions">Охарактеризуйте власне дослідження в аспектах його географічних, хронологічних (історичних) або інших меж.</message>
+       <message key="author.submit.subjectClassInstructions">Використовуйте гіпертекстову класифікаційну систему для визначення класифікаційних термінів і, якщо можливо, номерів.</message>
        <message key="author.submit.languageInstructions"><![CDATA[Українська=uk; Русский=ru; English=en. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Додаткові коди</a>.]]></message>
        <message key="author.submit.form.authorRequired">Потрібний, принаймні, один автор.</message>
        <message key="author.submit.form.authorRequiredFields">Необхідно ввести ім'я, прізвище та адресу email кожного з авторів.</message>
