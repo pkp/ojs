@@ -126,7 +126,7 @@
        <message key="manager.setup.announcementsDescription">Для інформування читачів про новини та події журнал може публікувати окрему сторінку "Анонси".</message>
        <message key="manager.setup.announcementsIntroduction">Додаткова інформація</message>
        <message key="manager.setup.announcementsIntroductionDescription">Додайте будь-яку додаткову інформацію, що має бути надана читачам на сторінці "Анонси".</message>
-       <message key="manager.setup.appearInAboutJournal">(показувати на сторінці "Про журнал") </message>
+       <message key="manager.setup.appearInAboutJournal">(показувати на сторінці "Про журнал")</message>
                                                        <message key="manager.setup.competingInterests.requireAuthors">На етапі подання авторами рукописів вимагати від них інформацію щодо можливих конфліктів інтересів.</message>
        <message key="manager.setup.competingInterests.requireReviewers">На етапі надсилання рецензій вимагати від рецензентів інформацію щодо можливих конфліктів інтересів.</message>
                                <message key="manager.setup.history">Історія журналу</message>
