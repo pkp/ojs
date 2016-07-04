@@ -510,7 +510,7 @@
 	<message key="sectionEditor.proofreader.confirmRenotify">Уведомление этого корректора приведет к повторному запуску задания с самого начала. Вы уверены, что хотите это сделать?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Отказы</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} Отказы рецензентов, отмены и предыдущие раунды</message>
+	<message key="sectionEditor.regrets.title">#{$submissionId} Отказы рецензентов, отмены и предыдущие раунды</message>
 	<message key="sectionEditor.regrets">Отказы</message>
 	<message key="sectionEditor.regrets.link">Просмотреть отказы, отмены и предыдущие раунды</message>
 	<message key="sectionEditor.regrets.reviewRound">Рецензирование, раунд {$round}</message>
@@ -985,48 +985,48 @@
 
 	<!-- Записи в журнале событий о статьях -->
 	<message key="log.author.submitted">Автор {$authorName} добавил новую статью, ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">Автор {$authorName} исправил статью {$articleId}. Новый ID файла — {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">Рецензент {$reviewerName} был освобожден от рецензирования статьи {$articleId} на {$round}-м раунде рецензирования.</message>
-	<message key="log.review.reviewInitiated">{$round}-й раунд рецензирования рецензентом {$reviewerName} для статьи {$articleId} был начат.</message>
-	<message key="log.review.reviewReinitiated">{$round}-й раунд рецензирования рецензентом {$reviewerName} для статьи {$articleId} был начат заново.</message>
-	<message key="log.review.reviewCancelled">{$round}-й раунд рецензирования рецензентом {$reviewerName} для статьи {$articleId} был отменен.</message>
-	<message key="log.review.reviewCleared">{$round}-й раунд рецензирования рецензентом {$reviewerName} для статьи {$articleId} был очищен.</message>
-	<message key="log.review.reviewerRated">Рецензенту {$reviewerName} был присвоен рейтинг на {$round}-м раунде рецензирования статьи {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">Срок выполнения рецензии в рамках {$round}-го раунда рецензирования статьи {$articleId} рецензентом {$reviewerName} был установлен равным {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">Рекомендация на {$round}-м раунде рецензирования статьи {$articleId} рецензентом {$reviewerName} была задана.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">Рекомендация на {$round}-м раунде рецензирования статьи {$articleId} была задана редактором ({$editorName}) по поручению рецензента ({$reviewerName}).</message>
-	<message key="log.review.resubmit">Статья {$articleId} была снова отправлена на рецензирование.</message>
-	<message key="log.review.reviewDeclined">Рецензент {$reviewerName} отказался дать рецензию на {$round}-м раунде рецензирования для статьи {$articleId}.</message>
-	<message key="log.review.reviewAccepted">Рецензент {$reviewerName} согласился дать рецензию на {$round}-м раунде рецензирования для статьи {$articleId}.</message>
-	<message key="log.review.reviewDeclinedByProxy">Редактор {$userName} внес отказ дать рецензию на {$round}-м раунде рецензирования для статьи {$articleId} по поручению рецензента ({$reviewerName}).</message>
-	<message key="log.review.reviewAcceptedByProxy">Редактор {$userName} внес согласие дать рецензию на {$round}-м раунде рецензирования для статьи {$articleId} по поручению рецензента ({$reviewerName}).</message>
-	<message key="log.review.reviewFileByProxy">Редактор {$userName} загрузил файл рецензии на {$round}-м раунде рецензирования статьи {$articleId} по поручению рецензента {$reviewerName}.</message>
+	<message key="log.author.documentRevised">Автор {$authorName} исправил статью {$submissionId}. Новый ID файла — {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">Рецензент {$reviewerName} был освобожден от рецензирования статьи {$submissionId} на {$round}-м раунде рецензирования.</message>
+	<message key="log.review.reviewInitiated">{$round}-й раунд рецензирования рецензентом {$reviewerName} для статьи {$submissionId} был начат.</message>
+	<message key="log.review.reviewReinitiated">{$round}-й раунд рецензирования рецензентом {$reviewerName} для статьи {$submissionId} был начат заново.</message>
+	<message key="log.review.reviewCancelled">{$round}-й раунд рецензирования рецензентом {$reviewerName} для статьи {$submissionId} был отменен.</message>
+	<message key="log.review.reviewCleared">{$round}-й раунд рецензирования рецензентом {$reviewerName} для статьи {$submissionId} был очищен.</message>
+	<message key="log.review.reviewerRated">Рецензенту {$reviewerName} был присвоен рейтинг на {$round}-м раунде рецензирования статьи {$submissionId}.</message>
+	<message key="log.review.reviewDueDateSet">Срок выполнения рецензии в рамках {$round}-го раунда рецензирования статьи {$submissionId} рецензентом {$reviewerName} был установлен равным {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">Рекомендация на {$round}-м раунде рецензирования статьи {$submissionId} рецензентом {$reviewerName} была задана.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">Рекомендация на {$round}-м раунде рецензирования статьи {$submissionId} была задана редактором ({$editorName}) по поручению рецензента ({$reviewerName}).</message>
+	<message key="log.review.resubmit">Статья {$submissionId} была снова отправлена на рецензирование.</message>
+	<message key="log.review.reviewDeclined">Рецензент {$reviewerName} отказался дать рецензию на {$round}-м раунде рецензирования для статьи {$submissionId}.</message>
+	<message key="log.review.reviewAccepted">Рецензент {$reviewerName} согласился дать рецензию на {$round}-м раунде рецензирования для статьи {$submissionId}.</message>
+	<message key="log.review.reviewDeclinedByProxy">Редактор {$userName} внес отказ дать рецензию на {$round}-м раунде рецензирования для статьи {$submissionId} по поручению рецензента ({$reviewerName}).</message>
+	<message key="log.review.reviewAcceptedByProxy">Редактор {$userName} внес согласие дать рецензию на {$round}-м раунде рецензирования для статьи {$submissionId} по поручению рецензента ({$reviewerName}).</message>
+	<message key="log.review.reviewFileByProxy">Редактор {$userName} загрузил файл рецензии на {$round}-м раунде рецензирования статьи {$submissionId} по поручению рецензента {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Файл рецензента был загружен на сайт.</message>
-	<message key="log.editor.decision">Решение редактора ({$decision}) по статье {$articleId} было введено редактором ({$editorName}).</message>
+	<message key="log.editor.decision">Решение редактора ({$decision}) по статье {$submissionId} было введено редактором ({$editorName}).</message>
 
 
-	<message key="log.copyedit.initiate">Литературное редактирование статьи {$articleId} было начато литературным редактором ({$copyeditorName}).</message>
+	<message key="log.copyedit.initiate">Литературное редактирование статьи {$submissionId} было начато литературным редактором ({$copyeditorName}).</message>
 	<message key="log.copyedit.copyeditFileSet">Для литературного редактирования был выбран файл по умолчанию.</message>
-	<message key="log.copyedit.initialEditComplete">Литературный редактор {$copyeditorName} завершил первоначальное литературное редактирование статьи {$articleId}.</message>
-	<message key="log.copyedit.finalEditComplete">Литературный редактор {$copyeditorName} завершил окончательное литературное редактирование статьи {$articleId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">Литературный редактор {$copyeditorName} был назначен для литературного редактирования статьи {$articleId}.</message>
+	<message key="log.copyedit.initialEditComplete">Литературный редактор {$copyeditorName} завершил первоначальное литературное редактирование статьи {$submissionId}.</message>
+	<message key="log.copyedit.finalEditComplete">Литературный редактор {$copyeditorName} завершил окончательное литературное редактирование статьи {$submissionId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">Литературный редактор {$copyeditorName} был назначен для литературного редактирования статьи {$submissionId}.</message>
 	<message key="log.copyedit.copyeditorFile">Версия статьи, исправленная литературным редактором, была загружена на сайт.</message>
 	<message key="log.copyedit.authorFile">Версия статьи, исправленная автором на этапе литературного редакторования, была загружена на сайт.</message>
 
-	<message key="log.layout.layoutEditorAssigned">Верстальщик {$editorName} был назначен верстальщиком статьи {$articleId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">Верстальщик {$editorName} был освобожден от верстки статьи {$articleId}.</message>
-	<message key="log.layout.layoutEditComplete">Верстальщик {$editorName} завершил верстку статьи {$articleId}.</message>
+	<message key="log.layout.layoutEditorAssigned">Верстальщик {$editorName} был назначен верстальщиком статьи {$submissionId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">Верстальщик {$editorName} был освобожден от верстки статьи {$submissionId}.</message>
+	<message key="log.layout.layoutEditComplete">Верстальщик {$editorName} завершил верстку статьи {$submissionId}.</message>
 
 	<message key="log.editor.metadataModified">Метаданные для этой статьи были изменены редактором ({$editorName}).</message>
 	<message key="log.editor.editorFile">Версия статьи, исправленная редактором, была загружена на сайт.</message>
-	<message key="log.editor.archived">Статья {$articleId} была перемещена в архив.</message>
-	<message key="log.editor.restored">Статья {$articleId} была восстановлена из архива в очередь статей.</message>
-	<message key="log.editor.editorAssigned">Редактор {$editorName} был назначен редактором статьи {$articleId}.</message>
+	<message key="log.editor.archived">Статья {$submissionId} была перемещена в архив.</message>
+	<message key="log.editor.restored">Статья {$submissionId} была восстановлена из архива в очередь статей.</message>
+	<message key="log.editor.editorAssigned">Редактор {$editorName} был назначен редактором статьи {$submissionId}.</message>
 
-	<message key="log.proofread.assign">Пользователь {$assignerName} назначил пользователя {$proofreaderName} корректором статьи {$articleId}.</message>
-	<message key="log.proofread.complete">Корректор {$proofreaderName} отправил статью {$articleId} для размещения в выпуске.</message>
+	<message key="log.proofread.assign">Пользователь {$assignerName} назначил пользователя {$proofreaderName} корректором статьи {$submissionId}.</message>
+	<message key="log.proofread.complete">Корректор {$proofreaderName} отправил статью {$submissionId} для размещения в выпуске.</message>
 
-	<message key="log.imported">Пользователь {$userName} импортировал статью {$articleId}.</message>
+	<message key="log.imported">Пользователь {$userName} импортировал статью {$submissionId}.</message>
 
 	<!-- Строки для инструментов читателя -->
 
