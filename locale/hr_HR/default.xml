@@ -4,7 +4,7 @@
 <!-- 
   * locale/hr_HR/default.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -19,6 +19,8 @@
 	<message key="default.journalSettings.checklist.addressesLinked">URL adrese za mrežno dostupne bibliografske čestice su priložene.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Tekst sadrži jednostruki razmak; koristi se font 12; preferira se kurziv(italic), radije nego podcrtavanje (prihvaća se za URL adrese); i sve ilustracije, slike i tablice su smještene na prikladnim mjestima u tekstu, radije nego na njegovom kraju.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Tekst ispunjava stilske i bibliografske zahtjeve navedene u <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Smjernice za autore</a>, koje se nalaze u rubrici "o časopisu".]]></message>
+	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Ako predajete za stručno recenziranu rubriku časopisa, upute u <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Kako osigurati anonimnost recenzije</a> se moraju slijediti.]]></message>
+
 	<message key="default.journalSettings.privacyStatement">Imena i adrese e-pošte registrirane na ovim stranicama koristit će se isključivo u navedene svrhe časopisa i neće biti dostupne niti jednoj drugoj stranci.</message>
 	<message key="default.journalSettings.openAccessPolicy">Ovaj časopis omogućuje trenutni otvoren pristup svojem cjelokupnom sadržaju u skladu s uvjerenjem kako javna dostupnost istraživačkih spoznaja potiče veću razmjenu znanja i ideja.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">Autorima je dozvoljeno i potiču se da tekstove koje su objavili u ovom časopisu postavljaju na osobne ili mrežne stranice svoje institucija, prije i nakon objave u časopisu, uz uvijet da prilože pune bibliografske informacije o tome gdje je članak izvorno objavljen.</message>
@@ -111,9 +113,9 @@ Brojevi u 3. tablici nisu poravnati s trećim stupcem.</pre>
 <pre>4. OBLIKOVANJE
 Paragraf koji počinje s "Posljednja tema..." nije uvučen.</pre>
 <br />]]></message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
-</message>
+	<message key="default.journalSettings.emailSignature">________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Potičemo čitatelje da se predbilježe za primanje obavijesti o novim izdanjima ovoga časopisa. Koristite <a href="{$indexUrl}/{$journalPath}/user/register">Registrirajte se</a> poveznicu na vrhu početne stranice časopisa. Ova registracija rezultirat će time da će čitatelj putem e-pošte primati kazalo sadržaja  za svaku novi broj ovoga časopisa. Popis predbilježenih čitatelja također pruža časopisu informacije o postignutom stupnju podrške čitateljstva. Pogledajte <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Izjavu o privatnosti</a> časopisa koja jamči čitateljima da njihovo ime i adresa e-pošte neće biti korišteni za druge potrebe.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Jeste li zainteresirani za ustupanje vlastitog priloga ovome časopisu? Preporučujemo da pregledate stranicu <a href="{$indexUrl}/{$journalPath}/about">O časopisu</a> u poveznici izdavačke politike časopisa i sadržaja pojedinih rubrika, kao i <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Smjernice za autore</a>. Autori se moraju <a href="{$indexUrl}/{$journalPath}/user/register">registrirati</a> prije nego mogu prijaviti svoj prilog, ili ako su već registrirani kao korisnici se jednostavno <a href="{$indexUrl}/{$journalPath}/login">prijaviti</a> i početi s procesom prijave priloga u 5 koraka.' u 'Autori se moraju registrirati da bi mogli objaviti svoj prilog, ili ako su već registrirani kao korisnici mogu se jednostavno prijaviti i početi s postupkom prijave priloga u 5 koraka.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Potičemo knjižničare knjižnica znanstveno-istraživačkih institucija da uvrste ovaj časopis u svoje evidencije elektroničkih časopisa. Isto tako, vrijedi istaknuti da pomoću ovoga sustava za izdavanje časopisa temeljenog na otvorenom kodu knjižnice jednostavno mogu istraživačima u vlastitoj instituciji pružiti platformu za uređivanje i izdavanje vlastitih časopisa (pogledajte <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
@@ -146,4 +148,16 @@ Paragraf koji počinje s "Posljednja tema..." nije uvučen.</pre>
 	<message key="default.journalSettings.membershipFeeDescription">Plaćanjem ove naknade postat ćete član ove organizacije na godinu dana, što će vam omogućiti besplatan pristup ovom časopisu.</message>
 	<message key="default.journalSettings.donationFeeDescription">Časopis sa velikom zahvalnošću prihvaća donacije u bilo kojem iznosu. One uvelike doprinose našim naporima redovnog izlaženja i unaprjeđenja kvalitete časopisa.</message>
 	<message key="default.journalSettings.purchaseArticleFeeDescription">Plaćanje ove naknade omogućit će vam neograničen pristup, preuzimanje i štampanje ovog članka.</message>
+	<message key="section.default.title">Članci</message>
+	<message key="default.journalSettings.emailHeader">SLijedeća poruka se šalje u ime {$journalName}.
+________________________________________________________________________</message>
+	<message key="default.journalSettings.submissionFee">Podnošenje članka</message>
+	<message key="default.journalSettings.donationFee">Donacije časopisu</message>
+	<message key="section.default.abbrev">ART</message>
+	<message key="default.journalSettings.fastTrackFee">Brza recenzija</message>
+	<message key="default.journalSettings.publicationFee">Objavljivanje članka</message>
+	<message key="default.journalSettings.purchaseArticleFee">Kupi članak</message>
+	<message key="default.journalSettings.purchaseIssueFee">Kupi izdanje</message>
+	<message key="default.journalSettings.purchaseIssueFeeDescription">Plaćanje ove cijene će vam omogućiti pregled, preuzimanje i tiskanje ovog izdanja.</message>
+	<message key="default.journalSettings.membershipFee">Članstvo u asocijaciji</message>
 </locale>
