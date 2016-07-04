@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/mk_MK/admin.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="mk_MK" full_name="Македонски јазик">
+	<message key="admin.hostedJournals">Домаќин списание</message>
+	<message key="admin.settings.journalRedirect">Пренасочување на списание</message>
+	<message key="admin.settings.options">Опции</message>
+	<message key="admin.settings.useAlphalist">За страница со многу списанија,  прикажи листа на почетната страница овозможувајќи брза алфабетска навигација помеѓу списанијата. </message>
+	<message key="admin.settings.usePaging">За страница со многу списанија, подели ја листата на списанија на неколку страници.</message>
+	<message key="admin.settings.journalRedirectInstructions">Барањата на главната страница ќе бидат пренасочени на ова списание. Ова може да биде корисно ако страницата е домаќин на само едно списание, на пример.</message>
+	<message key="admin.settings.noJournalRedirect">Без пренасочување</message>
+	<message key="admin.settings.journalsList">Елементи на списанието</message>
+	<message key="admin.settings.journalsList.description">Ве молам изберете ги елементите на списанието кои ќе се прикажуваат  за секое списание на оваа страница.</message>
+	<message key="admin.settings.journalsList.showThumbnail">Слика на списанието</message>
+	<message key="admin.settings.journalsList.showTitle">Наслов на списанието</message>
+	<message key="admin.settings.journalsList.showDescription">Опис на списанието</message>
+	<message key="admin.languages.primaryLocaleInstructions">Ова ќе биде стандарден јазик за страницата и за секое поставено списание. </message>
+	<message key="admin.languages.supportedLocalesInstructions">Изберете ги сите локации за подршка на страницата. Избраните локации ќе бидат достапни за употреба од страна на сите списанија поставени на оваа страница, и исто така ќе се појавуваат во избирачкото мени за јазик на секоја страница. Ако не се избрани повеќе локации, менито за јазик нема да се појавува и проширените јазични подесувања нема да бидат достапни за списанијата.</message>
+	<message key="admin.locale.maybeIncomplete">Означените локации може да се нецелосни.</message>
+	<message key="admin.languages.confirmUninstall">Дали сте сигурни дека сакате да ја деинсталирате оваа локација?Ова може да влијае на било кое моментално поставено списание кое ја користи оваа локација.</message>
+	<message key="admin.languages.installNewLocalesInstructions">Одберете ги додатните локации за да инсталирате подршка за овој систем. Локациите мора да бидат инсталирани пред да може да се користат од страна на поставените списанија. Види ја OJS документацијата за информации за додавање на поддршка за новите јазици.</message>
+	<message key="admin.languages.downloadLocales">Преземи ја локацијата</message>
+	<message key="admin.languages.downloadFailed">Преземањето на локацијата не е успешно.Пораката за грешка подолу го опишува неуспехот.</message>
+	<message key="admin.languages.localeInstalled"> "{$locale}" локацијата е инсталирана.</message>
+	<message key="admin.languages.download">Преземи ја локацијата</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Вчитај стандардно е-мејл шаблони</message>
+	<message key="admin.languages.download.cannotOpen">Не може да се отвори опишувачот за јазик од PKP веб страната.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Не можете да вметнете нова локација во локалниот регистар на датотеки, вообичаено "registry/locales.xml".</message>
+	<message key="admin.auth.ojs">OJS корисник на базата на податоци</message>
+	<message key="admin.auth.enableSyncProfiles">Овозможете синхронизација на корисничкиот профил(ако е подржано од додатокот за проверка). Информациите за профилот на корисникот ќе се ажурираат автоматски од далечински извор кога корисникот се најавува, и промени на профилот(вклучувајќи и промена на лозинка) направени во рамките на OJS ќе бидат автоматски ажурирани  на далечински извор. Ако оваа опција не е овозможена OJS профилот на информации ќе се чува одделно од далечинскиот извор на профилот на информации.</message>
+	<message key="admin.auth.enableSyncPasswords">Овозможете промена на лозинката на корисникот(ако е подржано од додатокот за проверка). Овозможувањето на оваа опција им овозможува на корисниците да ги променат нивните лозинки внатре во OJS и да ја користат OJS "изгубена лозинка" функцијата за да ги ресетираат заборавените лозинки. Овие функции ќе бидат недостапни за корисниците со овој код за проверка ако оваа опција не е овозможена.</message>
+	<message key="admin.auth.enableCreateUsers">Овозможете му на корисникот да создава(ако е подржано од додатокот за проверка). Корисниците создадени во рамките на OJS со овој код за проверка ќе бидат автоматски додадени на далечински код за проверка ако тие веќе не постојат. Покрај тоа, ако овој код е стандарден код за проверка, OJS профилите создадени преку регистрација на корисниците ќе бидат додадени на далечински код за проверка.</message>
+	<message key="admin.systemVersion">OJS верзија</message>
+	<message key="admin.systemConfiguration">OJS конфигурација </message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[OJS конфигурациски поставки од<tt>config.inc.php</tt>.]]></message>
+	<message key="admin.journals.journalSettings">Подесувања на списание</message>
+	<message key="admin.journals.noneCreated">Не се креирани списанија.</message>
+	<message key="admin.journals.confirmDelete">Дали сте сигурни дека сакате трајно да го избришете ова списание и целата негова содржина?</message>
+	<message key="admin.journals.create">Креирај списание</message>
+	<message key="admin.journals.createInstructions">Автоматски ќе бидете додадени како управник на ова списание. По создавање на ново списание, треба да се внесете како управник за да продолжите со својата поставеност и  запишување на корисници.</message>
+	<message key="admin.journals.urlWillBe">Ова треба да биде еден краток збор или акроним кој го идентификува списанието. URL-то на списанието ќе биде{$sampleUrl}</message>
+	<message key="admin.journals.form.titleRequired">Наслов е потребен.</message>
+	<message key="admin.journals.form.pathRequired">Патека е потребна.</message>
+	<message key="admin.journals.form.pathAlphaNumeric">Патеката може да содржи само алфанумерички карактери, долни црти, и тире, и мора да започне и заврши со алфанумерички карактер.</message>
+	<message key="admin.journals.form.pathExists">Селектираната патека е веќе во употреба од друго списание.</message>
+	<message key="admin.journals.enableJournalInstructions">Овозможи му на ова списание да се појави јавно на страната.</message>
+	<message key="admin.journals.journalDescription">Опис на списанието</message>
+	<message key="admin.journal.pathImportInstructions">Постоечка патека на списание или креирање на патека(e.g., "ojs").</message>
+	<message key="admin.journals.importSubscriptions">Вметни членови</message>
+	<message key="admin.journals.transcode">Префрлање на мета податоци за статија од ISO8859-1</message>
+	<message key="admin.journals.redirect">Генерирај код на страната OJS 1 URLs до OJS 2 URLs</message>
+	<message key="admin.journals.form.importPathRequired">Влезната патека е потребна.</message>
+	<message key="admin.journals.importErrors">Внесувањето не успеа да се изврши успешно</message>
+	<message key="admin.mergeUsers">Логирани корисници</message>
+	<message key="admin.mergeUsers.mergeUser">Логиран корисник</message>
+	<message key="admin.mergeUsers.into.description">Изберете корисник кому ке му ги доделете авторските права од претходниот корисник, уредувањето на задачи, итн.</message>
+	<message key="admin.mergeUsers.from.description">Изберете корисник (или повеќе) кои ќе се спојат во еден кориснички профил(на пр. кога некој има два кориснички профила).Профилот(профилите) кои се избрани први ќе бидат избришани и сите подесувања, задачи, итн ќе бидат префрлени во другиот профил.</message>
+	<message key="admin.mergeUsers.allUsers">Сите запишани корисници</message>
+	<message key="admin.mergeUsers.confirm">Дали сте сигурни дека сакате да се логирате на избраниот {$oldAccountCount} профил(профили) со корисничкото име "{$newUsername}"? Избраниот {$oldAccountCount} профил нема да постои потоа. Оваа акција не е двонасочна.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Не запишани корисници.</message>
+
+	<!-- Categories -->
+	<message key="admin.categories">Категории</message>
+	<message key="admin.categories.enable.description">Администраторот на страната може да избере да дефинира група на категории за да помогне во организирање на голема колекција на списанија. Менаџерите на списанија тогаш може да изберат неколку од овие категории за секое списание, и читателите може да ги пребаруваат колекциите на списанија по категорија.</message>
+	<message key="admin.categories.disableCategories">Не ги организиравте списанијата во категории.</message>
+	<message key="admin.categories.enableCategories">Дозволете им на менаџерите на списанијата да ги организираат списанијата во категории.</message>
+	<message key="admin.categories.editTitle">Уреди категорија</message>
+	<message key="admin.categories.createTitle">Креирај категорија</message>
+	<message key="admin.categories.create">Креирај нова категорија</message>
+	<message key="admin.categories.noneCreated">Не е креирана категорија.</message>
+	<message key="admin.categories.confirmDelete">Дали сте сигурни дека сакате да ја избришете оваа категорија?</message>
+	<message key="admin.categories.name">Име</message>
+	<message key="admin.categories.nameRequired">Името на категоријата е потребно.</message>
+</locale>

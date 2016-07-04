@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/mk_MK/default.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+ 
+<locale name="mk_MK" full_name="Македонски јазик">
+	<!-- Section default -->
+	<message key="section.default.title">Статии</message>
+	<message key="section.default.abbrev">ART</message>
+	<message key="section.default.policy"></message>
+
+	<!--
+	 *
+	 * DEFAULT - Default settings for setup items.
+	 *
+	-->
+	<message key="default.journalSettings.checklist.notPreviouslyPublished">Поднесување претходно не е објавена, ниту пак е пред друго списание за разгледување (или објаснување е предвидено во Коментари до уредникот).</message>
+	<message key="default.journalSettings.checklist.fileFormat">Поднесувањето на датотеката е во OpenOffice, Microsoft Word, RTF, или WordPerfect документ формат на датотеката.</message>
+	<message key="default.journalSettings.checklist.addressesLinked">Каде што е достапно, URL адреси за референци биле предвидени.</message>
+	<message key="default.journalSettings.checklist.submissionAppearance">Текстот е single-spaced; користи 12-ка фонт; користи закосени букви, наместо подвлечени (освен со URL адреси) и сите илустрации, бројки и табели се поставени во рамките на текст во соодветен поени, наместо на крајот.</message>
+	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Текстот се придржува кон стилските и библиографски барањата истакнати во <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Авторски насоки</a>, кој се наоѓа во About the Journal.]]></message>
+	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Ако се поднесува на рецензираните делови на списанието, инструкциите во <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Обезбедување на Blind Review</a> биле следени.]]></message>
+	<message key="default.journalSettings.privacyStatement">Внесените имиња и е-маил адреси во овој сајт за списание ќе се користат исклучиво за наведените цели на ова списание и нема да бидат ставени на располагање за било каква друга цел.</message>
+	<message key="default.journalSettings.openAccessPolicy">Ова списание обезбедува директно отворен пристап до своите содржини на принципот што прави истражување слободно за располагање на јавноста и поддржува поголема глобална размена на знаењето.</message>
+	<message key="default.journalSettings.authorSelfArchivePolicy">Ова списание дозволува и поттикнува авторите да објавуваат ставки доставени до списанието за лични веб-сајтови или институционални складишта и по објавувањето, истовремено обезбедувајќи библиографски детали доколку е применливо, на објавувањето во ова списание.</message>
+	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Фазата на уредување е наменета за подобрување на протокот, јасноста, граматика, текстови, и форматирање на статијата. Таа претставува последна шанса за авторот да направи било какви значителни измени во текстот, бидејќи наредната фаза е ограничена на грешки и форматирање корекции. 
+
+Датотеката може да биде е во Word или. RTF формат и затоа лесно може да се уредува како обработка на текст документ. Множество на инструкции прикажани овде предлагаат два пристапи кон уредувањето. Една е базирана на вистинскиот пат на Microsoft Word's Track Changes функција и бара едиторска копија, едитор, и автор имаат пристап до оваа програма. Вториот систем, кој е софтверски самостоен, е позајмена, со дозвола, од Харвард едукативен преглед. Уредникот на списанието е во позиција да ги менува овие упатства, така предлозите можат да се направат за подобрување на процесот за ова списание.
+
+
+<h4>Копија уредувачки системи</h4>
+
+<strong>1. Microsoft Word's Track Changes</strong>
+
+Во алатките во мени лентата, функцијата Track Changes овозможува на копија уредник да направи инсерции (текст се појавува во боја) и бришења (текст се појавува прецртан во боја или на маргините како избришани). Копија уредник може да постави барања до авторот (Автор за барања) и до уредникот (уредник за барања) со вметнување на овие барања во квадратни загради. На copyedited верзија потоа се прикачува, и уредник е известен. Уредникот потоа го прегледува текстот и го известува авторот.
+
+Уредникот и авторот треба да ги напуштат тие промени со кои тие се задоволни. Ако понатамошни промени се неопходни, уредник и автор може да прават промени на првичните инсерции или бришења, како и да се направат нови инсерции или бришења на друго место во текстот. Авторите и уредниците треба да одговорат на секое од барањата упатени до нив, со одговори сместени внатре во квадратни загради.
+
+Потоа текстот е испитуван од страна на уредникот и авторот, копија уредникот ќе направи конечно прифаќање на промени во рамките на подготовките за изгледот и фазата за корегирање.
+
+
+<strong>2. Harvard Educational Review </strong>
+
+<strong>Instructions for Making Electronic Revisions to the Manuscript</strong>
+
+Ве молиме следете ги следниве протокол за изработка на електронски дополнувања вашиот ракопис:
+
+<strong>Одговарање на предложените промени.</strong>
+&nbsp; За секој од предложените измени кои ги ќе прифатите, unbold текстот.
+&nbsp; За секој од предложените промени што не ги прифаќате, повторно внесете го оригиналниот текст и <strong>bold</strong> it.
+
+<strong>Изработка на дополнувања и бришења.</strong>
+&nbsp; Наведете дополнувања од страна на <strong>bolding</strong> новиот текст.
+&nbsp; Заменете ги избришаните делови со: <strong>[deleted text]</strong>.
+&nbsp; Ако избришете една или повеќе реченица, ве молиме наведете со забелешка, на пример, <strong>[deleted 2 sentences]</strong>.
+
+<strong>Одговарање на прашања на Авторот (QAS).</strong>
+&nbsp; Чувајте ги сите QAS целосни и со задебелен фонт, во текстот. Не ги бришете.
+&nbsp; За да одговорите на ОК, додадете коментар по него. Коментарите треба да се одвоени со помош на:
+<strong>[Коментар:]</strong>
+&nbsp; на пр., <strong>[Коментар: Проширена дискусијата на методологија која ја предложувате]</strong>.
+
+<strong>Правење на коментари.</strong>
+&nbsp; Користете коментари за да се објаснат организациските промени или деталните ревизии
+&nbsp; e.g., <strong>[Коментар: Преместен е горниот параграф од стр. 5 во стр. 7].</strong>
+&nbsp; Note: Кога се однесува за броевите на страниците, посетете го форумот за броеви од печатена копија од ракописот што беше испратена до Вас. Ова е важно бидејќи страница броеви може да се промени како документ кој се ревидира по електронски пат.
+
+<h4>Илустрација на електронска верзија</h4>
+
+<ol>
+<li><strong>Почетна копија-уредување.</strong> Уредувачот на списанието ќе го уреди текстот за да се подобри протокот, јасноста, граматиката, текстовите, и форматирањето. Откако првичното уредување е завршено, уредникот ќе го испрати ревидираниот документ преку веб-списание сајтот и го известува авторот дека изменетиот ракопис е на располагање за разгледување.</li>
+<li><strong>Author copyedit.</strong> Пред да се драматични заминувања од структурата и организацијата на изменетиот ракопис, авторите треба да се проверат со уредниците кои се ко-претседава со парче. Авторите треба да ги прифатат / отфрлат сите промени направени за време на почетното уредување, како што е соодветно, и да одговори на сите _ пребарувања. Кога ќе завршите со ревизии, авторите треба да ја преименуваат датотеката од AuthorNameQA.doc во AuthorNameQAR.doc (на пример, од LeeQA.doc во LeeQAR.doc) и да испратите ревидиран документ преку веб-списание сајтот.</li>
+<li><strong>Final copyedit.</strong> Уредувачот на списание ќе ги провери промените направени од страна на авторот и ќе се приклучи да одговори на авторот да се создаде конечниот ракопис. Кога ќе заврши, уредникот ќе го испрати финалниот документ преку веб-списание сајтот и го известува распоред уредник да се заврши форматирањето.</li>
+</ol>]]></message>
+
+	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>To Add Reference Linking to the Layout Process</h4>
+	<p>Кога се поднесува во HTML или PDF, бидете сигурни дека сите хиперлинкови во поднесувањето се активни.</p>
+	<h4>A. When the Author Provides a Link with the Reference</h4>
+	<ol>
+	<li>Додека поднесувањето се уште е во обработка на текст формат (на пример, Word), додадете фраза VIEW ставка на крајот на референцата што го има URL-то.</li>
+	<li>Претвори ja оваа фраза во хиперврска со осветлување на неа и користење на Word's Insert Hyperlink алатка и URL подготвени во #2.</li>
+	</ol>
+	<h4>B. Овозможувајќи им на читателите да пребаруваат низ Google Scholar за референци</h4>
+	<ol>
+		<li>Додека поднесувањето се уште е во обработка на текст формат (на пример, зборот), ископирајте го насловот на делото референцирано во листата на референци (if it appears to be too common a title—e.g., "Peace"—then copy author and title).</li>
+		<li>Paste the reference's title between the %22's, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search.</li>
+
+	<li>Додадете фраза GS Search за да на крајот од секој цитат во поднесувањето листа на референци.</li>
+	<li>Претвори ja оваа фраза во хиперврска со осветлување на неа и користење на Word's Insert Hyperlink алатка и URL подготвени во #2.</li>
+	</ol>
+	<h4>C. Овозможувајќи им на читателите да пребаруваат референци со DOI</h4>
+	<ol>
+	<li>Додека поднесувањето се уште е во Word, копирајте група на референци во CrossRef Text Query http://www.crossref.org/freeTextQuery/.</li>
+	<li>Paste each DOI that the Query provides in the following URL (between = and &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI.</li>
+	<li>Додадете фраза CrossRef на крајот од секој цитат во поднесувањето на листата на референци.</li>
+	<li>Претвори ja оваа фраза во хиперврска со осветлување на таа фраза и користење Word's Insert Hyperlink алатка и соодветни URL подготвени во # 2.</li>
+	</ol>]]></message>
+
+	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Во лекторска фаза е наменето да се фати било какви грешки во правописот , граматиката, и форматирањето. Посуштински промени не може да се направи во оваа фаза, освен ако не е разговарано со делот на  уредникот. Во распределба, кликнете на View PROOF да видите HTML, PDF, и други достапни формати на датотеки кои се користат во објавувањето на овој елемент.</p>
+	<h4>For Spelling and Grammar Errors</h4>
+
+	<p>Ископирајте го проблем зборот или групите на зборови и ставете ги во лекторирање на корекции со "CHANGE-TO" инструкции до уредникот на следниов начин:</p>
+
+	<pre>1. CHANGE...
+	then the others
+	TO...
+	than the others</pre>
+	<br />
+	<pre>2. CHANGE...
+	Malinowsky
+	TO...
+	Malinowski</pre>
+	<br />
+
+	<h4>For Formatting Errors</h4>
+	
+	<p>Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title "FORMATTING" as follows:</p>
+	<br />
+	<pre>3. FORMATTING
+	The numbers in Table 3 are not aligned in the third column.</pre>
+	<br />
+	<pre>4. FORMATTING
+	The paragraph that begins "This last topic..." is not indented.</pre>]]></message>
+
+	<message key="default.journalSettings.emailSignature">________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}</message>
+	<message key="default.journalSettings.forReaders"><![CDATA[Ние ги охрабруваме читателите да се регистрираат на сервисот за објавување на ова списание. Користете го <a href="{$indexUrl}/{$journalPath}/user/register">Register</a> линкот на горниот дел од почетната страница на списанието. Оваа регистрација ќе резултира за читателот да добие содржина преку е-маил за секој ново издание на списанието. Оваа листа исто така им овозможува на списанието да бара одредено ниво на поддршка или читатели. Види го списанието <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Privacy Statement</a>, кое гарантира дека името и е-мејл адресата на читаталите  нема да се користи за други цели.]]></message>
+	<message key="default.journalSettings.forAuthors"><![CDATA[Interested in submitting to this journal? We recommend that you review the <a href="{$indexUrl}/{$journalPath}/about">About the Journal</a> page for the journal's section policies, as well as the <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="{$indexUrl}/{$journalPath}/user/register">register</a> with the journal prior to submitting or, if already registered, can simply <a href="{$indexUrl}/index/login">log in</a> and begin the five-step process.]]></message>	
+	<message key="default.journalSettings.forLibrarians"><![CDATA[We encourage research librarians to list this journal among their library's electronic journal holdings. As well, it may be worth noting that this journal's open source publishing system is suitable for libraries to host for their faculty members to use with journals they are involved in editing (see <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
+	<message key="default.journalSettings.lockssLicense"><![CDATA[Ова списание користи LOCKSS систем за да создаде дистрибуиран систем за архивирање помеѓу библиотеките учеснички и дозволи на оние библиотеки да создадат постојани архиви на списанието со цел за зачувување и реставрација. <a href="http://www.lockss.org/">More...</a>]]></message>
+
+	<!-- Default settings for payment items. -->
+	<message key="default.journalSettings.submissionFee">Поднесување на статија</message>
+	<message key="default.journalSettings.submissionFeeDescription">Авторите задолжително мора да платат за статијата на поднесување како дел од за поднесувањето процес за да се видат трошоци.</message>
+	<message key="default.journalSettings.fastTrackFee">Брз преглед</message>
+	<message key="default.journalSettings.fastTrackFeeDescription">Со плаќање на оваа такса, прегледот, уредувачката одлука, и авторот за овој ракопис се гарантира се одржи во рок од 4 недели.</message>
+	<message key="default.journalSettings.publicationFee">Објавување на статија</message>
+	<message key="default.journalSettings.publicationFeeDescription">Ако овој труд е прифатен за објавување, ќе биде побарано да се плати за објавање на статија за да се покријат објавените трошоци.</message>
+	<message key="default.journalSettings.waiverPolicy">Ако немате средства да се плати ваквите надоместоци, ќе имаат можност да се откажат секоја цена. Ние не сакаме надоместоци за да се спречи објавувањето на достојно дело.</message>
+	<message key="default.journalSettings.purchaseArticleFee">Купување на статија</message>
+	<message key="default.journalSettings.purchaseArticleFeeDescription">Плаќање на оваа давачка ќе ви овозможи да ја видите, симнете, и испечатете оваа статија.</message>
+	<message key="default.journalSettings.purchaseIssueFee">Purchase Issue</message>
+	<message key="default.journalSettings.purchaseIssueFeeDescription">The payment of this fee will enable you to view, download, and print this issue.</message>
+	<message key="default.journalSettings.membershipFee">Асоцијативно членство</message>
+	<message key="default.journalSettings.membershipFeeDescription">Плаќање на оваа давачка ќе Ве запише како член во оваа асоцијација за една година и ќе Ви обезбеди слободен пристап до ова списание.</message>
+	<message key="default.journalSettings.donationFee">Донации за списанието</message>
+	<message key="default.journalSettings.donationFeeDescription">Донации на било кој износ за ова списание се благодарност и обезбедува средства за уредниците да продолжат да обезбедуваат списание на највисок квалитет на своите читатели.</message>
+</locale>
