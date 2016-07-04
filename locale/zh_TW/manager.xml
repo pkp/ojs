@@ -62,7 +62,7 @@
 	<message key="manager.setup.announcementsDescription">可以發佈公告以通知期刊的讀者關於期刊的新聞稿以及活動。已發佈的公告會出現在「公告」頁面。</message>
 	<message key="manager.setup.announcementsIntroduction">額外的資訊</message>
 	<message key="manager.setup.announcementsIntroductionDescription">輸入在公告網頁上要給讀者看到的額外的資訊</message>
-	<message key="manager.setup.appearInAboutJournal">(將在「期刊介紹」中出現) </message>
+	<message key="manager.setup.appearInAboutJournal">(將在「期刊介紹」中出現)</message>
 	<message key="manager.setup.copyeditInstructions">校樣編輯指引</message>
 	<message key="manager.setup.copyeditInstructionsDescription">「校樣編輯指引」會在「投稿編輯」階段顯示給校樣編輯、作者和文稿類型編輯看到。下面是一組預設的HTML格式指南，期刊管理員可以在任何階段進行修訂或者代換（以純文字或HTML的方式）。</message>
 	<message key="manager.setup.copyrightNotice">版權注意事項</message>
