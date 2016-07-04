@@ -16,7 +16,6 @@
 	<message key="admin.hostedJournals">Revistas alojadas</message>
 	<message key="admin.settings.journalRedirect">Redirigir revista</message>
 	<message key="admin.settings.options">Opciones</message>
-	<message key="admin.settings.useAlphalist">En sitios con muchas revistas, muestre una lista alfabética en la página principal que permita una navegación rápida entre las revistas.</message>
 	<message key="admin.settings.usePaging">En sitios con muchas revistas, divida la lista de revistas en varias páginas.</message>
 	<message key="admin.settings.journalRedirectInstructions">Las solicitudes para acceder al sitio principal se redirigirán a esta revista. Esto puede resultarle útil si el sitio sólo aloja una revista, por ejemplo.</message>
 	<message key="admin.settings.noJournalRedirect">No redirigir</message>
@@ -33,7 +32,6 @@
 	<message key="admin.locale.maybeIncomplete">Las configuraciones regionales marcadas pueden estar incompletas.</message>
 	<message key="admin.languages.confirmUninstall">¿Está seguro/a de que desea desinstalar esta configuración regional? Esto puede afectar a cualquier revista alojada que esté utilizando actualmente dicha configuración regional.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Seleccione cualquier configuración regional adicional para instalar su soporte en este sistema. Debe instalar las configuraciones regionales antes de que otras revistas alojadas puedan utilizarlas. Vea la documentación de OJS para obtener más información o para añadir soporte para nuevos idiomas.</message>
-	<message key="admin.languages.downloadLocales">Descargar configuraciones regionales</message>
 	<message key="admin.languages.downloadFailed">Fallo en la descarga de configuraciones regionales. El siguiente mensaje/s de error describe el fallo.</message>
 	<message key="admin.languages.localeInstalled">La configuración regional "{$locale}" se instaló.</message>
 	<message key="admin.languages.download">Descargar configuración regional</message>
@@ -52,7 +50,6 @@
 	<message key="admin.contexts.create">Crear revista</message>
 	<message key="admin.journals.createInstructions">Se le asignará de forma automática el rol de gestor/a de la revista. Tras crear una nueva revista, acceda a ella como gestor/a para continuar con la configuración y el registro de usuarios/as.</message>
 	<message key="admin.journals.urlWillBe">Este elemento debe ser una palabra corta o acrónimo para identificar la revista. La dirección URL de la revista será {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">Inserte un título.</message>
 	<message key="admin.contexts.form.pathRequired">Inserte una ruta.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">La ruta sólo puede contener caracteres alfanuméricos, guiones y guiones bajos, y debe empezar y terminar con un carácter alfanumérico.</message>
 	<message key="admin.contexts.form.pathExists">La ruta seleccionada ya está siendo utilizada por otra revista.</message>
@@ -85,15 +82,5 @@
 	<message key="admin.categories.name">Nombre</message>
 	<message key="admin.categories.nameRequired">Se requiere un nombre para la categoría.</message>
 	
-	<message key="admin.copyAccessLogFileTool.usage">Copiar el archivo/s de registro de acceso Apache, filtrando las entradas relacionadas con esta instalación, al actual directorio de archivos, en el directorio de copia intermedia UsageStatsPlugin. El usuario/a debe disponer de privilegios suficientes para leer archivos de registro de acceso Apache. Esta herramienta sólo copiará los archivos que no se encuentren actualmente en los directorios de carga de archivos usageStats (copia intermedia, procesar, archivar, rechazar). Uso: {$scriptName} path/to/apache/log/file.log Uso (procesar todos los archivos en el interior de un directorio): {$scriptName} path/to/apache/directory 
-	</message>
-	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Error: no se puede crear la carpeta temporal {$tmpDir}</message>
-	<message key="admin.copyAccessLogFileTool.error.acessingFile">Error: El archivo {$filePath} no existe o no se puede acceder a él.</message>
-	<message key="admin.copyAccessLogFileTool.error.copyingFile">Error: no se puede copiar el archivo de {$filePath} a {$tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.error.deletingFile">Error: no se puede eliminar el archivo {$tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Advertencia: el archivo {$filePath} ya existe en el directorio de estadísticas de uso.</message>
-	<message key="admin.copyAccessLogFileTool.success">Operación realizada correctamente: {$filePath} a {$destinationPath}</message>
-	<message key="admin.settings.security">Seguridad</message>
-	<message key="admin.settings.security.plugins">Impedir que losl gestores/as de la revista puedan instalar, actualitzar o suprimir módulos.</message>
-	<message key="admin.languages.reloadDefaultEmailTemplates">Recargar las plantillas de correo por defecto</message>
+	
 </locale>

@@ -13,11 +13,7 @@
   -->
 
 <locale name="es_ES" full_name="Español (España)">
-	<message key="editor.article.reviewForms">Formularios de revisión</message>
-	<message key="editor.article.selectReviewForm">Seleccionar formulario de revisión</message>
-	<message key="editor.article.clearReviewForm">Eliminar formulario de revisión</message>
 	<message key="editor.home">Página principal del editor/a</message>
-	<message key="editor.article.confirmChangeReviewForm">Advertencia: Modificar el formulario de revisión afectará a las respuestas que los revisores/as hayan hecho utilizando este formulario. ¿Desea continuar?</message>
 	<message key="editor.reassign">Volver a asignar</message>
 	<message key="editor.submissionsAndPublishing">Envíos y publicaciones</message>
 	<message key="editor.submissionQueue">Cola de envío</message>
@@ -41,7 +37,6 @@
 	<message key="editor.notifyUsers.allAuthors">Todos los autores/as publicados ({$count} usuarios/as)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Todos los suscriptores/as individuales ({$count} usuarios/as)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Todos los suscriptores/as institucionales ({$count} usuarios/as)</message>
-	<message key="editor.notifyUsers.allMailingList">Incluir todos los correos electrónicos en la lista de distribución de correo ({$count} correos electrónicos)</message>
 	<message key="editor.notifyUsers.inProgress">Se está informando a los usuarios/as...</message>
 	<message key="editor.usersNotified">Usuarios/as informados</message>
 	<message key="editor.notifyUsers.allUsers">Enviar este mensaje a todos los usuarios/as asociados con esta revista ({$count} usuarios/as)</message>
@@ -117,9 +112,7 @@
 	<message key="editor.issues.backToIssueGalleys">Volver a galeradas del número</message>
 	<message key="editor.issues.viewingGalley">Visualizar galerada del número</message>
 	<message key="editor.issues.confirmDeleteGalley">¿Está seguro/a de que desea eliminar la galerada del número?</message>
-	<message key="editor.navigation.issues">Números</message>
 	<message key="editor.navigation.futureIssues">Próximos números</message>
-	<message key="editor.navigation.createIssue">Crear número</message>
 	<message key="editor.navigation.issueArchive">Números anteriores</message>
 	<message key="editor.article.designateReviewVersion">Designar el archivo original como la versión para revisar</message>
 	<message key="editor.article.uploadReviewVersion">Cargar una versión para revisar corregida</message>
@@ -222,6 +215,4 @@
 	<message key="editor.article.removeCoverPage">¿Eliminar la imagen de portada?</message>
 	<message key="editor.article.remove">Eliminar</message>
 	<message key="editor.issues.invalidAccessDate">Fecha de acceso no válida.</message>
-	<message key="editor.issues.resetArticlePublicationDates">Resetear las fechas de publicación del artículo.</message>
-	<message key="editor.publicGalleyIdentificationExists">El identificador público '{$publicIdentifier}' ya existe para otra galerada de este artículo. Escoja un identificador único de galerada dentro de este artículo.</message>
 </locale>
