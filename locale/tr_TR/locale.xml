@@ -198,7 +198,7 @@
 	<message key="journal.currentIssue">Yeni Sayı</message>
 	<message key="journal.journals">Dergiler</message>
 	<message key="journal.path">Yol</message>
-	<message key="journal.journal">Dergi</message>
+	<message key="context.context">Dergi</message>
 	<message key="journal.issn">ISSN</message>
 
 	<!-- User -->

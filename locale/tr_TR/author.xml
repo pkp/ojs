@@ -26,11 +26,11 @@
 	<message key="author.submit.step4">4. Adım: Ek Belge ve Dosyaların Yüklenmesi</message>
 	<message key="author.submit.step4a">4.1. Adım: Ek Dosya Yükleme</message>
 	<message key="author.submit.step5">5. Adım: Gönderi Onayı</message>
-	<message key="author.submit.start">1. Başla</message>
-	<message key="author.submit.upload">2. Gönderiyi Yükle</message>
-	<message key="author.submit.metadata">3. Üst Veri Gir</message>
-	<message key="author.submit.supplementaryFiles">4. Ek Dosyaları Yükle</message>
-	<message key="author.submit.confirmation">5. Onay</message>
+	<message key="author.submit.start">Başla</message>
+	<message key="author.submit.upload">Gönderiyi Yükle</message>
+	<message key="author.submit.metadata">Üst Veri Gir</message>
+	<message key="author.submit.supplementaryFiles">Ek Dosyaları Yükle</message>
+	<message key="author.submit.confirmation">Onay</message>
 	<message key="author.submit.cancelSubmission">Bu gönderiyi, yazar sayfasında, Aktif Gönderilerden seçerek daha sonra tamamlayabilirsiniz.</message>
 	<message key="author.submit.notAccepting">Dergi şu anda göneri kabul etemiyor.</message>
 	<message key="author.submit.requestWaiver">Vazgeç</message>
@@ -49,19 +49,19 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Problem mi yaşıyorsunuz? Yardım için <a href="mailto:{$supportEmail}">{$supportName}</a> adlı yetkiliye başvurabilirsiniz.]]></message>
 	<message key="author.submit.journalSection">Dergi Bölümü</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Bu gönderi için uygun bir bölüm seçin (Daha fazla bilgi için dergi <a href="{$aboutUrl}" target="_new">Hakkında</a> başlığı altındaki Bölümler ve Politikalara bakınız).]]></message>
-	<message key="author.submit.selectSection">Lütfen bir bölüm seçiniz...</message>
+	<message key="submission.submit.selectSection">Lütfen bir bölüm seçiniz...</message>
 	<message key="author.submit.submissionLocale">Gönderi Dili</message>
 	<message key="author.submit.submissionLocaleDescription">Bu dergi çeşitli dillerde başvuru kabul eder. Açılabilir menüden birincil olarak kullanmak istediğiniz dili seçiniz.</message>
 	<message key="author.submit.submissionChecklist">Başvuru Kontrol Listesi</message>
-	<message key="author.submit.submissionChecklistDescription">Yazarlar gönderiye devam edebilmek için Başvuru Kontrol Listesi'ndeki gerekliliklerin hepsini yerine getirdiklerini belirtmelidir.</message>
+	<message key="submission.submit.submissionChecklistDescription">Yazarlar gönderiye devam edebilmek için Başvuru Kontrol Listesi'ndeki gerekliliklerin hepsini yerine getirdiklerini belirtmelidir.</message>
 	<message key="author.submit.verifyChecklist">Devam etmeden önce başvuru kontrol listesindeki her öğenin tamalanmış olduğundan emin olmalısınız.</message>
 	<message key="author.submit.copyrightNoticeAgree">Yazarlar bu dergi tarafından yayımlanan gönderiler için Telif Hakkı koşullarını kabul etmiş sayılır. Telif Hakkı koşulları bu gönderi için de geçerli olacaktır (editöre iletmek istediğiniz yorumları aşağıya yazabilirsiniz).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Devam etmeden önce telif hakkı ile ilgili koşulları kabul etmeniz gerekmektedir.</message>
-	<message key="author.submit.commentsForEditor">Editör için notlar</message>
+	<message key="submission.submit.coverNote">Editör için notlar</message>
 	<message key="author.submit.comments">Editöre iletmek istediğiniz notları bu alana yazabilirsiniz (isteğe bağlı)</message>
 	<message key="author.submit.form.sectionRequired">Lütfen bu gönderi için uygun bir dergi bölümü seçiniz.</message>
 	<message key="author.submit.form.localeRequired">Lütfen gönderi dilini seçiniz.</message>
-	<message key="author.submit.privacyStatement">Dergi Gizlilik Beyannamesi</message>
+	<message key="submission.submit.privacyStatement">Dergi Gizlilik Beyannamesi</message>
 	<message key="author.submit.reorderInstructions">Yayın üzerindeki yazarların sırasnı yeniden düzenle.</message>
 	<message key="author.submit.reorder">Yazar isimlerini yeniden sırala</message>
 	<message key="author.submit.selectPrincipalContact">Editöryal iletişim için birincil irtibat.</message>
