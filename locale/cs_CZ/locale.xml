@@ -218,7 +218,7 @@
 	<message key="journal.currentIssue">Aktuální výtisk</message>
 	<message key="journal.journals">Časopisy</message>
 	<message key="journal.path">Cesta</message>
-	<message key="journal.journal">Časopis</message>
+	<message key="context.context">Časopis</message>
 	<message key="journal.issn">ISSN</message>
 
 	<!-- User -->

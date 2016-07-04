@@ -23,9 +23,9 @@
 	<message key="author.submit.step4">Krok 4. Nahrání doplňkových souborů</message>
 	<message key="author.submit.step4a">Krok 4a. Přidat doplňkový soubor</message>
 	<message key="author.submit.step5">Krok 5. Potvrzení příspěvku</message>
-	<message key="author.submit.start">1. Zahájení</message>
-	<message key="author.submit.supplementaryFiles">4. Nahrát doplňkové soubory</message>
-	<message key="author.submit.confirmation">5. Potvrzení</message>
+	<message key="author.submit.start">Zahájení</message>
+	<message key="author.submit.supplementaryFiles">Nahrát doplňkové soubory</message>
+	<message key="author.submit.confirmation">Potvrzení</message>
 	<message key="author.submit.cancelSubmission">Odeslání tohoto příspěvku můžete dokončit později tím, že na domácí sránce pro autora vyberete Aktivní příspěvky.</message>
 	<message key="author.submit.notAccepting">Tento časopis aktuálně nepřijímá příspěvky.</message>
 	<message key="author.submit.requestWaiver">Požádat o prominutí</message>
@@ -40,16 +40,16 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Potýkáte se s obtížemi? Kontaktujte <a href="mailto:{$supportEmail}">{$supportName}</a> pro pomoc.]]></message>
 	<message key="author.submit.journalSection">Sekce časopisu</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Zvolte vhodnou sekci pro tento příspěvek (viz Sekce a Pravidla v části <a href="{$aboutUrl}" target="_new">O časopisu</a>).]]></message>
-	<message key="author.submit.selectSection">Prosím zvolte sekci...</message>
+	<message key="submission.submit.selectSection">Prosím zvolte sekci...</message>
 	<message key="author.submit.submissionChecklist">Zaškrtávací seznam příspěvku</message>
-	<message key="author.submit.submissionChecklistDescription">Zaškrtnutím následujících položek potvrďte, že tento příspěvek je připraven pro posouzení tímto časopisem (níže je možné přidat komentář pro editora).</message>
+	<message key="submission.submit.submissionChecklistDescription">Zaškrtnutím následujících položek potvrďte, že tento příspěvek je připraven pro posouzení tímto časopisem (níže je možné přidat komentář pro editora).</message>
 	<message key="author.submit.verifyChecklist">Než budete pokračovat, musíte zajistit splnění všech položek zaškrtávacího seznamu.</message>
 	<message key="author.submit.copyrightNoticeAgree">Autoři souhlasí s podmínkami uvedenými v Oznámení o copyrightu, které budou aplikovány na tento příspěvek, jakmile bude publikován tímto časopisem (níže je možné přidat komentář pro editora).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Než budete pokračovat, musíte souhlasit s podmínkami uvedenými v Oznámení o copyrightu.</message>
-	<message key="author.submit.commentsForEditor">Komentář pro editora</message>
+	<message key="submission.submit.coverNote">Komentář pro editora</message>
 	<message key="author.submit.comments">Vložte text (nepovinné)</message>
 	<message key="author.submit.form.sectionRequired">Vyberte prosím vhodnou sekci časopisu pro tento příspěvek.</message>
-	<message key="author.submit.privacyStatement">Prohlášení o soukromí pro tento časopis</message>
+	<message key="submission.submit.privacyStatement">Prohlášení o soukromí pro tento časopis</message>
 	<message key="author.submit.reorderInstructions">Přeuspořádejte autory tak, aby byli zobrazeni ve stejném pořadí, v jakém mají být uvedeni v publikaci.</message>
 	<message key="author.submit.selectPrincipalContact">Hlavní kontakt pro korespondenci s editory.</message>
 	<message key="author.submit.addAuthor">Přidat autora</message>
@@ -113,8 +113,8 @@
 	<message key="author.submissions.queuedReviewSubsequent">V recenzním kole {$round}</message>
 	<message key="author.submit.step2">Krok 2. Nahrání příspěvku</message>
 	<message key="author.submit.step3">Krok 3. Vložení metadat příspěvku</message>
-	<message key="author.submit.upload">2. Nahrát příspěvek</message>
-	<message key="author.submit.metadata">3. Vložit metadata</message>
+	<message key="author.submit.upload">Nahrát příspěvek</message>
+	<message key="author.submit.metadata">Vložit metadata</message>
 	<message key="author.submit.mustEnterWaiverReason">Pokud žádáte o prominutí platby, musíte do příslušného místa uvést důvod.</message>
 	<message key="author.submissions.queuedReviewRevisions">V recenzním řízení: Vyžaduje přepracování</message>
 	<message key="author.submissions.queuedEditingCopyedit">Redakční úravy: Vyžádáno redigování</message>
