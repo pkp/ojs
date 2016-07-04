@@ -481,7 +481,7 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="sectionEditor.regrets.regret">Penyesalan</message>
 	<message key="sectionEditor.regrets.result">Hasil</message>
 	<message key="sectionEditor.review.enrollReviewer">Mendaftarkan Pengguna yang sudah ada sebagai Reviewer</message>
-	<message key="sectionEditor.review.createReviewer">Buat Reviewer Baru </message>
+	<message key="sectionEditor.review.createReviewer">Buat Reviewer Baru</message>
 
 	<!-- Editor Layout -->
 	<message key="layoutEditor.activeEditorialAssignments">Tugas Editorial Aktif</message>
@@ -511,10 +511,10 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="reviewer.article.automatic">(Auto)</message>
 	<message key="reviewer.article.recommendation">Rekomendasi</message>
 	<message key="reviewer.article.submitReview">Serahkan Review kepada Editor</message>
-	<message key="reviewer.article.reviewerComments">Komentar </message>
+	<message key="reviewer.article.reviewerComments">Komentar</message>
 	<message key="reviewer.article.uploadedFile">File yang diunggah</message>	
 	<message key="reviewer.article.reviewersAnnotatedVersion">Versi yang diunggah Reviewer</message>
-	<message key="reviewer.article.reviewersAnnotatedVersionDescription"> (Jika Anda ingin menambahkan penjelasan lebih lanjut pada file, untuk editor, simpan di hard drive dan gunakan Telusuri/ Unggah.) </message>
+	<message key="reviewer.article.reviewersAnnotatedVersionDescription"> (Jika Anda ingin menambahkan penjelasan lebih lanjut pada file, untuk editor, simpan di hard drive dan gunakan Telusuri/ Unggah.)</message>
         <message key="reviewer.article.schedule.request">Permintaan Editor</message>
         <message key="reviewer.article.schedule.response">Respon Anda</message>
         <message key="reviewer.article.schedule.submitted">Review Dikumpulkan</message>

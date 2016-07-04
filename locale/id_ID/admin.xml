@@ -15,16 +15,16 @@
 	<message key="admin.hostedJournals">Host Jurnal</message>
 	<message key="admin.settings.journalRedirect">Pengalihan Jurnal</message> 
 	<message key="admin.settings.journalRedirectInstructions"> Permintaan ke situs utama akan dialihkan ke jurnal ini. Hal ini mungkin berguna jika hosting merupakan jurnal tunggal.</message>	
-<message key="admin.settings.noJournalRedirect"> Jangan dialihkan </message> 
+<message key="admin.settings.noJournalRedirect"> Jangan dialihkan</message> 
 	<message key="admin.languages.primaryLocaleInstructions"> Bahasa Utama ini akan menjadi bahasa default untuk situs dan setiap host jurnal.</message> 
 	<message key="admin.languages.supportedLocalesInstructions"> Pilih bahasa untuk men-support situs ini. Bahasa yang terpilih akan tersedia untuk digunakan oleh semua jurnal di host pada situs, dan juga ditampilkan dalam menu pilih bahasa di setiap halaman situs (yang dapat diganti pada halaman spesifik-jurnal).</message>	
 <message key="admin.locale.maybeIncomplete"> Penandaan bahasa kemungkinan tidak selesai.</message> 
 	<message key="admin.languages.confirmUninstall"> Apakah Anda yakin ingin membatalkan penginstalan bahasa ini? Hal ini mungkin akan berpengaruh pada host jurnal manapun yang saat ini sedang menggunakan bahasa.</message>
 	<message key="admin.languages.installNewLocalesInstructions"> Pilih bahasa tambahan untuk diinstal dalam sistem ini. Bahasa harus diinstal agar dapat digunakan oleh host jurnal.</message> 
 
-	<message key="admin.languages.downloadFailed"> Pengunduhan bahasa gagal. Pesan kesalahan dibawah ini mendeskripsikan kegagalannya. </message> 
+	<message key="admin.languages.downloadFailed"> Pengunduhan bahasa gagal. Pesan kesalahan dibawah ini mendeskripsikan kegagalannya.</message> 
 	<message key="admin.languages.localeInstalled">The "{$locale}" bahasa telah diinstal.</message> 
-	<message key="admin.languages.download"> Unduh Bahasa </message> 
+	<message key="admin.languages.download"> Unduh Bahasa</message> 
 	<message key="admin.languages.download.cannotOpen"> Tidak bisa membuka descriptor bahasa dari website PKP.</message>	
 <message key="admin.languages.download.cannotModifyRegistry"> Tidak bisa menambahkan bahasa baru pada file registrasi bahasa, khususnya "registry/locales.xml".</message> 
 	<message key="admin.auth.ojs"> Database pengguna OJS
@@ -32,10 +32,10 @@
 <message key="admin.auth.enableSyncProfiles"> Memungkinkan sinkronisasi profil pengguna (jika disupport oleh pembuktian keaslian plugin ini). Informasi profil pengguna akan secara otomatis diperbarui dari sumber tersendiri ketika pengguna dan profil login berubah (termasuk perubahan kata sandi) yang dibuat dalam OJS akan secara otomatis diperbarui pada sumber tersendiri. Jika opsi ini tidak bisa dilakukan, informasi profil OJS akan disimpan terpisah dari informasi profil sumber tersendiri.</message>
 	<message key="admin.auth.enableSyncPasswords"> Memungkinkan memodifikasi kata sandi pengguna (jika didukung oleh pembuktian keaslian plug-in ini). Jika opsi ini memungkinkan maka dapat membuat pengguna memodifikasi kata sandi mereka dari dalam OJS dan untuk menggunakan fitur OJS "kehilangan kata sandi" untuk memasang kembali kata sandi yang terlupa. Fungsi-fungsi ini tidak akan tersedia bagi pengguna dalam sumber pembuktian keaslian ini jika opsi ini tidak berfungsi.</message> 
 	<message key="admin.auth.enableCreateUsers">Memungkinkan kreasi pengguna (jika didukung oleh pembuktian keaslian plug-in ini). Para pengguna membuatnyadalam OJS dengan sumber pembuktian keaslian ini yang akan secara otomatis ditambahkan pada sumber pembuktian keaslian tersendiri jika mereka tidak betul-betul ada. Sebagai tambahan, jika sumber ini sumber pembuktian keaslian yang gagal, akun OJS terbuat melalui registrasi pengguna yang juga akan ditambahkan pada sumber pembuktian keaslian tersendiri.</message> 
-	<message key="admin.systemVersion"> Versi OJS </message> 
-	<message key="admin.systemConfiguration"> Konfigurasi OJS </message> 
+	<message key="admin.systemVersion"> Versi OJS</message> 
+	<message key="admin.systemConfiguration"> Konfigurasi OJS</message> 
 	<message key="admin.systemConfigurationDescription"><![CDATA[Pengaturan konfigurasi OJS dari <tt>config.inc.php</tt>.]]></message>
-	<message key="admin.journals.journalSettings"> Pengaturan Jurnal </message> 
+	<message key="admin.journals.journalSettings"> Pengaturan Jurnal</message> 
 	<message key="admin.journals.noneCreated"> Tidak ada jurnal yang telah dibuat.</message> 
 	<message key="admin.contexts.confirmDelete"> Apakah Anda yakin ingin menghapus jurnal ini dan semua isinya secara permanen?</message> 
 	<message key="admin.contexts.create"> Buat jurnal baru</message> 
@@ -46,13 +46,13 @@
 	<message key="admin.contexts.form.pathAlphaNumeric"> Path akan hanya terdiri dari karakter alphanumeris, garisbawah, dan tanda penghubung, dan harus dimulai dan diakhiri dengan karakter alphanumeric.</message>
 	<message key="admin.contexts.form.pathExists"> Path sudah digunakan oleh jurnal lainnya.</message> 
 	<message key="admin.journals.enableJournalInstructions"> Memungkinkan jurnal ditampilkan di situs untuk umum</message>	
-<message key="admin.journals.journalDescription"> Deskripsi Jurnal </message> 
+<message key="admin.journals.journalDescription"> Deskripsi Jurnal</message> 
 	<message key="admin.journal.pathImportInstructions"> Path jurnal yang sudah ada atau path untuk membuat (contoh: ojs).</message>
-	<message key="admin.journals.importSubscriptions"> Langganan impor </message> 
+	<message key="admin.journals.importSubscriptions"> Langganan impor</message> 
 	<message key="admin.journals.transcode"> Transcode metadata artike dari ISO8859-1</message> 
-	<message key="admin.journals.redirect"> Hasilkan kode untuk peta OJS 1 URLs ke OJS 2 URLs </message> 
+	<message key="admin.journals.redirect"> Hasilkan kode untuk peta OJS 1 URLs ke OJS 2 URLs</message> 
 	<message key="admin.journals.form.importPathRequired"> Dibutuhkan path impor.</message> 
-	<message key="admin.journals.importErrors"> Pengimporan gagal untuk meyelesaikan secara sukses </message> 
+	<message key="admin.journals.importErrors"> Pengimporan gagal untuk meyelesaikan secara sukses</message> 
 	<message key="admin.mergeUsers"> Gabungkan Para Pengguna</message>
 	<message key="admin.mergeUsers.mergeUser"> Gabungkan Para Pengguna</message> 
 	<message key="admin.mergeUsers.into.description"> Pilih pengguna yang akan menghubungkan kepenulisan pengguna sebelumnya, tugas pengeditan.</message>	<message key="admin.mergeUsers.from.description"> Pilih pengguna (atau beberapa pengguna) untuk digabungkan pada akun pengguna lainnya (contoh, ketika seseorang menggunakan dua akun).</message>	

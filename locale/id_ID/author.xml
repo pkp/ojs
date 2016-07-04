@@ -27,7 +27,7 @@
 <message key="author.submit.step5">Langkah 5. Mengonfirmasi Penyerahan Naskah</message> 
 <message key="author.submit.start">Mulai</message> 
 <message key="author.submit.upload">Unggah Naskah</message>
- <message key="author.submit.metadata">Masukkan Metadata </message> <message key="author.submit.supplementaryFiles">Unggah File Tambahan </message> 
+ <message key="author.submit.metadata">Masukkan Metadata</message> <message key="author.submit.supplementaryFiles">Unggah File Tambahan</message> 
 <message key="author.submit.confirmation">Konfirmasi</message>	
 <message key="author.submit.cancelSubmission"> Anda dapat melengkapi naskah ini kapan saja dengan memilih Naskah Aktif dari Beranda Penulis.</message> 
 	<message key="author.submit.notAccepting"> Jurnal ini tidak menerima penyerahan naskah saat ini.</message>	
@@ -42,7 +42,7 @@
 	<message key="author.submissions.proofreadingCorrections">Koreksi Proofreading</message>	
 <message key="author.submissions.confirmDelete">Apakah kamu yakin akan menghapus naskah yang tidak lengkap?</message>	
 <message key="author.submissions.viewStatus">Lihat Status</message>
-<message key="author.submissions.noSubmissions">Tidak ada penyerahan nasakah </message> 
+<message key="author.submissions.noSubmissions">Tidak ada penyerahan nasakah</message> 
 <message key="author.submit.howToSubmit"><![CDATA[Menghadapi kesulitan? kontak <a href="mailto:{$supportEmail}">{$supportName}</a> untuk bantuan.({$supportPhone}).]]></message>
 <message key="author.submit.howToSubmitNoPhone"><![CDATA[Menghadapi kesulitan? kontak<a href="mailto:{$supportEmail}">{$supportName}</a> untuk bantuan.]]></message> 
 	<message key="author.submit.journalSection">Bagian Jurnal</message> 
@@ -85,7 +85,7 @@
 	<message key="author.submit.noSupplementaryFiles">Tidak ada file tambahan yang ditambahkan ke penyerahan ini.</message>
 	<message key="author.submit.backToSupplementaryFiles">Kembali ke file tambahan.</message> 
 	<message key="author.submit.confirmDeleteSuppFile"> Apakah Anda yakin ingin menghapus file tambahan ini?</message>
-	<message key="author.submit.uploadSuppFile"> Unggah File Tambahan </message> 
+	<message key="author.submit.uploadSuppFile"> Unggah File Tambahan</message> 
 	<message key="author.submit.addSupplementaryFile">Tambah File Tambahan</message> 
 	<message key="author.submit.editSupplementaryFile">Edit File Tambahan</message> 
 	<message key="author.submit.supplementaryFileData">Metadata File tambahan</message> 
@@ -96,10 +96,10 @@
 	<message key="author.submit.suppFile.researchMaterials">Materi/ Bahan Riset</message> 
 	<message key="author.submit.suppFile.researchResults">Hasil Riset</message> 
 	<message key="author.submit.suppFile.transcripts">Transkrip</message> 
-	<message key="author.submit.suppFile.dataAnalysis"> Analisis Data </message> 
-	<message key="author.submit.suppFile.dataSet"> Set Data </message>	
-	<message key="author.submit.suppFile.sourceText"> Teks Sumber </message> 
-	<message key="author.submit.suppFile.briefDescription"> Deskripsi Singkat </message> 
+	<message key="author.submit.suppFile.dataAnalysis"> Analisis Data</message> 
+	<message key="author.submit.suppFile.dataSet"> Set Data</message>	
+	<message key="author.submit.suppFile.sourceText"> Teks Sumber</message> 
+	<message key="author.submit.suppFile.briefDescription"> Deskripsi Singkat</message> 
 
 	<message key="author.submit.suppFile.availableToPeers">File Saat ini hingga Reviewer (tanpa metadata), tanpa mengkompromikan Reviewer anonim.</message>	
 <message key="author.submit.suppFile.publisherDescription"> Gunakan hanya dengan materi yang diterbitkan secara formal.</message>	<message key="author.submit.suppFile.dateDescription"> Tanggal saat data dikumpulkan atau instrumen dibuat.</message>	
@@ -110,15 +110,15 @@
 	<message key="author.submit.suppFile.form.subjectRequired"> Masukkan subjek.</message> 
 	<message key="author.submit.suppFile.form.descriptionRequired"> Masukkan deskripsi.</message> 
 	<message key="author.suppFile.suppFilePublicIdentificationExists"> Identifikasi file tambahan umum sudah ada.</message>	
-<message key="author.suppFile.publicSuppFileIdentifier"> Pengidentifikasi file tambahan umum </message> 
+<message key="author.suppFile.publicSuppFileIdentifier"> Pengidentifikasi file tambahan umum</message> 
 	<message key="author.submit.confirmationDescription"> Untuk menyerahkan manuskrip Anda ke {$journalTitle} klik Penyerahan Selesai. Kontak utama penyerahan akan menerima pemberitahuan lewat email dan akan bisa melihat kemajuan penyerahan melalui proses editorial dengan login ke web site jurnal.  Terima kasih atas partisipasi Anda untuk bergabung bersama {$journalTitle}.</message>
 	<message key="author.submit.noFiles">Tidak ada file yang dilampirkan pada penyerahan ini.</message> 
-	<message key="author.submit.filesSummary"> Ringkasan File </message> 
-	<message key="author.submit.finishSubmission"> Penyerahan Selesai </message> 
+	<message key="author.submit.filesSummary"> Ringkasan File</message> 
+	<message key="author.submit.finishSubmission"> Penyerahan Selesai</message> 
 	<message key="author.submit.submissionComplete"> Penyerahan naskah sukses. Terima kasih atas partisipasi Anda untuk bergabung bersama {$journalTitle}.</message>
 
 	<message key="author.article.uploadAuthorVersion"> Unggah Versi Penulis Version</message> 
-	<message key="author.article.copyeditedFile"> File Copyedited </message> 
-	<message key="author.article.authorRevisedFile"> File Penulis </message> 
+	<message key="author.article.copyeditedFile"> File Copyedited</message> 
+	<message key="author.article.authorRevisedFile"> File Penulis</message> 
 	<message key="author.submit.authorSubmitLoginMessage"> Akun pengguna dibutuhkan untuk menyerahkan jurnal ini. Hal ini memungkinkan editor kami untuk melacak penyerahan Anda dan menghubungi Anda saat status penyerahan Anda berubah, atau jika ada informasi tambahan.</message> 
 </locale>
