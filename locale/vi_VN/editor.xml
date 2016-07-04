@@ -4,7 +4,7 @@
 <!--
   * locale/vi_VN/editor.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="vi_VN" full_name = "Tiếng Việt">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="editor.article.reviewForms">Mẫu phiếu Phản biện</message>
 	<message key="editor.article.selectReviewForm">Chọn Mẫu phiếu Phản biện</message>
 	<message key="editor.article.clearReviewForm">Xóa Mẫu phiếu Phản biện</message>
@@ -95,8 +95,9 @@
 	<message key="editor.issues.noLiveIssues">Không có nào.</message>
 	<message key="editor.issues.open">Mở</message>
 	<message key="editor.issues.pages">Trang</message>
+	<message key="editor.navigation.issues">Các số tạp chí</message>
 	<message key="editor.navigation.futureIssues">Các số sắp XB</message>
-	<message key="grid.action.addIssue">Tạo số tạp chí</message>
+	<message key="editor.navigation.createIssue">Tạo số tạp chí</message>
 	<message key="editor.navigation.issueArchive">Các số đã xuất bản</message>
 	<message key="editor.article.designateReviewVersion">Chỉ định file gốc làm Phiên bản phản biện</message>
 	<message key="editor.article.uploadReviewVersion">Tải lên một phiên bản phản biện đã hiệu đính</message>

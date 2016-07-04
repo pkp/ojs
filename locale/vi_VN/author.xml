@@ -4,7 +4,7 @@
 <!--
   * locale/vi_VN/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="vi_VN" full_name = "Tiếng Việt">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="author.submit">Nộp bài mới</message>
 	<message key="author.track">Bài đang nộp dở</message>
 	<message key="author.competingInterests"><![CDATA[Lợi&nbsp;ích&nbsp;xung&nbsp;đột <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Chính&nbsp;sách&nbsp;CI</a>]]></message>
@@ -26,11 +26,11 @@
 	<message key="author.submit.step4">Bước 4. Tải các file phụ trợ lên</message>
 	<message key="author.submit.step4a">Bước 4a. Thêm một file phụ trợ</message>
 	<message key="author.submit.step5">Bước 5. Khẳng định nộp bài</message>
-	<message key="author.submit.start">Bắt đầu</message>
-	<message key="author.submit.upload">Tải bài nộp lên</message>
-	<message key="author.submit.metadata">Nhập dữ liệu mô tả</message>
-	<message key="author.submit.supplementaryFiles">Tải các file phụ trợ lên</message>
-	<message key="author.submit.confirmation">Khẳng định</message>
+	<message key="author.submit.start">1. Bắt đầu</message>
+	<message key="author.submit.upload">2. Tải bài nộp lên</message>
+	<message key="author.submit.metadata">3. Nhập dữ liệu mô tả</message>
+	<message key="author.submit.supplementaryFiles">4. Tải các file phụ trợ lên</message>
+	<message key="author.submit.confirmation">5. Khẳng định</message>
 	<message key="author.submit.cancelSubmission">Tác giả có thể hoàn thành việc nộp bài viết vào thời gian khác bằng cách lựa chọn mục Các bài đang nộp dở trong trang dành cho Tác giả.</message>
 	<message key="author.submit.notAccepting">Tạp chí này hiện thời không nhận bài nộp.</message>
 	<message key="author.submit.requestWaiver">Đề nghị miễn thu phí</message>
@@ -45,22 +45,23 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Gặp khó khăn? Liên hệ với <a href="mailto:{$supportEmail}">{$supportName}</a> để được trợ giúp.]]></message>
 	<message key="author.submit.journalSection">Chuyên mục tạp chí</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Lựa chọn chuyên mục phù hợp cho bài nộp này (xem Chuyên mục và Chính sách trong trang <a href="{$aboutUrl}" target="_new">Giới thiệu</a> Tạp chí).]]></message>
-	<message key="submission.submit.selectSection">Chọn một chuyên mục...</message>
-	<message key="submission.submit.submissionChecklist">Danh mục kiểm tra bài nộp</message>
-	<message key="submission.submit.submissionChecklistDescription">Thể hiện rằng bài viết đã sẵn sàng để duyệt bằng cách đánh dấu vào các mục dưới đây (lời nhắn gửi BTV chính có thể được bổ sung ở phía dưới).</message>
+	<message key="author.submit.selectSection">Chọn một chuyên mục...</message>
+	<message key="author.submit.submissionChecklist">Danh mục kiểm tra bài nộp</message>
+	<message key="author.submit.submissionChecklistDescription">Thể hiện rằng bài viết đã sẵn sàng để duyệt bằng cách đánh dấu vào các mục dưới đây (lời nhắn gửi BTV chính có thể được bổ sung ở phía dưới).</message>
 	<message key="author.submit.verifyChecklist">Tác giả cần đảm bảo rằng tất cả các mục đều đã thỏa mãn yêu cầu trước khi tiếp tục.</message>
 	<message key="author.submit.copyrightNoticeAgree">Tác giả nhất trí với các điều khoản trong Thỏa thuận về Bản quyền sẽ áp dụng cho bài nộp này nếu và khi nó được xuất bản trên tạp chí(lời nhắn dành cho BTV chính có thể được bổ sung ở phía dưới).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Tác giả phải nhất trí với những điều khoản của Thỏa thuận về Bản quyền trước khi tiếp tục.</message>
-	<message key="submission.submit.coverNote">Lời nhắn gửi BTV chính</message>
+	<message key="author.submit.commentsForEditor">Lời nhắn gửi BTV chính</message>
 	<message key="author.submit.comments">Nhập lời nhắn (Không bắt buộc)</message>
 	<message key="author.submit.form.sectionRequired">Vui lòng lựa chọn một chuyên mục phù hợp cho bài nộp này.</message>
-	<message key="submission.submit.privacyStatement">Tuyên bố về Bí mật cá nhân của Tạp chí</message>
+	<message key="author.submit.privacyStatement">Tuyên bố về Bí mật cá nhân của Tạp chí</message>
 	<message key="author.submit.reorderInstructions">Xếp lại thứ tự tác giả theo thứ tự sẽ được liệt kê khi xuất bản.</message>
 	<message key="author.submit.selectPrincipalContact">Địa chỉ đầu tiên để BBT liên hệ.</message>
 	<message key="author.submit.addAuthor">Thêm tác giả</message>
 	<message key="author.submit.deleteAuthor">Xóa tác giả</message>
 	<message key="author.submit.submissionIndexingDescription">Nhập các từ khóa để lập chỉ mục cho bài nộp; phân tách các từ khóa bằng dấu chấm phẩy (từ khóa 1; từ khóa 2; từ khóa 3).</message>
 	<message key="author.submit.coverageInstructions">Chỉ vị trí địa lý, phạm vi thời gian hoặc lịch sử, và/hoặc những đặc trưng của mẫu nghiên cứu.</message>
+	<message key="author.submit.subjectClassInstructions">Sử dụng các hệ thông phân loại có siêu liên kết để lựa chọn các thuật ngữ phân loại và chỉ số phân loại, nếu có thể.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Các mã khác</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Ít nhất phải có một tác giả.</message>
 	<message key="author.submit.form.authorRequiredFields">Phải có họ, tên gọi và địa chỉ email của tác giả.</message>

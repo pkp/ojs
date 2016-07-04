@@ -4,7 +4,7 @@
 <!--
   * locale/vi_VN/admin.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="vi_VN" full_name = "Tiếng Việt">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="admin.hostedJournals">Các tạp chí trên Website</message>
 	<message key="admin.settings.journalRedirect">Chuyển hướng tạp chí</message>
 	<message key="admin.settings.journalRedirectInstructions">Website chính sẽ được chuyển hướng sáng tạp chí này. Điều này hữu ích khi website chỉ có một tạp chí.</message>
@@ -25,6 +25,7 @@
 	<message key="admin.languages.downloadFailed">Ngôn ngữ không tải được. Thông báo lỗi dưới đây giải thích về sự cố này.</message>
 	<message key="admin.languages.localeInstalled">Ngôn ngữ "{$locale}" đã được cài đặt.</message>
 	<message key="admin.languages.download">Tải Ngôn ngữ</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Nạp lại mẫu email mặc định</message>
 	<message key="admin.languages.download.cannotOpen">Không mở được định danh ngôn ngữ từ website của PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Không thể thêm ngôn ngữ mới vào file đăng ký ngôn ngữ, thường là "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">CSDL người dùng OJS</message>
@@ -36,13 +37,14 @@
 	<message key="admin.systemConfigurationDescription"><![CDATA[Cấu hình OJS ghi trong <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.journals.journalSettings">Thiết lập tạp chí</message>
 	<message key="admin.journals.noneCreated">Chưa có tạp chí nào được khởi tạo.</message>
-	<message key="admin.contexts.confirmDelete">Quý vị có chắc chắn muốn xóa vĩnh viễn tạp chí này và tất cả nội dung của tạp chí?</message>
-	<message key="admin.contexts.create">Khởi tạp một tạp chí</message>
+	<message key="admin.journals.confirmDelete">Quý vị có chắc chắn muốn xóa vĩnh viễn tạp chí này và tất cả nội dung của tạp chí?</message>
+	<message key="admin.journals.create">Khởi tạp một tạp chí</message>
+	<message key="admin.journals.createInstructions">Quý vị sẽ tự động được bổ nhiệm là người quản lý (Tổng biên tập) tạp chí này. Sau khi tạo một tạp chí mới, đăng nhập vào với tư cách Tổng biên tập để tiếp tục thiết lập cho tạp chí và bổ nhiệm người dùng.</message>
 	<message key="admin.journals.urlWillBe">Địa chỉ của tạp chí sẽ là {$sampleUrl}</message>
-	<message key="admin.contexts.form.titleRequired">Phải có tên tạp chí.</message>
-	<message key="admin.contexts.form.pathRequired">Phải có đường dẫn.</message>
-	<message key="admin.contexts.form.pathAlphaNumeric">Đường dẫn chỉ được phép có các ký tự chữ cái, chữ số, dấu gạch dưới, gạch ngang và phải bắt đầu bằng chữ cái, chữ số.</message>
-	<message key="admin.contexts.form.pathExists">Đường dẫn vừa chọn đã được dùng cho một tạp chí khác.</message>
+	<message key="admin.journals.form.titleRequired">Phải có tên tạp chí.</message>
+	<message key="admin.journals.form.pathRequired">Phải có đường dẫn.</message>
+	<message key="admin.journals.form.pathAlphaNumeric">Đường dẫn chỉ được phép có các ký tự chữ cái, chữ số, dấu gạch dưới, gạch ngang và phải bắt đầu bằng chữ cái, chữ số.</message>
+	<message key="admin.journals.form.pathExists">Đường dẫn vừa chọn đã được dùng cho một tạp chí khác.</message>
 	<message key="admin.journals.enableJournalInstructions">Để tạp chí này xuất hiện công khai trên web site</message>
 	<message key="admin.journals.journalDescription">Mô tả tạp chí</message>
 	<message key="admin.journals.importOJS1">Nhập từ OJS 1</message>
