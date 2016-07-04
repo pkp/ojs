@@ -122,7 +122,7 @@
 	<message key="manager.setup.announcementsDescription">Anunţurile pot fi publicate pentru a informa cititorii revistei despre noutăţi şi evenimente. Anunţurile publicate vor apărea în pagina dedicată anunţurilor.</message>
 	<message key="manager.setup.announcementsIntroduction">Informaţii suplimentare</message>
 	<message key="manager.setup.announcementsIntroductionDescription">Introduceţi orice informaţii suplimentare ar trebui să fie prezentate cititorilor pe pagina anunţurilor.</message>
-	<message key="manager.setup.appearInAboutJournal">(Trebuie să apară în secţiunea „despre revistă”) </message>
+	<message key="manager.setup.appearInAboutJournal">(Trebuie să apară în secţiunea „despre revistă”)</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Cereţi autorilor care fac propuneri să depună şi o declaraţie privind conflictul de interes (CI) atașat acestora.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Cereţi evaluatorilor să depună o declaraţie de CI la fiecare evaluare peer review pe care o fac.</message>
 	<message key="manager.setup.history">Istoricul revistei</message>

@@ -24,7 +24,7 @@
 	<message key="admin.languages.confirmUninstall">Eşti sigur că doreşti să dezinstalezi această localizare? Acest lucru poate afecta revistele găzduite şi care folosesc această localizare.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Selectează localizări suplimentare pentru a instala suport în cadrul sistemului. Localizările trebuie să fie înstalate înainte de a fi utilizate de revistele găzduite. Vezi documentaţia OJS pentru informaţii privind suportul pentru limbi noi.</message>
 	<message key="admin.languages.downloadFailed">Descărcarea localizării a dat eroare. Mesajul(ele) de mai jos descriu ce s-a întâmplat.</message>
-	<message key="admin.languages.localeInstalled">Localizarea "{$locale}" a fost instalată. </message>
+	<message key="admin.languages.localeInstalled">Localizarea "{$locale}" a fost instalată.</message>
 	<message key="admin.languages.download">Descarcă localizări</message>
 	<message key="admin.languages.download.cannotOpen">Nu pot deschide descriptorul de limbă de pe siteul PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Nu pot adăuga noul fişier registru al localizării, de regulă "registry/locales.xml".</message>
