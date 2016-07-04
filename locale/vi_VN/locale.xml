@@ -162,7 +162,7 @@
 	<message key="journal.currentIssue">Số mới ra</message>
 	<message key="journal.journals">Các tạp chí</message>
 	<message key="journal.path">Đường dẫn</message>
-	<message key="journal.journal">Tạp chí</message>
+	<message key="context.context">Tạp chí</message>
 
 	<!-- User -->
 	<message key="user.showAllJournals">Các tạp chí đã chọn</message>
