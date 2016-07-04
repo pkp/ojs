@@ -74,7 +74,7 @@
 	<message key="manager.people.enrollSyncJournal">Avec la revue</message>
 	<message key="manager.people.mergeUsers.from.description">Choisir un utilisateur à fusionner dans un autre compte (par ex., quand quelqu'un a deux comptes utilisateurs). Le compte que vous choisissez en premier sera supprimé, et toutes les soumissions, assignations, etc. seront attribuées au second compte.</message>
 	<message key="manager.people.mergeUsers.into.description">Sélecitonner un utilisateur à qui attribuer les privilèges et assignations de l'utilisateur précédent.</message>
-	<message key="manager.people.roleEnrollment">Inscription en tant que {$role} </message>
+	<message key="manager.people.roleEnrollment">Inscription en tant que {$role}</message>
 	<message key="manager.people.syncUserDescription">La synchronisation de l'inscription inscrira tous les utilisateurs déjà inscrit à un rôle donné dans la revue donnée à occuper le même rôle dans cette revue. Cette fonction permet à un groupe d'utilisateurs (par ex., Évaluateurs) d'être synchronisés entre les différentes revues.</message>
 	<message key="manager.sections.abstractsNotRequired">Résumé non obligatoire</message>
 	<message key="manager.sections.assigned">Rédacteurs de cette rubrique</message>
