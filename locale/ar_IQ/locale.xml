@@ -218,7 +218,7 @@
 	<message key="journal.currentIssue">العدد الحالي</message>
 	<message key="journal.journals">المجلات</message>
 	<message key="journal.path">المسار</message>
-	<message key="journal.journal">المجلة</message>
+	<message key="context.context">المجلة</message>
 	<message key="journal.issn">ISSN</message>
 
 	<!-- User -->

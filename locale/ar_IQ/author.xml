@@ -25,11 +25,11 @@
 	<message key="author.submit.step4">الخطوة الرابعة: تحميل الملفات التكميلية</message>
 	<message key="author.submit.step4a">الخطوة الرابعة (أيضاً): أضف ملفاً تكميلياً</message>
 	<message key="author.submit.step5">الخطوة الخامسة: تأكيد الطلب</message>
-	<message key="author.submit.start">1. البدء</message>
-	<message key="author.submit.upload">2. إرفع ملفات الطلب</message>
-	<message key="author.submit.metadata">3. أدخل البيانات الوصفية</message>
-	<message key="author.submit.supplementaryFiles">4. إرفع الملفات التكميلية</message>
-	<message key="author.submit.confirmation">5. تأكيد الطلب</message>
+	<message key="author.submit.start">البدء</message>
+	<message key="author.submit.upload">إرفع ملفات الطلب</message>
+	<message key="author.submit.metadata">أدخل البيانات الوصفية</message>
+	<message key="author.submit.supplementaryFiles">إرفع الملفات التكميلية</message>
+	<message key="author.submit.confirmation">تأكيد الطلب</message>
 	<message key="author.submit.cancelSubmission">لك أن تكمل طلبك للنشر في موقعنا لاحقاً عبر الذهاب إلى (طلبات النشر قيد المعالجة) في صفحة دخول المؤلفين</message>
 	<message key="author.submit.notAccepting">النشر في هذه المجلة معلق حالياً</message>
 	<message key="author.submit.requestWaiver">إلتمس تنازلاً</message>
@@ -49,19 +49,19 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[أتواجهك صعوبات؟ تراسل مع <a href="mailto:{$supportEmail}">{$supportName}</a> للحصول على المساعدة.]]></message>
 	<message key="author.submit.journalSection">قسم المجلة</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[إختر القسم الأنسب لطلب النشر هذا (أنظر الأقسام وسياسات النشر <a href="{$aboutUrl}" target="_new">في المجلة</a>)]]></message>
-	<message key="author.submit.selectSection">لطفاً، إختر أحد الأقسام</message>
+	<message key="submission.submit.selectSection">لطفاً، إختر أحد الأقسام</message>
 	<message key="author.submit.submissionLocale">لغة طلب النشر</message>
 	<message key="author.submit.submissionLocaleDescription">هذه المجلة تتقبل طلبات النشر بعدة لغات. إختر لغة الطلب الأساسية من القائمة المنسدلة أدناه</message>
 	<message key="author.submit.submissionChecklist">مرجعيات طلب النشر</message>
-	<message key="author.submit.submissionChecklistDescription">أعلم المجلة بأن طلب النشر هذا جاهز للنظر به من قبل هيئة تحريرها عبر وضع التأشيرات لكل مما يأتي (الملاحظات إلى هيئة التحرير يمكن إضافتها أدناه):</message>
+	<message key="submission.submit.submissionChecklistDescription">أعلم المجلة بأن طلب النشر هذا جاهز للنظر به من قبل هيئة تحريرها عبر وضع التأشيرات لكل مما يأتي (الملاحظات إلى هيئة التحرير يمكن إضافتها أدناه):</message>
 	<message key="author.submit.verifyChecklist">عليك التأكد من أن كل فقرات نموذج التقديم تمت تلبيتها قبل المتابعة</message>
 	<message key="author.submit.copyrightNoticeAgree">المؤلف أو المؤلفون يوافقون على فقرات إشعار الحقوق الفكرية، والتي تنطبق على طلب النشر هذا إذا أو عند تحقق النشر عبر هذه المجلة (الملاحظات إلى هيئة التحرير يمكن إضافتها أدناه)</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">عليك أن توافق على فقرات إشعار الحقوق الفكرية لتتمكن من المتابعة</message>
-	<message key="author.submit.commentsForEditor">ملاحظات للمحرر</message>
+	<message key="submission.submit.coverNote">ملاحظات للمحرر</message>
 	<message key="author.submit.comments">أدخل نصاً (إختياري)</message>
 	<message key="author.submit.form.sectionRequired">لطفاً إختر قسم المجلة الذي يتناسب وطلب النشر هذا</message>
 	<message key="author.submit.form.localeRequired">لطفا، إختر أحد اللغات لطلب النشر</message>
-	<message key="author.submit.privacyStatement">بيان الخصوصية للمجلة</message>
+	<message key="submission.submit.privacyStatement">بيان الخصوصية للمجلة</message>
 	<message key="author.submit.reorderInstructions">أعد ترتيب المؤلفين بالشكل الذي سيتم فيه سرد أسمائهم عند النشر</message>
 	<message key="author.submit.reorder">أعد ترتيب أسماء المؤلفين</message>
 	<message key="author.submit.selectPrincipalContact">جهة الاتصال الأساسية بالنسبة لهيئة التحرير</message>
