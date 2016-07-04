@@ -220,7 +220,7 @@
 	<message key="journal.currentIssue">Ultimo fascicolo</message>
 	<message key="journal.journals">Riviste</message>
 	<message key="journal.path">Path</message>
-	<message key="journal.journal">Rivista</message>
+	<message key="context.context">Rivista</message>
 	<message key="journal.issn">ISSN</message>
 
 	<!-- User -->
