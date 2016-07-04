@@ -26,11 +26,11 @@
 	<message key="author.submit.step4">Pas 4. Càrrega dels fitxers addicionals</message>
 	<message key="author.submit.step4a">Pas 4a. Addició d'un fitxer addicional</message>
 	<message key="author.submit.step5">Pas 5. Confirmació de la tramesa</message>
-	<message key="author.submit.start">1. Inici</message>
-	<message key="author.submit.upload">2. Càrrega de la tramesa</message>
-	<message key="author.submit.metadata">3. Introducció de les metadades</message>
-	<message key="author.submit.supplementaryFiles">4. Càrrega de fitxers addicionals</message>
-	<message key="author.submit.confirmation">5. Confirmació</message>
+	<message key="author.submit.start">Inici</message>
+	<message key="author.submit.upload">Càrrega de la tramesa</message>
+	<message key="author.submit.metadata">Introducció de les metadades</message>
+	<message key="author.submit.supplementaryFiles">Càrrega de fitxers addicionals</message>
+	<message key="author.submit.confirmation">Confirmació</message>
 	<message key="author.submit.cancelSubmission">Podeu completar aquesta tramesa més endavant si seleccioneu «Trameses actives» a la pàgina d'inici de l’autor/a.</message>
 	<message key="author.submit.notAccepting">Actualment aquesta revista no accepta trameses.</message>
 	<message key="author.submit.requestWaiver">Sol·licita una exempció</message>
@@ -50,19 +50,19 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[ En cas que necessiteu assistència, poseu-vos en contacte amb <a href="mailto:{$supportEmail}">{$supportName}</a>.]]></message>
 	<message key="author.submit.journalSection">Secció de la revista</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Seleccioneu la secció adequada per a aquesta tramesa (vegeu «Seccions i Polítiques» a «<a href="{$aboutUrl}" target="_new">Sobre</a> la revista»).]]></message>
-	<message key="author.submit.selectSection">Seleccioneu una secció...</message>
+	<message key="submission.submit.selectSection">Seleccioneu una secció...</message>
 	<message key="author.submit.submissionLocale">Llengua de la tramesa</message>
 	<message key="author.submit.submissionLocaleDescription">Aquesta revista accepta trameses en diverses llengües. Trieu la llengua principal de la tramesa al menú desplegable que hi ha a continuació.</message>
 	<message key="author.submit.submissionChecklist">Llista de verificació de tramesa</message>
-	<message key="author.submit.submissionChecklistDescription">Per indicar que aquesta tramesa ja està llesta perquè la consideri la revista, comproveu els punts següents (podeu incloure comentaris per a l’editor/a a continuació).</message>
+	<message key="submission.submit.submissionChecklistDescription">Per indicar que aquesta tramesa ja està llesta perquè la consideri la revista, comproveu els punts següents (podeu incloure comentaris per a l’editor/a a continuació).</message>
 	<message key="author.submit.verifyChecklist">Abans de continuar, comproveu que es compleixen tots els punts de la llista de verificació de la tramesa.</message>
 	<message key="author.submit.copyrightNoticeAgree">Els autors/ores accepten les condicions d’aquest avís de drets d'autor/a, que s’aplicarà quan aquesta tramesa es publiqui en aquesta revista (podeu incloure comentaris per a l’editor/a a continuació).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Abans de continuar, accepteu les condicions de l’avís de drets d'autor/a.</message>
-	<message key="author.submit.commentsForEditor">Comentaris per a l'editor/a</message>
+	<message key="submission.submit.coverNote">Comentaris per a l'editor/a</message>
 	<message key="author.submit.comments">Introduïu el text (opcional)</message>
 	<message key="author.submit.form.sectionRequired">Seleccioneu una secció adequada de la revista per a aquesta tramesa.</message>
 	<message key="author.submit.form.localeRequired">Seleccioneu la llengua per a la tramesa.</message>
-	<message key="author.submit.privacyStatement">Declaració de privacitat de la revista</message>
+	<message key="submission.submit.privacyStatement">Declaració de privacitat de la revista</message>
 	<message key="author.submit.reorderInstructions">Reordena els autors/ores perquè apareguin en l'ordre que sortiran a la publicació.</message>
 	<message key="author.submit.reorder">Reordena el nom de l’autor/a</message>
 	<message key="author.submit.selectPrincipalContact">Contacte principal per a la correspondència editorial.</message>
