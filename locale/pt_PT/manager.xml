@@ -4,7 +4,7 @@
 <!--
   * locale/pt_PT/manager.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="pt_PT" full_name = "Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="manager.emails.confirmResetAll">Deseja realmente restaurar todos os e-mails para o padrão original desta revista? Todas as personalizações serão perdidas.</message>
 	<message key="manager.files.note">Aviso: o Navegador de Ficheiros é uma ferramenta avançada que permite visualização e manipulação directa de documentos e pastas associadas à revista.</message>
 	<message key="manager.groups">Pessoal</message>
@@ -87,9 +87,41 @@
 	<message key="manager.people.roleEnrollment">{$role} Registo</message>
 	<message key="manager.people.syncUserDescription">Sincronizar Registo registará nesta revista todos os utilizadores com a função específica na revista especificada. Esta função permite que um grupo padrão de utilizadores (exemplo: revisores) seja partilhado entre revistas.</message>
 	<message key="manager.plugins.description">Esta página permite ao Editor-Gestor verificar e configurar os plugins actualmente instalados. Os Plugins estão divididos por categorias, de acordo com a sua função. As categorias estão listadas a seguir, cada uma com o seu conjunto de plugins.</message>
+	<message key="manager.reviewFormElements">Campos do formulário de revisão</message>
+	<message key="manager.reviewFormElements.addResponseItem">Adicionar resposta possível</message>
+	<message key="manager.reviewFormElements.checkboxes">Campo de selecção</message>
+	<message key="manager.reviewFormElements.chooseType">Escolher tipo de campo</message>
+	<message key="manager.reviewFormElements.copyTo">Copiar para</message>
+	<message key="manager.reviewFormElements.create">Criar novo campo</message>
+	<message key="manager.reviewFormElements.dropdownbox">Campo de menu de opções</message>
+	<message key="manager.reviewFormElements.edit">Editar campo</message>
+	<message key="manager.reviewFormElements.elementType">Tipo de campo</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">O tipo do campo do formulário é obrigatório.</message>
+	<message key="manager.reviewFormElements.form.questionRequired">Uma pergunta para o campo do formulário é obrigatória</message>
+	<message key="manager.reviewFormElements.noneCreated">Nenhum campo de formulário criado .</message>
+	<message key="manager.reviewFormElements.possibleResponse">Resposta possível</message>
+	<message key="manager.reviewFormElements.question">Pergunta</message>
+	<message key="manager.reviewFormElements.radiobuttons">Campo de botão de rádio</message>
+	<message key="manager.reviewFormElements.required">Campo de revisão obrigatório</message>
+	<message key="manager.reviewFormElements.smalltextfield">Campo de texto pequeno</message>
+	<message key="manager.reviewFormElements.textarea">Campo de texto longo</message>
+	<message key="manager.reviewFormElements.textfield">Campo de texto de uma linha</message>
+	<message key="manager.reviewForms">Formulários de Revisão</message>
+	<message key="manager.reviewForms.completed">Concluído</message>
+	<message key="manager.reviewForms.create">Criar formulário de revisão</message>
+	<message key="manager.reviewForms.description">Descrição</message>
+	<message key="manager.reviewForms.edit">Editar formulário de revisão</message>
+	<message key="manager.reviewForms.form.titleRequired">Título do formulário de revisão obrigatório.</message>
+	<message key="manager.reviewForms.inReview">Em Revisão</message>
+	<message key="manager.reviewForms.list.description">Os formulários de revisão por pares criados aqui estarão disponíveis aos revisores para preenchimento, em vez do formulário padrão que consiste em duas caixas de texto de comentários com comentários exclusivos para o autor e outra para o  Editor e o Autor. Formulários de revisão podem ser designados a secções específicas e os editores poderão escolher qual o formulário utilizar no momento da revisão. Em todos os casos, os editores poderão incluir as revisões nas correspondências com o autor.</message>
+	<message key="manager.reviewForms.noneChosen">Nenhum / Formulário de revisão padrão</message>
+	<message key="manager.reviewForms.noneCreated">Nenhum formulário de revisão criado.</message>
+	<message key="manager.reviewForms.preview">Visualizar formulário de revisão</message>
+	<message key="manager.reviewForms.title">Título</message>
 	<message key="manager.sections.abstractsNotRequired">Não exigir resumos</message>
 	<message key="manager.sections.assigned">Editores desta Secção</message>
 	<message key="manager.sections.create">Criar Secção</message>
+	<message key="manager.sections.disableComments">Desactivar comentários dos leitores para esta secção</message>
 	<message key="manager.section.sectionEditorInstructions">Escolha dentre os Editores de Secção disponíveis e clique em "Designar Editor" a esta secção.</message>
 	<message key="manager.sections.editorRestriction">Restrita a Editores e Editores de Secção.</message>
 	<message key="manager.sections.editors">Editores de Secção</message>
@@ -149,7 +181,13 @@
 	<message key="manager.setup.copyeditInstructionsDescription">As Instruções de Edição de Texto estarão disponíveis aos Editores de Texto, Autores e Editores de Secção, no estágio de Edição de Submissão. A seguir apresenta-se um padrão de instruções em HTML, que pode ser modificado ou substituído pelo Editor-Gestor a qualquer momento (em HTML ou texto simples).</message>
 	<message key="manager.setup.copyrightNotice">Declaração de Direitos de Autor</message>
 	<message key="manager.setup.coverage">Cobertura</message>
+	<message key="manager.setup.coverageChronExamples">(Ex.: Renascimento Europeu; Período Jurássico; Terceiro Trimestre; Modernismo)</message>
+	<message key="manager.setup.coverageChronProvideExamples">Forneça exemplos relevantes de termos cronológicos ou históricos</message>
 	<message key="manager.setup.coverageDescription">Referente à cobertura geo-espacial, cronológica ou histórica, e/ou características da pesquisa.</message>
+	<message key="manager.setup.coverageGeoExamples">(Ex.: Península Ibérica; Estratosfera; Floresta Boreal; Amazónia)</message>
+	<message key="manager.setup.coverageGeoProvideExamples">Forneça exemplos de termos geo-espaciais ou geográficos relevantes</message>
+	<message key="manager.setup.coverageResearchSampleExamples">(Ex.: por idade; por género; por etnia; grau de instrução)</message>
+	<message key="manager.setup.coverageResearchSampleProvideExamples">Forneça exemplos de características de pesquisa</message>
 	<message key="manager.setup.currentIssue">Edição Actual</message>
 	<message key="manager.setup.customizingTheLook">Passo 5. Visual da Revista</message>
 	<message key="manager.setup.customTags">Marcações Padronizadas</message>
@@ -162,9 +200,13 @@
 	<message key="manager.setup.disciplineExamples">(Ex.: Psicologia; Educação; Sociologia; Neurociências)</message>
 	<message key="manager.setup.disciplineProvideExamples">Forneça exemplos de áreas do conhecimento relevantes para esta revista</message>
 	<message key="manager.setup.displayCurrentIssue">Adicionar sumário na edição actual (se disponível).</message>
-	<message key="manager.setup.doiPrefix">Prefixo DOI</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[O Prefixo DOI (Digital Object Identifier) é controlado e oferecido por <a href="http://www.crossref.org" target="_new">CrossRef</a> e possui o formato 10.xxxx (ex.: 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Decisão Editorial</message>
+	<message key="manager.setup.editorialMembers">Entre em Membros do Equipa para registar pessoas na Equipa Editorial e/ou Revisor. Pode ser realizado a qualquer tempo.</message>
+	<message key="manager.setup.editorialProcess1">Um ou mais editores podem tratar os passos básicos sem papéis definidos.</message>
+	<message key="manager.setup.editorialProcess2">Editor trata da Fila de Submissão e Sumário, enquanto Editores de Secção tratam da Revisão e Edição da Submissão.</message>
+	<message key="manager.setup.editorialProcess3">Editor trata da Fila de Submissão, Edição de Submissão e Sumário, enquanto os Editores de Secção tratam da Revisão da Submissão.</message>
+	<message key="manager.setup.editorialReviewBoard">Equipa Editorial / Revisor</message>
+	<message key="manager.setup.editorialReviewBoardDescription">A função da Equipa Editorial é definir as directrizes, âmbito e público alvo da revista, definir o corpo editorial, e, pela reputação dos seus participantes, proporcionar à revista um posicionamento na área de actuação. A Equipa de Revisores tem uma função similar, porém ainda acompanha o processo de revisão por pares. Os membros do Equipa de Revisores não terão acesso à administração do sistema, mas estarão incluídos na lista de revisores.</message>
 	<message key="manager.setup.emailBounceAddress">Endereço de retorno de e-mail</message>
 	<message key="manager.setup.emailBounceAddressDescription">Qualquer e-mail retornado (não recebido) produzirá uma mensagem de erro para o endereço definido aqui.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Aviso:</strong> Para activar esta opção, o administrador do portal deve activar a opção <tt>allow_envelope_sender</tt> no documento de configuração do sistema. Configurações adicionais no servidor podem ser necessárias para suportar tal funcionalidade (pode não ser possível em todos os tipos de servidores!), como descrito na documentação do sistema.]]></message>
@@ -174,6 +216,11 @@
 	<message key="manager.setup.enableAnnouncements">Activar notícias a Editores-Gestores.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Exibir</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">das notícias mais recentes na página inicial da revista.</message>
+	<message key="manager.setup.enablePageNumber">A numeração de páginas para cada item publicado pode ser incluída manualmente no Sumário da revista(Ex.: p. 13-26).</message>
+	<message key="manager.setup.enablePublicArticleId">Identificadores Personalizados serão utilizados para identificar itens publicados.</message>
+	<message key="manager.setup.enablePublicGalleyId">Identificadores personalizados serão utilizados para identificar composições finais (ex.: documentos HTML ou PDF) de itens publicados.</message>
+	<message key="manager.setup.enablePublicIssueId">Identificadores Personalizados serão utilizados para identificar as edições.</message>
+	<message key="manager.setup.enablePublicSuppFileId">Identificadores personalizados serão utilizados para identificar documentos suplementares da submissão.</message>
 	<message key="manager.setup.enableUserRegistration">Utilizadores podem se registar numa revista, assumindo um ou mais papéis, listados a seguir:</message>
 	<message key="manager.setup.enableUserRegistration.author">Autores (podem submeter documentos à revista)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Leitores (recebem notificações e podem ser considerados assinantes)</message>
@@ -201,7 +248,6 @@
 	<message key="manager.setup.guidingSubmissions">Passo 3. Instruções para Submissão</message>
 	<message key="manager.setup.homepageImage">Imagem da Página Inicial</message>
 	<message key="manager.setup.homepageImageDescription">Inclua uma imagem para exibição no centro da página.</message>
-	<message key="manager.setup.includeCreativeCommons">Para revistas que oferecem acesso livre imediato ou adiado, inclua uma licença Creative Commons com todo o material na data de publicação.</message>
 	<message key="manager.setup.information">Informação</message>
 	<message key="manager.setup.information.description">Informações breves sobre a revista para bibliotecários, potenciais autores e leitores estão disponíveis na secção Informação na barra de ferramentas lateral.</message>
 	<message key="manager.setup.information.forAuthors">Para Autores</message>
@@ -230,6 +276,8 @@
 	<message key="manager.setup.journalLogo.altText">Logótipo da revista</message>
 	<message key="manager.setup.journalPageFooter">Rodapé da Revista</message>
 	<message key="manager.setup.journalPageFooterDescription">No rodapé da revista é possível incluir ou actualizar o conteúdo, colocando código HTML customizado, como outras barras de navegação, contadores, publicidade. O rodapé aparecerá em todas as páginas.</message>
+	<message key="manager.setup.journalPageHeader">Cabeçalho interno da Revista</message>
+	<message key="manager.setup.journalPageHeaderDescription">Uma versão em formato de imagem do título e logótipo da revista (como .gif, .jpg, ou .png ) pode ser submetida, possivelmente em tamanho reduzido, que substituirá a versão em texto que aparece como padrão.</message>
 	<message key="manager.setup.journalPolicies">Passo 2. Políticas da Revista</message>
 	<message key="manager.setup.journalSetup">Configuração da Revista</message>
 	<message key="manager.setup.journalSetupUpdated">Configurações da revista actualizadas.</message>
@@ -315,7 +363,7 @@
 	<message key="manager.setup.reviewerDatabaseLink">Base de Dados de Revisores em potencial</message>
 	<message key="manager.setup.reviewerDatabaseLink.desc">Inclua à página Designar Revisor um link para uma base de dados relevante, que possa ser pesquisada por potenciais revisores e seja de acesso livre ou irrestrito, sem subscrição.</message>
 	<message key="manager.setup.reviewGuidelines">Instruções para Revisão</message>
-	<message key="manager.setup.reviewGuidelinesDescription">As Instruções para Revisão proporcionam um guia de critérios essencial para o julgamento da submissão e avaliar se está de acordo com as políticas e conteúdo da revista, assim como instruções especiais para preparar uma crítica eficaz, eficiente e construtiva.</message>
+	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[As Instruções para Revisão proporcionam um guia de critérios essencial para o julgamento da submissão e avaliar se está de acordo com as políticas e conteúdo da revista, assim como instruções especiais para preparar uma crítica eficaz, eficiente e construtiva. Em alternativa, pode criar um formulário de revisão em <a href="{$reviewFormsUrl}" class="action">Formulários</a>. Em ambos os casos, os editores podem encaminhar os comentários da revisão aos autores.]]></message>
 	<message key="manager.setup.reviewOptions">Opções para Revisão</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">E-mails automatizados serão enviados ao revisor (o editor também pode enviar lembretes ao revisor)</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Aviso:</strong> Para activar estas opções, o administrador do portal deve activar a opção de <tt>scheduled_tasks</tt> no documento de configuração do sistema. Configurações adicionais no servidor podem ser necessárias para suportar tais funcionalidades (pode não ser possível em todos os tipos de servidores!), como descrito na documentação do sistema.]]></message>
@@ -355,11 +403,11 @@
 	<message key="manager.setup.sponsors">Instituições Patrocinadoras</message>
 	<message key="manager.setup.sponsorsDescription">O nome das instituições patrocinadoras (Ex.: instituições de ensino superior, instituições patrocinadoras à pesquisa científica, etc.) aparecerá na secção Sobre a Revista .</message>
 	<message key="manager.setup.stepsToJournalSite">Cinco passos para ter uma Revista na Web</message>
+	<message key="manager.setup.subjectClassification">Classificação de Assunto</message>
+	<message key="manager.setup.subjectClassificationExamples">(Ex.: Classificação de Assuntos da Matemática; Classificação da Biblioteca do Congresso)</message>
 	<message key="manager.setup.subjectExamples">(Ex.: Fotossíntese; Buracos Negros; Arquitectura da Informação; Sistemas de Informação)</message>
 	<message key="manager.setup.subjectKeywordTopic">Palavras-chave</message>
 	<message key="manager.setup.subjectProvideExamples">Forneça exemplos de palavras-chave ou tópicos para auxiliar o autor</message>
-	<message key="manager.setup.submissionEmailLogging">Manter histórico de todos os e-mails enviados relativos à submissão na página de Histórico.</message>
-	<message key="manager.setup.submissionEventLogging">Manter histórico de todas as acções tomadas sobre a submissão na página Histórico.</message>
 	<message key="manager.setup.submissionGuidelines">Instruções para Submissão</message>
 	<message key="manager.setup.submissionPreparationChecklist">Normas de Submissão</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Ao submeter um trabalho para a revista, os autores devem ler, aceitar e marcar como realizados cada Item de Verificação nas Normas de Submissão, antes de proceder. A lista de Itens de Verificação também é apresentada em Instruções para Autores, na secção Sobre a Revista. A lista pode ser modificada, porém todos os itens requerem a marcação dos autores para procederem à submissão.</message>
@@ -384,6 +432,8 @@
 	<message key="manager.setup.userRegistration">Registo de Utilizadores</message>
 	<message key="manager.setup.useTextTitle">Texto Título</message>
 	<message key="manager.setup.volumePerYear">Volumes por ano</message>
+	<message key="manager.statistics.reports">Relatórios</message>
+	<message key="manager.statistics.reports.description">O sistema gera relatórios que registam os detalhes associados com os procedimentos da submissão, da perspectiva de submissões, editores, revisores e secções, em um dado período. Relatórios são gerados no formato CSV, que exigem um aplicativo de planilha eletrónica para serem visualizados.</message>
 	<message key="manager.statistics.statistics">Estatísticas da Revista</message>
 	<message key="manager.statistics.statistics.articleViews">Registo de visualização de artigo (Apenas para autores)</message>
 	<message key="manager.statistics.statistics.count.accept">Aceite</message>
@@ -415,19 +465,14 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">mês(es) após a pulicação da edição.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Escolha um tempo de duração válido.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">O texto a seguir será exibido em Sobre a Revista, no item Acesso Livre Adiado.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Active a caixa de opção disponível.</message>
 	<message key="manager.subscriptionPolicies.expiry">Expiração de Subscrição</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Leitores podem perder acesso ao conteúdo exclusivo a subscritores no momento da expiração da subscrição, ou podem manter acesso a conteúdo publicado anteriormente à expiração.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Expiração total</message>
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Leitores perdem acesso a todo o conteúdo exclusivo a subscritores na data de expiração.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Expiração parcial</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Leitores mantêm acesso apenas a conteúdo publicado anteriormente à expiração. Novas publicação não permitirão acesso a conteúdo exclusivo a subscritores.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Notificar subscritores via e-mail</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">mês(es) após a expiração da subscrição.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Notificar subscritores via e-mail</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">semana(s) depois da expiração da subscrição.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Notificar subscritores via e-mail</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">mês(es) antes da expiração da subscrição.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Notificar subscritores via e-mail</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">semana(s) antes da expiração da subscrição.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Lembretes de Expiração de Subscrição</message>
@@ -537,6 +582,8 @@
 	<message key="manager.language.ui">Interface do utilizador</message>
 	<message key="manager.language.forms">Formulários</message>
 	<message key="manager.people.showNoRole">Exibir utilizadores sem papéis</message>
+	<message key="manager.plugins.install">Instalar um novo Plugin</message>
+	<message key="manager.plugins.installDescription">Este formulário permite enviar e instalar um novo plugin. Certifique-se de que o plugin está comprimido como um ficheiro tar.gz.</message>
 	<message key="manager.plugins.upgrade">Actualizar Plugin</message>
 	<message key="manager.plugins.upgradeDescription">Este formulário permite actualizar um plugin. Certifique-se de que o plugin está comprimido como um ficheiro tar.gz.</message>
 	<message key="manager.plugins.delete">Eliminar Plugin</message>
@@ -563,16 +610,9 @@
 	<message key="manager.setup.contributorNoteDescription">Este texto será apresentado abaixo de "Contribuidores" e acima da lista de nomes e URLs para organizações contribuidoras, sob "Apoio à revista" na página "Sobre".</message>
 	<message key="manager.setup.history">Histórico da revista</message>
 	<message key="manager.setup.historyDescription">Este texto aparecerá na secção "Sobre" da revista e pode ser usado para detalhar mudanças de título, corpo editorial e outros itens de relevância na história da publicação.</message>
-	<message key="manager.setup.doiSuffix">Suffixo DOI</message>
-	<message key="manager.setup.doiSuffixDefault">Usar padrão (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Use o padrão fornecido abaixo para gerar sufixos DOI. Use %j para iniciais da revista, %v para o volume, %i para a edição, %a para o código do artigo no sistema e %p para o número da página.</message>
-	<message key="manager.setup.doiSuffixPattern.example">Por exemplo, vl%viss%ipp%p poderia criar um DOI to tipo 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">Um sufixo DOI pode possuir qualquer formato, desde que seja único para cada artigo publicado.</message>
-	<message key="manager.setup.doiSuffixPublisherId">Usar o "Identificador Personalizado" para itens publicados como sufixo DOI (deve estar activado no Passo 4).</message>
-	<message key="manager.setup.form.doiPrefixPattern">O padrão DOI deve estar no formato 10.xxxx.</message>
-	<message key="manager.setup.favicon">Favicon da revista</message>
-	<message key="manager.setup.faviconDescription">Adicionar um ícone de favoritos da revista, a ser exibido na barra de endereço do navegador.</message>
-	<message key="manager.setup.faviconInvalid">Formato de favicon inválido. Formatos aceites são .ico, .png e .gif.</message>
+	<message key="manager.setup.journalFavicon">Favicon da revista</message>
+	<message key="manager.setup.journalFaviconDescription">Adicionar um ícone de favoritos da revista, a ser exibido na barra de endereço do navegador.</message>
+	<message key="manager.setup.journalFaviconInvalid">Formato de favicon inválido. Formatos aceites são .ico, .png e .gif.</message>
 	<message key="manager.setup.publisherNoteDescription">Este texto aparecerá abaixo de "Editora" e acima da lista de nomes e URLs de editoras, na página "Apoio à revista" na página "Sobre".</message>
 	<message key="manager.setup.sponsorNoteDescription">Este texto aparecerá abaixo de "Patrocínio" e acima da lista de nomes e URLs de patrocinadores, na página "Apoio à revista" na página "Sobre".</message>
 	<message key="manager.setup.noPublishing">O sistema não será usado para publicar o conteúdo da revista online.</message>
@@ -627,6 +667,75 @@
 	<message key="manager.plugins.tarCommandNotFound">O comando tar não está disponível. Por favor, configure-o correctamente no config.inc.php.</message>
 	<message key="manager.plugins.versionFileInvalid">version.xml no directório do plugin contém dados inválidos.</message>
 	<message key="manager.reviewFormElements.included">Incluído na mensagem para o autor</message>
-	<message key="manager.setup.doiReassign">Reatribuir DOI's</message>
-	<message key="manager.setup.doiReassign.description">Se alterar a sua configuração DOI, os DOI's que foram atribuídos não serão afectados. Uma vez guardada a configuração DOI, use o botão para limpar todos os DOI's existentes de modo a que as novas configurações não afectem os artigos existentes.</message>
+	<message key="manager.payment.giftFees">Valores dos Donativos</message>
+	<message key="manager.payment.giftFeesDescription">Será exibido um link para donativos das assinaturas na página das Asssinaturas em Sobre a Revista e integrado no bloco lateral de assinaturas.</message>
+	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Esta acção activará os pagamentos para a assinatura de donativos, permitindo aos leitores oferecer assinaturas a outros leitores.</message>
+	<message key="manager.payment.options.purchaseIssueFee">Comprar Número</message>
+	<message key="manager.plugins.wrongCategory">O plugin transferido não corresponde à categoria de plugins carregados.</message>
+	<message key="manager.plugins.wrongName">A versão.xml do plugin transferido contém um nome que não corresponde ao nome do plugin carregado.</message>
+	<message key="manager.plugins.settings">Configurações</message>
+	<message key="manager.sections.confirmDelete">Tem a certeza que pretende eliminar permanentemente esta secção?</message>
+	<message key="manager.sections.alertDelete">Antes de ser eliminada esta secção, tem de remover os artigos publicados noutras secções.</message>
+	<message key="manager.setup.permissions.priorAgreement">Concordância Prévia</message>
+	<message key="manager.setup.permissions.display">Mostrar</message>
+	<message key="manager.setup.licenseURLDescription">Fornecer o URL da página da licença, caso exista.</message>
+	<message key="manager.setup.includeCopyrightStatement">Mostrar a declaração de direitos de autor com conteúdo (aconselhável para definir os direitos de um autor)</message>
+	<message key="manager.setup.includeLicense">Mostrar a licença com trabalho publicado.</message>
+	<message key="manager.setup.resetPermissions">Repor Permissões Artigo</message>
+	<message key="manager.setup.resetPermissions.description">A declaração de direitos de autor e informações sobre a licença estarão permanentemente ligados ao conteúdo publicado, garantindo que esses dados não serão alterado nas circunstância em que a revista modifique as políticas relativas a novas submissões. Para repor as permissões sobre informação armazenada previamente anexada ao conteúdo publicado, use o botão abaixo.</message>
+	<message key="manager.setup.confirmResetLicense">Tem a certeza que deseja repor as informações sobre licença e direitos de autor associados ao conteúdo publicado com a licença definida em Configurações da Revista?</message>
+	<message key="manager.setup.journalThumbnail">Thumbnail da Revista</message>
+	<message key="manager.setup.subjectClassificationURLValid">Por favor indique um URL remoto válido (include http://).</message>
+	<message key="manager.setup.useThumbnail">Thumbnail</message>
+	<message key="manager.statistics.defaultMetricDescription">A sua revista foi configurada para guardar mais do um tipo de métrica. As estatísticas de utilização serão exibidas em diferentes contextos.
+		Existem situações em que um único tipo de estatística será usado, e.g. para mostrar uma lista ordenada dos artigos mais lidos ou para ordenar o resultado de pesquisas. Por favor, seleccione uma das métricas configuradas como padrão.</message>
+	<message key="manager.statistics.reports.aggregationColumns">Agregar estatísticas por:</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">Templates padrão do relatório</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">Downloads do ficheiro do artigo</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Visualizações da página do resumo do artigo</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Resumo do artigo e downloads</message>
+	<message key="manager.statistics.reports.defaultReport.issueDownloads">Downloads do ficheiro do número</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContents">Visualizações da página do índice do número</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">Índice do número e downloads</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Visualizações da página principal da revista</message>
+	<message key="manager.statistics.reports.generateReport">Gerar relatório customizado</message>
+	<message key="manager.statistics.reports.advancedOptions">Opções Avançadas</message>
+	<message key="manager.statistics.reports.advancedOptions.label">Personalizar coluna e opções do filtro e ordenação. A alteração de qualquer uma destas opções pode modificar o resultado do template do relatório esperado.</message>
+	<message key="manager.statistics.reports.columns">Colunas</message>
+	<message key="manager.statistics.reports.columns.description">Definir as colunas que serão usadas para elaborar o relatório. As colunas seleccionadas aqui estabelece os dados presentes no relatório, assim como define o nível de agregação das estatísticas. Por exemplo, se escolhe as colunas ID, Tipo e Mês, o relatório vai sumariar todas as visualizações mensais de um objecto e os dados serão apresentados em linha. Se escolher Dia em vez de Mês, cada objecto terá uma linha por cada dia.</message>
+	<message key="manager.statistics.reports.filters">Filtros</message>
+	<message key="manager.statistics.reports.objectType">Tipo de Objecto</message>
+	<message key="manager.statistics.reports.objectId">ID Objecto</message>
+	<message key="manager.statistics.reports.objectId.label">Definir um ou mais IDs de objectos, separados por vírgula (e.g. 1,2,3,4,5).</message>
+	<message key="manager.statistics.reports.today">Hoje</message>
+	<message key="manager.statistics.reports.currentMonth">Mês actual</message>
+	<message key="manager.statistics.reports.orderBy">Ordenar por</message>
+	<message key="manager.statistics.reports.orderDir">Direcção</message>
+	<message key="manager.statistics.reports.orderDir.asc">Ascendente</message>
+	<message key="manager.statistics.reports.orderDir.desc">Descendente</message>
+	<message key="manager.statistics.reports.month.label">Usar o formato YYYYMM</message>
+	<message key="manager.statistics.reports.day.label">Usar o formato YYYYMMDD</message>
+	<message key="manager.statistics.reports.cities.label">Um ou mais nomes  de cidades, separados por vírgulas (e.g. Nome Cidade 1,Nome Cidade 2)</message>
+	<message key="manager.statistics.reports.form.columnsRequired">Tem de seleccionar pelo menos uma coluna para gerar o relatório.</message>
+	<message key="manager.statistics.reports.reportUrl">Reportar URL</message>
+	<message key="manager.statistics.reports.reportUrl.label">O URL seguinte pode ser usado para gerar o relatório através das configurações do actual formulário. Copie e cole no navegador e clique ENTER. Pode usar os seus favoritos para guardar o seu gerador URL de relatório personalizado.</message>
+	<message key="manager.statistics.reports.filters.byContext">Por contexto</message>
+	<message key="manager.statistics.reports.filters.byContext.description">Restringir resultados por contexto (número e/ou artigo)</message>
+	<message key="manager.statistics.reports.filters.byObject">Por tipo objecto e/ou ID de objecto</message>
+	<message key="manager.statistics.reports.filters.byObject.description">Restringir resultados por tipo de objecto (revista, número, artigo, pdf galles, outros galleys) e /ou por um mais IDs de objectos.</message>
+	<message key="manager.statistics.reports.filters.byTime">Seleccione um intervalo do relatório</message>
+	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">Ou seleccione intervalo por:</message>
+	<message key="manager.statistics.reports.filters.byLocation">Por geo-localização</message>
+	<message key="manager.statistics.reports.filters.byLocation.description">Restringir resultados por país, região e/ou cidade.</message>
+	<message key="manager.subscriptions.form.dateRemindedBefore">Enviado Lembrete de Pré-Expiração</message>
+	<message key="manager.subscriptions.form.dateRemindedAfter">Enviado Lembrete de Pós-Expiração</message>
+	<message key="manager.setup.categories">Categorias</message>
+	<message key="manager.setup.categories.description">Seleccionar as categorias mais adequadas da lista exibida em cima. Os leitores poderão procurar por categoria a partir da configuração concluída da revista.</message>
+	<message key="manager.setup.confirmResetLicenseChanged">Alterou as informações sobre licença e direitos de autor em Setup Journal. Por favor, guarde estas alterações antes de redefinir as permissões.</message>
+	<message key="manager.setup.copyrightYearBasis">Definir ano de copyright do artigo</message>
+	<message key="manager.setup.copyrightYearBasis.Article">Ano padrão será definido a partir da data da publicação do artigo, tal como em "publicar-as-you-go".</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">Ano padrão será definido a partir da data de publicação do número.</message>
+	<message key="manager.statistics.reports.objectNotFound">Não foi encontrado o objecto na base de dados.</message>
+	<message key="manager.setup.emailHeader">Cabeçalho do e-mail</message>
+	<message key="manager.setup.emailHeaderDescription">Os emails automáticos enviados pelo sistema em nome da revista começa com o seguinte cabeçalho. Estes emails serão dirigidos ao Contacto Principal, assim é importante clarificar que o Contacto Principal não é necessariamente o responsável pelo conteúdo da mensagem, a qual poderá ser enviada em nome de outra pessoa.</message>
 </locale>

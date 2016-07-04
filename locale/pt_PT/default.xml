@@ -4,14 +4,14 @@
 <!--
   * locale/pt_PT/default.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_PT (Português (Portugal)) locale (default journal settings).
   *
   -->
- 
+
 <locale name="pt_PT" full_name="Português (Portugal)">
 	<!-- Section default -->
 	<message key="section.default.title">Artigos</message>
@@ -27,6 +27,7 @@
 	<message key="default.journalSettings.checklist.fileFormat">Os ficheiros para submissão encontram-se em formato Microsoft Word, OpenOffice ou RTF (desde que não ultrapassem 2MB)</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">O texto está em espaço duplo; usa uma fonte de 12-pontos; emprega itálico em vez de sublinhado (excepto em endereços URL); as figuras e tabelas estão inseridas no texto, não no final do documento na forma de anexos.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[O texto segue os padrões de estilo e requisitos bibliográficos descritos em <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Instruções para Autores</a>, na secção Sobre a Revista.]]></message>
+	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Em caso de submissão a uma secção com revisão por pares (ex.: artigos), as instruções disponíveis em <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Assegurando a Revisão Cega por Pares</a> foram seguidas.]]></message>
 	<message key="default.journalSettings.privacyStatement">Os nomes e endereços fornecidos nesta revista serão usados exclusivamente para os serviços prestados por esta publicação, não sendo disponibilizados para outras finalidades ou a terceiros.</message>
 	<message key="default.journalSettings.openAccessPolicy">Esta revista oferece acesso livre imediato ao seu conteúdo, seguindo o princípio de que disponibilizar gratuitamente o conhecimento científico ao público proporciona maior democratização mundial do conhecimento.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">Esta revista permite e encoraja os autores a submeterem artigos para a revista ou repositórios institucionais, antes e após a publicação (sempre oferecendo uma indexação detalhada do artigo).</message>
@@ -62,11 +63,11 @@ Siga o seguinte protocolo para fazer revisões electrónicas no seu manuscrito:
 <strong>Respondendo a Dúvidas ao Autor (QAs)</strong>
    Mantenha todas as QAs intactas e em negrito dentro do texto. Não as remova.
    Para responder a uma QA, insira um comentário após a dúvida. Delimite comentários da seguinte forma:
-<strong>[Comentário: ]</strong> 
+<strong>[Comentário: ]</strong>
   Ex.: <strong>[Comentário: Maior desenvolvimento da discussão da metodologia, como sugerido]</strong>
 
 <strong>Incluindo Comentários</strong>
-   Use comentários para explicar alterações organizacionais ou revisões mais importantes 
+   Use comentários para explicar alterações organizacionais ou revisões mais importantes
   Ex.: <strong>[Comentário: Parágrafo acima movido da p. 5 para a p. 7]</strong>
   Aviso: Ao se referir a numeração de páginas, use a numeração da cópia impressa enviada, pois a numeração pode ser alterada nas revisões eletrónicas.
 
@@ -87,13 +88,13 @@ Após o término das suas revisões, renomeie o arquivo de NomedoAutorQA.doc par
 
 <strong>Avisos:</strong>
 • Texto simples indica aceitação de alterações sugeridas à primeira frase
-• Frase inserida em resposta a QA. Texto em negrito indica inserção 
+• Frase inserida em resposta a QA. Texto em negrito indica inserção
 • [deleted word] indica remoção de "completamente"
 • Comentário contém a resposta às QAs dos editores]]></message>
 
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
-</message>
+	<message key="default.journalSettings.emailSignature">________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Convidamos os leitores a se registarem no serviço de notificação de publicação da revista. Clique em <a href="{$indexUrl}/{$journalPath}/user/register">Registo</a> no menu superior da página. O registo permitirá ao leitor receber o Sumário via e-mail a cada nova edição. A lista procura também reivnidicar um nível básico de apoio ou de leitura. Leia a <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Política de Privacidade</a> da revista, que assegura aos leitores que os nomes e endereços fornecidos não serão utilizados para outros fins.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Deseja enviar contribuições à revista? Convidamos todos a conferir a secção <a href="{$indexUrl}/{$journalPath}/about">Sobre a Revista</a> e ler as políticas de secção, bem como as <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Instruções para Autores</a>. É necessário que os autores se <a href="{$indexUrl}/{$journalPath}/user/register">registem</a> no sistema antes de submeter um artigo; caso já tenha se registado basta <a href="{$indexUrl}/{$journalPath}/login">aceder</a> ao sistema e iniciar o processo de 5 passos de submissão.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Convidamos as bibliotecas a listar revistas de Acesso Livre nos seus catálogos de revistas electrónicas. Este sistema de publicação é desenvolvido também para ser hospedado e operado por bibliotecas de pesquisa em apoio ao trabalho de publicação de revistas de corpo académico. Para mais informações sobre o Open Journal Systems - OJS, e a administração e publicação de revistas revistas por pares visite o <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
@@ -160,4 +161,8 @@ O parágrafo iniciado em "Este último elemento..." não está recuado.</pre>]]>
 	<message key="default.journalSettings.purchaseArticleFee">Adquirir artigo</message>
 	<message key="default.journalSettings.membershipFee">Registo em Entidade de Classe</message>
 	<message key="default.journalSettings.donationFee">Doações à revista</message>
+	<message key="default.journalSettings.purchaseIssueFee">Comprar Número</message>
+	<message key="default.journalSettings.purchaseIssueFeeDescription">O pagamento deste montante permite ver, descarregar e imprimir o número.</message>
+	<message key="default.journalSettings.emailHeader">A seguinte mensagem foi enviada em nome de {$journalName}.
+________________________________________________________________________</message>
 </locale>

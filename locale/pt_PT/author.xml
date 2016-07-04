@@ -4,7 +4,7 @@
 <!--
   * locale/pt_PT/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="pt_PT" full_name = "Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="author.submit">Nova submissão</message>
 	<message key="author.track">Submissões activas</message>
 	<message key="author.competingInterests"><![CDATA[<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Política  de Conflito de Interesses</a>]]></message>
@@ -26,11 +26,11 @@
 	<message key="author.submit.step4">Passo 4. Transferência de documentos suplementares</message>
 	<message key="author.submit.step4a">Passo 4a. Incluir documento suplementar</message>
 	<message key="author.submit.step5">Passo 5. Confirmação da submissão</message>
-	<message key="author.submit.start">Início</message>
-	<message key="author.submit.upload">Transferência do manuscrito</message>
-	<message key="author.submit.metadata">Inclusão de metadados</message>
-	<message key="author.submit.supplementaryFiles">Transferência de documentos suplementares</message>
-	<message key="author.submit.confirmation">Confirmação</message>
+	<message key="author.submit.start">1. Início</message>
+	<message key="author.submit.upload">2. Transferência do manuscrito</message>
+	<message key="author.submit.metadata">3. Inclusão de metadados</message>
+	<message key="author.submit.supplementaryFiles">4. Transferência de documentos suplementares</message>
+	<message key="author.submit.confirmation">5. Confirmação</message>
 	<message key="author.submit.cancelSubmission">A submissão pode ser concluída numa data posterior, clicando em Submissões Activas nas opções da página do Autor.</message>
 	<message key="author.submit.notAccepting">Neste momento esta revista não aceita submissões.</message>
 	<message key="author.submit.requestWaiver">Solicitar isenção de taxas</message>
@@ -45,22 +45,23 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Em caso de dificuldades com o processo, entre em contacto com <a href="mailto:{$supportEmail}">{$supportName}</a> via e-mail para suporte.]]></message>
 	<message key="author.submit.journalSection">Secção</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Escolha a secção apropriada para a submissão (leia Secções e Políticas em <a href="{$aboutUrl}">Sobre</a> a revista).]]></message>
-	<message key="submission.submit.selectSection">Escolha uma secção...</message>
-	<message key="submission.submit.submissionChecklist">Condições para submissão</message>
-	<message key="submission.submit.submissionChecklistDescription">Confirme que a submissão está em conformidade com as condições seguintes, marcando as caixas de selecção, para prosseguir ao Passo 2 do processo.</message>
+	<message key="author.submit.selectSection">Escolha uma secção...</message>
+	<message key="author.submit.submissionChecklist">Condições para submissão</message>
+	<message key="author.submit.submissionChecklistDescription">Confirme que a submissão está em conformidade com as condições seguintes, marcando as caixas de selecção, para prosseguir ao Passo 2 do processo.</message>
 	<message key="author.submit.verifyChecklist">Todas as condições devem ser satisfeitas antes de continuar</message>
 	<message key="author.submit.copyrightNoticeAgree">Os autores concordam com os termos da Declaração de Direitos de Autor, que se aplicará a esta submissão caso seja publicada nesta revista (comentários ao editor podem ser incluídos a seguir).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">É obrigatório aceitar a Declaração de Direitos de Autor para continuar!</message>
-	<message key="submission.submit.coverNote">Comentários ao Editor</message>
+	<message key="author.submit.commentsForEditor">Comentários ao Editor</message>
 	<message key="author.submit.comments">Insira o texto (opcional)</message>
 	<message key="author.submit.form.sectionRequired">Escolha a secção apropriada para a submissão.</message>
-	<message key="submission.submit.privacyStatement">Política de Privacidade</message>
+	<message key="author.submit.privacyStatement">Política de Privacidade</message>
 	<message key="author.submit.reorderInstructions">Utilize as setas para alterar a ordem pela qual aparecerão os nomes dos autores na publicação.</message>
 	<message key="author.submit.selectPrincipalContact">Contacto principal para correspondência.</message>
 	<message key="author.submit.addAuthor">Adicionar autor</message>
 	<message key="author.submit.deleteAuthor">Eliminar autor</message>
 	<message key="author.submit.submissionIndexingDescription">Insira os termos que descrevam da melhor maneira o conteúdo da submissão, segundo as categorias utilizadas pela revista e os exemplos oferecidos pelo editor. Separe os termos com ponto-e-vírgula (termo1; termo2; termo3).</message>
 	<message key="author.submit.coverageInstructions">Refere-se à localização ou cobertura geográfica, cronológica ou histórica, e/ou às características de amostragem da pesquisa.</message>
+	<message key="author.submit.subjectClassInstructions">Use o sistema de classificação definido para escolher termos específicos da área do conhecimento e numeração se apropriado.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Português=pt; English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Códigos Adicionais</a>.]]></message>
 	<message key="author.submit.form.authorRequired">A submissão deve ter pelo menos um autor.</message>
 	<message key="author.submit.form.authorRequiredFields">São campos obrigatórios o nome, apelido e e-mail para cada autor.</message>
@@ -124,4 +125,6 @@
 	<message key="author.submit.submissionLocale">Idioma de Submissão</message>
 	<message key="author.submit.submissionLocaleDescription">A revista aceita submissões em vários idiomas. Escolha o principal idioma de submissão a partir do botão em baixo.</message>
 	<message key="author.submit.form.localeRequired">Seleccione o idioma de submissão</message>
+	<message key="author.submit.submissionSupportingAgencies">Entidades Financiadoras</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Identificar as entidades (uma pessoa, uma organização ou um serviço) que contribuiram para o conteúdo ou financiaram ou apoiaram o trabalho submetido. Separe-os com um ponto e vírgula (por exemplo, José Castro Silva, ISPA-Instituto Universitário; Departamento de Psicologia da Educação).</message>
 </locale>
