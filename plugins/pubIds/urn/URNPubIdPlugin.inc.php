@@ -22,15 +22,6 @@ class URNPubIdPlugin extends PubIdPlugin {
 	// Implement template methods from Plugin.
 	//
 	/**
-	 * @copydoc PubIdPlugin::register()
-	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
-		$this->addLocaleData();
-		return $success;
-	}
-
-	/**
 	 * @copydoc Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
@@ -94,8 +85,8 @@ class URNPubIdPlugin extends PubIdPlugin {
 	/**
 	 * @copydoc PKPPubIdPlugin::getResolvingURL()
 	 */
-	function getResolvingURL($journalId, $pubId) {
-		$resolverURL = $this->getSetting($journalId, 'urnResolver');
+	function getResolvingURL($contextId, $pubId) {
+		$resolverURL = $this->getSetting($contextId, 'urnResolver');
 		return $resolverURL . $pubId;
 	}
 
@@ -198,7 +189,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 	function getSuffixPatternsFieldNames() {
 		return  array(
 			'Issue' => 'urnIssueSuffixPattern',
-			'Article' => 'urnArticleSuffixPattern',
+			'Submission' => 'urnSubmissionSuffixPattern',
 			'Representation' => 'urnRepresentationSuffixPattern',
 		);
 	}

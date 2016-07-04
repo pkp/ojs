@@ -22,7 +22,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Please choose the objects DOIs should be assigned to.</message>
 	<message key="plugins.pubIds.doi.manager.settings.explainDois">Please select the publishing objects that will have Digital Object Identifiers (DOI) assigned:</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Issues</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Articles</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableSubmissionDoi">Articles</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">Galleys</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">DOI Prefix</message>
@@ -34,13 +34,13 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Use the pattern entered below to generate DOI suffixes. Use %j for journal initials, %v for the volume number, %i for the issue number, %Y for the year, %a for the OJS article ID, %g for the OJS galley ID, %f for the OJS file ID, %p for the page number and %x for "Custom Identifier".</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">For example, vol%viss%ipp%p could create a DOI such as 10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">for issues</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">for articles</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions">for articles</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations">for galleys</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Use default patterns.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i for issues<br />%j.v%vi%i.%a for articles<br />%j.v%vi%i.%a.g%g for galleys.]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Enter an individual DOI suffix for each published item. You'll find an additional DOI input field on each item's meta-data page.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Please enter the DOI suffix pattern for issues.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Please enter the DOI suffix pattern for articles.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired">Please enter the DOI suffix pattern for articles.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired">Please enter the DOI suffix pattern for galleys.</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Reassign DOIs</message>
@@ -51,7 +51,7 @@
 	<!-- metadata form -->
 	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">issue</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">article</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmission">article</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeRepresentation">galley</message>
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">What you see is a preview of the DOI that may be incomplete. A DOI has not yet been generated.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">The given DOI suffix is already in use for another published item. Please enter a unique DOI suffix for each item.</message>

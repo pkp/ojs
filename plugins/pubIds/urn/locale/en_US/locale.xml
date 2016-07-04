@@ -22,7 +22,7 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnObjectsRequired">Please choose the objects URNs should be assigned to.</message>
 	<message key="plugins.pubIds.urn.manager.settings.explainURNs">Please select the publishing objects that will have Uniform Resource Names (URN) assigned:</message>
 	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">Issues</message>
-	<message key="plugins.pubIds.urn.manager.settings.enableArticleURN">Articles</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableSubmissionURN">Articles</message>
 	<message key="plugins.pubIds.urn.manager.settings.enableRepresentationURN">Galleys</message>
 
 	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">URN Prefix</message>
@@ -34,10 +34,10 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern">Use the pattern entered below to generate URN suffixes. Use %j for journal initials, %v for the volume number, %i for the issue number, %Y for the year, %a for the OJS article ID, %g for the OJS galley ID, %f for the OJS file ID, %p for the page number and %x for "Custom Identifier".</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.example">For example, vol%viss%ipp%p could create the URN suffix "vol3iss2pp230".</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues">for issues</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.articles">for articles</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions">for articles</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations">for galleys</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired">Please enter the URN suffix pattern for issues.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnArticleSuffixPatternRequired">Please enter the URN suffix pattern for articles.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired">Please enter the URN suffix pattern for articles.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired">Please enter the URN suffix pattern for galleys.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault">Use default patterns.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"><![CDATA[%j.v%vi%i for issues<br />%j.v%vi%i.%a for articles<br />%j.v%vi%i.%a.g%g for galleys.]]></message>
@@ -58,7 +58,7 @@
 	<!-- metadata form -->
 	<message key="plugins.pubIds.urn.editor.urn">URN</message>
 	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">issue</message>
-	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">article</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSubmission">article</message>
 	<message key="plugins.pubIds.urn.editor.urnObjectTypeRepresentation">galley</message>
 	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">What you see is a preview of the URN that may be incomplete. A URN has not yet been generated.</message>
 	<message key="plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique">The given URN suffix is already in use for another published item. Please enter a unique URN suffix for each item.</message>

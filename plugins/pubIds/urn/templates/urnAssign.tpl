@@ -9,7 +9,7 @@
  *}
 
 {assign var=pubObjectType value=$pubIdPlugin->getPubObjectType($pubObject)}
-{assign var=enableObjectURN value=$pubIdPlugin->getSetting($currentJournal->getId(), "enable`$pubObjectType`URN")}
+{assign var=enableObjectURN value=$pubIdPlugin->getSetting($currentContext->getId(), "enable`$pubObjectType`URN")}
 {if $enableObjectURN}
 	{if $pubObject->getStoredPubId($pubIdPlugin->getPubIdType())}
 		{fbvFormSection}

@@ -22,15 +22,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	// Implement template methods from Plugin.
 	//
 	/**
-	 * @copydoc Plugin::register()
-	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
-		$this->addLocaleData();
-		return $success;
-	}
-
-	/**
 	 * @copydoc Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
@@ -87,7 +78,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	/**
 	 * @copydoc PKPPubIdPlugin::getResolvingURL()
 	 */
-	function getResolvingURL($journalId, $pubId) {
+	function getResolvingURL($contextId, $pubId) {
 		return 'http://dx.doi.org/'.$this->_doiURLEncode($pubId);
 	}
 
@@ -190,7 +181,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	function getSuffixPatternsFieldNames() {
 		return  array(
 			'Issue' => 'doiIssueSuffixPattern',
-			'Article' => 'doiArticleSuffixPattern',
+			'Submission' => 'doiSubmissionSuffixPattern',
 			'Representation' => 'doiRepresentationSuffixPattern'
 		);
 	}
