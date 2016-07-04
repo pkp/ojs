@@ -23,7 +23,7 @@
 	<message key="admin.languages.confirmUninstall">您确认卸载这个语言环境?这个将影响使用该语言环境的主办期刊.</message>
 	<message key="admin.languages.installNewLocalesInstructions">安装额外的地区配置以在这个系统取得语言支持。地区配置必须先安装，系统上的期刊才能使用该地区语言。请参考OJS文件以取得关于增加语言支持的信息。</message>
 	<message key="admin.languages.downloadFailed">语言环境下载失败.错误提示信息描述如下.</message>
-	<message key="admin.languages.localeInstalled">语言环境 "{$locale}" 已经被安装. </message>
+	<message key="admin.languages.localeInstalled">语言环境 "{$locale}" 已经被安装.</message>
 	<message key="admin.languages.download">下载语言环境</message>
 	<message key="admin.languages.download.cannotOpen">无法从PKP网站打开语言描述.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">无法添加一个新的语言环境到注册文件"registry/locales.xml".</message>

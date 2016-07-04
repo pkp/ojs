@@ -103,7 +103,7 @@
 	<message key="manager.section.submissionsToThisSection">期刊的这个栏目有人投稿</message>
 	<message key="manager.sections.unassigned">可供选择的栏目编辑</message>
 	<message key="manager.sections.wordCount">字数</message>
-	<message key="manager.sections.wordCountInstructions">限制本栏目的字符数(0为不限制): </message>
+	<message key="manager.sections.wordCountInstructions">限制本栏目的字符数(0为不限制):</message>
 	<message key="manager.setup">配置</message>
 	<message key="manager.setup.aboutItemContent">内容</message>
 	<message key="manager.setup.addAboutItem">增加说明项目</message>
@@ -119,7 +119,7 @@
 	<message key="manager.setup.announcementsDescription">可以发布公告以通知期刊的读者关于期刊的新闻稿以及活动。已发布的公告会出现在「公告」页面。</message>
 	<message key="manager.setup.announcementsIntroduction">额外的信息</message>
 	<message key="manager.setup.announcementsIntroductionDescription">输入在公告网页上要给读者看到的额外的信息</message>
-	<message key="manager.setup.appearInAboutJournal">(将在「期刊介绍」中出现) </message>
+	<message key="manager.setup.appearInAboutJournal">(将在「期刊介绍」中出现)</message>
 	<message key="manager.setup.competingInterests.requireAuthors">要求投稿作者提供一个利益冲突（CI）的文字声明。</message>
 	<message key="manager.setup.competingInterests.requireReviewers">要求审稿人在每次提交同行评议的审稿的时候，提交一个利益冲突（CI）声明。</message>
 	<message key="manager.setup.history">期刊历史</message>
