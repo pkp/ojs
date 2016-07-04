@@ -198,7 +198,7 @@
 	<message key="journal.currentIssue">Número actual</message>
 	<message key="journal.journals">Revistas</message>
 	<message key="journal.path">Ruta</message>
-	<message key="journal.journal">Revista</message>
+	<message key="context.context">Revista</message>
 	<message key="journal.issn">ISSN</message>
 
 	<!-- User -->

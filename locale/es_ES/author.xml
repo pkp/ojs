@@ -26,11 +26,11 @@
 	<message key="author.submit.step4">Paso 4. Cargar los archivos complementarios</message>
 	<message key="author.submit.step4a">Paso 4a. Añadir un archivo complementario</message>
 	<message key="author.submit.step5">Paso 5. Confirmar el envío</message>
-	<message key="author.submit.start">1. Inicio</message>
-	<message key="author.submit.upload">2. Cargar el envío</message>
-	<message key="author.submit.metadata">3. Introducir los metadatos</message>
-	<message key="author.submit.supplementaryFiles">4. Cargar los archivos complementarios</message>
-	<message key="author.submit.confirmation">5. Confirmación</message>
+	<message key="author.submit.start">Inicio</message>
+	<message key="author.submit.upload">Cargar el envío</message>
+	<message key="author.submit.metadata">Introducir los metadatos</message>
+	<message key="author.submit.supplementaryFiles">Cargar los archivos complementarios</message>
+	<message key="author.submit.confirmation">Confirmación</message>
 	<message key="author.submit.cancelSubmission">Puede completar este envío en otro momento seleccionando Envíos activos desde la página de inicio del autor/a.</message>
 	<message key="author.submit.notAccepting">La revista no acepta envíos en este momento.</message>
 	<message key="author.submit.requestWaiver">Solicitud de exención de cuotas</message>
@@ -50,19 +50,19 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[¿Necesita ayuda? Póngase en contacto con <a href="mailto:{$supportEmail}">{$supportName}</a> para recibir asistencia.]]></message>
 	<message key="author.submit.journalSection">Sección de la revista</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Seleccione la sección adecuada para el envío (ver Secciones y Política en <a href="{$aboutUrl}" target="_new">Acerca de</a> la revista).]]></message>
-	<message key="author.submit.selectSection">Seleccione una sección...</message>
+	<message key="submission.submit.selectSection">Seleccione una sección...</message>
 	<message key="author.submit.submissionLocale">Idioma del envío</message>
 	<message key="author.submit.submissionLocaleDescription">Esta revista acepta envíos en varios idiomas. Elija el idioma principal del envío en el menú desplegable.</message>
 	<message key="author.submit.submissionChecklist">Lista de comprobación del envío</message>
-	<message key="author.submit.submissionChecklistDescription">Marque los siguientes elementos para indicar que este envío está preparado para que la revista lo examine (más abajo se pueden añadir comentarios al editor/a).</message>
+	<message key="submission.submit.submissionChecklistDescription">Marque los siguientes elementos para indicar que este envío está preparado para que la revista lo examine (más abajo se pueden añadir comentarios al editor/a).</message>
 	<message key="author.submit.verifyChecklist">Antes de continuar, debe asegurarse de que se cumplen todos los requisitos de la lista de comprobación.</message>
 	<message key="author.submit.copyrightNoticeAgree">Los autores/as se comprometen a aceptar las condiciones de este aviso de derechos de autor/a, que se aplicarán a este envío siempre y cuando se publique en esta revista (más abajo se pueden añadir comentarios al editor/a).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Debe aceptar las condiciones del aviso de derechos de autor/a antes de continuar.</message>
-	<message key="author.submit.commentsForEditor">Comentarios para el editor/a</message>
+	<message key="submission.submit.coverNote">Comentarios para el editor/a</message>
 	<message key="author.submit.comments">Introduzca texto (opcional)</message>
 	<message key="author.submit.form.sectionRequired">Seleccione la sección adecuada de la revista para este envío.</message>
 	<message key="author.submit.form.localeRequired">Seleccione el idioma del envío.</message>
-	<message key="author.submit.privacyStatement">Declaración de privacidad de la revista</message>
+	<message key="submission.submit.privacyStatement">Declaración de privacidad de la revista</message>
 	<message key="author.submit.reorderInstructions">Reordenar a los autores/as para que aparezcan en el orden en el que serán enumerados en la publicación.</message>
 	<message key="author.submit.reorder">Reordenar el nombre del autor/a</message>
 	<message key="author.submit.selectPrincipalContact">Contacto principal para la correspondencia editorial.</message>
