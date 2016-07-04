@@ -165,7 +165,7 @@
 	<message key="journal.currentIssue">Nyeste nummer</message>
 	<message key="journal.journals">Tidsskrifter</message>
 	<message key="journal.path">Sti</message>
-	<message key="journal.journal">Tidsskrift</message>
+	<message key="context.context">Tidsskrift</message>
 
 	<!-- User -->
 	<message key="user.showAllJournals">Vis mine tidsskrifter</message>
