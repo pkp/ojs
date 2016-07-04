@@ -85,9 +85,7 @@
 	<message key="editor.issues.noLiveIssues">処理中の巻号はありません</message>
 	<message key="editor.issues.open">オープン</message>
 	<message key="editor.issues.pages">ページ</message>
-	<message key="editor.navigation.issues">巻号</message>
 	<message key="editor.navigation.futureIssues">出版予定号</message>
-	<message key="editor.navigation.createIssue">巻号作成</message>
 	<message key="editor.navigation.issueArchive">バックナンバー</message>
 	<message key="editor.article.designateReviewVersion">査読版としてオリジナルファイルを指定</message>
 	<message key="editor.article.uploadReviewVersion">改訂済み査読版のアップロード</message>
@@ -171,10 +169,6 @@
 	<message key="editor.article.scheduleForPublication">出版スケジュール</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">指定予定</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">出版料金が支払われていません。アイテムを出版スケジュールに載せるためには、料金を支払うよう著者に通知するか出版料金を免除してください。</message>
-	<message key="editor.article.reviewForms">査読フォーム</message>
-	<message key="editor.article.selectReviewForm">査読フォームの選択</message>
-	<message key="editor.article.clearReviewForm">査読フォームのクリア</message>
-	<message key="editor.article.confirmChangeReviewForm">査読フォームの変更はレスポンスを削除します</message>
 	<message key="editor.allEditors">全編集者</message>
 	<message key="editor.me">自分</message>
 	<message key="editor.issues.coverPageDisplay">表示</message>

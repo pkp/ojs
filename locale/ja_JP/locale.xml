@@ -38,8 +38,7 @@
   <!-- Common Error Messages -->
   <!-- Navigation -->
   <message key="navigation.journalHelp">ヘルプ</message>
-  <message key="navigation.archives">アーカイブ</message>
-  <message key="navigation.current">最新号</message>
+   <message key="navigation.current">最新号</message>
   <message key="navigation.otherJournals">その他の雑誌</message>
   <message key="navigation.browseByIssue">巻号によるブラウズ</message>
   <message key="navigation.browseByAuthor">著者によるブラウズ</message>
@@ -85,13 +84,9 @@
   <message key="article.suppFiles">補足ファイル</message>
   <message key="article.suppFilesAbbrev">補足ファイル</message>
   <message key="article.discipline">学術分野</message>
-  <message key="article.subjectClassification">主題分類</message>
-  <message key="article.subject">キーワード</message>
+   <message key="article.subject">キーワード</message>
   <message key="article.coverage">範囲</message>
-  <message key="article.coverageGeo">地理空間的範囲</message>
-  <message key="article.coverageChron">時代･歴史的範囲</message>
-  <message key="article.coverageSample">研究資料の特徴</message>
-  <message key="article.type">種類、方法またはアプローチ</message>
+     <message key="article.type">種類、方法またはアプローチ</message>
   <message key="article.language">言語</message>
   <message key="article.sectionEditor">SE</message>
   <message key="article.commentsToEditor">編集者へのコメント</message>
@@ -150,21 +145,10 @@
   <message key="user.myJournals">マイ・ジャーナル</message>
   <!-- Roles -->
   <message key="user.role.manager">雑誌管理者</message>
-  <message key="user.role.editor">編集者</message>
-  <message key="user.role.sectionEditor">セクションエディタ</message>
-  <message key="user.role.layoutEditor">レイアウトエディタ</message>
-  <message key="user.role.copyeditor">コピーエディタ</message>
-  <message key="user.role.proofreader">校正者</message>
-  <message key="user.role.author">著者</message>
-  <message key="user.role.subscriptionManager">購読管理者</message>
+   <message key="user.role.sectionEditor">セクションエディタ</message>
+      <message key="user.role.subscriptionManager">購読管理者</message>
   <message key="user.role.managers">雑誌管理者</message>
-  <message key="user.role.editors">編集者</message>
-  <message key="user.role.sectionEditors">セクションエディタ</message>
-  <message key="user.role.layoutEditors">レイアウトエディタ</message>
-  <message key="user.role.copyeditors">コピーエディタ</message>
-  <message key="user.role.proofreaders">校正者</message>
-  <message key="user.role.authors">著者</message>
-  <message key="user.role.subscriptionManagers">購読管理者</message>
+        <message key="user.role.subscriptionManagers">購読管理者</message>
   <!-- Common Issue Terms -->
   <message key="issue.issue">巻号</message>
   <message key="issue.issues">巻号</message>
@@ -188,8 +172,7 @@
   <message key="submission.event.logLevel.warning">Warning</message>
   <message key="submission.event.logLevel.error">Error</message>
   <message key="submission.event.general.defaultEvent">投稿イベント</message>
-  <message key="submission.event.general.articleSubmitted">投稿論文</message>
-  <message key="submission.event.general.issueScheduled">投稿物が巻号スケジューリングキューに送られた</message>
+   <message key="submission.event.general.issueScheduled">投稿物が巻号スケジューリングキューに送られた</message>
   <message key="submission.event.general.issueAssigned">投稿物が巻号に割り付けられた</message>
   <message key="submission.event.general.articlePublished">論文が出版された</message>
   <message key="submission.event.author.authorRevision">著者改訂版が投稿された</message>
@@ -453,16 +436,11 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="submission.comments.saveAndEmailAuthor">保存して著者にメール</message>
   <message key="submission.comments.saveAndEmailEditor">保存して編集者にメール</message>
   <!-- Login -->
-  <message key="user.login.registerNewAccount">登録はこちらから。</message>
-  <message key="user.login.resetPasswordInstructions"><![CDATA[セキュリティ上の理由により、本システムでは現行のパスワードをお知らせするのではなく、リセットするためのパスワードをお送りしています。<br /><br />パスワードをリセットするには、以下の記入欄にメールアドレスを入力してください。入力されたメールアドレスに確認メールを送信します。]]></message>
-  <!-- Profile -->
+    <!-- Profile -->
   <!-- Registration -->
-  <message key="user.register.selectJournal">登録する雑誌を選択してください</message>
-  <message key="user.register.noJournals">登録できる雑誌はありません。</message>
+   <message key="user.register.noJournals">登録できる雑誌はありません。</message>
   <message key="user.register.privacyStatement">個人情報の扱いについて</message>
-  <message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[既にこの雑誌またはこのサイトの別の雑誌に登録している場合は、<a href="{$registerUrl}">ここをクリック</a>してください。]]></message>
-  <message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[まだこのサイトの雑誌に登録して<strong>いない</strong>場合は、<a href="{$registerUrl}">ここをクリック</a>してください。]]></message>
-  <message key="user.register.loginToRegister">この雑誌に登録するには、ユーザ名とパスワードを入力してください。</message>
+    <message key="user.register.loginToRegister">この雑誌に登録するには、ユーザ名とパスワードを入力してください。</message>
   <message key="user.register.registrationDisabled">この雑誌は、現在、ユーザ登録を受付けていません。</message>
   <message key="user.register.form.passwordLengthTooShort">指定したパスワードは短すぎます。</message>
   <message key="user.register.readerDescription">この雑誌の新しい号が発行された場合、メールで連絡します。</message>
@@ -509,22 +487,15 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="archive.issueUnavailable">利用できない号</message>
   <!-- About The Journal -->
   <message key="about.statistics">統計</message>
-  <message key="about.journalContact">雑誌の連絡先</message>
-  <message key="about.aboutTheJournal">この雑誌について</message>
-  <message key="about.editorialTeam">編集委員会</message>
+    <message key="about.editorialTeam">編集委員会</message>
   <message key="about.editorialTeam.biography">人物紹介</message>
   <message key="about.editorialPolicies">編集ポリシー</message>
   <message key="about.focusAndScope">対象と範囲</message>
   <message key="about.sectionPolicies">セクションポリシー</message>
   <message key="about.submissions">投稿</message>
-  <message key="about.sponsors">スポンサー</message>
-  <message key="about.contributors">支援者</message>
-  <message key="about.onlineSubmissions">オンライン投稿</message>
-  <message key="about.onlineSubmissions.haveAccount">雑誌『{$journalTitle} 』用のユーザ名/パスワードを既に持っている　→</message>
-  <message key="about.onlineSubmissions.login">ログイン画面へ</message>
-  <message key="about.onlineSubmissions.needAccount">ユーザ名/パスワードを作成する　→</message>
-  <message key="about.onlineSubmissions.registration">ユーザ登録画面へ</message>
-  <message key="about.onlineSubmissions.registrationRequired">オンライン投稿および投稿物の状態の確認には、ユーザ登録してログインする必要があります。</message>
+    <message key="about.onlineSubmissions">オンライン投稿</message>
+   <message key="about.onlineSubmissions.login">ログイン画面へ</message>
+    <message key="about.onlineSubmissions.registrationRequired">オンライン投稿および投稿物の状態の確認には、ユーザ登録してログインする必要があります。</message>
   <message key="about.authorGuidelines">執筆要項</message>
   <message key="about.submissionPreparationChecklist">投稿前の確認リスト</message>
   <message key="about.submissionPreparationChecklist.description">投稿プロセスの1つとして、著者は投稿物が以下のすべての事項を満たしていることを確認する必要があります。これらのガイドラインに従っていないと投稿物は著者の元に返されます場合があります。</message>
@@ -541,8 +512,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="about.subscriptions">購読</message>
   <message key="about.subscriptionsContact">購読連絡先</message>
   <message key="about.availableSubscriptionTypes">購読種別</message>
-  <message key="about.journalSponsorship">雑誌スポンサー</message>
-  <message key="about.aboutThisPublishingSystem">この出版システムについて</message>
+   <message key="about.aboutThisPublishingSystem">この出版システムについて</message>
   <message key="about.aboutOJSJournal"><![CDATA[この雑誌は、オープン･ジャーナル･システム {$ojsVersion} を使用しています。OJSは、<a href="http://pkp.sfu.ca/">Public Knowledge Project</a>により開発・サポートされ、GNU一般公衆利用許諾契約書の下に自由に配布されているオープンソースの雑誌管理・出版ソフトウェアです。]]></message>
   <message key="about.aboutOJSSite"><![CDATA[このサイトは、オープン･ジャーナル･システム {$ojsVersion} を使用しています。OJSは、<a href="http://pkp.sfu.ca/">Public Knowledge Project</a>により開発・サポートされ、GNU一般公衆利用許諾契約書の下に自由に配布されているオープンソースの雑誌管理・出版ソフトウェアです。]]></message>
   <!-- Announcement -->
@@ -617,8 +587,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <!-- Article Logs -->
   <message key="log.author.submitted">{$authorName}が新規投稿ID {$submissionId} を行った。</message>
   <message key="log.author.documentRevised">{$authorName}が論文 {$articleId} を改訂した。新しいファイルIDは {$fileId} である。</message>
-  <message key="log.review.reviewerAssigned">{$reviewerName}が投稿物 {$articleId} の{$round}回目の査読の査読者に任命された。</message>
-  <message key="log.review.reviewerUnassigned">{$reviewerName}が投稿物 {$articleId} の{$round}回目の査読の査読者を解除された。</message>
+   <message key="log.review.reviewerUnassigned">{$reviewerName}が投稿物 {$articleId} の{$round}回目の査読の査読者を解除された。</message>
   <message key="log.review.reviewInitiated">投稿物 {$articleId} の{$reviewerName}による{$round}回目の査読が開始された。</message>
   <message key="log.review.reviewReinitiated">投稿物 {$articleId} の{$reviewerName}による{$round}回目の査読が再開された。</message>
   <message key="log.review.reviewCancelled">投稿物 {$articleId} の{$reviewerName}による{$round}回目の査読が取り消された。</message>
@@ -648,8 +617,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="log.editor.archived">投稿物 {$articleId} がアーカイブされた。</message>
   <message key="log.editor.restored">投稿物 {$articleId} がキューに格納された。</message>
   <message key="log.editor.editorAssigned">{$editorName}が投稿物 {$articleId} の編集者に任命された。</message>
-  <message key="log.editor.submissionExpedited">{$editorName}が論文 {$articleId} の編集処理を早めた。</message>
-  <message key="log.proofread.assign">{$assignerName}が{$proofreaderName}を投稿物 {$articleId} の校正者に任命した。</message>
+   <message key="log.proofread.assign">{$assignerName}が{$proofreaderName}を投稿物 {$articleId} の校正者に任命した。</message>
   <message key="log.proofread.complete">{$proofreaderName}がスケジューリングのために {$articleId} を投稿した。</message>
   <message key="log.imported">{$userName}が論文 {$articleId}をインポートした。</message>
   <!-- Reading Tools entries -->
@@ -774,12 +742,8 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="rt.admin.settings.addComment.unauthenticated">コメントをつけるには、ユーザ登録の必要がない。匿名によるコメントを許可する。</message>
 	<message key="rt.metadata.pkp.doi">DOI</message>
 	<message key="debug.notes.currencyListLoad">XMLから通貨リスト"{$filename}" をロードしました。</message>
-	<message key="debug.notes.helpMappingLoad">{$id}を捜すためにXMLヘルプマッピングファイル{$filename} を再ロードしました。</message>
-	<message key="submission.reviewForm">査読フォーム</message>
-	<message key="submission.reviewFormResponse">査読フォームレスポンス</message>
 	<message key="reviewer.article.enterReviewForm">アイコンをクリックして、査読フォームに記入してください。</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">必須フィールドに記入してください。</message>
-	<message key="common.pageHeader.altText">ページヘッダー</message>
 	<message key="common.homePageHeader.altText">ホームページヘッダー</message>
 	<message key="common.journalHomepageImage.altText">雑誌ホームページ画像</message>
 	<message key="article.coverPage.altText">表紙画像</message>
@@ -805,14 +769,12 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="help.searchReturnResults">検索結果に戻る</message>
 	<message key="payment.type.purchaseArticle">論文購入料金</message>
 	<message key="journal.issn">ISSN</message>
-	<message key="plugins.categories.oaiMetadataFormats">OAIメタデータフォーマットプラグイン</message>
 	<message key="subscriptionTypes.format.online">オンライン</message>
 	<message key="subscriptionTypes.format.print">冊子</message>
 	<message key="subscriptionTypes.format.printOnline">冊子とオンライン</message>
 	<message key="notification.type.editing">編集イベント</message>
 	<message key="notification.type.galleyModified">"{$param}".</message>
 	<message key="notification.type.submissions">投稿イベント</message>
-	<message key="notification.type.suppFileModified">"{$param}" の補足ファイルが修正された</message>
 	<message key="notification.type.userComment">読者が "{$param}" にコメントした。</message>
 	<message key="subscriptions.individualDescription">個人購読では購読コンテンツにアクセスするためにはログインが必要です。</message>
 	<message key="subscriptions.institutionalDescription">機関購読ではログインは必要ありません。ユーザのドメインもしくはIPアドレス(またはその両方)によって購読コンテンツへのアクセスが提供されます。</message>
@@ -836,10 +798,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="user.subscriptions.form.deleteIpRange">削除</message>
 	<message key="user.subscriptions.form.addIpRange">追加</message>
 	<message key="notification.type.issuePublished">新しい巻号が出版された時</message>
-	<message key="notification.type.layoutComment">"{$param}" のレイアウトについてコメントがあった時</message>
-	<message key="notification.type.metadataModified">"{$param}" のメタデータが修正された時</message>
 	<message key="notification.type.newAnnouncement">新しいお知らせが作成された時</message>
-	<message key="notification.type.reviewerComment">査読者が "{$param}" にコメントした時</message>
 	<message key="notification.type.reviewerFormComment">"{$param}" についての査読が査読フォームから送信された時</message>
 	<message key="notification.type.reviewing">査読イベント</message>
 	<message key="notification.type.site">サイトイベント</message>
@@ -869,19 +828,15 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="user.subscriptions.form.typeIdValid">有効な購読種別を選択してください。</message>
 	<message key="user.subscriptions.form.domainIPRangeRequired">選択された購読種別は購読の認証のためのドメイン名とIPアドレス(の両方もしくは片方)が必要です。</message>
 	<message key="user.subscriptions.form.domainValid">有効なドメイン名を入力してください。</message>
-	<message key="notification.type.copyeditComment">コピーエディタが "{$param}" にコメントした時</message>
 	<message key="notification.type.editorDecisionComment">"{$param}" の編集者の判断についてコメントがあった時</message>
-	<message key="notification.type.proofreadComment">"{$param}" について校正者のコメントがあった時</message>
 	<message key="subscriptions.status.awaitingManualPayment">手作業による支払い待ち</message>
 	<message key="about.subscriptionTypes.format">フォーマット</message>
 	<message key="about.subscriptionTypes.duration">期間</message>
-	<message key="manager.setup.citations">著者それぞれに投稿プロセスの一部として参考文献（引用）についての整形されたリストを提出可能にする。</message>
 	<message key="about.history">雑誌の履歴</message>
 	<message key="manager.people.confirmDisable">このユーザを無効にしますか？この処理によってユーザはシステムにログインできなくなります。
 
 アカウントを無効にする理由をユーザに対して連絡したほうがよいかもしれません。</message>
 	<message key="user.subscriptions.mySubscriptions">マイ・購読情報</message>
-	<message key="manager.setup.reviewProcessEmailDescription">編集者は、投稿物をメールに添付して査読者に査読を依頼する。査読者は、査読の受諾（または謝絶）、査読コメントと審査結果をメールで編集者に通知する。編集者は、審査プロセスを記録するために、投稿物の審査ページで査読者の受諾（または謝絶）、査読コメントと審査結果を入力する。</message>
 	<message key="subscriptionTypes.months">ヶ月</message>
 	<message key="subscriptionTypes.nonExpiring">期間なし</message>
 	<message key="subscriptionTypes.format">フォーマット</message>
@@ -897,7 +852,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<li>"期限"は査読者が査読依頼を引き受けた際に入力されます。査読者の査読期限日または(-) 週数で表示されます。</li>
 </ol>]]></message>
 	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>注意:</strong> 機関のオンライン購読では購読のアクティベーションの前に提供されたドメイン名とIPアドレスの承認が必要です。]]></message>
-	<message key="plugins.categories.oaiMetadataFormats.description">これらのフォーマットプラグインはOAI通信でメタデータを送信します。</message>
 	<message key="user.subscriptions.form.membershipInstructions">選択した購読種別で必要な場合は会員情報</message>
 	<message key="user.subscriptions.form.domainInstructions"><![CDATA[ここでドメイン名を入力された場合は，IPアドレスの入力はオプションです。<br />有効なドメイン名 (例: lib.sfu.ca)]]></message>
 	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[ここでIPアドレスを入力された場合は，ドメイン名の入力はオプションです。<br />有効なIPアドレス値は次のようなものです。IPアドレス (例: 142.58.103.1), IPアドレス範囲 (例: 142.58.103.1 - 142.58.103.4), ワイルドカード '*' を使用したIPアドレス範囲 (例: 142.58.*.*), CIDR IPアドレス範囲 (例: 142.58.100.0/24)]]></message>
@@ -906,13 +860,11 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="user.subscriptions.subscriptionStatus">講読状態</message>
 	<message key="user.register.reviewerInterests">査読可能分野を定義 (研究テーマや研究手法)</message>
 	<message key="user.subscriptions.status.needsInformationDescription">講読をアクティベートする前に追加情報が必要です。</message>
-	<message key="article.pdf.download">このPDFをダウンロード</message>
 	<message key="user.subscriptions.status">状態</message>
 	<message key="user.subscriptions.statusDescription">備考</message>
 	<message key="user.subscriptions.status.needsApprovalDescription">講読がアクティベイトされる前に審査が必要です。</message>
 	<message key="payment.authorFees">投稿料</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">手作業による支払いは開始されましたが，まだ受け取っていません。</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">オンライン支払は開始されましたが，キャンセルあるいは完了していません。</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>使用しているWebブラウザにPDFリーダープラグイン（例えば、<a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a> の最新版）をインストールしていれば，選択したPDFファイルがここにロードされるはずです。</p><p>また，PDFファイルをダウンロードすることもできます。ダウンロードしたファイルもPDFリーダーを使って開くことができます。 ダウンロードする場合は下記のリンクをクリックしてください。</p><p>PDFファイルの印刷，保存．作成などについてさらに詳しく知りたい場合は，Highwire Pressが提供している <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a> が参考になります。</p>]]></message>
 	<message key="user.subscriptions.statusInformation">アクティベートあるいは有効期限切れの講読が有効期限順に下記に表示されます。また，次のようなステータス情報がそれぞれの講読ごとに表示される場合があります。</message>
 </locale>

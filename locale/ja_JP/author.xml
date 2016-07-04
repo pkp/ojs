@@ -45,7 +45,6 @@
 	<message key="author.submit.journalSection">雑誌セクション</message>
 	<message key="submission.submit.selectSection">セクションを選択してください。</message>
 	<message key="author.submit.submissionChecklist">投稿時のチェックリスト</message>
-	<message key="submission.submit.submissionChecklistDescription">この投稿物が、雑誌が必要とする以下の項目を満たしていることを確認して、チェックしてください。&lt;br/&gt;（このページの最後で編集者へのコメントを書くことができます。）</message>
 	<message key="author.submit.verifyChecklist">投稿を続けるには、投稿物がチェックリストの全項目を満たしていることが必要です。</message>
 	<message key="author.submit.copyrightNoticeAgree">私（たち）は、投稿物がこの雑誌で出版される際に適用される上記の著作権表示条件に同意します。&lt;br/&gt;（このページの最後で編集者へのコメントを書くことができます。）</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">投稿を続けるには、著作権表示条項に同意する必要があります。</message>
@@ -59,7 +58,6 @@
 	<message key="author.submit.deleteAuthor">著者の削除</message>
 	<message key="author.submit.submissionIndexingDescription">投稿物の索引語を入力してください。各索引語は（索引語1;索引語2;索引語3）のようにセミコロンで区切ってください。</message>
 	<message key="author.submit.coverageInstructions">地理空間的・年代的・歴史的範囲または研究材料の特性を示してください。</message>
-	<message key="author.submit.subjectClassInstructions">分類語または（可能であれば）分類標数の選択にはハイパーリンク分類システムを使用してください。</message>
 	<message key="author.submit.form.authorRequired">少なくとも1人の著者が必須です。</message>
 	<message key="author.submit.form.authorRequiredFields">各著者の姓名、メールアドレスは必須です。</message>
 	<message key="author.submit.form.titleRequired">論文のタイトルを入力してください。</message>
@@ -90,7 +88,6 @@
 	<message key="author.submit.suppFile.dataSet">データセット</message>
 	<message key="author.submit.suppFile.sourceText">ソーステキスト</message>
 	<message key="author.submit.suppFile.briefDescription">簡単な説明</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">貢献者または助成機関</message>
 	<message key="author.submit.suppFile.availableToPeers">ブラインド審査の条件に抵触しないので、査読者にファイルを（メタデータは付けずに）提供する。</message>
 	<message key="author.submit.suppFile.publisherDescription">正式に出版された資料に限る。</message>
 	<message key="author.submit.suppFile.dateDescription">データが収集された日付、または装置が作成された日付。</message>
@@ -121,7 +118,6 @@
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">追加コード</a>.]]></message>
 	<message key="author.submit.form.wordCountAlert">このセクションにおけるアブストラクトの最大文字数を超過しています。</message>
 	<message key="author.submit.reorder">著者名の並べ替え</message>
-	<message key="author.submit.expedite"><![CDATA[もしこの投稿が査読，編集，レイアウト作業なしで公開可能なフォーマットである場合は，<a href="{$expediteUrl}" class="action">ここをクリックすることで</a> 編集作業の最終段階に直接配置することができます。(注意: 雑誌編集者だけがこのオプションを選択する権限があります。)]]></message>
 	<message key="author.submit.submissionLocaleDescription">このジャーナルは複数の言語による投稿を受け付けています。下記のプルダウンより投稿言語を選択してください。</message>
 	<message key="author.submit.form.localeRequired">投稿言語を選択してください。</message>
 	<message key="author.submit.submissionLocale">投稿言語</message>
