@@ -112,7 +112,7 @@
 	<message key="manager.section.submissionsToThisSection">Статьи, поданные в этот раздел журнала</message>
 	<message key="manager.sections.unassigned">Свободные редакторы разделов</message>
 	<message key="manager.sections.wordCount">Количество слов</message>
-	<message key="manager.sections.wordCountInstructions">Ограничить количество слов в аннотации для этого раздела (0 — неограничено): </message>
+	<message key="manager.sections.wordCountInstructions">Ограничить количество слов в аннотации для этого раздела (0 — неограничено):</message>
 	<message key="manager.setup">Установка</message>
 	<message key="manager.setup.aboutItemContent">Контент</message>
 	<message key="manager.setup.addAboutItem">Добавить информацию о журнале</message>
@@ -128,7 +128,7 @@
 	<message key="manager.setup.announcementsDescription">Объявления могут быть опубликованы, чтобы проинформировать читателей о новостях и событиях журнала. Опубликованные объявления будут размещаться на странице «Объявления».</message>
 	<message key="manager.setup.announcementsIntroduction">Дополнительная информация</message>
 	<message key="manager.setup.announcementsIntroductionDescription">Введите дополнительную информацию, которая будет показана для читателей на странице «Объявления».</message>
-	<message key="manager.setup.appearInAboutJournal">(появится в разделе «О журнале») </message>
+	<message key="manager.setup.appearInAboutJournal">(появится в разделе «О журнале»)</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Требовать от авторов отправки файла с Декларацией о конфликте интересов при отправке рукописи статьи.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Требовать от рецензентов отправки файла с Декларацией о конфликте интересов с каждой рецензией, отправляемой ими.</message>
 	<message key="manager.setup.history">История журнала</message>
