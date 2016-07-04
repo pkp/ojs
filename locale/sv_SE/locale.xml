@@ -198,7 +198,7 @@
 	<message key="journal.currentIssue">Senaste numret</message>
 	<message key="journal.journals">Tidskrifter</message>
 	<message key="journal.path">Sökväg</message>
-	<message key="journal.journal">Tidskrift</message>
+	<message key="context.context">Tidskrift</message>
 
 	<!-- User -->
 	<message key="user.showAllJournals">Visa mina tidskrifter</message>

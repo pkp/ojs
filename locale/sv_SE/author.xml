@@ -26,11 +26,11 @@
 	<message key="author.submit.step4">Steg 4. Ladda upp eventuella komplementerande filer</message>
 	<message key="author.submit.step4a">Steg 4a. Lägg till en komplementerande fil</message>
 	<message key="author.submit.step5">Steg 5. Bekräfta manusinlämning</message>
-	<message key="author.submit.start">1. Starta</message>
+	<message key="author.submit.start">Starta</message>
 	<message key="author.submit.metadata">2. Ange Metadata</message>
 	<message key="author.submit.upload">3. Ladda upp manuskriptet</message>
-	<message key="author.submit.supplementaryFiles">4. Ladda upp komplementerande filer</message>
-	<message key="author.submit.confirmation">5. Bekräfta</message>
+	<message key="author.submit.supplementaryFiles">Ladda upp komplementerande filer</message>
+	<message key="author.submit.confirmation">Bekräfta</message>
 	<message key="author.submit.cancelSubmission">Du kan göra klart manusinlämningen vid ett senare tillfälle genom att välja Aktiva manuskript under Din Författarsida.</message>
 	<message key="author.submit.notAccepting">Den här tidskriften tar för tillfället inte emot några manuskript.</message>
 	<message key="author.submit.requestWaiver">Begär avsägelse</message>
@@ -45,16 +45,16 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Stöter du på problem? Kontakta <a href="mailto:{$supportEmail}">{$supportName}</a> för hjälp.]]></message>
 	<message key="author.submit.journalSection">Tidskriftssektion</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Välj lämplig sektion för det här manuskriptet (se Sektioner och Policies under <a href="{$aboutUrl}" target="_new">Om</a> Tidskriften).]]></message>
-	<message key="author.submit.selectSection">Vänligen välj en sektion...</message>
+	<message key="submission.submit.selectSection">Vänligen välj en sektion...</message>
 	<message key="author.submit.submissionChecklist">Checklista för manusinlämning</message>
-	<message key="author.submit.submissionChecklistDescription">Bekräftar att manuskriptet är klart för granskning i tidskriften genom att kryssa för följande (kommentarer till redaktören kan läggas till nedan).</message>
+	<message key="submission.submit.submissionChecklistDescription">Bekräftar att manuskriptet är klart för granskning i tidskriften genom att kryssa för följande (kommentarer till redaktören kan läggas till nedan).</message>
 	<message key="author.submit.verifyChecklist">Alla moment i Checklistan för manusinlämning måste vara genomförda och förkryssade innan du kan gå vidare.</message>
 	<message key="author.submit.copyrightNoticeAgree">Författarna samtycker till upphovsrättsvillkoren för manuskriptet om och när texten blir accepterad för publicering. (Kommentarer till redaktören kan lämnas nedan).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Du måste samtycka till upphovsrättsvillkoren innan du kan fortsätta.</message>
-	<message key="author.submit.commentsForEditor">Kommentarer till redaktören</message>
+	<message key="submission.submit.coverNote">Kommentarer till redaktören</message>
 	<message key="author.submit.comments">Skriv in text (frivilligt)</message>
 	<message key="author.submit.form.sectionRequired">Välj en lämplig tidskriftssektion för manuskriptet.</message>
-	<message key="author.submit.privacyStatement">Tidskriftens sekretesspolicy</message>
+	<message key="submission.submit.privacyStatement">Tidskriftens sekretesspolicy</message>
 	<message key="author.submit.reorderInstructions">Sortera författarna så att de hamnar i rätt ordning enligt publikationen.</message>
 	<message key="author.submit.selectPrincipalContact">Huvudkontakt för korrespondens med redaktören.</message>
 	<message key="author.submit.addAuthor">Lägg till författare</message>
