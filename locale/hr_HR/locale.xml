@@ -161,7 +161,7 @@
 	<message key="journal.currentIssue">Trenutni broj</message>
 	<message key="journal.journals">Časopisi</message>
 	<message key="journal.path">Putanja</message>
-	<message key="journal.journal">Časopis</message>
+	<message key="context.context">Časopis</message>
 
 	<!-- User -->
 	<message key="user.showAllJournals">Prikaz mojih časopisa</message>
