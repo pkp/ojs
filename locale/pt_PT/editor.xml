@@ -13,9 +13,6 @@
   -->
 
 <locale name="pt_PT" full_name="Português (Portugal)">
-	<message key="editor.article.reviewForms">Formulários de revisão</message>
-	<message key="editor.article.selectReviewForm">Escolher formulário de revisão</message>
-	<message key="editor.article.clearReviewForm">Limpar formulário de revisão</message>
 	<message key="editor.home">Página Inicial do Editor</message>
 	<message key="editor.submissionsAndPublishing">Submissões e Publicações</message>
 	<message key="editor.submissionQueue">Fila de Submissão</message>
@@ -93,9 +90,7 @@
 	<message key="editor.issues.noLiveIssues">Nenhuma edição em produção</message>
 	<message key="editor.issues.open">Aberto</message>
 	<message key="editor.issues.pages">Páginas</message>
-	<message key="editor.navigation.issues">Edições</message>
 	<message key="editor.navigation.futureIssues">Edições Futuras</message>
-	<message key="editor.navigation.createIssue">Criar Edição</message>
 	<message key="editor.navigation.issueArchive">Edições Anteriores</message>
 	<message key="editor.article.designateReviewVersion">Designar documento original como Versão para Revisão</message>
 	<message key="editor.article.uploadReviewVersion">Enviar Versão para Revisão actualizada</message>
@@ -196,7 +191,6 @@
 	<message key="editor.article.uploaded">Enviado</message>
 	<message key="editor.article.removeCoverPage">Eliminar imagem de capa?</message>
 	<message key="editor.article.remove">Eliminar</message>
-	<message key="editor.article.confirmChangeReviewForm">Aviso: Alterações no formulário de revisão removerá todas as respostas dos revisores que usaram o mesmo. Deseja realmente continuar?</message>
 	<message key="editor.issues.enableOpenAccessDate">Activar acesso livre adiado</message>
 	<message key="editor.issues.unpublishIssue">Despublicar edição</message>
 	<message key="editor.issues.confirmUnpublish">Deseja realmente despublicar esta edição?</message>
@@ -209,7 +203,6 @@
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Todos os assinantes institucionais ({$count} utilizadores)</message>
 	<message key="editor.reassign">Re-atribuir</message>
 	<message key="editor.publicIdentificationExists">O identificador público '{$ publicIdentifier}' já existe para outro objecto (número, artigo, galleys do número ou ficheiro suplementar). Por favor, escolha identificadores únicos que pertençam à sua revista.</message>
-	<message key="editor.notifyUsers.allMailingList">Incluir todos os e-mails na mailing list ({$count} emails)</message>
 	<message key="editor.issues.galleys">Galleys Número</message>
 	<message key="editor.issues.galley">Galley Número</message>
 	<message key="editor.issues.viewingGalley">Visualizando Galley do Número</message>
@@ -220,6 +213,4 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">A identificação pública do galley já existe.</message>
 	<message key="editor.issues.backToIssueGalleys">Voltar ao galley dos números</message>
 	<message key="editor.issues.confirmDeleteGalley">Tem a certeza que pretende eliminar este galley do número?</message>
-	<message key="editor.publicGalleyIdentificationExists">O identificador público '{$publicIdentifier}' já existe para ouyra instância deste artigo. Por favor, escolha um identificador único dentro deste artigo.</message>
-	<message key="editor.issues.resetArticlePublicationDates">Restaurar as datas de publicação dos artigos</message>
 </locale>
