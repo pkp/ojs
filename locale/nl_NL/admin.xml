@@ -21,7 +21,6 @@
 	<message key="admin.languages.supportedLocalesInstructions">Selecteer de talen die de site moet ondersteunen. De geselecteerde talen zijn beschikbaar voor alle tijdschriften in de site en zullen ook verschijnen in een taalkeuzemenu  op alle pagina's van de site (dat kan overruled worden voor specifieke tijdschriften). Als er slechts één taal geselecteerd wordt zal er geen taalkeuzemenu getoond worden en zijn er geen taalinstellingen bij de tijdschriften.</message>
 	<message key="admin.languages.confirmUninstall">Weet u zeker dat u deze taal wilt de-installeren? Dit beïnvloedt de tijdschriften in de site die deze taal gebruiken.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Selecteer aanvullende talen voor gebruik in dit systeem. De talen moeten geïnstalleerd worden voor ze door te tijdschriften gebruikt kunnen worden. Zie de OJS documentatie voor informatie over het toevoegen van ondersteuning voor nieuwe talen.</message>
-	<message key="admin.languages.downloadLocales">Taalbestanden ophalen</message>
 	<message key="admin.languages.downloadFailed">Het ophalen van de taalbestanden is mislukt. De foutmelding hieronder beschrijft het probleem.</message>
 	<message key="admin.languages.localeInstalled">De taal "{$locale}" is geïnstalleerd.</message>
 	<message key="admin.languages.download">Taalbestanden binnenhalen</message>
@@ -40,7 +39,6 @@
 	<message key="admin.contexts.create">Creëer tijdschrift</message>
 	<message key="admin.journals.createInstructions">U wordt automatisch ingesteld als tijdschriftbeheerder. Log in als beheerder als het tijdschrift is aangemaakt om verder te gaan met het inrichten en om gebruikers toe te voegen.</message>
 	<message key="admin.journals.urlWillBe">De URL van dit tijdschrift wordt {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">Een titel is verplicht.</message>
 	<message key="admin.contexts.form.pathRequired">Een pad is verplicht.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Het pad mag alleen alfanumerieke tekens, liggende streepjes en koppeltekens bevatten en moet beginnen en eindigen met een alfanuermiek teken.</message>
 	<message key="admin.contexts.form.pathExists">Het opgegeven pad is al in gebruik voor een ander tijdschrift.</message>
@@ -78,24 +76,8 @@
 	<message key="admin.settings.journalsList">Tijdschriftelementen</message>
 	<message key="admin.settings.journalsList.description">Kies de tijdschriftelementen die voor ieder tijdschrift getoond worden op de pagina van de site</message>
 	<message key="admin.settings.journalsList.showThumbnail">Miniatuur van het tijdschrift</message>
-	<message key="admin.settings.useAlphalist">Toon een alfabetische lijst op de homepagina, om bij sites met veel tijdschriften snel op alfabet te kunnen navigeren.</message>
-	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Fout: kan tijdelijke map niet aanmaken {$tmpDir}</message>
-	<message key="admin.copyAccessLogFileTool.error.acessingFile">Fout: bestand {$filePath} bestaat niet of is niet toegankelijk.</message>
-	<message key="admin.copyAccessLogFileTool.error.copyingFile">Fout: can bestand niet kopiëren van {$filePath} naar {$tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.error.deletingFile">Fout: kan bestand niet weggooien {$tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Waarschuwing: bestand {$filePath} bestaat al in de map met gebruiksstatistieken</message>
-	<message key="admin.copyAccessLogFileTool.success">Success: {$filePath} naar {$destinationPath}</message>
 	<message key="admin.settings.defaultMetricDescription">Uw OJS installatie geconfigureerd voor meer dan een gebruiksmeting. Gebruiksstatistieken worden in verschillende contexten getoond.
 		Soms wordt een enkele statistiek getoond, bv, om een lijst van meestgebruikte artikelen te tonen of om
 		zoekresultaten te wegen. Kies een van de methodes als standaard.</message>
-	<message key="admin.copyAccessLogFileTool.usage">Kopieer de doorgegeven apace logbestanden, met een filter op de regelt voor deze installatie,
-naar de map met huidige bestanden in de  UsageStatsPlugin stage map. Moet draaien onder een gebruiker met genoeg rechten om de apache acces log bestanden te lezen.
-
-Dit gereedschap kopieert alleen bestanden die niet al in de usageStats mappen zitten  (stage, processing, archive, reject).
-
-Gebruik: {$scriptName} path/to/apache/log/file.log
-Gebruik (verwerk alle bestanden in een map): {$scriptName} path/to/apache/directory</message>
-	<message key="admin.settings.security">Veiligheid</message>
-	<message key="admin.settings.security.plugins">Voorkom dat tijdschriftbeheerders plugins installeren, bijwerken of verwijderen.</message>
-	<message key="admin.languages.reloadDefaultEmailTemplates">Standaard email sjablonen terugzetten</message>
+	
 </locale>
