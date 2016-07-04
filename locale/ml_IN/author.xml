@@ -4,7 +4,7 @@
 <!--
   * locale/ml_IN/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,25 +12,23 @@
   *
   -->
 
-<locale name="ml_IN" full_name = "Malayalam">
+<locale name="ml_IN" full_name="മലയാളം">
 	<message key="author.submit">പുതിയ സമര്‍പ്പണം</message>
 	<message key="author.track">സജീവമായ സമര്‍പ്പണങ്ങള്‍</message>
-	<message key="author.competingInterests"><![CDATA[Competing&nbsp;interests <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></message>
 	<message key="author.submit.submitArticle">ഒരു പ്രബന്ധം സമര്‍പ്പിക്കുക</message>
 	<message key="author.submit.stepsToSubmit">സമര്‍പ്പിക്കുന്നതിന് അഞ്ചുഘട്ടങ്ങള്‍ കൂടി</message>
 	<message key="author.submit.startHereTitle">ഒരു പുതിയ സമര്‍പ്പണം ആരംഭിക്കുക</message>
-	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Click here</a> to go to step one of the five-step submission process.]]></message>
 	<message key="author.submit.step1">ഘട്ടം 1. സമര്‍പ്പണം ആരംഭിക്കുക</message>
 	<message key="author.submit.step2">ഘട്ടം 2. സമര്‍പ്പണം അപ് ലോഡ് ചെയ്യുക</message>
 	<message key="author.submit.step3">ഘട്ടം 3. സമര്‍പ്പണത്തിന്റെ മെറ്റാഡേറ്റ ചേര്‍ക്കുക</message>
 	<message key="author.submit.step4">ഘട്ടം 4. അനുബന്ധ ഫയലുകള്‍ അപ് ലോഡ് ചെയ്യുക</message>
 	<message key="author.submit.step4a">ഘട്ടം 4a. അനുബന്ധ ഫയല്‍ ചേര്‍ക്കുക</message>
 	<message key="author.submit.step5">ഘട്ടം 5. സമര്‍പ്പണം സ്ഥിരീകരിക്കുക</message>
-	<message key="author.submit.start">ആരംഭിക്കുക</message>
-	<message key="author.submit.upload">സമര്‍പ്പണം അപ് ലോഡ് ചെയ്യുക</message>
-	<message key="author.submit.metadata">മെറ്റാഡേറ്റ ചേര്‍ക്കുക</message>
-	<message key="author.submit.supplementaryFiles">അനുബന്ധ ഫയലുകള്‍ അപ് ലോഡ് ചെയ്യുക</message>
-	<message key="author.submit.confirmation">സ്ഥിരീകരണം</message>
+	<message key="author.submit.start">1. ആരംഭിക്കുക</message>
+	<message key="author.submit.upload">2. സമര്‍പ്പണം അപ് ലോഡ് ചെയ്യുക</message>
+	<message key="author.submit.metadata">3. മെറ്റാഡേറ്റ ചേര്‍ക്കുക</message>
+	<message key="author.submit.supplementaryFiles">4. അനുബന്ധ ഫയലുകള്‍ അപ് ലോഡ് ചെയ്യുക</message>
+	<message key="author.submit.confirmation">5. സ്ഥിരീകരണം</message>
 	<message key="author.submit.cancelSubmission">ഓതര്‍ ഹോമില്‍ നിന്നും സജീവമായ സമര്‍പ്പണങ്ങള്‍ തിരഞ്ഞെടുത്താല്‍ താങ്കള്‍ക്ക് ഈ സമര്‍പ്പണം പിന്നീട് ഒരു ദിവസം പൂര്‍ണ്ണമാക്കാവുന്നതാണ്.</message>
 	<message key="author.submit.notAccepting">ഈ പ്രസിദ്ധീകരണം സമര്‍പ്പണങ്ങള്‍ ഒന്നും തന്നെ ഈ സമയം സ്വീകരിക്കുന്നതല്ല.</message>
 	<message key="author.submit.requestWaiver">ഇളവിനു വേണ്ടി അപേക്ഷിക്കുക</message>
@@ -46,23 +44,19 @@
 	<message key="author.submissions.confirmDelete">അപൂര്‍ണ്ണമായ ഈ സമര്‍പ്പണം മായ്ക്കണമെന്ന് താങ്കള്‍ക്ക് ഉറപ്പാണോ?</message>
 	<message key="author.submissions.viewStatus">സ്റ്റാറ്റസ് കാണുക</message>
 	<message key="author.submissions.noSubmissions">സമര്‍പ്പണങ്ങള്‍ ഒന്നും ഇല്ല.</message>
-	<message key="author.submit.howToSubmit"><![CDATA[Encountering difficulties? Contact <a href="mailto:{$supportEmail}">{$supportName}</a> for assistance ({$supportPhone}).]]></message>
-	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Encountering difficulties? Contact <a href="mailto:{$supportEmail}">{$supportName}</a> for assistance.]]></message>
 	<message key="author.submit.journalSection">ജേണല്‍ സെക്ഷന്‍</message>
-	<message key="author.submit.journalSectionDescription"><![CDATA[Select the appropriate section for this submission (see Sections and Policies in <a href="{$aboutUrl}" target="_new">About</a> the Journal).]]></message>
-	<message key="submission.submit.selectSection">ദയവായി ഒരു സെക്ഷന്‍ തിരഞ്ഞെടുക്കുക...</message>
+	<message key="author.submit.selectSection">ദയവായി ഒരു സെക്ഷന്‍ തിരഞ്ഞെടുക്കുക...</message>
 	<message key="author.submit.submissionLocale">സമര്‍പ്പണ ഭാഷ</message>
 	<message key="author.submit.submissionLocaleDescription">വിവിധ ഭാഷകളിലുള്ള സമര്‍പ്പണങ്ങള്‍ ഈ ജേണല്‍ സ്വീകരിക്കും.സമര്‍പ്പണത്തിന്റെ പ്രഥമ ഭാഷ താഴെ കാണുന്ന പുള്‍ ഡൗണ്‍ ഉപയോഗിച്ച് തിരഞ്ഞെടുക്കുക.</message>
-	<message key="submission.submit.submissionChecklist">സബ്മിഷന്‍ ചെക്ക് ലിസ്റ്റ്</message>
-	<message key="submission.submit.submissionChecklistDescription">താഴെ കാണുന്ന വിവരങ്ങള്‍ പരിശോധിച്ചുകൊണ്ട് ജേണല്‍ ഈ സമര്‍പ്പണത്തെ പരിഗണിക്കുന്നതിന് തയ്യാറാണെന്നതിനെ സൂചിപ്പിക്കുന്നു (ലേഖകനുള്ള അഭിപ്രായങ്ങള്‍ താഴെ ചേര്‍ക്കാവുന്നതാണ്).</message>
+	<message key="author.submit.submissionChecklist">സബ്മിഷന്‍ ചെക്ക് ലിസ്റ്റ്</message>
+	<message key="author.submit.submissionChecklistDescription">താഴെ കാണുന്ന വിവരങ്ങള്‍ പരിശോധിച്ചുകൊണ്ട് ജേണല്‍ ഈ സമര്‍പ്പണത്തെ പരിഗണിക്കുന്നതിന് തയ്യാറാണെന്നതിനെ സൂചിപ്പിക്കുന്നു (ലേഖകനുള്ള അഭിപ്രായങ്ങള്‍ താഴെ ചേര്‍ക്കാവുന്നതാണ്).</message>
 	<message key="author.submit.verifyChecklist">തുടരുന്നതിനു മുന്‍പ് സബ്മിഷന്‍ ചെക്ക് ലിസ്റ്റിലുള്ള എല്ലാ ഇനങ്ങളും തൃപ്തികരമാണെന്ന് ഉറപ്പു വരുത്തുക.</message>
-	<message key="author.submit.copyrightNoticeAgree">The authors agree to the terms of this Copyright Notice, which will apply to this submission if and when it is published by this journal (comments to the editor can be added below).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">തുടരുന്നതിനു മുന്‍പ് കോപ്പി റൈറ്റ് നോട്ടീസിന്റെ സംജ്ഞകളുമായി താങ്കള്‍ അനുകൂലിക്കേണ്ടതുണ്ട്.</message>
-	<message key="submission.submit.coverNote">ലേഖകനായുള്ള അഭിപ്രായങ്ങള്‍</message>
+	<message key="author.submit.commentsForEditor">ലേഖകനായുള്ള അഭിപ്രായങ്ങള്‍</message>
 	<message key="author.submit.comments">ടെക്സ്റ്റ് ചേര്‍ക്കുക (ഐച്ഛികമായ)</message>
 	<message key="author.submit.form.sectionRequired">ദയവായി ഈ സമര്‍പ്പണത്തിന് ഉചിതമായ ജേണല്‍ സെക്ഷന്‍ തിരഞ്ഞെടുക്കൂ.</message>
 	<message key="author.submit.form.localeRequired">ദയവായി ഒരു സമര്‍പ്പണ ഭാഷ തിരഞ്ഞെടുക്കൂ.</message>
-	<message key="submission.submit.privacyStatement">ജേണലിന്റെ സ്വകാര്യ പ്രസ്താവന</message>
+	<message key="author.submit.privacyStatement">ജേണലിന്റെ സ്വകാര്യ പ്രസ്താവന</message>
 	<message key="author.submit.reorderInstructions">പ്രസിദ്ധീകരണത്തില്‍ പട്ടികപ്പെടുത്തിയിട്ടുള്ള ക്രമത്തില്‍ത്തന്നെ ലേഖകരെ പുനഃക്രമീകരിക്കുക.</message>
 	<message key="author.submit.reorder">ലേഖകന്റെ പേര് പുനഃക്രമീകരിക്കുക</message>
 	<message key="author.submit.selectPrincipalContact">എഡിറ്റോറിയല്‍ കറസ്പോണ്ടന്റിനായുള്ള പ്രഥമ കോണ്‍ടാക്റ്റ്.</message>
@@ -72,6 +66,7 @@
 	<message key="author.submit.submissionSupportingAgencies">പിന്തുണയ്ക്കുന്ന ഏജന്‍സികള്‍</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">ഈ സമര്‍പ്പണത്തിന്റെ പ്രവര്‍ത്തനങ്ങളെ പിന്തുണയ്ക്കുന്ന അല്ലെങ്കില്‍ അതിനായി ധനനിക്ഷേപം നടത്തുന്ന ഏജന്‍സികളെ തിരിച്ചറിയുക.</message>
 	<message key="author.submit.coverageInstructions">ജിയോ-സ്പേഷ്യല്‍ ലൊക്കേഷന്‍,ക്രൊനോളജിക്കല്‍ അല്ലെങ്കില്‍ ഹിസ്റ്റോറിക്കല്‍ കവറേജ് അല്ലെങ്കില്‍ ഗവേഷണ മാതൃകയുടെ സ്വഭാവവിശേഷങ്ങള്‍ എന്നിവയെ സൂചിപ്പിക്കുന്നു.</message>
+	<message key="author.submit.subjectClassInstructions">ക്ലാസിഫിക്കേഷന്‍ ടേംസ് തിരഞ്ഞെടുക്കുന്നതിനായി ഹൈപ്പര്‍ലിങ്ക്ഡ് ക്ലാസിഫിക്കേഷന്‍ സിസ്റ്റം ഉപയോഗിക്കുക,ഉചിതമെങ്കില്‍ നമ്പരുകളും.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Additional codes</a>.]]></message>
 	<message key="author.submit.form.authorRequired">കുറഞ്ഞത് ഒരു ലേഖകനെങ്കിലും ആവശ്യമാണ്.</message>
 	<message key="author.submit.form.authorRequiredFields">ഒരോ ലേഖകന്റെയും ആദ്യനാമം, അവസാന നാമം, ഇ-മെയില്‍ അഡ്രസ്സ് എന്നിവ ആവശ്യമാണ്.</message>
@@ -83,7 +78,6 @@
 	<message key="author.submit.replaceSubmissionFile">സബ്മിഷന്‍ ഫയല്‍ പുനഃസ്ഥാപിക്കുക</message>
 	<message key="author.submit.noSubmissionFile">സബ്മിഷന്‍ ഫയല്‍ ഒന്നുംതന്നെ അപ് ലോഡ് ചെയ്തിട്ടില്ല.</message>
 	<message key="author.submit.noSubmissionConfirm">സബ്മിഷന്‍ ഫയല്‍ അപ് ലോഡ് ചെയ്യാതെ തന്നെ തുടരണമെന്ന് താങ്കള്‍ക്ക് ഉറപ്പാണോ?</message>
-	<message key="author.submit.supplementaryFilesInstructions">This optional step allows Supplementary Files to be added to a submission. The files, which can be in any format, might include (a) research instruments, (b) data sets, which comply with the terms of the study's research ethics review, (c) sources that otherwise would be unavailable to readers, (d) figures and tables that cannot be integrated into the text itself, or other materials that add to the contribution of the work.</message>
 	<message key="author.submit.supplementaryFiles.saveToUpload">ഫയല്‍ അപ് ലോഡ് ചെയ്യുന്നതിനായി സേവ്-ല്‍ ക്ലിക്ക് ചെയ്യുക (കൂടുതല്‍ ഫയലുകള്‍ അതിനുശേഷം അപ് ലോഡ് ചെയ്യാവുന്നതാണ്).</message>
 	<message key="author.submit.forgottenSubmitSuppFile">തിരഞ്ഞെടുത്ത അനുബന്ധ ഫയലുകള്‍ അപ് ലോഡ് ചെയ്യാതെതന്നെ തുടരണമെന്ന് താങ്കള്‍ക്ക് ഉറപ്പാണോ?</message>
 	<message key="author.submit.noSupplementaryFiles">ഈ സമര്‍പ്പണത്തില്‍ അനുബന്ധ ഫയലുകള്‍ ഒന്നുംതന്നെ ചേര്‍ത്തിട്ടില്ല.</message>
@@ -116,12 +110,10 @@
 	<message key="author.submit.suppFile.form.descriptionRequired">ദയവായി ഒരു വിവരണം ചേര്‍ക്കുക.</message>
 	<message key="author.suppFile.suppFilePublicIdentificationExists">പൊതുവായ അനുബന്ധ ഫയല്‍ താദാത്മ്യനിരൂപണം മുന്‍പേതന്നെ നിലവിലുണ്ട്.</message>
 	<message key="author.suppFile.publicSuppFileIdentifier">പൊതു അനുബന്ധ ഫയല്‍ ഐഡന്റിഫയര്‍</message>
-	<message key="author.submit.confirmationDescription">To submit your manuscript to {$journalTitle} click Finish Submission. The submission's principal contact will receive an acknowledgement by email and will be able to view the submission's progress through the editorial process by logging in to the journal web site. Thank you for your interest in publishing with {$journalTitle}.</message>
 	<message key="author.submit.noFiles">ഒരു ഫയലുകളും ഈ സമര്‍പ്പണത്തോടൊപ്പം ബന്ധിപ്പിച്ചിട്ടില്ല.</message>
 	<message key="author.submit.filesSummary">ഫയല്‍ സംഗ്രഹം</message>
 	<message key="author.submit.finishSubmission">സമര്‍പ്പണം അവസാനിപ്പിക്കുക</message>
 	<message key="author.submit.submissionComplete">സമര്‍പ്പണം പൂര്‍ണ്ണമായിരിക്കുന്നു.ഈ ജേണലില്‍ {$journalTitle} പ്രസിദ്ധീകരിക്കുവാന്‍ താല്പര്യപ്പെട്ടതിന് താങ്കള്‍ക്ക് നന്ദി.</message>
-	<message key="author.submit.expedite"><![CDATA[If this submission is in a format that is ready to be published without further review, editing, or layout work, it can be placed directly in the last stage of the Editing queue by <a href="{$expediteUrl}" class="action">Clicking here</a>. (Note: Only journal editors have this option for their submissions.)]]></message>
 	<message key="author.article.uploadAuthorVersion">ലേഖകന്റെ വേര്‍ഷന്‍ അപ് ലോഡ് ചെയ്യുക</message>
 	<message key="author.article.copyeditedFile">കോപ്പി എഡിറ്റ് ചെയ്ത ഫയല്‍</message>
 	<message key="author.article.authorRevisedFile">ലേഖകന്റെ ഫയല്‍</message>

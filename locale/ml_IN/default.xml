@@ -4,7 +4,7 @@
 <!--
   * locale/ml_IN/default.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="ml_IN" full_name = "Malayalam">
+<locale name="ml_IN" full_name="മലയാളം">
 	<!-- Section default -->
 	<message key="section.default.title">പ്രബന്ധം</message>
 	<message key="section.default.abbrev"></message>
@@ -28,6 +28,7 @@
 	<message key="default.journalSettings.checklist.addressesLinked">എവിടെയാണോ യുആര്‍എല്‍ നു വേണ്ടിയുള്ള അവലംബം ലഭിക്കുക.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">വാചകം സിങ്കിള്‍ സ്പെയിസ്ഡ് ആണ്; 12 പോയിന്റിലുള്ള് അക്ഷര്ങ്ങള്‍ ഉപയോഗിക്കുന്നു;അണ്ടര്‍ലൈനിങ്ങ് ചെയ്യുന്നതിനെക്കാള്‍ ഇറ്റാലിക്സ്  ഉപയോഗിക്കുന്നു (യുആര്‍എല്‍ അഡ്രസ്സുകള്‍ ഉള്ളവ ഒഴികെ );കൂടാതെ എല്ലാ ഇല്ലസ്ട്രേഷന്‍സും,ചിത്രങ്ങളും,പട്ടികകളും വാചകാവസാനം കൊടുക്കുന്നതിനെക്കാള്‍   ഉചിതമായ പോയിന്റോടുകൂടി വാചകത്തിനുള്ളില്‍തന്നെ സ്ഥാനം നല്‍കിയിരിക്കുന്നു.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[The text adheres to the stylistic and bibliographic requirements outlined in the <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Author Guidelines</a>, which is found in About the Journal.]]></message>
+	<message key="default.journalSettings.checklist.anonymous"><![CDATA[If submitting to a peer-reviewed section of the journal, the instructions in <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Ensuring a Blind Review</a> have been followed.]]></message>
 	<message key="default.journalSettings.privacyStatement">ഈ ജേര്‍ണല്‍ സൈറ്റില്‍ കൊടുത്ത  പേരും ഇ-മെയില്‍ അഡ്രസ്സും ഇതേ ജേര്‍ണലില്‍ തന്നെ ചില നിശ്ചിത ആവശ്യങ്ങള്‍ക്കുവേണ്ടിമാത്രം ഉപയോഗിക്കാം അല്ലാതെ മറ്റു  ആവശ്യങ്ങള്‍ക്കോ മൂന്നാമനോ ഇതുയോഗിക്കാന്‍ സാധിക്കുന്നതല്ല.</message>
 	<message key="default.journalSettings.openAccessPolicy">ഈ ജേര്‍ണലില്‍ തല്ക്ഷണം തന്നെ സിദ്ധാന്തത്തിന്റെ ഉള്ളടക്കത്തിലേയ്ക്ക് കടക്കാനും തടസ്സങ്ങള്‍ ഒന്നും തന്നെയില്ലാതെ വിവരങ്ങള്‍ കൈമാറ്റം ചെയ്യാനും ഇതു് വളരെയധികം പൊതുജനങ്ങളെ സഹായിക്കുന്നു.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">This journal permits and encourages authors to post items submitted to the journal on personal websites or institutional repositories both prior to and after publication, while providing bibliographic details that credit, if applicable, its publication in this journal.</message>
@@ -130,9 +131,9 @@ Please follow the following protocol for making electronic revisions to your man
 	<pre>4. FORMATTING
 	The paragraph that begins "This last topic..." is not indented.</pre>]]></message>
 	
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
-</message>
+	<message key="default.journalSettings.emailSignature">________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[We encourage readers to sign up for the publishing notification service for this journal. Use the <a href="{$indexUrl}/{$journalPath}/user/register">Register</a> link at the top of the home page for the journal. This registration will result in the reader receiving the Table of Contents by email for each new issue of the journal. This list also allows the journal to claim a certain level of support or readership. See the journal's <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Interested in submitting to this journal? We recommend that you review the <a href="{$indexUrl}/{$journalPath}/about">About the Journal</a> page for the journal's section policies, as well as the <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="{$indexUrl}/{$journalPath}/user/register">register</a> with the journal prior to submitting or, if already registered, can simply <a href="{$indexUrl}/index/login">log in</a> and begin the five-step process.]]></message>	
 	<message key="default.journalSettings.forLibrarians"><![CDATA[We encourage research librarians to list this journal among their library's electronic journal holdings. As well, it may be worth noting that this journal's open source publishing system is suitable for libraries to host for their faculty members to use with journals they are involved in editing (see <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>

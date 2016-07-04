@@ -4,14 +4,14 @@
 <!--
   * locale/ml_IN/manager.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ml_IN (മലയാളം) locale.
   -->
 
-<locale name="ml_IN" full_name = "Malayalam">
+<locale name="ml_IN" full_name="മലയാളം">
 	<message key="manager.emails.confirmResetAll">ഈ ജേണലിലുള്ള ഇ-മെയില്‍ ടെംപ്ലേറ്റുകളെല്ലാം പുന:സ്ഥാപിക്കണമെന്ന് താങ്കള്‍ക്ക് ഉറപ്പാണോ? താങ്കള്‍ ചെയ്ത ഏതെങ്കിലും കസ്റ്റമൈസേഷനുകള്‍ നഷ്ടപ്പെടും.</message>
 	<message key="manager.files.note">കുറിപ്പ്: ഫയലുകള്‍ക്ക് അനുമതി നല്‍ക്കുന്ന ഫയല്‍  ബ്രൗസര്‍ നൂതന സവിശേഷതകള്‍ ഉള്‍ക്കൊണ്ടവയാണ്. അതുപോലെ ഡയറക്ടറിയുമായി ചേര്‍ന്നു പ്രവര്‍ത്തിക്കുന്ന ജേണലിനെ വീക്ഷിക്കുകയും നേരിട്ടു കൈകാര്യം ചെയ്യുന്നതുമാണ്.</message>
 	<message key="manager.groups">Masthead</message>
@@ -30,7 +30,7 @@
 	<message key="manager.language.forms">ഫോമുകള്‍</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">ഈ ലൊക്കേലിനായി താങ്കളുടെ പക്കലുള്ള ഏതെങ്കിലും ലൊക്കേല്‍-സ്പെസിഫിക് ജേണല്‍ ക്രമീകരണങ്ങളെ ഇത് പുന:സ്ഥാപിക്കും.</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">റീലോഡ് ഡീഫാള്‍ട്ട്സ്</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br />If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
 	<message key="manager.languages.noneAvailable">ക്ഷമിക്കണം,അധികമായുള്ള ഭാഷകളൊന്നും ലഭ്യമല്ല.ഈ ജേണലില്‍ അധികമായ ഭാഷകള്‍ ഉപയോഗിക്കണം എന്നുണ്ടെങ്കില്‍ സൈറ്റ് അഡ്മിനിസ്ട്രേറ്ററുമായി ബന്ധപ്പെടുക.</message>
 	<message key="manager.languages.primaryLocaleInstructions">ഈ ജേണല്‍ സൈറ്റിന്റെ നിശ്ചിതമായ ഭാഷ ഇതായിരിക്കും.</message>
 	<message key="manager.managementPages">മാനേജ്മെന്റ് പേജുകള്‍</message>
@@ -99,6 +99,8 @@
 	<message key="manager.plugins.description">This page allows the Journal Manager to review and potentially configure the plugins that are currently installed. Plugins are divided into categories, according to their function. The categories are listed below, and within each category, its current set of plugins.</message>
 	<message key="manager.plugins.doesNotExist">പ്ലഗിന്‍ നിലവിലില്ല</message>
 	<message key="manager.plugins.fileSelectError">ദയവായി ആദ്യം ഒരു ഫയല്‍ തിരഞ്ഞെടുക്കൂ</message>
+	<message key="manager.plugins.install">ഒരു പുതിയ പ്ലഗിന്‍ ഇന്‍സ്റ്റാള്‍ ചെയ്യൂ</message>
+	<message key="manager.plugins.installDescription">ഒരു പുതിയ പ്ലഗിന്‍ അപ്പ്-ലോഡ് ചെയ്യുവാനും ഇന്‍സ്റ്റാള്‍ ചെയ്യുവാനും ഈ ഫോം താങ്കളെ അനുവദിക്കും. പ്ലഗിന്‍ .tar.gz ഫയല്‍ ആക്കി ചുരുക്കിയിട്ടുണ്ടെന്ന് ഉറപ്പു വരുത്തുക.</message>
 	<message key="manager.plugins.installedVersionNewer">പ്ലഗിന്‍ മുന്‍പേ നിലവിലുള്ളതും,പുതിയതും അല്ലെങ്കില്‍ ഇന്‍സ്റ്റാള്‍ ചെയ്ത വേര്‍ഷനോട് സമാനവുമാണ്.</message>
 	<message key="manager.plugins.installedVersionOlder">പ്ലഗിന്‍ മുന്‍പേ നിലവിലുള്ളതും,പഴയതും അല്ലെങ്കില്‍ ഇന്‍സ്റ്റാള്‍ ചെയ്ത വേര്‍ഷനോട് സമാനവുമാണ്.</message>
 	<message key="manager.plugins.installFailed">ഇന്‍സ്റ്റാളേഷന്‍ പരാജയപ്പെട്ടിരിക്കുന്നു</message>
@@ -115,10 +117,46 @@
 	<message key="manager.plugins.uploadPluginDir">പ്ലഗിന്‍ ഫയല്‍ തിരഞ്ഞെടുക്കൂ</message>
 	<message key="manager.plugins.versionFileInvalid">പ്ലഗിന്‍ ഡയറക്ടറിയിലെ version.xml in ല്‍ അസാധുവായ ഡേറ്റ ഉള്‍ക്കൊള്ളുന്നു.</message>
 	<message key="manager.plugins.versionFileNotFound">പ്ലഗിന്‍ ഡയറക്ടറിയില്‍ version.xml കണ്ടെത്താനാവുന്നില്ല</message>
+	<message key="manager.reviewFormElement.changeType">Warning: Changing the review form element type from a multiple-choice type to an open-ended type will result in the deletion of the multiple choice options.</message>
+	<message key="manager.reviewFormElements">ഫോം ഐറ്റംസ്</message>
+	<message key="manager.reviewFormElements.addResponseItem">തിരഞ്ഞെടുത്തത് ചേര്‍ക്കുക</message>
+	<message key="manager.reviewFormElements.checkboxes">ചെക്ക് ബോക്സസ് (താങ്കള്‍ക്ക് ഒന്നോ അതിലധികമോ തിരഞ്ഞെടുക്കവുന്നതാണ്)</message>
+	<message key="manager.reviewFormElements.chooseType">ഏതു തരത്തിലുള്ള ഇനമാണ് വേണ്ടതെന്ന് തിരഞ്ഞെടുക്കുക</message>
+	<message key="manager.reviewFormElements.confirmDelete">പ്രസിദ്ധീകരിച്ച അവലോകന ഫോമില്‍ നിന്നും ഒരു ഇലമെന്റ് നീക്കം ചെയ്യണമെന്ന് താങ്കള്‍ക്ക് ഉറപ്പാണോ?</message>
+	<message key="manager.reviewFormElements.copyTo">കോപ്പി ടു:</message>
+	<message key="manager.reviewFormElements.create">പുതിയ ഇനത്തെ സൃഷ്ടിക്കുക</message>
+	<message key="manager.reviewFormElements.dropdownbox">ഡ്രോപ്-ഡൗണ്‍ ബോക്സ്</message>
+	<message key="manager.reviewFormElements.edit">ഫോം ഇനത്തെ ചിട്ടപ്പെടുത്തുക</message>
+	<message key="manager.reviewFormElements.elementType">ഐറ്റം ടൈപ്പ്</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">ഫോം ഐറ്റത്തിനു ഒരു ഐറ്റം ടൈപ്പ് ആവശ്യമാണ്.</message>
+	<message key="manager.reviewFormElements.form.questionRequired">ഫോം ഐറ്റത്തിനു ഒരു ചോദ്യം ആവശ്യമാണ്.</message>
+	<message key="manager.reviewFormElements.noneCreated">ഫോം ഐറ്റം ഒന്നും തന്നെ സൃഷ്ടിക്കപ്പെട്ടില്ല.</message>
+	<message key="manager.reviewFormElements.possibleResponse">തിരഞ്ഞെടുപ്പ്</message>
+	<message key="manager.reviewFormElements.question">ഐറ്റം</message>
+	<message key="manager.reviewFormElements.radiobuttons">റേഡിയോ ബട്ടണ്‍സ് (താങ്കള്‍ക്ക് ഒരെണ്ണം മാത്രമേ തിരഞ്ഞെടുക്കാന്‍ സാധിക്കുകയുള്ളൂ)</message>
+	<message key="manager.reviewFormElements.required">ഐറ്റം പൂര്‍ത്തിയകുവാന്‍ അവലോകകര്‍ ആവശ്യമാണ്</message>
+	<message key="manager.reviewFormElements.included">സന്ദേശം ഗ്രന്ഥകര്‍ത്താവിനു കൂടി സമര്‍പ്പിക്കുക</message>
+	<message key="manager.reviewFormElements.smalltextfield">സിഗിള്‍ വേര്‍ഡ് ടെക്സ്റ്റ് ബോക്സ്</message>
+	<message key="manager.reviewFormElements.textarea">എക്സ്ടെന്‍ഡഡ് ടെക്സ്റ്റ് ബോക്സ്</message>
+	<message key="manager.reviewFormElements.textfield">സിഗിള്‍ ലൈന്‍ ടെക്സ്റ്റ് ബോക്സ്</message>
+	<message key="manager.reviewForms">അവലോകന ഫോറംസ്</message>
+	<message key="manager.reviewForms.completed">പൂര്‍ണ്ണമായ</message>
+	<message key="manager.reviewForms.confirmDeleteUnpublished">പ്രസിദ്ധീകരിച്ചിട്ടില്ലാത്ത ഈ അവലോകന ഫോറം നീക്കം ചെയ്യണമെന്ന് താങ്കള്‍ക്ക് ഉറപ്പാണോ?</message>
+	<message key="manager.reviewForms.create">അവലോകന ഫോറം സൃഷ്ടിക്കുക</message>
+	<message key="manager.reviewForms.description">വിവരണങ്ങളും പിന്നെ നിര്‍ദ്ദേശങ്ങളും</message>
+	<message key="manager.reviewForms.edit">അവലോകന ഫോറം</message>
+	<message key="manager.reviewForms.form.titleRequired">അവലോകന ഫോറത്തിനു ഒരു തലക്കെട്ട് ആവശ്യമാണ്.</message>
+	<message key="manager.reviewForms.inReview">അവലോകനത്തിലാണ്</message>
+	<message key="manager.reviewForms.list.description">The peer review forms created here will be presented to reviewers to complete, instead of the default form which consists of two open text boxes, the first "for author and editor," and the second "for editor." Review forms can be designated for a specific journal section, and editors will have the option to choose which form to use in assigning the review. In all cases, editors will have the option of including the reviews in corresponding with the author.</message>
+	<message key="manager.reviewForms.noneChosen">ഇല്ല / സൗജന്യ അവലോകന ഫോറം</message>
+	<message key="manager.reviewForms.noneCreated">അവലോകന ഫോറം ഒന്നും തന്നെ സൃഷ്ടിക്കപ്പെട്ടില്ല.</message>
+	<message key="manager.reviewForms.preview">പ്രിവ്യൂ ഫോറം</message>
+	<message key="manager.reviewForms.title">തലക്കെട്ട്</message>
 	<message key="manager.sections.abstractsNotRequired">സംഗ്രഹിക്കേണ്ട ആവശ്യമില്ല</message>
 	<message key="manager.sections.assigned">ഈ വിഭാഗത്തിന്റെ ഗ്രന്ഥപരിശോധകര്‍</message>
 	<message key="manager.sections.confirmDelete">ഈ സെക്ഷന്‍ സ്ഥിരമായി നീക്കം ചെയ്യണമെന്ന് താങ്കള്‍ ഉറപ്പാണോ? താങ്കള്‍ ഈ സെക്ഷനിലെ ഏതെങ്കിലും ഒരു ലേഖനത്തെ വീണ്ടും പ്രസിദ്ധീകരിക്കണം.</message>
 	<message key="manager.sections.create">സെക്ഷന്‍ സൃഷ്ടിക്കുക</message>
+	<message key="manager.sections.disableComments">ഈ വിഭാഗത്തില്‍ വായനകാരുടെ അഭിപ്രായം അപ്രാപ്യമാക്കുക.</message>
 	<message key="manager.section.sectionEditorInstructions">Add a Section Editor to this section to have submissions automatically assigned to the Section Editor. (Otherwise, Section Editors can be assigned manually, after a submission comes in.) If added, a Section Editor can be automatically assigned to oversee the REVIEW (peer review) and/or the EDITING (copyediting, layout and proofreading) of submissions to this section. Section Editors are created by clicking Section Editors under Roles in Journal Management.</message>
 	<message key="manager.sections.editorRestriction">എഡിറ്ററിനും സെക്ഷന്‍ എഡിറ്ററിനും മാത്രമേ ഐറ്റംസ് സമര്‍പ്പിക്കാന്‍ കഴിയൂ.</message>
 	<message key="manager.sections.editors">സെക്ഷന്‍ എഡിറ്റര്‍സ്</message>
@@ -183,7 +221,13 @@
 	<message key="manager.setup.copyeditInstructionsDescription">കോപ്പി എഡിറ്റിങ്ങ് നിര്‍ദ്ദേശങ്ങള്‍ സബ്മിഷന്‍ എഡിറ്റിങ്ങ് സ്റ്റേജിലെ കോപ്പി എഡിറ്റര്‍സ്, ഗ്രന്ഥകര്‍ത്താകള്‍, സെക്ഷന്‍ എഡിറ്റര്‍സ് എന്നിവര്‍ക്ക് ലഭ്യമാക്കുന്നതാണ്. താഴെയായി ഡിഫാള്‍ട്ടായിട്ടുള്ള  നിര്‍ദ്ദേശങ്ങളും എച്ച്ടിഎംഎല്‍ -ല്‍ കാണാം അവ ഏതൊരു സന്ദര്‍ഭത്തിലും ജേണല്‍ മാനേജറിനു ഭേതഗതി വരുത്താനും പുനസ്ഥാപിക്കുവാനും സാധിക്കും (എച്ച്ടിഎംഎല്‍ -ലോ അഥവാ പ്ലേയ്ന്‍ ടെക്സ്റ്റിലോ)</message>
 	<message key="manager.setup.copyrightNotice">കോപ്പിറൈറ്റ് നോട്ടീസ്</message>
 	<message key="manager.setup.coverage">കവറേജ്</message>
+	<message key="manager.setup.coverageChronExamples">(ഉദാ: യുറോപ്യന്‍ റേനൈസ്സന്‍സ്; ജുറാസിക് പിരീഡ്; തെര്‍ഡ് ട്രിമെസ്റ്റര്‍; മുതലായവ)</message>
+	<message key="manager.setup.coverageChronProvideExamples">ഈ ഫീല്‍ഡിനു വേണ്ടി പ്രസക്തമായ ക്രോണോലോജിക്കല്‍ അഥവാ ഹിസ്റ്റോറിക്കല്‍ ടെംസ് ഉദാഹരണമായി നല്‍ക്കുക</message>
 	<message key="manager.setup.coverageDescription">ജിയോ സ്പേഷ്യയല്‍ ലോക്കേഷന്‍സ്, ക്രോണോലോജിക്കല്‍ അഥവാ ഹിസ്റ്റോറിക്കല്‍ കവറേജ്, പിന്നെ/അഥവാ റിസെര്‍ച്ച് സാമ്പിലിന്റെ കാരക്ടറിസ്റ്റിക്സ് എന്നിവ കാണുക.</message>
+	<message key="manager.setup.coverageGeoExamples">(ഉദാ: ഐബേറിയന്‍ പെനിന്‍സുല; സ്ട്രാറ്റോസ്പിയര്‍; ബോറിയല്‍ ഫോറസ്റ്റ്; എന്നിവ)</message>
+	<message key="manager.setup.coverageGeoProvideExamples">ഈ ഫിള്‍ഡിനു വേണ്ടി പ്രസക്ത ജിയോ സ്പേഷ്യയല്‍ അഥവാ ജിയോഗ്രാഫിക്കല്‍ ടെംസ് എന്നിവയുടെ ഉദാഹരണങ്ങള്‍ നല്‍ക്കുക</message>
+	<message key="manager.setup.coverageResearchSampleExamples">(ഉദാ:., വയസ്സ്; ലിംഗം; എതിനിസിറ്റി; മുതലായവ.)</message>
+	<message key="manager.setup.coverageResearchSampleProvideExamples">ഈ ഫിള്‍ഡിനു വേണ്ടി റിസെര്‍ച്ച് സാമ്പിലിന്റെ കാരക്ടറിസ്റ്റിക്സ് ഉദാഹരണമായി നല്‍ക്കുക</message>
 	<message key="manager.setup.currentIssue">നിലവിലുള്ള പതിപ്പ്</message>
 	<message key="manager.setup.customizingTheLook">സ്റ്റെപ്പ് 5. ലുക്ക് കസ്റ്റമൈസ് ചെയ്യുക</message>
 	<message key="manager.setup.customTags">കസ്റ്റം ടാഗ്സ്</message>
@@ -207,6 +251,12 @@
 	<message key="manager.setup.doiReassign">റിഅസൈന്‍ ഡിഒഐ-സ്</message>
 	<message key="manager.setup.doiReassign.description">താങ്കള്‍ ഡിഒഐ കോണ്‍ഫിഗറേഷന്‍ വ്യത്യാസപ്പെടുത്തുന്ന പക്ഷം, അവ നിലവിലുള്ള ഡിഒഐ -നെ ബാധിക്കുന്നതല്ല. ഒരിക്കല്‍ ഡിഒഐ കോണ്‍ഫിഗറേഷന്‍ രേഖപ്പെടുത്തിയാല്‍, നിലവിലുള്ള എല്ലാ ഡിഒഐ -നെ ക്ലിയര്‍ ചെയ്യുകയും തന്മൂലം നിലവിലുള്ള ലേഖനത്തിനെ പുതിയ ക്രമീകരണങ്ങള്‍ സ്വാധീനം ചെലുത്തുനതിനുമായി ഈ ബട്ടണില്‍ ക്ലിക്ക് ചെയ്യുക</message>
 	<message key="manager.setup.editorDecision">ഗ്രന്ഥപരിശോധകന്റെ തീരുമാനം</message>
+	<message key="manager.setup.editorialMembers">ബോര്‍ഡ് മെമ്പര്‍സ് -ല്‍ പോകുകയും എഡിറ്റോറിയല്‍ ബോര്‍ഡ് പിന്നെ/അഥവാ റിവ്യൂ ബോര്‍ഡ് മെമ്പര്‍സ് -നെ ചേര്‍ക്കുക. എത് ഏതൊരു സന്ദര്‍ഭത്തിലും നടത്താവുന്നതാണ്.</message>
+	<message key="manager.setup.editorialProcess1">നിര്‍ദ്ദിഷ്ട ചുമതല ഇല്ലാതെ ഒന്നോ അതിലധികമോ ഗ്രന്ഥപരിശോധകര്‍ അടിസ്ഥാന സ്റ്റെപ്പ്സ് നിയന്ത്രിക്കുന്നു.</message>
+	<message key="manager.setup.editorialProcess2">സെക്ഷന്‍ എഡിറ്റര്‍സ് സബ്മിഷന്‍ റിവ്യു സബ്മിഷന്‍ എഡിറ്റിങ്ങ് എന്നിവ നിയന്ത്രിക്കുമ്പോള്‍ മാനേജിങ്ങ് എഡിറ്റര്‍ സബ്മിഷന്‍ ക്യൂ ഉള്ളടക്ക പട്ടിക എന്നിവ നിയന്ത്രിക്കുന്നു.</message>
+	<message key="manager.setup.editorialProcess3">സെക്ഷന്‍ എഡിറ്റര്‍സ് സബ്മിഷന്‍ റിവ്യു നിയന്ത്രിക്കുമ്പോള്‍ മാനേജിങ്ങ് എഡിറ്റര്‍ സബ്മിഷന്‍ ക്യൂ സബ്മിഷന്‍ എഡിറ്റിങ്ങ് ഉള്ളടക്ക പട്ടിക എന്നിവ നിയന്ത്രിക്കുന്നു.</message>
+	<message key="manager.setup.editorialReviewBoard">എഡിറ്റോറിയല്‍ / റിവ്യൂ ബോര്‍ഡ്</message>
+	<message key="manager.setup.editorialReviewBoardDescription">Journals have Editorial Boards to oversee the editorial direction of the journal, participate in the appointment of editors, and, by virtue of board members' reputations, give the journal some standing in the field. Review Boards play a similar role but in addition, they lead the peer review process. Review Board members will not have access to the journal's administrative system but will be added to the list of those available to do peer reviews.</message>
 	<message key="manager.setup.emailBounceAddress">ബൗന്‍സ് അഡ്രസ്</message>
 	<message key="manager.setup.emailBounceAddressDescription">ലഭിക്കപ്പെടാത്ത ഇമെയില്‍സ് ഈ അഡ്രസിന്റെ പിശകായി വിലയിരുത്തപ്പെടുന്നു.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>allow_envelope_sender</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
@@ -216,6 +266,11 @@
 	<message key="manager.setup.enableAnnouncements">ജേണല്‍ മാനേജറിനു ജേണല്‍ അറിയിപ്പുകള്‍ നല്‍ക്കുന്നതിന് പ്രാപ്യമാക്കുക.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">പ്രദര്‍പ്പിക്കുക</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">ഹോം പേജില്‍ സമീപകാലത്ത് നല്‍കിയ അറിയിപ്പുകള്‍.</message>
+	<message key="manager.setup.enablePageNumber">ഉള്ളടക്ക പട്ടികയില്‍ ഐറ്റംസിന്റെ പേജ് നമ്പര്‍ സ്വയം തിട്ടപ്പെടുത്തുകയും അവ നല്‍ക്കുകയും വേണം  (ഉദാ:, 13-26).</message>
+	<message key="manager.setup.enablePublicArticleId">പ്രസിദ്ധീകരിച്ച ഐറ്റംസ് കണ്ടു പിടിക്കുന്നതിനായി കസ്റ്റം എഡന്റിഫയര്‍ ഉപയോഗിക്കുന്നു.</message>
+	<message key="manager.setup.enablePublicGalleyId">പ്രസിദ്ധീകരിച്ച ഐറ്റംസിന്റെ ഗ്യാലേസ് (ഉദാ: എച്ച്ടിഎംഎല്‍ അഥവാ പിഡിഎഫ് ഫയല്‍സ്) കണ്ടു പിടിക്കുന്നതിനായി കസ്റ്റം എഡന്റിഫയര്‍ ഉപയോഗിക്കുന്നു.</message>
+	<message key="manager.setup.enablePublicIssueId">പതിപ്പുകള്‍ കണ്ടു പിടിക്കുന്നതിനായി കസ്റ്റം എഡന്റിഫയര്‍ ഉപയോഗിക്കുന്നു.</message>
+	<message key="manager.setup.enablePublicSuppFileId">സപ്ലിമെന്റല്‍ ആര്‍ട്ടിക്കിള്‍ ഫയല്‍സ് കണ്ടു പിടിക്കുന്നതിനായി കസ്റ്റം എഡന്റിഫയര്‍ ഉപയോഗിക്കുന്നു.</message>
 	<message key="manager.setup.enableUserRegistration">താഴെ പറയുന്ന ഒന്നോ അതിലധികമോ ചുമതലകളുടെ അടിസ്ഥാനത്തില്‍ യൂസര്‍സിനു സ്വയം ജേണലില്‍ റജിസ്റ്റര്‍ ചെയ്യാവുന്നതാണ്:</message>
 	<message key="manager.setup.enableUserRegistration.author">ഗ്രന്ഥകര്‍ത്താക്കള്‍ (ജേണലില്‍ മെറ്റീരിയല്‍സ് സമര്‍പ്പിക്കാന്‍ സാധിക്കുന്നതാണ്)</message>
 	<message key="manager.setup.enableUserRegistration.reader">വായനക്കാര്‍ (നോട്ടിഫിക്കേഷന്‍സ് ലഭിക്കുന്നതോടോപ്പം അവ സബ്സ്ക്രൈബറിനെ പോലെ തിട്ടപ്പെടുത്തുന്നതാണ്)</message>
@@ -244,7 +299,6 @@
 	<message key="manager.setup.guidingSubmissions">സ്റ്റെപ്പ് 3. ഗൈഡിങ്ങ് സബ്മിഷന്‍സ്</message>
 	<message key="manager.setup.homepageImage">ഹോംപേജ് ഇമേജ്</message>
 	<message key="manager.setup.homepageImageDescription">പേജിന്റെ നടുക്ക് ഒരു ഇമേജോ ഗ്രാഫിക്ക് ഫയലോ ചേര്‍ക്കുക</message>
-	<message key="manager.setup.includeCreativeCommons">പെട്ടെന്നുള്ളതോ മന്ദമായോ ഓപ്പണ്‍ ആക്സസ് ഓഫര്‍ ചെയ്യുന്ന ജേണലുകള്‍ സമയോചിതമായി  പ്രസിദ്ധീകരിച്ച വര്‍ക്കുകളുടെ അടിസ്ഥാനത്തില്‍ ക്രിയേറ്റിവ് കോമ്മണ്‍സ് ലൈസെന്‍സില്‍ ഉള്‍പ്പെടുത്തുക.</message>
 	<message key="manager.setup.information">വിവരം</message>
 	<message key="manager.setup.information.description">സൈഡ്ബാറിലെ "വിവരങ്ങള്‍” എന്ന വിഭാഗത്തില്‍ ലഭ്യമായിട്ടുള്ള ജേണലിന്റെ ലൈബ്രേറിയന്‍സ്, പ്രൊസ്പെറ്റിവ് ഓതര്‍സ്, പിന്നെ വായനക്കാര്‍ എന്നിവരെ പ്റ്റിയുള്ള ചുരുങ്ങിയ വിവരണം.</message>
 	<message key="manager.setup.information.forAuthors">ഗ്രന്ഥകര്‍ത്താകള്‍ക്കു  വേണ്ടി</message>
@@ -261,9 +315,9 @@
 	<message key="manager.setup.journalArchiving">ജേണല്‍ ആര്‍ച്ചീവിങ്ങ്</message>
 	<message key="manager.setup.journalDescription">ജേണലിന്റെ വിവരണങ്ങള്‍</message>
 	<message key="manager.setup.journalDescriptionDescription">ടെക്സ്റ്റ്/എച്ച്ടിഎംഎല്‍ 20-25 വാക്കുകളില്‍ ഒരു ചുരുങ്ങിയ വിവരണം നല്‍ക്കുക. ഇവ നാവിഗേഷന്‍ ലിങ്കിനു തൊട്ടു മുകളിലായി ദൃശ്യമാകുന്നതാണ്.</message>
-	<message key="manager.setup.favicon">ജേണല്‍ ഫവികോണ്‍</message>
-	<message key="manager.setup.faviconDescription">യൂസര്‍സ് താങ്കളുടെ സൈറ്റ് സന്ദര്‍ഷിക്കുമ്പോള്‍ നാവിഗേഷന്‍ ബാറിന്റെ കൂടെ ദൃശ്യമാകുന്നതിനായി ജേണലിനു വേണ്ടി ഒരു ഫവികോണ്‍ ചേര്‍ക്കുക.</message>
-	<message key="manager.setup.faviconInvalid">അപ്രാപ്യമായ ഫവികോണ്‍ ഫോര്‍മാറ്റ്. സ്വീകരിക്കുന്ന ഫോര്‍മാറ്റുകള്‍  .ico, .png, and .gif.</message>
+	<message key="manager.setup.journalFavicon">ജേണല്‍ ഫവികോണ്‍</message>
+	<message key="manager.setup.journalFaviconDescription">യൂസര്‍സ് താങ്കളുടെ സൈറ്റ് സന്ദര്‍ഷിക്കുമ്പോള്‍ നാവിഗേഷന്‍ ബാറിന്റെ കൂടെ ദൃശ്യമാകുന്നതിനായി ജേണലിനു വേണ്ടി ഒരു ഫവികോണ്‍ ചേര്‍ക്കുക.</message>
+	<message key="manager.setup.journalFaviconInvalid">അപ്രാപ്യമായ ഫവികോണ്‍ ഫോര്‍മാറ്റ്. സ്വീകരിക്കുന്ന ഫോര്‍മാറ്റുകള്‍  .ico, .png, and .gif.</message>
 	<message key="manager.setup.journalHomepageContent">ജേണലിന്റെ ഹോം പേജിന്റെ ഉള്ളടക്കം</message>
 	<message key="manager.setup.journalHomepageContentDescription">By default, the homepage consists of navigation links. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown. Note that the current issue is always accessible through the Current link in the navigation bar.</message>
 	<message key="manager.setup.journalHomepageHeader">ജേണല്‍ ഹോം പേജ് ഹെഡര്‍</message>
@@ -276,6 +330,8 @@
 	<message key="manager.setup.journalLogo.altText">ജേണല്‍ ലോഗോ</message>
 	<message key="manager.setup.journalPageFooter">ജേണല്‍ പേജ് ഫുട്ടര്‍</message>
 	<message key="manager.setup.journalPageFooterDescription">This is the footer of your journal. To change or update the footer, paste the HTML code in the textbox below. Examples could be another navigation bar, a counter, etc. This footer will appear on every page.</message>
+	<message key="manager.setup.journalPageHeader">ജേണല്‍ പേജ് ഹെഡര്‍</message>
+	<message key="manager.setup.journalPageHeaderDescription">A graphic version of the journal's title and logo (.gif, .jpg, or .png file), possibly a smaller version of the one used on the homepage, can be uploaded to appear as a header on journal pages, which will replace the text version that otherwise appears.</message>
 	<message key="manager.setup.journalPolicies">സ്റ്റെപ്പ്  2. ജേണല്‍ നയങ്ങള്‍</message>
 	<message key="manager.setup.journalSetup">ജേണല്‍ സെറ്റ്അപ്</message>
 	<message key="manager.setup.journalSetupUpdated">താങ്കളുടെ ജേണല്‍ സെറ്റ്അപ് അപ്ഡേറ്റ് ചെയ്തിരിക്കുന്നു.</message>
@@ -403,6 +459,8 @@
 	<message key="manager.setup.sponsorNoteDescription">ഈ ടെക്സ്റ്റ് "സ്പോണ്‍സര്‍" തലക്കെട്ടിനു താഴെ ലിസ്റ്റ് ഓഫ് സ്പോണ്‍സര്‍-നു മുകളിലും, യു.ആര്‍.എല്‍ "എബൗട്ട്" പേജില്‍ "ജേണല്‍ സ്പോണ്‍സര്‍ഷിപ്പ്"-നു താഴെയും പ്രത്യക്ഷപ്പെടും.</message>
 	<message key="manager.setup.sponsorsDescription">ജേണലിനെ സ്പോണ്‍സര്‍ ചെയ്യുന്ന സ്ഥാപനങ്ങളുടെ പേരുകള്‍ (ഉദാ: സ്കോളര്‍ലി അസോസിയേഷന്‍സ്, യൂണിവേഴ്സിറ്റി ഡിപ്പാര്‍ട്ടുമെന്റുകള്‍, കോപ്പറേറ്റിവ്സ് ) ജേണലിനെ സംബന്ധിച്ച വിവരങ്ങളില്‍ നന്ദി പ്രകാശനത്തോടൊപ്പം ഉണ്ടാവുന്നതാണ്.</message>
 	<message key="manager.setup.stepsToJournalSite">ജേണല്‍ വെബ് സൈറ്റിനായുള്ള 5 ഘട്ടങ്ങള്‍</message>
+	<message key="manager.setup.subjectClassification">സബ്ജക്ട് ക്ലാസിഫിക്കേഷന്‍</message>
+	<message key="manager.setup.subjectClassificationExamples">(ഉദാ: മാത്തമാറ്റിക്സ് സബ്ജക്ട് ക്ലാസിഫിക്കേഷന്‍; ലൈബ്രറി ഓഫ് കോണ്‍ഗ്രസ് ക്ലാസിഫിക്കേഷന്‍)</message>
 	<message key="manager.setup.subjectExamples">(ഉദാ:ഫോട്ടോസിന്തസിസ്; ബ്ലാക്ക് ഹോള്‍; ഫോര്‍ കളര്‍ മാപ്പ് പ്രോബ്ലം; ബയേസ്യന്‍ തിയറി)</message>
 	<message key="manager.setup.subjectKeywordTopic">കീ വേഡ്സ്</message>
 	<message key="manager.setup.subjectProvideExamples">ലേഖകര്‍ക്കുള്ള ഗൈഡായി കീവേഡ്സ് അല്ലെങ്കില്‍ ടോപ്പിക്സ് ഉദാഹരണങ്ങള്‍ നല്‍കുക</message>
@@ -466,19 +524,14 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">ഒരു പതിപ്പ് പ്രസിദ്ധീകരിച്ചതിനു ശേഷമുള്ള മാസം(ങ്ങള്‍)</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">ദയവായി ഒരു പ്രബലമായ കാലദൈര്‍ഘ്യം തിരഞ്ഞെടുക്കൂ.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">താഴെ കാണുന്ന ഡിലേയ്ഡ് ഓപ്പണ്‍ അക്സസ് പോളിസി, ജേണല്‍ അണ്ടര്‍ പോളിസികളില്‍ പോസ്റ്റ് ചെയ്യപ്പെടും.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">ദയവായി തന്നിരിക്കുന്ന ചെക്ക്ബോക്സ് ഉപയോഗിക്കൂ.</message>
 	<message key="manager.subscriptionPolicies.expiry">സബ്സ്ക്രിപ്ഷന്‍ കാലാവധി</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Upon subscription expiry, readers may be denied access to all subscription content or may continue to retain access to subscription content published prior to the subscription expiry date.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">മുഴുവന്‍ കാലാവധി</message>
 	<message key="manager.subscriptionPolicies.expiryFullDescription">കാലാവധി ആകുന്നതുവരെ ഏതൊരു സബ്സ്ക്രിപ്ഷനും അക്സസ് ചെയ്യുന്നതില്‍നിന്നും വായനക്കാരെ നിഷേധിച്ചിരിക്കുന്നു.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">ഭാഗീകമായ കാലാവധി</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Readers are denied access to recently published subscription content, but retain access to subscription content published prior to the subscription expiry date.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">ഇ-മെയില്‍ വഴി സബ്സ്ക്രൈബേഴ്സിനെ അറിയിക്കുക</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">സബ്സ്ക്രിപ്ഷന്‍ കാലാവധിക്കു ശേഷമുള്ള മാസം(ങ്ങള്‍)</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">ഇ-മെയിലിലൂടെ സബ്സ്ക്രൈബേഴ്സിനെ അറിയിക്കുക</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">സബ്സ്ക്രിപ്ഷന്‍ കാലാവധിക്കു ശേഷമുള്ള ആഴ്ച(കള്‍).</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">ഇ-മെയിലിലൂടെ സബ്സ്ക്രൈബേഴ്സിനെ അറിയിക്കുക</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">സബ്സ്ക്രിപ്ഷന്‍ കാലാവധിക്കു മുന്‍പുള്ള മാസം(മാസങ്ങള്‍).</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">ഇ-മെയിലിലൂടെ സബ്സ്ക്രൈബേഴ്സിന് അറിയിപ്പ് നല്‍കുക</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">സബ്സ്ക്രിപ്ഷന്‍ കാലാവധിക്കു മുന്‍പുള്ള ആഴ്ച(കള്‍).</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">സബ്സ്ക്രിപ്ഷന്‍ എക്സ്പൈറി റിമൈന്റര്‍</message>
