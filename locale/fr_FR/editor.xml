@@ -13,9 +13,6 @@
   -->
 
 <locale name="fr_FR" full_name="Français (France)">
-	<message key="editor.article.reviewForms">Formulaires d'évaluation</message>
-	<message key="editor.article.selectReviewForm">Sélectionner un formulaire d'évaluation</message>
-	<message key="editor.article.clearReviewForm">Réinitialiser le formulaire d'évaluation</message>
 	<message key="editor.home">Page d'accueil du rédacteur</message>
 	<message key="editor.submissionsAndPublishing">Soumissions et publication</message>
 	<message key="editor.submissionQueue">Soumission en attente</message>
@@ -93,9 +90,7 @@
 	<message key="editor.issues.noLiveIssues">Aucun numéro en ligne</message>
 	<message key="editor.issues.open">Ouvert</message>
 	<message key="editor.issues.pages">Pages</message>
-	<message key="editor.navigation.issues">Numéros</message>
 	<message key="editor.navigation.futureIssues">Numéros à venir</message>
-	<message key="editor.navigation.createIssue">Créer un numéro</message>
 	<message key="editor.navigation.issueArchive">Numéros précédents</message>
 	<message key="editor.article.designateReviewVersion">Désigner le fichier original comme le fichier d'évaluation</message>
 	<message key="editor.article.uploadReviewVersion">Télécharger la version d'évaluation révisée</message>
@@ -196,7 +191,6 @@
 	<message key="editor.article.uploaded">Téléchargé</message>
 	<message key="editor.article.removeCoverPage">Supprimer l'image de la page couverture?</message>
 	<message key="editor.article.remove">Supprimer</message>
-	<message key="editor.article.confirmChangeReviewForm">Avertissement : Changer le formulaire d'évaluation supprimera toutes les réponses que les évaluateurs ont fait en utilisant ce formulaire. Êtes-vous certain que vous souhaitez poursuivre?</message>
 	<message key="editor.issues.enableOpenAccessDate">Activer l'accès libre différé</message>
 	<message key="editor.issues.unpublishIssue">Dépublier le numéro</message>
 	<message key="editor.issues.confirmUnpublish">Êtes-vous certain que vous souhaitez retirer ce numéro publié?</message>
@@ -219,7 +213,4 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">L'identification des épreuves publiées du numéro existe déjà???</message>
 	<message key="editor.issues.backToIssueGalleys">Retourner aux épreuves du numéro</message>
 	<message key="editor.issues.confirmDeleteGalley">Êtes-vous certain de vouloir supprimer les épreuves de ce numéro?</message>
-	<message key="editor.notifyUsers.allMailingList">Inclure tous les courriel de la liste de diffusion ({$count} courriels)</message>
-	<message key="editor.publicGalleyIdentificationExists">L'identifiant public '{$publicIdentifier}' existe déjà pour une autre épreuve de cet article. Veuillez choisir un identifiant unique pour l’épreuve de cet article.</message>
-	<message key="editor.issues.resetArticlePublicationDates">Réinitialiser les dates de publication de l'article.</message>
 </locale>
