@@ -4,7 +4,7 @@
 <!--
   * locale/tr_TR/default.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -24,10 +24,11 @@
 	 *
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Gönderilen yazı daha önceden yayınlanmamış ve yayımlanmak üzere herhangi bir dergiye değerlendirilmek üzere sunulmamıştır (Yazar Rehberi'nde detaylı açıklama verimiştir).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Gönderi dosyası OpenOffice, Microsoft Word veya RTF dokümanı dosyası biçimindedir.</message>
+	<message key="default.journalSettings.checklist.fileFormat">Gönderi dosyası OpenOffice, Microsoft Word, RTF veya WordPerfect dokümanı dosyası biçimindedir.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">Burada mevcut başvurular için URL'ler sağlanmıştır.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Metin tek satırlı, 10 punto, altı çizilme yerine italik olarak vurgulanmış (geçerli URL adresleri ile) ve tüm şekil, resim ve tablolar sayfa sonu yerien metin içinde uygun noktalara yerleştirilmiştir. Baskı için, resimlerin kaliteli kopyalarını ek dosya olarak gönderiniz. Gönderilen dosyanın boyutu çok fazla olur ise, sistem almayabilir. Böyle durumlarda yazıyı bölüp, diğer bölümleri ek dosya olarak tek, tek gönderebilirsiniz.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Buraya eklenen sitil ve bibliyografk gereksinimler Dergi Hakkında kısmındaki <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Yazar Rehberi</a>'nden görülebilir.]]></message>
+	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Yazınızı hakem değerlendirmesi yapılan bir dergi bölümüne gönderiyor iseniz <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">kör hakemlikten emin olmak için</a> tıklayın. Yardım sayfasındaki önerilere tam olarak uyunuz.]]></message>
 	<message key="default.journalSettings.privacyStatement">Bu dergi sitesindeki isimler ve elektronik posta adresleri bu derginin belirtilen amaçları doğrultusunda kullanılacaktır. Diğer amaçlar veya başka bir bölüm için kullanılmaycaktır.</message>
 	<message key="default.journalSettings.openAccessPolicy">Bu dergi açık erişim sağlama politikasını benimsemiştir. Açık erişim bilginin global değişimini artırarak insanlık için yararlı sonuçlar doğurmaktadır.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">Yazarlar bu dergide yayınlanan çalışmalarını kişisel web sitelerinde veya kurumsal arşivlerde, dergiye kütüphanecilik kurallarına uyan bağlantı vererek açık olarak yayınlayabilirler.</message>
@@ -103,58 +104,11 @@ Yeni dosyada <strong>[silinmiş sözcük]</strong> değiştirilmiş bölümler k
 &bull; [silinen sözcükler] Köşeli parantez içine alınmış metin tümü ile silinecek metindir.
 &bull; Köşeli parantez içinde YORUM: biçiminde başlayan ifadeler editöre görüş bildirmeki için kullanılır.]]></message>
 
-<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Tasarım sürecine referans bağlama ekle</h4>
-	<p>Bir gönderiyi HTML veya PDF dönüştürüken gönderideki tüm bağlantıların aktif olduğundan emin olun.</p>
-	<h4>A. Yazar referansla birlikte bir bağlantı sağladığında</h4>
-	<ol>
-	<li>While the submission is still in its word processing format (e.g., Word), add the phrase VIEW ITEM to the end of the reference that has a URL.</li>
-	<li>Turn that phrase into a hyperlink by highlighting it and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
-	</ol>
-	<h4>B. Referanslar için Google Akademik Aramada Okuyucu Etkinleştir.</h4>
-	<ol>
-		<li>While the submission is still in its word processing format (e.g., Word), copy the title of the work referenced in the References list (if it appears to be too common a title—e.g., "Peace"—then copy author and title).</li>
-		<li>Paste the reference's title between the %22's, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search.</li>
 
-	<li>Add the phrase GS SEARCH to the end of each citation in the submission's References list.</li>
-	<li>Turn that phrase into a hyperlink by highlighting it and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
-	</ol>
-	<h4>C. Enabling Readers to Search for References with a DOI</h4>
-	<ol>
-	<li>While the submission is still in Word, copy a batch of references into CrossRef Text Query http://www.crossref.org/freeTextQuery/.</li>
-	<li>Paste each DOI that the Query provides in the following URL (between = and &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI.</li>
-	<li>Add the phrase CrossRef to the end of each citation in the submission's References list.</li>
-	<li>Turn that phrase into a hyperlink by highlighting the phrase and using Word's Insert Hyperlink tool and the appropriate URL prepared in #2.</li>
-	</ol>]]></message>
 
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>The proofreading stage is intended to catch any errors in the galley's spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF, and other available file formats used in publishing this item.</p>
-	<h4>For Spelling and Grammar Errors</h4>
-
-	<p>Copy the problem word or groups of words and paste them into the Proofreading Corrections box with "CHANGE-TO" instructions to the editor as follows:</p>
-
-	<pre>1. CHANGE...
-	then the others
-	TO...
-	than the others</pre>
-	<br />
-	<pre>2. CHANGE...
-	Malinowsky
-	TO...
-	Malinowski</pre>
-	<br />
-
-	<h4>Biçimlendirme hataları için</h4>
-	
-	<p>Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title "FORMATTING" as follows:</p>
-	<br />
-	<pre>3. FORMATTING
-	The numbers in Table 3 are not aligned in the third column.</pre>
-	<br />
-	<pre>4. FORMATTING
-	The paragraph that begins "This last topic..." is not indented.</pre>]]></message>
-
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
-</message>
+	<message key="default.journalSettings.emailSignature">________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Okuyucuların yayın bildirimi servisine kayıt olmaları önerilir. Dergi ana sayfasının üst kısmında yer alan <a href="{$indexUrl}/{$journalPath}/user/register">Kayıt</a> bağlantısı aracılığı ile bu işlem gerçekleştirilebilir. Bu kayıtla her yeni sayı yayınlandığında İÇİNDEKİLER sayfası e-posta aracılığı ile okuyucuya iletilir. Derginin <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">güvenlik kurallarına bakınız</a> yazarların kimlik bilgileri ve e-posta adresleri hiç bir şekilde başka amaçlar için kullanılmayacaktır.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Dergimize makale başvurusunda bulunmayı düşünüyorsanız <a href="{$indexUrl}/{$journalPath}/about">Dergi Hakkında</a> bağlantısı araılığıyla dergi yayın politikası ve <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Yazar Rehberi</a>'ne ulaşabilirsiniz. Yazarlar dergiye gönderi yapmadan önce <a href="{$indexUrl}/{$journalPath}/user/register">register</a> üye olmalıdır. Gönderi işlemi  <a href="{$indexUrl}/{$journalPath}/login">Üye Giriş</a> bağlantısı aracılığıyla 5 basamakta yapılır.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Kütüphanelere, bu açık erişimli dergiyi elektronik dergileri içine almaları önerilir. Açık Dergi Sitemleri ile ilgili ayrıntılı bilgi <a href="http://pkp.sfu.ca">Public Knowledge Project</a> bağlantısından elde edilebilir.]]></message>
@@ -175,4 +129,6 @@ Yeni dosyada <strong>[silinmiş sözcük]</strong> değiştirilmiş bölümler k
 	<message key="default.journalSettings.donationFeeDescription">Bu derginin herhangi bir miktarı bağış olarak alması ve okurlarına yüksek kalitede bir dergi sunmaya devam etmek istemesi düzenleyiciler için bir araç sağlamaktadır.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Sayı Satın Al</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Ücretin ödemesi, bu sayının yazdırılması, indirilmesi ve görüntülenmesine izin verir.</message>
+	<message key="default.journalSettings.emailHeader">Aşağıdaki mesaj {$journalName} adına teslim edilecektir.
+________________________________________________________________________</message>
 </locale>

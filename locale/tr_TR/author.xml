@@ -4,7 +4,7 @@
 <!--
   * locale/tr_TR/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="tr_TR" full_name = "Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="author.submit">Yeni Gönderi</message>
 	<message key="author.track">Aktif Gönderiler</message>
 	<message key="author.competingInterests"><![CDATA[Çıkar Çatışması (Competing Interests) <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI Rehberi</a>]]></message>
@@ -26,11 +26,11 @@
 	<message key="author.submit.step4">4. Adım: Ek Belge ve Dosyaların Yüklenmesi</message>
 	<message key="author.submit.step4a">4.1. Adım: Ek Dosya Yükleme</message>
 	<message key="author.submit.step5">5. Adım: Gönderi Onayı</message>
-	<message key="author.submit.start">Başla</message>
-	<message key="author.submit.upload">Gönderiyi Yükle</message>
-	<message key="author.submit.metadata">Üst Veri Gir</message>
-	<message key="author.submit.supplementaryFiles">Ek Dosyaları Yükle</message>
-	<message key="author.submit.confirmation">Onay</message>
+	<message key="author.submit.start">1. Başla</message>
+	<message key="author.submit.upload">2. Gönderiyi Yükle</message>
+	<message key="author.submit.metadata">3. Üst Veri Gir</message>
+	<message key="author.submit.supplementaryFiles">4. Ek Dosyaları Yükle</message>
+	<message key="author.submit.confirmation">5. Onay</message>
 	<message key="author.submit.cancelSubmission">Bu gönderiyi, yazar sayfasında, Aktif Gönderilerden seçerek daha sonra tamamlayabilirsiniz.</message>
 	<message key="author.submit.notAccepting">Dergi şu anda göneri kabul etemiyor.</message>
 	<message key="author.submit.requestWaiver">Vazgeç</message>
@@ -49,19 +49,19 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Problem mi yaşıyorsunuz? Yardım için <a href="mailto:{$supportEmail}">{$supportName}</a> adlı yetkiliye başvurabilirsiniz.]]></message>
 	<message key="author.submit.journalSection">Dergi Bölümü</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Bu gönderi için uygun bir bölüm seçin (Daha fazla bilgi için dergi <a href="{$aboutUrl}" target="_new">Hakkında</a> başlığı altındaki Bölümler ve Politikalara bakınız).]]></message>
-	<message key="submission.submit.selectSection">Lütfen bir bölüm seçiniz...</message>
+	<message key="author.submit.selectSection">Lütfen bir bölüm seçiniz...</message>
 	<message key="author.submit.submissionLocale">Gönderi Dili</message>
 	<message key="author.submit.submissionLocaleDescription">Bu dergi çeşitli dillerde başvuru kabul eder. Açılabilir menüden birincil olarak kullanmak istediğiniz dili seçiniz.</message>
-	<message key="submission.submit.submissionChecklist">Başvuru Kontrol Listesi</message>
-	<message key="submission.submit.submissionChecklistDescription">Yazarlar gönderiye devam edebilmek için Başvuru Kontrol Listesi'ndeki gerekliliklerin hepsini yerine getirdiklerini belirtmelidir.</message>
+	<message key="author.submit.submissionChecklist">Başvuru Kontrol Listesi</message>
+	<message key="author.submit.submissionChecklistDescription">Yazarlar gönderiye devam edebilmek için Başvuru Kontrol Listesi'ndeki gerekliliklerin hepsini yerine getirdiklerini belirtmelidir.</message>
 	<message key="author.submit.verifyChecklist">Devam etmeden önce başvuru kontrol listesindeki her öğenin tamalanmış olduğundan emin olmalısınız.</message>
 	<message key="author.submit.copyrightNoticeAgree">Yazarlar bu dergi tarafından yayımlanan gönderiler için Telif Hakkı koşullarını kabul etmiş sayılır. Telif Hakkı koşulları bu gönderi için de geçerli olacaktır (editöre iletmek istediğiniz yorumları aşağıya yazabilirsiniz).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Devam etmeden önce telif hakkı ile ilgili koşulları kabul etmeniz gerekmektedir.</message>
-	<message key="submission.submit.coverNote">Editör için notlar</message>
+	<message key="author.submit.commentsForEditor">Editör için notlar</message>
 	<message key="author.submit.comments">Editöre iletmek istediğiniz notları bu alana yazabilirsiniz (isteğe bağlı)</message>
 	<message key="author.submit.form.sectionRequired">Lütfen bu gönderi için uygun bir dergi bölümü seçiniz.</message>
 	<message key="author.submit.form.localeRequired">Lütfen gönderi dilini seçiniz.</message>
-	<message key="submission.submit.privacyStatement">Dergi Gizlilik Beyannamesi</message>
+	<message key="author.submit.privacyStatement">Dergi Gizlilik Beyannamesi</message>
 	<message key="author.submit.reorderInstructions">Yayın üzerindeki yazarların sırasnı yeniden düzenle.</message>
 	<message key="author.submit.reorder">Yazar isimlerini yeniden sırala</message>
 	<message key="author.submit.selectPrincipalContact">Editöryal iletişim için birincil irtibat.</message>
@@ -71,6 +71,7 @@
 	<message key="author.submit.submissionSupportingAgencies">Katkıda Bulunanlar ve Destekleyen Kuruluşlar</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Bu çalışmayı maddi ya da başka bir şekilde destekleyen kuruluşları (kişi, kurum veya servis) tanımlar. Destekleyenleri noktalı virgül ile ayırarak yazınız (Örneğin: Sönmez ÇELİK; Doğuş Üniversitesi; Doğuş Üniversitesi Kütüphanesi).</message>
 	<message key="author.submit.coverageInstructions">Araştırma materyalinin coğrafik konumları, kronolojik ya da tarihsel kapsamı ve/veya karekteristiği.</message>
+	<message key="author.submit.subjectClassInstructions">Sınıflandırma terimleri ve uygunsa numaralarını seçmek için bağlantı kurulmuş sınıflama sitemini kullanınız.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Türkçe = tr; İngilizce = en. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Diğer Kodlar</a>.]]></message>
 	<message key="author.submit.form.authorRequired">En az bir yazar gerekli.</message>
 	<message key="author.submit.form.authorRequiredFields">Her yazarın adı, soyadı ve e-posta adresi gereklidir.</message>
@@ -92,7 +93,7 @@
 	<message key="author.submit.addSupplementaryFile">Ek Dosya Ekle</message>
 	<message key="author.submit.editSupplementaryFile">Ek Dosya Düzenle</message>
 	<message key="author.submit.supplementaryFileData">Ek Dosya Üst Verisi</message>
-	<message key="author.submit.supplementaryFileDataDescription">Yüklediğiniz bu ek belge için lütfen aşağıdaki formu doldurunuz. (Eğer belgeniz yayın hakkı devir formu ise (a) "Başlık" alanına makalenizin başlığını yazınız, (b) "Tür" alanında "diğer" seçeneğini seçiniz, (c) "Kısa Açıklama" alanına "Yayın Kakkı Devir Formu" ifadesini yazınız, (d) "Yayıncı" kısmına "Deri yayıncısını" yazınız ve (e) makalenizin dil kodunu "dil" alanında belirtiniz.)</message>
+	<message key="author.submit.supplementaryFileDataDescription">Yüklediğiniz bu ek belge için lütfen aşağıdaki formu doldurunuz. (Eğer belgeniz yayın hakkı devir formu ise (a) "Başlık" alanına makalenizin başlığını yazınız, (b) "Tür" alanında "diğer" seçeneğini seçiniz, (c) "Kısa Açıklama" alanına "Yayın Kakkı Devir Formu" ifadesini yazınız, (d) "Yayıncı" kısmına "Dergi yayıncısını" yazınız ve (e) makalenizin dil kodunu "dil" alanında belirtiniz.)</message>
 	<message key="author.submit.supplementaryFileUpload">Ek Dosya</message>
 	<message key="author.submit.suppFile.createrOrOwner">Dosya sahibi</message>
 	<message key="author.submit.suppFile.researchInstrument">Araştırma Enstürmanları</message>

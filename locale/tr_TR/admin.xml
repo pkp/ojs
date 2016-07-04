@@ -4,7 +4,7 @@
 <!--
   * locale/tr_TR/admin.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="tr_TR" full_name = "Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="admin.hostedJournals">Yayınlanan Dergiler</message>
 	<message key="admin.settings.journalRedirect">Dergiye Yönlendirme</message>
 	<message key="admin.settings.journalRedirectInstructions">Siteye girişler, doğrudan derginin ana sayfasına yönlendirilecektir. Özellikle tek dergi tutuluyor ise yararlıdır.</message>
@@ -26,6 +26,7 @@
 	<message key="admin.languages.downloadFailed">Dil indirme başarısız. Hata mesaj(lar)ı aşağıda belirtilmiştir.</message>
 	<message key="admin.languages.localeInstalled">"{$locale}" dili yüklendi.</message>
 	<message key="admin.languages.download">Dil İndir</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Varsayılan e-posta şablonları güncelle</message>
 	<message key="admin.languages.download.cannotOpen">PKP web sitesinden dil tanımlayıcısı açılamıyor.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Dil kayıt dosyasına yeni dil eklenemiyor, tipik "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">ADS Üye Veri Tabanı</message>
@@ -37,13 +38,14 @@
 	<message key="admin.systemConfigurationDescription"><![CDATA[<tt>config.inc.php</tt>'de ADS kurulum ayarları.]]></message>
 	<message key="admin.journals.journalSettings">Dergi Ayarları</message>
 	<message key="admin.journals.noneCreated">Dergi Oluşturulmadı.</message>
-	<message key="admin.contexts.confirmDelete">Bu dergi ve tüm içeriğini kalıcı olarak silmek istediğinizden emin misiniz?</message>
-	<message key="admin.contexts.create">Dergi Oluştur</message>
+	<message key="admin.journals.confirmDelete">Bu dergi ve tüm içeriğini kalıcı olarak silmek istediğinizden emin misiniz?</message>
+	<message key="admin.journals.create">Dergi Oluştur</message>
+	<message key="admin.journals.createInstructions">Otomatik olarak bu derginin yöneticisi olarak kaydedileceksiniz. Yeni bir dergi oluşturduktan sonra, ayarları ile devam edebilmek ve kullanıcı kaydı yapabilmek için yönetici olarak girin.</message>
 	<message key="admin.journals.urlWillBe">Bu dergiyi tanımlayan kısa bir kelime ya da kısaltma olmalıdır. Derginin URL adresi {$sampleUrl} şeklinde olabilir.</message>
-	<message key="admin.contexts.form.titleRequired">Bir başlık gerekli.</message>
-	<message key="admin.contexts.form.pathRequired">Bir yol gerekli.</message>
-	<message key="admin.contexts.form.pathAlphaNumeric">Yol sadece alfanümerik karekterler, alt çizgi, tire içerebilir ve bir alfanümerik karekterle başlamak ve bitmek zorundadır.</message>
-	<message key="admin.contexts.form.pathExists">Seçilen yol bir başka dergi tarafından kullanılmaktadır.</message>
+	<message key="admin.journals.form.titleRequired">Bir başlık gerekli.</message>
+	<message key="admin.journals.form.pathRequired">Bir yol gerekli.</message>
+	<message key="admin.journals.form.pathAlphaNumeric">Yol sadece alfanümerik karekterler, alt çizgi, tire içerebilir ve bir alfanümerik karekterle başlamak ve bitmek zorundadır.</message>
+	<message key="admin.journals.form.pathExists">Seçilen yol bir başka dergi tarafından kullanılmaktadır.</message>
 	<message key="admin.journals.enableJournalInstructions">Bu derginin sitede açık olarak görülebilir olmasını sağlayın</message>
 	<message key="admin.journals.journalDescription">Dergi tanımı</message>
 	<message key="admin.journal.pathImportInstructions">Varolan dergi yolu veya dergi yolu oluşturmak (Ör., "ads").</message>
@@ -59,6 +61,7 @@
 	<message key="admin.mergeUsers.allUsers">Tüm Kayıtlı Üyeler</message>
 	<message key="admin.mergeUsers.confirm">Seçilen {$oldAccountCount} hesap/hesapları "{$newUsername}" kullanıcı hesabında birleştirmek istediğinizen emin misiniz? Seçilen {$oldAccountCount} hesap daha sonra açılamaz. Bu işlem geri alınamaz.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Kayıtlı olmayan üyeler.</message>
+	<message key="admin.settings.useAlphalist">Birden çok dergi olan siteler için, dergiler arasında hızlı yönlendirmeyi sağlayan alfabetik liste göstermektedir.</message>
 	<message key="admin.settings.journalsList.description">Lütfen site sayfasında her bir dergi için listelenen dergi elemanlarını seçiniz.</message>
 	<message key="admin.categories.enable.description">Dergilerin geniş kümeler düzenlemenize yardımcı olmak için Site Yöneticisi burada kategorileri tanımlayarak bir dizi seçebilir. Dergi yöneticisi her bir dergi için bu kategorilerden birçoğunu seçebilir ve okuyucular dergi koleksiyonlarını katagorilere göre listeleyebilir.</message>
 	<message key="admin.categories.editTitle">Kategori Düzenle</message>
@@ -77,4 +80,12 @@
 	<message key="admin.categories.noneCreated">Herhangi bir kategori oluşturulamadı.</message>
 	<message key="admin.categories.confirmDelete">Bu kategoriyi silmek istediğinize emin misiniz?</message>
 	<message key="admin.categories.nameRequired">Bir kategori adı gerekli.</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Hata: {$filePath} geçici klasörü oluşturamıyor.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Hata: {$tmpFilePath} için {$filePath} geçici dosyası kopyalanamaz</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Hata: {$tmpFilePath} dosyası silinemez</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Uyarı: {$filePath} dosyası kullanıcı istatisikleri dizininde zaten var.</message>
+	<message key="admin.copyAccessLogFileTool.success">Başarı: {$destinationPath} kaynağından {$filePath} hedefine</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Hata: {$tmpDir} geçici klasörü oluşturuşamıyor</message>
+	<message key="admin.settings.security">Güvenlik</message>
+	<message key="admin.settings.security.plugins">Dergi yöneticilerinin güncelleme veya eklentileri silmesini engelle.</message>
 </locale>
