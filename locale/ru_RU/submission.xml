@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/ru_RU/submission.xml
+  *
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization strings for the ru_RU (Русский) locale.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
+  -->
+
+<locale name="ru_RU" full_name = "Русский">
+	<!-- Submission wizard -->
+
+	<!-- Submission Information Modal -->
+
+	<!-- events -->
+
+	<!-- galleys grid -->
+
+	<!-- galley files grid -->
+</locale>
