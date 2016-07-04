@@ -112,7 +112,7 @@
 	<message key="manager.section.submissionsToThisSection">Envíos realizados a esta sección de la revista</message>
 	<message key="manager.sections.unassigned">Editores/as de sección disponibles</message>
 	<message key="manager.sections.wordCount">N.º de palabras</message>
-	<message key="manager.sections.wordCountInstructions">Limitar el número de palabras del resumen en esta sección; si no desea poner un límite, escriba un 0: </message>
+	<message key="manager.sections.wordCountInstructions">Limitar el número de palabras del resumen en esta sección; si no desea poner un límite, escriba un 0:</message>
 	<message key="manager.setup">Configuración</message>
 	<message key="manager.setup.aboutItemContent">Contenido</message>
 	<message key="manager.setup.addAboutItem">Añadir un elemento "Acerca de"</message>
@@ -128,7 +128,7 @@
 	<message key="manager.setup.announcementsDescription">Pueden publicarse avisos para informar a los lectores/as sobre noticias y eventos de la revista. Estos se mostrarán en la página Avisos.</message>
 	<message key="manager.setup.announcementsIntroduction">Información adicional</message>
 	<message key="manager.setup.announcementsIntroductionDescription">Introduzca la información adicional que ha de mostrarse en la página Avisos.</message>
-	<message key="manager.setup.appearInAboutJournal">(Para que se muestre en la sección Acerca de la revista) </message>
+	<message key="manager.setup.appearInAboutJournal">(Para que se muestre en la sección Acerca de la revista)</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Pedir a los autores/as que adjunten una declaración de conflicto de intereses a su envío.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Pedir a los revisores/as que adjunten una declaración de conflicto de intereses a cada evaluación por pares.</message>
 	<message key="manager.setup.history">Historial de la revista</message>
