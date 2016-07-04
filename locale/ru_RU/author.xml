@@ -54,7 +54,6 @@
 	<message key="author.submit.submissionLocale">Язык отправляемой статьи</message>
 	<message key="author.submit.submissionLocaleDescription">Этот журнал принимает статьи на нескольких языках. Выберите основной язык отправляемой статьи из раскрывающегося списка ниже.</message>
 	<message key="author.submit.submissionChecklist">Контрольный список подготовки статьи к отправке</message>
-	<message key="submission.submit.submissionChecklistDescription">Подтвердите, что отправляемая статья готова для рассмотрения этим журналом, отметив следующие пункты (комментарии для редактора могут быть добавлены ниже).</message>
 	<message key="author.submit.verifyChecklist">Перед продолжением отправки вы должны убедиться, что выполнены все пункты в контрольном списке подготовки статьи к отправке.</message>
 	<message key="author.submit.copyrightNoticeAgree">Авторы согласны с Условиями передачи авторских прав, которые будут применены к этой статье в случае, если эта статья будет опубликована этим журналом (комментарии для редактора могут быть добавлены ниже).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Перед продолжением отправки вы должны принять Условия передачи авторских прав.</message>
@@ -69,10 +68,7 @@
 	<message key="author.submit.addAuthor">Добавить автора</message>
 	<message key="author.submit.deleteAuthor">Удалить автора</message>
 	<message key="author.submit.submissionIndexingDescription">Укажите ключевые слова для индексирования этой статьи; ключевые слова разделяйте точками с запятой (слово1; слово2; слово3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Благодарность и поддержка</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Укажите агентства (лицо, организацию или службу), которые внесли свой вклад в содержание, обеспечили финансирование или поддержку работы, представленной в этой статье. Разделяйте их точками с запятой (например, Иван Иванов, Университет Метро; Master University, Department of Computer Science).</message>
 	<message key="author.submit.coverageInstructions">Опишите геопространственный, хронологический или исторический охват вашего исследования и/или характеристики исследуемого объекта.</message>
-	<message key="author.submit.subjectClassInstructions">Используйте систему классификации с гиперссылками для выбора подходящих классификационных категорий и их номеров (если эти номера существуют).</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es; Russian=ru. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Дополнительные коды</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Минимум один автор обязателен.</message>
 	<message key="author.submit.form.authorRequiredFields">Для каждого автора обязательно нужно ввести имя, фамилию и адрес электронной почты.</message>
@@ -105,7 +101,6 @@
 	<message key="author.submit.suppFile.dataSet">Набор данных</message>
 	<message key="author.submit.suppFile.sourceText">Исходный текст</message>
 	<message key="author.submit.suppFile.briefDescription">Краткое описание</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Предоставивший материал или спонсор</message>
 	<message key="author.submit.suppFile.availableToPeers">Предоставить файл рецензентам (без метаданных), так как он не нарушает требования слепого рецензирования.</message>
 	<message key="author.submit.suppFile.publisherDescription">Использовать только для официально опубликованных материалов.</message>
 	<message key="author.submit.suppFile.dateDescription">Дата сбора данных или создания инструмента.</message>
@@ -122,7 +117,6 @@
 	<message key="author.submit.filesSummary">Сведения о файлах</message>
 	<message key="author.submit.finishSubmission">Завершить отправку</message>
 	<message key="author.submit.submissionComplete">Статья отправлена. Спасибо за интерес к публикации в журнале «{$journalTitle}».</message>
-	<message key="author.submit.expedite"><![CDATA[Если эта статья уже представлена в формате, готовом для публикации, и не требует  рецензирования, редактирования или форматирования, ее можно поместить непосредственно на последнюю стадию процесса редактирования, <a href="{$expediteUrl}" class="action">нажав на эту ссылку</a>. (Замечание: только редакторы журнала могут воспользоваться этой возможностью для своих статей.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Загрузить авторскую версию</message>
 	<message key="author.article.copyeditedFile">Файл после литературного редактирования</message>
 	<message key="author.article.authorRevisedFile">Файл автора</message>

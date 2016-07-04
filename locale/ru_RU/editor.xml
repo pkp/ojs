@@ -13,11 +13,7 @@
   -->
 
 <locale name="ru_RU" full_name="Русский">
-	<message key="editor.article.reviewForms">Формы для рецензии</message>
-	<message key="editor.article.selectReviewForm">Выбрать форму рецензии</message>
-	<message key="editor.article.clearReviewForm">Очистить форму рецензии</message>
 	<message key="editor.home">Главная страница редактора</message>
-	<message key="editor.article.confirmChangeReviewForm">Предупреждение: внесение изменений в форму рецензии повлияет на все ответы рецензентов, которые уже были сделаны с использованием данной формы. Вы уверены, что хотите продолжить?</message>
 	<message key="editor.reassign">Переназначить</message>
 	<message key="editor.submissionsAndPublishing">Рукописи и публикация</message>
 	<message key="editor.submissionQueue">Очередь рукописей</message>
@@ -28,7 +24,6 @@
 	<message key="editor.allEditors">Все редакторы</message>
 	<message key="editor.me">Я</message>
 	<message key="editor.publicIdentificationExists">Открытый идентификатор «{$publicIdentifier}» уже используется для другого объекта (выпуска, статьи, гранки или дополнительного файла). Пожалуйста, выбирайте уникальные идентификаторы в рамках своего журнала.</message>
-	<message key="editor.publicGalleyIdentificationExists">Открытый идентификатор «{$publicIdentifier}» уже используется для другой гранки этой статьи. Пожалуйста, выберите уникальный идентификатор гранки в рамках этой статьи.</message>
 	<message key="editor.submissionArchive.noSubmissions">Нет рукописей в архиве.</message>
 	<message key="editor.submissionArchive.saveChanges">Сохранить изменения в архиве рукописей? Отмеченные для удаления рукописи будут навсегда удалены из системы.</message>
 	<message key="editor.submissionArchive.confirmDelete">Вы уверены, что хотите навсегда удалить эту рукопись?</message>
@@ -42,7 +37,6 @@
 	<message key="editor.notifyUsers.allAuthors">Все опубликованные авторы ({$count} пользователей)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Все индивидуальные подписчики ({$count} пользователей)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Все учреждения-подписчики ({$count} пользователей)</message>
-	<message key="editor.notifyUsers.allMailingList">Включить все адреса из списка рассылки ({$count} адресов электронной почты)</message>
 	<message key="editor.notifyUsers.inProgress">Рассылаются уведомления пользователям...</message>
 	<message key="editor.usersNotified">Пользователи уведомлены</message>
 	<message key="editor.notifyUsers.allUsers">Отправить это сообщение всем пользователям, связанным с этим журналом ({$count} пользователей)</message>
@@ -67,7 +61,6 @@
 	<message key="editor.issues.publicIssueIdentifier">Открытый идентификатор выпуска</message>
 	<message key="editor.issues.description">Описание</message>
 	<message key="editor.issues.accessStatus">Статус доступа</message>
-	<message key="editor.issues.resetArticlePublicationDates">Сбросить даты публикации статей</message>
 	<message key="editor.issues.accessDate">Дата открытого доступе</message>
 	<message key="editor.issues.enableOpenAccessDate">Включить отложенный открытый доступ</message>
 	<message key="editor.issues.coverPage">Изображение обложки</message>
@@ -119,9 +112,7 @@
 	<message key="editor.issues.backToIssueGalleys">Назад к гранкам выпуска</message>
 	<message key="editor.issues.viewingGalley">Просмотр гранки выпуска</message>
 	<message key="editor.issues.confirmDeleteGalley">Вы уверены, что хотите удалить эту гранку выпуска?</message>
-	<message key="editor.navigation.issues">Выпуски</message>
 	<message key="editor.navigation.futureIssues">Будущие выпуски</message>
-	<message key="editor.navigation.createIssue">Создать выпуск</message>
 	<message key="editor.navigation.issueArchive">Старые выпуски</message>
 	<message key="editor.article.designateReviewVersion">Обозначить оригинальный файл как версию для рецензирования</message>
 	<message key="editor.article.uploadReviewVersion">Загрузить переработанную версию для рецензирования</message>

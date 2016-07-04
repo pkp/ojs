@@ -15,10 +15,7 @@
 <locale name="ru_RU" full_name="Русский">
 	<message key="admin.hostedJournals">Журналы на сайте</message>
 	<message key="admin.settings.journalRedirect">Перенаправить</message>
-	<message key="admin.settings.security">Безопасность</message>
-	<message key="admin.settings.security.plugins">Запретить управляющим журналами устанавливать, обновлять или удалять плагины.</message>
 	<message key="admin.settings.options">Параметры</message>
-	<message key="admin.settings.useAlphalist">Для сайтов с большим количеством журналов показывать список букв на главной странице для быстрого перехода между журналами по первой букве названия.</message>
 	<message key="admin.settings.usePaging">Для сайтов с большим количеством журналов разбивать список журналов на несколько страниц.</message>
 	<message key="admin.settings.journalRedirectInstructions">Основной страницей сайта станет главная страница этого журнала. Это полезно, например, если на сайте размещается только один журнал.</message>
 	<message key="admin.settings.noJournalRedirect">Не перенаправлять</message>
@@ -37,11 +34,9 @@
 	<message key="admin.locale.maybeIncomplete">Поддержка отмеченных языков может быть неполной.</message>
 	<message key="admin.languages.confirmUninstall">Вы уверены, что хотите удалить этот язык? Это может повлиять на все размещенные журналы, которые сейчас используют его.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Выберите дополнительные языки для установки их поддержки в этой системе. Языки должны быть установлены до того, как их можно будет использовать в размещенных журналах. Смотрите в документации OJS информацию о том, как добавить поддержку новых языков.</message>
-	<message key="admin.languages.downloadLocales">Загрузка языков</message>
 	<message key="admin.languages.downloadFailed">Загрузка языка завершилась ошибкой. Сообщения ниже описывают эту ошибку.</message>
 	<message key="admin.languages.localeInstalled">Язык "{$locale}" был установлен.</message>
 	<message key="admin.languages.download">Загрузить язык</message>
-	<message key="admin.languages.reloadDefaultEmailTemplates">Перезагрузка шаблоны писем по умолчанию</message>
 	<message key="admin.languages.download.cannotOpen">Невозможно открыть дескриптор языка с веб-сайта PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Невозможно добавить новый язык в файл списка языков, обычно расположенный «registry/locales.xml».</message>
 	<message key="admin.auth.ojs">База пользователей OJS</message>
@@ -57,7 +52,6 @@
 	<message key="admin.contexts.create">Создать журнал</message>
 	<message key="admin.journals.createInstructions">Вы будете автоматически записаны управляющим этого журнала. После создания нового журнала войдите в него как управляющий и продолжите его настройку и запись пользователей.</message>
 	<message key="admin.journals.urlWillBe">Это должно быть одно короткое слово или аббревиатура, которая идентифицирует журнал. URL-адрес журнала будет {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">Название журнала обязательно.</message>
 	<message key="admin.contexts.form.pathRequired">Путь обязателен.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Путь может содержать только буквы и цифры английского алфавита, подчеркивания и дефисы; путь должен начинаться с буквы или цифры.</message>
 	<message key="admin.contexts.form.pathExists">Выбранный путь уже используется другим журналом.</message>
@@ -90,19 +84,5 @@
 	<message key="admin.categories.name">Название</message>
 	<message key="admin.categories.nameRequired">Название категории обязательно.</message>
 	
-	<message key="admin.copyAccessLogFileTool.usage">Копирует прошедшие файлы журнала доступа apache, отфильтровывая записи, связанные с этой инсталляцией,
-в каталог текущих файлов, находящийся внутри каталога stage плагина «Статистика использования». Должен запускаться под пользователем с достаточными правами для чтения файлов журнала доступа apache.
-
-Этот инструмент будет только копировать те файлы, которые еще не скопированы в каталоги загрузки файлов плагина «Статистика использования» (stage, processing, archive, reject).
-
-Вызов: {$scriptName} path/to/apache/log/file.log
-Вызов (обработка всех файлов в каталоге): {$scriptName} path/to/apache/directory 
-Вызов (обработка всех файлов в каталоге, которые начинаются с переданной строки): {$scriptName} path/to/apache/directory starts_with_string
-	</message>
-	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Ошибка: не могу создать временный каталог {$tmpDir}</message>
-	<message key="admin.copyAccessLogFileTool.error.acessingFile">Ошибка: Файл {$filePath} не существует или к нему нет доступа.</message>
-	<message key="admin.copyAccessLogFileTool.error.copyingFile">Ошибка: не могу скопировать файл из {$filePath} в {$tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.error.deletingFile">Ошибка: не могу удалить файл {$tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Предупреждение: файл {$filePath} уже существует в каталоге статистики использования.</message>
-	<message key="admin.copyAccessLogFileTool.success">Успех: {$filePath} в {$destinationPath}</message>
+	
 </locale>

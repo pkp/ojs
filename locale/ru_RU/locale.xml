@@ -29,7 +29,6 @@
 	<!-- формы рецензии (начало) -->
 
 	<!-- общее -->
-	<message key="common.journal">Журнал</message>
 
 	<!-- Управление журналом -->
 
@@ -38,30 +37,8 @@
 	<message key="navigation.categories.browse">Обзор</message>
 
 	<!--  рецензирование -->
-	<message key="submission.reviewForm">Форма рецензии</message>
-	<message key="submission.reviewFormResponse">Сообщение формы рецензии</message>
 
 	<!-- Permissions -->
-	<message key="submission.permissions">Разрешения</message>
-	<message key="submission.license">Лицензия</message>
-	<message key="submission.copyright">Авторское право</message>
-	<message key="submission.copyrightHolder">Владелец авторского права</message>
-	<message key="submission.copyrightYear">Год авторского права</message>
-	<message key="submission.copyrightStatement">(c) {$copyrightYear} {$copyrightHolder}</message>
-	<message key="submission.licenseURLValid">Пожалуйста, укажите правильный адрес URL (включая http://).</message>
-	<message key="submission.licenseURL">URL лицензии</message>
-	<message key="submission.license.cc.by-nc-nd4">CC «Attribution-NonCommercial-NoDerivatives» («Атрибуция — Некоммерческое использование — Без производных произведений») 4.0</message>
-	<message key="submission.license.cc.by-nc4">CC «Attribution-NonCommercial» («Атрибуция — Некоммерческое использование») 4.0</message>
-	<message key="submission.license.cc.by-nc-sa4">CC «Attribution-NonCommercial-ShareAlike» («Атрибуция — Некоммерческое использование — На тех же условиях») 4.0</message>
-	<message key="submission.license.cc.by-nd4">CC «Attribution-NoDerivatives» («Атрибуция — Без производных произведений») 4.0</message>
-	<message key="submission.license.cc.by4">CC «Attribution» («Атрибуция») 4.0</message>
-	<message key="submission.license.cc.by-sa4">CC «Attribution-ShareAlike» («Атрибуция — На тех же условиях») 4.0</message>
-	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Это произведение доступно по <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">лицензии Creative Commons «Attribution-NonCommercial-NoDerivatives» («Атрибуция — Некоммерческое использование — Без производных произведений») 4.0 Всемирная</a>.]]></message>
-	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Это произведение доступно по <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">лицензии Creative Commons «Attribution-NonCommercial» («Атрибуция — Некоммерческое использование») 4.0 Всемирная</a>.]]></message>
-	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Это произведение доступно по <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">лицензии Creative Commons «Attribution-NonCommercial-ShareAlike» («Атрибуция — Некоммерческое использование — На тех же условиях») 4.0 Всемирная</a>.]]></message>
-	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />Это произведение доступно по <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">лицензии Creative Commons «Attribution-NoDerivatives» («Атрибуция — Без производных произведений») 4.0 Всемирная</a>.]]></message>
-	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Это произведение доступно по <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">лицензии Creative Commons «Attribution» («Атрибуция») 4.0 Всемирная</a>.]]></message>
-	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Это произведение доступно по <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">лицензии Creative Commons «Attribution-ShareAlike» («Атрибуция — На тех же условиях») 4.0 Всемирная</a>.]]></message>
 
 	<message key="reviewer.article.enterReviewForm">Щелкните на значке, чтобы заполнить форму рецензии.</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Пожалуйста, заполните обязательные поля.</message>
@@ -79,7 +56,6 @@
 	<message key="common.confirmComplete">Вы уверены, что хотите отметить эту задачу как завершенную? После этого у Вас может не быть возможности внести изменения.</message>
 	<message key="common.payment">Платеж</message>
 	<message key="common.payments">Платежи</message>
-	<message key="common.pageHeader.altText">Заголовок страницы</message>
 	<message key="common.homePageHeader.altText">Заголовок главной страницы</message>
 	<message key="common.journalHomepageImage.altText">Изображение главной страницы журнала</message>
 
@@ -93,7 +69,6 @@
 
 	<!-- Навигация -->
 	<message key="navigation.journalHelp">Помощь</message>
-	<message key="navigation.archives">Архивы</message>
 	<message key="navigation.current">Текущий выпуск</message>
 	<message key="navigation.otherJournals">Другие журналы</message>
 	<message key="navigation.browseByIssue">По выпускам</message>
@@ -146,12 +121,8 @@
 	<message key="article.suppFiles">Дополнительные файлы</message>
 	<message key="article.suppFilesAbbrev">Доп. файлы</message>
 	<message key="article.discipline">Академические дисциплины и разделы дисциплин</message>
-	<message key="article.subjectClassification">Тематическая классификация</message>
 	<message key="article.subject">Ключевые слова</message>
 	<message key="article.coverage">Охват</message>
-	<message key="article.coverageGeo">Геопространственный охват</message>
-	<message key="article.coverageChron">Хронологический или исторический охват</message>
-	<message key="article.coverageSample">Характеристики исследуемого образца</message>
 	<message key="article.type">Тип, метод или подход</message>
 	<message key="article.language">Язык</message>
 	<message key="article.sectionEditor">РР</message>
@@ -234,27 +205,12 @@
 	<message key="user.noRoles.submitArticleRegClosed">Отправить статью: регистрация авторов сейчас закрыта.</message>
 	<message key="user.noRoles.regReviewer">Зарегистрироваться в качестве рецензента</message>
 	<message key="user.noRoles.regReviewerClosed">Зарегистрироваться в качестве рецензента: регистрация рецензентов сейчас закрыта.</message>
-	<message key="user.orcid">ORCID iD</message>
-	<message key="user.orcid.description"><![CDATA[ORCID iD могут быть присвоен только <a href="http://orcid.org/" target="_blank">Регистром ORCID</a>. Вы должны соответствовать их стандартам для формирования ORCID iD и добавить полный адрес URI (например, <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
-	<message key="user.profile.form.orcidInvalid">Указанный вами ORCID iD является неправильным.</message>
-	<message key="user.profile.implicitAuthChangePasswordInstructions">Если вы вошли в систему через Shibboleth, для смены пароля следуйте схеме, установленной в вашей организации. Локальные пользователи могут продолжить смену ниже.</message>
 
 	<!-- Роли -->
 	<message key="user.role.manager">Управляющий журнала</message>
-	<message key="user.role.editor">Редактор</message>
 	<message key="user.role.sectionEditor">Редактор раздела</message>
-	<message key="user.role.layoutEditor">Верстальщик</message>
-	<message key="user.role.copyeditor">Литературный редактор</message>
-	<message key="user.role.proofreader">Корректор</message>
-	<message key="user.role.author">Автор</message>
 	<message key="user.role.subscriptionManager">Менеджер по подписке</message>
 	<message key="user.role.managers">Управляющие журналом</message>
-	<message key="user.role.editors">Редакторы</message>
-	<message key="user.role.sectionEditors">Редакторы разделов</message>
-	<message key="user.role.layoutEditors">Верстальщики</message>
-	<message key="user.role.copyeditors">Литературные редакторы</message>
-	<message key="user.role.proofreaders">Корректоры</message>
-	<message key="user.role.authors">Авторы</message>
 	<message key="user.role.subscriptionManagers">Менеджеры по подписке</message>
 
 	<!-- Общие термины выпуска -->
@@ -273,7 +229,6 @@
 	<message key="issue.fullIssue">Весь выпуск</message>
 	<message key="issue.nonpdf.title">Скачать выпуск</message>
 	<message key="issue.viewIssue">Просмотреть выпуск</message>
-	<message key="issue.viewIssueDescription">Просмотреть или скачать весь выпуск</message>
 
 	<!-- Общие термины типа подписки -->
 	<message key="subscriptionTypes.currency">Валюта</message>
@@ -306,7 +261,6 @@
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">Событие отправки</message>
-	<message key="submission.event.general.articleSubmitted">Статья отправлена</message>
 	<message key="submission.event.general.issueScheduled">Статья отправлена в очередь запланированных в номер</message>
 	<message key="submission.event.general.issueAssigned">Статья назначена в выпуск</message>
 	<message key="submission.event.general.articlePublished">Статья опубликована</message>
@@ -410,10 +364,6 @@
 	<message key="plugins.categories.generic.description">Общие плагины используются для расширения возможностей Open Journal Systems различными способами, которые не поддерживаются другими категориями плагинов.</message>
 	<message key="plugins.categories.implicitAuth">Плагины скрытой аутентификации</message>
 	<message key="plugins.categories.implicitAuth.description">Плагины скрытой аутентификации реализуют поддержку аутентификации пользователей на основе заголовков протокола http.</message>
-	<message key="plugins.categories.oaiMetadataFormats">Плагины формата метаданных OAI</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Эти плагины формата описывают метаданные при коммуникации в рамках OAI.</message>
-	<message key="plugins.categories.pubIds">Плагины открытых идентификаторов</message>
-	<message key="plugins.categories.pubIds.description">Эти плагины реализуют поддержку открытых идентификаторов.</message>
 
 	<!-- Браузер файлов -->
 
@@ -428,7 +378,6 @@
 	рецензентам запрос на рецензирование по электронной почте, с прикрепленной к письму копией статьи. Рецензенты электронной почтой отправляют редакторам свое согласие (или свой отказ), а также свою рецензию и рекомендацию. Редакторы вносят согласие (или отказ) рецензента, рецензию и рекомендацию на странице «Рецензирование» этой статьи, чтобы отразить на сайте процесс рецензирования.</message>
 
 
-	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems поддерживает систему <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe), которая обеспечивает безопасную и постоянную архивацию журнала. У вас есть несколько вариантов для включения вашего жкрнала в сеть LOCKSS:]]></message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[<strong>Другие сети LOCKSS</strong>
 <br /><br />
@@ -455,7 +404,6 @@
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Чтобы контент этого журнала индексировался в глобальной распределенной системе баз данных исследований, пожалуйста, прочтите <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">шаги, чтобы стать поставщиком данных,</a> и зарегистрируйте Ваш журнал в официальном <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">реестре Open Archives</a>. Для регистрации вам потребуется базовый адрес (URL) для вашего хранилища: <span class="highlight">{$oaiUrl}</span>.  После этого вы можете зарегистрировать ваш журнал в <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">реестре UIUC OAI </a> и <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 <br /><br />
 Обратите внимание, что если ваш администратор сайта уже зарегистрировал этот сайт в этих сервисах, ваш журнал автоматически будет индексироваться в глобальной распределенной системе баз данных исследований и вам не нужно регистрировать ваш журнал.]]></message>
-	<message key="manager.setup.citations">Включить Помощник разметки цитат</message>
 
 	<!-- Настройка (Шаг 4) -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Шаги: Очередь отправленных статей &gt; Реценизрование статьи &gt; Редактирование статьи &gt; Содержание выпуска.<br /><br />
@@ -728,19 +676,12 @@
 	<message key="submission.comments.saveAndEmailEditor">Сохранить и отправить редактору</message>
 
 	<!-- Вход в систему -->
-	<message key="user.login.registerNewAccount">Не являетесь пользователем? Зарегистрируйтесь на этом сайте</message>
 	<message key="user.login.resetPasswordInstructions"><![CDATA[В целях безопасности эта система сбрасывает пароль зарегистрированного пользователя и высылает новый, а не отправляет пользователю его 
 старый пароль.<br /><br />Введите ниже ваш адрес электронной почты для сброса вашего пароля. Подтверждение будет направлено вам на этот адрес электронной почты.]]></message>
-	<message key="user.login.implicitAuthLogin">Вход через Shibboleth</message>
 
 	<!-- Регистрация -->
-	<message key="user.register.emailValidation">Требуется подтверждение адреса электронной почты</message>
-	<message key="user.register.emailValidationDescription">Для продолжения работы Вам необходимо подтвердить Ваш адрес электронной почты. Пожалуйста, проверьте свой почтовый ящик для получения дальнейших инструкций. Как только Вы подтвердите свою учетную запись, Вы сможете войти в систему.</message>
-	<message key="user.register.selectJournal">Выбрать журнал для регистрации</message>
 	<message key="user.register.noJournals">На сайте нет журналов, в которых вы могли бы зарегистрироваться.</message>
 	<message key="user.register.privacyStatement">Заявление о конфиденциальности</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Щелкните здесь</a>, если вы уже зарегистрированы в качестве пользователя этого или другого журнала нашего сайта.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Щелкните здесь</a>, если вы еще <strong>не</strong> зарегистрированы в качестве пользователя этого или другого журнала нашего сайта.]]></message>
 	<message key="user.register.loginToRegister">Введите имеющиеся у вас имя пользователя и пароль для регистрации в этом журнале.</message>
 	<message key="user.register.registrationDisabled">Этот журнал сейчас не регистрирует новых пользователей.</message>
 	<message key="user.register.form.passwordLengthTooShort">Пароль, введенный вами, является недостаточно длинным.</message>
@@ -750,7 +691,6 @@
 	<message key="user.register.reviewerDescriptionNoInterests">Согласен участвовать в рецензировании рукописей, направляемых в этот журнал.</message>
 	<message key="user.register.reviewerDescription">Согласен участвовать в рецензировании рукописей, направляемых в журналы этого сайта.</message>
 	<message key="user.register.reviewerInterests">Укажите ваши интересы как рецензента (основные области и методы исследования):</message>
-	<message key="user.register.implicitAuth">Вход через Shibboleth с помощью существующего аккаунта в системе организации</message>
 
 	<!-- Подписки -->
 	<message key="user.subscriptions.mySubscriptions">Мои подписки</message>
@@ -814,8 +754,6 @@
 
 	<!-- Промежуточная страница для PDF -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.download">Скачать этот файл PDF</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Выбранный файл PDF должен загрузиться здесь, если в вашем веб-браузере установлен плагин для чтения PDF (например, последняя версия <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Если вам нужна дополнительная информация о том, как распечатать, сохранить и работать с PDF-файлами, у издательства Highwire Press на сайте размещен полезный материал <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">«Frequently Asked Questions about PDFs»</a>.</p> <p>В качестве альтернативы, вы можете скачать файл PDF на свой компьютер, на котором файл может быть открыт любой программой для просмотра PDF. Для скачивания файла PDF щелкните на ссылке «Скачать» выше.</p>]]></message>
 
 
 	<!-- Промежуточная страница для гранок в форматах, отличных от PDF и HTML -->
@@ -841,8 +779,6 @@
 
 	<!-- О журнале -->
 	<message key="about.statistics">Статистика</message>
-	<message key="about.journalContact">Контакты редакции</message>
-	<message key="about.aboutTheJournal">О журнале</message>
 	<message key="about.history">История журнала</message>
 	<message key="about.editorialTeam">Редакция</message>
 	<message key="about.editorialTeam.biography">Биография</message>
@@ -850,13 +786,8 @@
 	<message key="about.focusAndScope">Концепция журнала</message>
 	<message key="about.sectionPolicies">Политика разделов журнала</message>
 	<message key="about.submissions">Отправка статей</message>
-	<message key="about.sponsors">Спонсоры</message>
-	<message key="about.contributors">Источники поддержки</message>
 	<message key="about.onlineSubmissions">Отправка статей через Интернет</message>
-	<message key="about.onlineSubmissions.haveAccount">У вас уже есть имя пользователя и пароль для журнала «{$journalTitle}»?</message>
 	<message key="about.onlineSubmissions.login">Перейти к входу в систему</message>
-	<message key="about.onlineSubmissions.needAccount">Вам нужно имя пользователя и пароль?</message>
-	<message key="about.onlineSubmissions.registration">Перейти к регистрации</message>
 	<message key="about.onlineSubmissions.registrationRequired">Для отправки статей через Интернет и проверки статуса отправленных статей вам необходимо зарегистрироваться и войти в систему под своей учетной записью.</message>
 	<message key="about.authorGuidelines">Руководство для авторов</message>
 	<message key="about.submissionPreparationChecklist">Контрольный список подготовки статьи к отправке</message>
@@ -882,12 +813,7 @@
 	<message key="about.subscriptionTypes.duration">Продолжительность</message>
 	<message key="about.subscriptionTypes.cost">Цена</message>
 	<message key="about.availableSubscriptionTypes">Типы подписок</message>
-	<message key="about.purchaseIssue">Купить выпуск</message>
-	<message key="about.purchaseArticle">Купить статью</message>
-	<message key="about.purchaseIssueDescription">Читатели без подписки могут покупать отдельные выпуски. Доступны следующие способы оплаты и цены:</message>
-	<message key="about.purchaseArticleDescription">Читатели без подписки могут покупать отдельные статьи. Доступны следующие способы оплаты и цены:</message>
 	<message key="about.memberships">Членства</message>
-	<message key="about.journalSponsorship">Спонсоры журнала</message>
 	<message key="about.aboutThisPublishingSystem">Об этой издательской системе</message>
 	<message key="about.aboutThisPublishingSystem.altText">Редакционный и издательский процесс OJS</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Этот журнал использует Open Journal Systems {$ojsVersion}, которая является программным обеспечением с открытым исходным кодом для управления журналами и их публикации. Данное программное обеспечение разработано, поддерживается и свободно распространяется <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> по лицензии GNU General Public License.]]></message>
@@ -1060,7 +986,6 @@
 	<!-- Записи в журнале событий о статьях -->
 	<message key="log.author.submitted">Автор {$authorName} добавил новую статью, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">Автор {$authorName} исправил статью {$articleId}. Новый ID файла — {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">Рецензент {$reviewerName} был назначен на рецензирование статьи {$articleId} на {$round}-м раунде рецензирования.</message>
 	<message key="log.review.reviewerUnassigned">Рецензент {$reviewerName} был освобожден от рецензирования статьи {$articleId} на {$round}-м раунде рецензирования.</message>
 	<message key="log.review.reviewInitiated">{$round}-й раунд рецензирования рецензентом {$reviewerName} для статьи {$articleId} был начат.</message>
 	<message key="log.review.reviewReinitiated">{$round}-й раунд рецензирования рецензентом {$reviewerName} для статьи {$articleId} был начат заново.</message>
@@ -1097,7 +1022,6 @@
 	<message key="log.editor.archived">Статья {$articleId} была перемещена в архив.</message>
 	<message key="log.editor.restored">Статья {$articleId} была восстановлена из архива в очередь статей.</message>
 	<message key="log.editor.editorAssigned">Редактор {$editorName} был назначен редактором статьи {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">Редактор {$editorName} взял контроль над редакционным процессом по статье {$articleId}.</message>
 
 	<message key="log.proofread.assign">Пользователь {$assignerName} назначил пользователя {$proofreaderName} корректором статьи {$articleId}.</message>
 	<message key="log.proofread.complete">Корректор {$proofreaderName} отправил статью {$articleId} для размещения в выпуске.</message>
@@ -1162,22 +1086,16 @@
 	<message key="notification.notificationsPublicDescription">На этой странице показан список новостей этого журнала, таких как выход новых выпусков или объявления. Вы можете подписаться на эти новости через ленты RSS (щелкнув на значках справа) или <![CDATA[  <a href="{$emailUrl}">по электронной почте.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">Новая статья «{$title}» была отправлена.</message>
-	<message key="notification.type.copyeditComment">Литературный редактор оставил комментарий о статье «{$title}».</message>
 	<message key="notification.type.editing">События редактирования</message>
 	<message key="notification.type.editorDecisionComment">Добавлен комментарий о решении редактора по статье «{$title}».</message>
 	<message key="notification.type.galleyModified">Изменена гранка для статьи «{$title}».</message>
 	<message key="notification.type.issuePublished">Опубликован новый выпуск.</message>
-	<message key="notification.type.layoutComment">Добавлен комментарий о верстке статьи «{$title}».</message>
-	<message key="notification.type.metadataModified">Изменены метаданные для статьи «{$title}».</message>
 	<message key="notification.type.newAnnouncement">Создано новое обьявление.</message>
-	<message key="notification.type.proofreadComment">Добавлен комментарий корректора о статье «{$title}».</message>
-	<message key="notification.type.reviewerComment">Добавлен комментарий рецензента о статье «{$title}».</message>
 	<message key="notification.type.reviewerFormComment">Форма рецензии была заполнена рецензентом для статьи «{$title}».</message>
 	<message key="notification.type.reviewing">События рецензирования</message>
 	<message key="notification.type.site">События сайта</message>
 	<message key="notification.type.submissionComment">Редактор оставил комментарий о статье «{$title}».</message>
 	<message key="notification.type.submissions">События процесса отправки</message>
-	<message key="notification.type.suppFileModified">Изменились дополнительные файлы к статье «{$title}».</message>
 	<message key="notification.type.userComment">Читатель добавил комментарий о  статье «{$title}»</message>
 
 	<!--
@@ -1187,14 +1105,11 @@
 	-->
 	<!-- Авторизация -->
 	<message key="user.authorization.copyeditorAssignmentMissing">Доступ запрещен! Вы не были назначены литературным редактором этой статьи.</message>
-	<message key="user.authorization.noJournal">Нет журнала в данном контексте!</message>
 	<message key="user.authorization.sectionAssignment">Вы пытаетесь получить доступ к статье, которая не относится к вашему разделу.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Версия, отправленная литературным редактором, является неправильной или запрос на литературное редактирование не был отправлен!</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">Версия, отправленная редактором раздела, является неправильной или запрос на версию от редактора раздела не был отправлен!</message>
 
 	<!-- Значки: Текст "alt" по умолчанию -->
 
 	<!-- Сообщения отладки -->
 	<message key="debug.notes.currencyListLoad">Загружен список валют «{$filename}» в XML</message>
-	<message key="debug.notes.helpMappingLoad">Перезагружен XML-файл помощи «{$filename}» в процессе поиска {$id}.</message>
 </locale>
