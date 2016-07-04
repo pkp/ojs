@@ -13,9 +13,6 @@
   -->
 
 <locale name="vi_VN" full_name="Tiếng Việt">
-	<message key="editor.article.reviewForms">Mẫu phiếu Phản biện</message>
-	<message key="editor.article.selectReviewForm">Chọn Mẫu phiếu Phản biện</message>
-	<message key="editor.article.clearReviewForm">Xóa Mẫu phiếu Phản biện</message>
 	<message key="editor.home">Trang BTV chính</message>
 	<message key="editor.submissionsAndPublishing">Bài nộp và Xuất bản</message>
 	<message key="editor.submissionQueue">Bài nộp đang chờ</message>
@@ -95,9 +92,7 @@
 	<message key="editor.issues.noLiveIssues">Không có nào.</message>
 	<message key="editor.issues.open">Mở</message>
 	<message key="editor.issues.pages">Trang</message>
-	<message key="editor.navigation.issues">Các số tạp chí</message>
 	<message key="editor.navigation.futureIssues">Các số sắp XB</message>
-	<message key="editor.navigation.createIssue">Tạo số tạp chí</message>
 	<message key="editor.navigation.issueArchive">Các số đã xuất bản</message>
 	<message key="editor.article.designateReviewVersion">Chỉ định file gốc làm Phiên bản phản biện</message>
 	<message key="editor.article.uploadReviewVersion">Tải lên một phiên bản phản biện đã hiệu đính</message>
@@ -198,5 +193,4 @@
 	<message key="editor.article.uploaded">Tải lên</message>
 	<message key="editor.article.removeCoverPage">Loại bỏ ảnh bìa?</message>
 	<message key="editor.article.remove">Loại bỏ</message>
-	<message key="editor.article.confirmChangeReviewForm">Thay mẫu phiếu phản biện sẽ xóa đi các phản hồi</message>
 </locale>

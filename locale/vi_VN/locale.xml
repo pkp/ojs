@@ -45,7 +45,6 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Hướng dẫn</message>
-	<message key="navigation.archives">Số cũ</message>
 	<message key="navigation.current">Số mới ra</message>
 	<message key="navigation.otherJournals">Các tạp chí khác</message>
 	<message key="navigation.browseByIssue">Theo Số tạp chí</message>
@@ -99,12 +98,8 @@
 	<message key="article.suppFiles">Các file phụ trợ</message>
 	<message key="article.suppFilesAbbrev">Các file phụ trợ</message>
 	<message key="article.discipline">Ngành khoa học và phân ngành</message>
-	<message key="article.subjectClassification">Phân loại chủ đề</message>
 	<message key="article.subject">Từ khóa</message>
 	<message key="article.coverage">Phạm vi</message>
-	<message key="article.coverageGeo">Phạm vi địa lý</message>
-	<message key="article.coverageChron">Phạm vi thời gian</message>
-	<message key="article.coverageSample">Đặc trưng của mẫu nghiên cứu</message>
 	<message key="article.type">Kiểu, phương pháp, cách tiếp cận</message>
 	<message key="article.language">Ngôn ngữ</message>
 	<message key="article.sectionEditor">BTV CM</message>
@@ -171,20 +166,9 @@
 	
 	<!-- Roles -->
 	<message key="user.role.manager">Tổng biên tập</message>
-	<message key="user.role.editor">BTV chính</message>
 	<message key="user.role.sectionEditor">BTV chuyên mục</message>
-	<message key="user.role.layoutEditor">BTV trình bày</message>
-	<message key="user.role.copyeditor">BTV bản thảo</message>
-	<message key="user.role.proofreader">Người soát lỗi</message>
-	<message key="user.role.author">Tác giả</message>
 	<message key="user.role.subscriptionManager">Phụ trách phát hành</message>
 	<message key="user.role.managers">Tổng biên tập</message>
-	<message key="user.role.editors">BTV chính</message>
-	<message key="user.role.sectionEditors">BTV chuyên mục</message>
-	<message key="user.role.layoutEditors">BTV trình bày</message>
-	<message key="user.role.copyeditors">BTV bản thảo</message>
-	<message key="user.role.proofreaders">BTV soát lỗi</message>
-	<message key="user.role.authors">Tác giả</message>
 	<message key="user.role.subscriptionManagers">Phụ trách phát hành</message>
 	
 	<!-- Common Issue Terms -->
@@ -212,7 +196,6 @@
 	<message key="submission.event.logLevel.error">Lỗi</message>
 	
 	<message key="submission.event.general.defaultEvent">Sự kiện về bài viết</message>
-	<message key="submission.event.general.articleSubmitted">Bài viết đã nộp</message>
 	<message key="submission.event.general.issueScheduled">Bài nộp đã được chuyển sang chờ xếp bài</message>
 	<message key="submission.event.general.issueAssigned">Bài nộp đã được xếp vào số tạp chí</message>
 	<message key="submission.event.general.articlePublished">Bài viết đã xuất bản</message>
@@ -552,17 +535,12 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="submission.comments.saveAndEmailEditor">Ghi và gửi email cho BTV</message>
 	
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Quý vị chưa có bí danh? Xin vui lòng đăng ký</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Vì lý do an ninh, hệ thống sẽ gửi cho quý vị qua email một mật khẩu mới thay vì gửi lại mật khẩu hiện tại.<br /><br />Nhập địa chỉ email dưới đây để tạo mật khẩu mới. Địa chỉ này sẽ nhận được email khẳng định từ hệ thống.]]></message>
 	
 	<!-- Profile -->
 	
 	<!-- Registration -->
-	<message key="user.register.selectJournal">Chọn một tạp chí muốn đăng ký</message>
 	<message key="user.register.noJournals">Không có tạp chí nào quý vị có thể đăng ký trên web site này.</message>
 	<message key="user.register.privacyStatement">Tuyên bố về bí mật cá nhân</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Nhấp chuột vào đây</a> nếu quý vị đã đăng ký với tạp chí này hoặc tạp chí khác trên web site này.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Nhấp chuột vào đây</a> nếu quý vị <strong>chưa</strong> đăng ký tạp chí này hoặc các tạp chí khác trên web site này.]]></message>
 	<message key="user.register.loginToRegister">Nhập bí danh và mật khẩu hiện dùng để đăng ký với tạp chí này.</message>
 	<message key="user.register.registrationDisabled">Tạp chí này hiện không nhận đăng ký người dùng.</message>
 	<message key="user.register.form.passwordLengthTooShort">Mật khẩu quý vị nhập chưa đủ dài.</message>
@@ -617,21 +595,14 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	
 	<!-- About The Journal -->
 	<message key="about.statistics">Thống kê</message>
-	<message key="about.journalContact">Liên hệ tạp chí</message>
-	<message key="about.aboutTheJournal">Giới thiệu tạp chí</message>
 	<message key="about.editorialTeam">Ban biên tập</message>
 	<message key="about.editorialTeam.biography">Tiểu sử</message>
 	<message key="about.editorialPolicies">Chính sách biên tập</message>
 	<message key="about.focusAndScope">Trọng tâm và phạm vi</message>
 	<message key="about.sectionPolicies">Chính sách về chuyên mục</message>
 	<message key="about.submissions">Gửi bài</message>
-	<message key="about.sponsors">Nhà tài trợ</message>
-	<message key="about.contributors">Nguồn hỗ trợ</message>
 	<message key="about.onlineSubmissions">Gửi bài trực tuyến</message>
-	<message key="about.onlineSubmissions.haveAccount">Đã có Bí danh/Mật khẩu dành cho {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Đến trang Đăng nhập</message>
-	<message key="about.onlineSubmissions.needAccount">Quý vị cần Bí danh/Mật khẩu?</message>
-	<message key="about.onlineSubmissions.registration">Chuyển đến trang Đăng ký</message>
 	<message key="about.onlineSubmissions.registrationRequired">Quý vị cần Đăng ký và Đăng nhập để gửi bài viết trực tuyến và kiểm tra trạng thái biên tập những bài viết mà quý vị đã gửi.</message>
 	<message key="about.authorGuidelines">Hướng dẫn dành cho Tác giả</message>
 	<message key="about.submissionPreparationChecklist">Danh mục chuẩn bị gửi bài</message>
@@ -649,7 +620,6 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="about.subscriptions">Đặt tạp chí</message>
 	<message key="about.subscriptionsContact">Liên hệ đặt tạp chí</message>
 	<message key="about.availableSubscriptionTypes">Hình thức đặt tạp chí</message>
-	<message key="about.journalSponsorship">Tài trợ tạp chí</message>
 	<message key="about.aboutThisPublishingSystem">Giới thiệu hệ thống phần mềm xuất bản tạp chí này</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Tạp chí này sử dụng phần mềm Open Journal Systems {$ojsVersion}, một phần mềm xuất bản và quản lý tạp chí mã nguồn mở do <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> phát triển, hỗ trợ và cung cấp miễn phí theo giấy phép GNU General Public License.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[Web site này sử dụng phần mềm Open Journal Systems {$ojsVersion}, một phần mềm xuất bản và quản lý tạp chí mã nguồn mở do <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> phát triển, hỗ trợ và cung cấp miễn phí theo giấy phép GNU General Public License.]]></message>
@@ -733,7 +703,6 @@ Máy chủ của quý vị hiện có hỗ trợ mbstring: <strong>{$supportsMBS
 	<!-- Article Logs -->
 	<message key="log.author.submitted">Tác giả {$authorName} đã gửi một bài nộp, mã số (ID) {$submissionId}.</message>
 	<message key="log.author.documentRevised">Tác giả {$authorName} đã sửa lại bài viết mã số {$articleId}. Mã số (ID) mới của file là {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">Người phản biện {$reviewerName} đã được giao phản biện bài nộp {$articleId} cho vòng phản biện thứ {$round}.</message>
 	<message key="log.review.reviewerUnassigned">Người phản biện {$reviewerName} không còn được giao phản biện bài nộp {$articleId} cho vòng phản biện thứ {$round}.</message>
 	<message key="log.review.reviewInitiated">Vòng phản biện thứ {$round} của {$reviewerName} của bài nộp {$articleId} đã được khởi động.</message>
 	<message key="log.review.reviewReinitiated">Vòng phản biện thứ {$round} của {$reviewerName} của bài nộp {$articleId} đã được khởi động lại.</message>
@@ -768,7 +737,6 @@ Máy chủ của quý vị hiện có hỗ trợ mbstring: <strong>{$supportsMBS
 	<message key="log.editor.archived">Bài nộp {$articleId} đã được lưu kho.</message>
 	<message key="log.editor.restored">Bài nộp {$articleId} đã được đưa lại danh sách đang xử lý.</message>
 	<message key="log.editor.editorAssigned">BTV {$editorName} đã được giao biên mục bài nộp {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">BTV {$editorName} làm tắt quá trình biên tập đối với bài nộp {$articleId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} đã giao {$proofreaderName} soát lỗi bài nộp {$articleId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} đã gửi bài nộp {$articleId} đi xếp bài.</message>
@@ -937,11 +905,8 @@ Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành
 <li><strong>Thêm một Công cụ đọc</strong><p>Tổng biên tập có thể thêm "Tìm các bài trích dẫn" vào các Công cụ đọc đi kèm với bài viết được xuất bản, giúp cho bạn đọc dùng tiêu đề của một bài viết được trích dẫn để tìm bài viết đó trong các cơ sở dữ liệu đã được lựa chọn trước</p></li>
 </li><strong>Đường dẫn gắn sẵn trong Danh mục Tài liệu trích dẫn</strong>BTV trình bày có thể thêm một đường dẫn vào các tài liệu được trích dẫn có thể tìm thấy trên mạng bằng cách sử dụng các hướng dẫn sau đây (có thể sửa được).</p></li>
 </ol>]]></message>
-	<message key="submission.reviewForm">Mẫu phiếu Phản biện</message>
-	<message key="submission.reviewFormResponse">Phản hồi Mẫu phiếu Phản biện</message>
 	<message key="reviewer.article.enterReviewForm">Nhập chuột vào biểu tượng để điền vào mẫu phiếu phản biện.</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Vui lòng điền vào các trường bắt buộc.</message>
-	<message key="common.pageHeader.altText">Măng-séc trang</message>
 	<message key="common.homePageHeader.altText">Măng-séc trang chủ</message>
 	<message key="common.journalHomepageImage.altText">Ảnh trang chủ tạp chí</message>
 	<message key="article.coverPage.altText">Ảnh bìa</message>
@@ -1021,7 +986,6 @@ Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành
 	<message key="log.review.reviewDeclinedByProxy">{$userName} đã từ chối phản biện vòng {$round} cho bài viết {$articleId} thay {$reviewerName}.</message>
 	<message key="log.editor.decision">Quyết định của biên tập viên ({$decision}) đối với bài viết {$articleId} đã được {$editorName} ghi lại.</message>
 	<message key="debug.notes.currencyListLoad">Danh sách tiền tệ "{$filename}" được tải từ XML</message>
-	<message key="debug.notes.helpMappingLoad">XML được tải lại giúp ánh xạ file {$filename} khi tìm kiếm {$id}.</message>
 	<message key="default.journalSettings.waiverPolicy">Nếu quý vị không tiền để trả những khoản phí này, quý vị có cơ hội để được miễn từng loại phí. Chúng tôi không muốn vì lệ phí mà không xuất bản tác phẩm có giá trị.</message>
 	<message key="default.journalSettings.membershipFeeDescription">Việc trả khoản phí này sẽ giúp quý vị trở thành hội viên của hiệp hội trong một năm và truy cập miễn phí tạp chí này.</message>
 	<message key="installer.databaseSettingsInstructions">Phần mềm OJS cần truy cập cơ sở dữ liệu SQL để lưu dữ liệu. Xem yêu cầu về hệ thống trên đây để biết danh mục các cơ sở dữ liệu được hỗ trợ. Nhập vào các trường dưới đây dùng để kết nối với cơ sở dữ liệu.</message>
