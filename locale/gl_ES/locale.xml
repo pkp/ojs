@@ -161,7 +161,7 @@
 	<message key="journal.currentIssue">En edición</message>
 	<message key="journal.journals">Revistas</message>
 	<message key="journal.path">Roteiro</message>
-	<message key="journal.journal">Revista</message>
+	<message key="context.context">Revista</message>
 
 	<!-- User -->
 	<message key="user.showAllJournals">Mostrar as miñas revistas</message>

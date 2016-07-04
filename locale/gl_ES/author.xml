@@ -26,11 +26,11 @@
 	<message key="author.submit.step4">Paso 4. Subir ficheiros complementares</message>
 	<message key="author.submit.step4a">Paso 4a. Engadir un ficheiro suplementar</message>
 	<message key="author.submit.step5">Paso 5. Confirmar o envío</message>
-	<message key="author.submit.start">1. Comezo</message>
-	<message key="author.submit.upload">2. Subir envío</message>
-	<message key="author.submit.metadata">3. Introducir os metadados</message>
-	<message key="author.submit.supplementaryFiles">4. Subir ficheiros complementares</message>
-	<message key="author.submit.confirmation">5. Confirmación</message>
+	<message key="author.submit.start">Comezo</message>
+	<message key="author.submit.upload">Subir envío</message>
+	<message key="author.submit.metadata">Introducir os metadados</message>
+	<message key="author.submit.supplementaryFiles">Subir ficheiros complementares</message>
+	<message key="author.submit.confirmation">Confirmación</message>
 	<message key="author.submit.cancelSubmission">Pode completar este envío máis tarde seleccionando Envíos Activos na home de autor/a.</message>
 	<message key="author.submit.notAccepting">Esta revista non aceita envíos no intre.</message>
 	<message key="author.submit.requestWaiver">Solicitar exención de pago</message>
@@ -45,16 +45,16 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Tes problemas? Contacta con <a href="mailto:{$supportEmail}">{$supportName}</a> para solicitar axuda.]]></message>
 	<message key="author.submit.journalSection">Sección da revista</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Escolle unha sección axeitada para o envio (vexa Seccións e Políticas en <a href="{$aboutUrl}" target="_new">Sobre</a> la revista).]]></message>
-	<message key="author.submit.selectSection">Escolle unha sección ...</message>
+	<message key="submission.submit.selectSection">Escolle unha sección ...</message>
 	<message key="author.submit.submissionChecklist">Listaxe de comprobación de envío</message>
-	<message key="author.submit.submissionChecklistDescription">Indica que este envío está listo para ser considerado por esta revista marcando los siguientes puntos (a seguir podes facer comentarios ao/á editor/a).</message>
+	<message key="submission.submit.submissionChecklistDescription">Indica que este envío está listo para ser considerado por esta revista marcando los siguientes puntos (a seguir podes facer comentarios ao/á editor/a).</message>
 	<message key="author.submit.verifyChecklist">Debe asegurarse de que cumpre todos os requisitos de la lista antes de continuar</message>
 	<message key="author.submit.copyrightNoticeAgree">Os/as autores/as están de acordo cos termos desta nota de copyright, que se han aplicar ao teu envío se for publicado por esta revista (a seguir podes facer comentarios ao/á editor/a).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Antes de continuar debes aceptar os termos da nota de copyright.</message>
-	<message key="author.submit.commentsForEditor">Comentarios para o/a editor/a</message>
+	<message key="submission.submit.coverNote">Comentarios para o/a editor/a</message>
 	<message key="author.submit.comments">Insire o texto (opcional)</message>
 	<message key="author.submit.form.sectionRequired">Por favor, selecciona unha sección axeitada da revista para o envío.</message>
-	<message key="author.submit.privacyStatement">Política de privacidade da revista</message>
+	<message key="submission.submit.privacyStatement">Política de privacidade da revista</message>
 	<message key="author.submit.reorderInstructions">Reordenar autores/as por orde de aparición no artigo.</message>
 	<message key="author.submit.selectPrincipalContact">Contacto principal para correspondencia editorial.</message>
 	<message key="author.submit.addAuthor">Engadir autor/a</message>
