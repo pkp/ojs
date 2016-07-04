@@ -507,12 +507,12 @@ itsatsi ebaluazioko oharrak hemen</message>
 	<message key="reviewer.article.automatic">(Auto)</message>
 	<message key="reviewer.article.selectRecommendation">Hautatu gomendio bat</message>
 	<message key="reviewer.article.recommendation">Gomendioa</message>
-	<message key="reviewer.article.submitReview">Bidali Ebaluazioa Editoreari </message>
+	<message key="reviewer.article.submitReview">Bidali Ebaluazioa Editoreari</message>
 	<message key="reviewer.article.reviewerComments">Iruzkinak</message>
 	<message key="reviewer.article.uploadedFile">Kargatutako fitxategiak</message>	
-	<message key="reviewer.article.reviewersAnnotatedVersion">Ebaluatzaileak kargatutako bertsioa </message>
+	<message key="reviewer.article.reviewersAnnotatedVersion">Ebaluatzaileak kargatutako bertsioa</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Fitxategiari oharrak egin nahi badizkiozu, editorearentzat, gorde zure disko gogorrean eta erabili Arakatu/Kargatu)</message>
-        <message key="reviewer.article.schedule.request">Editorearen eskaera </message>
+        <message key="reviewer.article.schedule.request">Editorearen eskaera</message>
         <message key="reviewer.article.schedule.response">Zure erantzuna</message>
         <message key="reviewer.article.schedule.submitted">Ebaluazioa bidalita</message>
         <message key="reviewer.article.schedule.due">Ebaluazioaren epea</message>
@@ -533,7 +533,7 @@ itsatsi ebaluazioko oharrak hemen</message>
         <message key="reviewer.article.downloadSubmission">Egin klik fitxategi-izenetan, bidalketa honi lotutako fitxategiak deskargatzeko eta ebaluatzeko (pantailan edo inprimatuta).</message>
         <message key="reviewer.article.enterCompetingInterests"><![CDATA[Deklaratu interes-gatazkarik daukazun ikerketa honi buruz (ikus <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Interes-gatazketako politika</a>)]]></message>
 	<message key="reviewer.competingInterests">Interes-gatazka</message>
-        <message key="reviewer.article.enterReviewA">Egin klik ikonoan bidalketari egin diozun ebaluazioa idazteko (edo itsasteko). </message>
+        <message key="reviewer.article.enterReviewA">Egin klik ikonoan bidalketari egin diozun ebaluazioa idazteko (edo itsasteko).</message>
         <message key="reviewer.article.uploadFile">Gainera, fitxategiak karga ditzakezu editoreak eta/edo egileak kontsulta ditzaten.</message>
         <message key="reviewer.article.selectRecommendation">Hautatu gomendio bat era bidali ebaluazioa prozesua osatzeko. Gomendio bat hautatu aurretik, ebaluazio bat sartu behar duzu edo fitxategi bat kargatu.</message>
 	<message key="reviewer.article.mustSelectDecision">Ez da gomendiorik hautatu. Gomendio bat aukeratu behar duzu bidaltzeko.</message>

@@ -78,12 +78,12 @@
 	<message key="manager.sections.abstractsNotRequired">Ez zaie eskatuko laburpenik</message>
 	<message key="manager.sections.assigned">Atal honetako editoreak</message>
 	<message key="manager.sections.create">Sortu atala</message>
-	<message key="manager.section.sectionEditorInstructions">Gehitu Ataleko editore bat, atal honetara iristen diren bidalketak automatikoki esleitzeko Ataleko editore horri. (Bestela, Ataleko editorea eskuz esleitu ahal izango da, bidalketa bat iristen den bakoitzean). Editore bat gehitzen bada, automatikoki esleitu ahal izango zaio atal honetarako bidaltzen diren lanen EBALUAZIOA (adituen ebaluazioa) eta/edo EDIZIOA (zuzenketa, maketazioa eta proba-zuzenketa) gainbegiratzea. Ataleko editoreak sortzeko, Aldizkariaren kudeaketako Funtzioetan, Ataleko editoreak esteka sakatu behar da. </message>
+	<message key="manager.section.sectionEditorInstructions">Gehitu Ataleko editore bat, atal honetara iristen diren bidalketak automatikoki esleitzeko Ataleko editore horri. (Bestela, Ataleko editorea eskuz esleitu ahal izango da, bidalketa bat iristen den bakoitzean). Editore bat gehitzen bada, automatikoki esleitu ahal izango zaio atal honetarako bidaltzen diren lanen EBALUAZIOA (adituen ebaluazioa) eta/edo EDIZIOA (zuzenketa, maketazioa eta proba-zuzenketa) gainbegiratzea. Ataleko editoreak sortzeko, Aldizkariaren kudeaketako Funtzioetan, Ataleko editoreak esteka sakatu behar da.</message>
 	<message key="manager.sections.editorRestriction">Editoreek eta Ataleko editoreek bakarrik bidal ditzakete lanak.</message>
 	<message key="manager.sections.editors">Ataleko editoreak</message>
 	<message key="manager.sections.form.abbrevRequired">Titulu laburtua eman behar zaio atalari.</message>
 	<message key="manager.sections.form.mustAllowPermission">Ziurtatu kontrol-lauki bat behintzat hautatu dela Ataleko editore bakoitzarentzat.</message>
-	<message key="manager.sections.form.reviewFormId">Ziurtatu baliozko ebaluazio-inprimaki bat aukeratu duzula. </message>
+	<message key="manager.sections.form.reviewFormId">Ziurtatu baliozko ebaluazio-inprimaki bat aukeratu duzula.</message>
 	<message key="manager.sections.form.titleRequired">Titulua eman behar zaio atalari.</message>
 	<message key="manager.sections.hideAbout">Ez sartu atal hau Aldizkariari buruz orrian.</message>
 	<message key="manager.sections.hideTocAuthor">Ez sartu atal honetako elementuen egile-izenak zenbakien aurkibidean.</message>
@@ -115,7 +115,7 @@
 	<message key="manager.setup.announcementsDescription">Anuntzioak argitara daitezke aldizkariaren irakurleei albisteen eta gertaeren berri emateko. Argitaratutako anuntzioak Anuntzioen orrian agertuko dira.</message>
 	<message key="manager.setup.announcementsIntroduction">Informazio osagarria</message>
 	<message key="manager.setup.announcementsIntroductionDescription">Idatzi Anuntzioen orrian irakurleei erakutsi nahi zaien gainerako informazioa.</message>
-	<message key="manager.setup.appearInAboutJournal">(Aldizkariari buruz orrian agertzeko) </message>
+	<message key="manager.setup.appearInAboutJournal">(Aldizkariari buruz orrian agertzeko)</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Eskatu lana bidaltzen duten egileei Interes-gatazkari buruzko deklarazio bat erants dezatela bidalketan.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Eskatu Ebaluatzaileei Interes-gatazkari buruzko deklarazio bat erants dezatela adituen ebaluazio bat bidaltzen duten bakoitzean.</message>
 	<message key="manager.setup.copyeditInstructions">Zuzenketak egiteko instrukzioak</message>
@@ -249,10 +249,10 @@
 	<message key="manager.setup.reviewOptions.automatedReminders">Mezu elektroniko automatikoak (OJSren mezu elektroniko lehenetsietan daude) bi puntutan bidal dakizkieke oroigarri gisa ebaluatzaileei (hala ere, editoreak nahi duenean bidal diezazkioke mezuak zuzenean ebaluatzaileari)</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Oharra:</strong> Aukera hauek aktibatzeko, gune-administratzaileak <tt>scheduled_tasks</tt> aukera gaitu behar du konfigurazio-fitxategian. Funtzionalitate hau erabili ahal izateko, zerbitzari-konfigurazio gehiago egin beharko dira seguru asko (eta zerbitzari guztietan ezin izango da), OJS dokumentazioan adierazten den bezala.]]></message>
 	<message key="manager.setup.reviewOptions.blindReview">Ebaluazio anonimoa</message>
-	<message key="manager.setup.reviewOptions.onQuality">Editoreek bost puntuko kalitate-eskala baten arabera baloratuko dituzte ebaluatzaileak, ebaluazio bakoitzaren ondoren. </message>
+	<message key="manager.setup.reviewOptions.onQuality">Editoreek bost puntuko kalitate-eskala baten arabera baloratuko dituzte ebaluatzaileak, ebaluazio bakoitzaren ondoren.</message>
 	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">Ebaluazioa egitea onartu ondoren bakarrik izango dute ebaluatzaileek bidalketa-fitxategian sartzeko baimena.</message>
-	<message key="manager.setup.reviewOptions.reviewerAccess">Ebaluatzaileen sarbidea </message>
-	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Oharra:</strong> Ebaluatzaileei mezu elektroniko bat bidaltzen zaienean bidalketa bat ebaluatzeko gonbita egiteko, zuzenean bidalketaren orrira eramaten duen URL bat jarriko da mezuan (saioa hasteko behar diren gainerako orrietarako sarbidearekin). Segurtasun-arrazoiengatik, aukera honekin editoreek ezingo dute helbide elektronikorik aldatu edo CC edo BCC helbiderik gehitu ebaluatzaileei gonbitak bidali aurretik.]]> </message>
+	<message key="manager.setup.reviewOptions.reviewerAccess">Ebaluatzaileen sarbidea</message>
+	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Oharra:</strong> Ebaluatzaileei mezu elektroniko bat bidaltzen zaienean bidalketa bat ebaluatzeko gonbita egiteko, zuzenean bidalketaren orrira eramaten duen URL bat jarriko da mezuan (saioa hasteko behar diren gainerako orrietarako sarbidearekin). Segurtasun-arrazoiengatik, aukera honekin editoreek ezingo dute helbide elektronikorik aldatu edo CC edo BCC helbiderik gehitu ebaluatzaileei gonbitak bidali aurretik.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Ebaluatzaileen kalifikazioa</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Ebaluatzaileentzako oroigarriak</message>
 	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Ezarri <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Ebaluazio anonimoa segurtatzen</a> duten estekak egileek eta ebaluatzaileek fitxategiak kargatzen dituzten orrietarako.]]></message>
@@ -319,16 +319,16 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Aldizkari honen zenbakiak, argitaratu eta handik</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">hilabetera egongo dira erabilgarri sarrera libreko formatuan.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Hautatu baliozko denbora bat.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Ondorengo Sarrera libre geroratuko politika hau azalduko da Aldizkariari buruz orrian, Politikak izenburuan . </message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Ondorengo Sarrera libre geroratuko politika hau azalduko da Aldizkariari buruz orrian, Politikak izenburuan .</message>
 	<message key="manager.subscriptionPolicies.expiry">Harpidetzaren amaiera</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Harpidetza amaitutakoan, irakurleek ez dute inolako aukerarik izango harpidetza bidezko edukia ikusteko, edo harpidetza amaitu baino lehenago argitaratutako lanak ikusteko aukera izango dute.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Erabat amaitu harpidetza</message>
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Harpidetza amaitutakoan, irakurleek ezingo dute ikusi harpidetza-bidezko edukirik.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Zati batean amaitu harpidetza</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Harpidetza amaitutakoan, irakurleek ezingo dute ikusi harpidetza bidezko eduki berririk, baina lehenago argitaratuko lanak ikusi ahal izango dituzte.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Harpidetza amaitu eta handik </message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Harpidetza amaitu eta handik</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">astera bidali mezua harpidedunei.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Harpidetza amaitu baino </message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Harpidetza amaitu baino</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">aste lehenago bidali mezua harpidedunei.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Harpidetza-amaierako oroigarriak</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Mezu elektroniko automatikoak (OJSren mezu elektroniko prestatuetan daude eta Aldizkariaren kudeatzaileak edita ditzake) bidal dakizkieke oroigarri gisa harpidedunei harpidetza amaitu aurretik eta ondoren.</message>

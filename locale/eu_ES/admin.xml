@@ -21,7 +21,7 @@
 	<message key="admin.languages.supportedLocalesInstructions">Hautatu gunean onartu nahi dituzun hizkuntza-pakete guztiak. Hautatutako hizkuntza-paketeak erabilgarri egongo dira gunean ostatatutako aldizkari guztietan erabiltzeko eta guneko orri guztietan azalduko dira, hizkuntza aukeratzeko menuan (nahi izanez gero, orri batzuetatik ken daiteke). Hizkuntza bakarra hautatzen bada, hizkuntza aldatzeko menua ez da azalduko eta hizkuntza-ezarpen hedatuak ere ez dira erabilgarri egongo aldizkarietan.</message>
 	<message key="admin.languages.confirmUninstall">Ziur zaude hizkuntza hau desinstalatu nahi duzula? Eragina izango du hizkuntza hau erabiltzen duten aldizkari ostatatu guztietan.</message>
 	<message key="admin.languages.downloadFailed">Hizkuntza deskargatzeak huts egin du. Beheko errore-mezuan azaltzen da hutsegitea.</message>
-	<message key="admin.languages.localeInstalled">"{$locale}" hizkuntza instalatu da. </message>
+	<message key="admin.languages.localeInstalled">"{$locale}" hizkuntza instalatu da.</message>
 	<message key="admin.languages.download">Deskargatu hizkuntza-paketea</message>
 	<message key="admin.languages.download.cannotOpen">Ezin da ireki PKP webguneko hizkuntza-deskriptorea.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Ezin da hizkuntza-pakete berria gehitu localeen erregistro-fitxategian (normalean "registry/locales.xml".</message>
