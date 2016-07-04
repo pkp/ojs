@@ -21,7 +21,7 @@
 <message key="admin.locale.maybeIncomplete"> Penandaan bahasa kemungkinan tidak selesai.</message> 
 	<message key="admin.languages.confirmUninstall"> Apakah Anda yakin ingin membatalkan penginstalan bahasa ini? Hal ini mungkin akan berpengaruh pada host jurnal manapun yang saat ini sedang menggunakan bahasa.</message>
 	<message key="admin.languages.installNewLocalesInstructions"> Pilih bahasa tambahan untuk diinstal dalam sistem ini. Bahasa harus diinstal agar dapat digunakan oleh host jurnal.</message> 
-	<message key="admin.languages.downloadLocales"> Unduh Bahasa </message> 
+
 	<message key="admin.languages.downloadFailed"> Pengunduhan bahasa gagal. Pesan kesalahan dibawah ini mendeskripsikan kegagalannya. </message> 
 	<message key="admin.languages.localeInstalled">The "{$locale}" bahasa telah diinstal.</message> 
 	<message key="admin.languages.download"> Unduh Bahasa </message> 
@@ -41,7 +41,7 @@
 	<message key="admin.contexts.create"> Buat jurnal baru</message> 
 	<message key="admin.journals.createInstructions"> Secara otomatis Anda akan terdaftar sebagai Manajer pada jurnal ini. Setelah membuat jurnal baru, lanjutkan dengan setup jurnal dan pendaftaran pengguna.</message> 
 	<message key="admin.journals.urlWillBe"> Kata tunggal atau singkatan yang mengidentifikasi jurnal. URL jurnal akan menjadi {$sampleUrl}</message> 
-	<message key="admin.journals.form.titleRequired"> Diperlukan Judul.</message> 
+
 	<message key="admin.contexts.form.pathRequired"> Diperlukan path.</message> 
 	<message key="admin.contexts.form.pathAlphaNumeric"> Path akan hanya terdiri dari karakter alphanumeris, garisbawah, dan tanda penghubung, dan harus dimulai dan diakhiri dengan karakter alphanumeric.</message>
 	<message key="admin.contexts.form.pathExists"> Path sudah digunakan oleh jurnal lainnya.</message> 

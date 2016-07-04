@@ -14,22 +14,19 @@
 <locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="manager.emails.confirmResetAll"> Apakah Anda yakin Anda ingin mengatur ulang seluruh template email di jurnal ini? Anda akan kehilangan semua penyesuaian yang sudah Anda buat.</message> 
 	<message key="manager.files.note">Catatan: Berkas Penelusuran adalah fitur canggih yang memungkinkan file dan direktori yang terkait dengan jurnal untuk dilihat dan dimanipulasi secara langsung. </message> 
-	<message key="manager.groups"> Dewan Redaksi </message> 
-	<message key="manager.groups.publishEmails"> Tampilkan alamat email anggota </message> 
-	<message key="manager.groups.context.editorialTeam"> Dewan akan ditampilkan di bawah Dewan Editorial di Bagian Penata Laksana di Tentang Kami (contoh: editor)</message> 
-	<message key="manager.groups.context.editorialTeam.short"> Dewan Editorial </message> 
-	<message key="manager.groups.context.people"> Dewan akan ditampilkan sebagai kategorinya sendiri di bawah Penata Laksana (contoh: Dewan Editorial)</message> 
-	<message key="manager.groups.create"> Buat Dewan </message> 
-	<message key="manager.groups.disableBoard"> Jurnal ini membentuk Dewan editorial di bawah peran yang ditugaskan (Manajer Jurnal, Copy editor, dll;)</message>	
-<message key="manager.groups.enableBoard"> Manajer Jurnal membuat dewan sendiri dan menambahkan pengguna di bawah masing-masing dewan.</message>
-	<message key="manager.groups.enableBoard.description"><![CDATA[Di bawah<a href="{$aboutEditorialTeamUrl}"> Orang </a> Di Tentang Kami:]]></message>
-	<message key="manager.groups.noneCreated"> Belum ada Dewan editorial.</message> 
+
+
+
+
+
+
+
 	<message key="manager.journalManagement">Manajemen Jurnal</message> 
 	<message key="manager.language.ui">UI</message>
 	<message key="manager.language.submissions"> Naskah </message>
 	<message key="manager.language.forms"> Form </message> 
 	<message key="manager.language.confirmDefaultSettingsOverwrite"> Ini akan menggantikan pengaturan jurnal bahasa khusus apapun yang Anda miliki untuk bahasa ini</message> 
-	<message key="manager.language.reloadLocalizedDefaultSettings"> Reload default </message> 
+
 	<message key="manager.languages.languageInstructions"><![CDATA[OJS dapat digunakan dalam bahasa apa pun yang tersedia (bahasa yang didukung oleh OJS). OJS juga dapat beroperasi sebagai sistem multilingual yang memungkinkan pengguna untuk berpindah dari satu bahasa ke bahasa lain pada halaman yang sama, dan memungkinkan data tertentu untuk dimasukkan ke dalam beberapa bahasa tambahan.<br /><br />Jika bahasa yang didukung oleh OJS tidak terdaftar di bawah ini, tanya Administrator Situs Anda untuk menginstal bahasa pendukung tersebut dari antarmuka administrasi situs. Untuk instruksi penambahan dukungan untuk bahasa baru, berkonsultasilah dengan dokumentasi OJS]]></message> 
 	<message key="manager.languages.noneAvailable"> Maaf, tidak tersedia bahasa tambahan dalam situs ini. Hubungi administrator situs Anda jika Anda ingin menggunakan bahasa pendukung untuk jurnal ini.</message>	
 <message key="manager.languages.primaryLocaleInstructions"> Bahasa default untuk situs jurnal.</message> 
@@ -92,73 +89,63 @@
 <message key="manager.people.mergeUsers.into.description"> Pilih pengguna yang diberikan kepengarangan pengguna, tugas pengeditan, dll.</message>
 	<message key="manager.people.roleEnrollment">{$role} Pendaftaran </message> 
 	<message key="manager.people.syncUserDescription"> Sinkronisasi Pendaftaram akan mendaftarkan semua pengguna yang terdaftar di peran yang telah ditentukan di jurnal yang telah ditentukan ke dalam peran yang sama di jurnal ini. Fungsi ini membuat sejumlah pengguna (contoh: Reviewer) akan disinkronisasikan diantara jurnal.</message>	
-<message key="manager.plugins.copyError"> Plugin tidak sukses disalin. Mungkin masalah izin. Pastikan web server bisa untuk menulis direktori plugin (termasuk subdirektori) tapi jangan lupa untuk mengamankannya lagi nanti.</message> 
 	<message key="manager.plugins.delete"> Hapus Plugin
-</message>	<message key="manager.plugins.deleteConfirm"> Apakah Anda yakin ingin menghapus plugin ini dari sistem?</message> 
-	<message key="manager.plugins.deleteDescription"> Dengan meng-klik hapus, Anda akan menghapus plugin dari sistem file server.</message> 
-<message key="manager.plugins.deleteError"> Plugin tidak dapat dihapus dari sistem file.  Mungkin masalah izin. Pastikan web server bisa menulis direktori plugin (termasuk subdirektori) tapi jangan lupa untuk mengamankannya lagi  nanti.</message> 
-	<message key="manager.plugins.deleteSuccess"> Plugin telah sukses dihapus </message> 
-	<message key="manager.plugins.description"> Di halaman ini Manajer Jurnal dapat mereview dan mengubah plugin yang saat ini diinstal. Plugin dibagi menjadi beberapa kategori, menurut fungsi mereka. Beberapa kategori tersebut seperti yang ada di daftar di bawah ini, dan di dalam masing-masing kategori, ada satu set plugin.</message> 
-	<message key="manager.plugins.doesNotExist"> Plugin tidak ada </message> 
-	<message key="manager.plugins.fileSelectError"> Pilih file dahulu </message> 
-	<message key="manager.plugins.install"> Instal Plugin Baru </message> 
-	<message key="manager.plugins.installDescription"> Form ini membuat Anda bisa mengunggah dan menginstal plugin baru. Pastikan plugin dikompres sebagai file .tar.gz.</message> 
-	<message key="manager.plugins.installedVersionNewer"> Plugin sudah ada dan lebih baru atau sama dengan versi yang sudah diinstal</message> 
-	<message key="manager.plugins.installedVersionOlder"> Plugin sudah ada dan lebih lama atau sama dengan versi yang sudah diinstal.</message> 
-<message key="manager.plugins.installFailed">Penginstalan gagal</message> 
-	<message key="manager.plugins.installSuccessful"> Versi yang sukses diinstal </message> 
-	<message key="manager.plugins.invalidPluginArchive"> Arsip plugin yang diunggah tidak berisi folder yang cocok dengan nama plugin.</message> 
-	<message key="manager.plugins.pleaseInstall">Plugin tidak ada. Silahkan instal lagi </message> 
-	<message key="manager.plugins.pleaseUpgrade"> Plugin sudah ada, tapi lebih baru dari versi yang sudah diinstal. Upgrade.</message>	
-<message key="manager.plugins.tarCommandNotFound"> Perintah tar  tidak tersedia. Atur dengan benar di "config.inc.php".</message> 
-	<message key="manager.plugins.upgrade"> Upgrade plugin </message> 
-	<message key="manager.plugins.upgradeDescription"> Form ini membuat Anda bisa meng-upgrade plugin. Pastikan plugin telah dikompres sebagai file .tar.gz.</message> 
-	<message key="manager.plugins.upgradeFailed"> Upgrade gagal </message> 
-	<message key="manager.plugins.upgradeSuccessful"> Sukses meng-upgrade ke versi </message> 
-	<message key="manager.plugins.uploadError"> File Upload yang salah/ eror </message> 
-	<message key="manager.plugins.uploadPluginDir"> Pilih file plugin </message> 
-	<message key="manager.plugins.versionFileInvalid"> versi .xml di direktori plugin berisi data yang invalid</message>	
-<message key="manager.plugins.versionFileNotFound"> versi .xml tidak ditemukan di direktori plugin </message> 
-	<message key="manager.reviewFormElement.changeType"> Peringatan: mengubah tipe elemen form review dari tipe pilihan banyak ke tipe akhir terbuka akan berakibat ke penghapusan opsi pilihan banyak.</message>	
-<message key="manager.reviewFormElements"> Item Form</message>
-	<message key="manager.reviewFormElements.addResponseItem"> Tambahkan penyeleksian </message> 
-	<message key="manager.reviewFormElements.checkboxes"> Kotak cek? (Anda bisa memilih satu atau lebih)</message>
-	<message key="manager.reviewFormElements.chooseType"> Pilih Tipe Item </message> 
-	<message key="manager.reviewFormElements.confirmDelete"> Apakah Anda yakin ingin menghapus elemen dari form review yang diterbitkan?</message> 
-	<message key="manager.reviewFormElements.copyTo"> Salin ke:</message> 
-	<message key="manager.reviewFormElements.create"> Buat Item Baru </message> 
-	<message key="manager.reviewFormElements.dropdownbox">Kotak Drop-down</message>
-	<message key="manager.reviewFormElements.edit"> Edit Tipe Form </message> 
-	<message key="manager.reviewFormElements.elementType"> Tipe item </message> 
-	<message key="manager.reviewFormElements.form.elementTypeRequired"> Sebuah tipe item diperlukan untuk item form.</message> 
-	<message key="manager.reviewFormElements.form.questionRequired"> Pertanyaan diperlukan untuk item form.</message> 
-	<message key="manager.reviewFormElements.noneCreated"> Tidak ada item form telah dibuat.</message> 
-	<message key="manager.reviewFormElements.possibleResponse"> Penyeleksian </message> 
-	<message key="manager.reviewFormElements.question">Item</message> 
-	<message key="manager.reviewFormElements.radiobuttons">Radio buttons (Anda hanya bisa memilih satu)</message> 
-<message key="manager.reviewFormElements.required"> Reviewer perlu melengkapi/ menyelesaikan item </message> 
-	<message key="manager.reviewFormElements.included"> Termasuk di pesan untuk penulis </message> 
-	<message key="manager.reviewFormElements.smalltextfield"> Kotak teks satu kata </message> 
-	<message key="manager.reviewFormElements.textarea"> Kotak teks lebih besar </message> 
-	<message key="manager.reviewFormElements.textfield"> Kotak teks satu garis </message> 
-	<message key="manager.reviewForms"> Form Review</message> 
-	<message key="manager.reviewForms.completed"> Selesai </message> 
-	<message key="manager.reviewForms.confirmDeleteUnpublished"> Apakah Anda yakin ingin menghapus form review yang belum diterbitkan ini?</message>  
-	<message key="manager.reviewForms.create"> Buat Form Review </message> 
-	<message key="manager.reviewForms.description"> Deskripsi dan Instruksi </message> 
-	<message key="manager.reviewForms.edit"> Form Review </message> 
-	<message key="manager.reviewForms.form.titleRequired"> Judul diperlukan untuk form review.</message> 
-	<message key="manager.reviewForms.inReview"> Dalam Review </message> 
-	<message key="manager.reviewForms.list.description"> Form peer review yang dibuat di sini akan ditampilkan kepada Reviewer untuk dilengkapi, bukan form default yang terdiri dari dua kotak teks terbuka, yang pertama "untuk Penulis dan Editor", dan yang kedua "untuk Editor". Form review dapat dipilih untuk bagian jurnal yang spesifik, dan Editor punya opsi untuk memilih form mana yang akan digunakan dalam penugasan review. Dalam semua kasus, editor punya opsi untuk memasukkan review dalam berkorespondensi dengan penulis.</message> 
-	<message key="manager.reviewForms.noneChosen"> Tidak ada form review </message> 
-	<message key="manager.reviewForms.noneCreated"> Tidak ada form review dibuat.</message> 
-	<message key="manager.reviewForms.preview"> Form Preview </message> 
-	<message key="manager.reviewForms.title"> Judul </message> 
+</message>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
 	<message key="manager.sections.abstractsNotRequired"> Tidak membutuhkan sari </message> 
 	<message key="manager.sections.assigned"> Editor Bagian ini </message> 
 	<message key="manager.sections.confirmDelete"> Apakah Anda yakin ingin menghapus bagian ini secara permanen? Anda akan harus menerbitkan ulang artikel apapun di bagian ini.</message> 
 	<message key="manager.sections.create"> Buat Bagian</message>	
-	<message key="manager.sections.disableComments"> Komentar pembaca di bagian ini tidak aktif.</message> 
+
 	<message key="manager.section.sectionEditorInstructions"> Tambahkan Editor Bagian ke bagian ini agar naskah secara otomastis ditugaskan kepada Editor Bagian. (jika tidak, Editor Bagian akan ditugaskan secara manual, setelah naskah masuk). Jika ditambahkan, Editor Bagian secara otomatis dapat ditugaskan untuk mengawasi REVIEW (peer review) dan/ atau PENGEDITAN (copyediting, layout, dan proofreading) naskah ke bagian ini. Editor Bagian dibuat dengan mengklik Editor Bagian di bawah Peran di Manajemen Jurnal. </message> 
 	<message key="manager.sections.editorRestriction"> Item hanya bisa diserahkan oleh editor dan editor bagian.</message>
 	<message key="manager.sections.editors"> Editor Bagian </message> 
@@ -187,12 +174,10 @@
 	<message key="manager.setup.aboutItemContent"> Konten </message> 
 	<message key="manager.setup.addAboutItem"> Tambahkan Tentang Item </message> 
 	<message key="manager.setup.addChecklistItem"> Tambahkan Checklist Item </message> 
-	<message key="manager.setup.addContributor"> Tambahkan Kontributor </message>
 	<message key="manager.setup.addItem"> Tambahkan Item
 </message>
 	<message key="manager.setup.addItemtoAboutJournal"> Item tambahan di "Tentang Kami"</message> 
-	<message key="manager.setup.additionalContent"> Konten Tambahan </message> 
-	<message key="manager.setup.additionalContentDescription"> Masukkan konten tambahan pada kolom dibawah, dengan menggunakan teks/HTML. Yang akan ditampilkan di bawah gambar beranda, jika sudah diunggah.</message>
+
 	<message key="manager.setup.addNavItem"> Tambahkan Item </message> 
 	<message key="manager.setup.addReviewerDatabaseLink"> Tambahkan Tautan Database Baru </message> 
 	<message key="manager.setup.addSponsor"> Tambahkan Organisasi Sponsor </message> 
@@ -203,33 +188,24 @@
 	<message key="manager.setup.announcementsIntroduction"> Informasi Tambahan </message> 
 	<message key="manager.setup.announcementsIntroductionDescription"> Masukkan informasi tambahan yang harus ditampilkan kepada pembaca di halaman Pengumuman.</message> 
 	<message key="manager.setup.appearInAboutJournal">( Untuk ditampilkan di Tentang Kami) </message> 
-	<message key="manager.setup.authorCopyrightNotice"> Pemberitahuan Hak Cipta </message> 
-	<message key="manager.setup.authorCopyrightNoticeAgree"> Membutuhkan penulis untuk menyetujui Pemberitahuan Hak Cipta sebagai bagian dari proses penyerahan.</message>	
-<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Pemberitahuan Hak Cipta yang dimasukkan di bawah ini akan ditampilkan di Tentang Kami dan di masing-masing metadata yang diterbitkan. Jurnal dapat menentukan sifat persetujuan Hak Cipta dengan Penulis. Tersedia <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action"> contoh Pemberitahuan Hak Cipta</a> yang dapat disalin pada kolom di bawah untuk jurnal yang (a) menawarkan akses terbuka, (b) menawarkan pra akses terbuka, atau (c) tidak menawarkan akses terbuka.]]></message>
-	<message key="manager.setup.authorGuidelines"> Petunjuk untuk Penulis </message> 
-	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Mengatur bibliografi dan format standar untuk penulis yang digunakan untuk penyerahan naskah jurnal (contoh: Manual Penerbitan Asosiasi Psikologi Amerika, edisi 5, 2001). Manual ini sangat membantu karena menyediakan contoh format Sitiran umum untuk jurnal dan buku dalam penyerahan. Juga mengidentifikasi tipe-tipe file tambahan yang tepat (contoh: rangkaian data, instrumen riset, dll). Disarankan agar penulis mengunggah file tambahan tersebut sebagai tambahan ke penyerahan mereka, untuk meningkatkan keterlibatan pembaca pada karya mereka.]]></message> 
-	<message key="manager.setup.competingInterests">Minat Review</message> 
-	<message key="manager.setup.competingInterests.description"><![CDATA[Jurnal biomedis biasanya membutuhkan Penulis dan Reviewer untuk menyatakan apakah mereka memiliki minat review dengan riset mereka (lihat <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoS Policy</a>).]]></message>
-	<message key="manager.setup.competingInterests.guidelines"> Petunjuk untuk minat review</message>
+
+
+
+
 	<message key="manager.setup.competingInterests.requireAuthors"> Membutuhkan Penulis untuk mengarsip file minat review dalam naskah mereka.</message>  
 	<message key="manager.setup.competingInterests.requireReviewers"> Membutuhkan Reviewer untuk mengarsipminat review dengan masing-masing peer review yang mereka serahkan.</message>
-	<message key="manager.setup.contributor"> Kontributor </message>
  
-	<message key="manager.setup.contributors">Kontributor</message> 
-	<message key="manager.setup.contributorNoteDescription"> Teks ini akan ditampilkan di bawah judul "Kontributor" dan di atas nama dan url Kontributor di bawah "Sponsor Jurnal" di halaman "Tentang Kami"</message>	<message key="manager.setup.contributorsDescription"> Badan atau organisasi pembantu yang memberikan bantuan keuangan untuk jurnal akan ditampilkan di Tentang Kami dan bisa ditampilkan dengan catatan pemberitahuan.</message> 
+
 	<message key="manager.setup.history"> Visi dan Tujuan Jurnal</message>	<message key="manager.setup.historyDescription"> Teks ini akan ditampilkan di bagian website jurnal "Tentang Kami" dan dapat digunakan untuk mendeskripsikan perubahan pada judul, Dewan editorial, dan item lain yang relevan dengan penerbitan jurnal.</message> 
-	<message key="manager.setup.copyediting">Copy editor</message> 
+
 	<message key="manager.setup.copyeditInstructions"> Instruksi Copyedit </message> 
 	<message key="manager.setup.copyeditInstructionsDescription"> Instruksi Copyedit merupakan instruksi untuk copy editor, penulis, dan editor bagian di tahap pengeditan penyerahan.</message> 
 	<message key="manager.setup.copyrightNotice"> Pemberitahuan Hak Cipta </message> 
 	<message key="manager.setup.coverage"> Cakupan </message>  
-	<message key="manager.setup.coverageChronExamples">(Contoh, European Renaissance; Jurassic Period; Third Trimester; dll.)</message>
-	<message key="manager.setup.coverageChronProvideExamples"> Masukkan istilah-istilah historis atau kronologis yang relevan untuk bidang ini).</message> 
+
 	<message key="manager.setup.coverageDescription"> Mengacu ke lokasi geospasial, cakupan kronologis atau historis, dan/ atau karakteristik sampel riset.</message> 
-	<message key="manager.setup.coverageGeoExamples">(Contoh: Iberian Peninsula; Stratosphere; Boreal Forest; dll.)</message>
-	<message key="manager.setup.coverageGeoProvideExamples"> Masukkan istilah-istilah geografis atau geospasial yang relevan untuk bidang ini</message> 
-	<message key="manager.setup.coverageResearchSampleExamples"> (Contoh: Umur; jenis Kelamin; Suku; dll.)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples"> Masukkan karakteristik sampel riset untuk bidang ini</message>	
+
+
 	<message key="manager.setup.currentIssue"> Terbitan Terkini </message> 
 	<message key="manager.setup.customizingTheLook"> Langkah 5. Menyesuaikan Tampilan </message> 
 	<message key="manager.setup.customTags">Tag Khusus</message>
@@ -252,12 +228,11 @@
 <message key="manager.setup.doiReassign">Menugaskan Kembali DOIs</message>
 <message key="manager.setup.doiReassign.description"> Jika Anda mengubah konfigurasi DOI, DOI yang sebelumnya tidak akan berfungsi lagi. Saat konfigurasi DOI disimpan, gunakan tombol ini untuk menghapus semua DOI yang ada sehingga pengaturan baru akan berlaku pada artikel yang sudah ada.</message> 
 	<message key="manager.setup.editorDecision"> Keputusan Editor</message> 
-	<message key="manager.setup.editorialMembers"> Pergi ke Anggota Dewan dan tambahkan Dewan Editorial dan/ atau anggota dewan Reviewer. Ini dapat dilakukan kapanpun dalam mengoperasikan jurnal.</message>
-	<message key="manager.setup.editorialProcess1"> Satu editor atau lebih menangani langkah awal tanpa peran tertentu.</message> 
-	<message key="manager.setup.editorialProcess2"> Pengaturan Editor menangani Antrian Penyerahan, Daftar Isi sedankan Editor Bagian menangani Review Penyerahan dan Pengeditan Penyerahan.</message> 
-	<message key="manager.setup.editorialProcess3"> Pengaturan Editor menangani Antrian Penyerahan, pengeditan penyerahan, dan daftar isi, sedangkan editor bagian menangani review penyerahan.</message> 
-	<message key="manager.setup.editorialReviewBoard">Editorial/Dewan Reviewer </message> 
-	<message key="manager.setup.editorialReviewBoardDescription"> Jurnal memiliki Dewan Editorial untuk mengawasi arah editorial jurnal, berpartisipasi dalam penunjukan editor dan karena reputasi anggota dewan, memberikan jurnal reputasi di bidang itu. Anggota dewan Reviewer tidak akan memiliki akses ke sistem administrasi jurnal tapi akan ditambahkan ke daftar yang tersedia/ yang bisa untuk mengerjakan peer review.</message> 
+
+
+
+
+
 	<message key="manager.setup.emailBounceAddress">Bounce Address</message> 
 	<message key="manager.setup.emailBounceAddressDescription">Setiap email yang tidak terkirim akan menghasilkan pesan eror ke alamat ini.</message> 
 	<message  key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Catatan:</strong> Untuk mengaktifkan pilihan ini, administrator situs harus mengaktifkan pilihan <tt>allow_envelope_sender</tt> di file konfigurasi OJS. Konfigurasi server tambahan mungkin diperlukan untuk mensupport fungsi ini (yang tidak dapat dilakukan pada semua server), seperti yang tercantum di dokumentasi OJS.]]></message> 
@@ -274,14 +249,12 @@
 	<message key="manager.setup.enablePublicSuppFileId"> Custom identifier akan digunakan untuk mengidentifikasikan file artikel tambahan.</message> 
 
 	<message key="manager.setup.enableUserRegistration"> Pengguna akan mendaftarkan diri mereka sendiri pada jurnal dalam satu peran atau lebih:</message> 
-	<message key="manager.setup.enableUserRegistration.author"> Penulis (dapat mengumpulkan bahan/ materi ke jurnal)</message>	
-<message key="manager.setup.enableUserRegistration.reader"> Pembaca (akan menerima notifikasi dan dinilai setara dengan pelanggan)</message>
-	<message key="manager.setup.enableUserRegistration.reviewer"> Reviewer (tersedia untuk mereview penyerahan)</message>	
+
 <message key="manager.setup.focusAndScope">Fokus dan Ruang Lingkup</message> 
-	<message key="manager.setup.focusAndScopeDescription"> Masukkan pernyataan di bawah ini yang akan ditampilkan di Tentang Kami, menginformasikan pada Penulis, Pembaca, dan Pustakawan tentang jangkauan artikel dan item lain yang akan diterbitkan oleh jurnal.</message> 
-	<message key="manager.setup.focusAndScopeOfJournal"> Fokus dan Ruang Lingkup Jurnal </message> 
-	<message key="manager.setup.focusScope"> Fokus dan Ruang Lingkup </message> 
-	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong> CONTOH DATA HTML</strong>]]></message> 
+
+
+
+
 	<message key="manager.setup.forAuthorsToIndexTheirWork"> Untuk Penulis Mengindeks Naskah Mereka </message> 
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[Sistem jurnal ini memakai <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protokol untuk metadata harvesting, yang merupakan standar untuk menyediakan akses pengindeksan dengan baik ke sumber riset elektronik di skala global. Penulis akan menggunakan template untuk metadata naskah mereka. Manajer jurnal harus memilih kategori untuk pengindeksan dan memberi Penulis contoh-contoh yang relevan untuk membantu mereka mengindeks naskah mereka, memisahkan istilah-istilah dengan titik koma (contoh: istilah1; istilah2). Entri harus dikenalkan sebagai contoh dengan menggunakan "contoh" atau "sebagai contoh".]]></message> 
 	<message key="manager.setup.form.contactEmailRequired"> Email Kontak Utama.</message> 
@@ -292,15 +265,13 @@
 <message key="manager.setup.form.doiPrefixPattern"> Pola DOI harus dalam form 10.xxxx.</message> 
 	<message key="manager.setup.form.supportEmailRequired"> Email dukungan diperlukan.</message>
 	<message key="manager.setup.form.supportNameRequired"> Nama dukungan diperlukan.</message> 
-	<message key="manager.setup.frequencyOfPublication"> Frekuensi dan Titik Mulai </message> 
-	<message key="manager.setup.frequencyOfPublicationDescription"> Atur tahun dan nomor terbitan/volume awal untuk penerbitan pertama jurnal, serta frekuensi yang dimaksudkan untuk terbitan/volume.</message>
-	<message key="manager.setup.frequencyOfPublicationNote"> Catatan: biarkan item kosong jika tidak digunakan oleh jurnal ini dan editor dapat mengatur ulang nomor di proses penerbitan.</message> 
+
+
 	<message key="manager.setup.generalInformation"> Informasi Umum </message> 
 	<message key="manager.setup.gettingDownTheDetails"> Langkah 1. Perhatikan detail</message> 
 	<message key="manager.setup.guidelines"> Petunjuk </message> 
 	<message key="manager.setup.guidingSubmissions"> Langkah 3. Memandu Penyerahan </message> 
-	<message key="manager.setup.homepageImage"> Gambar Beranda </message> 
-	<message key="manager.setup.homepageImageDescription"> Tambahkan gambar atau file grafis ke tengah halaman.</message>
+
 	<message key="manager.setup.information">Informasi</message>
 	<message key="manager.setup.information.description"> Deskripsi singkat jurnal untuk pustakawan dan calon penulis dan pembaca yang tersedia di bagian "Informasi".</message> 
 	<message key="manager.setup.information.forAuthors"> Untuk Penulis </message> 
@@ -310,16 +281,15 @@
 </message>	<message key="manager.setup.initialIssueDescription"> Tergantung pada format yang dipilih, mengidentifikasi terbitan, volume, dan/ atau tahun terbitan pertama untuk diterbitkan dnegan OJS:</message> 
 	<message key="manager.setup.institution">Institusi</message> 
 	<message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number) adalah delapan digit nomor yang mengidentifikasi penerbitan berkala, termasuk penerbitan berkala elektronik. ISSN dikelola oleh World Wide Network of National Centres yang dikoordinasikan oleh International Centre yang berkedudukan di Paris yang didukung oleh Unesco dan Pemerintah Perancis. ISSN bisa didapatkan di <a href="http://www.issn.org" target="_new">Website ISSN</a>.]]></message>
-<message key="manager.setup.issuePerVolume"> Terbitan per volume </message> 
 	<message key="manager.setup.itemsDescription"> Item navigasi bisa ditambahkan ke set yang ada saat ini (Beranda, Tentang Kami, Beranda Pengguna, dll) yang ditampilkan di bagian atas pada halaman.</message>
 	<message key="manager.setup.itemsPerPage"> Item per halaman</message> 
 	<message key="manager.setup.journalAbbreviation"> Singkatan Jurnal </message> 
 	<message key="manager.setup.journalArchiving"> Mengarsip Jurnal </message> 
-	<message key="manager.setup.journalDescription"> Deskripsi Jurnal </message> 
-	<message key="manager.setup.journalDescriptionDescription"> Tambahkan deskripsi singkat (20-25 kata) dalam teks/ HTML yang akan ditampilkan di bawah navigasi.</message>  
-	<message key="manager.setup.journalFavicon"> Favicon Jurnal </message> 
-	<message key="manager.setup.journalFaviconDescription"> Tambahkan favicon untuk jurnal ini untuk ditampilkan di sepanjang tepi navigasi saat pengguna berkunjung ke situs Anda. </message> 
-	<message key="manager.setup.journalFaviconInvalid"> Format Favicon Invalid. Format yang diterima adalah .ico, .png, dan .gif.</message> 
+
+ 
+
+
+
 	<message key="manager.setup.journalHomepageContent"> Konten Beranda Jurnal</message> 
 	<message key="manager.setup.journalHomepageContentDescription"> Secara default, beranda terdiri dari navigasi. Konten tambahan beranda dapat ditambahkan dengan menggunakan salah satu atau semua pilihan berikut ini, yang akan ditampilkan dalam urutan yang benar. Perhatikan bahwa terbitan terkini selalu dapat diakses melalui tautan Terkini di navigasi.</message> 
 	<message key="manager.setup.journalHomepageHeader"> Header Beranda Jurnal </message> 
@@ -332,8 +302,8 @@
 </message> 
 	<message key="manager.setup.journalPageFooter"> Footer Halaman Jurnal </message> 
 	<message key="manager.setup.journalPageFooterDescription"> Ini adalah footer jurnal Anda. Untuk mengganti atau meng-update footer, salin kode HTML pada kotak teks di bawah. Sebagai contoh dapat berisi navigasi lain, counter, dll. Footer ini akan tampil di tiap halaman.</message> 
-	<message key="manager.setup.journalPageHeader"> Header Halaman Jurnal </message> 
-	<message key="manager.setup.journalPageHeaderDescription"> Versi grafis judul dan logo jurnal (file .gif, .jpg. atau .png) dapat diunggah untuk ditampilkan sebagai header di halaman jurnal, yang akan menggantikan versi teks jika tidak ditampilkan.</message> 
+
+
 	<message key="manager.setup.journalPolicies"> Langkah 2. Kebijakan Jurnal </message> 
 	<message key="manager.setup.journalSetup">Setup Jurnal</message> 
 	<message key="manager.setup.journalSetupUpdated"> Setup jurnal Anda telah di-update.</message> 
@@ -341,7 +311,6 @@
 	<message key="manager.setup.journalTheme"> Tema Jurnal </message> 
 	<message key="manager.setup.journalTitle"> Nama Jurnal
 </message>	<message key="manager.setup.labelName"> Nama Label </message> 
-	<message key="manager.setup.layoutAndGalleys"> Editor Layout </message>
 	<message key="manager.setup.layoutInstructions"> Instruksi Layout </message> 
 	<message key="manager.setup.layoutInstructionsDescription"> Instruksi Layout digunakan untuk pemformatan atau penerbitan item di jurnal dan dimasukkan pada kolom dibawah ini dalam HTML atau teks biasa. Isntruksi ini akan tersedia untuk editor layout dan editor bagian di halaman pengeditan dari masing-masing penyerahan. (Saat masing-masing jurnal menggunakan format file, standar bibliografi, style sheet, dll milik mereka sendiri, satu set default instruksi tidak disediakan.</message> 
 	<message key="manager.setup.layoutTemplates"> Template Layout</message>  
@@ -351,12 +320,10 @@
 	<message key="manager.setup.lists"> Daftar </message> 
 	<message key="manager.setup.listsDescription"> Masukkan jumlah maksimal item (sebagai contoh: penyerahan, pengguna, atau pengeditan tugas) yang ditampilkan di tiap halaman, dan jumlah tautan halaman ditampilkan di tiap halaman.</message> 
 	<message key="manager.setup.lockssEnable"><![CDATA[Mengaktifkan LOCKSS untuk menyimpan dan mendistribusikan konten jurnal ke perpustakaan yang berpartisipasi melalui halaman LOCKSS <a href="{$lockssUrl}" target="_blank">Manifestasi Penerbit</a>. Lisensi LOCKSS akan ditampilkan di Tentang Kami di bawah Arsip :]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[Lihat <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">versi lain lisensi LOCKSS</a>.]]></message>  
+ 
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifikasikan 6-10 perpustakaan yang akan mendaftarkan dan menyimpan jurnal. Sebagai contoh, beralih ke institusi di mana editor atau anggota dewan bekerja dan/ atau institusi yang berpartisipasi dalam LOCKSS. Lihat <a href="http://www.lockss.org/community/" target="_blank"> perpustakaan yang berpartisipasi</a>. Gunakan undangan yang telah disiapkan untuk (i) <a href="{$lockssExistingArchiveUrl}" target="_blank"> perpustakaan yang berpartisipasi dalam LOCKSS </a> atau (ii) <a href="{$lockssNewArchiveUrl}" target="_blank"> perpustakaan yang belum berpartisipasi dalam LOCKSS </a>.]]></message>
 	<message key="manager.setup.look">Tampilan</message> 
-	<message key="manager.setup.look.description">Header beranda, isi jurnal, header jurnal, footer, navigasi dan style sheet.</message>	
-<message key="manager.setup.mailingAddressDescription"> Lokasi fisik jurnal dan alamat surat-menyurat.</message>
-	<message key="manager.setup.management"> Manajemen </message> 
+	<message key="manager.setup.look.description">Header beranda, isi jurnal, header jurnal, footer, navigasi dan style sheet.</message>		<message key="manager.setup.management"> Manajemen </message> 
 	<message key="manager.setup.management.description"> Akses dan keamanan, penjadwalan, pengumuman, copyediting, layout dan proofreading.</message> 
 	<message key="manager.setup.managementOfBasicEditorialSteps"> Manajemen Langkah Editorial Dasar </message>
 	<message key="manager.setup.managingPublishingSetup"> Setup Penerbitan dan Manajemen </message> 
@@ -368,83 +335,67 @@
 	<message key="manager.setup.noImageFileUploaded"> Tidak ada file gambar yang diunggah.</message> 
 	<message key="manager.setup.noStyleSheetUploaded"> Tidak ada lembaran model yang diunggah.</message> 
 	<message key="manager.setup.note"> Catatan </message> 
-	<message key="manager.setup.notifications"> Notifikasi Penyerahan Naskah Penulis</message> 
-	<message key="manager.setup.notifications.copyPrimaryContact"> Kirim salinan ke Kontak Utama jurnal, teridentifikasi di Setup Langkah 1.</message>	<message key="manager.setup.notifications.copySpecifiedAddress"> Kirim salinan ke alamat email:</message> 
-	<message key="manager.setup.notifications.description"> Saat menyelesaikan proses penyerahan naskah, Penulis secara otomatis mengirimkan email pemberitahuan (yang dapat dilihat dan diedit di Email yang Disiapkan). Sebagai tambahan, salinan email pemberitahuan dapat dikirim seperti berikut ini:</message>
+
 	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong> Catatan: </strong> Email pemberitahuan penyerahan saat ini tidak bisa. Untuk menggunakan fitur ini, aktifkan  email SUBMISSION_ACK di <a class="action" href="{$preparedEmailsUrl}"> Email yang Disiapkan </a>.]]></message>
-	<message key="manager.setup.notifyAllAuthorsOnDecision"> Saat menggunakan email 'Beritahu Penulis', sertakan alamat email semua penulis pembantu untuk naskah yang ditulis lebih dari satu penulis, dan bukan hanya menyerahkan pengguna.</message> 
-	<message key="manager.setup.noUseCopyeditors"> Copyediting akan menjadi tanggung jawab editor atau editor bagian yang ditugaskan naskah.</message> 
-	<message key="manager.setup.noUseLayoutEditors"> Editor atau editor bagian yang ditugaskan ke penyerahan akan menyiapkan file HTML, PDF, dll.</message> 
-	<message key="manager.setup.noUseProofreaders"> Editor atau Editor Bagian yang ditugaskan mengecek galley naskah.</message> 
+
+
+
+
 	<message key="manager.setup.numPageLinks">Tautan Halaman</message>	<message key="manager.setup.onlineAccessManagement"> Akses ke Konten Jurnal </message> 
 	<message key="manager.setup.onlineIssn">ISSN Online</message>
 	<message key="manager.setup.openAccess"> Jurnal akan menyediakan Akses Terbuka ke dalam konten jurnal.</message>	
-<message key="manager.setup.openAccessPolicy"> Kebijakan Akses Terbuka</message> 
-	<message key="manager.setup.openAccessPolicyDescription"> Jika jurnal akan menyediakan akses gratis kepada Pembaca untuk seluruh konten yang diterbitkan, masukkan Kebijakan Akses Terbuka yang akan ditampilkan di Tentang Kami di bawah Kebijakan.</message> 
+
 	<message key="manager.setup.pageNumberIdentifier"> Pilihan Nomor Halaman </message> 
-	<message key="manager.setup.peerReviewDescription"> Membuat garis besar kebijakan dan proses peer review jurnal untuk Pembaca dan Penulis, termasuk jumlah Reviewer yang biasanya bertugas mereview dalam sebuah naskah, kriteria Reviewer dalam menilai naskah, banyaknya waktu yang digunakan untuk melakukan review, dan aturan perekrutan Reviewer. Semua ini akan ditampilkan di Tentang Kami.</message> 
-	<message key="manager.setup.peerReviewPolicy">Peer Review</message>
-	<message key="manager.setup.peerReviewPolicy2"> Kebijakan Peer review</message>
+
 	<message key="manager.setup.policies"> Kebijakan </message>
 	<message key="manager.setup.policies.description"> Fokus, peer review, bagian, privasi, keamanan, dan item tambahan tentang kami.</message>
-	<message key="manager.setup.principalContact"> Kontak Utama </message> 
-	<message key="manager.setup.principalContactDescription"> Posisi ini dapat diisi oleh Redaktur utama, Redaktur pelaksana, atau Staf administratif. Akan ditampilkan di beranda jurnal di bawah Kontak, bersama dengan Kontak Dukungan Teknis.</message>	
+
+
 <message key="manager.setup.printIssn">ISSN Cetak</message> 
-	<message key="manager.setup.privacyStatement"> Pernyataan Privasi </message> 
-	<message key="manager.setup.privacyStatement2"> Pernyataan Privasi </message> 
-	<message key="manager.setup.privacyStatementDescription"> Pernyataan ini akan ditampilkan di Tentang Kami serta di Penyerahan Penulis dan halaman Notifikasi Sign-up. Di bawah ini kebijakan privasi yang direkomendasikan, yang dapat direvisi kapanpun.</message>  
+
+
+ 
 	<message key="manager.setup.proofingInstructions"> Instruksi Proofing</message> 
 	<message key="manager.setup.proofingInstructionsDescription"> Instruksi Proofreading merupakan instruksi untuk Proofreader, Penulis, Editor Layout, dan Editor Bagian di tahap pengeditan naskah. Di bawah ini serangkaian instruksi default di HTML, yang dapat diedit atau diganti oleh Manajer Jurnal kapanpun. (dalam HTML atau teks biasa).</message> 
-	<message key="manager.setup.proofreading">Proofreaders</message> 
+
 	<message key="manager.setup.provideRefLinkInstructions"> Menyediakan Editor Layout dengan instruksi.</message>
-	<message key="manager.setup.publicationFormat">Format</message> 
-	<message key="manager.setup.publicationFormatDescription"> Jurnal akan menggunakan elemen berikut ini untuk mengidentifikasikan terbitan (yang dapat diabaikan untuk terbitan individual).</message>  
-	<message key="manager.setup.publicationFormatNumber"> Nomor</message> 
-	<message key="manager.setup.publicationFormatTitle"> Judul </message> 
-	<message key="manager.setup.publicationFormatVolume">Volume</message> 
-	<message key="manager.setup.publicationFormatYear"> Tahun </message> 
+
+ 
+
+
+
+
 	<message key="manager.setup.publicationSchedule"> Jadwal Penerbitan</message> 
 	<message key="manager.setup.publicationScheduleDescription"><![CDATA[Item jurnal dapat diterbitkan secara kolektif, sebagai bagian dari terbitan dengan daftar isi sendiri. Item individual juga bisa diterbitkan setelah mereka siap, dengan menambahkan mereka ke volume terkini di daftar isi. Menyediakan pernyataan tentang sistem yang akan digunakan jurnal ini dan frekuensi penerbitan yang diharapkan kepada pembaca yang dtampilkan di halaman Tentang Kami.]]></message> 
 	<message key="manager.setup.publicationScheduling"> Penjadwalan Penerbitan </message> 
 	<message key="manager.setup.publicIdentifier"> Identifikasi Konten Jurnal
 </message>
 	<message key="manager.setup.publisher"> Penerbit </message> 
-	<message key="manager.setup.publisherNoteDescription"> Teks ini akan ditampilkan di bawah judul "Penerbit" dan di atas nama dan url penerbit di bawah "Sponsor Jurnal" di halaman "Tentang Kami".</message>
 	<message key="manager.setup.publisherDescription"> Nama organisasi yang menerbitkan jurnal akan ditampilkan di Tentang Kami.</message>	
 <message key="manager.setup.referenceLinking"> Tautan Referensi </message> 
 	<message key="manager.setup.refLinkInstructions.description"> Instruksi Layout untuk Tautan Referensi</message> 
-	<message key="manager.setup.registerJournalForIndexing"> Mendaftarkan Jurnal untuk Pengindeksan (Metadata Harvesting)</message>
 	<message key="manager.setup.restrictArticleAccess"> Pengguna harus didaftarkan dan login untuk melihat konten Akses Terbuka.</message>
-	<message key="manager.setup.restrictSiteAccess"> Pengguna harus didaftarkan dan login untuk melihat situs jurnal.</message>	
-<message key="manager.setup.reviewerDatabaseLink"> Potensial Database Reviewer </message>  
-	<message key="manager.setup.reviewerDatabaseLink.desc"> Tambahkan ke halaman Pilih Reviewer sebuah tautan ke database literatur relevan yang dapat dicari oleh Reviewer potensial dan terbuka untuk editor tanpa harus berlangganan.</message>
+	<message key="manager.setup.restrictSiteAccess"> Pengguna harus didaftarkan dan login untuk melihat situs jurnal.</message>	 
 	<message key="manager.setup.reviewGuidelines"> Petunjuk Review</message> 
 	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[Memberi petunjuk bagi Reviewer tentang kriteria untuk menilai kepantasan naskah yang akan diterbitkan jurnal, juga instruksi untuk menyiapkan review yang efektif dan berguna. Dalam melakukan review, Reviewer dibagi dalam dua bagian, yang pertama "untuk Penulis dan Editor", dan yang kedua "untuk Editor". Manajer jurnal juga dapat membuat form peer review di bawah <a href="{$reviewFormsUrl}" class="action"> Form Review </a>. Dalam semua kasus, editor mempunyai pilihan memasukkan Reviewer untuk berkorespondensi dengan penulis.]]></message>
 	<message key="manager.setup.reviewOptions">Pilihan Review</message> 
 	<message key="manager.setup.reviewOptions.automatedReminders"> Email pengingat otomatis (tersedia di email default jurnal) dapat dikirim ke Reviewer dalam dua tahap (saat editor dapat selalu mengirimkan email kepada Reviewer secara langsung))</message> 
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Catatan:</strong> Untuk mengaktifkan pilihan ini, administrator situs harus mengaktifkan pilihan <tt>scheduled_tasks</tt> di file konfigurasi jurnal. Konfigurasi server tambahan mungkin diperlukan untuk support fungsi ini (yang bisa tidak mungkin di semua server), seperti ditunjukkan di dokumentasi jurnal.]]></message>
 	<message key="manager.setup.reviewOptions.blindReview"> Reviewer Anonim </message> 
-	<message key="manager.setup.reviewOptions.noteOnModification"> Dapat dimodifikasi selama proses editorial.</message>
 	<message key="manager.setup.reviewOptions.numWeeksPerReview"> Jangka waktu review</message>
 	<message key="manager.setup.reviewOptions.onQuality"> Editor akan menilai Reviewer dengan skala kualitas lima poin setelah masing-masing Reviewer selesai mereview.</message> 
-	<message key="manager.setup.reviewOptions.remindForInvite1"> Jika Reviewer belum merespon permintaan review dalam</message>
-	<message key="manager.setup.reviewOptions.remindForInvite2">hari.</message>	
-<message key="manager.setup.reviewOptions.remindForSubmit1"> Jika Reviewer belum menyerahkan rekomendasi dalam</message>
-<message key="manager.setup.reviewOptions.remindForSubmit2">hari setelah tanggal jatuh tempo.</message> 
 	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess"> Reviewer akan memiliki akses ke file naskah hanya setelah setuju untuk mereviewnya.</message> 
 	<message key="manager.setup.reviewOptions.reviewerAccess"> Akses Review </message> 
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled"> Memberi akses One-Click review.</message> 
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Catatan:</strong> Undangan email ke Reviewer akan berisi URL yang akan membawa Reviewer yang diundang secara langsung ke halaman review untuk naskah (untuk akses ke halaman lain mengharuskan mereka untuk login). Untuk alasan keamanan dengan pilihan ini, editor tidak bisa memodifikasi alamat email atau menambahkan Ccs atau BCCs sebelum mengirimkan undangan kepada Reviewer.]]></message> 
 	<message key="manager.setup.reviewOptions.reviewerRatings"> Rating Review </message> 
 	<message key="manager.setup.reviewOptions.reviewerReminders"> Pengingat Review </message> 
-	<message key="manager.setup.reviewOptions.reviewTime"> Waktu Review </message>
 	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Menyediakan tautan ke <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action"> Memastikan Reviewer Anonim</a> di halaman di mana penulis dan Reviewer mengunggah file.]]></message> 
 	<message key="manager.setup.reviewPolicy">Kebijakan Review</message> 
-	<message key="manager.setup.reviewProcess">Proses Review</message> 
-	<message key="manager.setup.reviewProcessDescription"><![CDATA[Jurnal ini mensupport dua model untuk mengatur proses review. Proses review standar direkomendasikan karena membimbing reviewer melalui proses, memastikan sejarah review yang lengkap untuk masing-masing penyerahan, dan menggunakan notifikasi pengingat otomatis, dan rekomendasi standar untuk penyerahan (seperti: terima; terima dengan revisi; serahkan untuk review; serahkan di mana saja; ditolak; lihat komentar).<br /><br /> Pilih salah satu dari berikut ini:]]></message> 
-	<message key="manager.setup.reviewProcessEmail"> Proses Review Email-Attachment </message> 
-	<message key="manager.setup.reviewProcessStandard"> Proses Review Standar </message> 
-	<message key="manager.setup.reviewProcessStandardDescription"> Editor akan mengirimkan email kepada reviewer yang terpilih tentang judul dan sari naskah, serta sebuah undangan untuk login ke website jurnal untuk menyelesaikan review. Reviewer masuk ke dalam website jurnal untuk menyetujui melakukan review, untuk mengunduh naskah, menyerahkan komentar mereka, dan memilih rekomendasi.</message>
+
+
+
+
 <message key="manager.setup.searchEngineIndexing">Pengindeksan Mesin Pencari</message> 
 	<message key="manager.setup.searchEngineIndexingDescription"> Untuk membantu pengguna dalam menemukan jurnal pada search engine, masukkan deskripsi singkat tentang kami dan kata kunci yang relevan (dipisahkan oleh titik koma).</message>	
 <message key="manager.setup.sectionsAndSectionEditors"> Bagian dan Editor Bagian </message> 
@@ -456,12 +407,11 @@
 <message key="manager.setup.selectSectionDescription"> Bagian jurnal di mana item akan dipertimbangkan.</message>
 	<message key="manager.setup.showGalleyLinksDescription"> Selalu tunjukkan tautan galley dan menandakan akses dibatasi.</message>
 	<message key="manager.setup.siteAccess"> Pembatasan Akses Artikel dan Situs Tambahan </message> 
-	<message key="manager.setup.sponsors"> Organisasi Sponsor </message> 
-	<message key="manager.setup.sponsorNoteDescription"> Teks ini akan ditampilkan di bawah judul "Sponsor" dan di atas nama dan url sponsor di bawah "Sponsor Jurnal" di halaman "Tentang Kami".</message>	
-<message key="manager.setup.sponsorsDescription"> Nama organisasi (contoh: asosiasi ilmiah, universitas, koperasi, dll) yang memberikan sponsor ke jurnal, akan ditampilkan di Tentang Kami dan bisa ditampilkan dengan catatan pemberitahuan.</message> 
+
+
 	<message key="manager.setup.stepsToJournalSite">5 Langkah ke Website Jurnal </message>
-	<message key="manager.setup.subjectClassification"> Klasifikasi Subjek</message> 
-	<message key="manager.setup.subjectClassificationExamples">(contoh: klasifikasi Subjek Matematika; klasifikasi Perpustakaan Kongres)</message> 
+
+
 	<message key="manager.setup.subjectExamples">(contoh: Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</message>	
 <message key="manager.setup.subjectKeywordTopic">Kata Kunci</message>	<message key="manager.setup.subjectProvideExamples"> Masukkan kata kunci atau topik sebagai petunjuk untuk Penulis</message>
 	<message key="manager.setup.submissionEmailLogging"> Menyimpan log tindakan yang berkaitan dengan naskah di halaman Sejarah.</message> 
@@ -474,25 +424,23 @@
 	<message key="manager.setup.subscription"> Jurnal akan mensyaratkan langganan untuk mengakses beberapa atau semua konten jurnal.</message> 
 	<message key="manager.setup.subscriptionDescription"> Menugaskan seorang Manajer Langganan yang memiliki akses ke modul langganan, yang termasuk akses terbuka tambahan, pengarsipan sendiri, dan notifikasi email.</message> 
 	<message key="manager.setup.noPublishing"> Sistem jurnal ini tidak menerbitkan konten jurnal secara online.</message>
-	<message key="manager.setup.technicalSupportContact">Kontak Dukungan Teknis</message> 
-	<message key="manager.setup.technicalSupportContactDescription"> Posisi ini akan tercantum di halaman Kontak jurnal sebagai perantara Editor, Penulis, dan Reviewer. Harus mempunyai pengalaman bekerja dengan sistem dari semua perspektif peran. Karena jurnal tidak terlalu membutuhkan support teknis, tugas ini seharusnya dilihat sebagai tugas paruh waktu. Sebagai contoh, saat Penulis dan Reviewer menemui kesulitan dengan instruksi atau format file, atau butuh memastikan bahwa jurnal di backup secara teratur di server.</message> 
+
+
 	<message key="manager.setup.typeExamples">(Contoh: Survey; Wawancara; Analisis Sastra)</message>
 	<message key="manager.setup.typeMethodApproach"> Tipe (Metode/Pendekatan)</message> 
 	<message key="manager.setup.typeProvideExamples"> Masukkan tipe riset yang relevan, metode, dan pendekatan untuk bidang ini.</message>
 	<message key="manager.setup.uniqueIdentifier">Pengidentifikasi Unik</message> 
 	<message key="manager.setup.uniqueIdentifierDescription"> Artikel dan terbitan dapat di-tag dengan nomor identifikasi atau string, memakai sistem registrasi seperti Digital Object Identifier System (DOI).</message>
-	<message key="manager.setup.useCopyeditors"> Copy editor akan ditugaskan untuk bekerja pada tiap naskah (contoh: Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory) .</message>
 <message key="manager.setup.useEditorialReviewBoard"> Dewan Reviewer/editorial akan digunakan oleh jurnal.</message>	
-<message key="manager.setup.useImageLogo">Gambar logo</message> 
 	<message key="manager.setup.useImageTitle"> Gambar</message> 
 	<message key="manager.setup.useJournalStyleSheet"> Style sheet jurnal</message> 
-	<message key="manager.setup.useLayoutEditors"> Editor layout akan ditugaskan untuk menyiapkan file HTML, PDF, dll untuk penerbitan elektronik.</message> 
-	<message key="manager.setup.useProofreaders"> Proofreader ditugaskan untuk mengecek galley (bersama penulis) sebelum penerbitan.</message> 
+
+
 	<message key="manager.setup.userRegistration"> Registrasi Pengguna</message> 
 	<message key="manager.setup.useTextTitle">Nama</message>	
-	<message key="manager.setup.volumePerYear"> Volume per tahun </message> 
-	<message key="manager.statistics.reports"> Penghasil Laporan </message> 
-	<message key="manager.statistics.reports.description"> Jurnal menghasilkan laporan yang mencatat detail pemrosesan naskah ke jurnal dari perspektif naskah, editor, reviewer, dan bagian, selama periode waktu yang diberikan. Laporan dihasilkan dalam format CSV yang membutuhkan aplikasi spreadsheet untuk dapat dibaca.</message>	
+
+
+
 <message key="manager.statistics.statistics">Statistik Jurnal</message>
 	<message key="manager.statistics.statistics.articleViews"> Hitung Lihat Artikel (hanya untuk Penulis)</message> 
 	<message key="manager.statistics.statistics.count.accept">Terima</message> 

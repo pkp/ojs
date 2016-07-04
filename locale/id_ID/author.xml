@@ -51,7 +51,7 @@
 	<message key="author.submit.submissionLocale">Bahasa Naskah</message> 
 	<message key="author.submit.submissionLocaleDescription">Jurnal ini menerima naskah dari beberapa bahasa. Pilih bahasa utama naskah dari menu di bawah ini.</message>	
 <message key="author.submit.submissionChecklist">Checklist Naskah</message> 
-	<message key="submission.submit.submissionChecklistDescription"> Menunjukkan bahwa naskah ini siap untuk dipertimbangkan oleh jurnal dengan mengecek hal-hal di bawah ini (komentar untuk editor dapat ditambahkan di bawah).</message>	
+
 <message key="author.submit.verifyChecklist">Anda harus memastikan semua artikel tercantum dalam daftar nama naskah yang memuaskan sebelum dilanjutkan.</message>	
 <message key="author.submit.copyrightNoticeAgree">Penulis setuju dengan persyaratan hak cipta, yang akan berlaku pada penyerahan ini dan saat diterbitkan oleh jurnal (komentar untuk editor dapat ditambahkan dibawah).</message>
 <message key="author.submit.copyrightNoticeAgreeRequired">Anda harus setuju dengan persyaratan hak cipta sebelum melanjutkan</message>
@@ -66,10 +66,9 @@
 <message key="author.submit.addAuthor">Tambah Penulis</message> 
 	<message key="author.submit.deleteAuthor">Hapus Penulis</message> 
 	<message key="author.submit.submissionIndexingDescription"> Masukkan istilah untuk mengindeks naskah; memisahkan istilah dengan titik dua (term1; term2; term3).</message> 
-	<message key="author.submit.submissionSupportingAgencies">Lembaga Pendukung</message> 
-<message key="author.submit.submissionSupportingAgenciesDescription">Masukkan nama lembaga yang menyediakan dana atau dukungan untuk pekerjaan yang ditampilkan dalam jurnal.</message> 
+
 <message key="author.submit.coverageInstructions">Mengacu pada lokasi geo-spasial, liputan atau cakupan kronologis atau historis, dan/ atau karakteristik sampel riset.</message> 
-	<message key="author.submit.subjectClassInstructions"> Gunakan sistem klasifikasi hyperlink untuk memilih istilah klasifikasi dan, jika sesuai, nomor.</message> 
+
 <message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Kode Tambahan</a>.]]></message>	<message key="author.submit.form.authorRequired">Setidaknya dibutuhkan satu penulis.</message>	
 <message key="author.submit.form.authorRequiredFields"> Nama pertama, Nama terakhir, dan alamat email masing-masing penulis dibutuhkan.</message> 
 	<message key="author.submit.form.titleRequired">Masukkan judul artikel Anda.</message> 
@@ -101,7 +100,7 @@
 	<message key="author.submit.suppFile.dataSet"> Set Data </message>	
 	<message key="author.submit.suppFile.sourceText"> Teks Sumber </message> 
 	<message key="author.submit.suppFile.briefDescription"> Deskripsi Singkat </message> 
-	<message key="author.submit.suppFile.contributorOrSponsor">Kontributor Sponsor</message> 
+
 	<message key="author.submit.suppFile.availableToPeers">File Saat ini hingga Reviewer (tanpa metadata), tanpa mengkompromikan Reviewer anonim.</message>	
 <message key="author.submit.suppFile.publisherDescription"> Gunakan hanya dengan materi yang diterbitkan secara formal.</message>	<message key="author.submit.suppFile.dateDescription"> Tanggal saat data dikumpulkan atau instrumen dibuat.</message>	
 <message key="author.submit.suppFile.sourceDescription">Nama studi atau bidang yang berkaitan.</message> 
@@ -117,7 +116,7 @@
 	<message key="author.submit.filesSummary"> Ringkasan File </message> 
 	<message key="author.submit.finishSubmission"> Penyerahan Selesai </message> 
 	<message key="author.submit.submissionComplete"> Penyerahan naskah sukses. Terima kasih atas partisipasi Anda untuk bergabung bersama {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Jika format penyerahan ini telah siap untuk dipublikasikan tanpa diperika lebih lanjut, proses edit atau pekerjaan tata letak, dapat ditempatkan langsung pada tahap terakhir dari proses edit dengan <a href="{$expediteUrl}" class="action">Klik disini</a>. (Catatan: hanya editor jurnal yang memiliki hak ini untuk masing-masing bagian mereka.)]]></message> 
+
 	<message key="author.article.uploadAuthorVersion"> Unggah Versi Penulis Version</message> 
 	<message key="author.article.copyeditedFile"> File Copyedited </message> 
 	<message key="author.article.authorRevisedFile"> File Penulis </message> 

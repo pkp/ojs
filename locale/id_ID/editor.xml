@@ -12,12 +12,11 @@
   -->
 
 <locale name="id_ID" full_name="Bahasa Indonesia">
-	<message key="editor.article.reviewForms"> Form Review </message> 
-	<message key="editor.article.selectReviewForm"> Seleksi Form Review </message> 
-	<message key="editor.article.clearReviewForm"> Hapus Form Review </message> 
+
+
+
 	<message key="editor.home"> Beranda Editor </message> 
-	 <message key="editor.article.confirmChangeReviewForm"> Peringatan: merubah form Review akan mempengaruhi jawaban para reviewer mana saja yang telah menggunakan form ini. Apakah kamu yakin mau melanjutkan?</message>
-	 <message key="editor.submissionsAndPublishing"> Langganan dan Penerbitan </message> 
+		 <message key="editor.submissionsAndPublishing"> Langganan dan Penerbitan </message> 
 	<message key="editor.submissionQueue"> Antrian Langganan </message> 
 	<message key="editor.submissionArchive"> Arsip Langganan </message> 
 	<message key="editor.publishing"> Penerbitan</message>	
@@ -101,9 +100,9 @@
 	<message key="editor.issues.noLiveIssues"> Tidak Ada Terbitan Terbaru </message> 
 	<message key="editor.issues.open"> Buka </message> 
 	<message key="editor.issues.pages"> Halaman </message> 
-	<message key="editor.navigation.issues">Terbitan</message> 
+
 	<message key="editor.navigation.futureIssues">Terbitan Akan Datang</message> 
-	<message key="editor.navigation.createIssue">Buat Terbitan Baru</message>	<message key="editor.navigation.issueArchive">Terbitan Terdahulu</message>
+<message key="editor.navigation.issueArchive">Terbitan Terdahulu</message>
 	<message key="editor.article.designateReviewVersion"> Merancang file asli sebagai Versi Review</message>	
 <message key="editor.article.uploadReviewVersion"> Unggah versi review yang sudah direvisi</message>	
 <message key="editor.article.showSuppFile"> Tampilkan file untuk direview</message> 

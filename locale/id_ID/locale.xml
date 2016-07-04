@@ -20,8 +20,6 @@
 	<!-- Journal Management -->
 
 	<!--  peer review -->
-	<message key="submission.reviewForm">Form Review</message>
-	<message key="submission.reviewFormResponse">Respon Form Review</message>
 
 
 	<message key="reviewer.article.enterReviewForm">Klik di ikon untuk mengisi form review.</message>	
@@ -40,7 +38,6 @@
 	<message key="common.confirmComplete">Apakah Anda yakin tugas ini telah selesai? Anda mungkin tidak bisa membuat perubahan setelahnya.</message>
 	<message key="common.payment">Pembayaran</message>
 	<message key="common.payments">Pembayaran</message>
-	<message key="common.pageHeader.altText">Header Halaman</message>
 	<message key="common.homePageHeader.altText">Header Beranda</message>
 	<message key="common.journalHomepageImage.altText">Gambar Beranda Jurnal</message>
 
@@ -54,7 +51,6 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Bantuan Jurnal</message>
-	<message key="navigation.archives">Arsip</message>
 	<message key="navigation.current">Terkini</message>
 	<message key="navigation.otherJournals">Jurnal Lain</message>
 	<message key="navigation.browseByIssue">Berdasarkan Terbitan</message>
@@ -107,12 +103,8 @@
 	<message key="article.suppFiles">File Tambahan</message>
 	<message key="article.suppFilesAbbrev">Singkatan File Tambahan</message>
 	<message key="article.discipline">Disiplin Ilmu dan Sub Disiplin</message>
-	<message key="article.subjectClassification">Klasifikasi Subjek</message>
 	<message key="article.subject">Kata Kunci</message>
 	<message key="article.coverage">Cakupan</message>
-	<message key="article.coverageGeo">Cakupan Ruang</message>
-	<message key="article.coverageChron">Cakupan historis atau kronologis</message>
-	<message key="article.coverageSample">Karakteristik contoh riset</message>
 	<message key="article.type">Tipe, Metode, atau Pendekatan</message>
 	<message key="article.language">Bahasa</message>
 	<message key="article.sectionEditor">SE</message>
@@ -197,20 +189,9 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Manajer Jurnal</message>
-	<message key="user.role.editor">Editor</message>
 	<message key="user.role.sectionEditor">Editor Bagian</message>
-	<message key="user.role.layoutEditor">Editor Layout</message>
-	<message key="user.role.copyeditor">Copy editor</message>
-	<message key="user.role.proofreader">Proofreader</message>
-	<message key="user.role.author">Penulis</message>
 	<message key="user.role.subscriptionManager">Manajer Langganan</message>
 	<message key="user.role.managers">Manajer Jurnal</message>
-	<message key="user.role.editors">Editor</message>
-	<message key="user.role.sectionEditors">Editor Bagian</message>
-	<message key="user.role.layoutEditors">Editor Layout</message>
-	<message key="user.role.copyeditors">Copy editor</message>
-	<message key="user.role.proofreaders">Proofreader</message>
-	<message key="user.role.authors">Penulis</message>
 	<message key="user.role.subscriptionManagers">Manajer Langganan</message>
 	
 	<!-- Common Issue Terms -->
@@ -264,7 +245,6 @@
 	<message key="submission.event.logLevel.error">Kesalahan</message>
 	
 	<message key="submission.event.general.defaultEvent">Acara Penyerahan</message>
-	<message key="submission.event.general.articleSubmitted">Artikel yang diserahkan</message>
 	<message key="submission.event.general.issueScheduled">Naskah dikirimkan ke antrian penjadwalan terbitan</message>
 	<message key="submission.event.general.issueAssigned">Naskah yang ditugaskan ke terbitan</message>
 	<message key="submission.event.general.articlePublished">Artikel yang terbit</message>
@@ -375,8 +355,6 @@ Perhatikan bahwa OAI antarmuka dapat dinonaktifkan dengan mengedit konfigurasi s
 	<message key="plugins.categories.implicitAuth.description"> Plugin Pengesahan Implisit mengimplementasikan dukungan untuk mengesahkan  dukungan untuk pengguna yang mengesahkan berdasarkan http header.</message>
 
 
-	<message key="plugins.categories.oaiMetadataFormats">Plugin Format Metadata OAI</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Plugin format ini mengekspresikan metadata in komunikasi OAI.</message>
 
 
  
@@ -390,7 +368,6 @@ Perhatikan bahwa OAI antarmuka dapat dinonaktifkan dengan mengedit konfigurasi s
 	<!-- Setup Langkah 2 -->
 
 
-	<message key="manager.setup.reviewProcessEmailDescription">Editor mengirimkan permintaan kepada Reviewer untuk mereview naskah yang dilampirkan di email. Reviewer mengirimkan editor persetujuan atau penolakan, seperti halnya review dan rekomendasi di halaman review naskah, untuk mencatat proses review.</message>
 
 
 	<message key="manager.setup.lockssDescription"><![CDATA[OJS support <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe). Sebuah sistem untuk mengarsipkan jurnal secara permanen dan aman. LOCKSS adalah perangkat lunak open source yang dikembangkan di Library of Stanford University yang memungkinkan perpustakaan untuk menjaga website jurnal yang dipilih dengan mengumpulkan backup data secara teratur dari website jurnal yang terdaftar untuk konten yang baru diterbitkan dan mengarsipkannya. Tiap arsip divalidasi secara terus menerus terhadap library caches yang lain, dan jika konten ditemukan dalam keadaan rusak atau hilang, caches atau jurnal yang lain digunakan untuk menyimpan ulang.
@@ -417,7 +394,6 @@ Penulis yang menerbitkan dengan jurnal ini setuju pada persyaratan berikut ini:<
 Judul Sistem Klasifikasi]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Untuk mengindeks konten jurnal kedalam sistem terdistribusi global dari database riset, baca <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">langkah-langkah untuk menjadi kontributor data</a> dan daftarkan jurnal Anda di<a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Pendaftaran Open Archives</a>.  Untuk mendaftar, Anda akan membutuhkan URL untuk repositori:<span class="highlight">{$oaiUrl}</span>. Setelah itu, Anda dapat mendaftarkan jurnal Anda di <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a>dan<a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 <br /><br />Perhatikan jika Administrator Situs Anda sudah mendaftarkan situs ini pada layanan ini, jurnal Anda akan diindeks secara otomatis dan Anda tidak perlu mendaftarkan lagi.]]></message>
-	<message key="manager.setup.citations">Memungkinkan Bantuan Koreksi sitiran</message>
 
 	<!-- Setup Langkah 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Langkah: Antrian Penyerahan &gt; Review Naskah &gt; Pengediatan Naskah &gt; Daftar Isi.<br /><br />
@@ -662,16 +638,11 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="submission.comments.saveAndEmailEditor">Simpan dan email Penulis</message>
 	
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Bukan Pengguna? Daftar di situs ini</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Untuk alasan keamanan, sistem ini akan mengirimkan kata sandi yang bisa diatur ulang oleh pengguna melalui email.<br /><br />Masukkan alamat email Anda di bawah ini untuk mengatur ulang kata sandi Anda. Konfirmasi akan dikirim ke alamat email.]]></message>
 		
 	<!-- Registration -->
 	<message key="user.register.repeatPassword">Ulangi Kata Sandi</message>
-	<message key="user.register.selectJournal">Pilih sebuah jurnal untuk mendaftar</message>
 	<message key="user.register.noJournals">Tidak ada jurnal untuk Anda mendaftar di situs ini.</message>
 	<message key="user.register.privacyStatement">Pernyataan Privasi</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klik di sini</a> Jika Anda sudah terdaftar di jurnal ini atau jurnal lain di situs ini.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klik di sini</a> Jika Anda <strong>belum</strong> terdaftar di jurnal ini atau jurnal lain di situs ini.]]></message>
 	<message key="user.register.loginToRegister">Masukkan nama pengguna dan kata sandi Anda untuk login di jurnal ini.</message>
 	<message key="user.register.registrationDisabled">Jurnal sedang tidak menerima pendaftaran pengguna.</message>
 	<message key="user.register.form.passwordLengthTooShort">Kata Sandi yang Anda masukkan tidak cukup panjang.</message>
@@ -745,8 +716,6 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.download">Unduh file PDF  ini</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>File PDF yang Anda pilih harus dimuat di sini jika perambah web mempunyai plugin PDF reader diinstall (sebagai contoh: versi sekarang dari <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Alternatif lain, Anda juga bisa mengunduh file PDF langsung ke komputer Anda, dan bisa dibuka dengan menggunakan PDF reader. Untuk mengunduh PDF, klik tautan Unduh di bawah ini</p> <p>Jika ada membutuhkan informasi lebih lanjut tentang cara mencetak, simpan dan bekerja dengan PDF, menyediakan Highwire Press bantuan <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Pertanyaan yang sering diajuka mengenai PDF</a>.</p>]]></message>
 
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
@@ -772,8 +741,6 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	
 	<!-- About The Journal -->
 	<message key="about.statistics">Statistik</message>
-	<message key="about.journalContact">Kontak Jurnal</message>
-	<message key="about.aboutTheJournal">Tentang Kami</message>
 	<message key="about.history">Visi dan Tujuan Jurnal</message>
 	<message key="about.editorialTeam">Dewan Editorial</message>
 	<message key="about.editorialTeam.biography">Biografi</message>
@@ -781,13 +748,8 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="about.focusAndScope">Fokus dan Ruang Lingkup</message>
 	<message key="about.sectionPolicies">Kebijakan Bagian</message>
 	<message key="about.submissions">Penyerahan</message>
-	<message key="about.sponsors">Sponsor</message>
-	<message key="about.contributors">Kontributor</message>
 	<message key="about.onlineSubmissions">Penyerahan Online</message>
-	<message key="about.onlineSubmissions.haveAccount">Sudahkah memiliki nama pengguna dan kata sandi untuk {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Ke Login</message>
-	<message key="about.onlineSubmissions.needAccount">Butuh nama pengguna dan kata sandi?</message>
-	<message key="about.onlineSubmissions.registration">Ke registrasi</message>
 	<message key="about.onlineSubmissions.registrationRequired">Registrasi dan login dibutuhkan untuk memasukkan naskah dan kelengkapannya secara online dan untuk mengecek status naskah saat ini.</message>
 	<message key="about.authorGuidelines">Petunjuk Penulis</message>
 	<message key="about.submissionPreparationChecklist">Petunjuk Untuk Penulis</message>
@@ -814,7 +776,6 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="about.subscriptionTypes.cost">Biaya</message>
 	<message key="about.availableSubscriptionTypes">Tipe Langganan</message>
 	<message key="about.memberships">Keanggotaan</message>
-	<message key="about.journalSponsorship">Sponsor Jurnal</message>
 	<message key="about.aboutThisPublishingSystem">Tentang Sistem Penerbitan</message>
 	<message key="about.aboutThisPublishingSystem.altText">Editorial OJS dan Proses Penerbitan</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Jurnal ini menggunakan Open Journal Systems {$ojsVersion}, merupakan perangkat lunak open source untuk manajemen jurnal dan penerbitan yang dikembangkan, didukung, dan bebas didistribusikan oleh <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> di bawah GNU General Public License.]]></message>
@@ -938,7 +899,6 @@ Server Anda sekarang support mbstring: <strong>{$supportsMBString}</strong>]]></
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} telah memasukkan naskah baru, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} telah merevisi artikel {$articleId}. ID file baru adalah {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} telah ditugaskan untuk mereview naskah {$articleId} untuk tahapan review {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} telah dibebastugaskan untuk mereview naskah {$articleId} untuk tahapan review {$round}.</message>
 	<message key="log.review.reviewInitiated">Tahapan {$round} direview oleh {$reviewerName} untuk naskah {$articleId} telah dimulai.</message>
 	<message key="log.review.reviewReinitiated">Tahapan {$round} direview oleh {$reviewerName} untuk naskah {$articleId} telah dimulai ulang.</message>
@@ -975,7 +935,6 @@ Server Anda sekarang support mbstring: <strong>{$supportsMBString}</strong>]]></
 	<message key="log.editor.archived">Naskah {$articleId} telah diarsipkan.</message>
 	<message key="log.editor.restored">Naskah {$articleId} telah disimpan ulang di antrian.</message>
 	<message key="log.editor.editorAssigned">{$editorName} telah ditugaskan sebagai editor untuk naskah {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} telah mempercepat proses pengeditan untuk artikel {$articleId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} telah menugaskan {$proofreaderName} untuk proofread naskah  {$articleId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} telah menyerahkan {$articleId} untuk penjadwalan.</message>
@@ -1038,22 +997,16 @@ Validasi mungkin gagal dalam pencarian URL memerlukan form data yang diposting.]
 	<message key="notification.notificationsPublicDescription">Halaman ini menunjukkan update penting yang berkaitan dengan jurnal ini seperti terbitan baru atau pengumuman. Anda bisa berlangganan ke notifikasi ini melalui RSS Feed (dengan meng-klik di gambar sebelah kanan), atau <![CDATA[  <a href="{$emailUrl}">melalui email.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">Artikel baru, "{$param}", telah diserahkan.</message>
-	<message key="notification.type.copyeditComment">Copy editor telah meninggalkan komentar di "{$param}".</message>
 	<message key="notification.type.editing">Event Pengeditan</message>
 	<message key="notification.type.editorDecisionComment">Komentar telah ditinggalkan di keputusan editor untuk "{$param}".</message>
 	<message key="notification.type.galleyModified">Galley telah dimodifikasi untuk "{$param}".</message>
 	<message key="notification.type.issuePublished">Sebuah terbitan telah terbit.</message>
-	<message key="notification.type.layoutComment">Komentar telah ditinggalkan tentang "{$param}'s" layout.</message>
-	<message key="notification.type.metadataModified">"{$param}'s" metadata telah di modifikasi.</message>
 	<message key="notification.type.newAnnouncement">Pengumuman baru telah dibuat.</message>	
-	<message key="notification.type.proofreadComment">Komentar telah ditinggalkan oleh proofreader di "{$param}".</message>
-	<message key="notification.type.reviewerComment">Reviewer telah berkomentar di "{$param}".</message>
 	<message key="notification.type.reviewerFormComment">Form review telah diserahkan untuk "{$param}".</message>
 	<message key="notification.type.reviewing">Events Review</message>
 	<message key="notification.type.site">Event Situs</message>
 	<message key="notification.type.submissionComment">Editor telah berkomentar di "{$param}".</message>
 	<message key="notification.type.submissions">Event Penyerahan Naskah</message>
-	<message key="notification.type.suppFileModified">"{$param}'s" file tambahan telah dimodifikasi.</message>
 	<message key="notification.type.userComment">Pembaca telah berkomentar di "{$param}"</message>
 
 	<!--
@@ -1063,14 +1016,11 @@ Validasi mungkin gagal dalam pencarian URL memerlukan form data yang diposting.]
 	-->
 	<!-- Authorization -->
 	<message key="user.authorization.copyeditorAssignmentMissing">Akses ditolak! Anda belum ditugaskan sebagai copy editor untuk artikel ini.</message>
-	<message key="user.authorization.noJournal">Tidak ada jurnal di konteks!</message>
 	<message key="user.authorization.sectionAssignment">Anda mencoba mengakses artikel yang bukan bagian Anda.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Penyerahan copy editor invalid atau tidak ada permintaan penyerahan copy editor!</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">Penyerahan editor bagian invalid atau tidak ada permintaan penyerahan editor bagian!</message>
 	
 	<!-- Icons: Default "alt" text -->
 	
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Memuat daftar mata uang "{$filename}" dari XML</message>
-	<message key="debug.notes.helpMappingLoad">Memuat ulang bantuan XML untuk memetakan file {$filename} dalam mencari {$id}.</message>
 </locale>
