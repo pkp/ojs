@@ -52,7 +52,6 @@
 	<message key="author.submit.journalSectionDescription"><![CDATA[选择投稿的栏目 (参看在 <a href="{$aboutUrl}" target="_new">关于期刊</a> 的栏目与政策).]]></message>
 	<message key="submission.submit.selectSection">请选择一个栏目...</message>
 	<message key="author.submit.submissionChecklist">投稿清单</message>
-	<message key="submission.submit.submissionChecklistDescription">勾选下列项目以确定这份稿件已慎重考虑投稿本期刊（可以在下面加上给编辑的意见）</message>
 	<message key="author.submit.verifyChecklist">您必须确定已经完成检查表中的所有的项目，才能继续下一步.</message>
 	<message key="author.submit.copyrightNoticeAgree">作者同意这份版权注意事项的内容，并同意在这份期刊出版此稿件时适用于这份稿件（可以在下面加上给编辑的意见）.</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">您必须同意的条款版权公告，然后继续.</message>
@@ -67,7 +66,6 @@
 	<message key="author.submit.deleteAuthor">删除作者</message>
 	<message key="author.submit.submissionIndexingDescription">依照本期刊所使用的领域类别以及编辑提供的范例，来选择能够最佳地说明此份稿件内容的词汇。以分号(;)来分隔多个词汇（如，词汇1; 词汇2; 词汇3）。</message>
 	<message key="author.submit.coverageInstructions">地理空间位置、年代或历史涵盖范围，以及＼或者研究样本的特色.</message>
-	<message key="author.submit.subjectClassInstructions">使用有超链接的分类系统来选择分类词汇以及（如果适合的话）数字.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; 中文=zh<a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">其他代码</a>.]]></message>
 	<message key="author.submit.form.authorRequired">至少一个作者是必须的.</message>
 	<message key="author.submit.form.authorRequiredFields">姓名和每个作者的电子邮件是必须的.</message>
@@ -100,7 +98,6 @@
 	<message key="author.submit.suppFile.dataSet">数据集</message>
 	<message key="author.submit.suppFile.sourceText">源文本</message>
 	<message key="author.submit.suppFile.briefDescription">摘要描述</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">合作者与赞助机构</message>
 	<message key="author.submit.suppFile.availableToPeers">给审稿人的当前文件 (没有元数据), 因为它不会妥协盲审.</message>
 	<message key="author.submit.suppFile.publisherDescription">只使用形式上已出版的资料.</message>
 	<message key="author.submit.suppFile.dateDescription">资料搜集或者建立方法的日期.</message>
@@ -117,7 +114,6 @@
 	<message key="author.submit.filesSummary">文件摘要</message>
 	<message key="author.submit.finishSubmission">完成投稿</message>
 	<message key="author.submit.submissionComplete">投稿完成.感谢您对出版于 {$journalTitle}有兴趣.</message>
-	<message key="author.submit.expedite"><![CDATA[如果这份稿件的格式是已经准备出版而没有进一步的审稿、编辑或者版面工作的话，它可以直接放到编辑列表的最后一个阶段：<a href="{$expediteUrl}" class="action">点击这里</a>. (注意，只有期刊编辑人可以为他们负责的稿件选择这个选项。)]]></message>
 	<message key="author.article.uploadAuthorVersion">上传作者版本</message>
 	<message key="author.article.copyeditedFile">文本编辑文件</message>
 	<message key="author.article.authorRevisedFile">作者文件</message>
@@ -125,6 +121,4 @@
 	<message key="author.submit.submissionLocale">投稿语言</message>
 	<message key="author.submit.submissionLocaleDescription">本期刊支持多语言投稿。请从下面的下拉菜单中选择投稿的主语言。</message>
 	<message key="author.submit.form.localeRequired">请选择一种提交语言</message>
-	<message key="author.submit.submissionSupportingAgencies">合著者和赞助机构</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">确认对文章内容作出贡献或为提交草稿中的工作提供资金或支持的机构（个人、组织或服务团体）。用分号将其隔开（如John Doe, 地铁大学；硕士大学，计算机科学系）。</message>
 </locale>

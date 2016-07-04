@@ -38,8 +38,6 @@
 
 
 	<!--  peer review -->
-	<message key="submission.reviewForm">审稿单</message>
-	<message key="submission.reviewFormResponse">审稿单答复</message>
 
 
 	<message key="reviewer.article.enterReviewForm">点击图标以填写审查表。</message>	
@@ -58,7 +56,6 @@
 	<message key="common.confirmComplete">你确定要标记这个任务为完成状态吗？以后您可能无法进行更改。</message>
 	<message key="common.payment">支付</message>
 	<message key="common.payments">支付</message>
-	<message key="common.pageHeader.altText">页面头部</message>
 	<message key="common.homePageHeader.altText">主页头部</message>
 	<message key="common.journalHomepageImage.altText">期刊主页图片</message>
 
@@ -72,7 +69,6 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">期刊帮助</message>
-	<message key="navigation.archives">过刊浏览</message>
 	<message key="navigation.current">最新一期</message>
 	<message key="navigation.otherJournals">其他杂志</message>
 	<message key="navigation.browseByIssue">通过刊期</message>
@@ -125,12 +121,8 @@
 	<message key="article.suppFiles">补充文件</message>
 	<message key="article.suppFilesAbbrev">补充文件</message>
 	<message key="article.discipline">学科和分学科</message>
-	<message key="article.subjectClassification">学科分类</message>
 	<message key="article.subject">关键词</message>
 	<message key="article.coverage">覆盖</message>
-	<message key="article.coverageGeo">地理空间覆盖面</message>
-	<message key="article.coverageChron">按时间顺序或历史报道</message>
-	<message key="article.coverageSample"> 研究样本特征</message>
 	<message key="article.type">形式，方法或途径</message>
 	<message key="article.language">语言</message>
 	<message key="article.sectionEditor">栏目编辑</message>
@@ -213,20 +205,9 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">期刊管理员</message>
-	<message key="user.role.editor">编辑</message>
 	<message key="user.role.sectionEditor">栏目编辑</message>
-	<message key="user.role.layoutEditor">排版编辑</message>
-	<message key="user.role.copyeditor">文字编辑</message>
-	<message key="user.role.proofreader">校对</message>
-	<message key="user.role.author">作者</message>
 	<message key="user.role.subscriptionManager">订阅管理员</message>
 	<message key="user.role.managers">期刊管理员</message>
-	<message key="user.role.editors">编辑</message>
-	<message key="user.role.sectionEditors">栏目编辑</message>
-	<message key="user.role.layoutEditors">排版编辑</message>
-	<message key="user.role.copyeditors">文字编辑</message>
-	<message key="user.role.proofreaders">校对</message>
-	<message key="user.role.authors">作者</message>
 	<message key="user.role.subscriptionManagers">订阅管理员</message>
 	
 	<!-- Common Issue Terms -->
@@ -273,7 +254,6 @@
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">投稿事件</message>
-	<message key="submission.event.general.articleSubmitted">文章已提交</message>
 	<message key="submission.event.general.issueScheduled">投稿已经发送的刊期计划队列中</message>
 	<message key="submission.event.general.issueAssigned">投稿已经指派到期刊</message>
 	<message key="submission.event.general.articlePublished">文章已经发布</message>
@@ -390,8 +370,6 @@
 	<message key="plugins.categories.implicitAuth.description">隐式身份验证插件执行基于HTTP头的用户验证.</message>
 
 
-	<message key="plugins.categories.oaiMetadataFormats">OAI源数据插件</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">这些格式插件表达OAI通信的元数据.</message>
 
 
  
@@ -405,7 +383,6 @@
 	<!-- Setup Step 2 -->
 
 
-	<message key="manager.setup.reviewProcessEmailDescription">编辑向审稿人寄交一份附有投稿稿件的审稿邀请函。审稿人同样以电子邮件将他们的同意书（或婉谢信），连同审稿意见书和建议选项寄交给编辑。编辑在投稿的「审稿」页面，进入审稿人的同意书（或婉谢信）以及审稿意见书和建议选项，以记录审稿流程.</message>
 
 
 	<!-- Setup Step 3 -->
@@ -672,15 +649,10 @@
 	<message key="submission.comments.saveAndEmailEditor">存档并电邮编辑</message>
 	
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">注册本站新用户。</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[基于安全性的理由，这个系统将一个重新配置的密码寄发给注册用户，而不是取回目前的密码。<br /><br />请在下面输入您的电子邮件地址以重新配置您的密码。系统会寄发一封确认信到这个地址去。]]></message>
 	
 	<!-- Registration -->
-	<message key="user.register.selectJournal">选择一份期刊进行注册</message>
 	<message key="user.register.noJournals">本站目前尚无任何期刊可供注册.</message>
 	<message key="user.register.privacyStatement">隐私权声明</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[如果您已经在本站上的任何一份期刊上注册过了，请<a href="{$registerUrl}">点击这里</a>。]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[如果您 <strong>尚未</strong> 在本站上的任何一份期刊上注册过，请<a href="{$registerUrl}">点击这里</a>。]]></message>
 	<message key="user.register.loginToRegister">要注册这份期刊，请输入您现有的用户名称以及密码.</message>
 	<message key="user.register.registrationDisabled">这份期刊目前不接受用户注册.</message>
 	<message key="user.register.form.passwordLengthTooShort">您输入的密码不够长.</message>
@@ -767,8 +739,6 @@
 	
 	<!-- About The Journal -->
 	<message key="about.statistics">统计</message>
-	<message key="about.journalContact">期刊联系方式</message>
-	<message key="about.aboutTheJournal">关于期刊</message>
 	<message key="about.history">期刊历史</message>
 	<message key="about.editorialTeam">编辑团队</message>
 	<message key="about.editorialTeam.biography">简介（Biography）</message>
@@ -776,13 +746,8 @@
 	<message key="about.focusAndScope">重点和范围</message>
 	<message key="about.sectionPolicies">栏目要求</message>
 	<message key="about.submissions">投稿</message>
-	<message key="about.sponsors">主管</message>
-	<message key="about.contributors">支持的来源</message>
 	<message key="about.onlineSubmissions">在线投稿</message>
-	<message key="about.onlineSubmissions.haveAccount">是否已经在{$journalTitle}里有了一个帐户?</message>
 	<message key="about.onlineSubmissions.login">开始登录</message>
-	<message key="about.onlineSubmissions.needAccount">需要一个用户名／密码?</message>
-	<message key="about.onlineSubmissions.registration">开始注册</message>
 	<message key="about.onlineSubmissions.registrationRequired">投稿需要先注册和登录，而且需要在线检查当前投稿的状态.</message>
 	<message key="about.authorGuidelines">作者指南</message>
 	<message key="about.submissionPreparationChecklist">投稿准备清单</message>
@@ -809,7 +774,6 @@
 	<message key="about.subscriptionTypes.cost">费用</message>
 	<message key="about.availableSubscriptionTypes">订阅类型</message>
 	<message key="about.memberships">会员资格</message>
-	<message key="about.journalSponsorship">期刊主办方（Journal Sponsorship）</message>
 	<message key="about.aboutThisPublishingSystem">关于这个期刊系统</message>
 	<message key="about.aboutThisPublishingSystem.altText">OJS编审与出版流程</message>
 	<message key="about.aboutOJSJournal"><![CDATA[本期刊使用开放期刊系统（{$ojsVersion}）,本系统是由<a href="http://pkp.sfu.ca/">Public Knowledge Project</a>研发与支持的一个开源的期刊管理与出版软件，另外，系统基于GNU通用公共许可证，因此可以自由的分发。]]></message>
@@ -921,7 +885,6 @@
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName}已经输入一份新的投稿稿件， ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName}已经修改过文章{$articleId}。新文件的 ID为{$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName}已经被指派审稿稿件{$articleId} ，进行{$round}审.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName}已经被取消指派对稿件{$articleId}进行{$round}审.</message>
 	<message key="log.review.reviewInitiated">{$reviewerName}对稿件{$articleId}进行{$round}审的工作已经开始进行.</message>
 	<message key="log.review.reviewReinitiated">{$reviewerName}对稿件{$articleId}进行{$round}审的工作已经重新开始进行.</message>
@@ -958,7 +921,6 @@
 	<message key="log.editor.archived">稿件{$articleId}已经被存档.</message>
 	<message key="log.editor.restored">稿件{$articleId}已经被复原至列表中.</message>
 	<message key="log.editor.editorAssigned">{$editorName}被指派为稿件{$articleId}的编辑.</message>
-	<message key="log.editor.submissionExpedited">{$editorName}已经在进行稿件{$articleId}的编辑流程.</message>
 
 	<message key="log.proofread.assign">{$assignerName} 已经被指派为{$proofreaderName}进行对稿件{$articleId}的校对.</message>
 	<message key="log.proofread.complete">{$proofreaderName} 提交文章 {$articleId} 用户组版.</message>
@@ -1019,22 +981,16 @@
 	<message key="notification.notificationsPublicDescription">这页显示了杂志刊期或公告相关的重要更新. 您可以通过RSS(点击右侧的图片)或者<![CDATA[  <a href="{$emailUrl}">通过电子邮件.</a>订阅这个通知 ]]></message>
 
 	<message key="notification.type.articleSubmitted">一篇新文章, "{$param}", 已经提交.</message>
-	<message key="notification.type.copyeditComment">文本编辑已经评论了 "{$param}".</message>
 	<message key="notification.type.editing">编辑事件</message>
 	<message key="notification.type.editorDecisionComment">在编辑的决定里已经对 "{$param}"进行了评论</message>
 	<message key="notification.type.galleyModified">草稿已经被修改，关于"{$param}".</message>
 	<message key="notification.type.issuePublished">一个刊期已经出版</message>
-	<message key="notification.type.layoutComment">有一个关于"{$param}'s"的排版评论.</message>
-	<message key="notification.type.metadataModified">"{$param}"的原数据已经被修改.</message>
 	<message key="notification.type.newAnnouncement">一条新的公告已经被创建.</message>	
-	<message key="notification.type.proofreadComment">一个校对已经对 "{$param}"进行了评论</message>
-	<message key="notification.type.reviewerComment">一个审稿人对 "{$param}"进行了评论.</message>
 	<message key="notification.type.reviewerFormComment">一个关于 "{$param}"的审稿评论已经提交.</message>
 	<message key="notification.type.reviewing">审稿事件</message>
 	<message key="notification.type.site">站点事件</message>
 	<message key="notification.type.submissionComment">一个编辑已经对"{$param}"进行了评论.</message>
 	<message key="notification.type.submissions">投稿时间</message>
-	<message key="notification.type.suppFileModified">"{$param}"的附件已经被修改.</message>
 	<message key="notification.type.userComment">一个读者对"{$param}"进行了评论</message>
 
 	<!--
@@ -1046,7 +1002,6 @@
 	
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">已经从XML载入货币列表：{$filename}</message>
-	<message key="debug.notes.helpMappingLoad">Reloaded XML help mapping file {$filename} in search of {$id}.</message>
 	<message key="about.aboutOJSSite"><![CDATA[本站使用开放期刊系统（OJS  {$ojsVersion} ）.OJS是一个开源的期刊管理于出版软件，由<a href="http://pkp.sfu.ca/">Public Knowledge Project</a>组织研发，遵循GNU General Public License.]]></message>
 	<message key="user.subscriptions.subscriptionStatus">订阅状态</message>
 	<message key="user.subscriptions.status">状态</message>
@@ -1055,16 +1010,12 @@
 	<message key="user.subscriptions.status.needsApprovalDescription">订阅在激活前必须被审查</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">人工付费已经可以支付但是尚未收到。</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">在线支付已经被初始化但是被取消或者不完整</message>
-	<message key="article.pdf.download">下载PDF文件</message>
 	<message key="payment.authorFees">作者费用</message>
 	<message key="navigation.categories">类别</message>
 	<message key="navigation.categories.browse">浏览</message>
 	<message key="issue.fullIssue">完整期次</message>
 	<message key="issue.nonpdf.title">期次下载</message>
 	<message key="issue.viewIssue">浏览期次</message>
-	<message key="issue.viewIssueDescription">查看或下载完整的期次</message>
-	<message key="plugins.categories.pubIds">公共标识符插件</message>
-	<message key="plugins.categories.pubIds.description">这些插件为公共标识符提供支持。</message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
 	<![CDATA[<ol>
 	<li>编辑要求突出标明项目显示行动，按照下列进行标注:
@@ -1077,7 +1028,6 @@
 </ol>]]></message>
 	<message key="user.register.reviewerInterests">识别审稿利益冲突 （实质性领域和研究方法）：</message>
 	<message key="user.subscriptions.statusInformation">活跃和无效的订阅将会随着到期日列在下面。此外，下面的状态信息可以包含在每个订阅之中。</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>如果您的Web浏览器安装了PDF阅读器插件（如，最新的版本<a href="https://get.adobe.com/reader/"> Adobe Acrobat Reader</a>).您所选择的PDF文件应加载到这里。</p> <p>如果您想要有关如何打印、保存和使用PDFs的更多信息，Highwire Press 为您提供了一个有帮助的<a href="http://highwire.stanford.edu/help/pdf-faq.dtl">有关PDFs的常问问题</a>.</p> <p>或者，您可以直接将PDF文件下载到您的电脑，在电脑上使用PDF阅读器将其打开。如果要下载PDF，点击上面的下载链接。</p>]]></message>
 	<message key="site.noJournals">没有可用期刊。</message>
 	<message key="gifts.buyer">从</message>
 	<message key="gifts.buyerDescription">谁送来的礼品？</message>
@@ -1121,34 +1071,7 @@
 	<message key="site.upgradeAvailable.admin"><![CDATA[有新版本的OJS可用。您目前使用OJS版本{$currentVersion}. 最新的版本为OJS {$latestVersion}. 请访问<a href="http://pkp.sfu.ca/ojs_download" target="_new"页面 </a> 下载最新的版本并找到升级说明。]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[有新版本的OJS可用。您目前使用OJS版本{$currentVersion}.最新的版本为OJS {$latestVersion}. 请联系您的网站管理员 ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>)通知他们最新版本已发布。更多详情可以在 <a href="http://pkp.sfu.ca/ojs_download" target="_new">here</a>上看到。]]></message>
 	<message key="user.authorization.copyeditorAssignmentMissing">拒绝访问！您不是该文章的排版编辑。</message>
-	<message key="user.authorization.noJournal">在背景中没有期刊！</message>
 	<message key="user.authorization.sectionAssignment">您正在试图访问不属于您文章栏目中的文章。</message>
 	<message key="user.authorization.invalidCopyditorSubmission">无效的排版编辑提交或没有要求的排版编辑提交！</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">无效的文章栏目编辑提交或没有要求的栏目编辑提交！</message>
-	<message key="common.journal">期刊</message>
-	<message key="submission.permissions">许可</message>
-	<message key="submission.license">许可证</message>
-	<message key="submission.copyright">版权</message>
-	<message key="submission.copyrightHolder">版权所有者</message>
-	<message key="submission.licenseURLValid">请提供一个有效的远程URL（包括 http://）</message>
-	<message key="submission.license.cc.by-nc-nd4">知识共享署名-非商业性使用-禁止演绎 4.0</message>
-	<message key="submission.license.cc.by-nc4">知识共享署名-非商业性使用 4.0</message>
-	<message key="submission.license.cc.by-nc-sa4">知识共享署名-非商业性使用-相同方式共享 4.0</message>
-	<message key="submission.license.cc.by-nd4">知识共享署名-禁止演绎 4.0</message>
-	<message key="submission.license.cc.by4">知识共享署名 4.0</message>
-	<message key="submission.license.cc.by-sa4">知识共享署名-相同方式共享 4.0</message>
-	<message key="submission.copyrightStatement">版权所有（c）{$ COPYRIGHTYEAR} {$ copyrightHolder}</message>
-	<message key="user.profile.form.orcidInvalid">您指定的ORCID ID无效。</message>
-	<message key="submission.licenseURL">许可 URL</message>
-	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />此作品已接受<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0国际许可协议</a>的许可。]]></message>
-	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />此作品已接受<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用 4.0国际许可协议</a>的许可。]]></message>
-	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />此作品已接受<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0国际许可协议</a>的许可。]]></message>
-	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />此作品已接受<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-禁止演绎 4.0国际许可协议</a>的许可。]]></message>
-	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />此作品已接受<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">知识共享署名 4.0国际许可协议</a>的许可]]></message>
-	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />此作品已接受<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">知识共享署名-相同方式共享 4.0国际许可协议</a>的许可]]></message>
-	<message key="submission.copyrightYear">版权年限</message>
 	<message key="user.profile.profileImage">个人照片</message>
-	<message key="user.orcid">ORCID iD</message>
-	<message key="user.orcid.description"><![CDATA[ORCID iDs只能通过<a href="http://orcid.org/" target="_blank"> ORCID注册</a>的指定。您必须符合ORCID iDs的标准，并且包括URI9（例如：<em>http://orcid.org/0000-0002-1825-0097</em>）]]></message>
-	<message key="manager.setup.preservationDescription"><![CDATA[开源期刊系统支持<a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (很多副本确保材料安全)确保您的期刊的安全和永久保存。下列多个选项供您选择使您的期刊包含在LOCKSS网络系统中。]]></message>
 </locale>

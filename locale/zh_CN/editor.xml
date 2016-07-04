@@ -13,11 +13,7 @@
   -->
 
 <locale name="zh_CN" full_name="简体中文">
-	<message key="editor.article.reviewForms">评审表单</message>
-	<message key="editor.article.selectReviewForm">选择评审表单</message>
-	<message key="editor.article.clearReviewForm">清除评审表单</message>
 	<message key="editor.home">编辑首页</message>
-	<message key="editor.article.confirmChangeReviewForm">警告：改变评审表单将影响到所有使用这个表单回复的审稿人，您确认继续吗?</message>
 	<message key="editor.submissionsAndPublishing">投稿与出版</message>
 	<message key="editor.submissionQueue">投稿队列</message>
 	<message key="editor.submissionArchive">投稿存档</message>
@@ -97,9 +93,7 @@
 	<message key="editor.issues.noLiveIssues">没有活动的刊期</message>
 	<message key="editor.issues.open">开放</message>
 	<message key="editor.issues.pages">页</message>
-	<message key="editor.navigation.issues">刊期</message>
 	<message key="editor.navigation.futureIssues">计划中刊期</message>
-	<message key="editor.navigation.createIssue">创建刊期</message>
 	<message key="editor.navigation.issueArchive">过刊</message>
 	<message key="editor.article.designateReviewVersion">指定原始文件作为审阅版本</message>
 	<message key="editor.article.uploadReviewVersion">一个上传的修订的审阅版本</message>
@@ -219,7 +213,4 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">公共期目校样确认已经存在。</message>
 	<message key="editor.issues.backToIssueGalleys">返回期目校样。</message>
 	<message key="editor.issues.confirmDeleteGalley">您确定要删除该期目校样吗？</message>
-	<message key="editor.notifyUsers.allMailingList">包含邮件列表上的所有邮件({$count} emails)</message>
-	<message key="editor.publicGalleyIdentificationExists">公共标识符'{$publicIdentifier}'已存在于文章的另一样稿中。请为该篇文章选择唯一的样稿标识符。</message>
-	<message key="editor.issues.resetArticlePublicationDates">重置文章出版日期</message>
 </locale>

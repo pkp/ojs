@@ -22,11 +22,9 @@
 	<message key="admin.locale.maybeIncomplete">标记的语言环境也许没有完成.</message>
 	<message key="admin.languages.confirmUninstall">您确认卸载这个语言环境?这个将影响使用该语言环境的主办期刊.</message>
 	<message key="admin.languages.installNewLocalesInstructions">安装额外的地区配置以在这个系统取得语言支持。地区配置必须先安装，系统上的期刊才能使用该地区语言。请参考OJS文件以取得关于增加语言支持的信息。</message>
-	<message key="admin.languages.downloadLocales">下载语言环境</message>
 	<message key="admin.languages.downloadFailed">语言环境下载失败.错误提示信息描述如下.</message>
 	<message key="admin.languages.localeInstalled">语言环境 "{$locale}" 已经被安装. </message>
 	<message key="admin.languages.download">下载语言环境</message>
-	<message key="admin.languages.reloadDefaultEmailTemplates">加载默认的电子邮件模板</message>
 	<message key="admin.languages.download.cannotOpen">无法从PKP网站打开语言描述.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">无法添加一个新的语言环境到注册文件"registry/locales.xml".</message>
 	<message key="admin.auth.ojs">OJS用户数据库</message>
@@ -42,7 +40,6 @@
 	<message key="admin.contexts.create">创建期刊</message>
 	<message key="admin.journals.createInstructions">您将自动注册为这个期刊管理员.在创建一个新期刊后，作为期刊管理员进入继续进行期刊的设置和用户的注册.</message>
 	<message key="admin.journals.urlWillBe">应该是一个单一的短词或缩写来标识杂志，期刊URL将是 {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">标题是必须的</message>
 	<message key="admin.contexts.form.pathRequired">路径是必须的</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">这个路径只能含有英文字母和数字符号，底线(_)和连字号(-)，而且一定要以英文字母和数字符号当做开头和结尾.</message>
 	<message key="admin.contexts.form.pathExists">选择的路径已经被其他期刊使用中.</message>
@@ -73,25 +70,13 @@
 	<message key="admin.categories.create">新建一个类别</message>
 	<message key="admin.categories.noneCreated">没有创建任何类别</message>
 	<message key="admin.settings.options">选项</message>
-	<message key="admin.settings.useAlphalist">对于含有许多期刊的网站，在其首页上提供字母列表从而在不同期刊间进行快速的字母导航。</message>
 	<message key="admin.settings.usePaging">含有多本期刊的网站，其期刊表会被分成若干页。</message>
 	<message key="admin.settings.journalsList">期刊元素</message>
 	<message key="admin.settings.journalsList.description">请选择在该网站页面上将为每本期刊所显示的期刊元素。</message>
 	<message key="admin.categories.enable.description">网站管理员可以选择定义此处的一套类别来帮助其组织更大规模的期刊。期刊管理员可以随后从其中为每本期刊选择若干类别，读者可以通过类别分类来浏览期刊内容。</message>
 	<message key="admin.categories.disableCategories">不要将期刊组织成类。</message>
 	<message key="admin.categories.enableCategories">允许期刊管理员将期刊组织成类。</message>
-	<message key="admin.copyAccessLogFileTool.error.creatingFolder">错误：无法创建当前文件夹{$tmpDir}</message>
-	<message key="admin.copyAccessLogFileTool.error.acessingFile">错误：文件{$文件路径}不存在或无法访问。</message>
-	<message key="admin.copyAccessLogFileTool.error.deletingFile">错误：无法删除文件{$ tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.error.copyingFile">错误：文件无法从{$filePath}复制到{$tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">提醒：文件{$filePath}已存在数据目录中。</message>
-	<message key="admin.copyAccessLogFileTool.success">成功： 从{$filePath} 到 {$destinationPath}</message>
 	<message key="admin.settings.defaultMetricDescription">您的期刊使用多个度量标准。 这些度量标准的使用统计将在许多上下文中出现。
 在某些情况下，期刊应包含一个使用统计，例如： 显示常用文章的顺序列表或者搜索结果排名。请选择其中一个度量标准作为默认值。</message>
-	<message key="admin.copyAccessLogFileTool.usage">把已经通过的apache访问日志文件（过滤相关的安装记录）复制到当前文件记录中的UsageStatsPlugin的子集目录里。只有拥有阅读apache访问日志文件权限的用户才能完成此操作。
-这个工具复制的文件不能存在于usageStats文件（当前状态，进行中，存档，拒绝）中。
-Usage: {$scriptName} path/to/apache/log/file.log
-Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory</message>
-	<message key="admin.settings.security">安全性</message>
-	<message key="admin.settings.security.plugins">阻止期刊管理员设置，更新或者删除插件</message>
+	
 </locale>
