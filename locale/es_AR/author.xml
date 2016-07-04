@@ -46,7 +46,6 @@
 	<message key="author.submit.journalSectionDescription"><![CDATA[Seleccione una sección apropiada para el envío (vea Secciones y Políticas en <a href="{$aboutUrl}" target="_new">Sobre</a> la revista).]]></message>
 	<message key="submission.submit.selectSection">Seleccione una sección ...</message>
 	<message key="author.submit.submissionChecklist">Lista de comprobación de envío</message>
-	<message key="submission.submit.submissionChecklistDescription">Indica que este envío está listo para ser considerado por esta revista marcando los siguientes puntos (a continuación se pueden enviar comentarios al / a la editor/a).</message>
 	<message key="author.submit.verifyChecklist">Debe asegurarse de que cumple todos los requisitos de la lista antes de continuar</message>
 	<message key="author.submit.copyrightNoticeAgree">Los/as autores/as están de acuerdo con los términos de esta nota de copyright, que se aplicará a su envío si y cuando sea publicado por esta revista (a continuación se pueden hacer comentarios al / a la editor/a).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Antes de continuar debe aceptar los términos de la nota de copyright.</message>
@@ -59,10 +58,7 @@
 	<message key="author.submit.addAuthor">Añadir autor/a</message>
 	<message key="author.submit.deleteAuthor">Borrar autor/a</message>
 	<message key="author.submit.submissionIndexingDescription">Proporcione palabras clave para indexar el envío; separe los términos con punto y coma (término1; término2; término3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Agencias de apoyo</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Identifique las agencias que proporcionan financiación o apoyo para el trabajo presentado en este envío.</message>
 	<message key="author.submit.coverageInstructions">Se refiere a la localización geo-espacial, cronológica o cobertura histórica, y/o características de ejemplos de investigación.</message>
-	<message key="author.submit.subjectClassInstructions">Utilice el sistema de clasificación hiperenlazado para seleccionar términos de clasificación y, si es necesario, números.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Inglés=en; Francés=fr; Español=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Códigos adicionales</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Es necesario, como mínimo, un/a autor/a.</message>
 	<message key="author.submit.form.authorRequiredFields">Es necesario el primer nombre, apellido y dirección de correo-e de cada autor/a.</message>
@@ -94,7 +90,6 @@
 	<message key="author.submit.suppFile.dataSet">Conjuntos de datos</message>
 	<message key="author.submit.suppFile.sourceText">Texto fuente</message>
 	<message key="author.submit.suppFile.briefDescription">Breve descripción</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Agencia colaboradora o financiadora</message>
 	<message key="author.submit.suppFile.availableToPeers">Mostrar archivo a los/as revisores/as (sin metadatos), ya que no comprometerá la evaluación ciega.</message>
 	<message key="author.submit.suppFile.publisherDescription">Usar sólo con materiales formalmente publicados.</message>
 	<message key="author.submit.suppFile.dateDescription">Fecha en que los datos fueron recogidos o los instrumentos creados.</message>
@@ -111,7 +106,6 @@
 	<message key="author.submit.filesSummary">Resumen de archivos</message>
 	<message key="author.submit.finishSubmission">Finalizar envío</message>
 	<message key="author.submit.submissionComplete">Envío completado. Gracias por su interés en publicar en {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Si este envío está en un formato listo para ser publicado, sin necesidad de más revisiones, edición, o maquetación, se puede enviar directamente a la cola de Planificación de Envíos <a href="{$expediteUrl}" class="action">pinchando aquí</a>. (Nota: Sólo los/as editores/as de revista cuentan con esta opción para sus envíos.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Subir versión de autor/a</message>
 	<message key="author.article.copyeditedFile">archivo corregido</message>
 	<message key="author.article.authorRevisedFile">archivo de autor/a</message>

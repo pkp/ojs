@@ -13,9 +13,6 @@
   -->
 
 <locale name="es_AR" full_name="Español (Argentina)">
-	<message key="editor.article.reviewForms">Formularios de Revisión</message>
-	<message key="editor.article.selectReviewForm">Escoger Formulario de Revisión</message>
-	<message key="editor.article.clearReviewForm">Limpiar Formulario de Revisión</message>
 	<message key="editor.home">Home de editor/a</message>
 	<message key="editor.submissionsAndPublishing">Envíos y publicación</message>
 	<message key="editor.submissionQueue">Cola de envíos</message>
@@ -93,9 +90,7 @@
 	<message key="editor.issues.noLiveIssues">No hay números en curso</message>
 	<message key="editor.issues.open">Abierto</message>
 	<message key="editor.issues.pages">Páginas</message>
-	<message key="editor.navigation.issues">Números</message>
 	<message key="editor.navigation.futureIssues">Números futuros</message>
-	<message key="editor.navigation.createIssue">Crear número</message>
 	<message key="editor.navigation.issueArchive">Números anteriores</message>
 	<message key="editor.article.designateReviewVersion">Designar el archivo original como la versión de revisión</message>
 	<message key="editor.article.uploadReviewVersion">Subir una versión de Revisión revisada</message>
@@ -196,7 +191,6 @@
 	<message key="editor.article.uploaded">archivo enviado</message>
 	<message key="editor.article.removeCoverPage">Remover imagen de portada?</message>
 	<message key="editor.article.remove">Remover</message>
-	<message key="editor.article.confirmChangeReviewForm">Cambiar el formulario de revisión removerá las respuestas...</message>
 	<message key="editor.issues.enableOpenAccessDate">Habilitado acceso abierto retardado</message>
 	<message key="editor.issues.unpublishIssue">Despublicar número</message>
 	<message key="editor.issues.confirmUnpublish">¿Está serguro de que quiere despublicar este número publicado?</message>
@@ -219,7 +213,4 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">La identificación para la versión galerdad ya existe.</message>
 	<message key="editor.issues.backToIssueGalleys">De vuelta a versiones galeradas.</message>
 	<message key="editor.issues.confirmDeleteGalley">¿Está seguro que quiere borrar esta version galerada?</message>
-	<message key="editor.notifyUsers.allMailingList">Incluir todos los emails de la lista de correos ({$count} emails)</message>
-	<message key="editor.publicGalleyIdentificationExists">El identificador público  '{$publicIdentifier}' ya existe para otra galerada de este artículo. Por favor escoja un identificador único para esta galerada.</message>
-	<message key="editor.issues.resetArticlePublicationDates">Resetear las fechas de publicación de l</message>
 </locale>
