@@ -4,7 +4,7 @@
 <!--
   * locale/ja_JP/default.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -14,11 +14,14 @@
 
 <locale name="ja_JP" full_name="日本語">
   <message key="default.journalSettings.checklist.notPreviouslyPublished">投稿物はこれまでに出版されておらず、また、別の雑誌に投稿されてもいない（または、編集者へのコメント欄で事情を説明している）。</message>
-  <message key="default.journalSettings.checklist.fileFormat">投稿ファイルは、Microsoft Word、またはRTF文書ファイルフォーマットのいずれかである。 </message>
+  <message key="default.journalSettings.checklist.fileFormat">投稿ファイルは、Microsoft Word、RTF、またはWordPerfect文書ファイルフォーマットのいずれかである。 </message>
   <message key="default.journalSettings.checklist.addressesLinked">可能な場合、参考文献のURLが提供されている。</message>
   <message key="default.journalSettings.checklist.submissionAppearance">テキストはシングルスペースで書かれており、12ポイントのフォントサイズを使用しており、下線ではなくイタリック体を使用しており（URLアドレスを除く）、すべてのイラスト、図、表は最後にまとめて示すのではなく、テキスト中の適当な場所に埋め込んでいる。</message>
   <message key="default.journalSettings.checklist.bibliographicRequirements">
     <![CDATA[テキストは、「この雑誌について」ページにある<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">執筆要項</a>で示された書式要件および書誌記述要件を順守している。]]>
+  </message>
+  <message key="default.journalSettings.checklist.anonymous">
+    <![CDATA[査読を行う雑誌セクションに投稿する場合、<a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">ブラインド審査を保証する</a>ための指示に従っている。]]>
   </message>
   <message key="default.journalSettings.privacyStatement">本雑誌サイトに入力された名前およびメールアドレスは、本雑誌で述べた目的にのみ使用し、他の目的で使用したり、他のいかなる団体にも公開することはありません。</message>
   <message key="default.journalSettings.openAccessPolicy">本雑誌は、知の全世界的な流通を支援するために研究成果を自由に利用できるようにするという原則に基づいて、そのコンテンツを直ちにオープンアクセスで提供します。</message>
@@ -88,9 +91,12 @@
 &bull; [単語を削除] は単語「全面的に」を削除したことを示しています
 &bull; コメントは編集者のQAに対する回答を含んでいます]]>
   </message>
-  <message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
-</message>
+  <message key="default.journalSettings.emailSignature">
+    <![CDATA[________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}
+]]>
+  </message>
   <message key="default.journalSettings.forReaders">
     <![CDATA[読者には、この雑誌の出版通知サービスへの登録をお薦めします。雑誌ホームページの上部にある<a href="{$indexUrl}/{$journalPath}/user/register">登録</a>リンクをクリックして登録してください。このサービスは、登録した雑誌に新しい号が出版されるたびに、目次情報をメールでお知らせするものです。登録者リストは、この雑誌のサポートや読者数のレベルを主張することを可能にします。登録読者の名前とメールアドレスは、その他の目的では使用いたしません。この雑誌の<a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">プライバシー情報の扱いについて</a>を参照してください。]]>
   </message>

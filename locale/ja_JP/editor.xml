@@ -4,7 +4,7 @@
 <!--
   * locale/ja_JP/editor.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="ja_JP" full_name = "日本語">
+<locale name="ja_JP" full_name="日本語">
 	<message key="editor.home">編集者ホーム</message>
 	<message key="editor.submissionsAndPublishing">投稿物と出版</message>
 	<message key="editor.submissionQueue">作業待ち投稿物</message>
@@ -85,8 +85,9 @@
 	<message key="editor.issues.noLiveIssues">処理中の巻号はありません</message>
 	<message key="editor.issues.open">オープン</message>
 	<message key="editor.issues.pages">ページ</message>
+	<message key="editor.navigation.issues">巻号</message>
 	<message key="editor.navigation.futureIssues">出版予定号</message>
-	<message key="grid.action.addIssue">巻号作成</message>
+	<message key="editor.navigation.createIssue">巻号作成</message>
 	<message key="editor.navigation.issueArchive">バックナンバー</message>
 	<message key="editor.article.designateReviewVersion">査読版としてオリジナルファイルを指定</message>
 	<message key="editor.article.uploadReviewVersion">改訂済み査読版のアップロード</message>

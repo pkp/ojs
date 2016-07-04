@@ -4,7 +4,7 @@
 <!--
   * locale/ja_JP/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="ja_JP" full_name = "日本語">
+<locale name="ja_JP" full_name="日本語">
 	<message key="author.submit">新規投稿</message>
 	<message key="author.track">投稿物一覧</message>
 	<message key="author.competingInterests"><![CDATA[利害の競合<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CIポリシー</a>]]></message>
@@ -26,11 +26,11 @@
 	<message key="author.submit.step4">ステップ 4. 補足ファイルのアップロード</message>
 	<message key="author.submit.step4a">ステップ 4a. 補足ファイルの追加</message>
 	<message key="author.submit.step5">ステップ 5. 投稿の確認</message>
-	<message key="author.submit.start">開始</message>
-	<message key="author.submit.upload">投稿物アップロード</message>
-	<message key="author.submit.metadata">メタデータ入力</message>
-	<message key="author.submit.supplementaryFiles">補足ファイルアップロード</message>
-	<message key="author.submit.confirmation">確認</message>
+	<message key="author.submit.start">1. 開始</message>
+	<message key="author.submit.upload">2. 投稿物アップロード</message>
+	<message key="author.submit.metadata">3. メタデータ入力</message>
+	<message key="author.submit.supplementaryFiles">4. 補足ファイルアップロード</message>
+	<message key="author.submit.confirmation">5. 確認</message>
 	<message key="author.submit.cancelSubmission">後日、著者のホームページからこの投稿物を選択することにより、この投稿を完了することもできます。</message>
 	<message key="author.submit.notAccepting">この雑誌は現在投稿を受け付けていません。</message>
 	<message key="author.submit.requestWaiver">免除依頼</message>
@@ -43,22 +43,23 @@
 	<message key="author.submissions.noSubmissions">投稿物がありません。</message>
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[ご不明な点がございましたら、 <a href="mailto:{$supportEmail}">{$supportName}</a>にお問い合わせください。]]></message>
 	<message key="author.submit.journalSection">雑誌セクション</message>
-	<message key="submission.submit.selectSection">セクションを選択してください。</message>
-	<message key="submission.submit.submissionChecklist">投稿時のチェックリスト</message>
-	<message key="submission.submit.submissionChecklistDescription">この投稿物が、雑誌が必要とする以下の項目を満たしていることを確認して、チェックしてください。&lt;br/&gt;（このページの最後で編集者へのコメントを書くことができます。）</message>
+	<message key="author.submit.selectSection">セクションを選択してください。</message>
+	<message key="author.submit.submissionChecklist">投稿時のチェックリスト</message>
+	<message key="author.submit.submissionChecklistDescription">この投稿物が、雑誌が必要とする以下の項目を満たしていることを確認して、チェックしてください。&lt;br/&gt;（このページの最後で編集者へのコメントを書くことができます。）</message>
 	<message key="author.submit.verifyChecklist">投稿を続けるには、投稿物がチェックリストの全項目を満たしていることが必要です。</message>
 	<message key="author.submit.copyrightNoticeAgree">私（たち）は、投稿物がこの雑誌で出版される際に適用される上記の著作権表示条件に同意します。&lt;br/&gt;（このページの最後で編集者へのコメントを書くことができます。）</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">投稿を続けるには、著作権表示条項に同意する必要があります。</message>
-	<message key="submission.submit.coverNote">編集者へのコメント</message>
+	<message key="author.submit.commentsForEditor">編集者へのコメント</message>
 	<message key="author.submit.comments">コメントを入力してください（オプション）</message>
 	<message key="author.submit.form.sectionRequired">この投稿物にふさわしい雑誌セクションを選択してください。</message>
-	<message key="submission.submit.privacyStatement">この雑誌のプライバシー情報の扱いについて</message>
+	<message key="author.submit.privacyStatement">この雑誌のプライバシー情報の扱いについて</message>
 	<message key="author.submit.reorderInstructions">出版物に掲載される著者の並びを再度並び替える。</message>
 	<message key="author.submit.selectPrincipalContact">編集上の連絡を取る第一著者</message>
 	<message key="author.submit.addAuthor">著者の追加</message>
 	<message key="author.submit.deleteAuthor">著者の削除</message>
 	<message key="author.submit.submissionIndexingDescription">投稿物の索引語を入力してください。各索引語は（索引語1;索引語2;索引語3）のようにセミコロンで区切ってください。</message>
 	<message key="author.submit.coverageInstructions">地理空間的・年代的・歴史的範囲または研究材料の特性を示してください。</message>
+	<message key="author.submit.subjectClassInstructions">分類語または（可能であれば）分類標数の選択にはハイパーリンク分類システムを使用してください。</message>
 	<message key="author.submit.form.authorRequired">少なくとも1人の著者が必須です。</message>
 	<message key="author.submit.form.authorRequiredFields">各著者の姓名、メールアドレスは必須です。</message>
 	<message key="author.submit.form.titleRequired">論文のタイトルを入力してください。</message>

@@ -4,7 +4,7 @@
 <!--
   * locale/ja_JP/manager.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="ja_JP" full_name = "日本語">
+<locale name="ja_JP" full_name="日本語">
 	<message key="manager.emails.confirmResetAll">この雑誌のメールテンプレートをリセットしてもよいですか。実行すると、カスタマイズしたメールが失われることになります。</message>
 	<message key="manager.files.note">注: ファイルブラウザは、雑誌に関係するファイルやディレクトリを直接、閲覧・操作するための新機能です。</message>
 	<message key="manager.groups">編集委員会</message>
@@ -138,7 +138,13 @@
 	<message key="manager.setup.copyeditInstructionsDescription">原稿整理の手引きは、投稿物編集段階においてコピーエディタ、著者、セクションエディタに公開されます。以下は、HTMLで書かれたデフォルトの指示内容です。雑誌編集者は、いつでもこれを変更したり、置き換えたりすることができます（プレーンテキストでもHTMLでも可）。</message>
 	<message key="manager.setup.copyrightNotice">著作権表示</message>
 	<message key="manager.setup.coverage">範囲</message>
+	<message key="manager.setup.coverageChronExamples">（例: ヨーロッパルネッサンス; ジュラ紀; 3学期）</message>
+	<message key="manager.setup.coverageChronProvideExamples">このフィールドで指定する年代的または歴史的用語の例を与えてください。</message>
 	<message key="manager.setup.coverageDescription">地理空間的・年代的・歴史的範囲または研究材料の性質を示してください。</message>
+	<message key="manager.setup.coverageGeoExamples">（例: イベリア半島; 成層圏; 北方林）</message>
+	<message key="manager.setup.coverageGeoProvideExamples">このフィールドで指定する地理空間的または地理的用語の例を与えてください。</message>
+	<message key="manager.setup.coverageResearchSampleExamples">（例: 年齢; 性別; 民族）</message>
+	<message key="manager.setup.coverageResearchSampleProvideExamples">このフィールドで指定する研究材料の性質の例を与えてください。</message>
 	<message key="manager.setup.currentIssue">最新号</message>
 	<message key="manager.setup.customizingTheLook">ステップ 5. 外観のカスタマイズ</message>
 	<message key="manager.setup.customTags">カスタムタグ</message>
@@ -153,6 +159,12 @@
 	<message key="manager.setup.displayCurrentIssue">（もしあれば）最新号の目次を追加する。</message>
 	<message key="manager.setup.doiPrefix">DOIプリフィックス</message>
 	<message key="manager.setup.editorDecision">編集者の判断</message>
+	<message key="manager.setup.editorialMembers">委員会委員のページで、編集委員会委員または査読委員会委員を追加してください。この処理は、雑誌運営のいつの時点で行っても構いません。</message>
+	<message key="manager.setup.editorialProcess1">1人以上の編集者が担当者が指定されていない基本的ステップを担当する。</message>
+	<message key="manager.setup.editorialProcess2">編集長が受付と目次を担当し、セクションエディタが査読と編集を担当する。</message>
+	<message key="manager.setup.editorialProcess3">編集長が受付と編集、目次を担当し、セクションエディタが査読を担当する。</message>
+	<message key="manager.setup.editorialReviewBoard">編集・査読委員会</message>
+	<message key="manager.setup.editorialReviewBoardDescription">雑誌は、雑誌の編集上の方向性を監督し、編集者の任命を行い、委員会委員の評判により該当分野におけるその雑誌の地位を高めるために編集委員会を設けます。査読委員会も同様な役割を果たしますが、さらに、査読処理を主導します。査読委員会の委員は、雑誌の管理システムへのアクセス権は持ちませんが、査読を行う候補者のリストに追加されます。</message>
 	<message key="manager.setup.emailBounceAddress">返信アドレス</message>
 	<message key="manager.setup.emailBounceAddressDescription">配信できなかったメールは、次のアドレスへエラーメッセージとなり返送されます。</message>
 	<message key="manager.setup.emails">メールの識別</message>
@@ -161,6 +173,10 @@
 	<message key="manager.setup.enableAnnouncements">雑誌管理者による告知文の追加機能を有効にする。</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">雑誌ホームページに最新の告知文を</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">件表示する。</message>
+	<message key="manager.setup.enablePageNumber">アイテムのページ数を独自に計算して、目次に入力する（例えば、13-26）。</message>
+	<message key="manager.setup.enablePublicArticleId">出版アイテムを識別するためにカスタム識別子を使用する。</message>
+	<message key="manager.setup.enablePublicIssueId">巻号を識別するためにカスタム識別子を使用する。</message>
+	<message key="manager.setup.enablePublicSuppFileId">論文補足ファイルを識別するためにカスタム識別子を使用する。</message>
 	<message key="manager.setup.enableUserRegistration">ユーザはこの雑誌について以下の1つ以上の役割を持つものとして自らを登録することができます。</message>
 	<message key="manager.setup.enableUserRegistration.author">著者（この雑誌に資料を投稿することができます）</message>
 	<message key="manager.setup.enableUserRegistration.reader">読者（通知を受け取り、購読者相当としてカウントされます）</message>
@@ -186,7 +202,6 @@
 	<message key="manager.setup.guidingSubmissions">ステップ 3. 投稿の手引き</message>
 	<message key="manager.setup.homepageImage">ホームページ画像</message>
 	<message key="manager.setup.homepageImageDescription">ページの中央に画像または図形を追加する。</message>
-	<message key="manager.setup.includeCreativeCommons">オープンアクセスを提供する（エンバーゴ付きを含む）雑誌については、適当な時点で発表される全ての作品にクリエイティブ･コモンズライセンスを与えてください。</message>
 	<message key="manager.setup.information">ご案内</message>
 	<message key="manager.setup.information.description">図書館員、潜在的著者および読者向けの雑誌に関する簡潔な説明で、サイドバーの"ご案内"欄に表示されます。</message>
 	<message key="manager.setup.information.forAuthors">著者向け</message>
@@ -212,6 +227,8 @@
 	<message key="manager.setup.journalLogo">雑誌ロゴ</message>
 	<message key="manager.setup.journalPageFooter">雑誌ページのフッタ</message>
 	<message key="manager.setup.journalPageFooterDescription">雑誌のフッタです。フッタを変更または更新する場合は、下の記入欄にHTML文を貼り付けてください。フッタの例としては、2つ目のナビゲーションバーやカウンターなどが考えられます。このフッタはすべてのページに表示されます。</message>
+	<message key="manager.setup.journalPageHeader">雑誌ページのヘッダ</message>
+	<message key="manager.setup.journalPageHeaderDescription">雑誌名と雑誌ロゴの画像（.gif, .jpg, .pngファイル。通常はホームページで使用したものより小型のもの）をホームページにアップロードできます。雑誌名の画像を指定すると雑誌名は表示されません。指定がないと雑誌名が表示されます。</message>
 	<message key="manager.setup.journalPolicies">ステップ 2. 雑誌ポリシー</message>
 	<message key="manager.setup.journalSetup">雑誌設定</message>
 	<message key="manager.setup.journalSetupUpdated">雑誌設定が更新されました。</message>
@@ -328,6 +345,8 @@
 	<message key="manager.setup.sponsors">スポンサー</message>
 	<message key="manager.setup.sponsorsDescription">雑誌をスポンサードする組織（例えば、学会や大学の部局、協同組合など）。その名称は「この雑誌について」ページに謝辞と共に表示されます。</message>
 	<message key="manager.setup.stepsToJournalSite">雑誌Webサイト完成までの5ステップ</message>
+	<message key="manager.setup.subjectClassification">主題分類</message>
+	<message key="manager.setup.subjectClassificationExamples">（例: 数学主題分類; 米国議会図書館分類）</message>
 	<message key="manager.setup.subjectExamples">（例: 光合成; ブラックホール; 地図の4色問題; ベイズの定理）</message>
 	<message key="manager.setup.subjectKeywordTopic">キーワード</message>
 	<message key="manager.setup.subjectProvideExamples">著者に示すキーワードまたはトピックの例を与えてください。</message>
@@ -390,13 +409,8 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">ヵ月からオープンアクセスで利用できるようにする。</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">正式なエンバーゴ期間を選択してください。</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">次の文が、エンバーゴ付きオープンアクセス雑誌の「この雑誌について」ページに表示されます。</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">チェックボックスをチェックしてください。</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">購読期間満了</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">ヶ月後に購読者にメールで通知する。</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">購読期間満了</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">週間後に購読者にメールで通知する。</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">購読期間満了</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">ヶ月前に購読者にメールで通知する。</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">購読期間満了</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">週間前に購読者にメールで通知する。</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">購読期間満了通知</message>
@@ -495,10 +509,46 @@
 	<message key="manager.language.confirmDefaultSettingsOverwrite">設定済みのこの言語用の雑誌設定を置き換えます。よろしいですか？</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">この言語のデフォルト設定をリロードする</message>
 	<message key="manager.payment.options.purchaseArticleFee">論文購入料</message>
+	<message key="manager.reviewFormElement.changeType">フォーム項目種別を変更する</message>
+	<message key="manager.reviewFormElements">フォーム項目</message>
+	<message key="manager.reviewFormElements.addResponseItem">選択の追加</message>
+	<message key="manager.reviewFormElements.checkboxes">チェックボックス（1つ以上選択可能）</message>
+	<message key="manager.reviewFormElements.chooseType">項目種別を選択してください</message>
+	<message key="manager.reviewFormElements.confirmDelete">公開されたフォーム項目の削除を確認</message>
+	<message key="manager.reviewFormElements.copyTo">複写先:</message>
+	<message key="manager.reviewFormElements.create">新項目の作成</message>
+	<message key="manager.reviewFormElements.dropdownbox">ドロップダウンボックス</message>
+	<message key="manager.reviewFormElements.edit">フォーム項目の編集</message>
+	<message key="manager.reviewFormElements.elementType">項目種別</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">フォーム項目には項目種別が必要です。</message>
+	<message key="manager.reviewFormElements.form.questionRequired">フォーム項目には質問が必要です。</message>
+	<message key="manager.reviewFormElements.noneCreated">フォーム項目は作成されていません。</message>
+	<message key="manager.reviewFormElements.possibleResponse">選択</message>
+	<message key="manager.reviewFormElements.question">項目</message>
+	<message key="manager.reviewFormElements.radiobuttons">ラジオボックス（1つのみ選択可能）</message>
+	<message key="manager.reviewFormElements.required">必須入力項目</message>
+	<message key="manager.reviewFormElements.smalltextfield">単語テキストボックス</message>
+	<message key="manager.reviewFormElements.textarea">拡張テキストボックス</message>
+	<message key="manager.reviewFormElements.textfield">行テキストボックス</message>
+	<message key="manager.reviewForms">査読フォーム</message>
+	<message key="manager.reviewForms.completed">完了</message>
+	<message key="manager.reviewForms.confirmDeleteUnpublished">公開されていない査読フォームの削除を確認</message>
+	<message key="manager.reviewForms.create">査読フォームの作成</message>
+	<message key="manager.reviewForms.description">説明と操作法</message>
+	<message key="manager.reviewForms.edit">査読フォーム</message>
+	<message key="manager.reviewForms.form.titleRequired">査読フォームにはタイトルが必要です。</message>
+	<message key="manager.reviewForms.inReview">査読中</message>
+	<message key="manager.reviewForms.list.description">2つの入力欄（「著者と編集者用」と「編集者用」）を持つデフォルトフォームの代わりに査読者に表示する、査読フォームを作成します。査読フォームは特定の雑誌セクションごとに作成することもでき、どれを使用するかは編集者が査読者任命の際に選択することができます。どんな場合も、編集者は著者への通知に査読結果を含めるか否かを選択することができます。</message>
+	<message key="manager.reviewForms.noneChosen">使用しない / 自由記述の査読フォーム</message>
+	<message key="manager.reviewForms.noneCreated">査読フォームが作成されていません。</message>
+	<message key="manager.reviewForms.preview">プレビュー</message>
+	<message key="manager.reviewForms.title">タイトル</message>
 	<message key="manager.sections.abstractsNotRequired">抄録を必要としない</message>
+	<message key="manager.sections.disableComments">このセクションは読者コメント機能を無効にする</message>
 	<message key="manager.sections.form.mustAllowPermission">各セクション編集者を割り当てるために少なくとも1つはチェックボックスをチェックしてください。</message>
 	<message key="manager.sections.form.reviewFormId">正しい査読フォームを選択したことを確認してください。</message>
 	<message key="manager.sections.hideTocAuthor">このセクションのアイテムは目次に著者名を表示しない</message>
+	<message key="manager.setup.enablePublicGalleyId">出版アイテムのコンテンツ文書（HTMLやPDFファイル）の識別にカスタム識別子を使用する。</message>
 	<message key="manager.setup.journalHomepageHeader.altText">雑誌ホームページヘッダダー</message>
 	<message key="manager.setup.journalLogo.altText">雑誌ロゴ</message>
 	<message key="manager.subscriptionPolicies.expiry">購読期限</message>
@@ -512,12 +562,14 @@
 	<message key="manager.subscriptions.dateStartSearch">開始日付</message>
 	<message key="manager.subscriptions.domain">ドメイン</message>
 	<message key="manager.subscriptions.membership">会費</message>
+	<message key="manager.plugins.install">新しいプラグインをインストールする</message>
 	<message key="manager.plugins.upgrade">プラグインをアップグレード</message>
 	<message key="manager.plugins.delete">プラグインを削除</message>
 	<message key="manager.plugins.deleteDescription">削除をクリックすると，サーバのファイルシステムからプラグインが削除されます。</message>
 	<message key="manager.plugins.deleteSuccess">プラグインは正常に削除されました。</message>
 	<message key="manager.plugins.uploadError">ファイルのアップロードに失敗しました。</message>
 	<message key="manager.plugins.copyError">プラグインは正常にコピーされませんでした。</message>
+	<message key="manager.plugins.installDescription">このフォームから新しいプラグインをアップロードあるいはインストールすることができます。プラグインファイルがプラグインファイルが 「.tar.gz」で圧縮されているか確認してください。</message>
 	<message key="manager.plugins.upgradeDescription">このフォームからプラグインをアップグレードできます。プラグインファイルが 「.tar.gz」で圧縮されているか確認してください。</message>
 	<message key="manager.plugins.uploadPluginDir">プラグインファイルを選択</message>
 	<message key="manager.plugins.deleteConfirm">本当にシステムからプラグインを削除してもよろしいですか？</message>
@@ -536,9 +588,9 @@
 	<message key="manager.setup.lockssEnable"><![CDATA[LOCKSS を有効にする。LOCKSS の<a href="{$lockssUrl}" target="_blank">出版者マニュフェスト</a>ページを通じてLOCKSSを有効にし、参加図書館にある雑誌コンテンツを保管・配布します。LOCKSSライセンスはアーカイブの「この雑誌について」ページに表示されます。]]></message>
 	<message key="manager.setup.lockssLicenses"><![CDATA[<a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS ライセンスのその他のバージョンはここ</a>を参照してください。]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[雑誌を登録･キャッシュする図書館を6館から10館見つけます。例えば、編集者や雑誌委員会委員が勤務する機関や既にLOCKSSに参加している機関に問い合わせてください。<a href="http://www.lockss.org/community/" target="_blank">参加図書館はここ</a>を参照してください。あらかじめ用意されている(1) <a href="{$lockssExistingArchiveUrl}" target="_blank">LOCKSS参加図書館向け</a>、または、(2) <a href="{$lockssNewArchiveUrl}" target="_blank">LOCKSS未参加図書館向け</a> の招待状を使用してください。]]></message>
-	<message key="manager.setup.favicon">雑誌ファビコン</message>
-	<message key="manager.setup.faviconDescription">ユーザがあなたのサイトを訪れた際にナビゲーションバーに表示させるこの雑誌のファビコンを追加します。</message>
-	<message key="manager.setup.faviconInvalid">ファビコンのフォーマットが不適切です。 フォーマットは [.ico], [.png], [.gif.]でなければなりません。</message>
+	<message key="manager.setup.journalFavicon">雑誌ファビコン</message>
+	<message key="manager.setup.journalFaviconDescription">ユーザがあなたのサイトを訪れた際にナビゲーションバーに表示させるこの雑誌のファビコンを追加します。</message>
+	<message key="manager.setup.journalFaviconInvalid">ファビコンのフォーマットが不適切です。 フォーマットは [.ico], [.png], [.gif.]でなければなりません。</message>
 	<message key="manager.people.showNoRole">役割をもたないユーザを表示</message>
 	<message key="manager.subscriptions.form.institutionName">機関名</message>
 	<message key="manager.subscriptions.form.institutionNameRequired">機関名は必要です。</message>
@@ -549,7 +601,7 @@
 	<message key="manager.language.ui">ユーザインターフェース</message>
 	<message key="manager.language.forms">フォーム</message>
 	<message key="manager.sections.wordCount">字数カウント</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJSはサポートしている言語のうち任意の言語で利用者にサービスを提供することができます。また、OJSは一部、多言語システムとして運用することもできます。その結果、ユーザはページごとに言語を切り替えることができ、また、デフォルト言語に加えてさらに2つの言語でデータを入力することができます。<br /><br/>OJSがサポートしている言語が以下に表示されていない場合は、サイト管理用のインターフェースを使って言語をインストールするようサイト管理者に依頼してください。サポート言語を追加する方法については、システムに添付されているOJS文書をご覧ください。]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJSはサポートしている言語のうち任意の言語で利用者にサービスを提供することができます。また、OJSは一部、多言語システムとして運用することもできます。その結果、ユーザはページごとに言語を切り替えることができ、また、デフォルト言語に加えてさらに2つの言語でデータを入力することができます。<br /><br />OJSがサポートしている言語が以下に表示されていない場合は、サイト管理用のインターフェースを使って言語をインストールするようサイト管理者に依頼してください。サポート言語を追加する方法については、システムに添付されているOJS文書をご覧ください。]]></message>
 	<message key="manager.setup.form.doiPrefixPattern">DOI は 10.xxxx という形式でなければなりません。</message>
 	<message key="manager.setup.issnDescription"><![CDATA[ISSN（国際標準逐次刊行物番号）は逐次刊行物（電子版を含む）を識別する8桁の数字です。ISSNは、本部を置くユネスコとフランス政府による支援を受けた国際センターの調整の元、各国の国内センターの世界的なネットワークにより管理されています。ISSN番号は、<a href="http://www.issn.org" target="_new">ISSN Webサイト</a>で入手することができます。ISSNの入手は、雑誌運営のいつの時点で行っても構いません。]]></message>
 	<message key="manager.setup.publisherNoteDescription">この文章は「この雑誌について」ページの「雑誌スポンサー」の「出版者」ヘッダと出版者名/URLの間に表示されます。</message>
