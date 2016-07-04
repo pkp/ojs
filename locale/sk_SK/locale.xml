@@ -55,7 +55,6 @@
 
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Pomoc časopisu</message>
-	<message key="navigation.archives">Archív</message>
 	<message key="navigation.current">Aktuálne</message>
 	<message key="navigation.otherJournals">Iné časopisy</message>
 	<message key="navigation.browseByIssue">Podľa čísla</message>
@@ -95,16 +94,11 @@
 
 	<!-- User -->
 	<message key="user.myJournals">Moje časopisy</message>
-	<message key="user.orcid.description"><![CDATA[ORCID-ID sa poskytujú len po <a href="http://orcid.org/" target="_blank">registrácii</a>. Musíte dodržať nastavovacie údaje ORCID-ID a použiť úplné URI (eg. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
 
 	<!-- Roles -->
 	<message key="user.role.manager">Manažérka/manažér časopisu</message>
-	<message key="user.role.editor">Redaktorka/redaktor</message>
 	<message key="user.role.sectionEditor">Redaktorka/redaktor rubriky</message>
-	<message key="user.role.author">Autorka/autor</message>
 	<message key="user.role.subscriptionManager">Manažér/manažérka predplatného</message>
-	<message key="user.role.editors">Redaktorky/redaktori</message>
-	<message key="user.role.sectionEditors">Redaktorky/redaktori rubrík</message>
 
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Číslo</message>
@@ -117,7 +111,6 @@
 	<message key="issue.toc">Obsah</message>
 	<message key="issue.fullIssue">Kompletné číslo</message>
 	<message key="issue.viewIssue">Prezrieť vydanie</message>
-	<message key="issue.viewIssueDescription">Otvoriť alebo stiahnuť kompletné číslo</message>
 
 	<!-- Common Subscription Type Terms -->
 
@@ -253,13 +246,9 @@
 	<!-- Submission Comments -->
 
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Nie ste užívateľ? Zaregistrujte sa na týchto stránkach</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Systém z bezpečnostných dôvodov zasiela registrovaným užívateľom namiesto súčasného hesla nové heslo na emailovú adresu.<br /><br />Pre obnovu hesla zadajte Vašu emailovú adresu. Potvrdenie bude poslané na túto emailovú adresu.]]></message>
 
 	<!-- Registration -->
 	<message key="user.register.privacyStatement">Ochrana osobných údajov</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[Ak ste na tejto stránke zaregistrovaný ako užívateľ tohto alebo iného časopisu, <a href="{$registerUrl}">kliknite sem</a>.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Kliknite sem</a>, ak ešte <strong>nie</strong> ste zaregistrovaný do tohto alebo iného časopisu na tejto stránke.]]></message>
 	<message key="user.register.loginToRegister">Na zaregistrovanie do tohto časopisu zadajte prosím Vaše prihlasovacie meno a heslo.</message>
 	<message key="user.register.form.passwordLengthTooShort">Heslo, ktoré ste zadali, nie je dostatočne dlhé.</message>
 	<message key="user.register.readerDescription">O publikovaní nového čísla časopisu budete informovaní emailom.</message>
@@ -286,7 +275,6 @@
 </ul>]]></message>
 
 	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.download">Stiahnuť tento PDF súbor</message>
 
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 
@@ -301,21 +289,14 @@
 	<message key="archive.archives">Archív</message>
 
 	<!-- About The Journal -->
-	<message key="about.journalContact">Kontakt na časopis</message>
-	<message key="about.aboutTheJournal">O časopise</message>
 	<message key="about.history">História časopisu</message>
 	<message key="about.editorialTeam">Redakcia</message>
 	<message key="about.editorialPolicies">Pravidlá a proces publikovania časopisu</message>
 	<message key="about.focusAndScope">Zameranie a oblasti</message>
 	<message key="about.sectionPolicies">Pravidlá rubrík</message>
 	<message key="about.submissions">Poslať príspevok</message>
-	<message key="about.sponsors">Finančná podpora</message>
-	<message key="about.contributors">Iné formy podpory</message>
 	<message key="about.onlineSubmissions">Poslať príspevok online</message>
-	<message key="about.onlineSubmissions.haveAccount">Máte už užívateľské meno/heslo pre {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Prejsť na prihlasovanie</message>
-	<message key="about.onlineSubmissions.needAccount">Potrebujete užívateľské meno/heslo?</message>
-	<message key="about.onlineSubmissions.registration">Prejsť na registráciu</message>
 	<message key="about.onlineSubmissions.registrationRequired">Ak chcete poslať príspevok online alebo skontrolovať aktuálny stav poslaného príspevku, musíte sa zaregistrovať a prihlásiť.</message>
 	<message key="about.authorGuidelines">Pokyny pre autorov</message>
 	<message key="about.copyrightNotice">Poznámka o autorských právach</message>
@@ -328,7 +309,6 @@
 	<message key="about.delayedOpenAccessDescription2">mesiace/mesiace po publikovaní čísla</message>
 	<message key="about.subscriptions">Predplatné</message>
 	<message key="about.subscriptionsContact">Kontakt na predplatné</message>
-	<message key="about.journalSponsorship">Finančná podpora časopisu</message>
 	<message key="about.aboutThisPublishingSystem">O tomto publikačnom systéme</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Tento časopis používa Open Journal Systems {$ojsVersion}, teda open source software pre spravovanie a publikjovanie časopisov, ktorý bol vyvinutý, je podporovaný a voľne šírený v rámci projektu <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> pod licenciou GNU General Public License.]]></message>
 
