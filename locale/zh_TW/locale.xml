@@ -47,7 +47,6 @@
 	<message key="navigation.journalHelp">期刊協助資訊</message>
 	<message key="navigation.loggedInAs">您是以下列使用者名稱登入：</message>
 	<message key="navigation.logout">登出</message>
-	<message key="navigation.archives">過期期刊</message>
 	<message key="navigation.current">當期期刊</message>
 	<message key="navigation.otherJournals">其它期刊</message>
 	<message key="navigation.myProfile">我的資料</message>
@@ -105,12 +104,8 @@
 	<message key="article.suppFiles">補充檔案</message>
 	<message key="article.suppFilesAbbrev">補充檔案</message>
 	<message key="article.discipline">學術領域和次領域</message>
-	<message key="article.subjectClassification">主題分類</message>
 	<message key="article.subject">關鍵詞</message>
 	<message key="article.coverage">範圍</message>
-	<message key="article.coverageGeo">地理空間範圍</message>
-	<message key="article.coverageChron">時期或歷史範圍</message>
-	<message key="article.coverageSample"> 研究樣本的特徵</message>
 	<message key="article.type">類型、方法或途徑</message>
 	<message key="article.language">語言</message>
 	<message key="article.sectionEditor">文稿類型編者</message>
@@ -179,20 +174,9 @@
 	
 	<!-- Roles 角色 -->
 	<message key="user.role.manager">期刊管理員</message>
-	<message key="user.role.editor">編輯</message>
 	<message key="user.role.sectionEditor">文稿類型編輯</message>
-	<message key="user.role.layoutEditor">版面編輯</message>
-	<message key="user.role.copyeditor">校樣編輯</message>
-	<message key="user.role.proofreader">校對者</message>
-	<message key="user.role.author">作者</message>
 	<message key="user.role.subscriptionManager">訂閱管理員</message>
 	<message key="user.role.managers">期刊管理員</message>
-	<message key="user.role.editors">編輯</message>
-	<message key="user.role.sectionEditors">文稿類型編輯</message>
-	<message key="user.role.layoutEditors">版面編輯</message>
-	<message key="user.role.copyeditors">校樣編輯</message>
-	<message key="user.role.proofreaders">校對者</message>
-	<message key="user.role.authors">作者</message>
 	<message key="user.role.subscriptionManagers">訂閱管理員</message>
 	
 	<!-- Common Issue Terms -->
@@ -220,7 +204,6 @@
 	<message key="submission.event.logLevel.error">錯誤</message>
 	
 	<message key="submission.event.general.defaultEvent">投稿事件</message>
-	<message key="submission.event.general.articleSubmitted">投稿稿件</message>
 	<message key="submission.event.general.issueScheduled">已送到期數排序的稿件</message>
 	<message key="submission.event.general.issueAssigned">已指派給某期的稿件</message>
 	<message key="submission.event.general.articlePublished">已刊出的論文</message>
@@ -639,18 +622,13 @@
 	<message key="submission.comments.saveAndEmailEditor">存檔並電郵編輯</message>
 	
 	<!-- Login 登入 -->
-	<message key="user.login.registerNewAccount">尚未是一個使用者嗎？請在本站註冊。</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[基於安全性的理由，這個系統將一個重新設定的密碼寄發給註冊使用者，而不是取回目前的密碼。<br /><br />請在下面輸入您的電子郵件地址以重新設定您的密碼。系統會寄發一封確認信到這個地址去。]]></message>
 	<message key="user.login.rememberMe">記得我</message>
 	
 	<!-- Profile 帳號 -->
 	
 	<!-- Registration 註冊 -->
-	<message key="user.register.selectJournal">選擇一份期刊進行註冊</message>
 	<message key="user.register.noJournals">本站目前尚無任何期刊可供註冊，</message>
 	<message key="user.register.privacyStatement">隱私權聲明</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[如果您已經在本站上的任何一份期刊上註冊過了，請<a href="{$registerUrl}">點擊這裡</a>。]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[如果您 <strong>尚未</strong> 在本站上的任何一份期刊上註冊過，請<a href="{$registerUrl}">點擊這裡</a>。]]></message>
 	<message key="user.register.loginToRegister">要註冊這份期刊，請輸入您現有的使用者名稱以及密碼</message>
 	<message key="user.register.registrationDisabled">這份期刊目前不接受使用者註冊。</message>
 	<message key="user.register.form.passwordLengthTooShort">您輸入的密碼不夠長.</message>
@@ -707,21 +685,14 @@
 	
 	<!-- About The Journal -->
 	<message key="about.statistics">統計</message>
-	<message key="about.journalContact">期刊聯絡人</message>
-	<message key="about.aboutTheJournal">期刊介紹</message>
 	<message key="about.editorialTeam">編輯團隊</message>
 	<message key="about.editorialTeam.biography">履歷</message>
 	<message key="about.editorialPolicies">編輯方針</message>
 	<message key="about.focusAndScope">收稿範圍</message>
 	<message key="about.sectionPolicies">文稿類型</message>
 	<message key="about.submissions">投稿</message>
-	<message key="about.sponsors">贊助單位</message>
-	<message key="about.contributors">贊助來源</message>
 	<message key="about.onlineSubmissions">線上投稿</message>
-	<message key="about.onlineSubmissions.haveAccount">您已經在{$journalTitle}中有了一份使用者名稱＼密碼了嗎？</message>
 	<message key="about.onlineSubmissions.login">請登入本期刊</message>
-	<message key="about.onlineSubmissions.needAccount">您需要一份使用者名稱＼密碼嗎？</message>
-	<message key="about.onlineSubmissions.registration">請進行註冊</message>
 	<message key="about.onlineSubmissions.registrationRequired">線上投稿以及查詢稿件當前處理狀態，需要您事先進行註冊和登入的動作。</message>
 	<message key="about.authorGuidelines">投稿須知暨撰稿凡例</message>
 	<message key="about.submissionPreparationChecklist">投稿檢查表</message>
@@ -739,7 +710,6 @@
 	<message key="about.subscriptions">投稿</message>
 	<message key="about.subscriptionsContact">期刊訂閱聯絡人</message>
 	<message key="about.availableSubscriptionTypes">訂閱方案</message>
-	<message key="about.journalSponsorship">期刊贊助單位</message>
 	<message key="about.aboutThisPublishingSystem">關於這個出版系統</message>
 	<message key="about.aboutOJSJournal"><![CDATA[這份期刊使用「開放期刊系統」(Open Journal Systems {$ojsVersion})，此系統是一個開源碼的期刊管理與出版軟體，由<a href="http://pkp.sfu.ca/">公共知識計畫(PKP; Public Knowledge Project)</a>研發與支持，並且以通用公共許可證(GNU; General Public License)自由流通。]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[這個網站使用「開放期刊系統」(Open Journal Systems {$ojsVersion})，此系統是一個開源碼的期刊管理與出版軟體，由<a href="http://pkp.sfu.ca/">公共知識計畫(PKP; Public Knowledge Project)</a>研發與支持，並且以通用公共許可證(GNU; General Public License)自由流通。]]></message>
@@ -821,7 +791,6 @@
 	<!-- Article Logs 文章記錄 -->
 	<message key="log.author.submitted">{$authorName}已經輸入一份新的投稿稿件， ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName}已經修改過文章{$articleId}。新檔案的 ID為{$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName}已經被指派審查稿件{$articleId} ，進行{$round}審。</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName}已經被取消指派對稿件{$articleId}進行{$round}審。</message>
 	<message key="log.review.reviewInitiated">{$reviewerName}對稿件{$articleId}進行{$round}審的工作已經開始進行。</message>
 	<message key="log.review.reviewReinitiated">{$reviewerName}對稿件{$articleId}進行{$round}審的工作已經重新開始進行。</message>
@@ -856,7 +825,6 @@
 	<message key="log.editor.archived">稿件{$articleId}已經被典藏。</message>
 	<message key="log.editor.restored">稿件{$articleId}已經被復原至列表中。</message>
 	<message key="log.editor.editorAssigned">{$editorName}被指派為稿件{$articleId}的編輯。</message>
-	<message key="log.editor.submissionExpedited">{$editorName}已經在進行稿件{$articleId}的編輯流程。</message>
 
 	<message key="log.proofread.assign">{$assignerName} 已經被指派為{$proofreaderName}進行對稿件{$articleId}的校對。</message>
 	<message key="log.proofread.complete">{$proofreaderName}已經提交稿件 {$articleId}進行排程出版。.</message>

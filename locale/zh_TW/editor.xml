@@ -82,9 +82,7 @@
 	<message key="editor.issues.noLiveIssues">沒有進行中的期數</message>
 	<message key="editor.issues.open">開放</message>
 	<message key="editor.issues.pages">頁面</message>
-	<message key="editor.navigation.issues">期數</message>
 	<message key="editor.navigation.futureIssues">未來期數</message>
-	<message key="editor.navigation.createIssue">建立期數</message>
 	<message key="editor.navigation.issueArchive">過往期數</message>
 	<message key="editor.article.designateReviewVersion">指派作為審訂版本的原始檔案</message>
 	<message key="editor.article.uploadReviewVersion">上傳一份修訂過的審查版本</message>
