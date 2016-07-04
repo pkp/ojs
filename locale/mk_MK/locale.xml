@@ -506,7 +506,7 @@
 	<message key="sectionEditor.proofreader.confirmRenotify">Известувањето на овој коректор повторно ќе ги започне неговите задачи. Дали сте сигурни дека сакате да го направите ова?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Извинување</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} рецензирано извинување, откажување и&amp; претходни кругови</message>
+	<message key="sectionEditor.regrets.title">#{$submissionId} рецензирано извинување, откажување и&amp; претходни кругови</message>
 	<message key="sectionEditor.regrets">Извинување</message>
 	<message key="sectionEditor.regrets.link">Преглед на извинувања, откажани, и претходните рецензии</message>
 	<message key="sectionEditor.regrets.reviewRound">Стручна рецензија, круг {$round}</message>
@@ -982,48 +982,48 @@
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} внесе ново поднесување, ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} изврши ревизија на статијата {$articleId}. ID-то на новиот фајл е {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} не му е доделена улога за преглед на поднесувањето {$articleId} во рундата за преглед {$round}.</message>
-	<message key="log.review.reviewInitiated">Рундата {$round} е прегледана од {$reviewerName} за поднесувањето {$articleId} е иницирана.</message>
-	<message key="log.review.reviewReinitiated">Рундата {$round} е прегледана од {$reviewerName} за поднесувањето {$articleId} не е иницирана.</message>
-	<message key="log.review.reviewCancelled">Рундата {$round} е прегледана од {$reviewerName} за поднесувањето {$articleId} е откажано.</message>
-	<message key="log.review.reviewCleared">Рундата {$round} е прегледана од {$reviewerName} за поднесувањето {$articleId} е избришано.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} беше оценето за рундата{$round} за преглед на поднесувањето {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">Одредениот датум за рундата {$round} за преглед на поднесувањето {$articleId} од {$reviewerName} е поставен на {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">Препораката за рундата{$round} за преглед на поднесувањето {$articleId} од {$reviewerName} е поставен на {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">Препораката за рундата{$round} за преглед на поднесувањето {$articleId} е поставена од едиторот, {$editorName}, во име на рецензентот, {$reviewerName}.</message>
-	<message key="log.review.resubmit">Поднесувањето {$articleId} е повторно вратено за прегледување.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} ја одби рундата {$round} за преглед на поднесувањето {$articleId}.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} ја прифати рундата {$round} за преглед на поднесувањето {$articleId}.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} ја одби рундата {$round} за преглед на поднесувањето {$articleId} во име на {$reviewerName}.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} ја прифати рундата {$round} за преглед на поднесувањето {$articleId} во име на {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">Уредникот, {$userName}, прикачи фајл за преглед за рундата {$round} за поднесување {$articleId} во име на рецензентот, {$reviewerName}.</message>
+	<message key="log.author.documentRevised">{$authorName} изврши ревизија на статијата {$submissionId}. ID-то на новиот фајл е {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} не му е доделена улога за преглед на поднесувањето {$submissionId} во рундата за преглед {$round}.</message>
+	<message key="log.review.reviewInitiated">Рундата {$round} е прегледана од {$reviewerName} за поднесувањето {$submissionId} е иницирана.</message>
+	<message key="log.review.reviewReinitiated">Рундата {$round} е прегледана од {$reviewerName} за поднесувањето {$submissionId} не е иницирана.</message>
+	<message key="log.review.reviewCancelled">Рундата {$round} е прегледана од {$reviewerName} за поднесувањето {$submissionId} е откажано.</message>
+	<message key="log.review.reviewCleared">Рундата {$round} е прегледана од {$reviewerName} за поднесувањето {$submissionId} е избришано.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} беше оценето за рундата{$round} за преглед на поднесувањето {$submissionId}.</message>
+	<message key="log.review.reviewDueDateSet">Одредениот датум за рундата {$round} за преглед на поднесувањето {$submissionId} од {$reviewerName} е поставен на {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">Препораката за рундата{$round} за преглед на поднесувањето {$submissionId} од {$reviewerName} е поставен на {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">Препораката за рундата{$round} за преглед на поднесувањето {$submissionId} е поставена од едиторот, {$editorName}, во име на рецензентот, {$reviewerName}.</message>
+	<message key="log.review.resubmit">Поднесувањето {$submissionId} е повторно вратено за прегледување.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} ја одби рундата {$round} за преглед на поднесувањето {$submissionId}.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} ја прифати рундата {$round} за преглед на поднесувањето {$submissionId}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} ја одби рундата {$round} за преглед на поднесувањето {$submissionId} во име на {$reviewerName}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} ја прифати рундата {$round} за преглед на поднесувањето {$submissionId} во име на {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">Уредникот, {$userName}, прикачи фајл за преглед за рундата {$round} за поднесување {$submissionId} во име на рецензентот, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Прегледаниот фајл е прикачен.</message>
-	<message key="log.editor.decision">Одлука на уредникот ({$decision}) за ставката {$articleId} е евидентирана од {$editorName}.</message>
+	<message key="log.editor.decision">Одлука на уредникот ({$decision}) за ставката {$submissionId} е евидентирана од {$editorName}.</message>
 
 
-	<message key="log.copyedit.initiate">Едитирање на копијата на поднесувањето {$articleId} е коментирана од {$copyeditorName}.</message>
+	<message key="log.copyedit.initiate">Едитирање на копијата на поднесувањето {$submissionId} е коментирана од {$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">Стандардниот едитиран копија фајл е избран.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} ја завршил почетната едитирана копија на поднесувањето {$articleId}.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} ја завршил финалната едитирана копија на поднесувањето{$articleId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} му е доделена улога да врши едитирање на копија на поднесувањето {$articleId}.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} ја завршил почетната едитирана копија на поднесувањето {$submissionId}.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} ја завршил финалната едитирана копија на поднесувањето{$submissionId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} му е доделена улога да врши едитирање на копија на поднесувањето {$submissionId}.</message>
 	<message key="log.copyedit.copyeditorFile"> Верзијата на уредникот на копија за поднесениот фајл е прикачена.</message>
 	<message key="log.copyedit.authorFile">Верзијата на поднесениот фајл едитиран од авторот е прикачена.</message>
 
-	<message key="log.layout.layoutEditorAssigned">{$editorName} му е доделена улога на едитор за изглед на поднесувањето {$articleId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} не му е доделена улога на едитор за изглед на поднесувањето {$articleId}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} го заврши едитирањето на изгледот на поднесувањето {$articleId}.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} му е доделена улога на едитор за изглед на поднесувањето {$submissionId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} не му е доделена улога на едитор за изглед на поднесувањето {$submissionId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} го заврши едитирањето на изгледот на поднесувањето {$submissionId}.</message>
 
 	<message key="log.editor.metadataModified">Метаподатоците за оваа ставка беа променети од {$editorName}.</message>
 	<message key="log.editor.editorFile">Верзијата на уредникот за поднесениот фајл е прикачена.</message>
-	<message key="log.editor.archived">Поднесениот фајл {$articleId} е архивиран.</message>
-	<message key="log.editor.restored">Поднесениот фајл{$articleId} е вратен на листата на чекање.</message>
-	<message key="log.editor.editorAssigned">{$editorName} е назначен како уредник на поднесувањето{$articleId}.</message>
+	<message key="log.editor.archived">Поднесениот фајл {$submissionId} е архивиран.</message>
+	<message key="log.editor.restored">Поднесениот фајл{$submissionId} е вратен на листата на чекање.</message>
+	<message key="log.editor.editorAssigned">{$editorName} е назначен како уредник на поднесувањето{$submissionId}.</message>
 
-	<message key="log.proofread.assign">{$assignerName} е назначен {$proofreaderName} да ги лекторира поднесувањата {$articleId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} има поднесено {$articleId} за распоред.</message>
+	<message key="log.proofread.assign">{$assignerName} е назначен {$proofreaderName} да ги лекторира поднесувањата {$submissionId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} има поднесено {$submissionId} за распоред.</message>
 
-	<message key="log.imported">{$userName} има внесено статија {$articleId}.</message>
+	<message key="log.imported">{$userName} има внесено статија {$submissionId}.</message>
 
 	<!-- Reading Tools entries -->
 
