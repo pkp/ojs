@@ -13,9 +13,6 @@
   -->
 
 <locale name="fa_IR" full_name="فارسی">
-	<message key="editor.article.reviewForms">فرم های کارشناسی</message>
-	<message key="editor.article.selectReviewForm">انتخاب فرم کارشناسی</message>
-	<message key="editor.article.clearReviewForm">حذف فرم کارشناسی</message>
 	<message key="editor.home">خانه دبیر</message>
 	<message key="editor.submissionsAndPublishing">ساب میشن ها و چاپ</message>
 	<message key="editor.submissionQueue">نوبت ساب میشن</message>
@@ -93,9 +90,7 @@
 	<message key="editor.issues.noLiveIssues">هیچ شماره مجله ای وجود ندارد</message>
 	<message key="editor.issues.open">باز کردن</message>
 	<message key="editor.issues.pages">صفحات</message>
-	<message key="editor.navigation.issues">شماره های مجله</message>
 	<message key="editor.navigation.futureIssues">ضماره های آتی مجله</message>
-	<message key="editor.navigation.createIssue">ایجاد شماره مجله</message>
 	<message key="editor.navigation.issueArchive">شماره های گذشته مجله</message>
 	<message key="editor.article.designateReviewVersion">تعیین فایل اصلی به عنوان نسخه کارشناسی</message>
 	<message key="editor.article.uploadReviewVersion">آپلود کردن یک نسخه کارشناسی اصلاح شده</message>
@@ -196,7 +191,6 @@
 	<message key="editor.article.uploaded">آپلود شد</message>
 	<message key="editor.article.removeCoverPage">حذف تصویر جلد</message>
 	<message key="editor.article.remove">حذف</message>
-	<message key="editor.article.confirmChangeReviewForm">تغییر فرم کارشناسی موجب از بین رفتن پاسخ های وارد شده میشود</message>
 	<message key="editor.issues.enableOpenAccessDate">فعال سازی دستیابی تاخیری</message>
 	<message key="editor.issues.resetIssueOrder"><![CDATA[در این مجله ترتیب بخشها قابل تغییر در هر شماره مجله میباشد.
 <a href="{$url}" class="action">برگرداندن به حالت اولیه</a>]]></message>

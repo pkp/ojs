@@ -30,7 +30,6 @@
 	 * ا
 	--><!--پیامهای مشترک-->
 <!-- پیامهای ایمیل رایج --><!-- واژه های محلی رایج --><!-- پیام های خطای رایج --><!-- گشت و گذار-->  <message key="navigation.journalHelp">راهنمای مجله</message>
-	<message key="navigation.archives">شماره های قبلی</message>
 	<message key="navigation.current">شماره جاری</message>
 	<message key="navigation.otherJournals">مجلات دیگر</message>
 	<message key="navigation.browseByIssue">مرور بر اساس شماره</message>
@@ -74,12 +73,8 @@
 	<message key="article.suppFiles">فایلهای مکمل</message>
 	<message key="article.suppFilesAbbrev">فایلهای مکمل</message>
 	<message key="article.discipline">رشته علمی</message>
-	<message key="article.subjectClassification">طبقه بندی موضوعی</message>
 	<message key="article.subject">موضوع</message>
 	<message key="article.coverage">پوشش</message>
-	<message key="article.coverageGeo">پوشش جغرافیایی</message>
-	<message key="article.coverageChron">پوشش تاریخی یا زمانی</message>
-	<message key="article.coverageSample">مثال برای نوع پوشش</message>
 	<message key="article.type">نوع مقاله</message>
 	<message key="article.language">زبان مقاله</message>
 	<message key="article.sectionEditor">SE</message>
@@ -134,20 +129,9 @@
 	<message key="user.registerForOtherJournals">ثبت نام برای دیگر مجلات</message>
 	<message key="user.myJournals">مجلات من</message>
 <!-- نقش ها -->	<message key="user.role.manager">مدیر مجله</message>
-	<message key="user.role.editor">دبیر</message>
 	<message key="user.role.sectionEditor">دبیر مقاله</message>
-	<message key="user.role.layoutEditor">صفحه آرا</message>
-	<message key="user.role.copyeditor">ویراستار</message>
-	<message key="user.role.proofreader">بازبین</message>
-	<message key="user.role.author">نویسنده</message>
 	<message key="user.role.subscriptionManager">مدیر اشتراک</message>
 	<message key="user.role.managers">مدیران</message>
-	<message key="user.role.editors">دبیران</message>
-	<message key="user.role.sectionEditors">دبیران مقاله</message>
-	<message key="user.role.layoutEditors">صفحه آراها</message>
-	<message key="user.role.copyeditors">ویراستاران</message>
-	<message key="user.role.proofreaders">بازبین ها</message>
-	<message key="user.role.authors">نویسنندگان</message>
 	<message key="user.role.subscriptionManagers">مدیران اشتراک</message>
 <!-- واژه های رایج شماره مجله -->  <message key="issue.issue">شماره</message>
 	<message key="issue.issues">شماره ها</message>
@@ -169,7 +153,6 @@
 	<message key="submission.event.logLevel.warning">اخطار</message>
 	<message key="submission.event.logLevel.error">خطا</message>
 	<message key="submission.event.general.defaultEvent">واقعه پیش فرض</message>
-	<message key="submission.event.general.articleSubmitted">مقاله سابمیت شد.</message>
 	<message key="submission.event.general.issueScheduled">سابمیشن در نوبت چاپ قرار گرفت.</message>
 	<message key="submission.event.general.issueAssigned">سابمیشن در نوبت چاپ قرار گرفت.</message>
 	<message key="submission.event.general.articlePublished">مقاله چاپ شد</message>
@@ -373,14 +356,9 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="submission.comments.forEditor">فقط برای دبیر</message>
 	<message key="submission.comments.saveAndEmailAuthor">ذخیره و ایمیل به نویسنده</message>
 	<message key="submission.comments.saveAndEmailEditor">ذخیره و ایمیل به دبیر</message>
-<!-- ورود -->	<message key="user.login.registerNewAccount">اگر کاربر این سایت نیستید، ثبت نام کنید.</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[به دلائل امنیتی ، این سیستم بجای ارسال رمز عبور فراموش شده ، رمز عبور را بازنشانی و با ایمیل برای کاربر می فرستد.<br /><br />ایمیل خود را وارد کنید تا روند بازنشانی رمز عبور را درخواست کنید. یک نامه تاییدیه به این آدرس ارسال خواهد شد.]]></message>
-<!-- کارنامه --><!-- ثبت نام -->  <message key="user.register.repeatPassword">تکرار رمز عبور</message>
-	<message key="user.register.selectJournal">مجله ای را برای ثبت نام انتخاب کنید.</message>
+<!-- ورود --><!-- کارنامه --><!-- ثبت نام -->  <message key="user.register.repeatPassword">تکرار رمز عبور</message>
 	<message key="user.register.noJournals">مجله ای برای ثبت نام در این سایت وجود ندارد.</message>
 	<message key="user.register.privacyStatement">بیانیه محرمانگی</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[چنانچه قبلا برای این مجله و یا مجله ای دیگر در این سایت ثبت نام کرده اید <a href="{$registerUrl}">اینجا</a>  را کلیک کنید]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[چنانچه قبلا برای این مجله و یا مجله ای دیگر در این سایت ثبت نام <b>نکرده اید</b> <a href="{$registerUrl}">اینجا</a> را کلیک کنید]]></message>
 	<message key="user.register.loginToRegister">نام کاربری و رمز عبور جاری  خود را وارد کنید تا برای این مجله ثبت نام کنید</message>
 	<message key="user.register.registrationDisabled">این مجله در حال حاضر ثبت نام کاربر نمی پذیرد</message>
 	<message key="user.register.form.passwordLengthTooShort">طول رمز عبور انتخاب شده کافی نیست</message>
@@ -420,21 +398,14 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="archive.browse">مرور شماره های گذشته</message>
 	<message key="archive.issueUnavailable">شماره مجله موجود نیست</message>
 <!-- درباره مجله -->	<message key="about.statistics">آمار</message>
-	<message key="about.journalContact">تماس مجله</message>
-	<message key="about.aboutTheJournal">در باره مجله</message>
 	<message key="about.editorialTeam">تیم سردبیری</message>
 	<message key="about.editorialTeam.biography">بیوگرافی</message>
 	<message key="about.editorialPolicies">سیاست دبیری</message>
 	<message key="about.focusAndScope">فوکوس و حیطه</message>
 	<message key="about.sectionPolicies">سیاست انواع مقالات</message>
 	<message key="about.submissions">ساب میشن</message>
-	<message key="about.sponsors">حمایت کنندگان</message>
-	<message key="about.contributors">منابع حمایت</message>
 	<message key="about.onlineSubmissions">ساب میشن آن لاین</message>
-	<message key="about.onlineSubmissions.haveAccount">قبلا نام کاربری و رمز عبور برای  {$journalTitle}  داشته اید?</message>
 	<message key="about.onlineSubmissions.login">رفته به صفحه ورودی</message>
-	<message key="about.onlineSubmissions.needAccount">آیا احتیاج به یک نام کاربری و رمز عبور دارید؟</message>
-	<message key="about.onlineSubmissions.registration">به صف ثبت نام بروید</message>
 	<message key="about.onlineSubmissions.registrationRequired">ثبت نام و ورود به سایت برای ساب میت کردن مقاله و چک کردن وضعیت آن لازم است</message>
 	<message key="about.authorGuidelines">راهنمای نویسندگان</message>
 	<message key="about.submissionPreparationChecklist">چک لیست تهیه ساب میشن</message>
@@ -452,7 +423,6 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="about.subscriptions">اشتراک</message>
 	<message key="about.subscriptionsContact">تماس برای اشتراک</message>
 	<message key="about.availableSubscriptionTypes">انواع اشتراک</message>
-	<message key="about.journalSponsorship">حمایت ها از مجله</message>
 	<message key="about.aboutThisPublishingSystem">در باره این سیستم انتشاراتی</message>
 	<message key="about.aboutOJSJournal"><![CDATA[این مجله از سیستم مجلات آزاد نسخه {$ojsVersion} استفاده میکند که یک نرم افزار کد باز اداره و انتشار مجلات تهیه شده توسط  <a href="http://pkp.sfu.ca/">پروژه دانش عمومی</a> است که تحت لیسانس GNU General Public License بصورت رایگان در اختیار همگان میباشد.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[این سایت از سیستم مجلات آزاد نسخه {$ojsVersion} استفاده میکند که یک نرم افزار کد باز اداره و انتشار مجلات تهیه شده توسط  <a href="http://pkp.sfu.ca/">پروژه دانش عمومی</a> است که تحت لیسانس GNU General Public License بصورت رایگان در اختیار همگان میباشد.]]></message>
@@ -523,7 +493,6 @@ http://journals.mui.ac.ir/index.php/index/index
 <p>چنانچه تا کنون ثبت نام نکرده اید و مایل هستید تا اخبار و تازه ها را دریافت کنید ، <strong>لطفا در سایت  <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a> ثبت نام کنید.</strong>  چنانچه سوال ویا نظری دارید لطفا از  <a href="http://forum.pkp.sfu.ca" target="_new">فوروم حمایت </a> دیدن کنید.</p>]]></message>
 <!-- لاگ مقالات -->  <message key="log.author.submitted">{$authorName} یک ساب میشن جدید وارد کرد ، ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} مقاله  {$articleId} را اصلاح کرد. ID فایل جدید  {$fileId} میباشد.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} برای کارشناسی مقاله  {$articleId} در دور {$round} اول کارشناسی انتساب یافت.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} از کارشناسی مقاله {$articleId} برای درو  {$round} معزول شد.</message>
 	<message key="log.review.reviewInitiated">درور  {$round} کارشناسی {$reviewerName} برای مقاله  {$articleId} شروع شد.</message>
 	<message key="log.review.reviewReinitiated">دور {$round} کارشناسی {$reviewerName} برای مقاله  {$articleId} از نو شروع شد.</message>
@@ -554,7 +523,6 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="log.editor.archived">مقاله  {$articleId} بایگانی شد.</message>
 	<message key="log.editor.restored">مقاله {$articleId} به نوبت جاری بازگشت</message>
 	<message key="log.editor.editorAssigned">{$editorName} به عنوان دبیر مقاله  {$articleId} انتخاب شد.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} روند دبیری مقاله  {$articleId} بصورت جهشی انجام داد.</message>
 	<message key="log.proofread.assign">{$assignerName} ، {$proofreaderName} برای چک نهائی مقاله  {$articleId} انتخاب کرد.</message>
 	<message key="log.proofread.complete">{$proofreaderName} مقاله {$articleId} برای نوبت چاپ ساب میت کرد.</message>
 	<message key="log.imported">{$userName} مقاله  {$articleId} وارد کرد.</message>
@@ -684,12 +652,8 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="rt.admin.settings.addComment.unauthenticated">برای ارسال نظرات بضورت گمنام احتیاج به ثبت نام نیست</message>
 	<message key="rt.metadata.pkp.doi">شناسه دیژیتال شیئ</message>
 	<message key="debug.notes.currencyListLoad">لیست واحد پولهای لود شده از فایل ایکس ام ال &quot;{$filename}&quot;</message>
-	<message key="debug.notes.helpMappingLoad">فایل ری لود شده نگاشت راهنما از فایل {$filename} در جستجوی {$id}</message>
-	<message key="submission.reviewForm">فرم کارشناسی</message>
-	<message key="submission.reviewFormResponse">پاسخ فرم کارشناسی</message>
 	<message key="reviewer.article.enterReviewForm">لطفا بر روی  شکلک کلیک کنید تا به فرم کارشناسی بروید</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">لطفا فیلد های الزامی را پر کنید</message>
-	<message key="common.pageHeader.altText">هدر صفحه</message>
 	<message key="common.homePageHeader.altText">هدر صفحه خانگی</message>
 	<message key="common.journalHomepageImage.altText">تصویر صفحه خانگی مجله</message>
 	<message key="article.coverPage.altText">تصویر روی جلد</message>
@@ -767,9 +731,6 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="subscriptionManager.individualSubscriptions">اشتراکات شخصی</message>
 	<message key="subscriptionManager.institutionalSubscriptions">اشتراکات سازمانی</message>
 	<message key="subscriptionManager.subscriptionTypes">انواع اشتراک</message>
-	<message key="plugins.categories.oaiMetadataFormats">پلاگین فرمات فراداده او ای آی</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">این پلاگین های فرمات، فراداه را در ارتباطات او ای آی بیان میکنند.</message>
-	<message key="manager.setup.reviewProcessEmailDescription">دبیر درخواست کارشناسی را همرا با ساب میشن با ایمیل برای کارشناس میفرستد. کارشناسان موافقت یا عدم موافقت خود را با ایمیل برای دبیر میفرستند و در صورت موافقت حاصل کارشناسی و توصیه نهائی خود را نیز میفرستند. دبیر موافقت یا عدم موافقت کارشناس را شخصا در سایت وارد میکند و پس از دریافت نهائی حاصل کارشناسی از طریق ایمیل، آنرا نیز شخصا وارد سایت میکند.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>
 بیانیه کپی رایت پیشنهادی کراتیو کامانز
 </h3>
@@ -833,7 +794,6 @@ http://journals.mui.ac.ir/index.php/index/index
 ثبت نام کنید.
 <br /><br />
 البته چنانچه ادمین سایت قبلا کل سایت را در این سرویس ها ثبت کرده باشد، دیگر نیازی به این اقدام ندارید.]]></message>
-	<message key="manager.setup.citations">به عنوان قسمتی از عمل ساب میشن اجازه دهید که نویسنده لیست فرمات شده رفرانس های مقاله را بصورت جداگانه ساب میت کند.</message>
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[مرحله: نوبت ساب میشن &gt; کارشناسی ساب میشن &gt;  ویرایش ساب میشن &gt; فهرست مقالت.<br /><br />
 انتخال مدلی برای اداره این جوانب روند دبیری. برای انتصاب یک مدیر دبیری و مدیر قسمت به قسمت دبیران در اداره مجله بروید.]]></message>
 	<message key="editor.submissionReview.notes"><![CDATA[<ol>
@@ -908,22 +868,16 @@ lib.sfu.ca]]></message>
 	<message key="notification.mailListDescription">آدرس ایمیل خود را وارد کنید تا بدین وسیله از چاپ مطالب جدید باخبر شوید.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[این صفحه نشان دهنده موارد مهم بروزرسانی میباشد که در این مجله اتفاق افتاده است مانند شماره های جدید مجله و یا اطلاعیه ها. میتوانید از طریق RSS برای این اطلاع رسانی ها ثبت نام کنید. برای این کار بر روی تصویر سمت راست کلیک کنید. ویا از <a href="{$emailUrl}"> طریق ایمیل</a> اقدام کنید.]]></message>
 	<message key="notification.type.articleSubmitted">یک مقاله جدید، "{$param}"، ساب میت شد.</message>
-	<message key="notification.type.copyeditComment">یکی از ویراستاران یاداشتی در مورد "{$param}" بر جا کذاشته اشت</message>
 	<message key="notification.type.editing">رویدادهای ویرایش</message>
 	<message key="notification.type.editorDecisionComment">نقطه نظری در خصوص تصمیم دبیر در باره "{$param}" برجا گذاشته شده است.</message>
 	<message key="notification.type.galleyModified">یک گالی در مورد "{$param}" تغییر یافته است.</message>
 	<message key="notification.type.issuePublished">یک شماره مجله منتشر شده است</message>
-	<message key="notification.type.layoutComment">نظری در خصوص "{$param}" مربوط به صفحه آرائی ایراد شده است</message>
-	<message key="notification.type.metadataModified">فراداده "{$param}" تغییر یافته است.</message>
 	<message key="notification.type.newAnnouncement">یک اطلاعیه جدید ایجاد شده است</message>
-	<message key="notification.type.proofreadComment">نقطه نظری در خصوص "{$param}" توسط بازبین گذاشته شده است.</message>
-	<message key="notification.type.reviewerComment">یک کارشناس در مورد "{$param}" نظر داده است</message>
 	<message key="notification.type.reviewerFormComment">یک فرم کارشناسی در خصوص "{$param}" ساب میت شده است</message>
 	<message key="notification.type.reviewing">رودادهای کارشناسی</message>
 	<message key="notification.type.site">رویدادهای سایت</message>
 	<message key="notification.type.submissionComment">یک دبیر نظری در مورد "{$param}" داده است.</message>
 	<message key="notification.type.submissions">رویدادهای ساب میشن</message>
-	<message key="notification.type.suppFileModified">فایل الحاقی مربوط به "{$param}" تغییر یافت.</message>
 	<message key="notification.type.userComment">یک خواننده نظری در مورد "{$param}" داده است</message>
 	<message key="user.register.reviewerInterests">تشخیص علائق کارشناسی: زمینه ها و روشهای پژوهشی مهم</message>
 	<message key="user.subscriptions.subscriptionStatus">وضعیت اشتراک</message>
@@ -934,7 +888,6 @@ lib.sfu.ca]]></message>
 	<message key="user.subscriptions.status.needsApprovalDescription">قبل از فعال سازی اشتراک می بایست مرور گردد</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">پرداخت دستی راه اندازی شده است ولی هنوز وصول نشده است</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">پرداخت آن لاین شورع شده است ولی کامل نشده است</message>
-	<message key="article.pdf.download">دانلود این فایل پی دی اف</message>
 	<message key="article.pdf.pluginMissing"><![CDATA[<p>
 در صورتی که مرورگر شما پلاگین خواندن پی دی اف را داشته باشد فایل پی دی اف خود را می تواندی در اینجا لود کنید. به عنوان مثال نسخه اخیر
 (<a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>)
