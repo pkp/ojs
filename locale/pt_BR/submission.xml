@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/pt_BR/submission.xml
+  *
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization strings for the pt_BR (Português (Brasil)) locale.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
+  -->
+
+<locale name="pt_BR" full_name = "Português (Brasil)">
+	<!-- Submission wizard -->
+
+	<!-- Submission Information Modal -->
+
+	<!-- events -->
+
+	<!-- galleys grid -->
+
+	<!-- galley files grid -->
+</locale>
