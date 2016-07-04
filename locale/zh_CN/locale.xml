@@ -482,7 +482,7 @@
 	<message key="sectionEditor.proofreader.confirmRenotify">再次通知这个校对者会重新指派他们的编辑任务。您确定您想要这么做？</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">遗憾</message>
-	<message key="sectionEditor.regrets.title">>#{$articleId} 审稿人婉谢、取消 &amp; 之前的审稿回合</message>
+	<message key="sectionEditor.regrets.title">>#{$submissionId} 审稿人婉谢、取消 &amp; 之前的审稿回合</message>
 	<message key="sectionEditor.regrets">遗憾</message>
 	<message key="sectionEditor.regrets.link">查看婉谢、取消、前一回合审稿</message>
 	<message key="sectionEditor.regrets.reviewRound">审稿，第{$round}回合审稿</message>
@@ -884,48 +884,48 @@
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName}已经输入一份新的投稿稿件， ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName}已经修改过文章{$articleId}。新文件的 ID为{$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName}已经被取消指派对稿件{$articleId}进行{$round}审.</message>
-	<message key="log.review.reviewInitiated">{$reviewerName}对稿件{$articleId}进行{$round}审的工作已经开始进行.</message>
-	<message key="log.review.reviewReinitiated">{$reviewerName}对稿件{$articleId}进行{$round}审的工作已经重新开始进行.</message>
-	<message key="log.review.reviewCancelled">{$reviewerName}对稿件{$articleId}进行{$round}审的工作已经被取消.</message>
-	<message key="log.review.reviewCleared">{$reviewerName}对稿件{$articleId}进行{$round}审的工作已经被清除.</message>
-	<message key="log.review.reviewerRated">{$reviewerName}对稿件{$articleId}进行{$round}审的工作已经受到评分.</message>
-	<message key="log.review.reviewDueDateSet">{$reviewerName}对稿件{$articleId}进行{$round}审工作的截止期限日期已经被配置为{$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">{$reviewerName}已经对稿件{$articleId}的{$round}审工作做出建议 .</message>
-	<message key="log.review.reviewRecommendationSetByProxy">编辑{$editorName}已对审稿人{$reviewerName}对稿件{$articleId}进行{$round}审的审稿意见做出建议.</message>
-	<message key="log.review.resubmit">稿件{$articleId}已经被重新投稿以进行审阅.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName}已经婉谢对稿件{$articleId}进行{$round}审.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName}已经接受对稿件{$articleId}进行{$round}审.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName}代表{$reviewerName}已经拒绝文章{$articleId}第{$round}回合的审阅.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName}已经代表{$reviewerName}接受对稿件{$articleId}进行{$round}审.</message>
-	<message key="log.review.reviewFileByProxy">编辑{$userName}已经代表审稿人{$reviewerName}上传了稿件{$articleId}在{$round}审时的审稿意见书文件.</message>
+	<message key="log.author.documentRevised">{$authorName}已经修改过文章{$submissionId}。新文件的 ID为{$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName}已经被取消指派对稿件{$submissionId}进行{$round}审.</message>
+	<message key="log.review.reviewInitiated">{$reviewerName}对稿件{$submissionId}进行{$round}审的工作已经开始进行.</message>
+	<message key="log.review.reviewReinitiated">{$reviewerName}对稿件{$submissionId}进行{$round}审的工作已经重新开始进行.</message>
+	<message key="log.review.reviewCancelled">{$reviewerName}对稿件{$submissionId}进行{$round}审的工作已经被取消.</message>
+	<message key="log.review.reviewCleared">{$reviewerName}对稿件{$submissionId}进行{$round}审的工作已经被清除.</message>
+	<message key="log.review.reviewerRated">{$reviewerName}对稿件{$submissionId}进行{$round}审的工作已经受到评分.</message>
+	<message key="log.review.reviewDueDateSet">{$reviewerName}对稿件{$submissionId}进行{$round}审工作的截止期限日期已经被配置为{$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">{$reviewerName}已经对稿件{$submissionId}的{$round}审工作做出建议 .</message>
+	<message key="log.review.reviewRecommendationSetByProxy">编辑{$editorName}已对审稿人{$reviewerName}对稿件{$submissionId}进行{$round}审的审稿意见做出建议.</message>
+	<message key="log.review.resubmit">稿件{$submissionId}已经被重新投稿以进行审阅.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName}已经婉谢对稿件{$submissionId}进行{$round}审.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName}已经接受对稿件{$submissionId}进行{$round}审.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName}代表{$reviewerName}已经拒绝文章{$submissionId}第{$round}回合的审阅.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName}已经代表{$reviewerName}接受对稿件{$submissionId}进行{$round}审.</message>
+	<message key="log.review.reviewFileByProxy">编辑{$userName}已经代表审稿人{$reviewerName}上传了稿件{$submissionId}在{$round}审时的审稿意见书文件.</message>
 	<message key="log.review.reviewerFile">已上传一份审稿意见书.</message>
-	<message key="log.editor.decision">对于稿件{$articleId} 的编辑决策已经被{$editorName}记录.</message>
+	<message key="log.editor.decision">对于稿件{$submissionId} 的编辑决策已经被{$editorName}记录.</message>
 
 
-	<message key="log.copyedit.initiate">文字编辑{$copyeditorName}已对稿件{$articleId}提出文字编辑意见.</message>
+	<message key="log.copyedit.initiate">文字编辑{$copyeditorName}已对稿件{$submissionId}提出文字编辑意见.</message>
 	<message key="log.copyedit.copyeditFileSet">已经选择预设的文字编辑文件.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} 已经完成稿件{$articleId}的初始文字编辑.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName}已经完成稿件{$articleId}的最终文字编辑.</message>
-	<message key="log.copyedit.copyeditorAssigned">稿件{$articleId}的校样工作已经被指派给{$copyeditorName}.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} 已经完成稿件{$submissionId}的初始文字编辑.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName}已经完成稿件{$submissionId}的最终文字编辑.</message>
+	<message key="log.copyedit.copyeditorAssigned">稿件{$submissionId}的校样工作已经被指派给{$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditorFile">已经上传一份此稿件文件的文字编辑版本.</message>
 	<message key="log.copyedit.authorFile">已经上传一份此稿件文件的作者校模板本.</message>
 
-	<message key="log.layout.layoutEditorAssigned">稿件{$articleId}的版面编辑工作已经被指派给版面编辑{$editorName}.</message>
-	<message key="log.layout.layoutEditorUnassigned">稿件{$articleId}的版面编辑工作已经取消指派给版面编辑{$editorName}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName}已经完成稿件{$articleId}的版面编辑工作.</message>
+	<message key="log.layout.layoutEditorAssigned">稿件{$submissionId}的版面编辑工作已经被指派给版面编辑{$editorName}.</message>
+	<message key="log.layout.layoutEditorUnassigned">稿件{$submissionId}的版面编辑工作已经取消指派给版面编辑{$editorName}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName}已经完成稿件{$submissionId}的版面编辑工作.</message>
 
 	<message key="log.editor.metadataModified">此文章的元数据已经被{$editorName}加以修改.</message>
 	<message key="log.editor.editorFile">已经上传了一份此稿件的编辑版本.</message>
-	<message key="log.editor.archived">稿件{$articleId}已经被存档.</message>
-	<message key="log.editor.restored">稿件{$articleId}已经被复原至列表中.</message>
-	<message key="log.editor.editorAssigned">{$editorName}被指派为稿件{$articleId}的编辑.</message>
+	<message key="log.editor.archived">稿件{$submissionId}已经被存档.</message>
+	<message key="log.editor.restored">稿件{$submissionId}已经被复原至列表中.</message>
+	<message key="log.editor.editorAssigned">{$editorName}被指派为稿件{$submissionId}的编辑.</message>
 
-	<message key="log.proofread.assign">{$assignerName} 已经被指派为{$proofreaderName}进行对稿件{$articleId}的校对.</message>
-	<message key="log.proofread.complete">{$proofreaderName} 提交文章 {$articleId} 用户组版.</message>
+	<message key="log.proofread.assign">{$assignerName} 已经被指派为{$proofreaderName}进行对稿件{$submissionId}的校对.</message>
+	<message key="log.proofread.complete">{$proofreaderName} 提交文章 {$submissionId} 用户组版.</message>
 
-	<message key="log.imported">{$userName}导入文章{$articleId}.</message>
+	<message key="log.imported">{$userName}导入文章{$submissionId}.</message>
 
 	<!-- Reading Tools entries -->
 
