@@ -13,9 +13,6 @@
   -->
 
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="editor.article.reviewForms">Recenzentski obrasci</message>
-	<message key="editor.article.selectReviewForm">Odaberi recenzentski obrazac</message>
-	<message key="editor.article.clearReviewForm">Očisti recenzentski obrazac</message>
 	<message key="editor.home">Urednička</message>
 	 <message key="editor.article.confirmChangeReviewForm">Važno: Menjanje recenzentskog obrasca uticaće na sve odgovore koje su recenzenti dali korišćenjem obrasca. 
 
@@ -86,11 +83,8 @@ Da li ste sigurni da želite da nastavite?</message>
 	<message key="editor.issues.identification">Identifikacija</message>
 	<message key="editor.issues.access">Pristup</message>
 	<message key="editor.issues.cover">Naslovnica</message>
-	<message key="editor.issues.resetArticlePublicationDates">Vratina početno stanje datum objavljivanja za članak</message>
-	<message key="editor.notifyUsers.allMailingList">Uključi sve e-adrese u ovoj dopisnoj listi ({$count} e-adresa)</message>
 	<message key="editor.reassign">Ponovo dodeli</message>
 	<message key="editor.publicIdentificationExists">Ovaj javni identifikator  '{$publicIdentifier}' već postoji za drugi objekt (izdanje, članak, korekturna kopija ili dopunska datoteka). Odaberite jedinstvene identifikatore vašeg časopisa.</message>
-	<message key="editor.publicGalleyIdentificationExists">Ovaj javni identifikator '{$publicIdentifier}' već postoji za drugu korekturnu kopiju ovog članka. Odaberite jedinstveni identifikator za ovaj članak.</message>
 	<message key="editor.issues.galleys">Korekturne kopije za izdanje</message>
 	<message key="editor.issues.galley">Korekturna kopija za izdanje</message>
 	<message key="editor.issues.viewingGalley">Pogledaj korekturnu kopiju za izdanje</message>
