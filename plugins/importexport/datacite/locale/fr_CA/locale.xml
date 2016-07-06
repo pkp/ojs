@@ -32,4 +32,8 @@
 	<message key="plugins.importexport.datacite.cliUsage">Utilisation: 
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...</message>
+	<message key="plugins.importexport.datacite.settings.form.passwordRequired">Veuillez entrer le mot de passe que vous avez reçu de DataCite.</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration">Enregistrer les DOIs automatiquement</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description"><![CDATA[OJS déposera automatiquement les DOIs des articles publiés sur DataCite. Il est important de noter que le processus de dépôt des fichiers peut prendre quelques minutes. Il est possible de voir tous les DOIs non-enregistrés dans la <a href="{$unregisteredURL}">liste des articles non-enregistrés</a>.]]></message>
+	<message key="plugins.importexport.datacite.senderTask.name">Tâche automatique d'enregistrement DataCite</message>
 </locale>
