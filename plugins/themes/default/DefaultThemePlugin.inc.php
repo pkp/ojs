@@ -21,8 +21,54 @@ class DefaultThemePlugin extends ThemePlugin {
 	 */
 	function DefaultThemePlugin() {
 		parent::ThemePlugin();
+	}
 
-		HookRegistry::register('Templates::Common::Footer::PageFooter', array($this, 'printJavascript'));
+	/**
+	 * @copydoc ThemePlugin::isActive()
+	 */
+	public function isActive() {
+                if (defined('SESSION_DISABLE_INIT')) return true;
+		return parent::isActive();
+	}
+
+	/**
+	 * Initialize the theme's styles, scripts and hooks. This is run on the
+	 * currently active theme and it's parent themes.
+	 *
+	 * @return null
+	 */
+	public function init() {
+		// Load Noto Sans font from Google Font CDN
+		// To load extended latin or other character sets, see:
+		// https://www.google.com/fonts#UsePlace:use/Collection:Noto+Sans
+		if (Config::getVar('general', 'enable_cdn')) {
+			$this->addStyle(
+				'fontNotoSans',
+				'//fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic',
+				array('baseUrl' => '')
+			);
+		}
+
+		// Load primary stylesheet
+		$this->addStyle('stylesheet', 'styles/index.less');
+
+		// Load jQuery from a CDN or, if CDNs are disabled, from a local copy.
+		$min = Config::getVar('general', 'enable_minified') ? '.min' : '';
+		if (Config::getVar('general', 'enable_cdn')) {
+			$jquery = '//ajax.googleapis.com/ajax/libs/jquery/' . CDN_JQUERY_VERSION . '/jquery' . $min . '.js';
+			$jqueryUI = '//ajax.googleapis.com/ajax/libs/jqueryui/' . CDN_JQUERY_UI_VERSION . '/jquery-ui' . $min . '.js';
+		} else {
+			// Use OJS's built-in jQuery files
+			$request = Application::getRequest();
+			$jquery = $request->getBaseUrl() . '/lib/pkp/lib/vendor/components/jquery/jquery' . $min . '.js';
+			$jqueryUI = $request->getBaseUrl() . '/lib/pkp/lib/vendor/components/jqueryui/jquery-ui' . $min . '.js';
+		}
+		// Use an empty `baseUrl` argument to prevent the theme from looking for
+		// the files within the theme directory
+		$this->addScript('jQuery', $jquery, array('baseUrl' => ''));
+
+		// Load custom JavaScript for this theme
+		$this->addScript('default', 'js/main.js');
 	}
 
 	/**
@@ -57,25 +103,6 @@ class DefaultThemePlugin extends ThemePlugin {
 	 */
 	function getDescription() {
 		return __('plugins.themes.default.description');
-	}
-
-	/**
-	 * @see ThemePlugin::getLessStylesheet
-	 */
-	function getLessStylesheet() {
-		return 'styles/index.less';
-	}
-
-	/**
-	 * Print JavaScript file into the footer
-	 * @param $hookName string
-	 * @param $args array
-	 * @return boolean Normal hook handling conventions.
-	 */
-	function printJavascript() {
-		$request = Registry::get('request');
-		echo '<script src="' . $request->getBaseUrl() . '/' . $this->getPluginPath() . '/js/main.js" type="text/javascript"></script>';
-		return false;
 	}
 }
 

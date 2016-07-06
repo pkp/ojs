@@ -771,7 +771,7 @@ class LucenePlugin extends GenericPlugin {
 
 		// Assign our private stylesheet.
 		$templateMgr = $params[0];
-		$templateMgr->addStylesheet($request->getBaseUrl() . '/' . $this->getPluginPath() . '/templates/lucene.css');
+		$templateMgr->addStylesheet('lucene', $request->getBaseUrl() . '/' . $this->getPluginPath() . '/templates/lucene.css');
 
 		// Instant search.
 		if ($this->getSetting(0, 'instantSearch')) {

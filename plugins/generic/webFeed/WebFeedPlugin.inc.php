@@ -95,20 +95,45 @@ class WebFeedPlugin extends GenericPlugin {
 
 		$templateManager =& $args[0];
 		$currentJournal = $templateManager->get_template_vars('currentJournal');
-		$requestedPage = $request->getRequestedPage();
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$currentIssue = $issueDao->getCurrent($currentJournal->getId(), true);
+
+		if (!$currentIssue) {
+			return;
+		}
+
 		$displayPage = $this->getSetting($currentJournal->getId(), 'displayPage');
 
-		if ($currentIssue && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'issue')) || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) {
-			$templateManager->assign(
-				'additionalHeadData',
-				$templateManager->get_template_vars('additionalHeadData') . '
-				<link rel="alternate" type="application/atom+xml" href="' . $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'atom')) . '" />
-				<link rel="alternate" type="application/rdf+xml" href="'. $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss')) . '" />
-				<link rel="alternate" type="application/rss+xml" href="'. $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss2')) . '" />'
-			);
+		// Define when the <link> elements should appear
+		$contexts = 'frontend';
+		if ($displayPage == 'homepage') {
+			$contexts = array('frontend-index', 'frontend-issue');
+		} elseif ($displayPage == 'issue') {
+			$contexts = 'frontend-issue';
 		}
+
+		$templateManager->addHeader(
+			'webFeedAtom+xml',
+			'<link rel="alternate" type="application/atom+xml" href="' . $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'atom')) . '">',
+			array(
+				'contexts' => $contexts,
+			)
+		);
+		$templateManager->addHeader(
+			'webFeedRdf+xml',
+			'<link rel="alternate" type="application/rdf+xml" href="'. $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss')) . '">',
+			array(
+				'contexts' => $contexts,
+			)
+		);
+		$templateManager->addHeader(
+			'webFeedRss+xml',
+			'<link rel="alternate" type="application/rss+xml" href="'. $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss2')) . '">',
+			array(
+				'contexts' => $contexts,
+			)
+		);
+
 		return false;
 	}
 

@@ -58,7 +58,6 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
-		if (!Config::getVar('general', 'installed')) return false;
 		if ($success) {
 			HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
 		}
