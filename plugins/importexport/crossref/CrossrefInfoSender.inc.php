@@ -61,7 +61,8 @@ class CrossrefInfoSender extends ScheduledTask {
 			$unregisteredArticlesIds = array();
 			foreach ($unregisteredArticles as $articleData) {
 				$article = $articleData['article'];
-				if (is_a($article, 'PublishedArticle')) {
+				$errors = array();
+				if (is_a($article, 'PublishedArticle') && $plugin->canBeExported($article, $errors)) {
 					$unregisteredArticlesIds[$article->getId()] = $article;
 				}
 			}
