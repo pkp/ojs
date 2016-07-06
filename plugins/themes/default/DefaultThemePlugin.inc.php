@@ -17,13 +17,27 @@ import('lib.pkp.classes.plugins.ThemePlugin');
 
 class DefaultThemePlugin extends ThemePlugin {
 	/**
+	 * Constructor
+	 */
+	function DefaultThemePlugin() {
+		parent::ThemePlugin();
+	}
+
+	/**
+	 * @copydoc ThemePlugin::isActive()
+	 */
+	public function isActive() {
+                if (defined('SESSION_DISABLE_INIT')) return true;
+		return parent::isActive();
+	}
+
+	/**
 	 * Initialize the theme's styles, scripts and hooks. This is run on the
 	 * currently active theme and it's parent themes.
 	 *
 	 * @return null
 	 */
 	public function init() {
-
 		// Load Noto Sans font from Google Font CDN
 		// To load extended latin or other character sets, see:
 		// https://www.google.com/fonts#UsePlace:use/Collection:Noto+Sans
