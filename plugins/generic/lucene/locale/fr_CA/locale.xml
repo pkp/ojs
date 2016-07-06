@@ -96,4 +96,6 @@
 	<message key="plugins.generic.lucene.sectionForm.ranking.low">Classer plus bas</message>
 	<message key="plugins.generic.lucene.sectionForm.ranking.normal">Normal</message>
 	<message key="plugins.generic.lucene.sectionForm.ranking.high">Classer plus haut</message>
+	<message key="plugins.generic.lucene.settings.useProxySettings">Configuration du proxy</message>
+	<message key="plugins.generic.lucene.settings.useProxySettingsInstructions">Utiliser la configuration du proxy dans le fichier config.inc.php pour les requêtes web à Solr.</message>
 </locale>

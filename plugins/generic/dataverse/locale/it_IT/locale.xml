@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/dataverse/locale/it_IT/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Dataverse plugin localization strings
+  -->
+
+<locale name="it_IT" full_name="Italiano">
+
+	<!-- Dataverse Plugin -->
+	<message key="plugins.generic.dataverse.displayName">Dataverse Plugin</message>
+	<message key="plugins.generic.dataverse.description">Deposita data set e/o altri file supplementari in Dataverse.</message>
+
+	<!-- Set up Dataverse: DVN URL and authentication details -->
+	<message key="plugins.generic.dataverse.settings.connect">Connetti</message>
+	<message key="plugins.generic.dataverse.settings.dvnUri">Dataverse URL</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriDescription">Root Dataverse URL</message>
+	<message key="plugins.generic.dataverse.settings.usernameDescription">Username o API token</message>
+	<message key="plugins.generic.dataverse.settings.passwordDescription">Password. Non richiesto per API token.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriRequired">Richiesta URL Dataverse URL.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">Non riesco a connettermi a Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.usernameRequired">Inserire username Dataverse.</message>
+
+	<!-- Set up Dataverse: select Dataverse -->
+	<message key="plugins.generic.dataverse.settings.selectDataverse">Selezionare Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.dataverse">Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.dataverseDescription">Selezionare Dataverse per depositare i file di dati di questa rivista.</message>
+	<message key="plugins.generic.dataverse.settings.dataverseRequired">Selezionare Dataverse.</message>
+
+	<!-- Plugin configuration: Settings -->
+	<message key="plugins.generic.dataverse.settings">Impostazioni</message>
+	<message key="plugins.generic.dataverse.settings.dataPolicies">Data Policies</message>
+	<message key="plugins.generic.dataverse.settings.dataPoliciesDescription">Configurare data policies.</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityPolicy">Policy di disponibilità dei dati</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityPolicyDescription">Policy generale di disponibilità dei dati per la rivista. Questi dati compariranno nella pagina Informazioni della rivista.</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityRequired">Fornire una policy di disponibilitàdei dati.</message>
+	<message key="plugins.generic.dataverse.settings.sectionPoliciesDescription">Aggiungere una policy sui dati per sezioni specifiche della rivista.</message>
+	<message key="plugins.generic.dataverse.settings.authorGuidelinesDescription"><![CDATA[Modifica le <a href="{$authorGuidelinesUrl}" target="_blank">Author Guidelines</a> riguardo a come trasmettere e citare i dati.]]></message>
+	<message key="plugins.generic.dataverse.settings.checklistDescription"><![CDATA[Modifica la <a href="{$checklistUrl}" target="_blank">Submission Preparation Checklist</a> per aiutare gli autori a rispettare le linee guida di proposta e citazione dei dati.]]></message>
+	<message key="plugins.generic.dataverse.settings.reviewPolicyDescription"><![CDATA[Modifica la <a href="{$reviewPolicyUrl}" target="_blank">Review Policy</a> riguardo ai dataset.]]></message>
+	<message key="plugins.generic.dataverse.settings.reviewGuidelinesUrl"><![CDATA[Modifica le <a href="{$reviewGuidelinesUrl}" target="_blank">Review Guidelines</a> inserendo istruzioni sulal revisione dei dataset.]]></message>
+	<message key="plugins.generic.dataverse.settings.copyeditInstructionsUrl"><![CDATA[Modifica le  <a href="{$copyeditInstructionsUrl}" target="_blank">Copyedit Instructions</a>  riguardo ai dataset.]]></message>
+	<message key="plugins.generic.dataverse.settings.termsOfUse">Condizioni d'uso</message>
+	<message key="plugins.generic.dataverse.settings.termsOfUseRequired">Fornire le condizioni d'uso o selezionare le condizioni d'uso su Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.termsOfUseDescription">Fornire le condizioni d'uso a cui gli utenti devono sottostare prima di depositare i file dei dati.</message>
+	<message key="plugins.generic.dataverse.settings.fetchTermsOfUse">Selezionare le condizioni d'uso dal setup di Dataverse per questa rivista.</message>
+	<message key="plugins.generic.dataverse.settings.defineTermsOfUse">Inserire le condizioni d'uso personalizzate nel campo sottostante.</message>
+	<message key="plugins.generic.dataverse.settings.dataverseTermsOfUseError">Impossibile recuperare le condizioni d'uso per il Dataverse configurato. Verificare le impostazioni di connessione.</message>
+	<message key="plugins.generic.dataverse.settings.metadata">Impostazioni dei metadati</message>
+	<message key="plugins.generic.dataverse.settings.citationFormat">Formato della citazione</message>
+	<message key="plugins.generic.dataverse.settings.citationFormatDescription">Scegliere il formato citazionale utilizzato per mostrare le informazioni catalografiche sullo studio.</message>
+	<message key="plugins.generic.dataverse.settings.citationFormat.apa">APA Citation Style</message>
+	<message key="plugins.generic.dataverse.settings.pubIdType">Tipologia di identificatore pubblico</message>
+	<message key="plugins.generic.dataverse.settings.pubIdTypeDescription"><![CDATA[Scegliere la tipologia di identificatore pubblico per creare il link all'articolo nella citazione della pubblicazione. Se il <a href="{$pubIdsUrl}">plugin per gli identificatori pubblici</a> è abilitato, le citazioni degli articoli pubblicati utilizzeranno i DOI.]]></message>
+	<message key="plugins.generic.dataverse.settings.workflow">Impostazioni di workflow</message>
+	<message key="plugins.generic.dataverse.settings.requireData">Richiedere i file dei dati</message>
+	<message key="plugins.generic.dataverse.settings.requireDataDescription">Richiedere che le submission includano ifile dei dati depositati in Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.requireDataError">Gli autori devono depositare i file dei dati in Dataverse. Caricare un file supplementare per proseguire.</message>
+	<message key="plugins.generic.dataverse.settings.studyRelease">Rilascia le bozze dello studio</message>
+	<message key="plugins.generic.dataverse.settings.studyReleaseSubmissionAccepted">Submission accettata</message>
+	<message key="plugins.generic.dataverse.settings.studyReleaseArticlePublished">Articolo pubblicato</message>
+
+	<!-- Settings: default values -->
+	<message key="plugins.generic.dataverse.settings.default.dataAvailabilityPolicy"><![CDATA[{$journal} richiede, come condizione necessaria per la pubblicazione, che i dati che supportano i risultati della ricerca debbano essere depositati in un repository pubblico. {$journal} raccomanda <a href="http://thedata.harvard.edu/">Harvard Dataverse</a>, una soluzione libera e aperta ai ricercatori di tutto il modno per condividere, citare, riusare e archiviare i dati della ricerca. I dati sono un prodotto importante della ricerca scientifica e devono essere conservati e utilizzabili per i prossimi decenni. Gli autori possono scegliere di rendere i dati pubblicamente disponibili al momento della pubblicazione. Possono essere garantite alcune eccezioni, a discrezione dell'editor, in particolare per informazioni sensibili, come quelle riguardanti le persone o la localizzazione di specie protette. Ogni eccezione va documentata con una dichiarazione nell'articolo pubblicato. (Adattato da <a href="http://datadryad.org/pages/jdap">Joint Data Archiving Policy</a> (JDAP)).]]></message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines.extras">Esempi di linee guida per gli autori</message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines.extras.label">Mostra esempi di linee guida per la proposta e la citazione dei dati</message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines"><![CDATA[
+   <ol>
+     <li>
+       <p>Definizione dei dati che devono essere condivisi</p>
+       <p>Un "dataset minimo" può essere definito come l'insieme dei dati utilizzati per raggiungere le conclusioni tratteggiate nell'articolo, con i relativi metadati e metodi, oltre ai dati aggiuntivi necessari per replicare nella loro interezza i risultati dello studio in oggetto. Includi informazioni sufficienti ai ricercatori per comprendere i dati, e ogni citazione ai dati dai quali il set è eventualmente tratto. Le caratteristiche dei dati, i metodi e i risultati dello studio dovrebbero essere innclusi nel manoscritto principale, indipendentemente dal deposito dei dati stessi. Gli autori che hanno creato dataset troppo grandi per condividerli attraverso il deposito o i file caricati dovrebbero contattare {$journal} per comunicarlo. (Adattamento della <a href="http://www.plos.org/data-access-for-the-open-access-literature-ploss-data-policy/">PLOS' Data Policy</a>)</p>
+     </li>
+     <li>
+       <p>Guida alla condivisione dei dataset derivanti da lavori che coinvolgano partecipanti umani</p>
+       <p>{$journal} riconosce che ci possano essere casi dove per ragioni di privacy, sicurezza nazionale o riservatezza commerciale non sia possibile condividere pubblicamente tutti i dati. In tali casi i ricercatori dovrebbero condividere la loro analisi dei dati sotto i termini meno restrittivi consentiti dalla normativa e comportarsi secondo i principi e le linee guida etiche delle loro comunità di ricerca. Questo potrebbe significare rendere pubblicamente disponibili i dati non sensibili, dati aggregati, metadati e codice, facilitando inoltre l'accesso se il proprietario originale dei dati permette ad altri ricercatoti di utilizzarli. (Adattamento degli OKF's <a href="http://openeconomics.net/principles/#sthash.MdxVXZlC.dpuf">Open Economics Priciples</a>)</p>
+     </li>
+     <li>
+       <p>Guidaalla citazione di dati</p>
+       <p>Se i dati della tua ricerca sono depositati insieme al manoscritto utilizzando OJS, l'Harvard Dataverse ne genererà automaticamente la citazione. Se tuttavia i tuoi dati fossero già in un archivio, questo è il formato citazionale suggerito per citarli quando invierai la proposta:</p>
+       <p>Author(s), Year, Dataset Title, Global Persistent Identifier, Data Repository or Archive, version and subset.</p>
+       <p>Per utleriori informazioni sulle migliori pratiche citazionali per i dati, leggi <a href="http://www.force11.org/datacitation">Force11's Data Citation Priciples</a>.</p>
+     </li>
+   </ol>]]>
+	</message>
+	<message key="plugins.generic.dataverse.settings.default.checklist.extras">Esempi di liste di controllo delle submission</message>
+	<message key="plugins.generic.dataverse.settings.default.checklist.extras.label">Mostra liste di esempio per il controllo di submission con dataset</message>
+	<message key="plugins.generic.dataverse.settings.default.checklist"><![CDATA[
+   <ol>
+   <li>Se intendi condividere dati derivanti da studi che abbiano coinvolto esseri umani, leggi le  "Guida alla condivisione dei dataset derivanti da lavori che coinvolgano partecipanti umani" qui sopra.</li>
+   <li>Prepara il dataset per il deposito rivedendo le linee guida per la replica: <a href="http://thedata.org/book/replication-guidelines">http://thedata.org/book/replication-guidelines</a></li>
+   <li>Se stai depositando in Harvard Dataverse, puoi trasmettere il dataset contemporaneamente alla proposta del manoscritto tramite OJS a {$journal}. Il dataset verrà automaticamente depositato in Harvard Dataverse che genererà una citazione con un identificatore permanente URL (DOI) che potrai indicare ad altri per citare i tuoi dati, una volta che l'articolo sarà pubblicato.</li>
+   <li>Se il dataset è già contenuto in un archivio pubblico tra quelli suggeriti, inserisci la citazione con un identificatore persistente. Per ulteriori informazioni, fai riferimento alle linee guida per gli autori.</li>
+   </ol>
+   ]]>
+	</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy.extras">Esempi di politiche di revisione</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy.extras.label">Mostra esempi di politiche di revisione per i dataset</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy"><![CDATA[
+   <ul>
+   <li>I dataset depositati dovrebbero essere trattati come parte integrante dell'articolo, per quanto riguarda la peer review; OPPURE</li>
+   <li>All'accettazione, e prima della versione finale del manoscritto, i dati devono essere sottoposti alla rivista insieme a una descrizione di come sia stato costituito il dataset (specificando eventuali differenze rispetto alle versioni precedenti e il nome di tutti i software che sono stati utilizzati per raccoglierli).</li>
+   </ul>
+   <p>Le politiche sulla revisione dovrebbero comprendere una indicazione specifica per i dataset derivanti da studi che coinvolgano esseri umani:</p>
+   <ul>
+   <li>I dati derivanti da studi che coinvolgono come partecipanti degli esseri umani dovrebbero indicare come venga rispettata la privacy dei partecipanti, così come previsto nelle politiche sulla disponibilità dei dati. Dovrebbero intolre preferibilmente rispettare i requisiti previsti per i "dataset minimi".</li>
+   </ul>
+   ]]>
+	</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines.extras">Esempi di linee guida per la revisione</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines.extras.label">Mostra esempi di linee guida per la revisione di dataset</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines"><![CDATA[
+   <p>Riguardo ai dati di accompagnamento di un articolo, i revisori dovrebbero verificare che sia l'articolo che i dati siano compatibili con le politiche della rivista sul deposito dei dati, che i dati corrispondano al contenuto dell'articolo e che l'articolo e la documentazione complementare siano sufficienti a comprendere i dati forniti, la loro origine e il modo in cui siano stati utilizzati.</p>
+   ]]>
+	</message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions.extras">Esempi di istruzioni per il copyedit</message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions.extras.label">Mostra esempi di istruzioni per il copyedit di dataset</message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions"><![CDATA[
+		<ul>
+			<li>Il Copyeditor ha verificato che sono state osservate le politiche per la citazione dei dati; OPPURE</li>
+			<li>Il Copyeditor ha verificato che  verified le affermazioni empiriche sono accompagnate dalle appropriate citazioni di dati.</li>
+		</ul>
+	]]></message>
+
+	<!-- Notifications -->
+	<message key="plugins.generic.dataverse.notification.studyCreated">I dati della submission sono stati depositati in Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.studyUpdated">I dati della submission sono stati aggiornati in Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.fileAdded">I file supplementari sono stati depositati in Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.fileDeleted">I file supplementari sono stati aggiornati in Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.studyDeleted">I dati della submission sono stati rimossi da Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.releaseDataverse"><![CDATA[I dati pubblicati nel Dataverse di questa rivista non sono accessibili fino a quando il Dataverse non è rilasciato. Entrare nel Dataverse della rivista per rilasciarli.]]></message>
+	<message key="plugins.generic.dataverse.notification.studyReleased"><![CDATA[<p>I dati della proposta sono stati pubblicati in Dataverse:</p><p>{$dataCitation}</p>]]></message>
+	<message key="plugins.generic.dataverse.notification.error">Si è verificato un errore durante l'aggiornamento dei dati della submission in Dataverse.</message>
+
+	<!-- Article metadata for completed submissions: form errors -->
+	<message key="plugins.generic.dataverse.metadataForm.studyLocked">Il set di dati Dataverse di questa proposta è bloccato da un processo in corso. I metadati della propoposta non possono essere aggiornati fino a quando il processo non sarà terminato.</message>
+
+	<!-- Additional metadata: suppfile form -->
+	<message key="plugins.generic.dataverse.suppFile.title">Plugin Dataverse: Publica i dati</message>
+	<message key="plugins.generic.dataverse.suppFile.description">I dati della ricerca possono essere sottoposti alla rivista per la pubblicazione depositandoli come file supplementari nel Dataverse della rivista oppure citando dati che sono già in un archivio.</message>
+	<message key="plugins.generic.dataverse.suppFile.publishDataNone"><![CDATA[Considera il file caricato come un file supplementare. Tale file <strong>non sarà</strong> depositato in Dataverse.]]></message>
+	<message key="plugins.generic.dataverse.suppFile.publishDataDataverse"><![CDATA[Deposita il file in Dataverse. L'autore accetta i <a href="javascript:openWindow('{$dataverseTermsOfUseUrl}');">termini d'uso di</a> Dataverse.]]></message>
+	<message key="plugins.generic.dataverse.suppFile.publishData.error">Caricare il file per il deposito in Dataverse.</message>
+	<message key="plugins.generic.dataverse.suppFile.dataCitationDescription">Il file verrà aggiunto al dataset Dataverse creato per questa proposta:</message>
+	<message key="plugins.generic.dataverse.suppFile.studyLocked">Lo studio è bloccato per un processo in corso. NOn possono essere apportati cambiamenti alla proposta fino alla conclusione di tale processo.</message>
+	<message key="plugins.generic.dataverse.suppFile.studyDescription">Descrizione dello studio</message>
+	<message key="plugins.generic.dataverse.suppFile.studyDescription.description">Fornisci un riassunto degli scopi, natura e limiti dei dati dello studio.</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation">Citazione di dati esterni</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.description">Se i dati da pubblicare insieme a questa proposta sono già in un archivio pubblico, inseriscine la citazione.</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.error">Caricare i file dei dati in Dataverse OPPURE indicare la citazione dei dati da una fonte esterna.</message>
+
+	<!-- Terms of use -->
+	<message key="plugins.generic.dataverse.termsOfUse.title">Condizioni d'uso</message>
+	<message key="plugins.generic.dataverse.termsOfUse.dataverse">Dataverse</message>
+
+	<!-- Data availality policy -->
+	<message key="plugins.generic.dataverse.dataAvailabilityPolicy.title">Politiche di disponibilità dei dati</message>
+
+	<!-- Block plugin -->
+	<message key="plugins.generic.dataverse.block.displayName">Plugin del blocco Dataverse</message>
+	<message key="plugins.generic.dataverse.block.title">Citazione dei dati</message>
+
+	<!-- Reading tools: suppfiles -->
+	<message key="plugins.generic.dataverse.suppFiles.view">Vedi in Dataverse</message>
+
+	<!-- Field labels -->
+	<message key="plugins.generic.dataverse.dataCitation">Citazione dei dati</message>
+
+	<!-- Citation "in press" info -->
+	<message key="plugins.generic.dataverse.citationAPA.inPress">(in stampa).</message>
+</locale>

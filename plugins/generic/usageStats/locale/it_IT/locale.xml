@@ -18,16 +18,64 @@
 	<message key="plugins.generic.usageStats.settings.logParseRegex">Usa espressioni regolari (ReGex) per esaminare i log</message>
 	<message key="plugins.generic.usageStats.settings.logParseRegex.description">Le regex utilizzate di default possono analizzare i log di accesso di apache in formato combninato e anche i file di log del plugin. Se i tuoi log d'accesso sono in formato diverso, devi utilizzare un'espressione regolare capace di analizzarli e di restituire i valori attesi. vedi UsageStatsLoader::_getDataFromLogEntry() per ulteriori informazioni.</message>
 	<message key="plugins.generic.usageStats.settings.saved">Configurazioni del plugin salvate</message>
-	
-	<message key="plugins.generic.usageStats.openFileFailed">Il file {$file} non può essere aperto ed è stato rifiutato.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Opzioni per la privacy dei dati</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath">Percorso del file per il salt di anonimizzazione</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath.invalid">Il file salt non è scrivibile.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements">Per assicurare la privacy dei dati, devi specificare un file leggibile e scrivibile dall'utente web che contenga un valore salt generato casualmente. Questo file NON deve essere conservato per assicurare la protezione della privacy. Il salt è generato casualmente usando la funzione mcrypt_create_iv, che richiede PHP mcrypt; la funzione openssl_random_pseudo_bytes, che richiede PHP openssl; il file /dev/urandom, che funziona solamente in sistemi *nix; oppure la funzione mt_rand, che non è sicura dal punto di vista crittografico. Quindi, se stai usando un server Windows, assicurati di installare PHP mcrypt o di abilitare openssl per avere un salt generato in maniera sicura.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Attiva questa opzione per avere una versione del plugin rispettosa della normativa sulla privacy, cioè che memorizzi solo versioni crittate degli indirizzi IP, informi gli utenti del tracking e fornisca un meccanismo di opt-out agli utenti. Nota: usando questa opzione non potrai utilizzare le funzionalità di geolocalizzazione del plugin.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requiresSalt">Per abilitare la privacy dei dati serve un file salt.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesCity">Abilitando la protezione della provacy escludi la Città dai report statistici.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesRegion">Abilitando la protezione della provacy escludi la Regione dai report statistici.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Rispetta la provacy dei dati</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns">Informazioni statistiche opzionali</message>
+	<message key="plugins.generic.usageStats.settings.archives">Archivio</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives.description">Attiva questa opzione per comprimere i file di log archiviati con gzip (devi configurare il path di gzip nel file config.inc.php). Se hai un sito ad alto traffico, è una buona idea abilitare la compressione, per risparmiare spazio disco.</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives">Comprimi l'archivio</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.cityRequiresRegion">The optional column "City" requires the optional column "Region".</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.description">Abilita o disabilita la raccolta delle seguenti informazioni opzionali. Questo influenzerà la quantità di report statistici che potrai ottenere e anche le dimensioni del database. NON modificare se non sei sicuro di quello che stai facendo.</message>
+
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Processamento automatico delle statistiche d'uso</message>
+
+		<message key="plugins.generic.usageStats.openFileFailed">Il file {$file} non può essere aperto ed è stato rifiutato.</message>
 	<message key="plugins.generic.usageStats.invalidLogEntry">La riga {$lineNumber} del file {$file} non è valida e il file è stato rifiutato.</message>
 	<message key="plugins.generic.usageStats.removeUrlError">La riga {$lineNumber} del file {$file} contiene una URL da cui il sistema non riesce a rimuovere la baseurl. Ciò generalmente si verifica quando le configurazioni della baseurl nel file config.inc.php file contengono parametri che, sono uguali a uno di quegli altri. Vedi Core::_checkBaseUrl() per comprendere meglio il problema. Il file è stato rifiutato.</message>
 	<message key="plugins.generic.usageStats.loadDataError">Impossibile caricare i dati estratti dal file {$file}. Si è verificato un errore: {$error}. Il file è stato riportato allo stato precedente.</message>
 	<message key="plugins.generic.usageStats.displayName">Statistiche d'uso</message>
 	<message key="plugins.generic.usageStats.description">Presenta statistiche d'uso dei dati. Può utilizzare i log di accesso al server per produrre le statistiche.</message>
+	<message key="plugins.generic.usageStats.pluginDisabled">Il plugin per le statistiche d'uso è disabilitato. Nessun file di log è stato processato.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">La directory {$directory} non è vuota. Questo potrebbe indicare un processo precedente fallito, o uno ancora in corso. Questo file verrà processato di nuovo automaticamente se stai usando scheduledTasksAutoStage.xml, altrimenti dovrai spostare manualmente di nuovo tutti i file orfani dalla directory di processamenteo a quella di stage.</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">La lista COUNTER dei bot non è stata trovata, o è presente più di una lista. Il file {$file} non può essere processato.</message>
+	<message key="plugins.generic.usageStats.failedCounterBotList">La lista COUNTER dei bot {$botlist} non può essere aperta. Il file {$file} non può essere processato.</message>
 	
 	<message key="plugins.reports.usageStats.report.displayName">Report delle statistiche d'uso</message>
 	<message key="plugins.reports.usageStats.report.description">Report delle statistiche OJS (compatibili COUNTER)</message>
+	
+	<message key="plugins.reports.usageStats.optout.displayName">Informazioni sulla privacy delle statistiche d'uso</message>
+	<message key="plugins.reports.usageStats.optout.description">Informazioni sulla privacy delle statistiche d'uso</message>
+	<message key="plugins.generic.usageStats.optout.title">Informazioni sulle statistiche d'uso</message>
+	<message key="plugins.generic.usageStats.optout.shortDesc"><![CDATA[Questo sito raccoglie log per statistiche anonime. Leggi le <a href="{$privacyInfo}">privacy information</a> per maggiori dettagli.]]></message>	
+	<message key="plugins.generic.usageStats.optout.description"><![CDATA[
+		<h3>Informativa generale sulla privacy</h3>
+		<p>Fai riferimento alla <a href="{$privacyStatementUrl}">privacy statement</a>.</p>
+		<h3>Statistiche d'uso</h3>
+		<p>Per analizzare l'uso e l'impatto della nostra rivista e degli articoli che pubblichiamo, raccogliamo e registriamo i dati di accesso alla homepage della rivista, ai fascicoli, agli articoli, ai full teext e ai file supplementari. Nel corso del processo tutti i dati vengono anonimizzati. Non vengono raccolte informazioni personali. Gli indirizzi IP sono anonimizzati attraverso hash (utilizzando <em>SHA 256</em>) in combinazione con un <em>salt sicuro di 64 caratteri</em> automaticamente <em>generato in maniera casuale e sovrascritto giornalmente</em>. GLi indirizzi IP non possono quindi essere ricostruiti.</p>
+		<p>Le seguenti informazioni vengono raccolte insieme all'IP anonimizzato come descritto:</p>
+		<ul>
+		<li>Access type (i.e. administrative)</li>
+		<li>Request time</li>
+		<li>Requested URL</li>
+		<li>HTTP status code</li>
+		<li>Browser</li>
+		</ul>
+		<p>I dati sono raccolti solo a scopo di valutazione; gli indirizzi IP non sono accoppiati agli ID degli utenti; è tecnicamente impossibile ricollegare uno specifico set di dati a uno specifico indirizzo IP.</p>]]></message> 
+	<message key="plugins.generic.usageStats.optout.done"><![CDATA[
+		<p>Sei stato escluso con successo dalla raccolta dei dati statistici. Da questo momento i dati del tuo utilizzo del sito non verranno più tracciati. Fai click sul pulsante sotto per modificare la tua scelta.</p>]]></message>
+	<message key="plugins.generic.usageStats.optin">Opt In</message>
+	<message key="plugins.generic.usageStats.optout">Opt Out</message>
+	<message key="plugins.generic.usageStats.optout.cookie"><![CDATA[
+		<p>Se vuoi puoi essere escluso (opt-out) dalla raccolta dei dati. Con un click sul pulsante opt-out qui sotto, puoi decidere di non partecipare all'analisi statistica. Quando fai click sul pulsante opt-out viene creato un <em>cookie</em> nel tuo sistema per memorizzare tale scelta. Se le impostazioni del tuo browser obbligano a cancellare i cookies automaticamente, dovrai scegliere di nuovo l'opt-aout la prossima volta che accedi a questa rivista. Il cookie è valido solo per un browser; se usi un browser differente, la prossima volta dovrai esercitare nuovamente l'opzione. Nel coockie non vengono memorizzate informazioni personali. Il cookie resta valido per un anno dall'ultimo accesso.</p>
+		<p>Ricordati che i log generali del server non sono toccati dalla tua decisione di essere escluso dal rilevamento statistico degli accessi. Fai riferimento alla nostra <a href="{$privacyStatementUrl}">privacy statement</a>.</p>]]></message>
+
 	
 	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
 	<message key="plugins.reports.usageStats.metricType.full">Statistiche OJS (compatibili COUNTER)</message>
