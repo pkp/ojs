@@ -233,7 +233,7 @@
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Commentaires sur cet article</message>
-	<message key="comments.authenticated"><![CDATA[by <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
+	<message key="comments.authenticated"><![CDATA[par <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
 	<!-- Site Administration -->
 
