@@ -21,4 +21,5 @@
 	<message key="plugins.block.user.logout">Se déconnecter</message>
 	<message key="plugins.block.user.signOutAsUser">Se déconnecter en tant qu'utilisateur</message>
 	<message key="plugins.block.user.rememberMe">Mémoriser mon mot de passe</message>
+	<message key="plugins.block.user.implicitAuthLogin">Accès à une revue</message>
 </locale>

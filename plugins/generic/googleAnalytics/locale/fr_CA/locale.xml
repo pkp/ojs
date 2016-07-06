@@ -34,4 +34,10 @@
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">Pour retracer le lectorat des articles publiés à l'aide de Google Analytics, saisir un numéro de compte ici (par ex., UA-xxxxxx-x).</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Un ou plusieurs numéro de compte Google Analytics saisi(s) pour les auteurs des soumissions ne sont pas valides.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">Nouveau code de suivi pour Universal Analytics (analytics.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.enableSite">Page d'accueil du site</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteEnable">Activer la configuration de cette revue sur la page d'accueil du site</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteDisable">Désactiver la configuration existante sur la page d'accueil du site</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteUnchanged">Conserver la configuration initiale de la page d'accueil</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.disabled">Désactivé</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.enableSiteInstructions">Google Analytics peut être configuré au niveau du site. Si aucune configuration n'est faite au niveau du site, Google Analytics sera uniquement disponible au niveau de la revue.</message>
 </locale>
