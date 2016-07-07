@@ -12,6 +12,11 @@
   -->
 
 <locale name="en_US" full_name="U.S. English">
+        <message key="editor.draft.decision">Draft Decision</message>
+        <message key="editor.draft.selectDecision">Select a Draft Decision</message>
+        <message key="editor.draft.comment">As a section editor you cannot make decisions, but may build a draft for a Senior Editor to approve.</message>
+        <message key="editor.draft.viewCurrent">View a current draft</message>
+        <message key="editor.draft.record">Record Draft</message>
 	<message key="editor.article.reviewForms">Review Forms</message>
 	<message key="editor.article.selectReviewForm">Select Review Form</message>
 	<message key="editor.article.clearReviewForm">Clear Review Form</message>
