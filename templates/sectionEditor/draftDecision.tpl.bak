@@ -21,11 +21,11 @@
 	<li><a href="{url op="submissionCitations" path=$submission->getId()}">{translate key="submission.citations"}</a></li>
 </ul>
 
-<h3>{translate key="editor.draft.adecision"}</h3>
+<h3>Draft a Decision</h3>
 <div>
-<p>{translate key="editor.draft.email"}</p>
+<p>This email will eventually be sent to the author, but only once approved by a section editor.</p>
 <form method="post" action="{url op="draftDecision" path=$submission->getId()}">
-	<label for="editor">{translate key="editor.draft.emailSenior"}</label><br />
+	<label for="editor">Senior Editor</label><br />
 	<select id="editor" name="editor" class="selectMenu">
 		{iterate from=editors item=user}
 		{assign var="userid" value=$user->getId()}
@@ -33,18 +33,18 @@
 		{/iterate}
 	</select>
 	<br /><br />
-	<label for="subject">{translate key="email.subject"}</label><br />
+	<label for="subject">Subject</label><br />
 	<input id="subject" name="subject" value="{$title|escape}" size="60" maxlength="200" class="textField" type="text">
 	<br /><br />
-	<label for="body">{translate key="email.body"}</label><br />
+	<label for="body">Body</label><br />
 	<textarea name="body" cols="60" rows="15" class="textArea">{$email->getBody()|escape}</textarea>
 	<br /><br />
-	<label for="note">{translate key="editor.draft.emailNote"}</label><br />
+	<label for="note">Note (displayed only to the Editor)</label><br />
 	<textarea name="note" cols="60" rows="5" class="textArea"></textarea>
 	<input type="hidden" name="decision" value="{$decision}" />
 	<input type="hidden" name="articleId" value="{$submission->getId()}" />
 	<br /><br />
-	<input type="submit" name="submit_draft" value="{translate key="editor.draft.record"}" class="button" />
+	<input type="submit" name="submit_draft" value="Record Draft" class="button" />
 </form>
 </div>
 {include file="common/footer.tpl"}
