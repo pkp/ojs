@@ -112,6 +112,12 @@ show_upgrade_warning = On
 ; alert purposes only.
 enable_beacon = On
 
+; Editorial workflow modification to force Section Editors to have their decisions approved
+; by Editors before they are emailed out to authors. This replaces the standard "accept"/"revise"/"decline"
+; workflow with a draft decision that can be saved before it is approved by an Editor
+; To enable the workflow modification, set enable_drafting = 1
+; otherwise to maintain the OJS regular workflow, set enable_drafting = 0
+enable_drafting = 1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ; Database Settings ;
