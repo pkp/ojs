@@ -14,12 +14,8 @@
 
 <locale name="it_IT" full_name = "Italiano">
     <message key="editor.draft.decision">Decisione provvisoria</message>
-    <message key="editor.draft.adecision">Draft a Decision ITA </message>
-     <message key="editor.draft.email">This email will eventually be sent to the author, but only once approved by a section editor. ITA</message>
     <message key="editor.draft.selectDecision">Seleziona una decisione provvisoria</message>
     <message key="editor.draft.comment">In qualità di Section editor, puoi proporre una decisione provvisoria all'approvazione dell'editor</message>
-     <message key="editor.draft.emailSenior">Senior Editor ITA</message>
-    <message key="editor.draft.emailNote">Note (displayed only to the Editor) ITA</message>
     <message key="editor.draft.viewCurrent">Vedi la decisione provvisoria corrente</message>
     <message key="editor.draft.record">Registra decisione provvisoria</message>
 	<message key="editor.article.reviewForms">Moduli di revisione</message>
