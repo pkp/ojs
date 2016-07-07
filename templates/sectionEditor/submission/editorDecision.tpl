@@ -9,14 +9,16 @@
  *
  *}
 <div id="editorDecision">
-{if $isEditor or $draftingDisabled}
+
+  {if $isEditor or not($draftingEnabled)}  
+
 <h3>{translate key="submission.editorDecision"}</h3>
 {else}
-<h3>Draft Decision</h3>
+<h3>{translate key="editor.draft.decision"}</h3>
 {/if}
 
 <table id="table1" width="100%" class="data">
-{if $isEditor or $draftingDisabled}
+{if $isEditor or not($draftingEnabled)}
 <tr valign="top">
 	<td class="label" width="20%">{translate key="editor.article.selectDecision"}</td>
 	<td width="80%" class="value">
@@ -67,20 +69,22 @@
 </tr>
 {else}
 <tr valign="top">
-	<td class="label" width="20%">Select a Draft Decision</td>
+	<td class="label" width="20%">{translate key="editor.draft.selectDecision"}</td>
 	<td width="80%" class="value">
-		As a section editor you cannot make decisions, but may build a draft for a Senior Editor to approve.
+                {translate key="editor.draft.comment"}
 		<form method="post" action="{url op="draftDecision" path=$submission->getId()}">
 			<select name="decision" size="1" class="selectMenu">
 				{html_options_translate options=$editorDecisionOptions}
 			</select>
-			<input type="submit" name="submit" value="Record Draft" class="button" />
+			<input type="submit" name="submit" value="{translate key="editor.draft.record"}" class="button" />
 		</form>
 	</td>
 </tr>
 {/if}
+
+{if $draftingEnabled}
 <tr valign="top">
-	<td class="label" width="20%">View a current draft</td>
+	<td class="label" width="20%">{translate key="editor.draft.viewCurrent"}</td>
 	<td width="80%" class="value">
 		{foreach from=$drafts item=draft}
 			{assign var="decision" value=$draft.decision}
@@ -88,7 +92,7 @@
 		{/foreach}
 	</td>
 </tr>
-
+{/if}
 </table>
 
 <form method="post" action="{url op="editorReview"}" enctype="multipart/form-data">
