@@ -13,11 +13,11 @@
   -->
 
 <locale name="it_IT" full_name = "Italiano">
-        <message key="editor.draft.decision">Draft Decision ITA</message>
-        <message key="editor.draft.selectDecision">Select a Draft Decision ITA</message>
-        <message key="editor.draft.comment">As a section editor you cannot make decisions, but may build a draft for a Senior Editor to approve. ITA</message>
-        <message key="editor.draft.viewCurrent">View a current draft ITA</message>
-        <message key="editor.draft.record">Record Draft ITA</message>
+    <message key="editor.draft.decision">Decisione provvisoria</message>
+    <message key="editor.draft.selectDecision">Seleziona una decisione provvisoria</message>
+    <message key="editor.draft.comment">In qualità di Section editor, puoi proporre una decisione provvisoria all'approvazione dell'editor</message>
+    <message key="editor.draft.viewCurrent">Vedi la decisione provvisoria corrente</message>
+    <message key="editor.draft.record">Registra decisione provvisoria</message>
 	<message key="editor.article.reviewForms">Moduli di revisione</message>
 	<message key="editor.article.selectReviewForm">Seleziona il modulo di revisione</message>
 	<message key="editor.article.clearReviewForm">Cancella il modulo di revisione</message>
