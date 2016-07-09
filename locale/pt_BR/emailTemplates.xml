@@ -51,7 +51,7 @@ Agradecendo desde já a atenção dispensada,<br />
 		<subject>Nova Edição Publicada</subject>
 		<body><![CDATA[Caros leitores,<br />
 <br />
-A revista {$contextName} acaba de publicar seu último número, disponível em <a href="{$journalUrl}">{$journalUrl}</a>. Convidamos todos para verificarem o sumário da revista e acessar artigos e outros itens de seu interesse.<br />
+A revista {$contextName} acaba de publicar seu último número, disponível em <a href="{$contextUrl}">{$contextUrl}</a>. Convidamos todos para verificarem o sumário da revista e acessar artigos e outros itens de seu interesse.<br />
 <br />
 Agradecemos pelo seu apoio contínuo e confiança em nosso trabalho,<br />
 {$editorialContactSignature}]]></body>
@@ -78,10 +78,10 @@ Em caso de dúvidas, entre em contato via e-mail.<br />
 		<description>Mensagem notifica o leitor cadastrado que o Editor criou sua Assinatura. Proporciona todas as informações necessárias para acesso ao conteúdo.</description>
 	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
-		<subject>Nova edição de Acesso Livre da revista {$contextName}</subject>
+		<subject>Nova edição de Acesso Livre</subject>
 		<body><![CDATA[Caros leitores,<br />
 <br />
-A {$contextName} acaba de tornar disponível para Acesso Livre mais uma edição. Convidamos a examinar o sumário nesta mensagem e então acessar a revista (<a href="{$journalUrl}">{$journalUrl}</a>), para ler os artigos e outros itens de seu proveito.<br />
+A {$contextName} acaba de tornar disponível para Acesso Livre mais uma edição. Convidamos a examinar o sumário nesta mensagem e então acessar a revista (<a href="{$contextUrl}">{$contextUrl}</a>), para ler os artigos e outros itens de seu proveito.<br />
 <br />
 Agradecemos o interesse e apoio contínuo à revista,<br />
 {$editorialContactSignature}]]></body>
@@ -268,7 +268,7 @@ Resumo<br />
 		<description>Mensagem do Editor de Seção para solicitar ao Avaliador que indique disponibilidade ou não para realizar uma avaliação. Oferece informações sobre a submissão, como título e resumo, além da data para a conclusão dos trabalhos e como acessar o documento. Esta mensagem é usada quando se utiliza o Processo Padrão de Avaliação, definido no Passo 2 de Configuração da Revista. (Caso contrário veja REVIEW_REQ_MULTI_ATTACHED e REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
-		<subject>A revista {$contextName} solicita avaliação de artigo</subject>
+		<subject>Solicita avaliação de artigo</subject>
 		<body><![CDATA[{$reviewerName},<br />
 <br />
 Acredito que seu conhecimento será fundamental para realizar a avaliação do manuscrito &quot;{$submissionTitle}&quot; submetido a {$contextName}. Informações sobre a submissão encontram-se abaixo, e espero que considere assumir esta importante responsabilidade.<br />
@@ -994,7 +994,7 @@ Editor de texto, {$contextName}]]></body>
 		<description>Solicitação ao autor de detalhes sobre referência, enviada pelo editor de texto.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
-		<subject>Solicitação de avaliação de artigo - {$contextName}</subject>
+		<subject>Solicitação de avaliação de artigo</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
 Esta mensagem está relacionada ao trabalho &quot;{$submissionTitle},&quot; que está em processo de avaliação na publicação {$contextName}.<br />
@@ -1021,7 +1021,7 @@ Agradecendo antecipadamente sua consideração em aceitar esta responsabilidade,
 		<description>Este e-mail a partir do Editor de Seção a um Viajante solicita que o usuário aceitar ou recusar a tarefa de rever uma submissão por um segundo ou maior rodada de avaliação. Ele fornece informações sobre a apresentação, como o título e resumo, uma revisão data de vencimento, e como acessar a própria apresentação. Esta mensagem é usada quando o Processo de Revisão Padrão é selecionado no programa de configuração Journal, Passo 2. (Otherwise see REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
-		<subject>Solicitação de avaliação de artigo - {$contextName}</subject>
+		<subject>Solicitação de avaliação de artigo</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
 Esta mensagem é referente ao trabalho &quot;{$submissionTitle}&quot;, que está em processo de avaliação na publicação {$contextName}.<br />
@@ -1046,7 +1046,7 @@ Agradecendo desde já a atenção dispensada,<br />
 		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
-		<subject>Solicitação de avaliação de artigo - {$contextName}</subject>
+		<subject>Solicitação de avaliação de artigo</subject>
 		<body><![CDATA[Prezada(o) {$reviewerName},<br />
 <br />
 Esta mensagem é referente ao trabalho &quot;{$submissionTitle},&quot; em processo de avaliação para a revista {$contextName}.<br />
