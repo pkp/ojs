@@ -77,4 +77,12 @@
 	<message key="admin.categories.nameRequired">O nome da categoria é obrigatório.</message>
 	<message key="admin.settings.defaultMetricDescription">O OJS está configurado para registrar mais de uma métrica de uso. Estatísticas de uso serão exibidas em vários contextos. Há casos onde uma estatística única deve ser usada, como, por exemplo, para exibir listas ordenadas dos artigos mais usados, ou para classificar resultados de pesquisa. Escolha uma das métricas configuradas como padrão.</message>
 	
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Não é possível baixar idiomas do servidor do Public Knowledge Project. Os motivos possíveis são:
+	<ul>
+		<li>Seu servidor não possui ou não permite a execução da ferramenta "tar" GNU</li>
+		<li>O sistema não possui permissão para alterar o arquivo de registro de idiomas, normalmente "registry/locales.xml".</li>
+                <li>O servidor não possui permissões para conexão remota ao servidor do PKP</li>
+	</ul>
+Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">portal do PKP</a>.</p>]]></message>
+	<message key="admin.contexts.form.titleRequired">O título é obrigatório</message>
 </locale>

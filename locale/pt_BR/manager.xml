@@ -150,11 +150,6 @@ Exemplo:
 	<message key="manager.setup.enableAnnouncements">Habilitar ferramenta de notícias a Editores-Gerentes.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Exibir</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">das notícias mais recentes na página inicial da revista.</message>
-	<message key="manager.setup.enablePageNumber">A numeração de páginas para cada item publicado pode ser incluída manualmente no Sumário da revista (ex.: p. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Identificadores personalizados serão utilizados para identificar itens publicados.</message>
-	<message key="manager.setup.enablePublicGalleyId">Identificadores personalizados serão utilizados para identificar composições finais (ex.: documentos HTML ou PDF) de itens publicados.</message>
-	<message key="manager.setup.enablePublicIssueId">Identificadores personalizados serão utilizados para identificar as edições.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Identificadores personalizados serão utilizados para identificar documentos suplementares da submissão.</message>
 	<message key="manager.setup.enableUserRegistration">Usuários podem se cadastrar em uma revista, assumindo um ou mais papéis, listados a seguir:</message>
 	<message key="manager.setup.focusAndScope">Foco e escopo</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Indexação da submissão</message>
@@ -515,4 +510,21 @@ Poderão ser usados estatísticas individuais de uso, por exemplo, para exibir u
 	<!-- Categories -->
 	<message key="manager.setup.categories">Categorias</message>
 	<message key="manager.setup.categories.description">Escolha a categoria mais apropria da lista apresentada. Leitores poderão navegar por categoria a partir do conjunto completo oferecido.</message>
+	<message key="manager.website.archiving">Arquivamento</message>
+	<message key="manager.section.noSectionEditors"><![CDATA[Ainda não existem editores de sessão. Designe este papel a ao menos um usuário por meio de Gerente > Cnfigurações > Usuários e Papéis.]]></message>
+	<message key="manager.setup.masthead">Equipe Editorial</message>
+	<message key="manager.setup.masthead.description">A Equipe Editorial contem uma lista de editores, diretores, gerentes e outros indivíduos associados à revista. As informações cadastradas aqui aparecerão na seção "Sobre" da revista.</message>
+	<message key="manager.setup.homepageContent">Página Inicial da Revista</message>
+	<message key="manager.setup.homepageContentDescription">A página inicial da revista consiste em links de navegação por padrão. Conteúdo adicional pode ser anexado usando uma ou todas as seguintes opções, que aparecerão na ordem mostrada.</message>
+	<message key="manager.setup.layout">Leiaute da Revista</message>
+	<message key="manager.setup.useStyleSheet">Folha de estilos da revista</message>
+	<message key="manager.setup.contextName">Título da Revista</message>
+	<message key="manager.setup.pageHeader">Cabeçalho</message>
+	<message key="manager.setup.includeCreativeCommons">Para periódicos que oferecem acesso livre imediato ou adiado, inclua uma licença Creative Commons com todo o material na data de publicação.</message>
+	<message key="manager.setup.Issn">ISSN</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Habilite a caixa de opção disponível.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Notificar assinantes via e-mail</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">mês(es) após a expiração da assinatura.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Notificar assinantes via e-mail</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">mês(es) antes da expiração da assinatura.</message>
 </locale>

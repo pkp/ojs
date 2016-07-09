@@ -9,7 +9,6 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
-  *
   -->
 
 <email_texts locale="pt_BR">
@@ -49,14 +48,14 @@ Agradecendo desde já a atenção dispensada,<br />
 		<description>Mensagem enviada aos usuários recém-cadastrados no sistema, para acolhê-los e proporcionar um registro pessoal do login e da senha.</description>
 	</email_text>
 	<email_text key="PUBLISH_NOTIFY">
-		<subject>{$contextName} publica nova edição</subject>
+		<subject>Nova Edição Publicada</subject>
 		<body><![CDATA[Caros leitores,<br />
 <br />
-A revista {$contextName} acaba de publicar seu último número, disponível em <a href="{$contextUrl}">{$contextUrl}</a>. Convidamos a navegar no sumário da revista para acessar os artigos e outros itens de seu interesse.<br />
+A revista {$contextName} acaba de publicar seu último número, disponível em <a href="{$journalUrl}">{$journalUrl}</a>. Convidamos todos para verificarem o sumário da revista e acessar artigos e outros itens de seu interesse.<br />
 <br />
-Agradecemos seu interesse e apoio contínuo em nosso trabalho,<br />
+Agradecemos pelo seu apoio contínuo e confiança em nosso trabalho,<br />
 {$editorialContactSignature}]]></body>
-		<description>Mensagem enviada a leitores cadastrados através da notificação do link de notificação de usuários na página do Editor. Ela convida os leitores a acessar o sistema web da revista para ler a edição mais recente, através da URL informada.</description>
+		<description>Mensagem enviada para leitores cadastrados via "notificação de usuários"  na página do Editor. Ela convida os leitores a acessar o sistema web da revista para ler a edição mais recente, através da URL informada.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>Confirmação de assinatura</subject>
@@ -82,7 +81,7 @@ Em caso de dúvidas, entre em contato via e-mail.<br />
 		<subject>Nova edição de Acesso Livre da revista {$contextName}</subject>
 		<body><![CDATA[Caros leitores,<br />
 <br />
-A {$contextName} acaba de tornar disponível para Acesso Livre mais uma edição. Convidamos a examinar o sumário nesta mensagem e então acessar a revista (<a href="{$contextUrl}">{$contextUrl}</a>), para ler os artigos e outros itens de seu proveito.<br />
+A {$contextName} acaba de tornar disponível para Acesso Livre mais uma edição. Convidamos a examinar o sumário nesta mensagem e então acessar a revista (<a href="{$journalUrl}">{$journalUrl}</a>), para ler os artigos e outros itens de seu proveito.<br />
 <br />
 Agradecemos o interesse e apoio contínuo à revista,<br />
 {$editorialContactSignature}]]></body>
@@ -846,7 +845,7 @@ Caso não deseje mais receber as notificações, acesse {$unsubscribeLink}.<br /
 		<subject>Decisão editorial</subject>
 		<body><![CDATA[{$authorName},<br />
 <br />
-Foi tomada uma decisão sobre o artigo submetido à revista {$journalTitle},<br />
+Foi tomada uma decisão sobre o artigo submetido à revista {$contextName},<br />
 &quot;{$submissionTitle}&quot;.<br />
 <br />
 A decisão é: Submissão aceita.<br />
@@ -858,7 +857,7 @@ A decisão é: Submissão aceita.<br />
 		<subject>Decisão editorial</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Foi tomada uma decisão sobre o artigo submetido à {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Foi tomada uma decisão sobre o artigo submetido à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 A decisão é: Revisões necessárias.<br />
 <br />
@@ -869,7 +868,7 @@ A decisão é: Revisões necessárias.<br />
 		<subject>Decisão editorial</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Foi tomada uma decisão sobre o artigo enviado à revista {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Foi tomada uma decisão sobre o artigo enviado à revista {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 A decisão é: Submeter novamente.<br />
 <br />
@@ -880,7 +879,7 @@ A decisão é: Submeter novamente.<br />
 		<subject>Decisão editorial</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Foi tomada uma decisão sobre o artigo submetido à revista {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Foi tomada uma decisão sobre o artigo submetido à revista {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 A decisão é: Submissão rejeitada.<br />
 <br />
@@ -1019,7 +1018,7 @@ Agradecendo antecipadamente sua consideração em aceitar esta responsabilidade,
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
-		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
+		<description>Este e-mail a partir do Editor de Seção a um Viajante solicita que o usuário aceitar ou recusar a tarefa de rever uma submissão por um segundo ou maior rodada de avaliação. Ele fornece informações sobre a apresentação, como o título e resumo, uma revisão data de vencimento, e como acessar a própria apresentação. Esta mensagem é usada quando o Processo de Revisão Padrão é selecionado no programa de configuração Journal, Passo 2. (Otherwise see REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
 		<subject>Solicitação de avaliação de artigo - {$contextName}</subject>
@@ -1136,5 +1135,18 @@ URL da submissão: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>This email is automatically sent to the assigned editor when author uploads a revised version of an article.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
+		<subject>Decisão do Editor</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Chegamos a uma decisão sobre sua submissão  {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Nossa decisão é que seu artigo foi enviado para avaliação externa. Iremos aguardar os pareceres para entrar em contato novamente<br />
+<br />
+URL da submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Este e-mail enviado pelo Editor ou Editor de Seção para um autor serve para notificar o mesmo de que sua submissão foi enviada para revisores externos.</description>
 	</email_text>
 </email_texts>
