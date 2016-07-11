@@ -311,15 +311,6 @@ Note que a interface OAI pode ser desativada para este portal nas configuraçõe
 <br /><br />
 Configurar o suporte ao LOCKSS para o OJS é necessário somente após a publicação de uma edição estar quase completa, bastando seguir os passos a seguir:]]></message>
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[A revista utiliza um sistema de classificação de assunto disponível na web.<br />
-Título do sistema de classificação:]]></message>
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Para ter o conteúdo desta revista indexado dentro de um sistema global de distribuição de bases de pesquisa, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">cadastre</a> a URL da revista no <a href="http://pkp.sfu.ca/harvester/" target="_blank">Coletador de Metadados</a> do Public Knowledge Project. Esta ferramenta coleta os metadados de cada item indexado desta revista, possibilitando buscas coletivas e precisas entre os portais de pesquisa que utilizam o protocolo de coleta de metadados do <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative, OAI-PMH</a>.
-<br /><br />
-Caso o administrador do portal já tenha cadastrado a revista no portal do Coletador do PKP, a revista será automaticamente indexada, sem necessidade de registro individual.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Clique aqui</a> e digite <span class="highlight">{$siteUrl}</span> no campo <strong>Site URL</strong>, e <span class="highlight">{$oaiUrl}</span> no campo <strong>Base URL for OAI Archive</strong>.]]></message>
-
-
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Passos: Fila de Submissão > Avaliação de Submissão > Edição de Submissão > Fila de Agendamento > Sumário.<br /><br />
 Escolha um modelo para administrar os aspectos do processo editorial. (Para designar um Editor-Gerente e Editores de Seção, acesse a opção Editores em Administração da Revista.)]]></message>
@@ -550,7 +541,6 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<!-- Registration -->
 	<message key="user.register.noJournals">Não há revistas para se cadastrar neste portal.</message>	
 	<message key="user.register.privacyStatement">Política de Privacidade</message>
-	<message key="user.register.loginToRegister">Digite o login e senha para cadastrar-se na revista.</message>
 	<message key="user.register.registrationDisabled">Cadastro de usuários desativado no momento.</message>
 	<message key="user.register.form.passwordLengthTooShort">Senha digitada não contém o mínimo de caracteres.</message>
 	<message key="user.register.readerDescription">Notificado via e-mail da publicação de nova edição da revista.</message>
@@ -865,13 +855,6 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="rt.admin.settings.addComment.anonymous">Usuários devem estar cadastrados e logados para comentar, com permissão de anonimato.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Não é necessário estar cadastrado para comentar, com permissão de anonimato.</message>
 	<message key="debug.notes.currencyListLoad">Lista de moedas "{$filename}" do arquivo XML</message>
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Não é possível baixar idiomas do servidor do Public Knowledge Project. Os motivos possíveis são:
-	<ul>
-		<li>Seu servidor não possui ou não permite a execução da ferramenta "tar" GNU</li>
-		<li>O sistema não possui permissão para alterar o arquivo de registro de idiomas, normalmente "registry/locales.xml".</li>
-                <li>O servidor não possui permissões para conexão remota ao servidor do PKP</li>
-	</ul>
-Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">portal do PKP</a>.</p>]]></message>
 	<message key="reader.subscriptionRequiredLoginText">Assinatura exigida para acesso ao item. Para verificar sua assinatura, acesse a revista.</message>
 	<message key="about.authorFees">Taxas para Autores</message>
 	<message key="about.authorFeesMessage">Este periódico cobra as seguintes taxas aos autores.</message>
@@ -911,8 +894,6 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="article.fontSize.medium.altText">Médio</message>
 	<message key="article.fontSize.large.altText">Maior</message>
 	<message key="journal.issn">ISSN</message>
-	<message key="journal.onlineIssn">e-ISSN</message>
-	<message key="journal.printIssn">ISSN impresso</message>
 	<message key="user.manageMySubscriptions">Gerenciar minhas assinaturas</message>
 	<message key="subscriptionTypes.currency">Moeda</message>
 	<message key="subscriptionTypes.year">ano</message>
@@ -1079,4 +1060,9 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="site.upgradeAvailable.admin"><![CDATA[Uma nova versão do sistema está disponível! Sua versão atual é OJS {$currentVersion}. A versão mais recente é OJS {$latestVersion}. Acesse <a href="http://pkp.sfu.ca/ojs_download" target="_new">esta página</a> para baixar a nova versão e para instruções sobre atualização.]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[Uma nova versão do sistema está disponível! Sua versão atual é OJS {$currentVersion}. A versão mais recente é OJS {$latestVersion}. Entre em contato com o Administrador do Sistema ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) para notificá-lo deste lançamento. Para maiores informações, acesse <a href="http://pkp.sfu.ca/ojs_download" target="_new">esta página</a>.]]></message>
 	<message key="user.profile.profileImage">Imagem de perfil</message>
+	<message key="context.select">Selecionar Revista:</message>
+	<message key="user.role.subEditors">Editores de Seção</message>
+	<message key="submission.event.submissionSubmitted">Artigo submetido</message>
+	<message key="manager.setup.citations.enable">Habilitar o Assistente de marcação de citações</message>
+	<message key="editor.navigation.issues">Edições</message>
 </locale>

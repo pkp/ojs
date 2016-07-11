@@ -212,4 +212,16 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">Identificação pública de composição final de edição já existe.</message>
 	<message key="editor.issues.backToIssueGalleys">Voltar para composições de edição</message>
 	<message key="editor.issues.confirmDeleteGalley">Deseja realmente excluir esta composição?</message>
+	<message key="grid.action.publish">Publicar edição</message>
+	<message key="grid.action.addIssue">Incluir edição</message>
+	<message key="grid.action.viewIssue">Visualizar</message>
+	<message key="grid.action.previewIssue">Pré-visualizar</message>
+	<message key="grid.action.addIssueGalley">Criar composição da edição</message>
+	<message key="grid.action.removeArticle">Remover artigo da edição</message>
+	<message key="editor.article.remove.confirm">Tem certeza que deseja remover este artigo da edição? O artigo estará disponível para publicação em outra edição.</message>
+	<message key="editor.issues.editIssueGalley">Editar composição da edição</message>
+	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[O editor de layout prepara estes arquivos para cada composição e em seguida transfere para o conjunto de <span class="pkp_help_title">Provas</span> para leitura de prova.]]></message>
+	<message key="editor.submission.selectGalleyFiles">Selecionar arquivos da composição</message>
+	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Rascunhos finais nesta lista são transformados por um Editor de Texto em versões editadas, transferidas abaixo em <span class="pkp_help_title">Edição de Texto</span>.]]></message>
+	<message key="editor.submission.proof.manageProofFilesDescription">Quaisquer arquivos que já tenham sido transferidos para qualquer etapa da submissão podem ser adicionados à listagem de Leitura de Prova marcando-se a caixa de seleção Incluir abaixo e clicando-se em Busca: todos os arquivos disponíveis serão listados e podem ser escolhidos para inclusão.</message>
 </locale>

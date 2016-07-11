@@ -65,9 +65,6 @@ Siga o seguinte protocolo para fazer revisões eletrônicas em seu manuscrito:
 <li><strong>Edição de texto final.</strong> O editor de texto verificará as alterções realizadas pelo autor, e incorporará as respostas do autor para produzir o documento final. Após concluir, o editor de texto enviará sua versão final por meio do sistema e notificará o editor de layout para produção da versão para publicação.</li>
 </ol>]]></message>
 
-	<message key="default.journalSettings.emailSignature">________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Convidamos os leitores a se cadastrarem no serviço de notificação de publicação da revista. Clique em <a href="{$indexUrl}/{$journalPath}/user/register">Cadastro</a> no menu superior da página. O cadastro permitirá ao leitor receber o sumário via e-mail a cada nova edição. A lista procura também reivindicar um nível básico de apoio ou de leitura da revista. Leia a <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Política de privacidade</a>, que assegura aos leitores que seus nomes e endereços informados não serão utilizados para outros fins.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Deseja enviar contribuições à revista? Convidamos todos a conferir a seção <a href="{$indexUrl}/{$journalPath}/about">Sobre a revista</a> e ler as políticas das seções disponíveis, bem como as <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Diretrizes para autores</a>. É necessário que os autores se <a href="{$indexUrl}/{$journalPath}/user/register">cadastrem</a> no sistema  antes de submeter um artigo; caso já tenha se cadastrado basta <a href="{$indexUrl}/{$journalPath}/login">acessar</a> o sistema e iniciar o processo de 5 passos de submissão.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Convidamos as bibliotecas a listar revistas de Acesso Livre em seus catálogos de revistas eletrônicas. Este sistema de publicação é desenvolvido também para ser hospedado e operado por bibliotecas, em apoio ao trabalho de publicação das revistas do seu corpo acadêmico (saiba mais acessando a página oficial do <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
@@ -137,6 +134,28 @@ Siga o seguinte protocolo para fazer revisões eletrônicas em seu manuscrito:
 	<message key="section.default.policy">Política padrão de seção</message>
 	<message key="default.journalSettings.purchaseIssueFee">Adquirir edição</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">O pagamento desta taxa permite ver, baixar e imprimir esta edição.</message>
-	<message key="default.journalSettings.emailHeader">A seguinte mensagem será entregue em nome da {$journalName}.
-________________________________________________________________________</message>
+	<message key="default.genres.article">Texto do artigo</message>
+	<message key="default.journalSettings.clockssLicense"><![CDATA[Esta revista utiliza o sistema CLOCKSS para criar um sistema de arquivos distribuídos entre bibliotecas participantes e permite que tais bibliotecas mantenham cópias permanentes da revista para propósitos de preservação e recuperação. <a href="http://clockss.org/">Saiba mais...</a>]]></message>
+	<message key="default.groups.name.manager">Gerente da revista</message>
+	<message key="default.groups.plural.manager">Gerentes da revista</message>
+	<message key="default.groups.abbrev.manager">GR</message>
+	<message key="default.groups.name.editor">Editor da revista</message>
+	<message key="default.groups.plural.editor">Editores da revista</message>
+	<message key="default.groups.abbrev.editor">ER</message>
+	<message key="default.groups.name.guestEditor">Editor convidado</message>
+	<message key="default.groups.plural.guestEditor">Editores convidados</message>
+	<message key="default.groups.abbrev.guestEditor">EConv</message>
+	<message key="default.groups.name.sectionEditor">Editor de seção</message>
+	<message key="default.groups.plural.sectionEditor">Editor de seção</message>
+	<message key="default.groups.abbrev.sectionEditor">ESeç</message>
+	<message key="default.groups.name.subscriptionManager">Gerente de assinatura</message>
+	<message key="default.groups.plural.subscriptionManager">Gerentes de assinatura</message>
+	<message key="default.groups.abbrev.subscriptionManager">GAssin</message>
+	<message key="default.genres.researchInstrument">Instrumento de pesquisa</message>
+	<message key="default.genres.researchMaterials">Materiais de pesquisa</message>
+	<message key="default.genres.researchResults">Resultados de pesquisa</message>
+	<message key="default.genres.transcripts">Transcrições</message>
+	<message key="default.genres.dataAnalysis">Análise de dados</message>
+	<message key="default.genres.dataSet">Conjunto de dados</message>
+	<message key="default.genres.sourceTexts">Textos fonte</message>
 </locale>
