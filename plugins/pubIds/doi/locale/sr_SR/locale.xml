@@ -13,52 +13,43 @@
  
 <locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
-	<message key="plugins.pubIds.doi.description">Ovaj dodatak omogućuje dodavanje Digital Object Identifiers jedinicama (brojevima), člancima, prikazima i dodatnim fajlovima u OJS-u.</message>
 
 	<!-- settings form -->
-	<message key="plugins.pubIds.doi.manager.settings.doiSettings">DOI podešavanja</message>
 	<message key="plugins.pubIds.doi.manager.settings.description">Podesite DOI dodatak kako biste mogli koristiti DOI-e u OJS-u:</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Sadržaj časopisa</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Odaberite objekte kojima bi DOI-i trebali biti dodeljeni.</message>
 	<message key="plugins.pubIds.doi.manager.settings.explainDois">Odaberite objekte kojima će biti dodeljeni Digital Object Identifiers (DOI):</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Jedinica (broj)</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Članak</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">Prikaz</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableSuppFileDoi">Dodatni fajl</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableSubmissionDoi">Članak</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">Prikaz</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">DOI prefiks</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiPrefixDescription"><![CDATA[DOI prefiks dodeljuje registraciona agencija (npr. <a href="http://www.crossref.org" target="_new">CrossRef</a>) i u formatu je 10.xxxx (npr. 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.description"><![CDATA[DOI prefiks dodeljuje registraciona agencija (npr. <a href="http://www.crossref.org" target="_new">CrossRef</a>) i u formatu je 10.xxxx (npr. 10.1234):]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">DOI prefiks je obavezan i mora biti u formi 10.xxxx.</message>
 
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">DOI sufiks</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDescription">DOI sufiks može biti u bilo kojoj formi, ali mora biti jedinstven među svim objektima objavljivanja koji koriste isti DOI prefiks:</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Koristite obrazac dole da generišete DOI sufikse. Koristite %j za inisijale časopisa, %v za vol., %i za broj, %Y za godinu, %a za OJS ID članka, %g za OJS ID prikaza, %s za OJS ID dodatnog fajla i %p za broj stranice.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix.description">DOI sufiks može biti u bilo kojoj formi, ali mora biti jedinstven među svim objektima objavljivanja koji koriste isti DOI prefiks:</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Koristite obrazac dole da generišete DOI sufikse. Koristite %j za inisijale časopisa, %v za vol., %i za broj, %Y za godinu, %a za OJS ID članka, %g za OJS ID prikaza, %f za OJS ID fajla i %p za broj stranice.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">za jedinicu (broj)</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">za članak</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys">za prikaz</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.suppFiles">za dodatni fajl</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions">za članak</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations">za prikaz</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Npr. vol%viss%ipp%p može dati DOI kao što je 10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Koristite predviđene obrasce.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i za jedinicu (broj)<br />%j.v%vi%i.%a za članak<br />%j.v%vi%i.%a.g%g za prikaz <br />%j.v%vi%i.%a.s%s za dodatni fajl.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Koristite "Custom Identifier" za objavljene stavke kao DOI sufiks (mora biti uključeno u koraku 4). Ovo je isti identifikator koji će se koristiti i za javni URL.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i za jedinicu (broj)<br />%j.v%vi%i.%a za članak<br />%j.v%vi%i.%a.g%g za prikaz.]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Unesite individualni DOI sufiks za svaku objavljenu stavku, nezavisan i drugačiji od "Custom Identifier" iz prethodnog opcije. Naći ćete dodatno polje za DOI unos na stranici svake stavlke među metapodacima.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Unesite DOI sufiks obrazac za ovu jedinicu (broj).</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Unesite DOI sufiks obrazac za članak.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Unesite DOI sufiks obrazac za prikaz.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuppFileSuffixPatternRequired">Unesite DOI sufiks obrazac za dodatni fajl.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired">Unesite DOI sufiks obrazac za članak.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired">Unesite DOI sufiks obrazac za prikaz.</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Ponovo dodeli DOI-e</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Ako promenite DOI konfiguraciju DOI-i koji su već dodeljeni neće biti njome pogođeni. Kada je konfiguracija sačuvana kliknite na ovo dugme da obrišete postojeće DOI-je kako bi nova podešavanja imala efekta na postojeće časopise.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Da li želite da obrišete sve postojeće DOI-je?</message>	
 
 
 	<!-- metadata form -->
 	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">jedinica (broj)</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">članak</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmission">članak</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">prikaz</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">dodatni fajl</message>
-	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Ovo što vidite je prikaz DOI-a koji može biti inkorpororan. DOI još nije generisan. Objavljivanje broja i pregled {$pubObjectType} stranice automatski generiše jedinstveni DOI za {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Dati DOI sufiks je već u upotrebi. Unesite jedinstveni DOI sufiks za svaku stavku.</message>
 </locale>

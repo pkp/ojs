@@ -13,52 +13,42 @@
  
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
-	<message key="plugins.pubIds.doi.description">Questo plugin permette l'assegnazione di DOI agli oggetti (fascicoli, articoli, file principali e supplementari) di OJS.</message>
 
 	<!-- settings form -->
-	<message key="plugins.pubIds.doi.manager.settings.doiSettings">Impostazioni dei DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.description">Seguire il setup per essere in grado di gestire e utilizzare DOI in OJS:</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Contenuto della rivista</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Scegli gli oggetti ai quali assegnare DOI.</message>
 	<message key="plugins.pubIds.doi.manager.settings.explainDois">Seleziona gli oggetti che avranno un DOI:</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Fascicoli</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Articoli</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">File principali degli articoli</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableSuppFileDoi">File supplementari</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableSubmissionDoi">Articoli</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">File principali degli articoli</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">Prefisso DOI</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiPrefixDescription"><![CDATA[Il prefisso DOI è assegnato dalle agenzie di registrazione (es. <a href="http://www.medra.org" target="_new">MeDRA</a>) ed è in formato 10.xxxx (es. 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.description"><![CDATA[Il prefisso DOI è assegnato dalle agenzie di registrazione (es. <a href="http://www.medra.org" target="_new">MeDRA</a>) ed è in formato 10.xxxx (es. 10.1234):]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">Il prefisso DOI è obbligatorio e deve essere nel formato 10.xxxx.</message>
 
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">Suffisso DOI</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDescription">Il suffisso URN può assumere qualsiasi forma, ma deve restare unico per ciascun oggetto pubblicato che abbia lo stesso prefisso.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Usa il pattern inserito sotto per generare suffissi DOI. Usa %j per le iniziali della rivista, %v per il numero del volume, %i per il numero del fascicolo, %Y per l'anno, %a per l'ID OJS degli articoli, %g per gli ID OJS dei file degli articoli, %s per gli ID OJS dei file supplementari e %p per il numero di pagina.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix.description">Il suffisso URN può assumere qualsiasi forma, ma deve restare unico per ciascun oggetto pubblicato che abbia lo stesso prefisso.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Usa il pattern inserito sotto per generare suffissi DOI. Usa %j per le iniziali della rivista, %v per il numero del volume, %i per il numero del fascicolo, %Y per l'anno, %a per l'ID OJS degli articoli, %g per gli ID OJS dei file degli articoli, %f per gli ID OJS dei file e %p per il numero di pagina.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">per i fascicoli</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">per gli articoli</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys">per i file principali</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.suppFiles">per i file supplementari.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions">per gli articoli</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations">per i file principali</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Per esempio, vol%viss%ipp%p creerà il suffisso "vol3iss2pp230".</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Usa i pattern di default.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i for i fascicoli<br />%j.v%vi%i.%a per gli articoli<br />%j.v%vi%i.%a.g%g per l'impaginato <br />%j.v%vi%i.%a.s%s per i file supplementari.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Usa gli "Identificatori personalizzati" degli oggetti pubblicati come suffissi DOI (devono essere abilitati nel Setup, 4.3). Lo stesso identificatore verrà usato nelle URL.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Inserisci un suffisso DOI indipendente per ogni oggetto pubblicato e differente dagli "Identificatori personalizzati" menzionati nell'opzione precedente. Troverai un ulteriore campo per inserire l'URN nella pagina dei metadati di ogni oggetto.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i for i fascicoli<br />%j.v%vi%i.%a per gli articoli<br />%j.v%vi%i.%a.g%g per l'impaginato.]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Inserisci il pattern del suffisso DOI per i fascicoli.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Inserisci il pattern del suffisso DOI per gli articoli.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Inserisci il pattern del suffisso DOI per i file principali degli articoli.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuppFileSuffixPatternRequired">Inserisci il pattern del suffisso DOI per i file supplementari.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired">Inserisci il pattern del suffisso DOI per gli articoli.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired">Inserisci il pattern del suffisso DOI per i file principali degli articoli.</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Riassegna i DOI.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Se cambi configurazione degli DOI, i DOI già assegnati non verranno modificati. Una volta che hai cambiato la configurazione, utilizza questo tasto per cancellare tutti i DOI esistenti e ricrearli con le nuove impostazioni.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Sei sicuro di eliminare tutti i DOI esistenti?</message>	
 
 
 	<!-- metadata form -->
 	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">fascicolo</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">articolo</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmission">articolo</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">file principale</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">file supplementari</message>
-	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Non è stato ancora generato un DOI. Publicando questo fascicolo e visitando la pagina  {$pubObjectType} verrà generato un DOI unico per questo {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Il suffisso DOI inserito è già in uso per un altro oggetto pubblicato. Inserisci un DOI unico per ciascun oggetto.</message>
 </locale>
