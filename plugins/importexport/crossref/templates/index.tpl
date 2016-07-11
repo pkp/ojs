@@ -74,7 +74,7 @@
 						{if !empty($linkActions)}
 							<ul class="pubids_export_actions">
 								{foreach from=$linkActions item=linkAction}
-									<li {if $linkAction->getId() == $smarty.const.DOI_EXPORT_ACTION_DEPOSIT}class="pkp_button_primary"{else}class="pkp_button_link"{/if}>
+									<li class="pkp_button_link">
 										{include file="linkAction/linkAction.tpl" action=$linkAction class="pkp_button_primary"}
 									</li>
 								{/foreach}
