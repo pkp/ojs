@@ -130,6 +130,7 @@
 <script src="{$baseUrl}/lib/pkp/js/pages/reviewer/ReviewerTabHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/pages/authorDashboard/SubmissionEmailHandler.js"></script>
 <script src="{$baseUrl}/js/controllers/grid/articleGalleys/ArticleGalleyGridHandler.js"></script>
+<script src="{$baseUrl}/js/controllers/form/DOIPubIdExportFormHandler.js"></script>
 <script src="{$baseUrl}/js/controllers/tab/issueEntry/IssueEntryTabHandler.js"></script>
 <script src="{$baseUrl}/js/controllers/tab/issueEntry/form/IssueEntryPublicationMetadataFormHandler.js"></script>
 <script src="{$baseUrl}/js/pages/search/SearchFormHandler.js"></script>
