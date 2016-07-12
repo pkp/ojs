@@ -167,7 +167,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 		if (is_a($pubObject, 'Issue')) {
 			// Clear issue objects pub ids
 			$linkActions['clearIssueObjectsPubIdsLinkActionURN'] = new LinkAction(
-				'clearIssueObjectsPubIds',
+				'clearObjectsPubIds',
 				new RemoteActionConfirmationModal(
 					__('plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm'),
 					__('common.delete'),

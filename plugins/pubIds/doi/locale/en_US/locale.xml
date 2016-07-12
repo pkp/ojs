@@ -53,7 +53,10 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">issue</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmission">article</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeRepresentation">galley</message>
-	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">What you see is a preview of the DOI that may be incomplete. A DOI has not yet been generated.</message>
+	<message key="plugins.pubIds.doi.editor.customSuffixMissing">The DOI cannot be assigned because the custom suffix is missing.</message>
+	<message key="plugins.pubIds.doi.editor.patternNotResolved">The DOI cannot be assigned because it contains an unresolved pattern.</message>
+	<message key="plugins.pubIds.doi.editor.canBeAssigned">What you see is a preview of the DOI. Select the checkbox and save the form to assign the DOI.</message>
+	<message key="plugins.pubIds.doi.editor.assigned">The DOI is assigned to this {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">The given DOI suffix is already in use for another published item. Please enter a unique DOI suffix for each item.</message>
 	<message key="plugins.pubIds.doi.editor.clearObjectsDoi">Clear DOI</message>
 	<message key="plugins.pubIds.doi.editor.clearObjectsDoi.confirm">Are you sure you wish to delete the existing DOI?</message>

@@ -60,7 +60,10 @@
 	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">issue</message>
 	<message key="plugins.pubIds.urn.editor.urnObjectTypeSubmission">article</message>
 	<message key="plugins.pubIds.urn.editor.urnObjectTypeRepresentation">galley</message>
-	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">What you see is a preview of the URN that may be incomplete. A URN has not yet been generated.</message>
+	<message key="plugins.pubIds.urn.editor.customSuffixMissing">The URN cannot be assigned because the custom suffix is missing.</message>
+	<message key="plugins.pubIds.urn.editor.patternNotResolved">The URN cannot be assigned because it contains an unresolved pattern.</message>
+	<message key="plugins.pubIds.urn.editor.canBeAssigned">What you see is a preview of the URN. Select the checkbox and save the form to assign the URN.</message>
+	<message key="plugins.pubIds.urn.editor.assigned">The URN is assigned to this {$pubObjectType}.</message>
 	<message key="plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique">The given URN suffix is already in use for another published item. Please enter a unique URN suffix for each item.</message>
 	<message key="plugins.pubIds.urn.editor.clearObjectsURN">Clear URN</message>
 	<message key="plugins.pubIds.urn.editor.clearObjectsURN.confirm">Are you sure you wish to delete the existing URN?</message>
