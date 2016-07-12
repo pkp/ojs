@@ -36,4 +36,18 @@
 Ovo su slučajevi kad može jedna statistika upotrebe biti upotrebljena npr. da prikaže listu najčešće upotrebljenih članaka ili da se rangiraju rezultirati pretrage.</message>
 	<message key="manager.setup.categories.description">Odaberite odgovarajuće kategorije iz liste gore. Čitaoci će tako moći da pretražuju časopis.</message>
 	<message key="manager.statistics.reports.filters.byObject.description">Suzite rezultate po tipu objekta (časopis, izdanje, članak, pdf kopije, druge kopije) i/ili pojednom ili više id objekata.</message>
+
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<!-- plugin tabs -->
+	<message key="plugins.importexport.common.settings">Podešavanja</message>
+	<!-- settings form -->
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Ako želite da koristite ovaj dodatak idite u kategoriju dodataka "Public Identifier (Javni dodaci)" i uključite i konfigurišite dodatak DOI.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">Dodatak nije u potpunosti podešen.</message>
+	<message key="plugins.importexport.common.settings.form.password">Lozinka</message>
+	<!-- actions -->
+	<message key="plugins.importexport.common.action.register">Registracija</message>
+	<!--  notifications and errors -->
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">U fajl {$param} nije moguće pisati.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Registracija nije bila uspešna! DOI registracioni server je vratio grešku: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Uspešna registracija!</message>
 </locale>

@@ -15,13 +15,7 @@
 <locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.importexport.crossref.displayName">Plugin exportu do XML pro CrossRef</message>
 	<message key="plugins.importexport.crossref.description">Export metadat článku v XML formátu CrossRef.</message>
-	
-	<message key="plugins.importexport.crossref.export">Export dat</message>
-	<message key="plugins.importexport.crossref.export.issues">Export čísel</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Zvolte číslo pro export</message>
-	<message key="plugins.importexport.crossref.export.articles">Exportovat články</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Zvolte články pro export</message>
-	
+
 	<message key="plugins.importexport.crossref.cliUsage">Použití: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
@@ -30,5 +24,4 @@
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Žádné číslo neodpovídá uvedenému ID čísla "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Žádný článek neodpovídá uvedenému ID článku "{$articleId}".</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Pro použití tohoto pluginu musí být v nastavení časopisu uveden platný prefix DOI.</message>
 </locale>

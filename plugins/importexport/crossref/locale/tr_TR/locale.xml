@@ -15,13 +15,7 @@
 <locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.importexport.crossref.displayName">Çapraz Referans XML İhraç Eklentisi</message>
 	<message key="plugins.importexport.crossref.description">Makale üst verilerini çapraz referans XML formatında ihraç et.</message>
-	
-	<message key="plugins.importexport.crossref.export">Veri ihracı</message>
-	<message key="plugins.importexport.crossref.export.issues">Sayı İracı</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">İhraç için bir sayı seçiniz.</message>
-	<message key="plugins.importexport.crossref.export.articles">Makale ihracı</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">İhraç için makale seçiniz.</message>
-	
+
 	<message key="plugins.importexport.crossref.cliUsage">Kullanım: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
@@ -30,5 +24,4 @@
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">"{$issueId}" özel sayı ID'si ile herhangi bir sayı eşlenmedi.</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">"{$articleId}" özel makale ID'si ile herhangi bir makale eşlenmedi.</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">bu eklentinin kullanımı için lütfen "Genel Belirleyici" eklenti kategorisini kullanınız. DOI eklentisini etkinleştirin, yapılandırın ve orada geçerli bir DOI ön eki belirleyin.</message>
 </locale>

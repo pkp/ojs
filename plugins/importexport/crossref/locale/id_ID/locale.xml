@@ -15,13 +15,7 @@
 <locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.importexport.crossref.displayName">Plugin Ekspor CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">> ekspor metadata artikel di format CrossRef XML.</message>
-	
-	<message key="plugins.importexport.crossref.export">Ekspor Data</message>
-	<message key="plugins.importexport.crossref.export.issues">Ekspor Isu</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">pilih isu untuk diekspor.</message>
-	<message key="plugins.importexport.crossref.export.articles">Ekspor Artikel</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Pilih artikel untuk diekspor.</message>
-	
+
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Kegunaan: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
@@ -31,5 +25,4 @@
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Tidak ada isi yang cocok dengan ID isu yang dipilih "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Tidak ada artikel yang cocok dengan ID artikel yang dipilih "{$articleId}".</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Awalan DOI harus di spesifikasikan di Setup jurnal untuk menggunakan plugin ini.</message>
 </locale>

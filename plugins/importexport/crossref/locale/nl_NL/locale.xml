@@ -17,13 +17,7 @@
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.importexport.crossref.displayName">CrossRef XML Export Plugin</message>
 	<message key="plugins.importexport.crossref.description">Exporteer metadata in CrossRef XML formaat.</message>
-	
-	<message key="plugins.importexport.crossref.export">Exporteer data</message>
-	<message key="plugins.importexport.crossref.export.issues">Exporteer nummers</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Selecteer het te exporteren nummer.</message>
-	<message key="plugins.importexport.crossref.export.articles">Exporteer artikelen</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Selecteer de te exporteren artikelen.</message>
-	
+
 	<message key="plugins.importexport.crossref.cliUsage">Gebruik: 
 {$scriptName} {$pluginName} [xmlFileName] [tijdschrift_pad] artikelen [artikelId1] [artikelId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [tijdschrift_pad] nummer [nummerId]</message>
@@ -32,5 +26,4 @@
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Er is geen nummer dat overeenkomt met het opgegeven nummer-ID "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Er is geen artikel dat overeenkomt met het opgegeven artikel-ID "{$articleId}".</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Om deze plugin te kunnen gebruiken moet bij de instellingen van het tijdschrift een  geldig DOI voorvoegsel gespecificeerd worden.</message>
 </locale>

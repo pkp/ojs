@@ -15,13 +15,7 @@
 <locale name="ru_RU" full_name="Русский">
 	<message key="plugins.importexport.crossref.displayName">Экспорт в формате CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Экспорт метаданны статей в формате CrossRef XML.</message>
-	
-	<message key="plugins.importexport.crossref.export">Экспортировать данные</message>
-	<message key="plugins.importexport.crossref.export.issues">Экспортировать выпуски</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Выберите выпуск для экспорта.</message>
-	<message key="plugins.importexport.crossref.export.articles">Экспортировать статьи</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Выберите статьи для экспорта.</message>
-	
+
 	<message key="plugins.importexport.crossref.cliUsage">Вызов: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
@@ -30,5 +24,4 @@
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Нет выпуска с указанным идентификатором "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Нет статьи с указанным идентификатором "{$articleId}".</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Для использования этого модуля в настройках журнала нужно указать верный префикс DOI.</message>
 </locale>

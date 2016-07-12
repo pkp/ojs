@@ -513,4 +513,20 @@
 	<!-- Categories -->
 	<message key="manager.setup.categories">Kategorien</message>
 	<message key="manager.setup.categories.description">Wählen Sie die passendsten Kategorien aus der oben angezeigten Menge. Leser/innen können die gesamte Zeitschriftenmenge dann nach Kategorien durchsehen.</message>
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<!-- plugin tabs -->
+	<message key="plugins.importexport.common.settings">Einstellungen</message>
+	<message key="plugins.importexport.common.export.articles">Artikel</message>
+	<message key="plugins.importexport.common.export.issues">Ausgaben</message>
+	<!-- settings form -->
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Um dieses Plug-In zu benutzen, gehen Sie bitte zu der Plug-In-Kategorie "Öffentliche Kennungen". Aktivieren und konfigurieren Sie das DOI-Plug-In und geben Sie dort einen gültigen DOI-Präfix an.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">Dieses Plug-In ist nicht komplett eingerichtet.</message>
+	<message key="plugins.importexport.common.settings.form.password">Passwort</message>
+	<!-- actions -->
+	<message key="plugins.importexport.common.action.register">Registrierung</message>
+	<!--  notifications and errors -->
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Die Ausgabedatei {$param} ist nicht schreibbar.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Die Registrierung war nicht erfolgreich! Der DOI-Registrierungsserver gab einen Fehler zurück: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Registrierung erfolgreich!</message>
+
 </locale>

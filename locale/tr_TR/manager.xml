@@ -508,4 +508,13 @@
 	<message key="manager.setup.resetPermissions">Makale İzinlerini Sıfırla</message>
 	<message key="manager.setup.copyrightYearBasis">Yeni makalenin temel telif hakkı yılı</message>
 
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<!-- plugin tabs -->
+	<message key="plugins.importexport.common.settings">Ayarlar</message>
+	<!-- settings form -->
+	<message key="plugins.importexport.common.settings.form.password">Şifre</message>
+	<!-- actions -->
+	<message key="plugins.importexport.common.action.register">Kayıt</message>
+	<!--  notifications and errors -->
+	<message key="plugins.importexport.common.register.success">Kayıt Başarılı!</message>
 </locale>

@@ -13,33 +13,22 @@
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 
-	<message key="plugins.importexport.common.error.DOIsNotAvailable">Um dieses Plug-In zu benutzen, gehen Sie bitte zu der Plug-In-Kategorie "Öffentliche Kennungen". Aktivieren und konfigurieren Sie das DOI-Plug-In und geben Sie dort einen gültigen DOI-Präfix an.</message>
-	<message key="plugins.importexport.common.error.pluginNotConfigured">Dieses Plug-In ist nicht komplett eingerichtet.</message>
-
-	<message key="plugins.importexport.common.settings">Einstellungen</message>
-
-	<message key="plugins.importexport.common.settings.form.password">Passwort</message>
 	<message key="plugins.importexport.common.settings.form.passwordRequired">Bitte geben Sie ein Passwort ein.</message>
-	
+
 	<message key="plugins.importexport.common.register">Registrierung</message>
 	<message key="plugins.importexport.common.registerDescription">Klicken Sie diesen Knopf, um dieses Objekt bei der Registrierungsagentur erstmals zu registrieren. Dies funktioniert nur, wenn Sie dieses Objekt noch nie zuvor registriert haben!</message>
 	<message key="plugins.importexport.common.registerDescription.multi">Klicken Sie diesen Knopf, um die Metadaten des oder der ausgewählten Objekte bei der Registrierungsagentur zu registrieren oder zu aktualisieren.</message>
-	<message key="plugins.importexport.common.register.error.mdsError">Die Registrierung war nicht erfolgreich! Der DOI-Registrierungsserver gab einen Fehler zurück: '{$param}'.</message>
-	<message key="plugins.importexport.common.register.success">Registrierung erfolgreich!</message>
 	<message key="plugins.importexport.common.register.warning">Die Registrierung vieler Objekte kann lange dauern. Bitte haben Sie Geduld, nachdem Sie den "Registrieren"-Knopf gedrückt haben. Sie werden benachrichtigt werden, wenn die Registrierung vollständig ist.</message>
 	<message key="plugins.importexport.common.register.noCredentials"><![CDATA[Die direkte Registrierung ist momentan deaktiviert. Bitte <a href="{$settingsUrl}">konfigurieren</a> Sie einen Benutzer/innennamen und ein Passwort, um Objekte direkt bei der Registrierungsagentur registrieren zu können.]]></message>
 
 	<message key="plugins.importexport.common.update">Update</message>
 	<message key="plugins.importexport.common.updateDescription">Klicken Sie diesen Button, um die Metadaten dieses Objekts bei der Registrierungsagentur zu aktualisieren. Dies funktioniert nur, wenn Sie dieses Objekt vorher erfolgreich registriert haben!</message>
-		
-	<message key="plugins.importexport.common.export">Daten exportieren</message>
+
 	<message key="plugins.importexport.common.export.unregistered">Exportieren aller unregistrierten Ausgaben, Artikel und Fahnen</message>
 	<message key="plugins.importexport.common.export.selectUnregistered">Wählen Sie unregistrierte Ausgaben, Artikel und Fahnen aus</message>
 	<message key="plugins.importexport.common.export.noUnregistered">Alle veröffentlichten Ausgaben, Artikel und Fahnen sind bereits registriert (oder haben keinen DOI zugeteilt).</message>
-	<message key="plugins.importexport.common.export.issues">Ausgaben exportieren</message>
 	<message key="plugins.importexport.common.export.selectIssue">Ausgaben auswählen</message>
 	<message key="plugins.importexport.common.export.noIssues">Keinen Ausgaben sind momentan DOI zugewiesen.</message>
-	<message key="plugins.importexport.common.export.articles">Artikel exportieren</message>
 	<message key="plugins.importexport.common.export.selectArticle">Artikel auswählen</message>
 	<message key="plugins.importexport.common.export.noArticles">Keinen Artikeln sind momentan DOI zugewiesen.</message>
 	<message key="plugins.importexport.common.export.galleys">Fahnen exportieren</message>
@@ -56,6 +45,6 @@
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Die Ausgabedatei {$param} ist nicht schreibbar.</message>
 
 	<message key="plugins.importexport.common.notification.exportSuccessful">Die ausgewählten Objekte wurden erfolgreich zu '{$param}' exportiert.</message>
- 
+
 	<message key="plugins.importexport.common.cliError">FEHLER:</message>
 </locale>
