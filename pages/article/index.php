@@ -17,6 +17,7 @@
  */
 
 switch ($op) {
+	case 'viewFile': // Old URLs; see https://github.com/pkp/pkp-lib/issues/1541
 	case 'view':
 	case 'download':
 		define('HANDLER_CLASS', 'ArticleHandler');

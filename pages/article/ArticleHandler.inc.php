@@ -188,6 +188,20 @@ class ArticleHandler extends Handler {
 	 * @param array $args
 	 * @param PKPRequest $request
 	 */
+	function viewFile($args, $request) {
+		// For deprecated OJS 2.x URLs; see https://github.com/pkp/pkp-lib/issues/1541
+		$articleId = isset($args[0]) ? $args[0] : 0;
+		$galleyId = isset($args[1]) ? $args[1] : 0;
+		$fileId = isset($args[2]) ? (int) $args[2] : 0;
+		header("HTTP/1.1 301 Moved Permanently");
+		$request->redirect(null, null, 'download', array($articleId, $galleyId, $fileId));
+	}
+
+	/**
+	 * Download an article file
+	 * @param array $args
+	 * @param PKPRequest $request
+	 */
 	function download($args, $request) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
