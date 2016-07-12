@@ -159,7 +159,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		if (is_a($pubObject, 'Issue')) {
 			// Clear issue objects pub ids
 			$linkActions['clearIssueObjectsPubIdsLinkActionDoi'] = new LinkAction(
-				'clearIssueObjectsPubIds',
+				'clearObjectsPubIds',
 				new RemoteActionConfirmationModal(
 					__('plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm'),
 					__('common.delete'),

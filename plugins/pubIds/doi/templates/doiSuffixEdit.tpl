@@ -24,11 +24,16 @@
 				{if $canBeAssigned}
 					{assign var=templatePath value=$pubIdPlugin->getTemplatePath()}
 					{include file="`$templatePath`doiAssignCheckBox.tpl" pubId="" pubObjectType=$pubObjectType}
+				{else}
+					<p class="pkp_help">{translate key="plugins.pubIds.doi.editor.customSuffixMissing"}</p>
 				{/if}
 			{else} {* stored pub id and clear option *}
 			{fbvFormSection}
 				<p>
 					{$storedPubId|escape}<br />
+					{capture assign=translatedObjectType}{translate key="plugins.pubIds.doi.editor.doiObjectType"|cat:$pubObjectType}{/capture}
+					{capture assign=assignedMessage}{translate key="plugins.pubIds.doi.editor.assigned" pubObjectType=$translatedObjectType}{/capture}
+					<p class="pkp_help">{$assignedMessage}</p>
 					{include file="linkAction/linkAction.tpl" action=$clearPubIdLinkActionDoi contextId="publicIdentifiersForm"}
 				</p>
 				{/fbvFormSection}
@@ -36,10 +41,11 @@
 		{else} {* pub id preview *}
 			<p>{$pubIdPlugin->getPubId($pubObject)|escape}</p>
 			{if $canBeAssigned}
+				<p class="pkp_help">{translate key="plugins.pubIds.doi.editor.canBeAssigned"}</p>
 				{assign var=templatePath value=$pubIdPlugin->getTemplatePath()}
 				{include file="`$templatePath`doiAssignCheckBox.tpl" pubId="" pubObjectType=$pubObjectType}
 			{else}
-				<p class="pkp_help">{translate key="plugins.pubIds.doi.editor.doiNotYetGenerated"}</p>
+				<p class="pkp_help">{translate key="plugins.pubIds.doi.editor.patternNotResolved"}</p>
 			{/if}
 		{/if}
 	{/fbvFormArea}

@@ -75,7 +75,7 @@
 							<ul class="pubids_export_actions">
 								{foreach from=$linkActions item=linkAction}
 									<li class="pkp_button_link">
-										{include file="linkAction/linkAction.tpl" action=$linkAction class="pkp_button_primary"}
+										{include file="linkAction/linkAction.tpl" action=$linkAction}
 									</li>
 								{/foreach}
 							</ul>
@@ -102,7 +102,7 @@
 							<ul class="pubids_export_actions">
 								{foreach from=$linkActions item=linkAction}
 									<li class="pkp_button_link">
-										{include file="linkAction/linkAction.tpl" action=$linkAction class="pkp_button_primary"}
+										{include file="linkAction/linkAction.tpl" action=$linkAction}
 									</li>
 								{/foreach}
 							</ul>
