@@ -8,11 +8,6 @@
  * List available import/export plugins.
  *
  *}
-{strip}
-{assign var="pageTitle" value="manager.importExport"}
-{include file="common/header.tpl"}
-{/strip}
-
 <div class="pkp_page_content pkp_page_importexport_plugins">
 	<ul>
 		{foreach from=$plugins item=plugin}
@@ -20,5 +15,3 @@
 		{/foreach}
 	</ul>
 </div>
-
-{include file="common/footer.tpl"}
