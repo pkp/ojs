@@ -103,7 +103,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		);
 
 		foreach ($embeddableFiles as $embeddableFile) {
-			$fileUrl = $request->url(null, 'article', 'viewFile', array($galley->getSubmissionId(), $galley->getBestGalleyId($journal), $embeddableFile->getFileId()));
+			$fileUrl = $request->url(null, 'article', 'download', array($galley->getSubmissionId(), $galley->getBestGalleyId($journal), $embeddableFile->getFileId()));
 			$pattern = preg_quote($embeddableFile->getOriginalFileName());
 
 			$contents = preg_replace(
