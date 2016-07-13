@@ -13,7 +13,7 @@
   -->
 
 <locale name="pt_PT" full_name="Português (Portugal)">
-	<message key="plugins.block.authorBios.displayName">Bloco sobre dados biográficos do author</message>
+	<message key="plugins.block.authorBios.displayName">Bloco sobre dados biográficos do autor</message>
 	<message key="plugins.block.authorBios.description">Este plugin mostra um bloco contendo os dados biográficos do autor na ferramenta de leitura disponível na barra lateral.</message>
 	<message key="plugins.block.authorBios.title">Sobre Os Autores</message>
 	<message key="plugins.block.authorBios.aboutTheAuthor">Sobre O Autor</message>

@@ -21,4 +21,5 @@
 	<message key="plugins.block.user.logout">Sair do sistema</message>
 	<message key="plugins.block.user.signOutAsUser">Sair do sistema como utilizador</message>
 	<message key="plugins.block.user.rememberMe">Memorizar nome utilizador</message>
+	<message key="plugins.block.user.implicitAuthLogin">Login Revistas</message>
 </locale>

@@ -15,7 +15,7 @@
 <locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.generic.translator.name">Plugin de Tradução</message>
 	<message key="plugins.generic.translator.description">Este plugin permite a manutenção, via browser, dos ficheiros de tradução.</message>
-	<message key="plugins.generic.translator.longdescription">Esta área permite ao Administrador do Portal construir, modificar e verificar as traduções do Sistema. Isto permeia todo o sistema e não deve ser usado para customizar uma única instalação. Se você corrigir ou criar uma tradução, por favor, envie-a ao Public Knowledge Project para distribuição em versões futuras.</message>
+	<message key="plugins.generic.translator.longdescription">Esta área permite ao Administrador do Portal construir, modificar e verificar as traduções do Sistema. Isto permeia todo o sistema e não deve ser usado para customizar uma única instalação. Se corrigir ou criar uma tradução, por favor, envie-a ao Public Knowledge Project para distribuição em versões futuras.</message>
 	<message key="plugins.generic.translator.localeDescription">Esta página lista todos os componentes de tradução do sistema e permite ao tradutor a oportunidade de editar cada um deles. Uma tradução deve conter traduções completas de todos estes componentes.</message>
 
 	<message key="plugins.generic.translator.localeName">Nome do idioma</message>

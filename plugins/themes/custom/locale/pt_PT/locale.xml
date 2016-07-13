@@ -15,13 +15,13 @@
 <locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.theme.custom.name">Plugin de Tema Customizado</message>
 	<message key="plugins.theme.custom.description">Este plugin implementa um tema customizado.</message>
-	<message key="plugins.theme.custom.notWritable">NOTA: A folha de estilos deste plugin, "{$stylesheetFileLocation}", não possui permissão de escrita. Este ficheiro deve possuir permissão de escrita antes de fazer uso do plugin.</message>
+	<message key="plugins.theme.custom.notWritable">NOTA: A folha de estilos deste plugin, "{$stylesheetFileLocation}", não possui permissão de escrita. Este ficheiro deve possuir permissão de escrita antes usar o plugin.</message>
 	<message key="plugins.theme.custom.settings">Configurações</message>
 	<message key="plugins.theme.custom.pickColour">Escolha a cor</message>
 	<message key="plugins.theme.custom.header">Cabeçalho</message>
 	<message key="plugins.theme.custom.link">Link</message>
 	<message key="plugins.theme.custom.background">Cor de segundo plano</message>
 	<message key="plugins.theme.custom.foreground">Cor de primeiro plano</message>
-	<message key="plugins.theme.custom.notWritablePlugin">NOTA: A opção da stylesheet base da revista é activada automaticamente porque o ficheiro de estilos deste plugin, "{$ stylesheetFileLocation}" não tem permissões de escrita.</message>
+	<message key="plugins.theme.custom.notWritablePlugin">NOTA: A opção da stylesheet base da revista é activada automaticamente porque o ficheiro de estilos deste plugin, "{$stylesheetFileLocation}" não tem permissões de escrita.</message>
 	<message key="plugins.theme.custom.perJournal">Stylesheet base da Revista</message>
 </locale>

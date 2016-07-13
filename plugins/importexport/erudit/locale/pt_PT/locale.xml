@@ -14,12 +14,13 @@
  
 <locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.importexport.erudit.displayName">Plugin de Exportação Formato Erudit</message>
-	<message key="plugins.importexport.erudit.description">Exporta artigos utilizando a DTD inglesa Erudit</message>
+	<message key="plugins.importexport.erudit.description">Exporta artigos utilizando a DTD Erudit</message>
 
-	<message key="plugins.importexport.erudit.cliUsage">Uso: {$scriptName} {$pluginName} [documentoXML] [caminhoRevista] [articleId] [galleyLabel]</message>
+	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Utilização: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]
+]]></message>
 	<message key="plugins.importexport.erudit.export">Exportar dados</message>
 	<message key="plugins.importexport.erudit.export.issues">Exportar edições</message>
-	<message key="plugins.importexport.erudit.export.sections">Exportar seções</message>
+	<message key="plugins.importexport.erudit.export.sections">Exportar secções</message>
 	<message key="plugins.importexport.erudit.export.articles">Exportar artigos</message>
 
 	<message key="plugins.importexport.erudit.selectIssue">Escolher edições</message>
@@ -29,7 +30,7 @@
 	<message key="plugins.importexport.erudit.error.unknownJournal">Caminho da revista "{$journalPath}" inexistente.</message>
 	<message key="plugins.importexport.erudit.export.error.couldNotWrite">Não foi possível escrever no documento "{$fileName}".</message>
 	<message key="plugins.importexport.erudit.export.error.articleNotFound">Não há artigo compatível com o ID "{$articleId}" especificado.</message>
-	<message key="plugins.importexport.erudit.export.error.galleyNotFound">Não há composição compatível com o rótulo "{$galleyLabel}" especificado.</message>
+	<message key="plugins.importexport.erudit.export.error.galleyNotFound">Não há prova compatível com o rótulo "{$galleyLabel}" especificado.</message>
 	
 
 	<message key="plugins.importexport.erudit.unavailable">Indisponível</message>
