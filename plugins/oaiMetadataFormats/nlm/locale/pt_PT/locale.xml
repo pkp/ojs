@@ -13,6 +13,6 @@
   -->
  
 <locale name="pt_PT" full_name="Português (Portugal)">
-	<message key="plugins.oaiMetadata.nlm.displayName">Formato de Meta-dados NLM</message>
-	<message key="plugins.oaiMetadata.nlm.description">Estrutura os meta-dados de modo a serem consistentes com o formato de Artigos de Revista NLM.</message>
+	<message key="plugins.oaiMetadata.nlm.displayName">Formato de Metadados NLM</message>
+	<message key="plugins.oaiMetadata.nlm.description">Estrutura os metadados de modo a serem consistentes com o formato de Artigos de Revista NLM.</message>
 </locale>

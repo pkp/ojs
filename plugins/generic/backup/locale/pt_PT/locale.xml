@@ -31,7 +31,7 @@ Os parâmetros "%s" serão substituídos, na seguinte ordem, por:<ol>
 	<li>Senha de acesso à base de dados</li>
 	<li>Nome da base de dados</li>
 </ol>
-Note que esta operação implica especificar a password da base de dados na linha de comandos, o que pode envolver problemas de segurança.<br /><br/>]]></message>
+Note que esta operação implica especificar a password da base de dados na linha de comandos, o que pode envolver problemas de segurança.<br /><br />]]></message>
 	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. strong>ATENÇÃO:</strong> A ferramenta "tar" não foi configurada no ficheiro de configuração: config.inc.php. A configuração vai depender da configuração do seu servidor. Deve ser especificada na secção designada [cli], na opção de configuração designada "tar", especificando o caminho para a ferramenta "tar", exemplo:<br />
 <pre>[cli]
 tar = "/bin/tar"

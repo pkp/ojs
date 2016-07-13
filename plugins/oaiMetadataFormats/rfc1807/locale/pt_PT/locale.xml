@@ -13,6 +13,6 @@
   -->
  
 <locale name="pt_PT" full_name="Português (Portugal)">
-	<message key="plugins.OAIMetadata.rfc1807.displayName">Formato de Meta-dados RFC1807</message>
-	<message key="plugins.OAIMetadata.rfc1807.description">Estrutura os meta-dados de modo a serem consistentes com o formato RFC1807.</message>
+	<message key="plugins.OAIMetadata.rfc1807.displayName">Formato de Metadados RFC1807</message>
+	<message key="plugins.OAIMetadata.rfc1807.description">Estrutura os metadados de modo a serem consistentes com o formato RFC1807.</message>
 </locale>

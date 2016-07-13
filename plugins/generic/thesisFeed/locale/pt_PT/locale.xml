@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="pt_BR" full_name="Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.generic.thesisfeed.displayName">Plugin de Canal de Divulgação (Feed RSS) de Resumos de Teses</message>
 	<message key="plugins.generic.thesisfeed.description">Este plugin produz um canal de divulgação RSS/Atom dos resumos de teses publicados na revista</message>
 

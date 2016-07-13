@@ -13,6 +13,6 @@
   -->
  
 <locale name="pt_PT" full_name="Português (Portugal)">
-	<message key="plugins.OAIMetadata.marc.displayName">Formato de Meta-dados MARC</message>
-	<message key="plugins.OAIMetadata.marc.description">Estrutura os meta-dados de modo a serem consistentes com o formato MARC.</message>
+	<message key="plugins.OAIMetadata.marc.displayName">Formato de Metadados MARC</message>
+	<message key="plugins.OAIMetadata.marc.description">Estrutura os metadados de modo a serem consistentes com o formato MARC.</message>
 </locale>

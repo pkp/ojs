@@ -12,30 +12,39 @@
   -->
 
 <locale name="pt_PT" full_name="Português (Portugal)">
-	<message key="plugins.generic.usageStats.settings.logging">Opções de Access aos logs</message>
+	<message key="plugins.generic.usageStats.settings.logging">Opções de Acesso aos logs</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles">Criar ficheiros log</message>
-	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Ao ativar esta opção vai permitir ao plugin criar ficheiros de logs nas pastas do sistema da revista. Esses ficheiros devem ser usados para extrair as estatísticas de uso. Se não pretende criar mais ficheiros de log, deixe esta opção inativa e use o sistema de logs do seu servidor.</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Ao activar esta opção vai permitir ao plugin criar ficheiros de logs nas pastas do sistema da revista. Estes ficheiros devem ser usados para extrair as estatísticas de utilização. Se não pretende criar mais ficheiros de log, deixe esta opção inactiva e use o sistema de logs do seu servidor.</message>
 
 
-	<message key="plugins.generic.usageStats.settings.saved">Configurações do Plugin de Estatísticas de Uso</message>
+	<message key="plugins.generic.usageStats.settings.saved">Configurações do Plugin de Estatísticas de Utilização</message>
 
 
 
-	<message key="plugins.generic.usageStats.usageStatsLoaderName">Tarefa (file loader) das Estatísticas de Uso</message>
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Tarefa (file loader) das Estatísticas de Utilização</message>
 	<message key="plugins.generic.usageStats.openFileFailed">O ficheiro {$file} não pode ser aberto e foi rejeitado.</message>
 	<message key="plugins.generic.usageStats.invalidLogEntry">A linha número {$lineNumber} do ficheiro {$file} não possui uma entrada de log válida e o ficheiro foi rejeitado.</message>
 	<message key="plugins.generic.usageStats.removeUrlError">A linha número {$lineNumber} do ficheiro {$file} contém um endereço url do qual o sistema não consegue retirar o URL base.</message>
 	<message key="plugins.generic.usageStats.loadDataError">Não é possível extrair a informação do ficheiro {$file}. O erro foi: {$error}. O ficheiro foi reposto na fila outra vez.</message>
-	<message key="plugins.generic.usageStats.displayName">Estatísticas de Uso</message>
-	<message key="plugins.generic.usageStats.description">Apresenta as estatísticas de uso baseadas nos trabalhos da publicação. Pode usar os ficheiros log de acesso do servidor para extrair estatísticas.</message>
-	<message key="plugins.generic.usageStats.pluginDisabled">O plugin de Estatísticas de Uso está inativo. Não são processados ficheiros de log.</message>
-	<message key="plugins.generic.usageStats.processingPathNotEmpty">A pasta {$directory} não está vazia. Isto pode indicar uma falha anterior do processo, ou processos concurrentes (a correr em paralelo). Este ficheiro será automaticamente processado se está a usar o processo scheduledTasksAutoStage.xml, caso contrário, terá que manualmente mover os ficheiros para a pasta de processamento dos ficheiros de log.</message>
+	<message key="plugins.generic.usageStats.displayName">Estatísticas de Utilização</message>
+	<message key="plugins.generic.usageStats.description">Apresenta as estatísticas de utilização baseadas nos trabalhos da publicação. Pode usar os ficheiros log de acesso do servidor para extrair estatísticas.</message>
+	<message key="plugins.generic.usageStats.pluginDisabled">O plugin de Estatísticas de utilização está inactivo. Não são processados ficheiros de log.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">A pasta {$directory} não está vazia. Isto pode indicar uma falha anterior do processo, ou processos concorrentes (a correr em paralelo). Este ficheiro será automaticamente processado se está a usar o processo scheduledTasksAutoStage.xml, caso contrário, terá que manualmente mover os ficheiros para a pasta de processamento dos ficheiros de log.</message>
 	<message key="plugins.generic.usageStats.noCounterBotList">A lista de robots (bots) COUNTER não foi encontrada, ou existe mais do que uma lista. O ficheiro {$file} não pode ser processado.</message>
 	<message key="plugins.generic.usageStats.failedCounterBotList">A lista de robots (bots) COUNTER {$botlist} não pode ser aberta. O ficheiro {$file} não pode ser processado.</message>
 	
-	<message key="plugins.reports.usageStats.report.displayName">Relatório de Estatísticas de Uso da Revista</message>
-	<message key="plugins.reports.usageStats.report.description">Relatório de Estatísticas de Uso da Revista(COUNTER)</message>
+	<message key="plugins.reports.usageStats.report.displayName">Relatório de Estatísticas de Utilização da Revista</message>
+	<message key="plugins.reports.usageStats.report.description">Relatório de Estatísticas de Utilização da Revista(COUNTER)</message>
 	
 	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
-	<message key="plugins.reports.usageStats.metricType.full">Open Journal Systems statistics (COUNTER ready)</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Opção de dados privados</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Respeitar privacidade dados</message>
+	<message key="plugins.generic.usageStats.settings.archives">Arquivos</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives">Comprimir arquivos</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.cityRequiresRegion">The optional column "City" requires the optional column "Region".</message>
+	<message key="plugins.reports.usageStats.optout.displayName">Informação Privacidade Estatísticas Utilização</message>
+	<message key="plugins.reports.usageStats.optout.description">Informação Privacidade Estatísticas Utilização</message>
+	<message key="plugins.generic.usageStats.optout.title">Informação Estatísticas Utilização</message>
+	<message key="plugins.generic.usageStats.optin">Opc dentro</message>
+	<message key="plugins.generic.usageStats.optout">Opc fora</message>
 </locale>
