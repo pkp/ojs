@@ -84,6 +84,27 @@ class DepositPackage {
 	 function getPackageFilePath() {
 		return $this->getDepositDir() . DIRECTORY_SEPARATOR . $this->_deposit->getUUID() . ".zip";
 	}
+    
+    /**
+     * Create a DOMElement in the $dom, and set the element name, namespace, and 
+     * content appropriately. Named HTML entities in the content are converted
+     * to UTF-8 characters. Any invalid UTF-8 characters will be dropped.
+     * 
+     * @param DOMDocument $dom
+     * @param string $elementName
+     * @param string $content
+     * @param string $namespace
+     * @return DOMElement
+     */
+	function _generateElement($dom, $elementName, $content, $namespace = null){
+		$encoded = html_entity_decode($content, ENT_NOQUOTES | ENT_HTML401, 'UTF-8');
+		$filtered = iconv('UTF-8', 'UTF-8//IGNORE', $encoded);
+		if($namespace !== null) {
+			return $dom->createElementNS($namespace, $elementName, $filtered);
+		} else {
+			return $dom->createElement($elementName, $filtered);
+		}
+	}
 
 	/**
 	 * Create an atom document for this deposit.
@@ -111,19 +132,19 @@ class DepositPackage {
 		$entry->setAttributeNS('http://www.w3.org/2000/xmlns/' ,'xmlns:dcterms', 'http://purl.org/dc/terms/');
 		$entry->setAttributeNS('http://www.w3.org/2000/xmlns/' ,'xmlns:pkp', 'http://pkp.sfu.ca/SWORD');
 		
-		$email = $atom->createElement('email', $journal->getSetting('contactEmail'));
+		$email = $this->_generateElement($atom, 'email', $journal->getSetting('contactEmail'));
 		$entry->appendChild($email);
 		
-		$title = $atom->createElement('title', $journal->getLocalizedTitle());
+		$title = $this->_generateElement($atom, 'title', $journal->getLocalizedTitle());
 		$entry->appendChild($title);
 		
-		$pkpJournalUrl = $atom->createElementNS('http://pkp.sfu.ca/SWORD', 'pkp:journal_url', $journal->getUrl());
+		$pkpJournalUrl = $this->_generateElement($atom, 'pkp:journal_url', $journal->getUrl(), 'http://pkp.sfu.ca/SWORD');
 		$entry->appendChild($pkpJournalUrl);
 
-		$pkpPublisher = $atom->createElementNS('http://pkp.sfu.ca/SWORD', 'pkp:publisherName', $journal->getSetting('publisherInstitution'));
+		$pkpPublisher = $this->_generateElement($atom, 'pkp:publisherName', $journal->getSetting('publisherInstitution'), 'http://pkp.sfu.ca/SWORD');
 		$entry->appendChild($pkpPublisher);
 
-		$pkpPublisherUrl = $atom->createElementNS('http://pkp.sfu.ca/SWORD', 'pkp:publisherUrl', $journal->getSetting('publisherUrl'));
+		$pkpPublisherUrl = $this->_generateElement($atom, 'pkp:publisherUrl', $journal->getSetting('publisherUrl'), 'http://pkp.sfu.ca/SWORD');
 		$entry->appendChild($pkpPublisherUrl);
 
 		$issn = '';
@@ -134,17 +155,17 @@ class DepositPackage {
 			$issn = $journal->getSetting('printIssn');
 		}
 		
-		$pkpIssn = $atom->createElementNS('http://pkp.sfu.ca/SWORD', 'pkp:issn', $issn);
+		$pkpIssn = $this->_generateElement($atom, 'pkp:issn', $issn, 'http://pkp.sfu.ca/SWORD');
 		$entry->appendChild($pkpIssn);
 		
-		$id = $atom->createElement('id', 'urn:uuid:'.$this->_deposit->getUUID());
+		$id = $this->_generateElement($atom, 'id', 'urn:uuid:'.$this->_deposit->getUUID());
 		$entry->appendChild($id);
 		
-		$updated = $atom->createElement('updated', strftime("%FT%TZ",strtotime($this->_deposit->getDateModified())));
+		$updated = $this->_generateElement($atom, 'updated', strftime("%FT%TZ",strtotime($this->_deposit->getDateModified())));
 		$entry->appendChild($updated);
 		
 		$url = $journal->getUrl() . '/' . PLN_PLUGIN_ARCHIVE_FOLDER . '/deposits/' . $this->_deposit->getUUID();
-		$pkpDetails = $atom->createElementNS('http://pkp.sfu.ca/SWORD', 'pkp:content', $url);
+		$pkpDetails = $this->_generateElement($atom, 'pkp:content', $url, 'http://pkp.sfu.ca/SWORD');
 		$pkpDetails->setAttribute('size', ceil(filesize($packageFile)/1000));
 		
 		$objectVolume = "";
@@ -196,8 +217,8 @@ class DepositPackage {
 
 		$locale = $journal->getPrimaryLocale();
 		$license = $atom->createElementNS('http://pkp.sfu.ca/SWORD', 'license');
-		$license->appendChild($atom->createElementNS('http://pkp.sfu.ca/SWORD', 'openAccessPolicy', $journal->getLocalizedSetting('openAccessPolicy', $locale)));
-		$license->appendChild($atom->createElementNS('http://pkp.sfu.ca/SWORD', 'licenseURL', $journal->getSetting('licenseURL')));
+		$license->appendChild($this->_generateElement($atom, 'openAccessPolicy', $journal->getLocalizedSetting('openAccessPolicy', $locale), 'http://pkp.sfu.ca/SWORD'));
+		$license->appendChild($this->_generateElement($atom, 'licenseURL', $journal->getLocalizedSetting('licenseURL', $locale), 'http://pkp.sfu.ca/SWORD'));
 		
 		$mode = $atom->createElementNS('http://pkp.sfu.ca/SWORD', 'publishingMode');
 		switch($journal->getSetting('publishingMode')) {
@@ -212,9 +233,9 @@ class DepositPackage {
 				break;
 		}
 		$license->appendChild($mode);
-		$license->appendChild($atom->createElementNS('http://pkp.sfu.ca/SWORD', 'copyrightNotice', $journal->getLocalizedSetting('copyrightNotice', $locale)));
-		$license->appendChild($atom->createElementNS('http://pkp.sfu.ca/SWORD', 'copyrightBasis', $journal->getSetting('copyrightYearBasis')));
-		$license->appendChild($atom->createElementNS('http://pkp.sfu.ca/SWORD', 'copyrightHolder', $journal->getSetting('copyrightHolderType')));
+		$license->appendChild($this->_generateElement($atom, 'copyrightNotice', $journal->getLocalizedSetting('copyrightNotice', $locale), 'http://pkp.sfu.ca/SWORD'));
+		$license->appendChild($this->_generateElement($atom, 'copyrightBasis', $journal->getLocalizedSetting('copyrightBasis'), 'http://pkp.sfu.ca/SWORD'));
+		$license->appendChild($this->_generateElement($atom, 'copyrightHolder', $journal->getLocalizedSetting('copyrightHolder'), 'http://pkp.sfu.ca/SWORD'));
 		
 		$entry->appendChild($license);
 		$atom->save($atomFile);
