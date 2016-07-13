@@ -13,7 +13,7 @@
   -->
  
 <locale name="pt_PT" full_name="Português (Portugal)">
-	<message key="plugins.importexport.users.displayName">Plugin de Utilizadores em XML</message>
+	<message key="plugins.importexport.users.displayName">Plugin de Utilizadores em formato XML</message>
 	<message key="plugins.importexport.users.description">Importar e exportar utilizadores</message>
 
 	<message key="plugins.importexport.users.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [command] ...
@@ -25,7 +25,7 @@ Commands:
 Optional flags:
 	continue_on_error: Se especificado, não interromper a importação de utilizadores se o erro persistir
 
-	send_notify: Se especificado, enviar emails de notificação contendo os nomes de utilizadores
+	send_notify: Se especificado, enviar e-mails de notificação contendo os nomes de utilizadores
 		e senhas para os utilizadores importados
 
 Examplos:
@@ -43,8 +43,8 @@ Examplos:
 	<message key="plugins.importexport.users.import.failedToImportUser">Insucesso na importação de utilizador</message>
 	<message key="plugins.importexport.users.import.failedToImportRole">Insucesso ao designar um papel ao utilizador</message>
 	<message key="plugins.importexport.users.import.dataFile">Ficheiro de dados do utilizador</message>
-	<message key="plugins.importexport.users.import.sendNotify">Enviar um email de notificação a cada utilizador importado contendo os nomes de utilizador e senha.</message>
-	<message key="plugins.importexport.users.import.continueOnError">Continuar a importar outros utilizadores se o insucesso ocorrer..</message>
+	<message key="plugins.importexport.users.import.sendNotify">Enviar um e-mail de notificação a cada utilizador importado contendo os nomes de utilizador e senha.</message>
+	<message key="plugins.importexport.users.import.continueOnError">Continuar a importar outros utilizadores se o insucesso ocorrer.</message>
 	<message key="plugins.importexport.users.import.noFileError">Nenhum ficheiro transferido!</message>
 	<message key="plugins.importexport.users.import.usersWereImported">Os seguintes utilizadores foram importados com sucesso para o sistema</message>
 	<message key="plugins.importexport.users.import.errorsOccurred">Erros ocorridos durante a importação</message>

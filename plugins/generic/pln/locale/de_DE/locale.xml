@@ -23,7 +23,7 @@
 	<message key="plugins.generic.pln.settings.acron_required">Das PKP-PLN-Plug-In benötigt entweder das Acron-Plug-In oder ein Tool für regelmäßig wiederholte Aktionen (wie 'cron').</message>
 	<message key="plugins.generic.pln.settings.saved">PKP-PLN-Einstellungen gespeichert.</message>
 	<message key="plugins.generic.pln.settings.terms_of_use">Nutzungsbedingungen</message>
-	<message key="plugins.generic.pln.settings.terms_of_use_help">Als Hauptkontakt der Zeitschrift akzeptiere und bestätige ich die folgenden Nutzungsbedingungen zur Teilnahme am Private LOCKSS Network des Public Knowledge Projects (PKP-PLN):</message>
+	<message key="plugins.generic.pln.settings.terms_of_use_help">Als Zeitschriftenverwalter/in der Zeitschrift akzeptiere und bestätige ich die folgenden Nutzungsbedingungen zur Teilnahme am Private LOCKSS Network des Public Knowledge Projects (PKP-PLN):</message>
 	<message key="plugins.generic.pln.settings.terms_of_use_agree">Ich stimme zu</message>
 	<message key="plugins.generic.pln.settings.journal_uuid">Kennzeichnung der Zeitschrift</message>
 	<message key="plugins.generic.pln.settings.journal_uuid_help">Dies ist die eindeutige Kennung Ihrer Zeitschrift für das PKP PLN. Sie müssen diese Kennung angeben, wenn Sie Support durch die Administrator/innen von PKP PLN erhalten möchten.</message>

@@ -14,14 +14,14 @@
 
 <topic id="journal/topic/000012" locale="pt_PT" title="Adicionar Novo Utilizador" toc="journal/toc/000002" key="journal.users.createNewUser">
 	<section>
-		<![CDATA[<p>O Editor-Gestor pode usar o link Adicionar Novo Utilizador para registar alguém e atribuir-lhe uma função, de Editor-Gestor a Leitor. O utilizador pode, ao logar na revista, completar e mudar as informações do seu perfil registadas pelo Editor-Gestor.</p><p><em>Alteração da Senha</em>. Os Utilizadores podem mudar as suas senhas assim que tenham se ligado à revista. O Editor-Gestor não pode aceder à senha do utilizador. Entretanto, o sistema pode gerar uma nova senha e envia-la via e-mail aos utilizadores que clicarem no link "Esqueceu a sua senha?" abaixo da caixa de login.</p>]]>	
+		<![CDATA[<p>O Director pode usar o link Adicionar Novo Utilizador para registar alguém e atribuir-lhe uma função, de Director a Leitor. O utilizador pode, ao logar na revista, completar e mudar as informações do seu perfil registadas pelo Director.</p><p><em>Alteração da Senha</em>. Os Utilizadores podem mudar as suas senhas assim que tenham se conectado à revista. O Director não pode aceder à senha do utilizador. O sistema pode gerar uma nova senha e enviá-la via e-mail aos utilizadores que clicarem no link "Esqueceu a sua senha?" abaixo da caixa de login.</p>]]>	
 	</section>
 	
 	<section title="Registar Utilizador Existente">
-		<![CDATA[<p>O Editor-Gestor pode designar uma ou mais funções a qualquer utilizador registado.</p>]]>
+		<![CDATA[<p>O Director pode designar uma ou mais funções a qualquer utilizador registado.</p>]]>
 	</section>
 
 	<section title="Sincronizar registo de utilizadores">
-		<![CDATA[<p>Sincronizar registos fará com que um utilizador com função específica numa revista seja registado com a mesma função em outra revista, acedida no momento da execução. Esta função permite partilhar um grupo de utilizadores entre as revistas (por exemplo, Revisores) e sincronizar os seus registos entre revistas.</p>]]>
+		<![CDATA[<p>Sincronizar registos fará com que um utilizador com função específica numa revista seja registado com a mesma função noutra revista, acedida no momento da execução. Esta função permite partilhar um grupo de utilizadores entre as revistas (por exemplo, Revisores) e sincronizar os seus registos entre revistas.</p>]]>
 	</section>
 </topic>

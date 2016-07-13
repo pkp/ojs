@@ -28,7 +28,7 @@
 	<message key="plugins.generic.referral.status.accept.empty">Não há nenhum apontador publicado.</message>
 	<message key="plugins.generic.referral.status.decline">Ignorado</message>
 	<message key="plugins.generic.referral.status.decline.empty">Não há nenhum apontador ignorado.</message>
-	<message key="plugins.generic.referral.confirmDelete">Deseja realmente excluir este apontador?</message>
+	<message key="plugins.generic.referral.confirmDelete">Deseja realmente eliminar este apontador?</message>
 	<message key="plugins.generic.referral.nameRequired">O nome para o apontador é obrigatório.</message>
 	<message key="plugins.generic.referral.urlRequired">O endereço URL do apontador é obrigatório.</message>
 	<message key="plugins.generic.referral.settings">Configurações do Plugin de Apontadores para Artigos</message>

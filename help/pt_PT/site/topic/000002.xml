@@ -14,7 +14,7 @@
 
 <topic id="site/topic/000002" locale="pt_PT" title="Administração do Portal" toc="site/toc/000000" key="site.siteManagement">
 	<section>
-		<![CDATA[<p>O sistema foi desenvolvido para administrar várias revistas, sendo o Administrador do Sistema o responsável pelas configurações ao nível do portal e criação de novas revistas a serem hospedados no sistema. Cada revista é independente, com a excepção dos registos de utilizadores: enquanto um utilizador pode assumir várias funções em várias revistas, o utilizador utilizará o mesmo endereço de e-mail e login independente da revista.</p>]]>	
+		<![CDATA[<p>O sistema foi desenvolvido para administrar várias revistas, sendo o Administrador do Sistema o responsável pelas configurações ao nível do portal e criação de novas revistas a serem hospedados no sistema. Cada revista é independente, com a excepção dos registos de utilizadores: enquanto um utilizador pode assumir várias funções em várias revistas, o utilizador utilizará o mesmo endereço de e-mail e login independentemente da revista.</p>]]>	
 	</section>
 	
 	<section title="Configurações do Portal">
@@ -23,7 +23,7 @@
 	</section>
 	
 	<section title="Revistas Hospedadas">
-		<![CDATA[<p>Como o sistema permite gerar qualquer número individual e distinto de revistas, novas revistas podem ser criadas a qualquer tempo. Cada revista criada pode ser acedida por um URL única baseada no caminho definido pelo Administrador do Sistema. Revistas em processo de configuração podem permanecer indisponíveis ao público até estarem prontas para lançamento.</p>]]>
+		<![CDATA[<p>Como o sistema permite gerar qualquer número individual e distinto de revistas, podem ser criadas novas revistas em qualquer momento. Cada revista criada pode ser acedida através de um URL única baseado no caminho definido pelo Administrador do Sistema. Revistas em processo de configuração podem permanecer indisponíveis ao público até estarem prontas para publicação.</p>]]>
 	</section>
 	
 	<section title="Idiomas">
