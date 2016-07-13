@@ -46,20 +46,10 @@
 			<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"}</span>
 		{/fbvFormSection}
 		{fbvFormSection list="true"}
-			{if $urnSuffix eq "customId"}
-				{assign var="checked" value=true}
-			{else}
-				{assign var="checked" value=false}
-			{/if}
-			{fbvElement type="radio" id="urnSuffixCustomId" name="urnSuffix" value="customId" label="plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier" checked=$checked}
+			{fbvElement type="radio" id="urnSuffixCustomId" name="urnSuffix" value="customId" label="plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier" checked=$urnSuffix|compare:"customId"}
 		{/fbvFormSection}
 		{fbvFormSection list="true"}
-			{if $urnSuffix eq "pattern"}
-				{assign var="checked" value=true}
-			{else}
-				{assign var="checked" value=false}
-			{/if}
-			{fbvElement type="radio" id="urnSuffixPattern" name="urnSuffix" value="pattern" label="plugins.pubIds.urn.manager.settings.urnSuffixPattern" checked=$checked}
+			{fbvElement type="radio" id="urnSuffixPattern" name="urnSuffix" value="pattern" label="plugins.pubIds.urn.manager.settings.urnSuffixPattern" checked=$urnSuffix|compare:"pattern"}
 			<p class="pkp_help">{translate key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"}</p>
 			{fbvElement type="text" label="plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues" id="urnIssueSuffixPattern" value=$urnIssueSuffixPattern maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
 			{fbvElement type="text" label="plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions" id="urnSubmissionSuffixPattern" value=$urnSubmissionSuffixPattern maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
@@ -68,12 +58,7 @@
 	{/fbvFormArea}
 	{fbvFormArea id="urnCheckNoFormArea" title="plugins.pubIds.urn.manager.settings.checkNo"}
 		{fbvFormSection list="true" }
-			{if $urnCheckNo}
-				{assign var="checked" value=true}
-			{else}
-				{assign var="checked" value=false}
-			{/if}
-			{fbvElement type="checkbox" id="urnCheckNo" name="urnCheckNo" label="plugins.pubIds.urn.manager.settings.checkNo.label" checked=$checked}
+			{fbvElement type="checkbox" id="urnCheckNo" name="urnCheckNo" label="plugins.pubIds.urn.manager.settings.checkNo.label" checked=$urnCheckNo|compare:true}
 		{/fbvFormSection}
 	{/fbvFormArea}
 	{fbvFormArea id="urnNamespaceFormArea" title="plugins.pubIds.urn.manager.settings.namespace"}
