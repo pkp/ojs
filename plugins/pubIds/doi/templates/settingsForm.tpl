@@ -46,20 +46,10 @@
 			<span class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"}</span>
 		{/fbvFormSection}
 		{fbvFormSection list="true"}
-			{if $doiSuffix eq "customId"}
-				{assign var="checked" value=true}
-			{else}
-				{assign var="checked" value=false}
-			{/if}
-			{fbvElement type="radio" id="doiSuffixCustomId" name="doiSuffix" value="customId" required="true" label="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier" checked=$checked}
+			{fbvElement type="radio" id="doiSuffixCustomId" name="doiSuffix" value="customId" required="true" label="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier" checked=$doiSuffix|compare:"customId"}
 		{/fbvFormSection}
 		{fbvFormSection list="true"}
-			{if $doiSuffix eq "pattern"}
-				{assign var="checked" value=true}
-			{else}
-				{assign var="checked" value=false}
-			{/if}
-			{fbvElement type="radio" id="doiSuffixPattern" name="doiSuffix" value="pattern" label="plugins.pubIds.doi.manager.settings.doiSuffixPattern" checked=$checked}
+			{fbvElement type="radio" id="doiSuffixPattern" name="doiSuffix" value="pattern" label="plugins.pubIds.doi.manager.settings.doiSuffixPattern" checked=$doiSuffix|compare:"pattern"}
 			<p class="pkp_help">{translate key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example"}</p>
 			{fbvElement type="text" id="doiIssueSuffixPattern" value=$doiIssueSuffixPattern label="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues" maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
 			{fbvElement type="text" id="doiSubmissionSuffixPattern" value=$doiSubmissionSuffixPattern label="plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions" maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
