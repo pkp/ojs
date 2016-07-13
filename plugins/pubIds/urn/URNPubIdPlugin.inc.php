@@ -37,7 +37,6 @@ class URNPubIdPlugin extends PubIdPlugin {
 
 	/**
 	 * @copydoc Plugin::getTemplatePath()
-	 * @param $inCore boolean True iff a core template should be preferred
 	 */
 	function getTemplatePath($inCore = false) {
 		return parent::getTemplatePath($inCore) . 'templates/';
@@ -54,7 +53,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 		$urn = $pubIdPrefix . $pubIdSuffix;
 		$suffixFieldName = $this->getSuffixFieldName();
 		$suffixGenerationStrategy = $this->getSetting($contextId, $suffixFieldName);
-		// checkNo is alread calculated for custom suffixes
+		// checkNo is already calculated for custom suffixes
 		if ($suffixGenerationStrategy != 'customId' && $this->getSetting($contextId, 'urnCheckNo')) {
 			$urn .= $this->_calculateCheckNo($urn);
 		}
@@ -95,6 +94,20 @@ class URNPubIdPlugin extends PubIdPlugin {
 	 */
 	function getPubIdMetadataFile() {
 		return $this->getTemplatePath().'urnSuffixEdit.tpl';
+	}
+
+	/**
+	 * @copydoc PKPPubIdPlugin::addJavaScript()
+	 */
+	function addJavaScript($request, $templateMgr) {
+		$templateMgr->addJavaScript(
+			'urnCheckNo',
+			$request->getBaseUrl() . DIRECTORY_SEPARATOR . $this->getPluginPath() . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'checkNumber.js',
+			array(
+				'inline' => false,
+				'contexts' => 'publicIdentifiersForm',
+			)
+		);
 	}
 
 	/**
@@ -205,7 +218,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 	 * @copydoc PKPPubIdPlugin::isObjectTypeEnabled()
 	 */
 	function isObjectTypeEnabled($pubObjectType, $contextId) {
-		return $this->getSetting($contextId, "enable${pubObjectType}URN") == '1';
+		return (boolean) $this->getSetting($contextId, "enable${pubObjectType}URN");
 	}
 
 	/**
