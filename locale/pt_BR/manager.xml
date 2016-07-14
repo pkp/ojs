@@ -527,4 +527,18 @@ Poderão ser usados estatísticas individuais de uso, por exemplo, para exibir u
 	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">mês(es) após a expiração da assinatura.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Notificar assinantes via e-mail</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">mês(es) antes da expiração da assinatura.</message>
+
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<!-- plugin tabs -->
+	<message key="plugins.importexport.common.settings">Configurações</message>
+	<!-- settings form -->
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Para usar este plugin, acesse a categoria de plugins "Identificadores públicos", habilite e configure o plugin DOI e especifique um prefixo DOI válido nele.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">O plugin não está totalmente configurado.</message>
+	<message key="plugins.importexport.common.settings.form.password">Senha</message>
+	<!-- actions -->
+	<message key="plugins.importexport.common.action.register">Registrar</message>
+	<!--  notifications and errors -->
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Não foi possível gravar no arquivo de saída {$param}.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Falha no registro! O servidor de registro DOI retornou um erro: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Registro realizado com sucesso!</message>
 </locale>

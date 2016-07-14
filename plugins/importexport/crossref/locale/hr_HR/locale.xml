@@ -16,13 +16,7 @@
 <locale name="hr_HR" full_name="Hrvatski">
 	<message key="plugins.importexport.crossref.displayName">Dodatak za CrossRef XML iznošenje</message>
 	<message key="plugins.importexport.crossref.description">Koristi se za iznošenje metapodataka članaka u CrossRef XML formatu.</message>
-	
-	<message key="plugins.importexport.crossref.export">Iznošenje podataka</message>
-	<message key="plugins.importexport.crossref.export.issues">Iznošenje brojeva</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Odaberite broj za iznošenje.</message>
-	<message key="plugins.importexport.crossref.export.articles">Iznošenje članaka</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Odaberite članke za iznošenje.</message>
-	
+
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Primjena: 
 {$scriptName} {$pluginName} [xmlNazivDatoteke] [putanja_časopisa] članci [članakId1] [članakId2] ...
 {$scriptName} {$pluginName} [xmlNazivDatoteke] [putanja_časopisa] broj [brojId]
@@ -33,5 +27,4 @@
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Nijedan članak ne odgovara navedenom ID-u 
 	 ({$articleId}).</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Kako biste mogli koristiti ovaj funkcionalan dodatak sustava, morate navesti ispravan DOI prefiks u prvom koraku "uređivanja postavki časopisa".</message>
 </locale>

@@ -502,4 +502,18 @@
 	<message key="manager.setup.journalThumbnail">Мініатюрне зображення журналу</message>
 	<message key="manager.setup.useThumbnail">Мініатюра</message>
 	<message key="manager.setup.categories.description">Зі списку нижче оберіть найбільш відповідні категорії. Читачі зможуть переглядати статті за обраними категоріями.</message>
+
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<!-- plugin tabs -->
+	<message key="plugins.importexport.common.settings">Налаштування</message>
+	<!-- settings form -->
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Щоб використовувати цей модуль, будь ласка, перейдіть до категорії модулів "Публічні ідентифікатори", включіть та налаштуйте модуль DOI, а потім вкажіть тут Ваш префікс DOI.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">Модуль не був повністю підключений.</message>
+	<message key="plugins.importexport.common.settings.form.password">Пароль</message>
+	<!-- actions -->
+	<message key="plugins.importexport.common.action.register">Зареєструвати</message>
+	<!--  notifications and errors -->
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Файл результатів {$param} не доступний для запису.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Реєстрація пройшла невдало! Реєстраційний сервер DOI повернув помилку: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Реєстрація вдала!</message>
 </locale>

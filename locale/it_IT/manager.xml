@@ -519,4 +519,18 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 Ci sono casi in cui deve essere utilizzato una sola statistica di utilizzo, ad esempio, per visualizzare un elenco ordinato di oggetti più utilizzati o risultati di ricerca. 
 Selezionare una delle metriche configurate come predefinita.</message>
 	<message key="manager.statistics.reports.objectNotFound">Oggetto non trovato nel database.</message>
+
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<!-- plugin tabs -->
+	<message key="plugins.importexport.common.settings">Impostazioni</message>
+	<!-- settings form -->
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Per utilizzare questo plugin vai alla categoria di plugin "Identificatori pubblici", abilita e configura il plugin specifico per il DOI e specifica lì un prefisso valido.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">Il plugin non è completamente configurato.</message>
+	<message key="plugins.importexport.common.settings.form.password">Password</message>
+	<!-- actions -->
+	<message key="plugins.importexport.common.action.register">Registrazione</message>
+	<!--  notifications and errors -->
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Il file {$param} non è scrivibile.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Errore nella registrazione! Il server di registrazione ha restituito un errore: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Registrazione conclusa con successo!</message>
 </locale>

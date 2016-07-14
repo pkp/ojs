@@ -12,33 +12,22 @@
   -->
  
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="plugins.importexport.common.error.DOIsNotAvailable">Ako želite da koristite ovaj dodatak idite u kategoriju dodataka "Public Identifier (Javni dodaci)" i uključite i konfigurišite dodatak DOI.</message>
-	<message key="plugins.importexport.common.error.pluginNotConfigured">Dodatak nije u potpunosti podešen.</message>
 
-	<message key="plugins.importexport.common.settings">Podešavanja</message>
-
-	<message key="plugins.importexport.common.settings.form.password">Lozinka</message>
 	<message key="plugins.importexport.common.settings.form.passwordRequired">Unesite lozinku</message>
-	
-	<message key="plugins.importexport.common.register">Registracija</message>
+
 	<message key="plugins.importexport.common.registerDescription">Kliknite na dugme da registrujete objekat sa registarskom agencijom prvi put. Ovo radi samo ako objekat registrujete prvi put.</message>
 	<message key="plugins.importexport.common.registerDescription.multi">Kliknite na dugme da registrujete ili ažurirate metapodatke odabranih objekata kod registarske agencije.</message>
-	<message key="plugins.importexport.common.register.error.mdsError">Registracija nije bila uspešna! DOI registracioni server je vratio grešku: '{$param}'.</message>
-	<message key="plugins.importexport.common.register.success">Uspešna registracija!</message>
 	<message key="plugins.importexport.common.register.warning">Registrovanje mnogo objekata može potrajati stoga budite strpljivi nakon što ste kliknuli dugme "Registracija". Bićete obavešteni kada registracija završi.</message>
 	<message key="plugins.importexport.common.register.noCredentials"><![CDATA[Direktna registracija je trenutno onemogućena. Molimo vas da<a href="{$settingsUrl}">podesite</a> korisničko ime i lozinku kako biste mogli da registrujete objekte direktno kod agencije.]]></message>
 
 	<message key="plugins.importexport.common.update">Ažuriraj</message>
 	<message key="plugins.importexport.common.updateDescription">Kliknite na dugme da biste ažurirali metapodatke ovog objekta kod agencije. Ovo radi samo ako ste objekat već registrovali.</message>
-		
-	<message key="plugins.importexport.common.export">Izvezi podatke</message>
+
 	<message key="plugins.importexport.common.export.unregistered">Izvezi sve neregistrovane brojeve, članke i prikaze</message>
 	<message key="plugins.importexport.common.export.selectUnregistered">Obeleži neregistrovane brojeve, članke i prikaze</message>
 	<message key="plugins.importexport.common.export.noUnregistered">Svi brojevi, članci i prikazi su već registrovani (ili ni jedan nema dodeljen DOI).</message>
-	<message key="plugins.importexport.common.export.issues">Izvezi određene brojeve</message>
 	<message key="plugins.importexport.common.export.selectIssue">Odaberi broj</message>
 	<message key="plugins.importexport.common.export.noIssues">Nema brojeva sa dodeljenim DOI-jem.</message>
-	<message key="plugins.importexport.common.export.articles">Izvezi određene članke</message>
 	<message key="plugins.importexport.common.export.selectArticle">Odaberi članke</message>
 	<message key="plugins.importexport.common.export.noArticles">Nema članaka sa dodeljenim DOI-jem</message>
 	<message key="plugins.importexport.common.export.galleys">Izvezi određene prikaze</message>
@@ -52,9 +41,8 @@
 	<message key="plugins.importexport.common.export.error.noDoiAssigned">Objekat sa ID-jem {$param} nema dodat DOI..</message>
 	<message key="plugins.importexport.common.export.error.unknownJournal">Ni jedan časopis ne odgovara datoj putanji časopisa: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.unknownObjectType">Objekat tipa {$param} ne može biti izvezen.</message>
-	<message key="plugins.importexport.common.export.error.outputFileNotWritable">U fajl {$param} nije moguće pisati.</message>
  
 	<message key="plugins.importexport.common.notification.exportSuccessful">Uspešan izvoz objekata u '{$param}'</message>
- 
+
 	<message key="plugins.importexport.common.cliError">GREŠKA:</message>
 </locale>

@@ -15,13 +15,7 @@
 <locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.importexport.crossref.displayName">Modulul de export CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Exportă metadatele articolului în format XML CrossRef.</message>
-	
-	<message key="plugins.importexport.crossref.export">Exportă Date</message>
-	<message key="plugins.importexport.crossref.export.issues">Exportă numere</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Selectează un număr pentru a fi exportat.</message>
-	<message key="plugins.importexport.crossref.export.articles">Exportă articole</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Selectează articolele pentru a fi exportate.</message>
-	
+
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Mod de utilizare: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articole [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] numărul [issueId]
@@ -31,5 +25,4 @@
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Nu a fost găsit niciun număr care să se potrivească cu ID-ul numărului specificat "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Niciun articol nu corespunde ID-ului de articol specificat "{$articleId}".</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Trebuie specificat un prefix DOI valid în setările revistei pentru a se putea utiliza acest modul.</message>
 </locale>

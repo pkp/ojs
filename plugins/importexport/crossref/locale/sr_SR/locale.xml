@@ -15,13 +15,7 @@
 <locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.importexport.crossref.displayName">CrossRef XML dodatak za izvoz</message>
 	<message key="plugins.importexport.crossref.description">Izvezi metapodatke članaka u CrossRef XML format.</message>
-	
-	<message key="plugins.importexport.crossref.export">Izvezi podatke</message>
-	<message key="plugins.importexport.crossref.export.issues">Izvezi broj</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Odabezi brojeve za izvoz.</message>
-	<message key="plugins.importexport.crossref.export.articles">Izvezi članke</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Odaberi članke za izvoz.</message>
-	
+
 	<message key="plugins.importexport.crossref.cliUsage">Korišćenje: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] članci [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] broj [issueId]</message>
@@ -30,5 +24,4 @@
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Nema brojeva koji se poklapaju sa ID-jem broja "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Nema članaka koji se poklapaju sa ID-jem članka "{$articleId}".</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Ispravan DOI prefiks definisan u podešavanjima časopisa kako bi se dodatak mogao koristiti.</message>
 </locale>

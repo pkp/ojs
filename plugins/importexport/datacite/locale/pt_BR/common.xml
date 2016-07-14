@@ -12,49 +12,37 @@
   -->
  
 <locale name="pt_BR" full_name="Português (Brasil)">
-	<message key="plugins.importexport.common.error.DOIsNotAvailable">Para usar este plugin, acesse a categoria de plugins "Identificadores públicos", habilite e configure o plugin DOI e especifique um prefixo DOI válido nele.</message>
-	<message key="plugins.importexport.common.error.pluginNotConfigured">O plugin não está totalmente configurado.</message>
 
-	<message key="plugins.importexport.common.settings">Configurações</message>
-
-	<message key="plugins.importexport.common.settings.form.password">Senha</message>
 	<message key="plugins.importexport.common.settings.form.passwordRequired">Informe uma senha</message>
-	
-	<message key="plugins.importexport.common.register">Registrar</message>
+
 	<message key="plugins.importexport.common.registerDescription">Clique neste botão para registrar este objeto na agência de registro pela primeira vez. Isto funciona apenas se o objeto não foi registrado antes.</message>
 	<message key="plugins.importexport.common.registerDescription.multi">Clique neste botão para registrar ou atualizar os metadados do(s) objeto(s) selecionado(s) na agência de registro.</message>
-	<message key="plugins.importexport.common.register.error.mdsError">Falha no registro! O servidor de registro DOI retornou um erro: '{$param}'.</message>
-	<message key="plugins.importexport.common.register.success">Registro realizado com sucesso!</message>
 	<message key="plugins.importexport.common.register.warning">Registrar muitos objetos pode levar muito tempo. Seja paciente após clicar no botão "Registrar". Uma notificação será gerada ao concluir o registro.</message>
 	<message key="plugins.importexport.common.register.noCredentials"><![CDATA[O registro direto está atualmente desabilitado.<a href="{$settingsUrl}">Configure</a> um login e senha para poder registrar objetos diretamente na agência de registro.]]></message>
 
 	<message key="plugins.importexport.common.update">Atualizar</message>
 	<message key="plugins.importexport.common.updateDescription">Clique neste botão para atualizar os metadados deste objeto na agência de registro. Isto funciona apenas se já registrou o objeto com sucesso antes.</message>
-		
-	<message key="plugins.importexport.common.export">Exportar dados</message>
+
 	<message key="plugins.importexport.common.export.unregistered">Exportar todas as edições, artigos e composições não registradas</message>
 	<message key="plugins.importexport.common.export.selectUnregistered">Escolher edições, artigos e composições não registradas</message>
 	<message key="plugins.importexport.common.export.noUnregistered">Todas as edições, artigos e composições já foram registradas (ou nenhum dos itens possui DOI).</message>
-	<message key="plugins.importexport.common.export.issues">Exportar edições específicas</message>
 	<message key="plugins.importexport.common.export.selectIssue">Escolher edições</message>
 	<message key="plugins.importexport.common.export.noIssues">Nenhuma edição possui DOI atualmente.</message>
-	<message key="plugins.importexport.common.export.articles">Exportar artigos específicos</message>
 	<message key="plugins.importexport.common.export.selectArticle">Escolher artigos</message>
 	<message key="plugins.importexport.common.export.noArticles">Nenhum artigo possui DOI atualmente.</message>
 	<message key="plugins.importexport.common.export.galleys">Exportar composições específicas</message>
 	<message key="plugins.importexport.common.export.selectGalley">Escolher composições</message>
 	<message key="plugins.importexport.common.export.noGalleys">Nenhuma composição possui DOI atualmente.</message>
 	<message key="plugins.importexport.common.exportDescription">Clique neste botão para exportar os dados em XML para o(s) objeto(s) selecionado(s) a um arquivo local sem registrá-lo em alguma agência de registro. Isto pode ser útil caso deseje que terceiros façam o registro do DOI ou se deseja inspecionar o formato XML antes de registrá-lo.</message>
- 
+
 	<message key="plugins.importexport.common.export.error.issueNotFound">Nenhuma edição correspondente ao ID: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.articleNotFound">Nenhum artigo correspondete ao ID: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.galleyNotFound">Nenhuma composição correspondente ao ID: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.noDoiAssigned">O objeto de ID {$param} não possui DOI.</message>
 	<message key="plugins.importexport.common.export.error.unknownJournal">Nenhuma publicação corresponde ao caminho: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.unknownObjectType">O tipo de objeto {$param} não pode ser exportado.</message>
-	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Não foi possível gravar no arquivo de saída {$param}.</message>
- 
+
 	<message key="plugins.importexport.common.notification.exportSuccessful">Objetos selecionados exportados com sucesso para '{$param}'</message>
- 
+
 	<message key="plugins.importexport.common.cliError">ERRO:</message>
 </locale>

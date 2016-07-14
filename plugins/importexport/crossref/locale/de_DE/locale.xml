@@ -16,12 +16,6 @@
 	<message key="plugins.importexport.crossref.displayName">CrossRef-XML-Export-Plug-In</message>
 	<message key="plugins.importexport.crossref.description">Metadaten des Beitrags im CrossRef-XML-Format exportieren.</message>
 	
-	<message key="plugins.importexport.crossref.export">Daten exportieren</message>
-	<message key="plugins.importexport.crossref.export.issues">Ausgaben exportieren</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Zu exportierende Ausgabe auswählen.</message>
-	<message key="plugins.importexport.crossref.export.articles">Beiträge exportieren</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Zu exportierende Beiträge auswählen.</message>
-	
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Gebrauch: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] …
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
@@ -31,5 +25,4 @@
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Keine Ausgabe passt zu der angegebenen Kennzeichnung "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Kein Beitrag passt zu der angegebenen Kennzeichnung "{$articleId}".</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Um dieses Plug-In zu verwenden, gehen Sie bitte zur Plug-In-Kategorie "Öffentliche Kennungen". Aktivieren und konfigurieren Sie das DOI-Plug-In und geben Sie dort einen gültigen DOI-Präfix an.</message>
 </locale>

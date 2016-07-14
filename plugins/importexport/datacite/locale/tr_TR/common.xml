@@ -12,18 +12,11 @@
   -->
  
 <locale name="tr_TR" full_name="Türkçe">
-	<message key="plugins.importexport.common.settings">Ayarlar</message>
 
-	<message key="plugins.importexport.common.settings.form.password">Şifre</message>
 	<message key="plugins.importexport.common.settings.form.passwordRequired">Lütfen bir şifre  giriniz.</message>
-	
-	<message key="plugins.importexport.common.register">Kayıt</message>
-	<message key="plugins.importexport.common.register.success">Kayıt Başarılı!</message>
+
 	<message key="plugins.importexport.common.update">Güncelle</message>
-	<message key="plugins.importexport.common.export">Veri İhracı</message>
-	<message key="plugins.importexport.common.export.issues">Belirli sayıları ihraç ediniz.</message>
 	<message key="plugins.importexport.common.export.selectIssue">Sayıları Seçiniz</message>
-	<message key="plugins.importexport.common.export.articles">Belirli makaleleri ihraç ediniz</message>
 	<message key="plugins.importexport.common.export.selectArticle">Makaleleri Seçiniz</message>
 	<message key="plugins.importexport.common.export.galleys">Belirli dizgi ihracı</message>
 	<message key="plugins.importexport.common.export.selectGalley">Dizgileri Seçiniz</message>
