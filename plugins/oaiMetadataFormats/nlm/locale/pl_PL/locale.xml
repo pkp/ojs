@@ -13,6 +13,4 @@
   -->
  
 <locale name="pl_PL" full_name="Język Polski">
-	<message key="plugins.oaiMetadata.nlm.displayName">NLM Metadata Format</message>
-	<message key="plugins.oaiMetadata.nlm.description">Structures metadata in a way that is consistent with the NLM Journal Article format.</message>
 </locale>

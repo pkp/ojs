@@ -13,6 +13,4 @@
   -->
 
 <locale name="pl_PL" full_name="Język Polski">
-	<message key="plugins.reports.views.displayName">View Report</message>
-	<message key="plugins.reports.views.description">This plugin implements a CSV report describing readership for each article.</message>
 </locale>

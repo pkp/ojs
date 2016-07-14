@@ -13,7 +13,5 @@
   -->
 
 <locale name="pl_PL" full_name="Język Polski">
-	<message key="plugins.reports.articles.displayName">Articles Report</message>
-	<message key="plugins.reports.articles.description">This plugin implements a CSV report containing a list of articles and their info.</message>
-	<message key="plugins.reports.articles.nodecision">No Decision</message>
+
 </locale>

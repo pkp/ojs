@@ -13,17 +13,4 @@
   -->
  
 <locale name="pl_PL" full_name="Język Polski">
-	<message key="plugins.importexport.METSExport.displayName">METS XML Export Plugin</message>
-	<message key="plugins.importexport.METSExport.description">Export Journals in METS XML</message>
-	<message key="plugins.importexport.METSExport.settings">Settings</message>
-	<message key="plugins.importexport.METSExport.export">Export Data</message>
-	<message key="plugins.importexport.METSExport.export.issues">Export Issues</message>
-	<message key="plugins.importexport.METSExport.export.selectIssue">Select Issues to export.</message>
-	<message key="plugins.importexport.METSExport.export.error.IssuesNotFound">No Issue matched the specified Issue ID "{$issueId}".</message>
-	<message key="plugins.importexport.METSExport.export.error.unknownIssue">Unknown Journal path {$journalPath}</message>
-	<message key="plugins.importexport.METSExport.settings.FContent">Use base64 encoding for content wrapper</message>
-	<message key="plugins.importexport.METSExport.settings.FLocat">Use URL of the bitstream for content wrapper</message>
-	<message key="plugins.importexport.METSExport.settings.organization">METS:agent element organization attribute</message>
-	<message key="plugins.importexport.METSExport.settings.preservationLevel">PREMIS preservation Level</message>
-	<message key="plugins.importexport.METSExport.settings.exportSuppFiles">Export supplementary files</message>
 </locale>

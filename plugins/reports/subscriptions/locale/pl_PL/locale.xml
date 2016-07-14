@@ -13,8 +13,5 @@
   -->
 
 <locale name="pl_PL" full_name="Język Polski">
-	<message key="plugins.reports.subscriptions.displayName">Subscriptions Report</message>
-	<message key="plugins.reports.subscriptions.description">This plugin implements a CSV report containing a list of subscriptions and their info.</message>
-	<message key="plugins.reports.subscriptions.institutionMailingAddress">Institution Mailing Address</message>
-	<message key="plugins.reports.subscriptions.ipRanges">IP Ranges</message>
+
 </locale>

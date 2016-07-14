@@ -15,6 +15,4 @@
   -->
  
 <locale name="pl_PL" full_name="Język Polski">
-	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
-	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. This is a site-wide plugin and is enabled in the OJS config file.</message>
 </locale>

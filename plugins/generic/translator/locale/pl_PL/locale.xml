@@ -13,11 +13,7 @@
 <locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.generic.translator.name">Translator</message>
 	<message key="plugins.generic.translator.description"><![CDATA[<span style="color: #00F";>Wtyczka umożliwia zarządzanie oraz edycję tłumaczeń z poziomu systemu (przeglądarki)</span>]]></message>
-	<message key="plugins.generic.translator.longdescription">This area allows the Site Administrator to build, modify and check translations of OJS. This is site-wide and should not be used to customize a single OJS journal. If you correct or create a translation, please consider submitting it to the Public Knowledge Project for distribution with future releases.</message>
-	<message key="plugins.generic.translator.localeDescription">This page lists all components of an OJS translation and provides the translator with the opportunity to edit each. A full translation of a translation should contain complete translations of all components.</message>
-	
-	<message key="plugins.generic.translator.tarMissing">The export function of this plugin has been deactivated because the configured tar binary cannot be found on this system. Please make sure that you have the tar program installed and then configure the path to the tar binary in config.inc.php's [cli] section!</message>
-	
+
 	<message key="plugins.generic.translator.localeName">Język</message>
 	<message key="plugins.generic.translator.localeKey">Klucz</message>
 	<message key="plugins.generic.translator.localeKey.description">Wpisz cały klucz aby wyszukać.</message>
@@ -30,11 +26,10 @@
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Brakujące klucze</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Nadmiarowe klucze</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Differing Parameter Lists</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Brakujące pliki tłumaczeń</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Brakujące e-maile</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.title">Nadmiarowe e-maile</message>
-	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.title">Differing Email Parameter Lists</message>
+
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">Klucz "{$key}" jest nieobecny w pliku "{$filename}".</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">Klucz "{$key}" nie jest już używany i może zostać usunięty z "{$filename}".</message>

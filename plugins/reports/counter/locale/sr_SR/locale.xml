@@ -13,7 +13,6 @@
   -->
  
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="plugins.reports.counter.description"><![CDATA[The COUNTER plugin allows recording and <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> reporting on site activity.]]></message>
 	<message key="plugins.reports.counter">COUNTER statistika</message>
 	<message key="plugins.reports.counter.1a.title">Izveštaj časopisa 1 (R3): Ceo tekst članka zahtevan od strane Month and Journal</message>
 	<message key="plugins.reports.counter.1a.title1">Izveštaj časopisa 1 (R3)</message>
