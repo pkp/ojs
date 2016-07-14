@@ -98,7 +98,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 				LEFT JOIN published_submissions pa ON g.submission_id = pa.submission_id ';
 		if (is_null($settingValue)) {
 			$sql .= 'LEFT JOIN submission_galley_settings gs ON g.galley_id = gs.galley_id AND gs.setting_name = ?
-				WHERE	(gs.setting_value IS NULL OR gs.setting_value = "")';
+				WHERE	(gs.setting_value IS NULL OR gs.setting_value = \'\')';
 		} else {
 			$params[] = (string) $settingValue;
 			$sql .= 'INNER JOIN submission_galley_settings gs ON g.galley_id = gs.galley_id
