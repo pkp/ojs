@@ -20,7 +20,4 @@
 
 	
 	<message key="plugins.importexport.doaj.export">Exportera tidskriftsdata till DOAJ</message>
-	<message key="plugins.importexport.doaj.export.email">Eposta DOAJ representatnten</message>
-	<message key="plugins.importexport.doaj.export.emailInfo">Vänligen komplettera detta delvis ifyllda formulär och sänd det till DOAJ så er tidskrift kan komma med i DOAJ-katalogen.</message>
-
 </locale>

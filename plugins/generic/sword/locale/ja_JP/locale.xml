@@ -16,7 +16,6 @@
 	<message key="plugins.generic.sword.displayName">SWORD プラグイン</message>
 	<message key="plugins.generic.sword.description">雑誌管理者が著者(選択)にSWORDプロトコルを通じた論文のデポジットを許可します。</message>
 	<message key="plugins.generic.sword.enabled">SWORD プラグインは有効です。</message>
-	<message key="plugins.generic.sword.disable">SWORD プラグインは無効です。</message>
 	<message key="plugins.generic.sword.settings">設定</message>
 	<message key="plugins.generic.sword.settings.allowAuthorSpecify">著者によるデポジットポイント指定を許可</message>
 	<message key="plugins.generic.sword.settings.depositPoints">デポジットポイント</message>

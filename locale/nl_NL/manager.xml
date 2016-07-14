@@ -684,7 +684,6 @@
 	<message key="manager.setup.permissions.display">Toon</message>
 	<message key="manager.setup.includeLicense">Toon de licentie bij het gepubliceerde werk.</message>
 	<message key="manager.statistics.reports.filters">Filters</message>
-	<message key="manager.statistics.reports.today">Vandaag</message>
 	<message key="manager.statistics.reports.currentMonth">Deze maand</message>
 	<message key="manager.statistics.reports.orderBy">Rangschik naar</message>
 	<message key="manager.statistics.reports.orderDir">Richting</message>
@@ -737,6 +736,4 @@
 	<message key="manager.setup.copyrightYearBasis">Baseer het jaartal voor het auteursrecht van nieuwe artikelen op</message>
 	<message key="manager.setup.copyrightYearBasis.Article">Standaard wordt het jaar afgeleid van de publicatiedatum van het artikel, zoals bij "publish as you go".</message>
 	<message key="manager.setup.copyrightYearBasis.Issue">Standaard wordt het jaar afgeleid van de publicatiedatum van het nummer.</message>
-	<message key="manager.setup.emailHeader">E-mail koptekst</message>
-	<message key="manager.setup.emailHeaderDescription">De voorbereide e-mails die namens het tijdschrift door het systeem worden verstuurd beginnen met de volgende tekst. Deze e-mails worden verstuurd namens de eerste contactpersoon. Het is belangrijk om duidelijk te maken dat deze persoon het bericht niet zelf verstuurt.</message>
 </locale>

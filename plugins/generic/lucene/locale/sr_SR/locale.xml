@@ -53,7 +53,5 @@
 <li> Koristite zagrade da kreirate složenije upite, npr. <em>arhiva ((časopis I konferencija) NE teze)</em></p>
 </p>]]></message>
 	
-	<message key="plugins.generic.lucene.error.searchServiceOffline">Na žalost OJS sistem pretrage trenutno ne radi, administrator sistema je obavešten o ovome.</message>
-	<message key="plugins.generic.lucene.error.coreNotFound">Traženo jezgro '{$core}' nije pronađeno na solr serveru, da li ste sigurni da je server online?</message>
 	<message key="plugins.generic.lucene.message.indexOnline">Indeksiraj sa {$numDocs} dokumentima onlajn.</message>
 </locale>

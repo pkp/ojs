@@ -26,8 +26,6 @@
 	<message key="plugins.generic.dataverse.settings.dvnUriRequired">رابط الإنترنت لـ Dataverse مطلوب حتماً.</message>
 	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">تعذر الاتصال بـ Dataverse.</message>
 	<message key="plugins.generic.dataverse.settings.usernameRequired">لطفاً، أدخل اسم مستخدم لـ Dataverse.</message>
-	<message key="plugins.generic.dataverse.settings.passwordRequired">لطفاً، أدخل كلمة مرور صحيحة لشبكة Dataverse المحددة.</message>
-
 	<!-- Set up Dataverse: select Dataverse -->
 	<message key="plugins.generic.dataverse.settings.selectDataverse">إختر Dataverse</message>
 	<message key="plugins.generic.dataverse.settings.dataverse">Dataverse</message>

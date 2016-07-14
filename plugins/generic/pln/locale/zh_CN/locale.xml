@@ -45,14 +45,9 @@
 	<message key="plugins.generic.pln.status.transferred">已转移</message>
 	<message key="plugins.generic.pln.status.received">已接收</message>
 	<message key="plugins.generic.pln.status.syncing">同步中</message>
-	<message key="plugins.generic.pln.status.synced">已同步</message>
 	<message key="plugins.generic.pln.status.updated">已更新</message>
 	<message key="plugins.generic.pln.status.local_failure">局部失败</message>
 	<message key="plugins.generic.pln.status.remote_failure">远程失败</message>
-	<message key="plugins.generic.pln.status.reset">重置</message>
-	<message key="plugins.generic.pln.status.yes">是</message>
-	<message key="plugins.generic.pln.status.no">否</message>
-
 	<message key="plugins.generic.pln.depositorTask.name">PKP PLN 存储器任务</message>
 	<message key="plugins.generic.pln.notifications.processing_for">存储进程</message>
 	<message key="plugins.generic.pln.notifications.pln_not_accepting">PKP PLN 当前不接受存储。</message>

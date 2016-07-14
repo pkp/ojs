@@ -149,8 +149,6 @@ Paragraf koji počinje s "Posljednja tema..." nije uvučen.</pre>
 	<message key="default.journalSettings.donationFeeDescription">Časopis sa velikom zahvalnošću prihvaća donacije u bilo kojem iznosu. One uvelike doprinose našim naporima redovnog izlaženja i unaprjeđenja kvalitete časopisa.</message>
 	<message key="default.journalSettings.purchaseArticleFeeDescription">Plaćanje ove naknade omogućit će vam neograničen pristup, preuzimanje i štampanje ovog članka.</message>
 	<message key="section.default.title">Članci</message>
-	<message key="default.journalSettings.emailHeader">SLijedeća poruka se šalje u ime {$journalName}.
-________________________________________________________________________</message>
 	<message key="default.journalSettings.submissionFee">Podnošenje članka</message>
 	<message key="default.journalSettings.donationFee">Donacije časopisu</message>
 	<message key="section.default.abbrev">ART</message>

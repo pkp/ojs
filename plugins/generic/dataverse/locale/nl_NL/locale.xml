@@ -26,8 +26,6 @@
 	<message key="plugins.generic.dataverse.settings.dvnUriRequired">Dataverse Network URL is verplicht.</message>
 	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">Dataverse Network URL is niet geldig</message>
 	<message key="plugins.generic.dataverse.settings.usernameRequired">Geef een geldige gebruikersnaam voor het opgegeven Dataverse Network.</message>
-	<message key="plugins.generic.dataverse.settings.passwordRequired">Geef een geldig wachtwoord voor het opgegeven Dataverse Network.</message>
-
 	<!-- Set up Dataverse: select Dataverse -->
 	<message key="plugins.generic.dataverse.settings.selectDataverse">Kies Dataverse</message>
 	<message key="plugins.generic.dataverse.settings.dataverse">Dataverse</message>

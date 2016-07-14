@@ -737,8 +737,6 @@
 	<message key="manager.setup.copyrightYearBasis">Poner la fecha del copyright del artículo a</message>
 	<message key="manager.setup.copyrightYearBasis.Article">El año por defecto se obtendrá de la fecha de publicación del número, como en "publicar sobre la marcha"</message>
 	<message key="manager.setup.copyrightYearBasis.Issue">El año por defecto se obtendrá de la fecha de publicación del número.</message>
-	<message key="manager.setup.emailHeader">Cabecera del correo electrónico</message>
 	<message key="manager.setup.confirmResetLicenseChanged">Ha cambiado la información sobre licencia y copyright. Guarde los cambios antes de resetear los permisos.</message>
-	<message key="manager.setup.emailHeaderDescription">Las plantillas de correo que son enviadas por el sistema a nombre de la revista comenzarán con la siguiente cabecera. Estos correos se enviarán a nombre del Contacto Principal de la revista, así que es importante aclarar que el Contacto Principal de la revista no es necesariamente el responsable del contenido del mensaje, que puede haber sido enviado por otro usuario pero llega a su nombre.</message>
 	<message key="manager.statistics.reports.yesterday">Ayer</message>
 </locale>

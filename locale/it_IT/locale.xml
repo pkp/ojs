@@ -158,7 +158,6 @@
 	<message key="article.submission">Proposta</message>
 	<message key="article.submissions">Proposte</message>
 	<message key="article.details">Dettagli</message>
-	<message key="article.identifiers">Identificatori</message>
 	<message key="article.abstract">Abstract</message>
 	<message key="article.coverPage.altText">Immagine di copertina</message>
 	<message key="article.accessLogoOpen.altText">Open Access</message>
@@ -170,8 +169,6 @@
 	<message key="article.fontSize.small.altText">Piccolo</message>
 	<message key="article.fontSize.medium.altText">Medio</message>
 	<message key="article.fontSize.large.altText">Grande</message>
-	<message key="article.nbn">NBN</message>
-
 	<!-- Submission Tracking - Common -->
 	<message key="submission.submissionEditing">Lavorazione degli articoli</message>
 	<message key="submission.changeSection">Cambia in</message>

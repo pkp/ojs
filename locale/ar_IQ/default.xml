@@ -132,9 +132,6 @@
 	<pre>4. FORMATTING
 	The paragraph that begins "This last topic..." is not indented.</pre>]]></message>
 
-    <message key="default.journalSettings.emailHeader">الرسالة الآتية يتم إرسالة نيابة عن {$journalName}.
-________________________________________________________________________</message>
-
     <message key="default.journalSettings.emailSignature">________________________________________________________________________
 {$journalName}
 {$indexUrl}/{$journalPath}</message>

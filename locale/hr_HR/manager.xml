@@ -617,7 +617,6 @@
 	<message key="manager.statistics.reports.objectType">Tip objekta</message>
 	<message key="manager.statistics.reports.objectId">ID objekta</message>
 	<message key="manager.statistics.reports.objectId.label">Odredi jedan ili više ID objekta, odvojenih zarezom (npr. 1,2,3,4,5).</message>
-	<message key="manager.statistics.reports.today">Danas</message>
 	<message key="manager.statistics.reports.currentMonth">Tekući mjesec</message>
 	<message key="manager.statistics.reports.orderBy">Naručio</message>
 	<message key="manager.statistics.reports.orderDir">Direkcija</message>
@@ -661,7 +660,6 @@
 	<message key="manager.setup.permissions.display">Prikaz</message>
 	<message key="manager.setup.licenseURLDescription">Upiši URL internet stranice za licencu, ako je imate.</message>
 	<message key="manager.setup.includeLicense">Prikaz licence zajedno sa objavljenim radom.</message>
-	<message key="manager.setup.emailHeader">Zaglavlje e-poruke</message>
 	<message key="manager.setup.journalSetup">Podešavanje časopisa</message>
 	<message key="manager.setup.subjectClassificationURLValid">Upišite važeći udaljeni URL (uključujući i  http://).</message>
 	<message key="manager.groups.publishEmails">Objavite e-adrese članova</message>
@@ -689,7 +687,6 @@
 	<message key="manager.setup.copyrightYearBasis.Article">Pretpostavljena godina će biti izvučena iz nadnevka objavljivanja članka kao u "objavi kako ide".</message>
 	<message key="manager.setup.copyrightYearBasis.Issue">Pretpostavljena godina će biti izvučena iz nadnevka objavljivanja izdanja.</message>
 	<message key="manager.setup.customizingTheLook">Korak 5. Prilagođavanje izgleda</message>
-	<message key="manager.setup.emailHeaderDescription">Pripremljene poruke koje sustav šalje u ime časopisa će započeti slijedećim zaglavljem. Ove poruke će biti adresirane od Glavnog kontakta. Važno je razjasniti da Prvi kontakt nijenužno odgovoran za te poruke koje je možda poslao drugi korisnik.</message>
 	<message key="manager.setup.gettingDownTheDetails">Korak 1. Ulazak u detalje</message>
 	<message key="manager.setup.guidingSubmissions">Korak 3. Vođenje podnesenih članaka</message>
 	<message key="manager.setup.journalFavicon">Omiljena sličica časopisa</message>

@@ -33,7 +33,6 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">للملفات التكميلية.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample">على سبيل المثال: vol%viss%ipp%p يمكن أن تنشئ لاحقة URN "vol3iss2pp230".</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">لاحقة URN يمكن أن تتخذ أي شكل، لكنها ينبغي أن تكون فريدة لكل فقرة منشورة.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">استعمل "المعرف المخصص" للفقرات المنشورة بمثابة لاحقة URN (يجب تمكينها في خطوة التهيئة 4.3). هذا نفس المعرف الذي سيتم استعماله لروابط الإنترنت العمومية.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">أدخل لاحقة URN منفردة لكل فقرة منشورة مستقلة ومختلفة عن "المعرف المخصص" المذكور في الخيار السابق. ستجد حقل إدخال URN إضافي في كل صفحة بيانات وصفية.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs">إزالة URN</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.description">إذا قمت بتغيير إعدادات URN فإن URN  التي سبق لك تعيينها لن تكون ذات جدوى. بمجرد حفظ إعدادات URN استعمل هذا الزر لإزالة كل ما موجود من URN  بحيث يمكن للإعدادات الجديدة أن يظهر مفعولها في المقالات الموجودة سلفاً.</message>

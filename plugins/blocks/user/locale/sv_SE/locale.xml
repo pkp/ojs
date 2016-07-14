@@ -19,7 +19,6 @@
 	<message key="plugins.block.user.displayName">Användarblock</message>
 	<message key="plugins.block.user.description">Detta insticksprogram tillhandahåller verktyg för användarkontohantering i sidomenyn (exempelvis in- och utloggning, profillänk osv.).</message>
 	<message key="plugins.block.user.loggedInAs">Du är inloggad som...</message>
-	<message key="plugins.block.user.notLoggedInAs">Du är inte inloggad! </message>
 	<message key="plugins.block.user.myJournals">Mina tidskrifter</message>
 	<message key="plugins.block.user.myProfile">Min profil</message>
 	<message key="plugins.block.user.logout">Logga ut</message>

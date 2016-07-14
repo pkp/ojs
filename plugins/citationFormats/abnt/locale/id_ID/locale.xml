@@ -15,6 +15,5 @@
 	<message key="plugins.citationFormats.abnt.displayName">Plugin format kutipan ABNT</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Plugin ini This plugin menerapkan kutipan ABNT.</message>
-	<message key="plugins.citationFormat.abnt.location">Amerika Utara</message>
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Tersedia pada: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Tanggal Akses: {$retrievedDate}]]></message>
 </locale>

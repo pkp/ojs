@@ -29,7 +29,6 @@
 	<message key="manager.setup.licenseURLDescription">Upišite URL za stranu o licenci ako je dostupna.</message>
 	<message key="manager.setup.includeLicense">Prikaz licence sa objavljenim radom.</message>
 	<message key="manager.setup.resetPermissions">Vrati na početno stanje dozvole u vezi članka.</message>
-	<message key="manager.setup.emailHeader">Zaglavlje e-poruke</message>
 	<message key="manager.setup.journalThumbnail">Mala slika časopisa</message>
 	<message key="manager.setup.subjectClassificationURLValid">Upišite važeći udaljeni URL (uključujuči http://)</message>
 	<message key="manager.setup.useThumbnail">Mala slika</message>
@@ -40,7 +39,6 @@
 	<message key="manager.statistics.reports.objectNotFound">Objekat nijepronađen u bazi podataka</message>
 	<message key="manager.statistics.reports.objectType">Tip objekta</message>
 	<message key="manager.statistics.reports.objectId">id objekta</message>
-	<message key="manager.statistics.reports.today">Danas</message>
 	<message key="manager.statistics.reports.currentMonth">Ovajmesec</message>
 	<message key="manager.statistics.reports.orderBy">Poredaj po</message>
 	<message key="manager.statistics.reports.orderDir.asc">rastući</message>
@@ -66,7 +64,6 @@
 	<message key="manager.setup.copyrightYearBasis">Postavi godinu autorskih prava članka na</message>
 	<message key="manager.setup.copyrightYearBasis.Article">Pretpostavljena godina za autorska prava će biti definisana prema datumu objavljivanja kao u "objavi-kako-ideš".</message>
 	<message key="manager.setup.copyrightYearBasis.Issue">Pretpostavljena godina za autorska prava će biti definisana prema datumu objavljivanja izdanja.</message>
-	<message key="manager.setup.emailHeaderDescription">Pripremljene poruke koje će biti poslate u ime časopisa će početi sledećim zaglavljem. Ove poruke će biti poslate o dstrane Glavnog kontakta. Važno je da se objasni da glavni kontakt nije ista osoba kao Prvi kontakt te da Prvi kontakt nije odgovoran za sadržaj poruke koja može biti poslata u ime drugog korisnika.</message>
 	<message key="manager.statistics.reports.defaultReportTemplates">Početni predlošci za izveštaje</message>
 	<message key="manager.statistics.reports.defaultReport.articleDownloads">Preuzimanja datoteka članka</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">Pregleda apstrakta strana</message>

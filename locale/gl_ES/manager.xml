@@ -200,8 +200,6 @@
 	<message key="manager.setup.disciplineExamples">(P.e., historia; formación; antropoloxía; psicología; estudos culturais; dereito)</message>
 	<message key="manager.setup.disciplineProvideExamples">Fornece exemplos de disciplinas académicas relevantes para esta revista</message>
 	<message key="manager.setup.displayCurrentIssue">Engadir a Táboa de Contidos do número actual (si está disponible).</message>
-	<message key="manager.setup.doiPrefix">Prefixo de DOI</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[O prefixo de DOI (Identificador de Obxecto Digital) está asignado por <a href="http://www.crossref.org" target="_new">CrossRef</a> e ten o formato 10.xxxx (p.e. 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Decisión del Editor</message>
 	<message key="manager.setup.editorialMembers">Ir a Membros do Consello e engadir membros ao Consello Editorial e/o ao Consello Revisor. Esta tarefa pódese facer hacer máis adiante.</message>
 	<message key="manager.setup.editorialProcess1">Un/a ou máis editores/a administran os pasos básicos sen roles designados.</message>
@@ -410,8 +408,6 @@
 	<message key="manager.setup.subjectExamples">(P.e., lóxica; ética; xeometría euclidiana)</message>
 	<message key="manager.setup.subjectKeywordTopic">Palabras chave</message>
 	<message key="manager.setup.subjectProvideExamples">Fornece exemplos de palabras chave ou temas como guía</message>
-	<message key="manager.setup.submissionEmailLogging">Manter un rexistro de todos os emails relativos a un envío no seu Historial.</message>
-	<message key="manager.setup.submissionEventLogging">Manter un rexistro de todas as accións relativas a un envío no su Historial.</message>
 	<message key="manager.setup.submissionGuidelines">Directrices de envío</message>
 	<message key="manager.setup.submissionPreparationChecklist">Listaxe de Comprobación de Envío</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Ao facer un envío á revista o primero que se pide é revisar que se cumpren todos os requisitos da Listaxe de Comprobación de Envío antes de continuar. A lista tamén aparece nas Directrices para Autores/as, en  Sobre a Revista. É posibel editar a listaxe, ainda que  todos os elementos incluidos deberán ser marcados antes de proceder co envío.</message>
@@ -649,24 +645,17 @@
 	<message key="manager.sections.wordCount">Cantidade de palabras</message>
 	<message key="manager.sections.wordCountInstructions">Limitar o número de palabras dos resumos (0 se non hai límite)</message>
 	<message key="manager.setup.history">Historia da Revista</message>
-	<message key="manager.setup.doiSuffix">Sufixo DOI</message>
-	<message key="manager.setup.doiSuffixDefault">Usar padrón por defecto (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixDescription">Un sufixo DOI pode tomar cualquera forma, ainda que ten que ser único para cada ítem publicado.</message>
-	<message key="manager.setup.form.doiPrefixPattern">Un padrón DOI ten que ser da forma 10.xxxx.</message>
 	<message key="manager.setup.journalFavicon">Icono de Sitio da Revista</message>
 	<message key="manager.setup.journalFaviconDescription">Insire un icono de sitio a esta revista para que se vexa na barra de navegación cando os usuarios visiten el site.</message>
 	<message key="manager.setup.journalFaviconInvalid">Formato de icono de site inválido. Acéptanse os formatos  .ico, .png, and .gif.</message>
 	<message key="manager.subscriptions.withStatus">Estado</message>
 	<message key="manager.subscriptions.form.userProfileInstructions">Nota: Todos as mudanzas en abaixo son para o perfil do usuario en todo o sistema.</message>
 	<message key="manager.setup.historyDescription">Este texto aparecerá na sección "Sobre nós"  da revista e pode ser usado para descreber cambios en cargos, consello editorial,e outros temas de relevo para a historia da revista.</message>
-	<message key="manager.setup.doiSuffixPattern.example">Por exemplo,  poderíase crear un DOI do tipo 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Use "Identificador Personalizado" para ítems publicados como de sufixo DOI (ter que estar habilitado no Paso 4).</message>
 	<message key="manager.setup.sponsorNoteDescription">Este texto aparecerá baixo a cabeceira "Patrocinadores" e sobre a listaxe de nomes e URLs dos patrocinadores baixo "Patrocinio da Revista" na páxina "Sobre nós".</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">As notificacións automatizadas por email (dispoñíbeis para edición polos Administradores da Revista en Emails Preparados de OJS) poden ser enviadas ao Administrador de Subscricións logo de completar os pagamentos online de subscrición.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">Notificar ao Administrador de Subscricións por email sobre a compra online dunha subscrición individual.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Nota:</strong> Para habilitar estas opcións, o Administrador da Revista ten que habilitar o módulo de pagamentos online, incluindo os pagamentos online para subscricións, baixo Taxas de Lector.]]></message>
 	<message key="manager.setup.contributorNoteDescription">Este texto aparecerá baixo o titular "Fontes de Suporte/Apoio" e sobre a listaxe de nomes e urls das organizaciones patrocinadoras baixo "Patrocinadores da Revista" na páxina "Sobre nós".</message>
-	<message key="manager.setup.doiSuffixPattern">Use o padrón xerado a continuación para xerar sufixos DOI. Use %j para as iniciais da revista, %v para o número de volume, %i para o número da revista, %a para o ID do artigo en OJS, e %p para o número de páxina.</message>
 	<message key="manager.setup.publisherNoteDescription">Este texto aparecerá baixo o titular "Editor" e sobre o nome/url do editor baixo "Patrocinio da Revista" na páxina "Sobre Nós".</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">Notificar ao Administrador de Subscricións por email logo da compra online dunha Subscrición Institucional (recomendado).</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual">Notificar ao Administrador de Subscricións por email logo da renovación online dunha Subscrición Individual.</message>
@@ -677,8 +666,6 @@
 	<message key="manager.language.submissions">Peticións</message>
 	<message key="manager.plugins.versionFileInvalid">O ficheiro version.xml no directorio de plugins contén dados inválidos.</message>
 	<message key="manager.reviewFormElements.included">Incluído na mensaxe ao autor.</message>
-	<message key="manager.setup.doiReassign">Reassignar DOIs</message>
 	<message key="manager.plugins.invalidPluginArchive">O arquivo de  plugin subido non contén un porta-folio que se corresponde co nome do plugin.</message>
 	<message key="manager.plugins.tarCommandNotFound">O comando tar non está dispoñíbel. Fai favor, configura correctamente o seu "config.inc.php".</message>
-	<message key="manager.setup.doiReassign.description">Se muda a configuración deo DOI, DOIs que xa se asignaron no se van ver afectados. Unha vez que a configuración do DOI se garda, utiliza este botón para borrar todos os DOIs existentes, de xeito que os novos ajustes hanse facer efectivos nos artigos existentes.</message>
 </locale>

@@ -41,14 +41,7 @@
 	<message key="admin.journals.form.pathExists">所選的路徑已經被其它期刊所使用。</message>
 	<message key="admin.journals.enableJournalInstructions">在這個網站上公開顯示這種期刊。</message>
 	<message key="admin.journals.journalDescription">期刊說明</message>
-	<message key="admin.journals.importOJS1">從 OJS 1 輸入</message>
-	<message key="admin.journals.importOJS1.editMigratedJournal">編輯移入的期刊</message>
-	<message key="admin.journals.importOJS1.conflict.desc">某些使用者帳號具有衝突的資訊。OJS 1.x允許多個使用者帳號共用同樣的電子郵件地址，而OJS 2.x則否。在下面的列表中，第二的帳號具有一個指派給它的暫時性電子郵件帳號。這些資訊應該手動加以更正，可以透過指派不同的電子郵件帳號，或者合併這些帳號。</message>
-	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) 和 {$secondUsername} ({$secondName})</message>
-	<message key="admin.journals.importOJS1Instructions">向OJS建議「升級」文件中的從OJS 1 升級到 OJS 2詳細資訊</message>
 	<message key="admin.journal.pathImportInstructions">已經存在的期刊路徑或是路徑已經被設置(例如："ojs")。</message>
-	<message key="admin.journal.importPath">OJS 1 路徑</message>
-	<message key="admin.journal.importPathInstructions">已經完成第一種期刊安裝的在地檔案系統(例如："/var/www/ojs")。</message>
 	<message key="admin.journals.importSubscriptions">輸入說明</message>
 	<message key="admin.journals.transcode">從ISO8859-1轉換文章後設資料的編碼</message>
 	<message key="admin.journals.form.importPathRequired">需要輸入的路徑。</message>

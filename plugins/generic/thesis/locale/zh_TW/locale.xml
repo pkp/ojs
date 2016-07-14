@@ -123,6 +123,4 @@
 	<message key="plugins.generic.thesis.form.supervisorMiddleName">指導教授中間名</message>
 	<message key="plugins.generic.thesis.form.supervisorEmail">指導教授Email</message>
 	<message key="plugins.generic.thesis.form.supervisorEmailValid">需要輸入一個有效的指導教授E-mail。</message>
-	<message key="plugins.generic.thesis.form.saveAndCreateAnother">存檔並建立下一筆資料</message>
-
 </locale>

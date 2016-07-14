@@ -34,7 +34,6 @@
 	<message key="author.submit.cancelSubmission">Pode completar este envío máis tarde seleccionando Envíos Activos na home de autor/a.</message>
 	<message key="author.submit.notAccepting">Esta revista non aceita envíos no intre.</message>
 	<message key="author.submit.requestWaiver">Solicitar exención de pago</message>
-	<message key="author.submit.qualityForWaiver">Por favor, considere eliminar a tarifa de envio de artigo neste caso</message>
 	<message key="author.submit.addReasonsForWaiver">Por favor, indique a seguir os motivos polos que solicita a exención de pago.</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Subir versión correxida</message>
 	<message key="author.submissions.proofreadingCorrections">Corrección de probas</message>

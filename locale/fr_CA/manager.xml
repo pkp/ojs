@@ -694,8 +694,6 @@
 	<message key="manager.setup.copyrightYearBasis">Baser l'année de mention de droit d'auteur du nouvel article sur</message>
 	<message key="manager.setup.copyrightYearBasis.Article">L'année par défaut sera prise de la date de publication de l'article, comme dans "publish-as-you-go".</message>
 	<message key="manager.setup.copyrightYearBasis.Issue">L'année par défaut sera prise de la date de publication du numéro.</message>
-	<message key="manager.setup.emailHeader">En-tête du courriel</message>
-	<message key="manager.setup.emailHeaderDescription">Les courriels préparés qui sont envoyés par le système au nom de la revue commenceront par l'en-tête suivant. Ces courriels seront adressés de la part du contact principal, c'est donc important de clarifier que le contact principal n'est pas forcément responsable du contenu du message, celui-ci pourrait être envoyé par un usager différent.</message>
 	<message key="manager.statistics.defaultMetricDescription">Votre revue est paramétrée pour enregistrer plus d'une mesure d'utilisation. Les statistiques d'utilisation seront affichées dans plusieurs contextes.
 Il y a des cas où seulement une seule statistique d'utilisation doit être utilisée , ex. pour afficher une liste ordonnée des articles les plus utilisés ou pour classer les résultats de recherche. Veuillez sélectionner l'une des mesures paramétrées comme celle par défaut.</message>
 	<message key="manager.statistics.reports.aggregationColumns">Regrouper les stats par :</message>
@@ -717,7 +715,6 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
 	<message key="manager.statistics.reports.objectType">Type d'objet</message>
 	<message key="manager.statistics.reports.objectId">ID d'objet</message>
 	<message key="manager.statistics.reports.objectId.label">Définir un ou plusieurs ID d'objet séparés par une virgule (ex. 1,2,3,4,5).</message>
-	<message key="manager.statistics.reports.today">Aujourd'hui</message>
 	<message key="manager.statistics.reports.currentMonth">Mois courant</message>
 	<message key="manager.statistics.reports.orderBy">Trier par</message>
 	<message key="manager.statistics.reports.orderDir">Direction</message>

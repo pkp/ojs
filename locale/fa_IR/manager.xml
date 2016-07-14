@@ -202,7 +202,6 @@
 	<message key="manager.setup.disciplineExamples">مانند: تاریخ; آموزش; جامعه شناسی; روانشناسی; مطالعات فرهنگی; حقوق</message>
 	<message key="manager.setup.disciplineProvideExamples">مثال هائی برای رسته تخصصی برای این مجله</message>
 	<message key="manager.setup.displayCurrentIssue">افزودن فهرست مطالب شماره جاری در صورت موجود بودن.</message>
-	<message key="manager.setup.doiPrefix">DOI پیشوند</message>
 	<message key="manager.setup.editorDecision">تصمیم دبیر</message>
 	<message key="manager.setup.editorialMembers">به قسمت اعضای شورا رفته و اعضای شورای نویسندگان یا کارشناسان را کم یا زیاد کنید. این کار را در هر زمانی در طول حیات آن لاین مجله میتوان انجام داد.</message>
 	<message key="manager.setup.editorialProcess1">یک یا چند دبیر مراحل پایه ای را بدون انتصاب رل انجام میدهند.</message>
@@ -410,8 +409,6 @@
 	<message key="manager.setup.subjectExamples">مانند: فتوسنتز; سیاه چاله; مسئله نقشه چهاررنگ; تئوری بایز</message>
 	<message key="manager.setup.subjectKeywordTopic">کلید واژه ها</message>
 	<message key="manager.setup.subjectProvideExamples">مثالهای برای کلیدواژه به عنوان راهنمائی برای نویسنگان</message>
-	<message key="manager.setup.submissionEmailLogging">فعال سازی ثبت ایمیل های ساب میشن که موجب می شود تمام ایمیلهائی که در ارتباط با ساب میشن ارسال میشود ثبت شود و از طریق تاریخچه ساب میشن قابل دستیابی است.</message>
-	<message key="manager.setup.submissionEventLogging">فعال سازی ثبت وقایع. باعث می شود تمامی اقدامات در مورد ساب میشن ثبت شود که از طریق تاریخجه ساب میشن قابل دستیابی است.</message>
 	<message key="manager.setup.submissionGuidelines">راهنمای ساب میشن</message>
 	<message key="manager.setup.submissionPreparationChecklist">چک لیست مهیا کردن ساب میشن</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">در بدو ارسال ساب میشن به مجله ابتدا از نویسنده خواسته می شود تا موارد مختلف مربوط به تهیه ساب میشن را در یک چک لیست چک بزند تا بدین وسیله اطمینان حاصل شود که وی آنها را رعایت کرده است. این چک لیست همچنین در راهنمای نویسندگان نیز در قسمت درباره مجله ظاهر می شود. در زیر میتوان این لیست را مشاهده و بدلخواه آنرا ویرایش کرد. تمام موارد این چک لیست میبایست توسط نویسنده چک بخورد تا وی قادر به ادامه ساب میشن باشد.</message>
@@ -615,19 +612,6 @@
 	<message key="manager.setup.contributorNoteDescription">این متن در محلی پائین تر از عنوان منابع حمایت و بالاتر از لیست نامها و آدرسهای سازمانهای حامی تحت عنوان اسپانسر مجله ظاهر میشود.</message>
 	<message key="manager.setup.history">تاریخچه مجله</message>
 	<message key="manager.setup.historyDescription">این متن در قسمت درباره مجله ظاهر میشود و از آن میتوان برای توصیف تغییرات در عنوان، شورای سردبیری و دیگر موارد تغییر مربوط به تاریخچه انتشاراتی مجله استفاده کرد.</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[دی او آی یا شماره شی منحصربه فرد توسط 
-<a href="http://www.crossref.org" target="_new">CrossRef</a>
-انتساب داده میشود و دارای فرمات
-10.xxxx
-میباشد. مانند 
-10.1234]]></message>
-	<message key="manager.setup.doiSuffix">پسوند دی او آی</message>
-	<message key="manager.setup.doiSuffixDefault">استفاده از الگوی پیش فرض یعنی</message>
-	<message key="manager.setup.doiSuffixPattern">ازالگوی زیر برای تولید پسوند دی او آی استفاده کن. %j یعنی اختصار مجله، %v یعنی شماره دوره، %i یعنی شماره مجله، %a یعنی آی دی مقاله او ج اس و %p یعنی شماره صفحه</message>
-	<message key="manager.setup.doiSuffixPattern.example">به انوان مثال vol%viss%ipp%p یک دی او آی مانند 10.1234/vol3iss2pp230 ممکن است تولید کند.</message>
-	<message key="manager.setup.doiSuffixDescription">پسوند دی او آی به هر شکلی میتواند درآید، ولی میبایست برای هر آیتم منتشر شده منحصر به فرد باشد.</message>
-	<message key="manager.setup.doiSuffixPublisherId">بکاربردن پسوند دی او آی به عنوان شناسه دلخواه. ابتدا باید در مرحله ۴ فعال شده باشد.</message>
-	<message key="manager.setup.form.doiPrefixPattern">الکوی دی او آی میبایست بصورت 10.xxxx باشد.</message>
 	<message key="manager.setup.issnDescription"><![CDATA[شابن یا شماره استاندارد بین المللی نشریه یه عدد هشت رقمی است که مشخصه انتشارات ادواری میباشد . شامل ادواری های الکترونیکی نیز میشود. اداره آن توسط شبکه کسترده ای از مراکز ملی است که توسط یک مرکز بین المللی در پاریس هماهنگ میگردند. پشتیبان آن یونسکو و دولت فرانسه است. شابن را میتوان از 
 <a href="http://www.issn.org" target="_new">وب سایت شابن</a>
 بدست آورد.]]></message>
@@ -692,6 +676,4 @@
 تنظیم کنید.</message>
 	<message key="manager.plugins.versionFileInvalid">version.xml در پوشه پلاگین حاوی داده های بی اعتبار است.</message>
 	<message key="manager.reviewFormElements.included">در داخل پیام برای نویسنده ضمیمه شده است.</message>
-	<message key="manager.setup.doiReassign">انتساب مجدد دی او آی ها</message>
-	<message key="manager.setup.doiReassign.description">در صورت تغییر تنظیمات دی او آی خود، دی او آی هائی که تا هم اکنون انتساب داده شده اند تحت تاثیر قرار نخواهند گرفت. به مجرد ذخیره تنظیمات دی او آی، از این دکمه برای پاک کردن تمام دی او آی های موجود استفاده کنید، بطوری که تنظیمات جدید برای مقالات موجود اعمال گردد.</message>
 </locale>

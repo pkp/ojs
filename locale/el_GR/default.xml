@@ -107,8 +107,6 @@
 	<message key="default.journalSettings.membershipFee">Συνεργαζόμενο Μέλος</message>
 	<message key="default.journalSettings.donationFee">Δωρεές στο περιοδικό</message>
 	<message key="section.default.policy">-</message>
-	<message key="default.journalSettings.emailHeader">Το παρακάτω μήνυμα παραδόθηκε για λογαριασμό του  {$journalName}.
-________________________________________________________________________</message>
 	<message key="default.journalSettings.purchaseIssueFee">Αγορά Τεύχους</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Η πληρωμή αυτού του τέλους θα σας επιτρέχει να δείτε, κατεβάσετε και τυπώσετε αυτό το τεύχος</message>
 </locale>

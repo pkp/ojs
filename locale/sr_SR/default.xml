@@ -37,8 +37,6 @@
 	<message key="default.journalSettings.purchaseArticleFee">Kupovina članaka</message>
 	<message key="default.journalSettings.membershipFee">Članstvo asocijacija</message>
 	<message key="default.journalSettings.donationFee">Donacije časopisu</message>
-	<message key="default.journalSettings.emailHeader">Sledeća poruka se šalje u ime  {$journalName}.
-________________________________________________________________________</message>
 	<message key="default.journalSettings.purchaseIssueFee">Kupi izdanje</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Plaćanje ovog iznosa će vam omogućiti da vidite, preuzmete ili odštampate izdanje broja.</message>
 </locale>

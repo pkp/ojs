@@ -60,7 +60,6 @@
 	<message key="editor.issues.accessStatus">Starea accesului</message>
 	<message key="editor.issues.accessDate">Data la care se va publica în regim de acces deschis</message>
 	<message key="editor.issues.enableOpenAccessDate">Activează accesul dechis cu întârziere</message>
-	<message key="editor.issues.issuePublicIdentificationExists">Identificatorul public pentru numărul de revistă există deja.</message>
 	<message key="editor.issues.coverPage">Imagine pentru copertă</message>
 	<message key="editor.issues.coverPageInstructions">(Formate permise: .gif, .jpg, sau .png )</message>
 	<message key="editor.issues.uploaded">Încărcate</message>

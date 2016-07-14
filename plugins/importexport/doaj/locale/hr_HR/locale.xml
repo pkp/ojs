@@ -16,6 +16,4 @@
 	<message key="plugins.importexport.doaj.displayName">Dodatak za iznošenje u DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Ovaj dodatak iznosi časopis za DOAJ i omogućuje slanje informacija o časopisu DOAJ kontaktu</message>
 	<message key="plugins.importexport.doaj.export">Iznesi podatke časopisa u DOAJ</message>
-	<message key="plugins.importexport.doaj.export.email">Iznesi relevantne informacije u DOAJ</message>
-	<message key="plugins.importexport.doaj.export.emailInfo">Kako biste uključili svoj časopis u DOAJ, molimo do kraja ispunite ovaj obrazac, koji se djelomično automatski ispunjava i potom ga pošaljite DOAJ kontaktu.</message>
 </locale>

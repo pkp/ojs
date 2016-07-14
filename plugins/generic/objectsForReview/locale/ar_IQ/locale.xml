@@ -71,8 +71,6 @@
 	<!-- Objects For Review Settings -->
 	<message key="plugins.generic.objectsForReview.settings">الإعدادات</message>
 	<message key="plugins.generic.objectsForReview.settings.objectsForReviewMode">الإدارة</message>
-	<message key="plugins.generic.objectsForReview.settings.ModeFull">الطريقة 1: أدرج المكونات المتاحة للتحكيم، قم بإدارة محكمي المكونات، ثم أنشر البيانات الوصفية للمكون.</message>
-	<message key="plugins.generic.objectsForReview.settings.ModeMetadata">الطريقة 2: Only publish object metadata.</message>
 	<message key="plugins.generic.objectsForReview.settings.description"><![CDATA[<h5>الطريقة 1</h5><p>يتم العمل وفق المخطط الانسيابي الآتي:</p><ul><li>يقوم المحرر بإضافة المكونات المتاحة للتحكيم.</li><li>المؤلفون المهتمون بتحكيم مكون ما بإمكانهم التماس كتابة التحكيم، عبر إشعار المحرر بذلك.</li><li>بإمكان المحرر قبول الالتماس أو رفضه، عبر إشعار المؤلف.</li><li>إذا تم قبول التماس التحكيم يتم ضبط تأريخ استيجاب للتحكيم.</li><li>يمكن للمحرر إرسال نسخة من المكون إلى المؤلف عبر البريد الالكتروني.</li><li>يقدم المؤلف تحكيمه عبر الإنترنت عبر عملية تقديم قياسية.</li><li>بيانات المكون الوصفية تُنشر كجزء من تقديم تحكيم المكون.</li></ul><p>هذه الإضافة تدعم عمل المجلات ذات أكثر من محرر واحد. عندما يقوم أحد المحررين بإضافة مكون جديد للتحكيم، يصير تلقائياً المحرر الرئيسي وعنوان الاتصال المعني بتحكيم المكون.</p><h5>الطريقة 2</h5><p>يتم العمل وفق المخطط الانسيابي الآتي:</p><ul><li>يضيف المحرر مكونات للتحكيم.</li><li>يطابق المحرر تقديمات التحكيم مع المكون المعني.</li><li>بيانات الكتاب الوصفية تُنشر كجزء من تقديم تحكيم المكون.</li></ul>]]></message>
 	<message key="plugins.generic.objectsForReview.settings.displayMetadata">عرض البيانات الوصفية للمكون</message>
 	<message key="plugins.generic.objectsForReview.settings.displayAbstract">عرض البيانات الوصفية للمكون على صفحات ملخصات المقالات.</message>
@@ -245,8 +243,6 @@
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredFields">لطفاً، إملأ الحقول المطلوبة.</message>
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredPersonFields">لطفاً، إختر دور الشخص وأذكر اسمه الأول أو اسمه الأخير.</message>
 	<!-- Objects For Review Settings -->
-	<message key="plugins.generic.objectsForReview.settings.ModeRequired">الطريقة مطلوبة حتماً.</message>
-	<message key="plugins.generic.objectsForReview.settings.ModeValid">لطفاً، حدد الطريقة الصحيحة.</message>
 	<message key="plugins.generic.objectsForReview.settings.numDaysReminderValid">لطفاً، حدد عدداً صحيحاً من الأيام لرسالة التذكير.</message>
 	<message key="plugins.generic.objectsForReview.settings.dueWeeksRequired">لطفاً، حدد عدد الأسابيع التي تستغرقها مدة تحكيم المكونات عادة.</message>
 	<message key="plugins.generic.objectsForReview.settings.dueWeeksValid">لطفاً، حدد عدداً صحيحاً من الأسابيع التي تستغرقها مدة تحكيم المكونات.</message>

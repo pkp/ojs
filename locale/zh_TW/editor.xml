@@ -24,7 +24,6 @@
 	<message key="editor.submissionArchive.saveChanges">儲存對於存檔稿件所做的變更？標記要刪除的稿件會永久性地從系統中被刪除。</message>
 	<message key="editor.submissionArchive.confirmDelete">您確定您要永久性地刪除這份稿件？</message>
 	<message key="editor.submissionReview.confirmDecision">您確定您要記錄這個決定？</message>
-	<message key="editor.submissionReview.notes">「期限」是指離審查截止日還剩下多少週或者已經過期多少(-)週。當一個審查人接受審稿的邀請時就算開始計算。</message>
 	<message key="editor.notifyUsers">通知使用者</message>
 	<message key="editor.usersNotified">已通知使用者</message>
 	<message key="editor.notifyUsers.allUsers">({$count})</message>
@@ -49,7 +48,6 @@
 	<message key="editor.issues.accessStatus">閱讀狀態</message>
 	<message key="editor.issues.accessDate">開放閱讀日期</message>
 	<message key="editor.issues.invalidAccessDate">閱讀日期無效</message>
-	<message key="editor.issues.issuePublicIdentificationExists">出版期數之識別號已經存在。</message>
 	<message key="editor.issues.coverPage">封面影像</message>
 	<message key="editor.issues.coverPageInstructions">(可用格式： .gif, .jpg, 或 .png )</message>
 	<message key="editor.issues.uploaded">已上傳</message>

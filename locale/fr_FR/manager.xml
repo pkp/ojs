@@ -706,7 +706,6 @@
 	<message key="manager.statistics.reports.objectType">Type d'objet</message>
 	<message key="manager.statistics.reports.objectId">ID de l'objet</message>
 	<message key="manager.statistics.reports.objectId.label">Définir un ou plusieurs identifiant(s) d'objet, séparés par une virgule (ex.: 1,2,3,4,5).</message>
-	<message key="manager.statistics.reports.today">Aujourd'hui</message>
 	<message key="manager.statistics.reports.currentMonth">Mois actuel</message>
 	<message key="manager.statistics.reports.orderBy">Mettre en ordre</message>
 	<message key="manager.statistics.reports.orderDir.asc">Ascendant</message>
@@ -733,7 +732,5 @@
 	<message key="manager.setup.copyrightYearBasis">Droit de reproduction annuel</message>
 	<message key="manager.setup.copyrightYearBasis.Article">Une année par défaut sera extraite et renseignée à partir de la date de publication de l’article comme dans un "publish-as-you-go".</message>
 	<message key="manager.setup.copyrightYearBasis.Issue">Une année par défaut sera extraite de la date du numéro de la publication.</message>
-	<message key="manager.setup.emailHeader">En-tête du courriel</message>
-	<message key="manager.setup.emailHeaderDescription">Les courriels préparés envoyés par le système au nom de la revue débuteront avec l'en-tête suivant. Le contact principal figurera comme expéditeur de ces courriels. Il est donc important de préciser que le contact principal n’est pas nécessairement responsable du contenu du message, qui peut être envoyé au nom d'un autre utilisateur.</message>
 	<message key="manager.statistics.reports.objectNotFound">Objet introuvable dans la base</message>
 </locale>

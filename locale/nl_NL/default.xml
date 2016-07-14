@@ -166,6 +166,4 @@ De paragraaf die begint met  "Dit laatste onderwerp..." is niet ingesprongen.</p
 	<message key="default.journalSettings.donationFeeDescription">Donaties van iedere omvang worden onder dank aanvaard en verschaffen de redactie middelen om een tijdschrift van de hoogst mogelijke kwaliteit aan de lezers aan te blijven bieden.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Koop issue</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Door deze kosten te betalen kunt u dit issue bekijken, downloaden en afdrukken.</message>
-	<message key="default.journalSettings.emailHeader">Dit bericht wordt u toegezonden namens {$journalName}.
-________________________________________________________________________</message>
 </locale>

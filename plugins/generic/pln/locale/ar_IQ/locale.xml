@@ -63,14 +63,9 @@
     <message key="plugins.generic.pln.status.sent">مرسل إلى LOCKSS</message>
     <message key="plugins.generic.pln.status.syncing">قيد المزامنة</message>
     <message key="plugins.generic.pln.status.agreement">موافقة</message>
-    <message key="plugins.generic.pln.status.synced">تمت مزامنتها</message>
 	<message key="plugins.generic.pln.status.updated">محدثة</message>
 	<message key="plugins.generic.pln.status.local_failure">فشل محلي</message>
 	<message key="plugins.generic.pln.status.remote_failure">فشل ناء</message>
-	<message key="plugins.generic.pln.status.reset">إعادة ضبط</message>
-	<message key="plugins.generic.pln.status.yes">نعم</message>
-	<message key="plugins.generic.pln.status.no">لا</message>
-
 	<message key="plugins.generic.pln.depositorTask.name">مهمة الإيداع في PLN لمشروع المعرفة العامة</message>
 	<message key="plugins.generic.pln.notifications.processing_for">معالجة الإيداع الخاص بـ {$title}.</message>
     <message key="plugins.generic.pln.notifications.getting_servicedocument">يجري الحصول على مستند الخدمة.</message>

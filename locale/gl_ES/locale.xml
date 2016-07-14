@@ -204,12 +204,6 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-	<message key="submission.event.logLevel">Nivel</message>
-	<message key="submission.event.logLevel.info">Información</message>
-	<message key="submission.event.logLevel.notice">Aviso</message>
-	<message key="submission.event.logLevel.warning">Advertencia</message>
-	<message key="submission.event.logLevel.error">Erro</message>
-	
 	<message key="submission.event.general.defaultEvent">Evento de envío</message>
 	<message key="submission.event.general.articleSubmitted">Artigo enviado</message>
 	<message key="submission.event.general.issueScheduled">Envío axendado para publicación</message>
@@ -278,9 +272,6 @@ Ten en conta que a interface OAI pódese desactivar editando a configuración de
 </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Emprega este formulario para modificar a configuración do teu sistema (o ficheiro <tt>config.inc.php</tt>). Clica en "gardar" para gardar a nova configuración, o en "mostrar" para  mostrar o ficheiro de configuración actualizado sen modificar a configuración actual.
-<br /><br />
-<span class="formError">Advertencia: a modificación destes valores pode provocar que o seu su sitio fique inaccesible (sendo preciso arranxar manualmente o ficheiro de configuración). Recoméndase que no realices nengun cambio se non sabes exactamente o que estás a facer.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>¡ATENCIÓN!</h4>
 <p>O sistema non puido sobreescribir automáticamente o ficheiro de configuración. Para aplicar os cambios á configuración compre abrir o ficheiro <tt>config.inc.php</tt>  nun editor de texto e substituir o texto existente co texto que aparece abaixo.</p>]]></message>
 	
@@ -577,7 +568,6 @@ o contrasinal actual.<br /><br />Insire o teu enderezo de correo elecrónico par
 
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Repite o contrasinal</message>
 	<message key="user.register.selectJournal">Selecciona unha revista para rexistrarte</message>
 	<message key="user.register.noJournals">Neste sitio non hai revistas nas que te poidas rexistrar.</message>
 	<message key="user.register.privacyStatement">Declaración de privacidade</message>
@@ -742,8 +732,6 @@ Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</stron
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Cuidado:</strong> Se a instalación fallou xusto cando estabas a instalar a base de dados é posibel que se precise eliminar a base de dados OJS ou as táboas antes de intentar reinstalar a base de dados.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>¡IMPORTANTE!</h4>
 <p>O instalador no puido sobreescreber automáticamente o ficheiro de configuración. Antes de usar o sistema abrea <tt>config.inc.php</tt> nun editor de textos e substitue o seu contido co contido do ficheiro que mostramos abaixo.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Instalación manual</h4>
-<p>A continuación móstranse as sentencias SQL para crear o esquema de base de dados de OJS e os dados iniciais. Ten en conta que o sistema non se poderá usar até que se executen manualmente estas sentencias. Tamén terás que configurar manualmente o ficheiro de configuración <tt>config.inc.php</tt>.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>A instalación de OJS completouse con éxito.</p>
 <p>Para comezar a usar o sistema, <a href="{$loginUrl}">lóguese</a> co nome de usuaria/o e contrasinal  inseridos na páxina anterior.</p>
 <p>Se queres receber noticias e actualizacións, por favor, rexístrate en <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>. Se tes preguntas ou comentarios, por favor, visita o <a href="http://forum.pkp.sfu.ca" target="_new">foro de suporte</a>.</p>]]></message>
@@ -1019,7 +1007,6 @@ A validación pode fallar en URLs de pescuda que precisan o envío de formulario
 	<message key="log.review.reviewDeclinedByProxy">{$userName} non permitiu a rolda {$round} de revisión para a presentación do artigo {$articleId} en nome de {$reviewerName}.</message>
 	<message key="log.editor.decision">Unha decisión ({$decision}) dun editor para o artigo {$articleId} vai ser rexistrada por {$editorName}.</message>
 	<message key="rt.admin.settings.addComment">Angadir comentario (habilita aos lectores a enviar comentarios, co Administrador daa Revista con competencia para borralos).</message>
-	<message key="rt.metadata.pkp.doi">Identificador de Obxecto Digital</message>
 	<message key="notification.mailListDescription">Insire o teu enderezo de correo electrónico para recibir notificacións inmediatas de novo contido engadido á revista.</message>
 	<message key="notification.type.copyeditComment">Un corrector de estilo deixou un comentario en "{$param}".</message>
 	<message key="notification.type.editorDecisionComment">Fíxose un comentario como decisión do editor para "{$param}".</message>

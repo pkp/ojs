@@ -167,6 +167,4 @@ Odstavec, který začíná "Toto poslední téma..." nebyl zamýšlený.</pre>]]
 	<message key="default.journalSettings.donationFeeDescription">Dary tomuto časopisu v jakékoliv výši jsou s vděčností přijímány a poskytují editorům prostředky, které jim umožní pokračovat v poskytování časopisu nejvyšší kvality svým čtenářům.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Zakoupit číslo</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Zaplacení tohoto poplatku vám umožní vidět, stáhnout a tisknout toto číslo.</message>
-	<message key="default.journalSettings.emailHeader">Následující zpráva bude doručena jménem {$journalName}.
-________________________________________________________________________</message>
 </locale>

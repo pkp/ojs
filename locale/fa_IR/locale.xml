@@ -165,10 +165,7 @@
 	 * لاگ - این قسمت حاوی موارد مربوط به لاگ میباشد.
 
 	 * ا
-	-->  <message key="submission.event.logLevel">سطح وقایع نگاری</message>
-	<message key="submission.event.logLevel.warning">اخطار</message>
-	<message key="submission.event.logLevel.error">خطا</message>
-	<message key="submission.event.general.defaultEvent">واقعه پیش فرض</message>
+	-->	<message key="submission.event.general.defaultEvent">واقعه پیش فرض</message>
 	<message key="submission.event.general.articleSubmitted">مقاله سابمیت شد.</message>
 	<message key="submission.event.general.issueScheduled">سابمیشن در نوبت چاپ قرار گرفت.</message>
 	<message key="submission.event.general.issueAssigned">سابمیشن در نوبت چاپ قرار گرفت.</message>
@@ -375,8 +372,7 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="submission.comments.saveAndEmailEditor">ذخیره و ایمیل به دبیر</message>
 <!-- ورود -->	<message key="user.login.registerNewAccount">اگر کاربر این سایت نیستید، ثبت نام کنید.</message>
 	<message key="user.login.resetPasswordInstructions"><![CDATA[به دلائل امنیتی ، این سیستم بجای ارسال رمز عبور فراموش شده ، رمز عبور را بازنشانی و با ایمیل برای کاربر می فرستد.<br /><br />ایمیل خود را وارد کنید تا روند بازنشانی رمز عبور را درخواست کنید. یک نامه تاییدیه به این آدرس ارسال خواهد شد.]]></message>
-<!-- کارنامه --><!-- ثبت نام -->  <message key="user.register.repeatPassword">تکرار رمز عبور</message>
-	<message key="user.register.selectJournal">مجله ای را برای ثبت نام انتخاب کنید.</message>
+<!-- کارنامه --><!-- ثبت نام -->	<message key="user.register.selectJournal">مجله ای را برای ثبت نام انتخاب کنید.</message>
 	<message key="user.register.noJournals">مجله ای برای ثبت نام در این سایت وجود ندارد.</message>
 	<message key="user.register.privacyStatement">بیانیه محرمانگی</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[چنانچه قبلا برای این مجله و یا مجله ای دیگر در این سایت ثبت نام کرده اید <a href="{$registerUrl}">اینجا</a>  را کلیک کنید]]></message>
@@ -682,7 +678,6 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="rt.admin.settings.addComment.authenticated">برای ارسال نظر خود لازم است که ثبت نام کرده و سپی وارد شوید. ارسال بصورت گمنام مقدور نیست</message>
 	<message key="rt.admin.settings.addComment.anonymous">برای ارسال نظر خود بصورت گمنام لازم است که ثبت نام کرده و سپی وارد شوید.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">برای ارسال نظرات بضورت گمنام احتیاج به ثبت نام نیست</message>
-	<message key="rt.metadata.pkp.doi">شناسه دیژیتال شیئ</message>
 	<message key="debug.notes.currencyListLoad">لیست واحد پولهای لود شده از فایل ایکس ام ال &quot;{$filename}&quot;</message>
 	<message key="debug.notes.helpMappingLoad">فایل ری لود شده نگاشت راهنما از فایل {$filename} در جستجوی {$id}</message>
 	<message key="submission.reviewForm">فرم کارشناسی</message>
@@ -745,8 +740,6 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="subscriptions.individualDescription">اشتراک فردی نیاز به ورود به سیتم دارد تا به محتوای اشتراک یافته دسترسی یابید.</message>
 	<message key="subscriptions.institutionalDescription">اشتراک سازمانی نیازی به ورود به سیستم ندارد. دامنه و یا آدرس IP کاربر برای تایید هویت وی بکار خواهد رفت.</message>
 	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>مهم:</strong> اشتراک سازمانی خریداری شده از طریق آن لاین قبل از فعال شدن، نیاز به تایید دامنه یا آدرس IP دارد.]]></message>
-	<message key="submission.event.logLevel.info">اطلاعات</message>
-	<message key="submission.event.logLevel.notice">توجه</message>
 	<message key="reader.subscriptionRequiredLoginText">برای دسیابی به این مورد نیاز به اشتراک دارید. برای تایید اشتراک ابتدا وارد سیستم شوید.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>
 به یکی از دلائل زیر دانلود بسته زیان از سرور PKP در حال حاضر ممکن نیست:

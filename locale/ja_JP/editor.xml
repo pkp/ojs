@@ -52,7 +52,6 @@
 	<message key="editor.issues.accessStatus">アクセス形態</message>
 	<message key="editor.issues.accessDate">オープンアクセス公開日</message>
 	<message key="editor.issues.invalidAccessDate">アクセス公開日が不正です。</message>
-	<message key="editor.issues.issuePublicIdentificationExists">公開巻号識別子が既に存在します。</message>
 	<message key="editor.issues.coverPage">カバー画像</message>
 	<message key="editor.issues.coverPageInstructions">（使用可能フォーマット: .gif, .jpg, .png）</message>
 	<message key="editor.issues.uploaded">アップロード済</message>

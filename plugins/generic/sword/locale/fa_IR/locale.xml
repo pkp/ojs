@@ -16,7 +16,6 @@
 	<message key="plugins.generic.sword.displayName">افزونه سورد</message>
 	<message key="plugins.generic.sword.description">مدیران مجله و بصورت اختیاری نویسندگان اجازه داشته باشند تا از طریق پروتوکل سورد مقاله ارسال کنند.</message>
 	<message key="plugins.generic.sword.enabled">اقزونه سورد فعال شد.</message>
-	<message key="plugins.generic.sword.disable">اقزونه سورد غیر فعال شد.</message>
 	<message key="plugins.generic.sword.settings">تنظیمات</message>
 	<message key="plugins.generic.sword.settings.allowAuthorSpecify">اجازه بده که نویسنده نقطه دپوزیت داشته باشد</message>
 	<message key="plugins.generic.sword.settings.depositPoints">نقاط دپوزیت</message>

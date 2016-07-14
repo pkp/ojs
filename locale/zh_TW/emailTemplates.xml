@@ -277,15 +277,7 @@
 {$reviewerName}</body>
 		<description>這封電子郵件是由一位審查人寄給區段編輯，回覆一份審查邀請，並通知區段編輯說已經接受審查邀請而且會在特定的日期之前完成工作。</description>
 	</email_text>
-	<email_text key="REVIEW_CONFIRM_ACK">
-		<subject>感謝您願意進行審查工作</subject>
-		<body>{$reviewerName}您好：
-
-謝謝您願意在{$reviewDueDate}之前為《{$journalName}》完成稿件〈{$articleTitle}〉的審查工作。
-{$editorialContactSignature}</body>
-		<description>這封電子郵件是由區段編輯寄給審查人，向他們接受審查工作致謝或者鼓勵他們完成審查工作。</description>
-	</email_text>
-	<email_text key="REVIEW_DECLINE">
+		<email_text key="REVIEW_DECLINE">
 		<subject>無法進行審查工作</subject>
 		<body>{$editorialContactName}您好：
 

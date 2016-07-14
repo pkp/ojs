@@ -228,7 +228,6 @@
 	<message key="plugins.generic.objectsForReview.notification.ofrRequested">请求评论的对象。等待编辑确认。</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrUpdated">已更新评审对象。</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrDeleted">评审对象和分配被删除。</message>
-	<message key="plugins.generic.objectsForReview.notification.ofrAauthorAssigned">评审对象分配的作者。</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorDenied">作者要求被拒。评审对象重置到初始状态。</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorMailed">评审对象已邮寄给作者。</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorRemoved">删除作者。评审对象重置到初始状态。</message>
@@ -280,7 +279,6 @@
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.performer">演奏者</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.composer">作曲家</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.contributor">投稿人</message>
-	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsByr">作词</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.format">格式</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.seriesTitle">系列名称</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.volume">卷</message>
@@ -489,7 +487,6 @@
 	<message key="plugins.generic.objectsForReview.object.letter">信件</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.author">作者</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.contributor">投稿人</message>
-	<message key="plugins.generic.objectsForReview.object.letter.person.recepient">收件人</message>
 	<message key="plugins.generic.objectsForReview.object.letter.type">信件类型</message>
 	<!-- Magazine Article -->
 	<message key="plugins.generic.objectsForReview.object.magazineArticle">杂志文章</message>

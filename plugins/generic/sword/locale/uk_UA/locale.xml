@@ -18,7 +18,6 @@
        <message key="plugins.generic.sword.displayName">Модуль SWORD</message>
        <message key="plugins.generic.sword.description">Дозволяє менеджерам журналу та (можливо) авторам депонувати статті за протоколом SWORD</message>
        <message key="plugins.generic.sword.enabled">Модуль SWORD був включений.</message>
-       <message key="plugins.generic.sword.disable">Модуль SWORD був відключений.</message>
        <message key="plugins.generic.sword.settings">Налаштування</message>
        <message key="plugins.generic.sword.settings.allowAuthorSpecify">Дозволити автору вказувати точку депонування</message>
        <message key="plugins.generic.sword.settings.depositPoints">Точки депонування</message>

@@ -47,14 +47,7 @@
 	<message key="admin.journals.form.pathExists">Vald sökväg används redan av en annan tidskrift.</message>
 	<message key="admin.journals.enableJournalInstructions">Gör tidskriften publik.</message>
 	<message key="admin.journals.journalDescription">Beskrivning av tidskriften</message>
-	<message key="admin.journals.importOJS1">Importera från OJS 1</message>
-	<message key="admin.journals.importOJS1.editMigratedJournal">Redigera migrerad tidskrift</message>
-	<message key="admin.journals.importOJS1.conflict.desc">Användarkonton innehåller motstridig information. OJS 1.x tillåter att olika användarkonton innehåller samma E-postadress, medan OJS 2.x inte tillåter detta. I listan nedan innehåller det andra användarkontot en tillfällig E-postadress. Ändra antingen E-postadressen eller slå ihop de olika kontona.</message>
-	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) och {$secondUsername} ({$secondName})</message>
-	<message key="admin.journals.importOJS1Instructions">Se UPGRADE-dokumentet som distribueras tillsammans med OJS för detaljerad information om datamigrering från OJS 1 till OJS 2.</message>
 	<message key="admin.journal.pathImportInstructions">Existerande sökväg eller sökväg som ska skapas (ex. "ojs").</message>
-	<message key="admin.journal.importPath">OJS 1 sökväg</message>
-	<message key="admin.journal.importPathInstructions">Fullständig lokal filsystemssökväg till OJS 1-installationen (ex., "/var/www/ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importera abonnemangsinformation</message>
 	<message key="admin.journals.transcode">Konvertera artikelns metadata med ISO8859-1</message>
 	<message key="admin.journals.form.importPathRequired">Importerad sökväg är obligatorisk.</message>

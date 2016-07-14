@@ -276,12 +276,6 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-	<message key="submission.event.logLevel">ലെവല്‍</message>
-	<message key="submission.event.logLevel.info">ഇന്‍ഫോ</message>
-	<message key="submission.event.logLevel.notice">നോട്ടീസ്</message>
-	<message key="submission.event.logLevel.warning">മുന്നറിയിപ്പ്</message>
-	<message key="submission.event.logLevel.error">തെറ്റ്</message>
-	
 	<message key="submission.event.general.defaultEvent">സബ്മിഷന്‍ ഇവന്റ്</message>
 	<message key="submission.event.general.articleSubmitted">ലേഖനം സബ്മിറ്റ് ചെയ്തു</message>
 	<message key="submission.event.general.issueScheduled">സബ്മിഷന്‍ ഇഷ്യൂ ഷെഡ്യൂലിങ്ങ് ക്യൂവിലേക്ക് അയച്ചിരിക്കുന്നു</message>
@@ -361,9 +355,6 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Use this form to modify your system configuration (the <tt>config.inc.php</tt> file). Click Save to save your new configuration, or "Display" to simply display the updated configuration file and not modify your existing configuration.
-<br /><br />
-<span class="formError">Warning: Modifying these settings can potentially leave your site in an inaccessible state (requiring your configuration file to be manually fixed). It is strongly recommended that you do not make any changes unless you know exactly what you are doing.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</h4>
 <p>The system could not automatically overwrite the configuration file. To apply your configuration changes you must open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>]]></message>
 	
@@ -703,7 +694,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 current password.<br /><br />Enter your email address below to reset your password. A confirmation will be sent to this email address.]]></message>
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">പാസ്സ് വേര്‍ഡ് ആവര്‍ത്തിക്കുക</message>
 	<message key="user.register.selectJournal">റജിസ്റ്റര്‍ ചെയ്യുന്നതിനായി ഒരു ജര്‍ണല്‍ തിരഞ്ഞെടുക്കുക</message>
 	<message key="user.register.noJournals">ഈ സൈറ്റില്‍ താങ്കള്‍ ഒരു ജര്‍ണലും റജിസ്റ്റര്‍ ചെയ്തിട്ടില്ല.</message>
 	<message key="user.register.privacyStatement">പ്രൈവസി സ്റ്റേറ്റ്മെന്റ്</message>
@@ -966,8 +956,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Warning:</strong> If installation failed part way through database installation you may need to drop your OJS database or database tables before attempting to reinstall the database.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
 <p>The installer could not automatically overwrite the configuration file. Before attempting to use the system, please open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Manual installation</h4>
-<p>The SQL statements to create the OJS database schema and initial data are displayed below. Note that the system will be unusable until these statements have been executed manually. You will also have to manually configure the <tt>config.inc.php</tt> configuration file.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>Installation of OJS has completed successfully.</p>
 <p>To begin using the system, <a href="{$loginUrl}">login</a> with the username and password entered on the previous page.</p>
 <p>If you wish to receive news and updates, you can:</p>
@@ -1068,12 +1056,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 
 	<message key="rt.metadata.pkp.primaryAuthor">ലേഖകന്റെ പേര്,അംഗീകാരം,രാജ്യം</message>
 	<message key="rt.metadata.pkp.peerReviewed">പിയര്‍-റിവ്യൂവ്ഡ് ആര്‍ട്ടിക്കിള്‍</message>
-	<message key="rt.metadata.pkp.doi">ഡിജിറ്റല്‍ ഒബ്ജക്ട് ഐഡന്റിഫയര്‍</message>
-
-
-
-
-
 	<message key="rt.beNotifiedWhen">ബീ നോട്ടിഫൈഡ് വെന്‍...</message>
 
 	<message key="rt.thisJournal">ജേണല്‍ തിരയുക</message>

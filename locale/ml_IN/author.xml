@@ -32,7 +32,6 @@
 	<message key="author.submit.cancelSubmission">ഓതര്‍ ഹോമില്‍ നിന്നും സജീവമായ സമര്‍പ്പണങ്ങള്‍ തിരഞ്ഞെടുത്താല്‍ താങ്കള്‍ക്ക് ഈ സമര്‍പ്പണം പിന്നീട് ഒരു ദിവസം പൂര്‍ണ്ണമാക്കാവുന്നതാണ്.</message>
 	<message key="author.submit.notAccepting">ഈ പ്രസിദ്ധീകരണം സമര്‍പ്പണങ്ങള്‍ ഒന്നും തന്നെ ഈ സമയം സ്വീകരിക്കുന്നതല്ല.</message>
 	<message key="author.submit.requestWaiver">ഇളവിനു വേണ്ടി അപേക്ഷിക്കുക</message>
-	<message key="author.submit.qualityForWaiver">പ്രബന്ധ സമര്‍പ്പണ തുകയുടെ ഇളവിനു വേണ്ടി ഈ പ്രബന്ധത്തെ പരിഗണിക്കുക</message>
 	<message key="author.submit.addReasonsForWaiver">ഫീസിളവിനുള്ള കാരണം എന്തെന്ന് താഴെ കാണുന്ന കമന്റ് ബോക്സില്‍ രേഖപ്പെടുത്തുക.</message>
 	<message key="author.submit.mustEnterWaiverReason">ഫീസിളവിനു വേണ്ടി അപേക്ഷിക്കുന്നുണ്ടെങ്കില്‍ ചുവടെ കൊടുത്തിരിക്കുന്ന സ്ഥലത്ത് കാരണം രേഖപ്പെടുത്തേണ്ടതാണ്.</message>
 	<message key="author.submissions.queuedReviewSubsequent">അവലോകനത്തില്‍ {$round}</message>
