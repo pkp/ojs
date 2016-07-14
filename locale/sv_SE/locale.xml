@@ -1013,4 +1013,7 @@ Validering av URL:er kan misslyckas på sökningar som kräver inskickad data.]]
 	<message key="user.orcid">ORCID-ID</message>
 	<message key="user.orcid.description"><![CDATA[ORCID-ID:n delas endast ut av <a href="http://orcid.org/" target="_blank">ORCID-registret</a>. ORCID-ID måste anges enligt den fastslagna standarden och inkludera hela URI:n (t.ex. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
 	<message key="user.profile.form.orcidInvalid">ORCID-ID:t du angav är ogiltigt.</message>
+
+	<message key="manager.setup.reviewProcessEmailDescription">Redaktörer mailar förfrågan om granskning till granskare och bifogar manuskriptet i E-posten. Granskaren tackar ja (eller nej),  och mailar sedan granskning och rekommendation. Redaktören för in granskarens synpunkter på Manuskriptsidan, under Granskning.</message>
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Tidskriften använder ett klassificeringssystem som finns tillgängligt online: <br /> Title på klassifikationssystem]]></message>
 </locale>

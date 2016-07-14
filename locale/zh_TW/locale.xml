@@ -804,4 +804,7 @@
 	 * DEFAULT - Default settings for setup items.
 	 *預設-設定項目的預設設定
 	-->
+
+	<message key="manager.setup.reviewProcessEmailDescription">編輯向審查人寄交一份附有投稿稿件的審查邀請函。審查人同樣以電子郵件將他們的同意書（或婉謝信），連同審查意見書和建議選項寄交給編輯。編輯在投稿的「審查」頁面，進入審查人的同意書（或婉謝信）以及審查意見書和建議選項，以記錄審查流程。</message>
+
 </locale>

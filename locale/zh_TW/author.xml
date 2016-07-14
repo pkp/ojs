@@ -103,4 +103,7 @@
 	<message key="author.article.uploadAuthorVersion">上傳作者版本</message>
 	<message key="author.article.copyeditedFile">校樣編輯檔案</message>
 	<message key="author.article.authorRevisedFile">作者檔案</message>
+
+	<message key="author.submit.journalSectionDescription"><![CDATA[為這份稿件選擇恰當的投稿文稿類型（見<a href="{$aboutUrl}">期刊介紹</a> 中的「文稿類型與方針」項目）
+	).]]></message>
 </locale>

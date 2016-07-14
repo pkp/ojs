@@ -447,4 +447,6 @@
 	<message key="manager.subscriptionTypes.name">訂閱類型</message>
 	<message key="manager.subscriptionTypes.noneCreated">沒有建立任何的訂閱類型。</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">成功建立訂閱類型</message>
+
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS可以讓使用者使用幾種受到支持的語言介面。同時，OJS可以當作一個部分多語化的系統，讓使用者在每個頁面中可以切換語言，並允許某些資料以額外的兩種語言進行輸入。<br /><br />如果一個受到OJS支持的語言沒有列在下表，請您的網站管理員從網站管理介面來安裝該項語系。新增支援新語系的指引說明，請見OJS的文件。]]></message>
 </locale>

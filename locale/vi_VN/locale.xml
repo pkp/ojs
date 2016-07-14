@@ -922,4 +922,7 @@ Việc xác thực có thể không thành công đối với các website tìm 
 	<message key="debug.notes.currencyListLoad">Danh sách tiền tệ "{$filename}" được tải từ XML</message>
 	<message key="debug.notes.helpMappingLoad">XML được tải lại giúp ánh xạ file {$filename} khi tìm kiếm {$id}.</message>
 	<message key="installer.databaseSettingsInstructions">Phần mềm OJS cần truy cập cơ sở dữ liệu SQL để lưu dữ liệu. Xem yêu cầu về hệ thống trên đây để biết danh mục các cơ sở dữ liệu được hỗ trợ. Nhập vào các trường dưới đây dùng để kết nối với cơ sở dữ liệu.</message>
+
+	<message key="editor.submissionReview.notes">Thời hạn chỉ số tuần còn lại cho đến khi ngày hết hợn phản biện hoặc (-) số tuần quá hạn. Nó được nhập vào khi người phản biện đồng ý tiến hành phản biện.</message>
+	<message key="manager.setup.reviewProcessEmailDescription">BTV gửi email cho Người phản biện đề nghị phản biện cùng với bài nộp đính kèm trong email. Người phản biện gửi email cho BTV đồng ý (hay từ chối) lời đề nghị, cùng với bài phản biện và khuyến nghị. BTV nhập thông tin đồng ý hay từ chối, cùng với bài phản biện và khuyến nghị vào trang Phản biện của bài nộp để ghi lại quá trình phản biện.</message>
 </locale>
