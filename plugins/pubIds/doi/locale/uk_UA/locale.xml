@@ -13,52 +13,41 @@
  
 <locale name="uk_UA" full_name="Українська">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
-	<message key="plugins.pubIds.doi.description">Цей модуль дозволяє призначення цифрових ідентифікаторів об'єктів (DOI) для випусків, статей, гранок та супровідних файлів OJS.</message>
 
 	<!-- settings form -->
-	<message key="plugins.pubIds.doi.manager.settings.doiSettings">Налаштування модуля DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.description">Щоб мати можливість використовувати DOI у OJS, будь ласка, налаштуйте модуль DOI:</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Зміст журналу</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Будь ласка, оберіть об'єкти, для яких мають призначатись DOI.</message>
 	<message key="plugins.pubIds.doi.manager.settings.explainDois">Будь ласка, оберіть об'єкти, які матимуть призначені для них унікальні цифрові ідентифікатори DOI:</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Випуски</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Статті</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">Гранки</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableSuppFileDoi">Супровідні файли</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableSubmissionDoi">Статті</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">Гранки</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">Префікс DOI</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiPrefixDescription"><![CDATA[Префікс DOI призначається виданню реєстраційною агенцією (наприклад, <a href="http://www.crossref.org" target="_new">CrossRef</a>), його формат 10.xxxx (наприклад, 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.description"><![CDATA[Префікс DOI призначається виданню реєстраційною агенцією (наприклад, <a href="http://www.crossref.org" target="_new">CrossRef</a>), його формат 10.xxxx (наприклад, 10.1234):]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">Префікс є обов'язковим елементом DOI, він має бути у формі 10.xxxx.</message>
 
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">Суфікс DOI</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDescription">Суфікс DOI може мати будь-яку форму, але він має бути унікальним серед всіх видавничих об'єктів з однаковим префіксом DOI:</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Використовуйте поданий нижче шаблон для генерації суфіксів DOI. Синтаксис шаблону наступний: %j - ініціали журналу, %v - номер тому, %i - номер випуску, %Y - рік, %a - ідентифікатор статті, %g - ідентифікатор гранки в OJS, %s - ідентифікатор супровідного файлу в OJS, %p - номери сторінок.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix.description">Суфікс DOI може мати будь-яку форму, але він має бути унікальним серед всіх видавничих об'єктів з однаковим префіксом DOI:</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">для випусків</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">для статей</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys">для гранок</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.suppFiles">для супровідних файлів.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions">для статей</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations">для гранок</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Наприклад, за шаблоном vol%viss%ipp%p будуть створюватись такі DOI, як 10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Використовувати шаблон за замовчуванням.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i - для випусків<br />%j.v%vi%i.%a - для статей<br />%j.v%vi%i.%a.g%g - для гранок <br />%j.v%vi%i.%a.s%s - для супровідних файлів.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Використовувати "Власний ідентифікатор" як суфікс DOI для опублікованих об'єктів (необхідно дозволити на Кроці 4). Це той саме ідентифікатор, який використовується для генерації адрес URL.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Самостійно вводити індивідуальний суфікс DOI для кожного опублікованого об'єкту, відмінний і незалежний від "Власного ідентифікатора", запропонованого у попередній опції. У цьому випадку на сторінках метаданих кожного об'єкту буде наявне додаткове поле для введення DOI.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i - для випусків<br />%j.v%vi%i.%a - для статей<br />%j.v%vi%i.%a.g%g - для гранок.]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Будь ласка, визначте шаблон суфіксу DOI для випусків.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Будь ласка, визначте шаблон суфіксу DOI для статей.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Будь ласка, визначте шаблон суфіксу DOI для гранок.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuppFileSuffixPatternRequired">Будь ласка, визначте шаблон суфіксу DOI для супровідних файлів.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired">Будь ласка, визначте шаблон суфіксу DOI для статей.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired">Будь ласка, визначте шаблон суфіксу DOI для гранок.</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Перепризначити DOI</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Якщо Ви змінили шаблони ідентифікації DOI, ці зміни не торкнуться тих ідентифікаторів DOI, які вже були призначені для опублікованих об'єктів. Але після того, як нова конфігурація DOI буде збережена, Ви можете натиснути цю кнопку, щоб скинути всі існуючі ідентифікатори DOI. Таким чином, зміни шаблонів ідентифікації будуть застосовані до всіх опублікованих статей журналу.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Ви впевнені, що хочете видалити всі існуючі DOI?</message>	
 
 
 	<!-- metadata form -->
 	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">випуск</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">стаття</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmission">стаття</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">гранка</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">супровідний файл</message>
-	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Те, що Ви бачите - це попередній перегляд DOI, який може бути неповним. Ідентифікатор DOI ще не був згенерований. Після публікації випуску та перегляду публічної сторінки {$pubObjectType} унікальний DOI буде згенерований автоматично для {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Обраний суфікс DOI вже використовується для іншого видавничого об'єкту. Будь ласка, оберіть для кожного об'єкту унікальний суфікс DOI.</message>
 </locale>

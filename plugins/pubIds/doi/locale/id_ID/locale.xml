@@ -13,52 +13,42 @@
  
 <locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
-	<message key="plugins.pubIds.doi.description">Plugin ini mengaktifkan penugasan Digital Object Identifiers untuk terbitan, artikel, galley dan file tambahan dalam OJS.</message>
 
 	<!-- settings form -->
-	<message key="plugins.pubIds.doi.manager.settings.doiSettings">Pengaturan Plugin DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.description">Silahkan konfigurasikan plugin DOI untuk dapat mengatur dan menggunakan DOIs dalam OJS:</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Konten Jurnal</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Silahkan pilih objek DOIs yang harus ditugaskan.</message>
 	<message key="plugins.pubIds.doi.manager.settings.explainDois">Silahkan pilih objek penerbitan yang akan memiliki penugasan Digital Object Identifiers (DOI):</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Terbitan</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Artikel</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">Galley</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableSuppFileDoi">File Tambahan</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableSubmissionDoi">Artikel</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">Galley</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">Awalan DOI</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiPrefixDescription"><![CDATA[Awalan DOI ditugaskan dengan agensi pendaftaran (contoh <a href="http://www.crossref.org" target="_new">CrossRef</a>) dan dalam format 10.xxxx (contoh 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.description"><![CDATA[Awalan DOI ditugaskan dengan agensi pendaftaran (contoh <a href="http://www.crossref.org" target="_new">CrossRef</a>) dan dalam format 10.xxxx (contoh 10.1234):]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">Awalan DOI wajib dan harus format 10.xxxx.</message>
 
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">Akhiran DOI</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDescription">Akhiran DOI dapat dengan format apapun, tetapi harus unik di antara semua objek penerbitan dengan penugasan awalan DOI yang sama:</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Gunakan pola seperti di bawah untuk menciptakan akhiran DOI. Gunakan %j untuk inisial jurnal, %v untuk nomor volume, %i untuk nomor terbitan, %Y untuk tahun, %a untuk ID artikel OJS, %g untuk ID galley OJS, %s untuk ID file tambahan dan %p untuk nomor halaman. </message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix.description">Akhiran DOI dapat dengan format apapun, tetapi harus unik di antara semua objek penerbitan dengan penugasan awalan DOI yang sama:</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Gunakan pola seperti di bawah untuk menciptakan akhiran DOI. Gunakan %j untuk inisial jurnal, %v untuk nomor volume, %i untuk nomor terbitan, %Y untuk tahun, %a untuk ID artikel OJS, %g untuk ID galley OJS, %f untuk ID file dan %p untuk nomor halaman. </message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">untuk terbitan</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">untuk artikel</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys">untuk galley</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.suppFiles">untuk file tambahan.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions">untuk artikel</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations">untuk galley</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Sebagai contoh, vol%viss%ipp%p dapat menciptakan DOI seperti 10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Gunakan pola default.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i untuk terbitan<br />%j.v%vi%i.%a untuk artikel<br />%j.v%vi%i.%a.g%g untuk galley <br />%j.v%vi%i.%a.s%s untuk file tambahan.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Gunakan "Custom Identifier" untuk item penerbitan sebagai akhiran DOI (harus diaktifkan di langkah 4). Identifier ini juga akan digunakan untuk URL publik.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Masukkan akhiran DOI individual untuk masing-masing akhiran independen DOI dan berbeda dari "Custom Identifier" yang disebutkan dalam pilihan sebelumnya. Anda akan menemukan field masukkan DOI tambahan di setiap halaman metadata item.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i untuk terbitan<br />%j.v%vi%i.%a untuk artikel<br />%j.v%vi%i.%a.g%g untuk galley.]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Silahkan masukkan pola akhiran DOI untuk terbitan.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Silahkan masukkan pola akhiran DOI untuk artikel.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Silahkan masukkan pola akhiran DOI untuk galley.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuppFileSuffixPatternRequired">Silahkan masukkan pola akhiran DOI untuk file tambahan.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired">Silahkan masukkan pola akhiran DOI untuk artikel.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired">Silahkan masukkan pola akhiran DOI untuk galley.</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Penugasan kembali DOI</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Jika anda mengganti konfigurasi DOI, tidak akan berpengaruh terhadap DOI yang telah ditetapkan sebelumnya. Sekali konfigurasi DOI telah disimpan, gunakan tombol ini untuk membersihkan semua DOI yang ada sehingga pengaturan baru akan berlaku pada artikel yang ada.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Anda yakin untuk menghapus semua DOI yang ada?</message>	
 
 
 	<!-- metadata form -->
 	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">terbitan</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">artikel</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmission">artikel</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">galley</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">file tambahan</message>
-	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Apa yang anda lihat merupakan preview DOI yang mungkin tidak lengkap. DOI belum diciptakan. Terbitkan sebuah terbitan dan lihat halaman publik {$pubObjectType} akan secara otomatis menciptakan sebuah DOI unik untuk {$pubObjectType} ini.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Akhiran DOI yang dimasukkan telah digunakan oleh item penerbitan lain. Silahkan masukkan akhiran DOI unik untuk masing-masing item.</message>
 </locale>
