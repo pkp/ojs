@@ -12,21 +12,13 @@
   -->
  
 <locale name="tr_TR" full_name="Türkçe">
-	<message key="plugins.pubIds.urn.urns">URNs</message>
-
-	<!-- plugin -->
 	<message key="plugins.pubIds.urn.displayName">URN</message>
-	<message key="plugins.pubIds.urn.description">Bu eklenti ADS içindeki nesneler (sayılar, makaleler, dizgi ve ek dosyaları) için Tekbiçim Kaynak adları atamasına olanak tanır.</message>
 
-	<!-- URN manager options, setting -->
-	<message key="plugins.pubIds.urn.manager.settings.description">ADS içinde URN'leri yönetmek ve kullanmak için aşağıdaki kurulum adımlarını yapınız:</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSettings">URN Ayarları</message>
+	<!-- settings form -->
+	<message key="plugins.pubIds.urn.manager.settings.urnObjects">Dergi İçeriği</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">URN Ön Eki</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnPrefix.description">The URN prefix is the fix, never changing part of the URN (e.g. "urn:nbn:de:0000-").</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">URN Son Eki</message>
 	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Seç</message>
-	<message key="plugins.pubIds.urn.manager.settings.journalContent">Dergi İçeriği</message>
 
-	<!-- custom URN suffix for an object -->
-	<message key="plugins.pubIds.urn.metadata">URN Üst Verisi</message>
-	<message key="plugins.pubIds.urn.urnSuffix">URN Son Eki</message>
 </locale>

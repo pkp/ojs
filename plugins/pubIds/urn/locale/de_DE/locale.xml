@@ -12,32 +12,28 @@
   -->
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.pubIds.urn.urns">URN</message>
-
-	<!-- plugin -->
 	<message key="plugins.pubIds.urn.displayName">URN</message>
-	<message key="plugins.pubIds.urn.description">Dieses Plug-In ermöglicht die Zuweisung von Uniform Resource Names an Objekte (Ausgaben, Artikel, Fahnen und Zusatzdateien) in OJS.</message>
 
-	<!-- URN manager options, setting -->
-	<message key="plugins.pubIds.urn.manager.settings.description"><![CDATA[Bitte erledigen Sie die folgenden Setup-Schritte, damit Sie URN in OJS verwalten und benutzen können:]]></message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSettings">URN-Einstellungen</message>
+	<!-- settings form -->
+	<message key="plugins.pubIds.urn.manager.settings.urnObjects">Zeitschrifteninhalt</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnObjectsRequired">Bitte wählen Sie, welchen Objekten URN zugewiesen werden sollen.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">URN werden Ausgaben zugewiesen werden.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableSubmissionURN">URN werden Artikeln zugewiesen werden.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableRepresentationURN">URN werden Fahnen (z.B. HTML- oder PDF-Dateien) zugewiesen werden.</message>
+
 	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">URN-Präfix</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnPrefix.description"><![CDATA[Der URN-Präfix ist der feste, niemals wechselnde Bestandteil des URN (z.B. "urn:nbn:de:0000-").]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"><![CDATA[Der URN-Präfix muss in der Form "urn:"&lt;NID&gt;":"&lt;NSS&gt; angegeben werden.]]></message>
+
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">URN-Suffix</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default">Die Standardmuster benutzen.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default.description"><![CDATA[%j.v%vi%i für Ausgaben<br />%j.v%vi%i.%a für Artikel<br />%j.v%vi%i.%a.g%g für Fahnen <br />%j.v%vi%i.%a.s%s für Zusatzdateien.]]></message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern">Verwenden Sie das unten angegebene Muster, um URN-Suffixe zu erzeugen. Nutzen Sie %j für die Initialen der Zeitschrift, %v für die Nummer des Jahrgangs, %i für die Nummer der Ausgabe, %Y für das Jahr, %a für die OJS-Artikel-ID, %g für die OJS-Fahnen-ID, %s für die OJS-Zusatzdatei-ID,  %p für die Seitenzahl und %x für die "benutzerdefinierte Kennung" (muss in Schritt 4.3 der Zeitschrifteneinrichtung aktiviert werden).</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.issues">für Ausgaben</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.articles">für Artikel</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.galleys">für Fahnen</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">für Zusatzdateien</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample">vol%viss%ipp%p würde z.B. einen URN-Suffix "vol3iss2pp230" erzeugen.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">Ein URN-Suffix kann in beliebiger Form sein, muss aber eindeutig für jedes veröffentlichte Element sein.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">Die eindeutige Kennung für veröffentlichte Elemente als URN-Suffix verwenden (muss in Schritt 4.3 der Zeitschrifteneinrichtung aktiviert werden). Dies ist dieselbe Kennung, die für öffentliche URL verwendet werden wird.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Für jedes veröffentlichte Element einen individuellen URN-Suffix unabhängig und verschieden von der "benutzerdefinierten Kennung" aus der vorherigen Option vergeben. Sie werden ein zusätzliches URN-Eingabefeld auf der Metadatenseite jedes Elements finden.</message>
-	<message key="plugins.pubIds.urn.manager.settings.clearURNs">URN löschen</message>
-	<message key="plugins.pubIds.urn.manager.settings.clearURNs.description">Wenn Sie Ihre URN-Konfiguration ändern, werden bereits zugewiesene URN nicht betroffen sein. Sobald die geänderte URN-Konfiguration gespeichert worden ist, nutzen Sie bitte diesen Knopf, um alle bestehenden URN zu löschen, so dass die neuen Einstellungen für bestehende Artikel gelten.</message>
-	<message key="plugins.pubIds.urn.manager.settings.clearURNs.confirm">Sind Sie sicher, dass Sie alle existierenden URN löschen möchten?</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.example">vol%viss%ipp%p würde z.B. einen URN-Suffix "vol3iss2pp230" erzeugen.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues">für Ausgaben</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions">für Artikel</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations">für Fahnen</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired">Bitte geben Sie das URN-Suffix-Muster für Ausgaben ein.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired">Bitte geben Sie das URN-Suffix-Muster für Artikel ein.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired">Bitte geben Sie das URN-Suffix-Muster für Fahnen ein.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault">Die Standardmuster benutzen.</message>
 	<message key="plugins.pubIds.urn.manager.settings.checkNo">Prüfziffer</message>
 	<message key="plugins.pubIds.urn.manager.settings.checkNo.label">Die Prüfziffer wird automatisch berechnet und am Ende, als letzte Ziffer des URN, angefügt.</message>
 	<message key="plugins.pubIds.urn.manager.settings.namespace">Namensraum</message>
@@ -45,42 +41,19 @@
 	<message key="plugins.pubIds.urn.manager.settings.namespace.description">Der Namensraum für persistente Bezeichner wird in der Regel für die Registrierung benötigt (z.B. bei der Deutschen Nationalbibliothek).</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnResolver">Resolver-URL</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(z.B. http://nbn-resolving.de/)</message>
-
-	<message key="plugins.pubIds.urn.manager.settings.journalContent">Zeitschrifteninhalt</message>
-	<message key="plugins.pubIds.urn.manager.settings.URNsForJournalContent">Bitte wählen Sie, welchen Objekten URN zugewiesen werden sollen.</message>
-	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">URN werden Ausgaben zugewiesen werden.</message>
-	<message key="plugins.pubIds.urn.manager.settings.enableArticleURN">URN werden Artikeln zugewiesen werden.</message>
-	<message key="plugins.pubIds.urn.manager.settings.enableGalleyURN">URN werden Fahnen (z.B. HTML- oder PDF-Dateien) zugewiesen werden.</message>
-	<message key="plugins.pubIds.urn.manager.settings.enableSuppFileURN">URN werden Zusatzdateien zugewiesen werden.</message>
-
-	<!-- custom URN suffix for an object -->
-	<message key="plugins.pubIds.urn.metadata">URN-Metadaten</message>
-	<message key="plugins.pubIds.urn.urnSuffix">URN-Suffix</message>
-	<message key="plugins.pubIds.urn.urnSuffix.description">Benutzerdefinierter URN-Suffix für diesen Artikel.</message>
-	<message key="plugins.pubIds.urn.calculateCheckNo">Prüfziffer berechnen</message>
-
-	<!--  metadata form -->
-	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">Ausgabe</message>
-	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">Artikel</message>
-	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">Fahne</message>
-	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">Zusatzdatei</message>
-	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">Sie sehen eine Vorschau der URN, die eventuell unvollständig ist. Der URN ist noch nicht erzeugt worden. Wenn die Ausgabe erzeugt wird und die öffentliche {$pubObjectType}-Seite aufgerufen wird, wird automatisch ein eindeutiger URN für dieses {$pubObjectType}-Objekt erzeugt.</message>
-
-	<!-- consider URNs at other places in the system -->
-	<message key="plugins.pubIds.urn.rt.metadata.urn">Uniform Resource Name</message>
-
-	<!-- errors -->
-	<message key="plugins.pubIds.urn.manager.settings.form.journalContentRequired">Bitte wählen, welchen Objekten URN zugewiesen werden sollen.</message>
-	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixRequired">Bitte geben Sie den URN-Präfix ein.</message>
-	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"><![CDATA[Der URN-Präfix muss in der Form "urn:"&lt;NID&gt;":"&lt;NSS&gt; angegeben werden.]]></message>
-	<message key="plugins.pubIds.urn.manager.settings.form.urnIssueSuffixPatternRequired">Bitte geben Sie das URN-Suffix-Muster für Ausgaben ein.</message>
-	<message key="plugins.pubIds.urn.manager.settings.form.urnArticleSuffixPatternRequired">Bitte geben Sie das URN-Suffix-Muster für Artikel ein.</message>
-	<message key="plugins.pubIds.urn.manager.settings.form.urnGalleySuffixPatternRequired">Bitte geben Sie das URN-Suffix-Muster für Fahnen ein.</message>
-	<message key="plugins.pubIds.urn.manager.settings.form.urnSuppFileSuffixPatternRequired">Bitte geben Sie das URN-Suffix-Muster für Zusatzdateien ein.</message>
-	<message key="plugins.pubIds.urn.manager.settings.form.namespaceRequired">Bitte wählen Sie einen Namensraum.</message>
 	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Bitte geben Sie die Adresse des Resolvers ein.</message>
 
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign">URN löschen</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.description">Wenn Sie Ihre URN-Konfiguration ändern, werden bereits zugewiesene URN nicht betroffen sein. Sobald die geänderte URN-Konfiguration gespeichert worden ist, nutzen Sie bitte diesen Knopf, um alle bestehenden URN zu löschen, so dass die neuen Einstellungen für bestehende Objekte gelten.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.confirm">Sind Sie sicher, dass Sie alle existierenden URN löschen möchten?</message>
+
+	<!--  metadata form -->
+	<message key="plugins.pubIds.urn.editor.urn">URN</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">Ausgabe</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSubmission">Artikel</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeRepresentation">Fahne</message>
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">Der angegebene URN-Suffix wird bereits für ein anderes veröffentlichtes Element benutzt. Bitte vergeben Sie einen eindeutigen URN-Suffix für jedes Element.</message>
+	<!-- errors -->
 	<message key="plugins.pubIds.urn.form.checkNoRequired">Die Prüfziffer fehlt.</message>
 
 </locale>
