@@ -841,8 +841,6 @@ A validación pode fallar en URLs de pescuda que precisan o envío de formulario
 	<message key="user.noRoles.regReviewer">Rexistrarse como un Revisor</message>
 	<message key="user.noRoles.regReviewerClosed">Rexistrarse como un Revisor: O rexistro de revisores está na actualidade deshabilitado.</message>
 	<message key="issue.coverPage.altText">Capa</message>
-	<message key="plugins.categories.implicitAuth">"Plugins" Implícitos de Autenticación</message>
-	<message key="plugins.categories.implicitAuth.description">Os "Plugins" de autenticación implícita implementan o suporte para a autenticación de usuarios baseado en encabezamentos http</message>
 	<message key="submission.layout.publicGalleyId">Publicar identificador de Galera</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Publicar identificador de galera existente</message>
 	<message key="about.aboutThisPublishingSystem.altText">Proceso de Edición e Publicación en OJS</message>

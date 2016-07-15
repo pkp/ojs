@@ -47,7 +47,6 @@ plugins/generic/lucene						\
 plugins/generic/openAIRE					\
 plugins/generic/coins						\
 plugins/auth/ldap						\
-plugins/implicitAuth/shibboleth					\
 tests								\
 lib/pkp/tests							\
 .git								\

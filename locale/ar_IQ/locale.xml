@@ -361,8 +361,6 @@
 	<message key="plugins.categories.auth.description">إضافات المصادقة تسمح لنظام المجلات المفتوحة بتفويض مهام المصادقة إلى أنظمة أخرى، مثل: ملقمات LDAP</message>
 	<message key="plugins.categories.citationFormats.description">إضافات تنسيق الإقتباس تتيح للمستخدمين أنماطاً متعددة من الوصول إلى اقتباسات المؤلَّفات العلمية</message>
 	<message key="plugins.categories.generic.description">الإضافات العامة تستعمل لتعزيز نظام المجلات المفتوحة في مجالات شتى غير مدعومة ضمن فئات الإضافات الأخرى</message>
-	<message key="plugins.categories.implicitAuth">إضافات المصادقة الضمنية</message>
-	<message key="plugins.categories.implicitAuth.description">إضافات المصادقة الضمنية تقدم الدعم لحصول المستخدمين على المصادقة استناداً إلى عناوين رؤوس http</message>
 
 	<!-- Files Browser -->
 

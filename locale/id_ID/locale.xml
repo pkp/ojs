@@ -351,14 +351,6 @@ Perhatikan bahwa OAI antarmuka dapat dinonaktifkan dengan mengedit konfigurasi s
 
 	<message key="plugins.categories.generic.description">Plugin umum digunakan untuk memperluas Open Journal Systems dalam banyak cara yang bervariasi yang tidak didukung oleh kategori plugin yang lain.</message>
 
-	<message key="plugins.categories.implicitAuth">Plugin Pengesahan Implisit</message>
-	<message key="plugins.categories.implicitAuth.description"> Plugin Pengesahan Implisit mengimplementasikan dukungan untuk mengesahkan  dukungan untuk pengguna yang mengesahkan berdasarkan http header.</message>
-
-
-
-
- 
-
 	<!-- Browser File -->
 
 	<!-- Setup Jurnal -->

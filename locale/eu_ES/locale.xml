@@ -332,13 +332,6 @@ key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ABISUA!</h4>
 
 	<message key="plugins.categories.generic.description">Plugin generikoek Open Journal Systems hedatzen dute, gainerako plugin kategoriek egin ezin dituzten hainbat gauzatarako.</message>
 
-	<message key="plugins.categories.implicitAuth">Autentifikazio inplizituko pluginak</message>
-	<message key="plugins.categories.implicitAuth.description">Autentifikazio inplizituko pluginek, erabiltzaileak http goiburuetan oinarrituta autentifikatzeko euskarria ematen dute.</message>
-
-
-
- 
-
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->

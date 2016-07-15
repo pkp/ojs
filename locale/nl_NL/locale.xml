@@ -852,8 +852,6 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="user.noRoles.regReviewer">Registreren als reviewer</message>
 	<message key="user.noRoles.regReviewerClosed">Registreren als reviewer: registratie is momenteel uitgeschakeld.</message>
 	<message key="issue.coverPage.altText">Omslag</message>
-	<message key="plugins.categories.implicitAuth">Impliciete authenticatie plugins</message>
-	<message key="plugins.categories.implicitAuth.description">Impliciete authenticatie plugins implementeren de ondersteuning voor authenticatie van gebruikers op basis van http headers.</message>
 	<message key="journal.issn">ISSN</message>
 	<message key="article.article">Artikel</message>
 	<message key="user.manageMySubscriptions">Mijn abonnementen beheren</message>

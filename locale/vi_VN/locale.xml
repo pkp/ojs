@@ -926,8 +926,6 @@ Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành
 	<message key="user.noRoles.regReviewer">Đăng ký làm Người Phản biện</message>
 	<message key="user.noRoles.regReviewerClosed">Đăng ký làm Người Phản biện: Đăng ký hiện đang tạm ngừng.</message>
 	<message key="issue.coverPage.altText">Trang Bìa</message>
-	<message key="plugins.categories.implicitAuth">Công cụ phụ trợ Xác thực  Ngầm định</message>
-	<message key="plugins.categories.implicitAuth.description">Công cụ phụ trợ Xác thực  Ngầm định hỗ trợ xác thực người dùng dựa trên đầu biểu http</message>
 	<message key="sectionEditor.review.enrollReviewer">Bổ nhiệm một người dùng hiện có làm Người phản biện</message>
 	<message key="submission.layout.imageInvalid">Định dạng ảnh không phù hợp. Định dạng cho phép là .gif, .jpg, and .png.</message>
 	<message key="reviewer.article.restrictedFileAccess">Bài nộp sẽ được cung cấp nếu và khi người phản biện đồng ý tiến hành phản biện.</message>

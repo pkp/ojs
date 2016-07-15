@@ -364,10 +364,6 @@
        
        <message key="plugins.categories.generic.description">Загальні модулі дозволяють багатьма шляхами розширити функціональність Open Journal Systems.</message>
 
-       <message key="plugins.categories.implicitAuth">Модулі неявної аутентифікації</message>
-       <message key="plugins.categories.implicitAuth.description">Модулі неявної аутентифікації дозволяють підтримку аутентифікації користувачів за заголовками http.</message>
-       
-            
        <!-- Files Browser -->
 
        <!-- Journal Setup -->

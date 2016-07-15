@@ -880,8 +880,6 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="user.noRoles.regReviewer">Cadastrar como avaliador</message>
 	<message key="user.noRoles.regReviewerClosed">Cadastrar como avaliador: o cadastro de avaliadores está atualmente desabilitado.</message>
 	<message key="issue.coverPage.altText">Capa da revista</message>
-	<message key="plugins.categories.implicitAuth">Plugins de Autenticação Implícita</message>
-	<message key="plugins.categories.implicitAuth.description">Plugins de Autenticação Implícita implementam suporte para autenticação de usuários baseada nos cabeçalhos HTTP.</message>
 	<message key="submission.layout.publicGalleyId">Identificador Público de Composição</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Identificador público de composição já existe.</message>
 	<message key="about.aboutThisPublishingSystem.altText">Processo editorial e de publicação</message>

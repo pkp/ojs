@@ -673,8 +673,6 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="user.noRoles.regReviewer">ثبت نام به عنوان کارشناس</message>
 	<message key="user.noRoles.regReviewerClosed">ثبت نام به عنوان کارشناس: در حال حاضر ثبت نام کارشناسان غیر فعال است</message>
 	<message key="issue.coverPage.altText">پشت جلد</message>
-	<message key="plugins.categories.implicitAuth">پلاگین تایید هویت ضمنی</message>
-	<message key="plugins.categories.implicitAuth.description">بکمک پلاگین تایید هویت امکان تایید هویت کاربران از روی هدر اچ تی تی پی بوجود می آید</message>
 	<message key="submission.layout.publicGalleyId">شناسه عمومی گالی</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">شناسه عمومی گالی قبلا بکار رفته است</message>
 	<message key="about.aboutThisPublishingSystem.altText">روند انتشار و دبیری او ج اس</message>

@@ -754,8 +754,6 @@ La validación puede fallar en URLs de búsque que necesitan el envío de formul
 	<message key="user.noRoles.regReviewer">Registrarse como un Revisor</message>
 	<message key="user.noRoles.regReviewerClosed">Registrarse como un Revisor: El registro de revisores se encuentra actualmente deshabilitado.</message>
 	<message key="issue.coverPage.altText">Portada</message>
-	<message key="plugins.categories.implicitAuth">"Plugins" Implícitos de Autenticación</message>
-	<message key="plugins.categories.implicitAuth.description">Los "Plugins" de autenticación implicita implementan el soporte para la autenticación de usuarios basado en encabezados http</message>
 	<message key="submission.layout.publicGalleyId">Publicar identificador de Galera</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Publicar identificador de galera existente</message>
 	<message key="about.aboutThisPublishingSystem.altText">Proceso de Edición y Publicación en OJS</message>

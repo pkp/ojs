@@ -44,7 +44,6 @@
 	<message key="manager.setup.publisherNoteDescription">Texten kommer återfinnas nedanför rubriken 'Utgivare' och ovanför utgivarens namn/url under 'Sponsorer' på sidan Om.</message>
 	<message key="manager.setup.sponsorNoteDescription">Texten kommer återfinnas nedanför rubriken "Sponsorer" och ovanför  listan över sponsorers namn och URL:er under 'Sponsorer' på sidan Om.</message>
 	<message key="manager.setup.contributorNoteDescription">Texen kommer återfinnas nedanför rubriken 'Sponsorer' och ovanför listan med namn och URL:er för organisationer som stöttar tidskriften under 'Sponsorer' på sidan Om.</message>
-	<message key="plugins.categories.implicitAuth">Verifierings-Plugins</message>
 	<message key="plugins.generic.staticPages.displayName">Statiska sidor</message>
 	<message key="plugins.generic.staticPages.description">Denna Plugin tillåter statisk innehållshantering</message>   
 	<message key="plugins.generic.staticPages.editAddContent">Redigera/lägg till innehåll</message>   

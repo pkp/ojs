@@ -366,14 +366,6 @@
 
 	<message key="plugins.categories.generic.description">该类型插件以各种方式扩充OJS，让其他种类的WEB程序可以支持OJS.</message>
 
-	<message key="plugins.categories.implicitAuth">隐式认证插件</message>
-	<message key="plugins.categories.implicitAuth.description">隐式身份验证插件执行基于HTTP头的用户验证.</message>
-
-
-
-
- 
-
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->

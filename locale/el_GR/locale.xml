@@ -850,8 +850,6 @@
 	<message key="user.noRoles.regReviewerClosed">Εγγραφείτε ως Αξιολογητής: Η εγγραφή αξιολογητών είναι προς το παρόν απενεργοποιημένη</message>
 	<message key="issue.coverPage.altText">Σελίδα εξωφύλλου</message>
 	<message key="reader.subscribersOnly">Μόνο Συνδρομητές</message>
-	<message key="plugins.categories.implicitAuth">Implicit Authentication Plugins</message>
-	<message key="plugins.categories.implicitAuth.description">Τα Implicit Authentication plugins  υποστηρίζουν την ταυτοποίηση χρηστών βάση των http επικεφαλίδων.</message>
 	<message key="submission.layout.publicGalleyId">Δημόσιο Αναγνωριστικό Τυπογραφικού Δοκιμίου</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Το Δημόσιο Αναγνωριστικό του τυπογραφικού δοκιμίου υπάρχει ήδη.</message>
 	<message key="about.aboutThisPublishingSystem.altText">Διαδικασία Επιμέλειας και Δημοσίευσης του OJS</message>

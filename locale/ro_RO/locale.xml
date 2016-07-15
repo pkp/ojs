@@ -397,14 +397,6 @@ Trebuie remarcat faptul că interfaţa OAI poate fi deazactivată pentru acest s
 
 	<message key="plugins.categories.generic.description">Modulele generice sunt utilizate pentru a extinde Open Journal Systems în multiple moduri care nu sunt suportate de alte categorii de module.</message>
 
-	<message key="plugins.categories.implicitAuth">Module inițiale pentru autentificare</message>
-	<message key="plugins.categories.implicitAuth.description">Modulele inițiale de autentificare au implementat suportul pentru autentificarea utilizatorilor bazată pe headerele http.</message>
-
-
-
-
- 
-
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->

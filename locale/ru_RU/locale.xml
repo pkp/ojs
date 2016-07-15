@@ -362,8 +362,6 @@
 	<message key="plugins.categories.auth.description">Плагины авторизации позволяют Open Journal Systems делегировать задачу аутентификации пользователей другим системам, таким как LDAP-сервера.</message>
 	<message key="plugins.categories.citationFormats.description">Плагины форматов ссылок предоставляют пользователям различные форматы, с помощью которых можно получить доступ к ссылкам статей.</message>
 	<message key="plugins.categories.generic.description">Общие плагины используются для расширения возможностей Open Journal Systems различными способами, которые не поддерживаются другими категориями плагинов.</message>
-	<message key="plugins.categories.implicitAuth">Плагины скрытой аутентификации</message>
-	<message key="plugins.categories.implicitAuth.description">Плагины скрытой аутентификации реализуют поддержку аутентификации пользователей на основе заголовков протокола http.</message>
 
 	<!-- Браузер файлов -->
 

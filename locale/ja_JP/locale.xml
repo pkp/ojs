@@ -238,8 +238,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <!-- General plugin information -->
   <message key="plugins.categories.generic.description">他のカテゴリに含まれていない方法でオープン･ジャーナル･システムを拡張するのに使用されます。</message>
   <message key="plugins.categories.auth.description">オープン･ジャーナル･システムが行うユーザ認証をLDAPサーバなどの他のシステムに委任できるようにします。</message>
-	<message key="plugins.categories.implicitAuth">暗黙的認証プラグイン</message>
-	<message key="plugins.categories.implicitAuth.description">httpヘッダによるユーザ認証方式をサポートします。</message>
 
   <!-- Files Browser -->
   <!-- Journal Setup -->

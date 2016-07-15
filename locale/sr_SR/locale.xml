@@ -747,8 +747,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="user.noRoles.regReviewer">Registrujte se kao recenzent</message>
 	<message key="user.noRoles.regReviewerClosed">Registracija kao recenzent: Registracija recenzenata trenutno je onemogućena.</message>
 	<message key="issue.coverPage.altText">Slika naslovne stranice broja</message>
-	<message key="plugins.categories.implicitAuth">Dodaci za implicitnu proveru identiteta</message>
-	<message key="plugins.categories.implicitAuth.description">Dodaci za implicitnu proveru identiteta implementiraju podršku za proveru korisničkih identiteta na osnovu http zaglavlja.</message>
 	<message key="about.aboutThisPublishingSystem.altText">Proces uređivanja i izdavanja u OJS-u</message>
 	<message key="submission.layout.publicGalleyId">Javni identifikator preloma</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Javni identifikator preloma već postoji.</message>

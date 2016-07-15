@@ -378,14 +378,6 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 
 	<message key="plugins.categories.generic.description">ഓപ്പണ്‍ ജര്‍ണല്‍ സിസ്റ്റത്തിനെ വിവിധ തരത്തില്‍ മറ്റു വിഭാഗത്തിലെ പ്ലഗിന്‍സിനെക്കാള്‍ വര്‍ദ്ധിപ്പിക്കാന്‍ ജനറിക്ക് പ്ലഗിന്‍സ് ഉപയോഗിക്കുന്നു.</message>
 
-	<message key="plugins.categories.implicitAuth">ഇമ്പ്ലിസിറ്റ് ആതന്റികേഷന്‍ പ്ലഗിന്‍സ്</message>
-	<message key="plugins.categories.implicitAuth.description">എച്ച്ടിടിപി ഹെഡേര്‍സ് അടിസ്ഥാനമാക്കിയുള്ള ആതേന്റിക്കേറ്റിങ്ങ് യൂസര്‍സിനെ അനുക്കൂലിച്ച് കൊണ്ടുള്ള ഇംപ്ലിസിറ്റ് ആതേന്റിക്കേഷന്‍ പ്ലഗിന്‍സ് ഇംപ്ലിമെന്റ് ചെയ്യുന്നു.</message>
-
-
-
-
- 
-
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->

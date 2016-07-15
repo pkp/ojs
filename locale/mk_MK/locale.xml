@@ -360,8 +360,6 @@
 	<message key="plugins.categories.auth.description">Овластувачките додатоци овозможуваат Open Journal Systems да делегира корисничка автенкација на други системи, како LDAP сервери.</message>
 	<message key="plugins.categories.citationFormats.description">Цитат формат додатоци им овозможуваат на корисниците со различни формати да пристапат до статиите.</message>
 	<message key="plugins.categories.generic.description">Генеричките додатоци се користат за да се прошири Open Journal Systems во различни начини кои не се поддржани од страна на други категории.</message>
-	<message key="plugins.categories.implicitAuth">Имплицитна проверка на додатоците за автентичност</message>
-	<message key="plugins.categories.implicitAuth.description">Имплицитна проверка на додатоците за автентичност имплементираат поддршка за автенкација на корисниците врз основа на HTTP headers.</message>
 
 	<!-- Files Browser -->
 

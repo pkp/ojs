@@ -357,11 +357,6 @@ Not: Bu site için Açık Arşiv Sistemi arayüzü ADS ana düzenleme sayfasınd
 
 	<message key="plugins.categories.generic.description">Genel eklentiler, diğer eklenti kategorileri tarafından desteklenmeyen çeşitli yollarla Açık Dergi Sistemleri kullanımını genişletmekte kullanılır.</message>
 
-	<message key="plugins.categories.implicitAuth">Örtük Kimlik Eklentileri</message>
-	<message key="plugins.categories.implicitAuth.description">Örtülü kimlik eklentileri http başlığında kullanıcı temelli kimlik doğrulama için destek uygular.</message>
-
-
-
 	<message key="manager.setup.lockssDescription"><![CDATA[Açık Dergi Sistemleri, dergi için güvenli ve kalıcı arşiv sistemi olan <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) uygulamasını destekler. LOCKSS uygulaması Stanford Üniversitesi Kütüphanesinde geliştirilmiştir. Kütüphanelerde düzenli olarak toplanan kayıtlı dergilerin web sitelerinde yeni yayınlanmış içerikleri arşivlemeyi sağlayan açık kaynak kodlu bir yazılımdır. Her arşiv kütüphane sisteminde meydana gelebilecek bir kayıba karşı veriyi korur. Eğer bozulur veya kaybolursa diğer önbellek verinin temini için kullanılır.
 <br /><br />
 Açık Dergi Sistemleri için LOCKSS desteğini dergi tümüyle yayına geçmeden açmayınız, dergi tümüyle yayına başlayınca aşağıdaki iki adımı izleyiniz:]]></message>

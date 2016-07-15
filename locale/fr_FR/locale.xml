@@ -793,10 +793,8 @@ le droit de première publication, avec l’ouvrage disponible simultanément [S
 	<message key="user.noRoles.regReviewer">S'inscrire en tant que qu'évaluateur</message>
 	<message key="user.noRoles.regReviewerClosed">S'inscrire en tant que qu'évaluateur : l'inscription d'évaluateur est présentement désactivée.</message>
 	<message key="issue.coverPage.altText">Page couverture</message>
-	<message key="plugins.categories.implicitAuth">Plugiciels d'authentification implicite</message>
 	<message key="help.searchReturnResults">Retourner aux résultats de recherche</message>
 	<message key="reviewer.article.enterReviewForm">Cliquez sur l'icône pour compléter le formulaire d'évaluation.</message>
-	<message key="plugins.categories.implicitAuth.description">Les plugiciels d'authentification implicite mettent en place le soutien pour l'authentification des utilisateurs basée sur les en-têtes HTTP.</message>
 	<message key="submission.layout.publicGalleyId">Identifiant de l'épreuve publique</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">l'identifiant de l'épreuve publique existe déjà.</message>
 	<message key="about.aboutThisPublishingSystem.altText">Processus éditorial et d'édition d'OJS</message>

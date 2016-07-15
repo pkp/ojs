@@ -834,8 +834,6 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="user.noRoles.regReviewer">Registrer som reviewer</message>
 	<message key="user.noRoles.regReviewerClosed">Registrer som reviewer: Reviewer-registrering er i øjeblikket deaktiveret.</message>
 	<message key="issue.coverPage.altText">Forside</message>
-	<message key="plugins.categories.implicitAuth">Implicit godkendelsesplugin</message>
-	<message key="plugins.categories.implicitAuth.description">Implicit godkendelsesplugin implementerer support for godkendelse af brugere baseret på http headers.</message>
 	<message key="submission.layout.publicGalleyId">Offentlig identifikationsmarkør af publiceringsformat</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Offentlig publiceringsformat-identifikation eksisterer allerede.</message>
 	<message key="about.aboutThisPublishingSystem.altText">OJS redaktions- og publikationsproces</message>
