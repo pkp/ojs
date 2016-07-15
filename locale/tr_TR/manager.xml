@@ -730,7 +730,5 @@
 	<message key="manager.setup.copyrightYearBasis.Article">Varsayılan yıl makalenin yayın tarihinden itibaren çekilecektir.</message>
 	<message key="manager.setup.copyrightYearBasis.Issue">Varsayılan yıl sayının yayımı tarihinden itibaren çekilecek.</message>
 	<message key="manager.statistics.reports.objectNotFound">Obje veri tabanında bulunamadı</message>
-	<message key="manager.setup.emailHeader">E-posta Başlığı</message>
-	<message key="manager.setup.emailHeaderDescription">Dergi hesabından sistem tarafından gönderilen hazır e-postalara aşağıdaki başlık eklenecektir. Bu e-postalara temel iletişim adresi eklenir. Temel iletişimde belirtilen kişinin mesaj içeriğinden sorumlu olarak gösterilmesi gerekli değildir; çünkü mesaj başka bri kullanıcı üzerinden gönderilebilir.</message>	
 	<message key="manager.statistics.reports.yesterday">Dün</message>
 </locale>

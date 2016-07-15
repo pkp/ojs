@@ -57,7 +57,6 @@
 	<message key="editor.issues.accessStatus">Estado de acceso</message>
 	<message key="editor.issues.accessDate">Data de acceso libre</message>
 	<message key="editor.issues.invalidAccessDate">A data de acceso non é válida.</message>
-	<message key="editor.issues.issuePublicIdentificationExists">Xa existe identificación pública do número.</message>
 	<message key="editor.issues.coverPage">Imaxe da capa</message>
 	<message key="editor.issues.coverPageInstructions">(Formatos permitidos: .gif, .jpg, o .png )</message>
 	<message key="editor.issues.uploaded">Subido</message>

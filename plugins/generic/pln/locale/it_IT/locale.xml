@@ -104,7 +104,4 @@
 
 	<message key="plugins.generic.plngateway.displayName">Gateway PLN</message>
 	<message key="plugins.generic.plngateway.description">Mostra lo stato della PLN e i titoli degli articoli recenti in preparazione per il deposito.</message>
-	<message key="plugins.generic.plnblock.preservedin">Conservato nella PKP|PLN</message>
-	<message key="plugins.generic.plnblock.name">Blocco "Conservato in"</message>
-	<message key="plugins.generic.plnblock.description">Questo plugin genera il blocco "Conservato in".</message>
 </locale>

@@ -19,5 +19,4 @@
 	<message key="plugins.generic.acron.reload">Ricarica le attività programmate</message>
 	<message key="plugins.generic.acron.enabled">Il plugin Acron è stato abilitato.</message>
 	<message key="plugins.generic.acron.disabled">Il plugin Acron è stato disabilitato.</message>
-	<message key="plugins.generic.acron.reloadedCronTab">Il crontab è stato ricaricato.</message>
 </locale>

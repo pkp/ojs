@@ -210,16 +210,6 @@
 	<message key="manager.setup.disciplineExamples">(np. historia; edukacja; socjologia; pedagogika; antropologia)</message>
 	<message key="manager.setup.disciplineProvideExamples">Podaj przykłady dziedzin naukowych dla tego czasopisma.</message>
 	<message key="manager.setup.displayCurrentIssue">Dodaj spis treści dla numeru (jeśli możliwe).</message>
-	<message key="manager.setup.doiPrefix">Prefix DOI</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[Prefix DOI (Digital Object Identifier) jest przydzielany przez <a href="http://www.crossref.org" target="_new">CrossRef</a> a jego format ma postać 10.xxxx (np. 10.1234).]]></message>
-	<message key="manager.setup.doiSuffix">Suffix DOI</message>
-	<message key="manager.setup.doiSuffixDefault">Wykorzystaj domyślny wzór (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Wykorzystaj niestandardowy wzór do tworzenia suffixów DOI. Użyj %j dla inicjałów czasopisma, %v dla numeru wolumenu, %i dla numeru, %a dla identyfikatora OJS, oraz %p dla numeru strony.</message>
-	<message key="manager.setup.doiSuffixPattern.example">np. vol%viss%ipp%p utworzy DOI 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">Suffix DOI może przybierać dowolną formę ale musi być unikatowy dla każdego z publikowanych tekstów.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Skorzystaj z niestandardowego suffixu (musi zostać włączony w kroku 4).</message>
-	<message key="manager.setup.doiReassign">Ponownie przydziel DOI</message>
-	<message key="manager.setup.doiReassign.description">Po zmianie konfiguracji DOI skorzystaj z ponownego przydzielenia DOI aby zapisać ustawienia dla opublikowanych tekstów.</message>
 	<message key="manager.setup.editorDecision">Decyzja korektora</message>
 	<message key="manager.setup.editorialMembers">Przejdź do listy redaktorów i utwórz radę redakcyjną. Można tego dokonać w dowolnej chwili.</message>
 	<message key="manager.setup.editorialProcess1">Jeden lub więcej redaktorów zajmuje się podstawowymi zadaniami bez przydzielania odrębnych ról.</message>
@@ -256,7 +246,6 @@
 	<message key="manager.setup.form.journalInitialsRequired">Inicjały czasopisma są wymagane.</message>
 	<message key="manager.setup.form.journalTitleRequired">Tytuł czasopisma jest wymagany.</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">Liczba recenzentów dla każdego wysłanego tekstu jest wymagana.</message>
-	<message key="manager.setup.form.doiPrefixPattern">Wzór musi posiadać formę 10.xxxx.</message>
 	<message key="manager.setup.form.supportEmailRequired">E-mail osoby wspierającej jest wymagany.</message>
 	<message key="manager.setup.form.supportNameRequired">Nazwa osoby wspierającej jest wymagana.</message>
 	<message key="manager.setup.frequencyOfPublication">Częstość publikowania numerów</message>
@@ -429,8 +418,6 @@
 	<message key="manager.setup.subjectExamples">(np. fotosynteza; czarne dziury; etc.)</message>
 	<message key="manager.setup.subjectKeywordTopic">Słowa kluczowe</message>
 	<message key="manager.setup.subjectProvideExamples">Podaj przykłady słów kluczowych lub tematów jako wzór dla autorów</message>
-	<message key="manager.setup.submissionEmailLogging">Zachowaj dziennik wszystkich e-maili wysłanych w kontekście przesłanego tekstu na jego stronie historii.</message>
-	<message key="manager.setup.submissionEventLogging">Zachowaj dziennik wszystkich działań podjętych w kontekście przesłanego tekstu na jego stronie historii.</message>
 	<message key="manager.setup.submissionGuidelines">Wytyczne dla autorów</message>
 	<message key="manager.setup.submissionPreparationChecklist">Sprawdzenie tekstu przed wysłaniem</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Na stronie przesyłania tekstu, autorzy muszą oznaczyć każdy z elementów listy.</message>

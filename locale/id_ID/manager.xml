@@ -242,15 +242,6 @@
 	<message key="manager.setup.disciplineExamples">( Contoh: Sejarah, Pendidikan, Sosiologi, Psikologi, Ilmu Budaya, hukum)</message>
 	<message key="manager.setup.disciplineProvideExamples"> Masukkan disiplin ilmu yang relevan untuk jurnal ini.</message>
 	<message key="manager.setup.displayCurrentIssue"> Tambahkan daftar isi untuk terbitan terkini (jika tersedia).</message> 
-	<message key="manager.setup.doiPrefix"> Awalan DOI </message> 
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[Awalan DOI (Digital Object Identifier) ditugaskan oleh <a href="http://www.crossref.org" target="_new">CrossRef</a> dan dalam format 10.xxxx (contoh: 10.1234).]]></message> 
-	<message key="manager.setup.doiSuffix"> Akhiran DOI </message>	<message key="manager.setup.doiSuffixDefault"> Gunakan pola default (%j.v%vi%i.%a).</message> 
-<message key="manager.setup.doiSuffixPattern"> Gunakan pola yang akan dimasukkan pada kolom dibawah ini untuk menghasilkan akhiran DOI. Gunakan %j untuk inisial jurnal, %v untuk nomor volume, %i untuk nomor terbitan, %a untuk ID artikel OJS, dan %p untuk nomor halaman.</message> 
-<message key="manager.setup.doiSuffixPattern.example"> Sebagai contoh, vol%viss%ipp%p dapat membuat DOI 10.1234/vol3iss2pp230 </message>
-	<message key="manager.setup.doiSuffixDescription"> Akhiran DOI dapat berbentuk apapun, tetapi harus unik untuk masing-masing item yang telah yang diterbitkan.</message>	
-<message key="manager.setup.doiSuffixCustomIdentifier"> Gunakan "Custom Identifier" untuk item yang telah diterbitkan sebagai akhiran DOI (harus diaktifkan pada langkah 4).</message>
-<message key="manager.setup.doiReassign">Menugaskan Kembali DOIs</message>
-<message key="manager.setup.doiReassign.description"> Jika Anda mengubah konfigurasi DOI, DOI yang sebelumnya tidak akan berfungsi lagi. Saat konfigurasi DOI disimpan, gunakan tombol ini untuk menghapus semua DOI yang ada sehingga pengaturan baru akan berlaku pada artikel yang sudah ada.</message> 
 	<message key="manager.setup.editorDecision"> Keputusan Editor</message> 
 	<message key="manager.setup.editorialMembers"> Pergi ke Anggota Dewan dan tambahkan Dewan Editorial dan/ atau anggota dewan Reviewer. Ini dapat dilakukan kapanpun dalam mengoperasikan jurnal.</message>
 	<message key="manager.setup.editorialProcess1"> Satu editor atau lebih menangani langkah awal tanpa peran tertentu.</message> 
@@ -289,7 +280,6 @@
 	<message key="manager.setup.form.journalInitialsRequired"> Inisial jurnal diperlukan.</message> 
 	<message key="manager.setup.form.journalTitleRequired"> Judul jurnal diperlukan.</message> 
 	<message key="manager.setup.form.numReviewersPerSubmission"> Jumlah Reviewer per penyerahan diperlukan .</message>	
-<message key="manager.setup.form.doiPrefixPattern"> Pola DOI harus dalam form 10.xxxx.</message> 
 	<message key="manager.setup.form.supportEmailRequired"> Email dukungan diperlukan.</message>
 	<message key="manager.setup.form.supportNameRequired"> Nama dukungan diperlukan.</message> 
 	<message key="manager.setup.frequencyOfPublication"> Frekuensi dan Titik Mulai </message> 
@@ -464,8 +454,6 @@
 	<message key="manager.setup.subjectClassificationExamples">(contoh: klasifikasi Subjek Matematika; klasifikasi Perpustakaan Kongres)</message> 
 	<message key="manager.setup.subjectExamples">(contoh: Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</message>	
 <message key="manager.setup.subjectKeywordTopic">Kata Kunci</message>	<message key="manager.setup.subjectProvideExamples"> Masukkan kata kunci atau topik sebagai petunjuk untuk Penulis</message>
-	<message key="manager.setup.submissionEmailLogging"> Menyimpan log tindakan yang berkaitan dengan naskah di halaman Sejarah.</message> 
-	<message key="manager.setup.submissionEventLogging"> Menyimpan log semua email yang dikirimkan yang berkaitan dengan naskah di halaman Sejarah.</message> 
 	<message key="manager.setup.submissionGuidelines"> Petunjuk Penyerahan </message> 
 	<message key="manager.setup.submissionPreparationChecklist"> Persiapan Penyerahan </message> 
 	<message key="manager.setup.submissionPreparationChecklistDescription"> Saat melakukan penyerahan naskah untuk jurnal, Penulis terlebih dahulu diminta untuk mengecek kelengkapan item di Daftar Persiapan Naskah, sebelum memproses. Daftar tersebut juga ditampilkan di Petunjuk Penulis, di bawah Tentang Kami, daftar ini dapat diedit, tapi terlebih dahulu diberi tanda centang sebelum diproses.</message> 

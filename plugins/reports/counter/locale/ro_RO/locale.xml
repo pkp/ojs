@@ -22,10 +22,6 @@
 	
 	
 	
-	<message key="plugins.reports.counter.migrate">Migrează fișierul de log</message>
-
-		
-	
 	<message key="plugins.reports.counter.1a.title">Raportul pentru revista 1 (R3): Solicitări de text integral pe lună şi pe revistă</message>
 	<message key="plugins.reports.counter.1a.title1">Raportul pentru revista 1 (R3)</message>
 	<message key="plugins.reports.counter.1a.title2">Numărul de cereri înregistrate cu succes pentru articole cu text integral pe lună şi pe revistă (Anul {$year})</message>

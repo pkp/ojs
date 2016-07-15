@@ -25,7 +25,6 @@
     <message key="plugins.importexport.doaj.export.articleInfo">تصدير المؤلفات المختارة بصيغة XML</message>
 
     <message key="plugins.importexport.doaj.export.contact">تواصل مع DOAJ لغرض التضمين</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">تصدير معلومات المقالات بصيغة XML لغرض الحفظ في DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">ليتم اعتبار مجلتك في DOAJ، لطفاً، قدم هذا النموذج المعبأ جزئياً إلى DOAJ، بعد أن تملأ المعلومات غير المكتملة قدر ما تستطيع.</message>
 
 </locale>

@@ -267,12 +267,6 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-	<message key="submission.event.logLevel">Poziom</message>
-	<message key="submission.event.logLevel.info">Informacje</message>
-	<message key="submission.event.logLevel.notice">Ogłoszenie</message>
-	<message key="submission.event.logLevel.warning">Ostrzeżenie</message>
-	<message key="submission.event.logLevel.error">Błąd</message>
-	
 	<message key="submission.event.general.defaultEvent">Akcja</message>
 	<message key="submission.event.general.articleSubmitted">Artykuł przesłany</message>
 	<message key="submission.event.general.issueScheduled">Artykuł przesłany do kolejki</message>
@@ -602,7 +596,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="user.login.resetPasswordInstructions"><![CDATA[Ze względów bezpieczeństwa, system przesyła nowe hasło.<br /><br />Podaj swój adres e-mail aby otrzymać nowe hasło.]]></message>
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Powtórz hasło</message>
 	<message key="user.register.selectJournal">Zaznacz czasopismo dla którego chcesz się zarejestrować</message>
 	<message key="user.register.noJournals">Brak czasopism.</message>
 	<message key="user.register.privacyStatement">Polityka prywatności</message>
@@ -797,12 +790,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 
 	<message key="rt.metadata.pkp.primaryAuthor">Imię, nazwisko autora, afiliacja, kraj</message>
 	<message key="rt.metadata.pkp.peerReviewed">Recenzowany artykuł</message>
-	<message key="rt.metadata.pkp.doi">Digital Object Identifier (DOI)</message>
-
-
-
-
-
 	<message key="rt.beNotifiedWhen">Powiadom gdy...</message>
 
 	<message key="rt.thisJournal">Wyszukaj w czasopiśmie</message>

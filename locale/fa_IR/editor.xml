@@ -57,7 +57,6 @@
 	<message key="editor.issues.accessStatus">وضعیت دستیابی</message>
 	<message key="editor.issues.accessDate">تاریخ دسترسی آزاد</message>
 	<message key="editor.issues.invalidAccessDate">تاریخ دستیابی ذکر شده معتبر نیست</message>
-	<message key="editor.issues.issuePublicIdentificationExists">شناسه عمومی شماره مجله ذکر شده در حال حاضر وجود دارد.</message>
 	<message key="editor.issues.coverPage">تصویر جلد</message>
 	<message key="editor.issues.coverPageInstructions">فرمات های مجاز: .gif, .jpg, یا .png</message>
 	<message key="editor.issues.uploaded">آپلود شد</message>

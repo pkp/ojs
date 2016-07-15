@@ -30,7 +30,6 @@
 	<message key="editor.submissionArchive.confirmDelete">Quý vị có chắc chắn muốn xóa vĩnh viễn bài nộp này?</message>
 	<message key="editor.submissionReview.confirmDecision">Quý vị có chắc chắn muốn ghi lại quyết định này?</message>
 	<message key="editor.submissionReview.emailWillArchive">Bài nộp này sẽ được lưu sau khi email Thông báo cho Tác giả được gửi đi hoặc nút "Bỏ qua Email" được sử dụng.</message>
-	<message key="editor.submissionReview.notes">Thời hạn chỉ số tuần còn lại cho đến khi ngày hết hợn phản biện hoặc (-) số tuần quá hạn. Nó được nhập vào khi người phản biện đồng ý tiến hành phản biện.</message>
 	<message key="editor.notifyUsers">Thông báo cho người dùng</message>
 	<message key="editor.notifyUsers.inProgress">Đang thông báo cho người dùng...</message>
 	<message key="editor.usersNotified">Người dùng đã được thông báo</message>
@@ -58,7 +57,6 @@
 	<message key="editor.issues.accessStatus">Trạng thái truy cập</message>
 	<message key="editor.issues.accessDate">Ngày truy cập tự do</message>
 	<message key="editor.issues.invalidAccessDate">Ngày cho truy cập không hợp lệ.</message>
-	<message key="editor.issues.issuePublicIdentificationExists">Định danh công khai đã có.</message>
 	<message key="editor.issues.coverPage">Ảnh bìa</message>
 	<message key="editor.issues.coverPageInstructions">(Các định dạng cho phép: .gif, .jpg, or .png )</message>
 	<message key="editor.issues.uploaded">Đã tải lên</message>

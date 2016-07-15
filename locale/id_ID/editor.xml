@@ -62,7 +62,6 @@
 	<message key="editor.issues.publicIssueIdentifier"> Pengidentifikasi isu umum </message> 
 	<message key="editor.issues.description"> Deskripsi </message> 
 	<message key="editor.issues.accessStatus"> Status Akses</message>	<message key="editor.issues.accessDate"> Buka Tanggal Akses</message>	<message key="editor.issues.enableOpenAccessDate"> Memungkinkan menunda membuka akses </message> 
-	<message key="editor.issues.issuePublicIdentificationExists"> Identifikasi isu umum sudah ada.</message> 
 	<message key="editor.issues.coverPage"> Gambar Sampul</message>
 	<message key="editor.issues.coverPageInstructions">(membolehkan format: .gif, .jpg, or .png)</message> 
 	<message key="editor.issues.uploaded"> Mengunduh </message> 

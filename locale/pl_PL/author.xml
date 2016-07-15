@@ -32,7 +32,6 @@
 	<message key="author.submit.cancelSubmission">Możesz uzupełnić swoje zgłoszenie w późniejszym terminie, przechodząc do "Zgłoszone teksty" w zakładce "Moje konto".</message>
 	<message key="author.submit.notAccepting">Czasopismo nie przyjmuje obecnie nowych zgłoszeń.</message>
 	<message key="author.submit.requestWaiver">Prośba o umorzenie płatności za publikację</message>
-	<message key="author.submit.qualityForWaiver">Proszę o umorzenie płatności za publikację testu</message>
 	<message key="author.submit.addReasonsForWaiver">Proszę uzasadnić dlaczego płatność za publikację tekstu powinna być umorzona.</message>
 	<message key="author.submissions.queuedReviewSubsequent">W recenzji, etap {$round}</message>
 	<message key="author.submissions.queuedReviewRevisions">W recenzji: Wymagana korekta</message>

@@ -104,8 +104,6 @@
 	<message key="manager.setup.disciplineExamples">(例如，歷史、教育、社會、心理學、文化研究、法律)</message>
 	<message key="manager.setup.disciplineProvideExamples">提供這份期刊相關的學門領域作為範例</message>
 	<message key="manager.setup.displayCurrentIssue">.為當期期刊新增一份目錄（如果可以的話）</message>
-	<message key="manager.setup.doiPrefix">DOI 字首</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[DOI字首(Digital Object Identifier 數位物件識別號) 是由 <a href="http://www.crossref.org">CrossRef</a>所指派， 格式為：10.xxxx (例如， 10.1234).]]></message>
 	<message key="manager.setup.editorialMembers">前往「委員會成員」並新增「編輯委員會」以及/或者「審查委員會」成員。在期刊運作的任何階段都可以做到這件事情。</message>
 	<message key="manager.setup.editorialProcess1">一個或多個編輯處理這些基本步驟，但並沒有特別分配預定的角色。</message>
 	<message key="manager.setup.editorialProcess2">編輯處理稿件順序、目錄，而文稿類型編輯處理稿件審查與編輯。</message>
@@ -273,7 +271,6 @@
 	<message key="manager.setup.reviewProcess">審查程序</message>
 	<message key="manager.setup.reviewProcessDescription"><![CDATA[.OJS支援兩種管理審查程序的模式。建議使用「標準審查程序」，因為其透過各項步驟引導審查人，確保每份投稿都會有一份完整審查歷史紀錄，還有方便的自動提醒通知，以及給投稿稿件的標準建議（接受刊登；修改後接受刊登；重新審查；投稿他處；婉謝退稿；見審查意見）。<br /><br />請在下面選擇一個選項：]]></message>
 	<message key="manager.setup.reviewProcessEmail">電子郵件附件審查程序</message>
-	<message key="manager.setup.reviewProcessEmailDescription">編輯向審查人寄交一份附有投稿稿件的審查邀請函。審查人同樣以電子郵件將他們的同意書（或婉謝信），連同審查意見書和建議選項寄交給編輯。編輯在投稿的「審查」頁面，進入審查人的同意書（或婉謝信）以及審查意見書和建議選項，以記錄審查流程。</message>
 	<message key="manager.setup.reviewProcessStandard">標準審查程序</message>
 	<message key="manager.setup.reviewProcessStandardDescription">編輯會將投稿文章的標題和摘要電郵給選中的審查人，同時以邀請函的形式請審查人登入這個期刊網站，以完成審查工作。審查人進入期刊網站以同意進行審查工作，之後下載投稿稿件，上傳他們的審查意見書，並選擇一個審查建議。</message>
 	<message key="manager.setup.searchEngineIndexing">搜尋引擎索引</message>
@@ -294,8 +291,6 @@
 	<message key="manager.setup.subjectExamples">(例如，光和作用、黑洞、四色地圖問題、貝斯定理)</message>
 	<message key="manager.setup.subjectKeywordTopic">關鍵字</message>
 	<message key="manager.setup.subjectProvideExamples">提供關鍵字或者主旨的範例，以引導作者。</message>
-	<message key="manager.setup.submissionEmailLogging">啟用投稿電子郵件記錄，這會為所有和一篇稿件相關的電子郵件留下一個記錄檔(可由每篇稿件的「歷史」網頁進入)。</message>
-	<message key="manager.setup.submissionEventLogging">啟用投稿事件記錄，這會為每篇稿件留下一個記錄檔(可由每篇稿件的「歷史」網頁進入)。</message>
 	<message key="manager.setup.submissionGuidelines">投稿須知</message>
 	<message key="manager.setup.submissionPreparationChecklist">投稿準備清單</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">在提交一份投稿文章給這個期刊時，作者首先會被要求檢查是否完成「投稿準備清單」中的每個項目，才能繼續下一步。這份清單也會出現在「期刊介紹」內的「作者須知」欄位中。這份清單能夠在下面進行編輯，而所有的項目將會需要作者進行核取後，才能繼續他們的投稿流程。</message>
@@ -412,9 +407,7 @@
 	<message key="manager.subscriptions.ipRange">IP Range</message>
 	<message key="manager.subscriptions.noneCreated">沒有建立任何的訂戶</message>
 	<message key="manager.subscriptions.select">指派角色給訂戶</message>
-	<message key="manager.subscriptions.selectSubscriber">選擇訂戶</message>
 	<message key="manager.subscriptions.selectSubscriber.desc">這份期刊的期刊管理員、編輯、文稿類型編輯、版面編輯、校樣編輯和校對者會自動擁有訂戶閱讀權限。</message>
-	<message key="manager.subscriptions.subscribe">指派角色</message>
 	<message key="manager.subscriptions.subscriptionCreatedSuccessfully">成功建立訂戶</message>
 	<message key="manager.subscriptions.subscriptionType">訂閱類型</message>
 	<message key="manager.subscriptions.user">使用者</message>
@@ -423,14 +416,9 @@
 	<message key="manager.subscriptionTypes.cost">價格</message>
 	<message key="manager.subscriptionTypes.create">建立新的訂閱類型</message>
 	<message key="manager.subscriptionTypes.createTitle">建立</message>
-	<message key="manager.subscriptionTypes.currency">貨幣</message>
 	<message key="manager.subscriptionTypes.duration">期限</message>
 	<message key="manager.subscriptionTypes.edit">編輯訂閱類型</message>
 	<message key="manager.subscriptionTypes.editTitle">編輯</message>
-	<message key="manager.subscriptionTypes.format">格式</message>
-	<message key="manager.subscriptionTypes.format.online">線上</message>
-	<message key="manager.subscriptionTypes.format.print">印刷</message>
-	<message key="manager.subscriptionTypes.format.printOnline">印刷以及線上</message>
 	<message key="manager.subscriptionTypes.form.cost">價格</message>
 	<message key="manager.subscriptionTypes.form.costInstructions">輸入一個數值(例如，40或40.00)不要含有任何像"$"的其他文字。</message>
 	<message key="manager.subscriptionTypes.form.costNumeric">價格必須是一個正整數。</message>
@@ -456,11 +444,9 @@
 	<message key="manager.subscriptionTypes.form.typeName">名稱</message>
 	<message key="manager.subscriptionTypes.form.typeNameExists">訂閱類型的名稱已經存在了</message>
 	<message key="manager.subscriptionTypes.form.typeNameRequired">需要一個訂閱類型的名稱</message>
-	<message key="manager.subscriptionTypes.month">月</message>
-	<message key="manager.subscriptionTypes.months">月</message>
 	<message key="manager.subscriptionTypes.name">訂閱類型</message>
 	<message key="manager.subscriptionTypes.noneCreated">沒有建立任何的訂閱類型。</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">成功建立訂閱類型</message>
-	<message key="manager.subscriptionTypes.year">年</message>
-	<message key="manager.subscriptionTypes.years">年</message>
+
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS可以讓使用者使用幾種受到支持的語言介面。同時，OJS可以當作一個部分多語化的系統，讓使用者在每個頁面中可以切換語言，並允許某些資料以額外的兩種語言進行輸入。<br /><br />如果一個受到OJS支持的語言沒有列在下表，請您的網站管理員從網站管理介面來安裝該項語系。新增支援新語系的指引說明，請見OJS的文件。]]></message>
 </locale>

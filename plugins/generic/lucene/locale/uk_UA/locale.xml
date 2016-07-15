@@ -53,7 +53,5 @@
 <li>Для створення складних пошукових запитів використовуйте дужки; наприклад, <em>архів ((журнал OR конференція) NOT дисертація)</em></li>
 </ul>]]></message>
 	
-	<message key="plugins.generic.lucene.error.searchServiceOffline">На жаль, пошукова служба OJS зараз не працює. Технічний адміністратор цього журналу інформований про цю проблему.</message>
-	<message key="plugins.generic.lucene.error.coreNotFound">Необхідне ядро '{$core}' не знайдене на сервері solr. Він працює?</message>
 	<message key="plugins.generic.lucene.message.indexOnline">Індекс з {$numDocs} документів онлайн.</message>
 </locale>

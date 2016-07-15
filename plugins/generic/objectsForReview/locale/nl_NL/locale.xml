@@ -228,7 +228,6 @@
 	<message key="plugins.generic.objectsForReview.notification.ofrRequested">Object voor review aangevraagd. In afwachting va.n bevestiging door de redacteur.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrUpdated">Object voor review bijgewerkt</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrDeleted">Object voor review en de taken daarvan verwijderd.</message>
-	<message key="plugins.generic.objectsForReview.notification.ofrAauthorAssigned">Auteur toegekend aan object voor review.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorDenied">Auteursverzoek geweigerd. Object hersteld naar de oorspronkelijke staat.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorMailed">Object voor review gemarkeerd als verstuurd naar de auteur.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorRemoved">Auteur verwijderd. Object hersteld naar de oorspronkelijke staat.</message>
@@ -280,7 +279,6 @@
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.performer">Uivoerende</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.composer">Componist</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.contributor">Contributeur</message>
-	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsByr">Tekst door</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.format">Formaat</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.seriesTitle">Serietitel</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.volume">Volume</message>
@@ -489,7 +487,6 @@
 	<message key="plugins.generic.objectsForReview.object.letter">Brief</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.author">Auteur</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.contributor">Contributeur</message>
-	<message key="plugins.generic.objectsForReview.object.letter.person.recepient">Ontvanger</message>
 	<message key="plugins.generic.objectsForReview.object.letter.type">Soort brief</message>
 	<!-- Magazine Article -->
 	<message key="plugins.generic.objectsForReview.object.magazineArticle">Lectuur-artikel</message>

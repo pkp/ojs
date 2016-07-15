@@ -16,7 +16,6 @@
 	<message key="plugins.generic.sword.displayName">Modul SWORD</message>
 	<message key="plugins.generic.sword.description">Permite managerilor revistei și (opțional) autorilor să-și depoziteze articolele prin intermediul protocolului SWORD</message>
 	<message key="plugins.generic.sword.enabled">Modulul SWORD a fost activat.</message>
-	<message key="plugins.generic.sword.disable">Modulul SWORD a fost dezactivat.</message>
 	<message key="plugins.generic.sword.settings">Setări</message>
 	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Permite autorului să specifice un punct de depozitare</message>
 	<message key="plugins.generic.sword.settings.depositPoints">Puncte de depozitare</message>

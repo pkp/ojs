@@ -65,7 +65,6 @@
 	<message key="editor.issues.accessStatus">ആക്സസ് സ്റ്റാറ്റസ്</message>
 	<message key="editor.issues.accessDate">ഓപ്പണ്‍ ആക്സസ് തിയതി</message>
 	<message key="editor.issues.enableOpenAccessDate">വൈകിപ്പോയ ഓപ്പണ്‍ അക്സസ് പ്രാപ്തമാക്കുക</message>
-	<message key="editor.issues.issuePublicIdentificationExists">പബ്ലിക് ഇഷ്യൂ ഐഡന്റിഫയര്‍ നിലവിലുണ്ട് .</message>
 	<message key="editor.issues.coverPage">കവര്‍ ചിത്രം</message>
 	<message key="editor.issues.coverPageInstructions">(സ്വീകാര്യമായ ഫോര്‍മാറ്റുകള്‍: .gif, .jpg, or .png )</message>
 	<message key="editor.issues.uploaded">അപ് ലോഡ് ചെയ്തു</message>

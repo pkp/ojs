@@ -271,8 +271,6 @@
 	<message key="manager.setup.emailBounceAddressDescription">أي رسالة لا تصل إلى هدفها سيعتبرها الموقع خطأً يُبلغ عنه إلى العنوان البريدي</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>ملاحظة:</strong> لتفعيل هذا الخيار، على مدير الموقع تفعيل <tt>allow_envelope_sender</tt> في ملف إعداد نظام المجلات المفتوحة. قد يتطلب الأمر أيضاً المزيد من التعديل في إعدادات الملقم لدعم هذه الوظيفة (الأمر الذي قد لا يكون ممكناً في جميع الملقمات)، كما هو مبين في أدبيات النظام.]]></message>
 	<message key="manager.setup.emails">تحديد هوية البريد الالكتروني</message>
-    <message key="manager.setup.emailHeader">نص عنوان البريد الالكتروني</message>
-    <message key="manager.setup.emailHeaderDescription">رسائل البريد الالكتروني المرسلة نيابة عن المجلة سيتصدرها العنوان الآتي. ستكون هذه الرسائل صادرة بتوقيع عنوان الاتصال الرئيسي للمجلة، لذلك سيكون من المهم التوضيح بأن صاحب هذا العنوان ليس بالضرورة مسؤولاً عن مضمونات تلك الرسائل، لأنها قد تصدر من قبل مستخدمين آخرين لموقع المجلة هذا.</message>
     <message key="manager.setup.emailSignature">التوقيع</message>
 	<message key="manager.setup.emailSignatureDescription">رسائل البريد الالكتروني المُحضرَّة آلياً والمرسلة من قبل النظام نيابة عن المجلة، ستكون مذيلة بالتوقيع الآتي، علماً أن محتوى تلك الرسائل قابل للتعديل ضمن باب (إدارة المجلة).</message>
 	<message key="manager.setup.enableAnnouncements">تمكين مدراء المجلة من إضافة إعلاناتهم على الموقع.</message>

@@ -45,14 +45,9 @@
 	<message key="plugins.generic.pln.status.transferred">Transferré</message>
 	<message key="plugins.generic.pln.status.received">Reçu</message>
 	<message key="plugins.generic.pln.status.syncing">En synchronisation</message>
-	<message key="plugins.generic.pln.status.synced">Synchronisé</message>
 	<message key="plugins.generic.pln.status.updated">Mis àjour</message>
 	<message key="plugins.generic.pln.status.local_failure">Échec local</message>
 	<message key="plugins.generic.pln.status.remote_failure">Échec distant</message>
-	<message key="plugins.generic.pln.status.reset">Réinitialiser</message>
-	<message key="plugins.generic.pln.status.yes">Oui</message>
-	<message key="plugins.generic.pln.status.no">Non</message>
-
 	<message key="plugins.generic.pln.depositorTask.name">Tâche de dépôt PKP PLN</message>
 	<message key="plugins.generic.pln.notifications.processing_for">Déposant en traitement de</message>
 	<message key="plugins.generic.pln.notifications.pln_not_accepting">Le PKP PLN n'accepte pas les dépôt actuellement.</message>

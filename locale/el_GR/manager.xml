@@ -690,8 +690,6 @@
 	<message key="manager.setup.copyrightYearBasis">Έτος - βάση πνευματικών δικαιωμάτων νέου άρθρου</message>
 	<message key="manager.setup.copyrightYearBasis.Article">Εξ'ορισμού το έτος θα συμπληρωθεί από την ημερομηνία δημοσίευσης, όπως "publish-as-you-go".</message>
 	<message key="manager.setup.copyrightYearBasis.Issue">Εξ'ορισμού το έτος θα συμπληρωθεί από την ημερομηνία δημοσίευσης.</message>
-	<message key="manager.setup.emailHeader">Επικεφαλίδα email</message>
-	<message key="manager.setup.emailHeaderDescription">Τα έτοιμα emails  που αποστέλλονται από το σύστημα για λογαριασμό του περιοδικού θα ξεκινήσει με την ακόλουθη επικεφαλίδα. Αυτά τα μηνύματα θα πρέπει να αντιμετωπιστούν από τον Κύριο Συγγραφέα επικοινωνίας, γι 'αυτό είναι σημαντικό να διευκρινιστεί ότι ο Κύριος Υπεύθυνος Επικοινωνίας δεν είναι απαραίτητα υπεύθυνη για το περιεχόμενο του μηνύματος, το οποίο μπορεί να αποστέλλεται για λογαριασμό ενός διαφορετικού χρήστη.</message>
 	<message key="manager.setup.journalThumbnail">Μικρογραφία περιοδικού</message>
 	<message key="manager.setup.subjectClassificationURLValid">Παρακαλούμε εισάγετε ένα έγκυρο απομακρυσμένο URL (συμπεριλάβετε http://).</message>
 	<message key="manager.setup.useThumbnail">Μικρογραφία</message>
@@ -714,7 +712,6 @@
 	<message key="manager.statistics.reports.objectType">Τύπος αντικειμένου</message>
 	<message key="manager.statistics.reports.objectId">Id αντικειμένου</message>
 	<message key="manager.statistics.reports.objectId.label">Ορίστε ένα ή περισσότερα ids αντικειμένων, διαχωρισμένα με κόμα (π.χ. 1,2,3,,4,5)</message>
-	<message key="manager.statistics.reports.today">Σήμερα</message>
 	<message key="manager.statistics.reports.currentMonth">Τρέχον μήνας</message>
 	<message key="manager.statistics.reports.orderBy">Ταξινόμηση κατά</message>
 	<message key="manager.statistics.reports.orderDir">Κατεύθυνση</message>

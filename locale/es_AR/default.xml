@@ -162,6 +162,4 @@ El tercer párrafo no está justificado.</pre>]]></message>
 	<message key="section.default.policy"><![CDATA[&nbsp;]]></message>
 	<message key="default.journalSettings.purchaseIssueFee">Comprar número</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">El pago de esta cuota le permitirá ver, descargar e imprimir este número</message>
-	<message key="default.journalSettings.emailHeader">El siguiente mensaje es enviado de parte de {$journalName}.
-________________________________________________________________________</message>
 </locale>

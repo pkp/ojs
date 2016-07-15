@@ -26,7 +26,6 @@
 	<!-- PayPal -->
 	<message key="plugins.paymethod.paypal">دفع الرسوم عبر PayPal</message>
 	<message key="plugins.paymethod.paypal.description"><![CDATA[PayPal تمكن المستخدمين، سواءً كانوا أعضاءً في PayPal أو لا، من استعمال كل بطاقات الائتمان الرئيسية. سيكون على رئيس تحرير المجلة تهيئة <a href="http://www.paypal.com" target="_new">حساب تجاري لـ PayPal</a>.]]></message>
-	<message key="plugins.paymethod.paypal.تحذير">أنقر زر المتابعة أدناه للذهاب إلى موقع PayPal، حيث يمكن استعمال بطاقات الائتمان لدفع الرسوم (دون الحاجة إلى الانضمام إلى PayPal). استعمل زر "العودة إلى التاجر" بعد إجراء الدفع المالي للعودة إلى هذا الموقع.</message>
 	<message key="plugins.paymethod.paypal.purchase.title">العنوان</message>
 	<message key="plugins.paymethod.paypal.purchase.fee">الرسم</message>
 	<message key="plugins.paymethod.paypal.purchase.description">الوصف</message>

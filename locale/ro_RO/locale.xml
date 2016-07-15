@@ -281,12 +281,6 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-	<message key="submission.event.logLevel">Nivel</message>
-	<message key="submission.event.logLevel.info">Info</message>
-	<message key="submission.event.logLevel.notice">Înștiințare</message>
-	<message key="submission.event.logLevel.warning">Avertisment</message>
-	<message key="submission.event.logLevel.error">Eroare</message>
-	
 	<message key="submission.event.general.defaultEvent">Depunere de propunere</message>
 	<message key="submission.event.general.articleSubmitted">Articol propus</message>
 	<message key="submission.event.general.issueScheduled">Propunere trimisă pentru a genera lista cu programări</message>
@@ -1166,12 +1160,6 @@ Validarea poate eşua pe URL-urile de căutare care necesită date postate într
 
 	<message key="rt.metadata.pkp.primaryAuthor">Numele autorului, afiliere, ţară</message>
 	<message key="rt.metadata.pkp.peerReviewed">Articol peer-reviewed</message>
-	<message key="rt.metadata.pkp.doi">Digital Object Identifier</message>
-
-
-
-
-
 	<message key="rt.beNotifiedWhen">Să fiţi înștiințat când...</message>
 
 	<message key="rt.thisJournal">Caută în revistă</message>

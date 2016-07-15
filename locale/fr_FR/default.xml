@@ -156,5 +156,4 @@ Le paragraphe qui commence par « Ce dernier sujet... » n'est pas en retrait.</
 	<message key="section.default.policy"></message>
 	<message key="default.journalSettings.purchaseIssueFee">Acheter un numéro</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Le règlement du montant dû vous permettra de voir, de télécharger et d'imprimer ce numéro.</message>
-	<message key="default.journalSettings.emailHeader">Le message suivant est envoyé au nom de {$journalName}.</message>
 </locale>

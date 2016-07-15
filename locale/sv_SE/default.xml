@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/sv_SE/default.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="sv_SE" full_name="Svenska">
+	<!-- Section default -->
+	<message key="section.default.title">Artiklar</message>
+	<message key="section.default.abbrev">ART</message>
+	<message key="section.default.policy"></message>
+
+	<!--
+	 *
+	 * DEFAULT - Default settings for setup items.
+	 *
+	-->
+	<message key="default.journalSettings.checklist.notPreviouslyPublished">Manuskriptet har inte publicerats tidigare, och ligger inte för publicering i annan tidskrift (eller se bifogad förklaring under Kommentarer under Redaktör).</message>
+	<message key="default.journalSettings.checklist.fileFormat">Manuskriptfilen är i Microsoft Word, RTF, eller WordPerfect format.</message>
+	<message key="default.journalSettings.checklist.addressesLinked">Där det är möjligt har URL:er bifogats till referenser.</message>
+	<message key="default.journalSettings.checklist.submissionAppearance">Texten är enkelradig; 12 punkters; använder kursivering snarare än understrykning (förutom hos URL-adresser); samt, samtliga illustrationer, figurer och tabeller är placerade löpande i texten ich inte i slutet.</message>
+	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Texten följer de stilistiska och bibliografiska kraven som sammanställts i <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Författarinstruktioner</a>, under Om Tidskriften.]]></message>
+	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Om manuskriptet lämnats för granskning i tidskriften, säkras <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">anonym granskning</a>).]]></message>
+	<message key="default.journalSettings.privacyStatement">Ifyllda namn och E-postadresser kommer endast att användas för tidskriftens ändamål och kommer inte tillgängliggöras för andra personer eller ändamål.</message>
+	<message key="default.journalSettings.openAccessPolicy">Den här tidskriften tillämpar omedelbar Open Access enligt principen att ett fritt tillgängliggörande av forskning gynnar en global kunskapsspridning.</message>
+	<message key="default.journalSettings.authorSelfArchivePolicy">Den här tidskriften tillåter och uppmuntrar att författare publicerar sina artiklar även på personliga webbsidor eller institutionella arkiv, såväl före som efter publicering, ange i så fall den här tidskriften som bibliografisk referens.</message>
+	<message key="default.journalSettings.emailSignature">________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}</message>
+	<message key="default.journalSettings.forReaders"><![CDATA[Vi uppmuntrar läsare att abbonera på nyhetsmeddelanden från tidskriften. Använd<a href="{$indexUrl}/{$journalPath}/user/register">Registrera</a> längst upp på tidskriftens hemsida. Registrering innebär att du får E-post med innehållsförteckning varje gång ett nytt nummer publiceras. Se tidskriftens <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Sekretesspolicy</a> som försäkrar att läsarens namn och E-Post inte kommer att användas för andra ändamål.]]></message>
+	<message key="default.journalSettings.forAuthors"><![CDATA[Intreserad av att skicka manuskript till den här tidskriften? Vi rekommenderar att du läser <a href="{$indexUrl}/{$journalPath}/about">Om Tidskriften</a> för tidskriftens olika sektionspolicies, liksom<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Författarinstruktioner</a>. Författare måste <a href="{$indexUrl}/{$journalPath}/user/register">registrera</a> sig i tidskiften innan inskickande av manuskript, eller, om du du redan är registrerad, klicka <a href="{$indexUrl}/index/login">logga in</a> och påbörja manusinlämningens 5 steg.]]></message>
+	<message key="default.journalSettings.forLibrarians"><![CDATA[Vi uppmuntrar forskningsbibliotekarier att lista den här tidskriften bland bibliotekets elektronsika resurser. Vi uppmuntrar även att information om OJS öppna publiceringssystem sprids till fakulteter som publicerar forskningsmaterial (se <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
+	<message key="default.journalSettings.lockssLicense"><![CDATA[Den här tidskriften tillämpar LOCKSS-principen för en effektivare spridning och arkivering bland de deltagande biblioteken. <a href="http://lockss.stanford.edu/">Mer...</a>]]></message>
+
+	<!-- Default settings for payment items. -->
+	<message key="default.journalSettings.submissionFeeDescription">Författare måste betala en publiceringsavgift för finansiering av sakkunnigbedömning/granskning.</message>
+	<message key="default.journalSettings.fastTrackFeeDescription">Med den här avgiften garanteras att granskning och besked från redaktören sker inom fyra veckor.</message>
+	<message key="default.journalSettings.publicationFeeDescription">Om artikeln accepteras för publicering, kommer du ombedjas att betala en publiceringsavgift för att täcka publiceringskostnaderna.</message>
+	<message key="default.journalSettings.waiverPolicy">Om du inte har möjligheter att betala denna avgift finns möjlighet att avstå. Vi vill inte att eventuella finansieringsaspekter ska förhindra spridning av god forskning.</message>
+	<message key="default.journalSettings.membershipFeeDescription">Betalning av den här avgiften innebär ett ettårsmedlemskap i föreningen, under vilken period du kommer att ha fri tillgänglighet till tidskriften.</message>
+	<message key="default.journalSettings.donationFeeDescription">Donationer till tidskriften tas emot tacksamt för att säkra ett fortsatt kvalificerat redaktörsskap av tidskriften.</message>
+</locale>

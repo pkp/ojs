@@ -257,12 +257,6 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-	<message key="submission.event.logLevel">Tingkat</message>
-	<message key="submission.event.logLevel.info">Info</message>
-	<message key="submission.event.logLevel.notice">Pemberitahuan</message>
-	<message key="submission.event.logLevel.warning">Peringatan</message>
-	<message key="submission.event.logLevel.error">Kesalahan</message>
-	
 	<message key="submission.event.general.defaultEvent">Acara Penyerahan</message>
 	<message key="submission.event.general.articleSubmitted">Artikel yang diserahkan</message>
 	<message key="submission.event.general.issueScheduled">Naskah dikirimkan ke antrian penjadwalan terbitan</message>
@@ -335,8 +329,6 @@ Perhatikan bahwa OAI antarmuka dapat dinonaktifkan dengan mengedit konfigurasi s
 </ul>]]></message>
 	
 	<!-- Informasi Sistem -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Gunakan form ini untuk memodifikasi konfigurasi sistem Anda yang ada pada file (<tt>config.inc.php</tt>). Klik "Simpan Konfigurasi" untuk menyimpan konfigurasi baru Anda, atau "Tampilkan Konfigurasi Baru" untuk menampilkan file konfigurasi yang telah diupdate dan tidak memodifikasi konfigurasi yang sudah ada. <br /><br />
-<span class="formError">Peringatan: Mengubah pengaturan ini berpotensi membuat situs Anda dalam keadaan tidak dapat diakses (memerlukan file konfigurasi untuk diperbaiki secara manual). Sangat dianjurkan untuk tidak melakukan perubahan apapun kecuali Anda tahu persis apa yang Anda lakukan.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>Catatan!</h4>
 <p>Sistem tidak dapat secara otomatis menimpa file konfigurasi. Untuk menerapkan perubahan konfigurasi Anda, Anda harus membuka <tt>config.inc.php</tt> di text editor yang cocok dan mengganti isinya dengan isi text field di bawah ini.</p>]]></message>
 	
@@ -666,7 +658,6 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="user.login.resetPasswordInstructions"><![CDATA[Untuk alasan keamanan, sistem ini akan mengirimkan kata sandi yang bisa diatur ulang oleh pengguna melalui email.<br /><br />Masukkan alamat email Anda di bawah ini untuk mengatur ulang kata sandi Anda. Konfirmasi akan dikirim ke alamat email.]]></message>
 		
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Ulangi Kata Sandi</message>
 	<message key="user.register.selectJournal">Pilih sebuah jurnal untuk mendaftar</message>
 	<message key="user.register.noJournals">Tidak ada jurnal untuk Anda mendaftar di situs ini.</message>
 	<message key="user.register.privacyStatement">Pernyataan Privasi</message>
@@ -927,8 +918,6 @@ Server Anda sekarang support mbstring: <strong>{$supportsMBString}</strong>]]></
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Peringatan:</strong> Jika instalasi gagal ditengah jalan, Anda harus menghapus database OJS atau tabel yang sudah dibuat sebelum menginstal ulang database.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>PENTING!</h4>
 <p>Installer tidak bisa secara otomatis menimpa file konfigurasi. Sebelum mencoba untuk menggunakan sistem, buka <tt>config.inc.php</tt> dalam text editor dan gantikan isinya dengan isi text field di bawah ini.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Instalasi Manual</h4>
-<p>Pernyataan SQL untuk membuat skema database dan data awal OJS ditampilkan di bawah ini. Perhatikan bahwa sistem akan tidak dapat digunakan hingga pernyataan ini telah dieksekusi secara manual. Anda juga akan harus mengatur secara manual file konfigurasi <tt>config.inc.php</tt>.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>Instalasi OJS berhasil.</p>
 <p>Untuk memulai, <a href="{$loginUrl}">login</a> dengan Nama Pengguna dan Kata Sandi Administrator Situs.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>Upgrade OJS ke versi {$version} selesai dengan sukses.</p>
@@ -1018,12 +1007,6 @@ Validasi mungkin gagal dalam pencarian URL memerlukan form data yang diposting.]
 
 	<message key="rt.metadata.pkp.primaryAuthor">Nama Penulis, afiliasi, negara</message>
 	<message key="rt.metadata.pkp.peerReviewed">Artikel yang dipeer-review</message>
-	<message key="rt.metadata.pkp.doi">Digital Object Identifier</message>
-
-
-
-
-
 	<message key="rt.beNotifiedWhen">Diberitahu saat....</message>
 
 	<message key="rt.thisJournal">Cari Jurnal</message>

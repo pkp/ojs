@@ -182,11 +182,6 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-  <message key="submission.event.logLevel">レベル</message>
-  <message key="submission.event.logLevel.info">Info</message>
-  <message key="submission.event.logLevel.notice">Notice</message>
-  <message key="submission.event.logLevel.warning">Warning</message>
-  <message key="submission.event.logLevel.error">Error</message>
   <message key="submission.event.general.defaultEvent">投稿イベント</message>
   <message key="submission.event.general.articleSubmitted">投稿論文</message>
   <message key="submission.event.general.issueScheduled">投稿物が巻号スケジューリングキューに送られた</message>
@@ -772,7 +767,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="rt.admin.settings.addComment.authenticated">コメントをつけるには、ユーザ登録してログインする必要がある。匿名によるコメントを許可しない。</message>
 	<message key="rt.admin.settings.addComment.anonymous">コメントをつけるには、ユーザ登録してログインする必要がある。匿名によるコメントを許可する。</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">コメントをつけるには、ユーザ登録の必要がない。匿名によるコメントを許可する。</message>
-	<message key="rt.metadata.pkp.doi">DOI</message>
 	<message key="debug.notes.currencyListLoad">XMLから通貨リスト"{$filename}" をロードしました。</message>
 	<message key="debug.notes.helpMappingLoad">{$id}を捜すためにXMLヘルプマッピングファイル{$filename} を再ロードしました。</message>
 	<message key="submission.reviewForm">査読フォーム</message>

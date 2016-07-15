@@ -54,7 +54,6 @@
 	<message key="editor.issues.accessStatus">Tillgångsstatus</message>
 	<message key="editor.issues.accessDate">Datum för Open Access</message>
 	<message key="editor.issues.invalidAccessDate">Datum för tillgång är inte giltigt.</message>
-	<message key="editor.issues.issuePublicIdentificationExists">Den publika utgåvoidentifikatorn finns redan.</message>
 	<message key="editor.issues.coverPage">Omslagsbild</message>
 	<message key="editor.issues.coverPageInstructions">(Tillåtna format: .gif, .jpg, eller .png )</message>
 	<message key="editor.issues.uploaded">Uppladdad</message>
@@ -194,7 +193,6 @@
 	<message key="editor.article.coverPageInstructions">(Tillåtna format: .gif, .jpg, eller .png )</message>
 	<message key="editor.article.uploaded">Uppladdad</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Innan du skickar manuskriptet för redigering, kontrollera att det finns tillgängliga granskare och att författaren meddelas om granskning med hjälp av Meddela Författaren-länken ovan.</message>
-	<message key="editor.article.sendFileToCopyedit">Välj fil för Manusredigering</message>
 	<message key="editor.article.reviewForms">Granskningsformulär</message>
 	<message key="editor.article.selectReviewForm">Välj granskningsformulär</message>
 	<message key="editor.article.clearReviewForm">Nollställ granskningsformulär</message>

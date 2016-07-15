@@ -175,8 +175,6 @@
 	<message key="manager.setup.disciplineExamples">(T.ex., Historia; Pedagogik; Sociologi; Psykologi; Kulturstudier; Juridik)</message>
 	<message key="manager.setup.disciplineProvideExamples">Ange exempel på relevanta akademiska ämnen för den här tidskriften.</message>
 	<message key="manager.setup.displayCurrentIssue">Lägg till Innehållsförteckning för det senaste numret. (om tillgängligt).</message>
-	<message key="manager.setup.doiPrefix">DOI prefix</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[ DOI (Digital Object Identifier) prefixet tilldelas av <a href="http://www.crossref.org" target="_new">CrossRef</a> i formatet 10.xxxx (ex. 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Redaktörens beslut</message>
 	<message key="manager.setup.editorialMembers">Gå till Medlemmar i Redaktionen och lägg till Redaktion och/eller redaktionsråd för granskning. Det här kan göras närsonhelst under installationen av tidskriften.</message>
 	<message key="manager.setup.editorialProcess1">En eller flera redaktörer hanterar de grundläggande stegen utan fördefinierade roller.</message>
@@ -225,7 +223,6 @@
 	<message key="manager.setup.guidingSubmissions">Steg 3. Skicka in manuskript</message>
 	<message key="manager.setup.homepageImage">Hemsidebild</message>
 	<message key="manager.setup.homepageImageDescription">Lägg till en bild till mitten av sidan</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[HTML kan användas i fälten för textredigering (fontstorlek, färg etc.), observera att "return" behandlas som <tt>&lt;br&gt;</tt>; HTML redigerare fungerar med Firefox.]]></message>
 	<message key="manager.setup.information">Information</message>
 	<message key="manager.setup.information.description">En kortfattad beskrivning av tidskriftens innehåll för bibliotekarier, potentiella författare och läsare finns under "Information" i sidomenyn.</message>
 	<message key="manager.setup.information.forAuthors">För författare</message>
@@ -363,7 +360,6 @@
 	<message key="manager.setup.reviewProcess">Granskningsprocessen</message>
 	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS stöder två olika modeller för bedömning och granskning av artiklar. Standardgranskningsprocessen, vilken innebär att granskaren går igenom processen steg för steg rekommenderas. Här kan granskaren även använda sig av standardmail för manuskript (Acceptera; Acceptera med ändringar; Skicka för ny granskning; Skicka till annan; Avvisa; See kommentarer <br /><br />Välj en av följande:]]></message>
 	<message key="manager.setup.reviewProcessEmail">Granskningsprocess bifogad i E-posten</message>
-	<message key="manager.setup.reviewProcessEmailDescription">Redaktörer mailar förfrågan om granskning till granskare och bifogar manuskriptet i E-posten. Granskaren tackar ja (eller nej),  och mailar sedan granskning och rekommendation. Redaktören för in granskarens synpunkter på Manuskriptsidan, under Granskning.</message>
 	<message key="manager.setup.reviewProcessStandard">Standardgranskningsprocess</message>
 	<message key="manager.setup.reviewProcessStandardDescription">Redaktörer mailar manuskriptets titel och sammanfattning till granskaren tillsammans med en inbjudan att logga in på sidan för komplett granskning och bedömning. Granskaren loggar in och accepterar att läsa artikeln, ladda ner manuset, lämna kommentarer och avge omdöme.</message>
 	<message key="manager.setup.searchEngineIndexing">Indexering för sökmotorer</message>
@@ -381,13 +377,10 @@
 	<message key="manager.setup.sponsorsDescription">Namn på organisationer (ex. forskningsorganisationer, avdelningar inom universitet etc.) som stöttar tidskriften finns tillgängligt under Om tidskriften. Här kan även inkluderas ett tack från utgivare.</message>
 	<message key="manager.setup.stepsToJournalSite">Fem steg mot en tidskriftshemsida</message>
 	<message key="manager.setup.subjectClassification">Ämnesklassificering</message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Tidskriften använder ett klassificeringssystem som finns tillgängligt online: <br /> Title på klassifikationssystem]]></message>
 	<message key="manager.setup.subjectClassificationExamples">(T.ex., Mathematics Subject Classification; Library of Congress Classification)</message>
 	<message key="manager.setup.subjectExamples">(T.ex., Fotosyntes; Svarta hål; Zenons paradoxer)</message>
 	<message key="manager.setup.subjectKeywordTopic">Nyckelord</message>
 	<message key="manager.setup.subjectProvideExamples">Ange exempel på nyckelord eller ämnen</message>
-	<message key="manager.setup.submissionEmailLogging">Underhåll en logg över E-post skickade i samband med manuskripthanterande på "Historik"-sidan.</message>
-	<message key="manager.setup.submissionEventLogging">Underhåll en logg över hanterandet av manuskript på sidan "Historik"</message>
 	<message key="manager.setup.submissionGuidelines">Riktlinjer för inskickande av manuskript</message>
 	<message key="manager.setup.submissionPreparationChecklist">Checklista för inskickande av manuskript.</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">När man skickar in ett manuskript till tidskriften måste författaren först kontrollera de olika momenten i "Checklistan för Manuskript". Checklistan syns också under "Författarinstruktioner" under "Om tidskriften". Checklistan kan redigeras nedan och alla delmoment på listan måste checkas av av författaren innan manuskriptet skickas in.</message>
@@ -507,9 +500,7 @@
 	<message key="manager.subscriptions.ipRange">IP Range</message>
 	<message key="manager.subscriptions.noneCreated">Inga abonnemang har skapats.</message>
 	<message key="manager.subscriptions.select">Läg till Abonnent</message>
-	<message key="manager.subscriptions.selectSubscriber">Välj abonnent</message>
 	<message key="manager.subscriptions.selectSubscriber.desc">Tidskriftens Redaktörer, Tidskriftsansvarig, Sektionsredaktörer, Layoutredaktörer, Manusredaktörer och Korrekturläsare tilldelas abonnemangsrättigheter automatiskt.</message>
-	<message key="manager.subscriptions.subscribe">Lägga till</message>
 	<message key="manager.subscriptions.subscriptionCreatedSuccessfully">Abonnemang har skapats.</message>
 	<message key="manager.subscriptions.subscriptionType">Abonnemangsform</message>
 	<message key="manager.subscriptions.user">Användare</message>
@@ -518,14 +509,9 @@
 	<message key="manager.subscriptionTypes.cost">Pris</message>
 	<message key="manager.subscriptionTypes.create">Skapa ny abonnemangsform</message>
 	<message key="manager.subscriptionTypes.createTitle">Skapa</message>
-	<message key="manager.subscriptionTypes.currency">Valuta</message>
 	<message key="manager.subscriptionTypes.duration">Varaktighet</message>
 	<message key="manager.subscriptionTypes.edit">Redigera abonnemangsform</message>
 	<message key="manager.subscriptionTypes.editTitle">Redigera</message>
-	<message key="manager.subscriptionTypes.format">Format</message>
-	<message key="manager.subscriptionTypes.format.online">Online</message>
-	<message key="manager.subscriptionTypes.format.print">Tryckt</message>
-	<message key="manager.subscriptionTypes.format.printOnline">Tryckt och Online</message>
 	<message key="manager.subscriptionTypes.form.cost">Pris</message>
 	<message key="manager.subscriptionTypes.form.costInstructions">Ange numerisk värde (ex. 40 eller 40.00) utan symboler (ex. £, $).</message>
 	<message key="manager.subscriptionTypes.form.costNumeric">Priset måste vara ha ett positivit numeriskt värde.</message>
@@ -551,13 +537,9 @@
 	<message key="manager.subscriptionTypes.form.typeName">Namn</message>
 	<message key="manager.subscriptionTypes.form.typeNameExists">Det finns redan en abonnemangsform med det här namnet.</message>
 	<message key="manager.subscriptionTypes.form.typeNameRequired">Ett namn på abonnemangsformen är obligatorisk.</message>
-	<message key="manager.subscriptionTypes.month">månad</message>
-	<message key="manager.subscriptionTypes.months">månader</message>
 	<message key="manager.subscriptionTypes.name">Abonnemangsform</message>
 	<message key="manager.subscriptionTypes.noneCreated">Inga abonnemangsformer har skapats.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">En abonnemangsform har skapats.</message>
-	<message key="manager.subscriptionTypes.year">år</message>
-	<message key="manager.subscriptionTypes.years">år</message>
 	<message key="manager.people.showNoRole">Visa användare utan tilldelad roll</message>
 	<message key="manager.language.ui">Gränssnitt</message>
 	<message key="manager.language.submissions">Bidrag</message>

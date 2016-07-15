@@ -200,8 +200,6 @@
 	<message key="manager.setup.disciplineExamples">(v.d., Lịch sử; Giáo dục; Xã hội học; Tâm lý học; Văn hóa học; Luật học)</message>
 	<message key="manager.setup.disciplineProvideExamples">Cung cấp các ví dụ về những ngành khoa học phù hợp với tạp chí này</message>
 	<message key="manager.setup.displayCurrentIssue">Thêm mục lục của số mới ra (nếu có).</message>
-	<message key="manager.setup.doiPrefix">Tiền tố DOI</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[Tiền tố DOI (Digital Object Identifier - Chỉ số Nhận dạng Vật thể số) được <a href="http://www.crossref.org" target="_new">CrossRef</a> cấp và có định dạng 10.xxxx (v.d. 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Quyết định của BTV</message>
 	<message key="manager.setup.editorialMembers">Vào mục Thành viên Hội đồng để thêm một Thành viên Hội đồng Biên tập và/hoặc Thành viên Hội đồng Phản biện. Việc này có thể làm ở bất kỳ thời điểm nào.</message>
 	<message key="manager.setup.editorialProcess1">Một hoặc nhiều BTV xử lý các bước cơ bản mà không cần chỉ định vai trò cụ thể.</message>
@@ -389,7 +387,6 @@
 	<message key="manager.setup.reviewProcess">Quá trình phản biện</message>
 	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS hỗ trợ hai mô hình quản lý quá trình phản biện. Quá trình Phản biện Chuẩn được khuyến khích vì đặt ra các bước cho người phản biện trong suốt quá trình, đảm bảo toàn bộ lịch sử phản biện của một bài nộp được lưu giữ, và tận dụng được nhắc nhở tự động cùng với các khuyến nghị chuẩn đối với bài nộp (Chấp nhận; Chấp nhận có sửa chữa; Gửi lại để phản biện; Gửi bài chỗ khác; Từ chố; Xem lời bình).<br /><br />Chọn một trong các lựa chọn:]]></message>
 	<message key="manager.setup.reviewProcessEmail">Quá trình Phản biện qua Email</message>
-	<message key="manager.setup.reviewProcessEmailDescription">BTV gửi email cho Người phản biện đề nghị phản biện cùng với bài nộp đính kèm trong email. Người phản biện gửi email cho BTV đồng ý (hay từ chối) lời đề nghị, cùng với bài phản biện và khuyến nghị. BTV nhập thông tin đồng ý hay từ chối, cùng với bài phản biện và khuyến nghị vào trang Phản biện của bài nộp để ghi lại quá trình phản biện.</message>
 	<message key="manager.setup.reviewProcessStandard">Quá trình Phản biện Chuẩn</message>
 	<message key="manager.setup.reviewProcessStandardDescription">BTV sẽ email những Người phản biện chọn lọc tiêu đề và tóm tắt của bài nộp, cùng với lời mời đăng nhập vào website của tạp chs để hoàn thành việc phản biện. Người phản biện vào website tạp chí để nhận lời phản biện, download bài nộp, gửi lời bình và lựa chọn khuyến nghị.</message>
 	<message key="manager.setup.searchEngineIndexing">Lập chỉ mục ở Công cụ tìm kiếm</message>
@@ -411,8 +408,6 @@
 	<message key="manager.setup.subjectExamples">(v.d., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</message>
 	<message key="manager.setup.subjectKeywordTopic">Từ khóa</message>
 	<message key="manager.setup.subjectProvideExamples">Cung cấp các ví dụ về từ khóa hoặc chủ đề như là một chỉ dẫn cho tác giả</message>
-	<message key="manager.setup.submissionEmailLogging">Lưu giữ nhật ký tất cả email đã gửi liên quan tới một bài nộp trên trang Lịch sử của bài viết này.</message>
-	<message key="manager.setup.submissionEventLogging">Lưu giữ nhật ký tất cả các tác vụ đã thực hiện đối với một bài nộp trên trang Lịch sử của bài viết này.</message>
 	<message key="manager.setup.submissionGuidelines">Hướng dẫn bài nộp</message>
 	<message key="manager.setup.submissionPreparationChecklist">Danh mục kiểm tra việc chuẩn bị nộp bài</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Khi nộp một bài viết cho tạp chí, trước tiên tác giả được đề nghị kiểm tra xem từng mục trong danh mục kiểm tra xem đã hoàn thành chưa trước khi tiếp tục. Danh mục kiểm tra cũng sẽ xuất hiện trong phần Hướng dẫn dành cho Tác giả. Danh mục có thể được sửa chữa dưới đây, nhưng tất cả các mục trong danh mục cần phải có dấu kiểm trước khi tác giả có thể tiếp tục nộp bài viết của mình.</message>
@@ -541,9 +536,7 @@
 	<message key="manager.subscriptions.membership">Hội viên</message>
 	<message key="manager.subscriptions.noneCreated">Chưa có phiếu nào được tạo.</message>
 	<message key="manager.subscriptions.select">Ghi danh khách hàng</message>
-	<message key="manager.subscriptions.selectSubscriber">Lựa chọn khách hàng</message>
 	<message key="manager.subscriptions.selectSubscriber.desc">Các quyền truy cập như khách hàng đặt tạp chí được tự động dành cho Tổng biên tập, BTV chính, BTV chuyên mục, BTV bản thảo, BTV trình bày, Người soát lỗi.</message>
-	<message key="manager.subscriptions.subscribe">Ghi danh</message>
 	<message key="manager.subscriptions.subscriptionCreatedSuccessfully">Phiếu đặt đã tạo thành công.</message>
 	<message key="manager.subscriptions.subscriptionType">Hình thức đặt tạp chí</message>
 	<message key="manager.subscriptions.user">Người dùng</message>
@@ -552,14 +545,9 @@
 	<message key="manager.subscriptionTypes.cost">Cước phí</message>
 	<message key="manager.subscriptionTypes.create">Tạo hình thức đặt tạp chí mới</message>
 	<message key="manager.subscriptionTypes.createTitle">Khởi tạo</message>
-	<message key="manager.subscriptionTypes.currency">Đơn vị tiền tệ</message>
 	<message key="manager.subscriptionTypes.duration">Thời hạn</message>
 	<message key="manager.subscriptionTypes.edit">Sửa hình thức đặt tạp chí</message>
 	<message key="manager.subscriptionTypes.editTitle">Sửa</message>
-	<message key="manager.subscriptionTypes.format">Định dạng</message>
-	<message key="manager.subscriptionTypes.format.online">Trực tuyến</message>
-	<message key="manager.subscriptionTypes.format.print">Bản in</message>
-	<message key="manager.subscriptionTypes.format.printOnline">Bản in và Trực tuyến</message>
 	<message key="manager.subscriptionTypes.form.cost">Cước phí</message>
 	<message key="manager.subscriptionTypes.form.costInstructions">Nhập một con số (v.d., 40 hoặc 40.00). Không đưa thêm ký tự vào, chẳng hạn ký tự "$".</message>
 	<message key="manager.subscriptionTypes.form.costNumeric">Cước phí phải là một số dương.</message>
@@ -585,18 +573,10 @@
 	<message key="manager.subscriptionTypes.form.typeName">Tên</message>
 	<message key="manager.subscriptionTypes.form.typeNameExists">Tên hình thức đặt tạp chí này đã có.</message>
 	<message key="manager.subscriptionTypes.form.typeNameRequired">Phải có tên hình thức đặt tạp chí.</message>
-	<message key="manager.subscriptionTypes.month">tháng</message>
-	<message key="manager.subscriptionTypes.months">tháng</message>
 	<message key="manager.subscriptionTypes.name">Hình thức đặt tạp chí</message>
 	<message key="manager.subscriptionTypes.noneCreated">Chưa có hình thức đặt tạp chí nào được khởi tạo.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Hình thức đặt tạp chí đã khởi tạo thành công.</message>
-	<message key="manager.subscriptionTypes.year">năm</message>
-	<message key="manager.subscriptionTypes.years">năm</message>
 	<message key="manager.reviewFormElement.changeType">Thay đổi kiểu mục</message>
 	<message key="manager.reviewFormElements.confirmDelete">Khẳng định việc xóa một mục đã tạo.</message>
-	<message key="manager.reviewFormElements.viewable">(Tác giả) có thể xem</message>
-	<message key="manager.reviewForms.confirmDeletePublished">Khẳng định việc xóa một mẫu phiếu phản biện đã công bố.</message>
 	<message key="manager.reviewForms.confirmDeleteUnpublished">Khẳng định việc xóa một mẫu phiếu phản biện chưa công bố.</message>
-	<message key="manager.reviewForms.noneUsed">Chưa có mẫu phiếu phản biện nào được sử dụng.</message>
-	<message key="manager.reviewForms.reviewFormData">Thông tin về Mẫu phiếu Phản biện</message>
 </locale>

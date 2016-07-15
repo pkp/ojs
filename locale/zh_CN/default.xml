@@ -143,6 +143,4 @@
 	<message key="default.journalSettings.donationFeeDescription">对本期刊任何数额的捐赠将感激地接受，您将为编辑提供一个继续提供高质量的杂志给读者的机会.</message>
 	<message key="default.journalSettings.purchaseIssueFee">购买期次</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">支付该项费用后您可以查看、下载和打印该期文章。</message>
-	<message key="default.journalSettings.emailHeader">下面的信息以期刊{$journalName}的名义发出。
-________________________________________________________________________</message>
 </locale>

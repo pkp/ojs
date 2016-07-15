@@ -45,14 +45,9 @@
 	<message key="plugins.generic.pln.status.transferred">Verstuurd</message>
 	<message key="plugins.generic.pln.status.received">Ontvangen</message>
 	<message key="plugins.generic.pln.status.syncing">Synchroniseren</message>
-	<message key="plugins.generic.pln.status.synced">Gesunchroniseerd</message>
 	<message key="plugins.generic.pln.status.updated">Bijgewerkt</message>
 	<message key="plugins.generic.pln.status.local_failure">Lokale fout</message>
 	<message key="plugins.generic.pln.status.remote_failure">Fout aan de andere kant</message>
-	<message key="plugins.generic.pln.status.reset">Herstel</message>
-	<message key="plugins.generic.pln.status.yes">Ja</message>
-	<message key="plugins.generic.pln.status.no">Nee</message>
-
 	<message key="plugins.generic.pln.depositorTask.name">PKP PLN Depositor Taak</message>
 	<message key="plugins.generic.pln.notifications.processing_for">Depositor verwerken voor</message>
 	<message key="plugins.generic.pln.notifications.pln_not_accepting">Het PKP PLN accepteert momenteel geen inzendingen.</message>

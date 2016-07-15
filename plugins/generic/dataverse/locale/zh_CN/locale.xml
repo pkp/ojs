@@ -26,8 +26,6 @@
 	<message key="plugins.generic.dataverse.settings.dvnUriRequired">需要Dataverse网址。</message>
 	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">Dataverse 网址无效</message>
 	<message key="plugins.generic.dataverse.settings.usernameRequired">请输入Dataverse有效用户名。</message>
-	<message key="plugins.generic.dataverse.settings.passwordRequired">请输入Dataverse有效密码。</message>
-
 	<!-- Set up Dataverse: select Dataverse -->
 	<message key="plugins.generic.dataverse.settings.selectDataverse">选择Dataverse</message>
 	<message key="plugins.generic.dataverse.settings.dataverse">Dataverse</message>

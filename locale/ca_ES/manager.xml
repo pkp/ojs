@@ -735,8 +735,6 @@
 	<message key="manager.subscriptions.form.dateRemindedBefore">S'ha enviat el recordatori pre-venciment</message>
 	<message key="manager.subscriptions.form.dateRemindedAfter">S'ha enviat el recordatori post-venciment</message>
 	<message key="manager.setup.confirmResetLicenseChanged">Heu canviat la informació de llicència i drets d'autor a la configuració de la revista. Guardeu aquests canvis abans de restablir els permisos.</message>
-	<message key="manager.setup.emailHeader">Capçalera del correu</message>
-	<message key="manager.setup.emailHeaderDescription">Els correus electrònics preestablerts que el sistema envia en nom de la revista començaran amb la següent capçalera. El remitent d'aquests correus serà el contacte principal, per la qual cosa és important aclarir que el contacte principal no és necessàriament el responsable del contingut dels missatges, que poden haver estat enviats en nom d'un usuari diferent.</message>
 	<message key="manager.statistics.reports.optionalColumns.description">Els elements en cursiva i amb el símbol * representen dades opcionals per a l'actual sistema de càlcul d'estadístiques en l'OJS (tipus mètric). És possible que tingueu dades o no, depenent de la configuració del vostre mòdul d'estadístiques.</message>
 	<message key="manager.statistics.reports.yesterday">Ahir</message>
 	<message key="manager.setup.copyrightYearBasis.Article">L'any per defecte s'extraurà de la data de publicació de l'article, com es fa en publicar de manera immediata.</message>

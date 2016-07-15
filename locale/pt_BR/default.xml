@@ -138,6 +138,4 @@ Siga o seguinte protocolo para fazer revisões eletrônicas em seu manuscrito:
 	<message key="section.default.policy">Política padrão de seção</message>
 	<message key="default.journalSettings.purchaseIssueFee">Adquirir edição</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">O pagamento desta taxa permite ver, baixar e imprimir esta edição.</message>
-	<message key="default.journalSettings.emailHeader">A seguinte mensagem será entregue em nome da {$journalName}.
-________________________________________________________________________</message>
 </locale>

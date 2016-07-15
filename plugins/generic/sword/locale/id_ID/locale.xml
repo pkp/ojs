@@ -16,7 +16,6 @@
 	<message key="plugins.generic.sword.displayName">Plugin SWORD </message>
 	<message key="plugins.generic.sword.description">Memudahkan Manajer Jurnal dan (opsional) Penulis untuk menyimpan artikel melalui protokol SWORD </message>
 	<message key="plugins.generic.sword.enabled">Plugin SWORD telah diaktifkan.</message>
-	<message key="plugins.generic.sword.disable">Plugin SWORD telah dinon-aktifkan.</message>
 	<message key="plugins.generic.sword.settings">Pengaturan</message>
 	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Memudahkan penulis untuk menspesifikasikan titik deposit.</message>
 	<message key="plugins.generic.sword.settings.depositPoints">Titik Deposit</message>

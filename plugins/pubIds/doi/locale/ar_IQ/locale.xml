@@ -42,7 +42,6 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">على سبيل المثال: vol%viss%ipp%p يمكنه إنشاء DOI مثل: 10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">استعمل الأنماط الافتراضية.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i للأعداد<br />%j.v%vi%i.%a للمقالات<br />%j.v%vi%i.%a.g%g للألواح الطباعية <br />%j.v%vi%i.%a.s%s للملفات التكميلية.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">استعمل "المعرف المخصص" للفقرات المنشورة بمثابة لاحقة DOI (يجب تمكينها في خطوة التهيئة 4.3). هذا نفس المعرف الذي سيتم استعماله لروابط الإنترنت العمومية.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">أدخل لاحقة DOI منفردة لكل فقرة منشورة مستقلة ومختلفة عن "المعرف المخصص" المذكور في الخيار السابق. ستجد حقل إدخال DOI إضافي في كل صفحة بيانات وصفية.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">لطفاً، أدخل نمط لاحقة DOI للأعداد.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">لطفاً، أدخل نمط لاحقة DOI للمقالات.</message>

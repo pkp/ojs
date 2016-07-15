@@ -240,16 +240,6 @@
 	<message key="manager.setup.disciplineExamples">(ഉദാ: ചരിത്രം; വിദ്യാഭ്യാസം; സാമൂഹ്യശാസ്ത്രം; മനഃശ്ശാസ്ത്രം; സാംസ്കാരികമായ പഠനങ്ങള്‍; നിയമം)</message>
 	<message key="manager.setup.disciplineProvideExamples">ഈ ജേണലിനു വേണ്ടി പ്രസക്തമായ അക്കാദമിക് ഡിസിപ്ലിന്‍സ് ഉദാഹരണമായി നല്‍കുക</message>
 	<message key="manager.setup.displayCurrentIssue">ഇപ്പോഴുള്ള പതിപ്പിനു വേണ്ടി ഉള്ളടക്ക പട്ടിക ചേര്‍ക്കുക (ലഭ്യമാണെങ്കില്‍).</message>
-	<message key="manager.setup.doiPrefix">ഡിഒഐ പ്രെഫിക്സ്</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[The DOI (Digital Object Identifier) Prefix is assigned by <a href="http://www.crossref.org" target="_new">CrossRef</a> and is in the format 10.xxxx (e.g. 10.1234).]]></message>
-	<message key="manager.setup.doiSuffix">ഡിഒഐ സഫിക്സ്</message>
-	<message key="manager.setup.doiSuffixDefault">ഡിഫാള്‍ട്ടായുള്ള മാതൃക ഉപയോഗിക്കുക (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Use the pattern entered below to generate DOI suffixes.  Use %j for journal initials, %v for the volume number, %i for the issue number, %a for the OJS article ID, and %p for the page number.</message>
-	<message key="manager.setup.doiSuffixPattern.example">For example, vol%viss%ipp%p could create a DOI such as 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">ഒരു ഡിഒഐ സഫിക്സ് ഏതു രീതിയില്‍ വേണമെങ്കിലും ഉപയോഗിക്കാം, പക്ഷേ പ്രസിദ്ധീകരിച്ച ഒരോ ഐറ്റംസിനും അവ അനന്യമായിരിക്കണം.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">ഡിഒഐ സഫിക്സ് ആയി പ്രസിദ്ധീകരിക്കപ്പെട്ട ഐറ്റംസിനു വേണ്ടി "കസ്റ്റം ഐഡന്റിഫയര്‍” ഉപയോഗിക്കുക (സ്റ്റെപ്പ് 4-ല്‍ ഇത് പ്രാബല്യത്തിലാക്കേണ്ടതാണ്).</message>
-	<message key="manager.setup.doiReassign">റിഅസൈന്‍ ഡിഒഐ-സ്</message>
-	<message key="manager.setup.doiReassign.description">താങ്കള്‍ ഡിഒഐ കോണ്‍ഫിഗറേഷന്‍ വ്യത്യാസപ്പെടുത്തുന്ന പക്ഷം, അവ നിലവിലുള്ള ഡിഒഐ -നെ ബാധിക്കുന്നതല്ല. ഒരിക്കല്‍ ഡിഒഐ കോണ്‍ഫിഗറേഷന്‍ രേഖപ്പെടുത്തിയാല്‍, നിലവിലുള്ള എല്ലാ ഡിഒഐ -നെ ക്ലിയര്‍ ചെയ്യുകയും തന്മൂലം നിലവിലുള്ള ലേഖനത്തിനെ പുതിയ ക്രമീകരണങ്ങള്‍ സ്വാധീനം ചെലുത്തുനതിനുമായി ഈ ബട്ടണില്‍ ക്ലിക്ക് ചെയ്യുക</message>
 	<message key="manager.setup.editorDecision">ഗ്രന്ഥപരിശോധകന്റെ തീരുമാനം</message>
 	<message key="manager.setup.editorialMembers">ബോര്‍ഡ് മെമ്പര്‍സ് -ല്‍ പോകുകയും എഡിറ്റോറിയല്‍ ബോര്‍ഡ് പിന്നെ/അഥവാ റിവ്യൂ ബോര്‍ഡ് മെമ്പര്‍സ് -നെ ചേര്‍ക്കുക. എത് ഏതൊരു സന്ദര്‍ഭത്തിലും നടത്താവുന്നതാണ്.</message>
 	<message key="manager.setup.editorialProcess1">നിര്‍ദ്ദിഷ്ട ചുമതല ഇല്ലാതെ ഒന്നോ അതിലധികമോ ഗ്രന്ഥപരിശോധകര്‍ അടിസ്ഥാന സ്റ്റെപ്പ്സ് നിയന്ത്രിക്കുന്നു.</message>
@@ -287,7 +277,6 @@
 	<message key="manager.setup.form.journalInitialsRequired">ജേണല്‍ ഇനിഷല്‍സ് ആവശ്യമാണ്.</message>
 	<message key="manager.setup.form.journalTitleRequired">ജേണലിനു തലക്കെട്ട് ആവശ്യമാണ്.</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">ഒരോ സബ്മിഷനുമുള്ള റിവ്യൂവര്‍സിന്റെ എണ്ണം ആവശ്യമാണ്.</message>
-	<message key="manager.setup.form.doiPrefixPattern">ഡിഒഐ മാതൃക തീര്‍ച്ചയായും 10.xxxx. എന്ന ഘടനയില്‍ ആയിരിക്കണം.</message>
 	<message key="manager.setup.form.supportEmailRequired">പിന്തുണക്കുന്ന ഇമെയില്‍ ആവശ്യമാണ്.</message>
 	<message key="manager.setup.form.supportNameRequired">പിന്തുണക്കുന്ന ഒരു നാമം ആവശ്യമാണ്</message>
 	<message key="manager.setup.frequencyOfPublication">സറ്റാര്‍ട്ടിങ്ങ് പോയിന്റ് പിന്നെ ഫ്രീക്വന്‍സി</message>
@@ -464,8 +453,6 @@
 	<message key="manager.setup.subjectExamples">(ഉദാ:ഫോട്ടോസിന്തസിസ്; ബ്ലാക്ക് ഹോള്‍; ഫോര്‍ കളര്‍ മാപ്പ് പ്രോബ്ലം; ബയേസ്യന്‍ തിയറി)</message>
 	<message key="manager.setup.subjectKeywordTopic">കീ വേഡ്സ്</message>
 	<message key="manager.setup.subjectProvideExamples">ലേഖകര്‍ക്കുള്ള ഗൈഡായി കീവേഡ്സ് അല്ലെങ്കില്‍ ടോപ്പിക്സ് ഉദാഹരണങ്ങള്‍ നല്‍കുക</message>
-	<message key="manager.setup.submissionEmailLogging">സമര്‍പ്പണവുമായി ബന്ധപ്പെട്ട എല്ലാ ഇ-മെയിലുകളും സൂക്ഷിച്ചുവയ്ക്കാവുന്ന ഒരു ലോഗ് അതിന്റെ ഹിസ്റ്ററി പേജില്‍ നിലനിര്‍ത്തുക.</message>
-	<message key="manager.setup.submissionEventLogging">സമര്‍പ്പണവുമായി ബന്ധപ്പെട്ട എല്ലാ പ്രവര്‍ത്തനങ്ങളും സൂക്ഷിച്ചുവയ്ക്കാവുന്ന ഒരു ലോഗ് അതിന്റെ ഹിസ്റ്ററി പേജില്‍ നിലനിര്‍ത്തുക.</message>
 	<message key="manager.setup.submissionGuidelines">സബ്മിഷന്‍ ഗൈഡ്ലൈന്‍സ്</message>
 	<message key="manager.setup.submissionPreparationChecklist">സമര്‍പ്പണം തയ്യാറാക്കുന്നതിനുള്ള ചെക്ക്ലിസ്റ്റ്</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">On making a submission to the journal, authors are first asked to check each item on the Submission Preparation Checklist as completed, before proceeding. The checklist also appears in the Author Guidelines, under About the Journal. The list can be edited below, but all items on the list will require a checkmark before authors can proceed with their submission.</message>

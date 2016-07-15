@@ -235,14 +235,6 @@
 	<message key="manager.setup.disciplineExamples">(Ex. Istorie; Educaţie; Sociologie; Psihologie; Studii culturale; Juridic)</message>
 	<message key="manager.setup.disciplineProvideExamples">Exemplificarea disciplinelor ştiinţifice relevante pentru această revistă</message>
 	<message key="manager.setup.displayCurrentIssue">Adaugă cuprinsul pentru numărul curent (dacă este disponibil).</message>
-	<message key="manager.setup.doiPrefix">Prefixul DOI (identificatorul unic - Digital Object Identifier)</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[Prefixul DOI (Digital Object Identifier) este atribuit de <a href="http://www.crossref.org" target="_new">CrossRef</a> şi are formatul 10.xxxx (e.g. 10.1234).]]></message>
-	<message key="manager.setup.doiSuffix">Sufix DOI</message>
-	<message key="manager.setup.doiSuffixDefault">Folosește formatul implicit (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Folosește formatul introdus mai pentru a genera sufixe DOI. Folosește %j pentru inițialele revistei, %v pentru numărul de volum, %i pentru numărul de revistă, %a pentru identificatorul de articol al articolului prezent în sistemul OJS și %p pentru numărul paginii.</message>
-	<message key="manager.setup.doiSuffixPattern.example">De exemplu: vol%viss%ipp%p poate genera un DOI astfel: 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">Un sufix DOI poate avea orice formă, dar trebuie să fie unic pentru fiecare articol publicat.</message>
-	<message key="manager.setup.doiSuffixPublisherId">Folosește „identificator particularizat” pentru articolele publicate ca fiind un sufix DOI (acesta trebuie activat la Pasul 4).</message>
 	<message key="manager.setup.editorDecision">Decizia redactorului</message>
 	<message key="manager.setup.editorialMembers">Mergi la membrii colectivului şi mai adaugă dintre aceștia la colectivul redacţional şi/sau la cel de evaluare. Acest lucru poate fi făcut în orice moment al activităţii revistei.</message>
 	<message key="manager.setup.editorialProcess1">Unu sau mai mulţi redactori gestionează paşii de bază fără a avea roluri desemnate.</message>
@@ -280,7 +272,6 @@
 	<message key="manager.setup.form.journalInitialsRequired">Sunt necesare iniţialele revistei.</message>
 	<message key="manager.setup.form.journalTitleRequired">The journal title is required.</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">Este necesar numărul de evaluatori acceptat pentru propunere.</message>
-	<message key="manager.setup.form.doiPrefixPattern">Șablonul de construcție a identificatorului DOI trebuie să fie de forma 10.xxxx.</message>
 	<message key="manager.setup.form.supportEmailRequired">Este nevoie de emailul pentru asistență.</message>
 	<message key="manager.setup.form.supportNameRequired">Este necesară introducerea numelui pentru cel care oferă suport.</message>
 	<message key="manager.setup.frequencyOfPublication">Momentul inițierii revistei şi frecvenţa</message>
@@ -457,8 +448,6 @@
 	<message key="manager.setup.subjectExamples">(Ex. Fotosinteză; Găurile negre; Problema diagramei cu patru culori; Teoria bayesiană)</message>
 	<message key="manager.setup.subjectKeywordTopic">Cuvinte cheie</message>
 	<message key="manager.setup.subjectProvideExamples">Exemplificaţi cuvintele cheie sau subiecte care să ghideze autorii</message>
-	<message key="manager.setup.submissionEmailLogging">Ţine o evidență a tuturor emailurilor trimise în legătură cu o propunere în pagina destinată „istoricului” acesteia.</message>
-	<message key="manager.setup.submissionEventLogging">Ţine un evidență a tuturor acţiunilor asupra unei propuneri în pagina „istoricului” acesteia.</message>
 	<message key="manager.setup.submissionGuidelines">Îndrumări pentru propuneri</message>
 	<message key="manager.setup.submissionPreparationChecklist">Lista de verificare pentru pregătirea propunerii</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Când se face o propunere unei reviste, autorii sunt întrebaţi în primul rând să parcurgă fiecare punct din lista de verificare înainte de a continua. Lista de verificare apare, de asemenea în îndrumările pentru autor sub secţiunea „despre revistă”. Lista poate fi editată mai jos, dar toate articolele din listă vor necesita câte o bifă înainte ca autorii să continue cu propunerea lor.</message>
@@ -679,6 +668,4 @@
 	<message key="manager.plugins.tarCommandNotFound">Comanda tar nu este disponibilă. Configurați-l corect în fișierul "config.inc.php".</message>
 	<message key="manager.plugins.versionFileInvalid">version.xml din directorul modulului conține date nevalide.</message>
 	<message key="manager.reviewFormElements.included">Inclus în mesajul către autor</message>
-	<message key="manager.setup.doiReassign">Reatribuie DOI-urile</message>
-	<message key="manager.setup.doiReassign.description">Dacă schimbi configurarea DOI-urile, DOI-urile care deja au fost atribuite nu vor fi afectate. Din moment ce configurarea DOI-urilor este salvată, folosește acest buton pentru a elimina toate DOI-urile existente astfel încât noile setări să aibă efect asupra articolelor existente.</message>
 </locale>

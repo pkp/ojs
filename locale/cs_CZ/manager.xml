@@ -666,7 +666,6 @@
 	<message key="manager.sections.confirmDelete">Jste si jisti, že chcete natrvalo vymazat tuto sekci?</message>
 	<message key="manager.sections.alertDelete">Než budete moci smazat tuto sekci, musíte přesunout všechny články z této sekce do jiných sekcí.</message>
 	<message key="manager.setup.subjectClassificationURLValid">Vložte, prosím, platné vzdálené URL (včetně http://).</message>
-	<message key="manager.statistics.reports.today">Dnes</message>
 	<message key="manager.statistics.reports.currentMonth">V tomto měsíci</message>
 	<message key="manager.statistics.reports.orderBy">Seřadit podle</message>
 	<message key="manager.statistics.reports.orderDir">Směr</message>
@@ -738,6 +737,4 @@
 	<!-- Categories -->
 	<message key="manager.setup.categories">Kategorie</message>
 	<message key="manager.setup.categories.description">Zvolte nejvíce vhodné kategorie z nabídky výše. Čtenáři boudou moci procházet podle těchto kategorií z kompletní sady časopisů.</message>
-	<message key="manager.setup.emailHeader">Hlavička e-mailu</message>
-	<message key="manager.setup.emailHeaderDescription">Připravené e-maily, které jsou zasílány systémem jménem časopisu budou mít následující záhlaví. Tyto e-maily budou zasílány jménem Hlavního kontaktu, je proto důležité vyjasnit, že Hlavní kontakt není nutně zodpovědný za obsah zprávy, která jeho jménem může být poslána různým uživatelům.</message>
 </locale>

@@ -129,6 +129,4 @@ Yeni dosyada <strong>[silinmiş sözcük]</strong> değiştirilmiş bölümler k
 	<message key="default.journalSettings.donationFeeDescription">Bu derginin herhangi bir miktarı bağış olarak alması ve okurlarına yüksek kalitede bir dergi sunmaya devam etmek istemesi düzenleyiciler için bir araç sağlamaktadır.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Sayı Satın Al</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Ücretin ödemesi, bu sayının yazdırılması, indirilmesi ve görüntülenmesine izin verir.</message>
-	<message key="default.journalSettings.emailHeader">Aşağıdaki mesaj {$journalName} adına teslim edilecektir.
-________________________________________________________________________</message>
 </locale>

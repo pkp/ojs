@@ -46,14 +46,9 @@
 	<message key="plugins.generic.pln.status.transferred">Transformováno</message>
 	<message key="plugins.generic.pln.status.received">Obdrženo</message>
 	<message key="plugins.generic.pln.status.syncing">Synchronizuje se</message>
-	<message key="plugins.generic.pln.status.synced">Synchronizováno</message>
 	<message key="plugins.generic.pln.status.updated">Aktualizováno</message>
 	<message key="plugins.generic.pln.status.local_failure">Místní chyba</message>
 	<message key="plugins.generic.pln.status.remote_failure">Vzdálená chyba</message>
-	<message key="plugins.generic.pln.status.reset">Reset</message>
-	<message key="plugins.generic.pln.status.yes">Ano</message>
-	<message key="plugins.generic.pln.status.no">Ne</message>
-
 	<message key="plugins.generic.pln.depositorTask.name">Úkol PKP PLN depozitoru</message>
 	<message key="plugins.generic.pln.notifications.processing_for">Zpracování uložení pro</message>
 	<message key="plugins.generic.pln.notifications.pln_not_accepting">PKP PLN v tomto momentě nepřijímá uložení.</message>

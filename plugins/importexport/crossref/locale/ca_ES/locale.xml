@@ -29,6 +29,5 @@
 	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Introduïu el correu electrònic del dipositant.</message>
 	<message key="plugins.importexport.crossref.export.unregistered">Exporta els articles sense registrar</message>
 	<message key="plugins.importexport.crossref.export.selectUnregistered">Selecciona els articles sense registrar</message>
-	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">La data de publicació de l'article amb ID {$param} no hi és.</message>
 	<message key="plugins.importexport.crossref.senderTask.name">Tasca de registre automàtic de CrossRef</message>
 </locale>

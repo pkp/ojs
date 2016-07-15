@@ -709,7 +709,6 @@ Hay casos en los que una sola estadística de uso debe ser usada, por ej. mostra
 	<message key="manager.statistics.reports.objectType">Tipo de Objeto</message>
 	<message key="manager.statistics.reports.objectId">Id del objeto</message>
 	<message key="manager.statistics.reports.objectId.label">Defina uno o más ids de objetos, separados por coma (ej. 1,2,3,4,5).</message>
-	<message key="manager.statistics.reports.today">Hoy</message>
 	<message key="manager.statistics.reports.currentMonth">Mes actual</message>
 	<message key="manager.statistics.reports.orderBy">Ordenar por</message>
 	<message key="manager.statistics.reports.orderDir">Dirección</message>
@@ -736,6 +735,4 @@ Hay casos en los que una sola estadística de uso debe ser usada, por ej. mostra
 	<message key="manager.setup.copyrightYearBasis.Article">Se tomará el  año por defecto desde la fecha de publicación del artículo, así como en  "publish-as-you-go"</message>
 	<message key="manager.setup.copyrightYearBasis.Issue">Se tomará el año por defecto desde la fecha de publicación del número</message>
 	<message key="manager.statistics.reports.objectNotFound">El objeto no se encontró en la base de datos</message>
-	<message key="manager.setup.emailHeader">Título del Email</message>
-	<message key="manager.setup.emailHeaderDescription">Los emails que son envíados por el sistema, comenzarán con el siguiente título. Estos emails serán envíados de parte del Contacto Principal, por lo que es importante dejar claro que el contacto principal no es necesariamente responsable del contenido del mensaje, que podría ser enviado por otro usuario.</message>
 </locale>

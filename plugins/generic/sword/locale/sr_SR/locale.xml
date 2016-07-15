@@ -16,7 +16,6 @@
 	<message key="plugins.generic.sword.displayName">SWORD dodatak</message>
 	<message key="plugins.generic.sword.description">Omogućuje urednicima i autorima (opciono) da deponuju članke putem SWORD protokola.</message>
 	<message key="plugins.generic.sword.enabled">SWORD dodatak je uključen.</message>
-	<message key="plugins.generic.sword.disable">SWORD dodatak je iključen.</message>
 	<message key="plugins.generic.sword.settings">Podešavanja</message>
 	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Dozvoli autoru da odredi tačku deponovanja</message>
 	<message key="plugins.generic.sword.settings.depositPoints">Tačke deponovanja</message>

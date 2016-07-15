@@ -17,7 +17,6 @@
 <locale name="uk_UA" full_name="Українська">
        <message key="plugins.reports.counter.description"><![CDATA[Модуль COUNTER дозволяє запис та створення звітів щодо активності на сайті за стандартом <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>.]]></message>
        <message key="plugins.reports.counter">Статистика COUNTER</message>
-       <message key="plugins.reports.counter.migrate">Міграція лог-файлу</message>
        <message key="plugins.reports.counter.1a.title">Журнальний звіт 1 (R3): Запити повних текстів статей за місяцями та журналами</message>
        <message key="plugins.reports.counter.1a.title1">Журнальний звіт 1 (R3)</message>
        <message key="plugins.reports.counter.1a.title2">Кількість успішних запитів повних текстів статей за місяцями та журналами (Рік {$year})</message>
