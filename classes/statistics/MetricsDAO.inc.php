@@ -22,7 +22,9 @@ class MetricsDAO extends PKPMetricsDAO {
 	 */
 	function &getMetrics($metricType, $columns = array(), $filters = array(), $orderBy = array(), $range = null, $nonAdditive = true) {
 		// Translate the issue dimension to a generic one used in pkp library.
-		foreach (array(&$columns, &$filters, &$orderBy) as &$parameter) { // Reference needed.
+		// Do not move this into foreach: https://github.com/pkp/pkp-lib/issues/1615
+		$worker = array(&$columns, &$filters, &$orderBy);
+		foreach ($worker as &$parameter) { // Reference needed.
 			if ($parameter === $filters && array_key_exists(STATISTICS_DIMENSION_ISSUE_ID, $parameter)) {
 				$parameter[STATISTICS_DIMENSION_ASSOC_OBJECT_TYPE] = ASSOC_TYPE_ISSUE;
 			}
