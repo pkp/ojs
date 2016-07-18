@@ -442,7 +442,12 @@ class SectionEditorAction extends Action {
 				);
 				$email->assignParams($paramArray);
 
+			} else if ($preventAddressChanges) {
+				// If bouncing back e.g. from adding an attachment, the recipient list will
+				// appear empty unless we add this. Informational only.
+				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
 			}
+
 			$email->displayEditForm(
 				$request->url(null, null, 'remindReviewer', 'send'),
 				array(
