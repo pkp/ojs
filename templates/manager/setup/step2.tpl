@@ -216,7 +216,8 @@
 
 {call_hook name="Templates::Manager::Setup::JournalArchiving"}
 
-<p>{translate key="manager.setup.lockssDescription" lockssExistingArchiveUrl=$lockssExistingArchiveUrl lockssNewArchiveUrl=$lockssNewArchiveUrl}</p>
+{url|assign:"genericPluginsUrl" page="manager" op="plugins" path="generic"}
+<p>{translate key="manager.setup.lockssDescription" genericPluginsUrl=$genericPluginsUrl}</p>
 
 {url|assign:"lockssUrl" page="gateway" op="lockss"}
 <p><input type="checkbox" name="enableLockss" id="enableLockss" value="1"{if $enableLockss} checked="checked"{/if} /> <label for="enableLockss">{translate key="manager.setup.lockssEnable" lockssUrl=$lockssUrl}</label></p>
