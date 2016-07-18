@@ -429,9 +429,11 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 
 	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems supports the <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) system to ensure secure and permanent preservation of your journal. You have several options for including your journal in a LOCKSS network:]]></message>
 
-	<message key="manager.setup.lockssDescription"><![CDATA[<strong>Other LOCKSS Networks</strong>
-<br /><br />
-If you believe you have access to one or more of the LOCKSS networks listed <a href="http://www.lockss.org/community/networks/" target="_blank">here</a>, please contact the appropriate LOCKSS Network administrator to apply for inclusion. Completing the form below will allow for inclusion of your journal in those networks. <em>No content will be preserved before you have notified the appropriate network</em>.]]></message>
+<message key="manager.setup.lockssDescription"><![CDATA[<strong>PKP Private LOCKSS Network</strong>
+<p>Any OJS journal that has an ISSN and has published at least one article can choose to agree to the terms of use and be preserved in the PKP PLN at no cost.</p>
+<p>To join, go to <a href="{$genericPluginsUrl}">Generic Plugins</a>, find PKP PLN Plugin, select Enable, and then select Settings, and accept the Terms of Use. Your content will then be automatically included in the network. No further action is required.</p>
+<strong>Other LOCKSS Networks</strong>
+<p>If you believe you have access to one or more of the LOCKSS networks listed <a href="http://www.lockss.org/community/networks/" target="_blank">here</a>, please contact the appropriate LOCKSS Network administrator to apply for inclusion. Completing the form below will allow for inclusion of your journal in those networks. <em>No content will be preserved before you have notified the appropriate network</em>.</p>]]></message>
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Examples of Creative Commons Licensing Notifications in the Copyright Notices</h3>
 <h4>1. Proposed Policy for Journals That Offer Open Access</h4>
