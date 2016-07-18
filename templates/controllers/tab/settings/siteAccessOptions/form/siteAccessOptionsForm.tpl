@@ -16,6 +16,8 @@
 	{rdelim});
 </script>
 
+{help file="users-and-roles.md" section="accessOptions" class="pkp_help_tab"}
+
 <form class="pkp_form" id="siteAccessOptionsForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.AccessSettingsTabHandler" op="saveFormData" tab="siteAccessOptions"}">
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="siteAccessOptionsFormNotification"}
 
