@@ -25,7 +25,6 @@ class SettingsHandler extends ManagementHandler {
 		$this->addRoleAssignment(
 			ROLE_ID_MANAGER,
 			array(
-				'index',
 				'settings',
 				'publication',
 				'distribution',
@@ -38,17 +37,6 @@ class SettingsHandler extends ManagementHandler {
 	// Public handler methods
 	//
 	/**
-	 * Display settings index page.
-	 * @param $request PKPRequest
-	 * @param $args array
-	 */
-	function index($args, $request) {
-		$templateMgr = TemplateManager::getManager($request);
-		$this->setupTemplate($request);
-		$templateMgr->display('management/settings/index.tpl');
-	}
-
-	/**
 	 * Route to other settings operations.
 	 * @param $args array
 	 * @param $request PKPRequest
@@ -57,8 +45,7 @@ class SettingsHandler extends ManagementHandler {
 		$path = array_shift($args);
 		switch($path) {
 			case 'index':
-				$this->index($args, $request);
-				break;
+			case '':
 			case 'journal':
 				$this->journal($args, $request);
 				break;

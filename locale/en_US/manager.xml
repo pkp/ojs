@@ -540,12 +540,7 @@
 	<message key="manager.subscriptionTypes.name">Subscription type</message>
 	<message key="manager.subscriptionTypes.noneCreated">No subscription types have been created.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Subscription type created successfully.</message>
-
 	<message key="manager.distribution.access">Access</message>
-	<message key="manager.settings.journalDescription"><![CDATA[All settings specific to the journal (masthead, contact, policies, guidelines, affiliation & support, categories and series).]]></message>
-	<message key="manager.settings.publicationDescription">All settings specific to the publication process (general settings, submission stage, review stage, editorial stage, production stage, email templates).</message>
-	<message key="manager.settings.websiteDescription">All settings specific to the public website pages (homepage, appearance, language)</message>
-	<message key="manager.settings.distributionDescription">All settings specific to the distribution process (notification, indexing, archiving, payment, reading tools).</message>
 
 	<!-- Categories -->
 	<message key="manager.setup.categories">Categories</message>
