@@ -25,7 +25,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$this->addRoleAssignment(
 			array(ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER),
 			array(
-				'publicationMetadata', 'identifiers', 'clearPubId', 'updateIdentifiers',
+				'publicationMetadata', 'savePublicationMetadataForm', 'identifiers', 'clearPubId', 'updateIdentifiers', 'assignPubIds',
 			)
 		);
 	}
@@ -36,22 +36,74 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 	//
 
 	/**
-	 * Show the publication metadata form.
+	 * Show the publication metadata form when scheduling for publication.
 	 * @param $args array
 	 * @param $request Request
 	 * @return JSONMessage JSON object
 	 */
 	function publicationMetadata($args, $request) {
+		$submission = $this->getSubmission();
+		$stageId = $this->getStageId();
+		$user = $request->getUser();
 		import('controllers.tab.issueEntry.form.IssueEntryPublicationMetadataForm');
+		$issueEntryPublicationMetadataForm = new IssueEntryPublicationMetadataForm($submission->getId(), $user->getId(), $stageId);
+		$issueEntryPublicationMetadataForm->initData();
+		return new JSONMessage(true, $issueEntryPublicationMetadataForm->fetch($request));
+	}
 
+	/**
+	 * Save publication metadata form when scheduling for publication.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function savePublicationMetadataForm($args, $request) {
 		$submission = $this->getSubmission();
 		$stageId = $this->getStageId();
 		$user = $request->getUser();
 
-		$issueEntryPublicationMetadataForm = new IssueEntryPublicationMetadataForm($submission->getId(), $user->getId(), $stageId, array('displayedInContainer' => true));
+		import('controllers.tab.issueEntry.form.IssueEntryPublicationMetadataForm');
+		$form = new IssueEntryPublicationMetadataForm($submission->getId(), $user->getId(), $stageId);
+		$form->readInputData();
+		if($form->validate($request)) {
+			$form->execute($request);
+			// Log the event
+			import('lib.pkp.classes.log.SubmissionLog');
+			import('classes.log.SubmissionEventLogEntry'); // Log consts
+			SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_ISSUE_METADATA_UPDATE, 'submission.event.issueMetadataUpdated');
+			// Create trivial notification in place on the form
+			$notificationManager = new NotificationManager();
+			$notificationKey = 'notification.savedIssueMetadata';
+			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SUCCESS, array('contents' => __($notificationKey)));
+			// Display assign public identifiers form
+			import('lib.pkp.controllers.grid.pubIds.form.PKPAssignPublicIdentifiersForm');
+			$formTemplate = $this->getAssignPublicIdentifiersFormTemplate();
+			$formParams['stageId'] = $stageId;
+			$assignPublicIdentifiersForm = new PKPAssignPublicIdentifiersForm($formTemplate, $submission, true, '', $formParams);
+			$assignPublicIdentifiersForm->initData($args, $request);
+			return new JSONMessage(true, $assignPublicIdentifiersForm->fetch($request));
+		} else {
+			return new JSONMessage(true, $form->fetch($request));
+		}
+	}
 
-		$issueEntryPublicationMetadataForm->initData();
-		return new JSONMessage(true, $issueEntryPublicationMetadataForm->fetch($request));
+	/**
+	 * Assign submission public identifiers when scheduling for publication.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function assignPubIds($args, $request) {
+		$submission = $this->getSubmission();
+		$stageId = $this->getStageId();
+		import('lib.pkp.controllers.grid.pubIds.form.PKPAssignPublicIdentifiersForm');
+		$formTemplate = $this->getAssignPublicIdentifiersFormTemplate();
+		$formParams['stageId'] = $stageId;
+		$assignPublicIdentifiersForm = new PKPAssignPublicIdentifiersForm($formTemplate, $submission, true, '', $formParams);
+		// Asign pub ids
+		$assignPublicIdentifiersForm->readInputData();
+		$assignPublicIdentifiersForm->execute($request, true);
+		return new JSONMessage();
 	}
 
 	/**
@@ -116,25 +168,11 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 	}
 
 	/**
-	 * Get the form for a particular tab.
+	 * Get the template for the assign public identifiers form.
+	 * @return string
 	 */
-	function _getFormFromCurrentTab(&$form, &$notificationKey, $request) {
-		parent::_getFormFromCurrentTab($form, $notificationKey, $request); // give PKP-lib a chance to set the form and key.
-
-		if (!$form) { // nothing applicable in parent.
-			$submission = $this->getSubmission();
-			switch ($this->getCurrentTab()) {
-				case 'publication':
-					import('controllers.tab.issueEntry.form.IssueEntryPublicationMetadataForm');
-					$user = $request->getUser();
-					$form = new IssueEntryPublicationMetadataForm($submission->getId(), $user->getId(), $this->getStageId(), array('displayedInContainer' => true, 'tabPos' => $this->getTabPosition()));
-					$notificationKey = 'notification.savedIssueMetadata';
-					import('lib.pkp.classes.log.SubmissionLog');
-					import('classes.log.SubmissionEventLogEntry'); // Log consts
-					SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_ISSUE_METADATA_UPDATE, 'submission.event.issueMetadataUpdated');
-					break;
-			}
-		}
+	function getAssignPublicIdentifiersFormTemplate() {
+		return 'controllers/grid/pubIds/form/assignPublicIdentifiersForm.tpl';
 	}
 
 	/**

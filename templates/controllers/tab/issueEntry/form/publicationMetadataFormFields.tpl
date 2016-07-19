@@ -19,14 +19,11 @@
 	{rdelim});
 </script>
 
-<form class="pkp_form" id="publicationMetadataEntryForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT op="saveForm"}">
+<form class="pkp_form" id="publicationMetadataEntryForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT op="savePublicationMetadataForm"}">
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="publicationMetadataFormFieldsNotification"}
 
 	<input type="hidden" name="submissionId" value="{$submissionId|escape}" />
 	<input type="hidden" name="stageId" value="{$stageId|escape}" />
-	<input type="hidden" name="tabPos" value="1" />
-	<input type="hidden" name="displayedInContainer" value="{$formParams.displayedInContainer|escape}" />
-	<input type="hidden" name="tab" value="publication" />
 	<input type="hidden" name="waivePublicationFee" value="0" />
 	<input type="hidden" name="markAsPaid" value="0" />
 
