@@ -84,26 +84,31 @@ class DepositPackage {
 	 function getPackageFilePath() {
 		return $this->getDepositDir() . DIRECTORY_SEPARATOR . $this->_deposit->getUUID() . ".zip";
 	}
-    
-    /**
-     * Create a DOMElement in the $dom, and set the element name, namespace, and 
-     * content appropriately. Named HTML entities in the content are converted
-     * to UTF-8 characters. Any invalid UTF-8 characters will be dropped.
-     * 
-     * @param DOMDocument $dom
-     * @param string $elementName
-     * @param string $content
-     * @param string $namespace
-     * @return DOMElement
-     */
+	
+	/**
+	 * Create a DOMElement in the $dom, and set the element name, namespace, and 
+	 * content. Any invalid UTF-8 characters will be dropped. The
+	 * content will be placed inside a CDATA section.
+	 * 
+	 * @param DOMDocument $dom
+	 * @param string $elementName
+	 * @param string $content
+	 * @param string $namespace
+	 * @return DOMElement
+	 */
 	function _generateElement($dom, $elementName, $content, $namespace = null){
-		$encoded = html_entity_decode($content, ENT_NOQUOTES | ENT_HTML401, 'UTF-8');
-		$filtered = iconv('UTF-8', 'UTF-8//IGNORE', $encoded);
-		if($namespace !== null) {
-			return $dom->createElementNS($namespace, $elementName, $filtered);
-		} else {
-			return $dom->createElement($elementName, $filtered);
-		}
+		// remove any invalid UTF-8.
+		$original = mb_substitute_character();
+		mb_substitute_character(0xFFFD);
+		$filtered = mb_convert_encoding($content, 'UTF-8', 'UTF-8');
+		mb_substitute_character($original);
+		
+		// put the filtered content in a CDATA, as it may contain markup that 
+		// isn't valid XML.
+		$node = $dom->createCDATASection($filtered);
+		$element = $dom->createElementNS($namespace, $elementName);
+		$element->appendChild($node);
+		return $element;
 	}
 
 	/**
