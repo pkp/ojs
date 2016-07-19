@@ -36,7 +36,7 @@
 
 	<!-- events -->
 	<message key="submission.event.articleGalleyMadeAvailable">The article galley "{$galleyFormatName}" is made available.</message>
-	<message key="submission.event.articleGalleyMadeUnavailable">The article galley "{$galleyFormatName}" is made available.</message>
+	<message key="submission.event.articleGalleyMadeUnavailable">The article galley "{$galleyFormatName}" is made unavailable.</message>
 	<message key="submission.event.publicIdentifiers">The submission's public identifiers updated.</message>
 
 	<!-- galleys grid -->
