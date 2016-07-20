@@ -18,19 +18,25 @@
 	{rdelim});
 </script>
 {if $pubObject instanceof Issue}
-	<form class="pkp_form" id="assignPublicIdentifierForm" method="post" action="{url component="grid.issues.FutureIssueGridHandler" op="publishIssue" issueId=$pubObject->getId() confirmed=true escape=false}">
+	<form class="pkp_form" id="assignPublicIdentifierForm" method="post" action="{url component="grid.issues.FutureIssueGridHandler" op="publishIssue" escape=false}">
+		<input type="hidden" name="issueId" value="{$pubObject->getId()|escape}" />
+		<input type="hidden" name="confirmed" value=true />
+		{assign var=hideCancel value=false}
+{elseif $pubObject instanceof Article}
+	<form class="pkp_form" id="assignPublicIdentifierForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" op="assignPubIds" escape=false}">
+		<input type="hidden" name="submissionId" value="{$pubObject->getId()|escape}" />
+		<input type="hidden" name="stageId" value="{$formParams.stageId|escape}" />
+		{assign var=hideCancel value=true}
 {/if}
 {fbvFormArea id="confirmationText"}
 	<p>{$confirmationText}</p>
 {/fbvFormArea}
 {if $approval}
-	{if !$remoteObject}
-		{foreach from=$pubIdPlugins item=pubIdPlugin}
-			{assign var=pubIdAssignFile value=$pubIdPlugin->getPubIdAssignFile()}
-			{assign var=canBeAssigned value=$pubIdPlugin->canBeAssigned($pubObject)}
-			{include file="$pubIdAssignFile" pubIdPlugin=$pubIdPlugin pubObject=$pubObject canBeAssigned=$canBeAssigned}
-		{/foreach}
-	{/if}
+	{foreach from=$pubIdPlugins item=pubIdPlugin}
+		{assign var=pubIdAssignFile value=$pubIdPlugin->getPubIdAssignFile()}
+		{assign var=canBeAssigned value=$pubIdPlugin->canBeAssigned($pubObject)}
+		{include file="$pubIdAssignFile" pubIdPlugin=$pubIdPlugin pubObject=$pubObject canBeAssigned=$canBeAssigned}
+	{/foreach}
 {/if}
-{fbvFormButtons id="assignPublicIdentifierForm" submitText="common.ok"}
+{fbvFormButtons id="assignPublicIdentifierForm" submitText="common.ok" hideCancel=$hideCancel}
 </form>

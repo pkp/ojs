@@ -26,6 +26,37 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler {
 	}
 
 	/**
+	 * @copydoc PKPWorkflowTabHandler::fetchTab
+	 */
+	function fetchTab($args, $request) {
+		$this->setupTemplate($request);
+		$templateMgr = TemplateManager::getManager($request);
+		$stageId = $this->getAuthorizedContextObject(ASSOC_TYPE_WORKFLOW_STAGE);
+		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+		switch ($stageId) {
+			case WORKFLOW_STAGE_ID_PRODUCTION:
+				$dispatcher = $request->getDispatcher();
+				import('lib.pkp.classes.linkAction.request.AjaxModal');
+				$schedulePublicationLinkAction = new LinkAction(
+					'schedulePublication',
+					new AjaxModal(
+						$dispatcher->url(
+							$request, ROUTE_COMPONENT, null,
+							'tab.issueEntry.IssueEntryTabHandler',
+							'publicationMetadata', null,
+							array('submissionId' => $submission->getId(), 'stageId' => $stageId)
+						),
+						__('submission.issueEntry.publicationMetadata')
+					),
+					__('editor.article.schedulePublication')
+				);
+				$templateMgr->assign('schedulePublicationLinkAction', $schedulePublicationLinkAction);
+				break;
+		}
+		return parent::fetchTab($args, $request);
+	}
+
+	/**
 	 * Get all production notification options to be used in the production stage tab.
 	 * @param $submissionId int
 	 * @return array
