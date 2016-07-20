@@ -24,7 +24,32 @@ class SubmissionHandler extends PKPSubmissionHandler {
 	function SubmissionHandler() {
 		parent::PKPSubmissionHandler();
 		$this->addRoleAssignment(array(ROLE_ID_AUTHOR, ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER),
-				array('index', 'wizard', 'step', 'saveStep'));
+				array('index', 'wizard', 'step', 'saveStep', 'fetchChoices'));
+	}
+
+
+	//
+	// Public methods
+	//
+	/**
+	 * Retrieves a JSON list of available choices for a tagit metadata input field.
+	 * @param $args array
+	 * @param $request Request
+	 */
+	function fetchChoices($args, $request) {
+		$term = $request->getUserVar('term');
+		switch ($request->getUserVar('list')) {
+			case 'languages':
+				$languageDao = DAORegistry::getDAO('LanguageDAO');
+				$languages = $languageDao->getLanguages(AppLocale::getLocale());
+				$matches = array();
+				foreach ($languages as $language) {
+					if (stristr($language->getName(), $term)) $matches[$language->getCode()] = $language->getName();
+				}
+				header('Content-Type: text/json');
+				echo json_encode($matches);
+		}
+		assert(false);
 	}
 
 
