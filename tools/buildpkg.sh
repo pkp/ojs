@@ -40,6 +40,7 @@ lib/pkp/plugins/*/*/tests					\
 plugins/*/*/tests						\
 plugins/generic/googleAnalytics					\
 plugins/generic/phpMyVisites					\
+plugins/generic/customLocale					\
 plugins/generic/counter						\
 plugins/generic/driver						\
 plugins/generic/externalFeed					\
