@@ -76,10 +76,10 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 			$notificationKey = 'notification.savedIssueMetadata';
 			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SUCCESS, array('contents' => __($notificationKey)));
 			// Display assign public identifiers form
-			import('lib.pkp.controllers.grid.pubIds.form.PKPAssignPublicIdentifiersForm');
+			import('controllers.grid.pubIds.form.AssignPublicIdentifiersForm');
 			$formTemplate = $this->getAssignPublicIdentifiersFormTemplate();
-			$formParams['stageId'] = $stageId;
-			$assignPublicIdentifiersForm = new PKPAssignPublicIdentifiersForm($formTemplate, $submission, true, '', $formParams);
+			$formParams = array('stageId' => $stageId);
+			$assignPublicIdentifiersForm = new AssignPublicIdentifiersForm($formTemplate, $submission, true, '', $formParams);
 			$assignPublicIdentifiersForm->initData($args, $request);
 			return new JSONMessage(true, $assignPublicIdentifiersForm->fetch($request));
 		} else {
@@ -96,10 +96,10 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 	function assignPubIds($args, $request) {
 		$submission = $this->getSubmission();
 		$stageId = $this->getStageId();
-		import('lib.pkp.controllers.grid.pubIds.form.PKPAssignPublicIdentifiersForm');
+		import('controllers.grid.pubIds.form.AssignPublicIdentifiersForm');
 		$formTemplate = $this->getAssignPublicIdentifiersFormTemplate();
-		$formParams['stageId'] = $stageId;
-		$assignPublicIdentifiersForm = new PKPAssignPublicIdentifiersForm($formTemplate, $submission, true, '', $formParams);
+		$formParams = array('stageId' => $stageId);
+		$assignPublicIdentifiersForm = new AssignPublicIdentifiersForm($formTemplate, $submission, true, '', $formParams);
 		// Asign pub ids
 		$assignPublicIdentifiersForm->readInputData();
 		$assignPublicIdentifiersForm->execute($request, true);

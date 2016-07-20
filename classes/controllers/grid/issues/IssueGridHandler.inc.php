@@ -391,9 +391,9 @@ class IssueGridHandler extends GridHandler {
 		$articleSearchIndex = null;
 		if (!$issue->getPublished()) {
 			$confirmationText = __('editor.issues.confirmPublish');
-			import('lib.pkp.controllers.grid.pubIds.form.PKPAssignPublicIdentifiersForm');
+			import('controllers.grid.pubIds.form.AssignPublicIdentifiersForm');
 			$formTemplate = $this->getAssignPublicIdentifiersFormTemplate();
-			$assignPublicIdentifiersForm = new PKPAssignPublicIdentifiersForm($formTemplate, $issue, true, $confirmationText);
+			$assignPublicIdentifiersForm = new AssignPublicIdentifiersForm($formTemplate, $issue, true, $confirmationText);
 			if (!$request->getUserVar('confirmed')) {
 				// Display assign pub ids modal
 				$assignPublicIdentifiersForm->initData($args, $request);

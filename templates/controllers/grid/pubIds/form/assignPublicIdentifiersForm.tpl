@@ -32,13 +32,11 @@
 	<p>{$confirmationText}</p>
 {/fbvFormArea}
 {if $approval}
-	{if !$remoteObject}
-		{foreach from=$pubIdPlugins item=pubIdPlugin}
-			{assign var=pubIdAssignFile value=$pubIdPlugin->getPubIdAssignFile()}
-			{assign var=canBeAssigned value=$pubIdPlugin->canBeAssigned($pubObject)}
-			{include file="$pubIdAssignFile" pubIdPlugin=$pubIdPlugin pubObject=$pubObject canBeAssigned=$canBeAssigned}
-		{/foreach}
-	{/if}
+	{foreach from=$pubIdPlugins item=pubIdPlugin}
+		{assign var=pubIdAssignFile value=$pubIdPlugin->getPubIdAssignFile()}
+		{assign var=canBeAssigned value=$pubIdPlugin->canBeAssigned($pubObject)}
+		{include file="$pubIdAssignFile" pubIdPlugin=$pubIdPlugin pubObject=$pubObject canBeAssigned=$canBeAssigned}
+	{/foreach}
 {/if}
 {fbvFormButtons id="assignPublicIdentifierForm" submitText="common.ok" hideCancel=$hideCancel}
 </form>
