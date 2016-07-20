@@ -179,7 +179,7 @@
 	<setting type="int" locale="0">
 		<name>submissionFee</name>
 		<value>0</value>
-	</setting>	
+	</setting>
 	<setting type="string" locale="1">
 		<name>submissionFeeName</name>
 		<value>{translate key="default.journalSettings.submissionFee"}</value>
@@ -187,11 +187,11 @@
 	<setting type="string" locale="1">
 		<name>submissionFeeDescription</name>
 		<value>{translate key="default.journalSettings.submissionFeeDescription"}</value>
-	</setting>			
+	</setting>
 	<setting type="int" locale="0">
 		<name>fastTrackFee</name>
 		<value>0</value>
-	</setting>	
+	</setting>
 	<setting type="string" locale="1">
 		<name>fastTrackFeeName</name>
 		<value>{translate key="default.journalSettings.fastTrackFee"}</value>
@@ -199,11 +199,11 @@
 	<setting type="string" locale="1">
 		<name>fastTrackFeeDescription</name>
 		<value>{translate key="default.journalSettings.fastTrackFeeDescription"}</value>
-	</setting>			
+	</setting>
 	<setting type="int" locale="0">
 		<name>publicationFee</name>
 		<value>0</value>
-	</setting>	
+	</setting>
 	<setting type="string" locale="1">
 		<name>publicationFeeName</name>
 		<value>{translate key="default.journalSettings.publicationFee"}</value>
@@ -215,11 +215,11 @@
 	<setting type="string" locale="1">
 		<name>waiverPolicy</name>
 		<value>{translate key="default.journalSettings.waiverPolicy"}</value>
-	</setting>				
+	</setting>
 	<setting type="int" locale="0">
 		<name>purchaseArticleFee</name>
 		<value>0</value>
-	</setting>	
+	</setting>
 	<setting type="string" locale="1">
 		<name>purchaseArticleFeeName</name>
 		<value>{translate key="default.journalSettings.purchaseArticleFee"}</value>
@@ -227,11 +227,11 @@
 	<setting type="string" locale="1">
 		<name>purchaseArticleFeeDescription</name>
 		<value>{translate key="default.journalSettings.purchaseArticleFeeDescription"}</value>
-	</setting>			
+	</setting>
 	<setting type="int" locale="0">
 		<name>membershipFee</name>
 		<value>0</value>
-	</setting>	
+	</setting>
 	<setting type="string" locale="1">
 		<name>membershipFeeName</name>
 		<value>{translate key="default.journalSettings.membershipFee"}</value>
@@ -239,7 +239,7 @@
 	<setting type="string" locale="1">
 		<name>membershipFeeDescription</name>
 		<value>{translate key="default.journalSettings.membershipFeeDescription"}</value>
-	</setting>			
+	</setting>
 	<setting type="string" locale="1">
 		<name>donationFeeName</name>
 		<value>{translate key="default.journalSettings.donationFee"}</value>
@@ -270,14 +270,6 @@
 	</setting>
 	<setting type="bool" locale="0">
 		<name>keywordsEnabledWorkflow</name>
-		<value>1</value>
-	</setting>
-	<setting type="bool" locale="0">
-		<name>includeCopyrightStatement</name>
-		<value>1</value>
-	</setting>
-	<setting type="bool" locale="0">
-		<name>includeLicense</name>
 		<value>1</value>
 	</setting>
 </journal_settings>
