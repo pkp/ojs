@@ -110,12 +110,12 @@ class ArticleHandler extends Handler {
 		if ($galley && $galley->getRemoteURL()) $request->redirectUrl($galley->getRemoteURL());
 		$templateMgr->assign('galley', $galley);
 		// Copyright and license info
-		if ($journal->getSetting('includeCopyrightStatement') && $journal->getLocalizedSetting('copyrightNotice')) $templateMgr->assign(array(
+		$templateMgr->assign(array(
 			'copyright' => $journal->getLocalizedSetting('copyrightNotice'),
 			'copyrightHolder' => $journal->getLocalizedSetting('copyrightHolder'),
 			'copyrightYear' => $journal->getSetting('copyrightYear')
 		));
-		if ($journal->getSetting('includeLicense') && $article->getLicenseURL()) $templateMgr->assign(array(
+		if ($article->getLicenseURL()) $templateMgr->assign(array(
 			'licenseUrl' => $article->getLicenseURL(),
 			'ccLicenseBadge' => Application::getCCLicenseBadge($article->getLicenseURL()),
 		));
