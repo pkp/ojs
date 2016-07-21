@@ -51,14 +51,12 @@
 	$.pkp.controllers.form.DOIPubIdExportFormHandler.
 			prototype.submitAction_ = function(submitButton, event) {
 
-		var $formElement = this.getHtmlElement(),
-				idPattern = new RegExp('(.*)-button-'),
-				button = event.target.id,
-				idPatternResult = idPattern.exec(button),
+		var idPattern = new RegExp('(.*)-button-'),
+				button = event.target,
+				idPatternResult = idPattern.exec(button.id),
 				action = idPatternResult[1],
-				actionHiddenInput = $('<input>')
-					.attr('type', 'hidden')
-					.attr('name', action).val('1');
+				$formElement = $(button).closest('form');
+
 		$formElement.append('<input type="hidden" name="' + action + '" value="1">');
 		$formElement.submit();
 		return true;
