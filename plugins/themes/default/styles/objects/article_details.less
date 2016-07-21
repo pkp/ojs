@@ -77,6 +77,14 @@
 		}
 	}
 
+	.item.doi {
+		padding-top: 0;
+
+		.label {
+			font-size: @font-sml;
+		}
+	}
+
 	.galleys_links {
 		&:extend(.pkp_unstyled_list);
 
@@ -113,6 +121,11 @@
 				color: @text-light;
 			}
 		}
+	}
+
+	// Allow long Pub IDs to wrap
+	.item.pubid .value {
+		word-wrap: break-word;
 	}
 
 	@media(min-width: @screen-phone) {

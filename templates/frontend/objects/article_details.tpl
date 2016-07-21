@@ -93,6 +93,30 @@
 				</ul>
 			{/if}
 
+			{* DOI (requires plugin) *}
+			{foreach from=$pubIdPlugins item=pubIdPlugin}
+				{if $pubIdPlugin->getPubIdType() != 'doi'}
+					{php}continue;{/php}
+				{/if}
+				{if $issue->getPublished()}
+					{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
+				{else}
+					{assign var=pubId value=$pubIdPlugin->getPubId($article)}{* Preview pubId *}
+				{/if}
+				{assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
+				<div class="item doi">
+					<span class="label">
+						{translate key="plugins.pubIds.doi.readerDisplayName"}
+					</span>
+					<span class="value">
+						<a href="{$doiUrl}">
+							{$doiUrl}
+						</a>
+					</span>
+				</div>
+			{/foreach}
+
+			{* Abstract *}
 			{if $article->getLocalizedAbstract()}
 				<div class="item abstract">
 					<h3 class="label">{translate key="article.abstract"}</h3>
@@ -118,7 +142,6 @@
 			{/if}
 
 			{* Article Galleys *}
-
 			{assign var=galleys value=$article->getGalleys()}
 			{if $galleys}
 				<div class="item galleys">
@@ -184,8 +207,10 @@
 			{/if}
 
 			{* PubIds (requires plugins) *}
-			{* @todo this hasn't been tested or styled *}
 			{foreach from=$pubIdPlugins item=pubIdPlugin}
+				{if $pubIdPlugin->getPubIdType() == 'doi'}
+					{php}continue;{/php}
+				{/if}
 				{if $issue->getPublished()}
 					{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{else}
