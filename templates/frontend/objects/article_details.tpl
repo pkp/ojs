@@ -53,7 +53,8 @@
  * @uses $issue Issue The issue this article is assigned to
  * @uses $section Section The journal section this article is assigned to
  * @uses $keywords array List of keywords assigned to this article
- * @uses $pubIdPlugins @todo
+ * @uses $pubIdPlugins Array of pubId plugins which this article may be assigned
+ * @uses $citationPlugins Array of citation format plugins
  * @uses $copyright string Copyright notice. Only assigned if statement should
  *   be included with published articles.
  * @uses $copyrightHolder string Name of copyright holder
@@ -162,6 +163,41 @@
 					</div>
 					<div class="value">
 						{$article->getDatePublished()|date_format}
+					</div>
+				</div>
+			{/if}
+
+			{* Citation formats *}
+			{if $citationPlugins|@count}
+				<div class="item citation_formats">
+					{* Output the first citation format *}
+					{foreach from=$citationPlugins name="citationPlugins" item="citationPlugin"}
+						<div class="sub_item citation_display">
+							<div class="label">
+								How to Cite
+							</div>
+							<div id="citationOutput" class="value">
+								{$citationPlugin->fetchCitation($article, $issue, $currentContext)}
+							</div>
+						</div>
+						{php}break;{/php}
+					{/foreach}
+
+					{* Output list of all citation formats *}
+					<div class="sub_item citation_format_options">
+						<div class="label">
+							Citation Formats
+						</div>
+						<div class="value">
+							<ul>
+								{foreach from=$citationPlugins name="citationPlugins" item="citationPlugin"}
+									<li class="{$citationPlugin->getName()|escape}{if $smarty.foreach.citationPlugins.iteration == 1} current{/if}">
+										{capture assign="citationUrl"}{url page="article" op="cite" path=$article->getBestArticleId()}/{$citationPlugin->getName()|escape}{/capture}
+										<a href="{$citationUrl}"{if !$citationPlugin->isDownloadable()} data-load-citation="true"{/if} target="_blank">{$citationPlugin->getCitationFormatName()|escape}</a>
+									</li>
+								{/foreach}
+							</ul>
+						</div>
 					</div>
 				</div>
 			{/if}
