@@ -28,7 +28,6 @@
 
 	// Require jQuery
 	if (typeof $ === 'undefined') {
-		console.log('The Citation Formats handler could not be loaded because jQuery was not found.');
 		return;
 	}
 
@@ -56,7 +55,6 @@
 			})
 			.fail(function(r) {
 				citationOutput.css('opacity', 1);
-				console.log('fail', r);
 			});
 	});
 
