@@ -18,8 +18,18 @@
 		line-height: @double - 2; // Adjust for border
 	}
 
+	.cover {
+		display: block;
+		margin-bottom: @double;
+
+		img {
+			display: block;
+			max-height: 250px;
+			width: auto;
+		}
+	}
+
 	.description {
-		margin-bottom: @triple * 2;
 
 		> *:first-child {
 			margin-top: 0;
@@ -27,6 +37,22 @@
 
 		> *:last-child {
 			margin-bottom: 0;
+		}
+	}
+
+	.pub_id {
+		margin: @double 0;
+
+		.type {
+			font-weight: @bold;
+		}
+	}
+
+	.published {
+		margin: @double 0;
+
+		.label {
+			font-weight: @bold;
 		}
 	}
 
@@ -51,7 +77,23 @@
 		margin-bottom: @triple;
 	}
 
+	.sections:not(:first-child) {
+		margin-toP: @triple * 2;
+	}
+
 	@media(min-width: @screen-tablet) {
+
+		.heading {
+			.pkp_helpers_clear;
+		}
+
+		.cover {
+			float: left;
+			width: 25%;
+			height: auto;
+			max-height: none;
+			margin-right: @double;
+		}
 
 		.galleys,
 		.section {
@@ -79,6 +121,15 @@
 		.galleys,
 		.section {
 			margin: @triple -@triple;
+		}
+
+		.cover {
+			margin-right: @triple;
+			margin-bottom: @triple;
+
+			img {
+				max-height: auto;
+			}
 		}
 	}
 }

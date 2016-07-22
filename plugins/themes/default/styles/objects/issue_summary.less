@@ -10,6 +10,17 @@
  */
 .obj_issue_summary {
 
+	.cover {
+		display: block;
+		margin-bottom: @double;
+
+		img {
+			display: block;
+			width: auto;
+			max-height: 250px;
+		}
+	}
+
 	.title {
 		font-weight: @bold;
 		text-decoration: none;
@@ -33,4 +44,18 @@
 		}
 	}
 
+	@media(min-width: @screen-tablet) {
+		.pkp_helpers_clear;
+
+		.cover {
+			float: left;
+			width: 25%;
+			height: auto;
+			margin-right: @double;
+
+			img {
+				max-height: auto;
+			}
+		}
+	}
 }

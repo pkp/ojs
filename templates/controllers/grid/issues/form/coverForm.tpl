@@ -29,11 +29,6 @@
 </script>
 
 <form class="pkp_form" id="coverForm" method="post" action="{url op="updateCover" issueId=$issueId}">
-	{fbvFormArea id="enableCover"}
-		{fbvFormSection list=true}
-			{fbvElement type="checkbox" id="showCoverPage" value=1 checked=$showCoverPage label="editor.issues.showCoverPage" inline=true}
-		{/fbvFormSection}
-	{/fbvFormArea}
 	{fbvFormArea id="coverFile"}
 		{fbvFormSection title="editor.issues.coverPage"}
 			{include file="controllers/fileUploadContainer.tpl" id="pluploadimage"}
@@ -49,10 +44,6 @@
 	{fbvFormArea id="coverDetails"}
 		{fbvFormSection}
 			{fbvElement type="textarea" id="coverPageDescription" value=$coverPageDescription multilingual=true rich=true label="editor.issues.coverPageCaption"}
-		{/fbvFormSection}
-		{fbvFormSection list=true}
-			{fbvElement type="checkbox" id="hideCoverPageArchives" value=1 checked=$hideCoverPageArchives label="editor.issues.hideCoverPageArchives" inline=true multilingual=true}
-			{fbvElement type="checkbox" id="hideCoverPageCover" value=1 checked=$hideCoverPageCover label="editor.issues.hideCoverPageCover" inline=true multilingual=true}
 		{/fbvFormSection}
 	{/fbvFormArea}
 {fbvFormButtons submitText="common.save"}

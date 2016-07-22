@@ -17,26 +17,6 @@
 {include file="frontend/components/header.tpl" pageTitleTranslated=$issueIdentification}
 
 <div class="page page_issue">
-	{* @todo look into this and find an appropriate place for it *}
-	{if $issue}
-		{foreach from=$pubIdPlugins item=pubIdPlugin}
-			{if $issue->getPublished()}
-				{assign var=pubId value=$issue->getStoredPubId($pubIdPlugin->getPubIdType())}
-			{else}
-				{assign var=pubId value=$pubIdPlugin->getPubId($issue)}{* Preview pubId *}
-			{/if}
-			{if $pubId}
-				{$pubIdPlugin->getPubIdDisplayType()|escape}:
-				{if $pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
-					<a id="pub-id::{$pubIdPlugin->getPubIdType()|escape}" href="{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}">
-						{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
-					</a>
-				{else}
-					{$pubId|escape}
-				{/if}
-			{/if}
-		{/foreach}
-	{/if}
 
 	{* Display a message if no current issue exists *}
 	{if !$issue}
