@@ -24,9 +24,35 @@
 	{* Description *}
 	{if $issue->hasDescription()}
 		<div class="description">
-			{$issue->getLocalizedDescription()|strip_unsafe_html|nl2br}
+			{$issue->getLocalizedDescription()|strip_unsafe_html}
 		</div>
 	{/if}
+
+	{* PUb IDs (eg - DOI) *}
+	{foreach from=$pubIdPlugins item=pubIdPlugin}
+		{if $issue->getPublished()}
+			{assign var=pubId value=$issue->getStoredPubId($pubIdPlugin->getPubIdType())}
+		{else}
+			{assign var=pubId value=$pubIdPlugin->getPubId($issue)}{* Preview pubId *}
+		{/if}
+		{if $pubId}
+			{assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
+			<div class="pub_id {$pubIdPlugin->getPubIdType()|escape}">
+				<span class="type">
+					{$pubIdPlugin->getPubIdDisplayType()|escape}:
+				</span>
+				<span class="id">
+					{if $doiUrl}
+						<a href="{$doiUrl|escape}">
+							{$doiUrl}
+						</a>
+					{else}
+						{$pubId}
+					{/if}
+				</span>
+			</div>
+		{/if}
+	{/foreach}
 
 	{* Full-issue galleys *}
 	{if $issueGalleys && ($hasAccess || $showGalleyLinks)}
