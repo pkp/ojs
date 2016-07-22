@@ -104,17 +104,19 @@
 				{else}
 					{assign var=pubId value=$pubIdPlugin->getPubId($article)}{* Preview pubId *}
 				{/if}
-				{assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
-				<div class="item doi">
-					<span class="label">
-						{translate key="plugins.pubIds.doi.readerDisplayName"}
-					</span>
-					<span class="value">
-						<a href="{$doiUrl}">
-							{$doiUrl}
-						</a>
-					</span>
-				</div>
+				{if $pubId}
+					{assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
+					<div class="item doi">
+						<span class="label">
+							{translate key="plugins.pubIds.doi.readerDisplayName"}
+						</span>
+						<span class="value">
+							<a href="{$doiUrl}">
+								{$doiUrl}
+							</a>
+						</span>
+					</div>
+				{/if}
 			{/foreach}
 
 			{* Abstract *}
