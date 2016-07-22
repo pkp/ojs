@@ -188,6 +188,7 @@
 	<message key="journal.path">Path</message>
 	<message key="context.context">Journal</message>
 	<message key="journal.issn">ISSN</message>
+	<message key="journal.viewAllIssues">View All Issues</message>
 
 	<!-- User -->
 	<message key="user.noRoles.selectUsersWithoutRoles">Include users with no roles in this journal.</message>

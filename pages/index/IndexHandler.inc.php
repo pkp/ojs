@@ -48,7 +48,6 @@ class IndexHandler extends Handler {
 		$this->setupTemplate($request);
 		$router = $request->getRouter();
 		$templateMgr = TemplateManager::getManager($request);
-		$journalDao = DAORegistry::getDAO('JournalDAO');
 		if ($journal) {
 			// Assign header and content for home page
 			$templateMgr->assign('additionalHomeContent', $journal->getLocalizedSetting('additionalHomeContent'));
@@ -56,10 +55,9 @@ class IndexHandler extends Handler {
 			$templateMgr->assign('homepageImageAltText', $journal->getLocalizedSetting('homepageImageAltText'));
 			$templateMgr->assign('journalDescription', $journal->getLocalizedSetting('description'));
 
-			$displayCurrentIssue = $journal->getSetting('displayCurrentIssue');
 			$issueDao = DAORegistry::getDAO('IssueDAO');
 			$issue = $issueDao->getCurrent($journal->getId(), true);
-			if ($displayCurrentIssue && isset($issue)) {
+			if (isset($issue) && $journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE) {
 				import('pages.issue.IssueHandler');
 				// The current issue TOC/cover page should be displayed below the custom home page.
 				IssueHandler::_setupIssueTemplate($request, $issue);
@@ -80,6 +78,7 @@ class IndexHandler extends Handler {
 
 			$templateMgr->display('frontend/pages/indexJournal.tpl');
 		} else {
+			$journalDao = DAORegistry::getDAO('JournalDAO');
 			$site = $request->getSite();
 
 			if ($site->getRedirect() && ($journal = $journalDao->getById($site->getRedirect())) != null) {
