@@ -161,7 +161,6 @@ class DOIExportPlugin extends ImportExportPlugin {
 			case 'suppFiles':
 				// Test mode.
 				$templateMgr->assign('testMode', $this->isTestMode($request)?array('testMode' => 1):array());
-				$filter = $request->getUserVar('filter');
 				$templateMgr->assign('filter', $request->getUserVar('filter'));
 
 				// Export without account.
