@@ -79,7 +79,7 @@
 								{if $status == $smarty.const.CROSSREF_STATUS_NOT_DEPOSITED}
 									{translate key="plugins.importexport.crossref.status.non"}
 								{else}
-									<input type="hidden" name="filter" value={$filter|escape} />
+									<input type="hidden" name="filter" value="{$filter|escape}" />
 									<a href="https://api.crossref.org{$article->getData($depositStatusUrlSettingName)|escape}" target="_blank">{$statusMapping[$status]|escape}</a></td>
 								{/if}
 						</tr>
