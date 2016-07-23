@@ -247,14 +247,15 @@ class IssueGridHandler extends GridHandler {
 	 */
 	function deleteIssue($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$issueId = $issue->getId();
+		if (!$issue || !$request->checkCSRF()) return new JSONMessage(false);
+
 		$journal = $request->getJournal();
 		$isBackIssue = $issue->getPublished() > 0 ? true: false;
 
 		// remove all published articles and return original articles to editing queue
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
+		$publishedArticles = $publishedArticleDao->getPublishedArticles($issue->getId());
 		if (isset($publishedArticles) && !empty($publishedArticles)) {
 			// Insert article tombstone if the issue is published
 			import('classes.article.ArticleTombstoneManager');
@@ -279,7 +280,7 @@ class IssueGridHandler extends GridHandler {
 			}
 		}
 
-		return DAO::getDataChangedEvent($issueId);
+		return DAO::getDataChangedEvent($issue->getId());
 	}
 
 	/**
@@ -322,6 +323,8 @@ class IssueGridHandler extends GridHandler {
 	 * @return JSONMessage JSON object
 	 */
 	function clearPubId($args, $request) {
+		if (!$request->checkCSRF()) return new JSONMessage(false);
+
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
 		$form = new PublicIdentifiersForm($issue);
@@ -336,6 +339,8 @@ class IssueGridHandler extends GridHandler {
 	 * @return JSONMessage JSON object
 	 */
 	function clearIssueObjectsPubIds($args, $request) {
+		if (!$request->checkCSRF()) return new JSONMessage(false);
+
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
 		$form = new PublicIdentifiersForm($issue);
@@ -486,6 +491,8 @@ class IssueGridHandler extends GridHandler {
 	function unpublishIssue($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$journal = $request->getJournal();
+
+		if (!$request->checkCSRF()) return new JSONMessage(false);
 
 		$issue->setCurrent(0);
 		$issue->setPublished(0);

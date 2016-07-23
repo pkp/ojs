@@ -145,6 +145,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		$linkActions['clearPubIdLinkActionDoi'] = new LinkAction(
 			'clearPubId',
 			new RemoteActionConfirmationModal(
+				$request->getSession(),
 				__('plugins.pubIds.doi.editor.clearObjectsDoi.confirm'),
 				__('common.delete'),
 				$request->url(null, null, 'clearPubId', null, $userVars),
@@ -160,6 +161,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 			$linkActions['clearIssueObjectsPubIdsLinkActionDoi'] = new LinkAction(
 				'clearObjectsPubIds',
 				new RemoteActionConfirmationModal(
+					$request->getSession(),
 					__('plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm'),
 					__('common.delete'),
 					$request->url(null, null, 'clearIssueObjectsPubIds', null, $userVars),

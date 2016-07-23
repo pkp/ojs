@@ -72,6 +72,7 @@ class DOISettingsForm extends Form {
 		$this->setData('clearPubIdsLinkAction', new LinkAction(
 			'reassignDOIs',
 			new RemoteActionConfirmationModal(
+				$request->getSession(),
 				__('plugins.pubIds.doi.manager.settings.doiReassign.confirm'),
 				__('common.delete'),
 				$request->url(null, null, 'manage', null, array('verb' => 'clearPubIds', 'plugin' => $plugin->getName(), 'category' => 'pubIds')),

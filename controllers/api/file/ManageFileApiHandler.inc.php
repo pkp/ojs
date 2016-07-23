@@ -72,6 +72,8 @@ class ManageFileApiHandler extends PKPManageFileApiHandler {
 	 * @return JSONMessage JSON object
 	 */
 	function clearPubId($args, $request) {
+		if (!$request->checkCSRF()) return new JSONMessage(false);
+
 		$submissionFile = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION_FILE);
 		$stageId = $request->getUserVar('stageId');
 		import('controllers.tab.pubIds.form.PublicIdentifiersForm');

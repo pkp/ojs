@@ -210,7 +210,7 @@ class SectionGridHandler extends SetupGridHandler {
 			$journal->getId()
 		);
 
-		if (isset($section)) {
+		if ($section && $request->checkCSRF()) {
 			$sectionDao->deleteObject($section);
 			return DAO::getDataChangedEvent($section->getId());
 		}

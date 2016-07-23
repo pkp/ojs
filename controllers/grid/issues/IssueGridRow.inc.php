@@ -74,6 +74,7 @@ class IssueGridRow extends GridRow {
 					new LinkAction(
 						'unpublish',
 						new RemoteActionConfirmationModal(
+							$request->getSession(),
 							__('editor.issues.confirmUnpublish'),
 							__('editor.issues.unpublishIssue'),
 							$router->url($request, null, null, 'unpublishIssue', null, array('issueId' => $issueId)),
@@ -103,6 +104,7 @@ class IssueGridRow extends GridRow {
 				new LinkAction(
 					'delete',
 					new RemoteActionConfirmationModal(
+						$request->getSession(),
 						__('common.confirmDelete'),
 						__('grid.action.delete'),
 						$router->url($request, null, null, 'deleteIssue', null, array('issueId' => $issueId)),

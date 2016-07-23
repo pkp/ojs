@@ -72,6 +72,7 @@ class URNSettingsForm extends Form {
 		$this->setData('clearPubIdsLinkAction', new LinkAction(
 			'reassignURNs',
 			new RemoteActionConfirmationModal(
+				$request->getSession(),
 				__('plugins.pubIds.urn.manager.settings.urnReassign.confirm'),
 				__('common.delete'),
 				$request->url(null, null, 'manage', null, array('verb' => 'clearPubIds', 'plugin' => $plugin->getName(), 'category' => 'pubIds')),
