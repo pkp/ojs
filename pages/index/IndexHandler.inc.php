@@ -85,7 +85,7 @@ class IndexHandler extends Handler {
 				$request->redirect($journal->getPath());
 			}
 
-			$templateMgr->assign('intro', $site->getLocalizedIntro());
+			$templateMgr->assign('about', $site->getLocalizedAbout());
 			$templateMgr->assign('journalFilesPath', $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/');
 
 			// If we're using paging, fetch the parameters
