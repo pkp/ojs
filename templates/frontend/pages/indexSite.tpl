@@ -10,37 +10,73 @@
  *}
 {include file="frontend/components/header.tpl"}
 
-<div class="page">
-	{if $intro}{$intro|nl2br}{/if}
+<div class="page_index_site">
 
-	<a name="journals"></a>
-
-	{iterate from=journals item=journal}
-		{if $site->getSetting('showThumbnail')}
-			{assign var="displayJournalThumbnail" value=$journal->getLocalizedSetting('journalThumbnail')}
-			<div style="clear:left;">
-			{if $displayJournalThumbnail && is_array($displayJournalThumbnail)}
-				{assign var="altText" value=$journal->getLocalizedSetting('journalThumbnailAltText')}
-				<div class="homepageImage"><a href="{url journal=$journal->getPath()}" class="action"><img src="{$journalFilesPath}{$journal->getId()}/{$displayJournalThumbnail.uploadName|escape:"url"}" {if $altText != ''}alt="{$altText|escape}"{else}alt="{translate key="common.pageHeaderLogo.altText"}"{/if} /></a></div>
-			{/if}
-			</div>
-		{/if}
-		{if $site->getSetting('showTitle')}
-			<h3>{$journal->getLocalizedName()|escape}</h3>
-		{/if}
-		{if $site->getSetting('showDescription')}
-			{if $journal->getLocalizedDescription()}
-				<p>{$journal->getLocalizedDescription()|nl2br}</p>
-			{/if}
-		{/if}
-		<p><a href="{url journal=$journal->getPath()}" class="action">{translate key="site.journalView"}</a> | <a href="{url journal=$journal->getPath() page="issue" op="current"}" class="action">{translate key="site.journalCurrent"}</a> | <a href="{url journal=$journal->getPath() page="user" op="register"}" class="action">{translate key="site.journalRegister"}</a></p>
-	{/iterate}
-	{if $journals->wasEmpty()}
-		{translate key="site.noJournals"}
+	{if $about}
+		<div class="about_site">
+			{$about|nl2br}
+		</div>
 	{/if}
 
-	<div id="journalListPageInfo">{page_info iterator=$journals}</div>
-	<div id="journalListPageLinks">{page_links anchor="journals" name="journals" iterator=$journals}</div>
+	<div class="journals">
+		<h2>
+			{translate key="journal.journals"}
+		</h2>
+		{if !count($journals)}
+			{translate key="site.noJournals"}
+		{else}
+			<ul>
+				{iterate from=journals item=journal}
+					{capture assign="url"}{url journal=$journal->getPath()}{/capture}
+					{assign var="thumb" value=$journal->getLocalizedSetting('journalThumbnail')}
+					{assign var="description" value=$journal->getLocalizedDescription()}
+					<li{if $thumb} class="has_thumb"{/if}>
+						{if $thumb}
+							{assign var="altText" value=$journal->getLocalizedSetting('journalThumbnailAltText')}
+							<div class="thumb">
+								<a href="{$url|escape}">
+									<img src="{$journalFilesPath}{$journal->getId()}/{$thumb.uploadName|escape:"url"}"{if $altText} alt="{$altText|escape}"{/if}>
+								</a>
+							</div>
+						{/if}
+
+						<div class="body">
+							<h3>
+								<a href="{$url|escape}" rel="bookmark">
+									{$journal->getLocalizedName()}
+								</a>
+							</h3>
+							{if $description}
+								<div class="description">
+									{$description|nl2br}
+								</div>
+							{/if}
+							<ul class="links">
+								<li class="view">
+									<a href="{$url|escape}">
+										{translate key="site.journalView"}
+									</a>
+								</li>
+								<li class="current">
+									<a href="{url|escape journal=$journal->getPath() page="issue" op="current"}">
+										{translate key="site.journalCurrent"}
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				{/iterate}
+			</ul>
+
+			{if $journals->getPageCount() > 0}
+				<div class="cmp_pagination">
+					{page_info iterator=$journals}
+					{page_links anchor="journals" name="journals" iterator=$journals}
+				</div>
+			{/if}
+		{/if}
+	</div>
+
 </div><!-- .page -->
 
 {include file="common/frontend/footer.tpl"}
