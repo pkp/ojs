@@ -77,6 +77,14 @@
 		}
 	}
 
+	.item.doi {
+		padding-top: 0;
+
+		.label {
+			font-size: @font-sml;
+		}
+	}
+
 	.galleys_links {
 		&:extend(.pkp_unstyled_list);
 
@@ -102,6 +110,7 @@
 		.item {
 			padding: @double;
 			border-bottom: @bg-border;
+			word-wrap: break-word;
 
 			&:last-child {
 				border-bottom: none;
@@ -112,6 +121,28 @@
 				font-weight: @normal;
 				color: @text-light;
 			}
+		}
+	}
+
+	.citation_display .value {
+		font-size: @font-tiny;
+	}
+
+	.citation_format_options ul {
+		&:extend(.pkp_unstyled_list all);
+	}
+
+	// RefWorks form
+	.citation_display form {
+
+		textarea {
+			max-width: 100%;
+			max-height: 19em;
+			white-space: nowrap;
+		}
+
+		input[type="submit"] {
+			&:extend(.cmp_button);
 		}
 	}
 

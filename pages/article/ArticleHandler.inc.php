@@ -128,6 +128,11 @@ class ArticleHandler extends Handler {
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
 
+		// Citation formats
+		$citationPlugins = PluginRegistry::loadCategory('citationFormats');
+		uasort($citationPlugins, create_function('$a, $b', 'return strcmp($a->getDisplayName(), $b->getDisplayName());'));
+		$templateMgr->assign('citationPlugins', $citationPlugins);
+
 		if (!$galley) {
 			// No galley: Prepare the article landing page.
 
@@ -326,6 +331,57 @@ class ArticleHandler extends Handler {
 			$request->redirect(null, 'search');
 		}
 		return true;
+	}
+
+	/**
+	 * Fetch an item citation
+	 * @param $args
+	 * @param $request
+	 */
+	function cite($args, $request) {
+		$router = $request->getRouter();
+		$this->setupTemplate($request);
+		$articleId = isset($args[0]) ? $args[0] : 0;
+		$citeType = isset($args[1]) ? $args[1] : null;
+		$returnFormat = isset($args[2]) ? $args[2] : null;
+
+		$citationPlugins = PluginRegistry::loadCategory('citationFormats');
+		uasort($citationPlugins, create_function('$a, $b', 'return strcmp($a->getDisplayName(), $b->getDisplayName());'));
+
+		import('lib.pkp.classes.core.JSONMessage');
+
+		if (empty($citeType) || !isset($citationPlugins[$citeType])) {
+			AppLocale::requireComponents(LOCALE_COMPONENT_APP_SUBMISSION);
+			$errorMessage = __('submission.citationFormat.notFound');
+			if ($returnFormat == 'json') {
+				return new JSONMessage(false, $errorMessage);
+			} else {
+				echo $errorMessage;
+			}
+			return;
+		}
+
+		$article = $this->article;
+		$issue = $this->issue;
+		$journal = $request->getContext();
+
+		// Initiate a file download and exit
+		if ($citationPlugins[$citeType]->isDownloadable()) {
+			$citationPlugins[$citeType]->downloadCitation($article, $issue, $journal);
+			return;
+		}
+
+		$citation = $citationPlugins[$citeType]->fetchCitation($article, $issue, $journal);
+
+		// Return a JSON formatted string
+		if ($returnFormat == 'json') {
+			return new JSONMessage(true, $citation);
+
+		// Display it straight to the browser
+		} else {
+			echo $citation;
+			return;
+		}
 	}
 
 	/**

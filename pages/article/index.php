@@ -3,7 +3,7 @@
 /**
  * @defgroup pages_article Article Pages
  */
- 
+
 /**
  * @file pages/article/index.php
  *
@@ -12,13 +12,14 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_article
- * @brief Handle requests for article functions. 
+ * @brief Handle requests for article functions.
  *
  */
 
 switch ($op) {
 	case 'viewFile': // Old URLs; see https://github.com/pkp/pkp-lib/issues/1541
 	case 'view':
+	case 'cite':
 	case 'download':
 		define('HANDLER_CLASS', 'ArticleHandler');
 		import('pages.article.ArticleHandler');

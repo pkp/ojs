@@ -53,7 +53,8 @@
  * @uses $issue Issue The issue this article is assigned to
  * @uses $section Section The journal section this article is assigned to
  * @uses $keywords array List of keywords assigned to this article
- * @uses $pubIdPlugins @todo
+ * @uses $pubIdPlugins Array of pubId plugins which this article may be assigned
+ * @uses $citationPlugins Array of citation format plugins
  * @uses $copyright string Copyright notice. Only assigned if statement should
  *   be included with published articles.
  * @uses $copyrightHolder string Name of copyright holder
@@ -93,6 +94,32 @@
 				</ul>
 			{/if}
 
+			{* DOI (requires plugin) *}
+			{foreach from=$pubIdPlugins item=pubIdPlugin}
+				{if $pubIdPlugin->getPubIdType() != 'doi'}
+					{php}continue;{/php}
+				{/if}
+				{if $issue->getPublished()}
+					{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
+				{else}
+					{assign var=pubId value=$pubIdPlugin->getPubId($article)}{* Preview pubId *}
+				{/if}
+				{if $pubId}
+					{assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
+					<div class="item doi">
+						<span class="label">
+							{translate key="plugins.pubIds.doi.readerDisplayName"}
+						</span>
+						<span class="value">
+							<a href="{$doiUrl}">
+								{$doiUrl}
+							</a>
+						</span>
+					</div>
+				{/if}
+			{/foreach}
+
+			{* Abstract *}
 			{if $article->getLocalizedAbstract()}
 				<div class="item abstract">
 					<h3 class="label">{translate key="article.abstract"}</h3>
@@ -118,7 +145,6 @@
 			{/if}
 
 			{* Article Galleys *}
-
 			{assign var=galleys value=$article->getGalleys()}
 			{if $galleys}
 				<div class="item galleys">
@@ -139,6 +165,41 @@
 					</div>
 					<div class="value">
 						{$article->getDatePublished()|date_format}
+					</div>
+				</div>
+			{/if}
+
+			{* Citation formats *}
+			{if $citationPlugins|@count}
+				<div class="item citation_formats">
+					{* Output the first citation format *}
+					{foreach from=$citationPlugins name="citationPlugins" item="citationPlugin"}
+						<div class="sub_item citation_display">
+							<div class="label">
+								How to Cite
+							</div>
+							<div id="citationOutput" class="value">
+								{$citationPlugin->fetchCitation($article, $issue, $currentContext)}
+							</div>
+						</div>
+						{php}break;{/php}
+					{/foreach}
+
+					{* Output list of all citation formats *}
+					<div class="sub_item citation_format_options">
+						<div class="label">
+							Citation Formats
+						</div>
+						<div class="value">
+							<ul>
+								{foreach from=$citationPlugins name="citationPlugins" item="citationPlugin"}
+									<li class="{$citationPlugin->getName()|escape}{if $smarty.foreach.citationPlugins.iteration == 1} current{/if}">
+										{capture assign="citationUrl"}{url page="article" op="cite" path=$article->getBestArticleId()}/{$citationPlugin->getName()|escape}{/capture}
+										<a href="{$citationUrl}"{if !$citationPlugin->isDownloadable()} data-load-citation="true"{/if} target="_blank">{$citationPlugin->getCitationFormatName()|escape}</a>
+									</li>
+								{/foreach}
+							</ul>
+						</div>
 					</div>
 				</div>
 			{/if}
@@ -184,8 +245,10 @@
 			{/if}
 
 			{* PubIds (requires plugins) *}
-			{* @todo this hasn't been tested or styled *}
 			{foreach from=$pubIdPlugins item=pubIdPlugin}
+				{if $pubIdPlugin->getPubIdType() == 'doi'}
+					{php}continue;{/php}
+				{/if}
 				{if $issue->getPublished()}
 					{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{else}
