@@ -25,6 +25,7 @@ class MastheadForm extends ContextSettingsForm {
 			'name' => 'string',
 			'acronym' => 'string',
 			'abbreviation' => 'string',
+			'publisherInstitution' => 'string',
 			'printIssn' => 'string',
 			'onlineIssn' => 'string',
 			'description' => 'string',
