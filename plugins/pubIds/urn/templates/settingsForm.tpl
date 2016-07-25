@@ -19,6 +19,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="urnSettingsForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT op="manage" category="pubIds" plugin=$pluginName verb="save"}">
+	{csrf}
 	{include file="common/formErrors.tpl"}
 	{fbvFormArea id="urnObjectsFormArea" title="plugins.pubIds.urn.manager.settings.urnObjects"}
 		<p class="pkp_help">{translate key="plugins.pubIds.urn.manager.settings.explainURNs"}</p>

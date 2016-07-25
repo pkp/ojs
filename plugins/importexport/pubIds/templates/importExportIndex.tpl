@@ -28,6 +28,7 @@
 		{rdelim});
 	</script>
 	<form class="pkp_form" id="pubIdsForm" action="{plugin_url path="import"}" method="post" enctype="multipart/form-data">
+	{csrf}
 	<input type="file" class="uploadField" name="importFile" id="import" /> <input name="import" type="submit" class="button" value="{translate key="common.import"}" />
 	</form>
 </div>

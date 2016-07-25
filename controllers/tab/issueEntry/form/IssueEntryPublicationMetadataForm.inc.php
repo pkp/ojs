@@ -50,6 +50,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$this->_formParams = $formParams;
 		$this->_userId = $userId;
 		$this->addCheck(new FormValidatorPost($this));
+		$this->addCheck(new FormValidatorCSRF($this));
 
 		$this->addCheck(new FormValidatorURL($this, 'licenseURL', 'optional', 'form.url.invalid'));
 	}

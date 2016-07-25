@@ -12,6 +12,7 @@
    implementation of reader statistics in the About page.          *}
 <div id="statistics">
 	<form class="pkp_form" id="saveSectionsForm" action="{url op="saveStatisticsSettings"}" method="post">
+		{csrf}
 		{if count($availableMetricTypes) > 1}
 			<h3>{translate key="defaultMetric.title"}</h3>
 			<p>{translate key="manager.statistics.defaultMetricDescription"}</p>
@@ -59,6 +60,7 @@
 		{rdelim});
 	</script>
 	<form class="pkp_form" id="saveStatsListForm" action="{url op="savePublicStatisticsList"}" method="post">
+		{csrf}
 		<table width="100%" class="data">
 			<tr valign="top">
 				<td width="25%" class="label"><h4>{translate key="common.year"}</h4></td>

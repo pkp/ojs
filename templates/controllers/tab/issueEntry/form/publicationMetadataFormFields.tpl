@@ -20,6 +20,7 @@
 </script>
 
 <form class="pkp_form" id="publicationMetadataEntryForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT op="savePublicationMetadataForm"}">
+	{csrf}
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="publicationMetadataFormFieldsNotification"}
 
 	<input type="hidden" name="submissionId" value="{$submissionId|escape}" />

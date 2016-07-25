@@ -27,6 +27,7 @@
 		{rdelim});
 	</script>
 	<form class="pkp_form" id="medraSettingsForm" method="post" action="{plugin_url path="settings"}">
+		{csrf}
 		<table class="data">
 			<tr>
 				<td class="label">{fieldLabel name="registrantName" required="true" key="plugins.importexport.medra.settings.form.registrantName"}</td>

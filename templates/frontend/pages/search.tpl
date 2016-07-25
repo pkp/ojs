@@ -45,6 +45,7 @@
 		{rdelim});
 	</script>
 	<form method="post" id="searchForm" action="{url op="search"}">
+	{csrf}
 
 		{* Main search input *}
 		<h2 class="pkp_screen_reader">

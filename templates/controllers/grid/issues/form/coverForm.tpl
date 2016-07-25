@@ -29,6 +29,7 @@
 </script>
 
 <form class="pkp_form" id="coverForm" method="post" action="{url op="updateCover" issueId=$issueId}">
+	{csrf}
 	{fbvFormArea id="coverFile"}
 		{fbvFormSection title="editor.issues.coverPage"}
 			{include file="controllers/fileUploadContainer.tpl" id="pluploadimage"}

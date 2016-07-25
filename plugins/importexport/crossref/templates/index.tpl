@@ -68,6 +68,7 @@
 					{rdelim});
 				</script>
 				<form id="exportSubmissionXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
+					{csrf}
 					{fbvFormArea id="submissionsXmlForm"}
 						{url|assign:submissionsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportSubmissionsListGridHandler" op="fetchGrid" plugin="crossref" category="importexport" escape=false}
 						{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
@@ -95,6 +96,7 @@
 				</script>
 				<p>{translate key="plugins.importexport.crossref.issues.description"}</p>
 				<form id="exportIssueXmlForm" class="pkp_form" action="{plugin_url path="exportIssues"}" method="post">
+					{csrf}
 					{fbvFormArea id="issuesXmlForm"}
 						{url|assign:issuesListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportIssuesListGridHandler" op="fetchGrid" plugin="crossref" category="importexport" escape=false}
 						{load_url_in_div id="issuesListGridContainer" url=$issuesListGridUrl}

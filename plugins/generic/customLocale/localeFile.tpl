@@ -26,6 +26,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="localeSearch" action="{plugin_url path="editLocaleFile" key=$locale file=$filenameEscaped  anchor="localeContents"}" method="post">
+	{csrf}
 	{translate key="plugins.generic.customLocale.localeKey"}&nbsp;&nbsp;
 	<input type="text" name="searchKey" class="textField" />&nbsp;&nbsp;
 	<input type="submit" class="button defaultButton" onclick="document.getElementById('locale').redirectUrl.value=document.localeSearch.action);document.getElementById('locale').submit();return false;" value="{translate key="common.search"}" /> {translate key="plugins.generic.customLocale.localeKey.description"}
@@ -41,6 +42,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="locale" action="{plugin_url path="saveLocaleFile" key=$locale file=$filenameEscaped }" method="post">
+{csrf}
 <input type="hidden" name="redirectUrl" value="" />
 
 <div id="localeContents">

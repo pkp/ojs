@@ -22,6 +22,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" method="post" id="subscriptionGiftForm" action="{url op="payPurchaseGiftSubscription"}">
+{csrf}
 
 <p>{translate key="gifts.subscriptionFormIntroduction"}</p>
 

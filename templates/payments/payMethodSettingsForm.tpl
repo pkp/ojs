@@ -40,6 +40,7 @@ function changePaymentMethod() {
 	{rdelim});
 </script>
 <form class="pkp_form" method="post" id="paymentSettingsForm" action="{url op="savePayMethodSettings"}">
+{csrf}
 
 <p>{translate key="manager.payment.paymentMethod.description"}</p>
 

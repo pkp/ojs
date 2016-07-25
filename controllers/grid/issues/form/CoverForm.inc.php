@@ -26,6 +26,7 @@ class CoverForm extends Form {
 	function CoverForm($issue) {
 		parent::Form('controllers/grid/issues/form/coverForm.tpl');
 		$this->addCheck(new FormValidatorPost($this));
+		$this->addCheck(new FormValidatorCSRF($this));
 		$this->issue = $issue;
 	}
 

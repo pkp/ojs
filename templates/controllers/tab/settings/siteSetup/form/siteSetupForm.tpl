@@ -21,6 +21,7 @@
 </script>
 
 <form id="siteSetupForm" class="pkp_form" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.AdminSettingsTabHandler" op="saveFormData" tab="siteSetup"}">
+	{csrf}
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="siteSetupFormNotification"}
 
 	{fbvFormSection title="admin.settings.siteTitle" required=true}

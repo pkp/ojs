@@ -28,6 +28,7 @@
 		<input type="hidden" name="stageId" value="{$formParams.stageId|escape}" />
 		{assign var=hideCancel value=true}
 {/if}
+{csrf}
 {fbvFormArea id="confirmationText"}
 	<p>{$confirmationText}</p>
 {/fbvFormArea}

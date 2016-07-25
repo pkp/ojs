@@ -27,6 +27,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="browseSettingsForm" method="post" action="{plugin_url path="settings"}">
+{csrf}
 {include file="common/formErrors.tpl"}
 <table class="data">
 	<tr>

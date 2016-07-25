@@ -70,8 +70,9 @@ class UserInstitutionalSubscriptionForm extends Form {
 				'\.' .
 				'[A-Z]{2,4}' .
 			'$/i'));
-		// Form was POSTed
+
 		$this->addCheck(new FormValidatorPost($this));
+		$this->addCheck(new FormValidatorCSRF($this));
 	}
 
 	/**

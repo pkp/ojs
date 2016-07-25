@@ -17,6 +17,7 @@
 	);
 </script>
 <form class="pkp_form filter" id="{$formId}" action="{url op="fetchGrid"}" method="post">
+	{csrf}
 	{fbvFormArea id="issueSearchFormArea"|concat:$filterData.gridId}
 		{fbvFormSection}
 			{fbvElement type="select" name="statusId" id="statusId"|concat:$filterData.gridId from=$filterData.status selected=$filterSelectionData.statusId size=$fbvStyles.size.SMALL translate=false inline="true"}

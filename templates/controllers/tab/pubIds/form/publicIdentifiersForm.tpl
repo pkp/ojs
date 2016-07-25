@@ -35,6 +35,7 @@
 	<form class="pkp_form" id="publicIdentifiersForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT op="updateIdentifiers" issueId=$pubObject->getId()}">
 		{include file="controllers/notification/inPlaceNotification.tpl" notificationId="issueIdentifiersFormFieldsNotification"}
 {/if}
+{csrf}
 
 {*include file="common/formErrors.tpl"*}
 {fbvFormSection}
