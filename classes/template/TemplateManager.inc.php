@@ -54,6 +54,13 @@ class TemplateManager extends PKPTemplateManager {
 				);
 			}
 
+			// Pass app-specific details to template
+			$this->assign(array(
+				'brandImage' => 'templates/images/ojs_brand.png',
+				'packageKey' => 'common.openJournalSystems',
+				'pkpLink'    => 'http://pkp.sfu.ca/ojs',
+			));
+
 			// Get a count of unread tasks.
 			if ($user = $request->getUser()) {
 				$notificationDao = DAORegistry::getDAO('NotificationDAO');
