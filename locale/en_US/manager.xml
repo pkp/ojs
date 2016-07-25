@@ -280,7 +280,7 @@
 	<message key="manager.setup.publicationScheduling">Publication Scheduling</message>
 	<message key="manager.setup.publicIdentifier">Identification of Journal Content</message>
 	<message key="manager.setup.publisher">Publisher</message>
-	<message key="manager.setup.publisherDescription">The name of the organization publishing the journal will appear in About the Journal.</message>
+	<message key="manager.setup.publisherDescription">The name of the organization publishing the journal may be included in metadata provided to third-party archival bodies.</message>
 	<message key="manager.setup.referenceLinking">Reference Linking</message>
 	<message key="manager.setup.refLinkInstructions.description">Layout Instructions for Reference Linking</message>
 	<message key="manager.setup.restrictArticleAccess">Users must be registered and log in to view open access content.</message>

@@ -39,6 +39,12 @@
 		{/fbvFormSection}
 	{/fbvFormArea}
 
+	{fbvFormArea id="mastheadPublisher"}
+		{fbvFormSection label="manager.setup.publisher" for="publisherInstitution" description="manager.setup.publisherDescription"}
+			{fbvElement type="text" name="publisherInstitution" id="publisherInstitution" value=$publisherInstitution maxlength="255"}
+		{/fbvFormSection}
+	{/fbvFormArea}
+
 	{fbvFormArea id="mastheadISSNContainer"}
 		{fbvFormSection label="manager.setup.Issn" for="onlineIssn" description="manager.setup.issnDescription"}
 			{fbvElement type="text" name="onlineIssn" id="onlineIssn" value=$onlineIssn label="manager.setup.onlineIssn" size=$fbvStyles.size.SMALL inline=true}
