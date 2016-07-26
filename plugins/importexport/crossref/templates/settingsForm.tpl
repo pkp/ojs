@@ -38,6 +38,9 @@
 		{fbvFormSection list="true"}
 			{fbvElement type="checkbox" id="automaticRegistration" label="plugins.importexport.crossref.settings.form.automaticRegistration.description" checked=$automaticRegistration|compare:true}
 		{/fbvFormSection}
+		{fbvFormSection list="true"}
+			{fbvElement type="checkbox" id="testMode" label="plugins.importexport.crossref.settings.form.testMode.description" checked=$testMode|compare:true}
+		{/fbvFormSection}
 	{/fbvFormArea}
 	{fbvFormButtons submitText="common.save"}
 	<p><span class="formRequired">{translate key="common.requiredField"}</span></p>

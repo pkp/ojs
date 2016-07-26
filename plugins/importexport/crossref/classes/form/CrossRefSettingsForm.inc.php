@@ -39,7 +39,7 @@ class CrossRefSettingsForm extends Form {
 	 * Get the plugin.
 	 * @return CrossRefExportPlugin
 	 */
-	function &_getPlugin() {
+	function _getPlugin() {
 		return $this->_plugin;
 	}
 
@@ -131,7 +131,8 @@ class CrossRefSettingsForm extends Form {
 			'depositorEmail' => 'string',
 			'username' => 'string',
 			'password' => 'string',
-			'automaticRegistration' => 'bool'
+			'automaticRegistration' => 'bool',
+			'testMode' => 'bool'
 		);
 	}
 
@@ -141,7 +142,7 @@ class CrossRefSettingsForm extends Form {
 	 * @return boolean
 	 */
 	function isOptional($settingName) {
-		return in_array($settingName, array('username', 'password', 'automaticRegistration'));
+		return in_array($settingName, array('username', 'password', 'automaticRegistration', 'testMode'));
 	}
 
 }

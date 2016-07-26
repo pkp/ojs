@@ -64,7 +64,11 @@
 				<script type="text/javascript">
 					$(function() {ldelim}
 						// Attach the form handler.
-						$('#exportSubmissionXmlForm').pkpHandler('$.pkp.controllers.form.DOIPubIdExportFormHandler');
+						$('#exportSubmissionXmlForm').pkpHandler('$.pkp.controllers.form.DOIPubIdExportFormHandler',
+							{ldelim}
+								submissionsActions: {$linkActions|@json_encode},
+							{rdelim}
+						);
 					{rdelim});
 				</script>
 				<form id="exportSubmissionXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
@@ -91,7 +95,11 @@
 				<script type="text/javascript">
 					$(function() {ldelim}
 						// Attach the form handler.
-						$('#exportIssueXmlForm').pkpHandler('$.pkp.controllers.form.DOIPubIdExportFormHandler');
+						$('#exportIssueXmlForm').pkpHandler('$.pkp.controllers.form.DOIPubIdExportFormHandler',
+							{ldelim}
+								issuesActions: {$linkActions|@json_encode},
+							{rdelim}						
+						);
 					{rdelim});
 				</script>
 				<p>{translate key="plugins.importexport.crossref.issues.description"}</p>
