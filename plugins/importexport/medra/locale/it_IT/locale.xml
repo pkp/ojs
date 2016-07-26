@@ -4,7 +4,7 @@
 <!--
   * plugins/importexport/medra/locale/it_IT/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -20,31 +20,32 @@
 		per ricevere username e password. Se non hai le credenziali potrai comunque esportare i metadati in ONIX ma non registrare DOI con mEDRA da OJS. 
 		Nota che la password sarà registrata in testo semplice, non crittografata, secondo le indicazioni di mEDRA.]]></message>
 
-	<message key="plugins.importexport.medra.settings.description"><![CDATA[<a href="{$settingsUrl}">Configura</a> il plugin  mEDRA prima del primo utilizzo.]]></message>
-	
 	<message key="plugins.importexport.medra.settings.form.description">Configura il plugin di export per mEDRA</message>
 	<message key="plugins.importexport.medra.settings.form.username">Username</message>
-	<message key="plugins.importexport.medra.settings.form.usernameRequired">Please enter your mEDRA username. The username may not contain colons.</message>
+	<message key="plugins.importexport.medra.settings.form.usernameRequired">Inserisci il tuo username mEDRA.</message>
+	<message key="plugins.importexport.medra.settings.form.passwordRequired">Inserisci la password ricevuta da mEDRA.</message>
+	<message key="plugins.importexport.medra.settings.form.automaticRegistration">Registra DOI automaticamente</message>
+	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description"><![CDATA[OJS depositerà i DOI automaticamente su mEDRA dopo la pubblicazione degli articoli. Potrebbe occorrere un certo tempo dopo la pubblicazione degli articoli. Puoi verificare i DOI in attesa di essere registrati nella <a href="{$unregisteredURL}">lista degli articoli non registrati</a>.]]></message>
 	<message key="plugins.importexport.medra.settings.form.registrantName">Istituzione registrata con mEDRA</message>	
 	<message key="plugins.importexport.medra.settings.form.registrantNameRequired">Inserisci il nome dell'istituzione registrata con mEDRA</message>
 	<message key="plugins.importexport.medra.settings.form.fromFields">Persona che verrà contattata da mEDRA in caso di problemi tecnici</message>
-	<message key="plugins.importexport.medra.settings.form.fromCompany">Istituzione:</message>
+	<message key="plugins.importexport.medra.settings.form.fromCompany">Istituzione</message>
 	<message key="plugins.importexport.medra.settings.form.fromCompanyRequired">Inserisci l'istituzione tecnicamente responsabile dei DOI (es. chi gestisce il server web).</message>
-	<message key="plugins.importexport.medra.settings.form.fromName">Nome:</message>
+	<message key="plugins.importexport.medra.settings.form.fromName">Nome</message>
 	<message key="plugins.importexport.medra.settings.form.fromNameRequired">Inserisci il nome del contatto tecnico</message>
-	<message key="plugins.importexport.medra.settings.form.fromEmail">Email:</message>
+	<message key="plugins.importexport.medra.settings.form.fromEmail">Email</message>
 	<message key="plugins.importexport.medra.settings.form.fromEmailRequired">Inserisci un indirizzo email valido per il contatto tecnico.</message>
 	<message key="plugins.importexport.medra.settings.form.publicationCountry">Scegli il paese da inserire in mEDRA come 'Paese di pubblicazione'</message>
 	<message key="plugins.importexport.medra.settings.form.exportIssuesAs"><![CDATA[Scegli se esportare fascicoli come <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'opere' o 'manifestazioni'</a>.]]></message>
 	<message key="plugins.importexport.medra.settings.form.work">opera</message>	
 	<message key="plugins.importexport.medra.settings.form.manifestation">manifestazione</message>
 
-	<message key="plugins.importexport.medra.reset">Reset</message>
-	<message key="plugins.importexport.medra.resetDescription">Fare clic su questo pulsante se si desidera trattare questo oggetto come se non fosse mai stato registrato prima (ad esempio quando mEDRA invia un messaggio di errore via e-mail durante la prima registrazione). NON fare clic su questo pulsante quando si riceve un messaggio di errore dopo un aggiornamento fallito!</message>
-	
 	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: I DOI assegnati agli articoli verranno esportati in mEDRA come <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'opere'</a>. I DOI assegnati ai file principali degli articoli verranno esportati come <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestazioni'</a>.]]></message>
-		
-	<message key="plugins.importexport.medra.cliUsage">Uso: 
+
+	<message key="plugins.importexport.medra.senderTask.name">Registrazione automatica DOI mEDRA</message>
+
+	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Uso: 
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys} objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...</message>
+{$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...
+]]></message>
 </locale>

@@ -1,8 +1,8 @@
 ================================
 === OJS mEDRA Export Plugin
-=== Version: 1.0
+=== Version: 2.0
 === Author: Florain Grandel <jerico.dev@gmail.com>
-=== Last update: 20. February 2012  
+=== Author: Bozana Bokan <bozana.bokan@posteo.net>
 ================================
 
 About
@@ -17,7 +17,19 @@ complete terms of this license.
 
 System Requirements
 -------------------
-Same requirements as the OJS 2.4 core.
+Same requirements as the OJS 3.x core.
+
+Installation
+------------
+To install the plugin:
+ - copy the medra folder into OJS/plugins/importexport
+
+The export functionality can then be accessed through: 
+ - Tools > Import/Export > mEDRA XML Export Plugin
+
+Contact/Support
+---------------
+For support, bugfixes, or comments please use PKP-LIB GitHub issues: https://github.com/pkp/pkp-lib/issues
 
 Note
 ---------
@@ -25,8 +37,3 @@ In order to register DOIs with mEDRA from within OJS you will have to enter your
 If you do not enter or have your own username and password you'll still be able to export into the 
 Onix for DOI (O4DOI) format, but you cannot register your DOIs from within OJS.
 Please note, that the passowrd will be saved as plain text, i.e. not encripted, due to mEDRA registration service requirements.
-
-Version History
----------------
-1.0	- Initial Release
-

@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/importexport/medra/locale/en_US/locale.xml
+  * plugins/importexport/medra/locale/da_DK/locale.xml
   *
   * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
@@ -11,19 +11,17 @@
   * Localization strings
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.importexport.medra.displayName">mEDRA Export/Registration Plugin</message>
-	<message key="plugins.importexport.medra.description">Export issue, article and galley metadata in Onix for DOI (O4DOI) format and register DOIs with the mEDRA registration agency.</message>
+<locale name="da_DK" full_name="Dansk">
+	<message key="plugins.importexport.medra.displayName">mEDRA Eksport/Registrerings-plug-in</message>
+	<message key="plugins.importexport.medra.description">Ekportér metadata fra nummer, artikel og satsskib i Onix til DOI (O4DOI)-format med mEDRA registreringsagentur.</message>
 
-	<message key="plugins.importexport.medra.intro"><![CDATA[
-		If you want to register DOIs with mEDRA, please follow the directions on the
+	<message key="plugins.importexport.medra.intro"><![CDATA[If you want to register DOIs with mEDRA, please follow the directions on the
 		<a href="http://www.medra.org/en/guide.htm" target="_blank">mEDRA homepage</a>
 		to receive a username and password. If you do not have your own username and
 		password you'll still be able to export into the mEDRA XML format (Onix for DOI)
 		but you cannot register your DOIs with mEDRA from within OJS. 
 		Please note that the password will be saved as plain text, i.e. not encrypted, due
-		to the mEDRA registration service requirements.
-	]]></message>
+		to the mEDRA registration service requirements.]]></message>
 	
 	<message key="plugins.importexport.medra.settings.form.description">Please configure the mEDRA export plug-in:</message>
 	<message key="plugins.importexport.medra.settings.form.username">Username</message>
@@ -41,16 +39,10 @@
 	<message key="plugins.importexport.medra.settings.form.exportIssuesAs"><![CDATA[Please choose whether you want to export issues as <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works' or 'manifestations'</a>.]]></message>
 	<message key="plugins.importexport.medra.settings.form.work">work</message>	
 	<message key="plugins.importexport.medra.settings.form.manifestation">manifestation</message>
-	<message key="plugins.importexport.medra.settings.form.exportIssuesAs.label">Issues export as</message>	
-	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description"><![CDATA[OJS will register assigned DOIs automatically to mEDRA. Please note that this may take a short amount of time after publication to process. You can check for all unregistered DOIs.]]></message>
-	<message key="plugins.importexport.medra.settings.form.testMode.description">Use the mEDRA test API (testing environment) for DOI registration. Please do not forget to remove this option for the production.</message>
 
 	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: DOIs assigned to articles will be exported to mEDRA as <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works'</a>. DOIs assigned to galleys will be exported as <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestations'</a>.]]></message>
-
-	<message key="plugins.importexport.medra.senderTask.name">mEDRA automatic registration task</message>
-
-	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Usage: 
+		
+	<message key="plugins.importexport.medra.cliUsage">Usage: 
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys} objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...
-]]></message>
+{$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...</message>
 </locale>

@@ -4,7 +4,7 @@
 <!--
   * plugins/importexport/medra/locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -22,28 +22,23 @@
 		Merk op dat het wachtwoord als gewone tekst wordt opgeslagen, dus niet versleuteld. Dit vanwege
 		de mEDRA registratie vereisten.]]></message>
 
-	<message key="plugins.importexport.medra.settings.description"><![CDATA[<a href="{$settingsUrl}">Configureer</a> de mEDRA export plugin alvorens die te gebruiken.]]></message>
-	
 	<message key="plugins.importexport.medra.settings.form.description">Configureer de mEDRA export plugin:</message>
 	<message key="plugins.importexport.medra.settings.form.username">Gebruikersnaam</message>
 	<message key="plugins.importexport.medra.settings.form.usernameRequired">Voer uw mEDRA gebruikersnaam in. De naam mag geen dubbele punt bevatten.</message>
-	<message key="plugins.importexport.medra.settings.form.registrantName">De naam van het instituut zoals geregistreerd bij mEDRA:</message>	
+	<message key="plugins.importexport.medra.settings.form.registrantName">De naam van het instituut zoals geregistreerd bij mEDRA</message>	
 	<message key="plugins.importexport.medra.settings.form.registrantNameRequired">Geef de naam van het instituut zoals geregistreerd bij mEDRA.</message>
 	<message key="plugins.importexport.medra.settings.form.fromFields">Contactpersoon voor mEDRA ingeval van technische vragen:</message>
-	<message key="plugins.importexport.medra.settings.form.fromCompany">Instituut:</message>
+	<message key="plugins.importexport.medra.settings.form.fromCompany">Instituut</message>
 	<message key="plugins.importexport.medra.settings.form.fromCompanyRequired">Het instituut dat technische verantwoordelijkheid draagt voor de DOI export (het instituut dat uw webserver beheert).</message>
-	<message key="plugins.importexport.medra.settings.form.fromName">Contactpersoon:</message>
+	<message key="plugins.importexport.medra.settings.form.fromName">Contactpersoon</message>
 	<message key="plugins.importexport.medra.settings.form.fromNameRequired">Geef de technische contactpersoon.</message>
-	<message key="plugins.importexport.medra.settings.form.fromEmail">E-mail:</message>
+	<message key="plugins.importexport.medra.settings.form.fromEmail">E-mail</message>
 	<message key="plugins.importexport.medra.settings.form.fromEmailRequired">Geeg een geldig e-mail adres voor de techische contactpersoon.</message>
 	<message key="plugins.importexport.medra.settings.form.publicationCountry">geef het land dat geinformeerd moet worden als 'publication country' voor mEDRA.</message>
 	<message key="plugins.importexport.medra.settings.form.exportIssuesAs"><![CDATA[Kies of u nummers wilt exporteren als <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works' of 'manifestations'</a>.]]></message>
 	<message key="plugins.importexport.medra.settings.form.work">work</message>	
 	<message key="plugins.importexport.medra.settings.form.manifestation">manifestation</message>
 
-	<message key="plugins.importexport.medra.reset">Herstel</message>
-	<message key="plugins.importexport.medra.resetDescription">Klik op deze knop als u dit object wilt behandelen alsof het nog niet eerder geregistreerd is (bijvoorbeeld als mEDRA een foutboodschap mailt bij de eerste registratie). Klik NIET op deze knop bij een bericht na een mislukte update!</message>
-	
 	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: DOI's die aan artikelen zijn toegekend zullen naar mEDRA geëxporteerd worden als <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works'</a>. DOI's toegekend aan proeven worden geëxporteerd als <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestations'</a>.]]></message>
 		
 	<message key="plugins.importexport.medra.cliUsage">Gebruik: 
