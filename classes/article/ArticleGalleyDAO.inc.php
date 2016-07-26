@@ -451,6 +451,71 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 		}
 		$this->flushCache();
 	}
+
+	/**
+	 * Get all published article galleys with a pubId assigned and matching the specified settings.
+	 * @param $pubIdType string
+	 * @param $contextId integer optional
+	 * @param $title string optional
+	 * @param $author string optional
+	 * @param $issueId integer optional
+	 * @param $pubIdSettingName string optional
+	 * (e.g. medra::status or medra::registeredDoi)
+	 * @param $pubIdSettingValue string optional
+	 * @param $rangeInfo DBResultRange optional
+	 * @return DAOResultFactory
+	 */
+	function getByPubIdType($pubIdType, $contextId = null, $title = null, $author = null, $issueId = null, $pubIdSettingName = null, $pubIdSettingValue = null, $rangeInfo = null) {
+		$params = array();
+		if ($pubIdSettingName) {
+			$params[] = $pubIdSettingName;
+		}
+		$params[] = 'pub-id::'.$pubIdType;
+		if ($contextId) {
+			$params[] = (int) $contextId;
+		}
+		if ($title) {
+			$params[] = 'title';
+			$params[] = '%' . $title . '%';
+		}
+		if ($author) array_push($params, $authorQuery = '%' . $author . '%', $authorQuery, $authorQuery);
+		if ($issueId) {
+			$params[] = (int) $issueId;
+		}
+		import('classes.plugins.DOIPubIdExportPlugin');
+		if ($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue != DOI_EXPORT_STATUS_NOT_DEPOSITED) {
+			$params[] = $pubIdSettingValue;
+		}
+
+		$result = $this->retrieveRange(
+				'SELECT	g.*, sf.*
+			FROM	submission_galleys g
+				' . ($contextId?' JOIN submissions s ON (s.submission_id = g.submission_id)':'') . '
+				LEFT JOIN published_submissions ps ON (ps.submission_id = g.submission_id)
+				LEFT JOIN issues i ON (ps.issue_id = i.issue_id AND i.date_published IS NOT NULL)
+				LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
+				LEFT JOIN submission_files nsf ON (nsf.file_id = g.file_id AND nsf.revision > sf.revision AND nsf.file_id IS NULL )
+				LEFT JOIN submission_galley_settings gs ON (g.galley_id = gs.galley_id)
+				'. ($title?' LEFT JOIN submission_settings sst ON (s.submission_id = sst.submission_id)':'')
+				. ($author?' LEFT JOIN authors au ON (s.submission_id = au.submission_id)':'')
+				. ($pubIdSettingName?' LEFT JOIN submission_galley_settings gss ON (g.galley_id = gss.galley_id AND gss.setting_name = ?)':'') .'
+			WHERE
+				gs.setting_name = ? AND gs.setting_value IS NOT NULL
+				' . ($contextId?' AND s.context_id = ?':'')
+				. ($title?' AND (sst.setting_name = ? AND sst.setting_value LIKE ?)':'')
+				. ($author?' AND (au.first_name LIKE ? OR au.middle_name LIKE ? OR au.last_name LIKE ?)':'')
+				. ($issueId?' AND ps.issue_id = ?':'')
+				. (($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue == DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND gss.setting_value IS NULL':'')
+				. (($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue != DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND gss.setting_value = ?':'')
+				. (($pubIdSettingName && is_null($pubIdSettingValue))?' AND gss.setting_value IS NULL OR gss.setting_value = \'\'':'') .'
+				ORDER BY ps.date_published DESC, s.submission_id DESC, g.galley_id DESC',
+				$params,
+				$rangeInfo
+		);
+
+		return new DAOResultFactory($result, $this, '_fromRow');
+	}
+
 }
 
 ?>

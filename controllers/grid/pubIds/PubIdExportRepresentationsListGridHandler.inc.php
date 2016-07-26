@@ -1,29 +1,29 @@
 <?php
 
 /**
- * @file controllers/grid/pubIds/PubIdExportIssuesListGridHandler.inc.php
+ * @file controllers/grid/pubIds/PubIdExportRepresentationsListGridHandler.inc.php
  *
  * Copyright (c) 2014-2016 Simon Fraser University Library
  * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class PubIdExportIssuesListGridHandler
+ * @class PubIdExportRepresentationsListGridHandler
  * @ingroup controllers_grid_pubIds
  *
- * @brief Handle exportable issues with pub ids list grid requests.
+ * @brief Handle exportable representations with pub ids list grid requests.
  */
 
 import('lib.pkp.classes.controllers.grid.GridHandler');
-import('controllers.grid.pubIds.PubIdExportIssuesListGridCellProvider');
+import('controllers.grid.pubIds.PubIdExportRepresentationsListGridCellProvider');
 
-class PubIdExportIssuesListGridHandler extends GridHandler {
+class PubIdExportRepresentationsListGridHandler extends GridHandler {
 	/** @var ImportExportPlugin */
 	var $_plugin;
 
 	/**
 	 * Constructor
 	 */
-	function PubIdExportIssuesListGridHandler() {
+	function PubIdExportRepresentationsListGridHandler() {
 		parent::GridHandler();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER),
@@ -55,13 +55,15 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 	 */
 	function initialize($request) {
 		parent::initialize($request);
+		$context = $request->getContext();
 
 		// Basic grid configuration.
-		$this->setTitle('plugins.importexport.common.export.issues');
+		$this->setTitle('plugins.importexport.common.export.articles');
 
 		// Load submission-specific translations.
 		AppLocale::requireComponents(
-			LOCALE_COMPONENT_APP_EDITOR, // date grid column
+			LOCALE_COMPONENT_APP_SUBMISSION, // title filter
+			LOCALE_COMPONENT_PKP_SUBMISSION, // authors filter
 			LOCALE_COMPONENT_APP_MANAGER
 		);
 
@@ -74,11 +76,22 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 		$authorizedRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
 
 		// Grid columns.
-		$cellProvider = new PubIdExportIssuesListGridCellProvider($this->_plugin, $authorizedRoles);
+		$cellProvider = new PubIdExportRepresentationsListGridCellProvider($this->_plugin, $authorizedRoles);
 		$this->addColumn(
 			new GridColumn(
-				'identification',
-				'issue.issue',
+				'id',
+				null,
+				__('common.id'),
+				'controllers/grid/gridCell.tpl',
+				$cellProvider,
+				array('alignment' => COLUMN_ALIGNMENT_LEFT,
+						'width' => 10)
+			)
+		);
+		$this->addColumn(
+			new GridColumn(
+				'title',
+				'grid.submission.itemTitle',
 				null,
 				null,
 				$cellProvider,
@@ -88,13 +101,24 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 		);
 		$this->addColumn(
 			new GridColumn(
-				'published',
-				'editor.issues.published',
+				'issue',
+				'issue.issue',
 				null,
 				null,
 				$cellProvider,
-				array('html' => true,
-						'alignment' => COLUMN_ALIGNMENT_LEFT)
+				array('alignment' => COLUMN_ALIGNMENT_LEFT,
+					'width' => 20)
+			)
+		);
+		$this->addColumn(
+			new GridColumn(
+				'galley',
+				'submission.layout.galleyLabel',
+				null,
+				null,
+				$cellProvider,
+				array('alignment' => COLUMN_ALIGNMENT_LEFT,
+					'width' => 20)
 			)
 		);
 		$this->addColumn(
@@ -106,7 +130,7 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 				$cellProvider,
 				array('alignment' => COLUMN_ALIGNMENT_LEFT,
 						'width' => 15)
-				)
+			)
 		);
 		$this->addColumn(
 			new GridColumn(
@@ -119,6 +143,7 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 						'width' => 10)
 			)
 		);
+
 	}
 
 
@@ -128,7 +153,7 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 	/**
 	 * @copydoc GridHandler::getRowInstance()
 	 */
-	protected function getRowInstance() {
+	function getRowInstance() {
 		return new GridRow();
 	}
 
@@ -159,24 +184,36 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 	 * @copydoc GridHandler::getSelectName()
 	 */
 	function getSelectName() {
-		return 'selectedIssues';
+		return 'selectedRepresentations';
 	}
 
 	/**
 	 * @copydoc GridHandler::getFilterForm()
 	 */
 	protected function getFilterForm() {
-		return 'controllers/grid/pubIds/pubIdExportIssuesGridFilter.tpl';
+		return 'controllers/grid/pubIds/pubIdExportRepresentationsGridFilter.tpl';
 	}
 
 	/**
 	 * @copydoc GridHandler::renderFilter()
 	 */
 	function renderFilter($request, $filterData = array()) {
+		$context = $request->getContext();
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issuesIterator = $issueDao->getPublishedIssues($context->getId());
+		$issues = $issuesIterator->toArray();
+		foreach ($issues as $issue) {
+			$issueOptions[$issue->getId()] = $issue->getIssueIdentification();
+		}
+		$issueOptions[0] = __('plugins.importexport.common.filter.issue');
+		ksort($issueOptions);
 		$statusNames = $this->_plugin->getStatusNames();
+		$filterColumns = $this->getFilterColumns();
 		$allFilterData = array_merge(
 			$filterData,
 			array(
+				'columns' => $filterColumns,
+				'issues' => $issueOptions,
 				'status' => $statusNames,
 				'gridId' => $this->getId(),
 			));
@@ -187,8 +224,14 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 	 * @copydoc GridHandler::getFilterSelectionData()
 	 */
 	function getFilterSelectionData($request) {
+		$search = (string) $request->getUserVar('search');
+		$column = (string) $request->getUserVar('column');
+		$issueId = (int) $request->getUserVar('issueId');
 		$statusId = (string) $request->getUserVar('statusId');
 		return array(
+			'search' => $search,
+			'column' => $column,
+			'issueId' => $issueId,
 			'statusId' => $statusId,
 		);
 	}
@@ -197,19 +240,43 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 	 * @copydoc GridHandler::loadData()
 	 */
 	protected function loadData($request, $filter) {
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$context = $request->getContext();
-		list($statusId) = $this->getFilterValues($filter);
+		list($search, $column, $issueId, $statusId) = $this->getFilterValues($filter);
+		$title = $author = null;
+		if ($column == 'title') {
+			$title = $search;
+		} elseif ($column == 'author') {
+			$author = $search;
+		}
 		$pubIdStatusSettingName = null;
 		if ($statusId) {
 			$pubIdStatusSettingName = $this->_plugin->getDepositStatusSettingName();
 		}
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		return $issueDao->getByPubIdType(
+		return $articleGalleyDao->getByPubIdType(
 			$this->_plugin->getPubIdType(),
 			$context?$context->getId():null,
+			$title,
+			$author,
+			$issueId,
 			$pubIdStatusSettingName,
 			$statusId,
 			$this->getGridRangeInfo($request, $this->getId())
+		);
+	}
+
+
+	//
+	// Own protected methods
+	//
+	/**
+	 * Get which columns can be used by users to filter data.
+	 * @return array
+	 */
+	protected function getFilterColumns() {
+		return array(
+			'title' => __('submission.title'),
+			'author' => __('submission.authors')
 		);
 	}
 
@@ -219,12 +286,27 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 	 * @return array
 	 */
 	protected function getFilterValues($filter) {
+		if (isset($filter['search']) && $filter['search']) {
+			$search = $filter['search'];
+		} else {
+			$search = null;
+		}
+		if (isset($filter['column']) && $filter['column']) {
+			$column = $filter['column'];
+		} else {
+			$column = null;
+		}
+		if (isset($filter['issueId']) && $filter['issueId']) {
+			$issueId = $filter['issueId'];
+		} else {
+			$issueId = null;
+		}
 		if (isset($filter['statusId']) && $filter['statusId'] != DOI_EXPORT_STATUS_ANY) {
 			$statusId = $filter['statusId'];
 		} else {
 			$statusId = null;
 		}
-		return array($statusId);
+		return array($search, $column, $issueId, $statusId);
 	}
 
 }

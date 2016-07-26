@@ -14,8 +14,6 @@
  */
 
 import('lib.pkp.classes.controllers.grid.GridHandler');
-
-import('lib.pkp.controllers.grid.submissions.exportableSubmissions.ExportableSubmissionsGridRow');
 import('controllers.grid.pubIds.PubIdExportSubmissionsListGridCellProvider');
 
 class PubIdExportSubmissionsListGridHandler extends GridHandler {
