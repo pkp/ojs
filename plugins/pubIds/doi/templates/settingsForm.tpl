@@ -19,6 +19,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="doiSettingsForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT op="manage" category="pubIds" plugin=$pluginName verb="save"}">
+	{csrf}
 	{include file="common/formErrors.tpl"}
 	{fbvFormArea id="doiObjectsFormArea" title="plugins.pubIds.doi.manager.settings.doiObjects"}
 		{fbvFormSection list="true"}

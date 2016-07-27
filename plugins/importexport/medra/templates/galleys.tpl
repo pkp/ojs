@@ -34,6 +34,7 @@
 		{rdelim});
 	</script>
 	<form class="pkp_form" action="{plugin_url path="exportGalleys"}" method="post" id="galleysForm">
+		{csrf}
 		<table class="listing">
 			<tr>
 				<td colspan="5" class="headseparator">&nbsp;</td>

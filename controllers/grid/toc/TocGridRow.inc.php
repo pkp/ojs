@@ -57,6 +57,7 @@ class TocGridRow extends GridRow {
 			new LinkAction(
 				'removeArticle',
 				new RemoteActionConfirmationModal(
+					$request->getSession(),
 					__('editor.article.remove.confirm'),
 					__('grid.action.removeArticle'),
 					$router->url($request, null, null, 'removeArticle', null, array('articleId' => $this->getId(), 'issueId' => $this->issueId)), 'modal_delete'

@@ -112,7 +112,7 @@ class JournalGridHandler extends ContextGridHandler {
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journal = $journalDao->getById($journalId);
 
-		if ($journal) {
+		if ($journal && $request->checkCSRF()) {
 			$journalDao->deleteById($journalId);
 
 			// Delete journal file tree

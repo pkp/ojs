@@ -27,6 +27,7 @@
 		{rdelim});
 	</script>
 	<form class="pkp_form" id="dataciteSettingsForm" method="post" action="{plugin_url path="settings"}">
+		{csrf}
 		<table class="data">
 			<tr>
 				<td colspan="2">

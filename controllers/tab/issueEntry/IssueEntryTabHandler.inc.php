@@ -128,6 +128,8 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 	 * @return JSONMessage JSON object
 	 */
 	function clearPubId($args, $request) {
+		if (!$request->checkCSRF()) return new JSONMessage(false);
+
 		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
 		$submission = $this->getSubmission();
 		$stageId = $this->getStageId();

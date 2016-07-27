@@ -72,8 +72,8 @@ class GiftIndividualSubscriptionForm extends Form {
 			array_keys($journal->getSupportedLocaleNames())
 		);
 
-		// Form was POSTed
 		$this->addCheck(new FormValidatorPost($this));
+		$this->addCheck(new FormValidatorCSRF($this));
 	}
 
 	/**

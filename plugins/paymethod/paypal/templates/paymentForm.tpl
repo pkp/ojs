@@ -21,6 +21,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" action="{$paypalFormUrl}" id="paypalPaymentForm" method="post" style="margin-bottom: 0px;">
+	{csrf}
 	{include file="common/formErrors.tpl"}
 	{if $params.item_name}
 	<table class="data">

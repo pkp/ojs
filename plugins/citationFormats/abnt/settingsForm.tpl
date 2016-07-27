@@ -28,6 +28,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" name="setupForm" id="setupForm" method="post" action="{plugin_url path="settings"}">
+{csrf}
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}

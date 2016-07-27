@@ -35,6 +35,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="subscriptionPolicies" method="post" action="{url op="saveSubscriptionPolicies"}">
+{csrf}
 {include file="common/formErrors.tpl"}
 
 	<script>

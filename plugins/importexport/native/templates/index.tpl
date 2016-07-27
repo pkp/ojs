@@ -41,6 +41,7 @@
 			{rdelim});
 		</script>
 		<form id="importXmlForm" class="pkp_form" action="{plugin_url path="importBounce"}" method="post">
+			{csrf}
 			{fbvFormArea id="importForm"}
 				{* Container for uploaded file *}
 				<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
@@ -63,6 +64,7 @@
 			{rdelim});
 		</script>
 		<form id="exportSubmissionXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
+			{csrf}
 			{fbvFormArea id="submissionsXmlForm"}
 				{url|assign:submissionsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.submissions.exportableSubmissions.ExportableSubmissionsListGridHandler" op="fetchGrid" escape=false}
 				{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
@@ -78,6 +80,7 @@
 			{rdelim});
 		</script>
 		<form id="exportIssuesXmlForm" class="pkp_form" action="{plugin_url path="exportIssues"}" method="post">
+			{csrf}
 			{fbvFormArea id="issuesXmlForm"}
 				{url|assign:issuesListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.issues.ExportableIssuesListGridHandler" op="fetchGrid" escape=false}
 				{load_url_in_div id="issuesListGridContainer" url=$issuesListGridUrl}

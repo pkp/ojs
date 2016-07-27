@@ -23,6 +23,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="issueGalleyForm" method="post" action="{url op="update" issueId=$issueId issueGalleyId=$issueGalleyId}">
+	{csrf}
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="publicationMetadataFormFieldsNotification"}
 	{fbvFormArea id="file"}
 		{fbvFormSection title="editor.issues.galley" required="true"}

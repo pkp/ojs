@@ -75,6 +75,7 @@ class SubscriptionTypeForm extends Form {
 		// Public flag is valid value
 		$this->addCheck(new FormValidatorInSet($this, 'disable_public_display', 'optional', 'manager.subscriptionTypes.form.publicValid', array('1')));
 		$this->addCheck(new FormValidatorPost($this));
+		$this->addCheck(new FormValidatorCSRF($this));
 	}
 
 	/**

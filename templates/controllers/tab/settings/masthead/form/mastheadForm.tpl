@@ -20,6 +20,7 @@
 </script>
 
 <form class="pkp_form" id="mastheadForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.JournalSettingsTabHandler" op="saveFormData" tab="masthead"}">
+	{csrf}
 
 	{include file="controllers/tab/settings/wizardMode.tpl" wizardMode=$wizardMode}
 

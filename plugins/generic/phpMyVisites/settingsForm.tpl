@@ -26,6 +26,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="phpMyVisitesSettingsForm" method="post" action="{plugin_url path="settings"}">
+{csrf}
 {include file="common/formErrors.tpl"}
 
 <table class="data">

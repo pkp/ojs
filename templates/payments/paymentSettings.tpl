@@ -26,6 +26,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" name="paymentSettingsForm" id="paymentSettingsForm" method="post" action="{url op="savePaymentSettings"}">
+{csrf}
 {if count($formLocales) > 1}
 <div id="locales">
 <table class="data">

@@ -57,6 +57,7 @@ class SectionGridRow extends GridRow {
 				new LinkAction(
 					'deleteSection',
 					new RemoteActionConfirmationModal(
+						$request->getSession(),
 						__('manager.sections.confirmDelete'),
 						__('grid.action.delete'),
 						$router->url($request, null, null, 'deleteSection', null, array('sectionId' => $sectionId)), 'modal_delete'

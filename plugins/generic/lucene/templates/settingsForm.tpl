@@ -20,6 +20,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="luceneSettingsForm" method="post" action="{plugin_url path="settings"}">
+		{csrf}
 		{include file="common/formErrors.tpl"}
 
 		<h3>{translate key="plugins.generic.lucene.settings.solrServerSettings"}</h3>
