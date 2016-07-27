@@ -163,7 +163,7 @@ Please follow the following protocol for making electronic revisions to your man
 	<message key="default.groups.abbrev.editor">JE</message>
 	<message key="default.groups.name.guestEditor">Guest editor</message>
 	<message key="default.groups.plural.guestEditor">Guest editors</message>
-	<message key="default.groups.abbrev.guestEditor">AcqE</message>
+	<message key="default.groups.abbrev.guestEditor">GE</message>
 	<message key="default.groups.name.sectionEditor">Section editor</message>
 	<message key="default.groups.plural.sectionEditor">Section editors</message>
 	<message key="default.groups.abbrev.sectionEditor">SecE</message>
