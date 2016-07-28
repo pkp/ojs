@@ -886,6 +886,9 @@ class NativeImportDom {
 			}
 			for ($index=0; ($node = $permissionsNode->getChildByName('copyright_holder', $index)); $index++) {
 				$locale = $node->getAttribute('locale');
+				if ($locale == '') {
+					$locale = $article->getLocale();
+				}
 				$article->setCopyrightHolder($node->getValue(), $locale);
 			}
 			if ($node = $permissionsNode->getChildByName('license_url')) {
