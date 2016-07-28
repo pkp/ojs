@@ -18,6 +18,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="reportForm" method="post" action="{url op="reportGenerator"}">
+{csrf}
 <table class="data">
 	<tr>
 		<td class="label">{translate key="manager.statistics.reports.reportType"}</td>

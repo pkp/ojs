@@ -567,6 +567,49 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	}
 
 	/**
+	 * Get all published issues with a pubId assigned and matching the specified settings.
+	 * @param $pubIdType string
+	 * @param $contextId integer optional
+	 * @param $pubIdSettingName string optional
+	 * (e.g. crossref::registeredDoi)
+	 * @param $pubIdSettingValue string optional
+	 * @param $rangeInfo DBResultRange optional
+	 * @return DAOResultFactory
+	 */
+	function getByPubIdType($pubIdType, $contextId = null, $pubIdSettingName = null, $pubIdSettingValue = null, $rangeInfo = null) {
+		$params = array();
+		if ($pubIdSettingName) {
+			$params[] = $pubIdSettingName;
+		}
+		$params[] = 'pub-id::'.$pubIdType;
+		if ($contextId) {
+			$params[] = (int) $contextId;
+		}
+		if ($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue != DOI_EXPORT_STATUS_NOT_DEPOSITED) {
+			$params[] = $pubIdSettingValue;
+		}
+
+		$result = $this->retrieveRange(
+			'SELECT i.*
+			FROM issues i
+				LEFT JOIN custom_issue_orders o ON (o.issue_id = i.issue_id)
+				LEFT JOIN issue_settings ist ON (i.issue_id = ist.issue_id)
+				'. ($pubIdSettingName?' LEFT JOIN issue_settings iss ON (i.issue_id = iss.issue_id AND iss.setting_name = ?)':'') .'
+			WHERE
+				ist.setting_name = ? AND ist.setting_value IS NOT NULL
+				' . ($contextId?' AND i.journal_id = ?':'')
+				. (($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue == DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND iss.setting_value IS NULL':'')
+				. (($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue != DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND iss.setting_value = ?':'')
+				. (($pubIdSettingName && is_null($pubIdSettingValue))?' AND iss.setting_value IS NULL OR iss.setting_value = \'\'':'')
+				.' AND i.published = 1 ORDER BY i.date_published DESC',
+			$params,
+			$rangeInfo
+		);
+
+		return new DAOResultFactory($result, $this, '_returnIssueFromRow');
+	}
+
+	/**
 	 * Return number of articles assigned to an issue.
 	 * @param $issueId int
 	 * @return int

@@ -27,6 +27,7 @@
 {else}
 <form class="pkp_form" method="post" id="subscriptionForm" action="{url op="payPurchaseSubscription" path="institutional"}">
 {/if}
+{csrf}
 
 {include file="common/formErrors.tpl"}
 

@@ -47,8 +47,9 @@ class BibtexCitationPlugin extends CitationPlugin {
 	 * Return an HTML-formatted citation. Default implementation displays
 	 * an HTML-based citation using the citation.tpl template in the plugin
 	 * path.
-	 * @param $article object
-	 * @param $issue object
+	 * @param $article Article
+	 * @param $issue Issue
+	 * @param $journal Journal
 	 */
 	function fetchCitation($article, $issue, $journal) {
 		$templateMgr = TemplateManager::getManager($this->getRequest());

@@ -4,7 +4,7 @@
 <!--
   * locale/uk_UA/default.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -14,7 +14,7 @@
   * V. I. Vernadsky National Library of Ukraine
   -->
 
-<locale name="uk_UA" full_name = "Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <!-- Section default -->
        <message key="section.default.title">Статті</message>
        <message key="section.default.abbrev">ART</message>
@@ -26,11 +26,11 @@
            *
            -->
        <message key="default.journalSettings.checklist.notPreviouslyPublished">Це подання раніше не було опубліковане і не надсилалося до розгляду редакціям інших журналів (або у коментарях для редактора нижче дані необхідні пояснення).</message>
-       <message key="default.journalSettings.checklist.fileFormat">Файл подання є документом у форматі Microsoft Word, OpenOffice, або RTF.</message>
+       <message key="default.journalSettings.checklist.fileFormat">Файл подання є документом у форматі Microsoft Word, OpenOffice, RTF або WordPerfect.</message>
        <message key="default.journalSettings.checklist.addressesLinked">Інтернет-посилання у тексті супроводжуються повними коректними адресами URL.</message>
        <message key="default.journalSettings.checklist.submissionAppearance">Текст набраний 12-м розміром кеглю з одинарним міжрядковим інтервалом; авторські акценти виділені курсивом, а не підкресленням (всюди, крім адрес URL); всі ілюстрації, графіки та таблиці розміщені безпосередньо у тексті, там, де вони повинні бути за змістом (а не у кінці документу).</message>
        <message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Текст відповідає вимогам до стилістики та бібліографії, викладеним у <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Керівництві для авторів</a> розділу "Про журнал".]]></message>
-       <message key="default.journalSettings.privacyStatement">Імена та електронні адреси, які вказуються користувачами сайту цього журналу, будуть використовуватись виключно для виконання внутрішніх технічних завдань цього журналу; вони не будуть поширюватись та передаватись стороннім особам.</message>
+             <message key="default.journalSettings.privacyStatement">Імена та електронні адреси, які вказуються користувачами сайту цього журналу, будуть використовуватись виключно для виконання внутрішніх технічних завдань цього журналу; вони не будуть поширюватись та передаватись стороннім особам.</message>
        <message key="default.journalSettings.openAccessPolicy">Цей журнал практикує політику негайного відкритого доступу до опублікованого змісту, підтримуючи принципи вільного поширення наукової інформації та глобального обміну знаннями задля загального суспільного прогресу.</message>
        <message key="default.journalSettings.authorSelfArchivePolicy">Цей журнал дозволяє і заохочує авторів депонувати матеріали, надіслані до нього, на особистих веб-сайтах або у сховищах установ, як до публікації цих матеріалів, так і після. При цьому, ми просимо, якщо можливо, оформлювати відповідні посилання на оригінали публікацій на цьому сайті.</message>
        <message key="default.journalSettings.copyeditInstructions"><![CDATA[Стадія літературного редагування необхідна для покращення стилю, зрозумілості, граматики та орфографії статті. Це останній шанс для авторів внести суттєві зміни до тексту, оскільки на наступному етапі можливі зміни, пов'язані виключно з виправленням опечаток та помилок форматування.
@@ -142,9 +142,10 @@
 <br />
 <pre>4. Форматування
 Перед абзацом, що починається словами "Ця остання тема..." немає відступу.</pre>]]></message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
-</message>
+       <message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}
+]]></message>
        <message key="default.journalSettings.forReaders"><![CDATA[Ми заохочуємо авторів реєструватися на сайті для користування службою сповіщень цього журналу. Для реєстрації використовуйте посилання <a href="{$indexUrl}/{$journalPath}/user/register">Зареєструватися</a> у верхньому меню домашньої сторінки сайту журналу. Ви зможете оперативно отримувати поштою сторінки змісту нових опублікованих випусків нашого видання та дозволите редакції відстежувати читацькі пріоритети та інтереси. Будь ласка, ознайомтеся з нашим <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Положенням про конфіденційність</a>, у якому йдеться про те, що журнал гарантує нерозповсюдження імен та електронних адрес своїх читачів стороннім особам.]]></message>
        <message key="default.journalSettings.forAuthors"><![CDATA[Ви хочете опублікувати свою роботу у цьому журналі? Рекомендуємо ознайомитись з нашою редакційною політикою на сторінці <a href="{$indexUrl}/{$journalPath}/about">Про журнал</a> та переглянути <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Керівництва для авторів</a>. Для того, щоб мати можливість надсилати рукописи у наше видання, автори повинні <a href="{$indexUrl}/{$journalPath}/user/register">зареєструватися</a> на сайті журналу. Якщо Ви вже зареєстровані, просто <a href="{$indexUrl}/index/login">увійдіть на сайт</a> та пройдіть 5 кроків подання рукопису для публікації.]]></message>
        <message key="default.journalSettings.forLibrarians"><![CDATA[Ми заохочуємо наукові бібліотеки включати цей журнал до списків своїх електронних колекцій. Крім того, ця видавнича система має засоби інтеграції з бібліотечним програмним забезпеченням, вона дозволяє бібліотекам забезпечувати архівне збереження електронного змісту журналу та/або безпосередньо брати участь у видавничому процесі. Більш детально про ці можливості див. на сайті <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>

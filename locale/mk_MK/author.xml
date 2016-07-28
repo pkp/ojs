@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/mk_MK/author.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="mk_MK" full_name="Македонски јазик">
+	<message key="author.submit">Ново поднесување</message>
+	<message key="author.track">Активни поднесувања</message>
+	<message key="author.competingInterests"><![CDATA[Конкурентни&nbsp;интереси <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Правила</a>]]></message>
+	<message key="author.submit.submitArticle">Додади артикал</message>
+	<message key="author.submit.stepsToSubmit">Пет чекори за поднесување</message>
+	<message key="author.submit.startHereTitle">Започни ново поднесување</message>
+	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Кликнете овде</a> за да преминете на првиот чекор.]]></message>
+	<message key="author.submit.step1">Чекор 1. Започнување на поднесувањето</message>
+	<message key="author.submit.step2">Чекор 2. Прикачување на датотека</message>
+	<message key="author.submit.step3">Чекор 3. Внесување на метаподатоци</message>
+	<message key="author.submit.step4">Чекор 4. Прикачување на дополнителни датотеки</message>
+	<message key="author.submit.step4a">Чекор 4а. Додај дополнителна датотека</message>
+	<message key="author.submit.step5">Чекор 5. Потврда за поднесувањето</message>
+	<message key="author.submit.start">Почеток</message>
+	<message key="author.submit.upload">Прикачи датотека</message>
+	<message key="author.submit.metadata">Внеси метаподатоци</message>
+	<message key="author.submit.supplementaryFiles">Прикачи дополнителни датотеки</message>
+	<message key="author.submit.confirmation">Потврда</message>
+	<message key="author.submit.cancelSubmission">Поднесувањето може да го завршите подоцна со избирање на „Активни поднесувања“ од почетната страна.</message>
+	<message key="author.submit.notAccepting">Ова списание моментално не прифаќа поднесување на документи.</message>
+	<message key="author.submit.requestWaiver">Барање за откажување</message>
+	<message key="author.submit.qualifyForWaiver">Внимавајте при откажувањето на Поднесување на артикал за овој запис.</message>
+	<message key="author.submit.addReasonsForWaiver">Ве молиме користете ги коментарите подолу за да наведете зошто надоместоците треба да бидат поништени.</message>
+	<message key="author.submit.mustEnterWaiverReason">Доколку се пријавувате за откажување, мора да ја наведете причината во предвидениот простор.</message>
+	<message key="author.submissions.queuedReviewSubsequent">Процес на прегледување {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">Прегледување: Ревизиите се задолжителни</message>
+	<message key="author.submissions.queuedEditingCopyedit">Уредување: Барање за лекторирање</message>
+	<message key="author.submissions.queuedEditingProofread">Уредување: Барање за приспособување</message>
+	<message key="author.submissions.uploadCopyeditedVersion">Прикачи лекторирана верзија</message>
+	<message key="author.submissions.proofreadingCorrections">Корекции на лекторирањето</message>
+	<message key="author.submissions.confirmDelete">Дали сте сигурни дека сакате да го избришете ова нецелосно поднесување?</message>
+	<message key="author.submissions.viewStatus">Види го статусот</message>
+	<message key="author.submissions.noSubmissions">Не е поднесено.</message>
+	<message key="author.submit.howToSubmit"><![CDATA[Имате проблем? Контактирајте не <a href="mailto:{$supportEmail}">{$supportName}</a> за помош ({$supportPhone}).]]></message>
+	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Имате проблем? Контактирајте не <a href="mailto:{$supportEmail}">{$supportName}</a> за помош.]]></message>
+	<message key="author.submit.journalSection">Оддел за списание</message>
+	<message key="author.submit.journalSectionDescription"><![CDATA[Селектирајте го соодветниот оддел за ова поднесување (Види Оддел и Правила во<a href="{$aboutUrl}" target="_new">За</a> списанието).]]></message>
+	<message key="submission.submit.selectSection">Ве молиме изберете оддел...</message>
+	<message key="author.submit.submissionLocale">Јазик на датотеката</message>
+	<message key="author.submit.submissionLocaleDescription">Системот прифаќа датотеки на неколку јазици. Изберете го основниот јазик на датотеката на паѓачкото мени подолу.</message>
+	<message key="author.submit.submissionChecklist">Список за проверка на поднесувањето</message>
+	<message key="author.submit.verifyChecklist">Мора да бидете сигурни дека сите ставки во доставувањето се исполнети пред да продолжите понатаму.</message>
+	<message key="author.submit.copyrightNoticeAgree">Авторите се согласуваат со авторските права кои ќе бидат применети на овој труд, ако и кога ќе биде објавен ( коментарите до уредникот може да се дадат подолу ).</message>
+	<message key="author.submit.copyrightNoticeAgreeRequired">Мора да се согласите со Авторските права пред да продолжите.</message>
+	<message key="submission.submit.coverNote">Коментари за уредникот</message>
+	<message key="author.submit.comments">Внеси текст ( опционално )</message>
+	<message key="author.submit.form.sectionRequired">Ве молиме одберете секција која ќе одговара за вашето поднесување.</message>
+	<message key="author.submit.form.localeRequired">Ве молиме изберете јазик на документот</message>
+	<message key="submission.submit.privacyStatement">Изјава за приватност</message>
+	<message key="author.submit.reorderInstructions">Редослед по кој авторите ќе се прикажуваат</message>
+	<message key="author.submit.reorder">Промена на редоследот на имињата на авторите</message>
+	<message key="author.submit.selectPrincipalContact">Главен контакт на уредувачкиот дописник</message>
+	<message key="author.submit.addAuthor">Додади Автор</message>
+	<message key="author.submit.deleteAuthor">Избриши Автор</message>
+	<message key="author.submit.submissionIndexingDescription">Внесите термини за индексирање на поднесувањето, одделете ги термините со ; (термин1; термин2; термин3).</message>
+	<message key="author.submit.coverageInstructions">Се однесува на гео-просторна локација, хронолошка и историска покриеност, и / или карактеристики на испитаниците.</message>
+	<message key="author.submit.languageInstructions"><![CDATA[Македонски=mk; Англиски=en; Француски=fr; Шпански=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Дополнителни кодови</a>.]]></message>
+	<message key="author.submit.form.authorRequired">Потребно е да наведете најмалку еден автор.</message>
+	<message key="author.submit.form.authorRequiredFields">Името, Презимето и е-маил адресата се задолжителни за секој автор.</message>
+	<message key="author.submit.form.titleRequired">Ве молиме внесете го насловот на вашиот труд.</message>
+	<message key="author.submit.form.abstractRequired">Ве молиме внесете го апстрактот на вашиот труд.</message>
+	<message key="author.submit.form.wordCountAlert">Го надминавте дозволениот број на зборови за апстрактот.</message>
+	<message key="author.submit.submissionFile">Поднесување на датотека</message>
+	<message key="author.submit.uploadSubmissionFile">Прикачи датотека</message>
+	<message key="author.submit.replaceSubmissionFile">Замени датотека</message>
+	<message key="author.submit.noSubmissionFile">Нема прикачено датотека</message>
+	<message key="author.submit.noSubmissionConfirm">Дали сте сигурни дека сакате да продолжите без да прикачите датотека?</message>
+	<message key="author.submit.supplementaryFilesInstructions">Овој опционален чекор овозможува додавање на Дополнителни датотеки на поднесувањето. Датотеките можат да бидат во било кој формат, може да вклучуваат (а) инструменти за истражување, (б) извори кои се недостапни за читателите, (в) бројки и табели кои не можат да бидат интегрирани во самиот текст, или други материјали кои имаат придонес во работата.</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">Кликни Зачувај за прикачување на датотека (по која дополнителни датотеки можат да се прикачуваат).</message>
+	<message key="author.submit.forgottenSubmitSuppFile">Дали сте сигурни дека сакате да продолжите без прикачување на дополнителната датотека која сте ја одбрале?</message>
+	<message key="author.submit.noSupplementaryFiles">Нема додадено дополнителни датотеки на ова поднесување.</message>
+	<message key="author.submit.backToSupplementaryFiles">Вратете се на Дополнителни Датотеки</message>
+	<message key="author.submit.confirmDeleteSuppFile">Дали сте сигурни дека сакате да ја избришете оваа дополнителна датотека?</message>
+	<message key="author.submit.uploadSuppFile">Прикачи дополнителни датотеки</message>
+	<message key="author.submit.addSupplementaryFile">Додадете дополнителна датотека</message>
+	<message key="author.submit.editSupplementaryFile">Уредување на дополнителна датотека</message>
+	<message key="author.submit.supplementaryFileData">Метаподатоци за дополнителна датотека</message>
+	<message key="author.submit.supplementaryFileDataDescription">За индексирање на овој дополнителен материјал, обезбедете ги следните метаподатоци за прикачената дополнителна датотека.</message>
+	<message key="author.submit.supplementaryFileUpload">Дополнителна датотека</message>
+	<message key="author.submit.suppFile.createrOrOwner">Автор (или сопственик) на датотеката</message>
+	<message key="author.submit.suppFile.researchInstrument">Истражувачки инструмент</message>
+	<message key="author.submit.suppFile.researchMaterials">Истражувачки материјали</message>
+	<message key="author.submit.suppFile.researchResults">Истражувачки резултати</message>
+	<message key="author.submit.suppFile.transcripts">Транскрипти</message>
+	<message key="author.submit.suppFile.dataAnalysis">Анализа на податоци</message>
+	<message key="author.submit.suppFile.dataSet">Збирка на податоци</message>
+	<message key="author.submit.suppFile.sourceText">Изворен текст</message>
+	<message key="author.submit.suppFile.briefDescription">Краток опис</message>
+	<message key="author.submit.suppFile.availableToPeers">Презентирајте ја датотеката на рецезенти (без метаподатоци), што нема да го загрози „слепиот преглед“.</message>
+	<message key="author.submit.suppFile.publisherDescription">Користете само формално објавени материјали.</message>
+	<message key="author.submit.suppFile.dateDescription">Датум кога податоците се собрани или инструментот креиран.</message>
+	<message key="author.submit.suppFile.sourceDescription">Име на студијата или друга точка на потекло.</message>
+	<message key="author.submit.suppFile.specifyOtherType">Наведете други</message>
+	<message key="author.submit.suppFile.noFile">Нема прикачено датотека</message>
+	<message key="author.submit.suppFile.form.titleRequired">Ве молиме внесете го насловот на оваа дополнителна датотека.</message>
+	<message key="author.submit.suppFile.form.subjectRequired">Ве молиме внесете предмет.</message>
+	<message key="author.submit.suppFile.form.descriptionRequired">Ве молиме внесете опис.</message>
+	<message key="author.suppFile.suppFilePublicIdentificationExists">Јавна идентификација на дополнителната датотека веќе постои.</message>
+	<message key="author.suppFile.publicSuppFileIdentifier">Јавен идентификатор на дополнителните датотеки.</message>
+	<message key="author.submit.confirmationDescription">За поднесување во {$journalTitle} кликнете Заврши Поднесување. За поднесувањето ќе добиете потврда преку е-маил и ќе бидете во можност да го видите напредокот на поднесувањето преку целиот уредувачки процес со најавување на системот. Ви благодариме за вашиот интерес за објавувањето во {$journalTitle}.</message>
+	<message key="author.submit.noFiles">Нема прикачено датотеки во ова поднесување.</message>
+	<message key="author.submit.filesSummary">Преглед на датотеката</message>
+	<message key="author.submit.finishSubmission">Заврши поднесување</message>
+	<message key="author.submit.submissionComplete">Поднесувањето е извршено. Ви благодариме за вашиот интерес во издаваштвото со {$journalTitle}.</message>
+	<message key="author.article.uploadAuthorVersion">Прикачи верзија на авторот</message>
+	<message key="author.article.copyeditedFile">Лекторирана датотека</message>
+	<message key="author.article.authorRevisedFile">Авторска датотека</message>
+	<message key="author.submit.authorSubmitLoginMessage">Потребен е кориснички профил за доставување во ова списание. Ова им овозможува на нашите уредници да ги следат вашите поднесувања и да ве известат доколку има некои промени, или ако се бараат дополнителни информации од вас.</message>
+</locale>

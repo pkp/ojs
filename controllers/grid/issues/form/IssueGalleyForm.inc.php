@@ -37,6 +37,7 @@ class IssueGalleyForm extends Form {
 
 		$this->addCheck(new FormValidator($this, 'label', 'required', 'editor.issues.galleyLabelRequired'));
 		$this->addCheck(new FormValidatorPost($this));
+		$this->addCheck(new FormValidatorCSRF($this));
 
 		// Ensure a locale is provided and valid
 		$journal = $request->getJournal();

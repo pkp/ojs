@@ -115,10 +115,10 @@ class IssueAction {
 		$user = Request::getUser();
 		$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId, null, true);
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($articleId, null, true);
 		$result = false;
 		if (isset($user) && isset($journal)) {
-			if ($this->allowedPrePublicationAccess($journal, $publishedArticle)) {
+			if ($publishedArticle && $this->allowedPrePublicationAccess($journal, $publishedArticle)) {
 				 $result = true;
 			} else {
 				$result = $subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId());

@@ -4,7 +4,7 @@
 <!--
   * locale/gl_ES/admin.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
 	<message
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -13,7 +13,7 @@
   *
   -->
 
-<locale name="gl_ES" full_name = "Galego">
+<locale name="gl_ES" full_name="Galego">
 	<message key="admin.hostedJournals">Revistas aloxadas</message>
 	<message key="admin.settings.journalRedirect">Encamiñamento á revista</message>
 	<message key="admin.settings.journalRedirectInstructions">Os pedidos serán redirecionados a esta revista. Isto pode ser útil, por exemplo, se houber apenas unha revista hospedada.</message>
@@ -22,7 +22,6 @@
 	<message key="admin.languages.supportedLocalesInstructions">Selecione todos os lugares que han apoiar o sitio. As localizacións escolleitas estarán dispoñíbeis a calquera revista, tamén se amosará nun menú de seleción de idioma en todas as páxinas (pode ser substituído en páxinas específicas dunha revista). Se non selecionar vários locais, o menu de escolla de idioma non estará dispoñíbel e non hai recursos de linguaxe adicional para revistas.</message>
 	<message key="admin.languages.confirmUninstall">Tes a certeza de que desexas desinstalar esta localización? Esta acción pode afectar calquera revista que empregue esta localización.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Seleccionar as localizacions adicionais para as que quere apoiar o sistema. Compre ter instalados as localizacións antes que poida ser usado por revistas. Consulte a documentación do OJS para información sobre como engadir soporte a novos idiomas.</message>
-	<message key="admin.languages.downloadLocales">Descarregar localizacións</message>
 	<message key="admin.languages.downloadFailed">Fallou a descárrega de ficheiro de localizacións. A seguinte mensaxe de erro describe a falla.</message>
 	<message key="admin.languages.localeInstalled">O ficheiro de localización "{$locale}" foi instalado.</message>
 	<message key="admin.languages.download">Descarregar ficheiro de localización</message>
@@ -39,8 +38,8 @@
 	<message key="admin.journals.noneCreated">Non se crearon revistas.</message>
 	<message key="admin.contexts.confirmDelete">Tes a certeza de que queres eliminar permanentemente esta revista e todos o seus contidos?</message>
 	<message key="admin.contexts.create">Crear revista</message>
+	<message key="admin.journals.createInstructions">Has ser automaticamente identificado como administrador/a desta revista. Trás crear unha nova revista, identifiquese como administrador/a para continuar com a sua configuración e alta de usuarios/as.</message>
 	<message key="admin.journals.urlWillBe">Debería ser unha palabra curta ou acrónimo que identifique a revista. A URL da revista será {$sampleUrl}</message>
-	<message key="admin.contexts.form.titleRequired">Precísase un título.</message>
 	<message key="admin.contexts.form.pathRequired">Precísase o roteiro.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">O roteiro só pode conter caracteres alfanuméricos, guións e guions a rodapé, comezando e rematando cun carácter alfanumérico.</message>
 	<message key="admin.contexts.form.pathExists">Seleccionou unha ruta que xa usa outra revista.</message>

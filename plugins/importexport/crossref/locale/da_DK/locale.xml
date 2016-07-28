@@ -15,13 +15,7 @@
 <locale name="da_DK" full_name="Dansk">
 	<message key="plugins.importexport.crossref.displayName">CrossRef XML Export Plugin</message>
 	<message key="plugins.importexport.crossref.description">Eksportér artikelmetadata i CrossRef XML format.</message>
-	
-	<message key="plugins.importexport.crossref.export">Eksporter data</message>
-	<message key="plugins.importexport.crossref.export.issues">Eksporter numre</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Vælg et nummer til eksport.</message>
-	<message key="plugins.importexport.crossref.export.articles">Eksportér artikler</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Vælg artikler til eksport.</message>
-	
+
 	<message key="plugins.importexport.crossref.cliUsage">Brug: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] nummer [issueId]</message>
@@ -30,5 +24,4 @@
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Intet nummer mathede det specificerede nummer ID "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Ingen artikel matchede det specificerede artikel ID "{$articleId}".</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Angiv et gyldigt DOI prefix i tidsskrift setupo for at bruge dette plugin.</message>
 </locale>

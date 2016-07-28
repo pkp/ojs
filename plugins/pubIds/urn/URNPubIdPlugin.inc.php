@@ -22,15 +22,6 @@ class URNPubIdPlugin extends PubIdPlugin {
 	// Implement template methods from Plugin.
 	//
 	/**
-	 * @copydoc PubIdPlugin::register()
-	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
-		$this->addLocaleData();
-		return $success;
-	}
-
-	/**
 	 * @copydoc Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
@@ -46,7 +37,6 @@ class URNPubIdPlugin extends PubIdPlugin {
 
 	/**
 	 * @copydoc Plugin::getTemplatePath()
-	 * @param $inCore boolean True iff a core template should be preferred
 	 */
 	function getTemplatePath($inCore = false) {
 		return parent::getTemplatePath($inCore) . 'templates/';
@@ -63,7 +53,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 		$urn = $pubIdPrefix . $pubIdSuffix;
 		$suffixFieldName = $this->getSuffixFieldName();
 		$suffixGenerationStrategy = $this->getSetting($contextId, $suffixFieldName);
-		// checkNo is alread calculated for custom suffixes
+		// checkNo is already calculated for custom suffixes
 		if ($suffixGenerationStrategy != 'customId' && $this->getSetting($contextId, 'urnCheckNo')) {
 			$urn .= $this->_calculateCheckNo($urn);
 		}
@@ -94,8 +84,8 @@ class URNPubIdPlugin extends PubIdPlugin {
 	/**
 	 * @copydoc PKPPubIdPlugin::getResolvingURL()
 	 */
-	function getResolvingURL($journalId, $pubId) {
-		$resolverURL = $this->getSetting($journalId, 'urnResolver');
+	function getResolvingURL($contextId, $pubId) {
+		$resolverURL = $this->getSetting($contextId, 'urnResolver');
 		return $resolverURL . $pubId;
 	}
 
@@ -104,6 +94,20 @@ class URNPubIdPlugin extends PubIdPlugin {
 	 */
 	function getPubIdMetadataFile() {
 		return $this->getTemplatePath().'urnSuffixEdit.tpl';
+	}
+
+	/**
+	 * @copydoc PKPPubIdPlugin::addJavaScript()
+	 */
+	function addJavaScript($request, $templateMgr) {
+		$templateMgr->addJavaScript(
+			'urnCheckNo',
+			$request->getBaseUrl() . DIRECTORY_SEPARATOR . $this->getPluginPath() . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'checkNumber.js',
+			array(
+				'inline' => false,
+				'contexts' => 'publicIdentifiersForm',
+			)
+		);
 	}
 
 	/**
@@ -163,6 +167,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 		$linkActions['clearPubIdLinkActionURN'] = new LinkAction(
 			'clearPubId',
 			new RemoteActionConfirmationModal(
+				$request->getSession(),
 				__('plugins.pubIds.urn.editor.clearObjectsURN.confirm'),
 				__('common.delete'),
 				$request->url(null, null, 'clearPubId', null, $userVars),
@@ -176,8 +181,9 @@ class URNPubIdPlugin extends PubIdPlugin {
 		if (is_a($pubObject, 'Issue')) {
 			// Clear issue objects pub ids
 			$linkActions['clearIssueObjectsPubIdsLinkActionURN'] = new LinkAction(
-				'clearIssueObjectsPubIds',
+				'clearObjectsPubIds',
 				new RemoteActionConfirmationModal(
+					$request->getSession(),
 					__('plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm'),
 					__('common.delete'),
 					$request->url(null, null, 'clearIssueObjectsPubIds', null, $userVars),
@@ -198,7 +204,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 	function getSuffixPatternsFieldNames() {
 		return  array(
 			'Issue' => 'urnIssueSuffixPattern',
-			'Article' => 'urnArticleSuffixPattern',
+			'Submission' => 'urnSubmissionSuffixPattern',
 			'Representation' => 'urnRepresentationSuffixPattern',
 		);
 	}
@@ -214,7 +220,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 	 * @copydoc PKPPubIdPlugin::isObjectTypeEnabled()
 	 */
 	function isObjectTypeEnabled($pubObjectType, $contextId) {
-		return $this->getSetting($contextId, "enable${pubObjectType}URN") == '1';
+		return (boolean) $this->getSetting($contextId, "enable${pubObjectType}URN");
 	}
 
 	/**

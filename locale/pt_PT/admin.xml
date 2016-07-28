@@ -4,7 +4,7 @@
 <!--
   * locale/pt_PT/admin.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="pt_PT" full_name = "Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="admin.hostedJournals">Revistas Hospedadas</message>
 	<message key="admin.settings.journalRedirect">Redireccionamento para revista hospedada</message>
 	<message key="admin.settings.journalRedirectInstructions">Os pedidos realizados no Portal Principal serão direccionados a esta revista. Esta opção pode ser útil caso o Portal hospede apenas uma revista.</message>
@@ -21,7 +21,6 @@
 	<message key="admin.languages.supportedLocalesInstructions">Os idiomas seleccionados estarão disponíveis para todas as revistas no portal, e constarão da lista de idiomas que aparece em cada página do sistema (esta opção pode ser desactivada individualmente por revista). Caso não sejam seleccionados vários idiomas, a lista de idiomas não estará disponível e a opção "configurações de idioma" não estará disponível para as revistas.</message>
 	<message key="admin.languages.confirmUninstall">Deseja realmente remover este idioma? A execução pode afectar revistas hospedas que podem estar utilizando o idioma.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Seleccionar idiomas adicionais para uso no sistema. Os idiomas devem ser instalados antes que possam ser utilizados pelas revistas hospedadas. Veja a documentação para informações sobre como adcicionar novos idiomas no sistema.</message>
-	<message key="admin.languages.downloadLocales">Transferir idiomas</message>
 	<message key="admin.languages.downloadFailed">Erro ao transferir idioma. A seguir, um detalhe do(s) erro(s).</message>
 	<message key="admin.languages.localeInstalled">Idioma "{$locale}" instalado.</message>
 	<message key="admin.languages.download">Transferir idioma</message>
@@ -38,8 +37,8 @@
 	<message key="admin.journals.noneCreated">Nenhuma revista foi criada.</message>
 	<message key="admin.contexts.confirmDelete">Deseja realmente eliminar permanentemente esta revista e o seu conteúdo?</message>
 	<message key="admin.contexts.create">Criar revista</message>
+	<message key="admin.journals.createInstructions">O seu registo como Editor-Gestor da revista será automático. Após a criação de uma revista, aceda-a como gestor e continue com as configurações da revista e registo de utilizadores.</message>
 	<message key="admin.journals.urlWillBe">Geralmente é usado um acrónimo que identifica a revista. O URL da revista será: {$sampleUrl}</message>
-	<message key="admin.contexts.form.titleRequired">Título obrigatório</message>
 	<message key="admin.contexts.form.pathRequired">Caminho obrigatório.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">O caminho deve conter apenas caracteres alfanuméricos, sublinhado, hífens, e deve começar e terminar com um caractere alfanumérico.</message>
 	<message key="admin.contexts.form.pathExists">O caminho seleccionado já está em uso por outra revista.</message>
@@ -56,7 +55,28 @@
 	<message key="admin.mergeUsers.into.description">Escolha um utilizador a quem deseja atribuir as submissões e histórico de tarefas do registo anterior.</message>
 	<message key="admin.mergeUsers.from.description">Escolha um utilizador para juntar o registo com o de outra conta (quando um utilizador possui duas contas distintas, em vez de acumular funções editoriais). O registo seleccionado primeiro será excluído e as suas submissões e histórico de tarefas atribuídas ao segundo registo escolhido.</message>
 	<message key="admin.mergeUsers.allUsers">Todos os utilizadores</message>
-	<message key="admin.mergeUsers.confirm">Deseja realmente juntar o registo do utilizador "{$oldUsername}" no registo do utilizador "{$newUsername}"? O registo de "{$oldUsername}" será eliminado permanentemente. Esta acção é irreversível!</message>
+	<message key="admin.mergeUsers.confirm">Deseja realmente juntar o registo do utilizador "{$oldAccountCount}" no registo do utilizador "{$newUsername}"? O registo de "{$oldAccountCount}" será eliminado permanentemente. Esta acção é irreversível!</message>
 	<message key="admin.mergeUsers.noneEnrolled">Nenhum utilizador registado.</message>
 	<message key="admin.locale.maybeIncomplete">Idiomas marcados podem estar incompletos.</message>
+	<message key="admin.settings.options">Opções</message>
+	<message key="admin.settings.usePaging">Para plataformas cm muitas revistas, distribuir as revistas por diferentes páginas.</message>
+	<message key="admin.settings.journalsList">Elementos da revista</message>
+	<message key="admin.settings.journalsList.description">Por favor seleccione os elementos da revista que serão apresentados em cada página da respectiva revista.</message>
+	<message key="admin.settings.journalsList.showThumbnail">Thumbnail da revista</message>
+	<message key="admin.settings.journalsList.showTitle">Título da revista</message>
+	<message key="admin.settings.journalsList.showDescription">Descrição da revista</message>
+	<message key="admin.settings.defaultMetricDescription">A instalação do OJS foi configurada para guardar mais do que uma métrica. As estatísticas de utilização serão exibidas em diferentes contextos.
+		Nalgumas situações será usada apenas uma única métrica, e.g. mostrar uma lista ordenada dos artigos mais usados ou ordenar 
+		resultados da pesquisa. Por favor seleccione um das métricas configuradas como padrão.</message>
+	<message key="admin.categories">Categorias</message>
+	<message key="admin.categories.enable.description">O administrador pode escolher definir um mapa de categorias para ajudar na organização de plataformas que alojam muitas revistas. Os directores de revista poderão escolher diversas categorias para cada revista, e leitores pode pesquisar os conteúdos das revistas por categoria.</message>
+	<message key="admin.categories.disableCategories">Não organizar as revistas por categorias</message>
+	<message key="admin.categories.enableCategories">Permitir aos Directores da Revista organizar a revista por categorias.</message>
+	<message key="admin.categories.editTitle">Editar Categoria</message>
+	<message key="admin.categories.createTitle">Criar Categoria</message>
+	<message key="admin.categories.create">Criar uma nova Categoria</message>
+	<message key="admin.categories.noneCreated">Não foram criadas categorias</message>
+	<message key="admin.categories.confirmDelete">Tem a certeza que pretende eliminar esta categoria?</message>
+	<message key="admin.categories.name">Nome</message>
+	<message key="admin.categories.nameRequired">É obrigatório indicar um nome da categoria</message>
 </locale>

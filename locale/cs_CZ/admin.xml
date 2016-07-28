@@ -4,63 +4,47 @@
 <!--
   * locale/cs_CZ/admin.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings.
+  * Localization strings for the cs_CZ (Čeština) locale.
+  * locale information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_%28cs_CZ%29
   -->
 
-<locale name="cs_CZ" full_name = "Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="admin.hostedJournals">Hostované časopisy</message>
 	<message key="admin.settings.journalRedirect">Přesměrování časopisu</message>
-	<message key="admin.settings.options">Volby</message>
-	<message key="admin.settings.useAlphalist">Pro web s více časopisy ukázat abecední seznam na domovské stránce dovolující rychlou abecední navigaci mezi časopisy.</message>
-	<message key="admin.settings.usePaging">Pro web s více časopisy rozdělit seznam časopisů do několika stran.</message>
 	<message key="admin.settings.journalRedirectInstructions">Požadavky na hlavní stránku budou přeměrovány na tento časopis. To může být užitečné například pokud stránka hostuje pouze jeden časopis.</message>
 	<message key="admin.settings.noJournalRedirect">Nepřesměrovávat</message>
-	<message key="admin.settings.journalsList">Prvky časopisu</message>
-	<message key="admin.settings.journalsList.description">Vyberte informace o jednotlivých časopisech, které budou zobrazeny pro každý časopis na této stránce.</message>
-	<message key="admin.settings.journalsList.showThumbnail">Náhled časopisu</message>
-	<message key="admin.settings.journalsList.showTitle">Název časopisu</message>
-	<message key="admin.settings.journalsList.showDescription">Popis časopisu</message>
-	<message key="admin.settings.defaultMetricDescription">
-		Vaše instalace OJS umožňuje záznam ve více metrikách. Statistiky přístupů budou zobrazeny v píslušném kontextu.
-		Ovšem existují případy, kdy je potřeba použít pouze jednu metriku. Např. zobrazení seznamu nejčtenějších článků
-		nebo pořadí výsldků vyhledávání. Vyberte prosím jednu metriku jako výchozí.
-	</message>
 	<message key="admin.languages.primaryLocaleInstructions">Toto bude výchozí jazyk pro stránku a všechny hostované časopisy.</message>
-	<message key="admin.languages.supportedLocalesInstructions">Vyberte všechny lokalizace, které mají být podporovány na této stránce. Vybrané lokalizace budou dostupné pro použití ve všech časopisech hostovaných na této stránce a objeví se také v menu pro výběr jazyka na všech stránkách (toto nastavení může být přepsáno na stránkách specifických stránkách daného časopisu). Pokud není vybráno více lokalizací, menu pro výběr jazyka se na stránkách neobjeví a rozšířené jazykové nastavení nebude pro časopisy dostupné.</message>
-	<message key="admin.locale.maybeIncomplete">Označené soubory lokalizace mohou být nekompletní.</message>
-	<message key="admin.languages.confirmUninstall">Jste si jistý, že chcete odinstalovat tuto lokalizaci? Může to ovlivnit všechny časopisy zde hostované, které aktuálně lokalizaci používají.</message>
-	<message key="admin.languages.installNewLocalesInstructions">Vyberte další lokalizace, pro které má být do systému nainstalována podpora. Aby mohly být lokalizace využity hostovanými časopisy, musí být nejprve nainstalovány. Pro informace o přidání nových jazyků viz dokumentaci k OJS.</message>
-	<message key="admin.languages.downloadLocales">Stáhnout lokalizace</message>
-	<message key="admin.languages.downloadFailed">Stahování lokalizace selhalo. Níže uvedené chybové hlášení popisuje selhání.</message>
-	<message key="admin.languages.localeInstalled">Tato "{$locale}" lokalizace byla nainstalována. </message>
-	<message key="admin.languages.download">Stáhnout lokalizaci</message>
+	<message key="admin.languages.supportedLocalesInstructions">Vyberte všechny jazykové lokalizace, které mají být podporovány na této stránce. Vybrané lokalizace budou dostupné pro použití ve všech časopisech hostovaných na této stránce a objeví se také v menu pro výběr jazyka na všech stránkách (toto nastavení může být přepsáno na stránkách specifických stránkách daného časopisu). Pokud není vybráno více jazykových lokalizací, menu pro výběr jazyka se na stránkách neobjeví a rozšířené jazykové nastavení nebude pro časopisy dostupné.</message>
+	<message key="admin.languages.confirmUninstall">Jste si jistý, že chcete odinstalovat tuto jazykovou lokalizaci? Může to ovlivnit všechny časopisy zde hostované, které aktuálně tuto jazykovou lokalizaci používají.</message>
+	<message key="admin.languages.installNewLocalesInstructions">Vyberte další jazykové lokalizace, pro které má být do systému nainstalována podpora. Aby mohly být lokalizace využity hostovanými časopisy, musí být nejprve nainstalovány. Pro informace o přidání nových jazyků viz dokumentaci k OJS.</message>
+	<message key="admin.languages.downloadFailed">Stahování jazykové lokalizace selhalo. Níže uvedené chybové hlášení popisuje selhání.</message>
+	<message key="admin.languages.localeInstalled">Tato "{$locale}" lokalizace byla nainstalována.</message>
+	<message key="admin.languages.download">Stáhnout jazykovou lokalizaci</message>
 	<message key="admin.languages.download.cannotOpen">Nelze otevřít popisovač jazyka z webové stránky PKP.</message>
-	<message key="admin.languages.download.cannotModifyRegistry">Nelze přidat novou lokalizaci do registračního souboru lokalizací - typicky "registry/locales.xml".</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Nelze přidat novou jazykovou lokalizaci do registračního souboru lokalizací - typicky "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">Databáze OJS uživatelů</message>
-	<message key="admin.auth.enableSyncProfiles">Umožnit synchronizaci uživatelských profilů (pokud je podporována tímto ověřovacím plug-inem). Informace v profilu uživatele budou automaticky aktualizovány ze vzdáleného zdroje, jakmile se uživatel přihlásí a změní se jeho profil (včetně změn hesla) v rámci OJS. Pokud není tato možnost povolena, informace v OJS profilu budou uchovávány odděleně od informací vzdáleného zdroje.</message>
-	<message key="admin.auth.enableSyncPasswords">Umožnit změnu hesla uživatele (pokud je podporována tímto ověřovacím plug-inem). Povolení této možnosti umožní uživatelům změnit své heslo v rámci OJS a využít funkci "ztracené heslo" pro obnovení zapomenutého hesla. Tyto funkce nebudou dostupné uživatelům s tímto zdrojem ověření pokud není povolena tato možnost.</message>
-	<message key="admin.auth.enableCreateUsers">Umožnit vytvoření uživatele (pokud je podporováno tímto ověřovacím plug-inem). Uživatelé vytvoření v rámci OJS tímto zdrojem ověření budou, pokud již neexistují, automaticky přidáni do vzdáleného zdroje ověření. Navíc, pokud je tento zdroj výchozím zdrojem ověření, OJS účty vytvořené v průběhu registrace uživatele budou přidány do vzdáleného zdroje ověření.</message>
+	<message key="admin.auth.enableSyncProfiles">Umožnit synchronizaci uživatelských profilů (pokud je podporována tímto ověřovacím pluginem). Informace v profilu uživatele budou automaticky aktualizovány ze vzdáleného zdroje, jakmile se uživatel přihlásí a změní se jeho profil (včetně změn hesla) v rámci OJS. Pokud není tato možnost povolena, informace v OJS profilu budou uchovávány odděleně od informací vzdáleného zdroje.</message>
+	<message key="admin.auth.enableSyncPasswords">Umožnit změnu hesla uživatele (pokud je podporována tímto ověřovacím pluginem). Povolení této možnosti umožní uživatelům změnit své heslo v rámci OJS a využít funkci "ztracené heslo" pro obnovení zapomenutého hesla. Tyto funkce nebudou dostupné uživatelům s tímto zdrojem ověření pokud není povolena tato možnost.</message>
+	<message key="admin.auth.enableCreateUsers">Umožnit vytvoření uživatele (pokud je podporováno tímto ověřovacím pluginem). Uživatelé vytvoření v rámci OJS tímto zdrojem ověření budou, pokud již neexistují, automaticky přidáni do vzdáleného zdroje ověření. Navíc, pokud je tento zdroj výchozím zdrojem ověření, OJS účty vytvořené v průběhu registrace uživatele budou přidány do vzdáleného zdroje ověření.</message>
 	<message key="admin.systemVersion">Verze OJS</message>
 	<message key="admin.systemConfiguration">Konfigurace OJS</message>
 	<message key="admin.systemConfigurationDescription"><![CDATA[Nastavení konfigurace OJS z <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.journals.journalSettings">Nastavení časopisu</message>
 	<message key="admin.journals.noneCreated">Žádné časopisy nebyly vytvořeny.</message>
-	<message key="admin.journals.confirmDelete">Jste si jistý, že chcete trvale odstranit tento časopis a veškerý jeho obsah?</message>
-	<message key="admin.journals.create">Vytvořit časopis</message>
+	<message key="admin.contexts.confirmDelete">Jste si jistý, že chcete trvale odstranit tento časopis a veškerý jeho obsah?</message>
+	<message key="admin.contexts.create">Vytvořit časopis</message>
 	<message key="admin.journals.createInstructions">Budete automaticky zaregistrován jako manažer tohoto časopisu. Poté, co vytvoříte nový časopis, vstupte do něj jako manažer a pokračujte v jeho nastavení a zápisu uživatelů.</message>
-	<message key="admin.journals.urlWillBe">URL časopisu bude {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">Je vyžadován název.</message>
-	<message key="admin.journals.form.pathRequired">Je vyžadována cesta.</message>
-	<message key="admin.journals.form.pathAlphaNumeric">Cesta může obsahovat pouze alfanumerické znaky, podtržítka a pomlčky a musí začínat a končit alfanumerickým znakem.</message>
-	<message key="admin.journals.form.pathExists">Zvolená cesta již je využívána jiným časopisem.</message>
-	<message key="admin.journals.enableJournalInstructions">Povolte pro tento časopis, aby byl na této stránce veřejně zobrazen</message>
+	<message key="admin.journals.urlWillBe">Toto má být krátké slovo nebo akronym, které identifikuje časopis. URL časopisu bude {$sampleUrl}</message>
+	<message key="admin.contexts.form.pathRequired">Je vyžadována cesta.</message>
+	<message key="admin.contexts.form.pathAlphaNumeric">Cesta může obsahovat pouze alfanumerické znaky, podtržítka a pomlčky a musí začínat a končit alfanumerickým znakem.</message>
+	<message key="admin.contexts.form.pathExists">Zvolená cesta již je využívána jiným časopisem.</message>
+	<message key="admin.journals.enableJournalInstructions">Povolte pro tento časopis, aby byl na těchto stránkách veřejně zobrazen</message>
 	<message key="admin.journals.journalDescription">Popis časopisu</message>
-	<message key="admin.journal.pathImportInstructions">Existující cesta časopisu nebo cesta, která má být vytvořena (např. "ojs").</message>
-	<message key="admin.journals.importSubscriptions">Importovat předpaltné</message>
+	<message key="admin.journal.pathImportInstructions">Existující cesta k časopisu nebo cesta, která má být vytvořena (např. "ojs").</message>
+	<message key="admin.journals.importSubscriptions">Importovat předplatné</message>
 	<message key="admin.journals.transcode">Překódovat metadata článků z ISO8859-1</message>
 	<message key="admin.journals.redirect">Generovat kód pro přesměrování adres URL OJS 1 na adresy URL OJS 2</message>
 	<message key="admin.journals.form.importPathRequired">Je vyžadována cesta importu.</message>
@@ -70,34 +54,27 @@
 	<message key="admin.mergeUsers.into.description">Vyberte uživatele, kterému mají být přiřazena autorství, přidělené úlohy atd. předchozího uživatele.</message>
 	<message key="admin.mergeUsers.from.description">Vyberte uživatele, který má být sloučen s jiným uživatelským účtem (např., pokud má někdo dva uživatelské účty). Prvně zvolený účet bude vymazán a jeho příspěvky, úlohy atd. budou přiřazeny ke druhému účtu.</message>
 	<message key="admin.mergeUsers.allUsers">Všichni zaregistrovaní uživatelé</message>
-	<message key="admin.mergeUsers.confirm">Jste si jistý, že chcete sloučit účet s uživatelským jménem "{$oldUsername}" do účtu s uživatelským jménem "{$newUsername}"? Účet s uživatelským jménem "{$oldUsername}" poté přestane existovat. Tato akce je nevratná.</message>
+	<message key="admin.mergeUsers.confirm">Jste si jistý, že chcete sloučit vybraný účet/účty   "{$oldAccountCount}" do účtu s uživatelským jménem "{$newUsername}"? Vybraný účet/účty  "{$oldAccounCount}" poté přestane/přestanou existovat. Tato akce je nevratná.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Žádní zapsaní uživatelé.</message>
-
-	<!-- Categories -->
+	<message key="admin.locale.maybeIncomplete">Označené soubory lokalizace mohou být nekompletní.</message>
+	<message key="admin.settings.options">Volby</message>
 	<message key="admin.categories">Kategorie</message>
-	<message key="admin.categories.enable.description">Administrátor stránky může definovat kategorie zde pro usnadnění správy velkého množství časopisů. Manažeři časopisů potom mohou vybrat vhodné kategorie pro každý časopis a čtenáři mohou prohlížet časopisy podle jednotlivých kategorií.</message>
-	<message key="admin.categories.disableCategories">Neorganizovat časopis do kategorií.</message>
-	<message key="admin.categories.enableCategories">Povolit manažerům časopisu organizovat články do sekcí.</message>
+	<message key="admin.categories.disableCategories">Neorganizovat časopisy do kategorií.</message>
+	<message key="admin.categories.enableCategories">Dovolit manažerům organizovat časopisy do kategorií.</message>
 	<message key="admin.categories.editTitle">Editovat kategorii</message>
 	<message key="admin.categories.createTitle">Vytvořit kategorii</message>
 	<message key="admin.categories.create">Vytvořit novou kategorii</message>
-	<message key="admin.categories.noneCreated">Vytvořit kategorii</message>
-	<message key="admin.categories.confirmDelete">Opravdu si přejete vymazat tuto kategorii?</message>
+	<message key="admin.categories.noneCreated">Nebyla vytvořena žádná kategorie</message>
 	<message key="admin.categories.name">Jméno</message>
-	<message key="admin.categories.nameRequired">Název kategorie je povinný.</message>
-
-	<message key="admin.copyAccessLogFileTool.usage">Copy the passed apache access log file(s), filtering the entries related with this installation,
-to the current files directory, inside the UsageStatsPlugin stage directory. Must run under user with enough privilegies to read access apache log files.
-
-This tool will only copy files that aren't already inside the usageStats file loader directories (stage, processing, archive, reject).
-
-Usage: {$scriptName} path/to/apache/log/file.log
-Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory 
-	</message>
-	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Chyba: nelze vytvořit dočasný adresář {$tmpDir}</message>
-	<message key="admin.copyAccessLogFileTool.error.acessingFile">Chyba: soubor {$filePath} neexistuje nebo není přístupný.</message>
-	<message key="admin.copyAccessLogFileTool.error.copyingFile">Chyba: nelze kopírovat soubor z {$filePath} do {$tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.error.deletingFile">Chyba: nelze smazat soubor {$tmpFilePath}</message>
-	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Upozornění: soubor {$filePath} již uvnitř adresáře použití statistiky existuje.</message>
-	<message key="admin.copyAccessLogFileTool.success">Úspěch: {$filePath} do {$destinationPath}</message>
+	<message key="admin.settings.journalsList.showThumbnail">Náhled časopisu</message>
+	<message key="admin.settings.journalsList.showTitle">Název časopisu</message>
+	<message key="admin.settings.journalsList.showDescription">Popis časopisu</message>
+	<message key="admin.categories.nameRequired">Je požadováno jméno kategorie.</message>
+	<message key="admin.settings.usePaging">Pro stránky s mnoha časopisy je vhodné rozdělit seznam časopisů na několik stránek.</message>
+	<message key="admin.settings.journalsList">Prvky časopisu</message>
+	<message key="admin.settings.journalsList.description">Zvolte prvky časopisu, které budou zobrazeny pro každý časopis na úvodní stránce.</message>
+	<message key="admin.settings.defaultMetricDescription">Vaše instalace OJS je konfigurována k zaznamenávání více metrik. Statistiky čtenosti budou zobrazeny ve více kontextech. V některých případech musí být použita jedna statistika čtenosti, např. při zobrazování seznamu nejčtenějších článků, nebo při zobrazení rozsahu hledání. Vyberte si, prosím, jednu z následujících metrik jako standardní.</message>
+	<message key="admin.categories.enable.description">Administrátor webu se může rozhodnout definovat sadu kategorií, aby mohlo být zorganizováno více časopisů. Manažer časopisu se pak může rozhodnou pro jednu či více kategorií, do kterých časopis spadá.</message>
+	<message key="admin.categories.confirmDelete">Přejete si smazat tuto kategorii?</message>
+	
 </locale>

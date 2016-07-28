@@ -24,6 +24,7 @@
 </script>
 
 <form class="pkp_form" id="{$submissionMetadataViewFormId}" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT op="saveForm"}">
+	{csrf}
 	{assign var="notificationId" value="submissionMetadataViewFormNotification-"|uniqid|escape}
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId=$notificationId}
 
@@ -45,7 +46,7 @@
 		{load_url_in_div id=$authorsGridContainer url="$authorGridUrl"}
 	{/if}
 
-	{include file="core:submission/submissionMetadataFormFields.tpl" readOnly=$formParams.readOnly}
+	{include file="submission/submissionMetadataFormFields.tpl" readOnly=$formParams.readOnly}
 
 	{if !$formParams.hideSubmit}
 		{fbvFormButtons id="submissionMetadataFormSubmit" submitText="common.save"}

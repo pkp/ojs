@@ -147,7 +147,6 @@ class Application extends PKPApplication {
 			'citationParser',
 			'gateways',
 			'generic',
-			'implicitAuth',
 			'importexport',
 			'oaiMetadataFormats',
 			'paymethod',

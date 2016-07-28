@@ -20,6 +20,7 @@
 </script>
 
 <form class="pkp_form" id="mastheadForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.JournalSettingsTabHandler" op="saveFormData" tab="masthead"}">
+	{csrf}
 
 	{include file="controllers/tab/settings/wizardMode.tpl" wizardMode=$wizardMode}
 
@@ -36,6 +37,12 @@
 
 		{fbvFormSection title="manager.setup.journalAbbreviation" for="abbreviation" inline=true size=$fbvStyles.size.SMALL}
 			{fbvElement type="text" multilingual=true name="abbreviation" id="abbreviation" value=$abbreviation}
+		{/fbvFormSection}
+	{/fbvFormArea}
+
+	{fbvFormArea id="mastheadPublisher"}
+		{fbvFormSection label="manager.setup.publisher" for="publisherInstitution" description="manager.setup.publisherDescription"}
+			{fbvElement type="text" name="publisherInstitution" id="publisherInstitution" value=$publisherInstitution maxlength="255"}
 		{/fbvFormSection}
 	{/fbvFormArea}
 

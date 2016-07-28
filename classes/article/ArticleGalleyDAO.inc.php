@@ -98,7 +98,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 				LEFT JOIN published_submissions pa ON g.submission_id = pa.submission_id ';
 		if (is_null($settingValue)) {
 			$sql .= 'LEFT JOIN submission_galley_settings gs ON g.galley_id = gs.galley_id AND gs.setting_name = ?
-				WHERE	(gs.setting_value IS NULL OR gs.setting_value = "")';
+				WHERE	(gs.setting_value IS NULL OR gs.setting_value = \'\')';
 		} else {
 			$params[] = (string) $settingValue;
 			$sql .= 'INNER JOIN submission_galley_settings gs ON g.galley_id = gs.galley_id
@@ -147,7 +147,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	 * @param $journalId int
 	 * @return DAOResultFactory
 	 */
-	function getByJournalId($journalId) {
+	function getByContextId($journalId) {
 		$result = $this->retrieve(
 			'SELECT	g.*, sf.*
 			FROM	submission_galleys g
@@ -191,7 +191,6 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	 */
 	function getAdditionalFieldNames() {
 		$additionalFields = parent::getAdditionalFieldNames();
-		// FIXME: Move this to a PID plug-in.
 		$additionalFields[] = 'pub-id::publisher-id';
 		return $additionalFields;
 	}
@@ -440,7 +439,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 		$journalId = (int) $journalId;
 		$settingName = 'pub-id::'.$pubIdType;
 
-		$galleys = $this->getByJournalId($journalId);
+		$galleys = $this->getByContextId($journalId);
 		while ($galley = $galleys->next()) {
 			$this->update(
 				'DELETE FROM submission_galley_settings WHERE setting_name = ? AND galley_id = ?',

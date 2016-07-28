@@ -32,7 +32,9 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 	 * @copydoc PKPPubIdPlugin::getPubObjectTypes()
 	 */
 	function getPubObjectTypes() {
-		return array('Issue', 'Article', 'Representation', 'SubmissionFile');
+		$pubObjectTypes = parent::getPubObjectTypes();
+		array_push($pubObjectTypes, 'Issue');
+		return $pubObjectTypes;
 	}
 
 	/**
@@ -46,29 +48,8 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 				$issues = $issueDao->getIssues($contextId);
 				$objectsToCheck = $issues->toArray();
 				break;
-
-			case 'Article':
-				$articleDao = Application::getSubmissionDAO(); /* @var $articleDao PublishedArticleDAO */
-				$articles = $articleDao->getByContextId($contextId);
-				$objectsToCheck = $articles->toArray();
-				break;
-
-			case 'Representation':
-				$representationDao = Application::getRepresentationDAO(); /* @var $representationDao ArticleGalleyDAO */
-				$representations = $representationDao->getByJournalId($contextId);
-				$objectsToCheck = $representations->toArray();
-				break;
-
-			case 'SubmissionFile':
-				$representationDao = Application::getRepresentationDAO();
-				$representations = $representationDao->getByJournalId($contextId);
-				$objectsToCheck = array();
-				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-				import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_... constants
-				while ($representation = $representations->next()) {
-					$objectsToCheck = array_merge($objectsToCheck, $submissionFileDao->getAllRevisionsByAssocId(ASSOC_TYPE_REPRESENTATION, $representation->getId(), SUBMISSION_FILE_PROOF));
-				}
-				unset($representations);
+			default:
+				$objectsToCheck = parent::getPubObjects($pubObjectType, $contextId);
 				break;
 		}
 		return $objectsToCheck;
@@ -90,21 +71,21 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 
 		// Initialize variables for publication objects.
 		$issue = ($pubObjectType == 'Issue' ? $pubObject : null);
-		$article = ($pubObjectType == 'Article' ? $pubObject : null);
+		$submission = ($pubObjectType == 'Submission' ? $pubObject : null);
 		$representation = ($pubObjectType == 'Representation' ? $pubObject : null);
 		$submissionFile = ($pubObjectType == 'SubmissionFile' ? $pubObject : null);
 
 		// Get the context id.
-		if (in_array($pubObjectType, array('Issue', 'Article'))) {
+		if (in_array($pubObjectType, array('Issue', 'Submission'))) {
 			$contextId = $pubObject->getJournalId();
 		} else {
-			// Retrieve the article.
+			// Retrieve the submission.
 			assert(is_a($pubObject, 'Representation') || is_a($pubObject, 'SubmissionFile'));
-			$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao PublishedArticleDAO */
-			$article = $articleDao->getById($pubObject->getSubmissionId(), null, true);
-			if (!$article) return null;
+			$submissionDao = Application::getSubmissionDAO();
+			$submission = $submissionDao->getById($pubObject->getSubmissionId(), null, true);
+			if (!$submission) return null;
 			// Now we can identify the context.
-			$contextId = $article->getJournalId();
+			$contextId = $submission->getJournalId();
 		}
 		// Check the context
 		$context = $this->getContext($contextId);
@@ -117,9 +98,9 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 
 		// Retrieve the issue.
 		if (!is_a($pubObject, 'Issue')) {
-			assert(!is_null($article));
+			assert(!is_null($submission));
 			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-			$issue = $issueDao->getIssueByArticleId($article->getId(), $contextId);
+			$issue = $issueDao->getIssueByArticleId($submission->getId(), $contextId);
 		}
 		if ($issue && $contextId != $issue->getJournalId()) return null;
 
@@ -156,12 +137,12 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 					$pubIdSuffix = PKPString::regexp_replace('/%Y/', $issue->getYear(), $pubIdSuffix);
 				}
 
-				if ($article) {
+				if ($submission) {
 					// %a - article id
-					$pubIdSuffix = PKPString::regexp_replace('/%a/', $article->getId(), $pubIdSuffix);
+					$pubIdSuffix = PKPString::regexp_replace('/%a/', $submission->getId(), $pubIdSuffix);
 					// %p - page number
-					if ($article->getPages()) {
-						$pubIdSuffix = PKPString::regexp_replace('/%p/', $article->getPages(), $pubIdSuffix);
+					if ($submission->getPages()) {
+						$pubIdSuffix = PKPString::regexp_replace('/%p/', $submission->getPages(), $pubIdSuffix);
 					}
 				}
 
@@ -186,8 +167,8 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 					$pubIdSuffix .= '.v%vi%i';
 				}
 
-				if ($article) {
-					$pubIdSuffix .= '.' . $article->getId();
+				if ($submission) {
+					$pubIdSuffix .= '.' . $submission->getId();
 				}
 
 				if ($representation) {
@@ -215,13 +196,12 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 	 */
 	function clearIssueObjectsPubIds($issue) {
 		$issueId = $issue->getId();
-		$articlePubIdEnabled = $this->isObjectTypeEnabled('Article', $issue->getJournalId());
+		$submissionPubIdEnabled = $this->isObjectTypeEnabled('Submission', $issue->getJournalId());
 		$representationPubIdEnabled = $this->isObjectTypeEnabled('Representation', $issue->getJournalId());
 		$filePubIdEnabled = $this->isObjectTypeEnabled('SubmissionFile', $issue->getJournalId());
-		if (!$articlePubIdEnabled && !$representationPubIdEnabled && !$filePubIdEnabled) return false;
+		if (!$submissionPubIdEnabled && !$representationPubIdEnabled && !$filePubIdEnabled) return false;
 
 		$pubIdType = $this->getPubIdType();
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$representationDao = Application::getRepresentationDAO();
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
@@ -229,8 +209,8 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 
 		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
 		foreach ($publishedArticles as $publishedArticle) {
-			if ($articlePubIdEnabled) { // Does this option have to be enabled here for?
-				$articleDao->deletePubId($publishedArticle->getId(), $pubIdType);
+			if ($submissionPubIdEnabled) { // Does this option have to be enabled here for?
+				$publishedArticleDao->deletePubId($publishedArticle->getId(), $pubIdType);
 			}
 			if ($representationPubIdEnabled || $filePubIdEnabled) { // Does this option have to be enabled here for?
 				$representations = $representationDao->getBySubmissionId($publishedArticle->getId());
@@ -254,12 +234,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 	 * @copydoc PKPPubIdPlugin::getDAOs()
 	 */
 	function getDAOs() {
-		return  array(
-			'Issue' => DAORegistry::getDAO('IssueDAO'),
-			'Article' => DAORegistry::getDAO('ArticleDAO'),
-			'Representation' => Application::getRepresentationDAO(),
-			'SubmissionFile' => DAORegistry::getDAO('SubmissionFileDAO'),
-		);
+		return array_merge(parent::getDAOs(), array('Issue' => DAORegistry::getDAO('IssueDAO')));
 	}
 
 }

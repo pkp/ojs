@@ -33,6 +33,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="subscriptionType" method="post" action="{url op="updateSubscriptionType"}">
+{csrf}
 {if $typeId}
 <input type="hidden" name="typeId" value="{$typeId|escape}" />
 {/if}

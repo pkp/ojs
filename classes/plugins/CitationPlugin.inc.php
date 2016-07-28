@@ -21,6 +21,10 @@ abstract class CitationPlugin extends Plugin {
 	 */
 	function CitationPlugin() {
 		parent::Plugin();
+
+		if ($this->getEnabled()) {
+			HookRegistry::register('TemplateManager::display', array($this, 'loadJavaScript'));
+		}
 	}
 
 	/**
@@ -29,37 +33,22 @@ abstract class CitationPlugin extends Plugin {
 	abstract function getCitationFormatName();
 
 	/**
-	 * Used by the cite function to embed an HTML citation in the
-	 * templates/rt/captureCite.tpl template, which ships with OJS.
+	 * Load the JavaScript file to retrieve citation formats
+	 *
 	 * @param $hookName string Hook name
-	 * @param $args array Hook arguments
-	 * @return boolean Hook processing status
+	 * @param $args array Hook arguments. See `TemplateManager::display`
+	 * @return null
 	 */
-	function displayCitationHook($hookName, $args) {
-		$params =& $args[0];
-		$templateMgr =& $args[1];
-		$output =& $args[2];
+	function loadJavaScript($hookName, $args) {
+		$templateMgr =& $args[0];
 
-		$output .= $templateMgr->fetch($this->getTemplatePath() . '/citation.tpl');
-		return true;
-	}
-
-	/**
-	 * Display an HTML-formatted citation. Default implementation displays
-	 * an HTML-based citation using the citation.tpl template in the plugin
-	 * path.
-	 * @param $article Article
-	 * @param $issue Issue
-	 * @param $journal Journal
-	 */
-	function displayCitation($article, $issue, $journal) {
-		HookRegistry::register('Template::RT::CaptureCite', array($this, 'displayCitationHook'));
-		$templateMgr = TemplateManager::getManager($this->getRequest());
-		$templateMgr->assign('citationPlugin', $this);
-		$templateMgr->assign('article', $article);
-		$templateMgr->assign('issue', $issue);
-		$templateMgr->assign('journal', $journal);
-		$templateMgr->display('rt/captureCite.tpl');
+		$templateMgr->addJavaScript(
+			'citationFormats',
+			$this->getRequest()->getBaseUrl() . '/js/plugins/citationFormats.js',
+			array(
+				'context' => 'frontend-article-view',
+			)
+		);
 	}
 
 	/**
@@ -78,6 +67,16 @@ abstract class CitationPlugin extends Plugin {
 		$templateMgr->assign('journal', $journal);
 		return $templateMgr->fetch($this->getTemplatePath() . '/citation.tpl');
 	}
+
+	/**
+	 * Whether this citation format is a downloadable file format (eg - EndNote)
+	 *
+	 * @return bool
+	 */
+	function isDownloadable() {
+		return false;
+	}
+
 }
 
 ?>

@@ -15,13 +15,7 @@
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.importexport.crossref.displayName">CrossRef用XMLエクスポートプラグイン</message>
 	<message key="plugins.importexport.crossref.description">論文のメタデータをCrossRef XMLフォーマットでエクスポートします。</message>
-	
-	<message key="plugins.importexport.crossref.export">データのエクスポート</message>
-	<message key="plugins.importexport.crossref.export.issues">巻号をエクスポートする</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">エクスポートする巻号を選択してください。</message>
-	<message key="plugins.importexport.crossref.export.articles">論文をエクスポートする</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">エクスポートする論文を選択してください。</message>
-	
+
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[使用法: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
@@ -31,5 +25,4 @@
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">指定した巻号ID "{$issueId}" に合致する号がありませんでした。</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">指定した論文ID "{$articleId}" に合致する論文がありませんでした。</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">このプラグインを使用するには、雑誌設定ページでこの雑誌のDOIプリフィックスを設定する必要があります。</message>
 </locale>

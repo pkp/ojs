@@ -17,6 +17,7 @@
 </script>
 
 <form class="pkp_form" id="journalSettingsForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="grid.admin.journal.JournalGridHandler" op="updateContext"}">
+	{csrf}
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="journalSettingsNotification"}
 
 	{if $contextId}

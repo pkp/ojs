@@ -1,16 +1,44 @@
 /**
- * @file styles/pages/indexJournal.less
+ * @file  plugins/themes/default/styles/pages/indexJournal.less
  *
  * Copyright (c) 2014-2016 Simon Fraser University Library
  * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @brief Styles applying to the journal homepage
+ * @brief Styles applying to the front page of the journal
  * @link templates/frontend/pages/indexJournal.tpl
  */
-.page_index_journal {
+.pkp_page_index {
 
-	// Announcements
+	.homepage_image,
+	.additional_content {
+		margin-left: -@base;
+		margin-right: -@base;
+
+		@media (min-width: @screen-phone) {
+			margin-left: -@double;
+			margin-right: -@double;
+		}
+
+		@media (min-width: @screen-desktop) {
+			margin-left: -@triple;
+			margin-right: -@triple;
+		}
+	}
+
+	.homepage_image {
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		@media (min-width: @screen-desktop) {
+			margin-top: -@triple; // flush with top nav
+		}
+	}
+
 	.cmp_announcements {
 		.pkp_helpers_clear();
 		border-top: @bg-border;
@@ -90,6 +118,56 @@
 				padding-left: @triple;
 				padding-right: @triple;
 			}
+		}
+	}
+
+	.current_issue {
+
+		.current_issue_title {
+			margin: @double 0;
+			font-weight: @bold;
+		}
+
+		.read_more {
+			.cmp_button_text(@fa-var-chevron-right);
+			margin-bottom: @double;
+		}
+
+		@media(min-width: @screen-tablet) {
+
+			.section:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.additional_content {
+		padding: @triple @base 0 @base;
+		border-top: @bg-border;
+
+		@media (min-width: @screen-phone) {
+			padding-left: @double;
+			padding-right: @double;
+		}
+
+		@media (min-width: @screen-desktop) {
+			padding-left: @triple;
+			padding-right: @triple;
+		}
+
+		> p:first-child {
+			margin-top: 0;
+		}
+
+		> p:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	@media(min-width: @screen-tablet) {
+
+		.cmp_announcements + .additional_content {
+			border-top: none;
 		}
 	}
 }

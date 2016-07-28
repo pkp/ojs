@@ -1,62 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * locale/es_ES/admin.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español (España)) locale.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   *
+  * Localization strings.
   -->
 
-<locale name="es_ES" full_name = "Español (España)">
+<locale name="es_ES" full_name="Español (España)">	
 	<message key="admin.hostedJournals">Revistas alojadas</message>
-	<message key="admin.settings.journalRedirect">Redirección a la revista</message>
-	<message key="admin.settings.journalRedirectInstructions">Las peticiones serán redirigidas a esta revista. Esto puede ser útil, por ejemplo, si sólo hay una revista alojada.</message>
-	<message key="admin.settings.noJournalRedirect">No redireccionar</message>
-	<message key="admin.languages.primaryLocaleInstructions">Este será el idioma por defecto para el sitio y cualquier revista alojada.</message>
-	<message key="admin.languages.supportedLocalesInstructions">Seleccione todas las localizaciones que soportará el sitio. Las localizaciones seleccionados estarán disponibles para cualquier revista, también aparecerán en un menú de selección de idioma en todas las páginas (puede ser eliminado en páginas específicas de una revista). Si no se seleccionan múltiples localizaciones, el menú de selección de idioma no aparecerá y no se estarán disponibles las funciones de idiomas adicionales para las revistas.</message>
-	<message key="admin.languages.confirmUninstall">¿Seguro que quiere desinstalar esta localización? Esta acción puede afectar a cualquier revista que use este localización.</message>
-	<message key="admin.languages.installNewLocalesInstructions">Seleccione localizaciones adicionales a las que quiere dar soporte en este sistema. Es necesario instalar las localizaciones antes de poder ser usadas por las revistas. Consulte la documentación de OJS para obtener información acerca de cómo añadir soporte a nuevos idiomas.</message>
-	<message key="admin.languages.downloadLocales">Descargar localizaciones</message>
-	<message key="admin.languages.downloadFailed">Falló la descarga de fichero de localizaciones. El mensaje de error siguiente describe el fallo.</message>
-	<message key="admin.languages.localeInstalled">El fichero de localización "{$locale}" ha sido instalado.</message>
-	<message key="admin.languages.download">Descargar fichero de localización</message>
-	<message key="admin.languages.download.cannotOpen">No es posible abrir el descriptor del idioma desde la web de PKP.</message>
-	<message key="admin.languages.download.cannotModifyRegistry">No se puede añadir el nuevo fichero de traducción al fichero de registro de idiomas, normalmente en "registry/locales.xml".</message>
-	<message key="admin.auth.ojs">Base de datos usuarios/as OJS</message>
-	<message key="admin.auth.enableSyncProfiles">Activar la sincronización de perfiles de usuario/a (si está soportado por este plugin de autentificación). La información del perfil de usuario se actualizará automáticamente desde la fuente remota cuando un/a usuario/a se identifica, y los cambios en el perfil (incluyendo cambios en la contraseña) realizados en OJS se actualizarán automáticamente en la fuente remota. Si no se activa esta opción, la información del perfil de OJS se mantendrá separada del perfil remoto.</message>
-	<message key="admin.auth.enableSyncPasswords">Permitir la modificación de contraseñas de usuarios/as (si está soportado por este plugin de autentificación). Al activar esta opción se permite a las/os usuarias/os modificar su contraseña de OJS y usar la opción "he olvidado mi contraseña" para restablecer una contraseña olvidada. Estas funciones no estarán disponibles para las/os usuarias/os con esta fuente de autentificación si no está activada esta opción.</message>
-	<message key="admin.auth.enableCreateUsers">Permitir la creación de usuarias/os (si está soportada por este plugin de autentificación). Los/as usuarios/as creados dentro de OJS con esta fuente de autentificación se añadirán automáticamente a la fuente de autentificación remota si no existen ya. Además, si esta es la fuente de autentificación por defecto, también se añadirán a la fuente de autentificación remota las cuentas de OJS creadas a través del registro de usuaria/o.</message>
+	<message key="admin.settings.journalRedirect">Redirigir revista</message>
+	<message key="admin.settings.options">Opciones</message>
+	<message key="admin.settings.usePaging">En sitios con muchas revistas, divida la lista de revistas en varias páginas.</message>
+	<message key="admin.settings.journalRedirectInstructions">Las solicitudes para acceder al sitio principal se redirigirán a esta revista. Esto puede resultarle útil si el sitio sólo aloja una revista, por ejemplo.</message>
+	<message key="admin.settings.noJournalRedirect">No redirigir</message>
+	<message key="admin.settings.journalsList">Elementos de la revista</message>
+	<message key="admin.settings.journalsList.description">Elija los elementos que se mostrarán para cada revista en la página del sitio.</message>
+	<message key="admin.settings.journalsList.showThumbnail">Miniatura de la revista</message>
+	<message key="admin.settings.journalsList.showTitle">Título de la revista</message>
+	<message key="admin.settings.journalsList.showDescription">Descripción de la revista</message>
+	<message key="admin.settings.defaultMetricDescription">
+		Su instalación de OJS está configurada para registrar más de una métrica de uso. Las estadísticas de uso se mostrarán en varios contextos. En algunos casos se debe utilizar una sola estadística de uso, p. ej. para mostrar una lista ordenada de los artículos más consultados o para clasificar los resultados de búsqueda. Seleccione una de las métricas configuradas como predeterminada.
+	</message>
+	<message key="admin.languages.primaryLocaleInstructions">Éste será el idioma predeterminado para el sitio y para todas las revistas que aloje.</message>
+	<message key="admin.languages.supportedLocalesInstructions">Seleccione todas las configuraciones regionales que serán compatibles con el sitio. Las configuraciones regionales seleccionadas estarán disponibles para todas las revistas alojadas en el sitio y también aparecerán en el menú de selección de idioma en cada página del sitio (puede ser anulado en páginas específicas de las revistas). Si no ha seleccionado más de una configuración regional, el menú de selección no aparecerá y la configuración extendida de idioma no estará disponible para las revistas.</message>
+	<message key="admin.locale.maybeIncomplete">Las configuraciones regionales marcadas pueden estar incompletas.</message>
+	<message key="admin.languages.confirmUninstall">¿Está seguro/a de que desea desinstalar esta configuración regional? Esto puede afectar a cualquier revista alojada que esté utilizando actualmente dicha configuración regional.</message>
+	<message key="admin.languages.installNewLocalesInstructions">Seleccione cualquier configuración regional adicional para instalar su soporte en este sistema. Debe instalar las configuraciones regionales antes de que otras revistas alojadas puedan utilizarlas. Vea la documentación de OJS para obtener más información o para añadir soporte para nuevos idiomas.</message>
+	<message key="admin.languages.downloadFailed">Fallo en la descarga de configuraciones regionales. El siguiente mensaje/s de error describe el fallo.</message>
+	<message key="admin.languages.localeInstalled">La configuración regional "{$locale}" se instaló.</message>
+	<message key="admin.languages.download">Descargar configuración regional</message>
+	<message key="admin.languages.download.cannotOpen">No se puede abrir el descriptor de idiomas del sitio web PKP.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">No se puede añadir la nueva configuración regional al archivo de registro de configuraciones locales, normalmente "registry/locales.xml".</message>
+	<message key="admin.auth.ojs">Base de datos de usuarios/as de OJS</message>
+	<message key="admin.auth.enableSyncProfiles">Habilitar la sincronización del perfil de usuario/a (si el módulo de autenticación es compatible). La información del perfil del usuario/a se actualizará automáticamente desde una fuente remota cuando el usuario/a inicie sesión. Los cambios que se hagan en el perfil dentro de OJS (incluido el cambio de contraseña) se actualizarán automáticamente en la fuente remota. Si esta opción no está habilitada, la información del perfil de OJS se mantendrá separada de la información del perfil de la fuente remota.</message>
+	<message key="admin.auth.enableSyncPasswords">Habilitar la modificación de contraseña de usuario/a (si el módulo de autenticación es compatible). Habilitar esta opción permite a los usuarios/as modificar su contraseña desde OJS y usar la función de OJS "contraseña perdida" para restablecer la contraseña en caso de olvido. Los usuarios/as con esta fuente de autenticación no podrán disponer de dichas funciones si la opción no está habilitada.</message>
+	<message key="admin.auth.enableCreateUsers">Habilitar la creación de usuarios/as (si es compatible con el módulo de autenticación). Los usuarios/as creados en OJS con esta fuente de autenticación se añadirán automáticamente a la fuente de autenticación remota si no existían previamente. De forma adicional, si ésta es la fuente de autenticación por defecto, las cuentas OJS creadas mediante un registro de usuario/a también se añadirán a la fuente de autenticación remota.</message>
 	<message key="admin.systemVersion">Versión de OJS</message>
 	<message key="admin.systemConfiguration">Configuración de OJS</message>
 	<message key="admin.systemConfigurationDescription"><![CDATA[Configuración de OJS de <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.journals.journalSettings">Configuración de la revista</message>
 	<message key="admin.journals.noneCreated">No se han creado revistas.</message>
-	<message key="admin.contexts.confirmDelete">¿Seguro que quiere eliminar permanentemente esta revista y todos sus contenidos?</message>
+	<message key="admin.contexts.confirmDelete">¿Está seguro/a de que desea eliminar esta revista y todos sus contenidos de forma permanente?</message>
 	<message key="admin.contexts.create">Crear revista</message>
-	<message key="admin.journals.urlWillBe">Debería ser una única palabra corta o acrónimo que identifique la revista. La URL de la revista será {$sampleUrl}</message>
-	<message key="admin.contexts.form.titleRequired">Se requiere un título.</message>
-	<message key="admin.contexts.form.pathRequired">Se requiere la ruta.</message>
-	<message key="admin.contexts.form.pathAlphaNumeric">La ruta sólo puede contener caracteres alfanuméricos, guiones y guiones bajos, comenzando y terminado con un carácter alfanumérico.</message>
-	<message key="admin.contexts.form.pathExists">Ha seleccionado una ruta que ya usa otra revista.</message>
-	<message key="admin.journals.enableJournalInstructions">Permitir que esta revista aparezca públicamente en el sitio</message>
+	<message key="admin.journals.createInstructions">Se le asignará de forma automática el rol de gestor/a de la revista. Tras crear una nueva revista, acceda a ella como gestor/a para continuar con la configuración y el registro de usuarios/as.</message>
+	<message key="admin.journals.urlWillBe">Este elemento debe ser una palabra corta o acrónimo para identificar la revista. La dirección URL de la revista será {$sampleUrl}</message>
+	<message key="admin.contexts.form.pathRequired">Inserte una ruta.</message>
+	<message key="admin.contexts.form.pathAlphaNumeric">La ruta sólo puede contener caracteres alfanuméricos, guiones y guiones bajos, y debe empezar y terminar con un carácter alfanumérico.</message>
+	<message key="admin.contexts.form.pathExists">La ruta seleccionada ya está siendo utilizada por otra revista.</message>
+	<message key="admin.journals.enableJournalInstructions">Habilitar esta revista para que aparezca de forma pública en el sitio</message>
 	<message key="admin.journals.journalDescription">Descripción de la revista</message>
-	<message key="admin.journal.pathImportInstructions">Ruta de la revista existente o ruta a crear (p.e., "ojs").</message>
+	<message key="admin.journal.pathImportInstructions">Ruta actual de la revista o ruta que se desea crear (p. ej. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importar suscripciones</message>
-	<message key="admin.journals.transcode">Artículos transcode de metadatos de ISO8859-1</message>
-	<message key="admin.journals.redirect">Generar código para mapear los URL de OJS 1 con os URLs de OJS 2</message>
-	<message key="admin.journals.form.importPathRequired">La ruta de importación es necesaria.</message>
-	<message key="admin.journals.importErrors">La importación no se ha podido completar.</message>
-	<message key="admin.mergeUsers">Combinar usuarios</message>
-	<message key="admin.mergeUsers.mergeUser">Combinar usuario</message>
-	<message key="admin.mergeUsers.into.description">Seleccione un usuario al que atribuir las características (artículos, tareas, ...) del usuario anterior.</message>
-	<message key="admin.mergeUsers.from.description">Seleccione una cuenta de usuario para combinar con otra cuenta de usuario (por ejemplo, si un usuario tiene 2 cuentas). La cuenta selecionada en primer lugar se borrará, pero sus datos (envíos, tareas, ..) se asignarán a la segunda cuenta de usuario.</message>
-	<message key="admin.mergeUsers.allUsers">Todos los usuarios asociados</message>
-	<message key="admin.mergeUsers.confirm">¿Confirma que desea combinar la cuenta de usuario "{$oldUsername}" en la cuenta de usuario "{$newUsername}"? La cuenta de usurio "{$oldUsername}" desaparecerá. Esta acción no es reversible.</message>
-	<message key="admin.mergeUsers.noneEnrolled">Ningún usuario asociado</message>
-	<message key="admin.locale.maybeIncomplete">Las localizaciones seleccionadas pueden estar incompletas.</message>
+	<message key="admin.journals.transcode">Transcodificar metadatos de artículos de ISO8859-1</message>
+	<message key="admin.journals.redirect">Generar código para asignar direcciones URL OJS 1 a URL OJS 2</message>
+	<message key="admin.journals.form.importPathRequired">Se requiere la ruta de importación.</message>
+	<message key="admin.journals.importErrors">No se pudo completar la importación correctamente</message>
+	<message key="admin.mergeUsers">Fusionar usuarios/as</message>
+	<message key="admin.mergeUsers.mergeUser">Fusionar usuario/a</message>
+	<message key="admin.mergeUsers.into.description">Seleccione un usuario/a para atribuirle las autorías del anterior usuario/a, editar asignaciones, etc.</message>
+	<message key="admin.mergeUsers.from.description">Seleccione uno (o varios) usuarios/as para fusionarlos en otra cuenta de usuario/a (p. ej. cuando algún usuario/a tiene dos cuentas distintas). La cuenta/s seleccionada en primer lugar será eliminada/s y todos los envíos, asignaciones, etc. se atribuirán a la segunda cuenta.</message>
+	<message key="admin.mergeUsers.allUsers">Todos los usuarios/as registrados</message>
+	<message key="admin.mergeUsers.confirm">¿Está seguro/a de que desea fusionar la cuenta/s seleccionada {$oldAccountCount} con la cuenta con el nombre de usuario/a "{$newUsername}"? Las cuentas seleccionadas {$oldAccountCount} dejarán de existir. Esta acción no es reversible.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Usuarios/as no registrados.</message>
+
+	<!-- Categories -->
+	<message key="admin.categories">Categorías</message>
+	<message key="admin.categories.enable.description">El administrador/a del sitio puede definir un conjunto de categorías para organizar grandes conjuntos de revistas. Los gestores/as de revista pueden seleccionar varias de estas categorías para cada revista, y los lectores/as podrán examinar las colecciones de revistas por categorías.</message>
+	<message key="admin.categories.disableCategories">No organizar las revistas por categorías.</message>
+	<message key="admin.categories.enableCategories">Permitir a los gestores/as de revista organizar las revistas por categorías.</message>
+	<message key="admin.categories.editTitle">Editar categoría</message>
+	<message key="admin.categories.createTitle">Crear categoría</message>
+	<message key="admin.categories.create">Crear categoría nueva</message>
+	<message key="admin.categories.noneCreated">No se han creado categorías.</message>
+	<message key="admin.categories.confirmDelete">¿Está seguro/a de que desea eliminar la categoría?</message>
+	<message key="admin.categories.name">Nombre</message>
+	<message key="admin.categories.nameRequired">Se requiere un nombre para la categoría.</message>
+	
+	
 </locale>

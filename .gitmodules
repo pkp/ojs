@@ -26,3 +26,6 @@
 [submodule "plugins/generic/googleAnalytics"]
 	path = plugins/generic/googleAnalytics
 	url = https://github.com/pkp/googleAnalytics.git
+[submodule "plugins/generic/orcidProfile"]
+	path = plugins/generic/orcidProfile
+	url = https://github.com/pkp/orcidProfile.git

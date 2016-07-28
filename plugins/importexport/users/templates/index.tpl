@@ -40,6 +40,7 @@
 			{rdelim});
 		</script>
 		<form id="importXmlForm" class="pkp_form" action="{plugin_url path="importBounce"}" method="post">
+			{csrf}
 			{fbvFormArea id="importForm"}
 				{* Container for uploaded file *}
 				<p>{translate key="plugins.importexport.users.import.instructions"}</p>
@@ -63,6 +64,7 @@
 			{rdelim});
 		</script>
 		<form id="exportXmlForm" class="pkp_form" action="{plugin_url path="export"}" method="post">
+			{csrf}
 			{fbvFormArea id="exportForm"}
 				{url|assign:usersGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.users.exportableUsers.ExportableUsersGridHandler" pluginName="UserImportExportPlugin" op="fetchGrid" escape=false}
 				{load_url_in_div id="usersGridContainer" url=$usersGridUrl}

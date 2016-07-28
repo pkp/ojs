@@ -12,65 +12,42 @@
   -->
  
 <locale name="nl_NL" full_name="Nederlands">
-	<message key="plugins.pubIds.urn.urns">URN's</message>
-
-	<!-- plugin -->
 	<message key="plugins.pubIds.urn.displayName">URN</message>
-	<message key="plugins.pubIds.urn.description">Deze plugin maak het mogelijk om Uniform Resource Names toe te kennen aan objecten (nummers, artikelen, proeven en aanvullende bestanden)</message>
 
-	<!-- URN manager options, setting -->
-	<message key="plugins.pubIds.urn.manager.settings.description">Voer de volgende stappen uit om URN's toe te kennen en beheren vanuit OJS:</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSettings">URN Instellingen</message>
+	<!-- settings form -->
+	<message key="plugins.pubIds.urn.manager.settings.urnObjects">Tijdschriftinhoud</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnObjectsRequired">Kies de objecten waar de URN's aan toegekend moeten worden.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">URN's worden toegekend aan nummers.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableSubmissionURN">URN's worden toegekend aan artikelen.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableRepresentationURN">URN's worden toegekend aan proeven (bv. HTML of PDF bestanden).</message>
+
 	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">URN voorvoegsel</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnPrefix.description">Het URN vorvoegsel is het onveranderlijke deel van de URN (bv. "urn:nbn:de:0000-").</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"><![CDATA[Het URN voorvoegsel heeft de volgende vorm "urn:"&lt;NID&gt;":"&lt;NSS&gt;.]]></message>
+
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">URN Achtervoegsel</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default">Gebruik standaardpatronen</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default.description"><![CDATA[%j.v%vi%i voor nummers<br />%j.v%vi%i.%a voor artikelen<br />%j.v%vi%i.%a.g%g voor proeven <br />%j.v%vi%i.%a.s%s voor aanvullende bestanden.]]></message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern">Gebruik het patroon dat hieronder is ingevoerd om URN achtervoegsels te genereren. Gebruik %j voor de initialen van het tijdschrift, %v voor volume, %i voor het nummer, %Y voor het jaar, %a voor het OJS artikelnummer, %g voor het OJS nummer van de proef, %s voor het OJS bestands ID van een aanvullend bestand en %p voor een paginanummer.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.issues">voor nummers</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.articles">voor artikelen</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.galleys">voor proeven</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">voor aanvullende bestanden.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample">bijvoorbeeld, vol%viss%ipp%p  kan het URN achtervoegsel "vol3iss2pp230" opleveren.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">Een URN achtervoegsel kan iedere vorm aannemen zolang het uniek is voor ieder gepubliceerd item.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">Gebruik de aangepaste identificatie voor gepubliceerde items als URN achtervoegsel (moet ingeschakeld worden in stap 4.3). Dit is dezelfde identificatie die gebruik zal worden voor publieke URL's.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Voer een individueel URN achtervoegsel in voor ieder gepubliceerd item onafhankelijk en afwijkend van de aangepaste identificatie uit de vorige optie. U zult een extra URN invoerveld tegenkomen op de metadata pagina van ieder item.</message>
-	<message key="plugins.pubIds.urn.manager.settings.clearURNs">Wis URN's</message>
-	<message key="plugins.pubIds.urn.manager.settings.clearURNs.description">Als u de URN configuratie verandert heeft dat geen gevolgen voor reeds toegekende URN's. Nadat de gewijzigde URN configuratie is opgeslagen kunt u deze knop gebruiken om alle bestaande URN's te wissen om de nieuwe instellingen ook toe te passen op bestaande objecten.</message>
-	<message key="plugins.pubIds.urn.manager.settings.clearURNs.confirm">Weet u zeker dat u allle bestaande URN's wilt verwijderen?</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.example">bijvoorbeeld, vol%viss%ipp%p  kan het URN achtervoegsel "vol3iss2pp230" opleveren.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues">voor nummers</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions">voor artikelen</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations">voor proeven</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired">Geef het URN achtervoegsel patroon voor nummers.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired">Geef het URN achtervoegsel patroon voor artikelen.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired">Geef het URN achtervoegsel patroon voor proeven.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault">Gebruik standaardpatronen</message>
 	<message key="plugins.pubIds.urn.manager.settings.checkNo">Controlegetal</message>
 	<message key="plugins.pubIds.urn.manager.settings.checkNo.label">Het controlegetal wordt automatisch berekend en toegevoegd aan het eind als het laatste cijfer van de URN.</message>
 	<message key="plugins.pubIds.urn.manager.settings.namespace">Namespace</message>
 	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Kies</message>
 	<message key="plugins.pubIds.urn.manager.settings.namespace.description">De namespace van de persistente identificatie die doorgaans gebruikt wordt voor de registratie (bv. bij de Koninklijke Bibliotheek)</message>
 
-	<message key="plugins.pubIds.urn.manager.settings.journalContent">Tijdschriftinhoud</message>
-	<message key="plugins.pubIds.urn.manager.settings.URNsForJournalContent">Kies de objecten waar de URN's aan toegekend moeten worden.</message>
-	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">URN's worden toegekend aan nummers.</message>
-	<message key="plugins.pubIds.urn.manager.settings.enableArticleURN">URN's worden toegekend aan artikelen.</message>
-	<message key="plugins.pubIds.urn.manager.settings.enableGalleyURN">URN's worden toegekend aan proeven (bv. HTML of PDF bestanden).</message>
-	<message key="plugins.pubIds.urn.manager.settings.enableSuppFileURN">URN's worden toegekend aan aanvullende bestanden.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign">Wis URN's</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.description">Als u de URN configuratie verandert heeft dat geen gevolgen voor reeds toegekende URN's. Nadat de gewijzigde URN configuratie is opgeslagen kunt u deze knop gebruiken om alle bestaande URN's te wissen om de nieuwe instellingen ook toe te passen op bestaande objecten.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.confirm">Weet u zeker dat u allle bestaande URN's wilt verwijderen?</message>
 
-	<!-- custom URN suffix for an object -->
-	<message key="plugins.pubIds.urn.metadata">URN Metadata</message>
-	<message key="plugins.pubIds.urn.urnSuffix">URN achtervoegsel</message>
-	<message key="plugins.pubIds.urn.urnSuffix.description">Aangepast URN achtervoegsel voor dit artikel.</message>
-	<message key="plugins.pubIds.urn.calculateCheckNo">Bereken controlegetal</message>
-
-	<!-- consider URNs at other places in the system -->
-	<message key="plugins.pubIds.urn.rt.metadata.urn">Uniform Resource Name</message>
-
-	<!-- errors -->
-	<message key="plugins.pubIds.urn.manager.settings.form.journalContentRequired">Kies de objecten waaraan URN's toegekend moet worden.</message>
-	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixRequired">Geef een URN voorvoegsel.</message>
-	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"><![CDATA[Het URN voorvoegsel heeft de volgende vorm "urn:"&lt;NID&gt;":"&lt;NSS&gt;.]]></message>
-	<message key="plugins.pubIds.urn.manager.settings.form.urnIssueSuffixPatternRequired">Geef het URN achtervoegsel patroon voor nummers.</message>
-	<message key="plugins.pubIds.urn.manager.settings.form.urnArticleSuffixPatternRequired">Geef het URN achtervoegsel patroon voor artikelen.</message>
-	<message key="plugins.pubIds.urn.manager.settings.form.urnGalleySuffixPatternRequired">Geef het URN achtervoegsel patroon voor proeven.</message>
-	<message key="plugins.pubIds.urn.manager.settings.form.urnSuppFileSuffixPatternRequired">Geef het URN achtervoegsel patroon voor aanvullende bestanden.</message>
-	<message key="plugins.pubIds.urn.manager.settings.form.namespaceRequired">Kies een namespace.</message>
-
+	<!-- metadata form -->
+	<message key="plugins.pubIds.urn.editor.urn">URN</message>
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">Het opgegeven URN achtervoegsel is al in gebruik bij een ander gepubliceerd item. Kies een uniek URN achtervoegsel voor ieder item.</message>
+	<!-- errors -->
 	<message key="plugins.pubIds.urn.form.checkNoRequired">Het controlegetal ontbreekt.</message>
 
 </locale>

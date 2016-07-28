@@ -13,9 +13,9 @@
  * @brief ProCite citation format plugin
  */
 
-import('classes.plugins.CitationPlugin');
+import('classes.plugins.DownloadableCitationPlugin');
 
-class ProCiteCitationPlugin extends CitationPlugin {
+class ProCiteCitationPlugin extends DownloadableCitationPlugin {
 	function register($category, $path) {
 		$success = parent::register($category, $path);
 		$this->addLocaleData();
@@ -44,15 +44,15 @@ class ProCiteCitationPlugin extends CitationPlugin {
 	}
 
 	/**
-	 * Display a custom-formatted citation.
+	 * Set the headers for a downloadable citation.
+	 *
 	 * @param $article object
 	 * @param $issue object
 	 * @param $journal object
 	 */
-	function displayCitation(&$article, &$issue, &$journal) {
+	function setHeaders($article, $issue, $journal) {
 		header('Content-Disposition: attachment; filename="' . $article->getId() . '-proCite.ris"');
 		header('Content-Type: application/x-Research-Info-Systems');
-		echo parent::fetchCitation($article, $issue, $journal);
 	}
 }
 

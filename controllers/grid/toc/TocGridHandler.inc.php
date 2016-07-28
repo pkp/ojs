@@ -207,7 +207,7 @@ class TocGridHandler extends CategoryGridHandler {
 		$article = $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 		import('classes.article.ArticleTombstoneManager');
 		$articleTombstoneManager = new ArticleTombstoneManager();
-		if ($article && $article->getIssueId() == $issue->getId()) {
+		if ($article && $article->getIssueId() == $issue->getId() && $request->checkCSRF()) {
 			if ($issue->getPublished()) {
 				$articleTombstoneManager->insertArticleTombstone($article, $journal);
 			}

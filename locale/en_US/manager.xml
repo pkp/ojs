@@ -241,7 +241,7 @@
 	<message key="manager.setup.lockssEnable"><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page.]]></message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[A LOCKSS license will appear in About the Journal under Archiving: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">LOCKSS License Description</message>
-	<message key="manager.setup.lockssRegister"><![CDATA[Identify 6-10 libraries that will register and cache the journal. For example, turn to institutions where editors or Board members work and/or institutions already participating in LOCKSS. See <a href="http://www.lockss.org/community/" target="_blank">the LOCKSS community</a>. Use the prepared invitations for (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">libraries participating in LOCKSS</a> or (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">libraries not yet participating in LOCKSS</a>.]]></message>
+	<message key="manager.setup.lockssRegister"><![CDATA[Identify 6-10 libraries that will register and cache the journal. For example, turn to institutions where editors or Board members work and/or institutions already participating in LOCKSS. See <a href="http://www.lockss.org/community/" target="_blank">the LOCKSS community</a>.]]></message>
 	<message key="manager.setup.lockssTitle">LOCKSS</message>
 	<message key="manager.setup.clockssEnable"><![CDATA[Enable CLOCKSS to store and distribute journal content at participating libraries via a CLOCKSS <a href="{$clockssUrl}" target="_blank">Publisher Manifest</a> page.]]></message>
 	<message key="manager.setup.clockssLicenseDescription"><![CDATA[A CLOCKSS license will appear in About the Journal under Archiving: <a href="http://clockss.org/" target="_blank">CLOCKSS License</a>]]></message>
@@ -280,7 +280,7 @@
 	<message key="manager.setup.publicationScheduling">Publication Scheduling</message>
 	<message key="manager.setup.publicIdentifier">Identification of Journal Content</message>
 	<message key="manager.setup.publisher">Publisher</message>
-	<message key="manager.setup.publisherDescription">The name of the organization publishing the journal will appear in About the Journal.</message>
+	<message key="manager.setup.publisherDescription">The name of the organization publishing the journal may be included in metadata provided to third-party archival bodies.</message>
 	<message key="manager.setup.referenceLinking">Reference Linking</message>
 	<message key="manager.setup.refLinkInstructions.description">Layout Instructions for Reference Linking</message>
 	<message key="manager.setup.restrictArticleAccess">Users must be registered and log in to view open access content.</message>
@@ -540,12 +540,7 @@
 	<message key="manager.subscriptionTypes.name">Subscription type</message>
 	<message key="manager.subscriptionTypes.noneCreated">No subscription types have been created.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Subscription type created successfully.</message>
-
 	<message key="manager.distribution.access">Access</message>
-	<message key="manager.settings.journalDescription"><![CDATA[All settings specific to the journal (masthead, contact, policies, guidelines, affiliation & support, categories and series).]]></message>
-	<message key="manager.settings.publicationDescription">All settings specific to the publication process (general settings, submission stage, review stage, editorial stage, production stage, email templates).</message>
-	<message key="manager.settings.websiteDescription">All settings specific to the public website pages (homepage, appearance, language)</message>
-	<message key="manager.settings.distributionDescription">All settings specific to the distribution process (notification, indexing, archiving, payment, reading tools).</message>
 
 	<!-- Categories -->
 	<message key="manager.setup.categories">Categories</message>
@@ -567,4 +562,34 @@
 	<message key="grid.genres.title.short">Components</message>
 	<message key="grid.genres.title">Article Components</message>
 	<message key="grid.genres.description">These components are used for file-naming purposes and are presented in a pull-down menu on uploading files. The genres designated ## allow the user to associate the file with either the whole submission 99Z or a particular component by number (e.g., 02).</message>
+
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<!-- plugin tabs -->
+	<message key="plugins.importexport.common.settings">Settings</message>
+	<message key="plugins.importexport.common.settings.DOIPluginSettings">DOI Plugin Settings</message>
+	<message key="plugins.importexport.common.export.articles">Articles</message>
+	<message key="plugins.importexport.common.export.issues">Issues</message>
+	<!-- settings form -->
+	<message key="plugins.importexport.common.missingRequirements">Plugin requirements not met</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">In order to use this plugin please go to the "Public Identifier" plugin category, enable and configure the DOI plug-in and specify a valid DOI prefix there.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">The plugin is not fully set up.</message>
+	<message key="plugins.importexport.common.settings.form.password">Password</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Please note that the password will be saved as plain text, i.e. not encrypted.</message>
+	<!-- export filter -->
+	<message key="plugins.importexport.common.filter.issue">Any Issue</message>
+	<message key="plugins.importexport.common.status.any">Any Status</message>
+	<message key="plugins.importexport.common.status.notDeposited">Not Deposited</message>
+	<message key="plugins.importexport.common.status.markedRegistered">Marked registered</message>
+	<!-- actions -->
+	<message key="plugins.importexport.common.action">Action</message>
+	<message key="plugins.importexport.common.action.export">Export</message>
+	<message key="plugins.importexport.common.action.markRegistered">Mark registered</message>
+	<message key="plugins.importexport.common.action.register">Register</message>
+	<message key="plugins.importexport.common.action.checkStatus">Check status</message>
+	<!--  notifications and errors -->
+	<message key="plugins.importexport.common.error.noObjectsSelected">No objects selected.</message>
+	<message key="plugins.importexport.common.error.validation">Could not convert selected objects.</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">The output file {$param} is not writable.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Registration was not successful! The DOI registration server returned an error: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Registration successful!</message>
 </locale>

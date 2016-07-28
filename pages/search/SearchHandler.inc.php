@@ -175,7 +175,6 @@ class SearchHandler extends Handler {
 		$templateMgr->assign('simDocsEnabled', true);
 
 		// Result set display.
-		$templateMgr->assign('jsLocaleKeys', array('search.noKeywordError'));
 		$this->_assignSearchFilters($request, $templateMgr, $searchFilters);
 		$templateMgr->assign('results', $results);
 		$templateMgr->assign('error', $error);

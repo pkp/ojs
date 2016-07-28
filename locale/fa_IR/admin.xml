@@ -4,7 +4,7 @@
 <!--
   * locale/fa_IR/admin.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="fa_IR" full_name = "Persian">
+<locale name="fa_IR" full_name="فارسی">
 	<message key="admin.hostedJournals">مجلات میزبان</message>
 	<message key="admin.settings.journalRedirect">تغییر جهت دادن به مجله</message>
 	<message key="admin.settings.journalRedirectInstructions">تقاضاهای ارسالی به سایت اصلی به این مجله ارجاع می شود . کاربرد آن ققط وقتی است که فقط یک مجله میزبان باشد.</message>
@@ -21,7 +21,6 @@
 	<message key="admin.languages.supportedLocalesInstructions">ز این لیست زبانهای دلخواه را برای سایت انتخاب کنید. زبانهای انتخاب شده در دسترس تمام مجلات سایت خواهد بود و مدیرهر مجله در صورت تمایل می تواند آنرا برای سایت خود انتخاب کند. و همچنین در منوی انتخاب زبان در تمام صفحات موجود خواهد بود. چنانچه فقط یک زبان در سایت باشد منوی انتخاب زبان و تنظیمات مربوطه موجود نخواهد بود.</message>
 	<message key="admin.languages.confirmUninstall">آیا می خواهید این زبان را عزل کنید؟ این کار ممکن است بر روی مجلات سایت که از این زبانها استفاده میکنند تاثیر بگذارد</message>
 	<message key="admin.languages.installNewLocalesInstructions">زبانهائی را که میخواهید در این سیستم حمایت شود انتخاب کنید. زبانها قبل از استفاده می بایست نصب شوند. برای اطلاع از چگونگی انجام این کار به راهنمای او ج اس مراحعه کنید.</message>
-	<message key="admin.languages.downloadLocales">دانلود فایل (های) زبانی</message>
 	<message key="admin.languages.downloadFailed">دانلود فایل (های) زبانی شکست خورد. پیامهای خطای زیر جزئیات موضوع را نشان میدهند</message>
 	<message key="admin.languages.localeInstalled">زبان &quot;{$locale}&quot; نصب شد</message>
 	<message key="admin.languages.download">دانلود فایل (های) زبانی</message>
@@ -38,8 +37,8 @@
 	<message key="admin.journals.noneCreated">هیچ مجله ای تعریف نشده است</message>
 	<message key="admin.contexts.confirmDelete">آیا مطمئنید که می خواهید به طور دائم این مجله و تمام محتویات آن را پاک کنید؟</message>
 	<message key="admin.contexts.create">مجله جدید</message>
+	<message key="admin.journals.createInstructions">شما بطور اتوماتیک مدیر این مجله خواهید بود.پس از ایجاد یک مجله جدید ، به عنوان مدیر وارد آن شوید تا راه اندازی اولیه آنرا انجام دهید.</message>
 	<message key="admin.journals.urlWillBe">URL مجله این است: {$sampleUrl}</message>
-	<message key="admin.contexts.form.titleRequired">عنوان الزامی است</message>
 	<message key="admin.contexts.form.pathRequired">مسیر الزامی است</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">مسیر فقط می تواند شامل کاراکترهای حروف و عدد باشد</message>
 	<message key="admin.contexts.form.pathExists">مسیر انتخاب شده قبلا توسط یک مجله دیگر انتخاب شده است</message>

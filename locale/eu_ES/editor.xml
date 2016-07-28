@@ -4,7 +4,7 @@
 <!--
   * locale/eu_ES/editor.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,11 +12,7 @@
   *
   -->
 
-<locale name="eu_ES" full_name = "Basque (Euskara)">
-	<message key="editor.article.reviewForms">Ebaluazio-inprimakiak</message>
-	<message key="editor.article.selectReviewForm">Hautatu ebaluazio-inprimakia</message>
-	<message key="editor.article.clearReviewForm">Garbitu ebaluazio-Inprimakia</message>
-	<message key="editor.article.confirmChangeReviewForm">Kontuz: Ebaluazio-inprimakia aldatzen baduzu, eragina izango du ebaluatzaileek inprimaki honen bidez eman dituzten erantzunetan. Ziur zaude jarraitu nahi duzula?</message>
+<locale name="eu_ES" full_name="Euskara">
 	<message key="editor.home">Editorearen hasierako orria</message>
 	<message key="editor.submissionsAndPublishing">Bidalketak eta argitalpena</message>
 	<message key="editor.submissionQueue">Bidalketen ilara</message>
@@ -36,7 +32,7 @@
 	<message key="editor.usersNotified">Jakinarazitako erabiltzaileak</message>
 	<message key="editor.notifyUsers.allUsers">Bidali mezu hau aldizkariaren erabiltzaile guztiei ({$count} erabiltzaile)</message>
 	<message key="editor.notifyUsers.interestedUsers">Bidali mezu hau eguneratzeak jaso nahi dituztela adierazi duten erabiltzaile guztiei ({$count} erabiltzaile)</message>
-	<message key="editor.notifyUsers.includeToc">Sartu zenbaki honetako aurkibidea: </message>
+	<message key="editor.notifyUsers.includeToc">Sartu zenbaki honetako aurkibidea:</message>
 	<message key="editor.editorAdministration">Editore-administrazioa</message>
 	<message key="editor.issues.createIssue">Sortu zenbakia</message>
 	<message key="editor.issues.backIssues">Aurreko zenbakiak</message>
@@ -56,7 +52,7 @@
 	<message key="editor.issues.publicIssueIdentifier">Zenbaki-identifikatzaile publikoa</message>
 	<message key="editor.issues.description">Azalpena</message>
 	<message key="editor.issues.accessStatus">Sarbidea</message>
-	<message key="editor.issues.accessDate">Sarrera libreko data </message>
+	<message key="editor.issues.accessDate">Sarrera libreko data</message>
 	<message key="editor.issues.invalidAccessDate">Sarrera librea emateko data ez da baliozkoa.</message>
 	<message key="editor.issues.coverPage">Azaleko irudia</message>
 	<message key="editor.issues.coverPageInstructions">(gif, .jpg, edo .png formatuak onartzen dira)</message>
@@ -66,12 +62,12 @@
 	<message key="editor.issues.removeCoverPage">Azaleko irudia kendu?</message>
 	<message key="editor.issues.invalidCoverPageFormat">Azaleko orriaren formatua ez da zuzena: .gif, .jpg, edo .png formatuak bakarrik onartzen dira.</message>
 	<message key="editor.issues.styleFile">Estilo-orria</message>
-	<message key="editor.issues.invalidStyleFormat">Estilo-orriaren formatua ez da zuzena: Ziurtatu bidalitako fitxategia CSS baliozkoa dela. (Kontuan izan hasieran iruzkinak dituzten estilo-orriak atzera botatzen direla batzuetan). </message>
+	<message key="editor.issues.invalidStyleFormat">Estilo-orriaren formatua ez da zuzena: Ziurtatu bidalitako fitxategia CSS baliozkoa dela. (Kontuan izan hasieran iruzkinak dituzten estilo-orriak atzera botatzen direla batzuetan).</message>
 	<message key="editor.issues.removeStyleFile">Estilo-orria kendu?</message>
 	<message key="editor.issues.showCoverPage">Sortu zenbaki honen azala ondorengo elementuekin.</message>
 	<message key="editor.issues.coverPageDisplay">Erakutsi</message>
-	<message key="editor.issues.hideCoverPageArchives">Ez erakutsi azaleko irudiaren koadro txikia zenbakien zerrendan. </message>
-	<message key="editor.issues.hideCoverPageCover">Ez erakutsi azaleko irudia aurkibidearen aurretik. </message>
+	<message key="editor.issues.hideCoverPageArchives">Ez erakutsi azaleko irudiaren koadro txikia zenbakien zerrendan.</message>
+	<message key="editor.issues.hideCoverPageCover">Ez erakutsi azaleko irudia aurkibidearen aurretik.</message>
 	<message key="editor.issues.openAccess">Sarrera librea</message>
 	<message key="editor.issues.subscription">Harpidetza</message>
 	<message key="editor.issues.identification">Identifikazioa</message>
@@ -81,7 +77,7 @@
 	<message key="editor.issues.resetIssueOrder"><![CDATA[Aldizkariak zenbaki-ordena pertsonalizatua erabiltzen du. <a href="{$url}" class="action">Berrezarri balio lehenetsiak</a>]]></message>
 	<message key="editor.issues.resetSectionOrder"><![CDATA[Zenbakiak atalen ordena pertsonalizatua erabiltzen du. <a href="{$url}" class="action">Berrezarri balio lehenetsiak</a>]]></message>
 	<message key="editor.issues.issueData">Zenbakiaren datuak</message>
-	<message key="editor.issues.saveChanges">Aurkibidean egindako aldaketak gorde? </message>
+	<message key="editor.issues.saveChanges">Aurkibidean egindako aldaketak gorde?</message>
 	<message key="editor.issues.default">Lehenetsia</message>
 	<message key="editor.issues.order">Ordena</message>
 	<message key="editor.issues.publicId">Id publikoa</message>
@@ -94,19 +90,18 @@
 	<message key="editor.issues.open">Irekia</message>
 	<message key="editor.issues.pages">Orrialdeak</message>
 	<message key="editor.navigation.futureIssues">Etorkizuneko zenbakiak</message>
-	<message key="grid.action.addIssue">Sortu zenbakia</message>
 	<message key="editor.navigation.issueArchive">Aurreko zenbakiak</message>
 	<message key="editor.article.designateReviewVersion">Izendatu jatorrizko fitxategia Ebaluazio-bertsio gisa</message>
 	<message key="editor.article.uploadReviewVersion">Kargatu berrikusitako Ebaluazio-bertsio bat</message>
 	<message key="editor.article.showSuppFile">Aurkeztu fitxategia ebaluatzaileei</message>
-	<message key="editor.article.layoutAndProof">Maketazioa eta Probak </message>
+	<message key="editor.article.layoutAndProof">Maketazioa eta Probak</message>
 	<message key="editor.article.clear">Garbitu</message>
 	<message key="editor.article.clearReviewer">Kendu ebaluatzailea</message>
 	<message key="editor.article.changeSection">Aldatu atala</message>
 	<message key="editor.article.setDueDate">Ezarri mugaeguna</message>
-	<message key="editor.article.addReviewer">Gehitu ebaluatzailea </message>
+	<message key="editor.article.addReviewer">Gehitu ebaluatzailea</message>
 	<message key="editor.article.toReviewer">Ebaluatzaileari</message>
-	<message key="editor.article.notifyReviewer">Jakinarazi ebaluatzaileari </message>
+	<message key="editor.article.notifyReviewer">Jakinarazi ebaluatzaileari</message>
 	<message key="editor.article.initiateReview">Hasi ebaluazioa</message>
 	<message key="editor.article.cancelReview">Ezereztu eskaera</message>
 	<message key="editor.article.clearReview">Kendu ebaluatzailea</message>
@@ -114,7 +109,7 @@
 	<message key="editor.article.enterReviewerRecommendation">Sartu Ebaluatzailearen gomendioa</message>
 	<message key="editor.article.recommendation">Gomendioa</message>
 	<message key="editor.article.selectReviewer">Hautatu Ebaluatzailea</message>
-	<message key="editor.article.replaceReviewer">Ordeztu Ebaluatzailea </message>
+	<message key="editor.article.replaceReviewer">Ordeztu Ebaluatzailea</message>
 	<message key="editor.article.editorToEnter">Editoreak hemen sar ditzake ebaluatzailearentzako gomendioak/iruzkinak</message>
 	<message key="editor.article.uploadReviewForReviewer">Kargatu ebaluazioa</message>
 	<message key="editor.article.peerReviewOptions">Adituen ebaluazioaren aukerak</message>
@@ -132,7 +127,7 @@
 	<message key="editor.article.selectCopyeditor">Izendatu Zuzentzailea</message>
 	<message key="editor.article.replaceCopyeditor">Ordeztu Zuzentzailea</message>
 	<message key="editor.article.editorsCopyedit">Editorearen Zuzenketa</message>
-	<message key="editor.article.showAuthor">Utzi egileari fitxategia ikusten </message>
+	<message key="editor.article.showAuthor">Utzi egileari fitxategia ikusten</message>
 	<message key="editor.article.showCopyeditor">Erakutsi bertsioa zuzentzaileari</message>
 	<message key="editor.article.rateReviewer">Ebaluatzailearen balorazioa</message>
 	<message key="editor.article.reviewerRating.veryGood">5 Onena</message>

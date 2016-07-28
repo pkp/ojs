@@ -4,7 +4,7 @@
 <!--
   * locale/zh_TW/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="zh_TW" full_name = "繁體中文">
+<locale name="zh_TW" full_name="繁體中文">
 	<message key="author.submit">新稿件</message>
 	<message key="author.track">進行中的稿件</message>
 	<message key="author.submit.submitArticle">送出一篇文章</message>
@@ -26,7 +26,7 @@
 	<message key="author.submit.step5">步驟 5. 確認投稿</message>
 	<message key="author.submit.start">開始</message>
 	<message key="author.submit.upload">上傳稿件</message>
-	<message key="author.submit.metadata">輸入後設資料</message>
+	<message key="author.submit.metadata"> 輸入後設資料</message>
 	<message key="author.submit.supplementaryFiles">上傳補充檔案</message>
 	<message key="author.submit.confirmation">確認</message>
 	<message key="author.submit.cancelSubmission">您可以在「作者」角色的使用者首頁中選擇「進行中的稿件」以在稍後任一個時間點完成此投稿程序。</message>
@@ -39,8 +39,7 @@
 	<message key="author.submit.howToSubmit"><![CDATA[作者透過這個網站的五步驟程序，上傳初稿和相關資訊（選擇是否同時上傳補充檔案，像是調查資料和使用設備），投稿各項目到這份期刊。如果在這個程序中碰到困難，請聯絡<a href="mailto:{$supportEmail}">{$supportName}</a> ，透過電子郵件或電話{$supportPhone}取得協助。]]></message>
 	<message key="author.submit.journalSection">期刊文稿類型</message>
 	<message key="submission.submit.selectSection">請選擇一個文稿類型...</message>
-	<message key="submission.submit.submissionChecklist">投稿檢查表</message>
-	<message key="submission.submit.submissionChecklistDescription">勾選下列項目以確定這份稿件已慎重考慮投稿本期刊（可以在下面加上給編輯的意見）</message>
+	<message key="author.submit.submissionChecklist">投稿檢查表</message>
 	<message key="author.submit.verifyChecklist">您必須確定已經完成檢查表中的所有的項目，才能繼續下一步。</message>
 	<message key="author.submit.copyrightNoticeAgree">作者同意這份版權注意事項的內容，並同意在這份期刊出版此稿件時適用於這份稿件（可以在下面加上給編輯的意見）。</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">您必須同意「版權注意事項」的內容才能夠繼續下一步。</message>
@@ -48,7 +47,6 @@
 	<message key="author.submit.comments">輸入文字 (選填)</message>
 	<message key="author.submit.form.sectionRequired">請為這份稿件選擇一個恰當的期刊文稿類型。</message>
 	<message key="submission.submit.privacyStatement">期刊的隱私權聲明</message>
-	<message key="author.submit.reorderInstructions">Use arrows to change the order in which the authors names are to appear with the submission.使用箭號以變更稿件中作者姓名的顯示順序</message>
 	<message key="author.submit.selectPrincipalContact">編輯通信的固定聯絡人</message>
 	<message key="author.submit.addAuthor">新增作者</message>
 	<message key="author.submit.deleteAuthor">刪除作者</message>
@@ -82,7 +80,6 @@
 	<message key="author.submit.suppFile.dataSet">資料或數據組</message>
 	<message key="author.submit.suppFile.sourceText">來源文獻</message>
 	<message key="author.submit.suppFile.briefDescription">概述</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">捐贈或贊助單位</message>
 	<message key="author.submit.suppFile.availableToPeers">在無損匿名審查原則的情況下，讓審查人看到檔案（不加後設資料）。</message>
 	<message key="author.submit.suppFile.publisherDescription">只使用形式上已出版的材料。</message>
 	<message key="author.submit.suppFile.dateDescription">資料蒐集或者建立方法的日期。</message>
@@ -99,7 +96,6 @@
 	<message key="author.submit.filesSummary">檔案摘要</message>
 	<message key="author.submit.finishSubmission">完成投稿</message>
 	<message key="author.submit.submissionComplete">完成投稿！感謝您願意在{$journalTitle}出版您的文章。</message>
-	<message key="author.submit.expedite"><![CDATA[如果這份稿件的格式是已經準備出版而沒有進一步的審查、編輯或者版面工作的話，它可以直接放到編輯列表的最後一個階段：<a href="{$expediteUrl}" class="action">點擊這裡</a>. (注意，只有期刊編輯人可以為他們負責的稿件選擇這個選項。)]]></message>
 	<message key="author.article.uploadAuthorVersion">上傳作者版本</message>
 	<message key="author.article.copyeditedFile">校樣編輯檔案</message>
 	<message key="author.article.authorRevisedFile">作者檔案</message>

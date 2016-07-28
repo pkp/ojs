@@ -4,7 +4,7 @@
 <!--
   * locale/fa_IR/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="fa_IR" full_name = "Persian">
+<locale name="fa_IR" full_name="فارسی">
 	<message key="author.submit">ساب میشن جدید</message>
 	<message key="author.track">ساب میشن های جاری</message>
 	<message key="author.submit.submitArticle">ساب میت مقاله</message>
@@ -44,8 +44,7 @@
 	<message key="author.submit.journalSection">نوع مقاله</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[نوع مقاله را انتخاب کنید. باری اطلاعات بیشتر به انواع مقالات و سیاست گذاری در <a href="{$aboutUrl}">درباره </a> مجله مراجعه کنید.]]></message>
 	<message key="submission.submit.selectSection">لطفا نوع مقاله را انتخاب کنید.</message>
-	<message key="submission.submit.submissionChecklist">چک لیست ساب میشن</message>
-	<message key="submission.submit.submissionChecklistDescription">با پر کردن چک لیست زیر اعلام کنید که این ساب میشن برای بررسی دفتر مجله آماده اشت. در قسمت پائین این صفحه می توانید نقطه نظرات دلخواه خود را به اطلاع سردبیر برسانید.</message>
+	<message key="author.submit.submissionChecklist">چک لیست ساب میشن</message>
 	<message key="author.submit.verifyChecklist">قبل از ادامه کار اطمینان حاصل کنید که تمام موارد لازم برای ساب میشن که در چک لیست آمده است را رعایت کرده اید.</message>
 	<message key="author.submit.copyrightNoticeAgree">نویسنگان این مقاله موافقت خودشان را با این بیانیه کپی رایت اعلام می گنند. این بیانیه در صورت چاپ شدن این مقاله در این مجله قابل اعمال است. در قسمت پائین این صفحه نقطه نظرات دلخواه خود را به اطلاع سردبیر برسانید</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">قبل از ادامه ، می بایست با بیانیه کپی رایت موافقت کنید.</message>
@@ -90,7 +89,6 @@
 	<message key="author.submit.suppFile.dataSet">مجموعه ناده</message>
 	<message key="author.submit.suppFile.sourceText">متن منبع</message>
 	<message key="author.submit.suppFile.briefDescription">توصیف مختصر</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">تشریک مساعی کننده یا حامی</message>
 	<message key="author.submit.suppFile.availableToPeers">فایل بدون متاداده در دسترس کارشناسان باشد به نحوی که کارشناسی محرمانه خدشه دار نشود</message>
 	<message key="author.submit.suppFile.publisherDescription">مورد استفاده فقط با موارد رسما چاپ شده</message>
 	<message key="author.submit.suppFile.dateDescription">تاریخ جمع آوری داده ها ویا تولید ابزار</message>
@@ -107,7 +105,6 @@
 	<message key="author.submit.filesSummary">لیست فایلهای آپلود شده</message>
 	<message key="author.submit.finishSubmission">اتمام ساب میشن</message>
 	<message key="author.submit.submissionComplete">ساب میشن کامل است. از توجه شما به مجله {$journalTitle} متشکریم.</message>
-	<message key="author.submit.expedite"><![CDATA[چنانچه این ساب میشن در فرماتی است آماده انتشار باشد میتوان مستقیما آنرا آخرین مرحله ویراستاری قرار داد. برای این کار  <a href="{$expediteUrl}" class="action">اینجا</a> را کلیک کنید. فقط دبیران مجله چنین اجازه ای دارند.]]></message>
 	<message key="author.article.uploadAuthorVersion">آپلود نسخه اصلاحی نویسنده</message>
 	<message key="author.article.copyeditedFile">فایل ویرایش شده</message>
 	<message key="author.article.authorRevisedFile">فایل نویسنده</message>

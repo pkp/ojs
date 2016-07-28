@@ -12,49 +12,35 @@
   -->
  
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.importexport.common.error.DOIsNotAvailable">Per utilizzare questo plugin vai alla categoria di plugin "Identificatori pubblici", abilita e configura il plugin specifico per il DOI e specifica lì un prefisso valido.</message>
-	<message key="plugins.importexport.common.error.pluginNotConfigured">Il plugin non è completamente configurato.</message>
-
-	<message key="plugins.importexport.common.settings">Impostazioni</message>
-
-	<message key="plugins.importexport.common.settings.form.password">Password</message>
 	<message key="plugins.importexport.common.settings.form.passwordRequired">Inserisci una password valida.</message>
-	
-	<message key="plugins.importexport.common.register">Registrazione</message>
 	<message key="plugins.importexport.common.registerDescription">Click this button to register this object with the registration agency for the first time. This only works when you've never registered the object before!</message>
 	<message key="plugins.importexport.common.registerDescription.multi">Click this button to register or update the meta-data of the selected object(s) with the registration agency.</message>
-	<message key="plugins.importexport.common.register.error.mdsError">Errore nella registrazione! Il server di registrazione ha restituito un errore: '{$param}'.</message>
-	<message key="plugins.importexport.common.register.success">Registrazione conclusa con successo!</message>
 	<message key="plugins.importexport.common.register.warning">Registrare molti oggetti può richiedere molto tempo. Sii quindi paziente dopo aver cliccato il tasto 'Registra'. Sarai informato al completamento della registrazione.</message>
 	<message key="plugins.importexport.common.register.noCredentials"><![CDATA[La registrazione diretta è ancora disabilitata. <a href="{$settingsUrl}">Inserisci</a> le credenziali per registrare le risorse direttamente con l'agenzia di registrazione.]]></message>
 
 	<message key="plugins.importexport.common.update">Aggiorna</message>
 	<message key="plugins.importexport.common.updateDescription">Clicca su questo tasto per aggiornare i metadati di questo oggetto per l'agenzia di registrazione. Questa funzione avrà successo solo per oggetti già registrati in precedenza.</message>
-		
-	<message key="plugins.importexport.common.export">Esporta i dati</message>
+
 	<message key="plugins.importexport.common.export.unregistered">Esporta tutti i fascicoli, gli articoli e i file non registrati.</message>
 	<message key="plugins.importexport.common.export.selectUnregistered">Seleziona i fascicoli, gli articoli e i file non registrati.</message>
 	<message key="plugins.importexport.common.export.noUnregistered">Tutti i fascicoli, gli articoli e i file sono già stati registrati (oppure nessuno di essi ha un DOI assegnato).</message>
-	<message key="plugins.importexport.common.export.issues">Esporta singoli fascicoli</message>
 	<message key="plugins.importexport.common.export.selectIssue">Seleziona i fascicoli</message>
 	<message key="plugins.importexport.common.export.noIssues">Nessun fascicolo ha attualmente DOI assegnati.</message>
-	<message key="plugins.importexport.common.export.articles">Esporta singoli articoli</message>
 	<message key="plugins.importexport.common.export.selectArticle">Seleziona gli articoli</message>
 	<message key="plugins.importexport.common.export.noArticles">Nessun articolo ha attualmente DOI assegnati.</message>
 	<message key="plugins.importexport.common.export.galleys">Esporta specifici file</message>
 	<message key="plugins.importexport.common.export.selectGalley">Seleziona i file</message>
 	<message key="plugins.importexport.common.export.noGalleys">Nessun file ha attualmente DOI assegnati.</message>
 	<message key="plugins.importexport.common.exportDescription">Fare clic su questo pulsante per esportare i dati XML per l'oggetto selezionato in un file locale, senza registrarlo con l'agenzia di registrazione. Questo può essere utile se si desidera registrare un DOI con terze parti o se si desidera controllare il formato XML prima di registrarlo.</message>
- 
+
 	<message key="plugins.importexport.common.export.error.issueNotFound">Nessun fascicolo corrisponde all'ID: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.articleNotFound">Nessun articolo corrisponde all'ID: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.galleyNotFound">Nessun file corrisponde all'ID: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.noDoiAssigned">L'oggetto con ID {$param} non ha DOI assegnati.</message>
 	<message key="plugins.importexport.common.export.error.unknownJournal">Nessuna rivista corrisponde al path: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.unknownObjectType">L'oggetto tipo {$param} non può essere esportato.</message>
-	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Il file {$param} non è scrivibile.</message>
- 
+
 	<message key="plugins.importexport.common.notification.exportSuccessful">Gli oggetti selezionati sono stati esportati con successo in '{$param}'</message>
- 
+
 	<message key="plugins.importexport.common.cliError">ERRORE:</message>
 </locale>

@@ -4,7 +4,7 @@
 <!--
   * locale/ro_RO/default.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -25,7 +25,7 @@
 	 *
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Propunerea nu a mai fost publicată şi nici nu a mai fost dată spre evaluare altei reviste (sau a fost dată o explicaţie la comentarii către editor).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Fişierul propunerii este în format Microsoft Word, sau RTF.</message>
+	<message key="default.journalSettings.checklist.fileFormat">Fişierul propunerii este în format Microsoft Word, RTF, sau WordPerfect.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">Acolo unde sunt disponibile, au fost puse URL-urile pentru referenţiere.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Textul este la un rând; font de 12; implică mai degrabă italice decât sublinieri (cu excepţia adreselor URL) iar toate ilustraţiile, figurile şi tabelele sunt plasate în corpul textului la punctele corespunzătoare decât la final.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Textul este conform cu cerinţele stilistice şi bibliografice descrise în <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">îndrumările pentru autori</a>, care pot fi găsite la secţiunea „despre” a revistei.]]></message>
@@ -151,9 +151,9 @@ Numerele din tabelul 3 nu sunt aliniate cu a treia coloană.</pre>
 <br />
 <pre>4. FORMATEAZĂ
 Paragraful care începe cu „Acest ultim subiect...” nu a fost dorit de la început.</pre>]]></message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
-</message>
+	<message key="default.journalSettings.emailSignature">________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Încurajăm cititorii să se aboneze la serviciul de notificări din cadrul acestei reviste. Folosiţi linkul <a href="{$indexUrl}/{$journalPath}/user/register">Înregistrare</a> din partea superioară a paginii revistei. Această înscriere va avea ca rezultat primirea de către cititor a cuprinsului prin email pentru fiecare număr al revistei. Această listă de abonați permite, de asemenea, ca revista să capete susținere şi vizibilitate. Vezi <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">declaraţia de confidenţialitate</a> a revistei, care asigură cititorii că numele lor şi adresa de email nu vor fi utilizate cu alte scopuri.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Sunteţi interesat să faceţi o propunere de articol acestei reviste? Recomandăm citirea secțiunii <a href="{$indexUrl}/{$journalPath}/about">despre revistă</a> pentru a înțelege politicile după care se conduc secțiunile revistei, precum și <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">îndrumările pentru autori</a>. Autorul trebuie să se <a href="{$indexUrl}/{$journalPath}/user/register">înregistreze</a> în sistemul de management al revistei înainte de a face o propunere iar dacă deja este înregistrat, se poate <a href="{$indexUrl}/index/login">autentifica</a> iar apoi să parcurgă cei cinci pași.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Încurajăm bibliotecarii din bibliotecile universitare și de cercetare să listeze această revistă printre cele menţionate în registrele lor electronice. De asemenea, merită a fi remarcat faptul că sistemul de publicare cu acces deschis al acestei reviste se pretează pentru găzduirea revistelor de către bibloteci în sprijinul membrilor facultăţii pentru a-i ajuta în procesul de publicare (vezi și <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>

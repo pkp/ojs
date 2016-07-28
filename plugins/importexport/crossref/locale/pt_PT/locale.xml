@@ -15,13 +15,7 @@
 <locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.importexport.crossref.displayName">Plugin Exportação CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Exporta metadados dos artigos no formato CrossRef XML.</message>
-	
-	<message key="plugins.importexport.crossref.export">Exportar dados</message>
-	<message key="plugins.importexport.crossref.export.issues">Exportar edições</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Escolher uma edição para exportar.</message>
-	<message key="plugins.importexport.crossref.export.articles">Exportar artigos</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Seleccionar artigos para exportar.</message>
-	
+
 	<message key="plugins.importexport.crossref.cliUsage">Modo de Usar: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] artigos [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] edição [issueId]</message>
@@ -30,5 +24,4 @@
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Nenhuma edição encontrada com o ID "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Nenhum artigo encontrado com o ID "{$articleId}".</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Deve ser especificado um prefixo DOI válido na Configuração da revista para poder usar este plugin.</message>
 </locale>

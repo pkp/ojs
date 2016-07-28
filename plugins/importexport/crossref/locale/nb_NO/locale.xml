@@ -15,13 +15,7 @@
 <locale name="nb_NO" full_name="Norsk bokmål">
 	<message key="plugins.importexport.crossref.displayName">Programutvidelse for eksport til CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Eksporter artikkelmetadata i CrossRef XML-format.</message>
-	
-	<message key="plugins.importexport.crossref.export">Eksporter data</message>
-	<message key="plugins.importexport.crossref.export.issues">Eksporter utgaver</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Velg en utgave for eksport.</message>
-	<message key="plugins.importexport.crossref.export.articles">Eksporter artikler</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Velg artikler for eksport.</message>
-	
+
 	<message key="plugins.importexport.crossref.cliUsage">Bruk:
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] artikler [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] utgave [issueId]</message>
@@ -30,5 +24,4 @@
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Ingen utgave stemmer med den angitte utgave-ID'en "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Ingen artikkel stemmer med den angitte artikkel-ID'en "{$articleId}".</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">For å bruke denne programutvidelsen må et gyldig DOI-prefix må være spesifisert under oppsett av tidsskriftet.</message>
 </locale>

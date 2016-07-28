@@ -4,7 +4,7 @@
 <!--
   * locale/gl_ES/default.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -16,7 +16,7 @@
  
 <locale name="gl_ES" full_name="Galego">
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">A petición non foi publicada anteriormente, nen se presentou a outra revista (ou se achegou unha explicación en Comentarios ao editor).</message>
-	<message key="default.journalSettings.checklist.fileFormat">O ficheiro enviado está en formato OpenOffice, Microsoft Word, o RTF.</message>
+	<message key="default.journalSettings.checklist.fileFormat">O ficheiro enviado está en formato OpenOffice, Microsoft Word, RTF, o WordPerfect.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">O texto ten interliñado simple; o tamaño da fonte é 12 puntos; se usa letra cursiva en vez de suliñado (agás os enderezos URL); e todas as ilustracións, figuras e táboas están dentro do texto no lugar que lles corresponde e non ao final.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[O texto cumpre cos requisitos bibliográficos e de estilo asinalados nas <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Normas para autores/as</a>, que se poden achar en Sobre a revista.]]></message>
 	<message key="default.journalSettings.privacyStatement">Os nomes e enderezos de correo electrónicos inseridos nesta revista usaranse exclusive para as fins declaradas por esta revista e non estarán disponibeis para nengum outro propósito ou outra persoa.</message>
@@ -87,9 +87,9 @@ Una vez teñas rematado as túas revisións renomea o ficheiro de NomeAutorPA.do
 &bull; [palabra riscada] indica o borrado de "completamente"
 &bull; Comentario que contén unha resposta ós PA dos/as editores/as]]></message>
 
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
-</message>
+	<message key="default.journalSettings.emailSignature">________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Recomendamos aos/as lectores/as que se dean de alta no servizo de notificación de publicación desta revista. Usa a ligazón de <a href="{$indexUrl}/{$journalPath}/user/register">Rexistro</a> que se atopa en riba na home da revista. Este rexistro permitirá ao/ á lector/a receber a Táboa de contidos por correo electrónico cada vez que se publique un novo número da revista. Tamén permitirá á revista acadar un certo nivel de suporte e número de lectores/as. Consulta a <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Política de Privacidade</a> da revista, que certifica aos/as lectores/as que o seu nome e enderezo de correu electrónico non seran usados fora de propósito.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Tes interés en facer un envío a esta revista? Recomendámoslle que revise a sección <a href="{$indexUrl}/{$journalPath}/about">Sobre a revista<a> para consultar a súa política e as <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Normas de autores/as</a>. Os/as autores/as precisan <a href="{$indexUrl}/{$journalPath}/user/register">rexistrarse</a> na revista para poder facer envíos, e se estaren rexistrados só teñen que  <a href="{$indexUrl}/{$journalPath}/login">identificarse</a> e comezar o proceso de 5 pasos.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Recomendamos ás bibliotecas de investigación que listen esta revista na súa listaxe de revistas electrónicas. Este sistema de publicación tamén está deseñado para ser aloxado e administrado por bibliotecas de investigación como suporte do traballo de publicación de revistas da súa facultade asociada. Para obter máis información sobre cómo empregar Open Journal Systems para administrar e publicar revistas revisadas por pares, consulta <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>

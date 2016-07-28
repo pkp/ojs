@@ -22,7 +22,7 @@
 		{include file="controllers/notification/inPlaceNotification.tpl" notificationId="publicationIdentifiersFormFieldsNotification"}
 		<input type="hidden" name="submissionId" value="{$pubObject->getId()|escape}" />
 		<input type="hidden" name="stageId" value="{$stageId|escape}" />
-		<input type="hidden" name="tabPos" value="2" />
+		<input type="hidden" name="tabPos" value="1" />
 		<input type="hidden" name="displayedInContainer" value="{$formParams.displayedInContainer|escape}" />
 		<input type="hidden" name="tab" value="identifiers" />
 {elseif $pubObject instanceof ArticleGalley}
@@ -35,6 +35,7 @@
 	<form class="pkp_form" id="publicIdentifiersForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT op="updateIdentifiers" issueId=$pubObject->getId()}">
 		{include file="controllers/notification/inPlaceNotification.tpl" notificationId="issueIdentifiersFormFieldsNotification"}
 {/if}
+{csrf}
 
 {*include file="common/formErrors.tpl"*}
 {fbvFormSection}

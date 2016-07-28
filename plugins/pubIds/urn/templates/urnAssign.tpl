@@ -9,8 +9,9 @@
  *}
 
 {assign var=pubObjectType value=$pubIdPlugin->getPubObjectType($pubObject)}
-{assign var=enableObjectURN value=$pubIdPlugin->getSetting($currentJournal->getId(), "enable`$pubObjectType`URN")}
+{assign var=enableObjectURN value=$pubIdPlugin->getSetting($currentContext->getId(), "enable`$pubObjectType`URN")}
 {if $enableObjectURN}
+	{fbvFormArea id="pubIdURNFormArea" class="border" title="plugins.pubIds.urn.editor.urn"}
 	{if $pubObject->getStoredPubId($pubIdPlugin->getPubIdType())}
 		{fbvFormSection}
 			<p class="pkp_help">{translate key="plugins.pubIds.urn.editor.assignURN.assigned" pubId=$pubObject->getStoredPubId($pubIdPlugin->getPubIdType())}</p>
@@ -30,4 +31,5 @@
 			{include file="`$templatePath`urnAssignCheckBox.tpl" pubId=$pubId pubObjectType=$pubObjectType}
 		{/if}
 	{/if}
+	{/fbvFormArea}
 {/if}

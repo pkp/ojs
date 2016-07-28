@@ -4,7 +4,7 @@
 <!--
   * locale/uk_UA/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -14,7 +14,7 @@
   * V. I. Vernadsky National Library of Ukraine
   -->
 
-<locale name="uk_UA" full_name = "Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <message key="author.submit">Нове подання</message>
        <message key="author.track">Активні подання</message>
        <message key="author.competingInterests"><![CDATA[<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Політика</a> щодо&nbsp;конфлікту&nbsp;інтересів]]></message>
@@ -55,9 +55,8 @@
        <message key="submission.submit.selectSection">Будь ласка, оберіть розділ...</message>
        <message key="author.submit.submissionLocale">Мова подання</message>
        <message key="author.submit.submissionLocaleDescription">Цей журнал приймає подання кількома мовами. Оберіть основну мову подання з запропонованих нижче.</message>
-       <message key="submission.submit.submissionChecklist">Вимоги до подання</message>
-       <message key="submission.submit.submissionChecklistDescription">Необхідно підтвердити, що це подання відповідає нормам, прийнятим у журналі. Підтвердіть всі пункти вимог (нижче можна додати коментарі для редактора).</message>
-       <message key="author.submit.verifyChecklist">Перед тим, як продовжити, Ви повинні підтвердити всі пункти вимог.</message>
+       <message key="author.submit.submissionChecklist">Вимоги до подання</message>
+             <message key="author.submit.verifyChecklist">Перед тим, як продовжити, Ви повинні підтвердити всі пункти вимог.</message>
        <message key="author.submit.copyrightNoticeAgree">Автори погоджуються з Положенням про авторські права, норми якого будуть застосовані до цього подання, коли і якщо воно буде опубліковане у цьому журналі (нижче можна додати коментарі для редактора).</message>
        <message key="author.submit.copyrightNoticeAgreeRequired">Перед тим, як продовжити, Ви повинні погодитися з нормами Положення про авторські права.</message>
        <message key="submission.submit.coverNote">Коментарі для редактора</message>
@@ -71,10 +70,8 @@
        <message key="author.submit.addAuthor">Додати автора</message>
        <message key="author.submit.deleteAuthor">Видалити автора</message>
        <message key="author.submit.submissionIndexingDescription">Вкажіть ключові слова для індексації цього подання, відокремлюючи їх одне від одного крапкою з комою (слово1; слово2; слово3).</message>
-       <message key="author.submit.submissionSupportingAgencies">Спонсоруючі організації</message>
-       <message key="author.submit.submissionSupportingAgenciesDescription">Вкажіть установи, які надали фінансову підтримку для виконання дослідження, яке розглядається у цьому поданні.</message>
-       <message key="author.submit.coverageInstructions">Охарактеризуйте власне дослідження в аспектах його географічних, хронологічних (історичних) або інших меж.</message>
-       <message key="author.submit.languageInstructions"><![CDATA[Українська=uk; Русский=ru; English=en. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Додаткові коди</a>.]]></message>
+                   <message key="author.submit.coverageInstructions">Охарактеризуйте власне дослідження в аспектах його географічних, хронологічних (історичних) або інших меж.</message>
+             <message key="author.submit.languageInstructions"><![CDATA[Українська=uk; Русский=ru; English=en. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Додаткові коди</a>.]]></message>
        <message key="author.submit.form.authorRequired">Потрібний, принаймні, один автор.</message>
        <message key="author.submit.form.authorRequiredFields">Необхідно ввести ім'я, прізвище та адресу email кожного з авторів.</message>
        <message key="author.submit.form.titleRequired">Будь ласка, введіть назву Вашої статті.</message>
@@ -106,8 +103,7 @@
        <message key="author.submit.suppFile.dataSet">Набір даних</message>
        <message key="author.submit.suppFile.sourceText">Текст першоджерела</message>
        <message key="author.submit.suppFile.briefDescription">Короткий опис</message>
-       <message key="author.submit.suppFile.contributorOrSponsor">Спонсоруюча організація</message>
-       <message key="author.submit.suppFile.availableToPeers">Дозволити рецензентам доступ до файлу (без метаданих), оскільки його зміст не суперечить нормам сліпого рецензування.</message>
+             <message key="author.submit.suppFile.availableToPeers">Дозволити рецензентам доступ до файлу (без метаданих), оскільки його зміст не суперечить нормам сліпого рецензування.</message>
        <message key="author.submit.suppFile.publisherDescription">Вказується лише для матеріалів, які були опубліковані.</message>
        <message key="author.submit.suppFile.dateDescription">Дата отримання даних чи створення дослідного інструменту.</message>
        <message key="author.submit.suppFile.sourceDescription">Назва дослідження або іншого джерела походження.</message>
@@ -123,8 +119,7 @@
        <message key="author.submit.filesSummary">Опис файлу</message>
        <message key="author.submit.finishSubmission">Підтвердити подання</message>
        <message key="author.submit.submissionComplete">Подання завершено. Дякуємо за Ваш інтерес до публікації у виданні "{$journalTitle}".</message>
-       <message key="author.submit.expedite"><![CDATA[Якщо це подання у форматі, готовому до публікації без подальшого рецензування, редагування та верстки, воно може бути переміщене безпосередньо до останньої ланки Редакційної черги за допомогою <a href="{$expediteUrl}" class="action">цього посилання</a>. (Примітка: Цю опцію мають лише редактори журналів.)]]></message>
-       <message key="author.article.uploadAuthorVersion">Вивантажити авторську версію</message>
+             <message key="author.article.uploadAuthorVersion">Вивантажити авторську версію</message>
        <message key="author.article.copyeditedFile">Відредагований файл</message>
        <message key="author.article.authorRevisedFile">Авторський файл</message>
        <message key="author.submit.authorSubmitLoginMessage">Для подання рукописів у цей журнал необхідно створити обліковий запис користувача. Це дозволить нашим редакторам працювати з Вашим поданням і контактувати з Вами, коли змінюється статус подання або необхідна додаткова інформація від Вас.</message>

@@ -9,20 +9,16 @@
  *
  * @uses $issue Issue The issue
  *}
+{assign var=issueTitle value=$issue->getLocalizedTitle()}
+{assign var=issueSeries value=$issue->getIssueSeries()}
+{assign var=issueCover value=$issue->getLocalizedFileName()}
+
 <div class="obj_issue_summary">
 
-	{* Retrieve separate entries for $issueTitle and $issueSeries *}
-	{assign var=issueTitle value=$issue->getLocalizedTitle()}
-	{assign var=issueSeries value=$issue->getIssueSeries()}
-
-	{* Show cover image and use cover description *}
-	{if $issue->getLocalizedFileName() && $issue->getShowCoverPage($currentLocale) && !$issue->getHideCoverPageArchives($currentLocale)}
+	{if $issueCover}
 		<a class="cover" href="{url op="view" path=$issue->getBestIssueId()}">
-			<img src="{$coverPagePath|escape}{$issue->getFileName($currentLocale)|escape}"{if $issue->getCoverPageAltText($currentLocale) != ''} alt="{$issue->getCoverPageAltText($currentLocale)|escape}"{else} alt="{translate key="issue.coverPage.altText"}"{/if}/>
+			<img src="{$coverPagePath|escape}{$issueCover|escape}"{if $issue->getCoverPageAltText($currentLocale) != ''} alt="{$issue->getCoverPageAltText($currentLocale)|escape}"{/if}>
 		</a>
-		{assign var="issueDescription" value=$issue->getLocalizedCoverPageDescription()}
-	{else}
-		{assign var="issueDescription" value=$issue->getLocalizedDescription()}
 	{/if}
 
 	<a class="title" href="{url op="view" path=$issue->getBestIssueId()}">
@@ -39,6 +35,6 @@
 	{/if}
 
 	<div class="description">
-		{$issueDescription|strip_unsafe_html|nl2br}
+		{$issue->getLocalizedDescription()|strip_unsafe_html}
 	</div>
 </div><!-- .obj_issue_summary -->

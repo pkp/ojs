@@ -4,7 +4,7 @@
 <!--
   * locale/zh_TW/manager.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,15 +12,9 @@
   *
   -->
 
-<locale name="zh_TW" full_name = "繁體中文">
+<locale name="zh_TW" full_name="繁體中文">
 	<message key="manager.emails.confirmResetAll">您確定您要重設這份期刊中所有的電子郵件樣版為預設值？您將會失去您曾自訂過的所有設定.</message>
 	<message key="manager.files.note">請注意：檔案瀏覽器是一項高階的功能，它允許一個期刊內的檔案和目錄直接被瀏覽和作。</message>
-	<message key="manager.groups">編輯團隊</message>
-	<message key="manager.groups.create">新增編輯團隊的名稱</message>
-	<message key="manager.groups.disableBoard">系統會根據指派的編輯角色（期刊管理員、編輯、文稿類型編輯、校樣編輯等等）產生一個人物清單。</message>
-	<message key="manager.groups.enableBoard">期刊管理員將會新增編輯團隊的職稱，並且將適當的人置於每個職稱之下。</message>
-	<message key="manager.groups.enableBoard.description"><![CDATA[為了讓<a href="{$aboutEditorialTeamUrl}">編輯團隊</a> 出現在「期刊介紹」中：]]></message>
-	<message key="manager.groups.noneCreated">沒有建置任何編輯團隊的職位。</message>
 	<message key="manager.journalManagement">期刊管理</message>
 	<message key="manager.languages.noneAvailable">抱歉，沒有額外的語言可供使用。如果您希望在這份期刊中使用額外的語系，請聯絡您的網站管理者。</message>
 	<message key="manager.languages.primaryLocaleInstructions">這將會是期刊網站的預設語言</message>
@@ -58,11 +52,8 @@
 	<message key="manager.setup.aboutItemContent">內容</message>
 	<message key="manager.setup.addAboutItem">增加說明項目</message>
 	<message key="manager.setup.addChecklistItem">增加清單項目</message>
-	<message key="manager.setup.addContributor">增加贊助者</message>
 	<message key="manager.setup.addItem">增加項目</message>
 	<message key="manager.setup.addItemtoAboutJournal">增加會在「期刊介紹」裏顯示的項目</message>
-	<message key="manager.setup.additionalContent">額外的內容</message>
-	<message key="manager.setup.additionalContentDescription">以HTML或純文字的方式，加入下面的內容；如果有上傳任何內容，這會出現在首頁的下方</message>
 	<message key="manager.setup.addNavItem">新增項目</message>
 	<message key="manager.setup.addSponsor">增加贊助單位</message>
 	<message key="manager.setup.alternateHeader">其它標頭</message>
@@ -71,16 +62,7 @@
 	<message key="manager.setup.announcementsDescription">可以發佈公告以通知期刊的讀者關於期刊的新聞稿以及活動。已發佈的公告會出現在「公告」頁面。</message>
 	<message key="manager.setup.announcementsIntroduction">額外的資訊</message>
 	<message key="manager.setup.announcementsIntroductionDescription">輸入在公告網頁上要給讀者看到的額外的資訊</message>
-	<message key="manager.setup.appearInAboutJournal">(將在「期刊介紹」中出現) </message>
-	<message key="manager.setup.authorCopyrightNotice">版權注意事項</message>
-	<message key="manager.setup.authorCopyrightNoticeAgree">作者必須同意「版權注意事項」以進行投稿。</message>
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[這份版權注意事項會顯示在「期刊介紹」中，而且出現在每份出版項目的後設資料中(metadata)。作者同意期刊具有初次出版權利時，可以保留版權。否則，作者可以把版權讓渡給這份期刊，接著允許作者以非商業性的方式使用其作品，包括將作品放在一份開放閱讀的檔案資料中。此外，可以考慮以<a href="http://www.creativecommons.org" target="_blank">Creative Commons</a>（創用CC）的方式制訂一份叫有彈性的版權許可。]]></message>
-	<message key="manager.setup.authorGuidelines">作者須知</message>
-	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[設定讓作者在投稿本期刊時要依循的書目和文件格式標準 (例如，<em>美國心理學會出版手冊</em>, 第五版, 2001).。提供用在投稿文章中的一般期刊和書目引用格式的範例通常是很有用的。也請指明恰當的「補充檔案」類型（例如資料集(data-sets)、研究器具等等），這些是應該要鼓勵作者上傳的東西，附加在他們的投稿文章上，提高讀者對其作品的瞭解程度。]]></message>
-	<message key="manager.setup.contributor">贊助者</message>
-	<message key="manager.setup.contributors">支援的來源</message>
-	<message key="manager.setup.contributorsDescription">提供本刊金融或者實物支持的其他機構或者組織單位會出現在「期刊介紹」中，並且可以附加一個致謝的備註。</message>
-	<message key="manager.setup.copyediting">校樣編輯</message>
+	<message key="manager.setup.appearInAboutJournal">(將在「期刊介紹」中出現)</message>
 	<message key="manager.setup.copyeditInstructions">校樣編輯指引</message>
 	<message key="manager.setup.copyeditInstructionsDescription">「校樣編輯指引」會在「投稿編輯」階段顯示給校樣編輯、作者和文稿類型編輯看到。下面是一組預設的HTML格式指南，期刊管理員可以在任何階段進行修訂或者代換（以純文字或HTML的方式）。</message>
 	<message key="manager.setup.copyrightNotice">版權注意事項</message>
@@ -109,12 +91,12 @@
 	<message key="manager.setup.enableAnnouncements">讓期刊管理員可以增加期刊公告。</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">顯示</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">之期刊首頁最近公告。</message>
+	<message key="manager.setup.enablePageNumber">項目頁碼將會以手動方式填入目錄裏(例如：頁 13-26)。</message>
+	<message key="manager.setup.enablePublicArticleId">自訂的識別碼將會被用來識別出版項目。</message>
+	<message key="manager.setup.enablePublicIssueId">自訂的識別碼將會被用來識別期數。</message>
+	<message key="manager.setup.enablePublicSuppFileId">自訂的識別碼將會被用來識別論文的補充檔案。</message>
 	<message key="manager.setup.enableUserRegistration">允設使用者在本期刊網站註冊為：</message>
 	<message key="manager.setup.focusAndScope">焦點和範圍</message>
-	<message key="manager.setup.focusAndScopeDescription">請在下面輸入一段說明，這會顯示在「期刊介紹」中，向作者、讀者與圖書館員說明期刊論文的領域以及本期刊將會刊行的項目。 </message>
-	<message key="manager.setup.focusAndScopeOfJournal">期刊焦點和範圍</message>
-	<message key="manager.setup.focusScope">焦點和範圍</message>
-	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>HTML資料範例</strong>]]></message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">讓作者索引他們的作品</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS支持 <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative(OAI )開放典藏計畫</a> 協定來編寫後設資料，其顯示標準提供了完善的索引，以存取全球規模的電子研究資源。作者會使用一個類似的模版來提供其投稿稿件的後設資料。「期刊管理員」應該選擇索引的領域，並請以相干的範例請作者索引他們的作品，用分號來分隔多個項目（例如，項目1; 項目2）。這些項目的前面應該要加上「例如，」或者「比方說：」來介紹。]]></message>
 	<message key="manager.setup.form.contactEmailRequired">需要主要連絡人的電子信箱。</message>
@@ -124,15 +106,10 @@
 	<message key="manager.setup.form.numReviewersPerSubmission">每篇稿件所需審查人數目。</message>
 	<message key="manager.setup.form.supportEmailRequired">需要贊助者的電子信箱。</message>
 	<message key="manager.setup.form.supportNameRequired">需要贊助者的姓名。</message>
-	<message key="manager.setup.frequencyOfPublication">創刊時間和出刊頻率</message>
-	<message key="manager.setup.frequencyOfPublicationDescription">為本期刊的第一次出版設定起始期/卷數和年分，還有預定出版期/卷數的頻率。</message>
-	<message key="manager.setup.frequencyOfPublicationNote">注意：將本期刊不用的項目空下來，編輯可以在出版過中重新設定數目。</message>
 	<message key="manager.setup.generalInformation">一般資訊</message>
 	<message key="manager.setup.gettingDownTheDetails">步驟 1：輸入細節。</message>
 	<message key="manager.setup.guidelines">須知</message>
 	<message key="manager.setup.guidingSubmissions">步驟 3：投稿導引</message>
-	<message key="manager.setup.homepageImage">首頁圖像</message>
-	<message key="manager.setup.homepageImageDescription">加一個圖檔到網頁中。</message>
 	<message key="manager.setup.information">資訊</message>
 	<message key="manager.setup.information.description">給圖書館館員、未來的作者和讀者的簡要說明，在側邊欄的「資訊」區段中顯示。</message>
 	<message key="manager.setup.information.forAuthors">給作者</message>
@@ -142,13 +119,10 @@
 	<message key="manager.setup.initialIssueDescription">依照所選的格式，指認被OJS所出刊的第一期的期數、卷數、和/或年分：</message>
 	<message key="manager.setup.institution">機構</message>
 	<message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number 國際標準序列號碼)是一個八位數字，用以識別定期出版之出版品，包括電子期刊。其由一個國家中心的世界性網路所管理，與位在巴黎的一個由聯合國教科文組織(Unesco)和法國政府所支持的國際中心合作。您可以從<a href="http://www.issn.org" target="_blank">ISSN 網站</a>獲得一組號碼。在期刊運作的任何一個階段都可以取得這樣的號碼。]]></message>
-	<message key="manager.setup.issuePerVolume">期/卷</message>
 	<message key="manager.setup.itemsDescription">可以新增「導覽」列項目到當前顯示自首頁上方的項目中（如首頁、期刊介紹、使用者首頁...等等）。</message>
 	<message key="manager.setup.itemsPerPage">每頁幾項</message>
 	<message key="manager.setup.journalAbbreviation">期刊名稱縮寫</message>
 	<message key="manager.setup.journalArchiving">期刊典藏</message>
-	<message key="manager.setup.journalDescription">期刊說明</message>
-	<message key="manager.setup.journalDescriptionDescription">以HTML或純文字的方式，加入簡短的 20-25字數說明；這會出現在導覽列的正下方。</message>
 	<message key="manager.setup.journalHomepageContent">期刊首頁內容</message>
 	<message key="manager.setup.journalHomepageContentDescription">根據預設，首頁由導覽連結所組成。您可以使用下面一個或所有的選項來增添額外的首頁內容，會以所見的順序來顯示。注意，當期期刊永遠都可以透過導覽列中的「當期期刊」連結來閱讀</message>
 	<message key="manager.setup.journalHomepageHeader">期刊網頁標頭</message>
@@ -163,7 +137,6 @@
 	<message key="manager.setup.journalStyleSheetInvalid">無效的期刊樣式表格式。可接受的格式為.css的檔案格式。</message>
 	<message key="manager.setup.journalTitle">期刊名稱</message>
 	<message key="manager.setup.labelName">標籤名</message>
-	<message key="manager.setup.layoutAndGalleys">版面編輯</message>
 	<message key="manager.setup.layoutInstructions">版面指引</message>
 	<message key="manager.setup.layoutInstructionsDescription">「版面指引」用以準備將期刊的出版項目進行格式化，在下面以HTML或純文字的方式輸入。在每份投稿稿件的「編輯」頁面中，版面編輯和文稿類型編輯都會看到這些資訊。（每份期刊可能使用自訂的檔案格式、書目標準和樣式表等等，所以沒有準備一組預設的指引。）</message>
 	<message key="manager.setup.layoutTemplates">版面樣式</message>
@@ -173,11 +146,9 @@
 	<message key="manager.setup.lists">列表</message>
 	<message key="manager.setup.listsDescription">.輸入每頁顯示項目的最大數字（例如投稿數、使用者數或者編輯作業指派人數），以及顯示每個頁面的連結數目。</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[啟用LOCKSS，在加入LOCKSS的圖書館中儲存與散佈期刊的內容。<a href="{$lockssUrl}" target="_blank">Publisher Manifest</a>頁面。 A LOCKSS的認證資訊會顯示在「期刊典藏」的「期刊介紹」中：]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[See <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">其他版本的LOCKSS認證</a>.]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[列出6-10個會註冊並且快取這份期刊的圖書館。比方說，指派編輯或者編委成員工作的機構，以及＼或者已經加入LOCKSS的機構。見 <a href="http://www.lockss.org/community/" target="_blank">participating libraries</a>. 用預備好的邀請函寄給(i) <a href="{$lockssExistingArchiveUrl}" target="_blank">libraries participating in LOCKSS</a>或者 (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">libraries not yet participating in LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">外觀</message>
 	<message key="manager.setup.look.description">首頁標題、內容、期刊標題、尾標、瀏覽列、和樣式。</message>
-	<message key="manager.setup.mailingAddressDescription">本期刊所在地點及其地址。</message>
 	<message key="manager.setup.management">管理</message>
 	<message key="manager.setup.management.description">時程、線上使用、公告、和校樣編輯、版面編輯、校對者的使用。</message>
 	<message key="manager.setup.managementOfBasicEditorialSteps">基本編輯步驟管理</message>
@@ -190,47 +161,23 @@
 	<message key="manager.setup.noImageFileUploaded">沒有上傳的圖像檔。</message>
 	<message key="manager.setup.noStyleSheetUploaded">沒有上傳CSS樣式表</message>
 	<message key="manager.setup.note">備註</message>
-	<message key="manager.setup.notifications">給作者的收稿通知</message>
-	<message key="manager.setup.notifications.copyPrimaryContact">送一分拷給期刊的主要連絡人(在步驟 1 的設定)。</message>
-	<message key="manager.setup.notifications.copySpecifiedAddress">送一分到下列的電子信箱：</message>
-	<message key="manager.setup.notifications.description">在成功完成投稿程序後，作者會自動地發出一封通知電子郵件（可以在「預備電子郵件」中檢視與編輯）。此外，通知信的副本可以用下列的方式寄出：</message>
 	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>注意：</strong>收稿通知的電子郵件現在是關閉的。若要開啟，請在 <a class="action" href="{$preparedEmailsUrl}">備用電子郵件</a>啟用「收稿通知」電子郵件。]]></message>
-	<message key="manager.setup.noUseCopyeditors">編輯將會擔負起校樣編輯的工作。</message>
-	<message key="manager.setup.noUseLayoutEditors">The editors will prepare the galleys in the appropriate format for electronic publication.編輯會為電子出版品準備恰當格式的校樣版面</message>
-	<message key="manager.setup.noUseProofreaders">編輯與作者將會進行校對。</message>
 	<message key="manager.setup.numPageLinks">網頁連結</message>
 	<message key="manager.setup.onlineAccessManagement">線上閱讀管理</message>
 	<message key="manager.setup.onlineIssn">線上的 ISSN</message>
 	<message key="manager.setup.openAccess">期刊內容將開放閱讀。</message>
-	<message key="manager.setup.openAccessPolicy">開放閱讀原則</message>
-	<message key="manager.setup.openAccessPolicyDescription">輸入一段期刊開放閱讀方針的說明，這會顯示在「期刊介紹」之中。</message>
 	<message key="manager.setup.pageNumberIdentifier">頁碼選項</message>
-	<message key="manager.setup.peerReviewDescription">概述這份期刊的同查審查方針以及讀者與作者的使用步驟，包括一般審查一份投稿時的審查人人數、審查人被要求以哪些判準來評審稿件、一般要花多少時間進行審查，以及聘用審查人之原則。這個項目會出現在「期刊介紹」之中。</message>
-	<message key="manager.setup.peerReviewPolicy">審查</message>
-	<message key="manager.setup.peerReviewPolicy2">審查方針</message>
 	<message key="manager.setup.policies">方針</message>
 	<message key="manager.setup.policies.description">焦點、審查、文稿類型、隱私、安全性和其它說明。</message>
-	<message key="manager.setup.principalContact">固定連絡人</message>
-	<message key="manager.setup.principalContactDescription">這個職位能夠被當成固定的編輯、管理編輯群或者管理事務的職位，會被列在期刊的首頁的「聯絡資訊」下面，連同「技術支援聯絡人」一起。</message>
 	<message key="manager.setup.printIssn">紙本的 ISSN</message>
-	<message key="manager.setup.privacyStatement">隱私權聲明</message>
-	<message key="manager.setup.privacyStatement2">隱私權聲明</message>
-	<message key="manager.setup.privacyStatementDescription">這個聲明會出現在「期刊介紹」以及「作者投稿」和「通知」登記頁面。下面是一個建議版本的隱私權方針，可以在任何階段中進行修改。</message>
 	<message key="manager.setup.proofingInstructions">校對指引</message>
 	<message key="manager.setup.proofingInstructionsDescription">「校對指引」會在「投稿編輯」頁面顯示給校對者、作者、版面編輯與文稿類型編輯看到。下面是一組預設的HTML格式之指引，期刊管理員可以在任何階段進行編輯或取代。（以純文字或HTML的方式）</message>
-	<message key="manager.setup.proofreading">校對者</message>
-	<message key="manager.setup.publicationFormat">格式</message>
-	<message key="manager.setup.publicationFormatDescription">為特定期刊期數或卷數選擇預設的格式。這個格式可以被被個別的期數所覆寫。</message>
-	<message key="manager.setup.publicationFormatTitle">自訂的期數標題</message>
-	<message key="manager.setup.publicationFormatVolume">卷、年</message>
-	<message key="manager.setup.publicationFormatYear">年</message>
 	<message key="manager.setup.publicationSchedule">出版時程</message>
 	<message key="manager.setup.publicationScheduleDescription"><![CDATA[期刊的各個項目能夠一起出版，作為一期目錄的一部份內容。否則，個別的項目能夠在一準備好的時候，透過將它們加入到當期(或當卷)的「目錄」中，逕行出版。請在「期刊介紹」中提供讀者一個關於這份期刊會使用的系統以及其出刊頻率的說明。]]></message>
 	<message key="manager.setup.publicationScheduling">出版時程設定</message>
 	<message key="manager.setup.publicIdentifier">期刊內容識別碼</message>
 	<message key="manager.setup.publisher">出版者</message>
 	<message key="manager.setup.publisherDescription">出版這份期刊的組織單位名稱會出現在這份期刊的「期刊介紹」中。</message>
-	<message key="manager.setup.registerJournalForIndexing">註冊本期刊以進行索引（後設資料收集）</message>
 	<message key="manager.setup.restrictArticleAccess">使用者必須登入才可以瀏覽已經出版論文的全文。</message>
 	<message key="manager.setup.restrictSiteAccess">使用者必須登入才能瀏覽這個網站。</message>
 	<message key="manager.setup.reviewGuidelines">審查須知</message>
@@ -238,27 +185,16 @@
 	<message key="manager.setup.reviewOptions">審查選項</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">自動電子郵件備忘錄 (可從 OJS 的預設電子郵件取得) 可以在兩個時間點送給審查人 (而編輯也隨時可以直接電郵審查人)</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>注意：</strong>要啟用這些選項，這個網站的管理員必須啟用OJS設定檔中的<tt>scheduled_tasks</tt> 選項。（可能無法在所有的伺服器上面執行），就在上面指出的OJS文件當中]]></message>
-	<message key="manager.setup.reviewOptions.noteOnModification">可在編輯過程中修訂。</message>
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">一般審查時間</message>
 	<message key="manager.setup.reviewOptions.onQuality">對每一篇審查結果，編輯將會由1到5評比審查人。</message>
-	<message key="manager.setup.reviewOptions.remindForInvite1">如果審查人沒有在下述時間之內回應一個審查要求：</message>
-	<message key="manager.setup.reviewOptions.remindForInvite2">天。</message>
-	<message key="manager.setup.reviewOptions.remindForSubmit1">如果審查人下述時間之內沒有送出推薦：</message>
-	<message key="manager.setup.reviewOptions.remindForSubmit2">天超過審查期限。</message>
 	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">審查人只有在答應審查之後才能瀏稿件檔案。</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">審查人閱讀選項</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">啟用審查人「一點即入」模式。</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>注意：</strong> 這封給審查人的電子郵件邀請函會包涵一個特殊的網址連結，邀請審查人直接進入稿件的「審查」頁面（同時可以存取其他需要登入身份的頁面）。基於與這個選項相關的安全性理由，編輯在寄出給審查人的邀請函之前，不能變更電子郵件或者增加副本(CCs)或密件副本(BCCs)。]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">審查人評比</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">審查人備忘錄</message>
-	<message key="manager.setup.reviewOptions.reviewTime">審查時間</message>
 	<message key="manager.setup.reviewPolicy">審查方針</message>
-	<message key="manager.setup.reviewProcess">審查程序</message>
-	<message key="manager.setup.reviewProcessDescription"><![CDATA[.OJS支援兩種管理審查程序的模式。建議使用「標準審查程序」，因為其透過各項步驟引導審查人，確保每份投稿都會有一份完整審查歷史紀錄，還有方便的自動提醒通知，以及給投稿稿件的標準建議（接受刊登；修改後接受刊登；重新審查；投稿他處；婉謝退稿；見審查意見）。<br /><br />請在下面選擇一個選項：]]></message>
-	<message key="manager.setup.reviewProcessEmail">電子郵件附件審查程序</message>
 	<message key="manager.setup.reviewProcessEmailDescription">編輯向審查人寄交一份附有投稿稿件的審查邀請函。審查人同樣以電子郵件將他們的同意書（或婉謝信），連同審查意見書和建議選項寄交給編輯。編輯在投稿的「審查」頁面，進入審查人的同意書（或婉謝信）以及審查意見書和建議選項，以記錄審查流程。</message>
-	<message key="manager.setup.reviewProcessStandard">標準審查程序</message>
-	<message key="manager.setup.reviewProcessStandardDescription">編輯會將投稿文章的標題和摘要電郵給選中的審查人，同時以邀請函的形式請審查人登入這個期刊網站，以完成審查工作。審查人進入期刊網站以同意進行審查工作，之後下載投稿稿件，上傳他們的審查意見書，並選擇一個審查建議。</message>
 	<message key="manager.setup.searchEngineIndexing">搜尋引擎索引</message>
 	<message key="manager.setup.searchEngineIndexingDescription">為協助使用者使用搜尋引擎來瞭解這份期刊，請提供一份簡短的期刊說明與相關關鍵字（以分號(;)加以區隔）。</message>
 	<message key="manager.setup.sectionsAndSectionEditors">文稿類型和文稿類型編輯</message>
@@ -269,8 +205,6 @@
 	<message key="manager.setup.selectEditorDescription">將會全程監控處理過程的期刊編輯</message>
 	<message key="manager.setup.selectSectionDescription">將會考慮納入此項目的期刊文稿類型。</message>
 	<message key="manager.setup.siteAccess">網站權限</message>
-	<message key="manager.setup.sponsors">贊助單位</message>
-	<message key="manager.setup.sponsorsDescription">贊助發起這份期刊的組織單位名稱（例如學會、大學系所、合作社等等）會出現在期刊的「期刊介紹」中，並且可以附加一個致謝的備註。</message>
 	<message key="manager.setup.stepsToJournalSite">建置一個期刊網站的5個步驟</message>
 	<message key="manager.setup.subjectExamples">(例如，光和作用、黑洞、四色地圖問題、貝斯定理)</message>
 	<message key="manager.setup.subjectKeywordTopic">關鍵字</message>
@@ -284,25 +218,16 @@
 	<message key="manager.setup.submissions.description">作者指引、版權和索引(包括註冊)。</message>
 	<message key="manager.setup.subscription">這份期刊需要訂閱之後才能閱讀某些或所有的內容。</message>
 	<message key="manager.setup.subscriptionDescription">「訂閱管理」模組需要指派「訂閱管理員」，存取這個模組，包括額外的開放閱讀、自行典藏和電子郵件通知選項。</message>
-	<message key="manager.setup.technicalSupportContact">技術支援連絡人</message>
-	<message key="manager.setup.technicalSupportContactDescription">這個人會被列在期刊的「聯絡資訊」頁面中，負責編輯、作者和審查人的使用問題，並且應該具有從所有角色的觀點來進行系統操作的經驗。這個期刊系統需要很少的技術支援，這或許該是個兼職性的工作。有可能會需要這樣的職位，比方說，當作者和審查人對於操作指南或者檔案格式有疑問時，或者說，有需要去確保期刊定期在伺服器上進行備份時。</message>
 	<message key="manager.setup.typeExamples">(例如，歷史研究、準實驗、文學分析、調查＼訪談等等)</message>
 	<message key="manager.setup.typeMethodApproach">類型（方法＼研究取向）</message>
 	<message key="manager.setup.typeProvideExamples">在本欄中提供相關的研究類型、方法和研究取向作為範例</message>
 	<message key="manager.setup.uniqueIdentifier">獨一的識別碼</message>
 	<message key="manager.setup.uniqueIdentifierDescription">文章和期數可以被附加上一個識別數字或字串，使用一個像是數位物件識別系統(Digital Object Identifier System; DOI)的註冊系統。</message>
-	<message key="manager.setup.useCopyeditors">期刊將指派校樣編輯來處理每篇稿件。</message>
 	<message key="manager.setup.useEditorialReviewBoard">本期刊設有一個編輯/審查委員會。</message>
-	<message key="manager.setup.useImageLogo">標誌圖像</message>
 	<message key="manager.setup.useImageTitle">標題圖像</message>
 	<message key="manager.setup.useJournalStyleSheet">期刊CSS樣式表</message>
-	<message key="manager.setup.useLayoutEditors">這份期刊會指派「版面編輯」來準備電子出版品之HTML、PDF、PS（文字檔案）等檔案格式的校樣版面。</message>
-	<message key="manager.setup.useProofreaders">這份期刊會指派（作者以外的）校對者，檢查校樣版面。</message>
 	<message key="manager.setup.userRegistration">使用者註冊</message>
 	<message key="manager.setup.useTextTitle">標題文字</message>
-	<message key="manager.setup.volumePerYear">卷/年</message>
-	<message key="manager.statistics.reports">報告產生器</message>
-	<message key="manager.statistics.reports.description">OJS建立報告，從投稿人、編輯、審查人和文稿類型編輯的眼光，追蹤在一段時間中進行之投稿的相關細節。報告生成為CSV檔案格式，需要一個有試算表的應用程式(如Excel)才能檢視。</message>
 	<message key="manager.statistics.statistics">期刊統計</message>
 	<message key="manager.statistics.statistics.count.accept">接受刊出</message>
 	<message key="manager.statistics.statistics.count.decline">回絕刊出</message>
@@ -333,13 +258,8 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">一期期刊出版過後幾個月</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">請選擇一個有效的時間長度</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">下列的說明會發佈在「期刊介紹」之中的「稍後開放閱讀」下面</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">請使用所提供之核取框</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">以電子郵件通知訂閱者</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">訂閱期滿後幾個月</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">以電子郵件通知訂閱者</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">訂閱期滿後幾週</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">以電子郵件通知訂閱者</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">訂閱期滿前幾個月</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">以電子郵件通知訂閱者</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">訂閱期滿前幾週</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">訂閱期滿提醒函</message>

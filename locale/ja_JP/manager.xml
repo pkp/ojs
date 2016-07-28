@@ -4,7 +4,7 @@
 <!--
   * locale/ja_JP/manager.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,17 +12,9 @@
   *
   -->
 
-<locale name="ja_JP" full_name = "日本語">
+<locale name="ja_JP" full_name="日本語">
 	<message key="manager.emails.confirmResetAll">この雑誌のメールテンプレートをリセットしてもよいですか。実行すると、カスタマイズしたメールが失われることになります。</message>
 	<message key="manager.files.note">注: ファイルブラウザは、雑誌に関係するファイルやディレクトリを直接、閲覧・操作するための新機能です。</message>
-	<message key="manager.groups">編集委員会</message>
-	<message key="manager.groups.context.editorialTeam">担当は「この雑誌について」ページのユーザ項目の編集委員会に表示されます（編集者など）。</message>
-	<message key="manager.groups.context.editorialTeam.short">編集委員会</message>
-	<message key="manager.groups.context.people">担当はユーザ項目にカテゴリ（編集委員会など）として表示されます。</message>
-	<message key="manager.groups.create">担当の作成</message>
-	<message key="manager.groups.disableBoard">OJSは割り当てられた役割（雑誌管理者、コピーエディタなど）の元にユーザをリストアップします。</message>
-	<message key="manager.groups.enableBoard">雑誌管理者は担当を作成し、各担当にユーザを割り当てます。</message>
-	<message key="manager.groups.noneCreated">編集委員会の担当は作成されていません。</message>
 	<message key="manager.journalManagement">雑誌管理</message>
 	<message key="manager.languages.noneAvailable">申し訳ありませんが、追加可能な言語はありません。この雑誌に言語を追加したい場合はサイト管理者にご連絡ください。</message>
 	<message key="manager.languages.primaryLocaleInstructions">この雑誌サイトのデフォルト言語になります。</message>
@@ -81,7 +73,6 @@
 	<message key="manager.people.mergeUsers.into.description">これまでのユーザの著書や編集担当などを移行するユーザを選択してください。</message>
 	<message key="manager.people.roleEnrollment">{$role} 担当</message>
 	<message key="manager.people.syncUserDescription">登録ユーザの同期機能は、指定した雑誌において指定した役割で登録されているすべてのユーザを、この雑誌においても同じ役割で登録します。この機能は、複数の雑誌で共通のユーザグループ（査読者など）を指定することを可能にします。</message>
-	<message key="manager.plugins.description">このページでは、雑誌管理者が現在インストールされているプラグインを評価したり、場合によっては設定したりすることができます。</message>
 	<message key="manager.sections.assigned">このセクションの編集者</message>
 	<message key="manager.sections.create">セクションの作成</message>
 	<message key="manager.section.sectionEditorInstructions">任命可能なセクションエディタの中からこのセクションの「セクションエディタを選択」してください。</message>
@@ -107,11 +98,8 @@
 	<message key="manager.setup.aboutItemContent">内容</message>
 	<message key="manager.setup.addAboutItem">項目の追加</message>
 	<message key="manager.setup.addChecklistItem">確認項目の追加</message>
-	<message key="manager.setup.addContributor">支援者の追加</message>
 	<message key="manager.setup.addItem">アイテムの追加</message>
 	<message key="manager.setup.addItemtoAboutJournal">「この雑誌について」の表示項目の追加</message>
-	<message key="manager.setup.additionalContent">追加コンテンツ</message>
-	<message key="manager.setup.additionalContentDescription">テキストまたはHTMLで書いた以下のコンテンツを追加する。ホームページ画像の下（これがアップロードされている場合）に表示されます。</message>
 	<message key="manager.setup.addNavItem">アイテム追加</message>
 	<message key="manager.setup.addReviewerDatabaseLink">新規データベースリンクの追加</message>
 	<message key="manager.setup.addSponsor">スポンサーの追加</message>
@@ -122,18 +110,8 @@
 	<message key="manager.setup.announcementsIntroduction">追加情報</message>
 	<message key="manager.setup.announcementsIntroductionDescription">「お知らせ」ページの告知分の前に表示する、読者に通知すべき追加情報を入力してください。</message>
 	<message key="manager.setup.appearInAboutJournal">（「この雑誌について」に表示されます）</message>
-	<message key="manager.setup.authorCopyrightNotice">著作権表示</message>
-	<message key="manager.setup.authorCopyrightNoticeAgree">投稿プロセスの一部として著者に著作権表示への同意を要求する。</message>
-	<message key="manager.setup.authorGuidelines">著者の手引き（執筆要項）</message>
-	<message key="manager.setup.competingInterests">利害の競合</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[生物学系の雑誌は、通常著者と査読者に対して、研究上の利害の競合があるか否かを宣言することを要求しています（see <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoSポリシー</a>を参照のこと）。]]></message>
-	<message key="manager.setup.competingInterests.guidelines">利害の競合声明添付のガイドライン</message>
 	<message key="manager.setup.competingInterests.requireAuthors">著者に投稿物に利害の競合（CI）声明を添付することを求める。</message>
 	<message key="manager.setup.competingInterests.requireReviewers">査読者に彼らが行う各査読に利害の競合（CI）声明を添付することを求める。</message>
-	<message key="manager.setup.contributor">名称</message>
-	<message key="manager.setup.contributors">支援者</message>
-	<message key="manager.setup.contributorsDescription">雑誌に経済的または現物支給による支援を提供するその他の機関や組織。その名称は「この雑誌について」ページに謝辞と共に表示されます。</message>
-	<message key="manager.setup.copyediting">コピーエディタ</message>
 	<message key="manager.setup.copyeditInstructions">原稿整理の手引き</message>
 	<message key="manager.setup.copyeditInstructionsDescription">原稿整理の手引きは、投稿物編集段階においてコピーエディタ、著者、セクションエディタに公開されます。以下は、HTMLで書かれたデフォルトの指示内容です。雑誌編集者は、いつでもこれを変更したり、置き換えたりすることができます（プレーンテキストでもHTMLでも可）。</message>
 	<message key="manager.setup.copyrightNotice">著作権表示</message>
@@ -161,14 +139,12 @@
 	<message key="manager.setup.enableAnnouncements">雑誌管理者による告知文の追加機能を有効にする。</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">雑誌ホームページに最新の告知文を</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">件表示する。</message>
+	<message key="manager.setup.enablePageNumber">アイテムのページ数を独自に計算して、目次に入力する（例えば、13-26）。</message>
+	<message key="manager.setup.enablePublicArticleId">出版アイテムを識別するためにカスタム識別子を使用する。</message>
+	<message key="manager.setup.enablePublicIssueId">巻号を識別するためにカスタム識別子を使用する。</message>
+	<message key="manager.setup.enablePublicSuppFileId">論文補足ファイルを識別するためにカスタム識別子を使用する。</message>
 	<message key="manager.setup.enableUserRegistration">ユーザはこの雑誌について以下の1つ以上の役割を持つものとして自らを登録することができます。</message>
-	<message key="manager.setup.enableUserRegistration.author">著者（この雑誌に資料を投稿することができます）</message>
-	<message key="manager.setup.enableUserRegistration.reader">読者（通知を受け取り、購読者相当としてカウントされます）</message>
-	<message key="manager.setup.enableUserRegistration.reviewer">査読者（投稿物の査読を依頼することができます）</message>
 	<message key="manager.setup.focusAndScope">対象と範囲</message>
-	<message key="manager.setup.focusAndScopeDescription">以下に、著者や読者、図書館員に知らせるために、この雑誌が出版する論文やその他のアイテムの範囲について入力してください。これは「この雑誌について」ページに表示されます。</message>
-	<message key="manager.setup.focusAndScopeOfJournal">雑誌の対象と範囲</message>
-	<message key="manager.setup.focusScope">対象と範囲</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">著者による投稿物のインデックス作成</message>
 	<message key="manager.setup.form.contactEmailRequired">連絡責任者のメールアドレスは必須です。</message>
 	<message key="manager.setup.form.contactNameRequired">連絡責任者は必須です。</message>
@@ -177,16 +153,10 @@
 	<message key="manager.setup.form.numReviewersPerSubmission">投稿物当たりの査読者の人数は必須です。</message>
 	<message key="manager.setup.form.supportEmailRequired">技術支援者のメールアドレスは必須です。</message>
 	<message key="manager.setup.form.supportNameRequired">技術支援者の名前は必須です。</message>
-	<message key="manager.setup.frequencyOfPublication">開始巻号と頻度</message>
-	<message key="manager.setup.frequencyOfPublicationDescription">最初に出版する雑誌の巻/号数と年、および、予定している巻/号数を設定してください。</message>
-	<message key="manager.setup.frequencyOfPublicationNote">注: この雑誌では使用しない場合は空白のままにしておいてください。また、編集者は出版プロセスにおいてこの数字を再設定することができます。</message>
 	<message key="manager.setup.generalInformation">一般的情報</message>
 	<message key="manager.setup.gettingDownTheDetails">ステップ 1. 雑誌情報の記述</message>
 	<message key="manager.setup.guidelines">ガイドライン</message>
 	<message key="manager.setup.guidingSubmissions">ステップ 3. 投稿の手引き</message>
-	<message key="manager.setup.homepageImage">ホームページ画像</message>
-	<message key="manager.setup.homepageImageDescription">ページの中央に画像または図形を追加する。</message>
-	<message key="manager.setup.includeCreativeCommons">オープンアクセスを提供する（エンバーゴ付きを含む）雑誌については、適当な時点で発表される全ての作品にクリエイティブ･コモンズライセンスを与えてください。</message>
 	<message key="manager.setup.information">ご案内</message>
 	<message key="manager.setup.information.description">図書館員、潜在的著者および読者向けの雑誌に関する簡潔な説明で、サイドバーの"ご案内"欄に表示されます。</message>
 	<message key="manager.setup.information.forAuthors">著者向け</message>
@@ -195,13 +165,10 @@
 	<message key="manager.setup.initialIssue">創刊号</message>
 	<message key="manager.setup.initialIssueDescription">選択した形式によっては、OJSで出版する最初の号、巻、年を特定する必要があります:</message>
 	<message key="manager.setup.institution">名称</message>
-	<message key="manager.setup.issuePerVolume">巻当たり号数</message>
 	<message key="manager.setup.itemsDescription">ページの上部に表示される現行のナビゲーションバー（ホーム、このサイトについて、ユーザホームなど）にアイテム追加することができます。</message>
 	<message key="manager.setup.itemsPerPage">ページ当たり項目数</message>
 	<message key="manager.setup.journalAbbreviation">略誌名</message>
 	<message key="manager.setup.journalArchiving">雑誌のアーカイブ化</message>
-	<message key="manager.setup.journalDescription">雑誌の説明</message>
-	<message key="manager.setup.journalDescriptionDescription">雑誌について簡単に説明したテキストまたはHTML文を追加する。ナビゲーションリンクの直下に表示されます。</message>
 	<message key="manager.setup.journalHomepageContent">雑誌ホームページのコンテンツ</message>
 	<message key="manager.setup.journalHomepageContentDescription">デフォルトでは、ホームページはナビゲーションリンクでできています。ホームページにコンテンツを追加するには、以下のオプションを1つ以上指定してください。ここに示した順に表示されます。最新号は、ナビゲーションバーの最新号リンクから常にアクセスできることに注意してください。</message>
 	<message key="manager.setup.journalHomepageHeader">雑誌ホームページのヘッダ</message>
@@ -219,7 +186,6 @@
 	<message key="manager.setup.journalTheme">雑誌のテーマ</message>
 	<message key="manager.setup.journalTitle">雑誌名</message>
 	<message key="manager.setup.labelName">ラベル名</message>
-	<message key="manager.setup.layoutAndGalleys">レイアウトエディタ</message>
 	<message key="manager.setup.layoutInstructions">レイアウトの手引き</message>
 	<message key="manager.setup.layoutInstructionsDescription">この雑誌で出版するアイテムをフォーマットするためにレイアウトの手引きを用意し、以下の記入欄にHTMLまたはプレーンテキストで入力することができます。この指示は、各投稿物の編集ページでレイアウトエディタとセクションエディタに公開されます。（各雑誌は独自のファイルフォーマットや書誌標準、スタイルシートなどを採用しているので、デフォルトの指示は提供していません。）</message>
 	<message key="manager.setup.layoutTemplates">レイアウトテンプレート</message>
@@ -230,7 +196,6 @@
 	<message key="manager.setup.listsDescription">各ページに表示するリスト項目（投稿物、ユーザ、編集者）の最大数、および、各ページに表示するページリンク数を入力してください。</message>
 	<message key="manager.setup.look">外観</message>
 	<message key="manager.setup.look.description">ホームページヘッダー、コンテンツ、雑誌ヘッダー、フッター、ナビゲーションバー、スタイルシート。</message>
-	<message key="manager.setup.mailingAddressDescription">雑誌事務局および住所。</message>
 	<message key="manager.setup.management">管理</message>
 	<message key="manager.setup.management.description">アクセス、セキュリティ、スケジューリング、お知らせ、コピーエディタ、レイアウトエディタ、校正者の任命。</message>
 	<message key="manager.setup.managementOfBasicEditorialSteps">基本的な編集ステップの管理</message>
@@ -243,42 +208,17 @@
 	<message key="manager.setup.noImageFileUploaded">画像ファイルがアップロードされていません。</message>
 	<message key="manager.setup.noStyleSheetUploaded">スタイルシートがアップロードされていません。</message>
 	<message key="manager.setup.note">注記</message>
-	<message key="manager.setup.notifications">著者への投稿受領通知</message>
-	<message key="manager.setup.notifications.copyPrimaryContact">受領確認メールのコピーをステップ1で指定した雑誌の連絡責任者に送信する。</message>
-	<message key="manager.setup.notifications.copySpecifiedAddress">受領確認メールのコピーを次のメールアドレスに送信する。</message>
-	<message key="manager.setup.notifications.description">投稿プロセスを完了すると、著者には受領確認メールが自動的に送付されます（その内容はメールテンプレートのページで閲覧・編集することができます）。この受領確認メールのコピーを次のとおり送信することができます。</message>
-	<message key="manager.setup.notifyAllAuthorsOnDecision">「著者に通知」メールを使用する際、共著投稿物の場合は投稿したユーザだけでなく、全ての共著者のメールアドレスを含めてください。</message>
-	<message key="manager.setup.noUseCopyeditors">コピーエディットは投稿物担当の編集者またはセクションエディタが行います。</message>
-	<message key="manager.setup.noUseLayoutEditors">投稿物担当の編集者またはセクションエディタがHTMLファイルやPDFファイルなどを用意します。</message>
-	<message key="manager.setup.noUseProofreaders">投稿物担当の編集者またはセクション編集者がゲラをチェックする。</message>
 	<message key="manager.setup.numPageLinks">ページリンク数</message>
 	<message key="manager.setup.onlineAccessManagement">雑誌コンテンツへのアクセス</message>
 	<message key="manager.setup.onlineIssn">電子版ISSN</message>
 	<message key="manager.setup.openAccess">この雑誌のコンテンツはオープンアクセスで提供する。</message>
-	<message key="manager.setup.openAccessPolicy">オープンアクセスポリシー</message>
-	<message key="manager.setup.openAccessPolicyDescription">この雑誌のオープンアクセスポリシーを入力してください。このポリシーは「この雑誌について」に表示されます。</message>
 	<message key="manager.setup.pageNumberIdentifier">ページ付けオプション</message>
-	<message key="manager.setup.peerReviewDescription">読者と著者のために、この雑誌の査読ポリーおよび査読プロセスの概要を入力してください。内容には、投稿の査読を行う査読者の数、投稿物の判断をするために査読者に求められる基準、査読を行う標準的な時間、査読者を補充する際の原則などを含みます。これは「この雑誌について」ページに表示されます。</message>
-	<message key="manager.setup.peerReviewPolicy">査読</message>
-	<message key="manager.setup.peerReviewPolicy2">査読ポリシー</message>
 	<message key="manager.setup.policies">ポリシー</message>
 	<message key="manager.setup.policies.description">対象、査読、セクション、プライバシー、セキュリティ、アイテムに関するその他のポリシー</message>
-	<message key="manager.setup.principalContact">連絡責任者</message>
-	<message key="manager.setup.principalContactDescription">この身分の者は、編集長、主任編集者、または管理職員として扱われ、雑誌ホームページの連絡先および技術支援窓口に表示されます。</message>
 	<message key="manager.setup.printIssn">印刷版ISSN</message>
-	<message key="manager.setup.privacyStatement">プライバシー情報の扱いについて</message>
-	<message key="manager.setup.privacyStatement2">プライバシー情報の扱いについて</message>
-	<message key="manager.setup.privacyStatementDescription">この文は、「この雑誌について」および「投稿と通知に関する著者署名」ページに表示されます。以下に表示されている文はプライバシー保護に関する推奨のポリシーですが、あらゆる部分を改訂することが可能です。</message>
 	<message key="manager.setup.proofingInstructions">校正の手引き</message>
 	<message key="manager.setup.proofingInstructionsDescription">校正の手引きは、投稿物編集段階において校正者、著者、レイアウトエディタ、セクションエディタに公開されます。以下は、HTMLで書かれたデフォルトの指示内容です。雑誌編集者は、いつでもこれを変更したり、置き換えたりすることができます（プレーンテキストでもHTMLでも可）。</message>
-	<message key="manager.setup.proofreading">校正者</message>
 	<message key="manager.setup.provideRefLinkInstructions">レイアウトエディタに指示を与える</message>
-	<message key="manager.setup.publicationFormat">形式</message>
-	<message key="manager.setup.publicationFormatDescription">この雑誌は巻号を識別するために以下の要素を使用します（個々の巻号でこれを上書きすることができます）。</message>
-	<message key="manager.setup.publicationFormatNumber">号</message>
-	<message key="manager.setup.publicationFormatTitle">タイトル</message>
-	<message key="manager.setup.publicationFormatVolume">巻</message>
-	<message key="manager.setup.publicationFormatYear">年</message>
 	<message key="manager.setup.publicationSchedule">出版スケジュール</message>
 	<message key="manager.setup.publicationScheduling">出版スケジューリング</message>
 	<message key="manager.setup.publicIdentifier">雑誌コンテンツの識別</message>
@@ -286,35 +226,22 @@
 	<message key="manager.setup.publisherDescription">雑誌を出版する組織。その名称は「この雑誌について」ページに表示されます。</message>
 	<message key="manager.setup.referenceLinking">参照リンキング</message>
 	<message key="manager.setup.refLinkInstructions.description">参照リンキングのレイアウト指示</message>
-	<message key="manager.setup.registerJournalForIndexing">メタデータハーベスティングのための雑誌登録</message>
 	<message key="manager.setup.restrictArticleAccess">オープンアクセスコンテンツを閲覧するには登録してログインする必要があります。</message>
 	<message key="manager.setup.restrictSiteAccess">この雑誌サイトを閲覧するには登録してログインする必要があります。</message>
-	<message key="manager.setup.reviewerDatabaseLink">査読候補者データベース</message>
-	<message key="manager.setup.reviewerDatabaseLink.desc">査読候補者を検索でき、購読権を持たない編集者に公開されている関連の文献データベースへのリンクを「査読者の選択」ページに追加してください。</message>
 	<message key="manager.setup.reviewGuidelines">査読の手引き</message>
 	<message key="manager.setup.reviewGuidelinesDescription">査読の手引きは、投稿物がこの雑誌で発表することがふさわしいかどうかを判断するための基準や、効果的で参考になる査読をするための特別な指示を査読者に提供します。</message>
 	<message key="manager.setup.reviewOptions">査読オプション</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">2つの時点で査読者に査読を督促するメールが自動的に送付されます（OJSのデフォルトメール機能で可能。もちろん、編集はいつでも査読者に直接メールを送ることもできます）。</message>
 	<message key="manager.setup.reviewOptions.blindReview">ブラインド審査</message>
-	<message key="manager.setup.reviewOptions.noteOnModification">編集プロセス中に変更が可能です。</message>
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">査読に許される標準的な時間</message>
 	<message key="manager.setup.reviewOptions.onQuality">査読後、編集者が査読者を5段階評価する。</message>
-	<message key="manager.setup.reviewOptions.remindForInvite1">査読者が、査読依頼後</message>
-	<message key="manager.setup.reviewOptions.remindForInvite2">日経過後。</message>
-	<message key="manager.setup.reviewOptions.remindForSubmit1">査読者が、査読期限日を</message>
-	<message key="manager.setup.reviewOptions.remindForSubmit2">日過ぎてもコメントを投稿しなかった場合。</message>
 	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">査読者は、査読に合意しないと投稿ファイルにアクセスできない。</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">査読者ページアクセス</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">投稿者ページへの1クリックアクセスを有効にする。</message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">査読者評価</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">査読督促</message>
-	<message key="manager.setup.reviewOptions.reviewTime">査読時間</message>
 	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[著者と査読者がファイルをアップロードするページに<a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">ブラインド審査を保証する</a> へのリンクを提供する。]]></message>
 	<message key="manager.setup.reviewPolicy">査読ポリシー</message>
-	<message key="manager.setup.reviewProcess">査読プロセス</message>
-	<message key="manager.setup.reviewProcessEmail">メール添付による査読プロセス</message>
-	<message key="manager.setup.reviewProcessStandard">標準的査読プロセス</message>
-	<message key="manager.setup.reviewProcessStandardDescription">編集者は、選ばれた査読者に投稿物のタイトルと要旨をつけて、雑誌のWebサイトにログインして査読を行うよう依頼のメールを送付する。査読者は、雑誌のWebサイトにログインし、査読を行うことを受諾し、投稿物をダウンロードし、コメントを投稿し、答申を選択する。</message>
 	<message key="manager.setup.searchEngineIndexing">サーチエンジンのためのインデックス</message>
 	<message key="manager.setup.searchEngineIndexingDescription">サーチエンジンのユーザがこの雑誌を発見できるように、雑誌の簡単な記述と関連キーワード（セミコロン区切り）を設定します</message>
 	<message key="manager.setup.sectionsAndSectionEditors">セクションとセクションエディタ</message>
@@ -325,8 +252,6 @@
 	<message key="manager.setup.selectSectionDescription">このアイテムの掲載対象となる雑誌セクション。</message>
 	<message key="manager.setup.showGalleyLinksDescription">常にゲラリンクを示し、アクセスが制限されることを示す。</message>
 	<message key="manager.setup.siteAccess">サイトと論文に関する追加のアクセス制限</message>
-	<message key="manager.setup.sponsors">スポンサー</message>
-	<message key="manager.setup.sponsorsDescription">雑誌をスポンサードする組織（例えば、学会や大学の部局、協同組合など）。その名称は「この雑誌について」ページに謝辞と共に表示されます。</message>
 	<message key="manager.setup.stepsToJournalSite">雑誌Webサイト完成までの5ステップ</message>
 	<message key="manager.setup.subjectExamples">（例: 光合成; ブラックホール; 地図の4色問題; ベイズの定理）</message>
 	<message key="manager.setup.subjectKeywordTopic">キーワード</message>
@@ -340,25 +265,16 @@
 	<message key="manager.setup.submissions.description">執筆要項、著作権、インデックス（登録を含む）。</message>
 	<message key="manager.setup.subscription">この雑誌のコンテンツの一部またはすべてにアクセスするためには購読を必要とする。</message>
 	<message key="manager.setup.subscriptionDescription">この雑誌は、購読モジュールにアクセスする購読管理者を割り当てる必要があります。このモジュールにはオープンアクセス、セルフアーカイビング、メール通知に関する追加オプションがあります。</message>
-	<message key="manager.setup.technicalSupportContact">技術支援窓口</message>
-	<message key="manager.setup.technicalSupportContactDescription">この者は、編集者や著者、査読担当者が利用する雑誌の連絡先ページに表示されますので、これらすべての役割の立場でシステム全般の作業を経験した人をあてるべきです。しかし、この雑誌システムはほとんど技術的な支援は必要としませんので、非常勤で行えるものと思われます。作業を行うのは、例えば、著者や査読担当者が使用説明書やファイルフォーマットに不明な点がある場合やサーバ上で雑誌が定期的に確実にバックアップされるようにする必要がある場合です。</message>
 	<message key="manager.setup.typeExamples">（例: 歴史的考察; 準実験; テクスト分析; 調査/聞き取り）</message>
 	<message key="manager.setup.typeMethodApproach">種類（方法/アプローチ）</message>
 	<message key="manager.setup.typeProvideExamples">このフィールドで指定する研究の種類、方法、アプローチの例を与えてください。</message>
 	<message key="manager.setup.uniqueIdentifier">ユニーク識別子</message>
 	<message key="manager.setup.uniqueIdentifierDescription">Digital Object Identifier System（DOI）などに登録することにより、論文や巻号を識別番号や識別文字列でタグ付けすることができます。</message>
-	<message key="manager.setup.useCopyeditors">各投稿物ににコピーエディタが指名されます。</message>
 	<message key="manager.setup.useEditorialReviewBoard">編集・査読委員会は雑誌で使用されます。</message>
-	<message key="manager.setup.useImageLogo">ロゴ画像</message>
 	<message key="manager.setup.useImageTitle">誌名画像</message>
 	<message key="manager.setup.useJournalStyleSheet">雑誌スタイルシート</message>
-	<message key="manager.setup.useLayoutEditors">レイアウトエディタは、電子出版のためのHTMLファイルやPDFファイルなどを用意するために指名されます。</message>
-	<message key="manager.setup.useProofreaders">出版に先立って（著者と共に）ゲラをチェックする校正者を割り当てる。</message>
 	<message key="manager.setup.userRegistration">ユーザ登録</message>
 	<message key="manager.setup.useTextTitle">誌名テキスト</message>
-	<message key="manager.setup.volumePerYear">1年当たり巻数</message>
-	<message key="manager.statistics.reports">報告書作成</message>
-	<message key="manager.statistics.reports.description">OJSは、指定された期間における投稿物、編集者、査読者、セクションに関して投稿から出版に至る処理に関する情報を追跡して、報告書を作成します。報告書は、スプレットシートアプリケーションで読み込むことができるようにCSVフォーマットで作成されます。</message>
 	<message key="manager.statistics.statistics">統計</message>
 	<message key="manager.statistics.statistics.articleViews">論文閲覧回数（著者のみ）</message>
 	<message key="manager.statistics.statistics.count.accept">アクセプト数</message>
@@ -390,13 +306,8 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">ヵ月からオープンアクセスで利用できるようにする。</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">正式なエンバーゴ期間を選択してください。</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">次の文が、エンバーゴ付きオープンアクセス雑誌の「この雑誌について」ページに表示されます。</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">チェックボックスをチェックしてください。</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">購読期間満了</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">ヶ月後に購読者にメールで通知する。</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">購読期間満了</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">週間後に購読者にメールで通知する。</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">購読期間満了</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">ヶ月前に購読者にメールで通知する。</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">購読期間満了</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">週間前に購読者にメールで通知する。</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">購読期間満了通知</message>
@@ -493,12 +404,12 @@
 	<message key="manager.subscriptionTypes.noneCreated">購読種別は作成されていません。</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">購読種別が作成されました。</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">設定済みのこの言語用の雑誌設定を置き換えます。よろしいですか？</message>
-	<message key="manager.language.reloadLocalizedDefaultSettings">この言語のデフォルト設定をリロードする</message>
 	<message key="manager.payment.options.purchaseArticleFee">論文購入料</message>
 	<message key="manager.sections.abstractsNotRequired">抄録を必要としない</message>
 	<message key="manager.sections.form.mustAllowPermission">各セクション編集者を割り当てるために少なくとも1つはチェックボックスをチェックしてください。</message>
 	<message key="manager.sections.form.reviewFormId">正しい査読フォームを選択したことを確認してください。</message>
 	<message key="manager.sections.hideTocAuthor">このセクションのアイテムは目次に著者名を表示しない</message>
+	<message key="manager.setup.enablePublicGalleyId">出版アイテムのコンテンツ文書（HTMLやPDFファイル）の識別にカスタム識別子を使用する。</message>
 	<message key="manager.setup.journalHomepageHeader.altText">雑誌ホームページヘッダダー</message>
 	<message key="manager.setup.journalLogo.altText">雑誌ロゴ</message>
 	<message key="manager.subscriptionPolicies.expiry">購読期限</message>
@@ -512,20 +423,6 @@
 	<message key="manager.subscriptions.dateStartSearch">開始日付</message>
 	<message key="manager.subscriptions.domain">ドメイン</message>
 	<message key="manager.subscriptions.membership">会費</message>
-	<message key="manager.plugins.upgrade">プラグインをアップグレード</message>
-	<message key="manager.plugins.delete">プラグインを削除</message>
-	<message key="manager.plugins.deleteDescription">削除をクリックすると，サーバのファイルシステムからプラグインが削除されます。</message>
-	<message key="manager.plugins.deleteSuccess">プラグインは正常に削除されました。</message>
-	<message key="manager.plugins.uploadError">ファイルのアップロードに失敗しました。</message>
-	<message key="manager.plugins.copyError">プラグインは正常にコピーされませんでした。</message>
-	<message key="manager.plugins.upgradeDescription">このフォームからプラグインをアップグレードできます。プラグインファイルが 「.tar.gz」で圧縮されているか確認してください。</message>
-	<message key="manager.plugins.uploadPluginDir">プラグインファイルを選択</message>
-	<message key="manager.plugins.deleteConfirm">本当にシステムからプラグインを削除してもよろしいですか？</message>
-	<message key="manager.plugins.fileSelectError">まず最初にファイルを選択してください。</message>
-	<message key="manager.plugins.versionFileNotFound">Version.xml がプラグインディレクトリに見つかりませんでした。</message>
-	<message key="manager.plugins.doesNotExist">プラグインは存在しません。</message>
-	<message key="manager.plugins.installFailed">インストールに失敗しました。</message>
-	<message key="manager.plugins.upgradeFailed">アップグレードに失敗しました。</message>
 	<message key="manager.setup.doiPrefixDescription">DOI(Digital Object Identifier) プレフィックスは，CrossRefによって与えられる10.xxxxという形式の値です。(例: 10.1234)</message>
 	<message key="manager.setup.doiSuffix">DOI サフィックス</message>
 	<message key="manager.setup.doiSuffixDefault">デフォルトパターンを使用する (%j.v%vi%i.%a)。</message>
@@ -534,11 +431,7 @@
 	<message key="manager.setup.doiSuffixDescription">DOI サフィックスはどのような形式でも構いませんが，出版アイテムごとにユニークなものでなければなりません。</message>
 	<message key="manager.setup.doiSuffixPublisherId">出版アイテムに対してDOI サフィックスのような「カスタム識別子」を使用することができます（Step 4で有効にする必要があります）。</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[LOCKSS を有効にする。LOCKSS の<a href="{$lockssUrl}" target="_blank">出版者マニュフェスト</a>ページを通じてLOCKSSを有効にし、参加図書館にある雑誌コンテンツを保管・配布します。LOCKSSライセンスはアーカイブの「この雑誌について」ページに表示されます。]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[<a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS ライセンスのその他のバージョンはここ</a>を参照してください。]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[雑誌を登録･キャッシュする図書館を6館から10館見つけます。例えば、編集者や雑誌委員会委員が勤務する機関や既にLOCKSSに参加している機関に問い合わせてください。<a href="http://www.lockss.org/community/" target="_blank">参加図書館はここ</a>を参照してください。あらかじめ用意されている(1) <a href="{$lockssExistingArchiveUrl}" target="_blank">LOCKSS参加図書館向け</a>、または、(2) <a href="{$lockssNewArchiveUrl}" target="_blank">LOCKSS未参加図書館向け</a> の招待状を使用してください。]]></message>
-	<message key="manager.setup.favicon">雑誌ファビコン</message>
-	<message key="manager.setup.faviconDescription">ユーザがあなたのサイトを訪れた際にナビゲーションバーに表示させるこの雑誌のファビコンを追加します。</message>
-	<message key="manager.setup.faviconInvalid">ファビコンのフォーマットが不適切です。 フォーマットは [.ico], [.png], [.gif.]でなければなりません。</message>
 	<message key="manager.people.showNoRole">役割をもたないユーザを表示</message>
 	<message key="manager.subscriptions.form.institutionName">機関名</message>
 	<message key="manager.subscriptions.form.institutionNameRequired">機関名は必要です。</message>
@@ -549,10 +442,9 @@
 	<message key="manager.language.ui">ユーザインターフェース</message>
 	<message key="manager.language.forms">フォーム</message>
 	<message key="manager.sections.wordCount">字数カウント</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJSはサポートしている言語のうち任意の言語で利用者にサービスを提供することができます。また、OJSは一部、多言語システムとして運用することもできます。その結果、ユーザはページごとに言語を切り替えることができ、また、デフォルト言語に加えてさらに2つの言語でデータを入力することができます。<br /><br/>OJSがサポートしている言語が以下に表示されていない場合は、サイト管理用のインターフェースを使って言語をインストールするようサイト管理者に依頼してください。サポート言語を追加する方法については、システムに添付されているOJS文書をご覧ください。]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJSはサポートしている言語のうち任意の言語で利用者にサービスを提供することができます。また、OJSは一部、多言語システムとして運用することもできます。その結果、ユーザはページごとに言語を切り替えることができ、また、デフォルト言語に加えてさらに2つの言語でデータを入力することができます。<br /><br />OJSがサポートしている言語が以下に表示されていない場合は、サイト管理用のインターフェースを使って言語をインストールするようサイト管理者に依頼してください。サポート言語を追加する方法については、システムに添付されているOJS文書をご覧ください。]]></message>
 	<message key="manager.setup.form.doiPrefixPattern">DOI は 10.xxxx という形式でなければなりません。</message>
 	<message key="manager.setup.issnDescription"><![CDATA[ISSN（国際標準逐次刊行物番号）は逐次刊行物（電子版を含む）を識別する8桁の数字です。ISSNは、本部を置くユネスコとフランス政府による支援を受けた国際センターの調整の元、各国の国内センターの世界的なネットワークにより管理されています。ISSN番号は、<a href="http://www.issn.org" target="_new">ISSN Webサイト</a>で入手することができます。ISSNの入手は、雑誌運営のいつの時点で行っても構いません。]]></message>
-	<message key="manager.setup.publisherNoteDescription">この文章は「この雑誌について」ページの「雑誌スポンサー」の「出版者」ヘッダと出版者名/URLの間に表示されます。</message>
 	<message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[この欄ではHTMLを使用できます（フォントサイズや色など）。また、「改行」は<tt>&lt;br&gt;</tt>として扱われます。ブラウザーFirefoxではHTMLエディターが使用できます。]]></message>
 	<message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>注意:</strong> このオプションを使用するには、OJS設定ファイルのこのオプションを使用するには、OJS設定ファイルの<tt>scheduled_tasks</tt>オプションを有効にする必要があります。また、OJS説明書で示したように、（この機能はすべてのサーバで利用できるわけではありませんので）この機能を使用するために、さらにサーバの設定を行う必要があるかもしれません。]]></message>
 	<message key="manager.subscriptions.allStatus">すべて</message>
@@ -579,31 +471,17 @@
 	<message key="manager.subscriptions.summary">購読情報概要</message>
 	<message key="manager.subscriptions.form.status">状態</message>
 	<message key="manager.subscriptions.form.statusValid">有効な購読状態を選択してください。</message>
-	<message key="manager.plugins.pleaseUpgrade">プラグインは既に存在していますが，バージョンはインストールされているものと比べて新しいです。アップグレードしてください。</message>
-	<message key="manager.plugins.installedVersionOlder">プラグインは既に存在していますが，バージョンはインストールされているものと比べて古い，あるいは同等です。</message>
-	<message key="manager.plugins.installedVersionNewer">プラグインは既に存在していますが，バージョンはインストールされているものと比べて新しい，あるいは同等です。</message>
-	<message key="manager.plugins.pleaseInstall">プラグインは存在しません。インストールしてください。</message>
-	<message key="manager.plugins.deleteError">プラグインはファイルシステムから削除できませんでした。</message>
-	<message key="manager.plugins.installSuccessful">正常にインストールされたバージョン</message>
-	<message key="manager.plugins.upgradeSuccessful">正常にアップグレードされたバージョン</message>
 	<message key="manager.sections.wordCountInstructions">このセクションのアブストラクトの文字数を制限する (0 を設定すると無制限):</message>
-	<message key="manager.setup.sponsorNoteDescription">この文章は，「この雑誌について」ページの「雑誌スポンサー」の下にある「スポンサー」ヘッダーとスポンサーリスト・URLの間に表示されます。</message>
 	<message key="manager.subscriptions.form.statusRequired">購読状態が必要です。</message>
 	<message key="manager.subscriptions.form.userProfileInstructions">備考: 下記の変更はユーザのシステム全体のプロフィールに反映されます。</message>
 	<message key="manager.setup.history">雑誌の履歴</message>
 	<message key="manager.setup.historyDescription">この文章は雑誌ページの「この雑誌について」に表示され，タイトル，編集委員会，その他の事項など雑誌の出版履歴に関する変更を記述しておくために使用することができます。</message>
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[ここで入力された著作権表示は「この雑誌について」および出版される各アイテムのメタデータに表示されます。著者との著作権契約の内容は各雑誌が決定することですが、パブリック･ナレッジ･プロジェクトでは、<a href="http://creativecommons.org" target="_new" class="action">クリエイティブ･コモンズ</a>ライセンスの使用を推奨しています。そのため、(a) オープンアクセスを提供する、(b) エンバーゴ付きオープンアクセスを提供する、(c) オープンアクセスを提供しない、雑誌が以下の入力欄にコピー&ペースできる<a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">著作権表示案</a>を提供しています。]]></message>
-	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[雑誌に投稿するアイテムに関して著者が従うべき書誌･書式標準（例: <em>Publication Manual of the American Psychological Association</em>, 5th edition, 2001）を設定してください。投稿に使用すべき雑誌および図書の一般的な引用書式例の提供も役に立つでしょう。さらに、読者による研究の再現を容易にするために、著者にアップロードを推奨する投稿物以外の適当な補足ファイル（データセットや研究機器など）の種類を指定してください。]]></message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJSは、<a href="http://www.openarchives.org/" target="_blank">オープン･アーカイブズ・イニシアティブ</a>のメタデータハーベスティングプロトコル（OAI-PMH）に準拠しています。このプロトコルは、世界規模の電子的研究情報資源へのインデックス化アクセスを提供する標準です。著者は以下に示すテンプレートを使って、投稿物に関するメタデータを提供することになります。雑誌管理者は、インデックス化するカテゴリを選択し、付与すべきインデックスの例や複数の検索語の入力法（例: インデックス1;インデックス2のようにセミコロンで区切る）を著者に示すべきです。記入例は「例:」や「例えば」を使って示すべきです。]]></message>
 	<message key="manager.setup.publicationScheduleDescription">雑誌アイテムは、ある巻号の一部として目次と共にまとめて出版することができます。また、準備ができたアイテムを「最新号」の目次に追加することにより直ちに出版することもできます。この雑誌がどちらの方式を採用するか、また、予定する出版頻度を読書に示してください（これは、「この雑誌について」に表示されます）。</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>注意:</strong> このオプションを有効にするには，サイト管理者がOJS設定ファイルで <tt>scheduled_tasks</tt> オプションを有効にしなければなりません。また，システム説明書で示したように（この機能はすべてのサーバで利用できるわけではありませんので）この機能を使用するために，これとは別にサーバの設定を行う必要があるかもしれません。]]></message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>注意:</strong> 査読を依頼するメールに投稿物の審査ページに直接リンクする特別なURLを含めます（その他のページへのアクセスはログインが必要です）。なお、このオプションを使用する場合は、セキュリティ上の理由により、編集者は査読依頼メールを送る際にメールアドレスを変更したり、CCやBCCを追加したりすることができません。]]></message>
-	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJSは、審査プロセスを管理する以下の2つのモデルをサポートしていますが、標準的審査プロセスの使用を推奨します。このプロセスは、査読者に処理を段階的に進めさせ、各投稿物について完全な審査履歴を残し、自動督促通知や投稿物に対する標準的な審査結果（採用、改訂の上採用、再投稿で審査、別の雑誌に投稿、不採用、コメント参照）を利用することができるからです。<br /><br />次の選択肢から1つを選択してください：]]></message>
 	<message key="manager.setup.noPublishing">OJSを雑誌のコンテンツをオンラインで公開するために使用しない。</message>
-	<message key="manager.groups.enableBoard.description"><![CDATA[「この雑誌について」の「<a href="{$aboutEditorialTeamUrl}">編集委員会</a>」欄に表示する担当一覧:]]></message>
-	<message key="manager.setup.contributorNoteDescription">この文章は，「この雑誌について」ページの「雑誌スポンサー」の下にある「支援者」ヘッダーと支援組織名・URLリストの間に表示されます。</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>注意:</strong> このオプションを有効にするには，サイト管理者がOJS設定ファイルでallow_envelope_senderオプションを有効にしている必要があります。また，システム説明書で示したように（この機能はすべてのサーバで利用できるわけではありませんので）この機能を使用するために，これとは別にサーバの設定を行う必要があるかもしれません。]]></message>
-	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>HTML 記述例</strong>]]></message>
 	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>注意:</strong> 投稿のお礼メールは現在無効です。これを使用するためには<a class="action" href="{$preparedEmailsUrl}">メールテンプレート</a>のSUBMISSION_ACK メールを有効にしてください。]]></message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[雑誌のセクション (例: Articles, Book Reviews など)の作成および修正は，「雑誌セクション」で行うことができます。<br /><br />雑誌へ投稿する著者が指定できます...]]></message>
 	<message key="manager.subscriptions.contact">連絡担当者</message>
@@ -622,10 +500,5 @@
 	<message key="manager.subscriptions.selectContact">購読連絡担当者の選択</message>
 	<message key="manager.setup.doiReassign">DOIを新たに割り振る</message>
 	<message key="manager.setup.doiReassign.description">DOIの設定を修正しても，既に付与されたDOIについては影響されません。DOIの設定を保存後，下記のボタンを使用した場合は，DOI情報がすべて消去され，既存の論文に新たな設定が適用されます。</message>
-	<message key="manager.plugins.tarCommandNotFound">tarコマンドが使用できません。"config.inc.php" で正しく設定してください。</message>
-	<message key="manager.plugins.versionFileInvalid">プラグインディレクトリ内の version.xml に不正なデータが含まれています。</message>
-	<message key="manager.groups.publishEmails">出版メンバーのメールアドレス</message>
-	<message key="manager.reviewFormElements.included">著者へのメッセージに含める</message>
 	<message key="manager.language.submissions">投稿</message>
-	<message key="manager.plugins.invalidPluginArchive">アップロードされたプラグインのアーカイブにプラグイン名に一致するフォルダが含まれていません。</message>
 </locale>

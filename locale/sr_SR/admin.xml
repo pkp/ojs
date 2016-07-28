@@ -4,7 +4,7 @@
 <!--
   * locale/sr_SR/admin.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="sr_SR" full_name = "Srpski">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="admin.hostedJournals">Hostovni časopisi</message>
 	<message key="admin.settings.journalRedirect">Redirekcija časopisa</message>
 	<message key="admin.settings.journalRedirectInstructions">Pristup sajtu će biti preusmeren na časopis. Ovo može biti korisno ako hostujete samo jedan časopis.</message>
@@ -22,7 +22,6 @@
 	<message key="admin.locale.maybeIncomplete">Markirane lokalizacije nisu kompletne.</message>
 	<message key="admin.languages.confirmUninstall">Da li ste sigurni da želite da obrišete lokazlizaciju? Ovo može uticati na časopise koji se načaze u sistemu, a koji koriste tu lokalizaciju.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Odaberite dodatne lokalizacije koje želite da instalirate.Pogledajte OJS dokumentaciju za više informacija kako da obezbedite podršku za nove jezike.</message>
-	<message key="admin.languages.downloadLocales">Preuzmi lokalizacije</message>
 	<message key="admin.languages.downloadFailed">Preuzimanje lokalizacije nije uspelo. Poruka o greškama niže objašnjava razloge.</message>
 	<message key="admin.languages.localeInstalled">"{$locale}" lokalizacija je instalirana.</message>
 	<message key="admin.languages.download">Preuzmi lokalizaciju</message>
@@ -39,8 +38,8 @@
 	<message key="admin.journals.noneCreated">Nema kreiranih časopisa.</message>
 	<message key="admin.contexts.confirmDelete">Da li ste sigurni da želite trajno obrisati ovaj časopis i njeov sadržaj?</message>
 	<message key="admin.contexts.create">Napravi časopis</message>
+	<message key="admin.journals.createInstructions">Automatski ćete biti dodeljeni časopisu kao menadžer. Nakon što napravite novi časopis, pristupite mu kao menadžer kako biste završili podešavanja i dodeljivanje uloga.</message>
 	<message key="admin.journals.urlWillBe">Ovo bi trebala da bude jedna kratka reč ili akronim koji identifikuje časopis. URL časopisa će biti {$sampleUrl}</message>
-	<message key="admin.contexts.form.titleRequired">Naslov je obavezan.</message>
 	<message key="admin.contexts.form.pathRequired">Putanja je obavezna.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Putanja može da sadrži samo alfanumeričke karaktere, podvlake i crtice i mora počinjati i završavati sa alfanumeričkim karakterom.</message>
 	<message key="admin.contexts.form.pathExists">Data putanja se već koristi za drugi časopis.</message>
@@ -59,4 +58,25 @@
 	<message key="admin.mergeUsers.allUsers">Svi korisnici koji imaju uloge</message>
 	<message key="admin.mergeUsers.confirm">Da li ste sigurni da želite da spojite korisničke naloge {$oldAccountCount} u nalog sa korisničkim imenom "{$newUsername}"? odabrani nalozi {$oldAccountCount} više neće postojati.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Nema korisnika sa dodeljenim ulogama.</message>
+	<message key="admin.settings.options">Opcije</message>
+	<message key="admin.settings.usePaging">Prelomilistu časopisa na nekoliko strana na sajtovima sa mnogo časopisa</message>
+	<message key="admin.settings.journalsList">Elementi časopisa</message>
+	<message key="admin.settings.journalsList.description">Odaberite elemente časopisa koji trebaju biti prikazani za svaki časopis na stranici sajta.</message>
+	<message key="admin.settings.journalsList.showThumbnail">Mala slika časopisa</message>
+	<message key="admin.settings.journalsList.showTitle">Naslov časopisa</message>
+	<message key="admin.settings.journalsList.showDescription">Opis časopisa</message>
+	<message key="admin.categories">Kategorije</message>
+	<message key="admin.categories.disableCategories">Ne organizuj časopis u kategorije.</message>
+	<message key="admin.categories.enableCategories">Dozvoli upravnicima časopisa da organizuju časopis u kategorije.</message>
+	<message key="admin.categories.editTitle">Uredi kategoriju</message>
+	<message key="admin.categories.createTitle">Napravi kategoriju</message>
+	<message key="admin.categories.create">Napravi novu kategoriju</message>
+	<message key="admin.categories.noneCreated">Nema napravljenih kategorija</message>
+	<message key="admin.categories.confirmDelete">Da li ste isgurni da ćelite izbrisati ovu katgeoriju</message>
+	<message key="admin.categories.name">Ime</message>
+	<message key="admin.categories.nameRequired">Obavezno je ime kategorije</message>
+	<message key="admin.settings.defaultMetricDescription">Vaša instalacija OJS je konfigurisana da može sačuvati rezultate jednog ili više načina merenja upotrebe. Statistika upotrebe će biti prikazana u nekoliko konteksta.
+U slučajevima kad mora biti upotrebljen samo jedan način merenja, npr. da bi se prikazala lista najčešće upotrebljenih članak ili za rangiranje rezultata pretrage.  Odaberite jedan od podešenih merenja kao pretpostavljen.</message>
+	<message key="admin.categories.enable.description">Administrator sajta može definisati više kategorija kako bi se organizovao većibroj časopisa. Upravnici časopisa mogu odabrati nekoliko kategorija za svoj časopis kako bi čitaoci mogli da nađu časopise pretragom u kolekciji časopisa.</message>
+	
 </locale>

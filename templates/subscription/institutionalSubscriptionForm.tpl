@@ -31,6 +31,7 @@
 {if $subscriptionId}
 <input type="hidden" name="subscriptionId" value="{$subscriptionId|escape}" />
 {/if}
+{csrf}
 
 {include file="common/formErrors.tpl"}
 

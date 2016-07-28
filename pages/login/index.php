@@ -18,8 +18,6 @@
 
 switch ($op) {
 	case 'index':
-	case 'implicitAuthLogin':
-	case 'implicitAuthReturn':
 	case 'signIn':
 	case 'signOut':
 	case 'lostPassword':

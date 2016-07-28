@@ -33,12 +33,34 @@ class CitationsForm extends ContextSettingsForm {
 	 */
 	function fetch($request) {
 		$templateMgr = TemplateManager::getManager($request);
+		$baseUrl = $templateMgr->_request->getBaseUrl();
 
 		// Add extra java script required for ajax components
 		// FIXME: Must be removed after OMP->OJS backporting
-		$templateMgr->addJavaScript('lib/pkp/js/functions/citation.js');
-		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.min.js');
-		$templateMgr->addJavaScript('lib/pkp/js/functions/jqueryValidatorI18n.js');
+		// NOTE: I believe this needs attention. jquery.validate.min.js is
+		// loaded with our minifiedScripts.tpl list and includes some i18n
+		// features.
+		$templateMgr->addJavaScript(
+			'citation',
+			$baseUrl . '/lib/pkp/js/functions/citation.js',
+			array(
+				'contexts' => 'backend',
+			)
+		);
+		$templateMgr->addJavaScript(
+			'jqueryValidate',
+			$baseUrl . '/lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.min.js',
+			array(
+				'contexts' => 'backend',
+			)
+		);
+		$templateMgr->addJavaScript(
+			'jqueryValidatorI18n',
+			$baseUrl . '/lib/pkp/js/functions/jqueryValidatorI18n.js',
+			array(
+				'contexts' => 'backend',
+			)
+		);
 
 		//
 		// Citation editor filter configuration

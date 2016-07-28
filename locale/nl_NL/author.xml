@@ -4,7 +4,7 @@
 <!--
   * locale/nl_NL/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="nl_NL" full_name = "Nederlands">
+<locale name="nl_NL" full_name="Nederlands">
 	<message key="author.submit">Nieuwe inzending</message>
 	<message key="author.track">Actieve inzendingen</message>
 	<message key="author.competingInterests"><![CDATA[Strijdige belangen <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">SB beleid</a>]]></message>
@@ -42,8 +42,7 @@
 	<message key="author.submit.journalSection">Tijdschriftsectie</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Kies de juiste sectie voor deze inzending (Zie Secties en beleid in <a href="{$aboutUrl}" target="_new">Over</a> het tijdschrift).]]></message>
 	<message key="submission.submit.selectSection">Kies een sectie...</message>
-	<message key="submission.submit.submissionChecklist">Checklist voor inzending</message>
-	<message key="submission.submit.submissionChecklistDescription">Aangeven dat de inzending gereed is om bekeken te worden door het tijdschrift door de volgende aan te vinken (opmerkingen voor de redacteur kunnen hieronder later toegevoegd worden).</message>
+	<message key="author.submit.submissionChecklist">Checklist voor inzending</message>
 	<message key="author.submit.verifyChecklist">U moet zich ervan verzekeren dat alle onderdelen van de inzendings-checklist zijn afgewerkt voordat u verdergaat.</message>
 	<message key="author.submit.copyrightNoticeAgree">De auteurs verklaren zich akkoord met de voorwaarden van deze auteursrecht verklaring die van toepassing is op deze inzending als het gepubliceerd wordt door dit tijdschrift (opmerkingen voor de redacteur kunnen hieronder later toegevoegd worden).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">U moet akkoord gaan met de voorwaarden van de auteursrecht verklaring voor u door kunt gaan.</message>
@@ -88,7 +87,6 @@
 	<message key="author.submit.suppFile.dataSet">Dataset</message>
 	<message key="author.submit.suppFile.sourceText">Brontekst</message>
 	<message key="author.submit.suppFile.briefDescription">Korte beschrijving</message>
-	<message key="author.submit.suppFile.contributorOrSponsor">Bijdragende of sponsor</message>
 	<message key="author.submit.suppFile.availableToPeers">Geef het bestand aan reviewers (zonder metadata), aangezien dat de blinde review niet compromitteert.</message>
 	<message key="author.submit.suppFile.publisherDescription">Alleen gebruiken bij formeel gepubliceerd materiaal.</message>
 	<message key="author.submit.suppFile.dateDescription">Datum waarop de gegevens zijn verzameld of het instrument gecreëerd.</message>
@@ -105,7 +103,6 @@
 	<message key="author.submit.filesSummary">Samenvatting bestanden</message>
 	<message key="author.submit.finishSubmission">Voltooi inzending</message>
 	<message key="author.submit.submissionComplete">Inzending voltooid. Dank u voor uw interesse in het publiceren in  {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Als deze inzending in een formaat is dat geschikt is om gepubliceerd te worden zonder verdere beoordeling, redactie of opmaak, kan het direct in de Redactiewachtrij geplaatst worden door <a href="{$expediteUrl}" class="action">hier</a> te klikken. (Noot: alleen tijdschriftbeheerders hebben deze mogelijkheid voor hun inzendingen.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Auteursversie laden</message>
 	<message key="author.article.copyeditedFile">Bestand na tekstredactie</message>
 	<message key="author.article.authorRevisedFile">Auteursbestand</message>
@@ -124,6 +121,4 @@
 	<message key="author.submit.submissionLocale">Taal van de inzending</message>
 	<message key="author.submit.form.localeRequired">Selecteer een taal voor de inzending.</message>
 	<message key="author.submit.submissionLocaleDescription">Dit tijdschrift accepteert inzendingen in verschillende  talen. Kies de taal van de inzending uit het menu hieronder.</message>
-	<message key="author.submit.submissionSupportingAgencies">Bijdragen en ondersteunende instanties</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Noem de instanties (personen, organisaties of diensten) die bijdragen leveren aan de inhoud of de financiering van het werk dat u presenteert in de inzending. Scheid ze met een puntkomma (bijvoorbeeld John Doe, Metro University; Master University, Department of Computer Science).</message>
 </locale>

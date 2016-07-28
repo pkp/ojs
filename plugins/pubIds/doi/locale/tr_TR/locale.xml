@@ -13,52 +13,41 @@
  
 <locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
-	<message key="plugins.pubIds.doi.description">Bu eklenti ADS'de sayılara, makalelere, dizgilere ve ek dosyalara Dijital Nesne Belirleyici (DOI) atamasını etkinleştirir.</message>
 
 	<!-- settings form -->
-	<message key="plugins.pubIds.doi.manager.settings.doiSettings">DOI Eklenti Ayarları</message>
 	<message key="plugins.pubIds.doi.manager.settings.description">ADS'de DOI'leri kullanmak ve yönetebilmek için lütfen DOI eklentilerini yapılandırın.</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Dergi İçeriği</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Lütfen DOI'lerin atanacağı nesneleri seçiniz.</message>
 	<message key="plugins.pubIds.doi.manager.settings.explainDois">Lütfen Dijital Nesne Belirleyici (DOI) atanacak yayımlanmış nesneleri seçiniz:</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Sayılar</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Makaleler</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">Dizgiler</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableSuppFileDoi">Ek Dosyalar</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableSubmissionDoi">Makaleler</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">Dizgiler</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">DOI Ön Ek</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiPrefixDescription"><![CDATA[DOI Ön Ekleri kayıt ajansları (Örneğin; <a href="http://www.crossref.org" target="_new">CrossRef</a>) tarafından atanmıştır ve biçimi 10.xxxx şeklindedir (Örneğin; 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.description"><![CDATA[DOI Ön Ekleri kayıt ajansları (Örneğin; <a href="http://www.crossref.org" target="_new">CrossRef</a>) tarafından atanmıştır ve biçimi 10.xxxx şeklindedir (Örneğin; 10.1234):]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">DOI ön eki zorunludur ve 10.xxxx biçiminde olmalıdır.</message>
 
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">DOI Son Ek</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDescription">Bir DOI son ek dosyası herhangi bir biçimi alabilir, fakat tüm yayınlanmış nesneler arasında aynı DOI ön eki almışlar arasında tekil olmalıdır.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">DOI son eklerini oluşturmak için aşağıda girilmiş olan şablonu kullanınız. Dergi başlangıcı için %j, cilt numarası için %v, sayı numarası için %i, yıl için %Y, ADS makale kimliği için %a, ADS dizgi kimliği için %g, ADS ek dosya kimliği için %s ve sayfa numarası için %p kullanınız.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix.description">Bir DOI son ek dosyası herhangi bir biçimi alabilir, fakat tüm yayınlanmış nesneler arasında aynı DOI ön eki almışlar arasında tekil olmalıdır.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">sayılar için</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">makaleler için</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys">dizgiler için</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.suppFiles">ek dosyalar için.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions">makaleler için</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations">dizgiler için</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Örneğin; vol%viss%ipp%p kodlaması, 10.1234/vol3iss2pp230 gibi bir DOI yaratabilir.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">varsayılan örneği/şablonu kullan.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[Sayılar için %j.v%vi%i<br />makaleler için %j.v%vi%i.%a<br />dizgiler için %j.v%vi%i.%a.g%g<br />ek dosyalar için %j.v%vi%i.%a.s%s.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Yayınlanmış öğeler için DOI son eki gibi (adım 4'te etkinleştirilmelidir) "Özelleştirilmiş Belirleyici" kullanın. Bu genel URL'ler için kullanılacak aynı belirleyicidir.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Önceki seçenekte belirtilen "Özel Belirleyici"den farklı ve bağımsız yayımlanan her öğe için tekil bir DOI son ek girin. Her öğenin üst veri sayfasında ek DOI giriş alanı bulacaksınız.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[Sayılar için %j.v%vi%i<br />makaleler için %j.v%vi%i.%a<br />dizgiler için %j.v%vi%i.%a.g%g.]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Lütfen sayılar için örnek/şablon DOI son ekini giriniz.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Lütfen makaleler için örnek/şablon DOI son ekini giriniz.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Lütfen dizgiler için örnek/şablon DOI son ekini gibiniz.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuppFileSuffixPatternRequired">Lütfen ek dosyalar için örnek/şablon DOI son ekini giriniz.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired">Lütfen makaleler için örnek/şablon DOI son ekini giriniz.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired">Lütfen dizgiler için örnek/şablon DOI son ekini gibiniz.</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign">DOI'leri yeniden ata</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Eğer DOI yapılandırmasını değiştirirseniz, önceden atanmış DOI'ler etkilenmeyecektir. DOI konfigürasyonu kaydettikten sonra DOI'leri silemk için bu butunu kullanınız. Böylece yeni ayarlar mevcut olan DOI'leri etkileyecektir.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Mevcut tüm DOI'leri silmek istediğinizden emin misiniz?</message>	
 
 
 	<!-- metadata form -->
 	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">sayı</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">makale</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmission">makale</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">dizgi</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">ek dosya</message>
-	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Gördüğünüz DOI ön izleme eksik olabilir. Bir DOI henüz tamamlanmamış olabilir. Sayı yayınlama ve {$pubObjectType} genel sayfasını görüntüleme otomatik olarak bu {$pubObjectType} için benzersiz bir DOI üretecektir.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Verilen DOI son eki yayınlanmış başka bir öğe için zaten kullanılıyor. Her öğe için benzersiz bir DOI sonek giriniz.</message>
 </locale>

@@ -4,7 +4,7 @@
 <!--
   * locale/fa_IR/default.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * تحت مجوزGNU GPL v2 منتشرشد. برای دیدن متن کامل فایل docs/COPYING را ببینید.
   *
@@ -13,7 +13,7 @@
   -->
 
 <locale full_name="Farsi" name="fa_IR" >
-	<message key="default.journalSettings.checklist.fileFormat" >فایل ساب میشن به فرمات OpenOffice, Microsoft Word, یا RTF میباشد.</message>
+	<message key="default.journalSettings.checklist.fileFormat" >فایل ساب میشن به فرمات OpenOffice, Microsoft Word, RTF, یا WordPerfect میباشد.</message>
 	<message key="default.journalSettings.openAccessPolicy" >این مجله دستیابی فوری به محتوی خود بصورت آزاد دارا میباشد به این امید که پژوهشی که بصورت عمومی در دسترس باشد موجب تبادل بیشتر دانش در مقیاس جهانی میشود</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy" >نویسندگان مجازند و توصیه میشود که مقالات این مجله را  در سایت های شخصی یا سازمانی به نمایش بگذارند.البته به شرط ذکر جزئیات کامل مرجع آن</message>
 	<message key="default.journalSettings.copyeditInstructions" ><![CDATA[مرحله ویراستاری به منظور بهبود گرامر ، جمله نگاری ، وفرمات مقاله و روانی آن میباشد. این آخرین فرصت برای نویسنده نیز هست تا تغییرات حجیم در مقاله خود بدهد ، چرا که در مراحل بعدی فقط اجازه اصلاحات املائی و فرمات داده میشود. 
@@ -82,9 +82,10 @@ Malinowski
 
 
 <strong>خطاهای فرمات</strong> ابتدا کلمه فرمات را به عنوان تیتر و سپس محل و ماهیت خطای فرمات را در جعبه اصلاحات چک نهائی وارد کنید مانند مثال زیر. 3. فرمات اعداد در جدول 3 مرتب نیستند. 4. فرمات پاراگرافی که با "This last topic..."  شروع شده است حاشیه سطر اول ندارد.]]></message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
-</message>
+	<message key="default.journalSettings.emailSignature" ><![CDATA[________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}
+]]></message>
 	<message key="default.journalSettings.forReaders" ><![CDATA[به خوانندگان عزیز توصیه میکنیم که برای سرویس خبر های انتشاراتی این مجله  با کلیک کردن بر روی لینک  <a href="{$indexUrl}/{$journalPath}/user/register">ثبت نام</a> در بالای صفحات ثبت نام کنند. در نتیجه شما از طریق ایمیل فهرست مطالب هر شماره جدید را دریافت خواهید داشت. برای اطلاع از محرمانگی اطلاعاتی که وارد میکنید  <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">بیانیه محرمانگی</a> مجله را ببینید. در این بیانیه آمده است که ایمیل هائی که وارد میکنید برای مقاصد دیگر بکار نحواهد رفت.]]></message>
 	<message key="default.journalSettings.forAuthors" ><![CDATA[آیا میخواهید به این مجله مقاله بفرستید؟ توصیه میشود که متن <a href="{$indexUrl}/{$journalPath}/about">در باره مجله</a>  از نظر سیاست های حاکم بر انواع مقالات و متن  <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">راهنمای نویسندگان</a> را مطالعه فرمائید. برای ارسال مقاله لازم است  چنانچه تا کنون  برای این مجله <a href="{$indexUrl}/{$journalPath}/user/register">ثبت نام</a> نکرده اید نسبت به این کار اقدام کنید. چنانچه قبلا ثبت نام کرده اید فقط کافی است که به سیستم   <a href="{$indexUrl}/{$journalPath}/login">وارد</a> شوید  ومراحل پنجگانه ساب میشن را شروع کنید.]]></message>
 	<message key="default.journalSettings.forLibrarians" ><![CDATA[به کتابخانه های پژوهشی توصیه میشود که این مجله را در لیست اقلام خود قرار دهند. همچنین میتوانید به افرادی که در موسسه شما درگیر کار انتشار مجله هستند توصیه کنید که از این سیستم مجلات آزاد برای مجله خود استفاده کنند. رای اطلاعات بیشتر به <a href="http://pkp.sfu.ca/ojs">سیستم مجلات آزاد </a> مراجعه کنید.]]></message>
@@ -154,6 +155,7 @@ http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI
 	<message key="default.journalSettings.checklist.addressesLinked" >ختی المقدور لینک مراجع در متن ارائه شده است. و URLs آماده کلیک کردن است</message>
 	<message key="default.journalSettings.checklist.submissionAppearance" >فاصله سطور در متن مقاله تک فاصله ای است ، فونت 12 در صورت لزوم از فونت ایتالیک بجای زیرخط دار استفاده شده است ، تمام تصاویر و نمودارها و جداول در خود متن در محل مناسب نه در انتها میباشد.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements" ><![CDATA[متن مقاله بر طبق اصول مقاله نویسی و مرجع نگاری  <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines"> راهنمای نویسندگان </a> میباشد که در قسمت در باره مجله یافت میشود.]]></message>
+	<message key="default.journalSettings.checklist.anonymous" ><![CDATA[در صورتی که مقاله قرار باشد کارشناسی شود ، ساب میشن از نظر  <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">رعایت کارشناسی محرمانه </a>) دستورالعمل های لازم رعایت شده است.]]></message>
 	<message key="default.journalSettings.privacyStatement" >نام ها و ایمیل های وارد شده در این سایت مجله فقط به منظور بیان شده بکار میرود و در دسترس هیچ شخص یا سازمان دیگری قرار نخواهد گرفت.</message>
 	<message key="default.journalSettings.purchaseArticleFeeDescription" >با پرداخت این وجه میتوانیذ ببینید و دانلود یا چاپ کنید</message>
 	<message key="section.default.title">مقالات</message>

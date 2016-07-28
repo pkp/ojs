@@ -18,13 +18,7 @@
 <locale name="sv_SE" full_name="Svenska">
 	<message key="plugins.importexport.crossref.displayName">CrossRef XML export plugin</message>
 	<message key="plugins.importexport.crossref.description">Export artikelmetadata i CrossRef XML format.</message>
-	
-	<message key="plugins.importexport.crossref.export">Exportera data</message>
-	<message key="plugins.importexport.crossref.export.issues">Exportera tidskriftsnummer</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Välj ett tidskriftsnummer för erport</message>
-	<message key="plugins.importexport.crossref.export.articles">Exportera artiklar</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Välj artiklar för export</message>
-	
+
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Användning: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
@@ -34,5 +28,4 @@
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Inget tidskriftsnummer matchas av "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Ingen artikel matchar "{$articleId}".</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Ett DOI-nummer med korrekt format måste anges!</message>
 </locale>

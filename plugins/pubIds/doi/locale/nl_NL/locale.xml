@@ -13,52 +13,41 @@
  
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
-	<message key="plugins.pubIds.doi.description">Deze plugin maak het mogelijk om Digital Object Identifiers toe te kennen aan nummers, artikelen, proeven en aanvullende bestanden in OJS.</message>
 
 	<!-- settings form -->
-	<message key="plugins.pubIds.doi.manager.settings.doiSettings">DOI plugin instellingen</message>
 	<message key="plugins.pubIds.doi.manager.settings.description">Configureer de DOI plugin om DOIs in OJS te kunnen beheren en gebruiken:</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Tijdschriftinhoud</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Kies de objecten waar DOI's aan toegekend moeten worden.</message>
 	<message key="plugins.pubIds.doi.manager.settings.explainDois">Kies de objecten waaraan Digital Object Identifiers (DOI) toegekend worden:</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Nummers</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Artikelen</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">Proeven</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableSuppFileDoi">Aanvullende bestanden</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableSubmissionDoi">Artikelen</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">Proeven</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">DOI voorvoegsel</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiPrefixDescription"><![CDATA[Het DOI voorvoegsel wordt toegekend door de registrerende instantie (bv. <a href="http://www.crossref.org" target="_new">CrossRef</a>) en heeft als format 10.xxxx (bv. 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.description"><![CDATA[Het DOI voorvoegsel wordt toegekend door de registrerende instantie (bv. <a href="http://www.crossref.org" target="_new">CrossRef</a>) en heeft als format 10.xxxx (bv. 10.1234):]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">Het DOI voorvoegsel is verplicht en heeft de volgende vorm: 10.xxxx.</message>
 
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">DOI Achtervoegsel</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDescription">Een DOI achtervoegsel kan iedere gewenste vorm hebben, maar moet uniek zijn tussen alle objecten met hetzelfde DOI voorvoegsel:</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Gebruik het patroon hieronder om DOI achtervoegsels te genereren. Gebruik %j voor tijdschriftinitialen, %v voor het volume, %i voor het nummer, %Y voor het jaar, %a het OJS artikel ID, %g voor het OJS proef ID, %s voor het OJS aanvullend bestand ID and %p voor het paginanummer.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix.description">Een DOI achtervoegsel kan iedere gewenste vorm hebben, maar moet uniek zijn tussen alle objecten met hetzelfde DOI voorvoegsel:</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">voor nummers</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">voor artikelen</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys">voor proeven</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.suppFiles">voor aanvullende bestanden.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions">voor artikelen</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations">voor proeven</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Bijvoorbeeld vol%viss%ipp%p kan resulteren in een DOI als 10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Gebruik standaard patronen.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i voor nummerss<br />%j.v%vi%i.%a voor artikelen<br />%j.v%vi%i.%a.g%g voor proeven<br />%j.v%vi%i.%a.s%s voor aanvullende bestanden.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Gebruik de aangepaste identificatie bij gepubliceerde items als DOI voorvoegsel (moet geactiveerd worden in stap 4). Dit is dezelfde identificatie die gebruikt zal worden voor publieke URL's.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Gebruik een apart DOI voorvoegsel voor ieder gepubliceerd item, onafhankelijk en afwijkend van de aangepaste identificatie zoals genoemd in de vorige optie. Er wordt een extra DOI invoerveld getoond op de metadata-pagina van ieder item.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i voor nummerss<br />%j.v%vi%i.%a voor artikelen<br />%j.v%vi%i.%a.g%g voor proeven.]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Kies het DOI voorvoegsel voor nummers.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Kies het DOI voorvoegsel voor artikelen.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Kies het DOI voorvoegsel voor proeven.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuppFileSuffixPatternRequired">Kies het DOI voorvoegsel voor aanvullende bestanden.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired">Kies het DOI voorvoegsel voor artikelen.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired">Kies het DOI voorvoegsel voor proeven.</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign">DOI's opnieuw toekennen</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Als u uw DOI configuratie wijzigt, worden reeds uitgedeelde DOI's ongemoeid gelaten. Gebruik deze knop na het opslaan van de nieuwe DOI configuratie om de nieuwe instellingen te effectueren bij bestaande artikelen.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Weet u zeker dat u alle bestaande DOI's wilt verwijderen?</message>	
 
 
 	<!-- metadata form -->
 	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">nummer</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">artikel</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmission">artikel</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">proef</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">aanvullend bestand</message>
-	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">U ziet een voorvertoning van een DOI die mogelijk incompleet is. Eer is nog geen DOI gegenereerd. Het nummer publiceren en het bekijken van de publieke {$pubObjectType} pagina zorgt voor het automatisch genereren van een unieke DOI voor dit {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">het opgegeven DOI voorvoegsel is al in gebruik bij een ander gepubliceerd item. Kies een uniek DOI voorvoegsel voor ieder item.</message>
 </locale>

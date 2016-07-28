@@ -44,6 +44,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" method="post" id="submit" action="{url op="subscriptions" path="individual"}">
+	{csrf}
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>

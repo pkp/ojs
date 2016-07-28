@@ -33,6 +33,7 @@
 		{rdelim});
 	</script>
 	<form class="pkp_form" action="{plugin_url path="exportIssues"}" method="post" id="issuesForm">
+		{csrf}
 		<table class="listing">
 			<tr>
 				<td colspan="5" class="headseparator">&nbsp;</td>

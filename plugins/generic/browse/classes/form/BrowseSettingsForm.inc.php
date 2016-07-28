@@ -34,6 +34,7 @@ class BrowseSettingsForm extends Form {
 		$this->plugin =& $plugin;
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 		$this->addCheck(new FormValidatorPost($this));
+		$this->addCheck(new FormValidatorCSRF($this));
 	}
 	
 	/**

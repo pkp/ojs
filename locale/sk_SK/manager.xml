@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/sk_SK/manager.xml
+  *
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="sk_SK" full_name="Slovenčina">
+	<message key="manager.sections.indexed">Indexované</message>
+	<message key="manager.sections.open">Možnosť poslať príspevok</message>
+	<message key="manager.sections.reviewed">Recenzované</message>
+	<message key="manager.setup">Nastavenie</message>
+
+	<!-- Categories -->
+</locale>

@@ -45,6 +45,7 @@
 		{rdelim});
 	</script>
 	<form method="post" id="searchForm" action="{url op="search"}">
+	{csrf}
 
 		{* Main search input *}
 		<h2 class="pkp_screen_reader">
@@ -124,9 +125,7 @@
 					<input type="submit" value="{translate key="common.search"}">
 				{/capture}
 
-				{* Expand full filter options *}
-				{* @todo advanced options template and toggle needs work *}
-				{include file="controllers/extrasOnDemand.tpl" id="emptyFilters" moreDetailsText="search.advancedSearchMore" lessDetailsText="search.advancedSearchLess" extraContent=$emptyFilters}
+				{$emptyFilters}
 			{/if}
 
 		</div><!-- .filters -->
@@ -262,4 +261,4 @@
 
 {/if}
 
-{include file="common/frontend/footer.tpl"}
+{include file="frontend/components/footer.tpl"}

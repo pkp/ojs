@@ -70,8 +70,8 @@ class SubscriptionForm extends Form {
 		// Notify email flag is valid value
 		$this->addCheck(new FormValidatorInSet($this, 'notifyEmail', 'optional', 'manager.subscriptions.form.notifyEmailValid', array('1')));
 
-		// Form was POSTed
 		$this->addCheck(new FormValidatorPost($this));
+		$this->addCheck(new FormValidatorCSRF($this));
 	}
 
 	/**

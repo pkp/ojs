@@ -147,7 +147,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * Get the XML for a set of submissions.
 	 * @param $submissionIds array Array of submission IDs
 	 * @param $context Context
-	 * @param $user User
+	 * @param $user User|null
 	 * @return string XML contents representing the supplied submission IDs.
 	 */
 	function exportSubmissions($submissionIds, $context, $user) {
@@ -215,14 +215,81 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @copydoc PKPImportExportPlugin::usage
 	 */
 	function usage($scriptName) {
-		fatalError('Not implemented');
+		echo __('plugins.importexport.native.cliUsage', array(
+			'scriptName' => $scriptName,
+			'pluginName' => $this->getName()
+		)) . "\n";
 	}
 
 	/**
 	 * @see PKPImportExportPlugin::executeCLI()
 	 */
 	function executeCLI($scriptName, &$args) {
-		fatalError('Not implemented');
+		$command = array_shift($args);
+		$xmlFile = array_shift($args);
+		$journalPath = array_shift($args);
+
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
+
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+
+		$journal = $journalDao->getByPath($journalPath);
+
+		if (!$journal) {
+			if ($journalPath != '') {
+				echo __('plugins.importexport.native.cliError') . "\n";
+				echo __('plugins.importexport.native.error.unknownJournal', array('journalPath' => $journalPath)) . "\n\n";
+			}
+			$this->usage($scriptName);
+			return;
+		}
+
+		if ($xmlFile && $this->isRelativePath($xmlFile)) {
+			$xmlFile = PWD . '/' . $xmlFile;
+		}
+
+		switch ($command) {
+			case 'import':
+				$userName = array_shift($args);
+				$user = $userDao->getByUsername($userName);
+
+				if (!$user) {
+					if ($userName != '') {
+						echo __('plugins.importexport.native.cliError') . "\n";
+						echo __('plugins.importexport.native.error.unknownUser', array('userName' => $userName)) . "\n\n";
+					}
+					$this->usage($scriptName);
+					return;
+				}
+
+				$this->importSubmissions(file_get_contents($xmlFile), $journal, $user);
+				return;
+			case 'export':
+				if ($xmlFile != '') switch (array_shift($args)) {
+					case 'article':
+					case 'articles':
+						file_put_contents($xmlFile, $this->exportSubmissions(
+							$args,
+							$journal,
+							null
+						));
+						return;
+					case 'issue':
+					case 'issues':
+						$exportXml = $this->exportIssues(
+							$args,
+							$journal,
+							null
+						);
+						return;
+				}
+				break;
+		}
+		$this->usage($scriptName);
 	}
 }
 

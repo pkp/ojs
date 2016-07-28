@@ -17,6 +17,7 @@
 </script>
 
 <form class="pkp_form" id="accessForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.DistributionSettingsTabHandler" op="saveFormData" tab="access"}">
+	{csrf}
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="accessFormNotification"}
 
 	{fbvFormArea id="userRegistration" title="manager.setup.onlineAccessManagement"}

@@ -22,15 +22,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	// Implement template methods from Plugin.
 	//
 	/**
-	 * @copydoc Plugin::register()
-	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
-		$this->addLocaleData();
-		return $success;
-	}
-
-	/**
 	 * @copydoc Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
@@ -46,7 +37,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 
 	/**
 	 * @copydoc Plugin::getTemplatePath()
-	 * @param $inCore boolean True iff a core template should be preferred
 	 */
 	function getTemplatePath($inCore = false) {
 		return parent::getTemplatePath($inCore) . 'templates/';
@@ -87,7 +77,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	/**
 	 * @copydoc PKPPubIdPlugin::getResolvingURL()
 	 */
-	function getResolvingURL($journalId, $pubId) {
+	function getResolvingURL($contextId, $pubId) {
 		return 'http://dx.doi.org/'.$this->_doiURLEncode($pubId);
 	}
 
@@ -155,6 +145,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		$linkActions['clearPubIdLinkActionDoi'] = new LinkAction(
 			'clearPubId',
 			new RemoteActionConfirmationModal(
+				$request->getSession(),
 				__('plugins.pubIds.doi.editor.clearObjectsDoi.confirm'),
 				__('common.delete'),
 				$request->url(null, null, 'clearPubId', null, $userVars),
@@ -168,8 +159,9 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		if (is_a($pubObject, 'Issue')) {
 			// Clear issue objects pub ids
 			$linkActions['clearIssueObjectsPubIdsLinkActionDoi'] = new LinkAction(
-				'clearIssueObjectsPubIds',
+				'clearObjectsPubIds',
 				new RemoteActionConfirmationModal(
+					$request->getSession(),
 					__('plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm'),
 					__('common.delete'),
 					$request->url(null, null, 'clearIssueObjectsPubIds', null, $userVars),
@@ -190,7 +182,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	function getSuffixPatternsFieldNames() {
 		return  array(
 			'Issue' => 'doiIssueSuffixPattern',
-			'Article' => 'doiArticleSuffixPattern',
+			'Submission' => 'doiSubmissionSuffixPattern',
 			'Representation' => 'doiRepresentationSuffixPattern'
 		);
 	}
@@ -206,7 +198,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	 * @copydoc PKPPubIdPlugin::isObjectTypeEnabled()
 	 */
 	function isObjectTypeEnabled($pubObjectType, $contextId) {
-		return $this->getSetting($contextId, "enable${pubObjectType}Doi") == '1';
+		return (boolean) $this->getSetting($contextId, "enable${pubObjectType}Doi");
 	}
 
 	/**

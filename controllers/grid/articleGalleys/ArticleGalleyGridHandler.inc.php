@@ -210,6 +210,8 @@ class ArticleGalleyGridHandler extends GridHandler {
 	 * @return JSONMessage JSON object
 	 */
 	function clearPubId($args, $request) {
+		if (!$request->checkCSRF()) return new JSONMessage(false);
+
 		$submission = $this->getSubmission();
 		$representationDao = Application::getRepresentationDAO();
 		$representation = $representationDao->getById(
@@ -246,7 +248,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	 */
 	function deleteGalley($args, $request) {
 		$galley = $this->getGalley();
-		if (!$galley) return new JSONMessage(false);
+		if (!$galley || !$request->checkCSRF()) return new JSONMessage(false);
 
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$galleyDao->deleteObject($galley);

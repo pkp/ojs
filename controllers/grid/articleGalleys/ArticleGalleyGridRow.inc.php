@@ -80,6 +80,7 @@ class ArticleGalleyGridRow extends GridRow {
 			$this->addAction(new LinkAction(
 				'deleteGalley',
 				new RemoteActionConfirmationModal(
+					$request->getSession(),
 					__('common.confirmDelete'),
 					__('grid.action.delete'),
 					$router->url($request, null, null, 'deleteGalley', null, $actionArgs), 'modal_delete'),

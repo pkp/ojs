@@ -36,6 +36,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="notificationSettings" method="post" action="{url op="saveSubscribeMailList"}">
+{csrf}
 
 <table class="data">
 	<tr>

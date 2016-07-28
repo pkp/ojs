@@ -40,6 +40,7 @@ lib/pkp/plugins/*/*/tests					\
 plugins/*/*/tests						\
 plugins/generic/googleAnalytics					\
 plugins/generic/phpMyVisites					\
+plugins/generic/customLocale					\
 plugins/generic/counter						\
 plugins/generic/driver						\
 plugins/generic/externalFeed					\
@@ -47,7 +48,6 @@ plugins/generic/lucene						\
 plugins/generic/openAIRE					\
 plugins/generic/coins						\
 plugins/auth/ldap						\
-plugins/implicitAuth/shibboleth					\
 tests								\
 lib/pkp/tests							\
 .git								\

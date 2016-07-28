@@ -16,6 +16,7 @@
 </script>
 
 <form class="pkp_form" id="citationSettingsForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.JournalSettingsTabHandler" op="saveFormData" tab="citations"}">
+{csrf}
 
 {include file="controllers/notification/inPlaceNotification.tpl" notificationId="policiesFormNotification"}
 {include file="controllers/tab/settings/wizardMode.tpl" wizardMode=$wizardMode}

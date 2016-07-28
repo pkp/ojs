@@ -23,6 +23,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="articleGalleyForm" method="post" action="{url op="updateGalley" submissionId=$submissionId representationId=$representationId}">
+	{csrf}
 	{fbvFormArea id="galley"}
 		{fbvFormSection title="submission.layout.galleyFileData"}
 			{fbvElement type="text" label="submission.layout.galleyLabel" value=$label id="label" size=$fbvStyles.size.MEDIUM inline=true}
