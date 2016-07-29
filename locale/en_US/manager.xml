@@ -569,10 +569,12 @@
 	<message key="plugins.importexport.common.settings.DOIPluginSettings">DOI Plugin Settings</message>
 	<message key="plugins.importexport.common.export.articles">Articles</message>
 	<message key="plugins.importexport.common.export.issues">Issues</message>
+	<message key="plugins.importexport.common.export.representations">Galleys</message>
 	<!-- settings form -->
 	<message key="plugins.importexport.common.missingRequirements">Plugin requirements not met</message>
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">In order to use this plugin please go to the "Public Identifier" plugin category, enable and configure the DOI plug-in and specify a valid DOI prefix there.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">The plugin is not fully set up.</message>
+	<message key="plugins.importexport.common.error.noDOIContentObjects">No publishing objects are selected for DOI assignment in the DOI public identifier plugin, so there is no deposit or export possibility in this plugin.</message>
 	<message key="plugins.importexport.common.settings.form.password">Password</message>
 	<message key="plugins.importexport.common.settings.form.password.description">Please note that the password will be saved as plain text, i.e. not encrypted.</message>
 	<!-- export filter -->
@@ -580,16 +582,17 @@
 	<message key="plugins.importexport.common.status.any">Any Status</message>
 	<message key="plugins.importexport.common.status.notDeposited">Not Deposited</message>
 	<message key="plugins.importexport.common.status.markedRegistered">Marked registered</message>
+	<message key="plugins.importexport.common.status.registered">Registered</message>
 	<!-- actions -->
 	<message key="plugins.importexport.common.action">Action</message>
 	<message key="plugins.importexport.common.action.export">Export</message>
 	<message key="plugins.importexport.common.action.markRegistered">Mark registered</message>
 	<message key="plugins.importexport.common.action.register">Register</message>
-	<message key="plugins.importexport.common.action.checkStatus">Check status</message>
 	<!--  notifications and errors -->
 	<message key="plugins.importexport.common.error.noObjectsSelected">No objects selected.</message>
 	<message key="plugins.importexport.common.error.validation">Could not convert selected objects.</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">The output file {$param} is not writable.</message>
 	<message key="plugins.importexport.common.register.error.mdsError">Registration was not successful! The DOI registration server returned an error: '{$param}'.</message>
 	<message key="plugins.importexport.common.register.success">Registration successful!</message>
+	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">DOI prefix is missing for the journal with the path {$path}.</message>
 </locale>

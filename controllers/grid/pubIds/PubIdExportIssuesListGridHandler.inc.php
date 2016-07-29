@@ -14,7 +14,6 @@
  */
 
 import('lib.pkp.classes.controllers.grid.GridHandler');
-
 import('controllers.grid.pubIds.PubIdExportIssuesListGridCellProvider');
 
 class PubIdExportIssuesListGridHandler extends GridHandler {
@@ -126,13 +125,6 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 	//
 	// Implemented methods from GridHandler.
 	//
-	/**
-	 * @copydoc GridHandler::getRowInstance()
-	 */
-	protected function getRowInstance() {
-		return new GridRow();
-	}
-
 	/**
 	 * @copydoc GridHandler::initFeatures()
 	 */

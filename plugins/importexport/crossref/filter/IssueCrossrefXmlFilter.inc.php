@@ -16,9 +16,6 @@
 import('lib.pkp.plugins.importexport.native.filter.NativeExportFilter');
 
 class IssueCrossrefXmlFilter extends NativeExportFilter {
-	/** @var CrossrefExportDeployment */
-	var $_deployment;
-
 	/**
 	 * Constructor
 	 * @param $filterGroup FilterGroup
@@ -26,25 +23,6 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 	function ArticleCrossrefXmlFilter($filterGroup) {
 		$this->setDisplayName('Crossref XML issue export');
 		parent::NativeExportFilter($filterGroup);
-	}
-
-	//
-	// Deployment management
-	//
-	/**
-	 * Set the import/export deployment
-	 * @param $deployment CrossrefExportDeployment
-	 */
-	function setDeployment($deployment) {
-		$this->_deployment = $deployment;
-	}
-
-	/**
-	 * Get the import/export deployment
-	 * @return CrossrefExportDeployment
-	 */
-	function getDeployment() {
-		return $this->_deployment;
 	}
 
 	//

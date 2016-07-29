@@ -713,6 +713,13 @@ class Issue extends DataObject {
 		$description = $this->getLocalizedDescription();
 		return !empty($description);
 	}
+
+	/**
+	 * @copydoc DataObject::getDAO()
+	 */
+	function getDAO() {
+		return DAORegistry::getDAO('IssueDAO');
+	}
 }
 
 ?>

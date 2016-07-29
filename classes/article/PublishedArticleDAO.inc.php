@@ -757,6 +757,7 @@ class PublishedArticleDAO extends ArticleDAO {
 		}
 		if ($title) {
 			$params[] = 'title';
+			$params[] = AppLocale::getLocale();
 			$params[] = '%' . $title . '%';
 		}
 		if ($author) array_push($params, $authorQuery = '%' . $author . '%', $authorQuery, $authorQuery);
@@ -774,20 +775,20 @@ class PublishedArticleDAO extends ArticleDAO {
 			FROM	published_submissions ps
 				LEFT JOIN submissions s ON (s.submission_id = ps.submission_id)
 				LEFT JOIN submission_settings ss ON (s.submission_id = ss.submission_id)
-				' . ($title?' LEFT JOIN submission_settings sst ON (s.submission_id = sst.submission_id)':'')
-				. ($author?' LEFT JOIN authors au ON (s.submission_id = au.submission_id)':'')
-				. ($pubIdSettingName?' LEFT JOIN submission_settings sss ON (s.submission_id = sss.submission_id AND sss.setting_name = ?)':'')
+				' . ($title != null?' LEFT JOIN submission_settings sst ON (s.submission_id = sst.submission_id)':'')
+				. ($author != null?' LEFT JOIN authors au ON (s.submission_id = au.submission_id)':'')
+				. ($pubIdSettingName != null?' LEFT JOIN submission_settings sss ON (s.submission_id = sss.submission_id AND sss.setting_name = ?)':'')
 				. ' ' . $this->getFetchJoins()
 				. ' ' . $this->getCompletionJoins() .'
 			WHERE
 				ss.setting_name = ? AND ss.setting_value IS NOT NULL
-				' . ($contextId?' AND s.context_id = ?':'')
-				. ($title?' AND (sst.setting_name = ? AND sst.setting_value LIKE ?)':'')
-				. ($author?' AND (au.first_name LIKE ? OR au.middle_name LIKE ? OR au.last_name LIKE ?)':'')
-				. ($issueId?' AND ps.issue_id = ?':'')
-				. (($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue == DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND sss.setting_value IS NULL':'')
-				. (($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue != DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND sss.setting_value = ?':'')
-				. (($pubIdSettingName && is_null($pubIdSettingValue))?' AND sss.setting_value IS NULL OR sss.setting_value = \'\'':'')
+				' . ($contextId != null?' AND s.context_id = ?':'')
+				. ($title != null?' AND (sst.setting_name = ? AND sst.locale = ? AND sst.setting_value LIKE ?)':'')
+				. ($author != null?' AND (au.first_name LIKE ? OR au.middle_name LIKE ? OR au.last_name LIKE ?)':'')
+				. ($issueId != null?' AND ps.issue_id = ?':'')
+				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND sss.setting_value IS NULL':'')
+				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND sss.setting_value = ?':'')
+				. (($pubIdSettingName != null && is_null($pubIdSettingValue))?' AND sss.setting_value IS NULL OR sss.setting_value = \'\'':'')
 			. ' AND ' . $this->getCompletionConditions(true)
 			. 'ORDER BY ps.date_published DESC, s.submission_id DESC',
 			$params,

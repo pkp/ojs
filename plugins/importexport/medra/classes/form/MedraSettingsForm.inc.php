@@ -13,12 +13,34 @@
  * @brief Form for journal managers to setup the mEDRA plug-in.
  */
 
+import('lib.pkp.classes.form.Form');
 
-if (!class_exists('DOIExportSettingsForm')) { // Bug #7848
-	import('plugins.importexport.medra.classes.form.DOIExportSettingsForm');
-}
+class MedraSettingsForm extends Form {
 
-class MedraSettingsForm extends DOIExportSettingsForm {
+	//
+	// Private properties
+	//
+	/** @var integer */
+	var $_contextId;
+
+	/**
+	 * Get the context ID.
+	 * @return integer
+	 */
+	function _getContextId() {
+		return $this->_contextId;
+	}
+
+	/** @var MedraExportPlugin */
+	var $_plugin;
+
+	/**
+	 * Get the plugin.
+	 * @return MedraExportPlugin
+	 */
+	function _getPlugin() {
+		return $this->_plugin;
+	}
 
 	//
 	// Constructor
@@ -26,11 +48,32 @@ class MedraSettingsForm extends DOIExportSettingsForm {
 	/**
 	 * Constructor
 	 * @param $plugin MedraExportPlugin
-	 * @param $journalId integer
+	 * @param $contextId integer
 	 */
-	function MedraSettingsForm(&$plugin, $journalId) {
-		// Configure the object.
-		parent::DOIExportSettingsForm($plugin, $journalId);
+	function MedraSettingsForm($plugin, $contextId) {
+		$this->_contextId = $contextId;
+		$this->_plugin = $plugin;
+
+		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
+
+		// DOI plugin settings action link
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
+		if (isset($pubIdPlugins['doipubidplugin'])) {
+			$application = PKPApplication::getApplication();
+			$request = $application->getRequest();
+			$dispatcher = $application->getDispatcher();
+			import('lib.pkp.classes.linkAction.request.AjaxModal');
+			$doiPluginSettingsLinkAction = new LinkAction(
+					'settings',
+					new AjaxModal(
+							$dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'manage', null, array('plugin' => 'doipubidplugin', 'category' => 'pubIds')),
+							__('plugins.importexport.common.settings.DOIPluginSettings')
+							),
+					__('plugins.importexport.common.settings.DOIPluginSettings'),
+					null
+					);
+			$this->setData('doiPluginSettingsLinkAction', $doiPluginSettingsLinkAction);
+		}
 
 		// Add form validation checks.
 		$this->addCheck(new FormValidator($this, 'registrantName', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.medra.settings.form.registrantNameRequired'));
@@ -41,6 +84,7 @@ class MedraSettingsForm extends DOIExportSettingsForm {
 		$this->addCheck(new FormValidatorInSet($this, 'publicationCountry', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.medra.settings.form.publicationCountry', array_keys($this->_getCountries())));
 		// The username is used in HTTP basic authentication and according to RFC2617 it therefore may not contain a colon.
 		$this->addCheck(new FormValidatorRegExp($this, 'username', FORM_VALIDATOR_OPTIONAL_VALUE, 'plugins.importexport.medra.settings.form.usernameRequired', '/^[^:]+$/'));
+		$this->addCheck(new FormValidatorPost($this));
 	}
 
 
@@ -48,10 +92,21 @@ class MedraSettingsForm extends DOIExportSettingsForm {
 	// Implement template methods from Form
 	//
 	/**
-	 * @see Form::display()
+	 * @copydoc Form::initData()
 	 */
-	function display() {
-		$templateMgr = TemplateManager::getManager();
+	function initData() {
+		$contextId = $this->_getContextId();
+		$plugin = $this->_getPlugin();
+		foreach($this->getFormFields() as $fieldName => $fieldType) {
+			$this->setData($fieldName, $plugin->getSetting($contextId, $fieldName));
+		}
+	}
+
+	/**
+	 * copydoc Form::fetch()
+	 */
+	function fetch($request) {
+		$templateMgr = TemplateManager::getManager($request);
 
 		// Issue export options.
 		$exportIssueOptions = array(
@@ -62,15 +117,34 @@ class MedraSettingsForm extends DOIExportSettingsForm {
 
 		// Countries.
 		$templateMgr->assign('countries', $this->_getCountries());
-		parent::display();
+		return parent::fetch($request);
+	}
+
+	/**
+	 * @copydoc Form::readInputData()
+	 */
+	function readInputData() {
+		$this->readUserVars(array_keys($this->getFormFields()));
+	}
+
+	/**
+	 * @copydoc Form::execute()
+	 */
+	function execute() {
+		$plugin = $this->_getPlugin();
+		$contextId = $this->_getContextId();
+		foreach($this->getFormFields() as $fieldName => $fieldType) {
+			$plugin->updateSetting($contextId, $fieldName, $this->getData($fieldName), $fieldType);
+		}
 	}
 
 
 	//
-	// Implement template methods from DOIExportSettingsForm
+	// Public helper methods
 	//
 	/**
-	 * @see DOIExportSettingsForm::getFormFields()
+	 * Get form fields
+	 * @return array (field name => field type)
 	 */
 	function getFormFields() {
 		return array(
@@ -81,8 +155,19 @@ class MedraSettingsForm extends DOIExportSettingsForm {
 			'publicationCountry' => 'string',
 			'exportIssuesAs' => 'int',
 			'username' => 'string',
-			'password' => 'string'
+			'password' => 'string',
+			'automaticRegistration' => 'bool',
+			'testMode' => 'bool'
 		);
+	}
+
+	/**
+	 * Is the form field optional
+	 * @param $settingName string
+	 * @return boolean
+	 */
+	function isOptional($settingName) {
+		return in_array($settingName, array('username', 'password', 'automaticRegistration', 'testMode'));
 	}
 
 
@@ -93,9 +178,9 @@ class MedraSettingsForm extends DOIExportSettingsForm {
 	 * Return a list of countries eligible as publication countries.
 	 * @return array
 	 */
-	function &_getCountries() {
+	function _getCountries() {
 		$countryDao = DAORegistry::getDAO('CountryDAO'); /* @var $countryDao CountryDAO */
-		$countries =& $countryDao->getCountries();
+		$countries = $countryDao->getCountries();
 		return $countries;
 	}
 }

@@ -51,7 +51,6 @@ class CrossrefInfoSender extends ScheduledTask {
 
 		$plugin = $this->_plugin;
 		$journals = $this->_getJournals();
-		$request = Application::getRequest();
 
 		foreach ($journals as $journal) {
 			$notify = false;
@@ -63,43 +62,10 @@ class CrossrefInfoSender extends ScheduledTask {
 				// Get unregistered issues
 				$unregisteredIssues = $plugin->getUnregisteredIssues($journal);
 				// Update the status and construct an array of the issues to be deposited
-				$issuesToBeDeposited = array();
-				foreach ($unregisteredIssues as $issue) {
-					$plugin->updateDepositStatus($request, $journal, $issue);
-					// get the current issue status
-					$currentIssueStatus = $issue->getData($plugin->getDepositStatusSettingName());
-					// update status and select only not submitted issues for the automatic deposit
-					if (!$currentIssueStatus) {
-						array_push($issuesToBeDeposited, $issue);
-					}
-					// check if the new status after the update == failed to notify the users
-					$newIssueStatus = $issue->getData($plugin->getDepositStatusSettingName());
-					if (!$notify && $newIssueStatus == CROSSREF_STATUS_FAILED && $currentIssueStatus != CROSSREF_STATUS_FAILED) {
-						$notify = true;
-					}
-				}
+				$issuesToBeDeposited = $this->_getObjectsToBeDeposited($unregisteredIssues, $journal, $notify);
 				// If there are issues to be deposited and we want automatic deposit
 				if (count($issuesToBeDeposited) && $plugin->getSetting($journal->getId(), 'automaticRegistration')) {
-					// export XML
-					$exportIssueXml = $plugin->exportXML($issuesToBeDeposited, 'issue=>crossref-xml', $journal, $request->getUser());
-					// Write the XML to a file.
-					$exportIssueFileName = $plugin->getExportPath() . date('Ymd-His') . '.xml';
-					file_put_contents($exportIssueFileName, $exportIssueXml);
-					// Deposit the XML file.
-					$result = $plugin->depositXML($request, $issuesToBeDeposited, $request->getContext(), $exportIssueFileName);
-					if ($result !== true) {
-						if (is_array($result)) {
-							foreach($result as $error) {
-								assert(is_array($error) && count($error) >= 1);
-								$this->addExecutionLogEntry(
-									__($error[0], array('param' => (isset($error[1]) ? $error[1] : null))),
-									SCHEDULED_TASK_MESSAGE_TYPE_WARNING
-								);
-							}
-						}
-					}
-					// Remove all temporary files.
-					$this->cleanTmpfile($exportIssueFileName);
+					$this->_registerObjects($issuesToBeDeposited, 'issue=>crossref-xml', $journal, 'issues');
 				}
 			}
 
@@ -107,58 +73,23 @@ class CrossrefInfoSender extends ScheduledTask {
 				// Get unregistered articles
 				$unregisteredArticles = $plugin->getUnregisteredArticles($journal);
 				// Update the status and construct an array of the articles to be deposited
-				$articlesToBeDeposited = array();
-				foreach ($unregisteredArticles as $article) {
-					$plugin->updateDepositStatus($request, $journal, $article);
-					// get the current article status
-					$currentArticleStatus = $article->getData($plugin->getDepositStatusSettingName());
-					// deposit only not submitted articles
-					if (!$currentArticleStatus) {
-						array_push($articlesToBeDeposited, $article);
-					}
-					// check if the new status after the update == failed to notify the users
-					$newArticleStatus = $article->getData($plugin->getDepositStatusSettingName());
-					if (!$notify && $newArticleStatus == CROSSREF_STATUS_FAILED && $currentArticleStatus != CROSSREF_STATUS_FAILED) {
-						$notify = true;
-					}
-				}
+				$articlesToBeDeposited = $this->_getObjectsToBeDeposited($unregisteredArticles, $journal, $notify);
 				// If there are articles to be deposited and we want automatic deposits
 				if (count($articlesToBeDeposited) && $plugin->getSetting($journal->getId(), 'automaticRegistration')) {
-					// export XML
-					$exportArticleXml = $plugin->exportXML($articlesToBeDeposited, 'article=>crossref-xml', $journal, $request->getUser());
-					// Write the XML to a file.
-					$exportArticleFileName = $plugin->getExportPath() . date('Ymd-His') . '.xml';
-					file_put_contents($exportArticleFileName, $exportArticleXml);
-					// Deposit the XML file.
-					$result = $plugin->depositXML($request, $articlesToBeDeposited, $request->getContext(), $exportArticleFileName);
-					if ($result !== true) {
-						if (is_array($result)) {
-							foreach($result as $error) {
-								assert(is_array($error) && count($error) >= 1);
-								$this->addExecutionLogEntry(
-									__($error[0], array('param' => (isset($error[1]) ? $error[1] : null))),
-									SCHEDULED_TASK_MESSAGE_TYPE_WARNING
-								);
-							}
-						}
-					}
-					// Remove all temporary files.
-					$this->cleanTmpfile($exportArticleFileName);
+					$this->_registerObjects($articlesToBeDeposited, 'article=>crossref-xml', $journal, 'articles');
 				}
 			}
 
 			// Notify journal managers if there is a new failed DOI status
 			if ($notify) {
 				$roleDao = DAORegistry::getDAO('RoleDAO');
-				$journalManagers = $roleDao->getUsersByRoleId(ROLE_ID_JOURNAL_MANAGER, $journal->getId());
+				$journalManagers = $roleDao->getUsersByRoleId(ROLE_ID_MANAGER, $journal->getId());
 				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				while ($journalManager = $journalManagers->next()) {
 					$notificationManager->createTrivialNotification($journalManager->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('plugins.importexport.crossref.notification.failed')));
-					unset($journalManager);
 				}
 			}
-
 		}
 		return true;
 	}
@@ -189,11 +120,76 @@ class CrossrefInfoSender extends ScheduledTask {
 			if ($doiPrefix) {
 				$journals[] = $journal;
 			} else {
-				$this->addExecutionLogEntry(__('plugins.importexport.crossref.senderTask.warning.noDOIprefix', array('path' => $journal->getPath())), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
+				$this->addExecutionLogEntry(__('plugins.importexport.common.senderTask.warning.noDOIprefix', array('path' => $journal->getPath())), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
 			}
-			unset($journal);
 		}
 		return $journals;
+	}
+
+	/**
+	 * Update the status and construct an array of the objects to be deposited
+	 * @param $unregisteredObjects array Array of all not fully registered objects
+	 * @param $journal Journal
+	 * @param $notify boolean
+	 * @return array Array of objects to be deposited
+	 */
+	function _getObjectsToBeDeposited($unregisteredObjects, $journal, &$notify) {
+		$plugin = $this->_plugin;
+		$objectsToBeDeposited = array();
+		foreach ($unregisteredObjects as $object) {
+			$plugin->updateDepositStatus($journal, $object);
+			// get the current object status
+			$currentStatus = $object->getData($plugin->getDepositStatusSettingName());
+			// deposit only not submitted objects
+			if (!$currentStatus) {
+				array_push($objectsToBeDeposited, $object);
+			}
+			// check if the new status after the update == failed to notify the users
+			$newStatus = $object->getData($plugin->getDepositStatusSettingName());
+			if (!$notify && $newStatus == CROSSREF_STATUS_FAILED && $currentStatus != CROSSREF_STATUS_FAILED) {
+				$notify = true;
+			}
+		}
+		return $objectsToBeDeposited;
+	}
+
+	/**
+	 * Register objects
+	 * @param $objects array
+	 * @param $filter string
+	 * @param $journal Journal
+	 * @param $objectsFileNamePart string
+	 */
+	function _registerObjects($objects, $filter, $journal, $objectsFileNamePart) {
+		$plugin = $this->_plugin;
+		// export XML
+		$exportXml = $plugin->exportXML($objects, $filter, $journal);
+		// Write the XML to a file.
+		$exportFileName = $plugin->getExportFileName($journal, $objectsFileNamePart);
+		file_put_contents($exportFileName, $exportXml);
+		// Deposit the XML file.
+		$result = $plugin->depositXML($objects, $journal, $exportFileName);
+		if ($result !== true) {
+			$this->_addLogEntry($result);
+		}
+		// Remove all temporary files.
+		$plugin->cleanTmpfile($exportFileName);
+	}
+
+	/**
+	 * Add execution log entry
+	 * @param $result array
+	 */
+	function _addLogEntry($result) {
+		if (is_array($result)) {
+			foreach($result as $error) {
+				assert(is_array($error) && count($error) >= 1);
+				$this->addExecutionLogEntry(
+					__($error[0], array('param' => (isset($error[1]) ? $error[1] : null))),
+					SCHEDULED_TASK_MESSAGE_TYPE_WARNING
+				);
+			}
+		}
 	}
 
 }

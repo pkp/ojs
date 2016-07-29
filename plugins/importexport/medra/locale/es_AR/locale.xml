@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/importexport/medra/locale/es_AR/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="es_AR" full_name="Español (Argentina)">
+	<message key="plugins.importexport.medra.displayName">Plugin de Exportación/Registro mEDRA.</message>
+	<message key="plugins.importexport.medra.description">Exporta números, artículos y metadatos en Onix para formato DOI (O4DOI) y registra los DOI con la agencia de registro mEDRA.</message>
+
+	<message key="plugins.importexport.medra.intro"><![CDATA[Si quiere registrar DOIs con mEDRA, por favor siga los pasos en la
+		<a href="http://www.medra.org/en/guide.htm" target="_blank">página de mEDRA </a>
+		para recibir un nombre de usuario y una clave.Si no tiene su nombre de usuario y su clave propios, seguirá siendo capaz de exportar  en el formato XML de mEDRA (Onix para DOI)
+		pero no podrá registrar sus  DOIs en mEDRA desde OJS. 
+		Por favor note que la clave no se almacenara en la base de datos de forma encriptada debido a los requerimientos del servicio de registro de mEDRA.]]></message>
+
+	<message key="plugins.importexport.medra.settings.form.description">Por favor configura el plugin de exportación mEDRA</message>
+	<message key="plugins.importexport.medra.settings.form.username">Nombre de Usuario</message>
+	<message key="plugins.importexport.medra.settings.form.usernameRequired">Por favor introduzca un nombre de usuario mEDRA. El nombre de usario no debería contenter puntos.</message>
+	<message key="plugins.importexport.medra.settings.form.registrantName">El nombre de la institución registrada en mEDRA</message>	
+	<message key="plugins.importexport.medra.settings.form.registrantNameRequired">Por favor introduzca la institución que es registrada en mEDRA.</message>
+	<message key="plugins.importexport.medra.settings.form.fromFields">Persona para ser contactada por mEDRA en caso de requisitos técnicos:</message>
+	<message key="plugins.importexport.medra.settings.form.fromCompany">Institución</message>
+	<message key="plugins.importexport.medra.settings.form.fromCompanyRequired">Por favor instrduzca la institución que es responsable técnica de la exportación DOI (e.g. la institución que hostea su servidor web).</message>
+	<message key="plugins.importexport.medra.settings.form.fromName">Persona de Contacto</message>
+	<message key="plugins.importexport.medra.settings.form.fromNameRequired">Por favor instroduzca una persona de contacto de caracter técnico.</message>
+	<message key="plugins.importexport.medra.settings.form.fromEmail">Email</message>
+	<message key="plugins.importexport.medra.settings.form.fromEmailRequired">Por favor intruduzca un mail de contacto técnico válido.</message>
+	<message key="plugins.importexport.medra.settings.form.publicationCountry">Por favor introduzca el país para ser informado como "país de publicación" en mEDRA .</message>
+	<message key="plugins.importexport.medra.settings.form.exportIssuesAs"><![CDATA[Por favor escoja si prefiere exportar los números como <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'trabajos' o 'manifestaciones'</a>.]]></message>
+	<message key="plugins.importexport.medra.settings.form.work">trabajo</message>	
+	<message key="plugins.importexport.medra.settings.form.manifestation">manifestación</message>
+
+	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: los DOIs asignados a los artículos van a ser exportados a  mEDRA como <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'trabajos'</a>. DOIs asignados a las versiones galeradas van a ser exportados como <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestaciones'</a>.]]></message>
+		
+	<message key="plugins.importexport.medra.cliUsage">Uso:
+{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...</message>
+</locale>

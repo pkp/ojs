@@ -13,9 +13,7 @@
  * @brief mEDRA Onix for DOI (O4DOI) export/registration plugin.
  */
 
-if (!class_exists('DOIExportPlugin')) { // Bug #7848
-	import('plugins.importexport.medra.classes.DOIExportPlugin');
-}
+import('classes.plugins.DOIPubIdExportPlugin');
 
 // O4DOI schemas.
 define('O4DOI_ISSUE_AS_WORK', 0x01);
@@ -23,113 +21,118 @@ define('O4DOI_ISSUE_AS_MANIFESTATION', 0x02);
 define('O4DOI_ARTICLE_AS_WORK', 0x03);
 define('O4DOI_ARTICLE_AS_MANIFESTATION', 0x04);
 
-class MedraExportPlugin extends DOIExportPlugin {
-
-	//
-	// Constructor
-	//
+class MedraExportPlugin extends DOIPubIdExportPlugin {
+	/**
+	 * Constructor
+	 */
 	function MedraExportPlugin() {
-		parent::DOIExportPlugin();
+		parent::DOIPubIdExportPlugin();
 	}
 
-
-	//
-	// Implement template methods from ImportExportPlugin
-	//
 	/**
-	 * @see ImportExportPlugin::getName()
+	 * @see Plugin::getName()
 	 */
 	function getName() {
 		return 'MedraExportPlugin';
 	}
 
 	/**
-	 * @see ImportExportPlugin::getDisplayName()
+	 * @see Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
 		return __('plugins.importexport.medra.displayName');
 	}
 
 	/**
-	 * @see ImportExportPlugin::getDescription()
+	 * @see Plugin::getDescription()
 	 */
 	function getDescription() {
 		return __('plugins.importexport.medra.description');
 	}
 
-
-	//
-	// Implement template methods from DOIExportPlugin
-	//
 	/**
-	 * @see DOIExportPlugin::getPluginId()
+	 * @copydoc DOIExportPlugin::getSubmissionFilter()
 	 */
-	function getPluginId() {
+	function getSubmissionFilter() {
+		return 'article=>medra-xml';
+	}
+
+	/**
+	 * @copydoc DOIExportPlugin::getIssueFilter()
+	 */
+	function getIssueFilter() {
+		return 'issue=>medra-xml';
+	}
+
+	/**
+	 * @copydoc DOIPubIdExportPlugin::getPluginSettingsPrefix()
+	 */
+	function getPluginSettingsPrefix() {
 		return 'medra';
 	}
 
 	/**
-	 * @see DOIExportPlugin::getSettingsFormClassName()
+	 * @copydoc DOIPubIdExportPlugin::getSettingsFormClassName()
 	 */
 	function getSettingsFormClassName() {
 		return 'MedraSettingsForm';
 	}
 
 	/**
-	 * @see DOIExportPlugin::generateExportFiles()
+	 * @copydoc DOIPubIdExportPlugin::getExportDeploymentClassName()
 	 */
-	function generateExportFiles($request, $exportType, &$objects, $targetPath, $journal, &$errors) {
-		assert(count($objects) >= 1);
-
-		// Identify the O4DOI schema to export.
-		$exportIssuesAs = $this->getSetting($journal->getId(), 'exportIssuesAs');
-		$schema = $this->_identifyO4DOISchema($exportType, $journal, $exportIssuesAs);
-		assert(!is_null($schema));
-
-		// Create the XML DOM and document.
-		$this->import('classes.O4DOIExportDom');
-		$dom = new O4DOIExportDom($request, $this, $schema, $journal, $this->getCache(), $exportIssuesAs);
-		$doc =& $dom->generate($objects);
-		if ($doc === false) {
-			$errors =& $dom->getErrors();
-			return false;
-		}
-
-		// Write the result to the target file.
-		$exportFileName = $this->getTargetFileName($targetPath, $exportType);
-		file_put_contents($exportFileName, XMLCustomWriter::getXML($doc));
-		$generatedFiles = array($exportFileName => &$objects);
-		return $generatedFiles;
+	function getExportDeploymentClassName() {
+		return 'MedraExportDeployment';
 	}
 
 	/**
-	 * @see DOIExportPlugin::registerDoi()
+	 * @copydoc ImportExportPlugin::display()
 	 */
-	function registerDoi($request, $journal, &$objects, $file) {
+	function display($args, $request) {
+		$context = $request->getContext();
+		switch (current($args)) {
+			case 'exportRepresentations':
+				$selectedRepresentations = (array) $request->getUserVar('selectedRepresentations');
+				if (!empty($selectedRepresentations)) {
+					$objects = $this->_getArticleGalleys($selectedRepresentations, $context);
+					$filter = 'galley=>medra-xml';
+					$tab = (string) $request->getUserVar('tab');
+					$objectsFileNamePart = 'galleys';
+				}
+				// Execute export action
+				$this->executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart);
+			default:
+				parent::display($args, $request);
+		}
+	}
+
+	/**
+	 * @copydoc DOIPubIdExportPlugin::depositXML()
+	 */
+	function depositXML($objects, $context, $filename) {
 		// Use a different endpoint for testing and
 		// production.
 		$this->import('classes.MedraWebservice');
-		$endpoint = ($this->isTestMode($request) ? MEDRA_WS_ENDPOINT_DEV : MEDRA_WS_ENDPOINT);
+		$endpoint = ($this->isTestMode($context) ? MEDRA_WS_ENDPOINT_DEV : MEDRA_WS_ENDPOINT);
 
 		// Get credentials.
-		$username = $this->getSetting($journal->getId(), 'username');
-		$password = $this->getSetting($journal->getId(), 'password');
-
+		$username = $this->getSetting($context->getId(), 'username');
+		$password = $this->getSetting($context->getId(), 'password');
 		// Retrieve the XML.
-		assert(is_readable($file));
-		$xml = file_get_contents($file);
+		assert(is_readable($filename));
+		$xml = file_get_contents($filename);
 		assert($xml !== false && !empty($xml));
 
 		// Instantiate the mEDRA web service wrapper.
 		$ws = new MedraWebservice($endpoint, $username, $password);
-
 		// Register the XML with mEDRA.
 		$result = $ws->upload($xml);
 
 		if ($result === true) {
 			// Mark all objects as registered.
 			foreach($objects as $object) {
-				$this->markRegistered($request, $object, MEDRA_WS_TESTPREFIX);
+				$object->setData($this->getDepositStatusSettingName(), DOI_EXPORT_STATUS_REGISTERED);
+				$this->saveRegisteredDoi($context, $object);
 			}
 		} else {
 			// Handle errors.
@@ -141,46 +144,47 @@ class MedraExportPlugin extends DOIExportPlugin {
 				$result = false;
 			}
 		}
-
 		return $result;
 	}
 
-
-	//
-	// Private helper methods
-	//
 	/**
-	 * Determine the O4DOI export schema.
-	 *
-	 * @param $exportType integer One of the DOI_EXPORT_* constants.
-	 * @param $journal Journal
-	 * @param $exportIssuesAs Whether issues are exported as work
-	 *  or as manifestation. One of the O4DOI_* schema constants.
-	 *
-	 * @return integer One of the O4DOI_* schema constants.
+	 * Retrieve all unregistered articles.
+	 * @param $context Context
+	 * @return array
 	 */
-	function _identifyO4DOISchema($exportType, &$journal, $exportIssuesAs) {
-		switch ($exportType) {
-			case DOI_EXPORT_ISSUES:
-				assert ($exportIssuesAs === O4DOI_ISSUE_AS_WORK || $exportIssuesAs === O4DOI_ISSUE_AS_MANIFESTATION);
-				return $exportIssuesAs;
+	function getUnregisteredGalleys($context) {
+		// Retrieve all galleys that have not yet been registered.
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+		$galleys = $galleyDao->getByPubIdType(
+			$this->getPubIdType(),
+			$context?$context->getId():null,
+			null,
+			null,
+			null,
+			$this->getPluginSettingsPrefix(). '::' . DOI_EXPORT_REGISTERED_DOI,
+			null,
+			null
+		);
+		return $galleys->toArray();
+	}
 
-			case DOI_EXPORT_ARTICLES:
-				return O4DOI_ARTICLE_AS_WORK;
 
-			case DOI_EXPORT_GALLEYS:
-				return O4DOI_ARTICLE_AS_MANIFESTATION;
+	/**
+	 * Get article galleys from gallley IDs.
+	 * @param $galleyIds array
+	 * @param $context Context
+	 * @return array
+	 */
+	function _getArticleGalleys($galleyIds, $context) {
+		$galleys = array();
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		foreach ($galleyIds as $galleyId) {
+			$articleGalley = $articleGalleyDao->getById($galleyId, null, $context->getId());
+			if ($articleGalley) $galleys[] = $articleGalley;
 		}
-
-		return null;
+		return $galleys;
 	}
 
-	/**
-	 * @copydoc PKPImportExportPlugin::usage
-	 */
-	function usage($scriptName) {
-		fatalError('Not implemented');
-	}
 }
 
 ?>

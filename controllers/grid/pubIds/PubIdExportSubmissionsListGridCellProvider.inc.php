@@ -120,8 +120,6 @@ class PubIdExportSubmissionsListGridCellProvider extends DataObjectGridCellProvi
 				return array('label' => $publishedSubmission->getId());
 			case 'title':
 				return array('label' => '');
-			case 'author':
-				return array('label' => $publishedSubmission->getAuthorString(true));
 			case 'issue':
 				return array('label' => '');
 			case 'pubId':

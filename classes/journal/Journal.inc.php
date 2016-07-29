@@ -94,10 +94,9 @@ class Journal extends Context {
 	}
 
 	/**
-	 * Get the DAO for this context object.
-	 * @return DAO
+	 * @copydoc DataObject::getDAO()
 	 */
-	static function getDAO() {
+	function getDAO() {
 		return DAORegistry::getDAO('JournalDAO');
 	}
 

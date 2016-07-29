@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/medra/locale/da_DK/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="da_DK" full_name="Dansk">
+	<message key="plugins.importexport.medra.displayName">mEDRA Eksport/Registrerings-plug-in</message>
+	<message key="plugins.importexport.medra.description">Ekportér metadata fra nummer, artikel og satsskib i Onix til DOI (O4DOI)-format med mEDRA registreringsagentur.</message>
+
+	<message key="plugins.importexport.medra.intro"><![CDATA[If you want to register DOIs with mEDRA, please follow the directions on the
+		<a href="http://www.medra.org/en/guide.htm" target="_blank">mEDRA homepage</a>
+		to receive a username and password. If you do not have your own username and
+		password you'll still be able to export into the mEDRA XML format (Onix for DOI)
+		but you cannot register your DOIs with mEDRA from within OJS. 
+		Please note that the password will be saved as plain text, i.e. not encrypted, due
+		to the mEDRA registration service requirements.]]></message>
+	
+	<message key="plugins.importexport.medra.settings.form.description">Please configure the mEDRA export plug-in:</message>
+	<message key="plugins.importexport.medra.settings.form.username">Username</message>
+	<message key="plugins.importexport.medra.settings.form.usernameRequired">Please enter your mEDRA username. The username may not contain colons.</message>
+	<message key="plugins.importexport.medra.settings.form.registrantName">The name of the institution registered at mEDRA</message>	
+	<message key="plugins.importexport.medra.settings.form.registrantNameRequired">Please enter the institution that is registered at mEDRA.</message>
+	<message key="plugins.importexport.medra.settings.form.fromFields">Person to be contacted by mEDRA in case of technical inquiries:</message>
+	<message key="plugins.importexport.medra.settings.form.fromCompany">Institution</message>
+	<message key="plugins.importexport.medra.settings.form.fromCompanyRequired">Please enter the institution that is technically responsible for DOI export (e.g. the institution hosting your web server).</message>
+	<message key="plugins.importexport.medra.settings.form.fromName">Contact Person</message>
+	<message key="plugins.importexport.medra.settings.form.fromNameRequired">Please enter a technical contact person.</message>
+	<message key="plugins.importexport.medra.settings.form.fromEmail">Email</message>
+	<message key="plugins.importexport.medra.settings.form.fromEmailRequired">Please enter a valid technical contact email.</message>
+	<message key="plugins.importexport.medra.settings.form.publicationCountry">Please choose the country to be informed as 'publication country' to mEDRA.</message>
+	<message key="plugins.importexport.medra.settings.form.exportIssuesAs"><![CDATA[Please choose whether you want to export issues as <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works' or 'manifestations'</a>.]]></message>
+	<message key="plugins.importexport.medra.settings.form.work">work</message>	
+	<message key="plugins.importexport.medra.settings.form.manifestation">manifestation</message>
+
+	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: DOIs assigned to articles will be exported to mEDRA as <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works'</a>. DOIs assigned to galleys will be exported as <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestations'</a>.]]></message>
+		
+	<message key="plugins.importexport.medra.cliUsage">Usage: 
+{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...</message>
+</locale>

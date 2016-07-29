@@ -17,8 +17,6 @@
  * application's specifics.
  */
 
-import('lib.pkp.classes.plugins.importexport.PKPImportExportDeployment');
-
 // XML attributes
 define('CROSSREF_XMLNS' , 'http://www.crossref.org/schema/4.3.6');
 define('CROSSREF_XMLNS_XSI' , 'http://www.w3.org/2001/XMLSchema-instance');
@@ -27,7 +25,10 @@ define('CROSSREF_XSI_SCHEMALOCATION' , 'http://www.crossref.org/schema/deposit/c
 define('CROSSREF_XMLNS_JATS' , 'http://www.ncbi.nlm.nih.gov/JATS1');
 define('CROSSREF_XMLNS_AI' , 'http://www.crossref.org/AccessIndicators.xsd');
 
-class CrossrefExportDeployment extends PKPImportExportDeployment {
+class CrossrefExportDeployment {
+	/** @var Context The current import/export context */
+	var $_context;
+
 	/** @var Plugin The current import/export plugin */
 	var $_plugin;
 
@@ -41,10 +42,10 @@ class CrossrefExportDeployment extends PKPImportExportDeployment {
 	/**
 	 * Constructor
 	 * @param $context Context
-	 * @param $user User
+	 * @param $plugin DOIPubIdExportPlugin
 	 */
-	function CrossrefExportDeployment($context, $plugin, $user) {
-		parent::PKPImportExportDeployment($context, $user);
+	function CrossrefExportDeployment($context, $plugin) {
+		$this->setContext($context);
 		$this->setPlugin($plugin);
 	}
 
@@ -118,6 +119,22 @@ class CrossrefExportDeployment extends PKPImportExportDeployment {
 	//
 	// Getter/setters
 	//
+	/**
+	 * Set the import/export context.
+	 * @param $context Context
+	 */
+	function setContext($context) {
+		$this->_context = $context;
+	}
+
+	/**
+	 * Get the import/export context.
+	 * @return Context
+	 */
+	function getContext() {
+		return $this->_context;
+	}
+
 	/**
 	 * Set the import/export plugin.
 	 * @param $plugin ImportExportPlugin
