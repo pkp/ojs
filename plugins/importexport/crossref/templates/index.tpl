@@ -64,23 +64,20 @@
 				<script type="text/javascript">
 					$(function() {ldelim}
 						// Attach the form handler.
-						$('#exportSubmissionXmlForm').pkpHandler('$.pkp.controllers.form.DOIPubIdExportFormHandler',
-							{ldelim}
-								submissionsActions: {$linkActions|@json_encode},
-							{rdelim}
-						);
+						$('#exportSubmissionXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
 					{rdelim});
 				</script>
 				<form id="exportSubmissionXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
 					{csrf}
+					<input type="hidden" name="tab" value="exportSubmissions-tab" />
 					{fbvFormArea id="submissionsXmlForm"}
 						{url|assign:submissionsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportSubmissionsListGridHandler" op="fetchGrid" plugin="crossref" category="importexport" escape=false}
 						{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
-						{if !empty($linkActions)}
+						{if !empty($actionNames)}
 							<ul class="pubids_export_actions">
-								{foreach from=$linkActions item=linkAction}
-									<li class="pkp_button_link">
-										{include file="linkAction/linkAction.tpl" action=$linkAction}
+								{foreach from=$actionNames key=action item=actionName}
+									<li class="pubids_export_action">
+										{fbvElement type="submit" label="$actionName" id="$action" name="$action" value="1" class="$action" translate=false inline=true}
 									</li>
 								{/foreach}
 							</ul>
@@ -95,24 +92,21 @@
 				<script type="text/javascript">
 					$(function() {ldelim}
 						// Attach the form handler.
-						$('#exportIssueXmlForm').pkpHandler('$.pkp.controllers.form.DOIPubIdExportFormHandler',
-							{ldelim}
-								issuesActions: {$linkActions|@json_encode},
-							{rdelim}						
-						);
+						$('#exportIssuesXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
 					{rdelim});
 				</script>
 				<p>{translate key="plugins.importexport.crossref.issues.description"}</p>
 				<form id="exportIssueXmlForm" class="pkp_form" action="{plugin_url path="exportIssues"}" method="post">
 					{csrf}
+					<input type="hidden" name="tab" value="exportIssues-tab" />
 					{fbvFormArea id="issuesXmlForm"}
 						{url|assign:issuesListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportIssuesListGridHandler" op="fetchGrid" plugin="crossref" category="importexport" escape=false}
 						{load_url_in_div id="issuesListGridContainer" url=$issuesListGridUrl}
-						{if !empty($linkActions)}
+						{if !empty($actionNames)}
 							<ul class="pubids_export_actions">
-								{foreach from=$linkActions item=linkAction}
-									<li class="pkp_button_link">
-										{include file="linkAction/linkAction.tpl" action=$linkAction}
+								{foreach from=$actionNames key=action item=actionName}
+									<li class="pubids_export_action">
+										{fbvElement type="submit" label="$actionName" id="$action" name="$action" value="1" class="$action" translate=false inline=true}
 									</li>
 								{/foreach}
 							</ul>

@@ -61,7 +61,7 @@ class MedraInfoSender extends ScheduledTask {
 				$unregisteredIssues = $plugin->getUnregisteredIssues($journal);
 				// If there are issues to be deposited
 				if (count($unregisteredIssues)) {
-					$this->_registerObjects($unregisteredIssues, 'issue=>medra-xml', $journal);
+					$this->_registerObjects($unregisteredIssues, 'issue=>medra-xml', $journal, 'issues');
 				}
 			}
 
@@ -70,7 +70,7 @@ class MedraInfoSender extends ScheduledTask {
 				$unregisteredArticles = $plugin->getUnregisteredArticles($journal);
 				// If there are articles to be deposited
 				if (count($unregisteredArticles)) {
-					$this->_registerObjects($unregisteredArticles, 'article=>medra-xml', $journal);
+					$this->_registerObjects($unregisteredArticles, 'article=>medra-xml', $journal, 'articles');
 				}
 			}
 
@@ -79,7 +79,7 @@ class MedraInfoSender extends ScheduledTask {
 				$unregisteredGalleys = $plugin->getUnregisteredGalleys($journal);
 				// If there are galleys to be deposited
 				if (count($unregisteredGalleys)) {
-					$this->_registerObjects($unregisteredGalleys, 'galley=>medra-xml', $journal);
+					$this->_registerObjects($unregisteredGalleys, 'galley=>medra-xml', $journal, 'galleys');
 				}
 			}
 		}
@@ -114,7 +114,6 @@ class MedraInfoSender extends ScheduledTask {
 			} else {
 				$this->addExecutionLogEntry(__('plugins.importexport.common.senderTask.warning.noDOIprefix', array('path' => $journal->getPath())), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
 			}
-			unset($journal);
 		}
 		return $journals;
 	}
@@ -125,13 +124,14 @@ class MedraInfoSender extends ScheduledTask {
 	 * @param $objects array
 	 * @param $filter string
 	 * @param $journal Journal
+	 * @param $objectsFileNamePart string
 	 */
-	function _registerObjects($objects, $filter, $journal) {
+	function _registerObjects($objects, $filter, $journal, $objectsFileNamePart) {
 		$plugin = $this->_plugin;
 		// export XML
 		$exportXml = $plugin->exportXML($objects, $filter, $journal);
 		// Write the XML to a file.
-		$exportFileName = $plugin->getExportPath() . date('Ymd-His') . '.xml';
+		$exportFileName = $plugin->getExportFileName($journal, $objectsFileNamePart);
 		file_put_contents($exportFileName, $exportXml);
 		// Deposit the XML file.
 		$result = $plugin->depositXML($objects, $journal, $exportFileName);

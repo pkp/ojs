@@ -588,7 +588,6 @@
 	<message key="plugins.importexport.common.action.export">Export</message>
 	<message key="plugins.importexport.common.action.markRegistered">Mark registered</message>
 	<message key="plugins.importexport.common.action.register">Register</message>
-	<message key="plugins.importexport.common.action.checkStatus">Check status</message>
 	<!--  notifications and errors -->
 	<message key="plugins.importexport.common.error.noObjectsSelected">No objects selected.</message>
 	<message key="plugins.importexport.common.error.validation">Could not convert selected objects.</message>

@@ -126,13 +126,6 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 	// Implemented methods from GridHandler.
 	//
 	/**
-	 * @copydoc GridHandler::getRowInstance()
-	 */
-	protected function getRowInstance() {
-		return new GridRow();
-	}
-
-	/**
 	 * @copydoc GridHandler::initFeatures()
 	 */
 	function initFeatures($request, $args) {

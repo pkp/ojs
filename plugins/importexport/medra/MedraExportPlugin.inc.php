@@ -65,31 +65,9 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc DOIExportPlugin::getExportActions()
+	 * @copydoc DOIPubIdExportPlugin::getPluginSettingsPrefix()
 	 */
-	function getExportActions($context) {
-		$actions = array(DOI_EXPORT_ACTION_EXPORT, DOI_EXPORT_ACTION_MARKREGISTERED);
-		if ($this->getSetting($context->getId(), 'username') && $this->getSetting($context->getId(), 'password')) {
-			array_unshift($actions, DOI_EXPORT_ACTION_DEPOSIT);
-		}
-		return $actions;
-	}
-
-	/**
-	 * @copydoc DOIExportPlugin::getExportActionNames()
-	 */
-	function getExportActionNames() {
-		return array(
-			DOI_EXPORT_ACTION_DEPOSIT => __('plugins.importexport.common.action.register'),
-			DOI_EXPORT_ACTION_EXPORT => __('plugins.importexport.common.action.export'),
-			DOI_EXPORT_ACTION_MARKREGISTERED => __('plugins.importexport.common.action.markRegistered'),
-		);
-	}
-
-	/**
-	 * @copydoc DOIPubIdExportPlugin::getPluginSettingsPreffix()
-	 */
-	function getPluginSettingsPreffix() {
+	function getPluginSettingsPrefix() {
 		return 'medra';
 	}
 
@@ -118,10 +96,11 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 				if (!empty($selectedRepresentations)) {
 					$objects = $this->_getArticleGalleys($selectedRepresentations, $context);
 					$filter = 'galley=>medra-xml';
-					$tab = 'exportRepresentations-tab';
+					$tab = (string) $request->getUserVar('tab');
+					$objectsFileNamePart = 'galleys';
 				}
 				// Execute export action
-				$this->executeExportAction($request, $objects, $filter, $tab);
+				$this->executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart);
 			default:
 				parent::display($args, $request);
 		}
@@ -182,7 +161,7 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 			null,
 			null,
 			null,
-			$this->getPluginSettingsPreffix(). '::' . DOI_EXPORT_REGISTERED_DOI,
+			$this->getPluginSettingsPrefix(). '::' . DOI_EXPORT_REGISTERED_DOI,
 			null,
 			null
 		);

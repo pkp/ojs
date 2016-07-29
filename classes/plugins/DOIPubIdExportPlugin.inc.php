@@ -21,11 +21,10 @@ define('DOI_EXPORT_STATUS_NOT_DEPOSITED', 'notDeposited');
 define('DOI_EXPORT_STATUS_MARKEDREGISTERED', 'markedRegistered');
 define('DOI_EXPORT_STATUS_REGISTERED', 'registered');
 
-// The status of the DOI.
+// The actions.
 define('DOI_EXPORT_ACTION_EXPORT', 'export');
 define('DOI_EXPORT_ACTION_MARKREGISTERED', 'markRegistered');
 define('DOI_EXPORT_ACTION_DEPOSIT', 'deposit');
-define('DOI_EXPORT_ACTION_CHECKSTATUS', 'checkStatus');
 
 // Configuration errors.
 define('DOI_EXPORT_CONFIG_ERROR_DOIPREFIX', 0x01);
@@ -149,35 +148,37 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 					$linkActions[] = new LinkAction($action, new NullAction(), $actionName);
 				}
 				$templateMgr = TemplateManager::getManager($request);
-				$templateMgr->assign('plugin', $this);
-				$templateMgr->assign('linkActions', $linkActions);
-				$templateMgr->assign('configurationErrors', $configurationErrors);
-				$templateMgr->assign('exportArticles', $exportArticles);
-				$templateMgr->assign('exportIssues', $exportIssues);
-				$templateMgr->assign('exportRepresentations', $exportRepresentations);
+				$templateMgr->assign(array(
+					'plugin' => $this,
+					'actionNames' => $actionNames,
+					'configurationErrors' => $configurationErrors,
+					'exportArticles' => $exportArticles,
+					'exportIssues' => $exportIssues,
+					'exportRepresentations' => $exportRepresentations,
+				));
 				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
 				break;
 			case 'exportSubmissions':
 			case 'exportIssues':
 				$selectedSubmissions = (array) $request->getUserVar('selectedSubmissions');
 				$selectedIssues = (array) $request->getUserVar('selectedIssues');
+				$tab = (string) $request->getUserVar('tab');
 
 				if (empty($selectedSubmissions) && empty($selectedIssues)) {
-					echo __('plugins.importexport.common.error.noObjectsSelected');
-					break;
+					fatalError(__('plugins.importexport.common.error.noObjectsSelected'));
 				}
 				if (!empty($selectedSubmissions)) {
 					$objects = $this->_getPublishedArticles($selectedSubmissions, $context);
 					$filter = $this->getSubmissionFilter();
-					$tab = 'exportSubmissions-tab';
+					$objectsFileNamePart = 'articles';
 				} elseif (!empty($selectedIssues)) {
 					$objects = $this->_getPublishedIssues($selectedIssues, $context);
 					$filter = $this->getIssueFilter();
-					$tab = 'exportIssues-tab';
+					$objectsFileNamePart = 'issues';
 				}
 
 				// Execute export action
-				$this->executeExportAction($request, $objects, $filter, $tab);
+				$this->executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart);
 		}
 	}
 
@@ -187,8 +188,9 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	 * @param $objects array Array of objects to be exported
 	 * @param $filter string Filter to use
 	 * @param $tab string Tab to return to
+	 * @param $objectsFileNamePart string Export file name part for this kind of objects
 	 */
-	function executeExportAction($request, $objects, $filter, $tab) {
+	function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart) {
 		$context = $request->getContext();
 		$path = array('plugin', $this->getName());
 
@@ -201,7 +203,9 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 				echo $exportXml;
 			} else { //deposit
 				// Write the XML to a file.
-				$exportFileName = $this->getExportPath() . date('Ymd-His') . '.xml';
+				// export file name example: crossref/20160723-160036-articles-1.xml
+				$exportFileName = $this->getExportFileName($objectsFileNamePart, $context);
+				//$this->getExportPath() . date('Ymd-His') .'-' . $objectsFileNamePart .'-' . $context->getId() . '.xml';
 				file_put_contents($exportFileName, $exportXml);
 				// Deposit the XML file.
 				$result = $this->depositXML($objects, $context, $exportFileName);
@@ -232,10 +236,6 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 			}
 		} elseif ($request->getUserVar(DOI_EXPORT_ACTION_MARKREGISTERED)) {
 			$this->markRegistered($context, $objects);
-			// redirect back to the right tab
-			$request->redirect(null, null, null, $path, null, $tab);
-		} elseif ($request->getUserVar(DOI_EXPORT_ACTION_CHECKSTATUS)) {
-			$this->checkStatus($objects, $context);
 			// redirect back to the right tab
 			$request->redirect(null, null, null, $path, null, $tab);
 		} else {
@@ -284,12 +284,11 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	 * @return array
 	 */
 	function getExportActions($context) {
-		return array(
-			DOI_EXPORT_ACTION_DEPOSIT,
-			DOI_EXPORT_ACTION_CHECKSTATUS,
-			DOI_EXPORT_ACTION_EXPORT,
-			DOI_EXPORT_ACTION_MARKREGISTERED,
-		);
+		$actions = array(DOI_EXPORT_ACTION_EXPORT, DOI_EXPORT_ACTION_MARKREGISTERED);
+		if ($this->getSetting($context->getId(), 'username') && $this->getSetting($context->getId(), 'password')) {
+			array_unshift($actions, DOI_EXPORT_ACTION_DEPOSIT);
+		}
+		return $actions;
 	}
 
 	/**
@@ -299,7 +298,6 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	function getExportActionNames() {
 		return array(
 			DOI_EXPORT_ACTION_DEPOSIT => __('plugins.importexport.common.action.register'),
-			DOI_EXPORT_ACTION_CHECKSTATUS => __('plugins.importexport.common.action.checkStatus'),
 			DOI_EXPORT_ACTION_EXPORT => __('plugins.importexport.common.action.export'),
 			DOI_EXPORT_ACTION_MARKREGISTERED => __('plugins.importexport.common.action.markRegistered'),
 		);
@@ -309,7 +307,7 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	 * Get the plugin ID used as plugin settings prefix.
 	 * @return string
 	 */
-	abstract function getPluginSettingsPreffix();
+	abstract function getPluginSettingsPrefix();
 
 	/**
 	 * Return the class name of the plugin's settings form.
@@ -371,28 +369,9 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	 * @param $objects array Array of published articles, issues or galleys
 	 * @param $context Context
 	 * @param $filename Export XML filename
-	 * @return boolean Weather the DOI has been registered/found
+	 * @return boolean Whether the DOI has been registered/found
 	 */
 	abstract function depositXML($objects, $context, $filename);
-
-	/**
-	 * Check statuses for selected publication objects.
-	 * @param $objects array Array of published articles, issues or galleys
-	 * @param $context Context
-	 */
-	function checkStatus($objects, $context) {
-		foreach ($objects as $object) {
-			$this->updateDepositStatus($context, $object);
-		}
-	}
-
-	/**
-	 * Update deposit status.
-	 * The function must be implemented in the subclasses, if the action is supported.
-	 * @param $context Context
-	 * @param $object The object getting deposited
-	 */
-	function updateDepositStatus($context, $object) { }
 
 	/**
 	 * Display XML validation errors.
@@ -423,7 +402,7 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	 *  errors if something went wrong.
 	 */
 	function getExportPath() {
-		$exportPath = Config::getVar('files', 'files_dir') . '/' . $this->getPluginSettingsPreffix();
+		$exportPath = Config::getVar('files', 'files_dir') . '/' . $this->getPluginSettingsPrefix();
 		if (!file_exists($exportPath)) {
 			$fileManager = new FileManager();
 			$fileManager->mkdir($exportPath);
@@ -435,6 +414,16 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 			return $errors;
 		}
 		return realpath($exportPath) . '/';
+	}
+
+	/**
+	 * Return the whole export file name.
+	 * @param $objectsFileNamePart string Part different for each object type.
+	 * @param $context Context
+	 * @return string
+	 */
+	function getExportFileName($objectsFileNamePart, $context) {
+		return $this->getExportPath() . date('Ymd-His') .'-' . $objectsFileNamePart .'-' . $context->getId() . '.xml';
 	}
 
 	/**
@@ -476,7 +465,7 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 		if ($this->isTestMode($context)) {
 			$registeredDoi = PKPString::regexp_replace('#^[^/]+/#', $testPrefix . '/', $registeredDoi);
 		}
-		$object->setData($this->getPluginSettingsPreffix() . '::' . DOI_EXPORT_REGISTERED_DOI, $registeredDoi);
+		$object->setData($this->getPluginSettingsPrefix() . '::' . DOI_EXPORT_REGISTERED_DOI, $registeredDoi);
 		$this->updateObject($object);
 	}
 
@@ -485,38 +474,14 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	 * @param $object Issue|PublishedArticle|ArticleGAlley
 	 */
 	function updateObject($object) {
-		// Get the dao name and update method for the given object.
-		list($daoName, $daoMethod) = $this->getDaoMethod($object);
 		// Register a hook for the required additional
 		// object fields. We do this on a temporary
 		// basis as the hook adds a performance overhead
 		// and the field will "stealthily" survive even
 		// when the DAO does not know about it.
-		$this->registerDaoHook($daoName);
-		$dao = DAORegistry::getDAO($daoName);
-		$dao->$daoMethod($object);
-	}
-
-	/**
-	 * Identify the dao name and update method for the given object.
-	 * @param $object Issue|PublishedArticle|ArticleGalley
-	 * @return array (DAO, Method)
-	 */
-	function getDaoMethod($object) {
-		$configurations = array(
-				'Issue' => array('IssueDAO', 'updateObject'),
-				'Article' => array('ArticleDAO', 'updateObject'),
-				'ArticleGalley' => array('ArticleGalleyDAO', 'updateObject'),
-		);
-		$foundConfig = false;
-		foreach($configurations as $objectType => $configuration) {
-			if (is_a($object, $objectType)) {
-				$foundConfig = true;
-				break;
-			}
-		}
-		assert($foundConfig);
-		return $configuration;
+		$dao = $object->getDAO();
+		$this->registerDaoHook(get_class($dao));
+		$dao->updateObject($object);
 	}
 
 	/**
@@ -541,7 +506,7 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 		$dao =& $args[0];
 		$additionalFields =& $args[1];
 		assert(is_array($additionalFields));
-		$additionalFields[] = $this->getPluginSettingsPreffix() . '::' . DOI_EXPORT_REGISTERED_DOI;
+		$additionalFields[] = $this->getPluginSettingsPrefix() . '::' . DOI_EXPORT_REGISTERED_DOI;
 		$additionalFields[] = $this->getDepositStatusSettingName();
 	}
 
@@ -577,7 +542,7 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 			null,
 			null,
 			null,
-			$this->getPluginSettingsPreffix(). '::' . DOI_EXPORT_REGISTERED_DOI,
+			$this->getPluginSettingsPrefix(). '::' . DOI_EXPORT_REGISTERED_DOI,
 			null,
 			null
 		);
@@ -595,7 +560,7 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 		$issuesFactory = $issueDao->getByPubIdType(
 			$this->getPubIdType(),
 			$context?$context->getId():null,
-			$this->getPluginSettingsPreffix(). '::' . DOI_EXPORT_REGISTERED_DOI,
+			$this->getPluginSettingsPrefix(). '::' . DOI_EXPORT_REGISTERED_DOI,
 			null,
 			null
 		);
@@ -614,7 +579,7 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	 * @return string
 	 */
 	function getDepositStatusSettingName() {
-		return $this->getPluginSettingsPreffix().'::status';
+		return $this->getPluginSettingsPrefix().'::status';
 	}
 
 	/**

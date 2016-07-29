@@ -65,7 +65,7 @@ class CrossrefInfoSender extends ScheduledTask {
 				$issuesToBeDeposited = $this->_getObjectsToBeDeposited($unregisteredIssues, $journal, $notify);
 				// If there are issues to be deposited and we want automatic deposit
 				if (count($issuesToBeDeposited) && $plugin->getSetting($journal->getId(), 'automaticRegistration')) {
-					$this->_registerObjects($issuesToBeDeposited, 'issue=>crossref-xml', $journal);
+					$this->_registerObjects($issuesToBeDeposited, 'issue=>crossref-xml', $journal, 'issues');
 				}
 			}
 
@@ -76,7 +76,7 @@ class CrossrefInfoSender extends ScheduledTask {
 				$articlesToBeDeposited = $this->_getObjectsToBeDeposited($unregisteredArticles, $journal, $notify);
 				// If there are articles to be deposited and we want automatic deposits
 				if (count($articlesToBeDeposited) && $plugin->getSetting($journal->getId(), 'automaticRegistration')) {
-					$this->_registerObjects($articlesToBeDeposited, 'article=>crossref-xml', $journal);
+					$this->_registerObjects($articlesToBeDeposited, 'article=>crossref-xml', $journal, 'articles');
 				}
 			}
 
@@ -88,7 +88,6 @@ class CrossrefInfoSender extends ScheduledTask {
 				$notificationManager = new NotificationManager();
 				while ($journalManager = $journalManagers->next()) {
 					$notificationManager->createTrivialNotification($journalManager->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('plugins.importexport.crossref.notification.failed')));
-					unset($journalManager);
 				}
 			}
 		}
@@ -123,7 +122,6 @@ class CrossrefInfoSender extends ScheduledTask {
 			} else {
 				$this->addExecutionLogEntry(__('plugins.importexport.common.senderTask.warning.noDOIprefix', array('path' => $journal->getPath())), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
 			}
-			unset($journal);
 		}
 		return $journals;
 	}
@@ -160,13 +158,14 @@ class CrossrefInfoSender extends ScheduledTask {
 	 * @param $objects array
 	 * @param $filter string
 	 * @param $journal Journal
+	 * @param $objectsFileNamePart string
 	 */
-	function _registerObjects($objects, $filter, $journal) {
+	function _registerObjects($objects, $filter, $journal, $objectsFileNamePart) {
 		$plugin = $this->_plugin;
 		// export XML
 		$exportXml = $plugin->exportXML($objects, $filter, $journal);
 		// Write the XML to a file.
-		$exportFileName = $plugin->getExportPath() . date('Ymd-His') . '.xml';
+		$exportFileName = $plugin->getExportFileName($journal, $objectsFileNamePart);
 		file_put_contents($exportFileName, $exportXml);
 		// Deposit the XML file.
 		$result = $plugin->depositXML($objects, $journal, $exportFileName);

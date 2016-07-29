@@ -53,6 +53,7 @@
 	<message key="plugins.importexport.crossref.action.export">Download XML</message>
 	<message key="plugins.importexport.crossref.action.markRegistered">Mark active</message>
 	<message key="plugins.importexport.crossref.action.register">Submit</message>
+	<message key="plugins.importexport.crossref.action.checkStatus">Check status</message>
 	<!-- scheduled task -->
 	<message key="plugins.importexport.crossref.senderTask.name">CrossRef automatic registration task</message>
 	<message key="plugins.importexport.crossref.notification.failed">A DOI has failed to register. Please go to Tools > Import/Export > CrossRef XML Export Plugin to see the failed deposits.</message>

@@ -22,6 +22,8 @@ define('CROSSREF_STATUS_FAILED', 'failed');
 define('CROSSREF_STATUS_COMPLETED', 'completed');
 define('CROSSREF_STATUS_REGISTERED', 'found');
 
+define('CROSSREF_EXPORT_ACTION_CHECKSTATUS', 'checkStatus');
+
 define('CROSSREF_API_DEPOSIT_OK', 303);
 define('CROSSREF_API_RESPONSE_OK', 200);
 
@@ -107,7 +109,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	function getExportActions($context) {
 		$actions = array(DOI_EXPORT_ACTION_EXPORT, DOI_EXPORT_ACTION_MARKREGISTERED, );
 		if ($this->getSetting($context->getId(), 'username') && $this->getSetting($context->getId(), 'password')) {
-			array_unshift($actions, DOI_EXPORT_ACTION_DEPOSIT, DOI_EXPORT_ACTION_CHECKSTATUS);
+			array_unshift($actions, DOI_EXPORT_ACTION_DEPOSIT, CROSSREF_EXPORT_ACTION_CHECKSTATUS);
 		}
 		return $actions;
 	}
@@ -116,13 +118,11 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	 * @copydoc DOIExportPlugin::getExportActionNames()
 	 */
 	function getExportActionNames() {
-		return array_merge(
-			parent::getExportActionNames(),
-			array(
-				DOI_EXPORT_ACTION_DEPOSIT => __('plugins.importexport.crossref.action.register'),
-				DOI_EXPORT_ACTION_EXPORT => __('plugins.importexport.crossref.action.export'),
-				DOI_EXPORT_ACTION_MARKREGISTERED => __('plugins.importexport.crossref.action.markRegistered'),
-			)
+		return array(
+			DOI_EXPORT_ACTION_DEPOSIT => __('plugins.importexport.crossref.action.register'),
+			CROSSREF_EXPORT_ACTION_CHECKSTATUS => __('plugins.importexport.crossref.action.checkStatus'),
+			DOI_EXPORT_ACTION_EXPORT => __('plugins.importexport.crossref.action.export'),
+			DOI_EXPORT_ACTION_MARKREGISTERED => __('plugins.importexport.crossref.action.markRegistered'),
 		);
 	}
 
@@ -143,9 +143,9 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc DOIPubIdExportPlugin::getPluginSettingsPreffix()
+	 * @copydoc DOIPubIdExportPlugin::getPluginSettingsPrefix()
 	 */
-	function getPluginSettingsPreffix() {
+	function getPluginSettingsPrefix() {
 		return 'crossref';
 	}
 
@@ -161,6 +161,32 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	 */
 	function getExportDeploymentClassName() {
 		return 'CrossrefExportDeployment';
+	}
+
+	/**
+	 * @copydoc DOIPubIdExportPlugin::executeExportAction()
+	 */
+	function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart) {
+		$context = $request->getContext();
+		$path = array('plugin', $this->getName());
+		if ($request->getUserVar(CROSSREF_EXPORT_ACTION_CHECKSTATUS)) {
+			$this->checkStatus($objects, $context);
+			// redirect back to the right tab
+			$request->redirect(null, null, null, $path, null, $tab);
+		} else {
+			parent::executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart);
+		}
+	}
+
+	/**
+	 * Check statuses for selected publication objects.
+	 * @param $objects array Array of published articles, issues or galleys
+	 * @param $context Context
+	 */
+	function checkStatus($objects, $context) {
+		foreach ($objects as $object) {
+			$this->updateDepositStatus($context, $object);
+		}
 	}
 
 	/**
@@ -220,8 +246,8 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 
 	/**
 	 * Check the CrossRef APIs, if deposits and registration have been successful
-	 *
-	 * @copydoc DOIPubIdExportPlugin::updateDepositStatus()
+	 * @param $context Context
+	 * @param $object The object getting deposited
 	 */
 	function updateDepositStatus($context, $object) {
 		assert(is_a($object, 'PublishedArticle') or is_a($object, 'Issue'));
@@ -287,10 +313,10 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 					// set the status, because we will need to check it for the automatic registration
 					$object->setData($this->getDepositStatusSettingName(), $lastStatus);
 				}
-				if ($object->getData($this->getPluginSettingsPreffix() . '::' . DOI_EXPORT_REGISTERED_DOI)) {
+				if ($object->getData($this->getPluginSettingsPrefix() . '::' . DOI_EXPORT_REGISTERED_DOI)) {
 					// apparently there was a new registreation i.e. update
 					// remove the setting defining the article as registered, for the article to be considered for automatic status updates
-					$object->setData($this->getPluginSettingsPreffix() . '::' . DOI_EXPORT_REGISTERED_DOI, null);
+					$object->setData($this->getPluginSettingsPrefix() . '::' . DOI_EXPORT_REGISTERED_DOI, null);
 				}
 				// Update the object
 				$this->updateObject($object);
@@ -305,7 +331,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	 * @return string
 	 */
 	function getDepositStatusUrlSettingName() {
-		return $this->getPluginSettingsPreffix().'::statusUrl';
+		return $this->getPluginSettingsPrefix().'::statusUrl';
 	}
 
 	/**
@@ -313,7 +339,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	 * @return string
 	 */
 	function getDepositBatchIdSettingName() {
-		return $this->getPluginSettingsPreffix().'::batchId';
+		return $this->getPluginSettingsPrefix().'::batchId';
 	}
 
 	/**

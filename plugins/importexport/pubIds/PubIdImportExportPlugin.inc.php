@@ -209,7 +209,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 						if (!$pubIdPlugin->checkDuplicate($pubIdValue, $pubObject, $journal->getId())) {
 							$errors[] = array('plugins.importexport.pubIds.import.error.duplicatePubId', array('pubId' => $pubIdValue));
 						} else {
-							$pubIdPlugin->setStoredPubId($pubObject, $pubObjectType, $pubIdValue);
+							$pubIdPlugin->setStoredPubId($pubObject, $pubIdValue);
 							$pubId = array('pubObjectType' => $pubObjectType, 'pubObjectId' => $pubObjectId, 'value' => $pubIdValue);
 						}
 					} else {
