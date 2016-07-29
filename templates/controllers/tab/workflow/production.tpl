@@ -9,6 +9,7 @@
  *}
 
 <div id="production">
+	{help file="chapter_9_production.md" class="pkp_help_tab"}
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="productionNotification" requestOptions=$productionNotificationRequestOptions}
 
 	<div class="pkp_context_sidebar">
@@ -20,7 +21,6 @@
 			</div>
 		{/if}
 		{include file="controllers/tab/workflow/stageParticipants.tpl"}
-		{help file="chapter_9_production.md"}
 	</div>
 
 	<div class="pkp_content_panel">
