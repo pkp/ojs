@@ -76,12 +76,17 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 			$notificationKey = 'notification.savedIssueMetadata';
 			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SUCCESS, array('contents' => __($notificationKey)));
 			// Display assign public identifiers form
-			import('controllers.grid.pubIds.form.AssignPublicIdentifiersForm');
-			$formTemplate = $this->getAssignPublicIdentifiersFormTemplate();
-			$formParams = array('stageId' => $stageId);
-			$assignPublicIdentifiersForm = new AssignPublicIdentifiersForm($formTemplate, $submission, true, '', $formParams);
-			$assignPublicIdentifiersForm->initData($args, $request);
-			return new JSONMessage(true, $assignPublicIdentifiersForm->fetch($request));
+			$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
+			if (!empty($pubIdPlugins)) {
+				import('controllers.grid.pubIds.form.AssignPublicIdentifiersForm');
+				$formTemplate = $this->getAssignPublicIdentifiersFormTemplate();
+				$formParams = array('stageId' => $stageId);
+				$assignPublicIdentifiersForm = new AssignPublicIdentifiersForm($formTemplate, $submission, true, '', $formParams);
+				$assignPublicIdentifiersForm->initData($args, $request);
+				return new JSONMessage(true, $assignPublicIdentifiersForm->fetch($request));
+			} else {
+				return new JSONMessage();
+			}
 		} else {
 			return new JSONMessage(true, $form->fetch($request));
 		}
