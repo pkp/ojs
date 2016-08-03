@@ -214,12 +214,8 @@
 	<message key="editor.article.hideTocAuthorHide">Omit</message>
 	<message key="editor.article.hideTocAuthorShow">Show</message>
 	<message key="editor.article.cover">Cover</message>
-	<message key="editor.article.showCoverPage">Create a cover for this article with the following elements.</message>
-	<message key="editor.article.coverPageDisplay">Display</message>
-	<message key="editor.article.hideCoverPageToc">Do not display cover image thumbnail in table of contents.</message>
-	<message key="editor.article.hideCoverPageAbstract">Do not display cover image in article abstract view.</message>
-	<message key="editor.article.coverPage">Cover image</message>
-	<message key="editor.article.coverPageInstructions">(Allowed formats: .gif, .jpg, or .png )</message>
+	<message key="editor.article.coverImage">Cover image</message>
+	<message key="editor.article.removeCoverImageFileNotFound">The cover image you requested to delete could not be found. It may have already been deleted. Try reloading the page.</message>
 	<message key="editor.article.uploaded">Uploaded</message>
 	<message key="editor.article.removeCoverPage">Remove cover image?</message>
 	<message key="grid.action.removeArticle">Remove Article From Issue</message>

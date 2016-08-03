@@ -15,9 +15,23 @@
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#{$submissionMetadataViewFormId}').pkpHandler(
-			'$.pkp.controllers.form.AjaxFormHandler',
+			'$.pkp.controllers.form.FileUploadFormHandler',
 			{ldelim}
-				trackFormChanges: true
+				$uploader: $('#coverImageUploader'),
+				$preview: $('#coverImagePreview'),
+				uploaderOptions: {ldelim}
+					uploadUrl: {url|json_encode router=$smarty.const.ROUTE_COMPONENT op="uploadCoverImage" escape=false},
+					baseUrl: {$baseUrl|json_encode},
+					filters: {ldelim}
+						mime_types : [
+							{ldelim} title : "Image files", extensions : "jpg,jpeg,png" {rdelim}
+						]
+					{rdelim},
+					multipart_params: {ldelim}
+						submissionId: {$submissionId|escape},
+						stageId: {$stageId|escape},
+					{rdelim}
+				{rdelim}
 			{rdelim}
 		);
 	{rdelim});
@@ -37,14 +51,43 @@
 
 	{include file="core:submission/submissionMetadataFormTitleFields.tpl" readOnly=$formParams.readOnly}
 
-	<!--  Contributors -->
-
+	{* Contributors *}
 	{if !$formParams.hideSubmit || !$formParams.anonymous}
 		{* generate a unique ID for the form *}
 		{assign var="authorsGridContainer" value="authorsGridContainer-"|uniqid|escape}
 		{url|assign:authorGridUrl router=$smarty.const.ROUTE_COMPONENT  component="grid.users.author.AuthorGridHandler" op="fetchGrid" submissionId=$submissionId stageId=$stageId escape=false}
 		{load_url_in_div id=$authorsGridContainer url="$authorGridUrl"}
 	{/if}
+
+	{* Cover Image *}
+	{fbvFormArea id="coverImage" title="editor.article.coverImage"}
+		{fbvFormSection}
+			{include file="controllers/fileUploadContainer.tpl" id="coverImageUploader"}
+			<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
+		{/fbvFormSection}
+		{fbvFormSection id="coverImagePreview"}
+			{if $coverImage != ''}
+				<div class="pkp_form_file_view pkp_form_image_view">
+					<div class="img">
+						<img src="{$publicFilesDir}/{$coverImage|escape:"url"}{'?'|uniqid}" {if $coverImageAlt !== ''} alt="{$coverImageAlt|escape}"{/if}>
+					</div>
+
+					<div class="data">
+						<span class="title">
+							{translate key="common.altText"}
+						</span>
+						<span class="value">
+							{fbvElement type="text" id="coverImageAltText" label="common.altTextInstructions" value=$coverImageAltText multilingual=true}
+						</span>
+
+						<div id="{$deleteCoverImageLinkAction->getId()}" class="actions">
+							{include file="linkAction/linkAction.tpl" action=$deleteCoverImageLinkAction contextId="issueForm"}
+						</div>
+					</div>
+				</div>
+			{/if}
+		{/fbvFormSection}
+	{/fbvFormArea}
 
 	{include file="submission/submissionMetadataFormFields.tpl" readOnly=$formParams.readOnly}
 
