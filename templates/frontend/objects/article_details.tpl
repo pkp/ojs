@@ -134,11 +134,11 @@
 		<div class="entry_details">
 
 			{* Issue cover image *}
-			{if $issue->getLocalizedFileName()}
+			{if $issue->getLocalizedCoverImage()}
 				<div class="item cover_image">
 					<div class="sub_item">
 						<a href="{url page="issue" op="view" path=$issue->getBestIssueId($currentJournal)}">
-							<img src="{$publicFilesDir}/{$issue->getLocalizedFileName()|escape}" alt="{$issue->getLocalizedOriginalFileName()|escape}">
+							<img src="{$publicFilesDir}/{$issue->getLocalizedCoverImage()|escape}">
 						</a>
 					</div>
 				</div>
