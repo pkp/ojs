@@ -132,7 +132,7 @@ class IssueForm extends Form {
 				'showYear' => $this->issue->getShowYear(),
 				'showTitle' => $this->issue->getShowTitle(),
 				'coverImage' => $this->issue->getLocalizedCoverImage(), // Localized
-				'coverImageAltText' => $this->issue->getCoverImageAltText(), // Localized
+				'coverImageAltText' => $this->issue->getCoverImageAltText(null), // Localized
 			);
 			parent::initData();
 		} else {
