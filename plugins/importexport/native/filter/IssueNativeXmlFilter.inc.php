@@ -102,7 +102,6 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 
 		$this->addDates($doc, $issueNode, $issue);
 		$this->addSections($doc, $issueNode, $issue);
-		$this->addStyleFile($doc, $issueNode, $issue);
 		$this->addCoverImage($doc, $issueNode, $issue);
 		$this->addIssueGalleys($doc, $issueNode, $issue);
 		$this->addArticles($doc, $issueNode, $issue);
@@ -204,33 +203,6 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 			$issueCoverNode->appendChild($embedNode);
 
 			$issueNode->appendChild($issueCoverNode);
-		}
-	}
-
-	/**
-	 * Add the issue cover image to its DOM element.
-	 * @param $doc DOMDocument
-	 * @param $issueNode DOMElement
-	 * @param $issue Issue
-	 */
-	function addStyleFile($doc, $issueNode, $issue) {
-
-		$originalStyleFileName = $issue->getOriginalStyleFileName();
-		if ($originalStyleFileName) {
-			$deployment = $this->getDeployment();
-			$issueStyleNode = $doc->createElementNS($deployment->getNamespace(), 'issue_style');
-			$issueStyleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'style_file_name', $issue->getStyleFileName()));
-			$issueStyleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'original_style_file_name', $issue->getOriginalStyleFileName()));
-
-			import('classes.file.PublicFileManager');
-			$publicFileManager = new PublicFileManager();
-
-			$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getStyleFileName();
-			$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
-			$embedNode->setAttribute('encoding', 'base64');
-			$issueStyleNode->appendChild($embedNode);
-
-			$issueNode->appendChild($issueStyleNode);
 		}
 	}
 

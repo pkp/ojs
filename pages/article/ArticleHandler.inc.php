@@ -168,7 +168,7 @@ class ArticleHandler extends Handler {
 				import('classes.file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
 				$templateMgr->assign(array(
-					'coverPagePath' => $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/',
+					'coverImagePath' => $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/',
 					'coverPageFileName' => $article->getLocalizedFileName(),
 					'width' => $article->getLocalizedWidth(),
 					'height' => $article->getLocalizedHeight(),

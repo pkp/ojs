@@ -11,13 +11,13 @@
  *}
 {assign var=issueTitle value=$issue->getLocalizedTitle()}
 {assign var=issueSeries value=$issue->getIssueSeries()}
-{assign var=issueCover value=$issue->getLocalizedFileName()}
+{assign var=issueCover value=$issue->getLocalizedCoverImage()}
 
 <div class="obj_issue_summary">
 
 	{if $issueCover}
 		<a class="cover" href="{url op="view" path=$issue->getBestIssueId()}">
-			<img src="{$coverPagePath|escape}{$issueCover|escape}"{if $issue->getCoverPageAltText($currentLocale) != ''} alt="{$issue->getCoverPageAltText($currentLocale)|escape}"{/if}>
+			<img src="{$coverImagePath|escape}{$issueCover|escape}"{if $issue->getCoverImageAltText($currentLocale) != ''} alt="{$issue->getCoverImageAltText($currentLocale)|escape}"{/if}>
 		</a>
 	{/if}
 

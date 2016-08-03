@@ -13,13 +13,14 @@
 		$('#issueForm').pkpHandler(
 			'$.pkp.controllers.form.FileUploadFormHandler',
 			{ldelim}
-				$uploader: $('#pluploadcss'),
+				$uploader: $('#coverImageUploader'),
+				$preview: $('#coverImagePreview'),
 				uploaderOptions: {ldelim}
 					uploadUrl: {url|json_encode op="uploadFile" escape=false},
 					baseUrl: {$baseUrl|json_encode},
 					filters: {ldelim}
 						mime_types : [
-							{ldelim} title : "CSS files", extensions : "css" {rdelim}
+							{ldelim} title : "Image files", extensions : "jpg,jpeg,png" {rdelim}
 						]
 					{rdelim}
 				{rdelim}
@@ -73,17 +74,34 @@
 		{fbvElement type="textarea" id="description" value=$description multilingual=true rich=true}
 	{/fbvFormArea}
 
-	{fbvFormArea id="file"}
-		{fbvFormSection title="editor.issues.styleFile"}
-			{include file="controllers/fileUploadContainer.tpl" id="pluploadcss"}
-		{/fbvFormSection}
+	{fbvFormArea id="coverImage" title="editor.issues.coverPage"}
 		{fbvFormSection}
-			{if $styleFileName}
-				{translate key="common.currentStyleSheet"}: <a href="{$publicFilesDir}/{$styleFileName|escape}" target="_blank">{$originalStyleFileName|escape}</a>
+			{include file="controllers/fileUploadContainer.tpl" id="coverImageUploader"}
+			<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
+		{/fbvFormSection}
+		{fbvFormSection id="coverImagePreview"}
+			{if $coverImage != ''}
+				<div class="pkp_form_file_view pkp_form_image_view">
+					<div class="img">
+						<img src="{$publicFilesDir}/{$coverImage|escape:"url"}{'?'|uniqid}" {if $coverImageAlt !== ''} alt="{$coverImageAlt|escape}"{/if}>
+					</div>
+
+					<div class="data">
+						<span class="title">
+							{translate key="common.altText"}
+						</span>
+						<span class="value">
+							{fbvElement type="text" id="coverImageAltText" label="common.altTextInstructions" value=$coverImageAltText multilingual=true}
+						</span>
+
+						<div id="{$deleteCoverImageLinkAction->getId()}" class="actions">
+							{include file="linkAction/linkAction.tpl" action=$deleteCoverImageLinkAction contextId="issueForm"}
+						</div>
+					</div>
+				</div>
 			{/if}
 		{/fbvFormSection}
 	{/fbvFormArea}
-	<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
 
 	{foreach from=$pubIdPlugins item=pubIdPlugin}
 		{assign var=pubIdMetadataFile value=$pubIdPlugin->getPubIdMetadataFile()}

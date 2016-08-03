@@ -24,23 +24,9 @@
 		{include file="frontend/components/notification.tpl" type="warning" messageKey="current.noCurrentIssueDesc"}
 
 	{* Display an issue with the Table of Contents *}
-	{elseif $showToc}
+	{else}
 		{include file="frontend/components/breadcrumbs_issue.tpl" currentTitle=$issueIdentification}
 		{include file="frontend/objects/issue_toc.tpl"}
-
-	{* Display an issue without a Table of Contents *}
-	{* @todo create an appropriate issue_cover.tpl object template for this *}
-	{else}
-		{if $issueId}
-			{url|assign:"currentUrl" page="issue" op="view" path=$issueId|to_array:"showToc"}
-		{else}
-			{url|assign:"currentUrl" page="issue" op="current" path="showToc"}
-		{/if}
-		<ul class="menu">
-			<li><a href="{$currentUrl}">{translate key="issue.toc"}</a></li>
-		</ul>
-		{if $coverPagePath}<div id="issueCoverImage"><a href="{$currentUrl}"><img src="{$coverPagePath|escape}{$issue->getFileName($locale)|escape}"{if $coverPageAltText != ''} alt="{$coverPageAltText|escape}"{else} alt="{translate key="issue.coverPage.altText"}"{/if}{if $width} width="{$width|escape}"{/if}{if $height} height="{$height|escape}"{/if}/></a></div>{/if}
-		<div id="issueCoverDescription">{$issue->getLocalizedCoverPageDescription()|strip_unsafe_html|nl2br}</div>
 	{/if}
 </div>
 

@@ -256,8 +256,6 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		$issue->setShowNumber($row['show_number']);
 		$issue->setShowYear($row['show_year']);
 		$issue->setShowTitle($row['show_title']);
-		$issue->setStyleFileName($row['style_file_name']);
-		$issue->setOriginalStyleFileName($row['original_style_file_name']);
 
 		$this->getDataObjectSettings('issue_settings', 'issue_id', $row['issue_id'], $issue);
 
@@ -271,7 +269,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'coverPageDescription', 'coverPageAltText', 'showCoverPage', 'hideCoverPageArchives', 'hideCoverPageCover', 'originalFileName', 'fileName', 'width', 'height', 'description');
+		return array('title', 'coverImageAltText', 'coverImage');
 	}
 
 	/**
@@ -304,9 +302,9 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	function insertObject($issue) {
 		$this->update(
 			sprintf('INSERT INTO issues
-				(journal_id, volume, number, year, published, current, date_published, date_notified, last_modified, access_status, open_access_date, show_volume, show_number, show_year, show_title, style_file_name, original_style_file_name)
+				(journal_id, volume, number, year, published, current, date_published, date_notified, last_modified, access_status, open_access_date, show_volume, show_number, show_year, show_title)
 				VALUES
-				(?, ?, ?, ?, ?, ?, %s, %s, %s, ?, %s, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, %s, %s, %s, ?, %s, ?, ?, ?, ?)',
 				$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getLastModified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
 				(int) $issue->getJournalId(),
@@ -320,8 +318,6 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 				(int) $issue->getShowNumber(),
 				(int) $issue->getShowYear(),
 				(int) $issue->getShowTitle(),
-				$issue->getStyleFileName(),
-				$issue->getOriginalStyleFileName()
 			)
 		);
 
@@ -386,9 +382,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 					show_volume = ?,
 					show_number = ?,
 					show_year = ?,
-					show_title = ?,
-					style_file_name = ?,
-					original_style_file_name = ?
+					show_title = ?
 				WHERE issue_id = ?',
 			$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getLastModified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
@@ -403,8 +397,6 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 				(int) $issue->getShowNumber(),
 				(int) $issue->getShowYear(),
 				(int) $issue->getShowTitle(),
-				$issue->getStyleFileName(),
-				$issue->getOriginalStyleFileName(),
 				(int) $issue->getId()
 			)
 		);
@@ -430,9 +422,6 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			if ($fileName != '') {
 				$publicFileManager->removeJournalFile($issue->getJournalId(), $fileName);
 			}
-		}
-		if (($fileName = $issue->getStyleFileName()) != '') {
-			$publicFileManager->removeJournalFile($issue->getJournalId(), $fileName);
 		}
 
 		$issueId = $issue->getId();
