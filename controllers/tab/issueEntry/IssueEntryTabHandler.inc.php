@@ -73,9 +73,8 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$file = $args['coverImage'];
 
 		// Remove cover image and alt text from issue settings
-		$locale = AppLocale::getLocale();
-		$submission->setFileName('', $locale);
-		$submission->setCoverPageAltText('', $locale);
+		$submission->setCoverImage('');
+		$submission->setCoverImageAltText('');
 
 		$submissionDao->updateObject($submission);
 

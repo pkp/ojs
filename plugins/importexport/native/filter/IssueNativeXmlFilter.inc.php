@@ -182,17 +182,12 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	 */
 	function addCoverImage($doc, $issueNode, $issue) {
 
-		$originalFileName = $issue->getOriginalFileName(null);
+		$coverImage = $issue->getCoverImage();
 		if (is_array($originalFileName) && count($originalFileName) > 0) {
 			$deployment = $this->getDeployment();
 			$issueCoverNode = $doc->createElementNS($deployment->getNamespace(), 'issue_cover');
-			$this->createLocalizedNodes($doc, $issueCoverNode, 'file_name', $issue->getFileName(null));
-			$this->createLocalizedNodes($doc, $issueCoverNode, 'original_file_name', $issue->getOriginalFileName(null));
-			$this->createLocalizedNodes($doc, $issueCoverNode, 'hide_cover_page_archives', $issue->getHideCoverPageArchives(null));
-			$this->createLocalizedNodes($doc, $issueCoverNode, 'hide_cover_page_cover', $issue->getHideCoverPageCover(null));
-			$this->createLocalizedNodes($doc, $issueCoverNode, 'show_cover_page', $issue->getShowCoverPage(null));
-			$this->createLocalizedNodes($doc, $issueCoverNode, 'cover_page_description', $issue->getCoverPageDescription(null));
-			$this->createLocalizedNodes($doc, $issueCoverNode, 'cover_page_alt_text', $issue->getCoverPageAltText(null));
+			$issueCoverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', $issue->getCoverImage());
+			$issueCoverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_page_alt_text', $issue->getCoverImage());
 
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();

@@ -275,17 +275,12 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 			if (is_a($n, 'DOMElement')) {
 				list($locale, $value) = $this->parseLocalizedContent($n);
 				switch ($n->tagName) {
-					case 'file_name': $issue->setFileName($value, $locale); break;
-					case 'original_file_name': $issue->setOriginalFileName($value, $locale); break;
-					case 'hide_cover_page_archives': $issue->setHideCoverPageArchives($value, $locale); break;
-					case 'hide_cover_page_cover': $issue->setHideCoverPageCover($value, $locale); break;
-					case 'show_cover_page': $issue->setShowCoverPage($value, $locale); break;
-					case 'cover_page_description': $issue->setCoverPageDescription($value, $locale); break;
-					case 'cover_page_alt_text': $issue->setCoverPageAltText($value, $locale); break;
+					case 'cover_image': $issue->setCoverImage($value); break;
+					case 'cover_image_alt_text': $issue->setCoverImageAltText($value); break;
 					case 'embed':
 						import('classes.file.PublicFileManager');
 						$publicFileManager = new PublicFileManager();
-						$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getLocalizedFileName();
+						$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getCoverImage();
 						file_put_contents($filePath, base64_decode($n->textContent));
 						break;
 				}

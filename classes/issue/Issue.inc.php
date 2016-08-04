@@ -345,55 +345,35 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * Get the localized issue cover filename
-	 * @return string
-	 */
-	function getLocalizedCoverImage() {
-		return $this->getLocalizedData('coverImage');
-	}
-
-	/**
 	 * Get issue cover image file name
-	 * @param $locale string
 	 * @return string
 	 */
-	function getCoverImage($locale) {
-		return $this->getData('coverImage', $locale);
+	function getCoverImage() {
+		return $this->getData('coverImage');
 	}
 
 	/**
 	 * Set issue cover image file name
 	 * @param $coverImage string
-	 * @param $locale string
 	 */
-	function setCoverImage($coverImage, $locale) {
-		return $this->setData('coverImage', $coverImage, $locale);
-	}
-
-	/**
-	 * Get the localized issue cover alternate text
-	 * @return string
-	 */
-	function getLocalizedCoverImageAltText() {
-		return $this->getLocalizedData('coverImageAltText');
+	function setCoverImage($coverImage) {
+		return $this->setData('coverImage', $coverImage);
 	}
 
 	/**
 	 * Get issue cover image alternate text
-	 * @param $locale string
 	 * @return string
 	 */
-	function getCoverImageAltText($locale) {
-		return $this->getData('coverImageAltText', $locale);
+	function getCoverImageAltText() {
+		return $this->getData('coverImageAltText');
 	}
 
 	/**
 	 * Set issue cover image alternate text
 	 * @param $coverImageAltText string
-	 * @param $locale string
 	 */
-	function setCoverImageAltText($coverImageAltText, $locale) {
-		return $this->setData('coverImageAltText', $coverImageAltText, $locale);
+	function setCoverImageAltText($coverImageAltText) {
+		return $this->setData('coverImageAltText', $coverImageAltText);
 	}
 
 	/**

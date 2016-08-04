@@ -197,16 +197,15 @@ class IssueGridHandler extends GridHandler {
 		// cover page.
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issue = $issueDao->getById((int) $args['issue']);
-		if ($args['coverImage'] != $issue->getLocalizedCoverImage()) {
+		if ($args['coverImage'] != $issue->getCoverImage()) {
 			return new JSONMessage(false, __('editor.issues.removeCoverImageFileNameMismatch'));
 		}
 
 		$file = $args['coverImage'];
 
 		// Remove cover image and alt text from issue settings
-		$locale = AppLocale::getLocale();
-		$issue->setCoverImage('', $locale);
-		$issue->setCoverImageAltText('', $locale);
+		$issue->setCoverImage('');
+		$issue->setCoverImageAltText('');
 		$issueDao->updateObject($issue);
 
 		// Remove the file

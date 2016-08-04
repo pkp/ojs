@@ -65,7 +65,7 @@ class IssueForm extends Form {
 		}
 
 		// Cover image preview
-		$coverImage = $this->issue->getLocalizedCoverImage();
+		$coverImage = $this->issue->getCoverImage();
 
 		// Cover image delete link action
 		if ($coverImage) {
@@ -131,8 +131,8 @@ class IssueForm extends Form {
 				'showNumber' => $this->issue->getShowNumber(),
 				'showYear' => $this->issue->getShowYear(),
 				'showTitle' => $this->issue->getShowTitle(),
-				'coverImage' => $this->issue->getLocalizedCoverImage(), // Localized
-				'coverImageAltText' => $this->issue->getCoverImageAltText(null), // Localized
+				'coverImage' => $this->issue->getCoverImage(),
+				'coverImageAltText' => $this->issue->getCoverImageAltText(),
 			);
 			parent::initData();
 		} else {
@@ -230,14 +230,14 @@ class IssueForm extends Form {
 
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
-			$newFileName = 'cover_issue_' . $issue->getId() . '_' . $this->getFormLocale() . $publicFileManager->getImageExtension($temporaryFile->getFileType());
+			$newFileName = 'cover_issue_' . $issue->getId() . $publicFileManager->getImageExtension($temporaryFile->getFileType());
 			$journal = $request->getJournal();
 			$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
-			$issue->setCoverImage($newFileName, $this->getFormLocale());
+			$issue->setCoverImage($newFileName);
 			$issueDao->updateObject($issue);
 		}
 
-		$issue->setCoverImageAltText($this->getData('coverImageAltText'), null); // Localized
+		$issue->setCoverImageAltText($this->getData('coverImageAltText'));
 
 		// if issueId is supplied, then update issue otherwise insert a new one
 		if (!$isNewIssue) {

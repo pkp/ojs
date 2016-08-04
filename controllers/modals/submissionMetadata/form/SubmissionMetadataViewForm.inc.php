@@ -44,7 +44,7 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 		$templateMgr->assign('sectionId', $submission->getSectionId());
 
 		// Cover image delete link action
-		$coverImage = $submission->getLocalizedFileName();
+		$coverImage = $submission->getCoverImage();
 		if ($coverImage) {
 			import('lib.pkp.classes.linkAction.LinkAction');
 			import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
@@ -83,8 +83,8 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 	function initData($args, $request) {
 		parent::initData($args, $request);
 		$submission = $this->getSubmission();
-		$this->setData('coverImage', $submission->getLocalizedFileName());
-		$this->setData('coverImageAltText', $submission->getCoverPageAltText(null));
+		$this->setData('coverImage', $submission->getCoverImage());
+		$this->setData('coverImageAltText', $submission->getCoverImageAltText());
 	}
 
 	/**
@@ -114,13 +114,13 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
-			$newFileName = 'article_' . $submission->getId() . '_cover_' . $this->getFormLocale() . $publicFileManager->getImageExtension($temporaryFile->getFileType());
+			$newFileName = 'article_' . $submission->getId() . '_cover' . $publicFileManager->getImageExtension($temporaryFile->getFileType());
 			$journal = $request->getJournal();
 			$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
-			$submission->setFileName($newFileName, $this->getFormLocale());
+			$submission->setCoverImage($newFileName);
 		}
 
-		$submission->setCoverPageAltText($this->getData('coverImageAltText'), null); // Localized
+		$submission->setCoverImageAltText($this->getData('coverImageAltText'));
 
 		$submissionDao->updateObject($submission);
 

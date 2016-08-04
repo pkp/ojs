@@ -77,7 +77,7 @@
 							{translate key="common.altText"}
 						</span>
 						<span class="value">
-							{fbvElement type="text" id="coverImageAltText" label="common.altTextInstructions" value=$coverImageAltText multilingual=true}
+							{fbvElement type="text" id="coverImageAltText" label="common.altTextInstructions" value=$coverImageAltText}
 						</span>
 
 						<div id="{$deleteCoverImageLinkAction->getId()}" class="actions">
