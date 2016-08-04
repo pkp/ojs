@@ -52,5 +52,4 @@
 {$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...
 ]]></message>
 	<message key="plugins.importexport.medra.senderTask.name">Registrazione automatica DOI mEDRA</message>
-	<message key="plugins.importexport.medra.senderTask.warning.noDOIprefix">Alla rivista con path {$path} manca il prefisso DOI.</message>
 </locale>
