@@ -11,7 +11,7 @@
   * Localization strings for the nb_NO (Norsk bokmål) locale.
   *
   -->
- 
+
 <locale name="nb_NO" full_name="Norsk bokmål">
 	<message key="plugins.importexport.crossref.displayName">Programutvidelse for eksport til CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Eksporter artikkelmetadata i CrossRef XML-format.</message>

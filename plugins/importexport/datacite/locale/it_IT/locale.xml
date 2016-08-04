@@ -4,7 +4,7 @@
 <!--
   * plugins/importexport/datacite/locale/it_IT/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -17,18 +17,9 @@
 
 	<message key="plugins.importexport.datacite.intro"><![CDATA[Se vuoi registrare DOI con DataCite, contatta un agente dalla <a href="http://datacite.org/contact" target="_blank">DataCite homepage</a>, che ti metterà in contatto con un agente locale. Una volta stabilito l'accordo, riceverai le credenziali per accedere al servizio e registrare metadati. Se non hai le credenziali, puoi comunque esportare i metadati nel formato XML DataCite, anche se non puoi registrarli in DataCite direttamente da OJS. Nota che la password verrà salvata in testo semplice, non crittografata, come da specifiche del servizio DataCite.]]></message>
 
-	<message key="plugins.importexport.datacite.settings.description"><![CDATA[<a href="{$settingsUrl}">Configura</a> il plugin di esportazione in DataCite prima di utilizzarlo.]]></message>
- 
-	<message key="plugins.importexport.datacite.settings.form.description">Configura il plugin di esportazione DataCite:</message>
 	<message key="plugins.importexport.datacite.settings.form.username">Username</message>
 	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Inserisci l'username ricevuto da DataCite. L'username non può contenere due punti (:).</message>
- 
-	<message key="plugins.importexport.datacite.export.suppFiles">Esporta specifici file supplementari</message>
-	<message key="plugins.importexport.datacite.export.selectSuppFile">Seleziona file supplementari</message>
-	<message key="plugins.importexport.datacite.export.noSuppFiles">Nessun file supplementare ha DOI assegnati in questo momento.</message>
- 
-	<message key="plugins.importexport.datacite.export.error.suppFileNotFound">Non ci sono file supplementari con l'id: {$param}.</message>
- 
+
 	<message key="plugins.importexport.datacite.cliUsage">Uso: 
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...</message>

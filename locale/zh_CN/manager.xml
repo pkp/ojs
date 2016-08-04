@@ -493,4 +493,19 @@
 	<message key="manager.statistics.defaultMetricDescription">您的期刊使用多个度量标准。 这些度量标准的使用统计将在许多上下文中出现。
 在某些情况下，期刊应包含一个使用统计，例如： 显示常用文章的顺序列表或者搜索结果排名。请选择其中一个度量标准作为默认值。</message>
 	<message key="manager.setup.copyrightYearBasis">根据新期刊的版权</message>
+
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<!-- plugin tabs -->
+	<message key="plugins.importexport.common.settings">设置</message>
+	<!-- settings form -->
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">为使用该款插件，请在"公共标识符"插件种类中，开启和配置DOI插件并且指定一个有效的DOI字首。</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">插件尚未完全建立。</message>
+	<message key="plugins.importexport.common.settings.form.password">密码</message>
+	<message key="plugins.importexport.common.settings.form.password.description">请注意密码已纯文本的形式保存，如：不加密。</message>
+	<!-- actions -->
+	<message key="plugins.importexport.common.action.register">注册</message>
+	<!--  notifications and errors -->
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">输出文件{$param}不可写。</message>
+	<message key="plugins.importexport.common.register.error.mdsError">注册失败！DOI注册服务器返回一个错误：'{$param}'。</message>
+	<message key="plugins.importexport.common.register.success">注册成功！</message>
 </locale>

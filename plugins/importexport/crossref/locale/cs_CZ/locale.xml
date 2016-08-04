@@ -11,17 +11,22 @@
   * Localization strings for the cs_CZ (Čeština) locale.
   *
   -->
- 
+
 <locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.importexport.crossref.displayName">Plugin exportu do XML pro CrossRef</message>
 	<message key="plugins.importexport.crossref.description">Export metadat článku v XML formátu CrossRef.</message>
 
 	<message key="plugins.importexport.crossref.cliUsage">Použití: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
-	<message key="plugins.importexport.crossref.cliError">CHYBA:</message>
-
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Žádné číslo neodpovídá uvedenému ID čísla "{$issueId}".</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Žádný článek neodpovídá uvedenému ID článku "{$articleId}".</message>
-
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] články [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] čísla [issueId]</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Uživatelské jméno</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Vložte, prosím, uživatelské jméno, které jste dostali od CrossRef.</message>
+	<message key="plugins.importexport.crossref.requirements">Požadavky</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Všechna požadavky pluginu byly uspokojeny.</message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Následujáící položky je třeba pro úspěšné uložení do CrossRef.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Jméno vkládajícího</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Email vkládajícího</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Vložte, prosím, jméno vkládajícího.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Vložte, prosím, e-mail vkládajícího.</message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Vydavatel časopisu nebyl nakonfigurován! Musíte přidat instituci vydavatele <a href="{$publisherUrl}" target="_blank">v Kroku 1.5 Nastavení časopisu</a>.]]></message>
 </locale>

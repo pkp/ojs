@@ -193,7 +193,6 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart) {
 		$context = $request->getContext();
 		$path = array('plugin', $this->getName());
-
 		if ($request->getUserVar(DOI_EXPORT_ACTION_EXPORT) || $request->getUserVar(DOI_EXPORT_ACTION_DEPOSIT)) {
 			// Get the XML
 			$exportXml = $this->exportXML($objects, $filter, $context);
@@ -205,7 +204,6 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 				// Write the XML to a file.
 				// export file name example: crossref/20160723-160036-articles-1.xml
 				$exportFileName = $this->getExportFileName($objectsFileNamePart, $context);
-				//$this->getExportPath() . date('Ymd-His') .'-' . $objectsFileNamePart .'-' . $context->getId() . '.xml';
 				file_put_contents($exportFileName, $exportXml);
 				// Deposit the XML file.
 				$result = $this->depositXML($objects, $context, $exportFileName);
@@ -242,7 +240,6 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 			$dispatcher = $request->getDispatcher();
 			$dispatcher->handle404();
 		}
-
 	}
 
 	/**
@@ -339,7 +336,7 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 
 	/**
 	 * Get the XML for selected objects.
-	 * @param $objects array Array of published articles, issues or galleys
+	 * @param $objects mixed Array of or single published article, issue or galley
 	 * @param $filter string
 	 * @param $context Context
 	 * @return string XML contents representing the supplied DOIs.
@@ -366,7 +363,7 @@ abstract class DOIPubIdExportPlugin extends ImportExportPlugin {
 	/**
 	 * Deposit XML i.e. publication objects DOIs.
 	 * This must be implemented in the subclasses, if the action is supported.
-	 * @param $objects array Array of published articles, issues or galleys
+	 * @param $objects mixed Array of or single published article, issue or galley
 	 * @param $context Context
 	 * @param $filename Export XML filename
 	 * @return boolean Whether the DOI has been registered/found

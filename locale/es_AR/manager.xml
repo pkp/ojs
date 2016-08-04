@@ -510,4 +510,15 @@ Hay casos en los que una sola estadística de uso debe ser usada, por ej. mostra
 	<message key="manager.statistics.reports.filters.byContext.description">Limitar resultados por contexto (número y/o artículo)</message>
 	<message key="manager.statistics.reports.filters.byObject.description">Limitar resultados por tipo de objeto (revista, número, artículo, galeradas de pdf, otras galeradas), y/o por uno o más ids de objetos.</message>
 	<message key="manager.setup.copyrightYearBasis">Bases de los  nuevos derechos de artículo en el año actual</message>
+
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<message key="plugins.importexport.common.settings">Configuración</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Para usar este plugin por favor vaya hacia la categoría  de plugins de "Identificadores Públicos", habilite y configure el plugin DOI y especifique un prefijo DOI válido ahí.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">El plugin no esta completamente configurado.</message>
+	<message key="plugins.importexport.common.settings.form.password">Clave</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Por favor note que la contraseña será guardada como texto plano, no encriptada</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">El archivo de salida {$param} no puede ser escrito.</message>
+	<message key="plugins.importexport.common.action.register">Registrar</message>
+	<message key="plugins.importexport.common.register.error.mdsError">El registro no pudo completarse! El server de registro DOI ha retornado un error: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Registro exitoso!.</message>
 </locale>

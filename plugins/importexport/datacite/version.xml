@@ -13,6 +13,6 @@
 <version>
 	<application>datacite</application>
 	<type>plugins.importexport</type>
-	<release>1.0.0.0</release>
-	<date>2011-11-22</date>
+	<release>2.0.0.0</release>
+	<date>2016-08-01</date>
 </version>

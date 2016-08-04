@@ -4,7 +4,7 @@
 <!--
   * plugins/importexport/crossref/locale/uk_UA/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,18 +13,13 @@
   * Translated by Denys Solovianenko, 2011
   * V. I. Vernadsky National Library of Ukraine
   -->
- 
-<locale name="uk_UA" full_name="Українська">
-	<message key="plugins.importexport.crossref.displayName">Модуль експорту у CrossRef XML</message>
-	<message key="plugins.importexport.crossref.description">Експорт метаданих статті у формат CrossRef XML.</message>
 
-	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Використання: 
+<locale name="uk_UA" full_name="Українська">
+		<message key="plugins.importexport.crossref.displayName">Модуль експорту у CrossRef XML</message>
+		<message key="plugins.importexport.crossref.description">Експорт метаданих статті у формат CrossRef XML.</message>
+
+		<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Використання:
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
 ]]></message>
-	<message key="plugins.importexport.crossref.cliError">ПОМИЛКА:</message>
-
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Немає випусків з визначеним issue ID "{$issueId}".</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Немає статей з визначеним article ID "{$articleId}".</message>
-
 </locale>

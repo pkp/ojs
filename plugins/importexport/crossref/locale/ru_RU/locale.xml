@@ -4,24 +4,32 @@
 <!--
   * plugins/importexport/crossref/locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ru_RU (Русский) locale.
-  *
+  * With updates from Pavel Pisklakov (revising translation).
   -->
- 
+
 <locale name="ru_RU" full_name="Русский">
-	<message key="plugins.importexport.crossref.displayName">Экспорт в формате CrossRef XML</message>
-	<message key="plugins.importexport.crossref.description">Экспорт метаданны статей в формате CrossRef XML.</message>
+	<message key="plugins.importexport.crossref.description">Этот плагин экспортирует или регистрирует метаданные статьи в формате CrossRef.</message>
+	<message key="plugins.importexport.crossref.displayName">Плагин «Экспорт/Регистрация в CrossRef»</message>
+	<message key="plugins.importexport.crossref.requirements">Требования</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Все требования плагина выполнены.</message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Издатель журнала не настроен! Вы должны добавить организацию-издателя на <a href="{$publisherUrl}" target="_blank">шаге 1.5 настройки журнала</a>.]]></message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Следующая информация необходима для успешной передачи в депозитарий CrossRef.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Имя ответственного</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">E-mail ответственного</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Пожалуйста, введите имя ответственного.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">>Пожалуйста, введите адрес электронной почты ответственного.</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Имя пользователя</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Пожалуйста, введите имя пользователя, которое вы получили от CrossRef.</message>
 
-	<message key="plugins.importexport.crossref.cliUsage">Вызов: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
-	<message key="plugins.importexport.crossref.cliError">ОШИБКА:</message>
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Вызов:
+{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register journal_path {issues|articles} objectId1 [objectId2] ...
+]]></message>
 
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Нет выпуска с указанным идентификатором "{$issueId}".</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Нет статьи с указанным идентификатором "{$articleId}".</message>
-
+	<message key="plugins.importexport.crossref.senderTask.name">Задача автоматической регистрации CrossRef</message>
 </locale>

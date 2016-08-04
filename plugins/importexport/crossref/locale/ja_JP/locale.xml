@@ -4,14 +4,14 @@
 <!--
   * plugins/importexport/crossref/locale/ja_JP/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ja_JP (日本語) locale.
   *
   -->
- 
+
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.importexport.crossref.displayName">CrossRef用XMLエクスポートプラグイン</message>
 	<message key="plugins.importexport.crossref.description">論文のメタデータをCrossRef XMLフォーマットでエクスポートします。</message>
@@ -20,9 +20,4 @@
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
 ]]></message>
-	<message key="plugins.importexport.crossref.cliError">エラー:</message>
-
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">指定した巻号ID "{$issueId}" に合致する号がありませんでした。</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">指定した論文ID "{$articleId}" に合致する論文がありませんでした。</message>
-
 </locale>

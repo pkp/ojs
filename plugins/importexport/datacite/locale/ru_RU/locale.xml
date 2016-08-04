@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/datacite/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Русский) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+ 
+<locale name="ru_RU" full_name="Русский">
+	<message key="plugins.importexport.datacite.displayName">Плагин «Экспорт/регистрация DataCite»</message>
+	<message key="plugins.importexport.datacite.description">Этот плагин позволяет экспортировать или зарегистрировать метаданные выпуска, статьи, гранки и дополнительных файлов в формате DataCite.</message>
+
+	<message key="plugins.importexport.datacite.intro"><![CDATA[
+		Если вы хотите зарегистрировать DOI в DataCite, пожалуйста, свяжитесь с управляющим 
+		агентом через <a href="http://datacite.org/contact" target="_blank">главную страницу 
+		DataCite</a>, который перенаправит вас к вашему региональному члену DataCite. Как только вы
+		установите отношения с организацией-членом DataCite, вы должны будете получить 
+		доступ к службе DataCite для выдачи постоянных идентификаторов (DOI)
+		и регистрации связанных с ними метаданных. Если у вас нет вашего собственного имени пользователя и
+		пароля, вы все равно сможете экспортировать в формат DataCite XML, но вы
+		не сможете зарегистрировать ваши DOI в DataCite из системы OJS.
+		Пожалуйста, обратие внимание, что пароль будет сохраняться как простой текст, то есть не будет шифроваться,
+		это требования службы регистрации DataCite.
+	]]></message>
+
+	<message key="plugins.importexport.datacite.settings.form.username">Имя пользователя (символ)</message>
+	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Пожалуйста, введите имя пользователя (символ), который вы получили от DataCite. Имя пользователя не может содержать двоеточие.</message>
+
+	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[Вызов: 
+{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
+]]></message>
+	<message key="plugins.importexport.datacite.senderTask.name">Задача автоматической регистрации DataCite</message>
+</locale>

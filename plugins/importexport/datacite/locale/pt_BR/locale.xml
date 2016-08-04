@@ -4,7 +4,7 @@
 <!--
   * plugins/importexport/datacite/locale/pt_BR/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -17,19 +17,12 @@
 
 	<message key="plugins.importexport.datacite.intro"><![CDATA[Caso deseje registrar DOIs no DataCite, entre em contato com o Gerente por meio da <a href="http://datacite.org/contact" target="_blank">página do DataCite</a>, que irá encaminá-lo ao seu Representante DataCite local. Uma vez estabelecido o relacionamento com a organização representante, será providenciado o acesso ao serviço  DataCite para a cunhagem de identificadores persistente (DOIs) e registro de metadados associados. Mesmo que não possua um login e senha, será possível exportar dados no formato XML  DataCite, porém não poderá registrar seus DOIs no DataCite por meio do OJS. Note que a senha será gravada como texto puro, isto é, não encriptada, devido aos requisitos de registro do serviço DataCite.]]></message>
 
-	<message key="plugins.importexport.datacite.settings.description"><![CDATA[<a href="{$settingsUrl}">Configure</a> o plugin DataCite antes de usá-lo pela primeira vez.]]></message>
- 
-	<message key="plugins.importexport.datacite.settings.form.description">Configure o plugin de exportação DataCite:</message>
 	<message key="plugins.importexport.datacite.settings.form.username">Login (símbolo)</message>
 	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Informe seu login (símbolo) recebido do DataCite. O login não pode conter dois pontos (:).</message>
- 
-	<message key="plugins.importexport.datacite.export.suppFiles">Exportar arquivos suplementares específicos</message>
-	<message key="plugins.importexport.datacite.export.selectSuppFile">Escolher arquivos suplementares</message>
-	<message key="plugins.importexport.datacite.export.noSuppFiles">Nenhum arquivo suplementar possui DOI.</message>
- 
-	<message key="plugins.importexport.datacite.export.error.suppFileNotFound">Nenhum arquivo suplementar corresponde ao ID: {$param}.</message>
- 
-	<message key="plugins.importexport.datacite.cliUsage">Uso: 
+
+	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[Uso:
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...</message>
+{$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
+]]></message>
+	<message key="plugins.importexport.datacite.senderTask.name">Dados DataCite do remetente</message>
 </locale>
