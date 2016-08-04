@@ -508,4 +508,15 @@
 	<message key="manager.statistics.reports.filters.byObject.description">Affiner les résultat par type d'objet (revue, numéro, article, épreuve PDF, autres épreuves) et/ou par un ou plusieurs identifiant(s) d'objet.</message>
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Nombre de consultations de la page d'accueil de la revue</message>
 	<message key="manager.setup.copyrightYearBasis">Droit de reproduction annuel</message>
+
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<message key="plugins.importexport.common.settings">Paramètres</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Afin d'utiliser ce plugiciel, veuillez aller à la catégorie "identifiants publics", activez et configurez le plugiciel DOI et spécifiez un préfixe DOI valide.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">Ce plugiciel n'est pas entièrement configuré.</message>
+	<message key="plugins.importexport.common.settings.form.password">Mot de passe</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Veuillez noter que le mot de passe sera enregistré en tant que texte brut (il ne sera pas chiffré).</message>
+	<message key="plugins.importexport.common.action.register">Enregistrer</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Le fichier de sortie {$param} n'est pas accessible en écriture.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">L'enregistrement a échoué! Le serveur d'enregistrement DOI a retourné une erreur: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Enregistrement réussi!</message>
 </locale>

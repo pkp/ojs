@@ -535,6 +535,7 @@ Poderão ser usados estatísticas individuais de uso, por exemplo, para exibir u
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">Para usar este plugin, acesse a categoria de plugins "Identificadores públicos", habilite e configure o plugin DOI e especifique um prefixo DOI válido nele.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">O plugin não está totalmente configurado.</message>
 	<message key="plugins.importexport.common.settings.form.password">Senha</message>
+	<message key="plugins.importexport.common.settings.form.password.description">As senhas serão salvas em texto não cifrado.</message>
 	<!-- actions -->
 	<message key="plugins.importexport.common.action.register">Registrar</message>
 	<!--  notifications and errors -->

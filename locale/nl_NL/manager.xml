@@ -519,6 +519,7 @@
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">GA, om deze plugin te gebruiken, naar de "Publieke identificatie" plugin categorie, schakel de DOI plugin in en configureer die specificeer een geldig DOI voorvoegsel.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">De plugin is niet volledig ingesteld.</message>
 	<message key="plugins.importexport.common.settings.form.password">Wachtwoord</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Merk op dat het wachtwoord als tekst wordt opgeslagen; niet versleuteld.</message>
 	<!-- actions -->
 	<message key="plugins.importexport.common.action.register">Registreer</message>
 	<!--  notifications and errors -->

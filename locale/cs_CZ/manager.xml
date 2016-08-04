@@ -512,4 +512,15 @@
 	<!-- Categories -->
 	<message key="manager.setup.categories">Kategorie</message>
 	<message key="manager.setup.categories.description">Zvolte nejvíce vhodné kategorie z nabídky výše. Čtenáři boudou moci procházet podle těchto kategorií z kompletní sady časopisů.</message>
+
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<message key="plugins.importexport.common.settings">Nastavení</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Aby bylo možné používat tento plugin, jděte prosím do kategorie pluginů Veřejné identifikátory, povolte a nastavte plugin DOI a specifikujte tam platný prefix DOI.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">Plugin není plně nastavený</message>
+	<message key="plugins.importexport.common.settings.form.password">Heslo</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Upozornění: heslo bude uloženo jako prostý text, nebude tedy zašifrováno.</message>
+	<message key="plugins.importexport.common.action.register">Registrace</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Do výstupního souboru {$param} nejde zapisovat.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Registrace nebyla úspěšná! Registrační server DOI vrátil následující chybu: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Registrace byla úspěšná!</message>
 </locale>

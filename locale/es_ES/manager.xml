@@ -512,4 +512,15 @@
 	<message key="manager.setup.resetPermissions">Reinicia permisos de artículo</message>
 	<message key="manager.setup.resetPermissions.description">La declaración del copyright y la información de la licencia se añadirán permanentemente al contenido publicado, garantizando que estos datos no cambian en caso de que lo hagan las políticas de la revista para los nuevos envíos. Para reiniciar la información almacenada de los permisos que ya se han adjuntado al contenido publicado, utiliza los botones que se muestran a continuación.</message>
 	<message key="manager.setup.copyrightYearBasis">Poner la fecha del copyright del artículo a</message>
+
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<message key="plugins.importexport.common.settings">Configuración</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Para utilizar este módulo, vaya a la categoría de módulo "Identificador público", habilite y configure el módulo de Identificador digital de objeto (DOI) y especifique un prefijo DOI válido.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">El módulo no está completamente configurado.</message>
+	<message key="plugins.importexport.common.settings.form.password">Contraseña</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Note que la contraseña será guardada en texto plano no cifrado.</message>
+	<message key="plugins.importexport.common.action.register">Registrarse</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">El archivo de salida {$param} no es editable.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">No se pudo realizar el registro. El servidor de registro DOI ha devuelto un error: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Registrado con éxito</message>
 </locale>

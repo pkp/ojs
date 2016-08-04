@@ -511,4 +511,14 @@
 	<message key="manager.setup.categories.description">Seleccioneu les categories que considereu més adequades de la llista anterior. Els lectors/ores poden fer cerques per categoria en el conjunt d'articles i números que componen la revista.</message>
 	<message key="manager.setup.resetPermissions">Reinicia permisos d'article</message>
 	<message key="manager.setup.resetPermissions.description">La declaració del copyright i la informació de la llicència s'afegiran permanentment al contingut publicat, garantint que aquestes dades no canvien en cas de que ho facin les polítiques de la revista per a les noves trameses. Per reiniciar la informació emmagatzemada dels permisos que ja s'ha adjuntat al contingut publicat, utilitza els botons que es mostren a continuació.</message>
+
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<message key="plugins.importexport.common.settings">Configuració</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Per utilitzar aquest mòdul heu d'anar a la categoria de mòduls "Identificador públic", activar i configurar el mòdul DOI i especificar-hi un prefix DOI vàlid.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">El mòdul no està configurat completament.</message>
+	<message key="plugins.importexport.common.settings.form.password">Contrasenya</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Heu de tenir en compte que la contrasenya serà guardada en text sense format, p. ex. no encriptada.</message>
+	<message key="plugins.importexport.common.action.register">Registra</message>
+	<message key="plugins.importexport.common.register.error.mdsError">El registre no es correcte! El servidor de registre del DOI ha retornat un error: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Registre correcte!</message>
 </locale>

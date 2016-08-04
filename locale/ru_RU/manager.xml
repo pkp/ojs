@@ -514,4 +514,21 @@
 	<!-- Категории -->
 	<message key="manager.setup.categories">Категории</message>
 	<message key="manager.setup.categories.description">Выберите наиболее подходящие категории из списка, приведенного выше. Читатели смогут просматривать статьи по категориям из полного набора для журнала.</message>
+
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<!-- plugin tabs -->
+	<message key="plugins.importexport.common.settings">Настройки</message>
+
+	<!-- settings form -->
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Для того чтобы использовать этот плагин, пожалуйста, перейдите в категорию плагинов «Плагины открытых идентификаторов», включите и настройте плагин DOI и укажите там верный префикс DOI.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">Плагин не полностью настроен.</message>
+	<message key="plugins.importexport.common.settings.form.password">Пароль</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Обратите внимание, что пароль будет сохранен в виде обычного текста, то есть не будет зашифрован.</message>
+	<!-- actions -->
+	<message key="plugins.importexport.common.action.register">Зарегистрировать</message>
+	<!--  notifications and errors -->
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Выходной файл {$param} не доступен для записи.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Регистрация завершилась неудачей! Сервер регистрации DOI вернул ошибку: «{$param}».</message>
+	<message key="plugins.importexport.common.register.success">Регистрация прошла успешно!</message>
+	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">Отсутствует префикс DOI для журнала с адресом {$path}.</message>
 </locale>

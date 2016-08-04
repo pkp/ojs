@@ -510,4 +510,19 @@
 	<message key="manager.setup.categories">Categorias</message>
 	<message key="manager.setup.categories.description">Seleccionar as categorias mais adequadas da lista exibida em cima. Os leitores poderão procurar por categoria a partir da configuração concluída da revista.</message>
 	<message key="manager.setup.copyrightYearBasis">Definir ano de copyright do artigo</message>
+
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<!-- plugin tabs -->
+	<message key="plugins.importexport.common.settings">Configurações</message>
+	<!-- settings form -->
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Para utilizar este plugin, por favor, consultar a categoria de plugins "Identificador Público", activar e configurar o plug-in DOI e especificar um prefixo DOI válido.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">O plugin não está totalmente configurado.</message>
+	<message key="plugins.importexport.common.settings.form.password">Senha</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Tenha em atenção que a senha será guardada como texto, não encriptada.</message>
+	<!-- actions -->
+	<message key="plugins.importexport.common.action.register">Registar-se</message>
+	<!--  notifications and errors -->
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">O ficheiro de saída {$param} não é gravável.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">O registo não foi bem-sucedido! O servidor de registo DOI retornou um erro: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Registo com sucesso!</message>
 </locale>

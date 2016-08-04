@@ -514,4 +514,15 @@
 	<!-- Categories -->
 	<message key="manager.setup.categories">التصنيفات</message>
 	<message key="manager.setup.categories.description">إختر التصنيفات الأكثر مناسبة من المجموعة المدرجة أعلاه. سيكون القراء قادرين على التصفح حسب الصنف من المجموعة الكاملة للمجلة.</message>
+
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<message key="plugins.importexport.common.settings">الإعدادات</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">لغرض استعمال هذه الإضافة، لطفاً، إذهب إلى فئة إضافة "المعرف العام"، قم بتمكين وتعريف إضافة DOI وقم بتحديد بادئة DOI صحيحة هناك.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">هذه الإضافة غير مهيئة بالكامل.</message>
+	<message key="plugins.importexport.common.settings.form.password">كلمة المرور</message>
+	<message key="plugins.importexport.common.settings.form.password.description">لطفاً، لاحظ أن كلمة المرور سيتم حفظها بشكل نص صريح غير مشفر.</message>
+	<message key="plugins.importexport.common.action.register">تسجيل</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">الملف الخارجي {$param} غير قابل للكتابة.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">التسجيل لم ينجح! أبلغ ملقم تسجيل DOI عن خطأ: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">نجحت عملية التسجيل!</message>
 </locale>
