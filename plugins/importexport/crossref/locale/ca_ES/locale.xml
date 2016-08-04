@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
-  * plugins/importexport/crossref/locale/ca_ES/locale.xml
+  * locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
   *
+  * Localization strings for the ca_ES (Català) locale.
   -->
- 
+
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.importexport.crossref.displayName">Connector d'exportació a XML de CrossRef</message>
+	<message key="plugins.importexport.crossref.displayName">Mòdul d'exportació a XML de CrossRef</message>
 	<message key="plugins.importexport.crossref.description">Exporta les metadades de l'article en format XML de CrossRef.</message>
 
-	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Usage: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
-]]></message>
-	<message key="plugins.importexport.crossref.cliError">ERROR:</message>
-
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">No hi ha cap número que coincideixi amb l'id. de número indicat, "{$issueId}".</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">No hi ha cap article que coincideixi amb l'id. d'article indicat, "{$articleId}".</message>
-
+	<message key="plugins.importexport.crossref.cliUsage">Ús: {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ... {$scriptName} {$pluginName} [xmlFileName] [journal_path] número [issueId]</message>
+	<message key="plugins.importexport.crossref.requirements">Requisits</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Tots els requisits del mòdul han estat satisfets.</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Nom d'usuari</message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Són necessaris els següents elements per a un dipòsit CrossRef amb èxit.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Nom del dipositant</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Correu electrònic del dipositant</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Introduïu el nom del dipositant.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Introduïu el correu electrònic del dipositant.</message>
+	<message key="plugins.importexport.crossref.senderTask.name">Tasca de registre automàtic de CrossRef</message>
 </locale>

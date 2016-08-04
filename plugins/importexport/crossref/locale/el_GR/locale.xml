@@ -4,7 +4,7 @@
 <!--
   * plugins/importexport/crossref/locale/el_GR/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -18,18 +18,22 @@
   * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
   *
   -->
- 
+
 <locale name="el_GR" full_name="ελληνικά">	
-	<message key="plugins.importexport.crossref.displayName">Plugin εξαγωγής CrossRef XML </message>
+	<message key="plugins.importexport.crossref.displayName">Πρόσθετο εξαγωγής CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Εξαγωγή των μεταδεδομένων του άρθρου σε μορφή CrossRef XML .</message>
 
-	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Usage: 
+	<message key="plugins.importexport.crossref.cliUsage">Χρήση:
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
-]]></message>
-	<message key="plugins.importexport.crossref.cliError">ΣΦΑΛΜΑ:</message>
-
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Δεν βρέθηκε τεύχος που να ταιριάζει με το συγκεκριμένο ID τεύχους "{$issueId}".</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Δεν βρέθηκε άρθρο που να ταιριάζει με το συγκεκριμένο ID άρθρου "{$articleId}".</message>
-
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
+	<message key="plugins.importexport.crossref.requirements">Απαιτήσεις</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Όλες οι απαιτήσεις του plugin έχουν ικανοποιηθεί</message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Ο Εκδότης του περιοδικού δεν έχει ρυθμιστεί! Θα πρέπει να προσθέσετε έναν οργανισμό έκδοσης μέσα από το <a href="{$publisherUrl}" target="_blank">Στήσιμο Περιοδικού Βήμα 1.5</a>.]]></message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Τα ακόλουθα στοιχεία που απαιτούνται για μια επιτυχή CrossRef κατάθεση.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Όνομα καταθέτη</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Email καταθέτη</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Παρακαλούμε εισάγετε το όνομα του καταθέτη</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Παρακαλούμε εισάγετε το email του καταθέτη</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Όνομα Χρήστη</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Παρακαλούμε εισάγετε το όνομα χρήστη έχετε από το CrossRef.</message>
 </locale>

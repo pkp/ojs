@@ -4,24 +4,31 @@
 <!--
   * plugins/importexport/crossref/locale/pt_BR/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_BR locale.
-  *
   -->
- 
+
 <locale name="pt_BR" full_name="Português (Brasil)">
-	<message key="plugins.importexport.crossref.displayName">Exportação CrossRef em XML</message>
 	<message key="plugins.importexport.crossref.description">Exporta metadados dos artigos no formato CrossRef XML.</message>
+	<message key="plugins.importexport.crossref.displayName">Exportação CrossRef em XML</message>
+	<message key="plugins.importexport.crossref.requirements">Requisitos</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Todos os requisitos do plugin estão atendidos.</message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[O nome da editora não foi configurado! Você deve adicionar uma instituição editora no <a href="{$publisherUrl}" target="_blank">passo 1.5 das configurações da revista</a>.]]></message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Os seguintes items são exigidos para um depósito bem sucedido na Crossref.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Nome do depositante</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Email do depositante</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Por favor digite o nome do depositante.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Por favor digite o email do depositante.</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Nome de usuário</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Por favor, informe o nome de usuário que você revcebeu da CrossRef.</message>
 
-	<message key="plugins.importexport.crossref.cliUsage">Uso: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
-	<message key="plugins.importexport.crossref.cliError">ERRO:</message>
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Uso:
+{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register journal_path {issues|articles} objectId1 [objectId2] ...
+]]></message>
 
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Nenhuma edição encontrada com o ID "{$issueId}".</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Nenhum artigo encontrado com o ID "{$articleId}".</message>
-
+	<message key="plugins.importexport.crossref.senderTask.name">Dados CrossRef do remetente</message>
 </locale>

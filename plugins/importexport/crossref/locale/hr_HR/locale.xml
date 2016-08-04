@@ -4,7 +4,7 @@
 <!--
   * plugins/importexport/crossref/locale/hr_HR/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,7 +12,7 @@
   *
   * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
   -->
- 
+
 <locale name="hr_HR" full_name="Hrvatski">
 	<message key="plugins.importexport.crossref.displayName">Dodatak za CrossRef XML iznošenje</message>
 	<message key="plugins.importexport.crossref.description">Koristi se za iznošenje metapodataka članaka u CrossRef XML formatu.</message>
@@ -21,10 +21,4 @@
 {$scriptName} {$pluginName} [xmlNazivDatoteke] [putanja_časopisa] članci [članakId1] [članakId2] ...
 {$scriptName} {$pluginName} [xmlNazivDatoteke] [putanja_časopisa] broj [brojId]
 ]]></message>
-	<message key="plugins.importexport.crossref.cliError">POGREŠKA:</message>
-
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Nijedan broj ne odgovara navedenom ID-u ({$issueId}).</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Nijedan članak ne odgovara navedenom ID-u 
-	 ({$articleId}).</message>
-
 </locale>

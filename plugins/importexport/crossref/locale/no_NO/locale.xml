@@ -2,26 +2,21 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/importexport/crossref/locale/nb_NO/locale.xml
+  * plugins/importexport/crossref/locale/no_NO/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the nb_NO (Norsk bokmål) locale.
+  * Localization strings for the no_NO (Norsk) locale.
   *
   -->
 
-<locale name="nb_NO" full_name="Norsk bokmål">
+<locale name="no_NO" full_name="Norsk">
 	<message key="plugins.importexport.crossref.displayName">Programutvidelse for eksport til CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Eksporter artikkelmetadata i CrossRef XML-format.</message>
 
 	<message key="plugins.importexport.crossref.cliUsage">Bruk:
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] artikler [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] utgave [issueId]</message>
-	<message key="plugins.importexport.crossref.cliError">FEIL:</message>
-
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Ingen utgave stemmer med den angitte utgave-ID'en "{$issueId}".</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Ingen artikkel stemmer med den angitte artikkel-ID'en "{$articleId}".</message>
-
 </locale>

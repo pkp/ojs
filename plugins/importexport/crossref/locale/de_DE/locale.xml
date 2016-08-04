@@ -4,25 +4,31 @@
 <!--
   * plugins/importexport/crossref/locale/de_DE/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
   * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
-  *
   -->
- 
+
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.importexport.crossref.displayName">CrossRef-XML-Export-Plug-In</message>
-	<message key="plugins.importexport.crossref.description">Metadaten des Beitrags im CrossRef-XML-Format exportieren.</message>
-	
-	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Gebrauch: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] …
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
+	<message key="plugins.importexport.crossref.description">Artikel-Metadaten im CrossRef-Format exportieren oder registrieren.</message>
+	<message key="plugins.importexport.crossref.displayName">CrossRef-Export/Registrierungs-Plug-In</message>
+	<message key="plugins.importexport.crossref.requirements">Anforderungen</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Alle Anforderungen des Plug-Ins sind erfüllt.</message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Kein Verlag eingerichtet! Sie müssen einen Verlag oder eine herausgebende Organisation im <a href="{$publisherUrl}" target="_blank">Schritt 1.5 unter Einrichten der Zeitschrift</a> festlegen.]]></message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Die folgenden Angaben werden für eine erfolgreiche Abgabe bei CrossRef nötig.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Depositor-Name</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Depositor-E-Mail</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Bitte geben Sie den Depositor-Namen ein.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Bitte geben Sie die Depositor-E-Mail-Adresse ein.</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Benutzer/innenname</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Bitte geben Sie den Benutzer/innennamen ein, den Sie von CrossRef erhalten haben.</message>
+
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Verwendung:
+{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register journal_path {issues|articles} objectId1 [objectId2] ...
 ]]></message>
-	<message key="plugins.importexport.crossref.cliError">FEHLER:</message>
 
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Keine Ausgabe passt zu der angegebenen Kennzeichnung "{$issueId}".</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Kein Beitrag passt zu der angegebenen Kennzeichnung "{$articleId}".</message>
-
+	<message key="plugins.importexport.crossref.senderTask.name">CrossRef automatic registration task</message>
 </locale>

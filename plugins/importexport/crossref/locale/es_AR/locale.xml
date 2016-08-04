@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the es_AR locale.
+  *
+  * Traducción de la versión original 1.2 por Juan Pablo Alperin - 2006/06/29
+  -->
+
+<locale name="es_AR" full_name="Español (Argentina)">
+		<message key="plugins.importexport.crossref.displayName">Plugin de exportación de XML de CrossRef</message>
+		<message key="plugins.importexport.crossref.description">Exportación de la metadata de artículos usando XML de CrossRef.</message>
+
+		<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Usage:
+	{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+	{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
+	]]></message>
+	<message key="plugins.importexport.crossref.requirements">Requerimientos</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Todos los requerimientos del plugin se cumplen.</message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[No se ha configurado ningún editor de revista. Debe añadir una institución editora en <a href="{$publisherUrl}" target="_blank">Paso 1.5</a>.]]></message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Los siguientes items son requeridos para un depósito Crossref exitoso</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Nombre del depositor</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Email del Depositor</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Por favor introduzca un nombre de depositor.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Por favor intruzca un correo de depositor</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Nombre de usuario</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Por favor introduzca el nombre de usuario que ha recibido de CrossRef</message>
+</locale>

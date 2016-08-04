@@ -2,26 +2,32 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/importexport/crossref/locale/fr_CA/locale.xml
+  * locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_CA locale.
   *
   -->
- 
+
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.importexport.crossref.displayName">Plugiciel d'exportation CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Exporter les métadonnées de l'article en format CrossRef XML.</message>
 
-	<message key="plugins.importexport.crossref.cliUsage">Utilisation : 
+	<message key="plugins.importexport.crossref.cliUsage">Utilisation :
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] numéro [issueId]</message>
-	<message key="plugins.importexport.crossref.cliError">ERREUR :</message>
-
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Aucun numéro ne correspond à l'identification de numéro spécifié "{$issueId}".</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Aucun article ne correspond à l'identification d'article spécifié "{$articleId}".</message>
-
+	<message key="plugins.importexport.crossref.requirements">Veuillez noter que le mot de passe sera enregistré en plein texte, c-a-d pas encrypté</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Marque enregistrée</message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">L'export de données est actuellement indisponible. Veuillez vérifier les exigences du plugiciel</message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Un éditeur n'est pas configuré! Vous devez ajouter un éditeur sous <a href="{$publisherUrl}" target="_blank">l'étape 1.5 de la configuration de la revue</a>.]]></message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Nom du déposant</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Courriel du déposant</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Veuillez inscrire le nom du déposant.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Veuillez inscrire le courriel du déposant.</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Nom d'utilisateur</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Veuillez entrer le nom d'utilisateur que vous a donné Crossref.</message>
+	<message key="plugins.importexport.crossref.senderTask.name">Tâche automatique d'enregistrement de CrossRef</message>
 </locale>
