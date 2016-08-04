@@ -13,9 +13,7 @@
  * @brief DataCite export/registration plugin.
  */
 
-if (!class_exists('DOIExportPlugin')) { // Bug #7848
-	import('plugins.importexport.datacite.classes.DOIExportPlugin');
-}
+import('classes.plugins.DOIPubIdExportPlugin');
 
 // DataCite API
 define('DATACITE_API_RESPONSE_OK', 201);
@@ -24,225 +22,387 @@ define('DATACITE_API_URL', 'https://mds.datacite.org/');
 // Test DOI prefix
 define('DATACITE_API_TESTPREFIX', '10.5072');
 
-class DataciteExportPlugin extends DOIExportPlugin {
+// Export file types.
+define('DATACITE_EXPORT_FILE_XML', 0x01);
+define('DATACITE_EXPORT_FILE_TAR', 0x02);
 
-	//
-	// Constructor
-	//
+
+class DataciteExportPlugin extends DOIPubIdExportPlugin {
+	/**
+	 * Constructor
+	 */
 	function DataciteExportPlugin() {
-		parent::DOIExportPlugin();
+		parent::DOIPubIdExportPlugin();
 	}
 
-
-	//
-	// Implement template methods from ImportExportPlugin
-	//
 	/**
-	 * @see ImportExportPlugin::getName()
+	 * @see Plugin::getName()
 	 */
 	function getName() {
 		return 'DataciteExportPlugin';
 	}
 
 	/**
-	 * @see ImportExportPlugin::getDisplayName()
+	 * @see Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
 		return __('plugins.importexport.datacite.displayName');
 	}
 
 	/**
-	 * @see ImportExportPlugin::getDescription()
+	 * @see Plugin::getDescription()
 	 */
 	function getDescription() {
 		return __('plugins.importexport.datacite.description');
 	}
 
-
-	//
-	// Implement template methods from DOIExportPlugin
-	//
 	/**
-	 * @see DOIExportPlugin::getPluginId()
+	 * @copydoc DOIExportPlugin::getSubmissionFilter()
 	 */
-	function getPluginId() {
+	function getSubmissionFilter() {
+		return 'article=>datacite-xml';
+	}
+
+	/**
+	 * @copydoc DOIExportPlugin::getIssueFilter()
+	 */
+	function getIssueFilter() {
+		return 'issue=>datacite-xml';
+	}
+
+	/**
+	 * @copydoc DOIPubIdExportPlugin::getPluginSettingsPrefix()
+	 */
+	function getPluginSettingsPrefix() {
 		return 'datacite';
 	}
 
 	/**
-	 * @see DOIExportPlugin::getSettingsFormClassName()
+	 * @copydoc DOIPubIdExportPlugin::getSettingsFormClassName()
 	 */
 	function getSettingsFormClassName() {
 		return 'DataciteSettingsForm';
 	}
 
 	/**
-	 * @see DOIExportPlugin::generateExportFiles()
+	 * @copydoc DOIPubIdExportPlugin::getExportDeploymentClassName()
 	 */
-	function generateExportFiles($request, $exportType, &$objects, $targetPath, $journal, &$errors) {
-		// Additional locale file.
-		AppLocale::requireComponents(array(LOCALE_COMPONENT_APP_EDITOR));
-
-		// Export objects one by one (DataCite does not allow
-		// multiple objects per file).
-		$this->import('classes.DataciteExportDom');
-		$exportFiles = array();
-		foreach($objects as $object) {
-			// Generate the export XML.
-			$dom = new DataciteExportDom($request, $this, $journal, $this->getCache());
-			$doc =& $dom->generate($object);
-			if ($doc === false) {
-				$this->cleanTmpfiles($targetPath, array_keys($exportFiles));
-				$errors =& $dom->getErrors();
-				return false;
-			}
-
-			// Write the result.
-			$exportFile = $this->getTargetFileName($targetPath, $exportType, $object->getId());
-			file_put_contents($exportFile, XMLCustomWriter::getXML($doc));
-			$fileManager = new FileManager();
-			$fileManager->setMode($exportFile, FILE_MODE_MASK);
-			$exportFiles[$exportFile] = array(&$object);
-			unset($object);
-		}
-
-		return $exportFiles;
+	function getExportDeploymentClassName() {
+		return 'DataciteExportDeployment';
 	}
 
 	/**
-	 * @see DOIExportPlugin::registerDoi()
+	 * @copydoc ImportExportPlugin::display()
 	 */
-	function registerDoi($request, $journal, &$objects, $file) {
-		// DataCite should always export exactly
-		// one object per meta-data file.
-		assert(count($objects) == 1);
-		$object =& $objects[0];
+	function display($args, $request) {
+		$context = $request->getContext();
+		switch (current($args)) {
+			case 'exportRepresentations':
+				$selectedRepresentations = (array) $request->getUserVar('selectedRepresentations');
+				if (!empty($selectedRepresentations)) {
+					$objects = $this->_getArticleGalleys($selectedRepresentations, $context);
+					$filter = 'galley=>datacite-xml';
+					$tab = (string) $request->getUserVar('tab');
+					$objectsFileNamePart = 'galleys';
+				}
+				// Execute export action
+				$this->executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart);
+			default:
+				parent::display($args, $request);
+		}
+	}
 
+	/**
+	 * @copydoc ImportExportPlugin::executeExportAction()
+	 */
+	function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart) {
+		$context = $request->getContext();
+		$path = array('plugin', $this->getName());
+
+		// Export
+		if ($request->getUserVar(DOI_EXPORT_ACTION_EXPORT)) {
+			$result = $this->_checkForTar();
+			if ($result === true) {
+				$exportedFiles = array();
+				foreach ($objects as $object) {
+					// Get the XML
+					$exportXml = $this->exportXML($object, $filter, $context);
+					// Write the XML to a file.
+					// export file name example: datacite/20160723-160036-articles-1-1.xml
+					$objectFileNamePart = $objectsFileNamePart . '-' . $object->getId();
+					$exportFileName = $this->getExportFileName($objectFileNamePart, $context);
+					file_put_contents($exportFileName, $exportXml);
+					$exportedFiles[] = $exportFileName;
+				}
+				// If we have more than one export file we package the files
+				// up as a single tar before going on.
+				assert(count($exportedFiles) >= 1);
+				if (count($exportedFiles) > 1) {
+					// tar file name: e.g. datacite/20160723-160036-articles-1.tar.gz
+					$finalExportFileName = $this->getExportPath() . date('Ymd-His') .'-' . $objectsFileNamePart .'-' . $context->getId() . '.tar.gz';
+					$finalExportFileType = DATACITE_EXPORT_FILE_TAR;
+					$this->_tarFiles($this->getExportPath(), $finalExportFileName, $exportedFiles);
+					// remove files
+					foreach ($exportedFiles as $exportedFile) {
+						$this->cleanTmpfile($exportedFile);
+					}
+				} else {
+					$finalExportFileName = array_shift($exportedFiles);
+					$finalExportFileType = DATACITE_EXPORT_FILE_XML;
+				}
+				header('Content-Type: application/' . ($finalExportFileType == DATACITE_EXPORT_FILE_TAR ? 'x-gtar' : 'xml'));
+				header('Cache-Control: private');
+				header('Content-Disposition: attachment; filename="' . basename($finalExportFileName) . '"');
+				readfile($finalExportFileName);
+			} else {
+				if (is_array($result)) {
+					foreach($result as $error) {
+						assert(is_array($error) && count($error) >= 1);
+						$this->_sendNotification(
+							$request->getUser(),
+							$error[0],
+							NOTIFICATION_TYPE_ERROR,
+							(isset($error[1]) ? $error[1] : null)
+						);
+					}
+				}
+				// redirect back to the right tab
+				$request->redirect(null, null, null, $path, null, $tab);
+			}
+		} elseif ($request->getUserVar(DOI_EXPORT_ACTION_DEPOSIT)) {
+			$resultErrors = array();
+			foreach ($objects as $object) {
+				// Get the XML
+				$exportXml = $this->exportXML($object, $filter, $context);
+				// Write the XML to a file.
+				// export file name example: datacite/20160723-160036-articles-1-1.xml
+				$objectFileNamePart = $objectsFileNamePart . '-' . $object->getId();
+				$exportFileName = $this->getExportFileName($objectFileNamePart, $context);
+				file_put_contents($exportFileName, $exportXml);
+				// Deposit the XML file.
+				$result = $this->depositXML($object, $context, $exportFileName);
+				if (is_array($result)) {
+					$resultErrors[] = $result;
+				}
+				// Remove all temporary files.
+				$this->cleanTmpfile($exportFileName);
+			}
+			// send notifications
+			if (empty($resultErrors)) {
+				$this->_sendNotification(
+					$request->getUser(),
+					$this->getDepositSuccessNotificationMessageKey(),
+					NOTIFICATION_TYPE_SUCCESS
+				);
+			} else {
+				foreach($resultErrors as $error) {
+					assert(is_array($error) && count($error) >= 1);
+					$this->_sendNotification(
+						$request->getUser(),
+						$error[0],
+						NOTIFICATION_TYPE_ERROR,
+						(isset($error[1]) ? $error[1] : null)
+					);
+				}
+			}
+			// redirect back to the right tab
+			$request->redirect(null, null, null, $path, null, $tab);
+		} else {
+			return parent::executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart);
+		}
+	}
+
+	/**
+	 * @copydoc DOIPubIdExportPlugin::depositXML()
+	 */
+	function depositXML($object, $context, $filename) {
+		$request = $this->getRequest();
 		// Get the DOI and the URL for the object.
 		$doi = $object->getStoredPubId('doi');
 		assert(!empty($doi));
-		if ($this->isTestMode($request)) {
+		if ($this->isTestMode($context)) {
 			$doi = PKPString::regexp_replace('#^[^/]+/#', DATACITE_API_TESTPREFIX . '/', $doi);
 		}
-		$url = $this->_getObjectUrl($request, $journal, $object);
+		$url = $this->_getObjectUrl($request, $context, $object);
 		assert(!empty($url));
-
 		// Prepare HTTP session.
-		$curlCh = curl_init ();
+		$curlCh = curl_init();
+		if ($httpProxyHost = Config::getVar('proxy', 'http_host')) {
+			curl_setopt($curlCh, CURLOPT_PROXY, $httpProxyHost);
+			curl_setopt($curlCh, CURLOPT_PROXYPORT, Config::getVar('proxy', 'http_port', '80'));
+			if ($username = Config::getVar('proxy', 'username')) {
+				curl_setopt($curlCh, CURLOPT_PROXYUSERPWD, $username . ':' . Config::getVar('proxy', 'password'));
+			}
+		}
 		curl_setopt($curlCh, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curlCh, CURLOPT_POST, true);
-
 		// Set up basic authentication.
-		$username = $this->getSetting($journal->getId(), 'username');
-		$password = $this->getSetting($journal->getId(), 'password');
+		$username = $this->getSetting($context->getId(), 'username');
+		$password = $this->getSetting($context->getId(), 'password');
 		curl_setopt($curlCh, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
 		curl_setopt($curlCh, CURLOPT_USERPWD, "$username:$password");
-
 		// Set up SSL.
 		curl_setopt($curlCh, CURLOPT_SSL_VERIFYPEER, false);
-
 		// Transmit meta-data.
-		assert(is_readable($file));
-		$payload = file_get_contents($file);
+		assert(is_readable($filename));
+		$payload = file_get_contents($filename);
 		assert($payload !== false && !empty($payload));
 		curl_setopt($curlCh, CURLOPT_URL, DATACITE_API_URL . 'metadata');
 		curl_setopt($curlCh, CURLOPT_HTTPHEADER, array('Content-Type: application/xml;charset=UTF-8'));
 		curl_setopt($curlCh, CURLOPT_POSTFIELDS, $payload);
-
 		$result = true;
 		$response = curl_exec($curlCh);
 		if ($response === false) {
-			$result = array(array('plugins.importexport.common.register.error.mdsError', 'No response from server.'));
+			$result = array(array('plugins.importexport.common.register.error.mdsError', "Registering DOI $doi: No response from server."));
 		} else {
 			$status = curl_getinfo($curlCh, CURLINFO_HTTP_CODE);
 			if ($status != DATACITE_API_RESPONSE_OK) {
-				$result = array(array('plugins.importexport.common.register.error.mdsError', "$status - $response"));
+				$result = array(array('plugins.importexport.common.register.error.mdsError', "Registering DOI $doi: $status - $response"));
 			}
 		}
-
 		// Mint a DOI.
 		if ($result === true) {
 			$payload = "doi=$doi\nurl=$url";
-
 			curl_setopt($curlCh, CURLOPT_URL, DATACITE_API_URL . 'doi');
 			curl_setopt($curlCh, CURLOPT_HTTPHEADER, array('Content-Type: text/plain;charset=UTF-8'));
 			curl_setopt($curlCh, CURLOPT_POSTFIELDS, $payload);
-
 			$response = curl_exec($curlCh);
 			if ($response === false) {
-				$result = array(array('plugins.importexport.common.register.error.mdsError', 'No response from server.'));
+				$result = array(array('plugins.importexport.common.register.error.mdsError', 'Registering DOI $doi: No response from server.'));
 			} else {
 				$status = curl_getinfo($curlCh, CURLINFO_HTTP_CODE);
 				if ($status != DATACITE_API_RESPONSE_OK) {
-					$result = array(array('plugins.importexport.common.register.error.mdsError', "$status - $response"));
+					$result = array(array('plugins.importexport.common.register.error.mdsError', "Registering DOI $doi: $status - $response"));
 				}
 			}
 		}
-
 		curl_close($curlCh);
-
 		if ($result === true) {
-			// Mark the object as registered.
-			$this->markRegistered($request, $object, DATACITE_API_TESTPREFIX);
+			$object->setData($this->getDepositStatusSettingName(), DOI_EXPORT_STATUS_REGISTERED);
+			$this->saveRegisteredDoi($context, $object, DATACITE_API_TESTPREFIX);
 		}
-
 		return $result;
 	}
 
+	/**
+	 * Retrieve all unregistered articles.
+	 * @param $context Context
+	 * @return array
+	 */
+	function getUnregisteredGalleys($context) {
+		// Retrieve all galleys that have not yet been registered.
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+		$galleys = $galleyDao->getByPubIdType(
+			$this->getPubIdType(),
+			$context?$context->getId():null,
+			null,
+			null,
+			null,
+			$this->getPluginSettingsPrefix(). '::' . DOI_EXPORT_REGISTERED_DOI,
+			null,
+			null
+		);
+		return $galleys->toArray();
+	}
 
-	//
-	// Private helper methods
-	//
+
+	/**
+	 * Get article galleys from gallley IDs.
+	 * @param $galleyIds array
+	 * @param $context Context
+	 * @return array
+	 */
+	function _getArticleGalleys($galleyIds, $context) {
+		$galleys = array();
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		foreach ($galleyIds as $galleyId) {
+			$articleGalley = $articleGalleyDao->getById($galleyId, null, $context->getId());
+			if ($articleGalley) $galleys[] = $articleGalley;
+		}
+		return $galleys;
+	}
+
+	/**
+	 * Test whether the tar binary is available.
+	 * @return boolean|array Boolean true if available otherwise
+	 *  an array with an error message.
+	 */
+	function _checkForTar() {
+		$tarBinary = Config::getVar('cli', 'tar');
+		if (empty($tarBinary) || !is_executable($tarBinary)) {
+			$result = array(
+				array('manager.plugins.tarCommandNotFound')
+			);
+		} else {
+			$result = true;
+		}
+		return $result;
+	}
+
+	/**
+	 * Create a tar archive.
+	 * @param $targetPath string
+	 * @param $targetFile string
+	 * @param $sourceFiles array
+	 */
+	function _tarFiles($targetPath, $targetFile, $sourceFiles) {
+		assert($this->_checkForTar());
+		// GZip compressed result file.
+		$tarCommand = Config::getVar('cli', 'tar') . ' -czf ' . escapeshellarg($targetFile);
+		// Do not reveal our internal export path by exporting only relative filenames.
+		$tarCommand .= ' -C ' . escapeshellarg($targetPath);
+		// Do not reveal our webserver user by forcing root as owner.
+		$tarCommand .= ' --owner 0 --group 0 --';
+		// Add each file individually so that other files in the directory
+		// will not be included.
+		foreach($sourceFiles as $sourceFile) {
+			assert(dirname($sourceFile) . '/' === $targetPath);
+			if (dirname($sourceFile) . '/' !== $targetPath) continue;
+			$tarCommand .= ' ' . escapeshellarg(basename($sourceFile));
+		}
+		// Execute the command.
+		exec($tarCommand);
+	}
+
 	/**
 	 * Get the canonical URL of an object.
 	 * @param $request Request
-	 * @param $journal Journal
+	 * @param $context Context
 	 * @param $object Issue|PublishedArticle|ArticleGalley
 	 */
-	function _getObjectUrl($request, $journal, $object) {
+	function _getObjectUrl($request, $context, $object) {
 		$router = $request->getRouter();
-
 		// Retrieve the article of article files.
-		if (is_a($object, 'SubmissionFile')) {
-			$articleId = $object->getArticleId();
+		if (is_a($object, 'ArticleGalley')) {
+			$articleId = $object->getSubmissionId();
 			$cache = $this->getCache();
 			if ($cache->isCached('articles', $articleId)) {
 				$article = $cache->get('articles', $articleId);
 			} else {
 				$articleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
-				$article = $articleDao->getPublishedArticleByArticleId($articleId, $journal->getId(), true);
+				$article = $articleDao->getPublishedArticleByArticleId($articleId, $context->getId(), true);
 			}
 			assert(is_a($article, 'PublishedArticle'));
 		}
-
 		$url = null;
 		switch (true) {
 			case is_a($object, 'Issue'):
-				$url = $router->url($request, null, 'issue', 'view', $object->getBestIssueId());
+				$url = $router->url($request, $context->getPath(), 'issue', 'view', $object->getBestIssueId());
 				break;
-
 			case is_a($object, 'PublishedArticle'):
-				$url = $router->url($request, null, 'article', 'view', $object->getBestArticleId());
+				$url = $router->url($request, $context->getPath(), 'article', 'view', $object->getBestArticleId());
 				break;
-
 			case is_a($object, 'ArticleGalley'):
-				$url = $router->url($request, null, 'article', 'view', array($article->getBestArticleId(), $object->getBestGalleyId()));
+				$url = $router->url($request, $context->getPath(), 'article', 'view', array($article->getBestArticleId(), $object->getBestGalleyId()));
 				break;
 		}
-
-		if ($this->isTestMode($request)) {
+		if ($this->isTestMode($context)) {
 			// Change server domain for testing.
 			$url = PKPString::regexp_replace('#://[^\s]+/index.php#', '://example.com/index.php', $url);
 		}
 		return $url;
 	}
 
-	/**
-	 * @copydoc PKPImportExportPlugin::usage
-	 */
-	function usage($scriptName) {
-		fatalError('Not implemented');
-	}
 }
 
 ?>
