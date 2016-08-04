@@ -25,7 +25,6 @@
 	<message key="plugins.importexport.medra.settings.form.usernameRequired">Inserisci il tuo username mEDRA.</message>
 	<message key="plugins.importexport.medra.settings.form.passwordRequired">Inserisci la password ricevuta da mEDRA.</message>
 	<message key="plugins.importexport.medra.settings.form.automaticRegistration">Registra DOI automaticamente</message>
-	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description"><![CDATA[OJS depositerà i DOI automaticamente su mEDRA dopo la pubblicazione degli articoli. Potrebbe occorrere un certo tempo dopo la pubblicazione degli articoli. Puoi verificare i DOI in attesa di essere registrati nella <a href="{$unregisteredURL}">lista degli articoli non registrati</a>.]]></message>
 	<message key="plugins.importexport.medra.settings.form.registrantName">Istituzione registrata con mEDRA</message>	
 	<message key="plugins.importexport.medra.settings.form.registrantNameRequired">Inserisci il nome dell'istituzione registrata con mEDRA</message>
 	<message key="plugins.importexport.medra.settings.form.fromFields">Persona che verrà contattata da mEDRA in caso di problemi tecnici</message>
