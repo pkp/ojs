@@ -30,7 +30,7 @@
 		{* Issue cover image *}
 		{assign var=issueCover value=$issue->getCoverImage()}
 		{if $issueCover}
-			<a class="cover" href="{url op="view" path=$issue->getBestIssueId()}">
+			<a class="cover" href="{url op="view" page="issue" path=$issue->getBestIssueId()}">
 				<img src="{$coverImagePath|escape}{$issueCover|escape}"{if $issue->getCoverImageAltText() != ''} alt="{$issue->getCoverImageAltText()|escape}"{/if}>
 			</a>
 		{/if}
