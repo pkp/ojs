@@ -72,7 +72,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$submissionDao = Application::getSubmissionDAO();
 		$file = $args['coverImage'];
 
-		// Remove cover image and alt text from issue settings
+		// Remove cover image and alt text from article settings
 		$submission->setCoverImage('');
 		$submission->setCoverImageAltText('');
 
