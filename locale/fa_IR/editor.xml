@@ -183,11 +183,11 @@
 	<message key="editor.article.hideTocAuthorShow">نمایش</message>
 	<message key="editor.article.cover">جلد مجله</message>
 	<message key="editor.article.showCoverPage">ایجاد جلدی برای این مقاله متشکل عناصر زیر</message>
-	<message key="editor.article.coverPageDisplay">نمایش</message>
+	<message key="editor.article.coverImageDisplay">نمایش</message>
 	<message key="editor.article.hideCoverPageToc">تصویر کوچک جلد مجله را در فهرست مقالات نشان نده</message>
 	<message key="editor.article.hideCoverPageAbstract">هنگام نمایش چکیده مقاله جلد مجله را در نمای چکیده نشان نده</message>
-	<message key="editor.article.coverPage">تصویر جلد</message>
-	<message key="editor.article.coverPageInstructions">فرمات های مجاز: gif, jpg, png</message>
+	<message key="editor.article.coverImage">تصویر جلد</message>
+	<message key="editor.article.coverImageInstructions">فرمات های مجاز: gif, jpg, png</message>
 	<message key="editor.article.uploaded">آپلود شد</message>
 	<message key="editor.article.removeCoverPage">حذف تصویر جلد</message>
 	<message key="editor.article.remove">حذف</message>

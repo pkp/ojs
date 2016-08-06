@@ -177,11 +177,11 @@
 	<message key="editor.article.hideTocAuthorShow">Prikaži</message>
 	<message key="editor.article.cover">Naslovnica</message>
 	<message key="editor.article.showCoverPage">Kreiraj naslovnu stranicu za ovaj prilog sa sljedećim elementima.</message>
-	<message key="editor.article.coverPageDisplay">Prikaz</message>
+	<message key="editor.article.coverImageDisplay">Prikaz</message>
 	<message key="editor.article.hideCoverPageToc">Ne prikazuj umanjenu sliku naslovne stranice u kazalu sadržaja.</message>
 	<message key="editor.article.hideCoverPageAbstract">Ne prikazuj sliku naslovne stranice u sažetku priloga.</message>
-	<message key="editor.article.coverPage">Slika naslovne stranice</message>
-	<message key="editor.article.coverPageInstructions">(dozvoljeni formati: .gif, .jpg ili .png)</message>
+	<message key="editor.article.coverImage">Slika naslovne stranice</message>
+	<message key="editor.article.coverImageInstructions">(dozvoljeni formati: .gif, .jpg ili .png)</message>
 	<message key="editor.article.uploaded">Priložena</message>
 	<message key="editor.article.removeCoverPage">Želite li ukloniti sliku naslovne stranice?</message>
 	<message key="editor.article.remove">Ukloni</message>

@@ -206,11 +206,11 @@
 	<message key="editor.article.hideTocAuthorShow">Mostra</message>
 	<message key="editor.article.cover">Portada</message>
 	<message key="editor.article.showCoverPage">Crea una portada per a aquest article amb els elements següents:</message>
-	<message key="editor.article.coverPageDisplay">Visualització</message>
+	<message key="editor.article.coverImageDisplay">Visualització</message>
 	<message key="editor.article.hideCoverPageToc">No mostris una miniatura de la imatge de la portada a la taula de continguts.</message>
 	<message key="editor.article.hideCoverPageAbstract">No mostris la imatge de la portada a la visualització del resum de l’article.</message>
-	<message key="editor.article.coverPage">Imatge per a la portada</message>
-	<message key="editor.article.coverPageInstructions">(Formats admesos: .gif, .jpg, .png)</message>
+	<message key="editor.article.coverImage">Imatge per a la portada</message>
+	<message key="editor.article.coverImageInstructions">(Formats admesos: .gif, .jpg, .png)</message>
 	<message key="editor.article.uploaded">Carregat</message>
 	<message key="editor.article.removeCoverPage">Voleu eliminar la imatge de la portada?</message>
 	<message key="editor.article.remove">Elimina</message>

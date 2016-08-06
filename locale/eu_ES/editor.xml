@@ -183,11 +183,11 @@
 	<message key="editor.article.hideTocAuthorShow">Erakutsi</message>
 	<message key="editor.article.cover">Azala</message>
 	<message key="editor.article.showCoverPage">Sortu artikulu honen azala ondorengo elementuekin.</message>
-	<message key="editor.article.coverPageDisplay">Erakutsi</message>
+	<message key="editor.article.coverImageDisplay">Erakutsi</message>
 	<message key="editor.article.hideCoverPageToc">Ez erakutsi azaleko irudia aurkibidean.</message>
 	<message key="editor.article.hideCoverPageAbstract">Ez erakutsi azaleko irudia artikuluaren laburpenaren ikuspegian.</message>
-	<message key="editor.article.coverPage">Azaleko irudia</message>
-	<message key="editor.article.coverPageInstructions">(gif, .jpg, edo .png formatuak onartzen dira)</message>
+	<message key="editor.article.coverImage">Azaleko irudia</message>
+	<message key="editor.article.coverImageInstructions">(gif, .jpg, edo .png formatuak onartzen dira)</message>
 	<message key="editor.article.uploaded">Kargatuta</message>
 	<message key="editor.article.removeCoverPage">Azaleko irudia kendu?</message>
 	<message key="editor.article.remove">Kendu</message>

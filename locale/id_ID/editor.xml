@@ -192,11 +192,11 @@
 	<message key="editor.article.hideTocAuthorShow">Tampilkan</message> 
 	<message key="editor.article.cover"> Sampul</message> 
 	<message key="editor.article.showCoverPage"> Buat sampul untuk artikel ini dengan elemen berikut.</message>
-	<message key="editor.article.coverPageDisplay">Tampilan</message> 
+	<message key="editor.article.coverImageDisplay">Tampilan</message> 
 	<message key="editor.article.hideCoverPageToc"> Jangan tampilkan gambar sampul pada tabel isi.</message>	
 <message key="editor.article.hideCoverPageAbstract"> Jangan tampilkan gambar sampul pada tampilan sari.</message>
-	<message key="editor.article.coverPage">Gambar Sampul</message>
-	<message key="editor.article.coverPageInstructions"> Ijinkan formats: .gif, .jpg, or .png )</message> 
+	<message key="editor.article.coverImage">Gambar Sampul</message>
+	<message key="editor.article.coverImageInstructions"> Ijinkan formats: .gif, .jpg, or .png )</message> 
 	<message key="editor.article.uploaded"> Unggah</message> 
 	<message key="editor.article.removeCoverPage"> Hapus gambar sampul?</message> 
 	<message key="editor.article.remove"> Hapus</message> 

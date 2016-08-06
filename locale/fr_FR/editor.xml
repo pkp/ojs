@@ -183,11 +183,11 @@
 	<message key="editor.article.hideTocAuthorShow">Afficher</message>
 	<message key="editor.article.cover">Page couverture</message>
 	<message key="editor.article.showCoverPage">Créer une page couverture pour cet article avec les éléments suivants.</message>
-	<message key="editor.article.coverPageDisplay">Afficher</message>
+	<message key="editor.article.coverImageDisplay">Afficher</message>
 	<message key="editor.article.hideCoverPageToc">Ne pas afficher l'imagette de la page couverture dans le sommaire.</message>
 	<message key="editor.article.hideCoverPageAbstract">Ne pas afficher l'image de la page couverture lors de l'affichage du résumé de l'article.</message>
-	<message key="editor.article.coverPage">Image de la page couverture</message>
-	<message key="editor.article.coverPageInstructions">(Formats autorisés : .gif, .jpg, ou .png)</message>
+	<message key="editor.article.coverImage">Image de la page couverture</message>
+	<message key="editor.article.coverImageInstructions">(Formats autorisés : .gif, .jpg, ou .png)</message>
 	<message key="editor.article.uploaded">Téléchargé</message>
 	<message key="editor.article.removeCoverPage">Supprimer l'image de la page couverture?</message>
 	<message key="editor.article.remove">Supprimer</message>

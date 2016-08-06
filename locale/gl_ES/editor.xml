@@ -184,11 +184,11 @@
 	<message key="editor.article.hideTocAuthorShow">Amosar</message>
 	<message key="editor.article.cover">Agachar</message>
 	<message key="editor.article.showCoverPage">Crear unha capa para este artigo cos elementos a seguir.</message>
-	<message key="editor.article.coverPageDisplay">Visualización</message>
+	<message key="editor.article.coverImageDisplay">Visualización</message>
 	<message key="editor.article.hideCoverPageToc">Non amosar image miniatura da capa na táboa de contidos ou sumario</message>
 	<message key="editor.article.hideCoverPageAbstract">Non amosar imaxe da capa na vista do resumo do artigo.</message>
-	<message key="editor.article.coverPage">Image da capa</message>
-	<message key="editor.article.coverPageInstructions">(Formatos permitidos: .gif, .jpg, o .png)</message>
+	<message key="editor.article.coverImage">Image da capa</message>
+	<message key="editor.article.coverImageInstructions">(Formatos permitidos: .gif, .jpg, o .png)</message>
 	<message key="editor.article.uploaded">Ficheiro enviado</message>
 	<message key="editor.article.removeCoverPage">Eliminar a imaxe da capa?</message>
 	<message key="editor.article.remove">Eliminar</message>

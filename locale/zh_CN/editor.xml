@@ -187,11 +187,11 @@
 	<message key="editor.article.hideTocAuthorShow">显示</message>
 	<message key="editor.article.cover">封面</message>
 	<message key="editor.article.showCoverPage">为这篇文章创建一个包含下面内容的封面.</message>
-	<message key="editor.article.coverPageDisplay">显示</message>
+	<message key="editor.article.coverImageDisplay">显示</message>
 	<message key="editor.article.hideCoverPageToc">在目录页不显示封面图片的所略图.</message>
 	<message key="editor.article.hideCoverPageAbstract">在文章摘要页不显示封面图片.</message>
-	<message key="editor.article.coverPage">封面图片</message>
-	<message key="editor.article.coverPageInstructions">(允许的格式: .gif, .jpg, or .png )</message>
+	<message key="editor.article.coverImage">封面图片</message>
+	<message key="editor.article.coverImageInstructions">(允许的格式: .gif, .jpg, or .png )</message>
 	<message key="editor.article.uploaded">已经上传</message>
 	<message key="editor.article.removeCoverPage">删除封面?</message>
 	<message key="editor.article.remove">删除</message>

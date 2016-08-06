@@ -183,11 +183,11 @@
 	<message key="editor.article.hideTocAuthorShow">Mostrar</message>
 	<message key="editor.article.cover">Ocultar</message>
 	<message key="editor.article.showCoverPage">Crear una portada para este artículo con los siguientes elementos.</message>
-	<message key="editor.article.coverPageDisplay">Visualización</message>
+	<message key="editor.article.coverImageDisplay">Visualización</message>
 	<message key="editor.article.hideCoverPageToc">No mostrar imagen miniatura de la portada en la tabla de contenidos</message>
 	<message key="editor.article.hideCoverPageAbstract">No mostrar imagen de la portada en la vista del resumen del artículo.</message>
-	<message key="editor.article.coverPage">Imagen de portada</message>
-	<message key="editor.article.coverPageInstructions">(Formatos permitidos: .gif, .jpg, o .png)</message>
+	<message key="editor.article.coverImage">Imagen de portada</message>
+	<message key="editor.article.coverImageInstructions">(Formatos permitidos: .gif, .jpg, o .png)</message>
 	<message key="editor.article.uploaded">archivo enviado</message>
 	<message key="editor.article.removeCoverPage">Remover imagen de portada?</message>
 	<message key="editor.article.remove">Remover</message>

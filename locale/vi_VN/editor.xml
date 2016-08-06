@@ -185,11 +185,11 @@
 	<message key="editor.article.hideTocAuthorShow">Hiển thị</message>
 	<message key="editor.article.cover">Trang bìa</message>
 	<message key="editor.article.showCoverPage">Tạo trang bìa cho số tạp chí này với các thành phần sau.</message>
-	<message key="editor.article.coverPageDisplay">Hiển thị</message>
+	<message key="editor.article.coverImageDisplay">Hiển thị</message>
 	<message key="editor.article.hideCoverPageToc">Không hiển thị hình nhỏ của bìa khi liệt kê các số tạp chí.</message>
 	<message key="editor.article.hideCoverPageAbstract">Không hiện thị ảnh bìa khi xem tóm tắt tạp bài viết</message>
-	<message key="editor.article.coverPage">Ảnh bìa</message>
-	<message key="editor.article.coverPageInstructions">(Định dạng cho phép: .gif, .jpg, or .png )</message>
+	<message key="editor.article.coverImage">Ảnh bìa</message>
+	<message key="editor.article.coverImageInstructions">(Định dạng cho phép: .gif, .jpg, or .png )</message>
 	<message key="editor.article.uploaded">Tải lên</message>
 	<message key="editor.article.removeCoverPage">Loại bỏ ảnh bìa?</message>
 	<message key="editor.article.remove">Loại bỏ</message>

@@ -183,11 +183,11 @@
 	<message key="editor.article.hideTocAuthorShow">Εμφάνιση</message>
 	<message key="editor.article.cover">Εξώφυλλο</message>
 	<message key="editor.article.showCoverPage">Δημιουργήστε ένα εξώφυλλο για αυτό το άρθρο με τα παρακάτω στοιχεία.</message>
-	<message key="editor.article.coverPageDisplay">Εμφάνιση</message>
+	<message key="editor.article.coverImageDisplay">Εμφάνιση</message>
 	<message key="editor.article.hideCoverPageToc">Να μην εμφανίζεται το εικονίδιο του εξωφύλλου στον πίνακα περιεχομένων</message>
 	<message key="editor.article.hideCoverPageAbstract">Να μην εμφανίζεται η εικόνα του εξωφύλλου στην προβολή της περίληψη του άρθρου</message>
-	<message key="editor.article.coverPage">Εικόνα εξωφύλλου</message>
-	<message key="editor.article.coverPageInstructions">(Επιτρεπόμενες μορφές αρχείων: .gif, .jpg, ή .png )</message>
+	<message key="editor.article.coverImage">Εικόνα εξωφύλλου</message>
+	<message key="editor.article.coverImageInstructions">(Επιτρεπόμενες μορφές αρχείων: .gif, .jpg, ή .png )</message>
 	<message key="editor.article.uploaded">Μεταφορτώθηκε</message>
 	<message key="editor.article.removeCoverPage">Αφαίρεση εικόνας εξωφύλλου?</message>
 	<message key="editor.article.remove">Αφαίρεση</message>

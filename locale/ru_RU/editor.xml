@@ -206,11 +206,11 @@
 	<message key="editor.article.hideTocAuthorShow">Показать</message>
 	<message key="editor.article.cover">Обложка</message>
 	<message key="editor.article.showCoverPage">Создать обложку для этой статьи, содержащую следующие элементы.</message>
-	<message key="editor.article.coverPageDisplay">Показать</message>
+	<message key="editor.article.coverImageDisplay">Показать</message>
 	<message key="editor.article.hideCoverPageToc">Не показывать уменьшенное изображение обложки в содержании.</message>
 	<message key="editor.article.hideCoverPageAbstract">Не показывать изображение обложки в просмотре аннотации статьи.</message>
-	<message key="editor.article.coverPage">Изображение обложки</message>
-	<message key="editor.article.coverPageInstructions">(Разрешенные форматы: .gif, .jpg, или .png)</message>
+	<message key="editor.article.coverImage">Изображение обложки</message>
+	<message key="editor.article.coverImageInstructions">(Разрешенные форматы: .gif, .jpg, или .png)</message>
 	<message key="editor.article.uploaded">Загружен</message>
 	<message key="editor.article.removeCoverPage">Удалить изображение обложки?</message>
 	<message key="editor.article.remove">Удалить</message>

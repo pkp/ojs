@@ -183,11 +183,11 @@
 	<message key="editor.article.hideTocAuthorShow">表示する</message>
 	<message key="editor.article.cover">表紙</message>
 	<message key="editor.article.showCoverPage">次の要素を使って論文の表示を作成する。</message>
-	<message key="editor.article.coverPageDisplay">表示</message>
+	<message key="editor.article.coverImageDisplay">表示</message>
 	<message key="editor.article.hideCoverPageToc">目次に表紙画像のサムネールを表示しない。</message>
 	<message key="editor.article.hideCoverPageAbstract">論文抄録ページに表紙画像を表示しない。</message>
-	<message key="editor.article.coverPage">表紙画像</message>
-	<message key="editor.article.coverPageInstructions">（使用可能なフォーマット: .gif, .jpg, .png）</message>
+	<message key="editor.article.coverImage">表紙画像</message>
+	<message key="editor.article.coverImageInstructions">（使用可能なフォーマット: .gif, .jpg, .png）</message>
 	<message key="editor.article.uploaded">アップロード</message>
 	<message key="editor.article.removeCoverPage">表紙画像を削除しても良いですか?</message>
 	<message key="editor.article.remove">削除</message>

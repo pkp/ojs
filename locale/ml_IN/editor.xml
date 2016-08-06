@@ -194,11 +194,11 @@
 	<message key="editor.article.hideTocAuthorShow">കാണിക്കുക</message>
 	<message key="editor.article.cover">കവര്‍</message>
 	<message key="editor.article.showCoverPage">താഴെ പറയുന്ന ഘടകങ്ങള്‍ ഉള്‍പ്പെട്ട ഒരു കവര്‍ ഈ പ്രബന്ധത്തിനായി സൃഷ്ടിക്കുക</message>
-	<message key="editor.article.coverPageDisplay">പ്രദര്‍ശനം</message>
+	<message key="editor.article.coverImageDisplay">പ്രദര്‍ശനം</message>
 	<message key="editor.article.hideCoverPageToc">ഉള്ളടക്കപ്പട്ടികയില്‍ കവര്‍ ചിത്രത്തിന്റെ സൂചനകളൊന്നും പ്രദര്‍ശിപ്പിക്കരുത്.</message>
 	<message key="editor.article.hideCoverPageAbstract">പ്രബന്ധത്തിന്റെ സംഗ്രഹത്തില്‍ കവര്‍ ചിത്രത്തെ പ്രദര്‍ശിപ്പിക്കരുത്.</message>
-	<message key="editor.article.coverPage">കവര്‍ ചിത്രം</message>
-	<message key="editor.article.coverPageInstructions">(അനുവദനീയമായ ഫോര്‍മാറ്റുകള്‍: .gif, .jpg, or .png )</message>
+	<message key="editor.article.coverImage">കവര്‍ ചിത്രം</message>
+	<message key="editor.article.coverImageInstructions">(അനുവദനീയമായ ഫോര്‍മാറ്റുകള്‍: .gif, .jpg, or .png )</message>
 	<message key="editor.article.uploaded">അപ് ലോഡ് ചെയ്തു</message>
 	<message key="editor.article.removeCoverPage">കവര്‍ ചിത്രം നീക്കം ചെയ്യണോ?</message>
 	<message key="editor.article.remove">നീക്കം ചെയ്യുക</message>

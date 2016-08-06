@@ -182,11 +182,11 @@
 	<message key="editor.article.hideTocAuthorShow">Exibir</message>
 	<message key="editor.article.cover">Capa</message>
 	<message key="editor.article.showCoverPage">Criar capa para este artigo com os seguintes elementos.</message>
-	<message key="editor.article.coverPageDisplay">Exibir</message>
+	<message key="editor.article.coverImageDisplay">Exibir</message>
 	<message key="editor.article.hideCoverPageToc">Não exibir miniatura da capa no sumário.</message>
 	<message key="editor.article.hideCoverPageAbstract">Não exibir capa na página de resumo de artigo.</message>
-	<message key="editor.article.coverPage">Capa do artigo</message>
-	<message key="editor.article.coverPageInstructions">(Formatos permitidos: .gif, jpg ou .png)</message>
+	<message key="editor.article.coverImage">Capa do artigo</message>
+	<message key="editor.article.coverImageInstructions">(Formatos permitidos: .gif, jpg ou .png)</message>
 	<message key="editor.article.uploaded">Enviado</message>
 	<message key="editor.article.removeCoverPage">Excluir capa?</message>
 	<message key="editor.article.remove">Excluir</message>
