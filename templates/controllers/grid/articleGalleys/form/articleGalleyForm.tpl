@@ -25,8 +25,8 @@
 <form class="pkp_form" id="articleGalleyForm" method="post" action="{url op="updateGalley" submissionId=$submissionId representationId=$representationId}">
 	{csrf}
 	{fbvFormArea id="galley"}
-		{fbvFormSection title="submission.layout.galleyFileData"}
-			{fbvElement type="text" label="submission.layout.galleyLabel" value=$label id="label" size=$fbvStyles.size.MEDIUM inline=true}
+		{fbvFormSection title="submission.layout.galleyLabel"}
+			{fbvElement type="text" label="submission.layout.galleyLabelInstructions" value=$label id="label" size=$fbvStyles.size.MEDIUM inline=true}
 		{/fbvFormSection}
 		{fbvFormSection}
 			{fbvElement type="select" id="galleyLocale" label="common.language" from=$supportedLocales selected=$galleyLocale|default:$formLocale size=$fbvStyles.size.MEDIUM translate=false inline=true}
