@@ -80,7 +80,7 @@ class IssueForm extends Form {
 					$router->url(
 						$request, null, null, 'deleteCoverImage', null, array(
 							'coverImage' => $coverImage,
-							'issue' => $this->issue->getId(),
+							'issueId' => $this->issue->getId(),
 						)
 					),
 					'modal_delete'

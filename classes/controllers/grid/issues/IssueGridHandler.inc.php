@@ -160,7 +160,7 @@ class IssueGridHandler extends GridHandler {
 	}
 
 	/**
-	 * An action to upload an issue file. Used for both covers and stylesheets.
+	 * An action to upload an issue file. Used for issue cover images.
 	 * @param $args array
 	 * @param $request PKPRequest
 	 * @return JSONMessage JSON object
@@ -186,17 +186,17 @@ class IssueGridHandler extends GridHandler {
 	 * Delete an uploaded cover image.
 	 * @param $args array
 	 *   `coverImage` string Filename of the cover image to be deleted.
-	 *   `issue` int Id of the issue this cover image is attached to
+	 *   `issueId` int Id of the issue this cover image is attached to
 	 * @param $request PKPRequest
 	 * @return JSONMessage JSON object
 	 */
 	function deleteCoverImage($args, $request) {
-		assert(!empty($args['coverImage']) && !empty($args['issue']));
+		assert(!empty($args['coverImage']) && !empty($args['issueId']));
 
 		// Check if the passed filename matches the filename for this issue's
 		// cover page.
 		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$issue = $issueDao->getById((int) $args['issue']);
+		$issue = $issueDao->getById((int) $args['issueId']);
 		if ($args['coverImage'] != $issue->getCoverImage()) {
 			return new JSONMessage(false, __('editor.issues.removeCoverImageFileNameMismatch'));
 		}
