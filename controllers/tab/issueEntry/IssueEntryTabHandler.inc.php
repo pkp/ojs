@@ -60,7 +60,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 	}
 
 	/**
-	 * An action to upload an article cover image.
+	 * An action to delete an article cover image.
 	 * @param $args array
 	 * @param $request PKPRequest
 	 * @return JSONMessage JSON object
