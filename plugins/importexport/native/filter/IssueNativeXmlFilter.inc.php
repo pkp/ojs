@@ -186,8 +186,8 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		if (is_array($originalFileName) && count($originalFileName) > 0) {
 			$deployment = $this->getDeployment();
 			$issueCoverNode = $doc->createElementNS($deployment->getNamespace(), 'issue_cover');
-			$issueCoverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', $issue->getCoverImage());
-			$issueCoverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_page_alt_text', $issue->getCoverImage());
+			$issueCoverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', $issue->getCoverImage()));
+			$issueCoverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_page_alt_text', $issue->getCoverImage()));
 
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
