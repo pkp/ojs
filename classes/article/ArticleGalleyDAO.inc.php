@@ -43,7 +43,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 		if ($contextId) $params[] = (int) $contextId;
 
 		$result = $this->retrieve(
-			'SELECT	g.*, sf.*
+			'SELECT	sf.*, g.*
 			FROM	submission_galleys g
 				' . ($contextId?' JOIN submissions s ON (s.submission_id = g.submission_id)':'') . '
 				LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
@@ -127,7 +127,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 
 		return new DAOResultFactory(
 			$this->retrieve(
-				'SELECT g.*, sf.*
+				'SELECT sf.*, g.*
 				FROM submission_galleys g
 				' . ($contextId?'INNER JOIN submissions s ON (g.submission_id = s.submission_id) ':'') . '
 				LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
@@ -149,7 +149,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	 */
 	function getByContextId($journalId) {
 		$result = $this->retrieve(
-			'SELECT	g.*, sf.*
+			'SELECT	sf.*, g.*
 			FROM	submission_galleys g
 				INNER JOIN submissions a ON (g.submission_id = a.submission_id)
 				LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
@@ -489,7 +489,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 		}
 
 		$result = $this->retrieveRange(
-				'SELECT	g.*, sf.*
+				'SELECT	sf.*, g.*
 			FROM	submission_galleys g
 				' . ($contextId != null?' JOIN submissions s ON (s.submission_id = g.submission_id)':'') . '
 				LEFT JOIN published_submissions ps ON (ps.submission_id = g.submission_id)
