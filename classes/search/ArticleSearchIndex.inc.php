@@ -244,6 +244,9 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 		// If no search plug-in is activated then fall back to the
 		// default database search implementation.
 		if ($hookResult === false || is_null($hookResult)) {
+
+			AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
+
 			// Check that no journal was given as we do
 			// not support journal-specific re-indexing.
 			if (is_a($journal, 'Journal')) die(__('search.cli.rebuildIndex.indexingByJournalNotSupported') . "\n");
