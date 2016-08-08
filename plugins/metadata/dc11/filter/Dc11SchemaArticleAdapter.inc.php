@@ -63,7 +63,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 	function &extractMetadataFromDataObject(&$article) {
 		assert(is_a($article, 'Article'));
 
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_SUBMISSION);
 
 		// Retrieve data that belongs to the article.
 		// FIXME: Retrieve this data from the respective entity DAOs rather than
@@ -221,8 +221,13 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		// Coverage
 		$this->_addLocalizedElements($dc11Description, 'dc:coverage', (array) $article->getCoverage(null));
 
-		// Rights
-		$this->_addLocalizedElements($dc11Description, 'dc:rights', $journal->getSetting('copyrightNotice'));
+		// Rights: Add both copyright statement and license
+		$copyrightHolder = $article->getLocalizedCopyrightHolder();
+		$copyrightYear = $article->getCopyrightYear();
+		if (!empty($copyrightHolder) && !empty($copyrightYear)) {
+			$dc11Description->addStatement('dc:rights', __('submission.copyrightStatement', array('copyrightHolder' => $copyrightHolder, 'copyrightYear' => $copyrightYear)));
+		}
+		if ($licenseUrl = $article->getLicenseURL()) $dc11Description->addStatement('dc:rights', $licenseUrl);
 
 		Hookregistry::call('Dc11SchemaArticleAdapter::extractMetadataFromDataObject', array($this, $article, $journal, $issue, &$dc11Description));
 
@@ -252,7 +257,9 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		foreach(stripAssocArray((array) $localizedValues) as $locale => $values) {
 			if (is_scalar($values)) $values = array($values);
 			foreach($values as $value) {
-				$description->addStatement($propertyName, $value, $locale);
+				if (!empty($value)) {
+					$description->addStatement($propertyName, $value, $locale);
+				}
 				unset($value);
 			}
 		}
