@@ -115,7 +115,11 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					return $json->getString();
 				}
 				$temporaryFilePath = $temporaryFile->getFilePath();
+				libxml_use_internal_errors(true);
 				$content = $this->importSubmissions(file_get_contents($temporaryFilePath), $journal, $user);
+				$validationErrors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR ||  $a->level == LIBXML_ERR_FATAL;'));
+				$templateMgr->assign('validationErrors', $validationErrors);
+				libxml_clear_errors();
 				$templateMgr->assign('content', $content);
 				$json = new JSONMessage(true, $templateMgr->fetch($this->getTemplatePath() . 'results.tpl'));
 				return $json->getString();
