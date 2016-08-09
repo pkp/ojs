@@ -30,6 +30,11 @@
 		<query>CREATE TABLE article_files_migration AS (SELECT * FROM article_files)</query>
 	</sql>
 
+	<!-- Article files migration -->
+	<sql>
+		<query>CREATE TABLE article_submitter_migration AS (SELECT article_id, user_id FROM articles)</query>
+	</sql>
+
 	<!-- Bug #8235: Rename article* submission* -->
 	<sql>
 		<!-- article_files to submission_files -->

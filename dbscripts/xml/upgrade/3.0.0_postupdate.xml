@@ -18,4 +18,8 @@
 		<query>DELETE FROM notifications WHERE type = 16777226</query><!-- NOTIFICATION_TYPE_SIGNOFF_COPYEDIT -->
 		<query>DELETE FROM notifications WHERE type = 16777228</query><!-- NOTIFICATION_TYPE_SIGNOFF_PROOF -->
 	</sql>
+
+	<sql>
+		<query>DROP TABLE article_submitter_migration</query>
+	</sql>
 </data>
