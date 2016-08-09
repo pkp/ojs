@@ -70,6 +70,26 @@
 		</complexType>
 	</element>
 
+	<!-- Add "supplementary_file" extension to submission files -->
+	<element name="supplementary_file" substitutionGroup="pkp:submission_file">
+		<complexType>
+			<complexContent>
+				<extension base="pkp:submission_file">
+					<sequence>
+						<element name="creator" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+						<element name="subject" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+						<element name="description" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+						<element name="publisher" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+						<element name="sponsor" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+						<element name="date_created" type="date" minOccurs="0" maxOccurs="1" />
+						<element name="source" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+						<element name="language" type="string" minOccurs="0" maxOccurs="1" />
+					</sequence>
+				</extension>
+			</complexContent>
+		</complexType>
+	</element>
+
 	<!--
 	  - Composite / root elements
 	  -->
@@ -95,7 +115,7 @@
 			<!-- sub elements -->
 			<element ref="pkp:sections" minOccurs="1" maxOccurs="1" />
 			<element ref="pkp:issue_cover" minOccurs="0" maxOccurs="1" />
-			<element ref="pkp:issue_galleys" minOccurs="1" maxOccurs="1" />
+			<element ref="pkp:issue_galleys" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:articles" minOccurs="1" maxOccurs="1" />
 		</sequence>
 		<attribute name="journal_id" type="int" use="optional" />

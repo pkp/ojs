@@ -1,0 +1,70 @@
+<?php
+
+/**
+ * @file plugins/importexport/native/filter/SupplementaryFileNativeXmlFilter.inc.php
+ *
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @class SupplementaryFileNativeXmlFilter
+ * @ingroup plugins_importexport_native
+ *
+ * @brief Filter to convert a supplementary file to a Native XML document
+ */
+
+import('lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter');
+
+class SupplementaryFileNativeXmlFilter extends SubmissionFileNativeXmlFilter {
+	/**
+	 * Constructor
+	 * @param $filterGroup FilterGroup
+	 */
+	function SupplementaryFileNativeXmlFilter($filterGroup) {
+		parent::SubmissionFileNativeXmlFilter($filterGroup);
+	}
+
+
+	//
+	// Implement template methods from PersistableFilter
+	//
+	/**
+	 * @copydoc PersistableFilter::getClassName()
+	 */
+	function getClassName() {
+		return 'plugins.importexport.native.filter.SupplementaryFileNativeXmlFilter';
+	}
+
+
+	//
+	// Implement/override functions from SubmissionFileNativeXmlFilter
+	//
+	/**
+	 * Create and return a submissionFile node.
+	 * @param $doc DOMDocument
+	 * @param $submissionFile SubmissionFile
+	 * @return DOMElement
+	 */
+	function createSubmissionFileNode($doc, $submissionFile) {
+		$deployment = $this->getDeployment();
+		$submissionFileNode = parent::createSubmissionFileNode($doc, $submissionFile);
+		$this->createLocalizedNodes($doc, $submissionFileNode, 'creator', $submissionFile->getCreator(null));
+		$this->createLocalizedNodes($doc, $submissionFileNode, 'subject', $submissionFile->getSubject(null));
+		$this->createLocalizedNodes($doc, $submissionFileNode, 'description', $submissionFile->getDescription(null));
+		$this->createLocalizedNodes($doc, $submissionFileNode, 'publisher', $submissionFile->getPublisher(null));
+		$this->createLocalizedNodes($doc, $submissionFileNode, 'sponsor', $submissionFile->getSponsor(null));
+		$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'date_created', $submissionFile->getDateCreated()));
+		$this->createLocalizedNodes($doc, $submissionFileNode, 'source', $submissionFile->getSource(null));
+		$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'language', $submissionFile->getLanguage()));
+		return $submissionFileNode;
+	}
+
+	/**
+	 * Get the submission file element name
+	 */
+	function getSubmissionFileElementName() {
+		return 'supplementary_file';
+	}
+}
+
+?>

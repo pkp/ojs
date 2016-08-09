@@ -81,6 +81,9 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 			case 'artwork_file':
 				$this->parseSubmissionFile($n, $submission);
 				break;
+			case 'supplementary_file':
+				$this->parseSubmissionFile($n, $submission);
+				break;
 			case 'article_galley':
 				$this->parseArticleGalley($n, $submission);
 				break;
@@ -100,7 +103,10 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 				$importClass='SubmissionFile';
 				break;
 			case 'artwork_file':
-				$importClass='ArtworkFile';
+				$importClass='SubmissionArtworkFile';
+				break;
+			case 'supplementary_file':
+				$importClass='SupplementaryFile';
 				break;
 			case 'article_galley':
 				$importClass='ArticleGalley';

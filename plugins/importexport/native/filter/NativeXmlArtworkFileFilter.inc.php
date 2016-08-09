@@ -63,9 +63,10 @@ class NativeXmlArtworkFileFilter extends NativeXmlArticleFileFilter {
 	 * any, to $submissionFiles
 	 * @param $node DOMElement
 	 * @param $stageId int SUBMISSION_FILE_...
+	 * @param $fileId int File id
 	 * @param $submissionFiles array
 	 */
-	function handleChildElement($node, $stageId, &$submissionFiles) {
+	function handleChildElement($node, $stageId, $fileId, &$submissionFiles) {
 		switch ($node->tagName) {
 			case 'caption':
 				$submissionFiles[count($submissionFiles)-1]->setCaption($node->textContent);
@@ -83,7 +84,7 @@ class NativeXmlArtworkFileFilter extends NativeXmlArticleFileFilter {
 				$submissionFiles[count($submissionFiles)-1]->setPermissionTerms($node->textContent);
 				break;
 			default:
-				return parent::handleChildElement($node, $stageId, $submissionFiles);
+				return parent::handleChildElement($node, $stageId, $fileId, $submissionFiles);
 		}
 	}
 }
