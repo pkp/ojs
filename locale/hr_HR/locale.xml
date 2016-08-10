@@ -648,7 +648,7 @@ Vaš poslužitelj trenutno podržava mbstring: <strong>{$supportsMBString}</stro
 <p>Ako se još niste registrirali i želite primati vijesti i dopune, <strong>molimo da se registrirate na <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> IAko imate pitanja ili komentare, molimo posjetite <a href="http://forum.pkp.sfu.ca" target="_new">forum podrške</a>.</p>]]></message>
 
 
-	<!-- Article Logs --><message key="log.author.submitted">{$authorName} je prijavio novi prilog, ID {$submissionId}.</message>
+	<!-- Article Logs -->
 	<message key="log.author.documentRevised">{$authorName} je revidirao svoj prilog {$submissionId}. ID nove datoteke je {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} je povučen(a) iz recenzijskog postupka priloga {$submissionId} u {$round}. krugu recenzije.</message>
 	<message key="log.review.reviewInitiated">Recenzent {$reviewerName} pokrenuo je  {$round}. krug recenzije priloga {$submissionId}.</message>

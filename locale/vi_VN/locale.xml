@@ -701,7 +701,6 @@ Máy chủ của quý vị hiện có hỗ trợ mbstring: <strong>{$supportsMBS
 
 	<!-- Article Logs -->
 	<!-- Article Logs -->
-	<message key="log.author.submitted">Tác giả {$authorName} đã gửi một bài nộp, mã số (ID) {$submissionId}.</message>
 	<message key="log.author.documentRevised">Tác giả {$authorName} đã sửa lại bài viết mã số {$submissionId}. Mã số (ID) mới của file là {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">Người phản biện {$reviewerName} không còn được giao phản biện bài nộp {$submissionId} cho vòng phản biện thứ {$round}.</message>
 	<message key="log.review.reviewInitiated">Vòng phản biện thứ {$round} của {$reviewerName} của bài nộp {$submissionId} đã được khởi động.</message>

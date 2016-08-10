@@ -975,7 +975,6 @@ Il vostro server supporta mbstring: <strong>{$supportsMBString}</strong>]]></mes
 	<message key="site.upgradeAvailable.manager"><![CDATA[Una nuova versione di OJS è disponibile! Stai utilizzando OJS {$currentVersion}. La versione più recente è OJS {$latestVersion}. Contatta l'amministratore del sito, ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) per informarlo di questa novità. Maggiori informazioni <a href="http://pkp.sfu.ca/ojs_download" target="_new">qui</a>.]]></message>
 
 	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName} ha inserito una nuova proposta, con il seguente ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} ha modificato l'articolo {$submissionId}. Il nuovo ID è {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">A {$reviewerName} è stato tolto l'incarico di revisore della proposta {$submissionId} per il {$round} ciclo di revisione.</message>
 	<message key="log.review.reviewInitiated">È iniziato il {$round} ciclo di revisione per la proposta {$submissionId} assegnata a {$reviewerName}.</message>

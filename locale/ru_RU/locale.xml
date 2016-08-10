@@ -982,7 +982,6 @@
 	<message key="site.upgradeAvailable.manager"><![CDATA[Доступна новая версия OJS! Сейчас вы пользуетесь OJS {$currentVersion}. Самая последняя версия — OJS {$latestVersion}. Пожалуйста, свяжитесь с вашим администратором сайта ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>), чтобы уведомить его об этой новой версии. Более подробную информацию можно найти <a href="http://pkp.sfu.ca/ojs_download" target="_new">здесь</a>.]]></message>
 
 	<!-- Записи в журнале событий о статьях -->
-	<message key="log.author.submitted">Автор {$authorName} добавил новую статью, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">Автор {$authorName} исправил статью {$submissionId}. Новый ID файла — {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">Рецензент {$reviewerName} был освобожден от рецензирования статьи {$submissionId} на {$round}-м раунде рецензирования.</message>
 	<message key="log.review.reviewInitiated">{$round}-й раунд рецензирования рецензентом {$reviewerName} для статьи {$submissionId} был начат.</message>

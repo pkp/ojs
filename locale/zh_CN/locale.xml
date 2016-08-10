@@ -875,7 +875,6 @@
 
 
 	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName}已经输入一份新的投稿稿件， ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName}已经修改过文章{$submissionId}。新文件的 ID为{$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName}已经被取消指派对稿件{$submissionId}进行{$round}审.</message>
 	<message key="log.review.reviewInitiated">{$reviewerName}对稿件{$submissionId}进行{$round}审的工作已经开始进行.</message>

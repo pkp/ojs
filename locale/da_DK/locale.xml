@@ -718,7 +718,6 @@ Serveren understøtter i øjeblikket mbstring: <strong>{$supportsMBString}</stro
 
 
 	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName} har angivet et nyt manuskript, Id {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} har revideret artikel {$submissionId}. Det nye fil-id er {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">Tildelingen af {$reviewerName} til bedømmelse af manuskriptet {$submissionId} for bedømmelsesrunde {$round} er fjernet.</message>
 	<message key="log.review.reviewInitiated">Rundebedømmelsen {$round}, der foretages af {$reviewerName}, for manuskriptet {$submissionId} er startet.</message>

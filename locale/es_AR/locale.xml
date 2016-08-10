@@ -637,7 +637,6 @@ Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</stron
 <p>Si no se ha registrado ya y quieres recibir noticias y actualizaciones, por favor, regístrese en <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>. Si tiene preguntas o comentarios, visite el <a href="http://forum.pkp.sfu.ca" target="_new">foro de soporte</a>.</p>]]></message>
 
 	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName} ha realizado un nuevo envío, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} ha revisado el artículo {$submissionId}. El nuevo ID del archivo es {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} ha sido desasignado/a de la revisión de envíos {$submissionId} en la ronda de revisión {$round}.</message>
 	<message key="log.review.reviewInitiated">Ha comenzado la ronda {$round} de revisión por {$reviewerName} para el envío {$submissionId}.</message>

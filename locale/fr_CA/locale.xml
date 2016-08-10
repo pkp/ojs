@@ -608,7 +608,6 @@ Actuellement, votre serveur prend en charge mbstring: <strong>{$supportsMBString
 
 
 	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName} a saisi une nouvelle soumission, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} a révisé l'article {$submissionId}. Le nouvel ID du fichier est {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} n'a pas été assigné à l'évaluation de la soumission {$submissionId} pour le cycle d'évaluation {$round}.</message>
 	<message key="log.review.reviewInitiated">Le cycle {$round} d'évaluation par {$reviewerName} pour la soumission {$submissionId} a été commencé.</message>

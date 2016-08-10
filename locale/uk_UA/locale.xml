@@ -914,7 +914,6 @@
 
 
        <!-- Article Logs -->
-       <message key="log.author.submitted">{$authorName} зробив нове подання, ID {$submissionId}.</message>
        <message key="log.author.documentRevised">{$authorName} виправив статтю {$submissionId}. Новий ID файла {$fileId}.</message>
              <message key="log.review.reviewerUnassigned">{$reviewerName} був звільнений від рецензування подання {$submissionId} на {$round} раунді.</message>
        <message key="log.review.reviewInitiated">Був розпочатий {$round} раунд рецензування подання {$submissionId} фахівцем {$reviewerName}.</message>
