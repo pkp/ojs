@@ -140,7 +140,7 @@
 						{if $article->getCoverImage()}
 							<img src="{$publicFilesDir}/{$article->getCoverImage()|escape}"{if $article->getCoverImageAltText()} alt="{$article->getCoverImageAltText()|escape}"{/if}>
 						{else}
-							<a href="{url page="issue" op="view" path=$issue->getBestIssueId($currentJournal)}">
+							<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
 								<img src="{$publicFilesDir}/{$issue->getCoverImage()|escape}"{if $issue->getCoverImageAltText()} alt="{$issue->getCoverImageAltText()|escape}"{/if}>
 							</a>
 						{/if}
