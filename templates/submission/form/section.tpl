@@ -7,12 +7,10 @@
  *
  * Include section placement for submissions.
  *}
-{url|assign:"aboutUrl" router=$smarty.const.ROUTE_PAGE page="about" op="submissions"}
-{if $readOnly}{* Bug #8379 *}
-	{assign var=sectionDescription value=""}
-{else}
-	{translate|assign:sectionDescription key="author.submit.journalSectionDescription" aboutUrl=$aboutUrl}
+{assign var=sectionDescription value=""}
+{if !$readOnly}
+	{assign var=sectionDescription value="author.submit.journalSectionDescription"}
 {/if}
-{fbvFormSection label="section.section"|translate description=$sectionDescription translate=false}
-	{fbvElement type="select" id="sectionId" from=$sectionOptions selected=$sectionId translate=false disabled=$readOnly size=$fbvStyles.size.MEDIUM}
+{fbvFormSection title="section.section" required=true}
+	{fbvElement type="select" id="sectionId" label=$sectionDescription from=$sectionOptions selected=$sectionId translate=false disabled=$readOnly size=$fbvStyles.size.MEDIUM}
 {/fbvFormSection}
