@@ -97,9 +97,9 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 			$deployment = $this->getDeployment();
 			$issueFileNode = $doc->createElementNS($deployment->getNamespace(), 'issue_file');
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_name', $issueFile->getServerFileName()));
-			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_type', $issueFile->getContentType()));
+			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_type', $issueFile->getFileType()));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_size', $issueFile->getFileSize()));
-			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'content_type', $issueFile->getFileType()));
+			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'content_type', $issueFile->getContentType()));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'original_file_name', $issueFile->getOriginalFileName()));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_uploaded', strftime('%F', strtotime($issueFile->getDateUploaded()))));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_modified', strftime('%F', strtotime($issueFile->getDateModified()))));

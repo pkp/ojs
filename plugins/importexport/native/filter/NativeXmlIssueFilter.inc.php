@@ -114,9 +114,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 		} else switch ($n->tagName) {
 			// Otherwise, delegate to specific parsing code
 			case 'id':
-				// Update advice not supported yet.
-				$advice = $n->getAttribute('advice');
-				assert (!$advice || $advice == 'ignore');
+				$this->parseIdentifier($n, $issue);
 				break;
 			case 'articles':
 				$this->parseArticles($n, $issue);
@@ -138,6 +136,33 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	//
 	// Element parsing
 	//
+	/**
+	 * Parse an identifier node and set up the issue object accordingly
+	 * @param $element DOMElement
+	 * @param $issue Issue
+	 */
+	function parseIdentifier($element, $issue) {
+		$deployment = $this->getDeployment();
+		$advice = $element->getAttribute('advice');
+		switch ($element->getAttribute('type')) {
+			case 'internal':
+				// "update" advice not supported yet.
+				assert(!$advice || $advice == 'ignore');
+				break;
+			case 'public':
+				if ($advice == 'update') {
+					$issue->setStoredPubId('publisher-id', $element->textContent);
+				}
+				break;
+			default:
+				if ($advice == 'update') {
+					// Load pub id plugins
+					$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $deployment->getContext()->getId());
+					$issue->setStoredPubId($element->getAttribute('type'), $element->textContent);
+				}
+		}
+	}
+
 	/**
 	 * Parse an articles element
 	 * @param $node DOMElement
@@ -273,10 +298,9 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	function parseIssueCover($node, $issue) {
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
 			if (is_a($n, 'DOMElement')) {
-				list($locale, $value) = $this->parseLocalizedContent($n);
 				switch ($n->tagName) {
-					case 'cover_image': $issue->setCoverImage($value); break;
-					case 'cover_image_alt_text': $issue->setCoverImageAltText($value); break;
+					case 'cover_image': $issue->setCoverImage($n->textContent); break;
+					case 'cover_image_alt_text': $issue->setCoverImageAltText($n->textContent); break;
 					case 'embed':
 						import('classes.file.PublicFileManager');
 						$publicFileManager = new PublicFileManager();

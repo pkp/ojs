@@ -82,9 +82,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$deployment->setIssue($issue);
 
 		$issueNode = $doc->createElementNS($deployment->getNamespace(), 'issue');
-		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', $issue->getId()));
-		$node->setAttribute('type', 'internal');
-		$node->setAttribute('advice', 'ignore');
+		$this->addIdentifiers($doc, $issueNode, $issue);
 
 		$issueNode->setAttribute('volume', $issue->getVolume());
 		$issueNode->setAttribute('number', $issue->getNumber());
@@ -107,6 +105,54 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$this->addArticles($doc, $issueNode, $issue);
 
 		return $issueNode;
+	}
+
+	/**
+	 * Create and add identifier nodes to a submission node.
+	 * @param $doc DOMDocument
+	 * @param $issueNode DOMElement
+	 * @param $issue Issue
+	 */
+	function addIdentifiers($doc, $issueNode, $issue) {
+		$deployment = $this->getDeployment();
+
+		// Add internal ID
+		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', $issue->getId()));
+		$node->setAttribute('type', 'internal');
+		$node->setAttribute('advice', 'ignore');
+
+		// Add public ID
+		if ($pubId = $issue->getStoredPubId('publisher-id')) {
+			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', $pubId));
+			$node->setAttribute('type', 'public');
+			$node->setAttribute('advice', 'update');
+		}
+
+		// Add pub IDs by plugin
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $deployment->getContext()->getId());
+		foreach ((array) $pubIdPlugins as $pubIdPlugin) {
+			$this->addPubIdentifier($doc, $issueNode, $issue, $pubIdPlugin);
+		}
+	}
+
+	/**
+	 * Add a single pub ID element for a given plugin to the document.
+	 * @param $doc DOMDocument
+	 * @param $issueNode DOMElement
+	 * @param $issue Issue
+	 * @param $pubIdPlugin PubIdPlugin
+	 * @return DOMElement|null
+	 */
+	function addPubIdentifier($doc, $issueNode, $issue, $pubIdPlugin) {
+		$pubId = $issue->getStoredPubId($pubIdPlugin->getPubIdType());
+		if ($pubId) {
+			$deployment = $this->getDeployment();
+			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', $pubId));
+			$node->setAttribute('type', $pubIdPlugin->getPubIdType());
+			$node->setAttribute('advice', 'update');
+			return $node;
+		}
+		return null;
 	}
 
 	/**
@@ -183,16 +229,16 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	function addCoverImage($doc, $issueNode, $issue) {
 
 		$coverImage = $issue->getCoverImage();
-		if (is_array($originalFileName) && count($originalFileName) > 0) {
+		if (!empty($coverImage)) {
 			$deployment = $this->getDeployment();
 			$issueCoverNode = $doc->createElementNS($deployment->getNamespace(), 'issue_cover');
 			$issueCoverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', $issue->getCoverImage()));
-			$issueCoverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_page_alt_text', $issue->getCoverImage()));
+			$issueCoverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', $issue->getCoverImage()));
 
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
 
-			$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getLocalizedFileName();
+			$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getCoverImage();
 			$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
 			$embedNode->setAttribute('encoding', 'base64');
 			$issueCoverNode->appendChild($embedNode);
