@@ -8,4 +8,13 @@
  * List of operations this plugin can perform
  *}
 
-{translate key="plugins.importexport.users.importComplete"}
+{if $validationErrors}
+	<h2>{translate key="plugins.importexport.common.validationErrors"}</h2>
+	<ul>
+		{foreach from=$validationErrors item=validationError}
+			<li>{$validationError->message|escape}</li>
+		{/foreach}
+	</ul>
+{else}
+	{translate key="plugins.importexport.users.importComplete"}
+{/if}
