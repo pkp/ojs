@@ -154,5 +154,12 @@
 		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$editorialContactName}', 'Éditeurs') WHERE locale = 'fr_CA' AND email_key IN ('REVIEW_ACCEPT', 'REVIEW_DECLINE')</query>
 		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$editorialContactName}', 'Editores') WHERE locale = 'pt_BR' AND email_key IN ('REVIEW_ACCEPT', 'REVIEW_DECLINE')</query>
 		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$editorialContactName}', 'Editores') WHERE locale = 'pt_BR' AND email_key IN ('REVIEW_ACCEPT', 'REVIEW_DECLINE')</query>
-	</sql>		
+	</sql>
+
+	<sql>
+		<query>INSERT INTO plugin_settings (plugin_name, setting_name, setting_value, setting_type, context_id) VALUES ('defaultthemeplugin', 'enabled', '1', 'bool', 0)</query>
+		<query>INSERT INTO plugin_settings (plugin_name, setting_name, setting_value, setting_type, context_id) SELECT 'defaultthemeplugin', 'enabled', '1', 'bool', journal_id FROM journals</query>
+		<query>INSERT INTO site_settings (setting_name, setting_value, setting_type) VALUES ('themePluginPath', 'default', 'string')</query>
+		<query>INSERT INTO journal_settings (setting_name, setting_value, setting_type, journal_id) SELECT 'themePluginPath', 'default', 'string', journal_id FROM journals</query>
+	</sql>
 </data>
