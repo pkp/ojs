@@ -122,7 +122,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 			$epubFormat = null;
 			if ($galley->isPdfGalley()) {
 				$epubFormat = O4DOI_EPUB_FORMAT_PDF;
-			} else if ($galleyFile->getFileType() == 'text/html') {
+			} else if ($galley->getRemoteURL() || $galleyFile->getFileType() == 'text/html') {
 				$epubFormat = O4DOI_EPUB_FORMAT_HTML;
 			}
 		}
@@ -215,7 +215,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 			$contentItemNode->appendChild($textItemNode);
 		}
 		// Extent (for article-as-manifestation only)
-		if ($galley) {
+		if ($galley && !$galley->getRemoteURL()) {
 			$galleyFile = $galley->getFile();
 			$contentItemNode->appendChild($this->createExtentNode($doc, $galleyFile));
 		}
