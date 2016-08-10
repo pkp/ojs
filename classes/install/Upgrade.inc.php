@@ -925,7 +925,7 @@ class Upgrade extends Installer {
 	function localizeCustomBlockSettings() {
 		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
 		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$journals = $journalDao->getJournals();
+		$journals = $journalDao->getAll();
 
 		while ($journal = $journals->next()) {
 			$journalId = $journal->getId();
