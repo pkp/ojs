@@ -493,7 +493,7 @@
 		</field>
 		<field name="stage_id" type="I8">
 			<NOTNULL/>
-			<DEFAULT VALUE="1"/>
+			<DEFAULT VALUE="1"/><!-- WORKFLOW_STAGE_ID_SUBMISSION -->
 		</field>
 		<descr>Submissions</descr>
 		<index name="submissions_journal_id">
