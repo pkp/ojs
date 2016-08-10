@@ -94,7 +94,6 @@
 			<element name="open_access_date" type="date" minOccurs="0" maxOccurs="1" />
 			<!-- sub elements -->
 			<element ref="pkp:sections" minOccurs="1" maxOccurs="1" />
-			<element ref="pkp:issue_style" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:issue_cover" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:issue_galleys" minOccurs="1" maxOccurs="1" />
 			<element ref="pkp:articles" minOccurs="1" maxOccurs="1" />
@@ -187,9 +186,6 @@
 
 	<!-- Permit "issue_cover" as a root element -->
 	<element name="issue_cover" type="pkp:issue_cover" />
-
-	<!-- Permit "issue_style" as a root element -->
-	<element name="issue_style" type="pkp:issue_style" />
 
 	<!-- Permit "section" as a root element -->
 	<element name="section" type="pkp:section" />
