@@ -199,6 +199,7 @@ class ArticleHandler extends Handler {
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		$fileId = isset($args[2]) ? (int) $args[2] : 0;
 
+		if ($this->galley->getRemoteURL()) $request->redirectUrl($this->galley->getRemoteURL());
 		if ($this->userCanViewGalley($request, $articleId, $galleyId)) {
 			if (!$fileId) {
 				$submissionFile = $this->galley->getFile();
