@@ -30,5 +30,4 @@
 	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Geef het e-mail adres van de deposito.</message>
 	<message key="plugins.importexport.crossref.requirements">Vereist</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">Niet aan alle vereisten is voldaan</message>
-	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Er is nog geen uitgever geconfigureerd! U moet een uitgevend instituut opgeven bij <a href="{$publisherUrl}" target="_blank">Tijdschrift inrichten stap 1.5</a>.]]></message>
 </locale>

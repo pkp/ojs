@@ -161,38 +161,36 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		$galleys = $articleGalleyDao->getBySubmissionId($submission->getId());
 		import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_... constants
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-		$submissionGalleyFiles = array();
+		$submissionGalleys = array();
 		// get immediatelly also supplementary files for component list
-		$componentFiles = array();
+		$componentGalleys = array();
+		$genreDao = DAORegistry::getDAO('GenreDAO');
 		while ($galley = $galleys->next()) {
-			$galleyFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_REPRESENTATION, $galley->getId(), $submission->getId(), SUBMISSION_FILE_PROOF);
 			// filter supp files with DOI
-			$genreDao = DAORegistry::getDAO('GenreDAO');
-			$suppGalleyFiles = array();
-			foreach ($galleyFiles as $galleyFile) {
+			if (!$galley->getRemoteURL()) {
+				$galleyFile = $galley->getFile();
 				$genre = $genreDao->getById($galleyFile->getGenreId());
 				if ($genre->getSupplementary()) {
-					if ($galleyFile->getStoredPubid('doi')) {
-						$suppGalleyFiles[] = $galleyFile;
+					if ($galley->getStoredPubid('doi')) {
+						// construct the array key with galley best ID and locale needed for the component node
+						$componentGalleys[] = $galley;
 					}
 				} else {
-					$submissionGalleyFiles[$galley->getBestGalleyId()] = $galleyFile;
+					$submissionGalleys[] = $galley;
 				}
-			}
-			if (!empty($suppGalleyFiles)) {
-				// construct the array key with galley best ID and locale needed for the component node
-				$componentFiles[$galley->getBestGalleyId().'-'.$galley->getLocale()] = $suppGalleyFiles;
+			} else {
+				$submissionGalleys[] = $galley;
 			}
 		}
 		// submission galley files - colelction nodes
-		if (!empty($submissionGalleyFiles)) {
-			$this->appendCollectionNodes($doc, $doiDataNode, $submission, $submissionGalleyFiles);
+		if (!empty($submissionGalleys)) {
+			$this->appendCollectionNodes($doc, $doiDataNode, $submission, $submissionGalleys);
 		}
 		$journalArticleNode->appendChild($doiDataNode);
 
 		// component list (supplementary files)
-		if (!empty($componentFiles)) {
-			$journalArticleNode->appendChild($this->createComponentListNode($doc, $submission, $componentFiles));
+		if (!empty($componentGalleys)) {
+			$journalArticleNode->appendChild($this->createComponentListNode($doc, $submission, $componentGalleys));
 		}
 
 		return $journalArticleNode;
@@ -203,9 +201,9 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 	 * @param $doc DOMDocument
 	 * @param $doiDataNode DOMElement
 	 * @param $submission PublishedArticle
-	 * @param $submissionFiles array (best galley ID => submission file)
+	 * @param $galleys array of galleys
 	 */
-	function appendCollectionNodes($doc, $doiDataNode, $submission, $submissionFiles) {
+	function appendCollectionNodes($doc, $doiDataNode, $submission, $galleys) {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
 		$request = Application::getRequest();
@@ -213,8 +211,8 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		// start of the text-mining collection element
 		$textMiningCollectionNode = $doc->createElementNS($deployment->getNamespace(), 'collection');
 		$textMiningCollectionNode->setAttribute('property', 'text-mining');
-		foreach ($submissionFiles as $betGalleyId => $submissionFile) {
-			$resourceURL = $request->url($context->getPath(), 'article', 'download', array($submission->getBestArticleId(), $betGalleyId, $submissionFile->getFileId()));
+		foreach ($galleys as $galley) {
+			$resourceURL = $request->url($context->getPath(), 'article', 'download', array($submission->getBestArticleId(), $galley->getBestGalleyId()));
 			// iParadigms crawler based collection element
 			$crawlerBasedCollectionNode = $doc->createElementNS($deployment->getNamespace(), 'collection');
 			$crawlerBasedCollectionNode->setAttribute('property', 'crawler-based');
@@ -227,7 +225,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 			// text-mining collection item
 			$textMiningItemNode = $doc->createElementNS($deployment->getNamespace(), 'item');
 			$resourceNode = $doc->createElementNS($deployment->getNamespace(), 'resource', $resourceURL);
-			$resourceNode->setAttribute('mime_type', $submissionFile->getFileType());
+			if (!$galley->getRemoteURL()) $resourceNode->setAttribute('mime_type', $galley->getFileType());
 			$textMiningItemNode->appendChild($resourceNode);
 			$textMiningCollectionNode->appendChild($textMiningItemNode);
 		}
@@ -238,10 +236,10 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 	 * Create and return component list node 'component_list'.
 	 * @param $doc DOMDocument
 	 * @param $submission PublishedArticle
-	 * @param $componentFiles array
+	 * @param $componentGalleys array
 	 * @return DOMElement
 	 */
-	function createComponentListNode($doc, $submission, $componentFiles) {
+	function createComponentListNode($doc, $submission, $componentGalleys) {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
 		$request = Application::getRequest();
@@ -249,25 +247,22 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		// Create the base node
 		$componentListNode =$doc->createElementNS($deployment->getNamespace(), 'component_list');
 		// Run through supp files and add component nodes.
-		foreach($componentFiles as $key => $componentFilesArray) {
-			// get galley best ID and locale
-			$keyParts = explode('-', $key);
-			foreach ($componentFilesArray as $componentFile) {
-				$componentNode = $doc->createElementNS($deployment->getNamespace(), 'component');
-				$componentNode->setAttribute('parent_relation', 'isPartOf');
-				/* Titles */
-				$componentFileTitle = $componentFile->getName($keyParts[1]);
-				if (!empty($componentFileTitle)) {
-					$titlesNode = $doc->createElementNS($deployment->getNamespace(), 'titles');
-					$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', $componentFileTitle));
-					$componentNode->appendChild($titlesNode);
-				}
-				// DOI data node
-				// TO-DO: bestId is missing for files
-				$resourceURL = $request->url($context->getPath(), 'article', 'download', array($submission->getBestArticleId(), $keyParts[0], $componentFile->getFileId()));
-				$componentNode->appendChild($this->createDOIDataNode($doc, $componentFile->getStoredPubId('doi'), $resourceURL));
-				$componentListNode->appendChild($componentNode);
+		foreach($componentGalleys as $componentGalley) {
+			$componentFile = $componentGalley->getFile();
+			$componentNode = $doc->createElementNS($deployment->getNamespace(), 'component');
+			$componentNode->setAttribute('parent_relation', 'isPartOf');
+			/* Titles */
+			$componentFileTitle = $componentFile->getName($componentGalley->getLocale());
+			if (!empty($componentFileTitle)) {
+				$titlesNode = $doc->createElementNS($deployment->getNamespace(), 'titles');
+				$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', $componentFileTitle));
+				$componentNode->appendChild($titlesNode);
 			}
+			// DOI data node
+			// TO-DO: bestId is missing for files
+			$resourceURL = $request->url($context->getPath(), 'article', 'download', array($submission->getBestArticleId(), $componentGalley->getBestGalleyId()));
+			$componentNode->appendChild($this->createDOIDataNode($doc, $componentGalley->getStoredPubId('doi'), $resourceURL));
+			$componentListNode->appendChild($componentNode);
 		}
 		return $componentListNode;
 	}

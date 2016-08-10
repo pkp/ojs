@@ -11,7 +11,10 @@
 {include file="common/header.tpl" pageTitle="plugins.importexport.crossref.displayName"}
 {/strip}
 
-{if !empty($configurationErrors) || !$currentContext->getSetting('publisherInstitution')|escape || (!$exportArticles && !$exportIssues)}
+{if !empty($configurationErrors) || 
+	!$currentContext->getSetting('publisherInstitution')|escape || 
+	(!$exportArticles && !$exportIssues) || 
+	(!$currentContext->getSetting('onlineIssn')|escape && !$currentContext->getSetting('pringIssn')|escape)}
 	{assign var="allowExport" value=false}
 {else}
 	{assign var="allowExport" value=true}
@@ -46,7 +49,14 @@
 					{/if}
 				{/foreach}
 				{if !$currentContext->getSetting('publisherInstitution')|escape}
-					{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=crossrefConfigurationErrors notificationStyleClass=notifyWarning notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents="plugins.importexport.crossref.error.publisherNotConfigured"|translate}
+					{url|assign:journalSettingsUrl router=$smarty.const.ROUTE_PAGE page="management" op="settings" path="journal" escape=false}
+					{capture assign=missingPublisherMessage}{translate key="plugins.importexport.crossref.error.publisherNotConfigured" journalSettingsUrl=$journalSettingsUrl}{/capture}
+					{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=crossrefConfigurationErrors notificationStyleClass=notifyWarning notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents=$missingPublisherMessage}
+				{/if}
+				{if !$currentContext->getSetting('onlineIssn')|escape && !$currentContext->getSetting('pringIssn')|escape}
+					{url|assign:journalSettingsUrl router=$smarty.const.ROUTE_PAGE page="management" op="settings" path="journal" escape=false}
+					{capture assign=missingIssnMessage}{translate key="plugins.importexport.crossref.error.issnNotConfigured" journalSettingsUrl=$journalSettingsUrl}{/capture}
+					{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=crossrefConfigurationErrors notificationStyleClass=notifyWarning notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents=$missingIssnMessage}
 				{/if}
 				{if !$exportArticles && !$exportIssues}
 					{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=crossrefConfigurationErrors notificationStyleClass=notifyWarning notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents="plugins.importexport.crossref.error.noDOIContentObjects"|translate}

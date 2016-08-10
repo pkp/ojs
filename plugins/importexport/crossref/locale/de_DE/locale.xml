@@ -16,7 +16,6 @@
 	<message key="plugins.importexport.crossref.displayName">CrossRef-Export/Registrierungs-Plug-In</message>
 	<message key="plugins.importexport.crossref.requirements">Anforderungen</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">Alle Anforderungen des Plug-Ins sind erfüllt.</message>
-	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Kein Verlag eingerichtet! Sie müssen einen Verlag oder eine herausgebende Organisation im <a href="{$publisherUrl}" target="_blank">Schritt 1.5 unter Einrichten der Zeitschrift</a> festlegen.]]></message>
 	<message key="plugins.importexport.crossref.settings.depositorIntro">Die folgenden Angaben werden für eine erfolgreiche Abgabe bei CrossRef nötig.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorName">Depositor-Name</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Depositor-E-Mail</message>

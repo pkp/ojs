@@ -22,7 +22,6 @@
 	<message key="plugins.importexport.crossref.requirements">Veuillez noter que le mot de passe sera enregistré en plein texte, c-a-d pas encrypté</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">Marque enregistrée</message>
 	<message key="plugins.importexport.crossref.settings.depositorIntro">L'export de données est actuellement indisponible. Veuillez vérifier les exigences du plugiciel</message>
-	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Un éditeur n'est pas configuré! Vous devez ajouter un éditeur sous <a href="{$publisherUrl}" target="_blank">l'étape 1.5 de la configuration de la revue</a>.]]></message>
 	<message key="plugins.importexport.crossref.settings.form.depositorName">Nom du déposant</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Courriel du déposant</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Veuillez inscrire le nom du déposant.</message>

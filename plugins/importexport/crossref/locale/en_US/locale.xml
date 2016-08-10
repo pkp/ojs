@@ -17,7 +17,8 @@
 	<!-- settings -->
 	<message key="plugins.importexport.crossref.requirements">Requirements</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">All plugin requirements are satisfied.</message>
-	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[A journal publisher has not been configured! You must add a publisher institution under <a href="{$publisherUrl}" target="_blank">Journal Setup Step 1.5</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[A journal publisher has not been configured! You must add a publisher institution on the <a href="{$journalSettingsUrl}" target="_blank">Journal Settings Page</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.issnNotConfigured"><![CDATA[A journal ISSN has not been configured! You must add an ISSN on the <a href="{$journalSettingsUrl}" target="_blank">Journal Settings Page</a>.]]></message>
 	<message key="plugins.importexport.crossref.error.noDOIContentObjects">Neither articles nor issues are selected for DOI assignment in the DOI public identifier plugin, so there is no deposit or export possibility in this plugin.</message>
 	<message key="plugins.importexport.crossref.settings.depositorIntro">The following items are required for a successful CrossRef deposit.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorName">Depositor name</message>

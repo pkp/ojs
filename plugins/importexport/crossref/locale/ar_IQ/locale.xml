@@ -16,7 +16,6 @@
 	<message key="plugins.importexport.crossref.displayName">إضافة التصدير/التسجيل CrossRef</message>
 	<message key="plugins.importexport.crossref.requirements">المتطلبات</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">كل متطلبات الإضافة ملباة.</message>
-	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[ناشر المجلة لم يتم تعريفه بعد! عليك إضافة مؤسسة النشر ضمن <a href="{$publisherUrl}" target="_blank">تهيئة المجلة، الخطوة 1.5</a>.]]></message>
 	<message key="plugins.importexport.crossref.settings.depositorIntro">الفقرات الآتية مطلوبة من أجل إيداع ناجح لدى CrossRef.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorName">اسم المودع</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmail">البريد الالكتروني للمودع</message>

@@ -17,7 +17,6 @@
 	<message key="plugins.importexport.crossref.displayName">Плагин «Экспорт/Регистрация в CrossRef»</message>
 	<message key="plugins.importexport.crossref.requirements">Требования</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">Все требования плагина выполнены.</message>
-	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Издатель журнала не настроен! Вы должны добавить организацию-издателя на <a href="{$publisherUrl}" target="_blank">шаге 1.5 настройки журнала</a>.]]></message>
 	<message key="plugins.importexport.crossref.settings.depositorIntro">Следующая информация необходима для успешной передачи в депозитарий CrossRef.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorName">Имя ответственного</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmail">E-mail ответственного</message>
