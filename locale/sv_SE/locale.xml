@@ -802,7 +802,7 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="payment.subscription.expires">Upphör</message>	
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">OJS installation</message>
+	<message key="installer.appInstallation">OJS installation</message>
 	<message key="installer.ojsUpgrade">OJS Uppgradering</message>
 	<message key="installer.installationInstructions">
 	<![CDATA[<h4>OJS Version {$version}</h4>

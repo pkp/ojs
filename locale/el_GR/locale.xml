@@ -653,7 +653,7 @@
 	<message key="payment.subscription.expires">Λήγει</message>
 
         <!-- Installer -->
-        <message key="installer.ojsInstallation">Εγκατάσταση OJS</message>
+        <message key="installer.appInstallation">Εγκατάσταση OJS</message>
         <message key="installer.ojsUpgrade">Αναβάθμιση OJS</message>
         <message key="installer.installationInstructions"><![CDATA[<h4>Έκδοση OJS {$version}</h4>
         <p>Σας ευχαριστούμε που προτιμήσατε το <strong>Open Journal Systems</strong> του Public Knowledge Project. Πριν να προχωρήσετε, συμβουλευτείτε το αρχείο <a href="{$baseUrl}/docs/README">README</a> που παρέχεται μαζί με το λογισμικό. Για περισσότερες πληροφορίες σχετικά με το Public Knowledge Project και τα έργα λογισμικού του, επισκεφτείτε τον <a href="http://pkp.sfu.ca/" target="_blank">ιστότοπο του PKP</a>. Εάν έχετε αναφορές σφαλμάτων ή ερωτήματα για την τεχνική υποστήριξη σχετικά με το Open Journal Systems, ανατρέξτε στο  <a href="http://forum.pkp.sfu.ca">φόρουμ υποστήριξης</a> ή επισκεφτείτε το <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">σύστημα σύνταξης αναφορών</a> του PKP στο διαδίκτυο. Αν και το φόρουμ υποστήριξης είναι η προτιμώμενη μέθοδος επικοινωνίας, μπορείτε επίσης να επικοινωνήσετε με την ομάδα μέσω ηλεκτρονικού ταχυδρομείου στη διεύθυνση <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>

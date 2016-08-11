@@ -652,7 +652,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="payment.subscription.expires">Verloopt</message>
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">OJS Installatie</message>
+	<message key="installer.appInstallation">OJS Installatie</message>
 	<message key="installer.ojsUpgrade">OJS Upgrade</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Versie {$version}</h4>
 

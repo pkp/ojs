@@ -902,7 +902,7 @@
 	<message key="payment.subscription.expires">Истекување</message>
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">OJS Инсталација</message>
+	<message key="installer.appInstallation">OJS Инсталација</message>
 	<message key="installer.ojsUpgrade">OJS Надградба</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Верзија{$version}</h4>
 

@@ -428,7 +428,7 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="about.aboutOJSSite"><![CDATA[این سایت از سیستم مجلات آزاد نسخه {$ojsVersion} استفاده میکند که یک نرم افزار کد باز اداره و انتشار مجلات تهیه شده توسط  <a href="http://pkp.sfu.ca/">پروژه دانش عمومی</a> است که تحت لیسانس GNU General Public License بصورت رایگان در اختیار همگان میباشد.]]></message>
 <!-- اطلاعیه --><!-- راهنما -->	<message key="help.ojsHelp">راهنمای سیستم مجلات آزاد</message>
 	<message key="help.ojsHelpAbbrev">راهنمای OJS</message>
-<!-- نصب کننده -->  <message key="installer.ojsInstallation">نصب OJS</message>
+<!-- نصب کننده -->  <message key="installer.appInstallation">نصب OJS</message>
 	<message key="installer.ojsUpgrade">بروز رسانی OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS نسخه {$version}</h4>
 

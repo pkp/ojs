@@ -632,7 +632,7 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<message key="help.ojsHelpAbbrev">Ajuda do sistema</message>	
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">Instalação do sistema</message>
+	<message key="installer.appInstallation">Instalação do sistema</message>
 	<message key="installer.ojsUpgrade">Atualização do sistema</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS versão {$version}</h4>
 

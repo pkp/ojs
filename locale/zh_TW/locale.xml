@@ -721,7 +721,7 @@
 	<message key="help.ojsHelpAbbrev">OJS協助資訊</message>	
 	
 	<!-- Installer 安裝 -->
-	<message key="installer.ojsInstallation">OJS安裝程式</message>
+	<message key="installer.appInstallation">OJS安裝程式</message>
 	<message key="installer.ojsUpgrade">OJS升級程式</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS版本{$version}</h4>
 

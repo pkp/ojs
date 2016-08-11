@@ -631,7 +631,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="help.ojsHelpAbbrev">Hướng dẫn OJS</message>	
 	
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">Cài đặt OJS</message>
+	<message key="installer.appInstallation">Cài đặt OJS</message>
 	<message key="installer.ojsUpgrade">Nâng cấp OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>Phiên bản OJS {$version}</h4>
 

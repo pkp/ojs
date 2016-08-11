@@ -904,7 +904,7 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 	<message key="payment.subscription.expires">Vyprší</message>	
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">OJS instalace</message>
+	<message key="installer.appInstallation">OJS instalace</message>
 	<message key="installer.ojsUpgrade">OJS Upgrade</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>Verze OJS {$version}</h4>
 

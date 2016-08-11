@@ -1840,7 +1840,7 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="help.relatedTopics">Rèlåtèð Tópîçþ</message>
 	<message key="help.search">ßèårçh Hèlp</message>
 	<message key="help.searchFor">ßèårçh hèlp tópîçþ fór</message>
-	<message key="installer.ojsInstallation">ÒJß Îñþtållåtîóñ</message>
+	<message key="installer.appInstallation">ÒJß Îñþtållåtîóñ</message>
 	<message key="installer.ojsUpgrade">ÒJß Üpgråðè</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>ÒJß Vèrþîóñ {$version}</h4>
 

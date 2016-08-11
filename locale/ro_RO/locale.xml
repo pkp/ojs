@@ -939,7 +939,7 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">Instalarea OJS</message>
+	<message key="installer.appInstallation">Instalarea OJS</message>
 	<message key="installer.ojsUpgrade">Actualizare OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>Versiune OJS {$version}</h4>
 

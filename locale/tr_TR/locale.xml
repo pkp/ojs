@@ -779,7 +779,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="payment.subscription.expires">Sona Eriyor</message>	
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">ADS Yüklenmesi</message>
+	<message key="installer.appInstallation">ADS Yüklenmesi</message>
 	<message key="installer.ojsUpgrade">ADS Güncellenmesi</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>ADS Sürümü {$version}</h4>
 
