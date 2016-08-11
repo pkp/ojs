@@ -13,10 +13,11 @@
 		$('#issueGalleyForm').pkpHandler(
 			'$.pkp.controllers.form.FileUploadFormHandler',
 			{ldelim}
-				$uploader: $('#plupload'),
+				$uploader: $('#pluploadgalley'),
 				uploaderOptions: {ldelim}
 					uploadUrl: {url|json_encode op="upload" issueId=$issueId escape=false},
-					baseUrl: {$baseUrl|json_encode}
+					baseUrl: {$baseUrl|json_encode},
+					browse_button: 'pkpIssueGalleyUploaderButton'
 				{rdelim}
 			{rdelim}
 		);
@@ -27,7 +28,7 @@
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="publicationMetadataFormFieldsNotification"}
 	{fbvFormArea id="file"}
 		{fbvFormSection title="editor.issues.galley" required="true"}
-			{include file="controllers/fileUploadContainer.tpl" id="plupload"}
+			{include file="controllers/fileUploadContainer.tpl" id="pluploadgalley" browseButton="pkpIssueGalleyUploaderButton"}
 			<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
 			{if $issueGalley}
 				<a href="{url op="download" issueId=$issueId issueGalleyId=$issueGalleyId}" target="_blank">{$issueGalley->getOriginalFileName()|escape}</a>

@@ -186,11 +186,11 @@
 	<message key="editor.article.hideTocAuthorShow">Mostra</message>
 	<message key="editor.article.cover">Copertina</message>
 	<message key="editor.article.showCoverPage">Crea  una copertina per questo articolo con i seguenti elementi.</message>
-	<message key="editor.article.coverPageDisplay">Visualizza</message>
+	<message key="editor.article.coverImageDisplay">Visualizza</message>
 	<message key="editor.article.hideCoverPageToc">Non visualizzare l'immagine della copertina nell'indice.</message>
 	<message key="editor.article.hideCoverPageAbstract">Non visualizzare l'immagine della copertina nella vista dell'abstract dell'articolo.</message>
-	<message key="editor.article.coverPage">Immagine di copertina</message>
-	<message key="editor.article.coverPageInstructions">(Formati ammessi: .gif, .jpg o .png)</message>
+	<message key="editor.article.coverImage">Immagine di copertina</message>
+	<message key="editor.article.coverImageInstructions">(Formati ammessi: .gif, .jpg o .png)</message>
 	<message key="editor.article.uploaded">Caricato</message>
 	<message key="editor.article.removeCoverPage">Rimuovi l'immagine di copertina?</message>
 	<message key="editor.article.remove">Rimuovi</message>

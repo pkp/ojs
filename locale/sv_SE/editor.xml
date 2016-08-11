@@ -185,11 +185,11 @@
 	<message key="editor.article.hideTocAuthorShow">Visa</message>
 	<message key="editor.article.cover">Omslag</message>
 	<message key="editor.article.showCoverPage">Skapa ett omslag för den här artikeln med följande element</message>
-	<message key="editor.article.coverPageDisplay">Visa</message>
+	<message key="editor.article.coverImageDisplay">Visa</message>
 	<message key="editor.article.hideCoverPageToc">Visa inte omslagsbild i innehållsförteckningen</message>
 	<message key="editor.article.hideCoverPageAbstract">Visa inte omslagsbild tillsammans med abstract</message>
-	<message key="editor.article.coverPage">Omslagsbild</message>
-	<message key="editor.article.coverPageInstructions">(Tillåtna format: .gif, .jpg, eller .png )</message>
+	<message key="editor.article.coverImage">Omslagsbild</message>
+	<message key="editor.article.coverImageInstructions">(Tillåtna format: .gif, .jpg, eller .png )</message>
 	<message key="editor.article.uploaded">Uppladdad</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Innan du skickar manuskriptet för redigering, kontrollera att det finns tillgängliga granskare och att författaren meddelas om granskning med hjälp av Meddela Författaren-länken ovan.</message>
 	<message key="editor.article.sendFileToCopyedit">Välj fil för Manusredigering</message>

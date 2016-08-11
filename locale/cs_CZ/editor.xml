@@ -182,11 +182,11 @@
 	<message key="editor.article.hideTocAuthorShow">Zobrazit</message>
 	<message key="editor.article.cover">Obal</message>
 	<message key="editor.article.showCoverPage">Vytvořit obal (titulní stránku) tomuto článku pomocí následujících prvků.</message>
-	<message key="editor.article.coverPageDisplay">Zobrazit</message>
+	<message key="editor.article.coverImageDisplay">Zobrazit</message>
 	<message key="editor.article.hideCoverPageToc">Nezobrazovat náhled titulního obrázku v obsahu.</message>
 	<message key="editor.article.hideCoverPageAbstract">Nezobrazovat titulní obrázek při zobrazení abstraktu článku.</message>
-	<message key="editor.article.coverPage">Titulní obrázek</message>
-	<message key="editor.article.coverPageInstructions">(Povolené formáty: .gif, .jpg neho .png)</message>
+	<message key="editor.article.coverImage">Titulní obrázek</message>
+	<message key="editor.article.coverImageInstructions">(Povolené formáty: .gif, .jpg neho .png)</message>
 	<message key="editor.article.uploaded">Nahráno</message>
 	<message key="editor.article.removeCoverPage">Odstranit titulní obrázek?</message>
 	<message key="editor.article.remove">Odstranit</message>

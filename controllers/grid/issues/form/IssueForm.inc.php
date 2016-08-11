@@ -64,6 +64,33 @@ class IssueForm extends Form {
 			$templateMgr->assign('issueId', $this->issue->getId());
 		}
 
+		// Cover image preview
+		$coverImage = $this->issue->getCoverImage();
+
+		// Cover image delete link action
+		if ($coverImage) {
+			import('lib.pkp.classes.linkAction.LinkAction');
+			import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
+			$router = $request->getRouter();
+			$deleteCoverImageLinkAction = new LinkAction(
+				'deleteCoverImage',
+				new RemoteActionConfirmationModal(
+					$request->getSession(),
+					__('common.confirmDelete'), null,
+					$router->url(
+						$request, null, null, 'deleteCoverImage', null, array(
+							'coverImage' => $coverImage,
+							'issueId' => $this->issue->getId(),
+						)
+					),
+					'modal_delete'
+				),
+				__('common.delete'),
+				null
+			);
+			$templateMgr->assign('deleteCoverImageLinkAction', $deleteCoverImageLinkAction);
+		}
+
 		return parent::fetch($request);
 	}
 
@@ -75,8 +102,11 @@ class IssueForm extends Form {
 			$user = $request->getUser();
 			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
 			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
-			if (!in_array($temporaryFile->getFileType(), array('text/plain', 'text/css'))) {
-				$this->addError('styleFile', __('editor.issues.invalidStyleFormat'));
+
+			import('classes.file.PublicFileManager');
+			$publicFileManager = new PublicFileManager();
+			if (!$publicFileManager->getImageExtension($temporaryFile->getFileType())) {
+				$this->addError('coverImage', __('editor.issues.invalidCoverImageFormat'));
 			}
 		}
 
@@ -101,8 +131,8 @@ class IssueForm extends Form {
 				'showNumber' => $this->issue->getShowNumber(),
 				'showYear' => $this->issue->getShowYear(),
 				'showTitle' => $this->issue->getShowTitle(),
-				'styleFileName' => $this->issue->getStyleFileName(),
-				'originalStyleFileName' => $this->issue->getOriginalStyleFileName()
+				'coverImage' => $this->issue->getCoverImage(),
+				'coverImageAltText' => $this->issue->getCoverImageAltText(),
 			);
 			parent::initData();
 		} else {
@@ -144,7 +174,8 @@ class IssueForm extends Form {
 			'showNumber',
 			'showYear',
 			'showTitle',
-			'temporaryFileId'
+			'temporaryFileId',
+			'coverImageAltText',
 		));
 
 		$this->readUserDateVars(array('datePublished', 'openAccessDate'));
@@ -191,6 +222,23 @@ class IssueForm extends Form {
 		if ($this->getData('enableOpenAccessDate')) $issue->setOpenAccessDate($this->getData('openAccessDate'));
 		else $issue->setOpenAccessDate(null);
 
+		// Copy an uploaded cover file for the issue, if there is one.
+		if ($temporaryFileId = $this->getData('temporaryFileId')) {
+			$user = $request->getUser();
+			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
+			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
+
+			import('classes.file.PublicFileManager');
+			$publicFileManager = new PublicFileManager();
+			$newFileName = 'cover_issue_' . $issue->getId() . $publicFileManager->getImageExtension($temporaryFile->getFileType());
+			$journal = $request->getJournal();
+			$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
+			$issue->setCoverImage($newFileName);
+			$issueDao->updateObject($issue);
+		}
+
+		$issue->setCoverImageAltText($this->getData('coverImageAltText'));
+
 		// if issueId is supplied, then update issue otherwise insert a new one
 		if (!$isNewIssue) {
 			parent::execute();
@@ -200,22 +248,6 @@ class IssueForm extends Form {
 			$issue->setCurrent(0);
 
 			$issueDao->insertObject($issue);
-		}
-
-		// Copy an uploaded CSS file for the issue, if there is one.
-		// (Must be done after insert for new issues as issue ID is in the filename.)
-		if ($temporaryFileId = $this->getData('temporaryFileId')) {
-			$user = $request->getUser();
-			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
-			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
-
-			import('classes.file.PublicFileManager');
-			$publicFileManager = new PublicFileManager();
-			$newFileName = 'style_' . $issue->getId() . '.css';
-			$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
-			$issue->setStyleFileName($newFileName);
-			$issue->setOriginalStyleFileName($publicFileManager->truncateFileName($temporaryFile->getOriginalFileName(), 127));
-			$issueDao->updateObject($issue);
 		}
 	}
 }

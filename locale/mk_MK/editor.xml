@@ -205,11 +205,11 @@
 	<message key="editor.article.hideTocAuthorShow">Прикажи</message>
 	<message key="editor.article.cover">Опфаќа</message>
 	<message key="editor.article.showCoverPage">Креирај покритие за овој артикл со следниве елементи.</message>
-	<message key="editor.article.coverPageDisplay">Прикажи</message>
+	<message key="editor.article.coverImageDisplay">Прикажи</message>
 	<message key="editor.article.hideCoverPageToc">Не ја прикажувај насловната слика во содржината.</message>
 	<message key="editor.article.hideCoverPageAbstract">Не ја прикажувај насловната слика во апстрактниот поглед на артиклот.</message>
-	<message key="editor.article.coverPage">Насловна слика</message>
-	<message key="editor.article.coverPageInstructions">(Дозволени формати: .gif, .jpg, or .png )</message>
+	<message key="editor.article.coverImage">Насловна слика</message>
+	<message key="editor.article.coverImageInstructions">(Дозволени формати: .gif, .jpg, or .png )</message>
 	<message key="editor.article.uploaded">Прикачи</message>
 	<message key="editor.article.removeCoverPage">Отстрани ја насловната слика?</message>
 	<message key="editor.article.remove">Избриши</message>

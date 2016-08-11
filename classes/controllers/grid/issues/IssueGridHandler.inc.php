@@ -32,8 +32,7 @@ class IssueGridHandler extends GridHandler {
 			array(
 				'fetchGrid', 'fetchRow',
 				'addIssue', 'editIssue', 'editIssueData', 'updateIssue',
-				'uploadFile',
-				'editCover', 'updateCover',
+				'uploadFile', 'deleteCoverImage',
 				'issueToc',
 				'issueGalleys',
 				'deleteIssue', 'publishIssue', 'unpublishIssue',
@@ -161,7 +160,7 @@ class IssueGridHandler extends GridHandler {
 	}
 
 	/**
-	 * An action to upload an issue file. Used for both covers and stylesheets.
+	 * An action to upload an issue file. Used for issue cover images.
 	 * @param $args array
 	 * @param $request PKPRequest
 	 * @return JSONMessage JSON object
@@ -184,6 +183,44 @@ class IssueGridHandler extends GridHandler {
 	}
 
 	/**
+	 * Delete an uploaded cover image.
+	 * @param $args array
+	 *   `coverImage` string Filename of the cover image to be deleted.
+	 *   `issueId` int Id of the issue this cover image is attached to
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function deleteCoverImage($args, $request) {
+		assert(!empty($args['coverImage']) && !empty($args['issueId']));
+
+		// Check if the passed filename matches the filename for this issue's
+		// cover page.
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getById((int) $args['issueId']);
+		if ($args['coverImage'] != $issue->getCoverImage()) {
+			return new JSONMessage(false, __('editor.issues.removeCoverImageFileNameMismatch'));
+		}
+
+		$file = $args['coverImage'];
+
+		// Remove cover image and alt text from issue settings
+		$issue->setCoverImage('');
+		$issue->setCoverImageAltText('');
+		$issueDao->updateObject($issue);
+
+		// Remove the file
+		$publicFileManager = new PublicFileManager();
+		if ($publicFileManager->removeJournalFile($issue->getJournalId(), $file)) {
+			$json = new JSONMessage(true);
+			$json->setEvent('fileDeleted');
+			return $json;
+		} else {
+			return new JSONMessage(false, __('editor.issues.removeCoverImageFileNotFound'));
+		}
+	}
+
+
+	/**
 	 * Update a issue
 	 * @param $args array
 	 * @param $request PKPRequest
@@ -201,42 +238,6 @@ class IssueGridHandler extends GridHandler {
 			return DAO::getDataChangedEvent($issueId);
 		} else {
 			return new JSONMessage(true, $issueForm->fetch($request));
-		}
-	}
-
-	/**
-	 * An action to edit a issue's cover
-	 * @param $args array
-	 * @param $request PKPRequest
-	 * @return JSONMessage JSON object
-	 */
-	function editCover($args, $request) {
-		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-
-		import('controllers.grid.issues.form.CoverForm');
-		$coverForm = new CoverForm($issue);
-		$coverForm->initData($request);
-		return new JSONMessage(true, $coverForm->fetch($request));
-	}
-
-	/**
-	 * Update an issue cover
-	 * @param $args array
-	 * @param $request PKPRequest
-	 * @return JSONMessage JSON object
-	 */
-	function updateCover($args, $request) {
-		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-
-		import('controllers.grid.issues.form.CoverForm');
-		$coverForm = new CoverForm($issue);
-		$coverForm->readInputData();
-
-		if ($coverForm->validate($request)) {
-			$coverForm->execute($request);
-			return DAO::getDataChangedEvent($issue->getId());
-		} else {
-			return new JSONMessage(false);
 		}
 	}
 

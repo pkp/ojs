@@ -163,19 +163,6 @@ class ArticleHandler extends Handler {
 				$templateMgr->assign('purchaseArticleEnabled', true);
 			}
 
-			// Article cover page.
-			if (isset($article) && $article->getLocalizedFileName() && $article->getLocalizedShowCoverPage() && !$article->getLocalizedHideCoverPageAbstract()) {
-				import('classes.file.PublicFileManager');
-				$publicFileManager = new PublicFileManager();
-				$templateMgr->assign(array(
-					'coverPagePath' => $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/',
-					'coverPageFileName' => $article->getLocalizedFileName(),
-					'width' => $article->getLocalizedWidth(),
-					'height' => $article->getLocalizedHeight(),
-					'coverPageAltText' => $article->getLocalizedCoverPageAltText(),
-				));
-			}
-
 			if (!HookRegistry::call('ArticleHandler::view', array(&$request, &$issue, &$article))) {
 				return $templateMgr->display('frontend/pages/article.tpl');
 			}

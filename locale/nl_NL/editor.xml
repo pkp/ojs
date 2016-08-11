@@ -183,11 +183,11 @@
 	<message key="editor.article.hideTocAuthorShow">Toon</message>
 	<message key="editor.article.cover">Omslag</message>
 	<message key="editor.article.showCoverPage">Maak een omslag voor dit artikel met de volgende elementen.</message>
-	<message key="editor.article.coverPageDisplay">Toon</message>
+	<message key="editor.article.coverImageDisplay">Toon</message>
 	<message key="editor.article.hideCoverPageToc">Omslagafbeelding niet tonen in de inhoudsopgave</message>
 	<message key="editor.article.hideCoverPageAbstract">Omslagafbeelding niet tonen in de artikelsamenvattingsweergave</message>
-	<message key="editor.article.coverPage">Omslagafbeelding</message>
-	<message key="editor.article.coverPageInstructions">(Toegestane formaten: .gif, .jpg en .png)</message>
+	<message key="editor.article.coverImage">Omslagafbeelding</message>
+	<message key="editor.article.coverImageInstructions">(Toegestane formaten: .gif, .jpg en .png)</message>
 	<message key="editor.article.uploaded">Geladen</message>
 	<message key="editor.article.removeCoverPage">Verwijder omslagafbeelding?</message>
 	<message key="editor.article.remove">Verwijder</message>

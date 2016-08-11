@@ -205,11 +205,11 @@
 	<message key="editor.article.hideTocAuthorShow">إعرض</message>
 	<message key="editor.article.cover">الغلاف</message>
 	<message key="editor.article.showCoverPage">أنشئ غلافاً لهذا المؤلَّف بواسطة العناصر الآتية</message>
-	<message key="editor.article.coverPageDisplay">إعرض</message>
+	<message key="editor.article.coverImageDisplay">إعرض</message>
 	<message key="editor.article.hideCoverPageToc">لا تعرض مصغر صورة الغلاف ضمن جدول المحتويات</message>
 	<message key="editor.article.hideCoverPageAbstract">لا تعرض صورة الغلاف ضمن نافذة استعراض ملخصات المؤلفات</message>
-	<message key="editor.article.coverPage">صورة الغلاف</message>
-	<message key="editor.article.coverPageInstructions">(الصيغ المتاحة: .gif, .jpg, or .png )</message>
+	<message key="editor.article.coverImage">صورة الغلاف</message>
+	<message key="editor.article.coverImageInstructions">(الصيغ المتاحة: .gif, .jpg, or .png )</message>
 	<message key="editor.article.uploaded">مرفوعة إلى الموقع</message>
 	<message key="editor.article.removeCoverPage">أتريد إزالة صورة الغلاف؟</message>
 	<message key="editor.article.remove">أزلها</message>

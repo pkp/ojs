@@ -13,6 +13,9 @@
  * @uses $issueGalleys array Galleys for the entire issue
  * @uses $hasAccess bool Can this user access galleys for this context?
  * @uses $showGalleyLinks bool Show galley links to users without access?
+ * @uses $coverImagePath string Base URL path for an issue cover image
+ * @uses $publishedArticles array Lists of articles published in this issue
+ *   sorted by section.
  *}
 <div class="obj_issue_toc">
 
@@ -25,10 +28,10 @@
 	<div class="heading">
 
 		{* Issue cover image *}
-		{assign var=issueCover value=$issue->getLocalizedFileName()}
+		{assign var=issueCover value=$issue->getCoverImage()}
 		{if $issueCover}
-			<a class="cover" href="{url op="view" path=$issue->getBestIssueId()}">
-				<img src="{$coverPagePath|escape}{$issueCover|escape}"{if $issue->getCoverPageAltText($currentLocale) != ''} alt="{$issue->getCoverPageAltText($currentLocale)|escape}"{/if}>
+			<a class="cover" href="{url op="view" page="issue" path=$issue->getBestIssueId()}">
+				<img src="{$coverImagePath|escape}{$issueCover|escape}"{if $issue->getCoverImageAltText() != ''} alt="{$issue->getCoverImageAltText()|escape}"{/if}>
 			</a>
 		{/if}
 

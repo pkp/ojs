@@ -18,10 +18,10 @@
 {/if}
 
 <div class="obj_article_summary">
-	{if $article->getLocalizedFileName() && $article->getLocalizedShowCoverPage() && !$article->getHideCoverPageToc($locale)}
+	{if $article->getCoverImage()}
 		<div class="cover">
 			<a href="{url page="article" op="view" path=$articlePath}" class="file">
-				<img src="{$coverPagePath|escape}{$article->getFileName($locale)|escape}"{if $article->getCoverPageAltText($locale) != ''} alt="{$article->getCoverPageAltText($locale)|escape}"{else} alt="{translate key="article.coverPage.altText"}"{/if}>
+				<img src="{$coverImagePath|escape}{$article->getCoverImage()|escape}"{if $article->getCoverImageAltText() != ''} alt="{$article->getCoverImageAltText()|escape}"{else} alt="{translate key="article.coverPage.altText"}"{/if}>
 			</a>
 		</div>
 	{/if}

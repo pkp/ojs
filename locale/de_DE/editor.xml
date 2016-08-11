@@ -205,11 +205,11 @@
 	<message key="editor.article.hideTocAuthorShow">Anzeigen</message>
 	<message key="editor.article.cover">Titelseite</message>
 	<message key="editor.article.showCoverPage">Eine Titelseite für diesen Artikel mit den folgenden Elementen anlegen.</message>
-	<message key="editor.article.coverPageDisplay">Anzeigen</message>
+	<message key="editor.article.coverImageDisplay">Anzeigen</message>
 	<message key="editor.article.hideCoverPageToc">Das Miniaturbild des Titelbildes nicht im Inhaltsverzeichnis anzeigen.</message>
 	<message key="editor.article.hideCoverPageAbstract">Das Titelbild nicht in der Ansicht des Abstracts anzeigen.</message>
-	<message key="editor.article.coverPage">Titelbild</message>
-	<message key="editor.article.coverPageInstructions">(Erlaubte Formate: .gif, .jpg oder .png)</message>
+	<message key="editor.article.coverImage">Titelbild</message>
+	<message key="editor.article.coverImageInstructions">(Erlaubte Formate: .gif, .jpg oder .png)</message>
 	<message key="editor.article.uploaded">Hochgeladen</message>
 	<message key="editor.article.removeCoverPage">Titelbild entfernen?</message>
 	<message key="editor.article.remove">Entfernen</message>

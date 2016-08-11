@@ -193,11 +193,11 @@
 	<message key="editor.article.hideTocAuthorShow">Göster</message>
 	<message key="editor.article.cover">Kapak</message>
 	<message key="editor.article.showCoverPage">Aşağıdaki öğeler ile bu makale için bir kapak oluştur.</message>
-	<message key="editor.article.coverPageDisplay">Görüntüle</message>
+	<message key="editor.article.coverImageDisplay">Görüntüle</message>
 	<message key="editor.article.hideCoverPageToc">İçindekiler sayfasında küçük kapak görseli görüntüleme.</message>
 	<message key="editor.article.hideCoverPageAbstract">Makale abstraktını görüntülerken kapak görseli görüntüleme.</message>
-	<message key="editor.article.coverPage">Kapak resmi</message>
-	<message key="editor.article.coverPageInstructions">(Kabul edilebilir formatlar: .gif, .jpg veya .png )</message>
+	<message key="editor.article.coverImage">Kapak resmi</message>
+	<message key="editor.article.coverImageInstructions">(Kabul edilebilir formatlar: .gif, .jpg veya .png )</message>
 	<message key="editor.article.uploaded">Yüklendi</message>
 	<message key="editor.article.removeCoverPage">Kapak görseli kaldırılsın mı?</message>
 	<message key="editor.issues.invalidAccessDate">Giriş tarihi geçerli değil.</message>

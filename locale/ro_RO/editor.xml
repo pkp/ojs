@@ -189,11 +189,11 @@
 	<message key="editor.article.hideTocAuthorShow">Afişează</message>
 	<message key="editor.article.cover">Copertă</message>
 	<message key="editor.article.showCoverPage">Creează o copertă pentru acest articol având următoarele elemente.</message>
-	<message key="editor.article.coverPageDisplay">Afişează</message>
+	<message key="editor.article.coverImageDisplay">Afişează</message>
 	<message key="editor.article.hideCoverPageToc">Nu afişa imaginea timbru a imaginii coperţii în cuprins.</message>
 	<message key="editor.article.hideCoverPageAbstract">Nu afişa imaginea coperţii în zona abstractul articolului.</message>
-	<message key="editor.article.coverPage">Imaginea copertei</message>
-	<message key="editor.article.coverPageInstructions">(Formate permise: .gif, .jpg, sau .png )</message>
+	<message key="editor.article.coverImage">Imaginea copertei</message>
+	<message key="editor.article.coverImageInstructions">(Formate permise: .gif, .jpg, sau .png )</message>
 	<message key="editor.article.uploaded">Încărcate</message>
 	<message key="editor.article.removeCoverPage">Elimini imaginea copertei?</message>
 	<message key="editor.article.remove">Elimină</message>

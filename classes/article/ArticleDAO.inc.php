@@ -26,20 +26,6 @@ class ArticleDAO extends SubmissionDAO {
 	}
 
 	/**
-	 * Get a list of field names for which data is localized.
-	 * @return array
-	 */
-	function getLocaleFieldNames() {
-		return array_merge(
-			parent::getLocaleFieldNames(),
-			array(
-				'coverPageAltText', 'showCoverPage', 'hideCoverPageToc', 'hideCoverPageAbstract',
-				'originalFileName', 'fileName', 'width', 'height',
-			)
-		);
-	}
-
-	/**
 	 * Find articles by querying article settings.
 	 * @param $settingName string
 	 * @param $settingValue mixed

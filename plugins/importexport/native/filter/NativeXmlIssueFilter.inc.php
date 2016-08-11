@@ -130,9 +130,6 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 			case 'issue_cover':
 				$this->parseIssueCover($n, $issue);
 				break;
-			case 'issue_style':
-				$this->parseIssueStyle($n, $issue);
-				break;
 			default:
 				fatalError('Unknown element ' . $n->tagName);
 		}
@@ -278,39 +275,12 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 			if (is_a($n, 'DOMElement')) {
 				list($locale, $value) = $this->parseLocalizedContent($n);
 				switch ($n->tagName) {
-					case 'file_name': $issue->setFileName($value, $locale); break;
-					case 'original_file_name': $issue->setOriginalFileName($value, $locale); break;
-					case 'hide_cover_page_archives': $issue->setHideCoverPageArchives($value, $locale); break;
-					case 'hide_cover_page_cover': $issue->setHideCoverPageCover($value, $locale); break;
-					case 'show_cover_page': $issue->setShowCoverPage($value, $locale); break;
-					case 'cover_page_description': $issue->setCoverPageDescription($value, $locale); break;
-					case 'cover_page_alt_text': $issue->setCoverPageAltText($value, $locale); break;
+					case 'cover_image': $issue->setCoverImage($value); break;
+					case 'cover_image_alt_text': $issue->setCoverImageAltText($value); break;
 					case 'embed':
 						import('classes.file.PublicFileManager');
 						$publicFileManager = new PublicFileManager();
-						$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getLocalizedFileName();
-						file_put_contents($filePath, base64_decode($n->textContent));
-						break;
-				}
-			}
-		}
-	}
-
-	/**
-	 * Parse out the issue style sheet and store it in an issue.
-	 * @param DOMElement $node
-	 * @param Issue $issue
-	 */
-	function parseIssueStyle($node, $issue) {
-		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
-			if (is_a($n, 'DOMElement')) {
-				switch ($n->tagName) {
-					case 'style_file_name': $issue->setStyleFileName($n->textContent); break;
-					case 'original_style_file_name': $issue->setOriginalStyleFileName($n->textContent); break;
-					case 'embed':
-						import('classes.file.PublicFileManager');
-						$publicFileManager = new PublicFileManager();
-						$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getStyleFileName();
+						$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getCoverImage();
 						file_put_contents($filePath, base64_decode($n->textContent));
 						break;
 				}

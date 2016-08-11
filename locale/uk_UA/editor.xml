@@ -206,11 +206,11 @@
        <message key="editor.article.hideTocAuthorShow">Показувати</message>
        <message key="editor.article.cover">Обкладинка</message>
        <message key="editor.article.showCoverPage">Створити для цієї статті обкладинку з наступними елементами.</message>
-       <message key="editor.article.coverPageDisplay">Відображення</message>
+       <message key="editor.article.coverImageDisplay">Відображення</message>
        <message key="editor.article.hideCoverPageToc">Не показувати мініатюру зображення обкладинки на сторінці змісту випуску.</message>
        <message key="editor.article.hideCoverPageAbstract">Не показувати зображення обкладинки на сторінці анотації статті.</message>
-       <message key="editor.article.coverPage">Зображення обкладинки</message>
-       <message key="editor.article.coverPageInstructions">(дозволені формати: .gif, .jpg, або .png)</message>
+       <message key="editor.article.coverImage">Зображення обкладинки</message>
+       <message key="editor.article.coverImageInstructions">(дозволені формати: .gif, .jpg, або .png)</message>
        <message key="editor.article.uploaded">Вивантажено</message>
        <message key="editor.article.removeCoverPage">Видалити зображення обкладинки?</message>
        <message key="editor.article.remove">Видалити</message>

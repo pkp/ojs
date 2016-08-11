@@ -25,7 +25,9 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$this->addRoleAssignment(
 			array(ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER),
 			array(
-				'publicationMetadata', 'savePublicationMetadataForm', 'identifiers', 'clearPubId', 'updateIdentifiers', 'assignPubIds',
+				'publicationMetadata', 'savePublicationMetadataForm',
+				'identifiers', 'clearPubId', 'updateIdentifiers',
+				'assignPubIds', 'uploadCoverImage', 'deleteCoverImage',
 			)
 		);
 	}
@@ -34,6 +36,58 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 	//
 	// Public handler methods
 	//
+	/**
+	 * An action to upload an article cover image.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function uploadCoverImage($args, $request) {
+		$user = $request->getUser();
+
+		import('lib.pkp.classes.file.TemporaryFileManager');
+		$temporaryFileManager = new TemporaryFileManager();
+		$temporaryFile = $temporaryFileManager->handleUpload('uploadedFile', $user->getId());
+		if ($temporaryFile) {
+			$json = new JSONMessage(true);
+			$json->setAdditionalAttributes(array(
+				'temporaryFileId' => $temporaryFile->getId()
+			));
+			return $json;
+		} else {
+			return new JSONMessage(false, __('common.uploadFailed'));
+		}
+	}
+
+	/**
+	 * An action to delete an article cover image.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	 function deleteCoverImage($args, $request) {
+		assert(!empty($args['coverImage']) && !empty($args['submissionId']));
+
+		$submission = $this->getSubmission();
+		$submissionDao = Application::getSubmissionDAO();
+		$file = $args['coverImage'];
+
+		// Remove cover image and alt text from article settings
+		$submission->setCoverImage('');
+		$submission->setCoverImageAltText('');
+
+		$submissionDao->updateObject($submission);
+
+		// Remove the file
+		$publicFileManager = new PublicFileManager();
+		if ($publicFileManager->removeJournalFile($submission->getJournalId(), $file)) {
+			$json = new JSONMessage(true);
+			$json->setEvent('fileDeleted');
+			return $json;
+		} else {
+			return new JSONMessage(false, __('editor.article.removeCoverImageFileNotFound'));
+		}
+	}
 
 	/**
 	 * Show the publication metadata form when scheduling for publication.

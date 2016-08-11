@@ -183,11 +183,11 @@
 	<message key="editor.article.hideTocAuthorShow">Vis</message>
 	<message key="editor.article.cover">Forside</message>
 	<message key="editor.article.showCoverPage">Opret forside for denne artikel med følgende elementer.</message>
-	<message key="editor.article.coverPageDisplay">Vis</message>
+	<message key="editor.article.coverImageDisplay">Vis</message>
 	<message key="editor.article.hideCoverPageToc">Vis ikke forsidebillede thumbnail i indholdsfortegnelse.</message>
 	<message key="editor.article.hideCoverPageAbstract">Vis ikke forsidebillede i artikel abstract visning</message>
-	<message key="editor.article.coverPage">Forsidebillede</message>
-	<message key="editor.article.coverPageInstructions">(Tilladte formater: .gif, .jpg, eller .png)</message>
+	<message key="editor.article.coverImage">Forsidebillede</message>
+	<message key="editor.article.coverImageInstructions">(Tilladte formater: .gif, .jpg, eller .png)</message>
 	<message key="editor.article.uploaded">Uploaded</message>
 	<message key="editor.article.removeCoverPage">Fjen forsidebillede?</message>
 	<message key="editor.article.remove">Fjern</message>

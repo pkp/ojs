@@ -94,7 +94,6 @@
 			<element name="open_access_date" type="date" minOccurs="0" maxOccurs="1" />
 			<!-- sub elements -->
 			<element ref="pkp:sections" minOccurs="1" maxOccurs="1" />
-			<element ref="pkp:issue_style" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:issue_cover" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:issue_galleys" minOccurs="1" maxOccurs="1" />
 			<element ref="pkp:articles" minOccurs="1" maxOccurs="1" />
@@ -135,22 +134,8 @@
 
 	<complexType name="issue_cover">
 		<sequence>
-			<element name="file_name" type="pkp:localizedNode" minOccurs="1" maxOccurs="unbounded" />
-			<element name="original_file_name" type="pkp:localizedNode" minOccurs="1" maxOccurs="unbounded" />
-			<element name="hide_cover_page_archives" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
-			<element name="hide_cover_page_cover" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
-			<element name="show_cover_page" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
-			<element name="cover_page_description" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
-			<element name="cover_page_alt_text" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
-			<element name="embed" type="pkp:embed" />
-		</sequence>
-	</complexType>
-
-	<complexType name="issue_style">
-		<sequence>
-			<element name="style_file_name" type="string" minOccurs="1" maxOccurs="unbounded" />
-			<element name="original_style_file_name" type="string" minOccurs="1" maxOccurs="unbounded" />
-			<element name="embed" type="pkp:embed" />
+			<element name="cover_image" type="string" minOccurs="1" maxOccurs="1" />
+			<element name="cover_image_alt_text" type="string" minOccurs="1" maxOccurs="1" />
 		</sequence>
 	</complexType>
 
@@ -201,9 +186,6 @@
 
 	<!-- Permit "issue_cover" as a root element -->
 	<element name="issue_cover" type="pkp:issue_cover" />
-
-	<!-- Permit "issue_style" as a root element -->
-	<element name="issue_style" type="pkp:issue_style" />
 
 	<!-- Permit "section" as a root element -->
 	<element name="section" type="pkp:section" />

@@ -181,11 +181,11 @@ Przed przesłaniem tekstu do redakcji techniczne, powiadom autora o decyzji i wy
 	<message key="editor.article.hideTocAuthorShow">Pokaż</message>
 	<message key="editor.article.cover">Okładka</message>
 	<message key="editor.article.showCoverPage">Stwórz okładkę dla artykułu z następującymi elementami.</message>
-	<message key="editor.article.coverPageDisplay">Wygląd</message>
+	<message key="editor.article.coverImageDisplay">Wygląd</message>
 	<message key="editor.article.hideCoverPageToc">Nie wyświetlaj miniaturki okładki w spisie treści.</message>
 	<message key="editor.article.hideCoverPageAbstract">Nie wyświetlaj okładki przy abstrakcie.</message>
-	<message key="editor.article.coverPage">Okładka</message>
-	<message key="editor.article.coverPageInstructions">(Dozwolone formaty: GIF, JPG lub PNG )</message>
+	<message key="editor.article.coverImage">Okładka</message>
+	<message key="editor.article.coverImageInstructions">(Dozwolone formaty: GIF, JPG lub PNG )</message>
 	<message key="editor.article.uploaded">Przesłane</message>
 	<message key="editor.article.removeCoverPage">Czy usunąć okładkę?</message>
 	<message key="editor.article.remove">Usuń</message>
