@@ -79,8 +79,6 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	function handleChildElement($n, $submission) {
 		switch ($n->tagName) {
 			case 'artwork_file':
-				$this->parseSubmissionFile($n, $submission);
-				break;
 			case 'supplementary_file':
 				$this->parseSubmissionFile($n, $submission);
 				break;

@@ -53,9 +53,13 @@ class SupplementaryFileNativeXmlFilter extends SubmissionFileNativeXmlFilter {
 		$this->createLocalizedNodes($doc, $submissionFileNode, 'description', $submissionFile->getDescription(null));
 		$this->createLocalizedNodes($doc, $submissionFileNode, 'publisher', $submissionFile->getPublisher(null));
 		$this->createLocalizedNodes($doc, $submissionFileNode, 'sponsor', $submissionFile->getSponsor(null));
-		$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'date_created', $submissionFile->getDateCreated()));
+		if ($dateCreated = $submissionFile->getDateCreated()) {
+			$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'date_created',$dateCreated));
+		}
 		$this->createLocalizedNodes($doc, $submissionFileNode, 'source', $submissionFile->getSource(null));
-		$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'language', $submissionFile->getLanguage()));
+		if ($language = $submissionFile->getLanguage()) {
+			$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'language', $language));
+		}
 		return $submissionFileNode;
 	}
 

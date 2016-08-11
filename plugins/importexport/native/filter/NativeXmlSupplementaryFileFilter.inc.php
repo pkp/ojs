@@ -62,8 +62,8 @@ class NativeXmlSupplementaryFileFilter extends NativeXmlArticleFileFilter {
 	 * Handle a child node of the submission file element; add new files, if
 	 * any, to $submissionFiles
 	 * @param $node DOMElement
-	 * @param $fileId int File id
 	 * @param $stageId int SUBMISSION_FILE_...
+	 * @param $fileId int File id
 	 * @param $submissionFiles array
 	 */
 	function handleChildElement($node, $stageId, $fileId, &$submissionFiles) {
@@ -81,7 +81,7 @@ class NativeXmlSupplementaryFileFilter extends NativeXmlArticleFileFilter {
 				$submissionFiles[count($submissionFiles)-1]->setLanguage($node->textContent);
 				break;
 			default:
-				return parent::handleChildElement($node, $stageId, $fileId, $submissionFiles);
+				parent::handleChildElement($node, $stageId, $fileId, $submissionFiles);
 		}
 	}
 

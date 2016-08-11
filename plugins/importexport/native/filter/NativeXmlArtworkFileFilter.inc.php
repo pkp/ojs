@@ -84,7 +84,7 @@ class NativeXmlArtworkFileFilter extends NativeXmlArticleFileFilter {
 				$submissionFiles[count($submissionFiles)-1]->setPermissionTerms($node->textContent);
 				break;
 			default:
-				return parent::handleChildElement($node, $stageId, $fileId, $submissionFiles);
+				parent::handleChildElement($node, $stageId, $fileId, $submissionFiles);
 		}
 	}
 }
