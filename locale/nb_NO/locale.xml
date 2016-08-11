@@ -634,7 +634,7 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 	<message key="help.ojsHelpAbbrev">OJS hjelp</message>	
 	
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">OJS installasjon</message>
+	<message key="installer.appInstallation">OJS installasjon</message>
 	<message key="installer.ojsUpgrade">OJS oppgradering</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS versjon {$version}</h4>
 

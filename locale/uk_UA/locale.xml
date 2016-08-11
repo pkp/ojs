@@ -838,7 +838,7 @@
        <message key="payment.subscription.expires">Завершується</message>      
 
        <!-- Installer -->
-       <message key="installer.ojsInstallation">Встановлення OJS</message>
+       <message key="installer.appInstallation">Встановлення OJS</message>
        <message key="installer.ojsUpgrade">Оновлення OJS</message>
        <message key="installer.installationInstructions"><![CDATA[<h4>Версія OJS {$version}</h4>
 

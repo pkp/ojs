@@ -822,7 +822,7 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="payment.subscription.expires">Masa Berakhir</message>	
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">Instalasi OJS</message>
+	<message key="installer.appInstallation">Instalasi OJS</message>
 	<message key="installer.ojsUpgrade">Updgrade OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>Versi OJS {$version}</h4>
 

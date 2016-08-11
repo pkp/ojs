@@ -901,7 +901,7 @@
 	<message key="payment.subscription.expires">تنتهي صلاحيته</message>
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">تنصيب نظام المجلات المفتوحة</message>
+	<message key="installer.appInstallation">تنصيب نظام المجلات المفتوحة</message>
 	<message key="installer.ojsUpgrade">ترقية نظام المجلات المفتوحة</message>
 	<message key="installer.installationInstructions">
         <![CDATA[<h4>نسخة نظام المجلات المفتوحة {$version}</h4>

@@ -575,7 +575,7 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 	<message key="help.ojsHelpAbbrev">Ayuda OJS</message>
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">Instalación de OJS</message>
+	<message key="installer.appInstallation">Instalación de OJS</message>
 	<message key="installer.ojsUpgrade">Actualización de OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>Versión de OJS {$version}</h4>
 

@@ -535,7 +535,7 @@ Activo indica revisão em consideração ou em progresso.]]></message>
 	<message key="help.ojsHelpAbbrev">Ajuda do sistema</message>
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">Instalação do Sistema</message>
+	<message key="installer.appInstallation">Instalação do Sistema</message>
 	<message key="installer.ojsUpgrade">Actualização do Sistema</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Versão {$version}</h4>
 

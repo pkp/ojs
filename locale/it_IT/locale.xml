@@ -895,7 +895,7 @@ Attive indica quante revisioni sono attualmente in corso.]]></message>
 	<message key="payment.subscription.expires">Scade</message>
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">Installazione di OJS</message>
+	<message key="installer.appInstallation">Installazione di OJS</message>
 	<message key="installer.ojsUpgrade">Aggiornamento di OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>versione di OJS{$version}</h4>
 

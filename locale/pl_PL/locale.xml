@@ -692,7 +692,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<!-- Payments -->
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">Instalacja OJS</message>
+	<message key="installer.appInstallation">Instalacja OJS</message>
 	<message key="installer.ojsUpgrade">Aktualizacja OJS</message>
 
 	<!-- Article Logs -->

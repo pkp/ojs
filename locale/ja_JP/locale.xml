@@ -518,7 +518,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="help.ojsHelp">オープン･ジャーナル･システムのヘルプ</message>
   <message key="help.ojsHelpAbbrev">OJSヘルプ</message>
   <!-- Installer -->
-  <message key="installer.ojsInstallation">OJSのインストール</message>
+  <message key="installer.appInstallation">OJSのインストール</message>
   <message key="installer.ojsUpgrade">OJSのバージョンアップ</message>
   <message key="installer.installationInstructions"><![CDATA[<h4>OJS バージョン {$version}</h4>
 

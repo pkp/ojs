@@ -903,7 +903,7 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<message key="payment.subscription.expires">Läuft aus</message>
 
 	<!-- Installation -->
-	<message key="installer.ojsInstallation">Installation von OJS</message>
+	<message key="installer.appInstallation">Installation von OJS</message>
 	<message key="installer.ojsUpgrade">Aktualisierung von OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS-Version {$version}</h4>
 

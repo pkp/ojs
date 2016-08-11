@@ -905,7 +905,7 @@
 	<message key="payment.subscription.expires">Истекает</message>
 
 	<!-- Установщик -->
-	<message key="installer.ojsInstallation">Установка OJS</message>
+	<message key="installer.appInstallation">Установка OJS</message>
 	<message key="installer.ojsUpgrade">Обновление OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>Версия OJS {$version}</h4>
 
