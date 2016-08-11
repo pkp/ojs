@@ -65,7 +65,8 @@ class IssueForm extends Form {
 		}
 
 		// Cover image preview
-		$coverImage = $this->issue->getCoverImage();
+		$coverImage = null;
+		if ($this->issue) $coverImage = $this->issue->getCoverImage();
 
 		// Cover image delete link action
 		if ($coverImage) {
