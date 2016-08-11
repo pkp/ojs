@@ -860,7 +860,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="payment.subscription.expires">കാലവധി കഴിഞ്ഞവ</message>	
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">ഒജെഎസ് ഇന്‍സ്റ്റാളേഷന്‍</message>
+	<message key="installer.appInstallation">ഒജെഎസ് ഇന്‍സ്റ്റാളേഷന്‍</message>
 	<message key="installer.ojsUpgrade">ഒജെഎസ് അപ്ഗ്രേഡ്</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Version {$version}</h4>
 

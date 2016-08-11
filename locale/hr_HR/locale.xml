@@ -581,7 +581,7 @@ Sadržaj priložene datoteke možete provjeriti ukoliko kliknete na njezino ime.
 	<!-- Announcement -->	<!-- Help -->	<message key="help.ojsHelp">Pomoć za korištenje OJS-a</message>
 	<message key="help.ojsHelpAbbrev">OJS pomoć</message>	
 	
-	<!-- Installer --><message key="installer.ojsInstallation">OJS instalacija</message>
+	<!-- Installer --><message key="installer.appInstallation">OJS instalacija</message>
 	<message key="installer.ojsUpgrade">OJS nadogradnja</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS verzija {$version}</h4>
 

@@ -650,7 +650,7 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 	<message key="payment.subscription.expires">Udløber</message>
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">OJS-installation</message>
+	<message key="installer.appInstallation">OJS-installation</message>
 	<message key="installer.ojsUpgrade">OJS-opgradering</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS-version {$version}</h4>
 

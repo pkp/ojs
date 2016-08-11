@@ -767,7 +767,7 @@ Prozesu editoriala eta argitaratze-prozesua</message>
 	<message key="payment.subscription.expires">Iraungi</message>	
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">OJS instalazioa</message>
+	<message key="installer.appInstallation">OJS instalazioa</message>
 	<message key="installer.ojsUpgrade">OJS bertsio-berritzea</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS {$version} bertsioa</h4>
 

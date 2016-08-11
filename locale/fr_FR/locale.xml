@@ -528,7 +528,7 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<message key="help.ojsHelpAbbrev">Aide d'OJS</message>
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">Installation d'OJS</message>
+	<message key="installer.appInstallation">Installation d'OJS</message>
 	<message key="installer.ojsUpgrade">Mise à jour d'OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>Version d'OJS {$version}</h4>
 

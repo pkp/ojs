@@ -818,7 +818,7 @@
 	<message key="payment.subscription.expires">到期</message>	
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">OJS安装</message>
+	<message key="installer.appInstallation">OJS安装</message>
 	<message key="installer.ojsUpgrade">OJS升级</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS版本 {$version}</h4>
 <p>谢谢您下载Public Knowledge Project的<strong>Open Journal Systems</strong>. 在处理之前，请阅读 <a href="{$baseUrl}/docs/README">README</a>文件. 关于 Public Knowledge Project 相关的以及其软件的更多信息，请访问 <a href="http://pkp.sfu.ca/" target="_blank">PKP的网站</a>. 如果您有OJS的bug报告或者技术质询, 请访问<a href="http://forum.pkp.sfu.ca" target="_blank">支持论坛</a>或者访问PKP的在线 <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Bug报告系统</a>.虽然支持论坛是联系的首选方法, 您也可以电邮 <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
