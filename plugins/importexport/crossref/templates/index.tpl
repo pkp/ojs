@@ -92,7 +92,7 @@
 				<script type="text/javascript">
 					$(function() {ldelim}
 						// Attach the form handler.
-						$('#exportIssuesXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+						$('#exportIssueXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
 					{rdelim});
 				</script>
 				<p>{translate key="plugins.importexport.crossref.issues.description"}</p>

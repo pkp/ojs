@@ -586,12 +586,12 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 				LEFT JOIN issue_settings ist ON (i.issue_id = ist.issue_id)
 				'. ($pubIdSettingName != null?' LEFT JOIN issue_settings iss ON (i.issue_id = iss.issue_id AND iss.setting_name = ?)':'') .'
 			WHERE
-				ist.setting_name = ? AND ist.setting_value IS NOT NULL
+				i.published = 1 AND ist.setting_name = ? AND ist.setting_value IS NOT NULL
 				' . ($contextId != null?' AND i.journal_id = ?':'')
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND iss.setting_value IS NULL':'')
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND iss.setting_value = ?':'')
-				. (($pubIdSettingName != null && is_null($pubIdSettingValue))?' AND iss.setting_value IS NULL OR iss.setting_value = \'\'':'')
-				.' AND i.published = 1 ORDER BY i.date_published DESC',
+				. (($pubIdSettingName != null && is_null($pubIdSettingValue))?' AND (iss.setting_value IS NULL OR iss.setting_value = \'\')':'')
+				.' ORDER BY i.date_published DESC',
 			$params,
 			$rangeInfo
 		);
