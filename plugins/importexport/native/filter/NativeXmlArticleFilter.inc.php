@@ -79,6 +79,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	function handleChildElement($n, $submission) {
 		switch ($n->tagName) {
 			case 'artwork_file':
+			case 'supplementary_file':
 				$this->parseSubmissionFile($n, $submission);
 				break;
 			case 'article_galley':
@@ -100,7 +101,10 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 				$importClass='SubmissionFile';
 				break;
 			case 'artwork_file':
-				$importClass='ArtworkFile';
+				$importClass='SubmissionArtworkFile';
+				break;
+			case 'supplementary_file':
+				$importClass='SupplementaryFile';
 				break;
 			case 'article_galley':
 				$importClass='ArticleGalley';

@@ -68,12 +68,26 @@
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
 			outputType="class::classes.article.Author[]" />
-		<!-- Artwork file native XML output -->
+		<!-- Article file native XML output -->
 		<filterGroup
-			symbolic="ArtworkFile=>native-xml"
+			symbolic="SubmissionFile=>native-xml"
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
-			inputType="class::classes.article.ArtworkFile"
+			inputType="class::lib.pkp.classes.submission.SubmissionFile"
+			outputType="xml::schema(plugins/importexport/native/native.xsd)" />
+		<!-- Artwork file native XML output -->
+		<filterGroup
+			symbolic="SubmissionArtworkFile=>native-xml"
+			displayName="plugins.importexport.native.displayName"
+			description="plugins.importexport.native.description"
+			inputType="class::lib.pkp.classes.submission.SubmissionArtworkFile"
+			outputType="xml::schema(plugins/importexport/native/native.xsd)" />
+		<!-- Supplementary file native XML output -->
+		<filterGroup
+			symbolic="SupplementaryFile=>native-xml"
+			displayName="plugins.importexport.native.displayName"
+			description="plugins.importexport.native.description"
+			inputType="class::lib.pkp.classes.submission.SupplementaryFile"
 			outputType="xml::schema(plugins/importexport/native/native.xsd)" />
 		<!-- Article file native XML input -->
 		<filterGroup
@@ -81,21 +95,21 @@
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
-			outputType="class::lib.pkp.classes.article.SubmissionFile" />
+			outputType="class::lib.pkp.classes.submission.SubmissionFile" />
 		<!-- Artwork file native XML input -->
 		<filterGroup
-			symbolic="native-xml=>ArtworkFile"
+			symbolic="native-xml=>SubmissionArtworkFile"
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
-			outputType="class::classes.article.ArtworkFile" />
-		<!-- Article file native XML output -->
+			outputType="class::lib.pkp.classes.submission.SubmissionArtworkFile" />
+		<!-- Supplementary file native XML input -->
 		<filterGroup
-			symbolic="SubmissionFile=>native-xml"
+			symbolic="native-xml=>SupplementaryFile"
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
-			inputType="class::lib.pkp.classes.article.SubmissionFile"
-			outputType="xml::schema(plugins/importexport/native/native.xsd)" />
+			inputType="xml::schema(plugins/importexport/native/native.xsd)"
+			outputType="class::lib.pkp.classes.submission.SupplementaryFile" />
 		<!-- Article Galley native XML output -->
 		<filterGroup
 			symbolic="article-galley=>native-xml"
@@ -159,17 +173,28 @@
 			isTemplate="0" />
 		<!-- Native XML artwork file input -->
 		<filter
-			inGroup="native-xml=>ArtworkFile"
+			inGroup="native-xml=>SubmissionArtworkFile"
 			class="plugins.importexport.native.filter.NativeXmlArtworkFileFilter"
+			isTemplate="0" />
+		<!-- Native XML supplementary file input -->
+		<filter
+			inGroup="native-xml=>SupplementaryFile"
+			class="plugins.importexport.native.filter.NativeXmlSupplementaryFileFilter"
 			isTemplate="0" />
 		<!-- Native XML submission file output -->
 		<filter
-			inGroup="ArtworkFile=>native-xml"
-			class="plugins.importexport.native.filter.ArtworkFileNativeXmlFilter"
-			isTemplate="0" />
-		<filter
 			inGroup="SubmissionFile=>native-xml"
 			class="lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter"
+			isTemplate="0" />
+		<!-- Native XML artwork file output -->
+		<filter
+			inGroup="SubmissionArtworkFile=>native-xml"
+			class="plugins.importexport.native.filter.ArtworkFileNativeXmlFilter"
+			isTemplate="0" />
+		<!-- Native XML supplementary file output -->
+		<filter
+			inGroup="SupplementaryFile=>native-xml"
+			class="plugins.importexport.native.filter.SupplementaryFileNativeXmlFilter"
 			isTemplate="0" />
 		<!-- Native XML article galley output -->
 		<filter
