@@ -508,7 +508,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 				. ($issueId != null?' AND ps.issue_id = ?':'')
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND gss.setting_value IS NULL':'')
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND gss.setting_value = ?':'')
-				. (($pubIdSettingName != null && is_null($pubIdSettingValue))?' AND gss.setting_value IS NULL OR gss.setting_value = \'\'':'') .'
+				. (($pubIdSettingName != null && is_null($pubIdSettingValue))?' AND (gss.setting_value IS NULL OR gss.setting_value = \'\')':'') .'
 				ORDER BY ps.date_published DESC, s.submission_id DESC, g.galley_id DESC',
 				$params,
 				$rangeInfo

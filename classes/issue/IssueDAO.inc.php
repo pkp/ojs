@@ -590,7 +590,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 				' . ($contextId != null?' AND i.journal_id = ?':'')
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND iss.setting_value IS NULL':'')
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND iss.setting_value = ?':'')
-				. (($pubIdSettingName != null && is_null($pubIdSettingValue))?' AND iss.setting_value IS NULL OR iss.setting_value = \'\'':'')
+				. (($pubIdSettingName != null && is_null($pubIdSettingValue))?' AND (iss.setting_value IS NULL OR iss.setting_value = \'\')':'')
 				.' ORDER BY i.date_published DESC',
 			$params,
 			$rangeInfo

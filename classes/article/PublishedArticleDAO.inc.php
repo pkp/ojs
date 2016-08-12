@@ -788,7 +788,7 @@ class PublishedArticleDAO extends ArticleDAO {
 				. ($issueId != null?' AND ps.issue_id = ?':'')
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND sss.setting_value IS NULL':'')
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND sss.setting_value = ?':'')
-				. (($pubIdSettingName != null && is_null($pubIdSettingValue))?' AND sss.setting_value IS NULL OR sss.setting_value = \'\'':'')
+				. (($pubIdSettingName != null && is_null($pubIdSettingValue))?' AND (sss.setting_value IS NULL OR sss.setting_value = \'\')':'')
 			. ' ORDER BY ps.date_published DESC, s.submission_id DESC',
 			$params,
 			$rangeInfo
