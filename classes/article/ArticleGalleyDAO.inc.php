@@ -493,7 +493,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 			FROM	submission_galleys g
 				' . ($contextId != null?' JOIN submissions s ON (s.submission_id = g.submission_id)':'') . '
 				LEFT JOIN published_submissions ps ON (ps.submission_id = g.submission_id)
-				LEFT JOIN issues i ON (ps.issue_id = i.issue_id)
+				JOIN issues i ON (ps.issue_id = i.issue_id)
 				LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
 				LEFT JOIN submission_files nsf ON (nsf.file_id = g.file_id AND nsf.revision > sf.revision AND nsf.file_id IS NULL )
 				LEFT JOIN submission_galley_settings gs ON (g.galley_id = gs.galley_id)
@@ -501,7 +501,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 				. ($author != null?' LEFT JOIN authors au ON (s.submission_id = au.submission_id)':'')
 				. ($pubIdSettingName != null?' LEFT JOIN submission_galley_settings gss ON (g.galley_id = gss.galley_id AND gss.setting_name = ?)':'') .'
 			WHERE
-				i.published = 1 AND i.date_published IS NOT NULL AND gs.setting_name = ? AND gs.setting_value IS NOT NULL
+				i.published = 1 AND gs.setting_name = ? AND gs.setting_value IS NOT NULL
 				' . ($contextId != null?' AND s.context_id = ?':'')
 				. ($title != null?' AND (sst.setting_name = ? AND sst.locale = ? AND sst.setting_value LIKE ?)':'')
 				. ($author != null?' AND (au.first_name LIKE ? OR au.middle_name LIKE ? OR au.last_name LIKE ?)':'')
