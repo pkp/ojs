@@ -223,7 +223,7 @@ class IssueForm extends Form {
 		if ($this->getData('enableOpenAccessDate')) $issue->setOpenAccessDate($this->getData('openAccessDate'));
 		else $issue->setOpenAccessDate(null);
 
-		// If it is a new issue, firs insert it, then update the cover
+		// If it is a new issue, first insert it, then update the cover
 		// because the cover name needs an issue id.
 		if ($isNewIssue) {
 			$issue->setPublished(0);
