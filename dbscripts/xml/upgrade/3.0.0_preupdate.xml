@@ -25,14 +25,14 @@
 		<rename table="edit_decisions" column="article_id" to="submission_id" />
 	</sql>
 
-	<!-- Article files migration -->
+	<!-- Articles migration -->
 	<sql>
-		<query>CREATE TABLE article_files_migration AS (SELECT * FROM article_files)</query>
+		<query>CREATE TABLE articles_migration AS (SELECT article_id, user_id, submission_file_id, revised_file_id, review_file_id, editor_file_id FROM articles)</query>
 	</sql>
 
 	<!-- Article files migration -->
 	<sql>
-		<query>CREATE TABLE article_submitter_migration AS (SELECT article_id, user_id FROM articles)</query>
+		<query>CREATE TABLE article_files_migration AS (SELECT * FROM article_files)</query>
 	</sql>
 
 	<!-- Bug #8235: Rename article* submission* -->

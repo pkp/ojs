@@ -356,7 +356,7 @@ class Upgrade extends Installer {
 			// Now, migrate stage assignments. This code is based on the default stage assignments outlined in registry/userGroups.xml
 			$submissionDao = Application::getSubmissionDAO();
 			$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
-			$submissionResult = $submissionDao->retrieve('SELECT article_id, user_id FROM article_submitter_migration');
+			$submissionResult = $submissionDao->retrieve('SELECT article_id, user_id FROM articles_migration');
 			$authorGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_AUTHOR);
 			while (!$submissionResult->EOF) {
 				$submissionRow = $submissionResult->GetRowAssoc(false);
