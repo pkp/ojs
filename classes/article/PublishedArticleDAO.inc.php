@@ -780,8 +780,9 @@ class PublishedArticleDAO extends ArticleDAO {
 				. ($pubIdSettingName != null?' LEFT JOIN submission_settings sss ON (s.submission_id = sss.submission_id AND sss.setting_name = ?)':'')
 				. ' ' . $this->getFetchJoins()
 				. ' ' . $this->getCompletionJoins() .'
-			WHERE
-				ss.setting_name = ? AND ss.setting_value IS NOT NULL
+			WHERE '
+				.$this->getCompletionConditions(true)
+				. ' AND i.published = 1 AND ss.setting_name = ? AND ss.setting_value IS NOT NULL
 				' . ($contextId != null?' AND s.context_id = ?':'')
 				. ($title != null?' AND (sst.setting_name = ? AND sst.locale = ? AND sst.setting_value LIKE ?)':'')
 				. ($author != null?' AND (au.first_name LIKE ? OR au.middle_name LIKE ? OR au.last_name LIKE ?)':'')
@@ -789,8 +790,7 @@ class PublishedArticleDAO extends ArticleDAO {
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND sss.setting_value IS NULL':'')
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND sss.setting_value = ?':'')
 				. (($pubIdSettingName != null && is_null($pubIdSettingValue))?' AND sss.setting_value IS NULL OR sss.setting_value = \'\'':'')
-			. ' AND ' . $this->getCompletionConditions(true)
-			. 'ORDER BY ps.date_published DESC, s.submission_id DESC',
+			. ' ORDER BY ps.date_published DESC, s.submission_id DESC',
 			$params,
 			$rangeInfo
 		);
