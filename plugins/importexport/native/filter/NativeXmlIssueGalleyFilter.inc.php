@@ -35,7 +35,28 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter {
 		return 'plugins.importexport.native.filter.NativeXmlIssueGalleyFilter';
 	}
 
+	//
+	// Override methods in NativeImportFilter
+	//
+	/**
+	 * Return the plural element name
+	 * @return string
+	 */
+	function getPluralElementName() {
+		return 'issue_galleys';
+	}
 
+	/**
+	 * Get the singular element name
+	 * @return string
+	 */
+	function getSingularElementName() {
+		return 'issue_galley';
+	}
+
+	//
+	// Extend functions in the parent class
+	//
 	/**
 	 * Handle a submission element
 	 * @param $node DOMElement
@@ -50,7 +71,7 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter {
 		// Create the data object
 		$issueGalleyDao  = DAORegistry::getDAO('IssueGalleyDAO');
 		$issueGalley = $issueGalleyDao->newDataObject();
-		$issueGalley->seIssueId($issue->getId());
+		$issueGalley->setIssueId($issue->getId());
 		$issueGalley->setLocale($node->getAttribute('locale'));
 		$issueGalley->setSequence($issueGalleyDao->getNextGalleySequence($issue->getId()));
 
@@ -66,15 +87,15 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter {
 					case 'file_name': $issueFile->setServerFileName($o->textContent); break;
 					case 'file_type': $issueFile->setFileType($o->textContent); break;
 					case 'file_size': $issueFile->setFileSize($o->textContent); break;
-					case 'content_type': $issueFile->setContentType($o->textContent); break;
+					case 'content_type': $issueFile->setContentType((int)$o->textContent); break;
 					case 'original_file_name': $issueFile->setOriginalFileName($o->textContent); break;
 					case 'date_uploaded': $issueFile->setDateUploaded($o->textContent); break;
 					case 'date_modified': $issueFile->setDateModified($o->textContent); break;
 					case 'embed':
 						import('classes.file.IssueFileManager');
 						$issueFileManager = new IssueFileManager($issue->getId());
-						$filePath = $issueFileManager->getFilesDir() . '/' . $issueFileManager->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
-						file_put_contents($filePath, base64_decode($o->textContent));
+						$filePath = $issueFileManager->getFilesDir() . $issueFileManager->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
+						$issueFileManager->writeFile($filePath, base64_decode($o->textContent));
 						break;
 				}
 			break;

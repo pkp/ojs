@@ -142,9 +142,9 @@
 	<complexType name="issue_file">
 		<sequence>
 			<element name="file_name" type="string" minOccurs="1" maxOccurs="1" />
-			<element name="file_type" type="int" minOccurs="1" maxOccurs="1" />
+			<element name="file_type" type="string" minOccurs="1" maxOccurs="1" />
 			<element name="file_size" type="int" minOccurs="1" maxOccurs="1" />
-			<element name="content_type" type="string" minOccurs="1" maxOccurs="1" />
+			<element name="content_type" type="int" minOccurs="1" maxOccurs="1" />
 			<element name="original_file_name" type="string" minOccurs="1" maxOccurs="1" />
 			<element name="date_uploaded" type="date" minOccurs="1" maxOccurs="1" />
 			<element name="date_modified" type="date" minOccurs="1" maxOccurs="1" />
@@ -156,6 +156,7 @@
 		<sequence>
 			<element name="cover_image" type="string" minOccurs="1" maxOccurs="1" />
 			<element name="cover_image_alt_text" type="string" minOccurs="1" maxOccurs="1" />
+			<element name="embed" type="pkp:embed" />
 		</sequence>
 	</complexType>
 

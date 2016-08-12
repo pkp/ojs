@@ -66,13 +66,16 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
 		assert(is_a($submission, 'Submission'));
 
 		$submissionFileRefNodes = $node->getElementsByTagName('submission_file_ref');
-		assert($submissionFileRefNodes->length == 1);
-		$fileNode = $submissionFileRefNodes->item(0);
-		$fileId = $fileNode->getAttribute('id');
-		$revisionId = $fileNode->getAttribute('revision');
-		$dbFileId = $deployment->getFileDBId($fileId, $revisionId);
-		assert($dbFileId);
-
+		assert($submissionFileRefNodes->length <= 1);
+		$addSubmissionFile = false;
+		if ($submissionFileRefNodes->length == 1) {
+			$fileNode = $submissionFileRefNodes->item(0);
+			$fileId = $fileNode->getAttribute('id');
+			$revisionId = $fileNode->getAttribute('revision');
+			$dbFileId = $deployment->getFileDBId($fileId, $revisionId);
+			assert($dbFileId);
+			$addSubmissionFile = true;
+		}
 		$representation = parent::handleElement($node);
 
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) if (is_a($n, 'DOMElement')) switch($n->tagName) {
@@ -84,15 +87,17 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
 		}
 
 		$representationDao = Application::getRepresentationDAO();
-		$representation->setFileId($dbFileId);
+		if ($addSubmissionFile) $representation->setFileId($dbFileId);
 		$representationDao->insertObject($representation);
 
-		// Update the submission file.
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-		$submissionFile = $submissionFileDao->getRevision($dbFileId, $revisionId);
-		$submissionFile->setAssocType(ASSOC_TYPE_REPRESENTATION);
-		$submissionFile->setAssocId($representation->getId());
-		$submissionFileDao->updateObject($submissionFile);
+		if ($addSubmissionFile) {
+			// Update the submission file.
+			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+			$submissionFile = $submissionFileDao->getRevision($dbFileId, $revisionId);
+			$submissionFile->setAssocType(ASSOC_TYPE_REPRESENTATION);
+			$submissionFile->setAssocId($representation->getId());
+			$submissionFileDao->updateObject($submissionFile);
+		}
 
 		// representation proof files
 		return $representation;
