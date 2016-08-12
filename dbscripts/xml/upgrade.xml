@@ -71,7 +71,6 @@
 		<code function="clearDataCache" />
 		<code function="migrateUserRoles" />
 		<code function="installDefaultGenres" />
-		<code function="migrateSubmissionFilePaths" />
 		<data file="dbscripts/xml/upgrade/remove_timed_views_bots.xml" condition="return $installer->tableExists('timed_views_log');" />
 		<code function="migrateCounterPluginUsageStatistics" condition="return $installer->tableExists('counter_monthly_log');" />
 		<code function="migrateTimedViewsUsageStatistics" condition="return $installer->tableExists('timed_views_log');" />
@@ -92,6 +91,7 @@
 		<code function="localizeCustomBlockSettings" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupdate.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_pubId_settings.xml" />
+		<code function="migrateFiles" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->

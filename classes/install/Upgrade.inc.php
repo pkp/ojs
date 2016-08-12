@@ -469,98 +469,6 @@ class Upgrade extends Installer {
 	}
 
 	/**
-	 * For 3.0.0 upgrade.  Migrates submission files to new paths.
-	 */
-	function migrateSubmissionFilePaths() {
-
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-		import('lib.pkp.classes.submission.SubmissionFile');
-		$genreDao = DAORegistry::getDAO('GenreDAO');
-		$journalDao = DAORegistry::getDAO('JournalDAO');
-
-		$submissionFile = new SubmissionFile();
-
-		import('lib.pkp.classes.file.FileManager');
-		$fileManager = new FileManager();
-
-		$submissionFilesResult = $submissionFileDao->retrieve('SELECT af.*, s.submission_id, s.context_id FROM article_files_migration af, submissions s WHERE af.article_id = s.submission_id');
-		$filesDir = Config::getVar('files', 'files_dir') . '/journals/';
-		while (!$submissionFilesResult->EOF){
-			$row = $submissionFilesResult->GetRowAssoc(false);
-			// Assemble the old file path.
-			$oldFilePath = $filesDir . $row['context_id'] . '/articles/' . $row['submission_id'] . '/';
-			if (isset($row['type'])) { // pre 2.4 upgrade.
-				$oldFilePath .= $row['type'];
-			} else { // post 2.4, we have file_stage instead.
-				switch ($row['file_stage']) {
-					case 1:
-						$oldFilePath .= 'submission/original';
-						break;
-					case 2:
-						$oldFilePath .= 'submission/review';
-						break;
-					case 3:
-						$oldFilePath .= 'submission/editor';
-						break;
-					case 4:
-						$oldFilePath .= 'submission/copyedit';
-						break;
-					case 5:
-						$oldFilePath .= 'submission/layout';
-						break;
-					case 6:
-						$oldFilePath .= 'supp';
-						break;
-					case 7:
-						$oldFilePath .= 'public';
-						break;
-					case 8:
-						$oldFilePath .= 'note';
-						break;
-					case 9:
-						$oldFilePath .= 'attachment';
-						break;
-				}
-			}
-
-			$oldFilePath .= '/' . $row['file_name'];
-			if (file_exists($oldFilePath)) { // sanity check.
-
-				$newFilePath = $filesDir . $row['context_id'] . '/articles/' . $row['submission_id'] . '/';
-
-				// Since we cannot be sure that we had a file_stage column before, query the new submission_files table.
-				$submissionFileResult = $submissionFileDao->retrieve('SELECT genre_id, file_stage, date_uploaded, original_file_name
-							FROM submission_files WHERE file_id = ? and revision = ?', array($row['file_id'], $row['revision']));
-				$submissionFileRow = $submissionFileResult->GetRowAssoc(false);
-
-				$newFilePath .= $submissionFile->_fileStageToPath($submissionFileRow['file_stage']);
-
-				$genre = $genreDao->getById($submissionFileRow['genre_id']);
-				// pull in the primary locale for this journal without loading the whole object.
-				$localeResult = $journalDao->retrieve('SELECT primary_locale FROM journals WHERE journal_id = ?', array($row['context_id']));
-				$localeRow = $localeResult->GetRowAssoc(false);
-
-				$newFilePath .= '/' . $row['submission_id'] . '-' . $genre->getDesignation() . '_' . $genre->getName($localeRow['primary_locale']) . '-' .
-					$row['file_id'] . '-' . $row['revision'] . '-' . $submissionFileRow['file_stage'] . '-' . date('Ymd', strtotime($submissionFileRow['date_uploaded'])) . '.' .
-					strtolower_codesafe($fileManager->parseFileExtension($submissionFileRow['original_file_name']));
-
-				$fileManager->copyFile($oldFilePath, $newFilePath);
-				if (file_exists($newFilePath)) {
-					$fileManager->deleteFile($oldFilePath);
-				}
-			}
-
-			$submissionFilesResult->MoveNext();
-			unset($localeResult);
-			unset($submissionFileResult);
-			unset($localeRow);
-			unset($submissionFileRow);
-		}
-
-		return true;
-	}
-
-	/**
 	 * For 2.4 upgrade: migrate COUNTER statistics to the metrics table.
 	 */
 	function migrateCounterPluginUsageStatistics() {
@@ -942,6 +850,61 @@ class Upgrade extends Installer {
 			unset($journal);
 		}
 
+		return true;
+	}
+
+	/**
+	 * Migrate submission filenames from OJS 2.x
+	 * @param $upgrade Upgrade
+	 * @param $params array
+	 * @return boolean
+	 */
+	function migrateFiles($upgrade, $params) {
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$submissionDao = DAORegistry::getDAO('ArticleDAO');
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		DAORegistry::getDAO('GenreDAO'); // Load constants
+		$siteDao = DAORegistry::getDAO('SiteDAO'); /* @var $siteDao SiteDAO */
+		$site = $siteDao->getSite();
+		$adminEmail = $site->getLocalizedContactEmail();
+
+		import('lib.pkp.classes.file.SubmissionFileManager');
+
+		$contexts = $journalDao->getAll();
+		while ($context = $contexts->next()) {
+			$submissions = $submissionDao->getByContextId($context->getId());
+			while ($submission = $submissions->next()) {
+				$submissionFileManager = new SubmissionFileManager($context->getId(), $submission->getId());
+				$submissionFiles = $submissionFileDao->getBySubmissionId($submission->getId());
+				foreach ($submissionFiles as $submissionFile) {
+					$generatedFilename = $submissionFile->getServerFileName();
+					$basePath = $submissionFileManager->getBasePath() . '/';
+					$globPattern = '*/' . $submissionFile->getSubmissionId() . '-' .
+						$submissionFile->getFileId() . '-' .
+						$submissionFile->getRevision() . '-' .
+						'??' .
+						'.' . strtolower_codesafe($submissionFile->getExtension());
+
+					$matchedResults = glob($basePath . '/submission/' . $globPattern);
+					if (count($matchedResults)>1) {
+						// Too many filenames matched.
+						error_log("Duplicate potential files for \"$globPattern\"!", 1, $adminEmail);
+						continue;
+					} elseif (count($matchedResults)==0) {
+						// No filenames matched.
+						error_log("Unable to find a match for \"$globPattern\".\n", 1, $adminEmail);
+						continue;
+					}
+
+					$discoveredFilename = array_shift($matchedResults);
+					$targetFilename = $basePath . $submissionFile->_fileStageToPath($submissionFile->getFileStage()) . '/' . $generatedFilename;
+					if (file_exists($targetFilename)) continue; // Skip existing files/links
+					if (!rename($discoveredFilename, $targetFilename)) {
+						error_log("Unable to move \"$discoveredFilename\" to \"$targetFilename\".");
+					}
+				}
+			}
+		}
 		return true;
 	}
 }
