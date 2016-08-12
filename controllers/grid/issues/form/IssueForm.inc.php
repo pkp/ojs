@@ -223,6 +223,14 @@ class IssueForm extends Form {
 		if ($this->getData('enableOpenAccessDate')) $issue->setOpenAccessDate($this->getData('openAccessDate'));
 		else $issue->setOpenAccessDate(null);
 
+		// If it is a new issue, firs insert it, then update the cover
+		// because the cover name needs an issue id.
+		if ($isNewIssue) {
+			$issue->setPublished(0);
+			$issue->setCurrent(0);
+			$issueDao->insertObject($issue);
+		}
+
 		// Copy an uploaded cover file for the issue, if there is one.
 		if ($temporaryFileId = $this->getData('temporaryFileId')) {
 			$user = $request->getUser();
@@ -240,16 +248,8 @@ class IssueForm extends Form {
 
 		$issue->setCoverImageAltText($this->getData('coverImageAltText'));
 
-		// if issueId is supplied, then update issue otherwise insert a new one
-		if (!$isNewIssue) {
-			parent::execute();
-			$issueDao->updateObject($issue);
-		} else {
-			$issue->setPublished(0);
-			$issue->setCurrent(0);
-
-			$issueDao->insertObject($issue);
-		}
+		parent::execute();
+		$issueDao->updateObject($issue);
 	}
 }
 
