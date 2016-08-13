@@ -121,4 +121,5 @@
 	<message key="author.article.copyeditedFile">Archivo corregido</message>
 	<message key="author.article.authorRevisedFile">Archivo del autor/a</message>
 	<message key="author.submit.authorSubmitLoginMessage">Es necesario disponer de una cuenta de usuario/a para realizar envíos a la revista. Esto permite que nuestros editores/as hagan un seguimiento de sus envíos y puedan contactarle cuando cambie el estado de los mismos o si es necesario proporcionar información adicional.</message>
+	<message key="author.submit.nextSteps">Siguientes pasos</message>
 </locale>

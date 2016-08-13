@@ -64,4 +64,30 @@ al.</strong> El corrector/a de la revista editará el texto para mejorar la flui
 	<message key="default.journalSettings.donationFeeDescription">Toda donación será gratamente recibida y se empleará en proporcionar recursos a los editores/as para seguir ofreciendo a los lectores/as una revista de alta calidad.</message>
 	<message key="default.journalSettings.emailHeader">El siguiente mensaje se está enviando a nombre de {$journalName}.
 ________________________________________________________________________</message>
+	<message key="default.genres.article">Texto del artículo</message>
+	<message key="default.journalSettings.clockssLicense"><![CDATA[Esta revista utiliza el sistema CLOCKSS para crear un sistema de archivos distribuido entre las bibliotecas participantes y permite a estas bibliotecas crear archivos permanentes de la revista con finalidad de preservación y restauración. <a href="http://clockss.org/">More...</a>]]></message>
+	<message key="default.groups.name.manager">Gestor/a de la revista</message>
+	<message key="default.groups.plural.manager">Gestores/as de la revista</message>
+	<message key="default.groups.abbrev.manager">GR</message>
+	<message key="default.groups.name.editor">Editor/a de la revista</message>
+	<message key="default.groups.plural.editor">Editores/as de la revista</message>
+	<message key="default.groups.abbrev.editor">ER</message>
+	<message key="default.groups.name.guestEditor">Editor/a invitado/a</message>
+	<message key="default.groups.plural.guestEditor">Editores/as invitados/as</message>
+	<message key="default.groups.name.sectionEditor">Editor/a de sección</message>
+	<message key="default.groups.plural.sectionEditor">Editores/as de sección</message>
+	<message key="default.groups.abbrev.sectionEditor">ESec</message>
+	<message key="default.groups.name.subscriptionManager">Gestor/a de suscripción</message>
+	<message key="default.groups.plural.subscriptionManager">Gestores/as de suscripción</message>
+	<message key="default.groups.abbrev.subscriptionManager">GSus</message>
+	<message key="default.genres.researchInstrument">Instrumento de investigación</message>
+	<message key="default.genres.researchMaterials">Materiales de investigación</message>
+	<message key="default.genres.researchResults">Resultados de la investigación</message>
+	<message key="default.genres.transcripts">Transcripciones</message>
+	<message key="default.genres.dataAnalysis">Análisis de datos</message>
+	<message key="default.genres.dataSet">Conjunto de datos</message>
+	<message key="default.genres.sourceTexts">Textos fuente</message>
+	<message key="default.groups.name.externalReviewer">Revisor/a</message>
+	<message key="default.groups.plural.externalReviewer">Revisores/as</message>
+	<message key="default.groups.abbrev.externalReviewer">R</message>
 </locale>

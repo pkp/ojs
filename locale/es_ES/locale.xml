@@ -344,6 +344,8 @@
 	<message key="plugins.categories.auth.description">Los módulos de autorización permiten a Open Journal Systems delegar las tareas de autenticación de usuarios/as a otros sistemas, como servidores LDAP.</message>
 	<message key="plugins.categories.citationFormats.description">Los módulos de formato de citas permiten a los usuarios/as emplear distintos formatos para acceder a las citas de los artículos.</message>
 	<message key="plugins.categories.generic.description">Los módulos genéricos se utilizan para ampliar las características del Open Journal Systems de diversas maneras y que son incompatibles con otras categorías de módulos.</message>
+	<message key="plugins.categories.implicitAuth">Módulos de autenticación implícita</message>
+	<message key="plugins.categories.implicitAuth.description">Los módulos de autenticación implícita ponen en funcionamiento un soporte para la autenticación de usuarios/as basado en encabezados http.</message>
 
 	<!-- Files Browser -->
 
@@ -681,7 +683,7 @@
 	<message key="about.submissions">Envíos</message>
 	<message key="about.onlineSubmissions">Envíos en línea</message>
 	<message key="about.onlineSubmissions.login">Ir a Iniciar sesión</message>
-	<message key="about.onlineSubmissions.registrationRequired">El registro y el inicio de sesión son necesarios para enviar elementos en línea y para comprobar el estado de los envíos recientes.</message>
+	<message key="about.onlineSubmissions.registrationRequired">El registro y el inicio de sesión son necesarios para enviar elementos en línea y para comprobar el estado de los envíos recientes. {$login} a una cuenta existente o {$register} una nueva cuenta.</message>
 	<message key="about.authorGuidelines">Directrices para autores/as</message>
 	<message key="about.submissionPreparationChecklist">Lista de comprobación para la preparación de envíos</message>
 	<message key="about.submissionPreparationChecklist.description">Como parte del proceso de envío, los autores/as están obligados a comprobar que su envío cumpla todos los elementos que se muestran a continuación. Se devolverán a los autores/as aquellos envíos que no cumplan estas directrices.</message>
@@ -929,7 +931,7 @@
 	 *
 	-->
 	<!-- Authorization -->
-	<message key="user.authorization.copyeditorAssignmentMissing">Acceso denegado No ha sido asignado como corrector/a de originales para este artículo.</message>
+	<message key="user.authorization.copyeditorAssignmentMissing">¡Acceso denegado! No ha sido asignado como corrector/a de originales para este artículo.</message>
 	<message key="user.authorization.sectionAssignment">Está intentando acceder a un artículo que no forma parte de su sección.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Envío del corrector/a de originales incorrecto o no se ha solicitado un envío del corrector/a de originales.</message>
 
@@ -937,4 +939,84 @@
 
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Lista de monedas “{$filename}” cargada de XML</message>
+	<message key="context.current">Revista actual:</message>
+	<message key="context.select">Cambiar a otra revista:</message>
+	<message key="article.return">Volver a los detalles del artículo</message>
+	<message key="user.noRoles.selectUsersWithoutRoles">Incluir usuarios de esta revista sin roles</message>
+	<message key="user.reviewerPrompt">¿Estaría dispuesto a revisar envíos para esta revista?</message>
+	<message key="user.reviewerPrompt.userGroup">Sí, solicitar el rol {$userGroup}.</message>
+	<message key="user.register.contextsPrompt">¿En qué revistas de este sitio le gustaría registrarse?</message>
+	<message key="user.register.otherContextRoles">Solicitar los siguientes roles.</message>
+	<message key="user.register.noContextReviewerInterests">Si ha solicitado ser revisor/a en alguna revista introduzca sus temas de interés, por favor.</message>
+	<message key="user.role.subEditors">Editores/as de sección</message>
+	<message key="user.role.journalAssistant">Asistente/a de revista</message>
+	<message key="user.role.journalAssistants">Asistentes/as de revista</message>
+	<message key="user.role.guestEditor">Editor/a invitado/a</message>
+	<message key="user.role.guestEditors">Editores/as invitados/as</message>
+	<message key="issue.return">Volver a los detalles del número</message>
+	<message key="submission.event.submissionSubmitted">Artículo enviado</message>
+	<message key="search.results.orderBy">Ordenar resultados por</message>
+	<message key="search.results.orderBy.article">Título del artículo</message>
+	<message key="search.results.orderBy.author">Autor/a</message>
+	<message key="search.results.orderBy.date">Fecha de publicación</message>
+	<message key="search.results.orderBy.issue">Número</message>
+	<message key="search.results.orderBy.journal">Título de la revista</message>
+	<message key="search.results.orderBy.popularityAll">Popularidad (histórico)</message>
+	<message key="search.results.orderBy.popularityMonth">Popularidad (último mes)</message>
+	<message key="search.results.orderBy.relevance">Relevancia</message>
+	<message key="search.results.orderDir.asc">Ascendente</message>
+	<message key="search.results.orderDir.desc">Descendente</message>
+	<message key="search.results.similarDocuments">documentos similares</message>
+	<message key="plugins.categories.viewableFiles">Módulos de galerada del artículo</message>
+	<message key="plugins.categories.viewableFiles.description">Los módulos de galerada del artículo añaden soporte para visualizar diferentes tipos de documentos como galeradas del artículo.</message>
+	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems también soporta el sistema <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe) para garantizar un archivo permanente y seguro para la revista. CLOCKSS se basa en el software de código abierto LOCKSS desarrollado en la Stanford University Library, que permite a las bibliotecas conservar las revistas web escogidas mediante la comprobación regular de los sitios web de las revistas registradas en busca de contenido publicado recientemente y archivándolo. Cada archivo se valida constantemente contra otras memorias caché de bibliotecas y, si se detecta que el contenido se ha corrompido o perdido, se usan las otras memorias caché o la revista para restaurarlo.
+<br /><br />
+La configuración del soporte CLOCKSS para Open Journal Systems no hace falta que se lleve a cabo hasta que la publicación esté totalmente en marcha.]]></message>
+	<message key="manager.setup.citations.enable">Activar el asistente de marcado de citas</message>
+	<message key="submission.layout.galley.remotelyHostedContent">Esta galerada se abrirá en una página web nueva.</message>
+	<message key="submission.layout.galley.remoteURL">URL del contenido alojado remotamente</message>
+	<message key="reviewer.article.selectRecommendation.byEditor">Configurar o ajustar la recomendación del revisor/a.</message>
+	<message key="user.register.selectContext">Seleccionar una revista para registrarse:</message>
+	<message key="article.pageTitle">Vista de {$title}</message>
+	<message key="article.download">Descargar este archivo PDF</message>
+	<message key="article.pluginMissing"><![CDATA[<p>El archivo PDF que ha seleccionado debería cargarse aquí si su navegador tiene instalado un módulo de lectura de PDF  (por ejemplo, una versión reciente de <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
+	<message key="archive.archivesPageNumber">Archivos - Página {$pageNumber}</message>
+	<message key="about.contact">Contacto</message>
+	<message key="about.aboutContext">Sobre la revista</message>
+	<message key="about.onlineSubmissions.register">Registrar</message>
+	<message key="help.goToEditPage">Editar {$sectionTitle}</message>
+	<message key="installer.preInstallationInstructions"><![CDATA[<h4>Pasos para la preinstalación</h4>
+
+
+<p>1. Los siguientes archivos y directorios (y sus contenidos) deben ser editables:</p>
+<ul>
+	<li><tt>config.inc.php</tt> es editable (opcional): {$writable_config}</li>
+	<li><tt>public/</tt> es editable: {$writable_public}</li>
+	<li><tt>cache/</tt> es editable: {$writable_cache}</li>
+	<li><tt>cache/t_cache/</tt> es editable: {$writable_templates_cache}</li>
+	<li><tt>cache/t_compile/</tt> es editable: {$writable_templates_compile}</li>
+	<li><tt>cache/_db</tt> es editable: {$writable_db_cache}</li>
+</ul>
+
+<p>2. Se debe crear un directorio editable para almacenar los archivos cargados (véase "Ajustes de archivo" más abajo).</p>]]></message>
+	<message key="notification.type.submissionSubmitted">Se ha enviado un nuevo artículo: "{$title}".</message>
+	<message key="notification.savedIssueMetadata">Se han guardado los metadatos de publicación del número.</message>
+	<message key="notification.type.editorAssignmentTask">Se ha enviado un nuevo artículo para el cual hay que asignar un editor/a.</message>
+	<message key="user.authorization.noContext">¡No hay ninguna revista en este contexto!</message>
+	<message key="user.authorization.invalidIssue">¡Petición de número no válida!</message>
+	<message key="grid.action.createContext">Crear una nueva revista</message>
+	<message key="editor.navigation.issues">Números</message>
+	<message key="notification.type.approveSubmission">El envío está actualmente esperando la aprobación, tras ella aparecerá en el número.</message>
+	<message key="notification.type.approveSubmissionTitle">Esperando aceptación.</message>
+	<message key="user.profile.form.showOtherContexts">Registrarse en otras revistas</message>
+	<message key="user.profile.form.hideOtherContexts">Ocultar las otras revistas</message>
+	<message key="article.view.interstitial">Por favor, elija un artículo para descargar.</message>
+	<message key="grid.catalogEntry.availableRepresentation.approved">Aceptado</message>
+	<message key="grid.catalogEntry.availableRepresentation.notApproved">Esperando aceptación</message>
+	<message key="grid.catalogEntry.approvedRepresentation.title">Aceptación de galerada</message>
+	<message key="grid.catalogEntry.approvedRepresentation.message"><![CDATA[<p>Aceptar esta galerada para su publicación.</p>]]></message>
+	<message key="grid.catalogEntry.approvedRepresentation.removeMessage"><![CDATA[<p>Cancelar la aceptación de esta galerada.</p>]]></message>
+	<message key="search.cli.rebuildIndex.indexing">Indexando "{$journalName}"</message>
+	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">La implementación de la búsqueda no permite la reindexación a nivel de revista.</message>
+	<message key="search.cli.rebuildIndex.unknownJournal">La ruta "{$journalPath}" no corresponde a ninguna revista.</message>
 </locale>

@@ -215,4 +215,20 @@
 	<message key="editor.article.removeCoverPage">¿Eliminar la imagen de portada?</message>
 	<message key="editor.article.remove">Eliminar</message>
 	<message key="editor.issues.invalidAccessDate">Fecha de acceso no válida.</message>
+	<message key="editor.issues.editIssue">Gestión del número: {$issueIdentification}</message>
+	<message key="editor.issues.datePublished">Fecha de publicación</message>
+	<message key="editor.issues.identifiers">Identificadores</message>
+	<message key="grid.action.addGalley">Añadir galerada</message>
+	<message key="grid.action.publish">Publicar número</message>
+	<message key="grid.action.addIssue">Crear número</message>
+	<message key="grid.action.viewIssue">Ver</message>
+	<message key="grid.action.previewIssue">Previsualizar</message>
+	<message key="grid.action.addIssueGalley">Crear galerada del número</message>
+	<message key="grid.action.removeArticle">Eliminar artículo del número</message>
+	<message key="editor.article.remove.confirm">¿Está seguro de que desea eliminar este artículo del número? Dicho artículo estará disponible para programarlo en otro número.</message>
+	<message key="editor.issues.editIssueGalley">Editar la galerada del número</message>
+	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[El editor de maquetación prepara estos archivos para cada galerada y los carga en el sitio <span class="pkp_help_title">Pruebas</span> apropiado para su corrección.]]></message>
+	<message key="editor.submission.selectGalleyFiles">Seleccionar los archivos de galerada</message>
+	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Los borradores finales de esta lista son transformados por el corrector/a de originales en versiones revisadas, cargadas a continuación en <span class="pkp_help_title">Corrección de originales</span>.]]></message>
+	<message key="editor.submission.proof.manageProofFilesDescription">Cualquier archivo que ya haya sido asignado a una fase del envío puede añadirse a la lista de corrección de originales marcando la casilla "Añadir" y haciendo clic en "Buscar": se listarán todos los archivos disponibles y podrán ser seleccionados para su inclusión.</message>
 </locale>
