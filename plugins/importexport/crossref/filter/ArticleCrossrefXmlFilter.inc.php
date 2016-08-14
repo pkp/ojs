@@ -259,7 +259,6 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 				$componentNode->appendChild($titlesNode);
 			}
 			// DOI data node
-			// TO-DO: bestId is missing for files
 			$resourceURL = $request->url($context->getPath(), 'article', 'download', array($submission->getBestArticleId(), $componentGalley->getBestGalleyId()));
 			$componentNode->appendChild($this->createDOIDataNode($doc, $componentGalley->getStoredPubId('doi'), $resourceURL));
 			$componentListNode->appendChild($componentNode);
