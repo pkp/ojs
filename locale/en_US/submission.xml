@@ -41,8 +41,8 @@
 
 	<!-- galleys grid -->
 	<message key="grid.issueEntry.availableGalley.title">Format Approval</message>
-	<message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[<p>This galley will <em>no longer be made available</em> to readers.]]></message>
-	<message key="grid.issueEntry.availableGalley.message"><![CDATA[<p>This galley will <em>be made available</em> to readers.]]></message>
+	<message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[<p>This galley will <em>no longer be made available</em> to readers.</p>]]></message>
+	<message key="grid.issueEntry.availableGalley.message"><![CDATA[<p>This galley will <em>be made available</em> to readers.</p>]]></message>
 	<message key="grid.action.availableArticleGalley">Make this galley available</message>
 
 	<!-- galley files grid -->
