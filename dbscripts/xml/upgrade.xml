@@ -89,6 +89,7 @@
 		<code function="installEmailTemplate" key="EDITOR_DECISION_SEND_TO_PRODUCTION" locales="en_US" />
 		<data file="dbscripts/xml/upgrade/3.0.0_scheduledTasks.xml" />
 		<code function="localizeCustomBlockSettings" />
+		<code function="convertQueries" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupdate.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_pubId_settings.xml" />
 		<code function="migrateFiles" />

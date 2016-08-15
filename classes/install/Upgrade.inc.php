@@ -899,6 +899,7 @@ class Upgrade extends Installer {
 					$discoveredFilename = array_shift($matchedResults);
 					$targetFilename = $basePath . $submissionFile->_fileStageToPath($submissionFile->getFileStage()) . '/' . $generatedFilename;
 					if (file_exists($targetFilename)) continue; // Skip existing files/links
+					if (!file_exists($path = dirname($targetFilename))) mkdir($path);
 					if (!rename($discoveredFilename, $targetFilename)) {
 						error_log("Unable to move \"$discoveredFilename\" to \"$targetFilename\".");
 					}
@@ -907,6 +908,147 @@ class Upgrade extends Installer {
 		}
 		return true;
 	}
+
+	/**
+	 * Convert signoffs to queries.
+	 * @return boolean True indicates success.
+	 */
+	function convertQueries() {
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		import('lib.pkp.classes.submission.SubmissionFile');
+
+		$signoffsResult = $submissionFileDao->retrieve('SELECT * FROM signoffs WHERE user_id IS NOT NULL AND user_id <> 0');
+
+		$queryDao = DAORegistry::getDAO('QueryDAO');
+		$noteDao = DAORegistry::getDAO('NoteDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
+		$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+
+		// Go through all signoffs and migrate them into queries.
+		$copyeditingQueries = $proofreadingQueries = $layoutQueries = array();
+		while (!$signoffsResult->EOF) {
+			$row = $signoffsResult->getRowAssoc(false);
+			$fileId = $row['file_id'];
+			$symbolic = $row['symbolic'];
+			$dateNotified = $row['date_notified']?strtotime($row['date_notified']):null;
+			$dateCompleted = $row['date_completed']?strtotime($row['date_completed']):null;
+			$userId = $row['user_id'];
+			$signoffId = $row['signoff_id'];
+			assert($row['assoc_type'] == ASSOC_TYPE_SUBMISSION); // Already changed from ASSOC_TYPE_ARTICLE
+			$assocId = $row['assoc_id'];
+			$signoffsResult->MoveNext();
+
+			// Stage 1. Create or look up the query object.
+			switch ($symbolic) {
+				case 'SIGNOFF_COPYEDITING_INITIAL':
+				case 'SIGNOFF_COPYEDITING_AUTHOR':
+				case 'SIGNOFF_COPYEDITING_FINAL':
+					if (isset($copyeditingQueries[$assocId])) $query = $copyeditingQueries[$assocId];
+					else {
+						$query = $queryDao->newDataObject();
+						$query->setAssocType(ASSOC_TYPE_SUBMISSION);
+						$query->setAssocId($assocId);
+						$query->setStageId(WORKFLOW_STAGE_ID_EDITING);
+						$copyeditingQueries[$assocId] = $query;
+						$query->setSequence(1);
+						$queryDao->insertObject($query);
+
+						$headNote = $noteDao->newDataObject();
+						$headNote->setAssocType(ASSOC_TYPE_QUERY);
+						$headNote->setAssocId($query->getId());
+						$headNote->setTitle('Copyediting');
+						$noteDao->insertObject($headNote);
+					}
+					break;
+				case 'SIGNOFF_LAYOUT':
+					$query = $queryDao->newDataObject();
+					$query->setAssocType($assocType = ASSOC_TYPE_SUBMISSION);
+					$query->setAssocId($assocId);
+					$query->setStageId(WORKFLOW_STAGE_ID_PRODUCTION);
+					$query->setSequence(3);
+					$queryDao->insertObject($query);
+					$layoutQueries[$assocId] = $query;
+
+					$headNote = $noteDao->newDataObject();
+					$headNote->setAssocType(ASSOC_TYPE_QUERY);
+					$headNote->setAssocId($query->getId());
+					$headNote->setTitle('Layout Editing');
+					$noteDao->insertObject($headNote);
+					break;
+				case 'SIGNOFF_PROOFREADING_AUTHOR':
+				case 'SIGNOFF_PROOFREADING_PROOFREADER':
+				case 'SIGNOFF_PROOFREADING_LAYOUT':
+					if (isset($proofreadingQueries[$assocId])) $query = $proofreadingQueries[$assocId];
+					else {
+						$query = $queryDao->newDataObject();
+						$query->setAssocType(ASSOC_TYPE_SUBMISSION);
+						$query->setAssocId($assocId);
+						$query->setStageId(WORKFLOW_STAGE_ID_PRODUCTION);
+						$proofreadingQueries[$assocId] = $query;
+						$query->setSequence(3);
+						$queryDao->insertObject($query);
+
+						$headNote = $noteDao->newDataObject();
+						$headNote->setAssocType(ASSOC_TYPE_QUERY);
+						$headNote->setAssocId($query->getId());
+						$headNote->setTitle('Proofreading');
+						$noteDao->insertObject($headNote);
+					}
+					break;
+			}
+			assert($query); // We've created or looked up a query.
+
+			$assignedUserIds = array($userId);
+			foreach (array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT) as $roleId) {
+				$stageAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($assocId, $roleId, $query->getStageId());
+				while ($stageAssignment = $stageAssignments->next()) {
+					$assignedUserIds[] = $stageAssignment->getUserId();
+				}
+			}
+
+			// Ensure that the necessary users are assigned to the query
+			foreach (array_unique($assignedUserIds) as $assignedUserId) {
+				if (count($queryDao->getParticipantIds($query->getId(), $assignedUserId))!=0) continue;
+				$queryDao->insertParticipant($query->getId(), $assignedUserId);
+			}
+
+			$submissionFiles = $submissionFileDao->getAllRevisions($fileId);
+			foreach((array) $submissionFiles as $submissionFile) {
+				$submissionFile->setAssocType(ASSOC_TYPE_NOTE);
+				$submissionFile->setAssocId($query->getHeadNote()->getId());
+				$submissionFile->setFileStage(SUBMISSION_FILE_QUERY);
+				$submissionFileDao->updateObject($submissionFile);
+			}
+		}
+		$signoffsResult->Close();
+
+		// Migrate related notes into the queries
+		$commentsResult = $submissionFileDao->retrieve('SELECT * FROM submission_comments WHERE comment_type IN (3, 4, 5)');
+		while (!$commentsResult->EOF) {
+			$row = $commentsResult->getRowAssoc(false);
+			$commentsResult->MoveNext();
+
+			$note = $noteDao->newDataObject();
+			$note->setAssocType(ASSOC_TYPE_QUERY);
+			switch ($row['comment_type']) {
+				case 3: // COMMENT_TYPE_COPYEDIT
+					$note->setAssocId($copyeditingQueries[$row['submission_id']]->getId());
+					break;
+				case 4: // COMMENT_TYPE_LAYOUT
+					$note->setAssocId($layoutQueries[$row['submission_id']]->getId());
+					break;
+				case 5: // COMMENT_TYPE_PROOFREAD
+					$note->setAssocId($proofreadingQueries[$row['submission_id']]->getId());
+					break;
+			}
+			$note->setContents($row['comments']);
+			$note->setUserId($row['author_id']);
+			$noteDao->insertObject($note);
+		}
+		$commentsResult->Close();
+		return true;
+	}
+
 }
 
 ?>
