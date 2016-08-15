@@ -4,11 +4,11 @@
 <!--
   * locale/de_DE/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
-  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
+  * Localization strings.
   -->
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
@@ -52,7 +52,6 @@
 	<message key="submission.submit.selectSection">Wählen Sie eine Rubrik aus...</message>
 	<message key="author.submit.submissionLocale">Beitragssprache</message>
 	<message key="author.submit.submissionLocaleDescription">Diese Zeitschrift nimmt Beiträge in verschiedenen Sprachen entgegen. Wählen Sie die primäre Sprache des Beitrags aus dem Auswahlmenü unten.</message>
-	<message key="author.submit.submissionChecklist">Checkliste für Beiträge</message>
 	<message key="author.submit.verifyChecklist">Stellen Sie sicher, dass alle Punkte der Checkliste erfüllt sind, bevor Sie fortfahren.</message>
 	<message key="author.submit.copyrightNoticeAgree">Die Autor/innen stimmen den Bestimmungen dieser Copyright-Regelungen zu, die für diesen Beitrag im Falle einer Veröffentlichung Anwendung finden. (Kommentare für die Redaktion können weiter unten angefügt werden.)</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Sie müssen den Copyright-Regelungen zustimmen, bevor Sie fortfahren.</message>
@@ -120,4 +119,5 @@
 	<message key="author.article.copyeditedFile">Lektorierte Datei</message>
 	<message key="author.article.authorRevisedFile">Autor/innendatei</message>
 	<message key="author.submit.authorSubmitLoginMessage">Um Beiträge bei dieser Zeitschrift einzureichen, ist ein Benutzer/innen-Konto erforderlich. Dies ermöglicht es unserer Redaktion, Ihre Beiträge zu verfolgen und Sie zu kontaktieren, wenn sich der Status Ihres Beitrags ändert oder wenn zusätzliche Informationen von Ihnen benötigt werden.</message>
+	<message key="author.submit.nextSteps">Nächste Schritte</message>
 </locale>

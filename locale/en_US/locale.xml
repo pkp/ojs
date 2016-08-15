@@ -4,10 +4,10 @@
 <!--
   * locale/en_US/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
   -->
 
@@ -1143,8 +1143,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="grid.catalogEntry.approvedRepresentation.message"><![CDATA[<p>Approve this galley for publication.</p>]]></message>
 	<message key="grid.catalogEntry.approvedRepresentation.removeMessage"><![CDATA[<p>Remove approval of this galley.</p>]]></message>
 	<message key="search.cli.rebuildIndex.indexing">Indexing "{$journalName}"</message>
-	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">This search implementation does not allow per-journ
-al re-indexing.</message>
+	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">This search implementation does not allow per-journal re-indexing.</message>
 	<message key="search.cli.rebuildIndex.unknownJournal">The given journal path "{$journalPath}" could not be resolved to a journal.</message>
 
 </locale>

@@ -4,12 +4,12 @@
 <!--
   * locale/de_DE/editor.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
-  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
--->
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
+  * Localization strings.
+  -->
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="editor.home">Startseite der Redakteurin/des Redakteurs</message>
@@ -205,13 +205,29 @@
 	<message key="editor.article.hideTocAuthorShow">Anzeigen</message>
 	<message key="editor.article.cover">Titelseite</message>
 	<message key="editor.article.showCoverPage">Eine Titelseite für diesen Artikel mit den folgenden Elementen anlegen.</message>
-	<message key="editor.article.coverImageDisplay">Anzeigen</message>
+	<message key="editor.article.coverPageDisplay">Anzeigen</message>
 	<message key="editor.article.hideCoverPageToc">Das Miniaturbild des Titelbildes nicht im Inhaltsverzeichnis anzeigen.</message>
 	<message key="editor.article.hideCoverPageAbstract">Das Titelbild nicht in der Ansicht des Abstracts anzeigen.</message>
-	<message key="editor.article.coverImage">Titelbild</message>
-	<message key="editor.article.coverImageInstructions">(Erlaubte Formate: .gif, .jpg oder .png)</message>
+	<message key="editor.article.coverPage">Titelbild</message>
+	<message key="editor.article.coverPageInstructions">(Erlaubte Formate: .gif, .jpg oder .png)</message>
 	<message key="editor.article.uploaded">Hochgeladen</message>
 	<message key="editor.article.removeCoverPage">Titelbild entfernen?</message>
 	<message key="editor.article.remove">Entfernen</message>
 	<message key="editor.issues.invalidAccessDate">Zugangsdatum ungültig.</message>
+	<message key="editor.issues.editIssue">Ausgabenverwaltung: {$issueIdentification}</message>
+	<message key="editor.issues.datePublished">Veröffentlichungsdatum</message>
+	<message key="editor.issues.identifiers">Identifier</message>
+	<message key="grid.action.addGalley">Fahne hinzufügen</message>
+	<message key="grid.action.publish">Ausgabe veröffentlichen</message>
+	<message key="editor.submission.proof.manageProofFilesDescription">Alle Dateien, die bisher zu irgendeiner Phase der Einreichung hochgeladen worden sind, können zur Korrekturliste hinzugefügt werden, indem die Auswahlbox unten angeklickt wird und auf Suchen geklickt wird: Alle verfügbaren Dateien werden aufgelistet und können ausgewählt werden.</message>
+	<message key="grid.action.addIssue">Ausgabe anlegen</message>
+	<message key="grid.action.viewIssue">Ansehen</message>
+	<message key="grid.action.previewIssue">Preview</message>
+	<message key="grid.action.addIssueGalley">Ausgabenfahne anlegen</message>
+	<message key="grid.action.removeArticle">Artikel aus der Ausgabe entfernen</message>
+	<message key="editor.article.remove.confirm">Sind Sie sicher, dass Sie diesen Artikel aus der Ausgabe entfernen möchten? Der Artikel kann danach für eine andere Ausgabe eingeplant werden.</message>
+	<message key="editor.issues.editIssueGalley">Ausgabenfahne bearbeiten</message>
+	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[Der oder die Layouter/in bereitet diese Dateien für jede Fahne vor und lädt sie dann zu den zugehörigen <span class="pkp_help_title">Korrektur</span> zum Korrekturlesen hoch.]]></message>
+	<message key="editor.submission.selectGalleyFiles">Fahnendateien auswählen</message>
+	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Endgültige Entwurfsdateien in dieser Liste werden durch eine/n Lektor/in in lektorierte Versionen umgewandelt und unter <span class="pkp_help_title">Lektorat</span> hochgeladen.]]></message>
 </locale>
