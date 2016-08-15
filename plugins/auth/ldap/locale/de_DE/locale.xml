@@ -36,4 +36,6 @@
 	<message key="plugins.auth.ldap.settings.saslrealm">Bereich</message>
 	<message key="plugins.auth.ldap.settings.saslauthzid">Erforderliche Berechtigungs ID</message>
 	<message key="plugins.auth.ldap.settings.saslprop">SASL Sicherheitseigenschaften</message>
+	<message key="plugins.auth.ldap.settings.pwhash.description">Hashformat für auf dem Server gespeicherte Passwörter. SSHA wird empfohlen.</message>
+	<message key="plugins.auth.ldap.settings.sasl">SASL an Stelle der einfachen Authentifizierung benutzen</message>
 </locale>
