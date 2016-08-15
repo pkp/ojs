@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
 <!--
   * locale/es_ES/editor.xml
   *
   * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
-  *
+  * https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
   -->
 
@@ -206,11 +205,11 @@
 	<message key="editor.article.hideTocAuthorShow">Mostrar</message>
 	<message key="editor.article.cover">Portada</message>
 	<message key="editor.article.showCoverPage">Crear una portada para este artículo con los siguientes elementos.</message>
-	<message key="editor.article.coverImageDisplay">Mostrar</message>
+	<message key="editor.article.coverPageDisplay">Mostrar</message>
 	<message key="editor.article.hideCoverPageToc">No mostrar la miniatura de la imagen de portada en la tabla de contenidos.</message>
 	<message key="editor.article.hideCoverPageAbstract">No mostrar la imagen de portada en la vista de resúmenes de artículos.</message>
-	<message key="editor.article.coverImage">Imagen de portada</message>
-	<message key="editor.article.coverImageInstructions">(Formatos permitidos: .gif, .jpg, o .png )</message>
+	<message key="editor.article.coverPage">Imagen de portada</message>
+	<message key="editor.article.coverPageInstructions">(Formatos permitidos: .gif, .jpg, o .png )</message>
 	<message key="editor.article.uploaded">Cargado</message>
 	<message key="editor.article.removeCoverPage">¿Eliminar la imagen de portada?</message>
 	<message key="editor.article.remove">Eliminar</message>

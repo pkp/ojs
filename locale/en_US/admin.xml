@@ -31,7 +31,7 @@
 	<message key="admin.languages.confirmDisable">Are you sure you want to disable this locale? This may affect any hosted journals currently using the locale.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>
 	<ul>
-		<li>Your server does not have or allow execution of the GNU "tar" utility</li>
+		<li>Your server does not have or allow execution of the GNU "tar" utility.</li>
 		<li>OJS is unable to modify the locale registry file, typically "registry/locales.xml".</li>
 	</ul>
 <p>Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
