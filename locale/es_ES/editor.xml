@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
 <!--
   * locale/es_ES/editor.xml
   *
   * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
-  *
+  * https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
   -->
 
@@ -206,13 +205,29 @@
 	<message key="editor.article.hideTocAuthorShow">Mostrar</message>
 	<message key="editor.article.cover">Portada</message>
 	<message key="editor.article.showCoverPage">Crear una portada para este artículo con los siguientes elementos.</message>
-	<message key="editor.article.coverImageDisplay">Mostrar</message>
+	<message key="editor.article.coverPageDisplay">Mostrar</message>
 	<message key="editor.article.hideCoverPageToc">No mostrar la miniatura de la imagen de portada en la tabla de contenidos.</message>
 	<message key="editor.article.hideCoverPageAbstract">No mostrar la imagen de portada en la vista de resúmenes de artículos.</message>
-	<message key="editor.article.coverImage">Imagen de portada</message>
-	<message key="editor.article.coverImageInstructions">(Formatos permitidos: .gif, .jpg, o .png )</message>
+	<message key="editor.article.coverPage">Imagen de portada</message>
+	<message key="editor.article.coverPageInstructions">(Formatos permitidos: .gif, .jpg, o .png )</message>
 	<message key="editor.article.uploaded">Cargado</message>
 	<message key="editor.article.removeCoverPage">¿Eliminar la imagen de portada?</message>
 	<message key="editor.article.remove">Eliminar</message>
 	<message key="editor.issues.invalidAccessDate">Fecha de acceso no válida.</message>
+	<message key="editor.issues.editIssue">Gestión del número: {$issueIdentification}</message>
+	<message key="editor.issues.datePublished">Fecha de publicación</message>
+	<message key="editor.issues.identifiers">Identificadores</message>
+	<message key="grid.action.addGalley">Añadir galerada</message>
+	<message key="grid.action.publish">Publicar número</message>
+	<message key="grid.action.addIssue">Crear número</message>
+	<message key="grid.action.viewIssue">Ver</message>
+	<message key="grid.action.previewIssue">Previsualizar</message>
+	<message key="grid.action.addIssueGalley">Crear galerada del número</message>
+	<message key="grid.action.removeArticle">Eliminar artículo del número</message>
+	<message key="editor.article.remove.confirm">¿Está seguro de que desea eliminar este artículo del número? Dicho artículo estará disponible para programarlo en otro número.</message>
+	<message key="editor.issues.editIssueGalley">Editar la galerada del número</message>
+	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[El editor de maquetación prepara estos archivos para cada galerada y los carga en el sitio <span class="pkp_help_title">Pruebas</span> apropiado para su corrección.]]></message>
+	<message key="editor.submission.selectGalleyFiles">Seleccionar los archivos de galerada</message>
+	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Los borradores finales de esta lista son transformados por el corrector/a de originales en versiones revisadas, cargadas a continuación en <span class="pkp_help_title">Corrección de originales</span>.]]></message>
+	<message key="editor.submission.proof.manageProofFilesDescription">Cualquier archivo que ya haya sido asignado a una fase del envío puede añadirse a la lista de corrección de originales marcando la casilla "Añadir" y haciendo clic en "Buscar": se listarán todos los archivos disponibles y podrán ser seleccionados para su inclusión.</message>
 </locale>

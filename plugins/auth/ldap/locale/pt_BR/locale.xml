@@ -7,9 +7,8 @@
   * Copyright (c) 2014-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * LDAP authentication plugin localization strings for the pt_BR locale.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
+  * Localization strings.
   -->
  
 <locale name="pt_BR" full_name="Português (Brasil)">
@@ -36,4 +35,6 @@
 	<message key="plugins.auth.ldap.settings.saslprop">Propriedades de segurança SASL</message>
 	<message key="plugins.auth.ldap.settings.uid">Atributo de nome de conta</message>
 	<message key="plugins.auth.ldap.settings.uid.description">O atributo cujo valor identifica de forma única um objeto usuário, como um uid ou cn ou sAMAccountName.</message>
+	<message key="plugins.auth.ldap.settings.pwhash.description">Formato de hash para senhas armazenadas no servidor. SSHA é recomendado.</message>
+	<message key="plugins.auth.ldap.settings.sasl">Use SASL em vez de autenticação simples</message>
 </locale>

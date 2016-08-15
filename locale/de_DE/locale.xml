@@ -4,11 +4,11 @@
 <!--
   * locale/de_DE/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
-  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
+  * Localization strings.
   -->
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
@@ -360,6 +360,8 @@ Bitte beachten Sie, dass die OAI-Schnittstelle für diese Website in der OJS-Sys
 	<message key="plugins.categories.auth.description">Die Zugangs-Plug-Ins ermöglichen Open Journal Systems, die Zugangsberechtigung von Benutzer/innen an andere Systeme, wie etwa LDAP-Server, zu übertragen.</message>
 	<message key="plugins.categories.citationFormats.description">Plug-Ins für Zitatformate bieten Benutzer/innen unterschiedliche Formate zur Zitation der Artikel an.</message>
 	<message key="plugins.categories.generic.description">Generische Plugins werden zur Erweiterung von Open Journal Systems in einer Vielzahl von Wegen genutzt, die nicht durch die anderen Plug-In-Kategorien bereitgestellt werden.</message>
+	<message key="plugins.categories.implicitAuth">Plug-Ins zur impliziten Authentifizierung</message>
+	<message key="plugins.categories.implicitAuth.description">Plug-Ins zur impliziten Authentifizierung stellen Mittel zur Verfügung, um Nutzer/innen anhand ihrer HTTP-Header zu authentifizieren.</message>
 
 	<!-- Dateinavigator -->
 
@@ -368,11 +370,6 @@ Bitte beachten Sie, dass die OAI-Schnittstelle für diese Website in der OJS-Sys
 	<!-- 1. Einrichtungsschritt -->
 
 	<!-- 2. Einrichtungsschritt -->
-
-
-	<message key="manager.setup.reviewProcessEmailDescription">Redakteur/innen senden den 
-	Gutachter/innen die Bitte um Begutachtung, indem sie den eingereichten Beitrag an die E-Mail anhängen. Gutachter/innen mailen den Redakteur/innen ihr Einverständnis (oder einen abschlägigen Bescheid), außerdem das Gutachten und ihre Empfehlung. Redakteur/innen können das Einverständnis der Gutachter/innen (oder deren abschlägigen Bescheid) sowie das Gutachten und die Empfehlung auf der "In Begutachtung"-Seite des Beitrags einsehen, um den Begutachtungsprozess zu verfolgen.</message>
-
 
 
 	<message key="manager.setup.lockssDescription"><![CDATA[<strong>Andere LOCKSS-Netzwerke</strong>
@@ -395,12 +392,6 @@ Autor/innen, die in dieser Zeitschrift publizieren möchten, stimmen den folgend
 	<li>Die Autor/innen können zusätzliche Verträge für die nicht-exklusive Verbreitung der in der Zeitschrift veröffentlichten Version ihrer Arbeit unter Nennung der Erstpublikation in dieser Zeitschrift eingehen (z.B. sie in Sammelpublikation oder einem Buch veröffentlichen).</li>
 	<li>Die Autor/innen werden dazu ermutigt, ihre Arbeit parallel zur Einreichung bei dieser Zeitschrift online zu veröffentlichen (z.B. auf den Homepages von Institutionen oder auf ihrer eigenen Homepage), weil so produktive Austauschprozesse wie auch eine frühe und erweiterte Bezugnahme auf das veröffentlichte Werk gefördert werden (siehe <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Die Zeitschrift verwendet ein online verfügbares Klassifikationssystem.<br />
-Titel des Klassifikationssystems]]></message>
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Damit der Inhalt dieser Zeitschrift in einem weltweiten System von Forschungsdatenbanken indiziert wird, lesen Sie bitte die <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">Schritte, um Daten zu liefern</a> und registrieren Sie Ihre Zeitschrift bei der offiziellen <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open-Archives-Registrierung</a>. Zum Registrieren benötigen Sie die Basis-URL für Ihr Repositorium: <span class="highlight">{$oaiUrl}</span>. Danach können Sie Ihre Zeitschrift bei der <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> und bei <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a> registrieren.
-<br /><br />
-Beachten Sie bitte, dass Ihre Zeitschrift bereits automatisch indiziert wird, wenn Ihr/e Website-Administrator/in die gesamte Installation bereits bei diesen Diensten registriert hat. In diesem Fall müssen Sie Ihre Zeitschrift nicht gesondert registrieren.]]></message>
-
 	<!-- 4. Einrichtungsschritt -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Schritte: Liste der eingegangenen Beiträge &gt; Begutachtung der Beiträge &gt; Redaktion der Beiträge &gt; Inhaltsverzeichnis<br /><br />
 Wählen Sie ein Schema für diese Schritte im redaktionellen Verfahren. (Zur Bestimmung von Redakteur/innen und Rubrikredakteur/innen gehen Sie unter "Zeitschriftenverwaltung" zu "Redakteur/innen".)]]></message>
@@ -672,13 +663,9 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="submission.comments.saveAndEmailEditor">Speichern und E-Mail an Redakteur/in senden</message>
 
 	<!-- Login -->
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Aus Sicherheitsgründen schickt das System den registrierten Benutzer/innen ein neues Passwort statt des aktuellen Passworts per E-Mail. <br /><br />
-Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. Eine Bestätigung geht an diese E-Mail-Adresse.]]></message>
-
 	<!-- Registrierung -->
 	<message key="user.register.noJournals">Auf dieser Seite gibt es keine Zeitschriften, bei denen Sie sich eintragen könnten.</message>
 	<message key="user.register.privacyStatement">Schutz persönlicher Daten</message>
-	<message key="user.register.loginToRegister">Tragen Sie bitte Ihren bestehenden Benutzer/innen-Namen und Ihr aktuelles Passwort ein, um sich für diese Zeitschrift zu registrieren.</message>
 	<message key="user.register.registrationDisabled">Gegenwärtig nimmt diese Zeitschrift keine Registrierung von Benutzer/innen entgegen.</message>
 	<message key="user.register.form.passwordLengthTooShort">Das eingetragene Passwort ist zu kurz.</message>
 	<message key="user.register.readerDescription">Sie werden per E-Mail über neue Ausgaben der Zeitschrift informiert.</message>
@@ -784,7 +771,7 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<message key="about.submissions">Beitragseinreichung</message>
 	<message key="about.onlineSubmissions">Elektronische Beitragseinreichung</message>
 	<message key="about.onlineSubmissions.login">Zum Login</message>
-	<message key="about.onlineSubmissions.registrationRequired">Um Beiträge online einzureichen oder den aktuellen Status eines eingereichten Beitrags zu überprüfen, müssen Sie registriert und eingeloggt sein.</message>
+	<message key="about.onlineSubmissions.registrationRequired">Um Beiträge online einzureichen oder den aktuellen Status eines eingereichten Beitrags zu überprüfen, müssen Sie registriert und eingeloggt sein. In einen existierenden Account {$login} oder einen neuen Account {$register}.</message>
 	<message key="about.authorGuidelines">Richtlinien für Autor/innen</message>
 	<message key="about.submissionPreparationChecklist">Checkliste für Beitragseinreichungen</message>
 	<message key="about.submissionPreparationChecklist.description">Als Teil des Einreichungsverfahren werden die Autor/innen gebeten, anhand der Checkliste für Beiträge die Übereinstimmung ihres Beitrags Punkt für Punkt mit den angegebenen Vorgaben abzugleichen. Beiträge können an Autor/innen, die die Richtlinien nicht befolgen, zurückgegeben werden.</message>
@@ -903,7 +890,7 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<message key="payment.subscription.expires">Läuft aus</message>
 
 	<!-- Installation -->
-	<message key="installer.appInstallation">Installation von OJS</message>
+	<message key="installer.ojsInstallation">Installation von OJS</message>
 	<message key="installer.ojsUpgrade">Aktualisierung von OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS-Version {$version}</h4>
 
@@ -1108,4 +1095,67 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 
 	<!-- Meldungen: Fehlerbehebung -->
 	<message key="debug.notes.currencyListLoad">Währungsliste "{$filename}" aus XML geladen</message>
+	<message key="context.current">Aktuelle Zeitschrift:</message>
+	<message key="context.select">Zu einer anderen Zeitschrift wechseln:</message>
+	<message key="article.return">Zu Artikeldetails zurückkehren</message>
+	<message key="user.noRoles.selectUsersWithoutRoles">Nutzer/innen ohne Rolle in dieser Zeitschrift mit aufnehmen.</message>
+	<message key="user.reviewerPrompt">Wären Sie daran interessiert, Beiträge in dieser Zeitschrift zu begutachten?</message>
+	<message key="user.reviewerPrompt.userGroup">Ja, die {$userGroup}-Rolle beantragen.</message>
+	<message key="user.register.contextsPrompt">Bei welchen Zeitschriften auf dieser Website möchten Sie sich registrieren?</message>
+	<message key="user.register.otherContextRoles">Die folgenden Rollen beantragen.</message>
+	<message key="user.register.noContextReviewerInterests">Wenn Sie die Aufnahme als Gutachter/in bei einer Zeitschrift beantragt haben, geben Sie bitte Ihre Begutachtungsinteressen ein.</message>
+	<message key="user.role.subEditors">Rubrikredakteur/innen</message>
+	<message key="user.role.journalAssistant">Zeitschriftenassistent/in</message>
+	<message key="user.role.journalAssistants">Zeitschriftenassistent/innen</message>
+	<message key="user.role.guestEditor">Gastredakteur/in</message>
+	<message key="user.role.guestEditors">Gastredakteur/innen</message>
+	<message key="issue.return">Zu Ausgabendetails zurückkehren</message>
+	<message key="submission.event.submissionSubmitted">Artikel eingereicht</message>
+	<message key="search.results.orderBy">Ergebnisse sortieren nach</message>
+	<message key="search.results.orderBy.article">Artikeltitel</message>
+	<message key="search.results.orderBy.author">Autor/in</message>
+	<message key="search.results.orderBy.date">Veröffentlichungsdatum</message>
+	<message key="search.results.orderBy.issue">Ausgabe</message>
+	<message key="search.results.orderBy.journal">Zeitschriftentitel</message>
+	<message key="search.results.orderBy.popularityAll">Beliebtheit (gesamte Zeit)</message>
+	<message key="search.results.orderBy.popularityMonth">Beliebtheit (letzter Monat)</message>
+	<message key="search.results.orderBy.relevance">Relevanz</message>
+	<message key="search.results.orderDir.asc">Aufsteigend</message>
+	<message key="search.results.orderDir.desc">Absteigend</message>
+	<message key="search.results.similarDocuments">ähnliche Dokumente</message>
+	<message key="plugins.categories.viewableFiles">Plugins für Artikelfahnen</message>
+	<message key="plugins.categories.viewableFiles.description">Plugins für Artikelfahnen fügen die Unterstützung für die Anzeige verschiedener Dokumentarten als Artikelfahnen hinzu.</message>
+	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">Diese Implementierung der Suche erlaubt keine Neuindizierung pro Journal.</message>
+	<message key="search.cli.rebuildIndex.unknownJournal">Der angegebene Pfad "{$journalPath}" führt zu keiner Zeitschrift.</message>
+	<message key="manager.setup.citations.enable">Den Zitationsauszeichnungsassistenten aktivieren</message>
+	<message key="reviewer.article.selectRecommendation.byEditor">Gutachter/in-Empfehlung setzen oder anpassen</message>
+	<message key="user.register.selectContext">Eine Zeitschrift auswählen, bei der Sie sich registrieren möchten:</message>
+	<message key="article.pageTitle">Anzeige von {$title}</message>
+	<message key="article.download">Diese PDF-Datei herunterladen</message>
+	<message key="article.pluginMissing"><![CDATA[<p>Die ausgewählte PDF-Datei sollte hier angezeigt werden, wenn Ihr Webbrowser ein PDF-Reader-Plugin installiert hat (zum Beispiel eine aktuelle Version des <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
+	<message key="archive.archivesPageNumber">Archive - Seite {$pageNumber}</message>
+	<message key="about.contact">Kontakt</message>
+	<message key="about.aboutContext">Über die Zeitschrift</message>
+	<message key="about.onlineSubmissions.register">Registrieren</message>
+	<message key="help.goToEditPage">{$sectionTitle} bearbeiten</message>
+	<message key="submission.layout.galley.remotelyHostedContent">Diese Fahne wird an einem externen Ort bereitgestellt werden.</message>
+	<message key="submission.layout.galley.remoteURL">URL des extern bereitgestellten Inhalts</message>
+	<message key="user.profile.form.hideOtherContexts">Andere Zeitschriften ausblenden.</message>
+	<message key="article.view.interstitial">Bitte wählen Sie eine Artikeldatei zum Download aus.</message>
+	<message key="grid.catalogEntry.availableRepresentation.approved">Freigegeben</message>
+	<message key="grid.catalogEntry.availableRepresentation.notApproved">Warte auf Freigabe</message>
+	<message key="grid.catalogEntry.approvedRepresentation.title">Fahnenfreigabe</message>
+	<message key="grid.catalogEntry.approvedRepresentation.message"><![CDATA[<p>Diese Fahne zur Veröffentlichung freigeben.</p>]]></message>
+	<message key="grid.catalogEntry.approvedRepresentation.removeMessage"><![CDATA[<p>Freigabe dieser Fahne entfernen.</p>]]></message>
+	<message key="search.cli.rebuildIndex.indexing">Indiziere "{$journalName}"</message>
+	<message key="notification.savedIssueMetadata">Ausgabenmetadaten gespeichert.</message>
+	<message key="notification.type.editorAssignmentTask">Ein neuer Artikel wurde eingereicht, dem ein/e Redakteur/in zugewiesen werden muss.</message>
+	<message key="user.authorization.noContext">Keine Zeitschrift im Kontext!</message>
+	<message key="user.authorization.invalidIssue">Ungültige Ausgabe angefordert!</message>
+	<message key="grid.action.createContext">Neue Zeitschrift anlegen</message>
+	<message key="editor.navigation.issues">Ausgaben</message>
+	<message key="notification.type.approveSubmission">Dieser Beitrag wartet momentan auf Freigabe, bevor er in der Ausgabe erscheinen wird.</message>
+	<message key="notification.type.approveSubmissionTitle">Warte auf Freigabe.</message>
+	<message key="user.profile.form.showOtherContexts">Bei anderen Zeitschriften registrieren</message>
+	<message key="notification.type.submissionSubmitted">Ein neuer Artikel wurde eingereicht: "{$title}"</message>
 </locale>

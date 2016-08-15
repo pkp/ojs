@@ -7,8 +7,9 @@
   * Copyright (c) 2014-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the en_US (English) locale.
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
   -->
 
 <locale name="en_US" full_name = "English">
@@ -41,8 +42,8 @@
 
 	<!-- galleys grid -->
 	<message key="grid.issueEntry.availableGalley.title">Format Approval</message>
-	<message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[<p>This galley will <em>no longer be made available</em> to readers.]]></message>
-	<message key="grid.issueEntry.availableGalley.message"><![CDATA[<p>This galley will <em>be made available</em> to readers.]]></message>
+	<message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[<p>This galley will <em>no longer be made available</em> to readers.</p>]]></message>
+	<message key="grid.issueEntry.availableGalley.message"><![CDATA[<p>This galley will <em>be made available</em> to readers.</p>]]></message>
 	<message key="grid.action.availableArticleGalley">Make this galley available</message>
 
 	<!-- galley files grid -->
