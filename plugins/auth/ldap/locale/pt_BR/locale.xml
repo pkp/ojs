@@ -36,4 +36,6 @@
 	<message key="plugins.auth.ldap.settings.saslprop">Propriedades de segurança SASL</message>
 	<message key="plugins.auth.ldap.settings.uid">Atributo de nome de conta</message>
 	<message key="plugins.auth.ldap.settings.uid.description">O atributo cujo valor identifica de forma única um objeto usuário, como um uid ou cn ou sAMAccountName.</message>
+	<message key="plugins.auth.ldap.settings.pwhash.description">Formato de hash para senhas armazenadas no servidor. SSHA é recomendado.</message>
+	<message key="plugins.auth.ldap.settings.sasl">Use SASL em vez de autenticação simples</message>
 </locale>
