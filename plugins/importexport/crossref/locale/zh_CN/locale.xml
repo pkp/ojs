@@ -28,5 +28,4 @@
 	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">请输入存储邮件</message>
 	<message key="plugins.importexport.crossref.requirements">要求</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">已满足所有插件的要求</message>
-	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[期刊出版商尚未设置。在 <a href="{$publisherUrl}" target="_blank">期刊设置Step 1.5</a>添加期刊出版商。]]></message>
 </locale>

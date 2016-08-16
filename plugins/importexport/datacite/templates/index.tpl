@@ -43,13 +43,13 @@
 			<div class="pkp_notification" id="dataciteConfigurationErrors">
 				{foreach from=$configurationErrors item=configurationError}
 					{if $configurationError == $smarty.const.DOI_EXPORT_CONFIG_ERROR_DOIPREFIX}
-						{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=dataciteConfigurationErrors notificationStyleClass=notifyWarning notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents="plugins.importexport.common.error.DOIsNotAvailable"|translate}
+						{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=dataciteConfigurationErrors notificationStyleClass="notifyWarning" notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents="plugins.importexport.common.error.DOIsNotAvailable"|translate}
 					{elseif $configurationError == $smarty.const.DOI_EXPORT_CONFIG_ERROR_SETTINGS}
-						{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=dataciteConfigurationErrors notificationStyleClass=notifyWarning notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents="plugins.importexport.common.error.pluginNotConfigured"|translate}
+						{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=dataciteConfigurationErrors notificationStyleClass="notifyWarning" notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents="plugins.importexport.common.error.pluginNotConfigured"|translate}
 					{/if}
 				{/foreach}
 				{if !$exportArticles && !$exportIssues && !$exportRepresentations}
-					{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=dataciteConfigurationErrors notificationStyleClass=notifyWarning notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents="plugins.importexport.common.error.noDOIContentObjects"|translate}
+					{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=dataciteConfigurationErrors notificationStyleClass="notifyWarning" notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents="plugins.importexport.common.error.noDOIContentObjects"|translate}
 				{/if}
 			</div>
 		{/if}

@@ -64,7 +64,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 	 * @copydoc PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'plugins.importexport.datacite.filter.IssueDataciteXmlFilter';
+		return 'plugins.importexport.datacite.filter.DataciteXmlFilter';
 	}
 
 	//
@@ -403,9 +403,13 @@ class DataciteXmlFilter extends NativeExportFilter {
 		$resourceTypeNode = null;
 		switch (true) {
 			case isset($galley):
-				$genreDao = DAORegistry::getDAO('GenreDAO'); /* @var $genreDao GenreDAO */
-				$genre = $genreDao->getById($galleyFile->getGenreId());
-				if ($genre->getCategory() == GENRE_CATEGORY_DOCUMENT && !$genre->getSupplementary() && !$genre->getDependent()) {
+				if (!$galley->getRemoteURL()) {
+					$genreDao = DAORegistry::getDAO('GenreDAO'); /* @var $genreDao GenreDAO */
+					$genre = $genreDao->getById($galleyFile->getGenreId());
+					if ($genre->getCategory() == GENRE_CATEGORY_DOCUMENT && !$genre->getSupplementary() && !$genre->getDependent()) {
+						$resourceType = 'Article';
+					}
+				} else {
 					$resourceType = 'Article';
 				}
 				break;
@@ -560,7 +564,9 @@ class DataciteXmlFilter extends NativeExportFilter {
 			$sizes[] = $pages . ' ' . __('editor.issues.pages');
 		}
 		foreach($files as $file) { /* @var $file PKPFile */
-			$sizes[] = $file->getNiceFileSize();
+			if ($file) {
+				$sizes[] = $file->getNiceFileSize();
+			}
 			unset($file);
 		}
 		$sizesNode = null;

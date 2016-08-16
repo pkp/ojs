@@ -29,5 +29,4 @@
 	<message key="plugins.importexport.crossref.settings.depositorIntro">Veuillez saisir le nom et l'adresse courriel du ou de la responsable des dépôts des identifiants d'objet numérique (DOI) CrossRef.</message>
 	<message key="plugins.importexport.crossref.requirements">Spécifications</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">Toutes les spécifications du plugiciel sont satisfaites.</message>
-	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[L’éditeur de la revue n’a pas été configuré ! Vous devez l’ajouter sous <a href="{$publisherUrl}" target="_blank"> à l’étape 1.5 du module « Configuration de la revue »</a>.]]></message>
 </locale>

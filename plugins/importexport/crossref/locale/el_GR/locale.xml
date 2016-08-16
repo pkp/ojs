@@ -28,7 +28,6 @@
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
 	<message key="plugins.importexport.crossref.requirements">Απαιτήσεις</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">Όλες οι απαιτήσεις του plugin έχουν ικανοποιηθεί</message>
-	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Ο Εκδότης του περιοδικού δεν έχει ρυθμιστεί! Θα πρέπει να προσθέσετε έναν οργανισμό έκδοσης μέσα από το <a href="{$publisherUrl}" target="_blank">Στήσιμο Περιοδικού Βήμα 1.5</a>.]]></message>
 	<message key="plugins.importexport.crossref.settings.depositorIntro">Τα ακόλουθα στοιχεία που απαιτούνται για μια επιτυχή CrossRef κατάθεση.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorName">Όνομα καταθέτη</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Email καταθέτη</message>

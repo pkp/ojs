@@ -28,5 +28,4 @@
 	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Email vkládajícího</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Vložte, prosím, jméno vkládajícího.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Vložte, prosím, e-mail vkládajícího.</message>
-	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Vydavatel časopisu nebyl nakonfigurován! Musíte přidat instituci vydavatele <a href="{$publisherUrl}" target="_blank">v Kroku 1.5 Nastavení časopisu</a>.]]></message>
 </locale>

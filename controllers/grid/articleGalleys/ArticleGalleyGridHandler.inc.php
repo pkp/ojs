@@ -278,7 +278,6 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$templateMgr->assign(array(
 			'submissionId' => $this->getSubmission()->getId(),
 			'representationId' => $galley->getId(),
-			'remoteRepresentation' => isset($galley) ? $galley->getRemoteURL() : null,
 		));
 		return new JSONMessage(true, $templateMgr->fetch('controllers/grid/articleGalleys/editFormat.tpl'));
 	}
