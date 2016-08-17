@@ -957,6 +957,8 @@ class Upgrade extends Installer {
 						$headNote->setAssocType(ASSOC_TYPE_QUERY);
 						$headNote->setAssocId($query->getId());
 						$headNote->setTitle('Copyediting');
+						$headNote->setDateCreated($dateNotified?$dateNotified:time());
+						$headNote->setDateModified($dateNotified?$dateNotified:time());
 						$noteDao->insertObject($headNote);
 					}
 					break;
@@ -973,6 +975,8 @@ class Upgrade extends Installer {
 					$headNote->setAssocType(ASSOC_TYPE_QUERY);
 					$headNote->setAssocId($query->getId());
 					$headNote->setTitle('Layout Editing');
+					$headNote->setDateCreated($dateNotified?$dateNotified:time());
+					$headNote->setDateModified($dateNotified?$dateNotified:time());
 					$noteDao->insertObject($headNote);
 					break;
 				case 'SIGNOFF_PROOFREADING_AUTHOR':
@@ -992,6 +996,8 @@ class Upgrade extends Installer {
 						$headNote->setAssocType(ASSOC_TYPE_QUERY);
 						$headNote->setAssocId($query->getId());
 						$headNote->setTitle('Proofreading');
+						$headNote->setDateCreated($dateNotified?$dateNotified:time());
+						$headNote->setDateModified($dateNotified?$dateNotified:time());
 						$noteDao->insertObject($headNote);
 					}
 					break;
@@ -1030,14 +1036,19 @@ class Upgrade extends Installer {
 
 			$note = $noteDao->newDataObject();
 			$note->setAssocType(ASSOC_TYPE_QUERY);
+			$note->setDateCreated(strtotime($row['date_posted']));
+			$note->setDateModified(strtotime($row['date_modified']));
 			switch ($row['comment_type']) {
 				case 3: // COMMENT_TYPE_COPYEDIT
+					$note->setTitle('Copyediting');
 					$note->setAssocId($copyeditingQueries[$row['submission_id']]->getId());
 					break;
 				case 4: // COMMENT_TYPE_LAYOUT
+					$note->setTitle('Layout Editing');
 					$note->setAssocId($layoutQueries[$row['submission_id']]->getId());
 					break;
 				case 5: // COMMENT_TYPE_PROOFREAD
+					$note->setTitle('Proofreading');
 					$note->setAssocId($proofreadingQueries[$row['submission_id']]->getId());
 					break;
 			}
@@ -1046,6 +1057,49 @@ class Upgrade extends Installer {
 			$noteDao->insertObject($note);
 		}
 		$commentsResult->Close();
+
+		$submissionFileDao->update('DELETE FROM submission_comments WHERE comment_type IN (3, 4, 5)'); // COMMENT_TYPE_EDITOR_DECISION
+		return true;
+	}
+
+	/**
+	 * Convert editor decision notes to a query.
+	 * @return boolean True indicates success.
+	 */
+	function convertEditorDecisionNotes() {
+		$noteDao = DAORegistry::getDAO('NoteDAO');
+		$queryDao = DAORegistry::getDAO('QueryDAO');
+		$commentsResult = $noteDao->retrieve('SELECT * FROM submission_comments WHERE comment_type=2 ORDER BY submission_id, comment_id ASC'); // COMMENT_TYPE_EDITOR_DECISION
+		$submissionId = 0;
+		$query = null; // Avoid Scrutinizer warnings
+		while (!$commentsResult->EOF) {
+			$row = $commentsResult->getRowAssoc(false);
+			$commentsResult->MoveNext();
+
+			if ($submissionId != $row['submission_id']) {
+				$submissionId = $row['submission_id'];
+				$query = $queryDao->newDataObject();
+				$query->setAssocType(ASSOC_TYPE_SUBMISSION);
+				$query->setAssocId($submissionId);
+				$query->setStageId(WORKFLOW_STAGE_ID_EXTERNAL_REVIEW);
+				$query->setSequence(REALLY_BIG_NUMBER);
+				$queryDao->insertObject($query);
+				$queryDao->resequence(ASSOC_TYPE_SUBMISSION, $submissionId);
+			}
+
+			$note = $noteDao->newDataObject();
+			$note->setAssocType(ASSOC_TYPE_QUERY);
+			$note->setAssocId($query->getId());
+			$note->setContents($row['comments']);
+			$note->setTitle('Editor Decision');
+			$note->setDateCreated(strtotime($row['date_posted']));
+			$note->setDateModified(strtotime($row['date_modified']));
+			$note->setUserId($row['author_id']);
+			$noteDao->insertObject($note);
+		}
+		$commentsResult->Close();
+
+		$noteDao->update('DELETE FROM submission_comments WHERE comment_type=2'); // COMMENT_TYPE_EDITOR_DECISION
 		return true;
 	}
 
