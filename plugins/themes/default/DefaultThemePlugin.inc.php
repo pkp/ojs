@@ -38,19 +38,121 @@ class DefaultThemePlugin extends ThemePlugin {
 	 * @return null
 	 */
 	public function init() {
-		// Load Noto Sans font from Google Font CDN
-		// To load extended latin or other character sets, see:
-		// https://www.google.com/fonts#UsePlace:use/Collection:Noto+Sans
-		if (Config::getVar('general', 'enable_cdn')) {
-			$this->addStyle(
-				'fontNotoSans',
-				'//fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic',
-				array('baseUrl' => '')
-			);
-		}
+
+		// Register theme options
+		$this->addOption('typography', 'radio', array(
+			'label' => 'plugins.themes.default.option.typography.label',
+			'description' => 'plugins.themes.default.option.typography.description',
+			'options' => array(
+				'notoSans' => 'plugins.themes.default.option.typography.notoSans',
+				'notoSerif' => 'plugins.themes.default.option.typography.notoSerif',
+				'notoSerif_notoSans' => 'plugins.themes.default.option.typography.notoSerif_notoSans',
+				'notoSans_notoSerif' => 'plugins.themes.default.option.typography.notoSans_notoSerif',
+				'lato' => 'plugins.themes.default.option.typography.lato',
+				'lora' => 'plugins.themes.default.option.typography.lora',
+				'lora_openSans' => 'plugins.themes.default.option.typography.lora_openSans',
+			)
+		));
 
 		// Load primary stylesheet
 		$this->addStyle('stylesheet', 'styles/index.less');
+
+		// Load fonts from Google Font CDN
+		// To load extended latin or other character sets, see:
+		// https://www.google.com/fonts#UsePlace:use/Collection:Noto+Sans
+		if (Config::getVar('general', 'enable_cdn')) {
+
+			if ($this->getOption('typography') === 'notoSerif') {
+				$this->addStyle(
+					'fontNotoSerif',
+					'//fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i',
+					array('baseUrl' => '')
+				);
+
+				$this->modifyStyle(
+					'stylesheet',
+					array(
+						'addLessVariables' => '@font: "Noto Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;',
+					)
+				);
+
+			} elseif (strpos($this->getOption('typography'), 'notoSerif') !== false) {
+				$this->addStyle(
+					'fontNotoSansNotoSerif',
+					'//fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i|Noto+Serif:400,400i,700,700i',
+					array('baseUrl' => '')
+				);
+
+				// Update LESS font variables
+				if ($this->getOption('typography') == 'notoSerif_notoSans') {
+					$this->modifyStyle(
+						'stylesheet',
+						array(
+							'addLessVariables' => '@font-heading: "Noto Serif", serif;',
+						)
+					);
+				} elseif ($this->getOption('typography') == 'notoSans_notoSerif') {
+					$this->modifyStyle(
+						'stylesheet',
+						array(
+							'addLessVariables' => '@font: "Noto Serif", serif;@font-heading: "Noto Sans", serif;',
+						)
+					);
+				}
+
+			} elseif ($this->getOption('typography') == 'lato') {
+
+				$this->addStyle(
+					'fontLato',
+					'//fonts.googleapis.com/css?family=Lato:400,400i,900,900i',
+					array('baseUrl' => '')
+				);
+
+				$this->modifyStyle(
+					'stylesheet',
+					array(
+						'addLessVariables' => '@font: Lato, sans-serif;',
+					)
+				);
+
+			} elseif ($this->getOption('typography') == 'lora') {
+
+				$this->addStyle(
+					'fontLora',
+					'//fonts.googleapis.com/css?family=Lora:400,400i,700,700i',
+					array('baseUrl' => '')
+				);
+
+				$this->modifyStyle(
+					'stylesheet',
+					array(
+						'addLessVariables' => '@font: Lora, serif;',
+					)
+				);
+
+			} elseif ($this->getOption('typography') == 'lora_openSans') {
+
+				$this->addStyle(
+					'fontLoraOpenSans',
+					'//fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Open+Sans:400,400i,700,700i',
+					array('baseUrl' => '')
+				);
+
+				$this->modifyStyle(
+					'stylesheet',
+					array(
+						'addLessVariables' => '@font: "Open Sans", sans-serif;@font-heading: Lora, serif;',
+					)
+				);
+
+			} else {
+				$this->addStyle(
+					'fontNotoSans',
+					'//fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic',
+					array('baseUrl' => '')
+				);
+			}
+		}
 
 		// Load jQuery from a CDN or, if CDNs are disabled, from a local copy.
 		$min = Config::getVar('general', 'enable_minified') ? '.min' : '';

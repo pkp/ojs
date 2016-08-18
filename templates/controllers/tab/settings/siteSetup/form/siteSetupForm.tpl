@@ -71,7 +71,7 @@
 			</div>
 		{/fbvFormSection}
 		{fbvFormSection label="manager.setup.layout.theme" description="manager.setup.layout.themeDescription"}
-			{fbvElement type="select" id="themePluginPath" from=$themePluginOptions selected=$themePluginPath translate=false size=$fbvStyles.size.MEDIUM}
+			{fbvElement type="select" id="themePluginPath" from=$enabledThemes selected=$themePluginPath translate=false size=$fbvStyles.size.MEDIUM}
 		{/fbvFormSection}
 		{fbvFormSection}{/fbvFormSection}{* FIXME: Clear inline fbvFormSections *}
 	{/fbvFormArea}
