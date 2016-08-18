@@ -91,9 +91,10 @@
 		<code function="localizeCustomBlockSettings" />
 		<code function="convertEditorDecisionNotes" />
 		<code function="convertQueries" />
+		<code function="migrateFiles" />
+		<code function="convertSupplementaryFiles" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupdate.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_pubId_settings.xml" />
-		<code function="migrateFiles" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->

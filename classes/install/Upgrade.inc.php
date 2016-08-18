@@ -879,23 +879,25 @@ class Upgrade extends Installer {
 				foreach ($submissionFiles as $submissionFile) {
 					$generatedFilename = $submissionFile->getServerFileName();
 					$basePath = $submissionFileManager->getBasePath() . '/';
-					$globPattern = '*/' . $submissionFile->getSubmissionId() . '-' .
+					$globPattern = $submissionFile->getSubmissionId() . '-' .
 						$submissionFile->getFileId() . '-' .
 						$submissionFile->getRevision() . '-' .
 						'??' .
 						'.' . strtolower_codesafe($submissionFile->getExtension());
 
-					$matchedResults = glob($basePath . '/submission/' . $globPattern);
+					$matchedResults = array_merge(
+						glob($basePath . '*/*/' . $globPattern),
+						glob($basePath . '*/' . $globPattern)
+					);
 					if (count($matchedResults)>1) {
 						// Too many filenames matched.
-						error_log("Duplicate potential files for \"$globPattern\"!", 1, $adminEmail);
+						error_log("Duplicate potential files for \"$globPattern\" in \"" . $submissionFileManager->getBasePath() . "\".");
 						continue;
 					} elseif (count($matchedResults)==0) {
 						// No filenames matched.
-						error_log("Unable to find a match for \"$globPattern\".\n", 1, $adminEmail);
+						error_log("Unable to find a match for \"$globPattern\" in \"" . $submissionFileManager->getBasePath() . "\".\n");
 						continue;
 					}
-
 					$discoveredFilename = array_shift($matchedResults);
 					$targetFilename = $basePath . $submissionFile->_fileStageToPath($submissionFile->getFileStage()) . '/' . $generatedFilename;
 					if (file_exists($targetFilename)) continue; // Skip existing files/links
@@ -906,6 +908,320 @@ class Upgrade extends Installer {
 				}
 			}
 		}
+		return true;
+	}
+
+	/**
+	 * Convert supplementary files to submission files.
+	 * @return boolean True indicates success.
+	 */
+	function convertSupplementaryFiles() {
+		$genreDao = DAORegistry::getDAO('GenreDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
+		$journal = null;
+
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$suppFilesResult = $submissionFileDao->retrieve('SELECT a.context_id, sf.* FROM article_supplementary_files sf, submissions a WHERE a.submission_id = sf.article_id'); // COMMENT_TYPE_EDITOR_DECISION
+		while (!$suppFilesResult->EOF) {
+			$row = $suppFilesResult->getRowAssoc(false);
+			$suppFilesResult->MoveNext();
+			if (!$journal || $journal->getId() != $row['context_id']) {
+				$journal = $journalDao->getById($row['context_id']);
+				$managerUserGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_MANAGER);
+				$managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $journal->getId());
+				$creatorUserId = $managerUsers->next()->getId();
+				unset($adminUsers, $adminUserGroup);
+			}
+			$article = $articleDao->getById($row['article_id']);
+
+			$genre = null;
+			switch ($row['type']) {
+				// author.submit.suppFile.dataAnalysis
+				case 'Análise de Dados':
+				case 'Análises de dados':
+				case 'Anàlisi de les dades':
+				case 'Analisi di dati':
+				case 'Analisis Data':
+				case 'Análisis de datos':
+				case 'Análisis de los datos':
+				case 'Analiza podataka':
+				case 'Analize de date':
+				case 'Analizy':
+				case 'Analyse de données':
+				case 'Analyse':
+				case 'Analys':
+				case 'Analýza dat':
+				case 'Dataanalyse':
+				case 'Data Analysis':
+				case 'Datenanalyse':
+				case 'Datu-analisia':
+				case 'Gegevensanalyse':
+				case 'Phân tích dữ liệu':
+				case 'Veri Analizi':
+				case 'آنالیز داده':
+				case 'تحليل بيانات':
+				case 'Ανάλυση δεδομένων':
+				case 'Анализа на податоци':
+				case 'Анализ данных':
+				case 'Аналіз даних':
+				case 'ഡേറ്റാ വിശകലനം':
+				case 'データ分析':
+				case '数据分析':
+				case '資料分析':
+					$genre = $genreDao->getByKey('DATAANALYSIS', $journal->getId());
+					break;
+				// author.submit.suppFile.dataSet
+				case 'Baza podataka':
+				case 'Conjunt de dades':
+				case 'Conjunto de Dados':
+				case 'Conjunto de datos':
+				case 'Conjuntos de datos':
+				case 'Conxuntos de dados':
+				case 'Datasæt':
+				case 'Data Set':
+				case 'Dataset':
+				case 'Datasett':
+				case 'Datensatz':
+				case 'Datový soubor':
+				case 'Datu multzoa':
+				case 'Ensemble de données':
+				case 'Forskningsdata':
+				case 'データセット':
+				case 'Set Data':
+				case 'Set di dati':
+				case 'Set podataka':
+				case 'Seturi de date':
+				case 'Tập hợp dữ liệu':
+				case 'Veri Seti':
+				case 'Zbiory danych':
+				case 'مجموعة بيانات':
+				case 'مجموعه ناده':
+				case 'Σύνολο δεδομένων':
+				case 'Збирка на податоци':
+				case 'Набір даних':
+				case 'Набор данных':
+				case 'ഡേറ്റാ സെറ്റ്':
+				case '数据集':
+				case '資料或數據組':
+					$genre = $genreDao->getByKey('DATASET', $journal->getId());
+					break;
+				// author.submit.suppFile.researchInstrument
+				case 'Araştırma Enstürmanları':
+				case 'Công cụ nghiên cứu':
+				case 'Forschungsinstrument':
+				case 'Forskningsinstrument':
+				case 'Herramienta de investigación':
+				case 'Ikerketa-tresna':
+				case 'Instrumen Riset':
+				case 'Instrument de cercetare':
+				case 'Instrument de recerca':
+				case 'Instrument de recherche':
+				case 'Instrumenti istraživanja':
+				case 'Instrumento de investigación':
+				case 'Instrumento de Pesquisa':
+				case 'Istraživački instrument':
+				case 'Narzędzie badawcze':
+				case 'Onderzoeksinstrument':
+				case 'Research Instrument':
+				case 'Strumento di ricerca':
+				case 'Výzkumný nástroj':
+				case 'ابزار پژوهشی':
+				case 'أداة بحث':
+				case 'Όργανο έρευνας':
+				case 'Дослідний інструмент':
+				case 'Инструмент исследования':
+				case 'Истражувачки инструмент':
+				case 'ഗവേഷണ ഉപകരണങ്ങള്‍':
+				case '研究方法或工具':
+				case '研究装置':
+				case '科研仪器':
+					$genre = $genreDao->getByKey('RESEARCHINSTRUMENT', $journal->getId());
+					break;
+				// author.submit.suppFile.researchMaterials
+				case 'Araştırma Materyalleri':
+				case 'Các tài liệu nghiên cứu':
+				case 'Documents de recherche':
+				case 'Forschungsmaterial':
+				case 'Forskningsmateriale':
+				case 'Forskningsmaterialer':
+				case 'Forskningsmaterial':
+				case 'Ikerketako materialak':
+				case 'Istraživački materijali':
+				case 'Istraživački materijal':
+				case 'Materiais de investigación':
+				case 'Material de Pesquisa':
+				case 'Materiale de cercetare':
+				case 'Materiales de investigación':
+				case 'Materiali di ricerca':
+				case 'Materials de recerca':
+				case 'Materiały badawcze':
+				case 'Materi/ Bahan Riset':
+				case 'Onderzoeksmaterialen':
+				case 'Research Materials':
+				case 'Výzkumné materiály':
+				case 'مواد بحث':
+				case 'مواد پژوهشی':
+				case 'Υλικά έρευνας':
+				case 'Дослідні матеріали':
+				case 'Истражувачки материјали':
+				case 'Материалы исследования':
+				case 'ഗവേഷണ സാമഗ്രികള്‍':
+				case '研究材料':
+				case '科研资料':
+					$genre = $genreDao->getByKey('RESEARCHMATERIALS', $journal->getId());
+					break;
+				// author.submit.suppFile.researchResults
+				case 'Araştırma Sonuçları':
+				case 'Forschungsergebnisse':
+				case 'Forskningsresultater':
+				case 'Forskningsresultat':
+				case 'Hasil Riset':
+				case 'Ikerketaren emaitza':
+				case 'Istraživački rezultati':
+				case 'Kết quả nghiên cứu':
+				case 'Onderzoeksresultaten':
+				case 'Research Results':
+				case 'Resultados de investigación':
+				case 'Resultados de la investigación':
+				case 'Resultados de Pesquisa':
+				case 'Resultats de la recerca':
+				case 'Résultats de recherche':
+				case 'Rezultate de cercetare':
+				case 'Rezultati istraživanja':
+				case 'Rezultaty z badań':
+				case 'Risultati di ricerca':
+				case 'Výsledky výzkumu':
+				case 'نتایج پژوهش':
+				case 'نتائج بحث':
+				case 'Αποτελέσματα έρευνας':
+				case 'Истражувачки резултати':
+				case 'Результати дослідження':
+				case 'Результаты исследования':
+				case 'ഗവേഷണ ഫലങ്ങള്‍':
+				case '研究結果':
+				case '科研结果':
+					$genre = $genreDao->getByKey('RESEARCHRESULTS', $journal->getId());
+					break;
+				// author.submit.suppFile.sourceText
+				case 'Brontekst':
+				case 'Iturburu-testua':
+				case 'Izvorni tekst':
+				case 'Källtext':
+				case 'Kaynak Metin':
+				case 'Kildetekst':
+				case 'ソーステキスト':
+				case 'Quellentext':
+				case 'Source Text':
+				case 'Teks Sumber':
+				case 'Tekst źródłowy':
+				case 'Testo della fonte':
+				case 'Texte source':
+				case 'Texte sursă':
+				case 'Texto fonte':
+				case 'Texto fuente':
+				case 'Texto Original':
+				case 'Text original':
+				case 'Văn bản (text) nguồn':
+				case 'Zdrojový text':
+				case 'متن منبع':
+				case 'نص مصدر':
+				case 'Πηγαίο κείμενο':
+				case 'Изворен текст':
+				case 'Исходный текст':
+				case 'Текст першоджерела':
+				case 'സോഴ്സ് ടെക്സ്റ്റ്':
+				case '來源文獻':
+				case '源文本':
+					$genre = $genreDao->getByKey('SOURCETEXTS', $journal->getId());
+					break;
+				// author.submit.suppFile.transcripts	
+				case 'Afskrifter':
+				case 'Kopya / Suret':
+				case 'Lời thoại':
+				case 'Reproduktioner':
+				case 'Transcrição':
+				case 'Transcricións':
+				case 'Transcripciones':
+				case 'Transcripcions':
+				case 'Transcripties':
+				case 'Transcriptions':
+				case 'Transcripts':
+				case 'Transcripturi':
+				case 'Transkrip':
+				case 'Transkripsjoner':
+				case 'Transkripte':
+				case 'Transkripti':
+				case 'Transkript':
+				case 'Transkripty':
+				case 'Transkripzioak':
+				case 'Transkrypcje':
+				case 'Trascrizioni':
+				case 'رونوشت':
+				case 'نصوص':
+				case 'Καταγραφή':
+				case 'Стенограми':
+				case 'Транскрипти':
+				case 'Транскрипты':
+				case 'പകര്‍പ്പുകള്‍':
+				case '副本':
+				case '筆記録':
+					$genre = $genreDao->getByKey('TRANSCRIPTS', $journal->getId());
+					break;
+				default:
+					$genre = $genreDao->getByKey('OTHER', $journal->getId());
+					break;
+			}
+			assert($genre);
+
+			// Set genres for files
+			$submissionFiles = $submissionFileDao->getAllRevisions($row['file_id']);
+			foreach ($submissionFiles as $submissionFile) {
+				$submissionFile->setGenreId($genre->getId());
+				$submissionFile->setUploaderUserId($creatorUserId);
+				$submissionFile->setFileStage(SUBMISSION_FILE_SUBMISSION);
+				$submissionFileDao->updateObject($submissionFile);
+			}
+
+			// Reload the files now that they're cast; set metadata
+			$submissionFiles = $submissionFileDao->getAllRevisions($row['file_id']);
+			foreach ($submissionFiles as $submissionFile) {
+				$suppFileSettingsResult = $submissionFileDao->retrieve('SELECT * FROM article_supp_file_settings WHERE supp_id = ?', array($row['supp_id'])); // COMMENT_TYPE_EDITOR_DECISION
+				while (!$suppFileSettingsResult->EOF) {
+					$sfRow = $suppFileSettingsResult->getRowAssoc(false);
+					$suppFileSettingsResult->MoveNext();
+					switch ($sfRow['setting_name']) {
+						case 'creator':
+							$submissionFile->setCreator($sfRow['setting_value'], $sfRow['locale']);
+							break;
+						case 'description':
+							$submissionFile->setDescription($sfRow['setting_value'], $sfRow['locale']);
+							break;
+						case 'publisher':
+							$submissionFile->setPublisher($sfRow['setting_value'], $sfRow['locale']);
+							break;
+						case 'source':
+							$submissionFile->setSource($sfRow['setting_value'], $sfRow['locale']);
+							break;
+						case 'sponsor':
+							$submissionFile->setSponsor($sfRow['setting_value'], $sfRow['locale']);
+							break;
+						case 'subject':
+							$submissionFile->setSubject($sfRow['setting_value'], $sfRow['locale']);
+							break;
+						case 'title':
+							$submissionFile->setName($sfRow['setting_value'], $sfRow['locale']);
+							break;
+						case 'typeOther': break; // Discard (at least for now)
+						default: assert(false);
+					}
+				}
+				$suppFileSettingsResult->Close();
+				$submissionFileDao->updateObject($submissionFile);
+			}
+		}
+		$suppFilesResult->Close();
 		return true;
 	}
 
@@ -1102,7 +1418,6 @@ class Upgrade extends Installer {
 		$noteDao->update('DELETE FROM submission_comments WHERE comment_type=2'); // COMMENT_TYPE_EDITOR_DECISION
 		return true;
 	}
-
 }
 
 ?>
