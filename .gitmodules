@@ -29,3 +29,6 @@
 [submodule "plugins/generic/orcidProfile"]
 	path = plugins/generic/orcidProfile
 	url = https://github.com/pkp/orcidProfile.git
+[submodule "plugins/blocks/makeSubmission"]
+	path = plugins/blocks/makeSubmission
+	url = https://github.com/pkp/makeSubmission.git
