@@ -67,10 +67,10 @@ class EditorDecisionCommentForm extends CommentForm {
 	/**
 	 * Email the comment.
 	 */
-	function email() {
+	function email($request) {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
 		// Create list of recipients:
 
@@ -105,7 +105,7 @@ class EditorDecisionCommentForm extends CommentForm {
 			$recipients = array_merge($recipients, $editorAddresses);
 		}
 
-		parent::email($recipients);	
+		parent::email($recipients, $request);
 	}
 }
 
