@@ -1392,7 +1392,9 @@ class Upgrade extends Installer {
 	function convertEditorDecisionNotes() {
 		$noteDao = DAORegistry::getDAO('NoteDAO');
 		$queryDao = DAORegistry::getDAO('QueryDAO');
-		$commentsResult = $noteDao->retrieve('SELECT * FROM submission_comments WHERE comment_type=2 ORDER BY submission_id, comment_id ASC'); // COMMENT_TYPE_EDITOR_DECISION
+		$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+
+		$commentsResult = $noteDao->retrieve('SELECT sc.*, a.user_id FROM submission_comments sc, articles_migration a WHERE sc.submission_id = a.article_id AND sc.comment_type=2 ORDER BY sc.submission_id, sc.comment_id ASC'); // COMMENT_TYPE_EDITOR_DECISION
 		$submissionId = 0;
 		$query = null; // Avoid Scrutinizer warnings
 		while (!$commentsResult->EOF) {
@@ -1408,6 +1410,20 @@ class Upgrade extends Installer {
 				$query->setSequence(REALLY_BIG_NUMBER);
 				$queryDao->insertObject($query);
 				$queryDao->resequence(ASSOC_TYPE_SUBMISSION, $submissionId);
+
+				$assignedUserIds = array($row['user_id']);
+				foreach (array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT) as $roleId) {
+					$stageAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submissionId, $roleId, $query->getStageId());
+					while ($stageAssignment = $stageAssignments->next()) {
+						$assignedUserIds[] = $stageAssignment->getUserId();
+					}
+				}
+
+				// Ensure that the necessary users are assigned to the query
+				foreach (array_unique($assignedUserIds) as $assignedUserId) {
+					if (count($queryDao->getParticipantIds($query->getId(), $assignedUserId))!=0) continue;
+					$queryDao->insertParticipant($query->getId(), $assignedUserId);
+				}
 			}
 
 			$note = $noteDao->newDataObject();
