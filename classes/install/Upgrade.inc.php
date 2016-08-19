@@ -249,7 +249,7 @@ class Upgrade extends Installer {
 				$userResult->MoveNext();
 			}
 
-			// update the user_group_id colun in the authors table.
+			// update the user_group_id column in the authors table.
 			$userGroupDao->update('UPDATE authors SET user_group_id = ?', array((int) $group->getId()));
 
 			// Reviewers.  All existing OJS reviewers get mapped to external reviewers.
