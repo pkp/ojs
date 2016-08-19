@@ -54,8 +54,17 @@ class DefaultThemePlugin extends ThemePlugin {
 			)
 		));
 
+		$this->addOption('baseColor', 'color', array(
+			'label' => 'plugins.themes.default.option.color.label',
+			'description' => 'plugins.themes.default.option.color.description',
+			'default' => '#1E6292',
+		));
+
 		// Load primary stylesheet
 		$this->addStyle('stylesheet', 'styles/index.less');
+
+		// Store additional LESS variables to process based on options
+		$additionalLessVariables = '';
 
 		// Load fonts from Google Font CDN
 		// To load extended latin or other character sets, see:
@@ -68,13 +77,7 @@ class DefaultThemePlugin extends ThemePlugin {
 					'//fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i',
 					array('baseUrl' => '')
 				);
-
-				$this->modifyStyle(
-					'stylesheet',
-					array(
-						'addLessVariables' => '@font: "Noto Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;',
-					)
-				);
+				$additionalLessVariables .= '@font: "Noto Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;';
 
 			} elseif (strpos($this->getOption('typography'), 'notoSerif') !== false) {
 				$this->addStyle(
@@ -85,65 +88,34 @@ class DefaultThemePlugin extends ThemePlugin {
 
 				// Update LESS font variables
 				if ($this->getOption('typography') == 'notoSerif_notoSans') {
-					$this->modifyStyle(
-						'stylesheet',
-						array(
-							'addLessVariables' => '@font-heading: "Noto Serif", serif;',
-						)
-					);
+					$additionalLessVariables .= '@font-heading: "Noto Serif", serif;';
 				} elseif ($this->getOption('typography') == 'notoSans_notoSerif') {
-					$this->modifyStyle(
-						'stylesheet',
-						array(
-							'addLessVariables' => '@font: "Noto Serif", serif;@font-heading: "Noto Sans", serif;',
-						)
-					);
+					$additionalLessVariables .= '@font: "Noto Serif", serif;@font-heading: "Noto Sans", serif;';
 				}
 
 			} elseif ($this->getOption('typography') == 'lato') {
-
 				$this->addStyle(
 					'fontLato',
 					'//fonts.googleapis.com/css?family=Lato:400,400i,900,900i',
 					array('baseUrl' => '')
 				);
-
-				$this->modifyStyle(
-					'stylesheet',
-					array(
-						'addLessVariables' => '@font: Lato, sans-serif;',
-					)
-				);
+				$additionalLessVariables .= '@font: Lato, sans-serif;';
 
 			} elseif ($this->getOption('typography') == 'lora') {
-
 				$this->addStyle(
 					'fontLora',
 					'//fonts.googleapis.com/css?family=Lora:400,400i,700,700i',
 					array('baseUrl' => '')
 				);
-
-				$this->modifyStyle(
-					'stylesheet',
-					array(
-						'addLessVariables' => '@font: Lora, serif;',
-					)
-				);
+ 				$additionalLessVariables .= '@font: Lora, serif;';
 
 			} elseif ($this->getOption('typography') == 'lora_openSans') {
-
 				$this->addStyle(
 					'fontLoraOpenSans',
 					'//fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Open+Sans:400,400i,700,700i',
 					array('baseUrl' => '')
 				);
-
-				$this->modifyStyle(
-					'stylesheet',
-					array(
-						'addLessVariables' => '@font: "Open Sans", sans-serif;@font-heading: Lora, serif;',
-					)
-				);
+				$additionalLessVariables .= '@font: "Open Sans", sans-serif;@font-heading: Lora, serif;';
 
 			} else {
 				$this->addStyle(
@@ -152,6 +124,16 @@ class DefaultThemePlugin extends ThemePlugin {
 					array('baseUrl' => '')
 				);
 			}
+		}
+
+		// Update color based on theme option
+		if ($this->getOption('baseColor') !== '#1E6292') {
+			$additionalLessVariables .= '@bg-base:' . $this->getOption('baseColor') . ';';
+		}
+
+		// Pass additional LESS variables based on options
+		if (!empty($additionalLessVariables)) {
+			$this->modifyStyle('stylesheet', array('addLessVariables' => $additionalLessVariables));
 		}
 
 		// Load jQuery from a CDN or, if CDNs are disabled, from a local copy.
