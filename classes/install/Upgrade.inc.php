@@ -1375,7 +1375,7 @@ class Upgrade extends Installer {
 					$note->setAssocId($proofreadingQueries[$row['submission_id']]->getId());
 					break;
 			}
-			$note->setContents($row['comments']);
+			$note->setContents(nl2br($row['comments']));
 			$note->setUserId($row['author_id']);
 			$noteDao->insertObject($note);
 		}
@@ -1413,7 +1413,7 @@ class Upgrade extends Installer {
 			$note = $noteDao->newDataObject();
 			$note->setAssocType(ASSOC_TYPE_QUERY);
 			$note->setAssocId($query->getId());
-			$note->setContents($row['comments']);
+			$note->setContents(nl2br($row['comments']));
 			$note->setTitle('Editor Decision');
 			$note->setDateCreated(strtotime($row['date_posted']));
 			$note->setDateModified(strtotime($row['date_modified']));
