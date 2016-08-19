@@ -129,6 +129,9 @@ class DefaultThemePlugin extends ThemePlugin {
 		// Update color based on theme option
 		if ($this->getOption('baseColor') !== '#1E6292') {
 			$additionalLessVariables .= '@bg-base:' . $this->getOption('baseColor') . ';';
+			if (!$this->isColorDark($this->getOption('baseColor'))) {
+				$additionalLessVariables .= '@text-bg-base:rgba(0,0,0,0.84);';
+			}
 		}
 
 		// Pass additional LESS variables based on options
