@@ -824,7 +824,6 @@
 	<message key="site.upgradeAvailable.manager"><![CDATA[¡Hay una nueva versión de OJS disponible! Está utilizando la versión de OJS {$currentVersion}. La versión más reciente de OJS es {$latestVersion}. Contacte con su administrador/a del sitio ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) para avisarles de esta nueva versión. Podrá encontrar más información <a href="http://pkp.sfu.ca/ojs_download" target="_new">aquí</a>.]]></message>
 
 	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName} introdujo un nuevo envío, Id. {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} revisó el artículo {$submissionId}. El Id. del nuevo archivo es {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">Se excluyó a {$reviewerName} de la revisión del envío {$submissionId} en la ronda de revisión {$round}.</message>
 	<message key="log.review.reviewInitiated">{$reviewerName} inició la ronda de revisión {$round} del envío {$submissionId}.</message>

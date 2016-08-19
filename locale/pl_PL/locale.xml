@@ -696,7 +696,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="installer.ojsUpgrade">Aktualizacja OJS</message>
 
 	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName} wysłał nowy tekst, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} dokonał edycji tekstu {$submissionId}. Nowy identyfikator pliku to {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} nie recenzuje tekstu {$submissionId} w etapie {$round}.</message>
 	<message key="log.review.reviewInitiated">Recenzja {$reviewerName} tekstu {$submissionId} w etapie {$round} została rozpoczęta.</message>

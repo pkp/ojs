@@ -11,18 +11,21 @@
   *
   -->
 
-<install version="2.9.9.0">
-	<upgrade minversion="2.0.0.0" maxversion="2.9.8.9">
+<install version="3.0.0.0">
+	<upgrade minversion="2.0.0.0" maxversion="2.3.9.9">
+		<!-- OJS < 2.4.0 to 3.0 upgrade unsupported -->
 		<code function="abort" message="installer.unsupportedUpgradeError" />
 	</upgrade>
 
-	<upgrade minversion="2.4.0.0" maxversion="2.9.0.0"><!-- 2.9.0.0 is OJS 3.0a1 -->
-		<code function="syncSeriesAssocType" />
+	<upgrade minversion="2.9.8.9" maxversion="2.9.9.9">
+		<!-- OJS 3.0 alpha or beta to 3.0 upgrade unsupported -->
+		<code function="abort" message="installer.unsupportedUpgradeError" />
 	</upgrade>
 
-	<upgrade minversion="2.4.0.0" maxversion="2.8.9.9"><!-- 2.9.0.0 is OJS 3.0a1 -->
+	<upgrade minversion="2.4.0.0" maxversion="2.4.9.9">
+		<code function="syncSeriesAssocType" />
 		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_usageStatistics.xml" condition="return $installer->columnExists('article_galleys', 'views');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_usageStatistics_issueGalleys.xml" condition="return $installer->tableExists('issue_galleys');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_usageStatistics2.xml" condition="return $installer->tableExists('issue_galleys');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_preupdate.xml" condition="return $installer->columnExists('edit_decisions', 'article_id');" />	
 		<data file="dbscripts/xml/upgrade/3.0.0_adaptTimedViews.xml" condition="return $installer->tableExists('timed_views_log');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_adaptReferrals.xml" condition="return $installer->tableExists('referrals');" />
@@ -59,7 +62,7 @@
 	<!-- CLOB/Text indexes handled differently for MySQL and PostgreSQL -->
 	<data file="dbscripts/xml/indexes.xml" />
 
-	<upgrade minversion="2.4.0.0" maxversion="2.8.9.9"><!-- 2.9.0.0 is OJS 3.0a1 -->
+	<upgrade minversion="2.4.0.0" maxversion="2.4.9.9">
 		<data file="dbscripts/xml/upgrade/3.0.0_change_assoc_type.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_change_assoc_type_metrics.xml" condition="return $installer->tableExists('metrics');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_settings.xml" />
@@ -68,26 +71,28 @@
 		<code function="clearDataCache" />
 		<code function="migrateUserRoles" />
 		<code function="installDefaultGenres" />
-		<code function="migrateSubmissionFilePaths" />
-		<schema file="plugins/generic/usageStats/schema.xml" />
 		<data file="dbscripts/xml/upgrade/remove_timed_views_bots.xml" condition="return $installer->tableExists('timed_views_log');" />
 		<code function="migrateCounterPluginUsageStatistics" condition="return $installer->tableExists('counter_monthly_log');" />
 		<code function="migrateTimedViewsUsageStatistics" condition="return $installer->tableExists('timed_views_log');" />
 		<code function="migrateDefaultUsageStatistics" condition="return $installer->tableExists('article_galleys_stats_migration');" />
 		<data file="dbscripts/xml/upgrade/2.4.0_postUsageStatsMigration.xml" condition="return $installer->tableExists('article_galleys_stats_migration');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_postUsageStatsMigration_issueGalleys.xml" condition="return $installer->tableExists('issue_galleys_stats_migration');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_postUsageStatsMigration2.xml" condition="return $installer->tableExists('issue_galleys_stats_migration');" />
 		<data file="dbscripts/xml/upgrade/2.4.0_postCounterMigration.xml" condition="return $installer->tableExists('counter_monthly_log');" />
 		<data file="dbscripts/xml/upgrade/2.4.0_postTimedViewsMigration.xml" condition="return $installer->tableExists('timed_views_log');" />
-		<data file="dbscripts/xml/upgrade/3.0.0_postSubmissionFilesMigration.xml" condition="return $installer->tableExists('article_files_migration');" />
-	</upgrade>
-
-	<upgrade minversion="2.4.0.0" maxversion="2.9.9.9"><!-- 2.9.9.0 is OJS 3.0b -->
 		<code function="fixReviewForms" />
-		<code function="htmlifyEmailTemplates" /><!-- Bug #8929 -->
+		<code function="htmlifyEmailTemplates" />
 		<note file="docs/release-notes/README-BEACON" />
-		<code function="installEmailTemplate" key="REVIEW_REQUEST_REMIND_AUTO" locales="ca_ES,cs_CZ,da_DK,de_DE,el_GR,en_US,es_ES,eu_ES,fr_IR,fr_CA,gl_ES,hr_HR,id_ID,it_IT,ja_JP,ml_IN,nb_NO,nl_NL,pt_BR,pr_PT,ro_RO,ru_RU,sr_SR,sv_SE,te_ST,tr_TR,uk_UA,vi_VN,zh_CN,zh_TW" />
-		<code function="installEmailTemplate" key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK" locales="ca_ES,cs_CZ,da_DK,de_DE,el_GR,en_US,es_ES,eu_ES,fr_IR,fr_CA,gl_ES,hr_HR,id_ID,it_IT,ja_JP,ml_IN,nb_NO,nl_NL,pt_BR,pr_PT,ro_RO,ru_RU,sr_SR,sv_SE,te_ST,tr_TR,uk_UA,vi_VN,zh_CN,zh_TW" />
+		<code function="installEmailTemplate" key="NOTIFICATION_CENTER_DEFAULT" locales="en_US" />
+		<code function="installEmailTemplate" key="REVIEW_REQUEST_REMIND_AUTO" locales="en_US" />
+		<code function="installEmailTemplate" key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK" locales="en_US" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_SEND_TO_EXTERNAL" locales="en_US" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_SEND_TO_PRODUCTION" locales="en_US" />
 		<data file="dbscripts/xml/upgrade/3.0.0_scheduledTasks.xml" />
+		<code function="localizeCustomBlockSettings" />
+		<code function="convertEditorDecisionNotes" />
+		<code function="convertQueries" />
+		<code function="migrateFiles" />
+		<code function="convertSupplementaryFiles" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupdate.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_pubId_settings.xml" />
 	</upgrade>

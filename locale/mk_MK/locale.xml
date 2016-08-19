@@ -979,7 +979,6 @@
 	<message key="site.upgradeAvailable.manager"><![CDATA[Овде е достапна новата верзија на OJS! Во моментот ја користите OJS {$currentVersion}. Најновата верзија е OJS {$latestVersion}. Контактирајте го вашиот администратор на страницата ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) за да го известите за оваа нова порака. Повеќе информации може да најдете овде <a href="http://pkp.sfu.ca/ojs_download" target="_new">here</a>.]]></message>
 
 	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName} внесе ново поднесување, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} изврши ревизија на статијата {$submissionId}. ID-то на новиот фајл е {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} не му е доделена улога за преглед на поднесувањето {$submissionId} во рундата за преглед {$round}.</message>
 	<message key="log.review.reviewInitiated">Рундата {$round} е прегледана од {$reviewerName} за поднесувањето {$submissionId} е иницирана.</message>

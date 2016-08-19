@@ -982,7 +982,6 @@ Váš server aktuálně podporuje mbstring: <strong>{$supportsMBString}</strong>
 	<message key="site.upgradeAvailable.manager"><![CDATA[Je dostupná nová verze OJS! Vy používáte následující verzi OJS: {$currentVersion}. Nejnovější verze OJS je: {$latestVersion}. Kontaktujte, prosím, administrátora webu ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) a upozorněte ho na novou verzi OJS. Více informací lze nalézt <a href="http://pkp.sfu.ca/ojs_download" target="_new">zde</a>.]]></message>
 
 	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName} vložil nový příspěvek, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} pozměnil článek {$submissionId}. Nové ID souboru je {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} byl odebrán z recenzování příspěvku {$submissionId} v recenzním kole {$round}.</message>
 	<message key="log.review.reviewInitiated">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$submissionId} bylo zahájeno.</message>

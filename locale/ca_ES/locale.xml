@@ -834,7 +834,6 @@
 	<message key="site.upgradeAvailable.manager"><![CDATA[Hi ha una nova versió de l'OJS disponible. Actualment feu servir l'OJS {$currentVersion}. La versió més recent és OJS {$latestVersion}. Contacteu amb l'administrador/a del lloc web ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) per notificar-li la nova versió. Hi ha més informació disponible <a href="http://pkp.sfu.ca/ojs_download" target="_new">aquí</a>.]]></message>
 
 	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName} ha introduït una tramesa nova amb l’identificador {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} ha revisat l’article {$submissionId}. El nou identificador per al fitxer és {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} s'ha desassignat de la tramesa de revisió {$submissionId} per a la ronda de revisió {$round}.</message>
 	<message key="log.review.reviewInitiated">S’ha començat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$submissionId}.</message>

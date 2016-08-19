@@ -598,7 +598,6 @@ O servidor actualmente tem suporte a mbstring: <strong>{$supportsMBString}</stro
 <p>Defina a variável "instalado", no documento de configuração config.inc.php, de novo para <em>On</em>.</p>]]></message>
 
 	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName} submeteu um novo documento, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} reviu o artigo {$submissionId}. O novo ID é {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} liberada(o) da ronda {$round} de revisão da submissão {$submissionId}.</message>
 	<message key="log.review.reviewInitiated">A ronda {$round} de revisão da submissão {$submissionId}, designada a {$reviewerName}, foi iniciada.</message>

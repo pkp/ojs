@@ -491,7 +491,7 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="installer.upgradeComplete"><![CDATA[<p>بروزرسانی  OJS به نسخه {$version} با موفقیت پایان یافت.</p>
 <p>فراموش نکنید که مقدار "installed" را در فایل تنظیمات  config.inc.php را دوباره به <i>On</i> برگردانید.</p>
 <p>چنانچه تا کنون ثبت نام نکرده اید و مایل هستید تا اخبار و تازه ها را دریافت کنید ، <strong>لطفا در سایت  <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a> ثبت نام کنید.</strong>  چنانچه سوال ویا نظری دارید لطفا از  <a href="http://forum.pkp.sfu.ca" target="_new">فوروم حمایت </a> دیدن کنید.</p>]]></message>
-<!-- لاگ مقالات -->  <message key="log.author.submitted">{$authorName} یک ساب میشن جدید وارد کرد ، ID {$submissionId}.</message>
+	<!-- لاگ مقالات -->
 	<message key="log.author.documentRevised">{$authorName} مقاله  {$submissionId} را اصلاح کرد. ID فایل جدید  {$fileId} میباشد.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} از کارشناسی مقاله {$submissionId} برای درو  {$round} معزول شد.</message>
 	<message key="log.review.reviewInitiated">درور  {$round} کارشناسی {$reviewerName} برای مقاله  {$submissionId} شروع شد.</message>

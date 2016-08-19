@@ -842,7 +842,6 @@ Zure zerbitzariak mbstring hau onartzen du: <strong>{$supportsMBString}</strong>
 
 
 	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName} egileak bidalketa berri bat sartu du. ID: {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} egileak {$submissionId} artikulua berrikusi du. Fitxategi ID berria {$fileId} da.</message>
 	<message key="log.review.reviewerAssigned">{$reviewerName} izendatu da {$submissionId} 
 artikulua ebaluatzeko {$round}. bueltan.</message>

@@ -979,7 +979,6 @@
 	<message key="site.upgradeAvailable.manager"><![CDATA[تم إطلاق نسخة جديدة من نظام المجلات المفتوحة! أنت حالياً تستعمل النسخة {$currentVersion}منه. النسخة ذات الإصدار الأحدث هي OJS {$latestVersion}. لطفاً، إتصل بمدير الموقع ({$siteAdminName}، <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) لإبلاغه عن هذا الإصدار الأخير. للمزيد من المعلومات أنظر <a href="http://pkp.sfu.ca/ojs_download" target="_new">هنا</a>.]]></message>
 
 	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName} قد أدخل طلب نشر جديد، رقمه التعريفي ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} قام بتنقيح المؤلَّف {$submissionId}. رمز الملف الجديد ID {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} قد تم فكه من تحكيم طلب النشر {$submissionId} خلال جولة التحكيم {$round}.</message>
 	<message key="log.review.reviewInitiated">جولة التحكيم {$round} من قبل {$reviewerName} للمؤلَّف {$submissionId} قد بوشر بها.</message>

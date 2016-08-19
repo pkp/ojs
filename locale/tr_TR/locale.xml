@@ -860,7 +860,6 @@ Sunucunuz mbstring'i güncel olarak destekler: <strong>{$supportsMBString}</stro
 
 
 	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName} yeni bir gönderi yaptı, deyat: {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} {$submissionId} numaralı gönderisini değiştirdi. Yeni dosya tanımı : {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} {$submissionId} numaralı gönderiyi değerlendirme görevinden çekildi ({$round}. değerlendirme turu).</message>
 	<message key="log.review.reviewInitiated">{$submissionId} numaralı gönderinin {$round}.  değerlendirme turu {$reviewerName} tarafından başlatıldı.</message>

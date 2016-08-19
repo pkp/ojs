@@ -1950,7 +1950,6 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="installer.releaseNotes">Rèlèåþè Ñótèþ</message>
 	<message key="installer.checkYes">Ýèþ</message>
 	<message key="installer.checkNo"><![CDATA[<span class="formError">ÑÒ</span>]]></message>
-	<message key="log.author.submitted">{$authorName} håþ èñtèrèð å ñèw þübmîþþîóñ, ÎÐ {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} håþ rèvîþèð årtîçlè {$submissionId}. Thè ñèw fîlè ÎÐ îþ {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} håþ bèèñ üñåþþîgñèð fróm rèvîèwîñg þübmîþþîóñ {$submissionId} fór rèvîèw róüñð {$round}.</message>
 	<message key="log.review.reviewInitiated">Thè róüñð {$round} rèvîèw bý {$reviewerName} fór þübmîþþîóñ {$submissionId} håþ bèèñ îñîtîåtèð.</message>

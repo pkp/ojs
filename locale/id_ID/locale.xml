@@ -889,7 +889,6 @@ Server Anda sekarang support mbstring: <strong>{$supportsMBString}</strong>]]></
 
 
 	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName} telah memasukkan naskah baru, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} telah merevisi artikel {$submissionId}. ID file baru adalah {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} telah dibebastugaskan untuk mereview naskah {$submissionId} untuk tahapan review {$round}.</message>
 	<message key="log.review.reviewInitiated">Tahapan {$round} direview oleh {$reviewerName} untuk naskah {$submissionId} telah dimulai.</message>
