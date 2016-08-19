@@ -901,7 +901,9 @@ class Upgrade extends Installer {
 					$discoveredFilename = array_shift($matchedResults);
 					$targetFilename = $basePath . $submissionFile->_fileStageToPath($submissionFile->getFileStage()) . '/' . $generatedFilename;
 					if (file_exists($targetFilename)) continue; // Skip existing files/links
-					if (!file_exists($path = dirname($targetFilename))) mkdir($path);
+					if (!file_exists($path = dirname($targetFilename)) && !$submissionFileManager->mkdirtree($path)) {
+						error_log("Unable to make directory \"$path\"");
+					}
 					if (!rename($discoveredFilename, $targetFilename)) {
 						error_log("Unable to move \"$discoveredFilename\" to \"$targetFilename\".");
 					}
@@ -1187,7 +1189,7 @@ class Upgrade extends Installer {
 			// Reload the files now that they're cast; set metadata
 			$submissionFiles = $submissionFileDao->getAllRevisions($row['file_id']);
 			foreach ($submissionFiles as $submissionFile) {
-				$suppFileSettingsResult = $submissionFileDao->retrieve('SELECT * FROM article_supp_file_settings WHERE supp_id = ?', array($row['supp_id'])); // COMMENT_TYPE_EDITOR_DECISION
+				$suppFileSettingsResult = $submissionFileDao->retrieve('SELECT * FROM article_supp_file_settings WHERE supp_id = ? AND setting_value IS NOT NULL', array($row['supp_id']));
 				while (!$suppFileSettingsResult->EOF) {
 					$sfRow = $suppFileSettingsResult->getRowAssoc(false);
 					$suppFileSettingsResult->MoveNext();
@@ -1214,7 +1216,12 @@ class Upgrade extends Installer {
 							$submissionFile->setName($sfRow['setting_value'], $sfRow['locale']);
 							break;
 						case 'typeOther': break; // Discard (at least for now)
-						default: assert(false);
+						case 'pub-id::publisher-id':
+							$submissionFile->setStoredPubId('publisher-id', $sfRow['setting_value']);
+							break;
+						default:
+							error_log('Unknown supplementary file setting "' . $sfRow['setting_name'] . '"!');
+							break;
 					}
 				}
 				$suppFileSettingsResult->Close();
