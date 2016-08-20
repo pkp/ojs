@@ -63,4 +63,6 @@
 	<message key="plugins.importexport.common.notification.exportSuccessful">Die ausgewählten Objekte wurden erfolgreich zu '{$param}' exportiert.</message>
 
 	<message key="plugins.importexport.common.cliError">FEHLER:</message>
+
+	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">Für die Zeitschrift mit dem Pfad {$path} fehlt der DOI-Präfix.</message>
 </locale>

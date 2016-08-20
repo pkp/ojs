@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="el_GR" full_name = "Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.block.readingTools.displayName">Δομική Μονάδα Εργαλείων Μελέτης</message>
 	<message key="plugins.block.readingTools.description">Αυτό το πρόσθετο εμφανίζει μια δομική μονάδα που περιέχει εργαλεία μελέτης στην πλαϊνή μπάρα εργαλείων μελέτης.</message>
 	<message key="plugins.block.readingTools.title">Εργαλεία μελέτης</message>

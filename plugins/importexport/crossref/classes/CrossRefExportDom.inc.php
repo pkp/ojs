@@ -345,25 +345,27 @@ class CrossRefExportDom extends DOIExportDom {
 		}
 
 		/* publication date of article */
-		if ($article->getDatePublished()) {
-			$publicationDateNode =& $this->_generatePublisherDateDom($doc, $article->getDatePublished());
+		// if there is no article publication date, take the issue publication date
+		$datePublished = $article->getDatePublished() ? $article->getDatePublished() : $issue->getDatePublished();
+		if ($datePublished) {
+			$publicationDateNode =& $this->_generatePublisherDateDom($doc, $datePublished);
 			XMLCustomWriter::appendChild($journalArticleNode, $publicationDateNode);
 		}
 
 		/* publisher_item is the article pages */
 		if ($article->getPages() != '') {
-			$pageNode =& XMLCustomWriter::createElement($doc, 'pages');
 			// extract the first page for the first_page element, store the remaining bits in otherPages,
 			// after removing any preceding non-numerical characters.
 			if (preg_match('/^[^\d]*(\d+)\D*(.*)$/', $article->getPages(), $matches)) {
+				$pageNode =& XMLCustomWriter::createElement($doc, 'pages');
 				$firstPage = $matches[1];
 				$otherPages = $matches[2];
 				XMLCustomWriter::createChildWithText($doc, $pageNode, 'first_page', $firstPage);
 				if ($otherPages != '') {
 					XMLCustomWriter::createChildWithText($doc, $pageNode, 'other_pages', $otherPages);
 				}
+				XMLCustomWriter::appendChild($journalArticleNode, $pageNode);
 			}
-			XMLCustomWriter::appendChild($journalArticleNode, $pageNode);
 		}
 
 		/* License URL */
@@ -483,7 +485,10 @@ class CrossRefExportDom extends DOIExportDom {
 				XMLCustomWriter::appendChild($collectionNode, $itemNode);
 				$resourceNode = XMLCustomWriter::createElement($doc, 'resource');
 				XMLCustomWriter::appendChild($itemNode, $resourceNode);
-				XMLCustomWriter::setAttribute($resourceNode, 'mime_type', $galley->getFileType());
+				$remoteGalleyURL = $galley->getRemoteURL();
+				if (!$remoteGalleyURL) {
+					XMLCustomWriter::setAttribute($resourceNode, 'mime_type', $galley->getFileType());
+				}
 				$urlNode = XMLCustomWriter::createTextNode($doc, $request->url($journal->getPath(), 'article', 'viewFile', array($galley->getArticleId(), $galley->getBestGalleyId($journal))));
 				XMLCustomWriter::appendChild($resourceNode, $urlNode);
 			}

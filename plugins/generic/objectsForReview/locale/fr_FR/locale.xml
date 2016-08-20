@@ -141,7 +141,6 @@
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.notesInstructions">Pour le rédacteur uniquement. Non publié comme partie intégrante du compte rendu de l'objet.</message>
 
 	<!-- Objects For Review Assignments Management by Editor -->
-	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Objects For Review</message>
 	<message key="plugins.generic.objectsForReview.editor.assignments">Assignations</message>
 	<!--  Actions -->
 	<message key="plugins.generic.objectsForReview.editor.select">Sélectionner</message>

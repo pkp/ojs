@@ -17,6 +17,7 @@
 	<message key="plugins.generic.objectsForReview.displayName">Nesneler için değerlendirme</message>
 
 	<!--  Editor -->
+	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Objects For Review</message>
 
 	<!-- Object Types Management -->
 
@@ -119,7 +120,6 @@
 
 
 	<!-- Objects For Review Assignments Management by Editor -->
-	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Objects For Review</message>
 	<message key="plugins.generic.objectsForReview.editor.assignments">Atamalar</message>
 	<!--  Actions -->
 	<message key="plugins.generic.objectsForReview.editor.select">Seçim</message>
@@ -618,4 +618,20 @@
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorAssigned">Değerlendirme için atanan hakem.</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsBy">Kelimelere Göre</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.recipient">Alıcı</message>
+	<message key="plugins.generic.objectsForReview.settings.additionalInformation">Ek Bilgi</message>
+	<message key="plugins.generic.objectsForReview.settings.emailReminders">E-posta Hatırlatmaları</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderBeforeDays1">Yazarlara bir hatırlatma e-postası gönder</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderBeforeDays2">gün (değerlendirme bitiş tarihine kalan süre)</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays2">gün (değerlendirme bitiş tarihinden sonraki süre)</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes">Değerlendirme Öğe Türleri</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType">Değerlendirme Öğe Türü</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.create">Değerlendirme Öğe Türü Oluştur</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.updateLocales">Yukarıdaki seçilmiş öğeler için yerel verileri güncelle:</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.create">Üst veri alanı oluştur</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.edit">Üst veri alanı düzenle</message>
+	<message key="plugins.generic.objectsForReview.reminderTask.name">Değerlendirme hatırlatmaları için öğeler</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeks2">hafta (yazara öğenin atanmasından sonra)</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays1">Yazarlara bir hatırlatma e-postası gönder</message>
+	<message key="plugins.generic.objectsForReview.filter.filterBy">Filitre:</message>
+	<message key="plugins.generic.objectsForReview.sort.sortBy">Sırala:</message>
 </locale>

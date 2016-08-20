@@ -18,7 +18,7 @@
 	 * by comments like this one. These sections are called:
 	 *  COMMON - Contains frequently-used words
 	 *  ENTITIES - Contains terms pertaining to the system's major
-	 *             entities, ex.: Article, Journal, Section
+	 *             entities, e.g. Article, Journal, Section
 	 *  INTERFACE - Contains phrases organized by the section of the
 	 *              user interface they appear in.
 	 *  LOG - Contains phrases related to log entries
@@ -83,7 +83,7 @@
 	<message key="article.suppFile">Documento Suplementar</message>
 	<message key="article.suppFiles">Documento(s) Suplementar(es)</message>
 	<message key="article.suppFilesAbbrev">Docs. Sup.</message>
-	<message key="article.discipline">Área e sub-área do Conhecimento Acadêmico</message>
+	<message key="article.discipline">Área e sub-área do Conhecimento Académico</message>
 	<message key="article.subjectClassification">Classificação de Assunto</message>
 	<message key="article.subject">Palavras-chave</message>
 	<message key="article.coverage">Cobertura</message>
@@ -150,11 +150,11 @@
 
 	<!-- User -->
 	<message key="user.showAllJournals">Mostrar Revistas</message>
-	<message key="user.registerForOtherJournals">Registar noutras revistas</message>
+	<message key="user.registerForOtherJournals">Registar-se noutras revistas</message>
 	<message key="user.myJournals">Minhas Revistas</message>
 
 	<!-- Roles -->
-	<message key="user.role.manager">Editor-Gestor</message>
+	<message key="user.role.manager">Director</message>
 	<message key="user.role.editor">Editor</message>
 	<message key="user.role.sectionEditor">Editor de Secção</message>
 	<message key="user.role.layoutEditor">Editor de Layout</message>
@@ -162,7 +162,7 @@
 	<message key="user.role.proofreader">Leitor de Prova</message>
 	<message key="user.role.author">Autor</message>
 	<message key="user.role.subscriptionManager">Gestor de Subscrições</message>
-	<message key="user.role.managers">Editores-Gestores</message>
+	<message key="user.role.managers">Directores</message>
 	<message key="user.role.editors">Editores</message>
 	<message key="user.role.sectionEditors">Editores de Secção</message>
 	<message key="user.role.layoutEditors">Editores de Layout</message>
@@ -257,7 +257,7 @@ Note que a interface OAI pode ser desactivada para este portal nas configuraçõ
 </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>AVISO!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>AVISO!</h4>
 <p>O sistema não conseguiu alterar automaticamente o documento de configuração. Para aplicar as alterações é necessário editar o ficheiro <tt>config.inc.php</tt> manualmente em algum editor de texto, substituindo-o com o conteúdo do campo a seguir.</p>]]></message>
 
 
@@ -266,7 +266,7 @@ Note que a interface OAI pode ser desactivada para este portal nas configuraçõ
 	<message key="subscriptionManager.subscriptionManagement">Controle de Subscrições</message>
 
 	<!-- General plugin information -->
-	<message key="plugins.categories.generic.description">Plugins Genéricos são utilizados para ampliar o sistema, customizando o que não é possível com plugins de outras categorias.</message>
+	<message key="plugins.categories.generic.description">Plugins Genéricos são utilizados para enriquecer o sistema, customizando o que não é possível com plugins de outras categorias.</message>
 	<message key="plugins.categories.auth.description">Plugins de Autenticação permitem ao sistema delegar tarefas de autenticação a outros sistemas, como servidores LDAP.</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[O sistema <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) para assegurar arquivamento seguro e permanente do cache da sua revista, é suportado pelo OJS. LOCKSS é um software livre desenvolvido pela Biblioteca da Universidade de Stanford, que permite preservar revistas online escolhidas ao sondar as páginas das mesmas por conteúdo recém publicado e arquivando-o. Cada arquivo é continuamente validado contra cópias de outras bibliotecas. Caso o conteúdo esteja corrompido ou perdido, as cópias são usadas para restauração.
@@ -285,7 +285,7 @@ Caso o administrador do portal já tenha registado a revista no portal do Colect
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Passos: Fila de Submissão > Revisão de Submissão > Edição de Submissão > Fila de Espera > Sumário.<br /><br />
-Escolha um modelo para administrar os aspectos do processo editorial. (Para designar um Editor-Gestor e Editores de Secção, aceda a opção Editores em Administração da Revista.)]]></message>
+Escolha um modelo para administrar os aspectos do processo editorial. (Para designar um Director e Editores de Secção, aceda a opção Editores em Administração da Revista.)]]></message>
 
 	<!-- People Management -->
 	<message key="manager.people.noAdministrativeRights"><![CDATA[Você não possui direitos administrativos sobre este utilizador porque:
@@ -296,10 +296,10 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	Esta tarefa deve ser executada por um administrador do portal.]]></message>
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[O nome é o atalho para o perfil do revisor.<br/>
-Classificação vai até 5 (Excelente).<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[O nome é o atalho para o perfil do revisor.<br />
+Classificação vai até 5 (Excelente).<br />
 Dias refere-se ao tempo médio para concluir uma revisão.<br />
-Última é a data da última aceitação de revisão,<br/>
+Última é a data da última aceitação de revisão,<br />
 Activo indica revisão em consideração ou em progresso.]]></message>
 
 	<!-- Section Editor -->
@@ -449,12 +449,12 @@ Activo indica revisão em consideração ou em progresso.]]></message>
 	<message key="submission.comments.blindCcReviewers">Após o envio, apresentar uma cópia carbono (BCC) da decisão editorial para editar e encaminhar aos revisores.</message>
 	<message key="submission.comments.forAuthorEditor">Para autor e editor</message>
 	<message key="submission.comments.forEditor">Para editor</message>
-	<message key="submission.comments.saveAndEmailAuthor">Guardar e enviar E-mail ao autor</message>
-	<message key="submission.comments.saveAndEmailEditor">Guardar e enviar E-mail ao editor</message>
+	<message key="submission.comments.saveAndEmailAuthor">Guardar e enviar e-mail ao autor</message>
+	<message key="submission.comments.saveAndEmailEditor">Guardar e enviar e-mail ao editor</message>
 
 	<!-- Login -->
 	<message key="user.login.registerNewAccount">Não está registado? Registe-se no sistema</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Por questões de segurança, o sistema envia uma nova senha a utilizadores registados, em vez de informar a senha actual.<br /><br />Insira o e-mail para obter uma nova senha. Um e-mail de confirmação será enviado ao endereço fornecido.]]></message>
+	<message key="user.login.resetPasswordInstructions"><![CDATA[Por razões de segurança, o sistema envia uma nova senha a utilizadores registados, em vez de informar a senha actual.<br /><br />Insira o e-mail para obter uma nova senha. Um e-mail de confirmação será enviado para o endereço fornecido.]]></message>
 
 	<!-- Profile -->
 
@@ -692,8 +692,8 @@ O servidor actualmente tem suporte a mbstring: <strong>{$supportsMBString}</stro
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[URLs possivelmente inválidas para os sistemas de pesquisa online exibidos a seguir.<br/>
-É necessário verificar manualmente os URLs marcadas como inválidas, pois o teste não é 100% preciso.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[URLs possivelmente inválidas para os sistemas de pesquisa online exibidos a seguir.<br />
+É necessário verificar manualmente os URLs marcadas como inválidas, pois o teste não é 100% preciso.<br />
 A validação pode falhar em URLs para pesquisa que requeiram dados via método POST.]]></message>
 
 	<!-- RT Entities -->
@@ -758,7 +758,7 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Estão disponíveis as seguintes opções para permitir aos leitores localizar versões online dos trabalhos citados pelo autor.</p>
 
 <ol>
-	<li><strong>Adicionar Ferramenta de Leitura</strong><p>O Editor-Gestor pode incluir "Pesquisar Referências" à Ferramenta de Leitura que acompanha os artigos publicados, permitindo aos leitores colar o título da referência no campo de pesquisa e escolher onde pesquisar, a partir das bases de dados pré-definidas.</p></li>
+	<li><strong>Adicionar Ferramenta de Leitura</strong><p>O Director pode incluir "Pesquisar Referências" à Ferramenta de Leitura que acompanha os artigos publicados, permitindo aos leitores colar o título da referência no campo de pesquisa e escolher onde pesquisar, a partir das bases de dados pré-definidas.</p></li>
 	<li><strong>Incluir Links para Referências</strong><p>O Editor de Layout pode incluir links activos nas referências disponíveis online, utilizando os recursos a seguir (que podem ser editados).</p></li>
 </ol>]]></message>
 	<message key="sectionEditor.review.enrollReviewer">Registar utilizador existente como Revisor</message>
@@ -792,7 +792,7 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="installer.databaseSettingsInstructions">O sistema exige acesso a uma base de dados SQL para armazenar os seus dados. Verifique os requisitos do sistema para a lista de bases de dados suportadas. Nos campos a seguir, informe as configurações a serem utilizadas para conectar ao servidor de bases de dados.</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} marcou indisponibilidade na ronda {$round} para rever a submissão {$articleId} em nome de {$reviewerName}.</message>
 	<message key="log.editor.decision">A Decisão Editorial ({$decision}) sobre a submissão {$articleId} foi registada por {$editorName}.</message>
-	<message key="rt.admin.settings.addComment">Adicionar comentários (Permite a publicação de comentários pelos leitores, permitindo a eliminação pelo Editor-Gestor).</message>
+	<message key="rt.admin.settings.addComment">Adicionar comentários (Permite a publicação de comentários pelos leitores, permitindo a eliminação pelo Director).</message>
 	<message key="rt.admin.settings.addComment.authenticated">Utilizadores devem estar registados e ligados para comentar, sem permissão de anonimato.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Utilizadores devem estar registados e ligados para comentar, com permissão de anonimato.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Não é necessário estar registado para comentar, com permissão de anonimato.</message>
@@ -886,7 +886,7 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<li>Itens marcados indicam que uma acção é exigida por parte do editor.</li>
 	<li>"Prazo" é preenchido quando o revisões indica disponibilidade para realizar a revisão; exibe o tempo em semanas até à data de entrega da revisão ou (-) semanas quando está atrasado.</li>
 </ol>]]></message>
-	<message key="reviewer.article.reviewGuidelinesDescription">As Directrizes para Revisão fornecerão aos revisores critérios necessários para julgar se uma submissão é adequada para publicação no periódico, e podem incluir quaisquer instruções especiais para preparar uma revisão efectiva e construtiva. Ao entrar na revisão, os revisores terão acesso a dois campos de texto aberto, sendo o primeiro "para autor e editor" e o segundo "somente para o editor". Como opção alternativa, o Editor-Gestor pode criar formulários específicos acedendo a "Formulários de Revisão", na Administração da revista. Em todos os casos, os editores terão a opção de incluir as revisões nas mensagens, ao se comunicarem com o autor.</message>
+	<message key="reviewer.article.reviewGuidelinesDescription">As Directrizes para Revisão fornecerão aos revisores critérios necessários para julgar se uma submissão é adequada para publicação no periódico, e podem incluir quaisquer instruções especiais para preparar uma revisão efectiva e construtiva. Ao entrar na revisão, os revisores terão acesso a dois campos de texto aberto, sendo o primeiro "para autor e editor" e o segundo "somente para o editor". Como opção alternativa, o Director pode criar formulários específicos acedendo a "Formulários de Revisão", na Administração da revista. Em todos os casos, os editores terão a opção de incluir as revisões nas mensagens, ao se comunicarem com o autor.</message>
 	<message key="user.subscriptions.mySubscriptions">Minhas Subscrições</message>
 	<message key="user.subscriptions.individualSubscriptions">Subscrição Individual</message>
 	<message key="user.subscriptions.institutionalSubscriptions">Subscrição Institucional</message>
@@ -947,7 +947,7 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="notification.type.submissions">Eventos da Submissão</message>
 	<message key="notification.type.suppFileModified">Ficheiro(s) suplementar(es) de "{$title}" foram alterados.</message>
 	<message key="notification.type.userComment">Um leitor comentou sobre "{$title}".</message>
-	<message key="navigation.archives">Anteriores</message>
+	<message key="navigation.archives">Arquivos</message>
 	<message key="user.register.reviewerInterests">Identificar os interesses de revisão (áreas relevantes e métodos de investigação):</message>
 	<message key="user.subscriptions.subscriptionStatus">Estado da Subscrição</message>
 	<message key="user.subscriptions.statusInformation">As subscrições activas e expiradas são exibidas em baixo assim prazo de expiração. Além disso, a informação seguinte sobre o estado pode ser incluída em cada subscrição.</message>
@@ -985,23 +985,14 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.]]></message>
 	<message key="user.profile.profileImage">Imagem Perfil</message>
 	<message key="user.orcid">ID ORCID</message>
-	<message key="user.orcid.description"><![CDATA[Os identificadores ORCID só podem ser atribuídos no serviço <a href="http://orcid.org/" target="_blank">ORCID</a>. Deve colocar corretamente o seu ORCID ID indicando o endereço completo (exemplo: <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
+	<message key="user.orcid.description"><![CDATA[Os identificadores ORCID só podem ser atribuídos no serviço <a href="http://orcid.org/" target="_blank">ORCID</a>. Deve colocar correctamente o seu ORCID ID indicando o endereço completo (exemplo: <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
 	<message key="user.profile.form.orcidInvalid">O ID ORCID indicado é inválido.</message>
 	<message key="issue.fullIssue">Número Completo</message>
 	<message key="issue.nonpdf.title">Download Número</message>
 	<message key="issue.viewIssue">Ver Número</message>
-	<message key="issue.viewIssueDescription">Ver ou download o número completo</message>
+	<message key="issue.viewIssueDescription">Ver ou download do número completo</message>
 	<message key="plugins.categories.pubIds">Identificadores Públicos de Plugins</message>
 	<message key="plugins.categories.pubIds.description">Estes plugins implementam o suporte ao identificador público.</message>
-	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
-	<li>Highlighted items indicate action is required by an editor, labelled as follows:
-		<ul>
-			<li class="highlightCopyediting">An action is required in the copyediting stage</li>
-			<li class="highlightLayoutEditing">An action is required in the layout editing stage</li>
-			<li class="higlightProofreading">An action is required in the proofreading stage</li>
-		</ul>
-	</li>
-</ol>]]></message>
 	<message key="site.noJournals">Não existem revistas.</message>
 	<message key="gifts.buyer">De</message>
 	<message key="gifts.buyerDescription">Quem oferece o donativo?</message>
@@ -1012,7 +1003,7 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="gifts.purchaseGiftIndividualSubscription">Subscrição de Donativo</message>
 	<message key="gifts.subscriptionFormIntroduction">Por favor preencha o formulário abaixo. A informação sobre o contacto, assim como a nota sobre o donativo, será usada para enviar ao destinatário e informá-lo que sobre o novo donativo subscrito (receberá também uma cópia deste e-mail).</message>
 	<message key="gifts.details">Detalhes Donativo</message>
-	<message key="gifts.detailsDescription">Por favor escolha o donativo em baixo e inclua uma mensagem personalisada que será enviada ao destinatário (receberá também uma cópia deste e-mail).</message>
+	<message key="gifts.detailsDescription">Por favor, escolha o donativo em baixo e inclua uma mensagem personalisada que será enviada ao destinatário (receberá também uma cópia deste e-mail).</message>
 	<message key="gifts.gift">Donativo</message>
 	<message key="gifts.noteTitle">Título</message>
 	<message key="gifts.note">Nota Donativo</message>
@@ -1050,4 +1041,13 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="user.authorization.invalidCopyditorSubmission">Submissão de cópia de editor inválida ou nenhuma de cópia de editor solicitada!</message>
 	<message key="user.authorization.invalidSectionEditorSubmission">Submissão de secção de editor inválida ou nenhuma de secção editor solicitada!</message>
 	<message key="manager.setup.preservationDescription"><![CDATA[O Open Journal Systems suporta o sistema <a href="http://www.lockss.org/" target="_blank">LOCKSS</a>(Lots of Copies Keep Stuff Safe) para assegurar a conservação segura e permanente da sua revista. Dispõe de várias opções para incluir a sua revista na rede LOCKSS:]]></message>
+	<message key="user.profile.implicitAuthChangePasswordInstructions">Se não estiver conectado através do seu Shibboleth, acompanhar o processo de sua organização se necessitar de alterar a sua senha. Para utilizadores locais, continue abaixo.</message>
+	<message key="user.login.implicitAuthLogin">Login via Shibboleth</message>
+	<message key="user.register.emailValidation">Validação e-Mail Obrigatória</message>
+	<message key="user.register.emailValidationDescription">É obrigatório validar o seu endereço de e-mail antes de prosseguir. Por favor, verifique a sua conta de e-mail para obter mais instruções. Depois de ter validado a sua conta, pode fazer o login.</message>
+	<message key="user.register.implicitAuth">Login via Shibboleth com uma conta local da organização</message>
+	<message key="about.purchaseIssue">Compra Número</message>
+	<message key="about.purchaseArticle">Compra Artigo</message>
+	<message key="about.purchaseIssueDescription">Os leitores sem assinatura podem comprar números individualmente. Estão disponíveis as seguintes opções de pagamento e taxas.</message>
+	<message key="about.purchaseArticleDescription">Os leitores sem assinatura podem comprar números individualmente. Estão disponíveis as seguintes opções de pagamento e taxas.</message>
 </locale>

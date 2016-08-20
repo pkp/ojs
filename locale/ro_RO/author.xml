@@ -13,7 +13,7 @@
   *
   -->
 
-<locale name="ro_RO" full_name = "Romanian">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="author.submit">Propunere nouă</message>
 	<message key="author.track">Propuneri active</message>
 	<message key="author.competingInterests"><![CDATA[Conflict&nbsp;de interese <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Politica&nbsp;CI</a>]]></message>

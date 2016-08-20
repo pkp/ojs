@@ -100,6 +100,8 @@
 	<message key="plugins.generic.lucene.settings.simdocs">«Еще похожих (показывать ссылку «похожие документы» для каждого результата поиска)</message>
 	<message key="plugins.generic.lucene.settings.solrServerSettings">Настройки сервера Solr</message>
 	<message key="plugins.generic.lucene.settings.spellcheck">Предложения альтернативного написания (показывать альтернативные поисковые термины)</message>
+	<message key="plugins.generic.lucene.settings.useProxySettings">Настройки прокси-сервера</message>
+	<message key="plugins.generic.lucene.settings.useProxySettingsInstructions">Использовать настройки прокси-сервера из файла config.inc.php для запросов веб-службы Solr.</message>
 	<message key="plugins.generic.lucene.settings.username">Имя пользователя</message>
 	<message key="plugins.generic.lucene.settings.usernameInstructions">Поисковый сервер Solr использует аутентификацию HTTP BASIC. Пожалуйста, введите имя пользователя.</message>
 	<message key="plugins.generic.lucene.settings.usernameRequired">Пожалуйста, введите правильное имя пользователя для аутентификации поискового сервера Solr (двоеточия запрещены).</message>

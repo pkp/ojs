@@ -141,7 +141,6 @@
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.notesInstructions">Nur für Redakteur/in. Wird nicht zusammen mit den Angaben zum Rezensionsobjekt aufgeführt.</message>
 
 	<!-- Objects For Review Assignments Management by Editor -->
-	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Objekte zur Rezension</message>
 	<message key="plugins.generic.objectsForReview.editor.assignments">Zuteilungen</message>
 	<!--  Actions -->
 	<message key="plugins.generic.objectsForReview.editor.select">Auswählen</message>

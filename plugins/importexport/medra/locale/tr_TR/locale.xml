@@ -14,14 +14,6 @@
 <locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.importexport.medra.displayName">mEDRA İhraç/Kayıt Eklentisi</message>
 	<message key="plugins.importexport.medra.description">mEDRA kayıt ajansı ile DOI (O4DOI) biçimi ve DOI'lere kayıt için Onix'de sayı, makale ve dizgi ihracı.</message>
-	<message key="plugins.importexport.medra.intro"><![CDATA[If you want to register DOIs with mEDRA, please follow the directions on the
-		<a href="http://www.medra.org/en/guide.htm" target="_blank">mEDRA homepage</a>
-		to receive a username and password. If you do not have your own username and
-		password you'll still be able to export into the mEDRA XML format (Onix for DOI)
-		but you cannot register your DOIs with mEDRA from within OJS. 
-		Please note that the password will be saved as plain text, i.e. not encrypted, due
-		to the mEDRA registration service requirements.]]></message>
-	<message key="plugins.importexport.medra.settings.description"><![CDATA[Please <a href="{$settingsUrl}">configure</a> the mEDRA export plug-in before using it for the first time.]]></message>
 	<message key="plugins.importexport.medra.settings.form.description">Lütfen mEDRA ihraç eklentisini yapılandırınız:</message>
 	<message key="plugins.importexport.medra.settings.form.username">Kullanıcı adı</message>
 	<message key="plugins.importexport.medra.settings.form.usernameRequired">Lütfen mEDRA kullanıcı adınızı giriniz. Kullanıcı adı virgül içeremez.</message>
@@ -34,13 +26,9 @@
 	<message key="plugins.importexport.medra.settings.form.fromNameRequired">Lütfen iletişim kurulacak teknik kişi giriniz.</message>
 	<message key="plugins.importexport.medra.settings.form.fromEmail">E-posta</message>
 	<message key="plugins.importexport.medra.settings.form.fromEmailRequired">Lütfen teknik bir iletişim e-postası giriniz.</message>
-	<message key="plugins.importexport.medra.settings.form.publicationCountry">Please choose the country to be informed as 'publication country' to mEDRA.</message>
-	<message key="plugins.importexport.medra.settings.form.exportIssuesAs"><![CDATA[Please choose whether you want to export issues as <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works' or 'manifestations'</a>.]]></message>
 	<message key="plugins.importexport.medra.settings.form.work">iş</message>
 	<message key="plugins.importexport.medra.settings.form.manifestation">ortaya koyma</message>
 	<message key="plugins.importexport.medra.reset">Yeniden Kur</message>
-	<message key="plugins.importexport.medra.resetDescription">Click this button if you want to treat this object as if it had never been registered before (e.g. when mEDRA sends an error message by email on first registration). Do NOT click this button when you receive an error message after a failed update!</message>
-	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: DOIs assigned to articles will be exported to mEDRA as <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works'</a>. DOIs assigned to galleys will be exported as <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestations'</a>.]]></message>
 	<message key="plugins.importexport.medra.cliUsage">Kullanım: 
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...</message>

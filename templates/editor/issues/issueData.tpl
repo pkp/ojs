@@ -95,7 +95,7 @@
 				{assign var=currentYear value=$smarty.now|date_format:"%Y"}
 				{if $datePublished}
 					{assign var=publishedYear value=$datePublished|date_format:"%Y"}
-					{math|assign:"minYear" equation="min(x,y)-10" x=$publishedYear y=$currentYear}
+					{math|assign:"minYear" equation="min(x,y)-50" x=$publishedYear y=$currentYear}
 					{math|assign:"maxYear" equation="max(x,y)+2" x=$publishedYear y=$currentYear}
 				{else}
 					{* No issue publication date info *}
@@ -103,14 +103,14 @@
 					{math|assign:"maxYear" equation="x+2" x=$currentYear}
 				{/if}
 				{html_select_date prefix="datePublished" time=$datePublished|default:"---" all_extra="class=\"selectMenu\"" start_year=$minYear end_year=$maxYear year_empty="-" month_empty="-" day_empty="-"}
-				<br/>
-				<input type="checkbox" id="resetArticlePublicationDates" name="resetArticlePublicationDates" />&nbsp;{fieldLabel name="resetArticlePublicationDates" key="editor.issues.resetArticlePublicationDates"}<br/>
+				<br />
+				<input type="checkbox" id="resetArticlePublicationDates" name="resetArticlePublicationDates" />&nbsp;{fieldLabel name="resetArticlePublicationDates" key="editor.issues.resetArticlePublicationDates"}<br />
 			{else}
 				{translate key="editor.issues.unpublished"}
 			{/if}
 
 			{if $issue->getDateNotified()}
-				<br/>
+				<br />
 				{translate key="editor.usersNotified"}&nbsp;&nbsp;
 				{$issue->getDateNotified()|date_format:$dateFormatShort}
 			{/if}
@@ -131,7 +131,7 @@
 	<tr valign="top">
 		<td class="label">{fieldLabel name="openAccessDate" key="editor.issues.accessDate"}</td>
 		<td class="value">
-			<input type="checkbox" id="enableOpenAccessDate" name="enableOpenAccessDate" {if $openAccessDate}checked="checked" {/if}onchange="document.getElementById('issue').openAccessDateMonth.disabled=this.checked?false:true;document.getElementById('issue').openAccessDateDay.disabled=this.checked?false:true;document.getElementById('issue').openAccessDateYear.disabled=this.checked?false:true;" />&nbsp;{fieldLabel name="enableOpenAccessDate" key="editor.issues.enableOpenAccessDate"}<br/>
+			<input type="checkbox" id="enableOpenAccessDate" name="enableOpenAccessDate" {if $openAccessDate}checked="checked" {/if}onchange="document.getElementById('issue').openAccessDateMonth.disabled=this.checked?false:true;document.getElementById('issue').openAccessDateDay.disabled=this.checked?false:true;document.getElementById('issue').openAccessDateYear.disabled=this.checked?false:true;" />&nbsp;{fieldLabel name="enableOpenAccessDate" key="editor.issues.enableOpenAccessDate"}<br />
 			{if $openAccessDate}
 				{html_select_date prefix=openAccessDate time=$openAccessDate end_year="+20" all_extra="class=\"selectMenu\""}
 			{else}

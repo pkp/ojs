@@ -725,53 +725,17 @@ Eğer bu bildirimi almak istemiyorsanız, lütfen tıklayınız {$unsubscribeLin
 {$principalContactSignature}</body>
 		<description>Bu e-posta bildirim listesindeki kayıtsız kullanıcılar tarafından gönderilir.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Welcome to the the {$journalName} mailing list!</subject>
-		<body>You have signed up to receive notifications from {$journalName}.
-
-Please click on this link to confirm your request and add your email address to the mailing list: {$confirmLink}
-
-If you wish to stop receiving notification emails, please go to {$unsubscribeLink}.
-
-{$principalContactSignature}</body>
-		<description>This email is sent to an unregistered user who just registered with the notification mailing list.</description>
-	</email_text>
-	<email_text key="USER_VALIDATE">
-		<subject>Validate Your Account</subject>
-		<body>{$userFullName}
-
-You have created an account with {$journalName}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:
-
-{$activateUrl}
-
-Thank you,
-{$principalContactSignature}</body>
-		<description>Bu e-posta sisteme yeni kayıt olan kullanıcılara gönderilir ve sisteme hoşgeldin mesajı ile birlikte kullanıcı adı ve şifre bilgilerini de içerir.</description>
-	</email_text>
-	<email_text key="REVIEWER_REGISTER">
-		<subject>Registration as Reviewer with {$journalName}</subject>
-		<body>In light of your expertise, we have taken the liberty of registering your name in the reviewer database for {$journalName}. This does not entail any form of commitment on your part, but simply enables us to approach you with a submission to possibly review. On being invited to review, you will have an opportunity to see the title and abstract of the paper in question, and you'll always be in a position to accept or decline the invitation. You can also ask at any point to have your name removed from this reviewer list.
-
-We are providing you with a username and password, which is used in all interactions with the journal through its website. You may wish, for example, to update your profile, including your reviewing interests.
-
-Username: {$username}
-Password: {$password}
-
-Thank you,
-{$principalContactSignature}</body>
-		<description>Bu e-posta sisteme yeni kayıt olan kullanıcılara gönderilir ve sisteme hoşgeldin mesajı ile birlikte kullanıcı adı ve şifre bilgilerini de içerir.</description>
-	</email_text>
 	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
-		<subject>Article Review Request</subject>
-		<body>{$reviewerName}:
+		<subject>Makale Değerlendirme İsteği 2. Tur</subject>
+		<body>{$reviewerName},
 
-This regards the manuscript "{$articleTitle}," which is under consideration by {$journalName}.
+Kıymetli Hocam,
 
-Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.
+{$journalName}'nde yayımlanması için değerlendirilmek üzere gönderilen "{$articleTitle}" adlı makalenin değerlendirmesi tarafınızdan yapılmıştı.
 
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$journalUrl}
+Önerileriniz doğrultusunda yazar makalesini güncellemiş ve yeniden incelenmek üzere dergimize sunmuştur. Söz konusu makale yeniden değerlendirilmek üzere tarafınıza gönderilmiştir.
 
-The review itself is due {$reviewDueDate}.
+Değerlendirme için öncelikle Dergimiz web sitesine giriş yaparak, {$weekLaterDate} tarihine kadar inceleme isteğimizi KABUL veya REDDETTİĞİNİZİ belirtmenizi bekliyoruz.
 
 If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
 
@@ -788,54 +752,6 @@ Thank you for considering this request.
 {$abstractTermIfEnabled}
 {$articleAbstract}</body>
 		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
-	</email_text>
-	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
-		<subject>Article Review Request</subject>
-		<body>{$reviewerName}:
-
-This regards the manuscript "{$articleTitle}," which is under consideration by {$journalName}.
-
-Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.
-
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.
-
-The review itself is due {$reviewDueDate}.
-
-Submission URL: {$submissionReviewUrl}
-
-Thank you for considering this request.
-
-{$editorialContactSignature}
-
-
-
-"{$articleTitle}"
-
-{$abstractTermIfEnabled}
-{$articleAbstract}</body>
-		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</description>
-	</email_text>
-	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
-		<subject>Article Review Request</subject>
-		<body>{$reviewerName}:
-
-This regards the manuscript "{$articleTitle}," which is under consideration by {$journalName}.
-
-Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.
-
-The Review Guidelines for this journal are appended below, and the submission is attached to this email. Your review of the submission, along with your recommendation, should be emailed to me by {$reviewDueDate}.
-
-Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.
-
-Thank you for considering this request.
-
-{$editorialContactSignature}
-
-
-Review Guidelines
-
-{$reviewGuidelines}</body>
-		<description>This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission for a second or greater round of review. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_SUBSEQUENT.)</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Editör Kararı</subject>
@@ -869,191 +785,5 @@ Kararımız:
 
 {$editorialContactSignature}</body>
 		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</description>
-	</email_text>
-	<email_text key="EDITOR_DECISION_DECLINE">
-		<subject>Editör Kararı</subject>
-		<body>{$authorName}:
-
-{$journalTitle} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz "{$articleTitle}" başlıklı çalışmanız için bir karara varılmıştır.
-
-Kararımız:
-
-{$editorialContactSignature}</body>
-		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
-		<subject>Subscription Purchase: Individual</subject>
-		<body>An individual subscription has been purchased online for {$journalName} with the following details.
-
-Subscription Type:
-{$subscriptionType}
-
-User:
-{$userDetails}
-
-Membership Information (if provided):
-{$membership}
-
-To view or edit this subscription, please use the following URL.
-
-Subscription URL: {$subscriptionUrl}</body>
-		<description>This email notifies the Subscription Manager that an individual subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
-		<subject>Subscription Purchase: Institutional</subject>
-		<body>An institutional subscription has been purchased online for {$journalName} with the following details. To activate this subscription, please use the provided Subscription URL and set the subscription status to 'Active'.
-
-Subscription Type:
-{$subscriptionType}
-
-Institution:
-{$institutionName}
-{$institutionMailingAddress}
-
-Domain (if provided):
-{$domain}
-
-IP Ranges (if provided):
-{$ipRanges}
-
-Contact Person:
-{$userDetails}
-
-Membership Information (if provided):
-{$membership}
-
-To view or edit this subscription, please use the following URL.
-
-Subscription URL: {$subscriptionUrl}</body>
-		<description>This email notifies the Subscription Manager that an institutional subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_RENEW_INDL">
-		<subject>Subscription Renewal: Individual</subject>
-		<body>An individual subscription has been renewed online for {$journalName} with the following details.
-
-Subscription Type:
-{$subscriptionType}
-
-User:
-{$userDetails}
-
-Membership Information (if provided):
-{$membership}
-
-To view or edit this subscription, please use the following URL.
-
-Subscription URL: {$subscriptionUrl}</body>
-		<description>This email notifies the Subscription Manager that an individual subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_RENEW_INSTL">
-		<subject>Subscription Renewal: Institutional</subject>
-		<body>An institutional subscription has been renewed online for {$journalName} with the following details.
-
-Subscription Type:
-{$subscriptionType}
-
-Institution:
-{$institutionName}
-{$institutionMailingAddress}
-
-Domain (if provided):
-{$domain}
-
-IP Ranges (if provided):
-{$ipRanges}
-
-Contact Person:
-{$userDetails}
-
-Membership Information (if provided):
-{$membership}
-
-To view or edit this subscription, please use the following URL.
-
-Subscription URL: {$subscriptionUrl}</body>
-		<description>This email notifies the Subscription Manager that an institutional subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
-	</email_text>
-	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
-		<subject>Atıf Düzenleme</subject>
-		<body>{$authorFirstName},
-
-Could you please verify or provide us with the proper citation for the following reference from your article, {$articleTitle}:
-
-{$rawCitation}
-
-Thanks!
-
-{$userFirstName}
-Copy-Editor, {$journalName}</body>
-		<description>This email allows copyeditors to request additional information about references from authors.</description>
-	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body>Dear {$recipientFirstName},
-
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:
-
-{$giftDetails}
-
-
-{$giftNote}
-
-
-You will receive a follow-up email that includes login details and instructions for redeeming your gift.
-
-We hope that you enjoy your gift!
-
-{$giftContactSignature}</body>
-		<description>This email notifies a gift recipient that a gift has been purchased and is available for redemption.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Redeem Your Gift: Login Details</subject>
-		<body>Dear {$recipientFirstName},
-
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:
-
-{$giftDetails}
-
-
-To redeem your gift, please login to the journal website at {$giftUrl}
-
-Your username: {$username}
-Your password: {$password}
-
-Once logged in, you can change your password at any time.
-
-We hope that you enjoy your gift!
-
-{$giftContactSignature}</body>
-		<description>This email notifies a gift recipient of their login details for a new account.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Redeem Your Gift: Login Details</subject>
-		<body>Dear {$recipientFirstName},
-
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:
-
-{$giftDetails}
-
-
-To redeem your gift, please login to the journal website at {$giftUrl}
-
-Your username: {$username}
-
-We hope that you enjoy your gift!
-
-{$giftContactSignature}</body>
-		<description>This email notifies a gift recipient of their login details.</description>
-	</email_text>
-	<email_text key="REVISED_VERSION_NOTIFY">
-		<subject>Revised Version Uploaded</subject>
-		<body>{$editorialContactName}:
-
-A revised version of "{$articleTitle}" has been uploaded by the author {$authorName}.
-
-Submission URL: {$submissionUrl}
-
-{$editorialContactSignature}</body>
-		<description>This email is automatically sent to the assigned editor when author uploads a revised version of an article.</description>
 	</email_text>
 </email_texts>

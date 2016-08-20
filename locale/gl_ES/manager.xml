@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="gl_ES" full_name = "Galego">
+<locale name="gl_ES" full_name="Galego">
 	<message key="manager.emails.confirmResetAll">Tes a certeza de que queres restaurar todas os modelos de correo-e desta revista? Perderád calquera personalización que teñas realizado.</message>
 	<message key="manager.files.note">Nota: o visor de ficheiros é unha ferramenta avanzada que permete ver e administrar directamente os ficheiros e directorios asociados con unha revista.</message>
 	<message key="manager.groups">Equipo de traballo</message>
@@ -27,7 +27,7 @@
 	<message key="manager.journalManagement">Administración da revista</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">Isto substituirá calquera configuración específica deste locale</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Recargar configuración por defecto deste locale</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS pode utilizar calquera dos idiomas dispoñíbeis. Tamén pode executarse como un sistema multi-idioma, permitindo ao usuario seleccionar o idioma de cada páxina, e permitindo que alguns dados se introduzan en varios idiomas. <br /><br/>Si su idioma no aparece en la lista siguiente, pida al administrador del sitio que instale el idioma. Para instrucciones sobre instalación de idiomas consulte la documentación de OJS.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS pode utilizar calquera dos idiomas dispoñíbeis. Tamén pode executarse como un sistema multi-idioma, permitindo ao usuario seleccionar o idioma de cada páxina, e permitindo que alguns dados se introduzan en varios idiomas. <br /><br />Si su idioma no aparece en la lista siguiente, pida al administrador del sitio que instale el idioma. Para instrucciones sobre instalación de idiomas consulte la documentación de OJS.]]></message>
 	<message key="manager.languages.noneAvailable">Sentímolo, non hai idiomas  dispoñíbeis. Contacta co/ca administrador/a deste sitio se desexas empregar outros idiomas con esta revista.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Este será o idioma por defecto do sitio.</message>
 	<message key="manager.managementPages">Páxinas de administración</message>

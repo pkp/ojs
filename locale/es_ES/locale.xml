@@ -7,7 +7,7 @@
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   *
   * Localization strings.
   -->
@@ -344,7 +344,7 @@
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Establecer como fuente de autenticación predeterminada otra diferente a OJS conllevará lo siguiente:</p> <ul> <li>Si un usuario/a intenta registrar una cuenta nueva en este sitio utilizando un nombre de usuario ya existente en la fuente de autenticación (pero no en la base de datos OJS), el intento de registro sólo será permitido si la contraseña proporcionada es válida para esa cuenta de usuario.</li> </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>¡NOTA!</div> <p>El sistema no puede sobrescribir automáticamente el archivo de configuración. Para aplicar los cambios de configuración es necesario abrir <tt>config.inc.php</tt> en un editor de texto adecuado y reemplazar los contenidos por los del campo de texto que se muestran a continuación.</p>]]></message>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>¡NOTA!</h4> <p>El sistema no puede sobrescribir automáticamente el archivo de configuración. Para aplicar los cambios de configuración es necesario abrir <tt>config.inc.php</tt> en un editor de texto adecuado y reemplazar los contenidos por los del campo de texto que se muestran a continuación.</p>]]></message>
 
 
 	<!-- Site Administrator Merge Users -->
@@ -1009,7 +1009,7 @@
 	<message key="submission.license.cc.by-nc-sa4">CC Reconocimiento-NoComercial-CompartirIgual 4.0</message>
 	<message key="submission.license.cc.by-nd4">CC Reconocimiento-SinObraDerivada 4.0</message>
 	<message key="submission.license.cc.by4">CC Reconocimiento 4.0</message>
-	<message key="submission.license.cc.by-sa4">CC Reconeixement-CompartirIgual 4.0</message>
+	<message key="submission.license.cc.by-sa4">CC Reconocimiento-CompartirIgual 4.0</message>
 	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">licencia de Creative Commons Reconocimiento-NoComercial-SinObraDerivada 4.0 Internacional</a>.]]></message>
 	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">licencia de Creative Commons Reconocimiento-NoComercial 4.0 Internacional</a>.]]></message>
 	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.]]></message>
@@ -1020,4 +1020,7 @@
 	<message key="user.orcid.description"><![CDATA[Solo el <a href="http://orcid.org/" target="_blank">Registro ORCID</a> puede asignar ORCID iDs. Debes aceptar sus estándares para disponer de ORCID iDs e incluri la URL completa (pe. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
 	<message key="user.profile.form.orcidInvalid">El ORCID iD que has especificado no es vàlido.</message>
 	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems soporta el sistema <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) para asegurar seguridad y preservación permanente de su revista. Tiene múltiples opciones para incluir su revista en una red LOCKSS:]]></message>
+	<message key="user.login.implicitAuthLogin">Inicia sesión vía Shibboleth</message>
+	<message key="about.purchaseIssue">Compra del número</message>
+	<message key="about.purchaseArticle">Compra del artículo</message>
 </locale>

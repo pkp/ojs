@@ -20,7 +20,7 @@
         <li><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
 </ul>
 
-<br/>
+<br />
 
 <div id="issues">
 <table width="100%" class="listing">

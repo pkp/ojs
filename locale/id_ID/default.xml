@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name = "Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="section.default.title"> Artikel </message> 
 	<message key="section.default.abbrev">ART</message> 
 	<message key="section.default.policy"></message>

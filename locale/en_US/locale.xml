@@ -383,7 +383,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</h4>
 <p>The system could not automatically overwrite the configuration file. To apply your configuration changes you must open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>]]></message>
 
 
@@ -429,9 +429,11 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 
 	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems supports the <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) system to ensure secure and permanent preservation of your journal. You have several options for including your journal in a LOCKSS network:]]></message>
 
-	<message key="manager.setup.lockssDescription"><![CDATA[<strong>Other LOCKSS Networks</strong>
-<br /><br />
-If you believe you have access to one or more of the LOCKSS networks listed <a href="http://www.lockss.org/community/networks/" target="_blank">here</a>, please contact the appropriate LOCKSS Network administrator to apply for inclusion. Completing the form below will allow for inclusion of your journal in those networks. <em>No content will be preserved before you have notified the appropriate network</em>.]]></message>
+<message key="manager.setup.lockssDescription"><![CDATA[<strong>PKP Private LOCKSS Network</strong>
+<p>Any OJS journal that has an ISSN and has published at least one article can choose to agree to the terms of use and be preserved in the PKP PLN at no cost.</p>
+<p>To join, go to <a href="{$genericPluginsUrl}">Generic Plugins</a>, find PKP PLN Plugin, select Enable, and then select Settings, and accept the Terms of Use. Your content will then be automatically included in the network. No further action is required.</p>
+<strong>Other LOCKSS Networks</strong>
+<p>If you believe you have access to one or more of the LOCKSS networks listed <a href="http://www.lockss.org/community/networks/" target="_blank">here</a>, please contact the appropriate LOCKSS Network administrator to apply for inclusion. Completing the form below will allow for inclusion of your journal in those networks. <em>No content will be preserved before you have notified the appropriate network</em>.</p>]]></message>
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Examples of Creative Commons Licensing Notifications in the Copyright Notices</h3>
 <h4>1. Proposed Policy for Journals That Offer Open Access</h4>
@@ -540,10 +542,10 @@ You may optionally provide the user with a reason for disabling their account.</
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to reviewer's profile.<br/>
-Ratings is out of 5 (Excellent).<br/>
-Weeks refers to average period of time to complete a review.<br/>
-Latest is date of most recently accepted review.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to reviewer's profile.<br />
+Ratings is out of 5 (Excellent).<br />
+Weeks refers to average period of time to complete a review.<br />
+Latest is date of most recently accepted review.<br />
 Active is how many reviews are currently being considered or underway.]]></message>
 
 
@@ -1129,8 +1131,8 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Possibly invalid URLs for search sites are displayed below.<br/>
-You should manually verify any URLs marked as invalid, as this test is not 100% accurate.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Possibly invalid URLs for search sites are displayed below.<br />
+You should manually verify any URLs marked as invalid, as this test is not 100% accurate.<br />
 Validation may fail on search URLs that require posted form data.]]></message>
 
 	<!-- RT Entities -->

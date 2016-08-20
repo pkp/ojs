@@ -27,7 +27,7 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveIssue"); });
         <li class="current"><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
 </ul>
 
-<br/>
+<br />
 
 {if $usesCustomOrdering}
 	{url|assign:"resetUrl" op="resetIssueOrder"}

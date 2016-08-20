@@ -286,10 +286,10 @@ Opciono možete proslediti korisniku razlog zašto ste mu onemogućili nalog.</m
 	<li>"Rok" se aktivira u trenutku kada recenzent prihvati zahtev za recenziju i označava broj nedelja do isteka roka za izradu recenzije ili (-) kada je rok recenzije istekao.</li>
 </ol>]]></message>
 
-	<!--  Editor Index Page  -->	<!--  Back Issues  -->	<!--  Create Issue / Issue Data  -->	<!--  Live Issues  -->	<!--  Navigation sidebar menu  -->	<!--  Used by editor in submission review / editing  -->	<message key="editor.article.selectReviewerNotes"><![CDATA[Link na imenu vodi do recenzentovog profila.<br/>
-Ocene su do 5 (Odličan).<br/>
-Nedelje prikazuju prosečno vreme koje je recenzentu bilo potrebno  za završetak recenzije.<br/>
-Poslednje prikazuje datum poslednje recenzije dodate recenzentu.<br/>
+	<!--  Editor Index Page  -->	<!--  Back Issues  -->	<!--  Create Issue / Issue Data  -->	<!--  Live Issues  -->	<!--  Navigation sidebar menu  -->	<!--  Used by editor in submission review / editing  -->	<message key="editor.article.selectReviewerNotes"><![CDATA[Link na imenu vodi do recenzentovog profila.<br />
+Ocene su do 5 (Odličan).<br />
+Nedelje prikazuju prosečno vreme koje je recenzentu bilo potrebno  za završetak recenzije.<br />
+Poslednje prikazuje datum poslednje recenzije dodate recenzentu.<br />
 Aktivnih prikazuje na koliko je recenzija recenzent trenutno angažovan.]]></message>
 
 
@@ -435,7 +435,7 @@ Sadržaj priloženog fajla možete proveriti ukoliko kliknete na njegovo ime. Um
 	<message key="submission.comments.saveAndEmailEditor">Sačuvaj i pošalji imejl uredniku</message>
 	
 	<!--  Login  -->	<message key="user.login.registerNewAccount">Niste korisnik? Registrujte se!</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Unesite u naznačeno polje vašu imejl adresu kako bi Vam bila poslata nova lozinka.<br/><br/>Potvrda će biti poslata na navedeni imejl.]]></message>
+	<message key="user.login.resetPasswordInstructions"><![CDATA[Unesite u naznačeno polje vašu imejl adresu kako bi Vam bila poslata nova lozinka.<br /><br/>Potvrda će biti poslata na navedeni imejl.]]></message>
 	
 	
 	<!--  Profile  -->	<!--  Registration  -->	<message key="user.register.selectJournal">Odaberite časopis za koji se želite registrovati</message>

@@ -65,7 +65,7 @@ function confirmSubmissionCheck() {
 					({translate key="submission.review"})
 				{/if}
 			{/if}
-			<br/>
+			<br />
 {/foreach}
 {if $notFirstEditAssignment}
 		</td>
@@ -209,7 +209,7 @@ function confirmSubmissionCheck() {
 		<td>
 			{url|assign:"competingInterestGuidelinesUrl" page="information" op="competingInterestGuidelines"}
 			<span class="instruct">{translate key="reviewer.article.enterCompetingInterests" competingInterestGuidelinesUrl=$competingInterestGuidelinesUrl}</span>
-			{if not $confirmedStatus or $declined or $submission->getCancelled() or $submission->getRecommendation()}<br/>
+			{if not $confirmedStatus or $declined or $submission->getCancelled() or $submission->getRecommendation()}<br />
 				{$reviewAssignment->getCompetingInterests()|strip_unsafe_html|nl2br}
 			{else}
 				<form action="{url op="saveCompetingInterests" reviewId=$reviewId}" method="post">

@@ -24,7 +24,7 @@
 	}
 {/literal}</script>
 
-<br/>
+<br />
 
 <div id="issues">
 	<form action="{plugin_url path="process"}" method="post" id="issuesForm">
@@ -64,7 +64,7 @@
 							{if $hasCredentials}
 								<a href="{plugin_url path="process" issueId=$issue->getId() params=$testMode target="issue" register=true}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
 							{/if}
-							<a href="{plugin_url path="process" issueId=$issue->getId() params=$testMode target="issue" export=true}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
+							<a href="{plugin_url path="process" issueId=$issue->getId() params=$testMode target="issue" export=true}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="plugins.importexport.crossref.downloadXML"}</a>
 							</nobr>
 						{/if}
 					</td>
@@ -93,10 +93,10 @@
 				{if $hasCredentials}
 					<input type="submit" name="register" value="{translate key="plugins.importexport.common.register"}" title="{translate key="plugins.importexport.common.registerDescription.multi"}" class="button defaultButton"/>
 					&nbsp;
-					<input type="submit" name="markRegistered" value="{translate key="plugins.importexport.common.markRegistered"}" title="{translate key="plugins.importexport.common.markRegisteredDescription"}" class="button"/>
-					&nbsp;
 				{/if}
-				<input type="submit" name="export" value="{translate key="common.export"}" title="{translate key="plugins.importexport.common.exportDescription"}" class="button{if !$hasCredentials}  defaultButton{/if}"/>
+				<input type="submit" name="export" value="{translate key="plugins.importexport.crossref.downloadXML"}" title="{translate key="plugins.importexport.common.exportDescription"}" class="button{if !$hasCredentials}  defaultButton{/if}"/>
+				&nbsp;
+				<input type="submit" name="markRegistered" value="{translate key="plugins.importexport.common.markRegistered"}" title="{translate key="plugins.importexport.common.markRegisteredDescription"}" class="button"/>
 				&nbsp;
 				<input type="button" value="{translate key="common.selectAll"}" class="button" onclick="toggleChecked()" />
 			</p>

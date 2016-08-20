@@ -290,7 +290,7 @@
 </ul>]]></message>
 	
 	<!-- System Information 系統資訊 -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>注意！</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>注意！</h4>
 <p>系統無法自動覆寫這個設定檔。要應用您的設定變更，您必須以適合的編輯器開啟<tt>config.inc.php</tt>，並以下列文字欄位中的內容來取代其內容。</p>]]></message>
 
 	
@@ -383,7 +383,7 @@
 
 	<!-- Languages 語言-->
 	<message key="manager.languages.languageInstructions"><![CDATA[
-	OJS可以讓使用者使用幾種受到支持的語言介面。同時，OJS可以當作一個部分多語化的系統，讓使用者在每個頁面中可以切換語言，並允許某些資料以額外的兩種語言進行輸入。<br /><br/>如果一個受到OJS支持的語言沒有列在下表，請您的網站管理員從網站管理介面來安裝該項語系。新增支援新語系的指引說明，請見OJS的文件。]]></message>
+	OJS可以讓使用者使用幾種受到支持的語言介面。同時，OJS可以當作一個部分多語化的系統，讓使用者在每個頁面中可以切換語言，並允許某些資料以額外的兩種語言進行輸入。<br /><br />如果一個受到OJS支持的語言沒有列在下表，請您的網站管理員從網站管理介面來安裝該項語系。新增支援新語系的指引說明，請見OJS的文件。]]></message>
 	<message key="manager.languages.alternateLocale1">額外的語言設定#1</message>
 	<message key="manager.languages.alternateLocale2">額外的語言設定#2</message>
 	<message key="manager.languages.alternativeLanguageOptions">語言選項</message>
@@ -447,10 +447,10 @@
 	<!-- Navigation sidebar menu 導覽側邊欄選單-->
 	
 	<!-- Used by editor in submission review / editing 由編輯在稿件審查＼編輯時使用-->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[姓名連結到審查人帳號。<br/>
-從5(極佳)開始評分。<br/>
-「週數」意指完成一份審查工作的平均時期<br/>
-「最新」是指最近接受的審查工作日期<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[姓名連結到審查人帳號。<br />
+從5(極佳)開始評分。<br />
+「週數」意指完成一份審查工作的平均時期<br />
+「最新」是指最近接受的審查工作日期<br />
 「進行中」是指有多少審查工作目前正待考慮或者正在進行。]]></message>
 	<message key="editor.article.emailAuthorOnArchive">寄發電子郵件告知作者要典藏這份稿件？</message>
 
@@ -887,8 +887,8 @@
 
 	<!-- RT Searches 閱讀工具搜尋 -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[下面列出可能是無效的搜尋網站網址。<br/>
-您應該手動查證被標記成無效的任何網址，因為這個測試並非完全準確。<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[下面列出可能是無效的搜尋網站網址。<br />
+您應該手動查證被標記成無效的任何網址，因為這個測試並非完全準確。<br />
 驗證需要遞交表單資料的搜尋網址可能會失敗。]]></message>
 	
 	<!-- RT Entities 閱讀工具項目 -->

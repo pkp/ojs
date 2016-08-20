@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<br/>
+<br />
 
 <h3>{translate key="plugins.importexport.METSExport.export"}</h3>
 <ul>

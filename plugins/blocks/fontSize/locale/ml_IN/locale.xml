@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="ml_IN" full_name = "Malayalam">
+<locale name="ml_IN" full_name="മലയാളം">
 	<message key="plugins.block.fontSize.displayName">അക്ഷരസഞ്ചയ വലിപ്പം ബ്ലോക്ക്</message>
 	<message key="plugins.block.fontSize.description">ഈ സംയോജകം  അക്ഷരസഞ്ചയവലിപ്പം ക്രമീകരിക്കുന്നതിനുള്ള സൈഡ്ബാര്‍ ലഭ്യമാക്കുന്നു.</message>
 	<message key="plugins.block.fontSize.title">അക്ഷരസഞ്ചയ വലിപ്പം</message>

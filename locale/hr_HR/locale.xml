@@ -349,10 +349,10 @@ Opcionalno možete proslijediti korisniku razlog zašto ste mu onemogućili rač
 	<!-- Live Issues -->
 	<!-- Navigation sidebar menu -->
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Poveznica na imenu vodi do recenzentova profila.<br/>
-Ocjene su do 5 (Odličan).<br/>
-Tjedni pokazuju prosječno vrijeme koje je recenzentu trebalo za završetak recenzije.<br/>
-Zadnje prikazuje datum posljednje recenzije pridružene recenzentu.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Poveznica na imenu vodi do recenzentova profila.<br />
+Ocjene su do 5 (Odličan).<br />
+Tjedni pokazuju prosječno vrijeme koje je recenzentu trebalo za završetak recenzije.<br />
+Zadnje prikazuje datum posljednje recenzije pridružene recenzentu.<br />
 Aktivnih prikazuje na koliko je recenzija recenzent trenutno angažiran.]]></message>
 
 
@@ -513,7 +513,7 @@ Sadržaj priložene datoteke možete provjeriti ukoliko kliknete na njezino ime.
 	<message key="submission.comments.saveAndEmailEditor">Spremi i pošalji e-poštu uredniku</message>
 	
 	<!-- Login -->	<message key="user.login.registerNewAccount">Niste korisnik? Registrirajte se u ovaj sustav!</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Unesite u priloženo polje vašu adresu e-pošte kako bi Vam bila izdana nova lozinka.<br/><br/>Potvrda će biti poslana na tu adresu e-pošte.]]></message>
+	<message key="user.login.resetPasswordInstructions"><![CDATA[Unesite u priloženo polje vašu adresu e-pošte kako bi Vam bila izdana nova lozinka.<br /><br/>Potvrda će biti poslana na tu adresu e-pošte.]]></message>
 	
 	
 	<!-- Profile -->	
@@ -1064,8 +1064,8 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="notification.type.suppFileModified">Izmijenjene su doopunske datoteke za  "{$title}".</message>
 	<message key="reviewer.article.reviewGuidelinesDescription">Recenzijske upute daju recenzentima kriterije o prosuđivanju da li je podnešeni članak odgovarajući za objavljivanje u časopisu.  Ove upute daju instrukcije recenzentima kako pripremiti efikasnu i sadržajnu recenziju. Recenzentima će u toku recenzije biti otvorena dva tekstualna okvira.  Prvi se odnosi na autora i urednika, a drugi za urednika. Ravnatelj časopisa može napraviti obrazac u  dijelu Recenzinjski obrasci.  U svakom slučaju, urednici će uvijek imati mogućnost uključiti recenzije u korespodenciji sa autorom.</message>
 	<message key="article.pdf.pluginMissing"><![CDATA[<p>PDF datoteka koju ste odabrali će se učitati ako vaš internet preglednik ima instaliran dodatak za PDF (na primjer, najnovija verzija <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Ako želite više informacija kako tiskati, spremiti i raditi sa PDF datotekama, Highwire Press dajel <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Najčešće postavljena pitanja o PDF</a>.</p> <p>Možete preuzeti PDF fdatoteku izravno na vaše računalo odakle je možete otvoriti pomoću PDF čitača. Kliknite na Preuzmi vezu gore da preuzmete PDF datoteku.</p>]]></message>
-	<message key="rt.admin.validateUrls.description"><![CDATA[Moguće je da su dole prikazane neke nevažeće URL za mjesta za traženje.<br/>
-Provjerite ručno da li su prikazane URL važeće jer ovaj test nije 100% točan. <br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Moguće je da su dole prikazane neke nevažeće URL za mjesta za traženje.<br />
+Provjerite ručno da li su prikazane URL važeće jer ovaj test nije 100% točan. <br />
 Provjera može pogriješiti kod URL koji zahtijevaju pretragu pomoću obrasca.]]></message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Ova stranica prikazuje važne vijesti u svezi sa ovim časopisom kao što su nova izdanja ili obavijesti. Možete se pretplatiti na ove vijesti upotrebom RSS vezama (klikom na sli;ice na desnoj strani) ili  <a href="{$emailUrl}">e-porukamal.</a>]]></message>
 	<message key="user.authorization.noJournal">Nema časopisa u kontekstu!</message>

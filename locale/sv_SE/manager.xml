@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="sv_SE" full_name = "Swedish">
+<locale name="sv_SE" full_name="Svenska">
 	<message key="manager.emails.confirmResetAll">Är du säker på att du vill återställa alla tidskriftens E-postmallar till ursprungligt utseende? Egna inställningar kommer att raderas</message>
 	<message key="manager.files.note">Observera: Filutforskaren är en funktion som gör det möjligt att ändra och visa en tidskrifts katalog och filer direkt.</message>
 	<message key="manager.groups">Redaktion</message>
@@ -26,7 +26,7 @@
 	<message key="manager.groups.noneCreated">Inget Redaktionslag har skapats.</message>
 	<message key="manager.journalManagement">Hantera tidskrift</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Ladda upp lokal-specifika standard-inställningar</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS kan översättas till flera olika språk och fungerar dessutom som ett flerspråkigt system där användaren kan växla mellan språk på de olika sidorna.<br /><br/> Om ett språk som stöds av OJS inte finns listad nedan, be huvudadministratören att installera språket. För instruktioner om hur man lägger till fler språk, vänligen se OJS-dokumentationen.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS kan översättas till flera olika språk och fungerar dessutom som ett flerspråkigt system där användaren kan växla mellan språk på de olika sidorna.<br /><br /> Om ett språk som stöds av OJS inte finns listad nedan, be huvudadministratören att installera språket. För instruktioner om hur man lägger till fler språk, vänligen se OJS-dokumentationen.]]></message>
 	<message key="manager.languages.noneAvailable">Tyvärr, det finns inga ytterligare språk tillgängliga. Kontakta huvudadministratören om du vill lägga till språk i den här tidskriften.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Detta blir standardspråket för tidskriftens hemsida.</message>
 	<message key="manager.managementPages">Administrationssidor</message>

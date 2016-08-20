@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name = "Turkish">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.OAIMetadata.marcxml.displayName">MARC21 Üst Veri Biçimi</message>
 	<message key="plugins.OAIMetadata.marcxml.description">Üst veri yapısı bir bakıma MARC21 ile tutarlı olmanın yoludur.</message>
 </locale>

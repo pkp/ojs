@@ -666,7 +666,7 @@ class BooksForReviewEditorHandler extends Handler {
 						);
 
 						$email->addRecipient($userEmail, $userName);
-						$email->setReplyTo($book->getEditorEmail(), $book->getEditorFullName());
+						$email->setFrom($book->getEditorEmail(), $book->getEditorFullName());
 						$email->assignParams($paramArray);
 					}
 					$returnUrl = $request->url(null, 'editor', 'assignBookForReviewAuthor', $bookId, array('returnPage' => $returnPage, 'userId' => $userId));
@@ -742,7 +742,7 @@ class BooksForReviewEditorHandler extends Handler {
 					);
 
 					$email->addRecipient($userEmail, $userFullName);
-					$email->setReplyTo($book->getEditorEmail(), $book->getEditorFullName());
+					$email->setFrom($book->getEditorEmail(), $book->getEditorFullName());
 					$email->assignParams($paramArray);
 				}
 				$returnUrl = $request->url(null, 'editor', 'denyBookForReviewAuthor', $bookId, array('returnPage' => $returnPage));
@@ -829,7 +829,7 @@ class BooksForReviewEditorHandler extends Handler {
 					);
 
 					$email->addRecipient($userEmail, $userFullName);
-					$email->setReplyTo($book->getEditorEmail(), $book->getEditorFullName());
+					$email->setFrom($book->getEditorEmail(), $book->getEditorFullName());
 					$email->assignParams($paramArray);
 				}
 				$returnUrl = $request->url(null, 'editor', 'notifyBookForReviewMailed', $bookId, array('returnPage' => $returnPage));
@@ -909,7 +909,7 @@ class BooksForReviewEditorHandler extends Handler {
 					);
 
 					$email->addRecipient($userEmail, $userFullName);
-					$email->setReplyTo($book->getEditorEmail(), $book->getEditorFullName());
+					$email->setFrom($book->getEditorEmail(), $book->getEditorFullName());
 					$email->assignParams($paramArray);
 				}
 				$returnUrl = $request->url(null, 'editor', 'removeBookForReviewAuthor', $bookId, array('returnPage' => $returnPage));

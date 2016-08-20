@@ -104,14 +104,14 @@
 	</script>
 
 <p>
-	<strong>{translate key="manager.setup.reviewOptions.reviewTime"}</strong><br/>
-	{fieldLabel name="numWeeksPerReview" key="manager.setup.reviewOptions.numWeeksPerReview"}: <input type="text" name="numWeeksPerReview" id="numWeeksPerReview" value="{$numWeeksPerReview|escape}" size="2" maxlength="8" class="textField" /> {translate key="common.weeks"}<br/>
+	<strong>{translate key="manager.setup.reviewOptions.reviewTime"}</strong><br />
+	{fieldLabel name="numWeeksPerReview" key="manager.setup.reviewOptions.numWeeksPerReview"}: <input type="text" name="numWeeksPerReview" id="numWeeksPerReview" value="{$numWeeksPerReview|escape}" size="2" maxlength="8" class="textField" /> {translate key="common.weeks"}<br />
 	{translate key="common.note"}: {translate key="manager.setup.reviewOptions.noteOnModification"}
 </p>
 
 	<p>
-		<strong>{translate key="manager.setup.reviewOptions.reviewerReminders"}</strong><br/>
-		{translate key="manager.setup.reviewOptions.automatedReminders"}:<br/>
+		<strong>{translate key="manager.setup.reviewOptions.reviewerReminders"}</strong><br />
+		{translate key="manager.setup.reviewOptions.automatedReminders"}:<br />
 		<input type="checkbox" name="remindForInvite" id="remindForInvite" value="1" onclick="toggleAllowSetInviteReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $remindForInvite} checked="checked"{/if} />&nbsp;
 		{fieldLabel name="remindForInvite" key="manager.setup.reviewOptions.remindForInvite1"}
 		<select name="numDaysBeforeInviteReminder" id="numDaysBeforeInviteReminder" size="1" class="selectMenu"{if not $remindForInvite || !$scheduledTasksEnabled} disabled="disabled"{/if}>
@@ -120,7 +120,7 @@
 			{/section}
 		</select>
 		{fieldLabel name="numDaysBeforeInviteReminder" key="manager.setup.reviewOptions.remindForInvite2"}
-		<br/>
+		<br />
 
 		<input type="checkbox" name="remindForSubmit" id="remindForSubmit" value="1" onclick="toggleAllowSetSubmitReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled"{elseif $remindForSubmit} checked="checked"{/if} />&nbsp;
 		{fieldLabel name="remindForSubmit" key="manager.setup.reviewOptions.remindForSubmit1"}
@@ -131,31 +131,31 @@
 		</select>
 		{fieldLabel name="numDaysBeforeSubmitReminder" key="manager.setup.reviewOptions.remindForSubmit2"}
 		{if !$scheduledTasksEnabled}
-		<br/>
+		<br />
 		{translate key="manager.setup.reviewOptions.automatedRemindersDisabled"}
 		{/if}
 	</p>
 
 <p>
-	<strong>{translate key="manager.setup.reviewOptions.reviewerRatings"}</strong><br/>
+	<strong>{translate key="manager.setup.reviewOptions.reviewerRatings"}</strong><br />
 	<input type="checkbox" name="rateReviewerOnQuality" id="rateReviewerOnQuality" value="1"{if $rateReviewerOnQuality} checked="checked"{/if} />&nbsp;
 	<label for="rateReviewerOnQuality">{translate key="manager.setup.reviewOptions.onQuality"}</label>
 </p>
 
 <p>
-	<strong>{translate key="manager.setup.reviewOptions.reviewerAccess"}</strong><br/>
+	<strong>{translate key="manager.setup.reviewOptions.reviewerAccess"}</strong><br />
 	<input type="checkbox" name="reviewerAccessKeysEnabled" id="reviewerAccessKeysEnabled" value="1"{if $reviewerAccessKeysEnabled} checked="checked"{/if} />&nbsp;
-	<label for="reviewerAccessKeysEnabled">{translate key="manager.setup.reviewOptions.reviewerAccessKeysEnabled"}</label><br/>
-	<span class="instruct">{translate key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"}</span><br/>
+	<label for="reviewerAccessKeysEnabled">{translate key="manager.setup.reviewOptions.reviewerAccessKeysEnabled"}</label><br />
+	<span class="instruct">{translate key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"}</span><br />
 	<input type="checkbox" name="restrictReviewerFileAccess" id="restrictReviewerFileAccess" value="1"{if $restrictReviewerFileAccess} checked="checked"{/if} />&nbsp;
 	<label for="restrictReviewerFileAccess">{translate key="manager.setup.reviewOptions.restrictReviewerFileAccess"}</label>
 </p>
 
 <p>
-	<strong>{translate key="manager.setup.reviewOptions.blindReview"}</strong><br/>
+	<strong>{translate key="manager.setup.reviewOptions.blindReview"}</strong><br />
 	<input type="checkbox" name="showEnsuringLink" id="showEnsuringLink" value="1"{if $showEnsuringLink} checked="checked"{/if} />&nbsp;
 	{get_help_id|assign:"blindReviewHelpId" key="editorial.sectionEditorsRole.review.blindPeerReview" url="true"}
-	<label for="showEnsuringLink">{translate key="manager.setup.reviewOptions.showEnsuringLink" blindReviewHelpId=$blindReviewHelpId}</label><br/>
+	<label for="showEnsuringLink">{translate key="manager.setup.reviewOptions.showEnsuringLink" blindReviewHelpId=$blindReviewHelpId}</label><br />
 </p>
 </div>
 </div>
@@ -216,7 +216,8 @@
 
 {call_hook name="Templates::Manager::Setup::JournalArchiving"}
 
-<p>{translate key="manager.setup.lockssDescription" lockssExistingArchiveUrl=$lockssExistingArchiveUrl lockssNewArchiveUrl=$lockssNewArchiveUrl}</p>
+{url|assign:"genericPluginsUrl" page="manager" op="plugins" path="generic"}
+<p>{translate key="manager.setup.lockssDescription" genericPluginsUrl=$genericPluginsUrl}</p>
 
 {url|assign:"lockssUrl" page="gateway" op="lockss"}
 <p><input type="checkbox" name="enableLockss" id="enableLockss" value="1"{if $enableLockss} checked="checked"{/if} /> <label for="enableLockss">{translate key="manager.setup.lockssEnable" lockssUrl=$lockssUrl}</label></p>

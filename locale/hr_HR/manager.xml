@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="hr_HR" full_name = "Hrvatski">
+<locale name="hr_HR" full_name="Hrvatski">
 	<message key="manager.emails.confirmResetAll">Jeste li sigurni da želite vratiti izvorno sve predloške e-pošte u ovom časopisu? Izgubit ćete sva podešenja koja ste napravili.</message>
 	<message key="manager.files.note">Napomena: Preglednik datoteka je napredna funkcija sustava koja omogućuje direktno pregledavanje i uređivanje datoteka i direktorija koje časopis koristi.</message>
 	<message key="manager.groups">Uredništvo</message>
@@ -674,7 +674,7 @@
 	<message key="manager.plugins.wrongCategory">Postavljen dodatak ne odgovara kategoriji nadograđenog dodatka.</message>
 	<message key="manager.language.ui">UI</message>
 	<message key="manager.language.submissions">Podneseni članci</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS može biti dostupan korisnicima na bilo kojem od mnogo podržanih jezika. OJS, može funkcionirati kao multilingvalni sustav i omogućiti korisnicima lak prelazak između jezika na svakoj strani i da se određeni podaci unesu na nekoliko dodatnih jezika.<br /><br/>  Ako nije dole izlistan jezik koji podržava OJS pitajte vašeg administratora sustava OJS da instalira jezik iz sučelja za administraciju. Pogledajte u OJS dokumentima instrukcije kako se dodaje podrška za nove jezike.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS može biti dostupan korisnicima na bilo kojem od mnogo podržanih jezika. OJS, može funkcionirati kao multilingvalni sustav i omogućiti korisnicima lak prelazak između jezika na svakoj strani i da se određeni podaci unesu na nekoliko dodatnih jezika.<br /><br />  Ako nije dole izlistan jezik koji podržava OJS pitajte vašeg administratora sustava OJS da instalira jezik iz sučelja za administraciju. Pogledajte u OJS dokumentima instrukcije kako se dodaje podrška za nove jezike.]]></message>
 	<message key="manager.payment.giftFees">Plaćanja poklona</message>
 	<message key="manager.payment.giftFeesDescription">Veza za poklonjenu pretplatu će se pojaviti u stranici Pretplate u O časopisu i u bloku u rubnom stupcu.</message>
 	<message key="manager.people.allUsers">Svi upisani korisnici</message>

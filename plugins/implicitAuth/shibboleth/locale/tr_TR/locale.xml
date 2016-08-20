@@ -14,7 +14,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name = "Turkish">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuth Eklentisi</message>
 	<message key="plugins.implicitAuth.shibboleth.description">ShibAuth Eklentisi. Bu site çapında bir eklentidir ve ADS konfigürasyon dosyasından etkinleştirilir.</message>
 </locale>

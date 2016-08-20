@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="hr_HR" full_name = "Hrvatski">
+<locale name="hr_HR" full_name="Hrvatski">
 	<message key="admin.hostedJournals">Časopisi u sustavu</message>
 	<message key="admin.settings.journalRedirect">Izravno preusmjeravanje na časopis</message>
 	<message key="admin.settings.journalRedirectInstructions">Svi upiti i posjeti glavnoj stranici bit će preusmjereni na odabrani časopis. To može biti izuzetno korisno ako je na sustavu postavljen samo jedan časopis.</message>
@@ -57,7 +57,7 @@
 	<message key="admin.mergeUsers.from.description">Odaberite korisnika kojeg ćete spojiti s drugim korisničkim računom (npr. u slučaju da neki korisnik posjeduje dva korisnička računa). Račun koji prvi odaberete bit će obrisan, a svi njegovi prilogzi, zaduženja itd. bit će pridruženi drugom računu.</message>
 	<message key="admin.mergeUsers.allUsers">Svi evidentirani korisnici</message>
 	<message key="admin.mergeUsers.confirm">Jeste li sigurni da želite spojiti račun korisnika "{$oldUsername}" s računom korisnika "{$newUsername}"? Račun korisničkog imena "{$oldUsername}" više neće postojati nakon toga. Ovo je nepovratna radnja.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Nema evidentiranih korisnika.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Nema evidentiranih korisnika.</message>
 	<message key="admin.settings.security">Sigurnost</message>
 	<message key="admin.settings.security.plugins">Spriječi ravnatelja časopisa da instalira, nadogradi ili briše dodatke.</message>
 	<message key="admin.settings.options">Mogućnosti</message>

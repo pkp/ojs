@@ -7,7 +7,7 @@
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
   *
   * Localization strings.
   -->
@@ -347,7 +347,7 @@
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Si indiqueu una font d’autenticació predeterminada que no sigui l’OJS es pot produir l’efecte següent:</p> <ul> <li>Si un usuari/ària intenta registrar un compte nou en aquest lloc web amb un nom d’usuari/ària que ja existeixi a la font d’autenticació (però no a la base de dades de l’OJS), l’intent de registre només s’admetrà si la contrasenya indicada és vàlida per a aquest compte d’usuari/ària.</li> </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>AVÍS</div> <p>El sistema no ha pogut sobreescriure automàticament el fitxer de configuració. Per aplicar els canvis a la configuració heu d’obrir el fitxer <tt>config.inc.php</tt> en un editor de textos adequat i reemplaçar-ne el contingut amb el contingut del camp de text que es mostra a continuació.</p>]]></message>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>AVÍS</h4> <p>El sistema no ha pogut sobreescriure automàticament el fitxer de configuració. Per aplicar els canvis a la configuració heu d’obrir el fitxer <tt>config.inc.php</tt> en un editor de textos adequat i reemplaçar-ne el contingut amb el contingut del camp de text que es mostra a continuació.</p>]]></message>
 
 
 	<!-- Site Administrator Merge Users -->
@@ -1031,4 +1031,14 @@
 	<message key="user.orcid">ORCID iD</message>
 	<message key="user.orcid.description"><![CDATA[ORCID iDs només pot ser assignat pel <a href="http://orcid.org/" target="_blank">Registre ORCID</a>. Has de complir amb els seus estàndards per a a disposar d'un ORCID iDs i has d'incloure la teva URI complerta (pe. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
 	<message key="user.profile.form.orcidInvalid">L'ORCID iD que ha especificat és invàlida.</message>
+	<message key="user.profile.implicitAuthChangePasswordInstructions">Si heu iniciat sessió via Shibboleth, seguiu el procés de la vostra organització si necessiteu canviar la contrasenya. Per a usuaris locals continueu a sota.</message>
+	<message key="user.login.implicitAuthLogin">Inicia sessió via Shibboleth</message>
+	<message key="user.register.emailValidation">Es necessita validar el correu</message>
+	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems és compatible amb el sistema <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) per garantir la seguretat i la protecció permanent de la revista. Teniu diferents opcions per incloure la revista en una xarxa LOCKSS:]]></message>
+	<message key="user.register.emailValidationDescription">Necessiteu validar l'adreça de correu electrònic abans de continuar. Si us plau, reviseu el vostre compte de correu per a més informació. Un cop hagueu validat el compte podreu iniciar sessió.</message>
+	<message key="user.register.implicitAuth">Inicia sessió via Shibboleth amb un compte d'empresa existent</message>
+	<message key="about.purchaseIssue">Compra la revista</message>
+	<message key="about.purchaseArticle">Compra l'article</message>
+	<message key="about.purchaseIssueDescription">Els lectors sense subscripció poden comprar números de revista individuals. Estan disponibles les següents tarifes i opcions de pagament.</message>
+	<message key="about.purchaseArticleDescription">Els lectors sense subscripció poden comprar números de revista individuals. Estan disponibles les següents tarifes i opcions de pagament.</message>
 </locale>

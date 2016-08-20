@@ -14,7 +14,6 @@
  */
 
 import('lib.pkp.classes.scheduledTask.ScheduledTask');
-import('lib.pkp.classes.core.JSONManager');
 
 
 class DataciteInfoSender extends ScheduledTask {
@@ -27,7 +26,7 @@ class DataciteInfoSender extends ScheduledTask {
 	 */
 	function DataciteInfoSender($args) {
 		PluginRegistry::loadCategory('importexport');
-		$plugin =& PluginRegistry::getPlugin('importexport', 'DataciteExportPlugin'); /* @var $plugin CrossRefExportPlugin */
+		$plugin =& PluginRegistry::getPlugin('importexport', 'DataciteExportPlugin'); /* @var $plugin DataciteExportPlugin */
 		$this->_plugin =& $plugin;
 
 		if (is_a($plugin, 'DataciteExportPlugin')) {
@@ -56,56 +55,71 @@ class DataciteInfoSender extends ScheduledTask {
 		$request =& Application::getRequest();
 
 		foreach ($journals as $journal) {
-			if ($plugin->getSetting($journal->getId(), 'automaticRegistration')) {
-				$unregisteredIssues = $plugin->_getUnregisteredIssues($journal);
-				$unregisteredArticles = $plugin->_getUnregisteredArticles($journal);
-				$unregisteredGalleys = $plugin->_getUnregisteredGalleys($journal);
-				$unregisteredSuppFiles = $plugin->_getUnregisteredSuppFiles($journal);
+			$unregisteredIssues = $plugin->_getUnregisteredIssues($journal);
+			$unregisteredArticles = $plugin->_getUnregisteredArticles($journal);
+			$unregisteredGalleys = $plugin->_getUnregisteredGalleys($journal);
+			$unregisteredSuppFiles = $plugin->_getUnregisteredSuppFiles($journal);
+			$errors = array();
 
-				$unregisteredIssueIds = array();
-				foreach ($unregisteredIssues as $issue) {
-					$unregisteredIssueIds[$issue->getId()] = $issue;
+			$unregisteredIssueIds = array();
+			foreach ($unregisteredIssues as $issue) {
+				if ($plugin->canBeExported($issue, $errors)) {
+					$unregisteredIssueIds[] = $issue->getId();
 				}
-				$unregisteredArticlesIds = array();
-				foreach ($unregisteredArticles as $articleData) {
-					$article = $articleData['article'];
-					if (is_a($article, 'PublishedArticle')) {
-						$unregisteredArticlesIds[$article->getId()] = $article;
+			}
+			$unregisteredArticlesIds = array();
+			foreach ($unregisteredArticles as $articleData) {
+				$article = $articleData['article'];
+				if (is_a($article, 'PublishedArticle') && $plugin->canBeExported($article, $errors)) {
+					$unregisteredArticlesIds[] = $article->getId();
+				}
+			}
+			$unregisteredGalleyIds = array();
+			foreach ($unregisteredGalleys as $galleyData) {
+				$galley = $galleyData['galley'];
+				if ($plugin->canBeExported($galley, $errors)) {
+					$unregisteredGalleyIds[] = $galley->getId();
+				}
+			}
+			$unregisteredSuppFileIds = array();
+			foreach ($unregisteredSuppFiles as $suppFileData) {
+				$suppFile = $suppFileData['suppFile'];
+				if ($plugin->canBeExported($suppFile, $errors)) {
+					$unregisteredSuppFileIds[$suppFile->getId()] = $suppFile->getId();
+				}
+			}
+
+			// If there are unregistered DOIs and we want automatic deposits
+			$exportSpec = array();
+			$register = false;
+			if (count($unregisteredIssueIds)) {
+				$exportSpec[DOI_EXPORT_ISSUES] = $unregisteredIssueIds;
+				$register = true;
+			}
+			if (count($unregisteredArticles)) {
+				$exportSpec[DOI_EXPORT_ARTICLES] = $unregisteredArticlesIds;
+				$register = true;
+			}
+			if (count($unregisteredGalleyIds)) {
+				$exportSpec[DOI_EXPORT_GALLEYS] = $unregisteredGalleyIds;
+				$register = true;
+			}
+			if (count($unregisteredSuppFileIds)) {
+				$exportSpec[DOI_EXPORT_SUPPFILES] = $unregisteredSuppFileIds;
+				$register = true;
+			}
+			if ($register) {
+				$result = $plugin->registerObjects($request, $exportSpec, $journal);
+				if ($result !== true) {
+					if (is_array($result)) {
+						foreach($result as $error) {
+							assert(is_array($error) && count($error) >= 1);
+							$this->addExecutionLogEntry(
+								__($error[0], array('param' => (isset($error[1]) ? $error[1] : null))),
+								SCHEDULED_TASK_MESSAGE_TYPE_WARNING
+							);
+						}
 					}
-				}
-				$unregisteredGalleyIds = array();
-				foreach ($unregisteredGalleys as $galleyData) {
-					$galley = $galleyData['galley'];
-					$unregisteredGalleyIds[$galley->getId()] = $galley;
-				}
-				$unregisteredSuppFileIds = array();
-				foreach ($unregisteredSuppFiles as $suppFileData) {
-					$suppFile = $suppFileData['suppFile'];
-					$unregisteredSuppFileIds[$suppFile->getId()] = $suppFile;
-				}
-
-				// If there are unregistered DOIs and we want automatic deposits
-				$exportSpec = array();
-				$register = false;
-				if (count($unregisteredIssueIds)) {
-					$exportSpec[DOI_EXPORT_ISSUES] = $unregisteredIssueIds;
-					$register = true;
-				}
-				if (count($unregisteredArticles)) {
-					$exportSpec[DOI_EXPORT_ARTICLES] = $unregisteredArticlesIds;
-					$register = true;
-				}
-				if (count($unregisteredGalleyIds)) {
-					$exportSpec[DOI_EXPORT_GALLEYS] = $unregisteredGalleyIds;
-					$register = true;
-				}
-				if (count($unregisteredSuppFileIds)) {
-					$exportSpec[DOI_EXPORT_SUPPFILES] = $unregisteredSuppFileIds;
-					$register = true;
-				}
-
-				if ($register) {
-					$plugin->registerObjects($request, $exportSpec, $journal);
 				}
 			}
 		}
@@ -125,7 +139,7 @@ class DataciteInfoSender extends ScheduledTask {
 		$journals = array();
 		while($journal =& $journalFactory->next()) {
 			$journalId = $journal->getId();
-			if (!$plugin->getSetting($journalId, 'enabled') || !$plugin->getSetting($journalId, 'automaticRegistration')) continue;
+			if (!$plugin->getSetting($journalId, 'username') || !$plugin->getSetting($journalId, 'password') || !$plugin->getSetting($journalId, 'automaticRegistration')) continue;
 
 			$doiPrefix = null;
 			$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $journalId);
@@ -137,8 +151,10 @@ class DataciteInfoSender extends ScheduledTask {
 			if ($doiPrefix) {
 				$journals[] =& $journal;
 			} else {
-				$this->notify(SCHEDULED_TASK_MESSAGE_TYPE_WARNING,
-					__('plugins.importexport.crossref.senderTask.warning.noDOIprefix', array('path' => $journal->getPath())));
+				$this->addExecutionLogEntry(
+					__('plugins.importexport.common.senderTask.warning.noDOIprefix', array('path' => $journal->getPath())),
+					SCHEDULED_TASK_MESSAGE_TYPE_WARNING
+				);
 			}
 			unset($journal);
 		}

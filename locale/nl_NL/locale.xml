@@ -278,7 +278,7 @@ Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de con
 </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>Attentie!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>Attentie!</h4>
 <p>Het systeem kon het instellingenbestand niet overschrijven. Om uw wijzigingen te effectueren moet u <tt>config.inc.php</tt> openen in een geschikte teksteditor en de inhoud van het bestand vervangen door de inhoud van het tekstveld hieronder.</p>]]></message>
 
 
@@ -351,10 +351,10 @@ Eventueel kunt u de gebruiker een reden voor het blokkeren geven.</message>
 </ol>]]></message>
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[De naam is een link naar het profiel van de reviewer.<br/>
-Oordeel is van 1 tot  5 (Uitstekend).<br/>
-Weken refereert aan de gemiddelde tijdsduur voor een complete review.<br/>
-Laatste is de datum van de laatst geaccepteerde review.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[De naam is een link naar het profiel van de reviewer.<br />
+Oordeel is van 1 tot  5 (Uitstekend).<br />
+Weken refereert aan de gemiddelde tijdsduur voor een complete review.<br />
+Laatste is de datum van de laatst geaccepteerde review.<br />
 Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]></message>
 
 	<!-- Section Editor -->
@@ -822,8 +822,8 @@ Uw server ondersteunt momenteel mbstring: <strong>{$supportsMBString}</strong>]]
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Mogelijk ongeldige URL's van zoeksites worden hieronder getoond.<br/>
-Verifieer de als ongeldig gemerkte URL's met de hand, aangezien deze test niet 100% accuraat is.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Mogelijk ongeldige URL's van zoeksites worden hieronder getoond.<br />
+Verifieer de als ongeldig gemerkte URL's met de hand, aangezien deze test niet 100% accuraat is.<br />
 Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 
 	<!-- RT Entities -->

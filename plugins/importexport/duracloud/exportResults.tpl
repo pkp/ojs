@@ -12,7 +12,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<br/>
+<br />
 
 <h3>{translate key="plugins.importexport.duracloud.export.results"}</h3>
 

@@ -62,7 +62,7 @@
 	<message key="plugins.generic.thesis.manager.form.studentEmailPublish">Publish student email</message>
 	<message key="plugins.generic.thesis.manager.form.studentEmailPublishInstructions">If checked, the student email will be published with the thesis abstract.</message>
 	<message key="plugins.generic.thesis.manager.form.studentBio">Student bio statement</message>
-	<message key="plugins.generic.thesis.manager.form.studentBioInstructions"><![CDATA[Insert blank lines to seperate paragraphs. Place text between &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, and &lt;u&gt;&lt;/u&gt; tags to bold, italicize, and underline, respectively (i.e. this &lt;i&gt;word&lt;/i&gt; will be italicized.)]]></message>
+	<message key="plugins.generic.thesis.manager.form.studentBioInstructions"><![CDATA[Insert blank lines to separate paragraphs. Place text between &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, and &lt;u&gt;&lt;/u&gt; tags to bold, italicize, and underline, respectively (i.e. this &lt;i&gt;word&lt;/i&gt; will be italicized.)]]></message>
 	<message key="plugins.generic.thesis.manager.form.indexing">Indexing</message>
 	<message key="plugins.generic.thesis.manager.form.indexingDescription">Choose terms that best describe the thesis content following the categories used by this journal. Separate terms with a semi-colon (term1; term2; term3).</message>
 	<message key="plugins.generic.thesis.manager.form.discipline">Academic discipline and sub-disciplines</message>
@@ -77,7 +77,7 @@
 	<message key="plugins.generic.thesis.manager.form.urlPrefixIncluded">Please provide the full URL, including the http:// or ftp:// at the start.</message>
 	<message key="plugins.generic.thesis.manager.form.abstract">Abstract</message>
 	<message key="plugins.generic.thesis.manager.form.abstractRequired">A thesis abstract is required.</message>
-	<message key="plugins.generic.thesis.manager.form.abstractInstructions"><![CDATA[Insert blank lines to seperate paragraphs. Place text between &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, and &lt;u&gt;&lt;/u&gt; tags to bold, italicize, and underline, respectively (i.e. this &lt;i&gt;word&lt;/i&gt; will be italicized.)]]></message>
+	<message key="plugins.generic.thesis.manager.form.abstractInstructions"><![CDATA[Insert blank lines to separate paragraphs. Place text between &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, and &lt;u&gt;&lt;/u&gt; tags to bold, italicize, and underline, respectively (i.e. this &lt;i&gt;word&lt;/i&gt; will be italicized.)]]></message>
 	<message key="plugins.generic.thesis.manager.form.url">URL</message>
 	<message key="plugins.generic.thesis.manager.form.urlInstructions">If thesis is published online. Include http://, ftp://, etc. at the start (i.e. http://www.sfu.ca/path/to/thesis.pdf).</message>
 	<message key="plugins.generic.thesis.manager.form.studentFirstName">Student first name</message>
@@ -166,7 +166,7 @@
 	<message key="plugins.generic.thesis.form.commentInstructions">Please include any additional comments that may be relevant to your submission.</message>
 	<message key="plugins.generic.thesis.form.author">Author and Supervision</message>
 	<message key="plugins.generic.thesis.form.studentBio">Student bio statement</message>
-	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[Insert blank lines to seperate paragraphs. Place text between &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, and &lt;u&gt;&lt;/u&gt; tags to bold, italicize, and underline, respectively (i.e. this &lt;i&gt;word&lt;/i&gt; will be italicized).]]></message>
+	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[Insert blank lines to separate paragraphs. Place text between &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, and &lt;u&gt;&lt;/u&gt; tags to bold, italicize, and underline, respectively (i.e. this &lt;i&gt;word&lt;/i&gt; will be italicized).]]></message>
 	<message key="plugins.generic.thesis.form.indexing">Indexing</message>
 	<message key="plugins.generic.thesis.form.indexingDescription">Choose terms that best describe the thesis content following the categories used by this journal. Separate terms with a semi-colon (term1; term2; term3).</message>
 	<message key="plugins.generic.thesis.form.discipline">Academic discipline and sub-disciplines</message>
@@ -181,7 +181,7 @@
 	<message key="plugins.generic.thesis.form.urlPrefixIncluded">Please provide the full URL, including the http:// or ftp:// at the start.</message>
 	<message key="plugins.generic.thesis.form.abstract">Abstract</message>
 	<message key="plugins.generic.thesis.form.abstractRequired">A thesis abstract is required.</message>
-	<message key="plugins.generic.thesis.form.abstractInstructions"><![CDATA[Insert blank lines to seperate paragraphs. Place text between &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, and &lt;u&gt;&lt;/u&gt; tags to bold, italicize, and underline, respectively (i.e. this &lt;i&gt;word&lt;/i&gt; will be italicized).]]></message>
+	<message key="plugins.generic.thesis.form.abstractInstructions"><![CDATA[Insert blank lines to separate paragraphs. Place text between &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, and &lt;u&gt;&lt;/u&gt; tags to bold, italicize, and underline, respectively (i.e. this &lt;i&gt;word&lt;/i&gt; will be italicized).]]></message>
 	<message key="plugins.generic.thesis.form.url">URL</message>
 	<message key="plugins.generic.thesis.form.urlInstructions">If thesis is published online. Include http:// or ftp:// at the start (i.e. http://www.sfu.ca/path/to/thesis.pdf).</message>
 	<message key="plugins.generic.thesis.form.uploadCode">Upload code</message>

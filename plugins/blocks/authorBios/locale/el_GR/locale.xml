@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="el_GR" full_name = "Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.block.authorBios.displayName">Δομική Μονάδα Βιογραφικού Συγγραφέα</message>
 	<message key="plugins.block.authorBios.description">Αυτό το πρόσθετο εμφανίζει μια δομική μονάδα που περιέχει την βιογραφία του συγγραφέα στα εργαλεία μελέτης στην πλαϊνή μπάρα.</message>
 	<message key="plugins.block.authorBios.title">Σχετικά με τους Συγγραφείς</message>

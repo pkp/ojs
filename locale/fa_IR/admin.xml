@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="fa_IR" full_name = "Persian">
+<locale name="fa_IR" full_name="فارسی">
 	<message key="admin.hostedJournals">مجلات میزبان</message>
 	<message key="admin.settings.journalRedirect">تغییر جهت دادن به مجله</message>
 	<message key="admin.settings.journalRedirectInstructions">تقاضاهای ارسالی به سایت اصلی به این مجله ارجاع می شود . کاربرد آن ققط وقتی است که فقط یک مجله میزبان باشد.</message>
@@ -58,6 +58,6 @@
 	<message key="admin.mergeUsers.from.description">کاربری را برای ادغام با حساب کاربر دیگر انتخاب کنید (مثال وقتی که شخصی دو حساب کاربری دارد ) حسابی که در ابتدا انتخاب شده پاک می شود و سابمیشن ها , انتسابها و غیره مربوط به آن به حساب دوم نسبت داده می شود</message>
 	<message key="admin.mergeUsers.allUsers">تمام کاربران نام نویسی شده</message>
 	<message key="admin.mergeUsers.confirm">آیا مطمئن هستید که می خواهید حساب با نام کاربری &quot;{$oldUsername}&quot; را با حساب با نام کاربری&quot;{$newUsername}&quot; ادغام کنید؟ حساب با نام کاربری&quot;{$oldUsername}&quot; دیگر وجود نخواهد داشت . این عملیات قابل بازگشت نیست</message>
-	<message key="admin.mergerUsers.noneEnrolled">فاقد کاربر داری نقش</message>
+	<message key="admin.mergeUsers.noneEnrolled">فاقد کاربر داری نقش</message>
 	<message key="admin.locale.maybeIncomplete">زبانهای مشخص شده ممکن است ناکامل باشند.</message>
 </locale>

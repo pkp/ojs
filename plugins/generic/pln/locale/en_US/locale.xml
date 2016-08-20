@@ -23,7 +23,7 @@
 	<message key="plugins.generic.pln.settings.acron_required">The PLN plugin requires either the Acron plugin or a periodic scheduling tools such as 'cron.'</message>
 	<message key="plugins.generic.pln.settings.saved">PKP PLN settings saved.</message>
 	<message key="plugins.generic.pln.settings.terms_of_use">Terms of Use</message>
-	<message key="plugins.generic.pln.settings.terms_of_use_help">As Primary Contact, I, in good faith, accept and confirm the following terms and conditions for participation in the Public Knowledge Project’s Private LOCKSS Network (PKP-PLN):</message>
+	<message key="plugins.generic.pln.settings.terms_of_use_help">As Journal Manager, I, in good faith, accept and confirm the following terms and conditions for participation in the Public Knowledge Project’s Private LOCKSS Network (PKP-PLN):</message>
 	<message key="plugins.generic.pln.settings.terms_of_use_agree">I Agree</message>
 	<message key="plugins.generic.pln.settings.journal_uuid">Journal Identifier</message>
 	<message key="plugins.generic.pln.settings.journal_uuid_help">This is your journal's unique identifier for the PKP PLN. You may need to share this with PKP PLN administrators for support purposes.</message>

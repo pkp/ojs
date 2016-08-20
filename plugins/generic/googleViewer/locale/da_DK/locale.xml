@@ -13,5 +13,5 @@
 
 <locale name="da_DK" full_name="Dansk">
 	<message key="plugins.generic.googleViewer.name">Indlejret Googlefremviser Plugin</message>
-	<message key="plugins.generic.googleViewer.description"><![CDATA[Dette plugin anvender <a href="https://docs.google.com/viewer">Google dokumentfremviser</a> service til indlejring af PDF-filer på artikelsiden.]]></message>
+	<message key="plugins.generic.googleViewer.description"><![CDATA[Dette plugin anvender Google dokumentfremviser service til indlejring af PDF-filer på artikelsiden.]]></message>
 </locale>

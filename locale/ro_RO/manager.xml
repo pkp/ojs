@@ -13,7 +13,7 @@
   *
   -->
 
-<locale name="ro_RO" full_name = "Romanian">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="manager.emails.confirmResetAll">Eşti sigur că doreşti să resetezi toate şabloanele pentru emailurile revistei? Veţi pierde toate adaptările făcute.</message>
 	<message key="manager.files.note">Notă: Browserul de fişiere este o funcţionalitate avansată care permite ca fişierele şi directoarele asociate cu o revistă să fie văzute şi manipulate în mod direct.</message>
 	<message key="manager.groups">Caseta editorială</message>
@@ -30,7 +30,7 @@
 	<message key="manager.language.forms">Formulare</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">Va avea ca efect înlocuirea oricăror setări specifice unei localizări pe care le-ai avut cât timp ai utilizat respectiva localizare</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Reîncarcă setările implicite specifice localizării</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS poate fi utilizat în mai multe limbi implementate în pachete de localizare. De asemenea, OJS poate opera  ca şi sistem multilingv, oferindu-le  utilizatorilor posibilitatea să aleagă limba dorită pentru oricare dintre pagini, fiind permis ca anumite date să fie întroduse în câteva limbi suplimentare.<br /><br/>Dacă o limbă suportată de OJS nu este menţionată mai jos, cereţi administratorului să instaleze limba din interfaţa de administrare a siteului. Pentru instrucţiuni privind adăugarea suportului pentru noi limbi, te rog consultă documentaţia OJS.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS poate fi utilizat în mai multe limbi implementate în pachete de localizare. De asemenea, OJS poate opera  ca şi sistem multilingv, oferindu-le  utilizatorilor posibilitatea să aleagă limba dorită pentru oricare dintre pagini, fiind permis ca anumite date să fie întroduse în câteva limbi suplimentare.<br /><br />Dacă o limbă suportată de OJS nu este menţionată mai jos, cereţi administratorului să instaleze limba din interfaţa de administrare a siteului. Pentru instrucţiuni privind adăugarea suportului pentru noi limbi, te rog consultă documentaţia OJS.]]></message>
 	<message key="manager.languages.noneAvailable">Scuze, nu sunt disponibile limbi suplimentare. Contactaţi administratorul siteului dacă doreşti să foloseşti limbi suplimentare pentru această revistă.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Aceasta va fi limba aleasă implicit pentru siteul revistei.</message>
 	<message key="manager.managementPages">Pagini pentru management</message>

@@ -52,7 +52,7 @@ class ReviewerAction extends Action {
 			$email = new ArticleMailTemplate($reviewerSubmission, $decline?'REVIEW_DECLINE':'REVIEW_CONFIRM');
 			// Must explicitly set sender because we may be here on an access
 			// key, in which case the user is not technically logged in
-			$email->setReplyTo($reviewer->getEmail(), $reviewer->getFullName());
+			$email->setFrom($reviewer->getEmail(), $reviewer->getFullName());
 			if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
 				HookRegistry::call('ReviewerAction::confirmReview', array(&$reviewerSubmission, &$email, $decline));
 				if ($email->isEnabled()) {
@@ -132,7 +132,7 @@ class ReviewerAction extends Action {
 			$email = new ArticleMailTemplate($reviewerSubmission, 'REVIEW_COMPLETE');
 			// Must explicitly set sender because we may be here on an access
 			// key, in which case the user is not technically logged in
-			$email->setReplyTo($reviewer->getEmail(), $reviewer->getFullName());
+			$email->setFrom($reviewer->getEmail(), $reviewer->getFullName());
 
 			if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
 				HookRegistry::call('ReviewerAction::recordRecommendation', array(&$reviewerSubmission, &$email, $recommendation));

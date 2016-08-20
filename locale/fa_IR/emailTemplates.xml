@@ -81,32 +81,6 @@
 {$editorialContactSignature}</body>
 		<description>This email is sent to registered readers via the "Notify Users" link in the Editor's User Home. It notifies readers of a new issue and invites them to visit the journal at a supplied URL.</description>
 	</email_text>
-	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>درخواست بایگانی کردن {$journalName}:</subject>
-		<body>مسئول محترم کتابخانه دانشگاه:
-{$journalName} &lt;{$journalUrl}&gt; ، عضو دانشکده شما می باشد &lt;[name of member]&gt;. این مجله خواستار ایجاد سیستم بایگانی LOCKSS با آن کتابخانه و کتابخانه های دیگر دانشگاهها می باشد.
-
-[Brief description of journal]
-
-برنامه LOCKSS تحت آدرس http://lockss.org که یک ابتکار بین المللی مربوط به ناشر/کتابخانه می باشد. این نرم افزار رایگان، حتی توسط یک رایانه شخصی نیز اجرا می گردد. کل سامانه آن لاین شده است و به نگهداری مختصری نیازمند است.
-جهت کمک در بایگانی مجله ما، از شما دعوت می کنیم که عضو انجمن LOCKSS شوید تا به شما در جمع آوری و نگهداری عناوین تهیه شده توسط سازمان خود و دیگر پژوهشگران جهان، کمک کند. برای این کار، لطفا از وب سایت LOCKSS بازدید کنید تا اطلاعاتی درباره نحوه عملکرد این سامانه دراختیار شما قرار گیرد. منتظر اعلام خبر از شما راجع به امکان تهیه چنین سامانه ای برای این مجله هستم.
-
-
-باتشکر
-{$principalContactSignature}Dear [University Librarian]
-
-{$journalName} &lt;{$journalUrl}&gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.
-
-[Brief description of journal]
-
-The LOCKSS Program &lt;http://lockss.org/&gt;, an international library/publisher initiative, is a working example of a distributed preservation and archiving repository, additional details are below. The software, which runs on an ordinary personal computer is free; the system is easily brought on-line; very little ongoing maintenance is required.
-
-To assist in the archiving of our journal, we invite you to become a member of the LOCKSS community, to help collect and preserve titles produced by your faculty and by other scholars worldwide. To do so, please have someone on your staff visit the LOCKSS site for information on how this system operates. I look forward to hearing from you on the feasibility of providing this archiving support for this journal.
-
-Thank you,
-{$principalContactSignature}</body>
-		<description>This email encourages the recipient to participate in the LOCKSS initiative and include this journal in the archive. It provides information about the LOCKSS initiative and ways to become involved.</description>
-	</email_text>
 	<email_text key="SUBMISSION_ACK">
 		<subject>قدردانی برای ارسال مقاله</subject>
 		<body>{$authorName}:
@@ -372,29 +346,6 @@ Thank you,
 
 {$editorialContactSignature}</body>
 		<description>This email is sent by a Section Editor to a submission's Copyeditor to request that they begin the copyediting process. It provides information about the submission and how to access it.</description>
-	</email_text>
-	<email_text key="COPYEDIT_COMPLETE">
-		<subject>اتمام ویراستاری مقاله</subject>
-		<body>{$editorialContactName}:
-
-هم اکنون ویراستاری مقاله جنابعالی با عنوان "{$articleTitle}" برای مجله {$journalName} به پایان رسید. برای بررسی نتیجه ویراستاری و پاسخ دادن به سؤالات احتمالی لطفا مراحل زیر را دنبال کنید:
-
-۱. با استفاده از نام کاربری و رمز عبور خود و بکمک لینک زیر وارد سایت مجله شوید (در صورت فراموش کردن نام کاربری یا رمز عبور از گزینه مربوط به فراموشی رمز  عبور استفاده کنید)
-۲. بر روی فایل موجود در مرحله اول ویراستاری کلیک کنید و آنرا دانلود کنید. پس از دانلود آنرا باز کنید.
-۳. مقاله را بدقت مطالعه کرده و قسمتهای ویراستاری شده را بررسی کنید. لازم به ذکر است که در فایل ورد ارسالی تغییرات اعمال شده با رنگ و علائم مخصوص براحتی قابل تشخیص است. ویراستار ممکن است در متن مقاله سؤالاتی کرده باشد که لازم است بدقت به آنها جواب دهید.
-۴. پس از وارد کردن پاسخ سؤالات
-4. Save file to desktop and upload it in 2. Author Copyedit.
-5. Click the email icon under COMPLETE and send email to the editor.
-
-This is the last opportunity that you have to make substantial changes. You will be asked at a later stage to proofread the galleys, but at that point only minor typographical and layout errors can be corrected.
-
-Manuscript URL: {$submissionEditingUrl}
-Username: {$authorUsername}
-
-If you are unable to undertake this work at this time or have any questions,
-please contact me. Thank you for your contribution to this journal.
-
-{$copyeditorName}</body>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>بررسی نهایی ویراستاری</subject>
@@ -821,50 +772,6 @@ jhvdo hkrqh: {$expiryDate}
 تصمیم اتخاد شده بدین شرح است:
 
 {$editorialContactSignature}</body>
-	</email_text>
-	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
-		<subject>خرید اشتراک شخصی</subject>
-		<body>An individual subscription has been purchased online for {$journalName} with the following details.
-
-Subscription Type:
-{$subscriptionType}
-
-کاربر:
-{$userDetails}
-
-اطلاعات عضویت در صورت موجود بودن:
-{$membership}
-
-برای دیدن یا ویرایش این اشتراک لطفا به آدرس زیر بروید.
-
-Subscription URL: {$subscriptionUrl}</body>
-	</email_text>
-	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
-		<subject>خرید اشتراک سازمانی</subject>
-		<body>An institutional subscription has been purchased online for {$journalName} with the following details. To activate this subscription, please use the provided Subscription URL and set the subscription status to 'Active'.
-
-Subscription Type:
-{$subscriptionType}
-
-Institution:
-{$institutionName}
-{$institutionMailingAddress}
-
-Domain (if provided):
-{$domain}
-
-IP Ranges (if provided):
-{$ipRanges}
-
-مسئول تماس:
-{$userDetails}
-
-اطلاعات عضویت در صورت وجود:
-{$membership}
-
-برای مشاهده یا ویرایش این اشتراک به آدرس زیر بروید.
-
-آدرس اشتراک: {$subscriptionUrl}</body>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
 		<subject>تمدید اشتراک شخصی</subject>

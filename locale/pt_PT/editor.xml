@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="pt_PT" full_name = "Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="editor.article.reviewForms">Formulários de revisão</message>
 	<message key="editor.article.selectReviewForm">Escolher formulário de revisão</message>
 	<message key="editor.article.clearReviewForm">Limpar formulário de revisão</message>
@@ -102,7 +102,7 @@
 	<message key="editor.article.showSuppFile">Apresentar documento ao revisor</message>
 	<message key="editor.article.layoutAndProof"><![CDATA[Layout & Leitura de Prova]]></message>
 	<message key="editor.article.clear">Limpar</message>
-	<message key="editor.article.clearReviewer">Limpar revisor</message>
+	<message key="editor.article.clearReviewer">Remover revisor</message>
 	<message key="editor.article.changeSection">Alterar Secção</message>
 	<message key="editor.article.setDueDate">Definir Prazo para conclusão</message>
 	<message key="editor.article.addReviewer">Adicionar Revisor</message>
@@ -110,7 +110,7 @@
 	<message key="editor.article.notifyReviewer">Notificar Revisor</message>
 	<message key="editor.article.initiateReview">Iniciar Revisão</message>
 	<message key="editor.article.cancelReview">Cancelar Revisão</message>
-	<message key="editor.article.clearReview">Limpar Revisão</message>
+	<message key="editor.article.clearReview">Remover Revisão</message>
 	<message key="editor.article.enterRecommendation">Definir Recomendação</message>
 	<message key="editor.article.enterReviewerRecommendation">Definir Recomendação pelo Revisor</message>
 	<message key="editor.article.recommendation">Recomendação</message>
@@ -180,7 +180,7 @@
 	<message key="editor.submissions.inSection">Na secção</message>
 	<message key="editor.article.scheduleForPublication">Agendar para publicar em</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">A Agendar</message>
-	<message key="editor.article.payment.publicationFeeNotPaid">A Taxa para Publicação do artigo não foi paga. Uma vez realizado o pagamento, será permitido agendar o artigo para publicação.</message>
+	<message key="editor.article.payment.publicationFeeNotPaid">A Taxa para Publicação do artigo não foi paga. Uma vez efectuado o pagamento, será permitido agendar o artigo para publicação.</message>
 	<message key="editor.article.display">Exibir</message>
 	<message key="editor.article.hideTocAuthorDescription">Omitir nomes dos autores no sumário da edição</message>
 	<message key="editor.article.hideTocAuthorDefault">Padrão</message>
@@ -208,18 +208,18 @@
 	<message key="editor.notifyUsers.allIndividualSubscribers">Todos os assinantes individuais ({$count} utilizadores)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Todos os assinantes institucionais ({$count} utilizadores)</message>
 	<message key="editor.reassign">Re-atribuir</message>
-	<message key="editor.publicIdentificationExists">O identificador público '{$ publicIdentifier}' já existe para outro objecto (número, artigo, galleys do número ou ficheiro suplementar). Por favor, escolha identificadores únicos que pertençam à sua revista.</message>
+	<message key="editor.publicIdentificationExists">O identificador público '{$publicIdentifier}' já existe para outro objecto (número, artigo, provas do número ou ficheiro suplementar). Por favor, escolha identificadores únicos que pertençam à sua revista.</message>
 	<message key="editor.notifyUsers.allMailingList">Incluir todos os e-mails na mailing list ({$count} emails)</message>
-	<message key="editor.issues.galleys">Galleys Número</message>
-	<message key="editor.issues.galley">Galley Número</message>
-	<message key="editor.issues.viewingGalley">Visualizando Galley do Número</message>
-	<message key="editor.issues.issueGalleysDescription">Publicar galleys com todos os conteúdos do número.</message>
-	<message key="editor.issues.noneIssueGalleys">Nenhum galley do número publicado.</message>
-	<message key="editor.issues.galleyLabelRequired">É obrigatório indicar uma categoria para o galley do número</message>
-	<message key="editor.issues.galleyLocaleRequired">É obrigatório indicar um galley local do número.</message>
-	<message key="editor.issues.galleyPublicIdentificationExists">A identificação pública do galley já existe.</message>
-	<message key="editor.issues.backToIssueGalleys">Voltar ao galley dos números</message>
-	<message key="editor.issues.confirmDeleteGalley">Tem a certeza que pretende eliminar este galley do número?</message>
-	<message key="editor.publicGalleyIdentificationExists">O identificador público '{$publicIdentifier}' já existe para ouyra instância deste artigo. Por favor, escolha um identificador único dentro deste artigo.</message>
+	<message key="editor.issues.galleys">Número Provas</message>
+	<message key="editor.issues.galley">Número Prova</message>
+	<message key="editor.issues.viewingGalley">Visualizando Prova do Número</message>
+	<message key="editor.issues.issueGalleysDescription">Publicar provas com todos os conteúdos do número.</message>
+	<message key="editor.issues.noneIssueGalleys">Nenhuma prova do número publicado.</message>
+	<message key="editor.issues.galleyLabelRequired">É obrigatório indicar uma categoria para a prova do número</message>
+	<message key="editor.issues.galleyLocaleRequired">É obrigatório indicar uma prova local do número.</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">A identificação pública da prova já existe.</message>
+	<message key="editor.issues.backToIssueGalleys">Voltar à prova dos números</message>
+	<message key="editor.issues.confirmDeleteGalley">Tem a certeza que pretende eliminar esta prova do número?</message>
+	<message key="editor.publicGalleyIdentificationExists">O identificador público '{$publicIdentifier}' já existe para outra instância deste artigo. Por favor, escolha um identificador único dentro deste artigo.</message>
 	<message key="editor.issues.resetArticlePublicationDates">Restaurar as datas de publicação dos artigos</message>
 </locale>

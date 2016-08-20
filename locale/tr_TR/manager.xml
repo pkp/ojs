@@ -30,7 +30,7 @@
 	<message key="manager.language.forms">Formlar</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">Belirtmiş olduğunuz dil herhangi bir dile özgü dergi ayarlarını değiştirecektir.</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Varsayılan ayarları çağır</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[ADS desteklenen dillerden herhangi biriyle kullanılabilir. ADS çok dilli bir sistem yapısına sahiptir ve her sayfada diller arasında geçiş yapabilme özelliği ile kullanıcıların istedikleri dilde veri girmesini sağlar.<br /><br/>ADS tarafından desteklenen bir dil aşağıdaki listede yoksa, site yönetim arayüzünden dili yüklemek için site yöneticinize başvurun. Yeni dil desteği eklemek için ilgili talimatlar ve ADS belgelerine bakınız.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[ADS desteklenen dillerden herhangi biriyle kullanılabilir. ADS çok dilli bir sistem yapısına sahiptir ve her sayfada diller arasında geçiş yapabilme özelliği ile kullanıcıların istedikleri dilde veri girmesini sağlar.<br /><br />ADS tarafından desteklenen bir dil aşağıdaki listede yoksa, site yönetim arayüzünden dili yüklemek için site yöneticinize başvurun. Yeni dil desteği eklemek için ilgili talimatlar ve ADS belgelerine bakınız.]]></message>
 	<message key="manager.languages.noneAvailable">Üzgünüz, başka bir ek dil kullanılamaz. Bu dergide ek bir dil kullanmak istiyorsanız site yöneticinize başvurunuz.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Bu dergi sitesi için varsayılan dil olacaktır.</message>
 	<message key="manager.managementPages">Yönetim Sayfaları</message>
@@ -669,11 +669,9 @@
 	<message key="manager.subscriptionTypes.name">Abonelik türü</message>
 	<message key="manager.subscriptionTypes.noneCreated">Herhangi bir abonelik türü oluşturulmadı.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Abonelik türü başarıyla oluşturuldu.</message>
-	<message key="manager.payment.giftFeesDescription">A gift subscriptions link will appear on the Subscriptions page in About the Journal and as part of the subscriptions sidebar block.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">This will activate payments for gift subscriptions, allowing journal readers to buy gift subscriptions for other readers.</message>
 	<message key="manager.plugins.wrongName">Yüklenen version.xml eklentisi yükseltilmiş eklenti adına sığmayan bir eklenti adı içeriyor.</message>
 	<message key="manager.sections.alertDelete">Bu bölümü silmeden önce yayımlanmış makaleleri diğer bölümlere taşımalısınız.</message>
-	<message key="manager.setup.categories.description">Yukarıda listelenen kümelerden uygun kategorileri seçiniz.  Okuyucular tamamlanmış dergi kümelerinden kategoriye göre listeleme yapabilirler.</message>
+	<message key="manager.setup.categories.description">Yukarıda listelenen kümelerden uygun kategorileri seçiniz. Okuyucular tamamlanmış dergi kümelerinden kategoriye göre listeleme yapabilirler.</message>
 	<message key="manager.payment.giftFees">Bağış Tutarı</message>
 	<message key="manager.payment.options.purchaseIssueFee">Sayı Satın Al</message>
 	<message key="manager.plugins.wrongCategory">Yüklenen eklenti güncellenen eklenti kategorisi uyuşmuyor.</message>
@@ -691,7 +689,6 @@
 	<message key="manager.statistics.reports.filters">Filitreler</message>
 	<message key="manager.statistics.reports.objectType">Nesne Türü</message>
 	<message key="manager.statistics.reports.objectId">Nesne ID'si</message>
-	<message key="manager.statistics.reports.today">Bugün</message>
 	<message key="manager.statistics.reports.currentMonth">Bu ay</message>
 	<message key="manager.statistics.reports.orderBy">Sırala</message>
 	<message key="manager.statistics.reports.orderDir">Yön</message>
@@ -710,9 +707,6 @@
 	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">veya aralığa göre seç:</message>
 	<message key="manager.statistics.reports.filters.byLocation">Coğrafi konuma göre</message>
 	<message key="manager.statistics.reports.filters.byLocation.description">Sonuçları ülkeye, bölgeye ve/veya şehre göre daralt.</message>
-	<message key="manager.statistics.defaultMetricDescription">Your journal is configured to record more than one usage metric. Usage statistics will be displayed in severeral contexts.
-		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank
-		search results. Please select one of the configured metrics as a default.</message>
 	<message key="manager.statistics.reports.defaultReport.articleDownloads">İndirilen makale dosyaları</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">Makale özet sayfası gösterimi</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Makale özeti ve indirmeleri</message>
@@ -721,17 +715,13 @@
 	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">Issue table of contents and downloads</message>
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Dergi ana sayfa görüntülemeleri</message>
 	<message key="manager.statistics.reports.generateReport">Özel rapor oluştur</message>
-	<message key="manager.statistics.reports.advancedOptions.label">Customize columns, filter and ordering options. Changing any of these options might change the expected report template result.</message>
-	<message key="manager.statistics.reports.columns.description">Define the columns that will be used to build the report. The columns you select here not only define which data will be presented inside the reports, but also defines the aggregation level of the statistics. For example, if you choose ID, Type and Month columns, the report will sum all views from an object from one month and will present that data in one row. If you choose Day instead of Month, each object will have a row for each day.</message>
 	<message key="manager.statistics.reports.objectId.label">Virgülle ayırılmış (ör. 1,2,3,4,5) bir veya birden çok nesne ID'si belirleyin.</message>
-	<message key="manager.statistics.reports.reportUrl.label">The following url can be used to generate the report with this current form settings. Just copy it, paste into your browser and enter. You can use your favorites to store your custom report url generator.</message>
 	<message key="manager.setup.permissions.priorAgreement">Ön anlaşma</message>
 	<message key="manager.setup.permissions.display">Görüntüle</message>
 	<message key="manager.setup.resetPermissions">Makale İzinlerini Sıfırla</message>
 	<message key="manager.setup.licenseURLDescription">Eğer var ise lisans web sayfası için URL giriniz.</message>
 	<message key="manager.setup.includeCopyrightStatement">Telif hakkı bildirimini içeriği ile görüntüle (bir yazarın elinde olduğu belirtilen telif hakkı için tavsiye edilen)</message>
 	<message key="manager.setup.includeLicense">Yayımlanmış çalışma ile lisansı göster.</message>
-	<message key="manager.setup.resetPermissions.description">Copyright statement and license information will be permanently attached to published content, ensuring that this data will not change in the case of a journal changing policies for new submissions. To reset stored permissions information already attached to published content, use the button below.</message>
 	<message key="manager.setup.confirmResetLicense">Dergi ayarında belirlenmiş ve yayımlanmış içeriğe eklenmiş lisans telif hakkını  sıfırlamak istediğinizden emin misiniz?</message>
 	<message key="manager.subscriptions.form.dateRemindedBefore">Ön-Süre Bitimi Hatırlatması Gönderildi</message>
 	<message key="manager.subscriptions.form.dateRemindedAfter">Geçmiş-Süre Bitimi Hatırlatması Gönderildi</message>
@@ -742,4 +732,5 @@
 	<message key="manager.statistics.reports.objectNotFound">Obje veri tabanında bulunamadı</message>
 	<message key="manager.setup.emailHeader">E-posta Başlığı</message>
 	<message key="manager.setup.emailHeaderDescription">Dergi hesabından sistem tarafından gönderilen hazır e-postalara aşağıdaki başlık eklenecektir. Bu e-postalara temel iletişim adresi eklenir. Temel iletişimde belirtilen kişinin mesaj içeriğinden sorumlu olarak gösterilmesi gerekli değildir; çünkü mesaj başka bri kullanıcı üzerinden gönderilebilir.</message>	
+	<message key="manager.statistics.reports.yesterday">Dün</message>
 </locale>

@@ -170,7 +170,7 @@ class AuthorSubmission extends Article {
 
 		$latestDecision = $this->getMostRecentDecision();
 		if ($latestDecision) {
-			if ($latestDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $latestDecision == SUBMISSION_EDITOR_DECISION_DECLINE) {
+			if ($latestDecision == SUBMISSION_EDITOR_DECISION_ACCEPT) {
 				return STATUS_QUEUED_EDITING;
 			}
 		}

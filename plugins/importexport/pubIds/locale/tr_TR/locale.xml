@@ -25,12 +25,9 @@ Commands:
 	<message key="plugins.importexport.pubIds.export">Genel belirleyici ihracı</message>
 	<message key="plugins.importexport.pubIds.export.forIssues">Genel belirleyici ihracı</message>
 	<message key="plugins.importexport.pubIds.export.selectIssue">Sayı Seç</message>
-	<message key="plugins.importexport.pubIds.export.selectIssue.description">Please select issues, for whose objects you whish to export the public identifiers.</message>
 	<message key="plugins.importexport.pubIds.import">GEnel Belirleyicileri Al</message>
-	<message key="plugins.importexport.pubIds.import.description">This plugin supports the import of the public identifiers based on the pubIds.dtd Document Type Definition.</message>
 	<message key="plugins.importexport.pubIds.import.results">Sonuçları Al</message>
 	<message key="plugins.importexport.pubIds.import.errors">Veri Alma Hatası</message>
-	<message key="plugins.importexport.pubIds.import.errors.description">One or more errors occurred during import. Please check to ensure that the format of the import file correctly matches the specification. Specific details of the import errors are listed below.</message>
 	<message key="plugins.importexport.pubIds.import.success">Veri Alma Başarılı</message>
 	<message key="plugins.importexport.pubIds.import.success.description">Aşağıda listelenen genel belirleyiciler başarılı bir şekilde alındı.</message>
 	<message key="plugins.importexport.pubIds.cliError">HATA:</message>
@@ -38,11 +35,4 @@ Commands:
 	<message key="plugins.importexport.pubIds.cliError.unknownUser">"{$userName}" adlı belirli üye açık değil.</message>
 	<message key="plugins.importexport.pubIds.cliError.issueNotFound">Belirli sayı numarası "{$issueId}" ile herhangi bir sayı eşlenemedi.</message>
 	<message key="plugins.importexport.pubIds.cliError.couldNotWrite">"{$fileName}" dosyasına yazılamadı.</message>
-	<message key="plugins.importexport.pubIds.import.error.uploadFailed">The upload failed; please ensure that uploads are allowed on your server and that the file is not too big for your PHP and web server configuration.</message>
-	<message key="plugins.importexport.pubIds.import.error.unsupportedRoot">This plugin does not support the supplied root node "{$rootName}". Please ensure that the file is correctly formed and try again.</message>
-	<message key="plugins.importexport.pubIds.import.error.unknownObjectType">An unknown object type "{$pubObjectType}" was specified in the "pubObjectType" attribute of the element with the value "{$pubId}".</message>
-	<message key="plugins.importexport.pubIds.import.error.unknownObject">The object "{$pubObjectType}" with ID = {$pubObjectId} specified in the element with the value "{$pubId}" deos not exist for this journal.</message>
-	<message key="plugins.importexport.pubIds.import.error.pubIdExists">Public identifier of the type "{$pubIdType}" for the object {$pubObjectType} with ID = {$pubObjectId} already exists.</message>
-	<message key="plugins.importexport.pubIds.import.error.duplicatePubId">The public identifier "{$pubId}" is already in use by another object.</message>
-	<message key="plugins.importexport.pubIds.import.error.unknownPubId">Your import file contains a public identifier type "{$pubIdType}" that no pubId plugin can handle. Please install and/or activate the corresponding pubId plugin before trying to import this dataset.</message>
 </locale>

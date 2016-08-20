@@ -94,7 +94,7 @@
 	<message key="plugins.generic.lucene.sectionForm.ranking.normal">Normal.</message>
 	<message key="plugins.generic.lucene.sectionForm.ranking.high">Rankear más arriba.</message>
 	<message key="plugins.generic.lucene.settings.autosuggestTypeExplanation"><![CDATA[<strong>Verifique términos para resultados</strong>: Sólo terminos de sugerencias que procudirán realmetne resultados de búsqueda.
-Las sugerencias serán confirmadas via chequeo cruzado contra la revista actual y los términos ya ingresados en otros campos de búsqueda. <br/>
+Las sugerencias serán confirmadas via chequeo cruzado contra la revista actual y los términos ya ingresados en otros campos de búsqueda. <br />
 <strong>Utilice un diccionario global</strong>: Esto es más rápido, consume menos recursos en el servidor de búsqueda y por lo tanto escala mejor para grandes instalaciones. Sugerencias pueden contener términos irrelevantes sin embargo, por ej. de otras revistas o términos que no producen resultados de búsquedas.]]></message>
 	<message key="plugins.generic.lucene.sectionForm.rankingBoostInstructions">El conector de búsqueda Lucene/Solr le permite ajustar el peso relativo de los artículos en la lista de resultados de una consulta de búsqueda. Confiturar el peso del ranking más alto (o más bajo) no coloca los artículos en esta sección arriba (o debajo) de otros artículos. Pero rankearán mejor (o peor) de lo que lo harían sin los ajustes realizados. Condigurar esta opción como "no mostrar nunca" excluirá completamente los artículos en esta sección de los resultados de búsqueda.</message>
 </locale>

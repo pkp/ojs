@@ -26,9 +26,9 @@
 	<message key="plugins.generic.sword.depositPoints.type.optionalFixed">可选的; 固定的</message>
 	<message key="plugins.generic.sword.depositPoints.type.manager">只允许管理员</message>
 	<message key="plugins.generic.sword.depositPoints.type.description"><![CDATA[<h4>存储点类型:</h4>
-<p><strong>自动</strong>:存储自动完成。完整的存储点已指定。需指定一个用户名和密码。通知作者接受后，存储进行。<br/>
-<strong>可选的; 灵活的</strong>: 作者选择是否存储。指定文档显示一个服务文档，并且作者从文件中选择指定的存储点。通知作者接受后，存储进行。<br/>
-<strong>可选的; 固定的</strong>:作者选择是否存储。网址指定SWORD存储点。通知作者接受后，存储进行。<br/>
+<p><strong>自动</strong>:存储自动完成。完整的存储点已指定。需指定一个用户名和密码。通知作者接受后，存储进行。<br />
+<strong>可选的; 灵活的</strong>: 作者选择是否存储。指定文档显示一个服务文档，并且作者从文件中选择指定的存储点。通知作者接受后，存储进行。<br />
+<strong>可选的; 固定的</strong>:作者选择是否存储。网址指定SWORD存储点。通知作者接受后，存储进行。<br />
 <strong>只允许管理员</strong>：只有管理员使用存储点。网址显示服务文档。存储由期刊管理员在期刊管理界面的导入/导出插件完成。]]></message>
 	<message key="plugins.generic.sword.depositPoints.password.description">如果您没有指定密码，存储进行时，系统将提示您或者作者。注意：密码对所有期刊管理员都是可见的，并且不会以加密的形式存在数据库里。</message>
 	<message key="plugins.generic.sword.depositPoints.name">姓名</message>

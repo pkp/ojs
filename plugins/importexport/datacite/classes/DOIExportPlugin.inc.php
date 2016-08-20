@@ -161,6 +161,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 			case 'suppFiles':
 				// Test mode.
 				$templateMgr->assign('testMode', $this->isTestMode($request)?array('testMode' => 1):array());
+				$templateMgr->assign('filter', $request->getUserVar('filter'));
 
 				// Export without account.
 				$username = $this->getSetting($journal->getId(), 'username');
@@ -181,7 +182,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 			// Process register/reset/export/mark actions.
 			case 'process':
-				$this->_process($request, $journal);
+				$this->process($request, $journal);
 				break;
 
 			default:
@@ -194,7 +195,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @param $request PKPRequest
 	 * @param $journal Journal
 	 */
-	function _process(&$request, &$journal) {
+	function process(&$request, &$journal) {
 		$objectTypes = $this->getAllObjectTypes();
 		$target = $request->getUserVar('target');
 		$result = false;
@@ -246,7 +247,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 					if ($result === true) {
 						$this->_sendNotification(
 							$request,
-							'plugins.importexport.common.register.success',
+							'plugins.importexport.'.$this->getPluginId() .'.register.success',
 							NOTIFICATION_TYPE_SUCCESS
 						);
 
@@ -693,17 +694,27 @@ class DOIExportPlugin extends ImportExportPlugin {
 			return $errors;
 		}
 
+		$arrayResult = array();
+		$falseResult = false; // medra can return also false
 		// Register DOIs and their meta-data.
 		foreach($exportFiles as $exportFile => $objects) {
 			$result = $this->registerDoi($request, $journal, $objects, $exportFile);
 			if ($result !== true) {
-				$this->cleanTmpfiles($exportPath, array_keys($exportFiles));
-				return $result;
+				if (is_array($result)) {
+					$arrayResult = array_merge($arrayResult, $result);
+				} elseif ($result == false) {
+					$falseResult = true;
+				}
 			}
 		}
 
 		// Remove all temporary files.
 		$this->cleanTmpfiles($exportPath, array_keys($exportFiles));
+
+		if (!empty($arrayResult)) {
+			return $arrayResult;
+		}
+		if ($falseResult) return false;
 
 		return true;
 	}

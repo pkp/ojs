@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="zh_TW" full_name = "繁體中文">
+<locale name="zh_TW" full_name="繁體中文">
 	<message key="manager.emails.confirmResetAll">您確定您要重設這份期刊中所有的電子郵件樣版為預設值？您將會失去您曾自訂過的所有設定.</message>
 	<message key="manager.files.note">請注意：檔案瀏覽器是一項高階的功能，它允許一個期刊內的檔案和目錄直接被瀏覽和作。</message>
 	<message key="manager.groups">編輯團隊</message>
@@ -214,7 +214,6 @@
 	<message key="manager.setup.notifications.description">在成功完成投稿程序後，作者會自動地發出一封通知電子郵件（可以在「預備電子郵件」中檢視與編輯）。此外，通知信的副本可以用下列的方式寄出：</message>
 	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>注意：</strong>收稿通知的電子郵件現在是關閉的。若要開啟，請在 <a class="action" href="{$preparedEmailsUrl}">備用電子郵件</a>啟用「收稿通知」電子郵件。]]></message>
 	<message key="manager.setup.noUseCopyeditors">編輯將會擔負起校樣編輯的工作。</message>
-	<message key="manager.setup.noUseLayoutEditors">The editors will prepare the galleys in the appropriate format for electronic publication.編輯會為電子出版品準備恰當格式的校樣版面</message>
 	<message key="manager.setup.noUseProofreaders">編輯與作者將會進行校對。</message>
 	<message key="manager.setup.numPageLinks">網頁連結</message>
 	<message key="manager.setup.onlineAccessManagement">線上閱讀管理</message>

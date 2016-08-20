@@ -26,7 +26,7 @@
 	<message key="plugins.generic.xmlGalley.settings.notAvailable">Ikke tilgængelig</message>
 
 	<message key="plugins.generic.xmlGalley.settings.externalXSLT">Ekstern kommando-linie XSLT gengivelse (f.eks. Xalan)</message>
-	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Indtast den fulde sti til XSLT genereringsværktøjet med alle krævede parametre.  Brug %xsl til at erstatte placeringen af XSL stylesheet filen, og %xml til at erstatte placeringen af XML kildefilen; f.eks.: <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Indtast den fulde sti til XSLT genereringsværktøjet med alle krævede parametre.  Brug %xsl til at erstatte placeringen af XSL stylesheet filen, og %xml til at erstatte placeringen af XML kildefilen; f.eks.: <br /><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">Test XSLT</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">Ekstern XSLT test lykkedes.</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">Ekstern XSLT test mislykkedes.</message>
@@ -36,7 +36,7 @@
 	<message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM Journal Publishing DTD</a> → XHTML]]></message>
 
 	<message key="plugins.generic.xmlGalley.settings.xslFOP">Aktiver generering af PDF korrekturer ved hjælp af XSL-FO (f.eks. FOP)</message>
-	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Indtast den fulde sti til FO processor med alle krævede paramre. Brug %fo til at erstatte placeringen af XSL-FO filen, og %pdf til at erstatte placeringen af PDF filen; f.eks.: <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Indtast den fulde sti til FO processor med alle krævede paramre. Brug %fo til at erstatte placeringen af XSL-FO filen, og %pdf til at erstatte placeringen af PDF filen; f.eks.: <br /><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired">Der skal angives en ekstern kommando-linie FO processor.</message>
 
 	<message key="plugins.generic.xmlGalley.settings.customXSL">Standard XSL stylesheet</message>

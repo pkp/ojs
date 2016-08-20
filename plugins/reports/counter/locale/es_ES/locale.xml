@@ -7,7 +7,7 @@
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   *
   * Localization strings.
   -->
@@ -28,4 +28,5 @@
 	<message key="plugins.reports.counter.1a.ytdPdf">PDF del último año</message>
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Total para todas las revistas</message>
 	<message key="plugins.reports.counter.legacyStats">Los siguientes enlaces generan informes mediante datos antiguos del módulo COUNTER. Si desea generar informes COUNTER mediante el nuevo tipo de métrica COUNTER de OJS, utilice los siguientes enlaces.</message>
+	<message key="plugins.reports.counter.1a.xml">versión XML</message>
 </locale>

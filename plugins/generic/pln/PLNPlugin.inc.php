@@ -196,6 +196,11 @@ class PLNPlugin extends GenericPlugin {
 					return $uuid;
 				$this->updateSetting($journalId, $settingName, $this->newUUID());
 				break;
+			case 'object_type':
+				$type = parent::getSetting($journalId, $settingName);
+				if( ! is_null($type)) return $type;
+				$this->updateSetting($journalId, $settingName, PLN_PLUGIN_DEPOSIT_OBJECT_ISSUE);
+				break;
 			case 'pln_network':
 				return Config::getVar('lockss', 'pln_url', PLN_DEFAULT_NETWORK);
 			case 'pln_status_docs':
@@ -634,7 +639,7 @@ class PLNPlugin extends GenericPlugin {
 	function cronEnabled() {
 		$application =& PKPApplication::getApplication();
 		$products =& $application->getEnabledProducts('plugins.generic');
-		return isset($products['acron']) || Config::getVar('scheduled_tasks', false);
+		return isset($products['acron']) || Config::getVar('general', 'scheduled_tasks', false);
 	}
 		
 	/**

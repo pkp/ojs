@@ -29,7 +29,6 @@
 	<message key="plugins.importexport.crossref.export.unregistered">Exporter tous les articles non enregistrés.</message>
 	<message key="plugins.importexport.crossref.export.selectUnregistered">Sélectionner les articles non enregistrés.</message>
 	<message key="plugins.importexport.crossref.export.noUnregistered">Tous les articles publiés ont été enregistrés (ou aucun article n'a été attribué d'identifiant d'objet numérique, DOI).</message>
-	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">Il n'y a aucune date de publication pour l'article avec l'identifiant {$param}.</message>
 	<message key="plugins.importexport.crossref.settings.form.description">Veuillez configurer le plugin de l'exportation/l'inscription CrossRef:</message>
 	<message key="plugins.importexport.crossref.settings.depositorIntro">Veuillez saisir le nom et l'adresse courriel du ou de la responsable des dépôts des identifiants d'objet numérique (DOI) CrossRef.</message>
 	<message key="plugins.importexport.crossref.settings.description"><![CDATA[Veuillez <a href="{$settingsUrl}">configurer</a> le plugin d'exportation / d'inscription CrossRef avant de l'utiliser pour la première fois.]]></message>

@@ -39,7 +39,7 @@
 
 {if $notFirstMessage}
 	</ul>
-	<br/>
+	<br />
 {/if}
 
 <div id="recipients">
@@ -94,7 +94,7 @@
 </table>
 </div>{* recipients *}
 
-<br/>
+<br />
 
 <div id="issue">
 <h3>{translate key="issue.issue"}</h3>
@@ -115,7 +115,7 @@
 </table>
 </div>
 
-<br/>
+<br />
 
 
 <table id="email" class="data" width="100%">

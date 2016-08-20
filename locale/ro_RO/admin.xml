@@ -13,7 +13,7 @@
   *
   -->
 
-<locale name="ro_RO" full_name = "Romanian">
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="admin.hostedJournals">Revistele găzduite</message>
 	<message key="admin.settings.journalRedirect">Redirectare către revistă</message>
 	<message key="admin.settings.journalRedirectInstructions">Cererile către siteul principal vor fi redirectare către această revistă. Acest lucru poate fi util dacă siteul găzduieşte doar o singură revistă.</message>
@@ -61,7 +61,7 @@
 	<message key="admin.mergeUsers.from.description">Selectează un utilizator pentru a-l uni cu alt cont de utilizator (de ex. când cineva are două conturi de utilizator). Primul cont selectat va fi şters iar sarcinile, propunerile, etc. vor fi atribuite celui de-al doilea cont.</message>
 	<message key="admin.mergeUsers.allUsers">Toţi utilizatorii angajați</message>
 	<message key="admin.mergeUsers.confirm">Eşti sigur că vrei să unești contul cu numele "{$oldUsername}" cu, contul cu numele "{$newUsername}"? Contul nu numele "{$oldUsername}" nu va mai exista după aceea. Această acţiune nu este reversibilă.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Utilizatori dezangajați.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Utilizatori dezangajați.</message>
 	<message key="admin.categories">Categorii</message>
 	<message key="admin.categories.disableCategories">Nu organiza revistele în categorii.</message>
 	<message key="admin.categories.editTitle">Editează categorie</message>

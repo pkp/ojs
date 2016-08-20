@@ -12,10 +12,10 @@
   *
   -->
 
-<locale name="pt_PT" full_name = "Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="admin.hostedJournals">Revistas Hospedadas</message>
-	<message key="admin.settings.journalRedirect">Redireccionamento para revista hospedada</message>
-	<message key="admin.settings.journalRedirectInstructions">Os pedidos realizados no Portal Principal serão direccionados a esta revista. Esta opção pode ser útil caso o Portal hospede apenas uma revista.</message>
+	<message key="admin.settings.journalRedirect">Redireccionamento para a revista hospedada</message>
+	<message key="admin.settings.journalRedirectInstructions">Os pedidos realizados no Portal Principal serão direccionados para esta revista. Esta opção pode ser útil caso o Portal hospede apenas uma revista.</message>
 	<message key="admin.settings.noJournalRedirect">Não redireccionar</message>
 	<message key="admin.languages.primaryLocaleInstructions">Este será o idioma padrão para o portal e todas as revistas hospedadas.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Os idiomas seleccionados estarão disponíveis para todas as revistas no portal, e constarão da lista de idiomas que aparece em cada página do sistema (esta opção pode ser desactivada individualmente por revista). Caso não sejam seleccionados vários idiomas, a lista de idiomas não estará disponível e a opção "configurações de idioma" não estará disponível para as revistas.</message>
@@ -25,7 +25,7 @@
 	<message key="admin.languages.downloadFailed">Erro ao transferir idioma. A seguir, um detalhe do(s) erro(s).</message>
 	<message key="admin.languages.localeInstalled">Idioma "{$locale}" instalado.</message>
 	<message key="admin.languages.download">Transferir idioma</message>
-	<message key="admin.languages.reloadDefaultEmailTemplates">Atualizar modelos de e-mail padrão</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Actualizar modelos de e-mail padrão</message>
 	<message key="admin.languages.download.cannotOpen">Não é possível abrir a identificação de idioma do portal do PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Não é possível adicionar novo idioma no ficheiro de registo de idiomas, geralmente "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">Base de Dados de Utilizadores do OJS</message>
@@ -39,7 +39,7 @@
 	<message key="admin.journals.noneCreated">Nenhuma revista foi criada.</message>
 	<message key="admin.journals.confirmDelete">Deseja realmente eliminar permanentemente esta revista e o seu conteúdo?</message>
 	<message key="admin.journals.create">Criar revista</message>
-	<message key="admin.journals.createInstructions">O seu registo como Editor-Gestor da revista será automático. Após a criação de uma revista, aceda-a como gestor e continue com as configurações da revista e registo de utilizadores.</message>
+	<message key="admin.journals.createInstructions">O seu registo como Director da revista será automático. Após a criação de uma revista, aceda-a como gestor e continue com as configurações da revista e registo de utilizadores.</message>
 	<message key="admin.journals.urlWillBe">Geralmente é usado um acrónimo que identifica a revista. O URL da revista será: {$sampleUrl}</message>
 	<message key="admin.journals.form.titleRequired">Título obrigatório</message>
 	<message key="admin.journals.form.pathRequired">Caminho obrigatório.</message>
@@ -59,19 +59,19 @@
 	<message key="admin.mergeUsers.from.description">Escolha um utilizador para juntar o registo com o de outra conta (quando um utilizador possui duas contas distintas, em vez de acumular funções editoriais). O registo seleccionado primeiro será excluído e as suas submissões e histórico de tarefas atribuídas ao segundo registo escolhido.</message>
 	<message key="admin.mergeUsers.allUsers">Todos os utilizadores</message>
 	<message key="admin.mergeUsers.confirm">Deseja realmente juntar o registo do utilizador "{$oldAccountCount}" no registo do utilizador "{$newUsername}"? O registo de "{$oldAccountCount}" será eliminado permanentemente. Esta acção é irreversível!</message>
-	<message key="admin.mergerUsers.noneEnrolled">Nenhum utilizador registado.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Nenhum utilizador registado.</message>
 	<message key="admin.locale.maybeIncomplete">Idiomas marcados podem estar incompletos.</message>
 	<message key="admin.settings.options">Opções</message>
 	<message key="admin.settings.useAlphalist">Para plataformas com muitas revistas, mostrar uma lista alfabética na página principal, permitindo uma navegação alfabética por revista.</message>
-	<message key="admin.settings.usePaging">Para plataformas cm muitas revistas, distribuir as revistas por diferentes páginas.</message>
+	<message key="admin.settings.usePaging">Para plataformas com muitas revistas, distribuir as revistas por diferentes páginas.</message>
 	<message key="admin.settings.journalsList">Elementos da revista</message>
-	<message key="admin.settings.journalsList.description">Por favor seleccione os elementos da revista que serão apresentados em cada página da respectiva revista.</message>
+	<message key="admin.settings.journalsList.description">Por favor, seleccione os elementos da revista que serão apresentados em cada página da respectiva revista.</message>
 	<message key="admin.settings.journalsList.showThumbnail">Thumbnail da revista</message>
 	<message key="admin.settings.journalsList.showTitle">Título da revista</message>
 	<message key="admin.settings.journalsList.showDescription">Descrição da revista</message>
 	<message key="admin.settings.defaultMetricDescription">A instalação do OJS foi configurada para guardar mais do que uma métrica. As estatísticas de utilização serão exibidas em diferentes contextos.
 		Nalgumas situações será usada apenas uma única métrica, e.g. mostrar uma lista ordenada dos artigos mais usados ou ordenar 
-		resultados da pesquisa. Por favor seleccione um das métricas configuradas como padrão.</message>
+		resultados da pesquisa. Por favor, seleccione um das métricas configuradas como padrão.</message>
 	<message key="admin.categories">Categorias</message>
 	<message key="admin.categories.enable.description">O administrador pode escolher definir um mapa de categorias para ajudar na organização de plataformas que alojam muitas revistas. Os directores de revista poderão escolher diversas categorias para cada revista, e leitores pode pesquisar os conteúdos das revistas por categoria.</message>
 	<message key="admin.categories.disableCategories">Não organizar as revistas por categorias</message>
@@ -83,13 +83,6 @@
 	<message key="admin.categories.confirmDelete">Tem a certeza que pretende eliminar esta categoria?</message>
 	<message key="admin.categories.name">Nome</message>
 	<message key="admin.categories.nameRequired">É obrigatório indicar um nome da categoria</message>
-	<message key="admin.copyAccessLogFileTool.usage">Copy the passed apache access log file(s), filtering the entries related with this installation,
-to the current files directory, inside the UsageStatsPlugin stage directory. Must run under user with enough privilegies to read access apache log files.
-
-This tool will only copy files that aren't already inside the usageStats file loader directories (stage, processing, archive, reject).
-
-Usage: {$scriptName} path/to/apache/log/file.log
-Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory</message>
 	<message key="admin.copyAccessLogFileTool.error.creatingFolder">ERRO: impossível criar uma pasta temporária {$tmpDir}</message>
 	<message key="admin.copyAccessLogFileTool.error.acessingFile">ERRO: Ficheiro {$filePath} não existe ou não está acessível.</message>
 	<message key="admin.copyAccessLogFileTool.error.copyingFile">ERRO: não é possível copiar ficheiro de {$filePath} para {$tmpFilePath}</message>

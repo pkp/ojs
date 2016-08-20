@@ -279,7 +279,7 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>LƯU Ý!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>LƯU Ý!</h4>
 <p>Hệ thống không thể tự động ghi đè lên file cấu hình. Để thực hiện những thay đổi cấu hình quý vị phải mở file <tt>config.inc.php</tt> bằng phần mềm soạn thảo text phù hợp và thay nội dung file bằng nội dung dưới đây.</p>]]></message>
 
 	
@@ -310,9 +310,6 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Phần mềm OJS hỗ trợ hệ thống <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Nhiều bản sao giữ cho tài liệu được an toàn - Lots of Copies Keep Stuff Safe) nhằm đảm bảo lưu giữ an toàn và vĩnh viễn kho bài viết của tạp chí. LOCKSS là một phần mềm mã nguồn mở được phát triển ở Thư viện Đại học Stanford cho phép các thư viện bảo quản những tạp chí trên web chọn lọc bằng cách thu thập thường xuyên từ những website đăng ký nội dung mới xuất bản và lưu kho nội dung này. Mỗi kho sẽ liên tục được kiểm tra so với các nơi lưu trữ ngoài của thư viện, và nếu dữ liệu được tìm thấy bị hỏng hoặc mất, những nơi lưu giữ khác hoặc bản thân tạp chí này sẽ được dùng về phục hồi lại.
-<br /><br />
-Setting up LOCKSS support for Open Journal Systems does not need to take place until after publishing is fully underway, at which point follow these two steps:]]></message>
 	
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Tạp chí sẽ sử dụng một hệ thống phân loại chủ đề có sẵn trên mạng.<br />
@@ -377,10 +374,10 @@ Quý vị có thể cho người dùng biết lý do tại sao tài khoản củ
 	<!-- Navigation sidebar menu -->
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Tên có liên kết sẽ dẫn tới hồ sơ của người phản biện.<br/>
-Đánh giá có giá trị trong khoảng 5 (Xuất sắc).<br/>
-Số tuần chỉ khoảng thời gian hoàn thành phản biện.<br/>
-Mới nhất là ngày ngày bài phản biện gần nhất được chấp nhận.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Tên có liên kết sẽ dẫn tới hồ sơ của người phản biện.<br />
+Đánh giá có giá trị trong khoảng 5 (Xuất sắc).<br />
+Số tuần chỉ khoảng thời gian hoàn thành phản biện.<br />
+Mới nhất là ngày ngày bài phản biện gần nhất được chấp nhận.<br />
 Đang xử lý là số người phản biện đang được cân nhắc hoặc tiến hành.]]></message>
 
 
@@ -799,8 +796,8 @@ Máy chủ của quý vị hiện có hỗ trợ mbstring: <strong>{$supportsMBS
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[URLs của các website tìm kiếm có khả năng không còn hoạt động được hiển thị dưới đây.<br/>
-Quý vị nên tự kiểm tra các URL được đánh dấu là không hoạt động vì kiểm tra trên đây không hoàn toàn chính xác.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[URLs của các website tìm kiếm có khả năng không còn hoạt động được hiển thị dưới đây.<br />
+Quý vị nên tự kiểm tra các URL được đánh dấu là không hoạt động vì kiểm tra trên đây không hoàn toàn chính xác.<br />
 Việc xác thực có thể không thành công đối với các website tìm kiếm đòi phải dữ liệu phải được gửi đi ở dạng mẫu biểu (form).]]></message>
 	
 	<!-- RT Entities -->
@@ -935,30 +932,6 @@ Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành
 	</ul>
 <p>Có thể tự tải các gói ngôn ngữ từ website của <a href="http://pkp.sfu.ca">PKP</a>.</p>]]></message>
 	<message key="plugins.categories.citationFormats.description">Phụ trợ định dạng Trích dẫn tài liệu tham khảo cung cấp cho người dùng các định dạng khác nhau khi trích dẫn một bài viết.</message>
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Thông báo về Bản quyền đề xuất theo Creative Commons</h3>
-<h4>1. Chính sách đề xuất dành cho Tạp chí cho Truy cập Tự do</h4>
-Tác giả xuất bản bài viết của mình trên tạp chí này đồng ý với những điều khoản sau:
-<ol type="a">
-	<li>Tác giả vẫn giữ bản quyền và trao cho tạp chí quyền xuất bản lần đầu tiên đồng thời phát hành tác phẩm theo giấy phép <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> cho phép những người khác chia sẻ tác phẩm đó với điều kiện nêu rõ tác giả và nơi xuất bản đầu tiên.</li>
-	<li>Tác giả có thể ký kết những thỏa thuận riêng rẻ khác mang tính hợp đồng đối với việc phát hành không độc quyền phiên bản của tác phẩm in trên tạp chí này (v.d., đưa vào một kho dữ liệu của một cơ quan hoặc đưa vào một cuốn sách), với điều kiện nêu rõ nơi xuất bản đầu tiên.</li>
-	<li>Tác giả được phép và được khuyến khích đưa bài viết của mình lên mạng (v.d., trong các kho dữ liệu cơ quan hoặc website của tác giả) trước và trong quá trình nộp bài viết vì nó có thể đưa lại những trao đổi hiệu quả cũng như giúp tác phẩm có nhiều địa chỉ trích dẫn hơn (Xem <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">Hiệu lực của Truy cập Tự do</a>).</li>
-</ol>
-
-<h4>1. Chính sách đề xuất dành cho Tạp chí cho Truy cập Tự do Trễ thời gian</h4>
-Tác giả xuất bản bài viết của mình trên tạp chí này đồng ý với những điều khoản sau:
-<ol type="a">
-	<li>Tác giả vẫn giữ bản quyền và trao cho tạp chí quyền xuất bản lần đầu tiên và sau [số tháng] phát hành tác phẩm theo giấy phép <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a>cho phép những người khác chia sẻ tác phẩm đó với điều kiện nêu rõ tác giả và nơi xuất bản đầu tiên.</li>
-	<li>Tác giả có thể ký kết những thỏa thuận riêng rẻ khác mang tính hợp đồng đối với việc phát hành không độc quyền phiên bản của tác phẩm in trên tạp chí này (v.d., đưa vào một kho dữ liệu của một cơ quan hoặc đưa vào một cuốn sách), với điều kiện nêu rõ nơi xuất bản đầu tiên.</li>
-	<li>Tác giả được phép và được khuyến khích đưa bài viết của mình lên mạng (v.d., trong các kho dữ liệu cơ quan hoặc website của tác giả) trước và trong quá trình nộp bài viết vì nó có thể đưa lại những trao đổi hiệu quả cũng như giúp tác phẩm có nhiều địa chỉ trích dẫn hơn (Xem <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">Hiệu lực của Truy cập Tự do</a>).</li>
-</ol>
-
-<h4>Proposed Policy for Journals That Offer Delayed Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
-</ol>]]></message>
 	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Nhằm giúp bạn đọc tìm các phiên bản trên mạng của tác phẩm được một tác giả trích dẫn, có các lựa chọn sau.</p>
 <ol>
 <li><strong>Thêm một Công cụ đọc</strong><p>Tổng biên tập có thể thêm "Tìm các bài trích dẫn" vào các Công cụ đọc đi kèm với bài viết được xuất bản, giúp cho bạn đọc dùng tiêu đề của một bài viết được trích dẫn để tìm bài viết đó trong các cơ sở dữ liệu đã được lựa chọn trước</p></li>

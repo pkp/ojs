@@ -42,7 +42,7 @@
 		{if $authorAffiliation}, {$authorAffiliation|escape}{/if}
 		{if $authorCountry} ({$author->getCountryLocalized()}){/if}
 	{/strip}
-	<br/>
+	<br />
 {/iterate}
 {if !$authors->wasEmpty()}
 	<br />

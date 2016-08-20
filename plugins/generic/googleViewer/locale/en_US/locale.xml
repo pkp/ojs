@@ -13,5 +13,5 @@
 
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.googleViewer.name">Google embedded viewer Plugin</message>
-	<message key="plugins.generic.googleViewer.description"><![CDATA[This plugin uses the <a href="https://docs.google.com/viewer">Google Docs Viewer</a> service to embed PDFs on the article view page.]]></message>
+	<message key="plugins.generic.googleViewer.description"><![CDATA[This plugin uses the Google Docs Viewer service to embed PDFs on the article view page.]]></message>
 </locale>

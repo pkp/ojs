@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="zh_CN" full_name = "China .PR">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="author.submit">新投稿</message>
 	<message key="author.track">处理中的投稿</message>
 	<message key="author.competingInterests"><![CDATA[利益冲突 <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;政策</a>]]></message>

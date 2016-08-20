@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name = "Turkish">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.generic.roundedcorners.displayName">Yuvarlak Köşeler</message>
 	<message key="plugins.generic.roundedcorners.description">Bu eklenti yan taraf blok ve köşelerine bir arka plan koyar. Kullanılan renkler eklentinin CSS biçim sayfasında bulunabilir ve değişiklikler yapılabilir.</message>
 </locale>

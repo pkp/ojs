@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="no_NO" full_name = "Norwegian">
+<locale name="no_NO" full_name="Norsk">
 	<message key="manager.emails.confirmResetAll">Er du sikker på at du vil tilbakestille alle e-postmaler i dette tidsskriftet? Du vil miste alle tilpasninger du har gjort.</message>
 	<message key="manager.files.note">NB: Filutforskeren er en avansert funksjon som gir mulighet til å manipulere filene og mappene til tidsskriftet direkte.</message>
 	<message key="manager.groups">Redaksjon</message>
@@ -22,7 +22,7 @@
 	<message key="manager.groups.enableBoard.description"><![CDATA[Til visning i <a href="{$aboutEditorialTeamUrl}">Redaksjon</a> i Om tidsskriftet:]]></message>
 	<message key="manager.groups.noneCreated">Ingen redaksjonelle stillinger er opprettet.</message>
 	<message key="manager.journalManagement">Tidsskriftadministrasjon</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS kan vises for brukere på alle språk OJS til enhver tid støtter. Dessuten kan OJS brukes som et delvis flerspråklig system, som gir brukere mulighet til å veksle mellom språk på hver side, og som tillater at visse data skrives inn på flere tilleggssspråk.<br /><br/>Hvis et språk som er støttet av OJS ikke er oppført på listen nedenfor, må du be nettstedsadministratoren din om å installere språket, gjennom grensesnittet for nettstedsadministrasjon. Hvordan støtte for nye språk skal legges til, er beskrevet i OJS-dokumentasjonen.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS kan vises for brukere på alle språk OJS til enhver tid støtter. Dessuten kan OJS brukes som et delvis flerspråklig system, som gir brukere mulighet til å veksle mellom språk på hver side, og som tillater at visse data skrives inn på flere tilleggssspråk.<br /><br />Hvis et språk som er støttet av OJS ikke er oppført på listen nedenfor, må du be nettstedsadministratoren din om å installere språket, gjennom grensesnittet for nettstedsadministrasjon. Hvordan støtte for nye språk skal legges til, er beskrevet i OJS-dokumentasjonen.]]></message>
 	<message key="manager.languages.noneAvailable">Beklager, ingen flere språk er tilgjengelig. Kontakt nettstedsadministratoren din hvis du ønsker å bruke flere språk i dette tidsskriftet.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Dette vil bli standard språk for tidsskriftets nettsted.</message>
 	<message key="manager.managementPages">Administrasjonssider</message>

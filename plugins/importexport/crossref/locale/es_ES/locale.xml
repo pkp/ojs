@@ -7,7 +7,7 @@
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   *
   * Localization strings
   -->
@@ -35,7 +35,6 @@
 	<message key="plugins.importexport.crossref.export.unregistered">Artículos sin registrar</message>
 	<message key="plugins.importexport.crossref.export.selectUnregistered">Seleccione los artículos no registrados</message>
 	<message key="plugins.importexport.crossref.export.noUnregistered">Todos los artículos publicados han sido publicados (o ninguno de ellos tiene un DOI asignado)</message>
-	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">El artículo con ID {$param} no tiene fecha de publicación.</message>
 	<message key="plugins.importexport.crossref.requirements">Requerimientos</message>
 	<message key="plugins.importexport.crossref.error.pluginNotConfigured"><![CDATA[El plugin CrossRef no está configurado! Configure este plugin en la <a href="{$settingsUrl}">página de configuración</a>.]]></message>
 </locale>

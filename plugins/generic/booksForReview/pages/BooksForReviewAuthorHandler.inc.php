@@ -125,6 +125,9 @@ class BooksForReviewAuthorHandler extends Handler {
 						$user =& $request->getUser();
 						$userId = $user->getId();
 
+						$userFullName = $user->getFullName();
+						$userEmail = $user->getEmail();
+
 						$editorFullName = $book->getEditorFullName();
 						$editorEmail = $book->getEditorEmail();
 
@@ -135,6 +138,7 @@ class BooksForReviewAuthorHandler extends Handler {
 						);
 
 						$email->addRecipient($editorEmail, $editorFullName);
+						$email->setFrom($userEmail, $userFullName);
 						$email->assignParams($paramArray);
 					}
 					$returnUrl = $request->url(null, 'author', 'requestBookForReview', $bookId);

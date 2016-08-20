@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="da_DK" full_name = "Danish">
+<locale name="da_DK" full_name="Dansk">
 	<message key="admin.hostedJournals">Tilknyttede tidsskrifter</message>
 	<message key="admin.settings.journalRedirect">Omdirigering af tidsskrift</message>
 	<message key="admin.settings.journalRedirectInstructions">Forespørgsler til hovedwebstedet omdirigeres til dette tidsskrift. Dette kan f.eks. være nyttigt, hvis webstedet kun er vært for et enkelt tidsskrift.</message>
@@ -59,7 +59,7 @@
 	<message key="admin.mergeUsers.from.description">Vælg en bruger, som skal flettes til en anden brugerkonto (f.eks. hvis en person har to brugerkonti). Den først valgte konto slettes, og dens manuskripter, tildelinger osv. tilskrives den anden konto.</message>
 	<message key="admin.mergeUsers.allUsers">Alle tilmeldte brugere</message>
 	<message key="admin.mergeUsers.confirm">Er du sikker på, at du vil flette kontoen med brugernavnet {$oldAccountCount} til kontoen med brugernavnet "{$newUsername}"? Kontoen med brugernavnet {$oldAccountCount} vil derefter ophøre med at eksistere. Denne handling kan ikke fortrydes.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Ingen tilmeldte brugere.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Ingen tilmeldte brugere.</message>
 	<message key="admin.locale.maybeIncomplete">De markerede landestandarder kan være ufuldstændige</message>
 	<message key="admin.categories">Kategorier</message>
 	<message key="admin.categories.editTitle">Redigér kategori</message>
@@ -83,19 +83,9 @@
 	<message key="admin.settings.defaultMetricDescription">Jeres OJS-installation er konfigureret til at registrere mere end en metrisk brugerenhed. Brugerstatistikker vil blive fremvist i flere forskellige sammenhænge.
 		Der er tilfælde, hvor en enkelt brugerstatistik skal anvendes, f.eks. ved visning af en sorteret liste over mest anvendte artikler eller ved rangering af
 		søgeresultater. Vælg én af de konfigurerede metriske enheder som standard.</message>
-	<message key="admin.copyAccessLogFileTool.usage">Copy the passed apache access log file(s), filtering the entries related with this installation,
-to the current files directory, inside the UsageStatsPlugin stage directory. Must run under user with enough privilegies to read access apache log files.
-
-This tool will only copy files that aren't already inside the usageStats file loader directories (stage, processing, archive, reject).
-
-Usage: {$scriptName} path/to/apache/log/file.log
-Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory</message>
 	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Fejl: Kan ikke oprette temporær mappe {$tmpDir}</message>
 	<message key="admin.copyAccessLogFileTool.error.acessingFile">Fejl: {$filePath} findes ikke eller kan ikke tilgås</message>
 	<message key="admin.copyAccessLogFileTool.error.copyingFile">Fejl: Kan ikke kopiere fra {$filePath} til {$tmpFilePath}</message>
 	<message key="admin.copyAccessLogFileTool.error.deletingFile">Fejl: Kan ikke slette  {$tmpFilePath}</message>
 	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Advarsel: {$filePath} eksisterer allerede i brugerstatistikmappen.</message>
-	<message key="admin.copyAccessLogFileTool.success">Succes: {$filePath} to {$destinationPath}</message>
-	<message key="admin.settings.security">Security</message>
-	<message key="admin.settings.security.plugins">Prevent journal managers to install, update or delete plugins.</message>
 </locale>

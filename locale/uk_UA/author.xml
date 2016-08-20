@@ -14,7 +14,7 @@
   * V. I. Vernadsky National Library of Ukraine
   -->
 
-<locale name="uk_UA" full_name = "Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <message key="author.submit">Нове подання</message>
        <message key="author.track">Активні подання</message>
        <message key="author.competingInterests"><![CDATA[<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Політика</a> щодо&nbsp;конфлікту&nbsp;інтересів]]></message>

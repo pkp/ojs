@@ -37,13 +37,48 @@
 
 	<message key="plugins.importexport.crossref.export.unregistered">Export unregistered articles</message>
 	<message key="plugins.importexport.crossref.export.selectUnregistered">Select unregistered articles</message>
-	<message key="plugins.importexport.crossref.export.noUnregistered">All published articles have already been registered (or none of them has a DOI assigned).</message>
+
+	<message key="plugins.importexport.crossref.manageDOIs">Manage DOIs</message>
+	<message key="plugins.importexport.crossref.manageIssues">Manage Issues</message>
+	<message key="plugins.importexport.crossref.manageArticleDOIs">Manage Article DOIs</message>
+	<message key="plugins.importexport.crossref.articles.notDeposited">All published articles have already been registered (or none of them has a DOI assigned).</message>
+	<message key="plugins.importexport.crossref.articles.failed">There are no failed deposits.</message>
+	<message key="plugins.importexport.crossref.articles.submitted">There are no just submitted DOIs.</message>
+	<message key="plugins.importexport.crossref.articles.completed">There are no completed deposits.</message>
+	<message key="plugins.importexport.crossref.articles.found">There are no active DOIs</message>
+
+	<message key="plugins.importexport.crossref.downloadXML">Download XML</message>
+	<message key="plugins.importexport.crossref.checkStatus">Check status</message>
+	<message key="plugins.importexport.crossref.checkStatusDescription">Click this button to update the status for the selected object(s).</message>
+	<message key="plugins.importexport.crossref.status.all">All</message>
+	<message key="plugins.importexport.crossref.status.non">Not deposited</message>
+	<message key="plugins.importexport.crossref.status.submitted">Submitted</message>
+	<message key="plugins.importexport.crossref.status.completed">Deposited</message>
+	<message key="plugins.importexport.crossref.status.failed">Failed</message>
+	<message key="plugins.importexport.crossref.status.registered">Active</message>
+	<message key="plugins.importexport.crossref.status.markedRegistered">Marked registered</message>
+	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[
+		<p>Deposit status:</p>
+		<p>
+		- Not deposited: no deposit attempt has been made for this DOI.<br />
+		- Submitted: this DOI has been submitted for the deposit.<br />
+		- Deposited: the DOI has been deposited to Crossref, but may not be active yet.<br />
+		- Active: the DOI has been deposited, and is resolving correctly.<br />
+		- Failed: the DOI deposit has failed.<br />
+		- Marked registered: the DOI was manually marked as registered.
+		</p>
+		<p>Only the status of the last deposit attempt is displayed.</p>
+		<p>If a deposit has failed, please solve the problem and try to register the DOI again.</p>]]></message>
+
+	<message key="plugins.importexport.crossref.notification.failed">A DOI has failed to register. Please go to CrossRef Export/Registration Plugin > Export unregistered articles > Failed.</message>
+	<message key="plugins.importexport.crossref.register.error.mdsError">Submission was not successful! The DOI registration server returned an error: '{$param}'.</message>
+	<message key="plugins.importexport.crossref.register.success">Submission successful!</message>
 
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Usage:
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register journal_path {issues|articles} objectId1 [objectId2] ...
 ]]></message>
 
-	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">The date published is missing for the article with ID {$param}.</message>
 	<message key="plugins.importexport.crossref.senderTask.name">CrossRef automatic registration task</message>
+	<message key="plugins.importexport.crossref.senderTask.warning.noDOIprefix">DOI prefix is missing for the journal with the path {$path}.</message>
 </locale>

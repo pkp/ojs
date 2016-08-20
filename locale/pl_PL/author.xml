@@ -10,7 +10,7 @@
   *
   -->
 
-<locale name="pl_PL" full_name = "Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="author.submit">Prześlij tekst do opublikowania</message>
 	<message key="author.track">Przesłane teksty</message>
 	<message key="author.competingInterests"><![CDATA[<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Zbieżne zainteresowania</a>]]></message>
@@ -34,7 +34,6 @@
 	<message key="author.submit.requestWaiver">Prośba o umorzenie płatności za publikację</message>
 	<message key="author.submit.qualityForWaiver">Proszę o umorzenie płatności za publikację testu</message>
 	<message key="author.submit.addReasonsForWaiver">Proszę uzasadnić dlaczego płatność za publikację tekstu powinna być umorzona.</message>
-	<message key="author.submit.mustEnterWaiverReason">If you are applying for a waiver, you must enter a reason in the space provided.</message>
 	<message key="author.submissions.queuedReviewSubsequent">W recenzji, etap {$round}</message>
 	<message key="author.submissions.queuedReviewRevisions">W recenzji: Wymagana korekta</message>
 	<message key="author.submissions.queuedEditingCopyedit">W korekcie: Wysłano prośbę o korektę</message>

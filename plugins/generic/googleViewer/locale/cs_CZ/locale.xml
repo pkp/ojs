@@ -13,5 +13,5 @@
 
 <locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.generic.googleViewer.name">Plugin pro Google vložený prohlížeč dokumentů</message>
-	<message key="plugins.generic.googleViewer.description"><![CDATA[Tento plugin používá <a href="https://docs.google.com/viewer">Prohlížeč dokumentů Google</a> - službu na prohlížení PDFs v rámci stránky článku.]]></message>
+	<message key="plugins.generic.googleViewer.description"><![CDATA[Tento plugin používá Prohlížeč dokumentů Google - službu na prohlížení PDFs v rámci stránky článku.]]></message>
 </locale>

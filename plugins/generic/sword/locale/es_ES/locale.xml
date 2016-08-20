@@ -7,7 +7,7 @@
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   *
   * Localization strings
   -->
@@ -26,7 +26,7 @@
 	<message key="plugins.generic.sword.depositPoints.type.optionalSelection">Opcional; Flexible</message>
 	<message key="plugins.generic.sword.depositPoints.type.optionalFixed">Opcional; Fijo</message>
 	<message key="plugins.generic.sword.depositPoints.type.manager">Sólo para el gestor/a</message>
-	<message key="plugins.generic.sword.depositPoints.type.description"><![CDATA[<h4>Tipos de puntos de depósito:</h4> <p><strong>Automático</strong>: El depósito se produce de forma automática. Se indica el punto de depósito SWORD completo. Debe indicar un nombre de usuario/a y una contraseña. El depósito se produce después de notificar al autor/a la aceptación.<br/> <strong>Opcional; Flexible</strong>: El autor/a puede decidir si desea depositar o no. La URL facilitada ofrece un documento de servicio y el autor/a puede decidir qué punto de depósito concreto usar de dicho documento. El depósito se produce después de notificar al autor/a la aceptación.<br/> <strong>Opcional; Flexible</strong>: El autor/a puede decidir si desea depositar o no. La URL indica el punto de depósito SWORD concreto. El depósito se produce después de notificar al autor/a la aceptación.<br/> <strong>Sólo el gestor/a</strong>: Sólo el gestor/a de la revista puede usar este punto de depósito. La URL indica un documento de servicio. El gestor/a de la revista realiza manualmente el depóstio mediante la interfaz Importar/Exportar de la Gestión de la revista.</p>]]></message>
+	<message key="plugins.generic.sword.depositPoints.type.description"><![CDATA[<h4>Tipos de puntos de depósito:</h4> <p><strong>Automático</strong>: El depósito se produce de forma automática. Se indica el punto de depósito SWORD completo. Debe indicar un nombre de usuario/a y una contraseña. El depósito se produce después de notificar al autor/a la aceptación.<br /> <strong>Opcional; Flexible</strong>: El autor/a puede decidir si desea depositar o no. La URL facilitada ofrece un documento de servicio y el autor/a puede decidir qué punto de depósito concreto usar de dicho documento. El depósito se produce después de notificar al autor/a la aceptación.<br/> <strong>Opcional; Flexible</strong>: El autor/a puede decidir si desea depositar o no. La URL indica el punto de depósito SWORD concreto. El depósito se produce después de notificar al autor/a la aceptación.<br/> <strong>Sólo el gestor/a</strong>: Sólo el gestor/a de la revista puede usar este punto de depósito. La URL indica un documento de servicio. El gestor/a de la revista realiza manualmente el depóstio mediante la interfaz Importar/Exportar de la Gestión de la revista.</p>]]></message>
 	<message key="plugins.generic.sword.depositPoints.password.description">Si no indica ahora una contraseña, se le solicitará cuando usted o el autor/a realicen el depósito. Esta contraseña será visible para todos los gestores/as de la revista y se guardará sin encriptar en la base de datos.</message>
 	<message key="plugins.generic.sword.depositPoints.name">Nombre</message>
 	<message key="plugins.generic.sword.automaticDepositComplete">El elemento "{$itemTitle}" se depositó automáticamente en el repositorio "{$repositoryName}".</message>

@@ -10,7 +10,7 @@
   *
   * Localization strings
   -->
- 
+
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.importexport.datacite.displayName">DataCite Export/Registration Plugin</message>
 	<message key="plugins.importexport.datacite.description">Export or register issue, article, galley and supplementary file metadata in DataCite format.</message>
@@ -29,20 +29,22 @@
 	]]></message>
 
 	<message key="plugins.importexport.datacite.settings.description"><![CDATA[Please <a href="{$settingsUrl}">configure</a> the DataCite export plug-in before using it for the first time.]]></message>
- 
+
 	<message key="plugins.importexport.datacite.settings.form.description">Please configure the DataCite export plug-in:</message>
 	<message key="plugins.importexport.datacite.settings.form.username">Username (symbol)</message>
 	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Please enter the username (symbol) you got from DataCite. The username may not contain colons.</message>
 	<message key="plugins.importexport.datacite.settings.form.passwordRequired">Please enter the password you got from DataCite.</message>
 	<message key="plugins.importexport.datacite.settings.form.automaticRegistration">Register DOIs automatically</message>
 	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description"><![CDATA[OJS will deposit DOIs automatically to DataCite as articles are published. Please note that this may take a short amount of time after publication to process. You can check for all unregistered DOIs in the <a href="{$unregisteredURL}">unregistered articles listing</a>.]]></message>
- 
+
 	<message key="plugins.importexport.datacite.export.suppFiles">Export supplementary files</message>
 	<message key="plugins.importexport.datacite.export.selectSuppFile">Select Supplementary Files</message>
 	<message key="plugins.importexport.datacite.export.noSuppFiles">No supplementary files currently have DOIs assigned.</message>
- 
+
+	<message key="plugins.importexport.datacite.register.success">Registration successful!</message>
+
 	<message key="plugins.importexport.datacite.export.error.suppFileNotFound">No supplementary file matched the specified suppfile ID: {$param}.</message>
- 
+
 	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[Usage: 
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...

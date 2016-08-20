@@ -111,7 +111,7 @@ class RegistrationForm extends Form {
 			if ($this->reCaptchaEnabled) {
 				import('lib.pkp.lib.recaptcha.recaptchalib');
 				$publicKey = Config::getVar('captcha', 'recaptcha_public_key');
-				$useSSL = Config::getVar('security', 'force_ssl')?true:false;
+				$useSSL = Config::getVar('security', 'force_ssl')||Request::getProtocol()=='https'?true:false;
 				$reCaptchaHtml = recaptcha_get_html($publicKey, null, $useSSL);
 				$templateMgr->assign('reCaptchaHtml', $reCaptchaHtml);
 				$templateMgr->assign('captchaEnabled', $this->captchaEnabled);
@@ -160,6 +160,10 @@ class RegistrationForm extends Form {
 		$this->setData('existingUser', $this->existingUser);
 		$this->setData('userLocales', array());
 		$this->setData('sendPassword', 0);
+		$this->setData('firstName', Request::getUserVar('firstName'));
+		$this->setData('lastName', Request::getUserVar('lastName'));
+		$this->setData('email', Request::getUserVar('email'));
+		$this->setData('orcid', Request::getUserVar('orcid'));
 	}
 
 	/**
@@ -336,7 +340,7 @@ class RegistrationForm extends Form {
 
 				// Send email validation request to user
 				$mail = new MailTemplate('USER_VALIDATE');
-				$mail->setReplyTo(null);
+				$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 				$mail->assignParams(array(
 					'userFullName' => $user->getFullName(),
 					'activateUrl' => Request::url($journal->getPath(), 'user', 'activateUser', array($this->getData('username'), $accessKey))
@@ -348,7 +352,7 @@ class RegistrationForm extends Form {
 			if ($this->getData('sendPassword')) {
 				// Send welcome email to user
 				$mail = new MailTemplate('USER_REGISTER');
-				$mail->setReplyTo(null);
+				$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 				$mail->assignParams(array(
 					'username' => $this->getData('username'),
 					'password' => String::substr($this->getData('password'), 0, 30), // Prevent mailer abuse via long passwords

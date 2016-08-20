@@ -13,5 +13,5 @@
 
 <locale name="uk_UA" full_name="Українська">
 	<message key="plugins.generic.googleViewer.name">Модуль вбудованого переглядача Google</message>
-	<message key="plugins.generic.googleViewer.description"><![CDATA[Цей модуль використовує службу <a href="https://docs.google.com/viewer">Google Docs Viewer</a> для вставки PDF на сторінки перегляду статей.]]></message>
+	<message key="plugins.generic.googleViewer.description"><![CDATA[Цей модуль використовує службу Google Docs Viewer для вставки PDF на сторінки перегляду статей.]]></message>
 </locale>

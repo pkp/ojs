@@ -71,7 +71,7 @@
 				<select id="categories" name="categories[]" class="selectMenu" multiple="multiple">
 					{html_options options=$allCategories selected=$categories}
 				</select>
-				<br/>
+				<br />
 				{translate key="manager.setup.categories.description"}
 			</td>
 		</tr>
@@ -144,13 +144,6 @@
 <div id="setupEmails">
 <h3>1.4 {translate key="manager.setup.emails"}</h3>
 <table width="100%" class="data">
-	<tr valign="top"><td colspan="2">{translate key="manager.setup.emailHeaderDescription"}<br />&nbsp;</td></tr>
-	<tr valign="top">
-		<td class="label">{fieldLabel name="emailHeader" key="manager.setup.emailHeader"}</td>
-		<td class="value">
-			<textarea name="emailHeader" id="emailHeader" rows="3" cols="60" class="textArea">{$emailHeader|escape}</textarea>
-		</td>
-	</tr>
 	<tr valign="top"><td colspan="2">{translate key="manager.setup.emailSignatureDescription"}<br />&nbsp;</td></tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="emailSignature" key="manager.setup.emailSignature"}</td>
@@ -184,7 +177,7 @@
 		<td width="20%" class="label">{fieldLabel name="publisherNote" key="manager.setup.note"}</td>
 		<td width="80%" class="value">
 			<textarea name="publisherNote[{$formLocale|escape}]" id="publisherNote" rows="5" cols="40" class="textArea">{$publisherNote[$formLocale]|escape}</textarea>
-			<br/>
+			<br />
 			<span class="instruct">{translate key="manager.setup.publisherNoteDescription"}</span>
 			</td>
 	</tr>
@@ -209,7 +202,7 @@
 		<td width="20%" class="label">{fieldLabel name="sponsorNote" key="manager.setup.note"}</td>
 		<td width="80%" class="value">
 			<textarea name="sponsorNote[{$formLocale|escape}]" id="sponsorNote" rows="5" cols="40" class="textArea">{$sponsorNote[$formLocale]|escape}</textarea>
-			<br/>
+			<br />
 			<span class="instruct">{translate key="manager.setup.sponsorNoteDescription"}</span>
 		</td>
 	</tr>
@@ -254,7 +247,7 @@
 		<td width="20%" class="label">{fieldLabel name="contributorNote" key="manager.setup.note"}</td>
 		<td width="80%" class="value">
 			<textarea name="contributorNote[{$formLocale|escape}]" id="contributorNote" rows="5" cols="40" class="textArea">{$contributorNote[$formLocale]|escape}</textarea>
-			<br/>
+			<br />
 			<span class="instruct">{translate key="manager.setup.contributorNoteDescription"}</span>
 		</td>
 	</tr>

@@ -12,8 +12,6 @@
   -->
  
 <locale name="tr_TR" full_name="Türkçe">
-	<message key="plugins.generic.pln.settings.pln_network">PLN Ağ Bağlantısı (URL)</message>
-	<message key="plugins.generic.pln.settings.pln_network_invalid">Verilen bağlantı geçerli değil. Lütfen bağlantıyı bir kez daha kontrol edin ve yeniden deneyin.</message>
 	<message key="plugins.generic.pln.notifications.getting_servicedocument">Hizmet belgesi alınıyor.</message>
 	<message key="plugins.generic.pln.notifications.issn_setting">Hizmet şartlarını kabul edebilmeniz için derginizin bir ISSN'sinin olması gerekir. Dergi Ayarları sayfasında ISSN bilgisini girebilirsiniz. Hizmet koşullarının aşağıda görüntülenebilmesi için öncelikle derginin ISSN'si girilmelidir.</message>
 	<message key="plugins.generic.pln.notifications.tar_missing">Sisteminiz tar uygulamasını çalıştırabilmelidir.</message>
@@ -28,4 +26,72 @@
 	<message key="plugins.generic.pln.depositor.packagingdeposits">Arşiv için içerik paketleniyor.</message>
 	<message key="plugins.generic.pln.depositor.transferringdeposits">Arşivler PLN'ye gönderiliyor.</message>
 	<message key="plugins.generic.plngateway.displayName">PLN Yolu</message>
+	<message key="plugins.generic.pln.settings">Ayarlar</message>
+	<message key="plugins.generic.pln">PKP PLN Eklentisi</message>
+	<message key="plugins.generic.pln.status.items">Öğeler</message>
+	<message key="plugins.generic.pln.status.lockss_status">LOCKSS Durumu</message>
+	<message key="plugins.generic.pln.status.unknown">Bilinmeyen</message>
+	<message key="plugins.generic.pln.status.new">Yeni</message>
+	<message key="plugins.generic.pln.status.packaged">Paketli</message>
+	<message key="plugins.generic.pln.status.transferred">Aktarılan</message>
+	<message key="plugins.generic.pln.status.received">Alınan</message>
+	<message key="plugins.generic.pln.status.validated">Geçerli</message>
+	<message key="plugins.generic.pln.status.sent">LOCKSS'a gönder</message>
+	<message key="plugins.generic.pln.status.agreement">Anlaşma</message>
+	<message key="plugins.generic.pln.status.updated">Güncellendi</message>
+	<message key="plugins.generic.pln.status.local_failure">Yerel Hata</message>
+	<message key="plugins.generic.pln.status.remote_failure">Uzak Hata</message>
+	<message key="plugins.generic.pln.settings.terms_of_use_agree">Katılıyorum</message>
+	<message key="plugins.generic.pln.settings.journal_uuid">Dergi Belirleyicisi</message>
+	<message key="plugins.generic.pln.settings.refresh">Yenile</message>
+	<message key="plugins.generic.pln.objects.article">Makale</message>
+	<message key="plugins.generic.pln.objects.issue">Sayı</message>
+	<message key="plugins.generic.pln.status_page">PKP PLN Eklentisi - Durumlar</message>
+	<message key="plugins.generic.pln.status.network_status">Ağ Durumu: {$networkStatusMessage}</message>
+	<message key="plugins.generic.pln.status">Durum</message>
+	<message key="plugins.generic.pln.status.id">ID</message>
+	<message key="plugins.generic.pln.status.type">Tür</message>
+	<message key="plugins.generic.pln.status.checked">İşaretli</message>
+	<message key="plugins.generic.pln.status.local_status">Yerel Durum</message>
+	<message key="plugins.generic.pln.status.processing_status">İşlem Durumu</message>
+	<message key="plugins.generic.pln.status.complete">Tamam</message>
+	<message key="plugins.generic.pln.description">The PKP PLN plugin will deposit your published content into the PKP Private LOCKSS Network for preservation.</message>
+	<message key="plugins.generic.pln.manager.setup.description"><![CDATA[<strong>PKP Private LOCKSS Network</strong><br /><br />Please read the <a href="https://pkp.sfu.ca/pkp-lockss/" target="_blank">overview of the PKP PLN</a> and complete <a href="{$plnPluginURL}">this simple form</a>. This option will enable inclusion of your journal in the Public Knowledge Project Private LOCKSS Network (PKP PLN).]]></message>
+	<message key="plugins.generic.pln.enabled">The PKP PLN plugin has been enabled.</message>
+	<message key="plugins.generic.pln.disabled">The PKP PLN plugin has been disabled.</message>
+	<message key="plugins.generic.pln.settings_page">PKP PLN Plugin - Settings</message>
+	<message key="plugins.generic.pln.settings.acron_required">The PLN plugin requires either the Acron plugin or a periodic scheduling tools such as 'cron.'</message>
+	<message key="plugins.generic.pln.settings.saved">PKP PLN settings saved.</message>
+	<message key="plugins.generic.pln.settings.terms_of_use">Terms of Use</message>
+	<message key="plugins.generic.pln.settings.terms_of_use_help">As Primary Contact, I, in good faith, accept and confirm the following terms and conditions for participation in the Public Knowledge Project’s Private LOCKSS Network (PKP-PLN):</message>
+	<message key="plugins.generic.pln.settings.journal_uuid_help">This is your journal's unique identifier for the PKP PLN. You may need to share this with PKP PLN administrators for support purposes.</message>
+	<message key="plugins.generic.pln.settings.refresh_help">If for some reason there are no terms listed above or you know these terms have been updated, click Refresh to update the terms listed above.</message>
+	<message key="plugins.generic.pln.required.object_type">Please choose an deposit object type.</message>
+	<message key="plugins.generic.pln.required.object_threshold">Please choose a deposit object threshold.</message>
+	<message key="plugins.generic.pln.required.terms_of_use_agreement">Agreement to the network's terms of use is required in order to deposit to the PLN.</message>
+	<message key="plugins.generic.pln.status.deposits">Deposits</message>
+	<message key="plugins.generic.pln.status.docs"><![CDATA[The PLN <a href="{$statusDocsUrl}">deposit statuses are described here</a>.]]></message>
+	<message key="plugins.generic.pln.status.confirmReset">Are you sure you want to reset this deposit? It will be repackaged and resent to the processing server.</message>
+	<message key="plugins.generic.pln.status.syncing">Syncing</message>
+	<message key="plugins.generic.pln.depositorTask.name">PKP PLN Depositor Task</message>
+	<message key="plugins.generic.pln.notifications.processing_for">Depositor processing for {$title}.</message>
+	<message key="plugins.generic.pln.notifications.pln_not_accepting">The PKP PLN is not currently accepting deposits.</message>
+	<message key="plugins.generic.pln.notifications.pln_accepting">The PKP PLN is accepting deposits.</message>
+	<message key="plugins.generic.pln.notifications.check_status">Check the status of your deposits.</message>
+	<message key="plugins.generic.pln.notifications.issn_missing">Your journal must have an ISSN to deposit content to the PKP PLN.</message>
+	<message key="plugins.generic.pln.notifications.http_error">There was an error connecting to the PKP PLN - please contact your system administrator.</message>
+	<message key="plugins.generic.pln.notifications.terms_updated">The PKP PLN terms of use have been updated. Agreement with new terms is required to continue depositing.</message>
+	<message key="plugins.generic.pln.notifications.curl_missing">CURL support must be enabled to proceed.</message>
+	<message key="plugins.generic.pln.notifications.zip_missing">ZipArchive support must be enabled to proceed.</message>
+	<message key="plugins.generic.pln.notifications.archive_tar_missing">The Archive_Tar PHP extension must be installed before the PKP PLN can be enabled.</message>
+	<message key="plugins.generic.pln.notifications.php5_missing">The PKP PLN requires PHP version 5 or higher.</message>
+	<message key="plugins.generic.pln.error.include.bagit">The BagIt library, which is included with OJS, cannot be loaded, probably due to a missing prerequisite.</message>
+	<message key="plugins.generic.pln.error.network.servicedocument">Network error {$error} connecting to the PLN to get the service document.</message>
+	<message key="plugins.generic.pln.error.network.deposit">Network error {$error} connecting to the PLN to send the deposit.</message>
+	<message key="plugins.generic.pln.error.network.swordstatement">Network error {$error} connecting to the PLN to get a status update for deposit.</message>
+	<message key="plugins.generic.pln.error.http.servicedocument">PLN server returned HTTP error {$error} when attempting to get the service document.</message>
+	<message key="plugins.generic.pln.error.http.deposit">PLN server returned HTTP error {$error} when sending the deposit.</message>
+	<message key="plugins.generic.pln.error.http.swordstatement">PLN server returned HTTP error {$error} when checking the status of a deposit.</message>
+	<message key="plugins.generic.pln.error.depositor.missingpackage">Cannot find package file {$file}.</message>
+	<message key="plugins.generic.plngateway.description">Reports PLN Status and recent article titles for the staging server.</message>
 </locale>

@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="el_GR" full_name = "Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="admin.hostedJournals">Φιλοξενούμενα Περιοδικά</message>
 	<message key="admin.settings.journalRedirect">Προώθηση σε URL Περιοδικού</message>
 	<message key="admin.settings.journalRedirectInstructions">Αιτήματα πρόσβασης στον κυρίως ιστότοπο του συστήματος θα προωθούνται στην ιστοσελίδα αυτού του περιοδικού. Αυτό μπορεί να φανεί χρήσιμο αν ο ιστότοπος φιλοξενεί, για παράδειγμα, μόνο ένα περιοδικό.</message>
@@ -58,7 +58,7 @@
 	<message key="admin.mergeUsers.from.description">Επιλέξτε έναν χρήστη (ή περισσότερους) για συγχώνευση σε έναν άλλο λογαριασμό χρήστη (π.χ., όταν κάποιος χρήστης έχει δύο λογαριασμούς). Ο λογαριασμός που θα επιλεγεί πρώτος   θα διαγραφεί και οι υποβολές του καθώς και τα δικαιώματά του θα αποδοθούν στον δεύτερο λογαριασμό.</message>
 	<message key="admin.mergeUsers.allUsers">Όλοι οι εγγεγραμμένοι Χρήστες</message>
 	<message key="admin.mergeUsers.confirm">Είστε σίγουρος ότι επιθυμείτε να συγχωνεύσετε τον/τους επιλεγμένο(-ους) {$oldAccountCount} λογαριασμό(-ους) στον λογαριασμό με όνομα χρήστη "{$newUsername}"? Ο/Οι επιλεγμένος(-οι) {$oldAccountCount} λογαριασμός(-οι) θα διαγραφεί(-ουν). Αυτή η ενέργεια δεν είναι αναστρέψιμη.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Κανένας εγγεγραμμένος χρήστης.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Κανένας εγγεγραμμένος χρήστης.</message>
 	<message key="admin.journals.redirect">Δημιουργία κώδικα για την αντιστοίχηση OJS 1 URLs σε OJS 2 URLs</message>
 	<message key="admin.locale.maybeIncomplete">Οι επιλεγμένες γλώσσες μπορεί να μην είναι ολοκληρωμένες.</message>
 	<message key="admin.categories.name">Ονομα</message>

@@ -33,7 +33,7 @@
 	<tr valign="top">
 		<td class="label"><label for="swordPassword">{translate key="user.password"}</label></td>
 		<td class="value">
-			<input type="password" name="depositPoint[password]" id="swordPassword" value="{$depositPoint.password|escape}" size="20" maxlength="90" /><br/>
+			<input type="password" name="depositPoint[password]" id="swordPassword" value="{$depositPoint.password|escape}" size="20" maxlength="90" /><br />
 			<span class="instruct">{translate key="plugins.generic.sword.depositPoints.password.description"}</span>
 		</td>
 	</tr>

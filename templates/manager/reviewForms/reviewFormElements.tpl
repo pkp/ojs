@@ -43,7 +43,7 @@ function toggleChecked() {
 	<li><a href="{url op="previewReviewForm" path=$reviewFormId}">{translate key="manager.reviewForms.preview"}</a></li>
 </ul>
 
-<br/>
+<br />
 
 <div id="reviewFormElements">
 <form id="reviewFormElements" action="{url op="copyReviewFormElement"}" method="post">

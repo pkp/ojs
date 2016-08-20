@@ -166,8 +166,10 @@ class SwordPlugin extends GenericPlugin {
 			$submittingUser =& $sectionEditorSubmission->getUser();
 
 			import('classes.mail.ArticleMailTemplate');
+			$contactName = $journal->getSetting('contactName');
+			$contactEmail = $journal->getSetting('contactEmail');
 			$mail = new ArticleMailTemplate($sectionEditorSubmission, 'SWORD_DEPOSIT_NOTIFICATION', null, null, $journal, true, true);
-			$mail->setReplyTo(null);
+			$mail->setFrom($contactEmail, $contactName);
 			$mail->addRecipient($submittingUser->getEmail(), $submittingUser->getFullName());
 
 			$mail->assignParams(array(

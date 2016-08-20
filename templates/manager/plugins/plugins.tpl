@@ -50,7 +50,7 @@
 			{/if}
 			<li><h4>{$plugin->getDisplayName()|escape}</h4>
 			<p>
-			{$plugin->getDescription()}<br/>
+			{$plugin->getDescription()}<br />
 			{assign var=managementVerbs value=$plugin->getManagementVerbs()}
 			{if $managementVerbs && $plugin->isSitePlugin() && !$isSiteAdmin}
 				<em>{translate key="manager.plugins.sitePlugin"}</em>

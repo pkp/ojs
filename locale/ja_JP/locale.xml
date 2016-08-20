@@ -244,7 +244,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   </message>
   <!-- System Information -->
   <message key="admin.overwriteConfigFileInstructions">
-    <![CDATA[<h4>注意</div>
+    <![CDATA[<h4>注意</h4>
 <p>設定ファイルを更新できませんでした。設定の変更を適用するためには、<tt>config.inc.php</tt>をエディタで開いて、以下の内容に置き換える必要があります。</p>]]>
   </message>
   <!-- Subscription Management -->
@@ -307,10 +307,10 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <!-- Live Issues -->
   <!-- Navigation sidebar menu -->
   <!-- Used by editor in submission review / editing -->
-  <message key="editor.article.selectReviewerNotes"><![CDATA[名前のリンクは査読者のプロフィールを表示します。<br/>
-評価は5段階です（5が最高）。<br/>
-週数は査読にかかる平均時間（週）です。<br/>
-最新受諾日は最も最近査読を受諾した日です。<br/>
+  <message key="editor.article.selectReviewerNotes"><![CDATA[名前のリンクは査読者のプロフィールを表示します。<br />
+評価は5段階です（5が最高）。<br />
+週数は査読にかかる平均時間（週）です。<br />
+最新受諾日は最も最近査読を受諾した日です。<br />
 アクティブは、現在依頼中または作業中の査読文献の数です。]]></message>
   <!-- Section Editor -->
   <message key="sectionEditor.activeEditorialAssignments">編集担当の任命</message>
@@ -664,8 +664,8 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <!-- RT Versions -->
   <!-- RT Contexts -->
   <!-- RT Searches -->
-  <message key="rt.admin.validateUrls.description"><![CDATA[検索サイトとして不正だと思われるURLを以下に表示します。<br/>
-このテストは100%正確なものではないので、不正であるとしたURLについてもご自分で確認してください。<br/>
+  <message key="rt.admin.validateUrls.description"><![CDATA[検索サイトとして不正だと思われるURLを以下に表示します。<br />
+このテストは100%正確なものではないので、不正であるとしたURLについてもご自分で確認してください。<br />
 データを実際に入力する必要がある検索サイトのURLでは検証が失敗している可能性があります。]]></message>
   <!-- RT Entities -->
   <message key="rt.metadata.dublinCore.primaryAuthor">作成者</message>

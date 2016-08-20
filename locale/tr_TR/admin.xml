@@ -60,7 +60,7 @@
 	<message key="admin.mergeUsers.from.description">Bir hesabı başka bir hesap ile birleştirmek için bir (veya birkaç) üye seçiniz. Örneğin bir kişi birden fazla hesaba sahip olduğunda silinecek hesap(lar) öce seçilir ve birleştir komutundan sonra birleştirilecek hesap seçilerek onay verilir. İlk seçilen hesaplarla bağlantılı gönderiler, atamalar gibi her türlü işlem ve yetki birleştirilen hesaba aktarılır.</message>
 	<message key="admin.mergeUsers.allUsers">Tüm Kayıtlı Üyeler</message>
 	<message key="admin.mergeUsers.confirm">Seçilen {$oldAccountCount} hesap/hesapları "{$newUsername}" kullanıcı hesabında birleştirmek istediğinizen emin misiniz? Seçilen {$oldAccountCount} hesap daha sonra açılamaz. Bu işlem geri alınamaz.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Kayıtlı olmayan üyeler.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Kayıtlı olmayan üyeler.</message>
 	<message key="admin.settings.useAlphalist">Birden çok dergi olan siteler için, dergiler arasında hızlı yönlendirmeyi sağlayan alfabetik liste göstermektedir.</message>
 	<message key="admin.settings.journalsList.description">Lütfen site sayfasında her bir dergi için listelenen dergi elemanlarını seçiniz.</message>
 	<message key="admin.categories.enable.description">Dergilerin geniş kümeler düzenlemenize yardımcı olmak için Site Yöneticisi burada kategorileri tanımlayarak bir dizi seçebilir. Dergi yöneticisi her bir dergi için bu kategorilerden birçoğunu seçebilir ve okuyucular dergi koleksiyonlarını katagorilere göre listeleyebilir.</message>
@@ -80,16 +80,6 @@
 	<message key="admin.categories.noneCreated">Herhangi bir kategori oluşturulamadı.</message>
 	<message key="admin.categories.confirmDelete">Bu kategoriyi silmek istediğinize emin misiniz?</message>
 	<message key="admin.categories.nameRequired">Bir kategori adı gerekli.</message>
-	<message key="admin.settings.defaultMetricDescription">Your OJS installation is configured to record more than one usage metric. Usage statistics will be displayed in severeral contexts.
-		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank
-		search results. Please select one of the configured metrics as a default.</message>
-	<message key="admin.copyAccessLogFileTool.usage">Copy the passed apache access log file(s), filtering the entries related with this installation,
-to the current files directory, inside the UsageStatsPlugin stage directory. Must run under user with enough privilegies to read access apache log files.
-
-This tool will only copy files that aren't already inside the usageStats file loader directories (stage, processing, archive, reject).
-
-Usage: {$scriptName} path/to/apache/log/file.log
-Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory</message>
 	<message key="admin.copyAccessLogFileTool.error.acessingFile">Hata: {$filePath} geçici klasörü oluşturamıyor.</message>
 	<message key="admin.copyAccessLogFileTool.error.copyingFile">Hata: {$tmpFilePath} için {$filePath} geçici dosyası kopyalanamaz</message>
 	<message key="admin.copyAccessLogFileTool.error.deletingFile">Hata: {$tmpFilePath} dosyası silinemez</message>

@@ -7,7 +7,7 @@
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   *
   * Localization strings.
   -->
@@ -70,7 +70,7 @@
 	<message key="admin.mergeUsers.from.description">Seleccione uno (o varios) usuarios/as para fusionarlos en otra cuenta de usuario/a (p. ej. cuando algún usuario/a tiene dos cuentas distintas). La cuenta/s seleccionada en primer lugar será eliminada/s y todos los envíos, asignaciones, etc. se atribuirán a la segunda cuenta.</message>
 	<message key="admin.mergeUsers.allUsers">Todos los usuarios/as registrados</message>
 	<message key="admin.mergeUsers.confirm">¿Está seguro/a de que desea fusionar la cuenta/s seleccionada {$oldAccountCount} con la cuenta con el nombre de usuario/a "{$newUsername}"? Las cuentas seleccionadas {$oldAccountCount} dejarán de existir. Esta acción no es reversible.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Usuarios/as no registrados.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Usuarios/as no registrados.</message>
 
 	<!-- Categories -->
 	<message key="admin.categories">Categorías</message>

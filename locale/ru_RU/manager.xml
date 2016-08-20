@@ -12,7 +12,7 @@
   * With updates from Pavel Pisklakov (revising translation). 
   -->
 
-<locale name="ru_RU" full_name = "Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="manager.emails.confirmResetAll">Вы уверены, что хотите заменить все шаблоны писем для данного журнала на шаблоны по умолчанию? Вы потеряете все изменения, которые вы сделали.</message>
 	<message key="manager.files.note">Внимание: файловый менеджер — это дополнительная возможность, которая позволяет напрямую просматривать и управлять файлами и каталогами, связанными с этим журналом.</message>
 	<message key="manager.groups">Сведения об издании</message>
@@ -21,7 +21,7 @@
 	<message key="manager.groups.context.editorialTeam.short">Редакция</message>
 	<message key="manager.groups.context.people">Включить отображение названий ролей в виде отдельной категории в разделе «Люди» (например, «Редакционная коллегия»)</message>
 	<message key="manager.groups.create">Создать название должности</message>
-	<message key="manager.groups.disableBoard">OJS отображает людей из редакции журнала в разделе «Редакция журнала» по названию их ролей (управляющий журналом, литературный редактор, и т. д.)</message>
+	<message key="manager.groups.disableBoard">OJS отображает людей из редакции журнала в разделе «Редакция журнала» по названию их ролей (управляющий журналом, литературный редактор и т. д.)</message>
 	<message key="manager.groups.enableBoard">Управляющий журнала создает названия должностей и сам добавляет людей для каждой должности.</message>
 	<message key="manager.groups.enableBoard.description"><![CDATA[В разделе <a href="{$aboutEditorialTeamUrl}">«Люди»</a> страницы «О журнале»:]]></message>
 	<message key="manager.groups.noneCreated">Не было создано должностей для членов редакции.</message>
@@ -31,7 +31,7 @@
 	<message key="manager.language.forms">Формы</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">Это заменит все настройки журнала, связанные с конкретным языком, которые вы сделали для этого языка.</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Загрузить настройки по умолчанию</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS может быть доступна пользователям на любом из поддерживаемых системой языков. В то же время, OJS может работать как многоязычная система, позволяя пользователям переключаться между языками на каждой странице и вводить определенные данные на нескольких дополнительных языках.<br /><br/>Если язык поддерживается OJS, но не указан в списке ниже — попросите вашего администратора сайта установить язык из интерфейса администрирования сайта. Смотрите в документации OJS инструкции о том, как добавить поддержку новых языков.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS может быть доступна пользователям на любом из поддерживаемых системой языков. В то же время, OJS может работать как многоязычная система, позволяя пользователям переключаться между языками на каждой странице и вводить определенные данные на нескольких дополнительных языках.<br /><br />Если язык поддерживается OJS, но не указан в списке ниже — попросите вашего администратора сайта установить язык из интерфейса администрирования сайта. Смотрите в документации OJS инструкции о том, как добавить поддержку новых языков.]]></message>
 	<message key="manager.languages.noneAvailable">Извините, дополнительные языки не доступны. Свяжитесь с вашим администраторм сайта, если вы хотите добавить дополнительные языки в этот журнал.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Этот язык будет языком по умолчанию для сайта журнала.</message>
 	<message key="manager.managementPages">Страницы управления</message>
@@ -86,7 +86,7 @@
 	<message key="manager.people.allJournals">Все журналы</message>
 	<message key="manager.people.allSiteUsers">Записать пользователя с этого сайта в данный журнал</message>
 	<message key="manager.people.showNoRole">Показать пользователей, не имеющих роли</message>
-	<message key="manager.people.allUsers">Все записанные пользователи</message>
+	<message key="manager.people.allUsers">Все пользователи</message>
 	<message key="manager.people.confirmRemove">Удалить этого пользователя из данного журнала? Это действие отменит все роли, назначенные этому пользователю в данном журнале.</message>
 	<message key="manager.people.emailUsers.selectTemplate">Выбрать шаблон</message>
 	<message key="manager.people.enrollExistingUser">Записать существующего пользователя</message>
@@ -101,7 +101,7 @@
 	<message key="manager.plugins.deleteDescription">Щелкнув на «Удалить», вы удалите плагин из файловой системы сервера.</message>
 	<message key="manager.plugins.deleteError">Плагин не может быть удален из файловой системы. Причиной этого может являться проблема с правами. Пожалуйста, убедитесь что веб-сервер может записывать в каталог «plugins» (включая подкаталоги), но не забудьте после этого защитить директорию, задав соответствующие права.</message>
 	<message key="manager.plugins.deleteSuccess">Плагин успешно удален</message>
-	<message key="manager.plugins.description">Эта страница позволяет управляющему журнала просмотреть и, возможно, сконфигурировать плагины, которые установленные в данный момент. Плагины разбиты по категориям, в соответствии с их функциями. Список категорий приведен ниже; щелкнув на конкретную категорию, вы увидите текущий набор плагинов в данной категории.</message>
+	<message key="manager.plugins.description">Эта страница позволяет управляющему журнала просмотреть и, возможно, сконфигурировать плагины, которые установлены в данный момент. Плагины разбиты по категориям, в соответствии с их функциями. Список категорий приведен ниже; щелкнув на конкретную категорию, вы увидите текущий набор плагинов в данной категории.</message>
 	<message key="manager.plugins.doesNotExist">Плагин не существует</message>
 	<message key="manager.plugins.fileSelectError">Пожалуйста, сначала выберите файл</message>
 	<message key="manager.plugins.install">Установить новый плагин</message>
@@ -109,7 +109,7 @@
 	<message key="manager.plugins.installedVersionNewer">Плагин уже установлен, и его версия более новая или совпадает с загружаемой.</message>
 	<message key="manager.plugins.installedVersionOlder">Плагин уже установлен, и его версия более старая или совпадает с загружаемой.</message>
 	<message key="manager.plugins.installFailed">Установка не удалась</message>
-	<message key="manager.plugins.installSuccessful">Версия успешно установлена</message>
+	<message key="manager.plugins.installSuccessful">Успешно установлена версия</message>
 	<message key="manager.plugins.invalidPluginArchive">Загруженный на сайт архив плагина не содержит каталог, который соответствует имени плагина.</message>
 	<message key="manager.plugins.wrongCategory">Загруженный плагин не соответствует категории обновляемого плагина.</message>
 	<message key="manager.plugins.wrongName">Файл version.xml в загруженном плагине содержит имя плагина, которое не соответствует имени обновляемого плагина.</message>
@@ -125,7 +125,7 @@
 	<message key="manager.plugins.uploadPluginDir">Выберите файл плагина</message>
 	<message key="manager.plugins.versionFileInvalid">version.xml в каталоге плагина содержит неверные данные.</message>
 	<message key="manager.plugins.versionFileNotFound">version.xml не найден в каталоге плагина</message>
-	<message key="manager.reviewFormElement.changeType">Предупреждение: Изменение типа элемента в формы рецензии с множественного выбора на открытый тип (текстовое поле) приведет к удалению вариантов множественного выбора.</message>
+	<message key="manager.reviewFormElement.changeType">Предупреждение: Изменение типа элемента в форме рецензии с множественного выбора на открытый тип (текстовое поле) приведет к удалению вариантов множественного выбора.</message>
 	<message key="manager.reviewFormElements">Элементы формы</message>
 	<message key="manager.reviewFormElements.addResponseItem">Добавить выбранный</message>
 	<message key="manager.reviewFormElements.checkboxes">Галочки (можно выбрать один или более вариантов)</message>
@@ -142,7 +142,7 @@
 	<message key="manager.reviewFormElements.possibleResponse">Выбор</message>
 	<message key="manager.reviewFormElements.question">Элемент</message>
 	<message key="manager.reviewFormElements.radiobuttons">Радиокнопки (можно выбрать только один вариант)</message>
-	<message key="manager.reviewFormElements.required">Рецензент обязательно должен  заполнить элемент.</message>
+	<message key="manager.reviewFormElements.required">Рецензент обязательно должен заполнить элемент.</message>
 	<message key="manager.reviewFormElements.included">Добавляется в сообщение для автора</message>
 	<message key="manager.reviewFormElements.smalltextfield">Текстовое поле для ввода одного слова</message>
 	<message key="manager.reviewFormElements.textarea">Расширенное текстовое поле</message>
@@ -177,7 +177,7 @@
 	<message key="manager.sections.hideTocAuthor">Убрать имена авторов для материалов этого раздела из содержания выпусков.</message>
 	<message key="manager.sections.hideTocTitle">Убрать название этого раздела из содержания выпусков.</message>
 	<message key="manager.sections.identifyType">Обозначать материалы, опубликованные в этом разделе как</message>
-	<message key="manager.sections.identifyTypeExamples">(Например, «Рецензируемая статья», "Обзор книги", "Комментарий специалиста", и т.д.)</message>
+	<message key="manager.sections.identifyTypeExamples">(Например, «Рецензируемая статья», «Обзор книги», «Комментарий специалиста» и т.д.)</message>
 	<message key="manager.sections.indexed">Индексируемый</message>
 	<message key="manager.sections.noneCreated">Разделы не были созданы.</message>
 	<message key="manager.sections.open">Свободная отправка статей</message>
@@ -191,13 +191,13 @@
 	<message key="manager.sections.wordCount">Количество слов</message>
 	<message key="manager.sections.wordCountInstructions">Ограничить количество слов в аннотации для этого раздела (0 — неограничено): </message>
 	<message key="manager.setup">Установка</message>
-	<message key="manager.setup.aboutItemContent">Содержание</message>
+	<message key="manager.setup.aboutItemContent">Контент</message>
 	<message key="manager.setup.addAboutItem">Добавить информацию о журнале</message>
 	<message key="manager.setup.addChecklistItem">Добавить элемент в контрольный список</message>
 	<message key="manager.setup.addContributor">Добавить поддерживающего журнал</message>
 	<message key="manager.setup.addItem">Добавить элемент</message>
 	<message key="manager.setup.addItemtoAboutJournal">Добавить элемент на страницу «О журнале»</message>
-	<message key="manager.setup.additionalContent">Дополнительное содержание</message>
+	<message key="manager.setup.additionalContent">Дополнительный контент</message>
 	<message key="manager.setup.additionalContentDescription">Добавить следующий текст (используя текстовый формат или формат HTML), который появится под изображением на главной странице, если это изображение загружено.</message>
 	<message key="manager.setup.addNavItem">Добавить элемент</message>
 	<message key="manager.setup.addReviewerDatabaseLink">Добавить новую ссылку на базу данных</message>
@@ -221,7 +221,7 @@
 	<message key="manager.setup.competingInterests.requireReviewers">Требовать от рецензентов отправки файла с Декларацией о конфликте интересов с каждой рецензией, отправляемой ими.</message>
 	<message key="manager.setup.contributor">Поддерживает журнал</message>
 	<message key="manager.setup.contributors">Источники, поддерживающие журнал</message>
-	<message key="manager.setup.contributorNoteDescription">Этот текст появится под заголовком «Источники, поддерживающие журнал» над списком имен и адресов (URL) организаций, поддерживающих журнал в разделе «Спонсоры журнала» на странице «О журнале».</message>
+	<message key="manager.setup.contributorNoteDescription">Этот текст появится под заголовком «Источники, поддерживающие журнал» над списком названий и адресов (URL) организаций, поддерживающих журнал в разделе «Спонсоры журнала» на странице «О журнале».</message>
 	<message key="manager.setup.contributorsDescription">Другие организации и люди, оказывающие финансовую и иную поддержку журналу, будут указаны на странице «О журнале», рядом с ними также может быть добавлен текст благодарности.</message>
 	<message key="manager.setup.history">История журнала</message>
 	<message key="manager.setup.historyDescription">Этот текст появится на странице «О журнале». Он может быть использован для описания изменения названий журнала, состава редакции и других материалов, связанных с историей публикации журнала.</message>
@@ -242,7 +242,7 @@
 	<message key="manager.setup.copyrightYearBasis.Article">Год по умолчанию будет браться из даты опубликования статьи, исходя из принципа «публикация по ходу работы».</message>
 	<message key="manager.setup.copyrightYearBasis.Issue">Год по умолчанию будет браться из даты опубликования выпуска.</message>
 	<message key="manager.setup.coverage">Охват</message>
-	<message key="manager.setup.coverageChronExamples">(Например, Эпоха Возрожения; Юрский период; Третий триместр; и т. д.)</message>
+	<message key="manager.setup.coverageChronExamples">(Например, Эпоха Возрождения; Юрский период; Третий триместр; и т. д.)</message>
 	<message key="manager.setup.coverageChronProvideExamples">Приведите примеры соответствующих хронологических или исторических терминов для данной области</message>
 	<message key="manager.setup.coverageDescription">Опишите геопространственный, хронологический или исторический охват вашего исследования и/или характеристики исследуемого объекта.</message>
 	<message key="manager.setup.coverageGeoExamples">(Например, Пиренейский полуостров; Стратосфера; Бореальный лес; и т. д.)</message>
@@ -276,7 +276,7 @@
 	<message key="manager.setup.emailHeaderDescription">Шаблонные письма, которые отправляются по электронной почте системой от имени журнала будут начинаться со следующего заголовка. Эти письма электронной почты будут отправляться от имени контактного лица, поэтому важно пояснить, что контактное лицо не обязательно ответственно за содержание письма, которое может быть отправлено по поручению другого пользователя.</message>
 	<message key="manager.setup.emailSignature">Подпись</message>
 	<message key="manager.setup.emailSignatureDescription">Подготовленные письма, которые отправляются системой от имени журнала, будут содержать следующую подпись, добавленную в конце письма. Содержимое этих писем может быть отредактировано в разделе «Управление журналом».</message>
-	<message key="manager.setup.enableAnnouncements">Разрешить управляющим журналами добавлять объявления журнала.</message>
+	<message key="manager.setup.enableAnnouncements">Разрешить управляющим журналами добавлять объявления в журналы.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Показать</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">последних обьявлений на главной странице журнала.</message>
 	<message key="manager.setup.enablePageNumber">Номера страниц для материалов будут вычисляться и вводиться вручную в Содержание выпуска (например, 13-26).</message>
@@ -312,7 +312,7 @@
 	<message key="manager.setup.homepageImage">Изображение на главной странице</message>
 	<message key="manager.setup.homepageImageDescription">Добавьте изображение в центр страницы.</message>
 	<message key="manager.setup.information">Информация</message>
-	<message key="manager.setup.information.description">Краткое описание журнала для библиотек, потенциальных авторов и читателей, которое будет доступно а разделе «Информация» боковой панели.</message>
+	<message key="manager.setup.information.description">Краткое описание журнала для библиотек, потенциальных авторов и читателей, которое будет доступно в разделе «Информация» боковой панели.</message>
 	<message key="manager.setup.information.forAuthors">Для авторов</message>
 	<message key="manager.setup.information.forLibrarians">Для библиотек</message>
 	<message key="manager.setup.information.forReaders">Для читателей</message>
@@ -340,9 +340,9 @@
 	<message key="manager.setup.journalLayoutDescription">Выберите здесь тему журнала и компоненты его макета. Таблица стилей журнала также может быть загружена на сайт и использована для переопределения стиля, заданного системными таблицами стилей и таблицей стилей темы (если выбрана тема).</message>
 	<message key="manager.setup.journalLogo">Логотип журнала</message>
 	<message key="manager.setup.journalLogo.altText">Логотип журнала</message>
-	<message key="manager.setup.journalPageFooter">Нижний колонититул страницы журнала</message>
+	<message key="manager.setup.journalPageFooter">Нижний колонтитул страницы журнала</message>
 	<message key="manager.setup.journalPageFooterDescription">Это нижний колонтитул для вашего журнала. Чтобы изменить или обновить нижний колонтитул, вставьте код HTML в текстовое поле ниже. В колонтитуле, например, может быть другая панель навигации, счетчик и т. д. Этот нижний колонтитул будет показываться на каждой странице.</message>
-	<message key="manager.setup.journalPageHeader">Верхний колонититул страницы журнала</message>
+	<message key="manager.setup.journalPageHeader">Верхний колонтитул страницы журнала</message>
 	<message key="manager.setup.journalPageHeaderDescription">Графическая версия названия и логотипа журнала (в виде файла в формате .gif, .jpg или .png), например, уменьшенная версия использованной на главной странице журнала, может быть загружена для использования в качестве верхнего колонтитула на страницах журнала, эта версия заменит текстовую версию, отображаемую по умолчанию.</message>
 	<message key="manager.setup.journalPolicies">Шаг 2. Политики журнала</message>
 	<message key="manager.setup.journalSetup">Настройка журнала</message>
@@ -446,7 +446,7 @@
 	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">Рецензенты получат доступ к файлу статьи только после того, как согласятся дать рецензию.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">Доступ рецензента</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">Включить прямой доступ для рецензента.</message>
-	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Обратите внимание:</strong> Письмо с приглашением рецензентам будет содержать специальную ссылку (URL), по которой рецензенты смогут напрямую попасть на страницу «Рецензирование» для статьи (доступ к любым другим страницам будет требовать входа в систему с их учетной записью). Из соображений безопасности, при использовании этой возможности редакторы не могут изменить адреса электронной почты или добавить адреса для копий (CC) и скрытых копий (BCC) до отправки приглашений рецензентам.]]></message>
+	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Обратите внимание:</strong> Письмо с приглашением рецензентам будет содержать специальную ссылку (URL), по которой рецензенты смогут напрямую попасть на страницу «Рецензирование» для статьи (доступ к любым другим страницам будет требовать входа в систему с их учетной записью). Из соображений безопасности, при использовании этой возможности редакторы не могут изменить адреса электронной почты или добавить адреса для копий (CC) и скрытых копий (BCC) перед отправкой запроса рецензентам.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Рейтинг рецензентов</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Напоминания рецензентам</message>
 	<message key="manager.setup.reviewOptions.reviewTime">Время рецензирования</message>
@@ -480,7 +480,7 @@
 	<message key="manager.setup.subjectProvideExamples">Укажите примеры ключевых слов или тем, на которые могут ориентироваться авторы</message>
 	<message key="manager.setup.submissionGuidelines">Руководство по отправке статьи</message>
 	<message key="manager.setup.submissionPreparationChecklist">Контрольный список подготовки статьи к отправке</message>
-	<message key="manager.setup.submissionPreparationChecklistDescription">При отправке статьи в журнал, авторам будет предложено проверить соответствие их статьи всем пунктам «Контрольного списка подготовки статьи к отправке» и отметить их как выполненные, прежде чем они отправят статью. Этот контрольный список также отображается в «Руководстве для авторов» на странице «О журнале». Список можно отредактировать ниже, но все пункты этого списка будут отметки, прежде чем авторы смогут продолжить отправку статьи.</message>
+	<message key="manager.setup.submissionPreparationChecklistDescription">При отправке статьи в журнал, авторам будет предложено проверить соответствие их статьи всем пунктам «Контрольного списка подготовки статьи к отправке» и отметить их как выполненные, прежде чем они отправят статью. Этот контрольный список также отображается в «Руководстве для авторов» на странице «О журнале». Список можно отредактировать ниже, но все пункты этого списка должны быть отмечены, прежде чем авторы смогут продолжить отправку статьи.</message>
 	<message key="manager.setup.submissions">Отправка статей</message>
 	<message key="manager.setup.submissions.description">Руководство для авторов, авторские права и индексирование (включая регистрацию).</message>
 	<message key="manager.setup.subscription">Журнал будет требовать подписок для доступа к части или ко всему своему контенту.</message>
@@ -492,7 +492,7 @@
 	<message key="manager.setup.typeMethodApproach">Тип (метод/подход)</message>
 	<message key="manager.setup.typeProvideExamples">Приведите примеры соответствующих типов исследования, методов и подходов для данной области</message>
 	<message key="manager.setup.uniqueIdentifier">Уникальный идентификатор</message>
-	<message key="manager.setup.uniqueIdentifierDescription">Статьи и выпуски могут быть помечены идентификационный номер или строкой, используя такую систему регистрации, как система Digital Object Identifier (DOI).</message>
+	<message key="manager.setup.uniqueIdentifierDescription">Статьи и выпуски могут быть помечены идентификационным номером или строкой, используя такую систему регистрации, как система Digital Object Identifier (DOI).</message>
 	<message key="manager.setup.useCopyeditors">Литературный редактор будет назначен для работы с каждой статьей.</message>
 	<message key="manager.setup.useEditorialReviewBoard">Журнал будет использовать редакционную коллегию/коллегию рецензентов.</message>
 	<message key="manager.setup.useImageLogo">Изображение логотипа</message>
@@ -525,7 +525,7 @@
 	<message key="manager.statistics.reports.advancedOptions">Дополнительные настройки</message>
 	<message key="manager.statistics.reports.advancedOptions.label">Настройка столбцов, фильтров и параметров сортировки. Изменение любой из этих настроек может изменить ожидаемый результат, который выдает шаблон отчета.</message>
 	<message key="manager.statistics.reports.columns">Столбцы</message>
-	<message key="manager.statistics.reports.columns.description">Укажите столбцы, которые будут испоьзоваться для построения отчета. Столбцы, которые вы выберете здесь, не только определяют то, какие данные будут в отчетах, но также определяют уровень агрегирования статистики. Например, если вы выберите столбцы «ID», «Тип» и «Месяц», отчет будет суммировать все просмотры объекта, которые были в один месяц, и представлять данные в одной строке. Если вы выберите «День» вместо «Месяц», каждый объект будет иметь отдельную строку для каждого дня.</message>
+	<message key="manager.statistics.reports.columns.description">Укажите столбцы, которые будут использоваться для построения отчета. Столбцы, которые вы выберете здесь, не только определяют то, какие данные будут в отчетах, но также определяют уровень агрегирования статистики. Например, если вы выберите столбцы «ID», «Тип» и «Месяц», отчет будет суммировать все просмотры объекта, которые были в один месяц, и представлять данные в одной строке. Если вы выберите «День» вместо «Месяц», каждый объект будет иметь отдельную строку для каждого дня.</message>
 	<message key="manager.statistics.reports.filters">Фильтры</message>
 	<message key="manager.statistics.reports.objectNotFound">Объект не найден в базе данных</message>
 	<message key="manager.statistics.reports.objectType">Тип объекта</message>
@@ -570,7 +570,7 @@
 	<message key="manager.statistics.statistics.reviewerCount">Назначено рецензентам</message>
 	<message key="manager.statistics.statistics.reviewers">Рецензенты</message>
 	<message key="manager.statistics.statistics.reviewerScore">Оценка редактором</message>
-	<message key="manager.statistics.statistics.reviewsPerReviewer">Количество Рецензий</message>
+	<message key="manager.statistics.statistics.reviewsPerReviewer">Количество рецензий</message>
 	<message key="manager.statistics.statistics.selectSections">Выберите разделы для вычисления статистики по рецензированию для этого журнала.</message>
 	<message key="manager.statistics.statistics.subscriptions">Подписки</message>
 	<message key="manager.subscriptionPolicies">Политики подписки</message>
@@ -614,7 +614,7 @@
 	<message key="manager.subscriptionPolicies.openAccessOptions">Настройки открытого доступа для журналов с платной подпиской</message>
 	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Журналы с платной подпиской могут предоставлять «отложенный открытый доступ» к своему опубликованному контенту, а также разрешить «самостоятельное создание архива автором» (все это увеличивает читательскую аудиторию и количество цитирований контента).</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Информация о подписке</message>
-	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">Типы подписок и структура платежей автоматически будет автоматически размещена в разделе «Подписки» на странице «О журнале», вместе с именем и контактной информацией менеджера по подписке. Здесь также можно добавить дополнительную информацию о подписках, такую как методы оплаты или способы поддержки подписчиков из развивающихся стран.</message>
+	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">Типы подписок и структура платежей автоматически будет размещена в разделе «Подписки» на странице «О журнале», вместе с именем и контактной информацией менеджера по подписке. Здесь также можно добавить дополнительную информацию о подписках, такую как методы оплаты или способы поддержки подписчиков из развивающихся стран.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContact">Менеджер по подписке</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Информация о контактном лице, размещаемая в разделе «Подписки» страницы «О журнале».</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Пожалуйста, введите правильный адрес электронной почты.</message>
@@ -667,12 +667,12 @@
 	<message key="manager.subscriptions.form.institutionName">Название организации</message>
 	<message key="manager.subscriptions.form.institutionNameRequired">Название организации обязательно.</message>
 	<message key="manager.subscriptions.form.institutionMailingAddress">Почтовый адрес</message>
-	<message key="manager.subscriptions.form.domainInstructions"><![CDATA[Если здесь введен домен, то диапазоны IP-адресов вводить необязательно. <br />Допустимые значения — доменные имена (например, lib.sfu.ca).]]></message>
+	<message key="manager.subscriptions.form.domainInstructions"><![CDATA[Если здесь введен домен, то диапазон IP-адресов вводить необязательно. <br />Допустимые значения — доменные имена (например, lib.sfu.ca).]]></message>
 	<message key="manager.subscriptions.form.domainIPRangeRequired">Выбранный тип подписки требует указания домена и/или диапазона IP-адресов для аутентификации по подписке.</message>
 	<message key="manager.subscriptions.form.domainValid">Пожалуйста введите верное доменное имя.</message>
-	<message key="manager.subscriptions.form.ipRange">Диапазоны IP-адресов</message>
+	<message key="manager.subscriptions.form.ipRange">Диапазон IP-адресов</message>
 	<message key="manager.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
-	<message key="manager.subscriptions.form.ipRangeInstructions"><![CDATA[Если здесь введены диапазоны IP-адресов, то указание домена необязательно.<br />Допустимыми значениями являются IP-адрес (например, 142.58.103.1), диапазон IP-адресов (например, 142.58.103.1 - 142.58.103.4), диапазон IP-адресов с символом подстановки «*» (например, 142.58.*.*) и диапазон IP-адресов с маской при бесклассовой маршрутизации (например, 142.58.100.0/24).]]></message>
+	<message key="manager.subscriptions.form.ipRangeInstructions"><![CDATA[Если здесь введен диапазон IP-адресов, то указание домена необязательно.<br />Допустимыми значениями являются IP-адрес (например, 142.58.103.1), диапазон IP-адресов (например, 142.58.103.1 - 142.58.103.4), диапазон IP-адресов с символом подстановки «*» (например, 142.58.*.*) и диапазон IP-адресов с маской при бесклассовой маршрутизации (например, 142.58.100.0/24).]]></message>
 	<message key="manager.subscriptions.form.ipRangeValid">Пожалуйста, введите правильный диапазон IP-адресов.</message>
 	<message key="manager.subscriptions.form.deleteIpRange">Удалить</message>
 	<message key="manager.subscriptions.form.addIpRange">Добавить</message>
@@ -735,7 +735,7 @@
 	<message key="manager.subscriptionTypes.form.publicValid">Пожалуйста, поставьте галочку.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">Сохранить и создать новый</message>
 	<message key="manager.subscriptionTypes.form.typeName">Имя типа</message>
-	<message key="manager.subscriptionTypes.form.typeNameExists">Тип подписки с таким именем уже существует.</message>
+	<message key="manager.subscriptionTypeCs.form.typeNameExists">Тип подписки с таким именем уже существует.</message>
 	<message key="manager.subscriptionTypes.form.typeNameRequired">Имя типа подписки обязательно.</message>
 	<message key="manager.subscriptionTypes.name">Тип подписки</message>
 	<message key="manager.subscriptionTypes.noneCreated">Типы подписки не были созданы.</message>

@@ -132,7 +132,7 @@ class CommentForm extends Form {
 
 		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($article, 'SUBMISSION_COMMENT');
-		$email->setReplyTo($this->user->getEmail(), $this->user->getFullName());
+		$email->setFrom($this->user->getEmail(), $this->user->getFullName());
 
 		$commentText = $this->getData('comments');
 

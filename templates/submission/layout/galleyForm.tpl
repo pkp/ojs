@@ -82,7 +82,7 @@
 {/if}
 </table>
 </div>
-<br/>
+<br />
 
 {foreach from=$pubIdPlugins item=pubIdPlugin}
 	{assign var=pubIdMetadataFile value=$pubIdPlugin->getPubIdMetadataFile()}

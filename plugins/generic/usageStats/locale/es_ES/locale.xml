@@ -7,7 +7,7 @@
   * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings
   -->
 
@@ -37,4 +37,6 @@
 	<message key="plugins.generic.usageStats.processingPathNotEmpty">El directorio {$directory} no está vacío. Esto puede indicar indicar o bien que ha fallado un proceso, o que se han ejecutado varios a la vez. Este fichero será reprocesado automáticamente si además está usando scheduledTasksAutoStage.xml, de otro modo necesitará mover manualmente cualquier fichero huérfano en el directorio de procesado de vuelta al directorio objetivo.</message>
 	<message key="plugins.generic.usageStats.noCounterBotList">No se puede encontrar la bot list could COUNTER, o hay más de una. El fichero {$file} no se puede procesar.</message>
 	<message key="plugins.generic.usageStats.failedCounterBotList">La bot list COUNTER, {$botlist}, no se puede abrir. El fichero {$file} no se puede procesar.</message>
+	<message key="plugins.generic.usageStats.settings.archives">Archivos</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives">Comprime los archivos</message>
 </locale>

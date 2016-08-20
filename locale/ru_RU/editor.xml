@@ -12,7 +12,7 @@
   * With updates from Pavel Pisklakov (revising translation). 
   -->
 
-<locale name="ru_RU" full_name = "Russian">
+<locale name="ru_RU" full_name="Русский">
 	<message key="editor.article.reviewForms">Формы для рецензии</message>
 	<message key="editor.article.selectReviewForm">Выбрать форму рецензии</message>
 	<message key="editor.article.clearReviewForm">Очистить форму рецензии</message>
@@ -124,7 +124,7 @@
 	<message key="editor.navigation.createIssue">Создать выпуск</message>
 	<message key="editor.navigation.issueArchive">Старые выпуски</message>
 	<message key="editor.article.designateReviewVersion">Обозначить оригинальный файл как версию для рецензирования</message>
-	<message key="editor.article.uploadReviewVersion">Загрузить измененную версию для рецензирования</message>
+	<message key="editor.article.uploadReviewVersion">Загрузить переработанную версию для рецензирования</message>
 	<message key="editor.article.showSuppFile">Предоставить файл рецензентам</message>
 	<message key="editor.article.layoutAndProof">Верстка и корректура</message>
 	<message key="editor.article.clear">Очистить</message>
@@ -173,7 +173,7 @@
 	<message key="editor.article.noneSelected">Ничего не выбрано</message>
 	<message key="editor.article.authorProofing">Авторская корректура</message>
 	<message key="editor.article.archiveSubmission">Отклонить и переместить рукопись в архив</message>
-	<message key="editor.article.restoreToQueue">Восстановить в списке обрабатываемых статьей</message>
+	<message key="editor.article.restoreToQueue">Восстановить в списке обрабатываемых статей</message>
 	<message key="editor.article.assignSectionEditor">Добавить редактора раздела</message>
 	<message key="editor.article.assignEditor">Добавить редактора</message>
 	<message key="editor.article.selectEditor">Выбрать {$roleName}</message>

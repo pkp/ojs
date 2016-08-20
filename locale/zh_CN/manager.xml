@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="zh_CN" full_name = "China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="manager.emails.confirmResetAll">您确定您要重设这份期刊中所有的电子邮件模板为预设值？您将会失去您曾自订过的所有配置。</message>
 	<message key="manager.files.note">请注意：文件浏览器是一项高阶的功能，它允许一个期刊内的文件和目录直接被浏览和作。</message>
 	<message key="manager.groups">编辑团队管理</message>
@@ -29,7 +29,7 @@
 	<message key="manager.language.forms">表单</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">这将替换在此区域下您已经设定的任何指定区域的期刊设置。</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">恢复默认设置</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS可以让用户使用几种受到支持的语言介面。同时，OJS可以当作一个部分多语化的系统，让用户在每个页面中可以切换语言，并允许某些资料以额外的两种语言进行输入。<br /><br/>如果一个受到OJS支持的语言没有列在下表，请您的网站管理员从网站管理介面来安装该项语系。新增支持新语系的指引说明，请见OJS的文件。]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS可以让用户使用几种受到支持的语言介面。同时，OJS可以当作一个部分多语化的系统，让用户在每个页面中可以切换语言，并允许某些资料以额外的两种语言进行输入。<br /><br />如果一个受到OJS支持的语言没有列在下表，请您的网站管理员从网站管理介面来安装该项语系。新增支持新语系的指引说明，请见OJS的文件。]]></message>
 	<message key="manager.languages.noneAvailable">抱歉，没有额外的语言可供使用。如果您希望在这份期刊中使用额外的语系，请联系您的网站管理者。</message>
 	<message key="manager.languages.primaryLocaleInstructions">这将会是期刊网站的预设语言</message>
 	<message key="manager.managementPages">网页管理</message>
@@ -52,7 +52,6 @@
 	<message key="manager.payment.noPayments">无支付记录</message>
 	<message key="manager.payment.notFound">没有找到</message>
 	<message key="manager.payment.options">支付选项管理</message>
-	<message key="manager.payment.options.acceptSubscriptionPayments">This will activate payments for Subscriptions, where types, cost, duration and subscriptions are managed by the Journal (Subscription) Manager.</message>
 	<message key="manager.payment.options.donationFee">捐赠费</message>
 	<message key="manager.payment.options.enablePayments">点击这里启用支付模块.你必须填写下面的支付配置表单  注意：用户必须登录到付款.</message>
 	<message key="manager.payment.options.fastTrackFee">加急费</message>
@@ -72,7 +71,6 @@
 	<message key="manager.payment.paymentMethods">支付方法管理</message>
 	<message key="manager.payment.paymentType">支付类型</message>
 	<message key="manager.payment.readerFees">读者费用</message>
-	<message key="manager.payment.readerFeesDescription">Selected options, along with their descriptions and fees (which can be edited below), will appear in About the Journal under Policies, as well as at points where payment is required.</message>
 	<message key="manager.payment.records">支付记录</message>
 	<message key="manager.payments">支付管理</message>
 	<message key="manager.payment.userName">支付ID</message>
@@ -454,7 +452,6 @@
 	<message key="manager.setup.submissions.description">作者指引、版权和索引(包括注册)。</message>
 	<message key="manager.setup.subscription">>这份期刊需要订阅之后才能阅读某些或所有的内容。</message>
 	<message key="manager.setup.subscriptionDescription">「订阅管理」模组需要指派「订阅管理员」，存取这个模组，包括额外的开放阅读、自行存档和电子邮件通知选项。</message>
-	<message key="manager.setup.noPublishing">OJS will not be used to publish the journal's contents online.</message>
 	<message key="manager.setup.technicalSupportContact">技术支持联系人</message>
 	<message key="manager.setup.technicalSupportContactDescription">这个人会被列在期刊的「联系信息」页面中，负责编辑、作者和审稿人的使用问题，并且应该具有从所有角色的观点来进行系统操作的经验。这个期刊系统需要很少的技术支持，这或许该是个兼职性的工作。有可能会需要这样的职位，比方说，当作者和审稿人对于操作指南或者文件格式有疑问时，或者说，有需要去确保期刊定期在服务器上进行备份时。</message>
 	<message key="manager.setup.typeExamples">(例如，历史研究、准实验、文学分析、调查＼访谈等等)</message>
@@ -523,17 +520,9 @@
 	<message key="manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid">请选择一个订阅期满之后有多少月数的有效值。</message>
 	<message key="manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid">请选择一个订阅期满之前有多少月数的有效值。</message>
 	<message key="manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid">.请选择一个订阅期满之后有多少周数的有效值。</message>
-	<message key="manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid">Please select a valid value for the number of weeks before subscription expiry.</message>
 	<message key="manager.subscriptionPolicies.openAccessNotificationDescription">已注册之读者将可以选择在一期期刊开放阅读之时，透过电子邮件收到目录通知。</message>
 	<message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>注意：</strong>要启用这些选项，这个网站的管理员必须启用OJS配置文件中的<tt>scheduled_tasks</tt> 选项。（可能无法在所有的服务器上面执行），就在上面指出的OJS文件当中]]></message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">在线支付通知</message>
-	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Automated email notifications (available for editing by Journal Managers in OJS's Prepared Emails) can be sent to the Subscription Manager upon the completion of subscription online payments.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">Notify Subscription Manager by email upon online purchase of an Individual subscription.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">Notify Subscription Manager by email upon online purchase of an Institutional subscription (recommended).</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual">Notify Subscription Manager by email upon online renewal of an Individual subscription.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional">Notify Subscription Manager by email upon online renewal of an Institutional subscription.</message>
-	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>Note:</strong> Institutional subscriptions purchased online require approval of the provided domain and IP ranges and activation of the subscription by the Subscription Manager.]]></message>
-	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Note:</strong> To enable these options, the Journal Manager must enable the online payments module, including online payments for subscriptions, under Reader Fees.]]></message>
 	<message key="manager.subscriptionPolicies.openAccessOptions">开放阅读选项来订阅期刊</message>
 	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">需订阅之期刊可以提供「稍后开放阅读」以及＼或者「作者自行存档」（增加读者和内容的引用数）两种方式。被选择的方案会出现在「期刊介绍」之中。</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">订阅信息</message>
@@ -543,10 +532,7 @@
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">请输入一个有效的电子邮件地址</message>
 	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">您的订阅方针配置已经被更新</message>
 	<message key="manager.subscriptions">订阅</message>
-	<message key="manager.individualSubscriptions">Individual Subscriptions</message>
-	<message key="manager.institutionalSubscriptions">Institutional Subscriptions</message>
 	<message key="manager.subscriptions.confirmDelete">您确定您要删除掉这个订户？</message>
-	<message key="manager.subscriptions.summary">Subscriptions Summary</message>
 	<message key="manager.subscriptions.create">建立新的订户</message>
 	<message key="manager.subscriptions.createTitle">建立</message>
 	<message key="manager.subscriptions.renew">Renew</message>
@@ -557,8 +543,6 @@
 	<message key="manager.subscriptions.domain">域名</message>
 	<message key="manager.subscriptions.edit">编辑订户</message>
 	<message key="manager.subscriptions.editTitle">编辑</message>
-	<message key="manager.subscriptions.withStatus">With Status</message>
-	<message key="manager.subscriptions.allStatus">All</message>
 	<message key="manager.subscriptions.form.status">状态</message>
 	<message key="manager.subscriptions.form.statusRequired">一个订阅状态是必须的。</message>
 	<message key="manager.subscriptions.form.statusValid">请选择一个有效的订阅状态。</message>
@@ -581,7 +565,6 @@
 	<message key="manager.subscriptions.form.notifyEmailValid">请使用复选框</message>
 	<message key="manager.subscriptions.form.membership">会员</message>
 	<message key="manager.subscriptions.form.referenceNumber">参考号码</message>
-	<message key="manager.subscriptions.form.membershipInstructions">Enter membership information if the subscription type requires that subscribers belong to an association or organization.</message>
 	<message key="manager.subscriptions.form.membershipRequired">选定的订阅类型需要会员信息.</message>
 	<message key="manager.subscriptions.form.notes">注释</message>
 	<message key="manager.subscriptions.form.domain">域名</message>

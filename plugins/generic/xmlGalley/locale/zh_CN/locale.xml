@@ -25,7 +25,7 @@
 	<message key="plugins.generic.xmlGalley.settings.notAvailable">不可用</message>
 
 	<message key="plugins.generic.xmlGalley.settings.externalXSLT">外部的XSLT命令行渲染器(例如Xalan)</message>
-	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[输入完整的XSLT渲染工具路径，以及必须的参数。 使用 %xsl 参数指定XSL文件的位置，使用 %xml 指定XML源文件的位置。例如: <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[输入完整的XSLT渲染工具路径，以及必须的参数。 使用 %xsl 参数指定XSL文件的位置，使用 %xml 指定XML源文件的位置。例如: <br /><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">测试XSLT</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">外部XSLT测试通过.</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">外部XSLT测试失败.</message>
@@ -35,7 +35,7 @@
 	<message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM杂志出版的 DTD</a> &rarr; XHTML]]></message>
 
 	<message key="plugins.generic.xmlGalley.settings.xslFOP">激活使用XSL－FO渲染(例如 FOP)</message>
-	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[输入FO处理器完整的路径，以及必须的参数，使用 %fo 指定XSL－FO文件的位置，使用 %pdf 指定PDF文件的位置。例如: <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[输入FO处理器完整的路径，以及必须的参数，使用 %fo 指定XSL－FO文件的位置，使用 %pdf 指定PDF文件的位置。例如: <br /><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired">必须指定一个外部的命令行FO处理器</message>
 
 	<message key="plugins.generic.xmlGalley.settings.customXSL">定制XSL stylesheet</message>

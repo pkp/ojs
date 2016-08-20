@@ -41,6 +41,8 @@ class MedraSettingsForm extends DOIExportSettingsForm {
 		$this->addCheck(new FormValidatorInSet($this, 'publicationCountry', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.medra.settings.form.publicationCountry', array_keys($this->_getCountries())));
 		// The username is used in HTTP basic authentication and according to RFC2617 it therefore may not contain a colon.
 		$this->addCheck(new FormValidatorRegExp($this, 'username', FORM_VALIDATOR_OPTIONAL_VALUE, 'plugins.importexport.medra.settings.form.usernameRequired', '/^[^:]+$/'));
+		$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'plugins.importexport.medra.settings.form.usernameRequired', create_function('$username,$form', 'if ($form->getData(\'automaticRegistration\') && empty($username)) { return false; } return true;'), array(&$this)));
+		$this->addCheck(new FormValidatorCustom($this, 'password', 'required', 'plugins.importexport.medra.settings.form.passwordRequired', create_function('$password,$form', 'if ($form->getData(\'automaticRegistration\') && empty($password)) { return false; } return true;'), array(&$this)));
 	}
 
 
@@ -50,8 +52,10 @@ class MedraSettingsForm extends DOIExportSettingsForm {
 	/**
 	 * @see Form::display()
 	 */
-	function display() {
-		$templateMgr =& TemplateManager::getManager();
+	function display($request) {
+		$templateMgr =& TemplateManager::getManager($request);
+		$plugin = $this->_plugin;
+		$templateMgr->assign('unregisteredURL', $request->url(null, null, 'importexport', array('plugin', $plugin->getName(), 'all')));
 
 		// Issue export options.
 		$exportIssueOptions = array(
@@ -62,7 +66,7 @@ class MedraSettingsForm extends DOIExportSettingsForm {
 
 		// Countries.
 		$templateMgr->assign_by_ref('countries', $this->_getCountries());
-		parent::display();
+		parent::display($request);
 	}
 
 
@@ -81,10 +85,17 @@ class MedraSettingsForm extends DOIExportSettingsForm {
 			'publicationCountry' => 'string',
 			'exportIssuesAs' => 'int',
 			'username' => 'string',
-			'password' => 'string'
+			'password' => 'string',
+			'automaticRegistration' => 'bool'
 		);
 	}
 
+	/**
+	 * @see DOIExportSettingsForm::isOptional()
+	 */
+	function isOptional($settingName) {
+		return in_array($settingName, array('username', 'password', 'automaticRegistration'));
+	}
 
 	//
 	// Private helper methods

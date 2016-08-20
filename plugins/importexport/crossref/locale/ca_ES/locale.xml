@@ -7,7 +7,7 @@
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
   *
   * Localization strings for the ca_ES (Català) locale.
   -->
@@ -17,4 +17,18 @@
 	<message key="plugins.importexport.crossref.description">Exporta les metadades de l'article en format XML de CrossRef.</message>
 	
 	<message key="plugins.importexport.crossref.cliUsage">Ús: {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ... {$scriptName} {$pluginName} [xmlFileName] [journal_path] número [issueId]</message>
+	<message key="plugins.importexport.crossref.requirements">Requisits</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Tots els requisits del mòdul han estat satisfets.</message>
+	<message key="plugins.importexport.crossref.error.pluginNotConfigured"><![CDATA[El mòdul CrossRef no està configurat! Configuri'l a la pàgina de configuració dels mòduls <a href="{$settingsUrl}"> </a>.]]></message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">Registra els DOI automàticament</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Nom d'usuari</message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Són necessaris els següents elements per a un dipòsit CrossRef amb èxit.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Nom del dipositant</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Correu electrònic del dipositant</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Introduïu el nom del dipositant.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Introduïu el correu electrònic del dipositant.</message>
+	<message key="plugins.importexport.crossref.export.unregistered">Exporta els articles sense registrar</message>
+	<message key="plugins.importexport.crossref.export.selectUnregistered">Selecciona els articles sense registrar</message>
+	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">La data de publicació de l'article amb ID {$param} no hi és.</message>
+	<message key="plugins.importexport.crossref.senderTask.name">Tasca de registre automàtic de CrossRef</message>
 </locale>

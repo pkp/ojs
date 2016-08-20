@@ -10,7 +10,7 @@
   *
   -->
 
-<locale name="pl_PL" full_name = "Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="admin.hostedJournals">Czasopisma</message>
 	<message key="admin.settings.journalRedirect">Przekieruj na czasopismo</message>
 	<message key="admin.settings.journalRedirectInstructions">Żądania wyświetlenia strony głównej będą przekierowane do wybranego czasopisma.</message>
@@ -58,5 +58,5 @@
 	<message key="admin.mergeUsers.from.description">Wybierz jedno lub kilka kont użytkowników w celu ich scalenia. (np. w sytuacji kiedy jedna osoba posiada dwa konta). Konto wybrane jako pierwsze zostanie usunięte a jego wszystkie parametry zostaną przydzielone dla nowego użytkownika.</message>
 	<message key="admin.mergeUsers.allUsers">Wszyscy użytkownicy</message>
 	<message key="admin.mergeUsers.confirm">Potwierdź połączenie użytkownika {$oldAccountCount} z nowym użytkownikiem "{$newUsername}"? Użytkownik {$oldAccountCount} zostanie nieudwracalnie usunięty.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Brak użytkowników.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Brak użytkowników.</message>
 </locale>

@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="fr_CA" full_name = "Français (Canada)">
+<locale name="fr_CA" full_name="Français (Canada)">
 	<message key="manager.emails.confirmResetAll">Êtes-vous certain de vouloir réinitialiser tous les modèles de courriels dans cette revue? Vous allez perdre toutes les personnalisations que vous avez effectuées.</message>
 	<message key="manager.files.note">Note: L'explorateur de fichiers est une fonction avancée qui permet aux fichiers et aux répertoires associés à une revue d'être affichés et manipulés directement.</message>
 	<message key="manager.groups">Bloc générique</message>
@@ -27,7 +27,7 @@
 	<message key="manager.journalManagement">Gestion de la revue</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">Ceci remplacera n'importe quel paramètre de langue spécifique à une revue que vous aviez pour cette langue</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Recharger les paramètres de langue par défaut</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS peut être mis à la disposition des utilisateurs dans l'une des nombreuses langues prises en charge. Aussi, OJS peut fonctionner comme système multilingue, ce qui permet aux utilisateurs d'alterner entre les langues sur chaque page, et rend possible la saisie de certaines données dans plusieurs langues supplémentaires.<br /><br/>Si une langue prise en charge par OJS n'est pas inscrite ci-dessous, demander à votre administrateur de site d'installer la langue à partir de l'interface de l'administration du site. Pour des directives sur la prise en charge de nouvelles langues, veuillez consulter la documentation d'OJS.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS peut être mis à la disposition des utilisateurs dans l'une des nombreuses langues prises en charge. Aussi, OJS peut fonctionner comme système multilingue, ce qui permet aux utilisateurs d'alterner entre les langues sur chaque page, et rend possible la saisie de certaines données dans plusieurs langues supplémentaires.<br /><br />Si une langue prise en charge par OJS n'est pas inscrite ci-dessous, demander à votre administrateur de site d'installer la langue à partir de l'interface de l'administration du site. Pour des directives sur la prise en charge de nouvelles langues, veuillez consulter la documentation d'OJS.]]></message>
 	<message key="manager.languages.noneAvailable">Malheureusement, aucune autre langue n'est disponible. Veuillez communiquer avec votre administrateur de site si vous désirez utiliser d'autres langues avec cette revue.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Cette langue sera la langue par défaut du site de la revue.</message>
 	<message key="manager.managementPages">Pages de gestion</message>
@@ -689,7 +689,7 @@
 	<message key="manager.setup.includeLicense">Afficher la licence avec l'oeuvre diffusée.</message>
 	<message key="manager.setup.resetPermissions">Réinitialiser les autorisations de l'article</message>
 	<message key="manager.setup.resetPermissions.description">La mention de droit d'auteur et l'information sur la licence seront attachées au contenu diffusé de façon permanente, afin d'assurer que les données restent telles quelles dans le cas d'un changement des politiques pour les nouvelles soumissions. Pour réinitialiser les autorisations stockées qui sont déjà attachées au contenu diffusé, utilisez le bouton ci-dessous.</message>
-	<message key="manager.setup.confirmResetLicense">Êtes-vous sûr de vouloir réinitialiser la licence et les informations de droits d'auteur attachés au contenu diffusé pour la licence paramétrée dans la configuration de la revue ?</message>
+	<message key="manager.setup.confirmResetLicense">Êtes-vous sûr de vouloir réinitialiser la licence et les informations de droits d'auteur attachés au contenu diffusé pour la licence paramétrée dans la configuration de la revue?</message>
 	<message key="manager.setup.confirmResetLicenseChanged">Vous avez changé la licence et les informations du droit d'auteur dans la configuration de la revue. Veuillez enregistrer les changements apportés avant de réinitialiser les autorisations.</message>
 	<message key="manager.setup.copyrightYearBasis">Baser l'année de mention de droit d'auteur du nouvel article sur</message>
 	<message key="manager.setup.copyrightYearBasis.Article">L'année par défaut sera prise de la date de publication de l'article, comme dans "publish-as-you-go".</message>
@@ -739,4 +739,6 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
 	<message key="manager.statistics.reports.filters.byLocation.description">Affiner les résultats par pays, région et/ou ville.</message>
 	<message key="manager.subscriptions.form.dateRemindedBefore">Rappel d'expiration prochaine envoyé</message>
 	<message key="manager.subscriptions.form.dateRemindedAfter">Rappel que la date d'expiration est dépassé, envoyé</message>
+	<message key="manager.statistics.reports.optionalColumns.description">Les items en italique et précédés d'un * représentent des mesures qui sont optionnelles. L'existence de ces mesures dépend de la configuration de votre plugiciel de statistiques.</message>
+	<message key="manager.statistics.reports.yesterday">Hier</message>
 </locale>

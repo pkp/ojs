@@ -261,12 +261,6 @@
 	<message key="subscriptions.status.active">Aktywna</message>
 	<message key="subscriptions.status.needsInformation">Wymaga informacji</message>
 	<message key="subscriptions.status.needsApproval">Wymaga zatwierdzenia</message>
-	<message key="subscriptions.status.awaitingManualPayment">Awaiting Manual Payment</message>
-	<message key="subscriptions.status.awaitingOnlinePayment">Awaiting Online Payment</message>
-	<message key="subscriptions.status.other">Other, See Notes</message>
-	<message key="subscriptions.individualDescription">Individual subscriptions require login to access subscription content.</message>
-	<message key="subscriptions.institutionalDescription">Institutional subscriptions do not require login. The user's domain and/or IP address is used to provide access to subscription content.</message>
-	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Note:</strong> Institutional subscriptions purchased online require approval of the domain and IP ranges before the subscription is activated.]]></message>
 
 	<!--
 	 *
@@ -336,39 +330,12 @@
 
 	<!-- Site Administration -->
 	
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[To have the contents of all journals hosted on this site indexed within a globally distributed system of research databases, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">register</a> your site's URL with the Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. This tool collects the metadata from each indexed item in this journal, enabling accurate and collective searching among the research sites that adhere to the <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <strong>Site URL</strong>, and <span class="highlight">{$oaiUrl}</span> under <strong>Base URL for OAI Archive</strong>.
-<br /><br />
-Note that the OAI interface can be disabled for this site by editing the OJS system configuration. Future versions of OJS will allow the OAI interface to be enabled or disabled for individual journals within the site.]]></message>
 
-	
-	
 	<!-- Languages -->
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>
-	<ul>
-		<li>Your server does not have or allow execution of the GNU "tar" utility</li>
-		<li>OJS is unable to modify the locale registry file, typically "registry/locales.xml".</li>
-	</ul>
-<p>Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
-
-	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Specifying a default authentication source other than OJS has the following effects:</p>
-<ul>
-	<li>If a user attempts to register a new account with this site with a username that exists on the authentication source (but not in the OJS database), the registration attempt is only allowed if the supplied password is valid for that user account.</li>
-</ul>]]></message>
-	
-	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</div>
-<p>The system could not automatically overwrite the configuration file. To apply your configuration changes you must open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>]]></message>
-	
 
 	<!-- Site Administrator Merge Users -->	
 
 	<!-- Subscription Management -->
-	<message key="subscriptionManager.subscriptionManagement">Subscription Management</message>
-	<message key="subscriptionManager.individualSubscriptions">Individual Subscriptions</message>
-	<message key="subscriptionManager.institutionalSubscriptions">Institutional Subscriptions</message>
-	<message key="subscriptionManager.subscriptionTypes">Subscription Types</message>
 	
 	<!-- Journal Management -->
 
@@ -376,31 +343,14 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 
 
 	<!-- Plugin Management -->
-	
+
 	<!-- Payment Management -->
 
 
-		
+
 
 
 	<!-- General plugin information -->
-	<message key="plugins.categories.auth.description">Authorization Plugins allow Open Journal Systems to delegate user authentication tasks to other systems, such as LDAP servers.</message>
-
-
-	<message key="plugins.categories.citationFormats.description">Citation format plugins provide users with various formats in which to access article citations.</message>
-
-
-	<message key="plugins.categories.generic.description">Generic plugins are used to extend Open Journal Systems in a variety of ways that are not supported by the other plugin categories.</message>
-
-	<message key="plugins.categories.implicitAuth">Implicit Authentication Plugins</message>
-	<message key="plugins.categories.implicitAuth.description">Implicit Authentication plugins implement support for authenticating users based on http headers.</message>
-
-
-	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata Format Plugins</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">These format plugins express metadata in OAI communications.</message>
-
-
- 
 
 	<!-- Files Browser -->
 
@@ -412,43 +362,10 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 
 
 	<message key="manager.setup.reviewProcessEmailDescription">Redaktor przesyła recenzentowi zaproszenie do wykonania recenzji wraz z  załączonym tekstem. W odpowiedzi, recenzent przesyła redaktorowi swoją recenzję oraz rekomendację.  Następnie redaktor wprowadza dane nadesłane przez recenzenta do systemu.</message>
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems supports the <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) system to ensure a secure and permanent archive for the journal. LOCKSS is open source software developed at Stanford University Library that enables libraries to preserve selected web journals by regularly polling registered journal websites for newly published content and archiving it. Each archive is continually validated against other library caches, and if content is found to be corrupted or lost, the other caches or the journal is used to restore it.
-<br /><br />
-Setting up LOCKSS support for Open Journal Systems does not need to take place until after publishing is fully underway, at which point follow these two steps:]]></message>
 	
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
-<h4>1. Proposed Policy for Journals That Offer Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
-</ol>
-
-<h4>Proposed Policy for Journals That Offer Delayed Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
-</ol>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Journal will use a subject classification system available on the web.<br />
-Title of classification system]]></message>
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[To have the contents of this journal indexed within a globally distributed system of research databases, please read <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">the steps to becoming a data contributor</a> and register your journal with the official <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open Archives registry</a>.  To register, you will need the base URL for your repository: <span class="highlight">{$oaiUrl}</span>.  Afterwards, you can register your journal at the <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> and <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
-<br /><br />
-Note that if your site administrator has already registered this site with these services, your journal will be indexed automatically and you do not need to register your journal.]]></message>
-	<message key="manager.setup.citations">Enable the Citation Markup Assistant</message>
 
 	<!-- Setup Step 4 -->
-	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Steps: Submission Queue &gt; Submission Review &gt; Submission Editing &gt; Table of Contents.<br /><br />
-Select a model for handling these aspects of the editorial process. (To designate a Managing Editor and Section Editors, go to Editors in Journal Management.)]]></message>
-	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>To enable readers to locate online versions of the work cited by an author, the following options are available.</p>
-
-<ol>
-	<li><strong>Add a Reading Tool</strong><p>The Journal Manager can add "Find References" to the Reading Tools that accompany published items, which enables readers to paste a reference's title and then search pre-selected scholarly databases for the cited work.</p></li>
-	<li><strong>Embed Links in the References</strong><p>The Layout Editor can add a link to references that can be found online by using the following instructions (which can be edited).</p></li>
-</ol>]]></message>
 
 	<!-- Setup Step 5 -->
 
@@ -498,10 +415,10 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<!-- Navigation sidebar menu -->
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Nazwa użytkownika jest linkiem do profilu recenzenta.<br/>
-Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
-"Tygodnie" oznaczają przeciętny czas na ukończenie recenzji.<br/>
-"Ostatnie" oznacza datę ostatnio zaakceptowanej recenzji.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Nazwa użytkownika jest linkiem do profilu recenzenta.<br />
+Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
+"Tygodnie" oznaczają przeciętny czas na ukończenie recenzji.<br />
+"Ostatnie" oznacza datę ostatnio zaakceptowanej recenzji.<br />
 "Aktywne" oznacza liczbę recenzji w przygotowaniu.]]></message>
 
 
@@ -578,7 +495,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
         <message key="reviewer.article.reviewSchedule">Harmonogram recenzowania</message>
         <message key="reviewer.article.reviewSteps">Etapy recenzowania</message>
         <message key="reviewer.article.reviewerGuidelines">Wytyczne dla recenzentów</message>
-	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[The Review Guidelines will provide reviewers with criteria for judging a submission's suitability for publication in the journal, and can include any special instructions for preparing an effective and helpful review. In conducting the review, reviewers are presented with with two open text boxes, the first "for author and editor," and the second "for editor." Alternatively, the Journal Manager can create a peer review form under Review Forms. In all cases, editors will have the option of including the reviews in corresponding with the author.]]></message>
         <message key="reviewer.article.notifyEditorA">Powiadom redaktora tekstu</message>
         <message key="reviewer.article.notifyEditorB">czy podejmiesz się recenzji.</message>
         <message key="reviewer.article.consultGuidelines">Jeżeli masz zamiar podjąć się recenzji, przeczytaj wytyczne zamieszczone poniżej.</message>
@@ -644,13 +560,10 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	
 	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.layout.noLayoutFile">Brak (wyślij finalną wersję przed wysłaniem żądania)</message>
-	<message key="submission.layout.publicGalleyId">??? Public Galley Identifier</message>
-	<message key="submission.layout.galleyPublicIdentificationExists">??? Public galley identification already exists.</message>
 	<message key="submission.layout.assignLayoutEditor">Wybierz specjalistę DTP</message>
 	<message key="submission.layout.replaceLayoutEditor">Zamień specjalistę DTP</message>
 	<message key="submission.layout.layoutComments">Uwagi</message>
 	<message key="submission.layout.instructions">Wytyczne</message>
-	<message key="submission.layout.referenceLinking">??? Reference Linking</message>
 	
 	
 	<!-- Submission Tracking - Proofread Specific -->
@@ -708,43 +621,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">Moje subskrypcje</message>
 	<message key="user.subscriptions.subscriptionStatus">Status subskrypcji</message>
-	<message key="user.subscriptions.statusInformation">Active and expired subscriptions are displayed below along with their expiration date. In addition, the following status information may be included with each subscription.</message>
-	<message key="user.subscriptions.status">Status</message>
-	<message key="user.subscriptions.statusDescription">Description</message>
-	<message key="user.subscriptions.status.needsInformationDescription">Additional information is needed before the subscription can be activated</message>
-	<message key="user.subscriptions.status.needsApprovalDescription">Subscription must be reviewed before it can be activated</message>
-	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Manual payment has been initiated but not yet received</message>
-	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">An online payment has been initiated but canceled or not completed</message>
-	<message key="user.subscriptions.individualSubscriptions">Individual Subscription</message>
-	<message key="user.subscriptions.institutionalSubscriptions">Institutional Subscriptions</message>
-	<message key="user.subscriptions.renew">Renew</message>
-	<message key="user.subscriptions.purchase">Purchase</message>
-	<message key="user.subscriptions.purchaseNewSubscription">Purchase New Subscription</message>
-	<message key="user.subscriptions.purchaseIndividualSubscription">Purchase Individual Subscription</message>
-	<message key="user.subscriptions.purchaseInstitutionalSubscription">Purchase Institutional Subscription</message>
-	<message key="user.subscriptions.expires">Expires</message>
-	<message key="user.subscriptions.expired">Expired</message>
-	<message key="user.subscriptions.viewSubscriptionTypes">View Available Subscription Types</message>
-	<message key="user.subscriptions.form.typeId">Subscription Type</message>
-	<message key="user.subscriptions.form.membership">Membership</message>
-	<message key="user.subscriptions.form.membershipRequired">The selected subscription type requires membership information.</message>
-	<message key="user.subscriptions.form.typeIdValid">Please select a valid subscription type.</message>
-	<message key="user.subscriptions.form.subscriptionExists">This user account already has an individual subscription.</message>
-	<message key="user.subscriptions.form.membershipInstructions">Membership information if required for the selected subscription type.</message>
-	<message key="user.subscriptions.form.institutionName">Institution name</message>
-	<message key="user.subscriptions.form.institutionNameRequired">An institution name is required.</message>
-	<message key="user.subscriptions.form.institutionMailingAddress">Mailing address</message>
-	<message key="user.subscriptions.form.domain">Domain</message>
-	<message key="user.subscriptions.form.domainInstructions"><![CDATA[If a domain is entered here, IP ranges are optional.<br />Valid values are domain names (e.g. lib.sfu.ca).]]></message>
-	<message key="user.subscriptions.form.domainIPRangeRequired">The selected subscription type requires a domain and/or an IP range for subscription authentication.</message>
-	<message key="user.subscriptions.form.domainValid">Please enter a valid domain.</message>
-	<message key="user.subscriptions.form.ipRange">IP ranges</message>
-	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
-	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[If IP ranges are entered here, the domain is optional.<br />Valid values include an IP address (e.g. 142.58.103.1), IP range (e.g. 142.58.103.1 - 142.58.103.4), IP range with wildcard '*' (e.g. 142.58.*.*), and an IP range with CIDR (e.g. 142.58.100.0/24).]]></message>
-	<message key="user.subscriptions.form.ipRangeValid">Please enter a valid IP range.</message>
-	<message key="user.subscriptions.form.deleteIpRange">Delete</message>
-	<message key="user.subscriptions.form.addIpRange">Add</message>
-
 
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Przeglądaj indeks autorów</message>
@@ -850,113 +726,10 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="donations.thankYouMessage">Dziękujemy za udzielenie wsparcia.</message>
 	
 	<!-- Payments -->
-	<message key="payment.loginRequired">You must be logged in to make a payment.</message>
-	<message key="payment.loginRequired.forArticle">Subscription or article purchase required to access item. To verify subscription, access previous purchase, or purchase article, log in to journal.</message>
-	<message key="payment.loginRequired.forDonation">You must be logged in to make a donation.</message>
-	
-	<message key="payment.paid">Paid</message>
-	<message key="payment.payNow">Pay Now</message>
-	<message key="payment.waive">Waive</message>
-	<message key="payment.alreadyPaid">Already Paid</message>
-	<message key="payment.alreadyPaidMessage">Select this box if you've already sent your payment to the journal in order to finish the submission process.  The submission will not be reviewed until the payment arrives.  Click PAY NOW above to see the payment instructions.</message>
-	<message key="payment.paymentReceived">Payment Received</message>
-	<message key="payment.paymentSent">Payment has already been sent</message>
-	<message key="payment.authorFees">Author Fees</message>
-	<message key="payment.type.submission">Submission Fee</message>
-	<message key="payment.type.publication">Publication Fee</message>
-	<message key="payment.type.fastTrack">Fast Track Review Fee</message>
-	<message key="payment.type.membership">Individual Membership Fee</message>
-	<message key="payment.type.purchaseArticle">Purchase Article Fee</message>
-	<message key="payment.type.subscription">Subscription Fee</message>
-	<message key="payment.type.donation">Donations</message>
-	
-	<message key="payment.donation.makeDonation">Make a donation</message>
-	
-	<message key="payment.submission.paySubmission">Pay Submission Fee</message>
-	<message key="payment.fastTrack.payFastTrack">Pay to FastTrack</message>
-	<message key="payment.fastTrack.inFastTrack">in FastTrack</message>
-	<message key="payment.publication.payPublication">Pay to Publish</message>
-	<message key="payment.publication.publicationPaid">Publication Fee Paid</message>
-	
-	<message key="payment.membership.buyMembership">Buy Individual Membership</message>
-	<message key="payment.membership.renewMembership">Renew Individual Membership</message>	
-	<message key="payment.membership.ends">Ends</message>
-
-	<message key="payment.subscription.purchase">Purchase Subscription</message>
-	<message key="payment.subscription.renew">Renew Subscription</message>
-	<message key="payment.subscription.expires">Expires</message>	
 
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">Instalacja OJS</message>
 	<message key="installer.ojsUpgrade">Aktualizacja OJS</message>
-	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Wersja {$version}</h4>
-
-<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> file included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. If you have bug reports or technical support inquiries about Open Journal Systems, see the <a href="http://forum.pkp.sfu.ca" target="_blank">support forum</a> or visit PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
-
-<h4>Upgrade</h4>
-
-<p>If you are upgrading an existing installation of OJS 2.x, <a href="{$upgradeUrl}">click here</a> to proceed.</p>
-
-<h4>Recommended system requirements</h4>
-
-<ul>
-	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (including PHP 5.x); you are currently using PHP {$phpVersion}{$wrongPhpText}</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (including MySQL 4.x) or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (including PostgreSQL 8.x)</li>
-	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>
-	<li>Operating system: Any OS that supports the above software, including <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
-</ul>
-
-<p>As PKP does not have the resources to test every possible combination of software versions and platforms, no guarantee of correct operation or support is implied.</p>
-
-<p>Changes to these settings can be made after installation by editing the file <tt>config.inc.php</tt> in the base OJS directory, or using the site administration web interface.</p>
-
-<h4>Supported database systems</h4>
-
-<p>OJS has currently only been tested on MySQL and PostgreSQL, although other database management systems supported by <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the OJS team.</p>
-
-<h4>Pre-Installation Steps</h4>
-
-<p>1. The following files and directories (and their contents) must be made writable:</p>
-<ul>
-	<li><tt>config.inc.php</tt> is writable (optional): {$writable_config}</li>
-	<li><tt>public/</tt> is writable: {$writable_public}</li>
-	<li><tt>cache/</tt> is writable: {$writable_cache}</li>
-	<li><tt>cache/t_cache/</tt> is writable: {$writable_templates_cache}</li>
-	<li><tt>cache/t_compile/</tt> is writable: {$writable_templates_compile}</li>
-	<li><tt>cache/_db</tt> is writable: {$writable_db_cache}</li>
-</ul>
-
-<p>2. A directory to store uploaded files must be created and made writable (see "File Settings" below).</p>]]></message>
-	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS Version {$version}</h4>
-	
-<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> and <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> files included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. If you have bug reports or technical support inquiries about Open Journal Systems, see the <a href="http://forum.pkp.sfu.ca" target="_blank">support forum</a> or visit PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
-<p>It is <strong>strongly recommended</strong> that you back up your database, files directory, and OJS installation directory before proceeding.</p>
-<p>If you are running in <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, please ensure that the max_execution_time directive in your php.ini configuration file is set to a high limit. If this or any other time limit (e.g. Apache's "Timeout" directive) is reached and the upgrade process is interrupted, manual intervention will be required.</p>]]></message>
-	<message key="installer.localeSettingsInstructions"><![CDATA[For complete Unicode (UTF-8) support, select UTF-8 for all character set settings. Note that this support currently requires a MySQL >= 4.1.1 or PostgreSQL >= 7.1 database server. Please also note that full Unicode support requires PHP >= 4.3.0 compiled with support for the <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> library (enabled by default in most recent PHP installations). You may experience problems using extended character sets if your server does not meet these requirements.
-<br /><br />
-Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]></message>
-	<message key="installer.localeInstructions">The primary language to use for this system. Please consult the OJS documentation if you are interested in support for languages not listed here.</message>
-	<message key="installer.additionalLocalesInstructions">Select any additional languages to support in this system. These languages will be available for use by journals hosted on the site. Additional languages can also be installed at any time from the site administration interface.</message>
-	<message key="installer.filesDirInstructions"><![CDATA[Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible. <strong>Please ensure that this directory exists and is writable prior to installation.</strong> Windows path names should use forward slashes, e.g. "C:/myjournal/files".]]></message>
-	<message key="installer.databaseSettingsInstructions">OJS requires access to a SQL database to store its data. See the system requirements above for a list of supported databases. In the fields below, provide the settings to be used to connect to the database.</message>
-	<message key="installer.installApplication">Install Open Journal Systems</message>
-	<message key="installer.upgradeApplication">Upgrade Open Journal Systems</message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Warning:</strong> If installation failed part way through database installation you may need to drop your OJS database or database tables before attempting to reinstall the database.]]></message>
-	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
-<p>The installer could not automatically overwrite the configuration file. Before attempting to use the system, please open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>]]></message>
-	<message key="installer.installationComplete"><![CDATA[<p>Installation of OJS has completed successfully.</p>
-<p>To begin using the system, <a href="{$loginUrl}">login</a> with the username and password entered on the previous page.</p>
-<p>If you wish to receive news and updates, you can:</p>
-<ol>
-	<li><a href="http://pkp.sfu.ca/ojs/register" target="_new">Register</a> your journal, conference, or harvester and receive updates on software upgrades, security patches, and more.</li>
-	<li>Join our <a href="http://pkp.sfu.ca/informed" target="_new">discussion list</a> for OJS, OCS, the Harvester, Lemon8-XML, OMP, or all of the above.</li>
-	<li>Subscribe to the <a href="http://pkp.sfu.ca/blog" target="_new">PKP blog</a> <a href="http://pkp.sfu.ca/blog/feed" target="_new">RSS feed</a>.</li>
-</ol>
-<p>If you have questions or comments, please visit the <a href="http://forum.pkp.sfu.ca" target="_new">support forum</a>.</p>]]></message>
-	<message key="installer.upgradeComplete"><![CDATA[<p>Upgrade of OJS to version {$version} has completed successfully.</p>
-<p>Don't forget to set the "installed" setting in your config.inc.php configuration file back to <em>On</em>.</p>
-<p>If you haven't already registered and wish to receive news and updates, <strong>please register at <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> If you have questions or comments, please visit the <a href="http://forum.pkp.sfu.ca" target="_new">support forum</a>.</p>]]></message>
-
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} wysłał nowy tekst, ID {$submissionId}.</message>
@@ -998,7 +771,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.editor.archived">Tekst {$articleId} został zarchiwizowany.</message>
 	<message key="log.editor.restored">Tekst {$articleId} został przywrócony do kolejki.</message>
 	<message key="log.editor.editorAssigned">{$editorName} został przydzielony jako redaktor do tekstu {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} ??? has expedited the editing process for article {$articleId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} przydzielił korektora {$proofreaderName} do korekty tekstu {$articleId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} przesłał tekst {$articleId} do publikacji.</message>
@@ -1009,21 +781,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 
 	<!-- RT Settings -->
-	<message key="rt.admin.settings">Reading Tool Options</message>
-
-	<message key="rt.admin.settings.description">The reading tools appear in a frame beside published items in the sections of the journal that have been designated for indexing. The reading tools consist of a set of optional tools related to the published item, listed below, and a set of tools that provide access to related items, organized by field and discipline.</message>
-	<message key="rt.admin.settings.enableReadingTools">Enable Reading Tools for designated sections of journal.</message>
-	<message key="rt.admin.settings.relatedItems">Field</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[See <a href="{$relatedItemsLink}" class="action">Related Items Sets</a> to view, add, correct, or delete related items for each field.]]></message>
-
-	<message key="rt.admin.options">Journal Item Tools</message>
-	<message key="rt.admin.relatedItems">Related Item Tools</message>
-
-	<message key="rt.admin.settings.addComment">Add comment (enables readers to post comments, with Journal Manager able to delete).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Users must be registered and logged in to post, with anonymity not permitted.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Users must be registered and logged in to post, with anonymity permitted.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Users do not need to be registered to post, with anonymity permitted.</message>
-
 
 	<!-- RT Versions -->
 
@@ -1031,10 +788,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Possibly invalid URLs for search sites are displayed below.<br/>
-You should manually verify any URLs marked as invalid, as this test is not 100% accurate.<br/>
-Validation may fail on search URLs that require posted form data.]]></message>
-	
 	<!-- RT Entities -->
 
 
@@ -1055,7 +808,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.thisJournal">Wyszukaj w czasopiśmie</message>
 	
 
-	<message key="rt.context.authorTermsDescription">For items with more than one author, leave all names checked to search for similarly co-authored work, or search one at a time by checking only a single name. To learn more about the resource searched, click on ABOUT. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
 	
 	
 	
@@ -1074,7 +826,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="notification.type.newAnnouncement">Nowe ogłoszenie zostało utworzone.</message>	
 	<message key="notification.type.proofreadComment">Dostępne są nowe uwagi korektora dla "{$param}".</message>
 	<message key="notification.type.reviewerComment">Dostępne są nowe uwagi recenzenta dla "{$param}".</message>
-	<message key="notification.type.reviewerFormComment">??? A review form review has been submitted for "{$param}".</message>
 	<message key="notification.type.reviewing">Wydarzenia dotyczące procesu recenzji</message>
 	<message key="notification.type.site">Wydarzenia dotyczące strony</message>
 	<message key="notification.type.submissionComment">Dostępne są nowe uwagi redaktora dla "{$param}".</message>
@@ -1097,6 +848,4 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<!-- Icons: Default "alt" text -->
 	
 	<!-- Debug messages -->
-	<message key="debug.notes.currencyListLoad">Loaded currency list "{$filename}" from XML</message>
-	<message key="debug.notes.helpMappingLoad">Reloaded XML help mapping file {$filename} in search of {$id}.</message>
 </locale>

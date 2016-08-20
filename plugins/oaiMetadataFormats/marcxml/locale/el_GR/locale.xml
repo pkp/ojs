@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="el_GR" full_name = "Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.OAIMetadata.marcxml.displayName">Σχήμα Μεταδεδομένων MARC21</message>
 	<message key="plugins.OAIMetadata.marcxml.description">Μορφοποεί τα μεταδεδομένα ώστε να είναι συμβατά με την μορφή MARC21.</message>
 </locale>

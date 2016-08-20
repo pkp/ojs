@@ -271,8 +271,6 @@
 	<message key="manager.setup.emailBounceAddressDescription">Jede E-Mail, die nicht zugestellt werden kann, erzeugt eine Fehlermeldung, die an diese Adresse geschickt wird.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Anmerkung:</strong> Die Website-Administrator/in muss in der OJS-Konfigurationsdatei die Option <tt>allow_envelope_sender</tt> aktivieren, um dies zu ermöglichen. Weitere Servereinstellungen können erforderlich sein (und sind nicht unbedingt auf allen Servern verfügbar). Siehe OJS-Dokumentation.]]></message>
 	<message key="manager.setup.emails">E-Mail-Kennzeichnung </message>
-	<message key="manager.setup.emailHeader">E-Mail-Header</message>
-	<message key="manager.setup.emailHeaderDescription">Die vorbereiteten E-Mails, die vom System im Namen der Zeitschrift verschickt werden, beginnen mit dem folgenden Header. Diese E-Mails werden von der Adresse des Hauptkontakts aus verschickt, deshalb ist es wichtig klarzustellen, dass dieser nicht unbedingt für den Inhalt der E-Mail verantwortlich ist, die durch eine/n andere Benutzer/in verschickt worden sein könnte.</message>
 	<message key="manager.setup.emailSignatureDescription">Alle E-Mail-Vorlagen, die vom System im Namen der Zeitschrift verschickt werden, tragen die folgende Signatur. Die E-Mail-Vorlagen können unter "Zeitschriftenverwaltung" bearbeitet werden.</message>
 	<message key="manager.setup.emailSignature">Signatur</message>
 	<message key="manager.setup.enableAnnouncements">Erlauben Sie den Zeitschriftenverwalter/innen, Mitteilungen hinzuzufügen.</message>
@@ -740,7 +738,7 @@
 	<message key="manager.subscriptionTypes.noneCreated">Es wurden keine neuen Abonnementtypen erstellt.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Abonnementtyp erfolgreich erstellt.</message>
 
-	<!-- Kategorien -->
+	<!-- Categories -->
 	<message key="manager.setup.categories">Kategorien</message>
 	<message key="manager.setup.categories.description">Wählen Sie die passendsten Kategorien aus der oben angezeigten Menge. Leser/innen können die gesamte Zeitschriftenmenge dann nach Kategorien durchsehen.</message>
 </locale>

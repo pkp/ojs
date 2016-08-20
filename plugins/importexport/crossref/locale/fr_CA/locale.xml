@@ -40,4 +40,5 @@
 	<message key="plugins.importexport.crossref.export.selectUnregistered">Sélectionner les articles non-enregistrés</message>
 	<message key="plugins.importexport.crossref.export.noUnregistered">Tous les articles ont déjà été enregistrés (ou aucun d'eux n'a de DOI assigné)</message>
 	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">La date de publication manque pour l'article avec l'ID {$param}.</message>
+	<message key="plugins.importexport.crossref.senderTask.name">Tâche automatique d'enregistrement de CrossRef</message>
 </locale>

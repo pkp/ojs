@@ -21,7 +21,7 @@
 	<message key="plugins.generic.backup.db">Database</message>
 	<message key="plugins.generic.backup.files">Bestanden</message>
 	<message key="plugins.generic.backup.code">Code</message>
-	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>Waarschuwing:</strong> Het database dump tool is niet geconfigureerd in config.inc.php. Deze configuratie is afhankelijk van uw server configuratie en de database die u gebruikt. Dat moet geconfigureerd worden in de sectie [cli], in de optie "dump". Gebruik voor MySQL, het mysqldump tool, bv.:<br/>
+	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>Waarschuwing:</strong> Het database dump tool is niet geconfigureerd in config.inc.php. Deze configuratie is afhankelijk van uw server configuratie en de database die u gebruikt. Dat moet geconfigureerd worden in de sectie [cli], in de optie "dump". Gebruik voor MySQL, het mysqldump tool, bv.:<br />
 <pre>[cli]
 dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
 </pre>
@@ -31,10 +31,10 @@ The "%s" tokens worden vervangen door respectievelijk:<ol>
 	<li>Database password</li>
 	<li>Database name</li>
 </ol>
-Merk op dat het wachtwoord van de database op de commandoregel opgegeven moet worden, wat een veiligheidsrisico kan zijn.<br/><br/>]]></message>
-	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>Waarschuwing:</strong> Het "tar" tool is niet geconfigureerd in config.inc.php. Deze configuratie hangt af van uw serverconfiguratie. Het moet gespecificeerd worden in de sectie [cli], in de optie "tar",en bevat het pad naar het "tar" utility, bv.:<br/>
+Merk op dat het wachtwoord van de database op de commandoregel opgegeven moet worden, wat een veiligheidsrisico kan zijn.<br /><br/>]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>Waarschuwing:</strong> Het "tar" tool is niet geconfigureerd in config.inc.php. Deze configuratie hangt af van uw serverconfiguratie. Het moet gespecificeerd worden in de sectie [cli], in de optie "tar",en bevat het pad naar het "tar" utility, bv.:<br />
 <pre>[cli]
 tar = "/bin/tar"
-</pre><br/>]]></message>
+</pre><br />]]></message>
 	<message key="plugins.generic.backup.failure"><![CDATA[<strong>Waarschuwing: </strong>Er kan een fout opgetreden zijn tijdens het back-up proces. De meest voorkomende oorzaak is bestandspermissies.]]></message>
 </locale>

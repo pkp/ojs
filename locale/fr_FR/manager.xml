@@ -11,7 +11,7 @@
   * Localization strings for the fr_FR (Français (France)) locale.
   -->
 
-<locale name="fr_FR" full_name = "Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="manager.emails.confirmResetAll">Êtes-vous certain de vouloir réinitialiser tous les modèles de courriels dans cette revue? Vous allez perdre toutes les personnalisations que vous avez effectuées.</message>
 	<message key="manager.files.note">Note: L'explorateur de fichiers est une fonction avancée qui permet aux fichiers et aux répertoires associés à une revue d'être affichés et manipulés directement.</message>
 	<message key="manager.groups">Bloc générique</message>
@@ -26,7 +26,7 @@
 	<message key="manager.journalManagement">Gestion de la revue</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">Ceci remplacera n'importe quel paramètre de langue spécifique à une revue que vous aviez pour cette langue</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Recharger les paramètres de langue par défaut</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS peut être mis à la disposition des utilisateurs dans l'une des nombreuses langues prises en charge. Aussi, OJS peut fonctionner comme système multilingue, ce qui permet aux utilisateurs d'alterner entre les langues sur chaque page, et rend possible la saisie de certaines données dans plusieurs langues supplémentaires.<br /><br/>Si une langue prise en charge par OJS n'est pas inscrite ci-dessous, demander à votre administrateur de site d'installer la langue à partir de l'interface de l'administration du site. Pour des directives sur la prise en charge de nouvelles langues, veuillez consulter la documentation d'OJS.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS peut être mis à la disposition des utilisateurs dans l'une des nombreuses langues prises en charge. Aussi, OJS peut fonctionner comme système multilingue, ce qui permet aux utilisateurs d'alterner entre les langues sur chaque page, et rend possible la saisie de certaines données dans plusieurs langues supplémentaires.<br /><br />Si une langue prise en charge par OJS n'est pas inscrite ci-dessous, demander à votre administrateur de site d'installer la langue à partir de l'interface de l'administration du site. Pour des directives sur la prise en charge de nouvelles langues, veuillez consulter la documentation d'OJS.]]></message>
 	<message key="manager.languages.noneAvailable">Malheureusement, aucune autre langue n'est disponible. Veuillez communiquer avec votre administrateur de site si vous désirez utiliser d'autres langues avec cette revue.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Cette langue sera la langue par défaut du site de la revue.</message>
 	<message key="manager.managementPages">Pages de gestion</message>

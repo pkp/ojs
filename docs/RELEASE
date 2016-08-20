@@ -1,6 +1,6 @@
-OJS 2.4.8 Release Notes
-CVS tag: ojs-2_4_8-0
-Release date: February 5, 2016
+OJS 2.4.8-1 Release Notes
+CVS tag: ojs-2_4_8-1
+Release date: August 3, 2016
 =================================
 
 Configuration Changes
@@ -47,7 +47,7 @@ Bug Fixes
 	#872: OJS: DOI plugins' options have to be renamed
 	#873: The version.xml descriptor has invalid XML in OJS 2.4.7
 	#880: Archived usage stats log files are taking too much disk space
-	#881: [OJS] Incorrect notification signature
+	#881: Incorrect notification signature
 	#884: Permit X in ONIX-formatted ISSNs
 	#885: Browse plugin drops whitespace in before HTML header
 	#889: Fatal error in editing submission metadata on missing section
@@ -57,7 +57,7 @@ Bug Fixes
 	#897: ThesisFeedPlugin is missing request type check
 	#899: Google Analytics setting references "boolean instead of "bool"
 	#917: Update references to Codehaus
-	#919: [OJS] Notify users fails when notifying "All published authors"
+	#919: Notify users fails when notifying "All published authors"
 	#935: Poor SQL performance for ReviewFormDAO::getActiveByAssocId()
 	#947: Use of proxy settings is not consistent
 	#959: es_ES translation of plugins.generic.usageStats.usageStatsLoaderName seems off
@@ -76,3 +76,43 @@ Bug Fixes
 	#1088: Not all issues displayed for the DOI export/registration
 	#1092: OAI-PMH interface strips HTML, but leaves HTML entities
 	#1097: Escaped HTML is slipping into Crossref exports
+	#1653: Native Import's articles' copyright holder does not default locale
+	#1616: One-click reviewer access plus attachment add causes apparently empty recipient list
+	#1607: PLN Deposits fail if metadata contains HTML entities
+	#1596: Mail::getReplyToString() is noisy
+	#1585: Crossref plugin tries to register objects without DOIs
+	#1564: status update for submission archive only happens when email is sent
+	#1560: update all locales before OJS 2.4.8-1 release
+	#1559: do not consider file size in mEDRA DOI registration for remote galleys
+	#1558: multiple DOI XML file registrations
+	#1555: first Scheduled Task Log filename is untranslated
+	#1544: da_DK email template OFR_REVIEW_REMINDER_LATE contains empty subject
+	#1543: DOI automatic registration
+	#1534: PLN Plugin Missing Deposit Type Prevents Deposits
+	#1533: PLN Plugin SQL and Non-Aggregated Columns
+	#1522: TinyMCE missing on manager/editUser
+	#1507: RECAPTCHA breaks on SSL if SSL is optional
+	#1498: Improve Crossref statuses
+	#1496: "Primary contact" used in preamble to terms of use
+	#1493: Mailing list warning and potential message duplication
+	#1487: Timed view reports wrong numbers when metrics data refers to non existing galley
+	#1464: Extend issue and article publication year to minimum year - 50
+	#1449: CrossRef minor improvements
+	#1444: Fix admin.mergerUsers.noneEnrolled locale key typo
+	#1433: SPF fixes should be reverted and altered
+	#1401: PKP PLN check for scheduled_tasks is missing parameter
+	#1381: alling mkdirtree when open_basedir prevents access to a folder triggers infinite recursion
+	#1367: Consider articles with no publication date for the Crossref export/registration
+	#1353: Navbar user home should stay in journal context for single journal installs
+	#1303: Reload Default Email Templates misses deleted templates and deletes plugin data
+	#1238: Article publication date incorrectly set to "today"
+	#1187: consider proxy settings for external feed plugin
+	#1183: make the proxy use for web serviece requests optional
+	#1145: Native import/export DTD tweaks
+	#1142: 2.4.3 Patch command picks wrong file
+	#1130: Typo in Google Analytics Plugin
+	#1129: .git file in ojs 2.4.8 patch (plugins/reports/counter/classes/COUNTER)
+	#1074: Disallow numeric public issue and article ids
+	#1013: Ajax form submit controls doesn't get enabled after form submission
+	#1001: Usage event plugin should not use public ids
+	#862: Implement better logging for web service requests

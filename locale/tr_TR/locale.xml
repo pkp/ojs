@@ -344,7 +344,7 @@ Not: Bu site için Açık Arşiv Sistemi arayüzü ADS ana düzenleme sayfasınd
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOT!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOT!</h4>
 <p>Sistem otomatik olarak yapılanma dosyasının üzerine yazamaz. Yapılanma değişikliklerini uygulayabilmek için <tt>config.inc.php</tt> dosyasını uygun bir yazı düzenleyicide açmak ve içeriğini aşağıdaki yazı alanında belirtilen içerikle değiştirmeniz gerekir. </p>]]></message>
 
 	<!-- Site Administrator Merge Users -->	
@@ -438,10 +438,10 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 	</ol>]]></message>
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[İsim hakemin profiline bağlantıdır.<br/>
-Puanlar 5 (çok iyi) üzerindendir.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[İsim hakemin profiline bağlantıdır.<br />
+Puanlar 5 (çok iyi) üzerindendir.<br />
 Günler, bir değerlendirmeyi ortalama kaç günde tamamladığını gösterir.<br />
-En Son, son değerlendirmeyi kabul ettiği tarihi gösterir,<br/>
+En Son, son değerlendirmeyi kabul ettiği tarihi gösterir,<br />
 Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmiştir.]]></message>
 
 	<!-- Section Editor -->
@@ -974,8 +974,8 @@ Sunucunuz mbstring'i güncel olarak destekler: <strong>{$supportsMBString}</stro
 	<!-- RT Contexts -->
 
 	<!-- RT Searches -->
-	<message key="rt.admin.validateUrls.description"><![CDATA[Aranan sitelerdeki olası geçersiz bağlantılar aşağıda listelenmiştir.<br/>
-Bu test %100 doğru sonuç veremediği için, geçersiz bağlantıları, kontrol ederek doğrulamanız gerekmektedir.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Aranan sitelerdeki olası geçersiz bağlantılar aşağıda listelenmiştir.<br />
+Bu test %100 doğru sonuç veremediği için, geçersiz bağlantıları, kontrol ederek doğrulamanız gerekmektedir.<br />
 Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladır.]]></message>
 
 
@@ -1003,8 +1003,8 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 	<message key="notification.type.articleSubmitted">"{$title}" başlıklı bir makale gönderildi..</message>
 	<message key="notification.type.copyeditComment">Sayfa düzenleyici "{$title}" başlıklı makale için yorum yaptı.</message>
 	<message key="notification.type.editing">Düzenleme durumları</message>
-	<message key="notification.type.editorDecisionComment">"{$title}" başlıklı makale için editör karar yorumu yaptı.</message>
-	<message key="notification.type.galleyModified">"{$title}" başlıklı makale için galeride güncellendi.</message>
+	<message key="notification.type.editorDecisionComment">"{$title}" başlıklı makale için editör yorum yaptı.</message>
+	<message key="notification.type.galleyModified">"{$title}" başlıklı makale güncellendi.</message>
 	<message key="notification.type.issuePublished">Yeni bir sayı yayımlandı.</message>
 	<message key="notification.type.layoutComment">"{$title}" başlıklı makalenin sayfa düzenleyicisi yorum yaptı.</message>
 	<message key="notification.type.metadataModified">"{$title}" başlıklı makalenin üst verisi güncellendi.</message>
@@ -1092,37 +1092,7 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 	<message key="payment.type.gift">Bağış</message>
 	<message key="payment.type.gift.subscription">Abonelik</message>
 	<message key="installer.allowFileUploads"><![CDATA[Sunucunuz güncel dosya yüklemesini kabul etti: <strong>{$allowFileUploads}</strong>]]></message>
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
-<h4>1. Proposed Policy for Journals That Offer Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
-</ol>
-
-<h4>Proposed Policy for Journals That Offer Delayed Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
-</ol>]]></message>
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>
-	<ul>
-		<li>Your server does not have or allow execution of the GNU "tar" utility</li>
-		<li>OJS is unable to modify the locale registry file, typically "registry/locales.xml".</li>
-	</ul>
-<p>Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
 	<message key="manager.setup.reviewProcessEmailDescription">Editörler gönderileri e-posta ekinde değerlendirme için hakemlere gönderirler. Hakemler kabul (veya red) yönündeki görüş ve değerlendirmelerini e-posta ile editörlere bildirirler. Hakemlerin e-posta ekinde gönderdikleri kabul (veya red) yönündeki görüş ve değerlendirmeleri gönderinin değerlendirme sayfasına editörler tarafından işlenir.</message>
-	<message key="gifts.thankYouMessage">Your gift purchase has been completed. You will receive a copy of the gift email sent to the recipient once your payment has been processed.</message>
-	<message key="gifts.subscriptionFormIntroduction">Please fill out the form below. The provided contact information, along with your gift note, will be used to email the recipient and inform them of their new gift subscription (you will also receive a copy of this email).</message>
-	<message key="gifts.detailsDescription">Please select the gift below and include a personalized message that will be emailed to the recipient (you will receive a copy of this email).</message>
-	<message key="gifts.subscriptionsDescription">A gift subscription redeemed here will replace your existing subscription (if you have one). Subscriptions will begin on the redemption date and will be valid for the duration of the subscription type.</message>
-	<message key="gifts.giftSubscriptionsAvailable">Gift subscriptions are also available. Gift subscriptions can be redeemed at any time by the recipient and are a great way to support this journal.</message>
-	<message key="gifts.subscriptionNonExpiring">The gift was not redeemed since you already have a non-expiring subscription with this journal.</message>
-	<message key="payment.loginRequired.forIssue">Subscription or issue purchase required to access item. To verify subscription, access previous purchase, or purchase issue, log in to journal.</message>
-	<message key="payment.alreadyPaidMessage">Select this box if you've already sent your payment to the journal in order to finish the submission process.  The submission will not be reviewed until the payment arrives.  Click PAY NOW above to see the payment instructions.</message>
 	<message key="user.profile.profileImage">Profil Resmi</message>
 	<message key="common.journal">Dergi</message>
 	<message key="submission.permissions">İzinler</message>
@@ -1148,11 +1118,12 @@ Authors who publish with this journal agree to the following terms:
 	<message key="submission.license.cc.by-nd4">CC Attribution-NoDerivatives 4.0</message>
 	<message key="submission.license.cc.by4">CC Attribution 4.0</message>
 	<message key="submission.license.cc.by-sa4">CC Attribution-ShareAlike 4.0</message>
-	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems supports the <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) system to ensure secure and permanent preservation of your journal. You have several options for including your journal in a LOCKSS network:]]></message>
 	<message key="user.register.emailValidation">E-Posta Doğrulaması Gerekli</message>
 	<message key="about.purchaseIssue">Sayı Satınalma</message>
 	<message key="about.purchaseArticle">Makale Satınalma</message>
 	<message key="user.register.emailValidationDescription">İşlem yapmadan önce e-posta adresinizi doğrulamanız gereklidir. Daha ayrıntılı talimatlar için lütfen e-posta adresinizi kontrol ediniz. Giriş yapmadan önce hesabınızı doğrulamalısınız.</message>
 	<message key="about.purchaseIssueDescription">Okuyucular abone olmadan dergi sayısı satın alabilir. Bunun için aşağıdaki ödeme seçenekleri ve fiyatlar geçerlidir.</message>
 	<message key="about.purchaseArticleDescription">Okuyucular abone olmadan makale satın alabilir. Bunun için aşağıdaki ödeme seçenekleri ve fiyatlar geçerlidir.</message>
+	<message key="user.login.implicitAuthLogin">Shibboleth Seçeneğiyle Giriş</message>
+	<message key="user.register.implicitAuth">Var olan kurumsal bir hesaba Shibboleth seçeneğiyle giriş</message>
 </locale>

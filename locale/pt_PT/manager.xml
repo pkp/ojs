@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="pt_PT" full_name = "Português">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="manager.emails.confirmResetAll">Deseja realmente restaurar todos os e-mails para o padrão original desta revista? Todas as personalizações serão perdidas.</message>
 	<message key="manager.files.note">Aviso: o Navegador de Ficheiros é uma ferramenta avançada que permite visualização e manipulação directa de documentos e pastas associadas à revista.</message>
 	<message key="manager.groups">Pessoal</message>
@@ -20,8 +20,8 @@
 	<message key="manager.groups.context.editorialTeam.short">Equipa Editorial</message>
 	<message key="manager.groups.context.people">Exibir título como categoria própria em Pessoal (ex.: Equipa Editorial)</message>
 	<message key="manager.groups.create">Criar Título da Equipa Editorial</message>
-	<message key="manager.groups.disableBoard">O sistema gerará automaticamente a lista de participantes sob cada função editorial (Editor-Gestor, Editor, Editor de Secção, Editor de Texto, etc.)</message>
-	<message key="manager.groups.enableBoard">O Editor-Gestor da revista criará equipas editoriais e seus títulos e incluirá as pessoas em cada grupo.</message>
+	<message key="manager.groups.disableBoard">O sistema gerará automaticamente a lista de participantes sob cada função editorial (Director, Editor, Editor de Secção, Editor de Texto, etc.)</message>
+	<message key="manager.groups.enableBoard">O Director da revista criará equipas editoriais e seus títulos e incluirá as pessoas em cada grupo.</message>
 	<message key="manager.groups.enableBoard.description"><![CDATA[Exibir em <a href="{$aboutEditorialTeamUrl}">Equipe Editorial</a> em Sobre a Revista:]]></message>
 	<message key="manager.groups.noneCreated">Nenhum cargo criado na equipa editorial.</message>
 	<message key="manager.journalManagement">Administração da Revista</message>
@@ -86,7 +86,7 @@
 	<message key="manager.people.mergeUsers.into.description">Escolha um utilizador a quem deseja atribuir as submissões e histórico de tarefas do registo anterior.</message>
 	<message key="manager.people.roleEnrollment">{$role} Registo</message>
 	<message key="manager.people.syncUserDescription">Sincronizar Registo registará nesta revista todos os utilizadores com a função específica na revista especificada. Esta função permite que um grupo padrão de utilizadores (exemplo: revisores) seja partilhado entre revistas.</message>
-	<message key="manager.plugins.description">Esta página permite ao Editor-Gestor verificar e configurar os plugins actualmente instalados. Os Plugins estão divididos por categorias, de acordo com a sua função. As categorias estão listadas a seguir, cada uma com o seu conjunto de plugins.</message>
+	<message key="manager.plugins.description">Esta página permite ao Director verificar e configurar os plugins actualmente instalados. Os Plugins estão divididos por categorias, de acordo com a sua função. As categorias estão listadas a seguir, cada uma com o seu conjunto de plugins.</message>
 	<message key="manager.reviewFormElements">Campos do formulário de revisão</message>
 	<message key="manager.reviewFormElements.addResponseItem">Adicionar resposta possível</message>
 	<message key="manager.reviewFormElements.checkboxes">Campo de selecção</message>
@@ -167,7 +167,7 @@
 	<message key="manager.setup.authorCopyrightNoticeAgree">Obrigar autores a aceitar a Declaração de Direitos de Autor como parte integrante do processo de submissão.</message>
 	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[O Aviso de Direitos de Autor fornecido aqui aparecerá em Sobre a Revista e nos metadados de cada documento publicado. Embora seja de responsabilidade da revista definir a natureza do acordo de direitos de autor, o Public Knowledge Project recomenda o uso de uma licença <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a>. São oferecidas para este fim <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">propostas de Aviso de Direitos de Autor</a> que podem ser editadas e inseridas no campo a seguir para periódicos que oferecem (a) acesso livre, (b) acesso livre adiado, ou (c) não oferecem acesso livre.]]></message>
 	<message key="manager.setup.authorGuidelines">Directrizes para Autores</message>
-	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Definição dos padrões bibliográficos e padrões de formatação de texto da revista (Ex.: <em>Publication Manual of the American Psychological Association</em>, 5th edition, 2001). Recomenda-se oferecer exemplos de formatos de citação comuns para revistas e livros para uso nas submissões. É importante também identificar os tipos apropriados de Documentos Suplementares (Ex.: conjuntos de dados, instrumentos de pesquisas, entre outros) que os autores deveriam ser estimulados a enviar, além do documento de submissão, para aumentar o interesse dos leitores com o trabalho.]]></message>
+	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Definição dos padrões bibliográficos e padrões de formatação de texto da revista (Ex.: <em>Publication Manual of the American Psychological Association</em>, 5th edition, 2001). Recomenda-se oferecer exemplos de formatos de citação comuns para revistas e livros para uso nas submissões. É importante também identificar os tipos apropriados de Documentos Suplementares (Ex.: conjuntos de dados, instrumentos de pesquisas, entre outros) que os autores deveriam ser estimulados a enviar, além do documento de submissão, para aumentar o interesse dos leitores pelo trabalho.]]></message>
 	<message key="manager.setup.competingInterests">Conflito de Interesses</message>
 	<message key="manager.setup.competingInterests.description"><![CDATA[Periódicos da bio-medicina geralmente exigem que autores e revisores declarem se há qualquer possibilidade de conflito de interesses em relação à pesquisa (veja <a href="http://www.plosbiology.org/static/competing.action" target="_new">Política PLoS</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines">Directrizes para registar Conflito de Interesses</message>
@@ -178,7 +178,7 @@
 	<message key="manager.setup.contributorsDescription">Entidades e organizações que proporcionam apoio financeiro ou material/pessoal para a revista aparecerão na secção Sobre a Revista e poderão vir acompanhadas de uma nota de agradecimento.</message>
 	<message key="manager.setup.copyediting">Editor de Texto</message>
 	<message key="manager.setup.copyeditInstructions">Instruções de Edição de Texto</message>
-	<message key="manager.setup.copyeditInstructionsDescription">As Instruções de Edição de Texto estarão disponíveis aos Editores de Texto, Autores e Editores de Secção, no estágio de Edição de Submissão. A seguir apresenta-se um padrão de instruções em HTML, que pode ser modificado ou substituído pelo Editor-Gestor a qualquer momento (em HTML ou texto simples).</message>
+	<message key="manager.setup.copyeditInstructionsDescription">As Instruções de Edição de Texto estarão disponíveis aos Editores de Texto, Autores e Editores de Secção, no estágio de Edição de Submissão. A seguir apresenta-se um padrão de instruções em HTML, que pode ser modificado ou substituído pelo Director a qualquer momento (em HTML ou texto simples).</message>
 	<message key="manager.setup.copyrightNotice">Declaração de Direitos de Autor</message>
 	<message key="manager.setup.coverage">Cobertura</message>
 	<message key="manager.setup.coverageChronExamples">(Ex.: Renascimento Europeu; Período Jurássico; Terceiro Trimestre; Modernismo)</message>
@@ -194,7 +194,7 @@
 	<message key="manager.setup.customTagsDescription">Marcações HTML para padronização do cabeçalho das páginas da revista (Ex.: tags META).</message>
 	<message key="manager.setup.details">Detalhes</message>
 	<message key="manager.setup.details.description">Nome da revista, ISSN, contactos, editora e patrocinadores e sistemas de pesquisa.</message>
-	<message key="manager.setup.disableUserRegistration">Editor-Gestor é responsável por registar todos os utilizadores, permitindo a Editores e Editores de Secção registar revisores.</message>
+	<message key="manager.setup.disableUserRegistration">Director é responsável por registar todos os utilizadores, permitindo a Editores e Editores de Secção registar revisores.</message>
 	<message key="manager.setup.discipline">Área e sub-área de Conhecimento Académico</message>
 	<message key="manager.setup.disciplineDescription">Recomendado para revistas e/ou trabalhos multidisciplinares.</message>
 	<message key="manager.setup.disciplineExamples">(Ex.: Psicologia; Educação; Sociologia; Neurociências)</message>
@@ -213,7 +213,7 @@
 	<message key="manager.setup.emails">Identificação de E-mail</message>
 	<message key="manager.setup.emailSignature">Subscrição</message>
 	<message key="manager.setup.emailSignatureDescription">Os e-mails padrão enviados pelo sistema em nome da revista incluirão a seguinte assinatura no final. O corpo do texto pode ser editado na secção E-mails da Administração da Revista.</message>
-	<message key="manager.setup.enableAnnouncements">Activar notícias a Editores-Gestores.</message>
+	<message key="manager.setup.enableAnnouncements">Activar notícias a Directores.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Exibir</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">das notícias mais recentes na página inicial da revista.</message>
 	<message key="manager.setup.enablePageNumber">A numeração de páginas para cada item publicado pode ser incluída manualmente no Sumário da revista(Ex.: p. 13-26).</message>
@@ -231,7 +231,7 @@
 	<message key="manager.setup.focusScope">Âmbito</message>
 	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>EXEMPLO DE HTML</strong>]]></message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Indexação da submissão</message>
-	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[O sistema adopta o Protocolo para Recolha de Metadados do <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a>, que é um padrão emergente para proporcionar acesso com base na indexação a recursos electrónicos de pesquisa numa escala global. Os autores farão uso de um padrão similar para incluir os metadados da submissão. O Editor-Gestor da revista deverá escolher as categorias para indexação e apresentar aos autores exemplos relevantes para auxiliá-los na indexação, separando os termos com ponto-e-vírgula (Ex.: termo1; termo2). Os termos deverão ser fornecidos como exemplos, utilizando as expressões "Ex." ou "Por exemplo,".]]></message>
+	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[O sistema adopta o Protocolo para Recolha de Metadados do <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a>, que é um padrão emergente para proporcionar acesso com base na indexação a recursos electrónicos de pesquisa numa escala global. Os autores farão uso de um padrão similar para incluir os metadados da submissão. O Director da revista deverá escolher as categorias para indexação e apresentar aos autores exemplos relevantes para auxiliá-los na indexação, separando os termos com ponto-e-vírgula (Ex.: termo1; termo2). Os termos deverão ser fornecidos como exemplos, utilizando as expressões "Ex." ou "Por exemplo,".]]></message>
 	<message key="manager.setup.form.contactEmailRequired">E-mail do contacto principal é obrigatório!</message>
 	<message key="manager.setup.form.contactNameRequired">Nome do contacto principal é obrigatório!</message>
 	<message key="manager.setup.form.journalInitialsRequired">Sigla da Revista obrigatória.</message>
@@ -334,13 +334,13 @@
 	<message key="manager.setup.policies">Políticas</message>
 	<message key="manager.setup.policies.description">Âmbito, revisão por pares, secções, privacidade, acesso, segurança e itens adicionais em Sobre a Revista.</message>
 	<message key="manager.setup.principalContact">Contacto Principal</message>
-	<message key="manager.setup.principalContactDescription">Esta função/posição, tratada como Editor Principal, Editor-Gestor, ou Editor, será listada na página da revista em Contacto, junto com o Contacto de Suporte Técnico.</message>
+	<message key="manager.setup.principalContactDescription">Esta função/posição, tratada como Editor Principal, Director, ou Editor, será listada na página da revista em Contacto, junto com o Contacto de Suporte Técnico.</message>
 	<message key="manager.setup.printIssn">ISSN (Impresso)</message>
 	<message key="manager.setup.privacyStatement">Política de Privacidade</message>
 	<message key="manager.setup.privacyStatement2">Política de Privacidade</message>
 	<message key="manager.setup.privacyStatementDescription">Esta declaração aparecerá na secção Sobre a Revista, assim como nas páginas de Submissão do Autor e registo para Notificação. Abaixo está uma declaração padrão recomendada, que pode ser alterada a qualquer momento.</message>
 	<message key="manager.setup.proofingInstructions">Instruções de Leitura de Provas</message>
-	<message key="manager.setup.proofingInstructionsDescription">As Instruções de Leitura de Provas estarão disponíveis para Leitores de Prova, Autores, Editores de Layout e Editores de Secção no estágio de Edição de Submissão. A seguir está um padrão de instruções em HTML, que pode ser modificado ou substituído pelo Editor-Gestor a qualquer tempo (em HTML ou texto simples).</message>
+	<message key="manager.setup.proofingInstructionsDescription">As Instruções de Leitura de Provas estarão disponíveis para Leitores de Prova, Autores, Editores de Layout e Editores de Secção no estágio de Edição de Submissão. A seguir está um padrão de instruções em HTML, que pode ser modificado ou substituído pelo Director a qualquer tempo (em HTML ou texto simples).</message>
 	<message key="manager.setup.proofreading">Leitor de Prova</message>
 	<message key="manager.setup.provideRefLinkInstructions">Oferecer instruções aos Editores de Layout</message>
 	<message key="manager.setup.publicationFormat">Formato</message>
@@ -476,7 +476,7 @@
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Notificar subscritores via e-mail</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">semana(s) antes da expiração da subscrição.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Lembretes de Expiração de Subscrição</message>
-	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Lembretes automáticos via e-mail (editáveis nas configurações da revista por Editores-Gestores na área de E-mails Padrão) podem ser enviados aos subscritores tanto antes quanto após expiração da subscrição.</message>
+	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Lembretes automáticos via e-mail (editáveis nas configurações da revista por Directores na área de E-mails Padrão) podem ser enviados aos subscritores tanto antes quanto após expiração da subscrição.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Aviso:</strong> Para activar esta opção, o administrador do portal deverá activar a opção <tt>scheduled_tasks</tt> no ficheiro de configuração do sistema. Configurações adicionais no servidor podem ser necessárias para o funcionamento correcto da opção (que pode não ser possível em todos os servidores!), como indicado na documentação do sistema.]]></message>
 	<message key="manager.subscriptionPolicies.expirySelectOne">Escolha uma opção:</message>
 	<message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[Em caso de utilização de código HTML nas caixas de texto nas Configurações (para tamanho de fonte, estilo da fonte, cor, entre outros), as quebras de linha "automáticas (return/enter)" no texto serão automaticamente tratados como <tt>&lt;br&gt;</tt>. O Editor HTML funciona no Firefox.]]></message>
@@ -536,7 +536,7 @@
 	<message key="manager.subscriptions.membership">Subscrição</message>
 	<message key="manager.subscriptions.noneCreated">Nenhuma subscrição criada.</message>
 	<message key="manager.subscriptions.select">Registar Subscritor</message>
-	<message key="manager.subscriptions.selectSubscriber.desc">Editores-Gestores, Editores, Editores de Secção, Editores de Layout, Editores de Texto e Leitores de Prova terão automaticamente acesso ao conteúdo para Assinantes.</message>
+	<message key="manager.subscriptions.selectSubscriber.desc">Directores, Editores, Editores de Secção, Editores de Layout, Editores de Texto e Leitores de Prova terão automaticamente acesso ao conteúdo para Assinantes.</message>
 	<message key="manager.subscriptions.subscriptionCreatedSuccessfully">Subscrição criada com sucesso.</message>
 	<message key="manager.subscriptions.subscriptionType">Tipo de Subscrição</message>
 	<message key="manager.subscriptions.user">Utilizador</message>
@@ -617,13 +617,13 @@
 	<message key="manager.setup.sponsorNoteDescription">Este texto aparecerá abaixo de "Patrocínio" e acima da lista de nomes e URLs de patrocinadores, na página "Apoio à revista" na página "Sobre".</message>
 	<message key="manager.setup.noPublishing">O sistema não será usado para publicar o conteúdo da revista online.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Notificações de Pagamento Online</message>
-	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Notificações automáticas via e-mail (disponíveis para personalização pelo Editor-Gestor na secção E-mails Padrão) podem ser enviados ao Gestor de Subscrições após a conclusão de pagamentos online.</message>
+	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Notificações automáticas via e-mail (disponíveis para personalização pelo Director na secção E-mails Padrão) podem ser enviados ao Gestor de Subscrições após a conclusão de pagamentos online.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">Notificar o Gestor de Subscrições via e-mail após a realização de um pagamento de Subscrição Individual online.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">Notificar o Gestor de Subscrições via e-mail após a realização de um pagamento de Subscrição Institucional online.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual">Notificar via e-mail o Gestor de Subscrições quando ocorrer renovação de Subscrição Individual.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional">Notificar via e-mail o Gestor de Subscrições quando ocorrer renovação de Subscrição Institucional.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>Aviso:</strong> Subscrições Institucionais adquiridas on-line exigem aprovação do domínio fornecido e das faixas de IP, além da activação da subscrição pelo Gestor de Subscrições.]]></message>
-	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Aviso:</strong> Para activar estas opções, o Editor Gestor deve activar o módulo de pagamentos on-line, incluindo os pagamentos online para subscrições, em Taxas para Leitores.]]></message>
+	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Aviso:</strong> Para activar estas opções, o Director deve activar o módulo de pagamentos on-line, incluindo os pagamentos online para subscrições, em Taxas para Leitores.]]></message>
 	<message key="manager.individualSubscriptions">Subscrições Individuais</message>
 	<message key="manager.institutionalSubscriptions">Subscrições Institucionais</message>
 	<message key="manager.subscriptions.summary">Detalhes das Subscrições</message>
@@ -707,7 +707,6 @@
 	<message key="manager.statistics.reports.objectType">Tipo de Objecto</message>
 	<message key="manager.statistics.reports.objectId">ID Objecto</message>
 	<message key="manager.statistics.reports.objectId.label">Definir um ou mais IDs de objectos, separados por vírgula (e.g. 1,2,3,4,5).</message>
-	<message key="manager.statistics.reports.today">Hoje</message>
 	<message key="manager.statistics.reports.currentMonth">Mês actual</message>
 	<message key="manager.statistics.reports.orderBy">Ordenar por</message>
 	<message key="manager.statistics.reports.orderDir">Direcção</message>
@@ -729,8 +728,6 @@
 	<message key="manager.statistics.reports.filters.byLocation.description">Restringir resultados por país, região e/ou cidade.</message>
 	<message key="manager.subscriptions.form.dateRemindedBefore">Enviado Lembrete de Pré-Expiração</message>
 	<message key="manager.subscriptions.form.dateRemindedAfter">Enviado Lembrete de Pós-Expiração</message>
-	<message key="manager.setup.categories">Categorias</message>
-	<message key="manager.setup.categories.description">Seleccionar as categorias mais adequadas da lista exibida em cima. Os leitores poderão procurar por categoria a partir da configuração concluída da revista.</message>
 	<message key="manager.setup.confirmResetLicenseChanged">Alterou as informações sobre licença e direitos de autor em Setup Journal. Por favor, guarde estas alterações antes de redefinir as permissões.</message>
 	<message key="manager.setup.copyrightYearBasis">Definir ano de copyright do artigo</message>
 	<message key="manager.setup.copyrightYearBasis.Article">Ano padrão será definido a partir da data da publicação do artigo, tal como em "publicar-as-you-go".</message>
@@ -738,4 +735,9 @@
 	<message key="manager.statistics.reports.objectNotFound">Não foi encontrado o objecto na base de dados.</message>
 	<message key="manager.setup.emailHeader">Cabeçalho do e-mail</message>
 	<message key="manager.setup.emailHeaderDescription">Os emails automáticos enviados pelo sistema em nome da revista começa com o seguinte cabeçalho. Estes emails serão dirigidos ao Contacto Principal, assim é importante clarificar que o Contacto Principal não é necessariamente o responsável pelo conteúdo da mensagem, a qual poderá ser enviada em nome de outra pessoa.</message>
+	<message key="manager.statistics.reports.yesterday">Ontem</message>
+
+	<!-- Categories -->
+	<message key="manager.setup.categories">Categorias</message>
+	<message key="manager.setup.categories.description">Seleccionar as categorias mais adequadas da lista exibida em cima. Os leitores poderão procurar por categoria a partir da configuração concluída da revista.</message>
 </locale>

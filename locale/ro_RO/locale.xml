@@ -373,7 +373,7 @@ Trebuie remarcat faptul că interfaţa OAI poate fi deazactivată pentru acest s
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTĂ!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTĂ!</h4>
 <p>Sistemul nu a putut suprascrie automat fişierul de configurare. Pentru a aplica modificările, trebuie să deschizi <tt>config.inc.php</tt> într-un editor de text şi să înlocuieşti conţinutul cu cel din câmpul de text de mai jos.</p>]]></message>
 
 
@@ -570,10 +570,10 @@ Opţional, poţi trimite utilizatorului motivul pentru care i-a fost deazactivat
 	<!-- Navigation sidebar menu -->
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Linkuri către profilul evaluatorului.<br/>
-Nota este peste 5 (Excelent).<br/>
-Săptămânile se referă la perioada medie de timp pentru a încheia o evaluare.<br/>
-Ultima este data celei mai recent aşteptate evaluări.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Linkuri către profilul evaluatorului.<br />
+Nota este peste 5 (Excelent).<br />
+Săptămânile se referă la perioada medie de timp pentru a încheia o evaluare.<br />
+Ultima este data celei mai recent aşteptate evaluări.<br />
 Activ însemnă câte evaluări sunt în prezent luate în considerare sau în desfăşurare.]]></message>
 
 
@@ -1151,8 +1151,8 @@ Serverul în acest moment suportă supports mbstring: <strong>{$supportsMBString
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Mai jos sunt afişate posibile URL-uri invalide pentru siteurile de căutare.<br/>
-Ar trebui să verifici manual orice URL marcat ca invalid pentru că acest test nu este 100% exact.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Mai jos sunt afişate posibile URL-uri invalide pentru siteurile de căutare.<br />
+Ar trebui să verifici manual orice URL marcat ca invalid pentru că acest test nu este 100% exact.<br />
 Validarea poate eşua pe URL-urile de căutare care necesită date postate într-un formular.]]></message>
 	
 

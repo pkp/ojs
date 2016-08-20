@@ -303,7 +303,7 @@ Merk at OAI-grensesnittet kan slås av for dette nettstedet ved å redigere OJS'
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>OBS!</div>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>OBS!</h4>
 <p>Systemet kunne ikke automatisk overskrive konfigurasjonsfilen. For å endre konfigurasjonen må du åpne <tt>config.inc.php</tt> i et egnet tekstbehandlingsprogram, og erstatte innholdet i den med innholdet i tekstfeltet nedenfor.</p>]]></message>
 
 	
@@ -400,10 +400,10 @@ Du kan velge å gi brukeren en begrunnelse for at kontoen er slått av.</message
 	<!-- Navigation sidebar menu -->
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Navnelenker til fagkonsulentprofil.<br/>
-Rangeres på en skala fra 1 til 5, hvor 5 er best.<br/>
-Uker viser til gjennomsnittlig tid det tar å ferdigstille et vurderingsoppdrag.<br/>
-Siste er dato for siste aksepterte vurderingsoppdrag.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Navnelenker til fagkonsulentprofil.<br />
+Rangeres på en skala fra 1 til 5, hvor 5 er best.<br />
+Uker viser til gjennomsnittlig tid det tar å ferdigstille et vurderingsoppdrag.<br />
+Siste er dato for siste aksepterte vurderingsoppdrag.<br />
 Aktive er hvor mange fagfellevurderinger som for øyeblikket er bestilt eller under arbeid.]]></message>
 
 
@@ -817,8 +817,8 @@ Din server støtter for øyeblikket mbstring: <strong>{$supportsMBString}</stron
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Mulig ugyldige URL-adresser for søkestedene er vist nedenfor.<br/>
-Du bør validere de URLene som er angitt som ugyldige manuelt, fordi denne testen ikke er 100% nøyaktig.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Mulig ugyldige URL-adresser for søkestedene er vist nedenfor.<br />
+Du bør validere de URLene som er angitt som ugyldige manuelt, fordi denne testen ikke er 100% nøyaktig.<br />
 Valideringen kan for eksempel svikte på søkesteder som krever utfylling av skjema.]]></message>
 	
 	<!-- RT Entities -->
@@ -898,22 +898,6 @@ Valideringen kan for eksempel svikte på søkesteder som krever utfylling av skj
 	<message key="plugins.categories.citationFormats.description">Siteringsformat-programutvidelser gir brukerne forskjellige formater for referanse til artiklene.</message>
 	<message key="plugins.categories.implicitAuth">Programutvidelser for implisitt autentisering</message>
 	<message key="plugins.categories.implicitAuth.description">Programutvidelser for implisitt autentisering implementer støtte for autentisering av brukere basert på http-headere.</message>
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Forslag til <i>Creative Commons Copyright Notices</i> på engelsk</h3>
-<h4>1. Forslag til retningslinjer for tidsskrift som tilbyr <i>Open Access</i></h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
-</ol>
-
-<h4>Forslag til retningslinjer for tidsskrift som tilbyr utsatt <i>Open Access</i> (OA etter en karantenetid)</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
-</ol>]]></message>
 	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>For at lesere lett skal kunne finne nettpubliserte versjoner av verk forfattere henviser til i artiklene sine, finnes følgende muligheter.</p>
 
 <ol>

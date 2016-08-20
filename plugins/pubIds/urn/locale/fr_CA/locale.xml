@@ -80,4 +80,11 @@
 	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">épreuve</message>
 	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">fichier supplémentaire</message>
 	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">Ce que vous voyez est l'aperçu de l'URN qui peut être incomplète. Une URN n'a pas encore été générée. Publier le numéro et aller voir la page {$pubObjectType} publique générera automatiquement un URN unique pour ce {$pubObjectType}.</message>
+	<message key="plugins.pubIds.urn.editor.excludePubObject">Excluez-cet {$pubObjectType} de l'assigner une URNE.</message>
+	<message key="plugins.pubIds.urn.editor.urnClear">Le statut du traitement du dépôt a été mis à jour.</message>
+	<message key="plugins.pubIds.urn.editor.urnClear.description">Traitement de contenu mis à jour.</message>
+	<message key="plugins.pubIds.urn.editor.excludeIssueObjectsURN">Nouveau contenu en traitemnt</message>
+	<message key="plugins.pubIds.urn.editor.excludeIssueObjectsURN.description">Le fichier de dépôt ne peut être trouvé. Il n'a peut être pas encore été paqueté ou a été supprimé.</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN">Paquetage de contenu pour le dépôt en cours.</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description">Utilisez ce bouton pour supprimer des URNs tous les objets (articles, épreuves et autres fichiers) actuellement prévus pour ce numéro.</message>
 </locale>

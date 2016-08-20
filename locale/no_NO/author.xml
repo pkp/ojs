@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="no_NO" full_name = "Norwegian">
+<locale name="no_NO" full_name="Norsk">
 	<message key="author.submit">Nytt manus</message>
 	<message key="author.track">Aktive manus</message>
 	<message key="author.submit.submitArticle">Send inn en artikkel</message>
