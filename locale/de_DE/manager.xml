@@ -12,6 +12,7 @@
   -->
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<message key="manager.website.archiving">Archivierung</message>
 	<message key="manager.emails.confirmResetAll">Sind Sie sicher, dass Sie alle E-Mail-Vorlagen dieser Zeitschrift zurücksetzen wollen? Sie verlieren damit alle speziellen Einstellungen, die Sie vorgenommen haben.</message>
 	<message key="manager.files.note">Anmerkung: Der Dateinavigator ermöglicht die unmittelbare Betrachtung und Bearbeitung der mit einer Zeitschrift verbundenen Dateien und Verzeichnisse.</message>
 	<message key="manager.journalManagement">Zeitschriftenverwaltung</message>
@@ -84,6 +85,7 @@
 	<message key="manager.people.roleEnrollment">{$role} eintragen</message>
 	<message key="manager.people.syncUserDescription">Mit der Synchronisierung werden alle in einer anderen Zeitschrift in einer bestimmten Funktion eingeschriebenen Benutzer/innen in dieser Zeitschrift mit eben dieser Funktion eingetragen. So können Zeitschriften eine bestimmte Benutzer/innen-Gruppe (z.B. Gutachter/innen) miteinander abgleichen.</message>
 	<message key="manager.sections.abstractsNotRequired">Benötigt keine Abstracts.</message>
+	<message key="manager.section.noSectionEditors"><![CDATA[Es gibt bisher keine Rubrikredakteur/innen. Ordnen Sie diese Rolle zunächst wenigstens einer Nutzerin/einem Nutzer via Management > Einstellungen > Nutzer/innen &amp; Rollen zu.]]></message>
 	<message key="manager.sections.assigned">Rubrikredakteur/innen dieser Rubrik</message>
 	<message key="manager.sections.confirmDelete">Sind Sie sicher, dass Sie diese Rubrik endgültig entfernen wollen?</message>
 	<message key="manager.sections.alertDelete">Bevor diese Rubrik entfernt werden kann, müssen Sie Artikel aus dieser Rubrik in andere Rubriken verschieben.</message>
@@ -113,6 +115,14 @@
 	<message key="manager.sections.wordCount">Wort-Anzahl</message>
 	<message key="manager.sections.wordCountInstructions">Wortanzahl für Abstracts für diese Rubrik begrenzen (0 für keine Begrenzung):</message>
 	<message key="manager.setup">Setup</message>
+	<message key="manager.setup.masthead">Impressum</message>
+	<message key="manager.setup.masthead.description">Nennen Sie Redakteur/innen, Verwalter/innen und andere mit der Zeitschrift verbundene Personen.</message>
+	<message key="manager.setup.homepageContent">Inhalte der Zeitschriften-Homepage</message>
+	<message key="manager.setup.homepageContentDescription">Die Zeitschriften-Homepage besteht standardmäßig aus Navigations-Links. Zusätzliche Inhalte können hinzugefügt werden, indem eine oder alle der folgenden Optionen ausgewählt werden. Sie werden in der angezeigten Reihenfolge auftauchen.</message>
+	<message key="manager.setup.layout">Layout der Zeitschrift</message>
+	<message key="manager.setup.useStyleSheet">Style sheet der Zeitschrift</message>
+	<message key="manager.setup.contextName">Name der Zeitschrift</message>
+	<message key="manager.setup.pageHeader">Header der Zeitschriften-Homepage</message>
 	<message key="manager.setup.aboutItemContent">Inhalt</message>
 	<message key="manager.setup.addAboutItem">Über-uns-Abschnitt hinzufügen</message>
 	<message key="manager.setup.addChecklistItem">Der Checkliste einen Punkt hinzufügen</message>
@@ -162,15 +172,11 @@
 	<message key="manager.setup.enableAnnouncements">Erlauben Sie den Zeitschriftenverwalter/innen, Mitteilungen hinzuzufügen.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Anzeige der</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">neuesten Mitteilungen auf der Startseite der Zeitschrift</message>
-	<message key="manager.setup.enablePageNumber">Für jeden Beitrag werden Seitenzahlen berechnet und manuell im Inhaltsverzeichnis der Zeitschrift eingetragen (z.B. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Eindeutige Kennungen werden für Artikel verwendet.</message>
-	<message key="manager.setup.enablePublicGalleyId">Eindeutige Kennungen werden für Fahnen (z.B. HTML- oder PDF-Dateien) zu Artikeln verwendet.</message>
-	<message key="manager.setup.enablePublicIssueId">Eindeutige Kennungen werden für Ausgaben verwendet.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Eindeutige Kennungen werden für Zusatzdateien verwendet.</message>
 	<message key="manager.setup.enableUserRegistration">Benutzer/innen können sich bei der Zeitschrift auf eine oder mehrere der folgenden Weisen registrieren:</message>
 	<message key="manager.setup.focusAndScope">Konzept</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Indizierung von Arbeiten für Autor/innen</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS unterstützt das Protocol for Metadata Harvesting der <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a>, das den Zugang zu gut katalogisierten Forschungsquellen weltweit eröffnet. Die Autor/innen veröffentlichen Metadaten ihrer Beiträge nach einer ähnlichen Vorlage. Die Zeitschriftenverwalterin/der Zeitschriftenverwalter sollte die Kategorien für die Indizierung auswählen und den Autor/innen passende Beispiele an die Hand geben, die die Indizierung ihrer Arbeit erleichtern, wobei die Begriffe durch Semikolon getrennt werden (z.B. Begriff1; Begriff2). Die Einträge sollten als Beispiele (mit "z.B." oder "zum Beispiel") gekennzeichnet sein.]]></message>
+	<message key="manager.setup.form.issnInvalid">Die angegebene ISSN ist ungültig.</message>
 	<message key="manager.setup.form.contactEmailRequired">Die E-Mail-Adresse des Hauptkontakts ist erforderlich.</message>
 	<message key="manager.setup.form.contactNameRequired">Der Name des Hauptkontakts ist erforderlich.</message>
 	<message key="manager.setup.form.journalInitialsRequired">Das Kürzel der Zeitschrift ist erforderlich.</message>
@@ -182,6 +188,7 @@
 	<message key="manager.setup.gettingDownTheDetails">1. Schritt: Angaben zur Zeitschrift festlegen</message>
 	<message key="manager.setup.guidelines">Richtlinien</message>
 	<message key="manager.setup.guidingSubmissions">3. Schritt: Beitragseinreichung</message>
+	<message key="manager.setup.includeCreativeCommons">Für Zeitschriften, die unmittelbaren oder verzögerten Open Access liefern, allen veröffentlichten Werken zu gegebener Zeit eine Creative-Commons-Lizenz hinzufügen.</message>
 	<message key="manager.setup.information">Informationen</message>
 	<message key="manager.setup.information.description">Kurzbeschreibungen der Zeitschrift für Bibliothekar/innen, potentielle Autor/innen und Leser/innen finden sich unter "Informationen" in der Seitenleiste.</message>
 	<message key="manager.setup.information.forAuthors">Für Autor/innen</message>
@@ -315,13 +322,7 @@
 		Ihre OJS-Installation ist so eingestellt, dass sie mehr als eine Nutzungsstatistik aufzeichnet. Nutzungsstatistiken werden in verschiedenen Kontexten angezeigt.
 		Es gibt Fälle, in denen eine einzige Nutzungsstatistik benutzt werden muss, z.B. wenn eine sortierte Liste der am häufigsten genutzten Artikel angezeigt werden soll oder um
 		Suchergebnisse zu gewichten. Bitte wählen Sie eine der Nutzungsmetriken als Standard aus.
-</message>
-	<message key="manager.statistics.reports.defaultReport.articleDownloads">Downloads von Artikeldateien</message>
-	<message key="manager.statistics.reports.defaultReport.articleAbstract">Aufrufe der Abstractseiten von Artikeln</message>
-	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Abstractseiten und Downloads</message>
-	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Startseiten-Aufrufe</message>
-	<message key="manager.statistics.reports.filters.byContext.description">Ergebnisse nach Kontext filtern (Ausgabe und/oder Artikel).</message>
-	<message key="manager.statistics.reports.filters.byObject.description">Ergebnisse nach Objekttyp (Zeitschrift, Ausgabe, Artikel, PDF-Fahne, andere Fahnen) und/oder nach einer oder mehrerer Objekt-ID filtern.</message>
+	</message>
 	<message key="manager.statistics.statistics">Zeitschriftenstatistik</message>
 	<message key="manager.statistics.statistics.articleViews">Artikel angesehen (nur für Autor/innen)</message>
 	<message key="manager.statistics.statistics.count.accept">Annehmen</message>
@@ -344,6 +345,13 @@
 	<message key="manager.statistics.statistics.reviewsPerReviewer">Anzahl der Gutachten pro Gutachter/in</message>
 	<message key="manager.statistics.statistics.selectSections">Wählen Sie die Rubriken für die Berechnung der Peer-Review-Statistiken der Zeitschrift aus.</message>
 	<message key="manager.statistics.statistics.subscriptions">Abonnements</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">Downloads von Artikeldateien</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Aufrufe der Abstractseiten von Artikeln</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Abstractseiten und Downloads</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Startseiten-Aufrufe</message>
+	<message key="manager.statistics.reports.filters.byContext.description">Ergebnisse nach Kontext filtern (Ausgabe und/oder Artikel).</message>
+	<message key="manager.statistics.reports.filters.byObject.description">Ergebnisse nach Objekttyp (Zeitschrift, Ausgabe, Artikel, PDF-Fahne, andere Fahnen) und/oder nach einer oder mehrerer Objekt-ID filtern.</message>
+
 	<message key="manager.subscriptionPolicies">Abonnementrichtlinien</message>
 	<message key="manager.subscriptionPolicies.authorSelfArchive">Richtlinien zur Selbstarchivierung durch die/den Autor/in</message>
 	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">Die folgenden Richtlinien zur Selbstarchivierung durch die/den Autor/in erscheinen im "Über uns" unter "Zur Zeitschrift"</message>
@@ -405,7 +413,7 @@
 	<message key="manager.subscriptions.domain">Domain</message>
 	<message key="manager.subscriptions.edit">Abonnement bearbeiten</message>
 	<message key="manager.subscriptions.editTitle">Bearbeiten</message>
-	<message key="manager.subscriptions.withStatus">With Status</message>
+	<message key="manager.subscriptions.withStatus">Mit dem Status</message>
 	<message key="manager.subscriptions.allStatus">Alle</message>
 	<message key="manager.subscriptions.form.status">Status</message>
 	<message key="manager.subscriptions.form.statusRequired">Ein Abonnement-Status ist erforderlich-</message>
@@ -509,8 +517,58 @@
 	<message key="manager.subscriptionTypes.name">Abonnementtyp</message>
 	<message key="manager.subscriptionTypes.noneCreated">Es wurden keine neuen Abonnementtypen erstellt.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Abonnementtyp erfolgreich erstellt.</message>
+	<message key="manager.distribution.access">Zugriff</message>
 
 	<!-- Categories -->
 	<message key="manager.setup.categories">Kategorien</message>
 	<message key="manager.setup.categories.description">Wählen Sie die passendsten Kategorien aus der oben angezeigten Menge. Leser/innen können die gesamte Zeitschriftenmenge dann nach Kategorien durchsehen.</message>
+
+	<message key="grid.category.path">Pfad</message>
+	<message key="grid.action.addSection">Rubrik hinzufügen</message>
+	<message key="manager.setup.section.description">Artikel innerhalb veröffentlichter Ausgaben einer Zeitschrift sind in Rubriken organisiert, normalerweise anhand eines Themas oder Inhaltstyps (z.B. Überblicksartikel, Forschung etc.).</message>
+	<message key="manager.publication.library">Bibliothek</message>
+	<message key="manager.setup.copyrightYearBasis">Basiere das Copyright-Jahr eines neuen Artikels auf</message>
+	<message key="manager.setup.copyrightYearBasis.article">Artikel: das Standardjahr wird aus dem Veröffentlichungsjahr des Artikels abgeleitet, wie bei "publish-as-you-go".</message>
+	<message key="manager.setup.copyrightYearBasis.issue">Ausgabe: das Standardjahr wird aus dem Veröffentlichungsdatum der Ausgabe abgeleitet.</message>
+	<message key="manager.setup.resetPermissions">Artikelrechte zurücksetzen</message>
+	<message key="manager.setup.resetPermissions.confirm">Sind Sie sicher, dass Sie die Rechte, die bisher diesem Artikel zugewiesen sind, zurücksetzen möchten?</message>
+	<message key="manager.setup.resetPermissions.description">Copyright-Angaben und Lizenzinformationen werden permanent mit veröffentlichten Inhalten verknüpft. Damit wird sichergestellt, dass diese Angaben nicht geändert werden, wenn eine Zeitschrift ihre Policy für neue Einreichungen ändert. Um gespeicherte Rechteinformationen, die bereits mit veröffentlichten Inhalten verknüpft sind, nutzen Sie den Knopf unten.</message>
+
+	<!-- Genres Grid -->
+	<message key="grid.genres.title.short">Bestandteile</message>
+	<message key="grid.genres.title">Artikelbestandteile</message>
+	<message key="grid.genres.description">Diese Bestandteile werden genutzt, um Dateien zu benennen. Sie werden in einem Pull-Down-Menü beim Hochladen von Dateien angezeigt. Die Genres, die mit ## markiert sind, ermöglichen es der Nutzerin/dem Nutzer, die Datei entweder mit der kompletten Einreichung 99Z oder einem bestimmten Bestandteil, identifiziert anhand der Nummer (z.B. 02), verknüpfen.</message>
+
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<!-- plugin tabs -->
+	<message key="plugins.importexport.common.settings">Einstellungen</message>
+	<message key="plugins.importexport.common.settings.DOIPluginSettings">DOI-Plugin-Einstellungen</message>
+	<message key="plugins.importexport.common.export.articles">Artikel</message>
+	<message key="plugins.importexport.common.export.issues">Ausgaben</message>
+	<message key="plugins.importexport.common.export.representations">Fahnen</message>
+	<!-- settings form -->
+	<message key="plugins.importexport.common.missingRequirements">Plugin-Anforderungen nicht erfüllt</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Um dieses Plugin zu benutzen, gehen Sie in die Plugin-Kategorie "Öffentliche Kennungen", aktivieren und konfigurieren Sie das DOI-Plugin und geben Sie dort einen gültigen DOI-Präfix an.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">Dieses Plugin ist noch nicht vollständig eingerichtet.</message>
+	<message key="plugins.importexport.common.error.noDOIContentObjects">Es wurde noch kein DOI erzeugt. Die Veröffentlichung der Ausgabe und die Ansicht der öffentlichen {$pubObjectType}-Seite wird automatisch eindeutige DOI für diese/n {$pubObjectType}.</message>
+	<message key="plugins.importexport.common.settings.form.password">Passwort</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Bitte beachten Sie, dass das Passwort im Klartext, d.h. unverschlüsselt, gespeichert wird.</message>
+	<!-- export filter -->
+	<message key="plugins.importexport.common.filter.issue">Jede Ausgabe</message>
+	<message key="plugins.importexport.common.status.any">Jeder Status</message>
+	<message key="plugins.importexport.common.status.notDeposited">Nicht abgeliefert</message>
+	<message key="plugins.importexport.common.status.markedRegistered">Als registriert markiert</message>
+	<message key="plugins.importexport.common.status.registered">Registriert</message>
+	<!-- actions -->
+	<message key="plugins.importexport.common.action">Aktion</message>
+	<message key="plugins.importexport.common.action.export">Export</message>
+	<message key="plugins.importexport.common.action.markRegistered">Als registriert markieren</message>
+	<message key="plugins.importexport.common.action.register">Registrieren</message>
+	<!--  notifications and errors -->
+	<message key="plugins.importexport.common.error.noObjectsSelected">Keine Objekte ausgewählt.</message>
+	<message key="plugins.importexport.common.error.validation">Konnte ausgewählte Objekte nicht konvertieren.</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Die Ausgabedatei {$param} ist nicht beschreibbar.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Die Registrierung war nicht erfolgreich! Der DOI-Registrierungsserver hat einen Fehler zurückgeliefert: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Registrierung erfolgreich!</message>
+	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">DOI-Präfix fehlt für die Zeitschrift mit dem Pfad {$path}.</message>
 </locale>
