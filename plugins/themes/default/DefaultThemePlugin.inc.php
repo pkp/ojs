@@ -27,7 +27,7 @@ class DefaultThemePlugin extends ThemePlugin {
 	 * @copydoc ThemePlugin::isActive()
 	 */
 	public function isActive() {
-                if (defined('SESSION_DISABLE_INIT')) return true;
+		if (defined('SESSION_DISABLE_INIT')) return true;
 		return parent::isActive();
 	}
 
@@ -35,9 +35,10 @@ class DefaultThemePlugin extends ThemePlugin {
 	 * Initialize the theme's styles, scripts and hooks. This is run on the
 	 * currently active theme and it's parent themes.
 	 *
+	 * @param $themes array List of all loaded themes
 	 * @return null
 	 */
-	public function init() {
+	public function init($themes) {
 
 		// Register theme options
 		$this->addOption('typography', 'radio', array(
@@ -107,7 +108,7 @@ class DefaultThemePlugin extends ThemePlugin {
 					'//fonts.googleapis.com/css?family=Lora:400,400i,700,700i',
 					array('baseUrl' => '')
 				);
- 				$additionalLessVariables .= '@font: Lora, serif;';
+				$additionalLessVariables .= '@font: Lora, serif;';
 
 			} elseif ($this->getOption('typography') == 'lora_openSans') {
 				$this->addStyle(
