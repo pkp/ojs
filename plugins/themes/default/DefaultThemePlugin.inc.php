@@ -17,13 +17,6 @@ import('lib.pkp.classes.plugins.ThemePlugin');
 
 class DefaultThemePlugin extends ThemePlugin {
 	/**
-	 * Constructor
-	 */
-	function DefaultThemePlugin() {
-		parent::ThemePlugin();
-	}
-
-	/**
 	 * @copydoc ThemePlugin::isActive()
 	 */
 	public function isActive() {
@@ -35,10 +28,9 @@ class DefaultThemePlugin extends ThemePlugin {
 	 * Initialize the theme's styles, scripts and hooks. This is run on the
 	 * currently active theme and it's parent themes.
 	 *
-	 * @param $themes array List of all loaded themes
 	 * @return null
 	 */
-	public function init($themes) {
+	public function init() {
 
 		// Register theme options
 		$this->addOption('typography', 'radio', array(
