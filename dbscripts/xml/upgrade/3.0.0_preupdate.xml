@@ -24,6 +24,9 @@
 	<sql>
 		<rename table="edit_decisions" column="article_id" to="submission_id" />
 	</sql>
+	<sql>
+		<rename table="static_pages" column="journal_id" to="context_id" />
+	</sql>
 
 	<!-- Articles migration -->
 	<sql>
