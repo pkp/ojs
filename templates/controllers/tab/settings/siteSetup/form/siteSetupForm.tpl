@@ -70,10 +70,7 @@
 				{include file="linkAction/linkAction.tpl" action=$uploadCssLinkAction contextId="siteSetupForm"}
 			</div>
 		{/fbvFormSection}
-		{fbvFormSection label="manager.setup.layout.theme" description="manager.setup.layout.themeDescription"}
-			{fbvElement type="select" id="themePluginPath" from=$enabledThemes selected=$themePluginPath translate=false size=$fbvStyles.size.MEDIUM}
-		{/fbvFormSection}
-		{fbvFormSection}{/fbvFormSection}{* FIXME: Clear inline fbvFormSections *}
+		{include file="core:controllers/tab/settings/appearance/form/theme.tpl"}
 	{/fbvFormArea}
 	{fbvFormArea id="oai"}
 		{fbvFormSection title="admin.settings.oaiRegistration"}
