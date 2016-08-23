@@ -144,10 +144,7 @@
 	<message key="manager.setup.historyDescription">Dieser Text erscheint auf der "Über uns"-Seite der Zeitschrift und kann genutzt werden, um Änderungen des Titels, in der Besetzung des Beirats und in anderen wesentlichen Belangen der Zeitschriftengeschichte zu beschreiben.</message>
 	<message key="manager.setup.copyeditInstructions">Anweisungen für das Lektorat</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Die Anweisungen werden den Lektor/innen, Autor/innen und Redakteur/innen mit dem zu bearbeitenden Beitrag übermittelt. Nachstehend finden Sie eine Reihe von Standardanweisungen im HTML-Format. Sie können jederzeit von der Zeitschriftenverwaltung ersetzt oder geändert werden (in HTML oder einfachem Text).</message>
-	<message key="manager.setup.resetPermissions">Rechte zum Artikel zurücksetzen</message>
-	<message key="manager.setup.resetPermissions.description">Copyright-Vermerk und Lizenzinformation werden dauerhaft mit dem Inhalt verbunden, damit sie nicht geändert werden, wenn eine Zeitschrift die Regeln für neue Einreichungen ändert. Um bereits zusammen mit den veröffentlichten Inhalten gespeicherte Angaben zu den Rechten zurückzusetzen, benutzen Sie bitte den Knopf unten.</message>
 	<message key="manager.setup.copyrightNotice">Copyright-Vermerk</message>
-	<message key="manager.setup.copyrightYearBasis">Bestimme das Copyright-Jahr neuer Artikel anhand von</message>
 	<message key="manager.setup.coverage">Themenbereich</message>
 	<message key="manager.setup.coverageDescription">Bezieht sich auf den räumlich-geografischen, auf den zeitlichen Bereich und auf die Eigenschaften des Fachgebiets.</message>
 	<message key="manager.setup.currentIssue">Aktuelle Ausgabe</message>
@@ -174,6 +171,7 @@
 	<message key="manager.setup.enableAnnouncementsHomepage2">neuesten Mitteilungen auf der Startseite der Zeitschrift</message>
 	<message key="manager.setup.enableUserRegistration">Benutzer/innen können sich bei der Zeitschrift auf eine oder mehrere der folgenden Weisen registrieren:</message>
 	<message key="manager.setup.focusAndScope">Konzept</message>
+	<message key="manager.setup.focusAndScope.description">Beschreiben Sie Autor/innen, Leser/innen und Bibliothekar/innen die Bandbreite der Arikel und anderer hier zu veröffentlichenden Werke.</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Indizierung von Arbeiten für Autor/innen</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS unterstützt das Protocol for Metadata Harvesting der <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a>, das den Zugang zu gut katalogisierten Forschungsquellen weltweit eröffnet. Die Autor/innen veröffentlichen Metadaten ihrer Beiträge nach einer ähnlichen Vorlage. Die Zeitschriftenverwalterin/der Zeitschriftenverwalter sollte die Kategorien für die Indizierung auswählen und den Autor/innen passende Beispiele an die Hand geben, die die Indizierung ihrer Arbeit erleichtern, wobei die Begriffe durch Semikolon getrennt werden (z.B. Begriff1; Begriff2). Die Einträge sollten als Beispiele (mit "z.B." oder "zum Beispiel") gekennzeichnet sein.]]></message>
 	<message key="manager.setup.form.issnInvalid">Die angegebene ISSN ist ungültig.</message>
@@ -202,6 +200,13 @@
 	<message key="manager.setup.itemsPerPage">Einträge pro Seite</message>
 	<message key="manager.setup.journalAbbreviation">Abkürzung des Zeitschriftennamens</message>
 	<message key="manager.setup.journalArchiving">Archivierung der Zeitschrift</message>
+	<message key="manager.setup.journalSummary">Zusammenfassung der Zeitschrift</message>
+	<message key="manager.setup.journalSummary.description">Eine kurze Beschreibung Ihrer Zeitschrift, die in der Liste der Zeitschriften angezeigt werden kann.</message>
+	<message key="manager.setup.journalAbout">Über uns</message>
+	<message key="manager.setup.journalAbout.description">Nehmen Sie alle Informationen über Ihre Zeitschrift mit auf, die von Interesse für Leser/innen, Autor/innen oder Gutachter/innen sein könnten. Hierzu könnten Ihre Open-Access-Policy, das Konzept Ihrer Zeitschrift, Copyright-Angaben, Informationen über Sponsoren, die Geschichte der Zeitschrift, Angaben zum Datenschutz und die Beteiligung an LOCKSS- oder CLOCKSS-Archivierungssystemen gehören.</message>
+	<message key="manager.setup.favicon">Favicon der Zeitschrift</message>
+	<message key="manager.setup.faviconDescription">Fügen Sie ein Favicon für diese Zeitschrift hinzu, das in der Navigationsleiste angezeigt werden kann, wenn Nutzer/innen Ihre Website besuchen.</message>
+	<message key="manager.setup.faviconInvalid">Ungültiges Favicon-Format. Zulässige Formate sind .ico, .png und .gif.</message>
 	<message key="manager.setup.journalHomepageContent">Inhalt der Eingangsseite der Zeitschrift</message>
 	<message key="manager.setup.journalHomepageContentDescription">Standardmäßig besteht die Eingangsseite nur aus Navigationslinks. Zusätzlicher Inhalt kann mit einer der folgenden Optionen hinzugefügt werden. Er erscheint in der Reihenfolge der Optionen. Bitte beachten Sie, dass die aktuelle Ausgabe der Zeitschrift immer über den "Aktuelle Ausgabe"-Link in der Navigationsleiste zu erreichen ist.</message>
 	<message key="manager.setup.journalHomepageHeader">Kopfzeile der Startseite</message>
@@ -220,6 +225,8 @@
 	<message key="manager.setup.journalStyleSheetInvalid">Das Format des Zeitschriften-Style Sheets ist ungültig. Das gültige Format ist .css.</message>
 	<message key="manager.setup.journalTheme">Zeitschriften-Designvorlage</message>
 	<message key="manager.setup.journalThumbnail">Vorschaubild der Zeitschrift</message>
+	<message key="manager.setup.journalThumbnail.description">Ein kleines Logo oder Symbol Ihrer Zeitschrift, das in der Liste der Zeitschriften angezeigt werden kann.</message>
+	<message key="manager.setup.journalThumbnail.altText">Alternativtext für Thumbnail</message>
 	<message key="manager.setup.journalTitle">Titel der Zeitschrift</message>
 	<message key="manager.setup.labelName">Seitenbenennung</message>
 	<message key="manager.setup.layoutInstructions">Anweisungen für das Layout</message>
@@ -230,8 +237,18 @@
 	<message key="manager.setup.layoutTemplates.title">Titel</message>
 	<message key="manager.setup.lists">Listen</message>
 	<message key="manager.setup.listsDescription">Maximalzahl der Elemente auf jeder Listenseite (z.B. Beiträge, Benutzer/innen oder redaktionelle Aufgaben) festlegen sowie die Anzahl der Links, die auf jeder Seite erscheinen sollen.</message>
-	<message key="manager.setup.lockssEnable"><![CDATA[Aktivieren Sie LOCKSS und verteilen und lagern Sie den Inhalt der Zeitschrift bei den an LOCKSS teilnehmenden Bibliotheken über eine LOCKSS <a href="{$lockssUrl}" target="_blank">Redakteur/innen-Erklärung-</a>Seite. Es erscheint dann eine Lizenz von LOCKSS im "Über uns" der Zeitschrift unter "Archiv":]]></message>
+	<message key="manager.setup.enableArchive">Archivierung aktivieren</message>
+	<message key="manager.setup.lockssEnable"><![CDATA[Aktivieren Sie LOCKSS und speichern und verteilen Sie den Inhalt der Zeitschrift bei den an LOCKSS teilnehmenden Bibliotheken über ein <a href="{$lockssUrl}" target="_blank">LOCKSS-Manifest</a>. Es erscheint dann eine Lizenz von LOCKSS im "Über uns" der Zeitschrift unter "Archiv":]]></message>
+	<message key="manager.setup.lockssLicenseDescription"><![CDATA[Eine LOCKSS-Lizenz wird in "Über uns" unter Archivierung erscheinen: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS-Lizenz</a>]]></message>
+	<message key="manager.setup.lockssLicenseLabel">Beschreibung der LOCKSS-Lizenz</message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifizieren Sie 6 bis 10 Bibliotheken, die die Zeitschrift registrieren und archivieren sollen. Wenden Sie sich zum Beispiel an Einrichtungen, in denen Mitglieder der Redaktion oder des Beirats arbeiten und/oder Einrichtungen, die bereits an LOCKSS beteiligt sind. Siehe <a href="http://www.lockss.org/community/" target="_blank">The Community</a>. Verwenden Sie die vorgefertigten Anfragen für (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">an LOCKSS teilnehmende Bibliotheken</a> oder für (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">an LOCKSS noch nicht teilnehmende Bibliotheken</a>.]]></message>
+	<message key="manager.setup.lockssTitle">LOCKSS</message>
+	<message key="manager.setup.clockssEnable"><![CDATA[Aktivieren Sie CLOCKSS und speichern und verteilen Sie den Inhalt der Zeitschrift bei den an CLOCKSS teilnehmenden Bibliotheken über ein <a href="{$clockssUrl}" target="_blank">CLOCKSS-Manifest</a>.]]></message>
+	<message key="manager.setup.clockssLicenseDescription"><![CDATA[Eine CLOCKSS-Lizenz wird in "Über uns" unter Archivierung erscheinen: <a href="http://clockss.org/" target="_blank">CLOCKSS-Lizenz</a>]]></message>
+	<message key="manager.setup.clockssLicenseLabel">Beschreibung der CLOCKSS-Lizenz</message>
+	<message key="manager.setup.clockssRegister"><![CDATA[Registrieren Sie sich für den CLOCKSS-Dienst, indem Sie <a href="http://clockss.org/" target="_blank">die CLOCKSS-Website</a> besuchen.]]></message>
+	<message key="manager.setup.clockssTitle">CLOCKSS</message>
+	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.setup.look">Gestaltung</message>
 	<message key="manager.setup.look.description">Titel der Startseite, Inhalt, Kopfzeile der Zeitschrift, Fußzeile, Navigationsleiste und Style Sheet.</message>
 	<message key="manager.setup.management">Management</message>
@@ -349,6 +366,7 @@
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">Aufrufe der Abstractseiten von Artikeln</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Abstractseiten und Downloads</message>
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Startseiten-Aufrufe</message>
+	<message key="manager.statistics.reports.defaultReport.issuePageViews">Aufrufe des Inhaltverzeichnis der Ausgabe</message>
 	<message key="manager.statistics.reports.filters.byContext.description">Ergebnisse nach Kontext filtern (Ausgabe und/oder Artikel).</message>
 	<message key="manager.statistics.reports.filters.byObject.description">Ergebnisse nach Objekttyp (Zeitschrift, Ausgabe, Artikel, PDF-Fahne, andere Fahnen) und/oder nach einer oder mehrerer Objekt-ID filtern.</message>
 
@@ -361,14 +379,19 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">Monat(e) nach Erscheinen frei zugänglich</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Bitte wählen Sie eine gültige Frist.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Die folgenden Richtlinien zu verzögertem Open Access erscheinen im "Über uns" unter "Zur Zeitschrift".</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Bitte nutzen Sie die vorgesehene Checkbox.</message>
 	<message key="manager.subscriptionPolicies.expiry">Ende des Abonnements</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Zum Ende des Abonnements kann den Leser/innen der Zugang zu sämtlichen Abonnement-Inhalten verwehrt werden, oder sie können weiterhin Zugang zu Abonnement-Inhalten erhalten, die vor dem Abonnement-Ende veröffentlicht wurden.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Volles Abonnement-Ende</message>
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Leser/innen wird der Zugang zu sämtlichen Abonnement-Inhalten verwehrt, wenn ihr Abonnement endet.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Teilweises Abonnement-Ende</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Leser/innen wird der Zugang zu aktuell veröffentlichten Abonnement-Inhalten verwehrt, aber sie erhalten weiterhin Zugriff auf Abonnement-Inhalte, die vor ihrem Abonnement-Ende veröffentlicht wurden.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Erinnerung per E-Mail</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">Monat(e) nach Ablauf des Abonnements.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Erinnerung per E-Mail</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">Woche(n) nach Ablauf des Abonnements.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Erinnerung per E-Mail</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">Monat(e) vor Ablauf des Abonnements.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Erinnerung per E-Mail</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">Woche(n) vor Ablauf des Abonnements.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Erinnerung an das Auslaufen des Abonnements</message>
@@ -526,6 +549,7 @@
 	<message key="grid.category.path">Pfad</message>
 	<message key="grid.action.addSection">Rubrik hinzufügen</message>
 	<message key="manager.setup.section.description">Artikel innerhalb veröffentlichter Ausgaben einer Zeitschrift sind in Rubriken organisiert, normalerweise anhand eines Themas oder Inhaltstyps (z.B. Überblicksartikel, Forschung etc.).</message>
+	<message key="settings.roles.gridDescription">Roles are groups of users in the journal who are given access to different permission levels and associated workflows within the journal. There are five different permission levels: Journal Managers have access to everything in the journal (all content and settings); Journal Editors have access to all content within their series; Journal Assistants have access to all monographs that have been explicitly assigned to them by an editor; Reviewers can see and perform the reviews they have been assigned; and Authors can see and interact with a limited amount of information on their own submissions. Additionally, there are five different stage assignments that roles may be given access to: Submission, Internal Review, Review, Editorial and Production.</message>
 	<message key="manager.publication.library">Bibliothek</message>
 	<message key="manager.setup.copyrightYearBasis">Basiere das Copyright-Jahr eines neuen Artikels auf</message>
 	<message key="manager.setup.copyrightYearBasis.article">Artikel: das Standardjahr wird aus dem Veröffentlichungsjahr des Artikels abgeleitet, wie bei "publish-as-you-go".</message>
