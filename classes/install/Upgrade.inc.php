@@ -356,7 +356,7 @@ class Upgrade extends Installer {
 			// Now, migrate stage assignments. This code is based on the default stage assignments outlined in registry/userGroups.xml
 			$submissionDao = Application::getSubmissionDAO();
 			$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
-			$submissionResult = $submissionDao->retrieve('SELECT article_id, user_id FROM articles_migration');
+			$submissionResult = $submissionDao->retrieve('SELECT article_id, user_id FROM articles_migration WHERE journal_id = ?', array($journal->getId()));
 			$authorGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_AUTHOR);
 			while (!$submissionResult->EOF) {
 				$submissionRow = $submissionResult->GetRowAssoc(false);
@@ -895,7 +895,7 @@ class Upgrade extends Installer {
 						continue;
 					} elseif (count($matchedResults)==0) {
 						// No filenames matched.
-						error_log("Unable to find a match for \"$globPattern\" in \"" . $submissionFileManager->getBasePath() . "\".\n");
+						error_log("Unable to find a match for \"$globPattern\" in \"" . $submissionFileManager->getBasePath() . "\".");
 						continue;
 					}
 					$discoveredFilename = array_shift($matchedResults);
@@ -1232,6 +1232,28 @@ class Upgrade extends Installer {
 		return true;
 	}
 
+	function _createQuery($stageId, $submissionId, $sequence, $title, $dateNotified = null) {
+		$queryDao = DAORegistry::getDAO('QueryDAO');
+		$noteDao = DAORegistry::getDAO('NoteDAO');
+
+		$query = $queryDao->newDataObject();
+		$query->setAssocType(ASSOC_TYPE_SUBMISSION);
+		$query->setAssocId($submissionId);
+		$query->setStageId($stageId);
+		$query->setSequence($sequence);
+		$queryDao->insertObject($query);
+
+		$headNote = $noteDao->newDataObject();
+		$headNote->setAssocType(ASSOC_TYPE_QUERY);
+		$headNote->setAssocId($query->getId());
+		$headNote->setTitle($title);
+		$headNote->setDateCreated($dateNotified?$dateNotified:time());
+		$headNote->setDateModified($dateNotified?$dateNotified:time());
+		$noteDao->insertObject($headNote);
+
+		return $query;
+	}
+
 	/**
 	 * Convert signoffs to queries.
 	 * @return boolean True indicates success.
@@ -1268,60 +1290,18 @@ class Upgrade extends Installer {
 				case 'SIGNOFF_COPYEDITING_FINAL':
 					if (isset($copyeditingQueries[$assocId])) $query = $copyeditingQueries[$assocId];
 					else {
-						$query = $queryDao->newDataObject();
-						$query->setAssocType(ASSOC_TYPE_SUBMISSION);
-						$query->setAssocId($assocId);
-						$query->setStageId(WORKFLOW_STAGE_ID_EDITING);
-						$copyeditingQueries[$assocId] = $query;
-						$query->setSequence(1);
-						$queryDao->insertObject($query);
-
-						$headNote = $noteDao->newDataObject();
-						$headNote->setAssocType(ASSOC_TYPE_QUERY);
-						$headNote->setAssocId($query->getId());
-						$headNote->setTitle('Copyediting');
-						$headNote->setDateCreated($dateNotified?$dateNotified:time());
-						$headNote->setDateModified($dateNotified?$dateNotified:time());
-						$noteDao->insertObject($headNote);
+						$query = $copyeditingQueries[$assocId] = $this->_createQuery(WORKFLOW_STAGE_ID_EDITING, $assocId, 1, 'Copyediting', $dateNotified);
 					}
 					break;
 				case 'SIGNOFF_LAYOUT':
-					$query = $queryDao->newDataObject();
-					$query->setAssocType($assocType = ASSOC_TYPE_SUBMISSION);
-					$query->setAssocId($assocId);
-					$query->setStageId(WORKFLOW_STAGE_ID_PRODUCTION);
-					$query->setSequence(3);
-					$queryDao->insertObject($query);
-					$layoutQueries[$assocId] = $query;
-
-					$headNote = $noteDao->newDataObject();
-					$headNote->setAssocType(ASSOC_TYPE_QUERY);
-					$headNote->setAssocId($query->getId());
-					$headNote->setTitle('Layout Editing');
-					$headNote->setDateCreated($dateNotified?$dateNotified:time());
-					$headNote->setDateModified($dateNotified?$dateNotified:time());
-					$noteDao->insertObject($headNote);
+					$query = $layoutQueries[$assocId] = $this->_createQuery(WORKFLOW_STAGE_ID_PRODUCTION, $assocId, 1, 'Layout Editing', $dateNotified);
 					break;
 				case 'SIGNOFF_PROOFREADING_AUTHOR':
 				case 'SIGNOFF_PROOFREADING_PROOFREADER':
 				case 'SIGNOFF_PROOFREADING_LAYOUT':
 					if (isset($proofreadingQueries[$assocId])) $query = $proofreadingQueries[$assocId];
 					else {
-						$query = $queryDao->newDataObject();
-						$query->setAssocType(ASSOC_TYPE_SUBMISSION);
-						$query->setAssocId($assocId);
-						$query->setStageId(WORKFLOW_STAGE_ID_PRODUCTION);
-						$proofreadingQueries[$assocId] = $query;
-						$query->setSequence(3);
-						$queryDao->insertObject($query);
-
-						$headNote = $noteDao->newDataObject();
-						$headNote->setAssocType(ASSOC_TYPE_QUERY);
-						$headNote->setAssocId($query->getId());
-						$headNote->setTitle('Proofreading');
-						$headNote->setDateCreated($dateNotified?$dateNotified:time());
-						$headNote->setDateModified($dateNotified?$dateNotified:time());
-						$noteDao->insertObject($headNote);
+						$query = $proofreadingQueries[$assocId] = $this->_createQuery(WORKFLOW_STAGE_ID_PRODUCTION, $assocId, 2, 'Proofreading', $dateNotified);
 					}
 					break;
 			}
@@ -1364,14 +1344,23 @@ class Upgrade extends Installer {
 			switch ($row['comment_type']) {
 				case 3: // COMMENT_TYPE_COPYEDIT
 					$note->setTitle('Copyediting');
+					if (!isset($copyeditingQueries[$row['submission_id']])) {
+						$copyeditingQueries[$row['submission_id']] = $this->_createQuery(WORKFLOW_STAGE_ID_EDITING, $row['submission_id'], 1, 'Copyediting');
+					}
 					$note->setAssocId($copyeditingQueries[$row['submission_id']]->getId());
 					break;
 				case 4: // COMMENT_TYPE_LAYOUT
 					$note->setTitle('Layout Editing');
+					if (!isset($layoutQueries[$row['submission_id']])) {
+						$layoutQueries[$row['submission_id']] = $this->_createQuery(WORKFLOW_STAGE_ID_PRODUCTION, $row['submission_id'], 1, 'Layout Editing');
+					}
 					$note->setAssocId($layoutQueries[$row['submission_id']]->getId());
 					break;
 				case 5: // COMMENT_TYPE_PROOFREAD
 					$note->setTitle('Proofreading');
+					if (!isset($proofreadingQueries[$row['submission_id']])) {
+						$proofreadingQueries[$row['submission_id']] = $this->_createQuery(WORKFLOW_STAGE_ID_PRODUCTION, $row['submission_id'], 2, 'Proofreading');
+					}
 					$note->setAssocId($proofreadingQueries[$row['submission_id']]->getId());
 					break;
 			}
