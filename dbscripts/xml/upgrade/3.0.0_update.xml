@@ -191,5 +191,6 @@
 
 		<query driver="mysql">UPDATE submission_files sf, articles_migration am SET sf.file_stage=7 WHERE am.editor_file_id=sf.file_id</query><!-- SUBMISSION_FILE_FAIR_COPY -->
 		<query driver="postgres7">UPDATE submission_files SET file_stage=7 FROM submission_files sf, articles_migration am WHERE am.editor_file_id=sf.file_id</query><!-- SUBMISSION_FILE_FAIR_COPY -->
+		<query>UPDATE submission_files SET file_stage=10 WHERE file_id IN (SELECT file_id FROM submission_galleys)</query><!-- SUBMISSION_FILE_PROOF -->
 	</sql>
 </data>
