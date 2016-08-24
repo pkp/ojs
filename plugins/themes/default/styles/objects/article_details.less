@@ -72,11 +72,17 @@
 		}
 
 		.orcid {
+			display: block;
+			font-size: @font-tiny;
+			line-height: @double;
+
 			&:before {
 				content:url('//orcid.org/sites/default/files/images/orcid_16x16.png');
-				padding: 4px 4px 4px 0px;
+				display: inline-block;
+				margin-right: 0.25em;
+				height: @double;
+				vertical-align: middle;
 			}
-			display: block;
 		}
 
 		.affiliation {
