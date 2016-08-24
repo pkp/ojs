@@ -28,10 +28,10 @@
 			<tr>
 				<td><label for="searchField">
 				{translate key="plugins.block.navigation.searchScope"}
-				<br />
+				<br /></label>
 				<select id="searchField" name="searchField" size="1" class="selectMenu">
 					{html_options_translate options=$articleSearchByOptions}
-				</select></label>
+				</select>
 				</td>
 			</tr>
 			<tr>
