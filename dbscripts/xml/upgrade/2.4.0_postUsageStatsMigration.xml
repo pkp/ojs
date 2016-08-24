@@ -2,7 +2,7 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-  * dbscripts/xml/upgrade/2.4.3_postUsageStatsMigration.xml
+  * dbscripts/xml/upgrade/2.4.0_postUsageStatsMigration.xml
   *
   * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
