@@ -70,7 +70,7 @@
 				{include file="linkAction/linkAction.tpl" action=$uploadCssLinkAction contextId="siteSetupForm"}
 			</div>
 		{/fbvFormSection}
-		{include file="core:controllers/tab/settings/appearance/form/theme.tpl"}
+		{include file="controllers/tab/settings/appearance/form/theme.tpl"}
 	{/fbvFormArea}
 	{fbvFormArea id="oai"}
 		{fbvFormSection title="admin.settings.oaiRegistration"}
