@@ -59,11 +59,11 @@ class ProofreadCommentForm extends CommentForm {
 	/**
 	 * Email the comment.
 	 */
-	function email() {
+	function email($request) {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		$journal =& Request::getJournal();	
+		$journal =& $request->getJournal();
 
 		// Create list of recipients:
 		$recipients = array();
@@ -156,7 +156,7 @@ class ProofreadCommentForm extends CommentForm {
 			}
 		}
 
-		parent::email($recipients);
+		parent::email($recipients, $request);
 	}
 }
 
