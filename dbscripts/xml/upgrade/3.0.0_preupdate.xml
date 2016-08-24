@@ -41,8 +41,8 @@
 	<!-- Bug #8235: Rename article* submission* -->
 	<sql>
 		<!-- article_files to submission_files -->
+		<rename table="article_files" column="article_id" to="submission_id" />
 		<rename table="article_files" to="submission_files" />
-		<rename table="submission_files" column="article_id" to="submission_id" />
 		<!-- article_comments to submission_comments -->
 		<rename table="article_comments" column="article_id" to="submission_id" />
 		<rename table="article_comments" to="submission_comments" />
