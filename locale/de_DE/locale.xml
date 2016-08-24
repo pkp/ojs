@@ -13,16 +13,16 @@
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<!--
-	 * Diese Datei ist in einige größere Abschnitte gegliedert, die jeweils
-	 * durch Kommentare wie diesen voneinander getrennt sind. Diese Abschnitte sind:
-	 * ALLGEMEINES - Enthält häufig vorkommende Wörter
-	 * EINHEITEN - Enthält Bezeichnungen, die sich auf die Hauptbestandteile 
-	 *             des Systems beziehen, z.B. Artikel, Zeitschrift, Rubrik
-	 * OBERFLÄCHE - Enthält Wörter und Wortfolgen, die nach den Rubriken der 
-	 *              Benutzer/innenoberfläche gegliedert sind, in denen sie jeweils auftauchen 
-	 * PROTOKOLL - Enthält Wörter und Wortfolgen zu den Protokoll-Einträgen
-	 * VERSCHIEDENES - Enthält Einträge, die unter keinen der anderen Abschnitte fallen 
-	 * STANDARD - Enthält Standardeinstellungen für die Konfiguration.
+	 * This file is organized into several major sections, separated
+	 * by comments like this one. These sections are called:
+	 *  COMMON - Contains frequently-used words
+	 *  ENTITIES - Contains terms pertaining to the system's major
+	 *             entities, e.g. Article, Journal, Section
+	 *  INTERFACE - Contains phrases organized by the section of the
+	 *              user interface they appear in.
+	 *  LOG - Contains phrases related to log entries
+	 *  MISC - Entries that don't belong elsewhere.
+	 *  DEFAULT - Default settings for configuration items.
 	-->
 
 	<!-- review froms start -->
@@ -58,13 +58,13 @@
 	<message key="common.homePageHeader.altText">Kopfzeile der Startseite</message>
 	<message key="common.journalHomepageImage.altText">Bild auf der Startseite der Zeitschrift</message>
 
-	<!-- Standardmeldungen -->
+	<!-- Common Form Messages -->
 
-	<!-- Allgemeine E-Mail-Meldungen -->
+	<!-- Common Email Messages -->
 
-	<!-- Allgemeine Regionalisierungsbegriffe -->
+	<!-- Common Localization Terms -->
 
-	<!-- Allgemeine Fehlermeldungen -->
+	<!-- Common Error Messages -->
 
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Navigationshilfe</message>
@@ -78,7 +78,7 @@
 	<message key="navigation.infoForAuthors.long">Informationen für Autor/innen</message>
 	<message key="navigation.infoForLibrarians.long">Informationen für Bibliothekar/innen</message>
 
-	<!-- Beitragswartelisten -->
+	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Nicht zugewiesen</message>
 	<message key="common.queue.short.submissionsUnassigned">Nicht zugewiesen</message>
 	<message key="common.queue.long.submissionsInEditing">In redaktioneller Bearbeitung</message>
@@ -94,19 +94,19 @@
 
 	<!--
 	 *
-	 * EINHEITEN - Dieser Abschnitt enthält Bezeichnungen, die sich auf die Hauptbestandteile 
-	 *             des Systems beziehen, z.B. Artikel, Zeitschrift, Rubrik
+	 * ENTITIES - This section contains terms pertaining to the system's
+	 *            major entities, e.g. Article, Journal, Section
 	 *
 	-->
 
-	<!-- Allgemeine Begriffe: Rubrik -->
+	<!-- Common Section Terms -->
 	<message key="section.section">Rubrik</message>
 	<message key="section.sections">Rubriken der Zeitschrift</message>
 	<message key="section.title">Titel der Rubrik</message>
 	<message key="section.abbreviation">Abkürzung</message>
 	<message key="section.abbreviation.example">(Zum Beispiel, Artikel=ART)</message>
 
-	<!-- Allgemeine Begriffe: Artikel -->
+	<!-- Common Article Terms -->
 	<message key="article.article">Artikel</message>	
 	<message key="article.articles">Artikel</message>
 	<message key="article.submissionId">Beitrags-ID</message>
@@ -141,7 +141,7 @@
 	<message key="article.fontSize.medium.altText">Mittel</message>
 	<message key="article.fontSize.large.altText">Groß</message>
 
-	<!-- Verlauf - Allgemein -->
+	<!-- Submission Tracking - Common -->
 	<message key="submission.submissionEditing">Redaktionelle Bearbeitung des Beitrags</message>
 	<message key="submission.changeSection">Ändern in</message>
 	<message key="submission.sent">Versandt</message>
@@ -178,21 +178,21 @@
 	<message key="submissions.editorRuling">Redaktionsbeschluss</message>
 	<message key="submission.eventLog">Protokoll der Ereignisse</message>
 	
-	<!-- Auflistung von Beiträgen Suchmaschine -->
+	<!-- Submission list search engine -->
 	<message key="submissions.copyeditComplete">Lektorat beendet</message>
 	<message key="submissions.layoutComplete">Layout fertig</message>
 	<message key="submissions.proofreadingComplete">Korrekturlektorat beendet</message>
 
-	<!-- Anmerkungen zu Einreichungen -->
+	<!-- Submission Notes -->
 
-	<!-- Allgemeine Begriffe: Zeitschrift -->
+	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Aktuelle Ausgabe</message>
 	<message key="journal.journals">Zeitschriften</message>
 	<message key="journal.path">Zugangspfad</message>
 	<message key="context.context">Zeitschrift</message>
 	<message key="journal.issn">ISSN</message>
 
-	<!-- Benutzer/in -->
+	<!-- User -->
 	<message key="user.profile.profileImage">Profilbild</message>
 	<message key="user.showAllJournals">Alle Zeitschriften anzeigen</message>
 	<message key="user.registerForOtherJournals">Für andere Zeitschriften registrieren</message>
@@ -204,14 +204,15 @@
 	<message key="user.noRoles.submitArticleRegClosed">Einen Vorschlag einreichen: Registrierung als Autor/in ist momentan ausgeschaltet.</message>
 	<message key="user.noRoles.regReviewer">Als Gutachter/in registrieren</message>
 	<message key="user.noRoles.regReviewerClosed">Als Gutachter/in registrieren: Die Registrierung als Gutachter/in ist momentan ausgeschaltet..</message>
-	<!-- Funktionen -->
+	
+	<!-- Roles -->
 	<message key="user.role.manager">Zeitschriftenverwalter/in</message>
 	<message key="user.role.sectionEditor">Rubrikredakteur/in</message>
 	<message key="user.role.subscriptionManager">Abonnementverwalter/in</message>
 	<message key="user.role.managers">Zeitschriftenverwalter/innen</message>
 	<message key="user.role.subscriptionManagers">Abonnementverwalter/innen</message>
 
-	<!-- Allgemeine Begriffe: Ausgabe -->
+	<!-- Common Issue Terms -->
 	<message key="issue.issue">Ausgabe</message>
 	<message key="issue.issues">Ausgaben</message>
 	<message key="issue.title">Titel</message>
@@ -228,7 +229,7 @@
 	<message key="issue.nonpdf.title">Ausgaben-Download</message>
 	<message key="issue.viewIssue">Ausgabe ansehen</message>
 
-	<!-- Allgemeine Begriffe: Abonnementarten -->
+	<!-- Common Subscription Type Terms -->
 	<message key="subscriptionTypes.currency">Währung</message>
 	<message key="subscriptionTypes.year">Jahr</message>
 	<message key="subscriptionTypes.years">Jahre</message>
@@ -240,7 +241,7 @@
 	<message key="subscriptionTypes.format.print">Print</message>
 	<message key="subscriptionTypes.format.printOnline">Print und Online</message>
 
-	<!-- Allgemeine Begriffe: Abonnement -->
+	<!-- Common Subscription Terms -->
 	<message key="subscriptions.inactive">Nicht aktiv</message>
 	<message key="subscriptions.status">Status</message>
 	<message key="subscriptions.status.active">Aktiv</message>
@@ -255,7 +256,7 @@
 
 	<!--
 	 *
-	 * PROTOKOLL - Dieser Abschnitt enthält Wörter und Wortfolgen zu den Protokoll-Einträgen.
+	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">Neuzugang</message>
@@ -296,23 +297,23 @@
 	<message key="submission.event.layout.layoutComplete">Layout abgeschlossen</message>
 	<!--
 	 *
-	 * OBERFLÄCHE - Enthält Wörter und Wortfolgen, die nach den Rubriken der Benutzer/innenoberfläche gegliedert sind, 
-	 *              in denen sie jeweils auftauchen 
+	 * INTERFACE - Contains phrases organized by the section of the
+	 *             user interface they appear in.
 	 *
 	-->
 
-	<!-- Beitrag Leser/innenzugang -->
+	<!-- Reader article view -->
 	<message key="reader.subscribersOnly">Nur für Abonnent/innen</message>
 	<message key="reader.subscriptionRequiredLoginText">Für den Zugang ist ein Abonnement erforderlich. Um Ihr Abonnement zu bestätigen, loggen Sie sich bei der Zeitschrift ein.</message>
 	<message key="reader.openAccess">Freier Zugang (Open Access)</message>
 	<message key="reader.subscriptionAccess">Zugang für Abonnent/innen</message>
 	<message key="reader.subscriptionOrFeeAccess">Zugang für Abonnent/innen oder durch Zahlung einer Gebühr</message>
 
-	<!-- Leser/innenkommentare -->
+	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Kommentare zu diesem Artikel</message>
 	<message key="comments.authenticated"><![CDATA[von <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
-	<!-- Verwaltung der Website -->
+	<!-- Site Administration -->
 
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Um den Inhalt aller von dieser Website angebotenen Zeitschriften bei einem allgemein verbreiteten System von Forschungsdatenbanken zu indizieren, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrieren Sie</a> die URL Ihrer Website beim Metadaten-Harvester des Public Knowledge Project <a href="http://pkp.sfu.ca/harvester/" target="_blank"></a>. Der Harvester sammelt die Metadaten jedes indizierten Artikels dieser Zeitschrift und ermöglicht somit eine umfassende und genaue Suche auf allen Forschungs-Webseiten, die sich an dem Projekt <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank"> Open Archives Initiative Protocol for Metadata Harvesting</a> beteiligen.
 <br /><br />
@@ -320,67 +321,54 @@
 <br /><br />
 Bitte beachten Sie, dass die OAI-Schnittstelle für diese Website in der OJS-Systemkonfiguration deaktiviert werden kann. Zukünftige Versionen von OJS werden es ermöglichen, die OAI-Schnittstelle für jede Zeitschrift einer Website gesondert zu aktivieren oder zu deaktivieren.]]></message>
 
-
-
-	<!-- Sprachen -->
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Momentan ist das Herunterladen von Sprachpaketen vom Server des Public Knowledge Project nicht möglich, weil:</p>
-	<ul>
-		<li>Ihr Server den Dienst GNU "tar" entweder nicht besitzt oder seine Ausführung nicht erlaubt</li>
-		<li>OJS die Registrierungsdatei für Regionaleinstellungen (üblicherweise "registry/locales.xml") nicht verändern kann.</li>
-	</ul>
-<p>Sprachpakete können manuell von der <a href="http://pkp.sfu.ca">PKP-Webseite</a> heruntergeladen werden.</p>]]></message>
-
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Eine Standardauthentifizierungsquelle außerhalb vom OJS festzulegen, hat folgende Auswirkungen:</p>
 <ul>
 	<li>Versucht jemand, auf dieser Seite ein neues Konto mit einem Benutzer/innen-Namen, der in der Authentifizierungsquelle existiert, nicht jedoch in der OJS-Datenbank, einzurichten, dann gelingt die Registrierung nur, wenn das eingegebene Passwort für dieses Benutzer/innen-Konto gültig ist.</li>
 </ul>]]></message>
 
-	<!-- Systeminformationen -->
+	<!-- System Information -->
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>Beachten Sie:</h4>
 <p>Das System konnte die Konfigurationsdatei nicht automatisch überschreiben. Öffnen Sie <tt>config.inc.php</tt> mit einem geeigneten Texteditor und ersetzen Sie den Inhalt durch den Text im nachstehenden Textfeld.</p>]]></message>
 
 
-	<!-- Website-Verwaltung: Benutzer/innendaten zusammenführen -->
+	<!-- Site Administrator Merge Users -->
 
-	<!-- Abonnementverwaltung -->
+	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Abonnementverwaltung</message>
 	<message key="subscriptionManager.individualSubscriptions">individueller Abonnements</message>
 	<message key="subscriptionManager.institutionalSubscriptions">Institutionelle Abonnements</message>
 	<message key="subscriptionManager.subscriptionTypes">Abonnement-Arten</message>
 
-	<!-- Zeitschriftenverwaltung -->
+	<!-- Journal Management -->
 
-	<!-- Statistiken & Berichte -->
+	<!-- Statistics & Reports -->
 
-	<!-- Verwaltung Plug-Ins -->
+	<!-- Plugin Management -->
 
-	<!-- Verwaltung Zahlungen -->
+	<!-- Payment Management -->
 
-	<!-- Allgemeine Informationen: Plug-Ins -->
-	<message key="plugins.categories.auth.description">Die Zugangs-Plug-Ins ermöglichen Open Journal Systems, die Zugangsberechtigung von Benutzer/innen an andere Systeme, wie etwa LDAP-Server, zu übertragen.</message>
-	<message key="plugins.categories.citationFormats.description">Plug-Ins für Zitatformate bieten Benutzer/innen unterschiedliche Formate zur Zitation der Artikel an.</message>
-	<message key="plugins.categories.generic.description">Generische Plugins werden zur Erweiterung von Open Journal Systems in einer Vielzahl von Wegen genutzt, die nicht durch die anderen Plug-In-Kategorien bereitgestellt werden.</message>
-	<message key="plugins.categories.implicitAuth">Plug-Ins zur impliziten Authentifizierung</message>
-	<message key="plugins.categories.implicitAuth.description">Plug-Ins zur impliziten Authentifizierung stellen Mittel zur Verfügung, um Nutzer/innen anhand ihrer HTTP-Header zu authentifizieren.</message>
+	<!-- General plugin information -->
+	<message key="plugins.categories.auth.description">Die Zugangs-Plugins ermöglichen Open Journal Systems, die Zugangsberechtigung von Benutzer/innen an andere Systeme, wie etwa LDAP-Server, zu übertragen.</message>
+	<message key="plugins.categories.citationFormats.description">Plugins für Zitatformate bieten Benutzer/innen unterschiedliche Formate zur Zitation der Artikel an.</message>
+	<message key="plugins.categories.generic.description">Generische Plugins werden zur Erweiterung von Open Journal Systems in einer Vielzahl von Wegen genutzt, die nicht durch die anderen Plugin-Kategorien bereitgestellt werden.</message>
 
-	<!-- Dateinavigator -->
-
-	<!-- Einrichten einer Zeitschrift -->
-
-	<!-- 1. Einrichtungsschritt -->
-
-	<!-- 2. Einrichtungsschritt -->
 
 
 	<message key="manager.setup.lockssDescription"><![CDATA[<strong>Andere LOCKSS-Netzwerke</strong>
 <br /><br />
 Wenn Sie denken, dass Sie Zugriff auf eines oder mehrere der <a href="http://www.lockss.org/community/networks/" target="_blank">hier gelisteten</a> LOCKSS-Netzwerke haben, kontaktieren Sie bitte die/den entsprechende/n LOCKSS-Netzwerk-Administrator/in, um sich um Aufnahme zu bewerben. Dazu können Sie das Formular unten ausfüllen, um in diese Netzwerke aufgenommen zu werden. <em>Es werden keine Inhalte archiviert werden, bevor Sie das entsprechende Netzwerk benachrichtigt haben.</em>]]></message>
-	<!-- 3. Einrichtungsschritt -->
+
+
+	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems unterstützt auch das <a href="http://clockss.org/" target="_blank">CLOCKSS</a>-System (Controlled Lots of Copies Keep Stuff Safe), um ein sicheres und dauerhaftes Archiv für die Zeitschrift zu gewährleisten. CLOCKSS basiert auf der Open-Source-Software LOCKSS, die an der Stanford University Library entwickelt worden ist und die Bibliotheken in die Lage versetzt, ausgewählte Onlinezeitschriften zu archivieren, in dem regelmäßig die Webseiten der registrierten Zeitschriften auf neu veröffentlichte Inhalte geprüft werden und diese dann archiviert werden. Jedes Archiv wird kontinuierlich durch den Vergleich mit den gespeicherten Versionen anderer Bibiotheken validiert. Wenn Inhalte gelöscht werden oder fehlerhaft sind, werden sie mit Hilfe der in anderen Bibliotheken archivierten Inhalte wiederhergestellt.
+<br /><br />
+Die CLOCKSS-Unterstützung in OJS sollte erst konfiguriert werden, wenn tatsächlich Inhalte publiziert werden.]]></message>
+
+	<!-- Setup Step 3 -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Beispiele für die Anzeige von Creative-Commons-Lizenzen in den Copyright-Vermerken</h3>
 <h4>1. Empfohlene Copyright-Regelungen für Zeitschriften mit Open Access</h4>
 Autor/innen, die in dieser Zeitschrift publizieren möchten, stimmen den folgenden Bedingungen zu:
 <ol type="a">
-	<li> Die Autor/innen behalten das Copyright und erlauben der Zeitschrift die Erstveröffentlichung unter einer <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Namensnennung Lizenz</a>, die es anderen erlaubt, die Arbeit unter Nennung der Autor/innenschaft und der Erstpublikation in dieser Zeitschrift zu verwenden.</li>
+	<li>Die Autor/innen behalten das Copyright und erlauben der Zeitschrift die Erstveröffentlichung unter einer <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Namensnennung Lizenz</a>, die es anderen erlaubt, die Arbeit unter Nennung der Autor/innenschaft und der Erstpublikation in dieser Zeitschrift zu verwenden.</li>
 	<li>Die Autor/innen können zusätzliche Verträge für die nicht-exklusive Verbreitung der in der Zeitschrift veröffentlichten Version ihrer Arbeit unter Nennung der Erstpublikation in dieser Zeitschrift eingehen (z.B. sie in Sammelpublikation oder einem Buch veröffentlichen).</li>
 	<li>Die Autor/innen werden dazu ermutigt, ihre Arbeit parallel zur Einreichung bei dieser Zeitschrift online zu veröffentlichen (z.B. auf den Homepages von Institutionen oder auf ihrer eigenen Homepage), weil so produktive Austauschprozesse wie auch eine frühe und erweiterte Bezugnahme auf das veröffentlichte Werk gefördert werden (siehe <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>
@@ -392,7 +380,7 @@ Autor/innen, die in dieser Zeitschrift publizieren möchten, stimmen den folgend
 	<li>Die Autor/innen können zusätzliche Verträge für die nicht-exklusive Verbreitung der in der Zeitschrift veröffentlichten Version ihrer Arbeit unter Nennung der Erstpublikation in dieser Zeitschrift eingehen (z.B. sie in Sammelpublikation oder einem Buch veröffentlichen).</li>
 	<li>Die Autor/innen werden dazu ermutigt, ihre Arbeit parallel zur Einreichung bei dieser Zeitschrift online zu veröffentlichen (z.B. auf den Homepages von Institutionen oder auf ihrer eigenen Homepage), weil so produktive Austauschprozesse wie auch eine frühe und erweiterte Bezugnahme auf das veröffentlichte Werk gefördert werden (siehe <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
-	<!-- 4. Einrichtungsschritt -->
+	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Schritte: Liste der eingegangenen Beiträge &gt; Begutachtung der Beiträge &gt; Redaktion der Beiträge &gt; Inhaltsverzeichnis<br /><br />
 Wählen Sie ein Schema für diese Schritte im redaktionellen Verfahren. (Zur Bestimmung von Redakteur/innen und Rubrikredakteur/innen gehen Sie unter "Zeitschriftenverwaltung" zu "Redakteur/innen".)]]></message>
 	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Die folgenden Optionen sind verfügbar, die es Leser/innen ermöglichen, Online-Versionen der nachgewiesenen bzw. verwendeten Literatur zu finden.</p>
@@ -402,19 +390,19 @@ Wählen Sie ein Schema für diese Schritte im redaktionellen Verfahren. (Zur Bes
 	<li><strong>Links in die Literaturverweise einbetten</strong><p>Die Layouterin/der Layouter kann einen Link zu denjenigen Literaturverweisen hinzufügen, die online zu finden sind. Dazu muss sie/er die folgenden Anweisungen befolgen (die bearbeitet werden können).</p></li>
 </ol>]]></message>
 
-	<!-- 5. Einrichtungsschritt -->
+	<!-- Setup Step 5 -->
 
-	<!-- Sprachen -->
+	<!-- Languages -->
 
-	<!-- Rubrikverwaltung -->
+	<!-- Section Management -->
 
 	<!-- Import/Export -->
 
-	<!-- Positionen / Redaktionsteam -->
+	<!-- Groups / Editorial Team -->
 
 
 
-	<!-- Personenverwaltung -->
+	<!-- People Management -->
 	<message key="manager.people.confirmDisable">Diese Nutzerin/diesen Nutzer sperren? Dies wird die Nutzerin/den Nutzer daran hindern, sich bei diesem System anzumelden.
 
 Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs angeben.</message>
@@ -428,19 +416,19 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 
 
 
-	<!-- E-Mail-Verwaltung -->
+	<!-- Email Management -->
 
-	<!-- Verwaltung der Abonnementrichtlinien -->
+	<!-- Subscription Policy Management -->
 
-	<!-- Abonnementtypenverwaltung -->
+	<!-- Subscription Type Management -->
 
-	<!-- Abonnementverwaltung -->
+	<!-- Subscription Management -->
 
-	<!-- Mitteilungstypverwaltung -->
+	<!-- Announcement Type Management -->
 
-	<!-- Mitteilungsverwaltung -->
+	<!-- Announcements Management -->
 
-	<!-- Redaktion -->
+	<!-- Editor -->
 	<message key="editor.submissionReview.notes">
 	<![CDATA[<ol>
 	<li>Hervorgehobene Einträge geben an, dass eine Aktion durch eine/n Redakteur/in erforderlich ist, gekennzeichnet wie folgt:
@@ -465,17 +453,17 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 	</li>
 </ol>]]></message>
 
-	<!-- Startseite Redakteur/innen -->
+	<!-- Editor Index Page -->
 
-	<!-- Frühere Ausgaben -->
+	<!-- Back Issues -->
 
-	<!-- Ausgabe erstellen / Ausgabendaten -->
+	<!-- Create Issue / Issue Data -->
 
-	<!-- Aktuelle Ausgaben -->
+	<!-- Live Issues -->
 
-	<!-- Navigation im Seitenleistenmenü -->
+	<!-- Navigation sidebar menu -->
 
-	<!-- Begutachtung von Beiträgen (Redakteur/innen) -->
+	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Der Name verweist zum Profil der Gutachterin/des Gutachters.<br />
 Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 "Wochen" bezieht sich auf die durchschnittlich von der Gutachterin/dem Gutachter für die Erstellung einer Begutachtung benötigte Zeit<br />
@@ -487,7 +475,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 
 
 
-	<!-- Rubrikredakteur/in -->
+	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Bestehende Redaktionsaufgaben</message>
 	<message key="sectionEditor.completedEditorialAssignments">Beendete Redaktionsaufgaben</message>
 	<message key="sectionEditor.noneAssigned">Keine redaktionellen Aufgaben zugewiesen</message>
@@ -508,7 +496,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="sectionEditor.review.enrollReviewer">Tragen Sie eine/n bestehende/n Benutzer/in als Gutachter/in ein</message>
 	<message key="sectionEditor.review.createReviewer">Neuen Gutachter/in erstellen</message>
 
-	<!-- Layouter/in -->
+	<!-- Layout Editor -->
 	<message key="layoutEditor.activeEditorialAssignments">Bestehende Redaktionsaufgaben</message>
 	<message key="layoutEditor.completedEditorialAssignments">Beendete Redaktionsaufgaben</message>
 	<message key="layoutEditor.noActiveAssignments">Keine redaktionellen Aufgaben zugewiesen</message>
@@ -518,12 +506,12 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="layoutEditor.galley.uploadSuppFile">Zusatzdatei hochladen</message>
 	<message key="submission.layout.imageInvalid">Ungültiges Bildformat. Gültige Formate sind .gif, .jpg und .png.</message>
 
-	<!-- Gutachter/in -->
+	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Beiträge in Begutachtung</message>
 	<message key="reviewer.completedReviews">Begutachtungen abgeschlossen</message>
 	<message key="reviewer.averageQuality">Bewertung</message>
 
-	<!-- Im Begutachtungsverfahren -->
+	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">Zu begutachtende Datei</message>
 	<message key="reviewer.article.notifyTheEditor">Redakteur/in benachrichtigen</message>
 	<message key="reviewer.article.canDoReview">Gutachten wird angefertigt</message>
@@ -569,24 +557,24 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="reviewer.article.confirmDecision">Sobald Sie eine Empfehlung abgegeben haben, können Sie keine Änderungen mehr an diesem Gutachten vornehmen. Sind Sie sicher, dass Sie fortfahren wollen?</message>
 	<message key="reviewer.article.ensuringBlindReview">Eine anonyme Begutachtung sicherstellen</message>
 
-	<!-- Im Lektorat -->	
+	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Datei zum Lektorat</message>
 	<message key="copyeditor.article.copyeditorFile">Datei der Lektorin/des Lektors</message>
 	<message key="copyeditor.article.uploadedFile">Hochgeladene Datei</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Datei der Lektorin/des Lektors</message>
 
-	<!-- Korrekturlektor/in -->
+	<!-- Proofreader -->
 	<message key="proofreader.noProofreadingAssignments">Keine Korrekturlektorataufgaben</message>
 
-	<!-- Autor/in -->
+	<!-- Author -->
 
 
-	<!-- Einreichung, Schritt 1 -->
+	<!-- Article Submission Step 1 -->
 
 
-	<!-- Einreichung, Schritt 2 -->
+	<!-- Article Submission Step 2 -->
 
-	<!-- Einreichung, Schritt 3 -->
+	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[
 <p>Gehen Sie wie folgt vor, um das Manuskript hochzuladen.</p>
 <ol>
@@ -597,16 +585,16 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 <li>Wenn der Beitrag hochgeladen ist, klicken Sie "Speichern und fortfahren" auf dieser Seite an.</li>
 </ol>]]></message>
 
-	<!-- Einreichung Schritt, 4 -->
+	<!-- Article Submission Step 4 -->
 
-	<!-- Einreichung, Schritt 4a: Zusatzdateien -->
+	<!-- Article Submission Step 4a: Supplementary Files -->
 
-	<!-- Einreichung, Schritt 5 -->
+	<!-- Article Submission Step 5 -->
 
-	<!-- Im Begutachtungs-/Redaktionsverfahren -->
+	<!-- Used in submission review / editing -->
 	<message key="submission.review.mustUploadFileForReview">Anfrage-E-Mail kann erst gesendet werden, wenn eine Begutachtungsversion vorliegt.</message>
 
-	<!-- Beitragsverlauf nachvollziehen - Lektorat -->
+	<!-- Submission Tracking - Copyedit Specific -->
 	<message key="submission.copyedit.mustUploadFileForInitialCopyedit">Anfrage-E-Mail kann erst gesendet werden, wenn eine Datei auf der Begutachtungsseite unter "Redaktionsentscheidungen" zum Lektorieren ausgewählt wurde.</message>
 	<message key="submission.copyedit.mustUploadFileForCopyedit">Anfrage-E-Mail kann erst gesendet werden, wenn eine Datei zum Lektorieren hochgeladen wurde.</message>
 	<message key="submission.copyedit.initialCopyedit">Erstes Lektorat</message>
@@ -619,7 +607,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="submission.copyedit.copyeditComments">Lektorat - Kommentare</message>
 	<message key="submission.copyedit.instructions">Lektorat - Richtlinien</message>
 
-	<!-- Beitragsverlauf nachvollziehen - Layoutspezifisch -->
+	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.layout.noLayoutFile">Keine (Laden Sie die endgültige Lektoratsversion als Layoutversion hoch, bevor Sie eine Anfrage stellen.)</message>
 	<message key="submission.layout.publicGalleyId">Eindeutige Kennung der Fahne</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Eindeutige Kennung existiert bereits.</message>
@@ -629,14 +617,12 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="submission.layout.instructions">Layoutrichtlinien</message>
 	<message key="submission.layout.referenceLinking">Verlinkung von Literaturververweisen</message>
 
-
-	<!-- Beitragslauf - Korrekturlektorat -->
+	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Korrekturlektorat - Kommentare</message>
 	<message key="submission.proofread.corrections">Korrekturlektorat - Korrekturen</message>
 	<message key="submission.proofread.instructions">Korrekturlektorat - Richtlinien</message>
-
-	<!-- Verlaufsprotokoll -->
-
+	
+	<!-- Submission History -->
 	<message key="submission.logType.article">Artikel</message>
 	<message key="submission.logType.author">Autor/in</message>
 	<message key="submission.logType.editor">Redakteur/in</message>
@@ -645,11 +631,11 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="submission.logType.layout">Layout</message>
 	<message key="submission.logType.proofread">Korrekturlektorat</message>
 
-	<!-- Protokoll Vorkommnisse -->
+	<!-- Submission Event Log -->
 
-	<!-- Protokoll E-Mails -->
+	<!-- Submission Email Log -->
 
-	<!-- Kommentare zum Beitrag-->
+	<!-- Submission Comments -->
 	<message key="submission.comments.editorAuthorCorrespondence">Korrepondenz Redakteur/in - Autor/in</message>
 	<message key="submission.comments.copyeditComments">Lektorats-Kommentare</message>
 	<message key="submission.comments.viewableDescription"><![CDATA[Diese Kommentare können dem/der Autor/in mitgeteilt werden.<br />
@@ -662,8 +648,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="submission.comments.saveAndEmailAuthor">Speichern und E-Mail an Autor/in senden</message>
 	<message key="submission.comments.saveAndEmailEditor">Speichern und E-Mail an Redakteur/in senden</message>
 
-	<!-- Login -->
-	<!-- Registrierung -->
+	<!-- Registration -->
 	<message key="user.register.noJournals">Auf dieser Seite gibt es keine Zeitschriften, bei denen Sie sich eintragen könnten.</message>
 	<message key="user.register.privacyStatement">Schutz persönlicher Daten</message>
 	<message key="user.register.registrationDisabled">Gegenwärtig nimmt diese Zeitschrift keine Registrierung von Benutzer/innen entgegen.</message>
@@ -675,7 +660,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="user.register.reviewerDescription">Sie sind bereit, bei der Website eingereichte Beiträge im Rahmen des Peer Review zu begutachten.</message>
 	<message key="user.register.reviewerInterests">Bitte geben Sie Begutachtungsinteressen an (Wissenschaftsbereiche und Forschungsmethoden):</message>
 
-	<!-- Abonnements -->
+	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">Meine Abonnements</message>
 	<message key="user.subscriptions.subscriptionStatus">Abonnementstatus</message>
 	<message key="user.subscriptions.statusInformation">Aktive und ausgelaufene Abonnements werden unten zusammen mit ihrem Auslaufdatum angezeigt. Zusätzlich können die folgenden Statusinformationen zu jedem Abonnement aufgeführt werden.</message>
@@ -716,7 +701,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="user.subscriptions.form.addIpRange">Hinzufügen</message>
 
 
-	<!-- Suche -->
+	<!-- Search -->
 	<message key="search.browseAuthorIndex">Verzeichnis der Autor/innen durchblättern</message>
 	<message key="search.searchFor">Artikel durchsuchen nach</message>
 	<message key="search.author">Autor/in</message>
@@ -735,32 +720,32 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 <li>Verwenden Sie <strong>*</strong> als Platzhalter für beliebige Zeichenfolgen, z.B. <em>Sozi* Moral</em> listet alle Dokumente, die "soziologisch" oder "sozial" enthalten.</li>
 </ul>]]></message>
 
-	<!-- Einschubseite für PDFs -->
+	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 
 
-	<!-- Einschubseite für Fahnen, die weder PDF noch HTML sind -->
+	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Artikel herunterladen</message>
-	<message key="article.nonpdf.note"><![CDATA[Die gewählte Datei sollte automatisch geladen werden. Falls nicht, klicken Sie auf den nachstehenden Link. Beachten Sie bitte, dass die Datei zur Wiedergabe ein spezielles Programm oder ein Plug-In benötigen kann.<br /><br />Falls die Datei nicht automatisch geladen wird, <a href="{$url}">hier klicken</a>.]]></message>
+	<message key="article.nonpdf.note"><![CDATA[Die gewählte Datei sollte automatisch geladen werden. Falls nicht, klicken Sie auf den nachstehenden Link. Beachten Sie bitte, dass die Datei zur Wiedergabe ein spezielles Programm oder ein Plugin benötigen kann.<br /><br />Falls die Datei nicht automatisch geladen wird, <a href="{$url}">hier klicken</a>.]]></message>
 
-	<!-- Index: Site -->
+	<!-- Site index -->
 	<message key="site.journalsHosted">Zeitschriften auf dieser Seite</message>
 	<message key="site.journalView">Zur Zeitschrift</message>
 	<message key="site.journalRegister">Sich registrieren</message>
 	<message key="site.journalCurrent">Aktuelle Ausgabe</message>
 	<message key="site.noJournals">Es sind keine Zeitschriften verfügbar.</message>
 
-	<!-- Index: Aktuelle Ausgabe -->
+	<!-- Current index -->
 	<message key="current.current">Aktuelle Ausgabe</message>
 	<message key="current.noCurrentIssue">Keine aktuelle Ausgabe</message>
 	<message key="current.noCurrentIssueDesc">Von der Zeitschrift ist keine Ausgabe erschienen.</message>
 
-	<!-- Index: Archiv -->
+	<!-- Archive index -->
 	<message key="archive.archives">Archiv</message>
 	<message key="archive.browse">Ältere Ausgaben durchblättern</message>
 	<message key="archive.issueUnavailable">Ausgabe nicht verfügbar</message>
 
-	<!-- Über uns -->
+	<!-- About The Journal -->
 	<message key="about.statistics">Statistiken</message>
 	<message key="about.history">Zeitschriften-Geschichte</message>
 	<message key="about.editorialTeam">Redaktion</message>
@@ -802,18 +787,18 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="about.aboutOJSJournal"><![CDATA[Diese Zeitschrift verwendet Open Journal Systems {$ojsVersion}, eine Open-Source-Zeitschriften- und Publikationsmanagement-Software. Sie wird unter der GNU General Public License entwickelt, dokumentiert und kostenlos vertrieben durch das <a href="http://pkp.sfu.ca/">Public Knowledge Project</a>.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[Diese Website verwendet Open Journal Systems {$ojsVersion}, eine Open-Source-Zeitschriften- und Publikationsmanagement-Software. Sie wird unter der GNU General Public License entwickelt, dokumentiert und kostenlos vertrieben durch das <a href="http://pkp.sfu.ca/">Public Knowledge Project</a>.]]></message>
 
-	<!-- Mitteilungen -->
+	<!-- Announcement -->
 
-	<!-- Hilfe -->
+	<!-- Help -->
 	<message key="help.ojsHelp">Hilfe zu Open Journal Systems</message>
 	<message key="help.ojsHelpAbbrev">OJS-Hilfe</message>
 	<message key="help.searchReturnResults">Zurück zu Suchergebnissen</message>
 
-	<!-- Spenden -->
+	<!-- Donations -->
 	<message key="donations.thankYou">Danke</message>
 	<message key="donations.thankYouMessage">Vielen Dank für Ihre Spende. Wir wissen sie sehr zu schätzen.</message>
 
-	<!-- Geschenke -->
+	<!-- Gifts -->
 	<message key="gifts.buyer">Von</message>
 	<message key="gifts.buyerDescription">Von wem ist dieses Geschenk?</message>
 	<message key="gifts.recipient">Für</message>
@@ -848,7 +833,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="gifts.subscriptionTypeNotValid">Der Abonnementtyp für dieses Geschenk ist ungültig. Bitte kontaktieren Sie den/die Abonnementverwalter/in.</message>
 	<message key="gifts.subscriptionNonExpiring">Das Geschenk wurde nicht eingelöst, da Sie bereits ein nicht auslaufendes Abonnement für diese Zeitschrift haben.</message>
 
-	<!-- Zahlungen -->
+	<!-- Payments -->
 	<message key="payment.loginRequired">Sie müssen angemeldet sein, um Zahlungen durchführen zu können.</message>
 	<message key="payment.loginRequired.forArticle">Ein Abonnement oder der Erwerb des Artikels sind für den Zugang notwendig. Loggen Sie sich bei der Zeitschrift ein, um Ihr Abonnement zu überprüfen, auf frühere Erwerbungen zuzugreifen oder den Artikel zu erwerben.</message>
 	<message key="payment.loginRequired.forIssue">Ein Abonnement oder der Erwerb der Ausgabe sind für den Zugang notwendig. Loggen Sie sich bei der Zeitschrift ein, um Ihr Abonnement zu überprüfen, auf frühere Erwerbungen zuzugreifen oder die Ausgabe zu erwerben.</message>
@@ -889,16 +874,16 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="payment.subscription.renew">Abonnement erneuern</message>
 	<message key="payment.subscription.expires">Läuft aus</message>
 
-	<!-- Installation -->
-	<message key="installer.ojsInstallation">Installation von OJS</message>
+	<!-- Installer -->
+	<message key="installer.appInstallation">Installation von OJS</message>
 	<message key="installer.ojsUpgrade">Aktualisierung von OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS-Version {$version}</h4>
 
-<p>Danke für das Herunterladen von Open Journal Systems <strong>des Public Knowledge Projects (PKP)</strong>. Bevor Sie fortfahren, lesen Sie bitte die zum Programm gehörende <a href="{$baseUrl}/docs/README">README</a>-Datei. Näheres über das Public Knowledge Project und seine Programmentwicklungen finden Sie auf der <a href="http://pkp.sfu.ca/" target="_blank">Webseite des PKP</a>. Wenn Sie Programmfehler melden wollen oder technische Fragen zu Open Journal Systems haben, gehen Sie bitte zum <a href="http://forum.pkp.sfu.ca">Support Forum</a> von PKP oder besuchen Sie unseren <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Webservice für die Anzeige von Programmfehlern</a>. Wenn Sie im Support Forum keine geeignete Hilfestellung finden, können Sie uns auch unter <a href="mailto:pkp.contact@gmail.com"></a> per E-Mail kontaktieren.</p>
+<p>Danke für das Herunterladen von Open Journal Systems <strong>des Public Knowledge Projects (PKP)</strong>. Bevor Sie fortfahren, lesen Sie bitte die zum Programm gehörende <a href="{$baseUrl}/docs/README">README</a>-Datei. Näheres über das Public Knowledge Project und seine Programmentwicklungen finden Sie auf der <a href="http://pkp.sfu.ca/" target="_blank">Webseite des PKP</a>. Wenn Sie Programmfehler melden wollen oder technische Fragen zu Open Journal Systems haben, gehen Sie bitte zum <a href="http://forum.pkp.sfu.ca">Support Forum</a> von PKP oder besuchen Sie unseren <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Webservice für die Anzeige von Programmfehlern</a>. Wenn Sie im Support Forum keine geeignete Hilfestellung finden, können Sie uns auch unter <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> per E-Mail kontaktieren.</p>
 
 <h4>Aktualisierungen</h4>
 
-<p>Wenn Sie eine bestehende Version von OJS 2.x durch eine neuere ersetzen wollen, <a href="{$upgradeUrl}/install/upgrade">hier klicken</a></p>
+<p>Wenn Sie eine bestehende Version von durch eine neuere ersetzen wollen, <a href="{$upgradeUrl}">hier klicken</a></p>
 
 <h4>Empfohlene Systemvoraussetzungen</h4>
 
@@ -915,9 +900,10 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 
 <h4>Unterstützte Datenbank-Systeme</h4>
 
-<p>Bisher wurde OJS nur mit MySQL und PostgreSQL getestet, aber andere Datenbanken, die <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> unterstützen, können ebenfalls funktionieren (ganz oder teilweise). Berichte zur Kompatibilität und Patches für andere Datenbanken nimmt das OJS-Team gerne entgegen.</p>
-
+<p>Bisher wurde OJS nur mit MySQL und PostgreSQL getestet, aber andere Datenbanken, die <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> unterstützen, können ebenfalls funktionieren (ganz oder teilweise). Berichte zur Kompatibilität und Patches für andere Datenbanken nimmt das OJS-Team gerne entgegen.</p>]]></message>
+<message key="installer.preInstallationInstructions"><![CDATA[
 <h4>Vor der Installation</h4>
+
 
 <p>1. Die folgenden Dateien und Verzeichnisse (mit ihren Inhalten) müssen beschreibbar sein:</p>
 <ul>
@@ -930,6 +916,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 </ul>
 
 <p>2. Ein Verzeichnis für die Ablage hochgeladener Dateien muss angelegt und beschreibbar gemacht werden (siehe "Datei-Einstellungen" unten).</p>]]></message>
+
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS-Version{$version}</h4>
 
 <p>Danke für das Herunterladen von Open Journal Systems <strong>des Public Knowledge Project</strong>. Bevor Sie fortfahren, lesen Sie bitte die zum Programm gehörenden Dateien <a href="{$baseUrl}/docs/README">README</a> und <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a>. Näheres über das Public Knowledge Project und seine Programmentwicklungen finden Sie auf der <a href="http://pkp.sfu.ca/" target="_blank">Webseite des PKP</a>. Wenn Sie Programmfehler melden wollen oder technische Fragen zu Open Journal Systems haben, gehen Sie bitte zum <a href="http://forum.pkp.sfu.ca">Support Forum</a> von PKP oder besuchen Sie unseren <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Webservice für die Anzeige von Programmfehlern</a>. Wenn Sie im Support Forum keine geeignete Hilfestellung finden, können Sie uns auch unter <a href="mailto:pkp.contact@gmail.com"></a> per E-Mail kontaktieren.</p>
@@ -962,11 +949,12 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 <p>Bitte vergessen Sie nicht, die "installed"-Einstellung in Ihrer config.inc.php-Konfigurationsdatei wieder zurück auf <em>On</em> zu setzen.</p>
 <p>Wenn Sie sich noch nicht registriert haben und in Zukunft Neuigkeiten und Hinweise auf Aktualisierungen erhalten möchten, <strong>registrieren Sie sich bitte auf <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Wenn Sie Fragen oder Kommentare haben, besuchen Sie bitte das <a href="http://forum.pkp.sfu.ca" target="_new">Support-Forum</a>.</p>]]></message>
 
-	<!-- Warnungen zum Upgrade -->
+	<!-- Installation upgrade warnings -->
 	<message key="site.upgradeAvailable.admin"><![CDATA[Eine neue Version von OJS ist verfügbar! Sie benutzen momentan OJS {$currentVersion}. Die aktuelleste Version ist OJS {$latestVersion}. Bitte gehen Sie zu <a href="http://pkp.sfu.ca/ojs_download" target="_new">dieser Seite</a>, um die aktuelle Version herunterzuladen und um Informationen zum Upgrade einzusehen.]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[Eine neue Version von OJS ist verfügbar! Sie benutzen momentan OJS {$currentVersion}. Die aktuellste Version ist OJS {$latestVersion}. Bitte benachrichtigen Sie Ihre/n Website-Administrator/in ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>), um sie/ihn über dieses neue Release zu informieren. Mehr Informationen können <a href="http://pkp.sfu.ca/ojs_download" target="_new">hier</a> gefunden werden.]]></message>
 
-	<!-- Protokolle - Beiträge -->
+	<!-- Article Logs -->
+	<message key="log.author.submitted">{$authorName} hat einen neuen Beitrag eingereicht, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} hat den Artikel bearbeitet {$submissionId}. Die neue Datei-ID ist {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">Der Beitrag {$submissionId} wird nicht länger von {$reviewerName} im Durchgang {$round} begutachtet.</message>
 	<message key="log.review.reviewInitiated">Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} hat begonnen.</message>
@@ -1010,10 +998,10 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 
 	<message key="log.imported">{$userName} hat Beitrag {$submissionId} importiert.</message>
 
-	<!-- Lesewerkzeuge Angaben -->
+	<!-- Reading Tools entries -->
 
 
-	<!-- Lesewerkzeuge - Einrichtung -->
+	<!-- RT Settings -->
 	<message key="rt.admin.settings">Lesewerkzeug-Optionen</message>
 
 	<message key="rt.admin.settings.description">Die Lesewerkzeuge erscheinen in denjenigen Rubriken der Zeitschrift, die zur Indizierung vorgesehen sind, in Frames neben den Beiträgen. Sie bestehen aus einem Satz optionaler Werkzeuge, die sich auf den jeweiligen Beitrag beziehen und die unten aufgelistet sind, sowie einem Satz von Werkzeugen, die verwandte Themen zugänglich machen, gegliedert nach Bereichen und Fachgebieten.</message>
@@ -1030,17 +1018,17 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 	<message key="rt.admin.settings.addComment.unauthenticated">Benutzer/innen müssen nicht registriert sein, um Kommentare abgeben zu können. Anonymes Kommentieren ist möglich.</message>
 
 
-	<!-- Lesewerkzeuge - Versionen -->
+	<!-- RT Versions -->
 
-	<!-- Lesewerkzeuge - Kontext -->
+	<!-- RT Contexts -->
 
-	<!-- Lesewerkzeuge - Suche -->
+	<!-- RT Searches -->
 
 	<message key="rt.admin.validateUrls.description"><![CDATA[Für Suchmaschinen möglicherweise ungültige URL sind unten aufgeführt.<br />
 Dieser Test ist nicht 100% genau, Sie sollten daher jede hier als ungültig gekennzeichneten URL manuell nachprüfen.<br />
 Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen.]]></message>
 
-	<!-- Lesewerkzeuge - Elemente -->
+	<!-- RT Entities -->
 
 
 
@@ -1063,7 +1051,7 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 
 
 
-	<!-- Benachrichtigungsarten -->
+	<!-- Notification Types -->
 	<message key="notification.mailListDescription">Geben Sie Ihre E-Mail-Adresse ein, wenn Sie über neue Inhalte in dieser Zeitschrift informiert werden wollen</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Auf dieser Seite finden Sie Updates wie neue Ausgaben oder Ankündigungen. Sie können diese Benachrichtigungen als RSS-Feed abonnieren (indem Sie auf die Abbildungen rechts klicken) oder <a href="{$emailUrl}">via E-Mail.</a>]]></message>
 
@@ -1082,18 +1070,23 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 
 	<!--
 	 *
-	 * VERSCHIEDENES - Enthält Einträge, die unter keinen der anderen Abschnitte fallen 
+	 * MISC - Entries that do not belong in the other sections.
 	 *
 	-->
-	<!-- Authorisierung -->
+	<!-- Authorization -->
 	<message key="user.authorization.copyeditorAssignmentMissing">Zugriff verweigert! Sie sind nicht als Lektor/in für diesen Artikel eingeteilt worden.</message>
 	<message key="user.authorization.sectionAssignment">Sie versuchen auf einen Artikel zuzugreifen, der nicht Teil Ihrer Rubrik ist.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Ungültige Lektor/innenfassung oder keine Lektor/innenfassung angefordert!</message>
 
-	<!-- Symbole: Standard "alt" Text -->
+	<!-- Icons: Default "alt" text -->
 
-	<!-- Meldungen: Fehlerbehebung -->
+	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Währungsliste "{$filename}" aus XML geladen</message>
+
+	<!-- Grid Actions -->
+
+	<!-- Included here because it may be used in the navigation bar -->
+	
 	<message key="context.current">Aktuelle Zeitschrift:</message>
 	<message key="context.select">Zu einer anderen Zeitschrift wechseln:</message>
 	<message key="article.return">Zu Artikeldetails zurückkehren</message>
@@ -1157,4 +1150,5 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 	<message key="notification.type.approveSubmissionTitle">Warte auf Freigabe.</message>
 	<message key="user.profile.form.showOtherContexts">Bei anderen Zeitschriften registrieren</message>
 	<message key="notification.type.submissionSubmitted">Ein neuer Artikel wurde eingereicht: "{$title}"</message>
+	<message key="journal.viewAllIssues">Alle Ausgaben anzeigen</message>
 </locale>

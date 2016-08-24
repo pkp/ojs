@@ -68,15 +68,12 @@
 	<message key="editor.issues.remove">Entfernen</message>
 	<message key="editor.issues.proofed">Überprüft</message>
 	<message key="editor.issues.removeCoverPage">Titelbild entfernen?</message>
-	<message key="editor.issues.invalidCoverPageFormat">Titelseitenformat ungültig. Gültige Formate sind: .gif, .jpg und .png.</message>
 	<message key="editor.issues.styleFile">Formatvorlage</message>
 	<message key="editor.issues.invalidStyleFormat">Format der Formatvorlage ungültig. Vergewissern Sie sich, dass die hochgeladene Datei eine gültige .css-Datei ist. (Beachten Sie, dass Formatvorlagen mit Eingangskommentaren abgelehnt werden können.)</message>
 	<message key="editor.issues.removeStyleFile">Formatvorlage entfernen?</message>
 	<message key="editor.issues.coverPageCaption">Überschrift auf der Titelseite</message>
 	<message key="editor.issues.showCoverPage">Erstellen Sie für diese Ausgabe eine Titelseite mit den folgenden Bestandteilen:</message>
 	<message key="editor.issues.coverPageDisplay">Anzeigen</message>
-	<message key="editor.issues.hideCoverPageArchives">Zeige Miniaturbild des Titelbildes nicht in der Liste der Ausgaben an.</message>
-	<message key="editor.issues.hideCoverPageCover">Zeige das Titelbild nicht über dem Inhaltsverzeichnis an.</message>
 	<message key="editor.issues.openAccess">Freier Zugang (Open Access)</message>
 	<message key="editor.issues.subscription">Abonnement</message>
 	<message key="editor.issues.identification">Identifizierung</message>
@@ -194,6 +191,7 @@
 	<message key="editor.submissions.averageTime">Wochen</message>
 	<message key="editor.submissions.lastCompleted">Zuletzt fertiggestellt</message>
 	<message key="editor.submissions.assignedTo">Zugeteilt an</message>
+	<message key="editor.article.schedulePublication">Zur Veröffentlichung vorsehen</message>
 	<message key="editor.submissions.inSection">In Rubrik</message>
 	<message key="editor.article.scheduleForPublication">Zur Veröffentlichung vorsehen in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Muss noch zugewiesen werden</message>
@@ -204,12 +202,6 @@
 	<message key="editor.article.hideTocAuthorHide">Nicht anzeigen</message>
 	<message key="editor.article.hideTocAuthorShow">Anzeigen</message>
 	<message key="editor.article.cover">Titelseite</message>
-	<message key="editor.article.showCoverPage">Eine Titelseite für diesen Artikel mit den folgenden Elementen anlegen.</message>
-	<message key="editor.article.coverPageDisplay">Anzeigen</message>
-	<message key="editor.article.hideCoverPageToc">Das Miniaturbild des Titelbildes nicht im Inhaltsverzeichnis anzeigen.</message>
-	<message key="editor.article.hideCoverPageAbstract">Das Titelbild nicht in der Ansicht des Abstracts anzeigen.</message>
-	<message key="editor.article.coverPage">Titelbild</message>
-	<message key="editor.article.coverPageInstructions">(Erlaubte Formate: .gif, .jpg oder .png)</message>
 	<message key="editor.article.uploaded">Hochgeladen</message>
 	<message key="editor.article.removeCoverPage">Titelbild entfernen?</message>
 	<message key="editor.article.remove">Entfernen</message>
@@ -230,4 +222,9 @@
 	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[Der oder die Layouter/in bereitet diese Dateien für jede Fahne vor und lädt sie dann zu den zugehörigen <span class="pkp_help_title">Korrektur</span> zum Korrekturlesen hoch.]]></message>
 	<message key="editor.submission.selectGalleyFiles">Fahnendateien auswählen</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Endgültige Entwurfsdateien in dieser Liste werden durch eine/n Lektor/in in lektorierte Versionen umgewandelt und unter <span class="pkp_help_title">Lektorat</span> hochgeladen.]]></message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">Das Titelbild, das Sie löschen wollten, stimmt nicht mit dem Titelbild dieser Ausgabe überein. Bitte laden Sie die Seite neu und versuchen Sie es erneut.</message>
+	<message key="editor.issues.removeCoverImageFileNotFound">Das Titelbild, das Sie löschen wollten, konnte nicht gefunden werden. Vielleicht wurde es bereits gelöscht. Versuchen Sie, die Seite neu zu laden.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Ungültiges Titelseitenformat. Zulässige Formate sind .gif, .jpg oder .png.</message>
+	<message key="editor.article.coverImage">Titelbild</message>
+	<message key="editor.article.removeCoverImageFileNotFound">Das Titelbild, das Sie löschen wollten, konnte nicht gefunden werden. Vielleicht wurde es bereits gelöscht. Versuchen Sie, die Seite neu zu laden.</message>
 </locale>

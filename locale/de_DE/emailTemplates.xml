@@ -478,10 +478,9 @@ Unsere Entscheidung lautet:<br />
 <br />
 wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: &quot;{$submissionTitle}&quot; gekommen.<br />
 <br />
-Unsere Entscheidung lautet:<br />
+Unsere Entscheidung lautet: Beitrag ablehnen<br />
 <br />
-{$editorialContactSignature}<br />
-]]></body>
+{$editorialContactSignature}<br />]]></body>
 		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
 	</email_text>
 		<email_text key="COPYEDIT_REQUEST">
