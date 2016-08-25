@@ -12,8 +12,8 @@
   -->
   
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.gateways.resolver.displayName">Resolver-Plug-In</message>
-	<message key="plugins.gateways.resolver.description">Dieses Plug-In verwaltet Verweise für Ausgaben und Artikel, ausgehend von Zitationsinformationen.</message>
+	<message key="plugins.gateways.resolver.displayName">Resolver-Plugin</message>
+	<message key="plugins.gateways.resolver.description">Dieses Plugin verwaltet Verweise für Ausgaben und Artikel, ausgehend von Zitationsinformationen.</message>
 	<message key="plugins.gateways.resolver.errors.errorMessage">Verweis nichts findbar. Vergewissern Sie sich, dass die Angabe vollständig ist und sich auf ein Element in dieser OJS-Anwendung bezieht.</message>
 	<message key="plugins.gateways.resolver.exportHoldings">Exportangaben</message>
 </locale>

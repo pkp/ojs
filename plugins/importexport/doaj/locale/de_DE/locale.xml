@@ -12,7 +12,7 @@
   -->
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.importexport.doaj.displayName">DOAJ-Export-Plug-In</message>
+	<message key="plugins.importexport.doaj.displayName">DOAJ-Export-Plugin</message>
 	<message key="plugins.importexport.doaj.description">Zeitschrift für DOAJ exportieren und Zeitschrifteninformationen an die/den DOAJ-Vertreter/in per E-Mail schicken</message>
 
 	

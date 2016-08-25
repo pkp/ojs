@@ -18,7 +18,7 @@
 <br />
 Die eventuell aufgetretene Fehlermeldung lautete: &quot;{$error}&quot;<br />
 <br />
-Diese E-Mail wurde durch das Lucene-Suche-Plug-In von Open Journal Systems erzeugt.]]></body>
+Diese E-Mail wurde durch das Lucene-Suche-Plugin von Open Journal Systems erzeugt.]]></body>
 		<description>Diese E-Mail-Vorlage wird benutzt, um den technischen Kontakt einer Zeitschrift darüber zu informieren,
 dass ein Fehler während der Artikelindizierung aufgetreten ist.</description>
 	</email_text>
@@ -28,7 +28,7 @@ dass ein Fehler während der Artikelindizierung aufgetreten ist.</description>
 <br />
 Die eventuell aufgetretene Fehlermeldung lautete: &quot;{$error}&quot;<br />
 <br />
-Diese E-Mail wurde durch das Lucene-Suche-Plug-In von Open Journal Systems erzeugt.]]></body>
+Diese E-Mail wurde durch das Lucene-Suche-Plugin von Open Journal Systems erzeugt.]]></body>
 		<description>Diese E-Mail-Vorlage wird benutzt, um den technischen Kontakt einer Zeitschrift darüber zu informieren,
 dass ein Fehler während der Zeitschriftenindizierung aufgetreten ist.</description>
 	</email_text>
@@ -38,7 +38,7 @@ dass ein Fehler während der Zeitschriftenindizierung aufgetreten ist.</descript
 <br />
 Die eventuell aufgetretene Fehlermeldung lautete: &quot;{$error}&quot;<br />
 <br />
-Diese E-Mail wurde durch das Lucene-Suche-Plug-In von Open Journal Systems erzeugt.]]></body>
+Diese E-Mail wurde durch das Lucene-Suche-Plugin von Open Journal Systems erzeugt.]]></body>
 		<description>Diese E-Mail-Vorlage wird benutzt, um den technischen Kontakt einer Zeitschrift darüber zu informieren,
 dass ein Fehler aufgetreten ist, während versucht wurde, auf den Solr-Suchdienst zuzugreifen.</description>
 	</email_text>

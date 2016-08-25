@@ -12,7 +12,7 @@
   -->
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.importexport.medra.displayName">mEDRA-Export/Registrierungs-Plug-In</message>
+	<message key="plugins.importexport.medra.displayName">mEDRA-Export/Registrierungs-Plugin</message>
 	<message key="plugins.importexport.medra.description">Exportieren Sie Metadaten zu Ausgaben, Artikeln und Fahnen im Format Onix for DOI (O4DOI), und registrieren Sie DOI bei der mEDRA-Registrierungsagentur.</message>
 
 	<message key="plugins.importexport.medra.intro"><![CDATA[
@@ -25,7 +25,7 @@
 		wird, da der mEDRA-Registrierungsdienst dies erfordert.
 	]]></message>
 	
-	<message key="plugins.importexport.medra.settings.form.description">Bitte konfigurieren Sie das mEDRA-Export-Plug-In:</message>
+	<message key="plugins.importexport.medra.settings.form.description">Bitte konfigurieren Sie das mEDRA-Export-Plugin:</message>
 	<message key="plugins.importexport.medra.settings.form.username">Benuzter/innenname</message>
 	<message key="plugins.importexport.medra.settings.form.usernameRequired">Bitte geben Sie Ihren mEDRA-Benutzer/innennamen ein. Der Benutzer/innenname darf keinen Doppelpunkt enthalten.</message>
 	<message key="plugins.importexport.medra.settings.form.registrantName">Der Name der bei mEDRA registrierten Institution</message>	

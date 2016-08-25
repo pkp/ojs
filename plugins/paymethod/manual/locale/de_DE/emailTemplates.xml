@@ -17,7 +17,7 @@
 Gezahlt werden soll für &quot;{$itemName}&quot;.<br />
 Die Kosten betragen {$itemCost} ({$itemCurrencyCode}).<br />
 <br />
-Diese E-Mail wurde vom OJS-Plug-In Manuelle Gebührenzahlung erzeugt.]]></body>
+Diese E-Mail wurde vom OJS-Plugin Manuelle Gebührenzahlung erzeugt.]]></body>
 		<description>Diese E-Mail-Vorlage wird genutzt, um eine/n Zeitschriftenverwalter/in darüber zu benachrichtigen, dass eine manuelle Zahlung beantragt worden ist.</description>
 	</email_text>
 </email_texts>

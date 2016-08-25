@@ -15,7 +15,7 @@
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 
 	<!-- settings form -->
-	<message key="plugins.pubIds.doi.manager.settings.description">Bitte konfigurieren Sie das DOI-Plug-In, damit Sie DOI in OJS verwalten und benutzen können:</message>
+	<message key="plugins.pubIds.doi.manager.settings.description">Bitte konfigurieren Sie das DOI-Plugin, damit Sie DOI in OJS verwalten und benutzen können:</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Zeitschrifteninhalt</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Bitte wählen Sie, welchen Objekten DOI zugewiesen werden sollen.</message>

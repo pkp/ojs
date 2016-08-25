@@ -12,7 +12,7 @@
   -->
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.citationFormats.turabian.displayName">Turabian-Zitationsformat-Plug-In</message>
+	<message key="plugins.citationFormats.turabian.displayName">Turabian-Zitationsformat-Plugin</message>
 	<message key="plugins.citationFormats.turabian.citationFormatName">Turabian</message>
-	<message key="plugins.citationFormats.turabian.description">Dieses Plug-In implementiert das Turabian-Zitationsformat.</message>
+	<message key="plugins.citationFormats.turabian.description">Dieses Plugin implementiert das Turabian-Zitationsformat.</message>
 </locale>

@@ -12,12 +12,12 @@
   -->
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.citationFormats.abnt.displayName">ABNT-Zitationsformat-Plug-In</message>
+	<message key="plugins.citationFormats.abnt.displayName">ABNT-Zitationsformat-Pluginn</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
-	<message key="plugins.citationFormats.abnt.description">Dieses Plug-In implementiert das ABNT-Zitationsformat.</message>
+	<message key="plugins.citationFormats.abnt.description">Dieses Plugin implementiert das ABNT-Zitationsformat.</message>
 	
 	<message key="plugins.citationFormats.abnt.manager.settings">Einstellungen</message>
-	<message key="plugins.citationFormats.abnt.manager.AbntCitationSettings">Einstellungen des Plug-Ins für das ABNT-Zitationsformat</message>
+	<message key="plugins.citationFormats.abnt.manager.AbntCitationSettings">Einstellungen des Plugins für das ABNT-Zitationsformat</message>
 	<message key="plugins.citationFormats.abnt.manager.settings.description">Einstellungen, um Zitationen nach ABNT zu erzeugen.</message>
 	<message key="plugins.citationFormats.abnt.manager.settings.location">Ort</message>
 	

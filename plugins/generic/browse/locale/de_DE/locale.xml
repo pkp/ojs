@@ -14,7 +14,7 @@
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<!-- plugin -->
 	<message key="plugins.generic.browse.displayName">Durchblättern</message>
-	<message key="plugins.generic.browse.description">Dieses Plug-In ermöglicht das Durchblättern nach Rubriken und/oder Identifikationstypen.</message>
+	<message key="plugins.generic.browse.description">Dieses Plugin ermöglicht das Durchblättern nach Rubriken und/oder Identifikationstypen.</message>
 
 	<!-- URN manager options, setting -->
 	<message key="plugins.generic.browse.manager.settings">Einstellungen</message>

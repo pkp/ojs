@@ -12,8 +12,8 @@
   -->
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.generic.announcementfeed.displayName">Plug-In für das Mitteilungs-Feed</message>
-	<message key="plugins.generic.announcementfeed.description">Dieses Plug-In erstellt RSS/Atom-Feeds für Zeitschriften-Mitteilungen.</message>
+	<message key="plugins.generic.announcementfeed.displayName">Plugin für das Mitteilungs-Feed</message>
+	<message key="plugins.generic.announcementfeed.description">Dieses Plugin erstellt RSS/Atom-Feeds für Zeitschriften-Mitteilungen.</message>
 	
 	<message key="plugins.generic.announcementfeed.settings">Einstellungen</message>
 	<message key="plugins.generic.announcementfeed.settings.all">Feed-Links auf allen Zeitschriftenseiten anzeigen.</message>
