@@ -29,7 +29,7 @@
 	{/if}
 
 	{* Announcements *}
-	{if $numAnnouncementsHomepage && $announcements|count}
+	{if $numAnnouncementsHomepage && $announcements|@count}
 		<div class="cmp_announcements highlight_first">
 			<h2>
 				{translate key="announcement.announcements"}
