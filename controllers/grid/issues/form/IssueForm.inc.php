@@ -177,9 +177,9 @@ class IssueForm extends Form {
 			'showTitle',
 			'temporaryFileId',
 			'coverImageAltText',
+			'datePublished',
+			'openAccessDate',
 		));
-
-		$this->readUserDateVars(array('datePublished', 'openAccessDate'));
 
 		$this->addCheck(new FormValidatorCustom($this, 'issueForm', 'required', 'editor.issues.issueIdentificationRequired', create_function('$showVolume, $showNumber, $showYear, $showTitle', 'return $showVolume || $showNumber || $showYear || $showTitle ? true : false;'), array($this->getData('showNumber'), $this->getData('showYear'), $this->getData('showTitle'))));
 
