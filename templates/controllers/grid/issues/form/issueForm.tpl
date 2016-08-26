@@ -39,14 +39,12 @@
 		{assign var=issuePublished value=false}
 	{/if}
 
-	{if $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION || $issuePublished}
-		{fbvFormArea id="issueAccessArea" title="editor.issues.access"}
+	{if $issuePublished}
+		{fbvFormArea title="editor.issues.datePublished"}
 			{fbvFormSection}
 				{if $issuePublished}
-					{fbvElement type="text" label="editor.issues.datePublished" id="datePublished" value=$datePublished|date_format:"%y-%m-%d" size=$fbvStyles.size.SMALL inline=true class="datepicker"}
+					{fbvElement type="text" id="datePublished" value=$datePublished|date_format:"%Y-%m-%d" size=$fbvStyles.size.SMALL class="datepicker"}
 				{/if}
-				{fbvElement type="select" id="accessStatus" label="editor.issues.accessStatus" from=$accessOptions selected=$accessStatus translate=false size=$fbvStyles.size.SMALL inline=true}
-				{fbvElement type="text" label="editor.issues.accessDate" id="openAccessDate" value=$openAccessDate|date_format:"%y-%m-%d" size=$fbvStyles.size.SMALL inline=true class="datepicker"}
 			{/fbvFormSection}
 		{/fbvFormArea}
 	{/if}
