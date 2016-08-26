@@ -5,7 +5,7 @@
  * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- *} 
+ *}
  <script>
 	$(function() {ldelim}
 		// Attach the form handler.
@@ -29,9 +29,9 @@
 		{assign var=hideCancel value=true}
 {/if}
 {csrf}
-{fbvFormArea id="confirmationText"}
+{if $confirmationText}
 	<p>{$confirmationText}</p>
-{/fbvFormArea}
+{/if}
 {if $approval}
 	{foreach from=$pubIdPlugins item=pubIdPlugin}
 		{assign var=pubIdAssignFile value=$pubIdPlugin->getPubIdAssignFile()}
