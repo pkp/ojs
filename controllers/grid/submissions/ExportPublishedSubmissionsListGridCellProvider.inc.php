@@ -1,29 +1,28 @@
 <?php
 
 /**
- * @file controllers/grid/pubIds/PubIdExportRepresentationsListGridCellProvider.inc.php
+ * @file controllers/grid/submissions/ExportPublishedSubmissionsListGridCellProvider.inc.php
  *
  * Copyright (c) 2014-2016 Simon Fraser University Library
  * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class PubIdExportRepresentationssListGridCellProvider
- * @ingroup controllers_grid_pubIds
+ * @class ExportPublishedSubmissionsListGridCellProvider
+ * @ingroup controllers_grid_submissions
  *
- * @brief Class for a cell provider that can retrieve labels from representations with pub ids
+ * @brief Class for a cell provider that can retrieve labels from submissions
  */
 
 import('lib.pkp.classes.controllers.grid.DataObjectGridCellProvider');
 
-
-class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellProvider {
+class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellProvider {
 	/** @var ImportExportPlugin */
 	var $_plugin;
 
 	/**
 	 * Constructor
 	 */
-	function PubIdExportRepresentationsListGridCellProvider($plugin, $authorizedRoles = null) {
+	function ExportPublishedSubmissionsListGridCellProvider($plugin, $authorizedRoles = null) {
 		$this->_plugin  = $plugin;
 		if ($authorizedRoles) {
 			$this->_authorizedRoles = $authorizedRoles;
@@ -40,12 +39,10 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 	 * @copydoc GridCellProvider::getCellActions()
 	 */
 	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
-		$publishedSubmissionGalley = $row->getData();
+		$publishedSubmission = $row->getData();
 		$columnId = $column->getId();
-		assert(is_a($publishedSubmissionGalley, 'ArticleGalley') && !empty($columnId));
+		assert(is_a($publishedSubmission, 'PublishedArticle') && !empty($columnId));
 
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedSubmission = $publishedArticleDao->getPublishedArticleByArticleId($publishedSubmissionGalley->getSubmissionId());
 		import('lib.pkp.classes.linkAction.request.RedirectAction');
 		switch ($columnId) {
 			case 'title':
@@ -85,7 +82,7 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 					)
 				);
 			case 'status':
-				$status = $publishedSubmissionGalley->getData($this->_plugin->getDepositStatusSettingName());
+				$status = $publishedSubmission->getData($this->_plugin->getDepositStatusSettingName());
 				$statusNames = $this->_plugin->getStatusNames();
 				$statusActions = $this->_plugin->getStatusActions($publishedSubmission);
 				if ($status && array_key_exists($status, $statusActions)) {
@@ -112,25 +109,21 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 	 * @copydoc DataObjectGridCellProvider::getTemplateVarsFromRowColumn()
 	 */
 	function getTemplateVarsFromRowColumn($row, $column) {
-		$publishedSubmissionGalley = $row->getData();
+		$publishedSubmission = $row->getData();
 		$columnId = $column->getId();
-		assert(is_a($publishedSubmissionGalley, 'ArticleGAlley') && !empty($columnId));
+		assert(is_a($publishedSubmission, 'PublishedArticle') && !empty($columnId));
 
 		switch ($columnId) {
 			case 'id':
-				return array('label' => $publishedSubmissionGalley->getId());
+				return array('label' => $publishedSubmission->getId());
 			case 'title':
 				return array('label' => '');
 			case 'issue':
 				return array('label' => '');
-			case 'galley':
-				return array('label' => $publishedSubmissionGalley->getGalleyLabel());
-			case 'pubId':
-				return array('label' => $publishedSubmissionGalley->getStoredPubId($this->_plugin->getPubIdType()));
 			case 'status':
-				$status = $publishedSubmissionGalley->getData($this->_plugin->getDepositStatusSettingName());
+				$status = $publishedSubmission->getData($this->_plugin->getDepositStatusSettingName());
 				$statusNames = $this->_plugin->getStatusNames();
-				$statusActions = $this->_plugin->getStatusActions($publishedSubmissionGalley);
+				$statusActions = $this->_plugin->getStatusActions($publishedSubmission);
 				if ($status) {
 					if (array_key_exists($status, $statusActions)) {
 						$label = '';

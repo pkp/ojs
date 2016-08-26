@@ -197,9 +197,9 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 			$pubIdStatusSettingName = $this->_plugin->getDepositStatusSettingName();
 		}
 		$issueDao = DAORegistry::getDAO('IssueDAO');
-		return $issueDao->getByPubIdType(
+		return $issueDao->getExportable(
+			$context->getId(),
 			$this->_plugin->getPubIdType(),
-			$context?$context->getId():null,
 			$pubIdStatusSettingName,
 			$statusId,
 			$this->getGridRangeInfo($request, $this->getId())
@@ -212,7 +212,7 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 	 * @return array
 	 */
 	protected function getFilterValues($filter) {
-		if (isset($filter['statusId']) && $filter['statusId'] != DOI_EXPORT_STATUS_ANY) {
+		if (isset($filter['statusId']) && $filter['statusId'] != EXPORT_STATUS_ANY) {
 			$statusId = $filter['statusId'];
 		} else {
 			$statusId = null;

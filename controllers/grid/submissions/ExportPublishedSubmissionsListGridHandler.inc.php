@@ -1,29 +1,28 @@
 <?php
 
 /**
- * @file controllers/grid/pubIds/PubIdExportRepresentationsListGridHandler.inc.php
+ * @file controllers/grid/submissions/ExportPublishedSubmissionsListGridHandler.inc.php
  *
  * Copyright (c) 2014-2016 Simon Fraser University Library
  * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class PubIdExportRepresentationsListGridHandler
- * @ingroup controllers_grid_pubIds
+ * @class ExportPublishedSubmissionsListGridHandler
+ * @ingroup controllers_grid_submissions
  *
- * @brief Handle exportable representations with pub ids list grid requests.
+ * @brief Handle exportable published submissions list grid requests.
  */
 
 import('lib.pkp.classes.controllers.grid.GridHandler');
-import('controllers.grid.pubIds.PubIdExportRepresentationsListGridCellProvider');
 
-class PubIdExportRepresentationsListGridHandler extends GridHandler {
+class ExportPublishedSubmissionsListGridHandler extends GridHandler {
 	/** @var ImportExportPlugin */
 	var $_plugin;
 
 	/**
 	 * Constructor
 	 */
-	function PubIdExportRepresentationsListGridHandler() {
+	function ExportPublishedSubmissionsListGridHandler() {
 		parent::GridHandler();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER),
@@ -72,11 +71,8 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 		$this->_plugin = PluginRegistry::loadPlugin($pluginCategory, $pluginPathName);
 		assert(isset($this->_plugin));
 
-		// Fetch the authorized roles.
-		$authorizedRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
-
 		// Grid columns.
-		$cellProvider = new PubIdExportRepresentationsListGridCellProvider($this->_plugin, $authorizedRoles);
+		$cellProvider = $this->getGridCellProvider();
 		$this->addColumn(
 			new GridColumn(
 				'id',
@@ -110,28 +106,9 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 					'width' => 20)
 			)
 		);
-		$this->addColumn(
-			new GridColumn(
-				'galley',
-				'submission.layout.galleyLabel',
-				null,
-				null,
-				$cellProvider,
-				array('alignment' => COLUMN_ALIGNMENT_LEFT,
-					'width' => 20)
-			)
-		);
-		$this->addColumn(
-			new GridColumn(
-				'pubId',
-				null,
-				$this->_plugin->getPubIdDisplayType(),
-				null,
-				$cellProvider,
-				array('alignment' => COLUMN_ALIGNMENT_LEFT,
-						'width' => 15)
-			)
-		);
+		if (method_exists($this, 'addAdditionalColumns')) {
+			$this->addAdditionalColumns($cellProvider);
+		}
 		$this->addColumn(
 			new GridColumn(
 				'status',
@@ -143,7 +120,6 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 						'width' => 10)
 			)
 		);
-
 	}
 
 
@@ -177,14 +153,14 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 	 * @copydoc GridHandler::getSelectName()
 	 */
 	function getSelectName() {
-		return 'selectedRepresentations';
+		return 'selectedSubmissions';
 	}
 
 	/**
 	 * @copydoc GridHandler::getFilterForm()
 	 */
 	protected function getFilterForm() {
-		return 'controllers/grid/pubIds/pubIdExportRepresentationsGridFilter.tpl';
+		return 'controllers/grid/submissions/exportPublishedSubmissionsGridFilter.tpl';
 	}
 
 	/**
@@ -233,7 +209,7 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 	 * @copydoc GridHandler::loadData()
 	 */
 	protected function loadData($request, $filter) {
-		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$context = $request->getContext();
 		list($search, $column, $issueId, $statusId) = $this->getFilterValues($filter);
 		$title = $author = null;
@@ -246,9 +222,9 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 		if ($statusId) {
 			$pubIdStatusSettingName = $this->_plugin->getDepositStatusSettingName();
 		}
-		return $articleGalleyDao->getExportable(
+		return $publishedArticleDao->getExportable(
 			$context->getId(),
-			$this->_plugin->getPubIdType(),
+			null,
 			$title,
 			$author,
 			$issueId,
@@ -300,6 +276,17 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 			$statusId = null;
 		}
 		return array($search, $column, $issueId, $statusId);
+	}
+
+	/**
+	 * Get the grid cell provider instance
+	 * @return DataObjectGridCellProvider
+	 */
+	function getGridCellProvider() {
+		// Fetch the authorized roles.
+		$authorizedRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+		import('controllers.grid.submissions.ExportPublishedSubmissionsListGridCellProvider');
+		return new ExportPublishedSubmissionsListGridCellProvider($this->_plugin, $authorizedRoles);
 	}
 
 }
