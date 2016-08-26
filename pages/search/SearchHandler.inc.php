@@ -64,20 +64,6 @@ class SearchHandler extends Handler {
 			$templateSearchFilters[$filterName] = $filterValue;
 		}
 
-		// Find out whether we have active/empty filters.
-		$hasActiveFilters = false;
-		$hasEmptyFilters = false;
-		foreach($templateSearchFilters as $filterName => $filterValue) {
-			// The main query and journal selector will always be displayed
-			// apart from other filters.
-			if (in_array($filterName, array('query', 'searchJournal', 'siteSearch'))) continue;
-			if (empty($filterValue)) {
-				$hasEmptyFilters = true;
-			} else {
-				$hasActiveFilters = true;
-			}
-		}
-
 		// Assign the filters to the template.
 		$templateMgr->assign($templateSearchFilters);
 
@@ -109,26 +95,15 @@ class SearchHandler extends Handler {
 			));
 		}
 
-		// Assign filter flags to the template.
-		$templateMgr->assign(compact('hasEmptyFilters', 'hasActiveFilters'));
-
 		// Assign the year range.
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$yearRange = $publishedArticleDao->getArticleYearRange($journalId);
-		$startYear = '-' . (date('Y') - substr($yearRange[1], 0, 4));
-		if (substr($yearRange[0], 0, 4) >= date('Y')) {
-			$endYear = '+' . (substr($yearRange[0], 0, 4) - date('Y'));
-		} else {
-			$endYear = (substr($yearRange[0], 0, 4) - date('Y'));
-		}
-		$templateMgr->assign(compact('startYear', 'endYear'));
-
-		// Assign journal options.
-		if ($searchFilters['siteSearch']) {
-			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$journals =& $journalDao->getTitles(true);
-			$templateMgr->assign('journalOptions', array('' => AppLocale::Translate('search.allJournals')) + $journals);
-		}
+		$yearStart = substr($yearRange[1], 0, 4);
+		$yearEnd = substr($yearRange[0], 0, 4);
+		$templateMgr->assign(array(
+			'yearStart' => $yearStart,
+			'yearEnd' => $yearEnd,
+		));
 	}
 
 	/**

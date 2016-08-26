@@ -11,6 +11,7 @@
  * @uses $hasAccess bool Can this user access galleys for this context? The
  *       context may be an issue or an article
  * @uses $showGalleyLinks bool Show galley links to users without access?
+ * @Uses $showDatePublished bool Show the date this article was published?
  *}
 {assign var=articlePath value=$article->getBestArticleId()}
 {if (!$section.hideAuthor && $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_DEFAULT) || $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_SHOW}
@@ -32,7 +33,7 @@
 		</a>
 	</div>
 
-	{if $showAuthor || $article->getPages()}
+	{if $showAuthor || $article->getPages() || ($article->getDatePublished() && $showDatePublished)}
 	<div class="meta">
 		{if $showAuthor}
 		<div class="authors">
@@ -46,6 +47,13 @@
 				{$article->getPages()|escape}
 			</div>
 		{/if}
+
+		{if $showDatePublished && $article->getDatePublished()}
+			<div class="published">
+				{$article->getDatePublished()|date_format:$dateFormatShort}
+			</div>
+		{/if}
+
 	</div>
 	{/if}
 
