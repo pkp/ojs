@@ -4,7 +4,7 @@
 <!--
   * plugins/importexport/doaj/locale/id_ID/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -15,12 +15,5 @@
 <locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.importexport.doaj.displayName">Plugin Ekspor DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Ekspor Jurnal untuk DOAJ dan sediakan informasi jurnal untuk pencantuman</message>
-
-	
-	<message key="plugins.importexport.doaj.export">Ekspor Data Jurnal ke DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journal">Ekspor Jurnal</message>
 	<message key="plugins.importexport.doaj.export.contact">Kontak DOAJ untuk pencantuman</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Ekspor informasi artikel dalam XML untuk pengarsipan dalam DOAJ</message>
-	<message key="plugins.importexport.doaj.export.contactInfo">sebagai bahan pertimbangan, silahkan menyerahkan sebagian formulir yang telah diisi ke DOAJ, dan isi informasi yang belum lengkap sebaik yang kamu bisa.</message>
-
 </locale>

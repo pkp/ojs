@@ -4,7 +4,7 @@
 <!--
   * plugins/importexport/doaj/locale/eu_ES/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -15,12 +15,6 @@
 <locale name="eu_ES" full_name="Euskara">
 	<message key="plugins.importexport.doaj.displayName">DOAJ esportatzeko plugina</message>
 	<message key="plugins.importexport.doaj.description">Aldizkaria esportatu DOAJerako eta DOAJen ordezkariei aldizkariari buruzko informazioa bidali posta elektronikoz.</message>
-
-	
-	<message key="plugins.importexport.doaj.export">Esportatu aldizkariaren datuak DOAJerako</message>
-	<message key="plugins.importexport.doaj.export.journal">Esportatu aldizkaria</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Esportatu artikuluen informazioa XMLn DOAJen artxibatzeko</message>
 	<message key="plugins.importexport.doaj.export.contact">Sartzeko, jarri harremanetan DOAJ-ekin.</message>
-	<message key="plugins.importexport.doaj.export.contactInfo">DOAJ-en zure aldizkariaren ordainketa egiteko, automatikoki erdizka betetako inprimaki hau DOAJ-era bidali, eta bete falta den informazioa ahal bezain ondoen.</message>
 </locale>
 

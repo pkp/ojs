@@ -13,11 +13,7 @@
   -->
 
 <locale name="cs_CZ" full_name="Čeština">
-	<message key="plugins.importexport.doaj.displayName">Plugin exoprtu pro DOAJ</message>
+	<message key="plugins.importexport.doaj.displayName">Plugin exportu pro DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Export časopisu pro DOAJ a odeslání emailu s informacemi o časopisu zástupci DOAJ</message>
-
-	
-	<message key="plugins.importexport.doaj.export">Export dat časopisu do DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journal">Exportovat časopis</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Exportovat informace článku v XML pro archivaci v DOAJ</message>
+	<message key="plugins.importexport.doaj.export.contact">Kontaktujte DOAJ pro vložení</message>
 </locale>

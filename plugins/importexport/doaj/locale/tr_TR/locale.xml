@@ -4,7 +4,7 @@
 <!--
   * plugins/importexport/doaj/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -15,12 +15,5 @@
 <locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.importexport.doaj.displayName">DOAJ İhraç Eklentisi</message>
 	<message key="plugins.importexport.doaj.description">DOAJ için dergi ihracı ve kapsam için dergi bilgisi desteği.</message>
-
-	
-	<message key="plugins.importexport.doaj.export">DOAJ İçin Dergi Verisi İhracı</message>
-	<message key="plugins.importexport.doaj.export.journal">Dergi İhracı</message>
 	<message key="plugins.importexport.doaj.export.contact">Katılım için DOAJ İletişimi</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">XML olarak DOAJ arşivlemesi için makale ihraç bilgisi</message>
-	<message key="plugins.importexport.doaj.export.contactInfo">DOAJ içinde derginizin dikkate alınması için lütfen kısmen doldurulan bu form tamamlayınız.</message>
-
 </locale>
