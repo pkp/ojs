@@ -291,7 +291,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @param $xml string
 	 */
 	function displayXMLValidationErrors($errors, $xml) {
-		echo '<h2>Validation errors:</h2>';
+		echo '<h2>' . __('plugins.importexport.common.validationErrors') .'</h2>';
 
 		foreach ($errors as $error) {
 			switch ($error->level) {
@@ -301,7 +301,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 			}
 		}
 		libxml_clear_errors();
-		echo '<h3>Invalid XML:</h3>';
+		echo '<h3>' . __('plugins.importexport.common.invalidXML') .'</h3>';
 		echo '<p><pre>' .htmlspecialchars($xml) .'</pre></p>';
 	}
 
