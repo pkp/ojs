@@ -9,7 +9,7 @@
  *
  *}
 {fbvFormArea id="openAIRE"}
-	{fbvFormSection label="plugins.generic.openAIRE.projectID" for="source" description="plugins.generic.openAIRE.metadata"}
+	{fbvFormSection label="plugins.generic.openAIRE.projectID" for="source" description="plugins.generic.openAIRE.projectID.description"}
 		{fbvElement type="text" name="projectID" id="projectID" value=$projectID maxlength="255" readonly=$readOnly}
 	{/fbvFormSection}
 {/fbvFormArea}
