@@ -39,7 +39,7 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 
 		// Get section for this journal
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$seriesOptions = array('0' => __('submission.submit.selectSection')) + $sectionDao->getSectionTitles($submission->getContextId());
+		$seriesOptions = $sectionDao->getSectionTitles($submission->getContextId());
 		$templateMgr->assign('sectionOptions', $seriesOptions);
 		$templateMgr->assign('sectionId', $submission->getSectionId());
 
