@@ -269,7 +269,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title');
+		return array('title', 'description');
 	}
 
 	/**
