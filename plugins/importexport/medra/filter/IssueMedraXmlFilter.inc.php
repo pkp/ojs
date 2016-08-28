@@ -127,6 +127,11 @@ class IssueMedraXmlFilter extends O4DOIXmlFilter {
 			$cache->add($pubObject, null);
 		}
 		$issueNode->appendChild($this->createJournalIssueNode($doc, $pubObject, $journalLocalePrecedence));
+		// Object Description 'OtherText'
+		$descriptions = $this->getTranslationsByPrecedence($pubObject->getDescription(null), $objectLocalePrecedence);
+		foreach ($descriptions as $locale => $description) {
+			$issueNode->appendChild($this->createOtherTextNode($doc, $locale, $description));
+		}
 
 		// 4) issue (as-work and as-manifestation):
 		// related works:

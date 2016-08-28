@@ -398,27 +398,6 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		return $subjectNode;
 	}
 
-	/**
-	 * Create a description text node.
-	 * @param $doc DOMDocument
-	 * @param $locale string
-	 * @param $description string
-	 * @return DOMElement
-	 */
-	function createOtherTextNode($doc, $locale, $description) {
-		$deployment = $this->getDeployment();
-		$otherTextNode = $doc->createElementNS($deployment->getNamespace(), 'OtherText');
-		// Text Type
-		$otherTextNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'TextTypeCode', O4DOI_TEXT_TYPE_MAIN_DESCRIPTION));
-		// Text
-		$language = AppLocale::get3LetterIsoFromLocale($locale);
-		assert(!empty($language));
-		$otherTextNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'Text', $description));
-		$node->setAttribute('textformat', O4DOI_TEXTFORMAT_ASCII);
-		$node->setAttribute('language', $language);
-		return $otherTextNode;
-	}
-
 }
 
 ?>
