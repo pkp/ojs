@@ -64,7 +64,9 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler {
 	protected function getProductionNotificationOptions($submissionId) {
 		return array(
 			NOTIFICATION_LEVEL_NORMAL => array(
-				NOTIFICATION_TYPE_VISIT_CATALOG => array(ASSOC_TYPE_SUBMISSION, $submissionId)
+				NOTIFICATION_TYPE_VISIT_CATALOG => array(ASSOC_TYPE_SUBMISSION, $submissionId),
+				NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER => array(ASSOC_TYPE_SUBMISSION, $submissionId),
+				NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS => array(ASSOC_TYPE_SUBMISSION, $submissionId)
 			),
 			NOTIFICATION_LEVEL_TRIVIAL => array()
 		);
