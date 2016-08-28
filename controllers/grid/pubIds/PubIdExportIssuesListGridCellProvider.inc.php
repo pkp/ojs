@@ -112,7 +112,7 @@ class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider {
 						$label = $statusNames[$status];
 					}
 				} else {
-					$label = $statusNames[DOI_EXPORT_STATUS_NOT_DEPOSITED];
+					$label = $statusNames[EXPORT_STATUS_NOT_DEPOSITED];
 				}
 				return array('label' => $label);
 		}

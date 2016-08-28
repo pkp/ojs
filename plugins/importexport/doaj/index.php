@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @defgroup plugins_importexport_doaj DOAJ Plugin
+ * @defgroup plugins_importexport_doaj DOAJ Export Plugin
  */
- 
+
 /**
  * @file plugins/importexport/doaj/index.php
  *
@@ -12,12 +12,12 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup plugins_importexport_doaj
- * @brief Wrapper for native XML import/export plugin.
+ * @brief Wrapper for DOAJ XML export plugin.
  *
  */
 
-require_once('DOAJPlugin.inc.php');
+require_once('DOAJExportPlugin.inc.php');
 
-return new DOAJPlugin();
+return new DOAJExportPlugin();
 
 ?>

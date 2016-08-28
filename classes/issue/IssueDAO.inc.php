@@ -557,25 +557,26 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	}
 
 	/**
-	 * Get all published issues with a pubId assigned and matching the specified settings.
-	 * @param $pubIdType string
+	 * Get all published issues (eventually with a pubId assigned and) matching the specified settings.
 	 * @param $contextId integer optional
+	 * @param $pubIdType string
 	 * @param $pubIdSettingName string optional
 	 * (e.g. crossref::registeredDoi)
 	 * @param $pubIdSettingValue string optional
 	 * @param $rangeInfo DBResultRange optional
 	 * @return DAOResultFactory
 	 */
-	function getByPubIdType($pubIdType, $contextId = null, $pubIdSettingName = null, $pubIdSettingValue = null, $rangeInfo = null) {
+	function getExportable($contextId, $pubIdType = null, $pubIdSettingName = null, $pubIdSettingValue = null, $rangeInfo = null) {
 		$params = array();
 		if ($pubIdSettingName) {
 			$params[] = $pubIdSettingName;
 		}
-		$params[] = 'pub-id::'.$pubIdType;
-		if ($contextId) {
-			$params[] = (int) $contextId;
+		$params[] = (int) $contextId;
+		if ($pubIdType) {
+			$params[] = 'pub-id::'.$pubIdType;
 		}
-		if ($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue != DOI_EXPORT_STATUS_NOT_DEPOSITED) {
+		import('classes.plugins.PubObjectsExportPlugin');
+		if ($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED) {
 			$params[] = $pubIdSettingValue;
 		}
 
@@ -583,13 +584,13 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			'SELECT i.*
 			FROM issues i
 				LEFT JOIN custom_issue_orders o ON (o.issue_id = i.issue_id)
-				LEFT JOIN issue_settings ist ON (i.issue_id = ist.issue_id)
-				'. ($pubIdSettingName != null?' LEFT JOIN issue_settings iss ON (i.issue_id = iss.issue_id AND iss.setting_name = ?)':'') .'
+				' . ($pubIdType != null?' LEFT JOIN issue_settings ist ON (i.issue_id = ist.issue_id)':'')
+				. ($pubIdSettingName != null?' LEFT JOIN issue_settings iss ON (i.issue_id = iss.issue_id AND iss.setting_name = ?)':'') .'
 			WHERE
-				i.published = 1 AND ist.setting_name = ? AND ist.setting_value IS NOT NULL
-				' . ($contextId != null?' AND i.journal_id = ?':'')
-				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND iss.setting_value IS NULL':'')
-				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND iss.setting_value = ?':'')
+				i.published = 1  AND i.journal_id = ?
+				' . ($pubIdType != null?' AND ist.setting_name = ? AND ist.setting_value IS NOT NULL':'')
+				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == EXPORT_STATUS_NOT_DEPOSITED)?' AND iss.setting_value IS NULL':'')
+				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED)?' AND iss.setting_value = ?':'')
 				. (($pubIdSettingName != null && is_null($pubIdSettingValue))?' AND (iss.setting_value IS NULL OR iss.setting_value = \'\')':'')
 				.' ORDER BY i.date_published DESC',
 			$params,

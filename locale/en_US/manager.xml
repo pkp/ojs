@@ -591,6 +591,7 @@
 	<!--  notifications and errors -->
 	<message key="plugins.importexport.common.error.noObjectsSelected">No objects selected.</message>
 	<message key="plugins.importexport.common.error.validation">Could not convert selected objects.</message>
+	<message key="plugins.importexport.common.invalidXML">Invalid XML:</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">The output file {$param} is not writable.</message>
 	<message key="plugins.importexport.common.register.error.mdsError">Registration was not successful! The DOI registration server returned an error: '{$param}'.</message>
 	<message key="plugins.importexport.common.register.success">Registration successful!</message>
