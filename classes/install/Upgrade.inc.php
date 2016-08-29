@@ -890,12 +890,11 @@ class Upgrade extends Installer {
 						glob($basePath . '*/' . $globPattern)
 					);
 					if (count($matchedResults)>1) {
-						// Too many filenames matched.
-						error_log("Duplicate potential files for \"$globPattern\" in \"" . $submissionFileManager->getBasePath() . "\".");
-						continue;
+						// Too many filenames matched. Continue with the first; this is just a warning.
+						error_log("WARNING: Duplicate potential files for \"$globPattern\" in \"" . $submissionFileManager->getBasePath() . "\". Taking the first.");
 					} elseif (count($matchedResults)==0) {
-						// No filenames matched.
-						error_log("Unable to find a match for \"$globPattern\" in \"" . $submissionFileManager->getBasePath() . "\".");
+						// No filenames matched. Skip migrating.
+						error_log("WARNING: Unable to find a match for \"$globPattern\" in \"" . $submissionFileManager->getBasePath() . "\". Skipping this file.");
 						continue;
 					}
 					$discoveredFilename = array_shift($matchedResults);
