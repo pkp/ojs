@@ -20,5 +20,7 @@
 	<sql><!-- Drop migration tables -->
 		<drop table="article_files_migration" />
 		<drop table="articles_migration" />
+		<drop table="article_supplementary_files" />
+		<drop table="article_supp_file_settings" />
 	</sql>
 </data>
