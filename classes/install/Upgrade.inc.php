@@ -1215,6 +1215,7 @@ class Upgrade extends Installer {
 							$submissionFile->setName($sfRow['setting_value'], $sfRow['locale']);
 							break;
 						case 'typeOther': break; // Discard (at least for now)
+						case 'excludeDoi': break; // Discard (no longer relevant)
 						case 'pub-id::doi':
 							$submissionFile->setStoredPubId('doi', $sfRow['setting_value']);
 							break;
@@ -1227,6 +1228,10 @@ class Upgrade extends Installer {
 					}
 				}
 				$suppFileSettingsResult->Close();
+
+				// Store the old supp ID so that we can redirect requests for old URLs.
+				$submissionFile->setStoredPubId('old-supp-id', $row['supp_id']);
+
 				$submissionFileDao->updateObject($submissionFile);
 			}
 		}
