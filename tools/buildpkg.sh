@@ -76,6 +76,8 @@ lib/pkp/lib/vendor/robloach					\
 lib/pkp/lib/vendor/smarty/smarty/demo				\
 lib/pkp/lib/vendor/symfony					\
 lib/pkp/lib/vendor/phpunit					\
+lib/pkp/js/lib/pnotify/build-tools				\
+lib/pkp/tools/travis						\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/test"
