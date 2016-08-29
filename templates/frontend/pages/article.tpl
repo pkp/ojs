@@ -30,6 +30,7 @@
 
 		{* Display Dublin Core metadata *}
 		{include file="frontend/objects/article_dublinCore.tpl" article=$article}
+		{include file="frontend/objects/article_googleScholar.tpl" article=$article}
 	{/if}
 
 	{call_hook name="Templates::Article::Footer::PageFooter"}
