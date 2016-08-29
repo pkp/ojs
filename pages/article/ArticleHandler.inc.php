@@ -177,16 +177,45 @@ class ArticleHandler extends Handler {
 
 	/**
 	 * Download an article file
-	 * @param array $args
-	 * @param PKPRequest $request
+	 * For deprecated OJS 2.x URLs; see https://github.com/pkp/pkp-lib/issues/1541
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function viewFile($args, $request) {
-		// For deprecated OJS 2.x URLs; see https://github.com/pkp/pkp-lib/issues/1541
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		$fileId = isset($args[2]) ? (int) $args[2] : 0;
-		header("HTTP/1.1 301 Moved Permanently");
+		header('HTTP/1.1 301 Moved Permanently');
 		$request->redirect(null, null, 'download', array($articleId, $galleyId, $fileId));
+	}
+
+	/**
+	 * Download a supplementary file.
+	 * For deprecated OJS 2.x URLs; see https://github.com/pkp/pkp-lib/issues/1541
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function downloadSuppFile($args, $request) {
+		$articleId = isset($args[0]) ? $args[0] : 0;
+		$suppId = isset($args[1]) ? $args[1] : 0;
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$submissionFiles = $submissionFileDao->getBySubmissionId($articleId);
+		foreach ($submissionFiles as $submissionFile) {
+			if ($submissionFile->getData('old-supp-id') == $suppId) {
+				$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+				$articleGalleys = $articleGalleyDao->getBySubmissionId($articleId);
+				while ($articleGalley = $articleGalleys->next()) {
+					$galleyFile = $articleGalley->getFile();
+print_r($galleyFile);
+					if ($galleyFile && $galleyFile->getFileId() == $submissionFile->getFileId()) {
+						header('HTTP/1.1 301 Moved Permanently');
+						$request->redirect(null, null, 'download', array($articleId, $articleGalley->getId(), $submissionFile->getFileId()));
+					}
+				}
+			}
+		}
+		$dispatcher = $request->getDispatcher();
+		$dispatcher->handle404();
 	}
 
 	/**

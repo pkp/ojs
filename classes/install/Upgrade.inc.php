@@ -920,6 +920,7 @@ class Upgrade extends Installer {
 		$genreDao = DAORegistry::getDAO('GenreDAO');
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
 		$journal = null;
 
@@ -1189,6 +1190,7 @@ class Upgrade extends Installer {
 			$submissionFiles = $submissionFileDao->getAllRevisions($row['file_id']);
 			foreach ($submissionFiles as $submissionFile) {
 				$suppFileSettingsResult = $submissionFileDao->retrieve('SELECT * FROM article_supp_file_settings WHERE supp_id = ? AND setting_value IS NOT NULL', array($row['supp_id']));
+				$extraSettings = array();
 				while (!$suppFileSettingsResult->EOF) {
 					$sfRow = $suppFileSettingsResult->getRowAssoc(false);
 					$suppFileSettingsResult->MoveNext();
@@ -1217,10 +1219,8 @@ class Upgrade extends Installer {
 						case 'typeOther': break; // Discard (at least for now)
 						case 'excludeDoi': break; // Discard (no longer relevant)
 						case 'pub-id::doi':
-							$submissionFile->setStoredPubId('doi', $sfRow['setting_value']);
-							break;
 						case 'pub-id::publisher-id':
-							$submissionFile->setStoredPubId('publisher-id', $sfRow['setting_value']);
+							$extraSettings[$sfRow['setting_name']] = $sfRow['setting_value'];
 							break;
 						default:
 							error_log('Unknown supplementary file setting "' . $sfRow['setting_name'] . '"!');
@@ -1230,9 +1230,31 @@ class Upgrade extends Installer {
 				$suppFileSettingsResult->Close();
 
 				// Store the old supp ID so that we can redirect requests for old URLs.
-				$submissionFile->setStoredPubId('old-supp-id', $row['supp_id']);
+				$extraSettings['old-supp-id'] = $row['supp_id'];
 
 				$submissionFileDao->updateObject($submissionFile);
+
+				// Preserve extra settings. (Plugins may not be loaded, so other mechanisms might not work.)
+				foreach ($extraSettings as $name => $value) {
+					$submissionFileDao->update(
+						'INSERT INTO submission_file_settings (file_id, setting_name, setting_value, setting_type) VALUES (?, ?, ?, ?)',
+						array(
+							$submissionFile->getFileId(),
+							$name,
+							$value,
+							'string'
+						)
+					);
+				}
+
+				if ($article->getStatus() == STATUS_PUBLISHED) {
+					$articleGalley = $articleGalleyDao->newDataObject();
+					$articleGalley->setFileId($submissionFile->getFileId());
+					$articleGalley->setSubmissionId($article->getId());
+					$articleGalley->setLabel($submissionFile->getName($article->getLocale()));
+					$articleGalley->setLocale($article->getLocale());
+					$articleGalleyDao->insertObject($articleGalley);
+				}
 			}
 		}
 		$suppFilesResult->Close();
