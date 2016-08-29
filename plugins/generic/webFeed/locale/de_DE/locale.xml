@@ -12,8 +12,8 @@
   -->
   
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.generic.webfeed.displayName">Web-Feed-Plug-In</message>
-	<message key="plugins.generic.webfeed.description">Dieses Plug-In erzeugt RSS/Atom-Feeds für die aktuelle Ausgabe.</message>
+	<message key="plugins.generic.webfeed.displayName">Web-Feed-Plugin</message>
+	<message key="plugins.generic.webfeed.description">Dieses Plugin erzeugt RSS/Atom-Feeds für die aktuelle Ausgabe.</message>
 
 	<message key="plugins.generic.webfeed.settings">Einstellungen</message>
 	<message key="plugins.generic.webfeed.settings.issue">Links zu Web-Feeds nur auf den Seiten der Ausgabe anzeigen.</message>

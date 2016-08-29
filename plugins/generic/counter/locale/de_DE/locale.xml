@@ -13,7 +13,7 @@
   -->
   
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.generic.counter.description"><![CDATA[Das Counter-Plug-In ermöglicht die Aufzeichnung und <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>-entsprechende Wiedergabe der Webseitenaktivität.]]></message>
+	<message key="plugins.generic.counter.description"><![CDATA[Das Counter-Plugin ermöglicht die Aufzeichnung und <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>-entsprechende Wiedergabe der Webseitenaktivität.]]></message>
 	<message key="plugins.generic.counter">COUNTER-Statistik</message>
 	<message key="plugins.generic.counter.migrate">Protokolldatei migrieren</message>
 	<message key="plugins.generic.counter.1a.title">Zeitschriften-Report 1 (R2): Volltext-Seitenaufrufe pro Monat und Zeitschrift</message>

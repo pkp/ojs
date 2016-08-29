@@ -12,8 +12,8 @@
   -->
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.citationFormats.mla.displayName">MLA-Zitationsformat-Plug-In</message>
+	<message key="plugins.citationFormats.mla.displayName">MLA-Zitationsformat-Plugin</message>
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
-	<message key="plugins.citationFormats.mla.description">Dieses Plug-In implementiert das MLA-Zitationsformat.</message>
+	<message key="plugins.citationFormats.mla.description">Dieses Plugin implementiert das MLA-Zitationsformat.</message>
 	<message key="plugins.citationFormats.mla.noPages">S.</message>
 </locale>

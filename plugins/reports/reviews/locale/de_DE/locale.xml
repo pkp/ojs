@@ -13,7 +13,7 @@
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.reports.reviews.displayName">Begutachtungs-Bericht</message>
-	<message key="plugins.reports.reviews.description">Dieses Plug-In implementiert einen CSV-Bericht, der eine Liste von Begutachtungsanweisungen für eine Zeitschrift enthält.</message>
+	<message key="plugins.reports.reviews.description">Dieses Plugin implementiert einen CSV-Bericht, der eine Liste von Begutachtungsanweisungen für eine Zeitschrift enthält.</message>
 	<message key="plugins.reports.reviews.round">Durchgang</message>
 	<message key="plugins.reports.reviews.reviewerId">Gutacher/in-ID</message>
 	<message key="plugins.reports.reviews.reviewer">Gutachter/in</message>

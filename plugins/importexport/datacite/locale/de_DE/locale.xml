@@ -12,7 +12,7 @@
   -->
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.importexport.datacite.displayName">DataCite-Export/Registrierungs-Plug-In</message>
+	<message key="plugins.importexport.datacite.displayName">DataCite-Export/Registrierungs-Plugin</message>
 	<message key="plugins.importexport.datacite.description">Exportieren oder registrieren Sie Metadaten zu Ausgaben, Artikeln, Fahnen und Zusatzdateien im DataCite-Format.</message>
 
 	<message key="plugins.importexport.datacite.intro"><![CDATA[

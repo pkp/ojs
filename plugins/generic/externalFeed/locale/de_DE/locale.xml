@@ -47,7 +47,7 @@
 	<message key="plugins.generic.externalFeed.settings.description">Die Anzeige externer Feedeinträge anpassen</message>
 	<message key="plugins.generic.externalFeed.settings.styleSheet">Anzeige</message>
 	<message key="plugins.generic.externalFeed.settings.defaultStyleSheet">Formatvorlage für externe Feeds</message>
-	<message key="plugins.generic.externalFeed.settings.stylesheetDescription">Eine angepasste Formatvorlage kann benutzt werden, um die Standardvorlage dieses Plug-Ins zu ersetzen. Die Standardvorlage kann hier angesehen werden.</message>
+	<message key="plugins.generic.externalFeed.settings.stylesheetDescription">Eine angepasste Formatvorlage kann benutzt werden, um die Standardvorlage Dieses Plugins zu ersetzen. Die Standardvorlage kann hier angesehen werden.</message>
 	<message key="plugins.generic.externalFeed.settings.useStyleSheet">Angepasste Formatvorlage</message>
 
 

@@ -12,7 +12,7 @@
   -->
 
 <locale name="de_DE" full_name="Deutsch">
-	<message key="plugins.generic.backup.name">Backup-Plug-In</message>
+	<message key="plugins.generic.backup.name">Backup-Plugin</message>
 	<message key="plugins.generic.backup.description">Dieses Plugin legt ein Backup der Installation an.</message>
 	<message key="plugins.generic.backup.link">Backup herunterladen</message>
 	<message key="plugins.generic.backup.db">Datenbank</message>

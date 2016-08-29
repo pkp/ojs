@@ -13,7 +13,7 @@
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.block.relatedItems.displayName">Verwandte-Beiträge-Block</message>
-	<message key="plugins.block.relatedItems.description">Dieses Plug-In erzeugt einen Block, der verwandte Beiträge enthält, in der Lesewerkzeuge-Sidebar.</message>
+	<message key="plugins.block.relatedItems.description">Dieses Plugin erzeugt einen Block, der verwandte Beiträge enthält, in der Lesewerkzeuge-Sidebar.</message>
 	<message key="plugins.block.relatedItems.title">Verwandte Beiträge</message>
 	<message key="plugins.block.relatedItems.hide">Verstecken</message>
 	<message key="plugins.block.relatedItems.show">Alle zeigen</message>
