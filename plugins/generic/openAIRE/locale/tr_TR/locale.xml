@@ -14,8 +14,6 @@
 <locale name="tr_TR" full_name = "Turkish">
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE Eklentisi</message>
 	<message key="plugins.generic.openAIRE.description">OpenAIRE eklentisi makalenin üst verisine proje numarası elemanını ekler ve OpenAIRE uyumlu olması için ADS dergilerine yardımcı OpenAIRE Yönergesi 1.1'e göre OAI-PMH arabirimini genişletir.</message>
-	<message key="plugins.generic.openAIRE.projectID">Proje No</message>
-	<message key="plugins.generic.openAIRE.metadata">OpenAIRE Özel Üst Verisi</message>
-	<message key="plugins.generic.openAIRE.projectID.description">Proje no Hibe Anlaşması numarasına eşittir.</message>
+	<message key="plugins.generic.openAIRE.projectID">OpenAIRE Proje No</message>
 	<message key="plugins.generic.openAIRE.projectIDValid">Lütfen geçerli bir proje numarası giriniz (6 haneli)</message>
 </locale>

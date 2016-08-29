@@ -8,19 +8,8 @@
  * Edit OpenAIRE projectID 
  *
  *}
-<!-- OpenAIRE -->
-<div id="openAIRE">
-<h3>{translate key="plugins.generic.openAIRE.metadata"}</h3>
-<table class="data">
-<tr>
-	<td rowspan="2" class="label">{fieldLabel name="projectID" key="plugins.generic.openAIRE.projectID"}</td>
-	<td class="value"><input type="text" class="textField" name="projectID" id="projectID" value="{$projectID|escape}" size="5" maxlength="10" /></td>
-</tr>
-<tr>
-	<td><span class="instruct">{translate key="plugins.generic.openAIRE.projectID.description"}</span></td>
-</tr>
-</table>
-</div>
-<div class="separator"></div>
-<!-- /OpenAIRE -->
-
+{fbvFormArea id="openAIRE"}
+	{fbvFormSection label="plugins.generic.openAIRE.projectID" for="source" description="plugins.generic.openAIRE.projectID.description"}
+		{fbvElement type="text" name="projectID" id="projectID" value=$projectID maxlength="255" readonly=$readOnly}
+	{/fbvFormSection}
+{/fbvFormArea}
