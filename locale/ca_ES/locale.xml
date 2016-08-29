@@ -649,7 +649,6 @@
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Navega per l’índex d’autors/ores</message>
 	<message key="search.searchFor">Cerca articles per</message>
-	<message key="search.author">Autors/ores</message>
 	<message key="search.withinJournal">Dins de</message>
 	<message key="search.allJournals">Totes les revistes</message>
 	<message key="search.authorIndex">Navega per l’índex d’autors/ores</message>
@@ -914,7 +913,7 @@
 	<message key="rt.beNotifiedWhen">Vull rebre una notificació quan...</message>
 
 	<message key="rt.thisJournal">Cerca en la revista</message>
-	
+
 	<message key="rt.context.authorTermsDescription">Per a les obres amb més d’un autor/a, deixeu tots els noms activats si voleu cercar obres que tinguin la mateixa autoria de manera col·laborativa o bé activeu un sol nom si voleu cercar cada persona una per una. Feu clic a «Sobre la revista» per obtenir més informació sobre el recurs cercat. Aquests recursos han estat seleccionats per la rellevància que tenen i perquè ofereixen accés lliure (gratuït) a tots o part dels continguts.</message>
 
 	<!-- Notification Types -->

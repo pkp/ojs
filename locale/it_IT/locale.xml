@@ -724,7 +724,6 @@ Attive indica quante revisioni sono attualmente in corso.]]></message>
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Scorri l'indice per Autori</message>
 	<message key="search.searchFor">Cerca gli articoli per</message>
-	<message key="search.author">Autori</message>
 	<message key="search.withinJournal">in</message>
 	<message key="search.allJournals">tutte le riviste</message>
 	<message key="search.authorIndex">Scorri l'indice per Autori</message>
@@ -1081,7 +1080,7 @@ Il processo di validazione pu&#x00F2; non funzionare sugli URL di ricerca che ri
 	<message key="notification.type.submissionComment">Un editor ha commentato  "{$title}".</message>
 	<message key="notification.type.submissions">Eventi legati alle proposta</message>
 	<message key="notification.type.userComment">Un lettore ha commentato "{$title}"</message>
-	
+
 
 	<!--
 	 *
@@ -1098,4 +1097,3 @@ Il processo di validazione pu&#x00F2; non funzionare sugli URL di ricerca che ri
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Elenco delle valute caricate "{$filename}" da XML</message>
 </locale>
-

@@ -496,7 +496,6 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Ver índice de autoras/es</message>
 	<message key="search.searchFor">Buscar artículos por</message>
-	<message key="search.author">Autoras/es</message>
 	<message key="search.withinJournal">Dentro</message>
 	<message key="search.allJournals">Todas las revistas</message>
 	<message key="search.authorIndex">Consultar índice de autoras/es</message>

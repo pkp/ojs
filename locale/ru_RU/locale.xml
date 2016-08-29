@@ -9,7 +9,7 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ru_RU (Русский) locale.
-  * With updates from Pavel Pisklakov (revising translation). 
+  * With updates from Pavel Pisklakov (revising translation).
   -->
 
 <locale name="ru_RU" full_name="Русский">
@@ -18,7 +18,7 @@
 	 * комментариями, подобными данному. Эти разделы называются:
 	 *  ОБЩЕЕ - Содержит часто используемые слова
 	 *  СУЩНОСТИ - Содержит термины, относящиеся к основным сущностям
-	 *             системы, например, Статья, Журнал, Раздел 
+	 *             системы, например, Статья, Журнал, Раздел
 	 *  ИНТЕРФЕЙС - Содержит фразы, организованные по разделам
 	 *              интерфейса пользователя, в которых они появляются.
 	 *  ЛОГ - Содержит фразы, связанные с записями в логах
@@ -95,8 +95,8 @@
 
 	<!--
 	 *
-	 * СУЩНОСТИ - Этот раздел содержит термины, относящиеся к основным 
-	 *            сущностям системы, например, Статья, Журнал, Раздел 
+	 * СУЩНОСТИ - Этот раздел содержит термины, относящиеся к основным
+	 *            сущностям системы, например, Статья, Журнал, Раздел
 	 *
 	-->
 
@@ -372,7 +372,7 @@
 	<!-- Настройка (Шаг 2) -->
 
 
-	<message key="manager.setup.reviewProcessEmailDescription">Редакторы отправляют 
+	<message key="manager.setup.reviewProcessEmailDescription">Редакторы отправляют
 	рецензентам запрос на рецензирование по электронной почте, с прикрепленной к письму копией статьи. Рецензенты электронной почтой отправляют редакторам свое согласие (или свой отказ), а также свою рецензию и рекомендацию. Редакторы вносят согласие (или отказ) рецензента, рецензию и рекомендацию на странице «Рецензирование» этой статьи, чтобы отразить на сайте процесс рецензирования.</message>
 
 
@@ -533,7 +533,7 @@
 	<message key="reviewer.pendingReviews">Статьи, ожидающие рецензии</message>
 	<message key="reviewer.completedReviews">Завершены</message>
 	<message key="reviewer.averageQuality">Рейтинг</message>
-	
+
 	<!-- Используются в рецензировании статьи -->
 	<message key="reviewer.article.fileToBeReviewed">Файл, который нужно отрецензировать</message>
 	<message key="reviewer.article.notifyTheEditor">Уведомить редактора</message>
@@ -585,7 +585,7 @@
 	<message key="copyeditor.article.copyeditorFile">Файл литературного редактора</message>
 	<message key="copyeditor.article.uploadedFile">Загруженный файл</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Файл литературного редактора</message>
-	
+
 	<!-- Корректор -->
 	<message key="proofreader.noProofreadingAssignments">Нет заданий на корректуру</message>
 
@@ -674,7 +674,7 @@
 	<message key="submission.comments.saveAndEmailEditor">Сохранить и отправить редактору</message>
 
 	<!-- Вход в систему -->
-	<message key="user.login.resetPasswordInstructions"><![CDATA[В целях безопасности эта система сбрасывает пароль зарегистрированного пользователя и высылает новый, а не отправляет пользователю его 
+	<message key="user.login.resetPasswordInstructions"><![CDATA[В целях безопасности эта система сбрасывает пароль зарегистрированного пользователя и высылает новый, а не отправляет пользователю его
 старый пароль.<br /><br />Введите ниже ваш адрес электронной почты для сброса вашего пароля. Подтверждение будет направлено вам на этот адрес электронной почты.]]></message>
 
 	<!-- Регистрация -->
@@ -734,7 +734,6 @@
 	<!-- Поиск -->
 	<message key="search.browseAuthorIndex">Просмотреть список авторов</message>
 	<message key="search.searchFor">Поиск статей</message>
-	<message key="search.author">Авторы</message>
 	<message key="search.withinJournal">В журнале</message>
 	<message key="search.allJournals">Все журналы</message>
 	<message key="search.authorIndex">Просмотреть список авторов</message>
@@ -821,7 +820,7 @@
 
 	<!-- Помощь -->
 	<message key="help.ojsHelp">Помощь по Open Journal Systems</message>
-	<message key="help.ojsHelpAbbrev">Помощь по OJS</message>	
+	<message key="help.ojsHelpAbbrev">Помощь по OJS</message>
 	<message key="help.searchReturnResults">Вернуться к результатам поиска</message>
 
 	<!-- Пожертвования -->

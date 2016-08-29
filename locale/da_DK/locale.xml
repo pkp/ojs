@@ -531,7 +531,6 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Gennemse forfatterindeks</message>
 	<message key="search.searchFor">Søg i artikler efter</message>
-	<message key="search.author">Forfattere</message>
 	<message key="search.withinJournal">Inden for</message>
 	<message key="search.allJournals">Alle tidsskrifter</message>
 	<message key="search.authorIndex">Gennemse forfatterindeks</message>

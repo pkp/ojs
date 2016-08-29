@@ -11,7 +11,7 @@
   * Localization strings.
   *
   -->
- 
+
 <locale name="zh_CN" full_name="简体中文">
 	<!--
 	 * This file is organized into several major sections, separated
@@ -40,9 +40,9 @@
 	<!--  peer review -->
 
 
-	<message key="reviewer.article.enterReviewForm">点击图标以填写审查表。</message>	
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">请填写必添项目</message>	
-	
+	<message key="reviewer.article.enterReviewForm">点击图标以填写审查表。</message>
+	<message key="reviewer.article.reviewFormResponse.form.responseRequired">请填写必添项目</message>
+
 	<!-- review forms end -->
 
 	<!--
@@ -60,13 +60,13 @@
 	<message key="common.journalHomepageImage.altText">期刊主页图片</message>
 
 	<!-- Common Form Messages -->
-	
+
 	<!-- Common Email Messages -->
 
 	<!-- Common Localization Terms -->
 
 	<!-- Common Error Messages -->
-		
+
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">期刊帮助</message>
 	<message key="navigation.current">最新一期</message>
@@ -78,7 +78,7 @@
 	<message key="navigation.competingInterestGuidelines">利益冲突向导</message>
 	<message key="navigation.infoForAuthors.long">作者须知</message>
 	<message key="navigation.infoForLibrarians.long">图书管理员须知</message>
-	
+
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">未指派</message>
 	<message key="common.queue.short.submissionsUnassigned">未指派</message>
@@ -92,7 +92,7 @@
 	<message key="common.queue.short.active">活动中</message>
 	<message key="common.queue.long.completed">存档</message>
 	<message key="common.queue.short.completed">存档</message>
-	
+
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
@@ -160,7 +160,7 @@
 	<message key="submission.scheduling">计划（Scheduling）</message>
 	<message key="submission.scheduledIn">在出版计划的 {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(TBA)</message>
-	
+
 	<message key="submissions.sec">Sec</message>
 	<message key="submissions.step1">步骤一</message>
 	<message key="submissions.step3">步骤三</message>
@@ -183,7 +183,7 @@
 	<message key="submissions.proofreadingComplete">校对完的</message>
 
 	<!-- Submission Notes -->
-	
+
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">最新一期</message>
 	<message key="journal.journals">期刊</message>
@@ -209,7 +209,7 @@
 	<message key="user.role.subscriptionManager">订阅管理员</message>
 	<message key="user.role.managers">期刊管理员</message>
 	<message key="user.role.subscriptionManagers">订阅管理员</message>
-	
+
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">期</message>
 	<message key="issue.issues">刊期</message>
@@ -261,15 +261,15 @@
 	<message key="submission.event.author.authorRevision">作者修订已经提交</message>
 
 	<message key="submission.event.general.authorRevision">作者的修订文件已经上传</message>
-	
+
 	<message key="submission.event.editor.editorAssigned">编辑分配给投稿</message>
 	<message key="submission.event.editor.editorUnassigned">编辑未分配给投稿</message>
 	<message key="submission.event.editor.editorDecision">编辑决定已经提交</message>
 	<message key="submission.event.editor.editorFile">编辑文件已经上传</message>
 	<message key="submission.event.editor.submissionArchived">投稿发送的存档</message>
 	<message key="submission.event.editor.submissionRestored">投稿从存档中恢复</message>
-	
-	
+
+
 	<message key="submission.event.copyedit.copyeditorAssigned">文本编辑已经指派给投稿</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">文本编辑未指派给投稿</message>
 	<message key="submission.event.copyedit.copyeditInitiated">文本编辑指派开始</message>
@@ -277,13 +277,13 @@
 	<message key="submission.event.copyedit.copyeditInitialCompleted">初步文本编辑完成</message>
 	<message key="submission.event.copyedit.copyeditFinalCompleted">最终文本编辑完成</message>
 	<message key="submission.event.copyedit.copyeditSetFile">文本编辑文件已经上传</message>
-	
+
 	<message key="submission.event.proofread.proofreaderAssigned">校对编辑已经指派给投稿</message>
 	<message key="submission.event.proofread.proofreaderUnassigned">校对未指派给投稿</message>
 	<message key="submission.event.proofread.proofreadInitiated">校对指派开始</message>
 	<message key="submission.event.proofread.proofreadRevision">校对修订文件已经上传</message>
 	<message key="submission.event.proofread.proofreadCompleted">校对指派完成</message>
-	
+
 	<message key="submission.event.layout.layoutEditorAssigned">排版编辑已经指派给投稿</message>
 	<message key="submission.event.layout.layoutEditorUnassigned">排版编辑未指派给投稿</message>
 	<message key="submission.event.layout.layoutInitiated">排版已经开始</message>
@@ -298,7 +298,7 @@
 
 	<!-- Reader article view -->
 	<message key="reader.subscribersOnly">只是订阅者</message>
-	<message key="reader.subscriptionRequiredLoginText">订阅所需的访问项目，需要登录期刊进行订阅验证.</message>  
+	<message key="reader.subscriptionRequiredLoginText">订阅所需的访问项目，需要登录期刊进行订阅验证.</message>
 	<message key="reader.openAccess">开放存取</message>
 	<message key="reader.subscriptionAccess">订阅存取</message>
 	<message key="reader.subscriptionOrFeeAccess">订阅或者付费存取</message>
@@ -308,15 +308,15 @@
 	<message key="comments.authenticated"><![CDATA[通过 <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
 	<!-- Site Administration -->
-	
+
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[为了让这个网站的所有期刊内容可以让一个全球发行的研究数据库检索，请将您网站的网址(url)<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">注册</a>到Public Knowledge Project的元数据<a href="http://pkp.sfu.ca/harvester/" target="_blank">收集器</a> 。该工具将会收集期刊中每个检索项目的元数据，以便精确和集中搜寻每个隶属于<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">为收集元数据而设的开放文件初始协议</a>的研究网站。
 <br /><br />
 <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">点击这里</a>并且输入 <span class="highlight">{$siteUrl}</span>在<strong>网站网址</strong>，和 <span class="highlight">{$oaiUrl}</span>在<strong>供「公开文件柜索引」(OAI)的基础网址</strong>。
 <br /><br />
 藉由修改开放期刊系统的配置，请注意开放存档检索界面可以被关闭。未来开放期刊系统的版本将会允设一个网站的各别期刊可以配置开启或关闭OAI系统。]]></message>
 
-	
-	
+
+
 	<!-- Languages -->
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>从PKP网站下载的语言包暂时不被支持，原因如下:</p>
 	<ul>
@@ -330,31 +330,31 @@
 		<ul>
 			<li>如果一个用户想要在这个网站中，以一个在认证来源中（而非OJS的数据库中）已经存在的名称来注册一个新的帐号，只有在输入的密码对该用户帐号来说是有效的时候，才能完成注册程序。</li>
 		</ul>]]></message>
-	
+
 	<!-- System Information -->
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>注意！</h4>
 <p>系统无法自动覆盖这个配置文件。要应用您的配置变更，您必须以适合的编辑器开启<tt>config.inc.php</tt>，并以下列文字栏位中的内容来替换其内容。</p>]]>></message>
-	
 
-	<!-- Site Administrator Merge Users -->	
+
+	<!-- Site Administrator Merge Users -->
 
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">订阅管理</message>
 	<message key="subscriptionManager.individualSubscriptions">个人订阅</message>
 	<message key="subscriptionManager.institutionalSubscriptions">机构订阅</message>
 	<message key="subscriptionManager.subscriptionTypes">订阅类型</message>
-	
+
 	<!-- Journal Management -->
 
 	<!-- Statistics & Reports -->
 
 
 	<!-- Plugin Management -->
-	
+
 	<!-- Payment Management -->
 
 
-		
+
 
 
 	<!-- General plugin information -->
@@ -369,7 +369,7 @@
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->
-	
+
 	<!-- Setup Step 1 -->
 
 	<!-- Setup Step 2 -->
@@ -378,13 +378,13 @@
 
 
 	<!-- Setup Step 3 -->
-	
+
 	<!-- Setup Step 3 -->
-	
+
 	<!-- Setup Step 3 -->
-	
+
 	<!-- Setup Step 3 -->
-	
+
 	<!-- Setup Step 3 -->
 
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[期刊会使用一个可在网路上取得的主题分类系统。<br />
@@ -402,7 +402,7 @@
 	<!-- Setup Step 5 -->
 
 	<!-- Languages -->
-	
+
 	<!-- Section Management -->
 
 	<!-- Import/Export -->
@@ -422,7 +422,7 @@
 		所要进行的动作，必须由网站管理员来完成。]]></message>
 
 
-	
+
 	<!-- Email Management -->
 
 	<!-- Subscription Policy Management -->
@@ -450,7 +450,7 @@
 	<!-- Live Issues -->
 
 	<!-- Navigation sidebar menu -->
-	
+
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.selectReviewerNotes"><![CDATA[
 		姓名链接到审稿人帐号。<br />
@@ -463,7 +463,7 @@
 
 
 
-	
+
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">活动的编辑指派</message>
 	<message key="sectionEditor.completedEditorialAssignments">完成的编辑指派</message>
@@ -494,12 +494,12 @@
 	<message key="layoutEditor.galley.replaceGalley">替换文件</message>
 	<message key="layoutEditor.galley.uploadSuppFile">上传附件</message>
 	<message key="submission.layout.imageInvalid">无效地俄图片格式，允许 .gif, .jpg, 和.png格式.</message>
-	
+
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">文章等待审阅</message>
 	<message key="reviewer.completedReviews">完成</message>
 	<message key="reviewer.averageQuality">等级</message>
-	
+
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">已经被审阅的文件</message>
 	<message key="reviewer.article.notifyTheEditor">通知作者</message>
@@ -514,7 +514,7 @@
 	<message key="reviewer.article.recommendation">建议</message>
 	<message key="reviewer.article.submitReview">提交审阅给编辑</message>
 	<message key="reviewer.article.reviewerComments">评论</message>
-	<message key="reviewer.article.uploadedFile">已经上传的文件</message>	
+	<message key="reviewer.article.uploadedFile">已经上传的文件</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">有审稿人上传的版本</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">（如果您想要在这份文件中做一些给编辑看的注解，请先将文件保存在您的磁盘上，然后使用「浏览＼上传」功能。）</message>
         <message key="reviewer.article.schedule.request">编辑请求</message>
@@ -551,7 +551,7 @@
 	<message key="copyeditor.article.copyeditorFile">文本编辑文件</message>
 	<message key="copyeditor.article.uploadedFile">已经上传的文件</message>
 	<message key="copyeditor.article.copyeditorFinalFile">文本编辑文件</message>
-	
+
 	<!-- Proofreader -->
 	<message key="proofreader.noProofreadingAssignments">未指派校对</message>
 
@@ -560,9 +560,9 @@
 
 	<!-- Article Submission Step 1 -->
 
-	
+
 	<!-- Article Submission Step 2 -->
-	
+
 	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[
 		要上传初稿给本期刊，请完成下列步骤。
@@ -574,11 +574,11 @@
 		<li>一旦稿件成功上传，请点击本页最下面的「存档并继续」按钮</li>
 		</ol>
 		您可以点击文件的名称来查看该份文件。可以上传一份新的或者修改过的文件，删除掉目前出现的这份文件。也可以（在下一步骤）使用「补充文件」来增加额外的文件。如果您上传稿件时出现问题，请联系 <a href="mailto:{$supportEmail}">{$supportName}</a> ，透过电子邮件或电话 {$supportPhone}取得协助。]]></message>
-	
+
 	<!-- Article Submission Step 4 -->
-	
+
 	<!-- Article Submission Step 4a: Supplementary Files -->
-	
+
 	<!-- Article Submission Step 5 -->
 
 	<!-- Used in submission review / editing -->
@@ -596,7 +596,7 @@
 	<message key="submission.copyedit.useFile">使用文件</message>
 	<message key="submission.copyedit.copyeditComments">文字编辑评论</message>
 	<message key="submission.copyedit.instructions">文字编辑指南</message>
-	
+
 	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.layout.noLayoutFile">无（在发送请求之前上传最后的文字编辑版本作为排版版本）</message>
 	<message key="submission.layout.publicGalleyId">公共草稿标识符</message>
@@ -606,15 +606,15 @@
 	<message key="submission.layout.layoutComments">排版评论</message>
 	<message key="submission.layout.instructions">排版指南</message>
 	<message key="submission.layout.referenceLinking">参考文献链接</message>
-	
-	
+
+
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">校对评论</message>
 	<message key="submission.proofread.corrections">校对修订</message>
 	<message key="submission.proofread.instructions">校对指南</message>
 
 	<!-- Submission History -->
-	
+
 	<message key="submission.logType.article">论文</message>
 	<message key="submission.logType.author">作者</message>
 	<message key="submission.logType.editor">编辑</message>
@@ -622,11 +622,11 @@
 	<message key="submission.logType.copyedit">文字编辑</message>
 	<message key="submission.logType.layout">排版</message>
 	<message key="submission.logType.proofread">校对</message>
-	
+
 	<!-- Submission Event Log -->
 
 	<!-- Submission Email Log -->
-	
+
 	<!-- Submission Comments -->
 	<message key="submission.comments.editorAuthorCorrespondence">作者／编辑通信</message>
 	<message key="submission.comments.copyeditComments">文本编辑评论</message>
@@ -639,9 +639,9 @@
 	<message key="submission.comments.forEditor">给编辑</message>
 	<message key="submission.comments.saveAndEmailAuthor">存档并电邮作者</message>
 	<message key="submission.comments.saveAndEmailEditor">存档并电邮编辑</message>
-	
+
 	<!-- Login -->
-	
+
 	<!-- Registration -->
 	<message key="user.register.noJournals">本站目前尚无任何期刊可供注册.</message>
 	<message key="user.register.privacyStatement">隐私权声明</message>
@@ -690,7 +690,6 @@
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">浏览作者索引</message>
 	<message key="search.searchFor">搜索文章的</message>
-	<message key="search.author">作者</message>
 	<message key="search.withinJournal">范围</message>
 	<message key="search.allJournals">所有期刊</message>
 	<message key="search.authorIndex">浏览作者索引</message>
@@ -711,13 +710,13 @@
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">文章下载</message>
 	<message key="article.nonpdf.note"><![CDATA[您选择的文件将开始自动下载。如果没有，请点击下面的链接。请注意，此文件可能需要一种特殊的工具或插件来查看.<br /><br />如果该文件不自动下载， <a href="{$url}">请点击这里</a>.]]></message>
-	
+
 	<!-- Site index -->
 	<message key="site.journalsHosted">本网站主办的期刊</message>
 	<message key="site.journalView">查看期刊</message>
 	<message key="site.journalRegister">注册</message>
 	<message key="site.journalCurrent">最新一期</message>
-	
+
 
 	<!-- Current index -->
 	<message key="current.current">当前的</message>
@@ -728,7 +727,7 @@
 	<message key="archive.archives">过刊</message>
 	<message key="archive.browse">浏览以前的刊期</message>
 	<message key="archive.issueUnavailable">刊期不存在</message>
-	
+
 	<!-- About The Journal -->
 	<message key="about.statistics">统计</message>
 	<message key="about.history">期刊历史</message>
@@ -769,23 +768,23 @@
 	<message key="about.aboutThisPublishingSystem">关于这个期刊系统</message>
 	<message key="about.aboutThisPublishingSystem.altText">OJS编审与出版流程</message>
 	<message key="about.aboutOJSJournal"><![CDATA[本期刊使用开放期刊系统（{$ojsVersion}）,本系统是由<a href="http://pkp.sfu.ca/">Public Knowledge Project</a>研发与支持的一个开源的期刊管理与出版软件，另外，系统基于GNU通用公共许可证，因此可以自由的分发。]]></message>
-	
+
 	<!-- Announcement -->
 
 	<!-- Help -->
 	<message key="help.ojsHelp">开放期刊系统帮助</message>
-	<message key="help.ojsHelpAbbrev">OJS帮助</message>	
+	<message key="help.ojsHelpAbbrev">OJS帮助</message>
 	<message key="help.searchReturnResults">反回到检索结果</message>
 
 	<!-- Donations -->
 	<message key="donations.thankYou">谢谢</message>
 	<message key="donations.thankYouMessage">感谢您作出的贡献。你的贡献是功不可没的。</message>
-	
+
 	<!-- Payments -->
 	<message key="payment.loginRequired">您必须先登录才能进行付款。</message>
 	<message key="payment.loginRequired.forArticle">订阅或者购买文章等项目，需要先登录期刊，进行相关验证.</message>
 	<message key="payment.loginRequired.forDonation">您必须先登录才能作出捐赠.</message>
-	
+
 	<message key="payment.paid">已经支付</message>
 	<message key="payment.payNow">现在支付</message>
 	<message key="payment.waive">减免</message>
@@ -800,22 +799,22 @@
 	<message key="payment.type.purchaseArticle">文章购买费</message>
 	<message key="payment.type.subscription">订阅费</message>
 	<message key="payment.type.donation">捐献</message>
-	
+
 	<message key="payment.donation.makeDonation">捐献</message>
-	
+
 	<message key="payment.submission.paySubmission">支付投稿费</message>
 	<message key="payment.fastTrack.payFastTrack">支付加急费用</message>
 	<message key="payment.fastTrack.inFastTrack">加急中</message>
 	<message key="payment.publication.payPublication">支付出版费</message>
 	<message key="payment.publication.publicationPaid">出版费已经支付</message>
-	
+
 	<message key="payment.membership.buyMembership">购买个人会员</message>
-	<message key="payment.membership.renewMembership">续订个人会员</message>	
+	<message key="payment.membership.renewMembership">续订个人会员</message>
 	<message key="payment.membership.ends">结束</message>
 
 	<message key="payment.subscription.purchase">支付订阅</message>
 	<message key="payment.subscription.renew">续订</message>
-	<message key="payment.subscription.expires">到期</message>	
+	<message key="payment.subscription.expires">到期</message>
 
 	<!-- Installer -->
 	<message key="installer.appInstallation">OJS安装</message>
@@ -948,7 +947,7 @@
 		下面列出可能是无效的搜寻网站网址。<br />
 		您应该手动查证被标记成无效的任何网址，因为这个测试并非完全准确。<br />
 		验证需要递交表单资料的搜寻网址可能会失败。]]></message>
-	
+
 	<!-- RT Entities -->
 
 
@@ -961,12 +960,12 @@
 	<message key="rt.beNotifiedWhen">会得到通知在...</message>
 
 	<message key="rt.thisJournal">检索期刊</message>
-	
+
 
 	<message key="rt.context.authorTermsDescription">由于文章拥有一个以上的作者，请选取所有的姓名以搜寻类似的共同作者作品，或者选取单个姓名以一次搜寻一个人。要学习更多关于搜寻资源的信息，请点击「介绍」。这些资源是基于其关连性与开放（自由）阅读所有或部分内容而被选取的.</message>
-	
-	
-	
+
+
+
 	<!-- Notification Types -->
 	<message key="notification.mailListDescription">请输入您的电子邮件地址，便于接收该期刊重要的新内容通知.</message>
 	<message key="notification.notificationsPublicDescription">这页显示了杂志刊期或公告相关的重要更新. 您可以通过RSS(点击右侧的图片)或者<![CDATA[  <a href="{$emailUrl}">通过电子邮件.</a>订阅这个通知 ]]></message>
@@ -976,7 +975,7 @@
 	<message key="notification.type.editorDecisionComment">在编辑的决定里已经对 "{$param}"进行了评论</message>
 	<message key="notification.type.galleyModified">草稿已经被修改，关于"{$param}".</message>
 	<message key="notification.type.issuePublished">一个刊期已经出版</message>
-	<message key="notification.type.newAnnouncement">一条新的公告已经被创建.</message>	
+	<message key="notification.type.newAnnouncement">一条新的公告已经被创建.</message>
 	<message key="notification.type.reviewerFormComment">一个关于 "{$param}"的审稿评论已经提交.</message>
 	<message key="notification.type.reviewing">审稿事件</message>
 	<message key="notification.type.site">站点事件</message>
@@ -990,7 +989,7 @@
 	 *
 	-->
 	<!-- Icons: Default "alt" text -->
-	
+
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">已经从XML载入货币列表：{$filename}</message>
 	<message key="about.aboutOJSSite"><![CDATA[本站使用开放期刊系统（OJS  {$ojsVersion} ）.OJS是一个开源的期刊管理于出版软件，由<a href="http://pkp.sfu.ca/">Public Knowledge Project</a>组织研发，遵循GNU General Public License.]]></message>

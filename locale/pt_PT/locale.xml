@@ -457,7 +457,6 @@ Activo indica revisão em consideração ou em progresso.]]></message>
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Índice de autores</message>
 	<message key="search.searchFor">Pesquisar termo</message>
-	<message key="search.author">Autor</message>
 	<message key="search.withinJournal">Em</message>
 	<message key="search.allJournals">Todas as Revistas</message>
 	<message key="search.authorIndex">Índice de Autores</message>

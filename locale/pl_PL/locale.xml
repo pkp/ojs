@@ -9,7 +9,7 @@
   * Plik językowy dla pl_PL
   *
   -->
- 
+
 <locale name="pl_PL" full_name="Język Polski">
 	<!--
 	 * This file is organized into several major sections, separated
@@ -38,9 +38,9 @@
 	<!--  peer review -->
 
 
-	<message key="reviewer.article.enterReviewForm">Kliknij aby wypełnić formularz recenzji.</message>	
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Wypełnij wymagane pola.</message>	
-	
+	<message key="reviewer.article.enterReviewForm">Kliknij aby wypełnić formularz recenzji.</message>
+	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Wypełnij wymagane pola.</message>
+
 	<!-- review forms end -->
 
 	<!--
@@ -58,13 +58,13 @@
 	<message key="common.journalHomepageImage.altText">Baner</message>
 
 	<!-- Common Form Messages -->
-	
+
 	<!-- Common Email Messages -->
 
 	<!-- Common Localization Terms -->
 
 	<!-- Common Error Messages -->
-		
+
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Pomoc</message>
 	<message key="navigation.current">Aktualny numer</message>
@@ -76,7 +76,7 @@
 	<message key="navigation.competingInterestGuidelines">Competing Interest Guidelines</message>
 	<message key="navigation.infoForAuthors.long">Informacje dla autorów</message>
 	<message key="navigation.infoForLibrarians.long">Informacje dla bibliotekarzy</message>
-	
+
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Zgłoszone</message>
 	<message key="common.queue.short.submissionsUnassigned">Zgłoszone</message>
@@ -90,7 +90,7 @@
 	<message key="common.queue.short.active">Zgłoszone</message>
 	<message key="common.queue.long.completed">Archiwum</message>
 	<message key="common.queue.short.completed">Archiwum</message>
-	
+
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
@@ -160,7 +160,7 @@
 	<message key="submission.proofreading">Zaakceptowanie tekstu do publikowania</message>
 	<message key="submission.scheduling">Harmonogram</message>
 	<message key="submission.scheduledIn">Zaplanowane do publikacji w {$issueName}.</message>
-	<message key="submission.scheduledIn.tba">(do uzgodnienia)</message>	
+	<message key="submission.scheduledIn.tba">(do uzgodnienia)</message>
 	<message key="submissions.sec">Dział</message>
 	<message key="submissions.step1">Krok 1</message>
 	<message key="submissions.step3">Krok 3</message>
@@ -183,7 +183,7 @@
 	<message key="submissions.proofreadingComplete">Zaakceptowane do opublikowania</message>
 
 	<!-- Submission Notes -->
-	
+
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Aktualny numer</message>
 	<message key="journal.journals">Czasopisma</message>
@@ -209,7 +209,7 @@
 	<message key="user.role.subscriptionManager">Administrator subskrypcji</message>
 	<message key="user.role.managers">Administratorzy czasopisma</message>
 	<message key="user.role.subscriptionManagers">Administratorzy subskrypcji</message>
-	
+
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Numer</message>
 	<message key="issue.issues">Numery</message>
@@ -253,7 +253,7 @@
 	<message key="submission.event.logLevel.notice">Ogłoszenie</message>
 	<message key="submission.event.logLevel.warning">Ostrzeżenie</message>
 	<message key="submission.event.logLevel.error">Błąd</message>
-	
+
 	<message key="submission.event.general.defaultEvent">Akcja</message>
 	<message key="submission.event.general.issueScheduled">Artykuł przesłany do kolejki</message>
 	<message key="submission.event.general.issueAssigned">Artykuły przypisany do wydania</message>
@@ -262,15 +262,15 @@
 	<message key="submission.event.author.authorRevision">Korekta autora przesłana</message>
 
 	<message key="submission.event.general.authorRevision">Plik korekty autora zaktualizowany</message>
-	
+
 	<message key="submission.event.editor.editorAssigned">Redaktor wybierzony do zgłoszonego tekstu</message>
 	<message key="submission.event.editor.editorUnassigned">Redaktor odłączony od zgłoszonego tekstu</message>
 	<message key="submission.event.editor.editorDecision">Decyzja redaktora wysłana</message>
 	<message key="submission.event.editor.editorFile">Plik redaktora zaktualizowany</message>
 	<message key="submission.event.editor.submissionArchived">Wysłany tekst przeniesiony do archiwum</message>
 	<message key="submission.event.editor.submissionRestored">Wysłany tekst przywrócony z archiwum</message>
-	
-	
+
+
 	<message key="submission.event.copyedit.copyeditorAssigned">Redaktor techniczny wybierzony do zgłoszonego tekstu</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">Redaktor techniczny odłączony od zgłoszonego tekstu</message>
 	<message key="submission.event.copyedit.copyeditInitiated">Zadania redaktorskie rozpoczęte</message>
@@ -278,13 +278,13 @@
 	<message key="submission.event.copyedit.copyeditInitialCompleted">Wstępne zadania redaktorskie zrealizowane</message>
 	<message key="submission.event.copyedit.copyeditFinalCompleted">Finalne zadania redaktorskie zrealizowane</message>
 	<message key="submission.event.copyedit.copyeditSetFile">Plik z korektami zaktualizowany</message>
-	
+
 	<message key="submission.event.proofread.proofreaderAssigned">Korektor wybierzony do zgłoszonego tekstu</message>
 	<message key="submission.event.proofread.proofreaderUnassigned">Korektor odłączony od zgłoszonego tekstu</message>
 	<message key="submission.event.proofread.proofreadInitiated">Zadania korektorskie rozpoczęte</message>
 	<message key="submission.event.proofread.proofreadRevision">Plik z korektami zaktualizowany</message>
 	<message key="submission.event.proofread.proofreadCompleted">Zadania korektorskie zrealizowane</message>
-	
+
 	<message key="submission.event.layout.layoutEditorAssigned">Specjalista DTP wybierzony do tego tekstu</message>
 	<message key="submission.event.layout.layoutEditorUnassigned">Specjalista DTP nie wybierzony do tego tekstu</message>
 	<message key="submission.event.layout.layoutInitiated">Zadanie wykonania wersji finalnej wybierzone</message>
@@ -299,7 +299,7 @@
 
 	<!-- Reader article view -->
 	<message key="reader.subscribersOnly">Tylko dla subskrybentów</message>
-	<message key="reader.subscriptionRequiredLoginText">Wymagana subskrypcja. Aby zweryfikować subskrypcję, zaloguj do czasopisma.</message>  
+	<message key="reader.subscriptionRequiredLoginText">Wymagana subskrypcja. Aby zweryfikować subskrypcję, zaloguj do czasopisma.</message>
 	<message key="reader.openAccess">Dostęp otwarty</message>
 	<message key="reader.subscriptionAccess">Dostęp przez subskrypcję</message>
 	<message key="reader.subscriptionOrFeeAccess">Subscription or Fee Access</message>
@@ -309,14 +309,14 @@
 	<message key="comments.authenticated"><![CDATA[by <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
 	<!-- Site Administration -->
-	
+
 
 	<!-- Languages -->
 
-	<!-- Site Administrator Merge Users -->	
+	<!-- Site Administrator Merge Users -->
 
 	<!-- Subscription Management -->
-	
+
 	<!-- Journal Management -->
 
 	<!-- Statistics & Reports -->
@@ -335,13 +335,13 @@
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->
-	
+
 	<!-- Setup Step 1 -->
 
 	<!-- Setup Step 2 -->
 
 
-	
+
 	<!-- Setup Step 3 -->
 
 	<!-- Setup Step 4 -->
@@ -349,7 +349,7 @@
 	<!-- Setup Step 5 -->
 
 	<!-- Languages -->
-	
+
 	<!-- Section Management -->
 
 	<!-- Import/Export -->
@@ -364,7 +364,7 @@
 	]]></message>
 
 
-	
+
 	<!-- Email Management -->
 
 	<!-- Subscription Policy Management -->
@@ -392,7 +392,7 @@
 	<!-- Live Issues -->
 
 	<!-- Navigation sidebar menu -->
-	
+
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Nazwa użytkownika jest linkiem do profilu recenzenta.<br />
 Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
@@ -404,7 +404,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 
 
 
-	
+
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Prace redaktorskie w toku</message>
 	<message key="sectionEditor.completedEditorialAssignments">Prace redaktorskie ukończone</message>
@@ -435,12 +435,12 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="layoutEditor.galley.replaceGalley">Podmień plik</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Prześlij dodatkowy plik</message>
 	<message key="submission.layout.imageInvalid">Niepoprawny format pliku. Akceptowane formaty to .gif, .jpg, oraz .png.</message>
-	
+
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Artykuły recenzowane</message>
 	<message key="reviewer.completedReviews">Ukończone</message>
 	<message key="reviewer.averageQuality">Ocena</message>
-	
+
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">Plik do zrecenzowania</message>
 	<message key="reviewer.article.notifyTheEditor">Powiadom redaktora</message>
@@ -455,7 +455,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="reviewer.article.recommendation">Rekomendacje</message>
 	<message key="reviewer.article.submitReview">Wyślij recenzję do redaktora</message>
 	<message key="reviewer.article.reviewerComments">Uwagi</message>
-	<message key="reviewer.article.uploadedFile">Wysłane pliki</message>	
+	<message key="reviewer.article.uploadedFile">Wysłane pliki</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Wersja wysłana przez recenzenta</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Jeżeli chcesz uzupełnić plik o komentarze dla redaktora
 , zapisz plik na dysku.)</message>
@@ -492,7 +492,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="copyeditor.article.copyeditorFile">Plik redaktora technicznego</message>
 	<message key="copyeditor.article.uploadedFile">Wyślij plik</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Plik redaktora technicznego - wersja finalna</message>
-	
+
 	<!-- Proofreader -->
 	<message key="proofreader.noProofreadingAssignments">Brak zadań korektorskich</message>
 
@@ -501,9 +501,9 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 
 	<!-- Article Submission Step 1 -->
 
-	
+
 	<!-- Article Submission Step 2 -->
-	
+
 	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[
 <p>Aby przesłać tekst do opublikowania w czasopiśmie, skorzystaj z poniższej instrukcji:</p>
@@ -516,9 +516,9 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 </ol>]]></message>
 
 	<!-- Article Submission Step 4 -->
-	
+
 	<!-- Article Submission Step 4a: Supplementary Files -->
-	
+
 	<!-- Article Submission Step 5 -->
 
 	<!-- Used in submission review / editing -->
@@ -536,22 +536,22 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="submission.copyedit.useFile">Użyj pliku</message>
 	<message key="submission.copyedit.copyeditComments">Uwagi dla redaktorów</message>
 	<message key="submission.copyedit.instructions">Instrukcje dla redaktorów</message>
-	
+
 	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.layout.noLayoutFile">Brak (wyślij finalną wersję przed wysłaniem żądania)</message>
 	<message key="submission.layout.assignLayoutEditor">Wybierz specjalistę DTP</message>
 	<message key="submission.layout.replaceLayoutEditor">Zamień specjalistę DTP</message>
 	<message key="submission.layout.layoutComments">Uwagi</message>
 	<message key="submission.layout.instructions">Wytyczne</message>
-	
-	
+
+
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Uwagi korektora</message>
 	<message key="submission.proofread.corrections">Poprawki korektora</message>
 	<message key="submission.proofread.instructions">Wytyczne dla korektora</message>
 
 	<!-- Submission History -->
-	
+
 	<message key="submission.logType.article">Artykuł</message>
 	<message key="submission.logType.author">Autor</message>
 	<message key="submission.logType.editor">Redaktor czasopisma</message>
@@ -559,11 +559,11 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="submission.logType.copyedit">Zredagowane</message>
 	<message key="submission.logType.layout">Layout</message>
 	<message key="submission.logType.proofread">Zaakceptowane</message>
-	
+
 	<!-- Submission Event Log -->
 
 	<!-- Submission Email Log -->
-	
+
 	<!-- Submission Comments -->
 	<message key="submission.comments.editorAuthorCorrespondence">Korespondencja redaktor - autor</message>
 	<message key="submission.comments.copyeditComments">Uwagi redaktora technicznego</message>
@@ -575,9 +575,9 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="submission.comments.forEditor">Dla redaktora</message>
 	<message key="submission.comments.saveAndEmailAuthor">Zapisz i wyślij e-mail do autora</message>
 	<message key="submission.comments.saveAndEmailEditor">Zapisz i wyślij e-mail do redaktora czasopisma</message>
-	
+
 	<!-- Login -->
-	
+
 	<!-- Registration -->
 	<message key="user.register.repeatPassword">Powtórz hasło</message>
 	<message key="user.register.noJournals">Brak czasopism.</message>
@@ -591,7 +591,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="user.register.reviewerDescriptionNoInterests">Gotowy do pisania recenzji artykułów publikowanych w czasopiśmie.</message>
 	<message key="user.register.reviewerDescription">Gotowy do pisania recenzji artykułów publikowanych w czasopiśmie.</message>
 	<message key="user.register.reviewerInterests">Określ zainteresowania badawcze (metody badawcze):</message>
-	
+
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">Moje subskrypcje</message>
 	<message key="user.subscriptions.subscriptionStatus">Status subskrypcji</message>
@@ -614,17 +614,17 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 
-	
+
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Pobieranie artykułów</message>
 	<message key="article.nonpdf.note"><![CDATA[Plik, który wybrałeś powinien rozpocząć pobieranie automatycznie. Jeżeli tak się nie stanie, kliknij w łącze widoczne poniżej.<br /><br />Jeżeli plik nie pobiera się automatycznie, <a href="{$url}">kliknij tutaj</a>.]]></message>
-	
+
 	<!-- Site index -->
 	<message key="site.journalsHosted">Czasopisma dostępne na stronie</message>
 	<message key="site.journalView">Pokaż czasopismo</message>
 	<message key="site.journalRegister">Zarejestruj</message>
 	<message key="site.journalCurrent">Aktualny numer</message>
-	
+
 
 	<!-- Current index -->
 	<message key="current.current">Aktualny numer</message>
@@ -635,7 +635,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="archive.archives">Archiwum</message>
 	<message key="archive.browse">Przeglądaj numery archiwalne</message>
 	<message key="archive.issueUnavailable">Numer niedostępny</message>
-	
+
 	<!-- About The Journal -->
 	<message key="about.statistics">Staystyki</message>
 	<message key="about.history">Historia czasopisma</message>
@@ -677,18 +677,18 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="about.aboutThisPublishingSystem.altText">Proces redakcyjny</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Strona zbudowana jest w oparciu o Open Journal Systems {$ojsVersion}, otwarty (open source) system zarządzania treścią dostarczany, rozwijany i dystrybuowany bezpłatnie przez <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> na licencji GNU GPL.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[Strona zbudowana jest w oparciu o Open Journal Systems {$ojsVersion}, otwarty (open source) system zarządzania treścią dostarczany, rozwijany i dystrybuowany bezpłatnie przez <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> na licencji GNU GPL.]]></message>
-	
+
 	<!-- Announcement -->
 
 	<!-- Help -->
 	<message key="help.ojsHelp">Pomoc Open Journal Systems</message>
-	<message key="help.ojsHelpAbbrev">Pomoc OJS</message>	
+	<message key="help.ojsHelpAbbrev">Pomoc OJS</message>
 	<message key="help.searchReturnResults">Wróc do wyników wyszukiwania</message>
 
 	<!-- Donations -->
 	<message key="donations.thankYou">Dziękujemy</message>
 	<message key="donations.thankYouMessage">Dziękujemy za udzielenie wsparcia.</message>
-	
+
 	<!-- Payments -->
 
 	<!-- Installer -->
@@ -768,11 +768,11 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="rt.beNotifiedWhen">Powiadom gdy...</message>
 
 	<message key="rt.thisJournal">Wyszukaj w czasopiśmie</message>
-	
 
-	
-	
-	
+
+
+
+
 	<!-- Notification Types -->
 	<message key="notification.mailListDescription">Podaj adres e-mail aby otrzymywać powiadomienia o aktualizacjach treści.</message>
 	<message key="notification.notificationsPublicDescription">Ta strona zawiera informacje o ważnych aktualizacjach treści czasopisma, takich jak nowe numery lub ogłoszenia. Możesz subskrybować powiadomienia za pomocą czytnika RSS (klikając w ikonę), lub <![CDATA[  <a href="{$emailUrl}">przez e-mail.</a>]]></message>
@@ -782,7 +782,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="notification.type.editorDecisionComment">Dostępne są nowe uwagi do decyzji redaktora dla "{$param}".</message>
 	<message key="notification.type.galleyModified">Plik z publikacją dla "{$param}" został zmodyfikowany.</message>
 	<message key="notification.type.issuePublished">Nowy numer został opublikowany.</message>
-	<message key="notification.type.newAnnouncement">Nowe ogłoszenie zostało utworzone.</message>	
+	<message key="notification.type.newAnnouncement">Nowe ogłoszenie zostało utworzone.</message>
 	<message key="notification.type.reviewing">Wydarzenia dotyczące procesu recenzji</message>
 	<message key="notification.type.site">Wydarzenia dotyczące strony</message>
 	<message key="notification.type.submissionComment">Dostępne są nowe uwagi redaktora dla "{$param}".</message>
@@ -798,8 +798,8 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="user.authorization.copyeditorAssignmentMissing">Dostęp zabroniony! Nie zostałeś przydzielony jako redaktor techniczny dla tego tekstu.</message>
 	<message key="user.authorization.sectionAssignment">Próbujesz uzyskać dostęp do artykułu, który nie znajduje się w twoim dziale.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Niepoprawny tekst recenzenta technicznego lub błędne żądanie.</message>
-	
+
 	<!-- Icons: Default "alt" text -->
-	
+
 	<!-- Debug messages -->
 </locale>

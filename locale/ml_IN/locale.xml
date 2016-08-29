@@ -502,7 +502,6 @@
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">ബ്രൗസ് ഓതര്‍ ഇന്റക്സ്</message>
 	<message key="search.searchFor">ലേഖനം തിരയുന്നത്:</message>
-	<message key="search.author">ഗ്രന്ഥകര്‍ത്താകള്‍</message>
 	<message key="search.withinJournal">വിതിന്‍</message>
 	<message key="search.allJournals">എല്ലാ ജര്‍ണലുകളും</message>
 	<message key="search.authorIndex">ഓതര്‍ ഇന്‍ഡക്സ് ബ്രൗസ് ചെയ്യുക</message>

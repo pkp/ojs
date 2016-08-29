@@ -514,7 +514,7 @@
         <message key="submission.comments.saveAndEmailEditor">Αποθήκευση και αποστολή email στον επιμελητή</message>
 
         <!-- Login -->
-              
+
         <!-- Profile -->
 
         <!-- Registration -->
@@ -534,7 +534,6 @@
         <!-- Search -->
         <message key="search.browseAuthorIndex">Ευρετήριο Συγγραφέων</message>
         <message key="search.searchFor">Αναζήτηση άρθρων για</message>
-        <message key="search.author">Συγγραφείς</message>
         <message key="search.withinJournal">Μέσα σε</message>
         <message key="search.allJournals">Όλα τα περιοδικά</message>
         <message key="search.authorIndex">Ευρετήριο Συγγραφέων</message>
@@ -763,7 +762,7 @@
         <message key="log.editor.archived">Η υποβολή {$submissionId} αρχειοθετήθηκε.</message>
         <message key="log.editor.restored">Η υποβολή {$submissionId} επανατοποθετήθηκε στη σειρά αναμονής.</message>
         <message key="log.editor.editorAssigned">Ο/Η {$editorName} έχει αναλάβει ως επιμελητής της υποβολής {$submissionId}.</message>
-       
+
         <message key="log.proofread.assign">Ο/Η {$assignerName} ανέθεσε στον/ην {$proofreaderName} την επιμέλεια του τυπογραφικού δοκιμίου της υποβολής {$submissionId}.</message>
         <message key="log.proofread.complete">Ο/Η {$proofreaderName} υπέβαλλε το {$submissionId} για προγραμματισμό.</message>
 
@@ -824,7 +823,7 @@
         <!-- Icons: Default "alt" text -->
         <!-- Debug messages -->
 				<message key="debug.notes.currencyListLoad">Η λίστα νομισματικών μονάδων  "{$filename}" φορτώθηκε από XML</message>
-			
+
 	<!-- Default settings for payment items. -->
 	<message key="reviewer.article.enterReviewForm">Πατήστε το εικονίδιο για να συμπληρώσετε την φόρμα αξιολόγησης</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Σας παρακαλούμε συμπληρώστε τα υποχρεωτικά πεδία.</message>

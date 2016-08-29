@@ -107,7 +107,7 @@
 	<message key="section.abbreviation.example">(Zum Beispiel, Artikel=ART)</message>
 
 	<!-- Common Article Terms -->
-	<message key="article.article">Artikel</message>	
+	<message key="article.article">Artikel</message>
 	<message key="article.articles">Artikel</message>
 	<message key="article.submissionId">Beitrags-ID</message>
 	<message key="article.title">Titel</message>
@@ -177,7 +177,7 @@
 	<message key="submissions.editorDecision">Redaktionsentscheidung</message>
 	<message key="submissions.editorRuling">Redaktionsbeschluss</message>
 	<message key="submission.eventLog">Protokoll der Ereignisse</message>
-	
+
 	<!-- Submission list search engine -->
 	<message key="submissions.copyeditComplete">Lektorat beendet</message>
 	<message key="submissions.layoutComplete">Layout fertig</message>
@@ -204,7 +204,7 @@
 	<message key="user.noRoles.submitArticleRegClosed">Einen Vorschlag einreichen: Registrierung als Autor/in ist momentan ausgeschaltet.</message>
 	<message key="user.noRoles.regReviewer">Als Gutachter/in registrieren</message>
 	<message key="user.noRoles.regReviewerClosed">Als Gutachter/in registrieren: Die Registrierung als Gutachter/in ist momentan ausgeschaltet..</message>
-	
+
 	<!-- Roles -->
 	<message key="user.role.manager">Zeitschriftenverwalter/in</message>
 	<message key="user.role.sectionEditor">Rubrikredakteur/in</message>
@@ -621,7 +621,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="submission.proofreadingComments">Korrekturlektorat - Kommentare</message>
 	<message key="submission.proofread.corrections">Korrekturlektorat - Korrekturen</message>
 	<message key="submission.proofread.instructions">Korrekturlektorat - Richtlinien</message>
-	
+
 	<!-- Submission History -->
 	<message key="submission.logType.article">Artikel</message>
 	<message key="submission.logType.author">Autor/in</message>
@@ -704,7 +704,6 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Verzeichnis der Autor/innen durchblättern</message>
 	<message key="search.searchFor">Artikel durchsuchen nach</message>
-	<message key="search.author">Autor/in</message>
 	<message key="search.withinJournal">In</message>
 	<message key="search.allJournals">allen Zeitschriften</message>
 	<message key="search.authorIndex">Autor/innenverzeichnis durchblättern</message>
@@ -1086,7 +1085,7 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 	<!-- Grid Actions -->
 
 	<!-- Included here because it may be used in the navigation bar -->
-	
+
 	<message key="context.current">Aktuelle Zeitschrift:</message>
 	<message key="context.select">Zu einer anderen Zeitschrift wechseln:</message>
 	<message key="article.return">Zu Artikeldetails zurückkehren</message>
