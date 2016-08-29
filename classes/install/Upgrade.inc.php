@@ -1216,6 +1216,9 @@ class Upgrade extends Installer {
 							$submissionFile->setName($sfRow['setting_value'], $sfRow['locale']);
 							break;
 						case 'typeOther': break; // Discard (at least for now)
+						case 'pub-id::doi':
+							$submissionFile->setStoredPubId('doi', $sfRow['setting_value']);
+							break;
 						case 'pub-id::publisher-id':
 							$submissionFile->setStoredPubId('publisher-id', $sfRow['setting_value']);
 							break;
