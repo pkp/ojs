@@ -35,7 +35,9 @@
 		</div>
 
 		<fieldset class="search_advanced">
-			<legend>Advanced Filters</legend>
+			<legend>
+				{translate key="search.advancedFilters"}
+			</legend>
 			<div class="date_range">
 				<div class="from">
 					<label class="label">
