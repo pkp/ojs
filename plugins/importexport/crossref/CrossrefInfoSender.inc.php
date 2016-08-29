@@ -58,17 +58,6 @@ class CrossrefInfoSender extends ScheduledTask {
 			$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $journal->getId());
 			$doiPubIdPlugin = $pubIdPlugins['doipubidplugin'];
 
-			if ($doiPubIdPlugin->getSetting($journal->getId(), 'enableIssueDoi')) {
-				// Get unregistered issues
-				$unregisteredIssues = $plugin->getUnregisteredIssues($journal);
-				// Update the status and construct an array of the issues to be deposited
-				$issuesToBeDeposited = $this->_getObjectsToBeDeposited($unregisteredIssues, $journal, $notify);
-				// If there are issues to be deposited and we want automatic deposit
-				if (count($issuesToBeDeposited) && $plugin->getSetting($journal->getId(), 'automaticRegistration')) {
-					$this->_registerObjects($issuesToBeDeposited, 'issue=>crossref-xml', $journal, 'issues');
-				}
-			}
-
 			if ($doiPubIdPlugin->getSetting($journal->getId(), 'enableSubmissionDoi')) {
 				// Get unregistered articles
 				$unregisteredArticles = $plugin->getUnregisteredArticles($journal);

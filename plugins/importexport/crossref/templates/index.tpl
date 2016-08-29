@@ -13,7 +13,7 @@
 
 {if !empty($configurationErrors) || 
 	!$currentContext->getSetting('publisherInstitution')|escape || 
-	(!$exportArticles && !$exportIssues) || 
+	!$exportArticles || 
 	(!$currentContext->getSetting('onlineIssn') && !$currentContext->getSetting('printIssn'))}
 	{assign var="allowExport" value=false}
 {else}
@@ -30,12 +30,7 @@
 	<ul>
 		<li><a href="#settings-tab">{translate key="plugins.importexport.common.settings"}</a></li>
 		{if $allowExport}
-			{if $exportArticles}
-				<li><a href="#exportSubmissions-tab">{translate key="plugins.importexport.common.export.articles"}</a></li>
-			{/if}
-			{if $exportIssues}
-				<li><a href="#exportIssues-tab">{translate key="plugins.importexport.common.export.issues"}</a></li>
-			{/if}
+			<li><a href="#exportSubmissions-tab">{translate key="plugins.importexport.common.export.articles"}</a></li>
 		{/if}
 	</ul>
 	<div id="settings-tab">
@@ -58,7 +53,7 @@
 					{capture assign=missingIssnMessage}{translate key="plugins.importexport.crossref.error.issnNotConfigured" journalSettingsUrl=$journalSettingsUrl}{/capture}
 					{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=crossrefConfigurationErrors notificationStyleClass="notifyWarning" notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents=$missingIssnMessage}
 				{/if}
-				{if !$exportArticles && !$exportIssues}
+				{if !$exportArticles}
 					{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=crossrefConfigurationErrors notificationStyleClass="notifyWarning" notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents="plugins.importexport.crossref.error.noDOIContentObjects"|translate}
 				{/if}
 			</div>
@@ -69,63 +64,32 @@
 	</div>
 
 	{if $allowExport}
-		{if $exportArticles}
-			<div id="exportSubmissions-tab">
-				<script type="text/javascript">
-					$(function() {ldelim}
-						// Attach the form handler.
-						$('#exportSubmissionXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
-					{rdelim});
-				</script>
-				<form id="exportSubmissionXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
-					{csrf}
-					<input type="hidden" name="tab" value="exportSubmissions-tab" />
-					{fbvFormArea id="submissionsXmlForm"}
-						{url|assign:submissionsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportSubmissionsListGridHandler" op="fetchGrid" plugin="crossref" category="importexport" escape=false}
-						{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
-						{if !empty($actionNames)}
-							<ul class="pubids_export_actions">
-								{foreach from=$actionNames key=action item=actionName}
-									<li class="pubids_export_action">
-										{fbvElement type="submit" label="$actionName" id="$action" name="$action" value="1" class="$action" translate=false inline=true}
-									</li>
-								{/foreach}
-							</ul>
-						{/if}
-					{/fbvFormArea}
-				</form>
-				<p>{translate key="plugins.importexport.crossref.statusLegend"}</p>
-			</div>
-		{/if}
-		{if $exportIssues}
-			<div id="exportIssues-tab">
-				<script type="text/javascript">
-					$(function() {ldelim}
-						// Attach the form handler.
-						$('#exportIssueXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
-					{rdelim});
-				</script>
-				<p>{translate key="plugins.importexport.crossref.issues.description"}</p>
-				<form id="exportIssueXmlForm" class="pkp_form" action="{plugin_url path="exportIssues"}" method="post">
-					{csrf}
-					<input type="hidden" name="tab" value="exportIssues-tab" />
-					{fbvFormArea id="issuesXmlForm"}
-						{url|assign:issuesListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportIssuesListGridHandler" op="fetchGrid" plugin="crossref" category="importexport" escape=false}
-						{load_url_in_div id="issuesListGridContainer" url=$issuesListGridUrl}
-						{if !empty($actionNames)}
-							<ul class="pubids_export_actions">
-								{foreach from=$actionNames key=action item=actionName}
-									<li class="pubids_export_action">
-										{fbvElement type="submit" label="$actionName" id="$action" name="$action" value="1" class="$action" translate=false inline=true}
-									</li>
-								{/foreach}
-							</ul>
-						{/if}
-					{/fbvFormArea}
-				</form>
-				<p>{translate key="plugins.importexport.crossref.statusLegend"}</p>
-			</div>
-		{/if}
+		<div id="exportSubmissions-tab">
+			<script type="text/javascript">
+				$(function() {ldelim}
+					// Attach the form handler.
+					$('#exportSubmissionXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+				{rdelim});
+			</script>
+			<form id="exportSubmissionXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
+				{csrf}
+				<input type="hidden" name="tab" value="exportSubmissions-tab" />
+				{fbvFormArea id="submissionsXmlForm"}
+					{url|assign:submissionsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportSubmissionsListGridHandler" op="fetchGrid" plugin="crossref" category="importexport" escape=false}
+					{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
+					{if !empty($actionNames)}
+						<ul class="pubids_export_actions">
+							{foreach from=$actionNames key=action item=actionName}
+								<li class="pubids_export_action">
+									{fbvElement type="submit" label="$actionName" id="$action" name="$action" value="1" class="$action" translate=false inline=true}
+								</li>
+							{/foreach}
+						</ul>
+					{/if}
+			{/fbvFormArea}
+			</form>
+			<p>{translate key="plugins.importexport.crossref.statusLegend"}</p>
+		</div>
 	{/if}
 </div>
 
