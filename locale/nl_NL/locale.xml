@@ -533,7 +533,6 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Blader door de auteursindex</message>
 	<message key="search.searchFor">Doorzoek artikelen op</message>
-	<message key="search.author">Auteurs</message>
 	<message key="search.withinJournal">Binnen</message>
 	<message key="search.allJournals">Alle Tijdschriften</message>
 	<message key="search.authorIndex">Blader door de auteursindex</message>

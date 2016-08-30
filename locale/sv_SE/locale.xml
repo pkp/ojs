@@ -11,7 +11,7 @@
   * Localization strings.
   *
   -->
- 
+
 <locale name="sv_SE" full_name="Svenska">
 	<!--
 	 * This file is organized into several major sections, separated
@@ -45,17 +45,17 @@
 	<message key="manager.setup.sponsorNoteDescription">Texten kommer återfinnas nedanför rubriken "Sponsorer" och ovanför  listan över sponsorers namn och URL:er under 'Sponsorer' på sidan Om.</message>
 	<message key="manager.setup.contributorNoteDescription">Texen kommer återfinnas nedanför rubriken 'Sponsorer' och ovanför listan med namn och URL:er för organisationer som stöttar tidskriften under 'Sponsorer' på sidan Om.</message>
 	<message key="plugins.generic.staticPages.displayName">Statiska sidor</message>
-	<message key="plugins.generic.staticPages.description">Denna Plugin tillåter statisk innehållshantering</message>   
-	<message key="plugins.generic.staticPages.editAddContent">Redigera/lägg till innehåll</message>   
+	<message key="plugins.generic.staticPages.description">Denna Plugin tillåter statisk innehållshantering</message>
+	<message key="plugins.generic.staticPages.editAddContent">Redigera/lägg till innehåll</message>
 	<message key="plugins.generic.staticPages.settingInstructions">Nedan finner du alla statiska sidor som har skapats. Du kan redigera eller ta bort sidorna genom att använda länkarna på högra sidan.</message>
 	<message key="plugins.generic.staticPages.viewInstructions">Sidorna kommer man sedan åt via http://journals.sfu.ca/smt/index.php/smt/about/sidor/%sökväg%, där du själv väljer %sökväg%.  Obs! Två sidor kan inte ha samma sökväg.</message>
-	<message key="plugins.generic.staticPages.path">Sökväg</message>   
-	<message key="plugins.generic.staticPages.pageTitle">Titel</message>   
-	<message key="plugins.generic.staticPages.addNewPage">Lägg till sida</message>   
-	<message key="plugins.generic.staticPages.editStaticPage">Redigera statiska sidor</message> 
-	<message key="plugins.generic.staticPages.editInstructions">Använd formuläret nedan för att lägga till eller redigera innehåll</message> 
-	<message key="plugins.generic.staticPages.content">Innehåll</message> 
-	<message key="reviewer.article.enter.ReviewForm">Klicka på ikonen för att komma till Granskningsformuläret</message> 
+	<message key="plugins.generic.staticPages.path">Sökväg</message>
+	<message key="plugins.generic.staticPages.pageTitle">Titel</message>
+	<message key="plugins.generic.staticPages.addNewPage">Lägg till sida</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Redigera statiska sidor</message>
+	<message key="plugins.generic.staticPages.editInstructions">Använd formuläret nedan för att lägga till eller redigera innehåll</message>
+	<message key="plugins.generic.staticPages.content">Innehåll</message>
+	<message key="reviewer.article.enter.ReviewForm">Klicka på ikonen för att komma till Granskningsformuläret</message>
 
 	<message key="article.fontSize">Fontstorlek</message>
 	<message key="editor.article.ShowCoverPage">Skapa ett omslag för den här artikeln med följande element</message>
@@ -69,13 +69,13 @@
 	<message key="common.payments">Betalningar</message>
 
 	<!-- Common Form Messages -->
-	
+
 	<!-- Common Email Messages -->
 
 	<!-- Common Localization Terms -->
 
 	<!-- Common Error Messages -->
-		
+
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Hjälp</message>
 	<message key="navigation.current">Senaste</message>
@@ -87,7 +87,7 @@
 	<message key="navigation.competingInterestGuidelines">Riktlinjer för Intressekonflikter</message>
 	<message key="navigation.infoForAuthors.long">Information för författare</message>
 	<message key="navigation.infoForLibrarians.long">Information för bibliotekarier</message>
-	
+
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Ej tilldelat</message>
 	<message key="common.queue.short.submissionsUnassigned">Ej tilldelat</message>
@@ -101,7 +101,7 @@
 	<message key="common.queue.short.active">Aktiv</message>
 	<message key="common.queue.long.completed">Arkiv</message>
 	<message key="common.queue.short.completed">Arkiv</message>
-	
+
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
@@ -164,7 +164,7 @@
 	<message key="submission.scheduling">Planera</message>
 	<message key="submission.scheduledIn">Planerad för publicering i {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(TBA)</message>
-	
+
 	<message key="submissions.sec">Sektion</message>
 	<message key="submissions.step1">Steg 1</message>
 	<message key="submissions.step3">Steg 3</message>
@@ -187,7 +187,7 @@
 	<message key="submissions.proofreadingComplete">Korrekturläst</message>
 
 	<!-- Submission Notes -->
-	
+
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Senaste numret</message>
 	<message key="journal.journals">Tidskrifter</message>
@@ -198,14 +198,14 @@
 	<message key="user.showAllJournals">Visa mina tidskrifter</message>
 	<message key="user.registerForOtherJournals">Registrera för Andra tidskrifter</message>
 	<message key="user.myJournals">Mina tidskrifter</message>
-	
+
 	<!-- Roles -->
 	<message key="user.role.manager">Tidskriftsansvarig</message>
 	<message key="user.role.sectionEditor">Sektionsredaktör</message>
 	<message key="user.role.subscriptionManager">Abonnemangsansvarig</message>
 	<message key="user.role.managers">Tidskriftsansvariga</message>
 	<message key="user.role.subscriptionManagers">Abonnemangsansvariga</message>
-	
+
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Nummer</message>
 	<message key="issue.issues">Nummer</message>
@@ -229,7 +229,7 @@
 	<message key="submission.event.logLevel.notice">Meddelande</message>
 	<message key="submission.event.logLevel.warning">Varning</message>
 	<message key="submission.event.logLevel.error">Fel</message>
-	
+
 	<message key="submission.event.general.defaultEvent">Manuskriptstatus</message>
 	<message key="submission.event.general.issueScheduled">Manuskript placerad i kö för kommande nummer</message>
 	<message key="submission.event.general.issueAssigned">Manuskript planerat för nummer</message>
@@ -238,15 +238,15 @@
 	<message key="submission.event.author.authorRevision">Författarändringar inskickade</message>
 
 	<message key="submission.event.general.authorRevision">Författarreviderad fil uppdaterad</message>
-	
+
 	<message key="submission.event.editor.editorAssigned">Redaktör utsedd för manuskriptet</message>
 	<message key="submission.event.editor.editorUnassigned">Redaktör avaktiverad från manuskriptet</message>
 	<message key="submission.event.editor.editorDecision">Redaktörens beslut inskickat</message>
 	<message key="submission.event.editor.editorFile">Redaktörens fil uppdaterad</message>
 	<message key="submission.event.editor.submissionArchived">Manuskript skickat till arkivet</message>
 	<message key="submission.event.editor.submissionRestored">Manuskript hämtat från arkivet</message>
-	
-	
+
+
 	<message key="submission.event.copyedit.copyeditorAssigned">Manusredaktör tilldelad manuskript</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">Manusredaktör avaktiverad från manuskript</message>
 	<message key="submission.event.copyedit.copyeditInitiated">Manusredigering inlett</message>
@@ -254,13 +254,13 @@
 	<message key="submission.event.copyedit.copyeditInitialCompleted">Inledande manusredigiering avslutad</message>
 	<message key="submission.event.copyedit.copyeditFinalCompleted">Avslutande manusredigering avslutad</message>
 	<message key="submission.event.copyedit.copyeditSetFile">Manusredaktörens fil uppdaterad</message>
-	
+
 	<message key="submission.event.proofread.proofreaderAssigned">Korrekturläsare tilldelad manuskript</message>
 	<message key="submission.event.proofread.proofreaderUnassigned">Korrekturläsare avaktiverad från manuskriptet</message>
 	<message key="submission.event.proofread.proofreadInitiated">Korrekturläsning inlett</message>
 	<message key="submission.event.proofread.proofreadRevision">Korrekturläsarens reviderade fil uppdaterad</message>
 	<message key="submission.event.proofread.proofreadCompleted">Korrekturläsning avslutad</message>
-	
+
 	<message key="submission.event.layout.layoutEditorAssigned">Layoutredaktör tilldelad manuskript</message>
 	<message key="submission.event.layout.layoutEditorUnassigned">Layoutredaktör avaktiverad från manuskriptet</message>
 	<message key="submission.event.layout.layoutInitiated">Layoutarbete påbörjat</message>
@@ -275,7 +275,7 @@
 
 	<!-- Reader article view -->
 	<message key="reader.subscribersOnly">Endast för abonnenter</message>
-	<message key="reader.subscriptionRequiredLoginText">Abonnemang krävs för att få tillgång till informationen, vänligen logga in.</message>  
+	<message key="reader.subscriptionRequiredLoginText">Abonnemang krävs för att få tillgång till informationen, vänligen logga in.</message>
 	<message key="reader.openAccess">Open Access</message>
 	<message key="reader.subscriptionAccess">Åtkomst endast för abonnenter</message>
 	<message key="reader.subscriptionOrFeeAccess">Åtkomst endast för betalande eller för abonnenter</message>
@@ -292,8 +292,8 @@
 <br /><br />
 Observera att OAI-gränssnittet kan avaktiveras från sidan om man redigerar OJS systemkonfiguration. Framtida versioner av OJS kommer stödja OAI-gränssnittet på tidskriftsnivå.]]></message>
 
-	
-	
+
+
 	<!-- Languages -->
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Nedladdning av språkfiler från Public Knowledge Project web server är inte tillgängligt för tillfället:</p>
 	<ul>
@@ -307,9 +307,9 @@ Observera att OAI-gränssnittet kan avaktiveras från sidan om man redigerar OJS
 <ul>
 	<li>Om en användare försöker att registrera ett nytt konto på den här sidan med ett användarnamn som redan finns på valideringskällan (Men alltså inte i OJS-databasen), så kommer registreringen bara godkännas om det valda lösenordet överensstämmer med det aktuella användarkontot.</li>
 </ul>]]></message>
-	
+
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Använd det här formuläret för att ändra dina systeminställningar (the <tt>config.inc.php</tt> file). Klicka Spara för att spara 
+	<message key="admin.editSystemConfigInstructions"><![CDATA[Använd det här formuläret för att ändra dina systeminställningar (the <tt>config.inc.php</tt> file). Klicka Spara för att spara
 ändringarna, eller "Display" för att visa ändringarna utan att ta bort aktuella inställningar.
 <br /><br />
 <span class="formError">Varning: Om du ändrar de här inställningarna kan sidan bli oåtkomlig (i så fall måste konfigureringsfilerna repareras manuellt.). Ändra ingenting om du inte vet exakt vad
@@ -318,11 +318,11 @@ Observera att OAI-gränssnittet kan avaktiveras från sidan om man redigerar OJS
 <p>Systemet kunde inte automatiskt skriva över konfiguationsfilen. För att spara dina ändringar, öppna <tt>config.inc.php</tt> i ett lämpligt textredigeringsprogram och ersätt innehållet med informationen i textfältet nedan.</p>]]></message>
 
 
-	<!-- Site Administrator Merge Users -->	
+	<!-- Site Administrator Merge Users -->
 
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Abonnemangsadministration</message>
-	
+
 	<!-- Journal Management -->
 
 	<!-- Statistics & Reports -->
@@ -349,12 +349,12 @@ Observera att OAI-gränssnittet kan avaktiveras från sidan om man redigerar OJS
 	<message key="manager.statistics.reports.daysToPublication">Dagar till publicering</message>
 
 	<!-- Plugin Management -->
-	
+
 	<!-- Payment Management -->
 	<message key="manager.payment.options.payPerViewFee">Pay-Per-View artikel</message>
 
 
-		
+
 
 
 	<!-- General plugin information -->
@@ -371,7 +371,7 @@ Observera att OAI-gränssnittet kan avaktiveras från sidan om man redigerar OJS
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->
-	
+
 	<!-- Setup Step 1 -->
 
 	<!-- Setup Step 2 -->
@@ -383,7 +383,7 @@ Observera att OAI-gränssnittet kan avaktiveras från sidan om man redigerar OJS
 		<![CDATA[Open Journal Systems stöder <a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe)för att säkra permanent arkivering för tidskriften. LOCKSS är en Open Source-programvara utvecklad vid Stanford University Library. Programvaran möjliggör för bibliotek att bevara tidskriftshemsidor genom att göra automatiska sökningar i andra registrerade tidskrifter efter nyligen inlagt material, för att sedan hämta hem materialet för arkivering. Varje arkiv valideras kontinuerligt mot andra biblioteks cacher, och om innehållet visar sig innehålla felaktigheter kan andras cacher eller tidskrifter reparera felen.
 <br /><br />
 Du behöver inte installera LOCKSS förrän publiceringen är i full gång. Installationen sker enligt följande två steg:]]></message>
-	
+
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Föreslagna Creative Commons Copyright-policies</h3>
 <h4>1. Förslag på policy för tidskrifter som erbjuder Open Access</h4>
@@ -422,8 +422,8 @@ Välj en modell för hantering av den redaktionella processen. (För att ange Re
 	<!-- Setup Step 5 -->
 
 	<!-- Languages -->
-	
-	
+
+
 	<!-- Section Management -->
 	<message key="manager.sections.abstractsDisabled">Inte obligatoriskt att bifoga abstract eller sammanfattning</message>
 
@@ -446,7 +446,7 @@ Du kan välja att ge användaren en förklaring till varför kontot har upphört
 	]]></message>
 
 
-	
+
 	<!-- Email Management -->
 
 	<!-- Subscription Policy Management -->
@@ -474,7 +474,7 @@ Du kan välja att ge användaren en förklaring till varför kontot har upphört
 	<!-- Live Issues -->
 
 	<!-- Navigation sidebar menu -->
-	
+
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Namnlänkar till granskarprofilen.<br />
 Granskning sker på en skala från 1-5 där 5 är högsta betyg.<br />
@@ -485,7 +485,7 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 
 
 
-	
+
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Aktiva redaktionella uppdrag</message>
 	<message key="sectionEditor.completedEditorialAssignments">Avslutade redaktionella uppdrag</message>
@@ -516,12 +516,12 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="layoutEditor.galley.replaceGalley">Ersätt fil</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Ladda upp komplementerande fil</message>
 	<message key="submission.layout.imageInvalid">Ogiltigt bildformat. Giltiga format är: .gif, .jpg, och .png.</message>
-	
+
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Artiklar som väntar på granskning</message>
 	<message key="reviewer.completedReviews">Färdig</message>
 	<message key="reviewer.averageQuality">Bedömning/betyg</message>
-	
+
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">File som ska granskas</message>
 	<message key="reviewer.article.notifyTheEditor">Meddela redaktören</message>
@@ -537,7 +537,7 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="reviewer.article.recommendation">Rekommendation</message>
 	<message key="reviewer.article.submitReview">Skicka granskning till redaktören</message>
 	<message key="reviewer.article.reviewerComments">Kommentarer</message>
-	<message key="reviewer.article.uploadedFile">Uppladdade filer</message>	
+	<message key="reviewer.article.uploadedFile">Uppladdade filer</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Versionen uppladdad av granskaren</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Om du vill göra kommentarer till granskaren i filen, spara först ned filen på din hårddisk och ladda sedan upp den igen (Browse/Ladda upp.)</message>
         <message key="reviewer.article.schedule.request">Redaktörens begäran</message>
@@ -573,7 +573,7 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="copyeditor.article.copyeditorFile">Manusredaktörens fil</message>
 	<message key="copyeditor.article.uploadedFile">Uppladdad fil</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Manusredaktörens fil</message>
-	
+
 	<!-- Proofreader -->
 	<message key="proofreader.noProofreadingAssignments">Inga uppdrag för korrekturläsning</message>
 
@@ -582,9 +582,9 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 
 	<!-- Article Submission Step 1 -->
 
-	
+
 	<!-- Article Submission Step 2 -->
-	
+
 	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[
 <p>För att ladda upp ett manuskript till den här tidskriften, fullfölj följande steg.</p>
@@ -595,11 +595,11 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 <li>Klicka Ladda upp på den här sidan, filen laddas upp från datorn till tidskriftens hemsida och namnet på filen ändras efter tidskriftens standarder.</li>
 <li>När manuskriptet har laddats upp, klicka på Spara och Fortsätt längst ner på sidan.</li>
 </ol>]]></message>
-	
+
 	<!-- Article Submission Step 4 -->
-	
+
 	<!-- Article Submission Step 4a: Supplementary Files -->
-	
+
 	<!-- Article Submission Step 5 -->
 
 	<!-- Used in submission review / editing -->
@@ -617,7 +617,7 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="submission.copyedit.useFile">Använd fil</message>
 	<message key="submission.copyedit.copyeditComments">Kommentarer från manusredigering</message>
 	<message key="submission.copyedit.instructions">Instruktioner för manusredigering</message>
-	
+
 	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.layout.noLayoutFile">Begäran kan inte skickas förrän Layoutversionen är på plats)</message>
 	<message key="submission.layout.assignLayoutEditor">Lägg till Layoutredaktör</message>
@@ -625,8 +625,8 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="submission.layout.layoutComments">Layoutkommentarer</message>
 	<message key="submission.layout.instructions">Layoutinstruktioner</message>
 	<message key="submission.layout.referenceLinking">Referenslänkning</message>
-	
-	
+
+
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Kommentarer från korrekturläsning</message>
 	<message key="submission.archiveSubmission">Arkivera manuskript</message>
@@ -634,7 +634,7 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="submission.proofread.instructions">Instruktioner för korrekturläsning</message>
 
 	<!-- Submission History -->
-	
+
 	<message key="submission.logType.article">Artikel</message>
 	<message key="submission.logType.author">Författare</message>
 	<message key="submission.logType.editor">Redaktör</message>
@@ -642,11 +642,11 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="submission.logType.copyedit">Manusredigering</message>
 	<message key="submission.logType.layout">Layout</message>
 	<message key="submission.logType.proofread">Korrekturläst</message>
-	
+
 	<!-- Submission Event Log -->
 
 	<!-- Submission Email Log -->
-	
+
 	<!-- Submission Comments -->
 	<message key="submission.comments.editorAuthorCorrespondence">Redaktör/Författarkorrespondens</message>
 	<message key="submission.comments.copyeditComments">Manusredigeringskommentarer</message>
@@ -659,11 +659,11 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="submission.comments.forEditor">För Redaktör</message>
 	<message key="submission.comments.saveAndEmailAuthor">Spara, och E-post till Författare</message>
 	<message key="submission.comments.saveAndEmailEditor">Spara, och E-post till Redaktör</message>
-	
+
 	<!-- Login -->
-	
+
 	<!-- Profile -->
-	
+
 	<!-- Registration -->
 	<message key="user.register.repeatPassword">Upprepa lösenord</message>
 	<message key="user.register.noJournals">Det finns inga tidskrifter att registrera sig hos på den här sidan.</message>
@@ -682,7 +682,6 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Bläddra Författarregister</message>
 	<message key="search.searchFor">Sök artiklar för</message>
-	<message key="search.author">Författare</message>
 	<message key="search.withinJournal">Inom</message>
 	<message key="search.allJournals">Alla tidskrifter</message>
 	<message key="search.authorIndex">Bläddra Författarregister</message>
@@ -700,17 +699,17 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	
+
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Artikelnedladdning</message>
 	<message key="article.nonpdf.note"><![CDATA[Nedladdning av vald fil sker automatiskt. Om nedladdningen inte påbörjas, klicka på länken nedan. Observera att filen kan behöva ett speciellt läsarprogram eller en särskild typ av plugin för att synas.<br /><br />Om filen inte laddas ned automatiskt, <a href="{$url}"> klicka här</a>.]]></message>
-	
+
 	<!-- Site index -->
 	<message key="site.journalsHosted">Tidskrifter som den här sidan är värd för</message>
 	<message key="site.journalView">Visa tidskrift</message>
 	<message key="site.journalRegister">Registrera</message>
 	<message key="site.journalCurrent">Aktuellt nummer</message>
-	
+
 
 	<!-- Current index -->
 	<message key="current.current">Aktuellt</message>
@@ -721,7 +720,7 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="archive.archives">Arkiv</message>
 	<message key="archive.browse">Bläddra bland äldre nummer</message>
 	<message key="archive.issueUnavailable">Hittar inga nummer</message>
-	
+
 	<!-- About The Journal -->
 	<message key="about.statistics">Statistik</message>
 	<message key="about.editorialTeam">Redaktion</message>
@@ -755,22 +754,22 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="about.aboutThisPublishingSystem">Om det här publiceringssystemet</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Den här tidskriften använder Open Journal Systems {$ojsVersion}, ett open source-system för tidskriftshantering och programvara för publicering utvecklad, stöttat och fritt distribuerat av <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under GNU General Public License.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[Den här sidan använder Open Journal Systems {$ojsVersion}, ett open source-system för tidskriftshantering och programvara för publicering utvecklad, stöttat och fritt distribuerat av <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under GNU General Public License.]]></message>
-	
+
 	<!-- Announcement -->
 
 	<!-- Help -->
 	<message key="help.ojsHelp">Open Journal Systems Hjälp</message>
-	<message key="help.ojsHelpAbbrev">OJS Hjälp</message>	
+	<message key="help.ojsHelpAbbrev">OJS Hjälp</message>
 
 	<!-- Donations -->
 	<message key="donations.thankYou">Tack</message>
 	<message key="donations.thankYouMessage">Tack för ditt bidrag. Ditt bidrag är mycket uppskattat.</message>
-	
+
 	<!-- Payments -->
 	<message key="payment.loginRequired">Du måste vara inloggad för att kunna betala.</message>
 	<message key="payment.loginRequired.forArticle">Abonnemang eller pay-per-view krävs för att få tillgång till innehållet. För att verifiera abonnemang eller betalning, logga in på tidskriften.</message>
 	<message key="payment.loginRequired.forDonation">Du måste vara inloggad för att lämna en donation.</message>
-	
+
 	<message key="payment.paid">Betalad</message>
 	<message key="payment.payNow">Betala nu</message>
 	<message key="payment.waive">Avstå</message>
@@ -785,21 +784,21 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="payment.type.payPerView">Avgift för Artikel-Pay-Per-View</message>
 	<message key="payment.type.subscription">Abonnemangsavgift</message>
 	<message key="payment.type.donation">Donationer</message>
-	
+
 	<message key="payment.donation.makeDonation">Gör en donation</message>
-	
+
 	<message key="payment.submission.paySubmission">Betala abonnemangsavgift</message>
 	<message key="payment.fastTrack.payFastTrack">Betala för snabbspår</message>
 	<message key="payment.fastTrack.inFastTrack">i snabbspåret</message>
 	<message key="payment.publication.payPublication">Betala för Publicering</message>
 	<message key="payment.publication.publicationPaid">Publiceringsavgift betald</message>
-	
+
 	<message key="payment.membership.buyMembership">Köp individuellt medlemskap</message>
-	<message key="payment.membership.renewMembership">Förnya individuellt medlemskap</message>	
+	<message key="payment.membership.renewMembership">Förnya individuellt medlemskap</message>
 	<message key="payment.membership.ends">Avslutas</message>
 
 	<message key="payment.subscription.renew">Förnya abonnemang</message>
-	<message key="payment.subscription.expires">Upphör</message>	
+	<message key="payment.subscription.expires">Upphör</message>
 
 	<!-- Installer -->
 	<message key="installer.appInstallation">OJS installation</message>
@@ -849,7 +848,7 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 <p>Välj <strong>Manuell installation</strong> för SQL-frågor som krävs för att skapa OJS-databasens schema och grunddata så att databasinstallationen kan utföras manuellt. Denna valmöjligheten är nyttig för debugging av installationsproblem, särskilt för plattformar som systemet inte har stöd för. Observera att den här installationsmetoden varken kommer att laga databasen eller tabeller, även om konfigurationsfilen kommer att skrivas med de medföljande databasinställningarna.</p>]]></message>
 	<message key="installer.upgradeInstructions">
 		<![CDATA[<h4>OJS Version {$version}</h4>
-	
+
 <p>Tack för att du laddar ned the Public Knowledge Project's <strong>Open Journal Systems</strong>. Innan du fortsätter, vänligen läs <a href="{$baseUrl}/docs/README">README</a> och <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> filerna som medföljer programvaran. För ytterligare information om the Public Knowledge Project, se <a href="http://pkp.sfu.ca/" target="_blank">PKP:s hemsida</a>. Om du vill rapportera buggar eller behöver teknisk support, se<a href="http://forum.pkp.sfu.ca">supportforum</a> eller besök PKP's <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">system för buggraportering</a>. Vi rekommenderar I första hand supportforumet om ni har frågor men det går också bra att maila supporten på: <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>Det rekommenderas <strong>kraftigt</strong> att du gör backup på din databas, filmappen, och OJS installationsmapp innan du fortsätter.</p>
 <p>Om du kör installationen i <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, vänligen försäkra dig om att the max_execution_time directive i din php.ini konfigurationsfil är satt till ett högt gränsvärde. Om denna eller annan tidsbegränsning (ex. Apache's "Timeout" direktiv) överskrids och uppgraderingsprocessen avbryts, så måste arbetet hanteras manuellt.</p>]]></message>
@@ -949,7 +948,7 @@ Din server stöttas för tillfället av mbstring: <strong>{$supportsMBString}</s
 	<message key="rt.admin.validateUrls.description"><![CDATA[Förmodat ogiltiga URL:er för söksidor visas nedan.<br />
 Du bör verifiera de URL:er som är markerade som ogiltiga manuellt, eftersom urvalet inte kan garanteras till 100%.<br />
 Validering av URL:er kan misslyckas på sökningar som kräver inskickad data.]]></message>
-	
+
 	<!-- RT Entities -->
 
 
@@ -968,7 +967,7 @@ Validering av URL:er kan misslyckas på sökningar som kräver inskickad data.]]
 	<message key="rt.beNotifiedWhen">Få meddelande när...</message>
 
 	<message key="rt.thisJournal">Sök tidskrift</message>
-	
+
 
 	<message key="rt.context.authorTermsDescription">För material med fler än en författare, lämna alla namn markerade för att göra sökningar på medförfattares arbeten, eller sök direkt genom att markera ett namn. För ytterligare information om Sökmöjligheter, se OM. De här resurserna är valda för sin relevans och fria tillgång till delar av, eller hela innehållet.</message>
 
@@ -982,7 +981,7 @@ Validering av URL:er kan misslyckas på sökningar som kräver inskickad data.]]
 	<message key="icon.small.alt">Liten</message>
 	<message key="icon.medium.alt">Medium</message>
 	<message key="icon.large.alt">Stor</message>
-	
+
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Laddad valutalista "{$filename}" från XML</message>
 
@@ -1000,19 +999,19 @@ Validering av URL:er kan misslyckas på sökningar som kräver inskickad data.]]
 	<message key="default.journalSettings.privacyStatement">Ifyllda namn och E-postadresser kommer endast att användas för tidskriftens ändamål och kommer inte tillgängliggöras för andra personer eller ändamål.</message>
 	<message key="default.journalSettings.openAccessPolicy">Den här tidskriften tillämpar omedelbar Open Access enligt principen att ett fritt tillgängliggörande av forskning gynnar en global kunskapsspridning.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">Den här tidskriften tillåter och uppmuntrar att författare publicerar sina artiklar även på personliga webbsidor eller institutionella arkiv, såväl före som efter publicering, ange i så fall den här tidskriften som bibliografisk referens.</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[De olika stegen för manusredigering syftar till en ökad språklig och formmässig konsekvens. Författaren kan under processen göra egna korrigeringar i texten. 
+	<message key="default.journalSettings.copyeditInstructions"><![CDATA[De olika stegen för manusredigering syftar till en ökad språklig och formmässig konsekvens. Författaren kan under processen göra egna korrigeringar i texten.
 
-The file to be copyedited is in Word or .rtf format and therefore can be easily edited as a word processing document. This set of instructions displayed here proposes two approaches to copyediting. The one is based on Microsoft Word's Track Changes feature and requires that the copyeditor, editor and author have access to this program. A second system, that is software independent, has been borrowed, with permission, from the Harvard Educational Review. The journal editor is in a position to modify these instructions, so suggestions can be made to improve the process for this journal. 
+The file to be copyedited is in Word or .rtf format and therefore can be easily edited as a word processing document. This set of instructions displayed here proposes two approaches to copyediting. The one is based on Microsoft Word's Track Changes feature and requires that the copyeditor, editor and author have access to this program. A second system, that is software independent, has been borrowed, with permission, from the Harvard Educational Review. The journal editor is in a position to modify these instructions, so suggestions can be made to improve the process for this journal.
 
 <h4>Copyediting Systems</h4>
 
 <b>1. Microsoft Word's Track Changes</b>
 
-Under Tools in the menu bar, the feature Track Changes enables the copyeditor to make insertions (text appears in color) and deletions (text appears crossed out in color or in the margins as deleted). The copyeditor can post queries to both the author (Author Queries) and to the editor (Editor Queries) by inserting these queries in square brackets. The copyedited version is then uploaded and the editor is notified. The editor then reviews the text and notifies the author. 
+Under Tools in the menu bar, the feature Track Changes enables the copyeditor to make insertions (text appears in color) and deletions (text appears crossed out in color or in the margins as deleted). The copyeditor can post queries to both the author (Author Queries) and to the editor (Editor Queries) by inserting these queries in square brackets. The copyedited version is then uploaded and the editor is notified. The editor then reviews the text and notifies the author.
 
-The editor and author should leave those changes with which they are satisfied. If further changes are necessary, the editor and author can make changes to the initial insertions or deletions, as well as make new insertions or deletions elsewhere in the text. Authors and editors should respond to each of the queries addressed to them, with responses placed inside the square brackets. 
+The editor and author should leave those changes with which they are satisfied. If further changes are necessary, the editor and author can make changes to the initial insertions or deletions, as well as make new insertions or deletions elsewhere in the text. Authors and editors should respond to each of the queries addressed to them, with responses placed inside the square brackets.
 
-After the text has been reviewed by editor and author, the copyeditor will make a final pass over the text accepting the changes in preparation for the layout and galley stage. 
+After the text has been reviewed by editor and author, the copyeditor will make a final pass over the text accepting the changes in preparation for the layout and galley stage.
 
 
 <b>2. Harvard Educational Review </b>
@@ -1119,7 +1118,7 @@ The paragraph that begins "This last topic..." is not indented.</pre>]]></messag
 	<message key="default.journalSettings.forAuthors"><![CDATA[Intreserad av att skicka manuskript till den här tidskriften? Vi rekommenderar att du läser <a href="{$indexUrl}/{$journalPath}/about">Om Tidskriften</a> för tidskriftens olika sektionspolicies, liksom<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Författarinstruktioner</a>. Författare måste <a href="{$indexUrl}/{$journalPath}/user/register">registrera</a> sig i tidskiften innan inskickande av manuskript, eller, om du du redan är registrerad, klicka <a href="{$indexUrl}/index/login">logga in</a> och påbörja manusinlämningens 5 steg.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Vi uppmuntrar forskningsbibliotekarier att lista den här tidskriften bland bibliotekets elektronsika resurser. Vi uppmuntrar även att information om OJS öppna publiceringssystem sprids till fakulteter som publicerar forskningsmaterial (se <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Den här tidskriften tillämpar LOCKSS-principen för en effektivare spridning och arkivering bland de deltagande biblioteken. <a href="http://lockss.stanford.edu/">Mer...</a>]]></message>
-	
+
 	<!-- Default settings for payment items. -->
 	<message key="common.homePageHeader.altText">Hemsidans sidhuvud</message>
 	<message key="article.article">Artikel</message>

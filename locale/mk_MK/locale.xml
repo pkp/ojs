@@ -669,9 +669,9 @@
 	<message key="submission.comments.saveAndEmailAuthor">Зачувај и испрати е-маил на авторот</message>
 	<message key="submission.comments.saveAndEmailEditor">Зачувај и испрати е-маил на авторот</message>
 
-	
+
 	<!-- Login -->
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Поради безбедносни причини, овој систем на пораки врши ресетирање на лозинка за регистрираните корисници, наместо да се повикува на  
+	<message key="user.login.resetPasswordInstructions"><![CDATA[Поради безбедносни причини, овој систем на пораки врши ресетирање на лозинка за регистрираните корисници, наместо да се повикува на
 тековната лозинка.<br /><br />Внесете ја вашата e-mail адреса подолу, за да ја ресетирате вашата лозинка. Потврда ќе биде испратени на оваа email адреса.]]></message>
 
 	<!-- Registration -->

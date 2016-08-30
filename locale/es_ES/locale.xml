@@ -639,7 +639,6 @@
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Examinar índice de autores/as</message>
 	<message key="search.searchFor">Buscar artículos por</message>
-	<message key="search.author">Autores/as</message>
 	<message key="search.withinJournal">Dentro de</message>
 	<message key="search.allJournals">Todas las revistas</message>
 	<message key="search.authorIndex">Examinar índice de autores/as</message>

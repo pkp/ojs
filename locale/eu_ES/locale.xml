@@ -11,7 +11,7 @@
   * Localization strings.
   *
   -->
- 
+
 <locale name="eu_ES" full_name="Euskara">
 	<!--
 	 * This file is organized into several major sections, separated
@@ -39,9 +39,9 @@
 	<!--  peer review -->
 
 
-	<message key="reviewer.article.enterReviewForm">Egin klik ikono batean ebaluazio-inprimakia betetzeko.</message>	
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Nahitaezko eremuak bete egin behar dira.</message>	
-	
+	<message key="reviewer.article.enterReviewForm">Egin klik ikono batean ebaluazio-inprimakia betetzeko.</message>
+	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Nahitaezko eremuak bete egin behar dira.</message>
+
 	<!-- review forms end -->
 
 	<!--
@@ -59,13 +59,13 @@
 	<message key="common.journalHomepageImage.altText">Aldizkariaren hasierako orriko irudia</message>
 
 	<!-- Common Form Messages -->
-	
+
 	<!-- Common Email Messages -->
 
 	<!-- Common Localization Terms -->
 
 	<!-- Common Error Messages -->
-		
+
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Aldizkariaren laguntza</message>
 	<message key="navigation.current">Unekoa</message>
@@ -77,7 +77,7 @@
 	<message key="navigation.competingInterestGuidelines">Interes-gatazketarako gidalerroak</message>
 	<message key="navigation.infoForAuthors.long">Egileentzako informazioa</message>
 	<message key="navigation.infoForLibrarians.long">Liburuzainentzako informazioa</message>
-	
+
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Esleitu gabe</message>
 	<message key="common.queue.short.submissionsUnassigned">Esleitu gabe</message>
@@ -91,7 +91,7 @@
 	<message key="common.queue.short.active">Aktibo</message>
 	<message key="common.queue.long.completed">Artxiboa</message>
 	<message key="common.queue.short.completed">Artxiboa</message>
-	
+
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
@@ -160,7 +160,7 @@
 	<message key="submission.scheduling">Programazioa</message>
 	<message key="submission.scheduledIn">{$issueName} zenbakian argitaratzeko programatua.</message>
 	<message key="submission.scheduledIn.tba">(Adieraziko den)</message>
-	
+
 	<message key="submissions.sec">Atl</message>
 	<message key="submissions.step1">1. urratsa</message>
 	<message key="submissions.step3">3. urratsa</message>
@@ -183,7 +183,7 @@
 	<message key="submissions.proofreadingComplete">Probak zuzenduta</message>
 
 	<!-- Submission Notes -->
-	
+
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Uneko zenbakia</message>
 	<message key="journal.journals">Aldizkariak</message>
@@ -208,7 +208,7 @@
 	<message key="user.role.subscriptionManager">Harpidetza-kudeatzailea</message>
 	<message key="user.role.managers">Aldizkariaren kudeatzaileak</message>
 	<message key="user.role.subscriptionManagers">Harpidetza-kudeatzaileak</message>
-	
+
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Zenbakia</message>
 	<message key="issue.issues">Zenbakiak</message>
@@ -236,15 +236,15 @@
 	<message key="submission.event.author.authorRevision">Egilearen berrikuspena bidali</message>
 
 	<message key="submission.event.general.authorRevision">Egilearen berrikuspen-fitxategia eguneratu</message>
-	
+
 	<message key="submission.event.editor.editorAssigned">Editorea izendatu</message>
 	<message key="submission.event.editor.editorUnassigned">Editorea kendu</message>
 	<message key="submission.event.editor.editorDecision">Editorearen erabakia bidali</message>
 	<message key="submission.event.editor.editorFile">Edizio-fitxategia eguneratu</message>
 	<message key="submission.event.editor.submissionArchived">Artikulua artxibora bidali</message>
 	<message key="submission.event.editor.submissionRestored">Artikulua artxibotik leheneratu</message>
-	
-	
+
+
 	<message key="submission.event.copyedit.copyeditorAssigned">Zuzentzailea izendatu</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">Zuzentzailea kendu</message>
 	<message key="submission.event.copyedit.copyeditInitiated">Zuzenketa hasi</message>
@@ -252,13 +252,13 @@
 	<message key="submission.event.copyedit.copyeditInitialCompleted">Lehenengo zuzenketa bukatu</message>
 	<message key="submission.event.copyedit.copyeditFinalCompleted">Azken zuzenketa bukatu</message>
 	<message key="submission.event.copyedit.copyeditSetFile">Zuzenketa-fitxategia eguneratu</message>
-	
+
 	<message key="submission.event.proofread.proofreaderAssigned">Proba-zuzentzailea izendatu</message>
 	<message key="submission.event.proofread.proofreaderUnassigned">Proba-zuzentzailea kendu</message>
 	<message key="submission.event.proofread.proofreadInitiated">Proba-zuzenketa hasi</message>
 	<message key="submission.event.proofread.proofreadRevision">Proba-zuzentzailearen aldaketen fitxategia eguneratu</message>
 	<message key="submission.event.proofread.proofreadCompleted">Proba-zuzenketa bukatu</message>
-	
+
 	<message key="submission.event.layout.layoutEditorAssigned">Maketatzailea izendatu</message>
 	<message key="submission.event.layout.layoutEditorUnassigned">Maketatzailea kendu</message>
 	<message key="submission.event.layout.layoutInitiated">Maketaziosi</message>
@@ -273,7 +273,7 @@
 
 	<!-- Reader article view -->
 	<message key="reader.subscribersOnly">Harpidedunak bakarrik</message>
-	<message key="reader.subscriptionRequiredLoginText">Harpidetuta egon behar da lan hau atzitzeko. Harpidetza egiaztatzeko, hasi saioa aldizkarian.</message>  
+	<message key="reader.subscriptionRequiredLoginText">Harpidetuta egon behar da lan hau atzitzeko. Harpidetza egiaztatzeko, hasi saioa aldizkarian.</message>
 	<message key="reader.openAccess">Sarrera librea</message>
 	<message key="reader.subscriptionAccess">Harpidedunen sarrera</message>
 	<message key="reader.subscriptionOrFeeAccess">Harpidetza edo Sarrera librea</message>
@@ -290,8 +290,8 @@
 <br /><br />
 Kontuan izan OAI interfazea desgaitu daitekeela gune honetarako, OJS sistema-konfigurazioa editatuz. OJS bertsio berriagoetan aukera izango da gune barruko aldizkariak banaka gaitzeko edo desgaitzeko.]]></message>
 
-	
-	
+
+
 	<!-- Languages -->
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Orain ezin da hizkuntza-paketerik deskargatu Public Knowledge Project web-zerbitzaritik:</p>
 	<ul>
@@ -304,24 +304,24 @@ Kontuan izan OAI interfazea desgaitu daitekeela gune honetarako, OJS sistema-kon
 <ul>
 	<li>Erabiltzaile bat saiatzen bada gune honetan kontu berri bat erregistratzen, lehendik autentifikazio-iturburuan dagoen (baina OJS datu-basean ez dagoen) erabiltzaile-izen batekin, ematen den pasahitza erabiltzaile-kontu horrentzat baliozkoa bada bakarrik onartuko da erregistratzeko ahalegina.</li>
 </ul>]]></message>
-	
+
 	<!-- System Information -->
-	<message 
+	<message
 key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ABISUA!</h4>
 <p>Sistemak ezin izan du automatikoki gainidatzi konfigurazio-fitxategia. Konfigurazio-aldaketak aplikatzeko, testu-editore egoki batekin ireki beharko duzu <tt>config.inc.php</tt> eta bertako edukia aldatu beheko testu-eremuaren edukiarekin.</p>]]></message>
 
-	<!-- Site Administrator Merge Users -->	
+	<!-- Site Administrator Merge Users -->
 
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Harpidetzen kudeaketa</message>
-	
+
 	<!-- Journal Management -->
 
 	<!-- Statistics & Reports -->
 
 
 	<!-- Plugin Management -->
-	
+
 	<!-- Payment Management -->
 	<!-- General plugin information -->
 	<message key="plugins.categories.auth.description">Baimena emateko pluginen bidez, erabiltzaile-autentifikazioa beste sistema batzuei delega diezaieke Open Journal Systems-ek, esate baterako LDAP zerbitzariei.</message>
@@ -335,21 +335,21 @@ key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ABISUA!</h4>
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->
-	
+
 	<!-- Setup Step 1 -->
 	<!-- Setup Step 2 -->
 
-	<message key="manager.setup.reviewProcessEmailDescription">Ebaluazioa 
-egiteko eskaerarekin batera, bidalketa eransten die ebaluatzaileei mezu 
-elektronikoan editoreak. Ebaluatzaileek mezu elektronikoz erantzuten diote 
-editoreari onartzen duten ala ez, eta bide beretik bidaltzen dizkiote ebaluazioa 
-eta gomendioa ere. Ebaluatzaileen onarpena (edo ezespena), eta ondorengo 
-ebaluazio-txostena eta gomendioa Editoreek sartzen dute bidalketaren 
+	<message key="manager.setup.reviewProcessEmailDescription">Ebaluazioa
+egiteko eskaerarekin batera, bidalketa eransten die ebaluatzaileei mezu
+elektronikoan editoreak. Ebaluatzaileek mezu elektronikoz erantzuten diote
+editoreari onartzen duten ala ez, eta bide beretik bidaltzen dizkiote ebaluazioa
+eta gomendioa ere. Ebaluatzaileen onarpena (edo ezespena), eta ondorengo
+ebaluazio-txostena eta gomendioa Editoreek sartzen dute bidalketaren
 Ebaluazio-orrian, ebaluazio-prozesua erregistratuta uzteko.</message>
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems-ek <a href="http://www.lockss.org/" target="_blank"> LOCKSS</a> (Lots of Copies Keep Stuff Safe) sistema erabiltzen du aldizkariaren artxibo seguru eta iraunkorra segurtatzeko. LOCKSS iturburu irekiko softwarea da, Stanford-eko Unibertsitateko Liburutegiak garatua, liburutegiei hautatutako web-aldizkariak mantentzen laguntzeko. LOCKSSek erregularki begiratzen du erregistratutako aldizkarien webguneetan, zenbaki edo eduki berririk argitaratu den ikusteko eta, hala bada, artxibatzeko. Artxibo bakoitza etengabe balidatzen da liburutegiko beste cache batzuen kontra, eta eduki hondatu edo galdurik aurkitzen bada, beste cacheak edo aldizkaria erabiltzen dira leheneratzeko.
 <br /><br />
 Argitaratzen hasi arte, ez da beharrezkoa LOCKSS euskarria gehitzea Open Journal Systems-i. Orduan, bi urrats hauek egin beharko dira:]]></message>
-	
+
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Creative Commons Copyright informazio proposatuak</h3>
 <h4>1. Sarrera librea ematen duten Aldizkarientzat proposatutako politika</h4>
@@ -382,15 +382,15 @@ Hautatu eredu bat prozesu editorialaren alderdi horiek maneiatzeko. (Editore nag
 
 <ol>
 	<li><strong>Irakurtzeko tresna bat gehitu</strong><p>Aldizkariaren kudeatzaileak "Bilatu erreferentziak" aukera gehi dezake argitaratutako lanen Irakurtzeko tresnetan, irakurleek erreferentzia baten titulua itsatsi ahal izan dezaten, aipatutako lana aldez aurretik hautatutako datu-base unibertsitarioetan bilatzeko.</p></li>
-	<li><strong>EStekak kapsulatu erreferentzietan</strong><p>Erreferentzia 
-Interneten 
+	<li><strong>EStekak kapsulatu erreferentzietan</strong><p>Erreferentzia
+Interneten
 aurki daitekeenean, erreferentziara joateko esteka bat gehi dezake Maketatzaileak, instrukzio hauei jarraituz (alda daitezke):</p></li>
 </ol>]]></message>
 
 	<!-- Setup Step 5 -->
 
 	<!-- Languages -->
-	
+
 	<!-- Section Management -->
 
 	<!-- Import/Export -->
@@ -410,7 +410,7 @@ Nahi baduzu, kontua zergatik desgaitu diozun azal diezaiokezu erabiltzaileari.</
 	]]></message>
 
 
-	
+
 	<!-- Email Management -->
 
 	<!-- Subscription Policy Management -->
@@ -437,7 +437,7 @@ Nahi baduzu, kontua zergatik desgaitu diozun azal diezaiokezu erabiltzaileari.</
 	<!-- Live Issues -->
 
 	<!-- Navigation sidebar menu -->
-	
+
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Izena ebaluatzailearen profilerako esteka da.<br />
 Balorazio-eskala: 1-5 (Bikaina).<br />
@@ -449,7 +449,7 @@ Aktibo: une honetan kontsideratzen edo egiten ari diren ebaluazioen kopurua.]]><
 
 
 
-	
+
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Edizio-lan aktiboak</message>
 	<message key="sectionEditor.completedEditorialAssignments">Bukatutako lanak</message>
@@ -480,12 +480,12 @@ Aktibo: une honetan kontsideratzen edo egiten ari diren ebaluazioen kopurua.]]><
 	<message key="layoutEditor.galley.replaceGalley">Ordeztu fitxategia</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Kargatu fitxategi osagarria</message>
 	<message key="submission.layout.imageInvalid">Irudi-formatua ez da baliozkoa: .gif, .jpg, eta .png formatuak bakarrik onartzen dira.</message>
-	
+
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Ebaluazioa egiteko zain dauden artikuluak</message>
 	<message key="reviewer.completedReviews">Eginda</message>
 	<message key="reviewer.averageQuality">Balorazioa</message>
-	
+
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">Ebaluatzeko fitxategia</message>
 	<message key="reviewer.article.notifyTheEditor">Jakinarazi Editoreari</message>
@@ -493,7 +493,7 @@ Aktibo: une honetan kontsideratzen edo egiten ari diren ebaluazioen kopurua.]]><
 	<message key="reviewer.article.cannotDoReview">Ezingo du egin ebaluazioa</message>
 	<message key="reviewer.article.restrictedFileAccess">Ebaluatzaileak ebaluazioa egitea onartzen duenean izango du erabilgarri bidalketa</message>
 	<message key="reviewer.article.submissionEditor">Bidalketaren Editorea</message>
-	<message key="reviewer.article.reviewerCommentsDescription">Idatzi edo 
+	<message key="reviewer.article.reviewerCommentsDescription">Idatzi edo
 itsatsi ebaluazioko oharrak hemen</message>
 	<message key="reviewer.article.editorToEnter">Editoreak sartzeko</message>
 	<message key="reviewer.article.sendReminder">Bidali oroigarria</message>
@@ -502,7 +502,7 @@ itsatsi ebaluazioko oharrak hemen</message>
 	<message key="reviewer.article.recommendation">Gomendioa</message>
 	<message key="reviewer.article.submitReview">Bidali Ebaluazioa Editoreari</message>
 	<message key="reviewer.article.reviewerComments">Iruzkinak</message>
-	<message key="reviewer.article.uploadedFile">Kargatutako fitxategiak</message>	
+	<message key="reviewer.article.uploadedFile">Kargatutako fitxategiak</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Ebaluatzaileak kargatutako bertsioa</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Fitxategiari oharrak egin nahi badizkiozu, editorearentzat, gorde zure disko gogorrean eta erabili Arakatu/Kargatu)</message>
         <message key="reviewer.article.schedule.request">Editorearen eskaera</message>
@@ -538,37 +538,37 @@ itsatsi ebaluazioko oharrak hemen</message>
 	<message key="copyeditor.article.copyeditorFile">Zuzentzailearen fitxategia</message>
 	<message key="copyeditor.article.uploadedFile">Kargatutako fitxategia</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Zuzentzailearen fitxategia</message>
-	
+
 	<!-- Proofreader -->
 	<message key="proofreader.noProofreadingAssignments">Ez da Proba-zuzenketarik esleitu</message>
 
 	<!-- Author -->
 	<!-- Article Submission Step 1 -->
 
-	
+
 	<!-- Article Submission Step 2 -->
-	
+
 	<!-- Article Submission Step 3 -->
-	<message key="author.submit.uploadInstructions"><![CDATA[ <p>Eskuizkribu bat aldizkari honetan 
-kargatzeko, ondorengo urratsak egin behar dituzu.</p> <ol> <li>Orri honetan, sakatu Arakatu (edo 
-Aukeratu fitxategia) eta Fitxategia aukeratzeko leiho bat irekiko da, bidali nahi duzun fitxategia zure 
-ordenagailuan bilatzeko.</li> <li>Lokalizatu bidali nahi duzun fitxategia eta nabarmendu.</li> <li>Fitxategia 
-aukeratzeko leihoan, sakatu Ireki, eta zure fitxategiaren izena orri honetan azalduko da.</li> <li>Orri 
-honetan, sakatu Kargatu eta zure fitxategia zure ordenagailutik aldizkariaren webgunera kargatuko da 
-eta izena aldatuko zaio aldizkariaren izendapen-ohituretara egokitzeko.</li> <li>Bidalketa 
-kargatutakoan, sakatu orri honen behealdeko 'Gorde eta jarraitu' botoia.</li> 
+	<message key="author.submit.uploadInstructions"><![CDATA[ <p>Eskuizkribu bat aldizkari honetan
+kargatzeko, ondorengo urratsak egin behar dituzu.</p> <ol> <li>Orri honetan, sakatu Arakatu (edo
+Aukeratu fitxategia) eta Fitxategia aukeratzeko leiho bat irekiko da, bidali nahi duzun fitxategia zure
+ordenagailuan bilatzeko.</li> <li>Lokalizatu bidali nahi duzun fitxategia eta nabarmendu.</li> <li>Fitxategia
+aukeratzeko leihoan, sakatu Ireki, eta zure fitxategiaren izena orri honetan azalduko da.</li> <li>Orri
+honetan, sakatu Kargatu eta zure fitxategia zure ordenagailutik aldizkariaren webgunera kargatuko da
+eta izena aldatuko zaio aldizkariaren izendapen-ohituretara egokitzeko.</li> <li>Bidalketa
+kargatutakoan, sakatu orri honen behealdeko 'Gorde eta jarraitu' botoia.</li>
 </ol>]]></message>
-	
+
 	<!-- Article Submission Step 4 -->
 	<!-- Article Submission Step 4a: Supplementary Files -->
-	
+
 	<!-- Article Submission Step 5 -->
 
 	<!-- Used in submission review / editing -->
 	<message key="submission.review.mustUploadFileForReview">Eskaera egiteko mezu elektronikoa ezin da bidali Ebaluazio-bertsioa prest egon arte.</message>
 
 	<!-- Submission Tracking - Copyedit Specific -->
-	<message key="submission.copyedit.mustUploadFileForInitialCopyedit">Eskaera egiteko mezua ezin 
+	<message key="submission.copyedit.mustUploadFileForInitialCopyedit">Eskaera egiteko mezua ezin
 da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen erabakian.</message>
 	<message key="submission.copyedit.mustUploadFileForCopyedit">Eskaera egiteko mezua ezin da bidali fitxategia zuzentzeko kargatuta egon arte.</message>
 	<message key="submission.copyedit.initialCopyedit">Lehenengo zuzenketa</message>
@@ -580,7 +580,7 @@ da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen eraba
 	<message key="submission.copyedit.useFile">Erabili fitxategia</message>
 	<message key="submission.copyedit.copyeditComments">Zuzentzailearen oharrak</message>
 	<message key="submission.copyedit.instructions">Zuzenketak egiteko instrukzioak</message>
-	
+
 	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.layout.noLayoutFile">Bat ere ez (eskaera bidali aurretik, kargatu azken zuzenketa-bertsioa Maketazio-bertsio gisa)</message>
 	<message key="submission.layout.publicGalleyId">Galerada-identifikatzaile publikoa</message>
@@ -590,15 +590,15 @@ da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen eraba
 	<message key="submission.layout.layoutComments">Maketazio-oharrak</message>
 	<message key="submission.layout.instructions">Maketatzeko instrukzioak</message>
 	<message key="submission.layout.referenceLinking">Erreferentziarako esteka</message>
-	
-	
+
+
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Proba-zuzenketako oharrak</message>
 	<message key="submission.proofread.corrections">Proba-zuzenketako zuzenketak</message>
 	<message key="submission.proofread.instructions">Probak zuzentzeko instrukzioak</message>
 
 	<!-- Submission History -->
-	
+
 	<message key="submission.logType.article">Artikulua</message>
 	<message key="submission.logType.author">Egilea</message>
 	<message key="submission.logType.editor">Editorea</message>
@@ -606,11 +606,11 @@ da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen eraba
 	<message key="submission.logType.copyedit">Zuzenketa</message>
 	<message key="submission.logType.layout">Maketazioa</message>
 	<message key="submission.logType.proofread">Proba-zuzenketa</message>
-	
+
 	<!-- Submission Event Log -->
 
 	<!-- Submission Email Log -->
-	
+
 	<!-- Submission Comments -->
 	<message key="submission.comments.editorAuthorCorrespondence">Editore/Egile arteko korrespondentzia</message>
 	<message key="submission.comments.copyeditComments">Zuzentzailearen oharrak</message>
@@ -623,9 +623,9 @@ da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen eraba
 	<message key="submission.comments.forEditor">Editorearentzat</message>
 	<message key="submission.comments.saveAndEmailAuthor">Gorde eta bidali mezua Egileari</message>
 	<message key="submission.comments.saveAndEmailEditor">Gorde eta bidali mezua Editoreari</message>
-	
+
 	<!-- Login -->
-	
+
 	<!-- Profile -->
 	<!-- Registration -->
 	<message key="user.register.noJournals">Gune honetan ez dago zu erregistratzeko moduko aldizkaririk.</message>
@@ -644,7 +644,6 @@ da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen eraba
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Arakatu egileen indizea</message>
 	<message key="search.searchFor">Bilatu artikuluetan</message>
-	<message key="search.author">Egileak</message>
 	<message key="search.withinJournal">Non</message>
 	<message key="search.allJournals">Aldizkari guztiak</message>
 	<message key="search.authorIndex">Arakatu egileen indizea</message>
@@ -662,17 +661,17 @@ da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen eraba
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	
+
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Artikulua deskargatu</message>
 	<message key="article.nonpdf.note"><![CDATA[Zuk hautatutako fitxategia automatikoki hasi behar da deskargatzen. Ez bada hasten, egin klik beheko estekan. Kontuan izan, fitxategi hau ikusteko ikustaile edo plugin berezi bat behar dela.<br /><br />Fitxategia ez bada automatikoki deskargatzen, <a href="{$url}">egin klik hemen</a>.]]></message>
-	
+
 	<!-- Site index -->
 	<message key="site.journalsHosted">Gune honetan ostatatutako aldizkariak</message>
 	<message key="site.journalView">Aldizkaria ikusi</message>
 	<message key="site.journalRegister">Erregistratu</message>
 	<message key="site.journalCurrent">Uneko zenbakia</message>
-	
+
 
 	<!-- Current index -->
 	<message key="current.current">Unekoa</message>
@@ -683,7 +682,7 @@ da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen eraba
 	<message key="archive.archives">Artxiboak</message>
 	<message key="archive.browse">Arakatu zenbaki zaharragoak</message>
 	<message key="archive.issueUnavailable">Zenbakia ez dago erabilgarri</message>
-	
+
 	<!-- About The Journal -->
 	<message key="about.statistics">Estatistikak</message>
 	<message key="about.editorialTeam">Talde editoriala</message>
@@ -715,27 +714,27 @@ da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen eraba
 	<message key="about.availableSubscriptionTypes">Harpidetza motak</message>
 	<message key="about.memberships">Kidetzak</message>
 	<message key="about.aboutThisPublishingSystem">Argitalpen-sistema honi buruz</message>
-	<message key="about.aboutThisPublishingSystem.altText">OJSren 
+	<message key="about.aboutThisPublishingSystem.altText">OJSren
 Prozesu editoriala eta argitaratze-prozesua</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Aldizkari honek Open Journal Systems {$ojsVersion} (OJS) erabiltzen du. Aldizkariak kudeatzeko eta argitaratzeko iturburu irekiko software bat da OJS; <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> proiektuak garatzen eta sostengatzen du, eta doan banatzen du GNUren lizentzia publiko orokorrarekin (General Public License).]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[Gune honek Open Journal Systems {$ojsVersion} erabiltzen du (OJS). Aldizkariak kudeatzeko eta argitaratzeko iturburu irekiko software bat da OJS; <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> proiektuak garatzen eta sostengatzen du, eta doan banatzen du GNUren lizentzia publiko orokorrarekin (General Public License).]]></message>
-	
+
 	<!-- Announcement -->
 
 	<!-- Help -->
 	<message key="help.ojsHelp">Open Journal Systems-en laguntza</message>
-	<message key="help.ojsHelpAbbrev">OJS laguntza</message>	
+	<message key="help.ojsHelpAbbrev">OJS laguntza</message>
 	<message key="help.searchReturnResults">Itzuli bilaketaren emaitzara</message>
 
 	<!-- Donations -->
 	<message key="donations.thankYou">Eskerrik asko</message>
 	<message key="donations.thankYouMessage">Eskerrik asko zure ekarpenagatik.  Benetan eskertzen dizugu.</message>
-	
+
 	<!-- Payments -->
 	<message key="payment.loginRequired">Ordainketa egiteko, saioa hasi behar duzu.</message>
 	<message key="payment.loginRequired.forArticle">Harpidetuta egon behar da edo artikulua erosi behar da lan hau atzitzeko. Harpidetza egiaztatzeko edo artikulua erosteko, aldizkarian saioa hasi behar da.</message>
 	<message key="payment.loginRequired.forDonation">Dohaintzak egiteko, saioa hasi behar duzu.</message>
-	
+
 	<message key="payment.paid">Ordainduta</message>
 	<message key="payment.payNow">Ordaindu orain</message>
 	<message key="payment.waive">Salbuetsi</message>
@@ -750,21 +749,21 @@ Prozesu editoriala eta argitaratze-prozesua</message>
 	<message key="payment.type.purchaseArticle">Artikulua erosteko tarifa</message>
 	<message key="payment.type.subscription">Harpidetza-tarifa</message>
 	<message key="payment.type.donation">Dohaintzak</message>
-	
+
 	<message key="payment.donation.makeDonation">Egin dohaintza bat</message>
-	
+
 	<message key="payment.submission.paySubmission">Ordaindu bidalketa-tarifa</message>
 	<message key="payment.fastTrack.payFastTrack">Ordaindu ebaluazio azkarra</message>
 	<message key="payment.fastTrack.inFastTrack">Ebaluazio azkarrean</message>
 	<message key="payment.publication.payPublication">Ordaindu argitaratzeko</message>
 	<message key="payment.publication.publicationPaid">Argitalpen-tarifa ordainduta</message>
-	
+
 	<message key="payment.membership.buyMembership">Egin bazkide</message>
-	<message key="payment.membership.renewMembership">Berritu bazkidetza</message>	
+	<message key="payment.membership.renewMembership">Berritu bazkidetza</message>
 	<message key="payment.membership.ends">Amaiera</message>
 
 	<message key="payment.subscription.renew">Berritu harpidetza</message>
-	<message key="payment.subscription.expires">Iraungi</message>	
+	<message key="payment.subscription.expires">Iraungi</message>
 
 	<!-- Installer -->
 	<message key="installer.appInstallation">OJS instalazioa</message>
@@ -788,7 +787,7 @@ Prozesu editoriala eta argitaratze-prozesua</message>
 
 <p>Hala ere, PKPk ez dauka software-bertsio eta plataforma konbinazio posible guztiak probatzeko adina baliabide eta, beraz, ezin du bermatu denek ondo funtzionatuko dutenik.</p>
 
-<p>Instalazioa egin ondoren ezarpen hauek aldatu ahal izango dira, OJSren 
+<p>Instalazioa egin ondoren ezarpen hauek aldatu ahal izango dira, OJSren
 oinarriko direktorioko <tt>config.inc.php</tt> fitxategia editatuz, edo gune-administratzailearen web interfazearen bidez.</p>
 
 <h4>Onartzen diren datu-base sistemak</h4>
@@ -811,15 +810,15 @@ oinarriko direktorioko <tt>config.inc.php</tt> fitxategia editatuz, edo gune-adm
 
 <h4>Eskuzko instalazioa</h4>
 
-<p>Datu-basea eskuz instalatu ahal izateko, hautatu <strong>Eskuzko 
-instalazioa</strong> OJS datu-basearen eskema eta hasierako datuak sortzeko SQL 
-instrukzioak bistaratzeko. Aukera hau praktikoa da instalazioan sortzen diren 
-problemak konpontzeko, batez ere euskarri gabeko plataformetan. Kontuan izan 
-instalazio-metodo hau ez dela saiatuko datu-basea edo taulak sortzen, 
-datu-basearen ezarpenak konfigurazio-fitxategian idatziko diren 
+<p>Datu-basea eskuz instalatu ahal izateko, hautatu <strong>Eskuzko
+instalazioa</strong> OJS datu-basearen eskema eta hasierako datuak sortzeko SQL
+instrukzioak bistaratzeko. Aukera hau praktikoa da instalazioan sortzen diren
+problemak konpontzeko, batez ere euskarri gabeko plataformetan. Kontuan izan
+instalazio-metodo hau ez dela saiatuko datu-basea edo taulak sortzen,
+datu-basearen ezarpenak konfigurazio-fitxategian idatziko diren
 arren.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS {$version} bertsioa</h4>
-	
+
 <p>Eskerrik asko Public Knowledge Project-en <strong>Open Journal Systems</strong> deskargatzeagatik. Aurrera egin aurretik, irakur itzazu mesedez software honekin batera ematen diren <a href="{$baseUrl}/docs/README">README</a> eta <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> fitxategiak. Public Knowledge Project-i eta lantzen dituen software-proiektuei buruzko informazio gehiago nahi izanez gero, jo <a href="http://pkp.sfu.ca/" target="_blank">PKP webgunera</a>. Open Journal Systems-en akatsen berri emateko edo laguntza teknikoa eskatzeko, ikus <a href="http://forum.pkp.sfu.ca">laguntza teknikoko foroa</a> edo PKPren <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">akatsen berri emateko</a> lineako sistema. Laguntza teknikoko foroa hobetsi arren kontaktuetarako, mezua ere bidal diezaiokezu taldeari <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> helbidera.</p>
 <p>Aurrera jarraitu aurretik, <strong>biziki gomendatzen dizugu</strong> datu-basearen, fitxategien direktorioaren eta OJSren instalazio-direktorioaren kopiak egitea.</p>
 <p><a href="http://www.php.net/features.safe-mode" target="_blank">PHP modu seguruan</a> exekutatzen ari bazara, ziurtatu zure php.ini konfigurazio-fitxategiko max_execution_time direktibaren muga altu jarrita dagoela. Muga horretara edo besteren batera (adib. Apache-ren "Timeout" direktibarenera) heltzen bada eta bertsio-berritzeko prozesua geratzen bada, eskuz konpondu behar da.</p>]]></message>
@@ -843,12 +842,12 @@ Zure zerbitzariak mbstring hau onartzen du: <strong>{$supportsMBString}</strong>
 
 	<!-- Article Logs -->
 	<message key="log.author.documentRevised">{$authorName} egileak {$submissionId} artikulua berrikusi du. Fitxategi ID berria {$fileId} da.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} izendatu da {$submissionId} 
+	<message key="log.review.reviewerAssigned">{$reviewerName} izendatu da {$submissionId}
 artikulua ebaluatzeko {$round}. bueltan.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} ebaluatzaileari {$submissionId} artikulua ebaluatzeko esleipena kendu zaio {$round}. bueltan.</message>
 	<message key="log.review.reviewInitiated">{$reviewerName} {$submissionId} artikula {$round}. bueltan ebaluatzen hasi da.</message>
 	<message key="log.review.reviewReinitiated">{$reviewerName} berriro hasi da {$submissionId} artikulua {$round}. bueltan ebaluatzen.</message>
-	<message key="log.review.reviewCancelled">{$reviewerName} ebaluatzailearen {$submissionId} artikuluaren 
+	<message key="log.review.reviewCancelled">{$reviewerName} ebaluatzailearen {$submissionId} artikuluaren
 {$round}. ebaluazio-buelta bertan behera utzi da.</message>
 	<message key="log.review.reviewCleared">{$reviewerName} ebaluatzailearen {$submissionId} artikuluaren {$round}. ebaluazio-buelta ezabatu egin da.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} {$submissionId} artikuluaren {$round}. ebaluazio-bueltarako baloratu da.</message>
@@ -884,7 +883,7 @@ artikulua ebaluatzeko {$round}. bueltan.</message>
 	<message key="log.editor.restored">{$submissionId} artikulua ilarara itzuli da.</message>
 	<message key="log.editor.editorAssigned">{$editorName} editoreari esleitu zaio {$submissionId} artikulua.</message>
 
-	<message key="log.proofread.assign">{$assignerName} editoreak {$proofreaderName} izendatu du {$submissionId} 
+	<message key="log.proofread.assign">{$assignerName} editoreak {$proofreaderName} izendatu du {$submissionId}
 artikuluaren probak zuzentzeko.</message>
 	<message key="log.proofread.complete">{$proofreaderName} proba-zuzentzaileak programatzeko bidali du {$submissionId}.</message>
 
@@ -919,7 +918,7 @@ artikuluaren probak zuzentzeko.</message>
 	<message key="rt.admin.validateUrls.description"><![CDATA[Behean erakusten dira bilaketa egiteko guneen URL baliogabeak ematen dutenak.<br />
 Eskuz egiaztatu beharko dituzu baliogabeko gisa markatutako URLak, proba hau ez delako % 100 fidagarria.<br />
 Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatzen duten URLetan.]]></message>
-	
+
 	<!-- RT Entities -->
 
 
@@ -932,7 +931,7 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	<message key="rt.beNotifiedWhen">Jakinarazi....</message>
 
 	<message key="rt.thisJournal">Bilatu aldizkarian</message>
-	
+
 
 	<message key="rt.context.authorTermsDescription">Egile bat baino gehiago dituzten lanetan, utzi izen guztiak hautatuta antzeko lankidetzan egindako lanak bilatzeko, edo bilatu banaka, izen bakarra hautatuta. Baliabideari buruzko informazio gehiago ikusteko, sakatu GURI BURUZ. Garrantziren arabera eta eduki osoa edo zati bat atzitzeko sarrera librearen (doakoaren) arabera hautatu dira baliabideak.</message>
 
@@ -943,7 +942,7 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	 *
 	-->
 	<!-- Icons: Default "alt" text -->
-	
+
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">{$filename} moneta-zerrenda XMLtik kargatu da</message>
 
@@ -1105,4 +1104,3 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	</li>
 </ol>]]></message>
 </locale>
-

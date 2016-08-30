@@ -735,7 +735,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Browse Author Index</message>
 	<message key="search.searchFor">Search articles for</message>
-	<message key="search.author">Authors</message>
 	<message key="search.withinJournal">Within</message>
 	<message key="search.allJournals">All Journals</message>
 	<message key="search.authorIndex">Browse Author Index</message>

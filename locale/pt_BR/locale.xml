@@ -140,7 +140,7 @@
 	<message key="submission.editorVersion">Versão do editor</message>
 	<message key="submission.authorsRevisedVersion">Versão revisada do autor</message>
 	<message key="submission.authorVersion">Versão do autor</message>
-	<message key="submission.copyediting">Edição de Texto</message>	
+	<message key="submission.copyediting">Edição de Texto</message>
 	<message key="submission.copyedit">Editar texto</message>
 	<message key="submission.proofreading">Leitura de Prova</message>
 	<message key="submission.scheduling">Agendamento</message>
@@ -179,7 +179,7 @@
 	<message key="user.showAllJournals">Mostrar Revistas</message>
 	<message key="user.registerForOtherJournals">Cadastrar em outras revistas</message>
 	<message key="user.myJournals">Minhas Revistas</message>
-	
+
 	<!-- Roles -->
 	<message key="user.role.manager">Editor-Gerente</message>
 	<message key="user.role.sectionEditor">Editor de Seção</message>
@@ -269,14 +269,14 @@ Note que a interface OAI pode ser desativada para este portal nas configuraçõe
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Definir uma fonte de autenticação padrão diferente da do sistema implica em:</p>
 <ul>
 	<li>Caso um usuário tente cadastrar uma nova conta com um login já existente na fonte de autenticação (mas não na base do sistema), o cadastro só será permitido se a senha informada for válida para a conta em questão.</li>
-</ul>]]></message> 
+</ul>]]></message>
 
 	<!-- System Information -->
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>AVISO!</h4>
 <p>O sistema não conseguiu alterar automaticamente o documento de configuração. Para aplicar as alterações é necessário editar o arquivo <tt>config.inc.php</tt> manualmente em algum editor de texto, substituindo-o com o conteúdo do campo a seguir.</p>]]></message>
 
 
-	
+
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Controle de Assinaturas</message>
 
@@ -419,7 +419,7 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<message key="reviewer.article.recommendation">Recomendação</message>
 	<message key="reviewer.article.submitReview">Enviar avaliação ao editor</message>
 	<message key="reviewer.article.reviewerComments">Comentários</message>
-	<message key="reviewer.article.uploadedFile">Documentos enviados</message>	
+	<message key="reviewer.article.uploadedFile">Documentos enviados</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Versão enviada pelo avaliador</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Caso deseje realizar anotações no documento ao editor, salve em sua máquina e depois envie usando Procurar/Enviar)</message>
         <message key="reviewer.article.schedule.request">Solicitação do editor</message>
@@ -444,7 +444,7 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
         <message key="reviewer.article.enterReviewA">Clique no ícone para digitar (ou colar) a avaliação da submissão.</message>
         <message key="reviewer.article.uploadFile">Opcionalmente, é possível transferir uma versão do documento com seus comentários para consulta pelo editor e/ou autor.</message>
         <message key="reviewer.article.selectRecommendation">Escolha a recomendação adequada e submeta a avaliação para concluir o processo. É obrigatório incluir os comentários da avaliação ou transferir uma Versão para Avaliação do documento antes de definir sua avaliação..</message>
-	<message key="reviewer.article.mustSelectDecision">Não foi selecionada nenhuma recomendação. Deve-se escolher uma recomendação para submeter a avaliação.</message>				
+	<message key="reviewer.article.mustSelectDecision">Não foi selecionada nenhuma recomendação. Deve-se escolher uma recomendação para submeter a avaliação.</message>
 	<message key="reviewer.article.confirmDecision">Uma vez registrada a decisão não será mais possível modificar a avaliação. Deseja realmente proceder?</message>
 	<message key="reviewer.article.ensuringBlindReview">Assegurando uma Avaliação Cega segura</message>
 
@@ -502,7 +502,7 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<message key="submission.layout.replaceLayoutEditor">Substituir Editor de Layout</message>
 	<message key="submission.layout.layoutComments">Comentários do Layout</message>
 	<message key="submission.layout.instructions">Diretrizes para Layout</message>
-	
+
 
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Comentários da Leitura de Prova</message>
@@ -539,22 +539,21 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<!-- Login -->
 
 	<!-- Registration -->
-	<message key="user.register.noJournals">Não há revistas para se cadastrar neste portal.</message>	
+	<message key="user.register.noJournals">Não há revistas para se cadastrar neste portal.</message>
 	<message key="user.register.privacyStatement">Política de Privacidade</message>
 	<message key="user.register.registrationDisabled">Cadastro de usuários desativado no momento.</message>
 	<message key="user.register.form.passwordLengthTooShort">Senha digitada não contém o mínimo de caracteres.</message>
 	<message key="user.register.readerDescription">Notificado via e-mail da publicação de nova edição da revista.</message>
 	<message key="user.register.openAccessNotificationDescription">Notificado via e-mail quando edições da revista se tornarem de Acesso Livre.</message>
 	<message key="user.register.authorDescription">Pode submeter à revista.</message>
-	<message key="user.register.reviewerDescriptionNoInterests">Disponível para realizar avaliação pelos pares das submissões a esta revista.</message>	
-	<message key="user.register.reviewerDescription">Disponível para realizar avaliação pelos pares das submissões a esta revista. Identifique a área de avaliação (áreas de interesses e metodologias de pesquisa).</message>	
+	<message key="user.register.reviewerDescriptionNoInterests">Disponível para realizar avaliação pelos pares das submissões a esta revista.</message>
+	<message key="user.register.reviewerDescription">Disponível para realizar avaliação pelos pares das submissões a esta revista. Identifique a área de avaliação (áreas de interesses e metodologias de pesquisa).</message>
 
 
 
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Índice de autores</message>
 	<message key="search.searchFor">Pesquisar termo</message>
-	<message key="search.author">Autor</message>
 	<message key="search.withinJournal">Em</message>
 	<message key="search.allJournals">Todas as Revistas</message>
 	<message key="search.authorIndex">Índice de autores</message>
@@ -572,7 +571,7 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	
+
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Baixar artigo</message>
 	<message key="article.nonpdf.note"><![CDATA[O documento selecionado deverá ser baixado automaticamente. Em caso negativo, clique no atalho abaixo. Note que o documento pode requerer um visualizador especial ou plugin para ser executado.<br /><br />Caso o documento não seja baixado automaticamente, <a href="{$url}">clique aqui</a>.]]></message>
@@ -629,7 +628,7 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 
 	<!-- Help -->
 	<message key="help.ojsHelp">Ajuda?</message>
-	<message key="help.ojsHelpAbbrev">Ajuda do sistema</message>	
+	<message key="help.ojsHelpAbbrev">Ajuda do sistema</message>
 
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">Instalação do sistema</message>
@@ -774,7 +773,7 @@ A validação pode falhar em URLs para pesquisa que requeiram dados via método 
 	<message key="rt.beNotifiedWhen">Receber notificação quando...</message>
 
 	<message key="rt.thisJournal">Pesquisar nesta revista</message>
-	
+
 
 	<message key="rt.context.authorTermsDescription">Para documentos com mais de um autor, deixe todos os nomes marcados para pesquisar trabalhos com coautoria semelhante, ou pesquise um por vez marcando cada nome individualmente. Para saber mais sobre o recurso pesquisado, clique no símbolo de informação. Estes recursos foram escolhidos devido a sua relevância e acessibilidade aberta (gratuita) para todo ou parte do conteúdo.</message>
 
@@ -930,7 +929,7 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
                         <li class="highlightReviewerConfirmationOverdue">Revisor está atrasado para confirmar um convite para revisão</li>
                         <li class="highlightReviewerCompletionOverdue">Revisor está atrasado para completar revisão</li>
                 </ul>
-        </li> 
+        </li>
         <li>"Prazo" é preenchido quando o avaliador indica disponibilidade para realizar a avaliação; exibe o tempo em semanas até a data de entrega da avaliação ou (-) semanas quando está atrasado.</li>
 </ol>]]></message>
 	<message key="reviewer.article.reviewGuidelinesDescription">As Diretrizes para Avaliação fornecerão aos avaliadores critérios necessários para julgar se uma submissão é adequada para publicação no periódico, e podem incluir quaisquer instruções especiais para preparar uma avaliação efetiva e construtiva. Ao entrar na avaliação, os avaliadores terão acesso a dois campos de texto aberto, sendo o primeiro "para autor e editor" e o segundo para "editor apenas". Como opção alternativa, o Editor Gerente pode criar formulários específicos acessando "Formulários de Avaliação", na Administração da revista. Em todos os casos, os editores terão a opção de incluir as avaliações nas mensagens, ao se comunicarem com o autor.</message>

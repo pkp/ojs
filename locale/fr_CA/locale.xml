@@ -457,7 +457,6 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Explorer l'Index des auteurs</message>
 	<message key="search.searchFor">Rechercher des articles contenant</message>
-	<message key="search.author">Auteurs</message>
 	<message key="search.withinJournal">Dans</message>
 	<message key="search.allJournals">Toutes les revues</message>
 	<message key="search.authorIndex">Explorer l'Index des auteurs</message>

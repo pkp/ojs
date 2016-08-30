@@ -18,7 +18,7 @@
 	display: inline-block;
 	padding: 0 1em;
 	background: #eee;
-	border: 1px solid #aaa;
+	border: @form-border;
 	border-top-color: #bbb;
 	border-radius: @radius;
 	box-shadow: inset 0 -1em 1em rgba(0, 0, 0, 0.1);
@@ -26,6 +26,11 @@
 	line-height: @triple - 2; // account for border
 	font-weight: @bold;
 	color: @primary;
+
+	&:hover,
+	&:focus {
+		box-shadow: inset 0 1em 1em rgba(0, 0, 0, 0.1);
+	}
 }
 
 // Wire button
@@ -77,6 +82,22 @@
 	}
 }
 
+.cmp_button_icon_left( @icon ) {
+	padding-right: 1em;
+	padding-left: @triple + (@triple / 2);
+	border-right: @form-border;
+	border-left: none;
+
+	&:after {
+		right: auto;
+		left: 0;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		border-top-left-radius: @radius;
+		border-bottom-left-radius: @radius;
+	}
+}
+
 // Text button with an icon
 .cmp_button_text( @icon ) {
 	display: inline-block;
@@ -110,7 +131,7 @@
 // These don't yet follow the component pattern on the frontend, but should
 // eventually once the login/registration templates are incorporated into the
 // frontend template structure.
-.pkp_form {
+.cmp_form {
 
 	fieldset {
 		margin: 0 0 @double;
@@ -175,7 +196,7 @@
 		width: 100%;
 		height: @triple - 2; // account for border
 		background: #fff;
-		border: 1px solid #aaa;
+		border: @form-border;
 		border-radius: @radius;
 		font-size: @font-sml;
 		line-height: @triple - 2; // account for border
