@@ -169,9 +169,9 @@
 	<message key="manager.setup.enableAnnouncements">Enable Journal Managers to add journal announcements.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Display</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">of the most recent announcements on the journal homepage.</message>
-	<message key="manager.setup.enableUserRegistration">Visitors can register a user account with the press.</message>
+	<message key="manager.setup.enableUserRegistration">Visitors can register a user account with the journal.</message>
 	<message key="manager.setup.focusAndScope">Focus and scope</message>
-	<message key="manager.setup.focusAndScope.description">Describe to authors, readers, and librarians the range of articles and other items the press will publish.</message>
+	<message key="manager.setup.focusAndScope.description">Describe to authors, readers, and librarians the range of articles and other items the journal will publish.</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">For Authors to Index Their Work</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Journal Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work.]]></message>
 	<message key="manager.setup.form.issnInvalid">The specified ISSN is not valid.</message>
@@ -188,7 +188,7 @@
 	<message key="manager.setup.guidingSubmissions">Step 3. Guiding Submissions</message>
 	<message key="manager.setup.includeCreativeCommons">For journals that offer immediate or delayed open access, include a Creative Commons license with all published work at the appropriate time.</message>
 	<message key="manager.setup.information">Information</message>
-	<message key="manager.setup.information.description">Brief descriptions of the press for librarians and prospective authors and readers. These are made available in the site's sidebar when the Information block has been added.</message>
+	<message key="manager.setup.information.description">Brief descriptions of the journal for librarians and prospective authors and readers. These are made available in the site's sidebar when the Information block has been added.</message>
 	<message key="manager.setup.information.forAuthors">For Authors</message>
 	<message key="manager.setup.information.forLibrarians">For Librarians</message>
 	<message key="manager.setup.information.forReaders">For Readers</message>
@@ -286,7 +286,7 @@
 	<message key="manager.setup.restrictArticleAccess">Users must be registered and log in to view open access content.</message>
 	<message key="manager.setup.restrictSiteAccess">Users must be registered and log in to view the journal site.</message>
 	<message key="manager.setup.reviewGuidelines">Review Guidelines</message>
-	<message key="manager.setup.reviewGuidelinesDescription">Provide external reviewers with criteria for judging a submission's suitability for publication in the press, which may include instructions for preparing an effective and helpful review. Reviewers will have an opportunity to provide comments intended for the author and editor, as well as separate comments only for the editor.</message>
+	<message key="manager.setup.reviewGuidelinesDescription">Provide external reviewers with criteria for judging a submission's suitability for publication in the journal, which may include instructions for preparing an effective and helpful review. Reviewers will have an opportunity to provide comments intended for the author and editor, as well as separate comments only for the editor.</message>
 	<message key="manager.setup.reviewOptions">Review Options</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">Automated Email Reminders</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
