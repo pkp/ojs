@@ -76,7 +76,13 @@ lib/pkp/lib/vendor/robloach					\
 lib/pkp/lib/vendor/smarty/smarty/demo				\
 lib/pkp/lib/vendor/symfony					\
 lib/pkp/lib/vendor/phpunit					\
+lib/pkp/lib/vendor/phpspec					\
+lib/pkp/lib/vendor/phpdocumentor				\
+lib/pkp/lib/vendor/doctrine					\
 lib/pkp/js/lib/pnotify/build-tools				\
+lib/pkp/lib/vendor/sebastian					\
+lib/pkp/lib/vendor/oyejorge/less.php/test			\
+lib/pkp/lib/vendor/webmozart					\
 lib/pkp/tools/travis						\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/.git					\
