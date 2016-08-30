@@ -291,7 +291,7 @@
 	<message key="manager.setup.reviewOptions.automatedReminders">Automated Email Reminders</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
 	<message key="manager.setup.reviewOptions.blindReview">Blind Review</message>
-	<message key="manager.setup.reviewOptions.numWeeksPerReview">The typical period of time allowed for reviews</message>
+	<message key="manager.setup.reviewOptions.numWeeksPerReview">Weeks allowed to complete the review</message>
 	<message key="manager.setup.reviewOptions.onQuality">Editors will rate reviewers on a five-point quality scale after each review.</message>
 	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">Reviewers will have access to the submission file only after agreeing to review it.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">Reviewer Access</message>
