@@ -183,4 +183,7 @@ Please follow the following protocol for making electronic revisions to your man
 	<message key="default.groups.name.externalReviewer">Reviewer</message>
 	<message key="default.groups.plural.externalReviewer">Reviewers</message>
 	<message key="default.groups.abbrev.externalReviewer">R</message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+________________________________________________________________________<br/>
+<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
 </locale>
