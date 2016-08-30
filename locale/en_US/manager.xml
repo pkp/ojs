@@ -195,7 +195,6 @@
 	<message key="manager.setup.initialIssue">Initial issue</message>
 	<message key="manager.setup.initialIssueDescription">Depending on the format selected, identify the issue, volume, and/or year of the first issue to be published with OJS:</message>
 	<message key="manager.setup.institution">Institution</message>
-	<message key="manager.setup.issnDescription"><![CDATA[The ISSN (International Standard Serial Number) is an eight-digit number which identifies periodical publications as such, including electronic serials. It is managed by a world wide network of National Centres coordinated by an International Centre based in Paris, backed by Unesco and the French Government. A number can be obtained from the <a href="http://www.issn.org" target="_new">ISSN web site</a>.  This can be done at any point in operating the journal.]]></message>
 	<message key="manager.setup.itemsDescription">Navigation bar items can be added to the current set (Home, About, User Home, etc.) that appear at the top of the page.</message>
 	<message key="manager.setup.itemsPerPage">Items per page</message>
 	<message key="manager.setup.journalAbbreviation">Journal Abbreviation</message>

@@ -459,9 +459,6 @@
 	<message key="manager.setup.doiSuffixDescription">پسوند دی او آی به هر شکلی میتواند درآید، ولی میبایست برای هر آیتم منتشر شده منحصر به فرد باشد.</message>
 	<message key="manager.setup.doiSuffixPublisherId">بکاربردن پسوند دی او آی به عنوان شناسه دلخواه. ابتدا باید در مرحله ۴ فعال شده باشد.</message>
 	<message key="manager.setup.form.doiPrefixPattern">الکوی دی او آی میبایست بصورت 10.xxxx باشد.</message>
-	<message key="manager.setup.issnDescription"><![CDATA[شابن یا شماره استاندارد بین المللی نشریه یه عدد هشت رقمی است که مشخصه انتشارات ادواری میباشد . شامل ادواری های الکترونیکی نیز میشود. اداره آن توسط شبکه کسترده ای از مراکز ملی است که توسط یک مرکز بین المللی در پاریس هماهنگ میگردند. پشتیبان آن یونسکو و دولت فرانسه است. شابن را میتوان از 
-<a href="http://www.issn.org" target="_new">وب سایت شابن</a>
-بدست آورد.]]></message>
 	<message key="manager.setup.noPublishing">از او ج اس برای انتشار آن لاین محتوای مجله استفاده نخواهد شد.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">اطلاع رسانی پرداخت آن لاین</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">ایمیل اطلاع رسانی خودکار را میتوان متعاقب تکمیل آن لاین فرم پراخت هزینه اشتراک به مدیر اشتراک فرستاد. متن این ایمیل قابل ویرایش از طریق لینک ویرایش ایمیل های از قبل آماده شده توسط مدیر مجله میباشد.</message>

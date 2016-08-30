@@ -191,7 +191,6 @@
 	<message key="manager.setup.initialIssue">Первый выпуск</message>
 	<message key="manager.setup.initialIssueDescription">В зависимости от выбранного формата укажите выпуск, том и/или год выхода первого номера, который будет опубликован с помощью OJS:</message>
 	<message key="manager.setup.institution">Организация</message>
-	<message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number) стосоит из восьми цифр, которые идентифицируют периодические публикации, в том числе и электронные серийные издания. Он управляется сетью Национальных центров по всему миру, координируемых располагающимся в Париже Международным центром, поддерживаемым ЮНЕСКО и французским правительством. Номер можно получить на <a href="http://www.issn.org" target="_new">веб-сайте ISSN</a>. Это можно сделать в любой момент работы журнала.]]></message>
 	<message key="manager.setup.itemsDescription">Элементы панели навигации могут быть добавлены к текущему набору («Главная», «О журнале», «Страница пользователя», и т. д.), который отображается в верхней части страницы.</message>
 	<message key="manager.setup.itemsPerPage">Элементов на странице</message>
 	<message key="manager.setup.journalAbbreviation">Аббревиатура названия журнала</message>

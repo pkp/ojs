@@ -178,7 +178,6 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.initialIssue">Numero iniziale</message>
 	<message key="manager.setup.initialIssueDescription">A seconda del formato selezionato, indicare il numero, il volume e/o l'anno del primo numero che verrà pubblicato con OJS:</message>
 	<message key="manager.setup.institution">Istituzione</message>
-	<message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number) &#x00E8; un codice composto da otto cifre che identifica le pubblicazioni periodiche, sia cartacee sia elettroniche. &#x00C8; gestita da un network mondiale composto da centri nazionali coordinati da un centro internazionale con sede a Parigi, supportato dall'Unesco e dal governo francese. &#x00C8; possibile richiedre un codice ISSN tramite il sito <a href="http://www.bice.rm.cnr.it/Iissn.html" target="_new">http://www.bice.rm.cnr.it/Iissn.html</a>. L'inserimento del codice ISSN pu&#x00F2; essere fatto in qualsiasi momento del ciclo di vita della rivista.]]></message>
 	<message key="manager.setup.itemsDescription">Per aggiungere altre voci al menu orizzontale che compare in ogni pagina utilizzare questa sezione.</message>
 	<message key="manager.setup.itemsPerPage">Voci per pagina</message>
 	<message key="manager.setup.journalAbbreviation">Abbreviazione della rivista</message>

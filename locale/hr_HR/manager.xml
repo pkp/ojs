@@ -167,7 +167,6 @@
 	<message key="manager.setup.initialIssue">Početno izdanje</message>
 	<message key="manager.setup.initialIssueDescription">Ovisno o odabranom formatu, odredite broj časopisa, svezak, i/ili godinu prvog izdanja izdanog u sklopu OJS-a:</message>
 	<message key="manager.setup.institution">Institucija</message>
-	<message key="manager.setup.issnDescription"><![CDATA[Međunarodni standardni broj serijske publikacije je osmeroznamenkasti broj koji omogućuje jedinstvenu identifikaciju periodičkih publikacija, kao i e-izdanja publikacija. Hrvatski nakladnici mogu dobiti ISSN u <a href="http://www.nsk.hr/izdavaci/issn/obrazacissn.html" target="_new">ISSN uredu za Hrvatsku</a>.]]></message>
 	<message key="manager.setup.itemsDescription">U navigacijsku traku mogu se uz postojeće ("naslovna", "o časopisu", "korisnička", itd.) postaviti i dodatne navigacijske poveznice koje se tada pojavljuju na vrhu svake stranice.</message>
 	<message key="manager.setup.itemsPerPage">Stavaka po stranici</message>
 	<message key="manager.setup.journalAbbreviation">Kratica časopisa</message>

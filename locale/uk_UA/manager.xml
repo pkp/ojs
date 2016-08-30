@@ -187,7 +187,6 @@
        <message key="manager.setup.initialIssue">Перший випуск</message>
        <message key="manager.setup.initialIssueDescription">Залежно від обраного формату вкажіть том, номер та/або рік першого випуску, який буде опублікований з OJS:</message>
        <message key="manager.setup.institution">Організація</message>
-       <message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number) - це 8-значний номер, який ідентифікує періодичні видання, в тому числі, електронні серіальні видання. Реєстр підтримується всесвітньою мережею національних центрів, яка координується Міжнародним центром ISSN у Парижі, що підпорядкований ЮНЕСКО та французькому уряду. Номер можна отримати на <a href="http://www.issn.org" target="_new">веб-сайті ISSN</a>. Це можна зробити на будь-якому етапі видання журналу.]]></message>
              <message key="manager.setup.itemsDescription">До поточного набору елементів навігаційної панелі, які відображаються у верхній частині сторінки ("Домашня сторінка", "Про нас", "Тека користувача" тощо), можна додати додаткові елементи.</message>
        <message key="manager.setup.itemsPerPage">Елементів на сторінці</message>
        <message key="manager.setup.journalAbbreviation">Абревіатура журналу</message>

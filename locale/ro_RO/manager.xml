@@ -191,7 +191,6 @@
 	<message key="manager.setup.initialIssue">Primul număr</message>
 	<message key="manager.setup.initialIssueDescription">În funcţie de formatul selectat, identificaţi numărul, volumul, şi/sau anul primului număr care va fi publicat cu OJS:</message>
 	<message key="manager.setup.institution">Instituţie</message>
-	<message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number) este un număr cu 8 digiţi care identifică un periodic incluzând periodicele electronice. Aceste numere sunt gestionate de o reţea globală de centre naţionale coordonate de un Centru Internaţional aflat la Paris susţinut de UNESCO şi Guvernul Francez. Un număr poate fi obţinut de la <a href="http://www.issn.org" target="_new">siteul ISSN</a>. Acest lucru poate fi făcut în orice moment al existenței unei reviste.]]></message>
 	<message key="manager.setup.itemsDescription">Elementele pentru bara de navigaţie pot fi adăugate la setul curent (Acasă, Despre, Spaţiul utilizatorului, etc.), care apare la partea superioară a paginii.</message>
 	<message key="manager.setup.itemsPerPage">Elemente per pagină</message>
 	<message key="manager.setup.journalAbbreviation">Abrevierea revistei</message>

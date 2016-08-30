@@ -139,7 +139,6 @@
 	<message key="manager.setup.initialIssue">Første utgave</message>
 	<message key="manager.setup.initialIssueDescription">For det formatet du valgte: oppgi utgave, volum og/eller år for første utgave som vil bli publisert i OJS:</message>
 	<message key="manager.setup.institution">Institusjon</message>
-	<message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number) er et mangesifret tall som identifiserer periodika, og som også omfatter nettpublikasjoner. ISSN administreres av et verdensomspennende nettverk av nasjonale sentre, som koordineres av det internasjonale senteret i Paris, med finansiering fra Unesco og den franske regjering. ISSN-nummer utdeles av <a href="http://www.nb.no/sn/html/issn.html" target="_blank">det norske ISSN-nettstedet</a>, eller av <a href="http://www.issn.org" target="_blank">det globale ISSN-nettstedet</a>.  Dette kan ordnes når som helst i arbeidsprosessen.]]></message>
 	<message key="manager.setup.issuePerVolume">Utgaver per volum</message>
 	<message key="manager.setup.itemsDescription">Navigasjonsfeltelementer kan legges til i det nåværende settet (hjem, om, min side, etc.) som vises på toppen av siden.</message>
 	<message key="manager.setup.itemsPerPage">Element per side</message>

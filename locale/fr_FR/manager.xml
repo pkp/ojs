@@ -172,7 +172,6 @@
 	<message key="manager.setup.initialIssue">Numéro initial</message>
 	<message key="manager.setup.initialIssueDescription">Selon le format sélectionné, identifier le numéro, le volume, et/ou l'année du premier numéro à être publié avec OJS :</message>
 	<message key="manager.setup.institution">Institution</message>
-	<message key="manager.setup.issnDescription"><![CDATA[L'ISSN (International Standard Serial Number) est un numéro à huit chiffres qui sert à identifier les périodiques, y compris les périodiques numériques. C'est géré par un réseau mondial de Centres Nationaux coordonnés par un Centre International situé à Paris, soutenu par l'UNESCO et le gouvernement français. On peut obtenir un numéro auprès du <a href="http://www.issn.org" target="_new">site Web du ISSN</a>. Ça peut être fait à n'importe quel moment de l'exploitation de la revue.]]></message>
 	<message key="manager.setup.itemsDescription">Éléments de la barre de navigation pouvant être ajoutés à l'ensemble actuel (Page d'accueil, À propos, Accueil de l'utilisateur, etc.) apparaissant en haut de la page.</message>
 	<message key="manager.setup.itemsPerPage">Éléments par page</message>
 	<message key="manager.setup.journalAbbreviation">Abréviation de la revue</message>

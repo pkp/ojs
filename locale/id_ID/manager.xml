@@ -280,7 +280,6 @@
 	<message key="manager.setup.initialIssue"> Terbitan Awal
 </message>	<message key="manager.setup.initialIssueDescription"> Tergantung pada format yang dipilih, mengidentifikasi terbitan, volume, dan/ atau tahun terbitan pertama untuk diterbitkan dnegan OJS:</message> 
 	<message key="manager.setup.institution">Institusi</message> 
-	<message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number) adalah delapan digit nomor yang mengidentifikasi penerbitan berkala, termasuk penerbitan berkala elektronik. ISSN dikelola oleh World Wide Network of National Centres yang dikoordinasikan oleh International Centre yang berkedudukan di Paris yang didukung oleh Unesco dan Pemerintah Perancis. ISSN bisa didapatkan di <a href="http://www.issn.org" target="_new">Website ISSN</a>.]]></message>
 	<message key="manager.setup.itemsDescription"> Item navigasi bisa ditambahkan ke set yang ada saat ini (Beranda, Tentang Kami, Beranda Pengguna, dll) yang ditampilkan di bagian atas pada halaman.</message>
 	<message key="manager.setup.itemsPerPage"> Item per halaman</message> 
 	<message key="manager.setup.journalAbbreviation"> Singkatan Jurnal</message> 

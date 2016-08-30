@@ -168,7 +168,6 @@
 	<message key="manager.setup.initialIssue">Αρχικό τεύχος</message>
 	<message key="manager.setup.initialIssueDescription">Με βάση την επιλεγμένη μορφή, προσδιορίστε το τεύχος, τον τόμο ή/και το έτος για το πρώτο τεύχος που θα δημοσιευθεί με το OJS:</message>
 	<message key="manager.setup.institution">Ίδρυμα</message>
-	<message key="manager.setup.issnDescription"><![CDATA[Ο ISSN (διεθνής πρότυπος αριθμός περιοδικής έκδοσης) αποτελεί αριθμό με οκτώ ψηφία που ταυτοποιεί περιοδικές εκδόσεις όπως η συγκεκριμένη, συμπεριλαμβανομένων αυτών σε ηλεκτρονική μορφή. Διαχειρίζεται από ένα παγκόσμιο δίκτυο Εθνικών Κέντρων που συντονίζονται από ένα Διεθνές Κέντρο με βάση το Παρίσι, υποστηριζόμενο από την Unesco και τη Γαλλική κυβέρνηση. Η λήψη του αριθμού αυτού μπορεί να γίνει από τον <a  href="http://www.issn.org" target="_blank">ιστότοπο του ISSN </a>. Αυτό μπορεί να πραγματοποιηθεί σε οποιοδήποτε σημείο λειτουργίας του περιοδικού.]]></message>
 	<message key="manager.setup.itemsDescription">Επιπλέον στοιχεία μπορούν να προστεθούν στα ήδη υπάρχοντα (Αρχική, Σχετικά με, Αρχική σελίδα χρήστη, κτλ.) της γραμμής πλοήγησης  που βρίσκεται στην κορυφή της σελίδας.</message>
 	<message key="manager.setup.itemsPerPage">Τεκμήρια ανά σελίδα</message>
 	<message key="manager.setup.journalAbbreviation">Συντομογραφία περιοδικού</message>

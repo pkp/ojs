@@ -190,7 +190,6 @@
 	<message key="manager.setup.initialIssue">الإصدار الأول</message>
 	<message key="manager.setup.initialIssueDescription">حسب الصيغة المعتمدة في المجلة، حدد رقم العدد والمجلد و/أو السنة للإصدار الأول التي تريد الانطلاق به مع نظام المجلات المفتوحة:</message>
 	<message key="manager.setup.institution">المؤسسة</message>
-	<message key="manager.setup.issnDescription"><![CDATA[إن الرقم التعريفي ISSN والذي هو مختصر: International Standard Serial Number هو رقم مؤلف من ثمانِ مراتب لتعريف المنشورات الدورية كهذه المجلة، شاملاً الدوريات الالكترونية. وهو مدار من قبل شبكة عالمية من المراكز الوطنية يتم التنسيق بينها عبر مركز عالمي مقره في باريس ومدعوم من قبل اليونسكو والحكومة الفرنسية. يمكن الحصول على هذا الرقم من <a href="http://www.issn.org" target="_new">موقع ISSN</a>. هذا الأمر يمكن إجراؤه خلال أي مرحلة من تشغيل المجلة.]]></message>
 	<message key="manager.setup.itemsDescription">فقرات شريط التنقل بالإمكان إضافتها إلى المجموعة الحالية (الرئيسية، عن المجلة، صفحة المستخدم الرئيسية... إلخ.) والتي تظهر أعلى الصفحة.</message>
 	<message key="manager.setup.itemsPerPage">عدد فقرات الصفحة</message>
 	<message key="manager.setup.journalAbbreviation">مختصر اسم المجلة</message>
