@@ -74,6 +74,7 @@
 <script src="{$baseUrl}/lib/pkp/js/controllers/form/FileUploadFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/form/MultilingualInputHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/form/CancelActionAjaxFormHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/controllers/form/ThemeOptionsHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/form/UserFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/form/reviewer/ReviewerReviewStep3FormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/grid/GridHandler.js"></script>

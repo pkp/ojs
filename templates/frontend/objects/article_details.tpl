@@ -187,7 +187,7 @@
 					{foreach from=$citationPlugins name="citationPlugins" item="citationPlugin"}
 						<div class="sub_item citation_display">
 							<div class="label">
-								How to Cite
+								{translate key="submission.howToCite"}
 							</div>
 							<div id="citationOutput" class="value">
 								{$citationPlugin->fetchCitation($article, $issue, $currentContext)}
@@ -199,7 +199,7 @@
 					{* Output list of all citation formats *}
 					<div class="sub_item citation_format_options">
 						<div class="label">
-							Citation Formats
+							{translate key="submission.howToCite.citationFormats"}
 						</div>
 						<div class="value">
 							<ul>
