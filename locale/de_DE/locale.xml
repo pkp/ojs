@@ -1150,4 +1150,7 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 	<message key="user.profile.form.showOtherContexts">Bei anderen Zeitschriften registrieren</message>
 	<message key="notification.type.submissionSubmitted">Ein neuer Artikel wurde eingereicht: "{$title}"</message>
 	<message key="journal.viewAllIssues">Alle Ausgaben anzeigen</message>
+
+	<message key="editor.issues.backIssues">Frühere Ausgaben</message>
+	<message key="editor.issues.futureIssues">Zukünftige Ausgaben</message>
 </locale>

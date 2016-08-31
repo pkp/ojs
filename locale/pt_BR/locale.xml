@@ -1136,4 +1136,7 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="context.current">Revista Atual:</message>
 	<message key="user.noRoles.selectUsersWithoutRoles">Incluir usuários sem papéis nesta revista.</message>
 	<message key="search.results.orderBy.popularityAll">Popularidade (desde sempre)</message>
+
+	<message key="editor.issues.backIssues">Edições anteriores</message>
+	<message key="editor.issues.futureIssues">Edições futuras</message>
 </locale>

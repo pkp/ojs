@@ -34,8 +34,6 @@
 	<message key="editor.notifyUsers.includeToc">Incluir sumário da edição:</message>
 	<message key="editor.editorAdministration">Administração do editor</message>
 	<message key="editor.issues.createIssue">Incluir edição</message>
-	<message key="editor.issues.backIssues">Edições anteriores</message>
-	<message key="editor.issues.futureIssues">Edições futuras</message>
 	<message key="editor.issues.currentIssue">Edição atual</message>
 	<message key="editor.issues.numArticles">Itens</message>
 	<message key="editor.issues.noArticles">Nenhum item agendado para esta edição.</message>

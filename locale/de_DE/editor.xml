@@ -43,8 +43,6 @@
 	<message key="editor.notifyUsers.includeToc">Das Inhaltsverzeichnis dieser Ausgabe anfügen:</message>
 	<message key="editor.editorAdministration">Redaktionsaufgaben</message>
 	<message key="editor.issues.createIssue">Ausgabe erstellen</message>
-	<message key="editor.issues.backIssues">Frühere Ausgaben</message>
-	<message key="editor.issues.futureIssues">Zukünftige Ausgaben</message>
 	<message key="editor.issues.currentIssue">Aktuelle Ausgabe</message>
 	<message key="editor.issues.numArticles">Zahl der Beiträge</message>
 	<message key="editor.issues.noArticles">Zur Zeit kein Beitrag zur Veröffentlichung in dieser Ausgabe vorgesehen</message>

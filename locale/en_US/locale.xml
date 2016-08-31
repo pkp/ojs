@@ -1148,4 +1148,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">This search implementation does not allow per-journal re-indexing.</message>
 	<message key="search.cli.rebuildIndex.unknownJournal">The given journal path "{$journalPath}" could not be resolved to a journal.</message>
 
+	<message key="editor.issues.backIssues">Back Issues</message>
+	<message key="editor.issues.futureIssues">Future Issues</message>
 </locale>

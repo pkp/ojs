@@ -43,8 +43,6 @@
 	<message key="editor.notifyUsers.includeToc">Incluir la tabla de contenidos de este número:</message>
 	<message key="editor.editorAdministration">Administración del editor/a</message>
 	<message key="editor.issues.createIssue">Crear número</message>
-	<message key="editor.issues.backIssues">Números anteriores</message>
-	<message key="editor.issues.futureIssues">Próximos números</message>
 	<message key="editor.issues.currentIssue">Número actual</message>
 	<message key="editor.issues.numArticles">Elementos</message>
 	<message key="editor.issues.noArticles">No hay elementos planificados para este número.</message>
