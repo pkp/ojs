@@ -413,12 +413,6 @@ recaptcha_private_key = your_private_key
 ; Whether or not to use Captcha on user registration
 captcha_on_register = on
 
-; Whether or not to use Captcha on user comments
-captcha_on_comments = on
-
-; Whether or not to use Captcha on notification mailing list registration
-captcha_on_mailinglist = on
-
 
 ;;;;;;;;;;;;;;;;;;;;;
 ; External Commands ;
