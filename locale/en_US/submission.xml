@@ -73,4 +73,6 @@
 	<message key="submission.submit.form.contributorRoleRequired">Please select the contributor's role.</message>
 
 	<message key="submission.citationFormat.notFound">The requested citation format could not be retrieved.</message>
+
+	<message key="submission.metadataDescription">These specifications are based on the Dublin Core metadata set, an international standard used to describe journal content.</message>
 </locale>
