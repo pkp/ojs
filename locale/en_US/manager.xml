@@ -285,7 +285,7 @@
 	<message key="manager.setup.restrictArticleAccess">Users must be registered and log in to view open access content.</message>
 	<message key="manager.setup.restrictSiteAccess">Users must be registered and log in to view the journal site.</message>
 	<message key="manager.setup.reviewGuidelines">Review Guidelines</message>
-	<message key="manager.setup.reviewGuidelinesDescription">Provide external reviewers with criteria for judging a submission's suitability for publication in the journal, which may include instructions for preparing an effective and helpful review. Reviewers will have an opportunity to provide comments intended for the author and editor, as well as separate comments only for the editor.</message>
+	<message key="manager.setup.reviewGuidelinesDescription">Provide reviewers with criteria for judging a submission's suitability for publication in the journal, which may include instructions for preparing an effective and helpful review. Reviewers will have an opportunity to provide comments intended for the author and editor, as well as separate comments only for the editor.</message>
 	<message key="manager.setup.reviewOptions">Review Options</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">Automated Email Reminders</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
