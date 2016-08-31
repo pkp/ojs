@@ -556,7 +556,7 @@ The submission &quot;{$submissionTitle}&quot; to {$contextName} now needs galley
 1. Click on the Submission URL below.<br />
 2. Log into the journal and use the Production Ready files to create the galleys according to the journal's standards.<br />
 3. Upload the galleys to the Galley Files section.<br />
-4. Notify the Editor that the galleys are uploaded and ready to be audited.<br />
+4. Notify the Editor using Production Discussions that the galleys are uploaded and ready.<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Submission URL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
