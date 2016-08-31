@@ -29,5 +29,4 @@
 	url = {ldelim}{url|bibtex_escape page="article" op="view" path=$article->getBestArticleId()}{rdelim}
 {rdelim}
 </pre>
-{/literal}
 </div>
