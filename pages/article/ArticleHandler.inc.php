@@ -108,7 +108,7 @@ class ArticleHandler extends Handler {
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = $galleyDao->getByBestGalleyId($galleyId, $article->getId());
 		if ($galley && $galley->getRemoteURL()) $request->redirectUrl($galley->getRemoteURL());
-		$templateMgr->assign('galley', $galley);
+
 		// Copyright and license info
 		$templateMgr->assign(array(
 			'copyright' => $journal->getLocalizedSetting('copyrightNotice'),
