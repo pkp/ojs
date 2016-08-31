@@ -25,7 +25,6 @@ class SiteAccessOptionsForm extends ContextSettingsForm {
 			'disableUserReg' => 'bool',
 			'restrictSiteAccess' => 'bool',
 			'restrictArticleAccess' => 'bool',
-			'showGalleyLinks' => 'bool'
 		);
 
 		parent::ContextSettingsForm($settings, 'controllers/tab/settings/siteAccessOptions/form/siteAccessOptionsForm.tpl', $wizardMode);

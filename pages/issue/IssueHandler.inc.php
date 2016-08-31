@@ -331,7 +331,6 @@ class IssueHandler extends Handler {
 		}
 
 		$templateMgr->assign(array(
-			'showGalleyLinks' => !$subscriptionRequired || $journal->getSetting('showGalleyLinks'),
 			'hasAccess' => !$subscriptionRequired || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN || $subscribedUser || $subscribedDomain
 		));
 

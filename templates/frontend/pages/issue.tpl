@@ -12,7 +12,6 @@
  * @uses $issueIdentification string Label for this issue, consisting of one or
  *       more of the volume, number, year and title, depending on settings
  * @uses $issueGalleys array Galleys for the entire issue
- * @uses $showGalleyLinks bool Show galley links to users without access?
  *}
 {include file="frontend/components/header.tpl" pageTitleTranslated=$issueIdentification}
 

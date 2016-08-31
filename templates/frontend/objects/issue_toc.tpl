@@ -12,7 +12,6 @@
  * @uses $issueSeries string Vol/No/Year string for the issue
  * @uses $issueGalleys array Galleys for the entire issue
  * @uses $hasAccess bool Can this user access galleys for this context?
- * @uses $showGalleyLinks bool Show galley links to users without access?
  * @uses $coverImagePath string Base URL path for an issue cover image
  * @uses $publishedArticles array Lists of articles published in this issue
  *   sorted by section.
@@ -82,7 +81,7 @@
 	</div>
 
 	{* Full-issue galleys *}
-	{if $issueGalleys && ($hasAccess || $showGalleyLinks)}
+	{if $issueGalleys && $hasAccess}
 		<div class="galleys">
 			<h2>
 				{translate key="issue.fullIssue"}

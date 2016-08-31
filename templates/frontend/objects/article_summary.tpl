@@ -10,8 +10,7 @@
  * @uses $article Article The article
  * @uses $hasAccess bool Can this user access galleys for this context? The
  *       context may be an issue or an article
- * @uses $showGalleyLinks bool Show galley links to users without access?
- * @Uses $showDatePublished bool Show the date this article was published?
+ * @uses $showDatePublished bool Show the date this article was published?
  *}
 {assign var=articlePath value=$article->getBestArticleId()}
 {if (!$section.hideAuthor && $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_DEFAULT) || $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_SHOW}
@@ -57,7 +56,7 @@
 	</div>
 	{/if}
 
-	{if $hasAccess || $showGalleyLinks}
+	{if $hasAccess}
 		<ul class="galleys_links">
 			{foreach from=$article->getGalleys() item=galley}
 				<li>
