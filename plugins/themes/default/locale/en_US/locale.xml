@@ -25,6 +25,6 @@
 	<message key="plugins.themes.default.option.typography.lato">Lato: A popular modern sans-serif font.</message>
 	<message key="plugins.themes.default.option.typography.lora">Lora: A wide-set serif font good for reading online.</message>
 	<message key="plugins.themes.default.option.typography.lora_openSans">Lora/Open Sans: A complimentary pairing with serif headings and sans-serif body text.</message>
-	<message key="plugins.themes.default.option.color.label">Color</message>
-	<message key="plugins.themes.default.option.color.description">Choose a color for the header.</message>
+	<message key="plugins.themes.default.option.colour.label">Colour</message>
+	<message key="plugins.themes.default.option.colour.description">Choose a colour for the header.</message>
 </locale>
