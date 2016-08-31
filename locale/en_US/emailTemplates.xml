@@ -537,10 +537,9 @@ Our decision is to: Decline Submission<br />
 <br />
 I would ask that you undertake the copyediting of &quot;{$submissionTitle}&quot; for {$contextName} by following these steps.<br />
 1. Click on the Submission URL below.<br />
-2. Consult Copyediting Instructions posted on webpage.<br />
-3. Open any files available under Final Draft Files and copyedit, while adding Author Queries as needed.<br />
-4. Save copyedited file(s), and upload to Copyediting.<br />
-5. Notify the Editor that all files have been prepared, and that the auditing process may begin.<br />
+2. Open any files available under Draft Files and do your copyediting, while adding any Copyediting Discussions as needed.<br />
+3. Save copyedited file(s), and upload to Copyedited panel.<br />
+4. Notify the Editor that all files have been prepared, and that the Production process may begin.<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
