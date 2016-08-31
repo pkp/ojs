@@ -7,6 +7,8 @@
  *
  * Form for creation and modification of an issue
  *}
+
+{help file="issue-management.md#edit-issue-data" class="pkp_help_tab"}
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
