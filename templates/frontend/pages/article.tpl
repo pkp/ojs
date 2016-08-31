@@ -21,17 +21,12 @@
 		{include file="frontend/components/breadcrumbs_article.tpl" currentTitleKey="article.article"}
 	{/if}
 
-	{if $galley}
-		{* Show galley overview *}
-		{include file="frontend/objects/galley_details.tpl"}
-	{else}
-		{* Show article overview *}
-		{include file="frontend/objects/article_details.tpl"}
+	{* Show article overview *}
+	{include file="frontend/objects/article_details.tpl"}
 
-		{* Display Dublin Core metadata *}
-		{include file="frontend/objects/article_dublinCore.tpl" article=$article}
-		{include file="frontend/objects/article_googleScholar.tpl" article=$article}
-	{/if}
+	{* Display Dublin Core metadata *}
+	{include file="frontend/objects/article_dublinCore.tpl" article=$article}
+	{include file="frontend/objects/article_googleScholar.tpl" article=$article}
 
 	{call_hook name="Templates::Article::Footer::PageFooter"}
 
