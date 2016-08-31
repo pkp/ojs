@@ -8,7 +8,7 @@
  * Common site header.
  *}
 {capture assign="appSpecificMenuItems"}
-	{if array_intersect(array(ROLE_ID_MANAGER), $userRoles)}
+	{if array_intersect(array(ROLE_ID_MANAGER), (array)$userRoles)}
 		<li><a name="issues" href="{url router=$smarty.const.ROUTE_PAGE page="manageIssues"}">{translate key="editor.navigation.issues"}</a></li>
 	{/if}
 {/capture}
