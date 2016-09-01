@@ -13,7 +13,7 @@
 
 <locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.importexport.crossref.description">Exportar ou registrar metadados dos artigos no formato CrossRef XML.</message>
-	<message key="plugins.importexport.crossref.displayName">Plugin de Registros e Exportação CrossRef</message>
+	<message key="plugins.importexport.crossref.displayName">Registro e Exportação XML CrossRef</message>
 	<message key="plugins.importexport.crossref.requirements">Requisitos</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">Todos os requisitos do plugin foram satisfeitos.</message>
 	<message key="plugins.importexport.crossref.error.pluginNotConfigured"><![CDATA[O plugin Crossref não está configurado! Configure este plugin na sua <a href="{$settingsUrl}">página de configurações</a>.]]></message>
@@ -70,7 +70,7 @@
 		<p>Apenas o status da última verificação é mostrado.</p>
 		<p>Se um depósito falhou, tente resolver o problema e faça o depósito novamente.</p>]]></message>
 
-	<message key="plugins.importexport.crossref.notification.failed">Um doi falhou ao ser registrado. Por favor vá para "Plugin de Registros e Exportação CrossRef > Exportar artigos não registrados > Falhos".</message>
+	<message key="plugins.importexport.crossref.notification.failed">Um doi falhou ao ser registrado. Por favor vá para "Registro e Exportação XML CrossRef > Exportar artigos não registrados > Falhos".</message>
 	<message key="plugins.importexport.crossref.register.error.mdsError">Submissão não sucedida! O servidor de registro DOI retornou um erro: '{$param}'.</message>
 	<message key="plugins.importexport.crossref.register.success">Submissão bem sucedida!</message>
 
