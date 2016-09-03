@@ -191,11 +191,11 @@ class Upgrade extends Installer {
 
 		// First, do Admins.
 		// create the admin user group.
-		$userGroupDao->update('INSERT INTO user_groups (user_group_id, context_id, role_id, is_default) VALUES (?, ?, ?, ?)', array(1, CONTEXT_SITE, ROLE_ID_SITE_ADMIN, 1));
+		$userGroupDao->update('INSERT INTO user_groups (context_id, role_id, is_default) VALUES (?, ?, ?)', array(CONTEXT_SITE, ROLE_ID_SITE_ADMIN, 1));
 		$userResult = $userGroupDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array(CONTEXT_SITE, ROLE_ID_SITE_ADMIN));
 		while (!$userResult->EOF) {
 			$row = $userResult->GetRowAssoc(false);
-			$userGroupDao->update('INSERT INTO user_user_groups (user_group_id, user_id) VALUES (?, ?)', array(1, (int) $row['user_id']));
+			$userGroupDao->update('INSERT INTO user_user_groups (user_group_id, user_id) VALUES (?, ?)', array($userGroupDao->getInsertId(), (int) $row['user_id']));
 			$userResult->MoveNext();
 		}
 
