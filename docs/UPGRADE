@@ -149,6 +149,11 @@ manually added after applying the patch, search the patch file for lines like:
 "Binary files (filename here) differ" (not including the quotes). These files
 can be found in the distribution archive.
 
+WARNING: The patch tool may leave files with ".orig" or ".rej" suffixes in your
+installation. Please ensure that these do not expose any unintended system
+information, particularly in the case of config.inc.php.orig (which may be
+created in your installation's root directory).
+
 
 Applying the Latest Recommended Patches
 ---------------------------------------
