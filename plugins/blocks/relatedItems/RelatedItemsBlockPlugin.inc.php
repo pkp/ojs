@@ -42,7 +42,7 @@ class RelatedItemsBlockPlugin extends BlockPlugin {
 	/**
 	 * @see BlockPlugin::getContents
 	 */
-	function getContents(&$templateMgr, $request = null) {
+	function getContents($templateMgr, $request = null) {
 		$journal = $request->getJournal();
 
 		return parent::getContents($templateMgr, $request);
