@@ -75,6 +75,16 @@
 </table>
 </div>
 
+<div id="submissionLocale">
+<h4>{translate key="author.submit.submissionLocale"}</h4>
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="article.language"}</td>
+		<td width="80%" class="value">{$submission->getLocale()|escape}</td>
+	</tr>
+</table>
+</div>
+
 <div id="titleAndAbstract">
 <h4>{translate key="submission.titleAndAbstract"}</h4>
 

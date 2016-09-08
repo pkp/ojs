@@ -145,6 +145,13 @@ class Action extends PKPAction {
 				return false;
 
 			} else {
+				// If the article locale has been changed, create a new form
+				// to consider that new locale as required for the form validation
+				if ($article->getLocale() != $metadataForm->getData('locale')) {
+					$article->setLocale($metadataForm->getData('locale'));
+					$metadataForm = new MetadataForm($article, $journal);
+					$metadataForm->readInputData();
+				}
 				if (!$metadataForm->validate()) {
 					return $metadataForm->display();
 				}
