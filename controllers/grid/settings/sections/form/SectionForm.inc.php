@@ -162,9 +162,9 @@ class SectionForm extends PKPSectionForm {
 		ListbuilderHandler::unpack(
 			$request,
 			$this->getData('subEditors'),
-			array(&$this, 'deleteSubEditorEntry'),
-			array(&$this, 'insertSubEditorEntry'),
-			array(&$this, 'updateSubEditorEntry')
+			array($this, 'deleteSubEditorEntry'),
+			array($this, 'insertSubEditorEntry'),
+			array($this, 'updateSubEditorEntry')
 		);
 
 		return true;
