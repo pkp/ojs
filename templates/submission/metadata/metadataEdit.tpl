@@ -213,6 +213,28 @@ function moveAuthor(dir, authorIndex) {
 <div class="separator"></div>
 {/if}
 
+{if count($supportedSubmissionLocaleNames) == 1}
+	{* There is only one supported submission locale; choose it invisibly *}
+	{foreach from=$supportedSubmissionLocaleNames item=localeName key=locale}
+		<input type="hidden" name="locale" value="{$locale|escape}" />
+	{/foreach}
+{else}
+	{* There are several submission locales available; allow choice *}
+	<div id="submissionLocale">
+
+	<h3>{translate key="author.submit.submissionLocale"}</h3>
+	<p>{translate key="author.submit.submissionLocaleDescription"}</p>
+
+	<table class="data" width="100%">
+		<tr valign="top">
+			<td width="20%" class="label">{fieldLabel name="locale" required="true" key="article.language"}</td>
+			<td width="80%" class="value"><select name="locale" id="locale" size="1" class="selectMenu">{html_options options=$supportedSubmissionLocaleNames selected=$locale}</select></td>
+		</tr>
+	</table>
+	</div>{* submissionLocale *}
+	<div class="separator"></div>
+{/if}{* count($supportedSubmissionLocaleNames) == 1 *}
+
 <div id="titleAndAbstract">
 <h3>{translate key="submission.titleAndAbstract"}</h3>
 

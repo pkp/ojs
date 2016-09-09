@@ -142,7 +142,8 @@ class MetadataForm extends Form {
 				'language' => $article->getLanguage(),
 				'sponsor' => $article->getSponsor(null), // Localized
 				'citations' => $article->getCitations(),
-				'hideAuthor' => $article->getHideAuthor()
+				'hideAuthor' => $article->getHideAuthor(),
+				'locale' => $article->getLocale()
 			);
 			// consider the additional field names from the public identifer plugins
 			import('classes.plugins.PubIdPluginHelper');
@@ -233,6 +234,18 @@ class MetadataForm extends Form {
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
 		$templateMgr->assign_by_ref('article', $this->article);
 
+		// Provide available submission languages. (Convert the array
+		// of locale symbolic names xx_XX into an associative array
+		// of symbolic names => readable names.)
+		$supportedSubmissionLocales = $journal->getSetting('supportedSubmissionLocales');
+		if (empty($supportedSubmissionLocales)) $supportedSubmissionLocales = array($journal->getPrimaryLocale());
+		$templateMgr->assign(
+			'supportedSubmissionLocaleNames',
+			array_flip(array_intersect(
+				array_flip(AppLocale::getAllLocales()),
+				$supportedSubmissionLocales
+			))
+		);
 		parent::display();
 	}
 
@@ -267,7 +280,8 @@ class MetadataForm extends Form {
 				'language',
 				'sponsor',
 				'citations',
-				'hideAuthor'
+				'hideAuthor',
+				'locale'
 			)
 		);
 		if ($this->isEditor) {
@@ -328,6 +342,9 @@ class MetadataForm extends Form {
 
 		// Retrieve the previous citation list for comparison.
 		$previousRawCitationList = $article->getCitations();
+
+		// Update article locale
+		$article->setLocale($this->getData('locale'));
 
 		// Update article
 		$article->setTitle($this->getData('title'), null); // Localized
