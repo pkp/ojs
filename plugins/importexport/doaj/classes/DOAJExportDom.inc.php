@@ -31,12 +31,12 @@ class DOAJExportDom {
 
 		// Records node contains all articles, each called a record
 		$records = XMLCustomWriter::createElement($doc, 'records');
-		
+
 		// retrieve selected issues
 		$selectedIssues = array();
 		if (isset($selectedObjects[DOAJ_EXPORT_ISSUES])) {
 			$selectedIssues = $selectedObjects[DOAJ_EXPORT_ISSUES];
-			
+
 			// make sure the selected issues belong to the current journal
 			foreach($selectedIssues as $key => $selectedIssueId) {
 				$selectedIssue = $issueDao->getIssueById($selectedIssueId, $journalId);
@@ -48,7 +48,7 @@ class DOAJExportDom {
 		$selectedArticles = array();
 		if (isset($selectedObjects[DOAJ_EXPORT_ARTICLES])) {
 			$selectedArticles = $selectedObjects[DOAJ_EXPORT_ARTICLES];
-		
+
 			// make sure the selected articles belong to the current journal
 			foreach($selectedArticles as $key => $selectedArticleId) {
 				$selectedArticle = $articleDao->getArticle($selectedArticleId, $journalId);
@@ -58,14 +58,14 @@ class DOAJExportDom {
 
 		$pubArticles = $pubArticleDao->getPublishedArticlesByJournalId($journalId);
 		while ($pubArticle = $pubArticles->next()) {
-			
+
 			// check for selected issues:
 			$issueId = $pubArticle->getIssueId();
 			if (!empty($selectedIssues) && !in_array($issueId, $selectedIssues)) continue;
 
 			$issue = $issueDao->getIssueById($issueId);
 			if(!$issue) continue;
-			
+
 			// check for selected articles:
 			$articleId = $pubArticle->getArticleId();
 			if (!empty($selectedArticles) && !in_array($articleId, $selectedArticles)) continue;
@@ -94,7 +94,7 @@ class DOAJExportDom {
 		$root = XMLCustomWriter::createElement($doc, 'record');
 
 		/* --- Article Language --- */
-		XMLCustomWriter::createChildWithText($doc, $root, 'language', DOAJExportDom::mapLang($article->getLanguage()), false);
+		XMLCustomWriter::createChildWithText($doc, $root, 'language', AppLocale::get3LetterIsoFromLocale($article->getLocale()), false);
 
 		/* --- Publisher name (i.e. institution name) --- */
 		XMLCustomWriter::createChildWithText($doc, $root, 'publisher', $journal->getSetting('publisherInstitution'), false);
@@ -108,7 +108,7 @@ class DOAJExportDom {
 
 		/* --- Article's publication date, volume, issue, DOI --- */
 		if ($article->getDatePublished()) {
-			XMLCustomWriter::createChildWithText($doc, $root, 'publicationDate', DOAJExportDom::formatDate($article->getDatePublished()), false);			
+			XMLCustomWriter::createChildWithText($doc, $root, 'publicationDate', DOAJExportDom::formatDate($article->getDatePublished()), false);
 		}
 		else {
 			XMLCustomWriter::createChildWithText($doc, $root, 'publicationDate', DOAJExportDom::formatDate($issue->getDatePublished()), false);
@@ -146,7 +146,7 @@ class DOAJExportDom {
 			if (empty($title)) continue;
 
 			$titleNode = XMLCustomWriter::createChildWithText($doc, $root, 'title', $title);
-			if (strlen($locale) == 5) XMLCustomWriter::setAttribute($titleNode, 'language', DOAJExportDom::mapLang(String::substr($locale, 0, 2)));
+			XMLCustomWriter::setAttribute($titleNode, 'language', AppLocale::get3LetterIsoFromLocale($locale));
 		}
 
 		/* --- Authors and affiliations --- */
@@ -177,7 +177,7 @@ class DOAJExportDom {
 			if (empty($abstract)) continue;
 
 			$abstractNode = XMLCustomWriter::createChildWithText($doc, $root, 'abstract', String::html2text($abstract));
-			if (strlen($locale) == 5) XMLCustomWriter::setAttribute($abstractNode, 'language', DOAJExportDom::mapLang(String::substr($locale, 0, 2)));
+			XMLCustomWriter::setAttribute($abstractNode, 'language', AppLocale::get3LetterIsoFromLocale($locale));
 		}
 
 		/* --- FullText URL --- */
@@ -258,224 +258,7 @@ class DOAJExportDom {
 		return date('Y-m-d', strtotime($date));
 	}
 
-	/**
-	 * Map a language from a 2-letter code to a 3-letter code.
-	 * FIXME: This should be moved to XML and reconciled against
-	 * other mapping implementations.
-	 * @param $val string 2-letter language code to map
-	 * @return string
-	 */
-	function mapLang($val) {
-		switch ($val) {
-			case "aa": return "aar"; break;
-			case "ab": return "abk"; break;
-			case "af": return "afr"; break;
-			case "ak": return "aka"; break;
-			case "sq": return "alb"; break;
-			case "sqi": return "alb"; break;
-			case "am": return "amh"; break;
-			case "ar": return "ara"; break;
-			case "an": return "arg"; break;
-			case "hy": return "arm"; break;
-			case "hye": return "arm"; break;
-			case "as": return "asm"; break;
-			case "av": return "ava"; break;
-			case "ae": return "ave"; break;
-			case "ay": return "aym"; break;
-			case "az": return "aze"; break;
-			case "ba": return "bak"; break;
-			case "bm": return "bam"; break;
-			case "eu": return "baq"; break;
-			case "eus": return "baq"; break;
-			case "be": return "bel"; break;
-			case "bn": return "ben"; break;
-			case "bh": return "bih"; break;
-			case "bi": return "bis"; break;
-			case "bo": return "tib"; break;
-			case "bod": return "tib"; break;
-			case "bs": return "bos"; break;
-			case "br": return "bre"; break;
-			case "bg": return "bul"; break;
-			case "my": return "bur"; break;
-			case "mya": return "bur"; break;
-			case "ca": return "cat"; break;
-			case "cs": return "cze"; break;
-			case "ces": return "cze"; break;
-			case "ch": return "cha"; break;
-			case "ce": return "che"; break;
-			case "zh": return "chi"; break;
-			case "zho": return "chi"; break;
-			case "cv": return "chv"; break;
-			case "kw": return "cor"; break;
-			case "co": return "cos"; break;
-			case "cr": return "cre"; break;
-			case "cy": return "wel"; break;
-			case "cym": return "wel"; break;
-			case "da": return "dan"; break;
-			case "de": return "ger"; break;
-			case "deu": return "ger"; break;
-			case "dv": return "div"; break;
-			case "nl": return "dut"; break;
-			case "nld": return "dut"; break;
-			case "dz": return "dzo"; break;
-			case "el": return "gre"; break;
-			case "ell": return "gre"; break;
-			case "en": return "eng"; break;
-			case "eo": return "epo"; break;
-			case "et": return "est"; break;
-			case "ee": return "ewe"; break;
-			case "fo": return "fao"; break;
-			case "fa": return "per"; break;
-			case "fas": return "per"; break;
-			case "fj": return "fij"; break;
-			case "fi": return "fin"; break;
-			case "fr": return "fre"; break;
-			case "fra": return "fre"; break;
-			case "fy": return "fry"; break;
-			case "ff": return "ful"; break;
-			case "ka": return "geo"; break;
-			case "kat": return "geo"; break;
-			case "gd": return "gla"; break;
-			case "ga": return "gle"; break;
-			case "gl": return "glg"; break;
-			case "gv": return "glv"; break;
-			case "gn": return "grn"; break;
-			case "gu": return "guj"; break;
-			case "ht": return "hat"; break;
-			case "ha": return "hau"; break;
-			case "he": return "heb"; break;
-			case "hz": return "her"; break;
-			case "hi": return "hin"; break;
-			case "ho": return "hmo"; break;
-			case "hr": return "scr"; break;
-			case "hrv": return "scr"; break;
-			case "hu": return "hun"; break;
-			case "ig": return "ibo"; break;
-			case "is": return "ice"; break;
-			case "isl": return "ice"; break;
-			case "io": return "ido"; break;
-			case "ii": return "iii"; break;
-			case "iu": return "iku"; break;
-			case "ie": return "ile"; break;
-			case "ia": return "ina"; break;
-			case "id": return "ind"; break;
-			case "ik": return "ipk"; break;
-			case "it": return "ita"; break;
-			case "jv": return "jav"; break;
-			case "ja": return "jpn"; break;
-			case "kl": return "kal"; break;
-			case "kn": return "kan"; break;
-			case "ks": return "kas"; break;
-			case "kr": return "kau"; break;
-			case "kk": return "kaz"; break;
-			case "km": return "khm"; break;
-			case "ki": return "kik"; break;
-			case "rw": return "kin"; break;
-			case "ky": return "kir"; break;
-			case "kv": return "kom"; break;
-			case "kg": return "kon"; break;
-			case "ko": return "kor"; break;
-			case "kj": return "kua"; break;
-			case "ku": return "kur"; break;
-			case "lo": return "lao"; break;
-			case "la": return "lat"; break;
-			case "lv": return "lav"; break;
-			case "li": return "lim"; break;
-			case "ln": return "lin"; break;
-			case "lt": return "lit"; break;
-			case "lb": return "ltz"; break;
-			case "lu": return "lub"; break;
-			case "lg": return "lug"; break;
-			case "mk": return "mac"; break;
-			case "mkd": return "mac"; break;
-			case "mh": return "mah"; break;
-			case "ml": return "mal"; break;
-			case "mi": return "mao"; break;
-			case "mri": return "mao"; break;
-			case "mr": return "mar"; break;
-			case "ms": return "may"; break;
-			case "msa": return "may"; break;
-			case "mg": return "mlg"; break;
-			case "mt": return "mlt"; break;
-			case "mo": return "mol"; break;
-			case "mn": return "mon"; break;
-			case "na": return "nau"; break;
-			case "nv": return "nav"; break;
-			case "nr": return "nbl"; break;
-			case "nd": return "nde"; break;
-			case "ng": return "ndo"; break;
-			case "ne": return "nep"; break;
-			case "nn": return "nno"; break;
-			case "nb": return "nob"; break;
-			case "no": return "nor"; break;
-			case "ny": return "nya"; break;
-			case "oc": return "oci"; break;
-			case "oj": return "oji"; break;
-			case "or": return "ori"; break;
-			case "om": return "orm"; break;
-			case "os": return "oss"; break;
-			case "pa": return "pan"; break;
-			case "pi": return "pli"; break;
-			case "pl": return "pol"; break;
-			case "pt": return "por"; break;
-			case "ps": return "pus"; break;
-			case "qu": return "que"; break;
-			case "rm": return "roh"; break;
-			case "ro": return "rum"; break;
-			case "ron": return "rum"; break;
-			case "rn": return "run"; break;
-			case "ru": return "rus"; break;
-			case "sg": return "sag"; break;
-			case "sa": return "san"; break;
-			case "sr": return "scc"; break;
-			case "srp": return "scc"; break;
-			case "si": return "sin"; break;
-			case "sk": return "slo"; break;
-			case "slk": return "slo"; break;
-			case "sl": return "slv"; break;
-			case "se": return "sme"; break;
-			case "sm": return "smo"; break;
-			case "sn": return "sna"; break;
-			case "sd": return "snd"; break;
-			case "so": return "som"; break;
-			case "st": return "sot"; break;
-			case "es": return "spa"; break;
-			case "sc": return "srd"; break;
-			case "ss": return "ssw"; break;
-			case "su": return "sun"; break;
-			case "sw": return "swa"; break;
-			case "sv": return "swe"; break;
-			case "ty": return "tah"; break;
-			case "ta": return "tam"; break;
-			case "tt": return "tat"; break;
-			case "te": return "tel"; break;
-			case "tg": return "tgk"; break;
-			case "tl": return "tgl"; break;
-			case "th": return "tha"; break;
-			case "ti": return "tir"; break;
-			case "to": return "ton"; break;
-			case "tn": return "tsn"; break;
-			case "ts": return "tso"; break;
-			case "tk": return "tuk"; break;
-			case "tr": return "tur"; break;
-			case "tw": return "twi"; break;
-			case "ug": return "uig"; break;
-			case "uk": return "ukr"; break;
-			case "ur": return "urd"; break;
-			case "uz": return "uzb"; break;
-			case "ve": return "ven"; break;
-			case "vi": return "vie"; break;
-			case "vo": return "vol"; break;
-			case "wa": return "wln"; break;
-			case "wo": return "wol"; break;
-			case "xh": return "xho"; break;
-			case "yi": return "yid"; break;
-			case "yo": return "yor"; break;
-			case "za": return "zha"; break;
-			case "zu": return "zul"; break;
-			default: return "";
-		}
-	}
+
 }
 
 ?>
