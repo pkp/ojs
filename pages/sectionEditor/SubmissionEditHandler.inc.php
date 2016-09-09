@@ -78,6 +78,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$templateMgr =& TemplateManager::getManager();
 
+		$allLocales = AppLocale::getAllLocales();
+		$submissionLocale = $allLocales[$submission->getLocale()];
+		$templateMgr->assign('submissionLocale', $submissionLocale);
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('section', $section);
 		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());

@@ -80,7 +80,7 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.language"}</td>
-		<td width="80%" class="value">{$submission->getLocale()|escape}</td>
+		<td width="80%" class="value">{$submissionLocale|escape}</td>
 	</tr>
 </table>
 </div>
