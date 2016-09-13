@@ -3,8 +3,8 @@
 /**
  * @file classes/article/AuthorDAO.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AuthorDAO
@@ -95,7 +95,7 @@ class AuthorDAO extends PKPAuthorDAO {
 
 		if (isset($journalId)) $params[] = $journalId;
 		if (isset($initial)) {
-			$params[] = String::strtolower($initial) . '%';
+			$params[] = PKPString::strtolower($initial) . '%';
 			$initialSql = ' AND LOWER(aa.last_name) LIKE LOWER(?)';
 		} else {
 			$initialSql = '';

@@ -3,8 +3,8 @@
 /**
  * @file classes/submission/form/SubmissionSubmitStep1Form.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionSubmitStep1Form
@@ -32,7 +32,7 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 
 		// Get section for this context
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$sectionOptions = array('0' => __('submission.submit.selectSection')) + $sectionDao->getSectionTitles($this->context->getId());
+		$sectionOptions = array('0' => '') + $sectionDao->getSectionTitles($this->context->getId());
 		$templateMgr->assign('sectionOptions', $sectionOptions);
 
 		return parent::fetch($request);

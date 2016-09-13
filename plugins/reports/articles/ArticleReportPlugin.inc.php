@@ -3,8 +3,8 @@
 /**
  * @file plugins/reports/articles/ArticleReportPlugin.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleReportPlugin
@@ -13,7 +13,7 @@
  * @brief Article report plugin
  */
 
-import('classes.plugins.ReportPlugin');
+import('lib.pkp.classes.plugins.ReportPlugin');
 
 class ArticleReportPlugin extends ReportPlugin {
 	/**
@@ -74,6 +74,7 @@ class ArticleReportPlugin extends ReportPlugin {
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
 
 		import('classes.article.Article');
+		import('classes.workflow.EditorDecisionActionsManager');
 		$decisionMessages = array(
 			SUBMISSION_EDITOR_DECISION_ACCEPT => __('editor.article.decision.accept'),
 			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => __('editor.article.decision.pendingRevisions'),

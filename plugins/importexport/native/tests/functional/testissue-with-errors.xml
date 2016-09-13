@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE issue PUBLIC "-//PKP//OJS Articles and Issues XML//EN" "../../../../../plugins/importexport/native/native.dtd">
 <issue published="true" current="true">
 	<!-- Unknown pub-id-type -->
 	<id type="unknown">xyz</id>
@@ -24,7 +23,6 @@
 			<date_published>2011-10-06</date_published>
 			<galley locale="en_US">
 				<id type="doi">10.1234/t.v1i1.1.g1-imp-test</id>
-				<label>PDF</label>
 				<file>
 					<embed filename="DOI Test Galley.pdf" encoding="base64"
 						mime_type="application/pdf"></embed>

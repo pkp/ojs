@@ -3,8 +3,8 @@
 /**
  * @file plugins/oaiMetadataFormats/rfc1807/OAIMetadataFormat_RFC1807.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_RFC1807
@@ -52,17 +52,12 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 		// Subject
 		$subjects = array_merge_recursive(
 			$this->stripAssocArray((array) $article->getDiscipline(null)),
-			$this->stripAssocArray((array) $article->getSubject(null)),
-			$this->stripAssocArray((array) $article->getSubjectClass(null))
+			$this->stripAssocArray((array) $article->getSubject(null))
 		);
 		$subject = isset($subjects[$journal->getPrimaryLocale()])?$subjects[$journal->getPrimaryLocale()]:'';
 
 		// Coverage
-		$coverage = array(
-			$article->getLocalizedCoverageGeo(),
-			$article->getLocalizedCoverageChron(),
-			$article->getLocalizedCoverageSample()
-		);
+		$coverage = $article->getCoverage(null);
 
 		$url = Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()));
 		$response = "<rfc1807\n" .

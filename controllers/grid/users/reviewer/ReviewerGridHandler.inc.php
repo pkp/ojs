@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/users/reviewer/ReviewerGridHandler.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReviewerGridHandler
@@ -23,6 +23,31 @@ class ReviewerGridHandler extends PKPReviewerGridHandler {
 		parent::PKPReviewerGridHandler();
 	}
 
+	/**
+	 * @copydoc PKPReviewerGridHandler::reviewRead()
+	 */
+	function reviewRead($args, $request) {
+		// Retrieve review assignment.
+		$reviewAssignment = $this->getAuthorizedContextObject(ASSOC_TYPE_REVIEW_ASSIGNMENT); /* @var $reviewAssignment ReviewAssignment */
+
+		// Recommendation
+		$newRecommendation = $request->getUserVar('recommendation');
+		// If editor set or changed the recommendation
+		if ($newRecommendation && $reviewAssignment->getRecommendation() != $newRecommendation) {
+			$reviewAssignment->setRecommendation($newRecommendation);
+
+			// Add log entry
+			import('lib.pkp.classes.log.SubmissionLog');
+			import('classes.log.SubmissionEventLogEntry');
+			$submission = $this->getSubmission();
+			$userDao = DAORegistry::getDAO('UserDAO');
+			$reviewer = $userDao->getById($reviewAssignment->getReviewerId());
+			$user = $request->getUser();
+			AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_APP_EDITOR);
+			SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_REVIEW_RECOMMENDATION_BY_PROXY, 'log.review.reviewRecommendationSetByProxy', array('round' => $reviewAssignment->getRound(), 'submissionId' => $submission->getId(), 'editorName' => $user->getFullName(), 'reviewerName' => $reviewer->getFullName()));
+		}
+		return parent::reviewRead($args, $request);
+	}
 
 	//
 	// Overridden methods from PKPHandler
@@ -37,7 +62,7 @@ class ReviewerGridHandler extends PKPReviewerGridHandler {
 		$this->_stageId = (int)$stageId;
 
 		// Get the stage access policy
-		import('classes.security.authorization.WorkflowStageAccessPolicy');
+		import('lib.pkp.classes.security.authorization.WorkflowStageAccessPolicy');
 		$ompWorkflowStageAccessPolicy = new WorkflowStageAccessPolicy($request, $args, $roleAssignments, 'submissionId', $stageId);
 
 		// Add policy to ensure there is a review round id.
@@ -51,6 +76,7 @@ class ReviewerGridHandler extends PKPReviewerGridHandler {
 
 		return parent::authorize($request, $args, $roleAssignments);
 	}
+
 }
 
 ?>

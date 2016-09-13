@@ -3,8 +3,8 @@
 /**
  * @file plugins/oaiMetadataFormats/marcxml/OAIMetadataFormat_MARC21.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_MARC21
@@ -32,13 +32,12 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 
 		$subjects = array_merge_recursive(
 			$this->stripAssocArray((array) $article->getDiscipline(null)),
-			$this->stripAssocArray((array) $article->getSubject(null)),
-			$this->stripAssocArray((array) $article->getSubjectClass(null))
+			$this->stripAssocArray((array) $article->getSubject(null))
 		);
 
 		$templateMgr->assign(array(
 			'subject' => isset($subjects[$journal->getPrimaryLocale()])?$subjects[$journal->getPrimaryLocale()]:'',
-			'abstract' => String::html2text($article->getAbstract($article->getLocale())),
+			'abstract' => PKPString::html2text($article->getAbstract($article->getLocale())),
 			'language' => AppLocale::get3LetterIsoFromLocale($article->getLocale())
 		));
 

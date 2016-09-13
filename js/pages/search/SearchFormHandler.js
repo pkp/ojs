@@ -4,8 +4,8 @@
 /**
  * @file js/pages/search/SearchFormHandler.js
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SearchFormHandler
@@ -40,7 +40,6 @@
 			// Auto-complete is switched off.
 			$queryInput = $form.find('input[name="query"]');
 		}
-		$queryInput.focus().select();
 
 		// Configure the form handler.
 		options.submitHandler = this.submitForm;

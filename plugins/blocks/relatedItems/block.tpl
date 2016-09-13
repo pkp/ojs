@@ -1,8 +1,8 @@
 {**
  * plugins/blocks/relatedItems/block.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Keyword cloud block plugin
@@ -12,12 +12,27 @@
 {if $journalRt && $journalRt->getEnabled() && $journalRt->getDefineTerms() && $version}
 
 <script>
-	{literal}initRelatedItems();{/literal}
+	{literal}
+	$(document).ready(function(){
+		$("#relatedItems").hide();
+		$("#toggleRelatedItems").show();
+	    $("#hideRelatedItems").click(function() {
+			$("#relatedItems").hide('slow');
+			$("#hideRelatedItems").hide();
+			$("#showRelatedItems").show();
+		});
+		$("#showRelatedItems").click(function() {
+			$("#relatedItems").show('slow');
+			$("#showRelatedItems").hide();
+			$("#hideRelatedItems").show();
+		});
+	});
+	{/literal}
 </script>
 
-
-<div class="block" id="sidebarRTRelatedItems">
-	<span class="blockTitle">{translate key="plugins.block.relatedItems.title"}</span>
+<div class="pkp_block block_rt_related_items">
+	<span class="title">{translate key="plugins.block.relatedItems.title"}</span>
+	<div class="content">
 		<table>
 			<tr>
 				<td valign="top" style="width:26px;">
@@ -40,6 +55,7 @@
 				</td>
 			</tr>
 		</table>
+	</div>
 </div>
 
 {/if}

@@ -3,8 +3,8 @@
 /**
  * @file tests/functional/pages/editor/FunctionalEditingBaseTestCase.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FunctionalLucenePluginBaseTestCase
@@ -90,7 +90,7 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 		// We should now have the article ID in the URL.
 		$url = $this->getLocation();
 		$matches = null;
-		String::regexp_match_get('/articleId=([0-9]+)/', $url, $matches);
+		PKPString::regexp_match_get('/articleId=([0-9]+)/', $url, $matches);
 		self::assertTrue(count($matches) == 2);
 		$articleId = $matches[1];
 		self::assertTrue(is_numeric($articleId));

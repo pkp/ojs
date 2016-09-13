@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/externalFeed/ExternalFeedForm.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ExternalFeedForm
@@ -46,6 +46,7 @@ class ExternalFeedForm extends Form {
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'plugins.generic.externalFeed.form.titleRequired'));
 
 		$this->addCheck(new FormValidatorPost($this));
+		$this->addCheck(new FormValidatorCSRF($this));
 	}
 
 	/**
@@ -148,7 +149,7 @@ class ExternalFeedForm extends Form {
 		if ($feed->getId() != null) {
 			$externalFeedDao->updateExternalFeed($feed);
 		} else {
-			$feed->setSeq(REALLY_BIG_NUMBER);
+			$feed->setSequence(REALLY_BIG_NUMBER);
 			$externalFeedDao->insertExternalFeed($feed);
 
 			// Re-order the feeds so the new one is at the end of the list.

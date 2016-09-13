@@ -2,12 +2,12 @@
 === OJS DataCite Export Plugin
 === Version: 1.0
 === Author: Florain Grandel <jerico.dev@gmail.com>
-=== Last update: 20. February 2012  
+=== Author: Bozana Bokan <bozana.bokan@posteo.net>
 ================================
 
 About
 -----
-This plugin enables the export of issue, article, galley and supplementary file metadata in DataCite format and 
+This plugin enables the export of issue, article and galley metadata in DataCite format and
 the registration of DOIs with DataCite.
 
 License
@@ -17,16 +17,12 @@ complete terms of this license.
 
 System Requirements
 -------------------
-Same requirements as the OJS 2.4 core.
+Same requirements as the OJS 3.0 core.
 
 Note
 ---------
 In order to register DOIs with DataCite from within OJS you will have to enter your username and password. 
 If you do not enter or have your own username and password you'll still be able to export into the 
 DataCite XML format but you cannot register your DOIs from within OJS.
-Please note, that the passowrd will be saved as plain text, i.e. not encripted, due to DataCite registration service requirements.
-
-Version History
----------------
-1.0	- Initial Release
+Please note, that the passowrd will be saved as plain text, i.e. not encrypted, due to DataCite registration service requirements.
 

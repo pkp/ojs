@@ -3,8 +3,8 @@
 /**
  * @file classes/payment/ojs/OJSCompletedPaymentDAO.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OJSCompletedPaymentDAO
@@ -65,6 +65,42 @@ class OJSCompletedPaymentDAO extends DAO {
 		);
 
 		return $this->getInsertId();
+	}
+
+	/**
+	 * Update an existing completed payment.
+	 * @param $completedPayment OJSCompletedPayment
+	 * @return boolean
+	 */
+	function updateObject($completedPayment) {
+		$returner = false;
+		
+		$returner = $this->update(
+			sprintf('UPDATE completed_payments
+			SET
+				timestamp = %s,
+				payment_type = ?,
+				journal_id = ?,
+				user_id = ?,
+				assoc_id = ?,
+				amount = ?,
+				currency_code_alpha = ?,
+				payment_method_plugin_name = ? 
+			WHERE completed_payment_id = ?',
+			$this->datetimeToDB($completedPayment->getTimestamp())),
+			array(
+				(int) $completedPayment->getType(),
+				(int) $completedPayment->getJournalId(),
+				(int) $completedPayment->getUserId(),
+				(int) $completedPayment->getAssocId(),
+				$completedPayment->getAmount(),
+				$completedPayment->getCurrencyCode(),
+				$completedPayment->getPayMethodPluginName(),
+				(int) $completedPayment->getCompletedPaymentId()
+			)
+		);
+
+		return $returner;
 	}
 
 	/**
@@ -280,6 +316,22 @@ class OJSCompletedPaymentDAO extends DAO {
 		);
 
 		return new DAOResultFactory($result, $this, '_returnPaymentFromRow');
+	}
+
+	/**
+	 * Retrieve an array of payments for a particular user ID.
+	 * @param $userId int
+	 * @return object DAOResultFactory containing matching payments
+	 */
+	function &getByUserId($userId, $rangeInfo = null) {
+		$result =& $this->retrieveRange(
+			'SELECT * FROM completed_payments WHERE user_id = ? ORDER BY timestamp DESC',
+			(int) $userId,
+			$rangeInfo
+		);
+
+		$returner = new DAOResultFactory($result, $this, '_returnPaymentFromRow');
+		return $returner;
 	}
 
 	/**

@@ -4,8 +4,8 @@
 <!--
   * locale/id_ID/emailTemplates.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -75,7 +75,6 @@ Atur ulang kata sandi saya: {$url}<br />
 		<body><![CDATA[Kata sandi Anda telah sukses diatur ulang untuk penggunaan dengan web site {$siteTitle}. Ingatlah nama pengguna dan kata sandi ini karena diperlukan untuk semua pekerjaan di jurnal.<br />
 <br />
 Nama pengguna Anda: {$username}<br />
-Kata sandi baru Anda: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Email ini dikirim untuk pengguna yang terdaftar saat mereka telah sukses mengatur ulang kata sandi mereka dengan mengikuti proses yang dideskripsikan di email  PASSWORD_RESET_CONFIRM.</description>
@@ -122,7 +121,7 @@ Terima kasih,<br />
 		<subject>tTerbitan Baru diterbitkan</subject>
 		<body><![CDATA[Pembaca:<br />
 <br />
-{$contextName} baru saja menerbitkan terbitan terbarunya di <a href="{$journalUrl}">{$journalUrl}</a>. Kami mengundang Anda untuk mereview Daftar Isi dan kemudian mengunjungi web site kami untuk mereivew artikel dan item minat.<br />
+{$contextName} baru saja menerbitkan terbitan terbarunya di <a href="{$contextUrl}">{$contextUrl}</a>. Kami mengundang Anda untuk mereview Daftar Isi dan kemudian mengunjungi web site kami untuk mereivew artikel dan item minat.<br />
 <br />
 Terima kasih untuk melanjutkan minat pada pekerjaan kami,<br />
 {$editorialContactSignature}]]></body>
@@ -132,11 +131,11 @@ Terima kasih untuk melanjutkan minat pada pekerjaan kami,<br />
 		<subject>Permintaan Pengarsipan untuk {$contextName}</subject>
 		<body><![CDATA[Kepada [Pustakawan Universitas]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, adalah sebuah jurnal yang anggota fakultas Anda, [name of member], berperan sebagai [nama posisi]. Jurnal akan membuat arsip LOCKSS (Lots of Copies Keep Stuff Safe) dengan ini dan perpustakaan universitas lain.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, adalah sebuah jurnal yang anggota fakultas Anda, [name of member], berperan sebagai [nama posisi]. Jurnal akan membuat arsip LOCKSS (Lots of Copies Keep Stuff Safe) dengan ini dan perpustakaan universitas lain.<br />
 <br />
 [Deskripsi singkat tentang jurnal]<br />
 <br />
-URL ke LOCKSS Publisher Manifest untuk jurnal kami: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+URL ke LOCKSS Publisher Manifest untuk jurnal kami: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Kami mengerti Anda telah berpartisipasi di LOCKSS. Jika kami dapat menyediakan metadata tambahan apapun untuk tujuan mendaftarkan jurnal kami dengan versi Anda tentang LOCKSS, kami akan senang menyediakannya.<br />
 <br />
@@ -148,7 +147,7 @@ Terima kasih,<br />
 		<subject>Permintaan Mengarsipkan untuk {$contextName}</subject>
 		<body><![CDATA[Kepada [Pustakawan Universitas]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, adalah sebuah jurnal yang anggota fakultas Anda, [name of member] berperan sebagai [nama posisi]. Jurnal akan membuat arsip  LOCKSS (Lots of Copies Keep Stuff Safe) dengan ini dan perpustakaan universitas lain.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, adalah sebuah jurnal yang anggota fakultas Anda, [name of member] berperan sebagai [nama posisi]. Jurnal akan membuat arsip  LOCKSS (Lots of Copies Keep Stuff Safe) dengan ini dan perpustakaan universitas lain.<br />
 <br />
 [Deskripsi singkat tentang jurnal]<br />
 <br />
@@ -166,7 +165,7 @@ Terima kasih,<br />
 <br />
 Terima kasih untuk menyerahkan manuskrip, &quot;{$submissionTitle}&quot; untuk {$contextName}. Dengan sistem manajemen jurnal online yang kami gunakan, Anda akan bisa melacak kemajuan naskah dalam proses editorial dengan login ke web site jurnal:<br />
 <br />
-URL Manuskrip: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL Manuskrip: {$submissionUrl}<br />
 Nama pengguna Penulis: {$authorUsername}<br />
 <br />
 Jika Anda mempunyai pertanyaan, silakan hubungi saya. Terima kasih untuk mempertimbangkan jurnal ini sebagai tempat untuk karya Anda. <br />
@@ -205,7 +204,7 @@ Review awal &quot;{$submissionTitle}&quot; telah memutuskan naskah ini tidak coc
 <br />
 Naskah, &quot;{$submissionTitle},&quot; untuk {$contextName} telah ditugaskan kepada Anda untuk has been assigned to you to see through the editorial process in your role as Section Editor.  <br />
 <br />
-URL Penyerahan: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL Penyerahan: {$submissionUrl}<br />
 Nama Pengguna Editor: {$editorUsername}<br />
 <br />
 Terima kasih,<br />
@@ -219,7 +218,7 @@ Terima kasih,<br />
 Saya yakin Anda dapat menjadi reviewer handal manuskrip, &quot;{$submissionTitle},&quot; yang telah diserahkan ke {$contextName}. Abstrak naskah disertakan di bawah ini, dan saya harap Anda mempertimbangkan untuk mengambil tugas penting ini untuk kami. <br />
 <br />
 <br />
-Mohon login ke web site jurnal sebelum tanggal {$weekLaterDate} untuk menunjukkan apakah Anda akan mengambil Review ini atau tidak, serta untuk mengakses naskah dan mencatat Review dan rekomendasi Anda. Web sitenya adalah <a href="{$journalUrl}">{$journalUrl}</a><br />
+Mohon login ke web site jurnal sebelum tanggal {$responseDueDate} untuk menunjukkan apakah Anda akan mengambil Review ini atau tidak, serta untuk mengakses naskah dan mencatat Review dan rekomendasi Anda. Web sitenya adalah <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 Review jatuh tempo tanggal {$reviewDueDate}.<br />
 <br />
@@ -246,7 +245,7 @@ Terima kasih untuk mempertimbangkan permintaan ini.<br />
 <br />
 Saya yakin Anda akan berperan sebagai Reviewer handal manuskrip, &quot;{$submissionTitle},&quot; yang telah diserahkan ke {$contextName}. Abstrak naskah disertakan di bawah ini, dan saya harap Anda akan mempertimbangkan untuk mengambil tugas penting ini untuk kami.<br />
 <br />
-Login ke web site jurnal sebelum tanggal {$weekLaterDate} untuk menunjukkan apakah Anda akan mengambil review atau tidak, serta untuk mengakses naskah dan mencatat review dan rekomendasi Anda.<br />
+Login ke web site jurnal sebelum tanggal {$responseDueDate} untuk menunjukkan apakah Anda akan mengambil review atau tidak, serta untuk mengakses naskah dan mencatat review dan rekomendasi Anda.<br />
 <br />
 Review jatuh tempo sebelum tanggal {$reviewDueDate}.<br />
 <br />
@@ -269,7 +268,7 @@ Terima kasih untuk mempertimbangkan permintaan ini.<br />
 <br />
 Saya yakin Anda akan berperan sebagai Reviewer handal manuskrip, &quot;{$submissionTitle},&quot; dan saya meminta Anda untuk mempertimbangkan tugas penting ini untuk kami. Petunjuk Review untuk jurnal ini dilampirkan di bawah ini, dan naskah dilampirkan di email ini. Review naskah, beserta rekomendasi Anda harus diemail ke saya sebelum tanggal {$reviewDueDate}.<br />
 <br />
-Mohon tunjukkan di email balasan sebelum {$weekLaterDate} apakah Anda bisa atau bersedia melakukan review.<br />
+Mohon tunjukkan di email balasan sebelum {$responseDueDate} apakah Anda bisa atau bersedia melakukan review.<br />
 <br />
 Terima kasih untuk mempertimbangkan permintaan ini.<br />
 <br />
@@ -429,7 +428,7 @@ Keputusan kami adalah:<br />
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Copyediting Request</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Saya meminta Anda bertanggungjawab atas proses copyediting  &quot;{$submissionTitle}&quot; untuk{$contextName} dengan mengikuti langkah-langkah berikut.<br />
 1. Klik URL Penyerahan di bawah ini.<br />
@@ -439,9 +438,9 @@ Saya meminta Anda bertanggungjawab atas proses copyediting  &quot;{$submissionTi
 5. Simpan file yang telah dicopyedit, dan upload ke Langkah 1 copyediting.<br />
 6. Kirim email LENGKAP kepada editor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL Penyerahan: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nama pengguna Copy Editor: {$copyeditorUsername}<br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL Penyerahan: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nama pengguna Copy Editor: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Email ini dikirim oleh Editor Bagian kepada Copyeditor naskah untuk meminta mereka memulai proses copyediting. Email ini memberikan informasi tentang naskah dan bagaimana mengaksesnya. </description>
@@ -464,11 +463,11 @@ URL Manuskrip: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br 
 <br />
 Jika Anda tidak dapat bertanggungjawab atas pekerjaan ini sekarang atau mempunyai pertanyaan apapun, silakan hubungi saya. Terima kasih untuk kontribusi Anda untuk jurnal ini. <br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Pernyataan Copyediting</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Terima kasih untuk meng-copyedit manuskrip, &quot;{$submissionTitle},&quot; untuk {$contextName}. Ini akan membuat kontribusi penting untuk kualitas jurnal ini. <br />
 <br />
@@ -489,7 +488,7 @@ Naskah Anda &quot;{$submissionTitle}&quot; untuk {$contextName} telah melewati l
 7. Klik di METADATA untuk mengecek informasi pengindeksan untuk kelengkapan dan keakuratan.<br />
 8. Kirim email LENGKAP kepada editor dan copyeditor.<br />
 <br />
-URL Penyerahan: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL Penyerahan: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Ini adalah kesempatan terbaik untuk membuat perubahan copyediting besar ke naskah. Tahap proofreading, yang mengikuti persiapa galley, terlarang untuk mengoreksi kesalahan layout dan tipografi. <br />
 <br />
@@ -519,7 +518,7 @@ Terima kasih telah mereview copyediting manuskrip Anda, &quot;{$submissionTitle}
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Review Final Copyediting</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Penulis dan editor telah menyelesaikan review copyediting mereka tentang &quot;{$submissionTitle}&quot; untuk {$contextName}. Salinan yang &quot;bersih&quot; perlu disiapkan untuk Layout dengan melewati langkah-langkah di bawah ini. <br />
 <br />
@@ -530,9 +529,9 @@ Penulis dan editor telah menyelesaikan review copyediting mereka tentang &quot;{
 5. Klik METADATA untuk mengecek informasi pengindeksan (menyimpan koreksi apapun)<br />
 6. Kirim email LENGKAP kepada editor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL Penyerahan: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nama pengguna Copy Editor: {$copyeditorUsername}<br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL Penyerahan: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nama pengguna Copy Editor: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Email ini dari Editor Bagian kepada Copyeditor meminta mereka melakukan putaran terakhir copyediting pada naskah sebelum memasuki proses layout.</description>
@@ -543,12 +542,12 @@ Nama pengguna Copy Editor: {$copyeditorUsername}<br />
 <br />
 Saya telah menyiapkan versi copyedited manuskrip yang bersih, &quot;{$submissionTitle},&quot; untuk {$contextName}. Ini siap untuk galley persiapan dan layout. <br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Email ini dari Copyeditor kepada Editor Bagian yang memberitahu mereka bahwa putaran terakhir copyediting telah selesai dan proses layout boleh dimulai. </description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Pernyataan Review Final Copyediting</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Terima kasih telah menyelesaikan copyediting manuskrip, &quot;{$submissionTitle},&quot; untuk {$contextName}. Persiapan &quot;salinan bersih&quot; untuk layout adalah sebuah langkah penting di proses editorial. <br />
 <br />
@@ -557,16 +556,16 @@ Terima kasih telah menyelesaikan copyediting manuskrip, &quot;{$submissionTitle}
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Permintaan Galleys</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Naskah &quot;{$submissionTitle}&quot; ke {$contextName} sekarang membutuhkan galley yang dikeluarkan dengan langkah-langkah berikut ini. <br />
 1. Klik URL Penyerahan di bawah ini.<br />
 2. Login ke jurnal dan gunakan file versi layout untuk membuat galley menurut standar jurnal. <br />
 3. Kirim email LENGKAP kepada editor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL Penyerahan: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Nama pengguna Layout Editor: {$layoutEditorUsername}<br />
+Nama pengguna Layout Editor: {$participantUsername}<br />
 <br />
 Jika Anda tidak bisa bertanggung jawab atas pekerjaan ini saat ini atau mempunyai pertanyaan apapub, silakan hubungi saya. Terima kasih untuk kontribusi Anda untuk jurnal ini. <br />
 <br />
@@ -581,12 +580,12 @@ Galley sekarang telah disiapkan untuk manuskrip, &quot;{$submissionTitle},&quot;
 <br />
 Jika Anda mempunyai pertanyaan, silakan hubungi saya.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Email ini dari Editor Layout untuk Editor Bagian yang memberitahu mereka bahwa proses layout telah selesai. </description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Pernyataan Layout</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Terima kasih untuk menyiapkan galley untuk manuskrip, &quot;{$submissionTitle},&quot; untuk {$contextName}. Ini adalah kontribusi penting untuk proses penerbitan. <br />
 <br />
@@ -605,7 +604,7 @@ Naskah Anda &quot;{$submissionTitle}&quot; untuk {$contextName} sekarang perlu d
 5. Simpan dan kirimkan email tentang koreksi ke Editor Layout dan Proofreader.<br />
 6. Kirim email LENGKAP kepada editor.<br />
 <br />
-URL Penyerahan: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL Penyerahan: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Email ini dari Editor Bagian untuk Penulis yang memberitahu mereka bahwa galley artikel siap untuk di-proofreading. Email ini memberikan informasi tentang artikel dan bagaimana mengaksesnya.</description>
@@ -642,7 +641,7 @@ Naskah &quot;{$submissionTitle}&quot;  untuk {$contextName} sekarang perlu di-pr
 5. Simpan dan kirimkan email tentang koreksi kepada Editor Layout.<br />
 6. Kirim email LENGKAP kepada editor.<br />
 <br />
-URL Manuskrip: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL Manuskrip: {$submissionUrl}<br />
 Nama pengguna Proofreader: {$proofreaderUsername}<br />
 <br />
 Jika Anda tidak bisa bertanggung jawab atas pekerjaan ini atau mempunyai pertanyaan, silakan hubungi saya. Terima kasih untuk kontribusi Anda untuk jurnal ini.<br />
@@ -670,7 +669,7 @@ Terima kasih telah mem-proofreading galley untuk manuskrip, &quot;{$submissionTi
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Permintaan Proofreading (Editor Layout)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Naskah &quot;{$submissionTitle}&quot; untuk {$contextName} telah diproofread oleh penulis dan proofreader, dan koreksi apapun harus dibuat dengan mengikuti langkah-langkah berikut ini. <br />
 1. Klik di URL Penyerahan di bawah ini. <br />
@@ -678,9 +677,9 @@ Naskah &quot;{$submissionTitle}&quot; untuk {$contextName} telah diproofread ole
 3. Upload galley yang telah direvisi.<br />
 4. Kirim email LENGKAP di Proofreading Langkah 3 kepada editor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL Penyerahan: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Nama pengguna Layout Editor: {$layoutEditorUsername}<br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL Penyerahan: {$submissionUrl}<br />
+Nama pengguna Layout Editor: {$participantUsername}<br />
 <br />
 Jika Anda tidak bisa bertanggung jawab atas pekerjaan ini saat ini atau mempunyai pertanyaan, silakan hubungi saya. Terima kasih atas kontribusi Anda untuk jurnal ini. <br />
 <br />
@@ -693,12 +692,12 @@ Jika Anda tidak bisa bertanggung jawab atas pekerjaan ini saat ini atau mempunya
 <br />
 Galley sekarang telah dikoreksi, mengikuti proofreading mereka, untuk manuskrip, &quot;{$submissionTitle},&quot; untuk {$contextName}. Bagian ini sekarang siap untuk diterbitkan.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Email ini dari Editor Layout untuk Editor Bagian yang memberitahu mereka bahwa tahap akhir proofreading telah selesai dan artikel sekarang siap untuk diterbitkan. </description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Pernyataan Proofreading (Editor Layout)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Terima kasih untuk menyelesaikan koreksi proofreading untuk galley yang diasosiasikan dengan manuskrip, &quot;{$submissionTitle},&quot; untuk {$contextName}. Ini mewakili kontribusi penting untuk karya jurnal ini. <br />
 <br />
@@ -733,7 +732,7 @@ Jika Anda mempunyai pertanyaan, silakan hubungi saya.<br />
 		<subject>Akses Terbuka Terbitan Terkini</subject>
 		<body><![CDATA[Pembaca:<br />
 <br />
-{$contextName} telah membuat terbitan berikut ini tersedia di format akses terbuka. Kami mengundang Anda untuk mereview Daftar Isi di sini dan kemudian mengunjungi web site kami(<a href="{$journalUrl}">{$journalUrl}</a>) untuk mereview artikel dan item minat.<br />
+{$contextName} telah membuat terbitan berikut ini tersedia di format akses terbuka. Kami mengundang Anda untuk mereview Daftar Isi di sini dan kemudian mengunjungi web site kami(<a href="{$contextUrl}">{$contextUrl}</a>) untuk mereview artikel dan item minat.<br />
 <br />
 Terima kasih untuk melanjutkan minat Anda terhadap karya kami,<br />
 {$editorialContactSignature}]]></body>

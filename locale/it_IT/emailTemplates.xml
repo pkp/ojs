@@ -2,10 +2,10 @@
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
 
 <!--
-  * locale/it_IT/emailTemplateData.xml
+  * locale/it_IT/emailTemplates.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -31,7 +31,6 @@ Reset password: {$url}<br />
 Qui sotto trovi il tuo username e la nuova password.<br />
 <br />
 La tua username: {$username}<br />
-La tua nuova password: {$password}<br />
 <br />
 {$principalContactSignature}]]&gt;]]></body>
 		<description>Questa email viene mandata ad un utente registrato quando ha resettato la password seguendo il processo descritto nella email PASSWORD_RESETTA_CONFERMA.</description>
@@ -54,7 +53,7 @@ Grazie,<br />
 		<subject>Pubblicato un nuovo fascicolo</subject>
 		<body><![CDATA[Gentile lettore,<br />
 <br />
-All'indirizzo <a href="{$journalUrl}">{$journalUrl}</a> è appena stato pubblicato un nuovo numero di {$contextName}.<br />
+All'indirizzo <a href="{$contextUrl}">{$contextUrl}</a> è appena stato pubblicato un nuovo numero di {$contextName}.<br />
 <br />
 Grazie per l'interesse dimostratoci,<br />
 {$editorialContactSignature}]]></body>
@@ -83,11 +82,11 @@ Per qualsiasi domanda non esitare a contattarmi.<br />
 		<subject>Richiesta di archiviazione per {$contextName}</subject>
 		<body><![CDATA[&lt;![CDATA[Caro [Bibliotecario dell'Universita']<br />
 <br />
-{$contextName} &lt;<a href="{$journalUrl}">{$journalUrl}</a>&gt;, &amp;#x00E8; una rivista a cui un membro della vostra facolt&amp;#x00E0;, [nome del membro], collabora come [posizione]  sta cercando di instaurare un archivio condiviso LOCKSS (Lots of Copies Keep Stuff Safe) con questa e altre biblioteche universitarie.<br />
+{$contextName} &lt;<a href="{$contextUrl}">{$contextUrl}</a>&gt;, &amp;#x00E8; una rivista a cui un membro della vostra facolt&amp;#x00E0;, [nome del membro], collabora come [posizione]  sta cercando di instaurare un archivio condiviso LOCKSS (Lots of Copies Keep Stuff Safe) con questa e altre biblioteche universitarie.<br />
 <br />
 [Breve descrizione del journal]<br />
 <br />
-La URL al manifesto di pubblicazione del LOCKSS  per il nostro journal &amp;#x00E8;: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+La URL al manifesto di pubblicazione del LOCKSS  per il nostro journal &amp;#x00E8;: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Comprendiamo che state gi&amp;#x00E0; partecipando al LOCKSS. Se possiamo fornire qualsiasi metadato aggiuntivo per scopi di registrazione al nostro journal con la vostra versione del LOCKSS, saremo felici di fornirvelo.<br />
 <br />
@@ -99,7 +98,7 @@ Grazie,<br />
 		<subject>Archiviare richiesta per {$contextName}</subject>
 		<body><![CDATA[Cara [biblioteca universitaria]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, &amp;amp;#x00E8; un journal per cui un membro della vostra facolt&amp;amp;#x00E0;, [nome del membro], presta servizio come [posizione]. Il journal sta cercando di instaurare un archivio condiviso LOCKSS (Lots of Copies Keep Stuff Safe) con questa e altre biblioteche universitarie.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, &amp;amp;#x00E8; un journal per cui un membro della vostra facolt&amp;amp;#x00E0;, [nome del membro], presta servizio come [posizione]. Il journal sta cercando di instaurare un archivio condiviso LOCKSS (Lots of Copies Keep Stuff Safe) con questa e altre biblioteche universitarie.<br />
 <br />
 [Breve descrizione del journal]<br />
 <br />
@@ -117,7 +116,7 @@ Grazie,<br />
 <br />
 Grazie per aver inviato la proposta dal titolo &quot;{$submissionTitle}&quot; a {$contextName}. Attraverso l'interfaccia web potrà seguire i vari passi della submission attraverso il processo di revisione utlizzando la sua login al sito:<br />
 <br />
-URL della submission: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL della submission: {$submissionUrl}<br />
 Username: {$authorUsername}<br />
 <br />
 Per qualsiasi domanda non esiti a contattarmi.<br />
@@ -165,7 +164,7 @@ Grazie ancora per il tuo contributo.<br />
 <br />
 La submission, &quot;{$submissionTitle},&quot; a {$contextName} ti è stata assegnata come Section Editor.<br />
 <br />
-Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Submission URL: {$submissionUrl}<br />
 Username: {$editorUsername}<br />
 <br />
 Grazie,<br />
@@ -178,8 +177,8 @@ Grazie,<br />
 <br />
 Ti propongo la revisione del manoscritto &quot;{$submissionTitle},&quot; che è stato proposto a {$contextName}. L'abstract della submission  è inserito qui sotto. Spero che vorrai prendere in carico questo compito.<br />
 <br />
-Ti chiedo quindi di effettuare il log in al sito web della rivista entro il {$weekLaterDate} per indicare se prenderai in carico la revisione o meno.<br />
-Potrai poi accedere alla submission e inviare il tuo parere. Il sito web è <a href="{$journalUrl}">{$journalUrl}</a><br />
+Ti chiedo quindi di effettuare il log in al sito web della rivista entro il {$responseDueDate} per indicare se prenderai in carico la revisione o meno.<br />
+Potrai poi accedere alla submission e inviare il tuo parere. Il sito web è <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 La data di scadenza per la revisione è fissata al {$reviewDueDate}.<br />
 <br />
@@ -205,7 +204,7 @@ Abstract<br />
 <br />
 Ti propongo la revisione del manoscritto &quot;{$submissionTitle},&quot; che è stato inviato a {$contextName}. L'abstract della proposta è più sotto. Spero che vorrai prendere in carico questo compito.<br />
 <br />
-Ti chiedo quindi di effettuare il log in al sito web della rivista entro il {$weekLaterDate} per indicare se prenderai in carico la revisione o meno. Potrai poi accedere alla submission e inviare il tuo parere.<br />
+Ti chiedo quindi di effettuare il log in al sito web della rivista entro il {$responseDueDate} per indicare se prenderai in carico la revisione o meno. Potrai poi accedere alla submission e inviare il tuo parere.<br />
 <br />
 La data di scadenza per la revisione è fissata al {$reviewDueDate}.<br />
 <br />
@@ -232,7 +231,7 @@ Le linee guida per la revisione sono indicate sotto e il file della submission �
 <br />
 Puoi comunicarmi il tuo parere per posta elettronica entro il {$reviewDueDate}.<br />
 <br />
-Ti chiedo di farmi sapere entro il {$weekLaterDate} e accetti o meno l'incarico di revisione.<br />
+Ti chiedo di farmi sapere entro il {$responseDueDate} e accetti o meno l'incarico di revisione.<br />
 <br />
 Grazie per la tua collaborazione<br />
 <br />
@@ -350,13 +349,13 @@ Ti chiedo la cortesia di confermare al più presto la volontà di portare a term
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Assegnazione di copyediting</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Ti chiedo di prendere in carico il copyedit del manoscritto, &quot;{$submissionTitle},&quot; per {$contextName}.<br />
 Il documento si trova su sito web della rivista, insieme alle istruzioni per il copyedit.<br />
 <br />
-URL Manoscritto: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Username: {$copyeditorUsername}<br />
+URL Manoscritto: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Username: {$participantUsername}<br />
 <br />
 Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi.<br />
 <br />
@@ -371,12 +370,12 @@ Ho completato la prima tornata del copyediting del manoscritto, &quot;{$submissi
 <br />
 Ora è pronto per la revisione dell'autore e dell'editor.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description></description>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Ringraziamenti per copyediting</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Grazie per il copyediting del manoscritto, &quot;{$submissionTitle},&quot; per {$contextName}.<br />
 <br />
@@ -394,7 +393,7 @@ Dopo aver revisionato il file, lo ricarichi nella fase 2 e comunichi all'Editor 
 <br />
 Questa è l'ultima occasione che ha per fare cambiamenti sostanziali. Le sarà richiesto di correggere le bozze, ma in quella fase potremo correggere solo refusi e poco altro.<br />
 <br />
-URL manoscritto: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL manoscritto: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Se non può prendere in carico il lavoro in questo periodo o ha qualche domanda, mi contatti.<br />
 <br />
@@ -424,7 +423,7 @@ Aspettiamo solo di vedere il lavoro pubblicato.<br />
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Revisione finale copyediting</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 L'autore e l'editor hanno completato la revisione editoriale del manoscritto, &quot;{$submissionTitle},&quot; per {$contextName}.<br />
 La definitiva &quot;copia pulita&quot; può essere preparata per il layout di stampa/visualizzazione, seguendo queste indicazioni.<br />
@@ -436,8 +435,8 @@ La definitiva &quot;copia pulita&quot; può essere preparata per il layout di st
 5. Clicca su 'Rivedi i metadati' per controllare le informazioni inserite (salvando eventuali correzioni)<br />
 6. Comunica all'editor il completamento dell'attività.<br />
 <br />
-URL del manoscritto: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Username: {$copyeditorUsername}<br />
+URL del manoscritto: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Username: {$participantUsername}<br />
 <br />
 Grazie a nome della rivista,<br />
 <br />
@@ -450,12 +449,12 @@ Grazie a nome della rivista,<br />
 <br />
 Ho preparato una versione pulita e revisionata del manoscritto, &quot;{$submissionTitle},&quot; per {$contextName}, pronta per l'impaginazione e la preparazione delle bozze.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Questa email dal copyeditor al section editor notifica che l'ultima tornata del copyedit è stata completata e che il processo di layout può cominciare.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Ringraziamenti revisione finale copyedit</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Grazie per aver completato l'editing del manoscritto, &quot;{$submissionTitle}&quot;, per {$contextName}.<br />
 <br />
@@ -464,12 +463,12 @@ Grazie per aver completato l'editing del manoscritto, &quot;{$submissionTitle}&q
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Richiesta preparazione delle bozze</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Vorrei chiederti di preparare le bozze per il manoscritto &quot;{$submissionTitle}&quot; per {$contextName}.<br />
 <br />
 URL manoscritto: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Username: {$layoutEditorUsername}<br />
+Username: {$participantUsername}<br />
 <br />
 Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi. Grazie per il tuo contributo al journal.<br />
 <br />
@@ -484,12 +483,12 @@ Sono pronte le bozze dell'articolo, &quot;{$submissionTitle}&quot; per {$context
 <br />
 Per qualsiasi domanda, si prega di contattarmi.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Questa email dal layout editor al section editor notifica che il processo di layout è stato completato.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Ringraziamenti layout</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Grazie per aver preparato l'impaginato de manoscritto &quot;{$submissionTitle}&quot; per {$contextName}.<br />
 <br />
@@ -509,7 +508,7 @@ E' necessario correggere le bozze del tuo contributo &quot;{$submissionTitle}&qu
 5. Salva le modifiche.<br />
 6. Invia all'editor il messaggio COMPLETATO.<br />
 <br />
-URL del contributo: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL del contributo: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Questa mail viene inviata dall'editor all'autore per informarlo che è necessario correggere le bozze del suo contributo. Fornisce informazioni sulla procedura.</description>
@@ -546,7 +545,7 @@ Vorrei chiederti di corregere le bozze per l'articolo, &quot;{$submissionTitle},
 4. Inserisci le correzioni, limitandoti a quelle tipografiche e al formato, in 'Correzioni delle bozze', indicando per ciascuna il numero di pagina e di riga<br />
 5. Salva le modifiche<br />
 6. Invia all'editor comunicazione di aver completato l'incarico.<br />
-URL manoscritto: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL manoscritto: {$submissionUrl}<br />
 Username: {$proofreaderUsername}<br />
 <br />
 Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi.<br />
@@ -575,7 +574,7 @@ Grazie per la correzione delle bozze per il manoscritto, &quot;{$submissionTitle
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Modifiche da apportare alle bozze</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Le bozze del manoscritto &quot;{$submissionTitle}&quot; per {$contextName} sono state corrette dall'autore e dai correttori di bozze. Per apportare le correzioni segui queste istruzioni:<br />
 <br />
@@ -585,8 +584,8 @@ Le bozze del manoscritto &quot;{$submissionTitle}&quot; per {$contextName} sono 
 3. Carica i file corretti<br />
 4. Invia all'editor la comunicazione di aver completato l'incarico, dal Passo n. 3 della correzione.<br />
 <br />
-URL manoscritto: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Username: {$layoutEditorUsername}<br />
+URL manoscritto: {$submissionUrl}<br />
+Username: {$participantUsername}<br />
 <br />
 Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi. Grazie per il tuo contributo al journal.<br />
 <br />
@@ -600,12 +599,12 @@ Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda
 Le bozze dell'articolo &quot;{$submissionTitle},&quot; per {$contextName} sono state corrette.<br />
 L'articolo è ora pronto per essere pubblicato.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Questa email dal curatore del layout informa che la fase finale di correzione delle bozze è stata completata e l'articolo è pronto per essere pubblicato.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Ringraziamenti modifica delle bozze</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Grazie per aver completato la correzione delle bozze associate al manoscritto, &quot;{$submissionTitle},&quot; per {$contextName}.<br />
 <br />
@@ -625,7 +624,7 @@ pubblicato in {$contextName}, Vol. {$volume}, N. {$number} ({$year}) e disponibi
 <br />
 {$contextName} ha appena reso disponibile ad accesso aperto un fascicolo.<br />
 <br />
-Ti invitiamo dunque a visitare il sito web (<a href="{$journalUrl}">{$journalUrl}</a>) per trovare articoli e altre risorse di tuo interesse.<br />
+Ti invitiamo dunque a visitare il sito web (<a href="{$contextUrl}">{$contextUrl}</a>) per trovare articoli e altre risorse di tuo interesse.<br />
 <br />
 Grazie per l'interesse dimolstrato nei nostri confronti,<br />
 {$editorialContactSignature}]]></body>
@@ -895,7 +894,7 @@ Copy-Editor, {$contextName}]]></body>
 <br />
 L'autore {$authorName} ha caricato una versione revisionata di &quot;{$submissionTitle}&quot;.<br />
 <br />
-Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Submission URL: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Questo messaggio viene inviato automaticamente all'editor quando un autore carica una versione revisionata di un articolo</description>
@@ -954,7 +953,7 @@ ti scrivo riguardo alla proposta &quot;{$submissionTitle},&quot; che è in revis
 <br />
 Seguendo i suggerimenti emersi in precedenza, l'autore ha modificato il manoscritto e inviato una nuova versione. Ti sarei grato se volessi aiutarci a valutarla.<br />
 <br />
-Ti prego quindi di accedere al sito entro il {$weekLaterDate} per comunicare se ti incaricherai o meno della revisione e poi per accedere alla proposta e registrare il tuo parere. Il sito è <a href="{$journalUrl}">{$journalUrl}</a><br />
+Ti prego quindi di accedere al sito entro il {$responseDueDate} per comunicare se ti incaricherai o meno della revisione e poi per accedere alla proposta e registrare il tuo parere. Il sito è <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 La data di scadenza per l'incarico di revisione è il {$reviewDueDate}.<br />
 <br />
@@ -981,7 +980,7 @@ Ti scrivo riguardo al manoscritto &quot;{$submissionTitle},&quot; in corso di re
 <br />
 L'autore ha inviato una nuova versione, modificata secondo i suggerimenti ricevuti dai revisori. Tu sarei grato se volessi aiutarci a valutarla.<br />
 <br />
-Ti chiedo di autenticarti al sito {$weekLaterDate} per indicarmi se intendi accettare l'incarico o meno e poi per accedere alla proposta e registrare il tuo parere.<br />
+Ti chiedo di autenticarti al sito {$responseDueDate} per indicarmi se intendi accettare l'incarico o meno e poi per accedere alla proposta e registrare il tuo parere.<br />
 <br />
 La data di scadenza è il {$reviewDueDate}.<br />
 <br />
@@ -1008,7 +1007,7 @@ Seguendo i suggerimenti ricevuti dai revisori, lautore ha inviato una nuova vers
 <br />
 Più sotto trovi le Linee guida sulla revisione e il file del manoscritto è in allegato. Puoi inviarmi la revisione e il tuo parere sulla proposta via email, entro il  {$reviewDueDate}.<br />
 <br />
-Perfavore informami entro il {$weekLaterDate} se accetti o meno l'incarico.<br />
+Perfavore informami entro il {$responseDueDate} se accetti o meno l'incarico.<br />
 <br />
 Grazie della disponibilià<br />
 {$editorialContactSignature}<br />

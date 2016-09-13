@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/lucene/locale/it_IT/locale.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * OJS solr/lucene search plugin localization strings
@@ -47,7 +47,7 @@
 	<message key="plugins.generic.lucene.results.orderDir.desc">Discendente</message>
 	<message key="plugins.generic.lucene.results.similarDocuments">documenti simili</message>
 	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[
-		Suggerimenti di ricerca: <ul>
+		<h4>Suggerimenti di ricerca:</h4><ul>
 			<li>La ricerca non differenzia maiuscole e minuscole nei termini inseriti</li>
 			<li>Le parole più comuni (stopword) sono ignorate</li>
 			<li>Per default la ricerca restituisce articoli contententi <em>qualsiasi</em> termine inserito (<em>OR</em> implicito)</li>

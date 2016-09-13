@@ -3,8 +3,8 @@
 /**
  * @file classes/journal/SectionDAO.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionDAO
@@ -156,7 +156,6 @@ class SectionDAO extends PKPSectionDAO {
 		$section->setHideTitle($row['hide_title']);
 		$section->setHideAuthor($row['hide_author']);
 		$section->setHideAbout($row['hide_about']);
-		$section->setDisableComments($row['disable_comments']);
 		$section->setAbstractWordCount($row['abstract_word_count']);
 
 		$this->getDataObjectSettings('section_settings', 'section_id', $row['section_id'], $section);
@@ -194,9 +193,9 @@ class SectionDAO extends PKPSectionDAO {
 	function insertObject($section) {
 		$this->update(
 			'INSERT INTO sections
-				(journal_id, review_form_id, seq, meta_indexed, meta_reviewed, abstracts_not_required, editor_restricted, hide_title, hide_author, hide_about, disable_comments, abstract_word_count)
+				(journal_id, review_form_id, seq, meta_indexed, meta_reviewed, abstracts_not_required, editor_restricted, hide_title, hide_author, hide_about, abstract_word_count)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				(int)$section->getJournalId(),
 				(int)$section->getReviewFormId(),
@@ -208,7 +207,6 @@ class SectionDAO extends PKPSectionDAO {
 				$section->getHideTitle() ? 1 : 0,
 				$section->getHideAuthor() ? 1 : 0,
 				$section->getHideAbout() ? 1 : 0,
-				$section->getDisableComments() ? 1 : 0,
 				(int) $section->getAbstractWordCount()
 			)
 		);
@@ -235,7 +233,6 @@ class SectionDAO extends PKPSectionDAO {
 					hide_title = ?,
 					hide_author = ?,
 					hide_about = ?,
-					disable_comments = ?,
 					abstract_word_count = ?
 				WHERE section_id = ?',
 			array(
@@ -248,7 +245,6 @@ class SectionDAO extends PKPSectionDAO {
 				(int)$section->getHideTitle(),
 				(int)$section->getHideAuthor(),
 				(int)$section->getHideAbout(),
-				(int)$section->getDisableComments(),
 				$this->nullOrInt($section->getAbstractWordCount()),
 				(int)$section->getId()
 			)
@@ -262,8 +258,8 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $contextId int optional
 	 */
 	function deleteById($sectionId, $contextId = null) {
-		$sectionEditorsDao = DAORegistry::getDAO('SectionEditorsDAO');
-		$sectionEditorsDao->deleteBySectionId($sectionId, $contextId);
+		$subEditorsDao = DAORegistry::getDAO('SubEditorsDAO');
+		$subEditorsDao->deleteBySectionId($sectionId, $contextId);
 
 		// Remove articles from this section
 		$articleDao = DAORegistry::getDAO('ArticleDAO');

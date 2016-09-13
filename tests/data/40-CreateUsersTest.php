@@ -3,8 +3,8 @@
 /**
  * @file tests/data/40-CreateUsersTest.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CreateUsersTest
@@ -96,7 +96,7 @@ class CreateUsersTest extends PKPCreateUsersTest {
 			'lastName' => 'Janssen',
 			'country' => 'Netherlands',
 			'affiliation' => 'Utrecht University',
-			'roles' => array('External Reviewer'),
+			'roles' => array('Reviewer'),
 		));
 	}
 
@@ -110,7 +110,7 @@ class CreateUsersTest extends PKPCreateUsersTest {
 			'lastName' => 'Hudson',
 			'country' => 'Canada',
 			'affiliation' => 'McGill University',
-			'roles' => array('External Reviewer'),
+			'roles' => array('Reviewer'),
 		));
 	}
 
@@ -124,7 +124,7 @@ class CreateUsersTest extends PKPCreateUsersTest {
 			'lastName' => 'McCrae',
 			'country' => 'Canada',
 			'affiliation' => 'University of Manitoba',
-			'roles' => array('External Reviewer'),
+			'roles' => array('Reviewer'),
 		));
 	}
 
@@ -138,7 +138,7 @@ class CreateUsersTest extends PKPCreateUsersTest {
 			'lastName' => 'Gallego',
 			'country' => 'United States',
 			'affiliation' => 'State University of New York',
-			'roles' => array('External Reviewer'),
+			'roles' => array('Reviewer'),
 		));
 	}
 

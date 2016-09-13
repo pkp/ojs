@@ -3,8 +3,8 @@
 /**
  * @file classes/file/IssueFileManager.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueFileManager
@@ -84,7 +84,7 @@ class IssueFileManager extends FileManager {
 		$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
 		$issueFile = $issueFileDao->getById($fileId);
 
-		if (parent::deleteFile($this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getFileName())) {
+		if (parent::deleteFile($this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName())) {
 			$issueFileDao->deleteById($fileId);
 			return true;
 		}
@@ -111,7 +111,7 @@ class IssueFileManager extends FileManager {
 
 		if ($issueFile) {
 			$fileType = $issueFile->getFileType();
-			$filePath = $this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getFileName();
+			$filePath = $this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
 
 			return parent::downloadFile($filePath, $fileType, $inline);
 

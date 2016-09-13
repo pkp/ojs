@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/NativeImportExportPlugin.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NativeImportExportPlugin
@@ -13,7 +13,7 @@
  * @brief Native XML import/export plugin
  */
 
-import('classes.plugins.ImportExportPlugin');
+import('lib.pkp.classes.plugins.ImportExportPlugin');
 
 class NativeImportExportPlugin extends ImportExportPlugin {
 	/**
@@ -75,13 +75,9 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @param $request PKPRequest
 	 */
 	function display($args, $request) {
+		parent::display($args, $request);
 		$templateMgr = TemplateManager::getManager($request);
 		$journal = $request->getJournal();
-
-		parent::display($args, $request);
-
-		$templateMgr->assign('plugin', $this);
-
 		switch (array_shift($args)) {
 			case 'index':
 			case '':
@@ -119,8 +115,12 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					return $json->getString();
 				}
 				$temporaryFilePath = $temporaryFile->getFilePath();
-				$submissions = $this->importSubmissions(file_get_contents($temporaryFilePath), $journal, $user);
-				$templateMgr->assign('submissions', $submissions);
+				libxml_use_internal_errors(true);
+				$content = $this->importSubmissions(file_get_contents($temporaryFilePath), $journal, $user);
+				$validationErrors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR ||  $a->level == LIBXML_ERR_FATAL;'));
+				$templateMgr->assign('validationErrors', $validationErrors);
+				libxml_clear_errors();
+				$templateMgr->assign('content', $content);
 				$json = new JSONMessage(true, $templateMgr->fetch($this->getTemplatePath() . 'results.tpl'));
 				return $json->getString();
 			case 'exportSubmissions':
@@ -151,7 +151,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * Get the XML for a set of submissions.
 	 * @param $submissionIds array Array of submission IDs
 	 * @param $context Context
-	 * @param $user User
+	 * @param $user User|null
 	 * @return string XML contents representing the supplied submission IDs.
 	 */
 	function exportSubmissions($submissionIds, $context, $user) {
@@ -212,7 +212,6 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		assert(count($nativeImportFilters) == 1); // Assert only a single unserialization filter
 		$importFilter = array_shift($nativeImportFilters);
 		$importFilter->setDeployment(new NativeImportExportDeployment($context, $user));
-
 		return $importFilter->execute($importXml);
 	}
 
@@ -220,14 +219,81 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @copydoc PKPImportExportPlugin::usage
 	 */
 	function usage($scriptName) {
-		fatalError('Not implemented');
+		echo __('plugins.importexport.native.cliUsage', array(
+			'scriptName' => $scriptName,
+			'pluginName' => $this->getName()
+		)) . "\n";
 	}
 
 	/**
 	 * @see PKPImportExportPlugin::executeCLI()
 	 */
 	function executeCLI($scriptName, &$args) {
-		fatalError('Not implemented');
+		$command = array_shift($args);
+		$xmlFile = array_shift($args);
+		$journalPath = array_shift($args);
+
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
+
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+
+		$journal = $journalDao->getByPath($journalPath);
+
+		if (!$journal) {
+			if ($journalPath != '') {
+				echo __('plugins.importexport.native.cliError') . "\n";
+				echo __('plugins.importexport.native.error.unknownJournal', array('journalPath' => $journalPath)) . "\n\n";
+			}
+			$this->usage($scriptName);
+			return;
+		}
+
+		if ($xmlFile && $this->isRelativePath($xmlFile)) {
+			$xmlFile = PWD . '/' . $xmlFile;
+		}
+
+		switch ($command) {
+			case 'import':
+				$userName = array_shift($args);
+				$user = $userDao->getByUsername($userName);
+
+				if (!$user) {
+					if ($userName != '') {
+						echo __('plugins.importexport.native.cliError') . "\n";
+						echo __('plugins.importexport.native.error.unknownUser', array('userName' => $userName)) . "\n\n";
+					}
+					$this->usage($scriptName);
+					return;
+				}
+
+				$this->importSubmissions(file_get_contents($xmlFile), $journal, $user);
+				return;
+			case 'export':
+				if ($xmlFile != '') switch (array_shift($args)) {
+					case 'article':
+					case 'articles':
+						file_put_contents($xmlFile, $this->exportSubmissions(
+							$args,
+							$journal,
+							null
+						));
+						return;
+					case 'issue':
+					case 'issues':
+						$exportXml = $this->exportIssues(
+							$args,
+							$journal,
+							null
+						);
+						return;
+				}
+				break;
+		}
+		$this->usage($scriptName);
 	}
 }
 

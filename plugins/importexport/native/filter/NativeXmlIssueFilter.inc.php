@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/filter/NativeXmlIssueFilter.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NativeXmlIssueFilter
@@ -59,6 +59,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	/**
 	 * Handle a singular element import.
 	 * @param $node DOMElement
+	 * @return Issue
 	 */
 	function handleElement($node) {
 		$deployment = $this->getDeployment();
@@ -112,6 +113,9 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 			$issue->$setterFunction(strtotime($n->textContent));
 		} else switch ($n->tagName) {
 			// Otherwise, delegate to specific parsing code
+			case 'id':
+				$this->parseIdentifier($n, $issue);
+				break;
 			case 'articles':
 				$this->parseArticles($n, $issue);
 				break;
@@ -124,9 +128,6 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 			case 'issue_cover':
 				$this->parseIssueCover($n, $issue);
 				break;
-			case 'issue_style':
-				$this->parseIssueStyle($n, $issue);
-				break;
 			default:
 				fatalError('Unknown element ' . $n->tagName);
 		}
@@ -135,6 +136,33 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	//
 	// Element parsing
 	//
+	/**
+	 * Parse an identifier node and set up the issue object accordingly
+	 * @param $element DOMElement
+	 * @param $issue Issue
+	 */
+	function parseIdentifier($element, $issue) {
+		$deployment = $this->getDeployment();
+		$advice = $element->getAttribute('advice');
+		switch ($element->getAttribute('type')) {
+			case 'internal':
+				// "update" advice not supported yet.
+				assert(!$advice || $advice == 'ignore');
+				break;
+			case 'public':
+				if ($advice == 'update') {
+					$issue->setStoredPubId('publisher-id', $element->textContent);
+				}
+				break;
+			default:
+				if ($advice == 'update') {
+					// Load pub id plugins
+					$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $deployment->getContext()->getId());
+					$issue->setStoredPubId($element->getAttribute('type'), $element->textContent);
+				}
+		}
+	}
+
 	/**
 	 * Parse an articles element
 	 * @param $node DOMElement
@@ -215,7 +243,6 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	 * @param $issue Issue
 	 */
 	function parseSection($node, $issue) {
-
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
 		$issue = $deployment->getIssue();
@@ -234,22 +261,33 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 		$section->setHideAuthor($node->getAttribute('hide_author'));
 		$section->setHideTitle($node->getAttribute('hide_title'));
 		$section->setHideAbout($node->getAttribute('hide_about'));
-		$section->setDisableComments($node->getAttribute('disable_comments'));
 		$section->setAbstractWordCount($node->getAttribute('abstract_word_count'));
 
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
 			if (is_a($n, 'DOMElement')) {
-				list($locale, $value) = $this->parseLocalizedContent($n);
 				switch ($n->tagName) {
-					case 'abbrev': $section->setAbbrev($value, $locale); break;
-					case 'policy': $section->setPolicy($value, $locale); break;
-					case 'title': $section->setTitle($value, $locale); break;
+					case 'id':
+						// Only support "ignore" advice for now
+						$advice = $n->getAttribute('advice');
+						assert(!$advice || $advice == 'ignore');
+						break;
+					case 'abbrev':
+						list($locale, $value) = $this->parseLocalizedContent($n);
+						$section->setAbbrev($value, $locale);
+						break;
+					case 'policy':
+						list($locale, $value) = $this->parseLocalizedContent($n);
+						$section->setPolicy($value, $locale);
+						break;
+					case 'title':
+						list($locale, $value) = $this->parseLocalizedContent($n);
+						$section->setTitle($value, $locale);
+						break;
 				}
 			}
 		}
 
 		$sectionDao->insertObject($section);
-
 	}
 
 	/**
@@ -260,41 +298,13 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	function parseIssueCover($node, $issue) {
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
 			if (is_a($n, 'DOMElement')) {
-				list($locale, $value) = $this->parseLocalizedContent($n);
 				switch ($n->tagName) {
-					case 'file_name': $issue->setFileName($value, $locale); break;
-					case 'original_file_name': $issue->setOriginalFileName($value, $locale); break;
-					case 'hide_cover_page_archives': $issue->setHideCoverPageArchives($value, $locale); break;
-					case 'hide_cover_page_cover': $issue->setHideCoverPageCover($value, $locale); break;
-					case 'show_cover_page': $issue->setShowCoverPage($value, $locale); break;
-					case 'cover_page_description': $issue->setCoverPageDescription($value, $locale); break;
-					case 'cover_page_alt_text': $issue->setCoverPageAltText($value, $locale); break;
+					case 'cover_image': $issue->setCoverImage($n->textContent); break;
+					case 'cover_image_alt_text': $issue->setCoverImageAltText($n->textContent); break;
 					case 'embed':
 						import('classes.file.PublicFileManager');
 						$publicFileManager = new PublicFileManager();
-						$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getLocalizedFileName();
-						file_put_contents($filePath, base64_decode($n->textContent));
-						break;
-				}
-			}
-		}
-	}
-
-	/**
-	 * Parse out the issue style sheet and store it in an issue.
-	 * @param DOMElement $node
-	 * @param Issue $issue
-	 */
-	function parseIssueStyle($node, $issue) {
-		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
-			if (is_a($n, 'DOMElement')) {
-				switch ($n->tagName) {
-					case 'style_file_name': $issue->setStyleFileName($n->textContent); break;
-					case 'original_style_file_name': $issue->setOriginalStyleFileName($n->textContent); break;
-					case 'embed':
-						import('classes.file.PublicFileManager');
-						$publicFileManager = new PublicFileManager();
-						$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getStyleFileName();
+						$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getCoverImage();
 						file_put_contents($filePath, base64_decode($n->textContent));
 						break;
 				}

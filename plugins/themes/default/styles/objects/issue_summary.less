@@ -1,0 +1,62 @@
+/**
+ * @file styles/objects/issue_summary.less
+ *
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to an issue summary view
+ * @link templates/frontend/objects/issue_summary.tpl
+ */
+.obj_issue_summary {
+
+	.cover {
+		display: block;
+		margin-bottom: @double;
+
+		img {
+			display: block;
+			width: auto;
+			max-height: 250px;
+		}
+	}
+
+	.title {
+		font-family: @font-heading;
+		font-weight: @bold;
+		text-decoration: none;
+	}
+
+	.series {
+		margin-bottom: @half;
+		color: @text-light;
+	}
+
+	.description {
+		font-size: @font-sml;
+		line-height: @line-sml;
+
+		p:first-child {
+			margin-top: 0;
+		}
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	@media(min-width: @screen-tablet) {
+		.pkp_helpers_clear;
+
+		.cover {
+			float: left;
+			width: 25%;
+			height: auto;
+			margin-right: @double;
+
+			img {
+				max-height: auto;
+			}
+		}
+	}
+}

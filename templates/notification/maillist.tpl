@@ -1,8 +1,8 @@
 {**
  * templates/notification/maillist.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Displays the notification settings page and unchecks
@@ -36,15 +36,12 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="notificationSettings" method="post" action="{url op="saveSubscribeMailList"}">
+{csrf}
 
 <table class="data">
 	<tr>
 		<td class="label" width="5%">{fieldLabel name="email" key="user.email"}</td>
 		<td class="value" width="45%"><input type="text" id="email" name="email" size="30" maxlength="90" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label" width="5%">{fieldLabel name="confirmEmail" key="user.confirmEmail"}</td>
-		<td class="value" width="45%"><input type="text" id="confirmEmail" name="confirmEmail" size="30" maxlength="90" class="textField" /></td>
 	</tr>
 	{if $captchaEnabled}
 		<tr>
@@ -61,12 +58,12 @@
 </table>
 </form>
 <h5 style="margin-left:10%">{translate key="notification.mailList.register"}</h5>
-<ul class="plain" style="margin-left:10%">
+<ul style="margin-left:10%">
 	{if $settings.subscriptionsEnabled}
 		{url|assign:"url" page="user" op="register"}
-		<li>&#187; {translate key="notification.mailList.protectedContent" subscribeUrl=$url}
+		<li>{translate key="notification.mailList.protectedContent" subscribeUrl=$url}
 	{/if}
-<li>&#187; <a href="{url page="about" op="submissions" anchor="privacyStatement"}">{translate key="about.privacyStatement"}</a></li>
+	<li><a href="{url page="about" op="submissions" anchor="privacyStatement"}">{translate key="about.privacyStatement"}</a></li>
 </ul>
 
 </form>

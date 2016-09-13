@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/CcorinoSubmissionTest.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CcorinoSubmissionTest
@@ -26,7 +26,6 @@ class CcorinoSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Corino',
 			'affiliation' => 'University of Bologna',
 			'country' => 'Italy',
-			'roles' => array('Author'),
 		));
 
 		$title = 'The influence of lactation on the quantity and quality of cashmere production';
@@ -41,9 +40,8 @@ class CcorinoSubmissionTest extends ContentBaseTestCase {
 
 		$this->logOut();
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
-		$this->assignParticipant('Section editor', 'David Buskins');
 		$this->sendToReview();
-		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/div[contains(text(), \'Initiated\')]');
+		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
 		$this->logOut();
 	}
 }

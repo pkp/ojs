@@ -3,8 +3,8 @@
 /**
  * @file pages/management/SettingsHandler.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SettingsHandler
@@ -25,7 +25,6 @@ class SettingsHandler extends ManagementHandler {
 		$this->addRoleAssignment(
 			ROLE_ID_MANAGER,
 			array(
-				'index',
 				'settings',
 				'publication',
 				'distribution',
@@ -38,17 +37,6 @@ class SettingsHandler extends ManagementHandler {
 	// Public handler methods
 	//
 	/**
-	 * Display settings index page.
-	 * @param $request PKPRequest
-	 * @param $args array
-	 */
-	function index($args, $request) {
-		$templateMgr = TemplateManager::getManager($request);
-		$this->setupTemplate($request);
-		$templateMgr->display('management/settings/index.tpl');
-	}
-
-	/**
 	 * Route to other settings operations.
 	 * @param $args array
 	 * @param $request PKPRequest
@@ -57,8 +45,7 @@ class SettingsHandler extends ManagementHandler {
 		$path = array_shift($args);
 		switch($path) {
 			case 'index':
-				$this->index($args, $request);
-				break;
+			case '':
 			case 'journal':
 				$this->journal($args, $request);
 				break;
@@ -87,6 +74,23 @@ class SettingsHandler extends ManagementHandler {
 	function journal($args, $request) {
 		$templateMgr = TemplateManager::getManager($request);
 		$this->setupTemplate($request);
+
+		// Display a warning message if there is a new version of OJS available
+		if (Config::getVar('general', 'show_upgrade_warning')) {
+			import('lib.pkp.classes.site.VersionCheck');
+			if ($latestVersion = VersionCheck::checkIfNewVersionExists()) {
+				$templateMgr->assign('newVersionAvailable', true);
+				$templateMgr->assign('latestVersion', $latestVersion);
+				$currentVersion = VersionCheck::getCurrentDBVersion();
+				$templateMgr->assign('currentVersion', $currentVersion->getVersionString());
+
+				// Get contact information for site administrator
+				$roleDao = DAORegistry::getDAO('RoleDAO');
+				$siteAdmins = $roleDao->getUsersByRoleId(ROLE_ID_SITE_ADMIN);
+				$templateMgr->assign('siteAdmin', $siteAdmins->next());
+			}
+		}
+
 		$templateMgr->display('management/settings/journal.tpl');
 	}
 

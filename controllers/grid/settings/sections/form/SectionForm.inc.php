@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/settings/sections/form/SectionForm.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionForm
@@ -63,7 +63,6 @@ class SectionForm extends PKPSectionForm {
 				'hideTitle' => $section->getHideTitle(),
 				'hideAuthor' => $section->getHideAuthor(),
 				'hideAbout' => $section->getHideAbout(),
-				'disableComments' => $section->getDisableComments(),
 				'policy' => $section->getPolicy(null), // Localized
 				'wordCount' => $section->getAbstractWordCount()
 			);
@@ -83,7 +82,6 @@ class SectionForm extends PKPSectionForm {
 		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
 		$sectionEditorCount = $userGroupDao->getContextUsersCount($journal->getId(), null, ROLE_ID_SUB_EDITOR);
 		$templateMgr->assign('sectionEditorCount', $sectionEditorCount);
-		$templateMgr->assign('commentsEnabled', $journal->getSetting('enableComments'));
 
 		$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForms = $reviewFormDao->getActiveByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId());
@@ -101,7 +99,7 @@ class SectionForm extends PKPSectionForm {
 	 */
 	function readInputData() {
 		parent::readInputData();
-		$this->readUserVars(array('abbrev', 'policy', 'reviewFormId', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'hideAbout', 'disableComments', 'wordCount'));
+		$this->readUserVars(array('abbrev', 'policy', 'reviewFormId', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'hideAbout', 'wordCount'));
 	}
 
 	/**
@@ -145,7 +143,6 @@ class SectionForm extends PKPSectionForm {
 		$section->setHideTitle($this->getData('hideTitle') ? 1 : 0);
 		$section->setHideAuthor($this->getData('hideAuthor') ? 1 : 0);
 		$section->setHideAbout($this->getData('hideAbout') ? 1 : 0);
-		$section->setDisableComments($this->getData('disableComments') ? 1 : 0);
 		$section->setPolicy($this->getData('policy'), null); // Localized
 		$section->setAbstractWordCount($this->getData('wordCount'));
 
@@ -155,7 +152,9 @@ class SectionForm extends PKPSectionForm {
 		if ($this->getSectionId()) {
 			$sectionDao->updateObject($section);
 		} else {
+			$section->setSequence(REALLY_BIG_NUMBER);
 			$this->setSectionId($sectionDao->insertObject($section));
+			$sectionDao->resequenceSections($journal->getId());
 		}
 
 		import('lib.pkp.classes.controllers.listbuilder.ListbuilderHandler');
@@ -163,9 +162,9 @@ class SectionForm extends PKPSectionForm {
 		ListbuilderHandler::unpack(
 			$request,
 			$this->getData('subEditors'),
-			array(&$this, 'deleteSubEditorEntry'),
-			array(&$this, 'insertSubEditorEntry'),
-			array(&$this, 'updateSubEditorEntry')
+			array($this, 'deleteSubEditorEntry'),
+			array($this, 'insertSubEditorEntry'),
+			array($this, 'updateSubEditorEntry')
 		);
 
 		return true;

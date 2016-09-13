@@ -4,15 +4,15 @@
 <!--
   * locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
   *
   -->
- 
-<locale name="zh_CN" full_name="China.PR">
+
+<locale name="zh_CN" full_name="简体中文">
 	<!--
 	 * This file is organized into several major sections, separated
 	 * by comments like this one. These sections are called:
@@ -37,11 +37,12 @@
 
 
 
+	<!--  peer review -->
 
 
-	<message key="reviewer.article.enterReviewForm">点击图标以填写审查表。</message>	
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">请填写必添项目</message>	
-	
+	<message key="reviewer.article.enterReviewForm">点击图标以填写审查表。</message>
+	<message key="reviewer.article.reviewFormResponse.form.responseRequired">请填写必添项目</message>
+
 	<!-- review forms end -->
 
 	<!--
@@ -55,21 +56,19 @@
 	<message key="common.confirmComplete">你确定要标记这个任务为完成状态吗？以后您可能无法进行更改。</message>
 	<message key="common.payment">支付</message>
 	<message key="common.payments">支付</message>
-	<message key="common.pageHeader.altText">页面头部</message>
 	<message key="common.homePageHeader.altText">主页头部</message>
 	<message key="common.journalHomepageImage.altText">期刊主页图片</message>
 
 	<!-- Common Form Messages -->
-	
+
 	<!-- Common Email Messages -->
 
 	<!-- Common Localization Terms -->
 
 	<!-- Common Error Messages -->
-		
+
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">期刊帮助</message>
-	<message key="navigation.archives">过刊浏览</message>
 	<message key="navigation.current">最新一期</message>
 	<message key="navigation.otherJournals">其他杂志</message>
 	<message key="navigation.browseByIssue">通过刊期</message>
@@ -79,7 +78,7 @@
 	<message key="navigation.competingInterestGuidelines">利益冲突向导</message>
 	<message key="navigation.infoForAuthors.long">作者须知</message>
 	<message key="navigation.infoForLibrarians.long">图书管理员须知</message>
-	
+
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">未指派</message>
 	<message key="common.queue.short.submissionsUnassigned">未指派</message>
@@ -93,7 +92,7 @@
 	<message key="common.queue.short.active">活动中</message>
 	<message key="common.queue.long.completed">存档</message>
 	<message key="common.queue.short.completed">存档</message>
-	
+
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
@@ -122,12 +121,8 @@
 	<message key="article.suppFiles">补充文件</message>
 	<message key="article.suppFilesAbbrev">补充文件</message>
 	<message key="article.discipline">学科和分学科</message>
-	<message key="article.subjectClassification">学科分类</message>
 	<message key="article.subject">关键词</message>
 	<message key="article.coverage">覆盖</message>
-	<message key="article.coverageGeo">地理空间覆盖面</message>
-	<message key="article.coverageChron">按时间顺序或历史报道</message>
-	<message key="article.coverageSample"> 研究样本特征</message>
 	<message key="article.type">形式，方法或途径</message>
 	<message key="article.language">语言</message>
 	<message key="article.sectionEditor">栏目编辑</message>
@@ -143,9 +138,6 @@
 	<message key="article.comments.disable">禁止</message>
 	<message key="article.comments.enable">启用</message>
 	<message key="article.fontSize">字体大小</message>
-	<message key="article.fontSize.small.altText">Small</message>
-	<message key="article.fontSize.medium.altText">Medium</message>
-	<message key="article.fontSize.large.altText">Large</message>
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.submissionEditing">投稿编辑中</message>
@@ -168,7 +160,7 @@
 	<message key="submission.scheduling">计划（Scheduling）</message>
 	<message key="submission.scheduledIn">在出版计划的 {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(TBA)</message>
-	
+
 	<message key="submissions.sec">Sec</message>
 	<message key="submissions.step1">步骤一</message>
 	<message key="submissions.step3">步骤三</message>
@@ -191,7 +183,7 @@
 	<message key="submissions.proofreadingComplete">校对完的</message>
 
 	<!-- Submission Notes -->
-	
+
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">最新一期</message>
 	<message key="journal.journals">期刊</message>
@@ -213,22 +205,11 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">期刊管理员</message>
-	<message key="user.role.editor">编辑</message>
 	<message key="user.role.sectionEditor">栏目编辑</message>
-	<message key="user.role.layoutEditor">排版编辑</message>
-	<message key="user.role.copyeditor">文字编辑</message>
-	<message key="user.role.proofreader">校对</message>
-	<message key="user.role.author">作者</message>
 	<message key="user.role.subscriptionManager">订阅管理员</message>
 	<message key="user.role.managers">期刊管理员</message>
-	<message key="user.role.editors">编辑</message>
-	<message key="user.role.subEditors">栏目编辑</message>
-	<message key="user.role.layoutEditors">排版编辑</message>
-	<message key="user.role.copyeditors">文字编辑</message>
-	<message key="user.role.proofreaders">校对</message>
-	<message key="user.role.authors">作者</message>
 	<message key="user.role.subscriptionManagers">订阅管理员</message>
-	
+
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">期</message>
 	<message key="issue.issues">刊期</message>
@@ -266,7 +247,6 @@
 	<message key="subscriptions.status.other">其他，看注释</message>
 	<message key="subscriptions.individualDescription">个人订阅需要登录访问订阅内容。</message>
 	<message key="subscriptions.institutionalDescription">机构订阅不需要登录。依据用户的域名和/或IP地址是用来提供访问订阅内容。</message>
-	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>注意：</strong> Institutional subscriptions purchased online require approval of the domain and IP ranges before the subscription is activated.]]></message>
 
 	<!--
 	 *
@@ -274,7 +254,6 @@
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">投稿事件</message>
-	<message key="submission.event.submissionSubmitted">文章已提交</message>
 	<message key="submission.event.general.issueScheduled">投稿已经发送的刊期计划队列中</message>
 	<message key="submission.event.general.issueAssigned">投稿已经指派到期刊</message>
 	<message key="submission.event.general.articlePublished">文章已经发布</message>
@@ -282,15 +261,15 @@
 	<message key="submission.event.author.authorRevision">作者修订已经提交</message>
 
 	<message key="submission.event.general.authorRevision">作者的修订文件已经上传</message>
-	
+
 	<message key="submission.event.editor.editorAssigned">编辑分配给投稿</message>
 	<message key="submission.event.editor.editorUnassigned">编辑未分配给投稿</message>
 	<message key="submission.event.editor.editorDecision">编辑决定已经提交</message>
 	<message key="submission.event.editor.editorFile">编辑文件已经上传</message>
 	<message key="submission.event.editor.submissionArchived">投稿发送的存档</message>
 	<message key="submission.event.editor.submissionRestored">投稿从存档中恢复</message>
-	
-	
+
+
 	<message key="submission.event.copyedit.copyeditorAssigned">文本编辑已经指派给投稿</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">文本编辑未指派给投稿</message>
 	<message key="submission.event.copyedit.copyeditInitiated">文本编辑指派开始</message>
@@ -298,13 +277,13 @@
 	<message key="submission.event.copyedit.copyeditInitialCompleted">初步文本编辑完成</message>
 	<message key="submission.event.copyedit.copyeditFinalCompleted">最终文本编辑完成</message>
 	<message key="submission.event.copyedit.copyeditSetFile">文本编辑文件已经上传</message>
-	
+
 	<message key="submission.event.proofread.proofreaderAssigned">校对编辑已经指派给投稿</message>
 	<message key="submission.event.proofread.proofreaderUnassigned">校对未指派给投稿</message>
 	<message key="submission.event.proofread.proofreadInitiated">校对指派开始</message>
 	<message key="submission.event.proofread.proofreadRevision">校对修订文件已经上传</message>
 	<message key="submission.event.proofread.proofreadCompleted">校对指派完成</message>
-	
+
 	<message key="submission.event.layout.layoutEditorAssigned">排版编辑已经指派给投稿</message>
 	<message key="submission.event.layout.layoutEditorUnassigned">排版编辑未指派给投稿</message>
 	<message key="submission.event.layout.layoutInitiated">排版已经开始</message>
@@ -319,7 +298,7 @@
 
 	<!-- Reader article view -->
 	<message key="reader.subscribersOnly">只是订阅者</message>
-	<message key="reader.subscriptionRequiredLoginText">订阅所需的访问项目，需要登录期刊进行订阅验证.</message>  
+	<message key="reader.subscriptionRequiredLoginText">订阅所需的访问项目，需要登录期刊进行订阅验证.</message>
 	<message key="reader.openAccess">开放存取</message>
 	<message key="reader.subscriptionAccess">订阅存取</message>
 	<message key="reader.subscriptionOrFeeAccess">订阅或者付费存取</message>
@@ -329,15 +308,15 @@
 	<message key="comments.authenticated"><![CDATA[通过 <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
 	<!-- Site Administration -->
-	
+
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[为了让这个网站的所有期刊内容可以让一个全球发行的研究数据库检索，请将您网站的网址(url)<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">注册</a>到Public Knowledge Project的元数据<a href="http://pkp.sfu.ca/harvester/" target="_blank">收集器</a> 。该工具将会收集期刊中每个检索项目的元数据，以便精确和集中搜寻每个隶属于<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">为收集元数据而设的开放文件初始协议</a>的研究网站。
 <br /><br />
 <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">点击这里</a>并且输入 <span class="highlight">{$siteUrl}</span>在<strong>网站网址</strong>，和 <span class="highlight">{$oaiUrl}</span>在<strong>供「公开文件柜索引」(OAI)的基础网址</strong>。
 <br /><br />
 藉由修改开放期刊系统的配置，请注意开放存档检索界面可以被关闭。未来开放期刊系统的版本将会允设一个网站的各别期刊可以配置开启或关闭OAI系统。]]></message>
 
-	
-	
+
+
 	<!-- Languages -->
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>从PKP网站下载的语言包暂时不被支持，原因如下:</p>
 	<ul>
@@ -351,31 +330,31 @@
 		<ul>
 			<li>如果一个用户想要在这个网站中，以一个在认证来源中（而非OJS的数据库中）已经存在的名称来注册一个新的帐号，只有在输入的密码对该用户帐号来说是有效的时候，才能完成注册程序。</li>
 		</ul>]]></message>
-	
-	<!-- System Information -->
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>注意！</div>
-<p>系统无法自动覆盖这个配置文件。要应用您的配置变更，您必须以适合的编辑器开启<tt>config.inc.php</tt>，并以下列文字栏位中的内容来替换其内容。</p>]]>></message>
-	
 
-	<!-- Site Administrator Merge Users -->	
+	<!-- System Information -->
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>注意！</h4>
+<p>系统无法自动覆盖这个配置文件。要应用您的配置变更，您必须以适合的编辑器开启<tt>config.inc.php</tt>，并以下列文字栏位中的内容来替换其内容。</p>]]>></message>
+
+
+	<!-- Site Administrator Merge Users -->
 
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">订阅管理</message>
 	<message key="subscriptionManager.individualSubscriptions">个人订阅</message>
 	<message key="subscriptionManager.institutionalSubscriptions">机构订阅</message>
 	<message key="subscriptionManager.subscriptionTypes">订阅类型</message>
-	
+
 	<!-- Journal Management -->
 
 	<!-- Statistics & Reports -->
 
 
 	<!-- Plugin Management -->
-	
+
 	<!-- Payment Management -->
 
 
-		
+
 
 
 	<!-- General plugin information -->
@@ -387,143 +366,29 @@
 
 	<message key="plugins.categories.generic.description">该类型插件以各种方式扩充OJS，让其他种类的WEB程序可以支持OJS.</message>
 
-	<message key="plugins.categories.implicitAuth">隐式认证插件</message>
-	<message key="plugins.categories.implicitAuth.description">隐式身份验证插件执行基于HTTP头的用户验证.</message>
-
-
-
-
- 
-
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->
-	
+
 	<!-- Setup Step 1 -->
 
 	<!-- Setup Step 2 -->
 
 
-	<message key="manager.setup.reviewProcessEmailDescription">编辑向审稿人寄交一份附有投稿稿件的审稿邀请函。审稿人同样以电子邮件将他们的同意书（或婉谢信），连同审稿意见书和建议选项寄交给编辑。编辑在投稿的「审稿」页面，进入审稿人的同意书（或婉谢信）以及审稿意见书和建议选项，以记录审稿流程.</message>
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems 支持<a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe)洛克斯数位存档系统，确保这份期刊有个安全与永久性的文件记录。LOCKSS是一个由史丹佛大学图书馆所开发的开源码软件，能够让图书馆以定期徵询注册之期刊网站是否有新内容并将之存档的方式，保存所选择的网路期刊。每份文件都会持续性地透过其他图书馆的快取(caches)加以认证，而如果文件内容被发现损毁或遗失，其他的快取或者这份期刊就会被用来备份它，
-<br /><br />
-除非日后的出版工作完全还在准备阶段，否则不需要配置 LOCKSS以支持OJS；在此阶段请遵循这两个步骤：]]</message>
-	
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
-<h4>1. Proposed Policy for Journals That Offer Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
-</ol>
 
-<h4>Proposed Policy for Journals That Offer Delayed Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
-</ol>]]></message>
-	
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
-<h4>1. Proposed Policy for Journals That Offer Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
-</ol>
 
-<h4>Proposed Policy for Journals That Offer Delayed Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
-</ol>]]></message>
-	
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
-<h4>1. Proposed Policy for Journals That Offer Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
-</ol>
 
-<h4>Proposed Policy for Journals That Offer Delayed Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
-</ol>]]></message>
-	
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
-<h4>1. Proposed Policy for Journals That Offer Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
-</ol>
 
-<h4>Proposed Policy for Journals That Offer Delayed Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
-</ol>]]></message>
-	
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
-<h4>1. Proposed Policy for Journals That Offer Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
-</ol>
 
-<h4>Proposed Policy for Journals That Offer Delayed Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
-</ol>]]></message>
-	
-	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
-<h4>1. Proposed Policy for Journals That Offer Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
-</ol>
-
-<h4>Proposed Policy for Journals That Offer Delayed Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
-</ol>]]></message>
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[期刊会使用一个可在网路上取得的主题分类系统。<br />
 分类系统的标题]]></message>
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[To have the contents of this journal indexed within a globally distributed system of research databases, please read <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">the steps to becoming a data contributor</a> and register your journal with the official <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open Archives registry</a>.  To register, you will need the base URL for your repository: <span class="highlight">{$oaiUrl}</span>.  Afterwards, you can register your journal at the <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> and <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
-<br /><br />
-Note that if your site administrator has already registered this site with these services, your journal will be indexed automatically and you do not need to register your journal.]]></message>
-	<message key="manager.setup.citations.enable">Allow authors to separately provide a formatted list of references (citations) as part of their submission.</message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[步骤：投稿稿件列表 &gt; 提交审稿意见书 &gt; 提交修订版本 &gt; 内容目录。<br /><br />
@@ -537,7 +402,7 @@ Note that if your site administrator has already registered this site with these
 	<!-- Setup Step 5 -->
 
 	<!-- Languages -->
-	
+
 	<!-- Section Management -->
 
 	<!-- Import/Export -->
@@ -557,7 +422,7 @@ Note that if your site administrator has already registered this site with these
 		所要进行的动作，必须由网站管理员来完成。]]></message>
 
 
-	
+
 	<!-- Email Management -->
 
 	<!-- Subscription Policy Management -->
@@ -585,20 +450,20 @@ Note that if your site administrator has already registered this site with these
 	<!-- Live Issues -->
 
 	<!-- Navigation sidebar menu -->
-	
+
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.selectReviewerNotes"><![CDATA[
-		姓名链接到审稿人帐号。<br/>
-		从5(极佳)开始评分。<br/>
-		「周数」意指完成一份审稿工作的平均时期<br/>
-		「最新」是指最近接受的审稿工作日期<br/>
+		姓名链接到审稿人帐号。<br />
+		从5(极佳)开始评分。<br />
+		「周数」意指完成一份审稿工作的平均时期<br />
+		「最新」是指最近接受的审稿工作日期<br />
 		「进行中」是指有多少审稿工作目前正待考虑或者正在进行。]]></message>
 
 
 
 
 
-	
+
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">活动的编辑指派</message>
 	<message key="sectionEditor.completedEditorialAssignments">完成的编辑指派</message>
@@ -609,7 +474,7 @@ Note that if your site administrator has already registered this site with these
 	<message key="sectionEditor.proofreader.confirmRenotify">再次通知这个校对者会重新指派他们的编辑任务。您确定您想要这么做？</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">遗憾</message>
-	<message key="sectionEditor.regrets.title">>#{$articleId} 审稿人婉谢、取消 &amp; 之前的审稿回合</message>
+	<message key="sectionEditor.regrets.title">>#{$submissionId} 审稿人婉谢、取消 &amp; 之前的审稿回合</message>
 	<message key="sectionEditor.regrets">遗憾</message>
 	<message key="sectionEditor.regrets.link">查看婉谢、取消、前一回合审稿</message>
 	<message key="sectionEditor.regrets.reviewRound">审稿，第{$round}回合审稿</message>
@@ -629,12 +494,12 @@ Note that if your site administrator has already registered this site with these
 	<message key="layoutEditor.galley.replaceGalley">替换文件</message>
 	<message key="layoutEditor.galley.uploadSuppFile">上传附件</message>
 	<message key="submission.layout.imageInvalid">无效地俄图片格式，允许 .gif, .jpg, 和.png格式.</message>
-	
+
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">文章等待审阅</message>
 	<message key="reviewer.completedReviews">完成</message>
 	<message key="reviewer.averageQuality">等级</message>
-	
+
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">已经被审阅的文件</message>
 	<message key="reviewer.article.notifyTheEditor">通知作者</message>
@@ -649,7 +514,7 @@ Note that if your site administrator has already registered this site with these
 	<message key="reviewer.article.recommendation">建议</message>
 	<message key="reviewer.article.submitReview">提交审阅给编辑</message>
 	<message key="reviewer.article.reviewerComments">评论</message>
-	<message key="reviewer.article.uploadedFile">已经上传的文件</message>	
+	<message key="reviewer.article.uploadedFile">已经上传的文件</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">有审稿人上传的版本</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">（如果您想要在这份文件中做一些给编辑看的注解，请先将文件保存在您的磁盘上，然后使用「浏览＼上传」功能。）</message>
         <message key="reviewer.article.schedule.request">编辑请求</message>
@@ -686,7 +551,7 @@ Note that if your site administrator has already registered this site with these
 	<message key="copyeditor.article.copyeditorFile">文本编辑文件</message>
 	<message key="copyeditor.article.uploadedFile">已经上传的文件</message>
 	<message key="copyeditor.article.copyeditorFinalFile">文本编辑文件</message>
-	
+
 	<!-- Proofreader -->
 	<message key="proofreader.noProofreadingAssignments">未指派校对</message>
 
@@ -695,9 +560,9 @@ Note that if your site administrator has already registered this site with these
 
 	<!-- Article Submission Step 1 -->
 
-	
+
 	<!-- Article Submission Step 2 -->
-	
+
 	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[
 		要上传初稿给本期刊，请完成下列步骤。
@@ -709,11 +574,11 @@ Note that if your site administrator has already registered this site with these
 		<li>一旦稿件成功上传，请点击本页最下面的「存档并继续」按钮</li>
 		</ol>
 		您可以点击文件的名称来查看该份文件。可以上传一份新的或者修改过的文件，删除掉目前出现的这份文件。也可以（在下一步骤）使用「补充文件」来增加额外的文件。如果您上传稿件时出现问题，请联系 <a href="mailto:{$supportEmail}">{$supportName}</a> ，透过电子邮件或电话 {$supportPhone}取得协助。]]></message>
-	
+
 	<!-- Article Submission Step 4 -->
-	
+
 	<!-- Article Submission Step 4a: Supplementary Files -->
-	
+
 	<!-- Article Submission Step 5 -->
 
 	<!-- Used in submission review / editing -->
@@ -731,7 +596,7 @@ Note that if your site administrator has already registered this site with these
 	<message key="submission.copyedit.useFile">使用文件</message>
 	<message key="submission.copyedit.copyeditComments">文字编辑评论</message>
 	<message key="submission.copyedit.instructions">文字编辑指南</message>
-	
+
 	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.layout.noLayoutFile">无（在发送请求之前上传最后的文字编辑版本作为排版版本）</message>
 	<message key="submission.layout.publicGalleyId">公共草稿标识符</message>
@@ -741,15 +606,15 @@ Note that if your site administrator has already registered this site with these
 	<message key="submission.layout.layoutComments">排版评论</message>
 	<message key="submission.layout.instructions">排版指南</message>
 	<message key="submission.layout.referenceLinking">参考文献链接</message>
-	
-	
+
+
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">校对评论</message>
 	<message key="submission.proofread.corrections">校对修订</message>
 	<message key="submission.proofread.instructions">校对指南</message>
 
 	<!-- Submission History -->
-	
+
 	<message key="submission.logType.article">论文</message>
 	<message key="submission.logType.author">作者</message>
 	<message key="submission.logType.editor">编辑</message>
@@ -757,11 +622,11 @@ Note that if your site administrator has already registered this site with these
 	<message key="submission.logType.copyedit">文字编辑</message>
 	<message key="submission.logType.layout">排版</message>
 	<message key="submission.logType.proofread">校对</message>
-	
+
 	<!-- Submission Event Log -->
 
 	<!-- Submission Email Log -->
-	
+
 	<!-- Submission Comments -->
 	<message key="submission.comments.editorAuthorCorrespondence">作者／编辑通信</message>
 	<message key="submission.comments.copyeditComments">文本编辑评论</message>
@@ -774,17 +639,12 @@ Note that if your site administrator has already registered this site with these
 	<message key="submission.comments.forEditor">给编辑</message>
 	<message key="submission.comments.saveAndEmailAuthor">存档并电邮作者</message>
 	<message key="submission.comments.saveAndEmailEditor">存档并电邮编辑</message>
-	
+
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">注册本站新用户。</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[基于安全性的理由，这个系统将一个重新配置的密码寄发给注册用户，而不是取回目前的密码。<br /><br />请在下面输入您的电子邮件地址以重新配置您的密码。系统会寄发一封确认信到这个地址去。]]></message>
-	
+
 	<!-- Registration -->
-	<message key="user.register.selectJournal">选择一份期刊进行注册</message>
 	<message key="user.register.noJournals">本站目前尚无任何期刊可供注册.</message>
 	<message key="user.register.privacyStatement">隐私权声明</message>
-	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[如果您已经在本站上的任何一份期刊上注册过了，请<a href="{$registerUrl}">点击这里</a>。]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[如果您 <strong>尚未</strong> 在本站上的任何一份期刊上注册过，请<a href="{$registerUrl}">点击这里</a>。]]></message>
 	<message key="user.register.loginToRegister">要注册这份期刊，请输入您现有的用户名称以及密码.</message>
 	<message key="user.register.registrationDisabled">这份期刊目前不接受用户注册.</message>
 	<message key="user.register.form.passwordLengthTooShort">您输入的密码不够长.</message>
@@ -830,12 +690,11 @@ Note that if your site administrator has already registered this site with these
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">浏览作者索引</message>
 	<message key="search.searchFor">搜索文章的</message>
-	<message key="search.author">作者</message>
 	<message key="search.withinJournal">范围</message>
 	<message key="search.allJournals">所有期刊</message>
 	<message key="search.authorIndex">浏览作者索引</message>
 	<message key="search.authorDetails">作者的详细信息</message>
-	<message key="search.syntaxInstructions"><![CDATA[检索提示: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>检索提示: </h4><ul>
 <li>检索的名词区分大小写</li>
 <li>常用字词将被忽略</li>
 <li>默认情况下只有在查询结果满足所有检索词才返回（例如，隐含AND）</li>
@@ -851,13 +710,13 @@ Note that if your site administrator has already registered this site with these
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">文章下载</message>
 	<message key="article.nonpdf.note"><![CDATA[您选择的文件将开始自动下载。如果没有，请点击下面的链接。请注意，此文件可能需要一种特殊的工具或插件来查看.<br /><br />如果该文件不自动下载， <a href="{$url}">请点击这里</a>.]]></message>
-	
+
 	<!-- Site index -->
 	<message key="site.journalsHosted">本网站主办的期刊</message>
 	<message key="site.journalView">查看期刊</message>
 	<message key="site.journalRegister">注册</message>
 	<message key="site.journalCurrent">最新一期</message>
-	
+
 
 	<!-- Current index -->
 	<message key="current.current">当前的</message>
@@ -868,11 +727,9 @@ Note that if your site administrator has already registered this site with these
 	<message key="archive.archives">过刊</message>
 	<message key="archive.browse">浏览以前的刊期</message>
 	<message key="archive.issueUnavailable">刊期不存在</message>
-	
+
 	<!-- About The Journal -->
 	<message key="about.statistics">统计</message>
-	<message key="about.journalContact">期刊联系方式</message>
-	<message key="about.aboutTheJournal">关于期刊</message>
 	<message key="about.history">期刊历史</message>
 	<message key="about.editorialTeam">编辑团队</message>
 	<message key="about.editorialTeam.biography">简介（Biography）</message>
@@ -880,13 +737,8 @@ Note that if your site administrator has already registered this site with these
 	<message key="about.focusAndScope">重点和范围</message>
 	<message key="about.sectionPolicies">栏目要求</message>
 	<message key="about.submissions">投稿</message>
-	<message key="about.sponsors">主管</message>
-	<message key="about.contributors">支持的来源</message>
 	<message key="about.onlineSubmissions">在线投稿</message>
-	<message key="about.onlineSubmissions.haveAccount">是否已经在{$journalTitle}里有了一个帐户?</message>
 	<message key="about.onlineSubmissions.login">开始登录</message>
-	<message key="about.onlineSubmissions.needAccount">需要一个用户名／密码?</message>
-	<message key="about.onlineSubmissions.registration">开始注册</message>
 	<message key="about.onlineSubmissions.registrationRequired">投稿需要先注册和登录，而且需要在线检查当前投稿的状态.</message>
 	<message key="about.authorGuidelines">作者指南</message>
 	<message key="about.submissionPreparationChecklist">投稿准备清单</message>
@@ -913,27 +765,26 @@ Note that if your site administrator has already registered this site with these
 	<message key="about.subscriptionTypes.cost">费用</message>
 	<message key="about.availableSubscriptionTypes">订阅类型</message>
 	<message key="about.memberships">会员资格</message>
-	<message key="about.journalSponsorship">期刊主办方（Journal Sponsorship）</message>
 	<message key="about.aboutThisPublishingSystem">关于这个期刊系统</message>
 	<message key="about.aboutThisPublishingSystem.altText">OJS编审与出版流程</message>
 	<message key="about.aboutOJSJournal"><![CDATA[本期刊使用开放期刊系统（{$ojsVersion}）,本系统是由<a href="http://pkp.sfu.ca/">Public Knowledge Project</a>研发与支持的一个开源的期刊管理与出版软件，另外，系统基于GNU通用公共许可证，因此可以自由的分发。]]></message>
-	
+
 	<!-- Announcement -->
 
 	<!-- Help -->
 	<message key="help.ojsHelp">开放期刊系统帮助</message>
-	<message key="help.ojsHelpAbbrev">OJS帮助</message>	
+	<message key="help.ojsHelpAbbrev">OJS帮助</message>
 	<message key="help.searchReturnResults">反回到检索结果</message>
 
 	<!-- Donations -->
 	<message key="donations.thankYou">谢谢</message>
 	<message key="donations.thankYouMessage">感谢您作出的贡献。你的贡献是功不可没的。</message>
-	
+
 	<!-- Payments -->
 	<message key="payment.loginRequired">您必须先登录才能进行付款。</message>
 	<message key="payment.loginRequired.forArticle">订阅或者购买文章等项目，需要先登录期刊，进行相关验证.</message>
 	<message key="payment.loginRequired.forDonation">您必须先登录才能作出捐赠.</message>
-	
+
 	<message key="payment.paid">已经支付</message>
 	<message key="payment.payNow">现在支付</message>
 	<message key="payment.waive">减免</message>
@@ -948,25 +799,25 @@ Note that if your site administrator has already registered this site with these
 	<message key="payment.type.purchaseArticle">文章购买费</message>
 	<message key="payment.type.subscription">订阅费</message>
 	<message key="payment.type.donation">捐献</message>
-	
+
 	<message key="payment.donation.makeDonation">捐献</message>
-	
+
 	<message key="payment.submission.paySubmission">支付投稿费</message>
 	<message key="payment.fastTrack.payFastTrack">支付加急费用</message>
 	<message key="payment.fastTrack.inFastTrack">加急中</message>
 	<message key="payment.publication.payPublication">支付出版费</message>
 	<message key="payment.publication.publicationPaid">出版费已经支付</message>
-	
+
 	<message key="payment.membership.buyMembership">购买个人会员</message>
-	<message key="payment.membership.renewMembership">续订个人会员</message>	
+	<message key="payment.membership.renewMembership">续订个人会员</message>
 	<message key="payment.membership.ends">结束</message>
 
 	<message key="payment.subscription.purchase">支付订阅</message>
 	<message key="payment.subscription.renew">续订</message>
-	<message key="payment.subscription.expires">到期</message>	
+	<message key="payment.subscription.expires">到期</message>
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">OJS安装</message>
+	<message key="installer.appInstallation">OJS安装</message>
 	<message key="installer.ojsUpgrade">OJS升级</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS版本 {$version}</h4>
 <p>谢谢您下载Public Knowledge Project的<strong>Open Journal Systems</strong>. 在处理之前，请阅读 <a href="{$baseUrl}/docs/README">README</a>文件. 关于 Public Knowledge Project 相关的以及其软件的更多信息，请访问 <a href="http://pkp.sfu.ca/" target="_blank">PKP的网站</a>. 如果您有OJS的bug报告或者技术质询, 请访问<a href="http://forum.pkp.sfu.ca" target="_blank">支持论坛</a>或者访问PKP的在线 <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Bug报告系统</a>.虽然支持论坛是联系的首选方法, 您也可以电邮 <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
@@ -974,7 +825,7 @@ Note that if your site administrator has already registered this site with these
 <p>如果您要升级现有的OJS 2.x的安装, <a href="{$upgradeUrl}">点击这里</a> 开始.</p>
 <h4>推荐系统要求</h4>
 <ul>
-	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (包含 PHP 5.x); 您现在使用的是 PHP {$phpVersion}{$wrongPhpText}</li>
+	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion}; 您现在使用的是 PHP {$phpVersion}{$wrongPhpText}</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 或者 <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x 或者 >= 2.0.4x or Microsoft IIS 6</li>
 	<li>操作系统: 任何操作系统支持的上述软件, 包含 <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
@@ -1001,6 +852,8 @@ Note that if your site administrator has already registered this site with these
 		<p>谢谢您下载公共知识项目(Public Knowledge Project)的 <strong>开放期刊系统(Open Journal Systems)</strong>。在进行下一步之前，请先阅读这份软件中的<a href="{$baseUrl}/docs/README">README</a>文件。想了解更多关于公共知识项目以及其软件计划，请见：<a href="http://pkp.sfu.ca/" target="_blank">PKP网站</a>。如果您要回报关于开放期刊系统的错误信息或者有相关的技术支持问题，请见：<a href="http://forum.pkp.sfu.ca">支持讨论区</a>，或者请见PKP的线上<a href="https://github.com/pkp/pkp-lib#issues" target="_blank">错误回报系统</a>。虽然我们比较希望以讨论区做为联系的管道，不过您也可以寄信给技术团队：<a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>。</p>
 		<p>我们<strong>强烈地建议您</strong>在继续下一步之前，请备份您的数据库、文件目录以及OJS的安装目录</p>
 		<p>如果您正在执行<a href="http://www.php.net/features.safe-mode" target="_blank">PHP安全模式</a>， 请确保在您的 php.ini 配置文件中配置max_execution_time指令一个高额的上限。如果这个或者其他的时间上限（例如Apache的 "Timeout"指令）已到，而升级程序遭到中断，您必须以手动的方式介入。</p>]]></message>
+	<message key="installer.localeSettingsInstructions"><![CDATA[为了完整支持Unicode (UTF-8)编码，请选择以UTF-8作为编码位。注意，这项支持目前需要一个MySQL >= 4.1.1或者PostgreSQL >= 7.1 的数据库服务器。也请注意，完整的Unicode编码需要PHP >= 4.3.0搭配支持<a href="http://www.php.net/mbstring" target="_blank">mbstring</a>库 (最新版本的PHP安装过程已经预设启动)。如果您的服务器没有满足这些条件的话，您可能在使用额外的字符集时会碰到问题<br /><br />
+您的服务器目前对mbstring的支持性：<strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.localeInstructions">使用本系统的主要语言。如果您有意支持不列在这里的语系，请参见OJS的说明文件.</message>
 	<message key="installer.additionalLocalesInstructions">选择额外的语系以支持本系统。这些语言可以被本站的期刊所使用。也可以在任何时间点透过网站管理介面来安装额外的语系.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[输入一个保存上传文件的既存目录的完整路径名称。这个目录不应该直接透过网页存取。<strong>请确定这个目录存在而且可写入</strong> Windows路径名称应该使用右斜线，例如："C:/myjournal/files".]]></message>
@@ -1021,50 +874,48 @@ Note that if your site administrator has already registered this site with these
 
 
 	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName}已经输入一份新的投稿稿件， ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName}已经修改过文章{$articleId}。新文件的 ID为{$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName}已经被取消指派对稿件{$articleId}进行{$round}审.</message>
-	<message key="log.review.reviewInitiated">{$reviewerName}对稿件{$articleId}进行{$round}审的工作已经开始进行.</message>
-	<message key="log.review.reviewReinitiated">{$reviewerName}对稿件{$articleId}进行{$round}审的工作已经重新开始进行.</message>
-	<message key="log.review.reviewCancelled">{$reviewerName}对稿件{$articleId}进行{$round}审的工作已经被取消.</message>
-	<message key="log.review.reviewCleared">{$reviewerName}对稿件{$articleId}进行{$round}审的工作已经被清除.</message>
-	<message key="log.review.reviewerRated">{$reviewerName}对稿件{$articleId}进行{$round}审的工作已经受到评分.</message>
-	<message key="log.review.reviewDueDateSet">{$reviewerName}对稿件{$articleId}进行{$round}审工作的截止期限日期已经被配置为{$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">{$reviewerName}已经对稿件{$articleId}的{$round}审工作做出建议 .</message>
-	<message key="log.review.reviewRecommendationSetByProxy">编辑{$editorName}已对审稿人{$reviewerName}对稿件{$articleId}进行{$round}审的审稿意见做出建议.</message>
-	<message key="log.review.resubmit">稿件{$articleId}已经被重新投稿以进行审阅.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName}已经婉谢对稿件{$articleId}进行{$round}审.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName}已经接受对稿件{$articleId}进行{$round}审.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName}代表{$reviewerName}已经拒绝文章{$articleId}第{$round}回合的审阅.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName}已经代表{$reviewerName}接受对稿件{$articleId}进行{$round}审.</message>
-	<message key="log.review.reviewFileByProxy">编辑{$userName}已经代表审稿人{$reviewerName}上传了稿件{$articleId}在{$round}审时的审稿意见书文件.</message>
+	<message key="log.author.documentRevised">{$authorName}已经修改过文章{$submissionId}。新文件的 ID为{$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName}已经被取消指派对稿件{$submissionId}进行{$round}审.</message>
+	<message key="log.review.reviewInitiated">{$reviewerName}对稿件{$submissionId}进行{$round}审的工作已经开始进行.</message>
+	<message key="log.review.reviewReinitiated">{$reviewerName}对稿件{$submissionId}进行{$round}审的工作已经重新开始进行.</message>
+	<message key="log.review.reviewCancelled">{$reviewerName}对稿件{$submissionId}进行{$round}审的工作已经被取消.</message>
+	<message key="log.review.reviewCleared">{$reviewerName}对稿件{$submissionId}进行{$round}审的工作已经被清除.</message>
+	<message key="log.review.reviewerRated">{$reviewerName}对稿件{$submissionId}进行{$round}审的工作已经受到评分.</message>
+	<message key="log.review.reviewDueDateSet">{$reviewerName}对稿件{$submissionId}进行{$round}审工作的截止期限日期已经被配置为{$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">{$reviewerName}已经对稿件{$submissionId}的{$round}审工作做出建议 .</message>
+	<message key="log.review.reviewRecommendationSetByProxy">编辑{$editorName}已对审稿人{$reviewerName}对稿件{$submissionId}进行{$round}审的审稿意见做出建议.</message>
+	<message key="log.review.resubmit">稿件{$submissionId}已经被重新投稿以进行审阅.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName}已经婉谢对稿件{$submissionId}进行{$round}审.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName}已经接受对稿件{$submissionId}进行{$round}审.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName}代表{$reviewerName}已经拒绝文章{$submissionId}第{$round}回合的审阅.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName}已经代表{$reviewerName}接受对稿件{$submissionId}进行{$round}审.</message>
+	<message key="log.review.reviewFileByProxy">编辑{$userName}已经代表审稿人{$reviewerName}上传了稿件{$submissionId}在{$round}审时的审稿意见书文件.</message>
 	<message key="log.review.reviewerFile">已上传一份审稿意见书.</message>
 	<message key="log.editor.decision">对于稿件{$submissionId} 的编辑决策已经被{$editorName}记录.</message>
 
 
-	<message key="log.copyedit.initiate">文字编辑{$copyeditorName}已对稿件{$articleId}提出文字编辑意见.</message>
+	<message key="log.copyedit.initiate">文字编辑{$copyeditorName}已对稿件{$submissionId}提出文字编辑意见.</message>
 	<message key="log.copyedit.copyeditFileSet">已经选择预设的文字编辑文件.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} 已经完成稿件{$articleId}的初始文字编辑.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName}已经完成稿件{$articleId}的最终文字编辑.</message>
-	<message key="log.copyedit.copyeditorAssigned">稿件{$articleId}的校样工作已经被指派给{$copyeditorName}.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} 已经完成稿件{$submissionId}的初始文字编辑.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName}已经完成稿件{$submissionId}的最终文字编辑.</message>
+	<message key="log.copyedit.copyeditorAssigned">稿件{$submissionId}的校样工作已经被指派给{$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditorFile">已经上传一份此稿件文件的文字编辑版本.</message>
 	<message key="log.copyedit.authorFile">已经上传一份此稿件文件的作者校模板本.</message>
 
-	<message key="log.layout.layoutEditorAssigned">稿件{$articleId}的版面编辑工作已经被指派给版面编辑{$editorName}.</message>
-	<message key="log.layout.layoutEditorUnassigned">稿件{$articleId}的版面编辑工作已经取消指派给版面编辑{$editorName}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName}已经完成稿件{$articleId}的版面编辑工作.</message>
+	<message key="log.layout.layoutEditorAssigned">稿件{$submissionId}的版面编辑工作已经被指派给版面编辑{$editorName}.</message>
+	<message key="log.layout.layoutEditorUnassigned">稿件{$submissionId}的版面编辑工作已经取消指派给版面编辑{$editorName}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName}已经完成稿件{$submissionId}的版面编辑工作.</message>
 
 	<message key="log.editor.metadataModified">此文章的元数据已经被{$editorName}加以修改.</message>
 	<message key="log.editor.editorFile">已经上传了一份此稿件的编辑版本.</message>
-	<message key="log.editor.archived">稿件{$articleId}已经被存档.</message>
-	<message key="log.editor.restored">稿件{$articleId}已经被复原至列表中.</message>
-	<message key="log.editor.editorAssigned">{$editorName}被指派为稿件{$articleId}的编辑.</message>
-	<message key="log.editor.submissionExpedited">{$editorName}已经在进行稿件{$articleId}的编辑流程.</message>
+	<message key="log.editor.archived">稿件{$submissionId}已经被存档.</message>
+	<message key="log.editor.restored">稿件{$submissionId}已经被复原至列表中.</message>
+	<message key="log.editor.editorAssigned">{$editorName}被指派为稿件{$submissionId}的编辑.</message>
 
-	<message key="log.proofread.assign">{$assignerName} 已经被指派为{$proofreaderName}进行对稿件{$articleId}的校对.</message>
-	<message key="log.proofread.complete">{$proofreaderName} 提交文章 {$articleId} 用户组版.</message>
+	<message key="log.proofread.assign">{$assignerName} 已经被指派为{$proofreaderName}进行对稿件{$submissionId}的校对.</message>
+	<message key="log.proofread.complete">{$proofreaderName} 提交文章 {$submissionId} 用户组版.</message>
 
-	<message key="log.imported">{$userName}导入文章{$articleId}.</message>
+	<message key="log.imported">{$userName}导入文章{$submissionId}.</message>
 
 	<!-- Reading Tools entries -->
 
@@ -1093,10 +944,10 @@ Note that if your site administrator has already registered this site with these
 	<!-- RT Searches -->
 
 	<message key="rt.admin.validateUrls.description"><![CDATA[
-		下面列出可能是无效的搜寻网站网址。<br/>
-		您应该手动查证被标记成无效的任何网址，因为这个测试并非完全准确。<br/>
+		下面列出可能是无效的搜寻网站网址。<br />
+		您应该手动查证被标记成无效的任何网址，因为这个测试并非完全准确。<br />
 		验证需要递交表单资料的搜寻网址可能会失败。]]></message>
-	
+
 	<!-- RT Entities -->
 
 
@@ -1109,12 +960,12 @@ Note that if your site administrator has already registered this site with these
 	<message key="rt.beNotifiedWhen">会得到通知在...</message>
 
 	<message key="rt.thisJournal">检索期刊</message>
-	
+
 
 	<message key="rt.context.authorTermsDescription">由于文章拥有一个以上的作者，请选取所有的姓名以搜寻类似的共同作者作品，或者选取单个姓名以一次搜寻一个人。要学习更多关于搜寻资源的信息，请点击「介绍」。这些资源是基于其关连性与开放（自由）阅读所有或部分内容而被选取的.</message>
-	
-	
-	
+
+
+
 	<!-- Notification Types -->
 	<message key="notification.mailListDescription">请输入您的电子邮件地址，便于接收该期刊重要的新内容通知.</message>
 	<message key="notification.notificationsPublicDescription">这页显示了杂志刊期或公告相关的重要更新. 您可以通过RSS(点击右侧的图片)或者<![CDATA[  <a href="{$emailUrl}">通过电子邮件.</a>订阅这个通知 ]]></message>
@@ -1124,9 +975,7 @@ Note that if your site administrator has already registered this site with these
 	<message key="notification.type.editorDecisionComment">在编辑的决定里已经对 "{$param}"进行了评论</message>
 	<message key="notification.type.galleyModified">草稿已经被修改，关于"{$param}".</message>
 	<message key="notification.type.issuePublished">一个刊期已经出版</message>
-	<message key="notification.type.metadataModified">"{$param}"的原数据已经被修改.</message>
-	<message key="notification.type.newAnnouncement">一条新的公告已经被创建.</message>	
-	<message key="notification.type.reviewerComment">一个审稿人对 "{$param}"进行了评论.</message>
+	<message key="notification.type.newAnnouncement">一条新的公告已经被创建.</message>
 	<message key="notification.type.reviewerFormComment">一个关于 "{$param}"的审稿评论已经提交.</message>
 	<message key="notification.type.reviewing">审稿事件</message>
 	<message key="notification.type.site">站点事件</message>
@@ -1140,7 +989,7 @@ Note that if your site administrator has already registered this site with these
 	 *
 	-->
 	<!-- Icons: Default "alt" text -->
-	
+
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">已经从XML载入货币列表：{$filename}</message>
 	<message key="about.aboutOJSSite"><![CDATA[本站使用开放期刊系统（OJS  {$ojsVersion} ）.OJS是一个开源的期刊管理于出版软件，由<a href="http://pkp.sfu.ca/">Public Knowledge Project</a>组织研发，遵循GNU General Public License.]]></message>
@@ -1151,16 +1000,12 @@ Note that if your site administrator has already registered this site with these
 	<message key="user.subscriptions.status.needsApprovalDescription">订阅在激活前必须被审查</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">人工付费已经可以支付但是尚未收到。</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">在线支付已经被初始化但是被取消或者不完整</message>
-	<message key="article.pdf.download">下载PDF文件</message>
 	<message key="payment.authorFees">作者费用</message>
 	<message key="navigation.categories">类别</message>
 	<message key="navigation.categories.browse">浏览</message>
 	<message key="issue.fullIssue">完整期次</message>
 	<message key="issue.nonpdf.title">期次下载</message>
 	<message key="issue.viewIssue">浏览期次</message>
-	<message key="issue.viewIssueDescription">查看或下载完整的期次</message>
-	<message key="plugins.categories.pubIds">公共标识符插件</message>
-	<message key="plugins.categories.pubIds.description">这些插件为公共标识符提供支持。</message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
 	<![CDATA[<ol>
 	<li>编辑要求突出标明项目显示行动，按照下列进行标注:
@@ -1173,7 +1018,6 @@ Note that if your site administrator has already registered this site with these
 </ol>]]></message>
 	<message key="user.register.reviewerInterests">识别审稿利益冲突 （实质性领域和研究方法）：</message>
 	<message key="user.subscriptions.statusInformation">活跃和无效的订阅将会随着到期日列在下面。此外，下面的状态信息可以包含在每个订阅之中。</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>如果您的Web浏览器安装了PDF阅读器插件（如，最新的版本<a href="https://get.adobe.com/reader/"> Adobe Acrobat Reader</a>).您所选择的PDF文件应加载到这里。</p>]]></message>
 	<message key="site.noJournals">没有可用期刊。</message>
 	<message key="gifts.buyer">从</message>
 	<message key="gifts.buyerDescription">谁送来的礼品？</message>
@@ -1217,10 +1061,7 @@ Note that if your site administrator has already registered this site with these
 	<message key="site.upgradeAvailable.admin"><![CDATA[有新版本的OJS可用。您目前使用OJS版本{$currentVersion}. 最新的版本为OJS {$latestVersion}. 请访问<a href="http://pkp.sfu.ca/ojs_download" target="_new"页面 </a> 下载最新的版本并找到升级说明。]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[有新版本的OJS可用。您目前使用OJS版本{$currentVersion}.最新的版本为OJS {$latestVersion}. 请联系您的网站管理员 ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>)通知他们最新版本已发布。更多详情可以在 <a href="http://pkp.sfu.ca/ojs_download" target="_new">here</a>上看到。]]></message>
 	<message key="user.authorization.copyeditorAssignmentMissing">拒绝访问！您不是该文章的排版编辑。</message>
-	<message key="user.authorization.noJournal">在背景中没有期刊！</message>
 	<message key="user.authorization.sectionAssignment">您正在试图访问不属于您文章栏目中的文章。</message>
 	<message key="user.authorization.invalidCopyditorSubmission">无效的排版编辑提交或没有要求的排版编辑提交！</message>
-
-	<!-- Included here because it may be used in the navigation bar -->
-	<message key="editor.navigation.issues">刊期</message>
+	<message key="user.profile.profileImage">个人照片</message>
 </locale>

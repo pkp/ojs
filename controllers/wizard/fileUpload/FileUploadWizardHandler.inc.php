@@ -8,8 +8,8 @@
 /**
  * @file controllers/wizard/fileUpload/FileUploadWizardHandler.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FileUploadWizardHandler
@@ -40,7 +40,8 @@ class FileUploadWizardHandler extends PKPFileUploadWizardHandler {
 		$stageId = (int)$request->getUserVar('stageId');
 
 		// Authorize review round id when this handler is used in review stages.
-		if ($stageId == WORKFLOW_STAGE_ID_EXTERNAL_REVIEW) {
+		import('lib.pkp.classes.submission.SubmissionFile');
+		if ($stageId == WORKFLOW_STAGE_ID_EXTERNAL_REVIEW && $request->getUserVar('fileStage') != SUBMISSION_FILE_QUERY) {
 			import('lib.pkp.classes.security.authorization.internal.ReviewRoundRequiredPolicy');
 			$this->addPolicy(new ReviewRoundRequiredPolicy($request, $args));
 		}
@@ -74,11 +75,30 @@ class FileUploadWizardHandler extends PKPFileUploadWizardHandler {
 			return false;
 		}
 		if ($fileIdToValidate) {
-			import('classes.security.authorization.SubmissionFileAccessPolicy');
+			import('lib.pkp.classes.security.authorization.SubmissionFileAccessPolicy');
 			$this->addPolicy(new SubmissionFileAccessPolicy($request, $args, $roleAssignments, SUBMISSION_FILE_ACCESS_READ, $fileIdToValidate));
 		}
 
 		return parent::authorize($request, $args, $roleAssignments);
+	}
+
+	/**
+	 * @copydoc PKPFileUploadWizardHandler::_attachEntities
+	 */
+	protected function _attachEntities($submissionFile) {
+		parent::_attachEntities($submissionFile);
+
+		switch ($submissionFile->getFileStage()) {
+			case SUBMISSION_FILE_PROOF:
+				$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+				assert($submissionFile->getAssocType() == ASSOC_TYPE_REPRESENTATION);
+				$galley = $galleyDao->getById($submissionFile->getAssocId(), $submissionFile->getSubmissionId());
+				if ($galley) {
+					$galley->setFileId($submissionFile->getFileId());
+					$galleyDao->updateObject($galley);
+				}
+				break;
+		}
 	}
 }
 

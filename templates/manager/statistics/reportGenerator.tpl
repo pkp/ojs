@@ -1,8 +1,8 @@
 {**
  * templates/manager/statistics/reportGenerator.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Subtemplate defining the report generator.
@@ -18,6 +18,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="reportForm" method="post" action="{url op="reportGenerator"}">
+{csrf}
 <table class="data">
 	<tr>
 		<td class="label">{translate key="manager.statistics.reports.reportType"}</td>

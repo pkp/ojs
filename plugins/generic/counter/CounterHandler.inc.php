@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/counter/CounterHandler.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CounterHandler
@@ -316,7 +316,7 @@ class CounterHandler extends Handler {
 	}
 
 	/**
-	 * Validate that user has site admin privileges or journal manager priveleges.
+	 * Validate that user has site admin privileges or journal manager privileges.
 	 * Redirects to the user index page if not properly authenticated.
 	 * @param $canRedirect boolean Whether or not to redirect if the user cannot be validated; if not, the script simply terminates.
 	 */

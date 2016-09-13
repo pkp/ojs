@@ -1,0 +1,159 @@
+/**
+ * @file plugins/themes/default/styles/body.less
+ *
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Classes for site-wide elements and layout scaffolding
+ */
+
+body {
+	font-family: @font;
+	font-size: @font-base;
+	line-height: @line-base;
+	color: @text;
+	background: @bg;
+}
+
+a {
+	color: @primary;
+
+	&:hover,
+	&:focus {
+		color: @primary-lift;
+	}
+}
+
+
+// Page container widths
+.pkp_site_name,
+.pkp_navigation_primary_wrapper,
+.pkp_navigation_user,
+.pkp_structure_content,
+.pkp_structure_footer {
+	.pkp_helpers_clear;
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	padding-left: @base;
+	padding-right: @base;
+
+	@media( min-width: @screen-tablet ) {
+		width: @screen-tablet-container;
+		padding: 0;
+	}
+
+	@media( min-width: @screen-desktop ) {
+		width: @screen-desktop-container;
+	}
+
+	@media( min-width: @screen-lg-desktop ) {
+		width: @screen-lg-desktop-container;
+	}
+}
+
+.has_site_logo {
+
+	.pkp_site_name,
+	.pkp_navigation_primary_wrapper {
+		width: auto;
+	}
+
+	.pkp_head_wrapper {
+		.pkp_helpers_clear;
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+		padding-left: @base;
+		padding-right: @base;
+
+		@media( min-width: @screen-tablet ) {
+			width: @screen-tablet-container;
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		@media( min-width: @screen-desktop ) {
+			width: @screen-desktop-container;
+		}
+
+		@media( min-width: @screen-lg-desktop ) {
+			width: @screen-lg-desktop-container;
+		}
+	}
+}
+
+// Layout scaffold for content and sidebars
+.pkp_structure_main {
+	padding: @base;
+}
+
+@media( min-width: @screen-phone ) {
+
+	.pkp_structure_main {
+		padding: @double;
+	}
+}
+
+@media( min-width: @screen-tablet ) {
+
+	// Full-height borders wrapping primary content column
+	.pkp_structure_main {
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 1px;
+			background: @bg-border-color;
+		}
+
+		&:after {
+			left: @screen-tablet-container;
+		}
+	}
+}
+
+@media( min-width: @screen-desktop ) {
+
+	.pkp_structure_content {
+		padding-top: @triple;
+	}
+
+	.pkp_structure_sidebar {
+		float: right;
+		width: @sidebar-width;
+	}
+
+	.pkp_structure_main {
+		float: left;
+		padding: 0 @triple (@triple * 3);
+		width: @screen-desktop-container - @sidebar-width;
+
+		&:after {
+			left: @screen-desktop-container - @sidebar-width;
+		}
+	}
+}
+
+@media( min-width: @screen-lg-desktop ) {
+
+	.pkp_structure_main {
+		width: @screen-lg-desktop-container - @sidebar-width;
+
+		&:after {
+			left: @screen-lg-desktop-container - @sidebar-width;
+		}
+	}
+}
+
+// Lock in images so they don't run outside their container
+img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}

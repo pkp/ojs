@@ -4,14 +4,14 @@
 <!--
   * plugins/generic/coins/locale/id_ID/locale.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.generic.coins.displayName"> COinS Plugin</message> 
 	<message key="plugins.generic.coins.description"> Plugin CoinS menambahkan deskriptor OpenURL ke halaman artikel (abstrak dan HTML) yang dapat digunakan contohnya untuk ekstrasi ke alat kutipan.</message> 
 </locale> 

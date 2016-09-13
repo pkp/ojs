@@ -3,8 +3,8 @@
 /**
  * @file plugins/reports/reviews/ReviewReportDAO.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  * 
  * @class ReviewReportDAO
@@ -38,6 +38,7 @@ class ReviewReportDAO extends DAO {
 		);
 		import('lib.pkp.classes.db.DBRowIterator');
 		$commentsReturner = new DBRowIterator($result);
+		unset($result);
 
 		$result = $this->retrieve(
 			'SELECT r.round AS round,
@@ -71,6 +72,7 @@ class ReviewReportDAO extends DAO {
 			)
 		);
 		$reviewsReturner = new DBRowIterator($result);
+		unset($result);
 
 		return array($commentsReturner, $reviewsReturner);
 	}

@@ -4,14 +4,14 @@
 <!--
   * plugins/oaiMetadataFormats/marcxml/locale/id_ID/locale.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.OAIMetadata.marcxml.displayName"> Format metadata MARC21</message> 
 	<message key="plugins.OAIMetadata.marcxml.description"> Menyusun metadata agar konsisten dengan format MARC21.</message>
  </locale>

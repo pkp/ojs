@@ -1,8 +1,9 @@
 config.inc.php
 ./build
 temp
-files
+/files
 .htaccess
 .project
 .buildpath
 .settings
+.DS_Store

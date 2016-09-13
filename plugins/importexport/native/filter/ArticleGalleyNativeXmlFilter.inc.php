@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/filter/ArticleGalleyNativeXmlFilter.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyNativeXmlFilter
@@ -47,11 +47,7 @@ class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter {
 	 */
 	function createRepresentationNode($doc, $representation) {
 		$representationNode = parent::createRepresentationNode($doc, $representation);
-		$representationNode->setAttribute('available', $representation->getIsAvailable()?'true':'false');
-		$representationNode->setAttribute('galley_type', $representation->getGalleyType());
-
-		$deployment = $this->getDeployment();
-		$representationNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'remote_url', $representation->getRemoteUrl()));
+		$representationNode->setAttribute('approved', $representation->getIsApproved()?'true':'false');
 
 		$submission = $this->getDeployment()->getSubmission();
 

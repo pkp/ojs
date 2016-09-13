@@ -2,10 +2,10 @@
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
 
 <!--
-  * locale/gl_ES/emailTemplateData.xml
+  * locale/gl_ES/emailTemplates.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -29,7 +29,6 @@ Mudar o meu contrasinal: {$url}<br />
 		<body><![CDATA[O teu contrasinal en {$siteTitle} cambiouse sen problema. Desde xa,garda en lugar seguro o teu nome de usuaria/o e contrasinal, xa que  son necesarios para traballar na revista.<br />
 <br />
 Nombe de usuaria/o: {$username}<br />
-Novo contrasinal: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Este correo envíase a un/a usuario/a rexistrado/a unha vez que mudou o seu contrasinal seguindo o procedimento descrito no correo electrónico PASSWORD_RESET_CONFIRM.</description>
@@ -49,7 +48,7 @@ Moi agradecidos,<br />
 		<subject>Novo número publicado</subject>
 		<body><![CDATA[Estimados/as lectores/as:<br />
 <br />
-{$contextName} ven de publicar o seu último número en <a href="{$journalUrl}">{$journalUrl}</a>. A continuación mostrámosche a táboa de contidos, logo podes visitar a páxina web para consultar os artigos do teu interese.<br />
+{$contextName} ven de publicar o seu último número en <a href="{$contextUrl}">{$contextUrl}</a>. A continuación mostrámosche a táboa de contidos, logo podes visitar a páxina web para consultar os artigos do teu interese.<br />
 <br />
 Benzóns por manter o teu interese no noso traballo,<br />
 {$editorialContactSignature}]]></body>
@@ -78,7 +77,7 @@ Se ten outra pregunta no dubides  en contactar connosco<br />
 		<subject>Nestre intre o Número é de Acceso Libre</subject>
 		<body><![CDATA[Lectores:<br />
 <br />
-	{$contextName} acaba de facer disponibel en acceso libre o número seguinte. Convidámoste a revisar a Táboa de Contido e a visitar a nosa páxina web  (<a href="{$journalUrl}">{$journalUrl}</a>) para consultar os artigoss o teu interese.<br />
+	{$contextName} acaba de facer disponibel en acceso libre o número seguinte. Convidámoste a revisar a Táboa de Contido e a visitar a nosa páxina web  (<a href="{$contextUrl}">{$contextUrl}</a>) para consultar os artigoss o teu interese.<br />
 	<br />
 	Benzóns por manter o teu interese no noso traballo,<br />
 	{$editorialContactSignature}]]></body>
@@ -137,11 +136,11 @@ Se ten outra pregunta no dubides  en contactar connosco<br />
 		<subject>Petición de Archivado para {$contextName}</subject>
 		<body><![CDATA[Estimado/a [Bibliotecaria/o Universitaria/o]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, é unha revista na que un membro de túa Facultade/Universidade, [nome da persoa], colabora como [responsabilidade, cargo, función]. A revista está a tentar crear un arquivo LOCKSS (Lots of Copies Keep Stuff Safe) con esta e outras bibliotecas universitarias.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, é unha revista na que un membro de túa Facultade/Universidade, [nome da persoa], colabora como [responsabilidade, cargo, función]. A revista está a tentar crear un arquivo LOCKSS (Lots of Copies Keep Stuff Safe) con esta e outras bibliotecas universitarias.<br />
 <br />
 [Breve descrición da revista]<br />
 <br />
-A URL para o Manifesto Editorial LOCKSS para a nosa revista é: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+A URL para o Manifesto Editorial LOCKSS para a nosa revista é: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Entendemos que xa está a participar en LOCKSS. Se podemos proporcionarlle metadados adicionais para rexistrar a nosa revista coa súa versión de LOCKSS, estaremos satisfeitos de o facer.<br />
 <br />
@@ -153,7 +152,7 @@ Benzóns,<br />
 		<subject>Petición de archivo para {$contextName}</subject>
 		<body><![CDATA[Estimado/a [Bibliotecario/a Universitario/a]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, é unha revista na que un membro de túa Facultade/Universidade, [nome da persoa], colabora como [responsabilidade, cargo, función]. A revista está a tentar crear un arquivo LOCKSS (Lots of Copies Keep Stuff Safe) con esta e outras bibliotecas universitarias.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, é unha revista na que un membro de túa Facultade/Universidade, [nome da persoa], colabora como [responsabilidade, cargo, función]. A revista está a tentar crear un arquivo LOCKSS (Lots of Copies Keep Stuff Safe) con esta e outras bibliotecas universitarias.<br />
 <br />
 [Breve descrición da revista]<br />
 <br />
@@ -171,7 +170,7 @@ Gracias,<br />
 <br />
 Benzón por enviarnos o teu manuscrito &quot;{$submissionTitle}&quot; a {$contextName}. Grazas ao sistema de xestión de revistas online que estamos a empregar poderás seguir o seu progreso através do proceso editorial identificándote na páxina web da revista:<br />
 <br />
-URL do manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL do manuscrito: {$submissionUrl}<br />
 Nome de usuaria/o: {$authorUsername}<br />
 <br />
 Se tes algunha pregunta non dubides en contactar connosco. Benzóns por contar con esta revista para difundir o teu traballo.<br />
@@ -211,7 +210,7 @@ Logo dunha revisión inicial de &quot;{$submissionTitle}&quot; decidiuse que est
 <br />
 Asignóuseche o envío, &quot;{$submissionTitle},&quot; a {$contextName} para que o revises no proceso editorial como Editor/a de Sección.<br />
 <br />
-URL del envío: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL del envío: {$submissionUrl}<br />
 Usuario/a: {$editorUsername}<br />
 <br />
 Benzóns,<br />
@@ -224,7 +223,7 @@ Benzóns,<br />
 <br />
 Teño o convencimento de que serías un/unha excelente revisor/a do manuscrito, &quot;{$submissionTitle},&quot; que foi enviado a {$contextName}. A continuación atoparás un extracto do envío, coa esperanza de que aceptarás levar a cabo esta importante tarefa para nós.<br />
 <br />
-Por favor, identifícate na revista antes de {$weekLaterDate} para decirnos si farás ou non a revisión e para teres acceso ao envío e poder rexistrar a túa revisión e recomendacións. O enderezo é <a href="{$journalUrl}">{$journalUrl}</a><br />
+Por favor, identifícate na revista antes de {$responseDueDate} para decirnos si farás ou non a revisión e para teres acceso ao envío e poder rexistrar a túa revisión e recomendacións. O enderezo é <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 A revisión debe estar lista para o {$reviewDueDate}.<br />
 <br />
@@ -250,7 +249,7 @@ Resumen<br />
 				<br />
 Teño o convencimento de que serías un/unha excelente revisor/a do manuscrito, &quot;{$submissionTitle},&quot; que foi enviado a {$contextName}. A continuación atoparás un extracto do envío, coa esperanza de que aceptarás levar a cabo esta importante tarefa para nós.<br />
 <br />
-Por favor, identifícate na revista antes de {$weekLaterDate} para decirnos si farás ou non a revisión e para teres acceso ao envío e poder rexistrar a túa revisión e recomendacións. O enderezo é <a href="{$journalUrl}">{$journalUrl}</a><br />
+Por favor, identifícate na revista antes de {$responseDueDate} para decirnos si farás ou non a revisión e para teres acceso ao envío e poder rexistrar a túa revisión e recomendacións. O enderezo é <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 A revisión debe estar lista para o {$reviewDueDate}.<br />
 <br />
@@ -276,7 +275,7 @@ Resumen<br />
 <br />
 Teño o convencimento de que serías un/unha excelente revisor/a do manuscrito, &quot;{$submissionTitle},&quot; que foi enviado a {$contextName}.A continuación atoparás un extracto do envío, coa esperanza de que aceptarás levar a cabo esta importante tarefa para nós. A continuación mostrámosche as Normas de Revisión desta revista e adxunto a este correo recibirás o envío. Deberías enviarme por correo electrónico a túa revisión do envío e as túas recomendacións antes do {$reviewDueDate}.<br />
 <br />
-Prégoche unha respota a este correo electrónico antes do {$weekLaterDate} e me comuniques se podes e queres facer a revisión.<br />
+Prégoche unha respota a este correo electrónico antes do {$responseDueDate} e me comuniques se podes e queres facer a revisión.<br />
 <br />
 Benzóns por ter en conta a nosa solicitude.<br />
 <br />
@@ -385,12 +384,12 @@ Pregámosche nos confirmes a túa disponibilidade para completar esta contribuci
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Petición de corrección</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Gostaría de pedirche que realices a corrección do manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Na páxina web da revista podes atopar o envío  e as instruccions de corrección.<br />
 <br />
-URL do manuscrito: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nome de usuaria/o: {$copyeditorUsername}<br />
+URL do manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nome de usuaria/o: {$participantUsername}<br />
 <br />
 Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta connosco. Benzóns por ter aceptado completar esta contribución vital para o traballo da revista. Agardamos as túas noticias.<br />
 <br />
@@ -404,11 +403,11 @@ Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta
 Veño de rematar a primeira rolda de corrección do manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Xa está preparado para que o/a autor/a e o/a editor/a revisen os cambios cambios e consultas. <br />
 <br />
 Benzóns,<br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Acuse de recibo de corrección</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Benzons por corrixir o manuscrito {$submissionTitle},&quot; para {$contextName}. Suporá un importante achega á calidade da revista.<br />
 <br />
@@ -423,7 +422,7 @@ Vimos de rematar unha corrección inicial do teu manuscrito &quot;{$submissionTi
 <br />
 Esta é a derradeira oportunidade que terás de facer cambios substanciais. Pediráseche que revises as probas, alén diso nesta fase só poderás corrixir pequenos erros tipográficos e de composición.<br />
 <br />
-URL do manuscrito: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL do manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
  <br />
 Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta connosco.Benzóns pola tú achega á revista.<br />
 <br />
@@ -451,12 +450,12 @@ Benzóns por revisar a corrección do teu manuscrito &quot;{$submissionTitle},&q
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Revisión final de corrección</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 O/a autor/a e o/a editor/a completaron a súa revisión da corrección do manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Xa se pode preparar para maquetaxe a &quot;copia limpa&quot; final.<br />
 <br />
-URL do manuscrito: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nome de usuaria/o: {$copyeditorUsername}<br />
+URL do manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nome de usuaria/o: {$participantUsername}<br />
 <br />
 Benzóns en nome da revista,<br />
 <br />
@@ -469,12 +468,12 @@ Benzóns en nome da revista,<br />
 <br />
 Veño de preparar unha versión limpa e corrixida do manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Está listo para composición e a preparación das probas de correción.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Este correo é enviado do / da corrector/a ao / a  Editor/a de Sección para notificarlle que rematou a rolda final de corrección e que  pode comezar o proceso de paxinación e composición.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Aviso de recibo de revisión final corrixida</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Benzóns por completar a revisión do manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. A preparación dunha &quot;copia limpa&quot; para maquetaxe é un paso importante no proceso editorial.<br />
 <br />
@@ -483,12 +482,12 @@ Benzóns por completar a revisión do manuscrito &quot;{$submissionTitle},&quot;
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Solicitud de galeradas</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Pregoche que prepares as probas do manuscrito con correccións (galeradas) &quot;{$submissionTitle},&quot; para {$contextName}.<br />
 <br />
 URL do manuscrito: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Nome de usuaria/o: {$layoutEditorUsername}<br />
+Nome de usuaria/o: {$participantUsername}<br />
 <br />
 Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta connosco. Benzóns pola túa achega á revista.<br />
 <br />
@@ -503,12 +502,12 @@ Xa foron preparadas as probas do manuscrito con correccións (galeradas)  &quot;
 <br />
 Se tes algunha dúbida, contacta connosco.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Este correo é enviado polo/a Editor/a de Maquetaxe ao / a  Editor/a de Sección notificándolle que o proceso de maquetaxe rematou.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Aviso de recibo de maquetaxe</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Benzóns por preparar as probas do manuscrito con correccións (galeradas) &quot;{$submissionTitle},&quot; para {$contextName}. Trátase dunha importante achega ao proceso de publicación.<br />
 <br />
@@ -521,7 +520,7 @@ Benzóns por preparar as probas do manuscrito con correccións (galeradas) &quot
 <br />
 Pregámosche que te encargues da corrección das probas do teu manuscrito con correccións (galeradas) &quot;{$submissionTitle},&quot; para {$contextName}. Para ver as probas de correción (galeradas), identifícate na revista através da ligazón que amosamos a seguir. Clica na opción VER PRoBA para ler a que será a versión publicada e busca somente os erros tipográficos e de maquetaxe. Registra este erros na caixa  Correcciçóns de Probas seguindo as instruccións.<br />
 <br />
-URL do manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL do manuscrito: {$submissionUrl}<br />
 <br />
 Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta connosco. Benzóns pola túa achega á revista.<br />
 <br />
@@ -554,7 +553,7 @@ Se estás subscrito ao noso servizo de notificación recibirás un correo electr
 <br />
 Pregámosche que te encargues da corrección das probas do teu manuscrito con correccións (galeradas) &quot;{$submissionTitle},&quot; para {$contextName}. <br />
 <br />
-URL do manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL do manuscrito: {$submissionUrl}<br />
 Nome de usuaria/o: {$proofreaderUsername}<br />
 <br />
 Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta connosco. Benzóns pola túa achega á revista.<br />
@@ -582,12 +581,12 @@ Benzóns por corrixir as probas de corrección (galeradas)  do manuscrito &quot;
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Petición de corrección de probas (Editor/a de maquetaxe)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Pregámosche  que procedas a facer as correccións solicitadas unha vez corrixidas as probas de galeradas do manuscrito &quot;{$submissionTitle},&quot; para {$contextName}.<br />
 <br />
-URL do manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Nome de usuaria/o: {$layoutEditorUsername}<br />
+URL do manuscrito: {$submissionUrl}<br />
+Nome de usuaria/o: {$participantUsername}<br />
 <br />
 Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta connosco. Benzóns pola túa achega á revista.<br />
 <br />
@@ -600,12 +599,12 @@ Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta
 <br />
 Xa se corrixiron as galeradas, una vez feitas as probas, do manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Xa está preparado para a súa publicación.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Este correo do / da Editor/a de Maquetaxe ao / a  Editor/a de Sección notifícalle que a etapa final de corrección rematou e que o artigo está preparado para a súa publicación.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Aviso de recibo de corrección de probas (Editor/a de maquetaxe)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Benzóns por rematar a corrección de probas de galeradas)  asociadas co manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Representa unha importante achega ao  traballo desta revista.<br />
 <br />

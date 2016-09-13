@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/crossref/locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -13,24 +13,21 @@
   * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
   *
   -->
- 
+
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.importexport.crossref.displayName">CrossRef XML Export Plugin</message>
 	<message key="plugins.importexport.crossref.description">Exporteer metadata in CrossRef XML formaat.</message>
-	
-	<message key="plugins.importexport.crossref.export">Exporteer data</message>
-	<message key="plugins.importexport.crossref.export.issues">Exporteer nummers</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Selecteer het te exporteren nummer.</message>
-	<message key="plugins.importexport.crossref.export.articles">Exporteer artikelen</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Selecteer de te exporteren artikelen.</message>
-	
-	<message key="plugins.importexport.crossref.cliUsage">Gebruik: 
+
+	<message key="plugins.importexport.crossref.cliUsage">Gebruik:
 {$scriptName} {$pluginName} [xmlFileName] [tijdschrift_pad] artikelen [artikelId1] [artikelId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [tijdschrift_pad] nummer [nummerId]</message>
-	<message key="plugins.importexport.crossref.cliError">FOUT:</message>
-
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Er is geen nummer dat overeenkomt met het opgegeven nummer-ID "{$issueId}".</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Er is geen artikel dat overeenkomt met het opgegeven artikel-ID "{$articleId}".</message>
-
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Om deze plugin te kunnen gebruiken moet bij de instellingen van het tijdschrift een  geldig DOI voorvoegsel gespecificeerd worden.</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Gebruikersnaam</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Geeft de gebruikersnaam die u van CrossRefe kreeg.</message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Geef de naam en het e-mailadres van degene die verantwoordlijk is voor de CrossRef DOI deposit.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Depositor naam</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">E-mail depositor</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Geef de naam van de depositor.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Geef het e-mail adres van de deposito.</message>
+	<message key="plugins.importexport.crossref.requirements">Vereist</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Niet aan alle vereisten is voldaan</message>
 </locale>

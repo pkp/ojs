@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issues/form/IssueForm.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueForm
@@ -31,6 +31,7 @@ class IssueForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'showYear', 'optional', 'editor.issues.yearRequired', create_function('$showYear, $form', 'return !$showYear || $form->getData(\'year\') ? true : false;'), array($this)));
 		$this->addCheck(new FormValidatorCustom($this, 'showTitle', 'optional', 'editor.issues.titleRequired', create_function('$showTitle, $form', 'return !$showTitle || implode(\'\', $form->getData(\'title\'))!=\'\' ? true : false;'), array($this)));
 		$this->addCheck(new FormValidatorPost($this));
+		$this->addCheck(new FormValidatorCSRF($this));
 		$this->issue = $issue;
 	}
 
@@ -58,14 +59,38 @@ class IssueForm extends Form {
 			ISSUE_ACCESS_SUBSCRIPTION => AppLocale::Translate('editor.issues.subscription')
 		));
 
-		$templateMgr->assign('enablePublicIssueId', $journal->getSetting('enablePublicIssueId'));
 		if ($this->issue) {
 			$templateMgr->assign('issue', $this->issue);
 			$templateMgr->assign('issueId', $this->issue->getId());
 		}
 
-		// consider public identifiers
-		$templateMgr->assign('pubIdPlugins', PluginRegistry::loadCategory('pubIds', true));
+		// Cover image preview
+		$coverImage = null;
+		if ($this->issue) $coverImage = $this->issue->getCoverImage();
+
+		// Cover image delete link action
+		if ($coverImage) {
+			import('lib.pkp.classes.linkAction.LinkAction');
+			import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
+			$router = $request->getRouter();
+			$deleteCoverImageLinkAction = new LinkAction(
+				'deleteCoverImage',
+				new RemoteActionConfirmationModal(
+					$request->getSession(),
+					__('common.confirmDelete'), null,
+					$router->url(
+						$request, null, null, 'deleteCoverImage', null, array(
+							'coverImage' => $coverImage,
+							'issueId' => $this->issue->getId(),
+						)
+					),
+					'modal_delete'
+				),
+				__('common.delete'),
+				null
+			);
+			$templateMgr->assign('deleteCoverImageLinkAction', $deleteCoverImageLinkAction);
+		}
 
 		return parent::fetch($request);
 	}
@@ -74,30 +99,17 @@ class IssueForm extends Form {
 	 * Validate the form
 	 */
 	function validate($request) {
-
-		// check if public issue ID has already been used
-		$journal = $request->getJournal();
-		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-
-		$publicIssueId = $this->getData('publicIssueId');
-		if ($this->issue && $publicIssueId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicIssueId, ASSOC_TYPE_ISSUE, $this->issue->getId())) {
-			$this->addError('publicIssueId', __('editor.publicIdentificationExists', array('publicIdentifier' => $publicIssueId)));
-			$this->addErrorField('publicIssueId');
-		}
-
 		if ($temporaryFileId = $this->getData('temporaryFileId')) {
 			$user = $request->getUser();
 			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
 			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
-			if (!in_array($temporaryFile->getFileType(), array('text/plain', 'text/css'))) {
-				$this->addError('styleFile', __('editor.issues.invalidStyleFormat'));
+
+			import('classes.file.PublicFileManager');
+			$publicFileManager = new PublicFileManager();
+			if (!$publicFileManager->getImageExtension($temporaryFile->getFileType())) {
+				$this->addError('coverImage', __('editor.issues.invalidCoverImageFormat'));
 			}
 		}
-
-		// Verify additional fields from public identifer plug-ins.
-		import('classes.plugins.PubIdPluginHelper');
-		$pubIdPluginHelper = new PubIdPluginHelper();
-		$pubIdPluginHelper->validate($journal->getId(), $this, $this->issue);
 
 		return parent::validate();
 	}
@@ -114,21 +126,15 @@ class IssueForm extends Form {
 				'year' => $this->issue->getYear(),
 				'datePublished' => $this->issue->getDatePublished(),
 				'description' => $this->issue->getDescription(null), // Localized
-				'publicIssueId' => $this->issue->getPubId('publisher-id'),
 				'accessStatus' => $this->issue->getAccessStatus(),
 				'openAccessDate' => $this->issue->getOpenAccessDate(),
 				'showVolume' => $this->issue->getShowVolume(),
 				'showNumber' => $this->issue->getShowNumber(),
 				'showYear' => $this->issue->getShowYear(),
 				'showTitle' => $this->issue->getShowTitle(),
-				'styleFileName' => $this->issue->getStyleFileName(),
-				'originalStyleFileName' => $this->issue->getOriginalStyleFileName()
+				'coverImage' => $this->issue->getCoverImage(),
+				'coverImageAltText' => $this->issue->getCoverImageAltText(),
 			);
-			// consider the additional field names from the public identifer plugins
-			import('classes.plugins.PubIdPluginHelper');
-			$pubIdPluginHelper = new PubIdPluginHelper();
-			$pubIdPluginHelper->init($this, $this->issue);
-
 			parent::initData();
 		} else {
 			$journal = $request->getJournal();
@@ -163,21 +169,17 @@ class IssueForm extends Form {
 			'number',
 			'year',
 			'description',
-			'publicIssueId',
 			'accessStatus',
 			'enableOpenAccessDate',
 			'showVolume',
 			'showNumber',
 			'showYear',
 			'showTitle',
-			'temporaryFileId'
+			'temporaryFileId',
+			'coverImageAltText',
+			'datePublished',
+			'openAccessDate',
 		));
-		// consider the additional field names from the public identifer plugins
-		import('classes.plugins.PubIdPluginHelper');
-		$pubIdPluginHelper = new PubIdPluginHelper();
-		$pubIdPluginHelper->readInputData($this);
-
-		$this->readUserDateVars(array('datePublished', 'openAccessDate'));
 
 		$this->addCheck(new FormValidatorCustom($this, 'issueForm', 'required', 'editor.issues.issueIdentificationRequired', create_function('$showVolume, $showNumber, $showYear, $showTitle', 'return $showVolume || $showNumber || $showYear || $showTitle ? true : false;'), array($this->getData('showNumber'), $this->getData('showYear'), $this->getData('showTitle'))));
 
@@ -212,7 +214,6 @@ class IssueForm extends Form {
 			$issue->setDatePublished($this->getData('datePublished'));
 		}
 		$issue->setDescription($this->getData('description'), null); // Localized
-		$issue->setStoredPubId('publisher-id', $this->getData('publicIssueId'));
 		$issue->setShowVolume($this->getData('showVolume'));
 		$issue->setShowNumber($this->getData('showNumber'));
 		$issue->setShowYear($this->getData('showYear'));
@@ -222,24 +223,15 @@ class IssueForm extends Form {
 		if ($this->getData('enableOpenAccessDate')) $issue->setOpenAccessDate($this->getData('openAccessDate'));
 		else $issue->setOpenAccessDate(null);
 
-		// consider the additional field names from the public identifer plugins
-		import('classes.plugins.PubIdPluginHelper');
-		$pubIdPluginHelper = new PubIdPluginHelper();
-		$pubIdPluginHelper->execute($this, $issue);
-
-		// if issueId is supplied, then update issue otherwise insert a new one
-		if (!$isNewIssue) {
-			parent::execute();
-			$issueDao->updateObject($issue);
-		} else {
+		// If it is a new issue, first insert it, then update the cover
+		// because the cover name needs an issue id.
+		if ($isNewIssue) {
 			$issue->setPublished(0);
 			$issue->setCurrent(0);
-
 			$issueDao->insertObject($issue);
 		}
 
-		// Copy an uploaded CSS file for the issue, if there is one.
-		// (Must be done after insert for new issues as issue ID is in the filename.)
+		// Copy an uploaded cover file for the issue, if there is one.
 		if ($temporaryFileId = $this->getData('temporaryFileId')) {
 			$user = $request->getUser();
 			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
@@ -247,12 +239,17 @@ class IssueForm extends Form {
 
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
-			$newFileName = 'style_' . $issue->getId() . '.css';
+			$newFileName = 'cover_issue_' . $issue->getId() . $publicFileManager->getImageExtension($temporaryFile->getFileType());
+			$journal = $request->getJournal();
 			$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
-			$issue->setStyleFileName($newFileName);
-			$issue->setOriginalStyleFileName($publicFileManager->truncateFileName($temporaryFile->getOriginalFileName(), 127));
+			$issue->setCoverImage($newFileName);
 			$issueDao->updateObject($issue);
 		}
+
+		$issue->setCoverImageAltText($this->getData('coverImageAltText'));
+
+		parent::execute();
+		$issueDao->updateObject($issue);
 	}
 }
 

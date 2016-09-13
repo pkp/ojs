@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
+
 <!--
-  * locale/pt_BR/emailTemplateData.xml
+  * locale/pt_BR/emailTemplates.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localized email templates XML file.
-  *
   -->
 
 <email_texts locale="pt_BR">
@@ -30,7 +30,6 @@ Atualizar senha: {$url}<br />
 		<body><![CDATA[Sua senha de acesso ao site {$siteTitle} foi atualizada com sucesso. Guarde o login e a senha, uma vez que serão necessários para todas as atividades relacionadas ao sistema.<br />
 <br />
 Seu login: {$username}<br />
-Sua nova senha: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Mensagem enviada a usuário cadastrado quando o mesmo informa que esqueceu sua senha ou encontra problemas para acessar o sistema. O link contido permite ao usuário atualizar a senha de acesso.</description>
@@ -49,14 +48,14 @@ Agradecendo desde já a atenção dispensada,<br />
 		<description>Mensagem enviada aos usuários recém-cadastrados no sistema, para acolhê-los e proporcionar um registro pessoal do login e da senha.</description>
 	</email_text>
 	<email_text key="PUBLISH_NOTIFY">
-		<subject>{$contextName} publica nova edição</subject>
+		<subject>Nova Edição Publicada</subject>
 		<body><![CDATA[Caros leitores,<br />
 <br />
-A revista {$contextName} acaba de publicar seu último número, disponível em <a href="{$journalUrl}">{$journalUrl}</a>. Convidamos a navegar no sumário da revista para acessar os artigos e outros itens de seu interesse.<br />
+A revista {$contextName} acaba de publicar seu último número, disponível em <a href="{$contextUrl}">{$contextUrl}</a>. Convidamos todos para verificarem o sumário da revista e acessar artigos e outros itens de seu interesse.<br />
 <br />
-Agradecemos seu interesse e apoio contínuo em nosso trabalho,<br />
+Agradecemos pelo seu apoio contínuo e confiança em nosso trabalho,<br />
 {$editorialContactSignature}]]></body>
-		<description>Mensagem enviada a leitores cadastrados através da notificação do link de notificação de usuários na página do Editor. Ela convida os leitores a acessar o sistema web da revista para ler a edição mais recente, através da URL informada.</description>
+		<description>Mensagem enviada para leitores cadastrados via "notificação de usuários"  na página do Editor. Ela convida os leitores a acessar o sistema web da revista para ler a edição mais recente, através da URL informada.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>Confirmação de assinatura</subject>
@@ -79,10 +78,10 @@ Em caso de dúvidas, entre em contato via e-mail.<br />
 		<description>Mensagem notifica o leitor cadastrado que o Editor criou sua Assinatura. Proporciona todas as informações necessárias para acesso ao conteúdo.</description>
 	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
-		<subject>Nova edição de Acesso Livre da revista {$contextName}</subject>
+		<subject>Nova edição de Acesso Livre</subject>
 		<body><![CDATA[Caros leitores,<br />
 <br />
-A {$contextName} acaba de tornar disponível para Acesso Livre mais uma edição. Convidamos a examinar o sumário nesta mensagem e então acessar a revista (<a href="{$journalUrl}">{$journalUrl}</a>), para ler os artigos e outros itens de seu proveito.<br />
+A {$contextName} acaba de tornar disponível para Acesso Livre mais uma edição. Convidamos a examinar o sumário nesta mensagem e então acessar a revista (<a href="{$contextUrl}">{$contextUrl}</a>), para ler os artigos e outros itens de seu proveito.<br />
 <br />
 Agradecemos o interesse e apoio contínuo à revista,<br />
 {$editorialContactSignature}]]></body>
@@ -141,11 +140,11 @@ Em caso de dúvidas, entre em contato via e-mail.<br />
 		<subject>Solicitação para incluir a revista {$contextName} em seu arquivo</subject>
 		<body><![CDATA[&lt;![CDATA[Prezada(o) [Nome da(o) Bibliotecária(o) da Universidade],<br />
 <br />
-{$contextName} &lt;<a href="{$journalUrl}">{$journalUrl}</a>&gt; é uma revista na qual um docente da sua instituição, [nome da pessoa], possui o papel editorial de [título do papel editorial]. Esta revista deseja estabelecer arquivamento por meio do LOCKSS (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) com esta e outras bibliotecas de instituições de ensino superior.<br />
+{$contextName} &lt;<a href="{$contextUrl}">{$contextUrl}</a>&gt; é uma revista na qual um docente da sua instituição, [nome da pessoa], possui o papel editorial de [título do papel editorial]. Esta revista deseja estabelecer arquivamento por meio do LOCKSS (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) com esta e outras bibliotecas de instituições de ensino superior.<br />
 <br />
 [Breve descrição da revista]<br />
 <br />
-A URL do Manifesto LOCKSS da Editora da nossa revista é: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+A URL do Manifesto LOCKSS da Editora da nossa revista é: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Consta do nosso registro que esta biblioteca é participante do sistema LOCKSS. Estamos à disposição caso necessite de metadados adicionais para o cadastro da revista na sua versão do LOCKSS, os quais providenciaremos o mais rápido possível.<br />
 <br />
@@ -159,7 +158,7 @@ Agradecendo desde já a atenção dispensada,<br />
 		<subject>Solicitação de inclusão da revista {$contextName} em seu arquivo</subject>
 		<body><![CDATA[&lt;![CDATA[Prezada(o) [Nome da(o) Bibliotecária(o) da Universidade],<br />
 <br />
-{$contextName} &lt;<a href="{$journalUrl}">{$journalUrl}</a>&gt; é uma revista na qual um docente da sua instituição, [nome da pessoa], possui o papel editorial de [título do papel editorial]. Esta revista deseja estabelecer arquivamento por meio do LOCKSS (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) com esta e outras bibliotecas de instituições de ensino superior.<br />
+{$contextName} &lt;<a href="{$contextUrl}">{$contextUrl}</a>&gt; é uma revista na qual um docente da sua instituição, [nome da pessoa], possui o papel editorial de [título do papel editorial]. Esta revista deseja estabelecer arquivamento por meio do LOCKSS (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) com esta e outras bibliotecas de instituições de ensino superior.<br />
 <br />
 [Breve descrição da revista]<br />
 <br />
@@ -180,7 +179,7 @@ Agradecendo desde já a atenção dispensada,<br />
 Agradecemos a submissão do trabalho &quot;{$submissionTitle}&quot; para a revista {$contextName}.<br />
 Acompanhe o progresso da sua submissão por meio da interface de administração do sistema, disponível em:<br />
 <br />
-URL da submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL da submissão: {$submissionUrl}<br />
 Login: {$authorUsername}<br />
 <br />
 Em caso de dúvidas,  entre em contato via e-mail.<br />
@@ -230,7 +229,7 @@ Agradecemos sua contribuição, fundamental para garantir a qualidade deste proc
 <br />
 Como parte de suas funções como editor de seção, designamos para seu acompanhamento do processo editorial a submissão &quot;{$submissionTitle}&quot; para a revista {$contextName}.<br />
 <br />
-URL da submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL da submissão: {$submissionUrl}<br />
 login: {$editorUsername}<br />
 <br />
 Agradecendo desde já a atenção dispensada,<br />
@@ -243,7 +242,7 @@ Agradecendo desde já a atenção dispensada,<br />
 <br />
 Acredito que seu conhecimento será fundamental para realizar a avaliação do trabalho &quot;{$submissionTitle}&quot; submetido a {$contextName}. Informações sobre a submissão encontram-se nesta mensagem, e espero que considere assumir esta importante responsabilidade.<br />
 <br />
-Acesse o sistema até {$weekLaterDate} para informar se estará disponível ou não para realizar a avaliação, bem como acessar os dados completos da submissão e registrar sua avaliação e recomendações, por meio da URL <a href="{$journalUrl}">{$journalUrl}</a>.<br />
+Acesse o sistema até {$responseDueDate} para informar se estará disponível ou não para realizar a avaliação, bem como acessar os dados completos da submissão e registrar sua avaliação e recomendações, por meio da URL <a href="{$contextUrl}">{$contextUrl}</a>.<br />
 <br />
 O prazo para a conclusão da avaliação é {$reviewDueDate}.<br />
 <br />
@@ -269,12 +268,12 @@ Resumo<br />
 		<description>Mensagem do Editor de Seção para solicitar ao Avaliador que indique disponibilidade ou não para realizar uma avaliação. Oferece informações sobre a submissão, como título e resumo, além da data para a conclusão dos trabalhos e como acessar o documento. Esta mensagem é usada quando se utiliza o Processo Padrão de Avaliação, definido no Passo 2 de Configuração da Revista. (Caso contrário veja REVIEW_REQ_MULTI_ATTACHED e REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
-		<subject>A revista {$contextName} solicita avaliação de artigo</subject>
+		<subject>Solicita avaliação de artigo</subject>
 		<body><![CDATA[{$reviewerName},<br />
 <br />
 Acredito que seu conhecimento será fundamental para realizar a avaliação do manuscrito &quot;{$submissionTitle}&quot; submetido a {$contextName}. Informações sobre a submissão encontram-se abaixo, e espero que considere assumir esta importante responsabilidade.<br />
 <br />
-Acesse o sistema até {$weekLaterDate} para informar se estará disponível ou não para realizar a avaliação, bem como acessar os dados completos da submissão e registrar sua avaliação e recomendações.<br />
+Acesse o sistema até {$responseDueDate} para informar se estará disponível ou não para realizar a avaliação, bem como acessar os dados completos da submissão e registrar sua avaliação e recomendações.<br />
 <br />
 O prazo para a entrega da avaliação é {$reviewDueDate}.<br />
 <br />
@@ -306,7 +305,7 @@ Acredito que seu conhecimento será fundamental para realizar a avaliação do t
 As diretrizes de avaliação encontram-se no final desta mensagem, e a submissão encontra-se em anexo.<br />
 O prazo para avaliar a submissão, bem como definir sua recomendação, devem ser enviadas via e-mail até {$reviewDueDate}.<br />
 <br />
-Responda a esta mensagem até {$weekLaterDate} se estará disponível ou não para realizar a avaliação.<br />
+Responda a esta mensagem até {$responseDueDate} se estará disponível ou não para realizar a avaliação.<br />
 <br />
 Espero que considere assumir esta importante responsabilidade.<br />
 <br />
@@ -440,7 +439,7 @@ Aguardando seu contato,<br />
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Solicitação de edição de texto</subject>
-		<body><![CDATA[{$copyeditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 Solicito a edição de texto do trabalho&quot;{$submissionTitle}&quot;, submetido à revista {$contextName}, conforme os passos a seguir:<br />
 <br />
@@ -451,9 +450,9 @@ Solicito a edição de texto do trabalho&quot;{$submissionTitle}&quot;, submetid
 5. Salve o arquivo editado e envie o arquivo no Passo 1.<br />
 5. Clique no ícone de e-mail sob CONCLUÍDO e envie a mensagem ao editor.<br />
 <br />
-URL da revista {$contextName}: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL da Submissão: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Login: {$copyeditorUsername}<br />
+URL da revista {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL da Submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Login: {$participantUsername}<br />
 <br />
 Caso não esteja disponível para assumir esta responsabilidade no momento, ou em caso de dúvidas, entre em contato via e-mail.<br />
 <br />
@@ -482,12 +481,12 @@ URL da submissão: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a>
 Caso não esteja disponível para realizar esta tarefa ou em caso de dúvidas, entre em contato via e-mail.<br />
 <br />
 Agradecendo desde já a atenção dispensada e sua contribuição para a qualidade desta publicação,<br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Mensagem enviada pelo Editor de Texto ao Editor de Seção, informando da conclusão da tarefa editorial.</description>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Agradecimento pela edição de texto</subject>
-		<body><![CDATA[{$copyeditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 Agradecemos a conclusão da edição de texto do trabalho &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}.<br />
 <br />
@@ -514,7 +513,7 @@ Avalie a edição realizada conforme os passos a seguir:<br />
 7. Clique em METADADOS para verificar a qualidade da indexação do documento.<br />
 8. Clique no ícone de e-mail sob CONCLUÍDO e envie a mensagem ao editor de texto.<br />
 <br />
-URL da submissão: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL da submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Esta é a última oportunidade para realizar alterações substanciais no documento. Em etapa posterior, lhe será solicitada a leitura de prova das composições finais, onde será possível solicitar apenas pequenas correções de digitação e de visual.<br />
 <br />
@@ -548,7 +547,7 @@ Agradecemos sua avaliação da edição de texto do trabalho &quot;{$submissionT
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Avaliação da edição de texto final</subject>
-		<body><![CDATA[{$copyeditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 O autor e o editor concluíram a avaliação da edição de texto do trabalho &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}.<br />
 A versão final deverá ser preparada para envio ao estágio de Layout, conforme os passos a seguir:<br />
@@ -560,9 +559,9 @@ A versão final deverá ser preparada para envio ao estágio de Layout, conforme
 5. Clique em METADADOS para avaliar a qualidade da indexação do documento (salvando quaisquer alterações).<br />
 6. Clique no ícone de e-mail sob CONCLUÍDO e envie a mensagem ao editor.<br />
 <br />
-URL da revista {$contextName}: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL da submissão: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Login: {$copyeditorUsername}<br />
+URL da revista {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL da submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Login: {$participantUsername}<br />
 <br />
 Em nome da equipe editorial, agradeço sua colaboração para a qualidade desta publicação,<br />
 <br />
@@ -575,12 +574,12 @@ Em nome da equipe editorial, agradeço sua colaboração para a qualidade desta 
 <br />
 Concluí a edição da versão final do trabalho &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}, e está pronta para preparação das composições.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Mensagem enviada pelo Editor de Texto ao Editor de Seção, solicitando que verifique o trabalho realizado pelo Editor de Texto, com informações sobre acesso e avisando que é a última chance de realizar modificações no texto.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Agradecimento pela avaliação final da edição de texto</subject>
-		<body><![CDATA[{$copyeditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 Agradecemos a conclusão da edição de texto do trabalho &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}.<br />
 <br />
@@ -593,7 +592,7 @@ Agradecendo mais uma vez pela sua contribuição,<br />
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Solicitação de composições</subject>
-		<body><![CDATA[{$layoutEditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 Solicito a preparação das composições do manuscrito &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}, conforme instruções a seguir:<br />
 <br />
@@ -601,9 +600,9 @@ Solicito a preparação das composições do manuscrito &quot;{$submissionTitle}
 2. Acesse o sistema e, usando a Versão de Layout como referência, produza as composições de acordo com os padrões desta revista.<br />
 3. Clique no ícone de e-mail sob CONCLUÍDO e envie a mensagem ao editor.<br />
 <br />
-URL da revista {$contextName}: <a href="{$journalUrl}">{$journalUrl}</a><br />
+URL da revista {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL da Submissão: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Login: {$layoutEditorUsername}<br />
+Login: {$participantUsername}<br />
 <br />
 Caso não esteja disponível para assumir esta responsabilidade no momento, ou tenha quaisquer dúvidas, entre em contato via e-mail.<br />
 <br />
@@ -620,12 +619,12 @@ As composições do trabalho &quot;{$submissionTitle}&quot;, submetido à revist
 <br />
 Em caso de dúvidas, entre em contato via e-mail.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Mensagem enviada pelo Editor de Layout ao Editor de Seção, informando sobre a conclusão das composições.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Agradecimento pelas composições</subject>
-		<body><![CDATA[{$layoutEditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 Agradecemos a preparação das composições do trabalho &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}.<br />
 <br />
@@ -647,7 +646,7 @@ Solicitamos a leitura de provas do trabalho&quot;{$submissionTitle}&quot;, subme
 5. Salve e envie o e-mail com as correções ao editor de layout e ao leitor de prova.<br />
 6. Clique no ícone de e-mail sob CONCLUÍDO e envie a mensagem ao editor.<br />
 <br />
-URL da Submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL da Submissão: {$submissionUrl}<br />
 <br />
 Em caso de dúvidas, entre em contato via e-mail.<br />
 <br />
@@ -693,7 +692,7 @@ Solicito a leitura de provas do trabalho &quot;{$submissionTitle}&quot;, submeti
 5. Salve e envie as correções via e-mail ao editor de layout.<br />
 6. Clique no ícone de e-mail sob CONCLUÍDO e envie a mensagem ao editor.<br />
 <br />
-URL da Submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL da Submissão: {$submissionUrl}<br />
 Login: {$proofreaderUsername}<br />
 <br />
 Caso não esteja disponível para assumir esta responsabilidade no momento, ou tenha quaisquer dúvidas, entre em contato via e-mail.<br />
@@ -726,7 +725,7 @@ Sua contribuição é fundamental para a qualidade desta publicação.<br />
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Solicitação de leitura de provas pelo Editor de Layout</subject>
-		<body><![CDATA[{$layoutEditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 O autor e o leitor de provas concluíram a leitura de provas do trabalho &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}.<br />
 As correções devem agora ser incorporadas conforme instruções a seguir:<br />
@@ -736,9 +735,9 @@ As correções devem agora ser incorporadas conforme instruções a seguir:<br /
 3. Envie as composições corrigidas.<br />
 4. Clique no ícone de e-mail sob CONCLUÍDO no Passo 3 da seção Leitura de provas, e envie a mensagem ao editor.<br />
 <br />
-URL da revista {$contextName}: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL da Submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Login: {$layoutEditorUsername}<br />
+URL da revista {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL da Submissão: {$submissionUrl}<br />
+Login: {$participantUsername}<br />
 <br />
 Caso não esteja disponível para assumir esta responsabilidade no momento, ou em caso de dúvidas, entre em contato através deste e-mail.<br />
 <br />
@@ -753,12 +752,12 @@ Agradecemos desde já sua colaboração, fundamental para a qualidade da revista
 <br />
 As composições do trabalho &quot;{$submissionTitle}&quot;, submetido à revista  {$contextName}, foram corrigidas, segundo as solicitações da leitura de provas, e estão prontas para publicação.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Mensagem enviada pelo Editor de Layout ao Editor de Seção, informando a conclusão das novas composições, após Leitura de Provas</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Agradecimento pela leitura de provas pelo Editor de Layout</subject>
-		<body><![CDATA[{$layoutEditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 Agradecemos a conclusão da leitura de provas e as correções realizadas às composições do manuscrito &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}.<br />
 <br />
@@ -846,10 +845,10 @@ Caso não deseje mais receber as notificações, acesse {$unsubscribeLink}.<br /
 		<subject>Decisão editorial</subject>
 		<body><![CDATA[{$authorName},<br />
 <br />
-Foi tomada uma decisão sobre o artigo submetido à revista {$journalTitle},<br />
+Foi tomada uma decisão sobre o artigo submetido à revista {$contextName},<br />
 &quot;{$submissionTitle}&quot;.<br />
 <br />
-A decisão é:<br />
+A decisão é: Submissão aceita.<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Esta é uma mensagem do Editor/Editor de Seção ao autor para notificá-lo da decisão editorial (final) tomada sobre a submissão.</description>
@@ -858,9 +857,9 @@ A decisão é:<br />
 		<subject>Decisão editorial</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Foi tomada uma decisão sobre o artigo submetido à {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Foi tomada uma decisão sobre o artigo submetido à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-A decisão é:<br />
+A decisão é: Revisões necessárias.<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Esta mensagem é enviada pelo do Editor/Editor de Seção ao autor, notificando-o da decisão final tomada sobre a submissão.</description>
@@ -869,9 +868,9 @@ A decisão é:<br />
 		<subject>Decisão editorial</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Foi tomada uma decisão sobre o artigo enviado à revista {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Foi tomada uma decisão sobre o artigo enviado à revista {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-A decisão é:<br />
+A decisão é: Submeter novamente.<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Esta mensagem do Editor/Editor de Seção ao autor notifica sobre a decisão editorial final tomada sobre a submissão.</description>
@@ -880,9 +879,9 @@ A decisão é:<br />
 		<subject>Decisão editorial</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Foi tomada uma decisão sobre o artigo submetido à revista {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Foi tomada uma decisão sobre o artigo submetido à revista {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-A decisão é:<br />
+A decisão é: Submissão rejeitada.<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Esta mensagem do Editor/Editor de Seção ao autor notifica sobre a decisão final tomada sobre a submissão.</description>
@@ -995,14 +994,14 @@ Editor de texto, {$contextName}]]></body>
 		<description>Solicitação ao autor de detalhes sobre referência, enviada pelo editor de texto.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
-		<subject>Solicitação de avaliação de artigo - {$contextName}</subject>
+		<subject>Solicitação de avaliação de artigo</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
 Esta mensagem está relacionada ao trabalho &quot;{$submissionTitle},&quot; que está em processo de avaliação na publicação {$contextName}.<br />
 <br />
 Seguindo o processo de de avaliação da versão anterior, os autores encaminharam uma versão revisada. Nos seria de grande valia se pudesse ajudar a avaliar essa nova versão.<br />
 <br />
-Para tanto, acesse o sistema da revista até {$weekLaterDate} para indicar se aceita ou não assumir a avaliação, bem como acessar os dados da submissão e registrar sua avaliação e recomendação. O site da revista é <a href="{$journalUrl}">{$journalUrl}</a><br />
+Para tanto, acesse o sistema da revista até {$responseDueDate} para indicar se aceita ou não assumir a avaliação, bem como acessar os dados da submissão e registrar sua avaliação e recomendação. O site da revista é <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 A avaliação deve ser concluída até{$reviewDueDate}.<br />
 <br />
@@ -1019,17 +1018,17 @@ Agradecendo antecipadamente sua consideração em aceitar esta responsabilidade,
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
-		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
+		<description>Este e-mail a partir do Editor de Seção a um Viajante solicita que o usuário aceitar ou recusar a tarefa de rever uma submissão por um segundo ou maior rodada de avaliação. Ele fornece informações sobre a apresentação, como o título e resumo, uma revisão data de vencimento, e como acessar a própria apresentação. Esta mensagem é usada quando o Processo de Revisão Padrão é selecionado no programa de configuração Journal, Passo 2. (Otherwise see REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
-		<subject>Solicitação de avaliação de artigo - {$contextName}</subject>
+		<subject>Solicitação de avaliação de artigo</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
 Esta mensagem é referente ao trabalho &quot;{$submissionTitle}&quot;, que está em processo de avaliação na publicação {$contextName}.<br />
 <br />
 Continuando o processo de avaliação da versão anterior do trabalho, os autores enviaram uma versão revisada. Nos seria de grande valia se pudesse ajudara a avaliá-lo.<br />
 <br />
-Para tanto, acesse o sistema da revista até {$weekLaterDate} para indicar se está disponível ou não para assumir a responsabilidade, bem como acessar os dados da submissão e registrar sua avaliação e recomendação.<br />
+Para tanto, acesse o sistema da revista até {$responseDueDate} para indicar se está disponível ou não para assumir a responsabilidade, bem como acessar os dados da submissão e registrar sua avaliação e recomendação.<br />
 <br />
 A avaliação deve ser concluída até {$reviewDueDate}.<br />
 <br />
@@ -1047,7 +1046,7 @@ Agradecendo desde já a atenção dispensada,<br />
 		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
-		<subject>Solicitação de avaliação de artigo - {$contextName}</subject>
+		<subject>Solicitação de avaliação de artigo</subject>
 		<body><![CDATA[Prezada(o) {$reviewerName},<br />
 <br />
 Esta mensagem é referente ao trabalho &quot;{$submissionTitle},&quot; em processo de avaliação para a revista {$contextName}.<br />
@@ -1056,7 +1055,7 @@ Seguindo o processo de avaliação do trabalho, os autores encaminharam uma vers
 <br />
 As Diretrizes para Avaliação estão apensas a e a submissão como anexo a esta mensaagem. Sua avaliação, bem como recomendação, devem ser enviadas para este e-mail até {$reviewDueDate}.<br />
 <br />
-Responda a esta mensagem até {$weekLaterDate} indicando sua disponibilidade ou não para realizar a avaliação.<br />
+Responda a esta mensagem até {$responseDueDate} indicando sua disponibilidade ou não para realizar a avaliação.<br />
 <br />
 Agradecendo desde já a atenção dispensada,<br />
 <br />
@@ -1132,9 +1131,22 @@ Esperamos que o presente seja de seu agrado!<br />
 <br />
 Uma versão atualizada de &quot;{$submissionTitle}&quot; foi enviada pelo autor {$authorName}.<br />
 <br />
-URL da submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL da submissão: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>This email is automatically sent to the assigned editor when author uploads a revised version of an article.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
+		<subject>Decisão do Editor</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Chegamos a uma decisão sobre sua submissão  {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Nossa decisão é que seu artigo foi enviado para avaliação externa. Iremos aguardar os pareceres para entrar em contato novamente<br />
+<br />
+URL da submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Este e-mail enviado pelo Editor ou Editor de Seção para um autor serve para notificar o mesmo de que sua submissão foi enviada para revisores externos.</description>
 	</email_text>
 </email_texts>

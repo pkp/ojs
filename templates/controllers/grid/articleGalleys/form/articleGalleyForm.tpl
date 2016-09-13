@@ -1,33 +1,48 @@
 {**
  * templates/editor/issues/articleGalleyForm.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form to add/edit an issue galley.
  *}
-<script>
+{if $remoteURL}
+	{assign var="remoteRepresentation" value=true}
+{else}
+	{assign var="remoteRepresentation" value=false}
+{/if}
+<script type="text/javascript">
 	$(function() {ldelim}
 		// Attach the form handler.
-		$('#articleGalleyForm').pkpHandler(
-			'$.pkp.controllers.form.AjaxFormHandler'
+		$('#articleGalleyForm').pkpHandler('$.pkp.controllers.grid.representations.form.RepresentationFormHandler',
+			{ldelim}
+				remoteRepresentation: {$remoteRepresentation|json_encode escape=false}
+			{rdelim}
 		);
 	{rdelim});
 </script>
-<form class="pkp_form" id="articleGalleyForm" method="post" action="{url op="update" submissionId=$submissionId articleGalleyId=$articleGalleyId}">
-	{fbvFormArea id="galley" class="border"}
-		{fbvFormSection title="submission.layout.galleyFileData"}
-			{fbvElement type="text" label="submission.layout.galleyLabel" value=$label id="label" size=$fbvStyles.size.MEDIUM inline=true}
-			{if $enablePublicGalleyId}
-				{fbvElement type="text" label="submission.layout.publicGalleyId" value=$publicGalleyId id="publicGalleyId" size=$fbvStyles.size.MEDIUM inline=true}
-			{/if}
+<form class="pkp_form" id="articleGalleyForm" method="post" action="{url op="updateGalley" submissionId=$submissionId representationId=$representationId}">
+	{csrf}
+	{fbvFormArea id="galley"}
+		{fbvFormSection title="submission.layout.galleyLabel"}
+			{fbvElement type="text" label="submission.layout.galleyLabelInstructions" value=$label id="label" size=$fbvStyles.size.MEDIUM inline=true}
 		{/fbvFormSection}
 		{fbvFormSection}
 			{fbvElement type="select" id="galleyLocale" label="common.language" from=$supportedLocales selected=$galleyLocale|default:$formLocale size=$fbvStyles.size.MEDIUM translate=false inline=true}
-			{fbvElement type="select" id="galleyType" label="submission.layout.galleyType" from=$enabledPlugins selected=$galleyType size=$fbvStyles.size.MEDIUM translate=false inline=true}
+		{/fbvFormSection}
+		{fbvFormSection for="remotelyHostedContent" list=true}
+			{fbvElement type="checkbox" label="submission.layout.galley.remotelyHostedContent" id="remotelyHostedContent"}
+			<div id="remote" style="display:none">
+				{fbvElement type="text" id="remoteURL" label="submission.layout.galley.remoteURL" value=$remoteURL}
+			</div>
 		{/fbvFormSection}
 	{/fbvFormArea}
+
+	{if $articleGalleyFile && $articleGalleyFile->getFileType()=='text/html'}
+		{url|assign:dependentFilesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.files.dependent.DependentFilesGridHandler" op="fetchGrid" submissionId=$submissionId fileId=$articleGalleyFile->getFileId() stageId=$smarty.const.WORKFLOW_STAGE_ID_PRODUCTION escape=false}
+		{load_url_in_div id="dependentFilesGridDiv" url=$dependentFilesGridUrl}
+	{/if}
 
 	{fbvFormButtons submitText="common.save"}
 </form>

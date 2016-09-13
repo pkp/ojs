@@ -3,8 +3,8 @@
 <!--
   * plugins/importexport/native/native.xsd
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Schema describing native XML import/export elements specific to OJS
@@ -25,6 +25,16 @@
 					<attribute name="section_ref" type="string" />
 					<attribute name="seq" type="int" />
 					<attribute name="access_status" type="int" />
+					<attribute name="stage" use="required">
+						<simpleType>
+							<restriction base="string">
+								<enumeration value="submission" />
+								<enumeration value="externalReview" />
+								<enumeration value="editorial" />
+								<enumeration value="production" />
+							</restriction>
+						</simpleType>
+					</attribute>
 				</extension>
 			</complexContent>
 		</complexType>
@@ -36,10 +46,7 @@
 		<complexType>
 			<complexContent>
 				<extension base="pkp:representation">
-					<sequence>
-						<element maxOccurs="1" minOccurs="0" name="remote_url" type="string" />
-					</sequence>
-					<attribute name="available" type="boolean"/>
+					<attribute name="approved" type="boolean"/>
 					<attribute name="galley_type" type="string"/>
 				</extension>
 			</complexContent>
@@ -63,11 +70,31 @@
 		</complexType>
 	</element>
 
+	<!-- Add "supplementary_file" extension to submission files -->
+	<element name="supplementary_file" substitutionGroup="pkp:submission_file">
+		<complexType>
+			<complexContent>
+				<extension base="pkp:submission_file">
+					<sequence>
+						<element name="creator" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+						<element name="subject" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+						<element name="description" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+						<element name="publisher" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+						<element name="sponsor" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+						<element name="date_created" type="date" minOccurs="0" maxOccurs="1" />
+						<element name="source" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+						<element name="language" type="string" minOccurs="0" maxOccurs="1" />
+					</sequence>
+				</extension>
+			</complexContent>
+		</complexType>
+	</element>
+
 	<!--
 	  - Composite / root elements
 	  -->
 	<!-- Permit "issues" as a root element -->
-	<element name="issues" abstract="true">
+	<element name="issues">
 		<complexType>
 			<sequence>
 				<element ref="pkp:issue" maxOccurs="unbounded" />
@@ -87,9 +114,8 @@
 			<element name="open_access_date" type="date" minOccurs="0" maxOccurs="1" />
 			<!-- sub elements -->
 			<element ref="pkp:sections" minOccurs="1" maxOccurs="1" />
-			<element ref="pkp:issue_style" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:issue_cover" minOccurs="0" maxOccurs="1" />
-			<element ref="pkp:issue_galleys" minOccurs="1" maxOccurs="1" />
+			<element ref="pkp:issue_galleys" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:articles" minOccurs="1" maxOccurs="1" />
 		</sequence>
 		<attribute name="journal_id" type="int" use="optional" />
@@ -116,9 +142,9 @@
 	<complexType name="issue_file">
 		<sequence>
 			<element name="file_name" type="string" minOccurs="1" maxOccurs="1" />
-			<element name="file_type" type="int" minOccurs="1" maxOccurs="1" />
+			<element name="file_type" type="string" minOccurs="1" maxOccurs="1" />
 			<element name="file_size" type="int" minOccurs="1" maxOccurs="1" />
-			<element name="content_type" type="string" minOccurs="1" maxOccurs="1" />
+			<element name="content_type" type="int" minOccurs="1" maxOccurs="1" />
 			<element name="original_file_name" type="string" minOccurs="1" maxOccurs="1" />
 			<element name="date_uploaded" type="date" minOccurs="1" maxOccurs="1" />
 			<element name="date_modified" type="date" minOccurs="1" maxOccurs="1" />
@@ -128,21 +154,8 @@
 
 	<complexType name="issue_cover">
 		<sequence>
-			<element name="file_name" type="pkp:localizedNode" minOccurs="1" maxOccurs="unbounded" />
-			<element name="original_file_name" type="pkp:localizedNode" minOccurs="1" maxOccurs="unbounded" />
-			<element name="hide_cover_page_archives" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
-			<element name="hide_cover_page_cover" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
-			<element name="show_cover_page" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
-			<element name="cover_page_description" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
-			<element name="cover_page_alt_text" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
-			<element name="embed" type="pkp:embed" />
-		</sequence>
-	</complexType>
-
-	<complexType name="issue_style">
-		<sequence>
-			<element name="style_file_name" type="string" minOccurs="1" maxOccurs="unbounded" />
-			<element name="original_style_file_name" type="string" minOccurs="1" maxOccurs="unbounded" />
+			<element name="cover_image" type="string" minOccurs="1" maxOccurs="1" />
+			<element name="cover_image_alt_text" type="string" minOccurs="1" maxOccurs="1" />
 			<element name="embed" type="pkp:embed" />
 		</sequence>
 	</complexType>
@@ -170,8 +183,8 @@
 			<element name="policy" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
 			<element name="title" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
 		</sequence>
-		<attribute name="journal_id" type="int" />
-		<attribute name="review_form_id" type="int" />
+		<attribute name="ref" type="string" />
+		<attribute name="review_form_id" type="int" use="optional" />
 		<attribute name="seq" type="string" />
 		<attribute name="editor_restricted" type="int" />
 		<attribute name="meta_indexed" type="int" />
@@ -180,7 +193,6 @@
 		<attribute name="hide_title" type="int" />
 		<attribute name="hide_author" type="int" />
 		<attribute name="hide_about" type="int" />
-		<attribute name="disable_comments" type="int" />
 		<attribute name="abstract_word_count" type="int" />
 	</complexType>
 
@@ -195,9 +207,6 @@
 
 	<!-- Permit "issue_cover" as a root element -->
 	<element name="issue_cover" type="pkp:issue_cover" />
-
-	<!-- Permit "issue_style" as a root element -->
-	<element name="issue_style" type="pkp:issue_style" />
 
 	<!-- Permit "section" as a root element -->
 	<element name="section" type="pkp:section" />

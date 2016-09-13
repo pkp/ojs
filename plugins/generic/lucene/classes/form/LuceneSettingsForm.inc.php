@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/lucene/classes/form/LuceneSettingsForm.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class LuceneSettingsForm
@@ -148,7 +148,7 @@ class LuceneSettingsForm extends Form {
 			'facetCategoryCoverage', 'facetCategoryJournalTitle',
 			'facetCategoryAuthors', 'facetCategoryPublicationDate',
 			'customRanking', 'instantSearch',
-			'rankingByMetric', 'sortingByMetric'
+			'rankingByMetric', 'sortingByMetric', 'useProxySettings'
 		);
 		$otherFormFields = array(
 			'searchEndpoint', 'username', 'instId',

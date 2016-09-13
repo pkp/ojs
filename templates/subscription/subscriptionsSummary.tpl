@@ -1,8 +1,8 @@
 {**
  * templates/subscription/subscriptionsSummary.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display summary subscriptions page in journal management.
@@ -24,17 +24,17 @@
 </ul>
 
 <h3>{translate key="manager.individualSubscriptions"}</h3>
-<ul class="plain">
+<ul>
 	{foreach name=allStatus from=$individualStatus key=statusIndex item=status}
-	<li>&#187; <a href="{url op="subscriptions" path="individual" filterStatus=$status.status}">{translate key=$status.localeKey}</a> ({$status.count})</li>
+	<li><a href="{url op="subscriptions" path="individual" filterStatus=$status.status}">{translate key=$status.localeKey}</a> ({$status.count})</li>
 	{/foreach}
 </ul>
 <a href="{url op="selectSubscriber" path="individual"}" class="action">{translate key="manager.subscriptions.create"}</a>
 
 <h3>{translate key="manager.institutionalSubscriptions"}</h3>
-<ul class="plain">
+<ul>
 	{foreach name=allStatus from=$institutionalStatus key=statusIndex item=status}
-	<li>&#187; <a href="{url op="subscriptions" path="institutional" filterStatus=$status.status}">{translate key=$status.localeKey}</a> ({$status.count})</li>
+	<li><a href="{url op="subscriptions" path="institutional" filterStatus=$status.status}">{translate key=$status.localeKey}</a> ({$status.count})</li>
 	{/foreach}
 </ul>
 <a href="{url op="selectSubscriber" path="institutional"}" class="action">{translate key="manager.subscriptions.create"}</a>

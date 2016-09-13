@@ -3,8 +3,8 @@
 /**
  * @file plugins/citationFormats/bibtex/BibtexCitationPlugin.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class BibtexCitationPlugin
@@ -47,8 +47,9 @@ class BibtexCitationPlugin extends CitationPlugin {
 	 * Return an HTML-formatted citation. Default implementation displays
 	 * an HTML-based citation using the citation.tpl template in the plugin
 	 * path.
-	 * @param $article object
-	 * @param $issue object
+	 * @param $article Article
+	 * @param $issue Issue
+	 * @param $journal Journal
 	 */
 	function fetchCitation($article, $issue, $journal) {
 		$templateMgr = TemplateManager::getManager($this->getRequest());

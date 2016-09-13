@@ -1,8 +1,8 @@
 {**
  * templates/subscription/users.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Search form for users
@@ -20,6 +20,7 @@
 
 <p>{translate key="manager.subscriptions.selectSubscriber.desc"}</p>
 <form class="pkp_form" method="post" id="submit" action="{if $subscriptionId}{url op="selectSubscriber" path=$redirect subscriptionId=$subscriptionId}{else}{url op="selectSubscriber" path=$redirect}{/if}">
+	{csrf}
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
@@ -51,7 +52,7 @@
 	<td class="nowrap">
 		{assign var=emailString value=$user->getFullName()|concat:" <":$user->getEmail():">"}
 		{url|assign:"url" page="user" op="email" to=$emailString|to_array}
-		{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url=$url}
+		{$user->getEmail()|truncate:20|escape}&nbsp;{icon name="mail" url=$url}
 	</td>
 	<td align="right" class="nowrap">
 		<a href="{if $subscriptionId}{url op="editSubscription" path=$redirect|to_array:$subscriptionId userId=$user->getId()}{else}{url op="createSubscription" path=$redirect userId=$user->getId()}{/if}" class="action">{translate key="manager.subscriptions.select"}</a>

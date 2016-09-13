@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE data SYSTEM "../../lib/pkp/dtd/xmlData.dtd">
-
 <!--
-  * ...
+  * dbscripts/xml/indexes.xml
+  *
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Indexes descriptor file (for indexes that need more than ADODB's XMLSchema
+  * descriptor can handle, e.g. database driver-specific DDL)
+  *
   -->
+
 <data>
 	<sql>
 		<query driver="mysql">

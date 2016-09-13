@@ -2,10 +2,10 @@
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
 
 <!--
-  * locale/fr_CA/emailTemplateData.xml
+  * locale/fr_CA/emailTemplates.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -29,7 +29,6 @@ Réinitialisation du mot de passe : {$url}<br />
 		<body><![CDATA[Votre mot de passe pour le site Web {$siteTitle} a été réinitialisé avec succès. Veuillez conserver précieusement votre nom d'utilisateur ainsi que votre mot de passe. Vous en aurez besoin pour chacune de vos interactions avec la revue.<br />
 <br />
 Votre nom d'utilisateur : {$username}<br />
-Votre nouveau mot de passe : {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description><![CDATA[Ce courriel est envoyé aux utilisateurs inscrits lorsqu'ils ont réussi à réinitialiser leur mot de passe en ayant suivi la procédure décrite dans le courriel « Confirmation de la réinitialisation du mot de passe ».]]></description>
@@ -51,7 +50,7 @@ Merci,<br />
 		<subject>Parution du dernier numéro</subject>
 		<body><![CDATA[Lecteurs:<br />
 <br />
-Le plus récent numéro de {$contextName} vient d'être publié à l'adresse suivante : <a href="{$journalUrl}">{$journalUrl}</a>. Nous vous invitons à consulter la table des matières, puis à visiter notre site Web pour y lire les articles qui vous intéressent.<br />
+Le plus récent numéro de {$contextName} vient d'être publié à l'adresse suivante : <a href="{$contextUrl}">{$contextUrl}</a>. Nous vous invitons à consulter la table des matières, puis à visiter notre site Web pour y lire les articles qui vous intéressent.<br />
 <br />
 Nous vous remercions de l'intérêt que vous portez à notre revue,<br />
 {$editorialContactSignature}]]></body>
@@ -61,11 +60,11 @@ Nous vous remercions de l'intérêt que vous portez à notre revue,<br />
 		<subject>Demande d'archivage pour {$contextName}</subject>
 		<body><![CDATA[&lt;![CDATA[Cher [Bibliothécaire universitaire]<br />
 <br />
-{$contextName} &lt;<a href="{$journalUrl}">{$journalUrl}</a>&gt; est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la position occupée]. La revue désire mettre en place un système d'archivage conforme LOCKSS (Lots of Copies Keep Stuff Safe - Plusieurs exemplaires qui assurent la sécurité) avec votre bibliothèque universitaire ainsi que celles d'autres universités.<br />
+{$contextName} &lt;<a href="{$contextUrl}">{$contextUrl}</a>&gt; est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la position occupée]. La revue désire mettre en place un système d'archivage conforme LOCKSS (Lots of Copies Keep Stuff Safe - Plusieurs exemplaires qui assurent la sécurité) avec votre bibliothèque universitaire ainsi que celles d'autres universités.<br />
 <br />
 [Brève description de la revue]<br />
 <br />
-L'adresse URL pour le LOCKSS Publisher Manifest pour notre revue est: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+L'adresse URL pour le LOCKSS Publisher Manifest pour notre revue est: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Nous savons que vous participez déjà à LOCKSS. Si nous pouvons vous fournir des métadonnées supplémentaires afin d'inscrire notre revue avec votre version de LOCKSS, il nous fera plaisir de vous les fournir.<br />
 <br />
@@ -77,7 +76,7 @@ Merci,<br />
 		<subject>Demande d'archivage pour {$contextName}</subject>
 		<body><![CDATA[&lt;![CDATA[Cher [Bibliothécaire universitaire]<br />
 <br />
-{$contextName}, &lt;<a href="{$journalUrl}">{$journalUrl}</a>&gt;, est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la fonction occupée]. La revue désire mettre en place un système d'archivage conforme LOCKSS (Lots of Copies Keep Stuff Safe) avec votre bibliothèque universitaire et celles d'autres universités.<br />
+{$contextName}, &lt;<a href="{$contextUrl}">{$contextUrl}</a>&gt;, est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la fonction occupée]. La revue désire mettre en place un système d'archivage conforme LOCKSS (Lots of Copies Keep Stuff Safe) avec votre bibliothèque universitaire et celles d'autres universités.<br />
 <br />
 [Brève description de la revue]<br />
 <br />
@@ -97,7 +96,7 @@ Merci,<br />
 <br />
 Nous vous remercions d'avoir soumis le manuscrit intitulé « {$submissionTitle} » à la revue {$contextName}. Grâce à notre système de gestion en ligne, vous pourrez suivre votre soumission tout au long du processus d'édition simplement en accédant au site Web de la revue.<br />
 <br />
-URL du manuscrit : <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL du manuscrit : {$submissionUrl}<br />
 Nom d'utilisateur : {$authorUsername}<br />
 <br />
 Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous remercions d'avoir pensé à notre revue pour la publication de vos travaux.<br />
@@ -138,7 +137,7 @@ Une évaluation initiale de votre manuscrit intitulé « {$submissionTitle} » a
 <br />
 La soumission intitulée « {$submissionTitle} » pour la revue {$contextName} vous a été attribuée. Vous êtes conséquemment responsable, en tant que Rédacteur de rubrique, de faire cheminer cet article à travers le processus d'évaluation.<br />
 <br />
-URL de la soumission : <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL de la soumission : {$submissionUrl}<br />
 Nom d'utilisateur : {$editorUsername}<br />
 <br />
 Merci,<br />
@@ -151,7 +150,7 @@ Merci,<br />
 <br />
 Nous croyons que vous seriez un excellent évaluateur pour le manuscrit intitulé « {$submissionTitle} » qui a été soumis à la revue {$contextName}. Vous trouverez un résumé de la soumission ci-dessous.  Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.<br />
 <br />
-Veuillez accéder au site Web de la revue avant le {$weekLaterDate} pour nous laisser savoir si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : <a href="{$journalUrl}">{$journalUrl}</a><br />
+Veuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous laisser savoir si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 La date d'échéance de l'évaluation a été fixée au {$reviewDueDate}.<br />
 <br />
@@ -177,7 +176,7 @@ En espérant que vous accepterez notre demande, veuillez agréer l'expression de
 <br />
 Nous croyons que vous seriez un excellent évaluateur pour le manuscrit intitulé « {$submissionTitle} » qui a été soumis à la revue {$contextName}. Vous trouverez un résumé de la soumission ci-dessous.  Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.<br />
 <br />
-Veuillez accéder au site Web de la revue avant le {$weekLaterDate} pour nous informer si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : <a href="{$journalUrl}">{$journalUrl}</a><br />
+Veuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous informer si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 Date limite pour l'évaluation {$reviewDueDate}.<br />
 <br />
@@ -201,7 +200,7 @@ En espérant que vous accepterez notre demande, veuillez agréer l'expression de
 <br />
 Nous croyons que vous feriez un excellent évaluateur pour le manuscrit intitulé « {$submissionTitle} ».  Nous espérons que vous accepterez ce travail important pour notre revue. Les Directives pour l'évaluation se trouvent ci-dessous et la soumission est jointe au présent courriel.<br />
 <br />
-Veuillez nous faire savoir par courriel d'ici le {$weekLaterDate} si vous acceptez ou non d'effectuer cette évaluation.<br />
+Veuillez nous faire savoir par courriel d'ici le {$responseDueDate} si vous acceptez ou non d'effectuer cette évaluation.<br />
 <br />
 En espérant que vous accepterez notre demande, veuillez agréer l'expression de notre considération distinguée.<br />
 <br />
@@ -309,7 +308,7 @@ S.V.P. veuillez nous confirmer votre disponibilité à compléter cette contribu
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Demande de révision d'une soumission</subject>
-		<body><![CDATA[&lt;![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[&lt;![CDATA[{$participantName}:<br />
 <br />
 J'aimerais que vous effectuiez la révision du manuscrit intitulé « {$submissionTitle} » pour {$contextName} à l'aide des étapes suivantes.<br />
 1. Cliquer sur l'URL de la soumission ci-dessous.<br />
@@ -319,9 +318,9 @@ J'aimerais que vous effectuiez la révision du manuscrit intitulé « {$submissi
 5. Enregistrer le fichier révisé, et télécharger à l'Étape 1 de la révision.<br />
 6. Envoyer le courriel TERMINÉ au rédacteur.<br />
 <br />
-URL de {$contextName} : <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL de la soumission : <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nom d'utilisateur : {$copyeditorUsername}<br />
+URL de {$contextName} : <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL de la soumission : <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nom d'utilisateur : {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]&gt;]]></body>
 		<description>Ce courriel est envoyé par le Rédacteur de rubrique à un Réviseur, pour lui demander de commencer le processus de révision. Il fournit l'information sur la soumission et comment accéder à celle-ci.</description>
@@ -344,12 +343,12 @@ URL de la soumission : <a href="{$submissionEditingUrl}">{$submissionEditingUrl}
 <br />
 Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec nous. Nous vous remercions de votre collaboration.<br />
 <br />
-{$copyeditorName}]]&gt;]]></body>
+{$participantName}]]&gt;]]></body>
 		<description></description>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Accusé de réception de la révision</subject>
-		<body><![CDATA[{$copyeditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 Nous vous remercions d'avoir révisé le manuscrit intitulé « {$submissionTitle} » pour {$contextName}. Votre collaboration contribue grandement à la qualité de la revue.<br />
 <br />
@@ -371,7 +370,7 @@ Nous avons maintenant terminé la révision initiale de votre manuscrit intitul�
 7. Cliquer sur MÉTADONNÉES pour vérifier l'information d'indexation afin de vous assurer que tout êtes exact et complet.<br />
 8. Envoyer le courriel TERMINÉ au rédacteur et au réviseur.<br />
 <br />
-URL de la soumission : <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL de la soumission : <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Il s'agit de votre dernière chance d'apporter des modifications importantes à votre soumission. À l'étape de la correction d'épreuves, vous ne pourrez changer que les erreurs typographiques et les problèmes de mise en page.<br />
 <br />
@@ -401,7 +400,7 @@ Nous vous remercions d'avoir bien voulu relire la version révisée de votre man
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Revue finale de la révision</subject>
-		<body><![CDATA[&lt;![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[&lt;![CDATA[{$participantName}:<br />
 <br />
 L'auteur et le rédacteur ont complété la revue de la révision de « {$submissionTitle} » pour {$contextName}. La version finale est maintenant prête pour la mise en page, qui sera effectuée en passant par les étapes suivantes.<br />
 1. Cliquer sur l'URL de la soumission ci-dessous.<br />
@@ -411,9 +410,9 @@ L'auteur et le rédacteur ont complété la revue de la révision de « {$submis
 5. Cliquer sur MÉTADONNÉES pour vérifier l'information d'indexation (en enregistrant toutes les corrections).<br />
 6. Envoyer le courriel TERMINÉ au rédacteur.<br />
 <br />
-URL de {$contextName} : <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL de la soumission : <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nom d'utilisateur : {$copyeditorUsername}<br />
+URL de {$contextName} : <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL de la soumission : <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nom d'utilisateur : {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]&gt;]]></body>
 		<description>Ce courriel venant du Rédacteur de rubrique au Réviseur lui demande de faire une révision finale de la soumission avant que celle-ci passe au processus de la mise en page.</description>
@@ -424,12 +423,12 @@ Nom d'utilisateur : {$copyeditorUsername}<br />
 <br />
 J'ai terminé la préparation de la version révisée finale du manuscrit intitulé « {$submissionTitle} » pour {$contextName}. Il est prêt pour la mise en page et la préparation des épreuves.<br />
 <br />
-{$copyeditorName}]]&gt;]]></body>
+{$participantName}]]&gt;]]></body>
 		<description>Ce courriel du Réviseur et adressé au Rédacteur de rubrique avise ce dernier que le dernier cycle de révision a été complété et que le processus de mise en page peut débuter.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Accusé de réception de la révision finale</subject>
-		<body><![CDATA[{$copyeditorName},<br />
+		<body><![CDATA[{$participantName},<br />
 <br />
 Nous vous remercions d'avoir effectué la révision du manuscrit intitulé « {$submissionTitle} » pour {$contextName}. La préparation de la version définitive avant la mise en page est une étape importante du processus de publication.<br />
 <br />
@@ -438,16 +437,16 @@ Nous vous remercions d'avoir effectué la révision du manuscrit intitulé « {
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Demande de mise en page des épreuves</subject>
-		<body><![CDATA[&lt;![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[&lt;![CDATA[{$participantName}:<br />
 <br />
 J'aimerais que vous prépariez les épreuves du manuscrit intitulé « {$submissionTitle} » pour {$contextName} à l'aide des étapes suivantes.<br />
 1. Cliquer sur l'URL de la soumission ci-dessous.<br />
 2. Se connecter au site Web de la revue et utiliser la version de mise en page du fichier pour créer les épreuves en fonction des normes de la revue.<br />
 3. Envoyer le courriel TERMINÉ au rédacteur.<br />
 <br />
-URL de {$contextName} : <a href="{$journalUrl}">{$journalUrl}</a><br />
+URL de {$contextName} : <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL du manuscrit : <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Nom d'utilisateur : {$layoutEditorUsername}<br />
+Nom d'utilisateur : {$participantUsername}<br />
 <br />
 Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec moi. Je vous remercie de votre collaboration.<br />
 <br />
@@ -462,12 +461,12 @@ Les épreuves du manuscrit intitulé « {$submissionTitle} » pour {$contextName
 <br />
 Si vous avez des questions, n'hésitez pas à communiquer avec moi.<br />
 <br />
-{$layoutEditorName}]]&gt;]]></body>
+{$participantName}]]&gt;]]></body>
 		<description>Ce courriel du Responsable de la mise en page au Rédacteur de rubrique l'avise que le processus de la mise en page est terminé.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Accusé de réception de la mise en page</subject>
-		<body><![CDATA[&lt;![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[&lt;![CDATA[{$participantName}:<br />
 <br />
 Nous vous remercions d'avoir accepté de préparer les épreuves pour le manuscrit intitulé « {$submissionTitle} » pour {$contextName}. Il s'agit d'une contribution importante au processus de publication.<br />
 <br />
@@ -486,7 +485,7 @@ Nous aimerions que vous procédiez à la correction d'épreuves du manuscrit int
 5. Enregistrer et envoyer par courriel les corrections au Responsable de la mise en page et au Correcteur d'épreuves.<br />
 6. Envoyer le courriel TERMINÉ au rédacteur.<br />
 <br />
-URL du manuscrit : <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL du manuscrit : {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]&gt;]]></body>
 		<description>Ce courriel du Rédacteur de rubrique à l'Auteur avise ce dernier que les épreuves de la soumission sont prêtes pour la correction d'épreuves. Il fournit de l'information sur la soumission et comment y accéder.</description>
@@ -523,7 +522,7 @@ Nous aimerions que vous procédiez à la correction d'épreuves du manuscrit int
 5. Enregistrer et envoyer par courriel les corrections au Responsable de la mise en page et au Correcteur d'épreuves.<br />
 6. Envoyer le courriel TERMINÉ au rédacteur.<br />
 <br />
-URL du manuscrit : <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL du manuscrit : {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]&gt;]]></body>
 		<description>Ce courriel du Rédacteur de rubrique au Correcteur d'épreuves demande que ce dernier fasse la correction des épreuves de l'article. Il fournit de l'information sur l'article, et comment y accéder.</description>
@@ -548,7 +547,7 @@ Nous vous remercions d'avoir accepté de corriger les épreuves du manuscrit int
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Demande de correction d'épreuves (Responsable de la mise en page)</subject>
-		<body><![CDATA[&lt;![CDATA[{$layoutEditorName},<br />
+		<body><![CDATA[&lt;![CDATA[{$participantName},<br />
 <br />
 Nous aimerions que vous insériez les modifications nécessaires à la suite de la correction d'épreuves du manuscrit intitulé « {$submissionTitle} » pour {$contextName} à l'aide des étapes suivantes.<br />
 1. Cliquer sur l'URL de la soumission ci-dessous.<br />
@@ -556,9 +555,9 @@ Nous aimerions que vous insériez les modifications nécessaires à la suite de 
 3.Télécharger les épreuves corrigées.<br />
 4. Envoyer le courriel TERMINÉ de l'Étape 3 de Correction d'épreuves au rédacteur.<br />
 <br />
-URL de {$contextName} : <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL du manuscrit : <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Nom d'utilisateur : {$layoutEditorUsername}<br />
+URL de {$contextName} : <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL du manuscrit : {$submissionUrl}<br />
+Nom d'utilisateur : {$participantUsername}<br />
 <br />
 Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec moi. Je vous remercie de votre collaboration.<br />
 <br />
@@ -571,12 +570,12 @@ Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des qu
 <br />
 Les corrections d'épreuves ont été effectuées dans le manuscrit intitulé « {$submissionTitle} » pour {$contextName}. Ce document est prêt à être publié.<br />
 <br />
-{$layoutEditorName}]]&gt;]]></body>
+{$participantName}]]&gt;]]></body>
 		<description>Ce courriel  du Responsable de la mise en page au Rédacteur de rubrique avise ce dernier que l'étape finale de correction d'épreuves est terminé et que l'article est maintenant prêt à être publié.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Accusé de réception de la correction d'épreuves (Responsable de la mise en page)</subject>
-		<body><![CDATA[&lt;![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[&lt;![CDATA[{$participantName}:<br />
 <br />
 Nous vous remercions d'avoir corrigé les épreuves du manuscrit intitulé « {$submissionTitle} » pour {$contextName}. Votre contribution est importante pour la revue.<br />
 <br />
@@ -611,7 +610,7 @@ Si vous avez des questions, n'hésitez pas à communiquer avec moi.<br />
 		<subject>Le numéro est maintenant à accès libre</subject>
 		<body><![CDATA[Chers lecteurs et lectrices :<br />
 <br />
-{$contextName} vient de rendre disponible en format libre accès le numéro suivant. Nous vous invitons à lire la table des matières ici puis visiter notre site Web (<a href="{$journalUrl}">{$journalUrl}</a>) pour lire les articles et autres textes qui pourraient vous intéresser.<br />
+{$contextName} vient de rendre disponible en format libre accès le numéro suivant. Nous vous invitons à lire la table des matières ici puis visiter notre site Web (<a href="{$contextUrl}">{$contextUrl}</a>) pour lire les articles et autres textes qui pourraient vous intéresser.<br />
 <br />
 Merci de votre intérêt continu pour notre travail,<br />
 {$editorialContactSignature}]]></body>

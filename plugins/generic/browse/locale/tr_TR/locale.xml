@@ -4,14 +4,14 @@
 <!--
   * plugins/generic/browse/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Plugin localization strings
   -->
  
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<!-- plugin -->
 	<message key="plugins.generic.browse.displayName">Listeleme</message>
 	<message key="plugins.generic.browse.description">Bu eklenti bölümlere ve/veya onların türlerini belirlemeye göre istelemeyi etkinleştirir.</message>

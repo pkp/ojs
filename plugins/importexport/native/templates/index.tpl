@@ -1,8 +1,8 @@
 {**
  * plugins/importexport/native/templates/index.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * List of operations this plugin can perform
@@ -33,27 +33,26 @@
 					{ldelim}
 						$uploader: $('#plupload'),
 							uploaderOptions: {ldelim}
-								uploadUrl: '{plugin_url path="uploadImportXML"}',
-								baseUrl: '{$baseUrl|escape:javascript}'
+								uploadUrl: {plugin_url|json_encode path="uploadImportXML" escape=false},
+								baseUrl: {$baseUrl|json_encode}
 							{rdelim}
 					{rdelim}
 				);
 			{rdelim});
 		</script>
 		<form id="importXmlForm" class="pkp_form" action="{plugin_url path="importBounce"}" method="post">
+			{csrf}
 			{fbvFormArea id="importForm"}
 				{* Container for uploaded file *}
 				<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
-				<p>{translate key="plugins.importexport.native.import.instructions"}</p>
 
-				<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
 				{fbvFormArea id="file"}
-					{fbvFormSection title="common.file"}
+					{fbvFormSection title="plugins.importexport.native.import.instructions"}
 						{include file="controllers/fileUploadContainer.tpl" id="plupload"}
 					{/fbvFormSection}
 				{/fbvFormArea}
 
-				{fbvFormButtons hideCancel="true"}
+				{fbvFormButtons submitText="plugins.importexport.native.import" hideCancel="true"}
 			{/fbvFormArea}
 		</form>
 	</div>
@@ -65,10 +64,11 @@
 			{rdelim});
 		</script>
 		<form id="exportSubmissionXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
+			{csrf}
 			{fbvFormArea id="submissionsXmlForm"}
-				{url|assign:submissionsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.submissions.exportableSubmissions.ExportableSubmissionsListGridHandler" op="fetchGrid"}
+				{url|assign:submissionsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.submissions.exportableSubmissions.ExportableSubmissionsListGridHandler" op="fetchGrid" escape=false}
 				{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
-				{fbvFormButtons hideCancel="true"}
+				{fbvFormButtons submitText="plugins.importexport.native.exportSubmissions" hideCancel="true"}
 			{/fbvFormArea}
 		</form>
 	</div>
@@ -80,10 +80,11 @@
 			{rdelim});
 		</script>
 		<form id="exportIssuesXmlForm" class="pkp_form" action="{plugin_url path="exportIssues"}" method="post">
+			{csrf}
 			{fbvFormArea id="issuesXmlForm"}
-				{url|assign:issuesListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.issues.ExportableIssuesListGridHandler" op="fetchGrid"}
+				{url|assign:issuesListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.issues.ExportableIssuesListGridHandler" op="fetchGrid" escape=false}
 				{load_url_in_div id="issuesListGridContainer" url=$issuesListGridUrl}
-				{fbvFormButtons hideCancel="true"}
+				{fbvFormButtons submitText="plugins.importexport.native.exportIssues" hideCancel="true"}
 			{/fbvFormArea}
 		</form>
 	</div>

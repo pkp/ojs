@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/sk_SK/locale.xml
+  *
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="sk_SK" full_name="Slovenčina">
+	<!--
+	 * This file is organized into several major sections, separated
+	 * by comments like this one. These sections are called:
+	 *  COMMON - Contains frequently-used words
+	 *  ENTITIES - Contains terms pertaining to the system's major
+	 *             entities, e.g. Article, Journal, Section
+	 *  INTERFACE - Contains phrases organized by the section of the
+	 *              user interface they appear in.
+	 *  LOG - Contains phrases related to log entries
+	 *  MISC - Entries that don't belong elsewhere.
+	 *  DEFAULT - Default settings for configuration items.
+	-->
+
+	<!-- review froms start -->
+
+	<!-- common -->
+
+	<!-- Journal Management -->
+
+	<!-- Categories -->
+
+	<!--  peer review -->
+
+	<!-- Permissions -->
+
+	<!-- review forms end -->
+
+	<!--
+	 *
+	 * COMMON - This section contains the most frequently-used words
+	 *
+	-->
+
+	<!-- Common Messages -->
+
+	<!-- Common Form Messages -->
+
+	<!-- Common Email Messages -->
+
+	<!-- Common Localization Terms -->
+
+	<!-- Common Error Messages -->
+
+	<!-- Navigation -->
+	<message key="navigation.journalHelp">Pomoc časopisu</message>
+	<message key="navigation.current">Aktuálne</message>
+	<message key="navigation.otherJournals">Iné časopisy</message>
+	<message key="navigation.browseByIssue">Podľa čísla</message>
+	<message key="navigation.browseByAuthor">Podľa autora</message>
+
+	<!-- Article Queues -->
+	<message key="common.queue.short.submissionsUnassigned">Nepridelené</message>
+	<message key="common.queue.short.submissionsInEditing">Redakčné úpravy</message>
+	<message key="common.queue.short.submissionsInReview">V recenznom konaní</message>
+	<message key="common.queue.short.active">Aktívny</message>
+	<message key="common.queue.long.completed">Archív</message>
+
+	<!--
+	 *
+	 * ENTITIES - This section contains terms pertaining to the system's
+	 *            major entities, e.g. Article, Journal, Section
+	 *
+	-->
+
+	<!-- Common Section Terms -->
+
+	<!-- Common Article Terms -->
+	<message key="article.title">Názov</message>
+	<message key="article.suppFiles">Doplnkové súbory</message>
+	<message key="article.subject">Kľúčové slová</message>
+	<message key="article.abstract">Abstrakt</message>
+
+	<!-- Submission Tracking - Common -->
+
+	<!-- Submission list search engine -->
+
+	<!-- Submission Notes -->
+
+	<!-- Common Journal Terms -->
+	<message key="journal.currentIssue">Aktuálne číslo</message>
+	<message key="context.context">Časopis</message>
+
+	<!-- User -->
+	<message key="user.myJournals">Moje časopisy</message>
+
+	<!-- Roles -->
+	<message key="user.role.manager">Manažérka/manažér časopisu</message>
+	<message key="user.role.sectionEditor">Redaktorka/redaktor rubriky</message>
+	<message key="user.role.subscriptionManager">Manažér/manažérka predplatného</message>
+
+	<!-- Common Issue Terms -->
+	<message key="issue.issue">Číslo</message>
+	<message key="issue.issues">Čísla</message>
+	<message key="issue.volume">Ročník</message>
+	<message key="issue.number">Číslo</message>
+	<message key="issue.vol">Roč.</message>
+	<message key="issue.no">Č.</message>
+	<message key="issue.noIssues">Obsah</message>
+	<message key="issue.toc">Obsah</message>
+	<message key="issue.fullIssue">Kompletné číslo</message>
+	<message key="issue.viewIssue">Prezrieť vydanie</message>
+
+	<!-- Common Subscription Type Terms -->
+
+	<!-- Common Subscription Terms -->
+
+	<!--
+	 *
+	 * LOG - This section contains entries related to log entries.
+	 *
+	-->
+
+	<!--
+	 *
+	 * INTERFACE - Contains phrases organized by the section of the
+	 *             user interface they appear in.
+	 *
+	-->
+
+	<!-- Reader article view -->
+
+	<!-- Reader Comments -->
+
+	<!-- Site Administration -->
+
+	<!-- Languages -->
+
+	<!-- System Information -->
+
+	<!-- Site Administrator Merge Users -->
+
+	<!-- Subscription Management -->
+
+	<!-- Journal Management -->
+
+	<!-- Statistics & Reports -->
+
+	<!-- Plugin Management -->
+
+	<!-- Payment Management -->
+
+	<!-- General plugin information -->
+
+	<!-- Files Browser -->
+
+	<!-- Journal Setup -->
+
+	<!-- Setup Step 1 -->
+
+	<!-- Setup Step 2 -->
+
+	<!-- Setup Step 3 -->
+
+	<!-- Setup Step 4 -->
+
+	<!-- Setup Step 5 -->
+
+	<!-- Languages -->
+
+	<!-- Section Management -->
+
+	<!-- Import/Export -->
+
+	<!-- Groups / Editorial Team -->
+
+	<!-- People Management -->
+
+	<!-- Email Management -->
+
+	<!-- Subscription Policy Management -->
+
+	<!-- Subscription Type Management -->
+
+	<!-- Subscription Management -->
+
+	<!-- Announcement Type Management -->
+
+	<!-- Announcements Management -->
+
+	<!-- Editor -->
+
+	<!-- Editor Index Page -->
+
+	<!-- Back Issues -->
+
+	<!-- Create Issue / Issue Data -->
+
+	<!-- Live Issues -->
+
+	<!-- Navigation sidebar menu -->
+
+	<!-- Used by editor in submission review / editing -->
+
+	<!-- Section Editor -->
+
+	<!-- Layout Editor -->
+
+	<!-- Reviewer -->
+
+	<!-- Used in submission review -->
+
+	<!-- Used in submission editing -->
+
+	<!-- Proofreader -->
+
+	<!-- Author -->
+
+	<!-- Article Submission Step 1 -->
+
+	<!-- Article Submission Step 2 -->
+
+	<!-- Article Submission Step 3 -->
+
+	<!-- Article Submission Step 4 -->
+
+	<!-- Article Submission Step 4a: Supplementary Files -->
+
+	<!-- Article Submission Step 5 -->
+
+	<!-- Used in submission review / editing -->
+
+	<!-- Submission Tracking - Copyedit Specific -->
+
+	<!-- Submission Tracking - Layout Specific -->
+
+	<!-- Submission Tracking - Proofread Specific -->
+
+	<!-- Submission History -->
+
+	<!-- Submission Event Log -->
+
+	<!-- Submission Email Log -->
+
+	<!-- Submission Comments -->
+
+	<!-- Login -->
+
+	<!-- Registration -->
+	<message key="user.register.privacyStatement">Ochrana osobných údajov</message>
+	<message key="user.register.loginToRegister">Na zaregistrovanie do tohto časopisu zadajte prosím Vaše prihlasovacie meno a heslo.</message>
+	<message key="user.register.form.passwordLengthTooShort">Heslo, ktoré ste zadali, nie je dostatočne dlhé.</message>
+	<message key="user.register.readerDescription">O publikovaní nového čísla časopisu budete informovaní emailom.</message>
+	<message key="user.register.authorDescription">Môžete posielať príspevky do časopisu.</message>
+	<message key="user.register.reviewerDescription">Ste ochotní recenzovať príspevky umiestnené na webovej stránke.</message>
+	<message key="user.register.reviewerInterests">Uveďte recenzné záujmy (vedecké oblasti a výskumné metódy).</message>
+
+	<!-- Subscriptions -->
+
+	<!-- Search -->
+	<message key="search.author">Autor</message>
+	<message key="search.withinJournal">V rámci</message>
+	<message key="search.allJournals">Všetky časopisy</message>
+	<message key="search.authorIndex">Hľadať v indexe autorov</message>
+	<message key="search.syntaxInstructions"><![CDATA[Tipy pre vyhľadávanie: <ul>
+<li>pri vyhľadávaní sa nerozlišujú veľké a malé písmená</li>
+<li> časo sa opakujúce slová sa nezohľadňujú</li>
+<li>v počiatočnom nastavení sa lobjavujú en články obsahujúce <em>všetky</em> vyhľadávacie výrazy (to znamená, že sa aplikuje <em>AND</em>)</li>
+<li> pre vyhľadávanie článkov obsahujúcich niektorý z termínov kombinujte  slová pomocou <em>OR</em>; napr. <em>vzdelávanie OR výskum</em></li>
+<li> pre  komplexnejšie vyhľadávanie použite zátvorky, napr.  <em>archív (časopis OR konferencia) NOT dizertácia)</em></li>
+<li> pre vyhľadávanie presných výrazov použite úvodzovky, napr. <em>"publikovanie open access"</em></li>
+<li>istý výraz vylúčite tým, že pred ním umiestnite spojovník <strong>-</strong> alebo <em>NOT</em>; napr <em>online - politika</em> alebo <em> online NOT politika</em></li>
+<li>použite <strong>*</strong> ako divokú kartu pre vyhľadávanie akéhokovek poradia znakov, napr. <em>soci*etika</em> zobrazí všetky pojmy obsahujúce "sociologický" alebo "sociálny"</li>
+</ul>]]></message>
+
+	<!-- Interstitial page for PDFs -->
+
+	<!-- Interstitial page for non-PDF non-HTML galleys -->
+
+	<!-- Site index -->
+
+	<!-- Current index -->
+	<message key="current.current">Aktuálne</message>
+	<message key="current.noCurrentIssue">Tento časopis doteraz nepublikoval nijaké čísla.</message>
+	<message key="current.noCurrentIssueDesc">Tento časopis doteraz nepublikoval nijaké čísla.</message>
+
+	<!-- Archive index -->
+	<message key="archive.archives">Archív</message>
+
+	<!-- About The Journal -->
+	<message key="about.history">História časopisu</message>
+	<message key="about.editorialTeam">Redakcia</message>
+	<message key="about.editorialPolicies">Pravidlá a proces publikovania časopisu</message>
+	<message key="about.focusAndScope">Zameranie a oblasti</message>
+	<message key="about.sectionPolicies">Pravidlá rubrík</message>
+	<message key="about.submissions">Poslať príspevok</message>
+	<message key="about.onlineSubmissions">Poslať príspevok online</message>
+	<message key="about.onlineSubmissions.login">Prejsť na prihlasovanie</message>
+	<message key="about.onlineSubmissions.registrationRequired">Ak chcete poslať príspevok online alebo skontrolovať aktuálny stav poslaného príspevku, musíte sa zaregistrovať a prihlásiť.</message>
+	<message key="about.authorGuidelines">Pokyny pre autorov</message>
+	<message key="about.copyrightNotice">Poznámka o autorských právach</message>
+	<message key="about.privacyStatement">Ochrana osobných dát</message>
+	<message key="about.peerReviewProcess">Postup pri recenzovaní</message>
+	<message key="about.publicationFrequency">Frekvencia vychádzania</message>
+	<message key="about.openAccessPolicy">Pravidlá pre open access</message>
+	<message key="about.delayedOpenAccess">Oneskorený open access</message>
+	<message key="about.delayedOpenAccessDescription1">Obsah časopisu bude prístupný vo formáte open access</message>
+	<message key="about.delayedOpenAccessDescription2">mesiace/mesiace po publikovaní čísla</message>
+	<message key="about.subscriptions">Predplatné</message>
+	<message key="about.subscriptionsContact">Kontakt na predplatné</message>
+	<message key="about.aboutThisPublishingSystem">O tomto publikačnom systéme</message>
+	<message key="about.aboutOJSJournal"><![CDATA[Tento časopis používa Open Journal Systems {$ojsVersion}, teda open source software pre spravovanie a publikjovanie časopisov, ktorý bol vyvinutý, je podporovaný a voľne šírený v rámci projektu <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> pod licenciou GNU General Public License.]]></message>
+
+	<!-- Announcement -->
+
+	<!-- Help -->
+
+	<!-- Donations -->
+
+	<!-- Gifts -->
+
+	<!-- Payments -->
+
+	<!-- Installer -->
+
+	<!-- Installation upgrade warnings -->
+
+	<!-- Article Logs -->
+
+	<!-- Reading Tools entries -->
+
+	<!-- RT Settings -->
+
+	<!-- RT Versions -->
+
+	<!-- RT Contexts -->
+
+	<!-- RT Searches -->
+
+	<!-- RT Entities -->
+
+	<message key="rt.metadata.dublinCore.primaryAuthor">Tvorca</message>
+
+	<message key="rt.metadata.pkp.primaryAuthor">Meno autora, pracovisko, štát</message>
+	<message key="rt.metadata.pkp.peerReviewed">Recenzovaný článok</message>
+
+
+	<!-- Notification Types -->
+
+	<!--
+	 *
+	 * MISC - Entries that do not belong in the other sections.
+	 *
+	-->
+	<!-- Authorization -->
+
+	<!-- Icons: Default "alt" text -->
+
+	<!-- Debug messages -->
+</locale>

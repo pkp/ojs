@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/filter/NativeXmlArticleGalleyFilter.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NativeXmlArticleGalleyFilter
@@ -65,28 +65,51 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
 		$submission = $deployment->getSubmission();
 		assert(is_a($submission, 'Submission'));
 
+		$submissionFileRefNodes = $node->getElementsByTagName('submission_file_ref');
+		assert($submissionFileRefNodes->length <= 1);
+		$addSubmissionFile = false;
+		if ($submissionFileRefNodes->length == 1) {
+			$fileNode = $submissionFileRefNodes->item(0);
+			$fileId = $fileNode->getAttribute('id');
+			$revisionId = $fileNode->getAttribute('revision');
+			$dbFileId = $deployment->getFileDBId($fileId, $revisionId);
+			assert($dbFileId);
+			$addSubmissionFile = true;
+		}
 		$representation = parent::handleElement($node);
 
-		if ($node->getAttribute('available') == 'true') $representation->setIsAvailable(true);
-
-		$galleyType = $node->getAttribute('galley_type');
-		$representation->setGalleyType($galleyType);
-
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) if (is_a($n, 'DOMElement')) switch($n->tagName) {
-			case 'remote_url': $representation->setRemoteURL($n->textContent); break;
 			case 'name':
 				// Labels are not localized in OJS ArticleGalleys, but we use the <name locale="....">...</name> structure.
 				$representation->setLabel($n->textContent);
 				$representation->setLocale($n->getAttribute('locale'));
 				break;
-
 		}
 
 		$representationDao = Application::getRepresentationDAO();
+		if ($addSubmissionFile) $representation->setFileId($dbFileId);
 		$representationDao->insertObject($representation);
+
+		if ($addSubmissionFile) {
+			// Update the submission file.
+			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+			$submissionFile = $submissionFileDao->getRevision($dbFileId, $revisionId);
+			$submissionFile->setAssocType(ASSOC_TYPE_REPRESENTATION);
+			$submissionFile->setAssocId($representation->getId());
+			$submissionFileDao->updateObject($submissionFile);
+		}
 
 		// representation proof files
 		return $representation;
+	}
+
+	/**
+	 * Process the self_file_ref node found inside the article_galley node.
+	 * @param $node DOMElement
+	 * @param $deployment NativeImportExportDeployment
+	 * @param $representation ArticleGalley
+	 */
+	function _processFileRef($node, $deployment, $representation) {
 	}
 }
 

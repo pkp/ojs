@@ -3,8 +3,8 @@
 /**
  * @file pages/user/UserHandler.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UserHandler
@@ -157,7 +157,6 @@ class UserHandler extends PKPUserHandler {
 		$subscriptionName = $journal->getSetting('subscriptionName');
 		$subscriptionEmail = $journal->getSetting('subscriptionEmail');
 		$subscriptionPhone = $journal->getSetting('subscriptionPhone');
-		$subscriptionFax = $journal->getSetting('subscriptionFax');
 		$subscriptionMailingAddress = $journal->getSetting('subscriptionMailingAddress');
 		$subscriptionAdditionalInformation = $journal->getLocalizedSetting('subscriptionAdditionalInformation');
 		// Get subscriptions and options for current journal
@@ -182,7 +181,6 @@ class UserHandler extends PKPUserHandler {
 		$templateMgr->assign('subscriptionName', $subscriptionName);
 		$templateMgr->assign('subscriptionEmail', $subscriptionEmail);
 		$templateMgr->assign('subscriptionPhone', $subscriptionPhone);
-		$templateMgr->assign('subscriptionFax', $subscriptionFax);
 		$templateMgr->assign('subscriptionMailingAddress', $subscriptionMailingAddress);
 		$templateMgr->assign('subscriptionAdditionalInformation', $subscriptionAdditionalInformation);
 		$templateMgr->assign('journalTitle', $journal->getLocalizedName());
@@ -238,7 +236,7 @@ class UserHandler extends PKPUserHandler {
 		} else {
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign('message', $deniedKey);
-			return $templateMgr->display('common/message.tpl');
+			return $templateMgr->display('frontend/pages/message.tpl');
 		}
 	}
 
@@ -261,36 +259,6 @@ class UserHandler extends PKPUserHandler {
 	function setupTemplate($request = null) {
 		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR, LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_MANAGER, LOCALE_COMPONENT_PKP_GRID);
-	}
-
-	/**
-	 * View the public user profile for a user, specified by user ID,
-	 * if that user should be exposed for public view.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function viewPublicProfile($args, $request) {
-		$this->validate(false);
-		$templateMgr = TemplateManager::getManager($request);
-		$userId = (int) array_shift($args);
-
-		$accountIsVisible = false;
-
-		// Ensure that the user's profile info should be exposed:
-
-		$commentDao = DAORegistry::getDAO('CommentDAO');
-		if ($commentDao->attributedCommentsExistForUser($userId)) {
-			// At least one comment is attributed to the user
-			$accountIsVisible = true;
-		}
-
-		if(!$accountIsVisible) $request->redirect(null, 'index');
-
-		$userDao = DAORegistry::getDAO('UserDAO');
-		$user = $userDao->getById($userId);
-
-		$templateMgr->assign('user', $user);
-		$templateMgr->display('user/publicProfile.tpl');
 	}
 
 

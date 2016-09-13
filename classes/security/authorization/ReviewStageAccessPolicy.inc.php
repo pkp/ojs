@@ -2,8 +2,8 @@
 /**
  * @file classes/security/authorization/ReviewStageAccessPolicy.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReviewStageAccessPolicy
@@ -32,12 +32,12 @@ class ReviewStageAccessPolicy extends ContextPolicy {
 		$workflowStagePolicy = new PolicySet(COMBINING_PERMIT_OVERRIDES);
 
 		// Add the workflow policy, for editorial / context roles
-		import('classes.security.authorization.WorkflowStageAccessPolicy');
+		import('lib.pkp.classes.security.authorization.WorkflowStageAccessPolicy');
 		$workflowStagePolicy->addPolicy(new WorkflowStageAccessPolicy($request, $args, $roleAssignments, $submissionParameterName, $stageId));
 
 		if ($stageId == WORKFLOW_STAGE_ID_EXTERNAL_REVIEW) { // All review rounds in OJS occur in 'external' review.
 			// Add the submission policy, for reviewer roles
-			import('classes.security.authorization.SubmissionAccessPolicy');
+			import('lib.pkp.classes.security.authorization.SubmissionAccessPolicy');
 			$submissionPolicy = new SubmissionAccessPolicy($request, $args, $roleAssignments, $submissionParameterName);
 			$submissionPolicy->addPolicy(new WorkflowStageRequiredPolicy($stageId));
 			$workflowStagePolicy->addPolicy($submissionPolicy);

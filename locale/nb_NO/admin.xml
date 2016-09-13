@@ -4,11 +4,11 @@
 <!--
   * locale/nb_NO/admin.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the nb_NO (Norwegian) locale.
+  * Localization strings for the nb_NO (Norsk bokmål) locale.
   *
   -->
 
@@ -57,7 +57,7 @@
 	<message key="admin.mergeUsers.from.description">Velg en bruker du vil slå sammen med en annen brukerkonto (for eks. når noen har to brukerkontoer). Den brukeren du velger først slettes, og elementer og oppgaver føres over til den andre brukeren.</message>
 	<message key="admin.mergeUsers.allUsers">Alle vervete brukere</message>
 	<message key="admin.mergeUsers.confirm">Er du sikker på at du vil slå sammen brukerkontoen med navnet "{$oldUsername}" med kontoen med brukernavnet "{$newUsername}"?  Etterpå finnes ikke brukerkontoen med navnet "{$oldUsername}" lenger. Denne handlingen kan ikke omgjøres.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Ingen vervete brukere</message>
+	<message key="admin.mergeUsers.noneEnrolled">Ingen vervete brukere</message>
 	<message key="admin.locale.maybeIncomplete">Merkede lokaliseringsfiler kan være ukomplette.</message>
 	<message key="admin.settings.journalsList.showTitle">Tidsskrifttittel</message>
 	<message key="admin.settings.journalsList.showDescription">Tidsskriftbeskrivelse</message>

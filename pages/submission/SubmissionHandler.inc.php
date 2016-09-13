@@ -3,8 +3,8 @@
 /**
  * @file pages/submission/SubmissionHandler.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionHandler
@@ -24,7 +24,32 @@ class SubmissionHandler extends PKPSubmissionHandler {
 	function SubmissionHandler() {
 		parent::PKPSubmissionHandler();
 		$this->addRoleAssignment(array(ROLE_ID_AUTHOR, ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER),
-				array('index', 'wizard', 'step', 'saveStep'));
+				array('index', 'wizard', 'step', 'saveStep', 'fetchChoices'));
+	}
+
+
+	//
+	// Public methods
+	//
+	/**
+	 * Retrieves a JSON list of available choices for a tagit metadata input field.
+	 * @param $args array
+	 * @param $request Request
+	 */
+	function fetchChoices($args, $request) {
+		$term = $request->getUserVar('term');
+		switch ($request->getUserVar('list')) {
+			case 'languages':
+				$languageDao = DAORegistry::getDAO('LanguageDAO');
+				$languages = $languageDao->getLanguages(AppLocale::getLocale());
+				$matches = array();
+				foreach ($languages as $language) {
+					if (stristr($language->getName(), $term)) $matches[$language->getCode()] = $language->getName();
+				}
+				header('Content-Type: text/json');
+				echo json_encode($matches);
+		}
+		assert(false);
 	}
 
 
@@ -44,12 +69,13 @@ class SubmissionHandler extends PKPSubmissionHandler {
 	 * Get the step numbers and their corresponding title locale keys.
 	 * @return array
 	 */
-	protected function _getStepsNumberAndLocaleKeys() {
+	function getStepsNumberAndLocaleKeys() {
 		return array(
 			1 => 'author.submit.start',
 			2 => 'author.submit.upload',
 			3 => 'author.submit.metadata',
-			4 => 'author.submit.confirmation'
+			4 => 'author.submit.confirmation',
+			5 => 'author.submit.nextSteps',
 		);
 	}
 
@@ -57,8 +83,8 @@ class SubmissionHandler extends PKPSubmissionHandler {
 	 * Get the number of submission steps.
 	 * @return int
 	 */
-	protected function _getStepCount() {
-		return 4;
+	function getStepCount() {
+		return 5;
 	}
 }
 

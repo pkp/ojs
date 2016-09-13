@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/VkarbasizaedSubmissionTest.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class VkarbasizaedSubmissionTest
@@ -26,7 +26,6 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Karbasizaed',
 			'affiliation' => 'University of Tehran',
 			'country' => 'Iran, Islamic Republic of',
-			'roles' => array('Author'),
 		));
 
 		$title = 'Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran';
@@ -37,31 +36,24 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 
 		$this->logOut();
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
-		$this->assignParticipant('Section editor', 'Stephanie Berardo');
 		$this->sendToReview();
-		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/div[contains(text(), \'Initiated\')]');
+		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignReviewer('jjanssen', 'Julie Janssen');
 		$this->assignReviewer('phudson', 'Paul Hudson');
-		$this->recordEditorialDecision('Accept Submission');
-		$this->waitForElementPresent('//a[contains(text(), \'Editorial\')]/div[contains(text(), \'Initiated\')]');
+		$this->recordEditorialDecision('Send to Copyediting');
+		$this->waitForElementPresent('//a[contains(text(), \'Copyediting\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Copyeditor', 'Maria Fritz');
 		$this->recordEditorialDecision('Send To Production');
-		$this->waitForElementPresent('//a[contains(text(), \'Production\')]/div[contains(text(), \'Initiated\')]');
+		$this->waitForElementPresent('//a[contains(text(), \'Production\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Layout Editor', 'Graham Cox');
 		$this->assignParticipant('Proofreader', 'Catherine Turner');
 
 		// Create a galley
-		$this->waitForElementPresent('css=[id^=component-grid-articlegalleys-articlegalleygrid-add-button-]');
-		$this->click('css=[id^=component-grid-articlegalleys-articlegalleygrid-add-button-]');
+		$this->waitForElementPresent($selector='css=[id^=component-grid-articlegalleys-articlegalleygrid-addGalley-button-]');
+		$this->click($selector);
 		$this->waitForElementPresent('css=[id^=label-]');
 		$this->type('css=[id^=label-]', 'PDF');
-		$this->select('id=galleyType', 'PDF Article Galley');
-		$this->click('//span[text()=\'Save\']/..');
-		$this->waitJQuery();
-
-		// Upload a galley file
-		$this->waitForElementPresent('css=a[id^=component-articleGalleyFiles-][id*=-addFile-button-]');
-		$this->click('css=a[id^=component-articleGalleyFiles-][id*=-addFile-button-]');
+		$this->click('//button[text()=\'Save\']');
 		$this->uploadWizardFile('PDF');
 
 		$this->logOut();

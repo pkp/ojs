@@ -3,8 +3,8 @@
 /**
  * @file classes/core/Application.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Application
@@ -27,7 +27,6 @@ define('ASSOC_TYPE_GALLEY',		ASSOC_TYPE_REPRESENTATION);
 define('ASSOC_TYPE_JOURNAL',		0x0000100);
 define('ASSOC_TYPE_ISSUE',		0x0000103);
 define('ASSOC_TYPE_ISSUE_GALLEY',	0x0000105);
-define('ASSOC_TYPE_SUPP_FILE',		0x0000106);
 
 define('CONTEXT_JOURNAL', 1);
 
@@ -94,12 +93,8 @@ class Application extends PKPApplication {
 			'ArticleGalleyDAO' => 'classes.article.ArticleGalleyDAO',
 			'ArticleSearchDAO' => 'classes.search.ArticleSearchDAO',
 			'AuthorDAO' => 'classes.article.AuthorDAO',
-			'CategoryDAO' => 'classes.journal.categories.CategoryDAO',
-			'CommentDAO' => 'lib.pkp.classes.comment.CommentDAO',
 			'EditorSubmissionDAO' => 'classes.submission.editor.EditorSubmissionDAO',
 			'EmailTemplateDAO' => 'classes.mail.EmailTemplateDAO',
-			'FooterCategoryDAO' => 'lib.pkp.classes.context.FooterCategoryDAO',
-			'FooterLinkDAO' => 'lib.pkp.classes.context.FooterLinkDAO',
 			'GiftDAO' => 'classes.gift.GiftDAO',
 			'IndividualSubscriptionDAO' => 'classes.subscription.IndividualSubscriptionDAO',
 			'InstitutionalSubscriptionDAO' => 'classes.subscription.InstitutionalSubscriptionDAO',
@@ -116,11 +111,8 @@ class Application extends PKPApplication {
 			'ReviewAssignmentDAO' => 'lib.pkp.classes.submission.reviewAssignment.ReviewAssignmentDAO',
 			'ReviewerSubmissionDAO' => 'classes.submission.reviewer.ReviewerSubmissionDAO',
 			'RoleDAO' => 'classes.security.RoleDAO',
-			'RTDAO' => 'classes.rt.ojs.RTDAO',
 			'ScheduledTaskDAO' => 'lib.pkp.classes.scheduledTask.ScheduledTaskDAO',
 			'SectionDAO' => 'classes.journal.SectionDAO',
-			'SectionEditorsDAO' => 'classes.journal.SectionEditorsDAO',
-			'SocialMediaDAO' => 'classes.journal.SocialMediaDAO',
 			'StageAssignmentDAO' => 'lib.pkp.classes.stageAssignment.StageAssignmentDAO',
 			'SubmissionEventLogDAO' => 'classes.log.SubmissionEventLogDAO',
 			'SubmissionFileDAO' => 'classes.article.SubmissionFileDAO',
@@ -143,7 +135,6 @@ class Application extends PKPApplication {
 			// This is necessary as several other plug-in categories
 			// depend on meta-data. This is a very rudimentary type of
 			// dependency management for plug-ins.
-			'viewableFiles',
 			'metadata',
 			'auth',
 			'blocks',
@@ -156,7 +147,6 @@ class Application extends PKPApplication {
 			'citationParser',
 			'gateways',
 			'generic',
-			'implicitAuth',
 			'importexport',
 			'oaiMetadataFormats',
 			'paymethod',
@@ -208,6 +198,7 @@ class Application extends PKPApplication {
 			$driver = $pluginSettingsDao->getDriver();
 			switch ($driver) {
 				case 'mysql':
+				case 'mysqli':
 					$checkResult = $pluginSettingsDao->retrieve('SHOW COLUMNS FROM plugin_settings LIKE ?', array('context_id'));
 					if ($checkResult->NumRows() == 0) {
 						return 'journal_id';
@@ -223,14 +214,6 @@ class Application extends PKPApplication {
 			}
 		}
 		return 'context_id';
-	}
-
-	/**
-	 * Get the DAO for ROLE_ID_SUB_EDITOR roles.
-	 * @return DAO
-	 */
-	static function getSubEditorsDAO() {
-		return DAORegistry::getDAO('SectionEditorsDAO');
 	}
 
 	/**

@@ -2,10 +2,10 @@
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
 
 <!--
-  * locale/nb_NO/emailTemplateData.xml
+  * locale/nb_NO/emailTemplates.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -29,7 +29,6 @@ Forny passordet: {$url}<br />
 		<body><![CDATA[Passordet ditt til nettstedet for {$siteTitle} er nå fornyet. Ta godt vare på brukernavnet og passordet, som du vil trenge for de oppgavene du skal utføre på nettstedet.<br />
 <br />
 Ditt brukernavn: {$username}<br />
-Ditt nye passord: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Denne e-posten sendes til en bruker som har fullført fornying av passordet sitt som beskrevet i PASSWORD_RESET_CONFIRM e-posten.</description>
@@ -49,7 +48,7 @@ Vennlig hilsen,<br />
 		<subject>Ny utgave</subject>
 		<body><![CDATA[Til registrerte lesere:<br />
 <br />
-{$contextName} har nettopp publisert en ny utgave på nettstedet <a href="{$journalUrl}">{$journalUrl}</a>. Her kan du lese innholdsfortegnelsen, før du går videre til nettstedet for å se nærmere på innholdet.<br />
+{$contextName} har nettopp publisert en ny utgave på nettstedet <a href="{$contextUrl}">{$contextUrl}</a>. Her kan du lese innholdsfortegnelsen, før du går videre til nettstedet for å se nærmere på innholdet.<br />
 <br />
 Takk for den interessen du viser  for arbeidet vårt,<br />
 {$editorialContactSignature}]]></body>
@@ -59,11 +58,11 @@ Takk for den interessen du viser  for arbeidet vårt,<br />
 		<subject>Anmodning om arkivering av {$contextName}</subject>
 		<body><![CDATA[Kjære [oppgi universitetsbibliotekar]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt; er et tidsskrift der en av deres fagansatte, [oppgi medlemsnavn], har påtatt seg å være [oppgi rolletittel]. Tidsskriftet ønsker å etablere et LOCKSS (Lots of Copies Keep Stuff Safe) arkiv, i samarbeid med flere universitetsbibliotek.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; er et tidsskrift der en av deres fagansatte, [oppgi medlemsnavn], har påtatt seg å være [oppgi rolletittel]. Tidsskriftet ønsker å etablere et LOCKSS (Lots of Copies Keep Stuff Safe) arkiv, i samarbeid med flere universitetsbibliotek.<br />
 <br />
 [Gi en kort beskrivelse av tidsskriftet]<br />
 <br />
-URL til det LOCKSS Publisher Manifest som gjelder for tidsskriftet vårt er: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+URL til det LOCKSS Publisher Manifest som gjelder for tidsskriftet vårt er: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Vi forstår det slik at biblioteket deres allerede deltar i et LOCKSS-samarbeid. Hvis det er behov for det, bidrar vi gjerne med ytterligere nødvendige metadata for å få registrert tidsskriftet vårt med deres versjon av LOCKSS.<br />
 <br />
@@ -75,7 +74,7 @@ Vennlig hilsen,<br />
 		<subject>Anmodning om arkivering av {$contextName}</subject>
 		<body><![CDATA[Kjære [oppgi universitetsbibliotekar]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, er et tidsskrift der en av deres fagansatte, [oppgi medlemsnavn], har påtatt seg å være [oppgi rolletittel]. Tidsskriftet ønsker å etablere et LOCKSS (Lots of Copies Keep Stuff Safe) arkiv, i samarbeid med flere universitetsbibliotek.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, er et tidsskrift der en av deres fagansatte, [oppgi medlemsnavn], har påtatt seg å være [oppgi rolletittel]. Tidsskriftet ønsker å etablere et LOCKSS (Lots of Copies Keep Stuff Safe) arkiv, i samarbeid med flere universitetsbibliotek.<br />
 <br />
 [Gi en kort beskrivelse av tidsskriftet]<br />
 <br />
@@ -93,7 +92,7 @@ Vennlig hilsen,<br />
 <br />
 Takk for at du har sendt inn manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Gjennom det nettbaserte publiseringssystemet vårt vil du kunne følge manuskriptet på sin vei gjennom den redasjonelle prosessen, ved å logge deg inn på tidsskriftets nettsted:<br />
 <br />
-Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskript URL: {$submissionUrl}<br />
 Brukernavn: {$authorUsername}<br />
 <br />
 Ta kontakt med meg, hvis det er noe mer du vil vite. Takk for at du velger tidsskriftet vårt som kanal for å publisere arbeidet ditt.<br />
@@ -133,7 +132,7 @@ Ved den redaksjonelle gjennomgangen av ditt manuskript &quot;{$submissionTitle}&
 <br />
 Som seksjonsredaktør i {$contextName} er du herved oppnevnt til å føre det innsendte manuskriptet &quot;{$submissionTitle}&quot; gjennom den redaksjonelle prosessen.<br />
 <br />
-Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskript URL: {$submissionUrl}<br />
 Brukernavn: {$editorUsername}<br />
 <br />
 Vennlig hilsen,<br />
@@ -146,7 +145,7 @@ Vennlig hilsen,<br />
 <br />
 Vårt tidsskrift {$contextName} har fått tilsendt manuskriptet &quot;{$submissionTitle}&quot;. Vi håper du er villig til å gi en fagfellevurdering av dette manuskriptet, fordi vi mener dette kan passe med din vurderingskompetanse. Sammendraget som var vedlagt manuskriptet er skrevet inn nedenfor, og jeg håper du vil påta deg dette viktige oppdraget for oss.<br />
 <br />
-Vennligst logg inn på tidsskriftets nettsted innen {$weekLaterDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke. Hvis du påtar deg oppdraget skal du også bruke nettstedet for å skrive inn vurderingen din, og for å registrere den anbefalingen du gir oss. Adressen til nettstedet er <a href="{$journalUrl}">{$journalUrl}</a><br />
+Vennligst logg inn på tidsskriftets nettsted innen {$responseDueDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke. Hvis du påtar deg oppdraget skal du også bruke nettstedet for å skrive inn vurderingen din, og for å registrere den anbefalingen du gir oss. Adressen til nettstedet er <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 Vi venter vurderingsoppdraget ferdigstilt innen {$reviewDueDate}.<br />
 <br />
@@ -171,7 +170,7 @@ Takk for at du har sagt deg villig til å bidra til arbeidet vårt.<br />
 <br />
 Vårt tidsskrift {$contextName} har fått tilsendt manuskriptet &quot;{$submissionTitle}&quot;. Vi håper du er villig til å gi en fagfellevurdering av dette manuskriptet, fordi vi mener dette kan passe med din vurderingskompetanse. Sammendraget som var vedlagt manuskriptet er skrevet inn nedenfor, og jeg håper du vil påta deg dette viktige oppdraget for oss.<br />
 <br />
-Vennligst logg inn på tidsskriftets nettsted innen {$weekLaterDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke. Hvis du påtar deg oppdraget skal du også bruke nettstedet for å skrive inn vurderingen din, og for å registrere den anbefalingen du gir oss.<br />
+Vennligst logg inn på tidsskriftets nettsted innen {$responseDueDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke. Hvis du påtar deg oppdraget skal du også bruke nettstedet for å skrive inn vurderingen din, og for å registrere den anbefalingen du gir oss.<br />
 <br />
 Vi venter vurderingsoppdraget ferdigstilt innen {$reviewDueDate}.<br />
 <br />
@@ -194,7 +193,7 @@ Takk for at du har sagt deg villig til å bidra til arbeidet vårt.<br />
 <br />
 Vårt tidsskrift {$contextName} har fått tilsendt manuskriptet &quot;{$submissionTitle}&quot;. Vi håper du er villig til å gi en fagfellevurdering av dette manuskriptet, fordi vi mener dette kan passe med din vurderingskompetanse. Tidsskriftets retningslinjer for fagfellevurdering følger nedenfor, og selve manuskriptet er vedlagt denne e-posten. Vurderingen og anbefalingen din returneres til meg som e-post, og er ventet ferdig innen {$reviewDueDate}.<br />
 <br />
-Vennligst send meg en svarpost innen {$weekLaterDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke.<br />
+Vennligst send meg en svarpost innen {$responseDueDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke.<br />
 <br />
 Takk for at du har sagt deg villig til å bidra til arbeidet vårt.<br />
 <br />
@@ -303,12 +302,12 @@ Vennligst bekreft om du fortsatt regner med å fullføre dette vurderingsoppdrag
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Forespørsel om manusredigering</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Jeg vil med dette be om at du påtar deg manusredigering av manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}. Du finner manuskriptet på tidsskriftets nettsted, sammen med vår Instruks for manusredigering.<br />
 <br />
-Manuskript URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Brukernavn: {$copyeditorUsername}<br />
+Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Brukernavn: {$participantUsername}<br />
 <br />
 Hvis du ikke har anledning til å påta deg dette oppdraget, eller har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil dessuten benytte denne anledningen til å takke deg for at du har sagt deg villig til å bidra til arbeidet vårt.<br />
 <br />
@@ -322,11 +321,11 @@ Hvis du ikke har anledning til å påta deg dette oppdraget, eller har ytterlige
 Jeg har nå fullført første runde med manusredigering av  manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}. Nå kan forfatter og redaktør gjennomgå mine spørsmål og forslag til endringer.<br />
 <br />
 Jeg vil samtidig benytte anledningen til å takke for oppdraget,<br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Bekrefter at du har fullført manusredigering</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Takk for at du har manusredigert manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}. Vi setter stor pris på at du på denne måten bidrar til å sikre kvaliteten i våre publikasjoner.<br />
 <br />
@@ -341,7 +340,7 @@ Vi har nå redigert ditt manuskript &quot;{$submissionTitle}&quot; for {$context
 <br />
 Vennligst merk deg at dette er din aller siste mulighet til å gjøre vesentlige endringer i manuskriptet. Riktignok vil du senere også bli bedt om å korrekturlese de ferdig oppsatte sidene, men i den produksjonsfasen er det bare formatfeil og typografiske feil som kan korrigeres.<br />
 <br />
-Manuskript URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.<br />
 <br />
@@ -369,12 +368,12 @@ Takk for at du har fullført gjennomgangen din av revisjonsforslagene til ditt m
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Manusredigering - siste gjennomgang</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Forfatteren og redaktøren har nå gått igjennom revisjonsforslagene til manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}. Nå er tiden inne til å gjøre klar manuskriptet i en &quot;renkopi&quot; for layout. Vi ber om at du foretar siste gjennomgang og rensing av manuskriptfilen, ved å bekrefte de endringene som er akseptert, og fjerne alle andre merknader, markeringer og overflødige formateringer. Manuskriptfilen som sendes til layoutredigering skal være så ren som mulig.<br />
 <br />
-Manuskript URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Brukernavn: {$copyeditorUsername}<br />
+Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Brukernavn: {$participantUsername}<br />
 <br />
 {$contextName} takker deg for innsatsen,<br />
 <br />
@@ -387,12 +386,12 @@ Brukernavn: {$copyeditorUsername}<br />
 <br />
 Jeg har nå gjort klar en ren og ferdig redigert filversjon av manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}. Manuskriptet er nå klart for layoutredigering.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Denne e-posten fra Manusredaktøren varsler Seksjonsredaktøren om at siste manusredigering av manuskriptet er fullført, og at layoutredigeringen kan settes i gang.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Bekrefter at siste manusgjennomgang er fullført</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Takk for at du har fullført siste manusredigering av manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}. Framstillingen av en slik god &quot;renkopi&quot; for layoutredigering er et viktig trinn i den redaksjonelle prosessen.<br />
 <br />
@@ -401,12 +400,12 @@ Takk for at du har fullført siste manusredigering av manuskriptet &quot;{$submi
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Forespørsel om layoutredigering - sideoppsett</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Jeg vil med dette be deg om å layoutredigere sideoppsettet for manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}.<br />
 <br />
 Manuskript URL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Brukernavn: {$layoutEditorUsername}<br />
+Brukernavn: {$participantUsername}<br />
 <br />
 Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.<br />
 <br />
@@ -421,12 +420,12 @@ Sidene til manuskriptet &quot;{$submissionTitle}&quot; er nå satt opp for {$con
 <br />
 Hvis du har spørsmål til arbeidet jeg har utført, ber jeg om at du kontakter meg.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Denne e-posten fra Layoutredaktøren til Seksjonsredaktøren varsler om at sideoppsettet er fullført.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Bekrefter at layoutredigering er fullført</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Takk for at du har satt opp sidene til manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}. Du har med dette gitt et viktig bidrag til publiseringsarbeidet vårt.<br />
 <br />
@@ -439,7 +438,7 @@ Takk for at du har satt opp sidene til manuskriptet &quot;{$submissionTitle}&quo
 <br />
 Vi ber med dette om at du leser sluttkorrektur på de oppsatte sidene for ditt manuskript  &quot;{$submissionTitle}&quot; for {$contextName}. For å få tilgang til den aktuelle manuskriptfilen ber vi deg om å logge inn på tidsskriftets nettsted med lenken nedenfor. Bruk deretter VIS KORREKTUR-lenken for å få se manuskriptsidene slik de vil bli publisert. Vi minner om at det bare er formatfeil og typografiske feil som kan korrigeres i denne produksjonsfasen. Vi ber deg om å følge vår Instruks for korrekturlesing. Oppgi slike feil i boksen som blir hentet fram av lenken Korrekturlesing: rettelser.<br />
 <br />
-Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskript URL: {$submissionUrl}<br />
 <br />
 Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.<br />
 <br />
@@ -472,7 +471,7 @@ Hvis du har krysset av på din brukerside for å få e-post varsel når ny utgav
 <br />
 Jeg ber deg med dette om å lese korrektur på de oppsatte sidene for manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}.<br />
 <br />
-Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskript URL: {$submissionUrl}<br />
 Brukernavn: {$proofreaderUsername}<br />
 <br />
 Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.<br />
@@ -500,12 +499,12 @@ Takk for at du har gjennomført korrektur av manuskriptet &quot;{$submissionTitl
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Forespørsel om korrektur (Layoutredaktør)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Vi ber med dette om at du utfører de rettelsene korrekturlesningen har påpekt behov for, i manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}.<br />
 <br />
-Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Brukernavn: {$layoutEditorUsername}<br />
+Manuskript URL: {$submissionUrl}<br />
+Brukernavn: {$participantUsername}<br />
 <br />
 Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.<br />
 <br />
@@ -518,12 +517,12 @@ Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har 
 <br />
 Sidekorrekturen til manuskriptet &quot;{$submissionTitle}&quot; er nå ferdigstilt etter korrektur for {$contextName}. Manuskriptfilen er med dette klar til publisering.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Denne e-posten fra Layoutredaktøren til Seksjonsredaktøren varsler om at de siste korrigeringene i manuskriptfilen er gjennomført, og at den dermed er klar for publisering.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Bekrefter ferdigstilt korrektur (Layoutredaktør)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Takk for at du har ferdigstilt sidekorrekturen til manuskriptet &quot;{$submissionTitle}&quot; for publisering i {$contextName}. Med dette arbeidet har du gitt et viktig bidrag til publiseringsarbeidet vårt: takk for innsatsen.<br />
 <br />
@@ -558,7 +557,7 @@ Hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg.<br />
 		<subject>Ny utgave i Open Access</subject>
 		<body><![CDATA[Til våre lesere:<br />
 <br />
-{$contextName} har nå gjort følgende utgave tilgjengelig i open access format. Innholdsfortegnelsen er her vedlagt. Vi inviterer deg med det samme til å besøk nettstedet vårt (<a href="{$journalUrl}">{$journalUrl}</a>) for å se nærmere på innholdet.<br />
+{$contextName} har nå gjort følgende utgave tilgjengelig i open access format. Innholdsfortegnelsen er her vedlagt. Vi inviterer deg med det samme til å besøk nettstedet vårt (<a href="{$contextUrl}">{$contextUrl}</a>) for å se nærmere på innholdet.<br />
 <br />
 Takk for at du viser interesse for arbeidet vårt,<br />
 {$editorialContactSignature}]]></body>

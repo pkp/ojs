@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/announcementFeed/AnnouncementFeedPlugin.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AnnouncementFeedPlugin
@@ -67,76 +67,108 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 		return false;
 	}
 
+	/**
+	 * Add links to the feeds.
+	 * @param $hookName string
+	 * @param $args array
+	 * @return boolean Hook processing status
+	 */
 	function callbackAddLinks($hookName, $args) {
 		$request =& $this->getRequest();
 		if ($this->getEnabled() && is_a($request->getRouter(), 'PKPPageRouter')) {
-			$templateManager =& $args[0];
-			$currentJournal =& $templateManager->get_template_vars('currentJournal');
+			$templateManager = $args[0];
+			$currentJournal = $templateManager->get_template_vars('currentJournal');
 			$announcementsEnabled = $currentJournal ? $currentJournal->getSetting('enableAnnouncements') : false;
-			$displayPage = $currentJournal ? $this->getSetting($currentJournal->getId(), 'displayPage') : null;
-			$requestedPage = $request->getRequestedPage();
 
-			if ( $announcementsEnabled && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'announcement')) || ($displayPage == $requestedPage)) ) {
-
-				// if we have a journal selected, append feed meta-links into the header
-				$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
-
-				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="' . $request->url(null, 'gateway', 'plugin', array('AnnouncementFeedGatewayPlugin', 'atom')) . '" />';
-				$feedUrl2 = '<link rel="alternate" type="application/rdf+xml" href="'. $request->url(null, 'gateway', 'plugin', array('AnnouncementFeedGatewayPlugin', 'rss')) . '" />';
-				$feedUrl3 = '<link rel="alternate" type="application/rss+xml" href="'. $request->url(null, 'gateway', 'plugin', array('AnnouncementFeedGatewayPlugin', 'rss2')) . '" />';
-
-				$templateManager->assign('additionalHeadData', $additionalHeadData."\n\t".$feedUrl1."\n\t".$feedUrl2."\n\t".$feedUrl3);
+			if (!$announcementsEnabled) {
+				return false;
 			}
+
+			$displayPage = $currentJournal ? $this->getSetting($currentJournal->getId(), 'displayPage') : null;
+
+			// Define when the <link> elements should appear
+			$contexts = 'frontend';
+			if ($displayPage == 'homepage') {
+				$contexts = array('frontend-index', 'frontend-announcement');
+			} elseif ($displayPage == 'announcement') {
+				$contexts = 'frontend-' . $displayPage;
+			}
+
+			$templateManager->addHeader(
+				'announcementsAtom+xml',
+				'<link rel="alternate" type="application/atom+xml" href="' . $request->url(null, 'gateway', 'plugin', array('AnnouncementFeedGatewayPlugin', 'atom')) . '">',
+				array(
+					'contexts' => $contexts,
+				)
+			);
+			$templateManager->addHeader(
+				'announcementsRdf+xml',
+				'<link rel="alternate" type="application/rdf+xml" href="'. $request->url(null, 'gateway', 'plugin', array('AnnouncementFeedGatewayPlugin', 'rss')) . '">',
+				array(
+					'contexts' => $contexts,
+				)
+			);
+			$templateManager->addHeader(
+				'announcementsRss+xml',
+				'<link rel="alternate" type="application/rss+xml" href="'. $request->url(null, 'gateway', 'plugin', array('AnnouncementFeedGatewayPlugin', 'rss2')) . '">',
+				array(
+					'contexts' => $contexts,
+				)
+			);
 		}
 
 		return false;
 	}
 
 	/**
-	 * Display verbs for the management interface.
+	 * @copydoc Plugin::getActions()
 	 */
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
-		if ($this->getEnabled()) {
-			$verbs[] = array('settings', __('plugins.generic.announcementfeed.settings'));
-		}
-		return $verbs;
+	function getActions($request, $verb) {
+		$router = $request->getRouter();
+		import('lib.pkp.classes.linkAction.request.AjaxModal');
+		return array_merge(
+			$this->getEnabled()?array(
+				new LinkAction(
+					'settings',
+					new AjaxModal(
+						$router->url($request, null, null, 'manage', null, array('verb' => 'settings', 'plugin' => $this->getName(), 'category' => 'generic')),
+						$this->getDisplayName()
+					),
+					__('manager.plugins.settings'),
+					null
+				),
+			):array(),
+			parent::getActions($request, $verb)
+		);
 	}
 
  	/**
-	 * @see Plugin::manage()
+	 * @copydoc Plugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
-		$request =& $this->getRequest();
-		switch ($verb) {
+	function manage($args, $request) {
+		switch ($request->getUserVar('verb')) {
 			case 'settings':
-				$journal = $request->getJournal();
+				$context = $request->getContext();
 
+				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 
 				$this->import('SettingsForm');
-				$form = new SettingsForm($this, $journal->getId());
+				$form = new SettingsForm($this, $context->getId());
 
 				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
-						return false;
-					} else {
-						$form->display($request);
+						return new JSONMessage(true);
 					}
 				} else {
 					$form->initData();
-					$form->display($request);
 				}
-				return true;
-			default:
-				// Unknown management verb
-				assert(false);
-				return false;
+				return new JSONMessage(true, $form->fetch($request));
 		}
+		return parent::manage($args, $request);
 	}
 }
 

@@ -3,8 +3,8 @@
 /**
  * @file classes/journal/Section.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Section
@@ -208,22 +208,6 @@ class Section extends PKPSection {
 	 */
 	function setHideAbout($hideAbout) {
 		return $this->setData('hideAbout', $hideAbout);
-	}
-
-	/**
-	 * Return boolean indicating if RT comments should be disabled.
-	 * @return boolean
-	 */
-	function getDisableComments() {
-		return $this->getData('disableComments');
-	}
-
-	/**
-	 * Set if RT comments should be disabled.
-	 * @param $disableComments boolean
-	 */
-	function setDisableComments($disableComments) {
-		return $this->setData('disableComments', $disableComments);
 	}
 
 	/**

@@ -1,0 +1,159 @@
+/**
+ * @file plugins/themes/default/styles/helpers.less
+ *
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Helper classes and reusable components
+ */
+
+//
+// A horizontal navigation list
+//
+// This component is applied to the hierarchical unordered navigation lists. It
+// supports nested lists that will be displayed on hover/focus.
+//
+// <ul class="pkp_nav_list">
+//   <li aria-haspopup="true" aria-expanded="false">
+//     <a href="#">1</a>
+//     <ul>
+//       <li>
+//         <a href="#">1-a</a>
+//       </li>
+//     </ul>
+//   </li>
+// </ul>
+//
+.pkp_nav_list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		position: relative;
+		display: inline-block;
+	}
+
+	a {
+		display: inline-block;
+		padding-left: @base;
+		padding-right: @base;
+		text-decoration: none;
+		padding-top: @half;
+		padding-bottom: @half;
+	}
+
+	ul {
+		position: absolute;
+		top: 100%;
+		left: -9999px;
+		z-index: 1000;
+		width: 15em;
+		margin: 0;
+		padding: 0;
+		background: @bg;
+		border-radius: @radius;
+		box-shadow: 0 0 5px rgba(0,0,0,0.3);
+
+		li {
+			display: block;
+		}
+
+		a {
+			display: block;
+			padding-left: @half;
+			border-left: @half solid transparent;
+
+			&:hover,
+			&:focus {
+				outline: 0;
+				background: @bg-shade;
+				border-color: @primary;
+			}
+		}
+
+		li:first-child a {
+			border-top-left-radius: @radius;
+			border-top-right-radius: @radius;
+		}
+
+		li:last-child a {
+			border-bottom-left-radius: @radius;
+			border-bottom-right-radius: @radius;
+		}
+	}
+
+	// Arrow linking top-level menu items with submenus
+	[aria-expanded="true"] {
+
+		> ul {
+			left: 0;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			.transform(translateX(-100%)); // Extra 50% centers under text, accounting for extra space from dropdown caret on the right.
+			width: 0;
+			height: 0;
+			color: @bg;
+			border-bottom: @base solid;
+			border-right: @base solid transparent;
+			border-left: @base solid transparent;
+			vertical-align: middle;
+			z-index: 1001;
+		}
+
+		// Ensure a dropdown doesn't open beyond the edge of the screen by aligning
+		// such dropdowns to the right rather than the left.
+		&.align_right > ul {
+			left: auto;
+			// Position in center on very small screens to prevent it from flying
+			// off to the left. Not a perfect solution, but should suffice for the
+			// overwhelming majority of cases
+			width: 10em;
+			right: 50%;
+			.transform(translateX(50%));
+
+			@media(min-width: @screen-phone) {
+				right: 0;
+				.transform(none);
+				width: 15em;
+			}
+		}
+	}
+
+	// Dropdown caret indicating submenus
+	// @todo these can probably abstracted into reusable components
+	[aria-haspopup] a:first-child {
+		margin-right: 0;
+	}
+
+	[aria-haspopup] > a:after {
+		position: relative;
+		display: inline-block;
+		content: '';
+		width: 0;
+		height: 0;
+		margin-left: 0.25em;
+		border-top: 4px solid;
+		border-right: 4px solid transparent;
+		border-left: 4px solid transparent;
+		vertical-align: middle;
+		overflow: hidden;
+	}
+
+	ul [aria-haspopup] > a:after {
+		border-left: 4px solid;
+		border-top: 4px solid transparent;
+		border-bottom: 4px solid transparent;
+		border-right: 4px solid transparent;
+	}
+
+	[aria-expanded="true"] > a:after {
+		opacity: 0;
+	}
+}

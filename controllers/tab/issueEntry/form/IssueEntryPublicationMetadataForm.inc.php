@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/issueEntry/form/IssueEntryPublicationMetadataForm.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueEntryPublicationMetadataForm
@@ -50,12 +50,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$this->_formParams = $formParams;
 		$this->_userId = $userId;
 		$this->addCheck(new FormValidatorPost($this));
-		if (isset($formParams['expeditedSubmission']) && $formParams['expeditedSubmission']) {
-			// make choosing an issue mandatory for expedited submissions.
-			$request = Application::getRequest();
-			$context = $request->getContext();
-			$this->addCheck(new FormValidatorCustom($this, 'issueId', 'required', 'author.submit.form.issueRequired', array(DAORegistry::getDAO('IssueDAO'), 'issueIdExists'), array($context->getId())));
-		}
+		$this->addCheck(new FormValidatorCSRF($this));
 
 		$this->addCheck(new FormValidatorURL($this, 'licenseURL', 'optional', 'form.url.invalid'));
 	}
@@ -76,10 +71,6 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$templateMgr->assign('context', $context);
 
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
-		$enablePublicArticleId = $journalSettingsDao->getSetting($context->getId(),'enablePublicArticleId');
-		$templateMgr->assign('enablePublicArticleId', $enablePublicArticleId);
-		$enablePageNumber = $journalSettingsDao->getSetting($context->getId(), 'enablePageNumber');
-		$templateMgr->assign('enablePageNumber', $enablePageNumber);
 		$templateMgr->assign('issueOptions', $this->getIssueOptions($context));
 
 		$publishedArticle = $this->getPublishedArticle();
@@ -106,6 +97,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 		if ($publicationFeeEnabled) {
 			$templateMgr->assign('publicationPayment', $completedPaymentDao->getPublicationCompletedPayment($context->getId(), $this->getSubission()->getId()));
 		}
+
+		$templateMgr->assign('submission', $this->getSubmission());
 
 		return parent::fetch($request);
 	}
@@ -210,7 +203,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$this->readUserVars(array(
 			'waivePublicationFee', 'markAsPaid', 'issueId',
 			'datePublished', 'accessStatus', 'pages',
-			'publicArticleId', 'copyrightYear', 'copyrightHolder',
+			'copyrightYear', 'copyrightHolder',
 			'licenseURL', 'attachPermissions',
 		));
 	}
@@ -286,16 +279,13 @@ class IssueEntryPublicationMetadataForm extends Form {
 			if (!is_null($this->getData('pages'))) {
 				$submission->setPages($this->getData('pages'));
 			}
-			if (!is_null($this->getData('publicArticleId'))) {
-				$articleDao->changePubId($submission->getId(), 'publisher-id', $this->getData('publicArticleId'));
-			}
 
 			if ($issue) {
 
 				// Schedule against an issue.
 				if ($publishedArticle) {
 					$publishedArticle->setIssueId($issueId);
-					$publishedArticle->setSeq(REALLY_BIG_NUMBER);
+					$publishedArticle->setSequence(REALLY_BIG_NUMBER);
 					$publishedArticle->setDatePublished($this->getData('datePublished'));
 					$publishedArticle->setAccessStatus($accessStatus);
 					$publishedArticleDao->updatePublishedArticle($publishedArticle);
@@ -307,10 +297,10 @@ class IssueEntryPublicationMetadataForm extends Form {
 					$publishedArticle->setId($submission->getId());
 					$publishedArticle->setIssueId($issueId);
 					$publishedArticle->setDatePublished(Core::getCurrentDate());
-					$publishedArticle->setSeq(REALLY_BIG_NUMBER);
+					$publishedArticle->setSequence(REALLY_BIG_NUMBER);
 					$publishedArticle->setAccessStatus($accessStatus);
 
-					$publishedArticleDao->insertPublishedArticle($publishedArticle);
+					$publishedArticleDao->insertObject($publishedArticle);
 
 					// If we're using custom section ordering, and if this is the first
 					// article published in a section, make sure we enter a custom ordering

@@ -1,8 +1,8 @@
 {**
  * plugins/generic/webFeed/templates/rss2.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * RSS 2 feed template
@@ -57,7 +57,7 @@
 				<item>
 					{* required elements *}
 					<title>{$article->getLocalizedTitle()|strip|escape:"html"}</title>
-					<link>{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}</link>
+					<link>{url page="article" op="view" path=$article->getBestArticleId()}</link>
 					<description>{$article->getLocalizedAbstract()|strip|escape:"html"}</description>
 
 					{* optional elements *}
@@ -76,7 +76,7 @@
 						<cc:license></cc:license>
 					{/if}
 
-					<guid isPermaLink="true">{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}</guid>
+					<guid isPermaLink="true">{url page="article" op="view" path=$article->getBestArticleId()}</guid>
 					{if $article->getDatePublished()}
 						<pubDate>{$article->getDatePublished()|date_format:"%a, %d %b %Y %T %z"}</pubDate>
 					{/if}

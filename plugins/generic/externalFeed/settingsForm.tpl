@@ -1,8 +1,8 @@
 {**
  * plugins/generic/externalFeed/settingsForm.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * External feed plugin settings
@@ -37,6 +37,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="externalFeedSettingsForm" method="post" action="{plugin_url path="settings"}" enctype="multipart/form-data">
+{csrf}
 {include file="common/formErrors.tpl"}
 
 <h4>{translate key="plugins.generic.externalFeed.settings.styleSheet"}</h4>

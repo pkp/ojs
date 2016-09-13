@@ -3,8 +3,8 @@
 /**
  * @file classes/plugins/CitationPlugin.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CitationPlugin
@@ -15,82 +15,49 @@
 
 import('lib.pkp.classes.plugins.Plugin');
 
-class CitationPlugin extends Plugin {
+abstract class CitationPlugin extends Plugin {
+	/**
+	 * Constructor
+	 */
 	function CitationPlugin() {
 		parent::Plugin();
-	}
 
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		assert(false); // Should always be overridden
-	}
-
-	/**
-	 * Get the display name of this plugin. This name is displayed on the
-	 * Journal Manager's setup page 5, for example.
-	 * @return String
-	 */
-	function getDisplayName() {
-		// This name should never be displayed because child classes
-		// will override this method.
-		return 'Abstract Citation Plugin';
+		if ($this->getEnabled()) {
+			HookRegistry::register('TemplateManager::display', array($this, 'loadJavaScript'));
+		}
 	}
 
 	/**
 	 * Get the citation format name for this plugin.
 	 */
-	function getCitationFormatName() {
-		// must be implemented by sub-classes
-		assert(false);
-	}
+	abstract function getCitationFormatName();
 
 	/**
-	 * Get a description of the plugin.
+	 * Load the JavaScript file to retrieve citation formats
+	 *
+	 * @param $hookName string Hook name
+	 * @param $args array Hook arguments. See `TemplateManager::display`
+	 * @return null
 	 */
-	function getDescription() {
-		return 'This is the CitationPlugin base class. Its functions can be overridden by subclasses to provide citation support.';
-	}
+	function loadJavaScript($hookName, $args) {
+		$templateMgr =& $args[0];
 
-	/**
-	 * Used by the cite function to embed an HTML citation in the
-	 * templates/rt/captureCite.tpl template, which ships with OJS.
-	 */
-	function displayCitationHook($hookName, $args) {
-		$params =& $args[0];
-		$templateMgr =& $args[1];
-		$output =& $args[2];
-
-		$output .= $templateMgr->fetch($this->getTemplatePath() . '/citation.tpl');
-		return true;
-	}
-
-	/**
-	 * Display an HTML-formatted citation. Default implementation displays
-	 * an HTML-based citation using the citation.tpl template in the plugin
-	 * path.
-	 * @param $article object
-	 * @param $issue object
-	 */
-	function displayCitation(&$article, &$issue, &$journal) {
-		HookRegistry::register('Template::RT::CaptureCite', array($this, 'displayCitationHook'));
-		$templateMgr = TemplateManager::getManager($this->getRequest());
-		$templateMgr->assign('citationPlugin', $this);
-		$templateMgr->assign('article', $article);
-		$templateMgr->assign('issue', $issue);
-		$templateMgr->assign('journal', $journal);
-		$templateMgr->display('rt/captureCite.tpl');
+		$templateMgr->addJavaScript(
+			'citationFormats',
+			$this->getRequest()->getBaseUrl() . '/js/plugins/citationFormats.js',
+			array(
+				'context' => 'frontend-article-view',
+			)
+		);
 	}
 
 	/**
 	 * Return an HTML-formatted citation. Default implementation displays
 	 * an HTML-based citation using the citation.tpl template in the plugin
 	 * path.
-	 * @param $article object
-	 * @param $issue object
+	 * @param $article Article
+	 * @param $issue Issue
+	 * @param $journal Journal
 	 */
 	function fetchCitation($article, $issue, $journal) {
 		$templateMgr = TemplateManager::getManager($this->getRequest());
@@ -100,6 +67,16 @@ class CitationPlugin extends Plugin {
 		$templateMgr->assign('journal', $journal);
 		return $templateMgr->fetch($this->getTemplatePath() . '/citation.tpl');
 	}
+
+	/**
+	 * Whether this citation format is a downloadable file format (eg - EndNote)
+	 *
+	 * @return bool
+	 */
+	function isDownloadable() {
+		return false;
+	}
+
 }
 
 ?>

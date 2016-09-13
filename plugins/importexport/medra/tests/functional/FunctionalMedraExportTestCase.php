@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/medra/tests/functional/FunctionalMedraExportTest.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FunctionalMedraExportTest
@@ -403,13 +403,13 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 	 */
 	protected function cleanXml($xml) {
 		// Fix URLs.
-		$xml = String::regexp_replace('#http://[^\s]+/index.php/(test|index)#', 'http://example.com/index.php/test', $xml);
+		$xml = PKPString::regexp_replace('#http://[^\s]+/index.php/(test|index)#', 'http://example.com/index.php/test', $xml);
 
 		// Fix sent date.
-		$xml = String::regexp_replace('/<SentDate>[0-9]{12}<\/SentDate>/', '<SentDate>201111082218</SentDate>', $xml);
+		$xml = PKPString::regexp_replace('/<SentDate>[0-9]{12}<\/SentDate>/', '<SentDate>201111082218</SentDate>', $xml);
 
 		// Fix version.
-		$xml = String::regexp_replace('/(<MessageNote>[^<]*)([0-9]\.){4}(<\/MessageNote>)/', '\1x.x.x.x.\3', $xml);
+		$xml = PKPString::regexp_replace('/(<MessageNote>[^<]*)([0-9]\.){4}(<\/MessageNote>)/', '\1x.x.x.x.\3', $xml);
 
 		return parent::cleanXml($xml);
 	}

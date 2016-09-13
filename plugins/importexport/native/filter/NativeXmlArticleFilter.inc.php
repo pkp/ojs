@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/filter/NativeXmlArticleFilter.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NativeXmlArticleFilter
@@ -47,8 +47,8 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	 * Get the method name for inserting a published submission.
 	 * @return string
 	 */
-	function getPublishedSubmissionInsertMethod(){
-		return 'insertPublishedArticle';
+	function getPublishedSubmissionInsertMethod() {
+		return 'insertObject';
 	}
 
 	/**
@@ -79,6 +79,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	function handleChildElement($n, $submission) {
 		switch ($n->tagName) {
 			case 'artwork_file':
+			case 'supplementary_file':
 				$this->parseSubmissionFile($n, $submission);
 				break;
 			case 'article_galley':
@@ -100,7 +101,10 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 				$importClass='SubmissionFile';
 				break;
 			case 'artwork_file':
-				$importClass='ArtworkFile';
+				$importClass='SubmissionArtworkFile';
+				break;
+			case 'supplementary_file':
+				$importClass='SupplementaryFile';
 				break;
 			case 'article_galley':
 				$importClass='ArticleGalley';
@@ -141,7 +145,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	function populatePublishedSubmission($submission, $node) {
 		$deployment = $this->getDeployment();
 		$issue = $deployment->getIssue();
-		$submission->setSeq($node->getAttribute('seq'));
+		$submission->setSequence($node->getAttribute('seq'));
 		$submission->setAccessStatus($node->getAttribute('access_status'));
 		$submission->setIssueId($issue->getId());
 		return $submission;

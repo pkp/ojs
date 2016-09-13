@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
+  * Localization strings.
+  -->
+
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<message key="plugins.importexport.native.displayName">Natives XML-Plugin</message>
+	<message key="plugins.importexport.native.description">Artikel und Ausgaben in OJS' nativem XML-Format importieren und exportieren.</message>
+	<message key="plugins.importexport.native.import">Import</message>
+	<message key="plugins.importexport.native.import.instructions">Lade XML-Datei zum Import hoch</message>
+	<message key="plugins.importexport.native.exportSubmissions">Artikel exportieren</message>
+	<message key="plugins.importexport.native.exportIssues">Ausgaben exportieren</message>
+	<message key="plugins.importexport.native.results">Ergebnisse</message>
+	<message key="plugins.inportexport.native.uploadFile">Bitte laden Sie unter "Import" eine Datei hoch, um fortzufahren.</message>
+	<message key="plugins.importexport.native.importComplete">Der Import wurde erfolgreich abgeschlossen. Die folgenden Elemente wurden importiert:</message>
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[Nutzung: {$scriptName} {$pluginName} [command] ...
+Befehle:
+	import [xmlFileName] [journal_path] [user_name] ...
+	export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+	export [xmlFileName] [journal_path] article [articleId]
+	export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
+	export [xmlFileName] [journal_path] issue [issueId]
+
+Zusätzliche Parameter sind wie folgt erforderlich, abhängig
+von dem Wurzelelement der XML-Datei.
+
+Wenn das Wurzelelement <article> oder <articles> ist, sind zusätzliche Parameter erforderlich.
+Die folgenden Formate sind zulässig:
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_id [sectionId]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_name [name]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
+	issue_id [issueId] section_abbrev [abbrev]
+]]></message>
+	<message key="plugins.importexport.native.cliError">FEHLER:</message>
+	<message key="plugins.importexport.native.error.unknownUser">Der angegebene Nutzer/die angegebene Nutzerin, "{$userName}", existiert nicht.</message>
+	<message key="plugins.importexport.native.error.unknownJournal">Der angegebene Zeitschriftenpfad, "{$journalPath}", existiert nicht.</message>
+	<message key="plugins.importexport.native.export.error.couldNotWrite">Konnte nicht in die Datei "{$fileName}" schreiben.</message>
+</locale>

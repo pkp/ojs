@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/settings/sections/SectionGridHandler.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionGridHandler
@@ -51,23 +51,21 @@ class SectionGridHandler extends SetupGridHandler {
 		// Set the grid title.
 		$this->setTitle('section.sections');
 
-		$this->setInstructions('manager.setup.section.description');
-
 		// Elements to be displayed in the grid
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$sectionEditorsDao = DAORegistry::getDAO('SectionEditorsDAO');
+		$subEditorsDao = DAORegistry::getDAO('SubEditorsDAO');
 		$sectionIterator = $sectionDao->getByJournalId($journal->getId());
 
 		$gridData = array();
 		while ($section = $sectionIterator->next()) {
 			// Get the section editors data for the row
-			$assignedSectionEditors = $sectionEditorsDao->getBySectionId($section->getId(), $journal->getId());
-			if(empty($assignedSectionEditors)) {
+			$assignedSubEditors = $subEditorsDao->getBySectionId($section->getId(), $journal->getId());
+			if(empty($assignedSubEditors)) {
 				$editorsString = __('common.none');
 			} else {
 				$editors = array();
-				foreach ($assignedSectionEditors as $sectionEditor) {
-					$editors[] = $sectionEditor->getLastName();
+				foreach ($assignedSubEditors as $subEditor) {
+					$editors[] = $subEditor->getLastName();
 				}
 				$editorsString = implode(', ', $editors);
 			}
@@ -124,7 +122,7 @@ class SectionGridHandler extends SetupGridHandler {
 	 * Get the row handler - override the default row handler
 	 * @return SectionGridRow
 	 */
-	function getRowInstance() {
+	protected function getRowInstance() {
 		return new SectionGridRow();
 	}
 
@@ -212,7 +210,7 @@ class SectionGridHandler extends SetupGridHandler {
 			$journal->getId()
 		);
 
-		if (isset($section)) {
+		if ($section && $request->checkCSRF()) {
 			$sectionDao->deleteObject($section);
 			return DAO::getDataChangedEvent($section->getId());
 		}

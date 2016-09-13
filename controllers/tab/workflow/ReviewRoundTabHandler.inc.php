@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/workflow/ReviewRoundTabHandler.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReviewRoundTabHandler
@@ -41,7 +41,7 @@ class ReviewRoundTabHandler extends PKPReviewRoundTabHandler {
 	function authorize($request, &$args, $roleAssignments) {
 		$stageId = (int) $request->getUserVar('stageId'); // This is validated in WorkflowStageAccessPolicy.
 
-		import('classes.security.authorization.WorkflowStageAccessPolicy');
+		import('lib.pkp.classes.security.authorization.WorkflowStageAccessPolicy');
 		$this->addPolicy(new WorkflowStageAccessPolicy($request, $args, $roleAssignments, 'submissionId', $stageId));
 
 		return parent::authorize($request, $args, $roleAssignments);

@@ -2,14 +2,14 @@
 /**
  * @file classes/security/authorization/OjsJournalMustPublishPolicy.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class OjsAuthorDashboardAccessPolicy
+ * @class OjsJournalMustPublishPolicy
  * @ingroup security_authorization
  *
- * @brief Class to control access to OMP author dashboard.
+ * @brief Access policy to limit access to journals that do not publish online.
  */
 
 import('lib.pkp.classes.security.authorization.PolicySet');

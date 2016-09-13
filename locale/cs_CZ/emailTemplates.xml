@@ -2,10 +2,10 @@
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
 
 <!--
-  * locale/cz_CZ/emailTemplateData.xml
+  * locale/cz_CZ/emailTemplates.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -27,7 +27,6 @@ Resetovat moje heslo: {$url}<br />
 		<body><![CDATA[Vaše heslo pro stránku {$siteTitle} bylo úspěšně resetováno. Zapamatujte si prosím toto uživatelské jméno a heslo, protože je budete potřebovat pro veškerou práci s tímto časopisem.<br />
 <br />
 Vaše uživatelské jméno: {$username}<br />
-Vaše nové heslo: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Tento email je zaslán registrovanému uživateli, když úspěšně resetuje své heslo postupem uvedeným v PASSWORD_RESET_CONFIRM emailu.</description>
@@ -74,7 +73,7 @@ Děkujeme,<br />
 		<subject>Vydání nového čísla</subject>
 		<body><![CDATA[Čtenáři:<br />
 <br />
-{$contextName} zrovna vydává své poslední číslo na <a href="{$journalUrl}">{$journalUrl}</a>. Zveme Vás zde ke shlédnutí obsahu a poté návštěvě našich stránek se všemi články.<br />
+{$contextName} zrovna vydává své poslední číslo na <a href="{$contextUrl}">{$contextUrl}</a>. Zveme Vás zde ke shlédnutí obsahu a poté návštěvě našich stránek se všemi články.<br />
 <br />
 Děkujeme za Váš dlouhodobý zájem o naši práci,<br />
 {$editorialContactSignature}]]></body>
@@ -84,11 +83,11 @@ Děkujeme za Váš dlouhodobý zájem o naši práci,<br />
 		<subject>Žádost o archivaci pro {$contextName}</subject>
 		<body><![CDATA[Vážený [univerzitní knihovník]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt; je časopis, ve kterém pracovník Vaší univerzity [jméno pracovníka] zastává pozici [název pozice]. Tento časopis má zájem vybudovat archiv kopatibilní s programem LOCKSS (Lots of Copies Keep Stuff Safe) společně s touto knihovnou a dalšími univerzitními knihovnami.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; je časopis, ve kterém pracovník Vaší univerzity [jméno pracovníka] zastává pozici [název pozice]. Tento časopis má zájem vybudovat archiv kopatibilní s programem LOCKSS (Lots of Copies Keep Stuff Safe) společně s touto knihovnou a dalšími univerzitními knihovnami.<br />
 <br />
 [Krátký popis časopisu]<br />
 <br />
-URL k Prohlášení LOCKSS vydavatele pro náš časopis je: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+URL k Prohlášení LOCKSS vydavatele pro náš časopis je: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Chápeme, že jste již zapojeni do LOCKSS. Pokud můžeme poskytnout jakákoliv dodatečná metadata pro účely zaregistrování našeho časopisu do Vaší verze LOCKSS, velice rádi Vám je dodáme.<br />
 <br />
@@ -100,7 +99,7 @@ Děkujeme,<br />
 		<subject>Žádost o archivaci pro {$contextName}</subject>
 		<body><![CDATA[Vážený [univerzitní knihovník]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt; je časopis, ve kterém pracovník Vaší univerzity [jméno pracovníka] zastává pozici [název pozice]. Tento časopis má zájem vybudovat archiv kopatibilní s programem LOCKSS (Lots of Copies Keep Stuff Safe) společně s touto knihovnou a dalšími univerzitními knihovnami.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; je časopis, ve kterém pracovník Vaší univerzity [jméno pracovníka] zastává pozici [název pozice]. Tento časopis má zájem vybudovat archiv kopatibilní s programem LOCKSS (Lots of Copies Keep Stuff Safe) společně s touto knihovnou a dalšími univerzitními knihovnami.<br />
 <br />
 [Krátký popis časopisu]<br />
 <br />
@@ -118,7 +117,7 @@ Děkujeme,<br />
 <br />
 Děkujeme za zaslání příspěvku &quot;{$submissionTitle}&quot; do {$contextName}. S online systémem, který používáme, budete moci sledovat postup příspěvku redakčním procesem po přihlášení na stránkách časopisu:<br />
 <br />
-URL rukopisu: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL rukopisu: {$submissionUrl}<br />
 Uživatelské jméno: {$authorUsername}<br />
 <br />
 Pokud máte nějaké otázky, kontaktujte mě prosím. Děkujeme, že jste zvolili tento časopis pro publikování Vaší práce.<br />
@@ -158,7 +157,7 @@ Z úvodního prostudování příspěvku &quot;{$submissionTitle}&quot; jasně v
 <br />
 Byl Vám přidělen příspěvek &quot;{$submissionTitle}&quot; do {$contextName}, abyste s ním v roli editora sekce prošel redakčním zpracováním.<br />
 <br />
-URL příspěvku: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL příspěvku: {$submissionUrl}<br />
 Uživatelské jméno: {$editorUsername}<br />
 <br />
 Děkujeme,<br />
@@ -171,7 +170,7 @@ Děkujeme,<br />
 <br />
 Domnívám se, že byste mohl být výborným recenzentem příspěvku &quot;{$submissionTitle},&quot; který byl zaslán do {$contextName}. Abstrakt příspěvku je vložen níže. Věřím, že zvážíte možnost přijetí tohoto pro nás důležitého úkolu.<br />
 <br />
-Prosím, přihlaste se do {$weekLaterDate} na stránkách časopisu, abyste uvedl, zda recenzi zpracujete nebo ne a také pro přístup k příspěvku a zaznamenání Vaší recenze a doporučení. Adresa webové stránky je <a href="{$journalUrl}">{$journalUrl}</a><br />
+Prosím, přihlaste se do {$responseDueDate} na stránkách časopisu, abyste uvedl, zda recenzi zpracujete nebo ne a také pro přístup k příspěvku a zaznamenání Vaší recenze a doporučení. Adresa webové stránky je <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 Termín pro zpracování recenze je {$reviewDueDate}.<br />
 <br />
@@ -196,7 +195,7 @@ Děkujeme za zvážení této žádosti.<br />
 <br />
 Domnívám se, že byste mohl být výborným recenzentem příspěvku &quot;{$submissionTitle},&quot; který byl zaslán do {$contextName}. Abstrakt příspěvku je vložen níže. Věřím, že zvážíte možnost přijetí tohoto pro nás důležitého úkolu.<br />
 <br />
-Prosím, přihlaste se do {$weekLaterDate} na stránkách časopisu, abyste uvedl, zda recenzi zpracujete nebo ne a také pro přístup k příspěvku a zaznamenání Vaší recenze a doporučení.<br />
+Prosím, přihlaste se do {$responseDueDate} na stránkách časopisu, abyste uvedl, zda recenzi zpracujete nebo ne a také pro přístup k příspěvku a zaznamenání Vaší recenze a doporučení.<br />
 <br />
 Termín pro zpracování recenze je {$reviewDueDate}.<br />
 <br />
@@ -219,7 +218,7 @@ Děkujeme za zvážení této žádosti.<br />
 <br />
 Domnívám se, že byste mohl být výborným recenzentem příspěvku &quot;{$submissionTitle}&quot; a žádám Vás, abyste zvážil možnost přijetí tohoto pro nás důležitého úkolu. Instrukce pro zpracování recenze pro tento časopis jsou připojeny níže a příspěvek je přiložen k tomuto emailu. Vaši recenzi příspěvku spolu s Vaším doporučením byste mi měl zaslat emailem do {$reviewDueDate}.<br />
 <br />
-Uveďte prosím do {$weekLaterDate} v odpovědi na tento email, zda můžete a chcete zpracovat tuto recenzi.<br />
+Uveďte prosím do {$responseDueDate} v odpovědi na tento email, zda můžete a chcete zpracovat tuto recenzi.<br />
 <br />
 Děkujeme za zvážení této žádosti.<br />
 <br />
@@ -328,7 +327,7 @@ Potvrďte prosím, zda můžete dokončit tento nezbytný úkol pro náš časop
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Žádost o redigování příspěvku</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Chtěl bych vás požádat, abyste zredigoval článek &quot;{$submissionTitle}&quot; pro {$contextName}. Postupujte přitom prosím podle následujících kroků:<br />
 1. Klikněte níže na URL příspěvku.<br />
@@ -338,9 +337,9 @@ Chtěl bych vás požádat, abyste zredigoval článek &quot;{$submissionTitle}&
 5. Uložte zredigovaný soubor a nahrajte ho na stránce pro redigování do Korku 1.<br />
 6. Pošlte email DOKONČENO editorovi.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL příspěvku: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Uživatelské jméno: {$copyeditorUsername}<br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL příspěvku: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Uživatelské jméno: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Tento email posílá editor sekce redaktorovi, aby ho požádal o zahájení procesu redigování. Obsahuje informace o příspěvku a jek se k němu dostat.</description>
@@ -364,11 +363,11 @@ URL příspěvku: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><
 Pokud nyní nemůžete tuto práci provést nebo máte nějaké otázky, kontaktujte mě prosím. Děkujeme za Vaše přispění do tohoto časopisu.<br />
 <br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Poděkování za redigování </subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Děkujeme vám za zredigování příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Významně tím pomáháte udržet kvalitu tohoto časopisu.<br />
 <br />
@@ -390,7 +389,7 @@ Váš příspěvek &quot;{$submissionTitle}&quot; pro {$contextName} prošel prv
 7. klikněte na METADATA a zkontrolujte úplnost a přesnost informací pro indexování.<br />
 8. Pošlete email DOKONČENO editorovi a redaktorovi.<br />
 <br />
-URL příspěvku: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL příspěvku: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Toto je poslední možnost udělat v příspěvku podstatnější redakční zásahy. Fáze korektur, která následuje po přípravě sazebnic, je omezena na opravy typografických a grafických chyb.<br />
 <br />
@@ -420,7 +419,7 @@ Děkujeme za kontrolu redigování Vašeho příspěvku &quot;{$submissionTitle}
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Finální kontrola redigování </subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Autor a editor právě dokončili kontrolu redigování příspěvku&quot;{$submissionTitle}&quot; pro {$contextName}. Nyní je třeba připravit &quot;čistou kopii&quot; pro grafické zpracování. K tomu je třeba postupovat podle následujících kroků:<br />
 1. Klikněte na níže uvedenou URL adresu příspěvku.<br />
@@ -430,9 +429,9 @@ Autor a editor právě dokončili kontrolu redigování příspěvku&quot;{$subm
 5. Klikněte na METADATA a zkontrolujte informace pro indexování (uložte případné opravy).<br />
 6. Pošlete email DOKONČENO editorovi.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL příspěvku: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Uživatelské jméno: {$copyeditorUsername}<br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL příspěvku: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Uživatelské jméno: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Tento email posílá editor sekce redaktorovi a žádá ho, aby provedl finální kolo redigování před tím, než příspěvek vstoupí do fáze grafických úprav.</description>
@@ -443,12 +442,12 @@ Uživatelské jméno: {$copyeditorUsername}<br />
 <br />
 Právě jsem připravil čistou redigovanou verzi příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Je připravena pro grafické úpravy a přípravu sazebnic.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Tento email posílá redaktor editorovi sekce, aby mu oznámil, že bylo dokončeno finální kolo redigování, a že nyní může začít fáze grafických úprav.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Poděkování za finální kontrolu redigování </subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Děkujeme za dokončení redigování příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Tato příprava &quot;čisté kopie&quot; pro grafické úpravy je důležitý krok v redakčním procesu.<br />
 <br />
@@ -457,16 +456,16 @@ Děkujeme za dokončení redigování příspěvku &quot;{$submissionTitle}&quot
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Žádost o sazebnice</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Příspěvek &quot;{$submissionTitle}&quot; pro {$contextName} je nyní třeba připravit do sazenicového formátu podle následujících instrukcí.<br />
 1. Klikněte níže na URL příspěvku.<br />
 2. Přihlaste se do časopisu a pro vytvoření sazebnice podle standardů časopisu použijte verzi souboru pro grafické úpravy.<br />
 3. Pošlete editorovi email DOKONČENO.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL příspěvku: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Uživatelské jméno: {$layoutEditorUsername}<br />
+Uživatelské jméno: {$participantUsername}<br />
 <br />
 Pokud nyní nemůžete tento úkol provést nebo máte nějaké dotazy, kontaktujte mě prosím. Děkujeme za Vaši pomoc našemu časopisu.<br />
 <br />
@@ -481,12 +480,12 @@ Nyní jsou vytvořeny sazebnicové verze souborů pro příspěvek &quot;{$submi
 <br />
 Pokud máte nějaké otázky, kontaktujte mě prosím.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Tento email posílá typograf editorovi sekce, aby mu oznámil, že byl dokončen proces grafických úprav.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Poděkování za grafické úpravy </subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Děkujeme za přípravu sazebnicových formátů souborů příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Vaše práce představuje významnou pomoc pro náš časopis.<br />
 <br />
@@ -505,7 +504,7 @@ Váš příspěvek &quot;{$submissionTitle}&quot; pro {$contextName} nyní vyža
 5. Uložte a odešlete opravy typografovi a korektorovi.<br />
 6. Pošlete email DOKONČENO editorovi.<br />
 <br />
-URL příspěvku: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL příspěvku: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Tento email posílá editor sekce autorovi, aby mu oznámil, že sazebnice příspěvku jsou připraveny pro korektury. Obsahuje informace o článku a přístupu k němu.</description>
@@ -542,7 +541,7 @@ Příspěvek &quot;{$submissionTitle}&quot; pro {$contextName} nyní vyžaduje k
 5. Uložte a pošlete opravy typografovi.<br />
 6. Pošlete email DOKONČENO editorovi.<br />
 <br />
-URL příspěvku: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL příspěvku: {$submissionUrl}<br />
 Uživatelské jméno: {$proofreaderUsername}<br />
 <br />
 Pokud nyní nemůžete tento úkol udělat nebo máte nějaké otázky, kontaktujte mě prosím. Děkujeme za Vaši pomoc našemu časopisu.<br />
@@ -570,7 +569,7 @@ Děkujeme za korektury sazebnic příspěvku &quot;{$submissionTitle}&quot; pro 
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Žádost o korektury (pro typografa)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 U příspěvku &quot;{$submissionTitle}&quot; pro {$contextName} byly provedeny korektury autorem a korektorem a nyní je třeba podle následujících instrukcí udělat potřebné opravy:<br />
 1. klikněte níže na URL příspěvku.<br />
@@ -578,9 +577,9 @@ U příspěvku &quot;{$submissionTitle}&quot; pro {$contextName} byly provedeny 
 3. Nahrajte opravené sazebnice.<br />
 4. Pošlete editorovi email DOKONČENO v Korekturách v Kroku 3.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL příspěvku: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Uživatelské jméno: {$layoutEditorUsername}<br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL příspěvku: {$submissionUrl}<br />
+Uživatelské jméno: {$participantUsername}<br />
 <br />
 Pokud nyní nemůžete tento úkol udělat nebo máte nějaké otázky, kontaktujte mě prosím. Děkujeme za Vaši pomoc našemu časopisu.<br />
 <br />
@@ -593,12 +592,12 @@ Pokud nyní nemůžete tento úkol udělat nebo máte nějaké otázky, kontaktu
 <br />
 Podle korektur byly opraveny sazebnice příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Tento příspěvek je nyní připraven k publikování.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Tento email posílá typograf editorovi sekce, aby mu oznámil, že byla dokončena finální fáze korektur a článek je připraven k publikování.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Poděkování za korektury (typografovi)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Děkujeme za dokončení korekčních oprav sazebnic příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Vaše práce představuje významnou pomoc našemu časopisu.<br />
 <br />
@@ -633,7 +632,7 @@ Pokud máte nějaké dotazy, neváhejte mě kontaktovat<br />
 		<subject>Nyní otevřen přístup k číslu </subject>
 		<body><![CDATA[Čtenáři:<br />
 <br />
-Časopis {$contextName} povolil otevřený přístup k následujícímu číslu. Zveme vás k prohlédnutí obsahu časopisu a návštěvě našich stránek (<a href="{$journalUrl}">{$journalUrl}</a>).<br />
+Časopis {$contextName} povolil otevřený přístup k následujícímu číslu. Zveme vás k prohlédnutí obsahu časopisu a návštěvě našich stránek (<a href="{$contextUrl}">{$contextUrl}</a>).<br />
 <br />
 Děkujeme za Vás pokračující zájem o naši práci<br />
 {$editorialContactSignature}]]></body>

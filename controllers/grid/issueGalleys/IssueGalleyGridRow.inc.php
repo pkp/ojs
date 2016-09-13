@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issueGalleys/IssueGalleyGridRow.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyGridRow
@@ -22,8 +22,9 @@ class IssueGalleyGridRow extends GridRow {
 	function IssueGalleyGridRow($issueId) {
 		parent::GridRow();
 		$this->setRequestArgs(
-			((array) $this->getRequestArgs()) + array(
-				'issueId' => $issueId
+			array_merge(
+				((array) $this->getRequestArgs()),
+				array('issueId' => $issueId)
 			)
 		);
 	}
@@ -50,7 +51,10 @@ class IssueGalleyGridRow extends GridRow {
 				new LinkAction(
 					'edit',
 					new AjaxModal(
-						$router->url($request, null, null, 'edit', null, $this->getRequestArgs() + array('issueGalleyId' => $issueGalleyId)),
+						$router->url(
+							$request, null, null, 'edit', null,
+							array_merge($this->getRequestArgs(), array('issueGalleyId' => $issueGalleyId))
+						),
 						__('editor.issues.editIssueGalley'),
 						'modal_edit',
 						true),
@@ -64,9 +68,13 @@ class IssueGalleyGridRow extends GridRow {
 				new LinkAction(
 					'delete',
 					new RemoteActionConfirmationModal(
+						$request->getSession(),
 						__('common.confirmDelete'),
 						__('grid.action.delete'),
-						$router->url($request, null, null, 'delete', null, $this->getRequestArgs() + array('issueGalleyId' => $issueGalleyId)),
+						$router->url(
+							$request, null, null, 'delete', null,
+							array_merge($this->getRequestArgs(), array('issueGalleyId' => $issueGalleyId))
+						),
 						'modal_delete'
 					),
 					__('grid.action.delete'),

@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/LchristopherSubmissionTest.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class LchristopherSubmissionTest
@@ -26,7 +26,6 @@ class LchristopherSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Christopher',
 			'affiliation' => 'Australian National University',
 			'country' => 'Australia',
-			'roles' => array('Author'),
 		));
 
 		$title = 'Sodium butyrate improves growth performance of weaned piglets during the first period after weaning';
@@ -41,9 +40,8 @@ class LchristopherSubmissionTest extends ContentBaseTestCase {
 
 		$this->logOut();
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
-		$this->assignParticipant('Section editor', 'David Buskins');
 		$this->sendToReview();
-		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/div[contains(text(), \'Initiated\')]');
+		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignReviewer('jjanssen', 'Julie Janssen');
 		$this->assignReviewer('phudson', 'Paul Hudson');
 		$this->logOut();

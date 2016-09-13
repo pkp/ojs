@@ -1,0 +1,123 @@
+/**
+ * @file plugins/themes/default/styles/main.less
+ *
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to the main content panel
+ */
+
+.pkp_structure_main {
+
+	h1 {
+		font-family: @font-heading;
+		font-size: @font-header;
+		line-height: @line-header;
+		font-weight: @bold;
+	}
+
+	h2 {
+		font-family: @font-heading;
+		font-size: @font-lead;
+		line-height: @line-lead;
+		font-weight: @bold;
+	}
+
+	h3 {
+		font-family: @font-heading;
+		font-size: @font-bump;
+		line-height: @line-bump;
+		font-weight: @bold;
+	}
+
+	h4 {
+		font-size: @font-base;
+		line-height: @line-base;
+		font-weight: @bold;
+	}
+
+	h5 {
+		font-size: @font-base;
+		line-height: @line-base;
+		font-weight: @normal;
+	}
+
+	h6 {
+		font-size: @font-sml;
+		line-height: @line-sml;
+		font-weight: @bold;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		margin: (@double * 2) 0 @double;
+	}
+
+	h5,
+	h6 {
+		margin: @double 0;
+	}
+
+	p {
+		line-height: @line-base-large;
+		margin: @line-base 0;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	.page {
+
+	    // Edit link that isn't nested in a section
+	    > .cmp_edit_link {
+	        float: right;
+	        padding: @half 0;
+	        line-height: @triple;
+	    }
+
+		// Count of catalog entries on the current page
+		// used in catalog, category, series and search pages
+		.monograph_count {
+			float: right;
+			padding: @base 0;
+			font-size: @font-sml;
+			color: @text-light;
+		}
+
+		// Description and image for catalog category/series
+		.about_section {
+			.pkp_helpers_clear;
+			color: @text-light;
+			line-height: @triple;
+
+			.cover {
+				float: right;
+				width: 20%;
+				margin-left: 10%;
+				margin-right: 10%;
+
+				img {
+					display: block;
+					margin: 0 auto;
+				}
+			}
+
+			.description p:first-child {
+				margin-top: 0;
+			}
+
+			.description p:last-child {
+				margin-bottom: 0;
+			}
+
+			@media(min-width: @screen-phone) {
+				font-size: @font-bump;
+				font-style: italic;
+			}
+		}
+	}
+}

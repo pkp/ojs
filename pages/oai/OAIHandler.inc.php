@@ -3,8 +3,8 @@
 /**
  * @file pages/oai/OAIHandler.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIHandler
@@ -21,19 +21,31 @@ import('classes.handler.Handler');
 class OAIHandler extends Handler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function OAIHandler() {
 		parent::Handler();
 	}
 
+	/**
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function index($args, $request) {
 		$this->validate();
+
 		PluginRegistry::loadCategory('oaiMetadataFormats', true);
 
 		$oai = new JournalOAI(new OAIConfig($request->url(null, 'oai'), Config::getVar('oai', 'repository_id')));
+		if (!$request->getJournal() && $request->getRequestedJournalPath() != 'index') {
+			$dispatcher = $request->getDispatcher();
+			return $dispatcher->handle404();
+		}
 		$oai->execute();
 	}
 
+	/**
+	 * Validate the request
+	 */
 	function validate() {
 		// Site validation checks not applicable
 		//parent::validate();

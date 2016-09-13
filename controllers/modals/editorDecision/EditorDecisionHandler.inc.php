@@ -3,8 +3,8 @@
 /**
  * @file controllers/modals/editorDecision/EditorDecisionHandler.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class EditorDecisionHandler
@@ -44,9 +44,8 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 	 */
 	function authorize($request, &$args, $roleAssignments) {
 		$stageId = (int) $request->getUserVar('stageId');
-		import('classes.security.authorization.OjsEditorDecisionAccessPolicy');
-		$this->addPolicy(new OjsEditorDecisionAccessPolicy($request, $args, $roleAssignments, 'submissionId', $stageId));
-
+		import('lib.pkp.classes.security.authorization.EditorDecisionAccessPolicy');
+		$this->addPolicy(new EditorDecisionAccessPolicy($request, $args, $roleAssignments, 'submissionId', $stageId));
 		return parent::authorize($request, $args, $roleAssignments);
 	}
 
@@ -101,7 +100,7 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 			$user = $request->getUser();
 
 			$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-			$galley = $articleGalleyDao->getGalleyByBestGalleyId($submissionFile->getAssocId(), $submission->getId());
+			$galley = $articleGalleyDao->getByBestGalleyId($submissionFile->getAssocId(), $submission->getId());
 
 			SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_PROOFS_APPROVED, 'submission.event.proofsApproved', array('formatName' => $galley->getLabel(),'name' => $user->getFullName(), 'username' => $user->getUsername()));
 		}

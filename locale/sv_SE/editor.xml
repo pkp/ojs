@@ -4,21 +4,21 @@
 <!--
   * locale/sv_SE/editor.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2000-2015 John Willinsky
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2000-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the sv_SE (Swedish) locale.
+  * Localization strings for the sv_SE (Svenska) locale.
   *
   -->
 
-<locale name="sv_SE" full_name = "Swedish">
+<locale name="sv_SE" full_name="Svenska">
 	<message key="editor.home">Redaktör</message>
 	<message key="editor.submissionsAndPublishing">Manuskript och publicering.</message>
 	<message key="editor.submissionQueue">Manuskriptprocess</message>
 	<message key="editor.submissionArchive">Manuskriptarkiv</message>
-	<message key="editor.publishing">Publisering</message>
-	<message key="editor.publishedIssues">Publiserade nummer</message>
+	<message key="editor.publishing">Publicering</message>
+	<message key="editor.publishedIssues">Publicerade nummer</message>
 	<message key="editor.allSections">Alla sektioner</message>
 	<message key="editor.allEditors">Alla Redaktörer</message>
 	<message key="editor.me">Mig själv</message>
@@ -92,7 +92,6 @@
 	<message key="editor.issues.open">Öppen</message>
 	<message key="editor.issues.pages">Sidor</message>
 	<message key="editor.navigation.futureIssues">Kommande nummer</message>
-	<message key="grid.action.addIssue">Skapa nummer</message>
 	<message key="editor.navigation.issueArchive">Äldre nummer</message>
 	<message key="editor.article.designateReviewVersion">Registrera originalfilen som granskningsversion</message>
 	<message key="editor.article.uploadReviewVersion">Ladda upp en omarbetad version för granskning.</message>
@@ -186,11 +185,18 @@
 	<message key="editor.article.hideTocAuthorShow">Visa</message>
 	<message key="editor.article.cover">Omslag</message>
 	<message key="editor.article.showCoverPage">Skapa ett omslag för den här artikeln med följande element</message>
-	<message key="editor.article.coverPageDisplay">Visa</message>
+	<message key="editor.article.coverImageDisplay">Visa</message>
 	<message key="editor.article.hideCoverPageToc">Visa inte omslagsbild i innehållsförteckningen</message>
 	<message key="editor.article.hideCoverPageAbstract">Visa inte omslagsbild tillsammans med abstract</message>
-	<message key="editor.article.coverPage">Omslagsbild</message>
-	<message key="editor.article.coverPageInstructions">(Tillåtna format: .gif, .jpg, eller .png )</message>
+	<message key="editor.article.coverImage">Omslagsbild</message>
+	<message key="editor.article.coverImageInstructions">(Tillåtna format: .gif, .jpg, eller .png )</message>
 	<message key="editor.article.uploaded">Uppladdad</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Innan du skickar manuskriptet för redigering, kontrollera att det finns tillgängliga granskare och att författaren meddelas om granskning med hjälp av Meddela Författaren-länken ovan.</message>
+	<message key="editor.article.sendFileToCopyedit">Välj fil för Manusredigering</message>
+	<message key="editor.submissionReview.sendToCopyediting">Skicka till manusredigering</message>
+	<message key="editor.issues.galleys">Korrekturversion nummer</message>
+	<message key="editor.issues.galley">Numrets korrekturversion</message>
+	<message key="editor.issues.viewingGalley">Visar numrets korrekturversion</message>
+	<message key="editor.issues.issueGalleysDescription">Publicera korrekturversion med hela numrets innehåll</message>
+	<message key="editor.issues.noneIssueGalleys">Ingen korrekturversion för hela numret har publicerat</message>
 </locale>

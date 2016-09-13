@@ -4,11 +4,11 @@
 <!--
   * locale/nb_NO/manager.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the nb_NO (Norwegian) locale.
+  * Localization strings for the nb_NO (Norsk bokmål) locale.
   *
   -->
 
@@ -85,13 +85,7 @@
 	<message key="manager.setup.copyeditInstructionsDescription">Instruksen for manusredigering vil bli gjort tilgjengelig for manusredaktører, forfattere, og seksjonsredaktører i manusredigeringsstadiet. Nedenfor finner du standardinstruksjoner (i HTML). Disse kan omgjøres eller erstattes av redaksjonslederen når som helst (i HTML eller ren tekst).</message>
 	<message key="manager.setup.copyrightNotice">Erklæring om copyright</message>
 	<message key="manager.setup.coverage">Dekning</message>
-	<message key="manager.setup.coverageChronExamples">(For eks. europeisk rennessanse; juratiden; førstesemester; tredje trimester; etc.)</message>
-	<message key="manager.setup.coverageChronProvideExamples">Gi eksempler på relevante kronologiske eller historiske termer for dette fagfeltet</message>
 	<message key="manager.setup.coverageDescription">Viser til dekning i både tid og rom; geografisk, topologisk, kronologisk eller historisk dekning, og/eller karakteristika ved materialet/utvalget.</message>
-	<message key="manager.setup.coverageGeoExamples">(For eks. Den iberiske halvøy; Stratosfæren; Polarskogene; etc.)</message>
-	<message key="manager.setup.coverageGeoProvideExamples">Gi eksempler på relevante geografiske eller topografiske termer for dette fagfeltet</message>
-	<message key="manager.setup.coverageResearchSampleExamples">(For eks. alder; kjønn; etnisitet; kulturell identitet; etc.)</message>
-	<message key="manager.setup.coverageResearchSampleProvideExamples">Gi eksempler på karakteristika ved materialet/utvalget som er relevante for dette fagfeltet</message>
 	<message key="manager.setup.currentIssue">Nyeste utgave</message>
 	<message key="manager.setup.customizingTheLook">Trinn 5. Tilpasning av utseendet</message>
 	<message key="manager.setup.customTags">Tilpassete etiketter</message>
@@ -104,12 +98,6 @@
 	<message key="manager.setup.disciplineExamples">(For eks. historie; utdanningsvitenskap; sosiologi; psykologi; kulturstudier; statsvitenskap)</message>
 	<message key="manager.setup.disciplineProvideExamples">Gi eksempler på relevante fagemner for dette tidsskriftet</message>
 	<message key="manager.setup.displayCurrentIssue">Legg til innholdsoversikten for nyste utgave (hvis tilgjengelig).</message>
-	<message key="manager.setup.editorialMembers">Gå til Rådsmedlemmer og legg til redaksjonsråd- og/eller fagfellerådsmedlemmer. Dette kan ordnes når som helst i arbeidsprosessen.</message>
-	<message key="manager.setup.editorialProcess1">En eller flere redaktører håndterer de grunnleggende trinnene uten fordelte roller.</message>
-	<message key="manager.setup.editorialProcess2">Ansvarlig redaktør håndterer manuskriptarbeidskø og innholdsfortegnelse, mens seksjonsredaktører håndterer manuskriptvurdering og manuskriptbehandling.</message>
-	<message key="manager.setup.editorialProcess3">Ansvarlig redaktør håndterer manuskriptarbeidskø, manuskriptbehandling og innholdsfortegnelse, mens seksjonsredaktørene håndterer manuskriptvurdering.</message>
-	<message key="manager.setup.editorialReviewBoard">Redaksjons- eller fagfelleråd</message>
-	<message key="manager.setup.editorialReviewBoardDescription">Vitenskapelige tidsskrift har redaksjonsråd som holder oppsyn med den redaksjonelle utviklingen i tidsskriftet, deltar ved utnevnelse av redaktører, og gir tidsskriftet troverdighet i kraft av rådsmedlemmenes omdømme. Fagfelleråd spiller en lignende rolle, men i tillegg leder de fagvurderingsprosessen. Fagfellerådsmedlemmer vil ikke få tilgang til tidsskriftets administrative system, men de vil bli lagt til i listen over brukere som er tilgjengelige for å utføre fagvurderinger.</message>
 	<message key="manager.setup.emailBounceAddress">Feilmeldingsadresse</message>
 	<message key="manager.setup.emailBounceAddressDescription">Alle e-poster som ikke kan leveres, vil utløse en feilmelding som sendes til denne adressen.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>NB:</strong> For å aktivere denne valgmuligheten, må nettstedsadministratoren slå på <tt>allow_envelope_sender</tt> valgmuligheten i OJS konfigurasjonsfilen. Ytterligere serverkonfigurasjon kan være påkrevet for å støtte denne funksjonen (som likevel kan være umulig å bruke på enkelte servere), som oppgitt i OJS-dokumentasjonen.]]></message>
@@ -119,10 +107,6 @@
 	<message key="manager.setup.enableAnnouncements">Tillat redaksjonsledere å legge til tidsskriftsoppslag.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Vis de</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">nyeste oppslagene på tidsskriftets hjemmeside.</message>
-	<message key="manager.setup.enablePageNumber">Sidetall for elementene vil bli regnet ut og skrevet inn manuelt i innholdsoversikten (for eks. pp. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Tilpassete identifikatorer vil bli brukt for å identifisere publisert elementer.</message>
-	<message key="manager.setup.enablePublicIssueId">Tilpassete identifikatorer vil bli brukt for å identifisere utgaver.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Tilpassete identifikatorer vil bli brukt for å identifisere tilleggsfiler til artikler.</message>
 	<message key="manager.setup.enableUserRegistration">Tillat brukere å registrere selv på tidsskriftets nettsted som:</message>
 	<message key="manager.setup.focusAndScope">Hovedfokus og spennvidde</message>
 	<message key="manager.setup.focusAndScopeDescription">Skriv inn en erklæring nedenfor, som vil bli vist i Om tidsskriftet. Den skal forklare forfattere, lesere, og bibliotekarer hva slags artikler og andre elementer tidsskriftet kommer til å publisere.</message>
@@ -155,7 +139,6 @@
 	<message key="manager.setup.initialIssue">Første utgave</message>
 	<message key="manager.setup.initialIssueDescription">For det formatet du valgte: oppgi utgave, volum og/eller år for første utgave som vil bli publisert i OJS:</message>
 	<message key="manager.setup.institution">Institusjon</message>
-	<message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number) er et mangesifret tall som identifiserer periodika, og som også omfatter nettpublikasjoner. ISSN administreres av et verdensomspennende nettverk av nasjonale sentre, som koordineres av det internasjonale senteret i Paris, med finansiering fra Unesco og den franske regjering. ISSN-nummer utdeles av <a href="http://www.nb.no/sn/html/issn.html" target="_blank">det norske ISSN-nettstedet</a>, eller av <a href="http://www.issn.org" target="_blank">det globale ISSN-nettstedet</a>.  Dette kan ordnes når som helst i arbeidsprosessen.]]></message>
 	<message key="manager.setup.issuePerVolume">Utgaver per volum</message>
 	<message key="manager.setup.itemsDescription">Navigasjonsfeltelementer kan legges til i det nåværende settet (hjem, om, min side, etc.) som vises på toppen av siden.</message>
 	<message key="manager.setup.itemsPerPage">Element per side</message>
@@ -171,8 +154,6 @@
 	<message key="manager.setup.journalLogo">Tidsskriftlogo</message>
 	<message key="manager.setup.journalPageFooter">Tidsskriftside bunntekst</message>
 	<message key="manager.setup.journalPageFooterDescription">Dette er bunnteksten for tidsskriftet ditt. For å endre eller oppdatere bunnteksten, lim inn HTML kode i tekstboksen nedenfor. For eksempel et annet navigasjonsfelt, et telleverk etc. Denne bunnteksten vil bli vist på hver side.</message>
-	<message key="manager.setup.journalPageHeader">Tidsskriftside topptekst</message>
-	<message key="manager.setup.journalPageHeaderDescription">En grafisk versjon av tidsskriftets tittel og logo (.gif-, .jpg-, eller .png-fil), gjerne en mindre versjon av den som brukes på hjemmesiden, kan lastes opp og vises som topptekst på tidsskriftsidene, og erstatter da tekstversjonen som ellers vises.</message>
 	<message key="manager.setup.journalPolicies">Trinn 2. Retningslinjer for tidsskriftet</message>
 	<message key="manager.setup.journalSetup">Tidsskriftoppsett</message>
 	<message key="manager.setup.journalSetupUpdated">Ditt tidsskriftoppsett er nå oppdatert.</message>
@@ -287,8 +268,6 @@
 	<message key="manager.setup.sponsors">Sponsorer</message>
 	<message key="manager.setup.sponsorsDescription">Navnet til organisasjoner (for eks. forskerorganisasjoner, institutter, nettverk etc.) som støtter tidsskriftet vil bli vist i 'Om' tidsskriftet, og kan følges opp med en merknad med takk.</message>
 	<message key="manager.setup.stepsToJournalSite">Fem trinn til et nettsted for tidsskriftet</message>
-	<message key="manager.setup.subjectClassification">Emneklassifisering</message>
-	<message key="manager.setup.subjectClassificationExamples">(F.eks. Mathematics Subject Classification; Library of Congress Classification)</message>
 	<message key="manager.setup.subjectExamples">(F.eks. fotosyntese; sorte hull; Gödels teorem; Zenons paradokser)</message>
 	<message key="manager.setup.subjectKeywordTopic">Emneord</message>
 	<message key="manager.setup.subjectProvideExamples">Gi eksempler på relevante nøkkelord eller emneord, til veiledning for forfatterene</message>
@@ -506,7 +485,6 @@
 	<message key="manager.people.roleEnrollment">{$role}-verving</message>
 	<message key="manager.plugins.description">Denne siden gir redaksjonsleder mulighet til å gjennomgå og konfigurerer de installerte programutvidelsene. Programutvidelsene er inndelt i kategorier etter funksjon. Disse kategoriene er listet opp nedenfor, med de programutvidelsene som for øyeblikket er gjort tilgjengelig.</message>
 	<message key="manager.sections.abstractsNotRequired">Ikke krev sammendrag</message>
-	<message key="manager.sections.disableComments">Slå av funksjonen leserkommentarer for denne seksjonen.</message>
 	<message key="manager.sections.form.mustAllowPermission">Vennligst kontrollér at minst én avkrysningsboks er krysset av for hvert oppdrag en seksjonsredaktør er oppnevnt til.</message>
 	<message key="manager.sections.form.reviewFormId">Vennligst kontrollér at du har valgt et gyldig vurderingsskjema.</message>
 	<message key="manager.sections.hideAbout">Utelat denne seksjonen fra 'Om' tidsskriftet.</message>
@@ -518,7 +496,6 @@
 	<message key="manager.setup.competingInterests.requireAuthors"><![CDATA[Krev at forfattere som sender inn manuskript samtidig sender inn en <I>Erklæring om interessekonflikter</I>.]]></message>
 	<message key="manager.setup.competingInterests.requireReviewers"><![CDATA[Krev at fagkonsulenter sender inn en <I>Erklæring om interessekonflikter</I> sammen med hver fagvurdering de sender inn.]]></message>
 	<message key="manager.setup.editorDecision">Redaktørens beslutning</message>
-	<message key="manager.setup.enablePublicGalleyId">Tilpassete identifikatorer vil bli brukt for å identifisere de ferdige sideoppsettene (f.eks. HTML eller PDF filer) for publiserte element.</message>
 	<message key="manager.setup.enableUserRegistration.author">Forfattere (kan sende inn bidrag og tilleggsmateriell til tidsskriftet)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Lesere (vil motta varslinger og bli tellet på linje med abonnenter)</message>
 	<message key="manager.setup.enableUserRegistration.reviewer">Fagkonsulenter (tilgjengelige for vurderingsoppdrag)</message>
@@ -599,9 +576,9 @@
 	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Opphavsrettserklæringen som legges inn nedenfor vil bli synlig i "om tidsskriftet" og i metadataene for hver publisert artikkel/tilsv. Selv om det det er opp til tidsskriftet å inngå opphavsrettsavtale med forfattere, anbefaler The Public Knowledge Project å bruke en <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a> lisens. For dette formål finnes det et <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">forslag til opphavsretterklæring</a> som kan klippes og limes inn nedenfor for tidsskrifter som (a) tilbyr open access, (b) tilbyr forsinket open access, eller (c) ikke tilbyr open access.]]></message>
 	<message key="manager.setup.contributorNoteDescription">Denne teksten vil vises nedenfor «Andre støttespillere» ovenfor listen med støttespillernes navn/url under «Tidsskriftets sponsorer» på «Om»-siden.</message>
 	<message key="manager.setup.history">Tidsskriftets historie</message>
-	<message key="manager.setup.journalFavicon">Tidsskriftets favicon</message>
-	<message key="manager.setup.journalFaviconDescription">Legg til et favicon som vises ved siden av navigasjonslinjen når brukere er inne på ditt nettsted.</message>
-	<message key="manager.setup.journalFaviconInvalid">Ugyldig favicon-format. Tillatte formater er .ico, .png, and .gif.</message>
+	<message key="manager.setup.favicon">Tidsskriftets favicon</message>
+	<message key="manager.setup.faviconDescription">Legg til et favicon som vises ved siden av navigasjonslinjen når brukere er inne på ditt nettsted.</message>
+	<message key="manager.setup.faviconInvalid">Ugyldig favicon-format. Tillatte formater er .ico, .png, and .gif.</message>
 	<message key="manager.setup.noPublishing">OJS vil ikke bli brukt til å publisere tidsskriftets innhold på nett.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Melding on online-betalinger</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Automatiske e-postbeskjeder (som kan redigeres av tidsskriftadministratorer i OJS' e-postmaler) kan sendes til abonnementsansvarlig når en online abonnementsbetaling er fullført.</message>
@@ -636,6 +613,5 @@
 	<message key="manager.sections.confirmDelete">Er du sikker på at du ønsker å slette denne seksjonen for godt?</message>
 	<message key="manager.sections.alertDelete">Før du kan slette denne seksjonen, må du flytte artiklene som er publisert i den over i andre seksjoner.</message>
 	<message key="manager.plugins.settings">Innstillinger</message>
-	<message key="manager.setup.subjectClassificationURLValid">Oppgi en gyldig ekstern URL (ta med http://).</message>
 	<message key="manager.payment.options.purchaseIssueFee">Kjøp nummer</message>
 </locale>

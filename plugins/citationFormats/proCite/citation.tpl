@@ -1,8 +1,8 @@
 {**
  * plugins/citationFormats/proCite/citation.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * ProCite citation format generator
@@ -27,6 +27,8 @@ PY  - {$issue->getYear()|escape}
 TI  - {$article->getLocalizedTitle()|strip_tags}
 JF  - {$journal->getLocalizedName()}{if $issue}; {$issue->getIssueIdentification()|strip_tags}{/if}
 
+{if $article->getStoredPubId('doi')}DO  - {$article->getStoredPubId('doi')|escape}
+{/if}
 KW  - {$article->getLocalizedSubject()|escape}
 N2  - {$article->getLocalizedAbstract()|strip_tags|replace:"\n":" "|replace:"\r":" "}
 UR  - {$articleUrl}

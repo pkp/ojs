@@ -3,11 +3,11 @@
 <!--
   * plugins/paymethod/paypal/locale/fa_IR/locale.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
+  * Copyright (c) 2014-2016 Simon Fraser University Library
   * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the fa_IR (Persian) locale.
+  * Localization strings for the fa_IR (فارسی) locale.
   -->
 <locale full_name="Farsi" name="fa_IR" >
 	<message key="plugins.paymethod.paypal.displayName" >پرداخت از طریق PayPal</message>

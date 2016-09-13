@@ -3,8 +3,8 @@
 /**
  * @file plugins/paymethod/manual/ManualPaymentPlugin.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ManualPaymentPlugin
@@ -146,7 +146,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 					'backLink' => $queuedPayment->getRequestUrl(),
 					'backLinkLabel' => 'common.continue'
 				));
-				$templateMgr->display('common/message.tpl');
+				$templateMgr->display('frontend/pages/message.tpl');
 				exit();
 		}
 		parent::handle($args, $request); // Don't know what to do with it

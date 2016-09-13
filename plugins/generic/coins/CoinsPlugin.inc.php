@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/coins/CoinsPlugin.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CoinsPlugin
@@ -94,7 +94,7 @@ class CoinsPlugin extends GenericPlugin {
 				$vars[] = array('rft.au', $author->getFullName());
 			}
 
-			if ($doi = $article->getPubId('doi')) $vars[] = array('rft_id', 'info:doi/' . $doi);
+			if ($doi = $article->getStoredPubId('doi')) $vars[] = array('rft_id', 'info:doi/' . $doi);
 			if ($article->getPages()) $vars[] = array('rft.pages', $article->getPages());
 			if ($journal->getSetting('printIssn')) $vars[] = array('rft.issn', $journal->getSetting('printIssn'));
 			if ($journal->getSetting('onlineIssn')) $vars[] = array('rft.eissn', $journal->getSetting('onlineIssn'));

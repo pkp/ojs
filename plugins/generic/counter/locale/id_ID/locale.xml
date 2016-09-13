@@ -4,14 +4,14 @@
 <!--
   * plugins/generic/counter/locale/id_ID/locale.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name="Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.generic.counter.description"><![CDATA[COUNTER plugin bisa merekam dan <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> melaporkan di aktifitas situs.]]></message> 
 	<message key="plugins.generic.counter"> Statistik COUNTER </message> 
 	<message key="plugins.generic.counter.migrate"> Log Migrasi </message> 

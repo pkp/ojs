@@ -4,31 +4,29 @@
 <!--
   * plugins/importexport/crossref/locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_PT locale.
   *
   -->
- 
-<locale name="pt_PT" full_name="Português">
+
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.importexport.crossref.displayName">Plugin Exportação CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Exporta metadados dos artigos no formato CrossRef XML.</message>
-	
-	<message key="plugins.importexport.crossref.export">Exportar dados</message>
-	<message key="plugins.importexport.crossref.export.issues">Exportar edições</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Escolher uma edição para exportar.</message>
-	<message key="plugins.importexport.crossref.export.articles">Exportar artigos</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Seleccionar artigos para exportar.</message>
-	
-	<message key="plugins.importexport.crossref.cliUsage">Modo de Usar: 
+
+	<message key="plugins.importexport.crossref.cliUsage">Modo de Usar:
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] artigos [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] edição [issueId]</message>
-	<message key="plugins.importexport.crossref.cliError">ERRO:</message>
-
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Nenhuma edição encontrada com o ID "{$issueId}".</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Nenhum artigo encontrado com o ID "{$articleId}".</message>
-
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Deve ser especificado um prefixo DOI válido na Configuração da revista para poder usar este plugin.</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Utilizador</message>
+	<message key="plugins.importexport.crossref.requirements">Requisitos</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Todos os requisitos do plugin foram satisfeitos.</message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Os seguintes requisitos não obrigatórios para um depósito com sucesso dos dados da CrossRef</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Nome do Depositante</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">E-mail do Depositante</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Por favor, insira o nome do depositante.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Por favor, insira o e-mail do depositante.</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Por favor, insira o nome de utilizador fornecido pela CrossRef</message>
+	<message key="plugins.importexport.crossref.senderTask.name">Tarefa de registo automático CrossRef</message>
 </locale>

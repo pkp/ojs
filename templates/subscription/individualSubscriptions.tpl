@@ -1,8 +1,8 @@
 {**
  * templates/subscription/individualSubscriptions.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display list of individual subscriptions in journal management.
@@ -44,6 +44,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" method="post" id="submit" action="{url op="subscriptions" path="individual"}">
+	{csrf}
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
@@ -99,7 +100,7 @@
 		<td>{$subscription->getStatusString()|escape}</td>
 		<td>{if $isNonExpiring}&nbsp;{else}{if $subscription->isExpired()}<span class="disabled">{$subscription->getDateStart()|date_format:$dateFormatShort}</span>{else}{$subscription->getDateStart()|date_format:$dateFormatShort}{/if}{/if}</td>
 		<td>{if $isNonExpiring}{translate key="subscriptionTypes.nonExpiring"}{else}{if $subscription->isExpired()}<span class="disabled">{$subscription->getDateEnd()|date_format:$dateFormatShort}</span>{else}{$subscription->getDateEnd()|date_format:$dateFormatShort}{/if}{/if}</td>
-		<td><a href="{url op="editSubscription" path="individual"|to_array:$subscription->getId()}" class="action">{translate key="common.edit"}</a>{if !$isNonExpiring}&nbsp;|&nbsp;<a href="{url op="renewSubscription" path="individual"|to_array:$subscription->getId()}" class="action">{translate key="manager.subscriptions.renew"}</a>{/if}&nbsp;|&nbsp;<a href="{url op="deleteSubscription" path="individual"|to_array:$subscription->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.subscriptions.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+		<td><a href="{url op="editSubscription" path="individual"|to_array:$subscription->getId()}" class="action">{translate key="common.edit"}</a>{if !$isNonExpiring}&nbsp;|&nbsp;<a href="{url op="renewSubscription" path="individual"|to_array:$subscription->getId()}" class="action">{translate key="manager.subscriptions.renew"}</a>{/if}&nbsp;|&nbsp;<a href="{url op="deleteSubscription" path="individual"|to_array:$subscription->getId()}" onclick="return confirm({translate|json_encode key="manager.subscriptions.confirmDelete"})" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
 		<td colspan="6" class="{if $subscriptions->eof()}end{/if}separator">&nbsp;</td>

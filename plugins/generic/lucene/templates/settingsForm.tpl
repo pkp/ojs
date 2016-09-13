@@ -1,8 +1,8 @@
 {**
  * plugins/generic/lucene/templates/settingsForm.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Lucene plugin settings
@@ -20,6 +20,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="luceneSettingsForm" method="post" action="{plugin_url path="settings"}">
+		{csrf}
 		{include file="common/formErrors.tpl"}
 
 		<h3>{translate key="plugins.generic.lucene.settings.solrServerSettings"}</h3>
@@ -55,6 +56,12 @@
 				<td class="value"><input type="text" name="instId" id="instId" value="{$instId|escape}" size="15" maxlength="25" class="textField" />
 					<br />
 					<span class="instruct">{translate key="plugins.generic.lucene.settings.instIdInstructions"}</span>
+				</td>
+			</tr>
+			<tr valign="top">
+				<td class="label">{fieldLabel name="useProxySettings" key="plugins.generic.lucene.settings.useProxySettings"}</td>
+				<td class="value"><input type="checkbox" name="useProxySettings" id="useProxySettings" {if $useProxySettings}checked="checked" {/if}/>
+					<label for="useProxySettings">{translate key="plugins.generic.lucene.settings.useProxySettingsInstructions"}</label>
 				</td>
 			</tr>
 		</table>
@@ -223,7 +230,7 @@
 					</select>
 					<script>
 						function rebuildIndexClick() {ldelim}
-							var confirmation = confirm('{translate|escape:"jsparam" key="plugins.generic.lucene.settings.indexRebuild.confirm"}');
+							var confirmation = confirm({translate|json_encode key="plugins.generic.lucene.settings.indexRebuild.confirm"});
 							if (confirmation === true) jumpToIndexAdminAnchor();
 							return confirmation;
 						{rdelim}

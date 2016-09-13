@@ -4,11 +4,11 @@
 <!--
   * locale/nb_NO/editor.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the nb_NO (Norwegian) locale.
+  * Localization strings for the nb_NO (Norsk bokmål) locale.
   *
   -->
 
@@ -189,11 +189,11 @@
 	<message key="editor.article.hideTocAuthorShow">Vis</message>
 	<message key="editor.article.cover">Omslag</message>
 	<message key="editor.article.showCoverPage">Lag et omslag med følgende elementer for tildenne artikkelen.</message>
-	<message key="editor.article.coverPageDisplay">Vis</message>
+	<message key="editor.article.coverImageDisplay">Vis</message>
 	<message key="editor.article.hideCoverPageToc">Ikke vis miniatyr av omslagsbilde i innholdsfortegnelsen.</message>
 	<message key="editor.article.hideCoverPageAbstract">Ikke vis omslagsbilde i sammendragsvisningen.</message>
-	<message key="editor.article.coverPage">Omslagsbilde</message>
-	<message key="editor.article.coverPageInstructions">(Tillatte filformat er .gif, .jpg, eller .png)</message>
+	<message key="editor.article.coverImage">Omslagsbilde</message>
+	<message key="editor.article.coverImageInstructions">(Tillatte filformat er .gif, .jpg, eller .png)</message>
 	<message key="editor.article.uploaded">Opplastet</message>
 	<message key="editor.article.removeCoverPage">Fjern omslagsbilde?</message>
 	<message key="editor.article.remove">Fjern</message>

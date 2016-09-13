@@ -9,8 +9,8 @@
 /**
  * @file classes/journal/Journal.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Journal
@@ -37,35 +37,24 @@ class Journal extends Context {
 
 	/**
 	 * Get "localized" journal page title (if applicable).
-	 * param $home boolean get homepage title
 	 * @return string
 	 */
-	function getLocalizedPageHeaderTitle($home = false) {
-		$prefix = $home ? 'home' : 'page';
-		$typeArray = $this->getSetting($prefix . 'HeaderTitleType');
-		$imageArray = $this->getSetting($prefix . 'HeaderTitleImage');
-		$titleArray = $this->getSetting($prefix . 'HeaderTitle');
-
+	function getLocalizedPageHeaderTitle() {
+		$titleArray = $this->getSetting('name');
 		$title = null;
 
 		foreach (array(AppLocale::getLocale(), AppLocale::getPrimaryLocale()) as $locale) {
-			if (isset($typeArray[$locale]) && $typeArray[$locale]) {
-				if (isset($imageArray[$locale])) $title = $imageArray[$locale];
-			}
-			if (empty($title) && isset($titleArray[$locale])) $title = $titleArray[$locale];
-			if (!empty($title)) return $title;
+			if (isset($titleArray[$locale])) return $titleArray[$locale];
 		}
 		return null;
 	}
 
 	/**
 	 * Get "localized" journal page logo (if applicable).
-	 * param $home boolean get homepage logo
 	 * @return string
 	 */
-	function getLocalizedPageHeaderLogo($home = false) {
-		$prefix = $home ? 'home' : 'page';
-		$logoArray = $this->getSetting($prefix . 'HeaderLogoImage');
+	function getLocalizedPageHeaderLogo() {
+		$logoArray = $this->getSetting('pageHeaderLogoImage');
 		foreach (array(AppLocale::getLocale(), AppLocale::getPrimaryLocale()) as $locale) {
 			if (isset($logoArray[$locale])) return $logoArray[$locale];
 		}
@@ -77,7 +66,7 @@ class Journal extends Context {
 	 * @return string
 	 */
 	function getLocalizedFavicon() {
-		$faviconArray = $this->getSetting('journalFavicon');
+		$faviconArray = $this->getSetting('favicon');
 		foreach (array(AppLocale::getLocale(), AppLocale::getPrimaryLocale()) as $locale) {
 			if (isset($faviconArray[$locale])) return $faviconArray[$locale];
 		}
@@ -105,10 +94,9 @@ class Journal extends Context {
 	}
 
 	/**
-	 * Get the DAO for this context object.
-	 * @return DAO
+	 * @copydoc DataObject::getDAO()
 	 */
-	static function getDAO() {
+	function getDAO() {
 		return DAORegistry::getDAO('JournalDAO');
 	}
 

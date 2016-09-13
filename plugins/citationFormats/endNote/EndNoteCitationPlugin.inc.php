@@ -3,8 +3,8 @@
 /**
  * @file plugins/citationFormats/endNote/EndNoteCitationPlugin.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class EndNoteCitationPlugin
@@ -13,9 +13,9 @@
  * @brief EndNote citation format plugin
  */
 
-import('classes.plugins.CitationPlugin');
+import('classes.plugins.DownloadableCitationPlugin');
 
-class EndNoteCitationPlugin extends CitationPlugin {
+class EndNoteCitationPlugin extends DownloadableCitationPlugin {
 	function register($category, $path) {
 		$success = parent::register($category, $path);
 		$this->addLocaleData();
@@ -44,15 +44,15 @@ class EndNoteCitationPlugin extends CitationPlugin {
 	}
 
 	/**
-	 * Return a custom-formatted citation.
+	 * Set the headers for a downloadable citation.
+	 *
 	 * @param $article object
 	 * @param $issue object
 	 * @param $journal object
 	 */
-	function displayCitation(&$article, &$issue, &$journal) {
+	function setHeaders($article, $issue, $journal) {
 		header('Content-Disposition: attachment; filename="' . $article->getId() . '-endNote.enw"');
 		header('Content-Type: application/x-endnote-refer');
-		echo parent::fetchCitation($article, $issue, $journal);
 	}
 }
 

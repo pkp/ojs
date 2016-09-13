@@ -3,78 +3,85 @@
 /**
  * @file controllers/grid/articleGalleys/ArticleGalleyGridCellProvider.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyGridCellProvider
  * @ingroup controllers_grid_articleGalleys
  *
- * @brief Grid cell provider for the article galleys grid
+ * @brief Base class for a cell provider for article galleys.
  */
 
-import('lib.pkp.classes.controllers.grid.GridCellProvider');
+import('lib.pkp.classes.controllers.grid.DataObjectGridCellProvider');
 
-class ArticleGalleyGridCellProvider extends GridCellProvider {
+class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
+
+	/** @var Submission **/
+	var $_submission;
+
 	/**
 	 * Constructor
+	 * @param $submission Submission
 	 */
-	function ArticleGalleyGridCellProvider() {
-		parent::GridCellProvider();
+	function ArticleGalleyGridCellProvider($submission) {
+		parent::DataObjectGridCellProvider();
+		$this->_submission = $submission;
+	}
+
+	//
+	// Template methods from GridCellProvider
+	//
+	/**
+	 * @copydoc GridCellProvider::getTemplateVarsFromRowColumn()
+	 */
+	function getTemplateVarsFromRowColumn($row, $column) {
+		$element = $row->getData();
+		$columnId = $column->getId();
+		assert(is_a($element, 'DataObject') && !empty($columnId));
+
+		switch ($columnId) {
+			case 'label':
+				return array(
+					'label' => ($element->getRemoteUrl()=='' && $element->getFileId())?'':$element->getLabel()
+				);
+				break;
+			default: assert(false);
+		}
+		return parent::getTemplateVarsFromRowColumn($row, $column);
 	}
 
 	/**
-	 * Extracts variables for a given column from a data element
-	 * so that they may be assigned to template before rendering.
+	 * Get request arguments.
 	 * @param $row GridRow
-	 * @param $column GridColumn
 	 * @return array
 	 */
-	function getTemplateVarsFromRowColumn($row, $column) {
-		$articleGalley = $row->getData();
-		$columnId = $column->getId();
-		assert (is_a($articleGalley, 'ArticleGalley'));
-		assert(!empty($columnId));
-
-		switch ($columnId) {
-			case 'label': return array('label' => $articleGalley->getLabel());
-			case 'locale':
-				$allLocales = AppLocale::getAllLocales();
-				return array('label' => $allLocales[$articleGalley->getLocale()]);
-			case 'publicGalleyId': return array('label' => $articleGalley->getStoredPubId('publisher-id'));
-			case 'isAvailable':
-			return array('status' => $articleGalley->getIsAvailable()?'completed':'new');
-			default: assert(false); break;
-		}
+	function getRequestArgs($row) {
+		return array(
+			'submissionId' => $this->_submission->getId(),
+		);
 	}
 
 	/**
 	 * @copydoc GridCellProvider::getCellActions()
 	 */
 	function getCellActions($request, $row, $column) {
-		$articleGalley = $row->getData();
-		$submissionId = $articleGalley->getSubmissionId();
-		$articleGalleyId = $articleGalley->getId();
-
 		switch ($column->getId()) {
-			case 'isAvailable':
-				$router = $request->getRouter();
-				$toolTip = $articleGalley->getIsAvailable() ? __('common.available') : null;
-				return array(new LinkAction(
-					'availableArticleGalley',
-					new RemoteActionConfirmationModal(
-						__($articleGalley->getIsAvailable()?'grid.issueEntry.availableGalley.removeMessage':'grid.issueEntry.availableGalley.message'),
-						__('grid.issueEntry.availableGalley.title'),
-						$router->url($request, null, 'grid.articleGalleys.ArticleGalleyGridHandler',
-							'setAvailable', null, array('articleGalleyId' => $articleGalleyId, 'newAvailableState' => $articleGalley->getIsAvailable()?0:1, 'submissionId' => $submissionId)),
-						'modal_approve'),
-						__('manager.emails.disable'),
-						$articleGalley->getIsAvailable()?'completed':'new',
-						$toolTip
-				));
-			default:
-				return array();
+			case 'label':
+				$element = $row->getData();
+				if ($element->getRemoteUrl() != '' || !$element->getFileId()) break;
+
+				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+				import('lib.pkp.classes.submission.SubmissionFile');
+				$submissionFile = $submissionFileDao->getLatestRevision(
+					$element->getFileId(),
+					SUBMISSION_FILE_PROOF,
+					$element->getSubmissionId()
+				);
+				import('lib.pkp.controllers.api.file.linkAction.DownloadFileLinkAction');
+				return array(new DownloadFileLinkAction($request, $submissionFile, $request->getUserVar('stageId'), $element->getLabel()));
 		}
+		return parent::getCellActions($request, $row, $column);
 	}
 }
 
