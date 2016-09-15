@@ -21,7 +21,8 @@
 	<message key="plugins.importexport.datacite.settings.form.username">Uživatel (symbol)</message>
 	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Vložte, prosím, uživatelské jméno (symbol), který jste dostali od DataCite. Uživatelské jméno nesmí obsahovat dvojtečku.</message>
 
-	<message key="plugins.importexport.datacite.cliUsage">Použití: 
-{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...</message>
+	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[Použití:
+{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+]]></message>
 </locale>
