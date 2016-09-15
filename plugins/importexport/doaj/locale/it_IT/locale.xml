@@ -16,4 +16,7 @@
 	<message key="plugins.importexport.doaj.displayName">Export per DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Esporta i metadati degli articoli e della rivista per DOAJ e invia una email di informazioni sulla rivista a DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contact">Suggerisci la rivista a DOAJ</message>
+	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Uso:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>

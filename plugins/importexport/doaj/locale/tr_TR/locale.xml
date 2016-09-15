@@ -16,4 +16,7 @@
 	<message key="plugins.importexport.doaj.displayName">DOAJ İhraç Eklentisi</message>
 	<message key="plugins.importexport.doaj.description">DOAJ için dergi ihracı ve kapsam için dergi bilgisi desteği.</message>
 	<message key="plugins.importexport.doaj.export.contact">Katılım için DOAJ İletişimi</message>
+	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Kullanım:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>

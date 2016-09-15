@@ -17,4 +17,7 @@
 <locale name="sv_SE" full_name="Svenska">
 	<message key="plugins.importexport.doaj.displayName">DOAJ export plugin</message>
 	<message key="plugins.importexport.doaj.description">Exportera tidskrift för DOAJ och eposta DOAJs representant tidskriftsinformationen</message>
+	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Användning:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>
