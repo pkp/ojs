@@ -16,9 +16,10 @@
 	<message key="plugins.importexport.crossref.displayName">Plugiciel d'exportation CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Exporter les métadonnées de l'article en format CrossRef XML.</message>
 
-	<message key="plugins.importexport.crossref.cliUsage">Utilisation :
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] numéro [issueId]</message>
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Utilisation:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 	<message key="plugins.importexport.crossref.settings.form.depositorName">Nom du déposant</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Adresse courriel du déposant</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Veuillez saisir le nom du déposant.</message>
