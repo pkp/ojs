@@ -37,7 +37,8 @@ medra注册服务要求。]]></message>
 
 	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB：指定DOI的文章导到 mEDRA为 <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works'</a>。指定DOI的样稿导出为 <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'证明'</a>。]]></message>
 		
-	<message key="plugins.importexport.medra.cliUsage">使用方法：
-{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys} objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...</message>
+	<message key="plugins.importexport.medra.cliUsage"><![CDATA[使用方法：
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+]]></message>
 </locale>
