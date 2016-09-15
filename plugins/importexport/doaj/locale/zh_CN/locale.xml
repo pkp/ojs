@@ -16,4 +16,7 @@
 	<message key="plugins.importexport.doaj.displayName">DOAJ导出插件</message>
 	<message key="plugins.importexport.doaj.description">将期刊导出到DAOJ，并且将期刊信息电邮给DAOJ的成员</message>
 	<message key="plugins.importexport.doaj.export.contact">联系DOAJ列入</message>
+	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[用法:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>

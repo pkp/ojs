@@ -15,4 +15,7 @@
 	<message key="plugins.importexport.doaj.displayName">إضافة التصدير DOAJ </message>
 	<message key="plugins.importexport.doaj.description">تصدير المجلة إلى DOAJ وإدراج معلومات المجلة لأغراض التضمين</message>
     <message key="plugins.importexport.doaj.export.contact">تواصل مع DOAJ لغرض التضمين</message>
+	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[الاستعمال:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>

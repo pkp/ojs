@@ -16,4 +16,7 @@
 	<message key="plugins.importexport.doaj.displayName">Плагин «Экспорт в DOAJ»</message>
 	<message key="plugins.importexport.doaj.description">Этот плагин позволяет экспортировать журнал для DOAJ и предоставить информацию о журнале для добавления в DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contact">Связаться с DOAJ для добавления журнала</message>
+	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Вызов:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>
