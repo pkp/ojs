@@ -302,6 +302,54 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	}
 
 	/**
+	 * Get published articles with a DOI asigned from submission IDs.
+	 * @param $submissionIds array
+	 * @param $context Context
+	 * @return array
+	 */
+	function getPublishedArticles($submissionIds, $context) {
+		$publishedArticles = array();
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		foreach ($submissionIds as $submissionId) {
+			$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submissionId, $context->getId());
+			if ($publishedArticle && $publishedArticle->getStoredPubId('doi')) $publishedArticles[] = $publishedArticle;
+		}
+		return $publishedArticles;
+	}
+
+	/**
+	 * Get published issues with a DOI asigned  from issue IDs.
+	 * @param $issueIds array
+	 * @param $context Context
+	 * @return array
+	 */
+	function getPublishedIssues($issueIds, $context) {
+		$publishedIssues = array();
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		foreach ($issueIds as $issueId) {
+			$publishedIssue = $issueDao->getById($issueId, $context->getId());
+			if ($publishedIssue && $publishedIssue->getStoredPubId('doi')) $publishedIssues[] = $publishedIssue;
+		}
+		return $publishedIssues;
+	}
+
+	/**
+	 * Get article galleys with a DOI asigned  from gallley IDs.
+	 * @param $galleyIds array
+	 * @param $context Context
+	 * @return array
+	 */
+	function getArticleGalleys($galleyIds, $context) {
+		$galleys = array();
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		foreach ($galleyIds as $galleyId) {
+			$articleGalley = $articleGalleyDao->getById($galleyId, null, $context->getId());
+			if ($articleGalley && $articleGalley->getStoredPubId('doi')) $galleys[] = $articleGalley;
+		}
+		return $galleys;
+	}
+
+	/**
 	 * Instantiate the settings form.
 	 * @param $context Context
 	 * @return CrossRefSettingsForm
