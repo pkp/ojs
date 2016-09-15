@@ -16,7 +16,10 @@
 	<message key="plugins.importexport.crossref.displayName">Mòdul d'exportació a XML de CrossRef</message>
 	<message key="plugins.importexport.crossref.description">Exporta les metadades de l'article en format XML de CrossRef.</message>
 
-	<message key="plugins.importexport.crossref.cliUsage">Ús: {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ... {$scriptName} {$pluginName} [xmlFileName] [journal_path] número [issueId]</message>
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Ús:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 	<message key="plugins.importexport.crossref.requirements">Requisits</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">Tots els requisits del mòdul han estat satisfets.</message>
 	<message key="plugins.importexport.crossref.settings.form.username">Nom d'usuari</message>

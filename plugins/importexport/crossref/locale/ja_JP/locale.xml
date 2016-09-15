@@ -16,8 +16,8 @@
 	<message key="plugins.importexport.crossref.displayName">CrossRef用XMLエクスポートプラグイン</message>
 	<message key="plugins.importexport.crossref.description">論文のメタデータをCrossRef XMLフォーマットでエクスポートします。</message>
 
-	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[使用法: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[使用法:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
 ]]></message>
 </locale>

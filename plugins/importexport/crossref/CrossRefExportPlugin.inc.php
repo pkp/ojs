@@ -73,13 +73,6 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc PubObjectsExportPlugin::getIssueFilter()
-	 */
-	function getIssueFilter() {
-		return 'issue=>crossref-xml';
-	}
-
-	/**
 	 * @copydoc PubObjectsExportPlugin::getStatusNames()
 	 */
 	function getStatusNames() {
