@@ -130,15 +130,15 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 					fatalError(__('plugins.importexport.common.error.noObjectsSelected'));
 				}
 				if (!empty($selectedSubmissions)) {
-					$objects = $this->_getPublishedArticles($selectedSubmissions, $context);
+					$objects = $this->getPublishedArticles($selectedSubmissions, $context);
 					$filter = $this->getSubmissionFilter();
 					$objectsFileNamePart = 'articles';
 				} elseif (!empty($selectedIssues)) {
-					$objects = $this->_getPublishedIssues($selectedIssues, $context);
+					$objects = $this->getPublishedIssues($selectedIssues, $context);
 					$filter = $this->getIssueFilter();
 					$objectsFileNamePart = 'issues';
 				} elseif (!empty($selectedRepresentations)) {
-					$objects = $this->_getArticleGalleys($selectedRepresentations, $context);
+					$objects = $this->getArticleGalleys($selectedRepresentations, $context);
 					$filter = $this->getRepresentationFilter();
 					$objectsFileNamePart = 'galleys';
 				}
@@ -421,17 +421,127 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @copydoc PKPImportExportPlugin::usage
 	 */
 	function usage($scriptName) {
-		fatalError('Not implemented');
+		echo __(
+			'plugins.importexport.' . $this->getPluginSettingsPrefix() . '.cliUsage',
+			array(
+				'scriptName' => $scriptName,
+				'pluginName' => $this->getName()
+			)
+		) . "\n";
 	}
 
 	/**
 	 * @copydoc PKPImportExportPlugin::executeCLI()
 	 */
 	function executeCLI($scriptName, &$args) {
-		fatalError('Not implemented');
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
+
+		$command = array_shift($args);
+		if (!in_array($command, array('export', 'register'))) {
+			$this->usage($scriptName);
+			return;
+		}
+
+		$outputFile = $command == 'export' ? array_shift($args) : null;
+		$contextPath = array_shift($args);
+		$objectType = array_shift($args);
+
+		$contextDao = DAORegistry::getDAO('JournalDAO');
+		$context = $contextDao->getByPath($contextPath);
+		if (!$context) {
+			if ($contextPath != '') {
+				echo __('plugins.importexport.common.cliError') . "\n";
+				echo __('plugins.importexport.common.error.unknownJournal', array('journalPath' => $contextPath)) . "\n\n";
+			}
+			$this->usage($scriptName);
+			return;
+		}
+
+		if ($outputFile) {
+			if ($this->isRelativePath($outputFile)) {
+				$outputFile = PWD . '/' . $outputFile;
+			}
+			$outputDir = dirname($outputFile);
+			if (!is_writable($outputDir) || (file_exists($outputFile) && !is_writable($outputFile))) {
+				echo __('plugins.importexport.common.cliError') . "\n";
+				echo __('plugins.importexport.common.export.error.outputFileNotWritable', array('param' => $outputFile)) . "\n\n";
+				$this->usage($scriptName);
+				return;
+			}
+		}
+
+		switch ($objectType) {
+			case 'articles':
+				$objects = $this->getPublishedArticles($args, $context);
+				$filter = $this->getSubmissionFilter();
+				$objectsFileNamePart = 'articles';
+				break;
+			case 'issues':
+				$objects = $this->getPublishedIssues($args, $context);
+				$filter = $this->getIssueFilter();
+				$objectsFileNamePart = 'issues';
+				break;
+			case 'galleys':
+				$objects = $this->getArticleGalleys($args, $context);
+				$filter = $this->getRepresentationFilter();
+				$objectsFileNamePart = 'galleys';
+				break;
+			default:
+				$this->usage($scriptName);
+				return;
+
+		}
+		if (empty($objects)) {
+			echo __('plugins.importexport.common.cliError') . "\n";
+			echo __('plugins.importexport.common.error.unknownObjects') . "\n\n";
+			$this->usage($scriptName);
+			return;
+		}
+		if (!$filter) {
+			$this->usage($scriptName);
+			return;
+		}
+
+		$this->executeCLICommand($scriptName, $command, $context, $outputFile, $objects, $filter, $objectsFileNamePart);
+		return;
 	}
 
+	/**
+	 * Execute the CLI command
+	 * @param $scriptName The name of the command-line script (displayed as usage info)
+	 * @param $command string (export or register)
+	 * @param $context Context
+	 * @param $outputFile string Path to the file where the exported XML should be saved
+	 * @param $objects array Objects to be exported or registered
+	 * @param $filter string Filter to use
+	 * @param $objectsFileNamePart string Export file name part for this kind of objects
+	 */
+	function executeCLICommand($scriptName, $command, $context, $outputFile, $objects, $filter, $objectsFileNamePart) {
+		$exportXml = $this->exportXML($objects, $filter, $context);
+		if ($command == 'export' && $outputFile) file_put_contents($outputFile, $exportXml);
 
+		if ($command == 'register') {
+			$exportFileName = $this->getExportFileName($objectsFileNamePart, $context);
+			file_put_contents($exportFileName, $exportXml);
+			$result = $this->depositXML($objects, $context, $exportFileName);
+			if ($result === true) {
+				echo __('plugins.importexport.common.register.success') . "\n";
+			} else {
+				echo __('plugins.importexport.common.cliError') . "\n";
+				if (is_array($result)) {
+					foreach($result as $error) {
+						assert(is_array($error) && count($error) >= 1);
+						$errorMessage = __($error[0], array('param' => (isset($error[1]) ? $error[1] : null)));
+						echo "*** $errorMessage\n";
+					}
+					echo "\n";
+				} else {
+					echo __('plugins.importexport.common.register.error.mdsError', array('param' => ' - ')) . "\n\n";
+				}
+				$this->usage($scriptName);
+			}
+		}
+	}
 
 	/**
 	 * Get published articles from submission IDs.
@@ -439,7 +549,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @param $context Context
 	 * @return array
 	 */
-	function _getPublishedArticles($submissionIds, $context) {
+	function getPublishedArticles($submissionIds, $context) {
 		$publishedArticles = array();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		foreach ($submissionIds as $submissionId) {
@@ -455,7 +565,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @param $context Context
 	 * @return array
 	 */
-	function _getPublishedIssues($issueIds, $context) {
+	function getPublishedIssues($issueIds, $context) {
 		$publishedIssues = array();
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		foreach ($issueIds as $issueId) {
@@ -471,7 +581,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @param $context Context
 	 * @return array
 	 */
-	function _getArticleGalleys($galleyIds, $context) {
+	function getArticleGalleys($galleyIds, $context) {
 		$galleys = array();
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		foreach ($galleyIds as $galleyId) {
