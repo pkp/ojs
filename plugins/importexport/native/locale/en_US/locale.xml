@@ -47,5 +47,4 @@ The following formats are accepted:
 	<message key="plugins.importexport.native.cliError">ERROR:</message>
 	<message key="plugins.importexport.native.error.unknownUser">The specified user, "{$userName}", does not exist.</message>
 	<message key="plugins.importexport.native.error.unknownJournal">The specified journal path, "{$journalPath}", does not exist.</message>
-	<message key="plugins.importexport.native.export.error.couldNotWrite">Could not write to the file "{$fileName}".</message>
 </locale>

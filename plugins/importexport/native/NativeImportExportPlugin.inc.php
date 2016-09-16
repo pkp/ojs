@@ -284,11 +284,11 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						return;
 					case 'issue':
 					case 'issues':
-						$exportXml = $this->exportIssues(
+						file_put_contents($xmlFile, $this->exportIssues(
 							$args,
 							$journal,
 							null
-						);
+						));
 						return;
 				}
 				break;
