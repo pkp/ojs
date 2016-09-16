@@ -47,5 +47,4 @@ Die folgenden Formate sind zulässig:
 	<message key="plugins.importexport.native.cliError">FEHLER:</message>
 	<message key="plugins.importexport.native.error.unknownUser">Der angegebene Nutzer/die angegebene Nutzerin, "{$userName}", existiert nicht.</message>
 	<message key="plugins.importexport.native.error.unknownJournal">Der angegebene Zeitschriftenpfad, "{$journalPath}", existiert nicht.</message>
-	<message key="plugins.importexport.native.export.error.couldNotWrite">Konnte nicht in die Datei "{$fileName}" schreiben.</message>
 </locale>
