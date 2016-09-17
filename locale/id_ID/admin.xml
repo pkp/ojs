@@ -56,5 +56,4 @@
 	<message key="admin.mergeUsers.allUsers"> Semua Pengguna</message>	
         <message key="admin.mergeUsers.confirm"> Apakah Anda menginginkan untuk menggabungkan akun yang diseleksi {$oldAccountCount} akun kedalam akun dengan nama "{$newUsername}"? akun {$oldAccountCount} tidak akan ditampilkan lagi.</message>
 	<message key="admin.mergeUsers.noneEnrolled"> Tidak ada pengguna yang terdaftar.</message> 
-	<message key="admin.expireSessions">Akhiri Sesi Pengguna</message> 
 </locale>
