@@ -16,12 +16,12 @@
 
 
 	<message key="editor.home"> Beranda Editor</message> 
-		 <message key="editor.submissionsAndPublishing"> Langganan dan Penerbitan</message> 
+	<message key="editor.submissionsAndPublishing"> Langganan dan Penerbitan</message> 
 	<message key="editor.submissionQueue"> Antrian Langganan</message> 
 	<message key="editor.submissionArchive"> Arsip Langganan</message> 
 	<message key="editor.publishing"> Penerbitan</message>	
-<message key="editor.publishedIssues"> Isu-Isu yang Diterbitkan</message>	
-<message key="editor.allSections"> Semua Bagian</message>
+    <message key="editor.publishedIssues"> Isu-Isu yang Diterbitkan</message>	
+    <message key="editor.allSections"> Semua Bagian</message>
 	<message key="editor.allEditors"> Semua Editor</message> 
 	<message key="editor.me"> Saya</message> 
 	<message key="editor.submissionArchive.noSubmissions"> Tidak ada lamgganan pada arsip.</message> 
@@ -39,8 +39,8 @@
 	<message key="editor.notifyUsers.inProgress"> Pemberitahuan para pengguna...</message> 
 	<message key="editor.usersNotified"> Para Pengguna Telah Diberitahu
 </message>	
-<message key="editor.notifyUsers.allUsers"> Kirimkan pesan ini ke seluruh pengguna yang terhubung dengan jurnal ini ({$count} pengguna)</message>
-<message key="editor.notifyUsers.interestedUsers"> Kirimkan pesan ini ke seluruh pengguna yang terhubung dengan jurnal ini yang telah memberitahukan bahwa mereka menginginkan berita terbaru ({$count} pengguna)</message> 
+    <message key="editor.notifyUsers.allUsers"> Kirimkan pesan ini ke seluruh pengguna yang terhubung dengan jurnal ini ({$count} pengguna)</message>
+    <message key="editor.notifyUsers.interestedUsers"> Kirimkan pesan ini ke seluruh pengguna yang terhubung dengan jurnal ini yang telah memberitahukan bahwa mereka menginginkan berita terbaru ({$count} pengguna)</message> 
 	<message key="editor.notifyUsers.includeToc"> Masukkan tabel isi dari isu ini:</message> 
 	<message key="editor.editorAdministration"> Administrasi Editor</message> 
 	<message key="editor.issues.createIssue">Buat Terbitan Baru</message>
@@ -50,11 +50,11 @@
 	<message key="editor.issues.numArticles">Item</message>
 	<message key="editor.issues.noArticles"> Saat ini tidak ada item yang dijadwalkan untuk isu ini.</message> 
 	<message key="editor.issues.confirmDelete"> Apakah Anda yakin ingin menghapus isu ini secara permanen?</message>	
-<message key="editor.issues.published"> Terpublikasikan</message> 
+    <message key="editor.issues.published"> Terpublikasikan</message> 
 	<message key="editor.issues.unpublished"> Tidak Terpublikasikan</message>	
-<message key="editor.issues.volumeRequired"> Dibutuhkan volume dan harus positif, nilai numeris.</message>
+    <message key="editor.issues.volumeRequired"> Dibutuhkan volume dan harus positif, nilai numeris.</message>
 	<message key="editor.issues.numberRequired"> Dibutuhkan angka dan harus positif, nilai numeris.</message>	
-<message key="editor.issues.yearRequired"> Dibutuhkan tahun dan harus positif, nilai numeris.</message> 
+    <message key="editor.issues.yearRequired"> Dibutuhkan tahun dan harus positif, nilai numeris.</message> 
 	<message key="editor.issues.titleRequired"> Dibutuhkan judul untuk isu ini.</message> 
 	<message key="editor.issues.issueIdentificationRequired"> Dibutuhkan identifikasi isu. Silahkan pilih setidaknya salah satu dari opsi identifikasi isu.</message> 
 	<message key="editor.issues.issueIdentification"> Identifikasi Isu</message> 
@@ -71,10 +71,10 @@
 	<message key="editor.issues.invalidCoverPageFormat"> Format gambar sampul tidak berlaku. Format yang diterima .gif, .jpg, or .png.</message> 
 	<message key="editor.issues.styleFile">Stylesheet</message> 
 	<message key="editor.issues.invalidStyleFormat"> Format Stylesheet tidak berlaku. Pastikan file yang diserahkan adalah CSS. (Komentar dalam stylesheet akan diabaikan.)</message>	
-<message key="editor.issues.removeStyleFile"> Hapus Stylesheet?</message>
-<message key="editor.issues.coverPageCaption"> Judul halaman sampul</message> 
+    <message key="editor.issues.removeStyleFile"> Hapus Stylesheet?</message>
+    <message key="editor.issues.coverPageCaption"> Judul halaman sampul</message> 
 	<message key="editor.issues.showCoverPage"> Buat sampul untuk isu ini dengan elemen-elemen berikut.</message>	
-<message key="editor.issues.coverPageDisplay"> Tampilkan</message> 
+    <message key="editor.issues.coverPageDisplay"> Tampilkan</message> 
 	<message key="editor.issues.hideCoverPageArchives"> Jangan tampilkan thumbnail gambar sampul pada daftar isu ini.</message>	
 	<message key="editor.issues.hideCoverPageCover"> Jangan tampilkan gambar sampul sebelumnya pada tabel isi.</message>
 	<message key="editor.issues.openAccess"> Buka akses</message>
@@ -95,17 +95,18 @@
 	<message key="editor.issues.previewIssue"> Terbitam Pendahuluan</message> 
 	<message key="editor.issues.preview">(Pendahuluan)</message> 
 	<message key="editor.issues.confirmPublish"> Apakah Anda yakin ingin menerbitkan terbitan baru?</message>	
-<message key="editor.issues.confirmUnpublish"> Apakah Anda yakin ingin tidak menerbitkan terbitan yang telah terbit ini?</message>
+    <message key="editor.issues.confirmUnpublish"> Apakah Anda yakin ingin tidak menerbitkan terbitan yang telah terbit ini?</message>
 	<message key="editor.issues.publicArticleIdExists"> Tidak bisa menyimpan id umum untuk artikel:</message> 
 	<message key="editor.issues.noLiveIssues"> Tidak Ada Terbitan Terbaru</message> 
 	<message key="editor.issues.open"> Buka</message> 
 	<message key="editor.issues.pages"> Halaman</message> 
 
 	<message key="editor.navigation.futureIssues">Terbitan Akan Datang</message> 
-<message key="editor.navigation.issueArchive">Terbitan Terdahulu</message>
+    <message key="editor.navigation.issues">Terbitan</message>
+    <message key="editor.navigation.issueArchive">Terbitan Terdahulu</message>
 	<message key="editor.article.designateReviewVersion"> Merancang file asli sebagai Versi Review</message>	
-<message key="editor.article.uploadReviewVersion"> Unggah versi review yang sudah direvisi</message>	
-<message key="editor.article.showSuppFile"> Tampilkan file untuk direview</message> 
+    <message key="editor.article.uploadReviewVersion"> Unggah versi review yang sudah direvisi</message>	
+    <message key="editor.article.showSuppFile"> Tampilkan file untuk direview</message> 
 	<message key="editor.article.layoutAndProof">Layout &amp; Persetujuan</message> 
 	<message key="editor.article.clear">Bersihkan</message> 
 	<message key="editor.article.clearReviewer"> Hapus Reviewer</message> 

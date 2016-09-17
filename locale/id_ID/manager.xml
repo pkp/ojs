@@ -91,11 +91,16 @@
 	<message key="manager.people.syncUserDescription"> Sinkronisasi Pendaftaram akan mendaftarkan semua pengguna yang terdaftar di peran yang telah ditentukan di jurnal yang telah ditentukan ke dalam peran yang sama di jurnal ini. Fungsi ini membuat sejumlah pengguna (contoh: Reviewer) akan disinkronisasikan diantara jurnal.</message>	
 	<message key="manager.plugins.delete"> Hapus Plugin
 </message>
-
-
-
-
-
+        <message key="manager.setup.contextName">Nama Jurnal</message>
+        <message key="manager.setup.Issn">ISSN</message>
+<message key="manager.setup.journalAbout">Tentang Jurnal</message>
+<message key="manager.setup.journalAbout.description">Include any information about your journal which may be of interest to readers, authors or reviewers. This could include your open access policy, the focus and scope of the journal, copyright notice, sponsorship disclosure, history of the journal, a privacy statement, and inclusion in any LOCKSS or CLOCKSS archival system.</message>
+<message key="manager.setup.journalSummary">Journal Summary</message>
+	<message key="manager.setup.journalSummary.description">A brief description of your journal that can be displayed in lists of journals.</message>
+<message key="manager.setup.masthead">Tajuk</message>
+	<message key="manager.setup.masthead.description">List editors, managing directors, and other individuals associated with the journal.</message>
+<message key="manager.masthead.title">Tajuk</message>
+<message key="manager.siteAccessOptions.siteAccessOptions">Opsi Akses Situs</message>
 
 
 
