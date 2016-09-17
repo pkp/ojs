@@ -777,17 +777,17 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br />
 	<message key="notification.mailListDescription">Podaj adres e-mail aby otrzymywać powiadomienia o aktualizacjach treści.</message>
 	<message key="notification.notificationsPublicDescription">Ta strona zawiera informacje o ważnych aktualizacjach treści czasopisma, takich jak nowe numery lub ogłoszenia. Możesz subskrybować powiadomienia za pomocą czytnika RSS (klikając w ikonę), lub <![CDATA[  <a href="{$emailUrl}">przez e-mail.</a>]]></message>
 
-	<message key="notification.type.articleSubmitted">Nowy artykuł, "{$param}", został wysłany.</message>
+	<message key="notification.type.articleSubmitted">Nowy artykuł, "{$title}", został wysłany.</message>
 	<message key="notification.type.editing">Edycja wydarzeń</message>
-	<message key="notification.type.editorDecisionComment">Dostępne są nowe uwagi do decyzji redaktora dla "{$param}".</message>
-	<message key="notification.type.galleyModified">Plik z publikacją dla "{$param}" został zmodyfikowany.</message>
+	<message key="notification.type.editorDecisionComment">Dostępne są nowe uwagi do decyzji redaktora dla "{$title}".</message>
+	<message key="notification.type.galleyModified">Plik z publikacją dla "{$title}" został zmodyfikowany.</message>
 	<message key="notification.type.issuePublished">Nowy numer został opublikowany.</message>
 	<message key="notification.type.newAnnouncement">Nowe ogłoszenie zostało utworzone.</message>
 	<message key="notification.type.reviewing">Wydarzenia dotyczące procesu recenzji</message>
 	<message key="notification.type.site">Wydarzenia dotyczące strony</message>
-	<message key="notification.type.submissionComment">Dostępne są nowe uwagi redaktora dla "{$param}".</message>
+	<message key="notification.type.submissionComment">Dostępne są nowe uwagi redaktora dla "{$title}".</message>
 	<message key="notification.type.submissions">Wydarzenia dotyczące wysłanych tekstów</message>
-	<message key="notification.type.userComment">Dostępne są nowe uwagi czytelnika dla "{$param}"</message>
+	<message key="notification.type.userComment">Dostępne są nowe uwagi czytelnika dla "{$title}"</message>
 
 	<!--
 	 *

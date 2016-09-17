@@ -864,18 +864,18 @@ lib.sfu.ca]]></message>
 در مورذ آدرسهای جستجوئی که مشتمل بر پر کردن و پست کردن اطالعات یک فرم باشد ممکن است این آزمایش تعیین اعتبار شکست بخورد.]]></message>
 	<message key="notification.mailListDescription">آدرس ایمیل خود را وارد کنید تا بدین وسیله از چاپ مطالب جدید باخبر شوید.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[این صفحه نشان دهنده موارد مهم بروزرسانی میباشد که در این مجله اتفاق افتاده است مانند شماره های جدید مجله و یا اطلاعیه ها. میتوانید از طریق RSS برای این اطلاع رسانی ها ثبت نام کنید. برای این کار بر روی تصویر سمت راست کلیک کنید. ویا از <a href="{$emailUrl}"> طریق ایمیل</a> اقدام کنید.]]></message>
-	<message key="notification.type.articleSubmitted">یک مقاله جدید، "{$param}"، ساب میت شد.</message>
+	<message key="notification.type.articleSubmitted">یک مقاله جدید، "{$title}"، ساب میت شد.</message>
 	<message key="notification.type.editing">رویدادهای ویرایش</message>
-	<message key="notification.type.editorDecisionComment">نقطه نظری در خصوص تصمیم دبیر در باره "{$param}" برجا گذاشته شده است.</message>
-	<message key="notification.type.galleyModified">یک گالی در مورد "{$param}" تغییر یافته است.</message>
+	<message key="notification.type.editorDecisionComment">نقطه نظری در خصوص تصمیم دبیر در باره "{$title}" برجا گذاشته شده است.</message>
+	<message key="notification.type.galleyModified">یک گالی در مورد "{$title}" تغییر یافته است.</message>
 	<message key="notification.type.issuePublished">یک شماره مجله منتشر شده است</message>
 	<message key="notification.type.newAnnouncement">یک اطلاعیه جدید ایجاد شده است</message>
-	<message key="notification.type.reviewerFormComment">یک فرم کارشناسی در خصوص "{$param}" ساب میت شده است</message>
+	<message key="notification.type.reviewerFormComment">یک فرم کارشناسی در خصوص "{$title}" ساب میت شده است</message>
 	<message key="notification.type.reviewing">رودادهای کارشناسی</message>
 	<message key="notification.type.site">رویدادهای سایت</message>
-	<message key="notification.type.submissionComment">یک دبیر نظری در مورد "{$param}" داده است.</message>
+	<message key="notification.type.submissionComment">یک دبیر نظری در مورد "{$title}" داده است.</message>
 	<message key="notification.type.submissions">رویدادهای ساب میشن</message>
-	<message key="notification.type.userComment">یک خواننده نظری در مورد "{$param}" داده است</message>
+	<message key="notification.type.userComment">یک خواننده نظری در مورد "{$title}" داده است</message>
 	<message key="user.register.reviewerInterests">تشخیص علائق کارشناسی: زمینه ها و روشهای پژوهشی مهم</message>
 	<message key="user.subscriptions.subscriptionStatus">وضعیت اشتراک</message>
 	<message key="user.subscriptions.statusInformation">اشتراکات فعال و منقضی هر دو در زیر همراه با تاریخ انقضا آنها نشان داده شده اند. به علاوه به ازای هر اشتراک اطلاعات وضعیتی زیر نیز ممکن است نشان داده شوند.</message>
