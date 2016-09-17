@@ -13,7 +13,21 @@
 
 <locale name="id_ID" full_name = "Bahasa Indonesia">
 	<!-- Submission wizard -->
+	<message key="submission.submit.title">Serahkan Naskah</message>
+	<message key="submission.submit.userGroup">Serahkan sebagai...</message>
+	<message key="submission.submit.userGroupDescription">Pilih peran yang Anda gunakan dalam menyerahkan naskah ini.</message>
+	<message key="submission.upload.selectComponent">Pilih komponen naskah</message>
+	<message key="submission.title">Judul Naskah</message>
+	<message key="submission.title.tip"><![CDATA[Jenis naskah biasanya berupa 'image', 'text', atau jenis multimedia lain termasuk 'software' atau 'interactive'.  Mohon pilih salah satu yang paling sesuai dengan apa yang Anda serahkan.  Contoh dapat dilihat di <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
+	<message key="submission.submit.newSubmissionMultiple">Mulai penyerahan naskah di</message>
+	<message key="submission.submit.newSubmissionSingle">Naskah Baru</message>
+	<message key="grid.action.workflow">Alur Penyerahan Naskah</message>
 
+	<message key="submission.issueEntry">Metadata</message>
+	<message key="submission.submit.whatNext.description">Pengelola jurnal telah diberitahu tentang naskah yang Anda serahkan, dan sebuah email telah dikirimkan ke alamat Anda sebagai konfirmasi.  Ketika editor telah mereview penyerahan naskah, editor akan menghubungi Anda.</message>
+	<message key="grid.action.galleyInIssueEntry">Galley yang ditampilkan di terbitan</message>
+	<message key="grid.action.issueEntry">Lihat metadata naskah ini</message>
+	
 	<!-- Submission Information Modal -->
 
 	<!-- events -->

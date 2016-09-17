@@ -7,15 +7,33 @@
   * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+
   * Localization strings.
   -->
 
 <locale name="id_ID" full_name="Bahasa Indonesia">
 
-	<!-- review froms start -->
-
+	<!-- 
+	 * This file is organized into several major sections, separated
+	 * by comments like this one. These sections are called:
+	 *  COMMON - Contains frequently-used words
+	 *  ENTITIES - Contains terms pertaining to the system's major
+	 *             entities, e.g. Article, Journal, Section
+	 *  INTERFACE - Contains phrases organized by the section of the
+	 *              user interface they appear in.
+	 *  LOG - Contains phrases related to log entries
+	 *  MISC - Entries that don't belong elsewhere.
+	 *  DEFAULT - Default settings for configuration items.
+	-->
 	<!-- common -->
+	<message key="context.current">Jurnal:</message>
+	<message key="context.select">Lihat jurnal lain:</message>
+	<!-- Categories -->
+	<message key="navigation.categories">Kategori</message>
+	<message key="navigation.categories.browse">Telusur</message>
+
+
 
 	<!-- Journal Management -->
 
@@ -23,7 +41,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Klik di ikon untuk mengisi form review.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Isilah di bidang yang dibutuhkan.</message>
+	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Isilah kolom berikut.</message>
 
 	<!-- review forms end -->
 
@@ -35,12 +53,14 @@
 
 	<!-- Common Messages -->
 	<message key="common.openJournalSystems">Open Journal Systems</message>
-	<message key="common.confirmComplete">Apakah Anda yakin tugas ini telah selesai? Anda mungkin tidak bisa membuat perubahan setelahnya.</message>
+	<message key="common.confirmComplete">Apakah Anda yakin tugas ini telah selesai? Anda mungkin tidak bisa mengubahnya lagi.</message>
 	<message key="common.payment">Pembayaran</message>
 	<message key="common.payments">Pembayaran</message>
 	<message key="common.homePageHeader.altText">Header Beranda</message>
 	<message key="common.journalHomepageImage.altText">Gambar Beranda Jurnal</message>
-
+	<message key="common.homepageNavigationLabel">Beranda</message>  
+	<message key="common.tasks">Tugas</message>
+	
 	<!-- Common Form Messages -->
 
 	<!-- Common Email Messages -->
@@ -51,6 +71,8 @@
 
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Bantuan Jurnal</message>
+	<message key="navigation.breadcrumbSeparator">/</message>
+	<message key="navigation.archives">Arsip</message>
 	<message key="navigation.current">Terkini</message>
 	<message key="navigation.otherJournals">Jurnal Lain</message>
 	<message key="navigation.browseByIssue">Berdasarkan Terbitan</message>
@@ -60,21 +82,39 @@
 	<message key="navigation.competingInterestGuidelines">Petunjuk Competing Interest</message>
 	<message key="navigation.infoForAuthors.long">Informasi untuk Penulis</message>
 	<message key="navigation.infoForLibrarians.long">Informasi untuk Pustakawan</message>
-
+	<message key="navigation.submissions">Kirim Naskah</message>
+	<message key="editor.navigation.issues">Terbitan</message>
+	<message key="navigation.settings">Pengaturan</message>
+        <message key="navigation.access">Pengguna dan Peran</message>
+	<message key="navigation.tools">Alat</message>
+        <message key="navigation.admin">Administrasi</message>
+	<message key="navigation.settings">Pengaturan</message>
+        <message key="grid.submission.itemTitle">Penulis; Judul</message>
+        <message key="dashboard.myQueue">Tugas Saya</message>
+        <message key="workflow.stage">Tahap</message>
+        <message key="submission.submit.newSubmissionSingle">Naskah Baru</message>
+        <message key="navigation.viewFrontend">Lihat Situs</message>
+        <message key="grid.action.addIssue">Tambah Terbitan</message>
+        <message key="grid.user.currentUsers">Pengguna Saat Ini</message>
+        <message key="grid.user.add">Tambah Pengguna</message>
+                
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Belum Ditugaskan</message>
 	<message key="common.queue.short.submissionsUnassigned">Belum Ditugaskan</message>
+        <message key="common.queue.long.myAssigned">Sudah Ditugaskan</message>
+	<message key="common.queue.short.myAssigned">Sudah Ditugaskan</message>
+        <message key="submission.mySubmissions">Naskah Saya</message>
 	<message key="common.queue.long.submissionsInEditing">Naskah dalam Pengeditan</message>
 	<message key="common.queue.short.submissionsInEditing">Dalam Pengeditan</message>
 	<message key="common.queue.long.submissionsInReview">Naskah dalam Review</message>
 	<message key="common.queue.short.submissionsInReview">Dalam Review</message>
 	<message key="common.queue.long.submissionsArchives">Arsip</message>
 	<message key="common.queue.short.submissionsArchives">Arsip</message>
-	<message key="common.queue.long.active">Penyerahan Aktif</message>
+	<message key="common.queue.long.active">Aktif</message>
 	<message key="common.queue.short.active">Aktif</message>
 	<message key="common.queue.long.completed">Arsip</message>
 	<message key="common.queue.short.completed">Arsip</message>
-
+                        
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
@@ -98,11 +138,11 @@
 	<message key="article.indexingInformation">Informasi Pengindeksan</message>
 	<message key="article.metadata">Metadata</message>
 	<message key="article.journalSection">Bagian Jurnal</message>
-	<message key="article.file">File</message>
-	<message key="article.suppFile">File Tambahan</message>
-	<message key="article.suppFiles">File Tambahan</message>
-	<message key="article.suppFilesAbbrev">Singkatan File Tambahan</message>
-	<message key="article.discipline">Disiplin Ilmu dan Sub Disiplin</message>
+	<message key="article.file">Berkas</message>
+	<message key="article.suppFile">Berkas Tambahan</message>
+	<message key="article.suppFiles">Berkas Tambahan</message>
+	<message key="article.suppFilesAbbrev">Berkas Tambahan</message>
+	<message key="article.discipline">Disiplin dan Sub-disiplin Ilmu</message>
 	<message key="article.subject">Kata Kunci</message>
 	<message key="article.coverage">Cakupan</message>
 	<message key="article.type">Tipe, Metode, atau Pendekatan</message>
@@ -112,13 +152,13 @@
 	<message key="article.submission">Naskah</message>
 	<message key="article.submissions">Naskah</message>
 	<message key="article.details">Detail</message>
-	<message key="article.abstract">Sari</message>
+	<message key="article.abstract">Abstrak</message>
 	<message key="article.coverPage.altText">Gambar Sampul</message>
-	<message key="article.accessLogoOpen.altText">Akses Terbuka</message>
+	<message key="article.accessLogoOpen.altText">Open Access</message>
 	<message key="article.accessLogoRestricted.altText">Akses Terbatas</message>
 	<message key="article.comments.sectionDefault">Default</message>
-	<message key="article.comments.disable">Tidak Aktif</message>
-	<message key="article.comments.enable">Aktif</message>
+	<message key="article.comments.disable">Matikan</message>
+	<message key="article.comments.enable">Aktifkan</message>
 	<message key="article.fontSize">Ukuran Huruf</message>
 	<message key="article.fontSize.small.altText">Kecil</message>
 	<message key="article.fontSize.medium.altText">Sedang</message>
@@ -126,16 +166,16 @@
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.submissionEditing">Pengeditan Naskah</message>
-	<message key="submission.changeSection">Berubah ke</message>
+	<message key="submission.changeSection">Ubah ke</message>
 	<message key="submission.sent">Kirim</message>
 	<message key="submission.editorDecision">Keputusan Editor</message>
-	<message key="submission.round">Tahapan&amp;nbsp;{$round}</message>
+	<message key="submission.round">Tahap&amp;nbsp;{$round}</message>
 	<message key="submission.editorReview">Review Editor</message>
 	<message key="submission.notifyAuthor">Beritahu Penulis</message>
 	<message key="submission.notifyEditor">Beritahu Editor</message>
 	<message key="submission.editorAuthorRecord">Rekam Email Editor/Penulis</message>
 	<message key="submission.reviewersVersion">Versi Anotasi Reviewer</message>
-	<message key="submission.postReviewVersion">Versi Setelah Review</message>
+	<message key="submission.postReviewVersion">Versi Pasca-review</message>
 	<message key="submission.editorVersion">Versi Editor</message>
 	<message key="submission.authorsRevisedVersion">Versi Revisi Penulis</message>
 	<message key="submission.authorVersion">Versi Penulis</message>
@@ -143,7 +183,7 @@
 	<message key="submission.copyedit">Copyedit</message>
 	<message key="submission.proofreading">Proses Proofread</message>
 	<message key="submission.scheduling">Penjadwalan</message>
-	<message key="submission.scheduledIn">Dijadwalkan untuk penerbitan di {$issueName}.</message>
+	<message key="submission.scheduledIn">Dijadwalkan untuk diterbitkan di {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(TBA)</message>
 	<message key="submissions.sec">Bagian</message>
 	<message key="submissions.step1">Langkah 1</message>
@@ -165,7 +205,7 @@
 	<message key="submissions.copyeditComplete">Telah Selesai Copyedit</message>
 	<message key="submissions.layoutComplete">Layout Selesai Edit</message>
 	<message key="submissions.proofreadingComplete">Proofread</message>
-
+  
 	<!-- Submission Notes -->
 
 	<!-- Common Journal Terms -->
@@ -174,10 +214,18 @@
 	<message key="journal.path">Path</message>
 	<message key="context.context">Jurnal</message>
 	<message key="journal.issn">ISSN</message>
+        <message key="journal.viewAllIssues">Lihat semua terbitan</message>
 
 	<!-- User -->
-	<message key="user.showAllJournals">Tunjukkan Jurnal Saya</message>
-	<message key="user.registerForOtherJournals">Mendaftar untuk Jurnal Lain</message>
+	<message key="user.noRoles.selectUsersWithoutRoles">Ikutkan pengguna tanpa peran di jurnal ini.</message>
+	<message key="user.profile.profileImage">Foto Profil</message>
+	<message key="user.showAllJournals">Tunjukkan jurnal saya</message>
+	<message key="user.registerForOtherJournals">Daftar ke jurnal Lain</message>
+        <message key="user.reviewerPrompt">Apakah Anda bersedia mereview naskah yang diserahkan ke jurnal ini?</message>
+	<message key="user.reviewerPrompt.userGroup">Ya, meminta peran sebagai {$userGroup}.</message>
+	<message key="user.register.contextsPrompt">Jurnal mana saja yang Anda pilih?</message>
+	<message key="user.register.otherContextRoles">Minta peran berikut.</message>
+	<message key="user.register.noContextReviewerInterests">Jika Anda meminta peran sebagai reviewer, mohon sebutkan subjek yang Anda minati.</message>, 
 	<message key="user.myJournals">Jurnal Saya</message>
 	<message key="user.manageMySubscriptions">Mengatur Langganan Saya</message>
 	<message key="user.noRoles.chooseJournal">Akun Anda tidak sedang berhubungan dengan jurnal manapun. Pilihlah sebuah jurnal:</message>
@@ -186,6 +234,10 @@
 	<message key="user.noRoles.submitArticleRegClosed">Serahkan Artikel: Registrasi Penulis sedang tidak bisa.</message>
 	<message key="user.noRoles.regReviewer">Daftar sebagai Reviewer</message>
 	<message key="user.noRoles.regReviewerClosed">Daftar sebagai Reviewer: Registrasi Reviewer sedang tidak bisa.</message>
+        <message key="user.profile.identity">Identitas</message>
+        <message key="user.profile.contact">Kontak</message>
+        <message key="user.profile.public">Publik</message>
+        <message key="user.suffix">Suffix</message>
 
 	<!-- Roles -->
 	<message key="user.role.manager">Manajer Jurnal</message>
@@ -334,9 +386,11 @@ Perhatikan bahwa OAI antarmuka dapat dinonaktifkan dengan mengedit konfigurasi s
 	<!-- Statistik & Laporan -->
 
 
+
 	<!--  Manajemen Plugin -->
 
 	<!-- Manajemen Pembayaran -->
+
 
 
 
@@ -407,8 +461,8 @@ Pilih model untuk menangani aspek proses editorial ni. (Untuk menunjuk Editor Pe
 	<!-- Grup / Tim Editorial -->
 
 
-
 	<!-- Manajemen Pegawai/ Orang -->
+
 	<message key="manager.people.confirmDisable">Membuat pengguna ini tidak bisa mengakses? Ini akan mencegah pengguna dari login ke sistem. Anda dapat memberi alasan kepada pengguna untuk membuat mereka tidak bisa mengakses akun mereka.</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[Maaf, Anda tidak mempunya hak administratif pada pengguna ini. Hal ini mungkin karena:
 		<ul>
@@ -731,6 +785,7 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="archive.issueUnavailable">Terbitan tidak tersedia</message>
 
 	<!-- About The Journal -->
+	<message key="about.aboutContext">Tentang jurnal ini</message>
 	<message key="about.statistics">Statistik</message>
 	<message key="about.history">Visi dan Tujuan Jurnal</message>
 	<message key="about.editorialTeam">Dewan Editorial</message>
@@ -742,6 +797,9 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="about.onlineSubmissions">Penyerahan Online</message>
 	<message key="about.onlineSubmissions.login">Ke Login</message>
 	<message key="about.onlineSubmissions.registrationRequired">Registrasi dan login dibutuhkan untuk memasukkan naskah dan kelengkapannya secara online dan untuk mengecek status naskah saat ini.</message>
+	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} atau {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.newSubmission">Serahkan naskah baru</message>
+	<message key="about.onlineSubmissions.viewSubmissions">cek naskah yang telah diserahkan</message>
 	<message key="about.authorGuidelines">Petunjuk Penulis</message>
 	<message key="about.submissionPreparationChecklist">Petunjuk Untuk Penulis</message>
 	<message key="about.submissionPreparationChecklist.description">Penulis yang ingin memasukkan naskah harus memperhatikan poin-poin di bawah ini. Jika naskah tidak sesuai dengan persyaratan yang telah dicantumkan, ada kemungkinan naskah tersebut akan dikembalikan.</message>
@@ -986,18 +1044,18 @@ Validasi mungkin gagal dalam pencarian URL memerlukan form data yang diposting.]
 	<message key="notification.mailListDescription">Masukkan alamat email Anda untuk menerima notifikasi langsung tentang konten baru yang penting dan ditambahkan ke jurnal.</message>
 	<message key="notification.notificationsPublicDescription">Halaman ini menunjukkan update penting yang berkaitan dengan jurnal ini seperti terbitan baru atau pengumuman. Anda bisa berlangganan ke notifikasi ini melalui RSS Feed (dengan meng-klik di gambar sebelah kanan), atau <![CDATA[  <a href="{$emailUrl}">melalui email.</a>]]></message>
 
-	<message key="notification.type.articleSubmitted">Artikel baru, "{$title}", telah diserahkan.</message>
+	<message key="notification.type.articleSubmitted">Artikel baru, "{$param}", telah diserahkan.</message>
 	<message key="notification.type.editing">Event Pengeditan</message>
-	<message key="notification.type.editorDecisionComment">Komentar telah ditinggalkan di keputusan editor untuk "{$title}".</message>
-	<message key="notification.type.galleyModified">Galley telah dimodifikasi untuk "{$title}".</message>
+	<message key="notification.type.editorDecisionComment">Komentar telah ditinggalkan di keputusan editor untuk "{$param}".</message>
+	<message key="notification.type.galleyModified">Galley telah dimodifikasi untuk "{$param}".</message>
 	<message key="notification.type.issuePublished">Sebuah terbitan telah terbit.</message>
 	<message key="notification.type.newAnnouncement">Pengumuman baru telah dibuat.</message>
-	<message key="notification.type.reviewerFormComment">Form review telah diserahkan untuk "{$title}".</message>
+	<message key="notification.type.reviewerFormComment">Form review telah diserahkan untuk "{$param}".</message>
 	<message key="notification.type.reviewing">Events Review</message>
 	<message key="notification.type.site">Event Situs</message>
-	<message key="notification.type.submissionComment">Editor telah berkomentar di "{$title}".</message>
+	<message key="notification.type.submissionComment">Editor telah berkomentar di "{$param}".</message>
 	<message key="notification.type.submissions">Event Penyerahan Naskah</message>
-	<message key="notification.type.userComment">Pembaca telah berkomentar di "{$title}"</message>
+	<message key="notification.type.userComment">Pembaca telah berkomentar di "{$param}"</message>
 
 	<!--
 	 *
