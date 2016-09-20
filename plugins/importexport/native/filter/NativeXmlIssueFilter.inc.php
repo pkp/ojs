@@ -99,6 +99,9 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	 * @param $issue Issue
 	 */
 	function handleChildElement($n, $issue) {
+		$deployment = $this->getDeployment();
+		$context = $deployment->getContext();
+
 		$localizedSetterMappings = $this->_getLocalizedIssueSetterMappings();
 		$dateSetterMappings = $this->_getDateIssueSetterMappings();
 
@@ -106,6 +109,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 			// If applicable, call a setter for localized content.
 			$setterFunction = $localizedSetterMappings[$n->tagName];
 			list($locale, $value) = $this->parseLocalizedContent($n);
+			if (empty($locale)) $locale = $context->getPrimaryLocale();
 			$issue->$setterFunction($value, $locale);
 		} else if (isset($dateSetterMappings[$n->tagName])) {
 			// Not a localized element?  Check for a date.
@@ -225,8 +229,8 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 
 	/**
 	 * Parse a submission file and add it to the submission.
-	 * @param $n DOMElement
-	 * @param $submission Submission
+	 * @param $node DOMElement
+	 * @param $issue Issue
 	 */
 	function parseSections($node, $issue) {
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
@@ -239,7 +243,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 
 	/**
 	 * Parse a section stored in an issue.
-	 * @param $n DOMElement
+	 * @param $node DOMElement
 	 * @param $issue Issue
 	 */
 	function parseSection($node, $issue) {
@@ -273,14 +277,17 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 						break;
 					case 'abbrev':
 						list($locale, $value) = $this->parseLocalizedContent($n);
+						if (empty($locale)) $locale = $context->getPrimaryLocale();
 						$section->setAbbrev($value, $locale);
 						break;
 					case 'policy':
 						list($locale, $value) = $this->parseLocalizedContent($n);
+						if (empty($locale)) $locale = $context->getPrimaryLocale();
 						$section->setPolicy($value, $locale);
 						break;
 					case 'title':
 						list($locale, $value) = $this->parseLocalizedContent($n);
+						if (empty($locale)) $locale = $context->getPrimaryLocale();
 						$section->setTitle($value, $locale);
 						break;
 				}
@@ -292,8 +299,8 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 
 	/**
 	 * Parse out the issue cover and store it in an issue.
-	 * @param DOMElement $node
-	 * @param Issue $issue
+	 * @param $node DOMElement
+	 * @param $issue Issue
 	 */
 	function parseIssueCover($node, $issue) {
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
