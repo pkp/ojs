@@ -60,7 +60,7 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter {
 	/**
 	 * Handle a submission element
 	 * @param $node DOMElement
-	 * @return array Array of Representation objects
+	 * @return IssueGalley
 	 */
 	function handleElement($node) {
 		$deployment = $this->getDeployment();
@@ -72,7 +72,9 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter {
 		$issueGalleyDao  = DAORegistry::getDAO('IssueGalleyDAO');
 		$issueGalley = $issueGalleyDao->newDataObject();
 		$issueGalley->setIssueId($issue->getId());
-		$issueGalley->setLocale($node->getAttribute('locale'));
+		$locale = $node->getAttribute('locale');
+		if (empty($locale)) $locale = $context->getPrimaryLocale();
+		$issueGalley->setLocale($locale);
 		$issueGalley->setSequence($issueGalleyDao->getNextGalleySequence($issue->getId()));
 
 		// Handle metadata in subelements.
@@ -98,11 +100,12 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter {
 						$issueFileManager->writeFile($filePath, base64_decode($o->textContent));
 						break;
 				}
-			break;
-			$issueFileId = $issueFileDao->insertObject($issueFile);
-			$issueGalley->setFileId($issueFileId);
+				$issueFileId = $issueFileDao->insertObject($issueFile);
+				$issueGalley->setFileId($issueFileId);
+				break;
 		}
 
+		$issueGalleyDao->insertObject($issueGalley);
 		return $issueGalley;
 	}
 }
