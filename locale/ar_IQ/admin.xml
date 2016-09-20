@@ -28,6 +28,14 @@
         لا بد فيها من اختيار أحد معطيات الاستعمال دون غيرها... منها على سبيل المثال لا الحصر: استعراض قائمة مرتبة هجائياً لأكثر المقالات استعمالاً
         أو لتقييم نتائج طلبات البحث (عن معلومات ضمن الموقع)، لذا، لطفاً، إختر أحد المعطيات الإحصائية ليكون بمثابة الاختيار الإفتراضي عموماً
 	</message>
+	<message key="admin.languages.confirmDisable">هل أنت متأكد من رغبتك في تعطيل هذه اللغة؟ هذا الأمر سيؤثر على المجلات المستضافة التي تستعمل هذه اللغة حالياً.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>تنزيل حزم اللغة من ملقم مشروع المعرفة العامة غير متاح حالياً لأن:</p>
+	<ul>
+		<li>ملقمك لا يمتلك أو لا يسمح بتنفيذ أداة معالجة ضغط الملفات "tar".</li>
+		<li>نظام المجلات المفتوحة غير قادر على تعديل ملف سجلاته، وهو عادة "registry/locales.xml".</li>
+	</ul>
+<p>إن حزم اللغات متاحة للتنزيل يدوياً عبر <a href="http://pkp.sfu.ca">موقع مشروع المعرفة العامة</a>.</p>]]></message>
+  
 	<message key="admin.languages.primaryLocaleInstructions">ستكون هذه اللغة هي الإفتراضية للموقع ولأي مجلة يستضيفها</message>
 	<message key="admin.languages.supportedLocalesInstructions">إختر أي من اللغات التي من المفترض أن يدعمها الموقع. حيث أن تلك اللغات ستكون متاحة لتظهر بها أي مجلة يستضيفها هذا الموقع، كما أنها ستظهر ضمن قائمة إختيار اللغة المتاحة للمستخدم المستعرض للموقع، (والتي بالإمكان تجاوزها في بعض الصفحات المتخصصة فقط). فيما لو تم الاقتصار على لغة واحدة، فإن قائمة تقليب اللغات لن تكون ظاهرة للمستخدم، كما أن الإعدادات الإضافية المتعلقة باللغات لن تكون متاحة للمجلات المستضافة في الموقع.</message>
 	<message key="admin.locale.maybeIncomplete">اللغات المعلمة بالنجمة قد تكون غير مكتملة</message>
@@ -44,13 +52,14 @@
 	<message key="admin.auth.enableCreateUsers">إسمح بإضافة مستخدمين (إن كانت هذه الوظيفة الإضافية تدعمه). المستخدمون المسجلون حديثاً ضمن هذا النظام بمستوى المصادقة هذا، ستتم إضافتهم أيضاً إلى مصدر المصادقة الخارجي إن لم يكونوا مضافين إليه سابقاً. فضلاً عن ذلك، إن كان هذا النظام هو مصدر المصادقة الإفتراضي، فإن حسابات المستخدمين المسجلين عبره ستضاف أيضاً إلى مصدر المصادقة الخارجي بمجرد تسجيلهم هنا</message>
 	<message key="admin.systemVersion">نسخة النظام</message>
 	<message key="admin.systemConfiguration">تهيئة النظام</message>
-	<message key="admin.systemConfigurationDescription"><![CDATA[OJS configuration settings from <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[إعدادات ملف التهيئة المأخوذة من <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.journals.createInstructions">سيتم تلقائياً منحك دور رئيس التحرير في هذه المجلة. بعد إنشاء مجلة جديدة، سيتم توجيهك لضبط إعداداتها من أجل إكمال مرحلة التهيئة الأولية.</message>
 	<message key="admin.journals.journalSettings">إعدادات المجلة</message>
 	<message key="admin.journals.noneCreated">لم تتم استضافة أي مجلة بعد</message>
 	<message key="admin.contexts.confirmDelete">هل أنت متأكد من رغبتك في إزالة هذه المجلة من الموقع ومحو جميع متعلقاتها؟</message>
 	<message key="admin.contexts.create">استضف مجلة</message>
-	<message key="admin.journals.createInstructions">سيتم تلقائياً منحك دور المدير لهذه المجلة. لذا وبعد إضافة مجلة جديدة، عليك الولوج إليها كمدير لمتابعة متعلقات تنصيبها ومنح الأدوار للمستفيدين منها</message>
 	<message key="admin.journals.urlWillBe">ينبغي أن يكون بشكل كلمة واحدة قصيرة أو اختصاراً يعرِّف المجلة رابط المجلة سيكون {$sampleUrl}</message>
+	<message key="admin.contexts.form.titleRequired">العنوان مطلوب حتماً.</message>
 	<message key="admin.contexts.form.pathRequired">المسار مطلوب حتماً</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">تسمية المسار متوقع لها أن تتكون من سلسلة حروف إنجليزية وأرقام وشُرط تحتية وواصلات، ولا بد لها أن تبدأ وتنتهي بحرف إنجليزي أو رقم حصراً</message>
 	<message key="admin.contexts.form.pathExists">المسار الذي اخترته سبق وأن استُعمل لمجلة أخرى</message>
@@ -69,7 +78,7 @@
 	<message key="admin.mergeUsers.allUsers">كل المستخدمين المسجلين</message>
 	<message key="admin.mergeUsers.confirm">هل أنت متأكد من رغبتك في ضم المستخدمين المحددين البالغ عددهم {$oldAccountCount} ضمن حساب المستخدم ذو اسم الدخول "{$newUsername}"؟ إن جميع تلك الحسابات ستزول من الموقع بعد إتمام هذه العملية والتي لا سبيل إلى التراجع عنها لاحقاً. لاحظ أن عدد الحسابات المعنية بالضم هو {$oldAccountCount}</message>
 	<message key="admin.mergeUsers.noneEnrolled">لا أحد مسجل في الموقع بعد</message>
-
+  
 	<!-- Categories -->
 	<message key="admin.categories">الأصناف</message>
 	<message key="admin.categories.enable.description">مدير الموقع له أن يستحدث هنا عدداً من الأصناف لمساعدة متصفحي الموقع في الوصول إلى المجلات العلمية عندما يكون عددها كبيراً، وعندها يمكن لمديري تلك المجلات وضع مجلاتهم في أي من تلك الأصناف، الأمر الذي يتيح لمستخدمي الموقع الوصول إلى مبتغاهم عبر الرجوع إلى تلك الطريقة من التصنيف</message>
@@ -82,6 +91,8 @@
 	<message key="admin.categories.confirmDelete">هل أنت متأكد من رغبتك في حذف هذا التصنيف؟</message>
 	<message key="admin.categories.name">الاسم</message>
 	<message key="admin.categories.nameRequired">اسم التصنيف مطلوب حتماً</message>
-	
-	
+	<message key="admin.presses.createInstructions">سيتم تلقائياً منحك دور رئيس التحرير في هذه المجلة. بعد إنشاء مجلة جديدة، سيتم توجيهك لضبط إعداداتها من أجل إكمال مرحلة التهيئة الأولية.</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">منبه انتهاء صلاحية الاشتراك</message>
+	<message key="admin.scheduledTask.openAccessNotification">إشعارات الوصول المفتوح</message>
+	<message key="admin.scheduledTask.reviewReminder">منبه التحكيم</message>
 </locale>
