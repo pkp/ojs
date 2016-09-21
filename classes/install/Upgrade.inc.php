@@ -996,7 +996,6 @@ class Upgrade extends Installer {
 				$managerUserGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_MANAGER);
 				$managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $journal->getId());
 				$creatorUserId = $managerUsers->next()->getId();
-				unset($adminUsers, $adminUserGroup);
 			}
 			$article = $articleDao->getById($row['article_id']);
 
@@ -1244,6 +1243,7 @@ class Upgrade extends Installer {
 			foreach ($submissionFiles as $submissionFile) {
 				$submissionFile->setGenreId($genre->getId());
 				$submissionFile->setUploaderUserId($creatorUserId);
+				$submissionFile->setUserGroupId($managerUserGroup->getId());
 				$submissionFile->setFileStage(SUBMISSION_FILE_SUBMISSION);
 				$submissionFileDao->updateObject($submissionFile);
 			}
