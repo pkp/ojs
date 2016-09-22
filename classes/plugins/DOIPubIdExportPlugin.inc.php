@@ -334,7 +334,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	}
 
 	/**
-	 * Get article galleys with a DOI asigned  from gallley IDs.
+	 * Get article galleys with a DOI assigned from gallley IDs.
 	 * @param $galleyIds array
 	 * @param $context Context
 	 * @return array
