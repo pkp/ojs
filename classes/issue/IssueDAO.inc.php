@@ -174,6 +174,51 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	}
 
 	/**
+	 * Retrieve Issues by identification
+	 * @param $journalId int
+	 * @param $volume int
+	 * @param $number string
+	 * @param $year int
+	 * @param $titles array
+	 * @return DAOResultFactory
+	 */
+	function getIssuesByIdentification($journalId, $volume = null, $number = null, $year = null, $titles = array()) {
+		$params = array((int) $journalId);
+
+		$sqlVol = $sqlNum = $sqlYear = '';
+		if ($volume !== null) {
+			$sqlVol = ' AND i.volume = ?';
+			$params[] = (int) $volume;
+		}
+		if ($number !== null) {
+			$sqlNum = ' AND i.number = ?';
+			$params[] = $number;
+		}
+		if ($year !== null) {
+			$sqlYear = ' AND i.year = ?';
+			$params[] = (int) $year;
+		}
+
+		$i = 1;
+		$sqlTitleJoin = $sqlTitleWhere = '';
+		foreach ($titles as $title) {
+			$sqlTitleJoin .= ' LEFT JOIN issue_settings iss' .$i .' ON (i.issue_id = iss' .$i .'.issue_id)';
+			$sqlTitleWhere .= ' AND iss' .$i .'.setting_name = \'title\' AND iss' .$i .'.setting_value = ?';
+			$params[] = $title;
+			$i++;
+		}
+
+		$sql = 'SELECT i.* FROM issues i'
+			.$sqlTitleJoin .
+			' WHERE i.journal_id = ?'
+			.$sqlVol .$sqlNum .$sqlYear
+			.$sqlTitleWhere;
+
+		$result = $this->retrieve($sql, $params);
+		return new DAOResultFactory($result, $this, '_returnIssueFromRow');
+	}
+
+	/**
 	 * Retrieve Issue by "best" issue id -- public ID if it exists,
 	 * falling back on the internal issue ID otherwise.
 	 * @param $issueId string

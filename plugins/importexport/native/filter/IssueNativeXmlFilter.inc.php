@@ -84,19 +84,12 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$issueNode = $doc->createElementNS($deployment->getNamespace(), 'issue');
 		$this->addIdentifiers($doc, $issueNode, $issue);
 
-		$issueNode->setAttribute('volume', $issue->getVolume());
-		$issueNode->setAttribute('number', $issue->getNumber());
-		$issueNode->setAttribute('year', $issue->getYear());
 		$issueNode->setAttribute('published', $issue->getPublished());
 		$issueNode->setAttribute('current', $issue->getCurrent());
 		$issueNode->setAttribute('access_status', $issue->getAccessStatus());
-		$issueNode->setAttribute('show_volume', $issue->getShowVolume());
-		$issueNode->setAttribute('show_number', $issue->getShowNumber());
-		$issueNode->setAttribute('show_year', $issue->getShowYear());
-		$issueNode->setAttribute('show_title', $issue->getShowTitle());
 
 		$this->createLocalizedNodes($doc, $issueNode, 'description', $issue->getDescription(null));
-		$this->createLocalizedNodes($doc, $issueNode, 'title', $issue->getTitle(null));
+		$issueNode->appendChild($this->createIssueIdentificationNode($doc, $issue));
 
 		$this->addDates($doc, $issueNode, $issue);
 		$this->addSections($doc, $issueNode, $issue);
@@ -287,6 +280,39 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		}
 
 		$issueNode->appendChild($sectionsNode);
+	}
+
+	/**
+	 * Create and return an issue identification node.
+	 * @param $doc DOMDocument
+	 * @param $issue Issue
+	 * @return DOMElement
+	 */
+	function createIssueIdentificationNode($doc, $issue) {
+		$deployment = $this->getDeployment();
+		$vol = $issue->getVolume();
+		$num = $issue->getNumber();
+		$year = $issue->getYear();
+		$title = $issue->getTitle(null);
+		assert($issue->getShowVolume() || $issue->getShowNumber() || $issue->getShowYear() || $issue->getShowTitle());
+		$issueIdentificationNode = $doc->createElementNS($deployment->getNamespace(), 'issue_identification');
+		if ($issue->getShowVolume()) {
+			assert(!empty($vol));
+			$issueIdentificationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'volume', $vol));
+		}
+		if ($issue->getShowNumber()) {
+			assert(!empty($num));
+			$issueIdentificationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'number', $num));
+		}
+		if ($issue->getShowYear()) {
+			assert(!empty($year));
+			$issueIdentificationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'year', $year));
+		}
+		if ($issue->getShowTitle()) {
+			assert(!empty($title));
+			$this->createLocalizedNodes($doc, $issueIdentificationNode, 'title', $title);
+		}
+		return $issueIdentificationNode;
 	}
 }
 
