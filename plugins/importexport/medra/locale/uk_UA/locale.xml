@@ -38,7 +38,8 @@
 
 	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: DOI, призначені для статей, будуть експортовані у mEDRA як об'єкти типу <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works'</a>. DOI, призначені для гранок, будуть експортовані як об'єкти типу <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestations'</a>.]]></message>
 
-	<message key="plugins.importexport.medra.cliUsage">Використання: 
-{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys} objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...</message>
+	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Використання:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+]]></message>
 </locale>

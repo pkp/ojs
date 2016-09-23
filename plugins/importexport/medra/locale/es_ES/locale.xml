@@ -37,6 +37,8 @@
 
 	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[Nota: Los DOI asignados a los artículos se exportarán a mEDRA como <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'obras'</a>. Los DOI asignados a las galeradas se exportarán como <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestación'</a>.]]></message>
 		
-	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} exportar xmlFileName journal_path {issues|articles|galleys} objectId1 [objectId2] ... {$scriptName} {$pluginName} registrar journal_path {issues|articles|galleys} objectId1 [objectId2] ...
+	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Uso:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 ]]></message>
 </locale>

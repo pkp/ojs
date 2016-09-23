@@ -244,7 +244,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);
 
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
 
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -256,8 +256,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 		if (!$journal) {
 			if ($journalPath != '') {
-				echo __('plugins.importexport.native.cliError') . "\n";
-				echo __('plugins.importexport.native.error.unknownJournal', array('journalPath' => $journalPath)) . "\n\n";
+				echo __('plugins.importexport.common.cliError') . "\n";
+				echo __('plugins.importexport.common.error.unknownJournal', array('journalPath' => $journalPath)) . "\n\n";
 			}
 			$this->usage($scriptName);
 			return;
@@ -265,6 +265,13 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 		if ($xmlFile && $this->isRelativePath($xmlFile)) {
 			$xmlFile = PWD . '/' . $xmlFile;
+		}
+		$outputDir = dirname($xmlFile);
+		if (!is_writable($outputDir) || (file_exists($xmlFile) && !is_writable($xmlFile))) {
+			echo __('plugins.importexport.common.cliError') . "\n";
+			echo __('plugins.importexport.common.export.error.outputFileNotWritable', array('param' => $xmlFile)) . "\n\n";
+			$this->usage($scriptName);
+			return;
 		}
 
 		switch ($command) {
@@ -274,7 +281,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 				if (!$user) {
 					if ($userName != '') {
-						echo __('plugins.importexport.native.cliError') . "\n";
+						echo __('plugins.importexport.common.cliError') . "\n";
 						echo __('plugins.importexport.native.error.unknownUser', array('userName' => $userName)) . "\n\n";
 					}
 					$this->usage($scriptName);

@@ -21,7 +21,8 @@
 	<message key="plugins.importexport.datacite.settings.form.username">Ім'я користувача (символ)</message>
 	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Будь ласка, вкажіть ім'я користувача (символ), яке Ви отримали від DataCite. Ім'я користувача не може містити двокрапок.</message>
 
-	<message key="plugins.importexport.datacite.cliUsage">Використання: 
-{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...</message>
+	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[Використання:
+{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+]]></message>
 </locale>

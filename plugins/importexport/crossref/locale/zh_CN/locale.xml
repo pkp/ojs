@@ -16,9 +16,10 @@
 	<message key="plugins.importexport.crossref.displayName">CrossRef XML导出插件</message>
 	<message key="plugins.importexport.crossref.description">导出文章元数据为CrossRef XML格式。</message>
 
-	<message key="plugins.importexport.crossref.cliUsage">用法: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[用法:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 	<message key="plugins.importexport.crossref.settings.form.username">用户名</message>
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">请输入CrossRef为您配置的用户名</message>
 	<message key="plugins.importexport.crossref.settings.depositorIntro">请输入CrossRef DOI存储负责人的姓名和邮箱</message>

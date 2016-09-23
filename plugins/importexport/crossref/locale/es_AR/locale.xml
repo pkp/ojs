@@ -14,13 +14,13 @@
   -->
 
 <locale name="es_AR" full_name="Español (Argentina)">
-		<message key="plugins.importexport.crossref.displayName">Plugin de exportación de XML de CrossRef</message>
-		<message key="plugins.importexport.crossref.description">Exportación de la metadata de artículos usando XML de CrossRef.</message>
+	<message key="plugins.importexport.crossref.displayName">Plugin de exportación de XML de CrossRef</message>
+	<message key="plugins.importexport.crossref.description">Exportación de la metadata de artículos usando XML de CrossRef.</message>
 
-		<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Usage:
-	{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-	{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
-	]]></message>
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Uso:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 	<message key="plugins.importexport.crossref.requirements">Requerimientos</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">Todos los requerimientos del plugin se cumplen.</message>
 	<message key="plugins.importexport.crossref.settings.depositorIntro">Los siguientes items son requeridos para un depósito Crossref exitoso</message>

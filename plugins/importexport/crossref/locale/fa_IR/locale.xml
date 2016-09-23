@@ -14,8 +14,8 @@
 	<message key="plugins.importexport.crossref.displayName" >پلاگین استخراج CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description" >استخراج متاداده مقاله با الگوی CrossRef XML</message>
 
-	<message key="plugins.importexport.crossref.cliUsage" ><![CDATA[نحوه استفاده: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
+	<message key="plugins.importexport.crossref.cliUsage" ><![CDATA[نحوه استفاده:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
 ]]></message>
 </locale>

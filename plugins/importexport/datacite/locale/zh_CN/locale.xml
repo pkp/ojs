@@ -21,7 +21,8 @@
 	<message key="plugins.importexport.datacite.settings.form.username">用户名（标志）</message>
 	<message key="plugins.importexport.datacite.settings.form.usernameRequired">请输入Datacite分配的用户名（标志）。不能包含冒号。</message>
 
-	<message key="plugins.importexport.datacite.cliUsage">使用方法：
-{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...</message>
+	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[使用方法：
+{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+]]></message>
 </locale>

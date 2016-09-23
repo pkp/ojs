@@ -16,4 +16,7 @@
 	<message key="plugins.importexport.doaj.displayName">DOAJ Export Plugin</message>
 	<message key="plugins.importexport.doaj.description">Eksporter tidsskrift til DOAJ og e-mail DOAJ repræsentant tidsskriftinformation</message>
 	<message key="plugins.importexport.doaj.export.contact">Kontakt DOAJ for at blive inkluderet</message>
+	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Brug:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>
