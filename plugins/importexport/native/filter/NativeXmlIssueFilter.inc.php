@@ -70,16 +70,9 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issue = $issueDao->newDataObject();
 		$issue->setJournalId($context->getId());
-		$issue->setVolume($node->getAttribute('volume'));
-		$issue->setYear($node->getAttribute('year'));
-		$issue->setNumber($node->getAttribute('number'));
 		$issue->setPublished($node->getAttribute('published'));
 		$issue->setCurrent($node->getAttribute('current'));
 		$issue->setAccessStatus($node->getAttribute('access_status'));
-		$issue->setShowVolume($node->getAttribute('show_volume'));
-		$issue->setShowNumber($node->getAttribute('show_number'));
-		$issue->setShowYear($node->getAttribute('show_year'));
-		$issue->setShowTitle($node->getAttribute('show_title'));
 
 		$issueDao->insertObject($issue);
 		$deployment->setIssue($issue);
@@ -131,6 +124,9 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 				break;
 			case 'issue_cover':
 				$this->parseIssueCover($n, $issue);
+				break;
+			case 'issue_identification':
+				$this->parseIssueIdentification($n, $issue);
 				break;
 			default:
 				fatalError('Unknown element ' . $n->tagName);
@@ -321,6 +317,40 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 		}
 	}
 
+	/**
+	 * Parse out the issue identification and store it in an issue.
+	 * @param $node DOMElement
+	 * @param $issue Issue
+	 */
+	function parseIssueIdentification($node, $issue) {
+		$deployment = $this->getDeployment();
+		$context = $deployment->getContext();
+		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
+			if (is_a($n, 'DOMElement')) {
+				switch ($n->tagName) {
+					case 'volume':
+						$issue->setVolume($n->textContent);
+						$issue->setShowVolume(1);
+						break;
+					case 'number':
+						$issue->setNumber($n->textContent);
+						$issue->setShowNumber(1);
+						break;
+					case 'year':
+						$issue->setYear($n->textContent);
+						$issue->setShowYear(1);
+						break;
+					case 'title':
+						list($locale, $value) = $this->parseLocalizedContent($n);
+						if (empty($locale)) $locale = $context->getPrimaryLocale();
+						$issue->setTitle($value, $locale);
+						$issue->setShowTitle(1);
+						break;
+				}
+			}
+		}
+	}
+
 	//
 	// Helper functions
 	//
@@ -331,7 +361,6 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	function _getLocalizedIssueSetterMappings() {
 		return array(
 			'description' => 'setDescription',
-			'title' => 'setTitle',
 		);
 	}
 

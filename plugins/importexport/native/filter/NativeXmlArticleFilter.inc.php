@@ -85,6 +85,9 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 			case 'article_galley':
 				$this->parseArticleGalley($n, $submission);
 				break;
+			case 'issue_identification':
+				// do nothing, because this is done in populatePublishedSubmission
+				break;
 			default:
 				parent::handleChildElement($n, $submission);
 		}
@@ -145,10 +148,54 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	function populatePublishedSubmission($submission, $node) {
 		$deployment = $this->getDeployment();
 		$issue = $deployment->getIssue();
+		if (empty($issue)) {
+			$issueIdentificationNodes = $node->getElementsByTagName('issue_identification');
+			assert($issueIdentificationNodes->length == 1);
+			$issueIdentificationNode = $issueIdentificationNodes->item(0);
+			$issue = $this->parseIssueIdentification($issueIdentificationNode);
+		}
+		assert($issue);
 		$submission->setSequence($node->getAttribute('seq'));
 		$submission->setAccessStatus($node->getAttribute('access_status'));
 		$submission->setIssueId($issue->getId());
 		return $submission;
+	}
+
+	/**
+	 * Get the issue from the given identification.
+	 * @param $node DOMElement
+	 * @return Issue
+	 */
+	function parseIssueIdentification($node) {
+		$deployment = $this->getDeployment();
+		$context = $deployment->getContext();
+		$vol = $num = $year = null;
+		$titles = array();
+		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
+			if (is_a($n, 'DOMElement')) {
+				switch ($n->tagName) {
+					case 'volume':
+						$vol = $n->textContent;
+						break;
+					case 'number':
+						$num = $n->textContent;
+						break;
+					case 'year':
+						$year = $n->textContent;
+						break;
+					case 'title':
+						list($locale, $value) = $this->parseLocalizedContent($n);
+						if (empty($locale)) $locale = $context->getPrimaryLocale();
+						$titles[$locale] = $value;
+						break;
+				}
+			}
+		}
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issuesByIdentification = $issueDao->getIssuesByIdentification($context->getId(), $vol, $num, $year, $titles);
+		assert($issuesByIdentification->getCount() == 1);
+		$issue = $issuesByIdentification->next();
+		return $issue;
 	}
 }
 
