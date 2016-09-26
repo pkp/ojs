@@ -89,7 +89,7 @@ class GoogleScholarPlugin extends GenericPlugin {
 		}
 
 		foreach($templateMgr->get_template_vars('pubIdPlugins') as $pubIdPlugin) {
-			if ($pubId = $pubIdPlugin->getPubId($article)) {
+			if ($pubId = $article->getStoredPubId($pubIdPlugin->getPubIdType())) {
 				$templateMgr->addHeader('googleScholarPubId' . $pubIdPlugin->getPubIdDisplayType(), '<meta name="citation_' . htmlspecialchars(strtolower($pubIdPlugin->getPubIdDisplayType())) . '" content="' . htmlspecialchars($pubId) . '"/>');
 				
 			}

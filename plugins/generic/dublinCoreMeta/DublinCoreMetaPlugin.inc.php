@@ -97,7 +97,7 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 		}
 
 		foreach($templateMgr->get_template_vars('pubIdPlugins') as $pubIdPlugin) {
-			if ($pubId = $pubIdPlugin->getPubId($article)) {
+			if ($pubId = $article->getStoredPubId($pubIdPlugin->getPubIdType())) {
 				$templateMgr->addHeader('dublinCorePubId' . $pubIdPlugin->getPubIdDisplayType(), '<meta name="DC.Identifier.' . htmlspecialchars($pubIdPlugin->getPubIdDisplayType()) . '" content="' . htmlspecialchars($pubId) . '"/>');
 			}
 		}
