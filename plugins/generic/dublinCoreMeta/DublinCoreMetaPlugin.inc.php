@@ -63,7 +63,7 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 
 		$i=0;
 		if ($coverages = $article->getCoverage(null)) foreach($coverages as $locale => $coverage) {
-			$templateMgr->addHeader('dublinCoreCoverage' . $i++, '<meta name="DC.Contributor.Sponsor" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars(strip_tags($coverage)) . '"/>');
+			$templateMgr->addHeader('dublinCoreCoverage' . $i++, '<meta name="DC.Coverage" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars(strip_tags($coverage)) . '"/>');
 		}
 
 		$i=0;
