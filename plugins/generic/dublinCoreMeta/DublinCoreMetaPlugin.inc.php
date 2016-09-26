@@ -125,7 +125,7 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 			}
 		}
 
-		$templateMgr->addHeader('dublinCoreTitle', '<meta name="DC.Title" content="' . htmlspecialchars($article->getLocalizedTitle()) . '"/>');
+		$templateMgr->addHeader('dublinCoreTitle', '<meta name="DC.Title" content="' . htmlspecialchars($article->getLocalizedTitle($article->getLocale())) . '"/>');
 		$i=0;
 		foreach ($article->getTitle(null) as $locale => $title) {
 			if ($title == $article->getLocalizedTitle()) continue;
