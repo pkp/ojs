@@ -35,7 +35,7 @@
 	</header>
 
 	<div id="htmlContainer">
-		<iframe name="htmlFrame" src="{url page="article" op="download" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal) inline=true}" width="100%" height="100%" style="border: 0px;" allowfullscreen webkitallowfullscreen></iframe>
+		<iframe name="htmlFrame" src="{url page="article" op="download" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal) inline=true}" allowfullscreen webkitallowfullscreen></iframe>
 	</div>
 	{call_hook name="Templates::Common::Footer::PageFooter"}
 </body>
