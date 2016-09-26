@@ -95,7 +95,7 @@ class GoogleScholarPlugin extends GenericPlugin {
 			}
 		}
 
-		$templateMgr->addHeader('googleScholarHtmlUrl', '<meta name="citation_abstract_html_url" content="' . $request->url(null, 'article', 'view', array($article->getBestArticleId($journal))) . '"/>');
+		$templateMgr->addHeader('googleScholarHtmlUrl', '<meta name="citation_abstract_html_url" content="' . $request->url(null, 'article', 'view', array($article->getBestArticleId())) . '"/>');
 		if ($language = $article->getLanguage()) $templateMgr->addHeader('googleScholarLanguage', '<meta name="citation_language" content="' . htmlspecialchars($language()) . '"/>');
 
 		$i=0;
@@ -108,10 +108,10 @@ class GoogleScholarPlugin extends GenericPlugin {
 		$i=$j=0;
 		if (is_a($article, 'PublishedArticle')) foreach ($article->getGalleys() as $galley) {
 			if (is_a($galley->getFile(), 'SupplementaryFile')) continue;
-				$templateMgr->addHeader('googleScholarPdfUrl' . $i++, '<meta name="citation_pdf_url" content="' . $request->url(null, 'article', 'download', array($article->getBestArticleId($journal), $galley->getBestGalleyId($journal))) . '"/>');
+				$templateMgr->addHeader('googleScholarPdfUrl' . $i++, '<meta name="citation_pdf_url" content="' . $request->url(null, 'article', 'download', array($article->getBestArticleId(), $galley->getBestGalleyId())) . '"/>');
 			if ($galley->getFileType()=='application/pdf') {
 			} else {
-				$templateMgr->addHeader('googleScholarHtmlUrl' . $i++, '<meta name="citation_fulltext_html_url" content="' . $request->url(null, 'article', 'view', array($article->getBestArticleId($journal), $galley->getBestGalleyId($journal))) . '"/>');
+				$templateMgr->addHeader('googleScholarHtmlUrl' . $i++, '<meta name="citation_fulltext_html_url" content="' . $request->url(null, 'article', 'view', array($article->getBestArticleId(), $galley->getBestGalleyId())) . '"/>');
 			}
 		}
 
