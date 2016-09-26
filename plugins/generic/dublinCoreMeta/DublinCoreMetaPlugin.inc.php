@@ -133,6 +133,11 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 		}
 
 		$templateMgr->addHeader('dublinCoreType', '<meta name="DC.Type" content="Text.Serial.Journal"/>');
+		$i=0;
+		if ($types = $article->getType(null)) foreach($types as $locale => $type) {
+			$templateMgr->addHeader('dublinCoreType' . $i++, '<meta name="DC.Type" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars(strip_tags($type)) . '"/>');
+		}
+
 		$templateMgr->addHeader('dublinCoreArticleType', '<meta name="DC.Type.articleType" content="' . htmlspecialchars($article->getSectionTitle()) . '"/>');
 
 		return false;
