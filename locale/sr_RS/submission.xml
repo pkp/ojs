@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/sr_RS/submission.xml
+  *
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sr_RS (Crpski) locale.
+  * Igor Lekić(igor.lekic@ff.uns.ac.rs)
+  -->
+
+<locale name="sr_RS" full_name = "Crpski">
+	<!-- Submission wizard -->
+
+	<!-- Submission Information Modal -->
+
+	<!-- events -->
+
+	<!-- galleys grid -->
+
+	<!-- galley files grid -->
+	<message key="submission.submit.title">Predaj rad</message>
+	<message key="submission.submit.userGroup">Predaj u mojoj ulozi kao...</message>
+	<message key="submission.upload.selectComponent">Odaberite sastavni deo rada</message>
+	<message key="submission.title">Naslov rada</message>
+	<message key="submission.title.tip"><![CDATA[Vrsta rada je obično "slika", "tekst" ili neki drua vrsta multimedije, uključujući i 'softver' ili 'interaktivni rad'. Odaberite najrelevantniju za vaš rad. Primere možete videti na sledećoj stranici <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
+	<message key="submission.submit.newSubmissionMultiple">Započnite predaju novog rada u</message>
+	<message key="submission.submit.newSubmissionSingle">Predaja novog rada</message>
+	<message key="grid.action.workflow">Proces predaje</message>
+	<message key="submission.issueEntry">Metapodaci</message>
+	<message key="submission.submit.whatNext.description">Časopis je obavešten o vašoj predaju i poslata vam je imejl poruka sa potvrdom vaših podataka. Kada urednici pregleda predaju kontaktiraće vas.</message>
+	<message key="grid.action.issueEntry">Pogledaj metapodatke predaje</message>
+	<message key="submission.issueEntry.modalTitle">Metapodaci predaje i publikacije</message>
+	<message key="submission.issueEntry.submissionMetadata">Predaja</message>
+	<message key="submission.issueEntry.publicationMetadata">Publikacije</message>
+	<message key="submission.event.publicIdentifiers">Javni identifikatori predaje su ažurirani.</message>
+	<message key="grid.action.availableArticleGalley">Omogući ovaj fajl prikaza</message>
+	<message key="submission.galleyFiles">Fajlovi prikaza</message>
+	<message key="grid.action.approveProof">Odobri pruf za uključivanje u prikaz.</message>
+	<message key="grid.action.pageProofApproved">Ovaj pruf je odobren za uključivanje u prikaz.</message>
+	<message key="submission.submit.titleAndSummary">Naslov i apstrakt</message>
+	<message key="submission.pageProofs">Lektura</message>
+	<message key="submission.confirmSubmit">Da li ste sigurni da želite da predate ovaj rad u časopis?</message>
+	<message key="workflow.review.externalReview">Recenzija</message>
+	<message key="editor.submission.decision.sendExternalReview">Pošalji na recenziranje</message>
+	<message key="submission.event.issueMetadataUpdated">Metapodaci predaje su ažurirani.</message>
+	<message key="submission.upload.fileContents">Delovi rada</message>
+	<message key="submission.complete">Odobreno</message>
+	<message key="submission.incomplete">Čekam odobrenje</message>
+	<message key="submission.submit.form.localeRequired">Odaberite jezik predaje.</message>
+	<message key="submission.submit.submissionChecklist">Čeklista predaje</message>
+	<message key="submission.submit.submissionChecklistDescription">Morate pročitati i potvrditi da ste ispunili sve zahteve pre nastavka.</message>
+	<message key="submission.submit.privacyStatement">Izjava o privatnosti</message>
+	<message key="submission.submit.contributorRole">Uloge saradnika</message>
+	<message key="submission.submit.form.authorRequired">Potreban je barem jedan autor.</message>
+	<message key="submission.submit.form.authorRequiredFields">Imena, prezimena i imejl adrese svih autora su neophodni.</message>
+	<message key="submission.submit.form.titleRequired">Unesite naslov rada</message>
+	<message key="submission.submit.form.abstractRequired">Unesite apstrakt rada.</message>
+	<message key="submission.submit.form.contributorRoleRequired">Odaberite ulogu saradnika.</message>
+	<message key="submission.citationFormat.notFound">Zahtevani format citata nije moguće preuzeti.</message>
+	<message key="submission.metadataDescription">Ove specifikacije su bazirane na Dublin Core setu metapodataka, međunarodnom standardu koji se koristi za opisivanje sadržaja časopisa.</message>
+</locale>
