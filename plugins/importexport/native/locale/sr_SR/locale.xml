@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="sr_SR" full_name="Српски">
 	<message key="plugins.importexport.native.displayName">Native XML додатак</message>
 	<message key="plugins.importexport.native.description">Увози и извози чланке  и бројеве часописа у примарном  OJS XML формату.</message>
 	<message key="plugins.importexport.native.import">Увоз</message>
