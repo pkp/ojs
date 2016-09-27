@@ -24,10 +24,6 @@
 	{* Show article overview *}
 	{include file="frontend/objects/article_details.tpl"}
 
-	{* Display Dublin Core metadata *}
-	{include file="frontend/objects/article_dublinCore.tpl" article=$article}
-	{include file="frontend/objects/article_googleScholar.tpl" article=$article}
-
 	{call_hook name="Templates::Article::Footer::PageFooter"}
 
 </div><!-- .page -->
