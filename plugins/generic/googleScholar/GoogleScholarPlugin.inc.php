@@ -108,9 +108,9 @@ class GoogleScholarPlugin extends GenericPlugin {
 		$i=$j=0;
 		if (is_a($article, 'PublishedArticle')) foreach ($article->getGalleys() as $galley) {
 			if (is_a($galley->getFile(), 'SupplementaryFile')) continue;
-				$templateMgr->addHeader('googleScholarPdfUrl' . $i++, '<meta name="citation_pdf_url" content="' . $request->url(null, 'article', 'download', array($article->getBestArticleId(), $galley->getBestGalleyId())) . '"/>');
 			if ($galley->getFileType()=='application/pdf') {
-			} else {
+				$templateMgr->addHeader('googleScholarPdfUrl' . $i++, '<meta name="citation_pdf_url" content="' . $request->url(null, 'article', 'download', array($article->getBestArticleId(), $galley->getBestGalleyId())) . '"/>');
+			} elseif ($galley->getFileType()=='text/html') {
 				$templateMgr->addHeader('googleScholarHtmlUrl' . $i++, '<meta name="citation_fulltext_html_url" content="' . $request->url(null, 'article', 'view', array($article->getBestArticleId(), $galley->getBestGalleyId())) . '"/>');
 			}
 		}
