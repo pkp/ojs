@@ -13,6 +13,6 @@
   -->
  
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="plugins.block.languageToggle.displayName">Blok promene jezika</message>
-	<message key="plugins.block.languageToggle.description">Ovaj blok prikazuje alatku za promenu jezika interfejsa.</message>
+	<message key="plugins.block.languageToggle.displayName">Блок промене језика</message>
+	<message key="plugins.block.languageToggle.description">Овај блок приказује алатку за промену језика интерфејса.</message>
 </locale>

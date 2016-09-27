@@ -13,8 +13,12 @@
   -->
  
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="plugins.citationFormats.abnt.displayName">ABNT format citata</message>
+	<message key="plugins.citationFormats.abnt.displayName">ABNT формат цитата</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
-	<message key="plugins.citationFormats.abnt.description">Ovaj dodatak implementira ABNT format citata.</message>
-	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Dostupno na: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Datum pristupa: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.description">Овај додатак имплементира ABNT формат цитата.</message>
+	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Доступно на: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Датум приступа: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.manager.settings">Подешавања</message>
+	<message key="plugins.citationFormats.abnt.manager.AbntCitationSettings">Подешавања додатка ABNT форамт цитата</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.description">Подешавања треба да креирају цитате по правилима ABNT.</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.location">Локација</message>
 </locale>

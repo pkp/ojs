@@ -13,6 +13,6 @@
   -->
  
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="plugins.OAIMetadata.rfc1807.displayName">RFC1807 format metapodataka</message>
-	<message key="plugins.OAIMetadata.rfc1807.description">Podešava strukturu metapodataka koji je u skladu sa RFC1807 formatom.</message>
+	<message key="plugins.OAIMetadata.rfc1807.displayName">RFC1807 формат метаподатака</message>
+	<message key="plugins.OAIMetadata.rfc1807.description">Подешава структуру метаподатака који је у складу са RFC1807 форматом.</message>
 </locale>

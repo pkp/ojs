@@ -14,31 +14,61 @@
  
 <locale name="sr_SR" full_name="Cрпски">
 	<!-- Section default -->
-	<message key="section.default.title">Članci</message>
+	<message key="section.default.title">Чланци</message>
 	<message key="section.default.abbrev">ART</message>
-	<message key="section.default.policy">Uređivačka politika</message>
+	<message key="section.default.policy">Уређивачка политика</message>
 
 	<!--
 	 *
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">Rad koji prilažem nije ranije objavljivan, niti se nalazi u procesu razmatranja u drugom časopisu (ili je objašnjenje obezbeđeno u komentarima uredniku).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Fajl koji prilažem je u formatu OpenOffice, Microsoft Word, RTF, ili WordPerfect.</message>
-	<message key="default.journalSettings.checklist.addressesLinked">Gde je moguće URL-ovi referenci su priloženi.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Tekst ima prored 1, korisi font veličine 12, koristi kurziv umesto podvlačenja (izuzev URL adresa) i ilustracije, tabele i prilozi su smešteni unutar teksta na odgovarajućim mestima na na kraju.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Tekst sa uputstvima vezanim za stil i bibliografske zahtevime je u <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Uputstva za autore</a>, koja se nalaze u sekciji "O časopisu".]]></message>
-	<message key="section.default.policy">Pravila za rubriku</message>
+	<message key="default.journalSettings.checklist.notPreviouslyPublished">Рад који прилажем није раније објављиван, нити се налази у процесу разматрања у другом часопису (или је објашњење обезбеђено у коментарима уреднику).</message>
+	<message key="default.journalSettings.checklist.fileFormat">Фајл који прилажем је у формату OpenOffice, Microsoft Word, RTF, или WordPerfect.</message>
+	<message key="default.journalSettings.checklist.addressesLinked">Где је могуће URL-ови референци су приложени.</message>
+	<message key="default.journalSettings.checklist.submissionAppearance">Текст има проред 1,5, кориси фонт Times New Roman величине 12, користи курзив уместо подвлачења (изузев URL адреса) и илустрације, табеле и прилози су смештени унутар текста на одговарајућим местима или на крају.</message>
+	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Текст са упутствима везаним за стил и библиографске захтевиме је у <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Упутства за ауторе</a>, која се налазе у секцији "О часопису".]]></message>
+	<message key="section.default.policy">Правила за рубрику</message>
 	
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFee">Predaja radova</message>
-	<message key="default.journalSettings.publicationFee">Objavljivanje radova</message>
-	<message key="default.journalSettings.publicationFeeDescription">If this paper is accepted for publication, you will be asked to pay an Article Publication Fee to cover publications costs.</message>
-	<message key="default.journalSettings.purchaseArticleFee">Kupovina članaka</message>
-	<message key="default.journalSettings.membershipFee">Članstvo asocijacija</message>
-	<message key="default.journalSettings.donationFee">Donacije časopisu</message>
-	<message key="default.journalSettings.emailHeader">Sledeća poruka se šalje u ime  {$journalName}.
-________________________________________________________________________</message>
-	<message key="default.journalSettings.purchaseIssueFee">Kupi izdanje</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Plaćanje ovog iznosa će vam omogućiti da vidite, preuzmete ili odštampate izdanje broja.</message>
+	<message key="default.journalSettings.submissionFee">Предаја радова</message>
+	<message key="default.journalSettings.publicationFee">Објављивање радова</message>
+	<message key="default.journalSettings.publicationFeeDescription">Ако овај чланак буде прихваћен за објављивање, од вас ће се тражити да плате накнаду за објављивање.</message>
+	<message key="default.journalSettings.purchaseArticleFee">Куповина чланака</message>
+	<message key="default.journalSettings.membershipFee">Чланство асоцијација</message>
+	<message key="default.journalSettings.donationFee">Донације часопису</message>
+	<message key="default.journalSettings.purchaseIssueFee">Купи издање</message>
+	<message key="default.journalSettings.purchaseIssueFeeDescription">Плаћање овог износа ће вам омогућити да видите, преузмете или одштампате издање броја.</message>
+	<message key="default.journalSettings.privacyStatement">Имена и имејл адресе унете на овом сајту биће коришћене искључиво за наведене потребе овог часописа и неће бити доступни ни за једну другу сврху или некој другој страни.</message>
+	<message key="default.journalSettings.openAccessPolicy">Овај часопис пружа отворени приступ садржају по принципу који омогућује истраживачки рад бесплатно доступан јавности, а све у циљу веће глобалне размене знања.</message>
+	<message key="default.journalSettings.submissionFeeDescription">Аутори су дужни да плате накнаду за предају радова као део процеса предаје у сврху доприноса трошковима рецензирања.</message>
+	<message key="default.journalSettings.fastTrackFeeDescription">Са плаћањем ове надокнаде рецензентска одлука, одлука уредника и обавештење аутору биће засигурно доступни у року од 4 недеље.</message>
+	<message key="default.groups.name.manager">Менаџер часописа</message>
+	<message key="default.groups.plural.manager">Менаџери часописа</message>
+	<message key="default.groups.abbrev.manager">JM</message>
+	<message key="default.groups.name.editor">Уредник часописа</message>
+	<message key="default.groups.plural.editor">Уредници часописа</message>
+	<message key="default.groups.abbrev.editor">JE</message>
+	<message key="default.groups.name.guestEditor">Гостујући уредник</message>
+	<message key="default.groups.plural.guestEditor">Гостујући уредници</message>
+	<message key="default.groups.abbrev.guestEditor">GE</message>
+	<message key="default.groups.name.sectionEditor">Уредник секције</message>
+	<message key="default.groups.plural.sectionEditor">Уредници секције</message>
+	<message key="default.groups.abbrev.sectionEditor">SecE</message>
+	<message key="default.groups.name.subscriptionManager">Менаџер претплата</message>
+	<message key="default.groups.plural.subscriptionManager">Менаџери претплата</message>
+	<message key="default.groups.abbrev.subscriptionManager">SubM</message>
+	<message key="default.genres.researchInstrument">Истраживачки инструмент</message>
+	<message key="default.genres.researchMaterials">Истраживачки материјал</message>
+	<message key="default.genres.researchResults">Истраживачки резултати</message>
+	<message key="default.genres.transcripts">Транскрипт</message>
+	<message key="default.genres.dataAnalysis">Анализа података</message>
+	<message key="default.genres.dataSet">Скуп података</message>
+	<message key="default.genres.sourceTexts">Изворни текстови</message>
+	<message key="default.groups.name.externalReviewer">Рецензент</message>
+	<message key="default.groups.plural.externalReviewer">Рецензенти</message>
+	<message key="default.groups.abbrev.externalReviewer">R</message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+________________________________________________________________________<br/>
+<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
 </locale>

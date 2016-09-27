@@ -13,6 +13,6 @@
   -->
  
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="plugins.OAIMetadata.marcxml.displayName">MARC21 format metapodataka</message>
-	<message key="plugins.OAIMetadata.marcxml.description">Podešava strukturu metapodataka koji je u skladu sa MARC21 formatom.</message>
+	<message key="plugins.OAIMetadata.marcxml.displayName">MARC21 формат метаподатака</message>
+	<message key="plugins.OAIMetadata.marcxml.description">Подешава структуру метаподатака који је у складу са MARC21 форматом.</message>
 </locale>

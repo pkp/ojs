@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  *
+  * Localization strings for the sr_SR (Cрпски) locale.
+  * Igor Lekić(igor.lekic@ff.uns.ac.rs)
+   -->
+
+<locale name="sr_SR" full_name="Српски">
+	<message key="plugins.importexport.users.displayName">Users XML додатак</message>
+	<message key="plugins.importexport.users.description">Увоз и извоз корисника</message>
+
+	<message key="plugins.importexport.users.cliUsage"><![CDATA[Примена: {$scriptName} {$pluginName} [command] ...
+Наредбе:
+	import [xmlFileName] [press_path] [optional flags]
+	export [xmlFileName] [press_path]
+	export [xmlFileName] [press_path] [role_path1] [role_path2] ...
+
+Опционе ознаке:
+	continue_on_error: Уколико је затато, у случају грешке не стаје са увозом корисника
+
+	send_notify: Уколико је задато шаље имејл обавештење свим корисницима са подацима о корисничком имену и лозинци
+
+Примери:
+	Увози кориснике у myPress часопис из myImportFile.xml, настављајући у случају грешке:
+	{$scriptName} {$pluginName} import myImportFile.xml myPress continue_on_error
+
+	Извози кориснике из часописа myPress у фајл myExportFile.xml:
+	{$scriptName} {$pluginName} export myExportFile.xml myPress
+
+	Извози кориснике регистроване као рецензенте са њиховим рецензентским улогама:
+	{$scriptName} {$pluginName} export myExportFile.xml myPress reviewer
+]]></message>
+	<message key="plugins.importexport.users.import.importUsers">Увоз корисника</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Одаберите XML фајл који садржи информације о корисницима које желите увести у часопис. Консултујте помоћ за детале о формату фајла.<br /><br />Уколико фајл садржи податке о корисницима који већ постоје, они неће бити унети већ ће се постојећим корисницима променити/доделити улоге из фајла.]]></message>
+	<message key="plugins.importexport.users.import.dataFile">Фајл са подацима</message>
+	<message key="plugins.importexport.users.import.sendNotify">Пошаљи имејл сваком унетом кориснику са његовим корисничким именом и лозинком.</message>
+	<message key="plugins.importexport.users.import.continueOnError">У случају грешке настави са увозом.</message>
+	<message key="plugins.importexport.users.import.usersWereImported">Следећи корисници су успешно увезени</message>
+	<message key="plugins.importexport.users.import.errorsOccurred">Грешке приликом увоза</message>
+	<message key="plugins.importexport.users.import.confirmUsers">Потврдите да су ово корисници које желите да увезете</message>
+	<message key="plugins.importexport.users.import.warning">УПОЗОРЕЊЕ</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Немогуће коришћење лозинки хешованих са {$importHash}; OJS је конфигурисан да користи {$ojsHash}. Уколико наставите, мораћете ресетовати лозинке свих корисника које увезете.</message>
+	<message key="plugins.importexport.users.unknownPress">Непозната путања часописа "{$journalPath}".</message>
+
+	<message key="plugins.importexport.users.export.exportUsers">Извези кориснике</message>
+	<message key="plugins.importexport.users.export.exportByRole">Извези по улози</message>
+	<message key="plugins.importexport.users.export.exportAllUsers">Извези све</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">Дошло је до грешака приликом извоза</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">Немогуће уписивање у фајл "{$fileName}".</message>
+	<message key="plugins.importexport.users.importComplete">Увоз је успешно завршен. Корисници са корисничким именима и имејл адресама које до сада нису била у употреби су успешно увезени и додати у одговарајуће групе.</message>
+	<message key="plugins.importexport.users.results">Резултати</message>
+	<message key="plugins.importexport.users.uploadFile">Молимо додајте фајл у опцији "Увоз" за наставак.</message>
+</locale>

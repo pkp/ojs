@@ -9,22 +9,23 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the sr_SR (Cрпски) locale.
-  *
+  * Igor Lekić(igor.lekic@ff.uns.ac.rs)
   -->
  
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="plugins.generic.webfeed.displayName">Web Feed dodatak</message>
-	<message key="plugins.generic.webfeed.description">Ovaj dodatak proizvodi RSS/Atom web syndication feeds za trenutni broj časopisa.</message>
+	<message key="plugins.generic.webfeed.displayName">Web Feed додатак</message>
+	<message key="plugins.generic.webfeed.description">Овај додатак производи RSS/Atom web syndication feeds за тренутни број часописа.</message>
 
-	<message key="plugins.generic.webfeed.settings">Podešavanja</message>
-	<message key="plugins.generic.webfeed.settings.issue">Prikaži linkove samo na stranici trenutnog broja.</message>
-	<message key="plugins.generic.webfeed.settings.homepage">Prikaži linkove samo na početnoj stranici i stranici trenutnog broja.</message>
-	<message key="plugins.generic.webfeed.settings.all">Prikaži linkove na svim stranicama časopisa.</message>
+	<message key="plugins.generic.webfeed.settings">Подешавања</message>
+	<message key="plugins.generic.webfeed.settings.issue">Прикажи линкове само на страници тренутног броја.</message>
+	<message key="plugins.generic.webfeed.settings.homepage">Прикажи линкове само на почетној страници и страници тренутног броја.</message>
+	<message key="plugins.generic.webfeed.settings.all">Прикажи линкове на свим страницама часописа.</message>
 
-	<message key="plugins.generic.webfeed.settings.currentIssue">Prikaži stavke trenutno objavljenog broja.</message>
-	<message key="plugins.generic.webfeed.settings.recentArticles">poslednje objavljene stavke.</message>
-	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Unesite broj stavki koje će se prikazivati.</message>
-	<message key="plugins.generic.webfeed.atom.altText">Atom logo</message>
-	<message key="plugins.generic.webfeed.rss1.altText">RSS1 logo</message>
-	<message key="plugins.generic.webfeed.rss2.altText">RSS2 logo</message>
+	<message key="plugins.generic.webfeed.settings.currentIssue">Прикажи ставке тренутно објављеног броја.</message>
+	<message key="plugins.generic.webfeed.settings.recentArticles">последње објављене ставке.</message>
+	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Унесите број ставки које ће се приказивати.</message>
+	<message key="plugins.generic.webfeed.atom.altText">Atom лого</message>
+	<message key="plugins.generic.webfeed.rss1.altText">RSS1 лого</message>
+	<message key="plugins.generic.webfeed.rss2.altText">RSS2 лого</message>
+	<message key="plugins.generic.webfeed.settings.recent">Прикажи фиксни број скорашњих ставки.</message>
 </locale>

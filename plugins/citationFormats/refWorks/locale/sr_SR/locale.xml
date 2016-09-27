@@ -13,8 +13,8 @@
   -->
  
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="plugins.citationFormats.refWorks.displayName">RefWorks format citata</message>
+	<message key="plugins.citationFormats.refWorks.displayName">RefWorks формат цитата</message>
 	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
-	<message key="plugins.citationFormats.refWorks.description">Ovaj dodatak implementira RefWorks format citata.</message>
-	<message key="plugins.citationFormats.refWorks.export">Izvezi u RefWorks</message>
+	<message key="plugins.citationFormats.refWorks.description">Овај додатак имплементира RefWorks формат цитата.</message>
+	<message key="plugins.citationFormats.refWorks.export">Извези у RefWorks</message>
 </locale>

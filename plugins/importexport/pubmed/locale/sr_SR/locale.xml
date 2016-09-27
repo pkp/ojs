@@ -9,26 +9,26 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the sr_SR (Cрпски) locale.
-  *
+  * Igor Lekić(igor.lekic@ff.uns.ac.rs)
   -->
  
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="plugins.importexport.pubmed.displayName">PubMed XML dodatak za izvoz</message>
-	<message key="plugins.importexport.pubmed.description">Izvoz metapodataka članaka u PubMed XML formatu za indeksiranje u MEDLINE.</message>
+	<message key="plugins.importexport.pubmed.displayName">PubMed XML додатак за извоз</message>
+	<message key="plugins.importexport.pubmed.description">Извоз метаподатака чланака у PubMed XML формату за индексирање у MEDLINE.</message>
 	
-	<message key="plugins.importexport.pubmed.export">Izvezi podatke</message>
-	<message key="plugins.importexport.pubmed.export.issues">Izvezi broj</message>
-	<message key="plugins.importexport.pubmed.export.selectIssue">Odaberi brojeve za izvoz.</message>
-	<message key="plugins.importexport.pubmed.export.articles">Izvezi članke</message>
-	<message key="plugins.importexport.pubmed.export.selectArticle">Odaberi članke za izvoz.</message>
+	<message key="plugins.importexport.pubmed.export">Извези податке</message>
+	<message key="plugins.importexport.pubmed.export.issues">Извези број</message>
+	<message key="plugins.importexport.pubmed.export.selectIssue">Одабери бројеве за извоз.</message>
+	<message key="plugins.importexport.pubmed.export.articles">Извези чланке</message>
+	<message key="plugins.importexport.pubmed.export.selectArticle">Одабери чланке за извоз.</message>
 	
-	<message key="plugins.importexport.pubmed.cliUsage">Korišćenje: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] članci [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] broj [issueId]</message>
-	<message key="plugins.importexport.pubmed.cliError">GREŠKA:</message>
+	<message key="plugins.importexport.pubmed.cliUsage">Коришћење: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] чланци [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] број [issueId]</message>
+	<message key="plugins.importexport.pubmed.cliError">ГРЕШКА:</message>
 
-	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Ni jedan broj se ne poklapa sa zadatim ID-jem broja "{$issueId}".</message>
-	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Ni jedan članak se ne poklapa sa zadatim ID-jem članka "{$articleId}".</message>
+	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Ни један број се не поклапа са задатим ID-јем броја "{$issueId}".</message>
+	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Ни један чланак се не поклапа са задатим ID-јем чланка "{$articleId}".</message>
 
 
 </locale>
