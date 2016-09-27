@@ -43,13 +43,13 @@
 					<label class="label">
 						{translate key="search.dateFrom"}
 					</label>
-					{html_select_date prefix="dateFrom" time=$dateFrom start_year=$yearStart end_year=$yaerEnd|@end year_empty="" month_empty="" day_empty="" field_order="YMD"}
+					{html_select_date prefix="dateFrom" time=$dateFrom start_year=$yearStart end_year=$yearEnd year_empty="" month_empty="" day_empty="" field_order="YMD"}
 				</div>
 				<div class="to">
 					<label class="label">
 						{translate key="search.dateTo"}
 					</label>
-					{html_select_date prefix="dateTo" time=$dateTo start_year=$yearStart end_year=$yaerEnd|@end year_empty="" month_empty="" day_empty="" field_order="YMD"}
+					{html_select_date prefix="dateTo" time=$dateTo start_year=$yearStart end_year=$yearEnd year_empty="" month_empty="" day_empty="" field_order="YMD"}
 				</div>
 			</div>
 			<div class="author">

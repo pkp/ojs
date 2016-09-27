@@ -15,4 +15,7 @@
 <locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="plugins.importexport.doaj.displayName">Công cụ xuất sang DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Xuất tạp chí sang DOAJ và email cho đại diện DOAJ các thông tin của tạp chí.</message>
+	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Usage:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>

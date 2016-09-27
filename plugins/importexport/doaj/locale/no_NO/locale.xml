@@ -16,4 +16,7 @@
 	<message key="plugins.importexport.doaj.displayName">Programutvidelse for eksport til DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Eksporter tidsskrift til DOAJ og e-post tidsskriftinformasjon til DOAJs ansvarlige</message>
 	<message key="plugins.importexport.doaj.export.contact">Kontakt DOAJ for å bli inkludert</message>
+	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Bruk:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>

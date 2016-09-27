@@ -99,6 +99,9 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	 * @param $issue Issue
 	 */
 	function handleChildElement($n, $issue) {
+		$deployment = $this->getDeployment();
+		$context = $deployment->getContext();
+
 		$localizedSetterMappings = $this->_getLocalizedIssueSetterMappings();
 		$dateSetterMappings = $this->_getDateIssueSetterMappings();
 
@@ -106,6 +109,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 			// If applicable, call a setter for localized content.
 			$setterFunction = $localizedSetterMappings[$n->tagName];
 			list($locale, $value) = $this->parseLocalizedContent($n);
+			if (empty($locale)) $locale = $context->getPrimaryLocale();
 			$issue->$setterFunction($value, $locale);
 		} else if (isset($dateSetterMappings[$n->tagName])) {
 			// Not a localized element?  Check for a date.
@@ -225,8 +229,8 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 
 	/**
 	 * Parse a submission file and add it to the submission.
-	 * @param $n DOMElement
-	 * @param $submission Submission
+	 * @param $node DOMElement
+	 * @param $issue Issue
 	 */
 	function parseSections($node, $issue) {
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
@@ -239,7 +243,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 
 	/**
 	 * Parse a section stored in an issue.
-	 * @param $n DOMElement
+	 * @param $node DOMElement
 	 * @param $issue Issue
 	 */
 	function parseSection($node, $issue) {
@@ -249,7 +253,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 		assert(is_a($issue, 'Issue'));
 
 		// Create the data object
-		$sectionDao  = DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$section = $sectionDao->newDataObject();
 		$section->setContextId($context->getId());
 		$section->setReviewFormId($node->getAttribute('review_form_id'));
@@ -273,27 +277,32 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 						break;
 					case 'abbrev':
 						list($locale, $value) = $this->parseLocalizedContent($n);
+						if (empty($locale)) $locale = $context->getPrimaryLocale();
 						$section->setAbbrev($value, $locale);
 						break;
 					case 'policy':
 						list($locale, $value) = $this->parseLocalizedContent($n);
+						if (empty($locale)) $locale = $context->getPrimaryLocale();
 						$section->setPolicy($value, $locale);
 						break;
 					case 'title':
 						list($locale, $value) = $this->parseLocalizedContent($n);
+						if (empty($locale)) $locale = $context->getPrimaryLocale();
 						$section->setTitle($value, $locale);
 						break;
 				}
 			}
 		}
 
-		$sectionDao->insertObject($section);
+		if (!$this->_sectionExist($section)) {
+			$sectionDao->insertObject($section);
+		}
 	}
 
 	/**
 	 * Parse out the issue cover and store it in an issue.
-	 * @param DOMElement $node
-	 * @param Issue $issue
+	 * @param $node DOMElement
+	 * @param $issue Issue
 	 */
 	function parseIssueCover($node, $issue) {
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
@@ -338,6 +347,82 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 			'open_access_date'	=> 'setOpenAccessDate',
 		);
 	}
+
+	/**
+	 * Check if the section already exists.
+	 * @param $importSection Section New created section
+	 * @return boolean
+	 */
+	function _sectionExist($importSection) {
+		$deployment = $this->getDeployment();
+		$issue = $deployment->getIssue();
+		// title and, optionally, abbrev contain information that can
+		// be used to locate an existing section. If title and abbrev each match an
+		// existing section, but not the same section, throw an error.
+		$sectionDao  = DAORegistry::getDAO('SectionDAO');
+		$contextId = $importSection->getContextId();
+		$section = null;
+		$foundSectionId = $foundSectionTitle = null;
+		$index = 0;
+		$titles = $importSection->getTitle(null);
+		foreach($titles as $locale => $title) {
+			$section = $sectionDao->getByTitle($title, $contextId);
+			if ($section) {
+				$sectionId = $section->getId();
+				if ($foundSectionId) {
+					if ($foundSectionId != $sectionId) {
+						// Mismatching sections found.
+						fatalError(__('plugins.importexport.native.import.error.sectionTitleMismatch', array('section1Title' => $title, 'section2Title' => $foundSectionTitle, 'issueTitle' => $issue->getIssueIdentification())));
+					}
+				} else if ($index > 0) {
+					// the current title matches, but the prev titles didn't
+					fatalError(__('plugins.importexport.native.import.error.sectionTitleMatch', array('sectionTitle' => $title, 'issueTitle' => $issue->getIssueIdentification())));
+				}
+				$foundSectionId = $sectionId;
+				$foundSectionTitle = $title;
+			} else {
+				if ($foundSectionId) {
+					// a prev title matched, but the current doesn't
+					fatalError(__('plugins.importexport.native.import.error.sectionTitleMatch', array('sectionTitle' => $foundSectionTitle, 'issueTitle' => $issue->getIssueIdentification())));
+				}
+			}
+			$index++;
+		}
+		// check abbrevs:
+		$abbrevSection = null;
+		$foundSectionId = $foundSectionAbbrev = null;
+		$index = 0;
+		$abbrevs = $importSection->getAbbrev(null);
+		foreach($abbrevs as $locale => $abbrev) {
+			$abbrevSection = $sectionDao->getByAbbrev($abbrev, $contextId);
+			if ($abbrevSection) {
+				$sectionId = $abbrevSection->getId();
+				if ($foundSectionId) {
+					if ($foundSectionId != $sectionId) {
+						// Mismatching sections found.
+						fatalError(__('plugins.importexport.native.import.error.sectionAbbrevMismatch', array('section1Abbrev' => $abbrev, 'section2Abbrev' => $foundSectionAbbrev, 'issueTitle' => $issue->getIssueIdentification())));
+					}
+				} else if ($index > 0) {
+					// the current abbrev matches, but the prev abbrevs didn't
+					fatalError(__('plugins.importexport.native.import.error.sectionAbbrevMatch', array('sectionAbbrev' => $abbrev, 'issueTitle' => $issue->getIssueIdentification())));
+				}
+				$foundSectionId = $sectionId;
+				$foundSectionAbbrev = $abbrev;
+			} else {
+				if ($foundSectionId) {
+					// a prev abbrev matched, but the current doesn't
+					fatalError(__('plugins.importexport.native.import.error.sectionAbbrevMatch', array('sectionAbbrev' => $foundSectionAbbrev, 'issueTitle' => $issue->getIssueIdentification())));
+				}
+			}
+			$index++;
+		}
+		if (isset($section) && isset($abbrevSection)) {
+			return $section->getId() == $abbrevSection->getId();
+		} else {
+			return isset($section) || isset($abbrevSection);
+		}
+	}
+
 }
 
 ?>

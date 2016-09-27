@@ -75,7 +75,7 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 				import('lib.pkp.classes.submission.SubmissionFile');
 				$submissionFile = $submissionFileDao->getLatestRevision(
 					$element->getFileId(),
-					SUBMISSION_FILE_PROOF,
+					null,
 					$element->getSubmissionId()
 				);
 				import('lib.pkp.controllers.api.file.linkAction.DownloadFileLinkAction');

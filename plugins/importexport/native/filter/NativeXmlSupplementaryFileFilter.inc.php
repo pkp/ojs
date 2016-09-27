@@ -67,11 +67,14 @@ class NativeXmlSupplementaryFileFilter extends NativeXmlArticleFileFilter {
 	 * @param $submissionFiles array
 	 */
 	function handleChildElement($node, $stageId, $fileId, &$submissionFiles) {
+		$deployment = $this->getDeployment();
+		$submission = $deployment->getSubmission();
 		$localizedSetterMappings = $this->_getLocalizedSupplementaryFileSetterMappings();
 		if (isset($localizedSetterMappings[$node->tagName])) {
 			// If applicable, call a setter for localized content.
 			$setterFunction = $localizedSetterMappings[$node->tagName];
 			list($locale, $value) = $this->parseLocalizedContent($node);
+			if (empty($locale)) $locale = $submission->getLocale();
 			$submissionFiles[count($submissionFiles)-1]->$setterFunction($value, $locale);
 		} else switch ($node->tagName) {
 			case 'date_created':

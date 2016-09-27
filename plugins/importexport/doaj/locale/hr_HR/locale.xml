@@ -15,4 +15,7 @@
         full_name="Hrvatski">
 	<message key="plugins.importexport.doaj.displayName">Dodatak za iznošenje u DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Ovaj dodatak iznosi časopis za DOAJ i omogućuje slanje informacija o časopisu DOAJ kontaktu</message>
+	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Primjena:
+{$scriptName} {$pluginName} export [xmlNazivDatoteke] [putanja_časopisa] articles objectId1 [objectId2] ...
+]]></message>
 </locale>

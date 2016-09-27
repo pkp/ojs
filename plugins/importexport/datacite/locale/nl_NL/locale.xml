@@ -28,7 +28,8 @@
 	<message key="plugins.importexport.datacite.settings.form.username">Gebruikersnaam (symbol)</message>
 	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Geef de gebruikersnaam (symbool) die u van DataCite hebt gekregen. De gebruikersnaam mag geen dubbele punt bevatten.</message>
 
-	<message key="plugins.importexport.datacite.cliUsage">Gebruik: 
-{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...</message>
+	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[Gebruik:
+{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+]]></message>
 </locale>

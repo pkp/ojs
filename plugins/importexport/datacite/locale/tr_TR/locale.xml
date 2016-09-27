@@ -14,8 +14,9 @@
 <locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.importexport.datacite.displayName">DataCite İhraç/Kayıt Eklentisi</message>
 	<message key="plugins.importexport.datacite.description">DataCite biçiminde sayı, makale, dizgi, ek dosya üst verisi ihracı veya kaydı.</message>
-	<message key="plugins.importexport.datacite.cliUsage">Kullanım:
-{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...</message>
+	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[Kullanım:
+{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+]]></message>
 	<message key="plugins.importexport.datacite.senderTask.name">DataCite bilgi göndericisi</message>
 </locale>

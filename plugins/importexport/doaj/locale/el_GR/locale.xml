@@ -16,4 +16,7 @@
 	<message key="plugins.importexport.doaj.displayName">Πρόσθετο εξαγωγής DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Εξαγωγή περιεχομένων του περιοδικού στο DOAJ και παροχή πληροφοριών για αναφορά σε αυτό.</message>
 	<message key="plugins.importexport.doaj.export.contact">Επικοινωνήστε με το DOAJ για να συμπεριλάβετε το περιοδικό</message>
+	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Χρήση:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>

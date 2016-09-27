@@ -913,6 +913,68 @@ class Upgrade extends Installer {
 	}
 
 	/**
+	 * Set the missing uploader user id and group id to a journal manager.
+	 * @return boolean True indicates success.
+	 */
+	function setFileUploader() {
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$journalIterator = $journalDao->getAll();
+		while ($journal = $journalIterator->next()) {
+			$managerUserGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_MANAGER);
+			$managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $journal->getId());
+			$creatorUserId = $managerUsers->next()->getId();
+			$submissionFileDao->update('UPDATE submission_files sf, submissions s SET sf.uploader_user_id = ?, sf.user_group_id = ? WHERE sf.uploader_user_id IS NULL AND sf.user_group_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?', array($creatorUserId, $managerUserGroup->getId(), $journal->getId()));
+			$emptyUserGroupResult = $submissionFileDao->retrieve('SELECT DISTINCT sf.uploader_user_id FROM submission_files sf, submissions s WHERE sf.user_group_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?',array($journal->getId()));
+			while (!$emptyUserGroupResult->EOF) {
+				$row = $emptyUserGroupResult->getRowAssoc(false);
+				$emptyUserGroupResult->MoveNext();
+				$uploaderUserId = $row['uploader_user_id'];
+				$userGroupIdResult = $userGroupDao->retrieve('SELECT MIN(ug.user_group_id) as user_group_id FROM user_groups ug, user_user_groups uug WHERE ug.user_group_id = uug.user_group_id AND uug.user_id = ? AND ug.context_id = ?', array($uploaderUserId, $journal->getId()));
+				if ($userGroupIdResult->RecordCount() != 0) {
+					$userGroupId = $userGroupIdResult->fields[0];
+					$submissionFileDao->update('UPDATE submission_files sf, submissions s SET sf.user_group_id = ? WHERE sf.uploader_user_id = ? AND sf.user_group_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?', array($userGroupId, $uploaderUserId, $journal->getId()));
+				}
+			}
+			unset($managerUsers, $managerUserGroup);
+		}
+		return true;
+	}
+
+	/**
+	 * Set the missing file names.
+	 * @return boolean True indicates success.
+	 */
+	function setFileName() {
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$submissionDao = DAORegistry::getDAO('ArticleDAO');
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+
+		$contexts = $journalDao->getAll();
+		while ($context = $contexts->next()) {
+			$submissions = $submissionDao->getByContextId($context->getId());
+			while ($submission = $submissions->next()) {
+				$submissionFiles = $submissionFileDao->getBySubmissionId($submission->getId());
+				foreach ($submissionFiles as $submissionFile) {
+					$reviewStage = $submissionFile->getFileStage() == SUBMISSION_FILE_REVIEW_FILE ||
+						$submissionFile->getFileStage() == SUBMISSION_FILE_REVIEW_ATTACHMENT ||
+						$submissionFile->getFileStage() == SUBMISSION_FILE_REVIEW_REVISION;
+					if (!$submissionFile->getName(AppLocale::getPrimaryLocale())) {
+						if ($reviewStage) {
+							$submissionFile->setName($submissionFile->_generateName(true), AppLocale::getPrimaryLocale());
+						} else {
+							$submissionFile->setName($submissionFile->_generateName(), AppLocale::getPrimaryLocale());
+						}
+					}
+					$submissionFileDao->updateObject($submissionFile);
+				}
+			}
+		}
+		return true;
+	}
+
+	/**
 	 * Convert supplementary files to submission files.
 	 * @return boolean True indicates success.
 	 */
@@ -934,7 +996,6 @@ class Upgrade extends Installer {
 				$managerUserGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_MANAGER);
 				$managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $journal->getId());
 				$creatorUserId = $managerUsers->next()->getId();
-				unset($adminUsers, $adminUserGroup);
 			}
 			$article = $articleDao->getById($row['article_id']);
 
@@ -1138,7 +1199,7 @@ class Upgrade extends Installer {
 				case '源文本':
 					$genre = $genreDao->getByKey('SOURCETEXTS', $journal->getId());
 					break;
-				// author.submit.suppFile.transcripts	
+				// author.submit.suppFile.transcripts
 				case 'Afskrifter':
 				case 'Kopya / Suret':
 				case 'Lời thoại':
@@ -1182,6 +1243,7 @@ class Upgrade extends Installer {
 			foreach ($submissionFiles as $submissionFile) {
 				$submissionFile->setGenreId($genre->getId());
 				$submissionFile->setUploaderUserId($creatorUserId);
+				$submissionFile->setUserGroupId($managerUserGroup->getId());
 				$submissionFile->setFileStage(SUBMISSION_FILE_SUBMISSION);
 				$submissionFileDao->updateObject($submissionFile);
 			}

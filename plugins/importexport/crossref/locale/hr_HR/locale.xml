@@ -17,8 +17,8 @@
 	<message key="plugins.importexport.crossref.displayName">Dodatak za CrossRef XML iznošenje</message>
 	<message key="plugins.importexport.crossref.description">Koristi se za iznošenje metapodataka članaka u CrossRef XML formatu.</message>
 
-	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Primjena: 
-{$scriptName} {$pluginName} [xmlNazivDatoteke] [putanja_časopisa] članci [članakId1] [članakId2] ...
-{$scriptName} {$pluginName} [xmlNazivDatoteke] [putanja_časopisa] broj [brojId]
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Primjena:
+{$scriptName} {$pluginName} export [xmlNazivDatoteke] [putanja_časopisa] articles članakId1 [članakId2] ...
+{$scriptName} {$pluginName} register [putanja_časopisa] articles članakId1 [članakId2] ...
 ]]></message>
 </locale>
