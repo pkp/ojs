@@ -17,7 +17,7 @@
 <br />
 Pokud jste tuto žádost neodeslal, ignorujte prosím tento email a Vaše heslo nebude změněno. Pokud chcete své heslo resetovat, klikněte na URL adresu níže.<br />
 <br />
-Resetovat moje heslo: {$url}<br />
+Resetovat moje heslo: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Tento email je zasílán registrovanému uživateli, když uvede, že zapomněl své heslo nebo se nemůže přihlásit. Obsahuje adresu URL, kterou může následovat a resetovat své heslo.</description>

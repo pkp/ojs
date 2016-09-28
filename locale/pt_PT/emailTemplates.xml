@@ -23,7 +23,7 @@ Caso não tenha apresentado este pedido, ignore este email e a sua senha não se
 <br />
 Se desejar actualizar a sua senha, clique no link a seguir.<br />
 <br />
-Actualizar senha: {$url}<br />
+Actualizar senha: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Mensagem enviada a utilizador registado quando o mesmo solicita actualização da senha, quando esqueceu a senha ou encontra problemas para aceder ao sistema. O link contido permite ao utilizador concluir a actualização da senha de acesso.</description>

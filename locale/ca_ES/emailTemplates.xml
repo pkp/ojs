@@ -17,7 +17,7 @@
 <br />
 Si no sou l'autor d'aquesta sol·licitud, ignoreu aquest missatge de correu electrònic i no es canviarà la vostra contrasenya. Si voleu reinicialitzar la contrasenya, feu clic a l'URL següent.<br />
 <br />
-Reinicialització de la meva contrasenya: {$url}<br />
+Reinicialització de la meva contrasenya: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Aquest missatge de correu electrònic s'envia a un usuari registrat si ha indicat que no recorda la seva contrasenya o que no pot iniciar la sessió. Inclou un URL per a la reinicialització de la contrasenya.</description>

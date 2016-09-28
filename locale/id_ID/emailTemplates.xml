@@ -65,7 +65,7 @@ Jika Anda ingin berhenti menerima email notifikasi, pergilah ke {$unsubscribeLin
 <br />
 Jika Anda tidak membuat permintaan ini, mohon abaikan email ini dan kata sandi Anda tidak akan diganti. Jika Anda ingin mengatur ulang kata sandi Anda, klik di URL di bawah ini. <br />
 <br />
-Atur ulang kata sandi saya: {$url}<br />
+Atur ulang kata sandi saya: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Email ini dikirimkan untuk pengguna yang telah terdaftar saat mereka menunjukkan bahwa mereka lupa kata sandi mereka atau tidak bisa login. Email ini menyediakan URL yang dapat mereka ikuti untuk mengatur ulang kata sandi mereka.</description>

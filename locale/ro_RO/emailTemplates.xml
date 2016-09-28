@@ -58,7 +58,7 @@ Parola pentru dezactivarea înștiințărilor prin email este: {$password}<br />
 <br />
 Dacă nu ați făcut această solicitare, ignorați acest mesaj iar parola va rămâne neschimbată. Dacă doriți resetarea parolei, dați clic mai jos de URL.<br />
 <br />
-Resetează parola: {$url}<br />
+Resetează parola: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Acest email este trimis doar utilizatorilor neînregistrați pe lista de email și care au indicat faptul că și-au uitat parola, neputându-se autentifica. Este oferită o adresă URL pe care o pot urma pentru a-și reseta parola.</description>
