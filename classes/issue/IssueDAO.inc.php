@@ -183,38 +183,36 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @return DAOResultFactory
 	 */
 	function getIssuesByIdentification($journalId, $volume = null, $number = null, $year = null, $titles = array()) {
-		$params = array((int) $journalId);
-
-		$sqlVol = $sqlNum = $sqlYear = '';
-		if ($volume !== null) {
-			$sqlVol = ' AND i.volume = ?';
-			$params[] = (int) $volume;
-		}
-		if ($number !== null) {
-			$sqlNum = ' AND i.number = ?';
-			$params[] = $number;
-		}
-		if ($year !== null) {
-			$sqlYear = ' AND i.year = ?';
-			$params[] = (int) $year;
-		}
+		$params = array();
 
 		$i = 1;
-		$sqlTitleJoin = $sqlTitleWhere = '';
+		$sqlTitleJoin = '';
 		foreach ($titles as $title) {
-			$sqlTitleJoin .= ' LEFT JOIN issue_settings iss' .$i .' ON (i.issue_id = iss' .$i .'.issue_id)';
-			$sqlTitleWhere .= ' AND iss' .$i .'.setting_name = \'title\' AND iss' .$i .'.setting_value = ?';
+			$sqlTitleJoin .= ' JOIN issue_settings iss' .$i .' ON (i.issue_id = iss' .$i .'.issue_id AND iss' .$i .'.setting_name = \'title\' AND iss' .$i .'.setting_value = ?)';
 			$params[] = $title;
 			$i++;
 		}
+		$params[] = (int) $journalId;
+		if ($volume !== null) {
+			$params[] = (int) $volume;
+		}
+		if ($number !== null) {
+			$params[] = $number;
+		}
+		if ($year !== null) {
+			$params[] = (int) $year;
+		}
 
-		$sql = 'SELECT i.* FROM issues i'
-			.$sqlTitleJoin .
-			' WHERE i.journal_id = ?'
-			.$sqlVol .$sqlNum .$sqlYear
-			.$sqlTitleWhere;
-
-		$result = $this->retrieve($sql, $params);
+		$result = $this->retrieve(
+			'SELECT i.*
+			FROM issues i'
+			.$sqlTitleJoin
+			.' WHERE i.journal_id = ?'
+			.(($volume !== null)?' AND i.volume = ?':'')
+			.(($number !== null)?' AND i.number = ?':'')
+			.(($year !== null)?' AND i.year = ?':''),
+			$params
+		);
 		return new DAOResultFactory($result, $this, '_returnIssueFromRow');
 	}
 

@@ -150,7 +150,11 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 		$issue = $deployment->getIssue();
 		if (empty($issue)) {
 			$issueIdentificationNodes = $node->getElementsByTagName('issue_identification');
-			assert($issueIdentificationNodes->length == 1);
+
+			if ($issueIdentificationNodes->length != 1) {
+				$titleNodes = $node->getElementsByTagName('title');
+				fatalError(__('plugins.importexport.native.import.error.issueIdentificationMissing', array('articleTitle' => $titleNodes->item(0)->textContent)));
+			}
 			$issueIdentificationNode = $issueIdentificationNodes->item(0);
 			$issue = $this->parseIssueIdentification($issueIdentificationNode);
 		}
@@ -170,30 +174,36 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
 		$vol = $num = $year = null;
-		$titles = array();
+		$titles = $givenIssueIdentification = array();
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
 			if (is_a($n, 'DOMElement')) {
 				switch ($n->tagName) {
 					case 'volume':
 						$vol = $n->textContent;
+						$givenIssueIdentification[] = 'volue = ' .$vol .' ';
 						break;
 					case 'number':
 						$num = $n->textContent;
+						$givenIssueIdentification[] = 'number = ' .$num .' ';
 						break;
 					case 'year':
 						$year = $n->textContent;
+						$givenIssueIdentification[] = 'year = ' .$year .' ';
 						break;
 					case 'title':
 						list($locale, $value) = $this->parseLocalizedContent($n);
 						if (empty($locale)) $locale = $context->getPrimaryLocale();
 						$titles[$locale] = $value;
+						$givenIssueIdentification[] = 'title (' .$locale .') = ' .$value .' ';
 						break;
 				}
 			}
 		}
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issuesByIdentification = $issueDao->getIssuesByIdentification($context->getId(), $vol, $num, $year, $titles);
-		assert($issuesByIdentification->getCount() == 1);
+		if ($issuesByIdentification->getCount() != 1) {
+			fatalError(__('plugins.importexport.native.import.error.issueIdentificationMatch', array('issueIdentification' => implode(',', $givenIssueIdentification))));
+		}
 		$issue = $issuesByIdentification->next();
 		return $issue;
 	}

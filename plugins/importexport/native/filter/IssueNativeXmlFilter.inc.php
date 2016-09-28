@@ -89,7 +89,9 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$issueNode->setAttribute('access_status', $issue->getAccessStatus());
 
 		$this->createLocalizedNodes($doc, $issueNode, 'description', $issue->getDescription(null));
-		$issueNode->appendChild($this->createIssueIdentificationNode($doc, $issue));
+		import('plugins.importexport.native.filter.NativeFilterHelper');
+		$nativeFilterHelper = new NativeFilterHelper();
+		$issueNode->appendChild($nativeFilterHelper->createIssueIdentificationNode($this, $doc, $issue));
 
 		$this->addDates($doc, $issueNode, $issue);
 		$this->addSections($doc, $issueNode, $issue);
@@ -282,38 +284,6 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$issueNode->appendChild($sectionsNode);
 	}
 
-	/**
-	 * Create and return an issue identification node.
-	 * @param $doc DOMDocument
-	 * @param $issue Issue
-	 * @return DOMElement
-	 */
-	function createIssueIdentificationNode($doc, $issue) {
-		$deployment = $this->getDeployment();
-		$vol = $issue->getVolume();
-		$num = $issue->getNumber();
-		$year = $issue->getYear();
-		$title = $issue->getTitle(null);
-		assert($issue->getShowVolume() || $issue->getShowNumber() || $issue->getShowYear() || $issue->getShowTitle());
-		$issueIdentificationNode = $doc->createElementNS($deployment->getNamespace(), 'issue_identification');
-		if ($issue->getShowVolume()) {
-			assert(!empty($vol));
-			$issueIdentificationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'volume', $vol));
-		}
-		if ($issue->getShowNumber()) {
-			assert(!empty($num));
-			$issueIdentificationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'number', $num));
-		}
-		if ($issue->getShowYear()) {
-			assert(!empty($year));
-			$issueIdentificationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'year', $year));
-		}
-		if ($issue->getShowTitle()) {
-			assert(!empty($title));
-			$this->createLocalizedNodes($doc, $issueIdentificationNode, 'title', $title);
-		}
-		return $issueIdentificationNode;
-	}
 }
 
 ?>
