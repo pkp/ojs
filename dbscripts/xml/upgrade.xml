@@ -97,12 +97,14 @@
 		<code function="setFileName" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupdate.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_pubId_settings.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_galley_files.xml" />
 	</upgrade>
 
 	<upgrade minversion="3.0.0.0" maxversion="3.0.0.9">
 		<code function="setFileUploader" />
 		<code function="setFileName" />
 		<data file="dbscripts/xml/upgrade/3.0.1_update.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_galley_files.xml" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
