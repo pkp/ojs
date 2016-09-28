@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<issue xmlns="http://pkp.sfu.ca" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" volume="1" number="1" year="2014" published="1" current="1" access_status="1" show_volume="1" show_number="1" show_year="1" show_title="0" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
+<issue xmlns="http://pkp.sfu.ca" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" published="1" current="1" access_status="1" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
   <id type="internal" advice="ignore">1</id>
+  <issue_identification>
+    <volume>1</volume>
+    <number>1</number>
+    <year>2014</year>
+  </issue_identification>
   <date_published>2016-02-11</date_published>
   <last_modified>2016-02-11</last_modified>
   <sections>
