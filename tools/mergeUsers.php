@@ -10,7 +10,7 @@
  * @class mergeUsers
  * @ingroup tools
  *
- * @brief CLI tool for merging two OJS 2 user accounts.
+ * @brief CLI tool for merging two OJS user accounts.
  */
 
 require(dirname(__FILE__) . '/bootstrap.inc.php');
@@ -43,8 +43,8 @@ class mergeUsers extends CommandLineTool {
 	 * Print command usage information.
 	 */
 	function usage() {
-		echo "OJS 2 merge users tool\n"
-			. "Use this tool to merge two OJS 2 user accounts.\n\n"
+		echo "OJS merge users tool\n"
+			. "Use this tool to merge two OJS user accounts.\n\n"
 			. "Usage: {$this->scriptName} [username1] [username2]\n"
 			. "username1      The first user to merge.\n"
 			. "username2      The second user to merge. All roles and content associated\n"
