@@ -59,8 +59,8 @@ class mergeUsers extends CommandLineTool {
 	function execute() {
 		$userDao = DAORegistry::getDAO('UserDAO');
 
-		$oldUser = $userDao->getUserbyUsername($this->username2);
-		$newUser = $userDao->getUserbyUsername($this->username1);
+		$oldUser = $userDao->getByUsername($this->username2);
+		$newUser = $userDao->getByUsername($this->username1);
 
 		$oldUserId = isset($oldUser) ? $oldUser->getId() : null;
 		$newUserId = isset($newUser) ? $newUser->getId() : null;
