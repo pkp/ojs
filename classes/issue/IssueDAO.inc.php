@@ -174,6 +174,49 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	}
 
 	/**
+	 * Retrieve Issues by identification
+	 * @param $journalId int
+	 * @param $volume int
+	 * @param $number string
+	 * @param $year int
+	 * @param $titles array
+	 * @return DAOResultFactory
+	 */
+	function getIssuesByIdentification($journalId, $volume = null, $number = null, $year = null, $titles = array()) {
+		$params = array();
+
+		$i = 1;
+		$sqlTitleJoin = '';
+		foreach ($titles as $title) {
+			$sqlTitleJoin .= ' JOIN issue_settings iss' .$i .' ON (i.issue_id = iss' .$i .'.issue_id AND iss' .$i .'.setting_name = \'title\' AND iss' .$i .'.setting_value = ?)';
+			$params[] = $title;
+			$i++;
+		}
+		$params[] = (int) $journalId;
+		if ($volume !== null) {
+			$params[] = (int) $volume;
+		}
+		if ($number !== null) {
+			$params[] = $number;
+		}
+		if ($year !== null) {
+			$params[] = (int) $year;
+		}
+
+		$result = $this->retrieve(
+			'SELECT i.*
+			FROM issues i'
+			.$sqlTitleJoin
+			.' WHERE i.journal_id = ?'
+			.(($volume !== null)?' AND i.volume = ?':'')
+			.(($number !== null)?' AND i.number = ?':'')
+			.(($year !== null)?' AND i.year = ?':''),
+			$params
+		);
+		return new DAOResultFactory($result, $this, '_returnIssueFromRow');
+	}
+
+	/**
 	 * Retrieve Issue by "best" issue id -- public ID if it exists,
 	 * falling back on the internal issue ID otherwise.
 	 * @param $issueId string

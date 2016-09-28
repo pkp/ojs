@@ -57,6 +57,7 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 	 * @return DOMElement
 	 */
 	function createSubmissionNode($doc, $submission) {
+		$deployment = $this->getDeployment();
 		$submissionNode = parent::createSubmissionNode($doc, $submission);
 
 		// Add the series, if one is designated.
@@ -71,8 +72,18 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
 		$publishedArticle ? $submissionNode->setAttribute('seq', $publishedArticle->getSequence()) : $submissionNode->setAttribute('seq', '0');
 		$publishedArticle ? $submissionNode->setAttribute('access_status', $publishedArticle->getAccessStatus()) : $submissionNode->setAttribute('access_status', '0');
+		// if this is a published article and not part/subelement of an issue element
+		// add issue identification element
+		if ($publishedArticle && !$deployment->getIssue()) {
+			$issueDao = DAORegistry::getDAO('IssueDAO');
+			$issue = $issueDao->getById($publishedArticle->getIssueId());
+			import('plugins.importexport.native.filter.NativeFilterHelper');
+			$nativeFilterHelper = new NativeFilterHelper();
+			$submissionNode->appendChild($nativeFilterHelper->createIssueIdentificationNode($this, $doc, $issue));
+		}
 		return $submissionNode;
 	}
+
 }
 
 ?>
