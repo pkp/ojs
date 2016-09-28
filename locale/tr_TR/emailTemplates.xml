@@ -20,7 +20,7 @@
 Bu istek sizin dışınızda oluştu ise, lütfen bu mesajı dikkate almayınız; eski şifrenizi kullanabilirsiniz.<br />
 Eğer şifrenizi değiştirmek istiyorsanız aşağıdaki bağlantıyı tıklayınız.<br />
 <br />
-Şifre değiştirmek için: {$url}<br />
+Şifre değiştirmek için: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Bu e-posta şifrelerini unuttuğunu beyan eden ve/veya giriş yapamayan kayıtlı kullanıcılara gönderilmektedir. Şifre değiştirme işlemlerini yapabilecekleri bir internet adresi bildirir.</description>

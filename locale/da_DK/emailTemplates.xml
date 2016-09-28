@@ -18,7 +18,7 @@
 <br />
 Hvis du ikke selv har sendt denne forespørgsel, skal du ignorere denne e-mail, og din adgangskode vil ikke blive ændret. Klik på nedenstående URL-adresse, hvis adgangskoden skal ændres.<br />
 <br />
-Nulstil min adgangskode: {$url}<br />
+Nulstil min adgangskode: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Denne e-mail sendes til registrerede brugere, når de angiver, at de har glemt deres adgangskode eller ikke kan logge på. Den indeholder en URL-adresse, de kan følge for at nulstille deres adgangskode.</description>

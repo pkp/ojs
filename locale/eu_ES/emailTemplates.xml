@@ -19,7 +19,7 @@
 <br />
 Eskaera ez bada zuk egindakoa, ez jaramonik egin mezu honi, eta zure pasahitza ez da aldatuko. Pasahitza berrezartzea nahi baduzu, egin klik beheko URLan.<br />
 <br />
-Berrezarri nire pasahitza: {$url}<br />
+Berrezarri nire pasahitza: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Pasahitza ahaztu duten erabiltzaile erregistratuei edo webgunean sartu ezinda dabiltzanei bidaltzen zaie mezu hau. Pasahitza berrezartzeko URL bat ematen du.</description>

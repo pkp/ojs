@@ -54,7 +54,7 @@ Wenn Sie keine Benachrichtigungs-E-Mails mehr erhalten möchten, gehen Sie bitte
 <br />
 Falls die Aufforderung nicht von Ihnen stammt, ignorieren Sie bitte diese E-Mail, und Ihr Passwort bleibt unverändert. Falls Sie Ihr Passwort neu setzen möchten, klicken Sie bitte auf die folgende URL:<br />
 <br />
-Mein Passwort neu setzen: {$url}<br />
+Mein Passwort neu setzen: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Diese E-Mail wird an registrierte Benutzer/innen der Benachrichtigungs-Mailingliste gesendet, die angegeben haben, dass sie ihr Passwort vergessen haben oder sich nicht einloggen können. Sie liefert eine URL, der die Benutzer/innen folgen können, um ihr Passwort zurückzusetzen.</description>
