@@ -12,51 +12,87 @@
   -->
 
 <locale name="id_ID" full_name="Bahasa Indonesia">
-	<message key="admin.hostedJournals">Host Jurnal</message>
+	<message key="admin.hostedJournals">Jurnal yang Dikelola</message>
 	<message key="admin.settings.journalRedirect">Pengalihan Jurnal</message> 
-	<message key="admin.settings.journalRedirectInstructions"> Permintaan ke situs utama akan dialihkan ke jurnal ini. Hal ini mungkin berguna jika hosting merupakan jurnal tunggal.</message>	
-<message key="admin.settings.noJournalRedirect"> Jangan dialihkan</message> 
-	<message key="admin.languages.primaryLocaleInstructions"> Bahasa Utama ini akan menjadi bahasa default untuk situs dan setiap host jurnal.</message> 
-	<message key="admin.languages.supportedLocalesInstructions"> Pilih bahasa untuk men-support situs ini. Bahasa yang terpilih akan tersedia untuk digunakan oleh semua jurnal di host pada situs, dan juga ditampilkan dalam menu pilih bahasa di setiap halaman situs (yang dapat diganti pada halaman spesifik-jurnal).</message>	
-<message key="admin.locale.maybeIncomplete"> Penandaan bahasa kemungkinan tidak selesai.</message> 
-	<message key="admin.languages.confirmUninstall"> Apakah Anda yakin ingin membatalkan penginstalan bahasa ini? Hal ini mungkin akan berpengaruh pada host jurnal manapun yang saat ini sedang menggunakan bahasa.</message>
-	<message key="admin.languages.installNewLocalesInstructions"> Pilih bahasa tambahan untuk diinstal dalam sistem ini. Bahasa harus diinstal agar dapat digunakan oleh host jurnal.</message> 
+	<message key="admin.settings.options">Pilihan</message>
+	<message key="admin.settings.usePaging">Untuk situs dengan banyak jurnal, bagi daftar jurnal ke dalam beberapa halaman.</message>
+	<message key="admin.settings.journalRedirectInstructions">Permintaan ke situs utama akan dialihkan ke jurnal ini. Hal ini berguna jika hanya ada satu jurnal yang dikelola.</message>	
+	<message key="admin.settings.noJournalRedirect">Jangan dialihkan</message> 
+	<message key="admin.settings.journalsList">Elemen Jurnal</message>
+	<message key="admin.settings.journalsList.description">Silakan pilih elemen jurnal yang hendak ditampilkan untuk masing-masing jurnal.</message>
+	<message key="admin.settings.journalsList.showThumbnail">Thumbnail jurnal</message>
+	<message key="admin.settings.journalsList.showTitle">Judul jurnal</message>
+	<message key="admin.settings.journalsList.showDescription">Deskripsi jurnal</message>
+	<message key="admin.settings.defaultMetricDescription">
+		Instalasi OJS Anda diatur untuk mencatat lebih dari satu parameter penggunaan.  Statistik penggunaan akan ditampilkan dalam beberapa konteks.
+		Terdapat kondisi tertentu yang mengharuskan pemakaian satu parameter saja, misalnya untuk menampilkan urutan naskah yang paling banyak dibaca atau membuat peringkat
+		hasil pencarian. Silakan pilih salah satu paket parameter sebagai default.
+	</message>
+	<message key="admin.languages.confirmDisable">Anda yakin hendak menonaktifkan bahasa ini? Hal ini dapat mempengaruhi semua jurnal yang menggunakannya.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Saat ini tidak dapat mengunduh paket bahasa dari server Public Knowledge Project karena:</p>
+	<ul>
+		<li>Server Anda tidak mengijinkan eksekusi piranti lunak GNU "tar".</li>
+		<li>OJS tidak dapat mengubah file register bahasa, biasanya ada di "registry/locales.xml".</li>
+	</ul>
+<p>Paket bahasa dapat diunduh secara manual dari <a href="http://pkp.sfu.ca">situs PKP</a>.</p>]]></message>
+	
+	<message key="admin.languages.primaryLocaleInstructions">Bahasa utama ini akan menjadi bahasa default situs dan setiap jurnal yang dikelola di situs ini.</message> 
+	<message key="admin.languages.supportedLocalesInstructions">Pilih bahasa yang akan didukung situs ini. Bahasa yang dipilih akan dapat digunakan oleh semua jurnal yang dikelola situs ini, dan juga akan tampil dalam menu pilihan bahasa di setiap halaman situs (yang dapat diganti pada halaman spesifik jurnal).  Jika hanya ada satu bahasa, menu pilihan bahasa tidak akan muncul.</message>	
+	<message key="admin.locale.maybeIncomplete">Bahasa yang diberi tanda kemungkinan masih belum lengkap.</message> 
+	<message key="admin.languages.confirmUninstall">Apakah Anda yakin ingin membatalkan instalasi bahasa ini? Hal ini akan mempengaruhi jurnal yang sedang menggunakannya.</message>
+	<message key="admin.languages.installNewLocalesInstructions">Pilih bahasa tambahan untuk diinstal dalam sistem ini. Bahasa harus diinstal sebelum dapat digunakan oleh jurnal.</message> 
+	<message key="admin.languages.downloadFailed">Pengunduhan bahasa gagal. Berikut ini catatan terkait kegagalan unduhan tersebut.</message> 
+	<message key="admin.languages.localeInstalled">"{$locale}" telah diinstal.</message> 
+	<message key="admin.languages.download">Unduh Bahasa</message> 
+	<message key="admin.languages.download.cannotOpen">Tidak bisa membuka deskriptor bahasa dari website PKP.</message>	
+	<message key="admin.languages.download.cannotModifyRegistry">Tidak bisa menambah bahasa baru pada file register bahasa, biasanya "registry/locales.xml".</message> 
+	<message key="admin.auth.ojs">Database Pengguna OJS</message>	
+	<message key="admin.auth.enableSyncProfiles">Aktifkan sinkronisasi profil pengguna (jika didukung oleh plugin otentikasi ini). Informasi profil pengguna akan diperbarui secara otomatis dari sumber luar ketika pengguna login, dan semua perubahan profil (termasuk perubahan kata sandi) yang dibuat dalam OJS secara otomatis akan diperbarui pada sumber otentikasi tersebut. Jika opsi ini tidak diaktifkan, informasi profil OJS akan disimpan secara terpisah dari informasi profil sumber luar tersebut.</message>
+	<message key="admin.auth.enableSyncPasswords">Aktifkan modifikasi kata sandi pengguna (jika didukung oleh plugin otentikasi ini). Mengaktifkan opsi ini memungkinkan pengguna mengubah kata sandi mereka melalui OJS dan untuk menggunakan fitur OJS "kehilangan kata sandi" untuk mereset kata sandi yang terlupa. Fungsi-fungsi ini tidak akan tersedia bagi pengguna dalam sumber otentikasi ini jika opsi ini tidak diaktifkan.</message> 
+	<message key="admin.auth.enableCreateUsers">Aktifkan pembuatan pengguna (jika didukung oleh plugin otentikasi ini). Pengguna yang dibuat di OJS dengan sumber otentikasi ini secara otomatis ditambahkan pada sumber otentikasi luar jika memang belum ada. Jika sumber ini menjadi sumber otentikasi default, akun OJS yang dibuat melalui registrasi pengguna juga akan ditambahkan ke sumber otentikasi tersebut.</message> 
+	<message key="admin.systemVersion">Versi OJS</message> 
+	<message key="admin.systemConfiguration">Konfigurasi OJS</message> 
+	<message key="admin.systemConfigurationDescription"><![CDATA[Konfigurasi OJS dari <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.journals.createInstructions">Secara otomatis Anda akan terdaftar sebagai manajer jurnal ini. Setelah membuat jurnal baru, Anda akan dialihkan ke panduan pengaturan jurnal untuk menyelesaikan pengaturan awal.</message> 
+	<message key="admin.journals.journalSettings">Pengaturan Jurnal</message> 
+	<message key="admin.journals.noneCreated">Belum ada jurnal yang dibuat.</message> 
+	<message key="admin.contexts.confirmDelete">Apakah Anda yakin ingin menghapus jurnal ini dan semua isinya secara permanen?</message> 
+	<message key="admin.contexts.create">Buat Jurnal</message> 
+	<message key="admin.journals.urlWillBe">Kata atau singkatan yang mengidentifikasi jurnal. URL jurnal akan menjadi {$sampleUrl}</message> 
+	<message key="admin.contexts.form.titleRequired">Perlu judul.</message>
+	<message key="admin.contexts.form.pathRequired">Perlu path.</message> 
+	<message key="admin.contexts.form.pathAlphaNumeric">Path hanya dapat berisi karakter alfanumerik, garis bawah, dan tanda hubung, dan harus dimulai dan diakhiri dengan karakter alfanumerik.</message>
+	<message key="admin.contexts.form.pathExists">Path sudah digunakan oleh jurnal lainnya.</message> 
+	<message key="admin.journals.enableJournalInstructions">Tampilkan jurnal kepada publik di situs</message>	
+	<message key="admin.journals.journalDescription">Deskripsi Jurnal</message> 
+	<message key="admin.journal.pathImportInstructions">Path jurnal yang sudah ada atau path yang hendak dibuat (contoh: ojs).</message>
+	<message key="admin.journals.importSubscriptions">Impor Langganan</message> 
+	<message key="admin.journals.transcode">Transcode metadata naskah dari ISO8859-1</message> 
+	<message key="admin.journals.redirect">Buat kode untuk memetakan URL OJS 1 ke OJS 2</message> 
+	<message key="admin.journals.form.importPathRequired">Perlu path impor.</message> 
+	<message key="admin.journals.importErrors">Impor gagal</message> 
+	<message key="admin.mergeUsers">Gabungkan Pengguna</message>
+	<message key="admin.mergeUsers.mergeUser">Gabungkan Pengguna</message> 
+	<message key="admin.mergeUsers.into.description">Pilih pengguna yang akan memperoleh hak kepenulisan pengguna sebelumnya, tugas pengeditan, dll.</message>
+	<message key="admin.mergeUsers.from.description">Pilih pengguna (atau beberapa pengguna) untuk digabungkan ke akun pengguna lainnya (contoh, ketika seseorang mempunyai dua akun).</message>	
+	<message key="admin.mergeUsers.allUsers">Semua Pengguna</message>	
+	<message key="admin.mergeUsers.confirm">Apakah Anda hendak menggabungkan akun {$oldAccountCount} ke dalam akun "{$newUsername}"? Akun {$oldAccountCount} tidak akan ditampilkan lagi. Tindakan ini ireversibel.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Tidak ada pengguna yang terdaftar.</message> 
 
-	<message key="admin.languages.downloadFailed"> Pengunduhan bahasa gagal. Pesan kesalahan dibawah ini mendeskripsikan kegagalannya.</message> 
-	<message key="admin.languages.localeInstalled">The "{$locale}" bahasa telah diinstal.</message> 
-	<message key="admin.languages.download"> Unduh Bahasa</message> 
-	<message key="admin.languages.download.cannotOpen"> Tidak bisa membuka descriptor bahasa dari website PKP.</message>	
-<message key="admin.languages.download.cannotModifyRegistry"> Tidak bisa menambahkan bahasa baru pada file registrasi bahasa, khususnya "registry/locales.xml".</message> 
-	<message key="admin.auth.ojs"> Database pengguna OJS
-</message>	
-<message key="admin.auth.enableSyncProfiles"> Memungkinkan sinkronisasi profil pengguna (jika disupport oleh pembuktian keaslian plugin ini). Informasi profil pengguna akan secara otomatis diperbarui dari sumber tersendiri ketika pengguna dan profil login berubah (termasuk perubahan kata sandi) yang dibuat dalam OJS akan secara otomatis diperbarui pada sumber tersendiri. Jika opsi ini tidak bisa dilakukan, informasi profil OJS akan disimpan terpisah dari informasi profil sumber tersendiri.</message>
-	<message key="admin.auth.enableSyncPasswords"> Memungkinkan memodifikasi kata sandi pengguna (jika didukung oleh pembuktian keaslian plug-in ini). Jika opsi ini memungkinkan maka dapat membuat pengguna memodifikasi kata sandi mereka dari dalam OJS dan untuk menggunakan fitur OJS "kehilangan kata sandi" untuk memasang kembali kata sandi yang terlupa. Fungsi-fungsi ini tidak akan tersedia bagi pengguna dalam sumber pembuktian keaslian ini jika opsi ini tidak berfungsi.</message> 
-	<message key="admin.auth.enableCreateUsers">Memungkinkan kreasi pengguna (jika didukung oleh pembuktian keaslian plug-in ini). Para pengguna membuatnyadalam OJS dengan sumber pembuktian keaslian ini yang akan secara otomatis ditambahkan pada sumber pembuktian keaslian tersendiri jika mereka tidak betul-betul ada. Sebagai tambahan, jika sumber ini sumber pembuktian keaslian yang gagal, akun OJS terbuat melalui registrasi pengguna yang juga akan ditambahkan pada sumber pembuktian keaslian tersendiri.</message> 
-	<message key="admin.systemVersion"> Versi OJS</message> 
-	<message key="admin.systemConfiguration"> Konfigurasi OJS</message> 
-	<message key="admin.systemConfigurationDescription"><![CDATA[Pengaturan konfigurasi OJS dari <tt>config.inc.php</tt>.]]></message>
-	<message key="admin.journals.journalSettings"> Pengaturan Jurnal</message> 
-	<message key="admin.journals.noneCreated"> Tidak ada jurnal yang telah dibuat.</message> 
-	<message key="admin.contexts.confirmDelete"> Apakah Anda yakin ingin menghapus jurnal ini dan semua isinya secara permanen?</message> 
-	<message key="admin.contexts.create"> Buat jurnal baru</message> 
-	<message key="admin.journals.createInstructions"> Secara otomatis Anda akan terdaftar sebagai Manajer pada jurnal ini. Setelah membuat jurnal baru, lanjutkan dengan setup jurnal dan pendaftaran pengguna.</message> 
-	<message key="admin.journals.urlWillBe"> Kata tunggal atau singkatan yang mengidentifikasi jurnal. URL jurnal akan menjadi {$sampleUrl}</message> 
-
-	<message key="admin.contexts.form.pathRequired"> Diperlukan path.</message> 
-	<message key="admin.contexts.form.pathAlphaNumeric"> Path akan hanya terdiri dari karakter alphanumeris, garisbawah, dan tanda penghubung, dan harus dimulai dan diakhiri dengan karakter alphanumeric.</message>
-	<message key="admin.contexts.form.pathExists"> Path sudah digunakan oleh jurnal lainnya.</message> 
-	<message key="admin.journals.enableJournalInstructions"> Memungkinkan jurnal ditampilkan di situs untuk umum</message>	
-<message key="admin.journals.journalDescription"> Deskripsi Jurnal</message> 
-	<message key="admin.journal.pathImportInstructions"> Path jurnal yang sudah ada atau path untuk membuat (contoh: ojs).</message>
-	<message key="admin.journals.importSubscriptions"> Langganan impor</message> 
-	<message key="admin.journals.transcode"> Transcode metadata artike dari ISO8859-1</message> 
-	<message key="admin.journals.redirect"> Hasilkan kode untuk peta OJS 1 URLs ke OJS 2 URLs</message> 
-	<message key="admin.journals.form.importPathRequired"> Dibutuhkan path impor.</message> 
-	<message key="admin.journals.importErrors"> Pengimporan gagal untuk meyelesaikan secara sukses</message> 
-	<message key="admin.mergeUsers"> Gabungkan Para Pengguna</message>
-	<message key="admin.mergeUsers.mergeUser"> Gabungkan Para Pengguna</message> 
-	<message key="admin.mergeUsers.into.description"> Pilih pengguna yang akan menghubungkan kepenulisan pengguna sebelumnya, tugas pengeditan.</message>	<message key="admin.mergeUsers.from.description"> Pilih pengguna (atau beberapa pengguna) untuk digabungkan pada akun pengguna lainnya (contoh, ketika seseorang menggunakan dua akun).</message>	
-<message key="admin.mergeUsers.allUsers"> Semua Pengguna</message>	
-<message key="admin.mergeUsers.confirm"> Apakah Anda menginginkan untuk menggabungkan akun yang diseleksi {$oldAccountCount} akun kedalam akun dengan nama "{$newUsername}"? akun {$oldAccountCount} tidak akan ditampilkan lagi.</message>
-	<message key="admin.mergeUsers.noneEnrolled"> Tidak ada pengguna yang terdaftar.</message> 
+	<!-- Categories -->
+	<message key="admin.categories">Kategori</message>
+	<message key="admin.categories.enable.description">Administrator situs dapat menetapkan set kategori di sini untuk menata koleksi jurnal. Manajer Jurnal dapat memilih set kategori ini untuk jurnalnya, dan pembaca dapat menelusuri koleksi jurnal berdasar kategori.</message>
+	<message key="admin.categories.disableCategories">Jangan menata jurnal ke dalam kategori.</message>
+	<message key="admin.categories.enableCategories">Ijinkan Manajer Jurnal untuk menata jurnal ke dalam kategori.</message>
+	<message key="admin.categories.editTitle">Edit Kategori</message>
+	<message key="admin.categories.createTitle">Buat Kategori</message>
+	<message key="admin.categories.create">Buat Kategori Baru</message>
+	<message key="admin.categories.noneCreated">Belum ada kategori.</message>
+	<message key="admin.categories.confirmDelete">Anda yakin hendak menghapus kategori ini?</message>
+	<message key="admin.categories.name">Nama</message>
+	<message key="admin.categories.nameRequired">Diperlukan nama kategori.</message>
+	<message key="admin.presses.createInstructions">Secara otomatis Anda akan menjadi manajer jurnal ini. Setelah membuat jurnal baru, Anda akan dialihkan ke panduan pengaturan jurnal untuk menyelesaikan pengaturan awal</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Pengingat Masa Berakhir Langganan</message>
+	<message key="admin.scheduledTask.openAccessNotification">Pemberitahuan Open Access</message>
+	<message key="admin.scheduledTask.reviewReminder">Pengingat Review</message>
 </locale>
