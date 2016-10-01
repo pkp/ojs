@@ -60,14 +60,6 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 		}
 	}
 
-	function getStatusNames() {
-		return array(
-			EXPORT_STATUS_ANY => __('plugins.importexport.common.status.any'),
-			EXPORT_STATUS_NOT_DEPOSITED => __('plugins.importexport.common.status.notDeposited'),
-			EXPORT_STATUS_MARKEDREGISTERED => __('plugins.importexport.common.status.markedRegistered'),
-		);
-	}
-
 	/**
 	 * @copydoc ImportExportPlugin::getPluginSettingsPrefix()
 	 */
@@ -89,6 +81,27 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 		return 'DOAJExportDeployment';
 	}
 
+	/**
+	 * @copydoc PubObjectsExportPlugin::getSettingsFormClassName()
+	 */
+	function getSettingsFormClassName() {
+		return 'DOAJSettingsForm';
+	}
+
+	/**
+	 * @copydoc PubObjectsExportPlugin::depositXML()
+	 */
+	function depositXML($objects, $context, $filename) {
+		// Deposit was received
+		$result = true;
+		foreach ($objects as $object) {
+			// set the status
+			$object->setData($this->getDepositStatusSettingName(), EXPORT_STATUS_REGISTERED);
+			// Update the object
+			$this->updateObject($object);
+		}
+		return $result;
+	}
 }
 
 ?>
