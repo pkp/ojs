@@ -210,7 +210,7 @@
 	<message key="user.reviewerPrompt.userGroup">Ya, daftarkan saya sebagai {$userGroup}.</message>
 	<message key="user.register.contextsPrompt">Jurnal mana saja yang Anda pilih?</message>
 	<message key="user.register.otherContextRoles">Mendaftar ke peran berikut.</message>
-	<message key="user.register.noContextReviewerInterests">Jika Anda meminta peran sebagai reviewer, mohon sebutkan subjek yang Anda minati.</message>, 
+	<message key="user.register.noContextReviewerInterests">Jika Anda meminta peran sebagai reviewer, mohon sebutkan subjek yang Anda minati.</message>
 	<message key="user.myJournals">Jurnal Saya</message>
 	<message key="user.manageMySubscriptions">Atur Langganan Saya</message>
 	<message key="user.noRoles.chooseJournal">Akun Anda tidak terdaftar ke jurnal apapun. Pilihlah satu jurnal:</message>
@@ -1075,7 +1075,7 @@ Validasi mungkin gagal pada URL yang mensyaratkan form data yang dikirimkan.]]><
 
 	<!-- Notification Types -->
 	<message key="notification.mailListDescription">Masukkan alamat email Anda untuk menerima notifikasi langsung tentang konten baru yang ditambahkan ke jurnal.</message>
-	<message key="notification.notificationsPublicDescription">Halaman ini menampilkan update penting seputar jurnal ini seperti terbitan baru atau pengumuman.  Anda dapat memperoleh pemberitahuan melalui RSS feeds (klik gambar di samping), atau <![CDATA[  <a href="{$emailUrl}">melalui email.</a>]]></message>
+	<message key="notification.notificationsPublicDescription"><![CDATA[Halaman ini menampilkan update penting seputar jurnal ini seperti terbitan baru atau pengumuman.  Anda dapat memperoleh pemberitahuan melalui RSS feeds (klik gambar di samping), atau <a href="{$emailUrl}">melalui email.</a>]]></message>
 	<message key="notification.type.articleSubmitted">Naskah baru, "{$title}", telah diserahkan.</message>
 	<message key="notification.type.editing">Event Editing</message>
 	<message key="notification.type.submissionSubmitted">Naskah baru, "{$title}," telah diserahkan.</message>
