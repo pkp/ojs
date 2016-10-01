@@ -20,7 +20,7 @@
 Se non hai fatto questa richiesta, ignora pure questo messaggio e la password non sar&amp;#224; modificata.<br />
 Se invece hai fatto tu la richiesta e desideri generare una nuova password, clicca sul link qui sotto.<br />
 <br />
-Reset password: {$url}<br />
+Reset password: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]&gt;]]></body>
 		<description>Questa email viene mandata ad un utente registrato quando questi indica che ha dimenticato la sua password o non riesce a fare il log in. Fornisce una URL per il reset della password.</description>
@@ -31,6 +31,7 @@ Reset password: {$url}<br />
 Qui sotto trovi il tuo username e la nuova password.<br />
 <br />
 La tua username: {$username}<br />
+Password: {$password}<br />
 <br />
 {$principalContactSignature}]]&gt;]]></body>
 		<description>Questa email viene mandata ad un utente registrato quando ha resettato la password seguendo il processo descritto nella email PASSWORD_RESETTA_CONFERMA.</description>

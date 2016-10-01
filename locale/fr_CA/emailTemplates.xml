@@ -19,7 +19,7 @@
 <br />
 Si vous n'avez pas fait cette demande, veuillez ne pas tenir compte du présent message, votre mot de passe restera le même. Si vous voulez réinitialiser votre mot de passe, cliquer sur l'URL et un nouveau mot de passe vous sera envoyé par courriel sous peu.<br />
 <br />
-Réinitialisation du mot de passe : {$url}<br />
+Réinitialisation du mot de passe : <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Ce courriel est envoyé aux utilisateurs qui nous signalent avoir oublié leur mot de passe ou qui sont incapables d'ouvrir une session. Il fournit le lien URL pour réinitialiser leur mot de passe.</description>
@@ -29,6 +29,7 @@ Réinitialisation du mot de passe : {$url}<br />
 		<body><![CDATA[Votre mot de passe pour le site Web {$siteTitle} a été réinitialisé avec succès. Veuillez conserver précieusement votre nom d'utilisateur ainsi que votre mot de passe. Vous en aurez besoin pour chacune de vos interactions avec la revue.<br />
 <br />
 Votre nom d'utilisateur : {$username}<br />
+Mot de passe : {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description><![CDATA[Ce courriel est envoyé aux utilisateurs inscrits lorsqu'ils ont réussi à réinitialiser leur mot de passe en ayant suivi la procédure décrite dans le courriel « Confirmation de la réinitialisation du mot de passe ».]]></description>

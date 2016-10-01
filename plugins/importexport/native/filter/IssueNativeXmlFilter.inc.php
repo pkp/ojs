@@ -84,19 +84,14 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$issueNode = $doc->createElementNS($deployment->getNamespace(), 'issue');
 		$this->addIdentifiers($doc, $issueNode, $issue);
 
-		$issueNode->setAttribute('volume', $issue->getVolume());
-		$issueNode->setAttribute('number', $issue->getNumber());
-		$issueNode->setAttribute('year', $issue->getYear());
 		$issueNode->setAttribute('published', $issue->getPublished());
 		$issueNode->setAttribute('current', $issue->getCurrent());
 		$issueNode->setAttribute('access_status', $issue->getAccessStatus());
-		$issueNode->setAttribute('show_volume', $issue->getShowVolume());
-		$issueNode->setAttribute('show_number', $issue->getShowNumber());
-		$issueNode->setAttribute('show_year', $issue->getShowYear());
-		$issueNode->setAttribute('show_title', $issue->getShowTitle());
 
 		$this->createLocalizedNodes($doc, $issueNode, 'description', $issue->getDescription(null));
-		$this->createLocalizedNodes($doc, $issueNode, 'title', $issue->getTitle(null));
+		import('plugins.importexport.native.filter.NativeFilterHelper');
+		$nativeFilterHelper = new NativeFilterHelper();
+		$issueNode->appendChild($nativeFilterHelper->createIssueIdentificationNode($this, $doc, $issue));
 
 		$this->addDates($doc, $issueNode, $issue);
 		$this->addSections($doc, $issueNode, $issue);
@@ -288,6 +283,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 
 		$issueNode->appendChild($sectionsNode);
 	}
+
 }
 
 ?>

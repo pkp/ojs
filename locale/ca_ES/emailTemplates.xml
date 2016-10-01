@@ -17,7 +17,7 @@
 <br />
 Si no sou l'autor d'aquesta sol·licitud, ignoreu aquest missatge de correu electrònic i no es canviarà la vostra contrasenya. Si voleu reinicialitzar la contrasenya, feu clic a l'URL següent.<br />
 <br />
-Reinicialització de la meva contrasenya: {$url}<br />
+Reinicialització de la meva contrasenya: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Aquest missatge de correu electrònic s'envia a un usuari registrat si ha indicat que no recorda la seva contrasenya o que no pot iniciar la sessió. Inclou un URL per a la reinicialització de la contrasenya.</description>
@@ -27,6 +27,7 @@ Reinicialització de la meva contrasenya: {$url}<br />
 		<body><![CDATA[La vostra contrasenya per al lloc web {$siteTitle} s'ha reinicialitzat correctament. Recordeu aquest nom d'usuari i aquesta contrasenya, ja que els necessitareu per a accedir a la revista i treballar-hi.<br />
 <br />
 Nom d'usuari: {$username}<br />
+Contrasenya: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Aquest missatge de correu electrònic s'envia a un usuari registrat per a notificar-li que la seva contrasenya s'ha reinicialitzat amb èxit després d'haver seguit el procés descrit al missatge de correu electrònic PASSWORD_RESET_CONFIRM.</description>
