@@ -16,4 +16,7 @@
 	<message key="plugins.importexport.doaj.displayName">DOAJエクスポートプラグイン</message>
 	<message key="plugins.importexport.doaj.description">DOAJに報告する雑誌データをエクスポートし、DOAJにメールで送信します。</message>
 	<message key="plugins.importexport.doaj.export.contact">DOAJにメールする</message>
+	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[使用法:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>

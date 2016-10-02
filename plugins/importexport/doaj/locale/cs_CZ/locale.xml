@@ -16,4 +16,7 @@
 	<message key="plugins.importexport.doaj.displayName">Plugin exportu pro DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Export časopisu pro DOAJ a odeslání emailu s informacemi o časopisu zástupci DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contact">Kontaktujte DOAJ pro vložení</message>
+	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Použití:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>

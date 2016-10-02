@@ -573,7 +573,7 @@
 		<field name="submission_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="label" type="C2" size="32"/>
+		<field name="label" type="C2" size="255"/>
 		<field name="file_id" type="I8"/>
 		<field name="seq" type="F">
 			<NOTNULL/>

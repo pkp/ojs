@@ -44,8 +44,11 @@ The following formats are accepted:
 {$scriptName} {$pluginName} import [xmlFileName] [journal_path]
 	issue_id [issueId] section_abbrev [abbrev]
 ]]></message>
-	<message key="plugins.importexport.native.cliError">ERROR:</message>
 	<message key="plugins.importexport.native.error.unknownUser">The specified user, "{$userName}", does not exist.</message>
-	<message key="plugins.importexport.native.error.unknownJournal">The specified journal path, "{$journalPath}", does not exist.</message>
-	<message key="plugins.importexport.native.export.error.couldNotWrite">Could not write to the file "{$fileName}".</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">The section title "{$section1Title}" and the section title "{$section2Title}" in the "{$issueTitle}" issue matched the different existing journal sections.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMatch">The section title "{$sectionTitle}" in the "{$issueTitle}" issue matched an existing journal section, but another title of this section doesn't match with another title of the existing journal section.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">The section abbreviation "{$section1Abbrev}" and the section abbreviation "{$section2Abbrev}" of the "{$issueTitle}" issue matched the different existing journal sections.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">The section abbreviation "{$sectionAbbrev}" in the "{$issueTitle}" issue matched an existing journal section, but another abbreviation of this section doesn't match with another abbreviation of the existing journal section.</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationMatch">None or more than one issue matches the given issue identification "{$issueIdentification}".</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationMissing">The issue identification element is missing for the article "{$articleTitle}"".</message>
 </locale>

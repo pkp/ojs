@@ -115,8 +115,18 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					return $json->getString();
 				}
 				$temporaryFilePath = $temporaryFile->getFilePath();
+
+				$filter = 'native-xml=>issue';
+				// is this articles import:
+				$xmlString = file_get_contents($temporaryFilePath);
+				$document = new DOMDocument();
+				$document->loadXml($xmlString);
+				$requirementsErrors = null;
+				if (in_array($document->documentElement->tagName, array('article', 'articles'))) {
+					$filter = 'native-xml=>article';
+				}
 				libxml_use_internal_errors(true);
-				$content = $this->importSubmissions(file_get_contents($temporaryFilePath), $journal, $user);
+				$content = $this->importSubmissions(file_get_contents($temporaryFilePath), $journal, $user, $filter);
 				$validationErrors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR ||  $a->level == LIBXML_ERR_FATAL;'));
 				$templateMgr->assign('validationErrors', $validationErrors);
 				libxml_clear_errors();
@@ -204,11 +214,12 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @param $importXml string XML contents to import
 	 * @param $context Context
 	 * @param $user User
+	 * @param $filter string Filter to be used
 	 * @return array Set of imported submissions
 	 */
-	function importSubmissions($importXml, $context, $user) {
+	function importSubmissions($importXml, $context, $user, $filter) {
 		$filterDao = DAORegistry::getDAO('FilterDAO');
-		$nativeImportFilters = $filterDao->getObjectsByGroup('native-xml=>issue');
+		$nativeImportFilters = $filterDao->getObjectsByGroup($filter);
 		assert(count($nativeImportFilters) == 1); // Assert only a single unserialization filter
 		$importFilter = array_shift($nativeImportFilters);
 		$importFilter->setDeployment(new NativeImportExportDeployment($context, $user));
@@ -233,7 +244,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);
 
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
 
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -245,8 +256,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 		if (!$journal) {
 			if ($journalPath != '') {
-				echo __('plugins.importexport.native.cliError') . "\n";
-				echo __('plugins.importexport.native.error.unknownJournal', array('journalPath' => $journalPath)) . "\n\n";
+				echo __('plugins.importexport.common.cliError') . "\n";
+				echo __('plugins.importexport.common.error.unknownJournal', array('journalPath' => $journalPath)) . "\n\n";
 			}
 			$this->usage($scriptName);
 			return;
@@ -254,6 +265,13 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 		if ($xmlFile && $this->isRelativePath($xmlFile)) {
 			$xmlFile = PWD . '/' . $xmlFile;
+		}
+		$outputDir = dirname($xmlFile);
+		if (!is_writable($outputDir) || (file_exists($xmlFile) && !is_writable($xmlFile))) {
+			echo __('plugins.importexport.common.cliError') . "\n";
+			echo __('plugins.importexport.common.export.error.outputFileNotWritable', array('param' => $xmlFile)) . "\n\n";
+			$this->usage($scriptName);
+			return;
 		}
 
 		switch ($command) {
@@ -263,7 +281,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 				if (!$user) {
 					if ($userName != '') {
-						echo __('plugins.importexport.native.cliError') . "\n";
+						echo __('plugins.importexport.common.cliError') . "\n";
 						echo __('plugins.importexport.native.error.unknownUser', array('userName' => $userName)) . "\n\n";
 					}
 					$this->usage($scriptName);
@@ -284,11 +302,11 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						return;
 					case 'issue':
 					case 'issues':
-						$exportXml = $this->exportIssues(
+						file_put_contents($xmlFile, $this->exportIssues(
 							$args,
 							$journal,
 							null
-						);
+						));
 						return;
 				}
 				break;

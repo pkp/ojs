@@ -16,4 +16,7 @@
 	<message key="plugins.importexport.doaj.displayName">Plugin Ekspor DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Ekspor Jurnal untuk DOAJ dan sediakan informasi jurnal untuk pencantuman</message>
 	<message key="plugins.importexport.doaj.export.contact">Kontak DOAJ untuk pencantuman</message>
+	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Kegunaan:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>

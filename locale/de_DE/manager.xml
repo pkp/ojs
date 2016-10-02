@@ -594,4 +594,6 @@
 	<message key="plugins.importexport.common.register.error.mdsError">Die Registrierung war nicht erfolgreich! Der DOI-Registrierungsserver hat einen Fehler zurückgeliefert: '{$param}'.</message>
 	<message key="plugins.importexport.common.register.success">Registrierung erfolgreich!</message>
 	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">DOI-Präfix fehlt für die Zeitschrift mit dem Pfad {$path}.</message>
+	<message key="plugins.importexport.common.cliError">FEHLER:</message>
+	<message key="plugins.importexport.common.error.unknownJournal">Der angegebene Zeitschriftenpfad, "{$journalPath}", existiert nicht.</message>
 </locale>

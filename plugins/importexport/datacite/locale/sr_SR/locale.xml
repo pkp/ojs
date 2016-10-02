@@ -14,4 +14,8 @@
 <locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.importexport.datacite.displayName">DataCite Export/Registration Plugin</message>
 	<message key="plugins.importexport.datacite.description">Izvezite ili registrujte metapodatke broja, članaka, prikaza i dodatnih fajlova u DataCIte formatu</message>
+	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[Korišćenje:
+{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+]]></message>
 </locale>

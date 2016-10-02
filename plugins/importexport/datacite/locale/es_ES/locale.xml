@@ -21,6 +21,8 @@
 	<message key="plugins.importexport.datacite.settings.form.username">Nombre de usuario/a (símbolo)</message>
 	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Introduzca el nombre de usuario/a (símbolo) que le proporcionó DataCite. El nombre de usuario/a no puede contener dos puntos.</message>
 
-	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} exportar xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ... {$scriptName} {$pluginName} registrar journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
+	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[Uso:
+{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 ]]></message>
 </locale>

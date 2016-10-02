@@ -20,7 +20,7 @@
 如果您沒有提出這個請求，請忽略這封電子郵件，同時您的密碼將會保持不變。<br />
 如果您希望要重設您的密碼，請按下面的連結。<br />
 <br />
-重設我的密碼： {$url}<br />
+重設我的密碼： <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>當註冊使用者忘記他們的密碼或者無法登入的時候，這封電子郵件會寄給他們。信中會提供一個網址讓它們能夠登入並重設他們的密碼。</description>
@@ -30,6 +30,7 @@
 		<body><![CDATA[您的密碼已經成功重新設定以使用{$siteTitle}網站。請保管好這份使用者名稱和密碼，它對於使用本站的所有功能來說是非常必要的。<br />
 <br />
 您的使用者名稱：{$username}<br />
+密碼：{$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>當註冊使用者成功依照PASSWORD_RESET_CONFIRM電子郵件的指示重新設定他們的密碼時，這封電子郵件會被寄給他們。</description>

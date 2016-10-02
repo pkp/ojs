@@ -19,7 +19,7 @@
 <br />
 Hvis du ikke har sendt oss en slik forespørsel, kan du beholde det gamle passordet ditt ved å ignorere denne e-posten. Hvis du ønsker nytt passord, klikk på lenken nedenfor.<br />
 <br />
-Forny passordet: {$url}<br />
+Forny passordet: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Denne e-posten sendes til registrerte brukere når de melder fra om at de har glemt passordet sitt, eller at de ikke klarer å logge inn. Den gir en URL-lenke brukeren kan følge for å fornye passordet sitt.</description>
@@ -29,6 +29,7 @@ Forny passordet: {$url}<br />
 		<body><![CDATA[Passordet ditt til nettstedet for {$siteTitle} er nå fornyet. Ta godt vare på brukernavnet og passordet, som du vil trenge for de oppgavene du skal utføre på nettstedet.<br />
 <br />
 Ditt brukernavn: {$username}<br />
+Passord: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Denne e-posten sendes til en bruker som har fullført fornying av passordet sitt som beskrevet i PASSWORD_RESET_CONFIRM e-posten.</description>

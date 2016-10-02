@@ -769,9 +769,9 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="subscriptionTypes.format.print">冊子</message>
 	<message key="subscriptionTypes.format.printOnline">冊子とオンライン</message>
 	<message key="notification.type.editing">編集イベント</message>
-	<message key="notification.type.galleyModified">"{$param}".</message>
+	<message key="notification.type.galleyModified">"{$title}".</message>
 	<message key="notification.type.submissions">投稿イベント</message>
-	<message key="notification.type.userComment">読者が "{$param}" にコメントした。</message>
+	<message key="notification.type.userComment">読者が "{$title}" にコメントした。</message>
 	<message key="subscriptions.individualDescription">個人購読では購読コンテンツにアクセスするためにはログインが必要です。</message>
 	<message key="subscriptions.institutionalDescription">機関購読ではログインは必要ありません。ユーザのドメインもしくはIPアドレス(またはその両方)によって購読コンテンツへのアクセスが提供されます。</message>
 	<message key="subscriptionManager.individualSubscriptions">個人購読</message>
@@ -795,10 +795,10 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="user.subscriptions.form.addIpRange">追加</message>
 	<message key="notification.type.issuePublished">新しい巻号が出版された時</message>
 	<message key="notification.type.newAnnouncement">新しいお知らせが作成された時</message>
-	<message key="notification.type.reviewerFormComment">"{$param}" についての査読が査読フォームから送信された時</message>
+	<message key="notification.type.reviewerFormComment">"{$title}" についての査読が査読フォームから送信された時</message>
 	<message key="notification.type.reviewing">査読イベント</message>
 	<message key="notification.type.site">サイトイベント</message>
-	<message key="notification.type.submissionComment">編集者が "{$param}" にコメントした時</message>
+	<message key="notification.type.submissionComment">編集者が "{$title}" にコメントした時</message>
 	<message key="subscriptionTypes.year">年</message>
 	<message key="subscriptions.status">状態</message>
 	<message key="subscriptions.status.awaitingOnlinePayment">オンライン支払待ち</message>
@@ -808,7 +808,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="user.subscriptions.form.subscriptionExists">このユーザアカウントはすでに個人購読中です。</message>
 	<message key="notification.mailListDescription">雑誌に追加された新しい重要なコンテンツについての通知をすぐに受け取るためにメールアドレスを入力してください。</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[このページでは新しい巻号の発行やお知らせのようなこの雑誌に関係する重要なおしらせを表示します。これらの通知は RSSフィード(右側の画像をクリックする)か，<a href="{$emailUrl}">メール</a>で受け取ることができます。]]></message>
-	<message key="notification.type.articleSubmitted">新しい論文, "{$param}", が投稿された時</message>
+	<message key="notification.type.articleSubmitted">新しい論文, "{$title}", が投稿された時</message>
 	<message key="installer.installApplication">Open Journal Systems をインストールする</message>
 	<message key="installer.upgradeApplication">Open Journal Systems をアップグレードする</message>
 	<message key="article.article">論文</message>
@@ -824,7 +824,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="user.subscriptions.form.typeIdValid">有効な購読種別を選択してください。</message>
 	<message key="user.subscriptions.form.domainIPRangeRequired">選択された購読種別は購読の認証のためのドメイン名とIPアドレス(の両方もしくは片方)が必要です。</message>
 	<message key="user.subscriptions.form.domainValid">有効なドメイン名を入力してください。</message>
-	<message key="notification.type.editorDecisionComment">"{$param}" の編集者の判断についてコメントがあった時</message>
+	<message key="notification.type.editorDecisionComment">"{$title}" の編集者の判断についてコメントがあった時</message>
 	<message key="subscriptions.status.awaitingManualPayment">手作業による支払い待ち</message>
 	<message key="about.subscriptionTypes.format">フォーマット</message>
 	<message key="about.subscriptionTypes.duration">期間</message>

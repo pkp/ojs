@@ -44,8 +44,9 @@ Die folgenden Formate sind zulässig:
 {$scriptName} {$pluginName} import [xmlFileName] [journal_path]
 	issue_id [issueId] section_abbrev [abbrev]
 ]]></message>
-	<message key="plugins.importexport.native.cliError">FEHLER:</message>
 	<message key="plugins.importexport.native.error.unknownUser">Der angegebene Nutzer/die angegebene Nutzerin, "{$userName}", existiert nicht.</message>
-	<message key="plugins.importexport.native.error.unknownJournal">Der angegebene Zeitschriftenpfad, "{$journalPath}", existiert nicht.</message>
-	<message key="plugins.importexport.native.export.error.couldNotWrite">Konnte nicht in die Datei "{$fileName}" schreiben.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">Rubrikentitel "{$section1Title}" und Rubrikentitel "{$section2Title}" in Ausgabe "{$issueTitle}" sind mit existierenden Rubriken vereinbar.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMatch">Rubrikentitel "{$sectionTitle}" in Ausgabe "{$issueTitle}" ist mit einer existierenden Rubrik vereinbar, aber ein anderer Titel ist mit existierenden Rubrikentiteln in dieser Zeitschrift nicht vereinbar.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">Rubrikenabkürzung "{$section1Abbrev}" und Rubrikenabkürzung "{$section2Abbrev}" in Ausgabe "{$issueTitle}" sind mit existierenden Rubriken vereinbar.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">Die Rubrikenabkürzung "{$sectionAbbrev}" in Ausgabe "{$issueTitle}" ist mit einer existierenden Rubrik vereinbar, aber eine andere Rubrikenabkürzung ist mit existierenden Rubrikenabkürzungen in dieser Zeitschrift nicht vereinbar.</message>
 </locale>

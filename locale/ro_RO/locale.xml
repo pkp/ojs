@@ -1139,18 +1139,18 @@ Validarea poate eşua pe URL-urile de căutare care necesită date postate într
 	<message key="notification.mailListDescription">Introdu adresa de email pentru a primi înștiințări imediat ce un nou conținut este adăugat la revistă.</message>
 	<message key="notification.notificationsPublicDescription">Această pagină indică actualizările importante asociate cu această revistă precum noilenumere sau anunțurile. Te poți înscrie pentru a primi aceste anunțuri prin intermediul fluxurilor RSS (dând clic pe imaginea din dreapta) sau <![CDATA[  <a href="{$emailUrl}">prin email.</a>]]></message>
 
-	<message key="notification.type.articleSubmitted">Un articol nou, "{$param}", a fost introdus ca propunere.</message>
+	<message key="notification.type.articleSubmitted">Un articol nou, "{$title}", a fost introdus ca propunere.</message>
 	<message key="notification.type.editing">Editarea evenimentelor</message>
-	<message key="notification.type.editorDecisionComment">A fost lăsat un comentariu la decizia redactorului pentru "{$param}".</message>
-	<message key="notification.type.galleyModified">A fost modificată o asamblare pentru "{$param}".</message>
+	<message key="notification.type.editorDecisionComment">A fost lăsat un comentariu la decizia redactorului pentru "{$title}".</message>
+	<message key="notification.type.galleyModified">A fost modificată o asamblare pentru "{$title}".</message>
 	<message key="notification.type.issuePublished">A fost publicat un nou număr.</message>
 	<message key="notification.type.newAnnouncement">A fost creat un anunț nou.</message>
-	<message key="notification.type.reviewerFormComment">A fost trimis un formular de evaluare pentru "{$param}".</message>
+	<message key="notification.type.reviewerFormComment">A fost trimis un formular de evaluare pentru "{$title}".</message>
 	<message key="notification.type.reviewing">Evenimente la evaluare</message>
 	<message key="notification.type.site">Evenimente privind siteul</message>
-	<message key="notification.type.submissionComment">Un redactor a făcut un comentariu la "{$param}".</message>
+	<message key="notification.type.submissionComment">Un redactor a făcut un comentariu la "{$title}".</message>
 	<message key="notification.type.submissions">Evenimente privind propunerea</message>
-	<message key="notification.type.userComment">Un cititor a făcut un comentariu la "{$param}"</message>
+	<message key="notification.type.userComment">Un cititor a făcut un comentariu la "{$title}"</message>
 
 
 	<!--

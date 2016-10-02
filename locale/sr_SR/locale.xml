@@ -814,8 +814,8 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="about.subscriptionTypes.duration">Trajanje</message>
 	<message key="about.subscriptionTypes.cost">Cena</message>
 	<message key="payment.authorFees">Naknade za autora</message>
-	<message key="notification.type.articleSubmitted">Novi članak, "{$param}", je predat.</message>
-	<message key="notification.type.galleyModified">Fajl za prikaz je izmenjen za "{$param}".</message>
+	<message key="notification.type.articleSubmitted">Novi članak, "{$title}", je predat.</message>
+	<message key="notification.type.galleyModified">Fajl za prikaz je izmenjen za "{$title}".</message>
 	<message key="notification.type.issuePublished">Izdanje je objavljeno.</message>
 	<message key="notification.type.newAnnouncement">Novo obaveštenje je napravljeno.</message>
 	<message key="notification.type.site">Događaji na sajtu</message>
@@ -839,12 +839,12 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="notification.mailListDescription">Unesite Vašu imejl adresu kako biste primali trenutna obaveštenja o važnim novostima u vašem časopisu</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Ova stranica prikazuje važne nadogradnje vezane za časopis, kao što su novi brojevi ili obaveštenja (vesti). Možete se pretplatiti na ova obaveštenja preko RSS-a (klikom na sliku desno) ili <a href="{$emailUrl}">putem imejla.</a>]]></message>
 	<message key="notification.type.editing">Događaji u uredništvu</message>
-	<message key="notification.type.editorDecisionComment">Ostavljen je komentar na urednikovu odluku "{$param}".</message>
-	<message key="notification.type.reviewerFormComment">Recenzija preko recenzentske forme je predata za "{$param}".</message>
+	<message key="notification.type.editorDecisionComment">Ostavljen je komentar na urednikovu odluku "{$title}".</message>
+	<message key="notification.type.reviewerFormComment">Recenzija preko recenzentske forme je predata za "{$title}".</message>
 	<message key="notification.type.reviewing">Događaji u čitalačkom delu</message>
-	<message key="notification.type.submissionComment">Urednik je komentarisao "{$param}".</message>
+	<message key="notification.type.submissionComment">Urednik je komentarisao "{$title}".</message>
 	<message key="notification.type.submissions">Događaji u delu za predaje</message>
-	<message key="notification.type.userComment">Čitaoc je komentarisao "{$param}'s"</message>
+	<message key="notification.type.userComment">Čitaoc je komentarisao "{$title}'s"</message>
 	<message key="user.authorization.copyeditorAssignmentMissing">Pristup nije dozvoljen! Niste dodati kao lektor za ovaj članak.</message>
 	<message key="user.authorization.sectionAssignment">Pokušavate da pristupite članku koji nije u vašoj sekciji.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Neispravna lektorska predaja ili predaja nije zahtevana!</message>

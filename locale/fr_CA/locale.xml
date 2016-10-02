@@ -887,18 +887,18 @@ Vous devriez vérifier manuellement tous les URLs indentifiés comme invalides, 
 La validation peut échouer sur les URL de recherche qui nécessitent des formulaires de données enregistrés.]]></message>
 	<message key="notification.mailListDescription">Saisir votre adresse de courriel pour être avisé immédiatement de tout nouveau contenu important ajouté à la revue.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Cette page montre les mises à jour importantes associées avec cette revue tel que les nouvelles parutions et les annonces. Vous pouvez vous abonner à ces avis par l'intermédiaire des flux RSS (en cliquant sur les images à droite), ou <a href="{$emailUrl}">par courriel.</a>]]></message>
-	<message key="notification.type.articleSubmitted">Un nouvel article, "{$param}", a été soumis.</message>
+	<message key="notification.type.articleSubmitted">Un nouvel article, "{$title}", a été soumis.</message>
 	<message key="notification.type.editing">Événements de révision</message>
-	<message key="notification.type.editorDecisionComment">Un commentaire a été laissé concernant la décision du rédacteur pour "{$param}".</message>
-	<message key="notification.type.galleyModified">Une épreuve a été modifiée pour "{$param}".</message>
+	<message key="notification.type.editorDecisionComment">Un commentaire a été laissé concernant la décision du rédacteur pour "{$title}".</message>
+	<message key="notification.type.galleyModified">Une épreuve a été modifiée pour "{$title}".</message>
 	<message key="notification.type.issuePublished">Un numéro a été publié.</message>
 	<message key="notification.type.newAnnouncement">Une nouvelle annonce a été créée</message>
-	<message key="notification.type.reviewerFormComment">Une évaluation de formulaire d'évaluation a été soumise pour "{$param}".</message>
+	<message key="notification.type.reviewerFormComment">Une évaluation de formulaire d'évaluation a été soumise pour "{$title}".</message>
 	<message key="notification.type.reviewing">Événements d'évaluation</message>
 	<message key="notification.type.site">Événements du site</message>
-	<message key="notification.type.submissionComment">Un rédacteur a fait un commentaire sur "{$param}".</message>
+	<message key="notification.type.submissionComment">Un rédacteur a fait un commentaire sur "{$title}".</message>
 	<message key="notification.type.submissions">Événements de soumission</message>
-	<message key="notification.type.userComment">Un lecteur a fait un commentaire sur "{$param}"</message>
+	<message key="notification.type.userComment">Un lecteur a fait un commentaire sur "{$title}"</message>
 	<message key="user.register.reviewerInterests">Identifier les intérêts d'évaluation (questions de fond et méthodes de recherche) :</message>
 	<message key="user.subscriptions.subscriptionStatus">Statut de l'abonnement</message>
 	<message key="user.subscriptions.statusInformation">Les abonnements actifs et échus sont affichés ci-dessous avec leur date d'expiration. De plus, les informations suivantes sur le statut peuvent être incluses avec chaque abonnement.</message>

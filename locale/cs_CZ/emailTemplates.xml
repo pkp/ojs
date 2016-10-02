@@ -17,7 +17,7 @@
 <br />
 Pokud jste tuto žádost neodeslal, ignorujte prosím tento email a Vaše heslo nebude změněno. Pokud chcete své heslo resetovat, klikněte na URL adresu níže.<br />
 <br />
-Resetovat moje heslo: {$url}<br />
+Resetovat moje heslo: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Tento email je zasílán registrovanému uživateli, když uvede, že zapomněl své heslo nebo se nemůže přihlásit. Obsahuje adresu URL, kterou může následovat a resetovat své heslo.</description>
@@ -27,6 +27,7 @@ Resetovat moje heslo: {$url}<br />
 		<body><![CDATA[Vaše heslo pro stránku {$siteTitle} bylo úspěšně resetováno. Zapamatujte si prosím toto uživatelské jméno a heslo, protože je budete potřebovat pro veškerou práci s tímto časopisem.<br />
 <br />
 Vaše uživatelské jméno: {$username}<br />
+Heslo: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Tento email je zaslán registrovanému uživateli, když úspěšně resetuje své heslo postupem uvedeným v PASSWORD_RESET_CONFIRM emailu.</description>
