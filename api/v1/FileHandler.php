@@ -1,0 +1,18 @@
+<?php 
+
+$app->get('/{contextPath}/api/{version}/file/{fileId}', '\FileHandler:getFile');
+
+class FileHandler {
+	protected $ci;
+	//Constructor
+	public function __construct(Interop\Container\ContainerInterface $ci) {
+		$this->ci = $ci;
+	}
+	 
+	public function getFile($request, $response, $args) {
+		$fileId = $request->getAttribute('fileId');
+		$response->getBody()->write("Serving file with id: {$fileId}");
+		return $response;
+	}
+	 
+}
