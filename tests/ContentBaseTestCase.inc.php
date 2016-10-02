@@ -3,8 +3,8 @@
 /**
  * @file tests/ContentBaseTestCase.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ContentBaseTestCase
@@ -42,18 +42,18 @@ class ContentBaseTestCase extends PKPContentBaseTestCase {
 	 * @return string
 	 */
 	protected function _getSubmissionElementName() {
-		return 'Article';
+		return 'Article Text';
 	}
 
 	/**
 	 * Send to review.
 	 */
 	protected function sendToReview() {
-		$this->waitForElementPresent($selector = '//span[text()=\'Send to Review\']/..');
+		$this->waitForElementPresent($selector = 'css=[id^=externalReview-button-]');
 		$this->click($selector);
 		$this->waitForElementPresent('//form[@id=\'initiateReview\']//input[@type=\'checkbox\']');
-		$this->waitForElementPresent($selector = '//form[@id=\'initiateReview\']//span[text()=\'Send to Review\']/..');
+		$this->waitForElementPresent($selector = '//form[@id=\'initiateReview\']//button[contains(., \'Send to Review\')]');
 		$this->click($selector);
-		$this->waitForElementNotPresent('css=.ui-widget-overlay');
+		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
 	}
 }

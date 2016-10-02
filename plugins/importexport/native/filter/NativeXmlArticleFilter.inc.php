@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/filter/NativeXmlArticleFilter.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NativeXmlArticleFilter
@@ -47,8 +47,8 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	 * Get the method name for inserting a published submission.
 	 * @return string
 	 */
-	function getPublishedSubmissionInsertMethod(){
-		return 'insertPublishedArticle';
+	function getPublishedSubmissionInsertMethod() {
+		return 'insertObject';
 	}
 
 	/**
@@ -79,10 +79,14 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	function handleChildElement($n, $submission) {
 		switch ($n->tagName) {
 			case 'artwork_file':
+			case 'supplementary_file':
 				$this->parseSubmissionFile($n, $submission);
 				break;
 			case 'article_galley':
 				$this->parseArticleGalley($n, $submission);
+				break;
+			case 'issue_identification':
+				// do nothing, because this is done in populatePublishedSubmission
 				break;
 			default:
 				parent::handleChildElement($n, $submission);
@@ -100,7 +104,10 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 				$importClass='SubmissionFile';
 				break;
 			case 'artwork_file':
-				$importClass='ArtworkFile';
+				$importClass='SubmissionArtworkFile';
+				break;
+			case 'supplementary_file':
+				$importClass='SupplementaryFile';
 				break;
 			case 'article_galley':
 				$importClass='ArticleGalley';
@@ -141,10 +148,64 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	function populatePublishedSubmission($submission, $node) {
 		$deployment = $this->getDeployment();
 		$issue = $deployment->getIssue();
-		$submission->setSeq($node->getAttribute('seq'));
+		if (empty($issue)) {
+			$issueIdentificationNodes = $node->getElementsByTagName('issue_identification');
+
+			if ($issueIdentificationNodes->length != 1) {
+				$titleNodes = $node->getElementsByTagName('title');
+				fatalError(__('plugins.importexport.native.import.error.issueIdentificationMissing', array('articleTitle' => $titleNodes->item(0)->textContent)));
+			}
+			$issueIdentificationNode = $issueIdentificationNodes->item(0);
+			$issue = $this->parseIssueIdentification($issueIdentificationNode);
+		}
+		assert($issue);
+		$submission->setSequence($node->getAttribute('seq'));
 		$submission->setAccessStatus($node->getAttribute('access_status'));
 		$submission->setIssueId($issue->getId());
 		return $submission;
+	}
+
+	/**
+	 * Get the issue from the given identification.
+	 * @param $node DOMElement
+	 * @return Issue
+	 */
+	function parseIssueIdentification($node) {
+		$deployment = $this->getDeployment();
+		$context = $deployment->getContext();
+		$vol = $num = $year = null;
+		$titles = $givenIssueIdentification = array();
+		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
+			if (is_a($n, 'DOMElement')) {
+				switch ($n->tagName) {
+					case 'volume':
+						$vol = $n->textContent;
+						$givenIssueIdentification[] = 'volue = ' .$vol .' ';
+						break;
+					case 'number':
+						$num = $n->textContent;
+						$givenIssueIdentification[] = 'number = ' .$num .' ';
+						break;
+					case 'year':
+						$year = $n->textContent;
+						$givenIssueIdentification[] = 'year = ' .$year .' ';
+						break;
+					case 'title':
+						list($locale, $value) = $this->parseLocalizedContent($n);
+						if (empty($locale)) $locale = $context->getPrimaryLocale();
+						$titles[$locale] = $value;
+						$givenIssueIdentification[] = 'title (' .$locale .') = ' .$value .' ';
+						break;
+				}
+			}
+		}
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issuesByIdentification = $issueDao->getIssuesByIdentification($context->getId(), $vol, $num, $year, $titles);
+		if ($issuesByIdentification->getCount() != 1) {
+			fatalError(__('plugins.importexport.native.import.error.issueIdentificationMatch', array('issueIdentification' => implode(',', $givenIssueIdentification))));
+		}
+		$issue = $issuesByIdentification->next();
+		return $issue;
 	}
 }
 

@@ -4,15 +4,15 @@
 <!--
   * plugins/citationFormats/refMan/locale/sr_SR/locale.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for this citation plugin in sr_SR.
   *
   -->
  
-<locale name="sr_SR" full_name="Serbian">
+<locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.citationFormats.refMan.displayName">Reference Manager format citata</message>
 	<message key="plugins.citationFormats.refMan.citationFormatName">Reference Manager - RIS format (Windows only)</message>
 	<message key="plugins.citationFormats.refMan.description">Ovaj dodatak implementira Reference Manager format citata.</message>

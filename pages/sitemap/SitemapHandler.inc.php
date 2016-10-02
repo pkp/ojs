@@ -3,8 +3,8 @@
 /**
  * @file pages/sitemap/SitemapHandler.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SitemapHandler
@@ -101,11 +101,11 @@ class SitemapHandler extends Handler {
 			$articles = $publishedArticleDao->getPublishedArticles($issue->getId());
 			foreach($articles as $article) {
 				// Abstract
-				XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'article', 'view', array($article->getId()))));
+				XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()))));
 				// Galley files
 				$galleys = $galleyDao->getBySubmissionId($article->getId());
 				while ($galley = $galleys->next()) {
-					XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'article', 'view', array($article->getId(), $galley->getId()))));
+					XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId(), $galley->getId()))));
 				}
 			}
 		}

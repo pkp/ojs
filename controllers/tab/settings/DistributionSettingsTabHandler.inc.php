@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/settings/DistributionSettingsTabHandler.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DistributionSettingsTabHandler
@@ -26,7 +26,6 @@ class DistributionSettingsTabHandler extends PKPDistributionSettingsTabHandler {
 			$this->getPageTabs(),
 			array(
 				'access' => 'controllers.tab.settings.access.form.AccessForm',
-				'identifiers' => 'controllers.tab.settings.identifiers.form.IdentifiersForm',
 				'permissions' => 'controllers.tab.settings.permissions.form.OJSPermissionSettingsForm',
 			)
 		));

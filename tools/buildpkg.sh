@@ -1,28 +1,27 @@
 #!/bin/bash
 
 #
-# buildpkg.sh
+# tools/buildpkg.sh
 #
-# Copyright (c) 2014-2015 Simon Fraser University Library
-# Copyright (c) 2003-2015 John Willinsky
+# Copyright (c) 2014-2016 Simon Fraser University Library
+# Copyright (c) 2003-2016 John Willinsky
 # Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 #
 # Script to create an OJS package for distribution.
 #
-# Usage: buildpkg.sh <version> [<tag>] [<patch_dir>]
+# Usage: buildpkg.sh <version> [<tag>]
 #
 #
 
 GITREP=git://github.com/pkp/ojs.git
 
 if [ -z "$1" ]; then
-	echo "Usage: $0 <version> [<tag>-<branch>] [<patch_dir>]";
+	echo "Usage: $0 <version> [<tag>-<branch>]";
 	exit 1;
 fi
 
 VERSION=$1
 TAG=$2
-PATCHDIR=${3-}
 PREFIX=ojs
 BUILD=$PREFIX-$VERSION
 TMPDIR=`mktemp -d $PREFIX.XXXXXX` || exit 1
@@ -39,10 +38,29 @@ tools/test							\
 lib/pkp/tools/travis						\
 lib/pkp/plugins/*/*/tests					\
 plugins/*/*/tests						\
+plugins/auth/ldap						\
+plugins/generic/announcementFeed				\
+plugins/generic/backup						\
+plugins/generic/coins						\
+plugins/generic/cookiesAlert					\
+plugins/generic/counter						\
+plugins/generic/customLocale					\
+plugins/generic/driver						\
+plugins/generic/externalFeed					\
+plugins/generic/lucene						\
+plugins/generic/openAIRE					\
+plugins/generic/phpMyVisites					\
+plugins/generic/recommendBySimilarity				\
+plugins/generic/translator					\
+plugins/importexport/sample					\
+plugins/importexport/duracloud					\
+plugins/reports/subscriptions					\
 tests								\
 lib/pkp/tests							\
 .git								\
 .openshift							\
+.scrutinizer.yml						\
+.travis.yml							\
 lib/pkp/.git							\
 lib/pkp/lib/components/*.js					\
 lib/pkp/lib/components/*.css					\
@@ -57,16 +75,24 @@ lib/pkp/lib/vendor/ezyang/htmlpurifier/maintenance		\
 lib/pkp/lib/vendor/ezyang/htmlpurifier/smoketests		\
 lib/pkp/lib/vendor/ezyang/htmlpurifier/tests			\
 lib/pkp/lib/vendor/kriswallsmith				\
-lib/pkp/lb/vendor/leafo/lessphp/tests				\
-lib/pkp/lb/vendor/leafo/lessphp/docs				\
-lib/pkp/lb/vendor/moxiecode/plupload/examples			\
-lib/pkp/lb/vendor/phpmailer/phpmailer/docs			\
-lib/pkp/lb/vendor/phpmailer/phpmailer/examples			\
-lib/pkp/lb/vendor/phpmailer/phpmailer/test			\
-lib/pkp/lb/vendor/robloach					\
-lib/pkp/lb/vendor/smarty/smarty/demo				\
-lib/pkp/lb/vendor/symfony					\
-lib/pkp/lib/phpunit-selenium					\
+lib/pkp/lib/vendor/leafo/lessphp/tests				\
+lib/pkp/lib/vendor/leafo/lessphp/docs				\
+lib/pkp/lib/vendor/moxiecode/plupload/examples			\
+lib/pkp/lib/vendor/phpmailer/phpmailer/docs			\
+lib/pkp/lib/vendor/phpmailer/phpmailer/examples			\
+lib/pkp/lib/vendor/phpmailer/phpmailer/test			\
+lib/pkp/lib/vendor/robloach					\
+lib/pkp/lib/vendor/smarty/smarty/demo				\
+lib/pkp/lib/vendor/symfony					\
+lib/pkp/lib/vendor/phpunit					\
+lib/pkp/lib/vendor/phpspec					\
+lib/pkp/lib/vendor/phpdocumentor				\
+lib/pkp/lib/vendor/doctrine					\
+lib/pkp/js/lib/pnotify/build-tools				\
+lib/pkp/lib/vendor/sebastian					\
+lib/pkp/lib/vendor/oyejorge/less.php/test			\
+lib/pkp/lib/vendor/webmozart					\
+lib/pkp/tools/travis						\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/test"
@@ -75,22 +101,21 @@ lib/pkp/lib/swordappv2/test"
 cd $TMPDIR
 
 echo -n "Cloning $GITREP and checking out tag $TAG ... "
-git clone -q -n $GITREP $BUILD || exit 1
+git clone -b $TAG --depth 1 -q -n $GITREP $BUILD || exit 1
 cd $BUILD
 git checkout -q $TAG || exit 1
 echo "Done"
 
-echo -n "Checking out corresponding submodule ... "
-git submodule -q update --init >/dev/null || exit 1
-echo "Done"
-
-echo -n "Checking out submodule submodules ... "
-cd lib/pkp
-git submodule -q update --init >/dev/null || exit 1
+echo -n "Checking out corresponding submodules ... "
+git submodule -q update --init --recursive >/dev/null || exit 1
 echo "Done"
 
 echo -n "Installing composer dependencies ... "
+cd lib/pkp
 composer.phar update
+cd lib/vendor/oyejorge/less.php
+composer.phar update
+cd ../../../..
 cd ../..
 
 echo -n "Preparing package ... "
@@ -104,21 +129,6 @@ cd ..
 echo -n "Creating archive $BUILD.tar.gz ... "
 tar -zhcf ../$BUILD.tar.gz $BUILD
 echo "Done"
-
-if [ ! -z "$PATCHDIR" ]; then
-	echo "Creating patches in $BUILD.patch ..."
-	[ -e "../${BUILD}.patch" ] || mkdir "../$BUILD.patch"
-	for FILE in $PATCHDIR/*; do
-		OLDBUILD=$(basename $FILE)
-		OLDVERSION=${OLDBUILD/$PREFIX-/}
-		OLDVERSION=${OLDVERSION/.tar.gz/}
-		echo -n "Creating patch against ${OLDVERSION} ... "
-		tar -zxf $FILE
-		diff -urN $PREFIX-$OLDVERSION $BUILD | gzip -c > ../${BUILD}.patch/$PREFIX-${OLDVERSION}_to_${VERSION}.patch.gz
-		echo "Done"
-	done
-	echo "Done"
-fi
 
 cd ..
 

@@ -15,6 +15,13 @@ Checkout submodules and copy default configuration :
     git submodule update --init --recursive
     cp config.TEMPLATE.inc.php config.inc.php
 
+Install or update dependencies via Composer:
+
+    cd lib/pkp
+    # if you don't already have Composer installed:
+    curl -sS https://getcomposer.org/installer | php
+    php composer.phar update
+
 If your PHP version supports built-in development server :
 
     php -S localhost:8000
@@ -25,8 +32,9 @@ See [Wiki][wiki-dev] for more complete development guide.
 
 Specific requirements : [PHPunit][php-unit]. Installing with pear for example :
 
-    pear channel-discover pear.phpunit.de
-    pear install phpunit/PHPUnit
+    wget https://phar.phpunit.de/phpunit.phar
+    chmod +x phpunit.phar
+    sudo mv phpunit.phar /usr/local/bin/phpunit
 
 Setting up test environment :
 

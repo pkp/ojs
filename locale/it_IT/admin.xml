@@ -4,8 +4,8 @@
 <!--
   * locale/it_IT/admin.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2000-2015 John Willinsky
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2000-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
@@ -13,7 +13,7 @@
   *
   -->
 
-<locale name="it_IT" full_name = "Italiano">
+<locale name="it_IT" full_name="Italiano">
 	<message key="admin.hostedJournals">Riviste</message>
 	<message key="admin.settings.journalRedirect">Redirect</message>
 	<message key="admin.settings.journalRedirectInstructions">Prevede un redirect dal sito principale a una rivista. Può essere utile, ad esempio, se il sito ospita solo una rivista.</message>
@@ -22,7 +22,6 @@
 	<message key="admin.languages.supportedLocalesInstructions">Seleziona tutte le localizzazioni supportate dal sito. Le lingue scelte saranno disponibili per tutte le riviste ospitate e saranno visibili nel menu presente in tutte le pagine del sito (in ogni caso il layout potrà sempre essere modificato personalizzando le pagine della singola rivista). Se non vengono impostate più lingue, il menu di selezione non sarà presente e non saranno disponibili le impostazioni estese per le lingue.</message>
 	<message key="admin.languages.confirmUninstall">Sei sicuro di voler disinstallare questa localizzazione? Questa operazione avrà effetto su tutte le lingue che la stanno utilizzando</message>
 	<message key="admin.languages.installNewLocalesInstructions">Seleziona le localizzazioni da installare nel sistema. I file di localizzazione vanno installati, prima che le riviste possano utilizzarli. Leggi la documentazione di OJS per ulteriori informazioni su come aggiungere nuove lingue</message>
-	<message key="admin.languages.downloadLocales">Scarica i file di localizzazione</message>
 	<message key="admin.languages.downloadFailed">Lo scaricamento della lingua è fallito. Il(I) messaggio(i) di errore qui sotto descrive il motivo dell'insuccesso.</message>
 	<message key="admin.languages.localeInstalled">La lingua "{$locale}" è stata installata.</message>
 	<message key="admin.languages.download">Scarica localizzazione</message>
@@ -39,8 +38,8 @@
 	<message key="admin.journals.noneCreated">Non è stata creata nessuna rivista.</message>
 	<message key="admin.contexts.confirmDelete">Sei sicuro di voler cancellare definitivamente questa rivista e tutti i suoi contenuti?</message>
 	<message key="admin.contexts.create">Crea una nuova rivista</message>
+	<message key="admin.journals.createInstructions">Sarai automaticamente registrato come manager di questa rivista. Dopo aver creato una nuova rivista, effettua il log in come manager per continuare il setup e registrare gli utenti.</message>
 	<message key="admin.journals.urlWillBe">Utilizzare un termine breve o un acronimo. La URL della rivista sarà {$sampleUrl}</message>
-	<message key="admin.contexts.form.titleRequired">Inserire un titolo</message>
 	<message key="admin.contexts.form.pathRequired">Inserire un path.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Il path può contenere solo caratteri alfanumerici, underscore e trattini. Deve iniziare e finire con un carattere alfanumerico e non può contenere spazi.</message>
 	<message key="admin.contexts.form.pathExists">Il path indicato è già utilizzato da un'altra rivista.</message>
@@ -58,7 +57,7 @@
 	<message key="admin.mergeUsers.from.description">Seleziona un utente da fondere sull'account di un altro utente (es. quando qualcuno ha due account da utente). L'account selezionato sarà cancellato e le sue submission, gli incarichi ecc. saranno attribuiti al secondo account.</message>
 	<message key="admin.mergeUsers.allUsers">Tutti gli utenti iscritti</message>
 	<message key="admin.mergeUsers.confirm">Sei sicuro di voler fondere {$oldAccountCount} account selezionato(i) con l'account con il nome utente "{$newUsername}"? I vecchi {$oldAccountCount} account non esisteranno più. Questa azione non è reversibile.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Non ci sono utenti iscritti</message>
+	<message key="admin.mergeUsers.noneEnrolled">Non ci sono utenti iscritti</message>
 	<message key="admin.locale.maybeIncomplete">I file marcati potrebbero essere incompleti.</message>
 	<message key="admin.settings.options">Opzioni</message>
 	<message key="admin.settings.journalsList.showThumbnail">Anteprima della rivista</message>
@@ -78,4 +77,8 @@
 	<message key="admin.settings.journalsList">Elementi della rivista</message>
 	<message key="admin.settings.usePaging">In siti con molte riviste, spezza la lista in diverse pagine.</message>
 	<message key="admin.categories.enable.description">L'amministratore del sito può definire qui un set di categorie per migliorare l'organizzazione di siti che ospitano molte riviste. Gli amministratori delle riviste possono poi scegliere alcune di queste categorie per ciascuna rivista e i lettori possono navigare attraverso le riviste per categorie.</message>
+	
+	<message key="admin.settings.defaultMetricDescription">Questa installazione OJS è configurata per registrare più di una metrica di utilizzo. Le statistiche di utilizzo verranno visualizzate in diversi contesti. 
+Ci sono casi in cui deve essere utilizzato una sola statistica di utilizzo, ad esempio, per visualizzare un elenco ordinato di oggetti più utilizzati o risultati di ricerca. 
+Selezionare una delle metriche configurate come predefinita.</message>
 </locale>

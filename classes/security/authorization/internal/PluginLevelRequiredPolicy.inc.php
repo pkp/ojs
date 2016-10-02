@@ -2,8 +2,8 @@
 /**
  * @file classes/security/authorization/internal/PluginLevelRequiredPolicy.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PluginLevelRequiredPolicy
@@ -37,7 +37,7 @@ class PluginLevelRequiredPolicy extends AuthorizationPolicy {
 	 */
 	function effect() {
 		// Get the plugin.
-		$plugin =& $this->getAuthorizedContextObject(ASSOC_TYPE_PLUGIN);
+		$plugin = $this->getAuthorizedContextObject(ASSOC_TYPE_PLUGIN);
 		if (!is_a($plugin, 'Plugin')) return AUTHORIZATION_DENY;
 
 		// Test the plugin level.

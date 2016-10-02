@@ -4,8 +4,8 @@
 <!--
   * ojs_schema.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * OJS database schema in XML.
@@ -123,10 +123,6 @@
 			<DEFAULT VALUE="0"/>
 		</field>
 		<field name="hide_about" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="disable_comments" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
@@ -473,19 +469,6 @@
 			<DEFAULT VALUE="1"/>
 		</field>
 
-		<!--
-		 - The following fields are DEPRECATED and should not be used;
-		 - They are only maintained so that they are not accidentally
-		 - dropped by the schema sync before upgrade scripts are run.
-		 -->
-
-		<field name="submission_file_id" type="I8"/>
-		<field name="revised_file_id" type="I8"/>
-		<field name="review_file_id" type="I8"/>
-		<field name="editor_file_id" type="I8"/>
-
-		<!-- End deprecation list -->
-
 		<field name="pages" type="C2" size="255"/>
 		<field name="fast_tracked" type="I1">
 			<NOTNULL/>
@@ -495,13 +478,9 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="comments_status" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
 		<field name="stage_id" type="I8">
 			<NOTNULL/>
-			<DEFAULT VALUE="1"/>
+			<DEFAULT VALUE="1"/><!-- WORKFLOW_STAGE_ID_SUBMISSION -->
 		</field>
 		<descr>Submissions</descr>
 		<index name="submissions_journal_id">
@@ -594,21 +573,16 @@
 		<field name="submission_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="file_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="label" type="C2" size="32"/>
+		<field name="label" type="C2" size="255"/>
+		<field name="file_id" type="I8"/>
 		<field name="seq" type="F">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="remote_url" type="C2" size="255" />
-		<field name="is_available" type="I1">
+		<field name="remote_url" type="C2" size="2047"/>
+		<field name="is_approved" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="galley_type" type="C2" size="255">
-			<NOTNULL/>
 		</field>
 		<descr>Submission galleys</descr>
 		<index name="submission_galleys_submission_id">

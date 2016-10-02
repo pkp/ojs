@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/webFeed/WebFeedPlugin.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class WebFeedPlugin
@@ -37,7 +37,6 @@ class WebFeedPlugin extends GenericPlugin {
 			if ($this->getEnabled()) {
 				HookRegistry::register('TemplateManager::display',array($this, 'callbackAddLinks'));
 				HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
-				HookRegistry::register('LoadHandler', array($this, 'callbackHandleShortURL') );
 			}
 			return true;
 		}
@@ -45,12 +44,20 @@ class WebFeedPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Get the name of the settings file to be installed on new journal
+	 * Get the name of the settings file to be installed on new context
 	 * creation.
 	 * @return string
 	 */
 	function getContextSpecificPluginSettingsFile() {
 		return $this->getPluginPath() . '/settings.xml';
+	}
+
+	/**
+	 * Override the builtin to get the correct template path.
+	 * @return string
+	 */
+	function getTemplatePath() {
+		return parent::getTemplatePath() . 'templates/';
 	}
 
 	/**
@@ -67,12 +74,12 @@ class WebFeedPlugin extends GenericPlugin {
 			case 'blocks':
 				$this->import('WebFeedBlockPlugin');
 				$blockPlugin = new WebFeedBlockPlugin($this->getName());
-				$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath()] =& $blockPlugin;
+				$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath()] = $blockPlugin;
 				break;
 			case 'gateways':
 				$this->import('WebFeedGatewayPlugin');
 				$gatewayPlugin = new WebFeedGatewayPlugin($this->getName());
-				$plugins[$gatewayPlugin->getSeq()][$gatewayPlugin->getPluginPath()] =& $gatewayPlugin;
+				$plugins[$gatewayPlugin->getSeq()][$gatewayPlugin->getPluginPath()] = $gatewayPlugin;
 				break;
 		}
 		return false;
@@ -82,125 +89,103 @@ class WebFeedPlugin extends GenericPlugin {
 	 * Add feed links to page <head> on select/all pages.
 	 */
 	function callbackAddLinks($hookName, $args) {
-		if ($this->getEnabled()) {
-			// Only page requests will be handled
-			$request =& $this->getRequest();
-			if (!is_a($request->getRouter(), 'PKPPageRouter')) return false;
+		// Only page requests will be handled
+		$request = $this->getRequest();
+		if (!is_a($request->getRouter(), 'PKPPageRouter')) return false;
 
-			$templateManager =& $args[0];
+		$templateManager =& $args[0];
+		$currentJournal = $templateManager->get_template_vars('currentJournal');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$currentIssue = $issueDao->getCurrent($currentJournal->getId(), true);
 
-			$currentJournal =& $templateManager->get_template_vars('currentJournal');
-			$requestedPage = $request->getRequestedPage();
-			$journalTitle = '';
-			if ($currentJournal) {
-				$issueDao = DAORegistry::getDAO('IssueDAO');
-				$currentIssue = $issueDao->getCurrent($currentJournal->getId(), true);
-				$displayPage = $this->getSetting($currentJournal->getId(), 'displayPage');
-				$journalTitle = $this->sanitize($currentJournal->getLocalizedName());
-			} else {
-				$displayPage = null; // Suppress scrutinizer
-			}
-
-			if (isset($currentIssue) && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'issue')) || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) {
-				$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
-
-				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="' . $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'atom')) . '" />';
-				$feedUrl2 = '<link rel="alternate" type="application/rdf+xml" href="'. $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss')) . '" />';
-				$feedUrl3 = '<link rel="alternate" type="application/rss+xml" href="'. $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss2')) . '" />';
-
-				$templateManager->assign('additionalHeadData', $additionalHeadData."\n\t".$feedUrl1."\n\t".$feedUrl2."\n\t".$feedUrl3);
-			}
+		if (!$currentIssue) {
+			return;
 		}
+
+		$displayPage = $this->getSetting($currentJournal->getId(), 'displayPage');
+
+		// Define when the <link> elements should appear
+		$contexts = 'frontend';
+		if ($displayPage == 'homepage') {
+			$contexts = array('frontend-index', 'frontend-issue');
+		} elseif ($displayPage == 'issue') {
+			$contexts = 'frontend-issue';
+		}
+
+		$templateManager->addHeader(
+			'webFeedAtom+xml',
+			'<link rel="alternate" type="application/atom+xml" href="' . $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'atom')) . '">',
+			array(
+				'contexts' => $contexts,
+			)
+		);
+		$templateManager->addHeader(
+			'webFeedRdf+xml',
+			'<link rel="alternate" type="application/rdf+xml" href="'. $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss')) . '">',
+			array(
+				'contexts' => $contexts,
+			)
+		);
+		$templateManager->addHeader(
+			'webFeedRss+xml',
+			'<link rel="alternate" type="application/rss+xml" href="'. $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss2')) . '">',
+			array(
+				'contexts' => $contexts,
+			)
+		);
 
 		return false;
 	}
 
 	/**
-	 * Handle requests for feed via short URLs (e.g., journalPath/feed/atom).
-	 * This is for backwards compatibility with older versions of this plugin.
+	 * @see Plugin::getActions()
 	 */
-	function callbackHandleShortURL($hookName, $args) {
-		if ($this->getEnabled()) {
-			$page =& $args[0];
-			$op =& $args[1];
-			$request =& $this->getRequest();
-
-			if ($page == 'feed') {
-				switch ($op) {
-					case 'atom':
-						$request->redirect(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'atom'));
-						break;
-					case 'rss':
-						$request->redirect(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss'));
-						break;
-					case 'rss2':
-						$request->redirect(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss2'));
-						break;
-					default:
-						$request->redirect(null, 'index');
-				}
-			}
-		}
-		return false;
-	}
-
-	/**
-	 * Display verbs for the management interface.
-	 */
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
-		if ($this->getEnabled()) {
-			$verbs[] = array('settings', __('plugins.generic.webfeed.settings'));
-		}
-		return $verbs;
+	function getActions($request, $verb) {
+		$router = $request->getRouter();
+		import('lib.pkp.classes.linkAction.request.AjaxModal');
+		return array_merge(
+			$this->getEnabled()?array(
+				new LinkAction(
+					'settings',
+					new AjaxModal(
+						$router->url($request, null, null, 'manage', null, array('verb' => 'settings', 'plugin' => $this->getName(), 'category' => 'generic')),
+						$this->getDisplayName()
+					),
+					__('manager.plugins.settings'),
+					null
+				),
+			):array(),
+			parent::getActions($request, $verb)
+		);
 	}
 
  	/**
 	 * @see Plugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
-		$request =& $this->getRequest();
-
-		switch ($verb) {
+	function manage($args, $request) {
+		switch ($request->getUserVar('verb')) {
 			case 'settings':
-				$journal = $request->getJournal();
+				$context = $request->getContext();
 
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 
 				$this->import('SettingsForm');
-				$form = new SettingsForm($this, $journal->getId());
+				$form = new SettingsForm($this, $context->getId());
 
 				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
-						$request->redirect(null, null, 'plugins');
-						return false;
-					} else {
-						$form->display();
+						return new JSONMessage(true);
 					}
 				} else {
 					$form->initData();
-					$form->display();
 				}
-				return true;
-			default:
-				// Unknown management verb
-				assert(false);
-				return false;
+				return new JSONMessage(true, $form->fetch($request));
 		}
-	}
-
-	/**
-	 * Clean up the Journal title.
-	 * @param $string
-	 * @return $string
-	 */
-	function sanitize($string) {
-		return htmlspecialchars(strip_tags($string));
+		return parent::manage($args, $request);
 	}
 }
 

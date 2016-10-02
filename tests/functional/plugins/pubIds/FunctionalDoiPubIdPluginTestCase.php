@@ -3,8 +3,8 @@
 /**
  * @file tests/functional/plugins/pubIds/FunctionalDoiPubIdPluginTest.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FunctionalDOIPubIdPluginTest
@@ -880,7 +880,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 				}
 				foreach (array('DC-meta', 'Google-meta') as $doiMetaAttribute) {
 					if (isset($this->pages[$objectType][$doiMetaAttribute])) {
-						$doiMetaElement = String::regexp_replace(
+						$doiMetaElement = PKPString::regexp_replace(
 							'/@[^@]+$/', '',
 							$this->pages[$objectType][$doiMetaAttribute]
 						);

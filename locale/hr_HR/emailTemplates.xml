@@ -2,10 +2,10 @@
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
 
 <!--
-  * locale/hr_HR/emailTemplateData.xml
+  * locale/hr_HR/emailTemplates.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -19,7 +19,7 @@
 <br />
 U slučaju da takav zahtjev niste poslali, molimo vas da ignorirate ovu e-poštu i vaša će lozinka ostati nepromijenjena. U slučaju da želite promijeniti lozinku, molimo vas da kliknete na dolje priloženu poveznicu.<br />
 <br />
-Promjena lozinke: {$url}<br />
+Promjena lozinke: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Ovaj obrazac e-pošte šalje se registriranim korisnicima kada informiraju sustav da su zaboravili svoju lozinku ili da se ne mogu prijaviti u sustav. U poruci se nalazi URL koji mogu slijediti kao bi postavili svoju novu lozinku.</description>
@@ -29,7 +29,7 @@ Promjena lozinke: {$url}<br />
 		<body><![CDATA[Vaša lozinka za mrežnu stranicu {$siteTitle} je uspješno promijenjena. Molimo vas da pohranite vaše korisničko ime i lozinku jer su oni nužni za sve aktivnosti vezane uz časopis.<br />
 <br />
 Vaše korisničko ime: {$username}<br />
-Vaša nova lozinka: {$password}<br />
+Lozinka: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Ovaj obrazac e-pošte šalje se registriranim korisnicima nakon što  uspješno ponovno postave  svoju  lozinku slijedeći postupak koji je opisan u PASSWORD_RESET_CONFIRM.</description>
@@ -49,7 +49,7 @@ Srdačno,<br />
 		<subject>Objavljen novi broj</subject>
 		<body><![CDATA[Poštovani čitatelji,<br />
 <br />
-upravo je objavljen novi broj časopisa {$contextName} koji je dostupan na adresi <a href="{$journalUrl}">{$journalUrl}</a>. Pozivamo vas da pregledate sadržaj broja i posjetite našu mrežnu stranicu kako bi pročitali vama zanimljive članke i druge priloge.<br />
+upravo je objavljen novi broj časopisa {$contextName} koji je dostupan na adresi <a href="{$contextUrl}">{$contextUrl}</a>. Pozivamo vas da pregledate sadržaj broja i posjetite našu mrežnu stranicu kako bi pročitali vama zanimljive članke i druge priloge.<br />
 <br />
 Hvala vam na interesu za naš rad,<br />
 {$editorialContactSignature}]]></body>
@@ -59,7 +59,7 @@ Hvala vam na interesu za naš rad,<br />
 		<subject>Zamolba za arhiviranje časopisa {$contextName}</subject>
 		<body><![CDATA[Poštovani [Knjižničar ustanove],<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt; je časopis s kojim zaposlenik vašeg fakulteta [ime zaposlenika] surađuje kao [titula]. Časopis pokušava, u ovoj i drugim knjižnicama u sustavu znanosti i visokog obrazovanja, uspostaviti arhivu u skladu s LOCKSS sustavom (Lots of Copies Keep Stuff Safe).<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; je časopis s kojim zaposlenik vašeg fakulteta [ime zaposlenika] surađuje kao [titula]. Časopis pokušava, u ovoj i drugim knjižnicama u sustavu znanosti i visokog obrazovanja, uspostaviti arhivu u skladu s LOCKSS sustavom (Lots of Copies Keep Stuff Safe).<br />
 <br />
 [Kratki opis časopisa]<br />
 <br />
@@ -75,7 +75,7 @@ Unaprijed hvala,<br />
 		<subject>Zamolba za arhiviranje časopisa {$contextName}</subject>
 		<body><![CDATA[Poštovani [Knjižničar ustanove],<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt; časopis je s kojim zaposlenik vašeg fakulteta [ime zaposlenika] surađuje kao [titula]. Časopis pokušava, u ovoj i drugim knjižnicama u sustavu znanosti i visokog obrazovanja, uspostaviti arhivu u skladu s LOCKSS sustavom (Lots of Copies Keep Stuff Safe).<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; časopis je s kojim zaposlenik vašeg fakulteta [ime zaposlenika] surađuje kao [titula]. Časopis pokušava, u ovoj i drugim knjižnicama u sustavu znanosti i visokog obrazovanja, uspostaviti arhivu u skladu s LOCKSS sustavom (Lots of Copies Keep Stuff Safe).<br />
 <br />
 [Kratki opis časopisa]<br />
 <br />
@@ -93,7 +93,7 @@ Unaprijed hvala,<br />
 <br />
 zahvaljujemo što ste prijavili prilog &quot;{$submissionTitle}&quot; našem časopisu {$contextName}. Pomoću sustava upravljanja časopisom koji koristimo, moći ćete aktivno pratiti kretanje članka kroz postupak uređivanja prijavljujući se na mrežnu stranicu časopisa:<br />
 <br />
-URL rukopisa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL rukopisa: {$submissionUrl}<br />
 Korisničko ime: {$authorUsername}<br />
 <br />
 U slučaju da imate bilo kakvih pitanja, molimo vas da nam se obratite.<br />
@@ -138,7 +138,7 @@ Srdačno,<br />
 <br />
 u okviru raspodjele uredničkih zaduženja za časopis {$contextName} vama je dodijeljen zaprimljeni prilog &quot;{$submissionTitle}&quot; kako biste proveli postupak njegova uređivanja.<br />
 <br />
-URL priloga: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL priloga: {$submissionUrl}<br />
 Korisničko ime: {$editorUsername}<br />
 <br />
 Unaprijed hvala,<br />
@@ -151,7 +151,7 @@ Unaprijed hvala,<br />
 <br />
 s obzirom na vaše iskustvo i područje ekspertize, rado bismo vam povjerili zadatak recenzije članka &quot;{$submissionTitle}&quot; prijavljenog u naš časopis {$contextName}. Sažetak članka nalazi se u nastavku ove poruke. Nadamo se da ćete prihvatiti našu ponudu te izvršiti ovu, za nas iznimno važnu, zadaću.<br />
 <br />
-Molimo vas da se kao korisnik prijavite na mrežnu stranicu časopisa do {$weekLaterDate} kako biste naznačili hoćete li preuzeti recenziju ili ne. Potom, ukoliko prihvatite izradu recenzije, na istome mjestu možete pristupiti tekstu članka te zabilježili vašu recenziju i preporuku. Mrežna stranica časopisa je <a href="{$journalUrl}">{$journalUrl}</a><br />
+Molimo vas da se kao korisnik prijavite na mrežnu stranicu časopisa do {$responseDueDate} kako biste naznačili hoćete li preuzeti recenziju ili ne. Potom, ukoliko prihvatite izradu recenzije, na istome mjestu možete pristupiti tekstu članka te zabilježili vašu recenziju i preporuku. Mrežna stranica časopisa je <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 U slučaju da nemate pri ruci svoje korisničko ime ili lozinku za mrežnu stranicu časopisa, možete se koristiti ovom poveznicom kako biste promijenili lozinku (koju ćemo vam tada, zajedno s korisničkim imenom, poslati putem e-pošte). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
 <br />
@@ -173,7 +173,7 @@ Srdačno,<br />
 <br />
 s obzirom na vaše iskustvo i područje ekspertize, rado bismo vam povjerili zadatak recenzije članka &quot;{$submissionTitle}&quot; prijavljenog u naš časopis {$contextName}. Sažetak članka nalazi se u nastavku ove poruke. Nadamo se da ćete prihvatiti našu ponudu te izvršiti ovu, za nas iznimno važnu, zadaću.<br />
 <br />
-Molimo vas da se kao korisnik prijavite na mrežnu stranicu časopisa do {$weekLaterDate} kako biste naznačili hoćete li preuzeti recenziju ili ne. Potom, ukoliko prihvatite izradu recenzije, na istome mjestu možete pristupiti tekstu članka te zabilježili vašu recenziju i preporuku.<br />
+Molimo vas da se kao korisnik prijavite na mrežnu stranicu časopisa do {$responseDueDate} kako biste naznačili hoćete li preuzeti recenziju ili ne. Potom, ukoliko prihvatite izradu recenzije, na istome mjestu možete pristupiti tekstu članka te zabilježili vašu recenziju i preporuku.<br />
 <br />
 Sama recenzija trebala bi biti završena zaključno s {$reviewDueDate}.<br />
 <br />
@@ -194,7 +194,7 @@ Srdačno,<br />
 s obzirom na vaše iskustvo i područje ekspertize, rado bismo vam povjerili zadatak recenzije članka &quot;{$submissionTitle}&quot; prijavljenog u naš časopis. Nadamo se da ćete prihvatiti našu ponudu te izvršiti ovu, za nas iznimno važnu, zadaću.<br />
 U nastavku teksta poruke nalaze se upute za recenzente našeg časopisa, a tekst članka nalazi se u prilogu. Od vas očekujemo da nam vašu recenziju članka, zajedno s preporukom dostavite e-poštom zaključno s {$reviewDueDate}.<br />
 <br />
-No prije svega, molimo vas da nam u odgovoru na ovu poruku e-poštom zaključno s datumom {$weekLaterDate} naznačite da li ste u mogućnosti i da li ste voljni izvršiti recenziju<br />
+No prije svega, molimo vas da nam u odgovoru na ovu poruku e-poštom zaključno s datumom {$responseDueDate} naznačite da li ste u mogućnosti i da li ste voljni izvršiti recenziju<br />
 <br />
 Srdačno,<br />
 {$editorialContactSignature}<br />
@@ -307,12 +307,12 @@ Srdačno,<br />
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Zamolba za lekturu</subject>
-		<body><![CDATA[Poštovana/i {$copyeditorName},<br />
+		<body><![CDATA[Poštovana/i {$participantName},<br />
 <br />
 željeli bismo vas zamoliti da prihvatite lekturu rukopisa &quot;{$submissionTitle}&quot; za časopis {$contextName}. Prijavljeni rukopis, kao i upute za lektoriranje možete pronaći na mrežnim stranicama časopisa.<br />
 <br />
-URL rukopisa: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Korisničko ime: {$copyeditorUsername}<br />
+URL rukopisa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Korisničko ime: {$participantUsername}<br />
 <br />
 U slučaju da trenutačno niste u mogućnosti preuzeti lekturu ili da imate bilo kakvih dodatnih pitanja, molimo vas da nam se obratite.<br />
 <br />
@@ -328,11 +328,11 @@ Srdačno,<br />
 prvi krug lekture rukopisa &quot;{$submissionTitle}&quot; za časopis {$contextName} je završen. Rukopis je sada spreman da autor i urednik na njemu izvrše pregled promjena i upita.<br />
 <br />
 Srdačno,<br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Zaprimljena lektura</subject>
-		<body><![CDATA[Poštovana/i {$copyeditorName},<br />
+		<body><![CDATA[Poštovana/i {$participantName},<br />
 <br />
 hvala vam što ste izvršili lekturu rukopisa &quot;{$submissionTitle}&quot; za časopis {$contextName}.<br />
 <br />
@@ -349,7 +349,7 @@ upravo smo napravili lekturu vašeg priloga &quot;{$submissionTitle}&quot; za č
 <br />
 Ovo je posljednja prilika da izvršite neke promjene u vašem prilogu. Tekst ćete moći još jednom pregledati u fazi korekture, međutim u toj fazi mogu se ispravljati samo manje tiskarske pogreške i pogreške u prijelomu.<br />
 <br />
-URL rukopisa: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL rukopisa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 U slučaju da trenutačno niste u mogućnosti pregledati svoj prilog ili ako imate bilo kakvih dodatnih upita, molimo vas da nam se obratite.<br />
 <br />
@@ -382,12 +382,12 @@ Srdačno,<br />
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Zamolba za završnu lekturu</subject>
-		<body><![CDATA[Poštovana/i {$copyeditorName},<br />
+		<body><![CDATA[Poštovana/i {$participantName},<br />
 <br />
 autor i urednik učinili su pregled lekture rukopisa &quot;{$submissionTitle}&quot; za časopis {$contextName}. Temeljem priloženih napomena molim vas da izradite konačnu, &quot;čistu verziju&quot;, koja će biti upućena u prijelom.<br />
 <br />
-URL rukopisa: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Korisničko ime: {$copyeditorUsername}<br />
+URL rukopisa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Korisničko ime: {$participantUsername}<br />
 <br />
 Srdačno,<br />
 {$editorialContactSignature}]]></body>
@@ -400,12 +400,12 @@ Srdačno,<br />
 pripremio/la sam čistu, lektoriranu verziju rukopisa &quot;{$submissionTitle}&quot; za časopis {$contextName}. Rukopis je sada spreman za pripremu prijeloma.<br />
 <br />
 Srdačno,<br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Ovim obrascem e-pošte lektor obavještava  urednika rubrike da je zadnji krug postupka lekture završen i da postupak prijeloma može početi.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Zaprimljena završna lektura</subject>
-		<body><![CDATA[Poštovana/i {$copyeditorName},<br />
+		<body><![CDATA[Poštovana/i {$participantName},<br />
 <br />
 hvala vam što ste završili lekturu rukopisa &quot;{$submissionTitle}&quot; za časopis {$contextName}.<br />
 <br />
@@ -415,12 +415,12 @@ Srdačno,<br />
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Zamolba za prijelom</subject>
-		<body><![CDATA[Poštovana/i {$layoutEditorName},<br />
+		<body><![CDATA[Poštovana/i {$participantName},<br />
 <br />
 molim vas da pripremite prijelom priloga &quot;{$submissionTitle}&quot; za časopis {$contextName}.<br />
 <br />
 URL rukopisa: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Korisničko ime: {$layoutEditorUsername}<br />
+Korisničko ime: {$participantUsername}<br />
 <br />
 U slučaju da trenutačno niste u mogućnosti preuzeti ovu obavezu ili ako imate bilo kakvih dodatnih pitanja, molim vas da mi se obratite.<br />
 <br />
@@ -436,13 +436,13 @@ prijelom priloga &quot;{$submissionTitle}&quot; za časopis {$contextName} je za
 U slučaju da imate bilo kakvih pitanja molim vas da mi se obratite.<br />
 <br />
 Srdačno,<br />
-{$layoutEditorName}<br />
+{$participantName}<br />
 ]]></body>
 		<description>Ova e-pošta urednika prijeloma uredniku rubrike obaviještava da je proces prijeloma završen.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Zaprimljen prijelom</subject>
-		<body><![CDATA[Poštovana/i {$layoutEditorName},<br />
+		<body><![CDATA[Poštovana/i {$participantName},<br />
 <br />
 zahvaljujem vam što ste pripremili prijelom priloga &quot;{$submissionTitle}&quot; za časopis {$contextName}.<br />
 <br />
@@ -456,7 +456,7 @@ Srdačno,<br />
 <br />
 molimo vas da izvršite korekturu prijeloma vašeg priloga &quot;{$submissionTitle}&quot; za časopis {$contextName}. Kako biste pristupili radnom primjerku prijeloma, molimo vas da otiđete na mrežnu stranicu časopisa koristeći se poveznicom koja se nalazi u nastavku teksta. Koristite poveznicu VIEW PROOF kako biste pregledali postoje li tiskarske pogreške i greške u prijelomu u tekstu oblikovanom za objavljivanje. Ispravke zabilježite unutar okvira Korektorski ispravci, koristeći se priloženim uputama za ispravke.<br />
 <br />
-URL Rukopisa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL Rukopisa: {$submissionUrl}<br />
 <br />
 U slučaju da trenutačno niste u mogućnosti izraditi korekturu svog priloga ili ako imate bilo kakvih dodatnih pitanja, molim vas da nam se obratite.<br />
 <br />
@@ -492,7 +492,7 @@ Srdačno,<br />
 <br />
 molim vas da izvršite korekturu prijeloma priloga &quot;{$submissionTitle}&quot; za časopis {$contextName}.<br />
 <br />
-URL Rukopisa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL Rukopisa: {$submissionUrl}<br />
 Korisničko ime: {$proofreaderUsername}<br />
 <br />
 U slučaju da trenutačno niste u mogućnosti preuzeti ovu korekturu ili u slučaju da imate bilo kakvih pitanja, molimo vas da nam se obratite.<br />
@@ -523,12 +523,12 @@ Srdačno,<br />
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Zamolba za unos korekture (grafički urednik)</subject>
-		<body><![CDATA[Poštovana/i {$layoutEditorName},<br />
+		<body><![CDATA[Poštovana/i {$participantName},<br />
 <br />
 molimo vas da izvršite potrebne ispravke u prijelomu priloga &quot;{$submissionTitle}&quot; za časopis {$contextName} u skladu s priloženim korekturama.<br />
 <br />
-URL priloga: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Korisničko ime: {$layoutEditorUsername}<br />
+URL priloga: {$submissionUrl}<br />
+Korisničko ime: {$participantUsername}<br />
 <br />
 U slučaju da trenutačno niste u mogućnosti izvršiti ove unose ili ako imate bilo kakva dodatna pitanja, molimo vas da nam se obratite.<br />
 <br />
@@ -543,12 +543,12 @@ Srdačno,<br />
 prijelom priloga &quot;{$submissionTitle}&quot; za časopis {$contextName} ispravljen je prema priloženim korektorskim uputama. Članak je sada spreman za objavljivanje.<br />
 <br />
 Srdačno,<br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Ovim obrascem e-pošte grafički urednik obavještava urednika rubrike da je unos korekture završen i da je članak spreman za objavljivanje.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Zaprimljena korektura (grafički urednik)</subject>
-		<body><![CDATA[Poštovana/i {$layoutEditorName},<br />
+		<body><![CDATA[Poštovana/i {$participantName},<br />
 <br />
 hvala vam što ste završili unos korektura u prijelom priloga &quot;{$submissionTitle}&quot; za časopis {$contextName}.<br />
 <br />
@@ -583,7 +583,7 @@ Srdačno,<br />
 	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
 		<subject>Broj dostupan pod uvjetima otvorenog pristupa</subject>
-		<body><![CDATA[Ovaj broj časopisa {$contextName} od sada je u cijelosti dostupan svim čitateljima pod uvjetima otvorenog pristupa. Pozivamo vas da pregledate kazalo sadržaja i potom posjetite našu mrežnu stranicu (<a href="{$journalUrl}">{$journalUrl}</a>) gdje možete bez ograničenja pregledati sve članke i priloge koji vas zanimaju.<br />
+		<body><![CDATA[Ovaj broj časopisa {$contextName} od sada je u cijelosti dostupan svim čitateljima pod uvjetima otvorenog pristupa. Pozivamo vas da pregledate kazalo sadržaja i potom posjetite našu mrežnu stranicu (<a href="{$contextUrl}">{$contextUrl}</a>) gdje možete bez ograničenja pregledati sve članke i priloge koji vas zanimaju.<br />
 <br />
 Hvala vam na zanimanju za naš rad,<br />
 {$editorialContactSignature}]]></body>

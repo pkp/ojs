@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/DdioufSubmissionTest.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DdioufSubmissionTest
@@ -26,7 +26,6 @@ class DdioufSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Diouf',
 			'affiliation' => 'Alexandria University',
 			'country' => 'Egypt',
-			'roles' => array('Author'),
 		));
 
 		$title = 'Genetic transformation of forest trees';
@@ -37,18 +36,15 @@ class DdioufSubmissionTest extends ContentBaseTestCase {
 
 		$this->logOut();
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
-		$this->assignParticipant('Section editor', 'David Buskins');
 		$this->sendToReview();
-		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/div[contains(text(), \'Initiated\')]');
+		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignReviewer('phudson', 'Paul Hudson');
 		$this->assignReviewer('agallego', 'Adela Gallego');
-		$this->recordEditorialDecision('Accept Submission');
-		$this->waitForElementPresent('//a[contains(text(), \'Editorial\')]/div[contains(text(), \'Initiated\')]');
-		$this->waitForText('css=a.editorial.stageId4 > div.stageState', 'Initiated');
+		$this->recordEditorialDecision('Send to Copyediting');
+		$this->waitForElementPresent('//a[contains(text(), \'Copyediting\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Copyeditor', 'Maria Fritz');
 		$this->recordEditorialDecision('Send To Production');
-		$this->waitForElementPresent('//a[contains(text(), \'Production\')]/div[contains(text(), \'Initiated\')]');
-		$this->waitForText('css=a.production.stageId5 > div.stageState', 'Initiated');
+		$this->waitForElementPresent('//a[contains(text(), \'Production\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Layout Editor', 'Graham Cox');
 		$this->assignParticipant('Proofreader', 'Catherine Turner');
 		$this->logOut();

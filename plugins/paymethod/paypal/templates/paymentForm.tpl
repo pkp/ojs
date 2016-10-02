@@ -1,7 +1,7 @@
 {**
  * plugins/paymethod/paypal/templates/paymentForm.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2014-2016 Simon Fraser University Library
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -21,6 +21,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" action="{$paypalFormUrl}" id="paypalPaymentForm" method="post" style="margin-bottom: 0px;">
+	{csrf}
 	{include file="common/formErrors.tpl"}
 	{if $params.item_name}
 	<table class="data">
@@ -41,7 +42,7 @@
 	{if $params.item_description}
 	<table class="data">
 		<tr>
-			<td class="label" colspan="2">{$params.item_description|escape|nl2br}</td>
+			<td class="label" colspan="2">{$params.item_description|nl2br}</td>
 		</tr>
 	</table>
 	{/if}

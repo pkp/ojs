@@ -3,8 +3,8 @@
 /**
  * @file controllers/modals/submissionMetadata/form/SubmissionMetadataViewForm.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionMetadataViewForm
@@ -35,14 +35,56 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 	function fetch($request) {
 		$submission = $this->getSubmission();
 		$templateMgr = TemplateManager::getManager($request);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
 
 		// Get section for this journal
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$seriesOptions = array('0' => __('submission.submit.selectSection')) + $sectionDao->getSectionTitles($submission->getContextId());
+		$seriesOptions = $sectionDao->getSectionTitles($submission->getContextId());
 		$templateMgr->assign('sectionOptions', $seriesOptions);
 		$templateMgr->assign('sectionId', $submission->getSectionId());
 
+		// Cover image delete link action
+		$coverImage = $submission->getCoverImage();
+		if ($coverImage) {
+			import('lib.pkp.classes.linkAction.LinkAction');
+			import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
+			$router = $request->getRouter();
+			$deleteCoverImageLinkAction = new LinkAction(
+				'deleteCoverImage',
+				new RemoteActionConfirmationModal(
+					$request->getSession(),
+					__('common.confirmDelete'), null,
+					$router->url(
+						$request, null, null, 'deleteCoverImage', null, array(
+							'coverImage' => $coverImage,
+							'submissionId' => $submission->getId(),
+							// This action can be performed during any stage,
+							// but we have to provide a stage id to make calls
+							// to IssueEntryTabHandler
+							'stageId' => WORKFLOW_STAGE_ID_PRODUCTION,
+						)
+					),
+					'modal_delete'
+				),
+				__('common.delete'),
+				null
+			);
+			$templateMgr->assign('deleteCoverImageLinkAction', $deleteCoverImageLinkAction);
+		}
+
 		return parent::fetch($request);
+	}
+
+	/**
+	 * Initialize form data
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function initData($args, $request) {
+		parent::initData($args, $request);
+		$submission = $this->getSubmission();
+		$this->setData('coverImage', $submission->getCoverImage());
+		$this->setData('coverImageAltText', $submission->getCoverImageAltText());
 	}
 
 	/**
@@ -50,7 +92,7 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 	 */
 	function readInputData() {
 		parent::readInputData();
-		$this->readUserVars(array('sectionId'));
+		$this->readUserVars(array('sectionId','temporaryFileId', 'coverImageAltText'));
 	}
 
 	/**
@@ -63,6 +105,23 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 		$submissionDao = Application::getSubmissionDAO();
 
 		$submission->setSectionId($this->getData('sectionId'));
+
+		// Copy an uploaded cover file for the article, if there is one.
+		if ($temporaryFileId = $this->getData('temporaryFileId')) {
+			$user = $request->getUser();
+			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
+			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
+
+			import('classes.file.PublicFileManager');
+			$publicFileManager = new PublicFileManager();
+			$newFileName = 'article_' . $submission->getId() . '_cover' . $publicFileManager->getImageExtension($temporaryFile->getFileType());
+			$journal = $request->getJournal();
+			$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
+			$submission->setCoverImage($newFileName);
+		}
+
+		$submission->setCoverImageAltText($this->getData('coverImageAltText'));
+
 		$submissionDao->updateObject($submission);
 
 		if ($submission->getDatePublished()) {

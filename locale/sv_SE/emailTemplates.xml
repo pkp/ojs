@@ -2,10 +2,10 @@
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
 
 <!--
-  * locale/sv_SE/emailTemplateData.xml
+  * locale/sv_SE/emailTemplates.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -19,7 +19,7 @@
 <br />
 Om du inte har gjort det här önskemålet, vänligen bortse från mailet, ditt lösenord kommer inte att ändras. Om du vill ändra lösenordet, klicka på länken nedan.<br />
 <br />
-Ändra lösenordet: {$url}<br />
+Ändra lösenordet: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Det här meddelandet skickas till registrerade användare som har glömt lösenordet eller har misslyckats med inloggning. Mailet innehåller en länk för ändring av lösenord.</description>
@@ -29,7 +29,7 @@ Om du inte har gjort det här önskemålet, vänligen bortse från mailet, ditt 
 		<body><![CDATA[Ditt lösenord för {$siteTitle} har ändrats. Vänligen spara inloggningsuppgifterna eftersom dessa är nödvändiga för allt arbete med tidskriften.<br />
 <br />
 Ditt användarnamn: {$username}<br />
-Ditt nya lösenord: {$password}<br />
+Lösenord: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Det här meddelandet skickas till registrerade användare som bekräftelse på ändrat lösenord (enligt beskrivning i PASSWORD_RESET_CONFIRM -mailet).</description>
@@ -76,7 +76,7 @@ Vänligen,<br />
 		<subject>Nytt nummer</subject>
 		<body><![CDATA[Till registrerade läsare:<br />
 <br />
-{$contextName} har nyligen publicerat ett nytt nummer <a href="{$journalUrl}">{$journalUrl}</a>. Nedan följer innehållsförteckningen, klicka dig vidare till tidskriftens hemsida för att läsa de artiklar som kan vara av intresse.<br />
+{$contextName} har nyligen publicerat ett nytt nummer <a href="{$contextUrl}">{$contextUrl}</a>. Nedan följer innehållsförteckningen, klicka dig vidare till tidskriftens hemsida för att läsa de artiklar som kan vara av intresse.<br />
 <br />
 Tack för visat intresse för vårt arbete,<br />
 {$editorialContactSignature}]]></body>
@@ -86,11 +86,11 @@ Tack för visat intresse för vårt arbete,<br />
 		<subject>Begäran om arkivering för {$contextName}</subject>
 		<body><![CDATA[Hej [Ange namn på universitetsbibliotekarie]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, är en tidskrift där fakultetsmedlemmen, [ange namn på medlemmen], bistår som [ange position]. Tidskriften vill etablera ett LOCKSS- (Lots of Copies Keep Stuff Safe) kompatibelt arkiv vid det här och andra universitetsbibliotek.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, är en tidskrift där fakultetsmedlemmen, [ange namn på medlemmen], bistår som [ange position]. Tidskriften vill etablera ett LOCKSS- (Lots of Copies Keep Stuff Safe) kompatibelt arkiv vid det här och andra universitetsbibliotek.<br />
 <br />
 [Ange en kortare beskrivning av tidskriften]<br />
 <br />
-URL till LOCKSS Publisher Manifest för vår tidskrift är: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+URL till LOCKSS Publisher Manifest för vår tidskrift är: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Vi har förstått att ni redan deltar i LOCKSS. Om vi får leverera utförligare metadata för att registrera vår tidskrift i er LOCKSS-version så bistår vi gärna med detta.<br />
 <br />
@@ -103,7 +103,7 @@ Tack! Vänligen,<br />
 		<body><![CDATA[<br />
 				Hej [Ange namn på universitetsbibliotekarie]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, är en tidskrift där fakultetsmedlemmen, [ange namn på medlemmen], bistår som [ange position]. Tidskriften vill etablera ett LOCKSS- (Lots of Copies Keep Stuff Safe) kompatibelt arkiv vid det här och andra universitetsbibliotek.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, är en tidskrift där fakultetsmedlemmen, [ange namn på medlemmen], bistår som [ange position]. Tidskriften vill etablera ett LOCKSS- (Lots of Copies Keep Stuff Safe) kompatibelt arkiv vid det här och andra universitetsbibliotek.<br />
 <br />
 [Ange en kortare beskrivning av tidskriften]<br />
 <br />
@@ -121,7 +121,7 @@ Tack, vänliga hälsningar:<br />
 <br />
 Tack för att du har skickat in manuskriptet, &quot;{$submissionTitle}&quot; till {$contextName}. I det publiceringssystem vi använder har du möjlighet att följa den redaktionella processen av manuskriptet genom att logga in på sidan:<br />
 <br />
-Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskript URL: {$submissionUrl}<br />
 Användarnamn: {$authorUsername}<br />
 <br />
 Om du har frågor, vänligen kontakta mig, tack för att du har valt att skicka manuskriptet till den här tidskriften.<br />
@@ -162,7 +162,7 @@ Vid den redaktionella granskningen av manuskriptet &quot;{$submissionTitle}&quot
 <br />
 				Som sektionsredaktör för {$contextName} har du fått i uppdrag att föra manuskriptet &quot;{$submissionTitle},&quot; genom den redaktionella processen.<br />
 <br />
-				Manuskriptets URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+				Manuskriptets URL: {$submissionUrl}<br />
 				Användarnamn: {$editorUsername}<br />
 <br />
 				Tack, vänligen:<br />
@@ -176,7 +176,7 @@ Vid den redaktionella granskningen av manuskriptet &quot;{$submissionTitle}&quot
 <br />
 			Vår tidskrift {$contextName} har fått manuskriptet &quot;{$submissionTitle}&quot; tillskickat oss, och vi hoppas att du har möjlighet att göra en sakkunnigbdömning av manuskriptet eftersom vi anser att manuskriptets ämne matchar ditt kompetensområde. Manuskriptets sammanfattning är bifogad nedan.<br />
 			<br />
-			Vänligen logga in på tidskriftens hemsida innan {$weekLaterDate}, för att bekräfta om du har möjlighet att åta dig uppdraget eller inte. Om du väljer att granska manuskriptet ska du också använda tidkriftens hemsida för att lämna kommentarer och bedömning. Adressen till hemsidan är: <a href="{$journalUrl}">{$journalUrl}</a><br />
+			Vänligen logga in på tidskriftens hemsida innan {$responseDueDate}, för att bekräfta om du har möjlighet att åta dig uppdraget eller inte. Om du väljer att granska manuskriptet ska du också använda tidkriftens hemsida för att lämna kommentarer och bedömning. Adressen till hemsidan är: <a href="{$contextUrl}">{$contextUrl}</a><br />
 			<br />
 			Sista dag för bedömning är {$reviewDueDate}.<br />
 			<br />
@@ -202,7 +202,7 @@ Tack för hjälp, vänligen<br />
 <br />
 				Vår tidskrift {$contextName} har fått manuskriptet &quot;{$submissionTitle},&quot; tillskickat oss. Utifrån dina ämneskunskaper tror vi att du skulle sakkunnigbedöma manuskriptet på ett ypperligt sätt. Manuskriptets sammanfattning är bifogat nedan, och vi hoppas att du har möjlighet att genomföra detta viktiga arbete.<br />
 <br />
-				Vänligen logga in i tidskriften senast {$weekLaterDate} för att meddela om du avser granska manuskriptet eller inte. Väl inloggad kan du även läsa manuskriptet, avge bedömning samt lämna kommnetarer och rekommendationer.<br />
+				Vänligen logga in i tidskriften senast {$responseDueDate} för att meddela om du avser granska manuskriptet eller inte. Väl inloggad kan du även läsa manuskriptet, avge bedömning samt lämna kommnetarer och rekommendationer.<br />
 <br />
 				Bedömningen ska vara genomförd innan {$reviewDueDate}.<br />
 <br />
@@ -228,7 +228,7 @@ Tack för hjälp, vänligen<br />
 	<br />
 	Se länk nedan för information om tidskriftens riktlinjer för sakkunigbedömning. Manuskriptet bifogas i det här mailet. Bedömning av manuskriptet, samt rekommendation, ska mailas till mig senast {$reviewDueDate}.<br />
 <br />
-	Vänligen meddela mig innan {$weekLaterDate}, för att bekräfta om du har möjlighet att åta dig uppdraget eller inte<br />
+	Vänligen meddela mig innan {$responseDueDate}, för att bekräfta om du har möjlighet att åta dig uppdraget eller inte<br />
 <br />
 	Tack för din hjälp.<br />
 	<br />
@@ -346,7 +346,7 @@ Vi har nu avslutat sakkunnigbedömning av ditt manuskript &quot;{$submissionTitl
 <br />
 Ytterligare kommentarer av Redaktion och Sakkunnigbedömare hitatr du om du loggar in på tidskriftens hemsida:<br />
 <br />
-Manuskriptets URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskriptets URL: {$submissionUrl}<br />
 <br />
 Vänligen kontakta mig om du har några frågor.<br />
 <br />
@@ -355,7 +355,7 @@ Vänligen kontakta mig om du har några frågor.<br />
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Begäran om Manusredigering</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Jag skulle vilja be dig om att genomföra manusredigering av manuskriptet &quot;{$submissionTitle}&quot; för {$contextName} genom att gå igenom följande steg.<br />
 1. Klicka på Manuskriptets URL nedan.<br />
@@ -365,9 +365,9 @@ Jag skulle vilja be dig om att genomföra manusredigering av manuskriptet &quot;
 5. Spara den redigerade filen och ladda upp den under Steg 1 under Manusredigering.<br />
 6. Skicka COMPLETE-mailet till Redaktören.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-Manuskriptets URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Användarnamn: {$copyeditorUsername}<br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+Manuskriptets URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Användarnamn: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Det här meddelandet skickas från Sektionsredaktören till ett manuskripts Manusredaktör och innehåller information om Manusredigering.</description>
@@ -391,11 +391,11 @@ Manuskriptets URL: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a>
 Om du inte har möjlighet att göra manusredigeringen nu, eller om du har frågor,<br />
 vänligen kontakta mig.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Bekräftelse på Manusredigering</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Tack för att du har genomfört manusredigering av manuskriptet, &quot;{$submissionTitle},&quot; för {$contextName}. Ditt arbete innebär att vi kan bibehålla en hög kvalitet av tidskriften.<br />
 <br />
@@ -417,7 +417,7 @@ Ditt Manuskript &quot;{$submissionTitle}&quot; för {$contextName} har passerat 
 7. Klicka på METADATA för att kontrollera införd informationen.<br />
 8. Skicka COMPLETE mailet till Redaktör och Manusredaktör.<br />
 <br />
-Manuskriptets URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+Manuskriptets URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Det här är sista möjligheten att göra mer omfattande ändringar av manuskriptet. I korrekturskedet, som följer i redigeringsprocessen, finns endast möjlighet att gäöra typografiska ändringar av layouten.<br />
 <br />
@@ -447,7 +447,7 @@ Tack för att du har granskat den redigerade versionen av Manuskriptet, &quot;{$
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Manusredigering - sista omgången</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Författaren och Redaktören har nu avslutat redigering av manuskriptet &quot;{$submissionTitle}&quot; för {$contextName}. En &quot;tvättad version&quot; måste nu förberedas för Layoutprocessen. Följ stegen nedan.<br />
 1. Klicka på Manuskriptets URL nedan.<br />
@@ -457,9 +457,9 @@ Författaren och Redaktören har nu avslutat redigering av manuskriptet &quot;{$
 5. Klicka på METADATA för att kontrollera och/eller ändra införd information.<br />
 6. Skicka COMPLETE mailet till Redaktören.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-Manuskriptets URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Användarnamn: {$copyeditorUsername}<br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+Manuskriptets URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Användarnamn: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Det här meddelandet från Sektionsredaktören till Manusredaktören innehåller information om en avslutande redigeringsprocess innan manuskriptet skickas vidare till Layout.</description>
@@ -470,12 +470,12 @@ Användarnamn: {$copyeditorUsername}<br />
 <br />
 Jag har nu iordningställt en &quot;tvättad&quot; redigerad version av manuskriptet, &quot;{$submissionTitle},&quot; för {$contextName}. Versionen är redo för Layout och Korrektur.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Det här meddelandet från Manusredaktören till Sektionsredaktören innehåller information om att manusredigeringen är avslutad och att Layoutprocessen kan påbörjas.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Bekräftelse på avslutad Manusredigering</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Tack för att du har avslutat Manusredigeringen av, &quot;{$submissionTitle},&quot; för {$contextName}. Iordningställandet av en &quot;tvättad version&quot; för Layout är ett viktigt steg i den redaktionella processen.<br />
 <br />
@@ -484,16 +484,16 @@ Tack för att du har avslutat Manusredigeringen av, &quot;{$submissionTitle},&qu
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Begäran om Korrekturversion</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Manuskriptet &quot;{$submissionTitle}&quot; till {$contextName} behöver Korrekturversioner för Layoutprocessen. Gå igenom följande steg.<br />
 1. Klicka på Manuskriptets URL nedan.<br />
 2. Logga in på tidskriften och använd den &quot;tvättade versionen&quot; för att skapa en Korrkturversion enligt tidskriftens föreskrifter.<br />
 3. Skicka COMPLETE mailet till Redaktören.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Manuskriptets URL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Användarnamn: {$layoutEditorUsername}<br />
+Användarnamn: {$participantUsername}<br />
 <br />
 Om du inte har möjlighet att genomföra det här arbetet, eller om du har frågor, vänligen kontakta mig.<br />
 <br />
@@ -508,12 +508,12 @@ Korrekturversion har nu färdigställts för Manuskriptet, &quot;{$submissionTit
 <br />
 Om du har några frågor, vänligen kontakta mig.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Det här meddelandet från Layoutredaktör till Sektionsredaktör innehåller information om att Layoutprocessen är avslutad.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Bekräftelse på avslutad Layoutredigering</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Tack för att du har färdigställt Korrekturversion av Manuskriptet, &quot;{$submissionTitle},&quot; for {$contextName}. Ditt arbete har inneburit ett viktigt bidrag för publiceringsprocessen.<br />
 <br />
@@ -532,7 +532,7 @@ Ditt manuskript &quot;{$submissionTitle}&quot; till {$contextName} ska korrektur
 5. Spara och maila ändringarna till Layoutredaktör och Korrekturläsare.<br />
 6. Skicka COMPLETE mailet till Redaktören.<br />
 <br />
-Manuskriptets URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskriptets URL: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Det här meddelandet från Sektionsredaktören till Författaren innehåller information om att Korrekturversionen är iordningställd för Korrekturläsning.</description>
@@ -570,7 +570,7 @@ Manuskriptet &quot;{$submissionTitle}&quot; till {$contextName} ska korrekturlä
 5. Spara och maila eventuella korrigeringar till Layoutredaktör.<br />
 6. Skicka COMPLETE mailet till Redaktören.<br />
 <br />
-Manuskriptets URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuskriptets URL: {$submissionUrl}<br />
 Användarnamn: {$proofreaderUsername}<br />
 <br />
 Om du inte har möjlighet att genomföra korrekturläsningen för tillfället, eller om du har andra frågor, vänligen kontakta mig.<br />
@@ -598,7 +598,7 @@ Tack för att du har korrekturläst manuskriptet, &quot;{$submissionTitle},&quot
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Begäran om Korrekturläsning (Layoutredaktör)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Manuskriptet &quot;{$submissionTitle}&quot; till {$contextName} har korrekturlästs av Författare och Korrekturläsare, och alla eventuella korrigeringar sker enligt följande steg:<br />
 1. Klicka på Manuskriptets URL nedan.<br />
@@ -606,9 +606,9 @@ Manuskriptet &quot;{$submissionTitle}&quot; till {$contextName} har korrekturlä
 3. Ladda upp den korrigerade och uppdaterade versionen.<br />
 3. Skicka COMPLETE mailet under Korrekturläsning Steg 3 till Redaktör.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-Manuskriptets URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Användarnamn: {$layoutEditorUsername}<br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+Manuskriptets URL: {$submissionUrl}<br />
+Användarnamn: {$participantUsername}<br />
 <br />
 Om du inte har möjlighet att korrekturläsa manuskriptet för tillfället, eller om du har några frågor, vänligen kontakta mig.<br />
 <br />
@@ -621,12 +621,12 @@ Om du inte har möjlighet att korrekturläsa manuskriptet för tillfället, elle
 <br />
 Korrekturversionen av manuskriptet, &quot;{$submissionTitle},&quot; for {$contextName} har nu korrekturlästs och slutgiltigt korrigerats. Bidraget är klar för publicering.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Det här meddelanndet från Layoutredaktör till Sektionsredaktör meddelar att det avslutande delen av korrekturläsningen nu är genomförd och att bidraget är färdigt för publicering.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Bekräftelse av Korrekturläsning (Layoutredaktör)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Tack för att du har avslutat korrekturprocessen rörande manuskriptet, &quot;{$submissionTitle},&quot; för {$contextName}.<br />
 <br />
@@ -662,7 +662,7 @@ Om du har några frågor, vänligen kontakta mig.<br />
 		<body><![CDATA[<br />
 				Läsare:<br />
 <br />
-				{$contextName} har nyligen gjorts tillgänglig som Open Access. Läs innehållsförteckningen nedan och klicka dig sedan in på tidskriften <a href="{$journalUrl}">{$journalUrl}</a>) för att ta del intressant material.<br />
+				{$contextName} har nyligen gjorts tillgänglig som Open Access. Läs innehållsförteckningen nedan och klicka dig sedan in på tidskriften <a href="{$contextUrl}">{$contextUrl}</a>) för att ta del intressant material.<br />
 <br />
 				Tack för fortsatt visat intresse för vårt arbete,<br />
 				{$editorialContactSignature}]]></body>

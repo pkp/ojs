@@ -1,29 +1,32 @@
 Upgrading an OJS Installation
 -----------------------------
 
-===============================================================================
-NOTE: THIS IS AN ALPHA RELEASE OF OJS AND IS NOT INTENDED FOR PRODUCTION USE.
-The upgrade process has NOT been completed and is intended for experimental
-purposes only.
-===============================================================================
-
-Note: backing up your current data files and database is strongly recommended
-prior to upgrading OJS.
+Note: Before upgrading your installation, perform a complete backup of your
+data files and database. If the upgrade process fails, you will need to recover
+from backup before continuing.
 
 If you are using PHP Safe Mode, please ensure that the max_execution_time
 directive in your php.ini configuration file is set to a high limit. If this
 or any other time limit (e.g. Apache's "Timeout" directive) is reached and
 the upgrade process is interrupted, manual intervention will be required.
 
-=========================================
-Upgrading from OJS 2.0.x, 2.1.x, or 2.2.x
-=========================================
+
+================================================
+Upgrading from OJS 2.0.x, 2.1.x, 2.2.x, or 2.3.x
+================================================
 
 See docs/UPGRADE-UNSUPPORTED.
 
+
 =====================================
-Upgrading from OJS 2.3.x or OJS 2.4.x
+Upgrading from OJS 2.4.x
 =====================================
+
+OJS 3.x is a major rewrite of Open Journal Systems, introducing numerous new
+concepts and different approaches. The upgrade process from 2.x to 3.x does its
+best to adapt old content to the new structures, but we strongly recommend
+performing a test upgrade and exploring the new system before committing your
+content to the upgrade. Downgrades from 3.x to 2.x will not be supported.
 
 Upgrading to the latest version of OJS involves two steps:
 
@@ -37,75 +40,10 @@ and other documentation in the docs directory before performing an upgrade.
 Obtaining the latest OJS code
 -----------------------------
 
-The OJS source code is available in three forms: as patches against older
-releases of OJS, from read-only github access, and as a complete
-stand-alone package.
+The OJS source code is available in two forms: a complete stand-alone 
+package, and from read-only github access.
 
-Patching or updating from github is the recommended approach if you have made
-local modifications to the system.
-
-1. Patch
-
-Patch files for older releases of OJS can be downloaded from the OJS web site.
-
-To update by patching, download the appropriate patch file for your current
-version of OJS and run the following command from your OJS directory:
-
-    $ patch -p1 < PATCH_FILE
-
-"PATCH_FILE" should be replaced with the path to the decompressed patch file
-that was downloaded, e.g. "ojs-2.3.1_to_2.3.2.patch".
-
-Alternatively, there is a command-line tool to automatically download and apply
-the appropriate patch to upgrade to the latest release. To use this tool run the
-following command from your OJS directory:
-
-    $ php tools/upgrade.php patch
-
-Note that this will require the GNU patch tool to be installed. GNU patch is
-included in most *NIX distributions, and is available for Windows and Solaris
-as a download. Windows users may need to work around a patch bug by converting
-the line-endings in the patch file from UNIX to DOS; to do this, open the patch
-file in Notepad and save it again.
-
-Patch upgrades will NOT include any binary files that were introduced in the
-new version, i.e. any GIF images that are needed in the new version but were
-not included in the old version. To find a list of binaries that should be
-manually added after applying the patch, search the patch file for lines like:
-"Binary files (filename here) differ" (not including the quotes). These files
-can be found in the distribution archive.
-
-
-2. git
-
-If your instance of OJS was checked out from github (see docs/README-GIT),
-you can update the OJS code using a git client.
-
-To update the OJS code from a git check-out, run the following command from
-your OJS directory:
-
-    $ git rebase --onto <new-release-tag> <previous-release-tag>
-
-This assumes that you have made local changes and committed them on top of
-the old release tag. The command will take your custom changes and apply
-them on top of the new release. This may cause merge conflicts which have to
-be resolved in the usual way, e.g. using a merge tool like kdiff3.
-
-"TAG" should be replaced with the git tag corresponding to the new release.
-OJS release version tags are of the form "ojs-MAJOR_MINOR_REVSION-BUILD".
-For example, the tag for the initial release of OJS 2.3.1 is "ojs-2_3_1-0".
-
-Consult the README of the latest OJS package or the OJS web site for the
-tag corresponding to the latest available OJS release.
-
-Note that attempting to update to an unreleased version (e.g., using the HEAD
-tag to obtain the bleeding-edge OJS code) is not recommended for anyone other
-than OJS or third-party developers; using experimental code on a production
-deployment is strongly discouraged and will not be supported in any way by
-the OJS team.
-
-
-3. Full Package
+1. Full Package
 
 It is also possible to upgrade by downloading the complete package for the
 latest release of OJS:
@@ -125,41 +63,36 @@ latest release of OJS:
       original version and the new version. You may need to manually add
       new items to your config.inc.php file.
 
+Updating from github is the recommended approach if you have made local
+modifications to the system.
 
+2. git
 
-Applying the Latest Recommended Patches
----------------------------------------
+If your instance of OJS was checked out from github (see docs/README-GIT),
+you can update the OJS code using a git client.
 
-Starting with OJS version 2.3.3-2, the Public Knowledge Project development 
-team maintains a publicly-available list of recommended patches for each 
-release. These will add no new functionality and will typically consist of small, 
-easy-to-read patches for specific issues. A Recommended Patches list for your
-version of OJS  can be found on the PKP development wiki: 
+To update the OJS code from a git check-out, run the following command from
+your OJS directory:
 
-    <http://pkp.sfu.ca/wiki/index.php/OJS_Recommended_Patches> 
+    $ git rebase --onto <new-release-tag> <previous-release-tag>
 
-Regardless of the method you used to download and apply the official system 
-files, you will also want to review the list of recommended patches specific 
-to your OJS version, and apply as necessary.
+This assumes that you have made local changes and committed them on top of
+the old release tag. The command will take your custom changes and apply
+them on top of the new release. This may cause merge conflicts which have to
+be resolved in the usual way, e.g. using a merge tool like kdiff3.
 
-To apply a recommended patch, open the bug report and download the attached 
-patch file(s). (Note that bug reports can quite often include a number of 
-patches, some relevant to the application (ie. OJS) and version you are 
-running, and some not. Ensure that you download all and only the patches 
-specific to your application and version.) For each patch you download, 
-first attempt a dry-run application of the patch, to ensure that it applies 
-cleanly: 
+"TAG" should be replaced with the git tag corresponding to the new release.
+OJS release version tags are of the form "ojs-MAJOR_MINOR_REVSION-BUILD".
+For example, the tag for the initial release of OJS 3.0.0 is "ojs-3_0_0-0".
 
-    $ patch -p1 --dry-run < PATCH_FILE
+Consult the README of the latest OJS package or the OJS web site for the
+tag corresponding to the latest available OJS release.
 
-If the patch applies cleanly, then run the following command, which will
-actually apply the patch: 
-
-    $ patch -p1 < PATCH_FILE
-
-"PATCH_FILE" should be replaced with the path to the patch file that was 
-downloaded, e.g. "6276-ojs.patch".
-
+Note that attempting to update to an unreleased version (e.g., using the HEAD
+tag to obtain the bleeding-edge OJS code) is not recommended for anyone other
+than OJS or third-party developers; using experimental code on a production
+deployment is strongly discouraged and will not be supported in any way by
+the OJS team.
 
 
 Upgrading the OJS database

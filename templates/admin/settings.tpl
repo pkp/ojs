@@ -1,8 +1,8 @@
 {**
  * templates/admin/settings.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Administration settings page, with tabs.
@@ -22,7 +22,6 @@
 <div id="settingsTabs">
 	<ul>
 		<li><a name="siteSetup" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.AdminSettingsTabHandler" op="showTab" tab="siteSetup"}">{translate key="admin.siteSetup"}</a></li>
-		<li><a name="categories" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.admin.categories.AdminCategoriesTabHandler" op="showTab" tab="categories"}">{translate key="admin.categories"}</a></li>
 		<li><a name="adminLanguages" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.AdminSettingsTabHandler" op="showTab" tab="languages"}">{translate key="common.languages"}</a></li>
 		<li><a name="adminPlugins" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.AdminSettingsTabHandler" op="showTab" tab="plugins"}">{translate key="common.plugins"}</a></li>
 	</ul>

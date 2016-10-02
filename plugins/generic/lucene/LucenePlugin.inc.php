@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/lucene/LucenePlugin.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class LucenePlugin
@@ -93,7 +93,7 @@ class LucenePlugin extends GenericPlugin {
 	function &getMailTemplate($emailKey, $journal = null) {
 		if (!isset($this->_mailTemplates[$emailKey])) {
 			import('lib.pkp.classes.mail.MailTemplate');
-			$mailTemplate = new MailTemplate($emailKey, null, null, $journal, true, true);
+			$mailTemplate = new MailTemplate($emailKey, null, $journal, true, true);
 			$this->_mailTemplates[$emailKey] =& $mailTemplate;
 		}
 		return $this->_mailTemplates[$emailKey];
@@ -162,8 +162,10 @@ class LucenePlugin extends GenericPlugin {
 			$username = $this->getSetting(0, 'username');
 			$password = $this->getSetting(0, 'password');
 			$instId = $this->getSetting(0, 'instId');
+			$useProxySettings = $this->getSetting(0, 'useProxySettings');
+			if (!$useProxySettings) $useProxySettings = false;
 
-			$this->_solrWebService = new SolrWebService($searchHandler, $username, $password, $instId);
+			$this->_solrWebService = new SolrWebService($searchHandler, $username, $password, $instId, $useProxySettings);
 		}
 		return $success;
 	}
@@ -769,7 +771,7 @@ class LucenePlugin extends GenericPlugin {
 
 		// Assign our private stylesheet.
 		$templateMgr = $params[0];
-		$templateMgr->addStylesheet($request->getBaseUrl() . '/' . $this->getPluginPath() . '/templates/lucene.css');
+		$templateMgr->addStylesheet('lucene', $request->getBaseUrl() . '/' . $this->getPluginPath() . '/templates/lucene.css');
 
 		// Instant search.
 		if ($this->getSetting(0, 'instantSearch')) {
@@ -1089,7 +1091,7 @@ class LucenePlugin extends GenericPlugin {
 
 	/**
 	 * Send an email to the site's tech admin
-	 * warning that an indexing error has occured.
+	 * warning that an indexing error has occurred.
 	 *
 	 * @param $error array An array of article ids.
 	 * @param $journal Journal A journal object.

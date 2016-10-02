@@ -4,14 +4,14 @@
 <!--
   * plugins/generic/lucene/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * OJS solr/lucene search plugin localization strings
   -->
  
-<locale name="tr_TR" full_name="Türkiye Türkçesi">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.generic.lucene.displayName">Lucene Arama Eklentisi</message>
 	<message key="plugins.generic.lucene.description">Lucene eklentisi çoklu dil desteği, geliştirilmiş ilgili arama sonucu, daha hızlı indeksleme, daha iyi ölçeklenebilirlik ve daha fazlasını sağlar.</message>
 	<message key="plugins.generic.lucene.settings">Ayarlar</message>

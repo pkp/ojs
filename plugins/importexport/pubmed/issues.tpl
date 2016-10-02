@@ -1,8 +1,8 @@
 {**
  * plugins/importexport/pubmed/issues.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * List of issues to potentially export
@@ -38,6 +38,7 @@ function toggleChecked() {
 	{rdelim});
 </script>
 <form class="pkp_form" action="{plugin_url path="exportIssues"}" method="post" id="issuesForm">
+{csrf}
 <table class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>

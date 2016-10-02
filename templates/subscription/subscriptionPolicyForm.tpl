@@ -1,8 +1,8 @@
 {**
  * templates/subscription/subscriptionPolicyForm.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Setup subscription policies.
@@ -35,6 +35,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" id="subscriptionPolicies" method="post" action="{url op="saveSubscriptionPolicies"}">
+{csrf}
 {include file="common/formErrors.tpl"}
 
 	<script>
@@ -84,10 +85,6 @@
 	<tr>
 		<td class="label">{fieldLabel name="subscriptionPhone" key="user.phone"}</td>
 		<td class="value"><input type="text" name="subscriptionPhone" id="subscriptionPhone" value="{$subscriptionPhone|escape}" size="15" maxlength="24" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="subscriptionFax" key="user.fax"}</td>
-		<td class="value"><input type="text" name="subscriptionFax" id="subscriptionFax" value="{$subscriptionFax|escape}" size="15" maxlength="24" class="textField" /></td>
 	</tr>
 	<tr>
 		<td class="label">{fieldLabel name="subscriptionMailingAddress" key="common.mailingAddress"}</td>

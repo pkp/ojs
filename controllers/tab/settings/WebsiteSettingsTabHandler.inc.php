@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/settings/WebsiteSettingsTabHandler.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class WebsiteSettingsTabHandler
@@ -39,7 +39,6 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 			'languages' => 'controllers/tab/settings/languages/languages.tpl',
 			'plugins' => 'controllers/tab/settings/plugins/plugins.tpl',
 			'announcements' => 'lib.pkp.controllers.tab.settings.announcements.form.AnnouncementSettingsForm',
-			'navigation' => 'controllers/tab/settings/navigation/navigation.tpl',
 		));
 	}
 
@@ -126,7 +125,7 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 		$tabForm = $this->getTabForm();
 		$tabForm->initData($request);
 
-		if ($tabForm->deleteFile($settingName, $request)) {
+		if ($request->checkCSRF() && $tabForm->deleteFile($settingName, $request)) {
 			return DAO::getDataChangedEvent($settingName);
 		} else {
 			return new JSONMessage(false);

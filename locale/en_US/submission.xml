@@ -4,11 +4,11 @@
 <!--
   * locale/en_US/submission.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the en_US (English) locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
   -->
 
 <locale name="en_US" full_name = "English">
@@ -20,11 +20,10 @@
 	<message key="submission.title">Article Title</message>
 	<message key="submission.title.tip"><![CDATA[The submission type is usually one of 'image', 'text', or other multimedia types including 'software' or 'interactive'.  Please choose the one most relevant for your submission.  Examples may be found at <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
 	<message key="submission.submit.newSubmissionMultiple">Start a New Submission in</message>
-	<message key="submission.submit.newSubmissionSingle">Start a New Submission in {$contextName}</message>
-	<message key="submission.submit.confirmExpedite">Choose an Issue for Expedited Submission</message>
+	<message key="submission.submit.newSubmissionSingle">New Submission</message>
 	<message key="grid.action.workflow">Submission Workflow</message>
 
-	<message key="submission.issueEntry">Submission Metadata</message>
+	<message key="submission.issueEntry">Metadata</message>
 	<message key="submission.submit.whatNext.description">The journal has been notified of your submission, and you've been emailed a confirmation for your records.  Once the editor has reviewed the submission, they will contact you.</message>
 	<message key="grid.action.galleyInIssueEntry">Galley appears in issue entry</message>
 	<message key="grid.action.issueEntry">View this submission's metadata</message>
@@ -33,17 +32,17 @@
 	<message key="submission.issueEntry.modalTitle">Submission and Publication Metadata</message>
 	<message key="submission.issueEntry.submissionMetadata">Submission</message>
 	<message key="submission.issueEntry.publicationMetadata">Publication</message>
-	<message key="issue.manage.entryDescription">Detailed help test for managing a journal's metadata should go here.</message>
 	<message key="submission.issueEntry.confirm">Create an issue entry for this article based on the metadata below.</message>
 
 	<!-- events -->
 	<message key="submission.event.articleGalleyMadeAvailable">The article galley "{$galleyFormatName}" is made available.</message>
-	<message key="submission.event.articleGalleyMadeUnavailable">The article galley "{$galleyFormatName}" is made available.</message>
+	<message key="submission.event.articleGalleyMadeUnavailable">The article galley "{$galleyFormatName}" is made unavailable.</message>
+	<message key="submission.event.publicIdentifiers">The submission's public identifiers updated.</message>
 
 	<!-- galleys grid -->
 	<message key="grid.issueEntry.availableGalley.title">Format Approval</message>
-	<message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[<p>This galley will <em>no longer be made available</em> to readers.]]></message>
-	<message key="grid.issueEntry.availableGalley.message"><![CDATA[<p>This galley will <em>be made available</em> to readers.]]></message>
+	<message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[<p>This galley will <em>no longer be made available</em> to readers.</p>]]></message>
+	<message key="grid.issueEntry.availableGalley.message"><![CDATA[<p>This galley will <em>be made available</em> to readers.</p>]]></message>
 	<message key="grid.action.availableArticleGalley">Make this galley available</message>
 
 	<!-- galley files grid -->
@@ -60,4 +59,20 @@
 	<message key="submission.event.issueMetadataUpdated">The submission's issue metadata was updated.</message>
 
 	<message key="submission.upload.fileContents">Article Component</message>
+	<message key="submission.complete">Approved</message>
+	<message key="submission.incomplete">Awaiting Approval</message>
+	<message key="submission.submit.form.localeRequired">Please select a submission language.</message>
+	<message key="submission.submit.submissionChecklist">Submission Checklist</message>
+	<message key="submission.submit.submissionChecklistDescription">You must read and acknowledge that you've completed the requirements below before proceeding.</message>
+	<message key="submission.submit.privacyStatement">Privacy Statement</message>
+	<message key="submission.submit.contributorRole">Contributor's role</message>
+	<message key="submission.submit.form.authorRequired">At least one author is required.</message>
+	<message key="submission.submit.form.authorRequiredFields">The first name, last name, and email address of each author is required.</message>
+	<message key="submission.submit.form.titleRequired">Please enter the title of your article.</message>
+	<message key="submission.submit.form.abstractRequired">Please enter your article's abstract.</message>
+	<message key="submission.submit.form.contributorRoleRequired">Please select the contributor's role.</message>
+
+	<message key="submission.citationFormat.notFound">The requested citation format could not be retrieved.</message>
+
+	<message key="submission.metadataDescription">These specifications are based on the Dublin Core metadata set, an international standard used to describe journal content.</message>
 </locale>

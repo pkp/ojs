@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/filter/NativeXmlIssueGalleyFilter.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NativeXmlIssueGalleyFilter
@@ -35,11 +35,32 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter {
 		return 'plugins.importexport.native.filter.NativeXmlIssueGalleyFilter';
 	}
 
+	//
+	// Override methods in NativeImportFilter
+	//
+	/**
+	 * Return the plural element name
+	 * @return string
+	 */
+	function getPluralElementName() {
+		return 'issue_galleys';
+	}
 
+	/**
+	 * Get the singular element name
+	 * @return string
+	 */
+	function getSingularElementName() {
+		return 'issue_galley';
+	}
+
+	//
+	// Extend functions in the parent class
+	//
 	/**
 	 * Handle a submission element
 	 * @param $node DOMElement
-	 * @return array Array of Representation objects
+	 * @return IssueGalley
 	 */
 	function handleElement($node) {
 		$deployment = $this->getDeployment();
@@ -50,8 +71,10 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter {
 		// Create the data object
 		$issueGalleyDao  = DAORegistry::getDAO('IssueGalleyDAO');
 		$issueGalley = $issueGalleyDao->newDataObject();
-		$issueGalley->seIssueId($issue->getId());
-		$issueGalley->setLocale($node->getAttribute('locale'));
+		$issueGalley->setIssueId($issue->getId());
+		$locale = $node->getAttribute('locale');
+		if (empty($locale)) $locale = $context->getPrimaryLocale();
+		$issueGalley->setLocale($locale);
 		$issueGalley->setSequence($issueGalleyDao->getNextGalleySequence($issue->getId()));
 
 		// Handle metadata in subelements.
@@ -66,22 +89,23 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter {
 					case 'file_name': $issueFile->setServerFileName($o->textContent); break;
 					case 'file_type': $issueFile->setFileType($o->textContent); break;
 					case 'file_size': $issueFile->setFileSize($o->textContent); break;
-					case 'content_type': $issueFile->setContentType($o->textContent); break;
+					case 'content_type': $issueFile->setContentType((int)$o->textContent); break;
 					case 'original_file_name': $issueFile->setOriginalFileName($o->textContent); break;
 					case 'date_uploaded': $issueFile->setDateUploaded($o->textContent); break;
 					case 'date_modified': $issueFile->setDateModified($o->textContent); break;
 					case 'embed':
 						import('classes.file.IssueFileManager');
 						$issueFileManager = new IssueFileManager($issue->getId());
-						$filePath = $issueFileManager->getFilesDir() . '/' . $issueFileManager->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
-						file_put_contents($filePath, base64_decode($o->textContent));
+						$filePath = $issueFileManager->getFilesDir() . $issueFileManager->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
+						$issueFileManager->writeFile($filePath, base64_decode($o->textContent));
 						break;
 				}
-			break;
-			$issueFileId = $issueFileDao->insertObject($issueFile);
-			$issueGalley->setFileId($issueFileId);
+				$issueFileId = $issueFileDao->insertObject($issueFile);
+				$issueGalley->setFileId($issueFileId);
+				break;
 		}
 
+		$issueGalleyDao->insertObject($issueGalley);
 		return $issueGalley;
 	}
 }

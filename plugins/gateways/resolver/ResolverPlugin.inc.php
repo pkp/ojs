@@ -3,8 +3,8 @@
 /**
  * @file plugins/gateways/resolver/ResolverPlugin.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ResolverPlugin
@@ -100,29 +100,30 @@ class ResolverPlugin extends GatewayPlugin {
 				unset($issues);
 
 				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-				$articles =& $publishedArticleDao->getPublishedArticles($issue->getId());
+				$articles = $publishedArticleDao->getPublishedArticles($issue->getId());
 				foreach ($articles as $article) {
 					// Look for the correct page in the list of articles.
 					$matches = null;
-					if (String::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)$/', $article->getPages(), $matches)) {
+					if (PKPString::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)$/', $article->getPages(), $matches)) {
 						$matchedPage = $matches[1];
 						if ($page == $matchedPage) $request->redirect(null, 'article', 'view', $article->getBestArticleId());
 					}
-					if (String::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)[ ]?-[ ]?([Pp][Pp]?[.]?[ ]?)?(\d+)$/', $article->getPages(), $matches)) {
+					if (PKPString::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)[ ]?-[ ]?([Pp][Pp]?[.]?[ ]?)?(\d+)$/', $article->getPages(), $matches)) {
 						$matchedPageFrom = $matches[1];
 						$matchedPageTo = $matches[3];
 						if ($page >= $matchedPageFrom && ($page < $matchedPageTo || ($page == $matchedPageTo && $matchedPageFrom = $matchedPageTo))) $request->redirect(null, 'article', 'view', $article->getBestArticleId());
 					}
 					unset($article);
 				}
+				break;
 		}
 
 		// Failure.
-		header("HTTP/1.0 500 Internal Server Error");
+		header('HTTP/1.0 404 Not Found');
 		$templateMgr = TemplateManager::getManager($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
 		$templateMgr->assign('message', 'plugins.gateways.resolver.errors.errorMessage');
-		$templateMgr->display('common/message.tpl');
+		$templateMgr->display('frontend/pages/message.tpl');
 		exit;
 	}
 
@@ -170,32 +171,6 @@ class ResolverPlugin extends GatewayPlugin {
 			echo $this->sanitize($endNumber) . "\n"; // iss_end
 
 		}
-	}
-
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
-		if (Validation::isSiteAdmin() && $this->getEnabled()) {
-			$verbs[] = array(
-				'exportHoldings',
-				__('plugins.gateways.resolver.exportHoldings')
-			);
-		}
-		return $verbs;
-	}
-
- 	/**
-	 * @see Plugin::manage()
-	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		switch ($verb) {
-			case 'exportHoldings':
-				if (Validation::isSiteAdmin() && $this->getEnabled()) {
-					$this->exportHoldings();
-					return true;
-				}
-				break;
-		}
-		return parent::manage($verb, $args, $message, $messageParams, $pluginModalContent);
 	}
 }
 

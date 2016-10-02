@@ -2,13 +2,13 @@
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
 
 <!--
-  * locale/ro_RO/emailTemplateData.xml
+  * locale/ro_RO/emailTemplates.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ro_RO (Romanian) locale.
+  * Localization strings for the ro_RO (Limba Română) locale.
   * Provided by Constantinescu Nicolaie.
   *
   -->
@@ -58,7 +58,7 @@ Parola pentru dezactivarea înștiințărilor prin email este: {$password}<br />
 <br />
 Dacă nu ați făcut această solicitare, ignorați acest mesaj iar parola va rămâne neschimbată. Dacă doriți resetarea parolei, dați clic mai jos de URL.<br />
 <br />
-Resetează parola: {$url}<br />
+Resetează parola: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Acest email este trimis doar utilizatorilor neînregistrați pe lista de email și care au indicat faptul că și-au uitat parola, neputându-se autentifica. Este oferită o adresă URL pe care o pot urma pentru a-și reseta parola.</description>
@@ -68,7 +68,7 @@ Resetează parola: {$url}<br />
 		<body><![CDATA[Parola dumneavoastră a fost resetată pentru a fi utilizată pe siteul {$siteTitle}. Rețineți numele de utilizator și parola, fiind necesare pentru lucrul cu revista.<br />
 <br />
 Numele de utilizator: {$username}<br />
-Noua parolă: {$password}<br />
+Parolă: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Acest email este trimis unui utilizator înregistrat la momentul resetării cu succes a parolei urmând procedura descrisă în emailul  PASSWORD_RESET_CONFIRM.</description>
@@ -115,7 +115,7 @@ Vă mulțumim,<br />
 		<subject>A fost publicat un nou număr</subject>
 		<body><![CDATA[Cititorii:<br />
 <br />
-{$contextName} tocmai a publicat ultimul număr accesibil la <a href="{$journalUrl}">{$journalUrl}</a>. Vă invităm să parcurgeți cuprinsul și apoi să vizitați siteul pentru a vedea articolele și punctele de interes.<br />
+{$contextName} tocmai a publicat ultimul număr accesibil la <a href="{$contextUrl}">{$contextUrl}</a>. Vă invităm să parcurgeți cuprinsul și apoi să vizitați siteul pentru a vedea articolele și punctele de interes.<br />
 <br />
 Vă mulțumim pentru interesul manifestat față de eforturile noastre,<br />
 {$editorialContactSignature}]]></body>
@@ -125,11 +125,11 @@ Vă mulțumim pentru interesul manifestat față de eforturile noastre,<br />
 		<subject>Arhivarea solicitării pentru {$contextName}</subject>
 		<body><![CDATA[Stimate [University Librarian]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, este o revistă pentru care unul din membrii facultății noastre [name of member], este [title of position]. Revista dorește să inițieze o arhivă conformă LOCKSS (Lots of Copies Keep Stuff Safe) împreună cu instituția dumneavoastră și cu alte biblioteci universitare.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, este o revistă pentru care unul din membrii facultății noastre [name of member], este [title of position]. Revista dorește să inițieze o arhivă conformă LOCKSS (Lots of Copies Keep Stuff Safe) împreună cu instituția dumneavoastră și cu alte biblioteci universitare.<br />
 <br />
 [Brief description of journal]<br />
 <br />
-URL-ul manifestului editorial privind LOCKSS pentru revista noastră se află la: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+URL-ul manifestului editorial privind LOCKSS pentru revista noastră se află la: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 Suntem la curent cu faptul că deja participați în LOCKSS. Am fi încântați dacă am putea să vă oferim metadate suplimentare cu scopul de a înregistra revista noastră cu versiunea dumneavoastră de LOCKSS.<br />
 <br />
@@ -141,7 +141,7 @@ Vă mulțumim,<br />
 		<subject>Arhivarea solicitării pentru {$contextName}</subject>
 		<body><![CDATA[Stimate [University Librarian]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, este o revistă pentru care unul din membrii facultății noastre [name of member], este [title of position]. Revista dorește să inițieze o arhivă conformă LOCKSS (Lots of Copies Keep Stuff Safe) cu instituția dumneavoastră și cu alte biblioteci universitare.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, este o revistă pentru care unul din membrii facultății noastre [name of member], este [title of position]. Revista dorește să inițieze o arhivă conformă LOCKSS (Lots of Copies Keep Stuff Safe) cu instituția dumneavoastră și cu alte biblioteci universitare.<br />
 <br />
 [Brief description of journal]<br />
 <br />
@@ -159,7 +159,7 @@ Vă mulțumim,<br />
 <br />
 Vă mulțumim pentru depunerea manuscrisului &quot;{$submissionTitle}&quot; la {$contextName}. Folosind sistemul de management online al revistei, vom putea urmări evoluția prin întreg procesul editorial prin autentificarea pe siteul revistei:<br />
 <br />
-URL-ul manuscrisului: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL-ul manuscrisului: {$submissionUrl}<br />
 Nume utilizator: {$authorUsername}<br />
 <br />
 Dacă aveți întrebări, vă rog să mă contactați. Vă mulțumim că ați luat în considerare această revistă ca o deschidere pentru contribuțiile dumneavoastră.<br />
@@ -199,7 +199,7 @@ O evaluare inițială pentru &quot;{$submissionTitle}&quot; a scos la iveală fa
 <br />
 Propunerea intitulată &quot;{$submissionTitle}&quot; trimisă revistei {$contextName} v-a fost trimisă pentru a o superviza de-a lungul procesului editorial în calitatea de redactor de secțiune.<br />
 <br />
-URL-ul propunerii: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL-ul propunerii: {$submissionUrl}<br />
 Nume utilizator: {$editorUsername}<br />
 <br />
 Vă mulțumim,<br />
@@ -212,7 +212,7 @@ Vă mulțumim,<br />
 <br />
 Suntem încredințați că ați putea face evaluarea acestui manuscris intitulat &quot;{$submissionTitle}&quot;, care a fost trimis revistei {$contextName}. Abstractul propunerii este introdus mai jos și sperăm că veți accepta această misiune importantă.<br />
 <br />
-Vă rugăm să vă autentificați pe siteul revistei prin {$weekLaterDate} pentru a indica dacă veți face evaluarea sau nu. De asemenea, veți putea accesa propunerea și veți putea înregistra evaluarea precum și recomandările. Siteul web se află la <a href="{$journalUrl}">{$journalUrl}</a><br />
+Vă rugăm să vă autentificați pe siteul revistei prin {$responseDueDate} pentru a indica dacă veți face evaluarea sau nu. De asemenea, veți putea accesa propunerea și veți putea înregistra evaluarea precum și recomandările. Siteul web se află la <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 Evaluarea va trebui făcută până la data de {$reviewDueDate}.<br />
 <br />
@@ -237,7 +237,7 @@ Vă mulțumim pentru că luați în considerare această solicitare.<br />
 <br />
 Suntem încredințați că ați putea face evaluarea acestui manuscris intitulat &quot;{$submissionTitle},&quot; care a fost trimis revistei {$contextName}. Abstractul propunerii este introdus mai jos și sperăm că veți accepta această misiune importantă.<br />
 <br />
-Vă rugăm să vă autentificați pe siteul revistei prin {$weekLaterDate} pentru a indica dacă veți face evaluarea sau nu. De asemenea, veți putea accesa propunerea și veți putea înregistra evaluarea precum și recomandările.<br />
+Vă rugăm să vă autentificați pe siteul revistei prin {$responseDueDate} pentru a indica dacă veți face evaluarea sau nu. De asemenea, veți putea accesa propunerea și veți putea înregistra evaluarea precum și recomandările.<br />
 <br />
 Evaluarea va trebui făcută până la data de {$reviewDueDate}.<br />
 <br />
@@ -260,7 +260,7 @@ Vă mulțumim pentru că luați în considerare această solicitare.<br />
 <br />
 Suntem încredințați că ați putea face evaluarea acestui manuscris intitulat &quot;{$submissionTitle}&quot; și vă rugăm să acceptați această misiune importantă pentru noi. Îndrumările pentru evaluare sunt adăugate mai jos iar propunerea este atașată la acest email. Evaluarea propunerii împreună cu recomandarea ar trebui să-mi fie expediate până la {$reviewDueDate}.<br />
 <br />
-Indicați într-un email de răspuns până la data de {$weekLaterDate} dacă puteți și doriți să faceți evaluarea.<br />
+Indicați într-un email de răspuns până la data de {$responseDueDate} dacă puteți și doriți să faceți evaluarea.<br />
 <br />
 Vă mulțumim pentru că luați în considerare această solicitare.<br />
 <br />
@@ -416,7 +416,7 @@ Decizia noastră este:<br />
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Solicitare pentru (tehno)redactare</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Vă solicităm inițierea (tehno)redactării articolului intitulat &quot;{$submissionTitle}&quot; pentru {$contextName}, urmând următorii pași.<br />
 1. Clic pe URL-ul propunerii mai jos.<br />
@@ -426,9 +426,9 @@ Vă solicităm inițierea (tehno)redactării articolului intitulat &quot;{$submi
 5. Salvați fișierul (tehno)redactat și încărcați-l la pasul 1 corspunzător (tehno)redactării.<br />
 6. Trimiteți un email complet cu toate neclaritățile redactorului.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL-ul propunerii: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nume utilizator: {$copyeditorUsername}<br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL-ul propunerii: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nume utilizator: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Acest email este trimis de redactorul de secțiune către (tehno)redactorul propunerii pentru a-i solicita inițierea procedurii. Sunt conținute informații privind propunerea și cum trebuie accesată aceasta.</description>
@@ -452,11 +452,11 @@ URL-ul manuscrisului: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}<
 Dacă nu puteți da un răspuns pozitiv pentru această sarcină sau aveți întrebări,<br />
 contactați-mă. Mulțumim pentru contribuția la revistă.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Confirmarea (tehno)redactării</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Mulțumim pentru (tehno)redactarea manuscrisului intitulat &quot;{$submissionTitle}&quot; pentru {$contextName}. Va fi o contribuție importantă la creșterea calității acestei reviste.<br />
 <br />
@@ -478,7 +478,7 @@ Propunerea dumneavoastră intitulată &quot;{$submissionTitle}&quot; pentru {$co
 7. Clic pe METADATA pentru a verifica informațiile de indexare pentru a revizui completitudinea și acuratețea.<br />
 8. Trimite emailul de ÎNCHEIERE către redactor și (tehno)redactor.<br />
 <br />
-URL-ul propunerii: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+URL-ul propunerii: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 Aceasta este ultima șansă de a face modificări substanțiale de (tehno)redactare asupra propunerii. Etapa de corectură care este premergătoare pregătirii asamblării este limitată la corectarea erorilor tipografice și a celor de machetare.<br />
 <br />
@@ -508,7 +508,7 @@ Mulțumim pentru evaluarea (tehno)redactării manuscrisului intitulat &quot;{$su
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Revizuirea finală a (tehno)redactării</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Autorul și redactorul au încheiat revizuirea (tehno)redactării pentru articolul &quot;{$submissionTitle}&quot; trimis revistei {$contextName}. În acest moment este nevoie să fie pregătită o „copie curată” pentru machetare urmând următorii pași:<br />
 1. Clic pe URL-ul propunerii de mai jos.<br />
@@ -518,9 +518,9 @@ Autorul și redactorul au încheiat revizuirea (tehno)redactării pentru articol
 5. Clic pe METADATE pentru a verifica informația de indexare (salvând corecturile).<br />
 6. Trimite emailul de ÎNCHEIERE către redactor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL-ul propunerii: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nume utilizator: {$copyeditorUsername}<br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL-ul propunerii: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nume utilizator: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Acest email este trimis ca răspuns al redactorului de secțiune la solicitările (tehno)redactorului pentru a începe sesiunea de finalizare a (tehno)redactării înainte de a intra la machetare.</description>
@@ -531,12 +531,12 @@ Nume utilizator: {$copyeditorUsername}<br />
 <br />
 Am pregătit o versiune curată de (tehno)redactare a manuscrisului intitulat &quot;{$submissionTitle}&quot; pentru {$contextName}. Versiunea este pregătită pentru machetare și gata de asamblare.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>Acest email a fost trimis de (tehno)redactor către redactorul de secțiune înștiințându-l asupra faptului că sesiunea finală de (tehno)redactare a fost încheiată și că procesul de machetare poate fi inițiat.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Confirmarea de primire a reviziei finale pentru (tehno)redactare</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Mulțumim pentru încheierea (tehno)redactării manuscrisului inititulat &quot;{$submissionTitle}&quot; pentru {$contextName}. Pregătirea unei „copii curate” pentru machetare este un pas important în procesul editorial.<br />
 <br />
@@ -545,16 +545,16 @@ Mulțumim pentru încheierea (tehno)redactării manuscrisului inititulat &quot;{
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Solitare pentru asamblare</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Propunerea intitulată &quot;{$submissionTitle}&quot; făcută revistei {$contextName} are nevoie să fie asamblată urmând următorii pași:<br />
 1. Clic pe URL-ul propunerii de mai jos.<br />
 2. Autentifică-te la revistă și folosește fișierul de machetare pentru a crea asamblarea urmând standardele revistei.<br />
 3. Trimite emailul de ÎNCHEIERE către redactor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL-ul propunerii: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Nume utilizator: {$layoutEditorUsername}<br />
+Nume utilizator: {$participantUsername}<br />
 <br />
 Dacă nu puteți îndeplini această sarcină în acest moment sau aveți întrebări, contactați-mă. Mulțumim pentru contribuția dumneavoastră la această revistă.<br />
 <br />
@@ -569,12 +569,12 @@ Asamblarea a fost pregătită pentru manuscrisul intitulat &quot;{$submissionTit
 <br />
 Dacă sunt întrebări, contactați-mă.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Acest email de la redactorul de machetă către redactorul de secțiune îl înștiințează pe acesta asupra încheierii procesului de machetare.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Confirmare privind machetarea</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Mulțumim pentru efortul de pregătire a asamblărilor pentru manuscrisul intitulat &quot;{$submissionTitle}&quot; propus {$contextName}. Aceasta este o contribuție importantă la procesul de publicare.<br />
 <br />
@@ -593,7 +593,7 @@ Propunerea intitulată &quot;{$submissionTitle}&quot; înaintată revistei {$con
 5. Salvează și trimite prin email corecturile redactorului de machetă cât și corectorului.<br />
 6. Trimite emailul de ÎNCHEIERE redactorului.<br />
 <br />
-URL-ul propunerii: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL-ul propunerii: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Acet email este trimis de redactorul de secțiune autorului înștiințându-l pe acesta asupra faptului că asamblările articolului sunt pregătite pentru corectură. Sunt oferite informații privind articolul și cum poate fi acesta accesat.</description>
@@ -630,7 +630,7 @@ Propunerea intitulată &quot;{$submissionTitle}&quot; trimisă {$contextName} ar
 5. Salvează și trimite prin email corecturile redactorului de machetă.<br />
 6. Trimite emailul de ÎNCHEIERE redactorului.<br />
 <br />
-URL-ul manuscrisului: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL-ul manuscrisului: {$submissionUrl}<br />
 Nume utilizator: {$proofreaderUsername}<br />
 <br />
 Dacă nu puteți îndeplini această sarcină în acest moment sau aveți întrebări, contactați-mă. Mulțumim pentru contribuția dumneavoastră la această revistă.<br />
@@ -658,7 +658,7 @@ Mulțumesc pentru corecturile aduse asamblărilor pentru manuscrisul intitulat &
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Solicitare pentru corectură (redactorul machetei)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Propunerea intitulată &quot;{$submissionTitle}&quot; trimisă revistei {$contextName}, a fost corectată de către autor și corector iar oricare alte corecturi care ar trebui făcute, ar trebui să urmeze următorii pași.<br />
 1. Clic pe URL-ul propunerii de mai jos.<br />
@@ -666,9 +666,9 @@ Propunerea intitulată &quot;{$submissionTitle}&quot; trimisă revistei {$contex
 3. Încarcă asamblările revizuite.<br />
 4. Trimite emailul de ÎNCHEIERE de la pasul 3 al sesiunii de corectură către redactor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-URL-ul propunerii: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Nume utilizatorilor: {$layoutEditorUsername}<br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL-ul propunerii: {$submissionUrl}<br />
+Nume utilizatorilor: {$participantUsername}<br />
 <br />
 Dacă nu puteți îndeplini această sarcină în acest moment sau aveți întrebări, contactați-mă. Mulțumim pentru contribuția dumneavoastră la această revistă.<br />
 <br />
@@ -681,12 +681,12 @@ Dacă nu puteți îndeplini această sarcină în acest moment sau aveți între
 <br />
 Asamblările au fost corectate după ce au fost corectate pentru manuscrisul intitulat &quot;{$submissionTitle}&quot; pentru {$contextName}. Acest articol este gata pentru a fi publicat.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>Acest email trimis de redactorul machetei pentru redactorul de secțiune, îl înștiințează pe acesta asupra faptului că a fost încheiată ultima etapă a corecturii și articolul este pregătit pentru publicare.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Confirmarea corecturii (redactorul de machetă)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Mulțumim pentru încheierea corecturilor pentru asamblările asociate cu manuscrisul intitulat &quot;{$submissionTitle}&quot; pentru {$contextName}. Mulțumim pentru contribuția dumneavoastră la această revistă.<br />
 <br />
@@ -721,7 +721,7 @@ Dacă sunt întrebări, nu ezitați să mă contactați.<br />
 		<subject>Număr de revistă acum cu acces deschis</subject>
 		<body><![CDATA[Cititori:<br />
 <br />
-{$contextName} tocmai a publicat în regim de acces deschis acest număr. Vă invităm să consultați cuprinsul aici și să vizitați siteul web (<a href="{$journalUrl}">{$journalUrl}</a>) pentru a răsfoi articolele și punctele de interes.<br />
+{$contextName} tocmai a publicat în regim de acces deschis acest număr. Vă invităm să consultați cuprinsul aici și să vizitați siteul web (<a href="{$contextUrl}">{$contextUrl}</a>) pentru a răsfoi articolele și punctele de interes.<br />
 <br />
 Mulțumim pentru interesul continuu arătat pentru efortul nostru,<br />
 {$editorialContactSignature}]]></body>

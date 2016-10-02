@@ -4,32 +4,21 @@
 <!--
   * plugins/importexport/crossref/locale/it_IT/locale.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT locale.
   * Contributed by AePIC Team CILEA.
   *
   -->
- 
+
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.importexport.crossref.displayName">CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Esporta i metadati degli articoli in formato CrossRef.</message>
-	
-	<message key="plugins.importexport.crossref.export">Esporta i dati</message>
-	<message key="plugins.importexport.crossref.export.issues">Esporta i fascicoli</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Seleziona i fascicoli da esportare.</message>
-	<message key="plugins.importexport.crossref.export.articles">Esporta Articoli</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Seleziona gli articoli da esportare.</message>
-	
-	<message key="plugins.importexport.crossref.cliUsage">Uso: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
-	<message key="plugins.importexport.crossref.cliError">ERRORE:</message>
 
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Non esiste corrispondenza per lo specifico ID di fasciolo "{$issueId}".</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Non esiste corrispondenza per lo specifico ID di articolo "{$articleId}".</message>
-
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Per usare questo plugin, nel setup della rivista deve essere specificato un prefisso DOI valido.</message>
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Uso:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>

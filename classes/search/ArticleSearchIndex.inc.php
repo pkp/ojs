@@ -3,8 +3,8 @@
 /**
  * @file classes/search/ArticleSearchIndex.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleSearchIndex
@@ -31,7 +31,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 *
 	 * @param $article Article
 	 */
-	function articleMetadataChanged(&$article) {
+	function articleMetadataChanged($article) {
 		// Check whether a search plug-in jumps in.
 		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::articleMetadataChanged',
@@ -66,11 +66,22 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_ABSTRACT, $article->getAbstract(null));
 
 			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_DISCIPLINE, (array) $article->getDiscipline(null));
-			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_SUBJECT, array_merge(array_values((array) $article->getSubjectClass(null)), array_values((array) $article->getSubject(null))));
+			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_SUBJECT, (array) $article->getSubject(null));
 			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_TYPE, $article->getType(null));
-			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_COVERAGE, array_merge(array_values((array) $article->getCoverageGeo(null)), array_values((array) $article->getCoverageChron(null)), array_values((array) $article->getCoverageSample(null))));
+			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_COVERAGE, (array) $article->getCoverage(null));
 			// FIXME Index sponsors too?
 		}
+	}
+
+	/**
+	 * Delete keywords from the search index.
+	 * @param $articleId int
+	 * @param $type int optional
+	 * @param $assocId int optional
+	 */
+	function deleteTextIndex($articleId, $type = null, $assocId = null) {
+		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
+		return $searchDao->deleteSubmissionKeywords($articleId, $type, $assocId);
 	}
 
 	/**
@@ -121,7 +132,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 *
 	 * @param $article Article
 	 */
-	function submissionFilesChanged(&$article) {
+	function submissionFilesChanged($article) {
 		// Check whether a search plug-in jumps in.
 		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::submissionFilesChanged',
@@ -233,6 +244,9 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 		// If no search plug-in is activated then fall back to the
 		// default database search implementation.
 		if ($hookResult === false || is_null($hookResult)) {
+
+			AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
+
 			// Check that no journal was given as we do
 			// not support journal-specific re-indexing.
 			if (is_a($journal, 'Journal')) die(__('search.cli.rebuildIndex.indexingByJournalNotSupported') . "\n");

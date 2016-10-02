@@ -3,8 +3,8 @@
 <!--
   * registry/siteSettings.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Default site settings.
@@ -42,5 +42,9 @@
 	<setting type="string" locale="1">
 		<name>contactEmail</name>
 		<value>{$contactEmail}</value>
+	</setting>
+	<setting type="string" locale="0">
+		<name>themePluginPath</name>
+		<value>default</value>
 	</setting>
 </site_settings>

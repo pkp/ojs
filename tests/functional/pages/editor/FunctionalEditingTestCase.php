@@ -3,8 +3,8 @@
 /**
  * @file tests/functional/pages/editor/FunctionalEditingTest.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FunctionalEditingTest
@@ -393,7 +393,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		$testFile = realpath($testFile);
 		if (Core::isWindows()) {
 			$testFile = str_replace(DIRECTORY_SEPARATOR, '/', $testFile);
-			$testFile = String::regexp_replace('%^[A-Z]:/%', '/', $testFile);
+			$testFile = PKPString::regexp_replace('%^[A-Z]:/%', '/', $testFile);
 		}
 		$testFile = 'file://' . $testFile;
 		return $testFile;

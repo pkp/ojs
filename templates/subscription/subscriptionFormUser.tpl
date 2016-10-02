@@ -1,8 +1,8 @@
 {**
  * templates/subscription/subscriptionFormUser.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Common subscription fields
@@ -69,10 +69,6 @@
 <tr>
 	<td class="label">{fieldLabel name="userPhone" key="user.phone"}</td>
 	<td class="value"><input type="text" name="userPhone" id="userPhone" value="{$userPhone|escape}" size="15" maxlength="24" class="textField" /></td>
-</tr>
-<tr>
-	<td class="label">{fieldLabel name="userFax" key="user.fax"}</td>
-	<td class="value"><input type="text" name="userFax" id="userFax" value="{$userFax|escape}" size="15" maxlength="24" class="textField" /></td>
 </tr>
 <tr>
 	<td class="label">{fieldLabel name="userMailingAddress" key="common.mailingAddress"}</td>

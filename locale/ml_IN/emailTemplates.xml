@@ -2,10 +2,10 @@
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
 
 <!--
-  * locale/ml_IN/emailTemplateData.xml
+  * locale/ml_IN/emailTemplates.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -66,7 +66,7 @@ If you wish to stop receiving notification emails, please go to {$unsubscribeLin
 <br />
 If you did not make this request, please ignore this email and your password will not be changed. If you wish to reset your password, click on the below URL.<br />
 <br />
-Reset my password: {$url}<br />
+Reset my password: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>This email is sent to a registered user when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password.</description>
@@ -76,7 +76,7 @@ Reset my password: {$url}<br />
 		<body><![CDATA[Your password has been successfully reset for use with the {$siteTitle} web site. Please retain this username and password, as it is necessary for all work with the journal.<br />
 <br />
 Your username: {$username}<br />
-Your new password: {$password}<br />
+Password: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>This email is sent to a registered user when they have successfully reset their password following the process described in the PASSWORD_RESET_CONFIRM email.</description>
@@ -123,7 +123,7 @@ Thank you,<br />
 		<subject>New Issue Published</subject>
 		<body><![CDATA[Readers:<br />
 <br />
-{$contextName} has just published its latest issue at <a href="{$journalUrl}">{$journalUrl}</a>. We invite you to review the Table of Contents here and then visit our web site to review articles and items of interest.<br />
+{$contextName} has just published its latest issue at <a href="{$contextUrl}">{$contextUrl}</a>. We invite you to review the Table of Contents here and then visit our web site to review articles and items of interest.<br />
 <br />
 Thanks for the continuing interest in our work,<br />
 {$editorialContactSignature}]]></body>
@@ -133,11 +133,11 @@ Thanks for the continuing interest in our work,<br />
 		<subject>Archiving Request for {$contextName}</subject>
 		<body><![CDATA[Dear [University Librarian]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
 <br />
 [Brief description of journal]<br />
 <br />
-The URL to the LOCKSS Publisher Manifest for our journal is: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+The URL to the LOCKSS Publisher Manifest for our journal is: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 We understand that you are already participating in LOCKSS. If we can provide any additional metadata for purposes of registering our journal with your version of LOCKSS, we would be happy to provide it.<br />
 <br />
@@ -149,7 +149,7 @@ Thank you,<br />
 		<subject>Archiving Request for {$contextName}</subject>
 		<body><![CDATA[Dear [University Librarian]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
 <br />
 [Brief description of journal]<br />
 <br />
@@ -167,7 +167,7 @@ Thank you,<br />
 <br />
 Thank you for submitting the manuscript, &quot;{$submissionTitle}&quot; to {$contextName}. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />
 <br />
-Manuscript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuscript URL: {$submissionUrl}<br />
 Username: {$authorUsername}<br />
 <br />
 If you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />
@@ -207,7 +207,7 @@ An initial review of &quot;{$submissionTitle}&quot; has made it clear that this 
 <br />
 The submission, &quot;{$submissionTitle},&quot; to {$contextName} has been assigned to you to see through the editorial process in your role as Section Editor.  <br />
 <br />
-Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Submission URL: {$submissionUrl}<br />
 Username: {$editorUsername}<br />
 <br />
 Thank you,<br />
@@ -220,7 +220,7 @@ Thank you,<br />
 <br />
 I believe that you would serve as an excellent reviewer of the manuscript, &quot;{$submissionTitle},&quot; which has been submitted to {$contextName}. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br />
 <br />
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$journalUrl}">{$journalUrl}</a><br />
+Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
@@ -245,7 +245,7 @@ Thank you for considering this request.<br />
 <br />
 I believe that you would serve as an excellent reviewer of the manuscript, &quot;{$submissionTitle},&quot; which has been submitted to {$contextName}. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br />
 <br />
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br />
+Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br />
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
@@ -268,7 +268,7 @@ Thank you for considering this request.<br />
 <br />
 I believe that you would serve as an excellent reviewer of the manuscript, &quot;{$submissionTitle},&quot; and I am asking that you consider undertaking this important task for us. The Review Guidelines for this journal are appended below, and the submission is attached to this email. Your review of the submission, along with your recommendation, should be emailed to me by {$reviewDueDate}.<br />
 <br />
-Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.<br />
+Please indicate in a return email by {$responseDueDate} whether you are able and willing to do the review.<br />
 <br />
 Thank you for considering this request.<br />
 <br />
@@ -425,7 +425,7 @@ Our decision is to:<br />
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Copyediting Request</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 I would ask that you undertake the copyediting of &quot;{$submissionTitle}&quot; for {$contextName} by following these steps.<br />
 1. Click on the Submission URL below.<br />
@@ -435,9 +435,9 @@ I would ask that you undertake the copyediting of &quot;{$submissionTitle}&quot;
 5. Save copyedited file, and upload to Step 1 of Copyediting.<br />
 6. Send the COMPLETE email to the editor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-Submission URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Username: {$copyeditorUsername}<br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Username: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>This email is sent by a Section Editor to a submission's Copyeditor to request that they begin the copyediting process. It provides information about the submission and how to access it.</description>
@@ -461,11 +461,11 @@ Manuscript URL: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br
 If you are unable to undertake this work at this time or have any questions,<br />
 please contact me. Thank you for your contribution to this journal.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Copyediting Acknowledgement</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Thank you for copyediting the manuscript, &quot;{$submissionTitle},&quot; for {$contextName}. It will make an important contribution to the quality of this journal.<br />
 <br />
@@ -487,7 +487,7 @@ Your submission &quot;{$submissionTitle}&quot; for {$contextName} has been throu
 7. Click on METADATA to check indexing information for completeness and accuracy.<br />
 8. Send the COMPLETE email to the editor and copyeditor.<br />
 <br />
-Submission URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 This is the last opportunity to make substantial copyediting changes to the submission. The proofreading stage, that follows the preparation of the galleys, is restricted to correcting typographical and layout errors.<br />
 <br />
@@ -517,7 +517,7 @@ Thank you for reviewing the copyediting of your manuscript, &quot;{$submissionTi
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Copyediting Final Review</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 The author and editor have now completed their copyediting review of &quot;{$submissionTitle}&quot; for {$contextName}. A &quot;clean copy&quot; now needs to be prepared for Layout by going through the following steps.<br />
 1. Click on the Submission URL below.<br />
@@ -527,9 +527,9 @@ The author and editor have now completed their copyediting review of &quot;{$sub
 5. Click on METADATA to check indexing information (saving any corrections).<br />
 6. Send the COMPLETE email to the editor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-Submission URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Username: {$copyeditorUsername}<br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Username: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>This email from the Section Editor to the Copyeditor requests that they perform a final round of copyediting on a submission before it enters the layout process.</description>
@@ -540,12 +540,12 @@ Username: {$copyeditorUsername}<br />
 <br />
 I have now prepared a clean, copyedited version of the manuscript, &quot;{$submissionTitle},&quot; for {$contextName}. It is ready for Layout and the preparation of the galleys.<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>This email from the Copyeditor to the Section Editor notifies them that the final round of copyediting has been completed and that the layout process may now begin.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Copyediting Final Review Acknowledgement</subject>
-		<body><![CDATA[{$copyeditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Thank you for completing the copyediting of the manuscript, &quot;{$submissionTitle},&quot; for {$contextName}. This preparation of a &quot;clean copy&quot; for Layout is an important step in the editorial process.<br />
 <br />
@@ -554,16 +554,16 @@ Thank you for completing the copyediting of the manuscript, &quot;{$submissionTi
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Request Galleys</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 The submission &quot;{$submissionTitle}&quot; to {$contextName} now needs galleys laid out by following these steps.<br />
 1. Click on the Submission URL below.<br />
 2. Log into the journal and use the Layout Version file to create the galleys according to the journal's standards.<br />
 3. Send the COMPLETE email to the editor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Submission URL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-Username: {$layoutEditorUsername}<br />
+Username: {$participantUsername}<br />
 <br />
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.<br />
 <br />
@@ -578,12 +578,12 @@ Galleys have now been prepared for the manuscript, &quot;{$submissionTitle},&quo
 <br />
 If you have any questions, please contact me.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>This email from the Layout Editor to the Section Editor notifies them that the layout process has been completed.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Layout Acknowledgement</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Thank you for preparing the galleys for the manuscript, &quot;{$submissionTitle},&quot; for {$contextName}. This is an important contribution to the publishing process.<br />
 <br />
@@ -602,7 +602,7 @@ Your submission &quot;{$submissionTitle}&quot; to {$contextName} now needs to be
 5. Save and email corrections to Layout Editor and Proofreader.<br />
 6. Send the COMPLETE email to the editor.<br />
 <br />
-Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Submission URL: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>This email from the Section Editor to the Author notifies them that an article's galleys are ready for proofreading. It provides information about the article and how to access it.</description>
@@ -639,7 +639,7 @@ The submission &quot;{$submissionTitle}&quot; to {$contextName} now needs to be 
 5. Save and email corrections to Layout Editor.<br />
 6. Send the COMPLETE email to the editor.<br />
 <br />
-Manuscript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Manuscript URL: {$submissionUrl}<br />
 Username: {$proofreaderUsername}<br />
 <br />
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.<br />
@@ -667,7 +667,7 @@ Thank you for proofreading the galleys for the manuscript, &quot;{$submissionTit
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Proofreading Request (Layout Editor)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 The submission &quot;{$submissionTitle}&quot; to {$contextName} has been proofread by the author and proofreader, and any corrections should now be made by following these steps.<br />
 1. Click on the Submission URL below.<br />
@@ -675,9 +675,9 @@ The submission &quot;{$submissionTitle}&quot; to {$contextName} has been proofre
 3. Upload the revised galleys.<br />
 4. Send the COMPLETE email in Proofreading Step 3 to the editor.<br />
 <br />
-{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
-Subnmission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Username: {$layoutEditorUsername}<br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+Subnmission URL: {$submissionUrl}<br />
+Username: {$participantUsername}<br />
 <br />
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.<br />
 <br />
@@ -690,12 +690,12 @@ If you are unable to undertake this work at this time or have any questions, ple
 <br />
 The galleys have now been corrected, following their proofreading, for the manuscript, &quot;{$submissionTitle},&quot; for {$contextName}. This piece is now ready to publish.<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>This email from the Layout Editor to the Section Editor notifies them that the final stage of proofreading has been completed and the article is now ready to publish.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Proofreading Acknowledgement (Layout Editor)</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 Thank you for completing the proofreading corrections for the galleys associated with the manuscript, &quot;{$submissionTitle},&quot; for {$contextName}. This represents an important contribution to the work of this journal.<br />
 <br />
@@ -730,7 +730,7 @@ If you have any questions, please feel free to contact me.<br />
 		<subject>Issue Now Open Access</subject>
 		<body><![CDATA[Readers:<br />
 <br />
-{$contextName} has just made available in an open access format the following issue. We invite you to review the Table of Contents here and then visit our web site (<a href="{$journalUrl}">{$journalUrl}</a>) to review articles and items of interest.<br />
+{$contextName} has just made available in an open access format the following issue. We invite you to review the Table of Contents here and then visit our web site (<a href="{$contextUrl}">{$contextUrl}</a>) to review articles and items of interest.<br />
 <br />
 Thanks for the continuing interest in our work,<br />
 {$editorialContactSignature}]]></body>

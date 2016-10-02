@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/medra/classes/MedraWebservice.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class MedraWebservice
@@ -145,14 +145,14 @@ class MedraWebservice {
 		// than instantiating a DOM.
 		if (is_string($response)) {
 			$matches = array();
-			String::regexp_match_get('#<faultstring>([^<]*)</faultstring>#', $response, $matches);
+			PKPString::regexp_match_get('#<faultstring>([^<]*)</faultstring>#', $response, $matches);
 			if (empty($matches)) {
 				if ($attachment) {
-					assert(String::regexp_match('#<returnCode>success</returnCode>#', $response));
+					assert(PKPString::regexp_match('#<returnCode>success</returnCode>#', $response));
 				} else {
 					$parts = explode("\r\n\r\n", $response);
 					$result = array_pop($parts);
-					$result = String::regexp_replace('/>[^>]*$/', '>', $result);
+					$result = PKPString::regexp_replace('/>[^>]*$/', '>', $result);
 				}
 			} else {
 				$result = 'mEDRA: ' . $status . ' - ' . $matches[1];

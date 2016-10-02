@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/toc/TocGridHandler.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class TocGridHandler
@@ -40,8 +40,8 @@ class TocGridHandler extends CategoryGridHandler {
 	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
-		import('lib.pkp.classes.security.authorization.PkpContextAccessPolicy');
-		$this->addPolicy(new PkpContextAccessPolicy($request, $roleAssignments));
+		import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
+		$this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
 
 		import('classes.security.authorization.OjsIssueRequiredPolicy');
 		$this->addPolicy(new OjsIssueRequiredPolicy($request, $args));
@@ -104,7 +104,7 @@ class TocGridHandler extends CategoryGridHandler {
 	 * Get the row handler - override the default row handler
 	 * @return TocGridRow
 	 */
-	function getRowInstance() {
+	protected function getRowInstance() {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		return new TocGridRow($issue->getId());
 	}
@@ -112,7 +112,7 @@ class TocGridHandler extends CategoryGridHandler {
 	/**
 	 * @copydoc CategoryGridHandler::getCategoryRowInstance()
 	 */
-	function getCategoryRowInstance() {
+	protected function getCategoryRowInstance() {
 		return new TocGridCategoryRow();
 	}
 
@@ -126,7 +126,7 @@ class TocGridHandler extends CategoryGridHandler {
 	/**
 	 * @copydoc GridHandler::loadData()
 	 */
-	function loadData($request, $filter) {
+	protected function loadData($request, $filter) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
@@ -174,7 +174,7 @@ class TocGridHandler extends CategoryGridHandler {
 	 * @copydoc GridHandler::getDataElementSequence()
 	 */
 	function getDataElementInCategorySequence($categoryId, $publishedArticle) {
-		return $publishedArticle->getSeq();
+		return $publishedArticle->getSequence();
 	}
 
 	/**
@@ -185,7 +185,7 @@ class TocGridHandler extends CategoryGridHandler {
 		if ($sectionId != $publishedArticle->getSectionId()) {
 			$publishedArticle->setSectionId($sectionId);
 		}
-		$publishedArticle->setSeq($newSequence);
+		$publishedArticle->setSequence($newSequence);
 		$publishedArticleDao->updatePublishedArticle($publishedArticle);
 	}
 
@@ -207,7 +207,7 @@ class TocGridHandler extends CategoryGridHandler {
 		$article = $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 		import('classes.article.ArticleTombstoneManager');
 		$articleTombstoneManager = new ArticleTombstoneManager();
-		if ($article && $article->getIssueId() == $issue->getId()) {
+		if ($article && $article->getIssueId() == $issue->getId() && $request->checkCSRF()) {
 			if ($issue->getPublished()) {
 				$articleTombstoneManager->insertArticleTombstone($article, $journal);
 			}

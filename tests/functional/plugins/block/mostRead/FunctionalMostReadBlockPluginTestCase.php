@@ -3,8 +3,8 @@
 /**
  * @file tests/functional/plugins/block/mostRead/FunctionalMostReadBlockPluginTest.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FunctionalMostReadBlockPluginTest
@@ -80,7 +80,7 @@ class FunctionalMostReadBlockPluginTest extends WebTestCase {
 	/**
 	 * SCENARIO: display most-read articles of a journal
 	 *    WHEN I display a journal page
-	 *    THEN I see a block plugin wich lists the articles
+	 *    THEN I see a block plugin which lists the articles
 	 *         ranking highest for the selected "main metric"
 	 *         throughout the journal
 	 *     AND I'll see the articles as title links with the
@@ -93,7 +93,7 @@ class FunctionalMostReadBlockPluginTest extends WebTestCase {
 		$this->verifyAndOpen($this->baseUrl . '/index.php/lucene-test');
 		
 		// Check that I see the block plugin.
-		$this->assertText('css=#sidebarMostRead .blockTitle', 'Most-Read Articles');
+		$this->assertText('css=#sidebarMostRead .title', 'Most-Read Articles');
 		
 		// Check that I see the articles:
 		// - correctly ordered

@@ -4,15 +4,15 @@
 <!--
   * locale/ml_IN/locale.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ml_IN (Malayalam) locale.
+  * Localization strings for the ml_IN (മലയാളം) locale.
   *
   -->
- 
-<locale name="ml_IN" full_name = "Malayalam">
+
+<locale name="ml_IN" full_name="മലയാളം">
 	<!--
 	 * This file is organized into several major sections, separated
 	 * by comments like this one. These sections are called:
@@ -26,23 +26,8 @@
 	 *  DEFAULT - Default settings for configuration items.
 	-->
 
-	<!-- review froms start -->
-
-	<!-- common -->
-
-	<!-- Journal Management -->
-
-
-
-
-
-
-
-
-	<message key="reviewer.article.enterReviewForm">അവലോകനാരൂപം പൂരിപ്പിക്കാന്‍ ഐകണില്‍ ക്ലിക്ക് ചെയ്യുക</message>	
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">ദയവായി ആവശ്യമുള്ള സ്ഥലങ്ങള്‍ പൂരിപ്പിക്കുക</message>	
-	
-	<!-- review forms end -->
+	<message key="reviewer.article.enterReviewForm">അവലോകനാരൂപം പൂരിപ്പിക്കാന്‍ ഐകണില്‍ ക്ലിക്ക് ചെയ്യുക</message>
+	<message key="reviewer.article.reviewFormResponse.form.responseRequired">ദയവായി ആവശ്യമുള്ള സ്ഥലങ്ങള്‍ പൂരിപ്പിക്കുക</message>
 
 	<!--
 	 *
@@ -55,11 +40,9 @@
 	<message key="common.confirmComplete">ഈ ജോലി പൂര്‍ത്തിയായതായി അടയാളപ്പെടുത്താന്‍ നിങ്ങള്‍ ആഗ്രഹിക്കുന്നു   ? നിങ്ങള്‍ക്ക് പിന്നീട് വ്യത്യാസം വരുതാന്‍ കഴിയില്ല.</message>
 	<message key="common.payment">പണം കൊടുക്കല്‍</message>
 	<message key="common.payments">പണം  ഒടുക്കല്‍</message>
-	<message key="common.pageHeader.altText">താളിന്റെ ഹെഡര്‍</message>
-		
+
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">ജേണല്‍ ഹെല്പ്</message>
-	<message key="navigation.archives">റിക്കോര്‍ഡുകള്‍ സൂക്ഷിക്കുന്ന സ്ഥലം</message>
 	<message key="navigation.current">നിലവിലുള്ള</message>
 	<message key="navigation.otherJournals">മറ്റ് ജേണല്‍സ്</message>
 	<message key="navigation.browseByIssue">പ്രസിദ്ധീകരണത്തിനായി</message>
@@ -69,7 +52,7 @@
 	<message key="navigation.competingInterestGuidelines">മത്സരിക്കൂന്നതിന് വേണ്ടിയുള്ള മാര്‍ഗ്ഗദര്‍ശയായ വരികള്‍</message>
 	<message key="navigation.infoForAuthors.long">ഗ്രന്ധകര്‍ത്താവിന് വേണ്ടിയുള്ള വിവരങ്ങള്‍</message>
 	<message key="navigation.infoForLibrarians.long">പുസ്തകശാലാധികാരിക്കൂ വേണ്ടിയുള്ള വിവരങ്ങള്‍</message>
-	
+
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">നിര്‍ണ്ണയിക്കാത്തത്</message>
 	<message key="common.queue.short.submissionsUnassigned">നിര്‍ണ്ണയിക്കാത്തത്</message>
@@ -83,7 +66,7 @@
 	<message key="common.queue.short.active">സജീവമായ</message>
 	<message key="common.queue.long.completed">റിക്കോര്‍ഡുകള്‍ സൂക്ഷിക്കുന്ന സ്ഥലം</message>
 	<message key="common.queue.short.completed">റിക്കോര്‍ഡുകള്‍ സൂക്ഷിക്കുന്ന സ്ഥലം</message>
-	
+
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
@@ -111,12 +94,8 @@
 	<message key="article.suppFiles">അനുബന്ധമായ ഫയല്‍ (സ് )</message>
 	<message key="article.suppFilesAbbrev">അനുബന്ധമായ ഫയലുകള്‍</message>
 	<message key="article.discipline">വിദ്യാഭ്യാസ വിജ്ഞാനശാഖയും ഉപശാഖകളും</message>
-	<message key="article.subjectClassification">വിഷയം തരം തിരിക്കല്‍</message>
 	<message key="article.subject">വാക്കുകളുടെ സാരാംശം</message>
 	<message key="article.coverage">ഉള്‍കൊള്ളുന്ന വിസ്തീര്‍ണ്ണം</message>
-	<message key="article.coverageGeo">ഭൂസ്ഥല വിസ്തീര്‍ണ്ണം സംബന്ധമായ</message>
-	<message key="article.coverageChron">ചരിത്രപരമായി ഉള്‍കൊള്ളുന്ന വിസ്തീര്‍ണ്ണം</message>
-	<message key="article.coverageSample">നൈസ്സര്‍ഗ്ഗിഗമായ ഗവേഷണ മാതൃക</message>
 	<message key="article.type">ഇനം,  ജോലി ചെയ്യുന്ന രീതി</message>
 	<message key="article.language">ഭാഷ</message>
 	<message key="article.sectionEditor">എസ്സ്  ഇ</message>
@@ -147,6 +126,7 @@
 	<message key="submission.notifyEditor">ഗ്രന്ധകര്‍ത്താവിന് അറിയിപ്പ് നല്‍കുക</message>
 	<message key="submission.editorAuthorRecord">ഗ്രന്ധപരിശോധകന്റെ/ഗ്രന്ധകര്‍ത്താവിന്റെ ഇ-മെയില്‍ രേഖപ്പെടുത്തുക</message>
 	<message key="submission.reviewersVersion">ഫയലിനെക്കുറി ച്ചുള്ള പുനപരിശോധകന്റെ ആവിഷ്കാരം അഥവാ വ്യാഖ്യാനം</message>
+	<message key="submission.postReviewVersion">Post-review version of file</message>
 	<message key="submission.editorVersion">ഗ്രന്ധപരിശോധകനുള്ള ആവിഷ്കാരം</message>
 	<message key="submission.authorsRevisedVersion">ഗ്രന്ധകര്‍ത്താവ്  പുനപരിശോധിച്ച്  ആവിഷ്കരിച്ച ഫയല്‍</message>
 	<message key="submission.authorVersion">ഗ്രന്ധകര്‍ത്താവിനുള്ള ആവിഷ്കാരം</message>
@@ -155,7 +135,7 @@
 	<message key="submission.proofreading">അച്ചടിപ്പിഴ തിരുത്തുക</message>
 	<message key="submission.scheduling">നിശ്ചിത സമയത്ത് നടത്താനായി തയ്യാറാക്കുക</message>
 	<message key="submission.scheduledIn">പ്രസിദ്ധീകരണത്തിനായി ആസൂത്രണം ചെയ്യുക in {$issueName}.</message>
-	<message key="submission.scheduledIn.tba">(റ്റി ബി എ )</message>	
+	<message key="submission.scheduledIn.tba">(റ്റി ബി എ )</message>
 	<message key="submissions.sec">എസ് ഇ സി</message>
 	<message key="submissions.step1">സ്റ്റെപ്പ്  1</message>
 	<message key="submissions.step3">സ്റ്റെപ്പ്  3</message>
@@ -178,7 +158,7 @@
 	<message key="submissions.proofreadingComplete">അച്ചടിപ്പിഴ തിരുത്തുക</message>
 
 	<!-- Submission Notes -->
-	
+
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">നിലവിലിരിക്കുന്ന പ്രസിദ്ധീകരണം</message>
 	<message key="journal.journals">ജേണല്‍സ്</message>
@@ -191,7 +171,6 @@
 	<message key="user.registerForOtherJournals">മറ്റ് ജേണല്‍സിനു വേണ്ടി രെജിസ്റ്റര്‍ ചെയ്യുക</message>
 	<message key="user.myJournals">എന്റെ ജേണല്‍സ്</message>
 	<message key="user.manageMySubscriptions">എന്റെ സംഭാവനകള്‍ നിയന്ത്രണത്തില്‍ കൊണ്ടുവരിക</message>
-	<message key="user.noRoles.noRolesForJournal">താങ്കളുടെ അക്കൗണ്ടിന് നിലവില്‍ ഈ ജേണലിനുവേണ്ടി ഏതൊരു കര്‍ത്തവ്യവുമില്ല . ദയവായി താഴെപറഞ്ഞിരിക്കുന്നവയില്‍നിന്നും ഒരു പ്രവൃത്തി  തിരഞ്ഞെടുക്കുക.</message>
 	<message key="user.noRoles.submitArticle">ഒരു നിര്‍ദ്ദേശം സമര്‍പ്പിക്കുക</message>
 	<message key="user.noRoles.submitArticleRegClosed">പ്രബന്ധം  സമര്‍പ്പിക്കുക: ഗ്രന്ധകര്‍ത്താവിന്റെ രജിസ്ട്രേഷന്‍ നിലവില്‍ നിയന്ത്രണത്തിലായിരിക്കണം</message>
 	<message key="user.noRoles.regReviewer">പരിശോധകന്റെ പേരില്‍ രെജിസ്റ്റര്‍ ചെയ്യുക</message>
@@ -199,22 +178,11 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">ജേണല്‍ മാനേജര്‍</message>
-	<message key="user.role.editor">ഗ്രന്ധപരിശോധകന്‍</message>
 	<message key="user.role.sectionEditor">വകുപ്പ് എഡിറ്റര്‍</message>
-	<message key="user.role.layoutEditor">ലേഔട്ട് എഡിറ്റര്‍</message>
-	<message key="user.role.copyeditor">കോപ്പി എഡിറ്റര്‍</message>
-	<message key="user.role.proofreader">അച്ചടിപ്പിഴ തിരുത്തുക</message>
-	<message key="user.role.author">ഗ്രന്ധകര്‍ത്താവ്</message>
 	<message key="user.role.subscriptionManager">സബ്സ്ക്രിപ്ഷന്‍ മാനേജര്‍</message>
 	<message key="user.role.managers">ജേണല്‍ മാനേജര്‍സ്</message>
-	<message key="user.role.editors">ഗ്രന്ധപരിശോധകര്‍</message>
-	<message key="user.role.subEditors">വകുപ്പ് എഡിറ്റേര്‍സ്</message>
-	<message key="user.role.layoutEditors">ലേഔട്ട്  എഡിറ്റേര്‍സ്</message>
-	<message key="user.role.copyeditors">കോപ്പി എഡിറ്റേര്‍സ്</message>
-	<message key="user.role.proofreaders">അച്ചടിപ്പിഴ തിരുത്തുന്നവര്‍</message>
-	<message key="user.role.authors">ഗ്രന്ധകര്‍ത്താക്കള്‍</message>
 	<message key="user.role.subscriptionManagers">സബ്സ്ക്രിപ്ഷന്‍ മാനേജര്‍സ്</message>
-	
+
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">പ്രസിദ്ധീകരണം</message>
 	<message key="issue.issues">പ്രസിദ്ധീകരണങ്ങള്‍</message>
@@ -264,9 +232,8 @@
 	<message key="submission.event.logLevel.notice">നോട്ടീസ്</message>
 	<message key="submission.event.logLevel.warning">മുന്നറിയിപ്പ്</message>
 	<message key="submission.event.logLevel.error">തെറ്റ്</message>
-	
+
 	<message key="submission.event.general.defaultEvent">സബ്മിഷന്‍ ഇവന്റ്</message>
-	<message key="submission.event.submissionSubmitted">ലേഖനം സബ്മിറ്റ് ചെയ്തു</message>
 	<message key="submission.event.general.issueScheduled">സബ്മിഷന്‍ ഇഷ്യൂ ഷെഡ്യൂലിങ്ങ് ക്യൂവിലേക്ക് അയച്ചിരിക്കുന്നു</message>
 	<message key="submission.event.general.issueAssigned">സബ്മിഷന്‍ ഇഷ്യുവിലേക്ക് അസൈന്‍ ചെയ്തു കൊടുത്തത്</message>
 	<message key="submission.event.general.articlePublished">ലേഖനം പ്രസിദ്ധീകരിച്ചിരിക്കുന്നു</message>
@@ -274,15 +241,15 @@
 	<message key="submission.event.author.authorRevision">ഗ്രന്ഥകര്‍ത്താവിന്റെ പുനരവലോകനം നല്‍കിയിരിക്കുന്നു</message>
 
 	<message key="submission.event.general.authorRevision">ഗ്രന്ഥകര്‍ത്താവ് പുനരവലോകനം ചെയ്ത ഫയല്‍ അപ്ഡേറ്റ് ചെയ്തിരിക്കുന്നു</message>
-	
+
 	<message key="submission.event.editor.editorAssigned">ഗ്രന്ഥപരിശോധകന്‍ സബ്മിഷനു അസൈന്‍ ചെയ്തു കൊടുത്തത്</message>
 	<message key="submission.event.editor.editorUnassigned">സബ്മിഷനില്‍ ഗ്രന്ഥപരിശോധകന്‍ അണ്‍അസൈന്‍ ചെയ്ത് കൊടുത്തത്</message>
 	<message key="submission.event.editor.editorDecision">ഗ്രന്ഥപരിശോധകന്റെ തീരുമാനം നല്‍കിയിരിക്കുന്നു</message>
 	<message key="submission.event.editor.editorFile">ഗ്രന്ഥപരിശോധകന്റെ ഫയല്‍ അപ്ഡേറ്റ് ചെയ്തിരിക്കുന്നു</message>
 	<message key="submission.event.editor.submissionArchived">സബ്മിഷന്‍ ആര്‍ച്ചീവിലേക്ക് അയച്ചിരിക്കുന്നു</message>
 	<message key="submission.event.editor.submissionRestored">ആര്‍ച്ചീവില്‍ നിന്നും സബ്മിഷന്‍ വീണ്ടെടുത്തിരിക്കുന്നു</message>
-	
-	
+
+
 	<message key="submission.event.copyedit.copyeditorAssigned">കോപ്പി എഡിറ്റര്‍ സബ്മിഷനു അസൈന്‍ ചെയ്ത് കൊടുത്തത്</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">കോപ്പി എഡിറ്റര്‍ സബ്മിഷനില്‍ അണ്‍അസൈന്‍ ചെയ്ത് കൊടുത്തത്</message>
 	<message key="submission.event.copyedit.copyeditInitiated">കോപ്പി എഡിറ്റ് അസൈന്‍മെന്റ് പ്രാരംഭിച്ചിരിക്കുന്നു</message>
@@ -290,13 +257,13 @@
 	<message key="submission.event.copyedit.copyeditInitialCompleted">പ്രാരംഭമായ കോപ്പി എഡിറ്റിങ്ങ് പൂര്‍ണ്ണമായിരിക്കുന്നു</message>
 	<message key="submission.event.copyedit.copyeditFinalCompleted">അന്തിമമായ കോപ്പി എഡിറ്റിങ്ങ് പൂര്‍ണ്ണമായിരിക്കുന്നു</message>
 	<message key="submission.event.copyedit.copyeditSetFile">കോപ്പി എഡിറ്റ് ഫയല്‍ അപ്പ് ലോഡ് ചെയ്തിരിക്കുന്നു</message>
-	
+
 	<message key="submission.event.proofread.proofreaderAssigned">പ്രൂഫ് റീഡര്‍ സബ്മിഷനായി അസൈന്‍ ചെയ്തു നല്‍കിയത്</message>
 	<message key="submission.event.proofread.proofreaderUnassigned">പ്രൂഫ് റീഡര്‍ സബ്മിഷനില്‍ നിന്നും അണ്‍അസൈന്‍ ചെയ്തു നല്‍കിയത്</message>
 	<message key="submission.event.proofread.proofreadInitiated">പ്രൂഫ് റീഡ് അസൈന്‍മെന്റ് പ്രാരംഭിച്ചിരിക്കുന്നു</message>
 	<message key="submission.event.proofread.proofreadRevision">പ്രൂഫ് റീഡറിന്റെ പുനരവലോകനങ്ങളുടെ ഫയല്‍ അപ്ഡേറ്റ് ചെയ്തിരിക്കുന്നു</message>
 	<message key="submission.event.proofread.proofreadCompleted">പ്രൂഫ് റീഡറിന്റെ അസൈന്‍മെന്റ് പൂര്‍ണ്ണമായിരിക്കുന്നു</message>
-	
+
 	<message key="submission.event.layout.layoutEditorAssigned">ലേഔട്ട് എഡിറ്റര്‍ സബ്മിഷനായി അസൈന്‍ ചെയ്തു നല്‍കിയത്</message>
 	<message key="submission.event.layout.layoutEditorUnassigned">ലേഔട്ട് എഡിറ്റര്‍ സബ്മിഷനില്‍ നിന്നും അണ്‍അസൈന്‍ ചെയ്തു നല്‍കിയത്</message>
 	<message key="submission.event.layout.layoutInitiated">ലേഔട്ട് അസൈന്‍മെന്റ് പ്രാരംഭിച്ചിരിക്കുന്നു</message>
@@ -311,7 +278,7 @@
 
 	<!-- Reader article view -->
 	<message key="reader.subscribersOnly">സബ്സ്ക്രിബര്‍സ് മാത്രം</message>
-	<message key="reader.subscriptionRequiredLoginText">സബ്സ്ക്രിപ്ഷനു ഇനത്തെ അക്സസ് ചെയ്യേണ്ടത് ആവശ്യമാണ്. പരിശോധിക്കുന്നതിനായി ജര്‍ണലില്‍ ലോഗിന്‍ ചെയ്യുക.</message>  
+	<message key="reader.subscriptionRequiredLoginText">സബ്സ്ക്രിപ്ഷനു ഇനത്തെ അക്സസ് ചെയ്യേണ്ടത് ആവശ്യമാണ്. പരിശോധിക്കുന്നതിനായി ജര്‍ണലില്‍ ലോഗിന്‍ ചെയ്യുക.</message>
 	<message key="reader.openAccess">ഓപ്പണ്‍ അക്സസ്</message>
 	<message key="reader.subscriptionAccess">സബ്സ്ക്രിപ്ഷന്‍ അക്സസ്</message>
 	<message key="reader.subscriptionOrFeeAccess">സബ്സ്ക്രിപ്ഷന്‍ അഥവാ ഫീ അക്സസ്</message>
@@ -319,26 +286,11 @@
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">ഈ ലേഖനത്തില്‍ അഭിപ്രായം രേഖപ്പെടുത്തുക</message>
 
-	<!-- Site Administration -->
-	
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">സബ്സ്ക്രിപ്ഷന്‍ മനേജ്മെന്റ്</message>
 	<message key="subscriptionManager.individualSubscriptions">വെവ്വേറെ സബ്സ്ക്രിപ്ഷന്‍സ്</message>
 	<message key="subscriptionManager.institutionalSubscriptions">ഇന്‍സ്റ്റിടൂഷനല്‍ സബ്സ്ക്രിപ്ഷന്‍സ്</message>
 	<message key="subscriptionManager.subscriptionTypes">സബ്സ്ക്രിപ്ഷന്‍ ടൈപ്പ്സ്</message>
-	
-	<!-- Journal Management -->
-
-	<!-- Statistics & Reports -->
-
-
-	<!-- Plugin Management -->
-	
-	<!-- Payment Management -->
-
-
-		
-
 
 	<!-- General plugin information -->
 	<message key="plugins.categories.auth.description">മറ്റു സിസ്റ്റങ്ങളിലേക്ക് എല്‍ഡാപ്പ് സെര്‍വര്‍സ് പോലുള്ള യുസര്‍ ആതന്റിക്കേഷന്‍ പ്രവര്‍ത്തികള്‍ക്ക് പകരം അതോറൈസേഷന്‍ പ്ലഗിന്‍സ് ഓപ്പണ്‍ ജര്‍ണല്‍ സിസ്റ്റങ്ങള്‍ക്ക് അനുമതി നല്‍ക്കുന്നു.</message>
@@ -349,15 +301,10 @@
 
 	<message key="plugins.categories.generic.description">ഓപ്പണ്‍ ജര്‍ണല്‍ സിസ്റ്റത്തിനെ വിവിധ തരത്തില്‍ മറ്റു വിഭാഗത്തിലെ പ്ലഗിന്‍സിനെക്കാള്‍ വര്‍ദ്ധിപ്പിക്കാന്‍ ജനറിക്ക് പ്ലഗിന്‍സ് ഉപയോഗിക്കുന്നു.</message>
 
-	<message key="plugins.categories.implicitAuth">ഇമ്പ്ലിസിറ്റ് ആതന്റികേഷന്‍ പ്ലഗിന്‍സ്</message>
-	<message key="plugins.categories.implicitAuth.description">എച്ച്ടിടിപി ഹെഡേര്‍സ് അടിസ്ഥാനമാക്കിയുള്ള ആതേന്റിക്കേറ്റിങ്ങ് യൂസര്‍സിനെ അനുക്കൂലിച്ച് കൊണ്ടുള്ള ഇംപ്ലിസിറ്റ് ആതേന്റിക്കേഷന്‍ പ്ലഗിന്‍സ് ഇംപ്ലിമെന്റ് ചെയ്യുന്നു.</message>
-
-	<message key="manager.setup.citations.enable">ഈ ഫോര്‍മാറ്റില്‍ ഉള്ള പ്ലഗിന്‍സ് ഒഎഐ കമ്യൂണിക്കേസ്കനില്‍ ഉള്ള മെറ്റാഡാറ്റയെ എക്സ് പ്രസ്സ് ചെയ്യുന്നു  സൈറ്റെഷന്‍ന്റെ മാര്ക്ക് അപ് അസിസ്റ്റന്റിനെ പ്രാബല്യത്തിലാക്കുക</message>
-
 	<!-- People Management -->
 	<message key="manager.people.confirmDisable">ഈ യൂസറിനെ അപ്രാപ്യമാക്കേണമോ ? ഇത് ഈ സിസ്റ്റത്തില്‍ യൂസറിനെ ലോഗിന്‍ ചെയ്യുന്നത്തില്‍ നിന്നും തടയുന്നു.
 താങ്കള്‍ക്ക് യൂസര്‍ അക്കൗണ്ട് അപ്രപ്യത്തിലാക്കുന്നതിന് കാരണം ഓപ്ഷണല്‍ ആയി നല്‍കാം</message>
-	
+
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">പ്രാബല്യത്തിലുള്ള എഡിറ്റോറിയല്‍ അസൈന്‍മെന്റ്സ്</message>
 	<message key="sectionEditor.completedEditorialAssignments">പൂര്‍ണ്ണമായിട്ടുള്ള എഡിറ്റോറിയല്‍ അസൈന്‍മെന്റ്സ്</message>
@@ -368,7 +315,7 @@
 	<message key="sectionEditor.proofreader.confirmRenotify">ഈ പ്രൂഫ് റീഡര്‍ അവരുടെ അസൈന്‍മെന്റെ വീണ്ടും റീസ്റ്റാര്‍ട്ട് ചെയ്യുകയാണെന്ന് അറിയിക്കുക. താങ്കള്‍ക്ക് ഇത് തുടരണമെന്ന് ഉറപ്പാണ്ണോ?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">റെഗ്രേറ്റ്സ്</message>
-	<message key="sectionEditor.regrets.title"><![CDATA[#{$articleId} റിവ്യൂവര്‍ റെഗ്രേറ്റ്സ്, കാന്‍സലേഷന്‍സ് & ഏര്‍ലിയര്‍ റൗണ്ട്സ്]]></message>
+	<message key="sectionEditor.regrets.title"><![CDATA[#{$submissionId} റിവ്യൂവര്‍ റെഗ്രേറ്റ്സ്, കാന്‍സലേഷന്‍സ് & ഏര്‍ലിയര്‍ റൗണ്ട്സ്]]></message>
 	<message key="sectionEditor.regrets">റെഗ്രേറ്റ്സ്</message>
 	<message key="sectionEditor.regrets.link"><![CDATA[വ്യൂ റെഗ്രേറ്റ്സ്, കാന്‍സേല്‍സ് & പ്രിവിയസ് റൗണ്ട്സ്]]></message>
 	<message key="sectionEditor.regrets.reviewRound">പീര്‍ റിവ്യൂ, റൗണ്ട്  {$round}</message>
@@ -387,12 +334,12 @@
 	<message key="layoutEditor.galley.replaceGalley">ഫയല്‍ റീപ്ലേസ് ചെയ്യുക</message>
 	<message key="layoutEditor.galley.uploadSuppFile">സപ്ലിമെന്ററി ഫയല്‍ അപ് ലോഡ് ചെയ്യുക</message>
 	<message key="submission.layout.imageInvalid">അപ്രാപ്യമായ ഇമേജ് ഫോര്‍മാറ്റ്. സ്വീകരിക്കുന്ന ഫോര്‍മാറ്റുകള്‍ .gif, .jpg, and .png.</message>
-	
+
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">പ്രബന്ധങ്ങളുടെ പെന്‍ഡിങ്ങ് റിവ്യൂ</message>
 	<message key="reviewer.completedReviews">ചെയ്തു</message>
 	<message key="reviewer.averageQuality">റേറ്റിങ്ങ്</message>
-	
+
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">അവലോകനം ചെയ്യേണ്ട ഫയല്‍</message>
 	<message key="reviewer.article.notifyTheEditor">ഗ്രന്ധപരിശോധകനു അറിയിപ്പ് നല്‍ക്കുക</message>
@@ -407,7 +354,7 @@
 	<message key="reviewer.article.recommendation">ശുപാര്‍ശ</message>
 	<message key="reviewer.article.submitReview">ഗ്രന്ഥപരിശോധകനു അവലോകനം സമര്‍പ്പിക്കുക</message>
 	<message key="reviewer.article.reviewerComments">അഭിപ്രായങ്ങള്‍</message>
-	<message key="reviewer.article.uploadedFile">അപ് ലോഡ് ചെയ്ത ഫയലുകള്‍</message>	
+	<message key="reviewer.article.uploadedFile">അപ് ലോഡ് ചെയ്ത ഫയലുകള്‍</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">റിവ്യൂവര്‍ അപ് ലോഡ് ചെയ്ത് ഫയലുകള്‍</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(ഈ ഫയല്‍ ഗ്രന്ഥപരിശോധകനു വേണ്ടി വ്യാഖ്യാനിക്കപ്പെടേണമോ, എങ്കില്‍ താങ്കളുടെ ഹാര്‍ഡ് ഡ്രൈവില്‍ സൂക്ഷിച്ച ശേഷം ബ്രൗസ്/അപ് ലോഡ് എന്നിവ ഉപയോഗിക്കുക.)</message>
         <message key="reviewer.article.schedule.request">ഗ്രന്ഥപരിശോധകന്റെ അഭിപ്രായം</message>
@@ -442,7 +389,7 @@
 	<message key="copyeditor.article.copyeditorFile">കോപ്പി എഡിറ്റര്‍ ഫയല്‍</message>
 	<message key="copyeditor.article.uploadedFile">അപ് ലോഡഡ് ഫയല്‍</message>
 	<message key="copyeditor.article.copyeditorFinalFile">കോപ്പി എഡിറ്റര്‍ ഫയല്‍</message>
-	
+
 	<!-- Proofreader -->
 	<message key="proofreader.noProofreadingAssignments">പ്രൂഫ് റീഡിങ്ങ് അസ്സൈന്‍മെന്റ്സ് ഒന്നുംതന്നെ ഇല്ല്ല</message>
 
@@ -461,7 +408,7 @@
 	<message key="submission.copyedit.useFile">യൂസ്  ഫയല്‍</message>
 	<message key="submission.copyedit.copyeditComments">കോപ്പി എഡിറ്റ് കമന്റ്സ്</message>
 	<message key="submission.copyedit.instructions">കോപ്പി എഡിറ്റ് ഇന്‍സ്ട്രുക്ഷന്‍സ്</message>
-	
+
 	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.layout.noLayoutFile">നണ്‍ (റിക്വസ്റ്റ് അയയ്ക്കുന്നതിനു മുന്‍പ് ലേഔട്ട് വെര്‍ഷനായി ഫൈനല്‍  കോപ്പി എഡിറ്റ് വെര്‍ഷനെ അപ് ലോഡ് ചെയ്യണം)</message>
 	<message key="submission.layout.publicGalleyId">പബ്ലിക് ഗ്യാലേ ഐഡന്റിഫയര്‍</message>
@@ -471,15 +418,14 @@
 	<message key="submission.layout.layoutComments">ലേഔട്ട് കമന്റ്സ്</message>
 	<message key="submission.layout.instructions">ലേഔട്ട് ഇന്‍സ്ട്രുക്ഷന്‍സ്</message>
 	<message key="submission.layout.referenceLinking">റെഫറന്‍സ് ലിങ്കിങ്ങ്</message>
-	
-	
+
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">പ്രൂഫ് റീഡിങ്ങ്  കമന്റ്സ്</message>
 	<message key="submission.proofread.corrections">പ്രൂഫ് റീഡിങ്ങ് കറക്ഷന്‍സ്</message>
 	<message key="submission.proofread.instructions">പ്രൂഫ് റീഡിങ്ങ്  ഇന്‍സ്ട്രുക്ഷന്‍സ്</message>
 
 	<!-- Submission History -->
-	
+
 	<message key="submission.logType.article">പ്രബന്ധം</message>
 	<message key="submission.logType.author">ഗ്രന്ധകര്‍ത്താവ്</message>
 	<message key="submission.logType.editor">ഗ്രന്ധപരിശോധകന്‍</message>
@@ -487,11 +433,7 @@
 	<message key="submission.logType.copyedit">കോപ്പി എഡിറ്റ്</message>
 	<message key="submission.logType.layout">ലേഔട്ട്</message>
 	<message key="submission.logType.proofread">അച്ചടിപ്പിഴ തിരുത്തുക</message>
-	
-	<!-- Submission Event Log -->
 
-	<!-- Submission Email Log -->
-	
 	<!-- Submission Comments -->
 	<message key="submission.comments.editorAuthorCorrespondence">ഗ്രന്ധപരിശോധകന്റെ/ഗ്രന്ധകര്‍ത്താവിന്റെ എഴുത്ത്കുത്ത്</message>
 	<message key="submission.comments.copyeditComments">കോപ്പി എഡിറ്റ് കമന്റ്സ്</message>
@@ -504,13 +446,9 @@
 	<message key="submission.comments.forEditor">ഗ്രന്ധപരിശോധകനു വേണ്ടി</message>
 	<message key="submission.comments.saveAndEmailAuthor">സേവ് ചെയ്ത ശേഷം ഗ്രന്ധപരിശോധകനു ഇ-മെയില്‍ ചെയ്യുക</message>
 	<message key="submission.comments.saveAndEmailEditor">സേവ് ചെയ്ത ശേഷം ഗ്രന്ധപരിശോധകനു ഇ-മെയില്‍ ചെയ്യുക</message>
-	
-	<!-- Login -->
-	<message key="user.login.registerNewAccount">യൂസര്‍ അല്ലെങ്കില്‍ ഈ സൈറ്റില്‍ രജിസ്റ്റര്‍ ചെയ്യുക</message>
-	
+
 	<!-- Registration -->
 	<message key="user.register.repeatPassword">പാസ്സ് വേര്‍ഡ് ആവര്‍ത്തിക്കുക</message>
-	<message key="user.register.selectJournal">റജിസ്റ്റര്‍ ചെയ്യുന്നതിനായി ഒരു ജര്‍ണല്‍ തിരഞ്ഞെടുക്കുക</message>
 	<message key="user.register.noJournals">ഈ സൈറ്റില്‍ താങ്കള്‍ ഒരു ജര്‍ണലും റജിസ്റ്റര്‍ ചെയ്തിട്ടില്ല.</message>
 	<message key="user.register.privacyStatement">പ്രൈവസി സ്റ്റേറ്റ്മെന്റ്</message>
 	<message key="user.register.loginToRegister">ഈ ജര്‍ണലില്‍ റജിസ്റ്റര്‍ ചെയ്യുന്നതിനായി താങ്കളുടെ നിലവിലുള്ള യൂസര്‍നേമും പാസ്സ് വേര്‍ഡും എന്റര്‍ ചെയ്യുക.</message>
@@ -522,7 +460,7 @@
 	<message key="user.register.reviewerDescriptionNoInterests">ജര്‍ണലില്‍ നല്‍കിയിട്ടുള്ള സബ്മിഷന്‍സിന്റെ പീര്‍ റിവ്യു നടത്തുക.</message>
 	<message key="user.register.reviewerDescription">പ്രെസ്സില്‍ നല്‍കിയിട്ടുള്ള സബ്മിഷന്‍സിന്റെ പീര്‍ റിവ്യു നടത്തുക.</message>
 	<message key="user.register.reviewerInterests">റിവ്യൂവിങ്ങ് ഇന്‍ട്രേസ്റ്റ് തിരിച്ചറിയുക (പ്രാധാന്യമുള്ള മേഖലകള്‍ പിന്നെ ഗവേഷണ രീതികള്‍):</message>
-	
+
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">എന്റെ സബ്സ്ക്രിപ്ഷന്‍സ്</message>
 	<message key="user.subscriptions.subscriptionStatus">സബ്സ്ക്രിപ്ഷന്‍ സ്റ്റാറ്റസ്</message>
@@ -564,7 +502,6 @@
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">ബ്രൗസ് ഓതര്‍ ഇന്റക്സ്</message>
 	<message key="search.searchFor">ലേഖനം തിരയുന്നത്:</message>
-	<message key="search.author">ഗ്രന്ഥകര്‍ത്താകള്‍</message>
 	<message key="search.withinJournal">വിതിന്‍</message>
 	<message key="search.allJournals">എല്ലാ ജര്‍ണലുകളും</message>
 	<message key="search.authorIndex">ഓതര്‍ ഇന്‍ഡക്സ് ബ്രൗസ് ചെയ്യുക</message>
@@ -572,17 +509,15 @@
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">പോര്‍ട്ടബിള്‍ ഡോക്യുമെന്റ് ഫോര്‍മാറ്റ് (പിഡിഎഫ് )</message>
-	<message key="article.pdf.download">ഈ പിഡിഎഫ് ഫയല്‍ ഡൗണ്‍ലോഡ് ചെയ്യുക</message>
-	
+
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">ലേഖനങ്ങള്‍ ഡൗണ്‍ലോഡ് ചെയ്യുന്നതിന്</message>
-	
+
 	<!-- Site index -->
 	<message key="site.journalsHosted">ജര്‍ണലുകള്‍ ഈ സൈറ്റില്‍ ആണ് ഹോസ്റ്റ് ചെയ്യപ്പെട്ടിരിക്കുന്നത്</message>
 	<message key="site.journalView">ജര്‍ണല്‍ കാണുക</message>
 	<message key="site.journalRegister">റജിസ്റ്റര്‍</message>
 	<message key="site.journalCurrent">പ്രചാരത്തിലുള്ള പതിപ്പ്</message>
-	
 
 	<!-- Current index -->
 	<message key="current.current">പ്രചാരത്തിലുള്ള</message>
@@ -593,11 +528,9 @@
 	<message key="archive.archives">ആര്‍ച്ചീവ്സ്</message>
 	<message key="archive.browse">പഴയ പതിപ്പുകളിലൂടെ ബ്രൗസ് ചെയ്യുക</message>
 	<message key="archive.issueUnavailable">പതിപ്പ് ലഭ്യമല്ല</message>
-	
+
 	<!-- About The Journal -->
 	<message key="about.statistics">സ്റ്റാറ്റിസ്റ്റിക്സ്</message>
-	<message key="about.journalContact">ജേണല്‍ കോണ്‍ടാക്റ്റ്</message>
-	<message key="about.aboutTheJournal">ജേണലിനെ സംബന്ധിച്ച്</message>
 	<message key="about.history">ജേണല്‍ ചരിത്രം</message>
 	<message key="about.editorialTeam">എഡിറ്റോറിയല്‍ ടീം</message>
 	<message key="about.editorialTeam.biography">ബയോഗ്രഫി</message>
@@ -605,13 +538,8 @@
 	<message key="about.focusAndScope"><![CDATA[ഫോക്കസ് & സ്കോപ്പ്]]></message>
 	<message key="about.sectionPolicies">തിരഞ്ഞെടുപ്പ് പോളിസികള്‍</message>
 	<message key="about.submissions">സമര്‍പ്പണങ്ങള്‍</message>
-	<message key="about.sponsors">നിര്‍മ്മാതാക്കള്‍</message>
-	<message key="about.contributors">പിന്താങ്ങുന്ന സ്രോതസ്സുകള്‍</message>
 	<message key="about.onlineSubmissions">ഓണ്‍ലൈന്‍ സമര്‍പ്പണങ്ങള്‍</message>
-	<message key="about.onlineSubmissions.haveAccount">{$journalTitle} നു വേണ്ടി നേരത്തെ തന്നെ ഒരു യൂസര്‍ നാമം/പാസ്-വേഡ് ഉണ്ടോ?</message>
 	<message key="about.onlineSubmissions.login">ലോഗിനിലേക്ക് പോകുക</message>
-	<message key="about.onlineSubmissions.needAccount">യൂസര്‍ നാമം/പാസ്-വേഡ് വേണോ?</message>
-	<message key="about.onlineSubmissions.registration">രജിസ്ട്രേഷനിലേക്ക് പോകുക</message>
 	<message key="about.onlineSubmissions.registrationRequired">നിലവിലുള്ള സമര്‍പ്പണങ്ങളുടെ സ്റ്റാറ്റസ് പരിശോധിക്കാനും ഓണ്‍ലൈനായി ഐറ്റംസ് സമര്‍പ്പിക്കാനും രജിസ്ട്രേഷന്‍,ലോഗിന്‍ എന്നിവ ആവശ്യമാണ്.</message>
 	<message key="about.authorGuidelines">ഓതര്‍ ഗൈഡ്ലൈന്‍സ്</message>
 	<message key="about.submissionPreparationChecklist">സമര്‍പ്പണം തയ്യാറാക്കുന്നതിനുള്ള ചെക്ക് ലിസ്റ്റ്</message>
@@ -637,24 +565,23 @@
 	<message key="about.subscriptionTypes.cost">മൂല്യം</message>
 	<message key="about.availableSubscriptionTypes">സബ്സ്ക്രിപ്ഷന്‍ ടൈപ്പ്സ്</message>
 	<message key="about.memberships">മെമ്പര്‍ഷിപ്പ്സ്</message>
-	<message key="about.journalSponsorship">ജര്‍ണലിന്റെ സ്പോണ്‍സര്‍ഷിപ്പ്</message>
 	<message key="about.aboutThisPublishingSystem">ഈ പബ്ലിഷിങ്ങ് സിസ്റ്റത്തെക്കുറിച്ച്</message>
 	<message key="about.aboutThisPublishingSystem.altText">ഒജെഎസ് എഡിറ്റോറിയലും പ്രസിദ്ധീകരണ പ്രക്രിയയും</message>
 
 	<!-- Help -->
 	<message key="help.ojsHelp">ഓപ്പണ്‍ ജര്‍ണല്‍ സിസ്റ്റംസ് ഹെല്‍പ്പ്</message>
-	<message key="help.ojsHelpAbbrev">ഒജെഎസ് ഹെല്‍പ്പ്</message>	
+	<message key="help.ojsHelpAbbrev">ഒജെഎസ് ഹെല്‍പ്പ്</message>
 	<message key="help.searchReturnResults">റിസള്‍ട്ട് തിരയുന്നതിലേക്ക് തിരിച്ച് പോകുക</message>
 
 	<!-- Donations -->
 	<message key="donations.thankYou">നന്ദി</message>
 	<message key="donations.thankYouMessage">ഒരു ലേഖനം തയ്യാറാക്കിയതിന് നന്ദി. താങ്കളുടെ ലേഖനം വളരെ പ്രശംസനീയമാണ്.</message>
-	
+
 	<!-- Payments -->
 	<message key="payment.loginRequired">പേമെന്റ് നല്‍ക്കുന്നതിനായി തീര്‍ച്ചയായും താങ്കള്‍ ലോഗിന്‍ ചെയ്യണം.</message>
 	<message key="payment.loginRequired.forArticle">സബ്സ്ക്രിപ്ഷന്‍ അഥവാ ആര്‍ട്ടിക്കിള്‍ പര്‍ച്ചേഴ്സിന് ഇനത്തെ അക്സസ് ചെയ്യേണ്ടത് ആവശ്യമാണ്. സബ്സ്ക്രിപ്ഷന്‍, അക്സസ് പ്രിവിയസ് പര്‍ച്ചേഴ്സ് അഥവാ പര്‍ച്ചേഴ്സ് ആര്‍ട്ടിക്കിള്‍ എന്നിവ പരിശോധിക്കുന്നതിനായി ജര്‍ണലില്‍ ലോഗിന്‍ ചെയ്യുക.</message>
 	<message key="payment.loginRequired.forDonation">സംഭാവന നല്‍ക്കുന്നതിനായി തീര്‍ച്ചയായും ലോഗിന്‍ ചെയ്യേണ്ടതാണ്.</message>
-	
+
 	<message key="payment.paid">പേയ്ഡ്</message>
 	<message key="payment.payNow">ഇപ്പോള്‍ തന്നെ പേ ചെയ്യുക</message>
 	<message key="payment.waive">ഉപേക്ഷിക്കുക</message>
@@ -669,25 +596,25 @@
 	<message key="payment.type.purchaseArticle">പര്‍ച്ചേഴ്സ് ആര്‍ട്ടിക്കിള്‍ ഫീ</message>
 	<message key="payment.type.subscription">സബ്സ്ക്രിപ്ഷന്‍ ഫീ</message>
 	<message key="payment.type.donation">സംഭാവനകള്‍</message>
-	
+
 	<message key="payment.donation.makeDonation">സംഭാവന നല്‍ക്കുക</message>
-	
+
 	<message key="payment.submission.paySubmission">പേ സബ്മിഷന്‍ ഫീ</message>
 	<message key="payment.fastTrack.payFastTrack">പേ ടു ഫാസ്റ്റ് ട്രാക്ക്</message>
 	<message key="payment.fastTrack.inFastTrack">ഇന്‍ ഫാസ്റ്റ് ട്രാക്ക്</message>
 	<message key="payment.publication.payPublication">പ്രസിദ്ധീകരിക്കുന്നതിനായി പേ ചെയ്യുക</message>
 	<message key="payment.publication.publicationPaid">പ്രസിദ്ധീകരണ ഫീ പേ ചെയ്തിരിക്കുന്നു</message>
-	
+
 	<message key="payment.membership.buyMembership">ഇന്റിവിച്യുവല്‍ മെമ്പര്‍ഷിപ്പ് വാങ്ങുക</message>
-	<message key="payment.membership.renewMembership">ഇന്റിവിച്യുവല്‍ മെമ്പര്‍ഷിപ്പ് അവലോകനം ചെയ്യുക</message>	
+	<message key="payment.membership.renewMembership">ഇന്റിവിച്യുവല്‍ മെമ്പര്‍ഷിപ്പ് അവലോകനം ചെയ്യുക</message>
 	<message key="payment.membership.ends">അവസാനിച്ചു</message>
 
 	<message key="payment.subscription.purchase">സബ്സ്ക്രിപ്ഷന്‍ പര്‍ച്ചേഴ്സ് ചെയ്യുക</message>
 	<message key="payment.subscription.renew">സബ്സ്ക്രിപ്ഷന്‍ റിന്യു ചെയ്യുക</message>
-	<message key="payment.subscription.expires">കാലവധി കഴിഞ്ഞവ</message>	
+	<message key="payment.subscription.expires">കാലവധി കഴിഞ്ഞവ</message>
 
 	<!-- Installer -->
-	<message key="installer.ojsInstallation">ഒജെഎസ് ഇന്‍സ്റ്റാളേഷന്‍</message>
+	<message key="installer.appInstallation">ഒജെഎസ് ഇന്‍സ്റ്റാളേഷന്‍</message>
 	<message key="installer.ojsUpgrade">ഒജെഎസ് അപ്ഗ്രേഡ്</message>
 	<message key="installer.localeInstructions">പ്രഥമ ഭാഷ സിസ്റ്റത്തിനു വേണ്ടി ഉപയോഗിക്കുന്നു. ഇവിടെ പറഞ്ഞിട്ടില്ലാത്ത ഭാഷകള്‍ സപ്പോര്‍ട്ട് ചെയ്യുന്നതില്‍ താങ്കള്‍ക്ക് താല്‍പര്യം ഉണ്ടെങ്കില്‍ ഒജെഎസ് ഡോക്യുമെന്റേഷനില്‍ വിദഗ്ദ്ധാഭിപ്രായം നേടുക.</message>
 	<message key="installer.additionalLocalesInstructions">ഈ സിസ്റ്റത്തെ സപ്പോര്‍ട്ട് ചെയ്യുന്നതിനായി ഇതിനു പുറമേ ഒരു ഭാഷ തിരഞ്ഞെടുക്കുക. ഈ ഭാഷകള്‍ ഈ സൈറ്റില്‍ ഹോസ്റ്റ് ചെയ്തിരിക്കുന്ന ജര്‍ണലുകളുടെ ഉപയോഗത്തിനായി ലഭ്യമാക്കിയിരിക്കുന്നു. കൂടുതലായി തിരഞ്ഞെടുത്ത ഭാഷകള്‍ എപ്പോള്‍ വേണമെങ്കിലും അഡ്മിനിട്രേഷന്‍ ഇന്‍റ്റര്‍ഫേസ് വഴി ഇന്‍സ്റ്റാള്‍ ചെയ്യവുന്നതാണ്.</message>
@@ -699,15 +626,11 @@
 	<message key="log.copyedit.authorFile">ഗ്രന്ഥകര്‍ത്താവ് കോപ്പി എഡിറ്റ് ചെയ്ത സബ്മിഷന്‍ ഫയലിന്റെ ഒരു വേര്‍ഷന്‍ അപ് ലോഡ് ചെയ്തിരിക്കുന്നു.</message>
 	<message key="log.editor.editorFile">സമര്‍പ്പിച്ച ഫയലിന്റെ എഡിറ്റര്‍ വേര്‍ഷന്‍ അപ്-ലോഡ് ചെയ്തു.</message>
 
-	<!-- Reading Tools entries -->
-
-
 	<!-- RT Settings -->
 	<message key="rt.admin.settings">റീഡിങ്ങ് ടൂള്‍ ഓപ്ഷന്‍സ്</message>
 
 	<message key="rt.admin.settings.enableReadingTools">ജേണലിന്റെ നിയോഗിക്കപ്പെട്ട സെക്ഷനുകളില്‍ റീഡിങ്ങ് ടൂള്‍സ് പ്രാപ്തമാക്കുക.</message>
 	<message key="rt.admin.settings.relatedItems">ഫീല്‍ഡ്</message>
-
 	<message key="rt.admin.options">ജേണല്‍ ഐറ്റം ടൂള്‍സ്</message>
 	<message key="rt.admin.relatedItems">റിലേറ്റഡ് ഐറ്റം ടൂള്‍സ്</message>
 
@@ -721,25 +644,29 @@
 	<message key="rt.metadata.pkp.primaryAuthor">ലേഖകന്റെ പേര്,അംഗീകാരം,രാജ്യം</message>
 	<message key="rt.metadata.pkp.peerReviewed">പിയര്‍-റിവ്യൂവ്ഡ് ആര്‍ട്ടിക്കിള്‍</message>
 	<message key="rt.metadata.pkp.doi">ഡിജിറ്റല്‍ ഒബ്ജക്ട് ഐഡന്റിഫയര്‍</message>
+
+
+
+
+
 	<message key="rt.beNotifiedWhen">ബീ നോട്ടിഫൈഡ് വെന്‍...</message>
+
 	<message key="rt.thisJournal">ജേണല്‍ തിരയുക</message>
-	
+
 	<!-- Notification Types -->
 	<message key="notification.mailListDescription">ജേണലില്‍ പ്രധാനപ്പെട്ട എന്തെങ്കിലും പുതിയ വിവരങ്ങള്‍ ചേര്‍ക്കുമ്പോള്‍ ആ വിവരം അറിയിക്കുന്നതിനായി താങ്കളുടെ ഇ-മെയില്‍ അഡ്രസ്സ് നല്‍കുക.</message>
-	<message key="notification.type.articleSubmitted">ഒരു പുതിയ പ്രബന്ധം "{$param}"സമര്‍പ്പിച്ചിരിക്കുന്നു</message>
+	<message key="notification.type.articleSubmitted">ഒരു പുതിയ പ്രബന്ധം "{$title}"സമര്‍പ്പിച്ചിരിക്കുന്നു</message>
 	<message key="notification.type.editing">എഡിറ്റിങ്ങ് ഈവന്റ്സ്</message>
-	<message key="notification.type.editorDecisionComment">"{$param}"-നു വേണ്ടി എഡിറ്റര്‍ ഡിസിഷനില്‍ ഒരു കമന്റ് കൊടുത്തിരിക്കുന്നു.</message>
-	<message key="notification.type.galleyModified">"{$param}"-നു വേണ്ടി ഒരു ഗ്യാലേ പരിഷ്കരിച്ചിരിക്കുന്നു.</message>
+	<message key="notification.type.editorDecisionComment">"{$title}"-നു വേണ്ടി എഡിറ്റര്‍ ഡിസിഷനില്‍ ഒരു കമന്റ് കൊടുത്തിരിക്കുന്നു.</message>
+	<message key="notification.type.galleyModified">"{$title}"-നു വേണ്ടി ഒരു ഗ്യാലേ പരിഷ്കരിച്ചിരിക്കുന്നു.</message>
 	<message key="notification.type.issuePublished">ഒരു പതിപ്പ് പ്രസിദ്ധീകരിച്ചിരിക്കുന്നു.</message>
-	<message key="notification.type.metadataModified">"{$param}"-ന്റെ മെറ്റാഡേറ്റ പരിഷ്കരിച്ചിരിക്കുന്നു.</message>
-	<message key="notification.type.newAnnouncement">ഒരു പുതിയ അറിയിപ്പ് സൃഷ്ടിച്ചിരിക്കുന്നു.</message>	
-	<message key="notification.type.reviewerComment">റിവ്യൂവര്‍ "{$param}"ല്‍ കമന്റ് ചെയ്തു.</message>
-	<message key="notification.type.reviewerFormComment">ഒരു റിവ്യൂ ഫോം അവലോകനം"{$param}"നു വേണ്ടി സമര്‍പ്പിച്ചിരിക്കുന്നു.</message>
+	<message key="notification.type.newAnnouncement">ഒരു പുതിയ അറിയിപ്പ് സൃഷ്ടിച്ചിരിക്കുന്നു.</message>
+	<message key="notification.type.reviewerFormComment">ഒരു റിവ്യൂ ഫോം അവലോകനം"{$title}"നു വേണ്ടി സമര്‍പ്പിച്ചിരിക്കുന്നു.</message>
 	<message key="notification.type.reviewing">റിവ്യൂവിങ്ങ് ഈവന്റ്സ്</message>
 	<message key="notification.type.site">സൈറ്റ് ഈവന്റ്സ്</message>
-	<message key="notification.type.submissionComment">എഡിറ്റര്‍ "{$param}"ല്‍ ഒരു കമന്റ് ചെയ്തിരിക്കുന്നു.</message>
+	<message key="notification.type.submissionComment">എഡിറ്റര്‍ "{$title}"ല്‍ ഒരു കമന്റ് ചെയ്തിരിക്കുന്നു.</message>
 	<message key="notification.type.submissions">സബ്മിഷന്‍ ഈവന്റ്സ്</message>
-	<message key="notification.type.userComment">വായനക്കാരന്‍ "{$param}"ല്‍ ഒരു കമന്റ് നല്‍കിയിരിക്കുന്നു.</message>
+	<message key="notification.type.userComment">വായനക്കാരന്‍ "{$title}"ല്‍ ഒരു കമന്റ് നല്‍കിയിരിക്കുന്നു.</message>
 
 	<!--
 	 *
@@ -748,15 +675,11 @@
 	-->
 	<!-- Authorization -->
 	<message key="user.authorization.copyeditorAssignmentMissing">അക്സസ് നിഷേധിച്ചിരിക്കുന്നു:ഈ ലേഖനത്തില്‍ ഒരു കോപ്പി എഡിറ്ററായി താങ്കളെ അസ്സൈന്‍ ചെയ്തിട്ടില്ല.</message>
-	<message key="user.authorization.noJournal">കണ്‍ടെക്സില്‍ ജേണല്‍ ഒന്നുമില്ല!</message>
 	<message key="user.authorization.sectionAssignment">താങ്കളുടെ സെക്ഷന്റെ ഭാഗമായ ഒരു ലേഖനം അക്സസ് ചെയ്യാനാണ് താങ്കള്‍ ശ്രമിക്കുന്നത്.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">അസാധുവായ കോപ്പി എഡിറ്റര്‍ സബ്മിഷന്‍ അല്ലെങ്കില്‍ കോപ്പി എഡിറ്റര്‍ സബ്മിഷന്‍ അപേക്ഷിച്ചിട്ടില്ല!</message>
-	
+
 	<!-- Icons: Default "alt" text -->
-	
+
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">XML-ല്‍ നിന്നും കറന്‍സി ലിസ്റ്റ് "{$filename}"  ലോഡ് ചെയ്തിരിക്കുന്നു</message>
-
-	<!-- Included here because it may be used in the navigation bar -->
-	<message key="editor.navigation.issues">പതിപ്പുകള്‍</message>
 </locale>

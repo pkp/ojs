@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/toc/TocGridRow.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class TocGridRow
@@ -57,6 +57,7 @@ class TocGridRow extends GridRow {
 			new LinkAction(
 				'removeArticle',
 				new RemoteActionConfirmationModal(
+					$request->getSession(),
 					__('editor.article.remove.confirm'),
 					__('grid.action.removeArticle'),
 					$router->url($request, null, null, 'removeArticle', null, array('articleId' => $this->getId(), 'issueId' => $this->issueId)), 'modal_delete'

@@ -1,7 +1,7 @@
 {**
  * templates/payments/paymentSettings.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2014-2016 Simon Fraser University Library
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -26,6 +26,7 @@
 	{rdelim});
 </script>
 <form class="pkp_form" name="paymentSettingsForm" id="paymentSettingsForm" method="post" action="{url op="savePaymentSettings"}">
+{csrf}
 {if count($formLocales) > 1}
 <div id="locales">
 <table class="data">

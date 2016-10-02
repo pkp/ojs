@@ -4,11 +4,11 @@
 <!--
   * @file plugins/generic/lucene/locale/de_DE/emailTemplates.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  * Localized email templates XML file.
-  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
+  * Localization strings.
   -->
 
 <email_texts locale="de_DE">
@@ -18,7 +18,7 @@
 <br />
 Die eventuell aufgetretene Fehlermeldung lautete: &quot;{$error}&quot;<br />
 <br />
-Diese E-Mail wurde durch das Lucene-Suche-Plug-In von Open Journal Systems erzeugt.]]></body>
+Diese E-Mail wurde durch das Lucene-Suche-Plugin von Open Journal Systems erzeugt.]]></body>
 		<description>Diese E-Mail-Vorlage wird benutzt, um den technischen Kontakt einer Zeitschrift darüber zu informieren,
 dass ein Fehler während der Artikelindizierung aufgetreten ist.</description>
 	</email_text>
@@ -28,7 +28,7 @@ dass ein Fehler während der Artikelindizierung aufgetreten ist.</description>
 <br />
 Die eventuell aufgetretene Fehlermeldung lautete: &quot;{$error}&quot;<br />
 <br />
-Diese E-Mail wurde durch das Lucene-Suche-Plug-In von Open Journal Systems erzeugt.]]></body>
+Diese E-Mail wurde durch das Lucene-Suche-Plugin von Open Journal Systems erzeugt.]]></body>
 		<description>Diese E-Mail-Vorlage wird benutzt, um den technischen Kontakt einer Zeitschrift darüber zu informieren,
 dass ein Fehler während der Zeitschriftenindizierung aufgetreten ist.</description>
 	</email_text>
@@ -38,7 +38,7 @@ dass ein Fehler während der Zeitschriftenindizierung aufgetreten ist.</descript
 <br />
 Die eventuell aufgetretene Fehlermeldung lautete: &quot;{$error}&quot;<br />
 <br />
-Diese E-Mail wurde durch das Lucene-Suche-Plug-In von Open Journal Systems erzeugt.]]></body>
+Diese E-Mail wurde durch das Lucene-Suche-Plugin von Open Journal Systems erzeugt.]]></body>
 		<description>Diese E-Mail-Vorlage wird benutzt, um den technischen Kontakt einer Zeitschrift darüber zu informieren,
 dass ein Fehler aufgetreten ist, während versucht wurde, auf den Solr-Suchdienst zuzugreifen.</description>
 	</email_text>

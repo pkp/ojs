@@ -2,10 +2,10 @@
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
 
 <!--
-  * locale/zh_TW/emailTemplateData.xml
+  * locale/zh_TW/emailTemplates.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -20,7 +20,7 @@
 如果您沒有提出這個請求，請忽略這封電子郵件，同時您的密碼將會保持不變。<br />
 如果您希望要重設您的密碼，請按下面的連結。<br />
 <br />
-重設我的密碼： {$url}<br />
+重設我的密碼： <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>當註冊使用者忘記他們的密碼或者無法登入的時候，這封電子郵件會寄給他們。信中會提供一個網址讓它們能夠登入並重設他們的密碼。</description>
@@ -30,7 +30,7 @@
 		<body><![CDATA[您的密碼已經成功重新設定以使用{$siteTitle}網站。請保管好這份使用者名稱和密碼，它對於使用本站的所有功能來說是非常必要的。<br />
 <br />
 您的使用者名稱：{$username}<br />
-您的新密碼：{$password}<br />
+密碼：{$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>當註冊使用者成功依照PASSWORD_RESET_CONFIRM電子郵件的指示重新設定他們的密碼時，這封電子郵件會被寄給他們。</description>
@@ -50,7 +50,7 @@
 		<subject>新一期期刊已出版</subject>
 		<body><![CDATA[親愛的讀者您好：<br />
 <br />
-《{$contextName}》已經出版了最新一期的期刊，請見<a href="{$journalUrl}">{$journalUrl}</a>。我們誠摯地邀請您閱覽這裡的目錄，並接著訪問我們的網站以閱讀各種文章以及有趣的項目。<br />
+《{$contextName}》已經出版了最新一期的期刊，請見<a href="{$contextUrl}">{$contextUrl}</a>。我們誠摯地邀請您閱覽這裡的目錄，並接著訪問我們的網站以閱讀各種文章以及有趣的項目。<br />
 <br />
 感謝您持續地關注我們的作品，<br />
 {$editorialContactSignature}]]></body>
@@ -60,11 +60,11 @@
 		<subject>請典藏《{$contextName}》</subject>
 		<body><![CDATA[Dear [University Librarian]<br />
 <br />
-《{$contextName}》 &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;是一份適合貴單位一位教職員的期刊：[成員名稱]，[職稱]。這份期刊正試著與這個圖書館與其他大學圖書館，共同建立一個符合洛克斯典藏計畫(LOCKSS; Lots of Copies Keep Stuff Safe)的檢藏資料庫。<br />
+《{$contextName}》 &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;是一份適合貴單位一位教職員的期刊：[成員名稱]，[職稱]。這份期刊正試著與這個圖書館與其他大學圖書館，共同建立一個符合洛克斯典藏計畫(LOCKSS; Lots of Copies Keep Stuff Safe)的檢藏資料庫。<br />
 <br />
 [期刊的簡介]<br />
 <br />
-我們這份期刊在「洛克斯出版品一覽」的網址是：<a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+我們這份期刊在「洛克斯出版品一覽」的網址是：<a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 我們瞭解貴單位已經參與洛克斯計畫。我們非常樂意提供任何額外的後設資料，以在貴單位的洛克斯版本中進行註冊。<br />
 <br />
@@ -76,7 +76,7 @@
 		<subject>請典藏《{$contextName}》</subject>
 		<body><![CDATA[親愛的[大學圖書館]：<br />
 <br />
-《{$contextName}》 &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;是一份適合貴單位一位教職員的期刊：[成員名稱]，[職稱]。這份期刊正試著與這個圖書館與其他大學圖書館，共同建立一個符合洛克斯典藏計畫(LOCKSS; Lots of Copies Keep Stuff Safe)的檢藏資料庫。<br />
+《{$contextName}》 &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;是一份適合貴單位一位教職員的期刊：[成員名稱]，[職稱]。這份期刊正試著與這個圖書館與其他大學圖書館，共同建立一個符合洛克斯典藏計畫(LOCKSS; Lots of Copies Keep Stuff Safe)的檢藏資料庫。<br />
 <br />
 [期刊的簡介]<br />
 <br />
@@ -94,7 +94,7 @@
 <br />
 感謝您將稿件 〈{$submissionTitle}〉 投稿至《{$contextName}》。透過我們所使用的期刊管理系統，您將能夠登入期刊網站來追蹤稿件的編輯進度：<br />
 <br />
-稿件網址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
+稿件網址：{$submissionUrl}<br />
 使用者名稱：{$authorUsername}<br />
 <br />
 如果您有任何問題，請與我們聯絡。再次感謝您考慮本期刊出版您的作品。<br />
@@ -134,7 +134,7 @@
 <br />
 我們已經將投稿到《{$contextName}》的稿件〈{$submissionTitle}〉指派給您進行編輯工作，請在您的「區段編輯」介面中進行編輯工作。<br />
 <br />
-稿件網址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
+稿件網址：{$submissionUrl}<br />
 使用者名稱：{$editorUsername}<br />
 <br />
 謝謝您<br />
@@ -147,7 +147,7 @@
 <br />
 《{$contextName}》的編輯團隊相信您是投稿到本期刊之稿件〈{$submissionTitle}〉的最佳審查人選。該份稿件的摘要如下，而我們希望您會考慮進行這份對我們來說相當重要的一個工作。<br />
 <br />
-無論您是否接受審查工作與否，都請在{$weekLaterDate}之前登入這個期刊網站，同時檢閱這份稿件並且記錄您的審查意見和編輯建議。網站為：<a href="{$journalUrl}">{$journalUrl}</a><br />
+無論您是否接受審查工作與否，都請在{$responseDueDate}之前登入這個期刊網站，同時檢閱這份稿件並且記錄您的審查意見和編輯建議。網站為：<a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 請注意審查工作的期限為：{$reviewDueDate}。<br />
 <br />
@@ -173,7 +173,7 @@
 <br />
 《{$contextName}》的編輯團隊相信您是投稿到本期刊之稿件〈{$submissionTitle}〉的最佳審查人選。該份稿件的摘要如下，而我們希望您會考慮進行這份對我們來說相當重要的一個工作。<br />
 <br />
-無論您是否接受審查工作與否，都請在{$weekLaterDate}之前登入這個期刊網站，同時檢閱這份稿件並且記錄您的審查意見和編輯建議。網站為：<a href="{$journalUrl}">{$journalUrl}</a><br />
+無論您是否接受審查工作與否，都請在{$responseDueDate}之前登入這個期刊網站，同時檢閱這份稿件並且記錄您的審查意見和編輯建議。網站為：<a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 請注意審查工作的期限為：{$reviewDueDate}。<br />
 <br />
@@ -196,7 +196,7 @@
 <br />
 《{$contextName}》的編輯團隊相信您是投稿到本期刊之稿件〈{$submissionTitle}〉的最佳審查人選，而我們希望您會考慮進行這份對我們來說相當重要的一個工作。該份期刊的審查指引已經附列如下，而稿件隨附在這封電子郵件的附加檔案之中。如果您接受這份審查工作，麻煩您在{$reviewDueDate}之前，將您對這份稿件的審查意見書以及編輯建議寄給我們。<br />
 <br />
-無論您是否接受審查工作與否，都請在{$weekLaterDate}之內回覆此封電子郵件給我們，告知我們您是否願意進行這個審查工作。<br />
+無論您是否接受審查工作與否，都請在{$responseDueDate}之內回覆此封電子郵件給我們，告知我們您是否願意進行這個審查工作。<br />
 <br />
 非常感謝您考慮我們的邀請。<br />
 {$editorialContactSignature}<br />
@@ -316,12 +316,12 @@
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Copyediting Request</subject>
-		<body><![CDATA[{$copyeditorName}您好：<br />
+		<body><![CDATA[{$participantName}您好：<br />
 <br />
 我想請您為《{$contextName}》擔任稿件〈{$submissionTitle}〉的校樣編輯。您可以在網站上找到這份稿件，以及校樣編輯的工作指引。<br />
 <br />
-稿件網址：<a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-使用者名稱：{$copyeditorUsername}<br />
+稿件網址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
+使用者名稱：{$participantUsername}<br />
 <br />
 如果您目前無法進行這份工作，或者對這項工作有任何的疑問，請直接回信與我聯絡。非常感謝您同意為這份期刊進行這份重要的工作。<br />
 <br />
@@ -335,11 +335,11 @@
 我目前已經為《{$contextName}》完成稿件〈{$submissionTitle}〉初步的校樣工作。稿件已經備妥，可供作者與編輯複審修訂與疑問之處。<br />
 <br />
 謝謝您<br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>校樣編輯工作感謝函</subject>
-		<body><![CDATA[{$copyeditorName}您好：<br />
+		<body><![CDATA[{$participantName}您好：<br />
 <br />
 非常感謝您為《{$contextName}》完成稿件〈{$submissionTitle}〉的校樣工作。這對本期刊的品質有非常重要的貢獻。<br />
 <br />
@@ -356,7 +356,7 @@
 <br />
 這是您可以對稿件做出重大修改的最後機會。您還會被要求進行校對與排版複閱工作，不過在那些工作階段時您將只能夠修正一些打字與版面等小地方的錯誤而已。<br />
 <br />
-稿件網址：<a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+稿件網址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
  <br />
 如果您目前無法進行這份複閱的工作，或者對這份工作有任何的問題，請回信聯絡我們。非常感謝您對本期刊的貢獻。<br />
 <br />
@@ -384,12 +384,12 @@
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>校樣槁的最後複閱工作</subject>
-		<body><![CDATA[{$copyeditorName}您好：<br />
+		<body><![CDATA[{$participantName}您好：<br />
 <br />
 作者和編輯目前都已經完成了他們對投稿《{$contextName}》之稿件〈{$submissionTitle}〉的複閱工作。最終的「清樣版本」現在可以進行排版的工作了。<br />
 <br />
-稿件網址：<a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-使用者名稱：{$copyeditorUsername}<br />
+稿件網址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
+使用者名稱：{$participantUsername}<br />
 <br />
 我們代表本期刊向您致謝<br />
 <br />
@@ -402,12 +402,12 @@
 <br />
 我目前已經就投稿《{$contextName}》之稿件〈{$submissionTitle}〉，備妥了一份清樣版本。此稿件已經可以交給版面編輯，並準備進行排版工作。<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>這封電子郵件是由校樣編輯寄給區段編輯，通知他們最後一次的校樣工作已經完成，並且現在可以開始排版的流成。</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>校樣定稿感謝函</subject>
-		<body><![CDATA[{$copyeditorName}您好：<br />
+		<body><![CDATA[{$participantName}您好：<br />
 <br />
 非常感謝您完成了投稿《{$contextName}》之稿件〈{$submissionTitle}〉的校樣工作。這份為排版進行的「文字清理」預備工作在編輯流程中非常的重要。<br />
 <br />
@@ -418,12 +418,12 @@
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>請進行排版工作</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 我想請您為投稿《{$contextName}》之稿件〈{$submissionTitle}〉準備製版的工作。<br />
 <br />
 稿件網址：<a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-使用者名稱：{$layoutEditorUsername}<br />
+使用者名稱：{$participantUsername}<br />
 <br />
 如果您目前無法進行這份工作，或者對這份工作有任何問題，請回信聯絡我們。感謝您對本期刊的貢獻。<br />
 <br />
@@ -438,12 +438,12 @@
 <br />
 如果您有任何問題，請與我們聯絡。<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>這封電子郵件是由版面編輯寄發給區段編輯，通知他們排版流程已經完成。</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>排版工作致謝</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 感謝您為對投稿《{$contextName}》之稿件〈{$submissionTitle}〉完成了製版的工作。這份工作在出版的過程中有著相當重要的貢獻。<br />
 <br />
@@ -458,7 +458,7 @@
 <br />
 我們要請您針對投稿《{$contextName}》之稿件〈{$submissionTitle}〉進行文字排版的校對工作。要檢視排版版本，請使用下面的連結登入本期刊網站。點擊「檢視校對」連結來檢查即將出版之稿件中，有哪些地方可能會有字樣與排版上的錯誤。請依循我們提供之校對指引，將這些錯誤記錄在「校對修訂」的文字框中。<br />
 <br />
-稿件網址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
+稿件網址：{$submissionUrl}<br />
 <br />
 如果您目前無法進行這份工作，或者對這份工作有任何問題，請回信聯絡我們。感謝您對本期刊的貢獻。<br />
 <br />
@@ -491,7 +491,7 @@
 <br />
 我們想請您為投稿《{$contextName}》之稿件〈{$submissionTitle}〉進行校對工作。<br />
 <br />
-稿件網址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
+稿件網址：{$submissionUrl}<br />
 使用者名稱：{$proofreaderUsername}<br />
 <br />
 如果您目前無法進行這份工作，或者對這份工作有任何問題，請回信聯絡我們。感謝您對本期刊的貢獻。<br />
@@ -521,12 +521,12 @@
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>請版面編輯進行校對工作</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 我們想請您為投稿《{$contextName}》之稿件〈{$submissionTitle}〉進行任何必要的校對工作，作為最終的排版稿校對版本。<br />
 <br />
-稿件網址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
-使用者名稱：{$layoutEditorUsername}<br />
+稿件網址：{$submissionUrl}<br />
+使用者名稱：{$participantUsername}<br />
 <br />
 如果您目前無法進行這份工作，或者對這份工作有任何問題，請回信聯絡我們。感謝您對本期刊的貢獻。<br />
 <br />
@@ -539,12 +539,12 @@
 <br />
 投稿《{$contextName}》之稿件〈{$submissionTitle}〉的排版稿已經依照校對結果完成修訂。這篇文章現在已經可以出版了。<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>這封電子郵件是由版面編輯寄發給區段編輯，通知他們已經完成了最後的校對階段以及文章目前已經可以出版了。</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>版面編輯校對工作致謝</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 感謝您為您投稿《{$contextName}》之稿件〈{$submissionTitle}〉完成了校對修訂的工作。這份工作對本期刊的品質有著很重要的貢獻。<br />
 <br />
@@ -583,7 +583,7 @@
 		<subject>本期內容已經開放存取</subject>
 		<body><![CDATA[親愛的讀者您好：<br />
 <br />
-《{$contextName}》已經以開放存取的格式公開本期期刊內容。我們邀請您瀏覽這裡所附的目錄，並且接著訪問我們的網站 (<a href="{$journalUrl}">{$journalUrl}</a>) ，閱讀文章以及您感興趣的項目。<br />
+《{$contextName}》已經以開放存取的格式公開本期期刊內容。我們邀請您瀏覽這裡所附的目錄，並且接著訪問我們的網站 (<a href="{$contextUrl}">{$contextUrl}</a>) ，閱讀文章以及您感興趣的項目。<br />
 <br />
 感謝您持續地關注本期刊<br />
 <br />

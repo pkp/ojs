@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/filter/NativeXmlArtworkFileFilter.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NativeXmlArtworkFileFilter
@@ -63,9 +63,10 @@ class NativeXmlArtworkFileFilter extends NativeXmlArticleFileFilter {
 	 * any, to $submissionFiles
 	 * @param $node DOMElement
 	 * @param $stageId int SUBMISSION_FILE_...
+	 * @param $fileId int File id
 	 * @param $submissionFiles array
 	 */
-	function handleChildElement($node, $stageId, &$submissionFiles) {
+	function handleChildElement($node, $stageId, $fileId, &$submissionFiles) {
 		switch ($node->tagName) {
 			case 'caption':
 				$submissionFiles[count($submissionFiles)-1]->setCaption($node->textContent);
@@ -83,7 +84,7 @@ class NativeXmlArtworkFileFilter extends NativeXmlArticleFileFilter {
 				$submissionFiles[count($submissionFiles)-1]->setPermissionTerms($node->textContent);
 				break;
 			default:
-				return parent::handleChildElement($node, $stageId, $submissionFiles);
+				parent::handleChildElement($node, $stageId, $fileId, $submissionFiles);
 		}
 	}
 }

@@ -1,8 +1,8 @@
 {**
  * templates/editor/issues/issueGalleyForm.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form to add/edit an issue galley.
@@ -13,31 +13,36 @@
 		$('#issueGalleyForm').pkpHandler(
 			'$.pkp.controllers.form.FileUploadFormHandler',
 			{ldelim}
-				$uploader: $('#plupload'),
+				$uploader: $('#pluploadgalley'),
 				uploaderOptions: {ldelim}
-					uploadUrl: '{url|escape:javascript op="upload" issueId=$issueId}',
-					baseUrl: '{$baseUrl|escape:javascript}'
+					uploadUrl: {url|json_encode op="upload" issueId=$issueId escape=false},
+					baseUrl: {$baseUrl|json_encode},
+					browse_button: 'pkpIssueGalleyUploaderButton'
 				{rdelim}
 			{rdelim}
 		);
 	{rdelim});
 </script>
 <form class="pkp_form" id="issueGalleyForm" method="post" action="{url op="update" issueId=$issueId issueGalleyId=$issueGalleyId}">
+	{csrf}
+	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="publicationMetadataFormFieldsNotification"}
 	{fbvFormArea id="file"}
-		{fbvFormSection title="editor.issues.galley"}
-			<div id="plupload"></div>
+		{fbvFormSection title="editor.issues.galley" required="true"}
+			{include file="controllers/fileUploadContainer.tpl" id="pluploadgalley" browseButton="pkpIssueGalleyUploaderButton"}
 			<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
 			{if $issueGalley}
 				<a href="{url op="download" issueId=$issueId issueGalleyId=$issueGalleyId}" target="_blank">{$issueGalley->getOriginalFileName()|escape}</a>
 			{/if}
 		{/fbvFormSection}
 
-		{fbvFormSection title="submission.layout.galleyFileData"}
-			{fbvElement type="text" label="submission.layout.galleyLabel" value=$label id="label"}
-			{if $enablePublicGalleyId}
-				{fbvElement type="text" label="submission.layout.publicGalleyId" value=$publicGalleyId id="publicGalleyId" size=$fbvStyles.size.MEDIUM}
-			{/if}
-			{fbvElement type="select" id="galleyLocale" label="common.language" from=$supportedLocales selected=$galleyLocale|default:$formLocale size=$fbvStyles.size.MEDIUM translate=false}
+		{fbvFormSection title="submission.layout.galleyLabel" required="true"}
+			{fbvElement type="text" value=$label id="label"}
+		{/fbvFormSection}
+			{fbvFormSection title="submission.layout.publicGalleyId" required="true"}
+				{fbvElement type="text" value=$publicGalleyId id="publicGalleyId"}
+			{/fbvFormSection}
+		{fbvFormSection title="common.language" required="true"}
+			{fbvElement type="select" id="galleyLocale" from=$supportedLocales selected=$galleyLocale|default:$formLocale translate=false}
 		{/fbvFormSection}
 	{/fbvFormArea}
 

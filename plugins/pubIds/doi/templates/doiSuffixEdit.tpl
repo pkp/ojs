@@ -1,43 +1,69 @@
 {**
  * @file plugins/pubIds/doi/templates/doiSuffixEdit.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Edit DOI meta-data.
+ * Edit custom DOI suffix for an object (issue, submission, galley)
  *}
 
-{if $pubObject}
 {assign var=pubObjectType value=$pubIdPlugin->getPubObjectType($pubObject)}
-{assign var=enableObjectDoi value=$pubIdPlugin->getSetting($currentJournal->getId(), "enable`$pubObjectType`Doi")}
+{assign var=enableObjectDoi value=$pubIdPlugin->getSetting($currentContext->getId(), "enable`$pubObjectType`Doi")}
 {if $enableObjectDoi}
-	<div id="pub-id::doi">
-		<h3>{translate key="plugins.pubIds.doi.editor.doi"}</h3>
-		{assign var=storedPubId value=$pubObject->getStoredPubId($pubIdPlugin->getPubIdType())}
-		{if $pubIdPlugin->getSetting($currentJournal->getId(), 'doiSuffix') == 'customId' || $storedPubId}
-			{if empty($storedPubId)}
-				<table class="data">
-					<tr>
-						<td rowspan="2" width="10%" class="label">{fieldLabel name="doiSuffix" key="plugins.pubIds.doi.manager.settings.doiSuffix"}</td>
-						<td rowspan="2" width="10%" align="right">{$pubIdPlugin->getSetting($currentJournal->getId(), 'doiPrefix')|escape}/</td>
-						<td class="value"><input type="text" class="textField" name="doiSuffix" id="doiSuffix" value="{$doiSuffix|escape}" size="20" maxlength="20" />
-					</tr>
-					<tr>
-						<td colspan="3"><span class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiSuffixDescription"}</span></td>
-					</tr>
-				</table>
-			{else}
-				{$storedPubId|escape}
+	{assign var=storedPubId value=$pubObject->getStoredPubId($pubIdPlugin->getPubIdType())}
+	{fbvFormArea id="pubIdDOIFormArea" class="border" title="plugins.pubIds.doi.editor.doi"}
+		{assign var=formArea value=true}
+		{if $pubIdPlugin->getSetting($currentContext->getId(), 'doiSuffix') == 'customId' || $storedPubId}
+			{if empty($storedPubId)} {* edit custom suffix *}
+				{fbvFormSection}
+					<p class="pkp_help">{translate key="plugins.pubIds.doi.manager.settings.doiSuffix.description"}</p>
+					{fbvElement type="text" label="plugins.pubIds.doi.manager.settings.doiPrefix" id="doiPrefix" disabled=true value=$pubIdPlugin->getSetting($currentContext->getId(), 'doiPrefix') size=$fbvStyles.size.SMALL}
+					{fbvElement type="text" label="plugins.pubIds.doi.manager.settings.doiSuffix" id="doiSuffix" value=$doiSuffix size=$fbvStyles.size.MEDIUM}
+				{/fbvFormSection}
+				{if $canBeAssigned}
+					{assign var=templatePath value=$pubIdPlugin->getTemplatePath()}
+					{include file="`$templatePath`doiAssignCheckBox.tpl" pubId="" pubObjectType=$pubObjectType}
+				{else}
+					<p class="pkp_help">{translate key="plugins.pubIds.doi.editor.customSuffixMissing"}</p>
+				{/if}
+			{else} {* stored pub id and clear option *}
+			{fbvFormSection}
+				<p>
+					{$storedPubId|escape}<br />
+					{capture assign=translatedObjectType}{translate key="plugins.pubIds.doi.editor.doiObjectType"|cat:$pubObjectType}{/capture}
+					{capture assign=assignedMessage}{translate key="plugins.pubIds.doi.editor.assigned" pubObjectType=$translatedObjectType}{/capture}
+					<p class="pkp_help">{$assignedMessage}</p>
+					{include file="linkAction/linkAction.tpl" action=$clearPubIdLinkActionDoi contextId="publicIdentifiersForm"}
+				</p>
+				{/fbvFormSection}
 			{/if}
-		{else}
-			{$pubIdPlugin->getPubId($pubObject, true)|escape} <br />
-			<br />
-			{capture assign=translatedObjectType}{translate key="plugins.pubIds.doi.editor.doiObjectType"|cat:$pubObjectType}{/capture}
-			{translate key="plugins.pubIds.doi.editor.doiNotYetGenerated" pubObjectType=$translatedObjectType}
+		{else} {* pub id preview *}
+			<p>{$pubIdPlugin->getPubId($pubObject)|escape}</p>
+			{if $canBeAssigned}
+				<p class="pkp_help">{translate key="plugins.pubIds.doi.editor.canBeAssigned"}</p>
+				{assign var=templatePath value=$pubIdPlugin->getTemplatePath()}
+				{include file="`$templatePath`doiAssignCheckBox.tpl" pubId="" pubObjectType=$pubObjectType}
+			{else}
+				<p class="pkp_help">{translate key="plugins.pubIds.doi.editor.patternNotResolved"}</p>
+			{/if}
 		{/if}
-		<br />
-	</div>
-	<div class="separator"> </div>
+	{/fbvFormArea}
 {/if}
+{* issue pub object *}
+{if $pubObjectType == 'Issue'}
+	{assign var=enableSubmissionDoi value=$pubIdPlugin->getSetting($currentContext->getId(), "enableSubmissionDoi")}
+	{assign var=enableRepresentationDoi value=$pubIdPlugin->getSetting($currentContext->getId(), "enableRepresentationDoi")}
+	{if $enableSubmissionDoi || $enableRepresentationDoi}
+		{if !$formArea}
+			{assign var="formAreaTitle" value="plugins.pubIds.doi.editor.doi"}
+		{else}
+			{assign var="formAreaTitle" value=""}
+		{/if}
+		{fbvFormArea id="pubIdDOIFormArea" class="border" title=$formAreaTitle}
+			{fbvFormSection list="true" description="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"}
+				{include file="linkAction/linkAction.tpl" action=$clearIssueObjectsPubIdsLinkActionDoi contextId="publicIdentifiersForm"}
+			{/fbvFormSection}
+		{/fbvFormArea}
+	{/if}
 {/if}

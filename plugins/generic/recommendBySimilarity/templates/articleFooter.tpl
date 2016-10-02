@@ -1,8 +1,8 @@
 {**
  * plugins/generic/recommendBySimilarity/templates/articleFooter.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * A template to be included via Templates::Article::Footer::PageFooter hook.
@@ -21,10 +21,10 @@
 					{foreach from=$article->getAuthors() item=author}
 						{$author->getFullName()|escape},
 					{/foreach}
-					<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)}">
+					<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId()}">
 						{$article->getLocalizedTitle()|strip_unsafe_html}
 					</a>,
-					<a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">
+					<a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId()}">
 						{$journal->getLocalizedName()|escape}: {$issue->getIssueIdentification()|escape}
 					</a>
 				</li>

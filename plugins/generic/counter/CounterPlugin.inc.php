@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/counter/CounterPlugin.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CounterPlugin
@@ -63,7 +63,7 @@ class CounterPlugin extends GenericPlugin {
 		$output =& $args[2];
 
 		$request =& $this->getRequest();
-		$output .= '<li>&#187; <a href="' . $request->url(null, 'counter') . '">' . __('plugins.generic.counter') . '</a></li>';
+		$output .= '<li><a href="' . $request->url(null, 'counter') . '">' . __('plugins.generic.counter') . '</a></li>';
 		return false;
 	}
 

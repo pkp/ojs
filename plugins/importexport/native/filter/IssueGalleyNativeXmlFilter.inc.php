@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/filter/IssueGalleyNativeXmlFilter.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyNativeXmlFilter
@@ -33,7 +33,7 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 	 * @copydoc PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.plugins.importexport.native.filter.IssueGalleyNativeXmlFilter';
+		return 'plugins.importexport.native.filter.IssueGalleyNativeXmlFilter';
 	}
 
 
@@ -97,9 +97,9 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 			$deployment = $this->getDeployment();
 			$issueFileNode = $doc->createElementNS($deployment->getNamespace(), 'issue_file');
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_name', $issueFile->getServerFileName()));
-			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_type', $issueFile->getContentType()));
+			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_type', $issueFile->getFileType()));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_size', $issueFile->getFileSize()));
-			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'content_type', $issueFile->getFileType()));
+			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'content_type', $issueFile->getContentType()));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'original_file_name', $issueFile->getOriginalFileName()));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_uploaded', strftime('%F', strtotime($issueFile->getDateUploaded()))));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_modified', strftime('%F', strtotime($issueFile->getDateModified()))));

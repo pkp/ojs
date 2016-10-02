@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issues/IssueGridRow.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGridRow
@@ -69,10 +69,12 @@ class IssueGridRow extends GridRow {
 
 			import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
 			if ($issue->getDatePublished()) {
+				import('lib.pkp.classes.linkAction.request.AjaxModal');
 				$this->addAction(
 					new LinkAction(
 						'unpublish',
 						new RemoteActionConfirmationModal(
+							$request->getSession(),
 							__('editor.issues.confirmUnpublish'),
 							__('editor.issues.unpublishIssue'),
 							$router->url($request, null, null, 'unpublishIssue', null, array('issueId' => $issueId)),
@@ -86,12 +88,12 @@ class IssueGridRow extends GridRow {
 				$this->addAction(
 					new LinkAction(
 						'publish',
-						new RemoteActionConfirmationModal(
-							__('editor.issues.confirmPublish'),
-							__('editor.issues.publishIssue'),
-							$router->url($request, null, null, 'publishIssue', null, array('issueId' => $issueId)),
-							'modal_confirm'
-						),
+						new AjaxModal(
+							$router->url(
+								$request, null, null, 'publishIssue', null, array('issueId' => $issueId)),
+								__('editor.issues.publishIssue'),
+								'modal_confirm'
+							),
 						__('editor.issues.publishIssue'),
 						'advance'
 					)
@@ -102,6 +104,7 @@ class IssueGridRow extends GridRow {
 				new LinkAction(
 					'delete',
 					new RemoteActionConfirmationModal(
+						$request->getSession(),
 						__('common.confirmDelete'),
 						__('grid.action.delete'),
 						$router->url($request, null, null, 'deleteIssue', null, array('issueId' => $issueId)),

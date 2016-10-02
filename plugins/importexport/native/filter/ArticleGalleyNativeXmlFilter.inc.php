@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/filter/ArticleGalleyNativeXmlFilter.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyNativeXmlFilter
@@ -47,11 +47,7 @@ class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter {
 	 */
 	function createRepresentationNode($doc, $representation) {
 		$representationNode = parent::createRepresentationNode($doc, $representation);
-		$representationNode->setAttribute('available', $representation->getIsAvailable()?'true':'false');
-		$representationNode->setAttribute('galley_type', $representation->getGalleyType());
-
-		$deployment = $this->getDeployment();
-		$representationNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'remote_url', $representation->getRemoteUrl()));
+		$representationNode->setAttribute('approved', $representation->getIsApproved()?'true':'false');
 
 		$submission = $this->getDeployment()->getSubmission();
 
@@ -64,13 +60,10 @@ class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter {
 	 * @return array
 	 */
 	function getFiles($representation) {
-		$deployment = $this->getDeployment();
-		$submission = $deployment->getSubmission();
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-		return array_filter(
-			$submissionFileDao->getLatestRevisions($submission->getId()),
-			create_function('$a', 'return $a->getAssocType() == ASSOC_TYPE_GALLEY && $a->getAssocId() == ' . ((int) $representation->getId()) . ';')
-		);
+		$galleyFiles = array();
+		if ($representation->getFileId()) $galleyFiles = array($submissionFileDao->getLatestRevision($representation->getFileId()));
+		return $galleyFiles;
 	}
 }
 

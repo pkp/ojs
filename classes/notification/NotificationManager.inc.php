@@ -3,8 +3,8 @@
 /**
  * @file classes/notification/NotificationManager.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PKPNotificationManager
@@ -175,6 +175,21 @@ class NotificationManager extends PKPNotificationManager {
 			default: return parent::getIconClass($notification);
 		}
 	}
+
+	/**
+         * @copydoc PKPNotificationManager::getMgrDelegate()
+         */
+        protected function getMgrDelegate($notificationType, $assocType, $assocId) {
+                switch ($notificationType) {
+                        case NOTIFICATION_TYPE_APPROVE_SUBMISSION:
+                        case NOTIFICATION_TYPE_VISIT_CATALOG:
+                                assert($assocType == ASSOC_TYPE_SUBMISSION && is_numeric($assocId));
+                                import('classes.notification.managerDelegate.ApproveSubmissionNotificationManager');
+                                return new ApproveSubmissionNotificationManager($notificationType);
+                }
+                // Otherwise, fall back on parent class
+                return parent::getMgrDelegate($notificationType, $assocType, $assocId);
+        }
 }
 
 ?>

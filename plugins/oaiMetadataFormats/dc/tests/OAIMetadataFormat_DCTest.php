@@ -7,8 +7,8 @@
 /**
  * @file plugins/oaiMetadataFormats/dc/tests/OAIMetadataFormat_DCTest.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_DCTest
@@ -59,8 +59,8 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		$pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'enabled', 1);
 		$pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'enableIssueDoi', 1);
-		$pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'enableArticleDoi', 1);
-		$pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'enableGalleyDoi', 1);
+		$pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'enableSubmissionDoi', 1);
+		$pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'enableRepresentationyDoi', 1);
 
 		// Author
 		import('classes.article.Author');
@@ -85,14 +85,10 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		$article->setTitle('article-title-de', 'de_DE');
 		$article->setDiscipline('article-discipline', 'en_US');
 		$article->setSubject('article-subject', 'en_US');
-		$article->setSubjectClass('article-subject-class', 'en_US');
 		$article->setAbstract('article-abstract', 'en_US');
 		$article->setSponsor('article-sponsor', 'en_US');
 		$article->setStoredPubId('doi', 'article-doi');
 		$article->setLanguage('en_US');
-		$article->setCoverageGeo('article-coverage-geo', 'en_US');
-		$article->setCoverageChron('article-coverage-chron', 'en_US');
-		$article->setCoverageSample('article-coverage-sample', 'en_US');
 
 		// Galleys
 		import('classes.article.ArticleGalley');
@@ -233,9 +229,6 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 
 			case 'publisherInstitution':
 				return array('journal-publisher');
-
-			case 'enablePublicGalleyId':
-				return false;
 
 			case 'onlineIssn':
 				return 'onlineIssn';

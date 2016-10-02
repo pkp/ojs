@@ -1,0 +1,456 @@
+/**
+ * @file plugins/themes/default/styles/head.less
+ *
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_structure_head
+ *
+ * @brief Classes for the page header structural elements
+ */
+
+// Structural components of the header layout
+.pkp_structure_head {
+	background-color: @bg-base;
+	border-bottom: @bg-border;
+}
+
+.pkp_head_wrapper {
+	padding-top: @triple * 2; // Make room for the user nav at the top
+}
+
+// Site logo/nav on same line on larger screens
+.has_site_logo .pkp_head_wrapper {
+
+	@media(min-width: @screen-desktop) {
+		padding-top: @triple;
+	}
+}
+
+// Site logo/name
+.pkp_site_name {
+	font-size: 2em; // Prevents extra vertical space after logos
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+
+	> a {
+		padding-top: @base;
+		padding-bottom: @base;
+
+		&:focus {
+			outline: 0;
+		}
+	}
+
+	.is_img {
+		display: inline-block;
+
+		&:focus {
+			box-shadow: 0 0 1px @text-bg-base;
+		}
+
+		img {
+			display:block;
+			max-height: 80px; // must match height - padding of .is_img
+			max-width: 100%;
+			width: auto;
+			height: auto;
+		}
+	}
+
+	.is_text {
+		font-family: @font-site-title;
+		display: inline-block;
+		position: relative;
+		font-size: @font-header;
+		font-weight: @bold;
+		line-height: @line-header;
+		color: @text-bg-base;
+		text-decoration: none;
+
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+
+	@media(min-width: @screen-desktop) {
+		text-align: left;
+	}
+}
+
+// The padding to apply to top-level items in the navigation row
+// Total height - line height (divided by 2 since it will be applied to top and bottom)
+@pkp_nav_primary_row_el_padding: (@quadruple - @double) / 2;
+
+// Primary site navigation menu
+.pkp_navigation_primary {
+	text-align: center;
+
+	> li {
+
+		> a {
+			margin: 0 1em;
+			padding: @pkp_nav_primary_row_el_padding 0 (@pkp_nav_primary_row_el_padding - 2); // -2 to account for border size
+			border-bottom: 2px solid transparent;
+			color: @text-bg-base;
+
+			&:hover,
+			&:focus {
+				color: @text-bg-base;
+				outline: 0;
+				border-color: @text-bg-base;
+			}
+		}
+
+		&:first-child {
+
+			a {
+				margin-left: 0;
+			}
+		}
+
+		&:last-child {
+
+			a {
+				margin-right: 0;
+			}
+		}
+	}
+
+	[aria-haspopup] a:focus,
+	[aria-haspopup] a:hover {
+		border-color: transparent;
+	}
+
+	ul {
+		text-align: left;
+
+		a {
+			padding-top: @base;
+			padding-bottom: @base;
+			color: @primary;
+		}
+	}
+
+	[aria-haspopup]  ul a:focus,
+	[aria-haspopup]  ul a:hover {
+		border-color: @primary;
+	}
+
+	@media(min-width: @screen-desktop) {
+		display: inline-block;
+		max-width: 80%;
+		text-align: left;
+	}
+}
+
+// Search bar
+.pkp_head_wrapper .pkp_search {
+	display: block;
+	padding: @base 0;
+	font-size: @font-sml;
+	line-height: @double;
+	text-align: center;
+
+	button {
+		&:extend(.cmp_button);
+		width: 100%;
+		margin-top: @base;
+
+		&:hover,
+		&:focus {
+			&:extend(.cmp_button:hover);
+		}
+
+		@media(min-width: @screen-phone) {
+			width: auto;
+			margin-top: 0;
+		}
+	}
+
+	input[type="text"] {
+		&:extend(.pkp_form input[type="text"]);
+	}
+
+	.search_controls {
+		display: none;
+		position: relative;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.search_prompt {
+		transition: background-color 0.4s;
+
+		// Needs to be defined outside of a media query or the font doesn't
+		// load
+		&:before {
+			&:extend(.fa);
+			content: @fa-var-search;
+		}
+	}
+
+	.search_cancel,
+	.search_loading {
+		position: absolute;
+		top: @base;
+		right: 100%;
+		margin-right: @double;
+		text-align: center;
+		color: @text-light;
+	}
+
+	.search_cancel{
+
+		&:before {
+			&:extend(.fa);
+			content: @fa-var-times;
+			width: @double;
+			height: @double;
+			line-height: @double;
+		}
+
+		&:hover,
+		&:focus {
+			outline: none;
+			border-radius: 50%;
+			background: @no;
+			color: #fff;
+		}
+	}
+
+	.search_loading {
+		.pkp_spinner;
+		display: none;
+	}
+
+	@media(min-width: @screen-desktop) {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: @quadruple;
+		min-width: 100px;
+		padding: 0;
+		font-size: @font-base;
+		line-height: @line-base;
+		transition: min-width 0.4s;
+		text-align: right;
+		overflow-x: hidden;
+
+		button {
+			position: absolute;
+			top: 0;
+			left: -9999px;
+		}
+
+		input[type="text"] {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0;
+			padding: 0;
+			border: none;
+		}
+
+		.search_controls {
+			display: inline-block;
+		}
+
+		.search_prompt {
+			display: inline-block;
+			position: relative;
+			padding: @pkp_nav_primary_row_el_padding @double;
+			color: @text-bg-base;
+			cursor: pointer;
+
+			&:before {
+				font-size: @font-bump;
+				margin-right: 0.25em;
+			}
+
+			&:hover,
+			&:focus {
+				outline: 0;
+				padding-bottom: @pkp_nav_primary_row_el_padding - 2;
+				border-bottom: 2px solid @text-bg-base;
+			}
+		}
+
+		&.is_open {
+			min-width: 100%;
+			background: @bg;
+
+			input[type="text"] {
+				width: 100%;
+				max-width: 100%;
+				line-height: @quadruple;
+				height: @quadruple;
+				top: 0;
+				left: 0;
+				padding-left: 0.5em;
+				padding-right: 180px; // try to stop before the search button, but this can change with different translations
+				border: none;
+				border-bottom: @bg-border;
+				font-size: @font-bump;
+				background: @bg;
+
+				&:hover,
+				&:focus {
+					outline: 0;
+				}
+			}
+
+			.search_prompt {
+				padding-bottom: @pkp_nav_primary_row_el_padding - 1;
+				background: @bg;
+				border-left: @bg-border;
+				border-bottom: 1px solid #ddd;
+				color: @primary;
+
+				&:hover,
+				&:focus {
+					border-bottom-color: @primary;
+				}
+			}
+		}
+
+		&.is_searching {
+
+			input[type="text"] {
+				opacity: 0.5;
+
+				&:hover,
+				&:focus {
+					border-color: @bg;
+				}
+			}
+
+			.search_prompt {
+				background: @bg;
+				border-left: @bg-border;
+				color: @primary;
+
+				&:hover,
+				&:focus {
+					background: @bg;
+					color: @primary-lift;
+				}
+			}
+
+			.search_cancel {
+				display: none;
+			}
+
+			.search_loading {
+				display: block;
+			}
+		}
+	}
+}
+
+// User-focused navigation menu with login/logout, tasks, etc
+.pkp_navigation_user_wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding-left: @base;
+	padding-right: @base;
+}
+
+.pkp_navigation_user {
+	text-align: right;
+	font-size: @font-sml;
+	padding-right: @double;
+
+	li {
+		text-align: left;
+	}
+
+	a {
+		padding-top: @half;
+		padding-bottom: @half;
+		line-height: @line-sml;
+	}
+
+	> li > a:focus {
+		outline: 0;
+	}
+
+	ul {
+		width: 10em;
+	}
+
+	> li > a,
+	> li.in_focus > a,
+	> li > a:hover,
+	> li > a:focus {
+		color: @text-bg-base;
+	}
+
+	// Open submenus aligned to the right edge, so they don't overflow screen
+	li:hover > ul,
+	li:focus > ul,
+	li.in_focus > ul {
+		left: auto;
+		right: 0;
+	}
+
+	// Align to the right edge of the container
+	> li:last-child a {
+		padding-right: 0;
+	}
+
+	// Offset the linking arrow a bit to compensate for short menu height
+	[aria-expanded="true"]:before {
+		border-width: @half;
+	}
+
+	// Fix alignment issues in task-count
+	.profile > a {
+		text-align: right;
+	}
+
+	// Don't show the drop-down caret next to the task count
+	.profile > a:after {
+		display: none;
+	}
+
+	.task_count {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		margin-left: 0.5em;
+		border-radius: 50%;
+		background: rgba(255,255,255,0.3);
+		line-height: 20px;
+		text-align: center;
+		font-size: 12px; // helps visually center the number
+	}
+
+	> li > ul a {
+
+		.task_count {
+			background: #ddd;
+		}
+
+		&:hover .task_count,
+		&:focus .task_count {
+			background: #fff;
+		}
+	}
+
+	.has_tasks {
+
+		ul .task_count,
+		ul a:hover .task_count,
+		ul a:focus .task_count {
+			background: #f00;
+			color: #fff;
+		}
+	}
+}

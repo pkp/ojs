@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/plugins/PluginGridRow.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PluginGridRow
@@ -34,7 +34,7 @@ class PluginGridRow extends PKPPluginGridRow {
 	 * @param $plugin Plugin
 	 * @return boolean
 	 */
-	function _canEdit(&$plugin) {
+	protected function _canEdit($plugin) {
 		if ($plugin->isSitePlugin()) {
 			if (in_array(ROLE_ID_SITE_ADMIN, $this->_userRoles)) {
 				return true;

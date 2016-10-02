@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/settings/JournalSettingsTabHandler.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JournalSettingsTabHandler
@@ -24,11 +24,7 @@ class JournalSettingsTabHandler extends ManagerSettingsTabHandler {
 		$this->setPageTabs(array(
 			'masthead' => 'controllers.tab.settings.masthead.form.MastheadForm',
 			'contact' => 'lib.pkp.controllers.tab.settings.contact.form.ContactForm',
-			'policies' => 'controllers.tab.settings.policies.form.OJSPoliciesForm',
-			'citations' => 'controllers.tab.settings.citations.form.CitationsForm',
 			'sections' => 'controllers/tab/settings/journal/sections.tpl',
-			'guidelines' => 'lib.pkp.controllers.tab.settings.guidelines.form.GuidelinesForm',
-			'affiliationAndSupport' => 'lib.pkp.controllers.tab.settings.affiliation.form.AffiliationForm',
 		));
 	}
 

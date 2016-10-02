@@ -4,10 +4,10 @@
 <!--
   * locale/en_US/editor.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
   -->
 
@@ -22,7 +22,7 @@
 	<message key="editor.allSections">All Sections</message>
 	<message key="editor.allEditors">All Editors</message>
 	<message key="editor.me">Me</message>
-	<message key="editor.publicIdentificationExists">The public identifier '{$publicIdentifier}' already exists for another object (issue, article, galley or supplementary file). Please choose unique identifiers within your journal.</message>
+	<message key="editor.publicIdentificationExists">The public identifier '{$publicIdentifier}' already exists for another object (issue, article, galley or file). Please choose unique identifiers within your journal.</message>
 	<message key="editor.submissionArchive.noSubmissions">No submissions in the archive.</message>
 	<message key="editor.submissionArchive.saveChanges">Save changes to archived submissions? Submissions marked for deletion will be permanently deleted from the system.</message>
 	<message key="editor.submissionArchive.confirmDelete">Are you sure you want to permanently delete this submission?</message>
@@ -44,8 +44,6 @@
 	<message key="editor.editorAdministration">Editor Administration</message>
 	<message key="editor.issues.createIssue">Create Issue</message>
 	<message key="editor.issues.editIssue">Issue Management: {$issueIdentification}</message>
-	<message key="editor.issues.backIssues">Back Issues</message>
-	<message key="editor.issues.futureIssues">Future Issues</message>
 	<message key="editor.issues.currentIssue">Current Issue</message>
 	<message key="editor.issues.numArticles">Items</message>
 	<message key="editor.issues.noArticles">No items are currently scheduled for this issue.</message>
@@ -70,15 +68,15 @@
 	<message key="editor.issues.remove">Remove</message>
 	<message key="editor.issues.proofed">Proofed</message>
 	<message key="editor.issues.removeCoverPage">Remove cover page image?</message>
-	<message key="editor.issues.invalidCoverPageFormat">Invalid cover page format. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">The cover image you requested to delete did not match the cover image for this issue. Please reload the page and try again.</message>
+	<message key="editor.issues.removeCoverImageFileNotFound">The cover image you requested to delete could not be found. It may have already been deleted. Try reloading the page.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Invalid cover page format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="editor.issues.styleFile">Stylesheet</message>
 	<message key="editor.issues.invalidStyleFormat">Invalid stylesheet format. Ensure that the submitted file is a valid CSS. (Note that stylesheets with comments at the beginning may be rejected.)</message>
 	<message key="editor.issues.removeStyleFile">Remove stylesheet?</message>
 	<message key="editor.issues.coverPageCaption">Cover caption</message>
 	<message key="editor.issues.showCoverPage">Create a cover for this issue with the following elements.</message>
 	<message key="editor.issues.coverPageDisplay">Display</message>
-	<message key="editor.issues.hideCoverPageArchives">Do not display cover image thumbnail in issue listing.</message>
-	<message key="editor.issues.hideCoverPageCover">Do not display cover image prior to table of contents.</message>
 	<message key="editor.issues.openAccess">Open access</message>
 	<message key="editor.issues.subscription">Subscription</message>
 	<message key="editor.issues.identification">Identification</message>
@@ -95,7 +93,7 @@
 	<message key="editor.issues.publishIssue">Publish Issue</message>
 	<message key="editor.issues.unpublishIssue">Unpublish Issue</message>
 	<message key="editor.issues.previewIssue">Preview Issue</message>
-	<message key="editor.issues.preview">(Preview)</message>
+	<message key="editor.issues.preview">Preview</message>
 	<message key="editor.issues.confirmPublish">Are you sure you want to publish the new issue?</message>
 	<message key="editor.issues.confirmUnpublish">Are you sure you want to unpublish this published issue?</message>
 	<message key="editor.issues.publicArticleIdExists">Unable to save public id for article:</message>
@@ -113,8 +111,9 @@
 	<message key="editor.issues.backToIssueGalleys">Back to issue galleys</message>
 	<message key="editor.issues.viewingGalley">Viewing Issue Galley</message>
 	<message key="editor.issues.confirmDeleteGalley">Are you sure you want to delete this issue galley?</message>
+	<message key="editor.issues.identifiers">Identifiers</message>
 	<message key="editor.navigation.futureIssues">Future Issues</message>
-	<message key="grid.action.expedite">Expedite this submission</message>
+	<message key="grid.action.addGalley">Add galley</message>
 	<message key="grid.action.publish">Publish Issue</message>
 	<message key="grid.action.addIssue">Create Issue</message>
 	<message key="grid.action.viewIssue">View</message>
@@ -203,22 +202,18 @@
 	<message key="editor.submissions.lastCompleted">Last Complete</message>
 	<message key="editor.submissions.assignedTo">Assigned To</message>
 	<message key="editor.submissions.inSection">In Section</message>
+	<message key="editor.article.schedulePublication">Schedule For Publication</message>
 	<message key="editor.article.scheduleForPublication">Schedule for publication in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">To Be Assigned</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Publication Fee not paid. To schedule item for publication notify author to pay fee or waive fee.</message>
-	<message key="editor.article.customJournalSettings">Custom identifiers and page information</message>
 	<message key="editor.article.display">Display</message>
 	<message key="editor.article.hideTocAuthorDescription">Omit author names from issue table of contents</message>
 	<message key="editor.article.hideTocAuthorDefault">Default</message>
 	<message key="editor.article.hideTocAuthorHide">Omit</message>
 	<message key="editor.article.hideTocAuthorShow">Show</message>
 	<message key="editor.article.cover">Cover</message>
-	<message key="editor.article.showCoverPage">Create a cover for this article with the following elements.</message>
-	<message key="editor.article.coverPageDisplay">Display</message>
-	<message key="editor.article.hideCoverPageToc">Do not display cover image thumbnail in table of contents.</message>
-	<message key="editor.article.hideCoverPageAbstract">Do not display cover image in article abstract view.</message>
-	<message key="editor.article.coverPage">Cover image</message>
-	<message key="editor.article.coverPageInstructions">(Allowed formats: .gif, .jpg, or .png )</message>
+	<message key="editor.article.coverImage">Cover image</message>
+	<message key="editor.article.removeCoverImageFileNotFound">The cover image you requested to delete could not be found. It may have already been deleted. Try reloading the page.</message>
 	<message key="editor.article.uploaded">Uploaded</message>
 	<message key="editor.article.removeCoverPage">Remove cover image?</message>
 	<message key="grid.action.removeArticle">Remove Article From Issue</message>
@@ -226,10 +221,8 @@
 	<message key="editor.article.remove.confirm">Are you sure you wish to remove this article from the issue? The article will be available for scheduling in another issue.</message>
 	<message key="editor.issues.invalidAccessDate">Access date is not valid.</message>
 	<message key="editor.issues.editIssueGalley">Edit Issue Galley</message>
-	<message key="editor.externalReview.introduction">In Review, the editor assigns reviewers external to the journal to the submission files and considers the resulting reviews, before selecting the appropriate action (which includes notifying the author): Request Revisions (revisions reviewed by editor alone); Resubmit for Review (revisions initiate another round of reviews); Accept Submission (entails selecting files for Editorial stage); or Decline Submission (editor archives submission).</message>
-	<message key="editor.submission.introduction">In Submission, the editor, after consulting the files submitted, selects the appropriate action (which includes notifying the author): Send to Review (entails selecting files for Review); Accept Submission (entails selecting files for Editorial stage); or Decline Submission (editor archives submission).</message>
 	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[The layout editor prepares these files for each galley and then uploads to the appropriate <span class="pkp_help_title">Proofs</span> for proofreading.]]></message>
 	<message key="editor.submission.selectGalleyFiles">Select Galley Files</message>
-	<message key="editor.submission.production.introduction"><![CDATA[In Production, the editor selects publication formats (e.g., PDF, HTML, etc.) in <span class="pkp_help_title">Galleys</span>, for which the layout editor prepares publication-quality files based on the production ready files. The publication-quality files are uploaded for each format in <span class="pkp_help_title">Galley Files</span>, where they are proof read. The article is <em>Approved</em> (i.e., marked ready for publication) for each galley in <span class="pkp_help_title">Galley Files</span>, and is published once its associated Issue is published via <span class="pkp_help_title">Issue Management</span>.]]></message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Final draft files in this list are transformed by a Copyeditor into copyedited versions, uploaded below under <span class="pkp_help_title">Copyediting</span>.]]></message>
+	<message key="editor.submission.proof.manageProofFilesDescription">Any files that have already been uploaded to any submission stage can be added to the Proofreading listing by checking the Include checkbox below and clicking Search: all available files will be listed and can be chosen for inclusion.</message>
 </locale>

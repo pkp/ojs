@@ -3,8 +3,8 @@
 /**
  * @file plugins/citationFormats/abnt/AbntCitationPlugin.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * With contributions from by Lepidus Tecnologia
  *
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -88,16 +88,45 @@ class AbntCitationPlugin extends CitationPlugin {
 	}
 
 	/**
-	 * Display an HTML-formatted citation. We register String::strtoupper modifier
+	 * @copydoc Plugin::getManagementVerbLinkAction()
+	 */
+	function getManagementVerbLinkAction($request, $verb) {
+		list($verbName, $verbLocalized) = $verb;
+
+		switch ($verbName) {
+			case 'settings':
+				// Generate a link action for the "settings" action
+				$dispatcher = $request->getDispatcher();
+				import('lib.pkp.classes.linkAction.request.RedirectAction');
+				return new LinkAction(
+					$verbName,
+					new RedirectAction($dispatcher->url(
+						$request, ROUTE_PAGE,
+						null, 'management', 'settings', 'website',
+						array('uid' => uniqid()), // Force reload
+						'staticPages' // Anchor for tab
+					)),
+					$verbLocalized,
+					null
+				);
+			default:
+				return parent::getManagementVerbLinkAction($request, $verb);
+		}
+	}
+
+	/**
+	 * Display an HTML-formatted citation. We register PKPString::strtoupper modifier
 	 * in order to convert author names to uppercase.
 	 * @param $article Article
 	 * @param $issue Issue
 	 * @param $journal Journal
 	 */
-	function displayCitation(&$article, &$issue, &$journal) {
+	function fetchCitation(&$article, &$issue, &$journal) {
 		$templateMgr = TemplateManager::getManager($this->getRequest());
-		$templateMgr->register_modifier('mb_upper', array('String', 'strtoupper'));
-		return parent::displayCitation($article, $issue, $journal);
+		$templateMgr->register_modifier('mb_upper', array('PKPString', 'strtoupper'));
+		$templateMgr->register_modifier('abnt_date_format', array($this, 'abntDateFormat'));
+		$templateMgr->register_modifier('abnt_date_format_with_day', array($this, 'abntDateFormatWithDay'));
+		return parent::fetchCitation($article, $issue, $journal);
 	}
 
  	/**
@@ -153,6 +182,46 @@ class AbntCitationPlugin extends CitationPlugin {
 		}
 
 		return $smarty->smartyUrl($params, $smarty);
+	}
+
+	/**
+	 * @function abntDateFormat Format date taking in consideration ABNT month abbreviations
+	 * @param $string string
+	 * @return string
+	 */
+	function abntDateFormat($string) {
+		if (is_numeric($string)) {
+			// it is a numeric string, we handle it as timestamp
+			$timestamp = (int)$string;
+		} else {
+			$timestamp = strtotime($string);
+		}
+		$format = "%B %Y";
+		if (PKPString::strlen(strftime("%B", $timestamp)) > 4) {
+			$format = "%b. %Y";
+		}
+
+		return PKPString::strtolower(strftime($format, $timestamp));
+	}
+
+	/**
+	 * @function abntDateFormatWithDay Format date taking in consideration ABNT month abbreviations
+	 * @param $string string
+	 * @return string
+	 */
+	function abntDateFormatWithDay($string) {
+		if (is_numeric($string)) {
+			// it is a numeric string, we handle it as timestamp
+			$timestamp = (int)$string;
+		} else {
+			$timestamp = strtotime($string);
+		}
+		$format = "%d %B %Y";
+		if (PKPString::strlen(strftime("%B", $timestamp)) > 4) {
+			$format = "%d %b. %Y";
+		}
+
+		return PKPString::strtolower(strftime($format, $timestamp));
 	}
 }
 

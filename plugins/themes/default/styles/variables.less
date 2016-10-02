@@ -1,0 +1,102 @@
+/**
+ * @file plugins/themes/default/styles/variables.less
+ *
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Common variables used through the the theme styles. They provide a
+ *  fully separated interface for defining variables, so that changes desired on
+ *  the frontend won't impact the backend.
+ */
+//
+// Colors
+//
+
+// Background
+@bg:                     #fff;
+@bg-shade:               #ddd;
+@bg-base:                #1E6292; // Accent color used in the header
+
+// Primary "anchor" color for links
+@primary:                #007ab2;
+@primary-lift:           lighten(@primary, 10%);
+
+// Yes/no, success/error, on/off, go/stop, etc. Typically green and red.
+@yes:                    #00b24e;
+@no:                     #ff4040;
+
+// Text
+@text:                   rgba(0,0,0,0.87);
+@text-light:             rgba(0,0,0,0.54);
+@text-bg-base:           #fff;
+
+// Border colors
+@bg-border-color:        @bg-shade;
+
+//
+// Spacing
+//
+// The baseline size should be used to achieve consistent vertical rhythm. All
+// vertical margins, padding, line-height and block heights should use a
+// multiple of this baseline (or half). Where appropriate, horizontal
+// spacings should also use this baseline. However, in some cases with inline
+// elements it is more appropriate to use an `em` spacing.
+//
+@base:                   10px;
+@half:                   @base / 2;
+@double:                 @base * 2;
+@triple:                 @base * 3;
+@quadruple:              @base * 4;
+@quintuple:              @base * 5;
+
+//
+// Typography
+//
+@font:                   "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+@font-heading:           @font;
+@font-site-title:        @font-heading;
+@font-sml:               13px;
+@line-sml:               @double;
+@font-base:              14px;
+@line-base:              @double;
+@line-base-large:        @line-base + 5; // large blocks of text
+@font-bump:              16px;
+@line-bump:              @double;
+@font-lead:              18px;
+@line-lead:              @triple;
+@font-header:            24px;
+@line-header:            @triple;
+
+// Font weights
+@normal:                 400;
+@bold:                   700;
+
+//
+// Borders
+//
+@bg-border:              1px solid @bg-border-color;
+@form-border:            1px solid rgba(0,0,0,0.4);
+@radius:                 3px;
+
+
+//
+// Screen width breakpoints
+//
+@screen-phone:                480px;
+@screen-tablet:               768px;
+@screen-tablet-container:     @screen-tablet - (@double * 2);
+@screen-desktop:              992px;
+@screen-desktop-container:    @screen-desktop - (@double * 2);
+@screen-lg-desktop:           1200px;
+@screen-lg-desktop-container: @screen-lg-desktop - (@double * 2);
+
+// Fixed widths and heights
+@sidebar-width:               300px;
+@logo-height:                 @quadruple * 3;
+
+// Base URL
+// The base URL is set appropriately before the LESS stylesheet is compiled and
+// will point to the theme's base directory. The variable can be used to point
+// to image and font assets.
+@base-url:                   ''; // Leave empty

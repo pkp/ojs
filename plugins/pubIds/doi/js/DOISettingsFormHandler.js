@@ -4,8 +4,8 @@
 /**
  * @file plugins/pubIds/doi/js/DOISettingsFormHandler.js
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOISettingsFormHandler.js
@@ -16,9 +16,9 @@
 (function($) {
 
 	/** @type {Object} */
-	$.pkp.plugins.pubIds =
-			$.pkp.plugins.pubIds ||
-			{ doi: { js: { } } };
+	$.pkp.plugins.pubIds.doi =
+			$.pkp.plugins.pubIds.doi ||
+			{ js: { } };
 
 
 
@@ -49,20 +49,15 @@
 	 * Callback to replace the element's content.
 	 *
 	 * @private
-	 *
-	 * @param {HTMLElement} sourceElement The element that triggered
-	 *  the event.
-	 * @param {Event} event The triggered event.
-	 * @param {Object} ui The tabs ui data.
 	 */
 	$.pkp.plugins.pubIds.doi.js.DOISettingsFormHandler.prototype.
 			updatePatternFormElementStatus_ =
-			function(sourceElement, event, ui) {
-		var $element = this.getHtmlElement(), pattern, $journalContentChoices;
+			function() {
+		var $element = this.getHtmlElement(), pattern, $contentChoices;
 		if ($('[id^="doiSuffix"]').filter(':checked').val() == 'pattern') {
-			$journalContentChoices = $element.find(':checkbox');
+			$contentChoices = $element.find(':checkbox');
 			pattern = new RegExp('enable(.*)Doi');
-			$journalContentChoices.each(function() {
+			$contentChoices.each(function() {
 				var patternCheckResult = pattern.exec($(this).attr('name')),
 						$correspondingTextField = $element.find('[id*="' +
 						patternCheckResult[1] + 'SuffixPattern"]').

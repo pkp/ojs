@@ -1,8 +1,8 @@
 {**
  * plugins/oaiMetadataFormats/marc/record.tpl
  *
- * Copyright (c) 2013-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2013-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * MARC-formatted metadata record for an article
@@ -80,19 +80,9 @@
 		<subfield label="a">{$language}</subfield>
 	</varfield>
 
-	{if $article->getCoverageGeo($journal->getPrimaryLocale())}
+	{if $article->getCoverage($journal->getPrimaryLocale())}
 		<varfield tag="500" ind1=" " ind2=" ">
-			<subfield label="a">{$article->getCoverageGeo($journal->getPrimaryLocale())|escape}</subfield>
-		</varfield>
-	{/if}
-	{if $article->getCoverageChron($journal->getPrimaryLocale())}
-		<varfield tag="500" ind1=" " ind2=" ">
-			<subfield label="a">{$article->getCoverageChron($journal->getPrimaryLocale())|escape}</subfield>
-		</varfield>
-	{/if}
-	{if $article->getCoverageSample($journal->getPrimaryLocale())}
-		<varfield tag="500" ind1=" " ind2=" ">
-			<subfield label="a">{$article->getCoverageSample($journal->getPrimaryLocale())|escape}</subfield>
+			<subfield label="a">{$article->getCoverage($journal->getPrimaryLocale())|escape}</subfield>
 		</varfield>
 	{/if}
 

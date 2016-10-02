@@ -4,21 +4,17 @@
 <!--
   * locale/ro_RO/editor.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ro_RO (Romanian) locale.
+  * Localization strings for the ro_RO (Limba Română) locale.
   * Provided by Constantinescu Nicolaie. 
   *
   -->
 
-<locale name="ro_RO" full_name = "Romanian">
-	<message key="editor.article.reviewForms">Formularele pentru evaluare</message>
-	<message key="editor.article.selectReviewForm">Selectează formularul pentru evaluare</message>
-	<message key="editor.article.clearReviewForm">Șterge conținutul formularul pentru evaluare</message>
+<locale name="ro_RO" full_name="Limba Română">
 	<message key="editor.home">Spațiul redactorului</message>
-	<message key="editor.article.confirmChangeReviewForm">Atenție: Modificarea formularului pentru evaluare va afecta răspunsurile pe care evaluatorii le vor da utilizând acest formular. Sunteți sigur că doriți să continuați?</message>
 	<message key="editor.submissionsAndPublishing">Propunerile și publicarea</message>
 	<message key="editor.submissionQueue">Lista propunerilor</message>
 	<message key="editor.submissionArchive">Arhiva propunerilor</message>
@@ -100,7 +96,6 @@
 	<message key="editor.issues.open">Deschide</message>
 	<message key="editor.issues.pages">Pagini</message>
 	<message key="editor.navigation.futureIssues">Numere de revistă viitoare</message>
-	<message key="grid.action.addIssue">Creează un număr de revistă</message>
 	<message key="editor.navigation.issueArchive">Numere anterioare</message>
 	<message key="editor.article.designateReviewVersion">Desemnează fişierul original ca fiind versiunea de evaluare</message>
 	<message key="editor.article.uploadReviewVersion">Încarcă o versiune de evaluare revizuită</message>
@@ -194,11 +189,11 @@
 	<message key="editor.article.hideTocAuthorShow">Afişează</message>
 	<message key="editor.article.cover">Copertă</message>
 	<message key="editor.article.showCoverPage">Creează o copertă pentru acest articol având următoarele elemente.</message>
-	<message key="editor.article.coverPageDisplay">Afişează</message>
+	<message key="editor.article.coverImageDisplay">Afişează</message>
 	<message key="editor.article.hideCoverPageToc">Nu afişa imaginea timbru a imaginii coperţii în cuprins.</message>
 	<message key="editor.article.hideCoverPageAbstract">Nu afişa imaginea coperţii în zona abstractul articolului.</message>
-	<message key="editor.article.coverPage">Imaginea copertei</message>
-	<message key="editor.article.coverPageInstructions">(Formate permise: .gif, .jpg, sau .png )</message>
+	<message key="editor.article.coverImage">Imaginea copertei</message>
+	<message key="editor.article.coverImageInstructions">(Formate permise: .gif, .jpg, sau .png )</message>
 	<message key="editor.article.uploaded">Încărcate</message>
 	<message key="editor.article.removeCoverPage">Elimini imaginea copertei?</message>
 	<message key="editor.article.remove">Elimină</message>

@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/CkwantesSubmissionTest.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CkwantesSubmissionTest
@@ -26,7 +26,6 @@ class CkwantesSubmissionTest extends ContentBaseTestCase {
 			'lastName' => 'Kwantes',
 			'affiliation' => 'University of Windsor',
 			'country' => 'Canada',
-			'roles' => array('Author'),
 		));
 
 		$title = 'The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence';
@@ -41,14 +40,12 @@ class CkwantesSubmissionTest extends ContentBaseTestCase {
 
 		$this->logOut();
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
-		$this->assignParticipant('Section editor', 'Stephanie Berardo');
 		$this->sendToReview();
-		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/div[contains(text(), \'Initiated\')]');
+		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignReviewer('amccrae', 'Aisla McCrae');
 		$this->assignReviewer('agallego', 'Adela Gallego');
-		$this->recordEditorialDecision('Accept Submission');
-		$this->waitForElementPresent('//a[contains(text(), \'Editorial\')]/div[contains(text(), \'Initiated\')]');
-		$this->waitForText('css=a.editorial.stageId4 > div.stageState', 'Initiated');
+		$this->recordEditorialDecision('Send to Copyediting');
+		$this->waitForElementPresent('//a[contains(text(), \'Copyediting\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Copyeditor', 'Maria Fritz');
 		$this->logOut();
 	}

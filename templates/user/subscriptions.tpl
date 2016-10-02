@@ -1,8 +1,8 @@
 {**
  * templates/user/subscriptions.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * User subscriptions management page.
@@ -23,9 +23,6 @@
 	{/if}
 	{if !empty($subscriptionPhone)}
 		{translate key="user.phone"}: {$subscriptionPhone|escape}<br />
-	{/if}
-	{if !empty($subscriptionFax)}
-		{translate key="user.fax"}: {$subscriptionFax|escape}<br />
 	{/if}
 	{if !empty($subscriptionEmail)}
 		{translate key="user.email"}: {mailto address=$subscriptionEmail|escape encode="hex"}<br />

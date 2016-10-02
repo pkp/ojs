@@ -1,8 +1,8 @@
 {**
  * plugins/citationFormats/abnt/citation.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * With contributions from by Lepidus Tecnologia
  *
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -10,8 +10,6 @@
  * Article reading tools -- Capture Citation for ABNT
  *
  *}
-<div class="separator"></div>
-<div id="citation">
 {assign var=authors value=$article->getAuthors()}
 {assign var=authorCount value=$authors|@count}
 {assign var=location value=$citationPlugin->getLocalizedLocation($journal)}
@@ -24,12 +22,12 @@
 	{assign var=firstName value=$authors[0]->getFirstName()}
 	{assign var=middleName value=$authors[0]->getMiddleName()}
 	{$authors[0]->getLastName()|escape|mb_upper}, {$firstName|escape}{if $middleName} {$middleName|escape}{/if} et al.
-{/if} 
+{/if}
 {$article->getLocalizedTitle()|strip_unsafe_html}.
 <strong>{$journal->getLocalizedName()|escape}</strong>, {$location|default:"[S.l.]"|escape}{if $issue}{if $issue->getShowVolume()}, v. {$issue->getVolume()|escape}{/if}{if $issue->getShowNumber()}, n. {$issue->getNumber()|escape}{/if}{/if}
-{if $article->getPages()}, p. {$article->getPages()|escape}{/if}, {if $article->getDatePublished()}{$article->getDatePublished()|date_format:'%b. %Y'|lower}{elseif $issue->getDatePublished()}{$issue->getDatePublished()|date_format:'%b. %Y'}{else}{$issue->getYear()|escape}{/if}. 
-{if $currentJournal->getSetting('onlineIssn')}ISSN {$currentJournal->getSetting('onlineIssn')|escape}.  
+{if $article->getPages()}, p. {$article->getPages()|escape}{/if}, {if $article->getDatePublished()}{$article->getDatePublished()|abnt_date_format|lower}{elseif $issue->getDatePublished()}{$issue->getDatePublished()|abnt_date_format}{else}{$issue->getYear()|escape}{/if}.
+{if $currentJournal->getSetting('onlineIssn')}ISSN {$currentJournal->getSetting('onlineIssn')|escape}.
 {elseif $currentJournal->getSetting('printIssn')}ISSN {$currentJournal->getSetting('printIssn')|escape}. {/if}
-{translate key="plugins.citationFormats.abnt.retrieved" retrievedDate=$smarty.now|date_format:'%d %b. %Y' url=$articleUrl}
-{if $article->getPubId('doi')}doi:{$article->getPubId('doi')|escape}. {/if}
-</div>
+{capture assign=articleUrl}{url page="article" op="view" path=$article->getBestArticleId()}{/capture}
+{translate key="plugins.citationFormats.abnt.retrieved" retrievedDate=$smarty.now|abnt_date_format_with_day url=$articleUrl}
+{if $article->getStoredPubId('doi')}doi: <a href="http://dx.doi.org/{$article->getStoredPubId('doi')|escape}">http://dx.doi.org/{$article->getStoredPubId('doi')|escape}</a>. {/if}

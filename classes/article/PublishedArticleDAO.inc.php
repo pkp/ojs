@@ -3,8 +3,8 @@
 /**
  * @file classes/article/PublishedArticleDAO.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PublishedArticleDAO
@@ -187,7 +187,7 @@ class PublishedArticleDAO extends ArticleDAO {
 				se.abstracts_not_required AS abstracts_not_required,
 				se.hide_title AS section_hide_title,
 				se.hide_author AS section_hide_author,
-				COALESCE(o.seq, ps.seq) AS section_seq,
+				COALESCE(o.seq, se.seq) AS section_seq,
 				ps.seq,
 				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
@@ -211,7 +211,7 @@ class PublishedArticleDAO extends ArticleDAO {
 			if ($publishedArticle->getSectionId() != $currSectionId && !isset($publishedArticles[$publishedArticle->getSectionId()])) {
 				$currSectionId = $publishedArticle->getSectionId();
 				$publishedArticles[$currSectionId] = array(
-					'articles'=> array(),
+					'articles' => array(),
 					'title' => '',
 					'abstractsNotRequired' => $row['abstracts_not_required'],
 					'hideAuthor' => $row['section_hide_author']
@@ -282,7 +282,7 @@ class PublishedArticleDAO extends ArticleDAO {
 		$publishedArticle->setId($row['submission_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
 		$publishedArticle->setDatePublished($this->datetimeFromDB($row['date_published']));
-		$publishedArticle->setSeq($row['seq']);
+		$publishedArticle->setSequence($row['seq']);
 		$publishedArticle->setAccessStatus($row['access_status']);
 
 		$result->Close();
@@ -543,7 +543,7 @@ class PublishedArticleDAO extends ArticleDAO {
 		$publishedArticle = parent::_fromRow($row);
 		$publishedArticle->setPublishedArticleId($row['published_submission_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
-		$publishedArticle->setSeq($row['seq']);
+		$publishedArticle->setSequence($row['seq']);
 		$publishedArticle->setAccessStatus($row['access_status']);
 
 		$publishedArticle->setGalleys($this->galleyDao->getBySubmissionId($row['submission_id'])->toArray());
@@ -558,7 +558,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param PublishedArticle object
 	 * @return pubId int
 	 */
-	function insertPublishedArticle($publishedArticle) {
+	function insertObject($publishedArticle) {
 		$this->update(
 			sprintf('INSERT INTO published_submissions
 				(submission_id, issue_id, date_published, seq, access_status)
@@ -568,7 +568,7 @@ class PublishedArticleDAO extends ArticleDAO {
 			array(
 				(int) $publishedArticle->getId(),
 				(int) $publishedArticle->getIssueId(),
-				$publishedArticle->getSeq(),
+				$publishedArticle->getSequence(),
 				$publishedArticle->getAccessStatus()
 			)
 		);
@@ -663,7 +663,7 @@ class PublishedArticleDAO extends ArticleDAO {
 			array(
 				(int) $publishedArticle->getId(),
 				(int) $publishedArticle->getIssueId(),
-				$publishedArticle->getSeq(),
+				$publishedArticle->getSequence(),
 				$publishedArticle->getAccessStatus(),
 				(int) $publishedArticle->getPublishedArticleId()
 			)
@@ -711,17 +711,6 @@ class PublishedArticleDAO extends ArticleDAO {
 	}
 
 	/**
-	 * Increment the views count for a galley.
-	 * @param $articleId int
-	 */
-	function incrementViewsByArticleId($articleId) {
-		return $this->update(
-			'UPDATE published_submissions SET views = views + 1 WHERE submission_id = ?',
-			(int) $articleId
-		);
-	}
-
-	/**
 	 * Return years of oldest/youngest published article on site or within a journal
 	 * @param $journalId int Optional
 	 * @return array (maximum date published, minimum date published)
@@ -741,6 +730,73 @@ class PublishedArticleDAO extends ArticleDAO {
 		$result->Close();
 		return $returner;
 	}
+
+
+	/**
+	 * Get all published submissions (eventually with a pubId assigned and) matching the specified settings.
+	 * @param $contextId integer optional
+	 * @param $pubIdType string
+	 * @param $title string optional
+	 * @param $author string optional
+	 * @param $issueId integer optional
+	 * @param $pubIdSettingName string optional
+	 * (e.g. crossref::status or crossref::registeredDoi)
+	 * @param $pubIdSettingValue string optional
+	 * @param $rangeInfo DBResultRange optional
+	 * @return DAOResultFactory
+	 */
+	function getExportable($contextId, $pubIdType = null, $title = null, $author = null, $issueId = null, $pubIdSettingName = null, $pubIdSettingValue = null, $rangeInfo = null) {
+		$params = array();
+		if ($pubIdSettingName) {
+			$params[] = $pubIdSettingName;
+		}
+		$params = array_merge($params, $this->getFetchParameters()); // because of the neccessary section row names in _fromRow
+		$params[] = (int) $contextId;
+		if ($pubIdType) {
+			$params[] = 'pub-id::'.$pubIdType;
+		}
+		if ($title) {
+			$params[] = 'title';
+			$params[] = AppLocale::getLocale();
+			$params[] = '%' . $title . '%';
+		}
+		if ($author) array_push($params, $authorQuery = '%' . $author . '%', $authorQuery, $authorQuery);
+		if ($issueId) {
+			$params[] = (int) $issueId;
+		}
+		import('classes.plugins.PubObjectsExportPlugin');
+		if ($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED) {
+			$params[] = $pubIdSettingValue;
+		}
+
+		$result = $this->retrieveRange(
+			'SELECT	s.*, ps.*,
+				' . $this->getFetchColumns() . '
+			FROM	published_submissions ps
+				JOIN issues i ON (ps.issue_id = i.issue_id)
+				LEFT JOIN submissions s ON (s.submission_id = ps.submission_id)
+				' . ($pubIdType != null?' LEFT JOIN submission_settings ss ON (s.submission_id = ss.submission_id)':'')
+				. ($title != null?' LEFT JOIN submission_settings sst ON (s.submission_id = sst.submission_id)':'')
+				. ($author != null?' LEFT JOIN authors au ON (s.submission_id = au.submission_id)':'')
+				. ($pubIdSettingName != null?' LEFT JOIN submission_settings sss ON (s.submission_id = sss.submission_id AND sss.setting_name = ?)':'')
+				. ' ' . $this->getFetchJoins() .'
+			WHERE
+				i.published = 1 AND s.context_id = ?
+				' . ($pubIdType != null?' AND ss.setting_name = ? AND ss.setting_value IS NOT NULL':'')
+				. ($title != null?' AND (sst.setting_name = ? AND sst.locale = ? AND sst.setting_value LIKE ?)':'')
+				. ($author != null?' AND (au.first_name LIKE ? OR au.middle_name LIKE ? OR au.last_name LIKE ?)':'')
+				. ($issueId != null?' AND ps.issue_id = ?':'')
+				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == EXPORT_STATUS_NOT_DEPOSITED)?' AND sss.setting_value IS NULL':'')
+				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED)?' AND sss.setting_value = ?':'')
+				. (($pubIdSettingName != null && is_null($pubIdSettingValue))?' AND (sss.setting_value IS NULL OR sss.setting_value = \'\')':'')
+			. ' ORDER BY ps.date_published DESC, s.submission_id DESC',
+			$params,
+			$rangeInfo
+		);
+
+		return new DAOResultFactory($result, $this, '_fromRow');
+	}
+
 }
 
 ?>

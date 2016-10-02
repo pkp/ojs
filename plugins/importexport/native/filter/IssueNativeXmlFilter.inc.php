@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/filter/IssueNativeXmlFilter.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueNativeXmlFilter
@@ -33,7 +33,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	 * @copydoc PersistableFilter::getClassName()
 	 */
 	function getClassName() {
-		return 'lib.pkp.plugins.importexport.native.filter.IssueNativeXmlFilter';
+		return 'plugins.importexport.native.filter.IssueNativeXmlFilter';
 	}
 
 
@@ -80,30 +80,74 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		// Create the root node and attributes
 		$deployment = $this->getDeployment();
 		$deployment->setIssue($issue);
+
 		$issueNode = $doc->createElementNS($deployment->getNamespace(), 'issue');
-		$issueNode->setAttribute('journal_id', $issue->getJournalId());
-		$issueNode->setAttribute('volume', $issue->getVolume());
-		$issueNode->setAttribute('number', $issue->getNumber());
-		$issueNode->setAttribute('year', $issue->getYear());
+		$this->addIdentifiers($doc, $issueNode, $issue);
+
 		$issueNode->setAttribute('published', $issue->getPublished());
 		$issueNode->setAttribute('current', $issue->getCurrent());
 		$issueNode->setAttribute('access_status', $issue->getAccessStatus());
-		$issueNode->setAttribute('show_volume', $issue->getShowVolume());
-		$issueNode->setAttribute('show_number', $issue->getShowNumber());
-		$issueNode->setAttribute('show_year', $issue->getShowYear());
-		$issueNode->setAttribute('show_title', $issue->getShowTitle());
 
 		$this->createLocalizedNodes($doc, $issueNode, 'description', $issue->getDescription(null));
-		$this->createLocalizedNodes($doc, $issueNode, 'title', $issue->getTitle(null));
+		import('plugins.importexport.native.filter.NativeFilterHelper');
+		$nativeFilterHelper = new NativeFilterHelper();
+		$issueNode->appendChild($nativeFilterHelper->createIssueIdentificationNode($this, $doc, $issue));
 
 		$this->addDates($doc, $issueNode, $issue);
 		$this->addSections($doc, $issueNode, $issue);
-		$this->addStyleFile($doc, $issueNode, $issue);
 		$this->addCoverImage($doc, $issueNode, $issue);
 		$this->addIssueGalleys($doc, $issueNode, $issue);
 		$this->addArticles($doc, $issueNode, $issue);
 
 		return $issueNode;
+	}
+
+	/**
+	 * Create and add identifier nodes to a submission node.
+	 * @param $doc DOMDocument
+	 * @param $issueNode DOMElement
+	 * @param $issue Issue
+	 */
+	function addIdentifiers($doc, $issueNode, $issue) {
+		$deployment = $this->getDeployment();
+
+		// Add internal ID
+		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', $issue->getId()));
+		$node->setAttribute('type', 'internal');
+		$node->setAttribute('advice', 'ignore');
+
+		// Add public ID
+		if ($pubId = $issue->getStoredPubId('publisher-id')) {
+			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', $pubId));
+			$node->setAttribute('type', 'public');
+			$node->setAttribute('advice', 'update');
+		}
+
+		// Add pub IDs by plugin
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $deployment->getContext()->getId());
+		foreach ((array) $pubIdPlugins as $pubIdPlugin) {
+			$this->addPubIdentifier($doc, $issueNode, $issue, $pubIdPlugin);
+		}
+	}
+
+	/**
+	 * Add a single pub ID element for a given plugin to the document.
+	 * @param $doc DOMDocument
+	 * @param $issueNode DOMElement
+	 * @param $issue Issue
+	 * @param $pubIdPlugin PubIdPlugin
+	 * @return DOMElement|null
+	 */
+	function addPubIdentifier($doc, $issueNode, $issue, $pubIdPlugin) {
+		$pubId = $issue->getStoredPubId($pubIdPlugin->getPubIdType());
+		if ($pubId) {
+			$deployment = $this->getDeployment();
+			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', $pubId));
+			$node->setAttribute('type', $pubIdPlugin->getPubIdType());
+			$node->setAttribute('advice', 'update');
+			return $node;
+		}
+		return null;
 	}
 
 	/**
@@ -179,54 +223,22 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	 */
 	function addCoverImage($doc, $issueNode, $issue) {
 
-		$originalFileName = $issue->getOriginalFileName(null);
-		if (is_array($originalFileName) && count($originalFileName) > 0) {
+		$coverImage = $issue->getCoverImage();
+		if (!empty($coverImage)) {
 			$deployment = $this->getDeployment();
 			$issueCoverNode = $doc->createElementNS($deployment->getNamespace(), 'issue_cover');
-			$this->createLocalizedNodes($doc, $issueCoverNode, 'file_name', $issue->getFileName(null));
-			$this->createLocalizedNodes($doc, $issueCoverNode, 'original_file_name', $issue->getOriginalFileName(null));
-			$this->createLocalizedNodes($doc, $issueCoverNode, 'hide_cover_page_archives', $issue->getHideCoverPageArchives(null));
-			$this->createLocalizedNodes($doc, $issueCoverNode, 'hide_cover_page_cover', $issue->getHideCoverPageCover(null));
-			$this->createLocalizedNodes($doc, $issueCoverNode, 'show_cover_page', $issue->getShowCoverPage(null));
-			$this->createLocalizedNodes($doc, $issueCoverNode, 'cover_page_description', $issue->getCoverPageDescription(null));
-			$this->createLocalizedNodes($doc, $issueCoverNode, 'cover_page_alt_text', $issue->getCoverPageAltText(null));
+			$issueCoverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', $issue->getCoverImage()));
+			$issueCoverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', $issue->getCoverImage()));
 
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
 
-			$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getLocalizedFileName();
+			$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getCoverImage();
 			$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
 			$embedNode->setAttribute('encoding', 'base64');
 			$issueCoverNode->appendChild($embedNode);
 
 			$issueNode->appendChild($issueCoverNode);
-		}
-	}
-
-	/**
-	 * Add the issue cover image to its DOM element.
-	 * @param $doc DOMDocument
-	 * @param $issueNode DOMElement
-	 * @param $issue Issue
-	 */
-	function addStyleFile($doc, $issueNode, $issue) {
-
-		$originalStyleFileName = $issue->getOriginalStyleFileName();
-		if ($originalStyleFileName) {
-			$deployment = $this->getDeployment();
-			$issueStyleNode = $doc->createElementNS($deployment->getNamespace(), 'issue_style');
-			$issueStyleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'style_file_name', $issue->getStyleFileName()));
-			$issueStyleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'original_style_file_name', $issue->getOriginalStyleFileName()));
-
-			import('classes.file.PublicFileManager');
-			$publicFileManager = new PublicFileManager();
-
-			$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getStyleFileName();
-			$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
-			$embedNode->setAttribute('encoding', 'base64');
-			$issueStyleNode->appendChild($embedNode);
-
-			$issueNode->appendChild($issueStyleNode);
 		}
 	}
 
@@ -237,16 +249,21 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	 * @param $issue Issue
 	 */
 	function addSections($doc, $issueNode, $issue) {
-
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$sections = $sectionDao->getByIssueId($issue->getId());
 		$deployment = $this->getDeployment();
+		$journal = $deployment->getContext();
 
 		$sectionsNode = $doc->createElementNS($deployment->getNamespace(), 'sections');
 		foreach ($sections as $section) {
 			$sectionNode = $doc->createElementNS($deployment->getNamespace(), 'section');
-			$sectionNode->setAttribute('journal_id', $section->getJournalId());
-			$sectionNode->setAttribute('review_form_id', $section->getReviewFormId());
+
+			$sectionNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', $section->getId()));
+			$node->setAttribute('type', 'internal');
+			$node->setAttribute('advice', 'ignore');
+
+			if ($section->getReviewFormId()) $sectionNode->setAttribute('review_form_id', $section->getReviewFormId());
+			$sectionNode->setAttribute('ref', $section->getAbbrev($journal->getPrimaryLocale()));
 			$sectionNode->setAttribute('seq', $section->getSequence());
 			$sectionNode->setAttribute('editor_restricted', $section->getEditorRestricted());
 			$sectionNode->setAttribute('meta_indexed', $section->getMetaIndexed());
@@ -255,8 +272,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 			$sectionNode->setAttribute('hide_title', $section->getHideTitle());
 			$sectionNode->setAttribute('hide_author', $section->getHideAuthor());
 			$sectionNode->setAttribute('hide_about', $section->getHideAbout());
-			$sectionNode->setAttribute('disable_comments', $section->getDisableComments());
-			$sectionNode->setAttribute('abstract_word_count', $section->getAbstractWordCount());
+			$sectionNode->setAttribute('abstract_word_count', (int) $section->getAbstractWordCount());
 
 			$this->createLocalizedNodes($doc, $sectionNode, 'abbrev', $section->getAbbrev(null));
 			$this->createLocalizedNodes($doc, $sectionNode, 'policy', $section->getPolicy(null));
@@ -267,6 +283,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 
 		$issueNode->appendChild($sectionsNode);
 	}
+
 }
 
 ?>

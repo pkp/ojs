@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issueGalleys/IssueGalleyGridHandler.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyGridHandler
@@ -39,8 +39,8 @@ class IssueGalleyGridHandler extends GridHandler {
 	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
-		import('lib.pkp.classes.security.authorization.PkpContextAccessPolicy');
-		$this->addPolicy(new PkpContextAccessPolicy($request, $roleAssignments));
+		import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
+		$this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
 
 		import('classes.security.authorization.OjsIssueRequiredPolicy');
 		$this->addPolicy(new OjsIssueRequiredPolicy($request, $args));
@@ -105,7 +105,10 @@ class IssueGalleyGridHandler extends GridHandler {
 			new LinkAction(
 				'add',
 				new AjaxModal(
-					$router->url($request, null, null, 'add', null, $this->getRequestArgs() + array('gridId' => $this->getId())),
+					$router->url(
+						$request, null, null, 'add', null,
+						array_merge($this->getRequestArgs(), array('gridId' => $this->getId()))
+					),
 					__('grid.action.addIssueGalley'),
 					'modal_add'
 				),
@@ -144,24 +147,23 @@ class IssueGalleyGridHandler extends GridHandler {
 		}
 
 		// Public ID, if enabled
-		if ($journal->getSetting('enablePublicGalleyId')) {
-			$this->addColumn(
-				new GridColumn(
-					'publicGalleyId',
-					'submission.layout.publicGalleyId',
-					null,
-					null,
-					$issueGalleyGridCellProvider
-				)
-			);
-		}
+		$this->addColumn(
+			new GridColumn(
+				'publicGalleyId',
+				'submission.layout.publicGalleyId',
+				null,
+				null,
+				$issueGalleyGridCellProvider
+			)
+		);
+
 	}
 
 	/**
 	 * Get the row handler - override the default row handler
 	 * @return IssueGalleyGridRow
 	 */
-	function getRowInstance() {
+	protected function getRowInstance() {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		return new IssueGalleyGridRow($issue->getId());
 	}
@@ -250,9 +252,8 @@ class IssueGalleyGridHandler extends GridHandler {
 		if ($issueGalleyForm->validate($request)) {
 			$issueId = $issueGalleyForm->execute($request);
 			return DAO::getDataChangedEvent($issueId);
-		} else {
-			return new JSONMessage(false);
 		}
+		return new JSONMessage(false);
 	}
 
 	/**
@@ -263,15 +264,17 @@ class IssueGalleyGridHandler extends GridHandler {
 	function delete($args, $request) {
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 		$issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
-		$issueGalley->getId();
-		$issueGalleyDao->deleteObject($issueGalley);
-		return DAO::getDataChangedEvent();
+		if ($issueGalley && $request->checkCSRF()) {
+			$issueGalleyDao->deleteObject($issueGalley);
+			return DAO::getDataChangedEvent();
+		}
+		return new JSONMessage(false);
 	}
 
 	/**
 	 * @copydoc GridHandler::loadData
 	 */
-	function loadData($request, $filter) {
+	protected function loadData($request, $filter) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 		return $issueGalleyDao->getByIssueId($issue->getId());

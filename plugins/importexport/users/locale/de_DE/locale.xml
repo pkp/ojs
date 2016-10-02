@@ -4,14 +4,14 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
-  * Weitergabe nach GNU GPL v2. Vollständiger Text s. docs/COPYING.
-  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
-  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
+  * Localization strings.
   -->
 
-<locale name="de_DE" full_name="German">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.importexport.users.displayName">Benutzer XML Einschub</message>
 	<message key="plugins.importexport.users.description">Benutzer Import und Export</message>
 

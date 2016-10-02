@@ -4,8 +4,8 @@
 <!--
   * 3.0.0_preupdate.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Database updates XML file (run before schema is reconciled).
@@ -24,6 +24,14 @@
 	<sql>
 		<rename table="edit_decisions" column="article_id" to="submission_id" />
 	</sql>
+	<sql>
+		<rename table="static_pages" column="journal_id" to="context_id" />
+	</sql>
+
+	<!-- Articles migration -->
+	<sql>
+		<query>CREATE TABLE articles_migration AS (SELECT journal_id, article_id, user_id, submission_file_id, revised_file_id, review_file_id, editor_file_id FROM articles)</query>
+	</sql>
 
 	<!-- Article files migration -->
 	<sql>
@@ -33,8 +41,8 @@
 	<!-- Bug #8235: Rename article* submission* -->
 	<sql>
 		<!-- article_files to submission_files -->
+		<rename table="article_files" column="article_id" to="submission_id" />
 		<rename table="article_files" to="submission_files" />
-		<rename table="submission_files" column="article_id" to="submission_id" />
 		<!-- article_comments to submission_comments -->
 		<rename table="article_comments" column="article_id" to="submission_id" />
 		<rename table="article_comments" to="submission_comments" />
@@ -63,5 +71,10 @@
 		<rename table="article_search_keyword_list" to="submission_search_keyword_list" />
 		<rename table="article_search_object_keywords" to="submission_search_object_keywords" />
 		<rename table="article_html_galley_images" to="submission_html_galley_images" />
+	</sql>
+	<!-- Clean up after OJS 2.4.x hard-coded controlled vocab / controlled vocab entry IDs (issue #1793) -->
+	<sql>
+		<query driver="postgres7">SELECT pg_catalog.setval(pg_get_serial_sequence('controlled_vocabs', 'controlled_vocab_id'), (SELECT MAX(controlled_vocab_id) FROM controlled_vocabs)+1)</query>
+		<query driver="postgres7">SELECT pg_catalog.setval(pg_get_serial_sequence('controlled_vocab_entries', 'controlled_vocab_entry_id'), (SELECT MAX(controlled_vocab_entry_id) FROM controlled_vocab_entries)+1)</query>
 	</sql>
 </data>

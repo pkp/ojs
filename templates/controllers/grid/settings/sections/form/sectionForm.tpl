@@ -1,8 +1,8 @@
 {**
  * templates/controllers/grid/settings/section/form/sectionForm.tpl
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2003-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Section form under journal management.
@@ -16,6 +16,7 @@
 </script>
 
 <form class="pkp_form" id="sectionForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="grid.settings.sections.SectionGridHandler" op="updateSection" sectionId=$sectionId}">
+	{csrf}
 	<input type="hidden" name="sectionId" value="{$sectionId|escape}"/>
 
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="sectionFormNotification"}
@@ -47,7 +48,7 @@
 		{call_hook name="Templates::Manager::Sections::SectionForm::AdditionalMetadata" sectionId=$sectionId}
 	{/fbvFormArea}
 
-	{fbvFormArea id="indexingInfo" title="submission.indexing" class="border"}
+	{fbvFormArea id="indexingInfo" title="submission.indexing"}
 		{fbvFormSection list=true}
 			{fbvElement type="checkbox" id="metaReviewed" checked=$metaReviewed label="manager.sections.submissionReview"}
 			{fbvElement type="checkbox" id="abstractsNotRequired" checked=$abstractsNotRequired label="manager.sections.abstractsNotRequired"}
@@ -63,12 +64,10 @@
 		{/fbvFormSection}
 	{/fbvFormArea}
 
-	{fbvFormSection for="context" inline=true size=$fbvStyles.size.MEDIUM}
+	{fbvFormSection for="context" size=$fbvStyles.size.LARGE}
 		{if $sectionEditorCount > 0}{* only include the section editor listbuilder if there are section editors available *}
-			<div id="sectionEditorsContainer">
-				{url|assign:sectionEditorsUrl router=$smarty.const.ROUTE_COMPONENT component="listbuilder.settings.SubEditorsListbuilderHandler" op="fetch" sectionId=$sectionId escape=false}
-				{load_url_in_div id="sectionEditorsContainer" url=$sectionEditorsUrl}
-			</div>
+			{url|assign:sectionEditorsUrl router=$smarty.const.ROUTE_COMPONENT component="listbuilder.settings.SubEditorsListbuilderHandler" op="fetch" sectionId=$sectionId escape=false}
+			{load_url_in_div id="sectionEditorsContainer" url=$sectionEditorsUrl}
 		{/if}
 	{/fbvFormSection}
 

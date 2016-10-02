@@ -4,17 +4,17 @@
 <!--
   * locale/uk_UA/default.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the uk_UA (Ukrainian) locale.
+  * Localization strings for the uk_UA (Українська) locale.
   *
   * Translated by Denys Solovianenko, 2011
   * V. I. Vernadsky National Library of Ukraine
   -->
 
-<locale name="uk_UA" full_name = "Ukrainian">
+<locale name="uk_UA" full_name="Українська">
        <!-- Section default -->
        <message key="section.default.title">Статті</message>
        <message key="section.default.abbrev">ART</message>
@@ -30,7 +30,7 @@
        <message key="default.journalSettings.checklist.addressesLinked">Інтернет-посилання у тексті супроводжуються повними коректними адресами URL.</message>
        <message key="default.journalSettings.checklist.submissionAppearance">Текст набраний 12-м розміром кеглю з одинарним міжрядковим інтервалом; авторські акценти виділені курсивом, а не підкресленням (всюди, крім адрес URL); всі ілюстрації, графіки та таблиці розміщені безпосередньо у тексті, там, де вони повинні бути за змістом (а не у кінці документу).</message>
        <message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Текст відповідає вимогам до стилістики та бібліографії, викладеним у <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Керівництві для авторів</a> розділу "Про журнал".]]></message>
-       <message key="default.journalSettings.privacyStatement">Імена та електронні адреси, які вказуються користувачами сайту цього журналу, будуть використовуватись виключно для виконання внутрішніх технічних завдань цього журналу; вони не будуть поширюватись та передаватись стороннім особам.</message>
+             <message key="default.journalSettings.privacyStatement">Імена та електронні адреси, які вказуються користувачами сайту цього журналу, будуть використовуватись виключно для виконання внутрішніх технічних завдань цього журналу; вони не будуть поширюватись та передаватись стороннім особам.</message>
        <message key="default.journalSettings.openAccessPolicy">Цей журнал практикує політику негайного відкритого доступу до опублікованого змісту, підтримуючи принципи вільного поширення наукової інформації та глобального обміну знаннями задля загального суспільного прогресу.</message>
        <message key="default.journalSettings.authorSelfArchivePolicy">Цей журнал дозволяє і заохочує авторів депонувати матеріали, надіслані до нього, на особистих веб-сайтах або у сховищах установ, як до публікації цих матеріалів, так і після. При цьому, ми просимо, якщо можливо, оформлювати відповідні посилання на оригінали публікацій на цьому сайті.</message>
        <message key="default.journalSettings.copyeditInstructions"><![CDATA[Стадія літературного редагування необхідна для покращення стилю, зрозумілості, граматики та орфографії статті. Це останній шанс для авторів внести суттєві зміни до тексту, оскільки на наступному етапі можливі зміни, пов'язані виключно з виправленням опечаток та помилок форматування.

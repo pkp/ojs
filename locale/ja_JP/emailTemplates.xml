@@ -2,10 +2,10 @@
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
 
 <!--
-  * locale/ja_JP/emailTemplateData.xml
+  * locale/ja_JP/emailTemplates.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -19,7 +19,7 @@
 <br />
 リセット依頼をした覚えがない場合は、申し訳ありませんが、このメールを無理し、パスワードは変更しないでください。パスワードのリセットを希望される場合は、下のURLをクリックしてください。<br />
 <br />
-パスワードのリセット: {$url}<br />
+パスワードのリセット: <a href="{$url}">{$url}</a><br />
 <br />
 よろしくお願いいたします。<br />
 <br />
@@ -31,7 +31,7 @@
 		<body><![CDATA[ご利用の「{$siteTitle}」のWebサイトのパスワードのリセットが終了しました。このユーザ名とパスワードは、雑誌のすべての処理で必要となりますので、大切に保管してください。<br />
 <br />
 あなたのユーザ名:   {$username}<br />
-あなたのパスワード: {$password}<br />
+パスワード: {$password}<br />
 <br />
 よろしくお願いいたします。<br />
 <br />
@@ -60,7 +60,7 @@
 <br />
 雑誌『{$contextName}』は、今日、最新号を発行しました。目次を送付いたしますので、興味のある論文や記事について、実際に雑誌のWebサイトにアクセスしてチェックしていただくようご案内いたします。<br />
 <br />
-雑誌WebサイトのURLは、<a href="{$journalUrl}">{$journalUrl}</a> です。<br />
+雑誌WebサイトのURLは、<a href="{$contextUrl}">{$contextUrl}</a> です。<br />
 <br />
 <br />
 {$editorialContactSignature}]]></body>
@@ -70,13 +70,13 @@
 		<subject>『{$contextName}』保存のお願い</subject>
 		<body><![CDATA[[大学図書館長] 御中<br />
 <br />
-本誌『{$contextName}』&amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;は、貴学の教官 [教官名]殿に[役職名]をお願いしているものです。本誌は、貴館およびその他の大学図書館との間でLOCKSS（Lots of Copies Keep Stuff Safe）準拠のアーカイブを構築したいと考えております。<br />
+本誌『{$contextName}』&amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;は、貴学の教官 [教官名]殿に[役職名]をお願いしているものです。本誌は、貴館およびその他の大学図書館との間でLOCKSS（Lots of Copies Keep Stuff Safe）準拠のアーカイブを構築したいと考えております。<br />
 <br />
 [雑誌の簡単な説明]<br />
 <br />
 本誌のLOCKSS出版者宣言書のURLは、以下の通りです。<br />
 <br />
-    <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+    <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
 <br />
 貴館は既にLOCKSSに参加していると伺っております。私たちの雑誌を貴館のLOCKSSに登録するためにメタデータを提供できるなら、喜んで提供したいと考えております。<br />
 <br />
@@ -89,7 +89,7 @@
 		<subject>『{$contextName}』保存のお願い</subject>
 		<body><![CDATA[[大学図書館長] 御中<br />
 <br />
-本誌『{$contextName}』&amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;は、貴学の教官 [教官名]殿に[役職名]をお願いしているものです。本誌は、貴館およびその他の大学図書館との間でLOCKSS（Lots of Copies Keep Stuff Safe）準拠のアーカイブを構築したいと考えております。<br />
+本誌『{$contextName}』&amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;は、貴学の教官 [教官名]殿に[役職名]をお願いしているものです。本誌は、貴館およびその他の大学図書館との間でLOCKSS（Lots of Copies Keep Stuff Safe）準拠のアーカイブを構築したいと考えております。<br />
 <br />
 [雑誌の簡単な説明]<br />
 <br />
@@ -108,7 +108,7 @@
 <br />
 雑誌『{$contextName}』に原稿「{$submissionTitle}」をご投稿いただき、ありがとうございました。本誌が使用しているオンライン雑誌管理システムでは、雑誌のWebサイトにログインすることにより、編集過程の進捗状況を確認することができます。<br />
 <br />
-原稿のURL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+原稿のURL: {$submissionUrl}<br />
 ユーザ名: {$authorUsername}<br />
 <br />
 何かご不明な点がございましたら、ご連絡ください。<br />
@@ -150,7 +150,7 @@
 <br />
 この度、雑誌『{$contextName}』への投稿論文「{$submissionTitle}」のセクションエディタとして、編集プロセス全般の管理をお願いすることになりました。<br />
 <br />
-投稿物のURL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+投稿物のURL: {$submissionUrl}<br />
 投稿者:      {$editorUsername}<br />
 <br />
 よろしくお願いいたします。<br />
@@ -163,7 +163,7 @@
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読をお願いいたしたくメールを差し上げました。投稿物の要旨を以下に添付しました。貴殿がこの重要な仕事を引き受けてくださることを希望いたしております。<br />
 <br />
-{$weekLaterDate}までに、雑誌のWebサイトにログインして、査読を引き受けていただけるかどうかを示していただけるようお願いいたします。引き受けていただける場合は、このサイトで投稿物にアクセスし、査読結果と答申を記録することができます。雑誌のWebサイトのURLは、<a href="{$journalUrl}">{$journalUrl}</a> です。<br />
+{$responseDueDate}までに、雑誌のWebサイトにログインして、査読を引き受けていただけるかどうかを示していただけるようお願いいたします。引き受けていただける場合は、このサイトで投稿物にアクセスし、査読結果と答申を記録することができます。雑誌のWebサイトのURLは、<a href="{$contextUrl}">{$contextUrl}</a> です。<br />
 <br />
 査読作業自体の期限日は、{$reviewDueDate}です。<br />
 <br />
@@ -190,7 +190,7 @@
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読をお願いいたしたくメールを差し上げました。投稿物の要旨を以下に添付しました。貴殿がこの重要な仕事を引き受けてくださることを希望いたしております。<br />
 <br />
-{$weekLaterDate}までに、雑誌のWebサイトにログインして、査読を引き受けていただけるかどうかを示していただけるようお願いいたします。引き受けていただける場合は、このサイトで投稿物にアクセスし、査読結果と答申を記録することができます。雑誌のWebサイトのURLは、<a href="{$journalUrl}">{$journalUrl}</a> です。<br />
+{$responseDueDate}までに、雑誌のWebサイトにログインして、査読を引き受けていただけるかどうかを示していただけるようお願いいたします。引き受けていただける場合は、このサイトで投稿物にアクセスし、査読結果と答申を記録することができます。雑誌のWebサイトのURLは、<a href="{$contextUrl}">{$contextUrl}</a> です。<br />
 <br />
 査読作業自体の期限日は、{$reviewDueDate}です。<br />
 <br />
@@ -214,7 +214,7 @@
 <br />
 原稿「{$submissionTitle}」の査読をお願いいたしたくメールを差し上げました。貴殿がこの重要な仕事を引き受けてくださることをお願いいたしております。この雑誌の査読の手引きを以下に添付しました。また、投稿物はメールの添付ファイルとして添付いたしました。投稿物の査読結果と答申は、{$reviewDueDate}までに私宛にメールでいただきたいと考えております。<br />
 <br />
-査読をしていただけるか否かを、{$weekLaterDate}までにメールでご返事いただけるようお願いいたします。<br />
+査読をしていただけるか否かを、{$responseDueDate}までにメールでご返事いただけるようお願いいたします。<br />
 <br />
 よろしくご検討くださるよう、お願いいたします。<br />
 <br />
@@ -337,12 +337,12 @@
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>原稿整理のお願い</subject>
-		<body><![CDATA[{$copyeditorName} 殿:<br />
+		<body><![CDATA[{$participantName} 殿:<br />
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理作業をお願いいたしたくメールを差し上げました。投稿物は雑誌のWebサイトで見ることができます。原稿整理の手引きも用意しております。<br />
 <br />
-原稿のURL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-ユーザ名: {$copyeditorUsername}<br />
+原稿のURL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+ユーザ名: {$participantUsername}<br />
 <br />
 今回、この作業を引き受けていただけない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />
 <br />
@@ -359,11 +359,11 @@
 <br />
 よろしくお願いいたします。<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>原稿整理のお礼</subject>
-		<body><![CDATA[{$copyeditorName} 殿:<br />
+		<body><![CDATA[{$participantName} 殿:<br />
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理を行っていただき、ありがとうございました。<br />
 <br />
@@ -380,7 +380,7 @@
 <br />
 これは、大規模な変更を行うことができる最後のチャンスです。今後、ゲラの校正をお願いすることになりますが、その際は、ちょっとした文字やレイアウトの間違いしか修正することはできませんのでご注意ください。<br />
 <br />
-原稿のURL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+原稿のURL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
 今回この作業を行うことができない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />
 <br />
@@ -413,12 +413,12 @@
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>最終の原稿整理のお願い</subject>
-		<body><![CDATA[{$copyeditorName} 殿:<br />
+		<body><![CDATA[{$participantName} 殿:<br />
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理版の著者と編集者によるチェックが終わりました。レイアウト作業のための最終の「クリーン版」を作成していただくようお願いいたします。<br />
 <br />
-原稿のURL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-ユーザ名: {$copyeditorUsername}<br />
+原稿のURL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+ユーザ名: {$participantUsername}<br />
 <br />
 よろしくお願いいたします。<br />
 <br />
@@ -433,12 +433,12 @@
 <br />
 よろしくお願いいたします。<br />
 <br />
-{$copyeditorName}]]></body>
+{$participantName}]]></body>
 		<description>このメールは、コピーエディタからセクションエディタに最終の原稿製作業が終了し、レイアウト作業を開始できることを通知するものです。</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>最終の原稿整理のお礼</subject>
-		<body><![CDATA[{$copyeditorName} 殿:<br />
+		<body><![CDATA[{$participantName} 殿:<br />
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理作業を行っていただき、ありがとうございました。レイアウト作業用の「クリーン版」の作成は、編集プロセスにとって重要なものです。<br />
 <br />
@@ -449,12 +449,12 @@
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>ゲラ作成のお願い</subject>
-		<body><![CDATA[{$layoutEditorName} 殿:<br />
+		<body><![CDATA[{$participantName} 殿:<br />
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの作成をお願いいたしたくメールを差し上げました。<br />
 <br />
 原稿のURL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
-ユーザ名: {$layoutEditorUsername}<br />
+ユーザ名: {$participantUsername}<br />
 <br />
 今回、この作業を引き受けていただけない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />
 <br />
@@ -473,12 +473,12 @@
 <br />
 よろしくお願いいたします。<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>このメールは、レイアウトエディタからセクションエディタにレイアウト処理が終了したことを通知するものです。</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>レイアウト作業のお礼</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラを作成していただき、ありがとうございました。これは出版プロセスに対する大きな貢献です。<br />
 <br />
@@ -493,7 +493,7 @@
 <br />
 雑誌『{$contextName}』に投稿いただいた原稿「{$submissionTitle}」のゲラができましたので、校正をお願いいたします。ゲラを見るには、下に示すリンクを使って雑誌のWebサイトにログインしてください。閲覧リンクをクリックして、原稿の出版版を読み、校正の手引きに従って文字やレイアウトの誤りのみをチェックしてください。修正点は、校正による修正入力ボックスに記入してください。<br />
 <br />
-原稿のURL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+原稿のURL: {$submissionUrl}<br />
 <br />
 今回この作業を行うことができない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />
 <br />
@@ -532,7 +532,7 @@
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの校正をお願いいたしたくメールを差し上げました。<br />
 <br />
-原稿URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+原稿URL: {$submissionUrl}<br />
 ユーザ名: {$proofreaderUsername}<br />
 <br />
 今回この作業を行うことができない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />
@@ -566,12 +566,12 @@
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>（レイアウトエディタ）校正のお願い</subject>
-		<body><![CDATA[{$layoutEditorName}:<br />
+		<body><![CDATA[{$participantName}:<br />
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の校正作業の結果、ゲラの修正をお願いすることになりました。<br />
 <br />
-原稿のURL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-ユーザ名: {$layoutEditorUsername}<br />
+原稿のURL: {$submissionUrl}<br />
+ユーザ名: {$participantUsername}<br />
 <br />
 今回この作業を行うことができない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />
 <br />
@@ -588,12 +588,12 @@
 <br />
 よろしくお願いいたします。<br />
 <br />
-{$layoutEditorName}]]></body>
+{$participantName}]]></body>
 		<description>このメールは、レイアウトエディタからセクションエディタに最終の校正作業が終了し、論文を出版する用意ができたことを通知するものです。</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>（レイアウトエディタ）校正のお礼</subject>
-		<body><![CDATA[{$layoutEditorName} 殿:<br />
+		<body><![CDATA[{$participantName} 殿:<br />
 <br />
 雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの校正結果に対する修正をしていただき、ありがとうございました。これは、本誌の品質の向上に重要な貢献をしていただいたことになります。<br />
 <br />
@@ -639,7 +639,7 @@
 <br />
 雑誌『{$contextName}』の以下の号がオープンアクセスにより利用できるようになりましたのでご案内いたします。<br />
 <br />
- 雑誌のWebサイト（<a href="{$journalUrl}">{$journalUrl}</a>）にアクセスし、目次をチェックし興味のある論文や記事をご利用ください。<br />
+ 雑誌のWebサイト（<a href="{$contextUrl}">{$contextUrl}</a>）にアクセスし、目次をチェックし興味のある論文や記事をご利用ください。<br />
 <br />
 よろしくお願いいたします。<br />
 <br />
