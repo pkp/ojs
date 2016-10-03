@@ -97,7 +97,8 @@ class SubmissionHandler extends APIHandler {
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		assert($submission);
 
-		$format = $slimRequest->getQueryParams()['format'];
+		$queryParams = $slimRequest->getQueryParams();
+		$format = isset($queryParams['format'])?$queryParams['format']:'';
 		import('plugins.metadata.dc11.schema.Dc11Schema');
 		if ($format == 'dc11' || $format == '') {
 			$schema = new Dc11Schema();
