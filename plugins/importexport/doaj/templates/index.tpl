@@ -61,16 +61,12 @@
 					{if !empty($actionNames)}
 						<ul class="export_actions">
 							{foreach from=$actionNames key=action item=actionName}
-								<li class="export_action">
+								<li class="export_action">								
 									{fbvElement type="submit" label="$actionName" id="$action" name="$action" value="1" class="$action" translate=false inline=true}
 								</li>
 							{/foreach}
 						</ul>
 					{/if}
-					{*
-					{fbvElement type="submit" label="plugins.importexport.common.action.export" id="export" name="export" value="1" class="export" inline=true}
-					{fbvElement type="submit" label="plugins.importexport.common.action.markRegistered" id="markRegistered" name="markRegistered" value="1" class="markRegistered" inline=true}
-					*}
 				{/fbvFormArea}
 			</form>
 		</div>

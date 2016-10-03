@@ -52,11 +52,11 @@ class DOAJSettingsForm extends Form {
 	 * @param $plugin DOAJExportPlugin
 	 * @param $contextId integer
 	 */
-	function DOAJSettingsForm($plugin, $contextId) {
+	function __construct($plugin, $contextId) {
 		$this->_contextId = $contextId;
 		$this->_plugin = $plugin;
 
-		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
+		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
 
 		// Add form validation checks.
 		$this->addCheck(new FormValidatorPost($this));
@@ -106,8 +106,7 @@ class DOAJSettingsForm extends Form {
 	 */
 	function getFormFields() {
 		return array(
-			'username' => 'string',
-			'password' => 'string',
+			'apiKey' => 'string',
 			'automaticRegistration' => 'bool',
 			'testMode' => 'bool'
 		);
@@ -119,7 +118,7 @@ class DOAJSettingsForm extends Form {
 	 * @return boolean
 	 */
 	function isOptional($settingName) {
-		return in_array($settingName, array('username', 'password', 'automaticRegistration', 'testMode'));
+		return in_array($settingName, array('apiKey', 'automaticRegistration', 'testMode'));
 	}
 
 }
