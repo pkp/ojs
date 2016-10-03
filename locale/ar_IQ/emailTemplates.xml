@@ -603,8 +603,8 @@
 		<description>هذه الرسالة تُعلم قارئاً مسجلاً بأن مدير المجلة قد أنشأ له اشتراكاً، وهي تتضمن رابط المجلة مع تعليمات الوصول إليها.</description>
 	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
-		<subject>Issue Now Open Access</subject>
-		<body><![CDATA[Readers:<br />
+		<subject>صدور عدد مجاني الآن</subject>
+		<body><![CDATA[قراءنا:<br />
 <br />
 {$contextName} قد أصدرت تواً عدداً مجانياً. نحن ندعوك لمراجعة جدول المحتويات هنا، ومن ثم زيارة موقعنا (<a href="{$contextUrl}">{$contextUrl}</a>) لتطلع على المواضيع والفقرات التي تحوز على إهتمامك.<br />
 <br />
