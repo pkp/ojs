@@ -58,25 +58,25 @@ class SubmissionHandler extends APIHandler {
 	function authorize($request, &$args, $roleAssignments) {
 		$routeName = null;
 		$slimRequest = $this->getSlimRequest();
-		
+
 		if (!is_null($slimRequest) && ($route = $slimRequest->getAttribute('route'))) {
 			$routeName = $route->getName();
 		}
-		
+
 		import('lib.pkp.classes.security.authorization.SubmissionAccessPolicy');
 		$this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments));
-		
+
 		if (in_array($routeName, array('getFiles','getParticipants'))) {
 			$stageId = $slimRequest->getQueryParam('stageId', WORKFLOW_STAGE_ID_SUBMISSION);
 			import('lib.pkp.classes.security.authorization.WorkflowStageAccessPolicy');
 			$this->addPolicy(new WorkflowStageAccessPolicy($request, $args, $roleAssignments, 'submissionId', $stageId));
 		}
-		
+
 		if ($routeName == 'getGalleys') {
 			import('lib.pkp.classes.security.authorization.WorkflowStageAccessPolicy');
 			$this->addPolicy(new WorkflowStageAccessPolicy($request, $args, $roleAssignments, 'submissionId', WORKFLOW_STAGE_ID_PRODUCTION));
 		}
-		
+
 		return parent::authorize($request, $args, $roleAssignments);
 	}
 
@@ -86,17 +86,17 @@ class SubmissionHandler extends APIHandler {
 	 * @param $slimRequest Request Slim request object
 	 * @param $response Response object
 	 * @param array $args arguments
-	 * 
+	 *
 	 * @return Response
 	 */
 	public function getFiles($slimRequest, $response, $args) {
 		$request = $this->getRequest();
 		$context = $request->getContext();
 		$data = array();
-		
+
 		$sContainer = ServicesContainer::instance();
 		$submissionService = $sContainer->get('submission');
-		
+
 		try {
 			$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 			$fileStage = $slimRequest->getQueryParam('fileStage');
@@ -138,10 +138,10 @@ class SubmissionHandler extends APIHandler {
 		catch (App\Services\Exceptions\InvalidSubmissionException $e) {
 			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
 		}
-		
+
 		return $response->withJson($data, 200);
 	}
-	
+
 	/**
 	 * Retrieve participant list by stage
 	 *
@@ -155,17 +155,17 @@ class SubmissionHandler extends APIHandler {
 		$request = $this->getRequest();
 		$context = $request->getContext();
 		$data = array();
-	
+
 		$sContainer = ServicesContainer::instance();
 		$submissionService = $sContainer->get('submission');
-	
+
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		$stageId = $slimRequest->getQueryParam('stageId', WORKFLOW_STAGE_ID_SUBMISSION);
 		$data = $submissionService->getParticipantsByStage($context->getId(), $submission, $stageId);
-	
+
 		return $response->withJson($data, 200);
 	}
-	
+
 	/**
 	 * Retrieve galley list
 	 *
@@ -179,10 +179,10 @@ class SubmissionHandler extends APIHandler {
 		$request = $this->getRequest();
 		$context = $request->getContext();
 		$data = array();
-	
+
 		$sContainer = ServicesContainer::instance();
 		$submissionService = $sContainer->get('submission');
-	
+
 		try {
 			$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 			$data = $submissionService->getGalleys($context->getId(), $submission);
@@ -190,7 +190,7 @@ class SubmissionHandler extends APIHandler {
 		catch (App\Services\Exceptions\SubmissionStageNotValidException $e) {
 			return $response->withStatus(400)->withJsonError('api.submissions.400.stageNotValid');
 		}
-	
+
 		return $response->withJson($data, 200);
 	}
 
