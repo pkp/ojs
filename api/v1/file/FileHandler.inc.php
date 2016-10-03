@@ -16,7 +16,7 @@
 
 use \Slim\App;
 
-class FileHandler {
+class FileHandler extends Handler {
 	protected $container;
 
 	/**
