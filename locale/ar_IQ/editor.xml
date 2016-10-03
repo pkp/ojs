@@ -23,7 +23,7 @@
 	<message key="editor.allEditors">كل أعضاء هيئة التحرير</message>
 	<message key="editor.me">أنا</message>
 	<message key="editor.publicIdentificationExists">المعرَّف العام '{$publicIdentifier}' موجود مسبقاً لشيء آخر (قضية، مقالة، كيان أو ملف تكميلي). لطفاً، إختر معرَّفاً فريداً لمكونات مجلتك</message>
-       <message key="editor.submissionArchive.noSubmissions">لا توجد طلبات للنشر في الأرشيف</message>
+	<message key="editor.submissionArchive.noSubmissions">لا توجد طلبات للنشر في الأرشيف</message>
 	<message key="editor.submissionArchive.saveChanges">هل تريد حفظ التعديلات على طلبات النشر المحفوظة؟ الطلبات المؤشر عليها بأن تحذف ستحذف نهائياً من النظام</message>
 	<message key="editor.submissionArchive.confirmDelete">هل أنت متأكد من رغبتك في حذف طلب النشر هذا نهائياً؟</message>
 	<message key="editor.submissionReview.confirmDecision">هل أنت متأكد من رغبتك في تسجيل هذا القرار؟</message>
@@ -43,14 +43,14 @@
 	<message key="editor.notifyUsers.includeToc">ضمِّن جدول المحتويات لهذا العدد:</message>
 	<message key="editor.editorAdministration">إدارة هيئة التحرير</message>
 	<message key="editor.issues.createIssue">أنشئ عدداً</message>
-	<message key="editor.issues.backIssues">الأعداد السابقة</message>
-	<message key="editor.issues.futureIssues">الأعداد المستقبلية</message>
+	<message key="editor.issues.editIssue">إدارة العدد: {$issueIdentification}</message>
 	<message key="editor.issues.currentIssue">العدد الحالي</message>
 	<message key="editor.issues.numArticles">الفقرات</message>
 	<message key="editor.issues.noArticles">لا توجد فقرات مجدولة حالياً لهذا العدد</message>
 	<message key="editor.issues.confirmDelete">هل أنت متأكد من رغبتك في حذف هذا العدد نهائياً؟</message>
 	<message key="editor.issues.published">منشورة</message>
 	<message key="editor.issues.unpublished">غير منشورة</message>
+	<message key="editor.issues.datePublished">تاريخ النشر</message>
 	<message key="editor.issues.volumeRequired">رقم المجلد مطلوب حتماً، ويجب أن يكون رقماً موجباً</message>
 	<message key="editor.issues.numberRequired">رقم العدد مطلوب حتماً، ويجب أن يكون رقماً موجباً</message>
 	<message key="editor.issues.yearRequired">السنة مطلوبة حتماً، ويجب أن تكون رقماً موجباً</message>
@@ -60,7 +60,7 @@
 	<message key="editor.issues.publicIssueIdentifier">معرَّف العدد العام</message>
 	<message key="editor.issues.description">الوصف</message>
 	<message key="editor.issues.accessStatus">موقف الوصول</message>
-       <message key="editor.issues.accessDate">تاريخ الوصول المفتوح</message>
+	<message key="editor.issues.accessDate">تاريخ الوصول المفتوح</message>
 	<message key="editor.issues.enableOpenAccessDate">مكن تأخير الوصول المفتوح</message>
 	<message key="editor.issues.coverPage">صورة الغلاف</message>
 	<message key="editor.issues.coverPageInstructions">(الصيغ المتاحة: .gif, .jpg, or .png )</message>
@@ -68,15 +68,15 @@
 	<message key="editor.issues.remove">إزالة</message>
 	<message key="editor.issues.proofed">مدقق</message>
 	<message key="editor.issues.removeCoverPage">أتريد إزالة صورة صفحة الغلاف؟</message>
-	<message key="editor.issues.invalidCoverPageFormat">صيغة ملف صورة الغلاف غير مدعومة. الصيغ المدعومة هي: .gif, .jpg, or .png.</message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">إن صورة الغلاف التي تريد حذفها لا تطابق صورة غلاف هذا العدد. لطفاً، قم بتنشيط الصفحة ثم حاول مجدداً.</message>
+	<message key="editor.issues.removeCoverImageFileNotFound">تعذر العثور على صورة الغلاف التي تريد حذفها. قد تكون محذوفة سلفاً. حاول إعادة تحميل الصفحة.</message>
+	<message key="editor.issues.invalidCoverImageFormat">صيغة ملف صورة الغلاف غير مدعومة. الصيغ المدعومة هي: .gif, .jpg, or .png.</message>
 	<message key="editor.issues.styleFile">ورقة أنماط</message>
 	<message key="editor.issues.invalidStyleFormat">صيغة ورقة الأنماط غير صحيحة. تأكد من أن ملف ورقة الأنماط بصيغة CSS صحيحة. (خذ بنظر الإعتبار أن ملف ورقة الأنماط الذي يبدأ بسطر ملاحظات قد يتم اعتباره خاطئاً ومرفوضاً)</message>
 	<message key="editor.issues.removeStyleFile">أتريد إزالة ورقة الأنماط؟</message>
 	<message key="editor.issues.coverPageCaption">تسمية الغلاف</message>
 	<message key="editor.issues.showCoverPage">أنشئ غلافاً لهذا العدد مستعملاً العناصر الآتية</message>
 	<message key="editor.issues.coverPageDisplay">العرض</message>
-	<message key="editor.issues.hideCoverPageArchives">لا تعرض مصغر صورة الغلاف في قائمة الأعداد</message>
-	<message key="editor.issues.hideCoverPageCover">لا تعرض صورة الغلاف قبل جدول المحتويات</message>
 	<message key="editor.issues.openAccess">الوصول المفتوح</message>
 	<message key="editor.issues.subscription">الاشتراك</message>
 	<message key="editor.issues.identification">التعريف</message>
@@ -111,7 +111,14 @@
 	<message key="editor.issues.backToIssueGalleys">العودة إلى تنضيدات العدد</message>
 	<message key="editor.issues.viewingGalley">معاينة تنضيد العدد</message>
 	<message key="editor.issues.confirmDeleteGalley">هل أنت متأكد من رغبتك في حذف هذا التنضيد؟</message>
+	<message key="editor.issues.identifiers">المعرفات</message>
 	<message key="editor.navigation.futureIssues">الأعداد القادمة</message>
+	<message key="grid.action.addGalley">أضف لوحاً طباعياً</message>
+	<message key="grid.action.publish">أنشر العدد</message>
+	<message key="grid.action.addIssue">أنشئ عدداً</message>
+	<message key="grid.action.viewIssue">معاينة</message>
+	<message key="grid.action.previewIssue">معاينة</message>
+	<message key="grid.action.addIssueGalley">أنشئ اللوح الطباعي للعدد</message>
 	<message key="editor.navigation.issueArchive">الأعداد السابقة</message>
 	<message key="editor.article.designateReviewVersion">إعتبر الملف الأصلي بمثابة النسخة المنقحة أو المحكمة</message>
 	<message key="editor.article.uploadReviewVersion">إرفع نسخة معدة للتحكيم</message>
@@ -195,6 +202,7 @@
 	<message key="editor.submissions.lastCompleted">آخر المكتمل</message>
 	<message key="editor.submissions.assignedTo">معين إلى</message>
 	<message key="editor.submissions.inSection">في قسم</message>
+	<message key="editor.article.schedulePublication">جدوله للنشر</message>
 	<message key="editor.article.scheduleForPublication">جدوله للنشر في</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">ليتم تعيينه</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">لم يتم دفع رسم النشر. لجدولة الفقرة لغرض النشر، أشعر المؤلف بدفع الرسم أو أخصمه له</message>
@@ -204,14 +212,17 @@
 	<message key="editor.article.hideTocAuthorHide">أسقط</message>
 	<message key="editor.article.hideTocAuthorShow">إعرض</message>
 	<message key="editor.article.cover">الغلاف</message>
-	<message key="editor.article.showCoverPage">أنشئ غلافاً لهذا المؤلَّف بواسطة العناصر الآتية</message>
-	<message key="editor.article.coverImageDisplay">إعرض</message>
-	<message key="editor.article.hideCoverPageToc">لا تعرض مصغر صورة الغلاف ضمن جدول المحتويات</message>
-	<message key="editor.article.hideCoverPageAbstract">لا تعرض صورة الغلاف ضمن نافذة استعراض ملخصات المؤلفات</message>
 	<message key="editor.article.coverImage">صورة الغلاف</message>
-	<message key="editor.article.coverImageInstructions">(الصيغ المتاحة: .gif, .jpg, or .png )</message>
+	<message key="editor.article.removeCoverImageFileNotFound">تعذر العثور على صورة الغلاف التي تريد حذفها. قد تكون محذوفة سلفاً. حاول إعادة تحميل الصفحة.</message>
 	<message key="editor.article.uploaded">مرفوعة إلى الموقع</message>
 	<message key="editor.article.removeCoverPage">أتريد إزالة صورة الغلاف؟</message>
+	<message key="grid.action.removeArticle">إزالة المقالة من هذا العدد</message>
 	<message key="editor.article.remove">أزلها</message>
+	<message key="editor.article.remove.confirm">هل أنت متأكد من رغبتك في إزالة هذه المقالة من العدد؟ ستكون المقالة متاحة للجدولة في عدد آخر.</message>
 	<message key="editor.issues.invalidAccessDate">تاريخ الوصول غير صحيح</message>
+	<message key="editor.issues.editIssueGalley">تعديل اللوح الطباعي للعدد</message>
+	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[يقوم المصمم الطباعي بتحضير هذه الملفات لكل لوح طباعي ومن ثم يرفعها إلى <span class="pkp_help_title">التصحيحات</span> المناسبة من أجل القراءة التصحيحية.]]></message>
+	<message key="editor.submission.selectGalleyFiles">إختر ملفات اللوح الطباعي</message>
+	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[الملفات المسودة النهائية ضمن هذه القائمة يتم تحويلها من قبل المدقق إلى نسخ مدققة، يتم رفعها أدناه ضمن باب <span class="pkp_help_title">التدقيق</span>.]]></message>
+	<message key="editor.submission.proof.manageProofFilesDescription">أي ملفات سبق رفعها إلى أي مرحلة من مراحل طلب النشر يمكن إضافتها إلى قائمة القراءة التصحيحية عبر تأشير خانة تضمين الملفات أدناه ومن ثم النقر على زر البحث. كل الملفات المتاحة سيتم عرضها وستكون جاهزة لهذا الغرض.</message>
 </locale>
