@@ -25,8 +25,8 @@ class SubmissionHandler extends APIHandler {
 		$app = $this->getApp();
 		$app->get('/{contextPath}/api/{version}/submissions/{submissionId}/files/{fileId}', array($this, 'getFile'));
 		$app->get('/{contextPath}/api/{version}/submissions/{submissionId}', array($this, 'submissionMetadata'));
-
 		$this->addRoleAssignment(
+
 			array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_REVIEWER, ROLE_ID_AUTHOR),
 			array('getFile', 'submissionMetadata')
 		);
@@ -97,9 +97,22 @@ class SubmissionHandler extends APIHandler {
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		assert($submission);
 
+		$format = $slimRequest->getQueryParams()['format'];
 		import('plugins.metadata.dc11.schema.Dc11Schema');
+		if ($format == 'dc11' || $format == '') {
+			$schema = new Dc11Schema();
+			return $this->getMetadaJSON($submission, $schema);
+		}
+		import('plugins.metadata.mods34.schema.Mods34Schema');
+		if ($format == 'mods34') {
+			$schema = new Mods34Schema();
+			return $this->getMetadaJSON($submission, $schema);
+		}
+	}
+
+	function getMetadaJSON($submission, $schema) {
 		$metadata = array();
-		$dcDescription = $submission->extractMetadata(new Dc11Schema());
+		$dcDescription = $submission->extractMetadata($schema);
 		foreach ($dcDescription->getProperties() as $propertyName => $property) {
 			if ($dcDescription->hasStatement($propertyName)) {
 				if ($property->getTranslated()) {
