@@ -76,7 +76,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		$section = $oaiDao->getSection($article->getSectionId());
 		if (is_a($article, 'PublishedArticle')) { /* @var $article PublishedArticle */
 			$issue = $oaiDao->getIssue($article->getIssueId());
-		}
+		} else $issue = null;
 
 		$dc11Description = $this->instantiateMetadataDescription();
 
