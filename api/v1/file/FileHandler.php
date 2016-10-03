@@ -1,6 +1,6 @@
 <?php 
 
-$app->get('/{contextPath}/api/{version}/file/{fileId}', '\FileHandler:getFile');
+
 
 class FileHandler {
 	protected $ci;
