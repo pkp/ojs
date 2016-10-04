@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/thesis/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * ملخصات الأطاريح plugin localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+
+	<!-- Thesis Abstract Management -->
+	<message key="plugins.generic.thesis.manager.settings">الإعدادات</message>
+	<message key="plugins.generic.thesis.manager.theses">ملخصات الأطاريح</message>
+	<message key="plugins.generic.thesis.manager.status">الحالة</message>
+	<message key="plugins.generic.thesis.manager.status.inactive">غير نشط</message>
+	<message key="plugins.generic.thesis.manager.status.active">نشط</message>
+	<message key="plugins.generic.thesis.manager.degree">درجة</message>
+	<message key="plugins.generic.thesis.manager.degree.masters">الماجستير</message>
+	<message key="plugins.generic.thesis.manager.degree.doctorate">الدكتوراه</message>
+	<message key="plugins.generic.thesis.manager.dateApproved">تأريخ الموافقة</message>
+	<message key="plugins.generic.thesis.manager.studentName">اسم الطالب</message>
+	<message key="plugins.generic.thesis.manager.title">العنوان</message>
+	<message key="plugins.generic.thesis.manager.keyword">الكلمة المفتاحية</message>
+	<message key="plugins.generic.thesis.manager.studentFirstName">الاسم الأول</message>
+	<message key="plugins.generic.thesis.manager.studentLastName">الاسم الأخير</message>
+	<message key="plugins.generic.thesis.manager.studentEmail">البريد الالكتروني</message>
+	<message key="plugins.generic.thesis.manager.department">القسم</message>
+	<message key="plugins.generic.thesis.manager.university">الجامعة</message>
+	<message key="plugins.generic.thesis.manager.abstract">الملخص</message>
+	<message key="plugins.generic.thesis.manager.confirmDelete">هل أنت متأكد من رغبتك في حذف ملخص هذه الأطروحة نهائياً؟</message>
+	<message key="plugins.generic.thesis.manager.noneCreated">لا ملخصات أطاريح</message>
+	<message key="plugins.generic.thesis.manager.noResults">لا نتائج</message>
+	<message key="plugins.generic.thesis.manager.create">إنشاء ملخص أطروحة جديد</message>
+	<message key="plugins.generic.thesis.manager.createTitle">إنشاء</message>
+	<message key="plugins.generic.thesis.manager.edit">تعديل ملخص الأطروحة</message>
+	<message key="plugins.generic.thesis.manager.editTitle">تعديل</message>
+	<message key="plugins.generic.thesis.manager.form.status">الحالة</message>
+	<message key="plugins.generic.thesis.manager.form.statusRequired">حالة ملخص الأطروحة مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.manager.form.statusValid">لطفاً، إختر حالة صحيحة.</message>
+	<message key="plugins.generic.thesis.manager.form.degree">الدرجة</message>
+	<message key="plugins.generic.thesis.manager.form.degreeRequired">درجة الأطروحة مطلوبة حتماً.</message>
+	<message key="plugins.generic.thesis.manager.form.degreeValid">لطفاً، إختر درجة صحيحة.</message>
+	<message key="plugins.generic.thesis.manager.form.degreeName">اسم الدرجة</message>
+	<message key="plugins.generic.thesis.manager.form.degreeNameRequired">مسمى الدرجة مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.manager.form.degreeNameInstructions">اسم الدرجة العلمية (مثل: الماجستير في الآداب، الدكتوراه في الفلسفة... إلخ.).</message>
+	<message key="plugins.generic.thesis.manager.form.department">القسم</message>
+	<message key="plugins.generic.thesis.manager.form.departmentRequired">اسم القسم مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.manager.form.university">الجامعة</message>
+	<message key="plugins.generic.thesis.manager.form.universityRequired">اسم الجامعة مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.manager.form.dateApproved">تأريخ القبول</message>
+	<message key="plugins.generic.thesis.manager.form.dateApprovedRequired">تأريخ القبول مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.manager.form.dateApprovedValid">لطفاً، إختر تأريخاً صحيحاً للقبول.</message>
+	<message key="plugins.generic.thesis.manager.form.title">العنوان</message>
+	<message key="plugins.generic.thesis.manager.form.titleRequired">عنوان الأطروحة مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.manager.form.comment">التعليقات</message>
+	<message key="plugins.generic.thesis.manager.form.author">المؤلف والمشرف</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailPublish">أنشر عنوان البريد الالكتروني للطالب</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailPublishInstructions">لو تم تأشيره، فإن عنوان البريد الالكتروني للطالب سيتم نشره مع ملخص الأطروحة.</message>
+	<message key="plugins.generic.thesis.manager.form.studentBio">بيان سيرة الطالب</message>
+	<message key="plugins.generic.thesis.manager.form.studentBioInstructions"><![CDATA[أدرج أسطراً فارغة لفصل الفقرات عن بعضها. ضع النص بين علامات &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, و &lt;u&gt;&lt;/u&gt; لتضخيمه، إمالته، وضع خط تحته، على التوالي (مثل: هذه &lt;i&gt;الكلمة&lt;/i&gt; ستكون بحروف مائلة.)]]></message>
+	<message key="plugins.generic.thesis.manager.form.indexing">الفهرسة</message>
+	<message key="plugins.generic.thesis.manager.form.indexingDescription">إختر أفضل التعابير التي تصف بها محتويات الأطروحة متبعاً الفئات المستعملة من قبل هذه المجلة. إفصل بين العبارات بفوارز منقوطة (إنجليزية) مثل: (عبارة 1; عبارة 2; عبارة 3).</message>
+	<message key="plugins.generic.thesis.manager.form.discipline">التخصصات الأكاديمية والتخصصات الفرعية</message>
+	<message key="plugins.generic.thesis.manager.form.subjectClass">تصنيفات المواضيع</message>
+	<message key="plugins.generic.thesis.manager.form.keyword">الكلمات المفتاحية</message>
+	<message key="plugins.generic.thesis.manager.form.coverageGeo">التغطية المكانية</message>
+	<message key="plugins.generic.thesis.manager.form.coverageChron">التغطية الزمانية أو التأريخية</message>
+	<message key="plugins.generic.thesis.manager.form.coverageSample">خصائص عينات البحث</message>
+	<message key="plugins.generic.thesis.manager.form.method">النوع، الطريقة، المنهج</message>
+	<message key="plugins.generic.thesis.manager.form.language">اللغة</message>
+	<message key="plugins.generic.thesis.manager.form.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">رموز إضافية</a>.]]></message>
+	<message key="plugins.generic.thesis.manager.form.urlPrefixIncluded">لطفاً، أذكر رابط الإنترنت الكامل، متضمناً http:// أو ftp:// في بدايته.</message>
+	<message key="plugins.generic.thesis.manager.form.abstract">الملخص</message>
+	<message key="plugins.generic.thesis.manager.form.abstractRequired">ملخص الأطروحة مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.manager.form.abstractInstructions"><![CDATA[أدرج أسطراً فارغة لفصل الفقرات عن بعضها. ضع النص بين علامات &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, و &lt;u&gt;&lt;/u&gt; لتضخيمه، إمالته، وضع خط تحته، على التوالي (مثل: هذه &lt;i&gt;الكلمة&lt;/i&gt; ستكون بحروف مائلة.)]]></message>
+	<message key="plugins.generic.thesis.manager.form.url">رابط الإنترنت</message>
+	<message key="plugins.generic.thesis.manager.form.urlInstructions">إن كانت الأطروحة منشورة على الإنترنت، أذكر http://، ftp://، إلخ. في مقدمة الرابط  (مثل: http://www.sfu.ca/path/to/thesis.pdf).</message>
+	<message key="plugins.generic.thesis.manager.form.studentFirstName">الاسم الأول للطالب</message>
+	<message key="plugins.generic.thesis.manager.form.studentFirstNameRequired">الاسم الأول للطالب مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.manager.form.studentLastName">الاسم الأخير للطالب</message>
+	<message key="plugins.generic.thesis.manager.form.studentLastNameRequired">الاسم الأخير للطالب مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.manager.form.studentMiddleName">الاسم الأوسط للطالب</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmail">البريد الالكتروني للطالب</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailValid">عنوان البريد الالكتروني الصحيح للطالب مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorFirstName">الاسم الأول للمشرف</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorFirstNameRequired">الاسم الأول للمشرف مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorLastName">الاسم الأخير للمشرف</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorLastNameRequired">الاسم الأخير للمشرف مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorMiddleName">الاسم الأوسط للمشرف</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorEmail">البريد الالكتروني للمشرف</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorEmailValid">عنوان البريد الالكتروني الصحيح للمشرف مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.manager.form.saveAndCreateAnother">إحفظ وأنشئ واحداً آخر</message>
+
+	<!-- Thesis Abstract Settings Management -->
+	<message key="plugins.generic.thesis.settings.description"><![CDATA[<p>مع تمكين هذه الإضافة، يمكن للطلبة تقديم ملخصات أطاريحهم إلى المجلة مستعملين نموذج تقديم على الإنترنت.</p><p>عند التقديم، المشرف الرئيسي على الأطروحة سيتم إشعاره تلقائياً عبر البريد الالكتروني عن ملخص الأطروحة، وسيُطلب منه تأكيد دقة المعلومات المقدمة عبر إرسال إجابة بالبريد الالكتروني إلى عنوان الاتصال الخاص بملخص الأطروحة المذكور أدناه، والذي يتطلب الأمر أن يكون رئيس تحرير المجلة. بمجرد وصول هذا التأكيد، يمكن للشخص المعني بملخص الأطروحة تفعيل تقديم الملخص عبر تعديل سجلها الخاص، وتغيير حالتها من 'غير نشط' إلى 'نشط'. عندها، سيكون ملخص الأطروحة متاحاً لقراء المجلة.</p>]]></message>
+	<message key="plugins.generic.thesis.settings.thesisContact">عنوان اتصال ملخص الأطروحة</message>
+	<message key="plugins.generic.thesis.settings.submissions">التقديمات</message>
+	<message key="plugins.generic.thesis.settings.uploadCode">استعمل رمز الرفع الآتي لتقديمات القسم:</message>
+	<message key="plugins.generic.thesis.settings.uploadCodeDescription">يمكن توزيع رموز الرفع (سلسلة من الحروف أو الأرقام) على الأقسام التي ترغب برفع ملخصات الأطاريح نيابة عن الطلبة. عند تقديم رمز الرفع من قبل القسم، فإن رسالة البريد الالكتروني التلقائية لن يتم إرسالها إلى المشرف للتحقق من الطلب.</message>
+	<message key="plugins.generic.thesis.settings.uploadCodeRequired">لطفاً، أدخل رمز الرفع.</message>
+	<message key="plugins.generic.thesis.settings.publishing">يتم النشر</message>
+	<message key="plugins.generic.thesis.settings.order">ترتيب النشر</message>
+	<message key="plugins.generic.thesis.settings.order.submissionDateAsc">تأريخ التقديم (تصاعدياً)</message>
+	<message key="plugins.generic.thesis.settings.order.submissionDateDesc">تأريخ التقديم (تنازلياً)</message>
+	<message key="plugins.generic.thesis.settings.order.approvalDateAsc">تأريخ القبول (تصاعدياً)</message>
+	<message key="plugins.generic.thesis.settings.order.approvalDateDesc">تأريخ القبول (تنازلياً)</message>
+	<message key="plugins.generic.thesis.settings.order.lastNameAsc">الاسم الأخير للطالب (تصاعدياً)</message>
+	<message key="plugins.generic.thesis.settings.order.lastNameDesc">الاسم الأخير للطالب (تنازلياً)</message>
+	<message key="plugins.generic.thesis.settings.order.titleAsc">العنوان (تصاعدياً)</message>
+	<message key="plugins.generic.thesis.settings.order.titleDesc">العنوان (تنازلياً)</message>
+	<message key="plugins.generic.thesis.settings.thesisIntroduction">عبارة المقدمة</message>
+	<message key="plugins.generic.thesis.settings.thesisIntroductionDescription">عبارة المقدمة التي ستظهر في أعلى صفحة ملخص الأطروحة.</message>
+	<message key="plugins.generic.thesis.settings.thesisNameRequired">لا بد من تحديد عنوان اتصال ملخص الأطروحة.</message>
+	<message key="plugins.generic.thesis.settings.thesisEmailRequired">لا بد من تحديد عنوان البريد الالكتروني للشخص المعني بالاتصال حول ملخص الأطروحة.</message>
+	<message key="plugins.generic.thesis.settings.thesisOrderValid">لطفاً، إختر ترتيب نشر صحيح.</message>
+
+	<!-- ملخصات الأطاريح -->
+	<message key="plugins.generic.thesis.displayName">ملخصات الأطاريح</message>
+	<message key="plugins.generic.thesis.description">إطلع على ملخصات الأطاريح وانشرها.</message>
+	<message key="plugins.generic.thesis.searchLink">إبحث في ملخصات الأطاريح</message>
+	<message key="plugins.generic.thesis.theses">ملخصات الأطاريح</message>
+	<message key="plugins.generic.thesis.headerLink"><![CDATA[ملخصات الأطاريح]]></message>
+	<message key="plugins.generic.thesis.submit">تقديم ملخص أطروحة</message>
+	<message key="plugins.generic.thesis.submitLink">تقديم ملخص أطروحة</message>
+	<message key="plugins.generic.thesis.submitButton">تقديم</message>
+	<message key="plugins.generic.thesis.view">الملخص</message>
+	<message key="plugins.generic.thesis.viewTitle">الملخص</message>
+	<message key="plugins.generic.thesis.noneExist">لا ملخصات أطاريح</message>
+	<message key="plugins.generic.thesis.noResults">لا نتائج</message>
+	<message key="plugins.generic.thesis.title">العنوان</message>
+	<message key="plugins.generic.thesis.keyword">الكلمة المفتاحية</message>
+	<message key="plugins.generic.thesis.studentFirstName">الاسم الأول</message>
+	<message key="plugins.generic.thesis.studentLastName">الاسم الأخير</message>
+	<message key="plugins.generic.thesis.department">القسم</message>
+	<message key="plugins.generic.thesis.university">الجامعة</message>
+	<message key="plugins.generic.thesis.abstract">الملخص</message>
+	<message key="plugins.generic.thesis.fullText">النص الكامل (موقع خارجي)</message>
+	<message key="plugins.generic.thesis.studentFullNameLast">{$lastName}, {$firstName}{$space}{$middleName}</message>
+	<message key="plugins.generic.thesis.studentFullName">{$firstName} {$middleName}{$space}{$lastName}</message>
+	<message key="plugins.generic.thesis.supervisorFullNameLast">{$lastName}، {$firstName}{$space}{$middleName}</message>
+	<message key="plugins.generic.thesis.supervisorFullName">{$firstName} {$middleName}{$space}{$lastName}</message>
+	<message key="plugins.generic.thesis.form.introduction">عند تقديم النموذج الآتي، سيتم إشعار مشرف الأطروحة عبر البريد الالكتروني ويُطلب منه تأكيد دقة معلومات التقديم. بمجرد وصول هذا التأكيد إلى المجلة، سيتم نشر ملخص الأطروحة على الإنترنت.</message>
+	<message key="plugins.generic.thesis.form.status">الحالة</message>
+	<message key="plugins.generic.thesis.form.statusValid">لطفاً، إختر حالة صحيحة.</message>
+	<message key="plugins.generic.thesis.form.degree">الدرجة</message>
+	<message key="plugins.generic.thesis.form.degreeRequired">درجة الأطروحة مطلوبة حتماً.</message>
+	<message key="plugins.generic.thesis.form.degreeValid">لطفاً، إختر درجة صحيحة.</message>
+	<message key="plugins.generic.thesis.form.degreeName">اسم الدرجة</message>
+	<message key="plugins.generic.thesis.form.degreeNameRequired">مسمى درجة الأطروحة مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.form.degreeNameInstructions">اسم الدرجة العلمية (مثل: الماجستير في الآداب، الدكتوراه في الفلسفة... إلخ.).</message>
+	<message key="plugins.generic.thesis.form.department">القسم</message>
+	<message key="plugins.generic.thesis.form.departmentRequired">اسم القسم مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.form.university">الجامعة</message>
+	<message key="plugins.generic.thesis.form.universityRequired">اسم الجامعة مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.form.dateApproved">تأريخ القبول</message>
+	<message key="plugins.generic.thesis.form.dateApprovedRequired">تأريخ القبول مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.form.dateApprovedValid">لطفاً، إختر تأريخاً صحيحاً للقبول.</message>
+	<message key="plugins.generic.thesis.form.title">العنوان</message>
+	<message key="plugins.generic.thesis.form.titleRequired">عنوان الأطروحة مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.form.comment">التعليقات</message>
+	<message key="plugins.generic.thesis.form.commentInstructions">لطفاً، أدرج أي تعليقات إضافية قد تكون متعلقة بطلبك هذا.</message>
+	<message key="plugins.generic.thesis.form.author">المؤلف والإشراف</message>
+	<message key="plugins.generic.thesis.form.studentBio">بيان سيرة الطالب</message>
+	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[أدرج أسطراً فارغة لفصل الفقرات عن بعضها. ضع النص بين علامات &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, و &lt;u&gt;&lt;/u&gt; لتضخيمه، إمالته، وضع خط تحته، على التوالي (مثل: هذه &lt;i&gt;الكلمة&lt;/i&gt; ستكون بحروف مائلة.)]]></message>
+	<message key="plugins.generic.thesis.form.indexing">الفهرسة</message>
+	<message key="plugins.generic.thesis.form.indexingDescription">إختر أفضل التعابير التي تصف بها محتويات الأطروحة متبعاً الفئات المستعملة من قبل هذه المجلة. إفصل بين العبارات بفوارز منقوطة (إنجليزية) مثل: (عبارة 1; عبارة 2; عبارة 3).</message>
+	<message key="plugins.generic.thesis.form.discipline">التخصصات الأكاديمية والتخصصات الفرعية</message>
+	<message key="plugins.generic.thesis.form.subjectClass">تصنيفات المواضيع</message>
+	<message key="plugins.generic.thesis.form.keyword">الكلمات المفتاحية</message>
+	<message key="plugins.generic.thesis.form.coverageGeo">التغطية المكانية</message>
+	<message key="plugins.generic.thesis.form.coverageChron">التغطية الزمانية أو التأريخية</message>
+	<message key="plugins.generic.thesis.form.coverageSample">خصائص عينات البحث</message>
+	<message key="plugins.generic.thesis.form.method">النوع، الطريقة، المنهج</message>
+	<message key="plugins.generic.thesis.form.language">اللغة</message>
+	<message key="plugins.generic.thesis.form.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">رموز إضافية</a>.]]></message>
+	<message key="plugins.generic.thesis.form.urlPrefixIncluded">لطفاً، أذكر رابط الإنترنت الكامل، متضمناً http:// أو ftp:// في بدايته.</message>
+	<message key="plugins.generic.thesis.form.abstract">الملخص</message>
+	<message key="plugins.generic.thesis.form.abstractRequired">ملخص الأطروحة مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.form.abstractInstructions"><![CDATA[أدرج أسطراً فارغة لفصل الفقرات عن بعضها. ضع النص بين علامات &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, و &lt;u&gt;&lt;/u&gt; لتضخيمه، إمالته، وضع خط تحته، على التوالي (مثل: هذه &lt;i&gt;الكلمة&lt;/i&gt; ستكون بحروف مائلة.)]]></message>
+	<message key="plugins.generic.thesis.form.url">رابط الإنترنت</message>
+	<message key="plugins.generic.thesis.form.urlInstructions">إن كانت الأطروحة منشورة على الإنترنت، أذكر http://، ftp://، إلخ. في مقدمة الرابط  (مثل: http://www.sfu.ca/path/to/thesis.pdf).</message>
+	<message key="plugins.generic.thesis.form.uploadCode">رمز الرفع</message>
+	<message key="plugins.generic.thesis.form.uploadCodeInstructions">للاستعمال من قبل القسم حصراً.</message>
+	<message key="plugins.generic.thesis.form.studentFirstName">الاسم الأول للطالب</message>
+	<message key="plugins.generic.thesis.form.studentFirstNameRequired">الاسم الأول للطالب مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.form.studentLastName">الاسم الأخير للطالب</message>
+	<message key="plugins.generic.thesis.form.studentLastNameRequired">الاسم الأخير للطالب مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.form.studentMiddleName">الاسم الأوسط للطالب</message>
+	<message key="plugins.generic.thesis.form.studentEmail">البريد الالكتروني للطالب</message>
+	<message key="plugins.generic.thesis.form.studentEmailValid">عنوان البريد الالكتروني الصحيح للطالب مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.form.studentEmailPublish">أنشر عنوان البريد الالكتروني للطالب</message>
+	<message key="plugins.generic.thesis.form.studentEmailPublishInstructions">لو تم تأشيره، فإن عنوان البريد الالكتروني للطالب سيتم نشره مع ملخص الأطروحة.</message>
+	<message key="plugins.generic.thesis.form.supervisorFirstName">الاسم الأول للمشرف</message>
+	<message key="plugins.generic.thesis.form.supervisorFirstNameRequired">الاسم الأول للمشرف مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.form.supervisorLastName">الاسم الأخير للمشرف</message>
+	<message key="plugins.generic.thesis.form.supervisorLastNameRequired">الاسم الأخير للمشرف مطلوب حتماً.</message>
+	<message key="plugins.generic.thesis.form.supervisorMiddleName">الاسم الأوسط للمشرف</message>
+	<message key="plugins.generic.thesis.form.supervisorEmail">البريد الالكتروني للمشرف</message>
+	<message key="plugins.generic.thesis.form.supervisorEmailValid">عنوان البريد الالكتروني الصحيح للمشرف مطلوب حتماً.</message>
+
+</locale>

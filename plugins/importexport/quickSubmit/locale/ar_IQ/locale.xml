@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/quickSubmit/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.importexport.quickSubmit.addToExisting">الإضافة إلى عدد موجود في المجلة:</message>
+	<message key="plugins.importexport.quickSubmit.chooseDestination">وجهة التقديم</message>
+	<message key="plugins.importexport.quickSubmit.chooseDestinationDescription">تخير بين إضافة طلبات نشر جديدة إلى عدد موجود، أو تركها في طابور التحرير.</message>
+	<message key="plugins.importexport.quickSubmit.displayName">إضافة QuickSubmit</message>
+	<message key="plugins.importexport.quickSubmit.description">إضافة التقديم بخطوة واحدة</message>
+	<message key="plugins.importexport.quickSubmit.descriptionLong">هذه الإضافة تتيح لك إضافة طلبات تقديم كاملة بشكل سريع إلى طابور التحرير أو مباشرة إلى أحد أعداد المجلة.</message>
+	<message key="plugins.importexport.quickSubmit.issueRequired">عليك إختيار العدد الذي تريد إضافة المقالة إليه.</message>
+	<message key="plugins.importexport.quickSubmit.leaveUnpublished">أتركه غير منشور</message>
+	<message key="plugins.importexport.quickSubmit.saveAndCreateAnother">إحفظ وأنشئ واحداً آخر</message>
+	<message key="plugins.importexport.quickSubmit.submissionData">بيانات التقديم</message>	
+	<message key="plugins.importexport.quickSubmit.submissionDescription">إختر الملف الذي تريد استعماله بمثابة اللوح الطباعي النهائي لهذا التقديم.</message>	
+	<message key="plugins.importexport.quickSubmit.submissionRequired">عليك رفع ملف ما لهذا التقديم.</message>	
+	<message key="plugins.importexport.quickSubmit.success">تمت إضافة المقالة</message>
+	<message key="plugins.importexport.quickSubmit.successDescription">نجحت عملية إنشاء المقالة.</message>
+	<message key="plugins.importexport.quickSubmit.successReturn">العودة إلى إضافة QuickSubmit.</message>
+</locale>

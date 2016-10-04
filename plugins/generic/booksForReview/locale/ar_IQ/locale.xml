@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/booksForReview/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Books for review plugin localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+
+	<!-- Books For Review Notifications -->
+	<message key="plugins.generic.booksForReview.notification.bookRequested">تم التماس الكتاب. بانتظار تأكيد توفر الكتاب للتحكيم من قبل المحرر.</message>
+	<message key="plugins.generic.booksForReview.notification.bookCreated">تم إنشاء كتاب جديد للتحكيم.</message>
+	<message key="plugins.generic.booksForReview.notification.bookUpdated">تم تحديث كتاب متاح للتحكيم.</message>
+	<message key="plugins.generic.booksForReview.notification.bookMailed">تم تأشير كتاب للتحكيم على أنه مرسل بالبريد الالكتروني.</message>
+	<message key="plugins.generic.booksForReview.notification.bookDeleted">تم حذف كتاب من قائمة ما متاح للتحكيم.</message>
+	<message key="plugins.generic.booksForReview.notification.submissionAssigned">تم تقديم التماس لغرض تحكيم كتاب.</message>
+	<message key="plugins.generic.booksForReview.notification.authorAssigned">تم تعيين أحدهم لغرض تحكيم كتاب.</message>
+	<message key="plugins.generic.booksForReview.notification.authorDenied">تم رفض التماس التحكيم. أُعيد وضع الكتاب للتحكيم حسب حالته الأولى.</message>
+	<message key="plugins.generic.booksForReview.notification.authorRemoved">تمت إزالة أحدهم من مهمة تحكيم كتاب. أُعيد وضع الكتاب للتحكيم حسب حالته الأولى.</message>
+	<message key="plugins.generic.booksForReview.notification.settingsSaved">تم حفظ إعدادات إتاحة الكتاب للتحكيم.</message>
+
+	<!-- Books For Review Management -->
+	<message key="plugins.generic.booksForReview.editor.booksForReview"><![CDATA[كتب للتحكيم]]></message>
+	<message key="plugins.generic.booksForReview.editor.all">الكل</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAll">كتب للتحكيم - الكل</message>
+	<message key="plugins.generic.booksForReview.editor.available">متوفر</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAvailable">كتب للتحكيم - متوفر</message>
+	<message key="plugins.generic.booksForReview.editor.requested">مطلوب</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewRequested">كتب للتحكيم - مطلوب</message>
+	<message key="plugins.generic.booksForReview.editor.assigned">معين</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAssigned">كتب للتحكيم - معين</message>
+	<message key="plugins.generic.booksForReview.editor.mailed">مرسل بالبريد الالكتروني</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewMailed">كتب للتحكيم - مرسل بالبريد الالكتروني</message>
+	<message key="plugins.generic.booksForReview.editor.submitted">مقدم</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewSubmitted">كتب للتحكيم - مقدم</message>
+	<message key="plugins.generic.booksForReview.editor.create">إنشاء كتاب للتحكيم</message>
+	<message key="plugins.generic.booksForReview.editor.createNewUser">إنشاء مستخدم جديد</message>
+	<message key="plugins.generic.booksForReview.editor.editBookForReviewMetadata">تعديل البيانات الوصفية للكتاب</message>
+	<message key="plugins.generic.booksForReview.editor.delete">حذف كتاب للتحكيم</message>
+	<message key="plugins.generic.booksForReview.editor.bookDetails">تفاصيل الكتاب</message>
+	<message key="plugins.generic.booksForReview.editor.notes">ملاحظات إضافية</message>
+	<message key="plugins.generic.booksForReview.editor.notesInstructions">للمحرر فقط. غير منشور كجزء من كتاب للتحكيم.</message>
+	<message key="plugins.generic.booksForReview.editor.title">العنوان</message>
+	<message key="plugins.generic.booksForReview.editor.editor">المحرر</message>
+	<message key="plugins.generic.booksForReview.editor.status">الحالة</message>
+	<message key="plugins.generic.booksForReview.editor.dueDate">تأريخ الاستيجاب</message>
+	<message key="plugins.generic.booksForReview.editor.noMailingAddress">لا يوجد عنوان مراسلة في الملف.</message>
+	<message key="plugins.generic.booksForReview.editor.editSubmission"><![CDATA[تعديل التقديم]]></message>
+	<message key="plugins.generic.booksForReview.editor.confirmDelete">هل أنت متأكد من رغبتك في حذف هذا الكتاب من التحكيم نهائياً؟</message>
+	<message key="plugins.generic.booksForReview.editor.confirmRemove">هل أنت متأكد من رغبتك في حذف هذا المؤلف وإزالة سيرة تحكيم هذا الكتاب؟</message>
+	<message key="plugins.generic.booksForReview.editor.selectSubmission"><![CDATA[إختيار التقديم]]></message>
+	<message key="plugins.generic.booksForReview.editor.select">إختر</message>
+	<message key="plugins.generic.booksForReview.editor.edit">تعديل</message>
+	<message key="plugins.generic.booksForReview.editor.submission">التقديم</message>
+	<message key="plugins.generic.booksForReview.editor.bookReviewer">محكم الكتاب</message>
+	<message key="plugins.generic.booksForReview.editor.assignBookReviewer">تعيين</message>
+	<message key="plugins.generic.booksForReview.editor.removeBookReviewer">إزالة</message>
+	<message key="plugins.generic.booksForReview.editor.acceptBookReviewer">قبول</message>
+	<message key="plugins.generic.booksForReview.editor.denyBookReviewer">رفض</message>
+	<message key="plugins.generic.booksForReview.editor.notifyBookMailed"><![CDATA[الكتب المرسلة بريدياً]]></message>
+	<message key="plugins.generic.booksForReview.editor.noneCreated">لا كتب لتحكيمها</message>
+	<message key="plugins.generic.booksForReview.editor.noResults">لا نتائج</message>
+	<message key="plugins.generic.booksForReview.editor.assignAuthor">تعيين مؤلف</message>
+	<message key="plugins.generic.booksForReview.editor.assign">تعيين</message>
+	<message key="plugins.generic.booksForReview.editor.form.status">الحالة</message>
+	<message key="plugins.generic.booksForReview.editor.form.title">العنوان</message>
+	<message key="plugins.generic.booksForReview.editor.form.addAuthor">إضافة مؤلف</message>
+	<message key="plugins.generic.booksForReview.editor.form.deleteAuthor">حذف</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorType"><![CDATA[نوعية المؤلف]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.copy">تتوافر نسخة</message>
+	<message key="plugins.generic.booksForReview.editor.form.publisher">الناشر</message>
+	<message key="plugins.generic.booksForReview.editor.form.year">السنة</message>
+	<message key="plugins.generic.booksForReview.editor.form.language">اللغة</message>
+	<message key="plugins.generic.booksForReview.editor.form.edition">الطبعة</message>
+	<message key="plugins.generic.booksForReview.editor.form.pages">صفحات</message>
+	<message key="plugins.generic.booksForReview.editor.form.isbn">ISBN</message>
+	<message key="plugins.generic.booksForReview.editor.form.url"><![CDATA[رابط الإنترنت للناشر]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.description">الوصف</message>
+	<message key="plugins.generic.booksForReview.editor.form.notes">الملاحظات</message>
+	<message key="plugins.generic.booksForReview.editor.form.dateRequested"><![CDATA[تأريخ الالتماس]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateAssigned"><![CDATA[تأريخ التعيين]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateMailed"><![CDATA[تأريخ إرساله]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateDue"><![CDATA[تأريخ استيجابه]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateSubmitted"><![CDATA[تأريخ تقديمه]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.user"><![CDATA[محكم الكتاب]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.article">تقديم</message>
+	<message key="plugins.generic.booksForReview.editor.form.saveAndCreateAnother">إحفظ وأنشئ واحداً آخر</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorTypeValid">لطفاً، إختر نوعية مؤلف صحيحة.</message>
+	<message key="plugins.generic.booksForReview.editor.form.publisherRequired">لطفاً، أدخل ناشر هذا الكتاب.</message>
+	<message key="plugins.generic.booksForReview.editor.form.yearRequired">لطفاً، أدخل سنة نشر هذا الكتاب.</message>
+	<message key="plugins.generic.booksForReview.editor.form.yearValid">لطفاً، أدخل سنة النشر الصحيحة.</message>
+	<message key="plugins.generic.booksForReview.editor.form.pagesValid">لطفاً، أدخل عدد الصفحات الصحيح.</message>
+	<message key="plugins.generic.booksForReview.editor.form.urlPrefixIncluded">لطفاً، أدخل رابط إنترنت كامل متضمناً البادئة (مثل: http://).</message>
+	<message key="plugins.generic.booksForReview.editor.form.titleRequired">لطفاً، أدخل عنوان الكتاب.</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorRequiredFields">لطفاً، تأكد من كون الاسم الأول والأخير مذكورين لكل مؤلف.</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPage">صفحة الغلاف</message>
+	<message key="plugins.generic.booksForReview.editor.form.image">الصورة</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPageInstructions">(الصيغ المتاحة هي: .gif، .jpg، أو .png )</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPageUploaded">مرفوع</message>
+	<message key="plugins.generic.booksForReview.editor.form.removeCoverPage">أتريد إزالة صورة الغلاف؟</message>
+	<message key="plugins.generic.booksForReview.editor.form.remove">إزالة</message>
+
+
+	<!-- Books For Review Settings Management -->
+	<message key="plugins.generic.booksForReview.settings">الإعدادات</message>
+	<message key="plugins.generic.booksForReview.booksForReviewSettings">إعدادات الكتب للتحكيم</message>
+	<message key="plugins.generic.booksForReview.settings.description"><![CDATA[<h5>الطريقة 1</h5><p>يتم العمل وفق المخطط الانسيابي الآتي:</p><ul><li>يقوم المحرر بإضافة الكتب المتاحة للتحكيم.</li><li>المؤلفون المهتمون بتحكيم كتاب ما بإمكانهم التماس كتابة التحكيم، عبر إشعار المحرر بذلك.</li><li>بإمكان المحرر قبول الالتماس أو رفضه، عبر إشعار المؤلف.</li><li>إذا تم قبول التماس التحكيم<ul><li>لن يعود الكتاب مدرجاً ضمن قائمة ما هو متاح للتحكيم.</li><li>يتم ضبط تأريخ استيجاب للتحكيم.</li><li>يمكن للمحرر إرسال نسخة من الكتاب إلى المؤلف عبر البريد الالكتروني.</li></ul></li><li>يقدم المؤلف تحكيمه عبر الإنترنت عبر عملية تقديم قياسية.</li><li>بيانات الكتاب الوصفية تُنشر كجزء من تقديم تحكيم الكتاب.</li></ul><p>هذه الإضافة تدعم عمل المجلات ذات أكثر من محرر واحد. عندما يقوم أحد المحررين بإضافة كتاب جديد للتحكيم، يصير تلقائياً المحرر الرئيسي وعنوان الاتصال المعني بتحكيم الكتاب.</p><h5>الطريقة 2</h5><p>يتم العمل وفق المخطط الانسيابي الآتي:</p><ul><li>يضيف المحرر كتباً للتحكيم.</li><li>يطابق المحرر تقديمات التحكيم مع الكتاب المعني.</li><li>بيانات الكتاب الوصفية تُنشر كجزء من تقديم تحكيم الكتاب.</li></ul>]]></message>
+	<message key="plugins.generic.booksForReview.settings.booksForReviewMode">الإدارة</message>
+	<message key="plugins.generic.booksForReview.settings.modeFull">الطريقة 1: إدراج الكتب المتاحة للتحكيم، إدارة محكمي الكتب، ونشر بيانات الكتب الوصفية.</message>
+	<message key="plugins.generic.booksForReview.settings.modeMetadata">الطريقة 2: فقط نشر البيانات الوصفية للكتب.</message>
+	<message key="plugins.generic.booksForReview.settings.booksForReviewDue">مدد تحكيم الكتب</message>
+	<message key="plugins.generic.booksForReview.settings.coverImages">صور الغلاف</message>
+	<message key="plugins.generic.booksForReview.settings.coverPageIssue">إعرض صور أغلفة الكتب لتحكيماتها في جدول محتويات العدد.</message>
+	<message key="plugins.generic.booksForReview.settings.coverPageAbstract">إعرض صور أغلفة الكتب لتحكيماتها في صفحات ملخصات المقالات.</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeks1">التحكيمات المستوجبة</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeks2">أسبوع/أسابيع بعد تعيين الكتاب إلى مؤلف لغرض تحكيمه.</message>
+	<message key="plugins.generic.booksForReview.settings.emailReminders">تذكيرات البريد الالكتروني</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays1">أرسل تذكيراً للمؤلفين عبر البريد الالكتروني</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays2">يوم/أيام قبل تأريخ استيجاب التحكيم.</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays1">أرسل تذكيراً للمؤلفين عبر البريد الالكتروني</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays2">يوم/أيام بعد تأريخ استيجاب التحكيم.</message>
+	<message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>ملاحظة:</strong> لتفعيل هذه الخيارات، على مدير الموقع تمكين خيار <tt>scheduled_tasks</tt> في ملف إعدادات نظام المجلات المفتوحة. قد يتطلب الأمر إجراء إعدادات إضافية في الملقم لدعم هذه الوظيفة (الأمر الذي قد لا يكون ممكناً في جميع الملقمات)، كما هو مشار إليه في أدبيات نظام المجلات المفتوحة.]]></message>
+	<message key="plugins.generic.booksForReview.settings.additionalInformation">معلومات إضافية</message>
+	<message key="plugins.generic.booksForReview.settings.additionalInformationDescription">معلومات إضافية منشورة مع كتب للتحكيم.</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeksRequired">لطفاً، حدد عدد الأسابيع التي تستغرقها مدة تحكيم الكتب عادة.</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeksValid">لطفاً، حدد عدداً صحيحاً من الأسابيع التي تستغرقها مدة تحكيم الكتب.</message>
+	<message key="plugins.generic.booksForReview.settings.numDaysBeforeDueReminderValid">لطفاً، حدد عدداً صحيحاً من الأيام لرسالة التذكير.</message>
+	<message key="plugins.generic.booksForReview.settings.numDaysAfterDueReminderValid">لطفاً، حدد عدداً صحيحاً من الأيام لرسالة التذكير.</message>
+
+	<!-- Books For Review Author -->
+	<message key="plugins.generic.booksForReview.author.title">العنوان</message>
+	<message key="plugins.generic.booksForReview.author.editor">المحرر</message>
+	<message key="plugins.generic.booksForReview.author.status">الحالة</message>
+	<message key="plugins.generic.booksForReview.author.submit">تقديم</message>
+	<message key="plugins.generic.booksForReview.author.dueDate">تأريخ الاستيجاب</message>
+	<message key="plugins.generic.booksForReview.author.noneCreated">لا كتب لتحكيمها</message>
+	<message key="plugins.generic.booksForReview.author.booksForReview">كتاباً متاحاً للتحكيم</message>
+	<message key="plugins.generic.booksForReview.author.myBooksForReview">كتبي</message>
+	<message key="plugins.generic.booksForReview.author.availableBooksForReview">الكتب المتوافرة</message>
+	<message key="plugins.generic.booksForReview.author.requestBookForReview">التمس هذا الكتاب للتحكيم</message>
+	<message key="plugins.generic.booksForReview.author.submitInstructions">لطفاً، حدد فيما إذا كان هذا التقديم هو تحكيم لكتاب ما توليت سابقاً مهمة تحكيمه</message>
+	<message key="plugins.generic.booksForReview.author.requested">مُلتَمَس</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewRequested">كتب للتحكيم - مُلتَمَس</message>
+	<message key="plugins.generic.booksForReview.author.assigned">معين</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewAssigned">كتب للتحكيم - معين</message>
+	<message key="plugins.generic.booksForReview.author.mailed">مرسل بالبريد الالكتروني</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewMailed">كتب للتحكيم - مرسل بالبريد الالكتروني</message>
+	<message key="plugins.generic.booksForReview.author.submitted">مقدم</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewSubmitted">كتب للتحكيم - مقدم</message>
+
+	<!-- كتب للتحكيم Public -->
+	<message key="plugins.generic.booksForReview.public.booksForReview">كتب للتحكيم</message>
+	<message key="plugins.generic.booksForReview.public.booksForReviewInstructions"><![CDATA[<p>لغرض التماس كتاب للتحكيم:</p><ul><li><a href="{$registerUrl}" target="_parent">سجل</a> نفسك كمؤلف في هذه المجلة.</li><li><a href="{$loginAuthorUrl}" target="_parent">أدخل الموقع</a> بصفة مؤلف.</li><li>أنقر على رابط الالتماس المحاذي للكتاب الذي يحوز على اهتمامك.</li></ul>]]></message>
+	<message key="plugins.generic.booksForReview.public.copy">نسخة متوافرة</message>
+	<message key="plugins.generic.booksForReview.public.copyYes">نعم</message>
+	<message key="plugins.generic.booksForReview.public.copyNo">لا</message>
+	<message key="plugins.generic.booksForReview.public.language">اللغة</message>
+	<message key="plugins.generic.booksForReview.public.edition">الطبعة</message>
+	<message key="plugins.generic.booksForReview.public.pages">صفحات</message>
+	<message key="plugins.generic.booksForReview.public.isbn">ISBN</message>
+	<message key="plugins.generic.booksForReview.public.externalSite">الموقع الخارجي</message>
+	<message key="plugins.generic.booksForReview.public.noneCreated">لا كتب متاحة للتحكيم</message>
+	<message key="plugins.generic.booksForReview.public.noResults">لا نتائج</message>
+	<message key="plugins.generic.booksForReview.public.coverPage.altText">صورة صفحة الغلاف</message>
+	<message key="plugins.generic.booksForReview.public.bookDetails">تفاصيل الكتاب</message>
+
+	<!-- Books For Review -->
+	<message key="plugins.generic.booksForReview.reminderTask.name">تذكير كتب للتحكيم</message>
+	<message key="plugins.generic.booksForReview.displayName">كتب للتحكيم</message>
+	<message key="plugins.generic.booksForReview.description">التمس تحكيم الكتب التي تهمك أو المستلمة من الناشرين. إدارة محكمي الكتب، وعملية تحكيمها.</message>
+	<message key="plugins.generic.booksForReview.headerLink"><![CDATA[كتب للتحكيم]]></message>
+	<message key="plugins.generic.booksForReview.status.available">متوافر</message>
+	<message key="plugins.generic.booksForReview.status.requested">ملتمس</message>
+	<message key="plugins.generic.booksForReview.status.assigned">معين</message>
+	<message key="plugins.generic.booksForReview.status.mailed">مرسل بالبريد الالكتروني</message>
+	<message key="plugins.generic.booksForReview.status.submitted">مقدم</message>
+	<message key="plugins.generic.booksForReview.authorType.by">حسب</message>
+	<message key="plugins.generic.booksForReview.authorType.editedBy">محرر من قبل</message>
+	<message key="plugins.generic.booksForReview.authorType.editedByShort">من قبل</message>
+	<message key="plugins.generic.booksForReview.editionShort">طبعة</message>
+	<message key="plugins.generic.booksForReview.field.status">الحالة</message>
+	<message key="plugins.generic.booksForReview.field.publisher">الناشر</message>
+	<message key="plugins.generic.booksForReview.field.year">السنة</message>
+	<message key="plugins.generic.booksForReview.field.isbn">ISBN</message>
+	<message key="plugins.generic.booksForReview.field.title">العنوان</message>
+	<message key="plugins.generic.booksForReview.field.description">الوصف</message>
+
+</locale>

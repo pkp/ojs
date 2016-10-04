@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageStats/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.generic.usageStats.settings.logging">خيارات سجل وقوعات الوصول</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles">إنشاء ملفات الوقوعات</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">تفعيل هذا الخيار سيدفع الإضافة إلى إنشاء ملفات سجل وقوعات الوصول في حافظة ملفات مخصصة. ينبغي استعمال هذه الملفات لاستقطاع بيانات إحصائية عن استعمال النظام. إذا لم تكن راغباً بإنشاء المزيد من ملفات وقوعات سجل الوصول، أترك هذا الخيار معطلاً واستعمل ملفات سجل الوقوعات الخاصة بملقمك بدلاً عنها.</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">تحليل التعابير المنطقية لملفات الوقوعات</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex.description">إن التعابير المنطقية الإفتراضية المستعملة بإمكانها تحليل ملفات وقوعات الوصول الخاصة بـ apache ،بشكل مجمع فضلاً عن ملفات وقوعات هذه الإضافة. لو كانت ملفات وقوعاتك بصيغة أخرى، سيكون عليك إدراج تعابير منطقية قادرة على تحليلها وإعطاء النتائج المتوقعة. أنظر UsageStatsLoader::_getDataFromLogEntry() للمزيد من المعلومات.</message>
+	<message key="plugins.generic.usageStats.settings.saved">تم حفظ إعدادات إضافة إحصائيات الاستعمال</message>
+    <message key="plugins.generic.usageStats.settings.dataPrivacyOption">خيار خصوصية البيانات</message>
+    <message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath">مسار ملف تعمية الهوية</message>
+    <message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath.invalid">إن الملف غير قابل للتعديل.</message>
+    <message key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements">لضمان خصوصية البيانات، عليك تحديد ملف قابل للقراءة والكتابة من قبل مستخدم الإنترنت ليتضمن قيمة مولدة عشوائياً. هذا الملف ينبغي أن لا يتعرض للحفظ الاحتياطي لضمان حماية الخصوصية. إن القيمة المخزونة في الملف تتولد عشوائياً بعدة وسائل: عبر دالة mcrypt_create_iv، والتي تتطلب وجود  mcrypt لـ PHP؛ عبر الدالة openssl_random_pseudo_bytes، التي تتطلب وجود  openssl لـ PHP؛ عبر الملف /dev/urandom، الذي يعمل فقط ضمن أنظمة *nix؛ أو عبر الدالة mt_rand، التي ليست آمنة من الناحية التشفيرية. لذلك، إن كنت من مستعملي ملقم يعمل بنظام تشغيل Windows، لطفاً، تأكد من قيامك بتنصيب أياً من mcrypt أو openssl لـ PHP وتمكينه للحصول على الرمز العشوائي الآمن.</message>
+
+
+    <message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">قم بتفعيل هذا الخيار لاستعمال نسخة من هذه الوظيفة الإضافية تراعي التشريعات المتعلقة بالخصوصية، أي أن: توثيق عناوين IP المعلمة يتطلب إبلاغ المستخدمين عن إمكانية تتبعهم مكانياً ويقدم لهم باباً للخروج من الموقع. لاحظ أنه عند استعمال هذا الخيار، لن يعود بوسعك استعمال ميزة التتبع المكاني التي تقدمها الوظيفة الإضافية.</message>
+    <message key="plugins.generic.usageStats.settings.dataPrivacyOption.requiresSalt">تمكين خصوصية البيانات يتطلب وجود ملف للرمز العشوائي.</message>
+    <message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesCity">إن تمكين خاصية الحفاظ على الخصوصية، يستثني حقل المدينة من خيارات الإحصائية.</message>
+    <message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesRegion">إن تمكين خاصية الحفاظ على الخصوصية، يستثني حقل المنطقة من خيارات الإحصائية.</message>
+    <message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">مراعاة خصوصية البيانات</message>
+    <message key="plugins.generic.usageStats.settings.optionalColumns">المعلومات الإحصائية الاختيارية</message>
+    <message key="plugins.generic.usageStats.settings.archives">الأرشيف</message>
+    <message key="plugins.generic.usageStats.settings.compressArchives.description">قم بتفعيل هذا الخيار لضغط ملفات التوثيق المحفوظة باستعمال تقنية gzip (سيكون عليك ضبط إعدادات هذه التقنية ضمن ملف config.inc.php). إن كان موقعك يتعرض إلى زخم تشغيل عال، سيكون من المستحسن تمكين ذلك لتتمكن من توفير بعض من المساحة المخصصة للحفظ.</message>
+    <message key="plugins.generic.usageStats.settings.compressArchives">ضغط الأرشيف</message>
+    <message key="plugins.generic.usageStats.settings.optionalColumns.description">تمكين أو تعطيل جمع البيانات الإختيارية الآتية. سيؤثر هذا على التقارير الإحصائية التي بإمكانك الحصول عليها، كما سيكون له أثر على حجم قاعدة البيانات. لا تعمد إلى تغييره ما لم تكن على دراية كاملة بما أنت صانع.</message>
+    <message key="plugins.generic.usageStats.settings.optionalColumns.cityRequiresRegion">الحقل الاختياري "City" يتطلب وجود الحقل الاختياري "Region".</message>
+
+
+    <message key="plugins.generic.usageStats.usageStatsLoaderName">مهمة تحميل ملف إحصائيات الاستعمال</message>
+	<message key="plugins.generic.usageStats.openFileFailed">تعذر فتح الملف {$file} ولذا تم رفضه.</message>
+	<message key="plugins.generic.usageStats.invalidLogEntry">إن رقم السطر {$lineNumber} من الملف {$file} ليس مدخل وقوعات صحيح، ولذا تم رفض الملف.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">إن رقم السطر {$lineNumber} من الملف {$file} يتضمن رابط إنترنت يتعذر على النظام تحديد أساس الرابط منه.</message>
+	<message key="plugins.generic.usageStats.loadDataError">تعذر تحميل البيات المستقطعة من الملف {$file}. الخطأ كان: {$error}. تم نقل الملف إلى المنصة مرة أخرى.</message>
+	<message key="plugins.generic.usageStats.displayName">إحصائيات الاستعمال</message>
+	<message key="plugins.generic.usageStats.description">إحصائيات استعمال مكونات البيانات الحالية. بالإمكان استعمال ملفات سجل وقوعات الوصول لاستقطاع الإحصائيات.</message>
+	<message key="plugins.generic.usageStats.pluginDisabled">تم تعطيل إضافة إحصائيات الوصول. لا توجد ملفات وقوعات لمعالجتها.</message>
+    <message key="plugins.generic.usageStats.processingPathNotEmpty">إن المسار {$directory} غير خالٍ. قد يكون هذا مؤشراً على عملية فاشلة سابقاً أو عملية جارية حالياً. ستعاد معالجة هذا الملف تلقائياً إن كنت تستعمل scheduledTasksAutoStage.xml أيضاً، وإلا، ستكون مضطراً على نقل أي ملفات متروكة في حافظة ملفات المعالجة إلى حافظة ملفات التشغيل يدوياً.</message>
+    <message key="plugins.generic.usageStats.noCounterBotList">تعذر العثور على قائمة COUNTER، أو هناك أكثر من قائمة واحدة. تعذرت معالجة الملف {$file}.</message>
+    <message key="plugins.generic.usageStats.failedCounterBotList">تعذر فتح قائمة COUNTER المسماة {$botlist}. تعذرت معالجة الملف {$file}.</message>
+
+    <message key="plugins.reports.usageStats.report.displayName">تقرير إحصائيات الاستعمال لنظام المجلات المفتوحة</message>
+	<message key="plugins.reports.usageStats.report.description">تقرير الإحصائيات الإفتراضي لاستعمال نظام المجلات المفتوحة (العداد الجاهز)</message>
+    <message key="plugins.reports.usageStats.optout.displayName">معلومات إحصائية شخصية عن الاستعمال</message>
+    <message key="plugins.reports.usageStats.optout.description">بيانات إحصائية عن منحى الاستعمال وهي ذات طبيعة شخصية</message>
+    <message key="plugins.generic.usageStats.optout.title">معلومات الاستعمال إحصائياً</message>
+    <message key="plugins.generic.usageStats.optout.shortDesc"><![CDATA[نحن نوثق إحصائيات التشغيل للمستخدمين مجهولي الهوية. لطفاً، أنظر <a href="{$privacyInfo}">معلومات الخصوصية</a> للمزيد من التفاصيل.]]></message>
+    <message key="plugins.generic.usageStats.optout.description">
+        <![CDATA[
+		<h3>معلومات شخصية عامة</h3>
+		<p>لطفاً، إرجع إلى <a href="{$privacyStatementUrl}">بيان الخصوصية</a> العام الخاص بنا.</p>
+		<h3>إحصائيات الاستعمال</h3>
+		<p>من أجل التمكن من تحليل منحى الاستعمال ووقع تأثير مجلتنا وما تتضمنه من مؤلفات منشورة، نقوم بجمع بيانات توثيقية تتعلق بالوصول إلى موقع المجلة الرئيسي، ومقالاتها، وأعدادها، ألواحها الطباعية، وملفاتها التكميلية. خلال معالجة تلك البيانات، نقوم بالتغاضي عن هويات المستخدمين. لا نقوم بتوثيق أي بيانات شخصية. عناوين IP يتم تعميتها عبر تشفيرها (باستعمال <em>SHA 256</em>) بالتمازج مع <em>حادي محرفي آمن مكون من 64 حرف</em> يتم توليده تلقائياً <em>وبشكل عشوائي مع تجديد منبعه بشكل يومي</em>. هذا ما يجعل استرجاع عناوين IP غير ممكن عملياً.</p>
+		<p>المعلومات الآتية يتم جمعها فضلاً عن عناوين IP المعماة:</p>
+		<ul>
+		<li>طبيعة الوصول (مثلاً: الإشراف على الموقع)</li>
+		<li>وقت التصفح</li>
+		<li>عنوان رابط الإنترنت المطلوب</li>
+		<li>رمز حالة HTTP</li>
+		<li>برنامج التصفح المستعمل</li>
+		</ul>
+		<p>البيانات المجموعة لدينا تستعمل لأغراض تقييمية حصراً. لا نقوم بمضاهات عناوين IP مع أسماء دخول المستخدمين. عملياً، يستحيل تتبع حزمة محددة من البيانات على أساس عنوان IP معين.</p>]]>
+    </message>
+    <message key="plugins.generic.usageStats.optout.done">
+        <![CDATA[
+		<p>قد نجحت في تعطيل جمع البيانات الإحصائية التي تتعلق باستعمال الموقع. في الوقت الذي ترى فيه هذه الرسالة، لن يتم جمع أي بيانات إحصائية تتعلق باستعمالك لهذا الموقع. أنقر الزر أدناه للتراجع عن قرارك.</p>]]>
+    </message>
+    <message key="plugins.generic.usageStats.optin">تمكين التوثيق</message>
+    <message key="plugins.generic.usageStats.optout">تعطيل التوثيق</message>
+    <message key="plugins.generic.usageStats.optout.cookie">
+        <![CDATA[
+		<p>بإمكانك تبعاً لرغبتك، تعطيل عملية توثيق جمع بيانات الاستعمال. عبر النقر على زر تعطيل التوثيق أدناه، وبهذا تقرر موقفك من المشاركة في التحليل الإحصائي أم لا. عند النقر على زر التعطيل، سيتم زرع <em>cookie</em> في نظام حاسبتك لحفظ خيارك هذا. إذا كانت سياسة عمل المتصفح لديك تقضي بالتخلص من cookies تلقائياً بمجرد إغلاقه، سيكون عليك معاودة تعطيل هذا الخيار مرة أخرى كلما أردت تصفح هذه المجلة. هذا الـ cookie صالح فقط لمتصفحك الحالي. بمعنى أن عليك تعطيل الخيار أيضاً لو استعملت متصفحاً آخر. لا يحتوي هذا الـ cookie على أي بيانات شخصية وهو يمتلك صلاحية بقاء لسنة كاملة من آخر مرة تزور فيها موقع المجلة.</p>
+		<p>لطفاً، خذ بنظر الاعتبار أن بيانات التوثيق العامة التي تسجلها ملقمات الإنترنت لا تتأثر بخيارك عندما تقوم بتعطيل عملية جمع بيانات الاستعمال التفصيلية. رجاءً، راجع <a href="{$privacyStatementUrl}">بيان الخصوصية</a> العام الخاص بنا.</p>]]>
+    </message>
+
+    <message key="plugins.reports.usageStats.metricType">نظام المجلات المفتوحة/عداد</message>
+	<message key="plugins.reports.usageStats.metricType.full">إحصائيات نظام المجلات المفتوحة (العداد الجاهز)</message>
+</locale>

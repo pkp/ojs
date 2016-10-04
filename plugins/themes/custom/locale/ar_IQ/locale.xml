@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/themes/custom/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.theme.custom.name">إضافة النمط المخصص</message>
+	<message key="plugins.theme.custom.description">هذه الإضافة تقدم نمطاً قابلاً للتخصيص من قبل المستخدم.</message>
+	<message key="plugins.theme.custom.notWritable">ملاحظة: ملف أنماط هذه الإضافة: "{$stylesheetFileLocation}" غير قابل للكتابة حالياً. ينبغي لهذا الملف أن يتقبل الكتابة عليه قبل الشروع باستعمال هذه الإضافة.</message>
+	<message key="plugins.theme.custom.notWritablePlugin">ملاحظة: إن خيار ملف الأنماط الرئيسي في المجلة ممكَّن تلقائياً لأن ملف أنماط هذه الإضافة: "{$stylesheetFileLocation}" غير قابل للكتابة حالياً.</message>
+	<message key="plugins.theme.custom.settings">الإعدادات</message>
+	<message key="plugins.theme.custom.pickColour">إختر لوناً معيناً</message>
+	<message key="plugins.theme.custom.header">رأس الصفحة</message>
+	<message key="plugins.theme.custom.link">الرابط</message>
+	<message key="plugins.theme.custom.background">الخلفية</message>
+	<message key="plugins.theme.custom.foreground">لون الأمامية</message>
+	<message key="plugins.theme.custom.perJournal">ملف الأنماط الرئيسي في المجلة</message>
+</locale>

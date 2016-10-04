@@ -24,13 +24,13 @@
 		لطفاً، لاحظ أن كلمة المرور سيتم حفظها بشكل نص صريح غير مشفر، نظراً لمتطلبات
 		خدمة التسجيل في mEDRA.
 	]]></message>
-	
+
 	<message key="plugins.importexport.medra.settings.form.description">لطفاً، قم بتهيئة إضافة التصدير mEDRA:</message>
 	<message key="plugins.importexport.medra.settings.form.username">اسم المستخدم</message>
 	<message key="plugins.importexport.medra.settings.form.usernameRequired">لطفاً، أدخل اسم دخولك إلى mEDRA. لا ينبغي أن يحتوي اسم المستخدم على علامات تنقيط.</message>
 	<message key="plugins.importexport.medra.settings.form.registrantName">اسم المؤسسة المسجلة في mEDRA</message>	
 	<message key="plugins.importexport.medra.settings.form.registrantNameRequired">لطفاً، أدخل اسم المؤسسة المسجلة في mEDRA.</message>
-	<message key="plugins.importexport.medra.settings.form.fromFields">الشخص المعني بالتواصل مع mEDRA في حالة الاستفسارات الفنية:</message>
+	<message key="plugins.importexport.medra.settings.form.fromFields">الشخص المعني بالتواصل مع mEDRA في حالة الاستفسارات الفنية</message>
 	<message key="plugins.importexport.medra.settings.form.fromCompany">المؤسسة</message>
 	<message key="plugins.importexport.medra.settings.form.fromCompanyRequired">لطفاً، أدخل اسم المؤسسة المسؤولة فنياً عن تصدير DOI (مثلاً: المؤسسة المضيفة لملقمك).</message>
 	<message key="plugins.importexport.medra.settings.form.fromName">شخص التواصل</message>
@@ -42,10 +42,16 @@
 	<message key="plugins.importexport.medra.settings.form.work">عمل</message>	
 	<message key="plugins.importexport.medra.settings.form.manifestation">تجلي</message>
 
+	<message key="plugins.importexport.medra.settings.form.exportIssuesAs.label">تصدير الأعداد بشكل</message>
+	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description">سيقوم نظام المجلات المفتوحة بتسجيل المكونات الرقمية DOI تلقائياً في mEDRA. لطفاً، لاحظ أن ذلك قد يستغرق وقتاً قصيراً بعد النشر بسبب المعالجة. بإمكانك بعدها التحقق من كل المكونات غير المسجلة.></message>
+	<message key="plugins.importexport.medra.settings.form.testMode.description">استعمل خاصية إختبار mEDRA (بيئة الاختبار) للمكونات الرقمية. لطفاً، لا تنس إزالة هذا الخيار عند التشغيل الفعلي.</message>
+
 	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: إن DOI المعينة للمقالات سيتم تصديرها إلى mEDRA بشكل <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'أعمال'</a>. أما DOI المعينة للألواح الطباعية فسيتم تصديرها بمثابة <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'تجليات'</a>.]]></message>
-		
+	
+	<message key="plugins.importexport.medra.senderTask.name">مهمة التسجيل التلقائي للإضافة mEDRA</message>
+
 	<message key="plugins.importexport.medra.cliUsage"><![CDATA[الاستعمال: 
-{$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...
 ]]></message>
 </locale>
