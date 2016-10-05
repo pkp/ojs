@@ -480,9 +480,9 @@ class Upgrade extends Installer {
 		$metricsDao->purgeLoadBatch($loadId);
 
 		$fileTypeCounts = array(
-			'count_html' => USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_HTML,
-			'count_pdf' => USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_PDF,
-			'count_other' => USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_OTHER
+			'count_html' => STATISTICS_FILE_TYPE_HTML,
+			'count_pdf' => STATISTICS_FILE_TYPE_PDF,
+			'count_other' => STATISTICS_FILE_TYPE_OTHER
 		);
 
 		while(!$result->EOF) {
@@ -497,7 +497,7 @@ class Upgrade extends Installer {
 						'load_id' => $loadId,
 						'assoc_type' => ASSOC_TYPE_JOURNAL,
 						'assoc_id' => $row['journal_id'],
-						'metric_type' => OJS_METRIC_TYPE_LEGACY_COUNTER,
+						'metric_type' => 'ojs::legacyCounterPlugin',
 						'metric' => $row[$countType],
 						'file_type' => $fileType,
 						'month' => $row['year'] . $month
@@ -550,7 +550,7 @@ class Upgrade extends Installer {
 		}
 
 		// Articles.
-		$params = array(OJS_METRIC_TYPE_TIMED_VIEWS, $loadId, ASSOC_TYPE_SUBMISSION);
+		$params = array('ojs::timedViews', $loadId, ASSOC_TYPE_SUBMISSION);
 		$tempStatsDao->update(
 					'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, country_id, region, city, submission_id, metric, context_id, issue_id)
 					SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, tr.assoc_id, count(tr.metric), a.context_id, pa.issue_id
@@ -562,7 +562,7 @@ class Upgrade extends Installer {
 		);
 
 		// Galleys.
-		$params = array(OJS_METRIC_TYPE_TIMED_VIEWS, $loadId, ASSOC_TYPE_GALLEY);
+		$params = array('ojs::timedViews', $loadId, ASSOC_TYPE_GALLEY);
 		$tempStatsDao->update(
 					'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, country_id, region, city, submission_id, metric, context_id, issue_id)
 					SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, ag.submission_id, count(tr.metric), a.context_id, pa.issue_id
@@ -608,7 +608,7 @@ class Upgrade extends Installer {
 				$pdfFileTypeWhereCheck = 'NOT IN';
 			}
 
-			$params = array($case['fileType'], $loadId, OJS_METRIC_TYPE_LEGACY_DEFAULT, $case['assocType']);
+			$params = array($case['fileType'], $loadId, 'ojs::legacyDefault', $case['assocType']);
 
 			if ($case['assocType'] == ASSOC_TYPE_GALLEY) {
 				array_push($params, (int) $case['isHtml']);
@@ -641,7 +641,7 @@ class Upgrade extends Installer {
 		}
 
 		// Published articles.
-		$params = array(null, $loadId, OJS_METRIC_TYPE_LEGACY_DEFAULT, ASSOC_TYPE_SUBMISSION);
+		$params = array(null, $loadId, 'ojs::legacyDefault', ASSOC_TYPE_SUBMISSION);
 		$metricsDao->update($insertIntoClause .
 			' SELECT ?, ?, ?, ?, pa.article_id, pa.article_id, pa.views, i.journal_id, pa.issue_id
 			FROM published_articles_stats_migration as pa
