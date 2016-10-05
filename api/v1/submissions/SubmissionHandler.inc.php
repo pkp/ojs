@@ -21,15 +21,22 @@ class SubmissionHandler extends APIHandler {
 	 * Constructor
 	 */
 	public function SubmissionHandler() {
-		parent::APIHandler();
-		$app = $this->getApp();
-		$app->get('/{contextPath}/api/{version}/submissions/{submissionId}/files/{fileId}', array($this, 'getFile'));
-		$app->get('/{contextPath}/api/{version}/submissions/{submissionId}', array($this, 'submissionMetadata'));
-		$this->addRoleAssignment(
-
-			array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_REVIEWER, ROLE_ID_AUTHOR),
-			array('getFile', 'submissionMetadata')
+		$roles = array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_REVIEWER, ROLE_ID_AUTHOR);
+		$this->_endpoints = array(
+			'GET' => array (
+				array(
+					'pattern' => '/{contextPath}/api/{version}/submissions/{submissionId}/files/{fileId}',
+					'handler' => array($this,'getFile'),
+					'roles' => $roles
+				),
+				array(
+					'pattern' => '/{contextPath}/api/{version}/submissions/{submissionId}',
+					'handler' => array($this,'submissionMetadata'),
+					'roles' => $roles
+				),
+			)
 		);
+		parent::APIHandler();
 	}
 
 	//
