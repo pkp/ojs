@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="sr_SR" full_name="Српски">
+<locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.htmlArticleGalley.displayName">Приказ у HTML формату</message>
 	<message key="plugins.generic.htmlArticleGalley.description">Овај додатак омогућује рендеровање фајлова чланака у HTML формату.</message>
 </locale>
