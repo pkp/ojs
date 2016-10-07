@@ -54,10 +54,12 @@
 	<!-- Common Messages -->
 	<message key="common.openJournalSystems">Açık Dergi Sistemleri</message>
 	<message key="common.confirmComplete">Bu görevi tamamlandı olarak işaretlemek istediğinizden emin misiniz? Sonradan değişiklik yapmanız mümkün olmayabilir.</message>
+	<message key="common.homepageNavigationLabel">Anasayfa</message>
 	<message key="common.payment">Ödeme</message>
 	<message key="common.payments">Ödemeler</message>
 	<message key="common.homePageHeader.altText">Ana Sayfa Başlığı</message>
 	<message key="common.journalHomepageImage.altText">Dergi Ana Sayfa Görseli</message>
+	<message key="common.viewProfile">Profil</message>
 
 	<!-- Common Form Messages -->
 
@@ -68,6 +70,8 @@
 	<!-- Common Error Messages -->
 
 	<!-- Navigation -->
+	<message key="navigation.archives">Arşiv</message>
+	<message key="navigation.breadcrumbSeparator">></message>
 	<message key="navigation.journalHelp">Yardım</message>
 	<message key="navigation.current">Son Sayı</message>
 	<message key="navigation.otherJournals">Diğer Dergiler</message>
@@ -690,6 +694,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="archive.issueUnavailable">Sayı Erişilebilir Değil</message>
 
 	<!-- About The Journal -->
+	<message key="about.aboutContext">İçerik Hakkında</message>
 	<message key="about.statistics">İstatistikler</message>
 	<message key="about.history">Dergi Geçmişi</message>
 	<message key="about.editorialTeam">Kişiler ve Kurullar</message>
