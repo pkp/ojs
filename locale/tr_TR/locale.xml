@@ -82,6 +82,7 @@
 	<message key="navigation.competingInterestGuidelines">Çıkar Çelişkisi Rehberi</message>
 	<message key="navigation.infoForAuthors.long">Yazarlar İçin Bilgi</message>
 	<message key="navigation.infoForLibrarians.long">Kütüphaneciler İçin Bilgi</message>
+	<message key="navigation.viewFrontend">Önizleme</message>
 
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Yeni Başvurular</message>
