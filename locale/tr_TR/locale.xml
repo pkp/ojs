@@ -59,7 +59,9 @@
 	<message key="common.payments">Ödemeler</message>
 	<message key="common.homePageHeader.altText">Ana Sayfa Başlığı</message>
 	<message key="common.journalHomepageImage.altText">Dergi Ana Sayfa Görseli</message>
+	<message key="common.tasks">Bildirimler</message>
 	<message key="common.viewProfile">Profil</message>
+	<message key="common.uploadedDate">Yüklenme Tarihi</message>
 
 	<!-- Common Form Messages -->
 
