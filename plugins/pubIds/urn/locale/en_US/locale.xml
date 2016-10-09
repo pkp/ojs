@@ -16,7 +16,7 @@
 	<message key="plugins.pubIds.urn.description">This plugin enables the assignment of the Uniform Resource Names to the issues, articles and galleys in OJS.</message>
 
 	<!-- settings form -->
-	<message key="plugins.pubIds.urn.manager.settings.description">Please configure the URN plug-in to be able to manage and use URNs in OJS:</message>
+	<message key="plugins.pubIds.urn.manager.settings.description">Please configure the URN plugin to be able to manage and use URNs in OJS:</message>
 
 	<message key="plugins.pubIds.urn.manager.settings.urnObjects">Journal Content</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnObjectsRequired">Please choose the objects URNs should be assigned to.</message>
