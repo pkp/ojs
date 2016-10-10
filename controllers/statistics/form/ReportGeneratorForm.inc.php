@@ -274,7 +274,7 @@ class ReportGeneratorForm extends Form {
 
 		$timeFilterOption = $this->getData('timeFilterOption');
 		switch($timeFilterOption) {
-			case TIME_FILTER_OPTION_YERSTERDAY:
+			case TIME_FILTER_OPTION_YESTERDAY:
 				$filter[STATISTICS_DIMENSION_DAY] = STATISTICS_YESTERDAY;
 				break;
 			case TIME_FILTER_OPTION_CURRENT_MONTH:
