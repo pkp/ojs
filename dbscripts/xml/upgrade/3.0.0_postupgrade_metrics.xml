@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * dbscripts/xml/upgrade/3.0.0_postupgrade_metrics.xml
+  *
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  -->
+<data>
+	<!-- synchronize the ASSOC_TYPE_ARTICLE constant to ASSOC_TYPE_SUBMISSION defined in PKPApplication -->
+	<sql>
+		<query>UPDATE metrics SET assoc_type = 1048585 WHERE assoc_type = 257</query>
+	</sql>
+	<!-- update the ASSOC_TYPE_SUPP_FILE = 262 constant to ASSOC_TYPE_SUBMISSION_FILE = 515 defined in PKPApplication -->
+	<sql>
+		<query>UPDATE metrics SET assoc_type = 515 WHERE assoc_type = 262</query>
+	</sql>
+
+	<!-- update the supp file ids to the new file ids, ASSOC_TYPE_SUBMISSION_FILE = 515 -->
+	<sql>
+		<query>UPDATE metrics m, submission_file_settings sfs SET m.assoc_id = sfs.file_id WHERE m.assoc_type = 515 AND sfs.setting_name = 'old-supp-id' AND sfs.setting_value = m.assoc_id</query>
+	</sql>
+
+	<!-- fill the new metrics columns (assoc_object_type, assoc_object_id, pkp_section_id and representation_id) appropriately: -->
+	<!-- insert section id for articles, article galleys and files - they all have submission_id in the table -->
+	<sql>
+		<query>UPDATE metrics m, submissions s SET m.pkp_section_id = s.section_id WHERE m.submission_id IS NOT NULL AND s.submission_id = m.submission_id</query>
+	</sql>
+	<!-- insert issue id for articles, article galleys and files - they all have submission_id in the table, ASSOC_TYPE_ISSUE = 259 -->
+	<sql>
+		<query>UPDATE metrics m, published_submissions p SET m.assoc_object_type = 259, m.assoc_object_id = p.issue_id WHERE m.submission_id IS NOT NULL AND p.submission_id = m.submission_id</query>
+	</sql>
+	<!-- insert issue id for issue galleys, ASSOC_TYPE_ISSUE = 259, ASSOC_TYPE_ISSUE_GALLEY = 261 -->
+	<sql>
+		<query>UPDATE metrics m, issue_galleys ig SET m.assoc_object_type = 259, m.assoc_object_id = ig.issue_id WHERE m.assoc_type = 261 AND ig.issue_id = m.assoc_id</query>
+	</sql>
+	<!-- insert representation id for article galleys, ASSOC_TYPE_REPRESENTATION = 521 -->
+	<sql>
+		<query>UPDATE metrics SET representation_id = assoc_id WHERE assoc_type = 521</query>
+	</sql>
+	<!-- insert representation id for galley files, ASSOC_TYPE_SUBMISSION_FILE = 515, ASSOC_TYPE_REPRESENTATION = 521 -->
+	<sql>
+		<query>UPDATE metrics m, submission_files sf SET m.representation_id = sf.assoc_id WHERE m.assoc_type = 515 AND sf.file_id = m.assoc_id AND sf.assoc_type = 521</query>
+	</sql>
+
+</data>
