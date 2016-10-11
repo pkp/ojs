@@ -29,6 +29,35 @@ class ArticleHandler extends Handler {
 	/** galley associated with the request **/
 	var $galley;
 
+	/** article id associated with the request **/
+	var $articleId;
+
+	/**  **/
+	var $galleyId;
+
+	/**  **/
+	var $fileId;
+
+	/**  **/
+	var $fileRevision;
+
+	/**  **/
+	var $isPreviousRevision = false;
+
+	/**  **/
+	var $previousRevisions;
+
+	/**  **/
+	var $latestTitle;
+
+
+	/**
+	 * Constructor
+	 * @param $request Request
+	 */
+	function __construct() {
+		parent::__construct();
+	}
 
 	/**
 	 * @copydoc PKPHandler::authorize()
@@ -47,6 +76,7 @@ class ArticleHandler extends Handler {
 	 * @see PKPHandler::initialize()
 	 */
 	function initialize($request, $args) {
+
 		$articleId = isset($args[0]) ? $args[0] : 0;
 
 		$journal = $request->getContext();
@@ -80,9 +110,11 @@ class ArticleHandler extends Handler {
 	 * @param $request Request
 	 */
 	function view($args, $request) {
+
 		$articleId = array_shift($args);
 		$galleyId = array_shift($args);
 		$fileId = array_shift($args);
+		$fileRevision = array_shift($args);
 
 		$journal = $request->getJournal();
 		$issue = $this->issue;
@@ -92,6 +124,7 @@ class ArticleHandler extends Handler {
 			'issue' => $issue,
 			'article' => $article,
 			'fileId' => $fileId,
+			'fileRevision' => $fileRevision,
 		));
 		$this->setupTemplate($request);
 
@@ -166,7 +199,8 @@ class ArticleHandler extends Handler {
 		} else {
 			// Galley: Prepare the galley file download.
 			if (!HookRegistry::call('ArticleHandler::view::galley', array(&$request, &$issue, &$galley, &$article))) {
-				$request->redirect(null, null, 'download', array($articleId, $galleyId));
+				$request->redirect(null, null, 'download', array($articleId, $galleyId, $fileId, $fileRevision));
+			
 			}
 
 		}
@@ -223,10 +257,12 @@ class ArticleHandler extends Handler {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		$fileId = isset($args[2]) ? (int) $args[2] : 0;
+		// string 'v' is stored in args[2] if this is an url with file revision
+		$fileRevision = isset($args[2])&&$args[2]==='v' ? (int) $args[3] : null;
 
 		if ($this->galley->getRemoteURL()) $request->redirectUrl($this->galley->getRemoteURL());
 		if ($this->userCanViewGalley($request, $articleId, $galleyId)) {
-			if (!$fileId) {
+			if (!$fileId||$fileId==='v') {
 				$submissionFile = $this->galley->getFile();
 				if ($submissionFile) {
 					$fileId = $submissionFile->getFileId();
@@ -240,7 +276,7 @@ class ArticleHandler extends Handler {
 			if (!HookRegistry::call('ArticleHandler::download', array($this->article, &$this->galley, &$fileId))) {
 				import('lib.pkp.classes.file.SubmissionFileManager');
 				$submissionFileManager = new SubmissionFileManager($this->article->getContextId(), $this->article->getId());
-				$submissionFileManager->downloadFile($fileId, null, $request->getUserVar('inline')?true:false);
+				$submissionFileManager->downloadFile($fileId, $fileRevision, $request->getUserVar('inline')?true:false);
 			}
 		}
 	}

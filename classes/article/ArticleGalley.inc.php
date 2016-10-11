@@ -160,6 +160,34 @@ class ArticleGalley extends Representation {
 	function getLocalizedName() {
 		return $this->getLabel();
 	}
+
+	/**
+	 * Retrieve not the first, but all other revisions assigned to this submission file.
+	 * @param $fileId int
+	 * @param $fileStage int (optional)
+	 * @param $submissionId int (optional)
+	 * @param $submissionRevision int (optional)
+	 * @return Array
+	 */
+	function getOtherRevisions($fileId, $fileStage = null, $submissionId = null, $submissionRevision = null) {
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$submissionFiles = $submissionFileDao->getAllRevisions($fileId, $fileStage, $submissionId);
+
+		array_shift($submissionFiles);
+		
+	/*	$otherSubmissionFiles = array();
+		foreach($submissionFiles as $submissionFile) {
+			$revision = $submissionFile->getRevision();
+			$fileName = $submissionFile->getOriginalFileName();
+
+			$otherSubmissionFiles[$revision] = $fileName;
+		}*/
+
+		$otherSubmissionFiles = $submissionFiles;
+	
+		return $otherSubmissionFiles;
+	}
+
 }
 
 ?>
