@@ -25,7 +25,7 @@
 		to the mEDRA registration service requirements.
 	]]></message>
 	
-	<message key="plugins.importexport.medra.settings.form.description">Please configure the mEDRA export plug-in:</message>
+	<message key="plugins.importexport.medra.settings.form.description">Please configure the mEDRA export plugin:</message>
 	<message key="plugins.importexport.medra.settings.form.username">Username</message>
 	<message key="plugins.importexport.medra.settings.form.usernameRequired">Please enter your mEDRA username. The username may not contain colons.</message>
 	<message key="plugins.importexport.medra.settings.form.registrantName">The name of the institution registered at mEDRA</message>	
