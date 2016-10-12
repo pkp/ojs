@@ -263,6 +263,17 @@ class DataciteExportDom extends DOIExportDom {
 		return $locales;
 	}
 
+	/**
+	 * Identify the publisher of the journal (journal title for DataCite citation purposes).
+	 * @param $localePrecedence array
+	 * @return string
+	 */
+	function getPublisher($localePrecedence) {
+		$journal =& $this->getJournal();
+		$publisher = $this->getPrimaryTranslation($journal->getTitle(null), $localePrecedence);
+		assert(!empty($publisher));
+		return $publisher;
+	}
 
 	//
 	// Private helper methods
