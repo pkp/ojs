@@ -70,6 +70,13 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
+	 * @copydoc ImportExportPlugin::getPluginSettingsPrefix()
+	 */
+	function getPluginSettingsPrefix() {
+		return 'native';
+	}
+
+	/**
 	 * Display the plugin.
 	 * @param $args array
 	 * @param $request PKPRequest
@@ -139,8 +146,13 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					$request->getContext(),
 					$request->getUser()
 				);
-				header('Content-type: application/xml');
-				echo $exportXml;
+				$exportFileName = $this->getExportFileName('articles', $journal);
+				file_put_contents($exportFileName, $exportXml);
+				header('Content-Type: application/xml');
+				header('Cache-Control: private');
+				header('Content-Disposition: attachment; filename="' . basename($exportFileName) . '"');
+				readfile($exportFileName);
+				$this->cleanTmpfile($exportFileName);
 				break;
 			case 'exportIssues':
 				$exportXml = $this->exportIssues(
@@ -148,8 +160,13 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					$request->getContext(),
 					$request->getUser()
 				);
-				header('Content-type: application/xml');
-				echo $exportXml;
+				$exportFileName = $this->getExportFileName('issues', $journal);
+				file_put_contents($exportFileName, $exportXml);
+				header('Content-Type: application/xml');
+				header('Cache-Control: private');
+				header('Content-Disposition: attachment; filename="' . basename($exportFileName) . '"');
+				readfile($exportFileName);
+				$this->cleanTmpfile($exportFileName);
 				break;
 			default:
 				$dispatcher = $request->getDispatcher();
@@ -313,6 +330,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		}
 		$this->usage($scriptName);
 	}
+
 }
 
 ?>

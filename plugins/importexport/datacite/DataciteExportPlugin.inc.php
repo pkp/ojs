@@ -78,7 +78,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc PubObjectsExportPlugin::getPluginSettingsPrefix()
+	 * @copydoc ImportExportPlugin::getPluginSettingsPrefix()
 	 */
 	function getPluginSettingsPrefix() {
 		return 'datacite';
@@ -140,6 +140,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 				header('Cache-Control: private');
 				header('Content-Disposition: attachment; filename="' . basename($finalExportFileName) . '"');
 				readfile($finalExportFileName);
+				$this->cleanTmpfile($finalExportFileName);
 			} else {
 				if (is_array($result)) {
 					foreach($result as $error) {
