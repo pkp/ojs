@@ -81,6 +81,8 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 			$nativeFilterHelper = new NativeFilterHelper();
 			$submissionNode->appendChild($nativeFilterHelper->createIssueIdentificationNode($this, $doc, $issue));
 		}
+		$pages = $submission->getPages();
+		if (!empty($pages)) $submissionNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'pages', $pages));
 		return $submissionNode;
 	}
 
