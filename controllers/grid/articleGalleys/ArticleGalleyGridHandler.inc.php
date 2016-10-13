@@ -31,7 +31,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		parent::GridHandler();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
-			array('fetchGrid', 'fetchRow', 'addGalley', 'editGalley', 'editGalleyTab', 'updateGalley', 'deleteGalley', 'identifiers', 'updateIdentifiers', 'clearPubId'));
+			array('fetchGrid', 'fetchRow', 'addGalley', 'editGalley', 'editGalleyTab', 'updateGalley', 'deleteGalley', 'identifiers', 'updateIdentifiers', 'clearPubId', 'saveSequence'));
 	}
 
 
@@ -123,6 +123,34 @@ class ArticleGalleyGridHandler extends GridHandler {
 		));
 	}
 
+	//
+	// Overridden methods from GridHandler
+	//
+	/**
+	 * @copydoc GridHandler::initFeatures()
+	 */
+	function initFeatures($request, $args) {
+		import('lib.pkp.classes.controllers.grid.feature.OrderGridItemsFeature');
+		return array(new OrderGridItemsFeature());
+	}
+
+	/**
+	 * @copydoc GridHandler::getDataElementSequence()
+	 */
+	function getDataElementSequence($row) {
+		return $row->getSequence();
+	}
+
+	/**
+	 * @copydoc GridHandler::setDataElementSequence()
+	 */
+	function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence) {
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$journal = $request->getJournal();
+		$galley = $galleyDao->getById($rowId, $journal->getId());
+		$galley->setSequence($newSequence);
+		$galleyDao->updateObject($galley);
+	}
 
 	//
 	// Overridden methods from GridHandler
