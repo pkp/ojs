@@ -128,21 +128,23 @@ class DataciteInfoSender extends ScheduledTask {
 	 */
 	function _registerObjects($objects, $filter, $journal, $objectsFileNamePart) {
 		$plugin = $this->_plugin;
+		import('lib.pkp.classes.file.FileManager');
+		$fileManager = new FileManager();
 		foreach ($objects as $object) {
 			// export XML
 			$exportXml = $plugin->exportXML($object, $filter, $journal);
 			// Write the XML to a file.
-			// export file name example: datacite/20160723-160036-articles-1-1.xml
+			// export file name example: datacite-20160723-160036-articles-1-1.xml
 			$objectFileNamePart = $objectsFileNamePart . '-' . $object->getId();
-			$exportFileName = $plugin->getExportFileName($objectFileNamePart, $journal);
-			file_put_contents($exportFileName, $exportXml);
+			$exportFileName = $plugin->getExportFileName($plugin->getExportPath(), $objectFileNamePart, $journal, '.xml');
+			$fileManager->writeFile($exportFileName, $exportXml);
 			// Deposit the XML file.
 			$result = $plugin->depositXML($object, $journal, $exportFileName);
 			if ($result !== true) {
 				$this->_addLogEntry($result);
 			}
 			// Remove all temporary files.
-			$plugin->cleanTmpfile($exportFileName);
+			$fileManager->deleteFile($exportFileName);
 		}
 	}
 

@@ -128,18 +128,20 @@ class MedraInfoSender extends ScheduledTask {
 	 */
 	function _registerObjects($objects, $filter, $journal, $objectsFileNamePart) {
 		$plugin = $this->_plugin;
+		import('lib.pkp.classes.file.FileManager');
+		$fileManager = new FileManager();
 		// export XML
 		$exportXml = $plugin->exportXML($objects, $filter, $journal);
 		// Write the XML to a file.
-		$exportFileName = $plugin->getExportFileName($objectsFileNamePart, $journal);
-		file_put_contents($exportFileName, $exportXml);
+		$exportFileName = $plugin->getExportFileName($plugin->getExportPath(), $objectFileNamePart, $journal, '.xml');
+		$fileManager->writeFile($exportFileName, $exportXml);
 		// Deposit the XML file.
 		$result = $plugin->depositXML($objects, $journal, $exportFileName);
 		if ($result !== true) {
 			$this->_addLogEntry($result);
 		}
 		// Remove all temporary files.
-		$plugin->cleanTmpfile($exportFileName);
+		$fileManager->deleteFile($exportFileName);
 	}
 
 	/**

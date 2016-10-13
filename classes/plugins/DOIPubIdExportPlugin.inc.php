@@ -110,9 +110,11 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 			// Get the XML
 			$exportXml = $this->exportXML($objects, $filter, $context);
 			// Write the XML to a file.
-			// export file name example: crossref/20160723-160036-articles-1.xml
-			$exportFileName = $this->getExportFileName($objectsFileNamePart, $context);
-			file_put_contents($exportFileName, $exportXml);
+			// export file name example: crossref-20160723-160036-articles-1.xml
+			import('lib.pkp.classes.file.FileManager');
+			$fileManager = new FileManager();
+			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
+			$fileManager->writeFile($exportFileName, $exportXml);
 			// Deposit the XML file.
 			$result = $this->depositXML($objects, $context, $exportFileName);
 			// send notifications
@@ -136,7 +138,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 				}
 			}
 			// Remove all temporary files.
-			$this->cleanTmpfile($exportFileName);
+			$fileManager->deleteFile($exportFileName);
 			// redirect back to the right tab
 			$request->redirect(null, null, null, $path, null, $tab);
 		}
