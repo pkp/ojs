@@ -163,13 +163,12 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 			assert($filter != null);
 			// Get the XML
 			$exportXml = $this->exportXML($objects, $filter, $context);
-			$exportFileName = $this->getExportFileName($objectsFileNamePart, $context);
-			file_put_contents($exportFileName, $exportXml);
-			header('Content-Type: application/xml');
-			header('Cache-Control: private');
-			header('Content-Disposition: attachment; filename="' . basename($exportFileName) . '"');
-			readfile($exportFileName);
-			$this->cleanTmpfile($exportFileName);
+			import('lib.pkp.classes.file.FileManager');
+			$fileManager = new FileManager();
+			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
+			$fileManager->writeFile($exportFileName, $exportXml);
+			$fileManager->downloadFile($exportFileName);
+			$fileManager->deleteFile($exportFileName);
 		} elseif ($request->getUserVar(EXPORT_ACTION_MARKREGISTERED)) {
 			$this->markRegistered($context, $objects);
 			// redirect back to the right tab
@@ -477,8 +476,10 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		if ($command == 'export' && $outputFile) file_put_contents($outputFile, $exportXml);
 
 		if ($command == 'register') {
-			$exportFileName = $this->getExportFileName($objectsFileNamePart, $context);
-			file_put_contents($exportFileName, $exportXml);
+			import('lib.pkp.classes.file.FileManager');
+			$fileManager = new FileManager();
+			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
+			$fileManager->writeFile($exportFileName, $exportXml);
 			$result = $this->depositXML($objects, $context, $exportFileName);
 			if ($result === true) {
 				echo __('plugins.importexport.common.register.success') . "\n";
@@ -496,6 +497,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				}
 				$this->usage($scriptName);
 			}
+			$fileManager->deleteFile($exportFileName);
 		}
 	}
 
