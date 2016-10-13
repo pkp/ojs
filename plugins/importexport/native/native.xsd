@@ -24,6 +24,7 @@
 				<extension base="pkp:submission">
 					<sequence>
 						<element ref="pkp:issue_identification" minOccurs="0" maxOccurs="1" />
+						<element maxOccurs="1" minOccurs="0" name="pages" type="string" />
 					</sequence>
 					<attribute name="section_ref" type="string" />
 					<attribute name="seq" type="int" />

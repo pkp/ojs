@@ -88,6 +88,9 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 			case 'issue_identification':
 				// do nothing, because this is done in populatePublishedSubmission
 				break;
+			case 'pages':
+				$submission->setPages($n->textContent);
+				break;
 			default:
 				parent::handleChildElement($n, $submission);
 		}
