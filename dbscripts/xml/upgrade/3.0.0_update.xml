@@ -194,4 +194,8 @@
 		<query driver="postgres7">UPDATE submission_files SET file_stage=7 FROM submission_files sf, articles_migration am WHERE am.editor_file_id=sf.file_id</query><!-- SUBMISSION_FILE_FAIR_COPY -->
 		<query>UPDATE submission_files SET file_stage=10 WHERE file_id IN (SELECT file_id FROM submission_galleys)</query><!-- SUBMISSION_FILE_PROOF -->
 	</sql>
+	<sql><!-- #1838 Automatic emails for open access/subscription triggered post-install -->
+		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.OpenAccessNotification'</query>
+		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.SubscriptionExpiryReminder'</query>
+	</sql>
 </data>

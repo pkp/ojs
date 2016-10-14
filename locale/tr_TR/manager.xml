@@ -506,6 +506,13 @@
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Dergi ana sayfa görüntülemeleri</message>
 	<message key="manager.setup.resetPermissions">Makale İzinlerini Sıfırla</message>
 	<message key="manager.setup.copyrightYearBasis">Yeni makalenin temel telif hakkı yılı</message>
+	<message key="manager.website.appearance">Website Görünümü</message>
+	<message key="manager.website.information">Website Bilgisi</message>
+    	<message key="manager.setup.logo">Website Logosu</message>
+    	<message key="manager.setup.pageFooter">Website Alt Metini</message>
+	<message key="manager.website.title">Website Başlığı</message>
+    	<message key="manager.website.archiving">Website Arşivi</message>
+    	<message key="manager.setup.pageFooterDescription">Websitenizin alt bölümüne eklemelerinizi buradan yapabilirsiniz.</message>
 
 	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
 	<!-- plugin tabs -->

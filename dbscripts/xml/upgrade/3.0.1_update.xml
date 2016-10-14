@@ -15,5 +15,9 @@
 		<query>INSERT INTO plugin_settings (plugin_name, setting_name, setting_value, setting_type, context_id) SELECT 'googlescholarplugin', 'enabled', '1', 'bool', journal_id FROM journals</query>
 		<query>INSERT INTO plugin_settings (plugin_name, setting_name, setting_value, setting_type, context_id) SELECT 'dublincoremetaplugin', 'enabled', '1', 'bool', journal_id FROM journals</query>
 	</sql>
+	<sql><!-- #1838 Automatic emails for open access/subscription triggered post-install -->
+		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.OpenAccessNotification'</query>
+		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.SubscriptionExpiryReminder'</query>
+	</sql>
 </data>
 

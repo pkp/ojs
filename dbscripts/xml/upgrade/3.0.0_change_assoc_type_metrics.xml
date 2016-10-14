@@ -11,7 +11,7 @@
   * 3.0.0.0 updates for assoc_type XML file (just conditional on the metrics table existing).
   -->
 <data>
-	<!-- synchronize the ASSOC_TYPE_ARTICLE constant to ASSOC_TYPE_SUBMISSION defined in PKPApplication -->
+	<!-- synchronize the ASSOC_TYPE_GALLEY constant to ASSOC_TYPE_REPRESENTATION defined in PKPApplication -->
 	<sql>
 		<query>UPDATE metrics SET assoc_type = 521 WHERE assoc_type = 260</query>
 	</sql>

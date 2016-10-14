@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale/de_DE/locale.xml
+  * plugins/generic/backup/locale/de_DE/locale.xml
   *
   * Copyright (c) 2014-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="de_DE" full_name="Deutsch">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.backup.name">Backup-Plugin</message>
 	<message key="plugins.generic.backup.description">Dieses Plugin legt ein Backup der Installation an.</message>
 	<message key="plugins.generic.backup.link">Backup herunterladen</message>

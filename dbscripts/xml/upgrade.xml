@@ -30,6 +30,14 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_adaptTimedViews.xml" condition="return $installer->tableExists('timed_views_log');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_adaptReferrals.xml" condition="return $installer->tableExists('referrals');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_adaptBooksForReview.xml" condition="return $installer->tableExists('books_for_review');" />
+		<data file="dbscripts/xml/upgrade/remove_timed_views_bots.xml" condition="return $installer->tableExists('timed_views_log');" />
+		<code function="migrateCounterPluginUsageStatistics" condition="return $installer->tableExists('counter_monthly_log');" />
+		<code function="migrateTimedViewsUsageStatistics" condition="return $installer->tableExists('timed_views_log');" />
+		<code function="migrateDefaultUsageStatistics" condition="return $installer->tableExists('article_galleys_stats_migration');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_postUsageStatsMigration.xml" condition="return $installer->tableExists('article_galleys_stats_migration');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_postUsageStatsMigration2.xml" condition="return $installer->tableExists('issue_galleys_stats_migration');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_postCounterMigration.xml" condition="return $installer->tableExists('counter_monthly_log');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_postTimedViewsMigration.xml" condition="return $installer->tableExists('timed_views_log');" />
 	</upgrade>
 
 
@@ -71,14 +79,6 @@
 		<code function="clearDataCache" />
 		<code function="migrateUserRoles" />
 		<code function="installDefaultGenres" />
-		<data file="dbscripts/xml/upgrade/remove_timed_views_bots.xml" condition="return $installer->tableExists('timed_views_log');" />
-		<code function="migrateCounterPluginUsageStatistics" condition="return $installer->tableExists('counter_monthly_log');" />
-		<code function="migrateTimedViewsUsageStatistics" condition="return $installer->tableExists('timed_views_log');" />
-		<code function="migrateDefaultUsageStatistics" condition="return $installer->tableExists('article_galleys_stats_migration');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_postUsageStatsMigration.xml" condition="return $installer->tableExists('article_galleys_stats_migration');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_postUsageStatsMigration2.xml" condition="return $installer->tableExists('issue_galleys_stats_migration');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_postCounterMigration.xml" condition="return $installer->tableExists('counter_monthly_log');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_postTimedViewsMigration.xml" condition="return $installer->tableExists('timed_views_log');" />
 		<code function="fixReviewForms" />
 		<code function="htmlifyEmailTemplates" />
 		<note file="docs/release-notes/README-BEACON" />
@@ -98,6 +98,7 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_postupdate.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_pubId_settings.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_galley_files.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_metrics.xml" />
 	</upgrade>
 
 	<upgrade minversion="3.0.0.0" maxversion="3.0.0.9">
@@ -105,6 +106,7 @@
 		<code function="setFileName" />
 		<data file="dbscripts/xml/upgrade/3.0.1_update.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_galley_files.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_metrics.xml" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
