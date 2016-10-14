@@ -121,12 +121,8 @@ class DataciteXmlFilter extends NativeExportFilter {
 		}
 
 		// The publisher is required.
-		$publisher = $context->getSetting('publisherInstitution');
-		if (empty($publisher)) {
-			// Use the journal title if no publisher is set.
-			// This corresponds to the logic implemented for OAI interfaces, too.
-			$publisher = $this->getPrimaryTranslation($context->getName(null), $objectLocalePrecedence);
-		}
+		// Use the journal title as DataCite recommends for now.
+		$publisher = $this->getPrimaryTranslation($context->getName(null), $objectLocalePrecedence);
 		assert(!empty($publisher));
 		// The publication date is required.
 		$publicationDate = (isset($article) ? $article->getDatePublished() : null);
