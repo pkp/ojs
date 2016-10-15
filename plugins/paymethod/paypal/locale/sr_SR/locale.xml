@@ -16,21 +16,21 @@
 	<message key="plugins.paymethod.paypal.displayName">Plaćanje nadoknade putem PayPal-a</message>
 
 	<!-- PayPal Settings Form -->
-	<message key="plugins.paymethod.paypal.settings.paypalenable">Omogući PayPal</message>
+	<message key="plugins.paymethod.paypal.settings.paypalenable">Омогући PayPal</message>
 	<message key="plugins.paymethod.paypal.settings.paypalurl">IPN URL</message>
-	<message key="plugins.paymethod.paypal.settings.paypalurl.description"><![CDATA[Ovo je URL ka PayPal Instant Payment Notification (IPN) servisu. Kako biste testirali, koristite <u>https://www.sandbox.paypal.com/cgi-bin/webscr</u>; za produktivne sisteme koristite <u>https://www.paypal.com/cgi-bin/webscr</u>.]]></message>
-	<message key="plugins.paymethod.paypal.settings.selleraccount">Nalog prodavca</message>
-	<message key="plugins.paymethod.paypal.settings.selleraccount.description">Ovo je korisničko ime naloga prodavca koji će se koristiti, obično imejl adresa.  Budite sigurni da ste aktivirali Instant Payment Notification (IPN) u profilu naloga prodavca.</message>
-	<message key="plugins.paymethod.paypal.settings.curlNotInstalled">UPOZORENJE: CURL podrška za PHP nije instalirana. PayPal podrška za plaćanje zahteva  CURL biblioteku i neće funkcionisati do njenog instaliranja.</message>
-	<message key="plugins.paymethod.paypal.settings">PayPal podešavanja</message>
+	<message key="plugins.paymethod.paypal.settings.paypalurl.description"><![CDATA[Ово је URL ка PayPal Instant Payment Notification (IPN) сервису. Како бисте тестирали, користите <u>https://www.sandbox.paypal.com/cgi-bin/webscr</u>; за продуктивне системе користите <u>https://www.paypal.com/cgi-bin/webscr</u>.]]></message>
+	<message key="plugins.paymethod.paypal.settings.selleraccount">Налог продавца</message>
+	<message key="plugins.paymethod.paypal.settings.selleraccount.description">Ово је корисничко име налога продавца који ће се користити, обично имејл адреса.  Будите сигурни да сте активирали Instant Payment Notification (IPN) у профилу налога продавца.</message>
+	<message key="plugins.paymethod.paypal.settings.curlNotInstalled">УПОЗОРЕЊЕ: CURL подршка за PHP није инсталирана. PayPal подршка за плаћање захтева  CURL библиотеку и неће функционисати до њеног инсталирања.</message>
+	<message key="plugins.paymethod.paypal.settings">PayPal подешавања</message>
 
 	<!-- PayPal -->
-	<message key="plugins.paymethod.paypal">PayPal plaćanje</message>
-	<message key="plugins.paymethod.paypal.description"><![CDATA[PayPal omogućava korisnicima, bez obzira da li imaju PayPal nalog ili ne, da koriste sve osnovne kreditne kartice. Menadžer će morati da podesi <a href="http://www.paypal.com" target="_new">PayPal poslovni nalog</a>.]]></message>
-	<message key="plugins.paymethod.paypal.warning">Kliknite na dugme Nastavi kako biste otišli na sajt PayPal-a gde možete iskoristiti kreditnu karticu kako bu+iste platili nadoknadu (bez obaveze da se registrujete na PayPal-u). Koristite dugme Povratak do prodavca (Return to Merchant)" nakon izvršenog plaćanja da biste se vratili na sajt..</message>
-	<message key="plugins.paymethod.paypal.purchase.title">Naslov</message>
-	<message key="plugins.paymethod.paypal.purchase.fee">Cena</message>
+	<message key="plugins.paymethod.paypal">PayPal плаћање</message>
+	<message key="plugins.paymethod.paypal.description"><![CDATA[PayPal омогућава корисницима, без обзира да ли имају PayPal налог или не, да користе све основне кредитне картице. Менаджер ће морати да подеси <a href="http://www.paypal.com" target="_new">PayPal пословни налог</a>.]]></message>
+	<message key="plugins.paymethod.paypal.warning">Кликните на дугме Настави како бисте отишли на сајт PayPal-a где можете искористити кредитну картицу како бисте платили надокнаду (без обавезе да се региструјете на PayPal-у). Користите дугме Повратак до продавца (Return to Merchant)" након извршеног плаћања да бисте се вратили на сајт.</message>
+	<message key="plugins.paymethod.paypal.purchase.title">Наслов</message>
+	<message key="plugins.paymethod.paypal.purchase.fee">Цена</message>
 	<message key="plugins.paymethod.paypal.purchase.description">Opis</message>
-	<message key="plugins.paymethod.paypal.purchase.cancelled">Vaša kupovina je otkazana.</message>
-	<message key="plugins.paymethod.paypal.purchase.cancelled.title">Kupovina otkazana</message>
+	<message key="plugins.paymethod.paypal.purchase.cancelled">Ваша куповина је отказана.</message>
+	<message key="plugins.paymethod.paypal.purchase.cancelled.title">Куповина отказана</message>
 </locale>

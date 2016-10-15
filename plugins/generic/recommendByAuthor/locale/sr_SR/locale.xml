@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/sr_SR/locale.xml
+  *
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="sr_SR" full_name="Cрпски">
+	<message key="plugins.generic.recommendByAuthor.displayName">Препоруке аутора</message>
+	<message key="plugins.generic.recommendByAuthor.description">Овај додатак убацује листу чланака истог аутора на страницу апстракта чланка.</message>
+	<message key="plugins.generic.recommendByAuthor.heading">Најчитаније од истог аутора</message>
+	<message key="plugins.generic.recommendByAuthor.noMetric">Напомена: Овај додатак захтева најмање један омогућен додатак за статистику/извештаје. Уколико имате више статистичких додатака који пружају више метрика одаберите који ће бити основни на администраторској страници и/или на страници подешавања самог часописа.</message>
+</locale>

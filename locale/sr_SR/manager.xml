@@ -12,42 +12,69 @@
   -->
 
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="manager.emails.confirmResetAll">Da li ste sigurni da želite da resetujete sve imejl šablone? Izgubićete sva podešavanja koja ste uradili.</message>
-	<message key="manager.files.note">Napomena: pregledač fajlova je dodatak koji momogućuje direktno upravljanje svi fajlovima i direktorijumima koji su vezani za časopis.</message>
+	<message key="manager.emails.confirmResetAll">Да ли сте сигурни да желите да ресетујете све имејл шаблоне? Изгубићете сва подешавања која сте урадили.</message>
+	<message key="manager.files.note">Напомена: прегледач фајлова је додатак који момогућује директно управљање сви фајловима и директоријумима који су везани за часопис.</message>
 
-	<message key="manager.payment.options.purchaseIssueFee">Kupi izdanje</message>
-	<message key="manager.setup.resetPermissions">Vrati na početno stanje dozvole u vezi članka.</message>
-	<message key="manager.setup.journalThumbnail">Mala slika časopisa</message>
-	<message key="manager.setup.useThumbnail">Mala slika</message>
-	<message key="manager.statistics.reports.today">Danas</message>
-	<message key="manager.setup.categories">Kategorije</message>
-	<message key="manager.payment.giftFees">Cene poklona</message>
-	<message key="manager.payment.giftFeesDescription">Veza na poklonjenu pretplatu će se pojaviti na strani za pretplatu u delu O časopisu u delu bočnog bloka za pretplate.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Ovo će aktivirati plaćanja za poklonjene pretplate omogućavajući čitaocima da kupe poklon pretplate i poklone ih drugim čitaocima.</message>
-	<message key="manager.sections.alertDelete">Prije nego što obrišete ovu rubriku morat ečlanke prethodnoobjavljene u njoj premestiti u drugu rubriku.</message>
-	<message key="manager.setup.resetPermissions.description">Izjava o autorskim pravima i informacija o licenci će biti trajno priključene uz objavljeni sadržaj tako da se ta informacija neće promeniti u slučaju da časopis promeni svoju politiku tokom novih podnošenja članaka. Ako želite vratiti na početno stanje sačuvane dozvole priključene uz objavljeni sadržaj pritisnite donje dugme.</message>
-	<message key="manager.setup.copyrightYearBasis">Postavi godinu autorskih prava članka na</message>
-	<message key="manager.statistics.reports.defaultReport.articleDownloads">Preuzimanja datoteka članka</message>
-	<message key="manager.statistics.reports.defaultReport.articleAbstract">Pregleda apstrakta strana</message>
-	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Preuzimanja članka i apstrakta</message>
-	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Broj pregleda glavne strane časopisa</message>
-	<message key="manager.statistics.reports.filters.byContext.description">Suzi rezultat po kontekstu (izdanje i/ili članak).</message>
-	<message key="manager.statistics.defaultMetricDescription">Vaš časopis je podešen tako da može sačuvati više načina merenja upotrebe.  Statistika upotrebe će biti prikazana u više od jednog konteksta.
-Ovo su slučajevi kad može jedna statistika upotrebe biti upotrebljena npr. da prikaže listu najčešće upotrebljenih članaka ili da se rangiraju rezultirati pretrage.</message>
-	<message key="manager.setup.categories.description">Odaberite odgovarajuće kategorije iz liste gore. Čitaoci će tako moći da pretražuju časopis.</message>
-	<message key="manager.statistics.reports.filters.byObject.description">Suzite rezultate po tipu objekta (časopis, izdanje, članak, pdf kopije, druge kopije) i/ili pojednom ili više id objekata.</message>
+	<message key="manager.payment.options.purchaseIssueFee">Купи издање</message>
+	<message key="manager.setup.resetPermissions">Врати на почетно стање дозволе у вези чланка.</message>
+	<message key="manager.setup.journalThumbnail">Мала слика часописа</message>
+	<message key="manager.setup.useThumbnail">Мала слика</message>
+	<message key="manager.statistics.reports.today">Данас</message>
+	<message key="manager.setup.categories">Категорије</message>
+	<message key="manager.payment.giftFees">Цене поклона</message>
+	<message key="manager.payment.giftFeesDescription">Веза на поклоњену претплату ће се појавити на страни за претплату у делу О часопису у делу бочног блока за претплате.</message>
+	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Ово ће активирати плаћања за поклоњене претплате омогућавајући читаоцима да купе поклон претплате и поклоне их другим читаоцима.</message>
+	<message key="manager.sections.alertDelete">Пре него што обришете ову рубрику морате чланке претходно објављене у њој преместити у другу рубрику.</message>
+	<message key="manager.setup.resetPermissions.description">Изјава о ауторским правима и информација о лиценци ће бити трајно прикључене уз објављени садржај тако да се та информација неће променити у случају да часопис промени своју политику током нових подношења чланака. Ако желите вратити на почетно стање сачуване дозволе прикључене уз објављени садржај притисните доње дугме.</message>
+	<message key="manager.setup.copyrightYearBasis">Постави годину ауторских права чланка на</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">Преузимања документа чланка</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Прегледа апстракта страна</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Преузимања чланка и апстракта</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Број прегледа главне стране часописa</message>
+	<message key="manager.statistics.reports.filters.byContext.description">Сузи резултат по контексту (издање и/или чланак).</message>
+	<message key="manager.statistics.defaultMetricDescription">Ваш часопис је подешен тако да може сачувати више начина мерења употребе.  Статистика употребе ће бити приказана у више од једног контекста. Ово су случајеви кад може једна статистика употребе бити употребљена нпр. да прикаже листу најчешће употребљених чланака или да се рангирају резултирати претраге.</message>
+	<message key="manager.setup.categories.description">Одаберите одговарајуће категорије из листе горе. Читаоци ће тако моћи да претражују часопис.</message>
+	<message key="manager.statistics.reports.filters.byObject.description">Сузите резултате по типу објекта (часопис, издање, чланак, пдф копије, друге копије) и/или поједном или више id објеката.</message>
 
 	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
 	<!-- plugin tabs -->
-	<message key="plugins.importexport.common.settings">Podešavanja</message>
+	<message key="plugins.importexport.common.settings">Подешавања</message>
 	<!-- settings form -->
-	<message key="plugins.importexport.common.error.DOIsNotAvailable">Ako želite da koristite ovaj dodatak idite u kategoriju dodataka "Public Identifier (Javni dodaci)" i uključite i konfigurišite dodatak DOI.</message>
-	<message key="plugins.importexport.common.error.pluginNotConfigured">Dodatak nije u potpunosti podešen.</message>
-	<message key="plugins.importexport.common.settings.form.password">Lozinka</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Ако желите да користите овај додатак идите у категорију додатака "Public Identifier (Јавни додаци)" и укључите и конфигуришите додатак DOI.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">Додатак није у потпуности подешен.</message>
+	<message key="plugins.importexport.common.settings.form.password">Лозинка</message>
 	<!-- actions -->
-	<message key="plugins.importexport.common.action.register">Registracija</message>
+	<message key="plugins.importexport.common.action.register">Регистрација</message>
 	<!--  notifications and errors -->
-	<message key="plugins.importexport.common.export.error.outputFileNotWritable">U fajl {$param} nije moguće pisati.</message>
-	<message key="plugins.importexport.common.register.error.mdsError">Registracija nije bila uspešna! DOI registracioni server je vratio grešku: '{$param}'.</message>
-	<message key="plugins.importexport.common.register.success">Uspešna registracija!</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">У фајл {$param} није могуће писати.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Регистрација није била успешна! DOI регистрациони сервер је вратио грешку: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Успешна регистрација!</message>
+	<message key="manager.website.archiving">Архивирање</message>
+	<message key="manager.setup">Подешавања часописа</message>
+	<message key="manager.setup.masthead">Управа</message>
+	<message key="manager.setup.masthead.description">Наведите уреднике, директоре секретаре и остале људе који су укључени у рад часописа.</message>
+	<message key="manager.setup.homepageContent">Садржај почетне стране часописа</message>
+	<message key="manager.setup.layout">Изглед часописа</message>
+	<message key="manager.setup.useStyleSheet">Style sheet часописа</message>
+	<message key="manager.setup.contextName">Назив часописа</message>
+	<message key="manager.setup.pageHeader">Заглавље странице часописа</message>
+	<message key="manager.setup.aboutItemContent">Садржај</message>
+	<message key="manager.setup.addAboutItem">Додај елемент "О" (о нама, о часопису)</message>
+	<message key="manager.setup.addChecklistItem">Додај елемент "Чеклиста"</message>
+	<message key="manager.setup.addItem">Додај елемент</message>
+	<message key="manager.setup.addItemtoAboutJournal">Додај елемент који ће се приказивати у секцији "О часопису"</message>
+	<message key="manager.setup.addNavItem">Додај елемент</message>
+	<message key="manager.setup.addReviewerDatabaseLink">Додај нову везу ка бази података</message>
+	<message key="manager.setup.addSponsor">Додај организацију подршке</message>
+	<message key="manager.setup.alternateHeader">Наизменични наслов</message>
+	<message key="manager.setup.announcements">Обавештења</message>
+	<message key="manager.setup.announcementsIntroduction">Додатне информације</message>
+	<message key="manager.setup.appearInAboutJournal">(Да се прикаже у "О часопису")</message>
+	<message key="manager.setup.history">Историја часописа</message>
+	<message key="manager.setup.copyeditInstructions">Инструкције за коректуру</message>
+	<message key="manager.setup.copyrightNotice">Коректорске напомене</message>
+	<message key="manager.setup.coverage">Покривеност</message>
+	<message key="manager.setup.currentIssue">Тренутни број</message>
+	<message key="manager.setup.customizingTheLook">5. корак Прилагођавање изгледа</message>
+	<message key="manager.setup.customTags">Прилагожене ознаке</message>
 </locale>

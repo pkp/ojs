@@ -13,7 +13,7 @@
   -->
  
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="plugins.citationFormats.proCite.displayName">ProCite format citata</message>
-	<message key="plugins.citationFormats.proCite.citationFormatName"><![CDATA[ProCite - RIS format (Macintosh & Windows)]]></message>
-	<message key="plugins.citationFormats.proCite.description">Ovaj dodatak implementira ProCite format citata.</message>
+	<message key="plugins.citationFormats.proCite.displayName">ProCite формат цитата</message>
+	<message key="plugins.citationFormats.proCite.citationFormatName"><![CDATA[ProCite - RIS формат (Macintosh & Windows)]]></message>
+	<message key="plugins.citationFormats.proCite.description">Овај додатак имплементира ProCite формат цитата.</message>
 </locale>

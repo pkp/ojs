@@ -13,17 +13,17 @@
  -->
 
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="plugins.paymethod.manual.displayName">Manuelno plaćanje</message>
-	<message key="plugins.paymethod.manual.description">Ovaj menadžer će manuelno zabeležiti plaćanje korisnika (van ovog softvera).</message>
-	<message key="plugins.paymethod.manual">Manuelno plaćanje nadoknade</message>
-	<message key="plugins.paymethod.manual.settings">Podešavanja manuelnog plaćanja</message>
-	<message key="plugins.paymethod.manual.settings.instructions">Uputstva</message>
-	<message key="plugins.paymethod.manual.settings.manualInstructions">Uputstva za korisnike koji su odabrali manuelni način plaćanja.</message>
+	<message key="plugins.paymethod.manual.displayName">Мануелно плаћање</message>
+	<message key="plugins.paymethod.manual.description">Овај менаджер ће мануелно забележити плаћање корисника (ван овог софтвера).</message>
+	<message key="plugins.paymethod.manual">Мануелно плаћање надокнаде</message>
+	<message key="plugins.paymethod.manual.settings">Подешавања мануелног плаћања</message>
+	<message key="plugins.paymethod.manual.settings.instructions">Упутства</message>
+	<message key="plugins.paymethod.manual.settings.manualInstructions">Упутства за кориснике који су одабрали мануелни начин плаћања.</message>
 
-	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Pošalji obaveštenje o plaćanju</message>
-	<message key="plugins.paymethod.manual.paymentNotification">Obaveštenje o plaćanju</message>
-	<message key="plugins.paymethod.manual.notificationSent">Obaveštenje o plaćanju je poslato</message>
+	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Пошаљи обавештење о плаћањu</message>
+	<message key="plugins.paymethod.manual.paymentNotification">Обавештење о плаћању</message>
+	<message key="plugins.paymethod.manual.notificationSent">Обавештење о плаћању је послато</message>
 
-	<message key="plugins.paymethod.manual.purchase.title">Naslov</message>
-	<message key="plugins.paymethod.manual.purchase.fee">Cena</message>
+	<message key="plugins.paymethod.manual.purchase.title">Наслоv</message>
+	<message key="plugins.paymethod.manual.purchase.fee">Цена</message>
 </locale>

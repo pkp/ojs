@@ -13,7 +13,7 @@
   -->
 
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="plugins.reports.articles.displayName">Izveštaj o člancima</message>
-	<message key="plugins.reports.articles.description">Ovaj dodatak implementira CVS izveštaj koji sadrži listu članaka i informacije o njima.</message>
-	<message key="plugins.reports.articles.nodecision">Nema odluke</message>
+	<message key="plugins.reports.articles.displayName">Извештај о чланцима</message>
+	<message key="plugins.reports.articles.description">Овај додатак имплементује CVS извештај који садржи листу чланака и информације о њима.</message>
+	<message key="plugins.reports.articles.nodecision">Нема одлуке</message>
 </locale>

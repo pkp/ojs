@@ -13,6 +13,6 @@
   -->
  
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="plugins.oaiMetadata.nlm.displayName">NLM format metapodataka</message>
-	<message key="plugins.oaiMetadata.nlm.description">Podešava strukturu metapodataka koji je u skladu sa NLM Journal Article formatom.</message>
+	<message key="plugins.oaiMetadata.nlm.displayName">NLM формат метаподатака</message>
+	<message key="plugins.oaiMetadata.nlm.description">Подешава структуру метаподатака који је у складу са NLM Journal Article форматом.</message>
 </locale>

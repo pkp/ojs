@@ -13,7 +13,7 @@
   -->
  
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="plugins.citationFormats.turabian.displayName">Turabian format citata</message>
+	<message key="plugins.citationFormats.turabian.displayName">Turabian формат цитата</message>
 	<message key="plugins.citationFormats.turabian.citationFormatName">Turabian</message>
-	<message key="plugins.citationFormats.turabian.description">Ovaj dodatak implementira Turabian format citata.</message>
+	<message key="plugins.citationFormats.turabian.description">Овај додатак имплементира Turabian формат цитата.</message>
 </locale>

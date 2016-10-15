@@ -13,9 +13,9 @@
   -->
 
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="plugins.block.relatedItems.displayName">Blok povezanih stavki</message>
-	<message key="plugins.block.relatedItems.description">Ovaj blok prikazuje povezane stavke u alatkama za čitanje.</message>
-	<message key="plugins.block.relatedItems.title">Povezane stavke</message>
-	<message key="plugins.block.relatedItems.hide">Sakri</message>
-	<message key="plugins.block.relatedItems.show">Prikaži sve</message>
+	<message key="plugins.block.relatedItems.displayName">Блок повезаних ставки</message>
+	<message key="plugins.block.relatedItems.description">Овај блок приказује повезане ставке у алаткама за читање.</message>
+	<message key="plugins.block.relatedItems.title">Повезане ставке</message>
+	<message key="plugins.block.relatedItems.hide">Сакриј</message>
+	<message key="plugins.block.relatedItems.show">Прикажи све</message>
 </locale>

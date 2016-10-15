@@ -13,7 +13,7 @@
   -->
  
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="plugins.block.information.displayName">Blok informacija</message>
-	<message key="plugins.block.information.description">Ovaj dodatak prikazuje polje sa informaciama.</message>
-	<message key="plugins.block.information.link">Informacije</message>
+	<message key="plugins.block.information.displayName">Блок информација</message>
+	<message key="plugins.block.information.description">Овај додатак приказује поље са информациама.</message>
+	<message key="plugins.block.information.link">Информације</message>
 </locale>
