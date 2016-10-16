@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/timedView/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.reports.timedView.displayName">تقرير توقيتات المعاينات</message>
+	<message key="plugins.reports.timedView.description">هذه الإضافة تعطي تقريراً بصيغة CSV تصف فيه قراءات كل مقالة مع تصفيته حسب فئات زمنية يعرّفها المستخدم.</message>
+
+	<message key="plugins.reports.timedView.form.dateStartRequired">تأريخ البدء مطلوب حتماً.</message>
+	<message key="plugins.reports.timedView.form.dateStartValid">لطفاً، إختر تأريخاً صحيحاً للبدء.</message>
+	<message key="plugins.reports.timedView.form.dateEndRequired">تأريخ الانتهاء مطلوب حتماً.</message>
+	<message key="plugins.reports.timedView.form.dateEndValid">لطفاً، إختر تأريخاً صحيحاً للانتهاء.</message>
+	<message key="plugins.reports.timedView.form.generate">إنشاء التقرير</message>
+	<message key="plugins.reports.timedView.form.clearLogs">إزالة سجلات الوقوعات</message>
+	<message key="plugins.reports.timedView.form.clearLogs.description">إختر تأريخاً لإزالة السجلات من الوقوعات استناداً له. أي مدخلات في سجل الوقوعات التي تسبق هذا التأريخ سيتم حذفها. لاحظ أن ذلك يؤثر فقط على هذه الإضافة وليس له دخل بأي إحصائيات أخرى (مثل: إضافة المعاينات العامة).</message>
+	<message key="plugins.reports.timedView.form.clearLogs.confirm">هل أنت متأكد من رغبتك في حذف هذه السجلات؟ هذا الأمر لا يمكنك التراجع عنه لاحقاً.</message>
+	<message key="plugins.reports.timedView.form.useTimedViewRecords">أشر هنا لاستعمال الإحصائيات المستقاة من إضافة توقيتات المعاينة القديمة. إذا أردت إنشاء تقرير توقيتات مع بيانات إحصائية جديدة، أترك هذه الخانة بدون تأشير.</message>
+	<message key="plugins.reports.timedView.form.largeSetOfDataIssue">عند اختيار فترة زمنية طويلة مع مجموعة كبيرة من البيانات الإحصائية، هذا التقرير قد يستغرق مدة ليكون جاهزاً. إذا استغرق مدة طويلة جداً، فإن الاتصال بقاعدة البيانات قد تنقضي مدته ولذلك لن تتلقى التقرير الذي تريده. إذا حدث ذلك، حاول مجدداً مع فترة زمنية أقصر.</message>
+
+	<message key="plugins.reports.timedView.report.articleId">رمز تعريف المقالة</message>
+	<message key="plugins.reports.timedView.report.articleTitle">عنوان المقالة</message>
+	<message key="plugins.reports.timedView.report.datePublished">تأريخ نشرها</message>
+	<message key="plugins.reports.timedView.report.abstractViews">معاينات الملخص</message>
+	<message key="plugins.reports.timedView.report.galleyViews">إجمالي معاينات اللوح الطباعي</message>
+</locale>

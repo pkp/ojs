@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/duracloud/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.importexport.duracloud.displayName">إضافة استيراد/تصدير DuraCloud</message>
+	<message key="plugins.importexport.duracloud.description">حفظ واستعادة الأعداد باستعمال خدمة DuraCloud الخارجية لأغراض الخزن</message>
+
+	<message key="plugins.importexport.duracloud.configuration">تعريف DuraCloud</message>
+	<message key="plugins.importexport.duracloud.configuration.unconfigured.description">لست حالياً داخلاً عبر حساب DuraCloud. لطفاً، أدخل معلومات حسابك أدناه. تلك المعلومات لن تستمر أكثر من جلستك هذه.</message>
+	<message key="plugins.importexport.duracloud.configuration.configured.description"><![CDATA[أنت حالياً داخل في DuraCloud عند <a href="{$url}">{$escapedUrl}</a> باستعمال اسم المستخدم "{$username}". تلك المعلومات لن تستمر أكثر من جلستك هذه. لإزالة بيانات دخولك فوراً، أنقر على <a href="{$logoutUrl}">الخروج</a> من DuraCloud.]]></message>
+	<message key="plugins.importexport.duracloud.configuration.urlRequired">رابط إنترنت أساسي لـ DuraCloud مطلوب حتماً.</message>
+	<message key="plugins.importexport.duracloud.configuration.usernameRequired">اسم مستخدم لـ DuraCloud مطلوب حتماً.</message>
+	<message key="plugins.importexport.duracloud.configuration.passwordRequired">كلمةمرور لـ DuraCloud مطلوبة حتماً.</message>
+	<message key="plugins.importexport.duracloud.configuration.credentialsInvalid">تعذر الاتصال بخدمة DuraCloud المحددة باستعمال بيانات الدخول المذكورة. لطفاً، تأكد من تلك البيانات ثم حاول مجدداً.</message>
+	<message key="plugins.importexport.duracloud.configuration.space">فراغ</message>
+	<message key="plugins.importexport.duracloud.cliUsage"><![CDATA[الاستعمال: {$scriptName} {$pluginName}
+	[base_url] [username] [password]
+	[ojs_journal_path] [duracloud_space_id] [command] ...
+الأوامر:
+	importIssues [user_name] [issueId1] [issueId2] ...
+	exportIssues [issueId1] [issueId2] ...
+مثال:
+	php {$scriptName} {$pluginName} \
+		https://pkp.duracloud.org myUsername myPassword \
+		demojournal testspace \
+		exportIssues 1
+]]></message>
+	<message key="plugins.importexport.duracloud.export">تصدير البيانات</message>
+	<message key="plugins.importexport.duracloud.export.issues">تصدير الأعداد</message>
+	<message key="plugins.importexport.duracloud.export.results">تصدير النتائج</message>
+	<message key="plugins.importexport.duracloud.export.results.description">هذه نتائج عملية التصدير لكل من الأعداد المحددة.</message>
+	<message key="plugins.importexport.duracloud.export.results.success"><![CDATA[{$issueIdentification} تم تصديره بنجاح إلى <a href="{$targetLocation}">{$targetLocationEscaped}</a>.]]></message>
+	<message key="plugins.importexport.duracloud.export.results.failure">{$issueIdentification} تعذر تصديره.</message>
+	<message key="plugins.importexport.duracloud.import.results">استيراد النتائج</message>
+	<message key="plugins.importexport.duracloud.import.results.description">هذه نتائج عملية الاستيراد لكل من الأعداد المحددة.</message>
+	<message key="plugins.importexport.duracloud.import.results.success"><![CDATA[{$issueIdentification} تم استيراده بنجاح من "{$contentId}".]]></message>
+	<message key="plugins.importexport.duracloud.import.results.failure">{$contentId} تعذر استيراده.</message>
+
+	<message key="plugins.importexport.duracloud.selectIssue">إختر العدد</message>
+
+	<message key="plugins.importexport.duracloud.import.issues">استورد الأعداد</message>
+	<message key="plugins.importexport.duracloud.import.description">هذه الإضافة تدعم استيراد البيانات استناداً إلى تعريف نوعية المستند native.dtd (كما هي تسميته في النظام). العقد الجذرية المدعومة هي: &amp;lt;article&amp;gt;, &amp;lt;articles&amp;gt;, &amp;lt;issue&amp;gt;, و &amp;lt;issues&amp;gt;.</message>
+
+	<message key="plugins.importexport.duracloud.import.error">خطأ في الاستيراد</message>
+	<message key="plugins.importexport.duracloud.import.error.description">حدث خطأ واحد أو أكثر خلال عملية الاستيراد. لطفاً، تحقق من كون صيغة الملف المستورد تطابق فعلاً ما هو مطلوب. بعض تفاصيل الخطأ مبينة أدناه.</message>
+
+	<message key="plugins.importexport.duracloud.cliError">خطأ:</message>
+	<message key="plugins.importexport.duracloud.export.error.couldNotWrite">تعذرت الكتابة إلى الملف "{$fileName}".</message>
+
+	<message key="plugins.importexport.duracloud.import.success">تم الاستيراد بنجاح</message>
+	<message key="plugins.importexport.duracloud.import.success.description">نجحت عملية الاستيراد. الفقرات المستوردة بنجاح مدرجة أدناه.</message>
+
+</locale>

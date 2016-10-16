@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/keywordCloud/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.block.keywordCloud.displayName">كتلة سحابة الكلمات</message>
+	<message key="plugins.block.keywordCloud.description">هذه الإضافة تقدم بطاقة لسحابة الكلمات المفتاحية المستقاة من المقالات.</message>
+	<message key="plugins.block.keywordCloud.title">الكلمات المفتاحية</message>
+</locale>

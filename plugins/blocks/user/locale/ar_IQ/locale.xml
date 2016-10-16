@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/user/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.block.user.displayName">كتلة المستخدم</message>
+	<message key="plugins.block.user.description">هذه الإضافة تقدم أدوات الشريط الجانبي للمستخدم والمتعلقة بحسابه في الموقع (مثل: الدخول، الخروج، رابط الملف الشخصي... إلخ.).</message>
+	<message key="plugins.block.user.loggedInAs">مسجل دخولك باسم...</message>
+	<message key="plugins.block.user.myJournals">مجلاتي</message>
+	<message key="plugins.block.user.myProfile">ملفي الشخصي</message>
+	<message key="plugins.block.user.logout">الخروج</message>
+	<message key="plugins.block.user.signOutAsUser">الخروج كمستخدم</message>
+	<message key="plugins.block.user.rememberMe">تذكرني</message>
+    <message key="plugins.block.user.implicitAuthLogin">تسجيل الدخول في المجلات</message>
+</locale>

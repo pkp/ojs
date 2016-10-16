@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
+<!--
+  * @file plugins/generic/sword/locale/ar_IQ/emailTemplates.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  -->
+
+<email_texts locale="ar_IQ">
+	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
+		<subject>إشعار إيداع</subject>
+		<body>تهانينا الحارة على قبول طلبك لنشر مؤلفك الموسوم "{$articleTitle}" في مجلة {$journalName}. إن رغبتك في ذلك، بإمكانك اختيار الإيداع الآلي لطلبك في واحد أو أكثر من المستودعات.
+
+إذهب إلى {$swordDepositUrl} للمتابعة.
+
+هذه الرسالة يولدها نظام المجلات المفتوحة مستعملاً إضافة الإيداع SWORD.</body>
+		<description>قالب الرسالة هذا يُستعمل لإشعار المؤلف بمواضع الإيداع الاختيارية التي تقدمها إضافة الإيداع SWORD.</description>
+	</email_text>
+</email_texts>

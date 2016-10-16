@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/erudit/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.importexport.erudit.displayName">إضافة تصدير المقالات Erudit</message>
+	<message key="plugins.importexport.erudit.description">تصدير المقالات باستعمال Erudit DTD بنسخته الإنجليزية</message>
+
+	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[الاستعمال: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]
+]]></message>
+	<message key="plugins.importexport.erudit.export">تصدير البيانات</message>
+	<message key="plugins.importexport.erudit.export.issues">تصدير الأعداد</message>
+	<message key="plugins.importexport.erudit.export.sections">تصدير الأقسام</message>
+	<message key="plugins.importexport.erudit.export.articles">تصدير المقالات</message>
+
+	<message key="plugins.importexport.erudit.selectIssue">إختر العدد</message>
+	<message key="plugins.importexport.erudit.selectArticle">إختر المقالة</message>
+
+	<message key="plugins.importexport.erudit.cliError">خطأ:</message>
+	<message key="plugins.importexport.erudit.error.unknownJournal">مسار المجلة المحدد "{$journalPath}"، غير موجود.</message>
+	<message key="plugins.importexport.erudit.export.error.couldNotWrite">تعذرت الكتابة إلى الملف "{$fileName}".</message>
+	<message key="plugins.importexport.erudit.export.error.articleNotFound">لا توجد مقالة تطابق رمز التعريف المحدد "{$articleId}".</message>
+	<message key="plugins.importexport.erudit.export.error.galleyNotFound">لا يوجد لوح طباعي يطابق عنوان اللوح المحدد "{$galleyLabel}".</message>
+
+	<message key="plugins.importexport.erudit.unavailable">غير متوافر</message>
+</locale>

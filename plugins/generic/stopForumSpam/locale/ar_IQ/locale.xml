@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/stopForumSpam/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Stop Forum Spam plugin localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+
+	<message key="plugins.generic.stopForumSpam.displayName">إضافة منع الإزعاجات عن المنتدى</message>
+	<message key="plugins.generic.stopForumSpam.description"><![CDATA[مكاملة نظام المجلات المفتوحة بنظام منع الإزعاجات عن المنتدى، والذي يهدف إلى تقليل التسجيلات العشوائية في المنتدى قدر الإمكان.]]></message>
+
+	<message key="plugins.generic.stopForumSpam.manager.settings">الإعدادات</message>
+	<message key="plugins.generic.stopForumSpam.manager.stopForumSpamSettings">إعدادات منع إزعاجات المنتدى</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.description"><![CDATA[<p>مع تمكين هذه الإضافة، نظام المجلات المفتوحة سيقوم بالتحقق من وجود أية عناصر في محتوى التسجيل لأحد المستخدمين مذكورة في قائمة المنع الخاصة بالمنتدى. لذا فإن عمليات التسجيل سيتم رفضها في تلك الحالات.</p>]]></message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkIp">التحقق من عنوان IP للمسجل</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkEmail">التحقق من عنوان البريد الالكتروني للمسجل</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkUsername">التحقق من اسم المستخدم الذي يقوم بالتسجيل (استعملها بحذر!)</message>
+	<message key="plugins.generic.stopForumSpam.checkName">إضافة منع الإزعاجات عن المنتدى</message>
+	<message key="plugins.generic.stopForumSpam.checkMessage"><![CDATA[إن إضافة <a href="http://www.stopforumspam.com" target="_blank">منع الإزعاجات عن المنتدى</a> قد قامت بحظر عملية التسجيل هذه.]]></message>
+</locale>

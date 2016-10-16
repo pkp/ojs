@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
+<!--
+  * @file plugins/generic/booksForReview/locale/ar_IQ/emailTemplates.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Books for review email template localized default text.
+  *
+  -->
+<email_texts locale="ar_IQ">
+	<email_text key="BFR_REVIEW_REMINDER">
+		<subject>كتاب للتحكيم: تذكير بموعد الاستيجاب</subject>
+		<body>عزيزنا {$authorName}:
+
+هذه رسالة تذكير ودية بأن موعد تسليمك لتحكيم الكتاب الموسوم {$bookForReviewTitle} سيستوجب بتاريخ: {$bookForReviewDueDate}.
+
+لتسليم تحكيمك للكتاب المذكور، لطفاً، قم بالدخول إلى موقع المجلة وأكمال عملية تقديم المؤلَّف على الإنترنت. لتسهيل الأمر عليك، رابط التسليم مدرج أدناه.
+
+رابط التسليم: {$submissionUrl}
+
+لطفاً، لا تترد في مراسلتي إن كانت لديك أية أسئلة أو متعلقات تخص تحكيم هذا الكتاب.
+
+نشكر لكم مساهمتكم في المجلة، ونحن نتطلع إلى استلام نتيجة التحكيم منكم قريباً.
+
+{$editorialContactSignature}</body>
+		<description>هذه رسالة مولدة آلياً يتم إرسالها إلى محكم كتاب ما لإبلاغه بأن تأريخ استيجاب التحكيم قد اقترب موعده.</description>
+	</email_text>
+	<email_text key="BFR_REVIEW_REMINDER_LATE">
+		<subject>كتاب للتحكيم: قد استوجب تسليم التحكيم</subject>
+		<body>عزيزنا {$authorName}:
+
+هذه رسالة تذكير ودية بأن موعد تسليمك لتحكيم الكتاب الموسوم {$bookForReviewTitle} قد استوجب بتاريخ {$bookForReviewDueDate} إلا أنه لم يصلنا منك بعد.
+
+لتسليم تحكيمك للكتاب المذكور، لطفاً، قم بالدخول إلى موقع المجلة وأكمال عملية تقديم المؤلَّف على الإنترنت. لتسهيل الأمر عليك، رابط التسليم مدرج أدناه.
+
+رابط التسليم: {$submissionUrl}
+
+لطفاً، لا تترد في مراسلتي إن كانت لديك أية أسئلة أو متعلقات تخص تحكيم هذا الكتاب.
+
+نشكر لكم مساهمتكم في المجلة، ونحن نتطلع إلى استلام نتيجة التحكيم منكم قريباً.
+
+{$editorialContactSignature}</body>
+		<description>هذه رسالة مولدة آلياً يتم إرسالها إلى محكم كتاب ما لإبلاغه بأن تأريخ استيجاب التحكيم قد انقضى موعده.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_ASSIGNED">
+		<subject>كتاب للتحكيم: تكليف بالكتاب</subject>
+		<body>عزيزنا {$authorName}:
+
+هذه الرسالة تؤكد بأن الكتاب الموسوم {$bookForReviewTitle} قد تم تكليفكم به لتولي مهمة تحكيمه حتى يوم التسليم المحدد بتأريخ {$bookForReviewDueDate}.
+
+لطفاً، تأكد من أن عنوانك البريدي المذكور في ملفك الشخصي للموقع محدث. هذا العنوان هو ما سيتم اعتماده لإرسال نسخة من الكتاب إليك لغرض تحكيمها.
+
+العنوان البريدي الموجود لدينا حالياً هو:
+{$authorMailingAddress}
+
+إن كان هذا العنوان غير كامل أو لم تعد تستعمله، لطفاً، استعمل رابط ملفك الشخصي أدناه لتعديل عنوانك البريدي:
+
+رابط الملف الشخصي: {$userProfileUrl}
+ 
+لتسليم تحكيمك للكتاب المذكور، لطفاً، قم بالدخول إلى موقع المجلة وأكمال عملية تقديم المؤلَّف على الإنترنت.
+
+رابط التسليم: {$submissionUrl}
+
+لطفاً، لا تترد في مراسلتي إن كانت لديك أية أسئلة أو متعلقات تخص تحكيم هذا الكتاب.
+
+{$editorialContactSignature}</body>
+		<description>هذه الرسالة يرسلها المحرر إلى محكم كتاب ما عندما يتم تكليفه بمهمة التحكيم.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_DENIED">
+		<subject>كتاب للتحكيم</subject>
+		<body>عزيزنا {$authorName}:
+
+للأسف، لم أتمكن من تكليفكم بمهمة تحكيم الكتاب الموسوم {$bookForReviewTitle} حالياً.
+
+أرجو أن تأخذوا بنظر الاعتبار إختيار كتاب آخر من قائمتنا لغرض التحكيم حالياً أو مستقبلاً.
+
+{$editorialContactSignature}</body>
+		<description>هذه الرسالة يرسلها المحرر إلى محكم مهتم بتحكيم كتاب لم يعد متاحاً للتحكيم.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_REQUESTED">
+		<subject>كتاب للتحكيم: إلتماس تحكيم كتاب</subject>
+		<body>عزيزي {$editorName}:
+
+عندي إهتمام في إنشاء تحكيم ومراجعة للكتاب الموسوم {$bookForReviewTitle}.
+
+هل لك لطفاً تأكيد فيما لو كان هذا الكتاب لا يزال متاحاً للتحكيم؟
+
+{$authorContactSignature}</body>
+		<description>هذه الرسالة يعنونها أحد المهتمين بتحكيم كتاب ما إلى المحرر لأبداء رغبته في تحكيمه.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_MAILED">
+		<subject>كتاب للتحكيم: تم إرسال الكتاب عبر البريد الالكتروني</subject>
+		<body>عزيزنا {$authorName}:
+
+هذه الرسالة تؤكد لكم بأننا قد أرسلنا نسخة من الكتاب الموسوم {$bookForReviewTitle} إلى العنوان البريدي الآتي والموجود في ملفكم الشخصي عندنا على الإنترنت:
+{$authorMailingAddress}
+ 
+لتسليم تحكيمك للكتاب المذكور، لطفاً، قم بالدخول إلى موقع المجلة وأكمال عملية تقديم المؤلَّف على الإنترنت.
+
+رابط التسليم: {$submissionUrl}
+
+لطفاً، لا تترد في مراسلتي إن كانت لديك أية أسئلة أو متعلقات تخص تحكيم هذا الكتاب.
+
+{$editorialContactSignature}</body>
+		<description>هذه الرسالة يعنونها المحرر إلى محكم كتاب ما عند إرساله نسخة من الكتاب إلى المحكم عبر البريد الالكتروني.</description>
+	</email_text>
+	<email_text key="BFR_REVIEWER_REMOVED">
+		<subject>كتاب للتحكيم</subject>
+		<body>عزيزنا {$authorName}:
+
+هذه الرسالة لتأكيد رفع اسمكم من مهمة تحكيم الكتاب الموسوم {$bookForReviewTitle}، حيث سيكون متاحاً إلى أشخاص آخرين لغرض تحكيمه.
+
+أرجو أن تأخذوا بنظر الاعتبار إختيار كتاب آخر من قائمتنا لغرض التحكيم حالياً أو مستقبلاً.
+
+{$editorialContactSignature}</body>
+		<description>هذه الرسالة يعنونها المحرر إلى المحكم لتأكيد إلغاء مهمة تحكيمه للكتاب المعني.</description>
+	</email_text>
+</email_texts>

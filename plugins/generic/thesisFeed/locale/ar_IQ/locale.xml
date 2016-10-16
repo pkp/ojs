@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/thesisFeed/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.generic.thesisfeed.displayName">إضافة مغذي ملخصات الأطاريح</message>
+	<message key="plugins.generic.thesisfeed.description">هذه الإضافة تولد مغذيات الإنترنت RSS/Atom الخاصة بملخصات الأطاريح.</message>
+
+	<message key="plugins.generic.thesisfeed.settings">الإعدادات</message>
+	<message key="plugins.generic.thesisfeed.settings.all">إعرض روابط المغذي في جميع صفحات المجلة.</message>
+	<message key="plugins.generic.thesisfeed.settings.homepage">إعرض روابط المغذي فقط على الصفحة الرئيسية وعلى صفحة ملخصات الأطاريح.</message>
+	<message key="plugins.generic.thesisfeed.settings.thesis">إعرض روابط المغذي فقط على صفحة ملخصات الأطاريح.</message>
+	<message key="plugins.generic.thesisfeed.settings.recentThesis1">قيد عدد الملخصات إلى</message>
+	<message key="plugins.generic.thesisfeed.settings.recentThesis2">أكثر ملخصات الأطاريح حداثة.</message>
+	<message key="plugins.generic.thesisfeed.settings.recentItemsRequired">لطفاً، أدخل رقماً صحيحاً موجباً يمثل عدد ملخصات الأطاريح الأخيرة.</message>
+	<message key="plugins.generic.thesisfeed.atom.altText">شعار Atom</message>
+	<message key="plugins.generic.thesisfeed.rss1.altText">شعار RSS1</message>
+	<message key="plugins.generic.thesisfeed.rss2.altText">شعار RSS2</message>
+</locale>

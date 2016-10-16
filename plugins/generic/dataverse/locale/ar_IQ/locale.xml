@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/dataverse/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Dataverse plugin localization strings
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+
+	<!-- Dataverse Plugin -->
+	<message key="plugins.generic.dataverse.displayName">إضافة Dataverse</message>
+	<message key="plugins.generic.dataverse.description">إيداع مجاميع البيانات و/أو غيرها من الملفات التكميلية في Dataverse.</message>
+
+	<!-- Set up Dataverse: DVN URL and authentication details -->
+	<message key="plugins.generic.dataverse.settings.connect">اتصال</message>
+	<message key="plugins.generic.dataverse.settings.dvnUri">رابط الإنترنت لـ Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriDescription">جذر رابط الإنترنت لـ Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.usernameDescription">اسم المستخدم أو معرفه لـ API</message>
+	<message key="plugins.generic.dataverse.settings.passwordDescription">كلمة المرور. غير مطلوبة لمعرف API</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriRequired">رابط الإنترنت لـ Dataverse مطلوب حتماً.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">تعذر الاتصال بـ Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.usernameRequired">لطفاً، أدخل اسم مستخدم لـ Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.passwordRequired">لطفاً، أدخل كلمة مرور صحيحة لشبكة Dataverse المحددة.</message>
+
+	<!-- Set up Dataverse: select Dataverse -->
+	<message key="plugins.generic.dataverse.settings.selectDataverse">إختر Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.dataverse">Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.dataverseDescription">إختر Dataverse لحفظ ملفات بيانات هذه المجلة.</message>
+	<message key="plugins.generic.dataverse.settings.dataverseRequired">لطفاً، إختر Dataverse.</message>
+
+	<!-- Plugin configuration: Settings -->
+	<message key="plugins.generic.dataverse.settings">الإعدادات</message>
+	<message key="plugins.generic.dataverse.settings.dataPolicies">سياسات البيانات</message>
+	<message key="plugins.generic.dataverse.settings.dataPoliciesDescription">ضبط سياسات البيانات.</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityPolicy">سياسة توافر البيانات</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityPolicyDescription">سياسة توافر البيانات العامة للمجلة. هذا سيظهر في (عن المجلة).</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityRequired">لطفاً، أذكر سياسة توافر البيانات.</message>
+	<message key="plugins.generic.dataverse.settings.sectionPoliciesDescription">أضف سياسات بيانات لأقسام معينة من المجلة.</message>
+	<message key="plugins.generic.dataverse.settings.authorGuidelinesDescription"><![CDATA[تعديل <a href="{$authorGuidelinesUrl}" target="_blank">إرشادات المؤلف</a> لتضمين تقديم البيانات وإرشادات الاقتباسات.]]></message>
+	<message key="plugins.generic.dataverse.settings.checklistDescription"><![CDATA[تعديل <a href="{$checklistUrl}" target="_blank">قائمة مهام تحضير التقديم</a> لمساعدة المؤلفين على الامتثال لإرشادات تقديم البيانات والاقتباسات.]]></message>
+	<message key="plugins.generic.dataverse.settings.reviewPolicyDescription"><![CDATA[تعديل <a href="{$reviewPolicyUrl}" target="_blank">سياسة التحكيم</a> لمعالجة مجموعات البيانات.]]></message>
+	<message key="plugins.generic.dataverse.settings.reviewGuidelinesUrl"><![CDATA[تعديل <a href="{$reviewGuidelinesUrl}" target="_blank">إرشادات التحكيم</a> لتضمين تعليمات بشأن تحكيم مجاميع البيانات.]]></message>
+	<message key="plugins.generic.dataverse.settings.copyeditInstructionsUrl"><![CDATA[تعديل <a href="{$copyeditInstructionsUrl}" target="_blank">تعليمات الحقوق الفكرية</a> لتضمين تعليمات بشأن مجاميع البيانات.]]></message>
+	<message key="plugins.generic.dataverse.settings.termsOfUse">شروط الاستعمال</message>
+	<message key="plugins.generic.dataverse.settings.termsOfUseRequired">أذكر شروط الاستعمال أو اختر استقدام شروط الاستعمال من Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.termsOfUseDescription">أذكر شروط الاستعمال التي على المستخدمين الموافقة عليها قبل إيداع ملفات بياناتهم.</message>
+	<message key="plugins.generic.dataverse.settings.fetchTermsOfUse">استقدم شروط الاستعمال من إعدادات Dataverse لهذه المجلة.</message>
+	<message key="plugins.generic.dataverse.settings.defineTermsOfUse">أدخل شروط استعمال مخصصة في الحقل أدناه.</message>
+	<message key="plugins.generic.dataverse.settings.dataverseTermsOfUseError">تعذر استقدام شروط الاستعمال من Dataverse المعني. لطفاً، تحقق من إعدادات الاتصال.</message>
+	<message key="plugins.generic.dataverse.settings.metadata">إعدادات البيانات الوصفية</message>
+	<message key="plugins.generic.dataverse.settings.citationFormat">صيغة الاقتباس</message>
+	<message key="plugins.generic.dataverse.settings.citationFormatDescription">إختر صيغة نشر الاقتباسات المعروضة في معلومات فهرسة الدراسة.</message>
+	<message key="plugins.generic.dataverse.settings.citationFormat.apa">نمط اقتباس APA</message>
+	<message key="plugins.generic.dataverse.settings.pubIdType">نوعية المعرف العام</message>
+	<message key="plugins.generic.dataverse.settings.pubIdTypeDescription"><![CDATA[إختر نوعية المعرف العام الذي يربطك بالمقالة من اقتباس النشر. إن لم تتوفر <a href="{$pubIdsUrl}">إضافة للمعرف العام</a> ممكنة، فإن اقتباسات المقالات المنشورة ستستعمل روابط الإنترنت لنظام المجلات المفتوحة.]]></message>
+	<message key="plugins.generic.dataverse.settings.workflow">إعدادات سير العمل</message>
+	<message key="plugins.generic.dataverse.settings.requireData">يتطلب ملفات بيانات</message>
+	<message key="plugins.generic.dataverse.settings.requireDataDescription">يتطلب من طلبات النشر أن تتضمن ملفات بيانات مودعة في Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.requireDataError">ينبغي على المؤلفين إيداع ملفات البيانات الخاصة بطلباتهم في Dataverse. قم بتحميل ملف تكميلي للمتابعة.</message>
+	<message key="plugins.generic.dataverse.settings.studyRelease">إطلاق مسودات الدراسات</message>
+	<message key="plugins.generic.dataverse.settings.studyReleaseSubmissionAccepted">المحرر يقبل طلبات النشر</message>
+	<message key="plugins.generic.dataverse.settings.studyReleaseArticlePublished">المقالة منشورة</message>
+
+	<!-- Settings: default values -->
+	<message key="plugins.generic.dataverse.settings.default.dataAvailabilityPolicy"><![CDATA[{$journal} تتطلب، كأحد شروط النشر فيها، بأن يتم حفظ البيانات التي تدعم نتائج المؤلَّف في أرشيف عام مناسب. {$journal} توصي بـ <a href="http://thedata.harvard.edu/">Harvard Dataverse</a>، وهو مجاني ومفتوح أمام كل الباحثين على نطاق العالم للمشاركة، والاقتباس، وإعادة الاستعمال، وحفظ البيانات البحثية. إن البيانات هي نتاج مهم للمؤسسات العلمية، وينبغي أن تكون محفوظة وقابلة للاستعمال لعقود قادمة مستقبلاً. قد يختار المؤلفون أن تكون سياسة البيانات متوفرة عند النشر. قد تمنح بعض الاستثناءات حسب السلطة التقديرية للمحرر، وبخاصة للمعلومات الحساسة مثل بيانات شخص معين أو موقع أنواع مهددة بالانقراض. أي استثناءات ينبغي توثيقها في بيان يظهر في المقالة المنشورة. (مقتبس من <a href="http://datadryad.org/pages/jdap">سياسة حفظ البيانات المشتركة</a> (JDAP)).]]></message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines.extras">نموذج من إرشادات المؤلف</message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines.extras.label">إظهار نموذج من إرشادات تقديم البيانات والاقتباس</message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines"><![CDATA[
+   <ol>
+     <li>
+       <p>تعريف البيانات التي تنبغي مشاركتها</p>
+       <p>"الحد الأدنى من مجموعة البيانات" يمكن تعريفه على أنه يضم مجموعة البيانات المستعملة للوصول إلى استنتاج مشار إليه في المؤلَّف مع البيانات الوصفية والطرق ذات الصلة، وأي بيانات إضافية مطلوبة لتكرار ما توصلت إليه الدراسة المعنية على وجه التمام. تتضمن معلومات كافية للباحث لفهم البيانات، وأي اقتباس لبيانات من تلك التي اشتقت منها المجموعة المكررة. ينبغي تضمين البيانات الوصفية الجوهرية، والطرق، ونتائج الدراسة في الأوراق الرئيسية، بغض النظر عن كثرة البيانات. الباحثون الذين لديهم مجاميع بيانات كبيرة جداً بحيث تتعذر مشاركتها عبر المستودعات أو رفع الملفات، عليهم مراسلة {$journal} لالتماس النصح. (مقتبس من <a href="http://www.plos.org/data-access-for-the-open-access-literature-ploss-data-policy/">PLOS' سياسة البيانات</a>)</p>
+     </li>
+     <li>
+       <p>توجيهات بشأن مشاركة مجموعات البيانات التي تستمد من العمل الذي ينطوي على مشاركين بشريين</p>
+       <p>{$journal} تدرك أن هناك حالات فيها، لأسباب تتعلق بحفظ الخصوصية الشخصية، الأمن الوطني، والسرية التجارية، يتعذر جعل البيانات الكاملة متاحة للعامة. في تلك الحالات، ينبغي على الباحثين مشاركة تحليلهم للبيانات بأقل قيود ممكنة تتلاءم مع المتطلبات القانونية، والالتزام بأخلاقيات البحث وإرشادات مجتمعاتهم. هذا ينبغي أن يشمل إتاحة الوصول إلى البيانات غير الحساسة، ملخصات البيانات، البيانات الوصفية، والنص البرمجي؛ مع تسهيل الوصول إليها إن كان مالك البيانات الأصلية يمنح الباحثين الآخرين صلاحية استعمالها. (مقتبس من <a href="http://openeconomics.net/principles/#sthash.MdxVXZlC.dpuf">مبادئ الاقتصاد المفتوح</a> لـ OKF)</p>
+     </li>
+     <li>
+       <p>توجيهات بشأن اقتباس البيانات</p>
+       <p>إن تم إيداع بياناتك البحثية في نفس الوقت مع نص بحثك باستعمال نموذج التقديم الخاص بنظام المجلات المفتوحة، فإن اقتباس البيانات سيتم إنشاؤه تلقائياً عبر Harvard Dataverse. مع ذلك، إن كانت بيانات بحثك محفوظة سابقاً في مستودع ما، إليك هنا صيغة مقترحة لاقتباس البيانات لتضمينها عند تقديم مؤلَّفك:</p>
+       <p>المؤلف/المؤلفون، السنة، عنوان مجموعة البيانات، ثابت التعريف العالمي، مستودع البيانات أو الأرشيف، رقم النسخة أو المجموعة الفرعية.</p>
+       <p>للمزيد من المعلومات عن أفضل أساليب اقتباس البيانات، لطفاً، اطلع على <a href="http://www.force11.org/datacitation">مبادئ اقتباس البيانات Force11</a>.</p>
+     </li>
+   </ol>]]>
+	</message>
+	<message key="plugins.generic.dataverse.settings.default.checklist.extras">أمثلة قوائم مهام تحضير البيانات</message>
+	<message key="plugins.generic.dataverse.settings.default.checklist.extras.label">أظهر نموذج من قائمة مهام تحضير التقديم الذي يتضمن مجموعة بيانات</message>
+	<message key="plugins.generic.dataverse.settings.default.checklist"><![CDATA[
+   <ol>
+   <li><p>فيما لو عزمت على مشاركة مجاميع بيانات مشتقة من أعمال تشتمل على متطوعين بشريين، لطفاً عاين "توجيهات بشأن مشاركة مجموعات البيانات التي تستمد من العمل الذي ينطوي على مشاركين بشريين" أعلاه.</p></li>
+   <li><p>حضر مجاميع البيانات للإيداع عبر مراجعة توجيهات النسخ المتماثل: <a href="http://thedata.org/book/replication-guidelines">http://thedata.org/book/replication-guidelines</a></p></li>
+   <li><p>في حالة الإيداع في Harvard Dataverse، فبإمكانك تقديم مجاميع بياناتك لنظام المجلات المفتوحة في نفس وقت تقديم مؤلَّفك إلى {$journal}. هذا سيجعله خائعاً للإيداع التلقائي في Harvard Dataverse وسينشئ اقتباس للبيانات مع رابط إنترنت ثابت (DOI) بحيث يمكنك إرشاد الآخرين إلى الاقتباس منه عند نشر مؤلَّفك.</p></li>
+   <li><p>إن كانت مجاميع البيانات الخاصة بك محفوظة مسبقاً في أرشيف عام موصى به، لطفاً، قم بتضمين اقتباس البيانات عبر ذكر رابط الإنترنت الثابت لها. للحصول على توجيهات بشأن اقتباس البيانات، لطفاً راجع إرشادات المؤلف.</p></li>
+   </ol>
+   ]]>
+	</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy.extras">أمثلة سياسة التحكيم</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy.extras.label">أظهر نماذج من سياسات التحكيم لمجاميع البيانات</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy"><![CDATA[
+   <ul>
+   <li><p>مجاميع البيانات المودعو ينبغي معاملتها كجزء من المؤلَّف لأغراض التحكيم المناظر؛ أو</p></li>
+   <li><p>عند القبول، وقبل الوصول إلى النسخة النهائية من المؤلَّف، ينبغي تقديم البيانات الأساسية مرفقة بوصف يوضح كيفية إنشائها (بضمنها أي إختلافات عن النسخ السابقة، واسم أي حزم برمجية تم استعمالها).</p></li>
+   </ul>
+   <p>على سياسة التحكيم أن تتضمن بياناً يتعلق بمجاميع البيانات المشتقة من أعمال تنطوي على مشاركين بشريين:</p>
+   <ul>
+   <li><p>على مجاميع البيانات المشتقة من أعمال تنطوي على مشاركين بشريين أن تتضمن الإشارة إلى أن خصوصية هؤلاء الأفراد محفوظة كما هو منصوص عليه في سياسة توافر البيانات. كما يفضل أيضاً أن تلبي متطلب "مجاميع البيانات في حدها الأدنى" الموصوف في سياسة توافر البيانات.</p></li>
+   </ul>
+   ]]>
+	</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines.extras">مثال على إرشادات التحكيم</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines.extras.label">أظهر نموذج من إرشادات التحكيم لأعمال تتضمن مجاميع بيانات</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines"><![CDATA[
+   <p>بالنسبة إلى المؤلفات التي تصاحبها مجاميع بيانات، على المحكمين التحقق من كون المؤلَّف ومجاميع البيانات هذه تتوافق مع سياسة تقديم البيانات الخاصة بالمجلة، وبأن البيانات تبدو متناغمة مع المؤلَّف، وبأن المؤلَّف والوثائق التكميلية كافية لفهم البيانات المرفقة بها، فضلاً عن أصولها وكيفية استعمالها.</p>
+   ]]>
+	</message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions.extras">مثال على تعليمات الحقوق الفكرية</message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions.extras.label">أظهر نماذج من تعليمات الحقوق الفكرية لمجاميع البيانات</message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions"><![CDATA[
+		<ul>
+			<li><p>تحقق المدققون من تلبية سياسة اقتباس البيانات؛ أو</p></li>
+			<li><p>تحقق المدققون من كون المطالبات التطبيقية مصاحبة للاقتباسات المناسبة للبيانات.</p></li>
+		</ul>
+	]]></message>
+
+	<!-- Notifications -->
+	<message key="plugins.generic.dataverse.notification.studyCreated">بيانات التقديم قد تم إيداعها في.</message>
+	<message key="plugins.generic.dataverse.notification.studyUpdated">بيانات التقديم قد تم تحديثها في Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.fileAdded">ملف تكميلي قد تم إيداعه في Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.fileDeleted">ملف تكميلي قد تم حذفه من Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.studyDeleted">بيانات التقديم قد تم حذفها من Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.releaseDataverse"><![CDATA[البيانات المنشورة في Dataverse الخاص بهذه المجلة لا يمكن الوصول إليها حتى يتم إطلاق Dataverse. لطفاً، أدخل إلى Dataverse في موقع المجلة وقم بإطلاقها.]]></message>
+	<message key="plugins.generic.dataverse.notification.studyReleased"><![CDATA[<p>بيانات التقديم قد تم نشرها في Dataverse:</p><p>{$dataCitation}</p>]]></message>
+	<message key="plugins.generic.dataverse.notification.error">حدث خطأ ما عند تحديث بيانات هذا التقديم في Dataverse.</message>
+
+	<!-- Article metadata for completed submissions: form errors -->
+	<message key="plugins.generic.dataverse.metadataForm.studyLocked">دراسة هذا التقديم في Dataverse مغلقة لأغراض المعالجة. البيانات الوصفية للتقديم لا يمكن تحديثها حتى تنتهي المعالجة.</message>
+
+	<!-- Additional metadata: suppfile form -->
+	<message key="plugins.generic.dataverse.suppFile.title">إضافة Dataverse: بيانات النشر</message>
+	<message key="plugins.generic.dataverse.suppFile.description">بيانات البحث يمكن تقديمها للنشر عبر إيداع الملفات التكميلية في Dataverse الخاص بالمجلة أو عبر ذكر رابط الاقتباس للبيانات الموجودة سابقاً في مستودع ما.</message>
+	<message key="plugins.generic.dataverse.suppFile.publishDataNone"><![CDATA[عامل الملف المرفوع بمثابة ملف تكميلي. الملف <strong>لن يتم</strong> إيداعه في Dataverse.]]></message>
+	<message key="plugins.generic.dataverse.suppFile.publishDataDataverse"><![CDATA[إيداع الملف في Dataverse. المؤلف يقبل ويوافق على ما يخص Dataverse من <a href="javascript:openWindow('{$dataverseTermsOfUseUrl}');">شروط الاستعمال</a>.]]></message>
+	<message key="plugins.generic.dataverse.suppFile.publishData.error">لطفاً، إرفع ملفاً لإيداعه في Dataverse.</message>
+	<message key="plugins.generic.dataverse.suppFile.dataCitationDescription">ستتم إضافة الملف إلى دراسة Dataverse المنشأة لهذا التقديم:</message>
+	<message key="plugins.generic.dataverse.suppFile.studyLocked">هذه الدراسة مغلقة لأغراض المعالجة. لا يمكن إجراء تعديلات على بيانات التقديم حتى تكتمل المعالجة.</message>
+    <message key="plugins.generic.dataverse.suppFile.studyDescription">وصف الدراسة</message>
+    <message key="plugins.generic.dataverse.suppFile.studyDescription.description">أعط ملخصاً للغرض من بيانات الدراسة وطبيعتها ومداها.</message>
+    <message key="plugins.generic.dataverse.suppFile.externalDataCitation">اقتباس البيانات الخارجية</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.description">إن كانت البيانات التي من المفترض نشرها مع هذا المؤلَّف مودعة سابقاً في مستودع آخر، لطفاً، أذكر رابط اقتباس البيانات.</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.error">لطفاً، إرفع ملفات لإيداعها في Dataverse أو ذكر الرابط الخارجي لاقتباس البيانات.</message>
+
+	<!-- Terms of use -->
+	<message key="plugins.generic.dataverse.termsOfUse.title">شروط الاستعمال</message>
+	<message key="plugins.generic.dataverse.termsOfUse.dataverse">Dataverse</message>
+
+	<!-- Data availality policy -->
+	<message key="plugins.generic.dataverse.dataAvailabilityPolicy.title">سياسة توافر البيانات</message>
+
+	<!-- Block plugin -->
+	<message key="plugins.generic.dataverse.block.displayName">كتلة إضافة Dataverse</message>
+	<message key="plugins.generic.dataverse.block.title">اقتباس البيانات</message>
+
+	<!-- Reading tools: suppfiles -->
+	<message key="plugins.generic.dataverse.suppFiles.view">المعاينة في Dataverse</message>
+
+	<!-- Field labels -->
+	<message key="plugins.generic.dataverse.dataCitation">اقتباس البيانات</message>
+
+	<!-- Citation "in press" info -->
+	<message key="plugins.generic.dataverse.citationAPA.inPress">(قيد الطباعة).</message>
+</locale>
