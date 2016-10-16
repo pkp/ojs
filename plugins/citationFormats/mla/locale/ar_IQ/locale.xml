@@ -15,5 +15,5 @@
 	<message key="plugins.citationFormats.mla.displayName">إضافة صيغة الاقتباس MLA</message>
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
 	<message key="plugins.citationFormats.mla.description">هذه الإضافة تطبق صيغة الاقتباس MLA.</message>
-	<message key="plugins.citationFormats.mla.noPages">n. pag.</message>	
+	<message key="plugins.citationFormats.mla.noPages">عدد الصفحات</message>	
 </locale>
