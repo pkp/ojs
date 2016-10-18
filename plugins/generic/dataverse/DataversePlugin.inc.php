@@ -41,6 +41,7 @@ define('NOTIFICATION_TYPE_DATAVERSE_FILE_DELETED',   NOTIFICATION_TYPE_PLUGIN_BA
 define('NOTIFICATION_TYPE_DATAVERSE_STUDY_DELETED',  NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001005);
 define('NOTIFICATION_TYPE_DATAVERSE_STUDY_RELEASED', NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001006);
 define('NOTIFICATION_TYPE_DATAVERSE_UNRELEASED',     NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001007);
+define('NOTIFICATION_TYPE_DATAVERSE_ERROR',          NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001008);
 
 class DataversePlugin extends GenericPlugin {
 
@@ -1671,7 +1672,8 @@ class DataversePlugin extends GenericPlugin {
 		$notificationManager = new NotificationManager();
 
 		switch ($type) {
-			case NOTIFICATION_TYPE_ERROR:
+			case NOTIFICATION_TYPE_DATAVERSE_ERROR:
+				// TODO: This constant is not used; evaluate each use by this plugin of NOTIFICATION_TYPE_ERROR as a case for using NOTIFICATION_TYPE_DATAVERSE_ERROR
 				$message = __('plugins.generic.dataverse.notification.error');
 				break;
 			
