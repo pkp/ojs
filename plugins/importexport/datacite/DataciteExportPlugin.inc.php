@@ -78,7 +78,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc PubObjectsExportPlugin::getPluginSettingsPrefix()
+	 * @copydoc ImportExportPlugin::getPluginSettingsPrefix()
 	 */
 	function getPluginSettingsPrefix() {
 		return 'datacite';
@@ -105,6 +105,9 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 		$context = $request->getContext();
 		$path = array('plugin', $this->getName());
 
+		import('lib.pkp.classes.file.FileManager');
+		$fileManager = new FileManager();
+
 		// Export
 		if ($request->getUserVar(EXPORT_ACTION_EXPORT)) {
 			$result = $this->_checkForTar();
@@ -114,32 +117,28 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 					// Get the XML
 					$exportXml = $this->exportXML($object, $filter, $context);
 					// Write the XML to a file.
-					// export file name example: datacite/20160723-160036-articles-1-1.xml
+					// export file name example: datacite-20160723-160036-articles-1-1.xml
 					$objectFileNamePart = $objectsFileNamePart . '-' . $object->getId();
-					$exportFileName = $this->getExportFileName($objectFileNamePart, $context);
-					file_put_contents($exportFileName, $exportXml);
+					$exportFileName = $this->getExportFileName($this->getExportPath(), $objectFileNamePart, $context, '.xml');
+					$fileManager->writeFile($exportFileName, $exportXml);
 					$exportedFiles[] = $exportFileName;
 				}
 				// If we have more than one export file we package the files
 				// up as a single tar before going on.
 				assert(count($exportedFiles) >= 1);
 				if (count($exportedFiles) > 1) {
-					// tar file name: e.g. datacite/20160723-160036-articles-1.tar.gz
-					$finalExportFileName = $this->getExportPath() . date('Ymd-His') .'-' . $objectsFileNamePart .'-' . $context->getId() . '.tar.gz';
-					$finalExportFileType = DATACITE_EXPORT_FILE_TAR;
+					// tar file name: e.g. datacite-20160723-160036-articles-1.tar.gz
+					$finalExportFileName = $this->getExportFileName($this->getExportPath(), $objectFileNamePart, $context, '.tar.gz');
 					$this->_tarFiles($this->getExportPath(), $finalExportFileName, $exportedFiles);
 					// remove files
 					foreach ($exportedFiles as $exportedFile) {
-						$this->cleanTmpfile($exportedFile);
+						$fileManager->deleteFile($exportedFile);
 					}
 				} else {
 					$finalExportFileName = array_shift($exportedFiles);
-					$finalExportFileType = DATACITE_EXPORT_FILE_XML;
 				}
-				header('Content-Type: application/' . ($finalExportFileType == DATACITE_EXPORT_FILE_TAR ? 'x-gtar' : 'xml'));
-				header('Cache-Control: private');
-				header('Content-Disposition: attachment; filename="' . basename($finalExportFileName) . '"');
-				readfile($finalExportFileName);
+				$fileManager->downloadFile($finalExportFileName);
+				$fileManager->deleteFile($finalExportFileName);
 			} else {
 				if (is_array($result)) {
 					foreach($result as $error) {
@@ -161,17 +160,17 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 				// Get the XML
 				$exportXml = $this->exportXML($object, $filter, $context);
 				// Write the XML to a file.
-				// export file name example: datacite/20160723-160036-articles-1-1.xml
+				// export file name example: datacite-20160723-160036-articles-1-1.xml
 				$objectFileNamePart = $objectsFileNamePart . '-' . $object->getId();
-				$exportFileName = $this->getExportFileName($objectFileNamePart, $context);
-				file_put_contents($exportFileName, $exportXml);
+				$exportFileName = $this->getExportFileName($this->getExportPath(), $objectFileNamePart, $context, '.xml');
+				$fileManager->writeFile($exportFileName, $exportXml);
 				// Deposit the XML file.
 				$result = $this->depositXML($object, $context, $exportFileName);
 				if (is_array($result)) {
 					$resultErrors[] = $result;
 				}
 				// Remove all temporary files.
-				$this->cleanTmpfile($exportFileName);
+				$fileManager->deleteFile($exportFileName);
 			}
 			// send notifications
 			if (empty($resultErrors)) {
@@ -276,6 +275,8 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 	 * @copydoc PKPImportExportPlugin::executeCLI()
 	 */
 	function executeCLICommand($scriptName, $command, $context, $outputFile, $objects, $filter, $objectsFileNamePart) {
+		import('lib.pkp.classes.file.FileManager');
+		$fileManager = new FileManager();
 		switch ($command) {
 			case 'export':
 				$result = $this->_checkForTar();
@@ -285,18 +286,18 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 						// Get the XML
 						$exportXml = $this->exportXML($object, $filter, $context);
 						// Write the XML to a file.
-						// export file name example: datacite/20160723-160036-articles-1-1.xml
+						// export file name example: datacite-20160723-160036-articles-1-1.xml
 						$objectFileNamePart = $objectsFileNamePart . '-' . $object->getId();
-						$exportFileName = $this->getExportFileName($objectFileNamePart, $context);
-						file_put_contents($exportFileName, $exportXml);
+						$exportFileName = $this->getExportFileName($this->getExportPath(), $objectFileNamePart, $context, '.xml');
+						$fileManager->writeFile($exportFileName, $exportXml);
 						$exportedFiles[] = $exportFileName;
 					}
 					// If we have more than one export file we package the files
 					// up as a single tar before going on.
 					assert(count($exportedFiles) >= 1);
 					if (count($exportedFiles) > 1) {
-						// tar file name: e.g. datacite/20160723-160036-articles-1.tar.gz
-						$finalExportFileName = $this->getExportPath() . date('Ymd-His') .'-' . $objectsFileNamePart .'-' . $context->getId() . '.tar.gz';
+						// tar file name: e.g. datacite-20160723-160036-articles-1.tar.gz
+						$finalExportFileName = $this->getExportFileName($this->getExportPath(), $objectFileNamePart, $context, '.tar.gz');
 						$finalExportFileType = DATACITE_EXPORT_FILE_TAR;
 						$this->_tarFiles($this->getExportPath(), $finalExportFileName, $exportedFiles);
 					} else {
@@ -307,11 +308,11 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 					if (substr($outputFile , -strlen($outputFileExtension)) != $outputFileExtension) {
 						$outputFile  .= $outputFileExtension;
 					}
-					$fileManager = new FileManager();
 					$fileManager->copyFile($finalExportFileName, $outputFile);
 					foreach ($exportedFiles as $exportedFile) {
-						$this->cleanTmpfile($exportedFile);
+						$fileManager->deleteFile($exportedFile);
 					}
+					$fileManager->deleteFile($finalExportFileName);
 				} else {
 					echo __('plugins.importexport.common.cliError') . "\n";
 					echo __('manager.plugins.tarCommandNotFound') . "\n\n";
@@ -324,17 +325,17 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 					// Get the XML
 					$exportXml = $this->exportXML($object, $filter, $context);
 					// Write the XML to a file.
-					// export file name example: datacite/20160723-160036-articles-1-1.xml
+					// export file name example: datacite-20160723-160036-articles-1-1.xml
 					$objectFileNamePart = $objectsFileNamePart . '-' . $object->getId();
-					$exportFileName = $this->getExportFileName($objectFileNamePart, $context);
-					file_put_contents($exportFileName, $exportXml);
+					$exportFileName = $this->getExportFileName($this->getExportPath(), $objectFileNamePart, $context, '.xml');
+					$fileManager->writeFile($exportFileName, $exportXml);
 					// Deposit the XML file.
 					$result = $this->depositXML($object, $context, $exportFileName);
 					if (is_array($result)) {
 						$resultErrors[] = $result;
 					}
 					// Remove all temporary files.
-					$this->cleanTmpfile($exportFileName);
+					$fileManager->deleteFile($exportFileName);
 				}
 				if (empty($resultErrors)) {
 					echo __('plugins.importexport.common.register.success') . "\n";
