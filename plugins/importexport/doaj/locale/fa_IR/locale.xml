@@ -14,4 +14,7 @@
 	<message key="plugins.importexport.doaj.displayName">پلاگین صادراتی دواج</message>
 	<message key="plugins.importexport.doaj.description">مجله را برای دواج صادر میکند و اطلاعات مجله را به نماینده دواج ایمیل میکند.</message>
 	<message key="plugins.importexport.doaj.export.contact">برای محسوب شدن با DOAJ تماس بگیرید</message>
+	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[نحوه استفاده:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>

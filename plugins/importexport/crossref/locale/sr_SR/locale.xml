@@ -16,7 +16,8 @@
 	<message key="plugins.importexport.crossref.displayName">CrossRef XML dodatak za izvoz</message>
 	<message key="plugins.importexport.crossref.description">Izvezi metapodatke članaka u CrossRef XML format.</message>
 
-	<message key="plugins.importexport.crossref.cliUsage">Korišćenje: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] članci [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] broj [issueId]</message>
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Korišćenje:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>

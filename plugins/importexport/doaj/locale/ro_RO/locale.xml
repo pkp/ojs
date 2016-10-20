@@ -16,4 +16,7 @@
 	<message key="plugins.importexport.doaj.displayName">Modul de export pentru DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Export al revistei în DOAJ şi trimiterea prin email a informaţiilor importante privind revista</message>
 	<message key="plugins.importexport.doaj.export.contact">Contactează DOAJ pentru includere</message>
+	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Mod de utilizare:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>

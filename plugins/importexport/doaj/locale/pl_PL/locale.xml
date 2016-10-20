@@ -16,4 +16,7 @@
 	<message key="plugins.importexport.doaj.displayName">DOAJ Export Plugin</message>
 	<message key="plugins.importexport.doaj.description">Export Journal for DOAJ and supply journal information for inclusion</message>
 	<message key="plugins.importexport.doaj.export.contact">Contact DOAJ for inclusion</message>
+	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Usage:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>

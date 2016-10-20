@@ -60,11 +60,10 @@
 	<message key="plugins.importexport.crossref.notification.failed">A DOI has failed to register. Please go to Tools > Import/Export > CrossRef XML Export Plugin to see the failed deposits.</message>
 
 	<!-- CLI -->
-	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Usage: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Usage:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
 ]]></message>
-	<message key="plugins.importexport.crossref.cliError">ERROR:</message>
 
 	<!--  notifications -->
 	<message key="plugins.importexport.crossref.register.error.mdsError">Submission was not successful! The DOI registration server returned an error: '{$param}'.</message>
