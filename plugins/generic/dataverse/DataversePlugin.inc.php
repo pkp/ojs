@@ -602,7 +602,7 @@ class DataversePlugin extends GenericPlugin {
 			$user =& Request::getUser();
 			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
-			$notificationManager->createTrivialNotification($user->getId(), $metadataReplaced ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED : NOTIFICATION_TYPE_ERROR);
+			$notificationManager->createTrivialNotification($user->getId(), $metadataReplaced ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED : NOTIFICATION_TYPE_DATAVERSE_ERROR);
 		}
 		return false;
 	}	 
@@ -845,7 +845,7 @@ class DataversePlugin extends GenericPlugin {
 							$this->replaceStudyMetadata($article, $study);
 						}
 						// Notify
-						$notificationManager->createTrivialNotification($user->getId(), $fileDeleted ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED : NOTIFICATION_TYPE_ERROR);
+						$notificationManager->createTrivialNotification($user->getId(), $fileDeleted ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED : NOTIFICATION_TYPE_DATAVERSE_ERROR);
 					}
 				}
 				break;
@@ -857,7 +857,7 @@ class DataversePlugin extends GenericPlugin {
 				if (!$study) $study = $this->createStudy($article);
 				if (!$study) {
 					// If study is not created, warn & exit	
-					$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR);
+					$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_DATAVERSE_ERROR);
 					return false;
 				}
 				if (!$form->suppFile->getId()) {
@@ -873,7 +873,7 @@ class DataversePlugin extends GenericPlugin {
 					// File-level metadata may need to be added to study.
 					$this->replaceStudyMetadata($article, $study);
 					// & notify:
-					$notificationManager->createTrivialNotification($user->getId(), $deposited ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED: NOTIFICATION_TYPE_ERROR);
+					$notificationManager->createTrivialNotification($user->getId(), $deposited ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED: NOTIFICATION_TYPE_DATAVERSE_ERROR);
 				}
 				else {
 					// Suppfile exists, and uploaded file may be new or a replacement
@@ -914,7 +914,7 @@ class DataversePlugin extends GenericPlugin {
 					// File-level metadata may need to be added to study.
  					$this->replaceStudyMetadata($article, $study);
 					// & notify:
- 					$notificationManager->createTrivialNotification($user->getId(), $deposited ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED: NOTIFICATION_TYPE_ERROR);
+ 					$notificationManager->createTrivialNotification($user->getId(), $deposited ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED: NOTIFICATION_TYPE_DATAVERSE_ERROR);
  				}
 				break;
 				
@@ -973,7 +973,7 @@ class DataversePlugin extends GenericPlugin {
 			$user =& Request::getUser();
 			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
-			$notificationManager->createTrivialNotification($user->getId(), $fileDeleted ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED : NOTIFICATION_TYPE_ERROR);
+			$notificationManager->createTrivialNotification($user->getId(), $fileDeleted ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED : NOTIFICATION_TYPE_DATAVERSE_ERROR);
 		}
 		return false;
 	}
@@ -1031,7 +1031,7 @@ class DataversePlugin extends GenericPlugin {
 				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();				
 				$user =& Request::getUser();
-				$notificationManager->createTrivialNotification($user->getId(), isset($study) ? NOTIFICATION_TYPE_DATAVERSE_STUDY_CREATED : NOTIFICATION_TYPE_ERROR);
+				$notificationManager->createTrivialNotification($user->getId(), isset($study) ? NOTIFICATION_TYPE_DATAVERSE_STUDY_CREATED : NOTIFICATION_TYPE_DATAVERSE_ERROR);
 			}
 		}
 		return false;
@@ -1558,7 +1558,7 @@ class DataversePlugin extends GenericPlugin {
 
 			// In API v1.1, publishing datasets in unpublished datverses is not supported.
 			if (version_compare($this->getSetting($journal->getId(), 'apiVersion'), '1.1', '>=')) {
-				$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR);
+				$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_DATAVERSE_ERROR);
 				return $dvReleased;
 			}
 		}
@@ -1590,7 +1590,7 @@ class DataversePlugin extends GenericPlugin {
 			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_DATAVERSE_STUDY_RELEASED, $params);			
 		}
 		else {
-			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR);
+			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_DATAVERSE_ERROR);
 		}
 		return $studyReleased;
 	}
@@ -1626,7 +1626,7 @@ class DataversePlugin extends GenericPlugin {
 			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 			$user =& Request::getUser();
-			$notificationManager->createTrivialNotification($user->getId(), $studyDeleted ? NOTIFICATION_TYPE_DATAVERSE_STUDY_DELETED : NOTIFICATION_TYPE_ERROR);
+			$notificationManager->createTrivialNotification($user->getId(), $studyDeleted ? NOTIFICATION_TYPE_DATAVERSE_STUDY_DELETED : NOTIFICATION_TYPE_DATAVERSE_ERROR);
 		}
 		return $studyDeleted;
 	}
@@ -1673,7 +1673,6 @@ class DataversePlugin extends GenericPlugin {
 
 		switch ($type) {
 			case NOTIFICATION_TYPE_DATAVERSE_ERROR:
-				// TODO: This constant is not used; evaluate each use by this plugin of NOTIFICATION_TYPE_ERROR as a case for using NOTIFICATION_TYPE_DATAVERSE_ERROR
 				$message = __('plugins.generic.dataverse.notification.error');
 				break;
 			
