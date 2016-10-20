@@ -244,7 +244,11 @@ class AcronPlugin extends GenericPlugin {
 
 			// By updating the last run time as soon as feasible, we can minimize
 			// the race window. See bug #8737.
-			$updateResult = $taskDao->updateLastRunTime($className, time());
+			$tasksToRun = $this->_getTasksToRun();
+			$updateResult = 0;
+			if (in_array($task, $tasksToRun, true)) {
+				$updateResult = $taskDao->updateLastRunTime($className, time());
+			}
 
 			switch ($updateResult) {
 				case false: // DB doesn't support the get affected rows used inside update method.
