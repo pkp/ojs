@@ -72,7 +72,7 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc PubObjectsExportPlugin::getPluginSettingsPrefix()
+	 * @copydoc ImportExportPlugin::getPluginSettingsPrefix()
 	 */
 	function getPluginSettingsPrefix() {
 		return 'medra';

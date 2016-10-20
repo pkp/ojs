@@ -69,8 +69,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 	}
 
 	/**
-	 * Get the plugin ID used as plugin settings prefix.
-	 * @return string
+	 * @copydoc ImportExportPlugin::getPluginSettingsPrefix()
 	 */
 	function getPluginSettingsPrefix() {
 		return 'doaj';

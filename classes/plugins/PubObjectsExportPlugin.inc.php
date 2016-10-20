@@ -163,8 +163,12 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 			assert($filter != null);
 			// Get the XML
 			$exportXml = $this->exportXML($objects, $filter, $context);
-			header('Content-type: application/xml');
-			echo $exportXml;
+			import('lib.pkp.classes.file.FileManager');
+			$fileManager = new FileManager();
+			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
+			$fileManager->writeFile($exportFileName, $exportXml);
+			$fileManager->downloadFile($exportFileName);
+			$fileManager->deleteFile($exportFileName);
 		} elseif ($request->getUserVar(EXPORT_ACTION_MARKREGISTERED)) {
 			$this->markRegistered($context, $objects);
 			// redirect back to the right tab
@@ -248,12 +252,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * Get the plugin ID used as plugin settings prefix.
-	 * @return string
-	 */
-	abstract function getPluginSettingsPrefix();
-
-	/**
 	 * Return the name of the plugin's deployment class.
 	 * @return string
 	 */
@@ -303,49 +301,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		libxml_clear_errors();
 		echo '<h3>' . __('plugins.importexport.common.invalidXML') .'</h3>';
 		echo '<p><pre>' .htmlspecialchars($xml) .'</pre></p>';
-	}
-
-	/**
-	 * Return the plugin export directory.
-	 *
-	 * This will create the directory if it doesn't exist yet.
-	 *
-	 * @return string|array The export directory name or an array with
-	 *  errors if something went wrong.
-	 */
-	function getExportPath() {
-		$exportPath = Config::getVar('files', 'files_dir') . '/' . $this->getPluginSettingsPrefix();
-		if (!file_exists($exportPath)) {
-			$fileManager = new FileManager();
-			$fileManager->mkdir($exportPath);
-		}
-		if (!is_writable($exportPath)) {
-			$errors = array(
-				array('plugins.importexport.common.export.error.outputFileNotWritable', $exportPath)
-			);
-			return $errors;
-		}
-		return realpath($exportPath) . '/';
-	}
-
-	/**
-	 * Return the whole export file name.
-	 * @param $objectsFileNamePart string Part different for each object type.
-	 * @param $context Context
-	 * @return string
-	 */
-	function getExportFileName($objectsFileNamePart, $context) {
-		return $this->getExportPath() . date('Ymd-His') .'-' . $objectsFileNamePart .'-' . $context->getId() . '.xml';
-	}
-
-	/**
-	 * Remove the given temporary file.
-	 * @param $tempfile string
-	 */
-	function cleanTmpfile($tempfile) {
-		if (file_exists($tempfile)) {
-			unlink($tempfile);
-		}
 	}
 
 	/**
@@ -521,8 +476,10 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		if ($command == 'export' && $outputFile) file_put_contents($outputFile, $exportXml);
 
 		if ($command == 'register') {
-			$exportFileName = $this->getExportFileName($objectsFileNamePart, $context);
-			file_put_contents($exportFileName, $exportXml);
+			import('lib.pkp.classes.file.FileManager');
+			$fileManager = new FileManager();
+			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
+			$fileManager->writeFile($exportFileName, $exportXml);
 			$result = $this->depositXML($objects, $context, $exportFileName);
 			if ($result === true) {
 				echo __('plugins.importexport.common.register.success') . "\n";
@@ -540,6 +497,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				}
 				$this->usage($scriptName);
 			}
+			$fileManager->deleteFile($exportFileName);
 		}
 	}
 

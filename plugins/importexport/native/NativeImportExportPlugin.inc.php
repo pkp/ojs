@@ -70,6 +70,13 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
+	 * @copydoc ImportExportPlugin::getPluginSettingsPrefix()
+	 */
+	function getPluginSettingsPrefix() {
+		return 'native';
+	}
+
+	/**
 	 * Display the plugin.
 	 * @param $args array
 	 * @param $request PKPRequest
@@ -139,8 +146,12 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					$request->getContext(),
 					$request->getUser()
 				);
-				header('Content-type: application/xml');
-				echo $exportXml;
+				import('lib.pkp.classes.file.FileManager');
+				$fileManager = new FileManager();
+				$exportFileName = $this->getExportFileName($this->getExportPath(), 'articles', $journal, '.xml');
+				$fileManager->writeFile($exportFileName, $exportXml);
+				$fileManager->downloadFile($exportFileName);
+				$fileManager->deleteFile($exportFileName);
 				break;
 			case 'exportIssues':
 				$exportXml = $this->exportIssues(
@@ -148,8 +159,12 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					$request->getContext(),
 					$request->getUser()
 				);
-				header('Content-type: application/xml');
-				echo $exportXml;
+				import('lib.pkp.classes.file.FileManager');
+				$fileManager = new FileManager();
+				$exportFileName = $this->getExportFileName($this->getExportPath(), 'issues', $journal, '.xml');
+				$fileManager->writeFile($exportFileName, $exportXml);
+				$fileManager->downloadFile($exportFileName);
+				$fileManager->deleteFile($exportFileName);
 				break;
 			default:
 				$dispatcher = $request->getDispatcher();
@@ -313,6 +328,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		}
 		$this->usage($scriptName);
 	}
+
 }
 
 ?>
