@@ -79,8 +79,8 @@ class GoogleScholarPlugin extends GenericPlugin {
 		}
 
 		if ($issue) {
-			$templateMgr->addHeader('googleScholarVolume', '<meta name="citation_volume" content="' . htmlspecialchars($issue->getVolume()) . '"/>');
-			$templateMgr->addHeader('googleScholarNumber', '<meta name="citation_issue" content="' . htmlspecialchars($issue->getNumber()) . '"/>');
+			if ($issue->getShowVolume()) $templateMgr->addHeader('googleScholarVolume', '<meta name="citation_volume" content="' . htmlspecialchars($issue->getVolume()) . '"/>');
+			if ($issue->getShowNumber()) $templateMgr->addHeader('googleScholarNumber', '<meta name="citation_issue" content="' . htmlspecialchars($issue->getNumber()) . '"/>');
 		}
 
 		if ($article->getPages()) {

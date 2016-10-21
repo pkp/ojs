@@ -8,10 +8,10 @@
  * EndNote citation format generator
  *
  *}
-{if $galleyId}
-	{url|assign:"articleUrl" page="article" op="view" path=$articleId|to_array:$galleyId}
+{if $galley}
+	{url|assign:"articleUrl" page="article" op="view" path=$article->getBestArticleId()|to_array:$galley->getBestGalleyId()}
 {else}
-	{url|assign:"articleUrl" page="article" op="view" path=$articleId}
+	{url|assign:"articleUrl" page="article" op="view" path=$article->getBestArticleId()}
 {/if}
 {foreach from=$article->getAuthors() item=author}
 %A {$author->getFullName(true)|escape}

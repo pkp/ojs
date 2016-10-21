@@ -183,12 +183,12 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 		if ($issue->getDatePublished()) {
 			$journalIssueNode->appendChild($this->createPublicationDateNode($doc, $issue->getDatePublished()));
 		}
-		if ($issue->getVolume()){
+		if ($issue->getVolume() && $issue->getShowVolume()){
 			$journalVolumeNode = $doc->createElementNS($deployment->getNamespace(), 'journal_volume');
 			$journalVolumeNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'volume', $issue->getVolume()));
 			$journalIssueNode->appendChild($journalVolumeNode);
 		}
-		if ($issue->getNumber()) {
+		if ($issue->getNumber() && $issue->getShowNumber()) {
 			$journalIssueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'issue', $issue->getNumber()));
 		}
 		if ($issue->getDatePublished() && $issue->getStoredPubId('doi')) {

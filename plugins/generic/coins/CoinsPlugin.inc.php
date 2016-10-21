@@ -77,8 +77,8 @@ class CoinsPlugin extends GenericPlugin {
 				array('rft.atitle', $article->getLocalizedTitle()),
 				array('rft.artnum', $article->getBestArticleId()),
 				array('rft.stitle', $journal->getLocalizedSetting('abbreviation')),
-				array('rft.volume', $issue->getVolume()),
-				array('rft.issue', $issue->getNumber()),
+				array('rft.volume', $issue->getShowVolume()?$issue->getVolume():''),
+				array('rft.issue', $issue->getShowNumber()?$issue->getNumber():''),
 				array('rft.aulast', $firstAuthor->getLastName()),
 				array('rft.aufirst', $firstAuthor->getFirstName()),
 				array('rft.auinit', $firstAuthor->getMiddleName())
