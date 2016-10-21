@@ -93,9 +93,9 @@ class DOAJXmlFilter extends NativeExportFilter {
 				$recordNode->appendChild($node = $doc->createElement('publicationDate', $this->formatDate($issue->getDatePublished())));
 			}
 			$volume = $issue->getVolume();
-			if (!empty($volume)) $recordNode->appendChild($node = $doc->createElement('volume', $volume));
+			if (!empty($volume) && $issue->getShowVolume()) $recordNode->appendChild($node = $doc->createElement('volume', $volume));
 			$issueNumber = $issue->getNumber();
-			if (!empty($issueNumber)) $recordNode->appendChild($node = $doc->createElement('issue', $issueNumber));
+			if (!empty($issueNumber) && $issue->getShowNumber()) $recordNode->appendChild($node = $doc->createElement('issue', $issueNumber));
 			/** --- FirstPage / LastPage (from PubMed plugin)---
 			 * there is some ambiguity for online journals as to what
 			 * "page numbers" are; for example, some journals (eg. JMIR)

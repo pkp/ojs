@@ -286,12 +286,12 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		$journalIssueNode = $doc->createElementNS($deployment->getNamespace(), 'JournalIssue');
 		// Volume
 		$volume = $issue->getVolume();
-		if (!empty($volume)) {
+		if (!empty($volume) && $issue->getShowVolume()) {
 			$journalIssueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'JournalVolumeNumber', $volume));
 		}
 		// Number
 		$number = $issue->getNumber();
-		if (!empty($number)) {
+		if (!empty($number) && $issue->getShowNumber()) {
 			$journalIssueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'JournalIssueNumber', $number));
 		}
 		// Identification
