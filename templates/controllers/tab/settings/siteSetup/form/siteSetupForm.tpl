@@ -42,6 +42,10 @@
 			{fbvElement type="textarea" multilingual=true id="about" value=$about}
 		{/fbvFormSection}
 	{/fbvFormArea}
+
+	{* Footer *}
+	{include file="core:controllers/tab/settings/appearance/form/footer.tpl"}
+
 	{fbvFormArea id="siteRedirection"}
 		{fbvFormSection title="admin.settings.journalRedirect"}
 			{fbvElement type="select" id="redirect" from=$redirectOptions selected=$redirect translate=false defaultValue="" label="admin.settings.journalRedirectInstructions" size=$fbvStyles.size.MEDIUM}
