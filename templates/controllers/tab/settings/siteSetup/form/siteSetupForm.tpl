@@ -71,6 +71,7 @@
 			</div>
 		{/fbvFormSection}
 		{include file="controllers/tab/settings/appearance/form/theme.tpl"}
+		{include file="core:controllers/tab/settings/appearance/form/sidebar.tpl"}
 	{/fbvFormArea}
 	{fbvFormArea id="oai"}
 		{fbvFormSection title="admin.settings.oaiRegistration"}
