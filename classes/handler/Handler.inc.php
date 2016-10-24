@@ -39,7 +39,7 @@ class Handler extends PKPHandler {
 		if ($requestedPath === 'index' || $requestedPath === '') {
 			// No journal requested. Check how many journals the site has.
 			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-			$journals = $journalDao->getAll();
+			$journals = $journalDao->getAll(true);
 			$journalsCount = $journals->getCount();
 			$journal = null;
 			if ($journalsCount === 1) {
