@@ -8,6 +8,12 @@
  * Article reading tools -- Capture Citation APA format
  *
  *}
+{if $galley}
+	{url|assign:"articleUrl" page="article" op="view" path=$article->getBestArticleId()|to_array:$galley->getBestGalleyId()}
+{else}
+	{url|assign:"articleUrl" page="article" op="view" path=$article->getBestArticleId()}
+{/if}
+
 {assign var=authors value=$article->getAuthors()}
 {assign var=authorCount value=$authors|@count}
 {foreach from=$authors item=author name=authors key=i}
