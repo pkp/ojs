@@ -96,7 +96,7 @@ class GoogleScholarPlugin extends GenericPlugin {
 		}
 
 		$templateMgr->addHeader('googleScholarHtmlUrl', '<meta name="citation_abstract_html_url" content="' . $request->url(null, 'article', 'view', array($article->getBestArticleId())) . '"/>');
-		if ($language = $article->getLanguage()) $templateMgr->addHeader('googleScholarLanguage', '<meta name="citation_language" content="' . htmlspecialchars($language()) . '"/>');
+		if ($language = $article->getLanguage()) $templateMgr->addHeader('googleScholarLanguage', '<meta name="citation_language" content="' . htmlspecialchars($language) . '"/>');
 
 		$i=0;
 		if ($subject = $article->getSubject(null)) foreach ($subject as $locale => $localeSubject) {
