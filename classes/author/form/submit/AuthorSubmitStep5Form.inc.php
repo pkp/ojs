@@ -141,7 +141,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$article->setSubmissionProgress(0);
 		$article->stampStatusModified();
 		$articleDao->updateArticle($article);
-		
+
 		// Setup default copyright/license metadata at finalization of submission.
 		$article->initializePermissions();
 		$articleDao->updateLocaleFields($article);
@@ -213,7 +213,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		}
 
 		import('classes.article.log.ArticleLog');
-		ArticleLog::logEvent($this->request, $article, ARTICLE_LOG_ARTICLE_SUBMIT, 'log.author.submitted', array('authorName' => $user->getFullName()));
+		ArticleLog::logEvent($this->request, $article, ARTICLE_LOG_ARTICLE_SUBMIT, 'log.author.submitted', array('authorName' => $user->getFullName(), 'submissionId' => $article->getId()));
 
 		return $this->articleId;
 	}
