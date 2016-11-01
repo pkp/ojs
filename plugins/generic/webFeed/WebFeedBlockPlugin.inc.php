@@ -60,7 +60,7 @@ class WebFeedBlockPlugin extends BlockPlugin {
 	 * @return array
 	 */
 	function getSupportedContexts() {
-		return array(BLOCK_CONTEXT_LEFT_SIDEBAR);
+		return array(BLOCK_CONTEXT_SIDEBAR);
 	}
 
 	/**
