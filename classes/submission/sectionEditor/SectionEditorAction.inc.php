@@ -1484,7 +1484,7 @@ class SectionEditorAction extends Action {
 
 		// Add log
 		import('classes.article.log.ArticleLog');
-		ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_EDITOR_ARCHIVE, 'log.editor.archived');
+		ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_EDITOR_ARCHIVE, 'log.editor.archived', array('articleId' => $sectionEditorSubmission->getId()));
 	}
 
 	/**
