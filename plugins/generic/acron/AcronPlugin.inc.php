@@ -250,17 +250,12 @@ class AcronPlugin extends GenericPlugin {
 				$updateResult = $taskDao->updateLastRunTime($className, time());
 			}
 
-			switch ($updateResult) {
-				case false: // DB doesn't support the get affected rows used inside update method.
-				case 1: // Introduced a new last run time.
-					// Load and execute the task.
-					import($className);
-					$task = new $baseClassName($taskArgs);
-					$task->execute();
-					break;
-				case 0: // Another simultaneously request came first.
-				default:
-					break;
+			if ($updateResult === false || $updateResult === 1) {
+				// DB doesn't support the get affected rows used inside update method, or one row was updated when we introduced a new last run time.
+				// Load and execute the task.
+				import($className);
+				$task = new $baseClassName($taskArgs);
+				$task->execute();
 			}
 		}
 	}
