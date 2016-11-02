@@ -54,12 +54,12 @@
 
 	{fbvFormArea id="identificationArea" title="editor.issues.identification"}
 		{fbvFormSection}
-			{fbvElement type="text" label="issue.volume" id="volume" value=$volume maxlength="40" inline=true size=$fbvStyles.size.SMALL}
-			{fbvElement type="text" label="issue.number" id="number" value=$number maxlength="40" inline=true size=$fbvStyles.size.SMALL}
-			{fbvElement type="text" label="issue.year" id="year" value=$year maxlength="4" inline=true size=$fbvStyles.size.SMALL}
+			{fbvElement type="text" label="issue.volume" id="volume" value=$volume maxlength="40" inline=true size=$fbvStyles.size.SMALL required=true}
+			{fbvElement type="text" label="issue.number" id="number" value=$number maxlength="40" inline=true size=$fbvStyles.size.SMALL required=true}
+			{fbvElement type="text" label="issue.year" id="year" value=$year maxlength="4" inline=true size=$fbvStyles.size.SMALL required=true}
 		{/fbvFormSection}
 		{fbvFormSection}
-			{fbvElement type="text" label="issue.title" id="title" value=$title multilingual=true}
+			{fbvElement type="text" label="issue.title" id="title" value=$title multilingual=true required=true}
 		{/fbvFormSection}
 
 		{fbvFormSection list=true}
