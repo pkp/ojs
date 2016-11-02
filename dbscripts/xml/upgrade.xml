@@ -99,6 +99,7 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_pubId_settings.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_galley_files.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_metrics.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.0_issue_settings.xml" />
 	</upgrade>
 
 	<upgrade minversion="3.0.0.0" maxversion="3.0.0.9">
@@ -107,6 +108,8 @@
 		<data file="dbscripts/xml/upgrade/3.0.1_update.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_galley_files.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_metrics.xml" />
+		<code function="localizeIssueCoverImages" />
+		<data file="dbscripts/xml/upgrade/3.0.0_issue_settings.xml" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
