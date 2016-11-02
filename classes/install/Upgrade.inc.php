@@ -1521,6 +1521,47 @@ class Upgrade extends Installer {
 		$noteDao->update('DELETE FROM submission_comments WHERE comment_type=2'); // COMMENT_TYPE_EDITOR_DECISION
 		return true;
 	}
+
+	/**
+	 * Localize issue cover images.
+	 * @return boolean True indicates success.
+	 */
+	function localizeIssueCoverImages() {
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$publicFileManager = new PublicFileManager();
+		// retrieve names for unlocalized issue cover images
+		$result = $issueDao->retrieve(
+			'SELECT iss.issue_id, iss.setting_value, j.journal_id, j.primary_locale
+			FROM issue_settings iss, issues i, journals j
+			WHERE iss.setting_name = \'coverImage\' AND iss.locale = \'\'
+				AND i.issue_id = iss.issue_id AND j.journal_id = i.journal_id'
+		);
+		// for all unlocalized issue cover images
+		// rename (copy + remove) the cover images files in the public folder,
+		// considereing the locale (using the journal primary locale)
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$oldFileName = $row['setting_value'];
+			$newFileName = str_replace('.', '_' . $row['primary_locale'] . '.', $oldFileName);
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldFileName)) {
+				$publicFileManager->copyJournalFile($row['journal_id'], $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldFileName, $newFileName);
+				$publicFileManager->removeJournalFile($row['journal_id'], $oldFileName);
+			}
+			$result->MoveNext();
+		}
+		$result->Close();
+		// Update cover image names in the issue_settings table
+		$issueDao->update(
+			'UPDATE issue_settings iss, issues i, journals j SET iss.locale = j.primary_locale, iss.setting_value = CONCAT(LEFT( iss.setting_value, LOCATE(\'.\', iss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING_INDEX(iss.setting_value,\'.\',-1))
+WHERE iss.setting_name = \'coverImage\' AND iss.locale = \'\' AND i.issue_id = iss.issue_id AND j.journal_id = i.journal_id'
+		);
+		// Update cover image alt texts in the issue_settings table
+		$issueDao->update(
+			'UPDATE issue_settings iss, issues i, journals j SET iss.locale = j.primary_locale WHERE iss.setting_name = \'coverImageAltText\' AND iss.locale = \'\' AND i.issue_id = iss.issue_id AND j.journal_id = i.journal_id'
+		);
+		$issueDao->flushCache();
+		return true;
+	}
 }
 
 ?>
