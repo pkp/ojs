@@ -13,6 +13,8 @@
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.description">Dieses Plugin ermöglicht die Zuordnung von DOIs (Persistente Identifizierer) zu Ausgaben, Artikeln und publizierten Dateien.</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI:</message>
 
 	<!-- settings form -->
 	<message key="plugins.pubIds.doi.manager.settings.description">Bitte konfigurieren Sie das DOI-Plugin, damit Sie DOI in OJS verwalten und benutzen können:</message>
