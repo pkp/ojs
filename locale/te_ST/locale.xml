@@ -2376,9 +2376,7 @@ Authors who publish with this journal agree to the following terms:
 	<message key="manager.setup.journalLayout">Journal Layout</message>
 	<message key="manager.setup.journalLayoutDescription">Choose a journal theme and select layout components here. A journal stylesheet may also be uploaded, which can be used to override style data in the system-wide stylesheets and theme stylesheet (if a theme is chosen).</message>
 	<message key="manager.setup.journalTheme">Journal Theme</message>
-	<message key="manager.setup.layout.leftSidebar">Left Sidebar</message>
 	<message key="manager.setup.layout.unselected">Unselected</message>
-	<message key="manager.setup.layout.rightSidebar">Right Sidebar</message>
 	<message key="manager.languages.languageInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
 	<message key="manager.languages.alternateLocaleInstructions">This system optionally allows certain critical information to be entered in several additional languages. To use this feature, select alternate locales and choose from the options listed below.</message>
 	<message key="manager.groups.create">Create Position Title</message>
