@@ -26,6 +26,17 @@ class ArticleDAO extends SubmissionDAO {
 	}
 
 	/**
+	 * Get a list of fields for which localized data is supported
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array_merge(
+			parent::getLocaleFieldNames(), array(
+				'coverImageAltText', 'coverImage',
+		));
+	}
+
+	/**
 	 * Find articles by querying article settings.
 	 * @param $settingName string
 	 * @param $settingValue mixed
