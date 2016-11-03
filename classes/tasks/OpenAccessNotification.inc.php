@@ -99,7 +99,7 @@ class OpenAccessNotification extends ScheduledTask {
 	}
 
 	/**
-	 * @see ScheduledTaks::executeActions()
+	 * @see ScheduledTask::executeActions()
 	 */
 	protected function executeActions() {
 		$journalDao = DAORegistry::getDAO('JournalDAO');
