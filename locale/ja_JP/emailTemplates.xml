@@ -780,7 +780,7 @@ Link: {$url}<br />
 		<subject>編集者の判断</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-私たちはあなたが {$journalTitle}, に投稿された &quot;{$submissionTitle}&quot;<br />
+私たちはあなたが {$contextName}, に投稿された &quot;{$submissionTitle}&quot;<br />
 について結論に達しました。<br />
 <br />
 結果:<br />
@@ -792,7 +792,7 @@ Link: {$url}<br />
 		<subject>編集者の判断</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-私たちは下記のあなたの投稿について結論に達しました。 {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+私たちは下記のあなたの投稿について結論に達しました。 {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 結果は:<br />
 <br />
@@ -804,7 +804,7 @@ Link: {$url}<br />
 		<body><![CDATA[{$authorName}:<br />
 <br />
 私たちはあなたの下記の投稿について結論に達しました。<br />
-{$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+{$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 結果は:<br />
 <br />
@@ -814,7 +814,7 @@ Link: {$url}<br />
 		<subject>編集者の判断</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-私たちはあなたの下記の投稿について結論に達しました。{$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+私たちはあなたの下記の投稿について結論に達しました。{$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 結果は:<br />
 <br />

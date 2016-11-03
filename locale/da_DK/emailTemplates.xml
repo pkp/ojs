@@ -663,7 +663,7 @@ Hvis du ikke længere ønsker at modtage e-mail-meddelelser, skal du gå ind på
 		<subject>Redaktørbeslutning</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Vi har besluttet at:<br />
 <br />
@@ -674,7 +674,7 @@ Vi har besluttet at:<br />
 		<subject>Redaktørbeslutning</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Vi har besluttet at:<br />
 <br />
@@ -685,7 +685,7 @@ Vi har besluttet at:<br />
 		<subject>Redaktørbeslutning</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Vi har besluttet at:<br />
 <br />
@@ -696,7 +696,7 @@ Vi har besluttet at:<br />
 		<subject>Redaktørbeslutning</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Vi har besluttet at:<br />
 <br />

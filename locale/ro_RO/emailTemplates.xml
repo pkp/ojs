@@ -371,7 +371,7 @@ Vă rugăm să ne confirmați posibilitatea de a vă implica în această import
 		<subject>Decizia redactorului</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Am ajuns la o concluzie privind propunerea intitulată &quot;{$submissionTitle}&quot; făcută revistei {$journalTitle}.<br />
+Am ajuns la o concluzie privind propunerea intitulată &quot;{$submissionTitle}&quot; făcută revistei {$contextName}.<br />
 <br />
 Decizia noastră este:<br />
 <br />
@@ -382,7 +382,7 @@ Decizia noastră este:<br />
 		<subject>Decizia redactorului</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Am ajuns la o decizie privind propunerea făcută revistei {$journalTitle} intitulată &quot;{$submissionTitle}&quot;.<br />
+Am ajuns la o decizie privind propunerea făcută revistei {$contextName} intitulată &quot;{$submissionTitle}&quot;.<br />
 <br />
 Decizia noastră este:<br />
 <br />
@@ -394,7 +394,7 @@ Decizia noastră este:<br />
 		<subject>Decizia redactorului</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Am ajuns la o decizie privind propunerea făcută către {$journalTitle} intitulată &quot;{$submissionTitle}&quot;.<br />
+Am ajuns la o decizie privind propunerea făcută către {$contextName} intitulată &quot;{$submissionTitle}&quot;.<br />
 <br />
 Decizia noastră este:<br />
 <br />
@@ -406,7 +406,7 @@ Decizia noastră este:<br />
 		<subject>Decizia redactorului</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Am ajuns la o decizie privind propunerea făcută către {$journalTitle} intitulată &quot;{$submissionTitle}&quot;.<br />
+Am ajuns la o decizie privind propunerea făcută către {$contextName} intitulată &quot;{$submissionTitle}&quot;.<br />
 <br />
 Decizia noastră este:<br />
 <br />

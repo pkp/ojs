@@ -728,7 +728,7 @@ Als u de berichten van deze lijst niet langer wilt ontvangen, ga dan naar {$unsu
 		<subject>Redacteursbeslissing</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-We hebben een beslissing genomen over uw inzending voor {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Onze beslissing is:<br />
 <br />
@@ -738,7 +738,7 @@ Onze beslissing is:<br />
 		<subject>Redacteursbeslissing</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-We hebben een beslissing genomen over uw inzending voor {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Onze beslissing is:<br />
 <br />
@@ -748,7 +748,7 @@ Onze beslissing is:<br />
 		<subject>Redacteursbeslissing</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-We hebben een beslissing genomen over uw inzending voorv{$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+We hebben een beslissing genomen over uw inzending voorv{$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Onze beslissing is:<br />
 <br />
@@ -758,7 +758,7 @@ Onze beslissing is:<br />
 		<subject>Redacteursbeslissing</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-We hebben een beslissing genomen over uw inzending voor {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Onze beslissing is:<br />
 <br />

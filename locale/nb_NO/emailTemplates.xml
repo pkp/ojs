@@ -677,7 +677,7 @@ Ditt passord for å slå av e-postmeldinger er: {$password}<br />
 		<subject>Redaktørens beslutning</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Vi har tatt en beslutning med hensyn til ditt innsendte manus til {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Vi har tatt en beslutning med hensyn til ditt innsendte manus til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Vår beslutning er:<br />
 <br />
@@ -687,7 +687,7 @@ Vår beslutning er:<br />
 		<subject>Redaktørens beslutning</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Vi har tatt en beslutning med hensyn til ditt innsendte manus til {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Vi har tatt en beslutning med hensyn til ditt innsendte manus til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Vår beslutning er:<br />
 <br />
@@ -697,7 +697,7 @@ Vår beslutning er:<br />
 		<subject>Redaktørens beslutning</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Vi har tatt en beslutning vedrørende ditt insendte manuskript til {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Vi har tatt en beslutning vedrørende ditt insendte manuskript til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Vår beslutning er:<br />
 <br />
@@ -707,7 +707,7 @@ Vår beslutning er:<br />
 		<subject>Redaktørens beslutning</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Vi har tatt en beslutning vedrørende ditt insendte manuskript til {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Vi har tatt en beslutning vedrørende ditt insendte manuskript til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Vår beslutning er:<br />
 <br />

@@ -622,7 +622,7 @@ Thank you for completing the proofreading corrections for the galleys associated
 		<subject>Редакционное решение</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Мы приняли решение относительно Вашей рукописи &quot;{$submissionTitle}&quot;, отправленной для публикации в наш журнал {$journalTitle}.<br />
+Мы приняли решение относительно Вашей рукописи &quot;{$submissionTitle}&quot;, отправленной для публикации в наш журнал {$contextName}.<br />
 <br />
 Наше решение:<br />
 <br />
@@ -633,7 +633,7 @@ Thank you for completing the proofreading corrections for the galleys associated
 		<subject>Редакционное решение</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Мы приняли решение относительно Вашей рукописи &quot;{$submissionTitle}&quot;, отправленной для публикации в наш журнал {$journalTitle}.<br />
+Мы приняли решение относительно Вашей рукописи &quot;{$submissionTitle}&quot;, отправленной для публикации в наш журнал {$contextName}.<br />
 <br />
 Наше решение:<br />
 <br />
@@ -643,7 +643,7 @@ Thank you for completing the proofreading corrections for the galleys associated
 		<subject>Редакционное решение</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Мы приняли решение относительно Вашей рукописи &quot;{$submissionTitle}&quot;, отправленной для публикации в наш журнал {$journalTitle}.<br />
+Мы приняли решение относительно Вашей рукописи &quot;{$submissionTitle}&quot;, отправленной для публикации в наш журнал {$contextName}.<br />
 <br />
 Наше решение:<br />
 <br />
@@ -654,7 +654,7 @@ Thank you for completing the proofreading corrections for the galleys associated
 		<subject>Редакционное решение</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Мы приняли решение относительно Вашей рукописи &quot;{$submissionTitle}&quot;, отправленной для публикации в наш журнал {$journalTitle}.<br />
+Мы приняли решение относительно Вашей рукописи &quot;{$submissionTitle}&quot;, отправленной для публикации в наш журнал {$contextName}.<br />
 <br />
 Наше решение:<br />
 <br />

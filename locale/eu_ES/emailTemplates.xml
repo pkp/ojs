@@ -736,7 +736,7 @@ Hau da jakinarazpen-mezuak desgaitzeko zure pasahitza: {$password}<br />
 		<subject>Editorearen erabakia</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Hartu dugu {$journalTitle} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
+Hartu dugu {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
 <br />
 Gure erabakia:<br />
 <br />
@@ -747,7 +747,7 @@ Gure erabakia:<br />
 		<subject>Editorearen erabakia</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Hartu dugu {$journalTitle} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
+Hartu dugu {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
 <br />
 Gure erabakia:<br />
 <br />
@@ -758,7 +758,7 @@ Gure erabakia:<br />
 		<subject>Editorearen erabakia</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Hartu dugu {$journalTitle} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
+Hartu dugu {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
 <br />
 Gure erabakia:<br />
 <br />
@@ -769,7 +769,7 @@ Gure erabakia:<br />
 		<subject>Editorearen erabakia</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Hartu dugu {$journalTitle} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
+Hartu dugu {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
 <br />
 Gure erabakia:<br />
 <br />

@@ -782,7 +782,7 @@ Review Guidelines<br />
 		<subject>Editör Kararı</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-{$journalTitle} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
+{$contextName} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
 <br />
 Kararımız:<br />
 <br />
@@ -793,7 +793,7 @@ Kararımız:<br />
 		<subject>Editör Kararı</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-{$journalTitle} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
+{$contextName} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
 <br />
 Kararımız:<br />
 <br />
@@ -804,7 +804,7 @@ Kararımız:<br />
 		<subject>Editör Kararı</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-{$journalTitle} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
+{$contextName} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
 <br />
 Kararımız:<br />
 <br />
@@ -815,7 +815,7 @@ Kararımız:<br />
 		<subject>Editör Kararı</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-{$journalTitle} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
+{$contextName} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
 <br />
 Kararımız:<br />
 <br />

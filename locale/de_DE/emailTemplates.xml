@@ -453,7 +453,7 @@ Unsere Entscheidung lautet: Beitrag annehmen<br />
 		<subject>Entscheidung der Redaktion</subject>
 		<body><![CDATA[{$authorName},<br />
 <br />
-wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: &quot;{$submissionTitle}&quot; gekommen.<br />
+wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$contextName}: &quot;{$submissionTitle}&quot; gekommen.<br />
 <br />
 Unsere Entscheidung lautet:<br />
 <br />
@@ -465,7 +465,7 @@ Unsere Entscheidung lautet:<br />
 		<subject>Entscheidung der Redaktion</subject>
 		<body><![CDATA[{$authorName},<br />
 <br />
-wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: &quot;{$submissionTitle}&quot; gekommen.<br />
+wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$contextName}: &quot;{$submissionTitle}&quot; gekommen.<br />
 <br />
 Unsere Entscheidung lautet:<br />
 <br />
@@ -477,7 +477,7 @@ Unsere Entscheidung lautet:<br />
 		<subject>Entscheidung der Redaktion</subject>
 		<body><![CDATA[{$authorName},<br />
 <br />
-wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: &quot;{$submissionTitle}&quot; gekommen.<br />
+wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$contextName}: &quot;{$submissionTitle}&quot; gekommen.<br />
 <br />
 Unsere Entscheidung lautet: Beitrag ablehnen<br />
 <br />

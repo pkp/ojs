@@ -63,6 +63,9 @@
 	</sql>
 	<!-- Bug #8212: Refactor MailTemplate code into PKP lib -->
 	<sql>
+		<!-- journalTitle becomes contextName -->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$journalTitle}', '{$contextName}'), subject=REPLACE(subject, '{$journalTitle}', '{$contextName}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$journalTitle}', '{$contextName}'), subject=REPLACE(subject, '{$journalTitle}', '{$contextName}')</query>
 		<!-- journalName becomes contextName -->
 		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$journalName}', '{$contextName}'), subject=REPLACE(subject, '{$journalName}', '{$contextName}')</query>
 		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$journalName}', '{$contextName}'), subject=REPLACE(subject, '{$journalName}', '{$contextName}')</query>
