@@ -164,6 +164,10 @@ class ArticleHandler extends Handler {
 		uasort($citationPlugins, create_function('$a, $b', 'return strcmp($a->getDisplayName(), $b->getDisplayName());'));
 		$templateMgr->assign('citationPlugins', $citationPlugins);
 
+		// Versioning
+		$versioningEnabled = Config::getVar('general', 'versioning') && $journal->getSetting('versioningEnabled');
+		$templateMgr->assign('versioningEnabled', $versioningEnabled);
+
 		if (!$galley) {
 			// No galley: Prepare the article landing page.
 

@@ -215,7 +215,9 @@
 								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley}
 							</li>
 
-							{include file="frontend/objects/file_revisions.tpl" parent=$article galley=$galley}
+							{if $versioningEnabled}
+								{include file="frontend/objects/file_revisions.tpl" parent=$article galley=$galley}
+							{/if}
 
 						{/foreach}
 					</ul>
