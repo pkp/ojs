@@ -20,8 +20,8 @@ class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function ArticleGalleyNativeXmlFilter($filterGroup) {
-		parent::RepresentationNativeXmlFilter($filterGroup);
+	function __construct($filterGroup) {
+		parent::__construct($filterGroup);
 	}
 
 

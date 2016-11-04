@@ -20,8 +20,8 @@ class OpenAccessNotification extends ScheduledTask {
 	/**
 	 * Constructor.
 	 */
-	function OpenAccessNotification() {
-		parent::ScheduledTask();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

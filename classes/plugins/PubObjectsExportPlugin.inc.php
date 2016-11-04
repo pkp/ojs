@@ -47,8 +47,8 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	/**
 	 * Constructor
 	 */
-	function PubObjectsExportPlugin() {
-		parent::ImportExportPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

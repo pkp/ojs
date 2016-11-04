@@ -32,8 +32,8 @@ abstract class AuthPlugin extends Plugin {
 	 * @param $settings array
 	 * @param $authId int ID for this instance
 	 */
-	function AuthPlugin($settings = array(), $authId = null) {
-		parent::Plugin();
+	function __construct($settings = array(), $authId = null) {
+		parent::__construct();
 		$this->settings = $settings;
 		$this->authId = $authId;
 	}

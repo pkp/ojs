@@ -19,8 +19,8 @@ class PageRouter extends PKPPageRouter {
 	/**
 	 * Constructor
 	 */
-	function PageRouter() {
-		parent::PKPPageRouter();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

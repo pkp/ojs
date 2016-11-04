@@ -31,8 +31,8 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 	/**
 	 * Constructor
 	 */
-	function DataciteExportPlugin() {
-		parent::DOIPubIdExportPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

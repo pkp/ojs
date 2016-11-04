@@ -31,8 +31,8 @@ class Journal extends Context {
 	/**
 	 * Constructor.
 	 */
-	function Journal() {
-		parent::Context();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

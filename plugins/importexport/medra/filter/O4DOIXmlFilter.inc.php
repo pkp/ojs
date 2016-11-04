@@ -83,8 +83,8 @@ class O4DOIXmlFilter extends NativeExportFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function O4DOIXmlFilter($filterGroup) {
-		parent::NativeExportFilter($filterGroup);
+	function __construct($filterGroup) {
+		parent::__construct($filterGroup);
 	}
 
 	/**

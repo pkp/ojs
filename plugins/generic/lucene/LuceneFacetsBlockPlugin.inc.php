@@ -25,9 +25,9 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	 * Constructor
 	 * @param $parentPluginName string
 	 */
-	function LuceneFacetsBlockPlugin($parentPluginName) {
+	function __construct($parentPluginName) {
 		$this->_parentPluginName = $parentPluginName;
-		parent::BlockPlugin();
+		parent::__construct();
 	}
 
 

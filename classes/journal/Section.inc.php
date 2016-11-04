@@ -21,8 +21,8 @@ class Section extends PKPSection {
 	/**
 	 * Constructor.
 	 */
-	function Section() {
-		parent::PKPSection();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

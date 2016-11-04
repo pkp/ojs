@@ -21,9 +21,9 @@ class DOAJXmlFilter extends NativeExportFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function DOAJXmlFilter($filterGroup) {
+	function __construct($filterGroup) {
 		$this->setDisplayName('DOAJ XML export');
-		parent::NativeExportFilter($filterGroup);
+		parent::__construct($filterGroup);
 	}
 
 	//

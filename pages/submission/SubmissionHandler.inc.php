@@ -21,8 +21,8 @@ class SubmissionHandler extends PKPSubmissionHandler {
 	/**
 	 * Constructor
 	 */
-	function SubmissionHandler() {
-		parent::PKPSubmissionHandler();
+	function __construct() {
+		parent::__construct();
 		$this->addRoleAssignment(array(ROLE_ID_AUTHOR, ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER),
 				array('index', 'wizard', 'step', 'saveStep', 'fetchChoices'));
 	}

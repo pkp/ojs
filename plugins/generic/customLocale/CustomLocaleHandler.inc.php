@@ -24,8 +24,8 @@ class CustomLocaleHandler extends Handler {
 	/**
 	 * Constructor
 	 **/
-	function CustomLocaleHandler($parentPluginName) {
-		parent::Handler();
+	function __construct($parentPluginName) {
+		parent::__construct();
 
 		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER)));
 

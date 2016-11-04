@@ -22,8 +22,8 @@ class Gift extends PKPGift {
 	/**
 	 * Constructor.
 	 */
-	function Gift() {
-		parent::PKPGift();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

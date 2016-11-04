@@ -23,8 +23,8 @@ class IssueHandler extends Handler {
 	/**
 	 * Constructor
 	 **/
-	function IssueHandler() {
-		parent::Handler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

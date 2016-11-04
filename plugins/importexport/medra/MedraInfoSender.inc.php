@@ -24,7 +24,7 @@ class MedraInfoSender extends ScheduledTask {
 	 * Constructor.
 	 * @param $argv array task arguments
 	 */
-	function MedraInfoSender($args) {
+	function __construct($args) {
 		PluginRegistry::loadCategory('importexport');
 		$plugin = PluginRegistry::getPlugin('importexport', 'MedraExportPlugin'); /* @var $plugin MedraExportPlugin */
 		$this->_plugin = $plugin;
@@ -33,7 +33,7 @@ class MedraInfoSender extends ScheduledTask {
 			$plugin->addLocaleData();
 		}
 
-		parent::ScheduledTask($args);
+		parent::__construct($args);
 	}
 
 	/**

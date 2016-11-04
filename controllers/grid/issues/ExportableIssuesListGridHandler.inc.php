@@ -19,8 +19,8 @@ class ExportableIssuesListGridHandler extends IssueGridHandler {
 	/**
 	 * Constructor
 	 */
-	function ExportableIssuesListGridHandler() {
-		parent::IssueGridHandler();
+	function __construct() {
+		parent::__construct();
 	}
 
 

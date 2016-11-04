@@ -24,9 +24,9 @@ class Mods34SchemaArticleAdapter extends Mods34SchemaSubmissionAdapter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function Mods34SchemaArticleAdapter($filterGroup) {
+	function __construct($filterGroup) {
 		// Configure the submission adapter
-		parent::Mods34SchemaSubmissionAdapter($filterGroup);
+		parent::__construct($filterGroup);
 	}
 
 

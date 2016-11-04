@@ -33,8 +33,8 @@ class ArticleHandler extends Handler {
 	 * Constructor
 	 * @param $request Request
 	 */
-	function ArticleHandler() {
-		parent::Handler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

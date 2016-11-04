@@ -29,8 +29,8 @@ class OJSQueuedPayment extends QueuedPayment {
 	/**
 	 * @copydoc QueuedPayment::QueuedPayment
 	 */
-	function OJSQueuedPayment($amount, $currencyCode, $userId = null, $assocId = null) {
-		parent::QueuedPayment($amount, $currencyCode, $userId, $assocId);
+	function __construct($amount, $currencyCode, $userId = null, $assocId = null) {
+		parent::__construct($amount, $currencyCode, $userId, $assocId);
 	}
 
 	/**

@@ -19,8 +19,8 @@ class TocGridCategoryRow extends GridCategoryRow {
 	/**
 	 * Constructor
 	 */
-	function TocGridCategoryRow() {
-		parent::GridCategoryRow();
+	function __construct() {
+		parent::__construct();
 	}
 
 	//

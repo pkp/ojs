@@ -21,8 +21,8 @@ class StageParticipantNotifyForm extends PKPStageParticipantNotifyForm {
 	/**
 	 * Constructor.
 	 */
-	function StageParticipantNotifyForm($itemId, $itemType, $stageId, $template = null) {
-		parent::PKPStageParticipantNotifyForm($itemId, $itemType, $stageId, $template);
+	function __construct($itemId, $itemType, $stageId, $template = null) {
+		parent::__construct($itemId, $itemType, $stageId, $template);
 	}
 
 	/**

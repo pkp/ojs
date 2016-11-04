@@ -20,8 +20,8 @@ class CrossrefCitationLookupPlugin extends PKPCrossrefCitationLookupPlugin {
 	/**
 	 * Constructor
 	 */
-	function CrossrefCitationLookupPlugin() {
-		parent::PKPCrossrefCitationLookupPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 }
 

@@ -20,8 +20,8 @@ class Dc11MetadataPlugin extends PKPDc11MetadataPlugin {
 	/**
 	 * Constructor
 	 */
-	function Dc11MetadataPlugin() {
-		parent::PKPDc11MetadataPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 }
 

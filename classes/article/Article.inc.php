@@ -31,8 +31,8 @@ class Article extends Submission {
 	/**
 	 * Constructor.
 	 */
-	function Article() {
-		parent::Submission();
+	function __construct() {
+		parent::__construct();
 	}
 
 

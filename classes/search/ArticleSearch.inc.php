@@ -20,8 +20,8 @@ class ArticleSearch extends SubmissionSearch {
 	/**
 	 * Constructor
 	 */
-	function ArticleSearch() {
-		parent::SubmissionSearch();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

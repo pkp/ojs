@@ -24,8 +24,8 @@ class IssueEntryHandler extends PublicationEntryHandler {
 	/**
 	 * Constructor.
 	 */
-	function IssueEntryHandler() {
-		parent::PublicationEntryHandler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	//

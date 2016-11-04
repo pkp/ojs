@@ -40,8 +40,8 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	/**
 	 * Constructor
 	 */
-	function CrossRefExportPlugin() {
-		parent::DOIPubIdExportPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

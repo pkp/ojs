@@ -23,8 +23,8 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 	 * @param $stageId integer
 	 * @param $formParams array
 	 */
-	function SubmissionMetadataViewForm($submissionId, $stageId = null, $formParams = null, $templateName = 'controllers/modals/submissionMetadata/form/submissionMetadataViewForm.tpl') {
-		parent::PKPSubmissionMetadataViewForm($submissionId, $stageId, $formParams, $templateName);
+	function __construct($submissionId, $stageId = null, $formParams = null, $templateName = 'controllers/modals/submissionMetadata/form/submissionMetadataViewForm.tpl') {
+		parent::__construct($submissionId, $stageId, $formParams, $templateName);
 	}
 
 	/**

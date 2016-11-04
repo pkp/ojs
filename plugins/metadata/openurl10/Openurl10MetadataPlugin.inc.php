@@ -20,8 +20,8 @@ class Openurl10MetadataPlugin extends PKPOpenurl10MetadataPlugin {
 	/**
 	 * Constructor
 	 */
-	function Openurl10MetadataPlugin() {
-		parent::PKPOpenurl10MetadataPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 }
 

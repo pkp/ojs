@@ -20,9 +20,9 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function NativeXmlIssueFilter($filterGroup) {
+	function __construct($filterGroup) {
 		$this->setDisplayName('Native XML issue import');
-		parent::NativeImportFilter($filterGroup);
+		parent::__construct($filterGroup);
 	}
 
 

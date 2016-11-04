@@ -46,8 +46,8 @@ class LucenePlugin extends GenericPlugin {
 	/**
 	 * Constructor
 	 */
-	function LucenePlugin() {
-		parent::GenericPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 

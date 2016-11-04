@@ -20,8 +20,8 @@ class Nlm30MetadataPlugin extends PKPNlm30MetadataPlugin {
 	/**
 	 * Constructor
 	 */
-	function Nlm30MetadataPlugin() {
-		parent::PKPNlm30MetadataPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 }
 

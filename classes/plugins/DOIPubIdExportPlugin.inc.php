@@ -27,8 +27,8 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	/**
 	 * Constructor
 	 */
-	function DOIPubIdExportPlugin() {
-		parent::PubObjectsExportPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

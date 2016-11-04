@@ -29,10 +29,10 @@ class BrowseSettingsForm extends Form {
 	 * @param $plugin object
 	 * @param $journalId int
 	 */
-	function BrowseSettingsForm(&$plugin, $journalId) {
+	function __construct(&$plugin, $journalId) {
 		$this->journalId = $journalId;
 		$this->plugin =& $plugin;
-		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
+		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
 	}

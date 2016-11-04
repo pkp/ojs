@@ -20,8 +20,8 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 	/**
 	 * Constructor.
 	 */
-	function SubscriptionExpiryReminder() {
-		parent::ScheduledTask();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

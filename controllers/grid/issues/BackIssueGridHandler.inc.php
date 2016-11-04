@@ -19,8 +19,8 @@ class BackIssueGridHandler extends IssueGridHandler {
 	/**
 	 * Constructor
 	 */
-	function BackIssueGridHandler() {
-		parent::IssueGridHandler();
+	function __construct() {
+		parent::__construct();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER),
 			array('saveSequence')

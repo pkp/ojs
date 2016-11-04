@@ -19,8 +19,8 @@ class IssueGridRow extends GridRow {
 	/**
 	 * Constructor
 	 */
-	function IssueGridRow() {
-		parent::GridRow();
+	function __construct() {
+		parent::__construct();
 	}
 
 	//

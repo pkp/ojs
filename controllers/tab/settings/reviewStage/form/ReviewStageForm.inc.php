@@ -20,8 +20,8 @@ class ReviewStageForm extends PKPReviewStageForm {
 	/**
 	 * Constructor.
 	 */
-	function ReviewStageForm($wizardMode = false) {
-		parent::PKPReviewStageForm(
+	function __construct($wizardMode = false) {
+		parent::__construct(
 			$wizardMode,
 			array(
 				'restrictReviewerFileAccess' => 'bool',

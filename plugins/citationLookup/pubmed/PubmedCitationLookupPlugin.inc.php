@@ -20,8 +20,8 @@ class PubmedCitationLookupPlugin extends PKPPubmedCitationLookupPlugin {
 	/**
 	 * Constructor
 	 */
-	function PubmedCitationLookupPlugin() {
-		parent::PKPPubmedCitationLookupPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 }
 

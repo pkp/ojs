@@ -44,7 +44,7 @@ class CrossrefExportDeployment {
 	 * @param $context Context
 	 * @param $plugin DOIPubIdExportPlugin
 	 */
-	function CrossrefExportDeployment($context, $plugin) {
+	function __construct($context, $plugin) {
 		$this->setContext($context);
 		$this->setPlugin($plugin);
 	}

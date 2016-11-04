@@ -52,9 +52,9 @@ class DataciteXmlFilter extends NativeExportFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function DataciteXmlFilter($filterGroup) {
+	function __construct($filterGroup) {
 		$this->setDisplayName('DataCite XML export');
-		parent::NativeExportFilter($filterGroup);
+		parent::__construct($filterGroup);
 	}
 
 	//

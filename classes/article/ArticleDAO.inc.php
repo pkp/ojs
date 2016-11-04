@@ -21,8 +21,8 @@ class ArticleDAO extends SubmissionDAO {
 	/**
 	 * Constructor.
 	 */
-	function ArticleDAO() {
-		parent::SubmissionDAO();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

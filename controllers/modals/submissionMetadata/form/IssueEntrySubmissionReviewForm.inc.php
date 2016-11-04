@@ -26,8 +26,8 @@ class IssueEntrySubmissionReviewForm extends SubmissionMetadataViewForm {
 	 * @param $stageId integer
 	 * @param $formParams array
 	 */
-	function IssueEntrySubmissionReviewForm($submissionId, $stageId = null, $formParams = null) {
-		parent::SubmissionMetadataViewForm($submissionId, $stageId, $formParams, 'controllers/modals/submissionMetadata/form/issueEntrySubmissionReviewForm.tpl');
+	function __construct($submissionId, $stageId = null, $formParams = null) {
+		parent::__construct($submissionId, $stageId, $formParams, 'controllers/modals/submissionMetadata/form/issueEntrySubmissionReviewForm.tpl');
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_APP_SUBMISSION, LOCALE_COMPONENT_APP_AUTHOR);
 	}
 

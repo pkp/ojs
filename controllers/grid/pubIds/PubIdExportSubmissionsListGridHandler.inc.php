@@ -19,8 +19,8 @@ class PubIdExportSubmissionsListGridHandler extends ExportPublishedSubmissionsLi
 	/**
 	 * Constructor
 	 */
-	function PubIdExportSubmissionsListGridHandler() {
-		parent::ExportPublishedSubmissionsListGridHandler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

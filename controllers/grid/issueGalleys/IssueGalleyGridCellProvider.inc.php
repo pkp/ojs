@@ -19,8 +19,8 @@ class IssueGalleyGridCellProvider extends GridCellProvider {
 	/**
 	 * Constructor
 	 */
-	function IssueGalleyGridCellProvider() {
-		parent::GridCellProvider();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

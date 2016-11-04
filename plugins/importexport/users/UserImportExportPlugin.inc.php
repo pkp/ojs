@@ -19,8 +19,8 @@ class UserImportExportPlugin extends PKPUserImportExportPlugin {
 	/**
 	 * Constructor
 	 */
-	function UserImportExportPlugin() {
-		parent::PKPUserImportExportPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

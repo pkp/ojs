@@ -24,8 +24,8 @@ class IssueForm extends Form {
 	/**
 	 * Constructor.
 	 */
-	function IssueForm($issue = null) {
-		parent::Form('controllers/grid/issues/form/issueForm.tpl');
+	function __construct($issue = null) {
+		parent::__construct('controllers/grid/issues/form/issueForm.tpl');
 		$this->addCheck(new FormValidatorCustom($this, 'showVolume', 'optional', 'editor.issues.volumeRequired', create_function('$showVolume, $form', 'return !$showVolume || $form->getData(\'volume\') ? true : false;'), array($this)));
 		$this->addCheck(new FormValidatorCustom($this, 'showNumber', 'optional', 'editor.issues.numberRequired', create_function('$showNumber, $form', 'return !$showNumber || $form->getData(\'number\') ? true : false;'), array($this)));
 		$this->addCheck(new FormValidatorCustom($this, 'showYear', 'optional', 'editor.issues.yearRequired', create_function('$showYear, $form', 'return !$showYear || $form->getData(\'year\') ? true : false;'), array($this)));

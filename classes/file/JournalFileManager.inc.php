@@ -25,8 +25,8 @@ class JournalFileManager extends BaseSubmissionFileManager {
 	 * @param $journalId int
 	 * @param $articleId int
 	 */
-	function JournalFileManager($journalId, $articleId) {
-		parent::BaseSubmissionFileManager($journalId, $articleId);
+	function __construct($journalId, $articleId) {
+		parent::__construct($journalId, $articleId);
 	}
 
 	/**

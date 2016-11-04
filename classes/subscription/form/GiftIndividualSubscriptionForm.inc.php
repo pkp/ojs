@@ -29,8 +29,8 @@ class GiftIndividualSubscriptionForm extends Form {
 	 * Constructor
 	 * @param buyerUserId int
 	 */
-	function GiftIndividualSubscriptionForm($request, $buyerUserId = null) {
-		parent::Form('subscription/giftIndividualSubscriptionForm.tpl');
+	function __construct($request, $buyerUserId = null) {
+		parent::__construct('subscription/giftIndividualSubscriptionForm.tpl');
 
 		$this->buyerUserId = isset($buyerUserId) ? (int) $buyerUserId : null;
 		$this->request =& $request;

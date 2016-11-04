@@ -20,8 +20,8 @@ class OAIMetadataFormatPlugin_DC extends PKPOAIMetadataFormatPlugin_DC {
 	/**
 	 * Constructor
 	 */
-	function OAIMetadataFormatPlugin_DC() {
-		parent::PKPOAIMetadataFormatPlugin_DC();
+	function __construct() {
+		parent::__construct();
 	}
 }
 

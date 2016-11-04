@@ -24,8 +24,8 @@ class LuceneHandler extends Handler {
 	 * Constructor
 	 * @param $request Request
 	 */
-	function LuceneHandler($request) {
-		parent::Handler();
+	function __construct($request) {
+		parent::__construct();
 	}
 
 	/**

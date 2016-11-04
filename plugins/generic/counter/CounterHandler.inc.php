@@ -24,8 +24,8 @@ class CounterHandler extends Handler {
 	/**
 	 * Constructor
 	 **/
-	function CounterHandler() {
-		parent::Handler();
+	function __construct() {
+		parent::__construct();
 	}
 	
 	/**

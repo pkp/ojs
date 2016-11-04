@@ -20,8 +20,8 @@ class NativeXmlSupplementaryFileFilter extends NativeXmlArticleFileFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function NativeXmlSupplementaryFileFilter($filterGroup) {
-		parent::NativeXmlArticleFileFilter($filterGroup);
+	function __construct($filterGroup) {
+		parent::__construct($filterGroup);
 	}
 
 

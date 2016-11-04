@@ -23,8 +23,8 @@ class ArticleGalley extends Representation {
 	/**
 	 * Constructor.
 	 */
-	function ArticleGalley() {
-		parent::Representation();
+	function __construct() {
+		parent::__construct();
 	}
 
 	//
