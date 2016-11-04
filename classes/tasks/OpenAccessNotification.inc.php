@@ -21,7 +21,7 @@ class OpenAccessNotification extends ScheduledTask {
 	 * Constructor.
 	 */
 	function OpenAccessNotification() {
-		$this->ScheduledTask();
+		parent::ScheduledTask();
 	}
 
 	/**

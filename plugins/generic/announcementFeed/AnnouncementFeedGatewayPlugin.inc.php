@@ -24,6 +24,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	 */
 	function AnnouncementFeedGatewayPlugin($parentPluginName) {
 		$this->parentPluginName = $parentPluginName;
+		parent::GatewayPlugin();
 	}
 
 	/**

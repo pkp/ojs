@@ -38,6 +38,8 @@ class SubscriptionForm extends Form {
 	 * @param $userId int The user ID for this subscription; null for new subscription
 	 */
 	function SubscriptionForm($subscriptionId = null, $userId = null) {
+		parent::Form();
+
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 		$this->userId = isset($userId) ? (int) $userId : null;
 

@@ -21,7 +21,7 @@ class SettingsHandler extends ManagementHandler {
 	 * Constructor.
 	 */
 	function SettingsHandler() {
-		parent::Handler();
+		parent::ManagementHandler();
 		$this->addRoleAssignment(
 			ROLE_ID_MANAGER,
 			array(
