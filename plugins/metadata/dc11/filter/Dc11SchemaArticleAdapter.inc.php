@@ -46,11 +46,10 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 	//
 	/**
 	 * @see MetadataDataObjectAdapter::injectMetadataIntoDataObject()
-	 * @param $dc11Description MetadataDescription
-	 * @param $article Article
-	 * @param $authorClassName string the application specific author class name
+	 * @param $metadataDescription MetadataDescription
+	 * @param $targetDataObject Article
 	 */
-	function &injectMetadataIntoDataObject(&$dc11Description, &$article, $authorClassName) {
+	function &injectMetadataIntoDataObject(&$metadataDescription, &$targetDataObject) {
 		// Not implemented
 		assert(false);
 	}

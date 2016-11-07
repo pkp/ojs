@@ -46,12 +46,12 @@ class Mods34SchemaArticleAdapter extends Mods34SchemaSubmissionAdapter {
 	//
 	/**
 	 * @see MetadataDataObjectAdapter::injectMetadataIntoDataObject()
-	 * @param $mods34Description MetadataDescription
-	 * @param $article Article
+	 * @param $metadataDescription MetadataDescription
+	 * @param $targetDataObject Article
 	 */
-	function &injectMetadataIntoDataObject(&$mods34Description, &$article) {
-		assert(is_a($article, 'Article'));
-		$article =& parent::injectMetadataIntoDataObject($mods34Description, $article, 'classes.article.Author');
+	function &injectMetadataIntoDataObject(&$metadataDescription, &$targetDataObject) {
+		assert(is_a($targetDataObject, 'Article'));
+		$article = parent::injectMetadataIntoDataObject($metadataDescription, $targetDataObject);
 
 		// ...
 		// FIXME: Go through MODS schema and see what context-specific
@@ -69,7 +69,7 @@ class Mods34SchemaArticleAdapter extends Mods34SchemaSubmissionAdapter {
 		assert(is_a($article, 'Article'));
 
 		// Extract meta-data from the submission.
-		$mods34Description =& parent::extractMetadataFromDataObject($article, 'aut');
+		$mods34Description =& parent::extractMetadataFromDataObject($article);
 
 		// ...
 		// FIXME: Go through MODS schema and see what context-specific
