@@ -277,8 +277,12 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		$xml = $exportXml->saveXml();
 		$errors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR ||  $a->level == LIBXML_ERR_FATAL;'));
 		if (!empty($errors)) {
+			$charset = Config::getVar('i18n', 'client_charset');
+			header('Content-type: text/html; charset=' . $charset);
+			echo '<html><body>';
 			$this->displayXMLValidationErrors($errors, $xml);
 			fatalError(__('plugins.importexport.common.error.validation'));
+			echo '</body></html>';
 		}
 		return $xml;
 	}
