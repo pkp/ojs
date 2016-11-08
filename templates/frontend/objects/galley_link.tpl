@@ -51,7 +51,7 @@
 {* Revision? *}
 {if $revision}
 	{assign var=path value=$parentId|to_array:$galley->getBestGalleyId():'v':$revision->getRevision()}
-	{assign var=label value=$revision->getDateModified()}
+	{assign var=label value=$galley->getGalleyLabel()|cat:" ("|cat:$revision->getRevision()|cat:")"}
 {else}
 	{assign var=path value=$parentId|to_array:$galley->getBestGalleyId()}
 	{assign var=label value=$galley->getGalleyLabel()}

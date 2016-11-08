@@ -206,33 +206,46 @@
 			{/if}
 
 			{* Article Galleys *}
+			{assign var=hasRevisions value=false}
 			{assign var=galleys value=$article->getGalleys()}
 			{if $galleys}
 				<div class="item galleys">
 					<ul class="value galleys_links">
 						{foreach from=$galleys item=galley}
-							<li>
-								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley}
-							</li>
-
-							{if $versioningEnabled}
-								{include file="frontend/objects/file_revisions.tpl" parent=$article galley=$galley}
+							{assign var=galleyId value=$galley->getId()}
+							{assign var=otherRevisions value=$galley->getOtherRevisions($galley->getFileId())} 
+							{if $otherRevisions}
+								{assign var=hasRevisions value=true}
 							{/if}
+							<li>
+								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley}	
+							</li>
 
 						{/foreach}
 					</ul>
 				</div>
 			{/if}
-
+	
 			{if $article->getDatePublished()}
 				<div class="item published">
 					<div class="label">
+						{if $versioningEnabled}
+							{translate key="submissions.firstPublished"}
+						{else}
 						{translate key="submissions.published"}
+						{/if}
 					</div>
 					<div class="value">
 						{$article->getDatePublished()|date_format:$dateFormatShort}
 					</div>
 				</div>
+			{/if}
+
+			{* Display version history of each galley *}
+			{if $versioningEnabled && $hasRevisions}
+				{foreach from=$galleys item=galley}
+					{include file="frontend/objects/file_revisions.tpl" parent=$article galley=$galley} 
+				{/foreach}
 			{/if}
 
 			{* Citation formats *}
