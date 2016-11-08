@@ -66,8 +66,7 @@ class IssueForm extends Form {
 
 		// Cover image preview
 		$locale = AppLocale::getLocale();
-		$coverImage = null;
-		if ($this->issue) $coverImage = $this->issue->getCoverImage($locale);
+		$coverImage = $this->issue ? $this->issue->getCoverImage($locale) : null;
 
 		// Cover image delete link action
 		if ($coverImage) {
