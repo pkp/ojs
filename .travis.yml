@@ -4,6 +4,9 @@ env:
   - TEST=validation
   - TEST=pgsql
   - TEST=mysql
+  # Allow PHP7 to fail pending dependency updates (e.g. ADODB)
+  - allow_failures:
+    - php: 7.0
   global:
   - secure: "nxosaZUBRaYhk8+LHaDnVgMIveiK4zewiXW5Fw5TtB/D6V67oASufil1uhcayyzIBwnrZZmrFPLhXm0Lm1RiQHrsftffcMB5JlWK9R9EyWpyd87ewqWy3kXBAvsXXTU6ihGiaFpklhVCKt7XcDSR8bWEb2NVWrM7JS7dHDKMwaA="
 language: php
