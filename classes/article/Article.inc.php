@@ -244,6 +244,60 @@ class Article extends Submission {
 		preg_match('/^[^\d]*(\d+)\D*(.*)$/', $this->getPages(), $pages);
 		return $pages[2];
 	}
+
+	/**
+	 * Get the localized cover page server-side file name
+	 * @return string
+	 */
+	function getLocalizedCoverImage() {
+		return $this->getLocalizedData('coverImage');
+	}
+
+	/**
+	 * get cover page server-side file name
+	 * @param $locale string
+	 * @return string
+	 */
+	function getCoverImage($locale) {
+		return $this->getData('coverImage', $locale);
+	}
+
+	/**
+	 * set cover page server-side file name
+	 * @param $coverImage string
+	 * @param $locale string
+	 */
+	function setCoverImage($coverImage, $locale) {
+		$this->setData('coverImage', $coverImage, $locale);
+	}
+
+	/**
+	 * Get the localized cover page alternate text
+	 * @return string
+	 */
+	function getLocalizedCoverImageAltText() {
+		return $this->getLocalizedData('coverImageAltText');
+	}
+
+	/**
+	 * get cover page alternate text
+	 * @param $locale string
+	 * @return string
+	 */
+	function getCoverImageAltText($locale) {
+		return $this->getData('coverImageAltText', $locale);
+	}
+
+	/**
+	 * set cover page alternate text
+	 * @param $coverImageAltText string
+	 * @param $locale string
+	 */
+	function setCoverImageAltText($coverImageAltText, $locale) {
+		$this->setData('coverImageAltText', $coverImageAltText, $locale);
+	}
+
+
 }
 
 ?>

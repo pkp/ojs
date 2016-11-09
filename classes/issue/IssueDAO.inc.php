@@ -312,7 +312,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'description');
+		return array('title', 'description', 'coverImageAltText', 'coverImage');
 	}
 
 	/**
@@ -324,8 +324,6 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		$additionalFields = parent::getAdditionalFieldNames();
 		// FIXME: Move this to a PID plug-in.
 		$additionalFields[] = 'pub-id::publisher-id';
-		$additionalFields[] = 'coverImage';
-		$additionalFields[] = 'coverImageAltText';
 		return $additionalFields;
 	}
 
@@ -463,9 +461,12 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 
-		$coverImage = $issue->getCoverImage();
-		if (!empty($coverImage)) {
-			$publicFileManager->removeJournalFile($issue->getJournalId(), $coverImage);
+		if (is_array($issue->getCoverImage(null))) {
+			foreach ($issue->getCoverImage(null) as $coverImage) {
+				if ($coverImage != '') {
+					$publicFileManager->removeJournalFile($issue->getJournalId(), $coverImage);
+				}
+			}
 		}
 
 		$issueId = $issue->getId();
