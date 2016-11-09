@@ -25,7 +25,7 @@ class SubmissionFileDAO extends PKPSubmissionFileDAO {
 	 * Constructor
 	 */
 	function __construct() {
-		return parent::__construct();
+		parent::__construct();
 	}
 
 
