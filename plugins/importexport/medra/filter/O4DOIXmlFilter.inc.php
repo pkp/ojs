@@ -303,7 +303,7 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		// Nominal Year
 		$year = (string) $issue->getYear();
 		$yearlen = strlen($year);
-		if (!empty($year) && ($yearlen == 2 || $yearlen == 4)) {
+		if ($issue->getShowYear() && !empty($year) && ($yearlen == 2 || $yearlen == 4)) {
 			$issueDateNode = $doc->createElementNS($deployment->getNamespace(), 'JournalIssueDate');
 			$issueDateNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DateFormat', O4DOI_DATE_FORMAT_YYYY));
 			// Try to extend the year if necessary.
