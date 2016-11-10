@@ -13,25 +13,9 @@
   <message key="plugins.importexport.users.description" >ورود و خروج کاربران</message>
   <message key="plugins.importexport.users.cliUsage" ><![CDATA[کاربرد: {$scriptName} {$pluginName} [command] ...
 Commands:
-	import [xmlFileName] [press_path] [optional flags]
-	export [xmlFileName] [press_path]
-	export [xmlFileName] [press_path] [role_path1] [role_path2] ...
-
-Optional flags:
-	continue_on_error: چنانچه دکر شود در صورت بروز خطا عمل ادامه مییابد.
-
-	send_notify: چنانچه ذکر شود ایمیل برای کاربران میفرستد و نام کاربری و رمزعبور را اعلام میکند
-
-
-مثال:
-کاربران را بداخل myPress از فایل مجله myPressFile.xml وارد میکند و با بروز خطا ادامه می یابد
-	{$scriptName} {$pluginName} import myImportFile.xml myPress continue_on_error
-
-	تمام کاربران myPress را انتقال میدهد:
-	{$scriptName} {$pluginName} export myExportFile.xml myPress
-
-	تمامی کاربرانی که به عنوان کارشناس ثبت نام کرده اند را منتقل میکند :
-	{$scriptName} {$pluginName} export myExportFile.xml myPress reviewer
+	import [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [userId1] [userId2] ...
 ]]></message>
   <message key="plugins.importexport.users.import.importUsers" >انتقال کاربران</message>
   <message key="plugins.importexport.users.import.instructions" ><![CDATA[فایل داده حاوی اطلاعات کاربران را انتخاب کنید تا انتقال یابد. برای اطلاع از فورمات این فایل به راهنمای مجله مراجعه کنید.
