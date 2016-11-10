@@ -94,7 +94,7 @@ class ArticleSearch extends SubmissionSearch {
 
 				case 'title':
 					$submission = $articleDao->getById($submissionId);
-					$orderKey = $submission->getLocalizedTitle();
+					$orderKey = $submission->getLocalizedTitle(null, false);
 					break;
 
 				case 'journalTitle':
