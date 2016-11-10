@@ -24,24 +24,9 @@
 
 	<message key="plugins.importexport.users.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [command] ...
 Commands:
-	import [xmlFileName] [press_path] [optional flags]
-	export [xmlFileName] [press_path]
-	export [xmlFileName] [press_path] [role_path1] [role_path2] ...
-
-Προαιρετικά flags:
-	continue_on_error: Αν οριστεί, δεν θα σταματάει η εισαγωγή χρηστών αν εμφανιστεί ένα σφάλμα
-
-	send_notify: Αν οριστεί, θα αποστέλλεται ενημερωτικό email με τα ονόματα χρηστών και του κωδικούς πρόσβασης στους εισηγμένους χρήστες
-
-Παραδείγματα:
-	Εισαγωγή χρηστών στο myPress από το myImportFile.xml, continuing on error:
-	{$scriptName} {$pluginName} import myImportFile.xml myPress continue_on_error
-
-	Εξαγωγή όλων των χρηστών από το myPress:
-	{$scriptName} {$pluginName} export myExportFile.xml myPress
-
-	Εξαγωγή όλων των χρηστών που έναι εγγεγραμμένοι ως αξιολογητές, μαζί μόνο με τον ρόλο του αξιολογητή :
-	{$scriptName} {$pluginName} export myExportFile.xml myPress reviewer
+	import [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [userId1] [userId2] ...
 ]]></message>
 	<message key="plugins.importexport.users.import.importUsers">Εισαγωγή Χρηστών</message>
 	<message key="plugins.importexport.users.import.instructions"><![CDATA[Επιλέξτε ένα αρχείο δεδομένων XML που περιέχει τις πληροφορίες των χρηστών για εισαγωγή σε αυτό το περιοδικό. Δείτε την βοήθεια του περιοδικου για πληροφορίες σχετικά με την μορφή του αρχείου αυτού.<br /><br />Σημειώστε ότι αν το αρχείο αυτό περιέχει ονόματα χρηστών και διευθύνσεις email που ήδη υπάρχουν στο σύστημα, τα δεδομένα για αυτούς τους χρήστες δεν θα εισαχθούν και κάθε νέος ρόλος που θα πρέπει να δημιουργηθού θα ανατεθούν στους υφιστάμενους χρήστες.]]></message>
