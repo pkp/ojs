@@ -217,6 +217,10 @@ public_files_dir = public
 ; Permissions mask for created files and directories
 umask = 0022
 
+; The minimum percentage similarity between filenames that should be considered
+; a possible revision
+filename_revision_match = 70
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Fileinfo (MIME) Settings ;
