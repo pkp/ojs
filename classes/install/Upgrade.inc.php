@@ -1521,6 +1521,88 @@ class Upgrade extends Installer {
 		$noteDao->update('DELETE FROM submission_comments WHERE comment_type=2'); // COMMENT_TYPE_EDITOR_DECISION
 		return true;
 	}
+
+	/**
+	 * Localize issue cover images.
+	 * @return boolean True indicates success.
+	 */
+	function localizeIssueCoverImages() {
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$publicFileManager = new PublicFileManager();
+		// retrieve names for unlocalized issue cover images
+		$result = $issueDao->retrieve(
+			'SELECT iss.issue_id, iss.setting_value, j.journal_id, j.primary_locale
+			FROM issue_settings iss, issues i, journals j
+			WHERE iss.setting_name = \'coverImage\' AND iss.locale = \'\'
+				AND i.issue_id = iss.issue_id AND j.journal_id = i.journal_id'
+		);
+		// for all unlocalized issue cover images
+		// rename (copy + remove) the cover images files in the public folder,
+		// considereing the locale (using the journal primary locale)
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$oldFileName = $row['setting_value'];
+			$newFileName = str_replace('.', '_' . $row['primary_locale'] . '.', $oldFileName);
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldFileName)) {
+				$publicFileManager->copyJournalFile($row['journal_id'], $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldFileName, $newFileName);
+				$publicFileManager->removeJournalFile($row['journal_id'], $oldFileName);
+			}
+			$result->MoveNext();
+		}
+		$result->Close();
+		// Update cover image names in the issue_settings table
+		$issueDao->update(
+			'UPDATE issue_settings iss, issues i, journals j SET iss.locale = j.primary_locale, iss.setting_value = CONCAT(LEFT( iss.setting_value, LOCATE(\'.\', iss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING_INDEX(iss.setting_value,\'.\',-1))
+WHERE iss.setting_name = \'coverImage\' AND iss.locale = \'\' AND i.issue_id = iss.issue_id AND j.journal_id = i.journal_id'
+		);
+		// Update cover image alt texts in the issue_settings table
+		$issueDao->update(
+			'UPDATE issue_settings iss, issues i, journals j SET iss.locale = j.primary_locale WHERE iss.setting_name = \'coverImageAltText\' AND iss.locale = \'\' AND i.issue_id = iss.issue_id AND j.journal_id = i.journal_id'
+		);
+		$issueDao->flushCache();
+		return true;
+	}
+
+	/**
+	 * Localize article cover images.
+	 * @return boolean True indicates success.
+	 */
+	function localizeArticleCoverImages() {
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$publicFileManager = new PublicFileManager();
+		// retrieve names for unlocalized article cover images
+		$result = $articleDao->retrieve(
+			'SELECT ss.submission_id, ss.setting_value, j.journal_id, j.primary_locale
+			FROM submission_settings ss, submissions s, journals j
+			WHERE ss.setting_name = \'coverImage\' AND ss.locale = \'\'
+				AND s.submission_id = ss.submission_id AND j.journal_id = s.context_id'
+		);
+		// for all unlocalized article cover images
+		// rename (copy + remove) the cover images files in the public folder,
+		// considereing the locale (using the journal primary locale)
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$oldFileName = $row['setting_value'];
+			$newFileName = str_replace('.', '_' . $row['primary_locale'] . '.', $oldFileName);
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldFileName)) {
+				$publicFileManager->copyJournalFile($row['journal_id'], $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldFileName, $newFileName);
+				$publicFileManager->removeJournalFile($row['journal_id'], $oldFileName);
+			}
+			$result->MoveNext();
+		}
+		$result->Close();
+		// Update cover image names in the submission_settings table
+		$articleDao->update(
+			'UPDATE submission_settings ss, submissions s, journals j SET ss.locale = j.primary_locale, ss.setting_value = CONCAT(LEFT( ss.setting_value, LOCATE(\'.\', ss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING_INDEX(ss.setting_value,\'.\',-1))
+WHERE ss.setting_name = \'coverImage\' AND ss.locale = \'\' AND s.submission_id = ss.submission_id AND j.journal_id = s.context_id'
+		);
+		// Update cover image alt texts in the submission_settings table
+		$articleDao->update(
+			'UPDATE submission_settings ss, submissions s, journals j SET ss.locale = j.primary_locale WHERE ss.setting_name = \'coverImageAltText\' AND ss.locale = \'\' AND s.submission_id = ss.submission_id AND j.journal_id = s.context_id'
+		);
+		$articleDao->flushCache();
+		return true;
+	}
 }
 
 ?>

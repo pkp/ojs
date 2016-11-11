@@ -65,8 +65,8 @@ class IssueForm extends Form {
 		}
 
 		// Cover image preview
-		$coverImage = null;
-		if ($this->issue) $coverImage = $this->issue->getCoverImage();
+		$locale = AppLocale::getLocale();
+		$coverImage = $this->issue ? $this->issue->getCoverImage($locale) : null;
 
 		// Cover image delete link action
 		if ($coverImage) {
@@ -119,6 +119,7 @@ class IssueForm extends Form {
 	 */
 	function initData($request) {
 		if (isset($this->issue)) {
+			$locale = AppLocale::getLocale();
 			$this->_data = array(
 				'title' => $this->issue->getTitle(null), // Localized
 				'volume' => $this->issue->getVolume(),
@@ -132,8 +133,8 @@ class IssueForm extends Form {
 				'showNumber' => $this->issue->getShowNumber(),
 				'showYear' => $this->issue->getShowYear(),
 				'showTitle' => $this->issue->getShowTitle(),
-				'coverImage' => $this->issue->getCoverImage(),
-				'coverImageAltText' => $this->issue->getCoverImageAltText(),
+				'coverImage' => $this->issue->getCoverImage($locale),
+				'coverImageAltText' => $this->issue->getCoverImageAltText($locale),
 			);
 			parent::initData();
 		} else {
@@ -231,6 +232,7 @@ class IssueForm extends Form {
 			$issueDao->insertObject($issue);
 		}
 
+		$locale = AppLocale::getLocale();
 		// Copy an uploaded cover file for the issue, if there is one.
 		if ($temporaryFileId = $this->getData('temporaryFileId')) {
 			$user = $request->getUser();
@@ -239,14 +241,14 @@ class IssueForm extends Form {
 
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
-			$newFileName = 'cover_issue_' . $issue->getId() . $publicFileManager->getImageExtension($temporaryFile->getFileType());
+			$newFileName = 'cover_issue_' . $issue->getId() . '_' . $locale . $publicFileManager->getImageExtension($temporaryFile->getFileType());
 			$journal = $request->getJournal();
 			$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
-			$issue->setCoverImage($newFileName);
+			$issue->setCoverImage($newFileName, $locale);
 			$issueDao->updateObject($issue);
 		}
 
-		$issue->setCoverImageAltText($this->getData('coverImageAltText'));
+		$issue->setCoverImageAltText($this->getData('coverImageAltText'), $locale);
 
 		parent::execute();
 		$issueDao->updateObject($issue);

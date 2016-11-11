@@ -18,10 +18,10 @@
 {/if}
 
 <div class="obj_article_summary">
-	{if $article->getCoverImage()}
+	{if $article->getLocalizedCoverImage()}
 		<div class="cover">
 			<a href="{url page="article" op="view" path=$articlePath}" class="file">
-				<img src="{$coverImagePath|escape}{$article->getCoverImage()|escape}"{if $article->getCoverImageAltText() != ''} alt="{$article->getCoverImageAltText()|escape}"{else} alt="{translate key="article.coverPage.altText"}"{/if}>
+				<img src="{$coverImagePath|escape}{$article->getLocalizedCoverImage()|escape}"{if $article->getLocalizedCoverImageAltText() != ''} alt="{$article->getLocalizedCoverImageAltText()|escape}"{else} alt="{translate key="article.coverPage.altText"}"{/if}>
 			</a>
 		</div>
 	{/if}

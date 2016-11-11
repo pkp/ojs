@@ -27,10 +27,10 @@
 	<div class="heading">
 
 		{* Issue cover image *}
-		{assign var=issueCover value=$issue->getCoverImage()}
+		{assign var=issueCover value=$issue->getLocalizedCoverImage()}
 		{if $issueCover}
 			<a class="cover" href="{url op="view" page="issue" path=$issue->getBestIssueId()}">
-				<img src="{$coverImagePath|escape}{$issueCover|escape}"{if $issue->getCoverImageAltText() != ''} alt="{$issue->getCoverImageAltText()|escape}"{/if}>
+				<img src="{$coverImagePath|escape}{$issueCover|escape}"{if $issue->getLocalizedCoverImageAltText() != ''} alt="{$issue->getLocalizedCoverImageAltText()|escape}"{/if}>
 			</a>
 		{/if}
 
