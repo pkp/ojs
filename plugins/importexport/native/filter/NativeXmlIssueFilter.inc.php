@@ -129,7 +129,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 				$this->parseIssueIdentification($n, $issue);
 				break;
 			default:
-				fatalError('Unknown element ' . $n->tagName);
+				$deployment->addError(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
 		}
 	}
 
@@ -419,18 +419,18 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 				if ($foundSectionId) {
 					if ($foundSectionId != $sectionId) {
 						// Mismatching sections found.
-						fatalError(__('plugins.importexport.native.import.error.sectionTitleMismatch', array('section1Title' => $title, 'section2Title' => $foundSectionTitle, 'issueTitle' => $issue->getIssueIdentification())));
+						$deployment->addError(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.sectionTitleMismatch', array('section1Title' => $title, 'section2Title' => $foundSectionTitle, 'issueTitle' => $issue->getIssueIdentification())));
 					}
 				} else if ($index > 0) {
 					// the current title matches, but the prev titles didn't
-					fatalError(__('plugins.importexport.native.import.error.sectionTitleMatch', array('sectionTitle' => $title, 'issueTitle' => $issue->getIssueIdentification())));
+					$deployment->addError(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.sectionTitleMatch', array('sectionTitle' => $title, 'issueTitle' => $issue->getIssueIdentification())));
 				}
 				$foundSectionId = $sectionId;
 				$foundSectionTitle = $title;
 			} else {
 				if ($foundSectionId) {
 					// a prev title matched, but the current doesn't
-					fatalError(__('plugins.importexport.native.import.error.sectionTitleMatch', array('sectionTitle' => $foundSectionTitle, 'issueTitle' => $issue->getIssueIdentification())));
+					$deployment->addError(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.sectionTitleMatch', array('sectionTitle' => $foundSectionTitle, 'issueTitle' => $issue->getIssueIdentification())));
 				}
 			}
 			$index++;
@@ -447,18 +447,18 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 				if ($foundSectionId) {
 					if ($foundSectionId != $sectionId) {
 						// Mismatching sections found.
-						fatalError(__('plugins.importexport.native.import.error.sectionAbbrevMismatch', array('section1Abbrev' => $abbrev, 'section2Abbrev' => $foundSectionAbbrev, 'issueTitle' => $issue->getIssueIdentification())));
+						$deployment->addError(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.sectionAbbrevMismatch', array('section1Abbrev' => $abbrev, 'section2Abbrev' => $foundSectionAbbrev, 'issueTitle' => $issue->getIssueIdentification())));
 					}
 				} else if ($index > 0) {
 					// the current abbrev matches, but the prev abbrevs didn't
-					fatalError(__('plugins.importexport.native.import.error.sectionAbbrevMatch', array('sectionAbbrev' => $abbrev, 'issueTitle' => $issue->getIssueIdentification())));
+					$deployment->addError(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.sectionAbbrevMatch', array('sectionAbbrev' => $abbrev, 'issueTitle' => $issue->getIssueIdentification())));
 				}
 				$foundSectionId = $sectionId;
 				$foundSectionAbbrev = $abbrev;
 			} else {
 				if ($foundSectionId) {
 					// a prev abbrev matched, but the current doesn't
-					fatalError(__('plugins.importexport.native.import.error.sectionAbbrevMatch', array('sectionAbbrev' => $foundSectionAbbrev, 'issueTitle' => $issue->getIssueIdentification())));
+					$deployment->addError(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.sectionAbbrevMatch', array('sectionAbbrev' => $foundSectionAbbrev, 'issueTitle' => $issue->getIssueIdentification())));
 				}
 			}
 			$index++;

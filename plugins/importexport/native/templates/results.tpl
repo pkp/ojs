@@ -15,6 +15,28 @@
 			<li>{$validationError->message|escape}</li>
 		{/foreach}
 	</ul>
+{elseif $submissionsErrors || $issuesErrors}
+	<h2>{translate key="plugins.importexport.common.errorsOccured"}</h2>
+	{foreach from=$issuesErrors item=issuesErrorMessages name=issuesErrors}
+		{if $issuesErrorMessages|@count > 0}
+			<p>{$smarty.foreach.issuesErrors.iteration}. {translate key="issue.issue"}</p>
+			<ul>
+				{foreach from=$issuesErrorMessages item=issuesErrorMessage}
+					<li>{$issuesErrorMessage|escape}</li>
+				{/foreach}
+			</ul>
+		{/if}
+	{/foreach}
+	{foreach from=$submissionsErrors item=submissionsErrorMessages name=submissionsErrors}
+		{if $submissionsErrorMessages|@count > 0}
+			<p>{$smarty.foreach.submissionsErrors.iteration}. {translate key="submission.submission"}</p>
+			<ul>
+				{foreach from=$submissionsErrorMessages item=submissionsErrorMessage}
+					<li>{$submissionsErrorMessage|escape}</li>
+				{/foreach}
+			</ul>
+		{/if}
+	{/foreach}
 {else}
 	{translate key="plugins.importexport.native.importComplete"}
 	<ul>
