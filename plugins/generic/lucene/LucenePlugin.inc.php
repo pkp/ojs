@@ -683,7 +683,7 @@ class LucenePlugin extends GenericPlugin {
 	// Form hook implementations.
 	//
 	/**
-	 * @see Form::Form()
+	 * @see Form::__construct()
 	 */
 	function callbackSectionFormConstructor($hookName, $params) {
 		// Check whether we got a valid ranking boost option.
