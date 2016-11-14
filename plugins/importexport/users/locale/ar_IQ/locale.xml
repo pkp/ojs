@@ -17,25 +17,9 @@
 
 	<message key="plugins.importexport.users.cliUsage"><![CDATA[الاستعمال: {$scriptName} {$pluginName} [command] ...
 Commands:
-	import [xmlFileName] [press_path] [optional flags]
-	export [xmlFileName] [press_path]
-	export [xmlFileName] [press_path] [role_path1] [role_path2] ...
-
-علامات إختيارية:
-	continue_on_error: إذا تم تحديده مع الأمر، معناه لا تتوقف عن استيراد المستخدمين عند حدوث أخطاء
-
-	send_notify: إذا تم تحديده مع الأمر، أرسل إشعار عبر البريد الالكتروني
-		متضمناً أسماء المستخدمين وكلمات مرورهم معنون إلى المستخدمين أنفسهم
-
-أمثلة:
-	استيراد المستخدمين إلى دار النشر من الملف myImportFile.xml، مع الاستمرار حين الخطأ:
-	{$scriptName} {$pluginName} import myImportFile.xml myPress continue_on_error
-
-	تصدير كل المستخدمين من مجلتي:
-	{$scriptName} {$pluginName} export myExportFile.xml myPress
-
-	تصدير كل المستخدمين المسجلين بصفة محكمين، فضلاً عن منحهم ذلك الدور حصراً:
-	{$scriptName} {$pluginName} export myExportFile.xml myPress reviewer
+	import [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [userId1] [userId2] ...
 ]]></message>
 	<message key="plugins.importexport.users.import.importUsers">استيراد المستخدمين</message>
 	<message key="plugins.importexport.users.import.instructions"><![CDATA[إختر ملف بيانات بصيغة XML يتضمن معلومات المستخدمين لاستيرادها إلى هذه المجلة. أنظر ملف المساعدة الخاص بالمجلة للحصول على تفاصيل عن صيغة هذا الملف.<br /><br />لاحظ أنه إن كان الملف المستورد يتضمن أي أسماء مستخدمين أو عناوين بريد الكتروني موجودة سلفاً في النظام، فإن بيانات هؤلاء المستخدمين لن يتم استيرادها، مع منحهم أي أدوار جديدة فيما لو جاءت مستوردة من الملف المعني، أي بعبارة أخرى، سيتم التعامل مع المستخدمين المكررين على أنهم معروفون سابقاً في النظام.]]></message>
