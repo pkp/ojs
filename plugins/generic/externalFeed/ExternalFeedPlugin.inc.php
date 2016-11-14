@@ -197,10 +197,10 @@ class ExternalFeedPlugin extends GenericPlugin {
 						$output .= '</tr>';
 						$output .= '<tr class="details">';
 						$output .= '<td class="posted">';
-						$output .= AppLocale::Translate('plugins.generic.externalFeed.posted') . ': ' . date('Y-m-d', strtotime($item->get_date()));
+						$output .= __('plugins.generic.externalFeed.posted') . ': ' . date('Y-m-d', strtotime($item->get_date()));
 						$output .= '</td>';
 						$output .= '<td class="more">';
-						$output .= '<a href="' . $item->get_permalink() . '" target="_blank">' . AppLocale::Translate('plugins.generic.externalFeed.more') . '</a>';
+						$output .= '<a href="' . $item->get_permalink() . '" target="_blank">' . __('plugins.generic.externalFeed.more') . '</a>';
 						$output .= '</td>';
 						$output .= '</tr>';
 

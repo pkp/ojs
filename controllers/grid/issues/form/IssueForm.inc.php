@@ -55,8 +55,8 @@ class IssueForm extends Form {
 		$templateMgr->assign('enableDelayedOpenAccess', $journal->getSetting('enableDelayedOpenAccess'));
 
 		$templateMgr->assign('accessOptions', array(
-			ISSUE_ACCESS_OPEN => AppLocale::Translate('editor.issues.openAccess'),
-			ISSUE_ACCESS_SUBSCRIPTION => AppLocale::Translate('editor.issues.subscription')
+			ISSUE_ACCESS_OPEN => __('editor.issues.openAccess'),
+			ISSUE_ACCESS_SUBSCRIPTION => __('editor.issues.subscription')
 		));
 
 		if ($this->issue) {
