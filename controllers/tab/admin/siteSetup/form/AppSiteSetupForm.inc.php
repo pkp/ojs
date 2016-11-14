@@ -19,8 +19,8 @@ class AppSiteSetupForm extends SiteSetupForm {
 	/**
 	 * Constructor.
 	 */
-	function SiteSettingsForm() {
-		parent::SiteSetupForm();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**
