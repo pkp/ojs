@@ -20,9 +20,9 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function ArticleCrossrefXmlFilter($filterGroup) {
+	function __construct($filterGroup) {
 		$this->setDisplayName('Crossref XML issue export');
-		parent::NativeExportFilter($filterGroup);
+		parent::__construct($filterGroup);
 	}
 
 	//
