@@ -25,8 +25,8 @@ class OJSUpgradeTool extends UpgradeTool {
 	 * Constructor.
 	 * @param $argv array command-line arguments
 	 */
-	function OJSUpgradeTool($argv = array()) {
-		parent::UpgradeTool($argv);
+	function __construct($argv = array()) {
+		parent::__construct($argv);
 	}
 }
 
