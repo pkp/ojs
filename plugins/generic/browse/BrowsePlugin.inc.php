@@ -112,17 +112,6 @@ class BrowsePlugin extends GenericPlugin {
 		}
 	}
 
-	/**
-	 * Display verbs for the management interface.
-	 */
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
-		if ($this->getEnabled()) {
-			$verbs[] = array('settings', __('plugins.generic.browse.manager.settings'));
-		}
-		return $verbs;
-	}
-
  	/**
 	 * @see Plugin::manage()
 	 */

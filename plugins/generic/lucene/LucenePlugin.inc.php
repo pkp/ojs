@@ -222,17 +222,6 @@ class LucenePlugin extends GenericPlugin {
 	//
 	// Implement template methods from GenericPlugin.
 	//
-	/**
-	 * @see GenericPlugin::getManagementVerbs()
-	 */
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
-		if ($this->getEnabled()) {
-			$verbs[] = array('settings', __('plugins.generic.lucene.settings'));
-		}
-		return $verbs;
-	}
-
  	/**
 	 * @see Plugin::manage()
 	 */

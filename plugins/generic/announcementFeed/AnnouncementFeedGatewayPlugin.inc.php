@@ -84,15 +84,6 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	}
 
 	/**
-	 * Get the management verbs for this plugin (override to none so that the parent
-	 * plugin can handle this)
-	 * @return array
-	 */
-	function getManagementVerbs() {
-		return array();
-	}
-
-	/**
 	 * Handle fetch requests for this plugin.
 	 * @param $args array
 	 * @param $request PKPRequest
