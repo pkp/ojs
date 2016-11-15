@@ -125,11 +125,19 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 			$submissionFileDao->getLatestRevisions($submissionFile->getSubmissionId(), SUBMISSION_FILE_PROOF),
 			$submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $submissionFile->getFileId(), $submissionFile->getSubmissionId(), SUBMISSION_FILE_DEPENDENT)
 		);
+		$referredArticle = null;
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
 
 		foreach ($embeddableFiles as $embeddableFile) {
 			$params = array();
+
 			if ($embeddableFile->getFileType()=='text/plain' || $embeddableFile->getFileType()=='text/css') $params['inline']='true';
-			$fileUrl = $request->url(null, 'article', 'download', array($galley->getSubmissionId(), $galley->getBestGalleyId($journal), $embeddableFile->getFileId()), $params);
+
+			// Ensure that the $referredArticle object refers to the article we want
+			if (!$referredArticle || $referredArticle->getId() != $galley->getSubmissionId()) {
+				$referredArticle = $articleDao->getById($galley->getSubmissionId());
+			}
+			$fileUrl = $request->url(null, 'article', 'download', array($referredArticle->getBestArticleId(), $galley->getBestGalleyId(), $embeddableFile->getFileId()), $params);
 			$pattern = preg_quote($embeddableFile->getOriginalFileName());
 
 			$contents = preg_replace(
