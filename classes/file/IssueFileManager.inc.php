@@ -32,7 +32,7 @@ class IssueFileManager extends FileManager {
 	 * Create a manager for handling issue files.
 	 * @param $issueId int
 	 */
-	function IssueFileManager($issueId) {
+	function __construct($issueId) {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issue = $issueDao->getById($issueId);
 		assert($issue);
@@ -40,7 +40,7 @@ class IssueFileManager extends FileManager {
 		$this->setIssueId($issueId);
 		$this->setFilesDir(Config::getVar('files', 'files_dir') . '/journals/' . $issue->getJournalId() . '/issues/' . $issueId . '/');
 
-		parent::FileManager();
+		parent::__construct();
 	}
 
 	/**

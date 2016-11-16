@@ -19,12 +19,12 @@ class AdminPluginGridHandler extends PluginGridHandler {
 	/**
 	 * Constructor
 	 */
-	function AdminPluginGridHandler() {
+	function __construct() {
 		$roles = array(ROLE_ID_SITE_ADMIN);
 
 		$this->addRoleAssignment($roles, array('plugin'));
 
-		parent::PluginGridHandler($roles);
+		parent::__construct($roles);
 	}
 
 	//

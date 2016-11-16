@@ -20,8 +20,8 @@ class SearchHandler extends Handler {
 	/**
 	 * Constructor
 	 **/
-	function SearchHandler() {
-		parent::Handler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

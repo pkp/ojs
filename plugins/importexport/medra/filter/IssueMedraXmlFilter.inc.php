@@ -21,9 +21,9 @@ class IssueMedraXmlFilter extends O4DOIXmlFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function IssueMedraXmlFilter($filterGroup) {
+	function __construct($filterGroup) {
 		$this->setDisplayName('mEDRA XML issue export');
-		parent::O4DOIXmlFilter($filterGroup);
+		parent::__construct($filterGroup);
 	}
 
 	/**

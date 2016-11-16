@@ -20,8 +20,8 @@ class OpenAccessNotification extends ScheduledTask {
 	/**
 	 * Constructor.
 	 */
-	function OpenAccessNotification() {
-		$this->ScheduledTask();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**
@@ -99,7 +99,7 @@ class OpenAccessNotification extends ScheduledTask {
 	}
 
 	/**
-	 * @see ScheduledTaks::executeActions()
+	 * @see ScheduledTask::executeActions()
 	 */
 	protected function executeActions() {
 		$journalDao = DAORegistry::getDAO('JournalDAO');

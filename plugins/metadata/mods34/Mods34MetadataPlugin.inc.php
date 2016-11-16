@@ -20,8 +20,8 @@ class Mods34MetadataPlugin extends PKPMods34MetadataPlugin {
 	/**
 	 * Constructor
 	 */
-	function Mods34MetadataPlugin() {
-		parent::PKPMods34MetadataPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 }
 

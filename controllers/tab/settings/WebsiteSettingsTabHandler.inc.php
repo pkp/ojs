@@ -20,7 +20,7 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 	/**
 	 * Constructor
 	 */
-	function WebsiteSettingsTabHandler() {
+	function __construct() {
 		$this->addRoleAssignment(ROLE_ID_MANAGER,
 			array(
 				'showFileUploadForm',
@@ -31,7 +31,7 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 				'reloadLocalizedDefaultSettings'
 			)
 		);
-		parent::ManagerSettingsTabHandler();
+		parent::__construct();
 		$this->setPageTabs(array(
 			'appearance' => 'controllers.tab.settings.appearance.form.AppearanceForm',
 			'information' => 'lib.pkp.controllers.tab.settings.information.form.InformationForm',

@@ -731,7 +731,7 @@ Votre mot de passe pour désactiver les courriels d'avis est : {$password}<br />
 		<subject>Décision du rédacteur</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Nous avons pris une décision concernant votre soumission à {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Notre décision est de :<br />
 <br />
@@ -741,7 +741,7 @@ Notre décision est de :<br />
 		<subject>Décision du rédacteur</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Nous avons pris une décision concernant votre soumission à {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Notre décision est de :<br />
 <br />
@@ -751,7 +751,7 @@ Notre décision est de :<br />
 		<subject>Décision du rédacteur</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Nous avons pris une décision concernant votre soumission à {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Notre décision est de :<br />
 <br />
@@ -761,7 +761,7 @@ Notre décision est de :<br />
 		<subject>Décision du rédacteur</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Nous avons pris une décision concernant votre soumission à {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Notre décision est de :<br />
 <br />

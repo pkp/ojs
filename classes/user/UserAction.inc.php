@@ -19,7 +19,7 @@ class UserAction {
 	/**
 	 * Constructor.
 	 */
-	function UserAction() {
+	function __construct() {
 	}
 
 	/**

@@ -22,8 +22,9 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	/**
 	 * Constructor
 	 */
-	function AnnouncementFeedGatewayPlugin($parentPluginName) {
+	function __construct($parentPluginName) {
 		$this->parentPluginName = $parentPluginName;
+		parent::__construct();
 	}
 
 	/**
@@ -80,15 +81,6 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	 */
 	function getEnabled() {
 		return $this->getAnnouncementFeedPlugin()->getEnabled();
-	}
-
-	/**
-	 * Get the management verbs for this plugin (override to none so that the parent
-	 * plugin can handle this)
-	 * @return array
-	 */
-	function getManagementVerbs() {
-		return array();
 	}
 
 	/**

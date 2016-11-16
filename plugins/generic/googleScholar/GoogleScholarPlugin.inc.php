@@ -79,8 +79,8 @@ class GoogleScholarPlugin extends GenericPlugin {
 		}
 
 		if ($issue) {
-			$templateMgr->addHeader('googleScholarVolume', '<meta name="citation_volume" content="' . htmlspecialchars($issue->getVolume()) . '"/>');
-			$templateMgr->addHeader('googleScholarNumber', '<meta name="citation_issue" content="' . htmlspecialchars($issue->getNumber()) . '"/>');
+			if ($issue->getShowVolume()) $templateMgr->addHeader('googleScholarVolume', '<meta name="citation_volume" content="' . htmlspecialchars($issue->getVolume()) . '"/>');
+			if ($issue->getShowNumber()) $templateMgr->addHeader('googleScholarNumber', '<meta name="citation_issue" content="' . htmlspecialchars($issue->getNumber()) . '"/>');
 		}
 
 		if ($article->getPages()) {
@@ -96,7 +96,7 @@ class GoogleScholarPlugin extends GenericPlugin {
 		}
 
 		$templateMgr->addHeader('googleScholarHtmlUrl', '<meta name="citation_abstract_html_url" content="' . $request->url(null, 'article', 'view', array($article->getBestArticleId())) . '"/>');
-		if ($language = $article->getLanguage()) $templateMgr->addHeader('googleScholarLanguage', '<meta name="citation_language" content="' . htmlspecialchars($language()) . '"/>');
+		if ($language = $article->getLanguage()) $templateMgr->addHeader('googleScholarLanguage', '<meta name="citation_language" content="' . htmlspecialchars($language) . '"/>');
 
 		$i=0;
 		if ($subject = $article->getSubject(null)) foreach ($subject as $locale => $localeSubject) {

@@ -21,8 +21,8 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 	/**
 	 * Constructor
 	 */
-	function DOAJExportPlugin() {
-		parent::PubObjectsExportPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

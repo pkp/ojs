@@ -20,8 +20,8 @@ class ManagerPaymentHandler extends ManagerHandler {
 	/**
 	 * Constructor
 	 **/
-	function ManagerPaymentHandler() {
-		parent::ManagerHandler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

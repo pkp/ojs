@@ -725,7 +725,7 @@ jhvdo hkrqh: {$expiryDate}<br />
 		<subject>تصمیم دبیر</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-عنوان مجله: {$journalTitle}<br />
+عنوان مجله: {$contextName}<br />
 عنوان مقاله: &quot;{$submissionTitle}&quot;<br />
 <br />
 هم اکنون موفق شدیم در مورد ساب میشن فوق مربوط به شما تصمیم گیری کنیم<br />
@@ -738,7 +738,7 @@ jhvdo hkrqh: {$expiryDate}<br />
 		<subject>تصمیم دبیر</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-در مورد مقاله شما با عنوان &quot;{$submissionTitle}&quot; برای {$journalTitle} تصمیم گیری شد.<br />
+در مورد مقاله شما با عنوان &quot;{$submissionTitle}&quot; برای {$contextName} تصمیم گیری شد.<br />
 <br />
 تصمیم گرفته شده به قرار زیر است:<br />
 <br />
@@ -748,7 +748,7 @@ jhvdo hkrqh: {$expiryDate}<br />
 		<subject>تصمیم دبیر</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-مقاله ارسالی شما با عنوان &quot;{$submissionTitle}&quot; برای {$journalTitle} مورد بررسی و تصمیم گیری قرار گرفت<br />
+مقاله ارسالی شما با عنوان &quot;{$submissionTitle}&quot; برای {$contextName} مورد بررسی و تصمیم گیری قرار گرفت<br />
 <br />
 تصمیم اتخاذ شده به قرار زیر است:<br />
 <br />
@@ -758,7 +758,7 @@ jhvdo hkrqh: {$expiryDate}<br />
 		<subject>تصمیم دبیر</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-مقاله شما با عنوان &quot;{$submissionTitle}&quot; برای {$journalTitle} مورد بررسی و تصمیم گیری واقع شد.<br />
+مقاله شما با عنوان &quot;{$submissionTitle}&quot; برای {$contextName} مورد بررسی و تصمیم گیری واقع شد.<br />
 <br />
 تصمیم اتخاد شده بدین شرح است:<br />
 <br />

@@ -19,8 +19,8 @@ class SubmissionSubmitStep2Form extends PKPSubmissionSubmitStep2Form {
 	/**
 	 * Constructor.
 	 */
-	function SubmissionSubmitStep2Form($context, $submission) {
-		parent::PKPSubmissionSubmitStep2Form($context, $submission);
+	function __construct($context, $submission) {
+		parent::__construct($context, $submission);
 	}
 }
 

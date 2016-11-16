@@ -23,8 +23,8 @@ class TocGridHandler extends CategoryGridHandler {
 	/**
 	 * Constructor
 	 */
-	function TocGridHandler() {
-		parent::CategoryGridHandler();
+	function __construct() {
+		parent::__construct();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER),
 			array('fetchGrid', 'fetchCategory', 'fetchRow', 'saveSequence', 'removeArticle')

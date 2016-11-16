@@ -20,8 +20,8 @@ class ParscitCitationParserPlugin extends PKPParscitCitationParserPlugin {
 	/**
 	 * Constructor
 	 */
-	function ParscitCitationParserPlugin() {
-		parent::PKPParscitCitationParserPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 }
 

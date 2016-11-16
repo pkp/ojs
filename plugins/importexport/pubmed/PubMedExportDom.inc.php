@@ -68,8 +68,8 @@ class PubMedExportDom {
 
 		if ($ISSN != '') XMLCustomWriter::createChildWithText($doc, $journalNode, 'Issn', $ISSN);
 
-		XMLCustomWriter::createChildWithText($doc, $journalNode, 'Volume', $issue->getVolume());
-		XMLCustomWriter::createChildWithText($doc, $journalNode, 'Issue', $issue->getNumber(), false);
+		if ($issue->getShowVolume()) XMLCustomWriter::createChildWithText($doc, $journalNode, 'Volume', $issue->getVolume());
+		if ($issue->getShowNumber()) XMLCustomWriter::createChildWithText($doc, $journalNode, 'Issue', $issue->getNumber(), false);
 
 		$datePublished = $article->getDatePublished();
 		if (!$datePublished) $datePublished = $issue->getDatePublished();

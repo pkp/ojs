@@ -22,8 +22,8 @@ class SectionForm extends PKPSectionForm {
 	 * @param $request Request
 	 * @param $sectionId int optional
 	 */
-	function SectionForm($request, $sectionId = null) {
-		parent::PKPSectionForm(
+	function __construct($request, $sectionId = null) {
+		parent::__construct(
 			$request,
 			'controllers/grid/settings/sections/form/sectionForm.tpl',
 			$sectionId

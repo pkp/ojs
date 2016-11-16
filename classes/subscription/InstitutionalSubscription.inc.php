@@ -27,8 +27,8 @@ define('SUBSCRIPTION_IP_RANGE_WILDCARD', '*');
 
 class InstitutionalSubscription extends Subscription {
 
-	function InstitutionalSubscription() {
-		parent::Subscription();
+	function __construct() {
+		parent::__construct();
 	}
 
 	//

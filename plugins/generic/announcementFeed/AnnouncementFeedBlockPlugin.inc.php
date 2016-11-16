@@ -21,9 +21,9 @@ class AnnouncementFeedBlockPlugin extends BlockPlugin {
 	/**
 	 * Constructor
 	 */
-	function AnnouncementFeedBlockPlugin($parentPluginName) {
+	function __construct($parentPluginName) {
 		$this->parentPluginName = $parentPluginName;
-		parent::BlockPlugin();
+		parent::__construct();
 	}
 
 	/**

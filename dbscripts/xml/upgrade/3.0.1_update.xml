@@ -19,5 +19,11 @@
 		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.OpenAccessNotification'</query>
 		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.SubscriptionExpiryReminder'</query>
 	</sql>
+	<!-- Bug #8212: Refactor MailTemplate code into PKP lib -->
+	<sql>
+		<!-- journalTitle becomes contextName -->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$journalTitle}', '{$contextName}'), subject=REPLACE(subject, '{$journalTitle}', '{$contextName}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$journalTitle}', '{$contextName}'), subject=REPLACE(subject, '{$journalTitle}', '{$contextName}')</query>
+	</sql>
 </data>
 

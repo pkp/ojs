@@ -19,8 +19,8 @@ class SectionGridRow extends GridRow {
 	/**
 	 * Constructor
 	 */
-	function SectionGridRow() {
-		parent::GridRow();
+	function __construct() {
+		parent::__construct();
 	}
 
 	//

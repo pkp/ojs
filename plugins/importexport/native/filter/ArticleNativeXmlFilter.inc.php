@@ -20,8 +20,8 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function ArticleNativeXmlFilter($filterGroup) {
-		parent::SubmissionNativeXmlFilter($filterGroup);
+	function __construct($filterGroup) {
+		parent::__construct($filterGroup);
 	}
 
 

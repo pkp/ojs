@@ -729,7 +729,7 @@ URL Υποβολής: {$submissionUrl}<br />
 		<subject>Απόφαση Επιμελητή</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Σχετικά με την υποβολή σας στο περιοδικό  {$journalTitle}, με τίτλο &quot;{$submissionTitle}&quot; θα θέλαμε να σας ενημερώσουμε :<br />
+Σχετικά με την υποβολή σας στο περιοδικό  {$contextName}, με τίτλο &quot;{$submissionTitle}&quot; θα θέλαμε να σας ενημερώσουμε :<br />
 <br />
 <br />
 <br />
@@ -739,7 +739,7 @@ URL Υποβολής: {$submissionUrl}<br />
 		<subject>Απόφαση Επιμελητή</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Σχετικά με την υποβολή σας στο περιοδικό {$journalTitle}, με τίτλο &quot;{$submissionTitle}&quot; θα θέλαμε να σας ενημερώσουμε:<br />
+Σχετικά με την υποβολή σας στο περιοδικό {$contextName}, με τίτλο &quot;{$submissionTitle}&quot; θα θέλαμε να σας ενημερώσουμε:<br />
 <br />
 <br />
 <br />
@@ -749,7 +749,7 @@ URL Υποβολής: {$submissionUrl}<br />
 		<subject>Απόφαση Επιμελητή</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Σχετικά με την υποβολή σας στο περιοδικό {$journalTitle}, με τίτλο &quot;{$submissionTitle}&quot; θα θέλαμε να σας ενημερώσουμε:<br />
+Σχετικά με την υποβολή σας στο περιοδικό {$contextName}, με τίτλο &quot;{$submissionTitle}&quot; θα θέλαμε να σας ενημερώσουμε:<br />
 <br />
 <br />
 <br />
@@ -759,7 +759,7 @@ URL Υποβολής: {$submissionUrl}<br />
 		<subject>Απόφαση Επιμελητή</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Σχετικά με την υποβολή σας στο περιοδικό {$journalTitle}, με τίτλο &quot;{$submissionTitle}&quot; θα θέλαμε να σας ενημερώσουμε:<br />
+Σχετικά με την υποβολή σας στο περιοδικό {$contextName}, με τίτλο &quot;{$submissionTitle}&quot; θα θέλαμε να σας ενημερώσουμε:<br />
 <br />
 <br />
 {$editorialContactSignature}]]></body>

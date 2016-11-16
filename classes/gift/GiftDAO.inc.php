@@ -25,8 +25,8 @@ class GiftDAO extends PKPGiftDAO {
 	/**
 	 * Constructor
 	 */
-	function GiftDAO() {
-		parent::PKPGiftDAO();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

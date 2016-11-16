@@ -24,8 +24,8 @@ class ReviewStageAccessPolicy extends ContextPolicy {
 	 * @param $submissionParameterName string
 	 * @param $stageId integer One of the WORKFLOW_STAGE_ID_* constants.
 	 */
-	function ReviewStageAccessPolicy($request, &$args, $roleAssignments, $submissionParameterName = 'submissionId', $stageId) {
-		parent::ContextPolicy($request);
+	function __construct($request, &$args, $roleAssignments, $submissionParameterName = 'submissionId', $stageId) {
+		parent::__construct($request);
 
 		// Create a "permit overrides" policy set that specifies
 		// role-specific access to submission stage operations.

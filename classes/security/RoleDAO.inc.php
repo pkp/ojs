@@ -29,8 +29,8 @@ class RoleDAO extends PKPRoleDAO {
 	/**
 	 * Constructor.
 	 */
-	function RoleDAO() {
-		parent::PKPRoleDAO();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

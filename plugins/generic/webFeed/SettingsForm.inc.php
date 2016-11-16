@@ -28,11 +28,11 @@ class SettingsForm extends Form {
 	 * @param $plugin WebFeedPlugin Web feed plugin
 	 * @param $contextId int Context ID
 	 */
-	function SettingsForm($plugin, $contextId) {
+	function __construct($plugin, $contextId) {
 		$this->_contextId = $contextId;
 		$this->_plugin = $plugin;
 
-		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
+		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
 	}

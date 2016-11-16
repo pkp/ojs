@@ -46,8 +46,8 @@ class LucenePlugin extends GenericPlugin {
 	/**
 	 * Constructor
 	 */
-	function LucenePlugin() {
-		parent::GenericPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 
@@ -222,17 +222,6 @@ class LucenePlugin extends GenericPlugin {
 	//
 	// Implement template methods from GenericPlugin.
 	//
-	/**
-	 * @see GenericPlugin::getManagementVerbs()
-	 */
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
-		if ($this->getEnabled()) {
-			$verbs[] = array('settings', __('plugins.generic.lucene.settings'));
-		}
-		return $verbs;
-	}
-
  	/**
 	 * @see Plugin::manage()
 	 */
@@ -683,7 +672,7 @@ class LucenePlugin extends GenericPlugin {
 	// Form hook implementations.
 	//
 	/**
-	 * @see Form::Form()
+	 * @see Form::__construct()
 	 */
 	function callbackSectionFormConstructor($hookName, $params) {
 		// Check whether we got a valid ranking boost option.

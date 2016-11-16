@@ -19,8 +19,8 @@ abstract class PaymethodPlugin extends PKPPaymethodPlugin {
 	/**
 	 * Constructor
 	 */
-	function PaymethodPlugin() {
-		parent::PKPPaymethodPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

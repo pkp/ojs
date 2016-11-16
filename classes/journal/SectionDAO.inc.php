@@ -20,8 +20,8 @@ import ('lib.pkp.classes.context.PKPSectionDAO');
 class SectionDAO extends PKPSectionDAO {
 	var $cache;
 
-	function SectionDAO() {
-		parent::PKPSectionDAO();
+	function __construct() {
+		parent::__construct();
 	}
 
 	function _cacheMiss($cache, $id) {

@@ -21,8 +21,8 @@ class UsageStatsPlugin extends PKPUsageStatsPlugin {
 	/**
 	 * Constructor.
 	 */
-	function UsageStatsPlugin() {
-		parent::PKPUsageStatsPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

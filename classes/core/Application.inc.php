@@ -34,8 +34,8 @@ class Application extends PKPApplication {
 	/**
 	 * Constructor
 	 */
-	function Application() {
-		parent::PKPApplication();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

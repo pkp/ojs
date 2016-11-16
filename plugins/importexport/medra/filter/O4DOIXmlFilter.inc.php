@@ -83,8 +83,8 @@ class O4DOIXmlFilter extends NativeExportFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function O4DOIXmlFilter($filterGroup) {
-		parent::NativeExportFilter($filterGroup);
+	function __construct($filterGroup) {
+		parent::__construct($filterGroup);
 	}
 
 	/**
@@ -286,12 +286,12 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		$journalIssueNode = $doc->createElementNS($deployment->getNamespace(), 'JournalIssue');
 		// Volume
 		$volume = $issue->getVolume();
-		if (!empty($volume)) {
+		if (!empty($volume) && $issue->getShowVolume()) {
 			$journalIssueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'JournalVolumeNumber', $volume));
 		}
 		// Number
 		$number = $issue->getNumber();
-		if (!empty($number)) {
+		if (!empty($number) && $issue->getShowNumber()) {
 			$journalIssueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'JournalIssueNumber', $number));
 		}
 		// Identification
@@ -303,7 +303,7 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		// Nominal Year
 		$year = (string) $issue->getYear();
 		$yearlen = strlen($year);
-		if (!empty($year) && ($yearlen == 2 || $yearlen == 4)) {
+		if ($issue->getShowYear() && !empty($year) && ($yearlen == 2 || $yearlen == 4)) {
 			$issueDateNode = $doc->createElementNS($deployment->getNamespace(), 'JournalIssueDate');
 			$issueDateNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DateFormat', O4DOI_DATE_FORMAT_YYYY));
 			// Try to extend the year if necessary.

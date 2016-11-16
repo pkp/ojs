@@ -25,8 +25,8 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 	/**
 	 * Constructor
 	 */
-	function MedraExportPlugin() {
-		parent::DOIPubIdExportPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

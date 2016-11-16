@@ -76,17 +76,6 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Display verbs for the management interface.
-	 */
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
-		if ($this->getEnabled()) {
-			$verbs[] = array('settings', __('plugins.generic.phpmv.manager.settings'));
-		}
-		return $verbs;
-	}
-
-	/**
 	 * Insert phpmv page tag to footer
 	 */
 	function insertFooter($hookName, $params) {

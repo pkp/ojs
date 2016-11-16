@@ -19,8 +19,8 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	/**
 	 * Constructor
 	 */
-	function ManualPaymentPlugin() {
-		parent::PaymethodPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

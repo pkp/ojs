@@ -19,8 +19,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	/**
 	 * Constructor
 	 */
-	function NativeImportExportPlugin() {
-		parent::ImportExportPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

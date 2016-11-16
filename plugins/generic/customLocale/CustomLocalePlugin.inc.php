@@ -16,6 +16,12 @@ define('CUSTOM_LOCALE_DIR', 'customLocale');
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class CustomLocalePlugin extends GenericPlugin {
+	/**
+	 * Register the plugin.
+	 * @param $category string Plugin category
+	 * @param $path string Path to plugin
+	 * @return boolean Registration success
+	 */
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
@@ -46,6 +52,12 @@ class CustomLocalePlugin extends GenericPlugin {
 		return false;
 	}
 
+	/**
+	 * Hook callback to add a custom locale file.
+	 * @param $hookName string
+	 * @param $args array
+	 * @return boolean
+	 */
 	function addCustomLocale($hookName, $args) {
 		$locale =& $args[0];
 		$localeFilename =& $args[1];
@@ -65,10 +77,18 @@ class CustomLocalePlugin extends GenericPlugin {
 		return true;
 	}
 
+	/**
+	 * Get the display name for the plugin.
+	 * @return string
+	 */
 	function getDisplayName() {
 		return __('plugins.generic.customLocale.name');
 	}
 
+	/**
+	 * Get the description for the plugin.
+	 * @return string
+	 */
 	function getDescription() {
 		return __('plugins.generic.customLocale.description');
 	}
@@ -96,16 +116,8 @@ class CustomLocalePlugin extends GenericPlugin {
 		return $smarty->smartyUrl($params, $smarty);
 	}
 
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
-		if ($this->getEnabled()) {
-			$verbs[] = array('index', __('plugins.generic.customLocale.customize'));
-		}
-		return $verbs;
-	}
-
  	/**
-	 * @see Plugin::manage()
+	 * @copydoc Plugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;

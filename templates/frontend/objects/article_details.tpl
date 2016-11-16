@@ -141,14 +141,14 @@
 		<div class="entry_details">
 
 			{* Article/Issue cover image *}
-			{if $article->getCoverImage() || $issue->getCoverImage()}
+			{if $article->getLocalizedCoverImage() || $issue->getLocalizedCoverImage()}
 				<div class="item cover_image">
 					<div class="sub_item">
-						{if $article->getCoverImage()}
-							<img src="{$publicFilesDir}/{$article->getCoverImage()|escape}"{if $article->getCoverImageAltText()} alt="{$article->getCoverImageAltText()|escape}"{/if}>
+						{if $article->getLocalizedCoverImage()}
+							<img src="{$publicFilesDir}/{$article->getLocalizedCoverImage()|escape}"{if $article->getLocalizedCoverImageAltText()} alt="{$article->getLocalizedCoverImageAltText()|escape}"{/if}>
 						{else}
 							<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
-								<img src="{$publicFilesDir}/{$issue->getCoverImage()|escape}"{if $issue->getCoverImageAltText()} alt="{$issue->getCoverImageAltText()|escape}"{/if}>
+								<img src="{$publicFilesDir}/{$issue->getLocalizedCoverImage()|escape}"{if $issue->getLocalizedCoverImageAltText()} alt="{$issue->getLocalizedCoverImageAltText()|escape}"{/if}>
 							</a>
 						{/if}
 					</div>

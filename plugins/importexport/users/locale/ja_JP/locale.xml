@@ -17,24 +17,9 @@
 
 	<message key="plugins.importexport.users.cliUsage"><![CDATA[使用法: {$scriptName} {$pluginName} [command] ...
 コマンド:
-	import [xmlFileName] [press_path] [optional flags]
-	export [xmlFileName] [press_path]
-	export [xmlFileName] [press_path] [role_path1] [role_path2] ...
-
-オプションフラグ:
-	continue_on_error: 指定すると、エラーが発生してもユーザのインポートを中止しない
-
-	send_notify: 指定すると、インポートしたユーザにユーザ名とパスワードを含む通知メールを送信する
-
-使用例:
-	Import users into myPress from myImportFile.xmlからmyPressへユーザをインポートする。エラーが発生しても継続する:
-	{$scriptName} {$pluginName} import myImportFile.xml myPress continue_on_error
-
-	myPressからすべてのユーザをエクスポートする:
-	{$scriptName} {$pluginName} export myExportFile.xml myPress
-
-	査読者として登録されたすべてのユーザをその査読役割と共にエクスポートする:
-	{$scriptName} {$pluginName} export myExportFile.xml myPress reviewer
+	import [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [userId1] [userId2] ...
 ]]></message>
 	<message key="plugins.importexport.users.import.importUsers">ユーザのインポート</message>
 	<message key="plugins.importexport.users.import.instructions"><![CDATA[この雑誌にインポートするユーザ情報が含まれているXMLデータファイルを選択してください。このファイルのフォーマットに関しての詳細については雑誌のヘルプを参照してください。<br /><br />インポートするファイルに、既にシステムに存在するユーザ名またはメールアドレスが含まれている場合、そのユーザに関するユーザ情報はインポートされず、作成されるべき新しい役割は既存のユーザに与えられることに注意してください。]]></message>

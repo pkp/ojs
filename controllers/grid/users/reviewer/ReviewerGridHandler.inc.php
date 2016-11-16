@@ -19,8 +19,8 @@ class ReviewerGridHandler extends PKPReviewerGridHandler {
 	/**
 	 * Constructor
 	 */
-	function ReviewerGridHandler() {
-		parent::PKPReviewerGridHandler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

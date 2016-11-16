@@ -28,8 +28,8 @@ class ArticleGalleyForm extends Form {
 	 * @param $submission Submission
 	 * @param $articleGalley ArticleGalley (optional)
 	 */
-	function ArticleGalleyForm($request, $submission, $articleGalley = null) {
-		parent::Form('controllers/grid/articleGalleys/form/articleGalleyForm.tpl');
+	function __construct($request, $submission, $articleGalley = null) {
+		parent::__construct('controllers/grid/articleGalleys/form/articleGalleyForm.tpl');
 		$this->_submission = $submission;
 		$this->_articleGalley = $articleGalley;
 

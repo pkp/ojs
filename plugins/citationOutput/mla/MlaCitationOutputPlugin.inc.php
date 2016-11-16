@@ -20,8 +20,8 @@ class MlaCitationOutputPlugin extends PKPMlaCitationOutputPlugin {
 	/**
 	 * Constructor
 	 */
-	function MlaCitationOutputPlugin() {
-		parent::PKPMlaCitationOutputPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 }
 

@@ -25,8 +25,8 @@ class JournalDAO extends ContextDAO {
 	/**
 	 * Constructor
 	 */
-	function JournalDAO() {
-		parent::ContextDAO();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

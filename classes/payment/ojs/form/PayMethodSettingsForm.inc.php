@@ -26,8 +26,8 @@ class PayMethodSettingsForm extends Form {
 	/**
 	 * Constructor
 	 */
-	function PayMethodSettingsForm() {
-		parent::Form('payments/payMethodSettingsForm.tpl');
+	function __construct() {
+		parent::__construct('payments/payMethodSettingsForm.tpl');
 
 		// Load the plugins.
 		$this->plugins =& PluginRegistry::loadCategory('paymethod');

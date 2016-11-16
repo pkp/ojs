@@ -42,6 +42,10 @@
 			{fbvElement type="textarea" multilingual=true id="about" value=$about}
 		{/fbvFormSection}
 	{/fbvFormArea}
+
+	{* Footer *}
+	{include file="core:controllers/tab/settings/appearance/form/footer.tpl"}
+
 	{fbvFormArea id="siteRedirection"}
 		{fbvFormSection title="admin.settings.journalRedirect"}
 			{fbvElement type="select" id="redirect" from=$redirectOptions selected=$redirect translate=false defaultValue="" label="admin.settings.journalRedirectInstructions" size=$fbvStyles.size.MEDIUM}
@@ -71,6 +75,7 @@
 			</div>
 		{/fbvFormSection}
 		{include file="controllers/tab/settings/appearance/form/theme.tpl"}
+		{include file="core:controllers/tab/settings/appearance/form/sidebar.tpl"}
 	{/fbvFormArea}
 	{fbvFormArea id="oai"}
 		{fbvFormSection title="admin.settings.oaiRegistration"}

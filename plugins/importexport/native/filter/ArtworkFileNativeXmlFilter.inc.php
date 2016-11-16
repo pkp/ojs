@@ -20,8 +20,8 @@ class ArtworkFileNativeXmlFilter extends SubmissionFileNativeXmlFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function ArtworkFileNativeXmlFilter($filterGroup) {
-		parent::SubmissionFileNativeXmlFilter($filterGroup);
+	function __construct($filterGroup) {
+		parent::__construct($filterGroup);
 	}
 
 

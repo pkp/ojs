@@ -20,8 +20,8 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
-	function WebFeedGatewayPlugin($parentPluginName) {
-		parent::GatewayPlugin();
+	function __construct($parentPluginName) {
+		parent::__construct();
 		$this->parentPluginName = $parentPluginName;
 	}
 

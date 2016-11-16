@@ -20,8 +20,8 @@ class VancouverCitationOutputPlugin extends PKPVancouverCitationOutputPlugin {
 	/**
 	 * Constructor
 	 */
-	function VancouverCitationOutputPlugin() {
-		parent::PKPVancouverCitationOutputPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 }
 

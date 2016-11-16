@@ -43,7 +43,7 @@ class MedraExportDeployment {
 	 * @param $context Context
 	 * @param $plugin DOIPubIdExportPlugin
 	 */
-	function MedraExportDeployment($context, $plugin) {
+	function __construct($context, $plugin) {
 		$this->setContext($context);
 		$this->setPlugin($plugin);
 	}

@@ -20,9 +20,9 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function NativeXmlIssueFilter($filterGroup) {
+	function __construct($filterGroup) {
 		$this->setDisplayName('Native XML issue import');
-		parent::NativeImportFilter($filterGroup);
+		parent::__construct($filterGroup);
 	}
 
 
@@ -122,8 +122,8 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 			case 'sections':
 				$this->parseSections($n, $issue);
 				break;
-			case 'issue_cover':
-				$this->parseIssueCover($n, $issue);
+			case 'issue_covers':
+				$this->parseIssueCovers($n, $issue);
 				break;
 			case 'issue_identification':
 				$this->parseIssueIdentification($n, $issue);
@@ -296,20 +296,38 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	}
 
 	/**
-	 * Parse out the issue cover and store it in an issue.
+	 * Parse out the object covers.
 	 * @param $node DOMElement
-	 * @param $issue Issue
+	 * @param $object Issue
 	 */
-	function parseIssueCover($node, $issue) {
+	function parseIssueCovers($node, $object) {
+		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
+			if (is_a($n, 'DOMElement')) {
+				assert($n->tagName == 'cover');
+				$this->parseCover($n, $object);
+			}
+		}
+	}
+
+	/**
+	 * Parse out the cover and store it in the object.
+	 * @param $node DOMElement
+	 * @param $object Issue
+	 */
+	function parseCover($node, $object) {
+		$deployment = $this->getDeployment();
+		$context = $deployment->getContext();
+		$locale = $node->getAttribute('locale');
+		if (empty($locale)) $locale = $context->getPrimaryLocale();
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
 			if (is_a($n, 'DOMElement')) {
 				switch ($n->tagName) {
-					case 'cover_image': $issue->setCoverImage($n->textContent); break;
-					case 'cover_image_alt_text': $issue->setCoverImageAltText($n->textContent); break;
+					case 'cover_image': $object->setCoverImage($n->textContent, $locale); break;
+					case 'cover_image_alt_text': $object->setCoverImageAltText($n->textContent, $locale); break;
 					case 'embed':
 						import('classes.file.PublicFileManager');
 						$publicFileManager = new PublicFileManager();
-						$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getCoverImage();
+						$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $context->getId()) . '/' . $object->getCoverImage($locale);
 						file_put_contents($filePath, base64_decode($n->textContent));
 						break;
 				}

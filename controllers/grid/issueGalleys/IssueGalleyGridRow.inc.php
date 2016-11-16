@@ -19,8 +19,8 @@ class IssueGalleyGridRow extends GridRow {
 	/**
 	 * Constructor
 	 */
-	function IssueGalleyGridRow($issueId) {
-		parent::GridRow();
+	function __construct($issueId) {
+		parent::__construct();
 		$this->setRequestArgs(
 			array_merge(
 				((array) $this->getRequestArgs()),

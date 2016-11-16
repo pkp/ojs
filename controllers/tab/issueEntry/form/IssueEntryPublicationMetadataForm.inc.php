@@ -41,8 +41,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 	 * @param $stageId integer
 	 * @param $formParams array
 	 */
-	function IssueEntryPublicationMetadataForm($submissionId, $userId, $stageId = null, $formParams = null) {
-		parent::Form('controllers/tab/issueEntry/form/publicationMetadataFormFields.tpl');
+	function __construct($submissionId, $userId, $stageId = null, $formParams = null) {
+		parent::__construct('controllers/tab/issueEntry/form/publicationMetadataFormFields.tpl');
 		$submissionDao = Application::getSubmissionDAO();
 		$this->_submission = $submissionDao->getById($submissionId);
 

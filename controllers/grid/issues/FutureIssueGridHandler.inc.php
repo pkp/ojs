@@ -19,8 +19,8 @@ class FutureIssueGridHandler extends IssueGridHandler {
 	/**
 	 * Constructor
 	 */
-	function FutureIssueGridHandler() {
-		parent::IssueGridHandler();
+	function __construct() {
+		parent::__construct();
 	}
 
 

@@ -19,10 +19,10 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 	/**
 	 * Constructor
 	 */
-	function SettingsPluginGridHandler() {
+	function __construct() {
 		$roles = array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER);
 		$this->addRoleAssignment($roles, array('manage'));
-		parent::PluginGridHandler($roles);
+		parent::__construct($roles);
 	}
 
 

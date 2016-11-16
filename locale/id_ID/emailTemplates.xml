@@ -383,7 +383,7 @@ Mohon konfirmasi kemampuan Anda untuk menyelesaikan kontribusi vital ini untuk p
 		<subject>Editor Decision</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Kami telah mengambil keputusan mengenai naskah Anda untuk {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Kami telah mengambil keputusan mengenai naskah Anda untuk {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Keputusan kami adalah:<br />
 <br />
@@ -395,7 +395,7 @@ Keputusan kami adalah:<br />
 		<subject>Keputusan Editor</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Kami telah mengambil keputusan mengenai naskah Anda untuk {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Kami telah mengambil keputusan mengenai naskah Anda untuk {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Keputusan kami adalah:<br />
 <br />
@@ -407,7 +407,7 @@ Keputusan kami adalah:<br />
 		<subject>Keputusan Editor</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Kami telah mengambil keputusan mengenai naskah Anda untuk  {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Kami telah mengambil keputusan mengenai naskah Anda untuk  {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Keputusan kami adalah:<br />
 <br />
@@ -419,7 +419,7 @@ Keputusan kami adalah:<br />
 		<subject>Keputusan Editor</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Kami telah mengambil keputusan mengenai naskah Anda untuk {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Kami telah mengambil keputusan mengenai naskah Anda untuk {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Keputusan kami adalah:<br />
 <br />

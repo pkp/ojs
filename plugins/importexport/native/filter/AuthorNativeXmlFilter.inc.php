@@ -20,8 +20,8 @@ class AuthorNativeXmlFilter extends PKPAuthorNativeXmlFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function AuthorNativeXmlFilter($filterGroup) {
-		parent::PKPAuthorNativeXmlFilter($filterGroup);
+	function __construct($filterGroup) {
+		parent::__construct($filterGroup);
 	}
 
 

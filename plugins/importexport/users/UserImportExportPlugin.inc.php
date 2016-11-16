@@ -19,8 +19,8 @@ class UserImportExportPlugin extends PKPUserImportExportPlugin {
 	/**
 	 * Constructor
 	 */
-	function UserImportExportPlugin() {
-		parent::PKPUserImportExportPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**
@@ -38,14 +38,68 @@ class UserImportExportPlugin extends PKPUserImportExportPlugin {
 	 * @copydoc PKPImportExportPlugin::usage
 	 */
 	function usage($scriptName) {
-		fatalError('Not implemented');
+		echo __('plugins.importexport.users.cliUsage', array(
+			'scriptName' => $scriptName,
+			'pluginName' => $this->getName()
+		)) . "\n\n";
+		echo __('plugins.importexport.users.cliUsage.examples', array(
+			'scriptName' => $scriptName,
+			'pluginName' => $this->getName()
+		)) . "\n\n";
 	}
 
 	/**
 	 * @see PKPImportExportPlugin::executeCLI()
 	 */
 	function executeCLI($scriptName, &$args) {
-		fatalError('Not implemented');
+		$command = array_shift($args);
+		$xmlFile = array_shift($args);
+		$journalPath = array_shift($args);
+
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
+
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
+
+		$journal = $journalDao->getByPath($journalPath);
+
+		if (!$journal) {
+			if ($journalPath != '') {
+				echo __('plugins.importexport.common.cliError') . "\n";
+				echo __('plugins.importexport.common.error.unknownJournal', array('journalPath' => $journalPath)) . "\n\n";
+			}
+			$this->usage($scriptName);
+			return;
+		}
+
+		if ($xmlFile && $this->isRelativePath($xmlFile)) {
+			$xmlFile = PWD . '/' . $xmlFile;
+		}
+		$outputDir = dirname($xmlFile);
+		if (!is_writable($outputDir) || (file_exists($xmlFile) && !is_writable($xmlFile))) {
+			echo __('plugins.importexport.common.cliError') . "\n";
+			echo __('plugins.importexport.common.export.error.outputFileNotWritable', array('param' => $xmlFile)) . "\n\n";
+			$this->usage($scriptName);
+			return;
+		}
+
+		switch ($command) {
+			case 'import':
+				$this->importUsers(file_get_contents($xmlFile), $journal, null);
+				return;
+			case 'export':
+				if ($xmlFile != '') {
+					if (empty($args)) {
+						file_put_contents($xmlFile, $this->exportAllUsers($journal, null));
+						return;
+					} else {
+						file_put_contents($xmlFile, $this->exportUsers($args, $journal, null));
+						return;
+					}
+				}
+				break;
+		}
+		$this->usage($scriptName);
 	}
 }
 

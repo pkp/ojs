@@ -27,8 +27,8 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 	/**
 	 * Constructor.
 	 */
-	function ReviewerSubmissionDAO() {
-		parent::ArticleDAO();
+	function __construct() {
+		parent::__construct();
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
 		$this->userDao = DAORegistry::getDAO('UserDAO');
 		$this->reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');

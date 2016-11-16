@@ -30,8 +30,8 @@ class PublishedArticleDAO extends ArticleDAO {
  	/**
 	 * Constructor.
 	 */
-	function PublishedArticleDAO() {
-		parent::ArticleDAO();
+	function __construct() {
+		parent::__construct();
 		$this->galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 	}
 
