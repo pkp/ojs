@@ -105,6 +105,20 @@ Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous r
 {$editorialContactSignature}]]&gt;]]></body>
 		<description>Ce courriel, lorsqu'activé, est envoyé automatiquement à un auteur quand il ou elle a complété le processus de soumission d'un manuscrit à la revue. Il fournit les informations sur comment suivre la soumission à travers le processus éditorial, et remercie l'auteur de sa soumission.</description>
 	</email_text>
+	<email_text key="SUBMISSION_ACK">
+		<subject>Accusé de réception d'une soumission</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Merci d'avoir envoyé votre manuscrit &quot;{$submissionTitle}&quot; à la presse {$contextName}. Le système de gestion virtuel de la presse que nous utilisons vous permet de suivre les progrès de votre article tout au long du processus de publication. Il suffit d'ouvrir une session sur le site Web:<br />
+<br />
+URL du manuscrit: {$submissionUrl}<br />
+Nom d'utilisateur: {$authorUsername}<br />
+<br />
+Si vous avez des questions, n'hésitez pas à me contacter. Merci d'avoir envoyé votre article à cette presse.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Lorsqu'il est activé, ce courriel est envoyé automatiquement à l'auteur lorsqu'il soumet son manuscrit à la presse. Il fournit des renseignements sur le suivi de la soumission tout au long du processus de publication et remercie l'auteur d'avoir envoyé une soumission.</description>
+	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
 		<subject>Soumission non conforme</subject>
 		<body><![CDATA[&lt;![CDATA[{$authorName}:<br />
