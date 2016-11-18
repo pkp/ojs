@@ -97,8 +97,6 @@ class SettingsHandler extends ManagementHandler {
 			}
 		}
 
-		$templateMgr->assign('fileVersioning', Config::getVar('general', 'versioning'));
-
 		$templateMgr->display('management/settings/journal.tpl');
 	}
 

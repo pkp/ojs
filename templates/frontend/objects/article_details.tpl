@@ -215,24 +215,25 @@
 							{assign var=galleyId value=$galley->getId()}
 							{assign var=otherRevisions value=$galley->getOtherRevisions($galley->getFileId())} 
 							{if $otherRevisions}
+								{* variable used later to decide whether to display old revisions or not *}
 								{assign var=hasRevisions value=true}
 							{/if}
 							<li>
-								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley}	
+								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley}
 							</li>
 
 						{/foreach}
 					</ul>
 				</div>
 			{/if}
-	
+
 			{if $article->getDatePublished()}
 				<div class="item published">
 					<div class="label">
 						{if $versioningEnabled}
 							{translate key="submissions.firstPublished"}
 						{else}
-						{translate key="submissions.published"}
+							{translate key="submissions.published"}
 						{/if}
 					</div>
 					<div class="value">

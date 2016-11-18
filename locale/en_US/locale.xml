@@ -1106,7 +1106,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="navigation.subscriptions">Subscriptions</message>
 
 <!-- Versioning -->
-	<message key="versioning">Versioning</message>
 	<message key="submissions.versions">Version History</message>
 	<message key="submissions.versionsOf">Version History of </message>
 	<message key="submissions.versions.current">Current Version</message>

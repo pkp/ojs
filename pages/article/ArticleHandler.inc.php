@@ -17,39 +17,29 @@
 import('classes.handler.Handler');
 
 class ArticleHandler extends Handler {
-	/** journal associated with the request **/
+	/** @var journal object: journal associated with the request **/
 	var $journal;
 
-	/** issue associated with the request **/
+	/** @var issue object: issue associated with the request **/	
 	var $issue;
 
-	/** article associated with the request **/
+	/** @var article object: article associated with the request **/
 	var $article;
 
-	/** galley associated with the request **/
+	/** @var galley object: galley associated with the request **/
 	var $galley;
 
-	/** article id associated with the request **/
+	/** @var int: article ID associated with the request **/
 	var $articleId;
 
-	/**  **/
+	/** @var int: galley ID associated with the request **/
 	var $galleyId;
 
-	/**  **/
+	/** @var int: file ID associated with the request **/
 	var $fileId;
 
-	/**  **/
+	/** @var int: file revision ID associated with the request **/
 	var $fileRevision;
-
-	/**  **/
-	var $isPreviousRevision = false;
-
-	/**  **/
-	var $previousRevisions;
-
-	/**  **/
-	var $latestTitle;
-
 
 	/**
 	 * Constructor
@@ -76,7 +66,6 @@ class ArticleHandler extends Handler {
 	 * @see PKPHandler::initialize()
 	 */
 	function initialize($request, $args) {
-
 		$articleId = isset($args[0]) ? $args[0] : 0;
 
 		$journal = $request->getContext();
@@ -110,7 +99,6 @@ class ArticleHandler extends Handler {
 	 * @param $request Request
 	 */
 	function view($args, $request) {
-
 		$articleId = array_shift($args);
 		$galleyId = array_shift($args);
 		$fileId = array_shift($args);
@@ -165,8 +153,7 @@ class ArticleHandler extends Handler {
 		$templateMgr->assign('citationPlugins', $citationPlugins);
 
 		// Versioning
-		$versioningEnabled = Config::getVar('general', 'versioning') && $journal->getSetting('versioningEnabled');
-		$templateMgr->assign('versioningEnabled', $versioningEnabled);
+		$templateMgr->assign('versioningEnabled', $journal->getSetting('versioningEnabled'));
 
 		if (!$galley) {
 			// No galley: Prepare the article landing page.

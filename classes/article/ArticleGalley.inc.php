@@ -166,26 +166,13 @@ class ArticleGalley extends Representation {
 	 * @param $fileId int
 	 * @param $fileStage int (optional)
 	 * @param $submissionId int (optional)
-	 * @param $submissionRevision int (optional)
 	 * @return Array
 	 */
-	function getOtherRevisions($fileId, $fileStage = null, $submissionId = null, $submissionRevision = null) {
+	function getOtherRevisions($fileId, $fileStage = null, $submissionId = null) {
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 		$submissionFiles = $submissionFileDao->getAllRevisions($fileId, $fileStage, $submissionId);
-
 		array_shift($submissionFiles);
-		
-	/*	$otherSubmissionFiles = array();
-		foreach($submissionFiles as $submissionFile) {
-			$revision = $submissionFile->getRevision();
-			$fileName = $submissionFile->getOriginalFileName();
-
-			$otherSubmissionFiles[$revision] = $fileName;
-		}*/
-
-		$otherSubmissionFiles = $submissionFiles;
-	
-		return $otherSubmissionFiles;
+		return $submissionFiles;
 	}
 
 

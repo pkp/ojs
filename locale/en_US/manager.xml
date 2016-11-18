@@ -330,6 +330,7 @@
 	<message key="manager.setup.useJournalStyleSheet">Journal style sheet</message>
 	<message key="manager.setup.userRegistration">User Registration</message>
 	<message key="manager.setup.useTextTitle">Title text</message>
+	<message key="manager.setup.versioning">Versioning</message>
 	<message key="manager.setup.versioningEnabled">Enable versioning for this journal.</message>
 	<message key="manager.statistics.defaultMetricDescription">
 		Your journal is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
