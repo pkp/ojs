@@ -73,8 +73,7 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
 			$fileId = $fileNode->getAttribute('id');
 			$revisionId = $fileNode->getAttribute('revision');
 			$dbFileId = $deployment->getFileDBId($fileId, $revisionId);
-			assert($dbFileId);
-			$addSubmissionFile = true;
+			if ($dbFileId) $addSubmissionFile = true;
 		}
 		$representation = parent::handleElement($node);
 

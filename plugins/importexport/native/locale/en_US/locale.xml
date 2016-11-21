@@ -44,6 +44,7 @@ The following formats are accepted:
 {$scriptName} {$pluginName} import [xmlFileName] [journal_path]
 	issue_id [issueId] section_abbrev [abbrev]
 ]]></message>
+	<message key="plugins.importexport.native.error.unknownSection">Unknown section {$param}</message>
 	<message key="plugins.importexport.native.error.unknownUser">The specified user, "{$userName}", does not exist.</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">The section title "{$section1Title}" and the section title "{$section2Title}" in the "{$issueTitle}" issue matched the different existing journal sections.</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMatch">The section title "{$sectionTitle}" in the "{$issueTitle}" issue matched an existing journal section, but another title of this section doesn't match with another title of the existing journal section.</message>
