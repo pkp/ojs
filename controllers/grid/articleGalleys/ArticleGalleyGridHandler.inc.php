@@ -147,7 +147,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence) {
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$journal = $request->getJournal();
-		$galley = $galleyDao->getById($rowId, $journal->getId());
+		$galley = $galleyDao->getById($rowId, null, $journal->getId());
 		$galley->setSequence($newSequence);
 		$galleyDao->updateObject($galley);
 	}
