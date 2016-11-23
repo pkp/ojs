@@ -182,7 +182,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 				$submissionGalleys[] = $galley;
 			}
 		}
-		// submission galley files - colelction nodes
+		// submission galley files - collection nodes
 		if (!empty($submissionGalleys)) {
 			$this->appendCollectionNodes($doc, $doiDataNode, $submission, $submissionGalleys);
 		}
