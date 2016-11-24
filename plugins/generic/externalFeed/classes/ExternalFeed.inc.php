@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/generic/externalFeed/ExternalFeed.inc.php
+ * @file plugins/generic/externalFeed/classes/ExternalFeed.inc.php
  *
  * Copyright (c) 2014-2018 Simon Fraser University
  * Copyright (c) 2003-2018 John Willinsky
