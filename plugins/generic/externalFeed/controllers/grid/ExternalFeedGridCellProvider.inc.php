@@ -1,0 +1,63 @@
+<?php
+/**
+ * @file controllers/grid/ExternalFeedGridCellProvider.inc.php
+ *
+ * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2000-2016 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @class ExternalFeedGridCellProvider
+ * @ingroup controllers_grid_externalFeed
+ *
+ * @brief Class for a cell provider to display information about external feed
+ */
+
+import('lib.pkp.classes.controllers.grid.GridCellProvider');
+import('lib.pkp.classes.linkAction.request.RedirectAction');
+
+class ExternalFeedGridCellProvider extends GridCellProvider {
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
+		parent::__construct();
+	}
+	
+	//
+	// Template methods from GridCellProvider
+	//
+	/**
+	* Get cell actions associated with this row/column combination
+	* @param $row GridRow
+	* @param $column GridColumn
+	* @return array an array of LinkAction instances
+	*/
+	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
+		$feed = $row->getData();
+		switch ($column->getId()) {
+			default:
+				return parent::getCellActions($request, $row, $column, $position);
+		}
+	}
+	
+	/**
+	 * Extracts variables for a given column from a data element
+	 * so that they may be assigned to template before rendering.
+	 * @param $row GridRow
+	 * @param $column GridColumn
+	 * @return array
+	 */
+	function getTemplateVarsFromRowColumn($row, $column) {
+		$feed = $row->getData();
+		switch ($column->getId()) {
+			case 'title':
+				return array('label' => $feed->getLocalizedTitle());
+			case 'homepage':
+				return array('selected' => $feed->getDisplayHomepage() ? true : false, 'disabled' => true ); 
+			case 'displayBlockAll':
+				return array('selected' => ($feed->getDisplayBlock() == EXTERNAL_FEED_DISPLAY_BLOCK_ALL) ? true : false, 'disabled' => true );
+			case 'displayBlockHomepage':
+				return array('selected' => ($feed->getDisplayBlock() == EXTERNAL_FEED_DISPLAY_BLOCK_HOMEPAGE) ? true : false, 'disabled' => true );
+		}
+	}
+}

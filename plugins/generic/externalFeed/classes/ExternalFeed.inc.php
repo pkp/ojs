@@ -8,7 +8,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ExternalFeed
- * @ingroup plugins_generic_externalFeed
+ * @ingroup plugins_generic_externalFeed_classes
  *
  * @brief Basic class describing an external feed.
  */
@@ -19,6 +19,10 @@ define('EXTERNAL_FEED_DISPLAY_BLOCK_ALL',		2);
 
 
 class ExternalFeed extends DataObject {
+
+	public function __construct() {
+		parent::__construct();
+	}
 
 	//
 	// Get/set methods
@@ -37,6 +41,7 @@ class ExternalFeed extends DataObject {
 	 * @param $feedId int
 	 */
 	function setId($feedId) {
+		$this->setData('id', $feedId);	// DAOResultFactory::toAssociativeArray() uses id for array key
 		return $this->setData('feedId', $feedId);
 	}
 

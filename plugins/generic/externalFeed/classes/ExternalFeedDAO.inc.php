@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @file plugins/generic/externalFeed/ExternalFeedDAO.inc.php
+ * @file plugins/generic/externalFeed/classes/ExternalFeedDAO.inc.php
  *
  * Copyright (c) 2014-2018 Simon Fraser University
  * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ExternalFeedDAO
- * @ingroup plugins_generic_externalFeed
+ * @ingroup plugins_generic_externalFeed_classes
  *
  * @brief Operations for retrieving and modifying ExternalFeed objects.
  */
@@ -22,7 +22,7 @@ class ExternalFeedDAO extends DAO {
 	/**
 	 * Constructor
 	 */
-	function __construct($parentPluginName) {
+	public function __construct($parentPluginName) {
 		$this->parentPluginName = $parentPluginName;
 		parent::__construct();
 	}
@@ -65,7 +65,7 @@ class ExternalFeedDAO extends DAO {
 	 */
 	function &_returnExternalFeedFromRow($row) {
 		$externalFeedPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
-		$externalFeedPlugin->import('ExternalFeed');
+		$externalFeedPlugin->import('classes.ExternalFeed');
 
 		$externalFeed = new ExternalFeed();
 		$externalFeed->setId($row['feed_id']);

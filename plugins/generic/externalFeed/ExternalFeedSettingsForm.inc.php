@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file plugins/generic/externalFeed/ExternalFeedSettingsForm.inc.php
  *
@@ -16,115 +15,78 @@
 import('lib.pkp.classes.form.Form');
 
 class ExternalFeedSettingsForm extends Form {
-
-	/** @var int */
-	var $journalId;
-
-	/** @var object */
-	var $plugin;
-
+	
+	/** @var $journalId int */
+	protected $journalId;
+	
+	/** @var $plugin object */
+	protected $plugin;
+	
 	/**
 	 * Constructor
 	 * @param $plugin object
 	 * @param $journalId int
 	 */
-	function __construct(&$plugin, $journalId) {
+	public function __construct(&$plugin, $journalId) {
 		$this->journalId = $journalId;
-		$this->plugin =& $plugin;
-
-		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
-
+		$this->plugin = $plugin;
+	
+		parent::__construct($plugin->getTemplatePath() . '/settingsForm.tpl');
+	
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
 	}
-
+	
 	/**
 	 * Initialize form data.
 	 */
-	function initData() {
+	public function initData() {
 		$journalId = $this->journalId;
-		$plugin =& $this->plugin;
-
+		$plugin = $this->plugin;
+	
 		$this->_data = array(
 			'externalFeedStyleSheet' => $plugin->getSetting($journalId, 'externalFeedStyleSheet')
 		);
 	}
-
+	
 	/**
 	 * Assign form data to user-submitted data.
 	 */
-	function readInputData() {
+	public function readInputData() {
 		$this->readUserVars(array('externalFeedStyleSheet'));
 	}
-
+	
 	/**
 	 * Display the form.
 	 */
-	function display() {
+	public function fetch($request) {
 		$journalId = $this->journalId;
 		$plugin = $this->plugin;
-
+	
 		// Ensure upload file settings are reloaded when the form is displayed.
-		$templateMgr = TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('journalStyleSheet', $plugin->getSetting($journalId, 'externalFeedStyleSheet'));
-		$templateMgr->assign('defaultStyleSheetUrl', Request::getBaseUrl() . '/' . $plugin->getDefaultStyleSheetFile());
-
-		parent::display();
+		$templateMgr->assign('defaultStyleSheetUrl', $request->getBaseUrl() . '/' . $plugin->getDefaultStyleSheetFile());
+	
+		return parent::fetch($request);
 	}
-
-	/**
-	 * Uploads custom stylesheet.
-	 */
-	function uploadStyleSheet() {
-		$journalId = $this->journalId;
-		$plugin =& $this->plugin;
-		$settingName = 'externalFeedStyleSheet';
-
-		import('classes.file.PublicFileManager');
-		$fileManager = new PublicFileManager();
-
-		if ($fileManager->uploadedFileExists($settingName)) {
-			$type = $fileManager->getUploadedFileType($settingName);
-			if ($type != 'text/plain' && $type != 'text/css') {
-				return false;
-			}
-
-			$uploadName = $plugin->getPluginPath() . '/' . $settingName . '.css';
-			if($fileManager->uploadJournalFile($journalId, $settingName, $uploadName)) {			
-				$value = array(
-					'name' => $fileManager->getUploadedFileName($settingName),
-					'uploadName' => $uploadName,
-					'dateUploaded' => Core::getCurrentDate()
-				);
-
-				$plugin->updateSetting($journalId, $settingName, $value, 'object');
-				return true;
-			}
-		}
-
-		return false;
-	}
-
+	
 	/**
 	 * Deletes a custom stylesheet.
 	 */
 	function deleteStyleSheet() {
 		$journalId = $this->journalId;
-		$plugin =& $this->plugin;
+		$plugin = $this->plugin;
 		$settingName = 'externalFeedStyleSheet';
-
 		$setting = $plugin->getSetting($journalId, $settingName);
-
 		import('classes.file.PublicFileManager');
 		$fileManager = new PublicFileManager();
-
 		if ($fileManager->removeJournalFile($journalId, $setting['uploadName'])) {
 			$plugin->updateSetting($journalId, $settingName, null);
-			return true;
+			return new JSONMessage(true);
 		} else {
-			return false;
+			return new JSONMessage(false);
 		}
 	}
+	
 }
-
-?>
