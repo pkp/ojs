@@ -30,4 +30,38 @@
 ]]></message>
 
 	<message key="plugins.importexport.crossref.senderTask.name">Dados CrossRef do remetente</message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[A instituição editora da revista não foi configurado! Você deve adicionar uma instituição editora na <a href="{$journalSettingsUrl}" target="_blank"> Página de Configurações da Revista</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.issnNotConfigured"><![CDATA[O ISSN da revista não foi configurado! Você deve adicionar um ISSN na <a href="{$journalSettingsUrl}" target="_blank"> Página de Configurações do Revista</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.noDOIContentObjects">Os artigos não foram selecionados para a atribuição de DOI no plugin de identificador público do DOI, portanto não há possibilidade de depósito ou exportação neste plugin.</message>
+	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Se você quiser usar este plugin para registrar Digital Object Identifiers (DOIs) diretamente com o CrossRef, você precisará de um nome de usuário e senha (disponível em <a href="http://www.crossref.org" target="_blank"> CrossRef </a>). Se você não tiver seu próprio nome de usuário e senha, ainda poderá exportar para o formato CrossRef XML, mas não poderá registrar os nomes DOI com a CrossRef a partir do OJS.]]></message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">O OJS depositará automaticamente os metadados dos DOIs atribuídos na CrossRef. Observe que isso pode levar um curto período de tempo após a publicação do processo. Você pode verificar todas os DOIs não registradas.</message>
+	<message key="plugins.importexport.crossref.settings.form.testMode.description">Use a API de teste CrossRef (ambiente de teste) para o depósito DOI. Não se esqueça de remover esta opção para a produção.</message>
+	<message key="plugins.importexport.crossref.issues.description">Nota: Somente as edições (e não seus artigos) serão considerados para exportação/registro aqui.</message>
+	<message key="plugins.importexport.crossref.status.submitted">Enviado</message>
+	<message key="plugins.importexport.crossref.status.completed">Depositado</message>
+	<message key="plugins.importexport.crossref.status.failed">Falhou</message>
+	<message key="plugins.importexport.crossref.status.registered">Ativo</message>
+	<message key="plugins.importexport.crossref.status.markedRegistered">Marcar como Ativo</message>
+	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[<p> Estado do depósito: </p>
+<p>
+- Não depositado: nenhuma tentativa de depósito foi feita para este DOI. <br/>
+- Enviado: este DOI foi enviado para o depósito. <br />
+- Depositado: o DOI foi depositado em Crossref, mas pode não estar ativo ainda. <br />
+- Ativo: o DOI foi depositado e está resolvendo corretamente. <br />
+- Falha: o depósito DOI falhou. <br />
+- Marcado ativo: o DOI foi marcado manualmente como ativo.
+</P>
+<P> Apenas o status da última tentativa de depósito é exibido. </P>
+<P> Se um depósito falhou, resolva o problema e tente registrar novamente o DOI. </P>
+<p> Se preciso, você pode consultar o <a href="http://labcoat.ibict.br/portal/wp-content/uploads/2015/03/Guia-do-usu%C3%A1rio-do-DOI-online3.pdf">Guia do Usuário DOI</a> ou buscar ajuda no <a href="http://forum.ibict.br/c/identificador-digital-de-objetos">Fórum do Ibict</a>. </p>]]></message>
+	<message key="plugins.importexport.crossref.action.export">Download XML</message>
+	<message key="plugins.importexport.crossref.action.markRegistered">Marcar como Ativo</message>
+	<message key="plugins.importexport.crossref.action.register">Enviar</message>
+	<message key="plugins.importexport.crossref.action.checkStatus">Verificar Status</message>
+	<message key="plugins.importexport.crossref.notification.failed"><![CDATA[Um DOI não conseguiu ser registrado. Por favor, vá para Ferramentas> Importar / Exportar> CrossRef XML Export Plugin para ver os depósitos com falha.]]></message>
+	<message key="plugins.importexport.crossref.cliError">Erro:</message>
+	<message key="plugins.importexport.crossref.register.error.mdsError">O envio não foi bem sucedido! O servidor de registro DOI retornou um erro: '{$param}'.</message>
+	<message key="plugins.importexport.crossref.register.success">Enviado com sucesso!</message>
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Nenhuma edição correspondeu ao ID de edição especificado "{$issueId}".</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">Nenhum artigo correspondeu ao ID do artigo especificado "{$articleId}".</message>
 </locale>

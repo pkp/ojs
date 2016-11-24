@@ -1139,4 +1139,7 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 
 	<message key="editor.issues.backIssues">Edições anteriores</message>
 	<message key="editor.issues.futureIssues">Edições futuras</message>
+	<message key="notification.type.assignProductionUser">Designe um usuário para criar as composições finais usando o link "Adicionar" na lista Participantes.</message>
+	<message key="notification.type.awaitingRepresentations">Esperando Composições Finais</message>
+	<message key="journal.viewAllIssues">Ver Todas as Edições</message>
 </locale>
