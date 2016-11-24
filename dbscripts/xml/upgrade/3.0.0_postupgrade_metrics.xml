@@ -46,4 +46,9 @@
 		<query>UPDATE metrics m, submission_files sf SET m.representation_id = sf.assoc_id WHERE m.assoc_type = 515 AND sf.file_id = m.assoc_id AND sf.assoc_type = 521</query>
 	</sql>
 
+	<!-- issue #1933, ASSOC_TYPE_REPRESENTATION = 521 should be accordingly replaced by ASSOC_TYPE_SUBMISSION_FILE = 515 -->
+	<sql>
+		<query>UPDATE metrics m, submission_galleys sg SET m.assoc_type = 515, m.assoc_id = sg.file_id WHERE m.assoc_type = 521 AND sg.galley_id = m.assoc_id AND ((sg.remote_url IS NULL) OR (sg.remote_url = ''))</query>
+	</sql>
+
 </data>
