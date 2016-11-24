@@ -32,8 +32,8 @@
 		this.parent($form, options);
 
 		// initial setup.
-		$('input[id^="datePublished"]', $form).datepicker(
-				{ dateFormat: 'yy-mm-dd', minDate: '0', autoSize: true});
+		//$('input[id^="datePublished"]', $form).datepicker(
+		//		{ dateFormat: 'yy-mm-dd', minDate: '0', autoSize: true});
 
 		// bind click handlers to the two payment waiver buttons.
 		$('#paymentReceivedButton', $form).click(
