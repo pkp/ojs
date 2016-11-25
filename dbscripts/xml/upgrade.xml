@@ -11,7 +11,7 @@
   *
   -->
 
-<install version="3.0.0.0">
+<install version="3.0.0.1">
 	<upgrade minversion="2.0.0.0" maxversion="2.3.9.9">
 		<!-- OJS < 2.4.0 to 3.0 upgrade unsupported -->
 		<code function="abort" message="installer.unsupportedUpgradeError" />
@@ -87,6 +87,7 @@
 		<code function="installEmailTemplate" key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_SEND_TO_EXTERNAL" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_SEND_TO_PRODUCTION" locales="en_US" />
+		<code function="installEmailTemplate" key="SUBMISSION_ACK_NOT_USER" locales="en_US,ca_ES,el_GR,es_ES,fr_CA,pt_BR" />
 		<data file="dbscripts/xml/upgrade/3.0.0_scheduledTasks.xml" />
 		<code function="localizeCustomBlockSettings" />
 		<code function="convertEditorDecisionNotes" />

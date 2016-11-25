@@ -28,6 +28,16 @@ best to adapt old content to the new structures, but we strongly recommend
 performing a test upgrade and exploring the new system before committing your
 content to the upgrade. Downgrades from 3.x to 2.x will not be supported.
 
+Note that upgrading from OJS 2.4.x to OJS 3.0 will rearrange your submission
+file storage, so be sure to back it up before running an upgrade.
+
+With that noted, follow the OJS 3.0 process described below.
+
+
+========================
+Upgrading from OJS 3.0.0
+========================
+
 Upgrading to the latest version of OJS involves two steps:
 
     - Obtaining the latest OJS code
