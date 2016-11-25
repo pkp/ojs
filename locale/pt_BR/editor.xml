@@ -226,4 +226,10 @@
 	<message key="editor.issues.datePublished">Data de Publicação</message>
 	<message key="editor.issues.identifiers">Identificadores</message>
 	<message key="grid.action.addGalley">Adicionar composição final</message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">A imagem da capa que você solicitou para excluir não corresponde à imagem da capa dessa edição. Por favor, recarregue a página e tente denovo.</message>
+	<message key="editor.issues.removeCoverImageFileNotFound">Não foi possível encontrar a imagem da capa que você solicitou para excluir. Ela já pode ter sido excluída. Tente recarregar a página.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Formato da imagem de capa inválida. Os formatos aceitos são .gif, .jpg ou .png.</message>
+	<message key="editor.article.schedulePublication">Agendar para Publicação</message>
+	<message key="editor.article.coverImage">Imagem de Capa</message>
+	<message key="editor.article.removeCoverImageFileNotFound">Não foi possível encontrar a imagem da capa que você solicitou para excluir. Ele já pode ter sido excluída. Tente recarregar a página.</message>
 </locale>
