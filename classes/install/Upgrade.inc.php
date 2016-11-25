@@ -921,11 +921,21 @@ class Upgrade extends Installer {
 		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 		$journalIterator = $journalDao->getAll();
+		$driver = $submissionFileDao->getDriver();
 		while ($journal = $journalIterator->next()) {
 			$managerUserGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_MANAGER);
 			$managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $journal->getId());
 			$creatorUserId = $managerUsers->next()->getId();
-			$submissionFileDao->update('UPDATE submission_files sf, submissions s SET sf.uploader_user_id = ?, sf.user_group_id = ? WHERE sf.uploader_user_id IS NULL AND sf.user_group_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?', array($creatorUserId, $managerUserGroup->getId(), $journal->getId()));
+			switch ($driver) {
+				case 'mysql':
+				case 'mysqli':
+					$submissionFileDao->update('UPDATE submission_files sf, submissions s SET sf.uploader_user_id = ?, sf.user_group_id = ? WHERE sf.uploader_user_id IS NULL AND sf.user_group_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?', array($creatorUserId, $managerUserGroup->getId(), $journal->getId()));
+					break;
+				case 'postgres':
+					$submissionFileDao->update('UPDATE submission_files SET uploader_user_id = ?, user_group_id = ? FROM submission_files sf, submissions s WHERE sf.uploader_user_id IS NULL AND sf.user_group_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?', array($creatorUserId, $managerUserGroup->getId(), $journal->getId()));
+					break;
+				default: fatalError('Unknown database type!');
+			}
 			$emptyUserGroupResult = $submissionFileDao->retrieve('SELECT DISTINCT sf.uploader_user_id FROM submission_files sf, submissions s WHERE sf.user_group_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?',array($journal->getId()));
 			while (!$emptyUserGroupResult->EOF) {
 				$row = $emptyUserGroupResult->getRowAssoc(false);
@@ -934,7 +944,16 @@ class Upgrade extends Installer {
 				$userGroupIdResult = $userGroupDao->retrieve('SELECT MIN(ug.user_group_id) as user_group_id FROM user_groups ug, user_user_groups uug WHERE ug.user_group_id = uug.user_group_id AND uug.user_id = ? AND ug.context_id = ?', array($uploaderUserId, $journal->getId()));
 				if ($userGroupIdResult->RecordCount() != 0) {
 					$userGroupId = $userGroupIdResult->fields[0];
-					$submissionFileDao->update('UPDATE submission_files sf, submissions s SET sf.user_group_id = ? WHERE sf.uploader_user_id = ? AND sf.user_group_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?', array($userGroupId, $uploaderUserId, $journal->getId()));
+					switch ($driver) {
+						case 'mysql':
+						case 'mysqli':
+							$submissionFileDao->update('UPDATE submission_files sf, submissions s SET sf.user_group_id = ? WHERE sf.uploader_user_id = ? AND sf.user_group_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?', array($userGroupId, $uploaderUserId, $journal->getId()));
+							break;
+						case 'postgres':
+							$submissionFileDao->update('UPDATE submission_files SET user_group_id = ? FROM submission_files sf, submissions s WHERE sf.uploader_user_id = ? AND sf.user_group_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?', array($userGroupId, $uploaderUserId, $journal->getId()));
+							break;
+						default: fatalError('Unknown database type!');
+					}
 				}
 			}
 			unset($managerUsers, $managerUserGroup);
@@ -1550,15 +1569,39 @@ class Upgrade extends Installer {
 			$result->MoveNext();
 		}
 		$result->Close();
-		// Update cover image names in the issue_settings table
-		$issueDao->update(
-			'UPDATE issue_settings iss, issues i, journals j SET iss.locale = j.primary_locale, iss.setting_value = CONCAT(LEFT( iss.setting_value, LOCATE(\'.\', iss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING_INDEX(iss.setting_value,\'.\',-1))
-WHERE iss.setting_name = \'coverImage\' AND iss.locale = \'\' AND i.issue_id = iss.issue_id AND j.journal_id = i.journal_id'
-		);
-		// Update cover image alt texts in the issue_settings table
-		$issueDao->update(
-			'UPDATE issue_settings iss, issues i, journals j SET iss.locale = j.primary_locale WHERE iss.setting_name = \'coverImageAltText\' AND iss.locale = \'\' AND i.issue_id = iss.issue_id AND j.journal_id = i.journal_id'
-		);
+		$driver = $issueDao->getDriver();
+		switch ($driver) {
+			case 'mysql':
+			case 'mysqli':
+				// Update cover image names in the issue_settings table
+				$issueDao->update(
+					'UPDATE issue_settings iss, issues i, journals j
+					SET iss.locale = j.primary_locale, iss.setting_value = CONCAT(LEFT( iss.setting_value, LOCATE(\'.\', iss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING_INDEX(iss.setting_value,\'.\',-1))
+					WHERE iss.setting_name = \'coverImage\' AND iss.locale = \'\' AND i.issue_id = iss.issue_id AND j.journal_id = i.journal_id'
+				);
+				// Update cover image alt texts in the issue_settings table
+				$issueDao->update(
+					'UPDATE issue_settings iss, issues i, journals j SET iss.locale = j.primary_locale WHERE iss.setting_name = \'coverImageAltText\' AND iss.locale = \'\' AND i.issue_id = iss.issue_id AND j.journal_id = i.journal_id'
+				);
+				break;
+			case 'postgres':
+				// Update cover image names in the issue_settings table
+				$issueDao->update(
+					'UPDATE issue_settings
+					SET locale = j.primary_locale, setting_value = CONCAT(LEFT( iss.setting_value, LOCATE(\'.\', iss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING_INDEX(iss.setting_value,\'.\',-1))
+					FROM issue_settings iss, issues i, journals j
+					WHERE iss.setting_name = \'coverImage\' AND iss.locale = \'\' AND i.issue_id = iss.issue_id AND j.journal_id = i.journal_id'
+				);
+				// Update cover image alt texts in the issue_settings table
+				$issueDao->update(
+					'UPDATE issue_settings
+					SET locale = j.primary_locale
+					FROM issue_settings iss, issues i, journals j
+					WHERE iss.setting_name = \'coverImageAltText\' AND iss.locale = \'\' AND i.issue_id = iss.issue_id AND j.journal_id = i.journal_id'
+				);
+				break;
+			default: fatalError('Unknown database type!');
+		}
 		$issueDao->flushCache();
 		return true;
 	}
@@ -1591,15 +1634,41 @@ WHERE iss.setting_name = \'coverImage\' AND iss.locale = \'\' AND i.issue_id = i
 			$result->MoveNext();
 		}
 		$result->Close();
-		// Update cover image names in the submission_settings table
-		$articleDao->update(
-			'UPDATE submission_settings ss, submissions s, journals j SET ss.locale = j.primary_locale, ss.setting_value = CONCAT(LEFT( ss.setting_value, LOCATE(\'.\', ss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING_INDEX(ss.setting_value,\'.\',-1))
-WHERE ss.setting_name = \'coverImage\' AND ss.locale = \'\' AND s.submission_id = ss.submission_id AND j.journal_id = s.context_id'
-		);
-		// Update cover image alt texts in the submission_settings table
-		$articleDao->update(
-			'UPDATE submission_settings ss, submissions s, journals j SET ss.locale = j.primary_locale WHERE ss.setting_name = \'coverImageAltText\' AND ss.locale = \'\' AND s.submission_id = ss.submission_id AND j.journal_id = s.context_id'
-		);
+		$driver = $articleDao->getDriver();
+		switch ($driver) {
+			case 'mysql':
+			case 'mysqli':
+				// Update cover image names in the submission_settings table
+				$articleDao->update(
+					'UPDATE submission_settings ss, submissions s, journals j
+					SET ss.locale = j.primary_locale, ss.setting_value = CONCAT(LEFT( ss.setting_value, LOCATE(\'.\', ss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING_INDEX(ss.setting_value,\'.\',-1))
+					WHERE ss.setting_name = \'coverImage\' AND ss.locale = \'\' AND s.submission_id = ss.submission_id AND j.journal_id = s.context_id'
+				);
+				// Update cover image alt texts in the submission_settings table
+				$articleDao->update(
+					'UPDATE submission_settings ss, submissions s, journals j
+					SET ss.locale = j.primary_locale
+					WHERE ss.setting_name = \'coverImageAltText\' AND ss.locale = \'\' AND s.submission_id = ss.submission_id AND j.journal_id = s.context_id'
+				);
+				break;
+			case 'postgres':
+				// Update cover image names in the submission_settings table
+				$articleDao->update(
+					'UPDATE submission_settings
+					SET locale = j.primary_locale, setting_value = CONCAT(LEFT( ss.setting_value, LOCATE(\'.\', ss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING_INDEX(ss.setting_value,\'.\',-1))
+					FROM submission_settings ss, submissions s, journals j
+					WHERE ss.setting_name = \'coverImage\' AND ss.locale = \'\' AND s.submission_id = ss.submission_id AND j.journal_id = s.context_id'
+				);
+				// Update cover image alt texts in the submission_settings table
+				$articleDao->update(
+					'UPDATE submission_settings
+					SET locale = j.primary_locale
+					FROM submission_settings ss, submissions s, journals j
+					WHERE ss.setting_name = \'coverImageAltText\' AND ss.locale = \'\' AND s.submission_id = ss.submission_id AND j.journal_id = s.context_id'
+				);
+				break;
+			default: fatalError('Unknown database type!');
+		}
 		$articleDao->flushCache();
 		return true;
 	}
