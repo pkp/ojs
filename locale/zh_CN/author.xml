@@ -31,7 +31,7 @@
 	<message key="author.submit.metadata">输入元数据</message>
 	<message key="author.submit.supplementaryFiles">上传附件</message>
 	<message key="author.submit.confirmation">确认</message>
-	<message key="author.submit.cancelSubmission">您可以在以后的时间通过选择在作者首页的处理中投稿来完成本次投稿.</message>
+	<message key="submission.submit.cancelSubmission">您可以在以后的时间通过选择在作者首页的处理中投稿来完成本次投稿.</message>
 	<message key="author.submit.notAccepting">这个杂志是在这个时候不接受投稿.</message>
 	<message key="author.submit.requestWaiver">申请免费</message>
 	<message key="author.submit.qualifyForWaiver">请考虑免除这个文章的投稿费</message>

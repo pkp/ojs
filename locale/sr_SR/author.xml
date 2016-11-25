@@ -31,7 +31,7 @@
 	<message key="author.submit.metadata">Unos metapodataka</message>
 	<message key="author.submit.supplementaryFiles">Dodavanje dodatnih fajlova</message>
 	<message key="author.submit.confirmation">Potvrda</message>
-	<message key="author.submit.cancelSubmission">Možete završiti predaju kasnije odabirom "Aktivnih predaja" u autorskom nalogu.</message>
+	<message key="submission.submit.cancelSubmission">Možete završiti predaju kasnije odabirom "Aktivnih predaja" u autorskom nalogu.</message>
 	<message key="author.submit.notAccepting">Časopis trenutno ne prihvata predaje radova.</message>
 	<message key="author.submit.requestWaiver">Zahtevaj oslobađanje</message>
 	<message key="author.submit.addReasonsForWaiver">Koristite tekst box ispod da navedete razloge za oslobađanje od naknade.</message>

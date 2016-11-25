@@ -27,7 +27,7 @@
 	<message key="author.submit.start">Start</message>
 	<message key="author.submit.supplementaryFiles">Aanvullende bestanden laden</message>
 	<message key="author.submit.confirmation">Bevestiging</message>
-	<message key="author.submit.cancelSubmission">U kunt deze inzending op een later tijdstip voltooien door Actieve inzendingen te kiezen op de homepage voor auteurs.</message>
+	<message key="submission.submit.cancelSubmission">U kunt deze inzending op een later tijdstip voltooien door Actieve inzendingen te kiezen op de homepage voor auteurs.</message>
 	<message key="author.submit.notAccepting">Dit tijdschrift accepteert momenteel geen inzendingen.</message>
 	<message key="author.submit.requestWaiver">Kwijtschelding vragen</message>
 	<message key="author.submit.qualifyForWaiver">Overweeg kwijtschelding van de inzendingskosten voor dit artikel</message>

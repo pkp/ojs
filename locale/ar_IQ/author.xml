@@ -31,7 +31,7 @@
 	<message key="author.submit.supplementaryFiles">إرفع الملفات التكميلية</message>
 	<message key="author.submit.confirmation">تأكيد الطلب</message>
 	<message key="author.submit.nextSteps">الخطوة التالية</message>
-	<message key="author.submit.cancelSubmission">لك أن تكمل طلبك للنشر في موقعنا لاحقاً عبر الذهاب إلى (طلبات النشر قيد المعالجة) في صفحة دخول المؤلفين</message>
+	<message key="submission.submit.cancelSubmission">لك أن تكمل طلبك للنشر في موقعنا لاحقاً عبر الذهاب إلى (طلبات النشر قيد المعالجة) في صفحة دخول المؤلفين</message>
 	<message key="author.submit.notAccepting">النشر في هذه المجلة معلق حالياً</message>
 	<message key="author.submit.requestWaiver">إلتمس خصماً مالياً</message>
 	<message key="author.submit.qualifyForWaiver">لطفاً، خذ بنظر الاعتبار خصم رسوم النشر لهذه المقالة</message>

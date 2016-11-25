@@ -32,7 +32,7 @@
 	<message key="author.submit.metadata">Introdu metadatele</message>
 	<message key="author.submit.supplementaryFiles">Încarcă fişierele suplimentare</message>
 	<message key="author.submit.confirmation">Confirmare</message>
-	<message key="author.submit.cancelSubmission">Poţi încheia această propunere mai târziu prin selectarea propunerilor active din pagina autorului.</message>
+	<message key="submission.submit.cancelSubmission">Poţi încheia această propunere mai târziu prin selectarea propunerilor active din pagina autorului.</message>
 	<message key="author.submit.notAccepting">Această revistă nu acceptă propuneri în acest moment.</message>
 	<message key="author.submit.requestWaiver">Solicită derogare</message>
 	<message key="author.submit.qualifyForWaiver">Vă rog să luați în considerare derogarea de la taxare pentru propunerea de articol</message>

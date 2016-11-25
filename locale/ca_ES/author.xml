@@ -31,7 +31,7 @@
 	<message key="author.submit.metadata">Introducció de les metadades</message>
 	<message key="author.submit.supplementaryFiles">Càrrega de fitxers addicionals</message>
 	<message key="author.submit.confirmation">Confirmació</message>
-	<message key="author.submit.cancelSubmission">Podeu completar aquesta tramesa més endavant si seleccioneu «Trameses actives» a la pàgina d'inici de l’autor/a.</message>
+	<message key="submission.submit.cancelSubmission">Podeu completar aquesta tramesa més endavant si seleccioneu «Trameses actives» a la pàgina d'inici de l’autor/a.</message>
 	<message key="author.submit.notAccepting">Actualment aquesta revista no accepta trameses.</message>
 	<message key="author.submit.requestWaiver">Sol·licita una exempció</message>
 	<message key="author.submit.qualifyForWaiver">Tingueu en compte que podeu sol·licitar l’exempció de la quota per a la tramesa d’aquest article.</message>

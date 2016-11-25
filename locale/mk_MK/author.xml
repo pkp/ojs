@@ -30,7 +30,7 @@
 	<message key="author.submit.metadata">Внеси метаподатоци</message>
 	<message key="author.submit.supplementaryFiles">Прикачи дополнителни датотеки</message>
 	<message key="author.submit.confirmation">Потврда</message>
-	<message key="author.submit.cancelSubmission">Поднесувањето може да го завршите подоцна со избирање на „Активни поднесувања“ од почетната страна.</message>
+	<message key="submission.submit.cancelSubmission">Поднесувањето може да го завршите подоцна со избирање на „Активни поднесувања“ од почетната страна.</message>
 	<message key="author.submit.notAccepting">Ова списание моментално не прифаќа поднесување на документи.</message>
 	<message key="author.submit.requestWaiver">Барање за откажување</message>
 	<message key="author.submit.qualifyForWaiver">Внимавајте при откажувањето на Поднесување на артикал за овој запис.</message>

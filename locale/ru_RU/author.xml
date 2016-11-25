@@ -31,7 +31,7 @@
 	<message key="author.submit.metadata">Метаданные</message>
 	<message key="author.submit.supplementaryFiles">Дополнительные файлы</message>
 	<message key="author.submit.confirmation">Подтверждение</message>
-	<message key="author.submit.cancelSubmission">Вы можете закончить эту отправку позже, выбрав «Статьи в работе» на домашней странице автора.</message>
+	<message key="submission.submit.cancelSubmission">Вы можете закончить эту отправку позже, выбрав «Статьи в работе» на домашней странице автора.</message>
 	<message key="author.submit.notAccepting">Этот журнал сейчас не принимает статьи.</message>
 	<message key="author.submit.requestWaiver">Запрос отмены оплаты</message>
 	<message key="author.submit.qualifyForWaiver">Пожалуйста рассмотрите возможность сделать исключение и отменить плату за отправку данной статьи</message>

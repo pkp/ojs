@@ -27,7 +27,7 @@
 	<message key="author.submit.start">Start</message>
 	<message key="author.submit.supplementaryFiles">Overfør supplerende filer</message>
 	<message key="author.submit.confirmation">Bekræftelse</message>
-	<message key="author.submit.cancelSubmission">Du kan fuldføre denne indsendelse på et senere tidspunkt ved at vælge Aktive indsendelser på startsiden for forfattere.</message>
+	<message key="submission.submit.cancelSubmission">Du kan fuldføre denne indsendelse på et senere tidspunkt ved at vælge Aktive indsendelser på startsiden for forfattere.</message>
 	<message key="author.submit.notAccepting">Dette tidsskrift accepterer ikke indsendelser på nuværende tidspunkt.</message>
 	<message key="author.submit.requestWaiver">Anmod om afkald</message>
 	<message key="author.submit.qualifyForWaiver">Overvej at give afkald på artikelmanuskriptgebyret for denne artikel</message>

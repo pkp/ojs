@@ -29,7 +29,7 @@
 	<message key="author.submit.metadata">Wprowadź metadane</message>
 	<message key="author.submit.supplementaryFiles">Prześlij dodatkowe pliki</message>
 	<message key="author.submit.confirmation">Potwierdź</message>
-	<message key="author.submit.cancelSubmission">Możesz uzupełnić swoje zgłoszenie w późniejszym terminie, przechodząc do "Zgłoszone teksty" w zakładce "Moje konto".</message>
+	<message key="submission.submit.cancelSubmission">Możesz uzupełnić swoje zgłoszenie w późniejszym terminie, przechodząc do "Zgłoszone teksty" w zakładce "Moje konto".</message>
 	<message key="author.submit.notAccepting">Czasopismo nie przyjmuje obecnie nowych zgłoszeń.</message>
 	<message key="author.submit.requestWaiver">Prośba o umorzenie płatności za publikację</message>
 	<message key="author.submit.qualityForWaiver">Proszę o umorzenie płatności za publikację testu</message>

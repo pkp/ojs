@@ -31,7 +31,7 @@
 	<message key="author.submit.upload">3. Ladda upp manuskriptet</message>
 	<message key="author.submit.supplementaryFiles">Ladda upp komplementerande filer</message>
 	<message key="author.submit.confirmation">Bekräfta</message>
-	<message key="author.submit.cancelSubmission">Du kan göra klart manusinlämningen vid ett senare tillfälle genom att välja Aktiva manuskript under Din Författarsida.</message>
+	<message key="submission.submit.cancelSubmission">Du kan göra klart manusinlämningen vid ett senare tillfälle genom att välja Aktiva manuskript under Din Författarsida.</message>
 	<message key="author.submit.notAccepting">Den här tidskriften tar för tillfället inte emot några manuskript.</message>
 	<message key="author.submit.requestWaiver">Begär avsägelse</message>
 	<message key="author.submit.qualifyForWaiver">Vänligen överväg att avstå från avgiften för den här artikeln</message>

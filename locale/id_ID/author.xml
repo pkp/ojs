@@ -29,7 +29,7 @@
 <message key="author.submit.upload">Unggah Naskah</message>
  <message key="author.submit.metadata">Masukkan Metadata</message> <message key="author.submit.supplementaryFiles">Unggah File Tambahan</message> 
 <message key="author.submit.confirmation">Konfirmasi</message>	
-<message key="author.submit.cancelSubmission">Anda dapat melengkapi naskah ini kapan saja dengan memilih Naskah Aktif dari Beranda Penulis.</message> 
+<message key="submission.submit.cancelSubmission">Anda dapat melengkapi naskah ini kapan saja dengan memilih Naskah Aktif dari Beranda Penulis.</message>
 	<message key="author.submit.notAccepting">Jurnal ini tidak menerima penyerahan naskah saat ini.</message>	
 <message key="author.submit.requestWaiver">Permintaan surat pernyataan melepaskan tuntutan</message>
 	<message key="author.submit.qualityForWaiver">Pertimbangkan menghilangkan  Biaya Penyerahan Artikel untuk artikel ini</message> 
