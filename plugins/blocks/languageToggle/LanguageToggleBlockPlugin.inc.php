@@ -60,12 +60,11 @@ class LanguageToggleBlockPlugin extends BlockPlugin {
 	 * Determine the plugin sequence. Overrides parent so that
 	 * the plugin will be displayed during install.
 	 *
-	 * @param $seq int
 	 * @param $contextId int Context ID (journal/press)
 	 */
-	function getSeq($seq, $contextId = null) {
+	function getSeq($contextId = null) {
 		if (!Config::getVar('general', 'installed')) return 2;
-		return parent::getSeq($seq, $contextId);
+		return parent::getSeq($contextId);
 	}
 
 	/**
