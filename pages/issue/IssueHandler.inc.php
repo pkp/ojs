@@ -128,13 +128,6 @@ class IssueHandler extends Handler {
 		$this->setupTemplate($request);
 		$journal = $request->getJournal();
 
-		$templateMgr = TemplateManager::getManager($request);
-		import('classes.file.PublicFileManager');
-		$publicFileManager = new PublicFileManager();
-		$coverImagePath = $request->getBaseUrl() . '/';
-		$coverImagePath .= $publicFileManager->getJournalFilesPath($journal->getId()) . '/';
-		$templateMgr->assign('coverImagePath', $coverImagePath);
-
 		$rangeInfo = $this->getRangeInfo($request, 'issues');
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getId(), $rangeInfo);
@@ -286,10 +279,7 @@ class IssueHandler extends Handler {
 
 		$locale = AppLocale::getLocale();
 
-		import('classes.file.PublicFileManager');
-		$publicFileManager = new PublicFileManager();
 		$templateMgr->assign(array(
-			'coverImagePath' => $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/',
 			'locale' => $locale,
 		));
 
