@@ -126,6 +126,7 @@ class IssueHandler extends Handler {
 	 */
 	function archive($args, $request) {
 		$this->setupTemplate($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$journal = $request->getJournal();
 
 		$rangeInfo = $this->getRangeInfo($request, 'issues');
