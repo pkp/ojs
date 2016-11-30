@@ -28,11 +28,15 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 	 * Fetch the form.
 	 */
 	function fetch($request) {
-		$templateMgr = TemplateManager::getManager($request);
+		$roleDao = DAORegistry::getDAO('RoleDAO');
+		$user = $request->getUser();
+		$canSubmitAll = $roleDao->userHasRole($this->context->getId(), $user->getId(), ROLE_ID_MANAGER) ||
+			$roleDao->userHasRole($this->context->getId(), $user->getId(), ROLE_ID_SUB_EDITOR);
 
-		// Get section for this context
+		// Get section options for this context
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$sectionOptions = array('0' => '') + $sectionDao->getSectionTitles($this->context->getId());
+		$sectionOptions = array('0' => '') + $sectionDao->getTitles($this->context->getId(), !$canSubmitAll);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('sectionOptions', $sectionOptions);
 
 		return parent::fetch($request);
