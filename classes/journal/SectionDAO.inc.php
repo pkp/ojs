@@ -394,20 +394,13 @@ class SectionDAO extends PKPSectionDAO {
 	 * Retrieve the IDs and titles of the sections for a journal in an associative array.
 	 * @return array
 	 */
-	function &getSectionTitles($journalId, $submittableOnly = false) {
+	function getTitles($journalId, $submittableOnly = false) {
 		$sections = array();
-
 		$sectionsIterator = $this->getByJournalId($journalId);
 		while ($section = $sectionsIterator->next()) {
-			if ($submittableOnly) {
-				if (!$section->getEditorRestricted()) {
-					$sections[$section->getId()] = $section->getLocalizedTitle();
-				}
-			} else {
-				$sections[$section->getId()] = $section->getLocalizedTitle();
-			}
+			if ($submittableOnly && $section->getEditorRestricted()) continue;
+			$sections[$section->getId()] = $section->getLocalizedTitle();
 		}
-
 		return $sections;
 	}
 
