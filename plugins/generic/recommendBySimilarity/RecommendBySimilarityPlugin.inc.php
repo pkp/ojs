@@ -23,8 +23,8 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 	/**
 	 * Constructor
 	 */
-	function RecommendBySimilarityPlugin() {
-		parent::GenericPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 

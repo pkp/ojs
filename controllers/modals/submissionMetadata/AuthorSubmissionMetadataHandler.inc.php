@@ -22,8 +22,8 @@ class AuthorSubmissionMetadataHandler extends SubmissionMetadataHandler {
 	/**
 	 * Constructor.
 	 */
-	function AuthorSubmissionMetadataHandler() {
-		parent::SubmissionMetadataHandler();
+	function __construct() {
+		parent::__construct();
 		$this->addRoleAssignment(array(ROLE_ID_AUTHOR), array('fetch', 'saveForm'));
 	}
 

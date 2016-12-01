@@ -4,7 +4,7 @@
 <!--
   * plugins/importexport/doaj/locale/da_DK/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -15,11 +15,8 @@
 <locale name="da_DK" full_name="Dansk">
 	<message key="plugins.importexport.doaj.displayName">DOAJ Export Plugin</message>
 	<message key="plugins.importexport.doaj.description">Eksporter tidsskrift til DOAJ og e-mail DOAJ repræsentant tidsskriftinformation</message>
-
-	
-	<message key="plugins.importexport.doaj.export">Eksporter tidsskriftdata til DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journal">Eksporter tidsskrift</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Eksporter artikel information i XML for arkivering i DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contact">Kontakt DOAJ for at blive inkluderet</message>
-	<message key="plugins.importexport.doaj.export.contactInfo">For at dit tidsskrift kan blive optaget i DOAJ, skal du indsende denne delvist automatisk udfyldte formular til DOAJ og udfylde de ufuldstændige informationer, så godt du kan.</message>
+	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Brug:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>

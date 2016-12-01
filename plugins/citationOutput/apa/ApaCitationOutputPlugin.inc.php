@@ -20,8 +20,8 @@ class ApaCitationOutputPlugin extends PKPApaCitationOutputPlugin {
 	/**
 	 * Constructor
 	 */
-	function ApaCitationOutputPlugin() {
-		parent::PKPApaCitationOutputPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 }
 

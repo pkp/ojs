@@ -57,7 +57,7 @@
 <br />
 Якщо Ви не робили цього запиту, будь ласка, ігноруйте цей лист і Ваш пароль не буде змінений. Якщо Ви бажаєте скинути свій пароль, натисніть на посиланні нижче.<br />
 <br />
-Скинути мій пароль: {$url}<br />
+Скинути мій пароль: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
                <description>Цей лист надсилається зареєстрованому користувачу, який вказав, що забув свій пароль і не може увійти до системи. У листі міститься URL, натиснувши на який користувач може скинути свій пароль.</description>
@@ -67,6 +67,7 @@
                <body><![CDATA[Ваш пароль для доступу до веб-сайту {$siteTitle} був успішно змінений. Будь ласка, збережіть вказані нижче ім'я користувача та пароль, оскільки ці дані будуть Вам необхідні протягом усієї подальшої роботи з цим журналом.<br />
 <br />
 Ваше ім'я користувача: {$username}<br />
+Пароль: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
                <description>Цей лист надсилається зареєстрованому користувачу після того, як він успішно скинув свій пароль за допомогою процесу, викладеного у листі PASSWORD_RESET_CONFIRM.</description>
@@ -367,7 +368,7 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 		<subject>Рішення редактора</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$journalTitle}&quot;.<br />
+Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;.<br />
 <br />
 Наше рішення:<br />
 <br />
@@ -378,7 +379,7 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 		<subject>Рішення редактора</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$journalTitle}&quot;.<br />
+Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;.<br />
 <br />
 Наше рішення:<br />
 <br />
@@ -389,7 +390,7 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 		<subject>Рішення редактора</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$journalTitle}&quot;.<br />
+Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;.<br />
 <br />
 Наше рішення:<br />
 <br />
@@ -400,7 +401,7 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 		<subject>Рішення редактора</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$journalTitle}&quot;.<br />
+Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;.<br />
 <br />
 Наше рішення:<br />
 <br />

@@ -21,8 +21,8 @@ class PluginGridRow extends PKPPluginGridRow {
 	 * @param $userRoles array
 	 * @param $contextLevel int CONTEXT_...
 	 */
-	function PluginGridRow($userRoles, $contextLevel) {
-		parent::PKPPluginGridRow($userRoles, $contextLevel);
+	function __construct($userRoles, $contextLevel) {
+		parent::__construct($userRoles, $contextLevel);
 	}
 
 

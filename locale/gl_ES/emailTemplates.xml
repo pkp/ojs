@@ -19,7 +19,7 @@
 <br />
 Se non fixeches esta petición ignora este correo electrónico e o teu contrasinal non mudará. Se desexas cambiar o teu contrasinal pica no atallo que che mostramos a continuación.<br />
 <br />
-Mudar o meu contrasinal: {$url}<br />
+Mudar o meu contrasinal: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Este correo envíase a un/a usuario/a rexistrado/a cando indica que esqueceu o seu contrasinal ou ben non se pode identificar. Proporciona unha URL para que cambien o seu contrasinal.</description>
@@ -29,6 +29,7 @@ Mudar o meu contrasinal: {$url}<br />
 		<body><![CDATA[O teu contrasinal en {$siteTitle} cambiouse sen problema. Desde xa,garda en lugar seguro o teu nome de usuaria/o e contrasinal, xa que  son necesarios para traballar na revista.<br />
 <br />
 Nombe de usuaria/o: {$username}<br />
+Contrasinal: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Este correo envíase a un/a usuario/a rexistrado/a unha vez que mudou o seu contrasinal seguindo o procedimento descrito no correo electrónico PASSWORD_RESET_CONFIRM.</description>
@@ -732,7 +733,7 @@ URL para administrar a subscrición: <a href="{$subscriptionUrl}">{$subscription
 		<subject>Decisión do Editor</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Tomamos unha decisión sobre a súa presentación a {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Tomamos unha decisión sobre a súa presentación a {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 A nosa decisión é:<br />
 <br />
@@ -743,7 +744,7 @@ A nosa decisión é:<br />
 		<subject>Decisión do Editor</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Tomamos unha decisión sobre a súa presentación en {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Tomamos unha decisión sobre a súa presentación en {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 A nosa decisión é:<br />
 <br />
@@ -754,7 +755,7 @@ A nosa decisión é:<br />
 		<subject>Decisión do Editor</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Tomamos unha decisión sobre a súa presentación en {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Tomamos unha decisión sobre a súa presentación en {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 A nosa decisión é:<br />
 <br />
@@ -774,7 +775,7 @@ Se desexas deixar de receber emails de notificación, vai dereito a {$unsubscrib
 		<subject>Decisión del Editor</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Tomamos unha decisión sobre a súa presentación en {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Tomamos unha decisión sobre a súa presentación en {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 A nosa decisión é:<br />
 <br />

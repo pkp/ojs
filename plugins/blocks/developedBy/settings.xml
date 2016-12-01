@@ -22,7 +22,7 @@
 	</setting>
 	<setting type="int">
 		<name>context</name>
-		<value>1</value><!-- BLOCK_CONTEXT_LEFT_SIDEBAR -->
+		<value>1</value><!-- BLOCK_CONTEXT_SIDEBAR -->
 	</setting>
 </plugin_settings>
 

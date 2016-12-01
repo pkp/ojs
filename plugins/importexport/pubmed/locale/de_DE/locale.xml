@@ -12,7 +12,7 @@
   -->
   
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.importexport.pubmed.displayName">PubMed-XML-Export-Plug-In</message>
+	<message key="plugins.importexport.pubmed.displayName">PubMed-XML-Export-Plugin</message>
 	<message key="plugins.importexport.pubmed.description">Beitragsmetadaten im PubMed-XML-Format für die Indexierung in MEDLINE exportieren.</message>
 	
 	<message key="plugins.importexport.pubmed.export">Daten exportieren</message>

@@ -33,8 +33,8 @@ class ArticleHandler extends Handler {
 	 * Constructor
 	 * @param $request Request
 	 */
-	function ArticleHandler() {
-		parent::Handler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**
@@ -108,7 +108,7 @@ class ArticleHandler extends Handler {
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = $galleyDao->getByBestGalleyId($galleyId, $article->getId());
 		if ($galley && $galley->getRemoteURL()) $request->redirectUrl($galley->getRemoteURL());
-		$templateMgr->assign('galley', $galley);
+
 		// Copyright and license info
 		$templateMgr->assign(array(
 			'copyright' => $journal->getLocalizedSetting('copyrightNotice'),
@@ -151,7 +151,6 @@ class ArticleHandler extends Handler {
 			$subscribedUser = $issueAction->subscribedUser($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
 			$subscribedDomain = $issueAction->subscribedDomain($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
 
-			$templateMgr->assign('showGalleyLinks', !$subscriptionRequired || $journal->getSetting('showGalleyLinks'));
 			$templateMgr->assign('hasAccess', !$subscriptionRequired || (isset($article) && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) || $subscribedUser || $subscribedDomain);
 
 			import('classes.payment.ojs.OJSPaymentManager');
@@ -177,16 +176,45 @@ class ArticleHandler extends Handler {
 
 	/**
 	 * Download an article file
-	 * @param array $args
-	 * @param PKPRequest $request
+	 * For deprecated OJS 2.x URLs; see https://github.com/pkp/pkp-lib/issues/1541
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function viewFile($args, $request) {
-		// For deprecated OJS 2.x URLs; see https://github.com/pkp/pkp-lib/issues/1541
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		$fileId = isset($args[2]) ? (int) $args[2] : 0;
-		header("HTTP/1.1 301 Moved Permanently");
+		header('HTTP/1.1 301 Moved Permanently');
 		$request->redirect(null, null, 'download', array($articleId, $galleyId, $fileId));
+	}
+
+	/**
+	 * Download a supplementary file.
+	 * For deprecated OJS 2.x URLs; see https://github.com/pkp/pkp-lib/issues/1541
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function downloadSuppFile($args, $request) {
+		$articleId = isset($args[0]) ? $args[0] : 0;
+		$suppId = isset($args[1]) ? $args[1] : 0;
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$submissionFiles = $submissionFileDao->getBySubmissionId($articleId);
+		foreach ($submissionFiles as $submissionFile) {
+			if ($submissionFile->getData('old-supp-id') == $suppId) {
+				$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+				$articleGalleys = $articleGalleyDao->getBySubmissionId($articleId);
+				while ($articleGalley = $articleGalleys->next()) {
+					$galleyFile = $articleGalley->getFile();
+print_r($galleyFile);
+					if ($galleyFile && $galleyFile->getFileId() == $submissionFile->getFileId()) {
+						header('HTTP/1.1 301 Moved Permanently');
+						$request->redirect(null, null, 'download', array($articleId, $articleGalley->getId(), $submissionFile->getFileId()));
+					}
+				}
+			}
+		}
+		$dispatcher = $request->getDispatcher();
+		$dispatcher->handle404();
 	}
 
 	/**
@@ -333,7 +361,6 @@ class ArticleHandler extends Handler {
 		$returnFormat = isset($args[2]) ? $args[2] : null;
 
 		$citationPlugins = PluginRegistry::loadCategory('citationFormats');
-		uasort($citationPlugins, create_function('$a, $b', 'return strcmp($a->getDisplayName(), $b->getDisplayName());'));
 
 		import('lib.pkp.classes.core.JSONMessage');
 

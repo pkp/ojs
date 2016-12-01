@@ -19,8 +19,8 @@ class JournalSettingsDAO extends SettingsDAO {
 	/**
 	 * Constructor
 	 */
-	function JournalSettingsDAO() {
-		parent::SettingsDAO();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

@@ -16,7 +16,8 @@
 	<message key="plugins.importexport.crossref.displayName">Programutvidelse for eksport til CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Eksporter artikkelmetadata i CrossRef XML-format.</message>
 
-	<message key="plugins.importexport.crossref.cliUsage">Bruk:
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] artikler [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] utgave [issueId]</message>
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Bruk:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 </locale>

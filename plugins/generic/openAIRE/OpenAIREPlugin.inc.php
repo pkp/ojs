@@ -26,34 +26,29 @@ class OpenAIREPlugin extends GenericPlugin {
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
-		//$this->addLocaleData();
 		if ($success && $this->getEnabled()) {
 			$this->import('OpenAIREDAO');
 			$openAIREDao = new OpenAIREDAO();
 			DAORegistry::registerDAO('OpenAIREDAO', $openAIREDao);
 
-
 			// Insert new field into author metadata submission form (submission step 3) and metadata form
-			HookRegistry::register('Templates::Author::Submit::AdditionalMetadata', array($this, 'metadataFieldEdit'));
-			HookRegistry::register('Templates::Submission::MetadataEdit::AdditionalMetadata', array($this, 'metadataFieldEdit'));
-			// Consider the new field in the metadata view
-			HookRegistry::register('Templates::Submission::Metadata::Metadata::AdditionalMetadata', array($this, 'metadataFieldView'));
+			HookRegistry::register('Templates::Submission::SubmissionMetadataForm::AdditionalMetadata', array($this, 'metadataFieldEdit'));
 
 			// Hook for initData in two forms -- init the new field
-			HookRegistry::register('metadataform::initdata', array($this, 'metadataInitData'));
-			HookRegistry::register('authorsubmitstep3form::initdata', array($this, 'metadataInitData'));
+			HookRegistry::register('submissionsubmitstep3form::initdata', array($this, 'metadataInitData'));
+			HookRegistry::register('issueentrysubmissionreviewform::initdata', array($this, 'metadataInitData'));
 
 			// Hook for readUserVars in two forms -- consider the new field entry
-			HookRegistry::register('metadataform::readuservars', array($this, 'metadataReadUserVars'));
-			HookRegistry::register('authorsubmitstep3form::readuservars', array($this, 'metadataReadUserVars'));
+			HookRegistry::register('submissionsubmitstep3form::readuservars', array($this, 'metadataReadUserVars'));
+			HookRegistry::register('issueentrysubmissionreviewform::readuservars', array($this, 'metadataReadUserVars'));
 
 			// Hook for execute in two forms -- consider the new field in the article settings
-			HookRegistry::register('authorsubmitstep3form::execute', array($this, 'metadataExecute'));
-			HookRegistry::register('metadataform::execute', array($this, 'metadataExecute'));
+			HookRegistry::register('submissionsubmitstep3form::execute', array($this, 'metadataExecute'));
+			HookRegistry::register('issueentrysubmissionreviewform::execute', array($this, 'metadataExecute'));
 
 			// Hook for save in two forms -- add validation for the new field
-			HookRegistry::register('authorsubmitstep3form::Constructor', array($this, 'addCheck'));
-			HookRegistry::register('metadataform::Constructor', array($this, 'addCheck'));
+			HookRegistry::register('submissionsubmitstep3form::Constructor', array($this, 'addCheck'));
+			HookRegistry::register('issueentrysubmissionreviewform::Constructor', array($this, 'addCheck'));
 
 			// Consider the new field for ArticleDAO for storage
 			HookRegistry::register('articledao::getAdditionalFieldNames', array($this, 'articleSubmitGetFieldNames'));
@@ -75,13 +70,20 @@ class OpenAIREPlugin extends GenericPlugin {
 		return $success;
 	}
 
+	/**
+	 * @copydoc Plugin::getDisplayName()
+	 */
 	function getDisplayName() {
 		return __('plugins.generic.openAIRE.displayName');
 	}
 
+	/**
+	 * @copydoc Plugin::getDescription()
+	 */
 	function getDescription() {
 		return __('plugins.generic.openAIRE.description');
 	}
+
 
 	/*
 	 * Metadata
@@ -99,17 +101,6 @@ class OpenAIREPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Add projectID to the metadata view
-	 */
-	function metadataFieldView($hookName, $params) {
-		$smarty =& $params[1];
-		$output =& $params[2];
-
-		$output .= $smarty->fetch($this->getTemplatePath() . 'projectIDView.tpl');
-		return false;
-	}
-
-	/**
 	 * Add projectID element to the article
 	 */
 	function articleSubmitGetFieldNames($hookName, $params) {
@@ -123,7 +114,11 @@ class OpenAIREPlugin extends GenericPlugin {
 	 */
 	function metadataExecute($hookName, $params) {
 		$form =& $params[0];
-		$article =& $form->article;
+		if (get_class($form) == 'SubmissionSubmitStep3Form') {
+			$article =& $params[1];
+		} elseif (get_class($form) == 'IssueEntrySubmissionReviewForm') {
+			$article = $form->getSubmission();
+		}
 		$formProjectID = $form->getData('projectID');
 		$article->setData('projectID', $formProjectID);
 		return false;
@@ -134,7 +129,7 @@ class OpenAIREPlugin extends GenericPlugin {
 	 */
 	function addCheck($hookName, $params) {
 		$form =& $params[0];
-		if (get_class($form) == 'AuthorSubmitStep3Form' || get_class($form) == 'MetadataForm' ) {
+		if (get_class($form) == 'SubmissionSubmitStep3Form' || get_class($form) == 'IssueEntrySubmissionReviewForm' ) {
 			$form->addCheck(new FormValidatorRegExp($form, 'projectID', 'optional', 'plugins.generic.openAIRE.projectIDValid', '/^\d{6}$/'));
 		}
 		return false;
@@ -145,7 +140,11 @@ class OpenAIREPlugin extends GenericPlugin {
 	 */
 	function metadataInitData($hookName, $params) {
 		$form =& $params[0];
-		$article =& $form->article;
+		if (get_class($form) == 'SubmissionSubmitStep3Form') {
+			$article = $form->submission;
+		} elseif (get_class($form) == 'IssueEntrySubmissionReviewForm') {
+			$article = $form->getSubmission();
+		}
 		$articleProjectID = $article->getData('projectID');
 		$form->setData('projectID', $articleProjectID);
 		return false;

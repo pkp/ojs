@@ -19,7 +19,7 @@
 <br />
 Si vous n'avez pas fait cette demande, veuillez ne pas tenir compte du présent message, votre mot de passe restera le même. Si vous voulez réinitialiser votre mot de passe, cliquer sur l'URL et un nouveau mot de passe vous sera envoyé par courriel sous peu.<br />
 <br />
-Réinitialisation du mot de passe : {$url}<br />
+Réinitialisation du mot de passe : <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Ce courriel est envoyé aux utilisateurs qui nous signalent avoir oublié leur mot de passe ou qui sont incapables d'ouvrir une session. Il fournit le lien URL pour réinitialiser leur mot de passe.</description>
@@ -29,6 +29,7 @@ Réinitialisation du mot de passe : {$url}<br />
 		<body><![CDATA[Votre mot de passe pour le site Web {$siteTitle} a été réinitialisé avec succès. Veuillez conserver précieusement votre nom d'utilisateur ainsi que votre mot de passe. Vous en aurez besoin pour chacune de vos interactions avec la revue.<br />
 <br />
 Votre nom d'utilisateur : {$username}<br />
+Mot de passe : {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description><![CDATA[Ce courriel est envoyé aux utilisateurs inscrits lorsqu'ils ont réussi à réinitialiser leur mot de passe en ayant suivi la procédure décrite dans le courriel « Confirmation de la réinitialisation du mot de passe ».]]></description>
@@ -103,6 +104,20 @@ Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous r
 <br />
 {$editorialContactSignature}]]&gt;]]></body>
 		<description>Ce courriel, lorsqu'activé, est envoyé automatiquement à un auteur quand il ou elle a complété le processus de soumission d'un manuscrit à la revue. Il fournit les informations sur comment suivre la soumission à travers le processus éditorial, et remercie l'auteur de sa soumission.</description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK">
+		<subject>Accusé de réception d'une soumission</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Merci d'avoir envoyé votre manuscrit &quot;{$submissionTitle}&quot; à la presse {$contextName}. Le système de gestion virtuel de la presse que nous utilisons vous permet de suivre les progrès de votre article tout au long du processus de publication. Il suffit d'ouvrir une session sur le site Web:<br />
+<br />
+URL du manuscrit: {$submissionUrl}<br />
+Nom d'utilisateur: {$authorUsername}<br />
+<br />
+Si vous avez des questions, n'hésitez pas à me contacter. Merci d'avoir envoyé votre article à cette presse.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Lorsqu'il est activé, ce courriel est envoyé automatiquement à l'auteur lorsqu'il soumet son manuscrit à la presse. Il fournit des renseignements sur le suivi de la soumission tout au long du processus de publication et remercie l'auteur d'avoir envoyé une soumission.</description>
 	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
 		<subject>Soumission non conforme</subject>
@@ -730,7 +745,7 @@ Votre mot de passe pour désactiver les courriels d'avis est : {$password}<br />
 		<subject>Décision du rédacteur</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Nous avons pris une décision concernant votre soumission à {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Notre décision est de :<br />
 <br />
@@ -740,7 +755,7 @@ Notre décision est de :<br />
 		<subject>Décision du rédacteur</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Nous avons pris une décision concernant votre soumission à {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Notre décision est de :<br />
 <br />
@@ -750,7 +765,7 @@ Notre décision est de :<br />
 		<subject>Décision du rédacteur</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Nous avons pris une décision concernant votre soumission à {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Notre décision est de :<br />
 <br />
@@ -760,7 +775,7 @@ Notre décision est de :<br />
 		<subject>Décision du rédacteur</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Nous avons pris une décision concernant votre soumission à {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Notre décision est de :<br />
 <br />

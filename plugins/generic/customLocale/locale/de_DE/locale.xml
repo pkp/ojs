@@ -12,8 +12,8 @@
   -->
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.generic.customLocale.name">Plug-In für die Regionalanpassung</message>
-	<message key="plugins.generic.customLocale.description">Dieses Plug-In ermöglicht die Anpassung der Standardeinstellungen für die Texte der von OJS verwandten Benutzungsoberfläche.</message>
+	<message key="plugins.generic.customLocale.name">Plugin für die Regionalanpassung</message>
+	<message key="plugins.generic.customLocale.description">Dieses Plugin ermöglicht die Anpassung der Standardeinstellungen für die Texte der von OJS verwandten Benutzungsoberfläche.</message>
 
 	<message key="plugins.generic.customLocale.longDescription">Auf dieser Seite werden alle Regionaleinstellungsdateien, die derzeit im System verfügbar sind, angezeigt.</message>
 	<message key="plugins.generic.customLocale.localeDescription">Auf dieser Seite werden alle Dateien angezeigt, die für die gewählte Sprachumgebung verfügbar sind.</message>

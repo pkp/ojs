@@ -20,7 +20,7 @@ class MastheadForm extends ContextSettingsForm {
 	/**
 	 * Constructor.
 	 */
-	function MastheadForm($wizardMode = false) {
+	function __construct($wizardMode = false) {
 		$settings = array(
 			'name' => 'string',
 			'acronym' => 'string',
@@ -33,7 +33,7 @@ class MastheadForm extends ContextSettingsForm {
 			'about' => 'string',
 		);
 
-		parent::ContextSettingsForm($settings, 'controllers/tab/settings/masthead/form/mastheadForm.tpl', $wizardMode);
+		parent::__construct($settings, 'controllers/tab/settings/masthead/form/mastheadForm.tpl', $wizardMode);
 
 		$this->addCheck(new FormValidatorLocale($this, 'name', 'required', 'manager.setup.form.journalNameRequired'));
 		$this->addCheck(new FormValidatorLocale($this, 'acronym', 'required', 'manager.setup.form.journalInitialsRequired'));

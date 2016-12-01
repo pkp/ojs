@@ -35,8 +35,8 @@ class OAIDAO extends PKPOAIDAO {
  	/**
 	 * Constructor.
 	 */
-	function OAIDAO() {
-		parent::PKPOAIDAO();
+	function __construct() {
+		parent::__construct();
 		$this->journalDao = DAORegistry::getDAO('JournalDAO');
 		$this->sectionDao = DAORegistry::getDAO('SectionDAO');
 		$this->publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');

@@ -20,8 +20,8 @@ class RegexCitationParserPlugin extends PKPRegexCitationParserPlugin {
 	/**
 	 * Constructor
 	 */
-	function RegexCitationParserPlugin() {
-		parent::PKPRegexCitationParserPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 }
 

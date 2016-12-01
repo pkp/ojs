@@ -7,6 +7,8 @@
  *
  * Form for creation and modification of an issue
  *}
+
+{help file="issue-management.md#edit-issue-data" class="pkp_help_tab"}
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
@@ -40,10 +42,10 @@
 	{/if}
 
 	{if $issuePublished}
-		{fbvFormArea title="editor.issues.datePublished"}
+		{fbvFormArea id="datePublishedArea" title="editor.issues.datePublished"}
 			{fbvFormSection}
 				{if $issuePublished}
-					{fbvElement type="text" id="datePublished" value=$datePublished|date_format:"%Y-%m-%d" size=$fbvStyles.size.SMALL class="datepicker"}
+					{fbvElement type="text" id="datePublished" value=$datePublished|date_format:$dateFormatShort size=$fbvStyles.size.SMALL class="datepicker"}
 				{/if}
 			{/fbvFormSection}
 		{/fbvFormArea}

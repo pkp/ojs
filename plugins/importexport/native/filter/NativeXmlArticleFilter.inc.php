@@ -20,8 +20,8 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function NativeXmlArticleFilter($filterGroup) {
-		parent::NativeXmlSubmissionFilter($filterGroup);
+	function __construct($filterGroup) {
+		parent::__construct($filterGroup);
 	}
 
 
@@ -52,20 +52,42 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	}
 
 	/**
+	 * @see Filter::process()
+	 * @param $document DOMDocument|string
+	 * @return array Array of imported documents
+	 */
+	function &process(&$document) {
+		$importedObjects =& parent::process($document);
+
+		// Index imported content
+		import('classes.search.ArticleSearchIndex');
+		foreach ($importedObjects as $submission) {
+			assert(is_a($submission, 'Submission'));
+			ArticleSearchIndex::articleMetadataChanged($submission);
+			ArticleSearchIndex::submissionFilesChanged($submission);
+		}
+		ArticleSearchIndex::articleChangesFinished();
+
+		return $importedObjects;
+	}
+
+	/**
 	 * Populate the submission object from the node
 	 * @param $submission Submission
 	 * @param $node DOMElement
 	 * @return Submission
 	 */
 	function populateObject($submission, $node) {
+		$deployment = $this->getDeployment();
 		$sectionAbbrev = $node->getAttribute('section_ref');
 		if ($sectionAbbrev !== '') {
 			$sectionDao = DAORegistry::getDAO('SectionDAO');
 			$section = $sectionDao->getByAbbrev($sectionAbbrev, $submission->getContextId());
 			if (!$section) {
-				fatalError('Could not find a section with the path "' . $sectionAbbrev . '"!');
+				$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.native.error.unknownSection', array('param' => $sectionAbbrev)));
+			} else {
+				$submission->setSectionId($section->getId());
 			}
-			$submission->setSectionId($section->getId());
 		}
 
 		return parent::populateObject($submission, $node);
@@ -85,6 +107,12 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 			case 'article_galley':
 				$this->parseArticleGalley($n, $submission);
 				break;
+			case 'issue_identification':
+				// do nothing, because this is done in populatePublishedSubmission
+				break;
+			case 'pages':
+				$submission->setPages($n->textContent);
+				break;
 			default:
 				parent::handleChildElement($n, $submission);
 		}
@@ -96,6 +124,8 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	 * @return Filter
 	 */
 	function getImportFilter($elementName) {
+		$deployment = $this->getDeployment();
+		$submission = $deployment->getSubmission();
 		switch ($elementName) {
 			case 'submission_file':
 				$importClass='SubmissionFile';
@@ -111,7 +141,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 				break;
 			default:
 				$importClass=null; // Suppress scrutinizer warn
-				fatalError('Unknown node ' . $elementName);
+				$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $elementName)));
 		}
 		// Caps on class name for consistency with imports, whose filter
 		// group names are generated implicitly.
@@ -145,10 +175,67 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	function populatePublishedSubmission($submission, $node) {
 		$deployment = $this->getDeployment();
 		$issue = $deployment->getIssue();
+		if (empty($issue)) {
+			$issueIdentificationNodes = $node->getElementsByTagName('issue_identification');
+
+			if ($issueIdentificationNodes->length != 1) {
+				$titleNodes = $node->getElementsByTagName('title');
+				$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.native.import.error.issueIdentificationMissing', array('articleTitle' => $titleNodes->item(0)->textContent)));
+			} else {
+				$issueIdentificationNode = $issueIdentificationNodes->item(0);
+				$issue = $this->parseIssueIdentification($issueIdentificationNode);
+			}
+		}
 		$submission->setSequence($node->getAttribute('seq'));
 		$submission->setAccessStatus($node->getAttribute('access_status'));
-		$submission->setIssueId($issue->getId());
+		if ($issue) $submission->setIssueId($issue->getId());
 		return $submission;
+	}
+
+	/**
+	 * Get the issue from the given identification.
+	 * @param $node DOMElement
+	 * @return Issue
+	 */
+	function parseIssueIdentification($node) {
+		$deployment = $this->getDeployment();
+		$context = $deployment->getContext();
+		$submission = $deployment->getSubmission();
+		$vol = $num = $year = null;
+		$titles = $givenIssueIdentification = array();
+		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
+			if (is_a($n, 'DOMElement')) {
+				switch ($n->tagName) {
+					case 'volume':
+						$vol = $n->textContent;
+						$givenIssueIdentification[] = 'volue = ' .$vol .' ';
+						break;
+					case 'number':
+						$num = $n->textContent;
+						$givenIssueIdentification[] = 'number = ' .$num .' ';
+						break;
+					case 'year':
+						$year = $n->textContent;
+						$givenIssueIdentification[] = 'year = ' .$year .' ';
+						break;
+					case 'title':
+						list($locale, $value) = $this->parseLocalizedContent($n);
+						if (empty($locale)) $locale = $context->getPrimaryLocale();
+						$titles[$locale] = $value;
+						$givenIssueIdentification[] = 'title (' .$locale .') = ' .$value .' ';
+						break;
+				}
+			}
+		}
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issue = null;
+		$issuesByIdentification = $issueDao->getIssuesByIdentification($context->getId(), $vol, $num, $year, $titles);
+		if ($issuesByIdentification->getCount() != 1) {
+			$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.native.import.error.issueIdentificationMatch', array('issueIdentification' => implode(',', $givenIssueIdentification))));
+		} else {
+			$issue = $issuesByIdentification->next();
+		}
+		return $issue;
 	}
 }
 

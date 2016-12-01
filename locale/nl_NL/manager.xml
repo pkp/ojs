@@ -174,7 +174,6 @@
 	<message key="manager.setup.initialIssue">Eerste nummer</message>
 	<message key="manager.setup.initialIssueDescription">Identificeer, afhankelijk van de gekozen vorm, nummer, volume en/of jaar van het eerste nummer dat met OJS gepubliceerd gaat worden:</message>
 	<message key="manager.setup.institution">Instituut</message>
-	<message key="manager.setup.issnDescription"><![CDATA[Het ISSN (Internationaal Standaard SerieNummer) is een achtcijferig nummer dat periodieke publicaties, inclusief elektronische versies identificeert. Het wordt beheerd door een wereldwijd netwerk van nationale centra gecoördineerd door een internationaal centrum in Parijs, gesteund door Unesco en de Franse regering. Een nummer kan verkregen worden bij de <a href="http://www.issn.org" target="_new">ISSN website</a>.  Dit kan op ieder gewenst moment gedaan worden.]]></message>
 	<message key="manager.setup.itemsDescription">Onderdelen voor de navigatiebalk kunnen toegevoegd worden aan de huidige set die bovenaan de pagina getoond wordt (Home, Over, Gebruiker, enz.).</message>
 	<message key="manager.setup.itemsPerPage">Items per pagina</message>
 	<message key="manager.setup.journalAbbreviation">Tijdschrift-afkorting</message>

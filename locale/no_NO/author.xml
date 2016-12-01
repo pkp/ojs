@@ -29,7 +29,7 @@
 	<message key="author.submit.metadata">Skriv inn metadata</message>
 	<message key="author.submit.supplementaryFiles">Last opp tilleggsfiler</message>
 	<message key="author.submit.confirmation">Bekreftelse</message>
-	<message key="author.submit.cancelSubmission">Du kan fullføre denne innsendingen senere, ved å velge Aktive manus fra forfattersiden din.</message>
+	<message key="submission.submit.cancelSubmission">Du kan fullføre denne innsendingen senere, ved å velge Aktive manus fra forfattersiden din.</message>
 	<message key="author.submit.notAccepting">Dette tidsskriftet tar for øyeblikket ikke imot bidrag.</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Last opp manuskript i redigert versjon</message>
 	<message key="author.submissions.proofreadingCorrections">Korrektur</message>

@@ -25,8 +25,8 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function Dc11SchemaArticleAdapter($filterGroup) {
-		parent::MetadataDataObjectAdapter($filterGroup);
+	function __construct($filterGroup) {
+		parent::__construct($filterGroup);
 	}
 
 
@@ -46,11 +46,10 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 	//
 	/**
 	 * @see MetadataDataObjectAdapter::injectMetadataIntoDataObject()
-	 * @param $dc11Description MetadataDescription
-	 * @param $article Article
-	 * @param $authorClassName string the application specific author class name
+	 * @param $metadataDescription MetadataDescription
+	 * @param $targetDataObject Article
 	 */
-	function &injectMetadataIntoDataObject(&$dc11Description, &$article, $authorClassName) {
+	function &injectMetadataIntoDataObject(&$metadataDescription, &$targetDataObject) {
 		// Not implemented
 		assert(false);
 	}
@@ -76,7 +75,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		$section = $oaiDao->getSection($article->getSectionId());
 		if (is_a($article, 'PublishedArticle')) { /* @var $article PublishedArticle */
 			$issue = $oaiDao->getIssue($article->getIssueId());
-		}
+		} else $issue = null;
 
 		$dc11Description = $this->instantiateMetadataDescription();
 

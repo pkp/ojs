@@ -30,7 +30,7 @@
 	<message key="author.submit.metadata">Metadaten eingeben</message>
 	<message key="author.submit.supplementaryFiles">Zusatzdateien hochladen</message>
 	<message key="author.submit.confirmation">Bestätigung</message>
-	<message key="author.submit.cancelSubmission">Sie können die Einreichung auch später fertigstellen, indem Sie "Aktuelle Beiträge" auf der Autor/innenstartseite auswählen.</message>
+	<message key="submission.submit.cancelSubmission">Sie können die Einreichung auch später fertigstellen, indem Sie "Aktuelle Beiträge" auf der Autor/innenstartseite auswählen.</message>
 	<message key="author.submit.notAccepting">Die Zeitschrift nimmt zur Zeit keine Beiträge an.</message>
 	<message key="author.submit.requestWaiver">Gebührenverzicht beantragen</message>
 	<message key="author.submit.qualifyForWaiver">Bitte ziehen Sie einen Verzicht auf die Einreichungsgebühr für diesen Artikel in Erwägung.</message>

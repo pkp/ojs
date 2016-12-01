@@ -174,7 +174,6 @@
 	<message key="manager.setup.initialIssue">Edição Inicial</message>
 	<message key="manager.setup.initialIssueDescription">Dependendo do formato escolhido, informe sobre a edição, volume e/ou ano da primeira edição a ser publicada no sistema:</message>
 	<message key="manager.setup.institution">Instituição</message>
-	<message key="manager.setup.issnDescription"><![CDATA[O ISSN (International Standard Serial Number) é um número de oito dígitos que identifica publicações seriadas como tais, incluindo publicações electrónicas. É gerido por uma rede mundial de Centros Nacionais, coordenados pelo Centro Internacional do ISSN em Paris, apoiado pela Unesco e o Governo francês. O número pode ser obtido do portal internacional <a href="http://www.issn.org" target="_new">ISSN web site</a>, ou para publicações brasileiras no <a href="http://www.ibict.br" target="_blank">Portal do Ibict</a>, acedendo aos Produtos e Serviços. O número pode ser adquirido a qualquer tempo durante a operação da revista. É importante salientar que para cada suporte (formato) de publicação de uma revista exige um número diferente (ex.: publicação em CD-Rom, internet, impresso.)]]></message>
 	<message key="manager.setup.itemsDescription">Itens na Barra de Navegação, que aparece no topo da página, podem ser incluídos (Página Inicial, Sobre, Página do Utilizador, etc.).</message>
 	<message key="manager.setup.itemsPerPage">Itens por página</message>
 	<message key="manager.setup.journalAbbreviation">Abreviatura da Revista</message>

@@ -20,9 +20,9 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function ArticleCrossrefXmlFilter($filterGroup) {
+	function __construct($filterGroup) {
 		$this->setDisplayName('Crossref XML article export');
-		parent::IssueCrossrefXmlFilter($filterGroup);
+		parent::__construct($filterGroup);
 	}
 
 	//
@@ -182,7 +182,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 				$submissionGalleys[] = $galley;
 			}
 		}
-		// submission galley files - colelction nodes
+		// submission galley files - collection nodes
 		if (!empty($submissionGalleys)) {
 			$this->appendCollectionNodes($doc, $doiDataNode, $submission, $submissionGalleys);
 		}

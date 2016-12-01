@@ -21,13 +21,8 @@
 		{include file="frontend/components/breadcrumbs_article.tpl" currentTitleKey="article.article"}
 	{/if}
 
-	{if $galley}
-		{* Show galley overview *}
-		{include file="frontend/objects/galley_details.tpl"}
-	{else}
-		{* Show article overview *}
-		{include file="frontend/objects/article_details.tpl"}
-	{/if}
+	{* Show article overview *}
+	{include file="frontend/objects/article_details.tpl"}
 
 	{call_hook name="Templates::Article::Footer::PageFooter"}
 

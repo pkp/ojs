@@ -30,9 +30,14 @@
 	<message key="author.submit.metadata">Ввод метаданных</message>
 	<message key="author.submit.supplementaryFiles">Загрузка дополнительных файлов</message>
 	<message key="author.submit.confirmation">Подтверждение</message>
+<<<<<<< HEAD
 	<message key="author.submit.nextSteps">Следующие шаги</message>
 	<message key="author.submit.cancelSubmission">Вы можете закончить эту отправку позже, выбрав «Активные материалы» на домашней странице автора.</message>
 	<message key="author.submit.notAccepting">Этот журнал сейчас не принимает материалы.</message>
+=======
+	<message key="submission.submit.cancelSubmission">Вы можете закончить эту отправку позже, выбрав «Статьи в работе» на домашней странице автора.</message>
+	<message key="author.submit.notAccepting">Этот журнал сейчас не принимает статьи.</message>
+>>>>>>> pkp/master
 	<message key="author.submit.requestWaiver">Запрос отмены оплаты</message>
 	<message key="author.submit.qualifyForWaiver">Пожалуйста, рассмотрите возможность отменить плату за отправку данной статьи</message>
 	<message key="author.submit.addReasonsForWaiver">Пожалуйста, используйте поле комментариев ниже для указания причин, почему плата должна быть отменена.</message>

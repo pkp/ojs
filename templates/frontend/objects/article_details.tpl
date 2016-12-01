@@ -141,14 +141,14 @@
 		<div class="entry_details">
 
 			{* Article/Issue cover image *}
-			{if $article->getCoverImage() || $issue->getCoverImage()}
+			{if $article->getLocalizedCoverImage() || $issue->getLocalizedCoverImage()}
 				<div class="item cover_image">
 					<div class="sub_item">
-						{if $article->getCoverImage()}
-							<img src="{$publicFilesDir}/{$article->getCoverImage()|escape}"{if $article->getCoverImageAltText()} alt="{$article->getCoverImageAltText()|escape}"{/if}>
+						{if $article->getLocalizedCoverImage()}
+							<img src="{$publicFilesDir}/{$article->getLocalizedCoverImage()|escape}"{if $article->getLocalizedCoverImageAltText()} alt="{$article->getLocalizedCoverImageAltText()|escape}"{/if}>
 						{else}
 							<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
-								<img src="{$publicFilesDir}/{$issue->getCoverImage()|escape}"{if $issue->getCoverImageAltText()} alt="{$issue->getCoverImageAltText()|escape}"{/if}>
+								<img src="{$publicFilesDir}/{$issue->getLocalizedCoverImage()|escape}"{if $issue->getLocalizedCoverImageAltText()} alt="{$issue->getLocalizedCoverImageAltText()|escape}"{/if}>
 							</a>
 						{/if}
 					</div>
@@ -187,7 +187,7 @@
 					{foreach from=$citationPlugins name="citationPlugins" item="citationPlugin"}
 						<div class="sub_item citation_display">
 							<div class="label">
-								How to Cite
+								{translate key="submission.howToCite"}
 							</div>
 							<div id="citationOutput" class="value">
 								{$citationPlugin->fetchCitation($article, $issue, $currentContext)}
@@ -199,7 +199,7 @@
 					{* Output list of all citation formats *}
 					<div class="sub_item citation_format_options">
 						<div class="label">
-							Citation Formats
+							{translate key="submission.howToCite.citationFormats"}
 						</div>
 						<div class="value">
 							<ul>

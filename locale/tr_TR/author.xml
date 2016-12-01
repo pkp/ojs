@@ -31,7 +31,7 @@
 	<message key="author.submit.metadata">Üst Veri Gir</message>
 	<message key="author.submit.supplementaryFiles">Ek Dosyaları Yükle</message>
 	<message key="author.submit.confirmation">Onay</message>
-	<message key="author.submit.cancelSubmission">Bu gönderiyi, yazar sayfasında, Aktif Gönderilerden seçerek daha sonra tamamlayabilirsiniz.</message>
+	<message key="submission.submit.cancelSubmission">Bu gönderiyi, yazar sayfasında, Aktif Gönderilerden seçerek daha sonra tamamlayabilirsiniz.</message>
 	<message key="author.submit.notAccepting">Dergi şu anda göneri kabul etemiyor.</message>
 	<message key="author.submit.requestWaiver">Vazgeç</message>
 	<message key="author.submit.addReasonsForWaiver">Ücretten neden feragat edilmesi gerektiğini bildirmek için lütfen aşağıdaki yorum kutusunu kullanın.</message>

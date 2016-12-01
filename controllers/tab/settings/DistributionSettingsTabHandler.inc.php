@@ -20,8 +20,8 @@ class DistributionSettingsTabHandler extends PKPDistributionSettingsTabHandler {
 	/**
 	 * Constructor
 	 */
-	function DistributionSettingsTabHandler() {
-		parent::PKPDistributionSettingsTabHandler();
+	function __construct() {
+		parent::__construct();
 		$this->setPageTabs(array_merge(
 			$this->getPageTabs(),
 			array(

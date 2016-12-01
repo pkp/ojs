@@ -18,7 +18,7 @@
 <br />
 Si no hizo usted esta petición ignore este correo-e y su contraseña no cambiará. Si desea cambiar su contraseña pinche en el enlace que le mostramos a continuación.<br />
 <br />
-Cambiar mi contraseña: {$url}<br />
+Cambiar mi contraseña: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Este correo se envía a un/a usuario/a registrado/a cuando indican que han olvidado su contraseña o que no se pueden identificar. Proporciona una URL para que cambien su contraseña.</description>
@@ -28,6 +28,7 @@ Cambiar mi contraseña: {$url}<br />
 		<body><![CDATA[Su contraseña en {$siteTitle} se ha cambiado sin problema. Por favor, guarde en lugar seguro su nombre de usuaria/o y contraseña, ya que son necesarios para trabajar con la revista.<br />
 <br />
 Nombre de usuaria/o: {$username}<br />
+Contraseña: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Este correo se envía a un/a usuario/a registrado/a una vez han cambiado su contraseña siguiendo el procedimiento descrito en el correo-e PASSWORD_RESET_CONFIRM.</description>
@@ -176,6 +177,20 @@ Si tiene cualquier pregunta no dude en contactar con nosotros/as. Gracias por te
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Este correo, cuando está activado, se envía automáticamente a un/a autor/a when cuando completa el proceso de envío de un manuscrito a la revista. Proporciona información para hacer el seguimiento del envío a través del proceso y agradece la contribución.</description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK">
+		<subject>Acuse de recibo del envío</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Gracias por enviar el manuscrito &quot;{$submissionTitle}&quot; a {$contextName}. Con el sistema de gestión de publicaciones en línea que utilizamos podrá seguir el progreso a través del proceso editorial tras iniciar sesión en el sitio web de la publicación:<br />
+<br />
+URL del manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nombre de usuario/a: {$authorUsername}<br />
+<br />
+Si tiene alguna duda puede ponerse en contacto conmigo. Gracias por elegir esta editorial para mostrar su trabajo.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Este correo electrónico, si está activado, se envía automáticamente a un autor/a cuando completa el proceso de envío de un manuscrito a la editorial. Proporciona información sobre el seguimiento del envío en el proceso y agradece al autor/a el envío.</description>
 	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
 		<subject>Envío rechazado</subject>

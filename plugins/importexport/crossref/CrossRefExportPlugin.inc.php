@@ -40,8 +40,8 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	/**
 	 * Constructor
 	 */
-	function CrossRefExportPlugin() {
-		parent::DOIPubIdExportPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**
@@ -66,21 +66,14 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc DOIExportPlugin::getSubmissionFilter()
+	 * @copydoc PubObjectsExportPlugin::getSubmissionFilter()
 	 */
 	function getSubmissionFilter() {
 		return 'article=>crossref-xml';
 	}
 
 	/**
-	 * @copydoc DOIExportPlugin::getIssueFilter()
-	 */
-	function getIssueFilter() {
-		return 'issue=>crossref-xml';
-	}
-
-	/**
-	 * @copydoc DOIExportPlugin::getStatusNames()
+	 * @copydoc PubObjectsExportPlugin::getStatusNames()
 	 */
 	function getStatusNames() {
 		return array_merge(parent::getStatusNames(), array(
@@ -88,14 +81,14 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 			CROSSREF_STATUS_COMPLETED => __('plugins.importexport.crossref.status.completed'),
 			CROSSREF_STATUS_REGISTERED => __('plugins.importexport.crossref.status.registered'),
 			CROSSREF_STATUS_FAILED => __('plugins.importexport.crossref.status.failed'),
-			DOI_EXPORT_STATUS_MARKEDREGISTERED => __('plugins.importexport.crossref.status.markedRegistered'),
+			EXPORT_STATUS_MARKEDREGISTERED => __('plugins.importexport.crossref.status.markedRegistered'),
 		));
 	}
 
 	/**
 	 * Provide the link to more status information only if the DOI deposit failed
 	 *
-	 * @copydoc DOIExportPlugin::getStatusActions()
+	 * @copydoc PubObjectsExportPlugin::getStatusActions()
 	 */
 	function getStatusActions($pubObject) {
 		return array(
@@ -104,25 +97,25 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc DOIExportPlugin::getExportActions()
+	 * @copydoc PubObjectsExportPlugin::getExportActions()
 	 */
 	function getExportActions($context) {
-		$actions = array(DOI_EXPORT_ACTION_EXPORT, DOI_EXPORT_ACTION_MARKREGISTERED, );
+		$actions = array(EXPORT_ACTION_EXPORT, EXPORT_ACTION_MARKREGISTERED, );
 		if ($this->getSetting($context->getId(), 'username') && $this->getSetting($context->getId(), 'password')) {
-			array_unshift($actions, DOI_EXPORT_ACTION_DEPOSIT, CROSSREF_EXPORT_ACTION_CHECKSTATUS);
+			array_unshift($actions, EXPORT_ACTION_DEPOSIT, CROSSREF_EXPORT_ACTION_CHECKSTATUS);
 		}
 		return $actions;
 	}
 
 	/**
-	 * @copydoc DOIExportPlugin::getExportActionNames()
+	 * @copydoc PubObjectsExportPlugin::getExportActionNames()
 	 */
 	function getExportActionNames() {
 		return array(
-			DOI_EXPORT_ACTION_DEPOSIT => __('plugins.importexport.crossref.action.register'),
+			EXPORT_ACTION_DEPOSIT => __('plugins.importexport.crossref.action.register'),
 			CROSSREF_EXPORT_ACTION_CHECKSTATUS => __('plugins.importexport.crossref.action.checkStatus'),
-			DOI_EXPORT_ACTION_EXPORT => __('plugins.importexport.crossref.action.export'),
-			DOI_EXPORT_ACTION_MARKREGISTERED => __('plugins.importexport.crossref.action.markRegistered'),
+			EXPORT_ACTION_EXPORT => __('plugins.importexport.crossref.action.export'),
+			EXPORT_ACTION_MARKREGISTERED => __('plugins.importexport.crossref.action.markRegistered'),
 		);
 	}
 
@@ -130,12 +123,10 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	 * Hook callback that returns the deposit setting's names,
 	 * to consider them by article or issue update.
 	 *
-	 * @copydoc DOIPubIdExportPlugin::getAdditionalFieldNames()
+	 * @copydoc PubObjectsExportPlugin::getAdditionalFieldNames()
 	 */
 	function getAdditionalFieldNames($hookName, $args) {
 		parent::getAdditionalFieldNames($hookName, $args);
-		assert(count($args) == 2);
-		$dao =& $args[0];
 		$additionalFields =& $args[1];
 		assert(is_array($additionalFields));
 		$additionalFields[] = $this->getDepositStatusUrlSettingName();
@@ -143,7 +134,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc DOIPubIdExportPlugin::getPluginSettingsPrefix()
+	 * @copydoc ImportExportPlugin::getPluginSettingsPrefix()
 	 */
 	function getPluginSettingsPrefix() {
 		return 'crossref';
@@ -157,14 +148,14 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc DOIPubIdExportPlugin::getExportDeploymentClassName()
+	 * @copydoc PubObjectsExportPlugin::getExportDeploymentClassName()
 	 */
 	function getExportDeploymentClassName() {
 		return 'CrossrefExportDeployment';
 	}
 
 	/**
-	 * @copydoc DOIPubIdExportPlugin::executeExportAction()
+	 * @copydoc PubObjectsExportPlugin::executeExportAction()
 	 */
 	function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart) {
 		$context = $request->getContext();
@@ -267,10 +258,13 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 		$doi = urlencode($object->getStoredPubId('doi'));
 		$params = 'filter=doi:' . $doi ;
 
+		// Use a different endpoint for testing and
+		// production.
+		$endpoint = ($this->isTestMode($context) ? CROSSREF_API_URL_DEV : CROSSREF_API_URL);
 		curl_setopt(
 			$curlCh,
 			CURLOPT_URL,
-			CROSSREF_API_URL . (strpos(CROSSREF_API_URL,'?')===false?'?':'&') . $params
+			$endpoint . (strpos($endpoint,'?')===false?'?':'&') . $params
 		);
 		// try to fetch from the new API
 		$response = curl_exec($curlCh);

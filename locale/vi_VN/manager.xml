@@ -176,7 +176,6 @@
 	<message key="manager.setup.initialIssue">Số khởi đầu</message>
 	<message key="manager.setup.initialIssueDescription">Tùy thuộc vào định dạng được chọn, xác định số, tập, và/hoặc năm của số đầu tiên sẽ được xuất bản bằng phần mềm OJS:</message>
 	<message key="manager.setup.institution">Đơn vị</message>
-	<message key="manager.setup.issnDescription"><![CDATA[Chỉ số ISSN (International Standard Serial Number) là một số gồm 8 chữ số định danh các ấn phẩm đều kỳ, bao gồm cả ấn phẩm đều kỳ điện tử. Chỉ số này được quản lý bởi một mạng lưới các Trung tâm Quốc gia về ISSN và được điều phối chung bởi Trung tâm Quốc tế ISSN tại Paris, được UNESCO và Chính phủ Pháp bảo trợ. Chỉ số này có thể xin tại <a href="http://www.issn.org" target="_new">Website của ISSN</a>.  Việc này có thể làm ở bất kỳ thời điểm nào trong quá trình hoạt động của tạp chí.]]></message>
 	<message key="manager.setup.itemsDescription">Các mục trên Thanh điều khiển có thể được bổ sung vào tập hợp các mục hiện tại (Trang chủ, Giới thiệu, Người dung, v.v..) xuất hiện trên đầu mỗi trang.</message>
 	<message key="manager.setup.itemsPerPage">Số mục mỗi trang</message>
 	<message key="manager.setup.journalAbbreviation">Tên viết tắt của Tạp chí</message>

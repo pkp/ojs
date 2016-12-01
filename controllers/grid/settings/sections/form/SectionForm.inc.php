@@ -22,8 +22,8 @@ class SectionForm extends PKPSectionForm {
 	 * @param $request Request
 	 * @param $sectionId int optional
 	 */
-	function SectionForm($request, $sectionId = null) {
-		parent::PKPSectionForm(
+	function __construct($request, $sectionId = null) {
+		parent::__construct(
 			$request,
 			'controllers/grid/settings/sections/form/sectionForm.tpl',
 			$sectionId
@@ -162,9 +162,9 @@ class SectionForm extends PKPSectionForm {
 		ListbuilderHandler::unpack(
 			$request,
 			$this->getData('subEditors'),
-			array(&$this, 'deleteSubEditorEntry'),
-			array(&$this, 'insertSubEditorEntry'),
-			array(&$this, 'updateSubEditorEntry')
+			array($this, 'deleteSubEditorEntry'),
+			array($this, 'insertSubEditorEntry'),
+			array($this, 'updateSubEditorEntry')
 		);
 
 		return true;

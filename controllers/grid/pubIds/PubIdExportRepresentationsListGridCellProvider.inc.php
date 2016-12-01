@@ -23,12 +23,12 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 	/**
 	 * Constructor
 	 */
-	function PubIdExportRepresentationsListGridCellProvider($plugin, $authorizedRoles = null) {
+	function __construct($plugin, $authorizedRoles = null) {
 		$this->_plugin  = $plugin;
 		if ($authorizedRoles) {
 			$this->_authorizedRoles = $authorizedRoles;
 		}
-		parent::DataObjectGridCellProvider();
+		parent::__construct();
 	}
 
 	//
@@ -139,7 +139,7 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 						$label = $statusNames[$status];
 					}
 				} else {
-					$label = $statusNames[DOI_EXPORT_STATUS_NOT_DEPOSITED];
+					$label = $statusNames[EXPORT_STATUS_NOT_DEPOSITED];
 				}
 				return array('label' => $label);
 		}

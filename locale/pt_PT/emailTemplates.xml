@@ -23,7 +23,7 @@ Caso não tenha apresentado este pedido, ignore este email e a sua senha não se
 <br />
 Se desejar actualizar a sua senha, clique no link a seguir.<br />
 <br />
-Actualizar senha: {$url}<br />
+Actualizar senha: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Mensagem enviada a utilizador registado quando o mesmo solicita actualização da senha, quando esqueceu a senha ou encontra problemas para aceder ao sistema. O link contido permite ao utilizador concluir a actualização da senha de acesso.</description>
@@ -35,6 +35,7 @@ Actualizar senha: {$url}<br />
 A sua senha de acesso ao site {$siteTitle} foi actualizada com sucesso. Guarde o login (nome de utilizador) e a senha, uma vez que serão necessários para todas as actividades relacionadas com este portal.<br />
 <br />
 O seu nome de utilizador: {$username}<br />
+Senha: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Mensagem enviada a utilizador registado quando o mesmo informa que esqueceu a sua senha ou encontra problemas para aceder ao sistema. O link contido permite ao utilizador actualizar a senha de acesso.</description>
@@ -858,7 +859,7 @@ A senha para desactivar os e-mails é: {$password}<br />
 		<subject>Decisão editorial</subject>
 		<body><![CDATA[{$authorName},<br />
 <br />
-Foi tomada uma decisão sobre o artigo submetido à revista {$journalTitle},<br />
+Foi tomada uma decisão sobre o artigo submetido à revista {$contextName},<br />
 &quot;{$submissionTitle}&quot;.<br />
 <br />
 A decisão é: INSERIR DECISÃO EDITORIAL<br />
@@ -870,7 +871,7 @@ A decisão é: INSERIR DECISÃO EDITORIAL<br />
 		<subject>Decisão editorial</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Foi tomada uma decisão sobre o artigo submetido à {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Foi tomada uma decisão sobre o artigo submetido à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 A decisão é: REVISÕES REQUERIDAS<br />
 <br />
@@ -881,7 +882,7 @@ A decisão é: REVISÕES REQUERIDAS<br />
 		<subject>Decisão editorial</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Foi tomada uma decisão sobre o artigo enviado à revista {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Foi tomada uma decisão sobre o artigo enviado à revista {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 A decisão é: SUBMETER NOVAMENTE PARA REVISÕES<br />
 <br />
@@ -892,7 +893,7 @@ A decisão é: SUBMETER NOVAMENTE PARA REVISÕES<br />
 		<subject>Decisão editorial</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Foi tomada uma decisão sobre o artigo submetido à revista {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Foi tomada uma decisão sobre o artigo submetido à revista {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 A decisão é: REJEITAR<br />
 <br />

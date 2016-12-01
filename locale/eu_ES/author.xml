@@ -31,7 +31,7 @@
 	<message key="author.submit.upload">3. Bidalketa kargatu</message>
 	<message key="author.submit.supplementaryFiles">Fitxategi osagarriak kargatu</message>
 	<message key="author.submit.confirmation">Berretsi</message>
-	<message key="author.submit.cancelSubmission">Bidalketa hau geroago osa dezakezu, Egilearen hasierako orrian Bidalketa aktiboak hautatuta.</message>
+	<message key="submission.submit.cancelSubmission">Bidalketa hau geroago osa dezakezu, Egilearen hasierako orrian Bidalketa aktiboak hautatuta.</message>
 	<message key="author.submit.notAccepting">Aldizkariak ez du bidalketarik onartzen orain.</message>
 	<message key="author.submit.requestWaiver">Eskatu salbuespena</message>
 	<message key="author.submit.qualifyForWaiver">Mesedez, kontsidera ezazue artikulu hau bidalketa-tarifa ordaintzetik salbuestea</message>

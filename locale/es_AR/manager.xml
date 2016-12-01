@@ -175,7 +175,6 @@
 	<message key="manager.setup.initialIssue">Número inicial</message>
 	<message key="manager.setup.initialIssueDescription">Dependiendo del formato seleccionado, identificar el número, volúmen y/o año del primer número publicado con OJS:</message>
 	<message key="manager.setup.institution">Institución</message>
-	<message key="manager.setup.issnDescription"><![CDATA[El ISSN (International Standard Serial Number) es un número de ocho dígitos que identifica publicaciones periódicas, incluyendo revistas electrónicas. Está gestionado por una red internacional de Centros Nacionales coordinados por un Centro Internacional con sede en París, auspiciado por la Unesco y el gobierno francés. Se puede solicitar un número en <a href="http://www.issn.org" target="_new">el sitio web del ISSN</a>. Se puede introducir esta información en cualquier momento.]]></message>
 	<message key="manager.setup.itemsDescription">Se pueden añadir elementos a los ya existentes en la barra de navegación (home, acerca de, etc.) que aparece en la parte superior de la página.</message>
 	<message key="manager.setup.itemsPerPage">Elementos por página</message>
 	<message key="manager.setup.journalAbbreviation">Abreviación de la revista</message>

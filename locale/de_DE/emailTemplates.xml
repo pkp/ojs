@@ -54,7 +54,7 @@ Wenn Sie keine Benachrichtigungs-E-Mails mehr erhalten möchten, gehen Sie bitte
 <br />
 Falls die Aufforderung nicht von Ihnen stammt, ignorieren Sie bitte diese E-Mail, und Ihr Passwort bleibt unverändert. Falls Sie Ihr Passwort neu setzen möchten, klicken Sie bitte auf die folgende URL:<br />
 <br />
-Mein Passwort neu setzen: {$url}<br />
+Mein Passwort neu setzen: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Diese E-Mail wird an registrierte Benutzer/innen der Benachrichtigungs-Mailingliste gesendet, die angegeben haben, dass sie ihr Passwort vergessen haben oder sich nicht einloggen können. Sie liefert eine URL, der die Benutzer/innen folgen können, um ihr Passwort zurückzusetzen.</description>
@@ -64,6 +64,7 @@ Mein Passwort neu setzen: {$url}<br />
 		<body><![CDATA[Ihr Benutzer/innen-Passwort für die Webseite {$siteTitle} wurde neu gesetzt. Bitte notieren Sie Benutzer/innennamen und Passwort, beides wird für alle Arbeiten mit dieser Zeitschrift gebraucht.<br />
 <br />
 Ihr Benutzer/innenname: {$username}<br />
+Passwort: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Diese E-Mail wird an registrierte Benutzer/innen gesendet, nachdem sie ihr Passwort erfolgreich nach dem in der PASSWORD_RESET_CONFIRM-E-Mail beschriebenen Verfahren zurückgesetzt haben.</description>
@@ -452,7 +453,7 @@ Unsere Entscheidung lautet: Beitrag annehmen<br />
 		<subject>Entscheidung der Redaktion</subject>
 		<body><![CDATA[{$authorName},<br />
 <br />
-wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: &quot;{$submissionTitle}&quot; gekommen.<br />
+wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$contextName}: &quot;{$submissionTitle}&quot; gekommen.<br />
 <br />
 Unsere Entscheidung lautet:<br />
 <br />
@@ -464,7 +465,7 @@ Unsere Entscheidung lautet:<br />
 		<subject>Entscheidung der Redaktion</subject>
 		<body><![CDATA[{$authorName},<br />
 <br />
-wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: &quot;{$submissionTitle}&quot; gekommen.<br />
+wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$contextName}: &quot;{$submissionTitle}&quot; gekommen.<br />
 <br />
 Unsere Entscheidung lautet:<br />
 <br />
@@ -476,7 +477,7 @@ Unsere Entscheidung lautet:<br />
 		<subject>Entscheidung der Redaktion</subject>
 		<body><![CDATA[{$authorName},<br />
 <br />
-wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: &quot;{$submissionTitle}&quot; gekommen.<br />
+wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$contextName}: &quot;{$submissionTitle}&quot; gekommen.<br />
 <br />
 Unsere Entscheidung lautet: Beitrag ablehnen<br />
 <br />

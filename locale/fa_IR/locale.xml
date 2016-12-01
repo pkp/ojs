@@ -14,7 +14,7 @@
 
 <locale full_name="Farsi" name="fa_IR">
 <!--
-	 * این فایل به چندین قسمت ماژور تقسیم شده است و هر قسمت توسط متن 
+	 * این فایل به چندین قسمت ماژور تقسیم شده است و هر قسمت توسط متن
 	 * مانند این متن از بقیه جدا شده است. این قسمت ها عبارت اند از:
 	 *  عمومی - حاوی کلمات دارای مصرف شایع.
 	 *  هستارها - حاوی واژه های هستار ماژور سیستم است - مانند مقاله , مجله ,
@@ -192,15 +192,15 @@
 	<message key="reader.subscriptionOrFeeAccess">دسترسی با اشتراک یا نقدی</message>
 <!-- نظرات خوانندگان -->  <message key="comments.commentsOnArticle">نظرات در مورد مقاله</message>
 	<message key="comments.authenticated">{$userName}</message>
-<!-- ادمین سایت -->	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[چنانچه مایل باشید محتوای مجلات این سایت در یک سیستم گسترده از بانکهای اطلاعاتی پژوهشی اندکس شود ، آدرس سایت خود را در سیستم 
+<!-- ادمین سایت -->	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[چنانچه مایل باشید محتوای مجلات این سایت در یک سیستم گسترده از بانکهای اطلاعاتی پژوهشی اندکس شود ، آدرس سایت خود را در سیستم
 <a href="http://pkp.sfu.ca/harvester/" target="_blank">
 استخراج کننده
 </a>
- فراداده پروژه عمومی دانش 
+ فراداده پروژه عمومی دانش
 <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">
 ثبت
 </a>
- کنید.این سیستم ، فراداده هر کدام از مجلات این سایت را جمع آوری میکند و امکان جستجوی دقیق و جامع را در سایتهای پژوهشی که تابع 
+ کنید.این سیستم ، فراداده هر کدام از مجلات این سایت را جمع آوری میکند و امکان جستجوی دقیق و جامع را در سایتهای پژوهشی که تابع
 <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">
 پروتکل استخراج فراداده پیشگام بایگانی آزاد
 </a>
@@ -209,11 +209,11 @@
 <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">
 اینجا
 </a>
- را کلیک کرده و در قسمت 
+ را کلیک کرده و در قسمت
 <b>Site URL</b>
 <span class="highlight">{$siteUrl}</span>
 http://journals.mui.ac.ir/index.php/index/index
-, و در قسمت  
+, و در قسمت
 <b>Base URL for OAI Archive</b>
 <span class="highlight">{$oaiUrl}</span>
  را وارد کنید.
@@ -230,14 +230,14 @@ http://journals.mui.ac.ir/index.php/index/index
 </h4>
 <p>
 سیستم بطور اتوماتیک نمیتواند برروی فایل تنظیمات بنویسد. برای اعمال تنظیمات مورد نظر میبایست خود فایل
-  <tt>config.inc.php</tt> 
+  <tt>config.inc.php</tt>
 در یک ویرایشگر مناسب ویرایش کرده و تنظیمات مورد نظر خود را اعمال کنید.
 </p>]]></message>
 <!-- اداره اشتراک -->  <message key="subscriptionManager.subscriptionManagement">مدیریت اشتراکها</message>
 <!-- اطلاعات عمومی پلاگین -->	<message key="plugins.categories.generic.description">پلاگین های عمومی برای گسترش سیستم ژورنال های آزاد به روشهای مختلف که توسط پلاگین های دیگر پشتیبانی نمی شوند به کار می روند</message>
 	<message key="plugins.categories.auth.description">پلاگ این های تایید کننده هویت  عمل تایید هویت را به سیستم های خارجی تایید کننده هویت مانند سرور LDAP واگذار می کنند.</message>
 	<message key="plugins.categories.citationFormats.description">پلاگین الگوی مرجع نویسی , قالبهای مختلف مرجع نویسی را برای  کاربران فراهم می کند</message>
-<!-- مرورگر فایل -->	<message key="manager.setup.lockssDescription"><![CDATA[OJS از سیستم <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> که علامت اختصاری Lots of Copies Keep Stuff Safe است  برای بایگانی امن و دائمی داده برای مجله پستیبانی میکند. LOCKSS یک نوم افزار کد آزاد است که توسط کتابخانه دانشگاه استانفورد تهیه شده است و کتابخانه ها را قادر می سازد داده های مجلات انتخابی خود را جمع آوری و حفاظت کنند. این کار از طریق استخراج مداوم داده ها از سایت های مجلات انتخاب شده صورت می گیرد. هر بایگانی یطور مداوم با کش های کتابخانه ای دیگر مقایسه و بروز رسانی میشود. 
+<!-- مرورگر فایل -->	<message key="manager.setup.lockssDescription"><![CDATA[OJS از سیستم <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> که علامت اختصاری Lots of Copies Keep Stuff Safe است  برای بایگانی امن و دائمی داده برای مجله پستیبانی میکند. LOCKSS یک نوم افزار کد آزاد است که توسط کتابخانه دانشگاه استانفورد تهیه شده است و کتابخانه ها را قادر می سازد داده های مجلات انتخابی خود را جمع آوری و حفاظت کنند. این کار از طریق استخراج مداوم داده ها از سایت های مجلات انتخاب شده صورت می گیرد. هر بایگانی یطور مداوم با کش های کتابخانه ای دیگر مقایسه و بروز رسانی میشود.
 <br /><br /> نصب پشتیبانی LOCKSS برای OJS تا وقتی که مجله کاملا بصورت آنلاین چاپ نشود لازم نیست. پس از را افتادن سیستم چاپ آنلاین مجله این دو اقدام را انجام دهید تا حمایت LOCKSS برقرار شود:]]></message>
 <!-- واردات / صادرات--><!-- گروهها / تیم دبیری -->	<message key="manager.people.confirmDisable">آیا این کاربر غیر فعال شود؟ این اقدام از ورود کاربر به سیستم جلوگیری میکند.
 
@@ -369,7 +369,6 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="user.register.reviewerDescription">مایلم برای این مجله مقاله کارشناسی کنم. زمینه های کارشناسی به قرار زیر است.</message>
 <!-- جستجو -->  <message key="search.browseAuthorIndex">مرور اندکس نویسندگان</message>
 	<message key="search.searchFor">جستجوی مقالات برای</message>
-	<message key="search.author">نویسندگان</message>
 	<message key="search.withinJournal">درون</message>
 	<message key="search.allJournals">تمام مجلات</message>
 	<message key="search.authorIndex">مرور اندکس نویسندگان</message>
@@ -473,7 +472,7 @@ http://journals.mui.ac.ir/index.php/index/index
 
 <p> <strong>نصب دستی</strong> را انتخاب کنید تا جملات SQL لازم برای ایجاد ساختار بانک اطلاعاتی و داده های مقدماتی را مشاهده کنید. بدین وسیله نصب بانک اطلاعاتی میتواند بصورت دستی صورت گیرد. این گزینه مخصوصا موقعی مفید است که بخواهید مشکلات نصب را اشکال زدائی کنید ، مخصوصا هنگام نصب بر روی سیستمهای عاملی که هنوز حمایت نشده اند. اگرچه با این روش فایل تنظیمات با مقادیر داده شده بانک اطلاعاتی نوشته میشود ولی توجه داشته باشید که با این متد ، بانک اطلاعاتی ایجاد نمیشود.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS نسخه {$version}</h4>
-	
+
 <p>با تشکر بخاطر دان لود  <strong>سیستم مجلات آزاد</strong> پروژه دانش عمومی قبل از ادامه ، فایل  <a href="{$baseUrl}/docs/README">README</a> و فایل <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> همراه با این نرم افزار را مطالعه بفرمائید. برای اطلاعات بیشتر در مورد پروژه دانش عمومی و و پروژههای نرم افزاری آن از  <a href="http://pkp.sfu.ca/" target="_blank">وب سایت PKP</a> دیدن فرمائید. چنانچه میخواهید گزارش اشکال بدهید ویا بدنبال حمایت تکنیکی در مورد سیستم مجلات آزاد هستید به  <a href="http://forum.pkp.sfu.ca">فوروم حمایت</a> بروید و یا از  <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">سیستم گزارش اشکال </a> آنلاین PKP بازدید کنید. اگرچه فوروم حمایت روش ترجیحی تماس است همچنین میتواید به آدرس ایمیل  <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p> پیغام بفرستید. <strong>شدیدا توصیه میشود</strong>  که از بانک اطلاعاتی و پوشه فایلها و پوشه نصب OJS نسخه پشتیبان تهیه کنید.</p>
 <p>چنانچه در  <a href="http://www.php.net/features.safe-mode" target="_blank">مد امن PHP</a> اجرا میکنید ، لطفا توجه کنید که گزینه  max_execution_time را در فایل تنظیمات  php.ini برابر با مقدار بالائی گذاشته شود. چنانچه زمان از این مقدار و یا سایر محدوده ها مانند مقدار Apache's "Timeout"  بیشتر شود و روند بروزرسانی قطع شوددخالت دستی لازم میشود.</p>]]></message>
@@ -722,7 +721,7 @@ http://journals.mui.ac.ir/index.php/index/index
 		</li>
 	</ul>
 <p>
-بسته های زبانی را میتوان بروش دستی از سایت PKP 
+بسته های زبانی را میتوان بروش دستی از سایت PKP
 <a href="http://pkp.sfu.ca">
 دانلود کرد.
 </a>.</p>]]></message>
@@ -738,7 +737,7 @@ http://journals.mui.ac.ir/index.php/index/index
 نویسندگان مقالات این مجله بدین وسیله موافقت خود با موارد زیر را اعلام میکنند:
 <ol type="a">
 	<li>
-	کپی رایت برای نویسنده باقی میماند و نویسنده حق اولین چاپ مقاله را به مجله واگذار میکند. هردو این امر تحت مجوز 
+	کپی رایت برای نویسنده باقی میماند و نویسنده حق اولین چاپ مقاله را به مجله واگذار میکند. هردو این امر تحت مجوز
 <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">
 لیسانس واگذاری کراتیو کامانز
 </a>
@@ -748,7 +747,7 @@ http://journals.mui.ac.ir/index.php/index/index
 	نویسندگان میتوانند بطور مستقل ترتیبی اتخاذ کنند تا در قالب قرار داد بصورت غیر صریح مقاله چاپ شده توسط مجله را منتشر کنند، یعنی آنرا به ذخیره مقالات سازمان متبوعه فرستاده و یا انرا در یک کتاب چاپ کنند. البته میبایست منبع چاپ اولیه در این مجله را ذکر کنند.
    </li>
 	<li>
-	نویسنگان اجازه دارند و توصیه میشود که کارهای خود را قبل یا هنگام ارسال به این مجله، بصورت آن لاین به جاهائی مانند سایت دخائر علمی سازمان منتبوعه و یا بر روی وب سایت شخصی خود قرار دهند. این عمل موجب تبادلات علمی و ارجاع دهی زودتر به مقاله خواهد شد. نگاه کنید به مقاله 
+	نویسنگان اجازه دارند و توصیه میشود که کارهای خود را قبل یا هنگام ارسال به این مجله، بصورت آن لاین به جاهائی مانند سایت دخائر علمی سازمان منتبوعه و یا بر روی وب سایت شخصی خود قرار دهند. این عمل موجب تبادلات علمی و ارجاع دهی زودتر به مقاله خواهد شد. نگاه کنید به مقاله
  (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>
 
@@ -758,7 +757,7 @@ http://journals.mui.ac.ir/index.php/index/index
 نویسندگان مقالات این مجله بدین وسیله موافقت خود با موارد زیر را اعلام میکنند:
 <ol type="a">
 	<li>
-	کپی رایت برای نویسنده باقی میماند و نویسنده حق اولین چاپ مقاله را به مجله واگذار میکند و این مقاله [ذکر تاخیر زمانی] مدت پس از چاپ تحت مجوز 
+	کپی رایت برای نویسنده باقی میماند و نویسنده حق اولین چاپ مقاله را به مجله واگذار میکند و این مقاله [ذکر تاخیر زمانی] مدت پس از چاپ تحت مجوز
 <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">
 لیسانس واگذاری کراتیو کامانز
 </a>
@@ -768,23 +767,23 @@ http://journals.mui.ac.ir/index.php/index/index
 		نویسندگان میتوانند بطور مستقل ترتیبی اتخاذ کنند تا در قالب قرار داد بصورت غیر صریح مقاله چاپ شده توسط مجله را منتشر کنند، یعنی آنرا به ذخیره مقالات سازمان متبوعه فرستاده و یا انرا در یک کتاب چاپ کنند. البته میبایست منبع چاپ اولیه در این مجله را ذکر کنند.
     </li>
 	 <li>
-		نویسنگان اجازه دارند و توصیه میشود که کارهای خود را قبل یا هنگام ارسال به این مجله، بصورت آن لاین به جاهائی مانند سایت دخائر علمی سازمان منتبوعه و یا بر روی وب سایت شخصی خود قرار دهند. این عمل موجب تبادلات علمی و ارجاع دهی زودتر به مقاله خواهد شد. نگاه کنید به مقاله 
+		نویسنگان اجازه دارند و توصیه میشود که کارهای خود را قبل یا هنگام ارسال به این مجله، بصورت آن لاین به جاهائی مانند سایت دخائر علمی سازمان منتبوعه و یا بر روی وب سایت شخصی خود قرار دهند. این عمل موجب تبادلات علمی و ارجاع دهی زودتر به مقاله خواهد شد. نگاه کنید به مقاله
  (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).
 	 </li>
 </ol>]]></message>
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[این مجله از یک سیستم طبقه بندی موضوعی موجود بر روی وب استفاده میکند.<br />
 عنوان سیستم طبقه بندی]]></message>
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[چنانچه مایل باشید محتوای این مجله در یک سیستم گسترده از بانکهای اطلاعاتی پژوهشی اندکس شود ، ابتدا 
+	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[چنانچه مایل باشید محتوای این مجله در یک سیستم گسترده از بانکهای اطلاعاتی پژوهشی اندکس شود ، ابتدا
 <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">
 اقدامات لازم برای تبدیل شدن به یک فراهم کننده داده
-</a> 
-را مطالعه کنید و سپس مجله خود را در سایت رسمی 
+</a>
+را مطالعه کنید و سپس مجله خود را در سایت رسمی
 <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">
 ثبت آرشیوهای باز
 </a>
 ثبت نام کنید.
- برای ثبت نام آدرس پایه آرشیو مجله را لازم دارید: 
-<span class="highlight">{$oaiUrl}</span>. 
+ برای ثبت نام آدرس پایه آرشیو مجله را لازم دارید:
+<span class="highlight">{$oaiUrl}</span>.
 در صورت تمایل مجله خود را در سایت
 <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a>
 و سایت
@@ -831,7 +830,7 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="user.subscriptions.form.institutionMailingAddress">آدرس پستی</message>
 	<message key="user.subscriptions.form.domain">دامنه</message>
 	<message key="user.subscriptions.form.domainInstructions"><![CDATA[در صورتی که نام دامنه را در این قسمت وارد میکنید، وارد کردن بازه IP اختیاری است.<br />
-مقادیر مناسب عبارتند از نامهای دامنه مانند 
+مقادیر مناسب عبارتند از نامهای دامنه مانند
 lib.sfu.ca]]></message>
 	<message key="user.subscriptions.form.domainIPRangeRequired">نوع استراک انتخاب شده نیاز به نام دامنه یا بازه IP دارد تا بکمک آن اشتراک تایید شود.</message>
 	<message key="user.subscriptions.form.domainValid">لطفا یک نام دامنه معتبری وارد کنید.</message>
@@ -839,7 +838,7 @@ lib.sfu.ca]]></message>
 	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
 	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[در صورت وارد کردن بازه های IP در این قسمت وارد کردن نام دامنه اختیاری است.<br />
 مقادیر معتبر عبارتند از یک آدرس IP مانند
-142.58.103.1 ، 
+142.58.103.1 ،
 یک بازه IP مانند
 142.58.103.1 - 142.58.103.4 ،
 بازه IP همرا با کاراکتر سرکش * مانند:
@@ -865,18 +864,18 @@ lib.sfu.ca]]></message>
 در مورذ آدرسهای جستجوئی که مشتمل بر پر کردن و پست کردن اطالعات یک فرم باشد ممکن است این آزمایش تعیین اعتبار شکست بخورد.]]></message>
 	<message key="notification.mailListDescription">آدرس ایمیل خود را وارد کنید تا بدین وسیله از چاپ مطالب جدید باخبر شوید.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[این صفحه نشان دهنده موارد مهم بروزرسانی میباشد که در این مجله اتفاق افتاده است مانند شماره های جدید مجله و یا اطلاعیه ها. میتوانید از طریق RSS برای این اطلاع رسانی ها ثبت نام کنید. برای این کار بر روی تصویر سمت راست کلیک کنید. ویا از <a href="{$emailUrl}"> طریق ایمیل</a> اقدام کنید.]]></message>
-	<message key="notification.type.articleSubmitted">یک مقاله جدید، "{$param}"، ساب میت شد.</message>
+	<message key="notification.type.articleSubmitted">یک مقاله جدید، "{$title}"، ساب میت شد.</message>
 	<message key="notification.type.editing">رویدادهای ویرایش</message>
-	<message key="notification.type.editorDecisionComment">نقطه نظری در خصوص تصمیم دبیر در باره "{$param}" برجا گذاشته شده است.</message>
-	<message key="notification.type.galleyModified">یک گالی در مورد "{$param}" تغییر یافته است.</message>
+	<message key="notification.type.editorDecisionComment">نقطه نظری در خصوص تصمیم دبیر در باره "{$title}" برجا گذاشته شده است.</message>
+	<message key="notification.type.galleyModified">یک گالی در مورد "{$title}" تغییر یافته است.</message>
 	<message key="notification.type.issuePublished">یک شماره مجله منتشر شده است</message>
 	<message key="notification.type.newAnnouncement">یک اطلاعیه جدید ایجاد شده است</message>
-	<message key="notification.type.reviewerFormComment">یک فرم کارشناسی در خصوص "{$param}" ساب میت شده است</message>
+	<message key="notification.type.reviewerFormComment">یک فرم کارشناسی در خصوص "{$title}" ساب میت شده است</message>
 	<message key="notification.type.reviewing">رودادهای کارشناسی</message>
 	<message key="notification.type.site">رویدادهای سایت</message>
-	<message key="notification.type.submissionComment">یک دبیر نظری در مورد "{$param}" داده است.</message>
+	<message key="notification.type.submissionComment">یک دبیر نظری در مورد "{$title}" داده است.</message>
 	<message key="notification.type.submissions">رویدادهای ساب میشن</message>
-	<message key="notification.type.userComment">یک خواننده نظری در مورد "{$param}" داده است</message>
+	<message key="notification.type.userComment">یک خواننده نظری در مورد "{$title}" داده است</message>
 	<message key="user.register.reviewerInterests">تشخیص علائق کارشناسی: زمینه ها و روشهای پژوهشی مهم</message>
 	<message key="user.subscriptions.subscriptionStatus">وضعیت اشتراک</message>
 	<message key="user.subscriptions.statusInformation">اشتراکات فعال و منقضی هر دو در زیر همراه با تاریخ انقضا آنها نشان داده شده اند. به علاوه به ازای هر اشتراک اطلاعات وضعیتی زیر نیز ممکن است نشان داده شوند.</message>

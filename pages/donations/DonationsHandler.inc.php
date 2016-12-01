@@ -20,8 +20,8 @@ class DonationsHandler extends Handler {
 	/**
 	 * Constructor
 	 */
-	function DonationsHandler() {
-		parent::Handler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

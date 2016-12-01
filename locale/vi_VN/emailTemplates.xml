@@ -19,7 +19,7 @@
 <br />
 Nếu không phải là quý vị yêu cầu thay đổi, vui lòng bỏ qua email này và mật khẩu của quý vị sẽ không thay đổi. Nếu quý vị muốn thay đổi mật khẩu, nhấp chuột vào đường dẫn sau:<br />
 <br />
-Thay đổi mật khẩu của tôi: {$url}<br />
+Thay đổi mật khẩu của tôi: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Email này được gửi tới bạn đọc đã đăng ký khi họ thông báo rằng họ quên mật khẩu hoặc không thể đăng nhập. Email này cung cấp đường dẫn để người dùng có thể truy cập để thay đổi mật khẩu.</description>
@@ -29,6 +29,7 @@ Thay đổi mật khẩu của tôi: {$url}<br />
 		<body><![CDATA[Mật khẩu của quý vị đã được thay đổi để sử dụng với web site {$siteTitle}. Vui lòng giữ lại bí danh và mật khẩu này bởi vì nó cần để đăng nhập vào tạp chí.<br />
 <br />
 Bí danh: {$username}<br />
+Mật khẩu: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Email này được gửi tới bạn đọc khi họ đã đổi thành công mật khẩu của mình trong email PASSWORD_RESET_CONFIRM.</description>

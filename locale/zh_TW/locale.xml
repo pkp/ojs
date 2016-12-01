@@ -11,7 +11,7 @@
   * Localization strings for the zh_TW (繁體中文) locale.
   *中文翻譯：祝平次（清華大學中文系），鄭凱元（中正大學哲學研究所博士班）
   -->
- 
+
 <locale name="zh_TW" full_name="繁體中文">
 	<!--
 	 * This file is organized into several major sections, separated
@@ -36,13 +36,13 @@
 	<message key="common.openJournalSystems">開放期刊系統</message>
 
 	<!-- Common Form Messages 表單訊息 -->
-	
+
 	<!-- Common Email Messages 電子郵件訊息 -->
 
 	<!-- Common Localization Terms 本土化 -->
 
 	<!-- Common Error Messages 錯誤資訊 -->
-		
+
 	<!-- Navigation 導覽 -->
 	<message key="navigation.journalHelp">期刊協助資訊</message>
 	<message key="navigation.loggedInAs">您是以下列使用者名稱登入：</message>
@@ -59,7 +59,7 @@
 	<message key="navigation.infoForLibrarians">給圖書館員</message>
 	<message key="navigation.infoForAuthors.long">給作者的資訊</message>
 	<message key="navigation.infoForLibrarians.long">給圖書館員的資訊</message>
-	
+
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">未指派</message>
 	<message key="common.queue.short.submissionsUnassigned">未指派</message>
@@ -73,7 +73,7 @@
 	<message key="common.queue.short.active">處理中</message>
 	<message key="common.queue.long.completed">檔案櫃</message>
 	<message key="common.queue.short.completed">檔案櫃</message>
-	
+
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
@@ -136,7 +136,7 @@
 	<message key="submission.scheduling">時程安排</message>
 	<message key="submission.scheduledIn">預定出刊日期{$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(TBA)</message>
-	
+
 	<message key="submissions.sec">文稿類型</message>
 	<message key="submissions.step1">步驟 1</message>
 	<message key="submissions.step3">步驟 3</message>
@@ -159,7 +159,7 @@
 	<message key="submissions.proofreadingComplete">已校對</message>
 
 	<!-- Submission Notes 投稿備註 -->
-	
+
 	<!-- Common Journal Terms 期刊詞彙 -->
 	<message key="journal.currentIssue">最新一期</message>
 	<message key="journal.journals">期刊</message>
@@ -171,14 +171,14 @@
 	<message key="user.url.description">所填入的綱址將會在「關於作者」和「編輯團隊」的「個人資訊」欄底下顯示為一個超連結。</message>
 	<message key="user.registerForOtherJournals">註冊其它期刊</message>
 	<message key="user.myJournals">我的期刊</message>
-	
+
 	<!-- Roles 角色 -->
 	<message key="user.role.manager">期刊管理員</message>
 	<message key="user.role.sectionEditor">文稿類型編輯</message>
 	<message key="user.role.subscriptionManager">訂閱管理員</message>
 	<message key="user.role.managers">期刊管理員</message>
 	<message key="user.role.subscriptionManagers">訂閱管理員</message>
-	
+
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">期</message>
 	<message key="issue.issues">期</message>
@@ -202,7 +202,7 @@
 	<message key="submission.event.logLevel.notice">通知</message>
 	<message key="submission.event.logLevel.warning">警訊</message>
 	<message key="submission.event.logLevel.error">錯誤</message>
-	
+
 	<message key="submission.event.general.defaultEvent">投稿事件</message>
 	<message key="submission.event.general.issueScheduled">已送到期數排序的稿件</message>
 	<message key="submission.event.general.issueAssigned">已指派給某期的稿件</message>
@@ -211,15 +211,15 @@
 	<message key="submission.event.author.authorRevision">作者修訂送出</message>
 
 	<message key="submission.event.general.authorRevision">作者修訂檔案更新</message>
-	
+
 	<message key="submission.event.editor.editorAssigned">指派稿件的編者</message>
 	<message key="submission.event.editor.editorUnassigned">不指派稿件的編者</message>
 	<message key="submission.event.editor.editorDecision">編者裁決送出</message>
 	<message key="submission.event.editor.editorFile">編者檔案更新</message>
 	<message key="submission.event.editor.submissionArchived">送到檔案櫃的稿件</message>
 	<message key="submission.event.editor.submissionRestored">從檔案櫃取回的稿件</message>
-	
-	
+
+
 	<message key="submission.event.copyedit.copyeditorAssigned">指派給稿件的校樣編輯</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">不指派給稿件的校樣編輯</message>
 	<message key="submission.event.copyedit.copyeditInitiated">已開始的校樣作業</message>
@@ -227,13 +227,13 @@
 	<message key="submission.event.copyedit.copyeditInitialCompleted">完成的初步校樣</message>
 	<message key="submission.event.copyedit.copyeditFinalCompleted">完成的校樣定稿</message>
 	<message key="submission.event.copyedit.copyeditSetFile">更新的校樣檔案</message>
-	
+
 	<message key="submission.event.proofread.proofreaderAssigned">指派給稿件的校對者</message>
 	<message key="submission.event.proofread.proofreaderUnassigned">不指派給稿件的校對者</message>
 	<message key="submission.event.proofread.proofreadInitiated">已開始進行的校對作業</message>
 	<message key="submission.event.proofread.proofreadRevision">已更新的校對修訂檔案</message>
 	<message key="submission.event.proofread.proofreadCompleted">已完成的校對作業</message>
-	
+
 	<message key="submission.event.layout.layoutEditorAssigned">指派給稿件的排版編輯</message>
 	<message key="submission.event.layout.layoutEditorUnassigned">不指派給稿件的排版編輯</message>
 	<message key="submission.event.layout.layoutInitiated">已開始的排版作業</message>
@@ -261,8 +261,8 @@
 <br /><br />
 藉由修改開放期刊系統的設定，請注意開放典藏檢索界面可以被關閉。未來開放期刊系統的版本將會允設一個網站的各別期刊可以設定開啟或關閉OAI系統。]]></message>
 
-	
-	
+
+
 	<!-- Languages 語言 -->
 	<message key="admin.languages.languageOptions">語言選項</message>
 	<message key="admin.languages.profileLocales">註冊使用者（編輯、審查人、版面編輯...等等）應該在其使用者帳號中納入方便期刊編輯人的語言。(In registering people (editors, reviewers, copyeditors, etc.), working languages should be included in their User Profiles for the benefit of journal editors.)</message>
@@ -271,15 +271,15 @@
 <ul>
 	<li>如果一個使用者想要在這個網站中，以一個在認證來源中（而非OJS的資料庫中）已經存在的名稱來註冊一個新的帳號，只有在輸入的密碼對該使用者帳號來說是有效的時候，才能完成註冊程序。</li>
 </ul>]]></message>
-	
+
 	<!-- System Information 系統資訊 -->
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>注意！</h4>
 <p>系統無法自動覆寫這個設定檔。要應用您的設定變更，您必須以適合的編輯器開啟<tt>config.inc.php</tt>，並以下列文字欄位中的內容來取代其內容。</p>]]></message>
 
-	
+
 	<!-- Subscription Management 訂閱管理 -->
 	<message key="subscriptionManager.subscriptionManagement">訂閱管理</message>
-	
+
 	<!-- Journal Management -->
 
 	<!-- Statistics & Reports 統計與報表 -->
@@ -316,7 +316,7 @@
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->
-	
+
 	<!-- Setup Step 1 -->
 
 	<!-- Setup Step 2 -->
@@ -336,7 +336,7 @@
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems 支持<a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe)洛克斯數位典藏系統，確保這份期刊有個安全與永久性的檔案記錄。LOCKSS是一個由史丹佛大學圖書館所開發的開源碼軟體，能夠讓圖書館以定期徵詢註冊之期刊網站是否有新內容並將之存檔的方式，保存所選擇的網路期刊。每份檔案都會持續性地透過其他圖書館的快取(caches)加以認證，而如果檔案內容被發現損毀或遺失，其他的快取或者這份期刊就會被用來備份它，
 <br /><br />
 除非日後的出版工作完全還在準備階段，否則不需要設定 LOCKSS以支持OJS；在此階段請遵循這兩個步驟：]]></message>
-	
+
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[期刊會使用一個可在網路上取得的主題分類系統。<br />
 分類系統的標題]]></message>
@@ -372,8 +372,8 @@
 	<message key="manager.languages.alternativeLanguageOptions">語言選項</message>
 	<message key="manager.languages.journalTitleAltLanguages">標題圖像、頁面標頭等等，會依照每個期刊的語系來上傳。</message>
 	<message key="manager.languages.articleAltLanguages">作者應該被要求提供另一種語言的標題和摘要，連同選取該選項的期刊工作人員亦然。</message>
-	
-	
+
+
 	<!-- Section Management 文稿類型管理 -->
 	<message key="manager.sections.assignEditor">指派編輯</message>
 	<message key="manager.sections.unassignEditor">取消指派編輯</message>
@@ -399,7 +399,7 @@
 
 
 	<message key="manager.people.signOutAsUser">登出這個使用者帳號</message>
-	
+
 	<!-- Email Management 電子郵件管理 -->
 
 	<!-- Subscription Policy Management 訂閱方針管理 -->
@@ -428,7 +428,7 @@
 	<!-- Live Issues 進行中的期數 -->
 
 	<!-- Navigation sidebar menu 導覽側邊欄選單-->
-	
+
 	<!-- Used by editor in submission review / editing 由編輯在稿件審查＼編輯時使用-->
 	<message key="editor.article.selectReviewerNotes"><![CDATA[姓名連結到審查人帳號。<br />
 從5(極佳)開始評分。<br />
@@ -439,7 +439,7 @@
 
 
 
-	
+
 	<!-- Section Editor 文稿類型編輯 -->
 	<message key="sectionEditor.activeEditorialAssignments">進行中的編輯任務</message>
 	<message key="sectionEditor.completedEditorialAssignments">已完成的編輯任務</message>
@@ -470,12 +470,12 @@
 	<message key="layoutEditor.galley.replaceGalley">替換檔案</message>
 	<message key="layoutEditor.galley.uploadSuppFile">上傳補充檔案</message>
 	<message key="submission.layout.galleryNoImages">沒有任何影像</message>
-	
+
 	<!-- Reviewer 審查人 -->
 	<message key="reviewer.pendingReviews">待審查的文章</message>
 	<message key="reviewer.completedReviews">完成</message>
 	<message key="reviewer.averageQuality">評分</message>
-	
+
 	<!-- Used in submission review 使用在稿件審查時 -->
 	<message key="reviewer.article.fileToBeReviewed">要進行審查的檔案</message>
 	<message key="reviewer.article.notifyTheEditor">通知編輯人</message>
@@ -491,7 +491,7 @@
 	<message key="reviewer.article.recommendation">建議</message>
 	<message key="reviewer.article.submitReview">送出審查意見書給編輯</message>
 	<message key="reviewer.article.reviewerComments">評論</message>
-	<message key="reviewer.article.uploadedFile">上傳檔案</message>	
+	<message key="reviewer.article.uploadedFile">上傳檔案</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">由審查人上傳之版本</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">（如果您想要在這份檔案中做一些給編輯看的註解，請先將檔案儲存在您的硬碟上，然後使用「瀏覽＼上傳」功能。）</message>
         <message key="reviewer.article.schedule.request">編輯的要求</message>
@@ -527,7 +527,7 @@
 	<message key="copyeditor.article.copyeditorFile">校樣編輯檔案</message>
 	<message key="copyeditor.article.uploadedFile">上傳檔案</message>
 	<message key="copyeditor.article.copyeditorFinalFile">校樣編輯檔案</message>
-	
+
 	<!-- Proofreader 校對者 -->
 	<message key="proofreader.noProofreadingAssignments">沒有任何校對工作</message>
 
@@ -537,13 +537,13 @@
 	<!-- Article Submission Step 1 投稿步驟 1.-->
 	<message key="author.submit.journalSectionDescription"><![CDATA[為這份稿件選擇恰當的投稿文稿類型（見<a href="{$aboutUrl}">期刊介紹</a> 中的「文稿類型與方針」項目）
 	).]]></message>
-	
-	
+
+
 	<!-- Article Submission Step 2 投稿步驟 2.-->
 	<message key="author.submit.metadataDescription">本期刊為每份投稿稿件蒐集後設資料；依據「開放典藏計畫」標準設定，一種呈現在線上的標準格式以識別各項研究資源。這能夠透過OAI資料庫獲得豐富和準確的搜尋結果，增加讀者找到類似本文之文章的可能性。編輯可以要求在文章進行編輯程序之前一定要先提供後設資料。</message>
 	<message key="author.submit.authorsDescription">若投稿作者超過一位以上，請排列作者姓名出現順序，以利引用</message>
 	<message key="author.submit.reorderAuthorName">記錄作者姓名</message>
-	
+
 	<!-- Article Submission Step 3 投稿步驟3. -->
 	<message key="author.submit.uploadInstructions"><![CDATA[
 要上傳初稿給本期刊，請完成下列步驟。
@@ -557,11 +557,11 @@
 </ol>
 
 您可以點擊檔案的名稱來檢視該份檔案。可以上傳一份新的或者修改過的檔案，刪除掉目前出現的這份檔案。也可以（在下一步驟）使用「補充檔案」來增加額外的檔案。如果您上傳稿件時出現問題，請聯絡 <a href="mailto:{$supportEmail}">{$supportName}</a> ，透過電子郵件或電話 {$supportPhone}取得協助。]]></message>
-	
+
 	<!-- Article Submission Step 4 步驟 4. -->
-	
+
 	<!-- Article Submission Step 4a: Supplementary Files 投稿步驟 4a. 補充檔案-->
-	
+
 	<!-- Article Submission Step 5 步驟5.  -->
 
 	<!-- Used in submission review / editing 用於稿件審查、編輯-->
@@ -579,15 +579,15 @@
 	<message key="submission.copyedit.useFile">使用檔案</message>
 	<message key="submission.copyedit.copyeditComments">校樣意見</message>
 	<message key="submission.copyedit.instructions">校樣指引</message>
-	
+
 	<!-- Submission Tracking - Layout Specific 稿件追蹤-版面編輯階段-->
 	<message key="submission.layout.mustUploadFileForLayout">除非一份版面版本在這裡出現，否則要求發出的電子郵件無法寄出。</message>
 	<message key="submission.layout.assignLayoutEditor">指派版面編輯</message>
 	<message key="submission.layout.replaceLayoutEditor">替換版面編輯</message>
 	<message key="submission.layout.layoutComments">版面建議</message>
 	<message key="submission.layout.instructions">排版指引</message>
-	
-	
+
+
 	<!-- Submission Tracking - Proofread Specific 稿件追蹤-校對階段-->
 	<message key="submission.proofreadingComments">校對意見</message>
 	<message key="submission.archiveSubmission">典藏稿件</message>
@@ -595,7 +595,7 @@
 	<message key="submission.proofread.instructions">校對指引</message>
 
 	<!-- Submission History 稿件履歷-->
-	
+
 	<message key="submission.logType.article">文章</message>
 	<message key="submission.logType.author">作者</message>
 	<message key="submission.logType.editor">編輯</message>
@@ -603,11 +603,11 @@
 	<message key="submission.logType.copyedit">校樣編輯</message>
 	<message key="submission.logType.layout">版面編輯</message>
 	<message key="submission.logType.proofread">校對</message>
-	
+
 	<!-- Submission Event Log 稿件事件記錄 -->
 
 	<!-- Submission Email Log 稿件電郵記錄 -->
-	
+
 	<!-- Submission Comments 稿件評論 -->
 	<message key="submission.comments.editorAuthorCorrespondence">編輯＼作者通信</message>
 	<message key="submission.comments.copyeditComments">校樣編輯意見</message>
@@ -620,12 +620,12 @@
 	<message key="submission.comments.forEditor">給編輯</message>
 	<message key="submission.comments.saveAndEmailAuthor">存檔並電郵作者</message>
 	<message key="submission.comments.saveAndEmailEditor">存檔並電郵編輯</message>
-	
+
 	<!-- Login 登入 -->
 	<message key="user.login.rememberMe">記得我</message>
-	
+
 	<!-- Profile 帳號 -->
-	
+
 	<!-- Registration 註冊 -->
 	<message key="user.register.noJournals">本站目前尚無任何期刊可供註冊，</message>
 	<message key="user.register.privacyStatement">隱私權聲明</message>
@@ -643,7 +643,6 @@
 	<!-- Search 搜尋 -->
 	<message key="search.browseAuthorIndex">瀏覽作者索引</message>
 	<message key="search.searchFor">搜尋文章for</message>
-	<message key="search.author">作者</message>
 	<message key="search.withinJournal">含有</message>
 	<message key="search.allJournals">所有期刊</message>
 	<message key="search.authorIndex">瀏覽作者索引</message>
@@ -661,17 +660,17 @@
 
 	<!-- Interstitial page for PDFs 插入PDF頁面 -->
 	<message key="article.pdf.title">可攜式文件格式(Portable Document Format; PDF)</message>
-	
+
 	<!-- Interstitial page for non-PDF non-HTML galleys 非PDF、非HTML排版樣式的插入頁面-->
 	<message key="article.nonpdf.title">文章下載</message>
 	<message key="article.nonpdf.note"><![CDATA[您選擇的檔案應該會被自動下載到您的電腦上。如果沒有的話，請點擊下面的連結。請注意，這個檔案可能會需要一個特定的閱讀器或者外掛程式才能被檢視。<a href="{$url}">點擊這裡</a>.]]></message>
-	
+
 	<!-- Site index 網站索引 -->
 	<message key="site.journalsHosted">這個網站上的各種期刊</message>
 	<message key="site.journalView">瀏覽期刊</message>
 	<message key="site.journalRegister">註冊</message>
 	<message key="site.journalCurrent">當期期刊</message>
-	
+
 
 	<!-- Current index 當期索引 -->
 	<message key="current.current">當期</message>
@@ -682,7 +681,7 @@
 	<message key="archive.archives">過期期刊</message>
 	<message key="archive.browse">瀏覽之前的期刊</message>
 	<message key="archive.issueUnavailable">期刊無法閱讀</message>
-	
+
 	<!-- About The Journal -->
 	<message key="about.statistics">統計</message>
 	<message key="about.editorialTeam">編輯團隊</message>
@@ -713,13 +712,13 @@
 	<message key="about.aboutThisPublishingSystem">關於這個出版系統</message>
 	<message key="about.aboutOJSJournal"><![CDATA[這份期刊使用「開放期刊系統」(Open Journal Systems {$ojsVersion})，此系統是一個開源碼的期刊管理與出版軟體，由<a href="http://pkp.sfu.ca/">公共知識計畫(PKP; Public Knowledge Project)</a>研發與支持，並且以通用公共許可證(GNU; General Public License)自由流通。]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[這個網站使用「開放期刊系統」(Open Journal Systems {$ojsVersion})，此系統是一個開源碼的期刊管理與出版軟體，由<a href="http://pkp.sfu.ca/">公共知識計畫(PKP; Public Knowledge Project)</a>研發與支持，並且以通用公共許可證(GNU; General Public License)自由流通。]]></message>
-	
+
 	<!-- Announcement 公告 -->
 
 	<!-- Help 協助資訊 -->
 	<message key="help.ojsHelp">開放期刊系統協助資訊</message>
-	<message key="help.ojsHelpAbbrev">OJS協助資訊</message>	
-	
+	<message key="help.ojsHelpAbbrev">OJS協助資訊</message>
+
 	<!-- Installer 安裝 -->
 	<message key="installer.appInstallation">OJS安裝程式</message>
 	<message key="installer.ojsUpgrade">OJS升級程式</message>
@@ -766,7 +765,7 @@
 
 <p>選擇<strong>手動安裝</strong> 以顯示建立OJS資料庫結構和初始資料所必須的SQL指令，以手動執行安裝資料庫。在為安裝問題除錯時，可以選擇這個選項，特別是在沒有受到支援的平台上。注意，這個安裝方式並不嘗試去建立資料庫或任何資料表，雖然仍會將支持資料庫設定的內容寫入設定檔案中。</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS版本{$version}</h4>
-	
+
 <p>謝謝您下載公共知識計畫(Public Knowledge Project)的 <strong>開放期刊系統(Open Journal Systems)</strong>。在進行下一步之前，請先閱讀這份軟體中的<a href="{$baseUrl}/docs/README">README</a>檔案。想瞭解更多關於公共知識計畫以及其軟體計畫，請見：<a href="http://pkp.sfu.ca/" target="_blank">PKP網站</a>。如果您要回報關於開放期刊系統的錯誤資訊或者有相關的技術支援問題，請見：<a href="http://forum.pkp.sfu.ca">支援討論區</a>，或者請見PKP的線上<a href="https://github.com/pkp/pkp-lib#issues" target="_blank">錯誤回報系統</a>。雖然我們比較希望以討論區做為聯絡的管道，不過您也可以寄信給技術團隊：<a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>。</p>
 <p>我們<strong>強烈地建議您</strong>在繼續下一步之前，請備份您的資料庫、檔案目錄以及OJS的安裝目錄</p>
 <p>如果您正在執行<a href="http://www.php.net/features.safe-mode" target="_blank">PHP安全模式</a>， 請確保在您的 php.ini 設定檔中設定max_execution_time指令一個高額的上限。如果這個或者其他的時間上限（例如Apache的 "Timeout"指令）已到，而升級程序遭到中斷，您必須以手動的方式介入。</p>]]></message>
@@ -857,7 +856,7 @@
 	<message key="rt.admin.validateUrls.description"><![CDATA[下面列出可能是無效的搜尋網站網址。<br />
 您應該手動查證被標記成無效的任何網址，因為這個測試並非完全準確。<br />
 驗證需要遞交表單資料的搜尋網址可能會失敗。]]></message>
-	
+
 	<!-- RT Entities 閱讀工具項目 -->
 
 
@@ -879,7 +878,7 @@
 	<message key="rt.beNotifiedWhen">通知我，當....</message>
 
 	<message key="rt.thisJournal">搜尋期刊</message>
-	
+
 
 	<message key="rt.context.authorTermsDescription">由於文章擁有一個以上的作者，請選取所有的姓名以搜尋類似的共同作者作品，或者選取單個姓名以一次搜尋一個人。要學習更多關於搜尋資源的資訊，請點擊「介紹」。這些資源是基於其關連性與開放（自由）閱讀所有或部分內容而被選取的。</message>
 
@@ -890,7 +889,7 @@
 	 *
 	-->
 	<!-- Icons: Default "alt" text 圖標：預設的"alt"文字-->
-	
+
 	<!-- Debug messages 除錯訊息-->
 
 	<!--

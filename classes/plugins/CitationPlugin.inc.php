@@ -19,8 +19,8 @@ abstract class CitationPlugin extends Plugin {
 	/**
 	 * Constructor
 	 */
-	function CitationPlugin() {
-		parent::Plugin();
+	function __construct() {
+		parent::__construct();
 
 		if ($this->getEnabled()) {
 			HookRegistry::register('TemplateManager::display', array($this, 'loadJavaScript'));

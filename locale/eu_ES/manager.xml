@@ -173,7 +173,6 @@
 	<message key="manager.setup.initialIssue">Lehenengo zenbakia</message>
 	<message key="manager.setup.initialIssueDescription">Hautatutako formatuaren arabera, identifikatu OJSrekin argitaratuko den lehenengo zenbakiaren zenbakia, bolumena eta/edo urtea.</message>
 	<message key="manager.setup.institution">Erakundea</message>
-	<message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number) aldizkako argitalpenak, serie elektronikoak barne, identifikatzeko erabiltzen den zortzi zifrako zenbaki bat da. Mundu guztiko Zentro Nazionalek osatutako sare batek kudeatzen du, Parisen kokatutako eta Unescok eta Frantziako gobernuak babestutako Nazioarteko Zentro batek koordinatuta. ISSN zenbaki bat nahi izanez gero, <a href="http://www.issn.org" target="_new">ISSN webgunean</a> lor daiteke.  Aldizkariaren edozein fasetan egin daiteke.]]></message>
 	<message key="manager.setup.itemsDescription">Nabigazio-barran elementu gehiago ere jar daitezke, oraingoekin batera (Hasierako orria, Guri buruz, Erabiltzailearen hasierako orria, etab.) orriaren goialdean ager daitezen.</message>
 	<message key="manager.setup.itemsPerPage">Orrialdeko elementuak</message>
 	<message key="manager.setup.journalAbbreviation">Aldizkariaren laburdura</message>

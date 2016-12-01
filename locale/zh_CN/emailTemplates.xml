@@ -56,7 +56,7 @@
 如果您没有提出这个请求，请忽略这封电子邮件，同时您的密码将会保持不变。<br />
 如果您希望要重置您的密码，请按下面的链接。<br />
 <br />
-重置我的密码： {$url}<br />
+重置我的密码： <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>当注册用户忘记他们的密码或者无法登入的时候，这封电子邮件会寄给他们。信中会提供一个网址让它们能够登入并重置他们的密码。</description>
@@ -66,6 +66,7 @@
 		<body><![CDATA[您的密码已经成功重新设定以使用{$siteTitle}网站。请保管好这份用户名称和密码，它对于使用本站的所有功能来说是非常必要的。<br />
 <br />
 您的用户名称：{$username}<br />
+密码：{$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>当注册用户成功依照PASSWORD_RESET_CONFIRM电子邮件的指示重新设定他们的密码时，这封电子邮件会被寄给他们。</description>
@@ -370,7 +371,7 @@
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>编辑决定</subject>
 		<body><![CDATA[{$authorName}:<br />
-我们对于您在《{$journalTitle}》提交的〈{$submissionTitle}〉达成一项决定。<br />
+我们对于您在《{$contextName}》提交的〈{$submissionTitle}〉达成一项决定。<br />
 <br />
 我们的决定是：<br />
 <br />
@@ -382,7 +383,7 @@
 		<subject>编辑决定</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-我们对于您在《{$journalTitle}》提交的〈{$submissionTitle}〉达成一项决定。<br />
+我们对于您在《{$contextName}》提交的〈{$submissionTitle}〉达成一项决定。<br />
 <br />
 我们的决定是：<br />
 <br />
@@ -394,7 +395,7 @@
 		<subject>编辑决定</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-我们对于您在《{$journalTitle}》提交的〈{$submissionTitle}〉达成一项决定。<br />
+我们对于您在《{$contextName}》提交的〈{$submissionTitle}〉达成一项决定。<br />
 <br />
 我们的决定是：<br />
 <br />
@@ -406,7 +407,7 @@
 		<subject>编辑决定</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-我们对于您在《{$journalTitle}》提交的〈{$submissionTitle}〉达成一项决定。<br />
+我们对于您在《{$contextName}》提交的〈{$submissionTitle}〉达成一项决定。<br />
 <br />
 我们的决定是：<br />
 <br />

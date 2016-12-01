@@ -9,10 +9,10 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ro_RO (Limba Română) locale.
-  * Provided by Constantinescu Nicolaie. 
+  * Provided by Constantinescu Nicolaie.
   *
   -->
- 
+
 <locale name="ro_RO" full_name="Limba Română">
 	<!--
 	 * This file is organized into several major sections, separated
@@ -41,9 +41,9 @@
 	<!--  peer review -->
 
 
-	<message key="reviewer.article.enterReviewForm">Dă clic pe pictogramă pentru a completa formularul de evaluare.</message>	
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Completaţi câmpurile necesare.</message>	
-	
+	<message key="reviewer.article.enterReviewForm">Dă clic pe pictogramă pentru a completa formularul de evaluare.</message>
+	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Completaţi câmpurile necesare.</message>
+
 	<!-- review forms end -->
 
 	<!--
@@ -60,16 +60,16 @@
 	<message key="common.homePageHeader.altText">Colontitlul paginii principale</message>
 	<message key="common.journalHomepageImage.altText">Imaginea din pagina principală a revistei</message>
 
-	
+
 
 	<!-- Common Form Messages -->
-	
+
 	<!-- Common Email Messages -->
 
 	<!-- Common Localization Terms -->
 
 	<!-- Common Error Messages -->
-		
+
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Sistemul de asistenţă al revistei</message>
 	<message key="navigation.current">Numărul curent</message>
@@ -81,7 +81,7 @@
 	<message key="navigation.competingInterestGuidelines">Îndrumări privind rezolvarea conflictului de interese</message>
 	<message key="navigation.infoForAuthors.long">Informaţii pentru autori</message>
 	<message key="navigation.infoForLibrarians.long">Informaţii pentru bibliotecari</message>
-	
+
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Neatribuit</message>
 	<message key="common.queue.short.submissionsUnassigned">Neatribuit</message>
@@ -95,7 +95,7 @@
 	<message key="common.queue.short.active">Activ</message>
 	<message key="common.queue.long.completed">Arhivate</message>
 	<message key="common.queue.short.completed">Arhivează</message>
-	
+
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
@@ -166,7 +166,7 @@
 	<message key="submission.scheduling">Programare</message>
 	<message key="submission.scheduledIn">Programat pentru publicare în {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(TBA)</message>
-	
+
 	<message key="submissions.sec">Sec</message>
 	<message key="submissions.step1">Pas 1</message>
 	<message key="submissions.step3">Pas 3</message>
@@ -189,7 +189,7 @@
 	<message key="submissions.proofreadingComplete">Corectură</message>
 
 	<!-- Submission Notes -->
-	
+
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Numărul curent</message>
 	<message key="journal.journals">Reviste</message>
@@ -217,7 +217,7 @@
 	<message key="user.role.subscriptionManager">Manager pentru abonamente</message>
 	<message key="user.role.managers">Managerii revistei</message>
 	<message key="user.role.subscriptionManagers">Manageri abonamente</message>
-	
+
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Număr</message>
 	<message key="issue.issues">Numere</message>
@@ -267,7 +267,7 @@
 	<message key="submission.event.logLevel.notice">Înștiințare</message>
 	<message key="submission.event.logLevel.warning">Avertisment</message>
 	<message key="submission.event.logLevel.error">Eroare</message>
-	
+
 	<message key="submission.event.general.defaultEvent">Depunere de propunere</message>
 	<message key="submission.event.general.issueScheduled">Propunere trimisă pentru a genera lista cu programări</message>
 	<message key="submission.event.general.issueAssigned">Propunere alipită la un număr</message>
@@ -276,15 +276,15 @@
 	<message key="submission.event.author.authorRevision">Versiunea revizuită de autor a fost trimisă</message>
 
 	<message key="submission.event.general.authorRevision">Versiunea revizuită de autor a fost actualizată</message>
-	
+
 	<message key="submission.event.editor.editorAssigned">Propunerea a fost angajată de un redactor</message>
 	<message key="submission.event.editor.editorUnassigned">Redactor dezangajat față de propunere</message>
 	<message key="submission.event.editor.editorDecision">Redactorul a trimis decizia</message>
 	<message key="submission.event.editor.editorFile">Fişierul redactorului a fost actualizat</message>
 	<message key="submission.event.editor.submissionArchived">Propunere trimisă la arhivă</message>
 	<message key="submission.event.editor.submissionRestored">Propunere restaurată din arhivă</message>
-	
-	
+
+
 	<message key="submission.event.copyedit.copyeditorAssigned">(Tehno)redactor angajat cu propunerea</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">(Tehno)redactor dezangajat față de propunere</message>
 	<message key="submission.event.copyedit.copyeditInitiated">Sarcină de (tehno)redactare iniţiată</message>
@@ -292,13 +292,13 @@
 	<message key="submission.event.copyedit.copyeditInitialCompleted">(Tehno)redactare iniţială încheiată</message>
 	<message key="submission.event.copyedit.copyeditFinalCompleted">(Tehno)redactare finală încheiată</message>
 	<message key="submission.event.copyedit.copyeditSetFile">Fişier de tehnoredactare actualizat</message>
-	
+
 	<message key="submission.event.proofread.proofreaderAssigned">Corector angajat cu propunerea</message>
 	<message key="submission.event.proofread.proofreaderUnassigned">Corector dezangajat față de propunere</message>
 	<message key="submission.event.proofread.proofreadInitiated">Sarcină de corectare iniţiată</message>
 	<message key="submission.event.proofread.proofreadRevision">Fișierul revizuit al corectorului a fost actualizat</message>
 	<message key="submission.event.proofread.proofreadCompleted">Sarcina corectorului s-a încheiat</message>
-	
+
 	<message key="submission.event.layout.layoutEditorAssigned">Redactor de machetă angajat cu propunerea</message>
 	<message key="submission.event.layout.layoutEditorUnassigned">Redactor de machetă dezangajat față de propunere</message>
 	<message key="submission.event.layout.layoutInitiated">Sarcină de machetare inițiată</message>
@@ -313,7 +313,7 @@
 
 	<!-- Reader article view -->
 	<message key="reader.subscribersOnly">Doar abonaţii</message>
-	<message key="reader.subscriptionRequiredLoginText">Este necesară abonarea pentru a accesa articolul. Pentru a verifica abonamentul, autentifică-te.</message>  
+	<message key="reader.subscriptionRequiredLoginText">Este necesară abonarea pentru a accesa articolul. Pentru a verifica abonamentul, autentifică-te.</message>
 	<message key="reader.openAccess">Acces Deschis</message>
 	<message key="reader.subscriptionAccess">Acces pe bază de abonament</message>
 	<message key="reader.subscriptionOrFeeAccess">Access pe bază de abonament sau cu taxă</message>
@@ -323,7 +323,7 @@
 	<message key="comments.authenticated"><![CDATA[de <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
 	<!-- Site Administration -->
-	
+
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Pentru a avea indexat conţinutul tuturor revistelor găzduite în sistemul distribuit global al bazelor de date pentru cercetare, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">înregistrează</a> URL-ul siteului la <a href="http://pkp.sfu.ca/harvester/" target="_blank">colectorul</a> de metadate al Public Knowledge Project. Acest instrument colectează metadatele de la fiecare articol indexat al revistei, permiţând căutarea colectivă şi cu acurateţe printre siteurile de cercetare care suportă <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
 Dă<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank"> clic aici</a> şi introdu <span class="highlight">{$siteUrl}</span> sub <strong>URL-ul siteului</strong> dar şi <span class="highlight">{$oaiUrl}</span> sub <strong>URL-ul de bază pentru arhiva OAI</strong>.
@@ -332,13 +332,13 @@ Trebuie remarcat faptul că interfaţa OAI poate fi deazactivată pentru acest s
 
 
 
-	
+
 	<!-- Languages -->
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Descărcarea pachetelor de limbă de la serverul web al Public Knowledge Project nu este posibilă deoarece:</p>
-	<ul>	
+	<ul>
 		<li>Serverul dumneavoastră nu are sau nu permite executarea utilitarului GNU "tar"</li>
 		<li>OJS nu poate modifica fişierul local de regiştri, de regulă acesta fiind găsit în "registry/locales.xml".</li>
-	
+
 
 
 
@@ -351,7 +351,7 @@ Trebuie remarcat faptul că interfaţa OAI poate fi deazactivată pentru acest s
 
 
 </ul>]]></message>
-	
+
 	<!-- System Information -->
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTĂ!</h4>
 <p>Sistemul nu a putut suprascrie automat fişierul de configurare. Pentru a aplica modificările, trebuie să deschizi <tt>config.inc.php</tt> într-un editor de text şi să înlocuieşti conţinutul cu cel din câmpul de text de mai jos.</p>]]></message>
@@ -367,25 +367,25 @@ Trebuie remarcat faptul că interfaţa OAI poate fi deazactivată pentru acest s
 
 
 
-	<!-- Site Administrator Merge Users -->	
+	<!-- Site Administrator Merge Users -->
 
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Managementul abonamentelor</message>
 	<message key="subscriptionManager.individualSubscriptions">Abonamente individuale</message>
 	<message key="subscriptionManager.institutionalSubscriptions">Abonamente instituționale</message>
 	<message key="subscriptionManager.subscriptionTypes">Tipuri de abonamente</message>
-	
+
 	<!-- Journal Management -->
 
 	<!-- Statistics & Reports -->
 
 
 	<!-- Plugin Management -->
-	
+
 	<!-- Payment Management -->
 
 
-		
+
 
 
 	<!-- General plugin information -->
@@ -400,14 +400,14 @@ Trebuie remarcat faptul că interfaţa OAI poate fi deazactivată pentru acest s
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->
-	
+
 	<!-- Setup Step 1 -->
 
 	<!-- Setup Step 2 -->
 
-	
-	
-	
+
+
+
 
 	<message key="manager.setup.reviewProcessEmailDescription">Redactorii trimit
 	evaluatorilor solicitarea de a face evaluarea propunerii ataşate printr-un email. Evaluatorii trimit un email redactorilor cu acordul (sau regretul), precum şi evaluarea sau recomandarea. Redactorii introduc acceptul (sau regretul), precum şi evaluarea şi recomandarea pe pagina de evaluare a propunerii, cu scopul de a înregistra procesul de evaluare.</message>
@@ -417,7 +417,7 @@ Trebuie remarcat faptul că interfaţa OAI poate fi deazactivată pentru acest s
 Instalarea suportului LOCKSS pentru Open Journal Systems nu este necesar să se întâmple înainte ca procesul de publicare să se desfăşoare deja, moment în care se poate proceda la următorii paşi:]]></message>
 
 
-	
+
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Propuneri de acorduri privind drepturile de autor conforme Creative Commons</h3>
 <h4>1. Regulă propusă pentru revistele care oferă acces deschis</h4>
@@ -461,7 +461,7 @@ Titlul sistemului de clasificare]]></message>
 
 <br /><br />
 Trebuie spus că în cazul în care administratorul siteului l-a înregistrat la aceste servicii, revista va fi indexată automat și nu va mai trebui să procedați la încă o înregistrare.]]></message>
-	
+
 
 
 
@@ -481,7 +481,7 @@ Selectaţi un model pentru gestionarea acestor aspecte ale procesului editorial.
 	<!-- Setup Step 5 -->
 
 	<!-- Languages -->
-	
+
 	<!-- Section Management -->
 
 	<!-- Import/Export -->
@@ -496,18 +496,18 @@ Selectaţi un model pentru gestionarea acestor aspecte ale procesului editorial.
 
 Opţional, poţi trimite utilizatorului motivul pentru care i-a fost deazactivat contul.</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[Scuze, dar nu ai drepturi de administrare asupra acestui utilizator. Pot fi din următoarele cauze:
-		<ul>		
+		<ul>
 			<li>Utilizatorul este administratorul unui site</li>
 			<li>Utilizatorul este activ în revistele la care nu eşti manager</li>
-		
-		
-		</ul>		
+
+
+		</ul>
 	Această sarcină poate fi îndeplinită de un administrator de site.
-	
+
 	]]></message>
 
 
-	
+
 	<!-- Email Management -->
 
 	<!-- Subscription Policy Management -->
@@ -537,7 +537,7 @@ Opţional, poţi trimite utilizatorului motivul pentru care i-a fost deazactivat
 	<!-- Live Issues -->
 
 	<!-- Navigation sidebar menu -->
-	
+
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Linkuri către profilul evaluatorului.<br />
 Nota este peste 5 (Excelent).<br />
@@ -556,14 +556,14 @@ Activ însemnă câte evaluări sunt în prezent luate în considerare sau în d
 
 
 
-	
+
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Sarcini de redactare active</message>
 	<message key="sectionEditor.completedEditorialAssignments">Sarcini de redactare încheiate</message>
 	<message key="sectionEditor.noneAssigned">Nu mai există propuneri angajate.</message>
 	<message key="sectionEditor.copyedit.confirmRenotify">Trimițând din nou o înștiințare acestui redactor, va reiniția sarcina acestuia. Ești sigur că dorești să faci asta?</message>
 	<message key="sectionEditor.author.confirmRenotify">Trimițând din nou o înștiințare acestui autor, va reiniția sarcina acestuia. Ești sigur că dorești să faci asta?</message>
-	
+
 	<message key="sectionEditor.layout.confirmRenotify">Trimițând din nou o înștiințare acestui redactor de machetă, va reiniția sarcina acestuia. Ești sigur că dorești să faci asta?</message>
 	<message key="sectionEditor.proofreader.confirmRenotify">Trimițând din nou o înștiințare acestui corector, va reiniția sarcina acestuia. Ești sigur că dorești să faci asta?</message>
 
@@ -588,12 +588,12 @@ Activ însemnă câte evaluări sunt în prezent luate în considerare sau în d
 	<message key="layoutEditor.galley.replaceGalley">Înlocuieşte fişierul</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Încarcă fişier suplimentar</message>
 	<message key="submission.layout.imageInvalid">Format de imagine invalid. Formatele acceptate sunt .gif, .jpg, şi .png.</message>
-	
+
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Articole în așteptarea evaluării</message>
 	<message key="reviewer.completedReviews">Evaluare încheiată</message>
 	<message key="reviewer.averageQuality">Calificativ</message>
-	
+
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">Fişier care trebuie evaluat</message>
 	<message key="reviewer.article.notifyTheEditor">Înștiințează redactorul</message>
@@ -608,7 +608,7 @@ Activ însemnă câte evaluări sunt în prezent luate în considerare sau în d
 	<message key="reviewer.article.recommendation">Recomandare</message>
 	<message key="reviewer.article.submitReview">Trimite evaluarea către redactor</message>
 	<message key="reviewer.article.reviewerComments">Comentarii</message>
-	<message key="reviewer.article.uploadedFile">Fișiere încărcate</message>	
+	<message key="reviewer.article.uploadedFile">Fișiere încărcate</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Versiune încărcată de evaluator</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Dacă doreşti să adnotezi fişierul pentru redactor, salvează-l pe hard disc şi utilizează Navighează/Încarcă.)</message>
         <message key="reviewer.article.schedule.request">Solicitarea redactorului</message>
@@ -649,7 +649,7 @@ Activ însemnă câte evaluări sunt în prezent luate în considerare sau în d
 	<message key="copyeditor.article.copyeditorFile">Fişierul (tehno)redactorului</message>
 	<message key="copyeditor.article.uploadedFile">Fişier încărcat</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Fişierul (tehno)redactorului</message>
-	
+
 	<!-- Proofreader -->
 	<message key="proofreader.noProofreadingAssignments">Nu există nicio sarcină de corectură</message>
 
@@ -658,9 +658,9 @@ Activ însemnă câte evaluări sunt în prezent luate în considerare sau în d
 
 	<!-- Article Submission Step 1 -->
 
-	
+
 	<!-- Article Submission Step 2 -->
-	
+
 	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[<p>Pentru a încărca un manuscris în sistemul revistei, completaţi următorii paşi.</p>
 
@@ -676,18 +676,18 @@ Activ însemnă câte evaluări sunt în prezent luate în considerare sau în d
 
 
 </ol>]]></message>
-	
+
 	<!-- Article Submission Step 4 -->
-	
+
 	<!-- Article Submission Step 4a: Supplementary Files -->
-	
+
 	<!-- Article Submission Step 5 -->
 
 	<!-- Used in submission review / editing -->
 	<message key="submission.review.mustUploadFileForReview">Emailul de solicitare nu poate fi trimis până cînd nu este pusă versiunea evaluată.</message>
 
 	<!-- Submission Tracking - Copyedit Specific -->
-	
+
 	<message key="submission.copyedit.mustUploadFileForInitialCopyedit">Emailul de solicitare nu poate fi trimis până când fișierul nu este selectat pentru (tehno)redactare din subsecțiunea „deciziei redactorului” din pagina de evaluare.</message>
 	<message key="submission.copyedit.mustUploadFileForCopyedit">Emailul de solicitare nu poate fi trimis până când fişierul nu este încărcat pentru a fi (tehno)redactat.</message>
 	<message key="submission.copyedit.initialCopyedit">(Tehno)redactare iniţială</message>
@@ -699,9 +699,9 @@ Activ însemnă câte evaluări sunt în prezent luate în considerare sau în d
 	<message key="submission.copyedit.useFile">Folosește fișierul</message>
 	<message key="submission.copyedit.copyeditComments">Comentarii la (tehno)redactare</message>
 	<message key="submission.copyedit.instructions">Instrucţiuni de (tehno)redactare</message>
-	
+
 	<!-- Submission Tracking - Layout Specific -->
-	
+
 	<message key="submission.layout.noLayoutFile">Niciunul (Încarcă versiunea finală de (tehno)redactare ca versiune de machetă înainte de a trimite solicitarea)</message>
 	<message key="submission.layout.publicGalleyId">Identificator public pentru asamblare</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Identificatorul public al asamblării există deja.</message>
@@ -710,15 +710,15 @@ Activ însemnă câte evaluări sunt în prezent luate în considerare sau în d
 	<message key="submission.layout.layoutComments">Comentarii la machetă</message>
 	<message key="submission.layout.instructions">Instrucţiuni de machetare</message>
 	<message key="submission.layout.referenceLinking">Linkuri pentru referințe</message>
-	
-	
+
+
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Comentarii la corectură</message>
 	<message key="submission.proofread.corrections">Corecturi aduse</message>
 	<message key="submission.proofread.instructions">Instrucţiuni de corectură</message>
 
 	<!-- Submission History -->
-	
+
 	<message key="submission.logType.article">Articol</message>
 	<message key="submission.logType.author">Autor</message>
 	<message key="submission.logType.editor">Redactor</message>
@@ -726,11 +726,11 @@ Activ însemnă câte evaluări sunt în prezent luate în considerare sau în d
 	<message key="submission.logType.copyedit">Redactare</message>
 	<message key="submission.logType.layout">Machetă</message>
 	<message key="submission.logType.proofread">Corectură</message>
-	
+
 	<!-- Submission Event Log -->
 
 	<!-- Submission Email Log -->
-	
+
 	<!-- Submission Comments -->
 	<message key="submission.comments.editorAuthorCorrespondence">Corespondenţa Redactor/Autor</message>
 	<message key="submission.comments.copyeditComments">Comentarii la (tehno)redactare</message>
@@ -743,10 +743,10 @@ Activ însemnă câte evaluări sunt în prezent luate în considerare sau în d
 	<message key="submission.comments.forEditor">Pentru redactor</message>
 	<message key="submission.comments.saveAndEmailAuthor">Salvează şi trimite email autorului</message>
 	<message key="submission.comments.saveAndEmailEditor">Salvează şi trimite email redactorului</message>
-	
+
 
 	<!-- Login -->
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Din motive de securitate acest sistem trimite o parolă de resetare prin email utilizatorilor înregistraţi şi nu trimite 
+	<message key="user.login.resetPasswordInstructions"><![CDATA[Din motive de securitate acest sistem trimite o parolă de resetare prin email utilizatorilor înregistraţi şi nu trimite
 parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta parola. Va fi trimisă o confirmare către această adresă de email.]]></message>
 
 
@@ -799,7 +799,6 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Parcurge indexul de autori</message>
 	<message key="search.searchFor">Caută în articole după</message>
-	<message key="search.author">Autori</message>
 	<message key="search.withinJournal">În revistă</message>
 	<message key="search.allJournals">Toate revistele</message>
 	<message key="search.authorIndex">Parcurge indexul de autori</message>
@@ -826,15 +825,15 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Descarcă articolul</message>
-	
+
 	<message key="article.nonpdf.note"><![CDATA[Fişierul selectat ar trebui să înceapă să se descarce automat. Dacă nu, apasă pe linkul de mai jos. Trebuie remarcat că acest fişier ar putea avea nevoie de un cititor sau modul special pentru a fi vizualizat.<br /><br />Dacă fişierul nu se descarcă automat, <a href="{$url}">apăsaţi aici</a>.]]></message>
-	
+
 	<!-- Site index -->
 	<message key="site.journalsHosted">Revistele găzduite pe acest site</message>
 	<message key="site.journalView">Vezi revista</message>
 	<message key="site.journalRegister">Înregistrează-te</message>
 	<message key="site.journalCurrent">Numărul curent</message>
-	
+
 
 	<!-- Current index -->
 	<message key="current.current">Curent</message>
@@ -845,7 +844,7 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<message key="archive.archives">Arhive</message>
 	<message key="archive.browse">Răsfoieşte numerele mai vechi</message>
 	<message key="archive.issueUnavailable">Număr indisponibil</message>
-	
+
 	<!-- About The Journal -->
 	<message key="about.statistics">Statistici</message>
 	<message key="about.history">Istoricul revistei</message>
@@ -878,7 +877,7 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<message key="about.subscriptions.institutional">Abonamente instituționale</message>
 	<message key="about.subscriptionsContact">Contact reponsabil pentru abonamente</message>
 	<message key="about.subscriptionTypes.name">Nume</message>
-	
+
 	<message key="about.subscriptionTypes.format">Format</message>
 	<message key="about.subscriptionTypes.duration">Durată</message>
 	<message key="about.subscriptionTypes.cost">Cost</message>
@@ -888,23 +887,23 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<message key="about.aboutThisPublishingSystem.altText">Procesul editorial și de publicare al OJS</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Această revistă foloseşte Open Journal Systems {$ojsVersion}, care este un software cu sursă deschisă pentru managementul şi publicarea unei reviste întreținut şi distribuit liber de <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> sub GNU General Public License.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[Aceast site foloseşte Open Journal Systems {$ojsVersion}, care este un software cu sursă deschisă pentru managementul şi publicarea unei reviste întreținut şi distribuit liber de <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> sub GNU General Public License.]]></message>
-	
+
 	<!-- Announcement -->
 
 	<!-- Help -->
 	<message key="help.ojsHelp">Sistemul de asistenţă al Open Journal Systems</message>
-	<message key="help.ojsHelpAbbrev">Asistenţă OJS</message>	
+	<message key="help.ojsHelpAbbrev">Asistenţă OJS</message>
 	<message key="help.searchReturnResults">Întoarce-te la rezultatele de căutare</message>
 
 	<!-- Donations -->
 	<message key="donations.thankYou">Mulțumim</message>
 	<message key="donations.thankYouMessage">Îți mulțumim pentru contribuție. Aportul tău este apreciat foarte mult.</message>
-	
+
 	<!-- Payments -->
 	<message key="payment.loginRequired">Trebuie să fii autentificat pentru a face o plată.</message>
 	<message key="payment.loginRequired.forArticle">Este necesar un abonament sau achiziţionarea articolului pentru a-l accesa. Pentru a verifica abonamentul, accesaţi achiziţia anterioară, achiziţionaţi direct articolul sau autentificaţi-vă pe siteul revistei.</message>
 	<message key="payment.loginRequired.forDonation">Trebuie să fii autentificat pentru a face o donaţie.</message>
-	
+
 	<message key="payment.paid">Plătit</message>
 	<message key="payment.payNow">Plăteşte acum</message>
 	<message key="payment.waive">Derogare</message>
@@ -919,22 +918,22 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<message key="payment.type.purchaseArticle">Cost de achiziţie pentru articol</message>
 	<message key="payment.type.subscription">Preț abonament</message>
 	<message key="payment.type.donation">Donaţii</message>
-	
+
 	<message key="payment.donation.makeDonation">Fă o donaţie</message>
-	
+
 	<message key="payment.submission.paySubmission">Plăteşte taxa pentru depunerea propunerii</message>
 	<message key="payment.fastTrack.payFastTrack">Plăteşte pentru evaluare accelerată</message>
 	<message key="payment.fastTrack.inFastTrack">e în evaluare accelerată</message>
 	<message key="payment.publication.payPublication">Taxă pentru publicare</message>
 	<message key="payment.publication.publicationPaid">Taxă de publicare plătită</message>
-	
+
 	<message key="payment.membership.buyMembership">Cumpără statut de membru la nivel individual</message>
-	<message key="payment.membership.renewMembership">Reînnoieşte-ţi statutul de membru</message>	
+	<message key="payment.membership.renewMembership">Reînnoieşte-ţi statutul de membru</message>
 	<message key="payment.membership.ends">Se încheie</message>
 
 	<message key="payment.subscription.purchase">Achită abonament</message>
 	<message key="payment.subscription.renew">Reînnoiește abonament</message>
-	<message key="payment.subscription.expires">Expiră</message>	
+	<message key="payment.subscription.expires">Expiră</message>
 
 
 
@@ -987,7 +986,7 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 <p>Vă mulţumim pentru descărcarea lui <strong>Open Journal Systems</strong> de la Public Knowledge Project. Înainte de a continua, vă rog să citiţi documentul <a href="{$baseUrl}/docs/README">README</a> şi documentul <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> care sunt încluse în acest pachet software. Pentru mai multe informaţii despre Public Knowledge Project şi proiectele sale software, vizitaţi <a href="http://pkp.sfu.ca/" target="_blank">siteul web PKP</a>. Dacă aveţi rapoarte privind bugurile sau nelămuriri de natură tehnică privind Open Journal System, consultaţi <a href="http://forum.pkp.sfu.ca">forumul pentru asistenţă</a> sau vizitaţi online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">sistemul de raportare al bugurilor</a> de la PKP. Chiar dacă metoda preferată de contact este forumul de asistenţă, puteţi să trimiteţi şi un email echipei la <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
 <p>Se recomandă <strong>cu insistenţă</strong> să faceţi o copie de siguranţă la baza de date, la sistemul de directoare şi a directorului de instalare mai înainte de a începe.</p>
 <p>Dacă rulaţi în <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, asiguraţi-vă că directiva  max_execution_time există în fişierul de configurare php.ini şi că este setat la valoare maximă. Dacă această limită de timp este depăşită sau oricare altă limită de timp (ex. directiva "Timeout" de la Apache) iar procesul de actualizare este intreupt, va fi necesară intervenţia manuală.</p>]]></message>
-	
+
 
 
 
@@ -1002,7 +1001,7 @@ Serverul în acest moment suportă supports mbstring: <strong>{$supportsMBString
 	<message key="installer.installApplication">Instalează Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Actualizează Open Journal Systems</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Avertisment:</strong> Dacă instalarea a eşuat parţial la momentul instalării bazei de date, va trebui să faci DROP la tabelele bazei de date înainte de a încerca reinstalarea acesteia.]]></message>
-	
+
 
 
 
@@ -1076,7 +1075,7 @@ Serverul în acest moment suportă supports mbstring: <strong>{$supportsMBString
 	<!-- RT Settings -->
 	<message key="rt.admin.settings">Opţiunile instrumentului de lectură</message>
 
-	
+
 
 
 
@@ -1092,7 +1091,7 @@ Serverul în acest moment suportă supports mbstring: <strong>{$supportsMBString
 
 	<message key="rt.admin.options">Instrumente pentru articolele revistei</message>
 	<message key="rt.admin.relatedItems">Instrumente pentru articolul legat</message>
-	
+
 	<message key="rt.admin.settings.addComment">Adaugă comentariu (permite cititorilor să pună comentarii, managerul revistei putând să le şteargă).</message>
 	<message key="rt.admin.settings.addComment.authenticated">Utilizatorii trebuie să se înregistreze şi să se autentifice pentru a putea posta. Anonimitatea nu este permisă.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Utilizatorii trebuie să se înregistreze şi să se autentifice pentru a posta. Postarea anonimă este permisă.</message>
@@ -1108,7 +1107,7 @@ Serverul în acest moment suportă supports mbstring: <strong>{$supportsMBString
 	<message key="rt.admin.validateUrls.description"><![CDATA[Mai jos sunt afişate posibile URL-uri invalide pentru siteurile de căutare.<br />
 Ar trebui să verifici manual orice URL marcat ca invalid pentru că acest test nu este 100% exact.<br />
 Validarea poate eşua pe URL-urile de căutare care necesită date postate într-un formular.]]></message>
-	
+
 
 
 <!-- RT Entities -->
@@ -1129,29 +1128,29 @@ Validarea poate eşua pe URL-urile de căutare care necesită date postate într
 	<message key="rt.beNotifiedWhen">Să fiţi înștiințat când...</message>
 
 	<message key="rt.thisJournal">Caută în revistă</message>
-	
+
 
 	<message key="rt.context.authorTermsDescription">Pentru articolele care au mai mult de un autor, lasă toate numele bifate pentru a căuta după lucrări în cooperare sau caută una câte una prin bifarea doar a unui nume. Pentru a afla mai multe despre resursele căutate, clic pe DESPRE. Aceste resurse au fost selectate datorită relevanţei lor şi pentru accesului deschis (liber) in integrum sau parţial la conţinutul conţinutului acestora.</message>
-	
-	
-	
+
+
+
 
 	<!-- Notification Types -->
 	<message key="notification.mailListDescription">Introdu adresa de email pentru a primi înștiințări imediat ce un nou conținut este adăugat la revistă.</message>
 	<message key="notification.notificationsPublicDescription">Această pagină indică actualizările importante asociate cu această revistă precum noilenumere sau anunțurile. Te poți înscrie pentru a primi aceste anunțuri prin intermediul fluxurilor RSS (dând clic pe imaginea din dreapta) sau <![CDATA[  <a href="{$emailUrl}">prin email.</a>]]></message>
-	
-	<message key="notification.type.articleSubmitted">Un articol nou, "{$param}", a fost introdus ca propunere.</message>
+
+	<message key="notification.type.articleSubmitted">Un articol nou, "{$title}", a fost introdus ca propunere.</message>
 	<message key="notification.type.editing">Editarea evenimentelor</message>
-	<message key="notification.type.editorDecisionComment">A fost lăsat un comentariu la decizia redactorului pentru "{$param}".</message>
-	<message key="notification.type.galleyModified">A fost modificată o asamblare pentru "{$param}".</message>
+	<message key="notification.type.editorDecisionComment">A fost lăsat un comentariu la decizia redactorului pentru "{$title}".</message>
+	<message key="notification.type.galleyModified">A fost modificată o asamblare pentru "{$title}".</message>
 	<message key="notification.type.issuePublished">A fost publicat un nou număr.</message>
-	<message key="notification.type.newAnnouncement">A fost creat un anunț nou.</message>	
-	<message key="notification.type.reviewerFormComment">A fost trimis un formular de evaluare pentru "{$param}".</message>
+	<message key="notification.type.newAnnouncement">A fost creat un anunț nou.</message>
+	<message key="notification.type.reviewerFormComment">A fost trimis un formular de evaluare pentru "{$title}".</message>
 	<message key="notification.type.reviewing">Evenimente la evaluare</message>
 	<message key="notification.type.site">Evenimente privind siteul</message>
-	<message key="notification.type.submissionComment">Un redactor a făcut un comentariu la "{$param}".</message>
+	<message key="notification.type.submissionComment">Un redactor a făcut un comentariu la "{$title}".</message>
 	<message key="notification.type.submissions">Evenimente privind propunerea</message>
-	<message key="notification.type.userComment">Un cititor a făcut un comentariu la "{$param}"</message>
+	<message key="notification.type.userComment">Un cititor a făcut un comentariu la "{$title}"</message>
 
 
 	<!--
@@ -1160,7 +1159,7 @@ Validarea poate eşua pe URL-urile de căutare care necesită date postate într
 	 *
 	-->
 	<!-- Icons: Default "alt" text -->
-	
+
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Lista de monede "{$filename}" a fost încărcată din XML</message>
 	<message key="user.register.reviewerInterests">Identificarea intereselor în contextul evaluării (zone ale subiectelor de studiu și metodele de cercetare):</message>

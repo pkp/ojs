@@ -100,7 +100,7 @@ class ResolverPlugin extends GatewayPlugin {
 				unset($issues);
 
 				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-				$articles =& $publishedArticleDao->getPublishedArticles($issue->getId());
+				$articles = $publishedArticleDao->getPublishedArticles($issue->getId());
 				foreach ($articles as $article) {
 					// Look for the correct page in the list of articles.
 					$matches = null;
@@ -115,10 +115,11 @@ class ResolverPlugin extends GatewayPlugin {
 					}
 					unset($article);
 				}
+				break;
 		}
 
 		// Failure.
-		header("HTTP/1.0 500 Internal Server Error");
+		header('HTTP/1.0 404 Not Found');
 		$templateMgr = TemplateManager::getManager($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
 		$templateMgr->assign('message', 'plugins.gateways.resolver.errors.errorMessage');
@@ -170,32 +171,6 @@ class ResolverPlugin extends GatewayPlugin {
 			echo $this->sanitize($endNumber) . "\n"; // iss_end
 
 		}
-	}
-
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
-		if (Validation::isSiteAdmin() && $this->getEnabled()) {
-			$verbs[] = array(
-				'exportHoldings',
-				__('plugins.gateways.resolver.exportHoldings')
-			);
-		}
-		return $verbs;
-	}
-
- 	/**
-	 * @see Plugin::manage()
-	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		switch ($verb) {
-			case 'exportHoldings':
-				if (Validation::isSiteAdmin() && $this->getEnabled()) {
-					$this->exportHoldings();
-					return true;
-				}
-				break;
-		}
-		return parent::manage($verb, $args, $message, $messageParams, $pluginModalContent);
 	}
 }
 

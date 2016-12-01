@@ -19,7 +19,7 @@
 <br />
 لطفا چنانچه شما این درخواست را نفرستاده اید، به این ایمیل توجهی نکنید، در این صورت رمز عبور شما تغییری نخواهد کرد. اگر مایل به تنظیم دوباره رمزعبور خود هستید، برروی پیوند زیر کلیک نمائید.<br />
 <br />
-تنظیم مجدد رمز عبور: {$url}<br />
+تنظیم مجدد رمز عبور: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>This email is sent to a registered user when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password.</description>
@@ -29,6 +29,7 @@
 		<body><![CDATA[رمزعبور شما برای استفاده از وب سایت {$contextName}، دوباره تنظیم شد. لطفا این کلمه کاربری و رمز عبور را محفوظ نگاه دارید، زیرا برای کارکردن با وب سایت مجله لازم است.<br />
 <br />
 نام کاربری شما: {$username}<br />
+رمز عبور: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>This email is sent to a registered user when they have successfully reset their password following the process described in the PASSWORD_RESET_CONFIRM email.</description>
@@ -724,7 +725,7 @@ jhvdo hkrqh: {$expiryDate}<br />
 		<subject>تصمیم دبیر</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-عنوان مجله: {$journalTitle}<br />
+عنوان مجله: {$contextName}<br />
 عنوان مقاله: &quot;{$submissionTitle}&quot;<br />
 <br />
 هم اکنون موفق شدیم در مورد ساب میشن فوق مربوط به شما تصمیم گیری کنیم<br />
@@ -737,7 +738,7 @@ jhvdo hkrqh: {$expiryDate}<br />
 		<subject>تصمیم دبیر</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-در مورد مقاله شما با عنوان &quot;{$submissionTitle}&quot; برای {$journalTitle} تصمیم گیری شد.<br />
+در مورد مقاله شما با عنوان &quot;{$submissionTitle}&quot; برای {$contextName} تصمیم گیری شد.<br />
 <br />
 تصمیم گرفته شده به قرار زیر است:<br />
 <br />
@@ -747,7 +748,7 @@ jhvdo hkrqh: {$expiryDate}<br />
 		<subject>تصمیم دبیر</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-مقاله ارسالی شما با عنوان &quot;{$submissionTitle}&quot; برای {$journalTitle} مورد بررسی و تصمیم گیری قرار گرفت<br />
+مقاله ارسالی شما با عنوان &quot;{$submissionTitle}&quot; برای {$contextName} مورد بررسی و تصمیم گیری قرار گرفت<br />
 <br />
 تصمیم اتخاذ شده به قرار زیر است:<br />
 <br />
@@ -757,7 +758,7 @@ jhvdo hkrqh: {$expiryDate}<br />
 		<subject>تصمیم دبیر</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-مقاله شما با عنوان &quot;{$submissionTitle}&quot; برای {$journalTitle} مورد بررسی و تصمیم گیری واقع شد.<br />
+مقاله شما با عنوان &quot;{$submissionTitle}&quot; برای {$contextName} مورد بررسی و تصمیم گیری واقع شد.<br />
 <br />
 تصمیم اتخاد شده بدین شرح است:<br />
 <br />

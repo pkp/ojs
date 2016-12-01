@@ -13,6 +13,7 @@
 // Structural components of the header layout
 .pkp_structure_head {
 	background-color: @bg-base;
+	border-bottom: @bg-border;
 }
 
 .pkp_head_wrapper {
@@ -47,7 +48,7 @@
 		display: inline-block;
 
 		&:focus {
-			box-shadow: 0 0 1px @text-on-bg;
+			box-shadow: 0 0 1px @text-bg-base;
 		}
 
 		img {
@@ -60,12 +61,13 @@
 	}
 
 	.is_text {
+		font-family: @font-site-title;
 		display: inline-block;
 		position: relative;
 		font-size: @font-header;
 		font-weight: @bold;
 		line-height: @line-header;
-		color: @text-on-bg;
+		color: @text-bg-base;
 		text-decoration: none;
 
 		&:focus {
@@ -92,13 +94,13 @@
 			margin: 0 1em;
 			padding: @pkp_nav_primary_row_el_padding 0 (@pkp_nav_primary_row_el_padding - 2); // -2 to account for border size
 			border-bottom: 2px solid transparent;
-			color: @text-on-bg;
+			color: @text-bg-base;
 
 			&:hover,
 			&:focus {
-				color: @text-on-bg;
+				color: @text-bg-base;
 				outline: 0;
-				border-color: @text-on-bg;
+				border-color: @text-bg-base;
 			}
 		}
 
@@ -262,7 +264,7 @@
 			display: inline-block;
 			position: relative;
 			padding: @pkp_nav_primary_row_el_padding @double;
-			color: @text-on-bg;
+			color: @text-bg-base;
 			cursor: pointer;
 
 			&:before {
@@ -274,7 +276,7 @@
 			&:focus {
 				outline: 0;
 				padding-bottom: @pkp_nav_primary_row_el_padding - 2;
-				border-bottom: 2px solid @text-on-bg;
+				border-bottom: 2px solid @text-bg-base;
 			}
 		}
 
@@ -387,7 +389,7 @@
 	> li.in_focus > a,
 	> li > a:hover,
 	> li > a:focus {
-		color: @text-on-bg;
+		color: @text-bg-base;
 	}
 
 	// Open submenus aligned to the right edge, so they don't overflow screen

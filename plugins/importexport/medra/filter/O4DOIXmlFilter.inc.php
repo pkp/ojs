@@ -83,8 +83,8 @@ class O4DOIXmlFilter extends NativeExportFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function O4DOIXmlFilter($filterGroup) {
-		parent::NativeExportFilter($filterGroup);
+	function __construct($filterGroup) {
+		parent::__construct($filterGroup);
 	}
 
 	/**
@@ -286,12 +286,12 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		$journalIssueNode = $doc->createElementNS($deployment->getNamespace(), 'JournalIssue');
 		// Volume
 		$volume = $issue->getVolume();
-		if (!empty($volume)) {
+		if (!empty($volume) && $issue->getShowVolume()) {
 			$journalIssueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'JournalVolumeNumber', $volume));
 		}
 		// Number
 		$number = $issue->getNumber();
-		if (!empty($number)) {
+		if (!empty($number) && $issue->getShowNumber()) {
 			$journalIssueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'JournalIssueNumber', $number));
 		}
 		// Identification
@@ -303,7 +303,7 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		// Nominal Year
 		$year = (string) $issue->getYear();
 		$yearlen = strlen($year);
-		if (!empty($year) && ($yearlen == 2 || $yearlen == 4)) {
+		if ($issue->getShowYear() && !empty($year) && ($yearlen == 2 || $yearlen == 4)) {
 			$issueDateNode = $doc->createElementNS($deployment->getNamespace(), 'JournalIssueDate');
 			$issueDateNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DateFormat', O4DOI_DATE_FORMAT_YYYY));
 			// Try to extend the year if necessary.
@@ -378,6 +378,26 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		 return $extentNode;
 	 }
 
+	 /**
+	  * Create a description text node.
+	  * @param $doc DOMDocument
+	  * @param $locale string
+	  * @param $description string
+	  * @return DOMElement
+	  */
+	function createOtherTextNode($doc, $locale, $description) {
+		$deployment = $this->getDeployment();
+		$otherTextNode = $doc->createElementNS($deployment->getNamespace(), 'OtherText');
+		// Text Type
+		$otherTextNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'TextTypeCode', O4DOI_TEXT_TYPE_MAIN_DESCRIPTION));
+		// Text
+		$language = AppLocale::get3LetterIsoFromLocale($locale);
+		assert(!empty($language));
+		$otherTextNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'Text', PKPString::html2text($description)));
+		$node->setAttribute('textformat', O4DOI_TEXTFORMAT_ASCII);
+		$node->setAttribute('language', $language);
+		return $otherTextNode;
+	}
 
 	 //
 	 // Helper functions

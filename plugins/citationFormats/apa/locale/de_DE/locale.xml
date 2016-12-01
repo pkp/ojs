@@ -12,8 +12,8 @@
   -->
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.citationFormats.apa.displayName">APA-Zitationsformat-Plug-In</message>
+	<message key="plugins.citationFormats.apa.displayName">APA-Zitationsformat-Plugin</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
-	<message key="plugins.citationFormats.apa.description">Dieses Plug-In implementiert das APA-Zitationsformat.</message>
+	<message key="plugins.citationFormats.apa.description">Dieses Plugin implementiert das APA-Zitationsformat.</message>
 	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Abgerufen am {$retrievedDate} von <a href="{$url}" target="_new">{$url}</a>]]></message>
 </locale>

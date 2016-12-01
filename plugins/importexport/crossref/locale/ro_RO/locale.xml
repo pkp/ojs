@@ -16,8 +16,8 @@
 	<message key="plugins.importexport.crossref.displayName">Modulul de export CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Exportă metadatele articolului în format XML CrossRef.</message>
 
-	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Mod de utilizare: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] articole [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] numărul [issueId]
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Mod de utilizare:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
 ]]></message>
 </locale>

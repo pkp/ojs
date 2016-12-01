@@ -195,7 +195,6 @@
 	<message key="manager.setup.initialIssue">Startausgabe</message>
 	<message key="manager.setup.initialIssueDescription">Geben Sie der Startausgabe (je nach gewähltem Format) eine eindeutige Bezeichnung:</message>
 	<message key="manager.setup.institution">Institution</message>
-	<message key="manager.setup.issnDescription"><![CDATA[Die ISSN (International Standard Serial Number) ist eine achtstellige Zahl, die periodischen Veröffentlichungen (einschließlich der elektronischen) zugeordnet ist. Die Verwaltung obliegt einem weltweiten Netzwerk nationaler Einrichtungen, das von einem internationalen Zentrum in Paris koordiniert und durch die UNESCO und die französische Regierung unterstützt wird. Eine Nummer erhalten Sie auf der <a href="http://www.issn.org" target="_new">ISSN-Website</a>. Sie kann jederzeit beantragt werden.]]></message>
 	<message key="manager.setup.itemsDescription">Es können jederzeit Einträge in die Navigationsleiste (Standard: "Startseite", "Über uns", "Benutzer/innen") am Kopf der Seite hinzugefügt werden</message>
 	<message key="manager.setup.itemsPerPage">Einträge pro Seite</message>
 	<message key="manager.setup.journalAbbreviation">Abkürzung des Zeitschriftennamens</message>
@@ -595,4 +594,6 @@
 	<message key="plugins.importexport.common.register.error.mdsError">Die Registrierung war nicht erfolgreich! Der DOI-Registrierungsserver hat einen Fehler zurückgeliefert: '{$param}'.</message>
 	<message key="plugins.importexport.common.register.success">Registrierung erfolgreich!</message>
 	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">DOI-Präfix fehlt für die Zeitschrift mit dem Pfad {$path}.</message>
+	<message key="plugins.importexport.common.cliError">FEHLER:</message>
+	<message key="plugins.importexport.common.error.unknownJournal">Der angegebene Zeitschriftenpfad, "{$journalPath}", existiert nicht.</message>
 </locale>

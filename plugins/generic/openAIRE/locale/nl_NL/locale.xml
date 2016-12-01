@@ -14,8 +14,6 @@
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
 	<message key="plugins.generic.openAIRE.description">De OpenAIRE plugin voegt het projectID element toe de artikel-metadata en breidt de OAI-PMH interface uit overeenkomstig de  OpenAIRE Guidelines 1.1. OJS tijdschriften worden hiermee OpenAIRE compliant.</message>
-	<message key="plugins.generic.openAIRE.projectID">ProjectID</message>
-	<message key="plugins.generic.openAIRE.metadata">OpenAIRE specifieke metadata</message>
-	<message key="plugins.generic.openAIRE.projectID.description">(Het projectID is hetzelfde als het Grant Agreement number)</message>
+	<message key="plugins.generic.openAIRE.projectID">OpenAIRE ProjectID</message>
 	<message key="plugins.generic.openAIRE.projectIDValid">Geef een geldig projectID (6 cijfers)</message>
 </locale>

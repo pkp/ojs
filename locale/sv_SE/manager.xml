@@ -173,7 +173,6 @@
 	<message key="manager.setup.initialIssue">Första utgåva</message>
 	<message key="manager.setup.initialIssueDescription">Uppge nummer, volym, och/eller år för det första numret som pulicerats i OJS:</message>
 	<message key="manager.setup.institution">Institution</message>
-	<message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number) är ett åttasiffrigt nummer som identifierar periodiska publikationer (även elektroniska). ISSN-numren hanteras av nationella enheter i ett globalt nätverk, koordinerade av ett internationellt centrum i Paris som finansieras av Unesco och franska regeringen. Ett ISSN-nummer kan beställas från <a href="http://www.issn.org" target="_new">ISSN:s hemsida</a>. Beställning kan göras närsomhelst.]]></message>
 	<message key="manager.setup.itemsDescription">lägg till komponenter i navigeringsfältets (Hem, Om, Min sida, etc.) som syns överst på sidan.</message>
 	<message key="manager.setup.itemsPerPage">Komponenter per sida</message>
 	<message key="manager.setup.journalAbbreviation">Förkortning av tidskriften</message>

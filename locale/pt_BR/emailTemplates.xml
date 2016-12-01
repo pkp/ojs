@@ -20,7 +20,7 @@ Caso não tenha feito a solicitação, ignore esta mensagem, para não alterar s
 <br />
 Se deseja realmente atualizar sua senha, clique no link a seguir.<br />
 <br />
-Atualizar senha: {$url}<br />
+Atualizar senha: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Mensagem enviada a usuário cadastrado quando o mesmo solicita atualização da senha, quando esqueceu a senha ou encontra problemas para acessar o sistema. O link contido permite ao usuário concluir a atualização da senha de acesso.</description>
@@ -30,6 +30,7 @@ Atualizar senha: {$url}<br />
 		<body><![CDATA[Sua senha de acesso ao site {$siteTitle} foi atualizada com sucesso. Guarde o login e a senha, uma vez que serão necessários para todas as atividades relacionadas ao sistema.<br />
 <br />
 Seu login: {$username}<br />
+Senha: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Mensagem enviada a usuário cadastrado quando o mesmo informa que esqueceu sua senha ou encontra problemas para acessar o sistema. O link contido permite ao usuário atualizar a senha de acesso.</description>
@@ -188,6 +189,17 @@ Agradecemos mais uma vez considerar nossa revista como meio de compartilhar seu 
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Mensagem enviada automaticamente pelo sistema ao autor, quando habilitada, ao ser concluído o processo de submissão de um trabalho à revista. Oferece informações sobre os mecanismos para acompanhamento do trabalho durante o processo editorial, e serve como registro e confirmação da submissão.</description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>Agradecimento pela submissão</subject>
+		<body><![CDATA[Olá,<br />
+<br />
+{$submitterName} submeteu o manuscrito &quot;{$submissionTitle}&quot; à editora {$contextName}. <br />
+<br />
+Em caso de dúvidas, entre em contato. Agradecemos por considerar nossa editora como um veículo para seus trabalhos.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Quando habilitada, esta mensagem é enviada automaticamente aos coautores informados durante o processo de submissão, que não estão cadastrados no OMP.</description>
 	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
 		<subject>Submissão inadequada</subject>

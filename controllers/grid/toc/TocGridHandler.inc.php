@@ -23,8 +23,8 @@ class TocGridHandler extends CategoryGridHandler {
 	/**
 	 * Constructor
 	 */
-	function TocGridHandler() {
-		parent::CategoryGridHandler();
+	function __construct() {
+		parent::__construct();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER),
 			array('fetchGrid', 'fetchCategory', 'fetchRow', 'saveSequence', 'removeArticle')
@@ -131,15 +131,15 @@ class TocGridHandler extends CategoryGridHandler {
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$publishedArticles = $publishedArticleDao->getPublishedArticles($issue->getId());
-
+		$publishedArticlesInSections = $publishedArticleDao->getPublishedArticlesInSections($issue->getId());
 		$sections = array();
-		foreach ($publishedArticles as $article) {
-			$sectionId = $article->getSectionId();
+		foreach ($publishedArticlesInSections as $sectionId => $articles) {
 			if (!isset($sections[$sectionId])) {
 				$sections[$sectionId] = $sectionDao->getById($sectionId);
 			}
-			$this->publishedArticlesBySectionId[$sectionId][$article->getId()] = $article;
+			foreach($articles['articles'] as $article) {
+				$this->publishedArticlesBySectionId[$sectionId][$article->getId()] = $article;
+			}
 		}
 		return $sections;
 	}
@@ -167,7 +167,7 @@ class TocGridHandler extends CategoryGridHandler {
 		if (!$sectionDao->customSectionOrderingExists($issue->getId())) {
 			$sectionDao->setDefaultCustomSectionOrders($issue->getId());
 		}
-		$sectionDao->moveCustomSectionOrder($issue->getId(), $sectionId, $newSequence);
+		$sectionDao->updateCustomSectionOrder($issue->getId(), $sectionId, $newSequence);
 	}
 
 	/**

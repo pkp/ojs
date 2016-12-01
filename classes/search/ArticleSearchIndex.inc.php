@@ -31,7 +31,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 *
 	 * @param $article Article
 	 */
-	function articleMetadataChanged($article) {
+	static function articleMetadataChanged($article) {
 		// Check whether a search plug-in jumps in.
 		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::articleMetadataChanged',
@@ -79,7 +79,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 * @param $type int optional
 	 * @param $assocId int optional
 	 */
-	function deleteTextIndex($articleId, $type = null, $assocId = null) {
+	static function deleteTextIndex($articleId, $type = null, $assocId = null) {
 		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
 		return $searchDao->deleteSubmissionKeywords($articleId, $type, $assocId);
 	}
@@ -94,7 +94,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 * @param $type int
 	 * @param $fileId int
 	 */
-	function submissionFileChanged($articleId, $type, $fileId) {
+	static function submissionFileChanged($articleId, $type, $fileId) {
 		// Check whether a search plug-in jumps in.
 		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::submissionFileChanged',
@@ -132,7 +132,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 *
 	 * @param $article Article
 	 */
-	function submissionFilesChanged($article) {
+	static function submissionFilesChanged($article) {
 		// Check whether a search plug-in jumps in.
 		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::submissionFilesChanged',
@@ -172,7 +172,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 * @param $type int optional
 	 * @param $assocId int optional
 	 */
-	function submissionFileDeleted($articleId, $type = null, $assocId = null) {
+	static function submissionFileDeleted($articleId, $type = null, $assocId = null) {
 		// Check whether a search plug-in jumps in.
 		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::submissionFileDeleted',
@@ -196,7 +196,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 *
 	 * @param $articleId integer
 	 */
-	function articleDeleted($articleId) {
+	static function articleDeleted($articleId) {
 		// Trigger a hook to let the indexing back-end know that
 		// an article was deleted.
 		HookRegistry::call(
@@ -212,7 +212,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 * Let the indexing back-end know that the current transaction
 	 * finished so that the index can be batch-updated.
 	 */
-	function articleChangesFinished() {
+	static function articleChangesFinished() {
 		// Trigger a hook to let the indexing back-end know that
 		// the index may be updated.
 		HookRegistry::call(
@@ -234,7 +234,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 *  as index data is not partitioned by journal.
 	 * @param $switches array Optional index administration switches.
 	 */
-	function rebuildIndex($log = false, $journal = null, $switches = array()) {
+	static function rebuildIndex($log = false, $journal = null, $switches = array()) {
 		// Check whether a search plug-in jumps in.
 		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::rebuildIndex',
@@ -291,7 +291,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 * @param $text string
 	 * @param $position int
 	 */
-	function _indexObjectKeywords($objectId, $text, &$position) {
+	static function _indexObjectKeywords($objectId, $text, &$position) {
 		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
 		$keywords = self::filterKeywords($text);
 		for ($i = 0, $count = count($keywords); $i < $count; $i++) {
@@ -308,7 +308,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 * @param $text string
 	 * @param $assocId int optional
 	 */
-	function _updateTextIndex($articleId, $type, $text, $assocId = null) {
+	static function _updateTextIndex($articleId, $type, $text, $assocId = null) {
 		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
 		$objectId = $searchDao->insertObject($articleId, $type, $assocId);
 		$position = 0;

@@ -20,8 +20,8 @@ class AbntCitationOutputPlugin extends PKPAbntCitationOutputPlugin {
 	/**
 	 * Constructor
 	 */
-	function AbntCitationOutputPlugin() {
-		parent::PKPAbntCitationOutputPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 }
 

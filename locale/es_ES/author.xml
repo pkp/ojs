@@ -30,7 +30,7 @@
 	<message key="author.submit.metadata">Introducir los metadatos</message>
 	<message key="author.submit.supplementaryFiles">Cargar los archivos complementarios</message>
 	<message key="author.submit.confirmation">Confirmación</message>
-	<message key="author.submit.cancelSubmission">Puede completar este envío en otro momento seleccionando Envíos activos desde la página de inicio del autor/a.</message>
+	<message key="submission.submit.cancelSubmission">Puede completar este envío en otro momento seleccionando Envíos activos desde la página de inicio del autor/a.</message>
 	<message key="author.submit.notAccepting">La revista no acepta envíos en este momento.</message>
 	<message key="author.submit.requestWaiver">Solicitud de exención de cuotas</message>
 	<message key="author.submit.qualifyForWaiver">Considere la posibilidad de exención de la cuota de envío para este artículo.</message>

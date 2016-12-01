@@ -19,10 +19,10 @@
 	<locale key="ca_ES" complete="false" name="Català" iso639-2b="cat" iso639-3="cat" />
 	<locale key="cs_CZ" complete="false" name="Čeština" iso639-2b="cze" iso639-3="ces" />
 	<locale key="da_DK" complete="false" name="Dansk" iso639-2b="dan" iso639-3="dan" />
-	<locale key="de_DE" complete="false" name="Deutsch" iso639-2b="ger" iso639-3="deu" />
+	<locale key="de_DE" complete="true" name="Deutsch" iso639-2b="ger" iso639-3="deu" />
 	<locale key="en_US" complete="true"  name="English" iso639-2b="eng" iso639-3="eng" />
 	<locale key="el_GR" complete="false" name="ελληνικά" iso639-2b="gre" iso639-3="ell" />
-	<locale key="es_ES" complete="false" name="Español (España)" iso639-2b="spa" iso639-3="spa" />
+	<locale key="es_ES" complete="true" name="Español (España)" iso639-2b="spa" iso639-3="spa" />
 	<locale key="eu_ES" complete="false" name="Euskara" iso639-2b="eus" iso639-3="eus" />
 	<locale key="fa_IR" complete="false" name="فارسی" iso639-2b="per" iso639-3="fas" stylesheet="lib/pkp/styles/rtl.css" />
 	<locale key="fr_CA" complete="false" name="Français (Canada)" iso639-2b="fre" iso639-3="fra" />
@@ -34,7 +34,7 @@
 	<locale key="ml_IN" complete="false" name="മലയാളം" iso639-2b="mal" iso639-3="mal" />
 	<locale key="nl_NL" complete="false" name="Nederlands" iso639-2b="dut" iso639-3="nld" />
 	<locale key="nb_NO" complete="false" name="Norsk Bokmål" iso639-2b="nor" iso639-3="nor" />
-	<locale key="pt_BR" complete="false" name="Português (Brasil)" iso639-2b="por" iso639-3="por" />
+	<locale key="pt_BR" complete="true" name="Português (Brasil)" iso639-2b="por" iso639-3="por" />
 	<locale key="pt_PT" complete="false" name="Português (Portugal)" iso639-2b="por" iso639-3="por" />
 	<locale key="ro_RO" complete="false" name="Limba Română" iso639-2b="rum" iso639-3="ron" />
 	<locale key="ru_RU" complete="false" name="Русский" iso639-2b="rus" iso639-3="rus" />

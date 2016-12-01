@@ -175,7 +175,6 @@
 	<message key="manager.setup.initialIssue">Første nummer</message>
 	<message key="manager.setup.initialIssueDescription">Angiv nummer, årgang og/eller år for det første nummer, der skal publiceres med OJS, på baggrund af det valgte format:</message>
 	<message key="manager.setup.institution">Institution</message>
-	<message key="manager.setup.issnDescription"><![CDATA[Det internationale standardserienummer, ISSN (International Standard Serial Number), er et ottecifret tal, der identificerer tidsskriftspublikationer, herunder elektroniske tidsskrifter. Det administreres af et verdensomspændende netværk af nationale centre koordineret af et internationalt center i Paris og støttes af Unesco og den franske regering. Du kan få fat på et nummer på <a href="http://www.issn.org" target="_new">ISSN-webstedet</a>. Det kan du gøre på et hvilket som helst tidspunkt under driften af tidsskriftet.]]></message>
 	<message key="manager.setup.itemsDescription">Elementer på navigationslinjen kan føjes til det aktuelle sæt (Startside, Om, Min side osv.), der vises øverst på siden.</message>
 	<message key="manager.setup.itemsPerPage">Elementer pr. side</message>
 	<message key="manager.setup.journalAbbreviation">Forkortelse for tidsskrift</message>

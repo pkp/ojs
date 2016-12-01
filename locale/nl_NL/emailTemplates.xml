@@ -19,7 +19,7 @@
 <br />
 Als u dat verzoek niet gedaan hebt, negeer dan deze e-mail en uw wachtwoord wordt niet veranderd. Als u uw wachtwoord wilt herstellen , klik dan op de url hieronder.<br />
 <br />
-Herstel mijn wachtwoord: {$url}<br />
+Herstel mijn wachtwoord: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Deze e-mail wordt gestuurd naar een geregistreerde gebruiker die heeft aangegeven zijn wachtwoord vergeten te zijn of niet in te kunnen loggen. Het bevat een URL die ze kunnen volgen om hun wachtwoord te herstellen.</description>
@@ -29,6 +29,7 @@ Herstel mijn wachtwoord: {$url}<br />
 		<body><![CDATA[Uw wachtwoord is met succes hersteld voor de website {$siteTitle}. Bewaar de gebruikersnaam en wachtwoord, ze zijn nodig om het tijdschrift te kunnen gebruiken.<br />
 <br />
 Uw gebruikersnaam: {$username}<br />
+Wachtwoord: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Deze e-mail wordt verstuurd naar een geregistreerde gebruiker als ze met succes hun wachtwoord hebben veranderd volgens de procedure die is beschreven in de PASSWORD_RESET_CONFIRM e-mail.</description>
@@ -727,7 +728,7 @@ Als u de berichten van deze lijst niet langer wilt ontvangen, ga dan naar {$unsu
 		<subject>Redacteursbeslissing</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-We hebben een beslissing genomen over uw inzending voor {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Onze beslissing is:<br />
 <br />
@@ -737,7 +738,7 @@ Onze beslissing is:<br />
 		<subject>Redacteursbeslissing</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-We hebben een beslissing genomen over uw inzending voor {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Onze beslissing is:<br />
 <br />
@@ -747,7 +748,7 @@ Onze beslissing is:<br />
 		<subject>Redacteursbeslissing</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-We hebben een beslissing genomen over uw inzending voorv{$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+We hebben een beslissing genomen over uw inzending voorv{$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Onze beslissing is:<br />
 <br />
@@ -757,7 +758,7 @@ Onze beslissing is:<br />
 		<subject>Redacteursbeslissing</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-We hebben een beslissing genomen over uw inzending voor {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Onze beslissing is:<br />
 <br />

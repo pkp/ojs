@@ -34,8 +34,8 @@ class OJSPaymentManager extends PaymentManager {
 	 * Constructor
 	 * @param $request PKPRequest
 	 */
-	function OJSPaymentManager($request) {
-		parent::PaymentManager($request);
+	function __construct($request) {
+		parent::__construct($request);
 	}
 
 	/**

@@ -38,7 +38,7 @@ class MedraWebservice {
 	 * @param $login string
 	 * @param $password string
 	 */
-	function MedraWebservice($endpoint, $login, $password) {
+	function __construct($endpoint, $login, $password) {
 		$this->_endpoint = $endpoint;
 		$this->_auth = "$login:$password";
 	}

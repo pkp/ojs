@@ -29,7 +29,7 @@
 	<message key="author.submit.metadata">وارد کردن متاداده</message>
 	<message key="author.submit.supplementaryFiles">آپلود فایلهای الحاقی</message>
 	<message key="author.submit.confirmation">تایید</message>
-	<message key="author.submit.cancelSubmission">میتوانید این ساب میشن را در وقتی دیگر کامل کنید. برای این کار به صفحه خانگی نویسنده رفته و ساب میشن های جاری را انتخاب کنید</message>
+	<message key="submission.submit.cancelSubmission">میتوانید این ساب میشن را در وقتی دیگر کامل کنید. برای این کار به صفحه خانگی نویسنده رفته و ساب میشن های جاری را انتخاب کنید</message>
 	<message key="author.submit.notAccepting">این مجله در حال حاضر ساب میشن نمی پذیرد</message>
 	<message key="author.submit.requestWaiver">درخواست تخفیف</message>
 	<message key="author.submit.qualifyForWaiver">لطفا درخواست تخفیف برای این مقاله را در نظر بگیرید</message>

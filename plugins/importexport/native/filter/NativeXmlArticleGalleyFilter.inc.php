@@ -20,8 +20,8 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function NativeXmlArticleGalleyFilter($filterGroup) {
-		parent::NativeXmlRepresentationFilter($filterGroup);
+	function __construct($filterGroup) {
+		parent::__construct($filterGroup);
 	}
 
 	//
@@ -73,16 +73,17 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
 			$fileId = $fileNode->getAttribute('id');
 			$revisionId = $fileNode->getAttribute('revision');
 			$dbFileId = $deployment->getFileDBId($fileId, $revisionId);
-			assert($dbFileId);
-			$addSubmissionFile = true;
+			if ($dbFileId) $addSubmissionFile = true;
 		}
 		$representation = parent::handleElement($node);
 
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) if (is_a($n, 'DOMElement')) switch($n->tagName) {
 			case 'name':
 				// Labels are not localized in OJS ArticleGalleys, but we use the <name locale="....">...</name> structure.
+				$locale = $n->getAttribute('locale');
+				if (empty($locale)) $locale = $submission->getLocale();
 				$representation->setLabel($n->textContent);
-				$representation->setLocale($n->getAttribute('locale'));
+				$representation->setLocale($locale);
 				break;
 		}
 

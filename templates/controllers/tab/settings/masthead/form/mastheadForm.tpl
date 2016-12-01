@@ -47,7 +47,7 @@
 	{/fbvFormArea}
 
 	{fbvFormArea id="mastheadISSNContainer"}
-		{fbvFormSection label="manager.setup.Issn" for="onlineIssn" description="manager.setup.issnDescription"}
+		{fbvFormSection label="manager.setup.Issn" for="onlineIssn"}
 			{fbvElement type="text" name="onlineIssn" id="onlineIssn" value=$onlineIssn label="manager.setup.onlineIssn" size=$fbvStyles.size.SMALL inline=true}
 			{fbvElement type="text" name="printIssn" id="printIssn" value=$printIssn label="manager.setup.printIssn" size=$fbvStyles.size.SMALL inline=true}
 		{/fbvFormSection}

@@ -217,6 +217,10 @@ public_files_dir = public
 ; Permissions mask for created files and directories
 umask = 0022
 
+; The minimum percentage similarity between filenames that should be considered
+; a possible revision
+filename_revision_match = 70
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Fileinfo (MIME) Settings ;
@@ -412,12 +416,6 @@ recaptcha_private_key = your_private_key
 
 ; Whether or not to use Captcha on user registration
 captcha_on_register = on
-
-; Whether or not to use Captcha on user comments
-captcha_on_comments = on
-
-; Whether or not to use Captcha on notification mailing list registration
-captcha_on_mailinglist = on
 
 
 ;;;;;;;;;;;;;;;;;;;;;

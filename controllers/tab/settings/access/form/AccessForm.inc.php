@@ -21,8 +21,8 @@ class AccessForm extends ContextSettingsForm {
 	 * Constructor.
 	 * @param $wizardMode boolean True IFF wizard mode is to be used.
 	 */
-	function AccessForm($wizardMode = false) {
-		parent::ContextSettingsForm(
+	function __construct($wizardMode = false) {
+		parent::__construct(
 			array(
 				'publishingMode' => 'int',
 			),

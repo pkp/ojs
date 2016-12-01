@@ -35,7 +35,7 @@
 <body class="pkp_page_{$requestedPage|escape} pkp_op_{$requestedOp|escape}">
 
 	{* Header wrapper *}
-	<header class="header_view_pdf">
+	<header class="header_view">
 
 		<a href="{$parentUrl}" class="return">
 			<span class="pkp_screen_reader">

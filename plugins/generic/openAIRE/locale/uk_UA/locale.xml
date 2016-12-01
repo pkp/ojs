@@ -17,8 +17,6 @@
 <locale name="uk_UA" full_name="Українська">
        <message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
        <message key="plugins.generic.openAIRE.description">Модуль OpenAIRE додає елемент projectID у метадані статті та розширює інтерфейс OAI-PMH згідно вимог OpenAIRE Guidelines 1.1, допомагаючи журналам на платформі OJS стати сумісними з OpenAIRE.</message>
-       <message key="plugins.generic.openAIRE.projectID">ProjectID</message>
-       <message key="plugins.generic.openAIRE.metadata">Специфічні метадані OpenAIRE</message>
-       <message key="plugins.generic.openAIRE.projectID.description">(Елемент projectID еквівалентний номеру гранту Grant Agreement number)</message>
+       <message key="plugins.generic.openAIRE.projectID">OpenAIRE ProjectID</message>
        <message key="plugins.generic.openAIRE.projectIDValid">Будь ласка, вкажіть коректний projectID (6 цифр)</message>
 </locale>

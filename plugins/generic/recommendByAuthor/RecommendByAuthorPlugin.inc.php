@@ -23,8 +23,8 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 	/**
 	 * Constructor
 	 */
-	function RecommendByAuthorPlugin() {
-		parent::GenericPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 

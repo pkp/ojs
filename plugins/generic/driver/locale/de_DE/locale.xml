@@ -13,5 +13,5 @@
  
 <locale name="en_US" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.driver.displayName">DRIVER</message>
-	<message key="plugins.generic.driver.description">Das DRIVER-Plug-In erweitert die OAI-PMH-Schnittstelle gemäß DRIVER Guidelines 2.0, damit OJS-Zeitschriften DRIVER-kompatibel werden können.</message>
+	<message key="plugins.generic.driver.description">Das DRIVER-Plugin erweitert die OAI-PMH-Schnittstelle gemäß DRIVER Guidelines 2.0, damit OJS-Zeitschriften DRIVER-kompatibel werden können.</message>
 </locale>

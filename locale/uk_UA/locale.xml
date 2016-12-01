@@ -40,11 +40,11 @@
 
 
        <!--  peer review -->
-            
 
-       <message key="reviewer.article.enterReviewForm">Щоб заповнити форму рецензування, натисніть на зображення.</message>    
-       <message key="reviewer.article.reviewFormResponse.form.responseRequired">Будь ласка, заповніть обов'язкові поля.</message>      
-       
+
+       <message key="reviewer.article.enterReviewForm">Щоб заповнити форму рецензування, натисніть на зображення.</message>
+       <message key="reviewer.article.reviewFormResponse.form.responseRequired">Будь ласка, заповніть обов'язкові поля.</message>
+
        <!-- review forms end -->
 
        <!--
@@ -62,13 +62,13 @@
        <message key="common.journalHomepageImage.altText">Зображення домашньої сторінки журналу</message>
 
        <!-- Common Form Messages -->
-       
+
        <!-- Common Email Messages -->
 
        <!-- Common Localization Terms -->
 
        <!-- Common Error Messages -->
-               
+
        <!-- Navigation -->
        <message key="navigation.journalHelp">Допомога</message>
              <message key="navigation.current">Поточний випуск</message>
@@ -80,7 +80,7 @@
        <message key="navigation.competingInterestGuidelines">Керівництва щодо конфлікту інтересів</message>
        <message key="navigation.infoForAuthors.long">Інформація для авторів</message>
        <message key="navigation.infoForLibrarians.long">Інформація для бібліотекарів</message>
-       
+
        <!-- Article Queues -->
        <message key="common.queue.long.submissionsUnassigned">Неопрацьовані</message>
        <message key="common.queue.short.submissionsUnassigned">Неопрацьовані</message>
@@ -94,7 +94,7 @@
        <message key="common.queue.short.active">Активні</message>
        <message key="common.queue.long.completed">Архів</message>
        <message key="common.queue.short.completed">Архів</message>
-       
+
        <!--
         *
         * ENTITIES - This section contains terms pertaining to the system's
@@ -186,7 +186,7 @@
        <message key="submissions.proofreadingComplete">Скореговано</message>
 
        <!-- Submission Notes -->
-       
+
        <!-- Common Journal Terms -->
        <message key="journal.currentIssue">Поточний номер</message>
        <message key="journal.journals">Журнали</message>
@@ -212,7 +212,7 @@
                                <message key="user.role.subscriptionManager">Менеджер передплати</message>
        <message key="user.role.managers">Менеджери журналів</message>
                                            <message key="user.role.subscriptionManagers">Менеджери передплати</message>
-       
+
        <!-- Common Issue Terms -->
        <message key="issue.issue">Номер</message>
        <message key="issue.issues">Номери</message>
@@ -265,14 +265,14 @@
        <message key="submission.event.author.authorRevision">Версія автора вивантажена</message>
 
        <message key="submission.event.general.authorRevision">Файл версії автора оновлений</message>
-       
+
        <message key="submission.event.editor.editorAssigned">Редактор призначений для подання</message>
        <message key="submission.event.editor.editorUnassigned">Редактор звільнений від роботи над поданням</message>
        <message key="submission.event.editor.editorDecision">Рішення редактора надіслане</message>
        <message key="submission.event.editor.editorFile">Файл редактора оновлений</message>
        <message key="submission.event.editor.submissionArchived">Подання надіслано до архіву</message>
        <message key="submission.event.editor.submissionRestored">Подання відновлено з архіву</message>
-       
+
        <message key="submission.event.copyedit.copyeditorAssigned">Літературний редактор призначений для подання</message>
        <message key="submission.event.copyedit.copyeditorUnassigned">Літературний редактор звільнений від роботи над поданням</message>
        <message key="submission.event.copyedit.copyeditInitiated">Літературний редактор розпочав роботу</message>
@@ -280,19 +280,19 @@
        <message key="submission.event.copyedit.copyeditInitialCompleted">Початкове літературне редагування завершено</message>
        <message key="submission.event.copyedit.copyeditFinalCompleted">Остаточне літературне редагування завершено</message>
        <message key="submission.event.copyedit.copyeditSetFile">Відредагований файл оновлений</message>
-       
+
        <message key="submission.event.proofread.proofreaderAssigned">Коректор призначений для подання</message>
        <message key="submission.event.proofread.proofreaderUnassigned">Коректор звільнений від роботи над поданням</message>
        <message key="submission.event.proofread.proofreadInitiated">Коректор розпочав роботу</message>
        <message key="submission.event.proofread.proofreadRevision">Файл правок коректора оновлений</message>
        <message key="submission.event.proofread.proofreadCompleted">Коректор завершив роботу</message>
-       
+
        <message key="submission.event.layout.layoutEditorAssigned">Редактор верстки призначений для подання</message>
        <message key="submission.event.layout.layoutEditorUnassigned">Редактор верстки звільнений від роботи над поданням</message>
        <message key="submission.event.layout.layoutInitiated">Редактор верстки розпочав роботу</message>
        <message key="submission.event.layout.layoutGalleyCreated">Гранка подання оновлена</message>
        <message key="submission.event.layout.layoutComplete">Редактор верстки завершив роботу</message>
-       
+
        <!--
         *
         * INTERFACE - Contains phrases organized by the section of the
@@ -302,7 +302,7 @@
 
        <!-- Reader article view -->
        <message key="reader.subscribersOnly">Лише для передплатників</message>
-       <message key="reader.subscriptionRequiredLoginText">Для доступу до об'єкту необхідна передплата. Для перевірки наявності передплати, увійдіть до журналу.</message>  
+       <message key="reader.subscriptionRequiredLoginText">Для доступу до об'єкту необхідна передплата. Для перевірки наявності передплати, увійдіть до журналу.</message>
        <message key="reader.openAccess">Відкритий доступ</message>
        <message key="reader.subscriptionAccess">Доступ за передплатою</message>
        <message key="reader.subscriptionOrFeeAccess">Передплата або плата за доступ</message>
@@ -312,13 +312,13 @@
        <message key="comments.authenticated"><![CDATA[як <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
        <!-- Site Administration -->
-       
+
        <message key="admin.settings.oaiRegistrationDescription"><![CDATA[Для того, щоб зміст всіх розміщених на цьому сайті журналів індексувався в глобальній розподіленій системі баз даних наукової інформації, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">зареєструйте</a> URL цього сайту з Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. Даний інструмент збирає метадані кожної проіндексованої одиниці у цьому журналі, дозволяючи точний та ефективний наскрізний пошук по наукових сайтах за <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">протоколом для отримання метаданих Ініціативи відкритих архівів (OAI-PMH)</a>.
 <br /><br />
 <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Натисніть сюди</a> та введіть <span class="highlight">{$siteUrl}</span> як <strong>Site URL</strong> та <span class="highlight">{$oaiUrl}</span> як <strong>Base URL for OAI Archive</strong>.
 <br /><br />
 Зауважте, що інтерфейс OAI може бути відключений для цього сайта шляхом зміни налаштувань системи OJS. Майбутні версії OJS будуть дозволяти включення або відключення інтерфейсу OAI для окремих журналів на сайті.]]></message>
-       
+
        <!-- Languages -->
        <message key="admin.languages.downloadUnavailable"><![CDATA[<p>Завантаження мовних пакетів з веб-серверу Public Knowledge Project зараз недоступне оскільки:</p>
        <ul>
@@ -331,54 +331,54 @@
 <ul>
        <li>Якщо користувач спробує зареєструвати новий обліковий запис на цьому сайті з іменем, яке вже існує у джерелі аутентифікації (але не в базі даних OJS), спроба реєстрації буде вдалою лише у випадку, якщо введений ним пароль буде збігатись з паролем облікового запису, існуючого у джерелі аутентифікації.</li>
 </ul>]]></message>
-       
+
        <!-- System Information -->
        <message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>УВАГА!</h4>
 <p>Система не може автоматично перейменувати файл конфігурації. Для застосування змін у конфігурації Ви повинні відкрити <tt>config.inc.php</tt> у текстовому редакторі та замінити його зміст змістом текстового поля, наведеного нижче.</p>]]></message>
 
-       <!-- Site Administrator Merge Users --> 
+       <!-- Site Administrator Merge Users -->
 
        <!-- Subscription Management -->
        <message key="subscriptionManager.subscriptionManagement">Керування передплатою</message>
        <message key="subscriptionManager.individualSubscriptions">Індивідуальні передплати</message>
        <message key="subscriptionManager.institutionalSubscriptions">Передплати установ</message>
        <message key="subscriptionManager.subscriptionTypes">Типи передплат</message>
-       
+
        <!-- Journal Management -->
 
        <!-- Statistics & Reports -->
 
 
        <!-- Plugin Management -->
-       
+
        <!-- Payment Management -->
 
 
-               
+
 
 
        <!-- General plugin information -->
        <message key="plugins.categories.auth.description">Модулі авторизації дозволяють Open Journal Systems делегувати завдання щодо аутентифікації користувачів іншим системам, таким як сервери LDAP.</message>
 
        <message key="plugins.categories.citationFormats.description">Модулі форматів цитування дозволяють користувачам використовувати різні формати цитування статей.</message>
-       
+
        <message key="plugins.categories.generic.description">Загальні модулі дозволяють багатьма шляхами розширити функціональність Open Journal Systems.</message>
 
        <!-- Files Browser -->
 
        <!-- Journal Setup -->
-       
+
        <!-- Setup Step 1 -->
 
        <!-- Setup Step 2 -->
 
 
-      
+
        <message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems підтримує систему <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) для захищеного та надійного архівування журналу. LOCKSS - це програмний засіб з відкритим вихідним кодом, розроблений Бібліотекою Стенфордського університету, який дозволяє бібліотекам забезпечувати збереження окремих веб-журналів, регулярно перевіряючи веб-сайти зареєстрованих журналів на наявність нового опублікованого змісту та архівуючи цей зміст. Кожний архів постійно перевіряються на відповідність з іншими; якщо зміст виявляється пошкодженим або втраченим, інші архіви використовуються для його відновлення.
 <br /><br />
 Встановлення підтримки LOCKSS для Open Journal Systems не повинно мати місця до того часу, поки процес видання не розгорнутий повністю. Коли це станеться, зробіть два наступні кроки:]]></message>
 
-       
+
        <!-- Setup Step 3 -->
        <message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Запропоноване Положення про авторські права Creative Commons</h3>
 <h4>1. Політика, яка рекомендується журналам, що пропонують відкритий доступ</h4>
@@ -401,7 +401,7 @@
        <message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Для того, щоб зміст цього журналу відображався в глобальній розподіленій системі, що індексує наукові бази даних, будь ласка, прочитайте, <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">як стати постачальником даних</a>, та зареєструйте свій журнал у офіційному <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">реєстрі відкритих архівів</a>. Щоб зареєструватися, Вам потрібно буде вказати базовий URL свого сховища: <span class="highlight">{$oaiUrl}</span>.  Після цього Ви можете зареєструвати свій журнал також у <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> та <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 <br /><br />
 Зауважте, якщо цей сайт вже зареєстрований адміністратором у цих системах, Ваш журнал буде індексуватись автоматично, окремо реєструвати його непотрібно.]]></message>
-      
+
        <!-- Setup Step 4 -->
        <message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Кроки: Редакційна черга &gt; Рецензування подання &gt; Редагування подання &gt; Сторінка змісту.<br /><br />
 Визначте модель організації цих аспектів редакційного процесу (для того, щоб розподілити між користувачами ролі Відповідального редактора та Редакторів розділів, перейдіть за посиланням "Редактори" на сторінці "Менеджмент журналу").]]></message>
@@ -415,7 +415,7 @@
        <!-- Setup Step 5 -->
 
        <!-- Languages -->
-       
+
        <!-- Section Management -->
 
        <!-- Import/Export -->
@@ -437,7 +437,7 @@
        ]]></message>
 
 
-       
+
        <!-- Email Management -->
 
        <!-- Subscription Policy Management -->
@@ -465,7 +465,7 @@
        <!-- Live Issues -->
 
        <!-- Navigation sidebar menu -->
-       
+
        <!-- Used by editor in submission review / editing -->
        <message key="editor.article.selectReviewerNotes"><![CDATA[Імена є посиланнями на профілі рецензентів.<br />
 Шкала рейтингу п'ятибальна. Оцінка 5 (Відмінно).<br />
@@ -473,7 +473,7 @@
 У полі "Остання" вказана дата прийняття останнього запиту на рецензування.<br />
 У полі "Активні" вказується кількість робіт, які зараз рецензуються користувачем.]]></message>
 
-       
+
        <!-- Section Editor -->
        <message key="sectionEditor.activeEditorialAssignments">Активні редакційні призначення</message>
        <message key="sectionEditor.completedEditorialAssignments">Завершені редакційні призначення</message>
@@ -504,12 +504,12 @@
        <message key="layoutEditor.galley.replaceGalley">Замінити файл</message>
        <message key="layoutEditor.galley.uploadSuppFile">Вивантажити супровідний файл</message>
        <message key="submission.layout.imageInvalid">Неприпустимий формат зображення. Дозволеними форматами є .gif, .jpg та .png.</message>
-       
+
        <!-- Reviewer -->
        <message key="reviewer.pendingReviews">Статті до рецензування</message>
        <message key="reviewer.completedReviews">Зроблено</message>
        <message key="reviewer.averageQuality">Рейтинг</message>
-       
+
        <!-- Used in submission review -->
        <message key="reviewer.article.fileToBeReviewed">Файл для рецензування</message>
        <message key="reviewer.article.notifyTheEditor">Сповістити редактора</message>
@@ -524,7 +524,7 @@
        <message key="reviewer.article.recommendation">Рекомендація</message>
        <message key="reviewer.article.submitReview">Надіслати рецензію редактору</message>
        <message key="reviewer.article.reviewerComments">Коментарі</message>
-       <message key="reviewer.article.uploadedFile">Вивантажені файли</message>        
+       <message key="reviewer.article.uploadedFile">Вивантажені файли</message>
        <message key="reviewer.article.reviewersAnnotatedVersion">Версія, вивантажена рецензентом</message>
        <message key="reviewer.article.reviewersAnnotatedVersionDescription">(Якщо Ви хочете прокоментувати файл для редактора, збережіть його на своєму комп'ютері та скористайтеся функцією Перегляд/Вивантаження).</message>
         <message key="reviewer.article.schedule.request">Запит редакції</message>
@@ -561,7 +561,7 @@
        <message key="copyeditor.article.copyeditorFile">Файл літ. редактора</message>
        <message key="copyeditor.article.uploadedFile">Вивантажений файл</message>
        <message key="copyeditor.article.copyeditorFinalFile">Файл літ. редактора</message>
-       
+
        <!-- Proofreader -->
        <message key="proofreader.noProofreadingAssignments">Немає призначень на коректуру</message>
 
@@ -570,9 +570,9 @@
 
        <!-- Article Submission Step 1 -->
 
-       
+
        <!-- Article Submission Step 2 -->
-       
+
        <!-- Article Submission Step 3 -->
        <message key="author.submit.uploadInstructions"><![CDATA[
 <p>Щоб вивантажити рукопис для цього журналу виконайте наступні дії.</p>
@@ -585,9 +585,9 @@
 </ol>]]></message>
 
        <!-- Article Submission Step 4 -->
-       
+
        <!-- Article Submission Step 4a: Supplementary Files -->
-       
+
        <!-- Article Submission Step 5 -->
 
        <!-- Used in submission review / editing -->
@@ -605,7 +605,7 @@
        <message key="submission.copyedit.useFile">Використати файл</message>
        <message key="submission.copyedit.copyeditComments">Коментарі літ. редактора</message>
        <message key="submission.copyedit.instructions">Інструкції з літературного редагування</message>
-       
+
        <!-- Submission Tracking - Layout Specific -->
        <message key="submission.layout.noLayoutFile">Немає (Перед тим, як надсилати запит, вивантажте версію остаточної редакції як версію верстки)</message>
        <message key="submission.layout.publicGalleyId">Ідентифікатор гранки</message>
@@ -615,8 +615,8 @@
        <message key="submission.layout.layoutComments">Коментарі редактора верстки</message>
        <message key="submission.layout.instructions">Інструкції з верстки</message>
        <message key="submission.layout.referenceLinking">Посилання у бібліографії</message>
-       
-       
+
+
        <!-- Submission Tracking - Proofread Specific -->
        <message key="submission.proofreadingComments">Коментарі коректора</message>
        <message key="submission.proofread.corrections">Виправлення коректора</message>
@@ -630,11 +630,11 @@
        <message key="submission.logType.copyedit">Редакція</message>
        <message key="submission.logType.layout">Верстка</message>
        <message key="submission.logType.proofread">Коректура</message>
-       
+
        <!-- Submission Event Log -->
 
        <!-- Submission Email Log -->
-       
+
        <!-- Submission Comments -->
        <message key="submission.comments.editorAuthorCorrespondence">Кореспонденція редактора/автора</message>
        <message key="submission.comments.copyeditComments">Коментарі літ. редактора</message>
@@ -647,9 +647,9 @@
        <message key="submission.comments.forEditor">Для редактора</message>
        <message key="submission.comments.saveAndEmailAuthor">Записати та надіслати автору</message>
        <message key="submission.comments.saveAndEmailEditor">Записати та надіслати редактору</message>
-       
+
        <!-- Login -->
-                   
+
        <!-- Registration -->
              <message key="user.register.noJournals">На цьому сайті немає журналів, у яких Ви можете зареєструватись.</message>
        <message key="user.register.privacyStatement">Положення про конфіденційність</message>
@@ -662,7 +662,7 @@
        <message key="user.register.reviewerDescriptionNoInterests">Дає свою згоду на рецензування рукописів для журналу.</message>
        <message key="user.register.reviewerDescription">Дає свою згоду на рецензування рукописів для редакції.</message>
        <message key="user.register.reviewerInterests">Вкажіть коло наукових інтересів (галузі та методологічні підходи):</message>
-       
+
        <!-- Subscriptions -->
        <message key="user.subscriptions.mySubscriptions">Мої передплати</message>
        <message key="user.subscriptions.subscriptionStatus">Статус передплати</message>
@@ -707,7 +707,6 @@
        <!-- Search -->
        <message key="search.browseAuthorIndex">Перегляд списку авторів</message>
        <message key="search.searchFor">Шукати статті за</message>
-       <message key="search.author">Автори</message>
        <message key="search.withinJournal">В журналі</message>
        <message key="search.allJournals">Всі журнали</message>
        <message key="search.authorIndex">Перегляд списку авторів</message>
@@ -725,12 +724,12 @@
 
        <!-- Interstitial page for PDFs -->
        <message key="article.pdf.title">Portable Document Format (PDF)</message>
-            
-       
+
+
        <!-- Interstitial page for non-PDF non-HTML galleys -->
        <message key="article.nonpdf.title">Завантаження статті</message>
        <message key="article.nonpdf.note"><![CDATA[Обраний Вами файл почне завантажуватись автоматично. Зауважте, що для перегляду цього файлу може знадобитись спеціалізоване програмне забезпечення.<br /><br />Якщо файл не завантажився автоматично, <a href="{$url}">натисніть сюди</a>.]]></message>
-       
+
        <!-- Site index -->
        <message key="site.journalsHosted">Журнали, розміщені на цьому сайті</message>
        <message key="site.journalView">Перегляд журналу</message>
@@ -746,7 +745,7 @@
        <message key="archive.archives">Архіви</message>
        <message key="archive.browse">Перегляд старих випусків</message>
        <message key="archive.issueUnavailable">Випуск недоступний</message>
-       
+
        <!-- About The Journal -->
        <message key="about.statistics">Статистика</message>
                    <message key="about.history">Історія журналу</message>
@@ -788,23 +787,23 @@
        <message key="about.aboutThisPublishingSystem.altText">Редакційний та видавничий процес OJS</message>
        <message key="about.aboutOJSJournal"><![CDATA[Цей журнал використовує Open Journal Systems {$ojsVersion} - програмний пакет з відкритим вихідним кодом, який обслуговує процеси менеджменту та публікації журналу. Пакет розробляється, підтримується та вільно розповсюджується <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> на умовах ліцензії GNU General Public License.]]></message>
        <message key="about.aboutOJSSite"><![CDATA[Цей сайт використовує Open Journal Systems {$ojsVersion} - програмний пакет з відкритим вихідним кодом, який обслуговує процеси менеджменту та публікації журналів. Пакет розробляється, підтримується та вільно розповсюджується <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> на умовах ліцензії GNU General Public License.]]></message>
-       
+
        <!-- Announcement -->
 
        <!-- Help -->
        <message key="help.ojsHelp">Допомога Open Journal Systems</message>
-       <message key="help.ojsHelpAbbrev">Допомога OJS</message>        
+       <message key="help.ojsHelpAbbrev">Допомога OJS</message>
        <message key="help.searchReturnResults">Повернутися до результатів пошуку</message>
 
        <!-- Donations -->
        <message key="donations.thankYou">Дякуємо</message>
        <message key="donations.thankYouMessage">Дякуємо за Ваш внесок. Ви зробили дуже корисну справу для нас.</message>
-       
+
        <!-- Payments -->
        <message key="payment.loginRequired">Щоб зробити платіж Ви повинні увійти у систему як зареєстрований користувач.</message>
        <message key="payment.loginRequired.forArticle">Для доступу до цього матеріалу Ви повинні мати передплату на журнал або купити окрему статтю. Увійдіть до системи як зареєстрований користувач, щоб перевірити Ваші права доступу або купити статтю.</message>
        <message key="payment.loginRequired.forDonation">Щоб зробити пожертву Ви повинні увійти у систему як зареєстрований користувач.</message>
-       
+
        <message key="payment.paid">Сплачено</message>
        <message key="payment.payNow">Сплатити зараз</message>
        <message key="payment.waive">Запит на виключення</message>
@@ -820,22 +819,22 @@
        <message key="payment.type.purchaseArticle">Купівля статті</message>
        <message key="payment.type.subscription">Плата за передплату</message>
        <message key="payment.type.donation">Пожертви</message>
-       
+
        <message key="payment.donation.makeDonation">Зробити пожертву</message>
-       
+
        <message key="payment.submission.paySubmission">Сплатити за подання</message>
        <message key="payment.fastTrack.payFastTrack">Сплатити за прискорене рецензування</message>
        <message key="payment.fastTrack.inFastTrack">поза чергою</message>
        <message key="payment.publication.payPublication">Сплатити за публікацію</message>
        <message key="payment.publication.publicationPaid">За публікацію статті сплачено</message>
-       
+
        <message key="payment.membership.buyMembership">Купити індивідуальне членство</message>
-       <message key="payment.membership.renewMembership">Поновити індивідуальне членство</message>     
+       <message key="payment.membership.renewMembership">Поновити індивідуальне членство</message>
        <message key="payment.membership.ends">Завершується</message>
 
        <message key="payment.subscription.purchase">Купити передплату</message>
        <message key="payment.subscription.renew">Поновити передплату</message>
-       <message key="payment.subscription.expires">Завершується</message>      
+       <message key="payment.subscription.expires">Завершується</message>
 
        <!-- Installer -->
        <message key="installer.appInstallation">Встановлення OJS</message>
@@ -883,7 +882,7 @@
 
 <p>Оберіть пункт <strong>Ручна інсталяція</strong> для відображення декларацій SQL, необхідних для створення схеми даних OJS та введення початкових даних. Після цього можна буде розпочати ручну інсталяцію. Цей метод корисний для виявлення проблем інсталяції, особливо у випадках, коли використовуються нетрадиційні платформи. Зазначимо, що цей метод інсталяції не передбачає автоматизованого створення бази даних або будь-яких таблиць, хоча до файлу конфігурації будуть вноситись зміни, пов'язані з налаштуваннями бази даних.</p>]]></message>
        <message key="installer.upgradeInstructions"><![CDATA[<h4>OJS версії {$version}</h4>
-       
+
 <p>Дякуємо, що завантажили <strong>Open Journal Systems</strong> виробництва Public Knowledge Project. Перед тим, як продовжити, будь ласка, прочитайте файли <a href="{$baseUrl}/docs/README">README</a> та <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a>, включені до цього дистрибутиву. Для того, щоб дізнатися більше про Public Knowledge Project та розроблені ним програмні пакети, будь ласка, завітайте на <a href="http://pkp.sfu.ca/" target="_blank">веб-сайт PKP</a>. Якщо Ви маєте звіти про помилки або запити до служби підтримки Open Journal Systems, дивіться <a href="http://forum.pkp.sfu.ca" target="_blank">форум підтримки</a> або завітайте до онлайнової служби PKP <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">система звітування про помилки</a>. Хоча форум підтримки є пріоритетним методом контактів з розробниками, Ви можете також написати розробникам листа на адресу <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>Перед тим, як продовжити, <strong>настійно рекомендуємо</strong> зробити резервну копію Вашої бази даних, файлових тек та теки інсталяції OJS.</p>
 <p>Якщо Ви працюєте у режимі <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, будь ласка, переконайтеся, що значення параметру max_execution_time у Вашому файлі конфігурації php.ini має найвище припустиме значення. Якщо цей або будь-який інший ліміт часу (наприклад, параметр "Timeout" налаштувань Apache) буде перевищений, процес оновлення буде перерваний і знадобиться ручне втручання.</p>]]></message>
@@ -950,7 +949,7 @@
        <message key="log.editor.archived">Подання {$submissionId} було надіслане до архіву.</message>
        <message key="log.editor.restored">Подання {$submissionId} було відновлене у редакційній черзі.</message>
        <message key="log.editor.editorAssigned">{$editorName} був призначений редактором подання {$submissionId}.</message>
-      
+
        <message key="log.proofread.assign">{$assignerName} призначив фахівця {$proofreaderName} коректором подання {$submissionId}.</message>
        <message key="log.proofread.complete">{$proofreaderName} надіслав подання {$submissionId} для включення до графіку публікації.</message>
 
@@ -985,7 +984,7 @@
        <message key="rt.admin.validateUrls.description"><![CDATA[Нижче відображені адреси URL пошукових сайтів, які, ймовірно, не є коректними.<br />
 Оскільки цей тест не дає 100% гарантії, вам треба вручну перевірити всі адреси URL, які були помічені як некоректні.<br />
 Негативні результати перевірки можуть бути пов'язані з тим, що сайт вимагає надсилання даних у формі.]]></message>
-       
+
        <!-- RT Entities -->
 
 
@@ -998,12 +997,12 @@
        <message key="rt.beNotifiedWhen">Сповістити, коли...</message>
 
        <message key="rt.thisJournal">Пошук у цьому журналі</message>
-       
+
 
        <message key="rt.context.authorTermsDescription">Якщо авторів статті декілька, залиште всі імена відміченими щоб знайти роботи, написані саме у цьому співавторстві, або шукайте роботи співавторів послідовно, відмічаючи для кожного пошуку лише одне ім'я. Щоб більше дізнатися про джерело, у якому Ви проводите пошук, натисніть відповідне посилання "Про нас". Ці джерела були вибрані через їх релевантність та відкритість (безкоштовність) їх змісту.</message>
-       
-       
-       
+
+
+
        <!-- Notification Types -->
        <message key="notification.mailListDescription">Вкажіть свою адресу email, щоб отримувати миттєві сповіщення про публікацію у цьому журналі нового важливого змісту.</message>
        <message key="notification.notificationsPublicDescription"><![CDATA[На цій сторінці відображаються важливі новини, пов'язані з цим журналом, наприклад, інформація про нові випуски або анонси. Ви можете передплатити ці сповіщення як стрічку RSS (натисніть на зображенні праворуч) або як   <a href="{$emailUrl}">поштову передплату</a>.]]></message>
@@ -1013,7 +1012,7 @@
        <message key="notification.type.editorDecisionComment">Залишений коментар на рішення видавця щодо статті"{$title}".</message>
        <message key="notification.type.galleyModified">Змінена гранка статті "{$title}".</message>
        <message key="notification.type.issuePublished">Опублікований випуск.</message>
-                   <message key="notification.type.newAnnouncement">Створений новий анонс.</message>       
+                   <message key="notification.type.newAnnouncement">Створений новий анонс.</message>
                    <message key="notification.type.reviewerFormComment">Надіслана форма рецензування для подання "{$title}".</message>
        <message key="notification.type.reviewing">Події процесу рецензування</message>
        <message key="notification.type.site">Події сайту</message>
@@ -1030,9 +1029,9 @@
        <message key="user.authorization.copyeditorAssignmentMissing">Доступ заборонений! Ви не призначалися літературним редактором цієї статті.</message>
              <message key="user.authorization.sectionAssignment">Ви намагаєтеся отримати доступ до статті, яка не належить до Вашого розділу.</message>
        <message key="user.authorization.invalidCopyditorSubmission">Помилка призначення літературного редактора подання або запиту на літературне редагування!</message>
-             
+
        <!-- Icons: Default "alt" text -->
-       
+
        <!-- Debug messages -->
        <message key="debug.notes.currencyListLoad">З XML-файлу завантажений список валют "{$filename}"</message>
       	<message key="navigation.categories">Категорії</message>

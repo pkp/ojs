@@ -118,7 +118,6 @@
 	<message key="manager.setup.initialIssue">創刊號</message>
 	<message key="manager.setup.initialIssueDescription">依照所選的格式，指認被OJS所出刊的第一期的期數、卷數、和/或年分：</message>
 	<message key="manager.setup.institution">機構</message>
-	<message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number 國際標準序列號碼)是一個八位數字，用以識別定期出版之出版品，包括電子期刊。其由一個國家中心的世界性網路所管理，與位在巴黎的一個由聯合國教科文組織(Unesco)和法國政府所支持的國際中心合作。您可以從<a href="http://www.issn.org" target="_blank">ISSN 網站</a>獲得一組號碼。在期刊運作的任何一個階段都可以取得這樣的號碼。]]></message>
 	<message key="manager.setup.itemsDescription">可以新增「導覽」列項目到當前顯示自首頁上方的項目中（如首頁、期刊介紹、使用者首頁...等等）。</message>
 	<message key="manager.setup.itemsPerPage">每頁幾項</message>
 	<message key="manager.setup.journalAbbreviation">期刊名稱縮寫</message>

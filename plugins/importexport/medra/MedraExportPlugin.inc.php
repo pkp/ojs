@@ -25,8 +25,8 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 	/**
 	 * Constructor
 	 */
-	function MedraExportPlugin() {
-		parent::DOIPubIdExportPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**
@@ -51,21 +51,28 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc DOIExportPlugin::getSubmissionFilter()
+	 * @copydoc PubObjectsExportPlugin::getSubmissionFilter()
 	 */
 	function getSubmissionFilter() {
 		return 'article=>medra-xml';
 	}
 
 	/**
-	 * @copydoc DOIExportPlugin::getIssueFilter()
+	 * @copydoc PubObjectsExportPlugin::getIssueFilter()
 	 */
 	function getIssueFilter() {
 		return 'issue=>medra-xml';
 	}
 
 	/**
-	 * @copydoc DOIPubIdExportPlugin::getPluginSettingsPrefix()
+	 * @copydoc PubObjectsExportPlugin::getRepresentationFilter()
+	 */
+	function getRepresentationFilter() {
+		return 'galley=>medra-xml';
+	}
+
+	/**
+	 * @copydoc ImportExportPlugin::getPluginSettingsPrefix()
 	 */
 	function getPluginSettingsPrefix() {
 		return 'medra';
@@ -79,31 +86,10 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc DOIPubIdExportPlugin::getExportDeploymentClassName()
+	 * @copydoc PubObjectsExportPlugin::getExportDeploymentClassName()
 	 */
 	function getExportDeploymentClassName() {
 		return 'MedraExportDeployment';
-	}
-
-	/**
-	 * @copydoc ImportExportPlugin::display()
-	 */
-	function display($args, $request) {
-		$context = $request->getContext();
-		switch (current($args)) {
-			case 'exportRepresentations':
-				$selectedRepresentations = (array) $request->getUserVar('selectedRepresentations');
-				if (!empty($selectedRepresentations)) {
-					$objects = $this->_getArticleGalleys($selectedRepresentations, $context);
-					$filter = 'galley=>medra-xml';
-					$tab = (string) $request->getUserVar('tab');
-					$objectsFileNamePart = 'galleys';
-				}
-				// Execute export action
-				$this->executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart);
-			default:
-				parent::display($args, $request);
-		}
 	}
 
 	/**
@@ -131,7 +117,7 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 		if ($result === true) {
 			// Mark all objects as registered.
 			foreach($objects as $object) {
-				$object->setData($this->getDepositStatusSettingName(), DOI_EXPORT_STATUS_REGISTERED);
+				$object->setData($this->getDepositStatusSettingName(), EXPORT_STATUS_REGISTERED);
 				$this->saveRegisteredDoi($context, $object);
 			}
 		} else {
@@ -145,44 +131,6 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 			}
 		}
 		return $result;
-	}
-
-	/**
-	 * Retrieve all unregistered articles.
-	 * @param $context Context
-	 * @return array
-	 */
-	function getUnregisteredGalleys($context) {
-		// Retrieve all galleys that have not yet been registered.
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-		$galleys = $galleyDao->getByPubIdType(
-			$this->getPubIdType(),
-			$context?$context->getId():null,
-			null,
-			null,
-			null,
-			$this->getPluginSettingsPrefix(). '::' . DOI_EXPORT_REGISTERED_DOI,
-			null,
-			null
-		);
-		return $galleys->toArray();
-	}
-
-
-	/**
-	 * Get article galleys from gallley IDs.
-	 * @param $galleyIds array
-	 * @param $context Context
-	 * @return array
-	 */
-	function _getArticleGalleys($galleyIds, $context) {
-		$galleys = array();
-		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		foreach ($galleyIds as $galleyId) {
-			$articleGalley = $articleGalleyDao->getById($galleyId, null, $context->getId());
-			if ($articleGalley) $galleys[] = $articleGalley;
-		}
-		return $galleys;
 	}
 
 }

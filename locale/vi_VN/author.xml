@@ -31,7 +31,7 @@
 	<message key="author.submit.metadata">Nhập dữ liệu mô tả</message>
 	<message key="author.submit.supplementaryFiles">Tải các file phụ trợ lên</message>
 	<message key="author.submit.confirmation">Khẳng định</message>
-	<message key="author.submit.cancelSubmission">Tác giả có thể hoàn thành việc nộp bài viết vào thời gian khác bằng cách lựa chọn mục Các bài đang nộp dở trong trang dành cho Tác giả.</message>
+	<message key="submission.submit.cancelSubmission">Tác giả có thể hoàn thành việc nộp bài viết vào thời gian khác bằng cách lựa chọn mục Các bài đang nộp dở trong trang dành cho Tác giả.</message>
 	<message key="author.submit.notAccepting">Tạp chí này hiện thời không nhận bài nộp.</message>
 	<message key="author.submit.requestWaiver">Đề nghị miễn thu phí</message>
 	<message key="author.submit.qualifyForWaiver">Vui lòng xem xét miễn Phí Nộp bài cho bài viết này</message>

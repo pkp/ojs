@@ -12,7 +12,7 @@
   -->
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.citationFormats.bibtex.displayName">BibTeX-Zitationsformat-Plug-In</message>
+	<message key="plugins.citationFormats.bibtex.displayName">BibTeX-Zitationsformat-Plugin</message>
 	<message key="plugins.citationFormats.bibtex.citationFormatName">BibTeX</message>
-	<message key="plugins.citationFormats.bibtex.description">Dieses Plug-In implementiert das BibTeX-Zitationsformat.</message>
+	<message key="plugins.citationFormats.bibtex.description">Dieses Plugin implementiert das BibTeX-Zitationsformat.</message>
 </locale>

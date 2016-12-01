@@ -8,12 +8,14 @@
  * Production workflow stage
  *}
 
+{* Help tab *}
+{help file="editorial-workflow/production.md" class="pkp_help_tab"}
+
 <div id="production">
-	{help file="chapter_9_production.md" class="pkp_help_tab"}
-	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="productionNotification" requestOptions=$productionNotificationRequestOptions}
+{include file="controllers/notification/inPlaceNotification.tpl" notificationId="productionNotification" requestOptions=$productionNotificationRequestOptions}
 
 	<div class="pkp_context_sidebar">
-		{if array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR), $userRoles)}
+		{if array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR), (array)$userRoles)}
 			<div id="schedulePublicationDiv" class="pkp_tab_actions">
 				<ul class="pkp_workflow_decisions">
 					<li>{include file="linkAction/linkAction.tpl" action=$schedulePublicationLinkAction}</li>

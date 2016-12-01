@@ -20,8 +20,8 @@ class SectionGridHandler extends SetupGridHandler {
 	/**
 	 * Constructor
 	 */
-	function SectionGridHandler() {
-		parent::SetupGridHandler();
+	function __construct() {
+		parent::__construct();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER),
 			array('fetchGrid', 'fetchRow', 'addSection', 'editSection', 'updateSection', 'deleteSection', 'saveSequence')

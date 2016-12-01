@@ -30,12 +30,13 @@
 	<message key="author.submit.metadata">أدخل البيانات الوصفية</message>
 	<message key="author.submit.supplementaryFiles">إرفع الملفات التكميلية</message>
 	<message key="author.submit.confirmation">تأكيد الطلب</message>
-	<message key="author.submit.cancelSubmission">لك أن تكمل طلبك للنشر في موقعنا لاحقاً عبر الذهاب إلى (طلبات النشر قيد المعالجة) في صفحة دخول المؤلفين</message>
+	<message key="author.submit.nextSteps">الخطوة التالية</message>
+	<message key="submission.submit.cancelSubmission">لك أن تكمل طلبك للنشر في موقعنا لاحقاً عبر الذهاب إلى (طلبات النشر قيد المعالجة) في صفحة دخول المؤلفين</message>
 	<message key="author.submit.notAccepting">النشر في هذه المجلة معلق حالياً</message>
-	<message key="author.submit.requestWaiver">إلتمس تنازلاً</message>
-	<message key="author.submit.qualifyForWaiver">لطفاً، خذ بنظر الاعتبار التنازل عن رسوم النشر لهذه المقالة</message>
-	<message key="author.submit.addReasonsForWaiver">رجاءً، استعمل خانة التعليق أدناه لتشرح لنا مبررات طلب التنازل عن استحصال رسوم النشر</message>
-	<message key="author.submit.mustEnterWaiverReason">ما دمت قد طالبت بالتنازل عن رسوم النشر، لا بد لك من الوقوف على المبررات التي دفعتك لذلك. نتوقع منك إدخالها في الخانة المخصصة لطفاً</message>
+	<message key="author.submit.requestWaiver">إلتمس خصماً مالياً</message>
+	<message key="author.submit.qualifyForWaiver">لطفاً، خذ بنظر الاعتبار خصم رسوم النشر لهذه المقالة</message>
+	<message key="author.submit.addReasonsForWaiver">لطفاً، استعمل خانة الملاحظات أدناه لتوضح لنا أسباب مطالبتك إيانا بالخصم المالي.</message>
+	<message key="author.submit.mustEnterWaiverReason">ما دمت قد طالبت بخصم رسوم النشر، لا بد لك من الوقوف على المبررات التي دفعتك لذلك. نتوقع منك إدخالها في الخانة المخصصة لطفاً</message>
 	<message key="author.submissions.queuedReviewSubsequent">رهن التقييم، الجولة {$round}</message>
 	<message key="author.submissions.queuedReviewRevisions">رهن التقييم: التقييمات لا بد منها</message>
 	<message key="author.submissions.queuedEditingCopyedit">قيد التحرير: تمت المطالبة بنسخة التحرير</message>
@@ -45,14 +46,10 @@
 	<message key="author.submissions.confirmDelete">هل أنت متأكد من رغبتك في حذف طلب النشر هذا رغم عدم إكتماله؟</message>
 	<message key="author.submissions.viewStatus">عرض الموقف</message>
 	<message key="author.submissions.noSubmissions">لا توجد تقديمات</message>
-	<message key="author.submit.howToSubmit"><![CDATA[أتواجهك صعوبات؟ تراسل مع <a href="mailto:{$supportEmail}">{$supportName}</a> للحصول على المساعدة ({$supportPhone}).]]></message>
-	<message key="author.submit.howToSubmitNoPhone"><![CDATA[أتواجهك صعوبات؟ تراسل مع <a href="mailto:{$supportEmail}">{$supportName}</a> للحصول على المساعدة.]]></message>
 	<message key="author.submit.journalSection">قسم المجلة</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[إختر القسم الأنسب لطلب النشر هذا (أنظر الأقسام وسياسات النشر <a href="{$aboutUrl}" target="_new">في المجلة</a>)]]></message>
-	<message key="submission.submit.selectSection">لطفاً، إختر أحد الأقسام</message>
 	<message key="author.submit.submissionLocale">لغة طلب النشر</message>
 	<message key="author.submit.submissionLocaleDescription">هذه المجلة تتقبل طلبات النشر بعدة لغات. إختر لغة الطلب الأساسية من القائمة المنسدلة أدناه</message>
-	<message key="author.submit.submissionChecklist">مرجعيات طلب النشر</message>
 	<message key="author.submit.verifyChecklist">عليك التأكد من أن كل فقرات نموذج التقديم تمت تلبيتها قبل المتابعة</message>
 	<message key="author.submit.copyrightNoticeAgree">المؤلف أو المؤلفون يوافقون على فقرات إشعار الحقوق الفكرية، والتي تنطبق على طلب النشر هذا إذا أو عند تحقق النشر عبر هذه المجلة (الملاحظات إلى هيئة التحرير يمكن إضافتها أدناه)</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">عليك أن توافق على فقرات إشعار الحقوق الفكرية لتتمكن من المتابعة</message>

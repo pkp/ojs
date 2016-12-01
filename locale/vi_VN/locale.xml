@@ -11,7 +11,7 @@
   * Localization strings for the vi_VN (Tiếng Việt) locale.
   *
   -->
- 
+
 <locale name="vi_VN" full_name="Tiếng Việt">
 	<!--
 	 * This file is organized into several major sections, separated
@@ -36,13 +36,13 @@
 	<message key="common.openJournalSystems">Phần mềm Tạp chí mở</message>
 
 	<!-- Common Form Messages -->
-	
+
 	<!-- Common Email Messages -->
 
 	<!-- Common Localization Terms -->
 
 	<!-- Common Error Messages -->
-		
+
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Hướng dẫn</message>
 	<message key="navigation.current">Số mới ra</message>
@@ -53,7 +53,7 @@
 	<message key="navigation.infoForLibrarians">Cho Thủ thư</message>
 	<message key="navigation.infoForAuthors.long">Thông tin cho Tác giả</message>
 	<message key="navigation.infoForLibrarians.long">Thông tin cho Thủ thư</message>
-	
+
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Bài chưa giao</message>
 	<message key="common.queue.short.submissionsUnassigned">Bài chưa giao</message>
@@ -67,7 +67,7 @@
 	<message key="common.queue.short.active">Đang xử lý</message>
 	<message key="common.queue.long.completed">Bài cũ</message>
 	<message key="common.queue.short.completed">Bài cũ</message>
-	
+
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
@@ -129,7 +129,7 @@
 	<message key="submission.scheduling">Xếp bài</message>
 	<message key="submission.scheduledIn">Xếp để in trong số {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(TBA)</message>
-	
+
 	<message key="submissions.sec">Chuyên mục</message>
 	<message key="submissions.step1">Bước 1</message>
 	<message key="submissions.step3">Bước 3</message>
@@ -152,7 +152,7 @@
 	<message key="submissions.proofreadingComplete">Đã soát bản in thử</message>
 
 	<!-- Submission Notes -->
-	
+
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Số mới ra</message>
 	<message key="journal.journals">Các tạp chí</message>
@@ -163,14 +163,14 @@
 	<message key="user.showAllJournals">Các tạp chí đã chọn</message>
 	<message key="user.registerForOtherJournals">Đăng ký các tạp chí khác</message>
 	<message key="user.myJournals">Tạp chí đã chọn</message>
-	
+
 	<!-- Roles -->
 	<message key="user.role.manager">Tổng biên tập</message>
 	<message key="user.role.sectionEditor">BTV chuyên mục</message>
 	<message key="user.role.subscriptionManager">Phụ trách phát hành</message>
 	<message key="user.role.managers">Tổng biên tập</message>
 	<message key="user.role.subscriptionManagers">Phụ trách phát hành</message>
-	
+
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Số tạp chí</message>
 	<message key="issue.issues">Các số tạp chí</message>
@@ -194,7 +194,7 @@
 	<message key="submission.event.logLevel.notice">Thông báo</message>
 	<message key="submission.event.logLevel.warning">Cảnh báo</message>
 	<message key="submission.event.logLevel.error">Lỗi</message>
-	
+
 	<message key="submission.event.general.defaultEvent">Sự kiện về bài viết</message>
 	<message key="submission.event.general.issueScheduled">Bài nộp đã được chuyển sang chờ xếp bài</message>
 	<message key="submission.event.general.issueAssigned">Bài nộp đã được xếp vào số tạp chí</message>
@@ -203,15 +203,15 @@
 	<message key="submission.event.author.authorRevision">Bài tác giả sửa đã nộp lại</message>
 
 	<message key="submission.event.general.authorRevision">File tác giả sửa đã nộp lại</message>
-	
+
 	<message key="submission.event.editor.editorAssigned">BTV được giao bài nộp</message>
 	<message key="submission.event.editor.editorUnassigned">BTV được rút khỏi bài nộp</message>
 	<message key="submission.event.editor.editorDecision">Quyết định của BTV được nộp</message>
 	<message key="submission.event.editor.editorFile">File của BTV được cập nhật</message>
 	<message key="submission.event.editor.submissionArchived">Bài nộp được đưa vào kho</message>
 	<message key="submission.event.editor.submissionRestored">Bài nộp được lấy ra từ kho</message>
-	
-	
+
+
 	<message key="submission.event.copyedit.copyeditorAssigned">BTV bản thảo đã được giao bài nộp</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">BTV bản thảo không còn được giao bài</message>
 	<message key="submission.event.copyedit.copyeditInitiated">BT bản thảo được khởi động</message>
@@ -219,13 +219,13 @@
 	<message key="submission.event.copyedit.copyeditInitialCompleted">BT bản thảo bước đầu đã hoàn thành</message>
 	<message key="submission.event.copyedit.copyeditFinalCompleted">BT bản thảo cuối cùng đã đã hoàn thành</message>
 	<message key="submission.event.copyedit.copyeditSetFile">File biên tập bản thảo đã được cập nhật</message>
-	
+
 	<message key="submission.event.proofread.proofreaderAssigned">Người soát lỗi đã được giao bài nộp</message>
 	<message key="submission.event.proofread.proofreaderUnassigned">Người soát lỗi không còn được giao bài</message>
 	<message key="submission.event.proofread.proofreadInitiated">Việc soát lỗi được khởi động</message>
 	<message key="submission.event.proofread.proofreadRevision">File có hiệu đính của Người soát lỗi đã được cập nhật</message>
 	<message key="submission.event.proofread.proofreadCompleted">Soát lỗi đã hoàn thành</message>
-	
+
 	<message key="submission.event.layout.layoutEditorAssigned">BTV trình bày đã được giao bài nộp</message>
 	<message key="submission.event.layout.layoutEditorUnassigned">BTV trình bày không còn được giao bài nộp</message>
 	<message key="submission.event.layout.layoutInitiated">Phần trình bày đã được khởi động</message>
@@ -252,23 +252,23 @@
 <br /><br />
 Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này bằng cách sửa lại file cấu hình của OJS. Các phiên bản tương lai của OJS sẽ cho phép vô hiệu hoặc kích hoạt giao diện OAI cho từng tạp chí có trên website.]]></message>
 
-	
-	
+
+
 	<!-- Languages -->
 
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Việc chỉ định một nguồn xác thực khác OJS sẽ có các hiệu lực sau:</p>
 <ul>
 	<li>Nếu một người dùng muốn đăng ký một tài khoản mới với website này với bí danh (username) đã có trên nguồn xác thực (nhưng chưa có trên CSDL của OJS), đăng ký này sẽ không được phép nếu mật khẩu trùng với mật khẩu dành cho người trùng bí danh trên nguồn xác thực.</li>
 </ul>]]></message>
-	
+
 	<!-- System Information -->
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>LƯU Ý!</h4>
 <p>Hệ thống không thể tự động ghi đè lên file cấu hình. Để thực hiện những thay đổi cấu hình quý vị phải mở file <tt>config.inc.php</tt> bằng phần mềm soạn thảo text phù hợp và thay nội dung file bằng nội dung dưới đây.</p>]]></message>
 
-	
+
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Quản lý phát hành</message>
-	
+
 	<!-- Journal Management -->
 
 	<!-- Statistics & Reports -->
@@ -284,7 +284,7 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->
-	
+
 	<!-- Setup Step 1 -->
 
 	<!-- Setup Step 2 -->
@@ -293,7 +293,7 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 
 
 
-	
+
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Tạp chí sẽ sử dụng một hệ thống phân loại chủ đề có sẵn trên mạng.<br />
 Tên của hệ thống phân loại]]></message>
@@ -310,7 +310,7 @@ Lựa chọn một mô hình để xử lý những khía cạnh này của quá
 	<!-- Setup Step 5 -->
 
 	<!-- Languages -->
-	
+
 	<!-- Section Management -->
 	<!-- Import/Export -->
 
@@ -331,7 +331,7 @@ Quý vị có thể cho người dùng biết lý do tại sao tài khoản củ
 	]]></message>
 
 
-	
+
 	<!-- Email Management -->
 
 	<!-- Subscription Policy Management -->
@@ -355,7 +355,7 @@ Quý vị có thể cho người dùng biết lý do tại sao tài khoản củ
 	<!-- Live Issues -->
 
 	<!-- Navigation sidebar menu -->
-	
+
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Tên có liên kết sẽ dẫn tới hồ sơ của người phản biện.<br />
 Đánh giá có giá trị trong khoảng 5 (Xuất sắc).<br />
@@ -365,7 +365,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 
 
 
-	
+
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Các công việc biên tập đang xử lý</message>
 	<message key="sectionEditor.completedEditorialAssignments">Các công việc biên tập đã hoàn thành</message>
@@ -394,12 +394,12 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="layoutEditor.galley.uploadGalleyFormat">Tải định dạng bản bông lên</message>
 	<message key="layoutEditor.galley.replaceGalley">Thay file</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Tải lên các file phụ trợ</message>
-	
+
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Các bài viết đang phản biện</message>
 	<message key="reviewer.completedReviews">Hoàn thành</message>
 	<message key="reviewer.averageQuality">Đánh giá</message>
-	
+
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">File dùng để phản biện</message>
 	<message key="reviewer.article.notifyTheEditor">Báo cho BTV chính</message>
@@ -414,7 +414,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="reviewer.article.recommendation">Khuyến nghị</message>
 	<message key="reviewer.article.submitReview">Gửi bài Phản biện cho BTV chính</message>
 	<message key="reviewer.article.reviewerComments">Lời bình</message>
-	<message key="reviewer.article.uploadedFile">Các file được tải lên</message>	
+	<message key="reviewer.article.uploadedFile">Các file được tải lên</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Phiên bản do người phản biện tải lên</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Nếu quý vị muốn chú giải cho file này để BTV dễ hiểu, ghi file vào ổ cứng trên máy tính và sử dụng nút Chọn/Tải lên)</message>
         <message key="reviewer.article.schedule.request">Yêu cầu của BTV chính</message>
@@ -448,7 +448,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="copyeditor.article.copyeditorFile">File của BTV bản thảo</message>
 	<message key="copyeditor.article.uploadedFile">File được tải lên</message>
 	<message key="copyeditor.article.copyeditorFinalFile">File bản thảo cuối cùng</message>
-	
+
 	<!-- Proofreader -->
 	<message key="proofreader.noProofreadingAssignments">Chưa có giao việc soát lỗi</message>
 
@@ -456,10 +456,10 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 
 
 	<!-- Article Submission Step 1 -->
-	
-	
+
+
 	<!-- Article Submission Step 2 -->
-	
+
 	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[
 <p>Để tải một bản thảo lên tạp chí nào, xin hoàn thành các bước sau.</p>
@@ -471,11 +471,11 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 <li>Nhấp chuột vào nút Tải lên trên trang này để tải file từ máy tính lên website tạp chí và đặt lại tên theo thông lệ của tạp chí.</li>
 <li>Khi bài nộp đã được tải lên, nhấp chuột vào nút Ghi và Tiếp tục ở cuối trang này.</li>
 </ol>]]></message>
-	
+
 	<!-- Article Submission Step 4 -->
-	
+
 	<!-- Article Submission Step 4a: Supplementary Files -->
-	
+
 	<!-- Article Submission Step 5 -->
 
 	<!-- Used in submission review / editing -->
@@ -493,14 +493,14 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="submission.copyedit.useFile">Sử dụng File</message>
 	<message key="submission.copyedit.copyeditComments">Lời bình từ biên tập bản thảo</message>
 	<message key="submission.copyedit.instructions">Hướng dẫn BT bản thảo</message>
-	
+
 	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.layout.assignLayoutEditor">Chỉ định BTV trình bày</message>
 	<message key="submission.layout.replaceLayoutEditor">Thay thế BTV trình bày</message>
 	<message key="submission.layout.layoutComments">Lời bình về trình bày</message>
 	<message key="submission.layout.instructions">Hướng dẫn Trình bày</message>
-	
-	
+
+
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Lời bình về soát lỗi</message>
 	<message key="submission.archiveSubmission">Lưu kho bài cũ</message>
@@ -508,7 +508,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="submission.proofread.instructions">Hướng dẫn soát lỗi</message>
 
 	<!-- Submission History -->
-	
+
 	<message key="submission.logType.article">Bài viết</message>
 	<message key="submission.logType.author">Tác giả</message>
 	<message key="submission.logType.editor">BTV</message>
@@ -516,11 +516,11 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="submission.logType.copyedit">BT bản thảo</message>
 	<message key="submission.logType.layout">Trình bày</message>
 	<message key="submission.logType.proofread">Soát lỗi</message>
-	
+
 	<!-- Submission Event Log -->
 
 	<!-- Submission Email Log -->
-	
+
 	<!-- Submission Comments -->
 	<message key="submission.comments.editorAuthorCorrespondence">Liên lạc BTV/Tác giả</message>
 	<message key="submission.comments.copyeditComments">Lời bình về biên tập bản thảo</message>
@@ -533,11 +533,11 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="submission.comments.forEditor">Dành cho BTV</message>
 	<message key="submission.comments.saveAndEmailAuthor">Ghi và gửi email cho tác giả</message>
 	<message key="submission.comments.saveAndEmailEditor">Ghi và gửi email cho BTV</message>
-	
+
 	<!-- Login -->
-	
+
 	<!-- Profile -->
-	
+
 	<!-- Registration -->
 	<message key="user.register.noJournals">Không có tạp chí nào quý vị có thể đăng ký trên web site này.</message>
 	<message key="user.register.privacyStatement">Tuyên bố về bí mật cá nhân</message>
@@ -553,7 +553,6 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Duyệt danh mục tác giả</message>
 	<message key="search.searchFor">Tìm các bài viết có từ</message>
-	<message key="search.author">Tác giả</message>
 	<message key="search.withinJournal">Trong</message>
 	<message key="search.allJournals">Tất cả các tạp chí</message>
 	<message key="search.authorIndex">Duyệt Chỉ mục Tác giả</message>
@@ -571,17 +570,17 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Định dạng file PDF (PDF)</message>
-	
+
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Tải bài viết</message>
 	<message key="article.nonpdf.note"><![CDATA[File quý vị đã chọn sẽ bắt đầu tự động tải xuống. Nếu không, nhấp chuột vào đường dẫn dưới đây. Lưu ý là file này có thể cần phải có một phần mềm xem đặc biệt.<br /><br />Nếu fil không tự động tải xuống, <a href="{$url}">nhấp chuột vào đây</a>.]]></message>
-	
+
 	<!-- Site index -->
 	<message key="site.journalsHosted">Các tạp chí có trên Web site</message>
 	<message key="site.journalView">Xem tạp chí</message>
 	<message key="site.journalRegister">Đăng ký</message>
 	<message key="site.journalCurrent">Số mới ra</message>
-	
+
 
 	<!-- Current index -->
 	<message key="current.current">Số mới ra</message>
@@ -592,7 +591,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="archive.archives">Số cũ</message>
 	<message key="archive.browse">Duyệt các số tạp chí cũ</message>
 	<message key="archive.issueUnavailable">Số không còn nữa</message>
-	
+
 	<!-- About The Journal -->
 	<message key="about.statistics">Thống kê</message>
 	<message key="about.editorialTeam">Ban biên tập</message>
@@ -623,13 +622,13 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="about.aboutThisPublishingSystem">Giới thiệu hệ thống phần mềm xuất bản tạp chí này</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Tạp chí này sử dụng phần mềm Open Journal Systems {$ojsVersion}, một phần mềm xuất bản và quản lý tạp chí mã nguồn mở do <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> phát triển, hỗ trợ và cung cấp miễn phí theo giấy phép GNU General Public License.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[Web site này sử dụng phần mềm Open Journal Systems {$ojsVersion}, một phần mềm xuất bản và quản lý tạp chí mã nguồn mở do <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> phát triển, hỗ trợ và cung cấp miễn phí theo giấy phép GNU General Public License.]]></message>
-	
+
 	<!-- Announcement -->
 
 	<!-- Help -->
 	<message key="help.ojsHelp">Hướng dẫn sử dụng Phần mềm Tạp chí Mở (OJS)</message>
-	<message key="help.ojsHelpAbbrev">Hướng dẫn OJS</message>	
-	
+	<message key="help.ojsHelpAbbrev">Hướng dẫn OJS</message>
+
 	<!-- Installer -->
 	<message key="installer.appInstallation">Cài đặt OJS</message>
 	<message key="installer.ojsUpgrade">Nâng cấp OJS</message>
@@ -676,7 +675,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 
 <p>Lựa chọn <strong>Cài đặt bằng tay</strong> để hiển thị SQL statements cần thiết dùng để khởi tạo cấu trúc CSDL cho OJS và những dữ liệu ban đầu và có thể sử dụng SQL statements đó để cài đặt CSDL bằng tay. Lựa chọn này hữu ích khi cần theo dõi các lỗi cài đặt, đặc biệt là trong trường hợp cài đặt trên những nền công nghệ không hỗ trợ OJS. Lưu ý rằng phương pháp cài đặt này sẽ không cố để tạo ra CSDL hoặc bất kỳ một bảng nào, mặc dù file cấu hình vẫn ghi lại thông tin về CSDL mà quý vị cung cấp.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Phiên bản OJS {$version}</h4>
-	
+
 <p>Cảm ơn đã tải về Phần mềm Tạp chí Mở<strong>Open Journal Systems</strong> của Dự án Tri thức Công cộng (Public Knowledge Project). Trước khi tiếp tục, vui lòng đọc các tài liệu <a href="{$baseUrl}/docs/README">Giới thiệu</a> và <a href="{$baseUrl}/docs/UPGRADE">Nâng cấp </a> đi kèm với phần mềm này. Để biết thêm thông tin về Dự án Tri thức Công cộng và các phần mềm của dự án, vui lòng ghé thăm <a href="http://pkp.sfu.ca/" target="_blank">Website của PKP</a>. Nếu quý vị phát hiện lỗi hoặc có yêu cầu hỗ trợ kỹ thuật, xem <a href="http://forum.pkp.sfu.ca">Diễn đàn hỗ trợ</a> hoặc mở <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">hệ thống báo lỗi trực tuyến</a> của PKP. Mặc dù tham khảo diễn đàn hỗ trợ là cách tốt nhất, quý vị vẫn có thể liên hệ với nhóm phát triển phần mềm này ở địa chỉ email: <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>Chúng tôi <strong>hết sức khuyến nghị</strong> rằng quý vị sao lưu CSDL, thư mục file và thư mục cài đặt OJS trước khi tiếp tục.</p>
 <p>Nếu máy chủ của quý vị chạy ở chế độ <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, vui lòng đảm bảo rằng chỉ thị max_execution_time trong file cấu hình php.ini được đặt ở giới hạn cao. Nếu chỉ số đạt tới giới hạn này hoặc bất kỳ giới hạn thời gian nào ( (v.d. chỉ thị "Timeout" Apache) và quá trình nâng cấp bị gián đoạn, quý vị sẽ cần phải can thiệp bằng tay.</p>]]></message>
@@ -766,7 +765,7 @@ Máy chủ của quý vị hiện có hỗ trợ mbstring: <strong>{$supportsMBS
 	<message key="rt.admin.validateUrls.description"><![CDATA[URLs của các website tìm kiếm có khả năng không còn hoạt động được hiển thị dưới đây.<br />
 Quý vị nên tự kiểm tra các URL được đánh dấu là không hoạt động vì kiểm tra trên đây không hoàn toàn chính xác.<br />
 Việc xác thực có thể không thành công đối với các website tìm kiếm đòi phải dữ liệu phải được gửi đi ở dạng mẫu biểu (form).]]></message>
-	
+
 	<!-- RT Entities -->
 
 
@@ -782,7 +781,7 @@ Việc xác thực có thể không thành công đối với các website tìm 
 	<message key="rt.beNotifiedWhen">Thông báo cho tôi khi...</message>
 
 	<message key="rt.thisJournal">Tìm  trong tạp chí</message>
-	
+
 
 	<message key="rt.context.authorTermsDescription">Đối với các tài liệu có nhiều hơn một tác giả, lựa chọn tất cả các tên để tìm tác phẩm cùng nhóm tác giả tương tự, hoặc tìm đối với từng người bằng cách chỉ chọn một tên. Để hiểu thêm về nguồn thông tin đang tìm kiếm, nhấp chuột vào nút Giới thiệu. Những nguồn này đã được chọn để phù hợp và truy cập tự do toàn phần hoặc một phần nội dung.</message>
 
@@ -793,7 +792,7 @@ Việc xác thực có thể không thành công đối với các website tìm 
 	 *
 	-->
 	<!-- Icons: Default "alt" text -->
-	
+
 	<!-- Debug messages -->
 
 	<!--
@@ -809,9 +808,9 @@ Việc xác thực có thể không thành công đối với các website tìm 
 	<message key="default.journalSettings.privacyStatement">Tên và địa chỉ email được nhập vào các mẫu biểu trên tạp chí này chỉ được sử dụng vào các mục đích đã được tuyên bố rõ ràng và sẽ không được cung cấp cho bất kỳ bên thứ ba nào khác hay dùng vào bất kỳ mục đích nào khác.</message>
 	<message key="default.journalSettings.openAccessPolicy">Tạp chí này cho phép truy cập tự do ngay khi xuất bản đối với các nội dung của tạp chí với triết lý rằng việc cung cấp cho công chúng sử dụng tự do các kết quả nghiên cứu sẽ thúc đẩy trao đổi kiến thức trên toàn cầu ngày càng mạnh mẽ.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">Các tác giả được phép và được khuyến khích xuất bản các bài viết đã nộp cho tạp chí này trên các website cá nhân hoặc tổ chức, trước và sau khi xuất bản (với điều kiện cung cấp các chi tiết về thư mục của ấn phẩm đó).</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Bước biên tập bản thảo là nhằm để hoàn thiện hơn mạch văn, sự rành mạch, ngữ pháp, câu chữ và định dạng của bài viết. Bước này cũng là cơ hội cuối cùng để tác giả có những thay đổi lớn đối với bài viết vì ở bước tiếp theo chỉ sửa các lỗi đánh máy và định dạng. 
+	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Bước biên tập bản thảo là nhằm để hoàn thiện hơn mạch văn, sự rành mạch, ngữ pháp, câu chữ và định dạng của bài viết. Bước này cũng là cơ hội cuối cùng để tác giả có những thay đổi lớn đối với bài viết vì ở bước tiếp theo chỉ sửa các lỗi đánh máy và định dạng.
 
-File sẽ được biên tập bản thảo ở dạng Word hoặc .rtf nên có thể dễ dàng biên tập sử như là một file văn bản. Những hướng dẫn ở đây đề xuất hai phương án biên tập bản thảo. Phương án một dựa trên chức năng Theo dõi các Thay đổi của phần mềm Microsoft Word và đòi hỏi BTV bản thảo, BTV chính và tác giả phải có sẵn phần mềm này. Phương án hai không phụ thuộc vào phần mềm được mượn có xin phép từ Tạp chí Giáo dục Harvard (Harvard Educational Review). BTV của tạp chí là người có thể sửa những hướng dẫn này, và vì vậy có thể đưa ra những đề xuất để hoàn thiện quá trình biên tập của tạp chí. 
+File sẽ được biên tập bản thảo ở dạng Word hoặc .rtf nên có thể dễ dàng biên tập sử như là một file văn bản. Những hướng dẫn ở đây đề xuất hai phương án biên tập bản thảo. Phương án một dựa trên chức năng Theo dõi các Thay đổi của phần mềm Microsoft Word và đòi hỏi BTV bản thảo, BTV chính và tác giả phải có sẵn phần mềm này. Phương án hai không phụ thuộc vào phần mềm được mượn có xin phép từ Tạp chí Giáo dục Harvard (Harvard Educational Review). BTV của tạp chí là người có thể sửa những hướng dẫn này, và vì vậy có thể đưa ra những đề xuất để hoàn thiện quá trình biên tập của tạp chí.
 
 <h4>Các phương án biên tập bản thảo</h4>
 
@@ -819,9 +818,9 @@ File sẽ được biên tập bản thảo ở dạng Word hoặc .rtf nên có
 
 Nằm dưới mục Tools trên thanh menu, chức năng Theo dõi các Thay đổi cho phép BTV bản thảo thêm vào (phần thêm vào được đổi màu) và xóa đi (phần xóa đi được đổi màu và gạch ngang hoặc đánh dấu đã xóa ở bên lề). BTV bản thảo có thể gửi những thắc mắc của mình cho cả tác giả (Truy vấn Tác giả) và BTV chính (Truy vấn BTV) bằng cách đưa những thắc mắc này vào trong ngoặc vuông. Phiên bản đã biên tập bản thảo sau đó sẽ được tải lên và thông báo sẽ được chuyển tới BTV chính. BTV chính xem lại bản thảo và thông báo cho tác giả.
 
-Tác giả và BTV chính để nguyên những thay đổi mà họ hài lòng. Nếu thấy cần sửa thêm, BTV chính và tác giả có thay đổi đối với những phần thêm vào hoặc bị xóa đi ban đầu, đồng thời có thể thêm mới hoặc xóa tiếp ở những nơi khác trong bài viết. Tác giả và BTV cần hồi âm cho từng thắc mắc được gửi đến cho họ và hồi âm được đặt bên trong dấu ngoặc vuông. 
+Tác giả và BTV chính để nguyên những thay đổi mà họ hài lòng. Nếu thấy cần sửa thêm, BTV chính và tác giả có thay đổi đối với những phần thêm vào hoặc bị xóa đi ban đầu, đồng thời có thể thêm mới hoặc xóa tiếp ở những nơi khác trong bài viết. Tác giả và BTV cần hồi âm cho từng thắc mắc được gửi đến cho họ và hồi âm được đặt bên trong dấu ngoặc vuông.
 
-Sau khi tài liệu đã được BTV và tác giả duyệt lại, BTV bản thảo sẽ hoàn thiện bản thảo cuối cùng với những thay đổi nói trên để chuẩn bị bước trình bày và bản bông. 
+Sau khi tài liệu đã được BTV và tác giả duyệt lại, BTV bản thảo sẽ hoàn thiện bản thảo cuối cùng với những thay đổi nói trên để chuẩn bị bước trình bày và bản bông.
 
 
 <strong>2. Tạp chí Giáo dục Havard (Harvard Educational Review) </strong>

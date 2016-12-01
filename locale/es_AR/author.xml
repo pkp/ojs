@@ -31,7 +31,7 @@
 	<message key="author.submit.metadata">Introducir los metadatos</message>
 	<message key="author.submit.supplementaryFiles">Subir archivos complementarios</message>
 	<message key="author.submit.confirmation">Confirmación</message>
-	<message key="author.submit.cancelSubmission">Puede completar este envío más tarde seleccionando Envíos Activos en la home de autor/a.</message>
+	<message key="submission.submit.cancelSubmission">Puede completar este envío más tarde seleccionando Envíos Activos en la home de autor/a.</message>
 	<message key="author.submit.notAccepting">Esta revista no acepta envíos en este momento.</message>
 	<message key="author.submit.requestWaiver">Solicitar exención de pago</message>
 	<message key="author.submit.addReasonsForWaiver">Por favor, indique a continuación los motivos por los que solicita la exención de pago.</message>

@@ -18,7 +18,7 @@
 <br />
 Hvis du ikke selv har sendt denne forespørgsel, skal du ignorere denne e-mail, og din adgangskode vil ikke blive ændret. Klik på nedenstående URL-adresse, hvis adgangskoden skal ændres.<br />
 <br />
-Nulstil min adgangskode: {$url}<br />
+Nulstil min adgangskode: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Denne e-mail sendes til registrerede brugere, når de angiver, at de har glemt deres adgangskode eller ikke kan logge på. Den indeholder en URL-adresse, de kan følge for at nulstille deres adgangskode.</description>
@@ -28,6 +28,7 @@ Nulstil min adgangskode: {$url}<br />
 		<body><![CDATA[Din adgangskode er blevet nulstillet og kan benyttes på webstedet {$siteTitle}. Opbevar brugernavnet og adgangskoden, da de er nødvendige for alt arbejde i forbindelse med tidsskriftet.<br />
 <br />
 Dit brugernavn: {$username}<br/>
+Adgangskode: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Denne e-mail sendes til registrerede brugere, når de har nulstillet deres adgangskode, efter at de har fulgt den proces, der er beskrevet i e-mailen PASSWORD_RESET_CONFIRM.</description>
@@ -60,7 +61,8 @@ Tak. {$principalContactSignature}]]></body>
 <br />
 Vi giver dig et brugernavn og en adgangskode, der skal bruges i forbindelse med alle interaktioner med tidsskriftet via tidsskriftets webside. Du kan f.eks. bede om at få opdateret din profil, herunder dine bedømmelsesinteresser.<br />
 <br />
-Brugernavn: {$username} Adgangskode: {$password}<br />
+Brugernavn: {$username}<br />
+Adgangskode: {$password}<br />
 <br />
 Tak. {$principalContactSignature}]]></body>
 		<description>Denne e-mail sendes til netop registrerede bedømmere for at byde dem velkommen til systemet og for at oplyse dem om deres brugernavn og adgangskode.</description>
@@ -661,7 +663,7 @@ Hvis du ikke længere ønsker at modtage e-mail-meddelelser, skal du gå ind på
 		<subject>Redaktørbeslutning</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Vi har besluttet at:<br />
 <br />
@@ -672,7 +674,7 @@ Vi har besluttet at:<br />
 		<subject>Redaktørbeslutning</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Vi har besluttet at:<br />
 <br />
@@ -683,7 +685,7 @@ Vi har besluttet at:<br />
 		<subject>Redaktørbeslutning</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Vi har besluttet at:<br />
 <br />
@@ -694,7 +696,7 @@ Vi har besluttet at:<br />
 		<subject>Redaktørbeslutning</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Vi har besluttet at:<br />
 <br />

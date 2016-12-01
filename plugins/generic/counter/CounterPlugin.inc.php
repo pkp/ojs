@@ -152,19 +152,6 @@ class CounterPlugin extends GenericPlugin {
 		return true;
 	}
 
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
-
-		if ($this->getEnabled()) {
-			$verbs[] = array('counter', __('plugins.generic.counter'));
-
-			$this->import('CounterReportDAO');
-			$counterReportDao = new CounterReportDAO();
-			DAORegistry::registerDAO('CounterReportDAO', $counterReportDao);
-		}
-		return $verbs;
-	}
-
  	/**
 	 * @see Plugin::manage()
 	 */

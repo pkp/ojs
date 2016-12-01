@@ -19,8 +19,8 @@ class AppearanceForm extends PKPAppearanceForm {
 	/**
 	 * Constructor.
 	 */
-	function AppearanceForm($wizardMode = false) {
-		parent::PKPAppearanceForm($wizardMode);
+	function __construct($wizardMode = false) {
+		parent::__construct($wizardMode);
 	}
 
 	/**

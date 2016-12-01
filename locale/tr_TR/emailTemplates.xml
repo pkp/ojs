@@ -20,7 +20,7 @@
 Bu istek sizin dışınızda oluştu ise, lütfen bu mesajı dikkate almayınız; eski şifrenizi kullanabilirsiniz.<br />
 Eğer şifrenizi değiştirmek istiyorsanız aşağıdaki bağlantıyı tıklayınız.<br />
 <br />
-Şifre değiştirmek için: {$url}<br />
+Şifre değiştirmek için: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Bu e-posta şifrelerini unuttuğunu beyan eden ve/veya giriş yapamayan kayıtlı kullanıcılara gönderilmektedir. Şifre değiştirme işlemlerini yapabilecekleri bir internet adresi bildirir.</description>
@@ -30,6 +30,7 @@ Eğer şifrenizi değiştirmek istiyorsanız aşağıdaki bağlantıyı tıklay�
 		<body><![CDATA[{$siteTitle} sitesinde kullanacağınız şifreniz değiştirilmiştir. Kullanıcı adı ve şifre dergi ile yapacağınız tüm çalışmalarda gerekli olduğundan güvenli bir yere not ediniz. <br />
 <br />
 Kullanıcı adı: {$username}<br />
+Şifre: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Bu e-posta PASSWORD_RESET_CONFIRM mesajında aktarılan süreç doğrultusunda şifre değişikliği yapmış kayıtlı kullanıcılara gönderilmektedir.</description>
@@ -781,7 +782,7 @@ Review Guidelines<br />
 		<subject>Editör Kararı</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-{$journalTitle} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
+{$contextName} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
 <br />
 Kararımız:<br />
 <br />
@@ -792,7 +793,7 @@ Kararımız:<br />
 		<subject>Editör Kararı</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-{$journalTitle} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
+{$contextName} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
 <br />
 Kararımız:<br />
 <br />
@@ -803,7 +804,7 @@ Kararımız:<br />
 		<subject>Editör Kararı</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-{$journalTitle} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
+{$contextName} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
 <br />
 Kararımız:<br />
 <br />
@@ -814,7 +815,7 @@ Kararımız:<br />
 		<subject>Editör Kararı</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-{$journalTitle} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
+{$contextName} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
 <br />
 Kararımız:<br />
 <br />

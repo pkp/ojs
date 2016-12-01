@@ -19,8 +19,8 @@ class SubmissionInformationCenterHandler extends PKPSubmissionInformationCenterH
 	/**
 	 * Constructor
 	 */
-	function SubmissionInformationCenterHandler() {
-		parent::PKPSubmissionInformationCenterHandler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

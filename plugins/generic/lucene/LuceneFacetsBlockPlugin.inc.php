@@ -25,9 +25,9 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	 * Constructor
 	 * @param $parentPluginName string
 	 */
-	function LuceneFacetsBlockPlugin($parentPluginName) {
+	function __construct($parentPluginName) {
 		$this->_parentPluginName = $parentPluginName;
-		parent::BlockPlugin();
+		parent::__construct();
 	}
 
 
@@ -120,7 +120,7 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 		// where navigation will usually be expected
 		// by the user.
 		if (!in_array($blockContext, $this->getSupportedContexts())) {
-			$blockContext = BLOCK_CONTEXT_LEFT_SIDEBAR;
+			$blockContext = BLOCK_CONTEXT_SIDEBAR;
 		}
 
 		return $blockContext;

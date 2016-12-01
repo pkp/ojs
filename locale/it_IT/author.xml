@@ -32,7 +32,7 @@
 	<message key="author.submit.upload">Carica il file della proposta</message>
 	<message key="author.submit.supplementaryFiles">Carica i file supplementari</message>
 	<message key="author.submit.confirmation">Conferma</message>
-	<message key="author.submit.cancelSubmission">Puoi completare questa proposta in un momento successivo, selezionando la voce "Proposteattive" nell'home page della sezione Autore.</message>
+	<message key="submission.submit.cancelSubmission">Puoi completare questa proposta in un momento successivo, selezionando la voce "Proposteattive" nell'home page della sezione Autore.</message>
 	<message key="author.submit.notAccepting">In questo momento la rivista non accetta nessuna proposta.</message>
 	<message key="author.submit.requestWaiver">Richiedi un'esenzione</message>
 	<message key="author.submit.qualifyForWaiver">Chiedo di essere esonerato dal pagamento della  quota di submission per questa proposta.</message>

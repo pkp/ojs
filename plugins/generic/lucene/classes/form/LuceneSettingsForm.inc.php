@@ -33,10 +33,10 @@ class LuceneSettingsForm extends Form {
 	 * Constructor
 	 * @param $plugin LucenePlugin
 	 */
-	function LuceneSettingsForm(&$plugin, &$embeddedServer) {
+	function __construct(&$plugin, &$embeddedServer) {
 		$this->_plugin =& $plugin;
 		$this->_embeddedServer =& $embeddedServer;
-		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
+		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
 
 		// Server configuration.
 		$this->addCheck(new FormValidatorUrl($this, 'searchEndpoint', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.generic.lucene.settings.searchEndpointRequired'));

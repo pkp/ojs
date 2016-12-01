@@ -19,7 +19,7 @@
 <br />
 Eskaera ez bada zuk egindakoa, ez jaramonik egin mezu honi, eta zure pasahitza ez da aldatuko. Pasahitza berrezartzea nahi baduzu, egin klik beheko URLan.<br />
 <br />
-Berrezarri nire pasahitza: {$url}<br />
+Berrezarri nire pasahitza: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Pasahitza ahaztu duten erabiltzaile erregistratuei edo webgunean sartu ezinda dabiltzanei bidaltzen zaie mezu hau. Pasahitza berrezartzeko URL bat ematen du.</description>
@@ -29,6 +29,7 @@ Berrezarri nire pasahitza: {$url}<br />
 		<body><![CDATA[{$siteTitle} webgunean sartzeko pasahitza ongi berrezarri da. Ondo gorde erabiltzaile-izen eta pasahitz hauek, aldizkarian sartzeko beharko baitituzu.<br />
 <br />
 Zure erabiltzaile-izena: {$username}<br />
+Pasahitza: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Mezu hau bidaltzen zaie PASSWORD_RESET_CONFIRM mezuan azaldutako prozesuaren bidez pasahitza ondo berrezartzea lortu duten erabiltzaile erregistratuei.</description>
@@ -735,7 +736,7 @@ Hau da jakinarazpen-mezuak desgaitzeko zure pasahitza: {$password}<br />
 		<subject>Editorearen erabakia</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Hartu dugu {$journalTitle} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
+Hartu dugu {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
 <br />
 Gure erabakia:<br />
 <br />
@@ -746,7 +747,7 @@ Gure erabakia:<br />
 		<subject>Editorearen erabakia</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Hartu dugu {$journalTitle} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
+Hartu dugu {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
 <br />
 Gure erabakia:<br />
 <br />
@@ -757,7 +758,7 @@ Gure erabakia:<br />
 		<subject>Editorearen erabakia</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Hartu dugu {$journalTitle} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
+Hartu dugu {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
 <br />
 Gure erabakia:<br />
 <br />
@@ -768,7 +769,7 @@ Gure erabakia:<br />
 		<subject>Editorearen erabakia</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Hartu dugu {$journalTitle} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
+Hartu dugu {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
 <br />
 Gure erabakia:<br />
 <br />

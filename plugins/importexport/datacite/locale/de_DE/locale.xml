@@ -12,7 +12,7 @@
   -->
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.importexport.datacite.displayName">DataCite-Export/Registrierungs-Plug-In</message>
+	<message key="plugins.importexport.datacite.displayName">DataCite-Export/Registrierungs-Plugin</message>
 	<message key="plugins.importexport.datacite.description">Exportieren oder registrieren Sie Metadaten zu Ausgaben, Artikeln, Fahnen und Zusatzdateien im DataCite-Format.</message>
 
 	<message key="plugins.importexport.datacite.intro"><![CDATA[
@@ -32,8 +32,8 @@
 	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Bitte geben Sie den Benutzer/innennamen (symbol) ein, den Sie von DataCite erhalten haben. Der Benutzer/innenname darf keinen Doppelpunkt enthalten.</message>
 
 	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[Verwendung: 
-{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 ]]></message>
 	<message key="plugins.importexport.datacite.senderTask.name">DataCite automatic registration task</message>
 </locale>

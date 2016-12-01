@@ -20,8 +20,8 @@ import ('lib.pkp.classes.context.PKPSectionDAO');
 class SectionDAO extends PKPSectionDAO {
 	var $cache;
 
-	function SectionDAO() {
-		parent::PKPSectionDAO();
+	function __construct() {
+		parent::__construct();
 	}
 
 	function _cacheMiss($cache, $id) {
@@ -394,20 +394,13 @@ class SectionDAO extends PKPSectionDAO {
 	 * Retrieve the IDs and titles of the sections for a journal in an associative array.
 	 * @return array
 	 */
-	function &getSectionTitles($journalId, $submittableOnly = false) {
+	function getTitles($journalId, $submittableOnly = false) {
 		$sections = array();
-
 		$sectionsIterator = $this->getByJournalId($journalId);
 		while ($section = $sectionsIterator->next()) {
-			if ($submittableOnly) {
-				if (!$section->getEditorRestricted()) {
-					$sections[$section->getId()] = $section->getLocalizedTitle();
-				}
-			} else {
-				$sections[$section->getId()] = $section->getLocalizedTitle();
-			}
+			if ($submittableOnly && $section->getEditorRestricted()) continue;
+			$sections[$section->getId()] = $section->getLocalizedTitle();
 		}
-
 		return $sections;
 	}
 
@@ -554,18 +547,12 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $issueId int
 	 */
 	function setDefaultCustomSectionOrders($issueId) {
-		$result = $this->retrieve(
-			'SELECT s.section_id FROM sections s, issues i WHERE i.journal_id = s.journal_id AND i.issue_id = ? ORDER BY seq',
-			(int) $issueId
-		);
-
-		for ($i=1; !$result->EOF; $i++) {
-			list($sectionId) = $result->fields;
-			$this->insertCustomSectionOrder($issueId, $sectionId, $i);
-			$result->MoveNext();
+		$issueSections = $this->getByIssueId($issueId);
+		$i = 1;
+		foreach ($issueSections as $section) {
+			$this->insertCustomSectionOrder($issueId, $section->getId(), $i);
+			$i++;
 		}
-
-		$result->Close();
 	}
 
 	/**
@@ -582,19 +569,18 @@ class SectionDAO extends PKPSectionDAO {
 	}
 
 	/**
-	 * Move a custom issue ordering up or down, resequencing as necessary.
+	 * Update a custom section ordering
 	 * @param $issueId int
 	 * @param $sectionId int
-	 * @param $newPos int The new position (0-based) of this section
-	 * @param $up boolean Whether we're moving the section up or down
+	 * @param $seq int
 	 */
-	function moveCustomSectionOrder($issueId, $sectionId, $newPos, $up) {
+	function updateCustomSectionOrder($issueId, $sectionId, $seq) {
 		$this->update(
-			'UPDATE custom_section_orders SET seq = ? ' . ($up?'-':'+') . ' 0.5 WHERE issue_id = ? AND section_id = ?',
-			array((float) $newPos, (int) $issueId, (int) $sectionId)
+			'UPDATE custom_section_orders SET seq = ? WHERE issue_id = ? AND section_id = ?',
+			array((float) $seq, (int) $issueId, (int) $sectionId)
 		);
-		$this->resequenceCustomSectionOrders($issueId);
 	}
+
 }
 
 ?>

@@ -23,8 +23,8 @@ class TocGridRow extends GridRow {
 	 * Constructor
 	 * @param $issueId int
 	 */
-	function TocGridRow($issueId) {
-		parent::GridRow();
+	function __construct($issueId) {
+		parent::__construct();
 		$this->issueId = $issueId;
 	}
 

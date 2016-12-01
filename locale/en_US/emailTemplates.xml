@@ -54,7 +54,7 @@ If you wish to stop receiving notification emails, please go to {$unsubscribeLin
 <br />
 If you did not make this request, please ignore this email and your password will not be changed. If you wish to reset your password, click on the below URL.<br />
 <br />
-Reset my password: {$url}<br />
+Reset my password: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>This email is sent to a registered user when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password.</description>
@@ -64,6 +64,7 @@ Reset my password: {$url}<br />
 		<body><![CDATA[Your password has been successfully reset for use with the {$siteTitle} web site. Please retain this username and password, as it is necessary for all work with the journal.<br />
 <br />
 Your username: {$username}<br />
+Password: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>This email is sent to a registered user when they have successfully reset their password following the process described in the PASSWORD_RESET_CONFIRM email.</description>
@@ -161,6 +162,17 @@ If you have any questions, please contact me. Thank you for considering this jou
 <br />
 {$editorialContactSignature}]]></body>
 		<description>This email, when enabled, is automatically sent to an author when he or she completes the process of submitting a manuscript to the journal. It provides information about tracking the submission through the process and thanks the author for the submission.</description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>Submission Acknowledgement</subject>
+		<body><![CDATA[Hello,<br />
+<br />
+{$submitterName} has submitted the manuscript, &quot;{$submissionTitle}&quot; to {$contextName}. <br />
+<br />
+If you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email, when enabled, is automatically sent to the other authors who are not users within OMP specified during the submission process.</description>
 	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
 		<subject>Unsuitable Submission</subject>
@@ -537,10 +549,9 @@ Our decision is to: Decline Submission<br />
 <br />
 I would ask that you undertake the copyediting of &quot;{$submissionTitle}&quot; for {$contextName} by following these steps.<br />
 1. Click on the Submission URL below.<br />
-2. Consult Copyediting Instructions posted on webpage.<br />
-3. Open any files available under Final Draft Files and copyedit, while adding Author Queries as needed.<br />
-4. Save copyedited file(s), and upload to Copyediting.<br />
-5. Notify the Editor that all files have been prepared, and that the auditing process may begin.<br />
+2. Open any files available under Draft Files and do your copyediting, while adding any Copyediting Discussions as needed.<br />
+3. Save copyedited file(s), and upload to Copyedited panel.<br />
+4. Notify the Editor that all files have been prepared, and that the Production process may begin.<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
@@ -557,7 +568,7 @@ The submission &quot;{$submissionTitle}&quot; to {$contextName} now needs galley
 1. Click on the Submission URL below.<br />
 2. Log into the journal and use the Production Ready files to create the galleys according to the journal's standards.<br />
 3. Upload the galleys to the Galley Files section.<br />
-4. Notify the Editor that the galleys are uploaded and ready to be audited.<br />
+4. Notify the Editor using Production Discussions that the galleys are uploaded and ready.<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Submission URL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />

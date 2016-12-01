@@ -36,8 +36,8 @@ class JournalOAI extends OAI {
 	/**
 	 * @copydoc OAI::OAI()
 	 */
-	function JournalOAI($config) {
-		parent::OAI($config);
+	function __construct($config) {
+		parent::__construct($config);
 
 		$this->site = Request::getSite();
 		$this->journal = Request::getJournal();

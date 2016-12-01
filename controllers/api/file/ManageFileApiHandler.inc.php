@@ -22,8 +22,8 @@ class ManageFileApiHandler extends PKPManageFileApiHandler {
 	/**
 	 * Constructor.
 	 */
-	function ManageFileApiHandler() {
-		parent::PKPManageFileApiHandler();
+	function __construct() {
+		parent::__construct();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_REVIEWER, ROLE_ID_AUTHOR),
 			array('identifiers', 'updateIdentifiers', 'clearPubId',)

@@ -42,6 +42,10 @@
 			{fbvElement type="textarea" multilingual=true id="about" value=$about}
 		{/fbvFormSection}
 	{/fbvFormArea}
+
+	{* Footer *}
+	{include file="core:controllers/tab/settings/appearance/form/footer.tpl"}
+
 	{fbvFormArea id="siteRedirection"}
 		{fbvFormSection title="admin.settings.journalRedirect"}
 			{fbvElement type="select" id="redirect" from=$redirectOptions selected=$redirect translate=false defaultValue="" label="admin.settings.journalRedirectInstructions" size=$fbvStyles.size.MEDIUM}
@@ -70,10 +74,8 @@
 				{include file="linkAction/linkAction.tpl" action=$uploadCssLinkAction contextId="siteSetupForm"}
 			</div>
 		{/fbvFormSection}
-		{fbvFormSection label="manager.setup.layout.theme" description="manager.setup.layout.themeDescription"}
-			{fbvElement type="select" id="themePluginPath" from=$themePluginOptions selected=$themePluginPath translate=false size=$fbvStyles.size.MEDIUM}
-		{/fbvFormSection}
-		{fbvFormSection}{/fbvFormSection}{* FIXME: Clear inline fbvFormSections *}
+		{include file="controllers/tab/settings/appearance/form/theme.tpl"}
+		{include file="core:controllers/tab/settings/appearance/form/sidebar.tpl"}
 	{/fbvFormArea}
 	{fbvFormArea id="oai"}
 		{fbvFormSection title="admin.settings.oaiRegistration"}

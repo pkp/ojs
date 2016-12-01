@@ -23,8 +23,8 @@ class IssueHandler extends Handler {
 	/**
 	 * Constructor
 	 **/
-	function IssueHandler() {
-		parent::Handler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**
@@ -49,7 +49,7 @@ class IssueHandler extends Handler {
 	 */
 	function initialize($request, $args) {
 		// Get the issue galley
-		$galleyId = isset($args[1]) && is_numeric($args[1]) ? $args[1] : 0;
+		$galleyId = isset($args[1]) ? $args[1] : 0;
 		if ($galleyId) {
 			$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 			$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
@@ -331,7 +331,6 @@ class IssueHandler extends Handler {
 		}
 
 		$templateMgr->assign(array(
-			'showGalleyLinks' => !$subscriptionRequired || $journal->getSetting('showGalleyLinks'),
 			'hasAccess' => !$subscriptionRequired || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN || $subscribedUser || $subscribedDomain
 		));
 

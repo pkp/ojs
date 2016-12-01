@@ -187,7 +187,6 @@
 	<message key="manager.setup.initialIssue">Прво издавање</message>
 	<message key="manager.setup.initialIssueDescription">Во зависност од форматот, да се идентификува изданието, волуменот, и / или годината на првото издание за да бидат објавени со OJS:</message>
 	<message key="manager.setup.institution">Институција</message>
-	<message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number) е осум-цифрен број кој идентификува периодични публикации како што се, вклучувајќи ги и електронските серијали. Тоа е управувано од страна на World Wide мрежа на Националниот центри координирани од страна на Меѓународниот центар со седиште во Париз, поддржан од УНЕСКО и француската влада. Голем број може да се добијат од <a href="http://www.issn.org" target="_new">ISSN веб сајт</a>. Ова може да се направи во било која точка во работењето на списанието.]]></message>
 	<message key="manager.setup.itemsDescription">Лента за навигација со точки може да се додаде на тековниот сет (Home, About, User Home, итн) кои се појавуваат на врвот на страната.</message>
 	<message key="manager.setup.itemsPerPage">Предмети на една страница</message>
 	<message key="manager.setup.journalAbbreviation">Кратенка на списанието</message>

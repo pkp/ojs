@@ -29,7 +29,7 @@
 					{rdelim},
 					multipart_params: {ldelim}
 						submissionId: {$submissionId|escape},
-						stageId: {$stageId|escape},
+						{if $stageId}stageId: {$stageId|escape},{/if}
 					{rdelim}
 				{rdelim}
 			{rdelim}
@@ -61,10 +61,12 @@
 
 	{* Cover Image *}
 	{fbvFormArea id="coverImage" title="editor.article.coverImage"}
-		{fbvFormSection}
-			{include file="controllers/fileUploadContainer.tpl" id="coverImageUploader"}
-			<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
-		{/fbvFormSection}
+		{if !$formParams.readOnly}
+			{fbvFormSection}
+				{include file="controllers/fileUploadContainer.tpl" id="coverImageUploader"}
+				<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
+			{/fbvFormSection}
+		{/if}
 		{fbvFormSection id="coverImagePreview"}
 			{if $coverImage != ''}
 				<div class="pkp_form_file_view pkp_form_image_view">

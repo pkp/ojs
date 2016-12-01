@@ -33,7 +33,8 @@
 	</sql>
 	<!-- Bug #6013: Make published dates for articles consistent -->
 	<sql>
-		<query driver="mysql">UPDATE published_submissions SET date_published = NULL WHERE date_published = '0000-00-00 00:00:00'</query>
+		<!-- CONCAT wrapper for issue #1788 -->
+		<query driver="mysql">UPDATE published_submissions SET date_published = NULL WHERE CONCAT(date_published) = '0000-00-00 00:00:00'</query>
 	</sql>
 	<!-- Re-map old ARTICLE_FILE_* constants to SUBMISSION_FILE_* ones.  The order here is important. -->
 	<sql>
@@ -62,6 +63,9 @@
 	</sql>
 	<!-- Bug #8212: Refactor MailTemplate code into PKP lib -->
 	<sql>
+		<!-- journalTitle becomes contextName -->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$journalTitle}', '{$contextName}'), subject=REPLACE(subject, '{$journalTitle}', '{$contextName}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$journalTitle}', '{$contextName}'), subject=REPLACE(subject, '{$journalTitle}', '{$contextName}')</query>
 		<!-- journalName becomes contextName -->
 		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$journalName}', '{$contextName}'), subject=REPLACE(subject, '{$journalName}', '{$contextName}')</query>
 		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$journalName}', '{$contextName}'), subject=REPLACE(subject, '{$journalName}', '{$contextName}')</query>
@@ -192,5 +196,9 @@
 		<query driver="mysql">UPDATE submission_files sf, articles_migration am SET sf.file_stage=7 WHERE am.editor_file_id=sf.file_id</query><!-- SUBMISSION_FILE_FAIR_COPY -->
 		<query driver="postgres7">UPDATE submission_files SET file_stage=7 FROM submission_files sf, articles_migration am WHERE am.editor_file_id=sf.file_id</query><!-- SUBMISSION_FILE_FAIR_COPY -->
 		<query>UPDATE submission_files SET file_stage=10 WHERE file_id IN (SELECT file_id FROM submission_galleys)</query><!-- SUBMISSION_FILE_PROOF -->
+	</sql>
+	<sql><!-- #1838 Automatic emails for open access/subscription triggered post-install -->
+		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.OpenAccessNotification'</query>
+		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.SubscriptionExpiryReminder'</query>
 	</sql>
 </data>

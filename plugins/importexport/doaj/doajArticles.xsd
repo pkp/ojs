@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema 
   xmlns:xs ="http://www.w3.org/2001/XMLSchema"
-  xmlns:iso_639-2b="http://www.it.ojp.gov/jxdm/iso_639-2b/1.0">
+  xmlns:iso_639-2b="http://www.doaj.org/schemas/iso_639-2b/1.0">
 
- <xs:import namespace="http://www.it.ojp.gov/jxdm/iso_639-2b/1.0" 
-       schemaLocation="http://www.it.ojp.gov/jxdm/iso_639-2b/1.0/iso_639-2b.xsd">
+ <xs:import namespace="http://www.doaj.org/schemas/iso_639-2b/1.0" 
+       schemaLocation="http://www.doaj.org/static/doaj/iso_639-2b.xsd">
 
   <xs:annotation>
     <xs:documentation>

@@ -49,7 +49,7 @@ class DevelopedByBlockPlugin extends BlockPlugin {
 	 * @return int
 	 */
 	function getBlockContext() {
-		if (!Config::getVar('general', 'installed')) return BLOCK_CONTEXT_LEFT_SIDEBAR;
+		if (!Config::getVar('general', 'installed')) return BLOCK_CONTEXT_SIDEBAR;
 		return parent::getBlockContext();
 	}
 

@@ -36,13 +36,13 @@ class RelatedItemsBlockPlugin extends BlockPlugin {
 	 * @return array
 	 */
 	function getSupportedContexts() {
-		return array(BLOCK_CONTEXT_LEFT_SIDEBAR);
+		return array(BLOCK_CONTEXT_SIDEBAR);
 	}
 
 	/**
 	 * @see BlockPlugin::getContents
 	 */
-	function getContents(&$templateMgr, $request = null) {
+	function getContents($templateMgr, $request = null) {
 		$journal = $request->getJournal();
 
 		return parent::getContents($templateMgr, $request);

@@ -24,8 +24,8 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 	 * Constructor
 	 * @param $submission Submission
 	 */
-	function ArticleGalleyGridCellProvider($submission) {
-		parent::DataObjectGridCellProvider();
+	function __construct($submission) {
+		parent::__construct();
 		$this->_submission = $submission;
 	}
 
@@ -75,7 +75,7 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 				import('lib.pkp.classes.submission.SubmissionFile');
 				$submissionFile = $submissionFileDao->getLatestRevision(
 					$element->getFileId(),
-					SUBMISSION_FILE_PROOF,
+					null,
 					$element->getSubmissionId()
 				);
 				import('lib.pkp.controllers.api.file.linkAction.DownloadFileLinkAction');

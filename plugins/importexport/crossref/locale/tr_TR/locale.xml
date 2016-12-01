@@ -16,9 +16,10 @@
 	<message key="plugins.importexport.crossref.displayName">Çapraz Referans XML İhraç Eklentisi</message>
 	<message key="plugins.importexport.crossref.description">Makale üst verilerini çapraz referans XML formatında ihraç et.</message>
 
-	<message key="plugins.importexport.crossref.cliUsage">Kullanım: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Kullanım:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 	<message key="plugins.importexport.crossref.requirements">Gereksinimler</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">Tüm eklenti gereksinimleri tatmin edici.</message>
 	<message key="plugins.importexport.crossref.settings.depositorIntro">Aşağıdaki öğeler başarılı bir CrossRef arşivleme için gereklidir.</message>

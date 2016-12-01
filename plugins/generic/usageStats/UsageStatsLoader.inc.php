@@ -20,8 +20,8 @@ class UsageStatsLoader extends PKPUsageStatsLoader {
 	/**
 	 * Constructor.
 	 */
-	function UsageStatsLoader($args) {
-		parent::PKPUsageStatsLoader($args);
+	function __construct($args) {
+		parent::__construct($args);
 	}
 
 

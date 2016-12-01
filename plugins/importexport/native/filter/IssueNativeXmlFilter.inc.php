@@ -20,9 +20,9 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function IssueNativeXmlFilter($filterGroup) {
+	function __construct($filterGroup) {
 		$this->setDisplayName('Native XML issue export');
-		parent::NativeExportFilter($filterGroup);
+		parent::__construct($filterGroup);
 	}
 
 
@@ -84,23 +84,18 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$issueNode = $doc->createElementNS($deployment->getNamespace(), 'issue');
 		$this->addIdentifiers($doc, $issueNode, $issue);
 
-		$issueNode->setAttribute('volume', $issue->getVolume());
-		$issueNode->setAttribute('number', $issue->getNumber());
-		$issueNode->setAttribute('year', $issue->getYear());
 		$issueNode->setAttribute('published', $issue->getPublished());
 		$issueNode->setAttribute('current', $issue->getCurrent());
 		$issueNode->setAttribute('access_status', $issue->getAccessStatus());
-		$issueNode->setAttribute('show_volume', $issue->getShowVolume());
-		$issueNode->setAttribute('show_number', $issue->getShowNumber());
-		$issueNode->setAttribute('show_year', $issue->getShowYear());
-		$issueNode->setAttribute('show_title', $issue->getShowTitle());
 
 		$this->createLocalizedNodes($doc, $issueNode, 'description', $issue->getDescription(null));
-		$this->createLocalizedNodes($doc, $issueNode, 'title', $issue->getTitle(null));
+		import('plugins.importexport.native.filter.NativeFilterHelper');
+		$nativeFilterHelper = new NativeFilterHelper();
+		$issueNode->appendChild($nativeFilterHelper->createIssueIdentificationNode($this, $doc, $issue));
 
 		$this->addDates($doc, $issueNode, $issue);
 		$this->addSections($doc, $issueNode, $issue);
-		$this->addCoverImage($doc, $issueNode, $issue);
+		$this->addCoverImages($doc, $issueNode, $issue);
 		$this->addIssueGalleys($doc, $issueNode, $issue);
 		$this->addArticles($doc, $issueNode, $issue);
 
@@ -221,29 +216,32 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	}
 
 	/**
-	 * Add the issue cover image to its DOM element.
+	 * Add the issue cover images to its DOM element.
 	 * @param $doc DOMDocument
 	 * @param $issueNode DOMElement
 	 * @param $issue Issue
 	 */
-	function addCoverImage($doc, $issueNode, $issue) {
-
-		$coverImage = $issue->getCoverImage();
-		if (!empty($coverImage)) {
+	function addCoverImages($doc, $issueNode, $issue) {
+		$coverImages = $issue->getCoverImage(null);
+		if (!empty($coverImages)) {
 			$deployment = $this->getDeployment();
-			$issueCoverNode = $doc->createElementNS($deployment->getNamespace(), 'issue_cover');
-			$issueCoverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', $issue->getCoverImage()));
-			$issueCoverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', $issue->getCoverImage()));
+			$issueCoversNode = $doc->createElementNS($deployment->getNamespace(), 'issue_covers');
+			foreach ($coverImages as $locale => $coverImage) {
+				$coverNode = $doc->createElementNS($deployment->getNamespace(), 'cover');
+				$coverNode->setAttribute('locale', $locale);
+				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', $coverImage));
+				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', $issue->getCoverImageAltText($locale)));
 
-			import('classes.file.PublicFileManager');
-			$publicFileManager = new PublicFileManager();
+				import('classes.file.PublicFileManager');
+				$publicFileManager = new PublicFileManager();
+				$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $coverImage;
+				$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
+				$embedNode->setAttribute('encoding', 'base64');
+				$coverNode->appendChild($embedNode);
 
-			$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getCoverImage();
-			$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
-			$embedNode->setAttribute('encoding', 'base64');
-			$issueCoverNode->appendChild($embedNode);
-
-			$issueNode->appendChild($issueCoverNode);
+				$issueCoversNode->appendChild($coverNode);
+			}
+			$issueNode->appendChild($issueCoversNode);
 		}
 	}
 
@@ -288,6 +286,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 
 		$issueNode->appendChild($sectionsNode);
 	}
+
 }
 
 ?>

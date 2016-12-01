@@ -174,6 +174,49 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	}
 
 	/**
+	 * Retrieve Issues by identification
+	 * @param $journalId int
+	 * @param $volume int
+	 * @param $number string
+	 * @param $year int
+	 * @param $titles array
+	 * @return DAOResultFactory
+	 */
+	function getIssuesByIdentification($journalId, $volume = null, $number = null, $year = null, $titles = array()) {
+		$params = array();
+
+		$i = 1;
+		$sqlTitleJoin = '';
+		foreach ($titles as $title) {
+			$sqlTitleJoin .= ' JOIN issue_settings iss' .$i .' ON (i.issue_id = iss' .$i .'.issue_id AND iss' .$i .'.setting_name = \'title\' AND iss' .$i .'.setting_value = ?)';
+			$params[] = $title;
+			$i++;
+		}
+		$params[] = (int) $journalId;
+		if ($volume !== null) {
+			$params[] = (int) $volume;
+		}
+		if ($number !== null) {
+			$params[] = $number;
+		}
+		if ($year !== null) {
+			$params[] = (int) $year;
+		}
+
+		$result = $this->retrieve(
+			'SELECT i.*
+			FROM issues i'
+			.$sqlTitleJoin
+			.' WHERE i.journal_id = ?'
+			.(($volume !== null)?' AND i.volume = ?':'')
+			.(($number !== null)?' AND i.number = ?':'')
+			.(($year !== null)?' AND i.year = ?':''),
+			$params
+		);
+		return new DAOResultFactory($result, $this, '_returnIssueFromRow');
+	}
+
+	/**
 	 * Retrieve Issue by "best" issue id -- public ID if it exists,
 	 * falling back on the internal issue ID otherwise.
 	 * @param $issueId string
@@ -269,7 +312,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'description');
+		return array('title', 'description', 'coverImageAltText', 'coverImage');
 	}
 
 	/**
@@ -281,8 +324,6 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		$additionalFields = parent::getAdditionalFieldNames();
 		// FIXME: Move this to a PID plug-in.
 		$additionalFields[] = 'pub-id::publisher-id';
-		$additionalFields[] = 'coverImage';
-		$additionalFields[] = 'coverImageAltText';
 		return $additionalFields;
 	}
 
@@ -420,9 +461,12 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 
-		$coverImage = $issue->getCoverImage();
-		if (!empty($coverImage)) {
-			$publicFileManager->removeJournalFile($issue->getJournalId(), $coverImage);
+		if (is_array($issue->getCoverImage(null))) {
+			foreach ($issue->getCoverImage(null) as $coverImage) {
+				if ($coverImage != '') {
+					$publicFileManager->removeJournalFile($issue->getJournalId(), $coverImage);
+				}
+			}
 		}
 
 		$issueId = $issue->getId();
@@ -557,25 +601,26 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	}
 
 	/**
-	 * Get all published issues with a pubId assigned and matching the specified settings.
-	 * @param $pubIdType string
+	 * Get all published issues (eventually with a pubId assigned and) matching the specified settings.
 	 * @param $contextId integer optional
+	 * @param $pubIdType string
 	 * @param $pubIdSettingName string optional
 	 * (e.g. crossref::registeredDoi)
 	 * @param $pubIdSettingValue string optional
 	 * @param $rangeInfo DBResultRange optional
 	 * @return DAOResultFactory
 	 */
-	function getByPubIdType($pubIdType, $contextId = null, $pubIdSettingName = null, $pubIdSettingValue = null, $rangeInfo = null) {
+	function getExportable($contextId, $pubIdType = null, $pubIdSettingName = null, $pubIdSettingValue = null, $rangeInfo = null) {
 		$params = array();
 		if ($pubIdSettingName) {
 			$params[] = $pubIdSettingName;
 		}
-		$params[] = 'pub-id::'.$pubIdType;
-		if ($contextId) {
-			$params[] = (int) $contextId;
+		$params[] = (int) $contextId;
+		if ($pubIdType) {
+			$params[] = 'pub-id::'.$pubIdType;
 		}
-		if ($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue != DOI_EXPORT_STATUS_NOT_DEPOSITED) {
+		import('classes.plugins.PubObjectsExportPlugin');
+		if ($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED) {
 			$params[] = $pubIdSettingValue;
 		}
 
@@ -583,13 +628,13 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			'SELECT i.*
 			FROM issues i
 				LEFT JOIN custom_issue_orders o ON (o.issue_id = i.issue_id)
-				LEFT JOIN issue_settings ist ON (i.issue_id = ist.issue_id)
-				'. ($pubIdSettingName != null?' LEFT JOIN issue_settings iss ON (i.issue_id = iss.issue_id AND iss.setting_name = ?)':'') .'
+				' . ($pubIdType != null?' LEFT JOIN issue_settings ist ON (i.issue_id = ist.issue_id)':'')
+				. ($pubIdSettingName != null?' LEFT JOIN issue_settings iss ON (i.issue_id = iss.issue_id AND iss.setting_name = ?)':'') .'
 			WHERE
-				i.published = 1 AND ist.setting_name = ? AND ist.setting_value IS NOT NULL
-				' . ($contextId != null?' AND i.journal_id = ?':'')
-				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND iss.setting_value IS NULL':'')
-				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != DOI_EXPORT_STATUS_NOT_DEPOSITED)?' AND iss.setting_value = ?':'')
+				i.published = 1  AND i.journal_id = ?
+				' . ($pubIdType != null?' AND ist.setting_name = ? AND ist.setting_value IS NOT NULL':'')
+				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == EXPORT_STATUS_NOT_DEPOSITED)?' AND iss.setting_value IS NULL':'')
+				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED)?' AND iss.setting_value = ?':'')
 				. (($pubIdSettingName != null && is_null($pubIdSettingValue))?' AND (iss.setting_value IS NULL OR iss.setting_value = \'\')':'')
 				.' ORDER BY i.date_published DESC',
 			$params,

@@ -19,8 +19,12 @@ class BackIssueGridHandler extends IssueGridHandler {
 	/**
 	 * Constructor
 	 */
-	function BackIssueGridHandler() {
-		parent::IssueGridHandler();
+	function __construct() {
+		parent::__construct();
+		$this->addRoleAssignment(
+			array(ROLE_ID_MANAGER),
+			array('saveSequence')
+		);
 	}
 
 
@@ -52,6 +56,34 @@ class BackIssueGridHandler extends IssueGridHandler {
 				$issueGridCellProvider
 			)
 		);
+	}
+
+	/**
+	 * @copydoc GridHandler::setDataElementSequence()
+	 */
+	function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence) {
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao->moveCustomIssueOrder($gridDataElement->getJournalId(), $gridDataElement->getId(), $newSequence);
+	}
+
+	/**
+	 * @copydoc GridHandler::getDataElementSequence()
+	 */
+	function getDataElementSequence($gridDataElement) {
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$customOrder = $issueDao->getCustomIssueOrder($gridDataElement->getJournalId(), $gridDataElement->getId());
+		if ($customOrder !== null) return $customOrder;
+
+		if ($gridDataElement->getCurrent()) return 0;
+		return $gridDataElement->getDatePublished();
+	}
+
+	/**
+	 * @copydoc GridHandler::addFeatures()
+	 */
+	function initFeatures($request, $args) {
+		import('lib.pkp.classes.controllers.grid.feature.OrderGridItemsFeature');
+		return array(new OrderGridItemsFeature());
 	}
 
 	/**

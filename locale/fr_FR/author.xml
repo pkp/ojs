@@ -31,7 +31,7 @@
 	<message key="author.submit.metadata">Saisir les métadonnées</message>
 	<message key="author.submit.supplementaryFiles">Télécharger les fichiers supplémentaires</message>
 	<message key="author.submit.confirmation">Confirmer la soumission</message>
-	<message key="author.submit.cancelSubmission">Vous pouvez terminer cette soumission plus tard en sélectionnant Soumissions actives à la Page d'accueil de l'auteur.</message>
+	<message key="submission.submit.cancelSubmission">Vous pouvez terminer cette soumission plus tard en sélectionnant Soumissions actives à la Page d'accueil de l'auteur.</message>
 	<message key="author.submit.notAccepting">Cette revue n'accepte pas de soumissions pour le moment.</message>
 	<message key="author.submit.requestWaiver">Demande d'exemption</message>
 	<message key="author.submit.qualifyForWaiver">Veuillez envisager d'être exempté des Frais de soumission d'article pour cet article</message>

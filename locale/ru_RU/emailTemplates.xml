@@ -54,7 +54,11 @@
 <br />
 Если вы не отправляли этот запрос, пожалуйста, проигнорирйте это письмо и ваш пароль не будет изменен. Если вы хотите сбросить свой пароль, то щелкните по ссылке ниже.<br />
 <br />
+<<<<<<< HEAD
 Сбросить мой пароль: {$url}<br />
+=======
+Reset my password: <a href="{$url}">{$url}</a><br />
+>>>>>>> pkp/master
 <br />
 {$principalContactSignature}]]></body>
 		<description>Это письмо отправляется зарегистрированному пользователю, когда он сообщает, что забыл пароль или не может войти на сайт. В письме содержится ссылка (URL), перейдя по которой пользователь сможет сбросить свой пароль.</description>
@@ -63,7 +67,12 @@
 		<subject>Пароль сброшен</subject>
 		<body><![CDATA[Ваш пароль на сайте «{$siteTitle}» был успешно сброшен. Пожалуйста, сохраните имя пользователя и пароль, так как они требуются для работы с журналом.<br />
 <br />
+<<<<<<< HEAD
 Ваше имя пользователя: {$username}<br />
+=======
+Your username: {$username}<br />
+Password: {$password}<br />
+>>>>>>> pkp/master
 <br />
 {$principalContactSignature}]]></body>
 		<description>Это письмо отправляется зарегистрированному пользователю, когда он успешно сбросил свой пароль в соответствии с процедурой, описанной в письме PASSWORD_RESET_CONFIRM.</description>
@@ -647,7 +656,7 @@ Thank you for completing the proofreading corrections for the galleys associated
 		<subject>Редакционное решение</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Мы приняли решение относительно Вашей рукописи &quot;{$submissionTitle}&quot;, отправленной для публикации в наш журнал {$journalTitle}.<br />
+Мы приняли решение относительно Вашей рукописи &quot;{$submissionTitle}&quot;, отправленной для публикации в наш журнал {$contextName}.<br />
 <br />
 Наше решение:<br />
 <br />
@@ -658,7 +667,7 @@ Thank you for completing the proofreading corrections for the galleys associated
 		<subject>Редакционное решение</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Мы приняли решение относительно Вашей рукописи &quot;{$submissionTitle}&quot;, отправленной для публикации в наш журнал {$journalTitle}.<br />
+Мы приняли решение относительно Вашей рукописи &quot;{$submissionTitle}&quot;, отправленной для публикации в наш журнал {$contextName}.<br />
 <br />
 Наше решение:<br />
 <br />
@@ -668,7 +677,7 @@ Thank you for completing the proofreading corrections for the galleys associated
 		<subject>Редакционное решение</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Мы приняли решение относительно Вашей рукописи &quot;{$submissionTitle}&quot;, отправленной для публикации в наш журнал {$journalTitle}.<br />
+Мы приняли решение относительно Вашей рукописи &quot;{$submissionTitle}&quot;, отправленной для публикации в наш журнал {$contextName}.<br />
 <br />
 Наше решение:<br />
 <br />
@@ -679,7 +688,7 @@ Thank you for completing the proofreading corrections for the galleys associated
 		<subject>Редакционное решение</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Мы приняли решение относительно Вашей рукописи &quot;{$submissionTitle}&quot;, отправленной для публикации в наш журнал {$journalTitle}.<br />
+Мы приняли решение относительно Вашей рукописи &quot;{$submissionTitle}&quot;, отправленной для публикации в наш журнал {$contextName}.<br />
 <br />
 Наше решение:<br />
 <br />

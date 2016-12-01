@@ -23,8 +23,8 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 	/**
 	 * Constructor
 	 */
-	function PubIdExportRepresentationsListGridHandler() {
-		parent::GridHandler();
+	function __construct() {
+		parent::__construct();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER),
 			array('fetchGrid', 'fetchRow')
@@ -246,9 +246,9 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 		if ($statusId) {
 			$pubIdStatusSettingName = $this->_plugin->getDepositStatusSettingName();
 		}
-		return $articleGalleyDao->getByPubIdType(
+		return $articleGalleyDao->getExportable(
+			$context->getId(),
 			$this->_plugin->getPubIdType(),
-			$context?$context->getId():null,
 			$title,
 			$author,
 			$issueId,
@@ -294,7 +294,7 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 		} else {
 			$issueId = null;
 		}
-		if (isset($filter['statusId']) && $filter['statusId'] != DOI_EXPORT_STATUS_ANY) {
+		if (isset($filter['statusId']) && $filter['statusId'] != EXPORT_STATUS_ANY) {
 			$statusId = $filter['statusId'];
 		} else {
 			$statusId = null;

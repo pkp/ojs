@@ -175,7 +175,6 @@
 	<message key="manager.setup.initialIssue">První výtisk</message>
 	<message key="manager.setup.initialIssueDescription">V závislosti na zvoleném formátu stanovte číslo, ročník a/nebo rok prvního výtisku, který má být publikován pomocí OJS:</message>
 	<message key="manager.setup.institution">Instituce</message>
-	<message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number) je osmi místné číslo, které jako takové identifikuje periodika včetně elektronických seriálů. Je spravováno celosvětovou sítí národních center koordinovaných mezinárodním centrem se sídlem v Paříži; zaštítěné Unescem a francouzskou vládou. Číslo může být získáno z <a href="http://www.issn.org" target="_new">webové stránky ISSN</a>. To můžete udělat v kterémkoliv bodě provozování časopisu.]]></message>
 	<message key="manager.setup.itemsDescription">Do aktuáního navigačního panelu lze přidat další položky (Domů, O časopisu, Výchozí stránka uživatele atd.), které se objeví v horní části stránky.</message>
 	<message key="manager.setup.itemsPerPage">Položek na stránku</message>
 	<message key="manager.setup.journalAbbreviation">Zkratka časopisu</message>

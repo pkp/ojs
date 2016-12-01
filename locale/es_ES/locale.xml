@@ -639,7 +639,6 @@
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Examinar índice de autores/as</message>
 	<message key="search.searchFor">Buscar artículos por</message>
-	<message key="search.author">Autores/as</message>
 	<message key="search.withinJournal">Dentro de</message>
 	<message key="search.allJournals">Todas las revistas</message>
 	<message key="search.authorIndex">Examinar índice de autores/as</message>
@@ -1017,4 +1016,7 @@ La configuración del soporte CLOCKSS para Open Journal Systems no hace falta qu
 	<message key="search.cli.rebuildIndex.indexing">Indexando "{$journalName}"</message>
 	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">La implementación de la búsqueda no permite la reindexación a nivel de revista.</message>
 	<message key="search.cli.rebuildIndex.unknownJournal">La ruta "{$journalPath}" no corresponde a ninguna revista.</message>
+
+	<message key="editor.issues.backIssues">Números anteriores</message>
+	<message key="editor.issues.futureIssues">Próximos números</message>
 </locale>

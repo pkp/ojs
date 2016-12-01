@@ -24,7 +24,7 @@ class CrossrefInfoSender extends ScheduledTask {
 	 * Constructor.
 	 * @param $argv array task arguments
 	 */
-	function CrossrefInfoSender($args) {
+	function __construct($args) {
 		PluginRegistry::loadCategory('importexport');
 		$plugin = PluginRegistry::getPlugin('importexport', 'CrossRefExportPlugin'); /* @var $plugin CrossRefExportPlugin */
 		$this->_plugin = $plugin;
@@ -33,7 +33,7 @@ class CrossrefInfoSender extends ScheduledTask {
 			$plugin->addLocaleData();
 		}
 
-		parent::ScheduledTask($args);
+		parent::__construct($args);
 	}
 
 	/**
@@ -57,17 +57,6 @@ class CrossrefInfoSender extends ScheduledTask {
 
 			$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $journal->getId());
 			$doiPubIdPlugin = $pubIdPlugins['doipubidplugin'];
-
-			if ($doiPubIdPlugin->getSetting($journal->getId(), 'enableIssueDoi')) {
-				// Get unregistered issues
-				$unregisteredIssues = $plugin->getUnregisteredIssues($journal);
-				// Update the status and construct an array of the issues to be deposited
-				$issuesToBeDeposited = $this->_getObjectsToBeDeposited($unregisteredIssues, $journal, $notify);
-				// If there are issues to be deposited and we want automatic deposit
-				if (count($issuesToBeDeposited) && $plugin->getSetting($journal->getId(), 'automaticRegistration')) {
-					$this->_registerObjects($issuesToBeDeposited, 'issue=>crossref-xml', $journal, 'issues');
-				}
-			}
 
 			if ($doiPubIdPlugin->getSetting($journal->getId(), 'enableSubmissionDoi')) {
 				// Get unregistered articles
@@ -162,18 +151,20 @@ class CrossrefInfoSender extends ScheduledTask {
 	 */
 	function _registerObjects($objects, $filter, $journal, $objectsFileNamePart) {
 		$plugin = $this->_plugin;
+		import('lib.pkp.classes.file.FileManager');
+		$fileManager = new FileManager();
 		// export XML
 		$exportXml = $plugin->exportXML($objects, $filter, $journal);
 		// Write the XML to a file.
-		$exportFileName = $plugin->getExportFileName($objectsFileNamePart, $journal);
-		file_put_contents($exportFileName, $exportXml);
+		$exportFileName = $plugin->getExportFileName($plugin->getExportPath(), $objectFileNamePart, $journal, '.xml');
+		$fileManager->writeFile($exportFileName, $exportXml);
 		// Deposit the XML file.
 		$result = $plugin->depositXML($objects, $journal, $exportFileName);
 		if ($result !== true) {
 			$this->_addLogEntry($result);
 		}
 		// Remove all temporary files.
-		$plugin->cleanTmpfile($exportFileName);
+		$fileManager->deleteFile($exportFileName);
 	}
 
 	/**

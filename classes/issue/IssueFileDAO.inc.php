@@ -26,8 +26,8 @@ class IssueFileDAO extends PKPFileDAO {
 	/**
 	 * Constructor.
 	 */
-	function IssueFileDAO() {
-		parent::DAO();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

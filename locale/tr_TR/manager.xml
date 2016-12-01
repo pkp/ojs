@@ -183,7 +183,6 @@
 	<message key="manager.setup.initialIssue">İlk sayı</message>
 	<message key="manager.setup.initialIssueDescription">Seçilen biçime uygun olarak ADS ile yayınlanacak ilk sayının, sayı, cilt, yıl gibi özellikleri:</message>
 	<message key="manager.setup.institution">Kurum</message>
-	<message key="manager.setup.issnDescription"><![CDATA[ISSN (Uluslararası Standart Süreli Yayın Numarası) elektronik kısım dahil süreli yayınları tanımlayan sekiz haneli bir sayıdır. UNESCO tarafından desteklenen, merkezi Paris'te bulunan bu Uluslararası Merkez, Fransız Hükümeti tarafından koordine edilmektedir ve dünya çapında bir ağ tarafından yönetilmektedir. ISSN Numarası, <a href="http://www.issn.org" target="_new"> ISSN web sitesi</a>den elde edilebilir. ISSN numarası yayın sürecinin herhangi bir aşamasından alınabilir.]]></message>	
 	<message key="manager.setup.itemsDescription">Sayfa üstünde oluşan Yönlendirme çubuğuna başka maddeler eklenebilir (Giriş Sayfası, Hakkında, Kullanıcı, Kullanıcı Ana Sayfası, v.b.).</message>
 	<message key="manager.setup.itemsPerPage">Sayfa başına madde</message>
 	<message key="manager.setup.journalAbbreviation">Dergi Kısaltması</message>
@@ -507,6 +506,13 @@
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Dergi ana sayfa görüntülemeleri</message>
 	<message key="manager.setup.resetPermissions">Makale İzinlerini Sıfırla</message>
 	<message key="manager.setup.copyrightYearBasis">Yeni makalenin temel telif hakkı yılı</message>
+	<message key="manager.website.appearance">Website Görünümü</message>
+	<message key="manager.website.information">Website Bilgisi</message>
+    	<message key="manager.setup.logo">Website Logosu</message>
+    	<message key="manager.setup.pageFooter">Website Alt Metini</message>
+	<message key="manager.website.title">Website Başlığı</message>
+    	<message key="manager.website.archiving">Website Arşivi</message>
+    	<message key="manager.setup.pageFooterDescription">Websitenizin alt bölümüne eklemelerinizi buradan yapabilirsiniz.</message>
 
 	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
 	<!-- plugin tabs -->

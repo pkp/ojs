@@ -25,8 +25,8 @@ class TemplateManager extends PKPTemplateManager {
 	 * Initialize template engine and assign basic template variables.
 	 * @param $request PKPRequest
 	 */
-	function TemplateManager($request) {
-		parent::PKPTemplateManager($request);
+	function __construct($request) {
+		parent::__construct($request);
 
 		if (!defined('SESSION_DISABLE_INIT')) {
 			/**
@@ -125,6 +125,19 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('siteTitle', $site->getLocalizedTitle());
 				$this->assign('primaryLocale', $site->getPrimaryLocale());
 				$this->assign('supportedLocales', $site->getSupportedLocaleNames());
+				$this->assign('pageFooter', $site->getLocalizedSetting('pageFooter'));
+
+				// Check if registration is open for any contexts
+				$contextDao = Application::getContextDAO();
+				$contexts = $contextDao->getAll(true)->toArray();
+				$contextsForRegistration = array();
+				foreach($contexts as $context) {
+					if (!$context->getSetting('disableUserReg')) {
+						$contextsForRegistration[] = $context;
+					}
+				}
+				$this->assign('contexts', $contextsForRegistration);
+				$this->assign('disableUserReg', empty($contextsForRegistration));
 			}
 		}
 	}

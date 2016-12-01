@@ -193,7 +193,6 @@
 	<message key="manager.setup.initialIssue">പ്രാരംഭമായ പതിപ്പ്</message>
 	<message key="manager.setup.initialIssueDescription">തിരഞ്ഞെടുത്ത ഫോര്‍മാറ്റ്, പതിപ്പ് തിരിച്ചറിയുക, വൊളിയം, പിന്നെ/അഥവാ ആദ്യ പതിപ്പിന്റെ വര്‍ഷം എന്നിവ അടിസ്ഥാനമാക്കിയാകും ഒജെസ് -ല്‍ പ്രസിദ്ധീകരിക്കുക:</message>
 	<message key="manager.setup.institution">സ്ഥാപനം</message>
-	<message key="manager.setup.issnDescription"><![CDATA[The ISSN (International Standard Serial Number) is an eight-digit number which identifies periodical publications as such, including electronic serials. It is managed by a world wide network of National Centres coordinated by an International Centre based in Paris, backed by Unesco and the French Government. A number can be obtained from the <a href="http://www.issn.org" target="_new">ISSN web site</a>.  This can be done at any point in operating the journal.]]></message>
 	<message key="manager.setup.itemsDescription">നാവിഗേഷന്‍ ബാര്‍ ഐറ്റംസ് ഇപ്പോഴുള്ള സെറ്റില്‍ ചേര്‍ക്കാവുന്നതാണ് (ഹോം, സംബന്ധിച്ച്, യൂസര്‍ ഹോം, മുതലായവ.) അവ പേജിനു മുകളില്‍ ദൃശ്യമാകുന്നതാണ്.</message>
 	<message key="manager.setup.itemsPerPage">പേജ് പ്രതിയുള്ള ഐറ്റംസ്</message>
 	<message key="manager.setup.journalAbbreviation">ജേണലിന്റെ സംഗ്രഹം</message>

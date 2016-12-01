@@ -735,7 +735,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Browse Author Index</message>
 	<message key="search.searchFor">Search articles for</message>
-	<message key="search.author">Authors</message>
 	<message key="search.withinJournal">Within</message>
 	<message key="search.allJournals">All Journals</message>
 	<message key="search.authorIndex">Browse Author Index</message>
@@ -755,7 +754,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="article.pageTitle">View of {$title}</message>
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.download">Download this PDF file</message>
-	<message key="article.pluginMissing"><![CDATA[<p>The PDF file you selected should load here if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
+	<message key="article.pluginMissing"><![CDATA[<p>The PDF file you selected should load here if your Web browser has a PDF reader plugin installed (for example, a recent version of <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
 
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Article Download</message>
@@ -790,10 +789,12 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="about.focusAndScope">Focus and Scope</message>
 	<message key="about.sectionPolicies">Section Policies</message>
 	<message key="about.submissions">Submissions</message>
-	<message key="about.onlineSubmissions">Online Submissions</message>
 	<message key="about.onlineSubmissions.login">Login</message>
 	<message key="about.onlineSubmissions.register">Register</message>
-	<message key="about.onlineSubmissions.registrationRequired">You must be registered and logged in to submit items and track current submissions. {$login} to an existing account or {$register} a new account.</message>
+	<message key="about.onlineSubmissions.registrationRequired">{$login} or {$register} to make a submission.</message>
+	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} or {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.newSubmission">Make a new submission</message>
+	<message key="about.onlineSubmissions.viewSubmissions">view your pending submissions</message>
 	<message key="about.authorGuidelines">Author Guidelines</message>
 	<message key="about.submissionPreparationChecklist">Submission Preparation Checklist</message>
 	<message key="about.submissionPreparationChecklist.description">As part of the submission process, authors are required to check off their submission's compliance with all of the following items, and submissions may be returned to authors that do not adhere to these guidelines.</message>
@@ -1105,6 +1106,8 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="notification.type.userComment">A reader has made a comment on "{$title}"</message>
 	<message key="notification.savedIssueMetadata">Issue publication metadata saved.</message>
 	<message key="notification.type.editorAssignmentTask">A new article has been submitted to which an editor needs to be assigned.</message>
+	<message key="notification.type.assignProductionUser">Assign a user to create galleys using the Add link in the Participants list.</message>
+	<message key="notification.type.awaitingRepresentations">Awaiting Galleys.</message>
 
 	<!--
 	 *
@@ -1145,4 +1148,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">This search implementation does not allow per-journal re-indexing.</message>
 	<message key="search.cli.rebuildIndex.unknownJournal">The given journal path "{$journalPath}" could not be resolved to a journal.</message>
 
+	<message key="editor.issues.backIssues">Back Issues</message>
+	<message key="editor.issues.futureIssues">Future Issues</message>
 </locale>

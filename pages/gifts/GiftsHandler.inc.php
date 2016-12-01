@@ -19,8 +19,8 @@ class GiftsHandler extends Handler {
 	/**
 	 * Constructor
 	 */
-	function GiftsHandler() {
-		parent::Handler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

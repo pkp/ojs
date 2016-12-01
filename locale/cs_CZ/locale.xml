@@ -304,7 +304,7 @@
 
 	<!-- Reader article view -->
 	<message key="reader.subscribersOnly">Pouze pro předplatitele</message>
-	<message key="reader.subscriptionRequiredLoginText">Pro přístup k položce je vyžadováno předplatné. Přihlaste se do časopisu pro ověření předplatného.</message>  
+	<message key="reader.subscriptionRequiredLoginText">Pro přístup k položce je vyžadováno předplatné. Přihlaste se do časopisu pro ověření předplatného.</message>
 	<message key="reader.openAccess">Volný přístup</message>
 	<message key="reader.subscriptionAccess">Předplacený přístup</message>
 	<message key="reader.subscriptionOrFeeAccess">Předplatné nebo placený přístup</message>
@@ -333,7 +333,7 @@ Vězte, že rozhraní OAI může být pro tuto stránku vypnuto editací konfigu
 
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Specifikování jiného výchozího zdroje ověření než OJS má následující efekt:</p>
 <ul>
-	<li>Pokud se uživatel pokusí zaregistrovat nový účet na této stránce s uživatelským jménem, které existuje ve zdroji ověření (ale ne v OJS databázi), pokus o registraci je povolen pouze tehdy, pokud je zadané heslo platné pro tento uživatelský účet.</li> 
+	<li>Pokud se uživatel pokusí zaregistrovat nový účet na této stránce s uživatelským jménem, které existuje ve zdroji ověření (ale ne v OJS databázi), pokus o registraci je povolen pouze tehdy, pokud je zadané heslo platné pro tento uživatelský účet.</li>
 </ul>]]></message>
 
 	<!-- System Information -->
@@ -341,7 +341,7 @@ Vězte, že rozhraní OAI může být pro tuto stránku vypnuto editací konfigu
 <p>Systém nemohl automaticky přepsat konfigurační soubor. K provedení změn konfigurace musíte otevřít <tt>config.inc.php</tt> ve vhodném textovém editoru a nahradit jeho obsah obsahem textového pole níže.</p>]]></message>
 
 
-	<!-- Site Administrator Merge Users -->	
+	<!-- Site Administrator Merge Users -->
 
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Správa předplatného</message>
@@ -371,7 +371,7 @@ Vězte, že rozhraní OAI může být pro tuto stránku vypnuto editací konfigu
 	<!-- Setup Step 2 -->
 
 
-	<message key="manager.setup.reviewProcessEmailDescription">Editoři odešlou 
+	<message key="manager.setup.reviewProcessEmailDescription">Editoři odešlou
 	e-mailem recenzentům žádost o recenzi s příspěvkem v příloze e-mailu. Recenzenti zašlou e-mailem editorům svůj souhlas (nebo nesouhlas) s provedením recenze, stejně jako recenzi a doporučení. Editoři zadají souhlas (nebo nesouhlas) recenzentů a dále recenzi a doporučení na příslušné webové recenzní stránce příspěvku, aby byl postup recenzního řízení zaznamenán.</message>
 
 
@@ -547,7 +547,7 @@ Aktivní udává kolik recenzí je právě zvažováno nebo zpracováváno.]]></
 	<message key="reviewer.article.recommendation">Doporučení</message>
 	<message key="reviewer.article.submitReview">Odeslat recenzi editorovi</message>
 	<message key="reviewer.article.reviewerComments">Komentáře</message>
-	<message key="reviewer.article.uploadedFile">Nahrané soubory</message>	
+	<message key="reviewer.article.uploadedFile">Nahrané soubory</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Verze nahraná recenzentem</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Pokud chcete soubor pro editora opatřit poznámkami, uložte ho na Váš pevný disk a použijte Procházet/Nahrát.)</message>
         <message key="reviewer.article.schedule.request">Požadavky editora</message>
@@ -584,7 +584,7 @@ Aktivní udává kolik recenzí je právě zvažováno nebo zpracováváno.]]></
 	<message key="copyeditor.article.copyeditorFile">Soubor od redaktora</message>
 	<message key="copyeditor.article.uploadedFile">Nahraný soubor</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Soubor od redaktora</message>
-	
+
 	<!-- Proofreader -->
 	<message key="proofreader.noProofreadingAssignments">Žádné úkoly pro korektora</message>
 
@@ -733,7 +733,6 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Procházet index autorů</message>
 	<message key="search.searchFor">Vyhledávat v článcích</message>
-	<message key="search.author">Autoři</message>
 	<message key="search.withinJournal">V rámci</message>
 	<message key="search.allJournals">Všechny časopisy</message>
 	<message key="search.authorIndex">Procházet index autorů</message>
@@ -820,7 +819,7 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 
 	<!-- Help -->
 	<message key="help.ojsHelp">Nápověda Open Journal Systems</message>
-	<message key="help.ojsHelpAbbrev">OJS Nápověda</message>	
+	<message key="help.ojsHelpAbbrev">OJS Nápověda</message>
 	<message key="help.searchReturnResults">Zpět k výsledkům vyhledávání</message>
 
 	<!-- Donations -->
@@ -896,12 +895,12 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 	<message key="payment.publication.publicationPaid">Poplatek za publikování zaplacen</message>
 
 	<message key="payment.membership.buyMembership">Koupit individuální členství</message>
-	<message key="payment.membership.renewMembership">Obnovit individuální členství</message>	
+	<message key="payment.membership.renewMembership">Obnovit individuální členství</message>
 	<message key="payment.membership.ends">Končí</message>
 
 	<message key="payment.subscription.purchase">Zakoupit předplatné</message>
 	<message key="payment.subscription.renew">Obnovit předplatné</message>
-	<message key="payment.subscription.expires">Vyprší</message>	
+	<message key="payment.subscription.expires">Vyprší</message>
 
 	<!-- Installer -->
 	<message key="installer.appInstallation">OJS instalace</message>
@@ -949,7 +948,7 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 <p>Děkujeme za stažení <strong>Open Journal Systému</strong> vytvořeného Public Knowledge Projectem. Než budete pokračovat, přečtěte si prosím <a href="{$baseUrl}/docs/README">README</a> a <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> soubory dodané s tímto softwarem. Pro více informací o Public Knowledge Projectu a jeho softwarových projektech navštivte prosím <a href="http://pkp.sfu.ca/" target="_blank">PKP webové stránky</a>. Pokud máte bug reporty nebo dotazy na technickou podporu OJS, navštivte <a href="http://forum.pkp.sfu.ca">support forum</a> nebo navštivte PKP online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting systém</a>. Přestože je support forum preferovaným způsobem kontaktování, můžete také týmu poslat email na <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
 <p>Je <strong>důrazně doporučeno</strong>, abyste udělali zálohu vaší databáze, adresáře souborů a OJS instalace před tím, než budete pokračovat.</p>
 <p>Pokud máte zapnutý <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, ujistěte se prosím, že max_execution_time instrukce ve vašem php.ini konfiguračním souboru je nastaven na vysoký limit. Pokud bude tohoto nebo jakéhokoliv dalšího časového limitu (např. "Timeout" instrukce u Apache) dosaženo a bude přerušen proces upgradování, budou vyžadovány ruční zásahy.</p>]]></message>
-	<message key="installer.localeSettingsInstructions"><![CDATA[Pro kompletní podporu Unicode (UTF-8) zvolte UTF-8 pro nastavení všech znakových sad. Vězte, že tato podpora aktuálně vyžaduje MySQL >= 4.1.1 nebo PostgreSQL >= 7.1 databázový server. Vězte prosím také, že plná Unicode podpora vyžaduje PHP >= 4.3.0 kompilované s podporou pro <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> knihovnu (ve výchozím nastavení povoleno ve většině nejnovějších instalací PHP). Pokud Váš server nesplňuje tyto požadavky, můžete se při používání rozšířených znakových sad střetnout s problémy. 
+	<message key="installer.localeSettingsInstructions"><![CDATA[Pro kompletní podporu Unicode (UTF-8) zvolte UTF-8 pro nastavení všech znakových sad. Vězte, že tato podpora aktuálně vyžaduje MySQL >= 4.1.1 nebo PostgreSQL >= 7.1 databázový server. Vězte prosím také, že plná Unicode podpora vyžaduje PHP >= 4.3.0 kompilované s podporou pro <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> knihovnu (ve výchozím nastavení povoleno ve většině nejnovějších instalací PHP). Pokud Váš server nesplňuje tyto požadavky, můžete se při používání rozšířených znakových sad střetnout s problémy.
 <br /><br />
 Váš server aktuálně podporuje mbstring: <strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.allowFileUploads"><![CDATA[Váš server v současnosti umožňuje nahrávání souborů: <strong>{$allowFileUploads}</strong>]]></message>
@@ -1073,7 +1072,7 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 
 	<message key="rt.thisJournal">Prohledat časopis</message>
 
-	
+
 	<message key="rt.context.authorTermsDescription">Pro vyhledání prací s podobným spoluautorstvím nechejte u položek s více než jedním autorem zaškrtnutá všechna jména. Zaškrtnutím jednoho jména můžete prohledávat autory postupně. Více o vyhledaných zdrojích se dozvíte klinutím na O ZDROJÍCH. Tyto zdroje byly vybrány pro svou relevantnost a otevřený (volný) přístup k části nebo k celému svému obsahu.</message>
 
 

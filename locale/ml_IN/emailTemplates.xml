@@ -66,7 +66,7 @@ If you wish to stop receiving notification emails, please go to {$unsubscribeLin
 <br />
 If you did not make this request, please ignore this email and your password will not be changed. If you wish to reset your password, click on the below URL.<br />
 <br />
-Reset my password: {$url}<br />
+Reset my password: <a href="{$url}">{$url}</a><br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>This email is sent to a registered user when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password.</description>
@@ -76,6 +76,7 @@ Reset my password: {$url}<br />
 		<body><![CDATA[Your password has been successfully reset for use with the {$siteTitle} web site. Please retain this username and password, as it is necessary for all work with the journal.<br />
 <br />
 Your username: {$username}<br />
+Password: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>This email is sent to a registered user when they have successfully reset their password following the process described in the PASSWORD_RESET_CONFIRM email.</description>
@@ -378,7 +379,7 @@ Please confirm your ability to complete this vital contribution to the work of t
 		<subject>Editor Decision</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-We have reached a decision regarding your submission to {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+We have reached a decision regarding your submission to {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Our decision is to:<br />
 <br />
@@ -390,7 +391,7 @@ Our decision is to:<br />
 		<subject>Editor Decision</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-We have reached a decision regarding your submission to {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+We have reached a decision regarding your submission to {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Our decision is to:<br />
 <br />
@@ -402,7 +403,7 @@ Our decision is to:<br />
 		<subject>Editor Decision</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-We have reached a decision regarding your submission to {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+We have reached a decision regarding your submission to {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Our decision is to:<br />
 <br />
@@ -414,7 +415,7 @@ Our decision is to:<br />
 		<subject>Editor Decision</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-We have reached a decision regarding your submission to {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+We have reached a decision regarding your submission to {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Our decision is to:<br />
 <br />

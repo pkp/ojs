@@ -72,4 +72,9 @@
 		<rename table="article_search_object_keywords" to="submission_search_object_keywords" />
 		<rename table="article_html_galley_images" to="submission_html_galley_images" />
 	</sql>
+	<!-- Clean up after OJS 2.4.x hard-coded controlled vocab / controlled vocab entry IDs (issue #1793) -->
+	<sql>
+		<query driver="postgres7">SELECT pg_catalog.setval(pg_get_serial_sequence('controlled_vocabs', 'controlled_vocab_id'), (SELECT MAX(controlled_vocab_id) FROM controlled_vocabs)+1)</query>
+		<query driver="postgres7">SELECT pg_catalog.setval(pg_get_serial_sequence('controlled_vocab_entries', 'controlled_vocab_entry_id'), (SELECT MAX(controlled_vocab_entry_id) FROM controlled_vocab_entries)+1)</query>
+	</sql>
 </data>

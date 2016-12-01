@@ -20,8 +20,8 @@
 </script>
 <div id="issuesTabs">
 	<ul>
-		<li><a href="#futureIssuesDiv">{translate key="editor.navigation.futureIssues"}</a></li>
-		<li><a href="#backIssuesDiv">{translate key="editor.navigation.issueArchive"}</a></li>
+		<li><a name="futureIssues" href="#futureIssuesDiv">{translate key="editor.navigation.futureIssues"}</a></li>
+		<li><a name="backIssues" href="#backIssuesDiv">{translate key="editor.navigation.issueArchive"}</a></li>
 	</ul>
 	<div id="futureIssuesDiv">
 		{help file="issue-management.md" class="pkp_help_tab"}
