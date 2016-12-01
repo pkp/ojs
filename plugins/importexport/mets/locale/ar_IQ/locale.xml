@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/mets/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.importexport.METSExport.displayName">إضافة تصدير METS XML</message>
+	<message key="plugins.importexport.METSExport.description">تصدير المجلات بصيغة METS XML</message>
+	<message key="plugins.importexport.METSExport.settings">الإعدادات</message>
+	<message key="plugins.importexport.METSExport.export">تصدير البيانات</message>
+	<message key="plugins.importexport.METSExport.export.issues">تصدير الأعداد</message>
+	<message key="plugins.importexport.METSExport.export.selectIssue">إختر الأعداد التي تريد تصديرها.</message>
+	<message key="plugins.importexport.METSExport.export.error.IssuesNotFound">لا أعداد تطابق رمز تعريف العدد المحدد "{$issueId}".</message>
+	<message key="plugins.importexport.METSExport.export.error.unknownIssue">مسار مجلة غير معروف {$journalPath}</message>
+	<message key="plugins.importexport.METSExport.settings.FContent">استعمل ترميز base64 لالتفاف المحتوى</message>
+	<message key="plugins.importexport.METSExport.settings.FLocat">استعمل رابط إنترنت لـ bitstream لالتفاف المحتوى</message>
+	<message key="plugins.importexport.METSExport.settings.organization">METS: سمة منظمة عنصر الوكيل</message>
+	<message key="plugins.importexport.METSExport.settings.preservationLevel">مستوى الحفظ لـ PREMIS</message>
+	<message key="plugins.importexport.METSExport.settings.exportSuppFiles">تصدير الملفات التكميلية</message>
+</locale>

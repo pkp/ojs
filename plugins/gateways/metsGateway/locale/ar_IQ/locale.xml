@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/gateways/metsGateway/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.gateways.metsGateway.displayName">إضافة بوابة METS</message>
+	<message key="plugins.gateways.metsGateway.settings">الإعدادات</message>
+	<message key="plugins.gateways.metsGateway.description"><![CDATA[هذه الإضافة تقدم بيانات XML خام بصيغة METS إلى مجلة معينة. <strong>ملاحظة: هذا الأمر المقصود منه استعماله من قبل خدمات الإنترنت. تمكين هذه الإضافة له تداعيات أمنية لأنه يتيح وصولاً غير مقيد للمجلة بصيغة XML (المحتوى مرمز بطريقة base64).</strong>]]></message>
+	<message key="plugins.gateways.metsGateway.errors.errorMessage">تعذر تصدير بيانات المجلة. إن إضافة بوابة METS تحتاج إلى أن تكون ممكنة وأن يكون رمز تعريف المجلة المطلوب تصديرها مذكوراً في الرابط.</message>
+	<message key="plugins.gateways.metsGateway.settings.FContent">استعمل ترميز base64 لتغليف المحتوى</message>
+	<message key="plugins.gateways.metsGateway.settings.FLocat">استعمل رابط الإنترنت من bitsream لتغليف المحتوى</message>
+	<message key="plugins.gateways.metsGateway.settings.organization">METS: سمة وكيل منظمة العنصر</message>
+	<message key="plugins.gateways.metsGateway.settings.preservationLevel">مستوى الحفظ PREMIS</message>
+	<message key="plugins.gateways.metsGateway.settings.exportSuppFiles">تصدير الملفات التكميلية</message>
+</locale>

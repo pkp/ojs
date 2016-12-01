@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/piwik/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Piwik plugin localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+
+	<!-- Piwik -->
+	<message key="plugins.generic.piwik.displayName">إضافة Piwik</message>
+	<message key="plugins.generic.piwik.description"><![CDATA[مكاملة نظام المجلات المفتوحة مع Piwik، وهي تطبيق مجاني مفتوح المصدر لتحليل حركة المرور الخاصة بموقع ما. يتطلب الأمر التنصيب المسبق لـ Piwik. لطفاً، راجع رابط <a href="http://piwik.org/" title="موقع piwik">موقع Piwik</a> للمزيد من المعلومات.]]></message>
+
+	<!-- Piwik Settings Management -->
+	<message key="plugins.generic.piwik.manager.settings">الإعدادات</message>
+	<message key="plugins.generic.piwik.manager.piwikSettings">إعدادات Piwik</message>
+	<message key="plugins.generic.piwik.manager.settings.description"><![CDATA[<p>مع تمكين هذه الإضافة، Piwik تستعمل لتجميع وتحليل بيانات استعمال موقع المجلة وحركة المرور إليه. لطفاً، لاحظ أن هذه الإضافة تتطلب التنصيب المسبق لـ Piwik. لطفاً، أنظر <a href="http://piwik.org/" title="موقع Piwik">موقع Piwik</a> للمزيد من المعلومات.</p>]]></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrl">رابط Piwik</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrlInstructions">الرابط الكامل لتنصيبك من Piwik (أي: http://myserver.net/piwik).</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrlRequired">لطفاً، أدخل رابطاً صحيحاً. متضمناً http:// في مقدمته.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteId">رمز ملف الموقع</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions">ضمن Piwik، أنقر على إعدادات -> المواقع. إن رمز ملف الموقع معروض بجوار اسم ملف موقعك.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired">لطفاً، أدخل رمز تعريف ملف موقعك.</message>
+
+</locale>

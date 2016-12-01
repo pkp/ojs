@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/sword/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.generic.sword.displayName">إضافة SWORD</message>
+	<message key="plugins.generic.sword.description">يتيح لرؤساء التحرير و(اختيارياً) المؤلفين، إيداع المؤلفات باستعمال بروتوكول SWORD</message>
+	<message key="plugins.generic.sword.descriptionUnsupported">يتيح لرؤساء التحرير و(اختيارياً) المؤلفين، إيداع المؤلفات باستعمال بروتوكول SWORD. لاحظ أن هذه الإضافة تتطلب وجود إمتداد Zip، والذي هو حالياً غير منصب.</message>
+	<message key="plugins.generic.sword.enabled">تم تمكين إضافة SWORD.</message>
+	<message key="plugins.generic.sword.settings">الإعدادات</message>
+	<message key="plugins.generic.sword.settings.allowAuthorSpecify">يتيح للمؤلف تحديد نقطة الإيداع</message>
+	<message key="plugins.generic.sword.settings.depositPoints">نقاط الإيداع</message>
+	<message key="plugins.generic.sword.depositPoints.create">إنشاء نقطة إيداع</message>
+	<message key="plugins.generic.sword.depositPoints.edit">تعديل نقطة الإيداع</message>
+	<message key="plugins.generic.sword.depositPoints.type.automatic">تلقائية</message>
+	<message key="plugins.generic.sword.depositPoints.type.optionalSelection">إختيارية؛ مرنة</message>
+	<message key="plugins.generic.sword.depositPoints.type.optionalFixed">إختيارية؛ ثابتة</message>
+	<message key="plugins.generic.sword.depositPoints.type.manager">رئيس التحرير حصراً</message>
+	<message key="plugins.generic.sword.depositPoints.type.description"><![CDATA[<h4>أنواع نقاط الإيداع:</h4>
+<p><strong>تلقائية</strong>: يحدث الإيداع بشكل آلي. يتم تحديد نقطة الإيداع الكاملة لـ SWORD. ينبغي هنا تحديد اسم الدخول وكلمة المرور. يحصل الإيداع بعد إشعار المؤلف بالقبول.<br/>
+<strong>إختيارية؛ مرنة</strong>: يمكن للمؤلف التخير بين الإيداع من عدمه. رابط الإنترنت المحدد يشير إلى وثيقة خدمة، ويمكن للمؤلف إختيار أي من نقاط الإيداع المحددة لاستعمالها من تلك الوثيقة. يحصل الإيداع بعد إشعار المؤلف بالقبول.<br/>
+<strong>إختيارية؛ ثابتة</strong>: يمكن للمؤلف التخير بين الإيداع من عدمه. رابط الإنترنت يحدد نقطة إيداع SWORD. يحصل الإيداع بعد إشعار المؤلف بالقبول.<br/>
+<strong>رئيس التحرير حصراً</strong>: لرئيس تحرير المجلة حصراً حق استعمال نقطة الإيداع هذه. رابط الإنترنت يحدد وثيقة الخدمة. يحصل الإيداع يدوياً من قبل رئيس التحرير عبر استعماله لواجهة الاستيراد/التصدير في صفحة إدارة المجلة.
+</p>]]></message>
+	<message key="plugins.generic.sword.depositPoints.password.description">إن لم تحدد كلمة المرور هنا، ستتم مطالبتك و/أو المؤلف بتقديمها عند حصول الإيداع. لاحظ أن تلك الكلمة ستكون مرئية لكل مدراء المجلة وستم حفظها بشكل صريح (غير مشفر) في قاعدة البيانات.</message>
+	<message key="plugins.generic.sword.depositPoints.name">الاسم</message>
+	<message key="plugins.generic.sword.automaticDepositComplete">الفقرة "{$itemTitle}" تم إيداعها تلقائياً في المستودع "{$repositoryName}".</message>
+	<message key="plugins.generic.sword.depositComplete">الفقرة "{$itemTitle}" تم إيداعها في المستودع "{$repositoryName}".</message>
+	<message key="plugins.generic.sword.authorDepositDescription"><![CDATA[<p>بإمكانك إختيارياً استعمال النموذج الآتي لإيداع طلبك للنشر الموسوم "{$submissionTitle}"، في واحد من المستودعات المدرجة. استعمل خانات الاختيار أسفل العمود الأيسر لاختيار أي من تلك المستودعات التي ترغب في حفظ طلبك فيها؛ كل مستودع قد يقدم لك أيضاً قائمة منسدلة بنقاط الإيداع لتختار منها.</p>]]></message>
+	<message key="plugins.generic.sword.authorCustomDepositDescription"><![CDATA[<p>بإمكانك إختيارياً تحديد نقطة إيداع متوافقة مع SWORD في النموذج الآتي. إن رغبت في هذا، لطفاً، حدد رابط الإنترنت، اسم المستخدم، وكلمة المرور لمستودعك ليتم استعمالها عند حفظ طلبك للنشر.</p>]]></message>
+
+	<message key="plugins.importexport.sword.displayName">الاستيراد/التصدير لإضافة الإيداع SWORD</message>
+	<message key="plugins.importexport.sword.description">إيداع المقالات في مستودعات خارجية باستعمال بروتوكول الإيداع SWORD</message>
+	<message key="plugins.importexport.sword.deposit">إيداع</message>
+	<message key="plugins.importexport.sword.serviceDocUrl">رابط الإنترنت لوثيقة الخدمة</message>
+	<message key="plugins.importexport.sword.depositUrl">رابط الإنترنت لنقطة الإيداع</message>
+	<message key="plugins.importexport.sword.depositPoint">نقطة الإيداع</message>
+	<message key="plugins.importexport.sword.depositPoint.addRemove">إضافة/حذف</message>
+	<message key="plugins.importexport.sword.depositGalleys">ألواح الإيداع</message>
+	<message key="plugins.importexport.sword.depositEditorial">إيداع أحدث ملفات التحرير</message>
+	<message key="plugins.importexport.sword.depositSuccessful">تم الإيداع بنجاح</message>
+	<message key="plugins.importexport.sword.depositSuccessfulDescription">الفقرات المحددة قد تم إيداعها.</message>
+	<message key="plugins.importexport.sword.depositFailed">فشلت عملية الإيداع</message>
+</locale>

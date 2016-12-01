@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/objectsForReview/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Objects for review plugin localization strings for the ar_IQ (العربية) locale.
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+
+	<!-- Objects For Review Plug-In -->
+	<message key="plugins.generic.objectsForReview.displayName">مكونات للتحكيم</message>
+	<message key="plugins.generic.objectsForReview.reminderTask.name">التذكير الخاص بمكونات للتحكيم</message>
+	<message key="plugins.generic.objectsForReview.description">التماس تحكيم المكونات التي تحوز على الاهتمام. إدارة مكونات التحكيم وعمليته.</message>
+
+	<!--  Editor -->
+	<message key="plugins.generic.objectsForReview.editor.objectsForReview">مكونات للتحكيم</message>
+
+	<!-- Object Types Management -->
+	<message key="plugins.generic.objectsForReview.editor.objectTypes">أنواع تحكيم المكونات</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.description">هنا بإمكانك تنصيب أنواع تحكيم المكونات مسبقة التعريف أو الإفتراضية، إن لزم الأمر، قم بتحديث الأنواع المنصبة أو أنشئ الأنواع الخاصة بك.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.name">الاسم</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.none">لا أحد</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.persons">الأشخاص</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.persons.description">لطفاً، حدد كل أدوار الأشخاص المحتملة التي لها أهمية أو علاقة بتحكيم هذا المكون (مثل: المؤلف، المساهم... إلخ.). لن تكون على تغييرهم أو إضافة دور جديد إليهم لاحقاً.</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectType">نوع تحكيم المكونات</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.confirmDelete">هذا الإجراء سيحذف أيضاً كل المكونات الموجودة للتحكيم من هذا النوع. هل أنت متأكد من رغبتك في حذف هذا النوع؟</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.create">إنشاء نوع تحكيم المكونات</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.edit">تعديل نوع تحكيم المكونات</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.update">تحديث</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.updateLocales">تحديث بيانات اللغة الخاصة بالمكونات المحددة أعلاه:</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.install">تنصيب</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.installObjects">تنصيب مكونات التحكيم المفقودة - إختر الأنواع واللغات، ثم أنقر زر التنصيب:</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.name">الاسم</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.description">الوصف والتعليمات</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.metadata">البيانات الوصفية</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.preview">معاينة</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata">البيانات الوصفية الخاصة بمكون للتحكيم</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.none">لا أحد</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copyTo">نسخ إلى:</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.create">إنشاء حقل للبيانات الوصفية</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.edit">تعديل حقل البيانات الوصفية</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.confirmDelete">هذاالإجراء سيحذف أيضاً كل البيانات الوصفية المدخلة في هذا الحقل. هل أنت متأكد من رغبتك في حذف حقل البيانات الوصفية لهذا النوع من المكونات للتحكيم؟</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copy">نسخ</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.name">الاسم</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.required">مطلوب</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.display">العرض</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.chooseType">إختر نوع حقل البيانات الوصفية</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.smalltextfield">مربع نص لكلمة واحدة</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.textfield">مربع نص لسطر واحد</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.textarea">مربع نص متعدد السطور</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.checkboxes">خانات إختيار (بإمكانك اختيار واحد منها أو أكثر)</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.radiobuttons">أزرار الراديو (بإمكانك اختيار واحد منها فقط)</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.dropdownbox">قائمة منسدلة</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.roledropdownbox">قائمة أدوار منسدلة</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.langdropdownbox">قائمة لغة منسدلة</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.changeType">تغيير النوع</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.metadataType">نوع حقل البيانات الوصفية</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.possibleOptions">الخيارات الممكنة</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.addOptionItem">كل الاختيار</message>
+
+	<!-- Objects For Review Settings -->
+	<message key="plugins.generic.objectsForReview.settings">الإعدادات</message>
+	<message key="plugins.generic.objectsForReview.settings.objectsForReviewMode">الإدارة</message>
+	<message key="plugins.generic.objectsForReview.settings.ModeFull">الطريقة 1: أدرج المكونات المتاحة للتحكيم، قم بإدارة محكمي المكونات، ثم أنشر البيانات الوصفية للمكون.</message>
+	<message key="plugins.generic.objectsForReview.settings.ModeMetadata">الطريقة 2: Only publish object metadata.</message>
+	<message key="plugins.generic.objectsForReview.settings.description"><![CDATA[<h5>الطريقة 1</h5><p>يتم العمل وفق المخطط الانسيابي الآتي:</p><ul><li>يقوم المحرر بإضافة المكونات المتاحة للتحكيم.</li><li>المؤلفون المهتمون بتحكيم مكون ما بإمكانهم التماس كتابة التحكيم، عبر إشعار المحرر بذلك.</li><li>بإمكان المحرر قبول الالتماس أو رفضه، عبر إشعار المؤلف.</li><li>إذا تم قبول التماس التحكيم يتم ضبط تأريخ استيجاب للتحكيم.</li><li>يمكن للمحرر إرسال نسخة من المكون إلى المؤلف عبر البريد الالكتروني.</li><li>يقدم المؤلف تحكيمه عبر الإنترنت عبر عملية تقديم قياسية.</li><li>بيانات المكون الوصفية تُنشر كجزء من تقديم تحكيم المكون.</li></ul><p>هذه الإضافة تدعم عمل المجلات ذات أكثر من محرر واحد. عندما يقوم أحد المحررين بإضافة مكون جديد للتحكيم، يصير تلقائياً المحرر الرئيسي وعنوان الاتصال المعني بتحكيم المكون.</p><h5>الطريقة 2</h5><p>يتم العمل وفق المخطط الانسيابي الآتي:</p><ul><li>يضيف المحرر مكونات للتحكيم.</li><li>يطابق المحرر تقديمات التحكيم مع المكون المعني.</li><li>بيانات الكتاب الوصفية تُنشر كجزء من تقديم تحكيم المكون.</li></ul>]]></message>
+	<message key="plugins.generic.objectsForReview.settings.displayMetadata">عرض البيانات الوصفية للمكون</message>
+	<message key="plugins.generic.objectsForReview.settings.displayAbstract">عرض البيانات الوصفية للمكون على صفحات ملخصات المقالات.</message>
+	<message key="plugins.generic.objectsForReview.settings.displayListing">أنشر قائمة كل المكونات المتاحة للتحكيم باستعمال فقرة التنقل "مكونات للتحكيم".</message>
+	<message key="plugins.generic.objectsForReview.settings.objectsForReviewDue">تاريخ استيجاب تحكيم المكون</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeks1">التحكيمات المستوجبة</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeks2">أسبوع/أسابيع بعد تعيين المكون إلى مؤلف لغرض تحكيمه.</message>
+	<message key="plugins.generic.objectsForReview.settings.emailReminders">تذكيرات البريد الالكتروني</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderBeforeDays1">أرسل تذكيراً للمؤلفين عبر البريد الالكتروني</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderBeforeDays2">يوم/أيام قبل تأريخ استيجاب التحكيم.</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays1">أرسل تذكيراً للمؤلفين عبر البريد الالكتروني</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays2">يوم/أيام بعد تأريخ استيجاب التحكيم.</message>
+	<message key="plugins.generic.objectsForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>ملاحظة:</strong> لتفعيل هذه الخيارات، على مدير الموقع تمكين خيار <tt>scheduled_tasks</tt> في ملف إعدادات نظام المجلات المفتوحة. قد يتطلب الأمر إجراء إعدادات إضافية في الملقم لدعم هذه الوظيفة (الأمر الذي قد لا يكون ممكناً في جميع الملقمات)، كما هو مشار إليه في أدبيات نظام المجلات المفتوحة.]]></message>
+	<message key="plugins.generic.objectsForReview.settings.additionalInformation">معلومات إضافية</message>
+	<message key="plugins.generic.objectsForReview.settings.additionalInformationDescription">معلومات إضافية منشورة مع مكونات للتحكيم.</message>
+
+	<!-- Search, filter, sort -->
+	<message key="plugins.generic.objectsForReview.search.field.title">العنوان</message>
+	<message key="plugins.generic.objectsForReview.search.field.abstract">الملخص</message>
+	<message key="plugins.generic.objectsForReview.search.noResults">لا نتائج</message>
+	<message key="plugins.generic.objectsForReview.filter.filterBy">تصفية حسب</message>
+	<message key="plugins.generic.objectsForReview.sort.sortBy">ترتيب حسب</message>
+	<message key="plugins.generic.objectsForReview.sort.sortDirectionAsc">تصاعدياً</message>
+	<message key="plugins.generic.objectsForReview.sort.sortDirectionDesc">تنازلياً</message>
+
+	<!-- Objects For Review -->
+	<message key="plugins.generic.objectsForReview.objectsForReview.pageTitle">مكونات للتحكيم</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.noneCreated">لا مكونات للتحكيم</message>	
+	<message key="plugins.generic.objectsForReview.objectsForReview.title">العنوان</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.dateCreated">منشأة</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.status">الحالة</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.objectReviewer">محكم المكون</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.objectType">نوع المكون</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.editor">المحرر</message>
+
+	<!-- مكون للتحكيم Assignments -->
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAll">مهام تحكيم المكونات - الكل</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.all">الكل</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleRequested">مهام تحكيم المكونات - ملتمسة للتحكيم</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.requested">ملتمسة للتحكيم</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAssigned">مهام تحكيم المكونات - معينة</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.assigned">معينة</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleMailed">مهام تحكيم المكونات - مرسلة بالبريد</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.mailed">مرسلة بالبريد</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleSubmitted">مهام تحكيم المكونات - مقدمة</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.submitted">مقدمة</message>
+
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.title">العنوان</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.status">الحالة</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.objectReviewer">محكم المكون</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.dateCreated">منشأة</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.dueDate">تأريخ الاستيجاب</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.submission">التقديم</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.editor">المحرر</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.noneCreated">لا مكونات متاحة للتحكيم</message>
+
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status">الحالة</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.available">متوافرة</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.requested">ملتمسة للتحكيم</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.assigned">معينة</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.mailed">مرسلة بالبريد</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.submitted">مقدمة</message>
+
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.additionalNotes">ملاحظات إضافية</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.notes">ملاحظات</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.notesInstructions">للمحرر فقط. غير منشور كجزء من مكون للتحكيم.</message>
+
+	<!-- Objects For Review Assignments Management by Editor -->
+	<message key="plugins.generic.objectsForReview.editor.objectsForReview">مكونات للتحكيم</message>
+	<message key="plugins.generic.objectsForReview.editor.assignments">مهام التحكيم</message>
+	<!--  Actions -->
+	<message key="plugins.generic.objectsForReview.editor.select">إختر</message>
+	<message key="plugins.generic.objectsForReview.editor.assignObjectReviewer">عيِّن</message>
+	<message key="plugins.generic.objectsForReview.editor.acceptObjectReviewer">إقبل</message>
+	<message key="plugins.generic.objectsForReview.editor.denyObjectReviewer">أرفض</message>
+	<message key="plugins.generic.objectsForReview.editor.notifyObjectMailed">تم إرسال المكون بالبريد الالكتروني</message>
+	<message key="plugins.generic.objectsForReview.editor.removeObjectReviewer">إزالة</message>
+	<message key="plugins.generic.objectsForReview.editor.confirmRemoveObjectReviewer">هل أنت متأكد من رغبتك في حذف هذا المؤلف وإزالة سيرة تحكيم هذا المكون؟</message>
+	<message key="plugins.generic.objectsForReview.editor.selectSubmission">إختر التقديم</message>
+	<!-- Assign Author -->
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor">عيِّن المؤلف</message>
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor.assign">عيِّن</message>
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor.createNewUser">إنشاء مستخدم جديد</message>
+
+	<message key="plugins.generic.objectsForReview.editor.noMailingAddress">لا يوجد عنوان مراسلة في الملف.</message>
+
+	<!-- مكون للتحكيم Edit -->
+	<message key="plugins.generic.objectsForReview.editor.objectForReview">مكون للتحكيم</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseLanguage">إختر اللغة</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseOption">إختر أحد الخيارات</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseRole">إختر الدور</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.noAnswer">لا إجابة</message>
+	<message key="plugins.generic.objectsForReview.editor.edit">تعديل</message>
+	<message key="plugins.generic.objectsForReview.editor.create">إنشاء مكون للتحكيم</message>
+	<message key="plugins.generic.objectsForReview.editor.saveAndCreateAnother">إحفظ وأنشئ واحداً آخر</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.addPerson">إضافة شخص</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.deletePerson">حذف</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverPage">صفحة الغلاف</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverPageInstructions">(الصيغ المتاحة هي: .gif، .jpg، أو .png )</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverPageUploaded">مرفوعة</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.removeCoverPage">أتريد إزالة صورة صفحة الغلاف؟</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.remove">إزالة</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverImage">صفحة الغلاف</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverImageAltText">النص البديل لصورة الغلاف</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.additionalNotes">ملاحظات إضافية</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.notes">ملاحظات</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.notesInstructions">للمحرر فقط. غير منشور كجزء من مكون للتحكيم.</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.assignEditor">عيِّن المحرر</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.editor">المحرر</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.assignEditorInstructions">إختر المحرر المسؤول عن هذا المكون للتحكيم.</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.available">متوافر</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.availableInstructions">حدد فيما إذا كان المكون متاحاً للتحكيم.</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.status.available">متوافر</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.status.notAvailable">غير متوافر</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.delete">حذف</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.confirmDelete">هذا الإجراء سيقوم بحذف المكون نهائياً مع المهام المتعلقة به. هل أنت متأكد من حذف هذا المكون؟</message>
+
+	<!-- Public -->
+	<message key="plugins.generic.objectsForReview.public.headerLink">مكونات للتحكيم</message>
+	<message key="plugins.generic.objectsForReview.public.objectsForReview">مكونات للتحكيم</message>
+	<message key="plugins.generic.objectsForReview.public.objectForReview">مكون للتحكيم</message>
+	<message key="plugins.generic.objectsForReview.public.objectsForReviewInstructions"><![CDATA[<p>لغرض التماس مكون للتحكيم:</p><ul><li><a href="{$registerUrl}" target="_parent">سجل</a> نفسك كمؤلف في هذه المجلة.</li><li><a href="{$loginAuthorUrl}" target="_parent">أدخل الموقع</a> بصفة مؤلف.</li><li>أنقر على رابط الالتماس المحاذي للمكون الذي يحوز على اهتمامك.</li></ul>]]></message>
+	
+	<!-- Article Abstract Page -->
+	<message key="plugins.generic.objectsForReview.public.articleObjectsForReview">المكونات المحكمة في هذه المقالة</message>
+
+
+	<!-- Author -->
+	<message key="plugins.generic.objectsForReview.author.objectsForReview">مكونات للتحكيم</message>
+	<message key="plugins.generic.objectsForReview.author.myObjectsForReview">مكوناتي</message>
+	<!--  Actions -->
+	<message key="plugins.generic.objectsForReview.author.requestObjectForReview">التمس هذا المكون للتحكيم</message>
+
+	<message key="plugins.generic.objectsForReview.author.submit">تقديم</message>
+	<message key="plugins.generic.objectsForReview.author.view">معاينة</message>
+	<!-- Submission -->
+	<message key="plugins.generic.objectsForReview.author.submitInstructions">لطفاً، حدد فيما إذا كان هذا التقديم هو تحكيم لأي من المكونات الموكلة إليك.</message>
+
+
+	<!-- Notifications -->
+	<message key="plugins.generic.objectsForReview.notification.objectTypeInstalled">تم تنصيب نوع تحكيم مكون.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeCreated">تم إنشاء نوع تحكيم مكون.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeUpdated">تم تحديث نوع تحكيم مكون.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeActivated">تم تفعيل نوع تحكيم مكون.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeDeactivated">تم تعطيل نوع تحكيم مكون.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeDeleted">تم حذف نوع تحكيم مكون. كذلك الحال مع متعلقات المكون بالنسبة للتحكيم ومهامه.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrCreated">تم إنشاء تحكيم مكون جديد.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrRequested">تم التماس مكون للتحكيم. بانتظار التأكيد من قبل المحرر.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrUpdated">تم تحديث مكون للتحكيم.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrDeleted">تم حدف مكون للتحكيم مع مهامه.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorAssigned">تم تعيين مؤلف لتولي تحكيم مكون.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorDenied">تم رفض التماس مؤلف. وضعية المكون للتحكيم تم إرجاعها إلى الحالة الأصلية.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorMailed">تم تسجيل المكون للتحكيم على أنه مرسل إلى المؤلف عبر البريد الالكتروني.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorRemoved">تمت إزالة المؤلف من مهمة تحكيم المكون. وضعية المكون للتحكيم تم إرجاعها إلى الحالة الأصلية.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrSubmissionAssigned">تم تعيين التقديم لمهمة مكون للتحكيم.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrSettingsSaved">تم حفظ إعدادات إضافة مكون للتحكيم.</message>
+
+
+	<!-- errors -->
+	<!-- Object Types Management -->
+	<message key="plugins.generic.objectsForReview.editor.objectType.form.nameRequired">اسم نوع تحكيم المكون مطلوب حتماً.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.nameRequired">اسم حقل البيانات الوصفية مطلوب حتماً.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.typeRequired">نوعية الحقل مطلوبة لحقل البيانات الوصفية.</message>
+	<!-- objects For Review Edit -->
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredFields">لطفاً، إملأ الحقول المطلوبة.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredPersonFields">لطفاً، إختر دور الشخص وأذكر اسمه الأول أو اسمه الأخير.</message>
+	<!-- Objects For Review Settings -->
+	<message key="plugins.generic.objectsForReview.settings.ModeRequired">الطريقة مطلوبة حتماً.</message>
+	<message key="plugins.generic.objectsForReview.settings.ModeValid">لطفاً، حدد الطريقة الصحيحة.</message>
+	<message key="plugins.generic.objectsForReview.settings.numDaysReminderValid">لطفاً، حدد عدداً صحيحاً من الأيام لرسالة التذكير.</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeksRequired">لطفاً، حدد عدد الأسابيع التي تستغرقها مدة تحكيم المكونات عادة.</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeksValid">لطفاً، حدد عدداً صحيحاً من الأسابيع التي تستغرقها مدة تحكيم المكونات.</message>
+
+
+
+
+
+	<!-- Objects for Review and their Metadata -->
+	<!-- Common Metadata -->
+	<message key="plugins.generic.objectsForReview.object.metadata.title">العنوان</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.person">الشخص</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.date">التأريخ</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.language">اللغة</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.shortTitle">العنوان المختصر</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.url">رابط الإنترنت</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.rights">الحقوق</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.abstract">الملخص</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.copyAvailable">نسخة متوافرة</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.copyAvailable.yes">نعم</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.copyAvailable.no">لا</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.coverPage">صفحة الغلاف</message>
+	<!-- Artwork -->
+	<message key="plugins.generic.objectsForReview.object.artwork">العمل الفني</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.person.artist">الفنان</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.medium">متوسط</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.size">الحجم</message>
+	<!-- Audio Recording -->
+	<message key="plugins.generic.objectsForReview.object.audioRecording">التسجيل الصوتي</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.performer">المؤدي</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.composer">الملحن</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsBy">الكلمات حسب</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.format">الصيغة</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.seriesTitle">عنوان الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.volume">المجلد</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.numberOfVolumes">عدد المجلدات</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.place">المكان</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.label">العنوان</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.runningTime">وقت التنفيذ</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.isbn">ISBN</message>
+	<!-- Bill -->
+	<message key="plugins.generic.objectsForReview.object.bill">الفاتورة</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.sponsor">الراعي</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.cosponsor">الملحن</message>
+	<message key="plugins.generic.objectsForReview.object.bill.number">رقم الفاتورة</message>
+	<message key="plugins.generic.objectsForReview.object.bill.code">الرمز</message>
+	<message key="plugins.generic.objectsForReview.object.bill.codeVolume">حجم الرمز</message>
+	<message key="plugins.generic.objectsForReview.object.bill.section">القسم</message>
+	<message key="plugins.generic.objectsForReview.object.bill.codePages">صفحات الرمز</message>
+	<message key="plugins.generic.objectsForReview.object.bill.legislativeBody">الهيئة التشريعية</message>
+	<message key="plugins.generic.objectsForReview.object.bill.session">الدورة</message>
+	<message key="plugins.generic.objectsForReview.object.bill.history">التأريخ</message>
+	<!-- Blog Post -->
+	<message key="plugins.generic.objectsForReview.object.blogPost">طرح المدونة</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.person.commenter">المعلق</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.blogTitle">عنوان المدونة</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.websiteTitle">عنوان موقع الإنترنت</message>
+	<!-- Book -->
+	<message key="plugins.generic.objectsForReview.object.book">الكتاب</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.editor">المحرر</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.seriesEditor">محرر الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.translator">المترجم</message>
+	<message key="plugins.generic.objectsForReview.object.book.series">السلسلة</message>
+	<message key="plugins.generic.objectsForReview.object.book.seriesNumber">رقم الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.book.volume">المجلد</message>
+	<message key="plugins.generic.objectsForReview.object.book.numberOfVolumes">عدد المجلدات</message>
+	<message key="plugins.generic.objectsForReview.object.book.edition">الطبعة</message>
+	<message key="plugins.generic.objectsForReview.object.book.place">المكان</message>
+	<message key="plugins.generic.objectsForReview.object.book.publisher">الناشر</message>
+	<message key="plugins.generic.objectsForReview.object.book.publisherURL">رابط موقع الناشر</message>
+	<message key="plugins.generic.objectsForReview.object.book.numberOfPages">عدد الصفحات</message>
+	<message key="plugins.generic.objectsForReview.object.book.isbn">ISBN</message>
+	<!-- Book Section -->
+	<message key="plugins.generic.objectsForReview.object.bookSection">قسم الكتاب</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.bookAuthor">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.editor">المحرر</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.seriesEditor">محرر الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.translator">المترجم</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.bookTitle">عنوان الكتاب</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.series">السلسلة</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.seriesNumber">رقم الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.volume">المجلد</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.numberOfVolumes">عدد المجلدات</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.edition">الطبعة</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.place">المكان</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.publisher">الناشر</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.publisherURL">رابط موقع الناشر</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.numberOfPages">عدد الصفحات</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.isbn">ISBN</message>
+	<!-- Case -->
+	<message key="plugins.generic.objectsForReview.object.case">الدعوى</message>
+	<message key="plugins.generic.objectsForReview.object.case.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.case.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.case.person.counsel">المحامي</message>
+	<message key="plugins.generic.objectsForReview.object.case.reporter">المراسل</message>
+	<message key="plugins.generic.objectsForReview.object.case.reporterVolume">مجلد المراسل</message>
+	<message key="plugins.generic.objectsForReview.object.case.court">المحكمة</message>
+	<message key="plugins.generic.objectsForReview.object.case.docketNo">رقم الدعوى</message>
+	<message key="plugins.generic.objectsForReview.object.case.firstPage">الصفحة الأولى</message>
+	<message key="plugins.generic.objectsForReview.object.case.history">التأريخ</message>
+	<!-- Computer Program -->
+	<message key="plugins.generic.objectsForReview.object.computerProgram">برنامج حاسوب</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.person.programmer">المبرمج</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.seriesTitle">عنوان الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.version">النسخة</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.system">النظام</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.place">المكان</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.programmingLanguage">لغة البرمجة</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.isbn">ISBN</message>
+	<!-- Conference Paper -->
+	<message key="plugins.generic.objectsForReview.object.conferencePaper">ورقة مؤتمر</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.editor">المحرر</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.seriesEditor">محرر الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.translator">المترجم</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.proceedingsTitle">عنوان التحضيرات</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.conferenceName">اسم المؤتمر</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.place">المكان</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.publisher">الناشر</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.publisherURL">رابط موقع الناشر</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.volume">المجلد</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.pages">صفحات</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.series">السلسلة</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.isbn">ISBN</message>
+	<!-- Dictionary Entry -->
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry">مدخل قاموس</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.editor">المحرر</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.seriesEditor">محرر الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.translator">المترجم</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.dictionaryTitle">عنوان القاموس</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.series">السلسلة</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.seriesNumber">رقم الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.volume">المجلد</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.numberOfVolumes">عدد المجلدات</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.edition">الطبعة</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.place">المكان</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.publisher">الناشر</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitlek.numberOfPages">عدد الصفحات</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.isbn">ISBN</message>
+	<!-- Document -->
+	<message key="plugins.generic.objectsForReview.object.document">الوثيقة</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.editor">المحرر</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.reviewedAuthor">المؤلف المنقح</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.translator">المترجم</message>
+	<message key="plugins.generic.objectsForReview.object.document.publisher">الناشر</message>
+	<!-- E-mail -->
+	<message key="plugins.generic.objectsForReview.object.email">البريد الالكتروني</message>
+	<message key="plugins.generic.objectsForReview.object.email.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.email.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.email.person.recipient">المستلم</message>
+	<!-- Encyclopedia Article -->
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle">مقالة الموسوعة</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.editor">المحرر</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.seriesEditor">محرر الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.translator">المترجم</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.encyclopediaTitle">عنوان الموسوعة</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.series">السلسلة</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.seriesNo">رقم الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.volume">المجلد</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.volumeNo">عدد المجلدات</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.edition">الطبعة</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.place">المكان</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.publisher">الناشر</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.pages">عدد الصفحات</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.isbn">ISBN</message>
+	<!-- Film -->
+	<message key="plugins.generic.objectsForReview.object.film">الفلم</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.director">المخرج</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.producer">المنتج</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.scriptwriter">كاتب النص</message>
+	<message key="plugins.generic.objectsForReview.object.film.distributor">الموزع</message>
+	<message key="plugins.generic.objectsForReview.object.film.genre">نوع الفيلم</message>
+	<message key="plugins.generic.objectsForReview.object.film.format">الصيغة</message>
+	<message key="plugins.generic.objectsForReview.object.film.runningTime">وقت التشغيل</message>
+	<!-- Forum Post -->
+	<message key="plugins.generic.objectsForReview.object.forumPost">طرح المنتدى</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.forumTitle">عنوان المنتدى</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.postType">نوعية الطرح</message>
+	<!-- Hearing -->
+	<message key="plugins.generic.objectsForReview.object.hearing">جلسة استماع</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.committee">اللجنة</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.place">المكان</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.publisher">الناشر</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.numberOfVolumes">عدد المجلدات</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.documentNo">رقم الوثيقة</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.pages">صفحات</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.legislativeBody">الهيئة التشريعية</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.session">الدورة</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.history">التأريخ</message>
+	<!-- Instant Message -->
+	<message key="plugins.generic.objectsForReview.object.instantMessage">رسالة فورية</message>
+	<message key="plugins.generic.objectsForReview.object.instantMessage.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.instantMessage.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.instantMessage.person.recipient">المستلم</message>
+	<!-- Interview -->
+	<message key="plugins.generic.objectsForReview.object.interview">المقابلة</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.interviewWith">مقابلة مع</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.interviewer">المقابل</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.translator">المترجم</message>
+	<message key="plugins.generic.objectsForReview.object.interview.medium">متوسط</message>
+	<!-- Journal Article -->
+	<message key="plugins.generic.objectsForReview.object.journalArticle">مقالة المجلة</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.editor">المحرر</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.reviewedAuthor">المؤلف المنقح</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.translator">المترجم</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.publication">المنشور</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.volume">المجلد</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.issue">العدد</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.pages">صفحات</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.series">السلسلة</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.seriesTitle">عنوان الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.seriesText">نص الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.journalAbbr">مختصر المجلة</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.issn">ISSN</message>
+	<!-- Letter -->
+	<message key="plugins.generic.objectsForReview.object.letter">الرسالة</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.recipient">المستلم</message>
+	<message key="plugins.generic.objectsForReview.object.letter.type">نوع الرسالة</message>
+	<!-- Magazine Article -->
+	<message key="plugins.generic.objectsForReview.object.magazineArticle">مقالة المجلة</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.reviewedAuthor">المؤلف المنقح</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.translator">المترجم</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.publication">المنشور</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.volume">المجلد</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.issue">العدد</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.pages">صفحات</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.issn">ISSN</message>
+	<!-- Manuscript -->
+	<message key="plugins.generic.objectsForReview.object.manuscript">المخطوطة</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.person.translator">المترجم</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.type">النوع</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.place">المكان</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.numberOfPages">عدد الصفحات</message>
+	<!-- Map -->
+	<message key="plugins.generic.objectsForReview.object.map">الخريطة</message>
+	<message key="plugins.generic.objectsForReview.object.map.person.cartographer">رسام الخرائط</message>
+	<message key="plugins.generic.objectsForReview.object.map.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.map.person.seriesEditor">محرر الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.map.type">النوع</message>
+	<message key="plugins.generic.objectsForReview.object.map.scale">المقياس</message>
+	<message key="plugins.generic.objectsForReview.object.map.seriesTitle">عنوان الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.map.edition">الطبعة</message>
+	<message key="plugins.generic.objectsForReview.object.map.place">المكان</message>
+	<message key="plugins.generic.objectsForReview.object.map.publisher">الناشر</message>
+	<message key="plugins.generic.objectsForReview.object.map.isbn">ISBN</message>
+	<!-- Newspaper Article -->
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle">مقالة الصحيفة</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.reviewedAuthor">المؤلف المنقح</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.translator">المترجم</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.publication">المنشور</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.edition">الطبعة</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.place">المكان</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.section">القسم</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.pages">صفحات</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.issn">ISSN</message>
+	<!-- Patent -->
+	<message key="plugins.generic.objectsForReview.object.patent">براءة الإختراع</message>
+	<message key="plugins.generic.objectsForReview.object.patent.person.inventor">المخترع</message>
+	<message key="plugins.generic.objectsForReview.object.patent.person.attorney">المحامي / الوكيل</message>
+	<message key="plugins.generic.objectsForReview.object.patent.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.patent.place">المكان</message>
+	<message key="plugins.generic.objectsForReview.object.patent.country">الدولة</message>
+	<message key="plugins.generic.objectsForReview.object.patent.assignee">المعهود إليه</message>
+	<message key="plugins.generic.objectsForReview.object.patent.issuingAuthority">هيئة الإصدار</message>
+	<message key="plugins.generic.objectsForReview.object.patent.number">العدد</message>
+	<message key="plugins.generic.objectsForReview.object.patent.pages">صفحات</message>
+	<message key="plugins.generic.objectsForReview.object.patent.appNumber">رقم الطلب</message>
+	<message key="plugins.generic.objectsForReview.object.patent.priorityNumbers">رقم الأولوية</message>
+	<message key="plugins.generic.objectsForReview.object.patent.filingDate">تأريخ الإملاء</message>
+	<message key="plugins.generic.objectsForReview.object.patent.references">المراجع</message>
+	<message key="plugins.generic.objectsForReview.object.patent.legalStatus">الوضع القانوني</message>
+	<!-- Podcast -->
+	<message key="plugins.generic.objectsForReview.object.podcast">روابط الوسائط</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.person.podcaster">المؤدي</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.person.guest">الضيف</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.seriesTitle">عنوان الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.episodeNo">رقم الحلقة</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.fileType">نوع الملف</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.runningTime">مدة التشغيل</message>
+	<!-- Presentation -->
+	<message key="plugins.generic.objectsForReview.object.presentation">العرض</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.person.presenter">العارض</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.type">النوع</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.place">المكان</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.meetingName">اسم الاجتماع</message>
+	<!-- Radio Broadcast -->
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast">بث إذاعي</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.director">المخرج</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.castMember">عضو الطاقم</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.guest">الضيف</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.producer">المنتج</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.scriptWriter">كاتب النص</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.programTitle">عنوان البرنامج</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.episodeNo">رقم الحلقة</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.format">الصيغة</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.place">المكان</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.network">الشبكة</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.runningTime">مدة التشغيل</message>
+	<!-- Report -->
+	<message key="plugins.generic.objectsForReview.object.report">التقرير</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.seriesEditor">محرر الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.translator">المترجم</message>
+	<message key="plugins.generic.objectsForReview.object.report.no">العدد</message>
+	<message key="plugins.generic.objectsForReview.object.report.type">النوع</message>
+	<message key="plugins.generic.objectsForReview.object.report.place">المكان</message>
+	<message key="plugins.generic.objectsForReview.object.report.seriesTitle">عنوان الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.report.institution">المؤسسة</message>
+	<message key="plugins.generic.objectsForReview.object.report.pages">صفحات</message>
+	<!-- Statute -->
+	<message key="plugins.generic.objectsForReview.object.statute">النظام الأساسي</message>
+	<message key="plugins.generic.objectsForReview.object.statute.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.statute.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.statute.code">القانون</message>
+	<message key="plugins.generic.objectsForReview.object.statute.codeNo">رقم القانون</message>
+	<message key="plugins.generic.objectsForReview.object.statute.publicLawNo">رقم القانون العام</message>
+	<message key="plugins.generic.objectsForReview.object.statute.pages">صفحات</message>
+	<message key="plugins.generic.objectsForReview.object.statute.section">القسم</message>
+	<message key="plugins.generic.objectsForReview.object.statute.session">الدورة</message>
+	<message key="plugins.generic.objectsForReview.object.statute.history">التأريخ</message>
+	<!-- Thesis -->
+	<message key="plugins.generic.objectsForReview.object.thesis">الأطروحة</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.type">النوع</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.university">الجامعة</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.place">المكان</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.numberOfPages">عدد الصفحات</message>
+	<!-- TV Broadcast -->
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast">بث تلفازي</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.director">المخرج</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.castMember">عضو الطاقم</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.guest">الضيف</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.producer">المنتج</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.scriptWriter">كاتب النص</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.programTitle">عنوان البرنامج</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.episodeNo">رقم الحلقة</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.format">الصيغة</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.place">المكان</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.network">الشبكة</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.runningTime">مدة التشغيل</message>
+	<!-- Video Recording -->
+	<message key="plugins.generic.objectsForReview.object.videoRecording">تسجيل فيديوي</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.director">المخرج</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.castMember">عضو الطاقم</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.guest">الضيف</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.producer">المنتج</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.scriptWriter">كاتب النص</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.format">الصيغة</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.seriesTitle">عنوان الدورية</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.volume">المجلد</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.numberOfVolumes">عدد المجلدات</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.place">المكان</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.studio">الستوديو</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.runningTime">مدة التشغيل</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.isbn">ISBN</message>
+	<!-- Web Page -->
+	<message key="plugins.generic.objectsForReview.object.webPage">صفحة إنترنت</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.person.author">المؤلف</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.person.contributor">المساهم</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.person.translator">المترجم</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.websiteTitle">عنوان موقع الإنترنت</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.websiteType">نوع موقع الإنترنت</message>
+
+
+</locale>

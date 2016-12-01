@@ -1,0 +1,138 @@
+#
+# registry/minifiedScripts.txt
+#
+# Copyright (c) 2014-2016 Simon Fraser University Library
+# Copyright (c) 2003-2016 John Willinsky
+# Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+#
+# This file contains a list of all JavaScript files that should be compiled
+# for distribution.
+#
+# NB: Please make sure that you add your scripts in the same format as the
+# existing files because this file will be parsed by the build script.
+#
+
+# External jQuery plug-ins to be minified
+lib/pkp/js/lib/jquery/plugins/jquery.form.js
+lib/pkp/js/lib/jquery/plugins/jquery.tag-it.js
+lib/pkp/js/lib/jquery/plugins/jquery.sortElements.js
+lib/pkp/js/lib/jquery/plugins/jquery.cookie.js
+lib/pkp/js/lib/jquery/plugins/jquery.equalizer.js
+lib/pkp/js/lib/jquery/plugins/jquery.jlabel-1.3.min.js
+lib/pkp/js/lib/jquery/plugins/jquery.selectBox.min.js
+
+# JSON library
+lib/pkp/js/lib/json/json2.js
+
+# Our own functions (depend on plug-ins)
+lib/pkp/js/functions/general.js
+
+# Our own classes (depend on plug-ins)
+lib/pkp/js/classes/Helper.js
+lib/pkp/js/classes/ObjectProxy.js
+lib/pkp/js/classes/Handler.js
+lib/pkp/js/classes/TinyMCEHelper.js
+lib/pkp/js/classes/linkAction/LinkActionRequest.js
+lib/pkp/js/classes/linkAction/RedirectRequest.js
+lib/pkp/js/classes/linkAction/OpenWindowRequest.js
+lib/pkp/js/classes/linkAction/PostAndRedirectRequest.js
+lib/pkp/js/classes/linkAction/NullAction.js
+lib/pkp/js/classes/linkAction/EventAction.js
+lib/pkp/js/classes/linkAction/AjaxRequest.js
+lib/pkp/js/classes/linkAction/ModalRequest.js
+lib/pkp/js/classes/notification/NotificationHelper.js
+lib/pkp/js/classes/features/Feature.js
+lib/pkp/js/classes/features/OrderItemsFeature.js
+lib/pkp/js/classes/features/OrderGridItemsFeature.js
+lib/pkp/js/classes/features/OrderCategoryGridItemsFeature.js
+lib/pkp/js/classes/features/OrderListbuilderItemsFeature.js
+lib/pkp/js/classes/features/OrderMultipleListsItemsFeature.js
+lib/pkp/js/classes/features/GridCategoryAccordionFeature.js
+lib/pkp/js/classes/features/GeneralPagingFeature.js
+lib/pkp/js/classes/features/PagingFeature.js
+lib/pkp/js/classes/features/InfiniteScrollingFeature.js
+lib/pkp/js/classes/features/CollapsibleGridFeature.js
+
+# Generic controllers
+lib/pkp/js/controllers/SiteHandler.js
+lib/pkp/js/controllers/UrlInDivHandler.js
+lib/pkp/js/controllers/ExtrasOnDemandHandler.js
+lib/pkp/js/controllers/PageHandler.js
+lib/pkp/js/controllers/TabHandler.js
+lib/pkp/js/controllers/MenuHandler.js
+lib/pkp/js/controllers/UploaderHandler.js
+lib/pkp/js/controllers/AutocompleteHandler.js
+lib/pkp/js/controllers/RangeSliderHandler.js
+lib/pkp/js/controllers/RevealMoreHandler.js
+lib/pkp/js/controllers/NotificationHandler.js
+lib/pkp/js/controllers/HelpPanelHandler.js
+lib/pkp/js/controllers/form/FormHandler.js
+lib/pkp/js/controllers/form/DropdownHandler.js
+lib/pkp/js/controllers/form/AjaxFormHandler.js
+lib/pkp/js/controllers/form/ClientFormHandler.js
+lib/pkp/js/controllers/form/ToggleFormHandler.js
+lib/pkp/js/controllers/form/FileUploadFormHandler.js
+lib/pkp/js/controllers/form/MultilingualInputHandler.js
+lib/pkp/js/controllers/form/CancelActionAjaxFormHandler.js
+lib/pkp/js/controllers/form/ThemeOptionsHandler.js
+lib/pkp/js/controllers/form/UserFormHandler.js
+lib/pkp/js/controllers/form/reviewer/ReviewerReviewStep3FormHandler.js
+lib/pkp/js/controllers/grid/GridHandler.js
+lib/pkp/js/controllers/grid/CategoryGridHandler.js
+lib/pkp/js/controllers/listbuilder/ListbuilderHandler.js
+lib/pkp/js/controllers/listbuilder/MultipleListsListbuilderHandler.js
+lib/pkp/js/controllers/modal/ModalHandler.js
+lib/pkp/js/controllers/modal/ConfirmationModalHandler.js
+lib/pkp/js/controllers/modal/RedirectConfirmationModalHandler.js
+lib/pkp/js/controllers/modal/RemoteActionConfirmationModalHandler.js
+lib/pkp/js/controllers/modal/ButtonConfirmationModalHandler.js
+lib/pkp/js/controllers/modal/JsEventConfirmationModalHandler.js
+lib/pkp/js/controllers/modal/AjaxModalHandler.js
+lib/pkp/js/controllers/modal/WizardModalHandler.js
+lib/pkp/js/controllers/modals/editorDecision/form/EditorDecisionFormHandler.js
+lib/pkp/js/controllers/linkAction/LinkActionHandler.js
+lib/pkp/js/controllers/wizard/WizardHandler.js
+
+# Specific controllers
+lib/pkp/js/controllers/grid/queries/ReadQueryHandler.js
+lib/pkp/js/controllers/wizard/fileUpload/FileUploadWizardHandler.js
+lib/pkp/js/controllers/wizard/fileUpload/form/FileUploadFormHandler.js
+lib/pkp/js/controllers/wizard/fileUpload/form/RevisionConfirmationHandler.js
+lib/pkp/js/controllers/grid/filter/form/FilterFormHandler.js
+lib/pkp/js/controllers/grid/representations/form/RepresentationFormHandler.js
+lib/pkp/js/controllers/grid/settings/user/form/UserDetailsFormHandler.js
+lib/pkp/js/controllers/grid/settings/roles/form/UserGroupFormHandler.js
+lib/pkp/js/controllers/grid/settings/metadata/MetadataGridHandler.js
+lib/pkp/js/controllers/tab/settings/form/FileViewFormHandler.js
+lib/pkp/js/controllers/tab/settings/announcements/form/AnnouncementSettingsFormHandler.js
+lib/pkp/js/controllers/tab/settings/permissions/form/PermissionSettingsFormHandler.js
+lib/pkp/js/controllers/tab/settings/paymentMethod/PaymentMethodHandler.js
+lib/pkp/js/controllers/grid/notifications/NotificationsGridHandler.js
+lib/pkp/js/controllers/tab/settings/siteAccessOptions/form/SiteAccessOptionsFormHandler.js
+lib/pkp/js/controllers/tab/settings/managementSettings/UsersAndRolesTabHandler.js
+lib/pkp/js/controllers/tab/workflow/WorkflowTabHandler.js
+lib/pkp/js/controllers/tab/representations/RepresentationsTabHandler.js
+lib/pkp/js/controllers/informationCenter/NotesHandler.js
+lib/pkp/js/controllers/statistics/ReportGeneratorFormHandler.js
+lib/pkp/js/controllers/dashboard/form/DashboardTaskFormHandler.js
+lib/pkp/js/pages/header/HeaderHandler.js
+lib/pkp/js/pages/header/TasksHandler.js
+lib/pkp/js/pages/admin/ContextsHandler.js
+lib/pkp/js/pages/submission/SubmissionTabHandler.js
+lib/pkp/js/pages/submission/SubmissionStep2FormHandler.js
+lib/pkp/js/pages/submission/SubmissionStep3FormHandler.js
+lib/pkp/js/pages/workflow/WorkflowHandler.js
+lib/pkp/js/controllers/grid/users/reviewer/AdvancedReviewerSearchHandler.js
+lib/pkp/js/controllers/grid/users/reviewer/form/EditReviewFormHandler.js
+lib/pkp/js/controllers/grid/users/reviewer/form/AddReviewerFormHandler.js
+lib/pkp/js/controllers/grid/users/stageParticipant/form/StageParticipantNotifyHandler.js
+lib/pkp/js/controllers/grid/users/stageParticipant/form/AddParticipantFormHandler.js
+lib/pkp/js/pages/reviewer/ReviewerTabHandler.js
+lib/pkp/js/pages/authorDashboard/SubmissionEmailHandler.js
+js/controllers/grid/articleGalleys/ArticleGalleyGridHandler.js
+js/controllers/tab/issueEntry/IssueEntryTabHandler.js
+js/controllers/tab/issueEntry/form/IssueEntryPublicationMetadataFormHandler.js
+js/pages/search/SearchFormHandler.js
+
+# Our own plug-in (depends on classes)
+lib/pkp/js/lib/jquery/plugins/jquery.pkp.js

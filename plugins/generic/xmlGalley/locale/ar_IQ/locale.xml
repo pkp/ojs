@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/xmlGalley/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.generic.xmlGalley.displayName">إضافة لوح XML</message>
+	<message key="plugins.generic.xmlGalley.description">هذه الإضافة تنشئ ألواح XHTML من مقالة بصيغة XML باستعمال XSLT.</message>
+
+	<message key="plugins.generic.xmlGalley.manager.settings">الإعدادات</message>
+
+	<!-- XML Article Galleys Settings Management -->
+	<message key="plugins.generic.xmlGalley.settings.description"><![CDATA[<p>بواسطة هذه الإضافة، ألواح المؤلَّف ستتم صناعتها آلياً من ملف مصدري مرفوع بصيغة XML عبر استعمال تحويل خاص من ملف أنماط XSL.</p>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.renderer">طريقة تشكيل XSLT</message>
+	<message key="plugins.generic.xmlGalley.settings.PHP5">PHP 5.0.0+ مع وظائف XSL (libxslt)</message>
+	<message key="plugins.generic.xmlGalley.settings.PHP4">PHP 4.0.3+ مع وظائف XSLT (Sablotron)</message>
+	<message key="plugins.generic.xmlGalley.settings.notAvailable">غير متوافر</message>
+
+	<message key="plugins.generic.xmlGalley.settings.externalXSLT">مشكل خارجي عبر سطر الأوامر لـ XSLT (مثل: Xalan)</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[أدخل المسار الكامل لأداة تشكيل XSLT مع أي عوامل مطلوبة. استعمل %xsl لاستبدال موقع ملف أنماط XSL، و %xml لاستبدال موقع ملف XML المصدري؛ مثلاً: <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">إختبر XSLT</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">إختبار XSLT الخارجي تم بنجاح.</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">إختبار XSLT الخارجي فشل في الحصول على النتيجة المرجوة.</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTRequired">ينبغي تحديد معالج سطر الأوامر الخارجي لـ XSLT.</message>
+
+	<message key="plugins.generic.xmlGalley.settings.stylesheet">ملف أنماط XSL</message>
+	<message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM نشر المجلة DTD</a> &rarr; XHTML]]></message>
+
+	<message key="plugins.generic.xmlGalley.settings.xslFOP">تمكين تشكيل ألواح PDF باستعمال XSL-FO (مثل: FOP)</message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[أدخل المسار الكامل لمعالج FO مع أية عوامل مطلوبة. استعمل %fo لاستبدال موقع ملف XSL-FO ، و %pdf لاستبدال موقع ملف PDF؛ مثل: <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired">ينبغي تحديد معالج سطر الأوامر الخارجي لـ FO.</message>
+
+	<message key="plugins.generic.xmlGalley.settings.customXSL">ملف أنماط XSL مخصص</message>
+	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">ينبغي تحديد ملف أنماط مخصص بصيغة XSL.</message>
+	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">إن ملف الأنماط XSL لم يكن صحيحاً. لطفاً، تحقق من الملف ثم حاول مجدداً.</message>
+
+</locale>
+

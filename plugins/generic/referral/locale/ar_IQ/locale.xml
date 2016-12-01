@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/referral/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.generic.referral.name">إضافة الإحالة</message>
+	<message key="plugins.generic.referral.description">إضافة الإحالة تتعقب روابط الإنترنت العائدة رجوعاً إلى المقالات (مثلاً عندما يتبع القارئ رابطاً خارجياً يشير إلى المؤلَّف)، مما يسمح للمؤلفين بإدامة وامتلاك ميزة النشر المحتمل لقائمة محدثة آلياً للروابط العائدة لمقالة معينة.</message>
+	
+	<message key="plugins.generic.referral.editReferral">تعديل المراجع العائدة</message>
+	<message key="plugins.generic.referral.createReferral">إنشاء مرجع عائد</message>
+	<message key="plugins.generic.referral.referrals">المراجع العائدة</message>
+	<message key="plugins.generic.referral.count">الزيارات</message>
+	<message key="plugins.generic.referral.dateAdded">تأريخ إضافتها</message>
+	<message key="plugins.generic.referral.all">الكل</message>
+	<message key="plugins.generic.referral.all.empty">لا توجد روابط عائدة حالياً.</message>
+	<message key="plugins.generic.referral.status.new">جديد</message>
+	<message key="plugins.generic.referral.status.new.empty">لا توجد روابط عائدة جديدة حالياً.</message>
+	<message key="plugins.generic.referral.status.accepted">منشور</message>
+	<message key="plugins.generic.referral.status.accept">أنشر</message>
+	<message key="plugins.generic.referral.status.accept.confirm">هل أنت متأكد من رغبتك في نشر الروابط العائدة المحددة؟</message>
+	<message key="plugins.generic.referral.status.accept.empty">لا توجد روابط عائدة منشورة حالياً.</message>
+	<message key="plugins.generic.referral.status.decline">تجاهل</message>
+	<message key="plugins.generic.referral.status.declined">تم تجاهلها</message>
+	<message key="plugins.generic.referral.status.decline.confirm">هل أنت متأكد من رغبتك في تجاهل الروابط العائدة المحددة؟</message>
+	<message key="plugins.generic.referral.status.decline.empty">لا توجد روابط عائدة سبق تجاهلها.</message>
+	<message key="plugins.generic.referral.confirmDelete">هل أنت متأكد من رغبتك في حذف الروابط العائدة المحددة؟</message>
+	<message key="plugins.generic.referral.nameRequired">عنوان الرابط العائد مطلوب حتماً.</message>
+	<message key="plugins.generic.referral.urlRequired">رابط الإنترنت مطلوب حتماً.</message>
+	<message key="plugins.generic.referral.settings">إعدادات إضافة الإحالة</message>
+	<message key="plugins.generic.referral.settings.description">إن إضافة الإحالة تلتقط روابط الإنترنت التي تشير إلى المقالات المنشورة في هذه المجلة، بحيث يمكن إقامتها من قبل المؤلف ونشرها إختيارياً. هذا النموذج يتيح لرئيس تحرير المجلة السيطرة على كيفية التقاط هذه الروابط.</message>
+	<message key="plugins.generic.referral.excusions">الاستثناءات</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[أدخل قائمة من أنماط التعابير النظامية، واحداً في كل سطر، لتتم معاملتها كاستثناءات عند توثيق وقوعات الإحالة. يمكن استعمال هذه الميزة لمنع طلبات الموقع القادمة من محركات البحث من مزاحمة قائمة الإحالات. للمزيد من المعلومات عن التعابير النظامية، أنظر <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>.]]></message>
+</locale>
