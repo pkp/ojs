@@ -7,42 +7,104 @@
   * Copyright (c) 2014-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localized email templates XML file.
-  *
   -->
 
 <email_texts locale="ru_RU">
-	<email_text key="PASSWORD_RESET_CONFIRM">
-		<subject>Password Reset Confirmation</subject>
-		<body><![CDATA[We have received a request to reset your password for the {$siteTitle} web site.<br />
+	<email_text key="NOTIFICATION">
+		<subject>Новое уведомление с сайта «{$siteTitle}»</subject>
+		<body><![CDATA[Вы получили новое уведомление с сайта «{$siteTitle}»:<br />
 <br />
-If you did not make this request, please ignore this email and your password will not be changed. If you wish to reset your password, click on the below URL.<br />
+{$notificationContents}<br />
 <br />
-Reset my password: {$url}<br />
+Ссылка: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
-		<description>This email is sent to a registered user when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password.</description>
+		<description>Это письмо отправляется зарегистрированным пользователям, которые указали, что данный тип уведомления отправляется им электронной почтой.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>Новое уведомление с сайта «{$siteTitle}»</subject>
+		<body><![CDATA[Вы получили новое уведомление с сайта «{$siteTitle}»:<br />
+--<br />
+{$notificationContents}<br />
+<br />
+Ссылка: {$url}<br />
+--<br />
+<br />
+Если хотите прекратить получать письма с уведомлениями, пожалуйста, перейдите по ссылке {$unsubscribeLink}.<br />
+<br />
+{$principalContactSignature}]]></body>
+		<description>Это письмо отправляется незарегистрированным пользователям в списке рассылки уведомлений.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>Добро пожаловать в список рассылки сайта «{$siteTitle}»!</subject>
+		<body><![CDATA[Вы подписались на получение уведомлений с сайта «{$siteTitle}».<br />
+<br />
+Пожалуйста щелкните на этой ссылке для подтверждения запроса и добавления вашего почтового адреса в список рассылки: {$confirmLink}<br />
+<br />
+Если хотите прекратить получать письма с уведомлениями, пожалуйста, перейдите по ссылке {$unsubscribeLink}.<br />
+<br />
+{$principalContactSignature}]]></body>
+		<description>Это письмо отправляется незарегистрированному пользователю, который только что зарегистрировался в списке рассылки уведомлений.</description>
+	</email_text>
+	<email_text key="PASSWORD_RESET_CONFIRM">
+		<subject>Подтверждение сброса пароля</subject>
+		<body><![CDATA[Мы получили запрос на сброс вашего пароля на сайте «{$siteTitle}».<br />
+<br />
+Если вы не отправляли этот запрос, пожалуйста, проигнорирйте это письмо и ваш пароль не будет изменен. Если вы хотите сбросить свой пароль, то щелкните по ссылке ниже.<br />
+<br />
+Сбросить мой пароль: {$url}<br />
+<br />
+{$principalContactSignature}]]></body>
+		<description>Это письмо отправляется зарегистрированному пользователю, когда он сообщает, что забыл пароль или не может войти на сайт. В письме содержится ссылка (URL), перейдя по которой пользователь сможет сбросить свой пароль.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET">
-		<subject>Password Reset</subject>
-		<body><![CDATA[Your password has been successfully reset for use with the {$siteTitle} web site. Please retain this username and password, as it is necessary for all work with the journal.<br />
+		<subject>Пароль сброшен</subject>
+		<body><![CDATA[Ваш пароль на сайте «{$siteTitle}» был успешно сброшен. Пожалуйста, сохраните имя пользователя и пароль, так как они требуются для работы с журналом.<br />
 <br />
-Your username: {$username}<br />
+Ваше имя пользователя: {$username}<br />
 <br />
 {$principalContactSignature}]]></body>
-		<description>This email is sent to a registered user when they have successfully reset their password following the process described in the PASSWORD_RESET_CONFIRM email.</description>
+		<description>Это письмо отправляется зарегистрированному пользователю, когда он успешно сбросил свой пароль в соответствии с процедурой, описанной в письме PASSWORD_RESET_CONFIRM.</description>
 	</email_text>
 	<email_text key="USER_REGISTER">
-		<subject>New User Registration</subject>
-		<body><![CDATA[Thank you for registering as a user with {$contextName}. Please keep track of your username and password, which are needed for all work with this journal.<br />
+		<subject>Регистрация в журнале</subject>
+		<body><![CDATA[{$userFullName}!<br />
 <br />
-Username: {$username}<br />
-Password: {$password}<br />
+Теперь вы зарегистрированы как пользователь в «{$contextName}». В этом письме мы указали ваши имя пользователя и пароль, которые потребуются для всей работы с этим журналом через сайт. Вы в любой момент можете попросить, чтобы вас удалили из списка пользователей журнала, для этого просто свяжитесь со мной.<br />
 <br />
-Thank you,<br />
+Имя пользователя: {$username}<br />
+Пароль: {$password}<br />
+<br />
+С уважением,<br />
 {$principalContactSignature}]]></body>
-		<description>This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</description>
+		<description>Это письмо отправляется вновь зарегистрированному пользователю, приветствуя его в системе и сообщая ему имя пользователя и пароль для доступа к сайту.</description>
+	</email_text>
+	<email_text key="USER_VALIDATE">
+		<subject>Подтвердите свою учетную запись</subject>
+		<body><![CDATA[{$userFullName}!<br />
+<br />
+Вы создали учетную запись в «{$contextName}», но перед тем как начать ее использовать, вам нужно подтвердить ваш адрес электронной почты. Чтобы сделать это, просто пройдите по ссылке ниже:<br />
+<br />
+<a href="{$activateUrl}">{$activateUrl}</a><br />
+<br />
+С уважением,<br />
+{$principalContactSignature}]]></body>
+		<description>Это письмо отправляется вновь зарегистрированному пользователю для подтверждения его адреса электронной почты.</description>
+	</email_text>
+	<email_text key="REVIEWER_REGISTER">
+		<subject>Регистрация в качестве рецензента в «{$contextName}»</subject>
+		<body><![CDATA[Принимая во внимание ваш опыт, мы взяли на себя смелость зарегистрировать вас в базе данных потенциальных рецензентов для «{$contextName}». Это не налагает на вас никаких обязательств, а просто позволяет нам обращаться к вам при поступлении в наш журнал материалов, рецензентом которых вы могли бы стать. Получив предложение дать рецензию, вы получите возможность увидеть название и аннотацию рукописи, о которой идет речь. Вы всегда имеете возможность принять или отклонить это предложение. В также, в любой момент можете обратиться, чтобы Ваше имя было убрано из списка потенциальных рецензентов.
+
+Мы высылаем Вам имя пользователя и пароль, которые используются при любом взаимодействии с нашим журналом через веб-сайт. Например, Вы можете уточнить свои данные в профиле пользователя, указав интересующую Вас как рецензента тематику.
+
+Имя пользователя: {$username}
+Пароль: {$password}
+
+С уважением,
+{$principalContactSignature}</body>
+		<description>Это письмо отправляется вновь зарегистрированному рецензенту, приветствуя его в системе и сообщая ему имя пользователя и пароль для доступа к сайту.</description>
 	</email_text>
 	<email_text key="PUBLISH_NOTIFY">
 		<subject>New Issue Published</subject>
@@ -504,42 +566,6 @@ Thank you for completing the proofreading corrections for the galleys associated
 		<subject>Article of Possible Interest</subject>
 		<body><![CDATA[Thought you might be interested in seeing &quot;{$submissionTitle}&quot; by {$authorName} published in Vol {$volume}, No {$number} ({$year}) of {$contextName} at &quot;<a href="{$articleUrl}">{$articleUrl}</a>&quot;.]]></body>
 		<description>This email template provides a registered reader with the opportunity to send information about an article to somebody who may be interested. It is available via the Reading Tools and must be enabled by the Journal Manager in the Reading Tools Administration page.</description>
-	</email_text>
-	<email_text key="NOTIFICATION">
-		<subject>извещение сайта {$siteTitle}</subject>
-		<body><![CDATA[У Вас новое извещение на сайте {$siteTitle}:<br />
-<br />
-{$notificationContents}<br />
-<br />
-Ссылка: {$url}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description></description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>извещение сайта {$siteTitle}</subject>
-		<body><![CDATA[У Вас новое извещение на сайте  {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Ссылка: {$url}<br />
---<br />
-<br />
-Если хотите прекратить получение извещений, пожалуйста перейдите по ссылке  {$unsubscribeLink} и введите свой почтовый адрес и пароль.<br />
-<br />
-{$principalContactSignature}]]></body>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Добро пожаловать в список рассылки {$siteTitle} !</subject>
-		<body><![CDATA[Вы подписались на получение извещений с сайта {$siteTitle}.<br />
-<br />
-Пожалуйста нажмите на ссылку для подтверждения своего запроса и добавления Вашего почтового адреса в список рассылки: {$confirmLink}<br />
-<br />
-Если не хотите получать извещения, пожалуйста нажмите на ссылку {$unsubscribeLink}  и введите свой почтовый адрес и пароль.<br />
-<br />
-Пароль для отключения извещений: {$password}<br />
-<br />
-{$principalContactSignature}]]></body>
 	</email_text>
 	<email_text key="USER_VALIDATE">
 		<subject>Подтвердите свой электронный адрес</subject>
