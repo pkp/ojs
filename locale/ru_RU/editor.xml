@@ -44,8 +44,6 @@
 	<message key="editor.editorAdministration">Редактор: Администрирование</message>
 	<message key="editor.issues.createIssue">Создать выпуск</message>
 	<message key="editor.issues.editIssue">Управление выпуском: {$issueIdentification}</message>
-	<message key="editor.issues.backIssues">Старые выпуски</message>
-	<message key="editor.issues.futureIssues">Будущие выпуски</message>
 	<message key="editor.issues.currentIssue">Текущий выпуск</message>
 	<message key="editor.issues.numArticles">Количество материалов</message>
 	<message key="editor.issues.noArticles">На текущий момент нет запланированных материалов для этого выпуска.</message>

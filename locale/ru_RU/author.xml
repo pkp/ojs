@@ -30,14 +30,9 @@
 	<message key="author.submit.metadata">Ввод метаданных</message>
 	<message key="author.submit.supplementaryFiles">Загрузка дополнительных файлов</message>
 	<message key="author.submit.confirmation">Подтверждение</message>
-<<<<<<< HEAD
 	<message key="author.submit.nextSteps">Следующие шаги</message>
-	<message key="author.submit.cancelSubmission">Вы можете закончить эту отправку позже, выбрав «Активные материалы» на домашней странице автора.</message>
+	<message key="submission.submit.cancelSubmission">Вы можете закончить эту отправку позже, выбрав «Активные материалы» на домашней странице автора.</message>
 	<message key="author.submit.notAccepting">Этот журнал сейчас не принимает материалы.</message>
-=======
-	<message key="submission.submit.cancelSubmission">Вы можете закончить эту отправку позже, выбрав «Статьи в работе» на домашней странице автора.</message>
-	<message key="author.submit.notAccepting">Этот журнал сейчас не принимает статьи.</message>
->>>>>>> pkp/master
 	<message key="author.submit.requestWaiver">Запрос отмены оплаты</message>
 	<message key="author.submit.qualifyForWaiver">Пожалуйста, рассмотрите возможность отменить плату за отправку данной статьи</message>
 	<message key="author.submit.addReasonsForWaiver">Пожалуйста, используйте поле комментариев ниже для указания причин, почему плата должна быть отменена.</message>
@@ -51,11 +46,8 @@
 	<message key="author.submissions.confirmDelete">Вы уверены, что хотите удалить этот материал, отправка которого не была завершена?</message>
 	<message key="author.submissions.viewStatus">Показать статус</message>
 	<message key="author.submissions.noSubmissions">Нет отправленных материалов.</message>
-	<message key="author.submit.howToSubmit"><![CDATA[Столкнулись с трудностями? Свяжитесь с <a href="mailto:{$supportEmail}">{$supportName}</a>, чтобы получить помощь ({$supportPhone}).]]></message>
-	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Столкнулись с трудностями? Свяжитесь с <a href="mailto:{$supportEmail}">{$supportName}</a>, чтобы получить помощь.]]></message>
 	<message key="author.submit.journalSection">Раздел журнала</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Выберите подходящий раздел для этого материала (смотрите «Разделы и правила» на странице <a href="{$aboutUrl}" target="_new">«О журнале»</a>).]]></message>
-	<message key="submission.submit.selectSection">Пожалуйста, выберите раздел...</message>
 	<message key="author.submit.submissionLocale">Язык отправляемого материала</message>
 	<message key="author.submit.submissionLocaleDescription">Этот журнал принимает материалы на нескольких языках. Выберите основной язык отправляемого материала из раскрывающегося списка ниже.</message>
 	<message key="author.submit.verifyChecklist">Чтобы продолжить вы должны убедиться, что выполнены все пункты в контрольном списке отправки.</message>
