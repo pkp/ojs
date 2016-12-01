@@ -22,8 +22,8 @@ class rebuildSearchIndex extends CommandLineTool {
 	 * Constructor
 	 * @param $argv array
 	 */
-	function rebuildSearchIndex($argv) {
-		parent::CommandLineTool($argv);
+	function __construct($argv) {
+		parent::__construct($argv);
 	}
 
 	/**
