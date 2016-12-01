@@ -28,8 +28,8 @@ class genEmailUpdates extends CommandLineTool {
 	 * @param $argv array command-line arguments
 	 * 	If specified, the first argument should be the file to parse
 	 */
-	function genEmailUpdates($argv = array()) {
-		parent::CommandLineTool($argv);
+	function __construct($argv = array()) {
+		parent::__construct($argv);
 
 		if (count($argv) != 3) {
 			$this->usage();
