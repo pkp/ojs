@@ -15,7 +15,7 @@
 	<message key="editor.home">Главная страница редактора</message>
 	<message key="editor.reassign">Переназначить</message>
 	<message key="editor.submissionsAndPublishing">Материалы и публикация</message>
-	<message key="editor.submissionQueue">Очередь матенриалов</message>
+	<message key="editor.submissionQueue">Очередь материалов</message>
 	<message key="editor.submissionArchive">Архив материалов</message>
 	<message key="editor.publishing">Публикация</message>
 	<message key="editor.publishedIssues">Опубликованные выпуски</message>
