@@ -22,6 +22,27 @@
 				{rdelim});
 	{rdelim});
 </script>
+
+{* Submission metadata versioning *}
+{if $isPublished}
+	<form id='submissionSettingsRevisionForm' class='pkp_form'>
+		{fbvFormArea id="submissionSettingsRevisionForm"}
+			{if $submissionSettingsRevisions|@count > 1} 
+				{fbvFormSection  for="submissionSettingsRevision"}
+					{fbvElement type="select" name="submissionSettingsRevision" id="submissionSettingsRevision" from=$submissionSettingsRevisions translate=false selected=$currentSubmissionSettingsRevision}
+				{/fbvFormSection}
+			{/if} 
+			{if  $versioningEnabled}
+				{fbvFormSection list=true}
+					{fbvElement type="checkbox" id="saveAsRevision" name="saveAsRevision" label="submission.saveAsRevision"}
+				{/fbvFormSection}
+			{/if}
+			{fbvFormSection}
+			{/fbvFormSection}
+		{/fbvFormArea}
+	</form>
+{/if}
+
 <div id="newIssueEntryTabs">
 	<ul>
 		<li>
@@ -29,5 +50,8 @@
 		</li>
 		<li>
 			<a name="catalog" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="identifiers" op="identifiers" submissionId=$submissionId stageId=$stageId tabPos="1"}">{translate key="submission.identifiers"}</a>
+		</li>
+		<li>
+			<a name="catalog" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="publication" op="publicationMetadata" submissionId=$submissionId stageId=$stageId tabPos="1"}">{translate key="submission.issueEntry.publicationMetadata"}</a>
 		</li>
 </ul>

@@ -133,6 +133,7 @@ js/controllers/grid/articleGalleys/ArticleGalleyGridHandler.js
 js/controllers/tab/issueEntry/IssueEntryTabHandler.js
 js/controllers/tab/issueEntry/form/IssueEntryPublicationMetadataFormHandler.js
 js/pages/search/SearchFormHandler.js
+js/controllers/tab/issueEntry/SubmissionRevisionsHandler.js
 
 # Our own plug-in (depends on classes)
 lib/pkp/js/lib/jquery/plugins/jquery.pkp.js

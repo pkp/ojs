@@ -72,15 +72,17 @@ class ArticleDAO extends SubmissionDAO {
 	/**
 	 * Internal function to return an Article object from a row.
 	 * @param $row array
+	 * @param $submissionRevision int
 	 * @return Article
 	 */
-	function _fromRow($row) {
-		$article = parent::_fromRow($row);
+	function _fromRow($row, $submissionRevision = null) {
+		$article = parent::_fromRow($row, $submissionRevision);
 
 		$article->setSectionId($row['section_id']);
 		$article->setSectionTitle($row['section_title']);
 		$article->setSectionAbbrev($row['section_abbrev']);
 		$article->setCitations($row['citations']);
+		$article->setCurrentRound($row['current_round']);
 		$article->setPages($row['pages']);
 		$article->setFastTracked($row['fast_tracked']);
 		$article->setHideAuthor($row['hide_author']);
@@ -176,11 +178,14 @@ class ArticleDAO extends SubmissionDAO {
 		);
 
 		$this->updateLocaleFields($article);
+		$contextId = Request::getContext()->getId();
+		$version = $article->getCurrentVersionId($contextId);
 
 		// update authors for this article
-		$authors = $article->getAuthors();
+		$authors = $article->getAuthors(false, $version);
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
 			if ($authors[$i]->getId() > 0) {
+				$authors[$i]->setVersion($version);
 				$this->authorDao->updateObject($authors[$i]);
 			} else {
 				$this->authorDao->insertObject($authors[$i]);

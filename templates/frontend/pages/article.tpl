@@ -24,6 +24,11 @@
 	{* Show article overview *}
 	{include file="frontend/objects/article_details.tpl"}
 
+	{* Display article versions *}
+	{if $versioningEnabled}
+		{include file="frontend/objects/article_versions.tpl"}
+	{/if}
+
 	{call_hook name="Templates::Article::Footer::PageFooter"}
 
 </div><!-- .page -->

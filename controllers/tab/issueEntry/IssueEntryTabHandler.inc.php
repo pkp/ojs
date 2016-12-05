@@ -100,8 +100,12 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$submission = $this->getSubmission();
 		$stageId = $this->getStageId();
 		$user = $request->getUser();
+		$revision = $request->getUserVar('revision') ? (int)$request->getUserVar('revision') : null;
+		$saveAsRevision = $request->getUserVar('saveAsRevision') ? (int)$request->getUserVar('saveAsRevision') : null;
+		$formParams = array('displayedInContainer' => true, 'revision' => $revision, 'saveAsRevision' => $saveAsRevision);
+
 		import('controllers.tab.issueEntry.form.IssueEntryPublicationMetadataForm');
-		$issueEntryPublicationMetadataForm = new IssueEntryPublicationMetadataForm($submission->getId(), $user->getId(), $stageId);
+		$issueEntryPublicationMetadataForm = new IssueEntryPublicationMetadataForm($submission->getId(), $user->getId(), $stageId, $formParams);
 		$issueEntryPublicationMetadataForm->initData();
 		return new JSONMessage(true, $issueEntryPublicationMetadataForm->fetch($request));
 	}
@@ -249,11 +253,13 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 	 * @copydoc PublicationEntryTabHandler::_getPublicationEntrySubmissionReviewForm()
 	 * @return PKPForm
 	 */
-	function _getPublicationEntrySubmissionReviewForm() {
+	function _getPublicationEntrySubmissionReviewForm($revision = null, $saveAsRevision = false) {
 
 		$submission = $this->getSubmission();
+		$formParams = array('displayedInContainer' => true, 'revision' => $revision, 'saveAsRevision' => $saveAsRevision);
+
 		import('controllers.modals.submissionMetadata.form.IssueEntrySubmissionReviewForm');
-		return new IssueEntrySubmissionReviewForm($submission->getId(), $this->getStageId(), array('displayedInContainer' => true));
+		return new IssueEntrySubmissionReviewForm($submission->getId(), $this->getStageId(), $formParams);
 	}
 
 	/**

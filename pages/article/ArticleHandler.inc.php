@@ -20,7 +20,7 @@ class ArticleHandler extends Handler {
 	/** @var journal object: journal associated with the request **/
 	var $journal;
 
-	/** @var issue object: issue associated with the request **/	
+	/** @var issue object: issue associated with the request **/
 	var $issue;
 
 	/** @var article object: article associated with the request **/
@@ -29,17 +29,20 @@ class ArticleHandler extends Handler {
 	/** @var galley object: galley associated with the request **/
 	var $galley;
 
-	/** @var int: article ID associated with the request **/
-	var $articleId;
+	/** @var int: submission(article) revision ID associated with the request **/
+	var $submissionRevision;
 
-	/** @var int: galley ID associated with the request **/
-	var $galleyId;
+	/** @var int: the highest metadata revision ID of a submission **/
+	var $latestSubmissionRevision;
 
-	/** @var int: file ID associated with the request **/
-	var $fileId;
+	/** @var boolean: true if current submission is an old revision **/
+	var $isPreviousRevision = false;
 
-	/** @var int: file revision ID associated with the request **/
-	var $fileRevision;
+	/** @var array: precedent revisions of the current submission **/
+	var $previousRevisions;
+
+	/** @var string: localized title of the latest submission **/
+	var $latestTitle;
 
 	/**
 	 * Constructor
@@ -68,11 +71,26 @@ class ArticleHandler extends Handler {
 	function initialize($request, $args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 
-		$journal = $request->getContext();
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $journal->getId(), $articleId, true);
+		$this->journal = $request->getContext();
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+
+		// get published article object
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, true);
+
+		// versioning
+
+		// get all previous article versions
+		$this->previousRevisions = $articleDao->getSubmissionRevisions($articleId, $this->journal->getId(), false, true);
+
+		// get the most resent article version
+		$this->latestSubmissionRevision = $articleDao->getLatestRevisionId($articleId, $this->journal->getId() );
+
+		// get title of recent article version
+		$this->latestTitle = $publishedArticleDao->getLocalizedTitleByVersion($publishedArticle->getId(), $this->latestSubmissionRevision);
+
 		if (isset($publishedArticle)) {
 			$issue = $issueDao->getById($publishedArticle->getIssueId(), $publishedArticle->getJournalId(), true);
 			$this->issue = $issue;
@@ -91,6 +109,28 @@ class ArticleHandler extends Handler {
 			$this->galley = $galleyDao->getByBestGalleyId($galleyId, $this->article->getId());
 			if ($galleyId && !$this->galley) $request->getDispatcher()->handle404();
 		}
+	}
+
+	/**
+	 * Handle article versions. Calls view().
+	 * @param $args array
+	 * @param $request Request
+	 */
+	function version($args, $request){
+		$articleId = $args[0];
+		$this->submissionRevision = $args[1];
+
+		// get published article object by revision
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId((int) $articleId, (int) $this->journal->getId(), false, $this->submissionRevision);
+		$this->article = $publishedArticle;
+
+		// check of this is an old version
+		if ($this->submissionRevision &&($this->submissionRevision < $this->latestSubmissionRevision)) {
+			$this->isPreviousRevision = true;
+		}
+
+		$this->view($args, $request);
 	}
 
 	/**
@@ -183,6 +223,14 @@ class ArticleHandler extends Handler {
 			if ( $paymentManager->purchaseArticleEnabled() ) {
 				$templateMgr->assign('purchaseArticleEnabled', true);
 			}
+
+			// article versioning
+			if ($this->isPreviousRevision) {
+				$templateMgr->assign('isPreviousRevision', true);
+				$templateMgr->assign('latestTitle', $this->latestTitle);
+			}
+			$templateMgr->assign('submissionRevision', $this->submissionRevision);
+			$templateMgr->assign('previousRevisions', $this->previousRevisions);
 
 			if (!HookRegistry::call('ArticleHandler::view', array(&$request, &$issue, &$article))) {
 				return $templateMgr->display('frontend/pages/article.tpl');

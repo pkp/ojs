@@ -64,6 +64,16 @@
  * @uses $ccLicenseBadge string An image and text with details about the license
  *}
 <article class="obj_article_details">
+
+	{* Notification if there is a more recent version of this article *}
+	{if $versioningEnabled && $isPreviousRevision}
+		<div class='cmp_notification'>
+			{translate key="submission.versioning.currentVersion"}: 
+			{assign var=newVersionLink value=$article->getBestArticleId($currentJournal)}
+			<a href="{url op="view" path=$newVersionLink escape=false}">{$latestTitle}</a>
+		</div>
+	{/if}
+
 	<h1 class="page_title">
 		{$article->getLocalizedTitle()|escape}
 	</h1>
@@ -77,9 +87,9 @@
 	<div class="row">
 		<div class="main_entry">
 
-			{if $article->getAuthors()}
+			{if $article->getAuthors(false, $submissionRevision)}
 				<ul class="item authors">
-					{foreach from=$article->getAuthors() item=author}
+					{foreach from=$article->getAuthors(false, $submissionRevision) item=author}
 						<li>
 							<span class="name">
 								{$author->getFullName()|escape}

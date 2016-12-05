@@ -294,9 +294,10 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $articleId int
 	 * @param $journalId int optional
 	 * @param $useCache boolean optional
+	 * @param $submissionRevision int optional
 	 * @return PublishedArticle object
 	 */
-	function getByArticleId($articleId, $journalId = null, $useCache = false) {
+	function getByArticleId($articleId, $journalId = null, $useCache = false, $submissionRevision = null) {
 		if ($useCache) {
 			$cache = $this->_getPublishedArticleCache();
 			$returner = $cache->get($articleId);
@@ -322,7 +323,7 @@ class PublishedArticleDAO extends ArticleDAO {
 
 		$publishedArticle = null;
 		if ($result->RecordCount() != 0) {
-			$publishedArticle = $this->_fromRow($result->GetRowAssoc(false));
+			$publishedArticle = $this->_fromRow($result->GetRowAssoc(false), true, $submissionRevision);
 		}
 
 		$result->Close();
@@ -528,10 +529,11 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * creates and returns a published article object from a row
 	 * @param $row array
 	 * @param $callHooks boolean Whether or not to call hooks
+	 * @param $submissionRevision int optional
 	 * @return PublishedArticle object
 	 */
-	function _fromRow($row, $callHooks = true) {
-		$publishedArticle = parent::_fromRow($row);
+	function _fromRow($row, $callHooks = true, $submissionRevision = null) {
+		$publishedArticle = parent::_fromRow($row, $submissionRevision);
 		$publishedArticle->setPublishedArticleId($row['published_submission_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
 		$publishedArticle->setSequence($row['seq']);

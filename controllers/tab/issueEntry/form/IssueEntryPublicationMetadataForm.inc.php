@@ -44,7 +44,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 	function __construct($submissionId, $userId, $stageId = null, $formParams = null) {
 		parent::__construct('controllers/tab/issueEntry/form/publicationMetadataFormFields.tpl');
 		$submissionDao = Application::getSubmissionDAO();
-		$this->_submission = $submissionDao->getById($submissionId);
+		$revision = isset($formParams['revision']) ? $formParams['revision'] : null;
+		$this->_submission = $submissionDao->getById((int) $submissionId, null, false, $revision);
 
 		$this->_stageId = $stageId;
 		$this->_formParams = $formParams;
@@ -340,6 +341,20 @@ class IssueEntryPublicationMetadataForm extends Form {
 				$submission->setCopyrightHolder(null, null);
 				$submission->setLicenseURL(null);
 			}
+
+			// Versioning
+
+			if ($request->getUserVar('submissionRevision')) {
+				$revision = (int)$request->getUserVar('submissionRevision');
+			} else {
+				$revision = $submission->getCurrentVersionId($context->getId());
+			}
+
+			if ($request->getUserVar('saveAsRevision')) {
+				$revision++;
+			}
+			$submission->setData('submissionRevision', $revision);
+
 
 			// Resequence the articles.
 			$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $issueId);

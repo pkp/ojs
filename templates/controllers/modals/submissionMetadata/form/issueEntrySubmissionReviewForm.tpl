@@ -35,6 +35,9 @@
 				{rdelim}
 			{rdelim}
 		);
+		$('#{$submissionMetadataViewFormId}').pkpHandler(
+			'$.pkp.controllers.tab.issueEntry.SubmissionRevisionsHandler'
+		);
 	{rdelim});
 </script>
 
@@ -47,6 +50,14 @@
 	<input type="hidden" name="stageId" value="{$stageId|escape}" />
 	<input type="hidden" name="displayedInContainer" value="{$formParams.displayedInContainer|escape}" />
 	<input type="hidden" name="tab" value="submission" />
+
+	{* Versioning *}
+	{assign var=submissionRevision value=$formParams.revision}
+	{if !$formParams.revision}
+		{assign var=submissionRevision value=$latestRevisionId}
+	{/if}
+	<input type="hidden" name="submissionRevision" id="submissionRevision" value="{$submissionRevision}" />
+	<input type="hidden" name="saveAsRevision" id="saveAsRevision" value="{$formParams.saveAsRevision}" />
 
 	{include file="submission/form/section.tpl" readOnly=$formParams.readOnly}
 

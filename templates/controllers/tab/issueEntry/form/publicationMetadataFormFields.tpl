@@ -16,6 +16,9 @@
 				arePermissionsAttached: {if $arePermissionsAttached}true{else}false{/if}
 			{rdelim}
 		);
+		$('#publicationMetadataEntryForm').pkpHandler(
+			'$.pkp.controllers.tab.issueEntry.SubmissionRevisionsHandler'
+		);
 	{rdelim});
 </script>
 
@@ -27,6 +30,8 @@
 	<input type="hidden" name="stageId" value="{$stageId|escape}" />
 	<input type="hidden" name="waivePublicationFee" value="0" />
 	<input type="hidden" name="markAsPaid" value="0" />
+	<input type="hidden" name="submissionRevision" value="{$formParams.revision|escape}" />
+	<input type="hidden" name="saveAsRevision" value="{$formParams.saveAsRevision|escape}" />
 
 	{if !$publicationFeeEnabled || $publicationPayment}
 		{fbvFormArea id="schedulingInformation" title="editor.article.scheduleForPublication"}

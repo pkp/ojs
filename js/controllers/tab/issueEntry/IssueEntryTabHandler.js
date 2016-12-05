@@ -34,6 +34,8 @@
 	$.pkp.controllers.tab.issueEntry.IssueEntryTabHandler =
 			function($tabs, options) {
 
+		this.setRevision(this.getLatestRevision());
+
 		if (options.selectedGalleyId) {
 			options.selected =
 					this.getTabPositionByGalleyId_(options.selectedGalleyId, $tabs);
@@ -226,5 +228,58 @@
 			return null;
 		}
 	};
+
+
+	/**
+	 * getLatestRevision
+	 * @param {jQueryObject} selectField
+	 * @return {int} latest revision id
+	 */
+	$.pkp.controllers.tab.issueEntry.IssueEntryTabHandler.prototype.getLatestRevision = function() {
+		var latestRevision = this.getRevisionSelectField().children().first().val();
+		return latestRevision ? latestRevision : 1;
+	}
+
+
+	/**
+	 * getSelectedRevision
+	 * @param {jQueryObject} selectField
+	 * @return {int} selected revision id
+	 */
+	$.pkp.controllers.tab.issueEntry.IssueEntryTabHandler.prototype.getSelectedRevision = function() {
+		return this.getRevisionSelectField().val();
+	}
+
+
+	/**
+	 * getRevisionSelectField
+	 * @return {jQueryObject}
+	 */
+	$.pkp.controllers.tab.issueEntry.IssueEntryTabHandler.prototype.getRevisionSelectField = function() {
+		return $('select#submissionSettingsRevision');
+	}
+	
+	
+	/**
+	 * getSaveAsRevisionField
+	 * @return {jQueryObject}
+	 */
+	$.pkp.controllers.tab.issueEntry.IssueEntryTabHandler.prototype.getSaveAsRevisionField = function() {
+		return $('#saveAsRevision');
+	}
+
+
+	/**
+	 * setRevision
+	 * @param {int} revision
+	 */
+	$.pkp.controllers.tab.issueEntry.IssueEntryTabHandler.prototype.setRevision = function(revision) {
+		var currentPath = window.location.pathname;
+		var journalPath = currentPath.split('workflow')[0];
+
+		$.cookie('version', revision, {path: journalPath});
+	}
+
+
 /** @param {jQuery} $ jQuery closure. */
 }(jQuery));
