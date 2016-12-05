@@ -161,6 +161,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 			'copyrightYear' => $submission->getDefaultCopyrightYear(),
 			'licenseURL' => $submission->getDefaultLicenseURL(),
 			'arePermissionsAttached' => !empty($copyrightHolder) || !empty($copyrightYear) || !empty($licenseURL),
+			'datePublished' => $submission->getDatePublished(),
 		);
 	}
 
@@ -289,7 +290,6 @@ class IssueEntryPublicationMetadataForm extends Form {
 				if ($publishedArticle) {
 					$publishedArticle->setIssueId($issueId);
 					$publishedArticle->setSequence(REALLY_BIG_NUMBER);
-					$publishedArticle->setDatePublished($this->getData('datePublished'));
 					$publishedArticle->setAccessStatus($accessStatus);
 					$publishedArticleDao->updatePublishedArticle($publishedArticle);
 
@@ -299,7 +299,6 @@ class IssueEntryPublicationMetadataForm extends Form {
 					$publishedArticle = $publishedArticleDao->newDataObject();
 					$publishedArticle->setId($submission->getId());
 					$publishedArticle->setIssueId($issueId);
-					$publishedArticle->setDatePublished(Core::getCurrentDate());
 					$publishedArticle->setSequence(REALLY_BIG_NUMBER);
 					$publishedArticle->setAccessStatus($accessStatus);
 
@@ -344,12 +343,17 @@ class IssueEntryPublicationMetadataForm extends Form {
 
 			// Versioning
 
+			// set publication date
+			$submission->setDatePublished($this->getData('datePublished') ? $this->getData('datePublished') : $submission->getDatePublished());
+
+			// get revisions
 			if ($request->getUserVar('submissionRevision')) {
 				$revision = (int)$request->getUserVar('submissionRevision');
 			} else {
 				$revision = $submission->getCurrentVersionId($context->getId());
 			}
 
+			// save as new revision
 			if ($request->getUserVar('saveAsRevision')) {
 				$revision++;
 			}

@@ -240,11 +240,7 @@
 			{if $article->getDatePublished()}
 				<div class="item published">
 					<div class="label">
-						{if $versioningEnabled}
-							{translate key="submissions.firstPublished"}
-						{else}
-							{translate key="submissions.published"}
-						{/if}
+						{translate key="submissions.published"}
 					</div>
 					<div class="value">
 						{$article->getDatePublished()|date_format:$dateFormatShort}

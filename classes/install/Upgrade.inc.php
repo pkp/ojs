@@ -1902,6 +1902,28 @@ class Upgrade extends Installer {
 			$result->MoveNext();
 		}
 		$result->Close();
+
+	}
+
+	/**
+	 * Move 'date_published' from the table 'published_submissions' into the table 'submission_settings'
+	 * @return boolean
+	 */
+	function migrateDatesPublished() {
+		$submissionDao = Application::getSubmissionDAO();
+		$result = $submissionDao->retrieve('SELECT submission_id, date_published FROM published_submissions');
+
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$submissionId = $row['submission_id'];
+			$datePublished = $submissionDao->datetimeFromDB($row['date_published']);
+
+			$submission = $submissionDao->getById($submissionId);
+			$submission->setDatePublished($datePublished);
+			$submissionDao->updateLocaleFields($submission);
+
+			$result->MoveNext();
+		}
 		return true;
 	}
 
