@@ -71,11 +71,11 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * @see Plugin::getTemplatePath()
+	 * @copydoc PKPPlugin::getTemplatePath
 	 */
-	function getTemplatePath() {
-		$plugin =& $this->_getLucenePlugin();
-		return $plugin->getTemplatePath();
+	function getTemplatePath($inCore = false) {
+		$plugin = $this->_getLucenePlugin();
+		return $plugin->getTemplatePath($inCore);
 	}
 
 	/**

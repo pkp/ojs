@@ -119,13 +119,12 @@ class CustomLocalePlugin extends GenericPlugin {
  	/**
 	 * @copydoc Plugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
+	function manage($args, $request) {
+		if (!parent::manage($args, $request)) return false;
 
-		$request = $this->getRequest();
 		$this->import('CustomLocaleHandler');
 		$customLocaleHandler = new CustomLocaleHandler($this->getName());
-		switch ($verb) {
+		switch ($array_shift($args)) {
 			case 'edit':
 				$customLocaleHandler->edit($args, $request);
 				return true;

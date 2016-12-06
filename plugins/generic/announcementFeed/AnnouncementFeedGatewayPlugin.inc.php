@@ -67,11 +67,10 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	}
 
 	/**
-	 * Override the builtin to get the correct template path.
-	 * @return string
+	 * @copydoc PKPPlugin::getTemplatePath
 	 */
-	function getTemplatePath() {
-		return $this->getAnnouncementFeedPlugin()->getTemplatePath() . 'templates/';
+	function getTemplatePath($inCore = false) {
+		return $this->getAnnouncementFeedPlugin()->getTemplatePath($inCore) . 'templates/';
 	}
 
 	/**
