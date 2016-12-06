@@ -15,13 +15,13 @@
 import('lib.pkp.classes.form.Form');
 
 class ExternalFeedSettingsForm extends Form {
-	
+
 	/** @var $journalId int */
 	protected $journalId;
-	
+
 	/** @var $plugin object */
 	protected $plugin;
-	
+
 	/**
 	 * Constructor
 	 * @param $plugin object
@@ -36,7 +36,7 @@ class ExternalFeedSettingsForm extends Form {
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
 	}
-	
+
 	/**
 	 * Initialize form data.
 	 */
@@ -48,16 +48,17 @@ class ExternalFeedSettingsForm extends Form {
 			'externalFeedStyleSheet' => $plugin->getSetting($journalId, 'externalFeedStyleSheet')
 		);
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	public function readInputData() {
 		$this->readUserVars(array('externalFeedStyleSheet'));
 	}
-	
+
 	/**
-	 * Display the form.
+	 * Fetch the form.
+	 * @copydoc Form::fetch()
 	 */
 	public function fetch($request) {
 		$journalId = $this->journalId;
@@ -70,7 +71,7 @@ class ExternalFeedSettingsForm extends Form {
 	
 		return parent::fetch($request);
 	}
-	
+
 	/**
 	 * Deletes a custom stylesheet.
 	 */
@@ -88,5 +89,5 @@ class ExternalFeedSettingsForm extends Form {
 			return new JSONMessage(false);
 		}
 	}
-	
+
 }

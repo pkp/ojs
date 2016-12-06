@@ -16,12 +16,10 @@
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class ExternalFeedBlockPlugin extends BlockPlugin {
-	/** @var string Name of parent plugin */
-	protected $parentPluginName;
+	/** @var ExternalFeedPlugin reference to external feed plugin */
 	protected $parentPlugin = null;
 
-	public function __construct($parentPluginName, $plugin) {
-		$this->parentPluginName = $parentPluginName;
+	public function __construct($plugin) {
 		$this->parentPlugin = $plugin;
 		parent::__construct();
 	}
@@ -73,7 +71,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 		$plugin =& $this->getExternalFeedPlugin();
 		return $plugin->getPluginPath();
 	}
-	
+
 	/**
 	 * Override the builtin to get the correct template path.
 	 * @return string

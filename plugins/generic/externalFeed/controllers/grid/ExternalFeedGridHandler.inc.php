@@ -18,7 +18,7 @@ import('plugins.generic.externalFeed.controllers.grid.ExternalFeedGridCellProvid
 class ExternalFeedGridHandler extends GridHandler {
 	/** @var ExternalFeedPlugin The external feeds plugin */
 	static $plugin;
-	
+
 	/**
 	 * Set the external feeds plugin.
 	 * @param $plugin ExternalFeedPlugin
@@ -26,7 +26,7 @@ class ExternalFeedGridHandler extends GridHandler {
 	static public function setPlugin($plugin) {
 		self::$plugin = $plugin;
 	}
-	
+
 	/**
 	 * Constructor
 	 */
@@ -37,7 +37,7 @@ class ExternalFeedGridHandler extends GridHandler {
 			array('index', 'fetchGrid', 'fetchRow', 'addExternalFeed', 'editExternalFeed', 'updateExternalFeed', 'delete')
 		);
 	}
-	
+
 	//
 	// Overridden template methods
 	//
@@ -106,7 +106,7 @@ class ExternalFeedGridHandler extends GridHandler {
 		));
 		
 	}
-	
+
 	/**
 	 * @copydoc GridHandler::initFeatures()
 	 */
@@ -114,14 +114,14 @@ class ExternalFeedGridHandler extends GridHandler {
 		import('lib.pkp.classes.controllers.grid.feature.OrderGridItemsFeature');
 		return array(new OrderGridItemsFeature());
 	}
-	
+
 	/**
 	 * @copydoc GridHandler::getDataElementSequence()
 	 */
 	function getDataElementSequence($row) {
 		return $row->getSequence();
 	}
-	
+
 	/**
 	 * @copydoc GridHandler::setDataElementSequence()
 	 */
@@ -138,7 +138,7 @@ class ExternalFeedGridHandler extends GridHandler {
 		}
 		
 	}
-	
+
 	//
 	// Overridden methods from GridHandler
 	//
@@ -148,7 +148,7 @@ class ExternalFeedGridHandler extends GridHandler {
 	function getRowInstance() {
 		return new ExternalFeedGridRow();
 	}
-	
+
 	//
 	// Public Grid Actions
 	//
@@ -161,10 +161,9 @@ class ExternalFeedGridHandler extends GridHandler {
 		$context = $request->getContext();
 		import('lib.pkp.classes.form.Form');
 		$form = new Form(self::$plugin->getTemplatePath() . '/externalFeeds.tpl');
-		$json = new JSONMessage(true, $form->fetch($request));
-		return $json->getString();
+		return new JSONMessage(true, $form->fetch($request));
 	}
-	
+
 	/**
 	 * An action to add a new external feed
 	 * @param $args array Arguments to the request
@@ -173,7 +172,7 @@ class ExternalFeedGridHandler extends GridHandler {
 	function addExternalFeed($args, $request) {
 		return $this->editExternalFeed($args, $request);
 	}
-	
+
 	/**
 	 * An action to edit an external feed
 	 * @param $args array Arguments to the request
@@ -192,7 +191,7 @@ class ExternalFeedGridHandler extends GridHandler {
 		$json = new JSONMessage(true, $externalFeedForm->fetch($request));
 		return $json->getString();
 	}
-	
+
 	/**
 	 * Update feed
 	 * @param $args array
@@ -218,7 +217,7 @@ class ExternalFeedGridHandler extends GridHandler {
 			return $json->getString();
 		}
 	}
-	
+
 	/**
 	 * Delete an external feed entry
 	 * @param $args array
@@ -236,5 +235,5 @@ class ExternalFeedGridHandler extends GridHandler {
 		
 		return DAO::getDataChangedEvent();
 	}
-	
+
 }

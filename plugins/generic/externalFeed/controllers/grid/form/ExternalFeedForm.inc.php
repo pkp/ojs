@@ -19,7 +19,7 @@ class ExternalFeedForm extends Form {
 	/** @var int Context (press / journal) ID */
 	protected $contextId;
 	
-	/** @var string Static page name */
+	/** @var int Feed id */
 	protected $feedId;
 	
 	/** @var ExternalFeedPlugin External feed plugin */
@@ -94,10 +94,11 @@ class ExternalFeedForm extends Form {
 	}
 	
 	/**
-	 * @see Form::fetch
+	 * Fetch the form.
+	 * @copydoc Form::fetch()
 	 */
 	function fetch($request) {
-		$templateMgr = TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('feedId', $this->feedId);
 		$templateMgr->assign('formLocale', AppLocale::getLocale());
 		

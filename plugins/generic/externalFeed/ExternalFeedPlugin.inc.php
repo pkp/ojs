@@ -16,9 +16,9 @@
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class ExternalFeedPlugin extends GenericPlugin {
-	
+
 	const CUSTOM_STYLESHEET = 'externalFeedStyleSheet.css';
-	
+
 	/**
 	 * Called as a plugin is registered to the registry
 	 * @param $category String Name of category plugin was registered to
@@ -27,7 +27,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 	 */
 	public function register($category, $path) {
 		$success = parent::register($category, $path);
-		
+
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
 		if ($success && $this->getEnabled()) {
 			$this->import('classes.ExternalFeedDAO');
@@ -48,22 +48,27 @@ class ExternalFeedPlugin extends GenericPlugin {
 		}
 		return $success;
 	}
-	
+
+	/**
+	 * Get the display name of this plugin
+	 * 
+	 * @return string
+	 */
 	public function getDisplayName() {
 		return __('plugins.generic.externalFeed.displayName');
 	}
-	
+
 	public function getDescription() {
 		return __('plugins.generic.externalFeed.description');
 	}
-	
+
 	/**
 	 * Get the filename of the ADODB schema for this plugin.
 	 */
 	public function getInstallSchemaFile() {
 		return $this->getPluginPath() . '/' . 'schema.xml';
 	}
-	
+
 	/**
 	 * Get plugin CSS URL
 	 *
@@ -72,32 +77,34 @@ class ExternalFeedPlugin extends GenericPlugin {
 	public function getCssUrl() {
 		return $this->getPluginPath() . '/css/';
 	}
-	
+
 	/**
 	 * Get the filename of the default CSS stylesheet for this plugin.
+	 * @return string 
 	 */
 	public function getDefaultStyleSheetFile() {
 		return $this->getCssUrl() . 'externalFeed.css';
 	}
-	
+
 	/**
-	 * 
+	 * Override the builtin to get the correct template path.
+	 * @return string
 	 */
 	public function getTemplatePath()
 	{
 		return parent::getTemplatePath() . 'templates/';
 	}
-	
+
 	/**
 	 * @see Plugin::getActions()
 	 */
 	function getActions($request, $verb) {
 		import('lib.pkp.classes.linkAction.request.AjaxModal');
 		import('lib.pkp.classes.linkAction.request.RedirectAction');
-		
+
 		$router = $request->getRouter();
 		$dispatcher = $request->getDispatcher();
-		
+
 		return array_merge(
 				$this->getEnabled()?array(
 						new LinkAction(
@@ -126,14 +133,14 @@ class ExternalFeedPlugin extends GenericPlugin {
 				parent::getActions($request, $verb)
 		);
 	}
-	
+
 	/**
 	 * @see Plugin::manage()
 	 */
 	function manage($args, $request) {
-		
+
 		$journal = $request->getJournal();
-		
+
 		switch ($request->getUserVar('verb')) {
 			case 'settings':
 				$this->import('ExternalFeedSettingsForm');
@@ -143,7 +150,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 				$form = new ExternalFeedSettingsForm($this, $context->getId());
 				if ($request->getUserVar('save')) {
-					
+
 					if ($request->getUserVar('deleteStyleSheet')) {
 						return $form->deleteStyleSheet();
 					}
@@ -177,11 +184,10 @@ class ExternalFeedPlugin extends GenericPlugin {
 					$form->initData();
 				}
 				return new JSONMessage(true, $form->fetch($request));
-				break;
-				
+
 			case 'uploadStyleSheet':
 				$user = $request->getUser();
-				
+
 				import('lib.pkp.classes.file.TemporaryFileManager');
 				$temporaryFileManager = new TemporaryFileManager();
 				$temporaryFile = $temporaryFileManager->handleUpload('uploadedFile', $user->getId());
@@ -195,10 +201,9 @@ class ExternalFeedPlugin extends GenericPlugin {
 				} else {
 					return new JSONMessage(false, __('common.uploadFailed'));
 				}
-				break;
 		}
 	}
-	
+
 	/**
 	 * Register as a block plugin
 	 * @param $hookName string
@@ -210,13 +215,13 @@ class ExternalFeedPlugin extends GenericPlugin {
 		switch ($category) {
 			case 'blocks':
 				$this->import('ExternalFeedBlockPlugin');
-				$blockPlugin = new ExternalFeedBlockPlugin($this->getName(), $this);
+				$blockPlugin = new ExternalFeedBlockPlugin($this);
 				$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath()] = $blockPlugin;
 				break;
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Extend the website settings tabs to include external feeds crud
 	 * @param $hookName string The name of the invoked hook
@@ -230,7 +235,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 		$output .= '<li><a name="externalFeeds" href="' . $dispatcher->url($request, ROUTE_COMPONENT, null, 'plugins.generic.externalFeed.controllers.grid.ExternalFeedGridHandler', 'index') . '">' . __('plugins.generic.externalFeed.displayName') . '</a></li>';
 		return false;
 	}
-	
+
 	/**
 	 * Permit requests to the external feeds grid handler
 	 * @param $hookName string The name of the hook being invoked
@@ -246,7 +251,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Get the filename of the CSS stylesheet for this plugin.
 	 */
@@ -256,7 +261,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 		$journalId = $journal->getId();
 		
 		$styleSheet = $this->getSetting($journalId, 'externalFeedStyleSheet');
-	
+
 		if (empty($styleSheet)) {
 			return $this->getDefaultStyleSheetFile();
 		} else {
@@ -265,7 +270,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 			return $fileManager->getJournalFilesPath($journalId) . '/' . $styleSheet['uploadName'];
 		}
 	}
-	
+
 	/**
 	 * Display external feed content on journal homepage.
 	 * @param $hookName string
@@ -275,48 +280,49 @@ class ExternalFeedPlugin extends GenericPlugin {
 		$request = $this->getRequest();
 		$journal = $request->getJournal();
 		$journalId = $journal->getId();
-		
+
 		if ($this->getEnabled()) {
 			if (!is_a($request->getRouter(), 'PKPPageRouter')) return false;
 			$requestedPage = $request->getRequestedPage();
-			
+
 			$entries = array();
 			if (empty($requestedPage) || $requestedPage == 'index') {
 				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
 				$this->import('simplepie.SimplePie');
-				
+
 				$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journal->getId());
 				while ($currentFeed =& $feeds->next()) {
 					if (!$currentFeed->getDisplayHomepage()) continue;
 					$items = null;
 					$feedTitle = null;
-					
+
 					$feed = new SimplePie();
 					$feed->set_feed_url($currentFeed->getUrl());
 					$feed->enable_order_by_date(false);
 					$feed->set_cache_location(CacheManager::getFileCachePath());
 					$feed->init();
-					
+
 					if ($currentFeed->getLimitItems()) {
 						$recentItems = $currentFeed->getRecentItems();
 					} else {
 						$recentItems = 0;
 					}
-					
+
 					$entries[] = array(
 						'feedTitle' => $currentFeed->getLocalizedTitle(),
 						'items' => $feed->get_items(0, $recentItems),
 					);
 				}
-				
+
 				$templateManager =& $args[0];
 				$templateManager->assign('entries', $entries);
+				$templateManager->assign('entry_date_format', Config::getVar('general', 'date_format_short'));
 				$output = $templateManager->fetch(dirname(__FILE__) . '/templates/homepage.tpl');
 				$additionalHomeContent = $templateManager->get_template_vars('additionalHomeContent');
 				$templateManager->assign('additionalHomeContent', $additionalHomeContent . "\n\n" . $output);
-				
+
 			}
 		}
-		
+
 	}
 }

@@ -17,8 +17,7 @@
 	{rdelim});
 </script>
 
-{url|assign:actionUrl router=$smarty.const.ROUTE_COMPONENT component="plugins.generic.externalFeed.controllers.grid.ExternalFeedGridHandler" op="updateExternalFeed" existingPageName=$blockName escape=false}
-<form id="externalFeedForm" class="pkp_form" method="post" action="{$actionUrl}">
+<form id="externalFeedForm" class="pkp_form" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="plugins.generic.externalFeed.controllers.grid.ExternalFeedGridHandler" op="updateExternalFeed" existingPageName=$blockName escape=false}">
 	{csrf}
 	
 	{if $feedId}
@@ -28,25 +27,20 @@
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="ExternalFeedFormNotification"}
 	
 	{fbvFormSection}
-		{fbvFormSection for="title " title="plugins.generic.externalFeed.form.title" description="plugins.generic.externalFeed.form.titleDescription"}
+		{fbvFormSection for="title" title="plugins.generic.externalFeed.form.title" description="plugins.generic.externalFeed.form.titleDescription"}
 			{assign var="formLocale" value=$formLocale|escape}
-			{fbvElement type="text" id="title" name=title[$formLocale] value=$title|escape}
+			{fbvElement type="text" id="title" name=title[$formLocale] value=$title}
 		{/fbvFormSection}
 		
-		{fbvFormSection for="feedUrl " title="plugins.generic.externalFeed.form.feedUrl" description="plugins.generic.externalFeed.form.feedUrlDescription"}
+		{fbvFormSection for="feedUrl" title="plugins.generic.externalFeed.form.feedUrl" description="plugins.generic.externalFeed.form.feedUrlDescription"}
 			{fbvElement type="text" id="feedUrl" value=$feedUrl|escape}
 		{/fbvFormSection}
 	{/fbvFormSection}
 	
 	{fbvFormSection list=true description="plugins.generic.externalFeed.form.display"}
 		
-		{if $displayHomepage}
-			{assign var="displayHomepageChecked" value=true}
-		{else}
-			{assign var="displayHomepageChecked" value=false}
-		{/if}
 		{fbvElement type="checkbox" name="displayHomepage" id="displayHomepage" value="1" 
-			label="plugins.generic.externalFeed.form.displayHomepage" checked=$displayHomepageChecked}
+			label="plugins.generic.externalFeed.form.displayHomepage" checked=$displayHomepage|compare:1"}
 			
 		{if $displayBlock eq $smarty.const.EXTERNAL_FEED_DISPLAY_BLOCK_HOMEPAGE}
 			{assign var="displayBlockNone" value=false}
@@ -78,9 +72,9 @@
 			{assign var="limitItemsChecked" value=false}
 		{/if}
 		<input type="checkbox" name="limitItems" id="limitItems" value="1" {if $limitItemsChecked} checked="checked" {/if}>
-		Limit to
+		{translate key="plugins.generic.externalFeed.form.recentItems1"}
 		<input type="text" name="recentItems" id="recentItems" value="{$recentItems|escape}" size="2" maxlength="90" placeholder="enter number here" >
-		feed items
+		{translate key="plugins.generic.externalFeed.form.recentItems2"}
 	{/fbvFormSection}
 	
 	{fbvFormButtons id="externalFeedSubmit" submitText="common.save" hideCancel=true}

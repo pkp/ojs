@@ -17,10 +17,12 @@
 				<td colspan="2" class="headseparator">&nbsp;</td>
 			</tr>
 			
-			{assign var="separator" value=''}
-			
-			{foreach from=$entry.items item=item}
-				{$separator}
+			{foreach from=$entry.items item=item name=loop}
+				{if !$smarty.foreach.loop.first}
+				<tr>
+					<td colspan="2" class="separator">&nbsp;</td>
+				</tr>
+				{/if}
 			 	<tr class="title">
 					<td colspan="2" class="title">
 						<h4>{$item->get_title()}</h4>
@@ -31,16 +33,14 @@
 				</tr>
 				<tr class="details">
 					<td class="posted">
-					{translate key="plugins.generic.externalFeed.posted"}: {$item->get_date()|@strtotime|date_format:"%Y-%m-%d"}
+					{translate key="plugins.generic.externalFeed.posted"}: {$item->get_date()|@strtotime|date_format:$entry_date_format}
 					</td>
 					<td class="more">
 						<a href="{$item->get_permalink()}" target="_blank"> {translate key="plugins.generic.externalFeed.more"}</a>
 					</td>
 				</tr>
-				
-				{assign var="separator" value='<tr><td colspan="2" class="separator">&nbsp;</td></tr>'}
 			 {/foreach}
-			 
+
 			 <tr>
 			 	<td colspan="2" class="endseparator">&nbsp;</td>
 			 </tr>
