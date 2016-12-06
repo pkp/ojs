@@ -116,7 +116,5 @@
 	<message key="author.submissions.queuedReviewRevisions">Granskas: revidering nödvändig</message>
 	<message key="author.submissions.queuedEditingCopyedit">Redigeras: manusredigering begärd</message>
 	<message key="author.submissions.queuedEditingProofread">Redigeras: Korrekturläsning begärd</message>
-	<message key="author.submit.submissionLocale">Bidragets språk</message>
-	<message key="author.submit.submissionLocaleDescription">Den här tidskriften tar emot bidrag på fler än ett språk. Välj bidragets huvudsakliga språk från listan nedan.</message>
 	<message key="author.submit.form.localeRequired">Vänligen välj ett språk för bidraget</message>
 </locale>

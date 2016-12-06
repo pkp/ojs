@@ -118,7 +118,5 @@
 	<message key="author.submit.form.wordCountAlert">U heeft het maximaal aantal woorden voor een samenvatting in deze sectie overschreden.</message>
 	<message key="author.submissions.queuedEditingCopyedit">Onder redactie: tekstredactie gevraagd</message>
 	<message key="author.submissions.queuedEditingProofread">Onder redactie: proeflezen gevraagd</message>
-	<message key="author.submit.submissionLocale">Taal van de inzending</message>
 	<message key="author.submit.form.localeRequired">Selecteer een taal voor de inzending.</message>
-	<message key="author.submit.submissionLocaleDescription">Dit tijdschrift accepteert inzendingen in verschillende  talen. Kies de taal van de inzending uit het menu hieronder.</message>
 </locale>

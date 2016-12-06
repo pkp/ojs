@@ -121,7 +121,5 @@
 	<message key="author.submissions.queuedEditingProofread">Under redigering: Korrekturlesing ønsket</message>
 	<message key="author.submit.reorder">Endre rekkefølgen på forfatternavnene</message>
 	<message key="author.submit.form.wordCountAlert">Du har overskredet maksimalt antall ord i et sammendrag i denne seksjonen.</message>
-	<message key="author.submit.submissionLocale">Innleveringsspråk</message>
-	<message key="author.submit.submissionLocaleDescription">Dette tidsskriftet tillater innleveringer på flere språk. Velg hovedspråket for innleveringen fra rullegardinmenyen under.</message>
 	<message key="author.submit.form.localeRequired">Vennligst velg innleveringsspråk.</message>
 </locale>

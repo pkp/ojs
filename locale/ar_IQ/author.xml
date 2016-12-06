@@ -48,8 +48,6 @@
 	<message key="author.submissions.noSubmissions">لا توجد تقديمات</message>
 	<message key="author.submit.journalSection">قسم المجلة</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[إختر القسم الأنسب لطلب النشر هذا (أنظر الأقسام وسياسات النشر <a href="{$aboutUrl}" target="_new">في المجلة</a>)]]></message>
-	<message key="author.submit.submissionLocale">لغة طلب النشر</message>
-	<message key="author.submit.submissionLocaleDescription">هذه المجلة تتقبل طلبات النشر بعدة لغات. إختر لغة الطلب الأساسية من القائمة المنسدلة أدناه</message>
 	<message key="author.submit.verifyChecklist">عليك التأكد من أن كل فقرات نموذج التقديم تمت تلبيتها قبل المتابعة</message>
 	<message key="author.submit.copyrightNoticeAgree">المؤلف أو المؤلفون يوافقون على فقرات إشعار الحقوق الفكرية، والتي تنطبق على طلب النشر هذا إذا أو عند تحقق النشر عبر هذه المجلة (الملاحظات إلى هيئة التحرير يمكن إضافتها أدناه)</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">عليك أن توافق على فقرات إشعار الحقوق الفكرية لتتمكن من المتابعة</message>

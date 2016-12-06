@@ -116,8 +116,6 @@
 	<message key="author.submissions.queuedEditingProofread">Em edição: Leitura de provas solicitada</message>
 	<message key="author.submit.reorder">Reordenar nome do autor</message>
 	<message key="author.submit.form.wordCountAlert">O limite de palavras para resumos desta seção foi excedido.</message>
-	<message key="author.submit.submissionLocale">Idioma da submissão</message>
 	<message key="author.submit.form.localeRequired">Escolha um idioma para a submissão.</message>
-	<message key="author.submit.submissionLocaleDescription">Este periódico aceita submissões em vários idiomas. Escolha o idioma principal da submissão a partir do menu dropdown a seguir.</message>
 	<message key="author.submit.nextSteps">Próximos Passos</message>
 </locale>

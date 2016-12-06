@@ -114,8 +114,6 @@
 	<message key="author.submissions.queuedReviewRevisions">Ebaluatzen: ebaluazioak behar dira</message>
 	<message key="author.submissions.queuedEditingCopyedit">Editatzen: Zuzenketak egiteko eskatu da.</message>
 	<message key="author.submissions.queuedEditingProofread">Editatzen: proba-zuzenketa eskatu da.</message>
-	<message key="author.submit.submissionLocale">Aurkezpenaren hizkuntza</message>
-	<message key="author.submit.submissionLocaleDescription">Aldizkari honek hainbat hizkuntzatako aurkezpenak onartzen ditu. Aukeratu aurkezpenaren hizkuntza nagusia beheko goitibeherakotik.</message>
 	<message key="author.submit.form.localeRequired">Mesedez, aukeratu aurkezpenaren hizkuntza.</message>
 	<message key="author.submit.reorder">Berriz eskatu egilearen izena</message>
 	<message key="author.submit.form.wordCountAlert">Laburpenetarako gehienezko hitz kopurua gainditu duzu atal honetan.</message>

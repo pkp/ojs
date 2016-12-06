@@ -51,8 +51,6 @@
 	<message key="author.submit.journalSection">Раздел журнала</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Выберите подходящий раздел для этой статьи (смотрите «Политика разделов журнала» на странице <a href="{$aboutUrl}" target="_new">«О журнале»</a>).]]></message>
 	<message key="submission.submit.selectSection">Пожалуйста, выберите раздел...</message>
-	<message key="author.submit.submissionLocale">Язык отправляемой статьи</message>
-	<message key="author.submit.submissionLocaleDescription">Этот журнал принимает статьи на нескольких языках. Выберите основной язык отправляемой статьи из раскрывающегося списка ниже.</message>
 	<message key="author.submit.submissionChecklist">Контрольный список подготовки статьи к отправке</message>
 	<message key="author.submit.verifyChecklist">Перед продолжением отправки вы должны убедиться, что выполнены все пункты в контрольном списке подготовки статьи к отправке.</message>
 	<message key="author.submit.copyrightNoticeAgree">Авторы согласны с Условиями передачи авторских прав, которые будут применены к этой статье в случае, если эта статья будет опубликована этим журналом (комментарии для редактора могут быть добавлены ниже).</message>
