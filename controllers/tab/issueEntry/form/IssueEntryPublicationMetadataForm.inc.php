@@ -232,7 +232,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 			$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
 			$submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), ROLE_ID_AUTHOR);
 			$submitterAssignment = $submitterAssignments->next();
-			assert($submitterAssignment); // At least one author should be assigned
+			assert(isset($submitterAssignment)); // At least one author should be assigned
 
 			$queuedPayment =& $paymentManager->createQueuedPayment(
 				$context->getId(),

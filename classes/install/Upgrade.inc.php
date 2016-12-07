@@ -1255,7 +1255,7 @@ class Upgrade extends Installer {
 					$genre = $genreDao->getByKey('OTHER', $journal->getId());
 					break;
 			}
-			assert($genre);
+			assert(isset($genre));
 
 			// Set genres for files
 			$submissionFiles = $submissionFileDao->getAllRevisions($row['file_id']);
@@ -1415,7 +1415,7 @@ class Upgrade extends Installer {
 					}
 					break;
 			}
-			assert($query); // We've created or looked up a query.
+			assert(isset($query)); // We've created or looked up a query.
 
 			$assignedUserIds = array($userId);
 			foreach (array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT) as $roleId) {

@@ -35,7 +35,7 @@ class IssueFileManager extends FileManager {
 	function __construct($issueId) {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issue = $issueDao->getById($issueId);
-		assert($issue);
+		assert(isset($issue));
 
 		$this->setIssueId($issueId);
 		$this->setFilesDir(Config::getVar('files', 'files_dir') . '/journals/' . $issue->getJournalId() . '/issues/' . $issueId . '/');

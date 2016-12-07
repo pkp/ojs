@@ -158,7 +158,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	 */
 	function parseArticleGalley($n, $submission) {
 		$importFilter = $this->getImportFilter($n->tagName);
-		assert($importFilter); // There should be a filter
+		assert(isset($importFilter)); // There should be a filter
 
 		$importFilter->setDeployment($this->getDeployment());
 		$articleGalleyDoc = new DOMDocument();

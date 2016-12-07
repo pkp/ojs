@@ -64,7 +64,7 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 		if ($sectionId = $submission->getSectionId()) {
 			$sectionDao = DAORegistry::getDAO('SectionDAO');
 			$section = $sectionDao->getById($sectionId, $submission->getContextId());
-			assert($section);
+			assert(isset($section));
 			$submissionNode->setAttribute('section_ref', $section->getLocalizedAbbrev());
 		}
 

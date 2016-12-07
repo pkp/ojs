@@ -379,7 +379,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 	 * @param $sourceFiles array
 	 */
 	function _tarFiles($targetPath, $targetFile, $sourceFiles) {
-		assert($this->_checkForTar());
+		assert((boolean) $this->_checkForTar());
 		// GZip compressed result file.
 		$tarCommand = Config::getVar('cli', 'tar') . ' -czf ' . escapeshellarg($targetFile);
 		// Do not reveal our internal export path by exporting only relative filenames.
