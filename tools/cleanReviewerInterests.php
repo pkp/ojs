@@ -29,13 +29,6 @@ class ReviewerInterestsDeletionTool extends CommandLineTool {
 			exit(1);
 		}
 		
-		$command = $this->argv[0];
-		if (!in_array($command, array('--show', '--remove'))) {
-			print 'INVALID COMMAND !! '. PHP_EOL;
-			$this->usage();
-			exit(2);
-		}
-
 		$this->parameters = $this->argv;
 	}
 
@@ -75,6 +68,11 @@ class ReviewerInterestsDeletionTool extends CommandLineTool {
 				}
 				print count($orphans) . ' rows deleted!';
 				break;
+
+			default:
+				print 'INVALID COMMAND !! '. PHP_EOL;
+				$this->usage();
+				exit(2);
 		}
 	}
 	
@@ -99,7 +97,7 @@ class ReviewerInterestsDeletionTool extends CommandLineTool {
 		);
 		
 		// list of vocabs associated to users
-		$interests = $interestDao->getAllInterests('%');
+		$interests = $interestDao->getAllInterests();
 		$userInterestVocabIds = array_map(
 			function($interest) { return $interest->getId(); },
 			$interests->toArray()
