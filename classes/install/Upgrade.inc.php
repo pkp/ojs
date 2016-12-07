@@ -1548,6 +1548,33 @@ class Upgrade extends Installer {
 	function localizeIssueCoverImages() {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$publicFileManager = new PublicFileManager();
+		// remove strange old cover images with array values in the DB - from 3.alpha or 3.beta?
+		$issueDao->update('DELETE FROM issue_settings WHERE setting_name = \'coverImage\' AND setting_type = \'object\'');
+
+		// remove empty 3.0 cover images
+		$issueDao->update('DELETE FROM issue_settings WHERE setting_name = \'coverImage\' AND locale = \'\' AND setting_value = \'\'');
+		$issueDao->update('DELETE FROM issue_settings WHERE setting_name = \'coverImageAltText\' AND locale = \'\' AND setting_value = \'\'');
+
+		// get cover image duplicates, from 2.4.x and 3.0
+		$result = $issueDao->retrieve(
+			'SELECT DISTINCT iss1.issue_id, iss1.setting_value, i.journal_id
+			FROM issue_settings iss1
+			LEFT JOIN issues i ON (i.issue_id = iss1.issue_id)
+			JOIN issue_settings iss2 ON (iss2.issue_id = iss1.issue_id AND iss2.setting_name = \'coverImage\')
+			WHERE iss1.setting_name = \'fileName\''
+		);
+		// remove the old 2.4.x cover images, for which a new cover image exists
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$oldFileName = $row['setting_value'];
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldFileName)) {
+				$publicFileManager->removeJournalFile($row['journal_id'], $oldFileName);
+			}
+			$issueDao->update('DELETE FROM issue_settings WHERE issue_id = ? AND setting_name = \'fileName\' AND setting_value = ?', array((int) $row['issue_id'], $oldFileName));
+			$result->MoveNext();
+		}
+		$result->Close();
+
 		// retrieve names for unlocalized issue cover images
 		$result = $issueDao->retrieve(
 			'SELECT iss.issue_id, iss.setting_value, j.journal_id, j.primary_locale
@@ -1613,6 +1640,34 @@ class Upgrade extends Installer {
 	function localizeArticleCoverImages() {
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$publicFileManager = new PublicFileManager();
+		// remove strange old cover images with array values in the DB - from 3.alpha or 3.beta?
+		$articleDao->update('DELETE FROM submission_settings WHERE setting_name = \'coverImage\' AND setting_type = \'object\'');
+
+		// remove empty 3.0 cover images
+		$articleDao->update('DELETE FROM submission_settings WHERE setting_name = \'coverImage\' AND locale = \'\' AND setting_value = \'\'');
+		$articleDao->update('DELETE FROM submission_settings WHERE setting_name = \'coverImageAltText\' AND locale = \'\' AND setting_value = \'\'');
+
+		// get cover image duplicates, from 2.4.x and 3.0
+		$result = $articleDao->retrieve(
+			'SELECT DISTINCT ss1.submission_id, ss1.setting_value, s.context_id
+			FROM submission_settings ss1
+			LEFT JOIN submissions s ON (s.submission_id = ss1.submission_id)
+			JOIN submission_settings ss2 ON (ss2.submission_id = ss1.submission_id AND ss2.setting_name = \'coverImage\')
+			WHERE ss1.setting_name = \'fileName\''
+		);
+		// remove the old 2.4.x cover images, for which a new cover image exists
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$submissionId = $row['submission_id'];
+			$oldFileName = $row['setting_value'];
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['context_id']) . '/' . $oldFileName)) {
+				$publicFileManager->removeJournalFile($row['journal_id'], $oldFileName);
+			}
+			$articleDao->update('DELETE FROM submission_settings WHERE submission_id = ? AND setting_name = \'fileName\' AND setting_value = ?', array((int) $submissionId, $oldFileName));
+			$result->MoveNext();
+		}
+		$result->Close();
+
 		// retrieve names for unlocalized article cover images
 		$result = $articleDao->retrieve(
 			'SELECT ss.submission_id, ss.setting_value, j.journal_id, j.primary_locale
