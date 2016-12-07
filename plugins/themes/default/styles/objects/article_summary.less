@@ -9,6 +9,18 @@
  * @link templates/frontend/objects/article_details.tpl
  */
 .obj_article_summary {
+	.pkp_helpers_clear();
+
+	.cover {
+		display: block;
+		margin-bottom: @double;
+
+		img {
+			display: block;
+			max-height: 250px;
+			width: auto;
+		}
+	}
 
 	> .title {
 		font-family: @font-heading;
@@ -48,6 +60,25 @@
 			top: 0;
 			right: 0;
 			line-height: @line-lead;
+		}
+
+		.cover {
+			float: left;
+			width: 25%;
+			margin-right: @double;
+
+			img {
+				height: auto;
+				max-height: none;
+			}
+		}
+	}
+
+	@media(min-width: @screen-desktop) {
+
+		.cover {
+			margin-right: @triple;
+			margin-bottom: @triple;
 		}
 	}
 }
