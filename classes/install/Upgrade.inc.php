@@ -1615,16 +1615,16 @@ class Upgrade extends Installer {
 				// Update cover image names in the issue_settings table
 				$issueDao->update(
 					'UPDATE issue_settings
-					SET locale = j.primary_locale, setting_value = CONCAT(LEFT( iss.setting_value, LOCATE(\'.\', iss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING_INDEX(iss.setting_value,\'.\',-1))
-					FROM issue_settings iss, issues i, journals j
-					WHERE iss.setting_name = \'coverImage\' AND iss.locale = \'\' AND i.issue_id = iss.issue_id AND j.journal_id = i.journal_id'
+					SET locale = j.primary_locale, setting_value = REGEXP_REPLACE(issue_settings.setting_value, \'[\.]\', CONCAT(\'_\', j.primary_locale, \'.\'))
+					FROM issues i, journals j
+					WHERE issue_settings.setting_name = \'coverImage\' AND issue_settings.locale = \'\' AND i.issue_id = issue_settings.issue_id AND j.journal_id = i.journal_id'
 				);
 				// Update cover image alt texts in the issue_settings table
 				$issueDao->update(
 					'UPDATE issue_settings
 					SET locale = j.primary_locale
-					FROM issue_settings iss, issues i, journals j
-					WHERE iss.setting_name = \'coverImageAltText\' AND iss.locale = \'\' AND i.issue_id = iss.issue_id AND j.journal_id = i.journal_id'
+					FROM issues i, journals j
+					WHERE issue_settings.setting_name = \'coverImageAltText\' AND issue_settings.locale = \'\' AND i.issue_id = issue_settings.issue_id AND j.journal_id = i.journal_id'
 				);
 				break;
 			default: fatalError('Unknown database type!');
@@ -1710,16 +1710,16 @@ class Upgrade extends Installer {
 				// Update cover image names in the submission_settings table
 				$articleDao->update(
 					'UPDATE submission_settings
-					SET locale = j.primary_locale, setting_value = CONCAT(LEFT( ss.setting_value, LOCATE(\'.\', ss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING_INDEX(ss.setting_value,\'.\',-1))
-					FROM submission_settings ss, submissions s, journals j
-					WHERE ss.setting_name = \'coverImage\' AND ss.locale = \'\' AND s.submission_id = ss.submission_id AND j.journal_id = s.context_id'
+					SET locale = j.primary_locale, setting_value = REGEXP_REPLACE(submission_settings.setting_value, \'[\.]\', CONCAT(\'_\', j.primary_locale, \'.\'))
+					FROM submissions s, journals j
+					WHERE submission_settings.setting_name = \'coverImage\' AND submission_settings.locale = \'\' AND s.submission_id = submission_settings.submission_id AND j.journal_id = s.context_id'
 				);
 				// Update cover image alt texts in the submission_settings table
 				$articleDao->update(
 					'UPDATE submission_settings
 					SET locale = j.primary_locale
-					FROM submission_settings ss, submissions s, journals j
-					WHERE ss.setting_name = \'coverImageAltText\' AND ss.locale = \'\' AND s.submission_id = ss.submission_id AND j.journal_id = s.context_id'
+					FROM submissions s, journals j
+					WHERE submission_settings.setting_name = \'coverImageAltText\' AND submission_settings.locale = \'\' AND s.submission_id = submission_settings.submission_id AND j.journal_id = s.context_id'
 				);
 				break;
 			default: fatalError('Unknown database type!');
