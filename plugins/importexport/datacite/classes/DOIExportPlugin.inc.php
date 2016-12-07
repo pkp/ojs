@@ -239,7 +239,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 					);
 					break;
 				} else { // Register selected objects.
-					assert($request->getUserVar('register'));
+					assert($request->getUserVar('register') != false);
 					$result = $this->registerObjects($request, $exportSpec, $journal);
 
 					// Provide the user with some visual feedback that
