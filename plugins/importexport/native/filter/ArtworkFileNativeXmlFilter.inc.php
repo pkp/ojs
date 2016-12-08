@@ -49,19 +49,19 @@ class ArtworkFileNativeXmlFilter extends SubmissionFileNativeXmlFilter {
 		$deployment = $this->getDeployment();
 		$submissionFileNode = parent::createSubmissionFileNode($doc, $submissionFile);
 		if ($caption = $submissionFile->getCaption()) {
-			$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'caption', $caption));
+			$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'caption', htmlspecialchars($caption, ENT_COMPAT, 'UTF-8')));
 		}
 		if ($credit = $submissionFile->getCredit()) {
-			$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'credit', $credit));
+			$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'credit', htmlspecialchars($credit, ENT_COMPAT, 'UTF-8')));
 		}
 		if ($copyrightOwner = $submissionFile->getCopyrightOwner()) {
-			$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'copyright_owner', $copyrightOwner));
+			$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'copyright_owner', htmlspecialchars($copyrightOwner, ENT_COMPAT, 'UTF-8')));
 		}
 		if ($copyrightOwnerContact = $submissionFile->getCopyrightOwnerContactDetails()) {
-			$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'copyright_owner_contact', $copyrightOwnerContact));
+			$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'copyright_owner_contact', htmlspecialchars($copyrightOwnerContact, ENT_COMPAT, 'UTF-8')));
 		}
 		if ($permissionTerms = $submissionFile->getPermissionTerms()) {
-			$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'permission_terms', $permissionTerms));
+			$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'permission_terms', htmlspecialchars($permissionTerms, ENT_COMPAT, 'UTF-8')));
 		}
 
 		// FIXME: is permission file ID implemented?
