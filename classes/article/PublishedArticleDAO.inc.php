@@ -340,8 +340,9 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $useCache boolean optional
 	 * @return PublishedArticle object
 	 */
-	function getPublishedArticleByPubId($pubIdType, $pubId, $journalId = null, $useCache = false) {
+	function getPublishedArticleByPubId($pubIdType, $pubId, $journalId = null, $useCache = false, $submissionRevision = null) {
 		if ($useCache && $pubIdType == 'publisher-id') {
+
 			$cache = $this->_getPublishedArticleCache();
 			$returner = $cache->get($pubId);
 			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
@@ -350,7 +351,7 @@ class PublishedArticleDAO extends ArticleDAO {
 
 		$publishedArticle = null;
 		if (!empty($pubId)) {
-			$publishedArticles = $this->getBySetting('pub-id::'.$pubIdType, $pubId, $journalId);
+			$publishedArticles = $this->getBySetting('pub-id::'.$pubIdType, $pubId, $journalId, $submissionRevision);
 			if ($publishedArticles->getCount()) {
 				assert($publishedArticles->getCount() == 1);
 				$publishedArticle = $publishedArticles->next();
@@ -362,7 +363,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	/**
 	 * @copydoc ArticleDAO::getBySetting()
 	 */
-	function getBySetting($settingName, $settingValue, $journalId = null, $rangeInfo = null) {
+	function getBySetting($settingName, $settingValue, $journalId = null, $submissionRevision = null, $rangeInfo = null) {
 		$params = $this->getFetchParameters();
 		$params[] = $settingName;
 
@@ -390,6 +391,14 @@ class PublishedArticleDAO extends ArticleDAO {
 
 		$result = $this->retrieveRange($sql, $params, $rangeInfo);
 
+	/*	$publishedArticles = array();
+		while (!$result->EOF) {
+			$publishedArticles[] = $this->_fromRow($result->GetRowAssoc(false), false, $submissionRevision);
+			$result->MoveNext();
+		}
+		$result->Close();
+	*/
+
 		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
@@ -401,10 +410,10 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $useCache boolean optional
 	 * @return PublishedArticle object
 	 */
-	function getPublishedArticleByBestArticleId($journalId, $articleId, $useCache = false) {
-		$article = $this->getPublishedArticleByPubId('publisher-id', $articleId, $journalId, $useCache);
+	function getPublishedArticleByBestArticleId($journalId, $articleId, $useCache = false, $submissionRevision = null) {
+		$article = $this->getPublishedArticleByPubId('publisher-id', $articleId, $journalId, $useCache, $submissionRevision);
 		if (!$article && ctype_digit("$articleId")) {
-			return $this->getByArticleId($articleId, $journalId, $useCache);
+			return $this->getByArticleId($articleId, $journalId, $useCache, $submissionRevision);	
 		}
 		return $article;
 	}

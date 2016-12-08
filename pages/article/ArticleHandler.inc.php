@@ -122,7 +122,8 @@ class ArticleHandler extends Handler {
 
 		// get published article object by revision
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId((int) $articleId, (int) $this->journal->getId(), false, $this->submissionRevision);
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, false, $this->submissionRevision);
+
 		$this->article = $publishedArticle;
 
 		// check of this is an old version
