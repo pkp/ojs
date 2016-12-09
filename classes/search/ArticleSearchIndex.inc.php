@@ -143,9 +143,10 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 		// default database search implementation.
 		if ($hookResult === false || is_null($hookResult)) {
 			$fileDao = DAORegistry::getDAO('SubmissionFileDAO');
+			import('lib.pkp.classes.submission.SubmissionFile'); // Constants
 			// Index galley files
 			$files = $fileDao->getLatestRevisions(
-				$article->getId(), WORKFLOW_STAGE_ID_PRODUCTION
+				$article->getId(), SUBMISSION_FILE_PROOF
 			);
 			foreach ($files as $file) {
 				if ($file->getFileId()) {
