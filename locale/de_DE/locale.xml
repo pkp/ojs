@@ -977,11 +977,11 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 <p>Die Installationsprozedur konnte die Konfigurationsdatei nicht automatisch überschreiben. Bevor Sie versuchen, das System zu benutzen, öffnen Sie bitte <tt>config.inc.php</tt> in einem geeigneten Text-Editor und ersetzen Sie den Dateiinhalt durch den Inhalt des folgenden Textfeldes.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>Die Installation von OJS wurde erfolgreich abgeschlossen.</p>
 <p>Um mit der Nutzung des Systems zu beginnen, <a href="{$loginUrl}">loggen</a> Sie sich bitte mit dem auf der vorherigen Seite eingegebenen Benutzer/innen-Namen und dem entsprechenden Passwort <a href="{$loginUrl}">ein</a>.</p>
-<p>Wenn Sie in Zukunft Neuigkeiten und Hinweise auf Aktualisierungen erhalten möchten:</p>
+<p>Wenn Sie ein Teil der PKP-Community sein möchten, können Sie:</p>
 <ol>
-	<li><a href="http://pkp.sfu.ca/ojs/register" target="_new">Registrieren</a> Sie Ihre Zeitschrift, Konferenz oder Ihren Harvester und erhalten Sie Hinweise zu Software-Upgrades, Sicherheits-Patches und mehr.</li><li>Treten Sie unseren <a href="http://pkp.sfu.ca/informed" target="_new">Diskussionslisten</a> für OJS, OCS, den Harvester, Lemon8-XML, OMP oder allen genannten Themen bei.</li>
-	<li>Abonnieren Sie den <a href="http://pkp.sfu.ca/blog/feed" target="_new">RSS-Feed</a> des <a href="http://pkp.sfu.ca/blog" target="_new">PKP-Blogs</a>.</li>
-</ol><p>Wenn Sie Fragen oder Kommentare haben, besuchen Sie bitte das <a href="http://forum.pkp.sfu.ca" target="_new">Support-Forum</a>.</p>]]></message>
+	<li>das <a href="http://pkp.sfu.ca/blog" target="_new">PKP-Blog</a> lesen und die <a href="http://pkp.sfu.ca/blog/feed" target="_new">RSS-Feeds</a> abonnieren.</li>
+	<li>das <a href="http://forum.pkp.sfu.ca" target="_new">Support-Forum</a> besuchen, wenn Sie Fragen oder Kommentare haben.</li>
+</ol>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>Die Aktualisierung von OJS auf Version {$version} wurde erfolgreich abgeschlossen.</p>
 <p>Bitte vergessen Sie nicht, die "installed"-Einstellung in Ihrer config.inc.php-Konfigurationsdatei wieder zurück auf <em>On</em> zu setzen.</p>
 <p>Wenn Sie sich noch nicht registriert haben und in Zukunft Neuigkeiten und Hinweise auf Aktualisierungen erhalten möchten, <strong>registrieren Sie sich bitte auf <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Wenn Sie Fragen oder Kommentare haben, besuchen Sie bitte das <a href="http://forum.pkp.sfu.ca" target="_new">Support-Forum</a>.</p>]]></message>
