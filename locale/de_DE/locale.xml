@@ -792,9 +792,9 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="about.onlineSubmissions.login">Zum Login</message>
 	<message key="about.onlineSubmissions.register">Registrieren</message>
 	<message key="about.onlineSubmissions.registrationRequired">Um Beiträge online einzureichen oder den aktuellen Status eines eingereichten Beitrags zu überprüfen, müssen Sie registriert und eingeloggt sein. In einen existierenden Account {$login} oder einen neuen Account {$register}.</message>
-
-
-
+	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} oder {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.newSubmission">Neuen Beitrag einreichen</message>
+	<message key="about.onlineSubmissions.viewSubmissions">Beiträge in Bearbeitung ansehen</message>
 	<message key="about.authorGuidelines">Richtlinien für Autor/innen</message>
 	<message key="about.submissionPreparationChecklist">Checkliste für Beitragseinreichungen</message>
 	<message key="about.submissionPreparationChecklist.description">Als Teil des Einreichungsverfahren werden die Autor/innen gebeten, anhand der Checkliste für Beiträge die Übereinstimmung ihres Beitrags Punkt für Punkt mit den angegebenen Vorgaben abzugleichen. Beiträge können an Autor/innen, die die Richtlinien nicht befolgen, zurückgegeben werden.</message>
