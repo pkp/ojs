@@ -98,19 +98,19 @@ class IssueMedraXmlFilter extends O4DOIXmlFilter {
 		$notificationType = (empty($registeredDoi) ? O4DOI_NOTIFICATION_TYPE_NEW : O4DOI_NOTIFICATION_TYPE_UPDATE);
 		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'NotificationType', $notificationType));
 		// DOI (mandatory)
-		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOI', $doi));
+		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOI', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
 		// DOI URL (mandatory)
-		$url = $router->url($request, $context->getPath(), 'article', 'view', $pubObject->getBestIssueId());
+		$url = $router->url($request, $context->getPath(), 'article', 'view', $pubObject->getBestIssueId(), null, null, true);
 		if ($plugin->isTestMode($context)) {
 			// Change server domain for testing.
 			$url = PKPString::regexp_replace('#://[^\s]+/index.php#', '://example.com/index.php', $url);
 		}
-		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOIWebsiteLink', $url));
+		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOIWebsiteLink', htmlspecialchars($url, ENT_COMPAT, 'UTF-8')));
 		// DOI strucural type
 		$structuralType = $this->isWork($context, $plugin) ? 'Abstraction' : 'DigitalFixation';
 		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOIStructuralType', $structuralType));
 		// Registrant (mandatory)
-		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'RegistrantName', $plugin->getSetting($context->getId(), 'registrantName')));
+		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'RegistrantName', htmlspecialchars($plugin->getSetting($context->getId(), 'registrantName'), ENT_COMPAT, 'UTF-8')));
 		// Registration authority (mandatory)
 		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'RegistrationAuthority', 'mEDRA'));
 		// Work/ProductIdentifier - proprietary ID

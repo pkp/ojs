@@ -118,7 +118,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 
 		// Add public ID
 		if ($pubId = $issue->getStoredPubId('publisher-id')) {
-			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', $pubId));
+			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', htmlspecialchars($pubId, ENT_COMPAT, 'UTF-8')));
 			$node->setAttribute('type', 'public');
 			$node->setAttribute('advice', 'update');
 		}
@@ -142,7 +142,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$pubId = $issue->getStoredPubId($pubIdPlugin->getPubIdType());
 		if ($pubId) {
 			$deployment = $this->getDeployment();
-			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', $pubId));
+			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', htmlspecialchars($pubId, ENT_COMPAT, 'UTF-8')));
 			$node->setAttribute('type', $pubIdPlugin->getPubIdType());
 			$node->setAttribute('advice', 'update');
 			return $node;
@@ -229,8 +229,8 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 			foreach ($coverImages as $locale => $coverImage) {
 				$coverNode = $doc->createElementNS($deployment->getNamespace(), 'cover');
 				$coverNode->setAttribute('locale', $locale);
-				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', $coverImage));
-				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', $issue->getCoverImageAltText($locale)));
+				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', htmlspecialchars($coverImage, ENT_COMPAT, 'UTF-8')));
+				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', htmlspecialchars($issue->getCoverImageAltText($locale), ENT_COMPAT, 'UTF-8')));
 
 				import('classes.file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
