@@ -31,15 +31,15 @@ class NativeFilterHelper {
 		$issueIdentificationNode = $doc->createElementNS($deployment->getNamespace(), 'issue_identification');
 		if ($issue->getShowVolume()) {
 			assert(!empty($vol));
-			$issueIdentificationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'volume', $vol));
+			$issueIdentificationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'volume', htmlspecialchars($vol, ENT_COMPAT, 'UTF-8')));
 		}
 		if ($issue->getShowNumber()) {
 			assert(!empty($num));
-			$issueIdentificationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'number', $num));
+			$issueIdentificationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'number', htmlspecialchars($num, ENT_COMPAT, 'UTF-8')));
 		}
 		if ($issue->getShowYear()) {
 			assert(!empty($year));
-			$issueIdentificationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'year', $year));
+			$issueIdentificationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'year', htmlspecialchars($year, ENT_COMPAT, 'UTF-8')));
 		}
 		if ($issue->getShowTitle()) {
 			assert(!empty($title));

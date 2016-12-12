@@ -132,9 +132,9 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		$context = $deployment->getContext();
 		$plugin = $deployment->getPlugin();
 		$headNode = $doc->createElementNS($deployment->getNamespace(), 'Header');
-		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'FromCompany', $plugin->getSetting($context->getId(), 'fromCompany')));
-		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'FromPerson',  $plugin->getSetting($context->getId(), 'fromName')));
-		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'FromEmail',  $plugin->getSetting($context->getId(), 'fromEmail')));
+		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'FromCompany', htmlspecialchars($plugin->getSetting($context->getId(), 'fromCompany'), ENT_COMPAT, 'UTF-8')));
+		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'FromPerson',  htmlspecialchars($plugin->getSetting($context->getId(), 'fromName'), ENT_COMPAT, 'UTF-8')));
+		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'FromEmail',  htmlspecialchars($plugin->getSetting($context->getId(), 'fromEmail'), ENT_COMPAT, 'UTF-8')));
 		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ToCompany',  'mEDRA'));
 		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SentDate',  date('YmdHi')));
 		// Message note
@@ -190,7 +190,7 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		// Publisher
 		$serialWorkNode->appendChild($this->createPublisherNode($doc, $journalLocalePrecedence));
 		// Country of Publication (mandatory)
-		$serialWorkNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'CountryOfPublication',  $plugin->getSetting($context->getId(), 'publicationCountry')));
+		$serialWorkNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'CountryOfPublication',  htmlspecialchars($plugin->getSetting($context->getId(), 'publicationCountry'), ENT_COMPAT, 'UTF-8')));
 		return $serialWorkNode;
 	}
 
@@ -214,7 +214,7 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		// Title type (mandatory)
 		$titleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'TitleType', $titleType));
 		// Title text (mandatory)
-		$titleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'TitleText', PKPString::html2text($localizedTitle)));
+		$titleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'TitleText', htmlspecialchars(PKPString::html2text($localizedTitle), ENT_COMPAT, 'UTF-8')));
 		return $titleNode;
 	}
 
@@ -238,7 +238,7 @@ class O4DOIXmlFilter extends NativeExportFilter {
 			$publisher = $this->getPrimaryTranslation($context->getName(null), $journalLocalePrecedence);
 		}
 		assert(!empty($publisher));
-		$publisherNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'PublisherName', $publisher));
+		$publisherNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'PublisherName', htmlspecialchars($publisher, ENT_COMPAT, 'UTF-8')));
 		return $publisherNode;
 	}
 
@@ -287,17 +287,17 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		// Volume
 		$volume = $issue->getVolume();
 		if (!empty($volume) && $issue->getShowVolume()) {
-			$journalIssueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'JournalVolumeNumber', $volume));
+			$journalIssueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'JournalVolumeNumber', htmlspecialchars($volume, ENT_COMPAT, 'UTF-8')));
 		}
 		// Number
 		$number = $issue->getNumber();
 		if (!empty($number) && $issue->getShowNumber()) {
-			$journalIssueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'JournalIssueNumber', $number));
+			$journalIssueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'JournalIssueNumber', htmlspecialchars($number, ENT_COMPAT, 'UTF-8')));
 		}
 		// Identification
 		$identification = $issue->getIssueIdentification();
 		if (!empty($identification)) {
-			$journalIssueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'JournalIssueDesignation', $identification));
+			$journalIssueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'JournalIssueDesignation', htmlspecialchars($identification, ENT_COMPAT, 'UTF-8')));
 		}
 		assert(!(empty($number) && empty($identification)));
 		// Nominal Year
@@ -393,7 +393,7 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		// Text
 		$language = AppLocale::get3LetterIsoFromLocale($locale);
 		assert(!empty($language));
-		$otherTextNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'Text', PKPString::html2text($description)));
+		$otherTextNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'Text', htmlspecialchars(PKPString::html2text($description), ENT_COMPAT, 'UTF-8')));
 		$node->setAttribute('textformat', O4DOI_TEXTFORMAT_ASCII);
 		$node->setAttribute('language', $language);
 		return $otherTextNode;
