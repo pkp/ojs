@@ -1671,7 +1671,6 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="user.login.loginError">Îñvålîð üþèrñåmè ór påþþwórð. Plèåþè trý ågåîñ.</message>
 	<message key="user.login.accountDisabled">Ýóür åççóüñt håþ bèèñ ðîþåblèð. Plèåþè çóñtåçt thè åðmîñîþtråtór fór mórè îñfórmåtîóñ.</message>
 	<message key="user.login.accountDisabledWithReason">Ýóür åççóüñt håþ bèèñ ðîþåblèð fór thè fóllówîñg rèåþóñ: {$reason}</message>
-	<message key="user.login.rememberUsernameAndPassword">Rèmèmbèr mý üþèrñåmè åñð påþþwórð</message>
 	<message key="user.login.registerNewAccount">Ñót å üþèr? Règîþtèr wîth thîþ þîtè</message>
 	<message key="user.login.forgotPassword">Fórgót ýóür påþþwórð?</message>
 	<message key="user.login.resetPassword">Rèþèt Påþþwórð</message>
