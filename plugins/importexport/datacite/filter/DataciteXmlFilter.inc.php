@@ -513,7 +513,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 				foreach ($articlesByIssue as $relatedArticle) {
 					$doi = $relatedArticle->getStoredPubId('doi');
 					if (!empty($doi)) {
-						$relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', $doi));
+						$relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
 						$node->setAttribute('relatedIdentifierType', DATACITE_IDTYPE_DOI);
 						$node->setAttribute('relationType', DATACITE_RELTYPE_HASPART);
 					}

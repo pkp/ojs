@@ -139,7 +139,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		// DOI URL (mandatory)
 		$urlPath = $article->getBestArticleId();
 		if ($galley) $urlPath = array($article->getBestArticleId(), $galley->getBestGalleyId());
-		$url = $router->url($request, $context->getPath(), 'article', 'view', $urlPath);
+		$url = $router->url($request, $context->getPath(), 'article', 'view', $urlPath, null, null, true);
 		if ($plugin->isTestMode($context)) {
 			// Change server domain for testing.
 			$url = PKPString::regexp_replace('#://[^\s]+/index.php#', '://example.com/index.php', $url);

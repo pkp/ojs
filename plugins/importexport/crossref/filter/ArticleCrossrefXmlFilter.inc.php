@@ -154,7 +154,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		}
 
 		// DOI data
-		$doiDataNode = $this->createDOIDataNode($doc, $submission->getStoredPubId('doi'), $request->url($context->getPath(), 'article', 'view', $submission->getBestArticleId()));
+		$doiDataNode = $this->createDOIDataNode($doc, $submission->getStoredPubId('doi'), $request->url($context->getPath(), 'article', 'view', $submission->getBestArticleId(), null, null, true));
 		// append galleys files and collection nodes to the DOI data node
 		// galley can contain several files
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
@@ -212,7 +212,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		$textMiningCollectionNode = $doc->createElementNS($deployment->getNamespace(), 'collection');
 		$textMiningCollectionNode->setAttribute('property', 'text-mining');
 		foreach ($galleys as $galley) {
-			$resourceURL = $request->url($context->getPath(), 'article', 'download', array($submission->getBestArticleId(), $galley->getBestGalleyId()));
+			$resourceURL = $request->url($context->getPath(), 'article', 'download', array($submission->getBestArticleId(), $galley->getBestGalleyId()), null, null, true);
 			// iParadigms crawler based collection element
 			$crawlerBasedCollectionNode = $doc->createElementNS($deployment->getNamespace(), 'collection');
 			$crawlerBasedCollectionNode->setAttribute('property', 'crawler-based');
@@ -259,7 +259,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 				$componentNode->appendChild($titlesNode);
 			}
 			// DOI data node
-			$resourceURL = $request->url($context->getPath(), 'article', 'download', array($submission->getBestArticleId(), $componentGalley->getBestGalleyId()));
+			$resourceURL = $request->url($context->getPath(), 'article', 'download', array($submission->getBestArticleId(), $componentGalley->getBestGalleyId()), null, null, true);
 			$componentNode->appendChild($this->createDOIDataNode($doc, $componentGalley->getStoredPubId('doi'), $resourceURL));
 			$componentListNode->appendChild($componentNode);
 		}
