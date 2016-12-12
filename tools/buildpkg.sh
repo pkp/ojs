@@ -29,7 +29,6 @@ TMPDIR=`mktemp -d $PREFIX.XXXXXX` || exit 1
 EXCLUDE="dbscripts/xml/data/locale/en_US/sample.xml		\
 dbscripts/xml/data/sample.xml					\
 docs/dev							\
-locale/te_ST							\
 tests								\
 tools/buildpkg.sh						\
 tools/genLocaleReport.sh					\
