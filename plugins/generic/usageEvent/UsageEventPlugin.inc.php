@@ -59,7 +59,7 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 
 					$journal = $templateMgr->get_template_vars('currentContext');
 					$issue = $templateMgr->get_template_vars('issue');
-					$publishedArticle = $templateMgr->get_template_vars('publishedArticle');
+					$publishedArticle = $templateMgr->get_template_vars('article');
 
 					// No published objects, no usage event.
 					if (!$journal && !$issue && !$publishedArticle) break;
