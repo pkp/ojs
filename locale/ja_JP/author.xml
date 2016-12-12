@@ -118,7 +118,5 @@
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">追加コード</a>.]]></message>
 	<message key="author.submit.form.wordCountAlert">このセクションにおけるアブストラクトの最大文字数を超過しています。</message>
 	<message key="author.submit.reorder">著者名の並べ替え</message>
-	<message key="author.submit.submissionLocaleDescription">このジャーナルは複数の言語による投稿を受け付けています。下記のプルダウンより投稿言語を選択してください。</message>
 	<message key="author.submit.form.localeRequired">投稿言語を選択してください。</message>
-	<message key="author.submit.submissionLocale">投稿言語</message>
 </locale>

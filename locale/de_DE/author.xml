@@ -50,8 +50,6 @@
 	<message key="author.submit.journalSection">Zeitschriftenrubrik</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Wählen Sie die passende Rubrik für diesen Beitrag aus (Siehe Rubriken und Richtlinien in <a href="{$aboutUrl}" target="_new">Über uns</a>).]]></message>
 	<message key="submission.submit.selectSection">Wählen Sie eine Rubrik aus...</message>
-	<message key="author.submit.submissionLocale">Beitragssprache</message>
-	<message key="author.submit.submissionLocaleDescription">Diese Zeitschrift nimmt Beiträge in verschiedenen Sprachen entgegen. Wählen Sie die primäre Sprache des Beitrags aus dem Auswahlmenü unten.</message>
 	<message key="author.submit.verifyChecklist">Stellen Sie sicher, dass alle Punkte der Checkliste erfüllt sind, bevor Sie fortfahren.</message>
 	<message key="author.submit.copyrightNoticeAgree">Die Autor/innen stimmen den Bestimmungen dieser Copyright-Regelungen zu, die für diesen Beitrag im Falle einer Veröffentlichung Anwendung finden. (Kommentare für die Redaktion können weiter unten angefügt werden.)</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Sie müssen den Copyright-Regelungen zustimmen, bevor Sie fortfahren.</message>

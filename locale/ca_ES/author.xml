@@ -51,8 +51,6 @@
 	<message key="author.submit.journalSection">Secció de la revista</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Seleccioneu la secció adequada per a aquesta tramesa (vegeu «Seccions i Polítiques» a «<a href="{$aboutUrl}" target="_new">Sobre</a> la revista»).]]></message>
 	<message key="submission.submit.selectSection">Seleccioneu una secció...</message>
-	<message key="author.submit.submissionLocale">Llengua de la tramesa</message>
-	<message key="author.submit.submissionLocaleDescription">Aquesta revista accepta trameses en diverses llengües. Trieu la llengua principal de la tramesa al menú desplegable que hi ha a continuació.</message>
 	<message key="author.submit.submissionChecklist">Llista de verificació de tramesa</message>
 	<message key="author.submit.verifyChecklist">Abans de continuar, comproveu que es compleixen tots els punts de la llista de verificació de la tramesa.</message>
 	<message key="author.submit.copyrightNoticeAgree">Els autors/ores accepten les condicions d’aquest avís de drets d'autor/a, que s’aplicarà quan aquesta tramesa es publiqui en aquesta revista (podeu incloure comentaris per a l’editor/a a continuació).</message>

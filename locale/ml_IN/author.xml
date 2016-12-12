@@ -46,8 +46,6 @@
 	<message key="author.submissions.noSubmissions">സമര്‍പ്പണങ്ങള്‍ ഒന്നും ഇല്ല.</message>
 	<message key="author.submit.journalSection">ജേണല്‍ സെക്ഷന്‍</message>
 	<message key="submission.submit.selectSection">ദയവായി ഒരു സെക്ഷന്‍ തിരഞ്ഞെടുക്കുക...</message>
-	<message key="author.submit.submissionLocale">സമര്‍പ്പണ ഭാഷ</message>
-	<message key="author.submit.submissionLocaleDescription">വിവിധ ഭാഷകളിലുള്ള സമര്‍പ്പണങ്ങള്‍ ഈ ജേണല്‍ സ്വീകരിക്കും.സമര്‍പ്പണത്തിന്റെ പ്രഥമ ഭാഷ താഴെ കാണുന്ന പുള്‍ ഡൗണ്‍ ഉപയോഗിച്ച് തിരഞ്ഞെടുക്കുക.</message>
 	<message key="author.submit.submissionChecklist">സബ്മിഷന്‍ ചെക്ക് ലിസ്റ്റ്</message>
 	<message key="author.submit.verifyChecklist">തുടരുന്നതിനു മുന്‍പ് സബ്മിഷന്‍ ചെക്ക് ലിസ്റ്റിലുള്ള എല്ലാ ഇനങ്ങളും തൃപ്തികരമാണെന്ന് ഉറപ്പു വരുത്തുക.</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">തുടരുന്നതിനു മുന്‍പ് കോപ്പി റൈറ്റ് നോട്ടീസിന്റെ സംജ്ഞകളുമായി താങ്കള്‍ അനുകൂലിക്കേണ്ടതുണ്ട്.</message>

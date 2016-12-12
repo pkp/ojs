@@ -53,8 +53,6 @@
        <message key="author.submit.journalSection">Розділ журналу</message>
        <message key="author.submit.journalSectionDescription"><![CDATA[Оберіть відповідний розділ для цього подання (див. Розділи та Політика на сторінці <a href="{$aboutUrl}" target="_new">Про журнал</a>).]]></message>
        <message key="submission.submit.selectSection">Будь ласка, оберіть розділ...</message>
-       <message key="author.submit.submissionLocale">Мова подання</message>
-       <message key="author.submit.submissionLocaleDescription">Цей журнал приймає подання кількома мовами. Оберіть основну мову подання з запропонованих нижче.</message>
        <message key="author.submit.submissionChecklist">Вимоги до подання</message>
              <message key="author.submit.verifyChecklist">Перед тим, як продовжити, Ви повинні підтвердити всі пункти вимог.</message>
        <message key="author.submit.copyrightNoticeAgree">Автори погоджуються з Положенням про авторські права, норми якого будуть застосовані до цього подання, коли і якщо воно буде опубліковане у цьому журналі (нижче можна додати коментарі для редактора).</message>

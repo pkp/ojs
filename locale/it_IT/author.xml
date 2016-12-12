@@ -120,6 +120,4 @@
 	<message key="author.submit.form.wordCountAlert">Hai superato il numero massimo di parole previsto per l'abstract degli articoli da pubblicare in questa sezione.</message>
 	<message key="author.submit.mustEnterWaiverReason">Se stai chiedendo un esonero, devi indicarne il motivo.</message>
 	<message key="author.submit.form.localeRequired">Seleziona una lingua per la proposta.</message>
-	<message key="author.submit.submissionLocale">Lingua della proposta</message>
-	<message key="author.submit.submissionLocaleDescription"><![CDATA[Questa rivista accetta contributi in diverse lingue. Seleziona la lingua della proposta dal men&#249; a tendina.]]></message>
 </locale>

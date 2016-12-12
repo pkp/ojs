@@ -119,7 +119,5 @@
 	<message key="author.article.copyeditedFile">Fişier redactat</message>
 	<message key="author.article.authorRevisedFile">Fişierul autorului</message>
 	<message key="author.submit.authorSubmitLoginMessage">Este necesar un cont de utilizator pentru a trimite propuneri acestei reviste. Acest lucru permite redactorilor noştri să urmărească propunerile şi să te contacteze atunci când statutul propunerii tale se modifică sau dacă sunt necesare informaţii suplimentare din partea ta.</message>
-	<message key="author.submit.submissionLocale">Limba pentru propuneri</message>
-	<message key="author.submit.submissionLocaleDescription">Această revistă acceptă propuneri în mai multe limbi. Alegeți limba primară a propunerilor din meniul derulant.</message>
 	<message key="author.submit.form.localeRequired">Selectează o limbă pentru propunere.</message>
 </locale>

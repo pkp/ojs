@@ -116,8 +116,6 @@
 	<message key="author.submissions.queuedEditingProofread">Redakční úpravy: Vyžádána korektura</message>
 	<message key="author.submit.reorder">Přeuspořádat jméno autora</message>
 	<message key="author.submit.form.wordCountAlert">Překročil jste maximální limit slov pro abstrakt v této sekci.</message>
-	<message key="author.submit.submissionLocale">Jazyk příspěvku</message>
-	<message key="author.submit.submissionLocaleDescription">Tento časopis přijímá příspěvky v několika jazycích. Zvolte si primární jazyk vašeho příspěvku z následujícího rozbalovacícho menu.</message>
 	<message key="author.submit.form.localeRequired">Zvolte si, prosím, jazyk příspěvku.</message>
 	<message key="author.submit.submissionIndexingDescription">Doplňte, prosím, klíčová slova pro indexování příspěvku: oddělte jednotlivá klíčová slova středníkem (klíčové slovo1; klíčové slovo 2; klíčové slovo 3)</message>
 </locale>
