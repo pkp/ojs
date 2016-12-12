@@ -92,7 +92,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 
 		// title
 		$titlesNode = $doc->createElementNS($deployment->getNamespace(), 'titles');
-		$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', $submission->getTitle($submission->getLocale())));
+		$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($submission->getTitle($submission->getLocale()), ENT_COMPAT, 'UTF-8')));
 		$journalArticleNode->appendChild($titlesNode);
 
 		// contributors
@@ -107,8 +107,8 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 			} else {
 				$personNameNode->setAttribute('sequence', 'additional');
 			}
-			$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'given_name', ucfirst($author->getFirstName()).(($author->getMiddleName())?' '.ucfirst($author->getMiddleName()):'')));
-			$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', ucfirst($author->getLastName())));
+			$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'given_name', htmlspecialchars(ucfirst($author->getFirstName()).(($author->getMiddleName())?' '.ucfirst($author->getMiddleName()):''), ENT_COMPAT, 'UTF-8')));
+			$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($author->getLastName()), ENT_COMPAT, 'UTF-8')));
 			if ($author->getData('orcid')) {
 				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ORCID', $author->getData('orcid')));
 			}
@@ -119,7 +119,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		// abstract
 		if ($submission->getAbstract($submission->getLocale())) {
 			$abstractNode = $doc->createElementNS($deployment->getJATSNamespace(), 'jats:abstract');
-			$abstractNode->appendChild($node = $doc->createElementNS($deployment->getJATSNamespace(), 'jats:p', html_entity_decode(strip_tags($submission->getAbstract($submission->getLocale())), ENT_COMPAT, 'UTF-8')));
+			$abstractNode->appendChild($node = $doc->createElementNS($deployment->getJATSNamespace(), 'jats:p', htmlspecialchars(html_entity_decode(strip_tags($submission->getAbstract($submission->getLocale())), ENT_COMPAT, 'UTF-8'), ENT_COMPAT, 'UTF-8')));
 			$journalArticleNode->appendChild($abstractNode);
 		}
 
@@ -149,7 +149,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		if ($submission->getLicenseUrl()) {
 			$licenseNode = $doc->createElementNS($deployment->getAINamespace(), 'ai:program');
 			$licenseNode->setAttribute('name', 'AccessIndicators');
-			$licenseNode->appendChild($node = $doc->createElementNS($deployment->getAINamespace(), 'ai:license_ref', $submission->getLicenseUrl()));
+			$licenseNode->appendChild($node = $doc->createElementNS($deployment->getAINamespace(), 'ai:license_ref', htmlspecialchars($submission->getLicenseUrl(), ENT_COMPAT, 'UTF-8')));
 			$journalArticleNode->appendChild($licenseNode);
 		}
 
@@ -218,13 +218,13 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 			$crawlerBasedCollectionNode->setAttribute('property', 'crawler-based');
 			$iParadigmsItemNode = $doc->createElementNS($deployment->getNamespace(), 'item');
 			$iParadigmsItemNode->setAttribute('crawler', 'iParadigms');
-			$iParadigmsItemNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'resource', $resourceURL));
+			$iParadigmsItemNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'resource', htmlspecialchars($resourceURL, ENT_COMPAT, 'UTF-8')));
 			$crawlerBasedCollectionNode->appendChild($iParadigmsItemNode);
 			$doiDataNode->appendChild($crawlerBasedCollectionNode);
 			// end iParadigms
 			// text-mining collection item
 			$textMiningItemNode = $doc->createElementNS($deployment->getNamespace(), 'item');
-			$resourceNode = $doc->createElementNS($deployment->getNamespace(), 'resource', $resourceURL);
+			$resourceNode = $doc->createElementNS($deployment->getNamespace(), 'resource', htmlspecialchars($resourceURL, ENT_COMPAT, 'UTF-8'));
 			if (!$galley->getRemoteURL()) $resourceNode->setAttribute('mime_type', $galley->getFileType());
 			$textMiningItemNode->appendChild($resourceNode);
 			$textMiningCollectionNode->appendChild($textMiningItemNode);
@@ -255,7 +255,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 			$componentFileTitle = $componentFile->getName($componentGalley->getLocale());
 			if (!empty($componentFileTitle)) {
 				$titlesNode = $doc->createElementNS($deployment->getNamespace(), 'titles');
-				$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', $componentFileTitle));
+				$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($componentFileTitle, ENT_COMPAT, 'UTF-8')));
 				$componentNode->appendChild($titlesNode);
 			}
 			// DOI data node
