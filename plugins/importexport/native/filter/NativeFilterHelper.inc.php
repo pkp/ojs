@@ -39,7 +39,7 @@ class NativeFilterHelper {
 		}
 		if ($issue->getShowYear()) {
 			assert(!empty($year));
-			$issueIdentificationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'year', htmlspecialchars($year, ENT_COMPAT, 'UTF-8')));
+			$issueIdentificationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'year', $year));
 		}
 		if ($issue->getShowTitle()) {
 			assert(!empty($title));

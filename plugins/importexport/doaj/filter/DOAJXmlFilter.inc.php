@@ -188,7 +188,7 @@ class DOAJXmlFilter extends NativeExportFilter {
 		$authorNode = $doc->createElement('author');
 		$authorNode->appendChild($node = $doc->createElement('name', htmlspecialchars($author->getFullName(), ENT_COMPAT, 'UTF-8')));
 		$email = $author->getEmail();
-		if (!empty($email)) $authorNode->appendChild($node = $doc->createElement('email', $email));
+		if (!empty($email)) $authorNode->appendChild($node = $doc->createElement('email', htmlspecialchars($email, ENT_COMPAT, 'UTF-8')));
 		if(in_array($author->getAffiliation($article->getLocale()), $affilList)  && !empty($affilList[0])) {
 			$authorNode->appendChild($node = $doc->createElement('affiliationId', htmlspecialchars(current(array_keys($affilList, $author->getAffiliation($article->getLocale()))), ENT_COMPAT, 'UTF-8')));
 		}
