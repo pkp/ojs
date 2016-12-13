@@ -229,7 +229,7 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 		$deployment = $this->getDeployment();
 		$doiDataNode = $doc->createElementNS($deployment->getNamespace(), 'doi_data');
 		$doiDataNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'doi', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
-		$doiDataNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'resource', htmlspecialchars($url, ENT_COMPAT, 'UTF-8')));
+		$doiDataNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'resource', $url));
 		return $doiDataNode;
 	}
 
