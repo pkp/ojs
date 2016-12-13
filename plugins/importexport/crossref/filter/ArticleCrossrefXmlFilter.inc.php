@@ -218,13 +218,13 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 			$crawlerBasedCollectionNode->setAttribute('property', 'crawler-based');
 			$iParadigmsItemNode = $doc->createElementNS($deployment->getNamespace(), 'item');
 			$iParadigmsItemNode->setAttribute('crawler', 'iParadigms');
-			$iParadigmsItemNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'resource', htmlspecialchars($resourceURL, ENT_COMPAT, 'UTF-8')));
+			$iParadigmsItemNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'resource', $resourceURL));
 			$crawlerBasedCollectionNode->appendChild($iParadigmsItemNode);
 			$doiDataNode->appendChild($crawlerBasedCollectionNode);
 			// end iParadigms
 			// text-mining collection item
 			$textMiningItemNode = $doc->createElementNS($deployment->getNamespace(), 'item');
-			$resourceNode = $doc->createElementNS($deployment->getNamespace(), 'resource', htmlspecialchars($resourceURL, ENT_COMPAT, 'UTF-8'));
+			$resourceNode = $doc->createElementNS($deployment->getNamespace(), 'resource', $resourceURL);
 			if (!$galley->getRemoteURL()) $resourceNode->setAttribute('mime_type', $galley->getFileType());
 			$textMiningItemNode->appendChild($resourceNode);
 			$textMiningCollectionNode->appendChild($textMiningItemNode);
