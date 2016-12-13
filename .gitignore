@@ -7,3 +7,9 @@ temp
 .buildpath
 .settings
 .DS_Store
+# Local changes
+/.idea*
+*.bak
+*.live
+*.log
+GeoLiteCity.dat
