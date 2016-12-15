@@ -7,19 +7,19 @@
   * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the ru_RU (Русский) locale.
-  * With updates from Pavel Pisklakov (revising translation). 
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
   -->
 
 <locale name="ru_RU" full_name="Русский">
-	<message key="manager.emails.confirmResetAll">Вы уверены, что хотите заменить все шаблоны писем для данного журнала на шаблоны по умолчанию? Вы потеряете все изменения, которые вы сделали.</message>
+	<message key="manager.website.archiving">Архивирование</message>
+	<message key="manager.emails.confirmResetAll">Вы уверены, что хотите заменить все шаблоны писем для данного журнала на шаблоны по умолчанию? Вы потеряете все изменения, которые Вы сделали.</message>
 	<message key="manager.files.note">Внимание: файловый менеджер — это дополнительная возможность, которая позволяет напрямую просматривать и управлять файлами и каталогами, связанными с этим журналом.</message>
 	<message key="manager.journalManagement">Управление журналом</message>
 	<message key="manager.language.ui">Интерфейс пользователя</message>
-	<message key="manager.language.submissions">Отправка статей</message>
+	<message key="manager.language.submissions">Отправленные материалы</message>
 	<message key="manager.language.forms">Формы</message>
-	<message key="manager.language.confirmDefaultSettingsOverwrite">Это заменит все настройки журнала, связанные с конкретным языком, которые вы сделали для этого языка.</message>
+	<message key="manager.language.confirmDefaultSettingsOverwrite">Это заменит все настройки журнала, связанные с конкретным языком, которые Вы сделали для этого языка.</message>
 	<message key="manager.languages.languageInstructions"><![CDATA[OJS может быть доступна пользователям на любом из поддерживаемых системой языков. В то же время, OJS может работать как многоязычная система, позволяя пользователям переключаться между языками на каждой странице и вводить определенные данные на нескольких дополнительных языках.<br /><br />Если язык поддерживается OJS, но не указан в списке ниже — попросите вашего администратора сайта установить язык из интерфейса администрирования сайта. Смотрите в документации OJS инструкции о том, как добавить поддержку новых языков.]]></message>
 	<message key="manager.languages.noneAvailable">Извините, дополнительные языки не доступны. Свяжитесь с вашим администраторм сайта, если вы хотите добавить дополнительные языки в этот журнал.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Этот язык будет языком по умолчанию для сайта журнала.</message>
