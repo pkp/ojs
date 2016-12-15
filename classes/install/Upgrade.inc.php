@@ -879,11 +879,13 @@ class Upgrade extends Installer {
 				foreach ($submissionFiles as $submissionFile) {
 					$generatedFilename = $submissionFile->getServerFileName();
 					$basePath = $submissionFileManager->getBasePath() . '/';
+					// Some filesystems are case sensitive. Make sure that we look for all possible variants
+					// matching given extension, i.e. not only for 'pdf', but also for 'PDF', 'Pdf' etc.
 					$globPattern = $submissionFile->getSubmissionId() . '-' .
 						$submissionFile->getFileId() . '-' .
 						$submissionFile->getRevision() . '-' .
 						'??' .
-						'.' . strtolower_codesafe($submissionFile->getExtension());
+						'.' . glob_ci_pattern($submissionFile->getExtension());
 
 					$matchedResults = array_merge(
 						glob($basePath . '*/*/' . $globPattern),
@@ -1259,82 +1261,96 @@ class Upgrade extends Installer {
 
 			// Set genres for files
 			$submissionFiles = $submissionFileDao->getAllRevisions($row['file_id']);
-			foreach ($submissionFiles as $submissionFile) {
-				$submissionFile->setGenreId($genre->getId());
-				$submissionFile->setUploaderUserId($creatorUserId);
-				$submissionFile->setUserGroupId($managerUserGroup->getId());
-				$submissionFile->setFileStage(SUBMISSION_FILE_SUBMISSION);
-				$submissionFileDao->updateObject($submissionFile);
-			}
+			// The SubmissionFileDAO::getAllRevisions() may return `null` which generates
+			// a warning with foreach.
+			if (!is_null($submissionFiles))
+			{
+				// We have some files to work on, proceed with casting ...
+				foreach ($submissionFiles as $submissionFile)
+				{
+					$submissionFile->setGenreId($genre->getId());
+					$submissionFile->setUploaderUserId($creatorUserId);
+					$submissionFile->setUserGroupId($managerUserGroup->getId());
+					$submissionFile->setFileStage(SUBMISSION_FILE_SUBMISSION);
+					$submissionFileDao->updateObject($submissionFile);
+				}
 
-			// Reload the files now that they're cast; set metadata
-			$submissionFiles = $submissionFileDao->getAllRevisions($row['file_id']);
-			foreach ($submissionFiles as $submissionFile) {
-				$suppFileSettingsResult = $submissionFileDao->retrieve('SELECT * FROM article_supp_file_settings WHERE supp_id = ? AND setting_value IS NOT NULL', array($row['supp_id']));
-				$extraSettings = array();
-				while (!$suppFileSettingsResult->EOF) {
-					$sfRow = $suppFileSettingsResult->getRowAssoc(false);
-					$suppFileSettingsResult->MoveNext();
-					switch ($sfRow['setting_name']) {
-						case 'creator':
-							$submissionFile->setCreator($sfRow['setting_value'], $sfRow['locale']);
-							break;
-						case 'description':
-							$submissionFile->setDescription($sfRow['setting_value'], $sfRow['locale']);
-							break;
-						case 'publisher':
-							$submissionFile->setPublisher($sfRow['setting_value'], $sfRow['locale']);
-							break;
-						case 'source':
-							$submissionFile->setSource($sfRow['setting_value'], $sfRow['locale']);
-							break;
-						case 'sponsor':
-							$submissionFile->setSponsor($sfRow['setting_value'], $sfRow['locale']);
-							break;
-						case 'subject':
-							$submissionFile->setSubject($sfRow['setting_value'], $sfRow['locale']);
-							break;
-						case 'title':
-							$submissionFile->setName($sfRow['setting_value'], $sfRow['locale']);
-							break;
-						case 'typeOther': break; // Discard (at least for now)
-						case 'excludeDoi': break; // Discard (no longer relevant)
-						case 'pub-id::doi':
-						case 'pub-id::publisher-id':
-							$extraSettings[$sfRow['setting_name']] = $sfRow['setting_value'];
-							break;
-						default:
-							error_log('Unknown supplementary file setting "' . $sfRow['setting_name'] . '"!');
-							break;
+				// Reload the files now that they're cast; set metadata
+				$submissionFiles = $submissionFileDao->getAllRevisions($row['file_id']);
+				foreach ($submissionFiles as $submissionFile)
+				{
+					$suppFileSettingsResult = $submissionFileDao->retrieve('SELECT * FROM article_supp_file_settings WHERE supp_id = ? AND setting_value IS NOT NULL', array($row['supp_id']));
+					$extraSettings = array();
+					while (!$suppFileSettingsResult->EOF)
+					{
+						$sfRow = $suppFileSettingsResult->getRowAssoc(false);
+						$suppFileSettingsResult->MoveNext();
+						switch ($sfRow['setting_name'])
+						{
+							case 'creator':
+								$submissionFile->setCreator($sfRow['setting_value'], $sfRow['locale']);
+								break;
+							case 'description':
+								$submissionFile->setDescription($sfRow['setting_value'], $sfRow['locale']);
+								break;
+							case 'publisher':
+								$submissionFile->setPublisher($sfRow['setting_value'], $sfRow['locale']);
+								break;
+							case 'source':
+								$submissionFile->setSource($sfRow['setting_value'], $sfRow['locale']);
+								break;
+							case 'sponsor':
+								$submissionFile->setSponsor($sfRow['setting_value'], $sfRow['locale']);
+								break;
+							case 'subject':
+								$submissionFile->setSubject($sfRow['setting_value'], $sfRow['locale']);
+								break;
+							case 'title':
+								$submissionFile->setName($sfRow['setting_value'], $sfRow['locale']);
+								break;
+							case 'typeOther':
+								break; // Discard (at least for now)
+							case 'excludeDoi':
+								break; // Discard (no longer relevant)
+							case 'pub-id::doi':
+							case 'pub-id::publisher-id':
+								$extraSettings[$sfRow['setting_name']] = $sfRow['setting_value'];
+								break;
+							default:
+								error_log('Unknown supplementary file setting "' . $sfRow['setting_name'] . '"!');
+								break;
+						}
 					}
-				}
-				$suppFileSettingsResult->Close();
+					$suppFileSettingsResult->Close();
 
-				// Store the old supp ID so that we can redirect requests for old URLs.
-				$extraSettings['old-supp-id'] = $row['supp_id'];
+					// Store the old supp ID so that we can redirect requests for old URLs.
+					$extraSettings['old-supp-id'] = $row['supp_id'];
 
-				$submissionFileDao->updateObject($submissionFile);
+					$submissionFileDao->updateObject($submissionFile);
 
-				// Preserve extra settings. (Plugins may not be loaded, so other mechanisms might not work.)
-				foreach ($extraSettings as $name => $value) {
-					$submissionFileDao->update(
-						'INSERT INTO submission_file_settings (file_id, setting_name, setting_value, setting_type) VALUES (?, ?, ?, ?)',
-						array(
-							$submissionFile->getFileId(),
-							$name,
-							$value,
-							'string'
-						)
-					);
-				}
+					// Preserve extra settings. (Plugins may not be loaded, so other mechanisms might not work.)
+					foreach ($extraSettings as $name => $value)
+					{
+						$submissionFileDao->update(
+							'INSERT INTO submission_file_settings (file_id, setting_name, setting_value, setting_type) VALUES (?, ?, ?, ?)',
+							array(
+								$submissionFile->getFileId(),
+								$name,
+								$value,
+								'string'
+							)
+						);
+					}
 
-				if ($article->getStatus() == STATUS_PUBLISHED) {
-					$articleGalley = $articleGalleyDao->newDataObject();
-					$articleGalley->setFileId($submissionFile->getFileId());
-					$articleGalley->setSubmissionId($article->getId());
-					$articleGalley->setLabel($submissionFile->getName($article->getLocale()));
-					$articleGalley->setLocale($article->getLocale());
-					$articleGalleyDao->insertObject($articleGalley);
+					if ($article->getStatus() == STATUS_PUBLISHED)
+					{
+						$articleGalley = $articleGalleyDao->newDataObject();
+						$articleGalley->setFileId($submissionFile->getFileId());
+						$articleGalley->setSubmissionId($article->getId());
+						$articleGalley->setLabel($submissionFile->getName($article->getLocale()));
+						$articleGalley->setLocale($article->getLocale());
+						$articleGalleyDao->insertObject($articleGalley);
+					}
 				}
 			}
 		}
