@@ -55,6 +55,7 @@ plugins/generic/recommendBySimilarity				\
 plugins/generic/translator					\
 plugins/importexport/sample					\
 plugins/importexport/duracloud					\
+plugins/importexport/pubmed					\
 plugins/reports/subscriptions					\
 tests								\
 lib/pkp/tests							\
