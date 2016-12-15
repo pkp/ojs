@@ -28,11 +28,11 @@
 
 	{fbvFormArea id="mastheadNameContainer"}
 		{fbvFormSection title="manager.setup.contextName" for="name" required=true inline=true size=$fbvStyles.size.MEDIUM}
-			{fbvElement type="text" multilingual=true name="name" id="name" value=$name}
+			{fbvElement type="text" multilingual=true name="name" id="name" value=$name required=true}
 		{/fbvFormSection}
 
 		{fbvFormSection title="manager.setup.journalInitials" for="acronym" required=true inline=true size=$fbvStyles.size.SMALL}
-			{fbvElement type="text" multilingual=true name="acronym" id="acronym" value=$acronym}
+			{fbvElement type="text" multilingual=true name="acronym" id="acronym" value=$acronym required=true}
 		{/fbvFormSection}
 
 		{fbvFormSection title="manager.setup.journalAbbreviation" for="abbreviation" inline=true size=$fbvStyles.size.SMALL}
