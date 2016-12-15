@@ -48,8 +48,6 @@
 	<message key="author.submissions.noSubmissions">Нет отправленных материалов.</message>
 	<message key="author.submit.journalSection">Раздел журнала</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Выберите подходящий раздел для этого материала (смотрите «Разделы и правила» на странице <a href="{$aboutUrl}" target="_new">«О журнале»</a>).]]></message>
-	<message key="author.submit.submissionLocale">Язык отправляемого материала</message>
-	<message key="author.submit.submissionLocaleDescription">Этот журнал принимает материалы на нескольких языках. Выберите основной язык отправляемого материала из раскрывающегося списка ниже.</message>
 	<message key="author.submit.verifyChecklist">Чтобы продолжить вы должны убедиться, что выполнены все пункты в контрольном списке отправки.</message>
 	<message key="author.submit.copyrightNoticeAgree">Авторы согласны с Условиями передачи авторских прав, которые будут применены к этому материалу в случае, если он будет опубликован этим журналом (комментарии для редактора могут быть добавлены ниже).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Чтобы продолжить вы должны принять Условия передачи авторских прав.</message>

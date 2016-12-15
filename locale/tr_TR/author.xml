@@ -50,8 +50,6 @@
 	<message key="author.submit.journalSection">Dergi Bölümü</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Bu gönderi için uygun bir bölüm seçin (Daha fazla bilgi için dergi <a href="{$aboutUrl}" target="_new">Hakkında</a> başlığı altındaki Bölümler ve Politikalara bakınız).]]></message>
 	<message key="submission.submit.selectSection">Lütfen bir bölüm seçiniz...</message>
-	<message key="author.submit.submissionLocale">Gönderi Dili</message>
-	<message key="author.submit.submissionLocaleDescription">Bu dergi çeşitli dillerde başvuru kabul eder. Açılabilir menüden birincil olarak kullanmak istediğiniz dili seçiniz.</message>
 	<message key="author.submit.submissionChecklist">Başvuru Kontrol Listesi</message>
 	<message key="author.submit.verifyChecklist">Devam etmeden önce başvuru kontrol listesindeki her öğenin tamalanmış olduğundan emin olmalısınız.</message>
 	<message key="author.submit.copyrightNoticeAgree">Yazarlar bu dergi tarafından yayımlanan gönderiler için Telif Hakkı koşullarını kabul etmiş sayılır. Telif Hakkı koşulları bu gönderi için de geçerli olacaktır (editöre iletmek istediğiniz yorumları aşağıya yazabilirsiniz).</message>

@@ -65,11 +65,10 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 	}
 
 	/**
-	 * Override the builtin to get the correct template path.
-	 * @return string
+	 * @copydoc PKPPlugin::getTemplatePath
 	 */
-	function getTemplatePath() {
-		return $this->getWebFeedPlugin()->getTemplatePath();
+	function getTemplatePath($inCore = false) {
+		return $this->getWebFeedPlugin()->getTemplatePath($inCore);
 	}
 
 	/**

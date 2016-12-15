@@ -118,7 +118,5 @@
 	<message key="author.article.copyeditedFile">文本编辑文件</message>
 	<message key="author.article.authorRevisedFile">作者文件</message>
 	<message key="author.submit.authorSubmitLoginMessage">投稿要求有一个本期刊的用户帐户.这个帐户用于编辑跟踪您的投稿，当投稿的状态改变的时候通知你，或者编辑需要您的相信信息 .</message>
-	<message key="author.submit.submissionLocale">投稿语言</message>
-	<message key="author.submit.submissionLocaleDescription">本期刊支持多语言投稿。请从下面的下拉菜单中选择投稿的主语言。</message>
 	<message key="author.submit.form.localeRequired">请选择一种提交语言</message>
 </locale>

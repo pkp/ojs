@@ -1255,7 +1255,7 @@ class Upgrade extends Installer {
 					$genre = $genreDao->getByKey('OTHER', $journal->getId());
 					break;
 			}
-			assert($genre);
+			assert(isset($genre));
 
 			// Set genres for files
 			$submissionFiles = $submissionFileDao->getAllRevisions($row['file_id']);
@@ -1415,7 +1415,7 @@ class Upgrade extends Installer {
 					}
 					break;
 			}
-			assert($query); // We've created or looked up a query.
+			assert(isset($query)); // We've created or looked up a query.
 
 			$assignedUserIds = array($userId);
 			foreach (array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT) as $roleId) {
@@ -1548,6 +1548,33 @@ class Upgrade extends Installer {
 	function localizeIssueCoverImages() {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$publicFileManager = new PublicFileManager();
+		// remove strange old cover images with array values in the DB - from 3.alpha or 3.beta?
+		$issueDao->update('DELETE FROM issue_settings WHERE setting_name = \'coverImage\' AND setting_type = \'object\'');
+
+		// remove empty 3.0 cover images
+		$issueDao->update('DELETE FROM issue_settings WHERE setting_name = \'coverImage\' AND locale = \'\' AND setting_value = \'\'');
+		$issueDao->update('DELETE FROM issue_settings WHERE setting_name = \'coverImageAltText\' AND locale = \'\' AND setting_value = \'\'');
+
+		// get cover image duplicates, from 2.4.x and 3.0
+		$result = $issueDao->retrieve(
+			'SELECT DISTINCT iss1.issue_id, iss1.setting_value, i.journal_id
+			FROM issue_settings iss1
+			LEFT JOIN issues i ON (i.issue_id = iss1.issue_id)
+			JOIN issue_settings iss2 ON (iss2.issue_id = iss1.issue_id AND iss2.setting_name = \'coverImage\')
+			WHERE iss1.setting_name = \'fileName\''
+		);
+		// remove the old 2.4.x cover images, for which a new cover image exists
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$oldFileName = $row['setting_value'];
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldFileName)) {
+				$publicFileManager->removeJournalFile($row['journal_id'], $oldFileName);
+			}
+			$issueDao->update('DELETE FROM issue_settings WHERE issue_id = ? AND setting_name = \'fileName\' AND setting_value = ?', array((int) $row['issue_id'], $oldFileName));
+			$result->MoveNext();
+		}
+		$result->Close();
+
 		// retrieve names for unlocalized issue cover images
 		$result = $issueDao->retrieve(
 			'SELECT iss.issue_id, iss.setting_value, j.journal_id, j.primary_locale
@@ -1588,16 +1615,16 @@ class Upgrade extends Installer {
 				// Update cover image names in the issue_settings table
 				$issueDao->update(
 					'UPDATE issue_settings
-					SET locale = j.primary_locale, setting_value = CONCAT(LEFT( iss.setting_value, LOCATE(\'.\', iss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING_INDEX(iss.setting_value,\'.\',-1))
-					FROM issue_settings iss, issues i, journals j
-					WHERE iss.setting_name = \'coverImage\' AND iss.locale = \'\' AND i.issue_id = iss.issue_id AND j.journal_id = i.journal_id'
+					SET locale = j.primary_locale, setting_value = REGEXP_REPLACE(issue_settings.setting_value, \'[\.]\', CONCAT(\'_\', j.primary_locale, \'.\'))
+					FROM issues i, journals j
+					WHERE issue_settings.setting_name = \'coverImage\' AND issue_settings.locale = \'\' AND i.issue_id = issue_settings.issue_id AND j.journal_id = i.journal_id'
 				);
 				// Update cover image alt texts in the issue_settings table
 				$issueDao->update(
 					'UPDATE issue_settings
 					SET locale = j.primary_locale
-					FROM issue_settings iss, issues i, journals j
-					WHERE iss.setting_name = \'coverImageAltText\' AND iss.locale = \'\' AND i.issue_id = iss.issue_id AND j.journal_id = i.journal_id'
+					FROM issues i, journals j
+					WHERE issue_settings.setting_name = \'coverImageAltText\' AND issue_settings.locale = \'\' AND i.issue_id = issue_settings.issue_id AND j.journal_id = i.journal_id'
 				);
 				break;
 			default: fatalError('Unknown database type!');
@@ -1613,6 +1640,34 @@ class Upgrade extends Installer {
 	function localizeArticleCoverImages() {
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$publicFileManager = new PublicFileManager();
+		// remove strange old cover images with array values in the DB - from 3.alpha or 3.beta?
+		$articleDao->update('DELETE FROM submission_settings WHERE setting_name = \'coverImage\' AND setting_type = \'object\'');
+
+		// remove empty 3.0 cover images
+		$articleDao->update('DELETE FROM submission_settings WHERE setting_name = \'coverImage\' AND locale = \'\' AND setting_value = \'\'');
+		$articleDao->update('DELETE FROM submission_settings WHERE setting_name = \'coverImageAltText\' AND locale = \'\' AND setting_value = \'\'');
+
+		// get cover image duplicates, from 2.4.x and 3.0
+		$result = $articleDao->retrieve(
+			'SELECT DISTINCT ss1.submission_id, ss1.setting_value, s.context_id
+			FROM submission_settings ss1
+			LEFT JOIN submissions s ON (s.submission_id = ss1.submission_id)
+			JOIN submission_settings ss2 ON (ss2.submission_id = ss1.submission_id AND ss2.setting_name = \'coverImage\')
+			WHERE ss1.setting_name = \'fileName\''
+		);
+		// remove the old 2.4.x cover images, for which a new cover image exists
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$submissionId = $row['submission_id'];
+			$oldFileName = $row['setting_value'];
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['context_id']) . '/' . $oldFileName)) {
+				$publicFileManager->removeJournalFile($row['journal_id'], $oldFileName);
+			}
+			$articleDao->update('DELETE FROM submission_settings WHERE submission_id = ? AND setting_name = \'fileName\' AND setting_value = ?', array((int) $submissionId, $oldFileName));
+			$result->MoveNext();
+		}
+		$result->Close();
+
 		// retrieve names for unlocalized article cover images
 		$result = $articleDao->retrieve(
 			'SELECT ss.submission_id, ss.setting_value, j.journal_id, j.primary_locale
@@ -1655,16 +1710,16 @@ class Upgrade extends Installer {
 				// Update cover image names in the submission_settings table
 				$articleDao->update(
 					'UPDATE submission_settings
-					SET locale = j.primary_locale, setting_value = CONCAT(LEFT( ss.setting_value, LOCATE(\'.\', ss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING_INDEX(ss.setting_value,\'.\',-1))
-					FROM submission_settings ss, submissions s, journals j
-					WHERE ss.setting_name = \'coverImage\' AND ss.locale = \'\' AND s.submission_id = ss.submission_id AND j.journal_id = s.context_id'
+					SET locale = j.primary_locale, setting_value = REGEXP_REPLACE(submission_settings.setting_value, \'[\.]\', CONCAT(\'_\', j.primary_locale, \'.\'))
+					FROM submissions s, journals j
+					WHERE submission_settings.setting_name = \'coverImage\' AND submission_settings.locale = \'\' AND s.submission_id = submission_settings.submission_id AND j.journal_id = s.context_id'
 				);
 				// Update cover image alt texts in the submission_settings table
 				$articleDao->update(
 					'UPDATE submission_settings
 					SET locale = j.primary_locale
-					FROM submission_settings ss, submissions s, journals j
-					WHERE ss.setting_name = \'coverImageAltText\' AND ss.locale = \'\' AND s.submission_id = ss.submission_id AND j.journal_id = s.context_id'
+					FROM submissions s, journals j
+					WHERE submission_settings.setting_name = \'coverImageAltText\' AND submission_settings.locale = \'\' AND s.submission_id = submission_settings.submission_id AND j.journal_id = s.context_id'
 				);
 				break;
 			default: fatalError('Unknown database type!');

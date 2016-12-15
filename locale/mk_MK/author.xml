@@ -50,8 +50,6 @@
 	<message key="author.submit.journalSection">Оддел за списание</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Селектирајте го соодветниот оддел за ова поднесување (Види Оддел и Правила во<a href="{$aboutUrl}" target="_new">За</a> списанието).]]></message>
 	<message key="submission.submit.selectSection">Ве молиме изберете оддел...</message>
-	<message key="author.submit.submissionLocale">Јазик на датотеката</message>
-	<message key="author.submit.submissionLocaleDescription">Системот прифаќа датотеки на неколку јазици. Изберете го основниот јазик на датотеката на паѓачкото мени подолу.</message>
 	<message key="author.submit.submissionChecklist">Список за проверка на поднесувањето</message>
 	<message key="author.submit.verifyChecklist">Мора да бидете сигурни дека сите ставки во доставувањето се исполнети пред да продолжите понатаму.</message>
 	<message key="author.submit.copyrightNoticeAgree">Авторите се согласуваат со авторските права кои ќе бидат применети на овој труд, ако и кога ќе биде објавен ( коментарите до уредникот може да се дадат подолу ).</message>

@@ -48,8 +48,6 @@
 	<message key="author.submit.journalSection">Bagian Jurnal</message> 
 	<message key="author.submit.journalSectionDescription"><![CDATA[Pilih bagian yang tepat untuk naskah ini (lihat Bagian dan Kebijakan di <a href="{$aboutUrl}" target="_new">Tentang</a> Kami).]]></message>	
 <message key="submission.submit.selectSection">Silah pilih bagian...</message> 
-	<message key="author.submit.submissionLocale">Bahasa Naskah</message> 
-	<message key="author.submit.submissionLocaleDescription">Jurnal ini menerima naskah dari beberapa bahasa. Pilih bahasa utama naskah dari menu di bawah ini.</message>	
 <message key="author.submit.submissionChecklist">Checklist Naskah</message> 
 
 <message key="author.submit.verifyChecklist">Anda harus memastikan semua artikel tercantum dalam daftar nama naskah yang memuaskan sebelum dilanjutkan.</message>	

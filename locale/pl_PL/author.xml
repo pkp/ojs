@@ -48,8 +48,6 @@
 	<message key="author.submit.journalSection">Dział czasopisma</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Wybierz docelowy dział dla przesyłanego tekstu (informacje o działach znajdziesz na stronie <a href="{$aboutUrl}" target="_new">O czasopiśmie</a>).]]></message>
 	<message key="submission.submit.selectSection">Wybierz dział...</message>
-	<message key="author.submit.submissionLocale">Język przesyłanego tekstu</message>
-	<message key="author.submit.submissionLocaleDescription">Czasopismo akceptuje teksty napisane w różnych językach. Wybierz w jakim języku został napisany tekst.</message>
 	<message key="author.submit.submissionChecklist">Sprawdzenie tekstu przed wysłaniem</message>
 	<message key="author.submit.verifyChecklist">Aby kontynuować, upewnij się, że wszystkie elementy listy zostały zaznaczone.</message>
 	<message key="author.submit.copyrightNoticeAgree">Zapoznałem się z prawami autorskimi dotyczącymi przesyłanego tekstu (ewentualny komenatrz dla redaktora można wpisać poniżej).</message>

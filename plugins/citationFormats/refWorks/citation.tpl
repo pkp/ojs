@@ -18,8 +18,8 @@
 	author = {{/literal}{assign var=authors value=$article->getAuthors()}{foreach from=$authors item=author name=authors key=i}{$author->getLastName()|escape}, {assign var=firstName value=$author->getFirstName()}{assign var=authorCount value=$authors|@count}{$firstName|escape|truncate:1:""}.{if $i<$authorCount-1}, {/if}{/foreach}{literal}},
 	title = {{/literal}{$article->getLocalizedTitle()|strip_unsafe_html}{literal}},
 	journal = {{/literal}{$journal->getLocalizedName()|escape}{literal}},
-{/literal}{if $issue}{if $issue->getShowVolume()}{literal}	volume = {{/literal}{$issue->getVolume()|escape}{literal}},{/literal}{/if}{literal}
-{if $issue->getShowNumber()}	number = {{/literal}{$issue->getNumber()|escape}{literal}},{/literal}{/if}{/if}{literal}
+{/literal}{if $issue}{if $issue->getShowVolume()}{literal}	volume = {{/literal}{$issue->getVolume()|escape}{literal}},{/literal}{/if}
+{if $issue->getShowNumber()}{literal}	number = {{/literal}{$issue->getNumber()|escape}{literal}},{/literal}{/if}{/if}{literal}
 	year = {{/literal}{if $article->getDatePublished()}{$article->getDatePublished()|date_format:'%Y'}{elseif $issue->getDatePublished()}{$issue->getDatePublished()|date_format:'%Y'}{else}{$issue->getYear()|escape}{/if}{literal}},
 {/literal}{assign var=issn value=$journal->getSetting('issn')|escape}{if $issn}{literal}	issn = {{/literal}{$issn|escape}{literal}},{/literal}{/if}
 {if $article->getStoredPubId('doi')}	doi = {ldelim}{$article->getStoredPubId('doi')|escape}{rdelim},

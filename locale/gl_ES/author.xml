@@ -118,7 +118,4 @@
 	<message key="author.submissions.queuedEditingProofread">En edición: Revisión requerida</message>
 	<message key="author.submit.reorder">Reclasificar nome do autor</message>
 	<message key="author.submit.form.wordCountAlert">Excediches o número máximo de palabras para o resumo.</message>
-	<message key="author.submit.submissionLocale">Idioma Presentación</message>
-	<message key="author.submit.form.localeRequired">Escolle un idioma de presentación</message>
-	<message key="author.submit.submissionLocaleDescription">Esta revista acepta presentacións en diversos idiomas. Escolle o idioma principal da presentación no desdobrabel de abaixo.</message>
 </locale>

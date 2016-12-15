@@ -59,10 +59,10 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @see Plugin::getTemplatePath()
+	 * @copydoc PKPPlugin::getTemplatePath
 	 */
-	function getTemplatePath() {
-		return parent::getTemplatePath() . 'templates/';
+	function getTemplatePath($inCore = false) {
+		return parent::getTemplatePath($inCore) . 'templates/';
 	}
 
 
