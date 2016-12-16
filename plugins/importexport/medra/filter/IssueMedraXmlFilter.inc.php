@@ -105,7 +105,7 @@ class IssueMedraXmlFilter extends O4DOIXmlFilter {
 			// Change server domain for testing.
 			$url = PKPString::regexp_replace('#://[^\s]+/index.php#', '://example.com/index.php', $url);
 		}
-		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOIWebsiteLink', htmlspecialchars($url, ENT_COMPAT, 'UTF-8')));
+		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOIWebsiteLink', $url));
 		// DOI strucural type
 		$structuralType = $this->isWork($context, $plugin) ? 'Abstraction' : 'DigitalFixation';
 		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOIStructuralType', $structuralType));
