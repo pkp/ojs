@@ -70,22 +70,21 @@ class TemplateManager extends PKPTemplateManager {
 			}
 			if (isset($context)) {
 
-				$this->assign('currentJournal', $context);
-				$this->assign('siteTitle', $context->getLocalizedName());
-				$this->assign('publicFilesDir', $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()));
-
-				$this->assign('primaryLocale', $context->getPrimaryLocale());
-				$this->assign('supportedLocales', $context->getSupportedLocaleNames());
-
-				// Assign page header
-				$this->assign('displayPageHeaderTitle', $context->getLocalizedPageHeaderTitle());
-				$this->assign('displayPageHeaderLogo', $context->getLocalizedPageHeaderLogo());
-				$this->assign('displayPageHeaderLogoAltText', $context->getLocalizedSetting('pageHeaderLogoImageAltText'));
-				$this->assign('numPageLinks', $context->getSetting('numPageLinks'));
-				$this->assign('itemsPerPage', $context->getSetting('itemsPerPage'));
-				$this->assign('enableAnnouncements', $context->getSetting('enableAnnouncements'));
-				$this->assign('contextSettings', $context->getSettingsDAO()->getSettings($context->getId()));
-				$this->assign('disableUserReg', $context->getSetting('disableUserReg'));
+				$this->assign(array(
+					'currentJournal' => $context,
+					'siteTitle' => $context->getLocalizedName(),
+					'publicFilesDir' => $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()),
+					'primaryLocale' => $context->getPrimaryLocale(),
+					'supportedLocales' => $context->getSupportedLocaleNames(),
+					'displayPageHeaderTitle' => $context->getLocalizedPageHeaderTitle(),
+					'displayPageHeaderLogo' => $context->getLocalizedPageHeaderLogo(),
+					'displayPageHeaderLogoAltText' => $context->getLocalizedSetting('pageHeaderLogoImageAltText'),
+					'numPageLinks' => $context->getSetting('numPageLinks'),
+					'itemsPerPage' => $context->getSetting('itemsPerPage'),
+					'enableAnnouncements' => $context->getSetting('enableAnnouncements'),
+					'contextSettings' => $context->getSettingsDAO()->getSettings($context->getId()),
+					'disableUserReg' => $context->getSetting('disableUserReg'),
+				));
 
 				// Assign meta tags
 				$favicon = $context->getLocalizedFavicon();
@@ -118,15 +117,6 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('journalPaymentsEnabled', $paymentManager->isConfigured());
 				$this->assign('pageFooter', $context->getLocalizedSetting('pageFooter'));
 			} else {
-				// Add the site-wide logo, if set for this locale or the primary locale
-				$this->assign('displayPageHeaderTitle', $site->getLocalizedPageHeaderTitle());
-				$this->assign('displayPageHeaderLogo', $site->getLocalizedSetting('pageHeaderTitleImage'));
-
-				$this->assign('siteTitle', $site->getLocalizedTitle());
-				$this->assign('primaryLocale', $site->getPrimaryLocale());
-				$this->assign('supportedLocales', $site->getSupportedLocaleNames());
-				$this->assign('pageFooter', $site->getLocalizedSetting('pageFooter'));
-
 				// Check if registration is open for any contexts
 				$contextDao = Application::getContextDAO();
 				$contexts = $contextDao->getAll(true)->toArray();
@@ -136,8 +126,18 @@ class TemplateManager extends PKPTemplateManager {
 						$contextsForRegistration[] = $context;
 					}
 				}
-				$this->assign('contexts', $contextsForRegistration);
-				$this->assign('disableUserReg', empty($contextsForRegistration));
+
+				$this->assign(array(
+					'contexts' => $contextsForRegistration,
+					'disableUserReg' => empty($contextsForRegistration),
+					'displayPageHeaderTitle' => $site->getLocalizedPageHeaderTitle(),
+					'displayPageHeaderLogo' => $site->getLocalizedSetting('pageHeaderTitleImage'),
+					'siteTitle' => $site->getLocalizedTitle(),
+					'primaryLocale' => $site->getPrimaryLocale(),
+					'supportedLocales' => $site->getSupportedLocaleNames(),
+					'pageFooter' => $site->getLocalizedSetting('pageFooter'),
+				));
+
 			}
 		}
 	}

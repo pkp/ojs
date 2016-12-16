@@ -53,11 +53,13 @@ class OpenAccessNotification extends ScheduledTask {
 			$mimeBoundary = '==boundary_' . md5(microtime());
 
 			$templateMgr = TemplateManager::getManager();
-			$templateMgr->assign('body', $email->getBody($journal->getPrimaryLocale()));
-			$templateMgr->assign('templateSignature', $journal->getSetting('emailSignature'));
-			$templateMgr->assign('mimeBoundary', $mimeBoundary);
-			$templateMgr->assign('issue', $issue);
-			$templateMgr->assign('publishedArticles', $publishedArticles);
+			$templateMgr->assign(array(
+				'body' => $email->getBody($journal->getPrimaryLocale()),
+				'templateSignature' => $journal->getSetting('emailSignature'),
+				'mimeBoundary' => $mimeBoundary,
+				'issue' => $issue,
+				'publishedArticles' => $publishedArticles,
+			));
 
 			$email->addHeader('MIME-Version', '1.0');
 			$email->setContentType('multipart/alternative; boundary="'.$mimeBoundary.'"');
