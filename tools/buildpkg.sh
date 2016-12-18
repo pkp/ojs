@@ -57,6 +57,7 @@ plugins/importexport/sample					\
 plugins/importexport/duracloud					\
 plugins/importexport/pubmed					\
 plugins/reports/subscriptions					\
+plugins/blocks/relatedItems					\
 tests								\
 lib/pkp/tests							\
 .git								\
