@@ -78,7 +78,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	 * @copydoc PKPPubIdPlugin::getResolvingURL()
 	 */
 	function getResolvingURL($contextId, $pubId) {
-		return 'http://dx.doi.org/'.$this->_doiURLEncode($pubId);
+		return 'https://doi.org/'.$this->_doiURLEncode($pubId);
 	}
 
 	/**
