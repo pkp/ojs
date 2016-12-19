@@ -144,7 +144,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 			// Change server domain for testing.
 			$url = PKPString::regexp_replace('#://[^\s]+/index.php#', '://example.com/index.php', $url);
 		}
-		$articleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOIWebsiteLink', htmlspecialchars($url, ENT_COMPAT, 'UTF-8')));
+		$articleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOIWebsiteLink', $url));
 		// DOI strucural type
 		$articleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOIStructuralType', $this->getDOIStructuralType()));
 		// Registrant (mandatory)
