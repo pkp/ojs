@@ -277,7 +277,7 @@
             <xsl:if test="article-meta/article-id[@pub-id-type='doi']">
                 <fo:block>
                     <xsl:text>DOI: </xsl:text>
-                    <fo:basic-link external-destination="url(http://dx.doi.org/{article-meta/article-id[@pub-id-type='doi']})" color="blue">
+                    <fo:basic-link external-destination="url(https://doi.org/{article-meta/article-id[@pub-id-type='doi']})" color="blue">
                         <xsl:value-of select="article-meta/article-id[@pub-id-type='doi']"/>
                     </fo:basic-link>
                 </fo:block>
@@ -1504,7 +1504,7 @@
 	            </xsl:when>
 	            <xsl:when test="@pub-id-type='doi'">
 	                <xsl:text> DOI: </xsl:text>
-	                <fo:basic-link external-destination="url(http://dx.doi.org/{.})" color="blue">
+	                <fo:basic-link external-destination="url(https://doi.org/{.})" color="blue">
 	                    <xsl:value-of select="."/>
 	                </fo:basic-link>
 	                <xsl:text>.</xsl:text>
