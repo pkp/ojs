@@ -897,7 +897,7 @@
 				</xsl:when>
 				-->
 				<xsl:when test="@pub-id-type='doi'">
-					<xsl:value-of select="'http://dx.doi.org/'"/>
+					<xsl:value-of select="'https://doi.org/'"/>
 				</xsl:when>
 			</xsl:choose>
 		</xsl:variable>
