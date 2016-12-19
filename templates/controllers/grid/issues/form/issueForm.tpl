@@ -59,7 +59,7 @@
 			{fbvElement type="text" label="issue.year" id="year" value=$year maxlength="4" inline=true size=$fbvStyles.size.SMALL}
 		{/fbvFormSection}
 		{fbvFormSection}
-			{fbvElement type="text" label="issue.title" id="title" value=$title multilingual=true required=true}
+			{fbvElement type="text" label="issue.title" id="title" value=$title multilingual=true}
 		{/fbvFormSection}
 
 		{fbvFormSection list=true}
