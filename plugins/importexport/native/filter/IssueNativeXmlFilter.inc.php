@@ -48,6 +48,8 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	function &process(&$issues) {
 		// Create the XML document
 		$doc = new DOMDocument('1.0');
+		$doc->preserveWhiteSpace = false;
+		$doc->formatOutput = true;
 		$deployment = $this->getDeployment();
 
 		if (count($issues)==1) {
