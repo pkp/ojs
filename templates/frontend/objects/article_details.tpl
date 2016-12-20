@@ -175,7 +175,7 @@
 						{translate key="submissions.published"}
 					</div>
 					<div class="value">
-						{$article->getDatePublished()|date_format}
+						{$article->getDatePublished()|date_format:$dateFormatShort}
 					</div>
 				</div>
 			{/if}
