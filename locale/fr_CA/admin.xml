@@ -77,12 +77,12 @@
 	<message key="admin.categories.nameRequired">Un nom de catégorie est requis.</message>
 	<message key="admin.settings.defaultMetricDescription">Votre installation OJS est paramétrée pour enregistrer plus d'une mesure d'utilisation. Les statistiques d'utilisation seront affichées dans plusieurs contextes. Il y a des cas où seulement une statistique d'utilisation doit être utilisée, ex. pour afficher une liste ordonnée des articles les plus utilisés ou classer les résultats de recherche. Veuillez sélectionnez l'une des mesures comme celle par défaut.</message>
 	
-	<message key="admin.languages.confirmDisable">*Êtes-vous certain de vouloir désactiver cette instance locale? Cela pourrait avoir un impact sur toute revue utilisant présentement cette instance.</message>
-	<message key="admin.contexts.form.titleRequired">*Un titre est requis.</message>
-	<message key="admin.presses.createInstructions">*Le rôle de directeur de la revue vous sera automatique attribué. Après avoir créer une nouvelle revue, vous serez dirigé vers son assistant de configuration afin de terminer la configuration initiale de la revue.</message>
-	<message key="admin.scheduledTask.subscriptionExpiryReminder">*Rappel d'expiration d'abonnement</message>
-	<message key="admin.scheduledTask.openAccessNotification">*Avis de libre accès</message>
-	<message key="admin.scheduledTask.reviewReminder">*Rappel d'évaluation</message>
+	<message key="admin.languages.confirmDisable">Êtes-vous certain de vouloir désactiver cette instance locale? Cela pourrait avoir un impact sur toute revue utilisant présentement cette instance.</message>
+	<message key="admin.contexts.form.titleRequired">Un titre est requis.</message>
+	<message key="admin.presses.createInstructions">Le rôle de directeur de la revue vous sera automatique attribué. Après avoir créer une nouvelle revue, vous serez dirigé vers son assistant de configuration afin de terminer la configuration initiale de la revue.</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Rappel d'expiration d'abonnement</message>
+	<message key="admin.scheduledTask.openAccessNotification">Avis de libre accès</message>
+	<message key="admin.scheduledTask.reviewReminder">Rappel d'évaluation</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<P>Le téléchargement de fichiers de langue depuis le serveur Web Public Knowledge Project n'est pas disponible actuellement car: </p>
 <ul>
 <li>Votre serveur n'a pas ou ne permet pas l'exécution de l'utilitaire GNU "tar". </li>
