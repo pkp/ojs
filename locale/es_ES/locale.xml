@@ -948,8 +948,6 @@
 	<message key="user.role.subEditors">Editores/as de sección</message>
 	<message key="user.role.journalAssistant">Asistente/a de revista</message>
 	<message key="user.role.journalAssistants">Asistentes/as de revista</message>
-	<message key="user.role.guestEditor">Editor/a invitado/a</message>
-	<message key="user.role.guestEditors">Editores/as invitados/as</message>
 	<message key="issue.return">Volver a los detalles del número</message>
 	<message key="submission.event.submissionSubmitted">Artículo enviado</message>
 	<message key="search.results.orderBy">Ordenar resultados por</message>

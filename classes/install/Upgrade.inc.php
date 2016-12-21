@@ -273,17 +273,6 @@ class Upgrade extends Installer {
 			// fix stage id assignments for reviews.  OJS hard coded *all* of these to '1' initially. Consider OJS reviews as external reviews.
 			$userGroupDao->update('UPDATE review_assignments SET stage_id = ?', array(WORKFLOW_STAGE_ID_EXTERNAL_REVIEW));
 
-			// Guest editors.
-			$userGroupIds = $userGroupDao->getUserGroupIdsByRoleId(ROLE_ID_GUEST_EDITOR, $journal->getId());
-			$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_GUEST_EDITOR));
-
-			while (!$userResult->EOF) {
-				$row = $userResult->GetRowAssoc(false);
-				// there should only be one guest editor group id.
-				$userGroupDao->assignUserToGroup($row['user_id'], $userGroupIds[0]);
-				$userResult->MoveNext();
-			}
-
 			// regular Editors.  NOTE:  this involves a role id change from 0x100 to 0x10 (old OJS _EDITOR to PKP-lib _MANAGER).
 			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_MANAGER);
 			$editorUserGroup = null;
