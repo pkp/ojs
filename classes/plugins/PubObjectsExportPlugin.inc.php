@@ -275,36 +275,16 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		libxml_use_internal_errors(true);
 		$exportXml = $exportFilter->execute($objects, true);
 		$xml = $exportXml->saveXml();
-		$errors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR ||  $a->level == LIBXML_ERR_FATAL;'));
+		$errors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;'));
 		if (!empty($errors)) {
 			$charset = Config::getVar('i18n', 'client_charset');
 			header('Content-type: text/html; charset=' . $charset);
 			echo '<html><body>';
 			$this->displayXMLValidationErrors($errors, $xml);
-			fatalError(__('plugins.importexport.common.error.validation'));
 			echo '</body></html>';
+			fatalError(__('plugins.importexport.common.error.validation'));
 		}
 		return $xml;
-	}
-
-	/**
-	 * Display XML validation errors.
-	 * @param $errors array
-	 * @param $xml string
-	 */
-	function displayXMLValidationErrors($errors, $xml) {
-		echo '<h2>' . __('plugins.importexport.common.validationErrors') .'</h2>';
-
-		foreach ($errors as $error) {
-			switch ($error->level) {
-				case LIBXML_ERR_ERROR:
-				case LIBXML_ERR_FATAL:
-					echo '<p>' .trim($error->message) .'</p>';
-			}
-		}
-		libxml_clear_errors();
-		echo '<h3>' . __('plugins.importexport.common.invalidXML') .'</h3>';
-		echo '<p><pre>' .htmlspecialchars($xml) .'</pre></p>';
 	}
 
 	/**
