@@ -11,9 +11,34 @@
 {* Help tab *}
 {help file="editorial-workflow/production.md" class="pkp_help_tab"}
 
+<script type="text/javascript">
+	// Attach the JS file tab handler.
+	$(function() {ldelim}
+		$('#submissionRevisions').pkpHandler(
+			'$.pkp.controllers.TabHandler',
+			{ldelim}
+				{assign var=versionIndex value=$latestSubmissionRevision-1}
+				selected: {$versionIndex},
+				disabled: [{$submissionRevision}]
+			{rdelim}
+		);
+	{rdelim});
+</script>
 <div id="production">
-{include file="controllers/notification/inPlaceNotification.tpl" notificationId="productionNotification" requestOptions=$productionNotificationRequestOptions}
+	{if $versioningEnabled}
+		<div id="submissionRevisions" class="pkp_controllers_tab">
+			<ul>
+				{foreach from=$submissionRevisions item=submissionRevision}
+					<li><a href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.workflow.VersioningTabHandler" op="versioning" submissionId=$submission->getId() stageId=$stageId submissionRevision=$submissionRevision}">{translate key="submission.production.version" submissionRevision=$submissionRevision}</a></li>
+				{/foreach}
+			</ul>
+		</div>
 
+	{** production discussions **}
+	{url|assign:queriesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.queries.QueriesGridHandler" op="fetchGrid" submissionId=$submission->getId() stageId=$stageId escape=false}
+	{load_url_in_div id="queriesGrid" url=$queriesGridUrl}
+
+{else}
 	<div class="pkp_context_sidebar">
 		{if array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR), (array)$userRoles)}
 			<div id="schedulePublicationDiv" class="pkp_tab_actions">
@@ -35,4 +60,5 @@
 		{url|assign:representationsGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.articleGalleys.ArticleGalleyGridHandler" op="fetchGrid" submissionId=$submission->getId() escape=false}
 		{load_url_in_div id="formatsGridContainer"|uniqid url=$representationsGridUrl}
 	</div>
+{/if}
 </div>

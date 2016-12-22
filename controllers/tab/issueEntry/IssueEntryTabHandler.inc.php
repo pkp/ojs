@@ -100,8 +100,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$submission = $this->getSubmission();
 		$stageId = $this->getStageId();
 		$user = $request->getUser();
-		$revision = $request->getUserVar('revision') ? (int)$request->getUserVar('revision') : null;
-		$saveAsRevision = $request->getUserVar('saveAsRevision') ? (int)$request->getUserVar('saveAsRevision') : null;
+		$revision = $args['submissionRevision'] ? $args['submissionRevision'] : null;
 		$formParams = array('displayedInContainer' => true, 'revision' => $revision, 'saveAsRevision' => $saveAsRevision);
 
 		import('controllers.tab.issueEntry.form.IssueEntryPublicationMetadataForm');
