@@ -226,14 +226,14 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		libxml_use_internal_errors(true);
 		$submissionXml = $exportFilter->execute($submissions, true);
 		$xml = $submissionXml->saveXml();
-		$errors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR ||  $a->level == LIBXML_ERR_FATAL;'));
+		$errors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;'));
 		if (!empty($errors)) {
 			$charset = Config::getVar('i18n', 'client_charset');
 			header('Content-type: text/html; charset=' . $charset);
 			echo '<html><body>';
 			$this->displayXMLValidationErrors($errors, $xml);
-			fatalError(__('plugins.importexport.common.error.validation'));
 			echo '</body></html>';
+			fatalError(__('plugins.importexport.common.error.validation'));
 		}
 		return $xml;
 	}
@@ -261,14 +261,14 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		libxml_use_internal_errors(true);
 		$issueXml = $exportFilter->execute($issues, true);
 		$xml = $issueXml->saveXml();
-		$errors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR ||  $a->level == LIBXML_ERR_FATAL;'));
+		$errors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;'));
 		if (!empty($errors)) {
 			$charset = Config::getVar('i18n', 'client_charset');
 			header('Content-type: text/html; charset=' . $charset);
 			echo '<html><body>';
 			$this->displayXMLValidationErrors($errors, $xml);
-			fatalError(__('plugins.importexport.common.error.validation'));
 			echo '</body></html>';
+			fatalError(__('plugins.importexport.common.error.validation'));
 		}
 		return $xml;
 	}
