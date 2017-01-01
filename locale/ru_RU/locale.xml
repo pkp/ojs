@@ -218,8 +218,6 @@
 	<message key="user.role.subscriptionManagers">Менеджеры по подписке</message>
 	<message key="user.role.journalAssistant">Ассистент журнала</message>
 	<message key="user.role.journalAssistants">Ассистенты журнала</message>
-	<message key="user.role.guestEditor">Приглашенный редактор</message>
-	<message key="user.role.guestEditors">Приглашенные редакторы</message>
 
 	<!-- Общие термины выпуска -->
 	<message key="issue.issue">Выпуск</message>
