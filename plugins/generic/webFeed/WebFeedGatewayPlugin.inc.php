@@ -134,11 +134,13 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		$version = $versionDao->getCurrentVersion();
 
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('ojsVersion', $version->getVersionString());
-		$templateMgr->assign('publishedArticles', $publishedArticles);
-		$templateMgr->assign('journal', $journal);
-		$templateMgr->assign('issue', $issue);
-		$templateMgr->assign('showToc', true);
+		$templateMgr->assign(array(
+			'ojsVersion' => $version->getVersionString(),
+			'publishedArticles' => $publishedArticles,
+			'journal' => $journal,
+			'issue' => $issue,
+			'showToc' => true,
+		));
 
 		$templateMgr->display($this->getTemplatePath() . $typeMap[$type], $mimeTypeMap[$type]);
 

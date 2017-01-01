@@ -117,6 +117,11 @@
 		<code function="installEmailTemplate" key="SUBMISSION_ACK_NOT_USER" locales="en_US,ca_ES,el_GR,es_ES,fr_CA,pt_BR" />
 	</upgrade>
 
+	<upgrade minversion="3.0.0.0" maxversion="3.0.9.9">
+		<data file="dbscripts/xml/upgrade/3.1.0_update.xml" />
+		<note file="docs/release-notes/README-3.1.0" />
+	</upgrade>
+
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>

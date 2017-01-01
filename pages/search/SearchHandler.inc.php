@@ -245,15 +245,17 @@ class SearchHandler extends Handler {
 			}
 
 			$templateMgr = TemplateManager::getManager($request);
-			$templateMgr->assign('publishedArticles', $publishedArticles);
-			$templateMgr->assign('issues', $issues);
-			$templateMgr->assign('issuesUnavailable', $issuesUnavailable);
-			$templateMgr->assign('sections', $sections);
-			$templateMgr->assign('journals', $journals);
-			$templateMgr->assign('firstName', $firstName);
-			$templateMgr->assign('middleName', $middleName);
-			$templateMgr->assign('lastName', $lastName);
-			$templateMgr->assign('affiliation', $affiliation);
+			$templateMgr->assign(array(
+				'publishedArticles' => $publishedArticles,
+				'issues' => $issues,
+				'issuesUnavailable' => $issuesUnavailable,
+				'sections' => $sections,
+				'journals' => $journals,
+				'firstName' => $firstName,
+				'middleName' => $middleName,
+				'lastName' => $lastName,
+				'affiliation' => $affiliation,
+			));
 
 			$countryDao = DAORegistry::getDAO('CountryDAO');
 			$country = $countryDao->getCountry($country);
@@ -272,9 +274,11 @@ class SearchHandler extends Handler {
 			);
 
 			$templateMgr = TemplateManager::getManager($request);
-			$templateMgr->assign('searchInitial', $request->getUserVar('searchInitial'));
-			$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
-			$templateMgr->assign('authors', $authors);
+			$templateMgr->assign(array(
+				'searchInitial' => $request->getUserVar('searchInitial'),
+				'alphaList' => explode(' ', __('common.alphaList')),
+				'authors' => $authors,
+			));
 			$templateMgr->display('frontend/pages/searchAuthorIndex.tpl');
 		}
 	}
