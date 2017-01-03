@@ -63,7 +63,7 @@
 	<message key="manager.payment.options.waiverPolicy">Правила отмены платежей</message>
 	<message key="manager.payment.paymentId">ID платежа</message>
 	<message key="manager.payment.paymentMethod">Метод платежа</message>
-	<message key="manager.payment.paymentMethod.description">С этой страницы Вы можете настроить любой из следующих плагинов методов платежей.</message>
+	<message key="manager.payment.paymentMethod.description">С этой страницы Вы можете настроить любой из следующих модулей методов платежей.</message>
 	<message key="manager.payment.paymentMethods">Методы платежей</message>
 	<message key="manager.payment.paymentType">Тип платежа</message>
 	<message key="manager.payment.readerFees">Платежи читателя</message>
@@ -562,18 +562,18 @@
 	<message key="grid.genres.title">Компоненты статьи</message>
 	<message key="grid.genres.description">Эти компоненты используются для задания имен файлам и отображаются в выпадающем меню на загружаемых файлах. Обозначенные ## жанры позволяют пользователю связывать файл либо со всем отправленным материалом 99Z, либо с конкретным компонентом по номеру (например, 02).</message>
 
-	<!-- Общие ключи для плагинов экспорта DOI (crossref, datacite, medra) -->
-	<!-- вкладки плагина -->
+	<!-- Общие ключи для модулей экспорта DOI (crossref, datacite, medra) -->
+	<!-- вкладки модуля -->
 	<message key="plugins.importexport.common.settings">Настройки</message>
-	<message key="plugins.importexport.common.settings.DOIPluginSettings">Настройки плагина DOI</message>
+	<message key="plugins.importexport.common.settings.DOIPluginSettings">Настройки модуля DOI</message>
 	<message key="plugins.importexport.common.export.articles">Статьи</message>
 	<message key="plugins.importexport.common.export.issues">Выпуски</message>
 	<message key="plugins.importexport.common.export.representations">Гранки</message>
 	<!-- форма настроек -->
-	<message key="plugins.importexport.common.missingRequirements">Требования плагина не выполнены</message>
-	<message key="plugins.importexport.common.error.DOIsNotAvailable">Для того чтобы использовать этот плагин, пожалуйста, перейдите в категорию плагинов «Плагины открытых идентификаторов», включите и настройте плагин DOI и укажите там верный префикс DOI.</message>
-	<message key="plugins.importexport.common.error.pluginNotConfigured">Плагин не полностью настроен.</message>
-	<message key="plugins.importexport.common.error.noDOIContentObjects">Нет опубликованных объектов, которые были выбраны для назначения DOI в плагине открытых идентификаторов DOI, поэтому невозможно депонировать или экспортировать в этом плагине.</message>
+	<message key="plugins.importexport.common.missingRequirements">Требования модуля не выполнены</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Для того чтобы использовать этот модуль, пожалуйста, перейдите в категорию модулей «Модули открытых идентификаторов», включите и настройте модуль DOI и укажите там верный префикс DOI.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">Модуль не полностью настроен.</message>
+	<message key="plugins.importexport.common.error.noDOIContentObjects">Нет опубликованных объектов, которые были выбраны для назначения DOI в модуле открытых идентификаторов DOI, поэтому невозможно депонировать или экспортировать в этом модуле.</message>
 	<message key="plugins.importexport.common.settings.form.password">Пароль</message>
 	<message key="plugins.importexport.common.settings.form.password.description">Обратите внимание, что пароль будет сохранен в виде обычного текста, то есть не будет зашифрован.</message>
 	<!-- фильтр экспорта -->
