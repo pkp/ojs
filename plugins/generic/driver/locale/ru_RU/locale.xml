@@ -12,6 +12,6 @@
   -->
  
 <locale name="ru_RU" full_name="Русский">
-	<message key="plugins.generic.driver.displayName">DRIVER</message>
+	<message key="plugins.generic.driver.displayName">Модуль «DRIVER»</message>
 	<message key="plugins.generic.driver.description">Расширяет интерфейс OAI-PMH в соответствии с DRIVER Guidelines 2.0, помогая журналам OJS становится DRIVER-совместимыми.</message>
 </locale>

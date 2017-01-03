@@ -12,6 +12,6 @@
   -->
 
 <locale name="ru_RU" full_name="Русский">
-	<message key="plugins.generic.htmlArticleGalley.displayName">HTML-гранка статьи</message>
+	<message key="plugins.generic.htmlArticleGalley.displayName">Модуль «HTML-гранка статьи»</message>
 	<message key="plugins.generic.htmlArticleGalley.description">Обеспечивает поддержку отображения для гранок статей в формате HTML.</message>
 </locale>

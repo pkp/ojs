@@ -12,6 +12,6 @@
   -->
 
 <locale name="ru_RU" full_name="Русский">
-	<message key="plugins.generic.dublinCoreMeta.name">Модуль «Индексирования Dublin Core»</message>
+	<message key="plugins.generic.dublinCoreMeta.name">Модуль «Индексирование Dublin Core»</message>
 	<message key="plugins.generic.dublinCoreMeta.description">Встраивает мета-теги Dublin Core в просмотр статей с целью индексирования.</message>
 </locale>

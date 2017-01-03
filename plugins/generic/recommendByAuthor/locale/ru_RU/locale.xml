@@ -12,7 +12,7 @@
   -->
  
 <locale name="ru_RU" full_name="Русский">
-	<message key="plugins.generic.recommendByAuthor.displayName">Рекомендуемые статьи по автору</message>
+	<message key="plugins.generic.recommendByAuthor.displayName">Модуль «Рекомендуемые статьи автора»</message>
 	<message key="plugins.generic.recommendByAuthor.description">Вставляет список статей этого же автора на страницу аннотации статьи.</message>
     
     <message key="plugins.generic.recommendByAuthor.heading">Наиболее читаемые статьи этого автора (авторов)</message>

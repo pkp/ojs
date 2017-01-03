@@ -12,7 +12,7 @@
   -->
  
 <locale name="ru_RU" full_name="Русский">
-	<message key="plugins.citationFormats.refMan.displayName">Реализует формат библиографических ссылок Reference Manager</message>
+	<message key="plugins.citationFormats.refMan.displayName">Модуль формата библиографических ссылок Reference Manager</message>
 	<message key="plugins.citationFormats.refMan.citationFormatName">Формат Reference Manager - RIS (только Windows)</message>
 	<message key="plugins.citationFormats.refMan.description">Реализует формат библиографических ссылок Reference Manager.</message>
 </locale>

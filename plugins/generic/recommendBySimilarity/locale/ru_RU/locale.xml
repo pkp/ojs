@@ -12,7 +12,7 @@
   -->
 
 <locale name="ru_RU" full_name="Русский">
-	<message key="plugins.generic.recommendBySimilarity.displayName">Рекомендуемые похожие статьи</message>
+	<message key="plugins.generic.recommendBySimilarity.displayName">Модуль «Рекомендуемые похожие статьи»</message>
 	<message key="plugins.generic.recommendBySimilarity.description">Добавляет список похожих статей на страницу с аннотацией статьи.</message>
 
 	<message key="plugins.generic.recommendBySimilarity.heading">Похожие статьи</message>
