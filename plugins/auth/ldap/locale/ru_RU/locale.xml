@@ -14,7 +14,7 @@
  
 <locale name="ru_RU" full_name="Русский">
 	<message key="plugins.auth.ldap.displayName">LDAP</message>
-	<message key="plugins.auth.ldap.description">Этот модуль поддерживает авторизацию и синхронизацию пользовательских учетных записей с внешним источником данных LDAP.</message>
+	<message key="plugins.auth.ldap.description">Поддерживает авторизацию и синхронизацию пользовательских учетных записей с внешним источником данных LDAP.</message>
 
 	<message key="plugins.auth.ldap.settings">Настройки LDAP</message>
 	<message key="plugins.auth.ldap.settings.hostname">Имя сервера</message>
