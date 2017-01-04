@@ -1271,7 +1271,7 @@ class Upgrade extends Installer {
 			$submissionFiles = $submissionFileDao->getAllRevisions($row['file_id']);
 			foreach ($submissionFiles as $submissionFile) {
 				$suppFileSettingsResult = $submissionFileDao->retrieve('SELECT * FROM article_supp_file_settings WHERE supp_id = ? AND setting_value IS NOT NULL', array($row['supp_id']));
-				$extraSettings = array();
+				$extraSettings = $extraGalleySettings = array();
 				while (!$suppFileSettingsResult->EOF) {
 					$sfRow = $suppFileSettingsResult->getRowAssoc(false);
 					$suppFileSettingsResult->MoveNext();
@@ -1299,9 +1299,13 @@ class Upgrade extends Installer {
 							break;
 						case 'typeOther': break; // Discard (at least for now)
 						case 'excludeDoi': break; // Discard (no longer relevant)
+						case 'excludeURN': break; // Discard (no longer relevant)
 						case 'pub-id::doi':
+						case 'pub-id::other::urn':
 						case 'pub-id::publisher-id':
-							$extraSettings[$sfRow['setting_name']] = $sfRow['setting_value'];
+						case 'urnSuffix':
+						case 'doiSuffix':
+							$extraGalleySettings[$sfRow['setting_name']] = $sfRow['setting_value'];
 							break;
 						default:
 							error_log('Unknown supplementary file setting "' . $sfRow['setting_name'] . '"!');
@@ -1335,6 +1339,19 @@ class Upgrade extends Installer {
 					$articleGalley->setLabel($submissionFile->getName($article->getLocale()));
 					$articleGalley->setLocale($article->getLocale());
 					$articleGalleyDao->insertObject($articleGalley);
+
+					// Preserve extra settings. (Plugins may not be loaded, so other mechanisms might not work.)
+					foreach ($extraGalleySettings as $name => $value) {
+						$submissionFileDao->update(
+							'INSERT INTO submission_galley_settings (galley_id, setting_name, setting_value, setting_type) VALUES (?, ?, ?, ?)',
+							array(
+								$articleGalley->getId(),
+								$name,
+								$value,
+								'string'
+							)
+						);
+					}
 				}
 			}
 		}
