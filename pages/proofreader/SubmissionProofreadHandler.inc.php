@@ -174,7 +174,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 
 			} else {
 				// View non-HTML file inline
-				$this->viewFile(array($articleId, $galley->getFileId()));
+				$this->viewFile(array($articleId, $galley->getFileId()), $request);
 			}
 		}
 	}
