@@ -73,13 +73,13 @@ If you have not made local code modifications to the system, upgrade by
 downloading the complete package for the latest release of OJS:
 
     - Download and decompress the package from the OJS web site
-    - Make a copy of the config.inc.php provided in the new package
     - Move or copy the following files and directories from your current OJS
       installation:
         - config.inc.php
         - public/
         - Your uploaded files directory ("files_dir" in config.inc.php), if it
           resides within your OJS directory
+    - Synchronize new changes from config.TEMPLATE.inc.php to config.inc.php
     - Replace the current OJS directory with the new OJS directory, moving the
       old one to a safe location as a backup
     - Be sure to review the Configuration Changes section of the release notes
