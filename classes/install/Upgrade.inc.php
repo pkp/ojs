@@ -708,7 +708,7 @@ class Upgrade extends Installer {
 				$newOptions[$key] = $option['content'];
 			}
 			$row['setting_value'] = serialize($newOptions);
-			$reviewFormDao->Replace('review_form_element_settings', $row, array('review_form_id', 'locale', 'setting_name'));
+			$reviewFormDao->Replace('review_form_element_settings', $row, array('review_form_element_id', 'locale', 'setting_name'));
 			$result->MoveNext();
 		}
 		$result->Close();
