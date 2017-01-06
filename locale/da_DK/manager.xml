@@ -87,7 +87,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Sørg for at mindst et afkrydsningsfelt er markeret for hver sektionsredaktøropgave.</message>
 	<message key="manager.sections.form.reviewFormId">Sørg for at du har valgt en gyldig review formular.</message>
 	<message key="manager.sections.form.titleRequired">En titel er påkrævet for denne sektion.</message>
-	<message key="manager.sections.hideAbout">Udelad denne sektion fra Om tidsskriftet.</message>
 	<message key="manager.sections.hideTocAuthor">Udelad fatternavne for sektionselementer fra numrenes indholdsfortegnelse.</message>
 	<message key="manager.sections.hideTocTitle">Udelad denne sektionstitel fra numres indholdsfortegnelse.</message>
 	<message key="manager.sections.identifyType">Identificer, med henblik på metadataformål, alle elementer i denne sektion som en/et</message>

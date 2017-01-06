@@ -85,7 +85,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Ziurtatu kontrol-lauki bat behintzat hautatu dela Ataleko editore bakoitzarentzat.</message>
 	<message key="manager.sections.form.reviewFormId">Ziurtatu baliozko ebaluazio-inprimaki bat aukeratu duzula.</message>
 	<message key="manager.sections.form.titleRequired">Titulua eman behar zaio atalari.</message>
-	<message key="manager.sections.hideAbout">Ez sartu atal hau Aldizkariari buruz orrian.</message>
 	<message key="manager.sections.hideTocAuthor">Ez sartu atal honetako elementuen egile-izenak zenbakien aurkibidean.</message>
 	<message key="manager.sections.hideTocTitle">Ez sartu atal honen titulua aldizkari-zenbakien aurkibidean.</message>
 	<message key="manager.sections.identifyType">Identifikatu honela atal honetan argitaratutako elementuak:</message>

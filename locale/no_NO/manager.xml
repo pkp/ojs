@@ -403,7 +403,6 @@
 	<message key="manager.sections.abstractsNotRequired">Ikke krev sammendrag</message>
 	<message key="manager.sections.form.mustAllowPermission">Vennligst kontrollér at minst én avkrysningsboks er krysset av for hvert oppdrag en seksjonsredaktør er oppnevnt til.</message>
 	<message key="manager.sections.form.reviewFormId">Vennligst kontrollér at du har valgt et gyldig vurderingsskjema.</message>
-	<message key="manager.sections.hideAbout">Utelat denne seksjonen fra 'Om' tidsskriftet.</message>
 	<message key="manager.sections.hideTocAuthor">Utelat forfatternavn for seksjonselementer fra utgavens innholdsoversikt.</message>
 	<message key="manager.setup.addReviewerDatabaseLink">Legg til en ny databaselenke</message>
 	<message key="manager.setup.competingInterests.requireAuthors"><![CDATA[Krev at forfattere som sender inn manuskript samtidig sender inn en <I>Erklæring om interessekonflikter</I>.]]></message>

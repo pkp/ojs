@@ -276,7 +276,6 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 			$sectionNode->setAttribute('abstracts_not_required', $section->getAbstractsNotRequired());
 			$sectionNode->setAttribute('hide_title', $section->getHideTitle());
 			$sectionNode->setAttribute('hide_author', $section->getHideAuthor());
-			$sectionNode->setAttribute('hide_about', $section->getHideAbout());
 			$sectionNode->setAttribute('abstract_word_count', (int) $section->getAbstractWordCount());
 
 			$this->createLocalizedNodes($doc, $sectionNode, 'abbrev', $section->getAbbrev(null));

@@ -86,7 +86,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Veuillez vous assurer qu'au moins une case à cocher est sélectionnée pour chaque assignation à un Rédacteur de rubrique.</message>
 	<message key="manager.sections.form.reviewFormId">Veuillez vous assurer que vous avez choisi un formulaire d'évaluation valide.</message>
 	<message key="manager.sections.form.titleRequired">Un titre est obligatoire pour la rubrique.</message>
-	<message key="manager.sections.hideAbout">Omettre cette rubrique de À propos de cette revue.</message>
 	<message key="manager.sections.hideTocAuthor">Omettre les noms d'auteur pour les articles de rubriques des sommaires de numéros.</message>
 	<message key="manager.sections.hideTocTitle">Omettre le titre de cette rubrique des sommaires de numéros.</message>
 	<message key="manager.sections.identifyType">Identifier les articles publiés dans cette rubrique en tant que un(e)</message>

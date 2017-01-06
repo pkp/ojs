@@ -86,7 +86,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Verifique que pelo menos uma opção está marcada para cada tarefa de Editor de Secção</message>
 	<message key="manager.sections.form.reviewFormId">É necessário escolher um formulário de revisão válido</message>
 	<message key="manager.sections.form.titleRequired">Título obrigatório para a secção.</message>
-	<message key="manager.sections.hideAbout">Omitir esta secção em Sobre a Revista.</message>
 	<message key="manager.sections.hideTocAuthor">Omitir nomes dos autores dos itens publicados nesta secção no sumário da edição.</message>
 	<message key="manager.sections.hideTocTitle">Omitir o título desta secção no sumário da edição.</message>
 	<message key="manager.sections.identifyType">Como metadado do artigo, identificar itens nesta secção como</message>

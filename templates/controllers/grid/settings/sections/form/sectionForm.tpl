@@ -56,7 +56,6 @@
 			{fbvElement type="checkbox" id="editorRestriction" checked=$editorRestriction label="manager.sections.editorRestriction"}
 			{fbvElement type="checkbox" id="hideTitle" checked=$hideTitle label="manager.sections.hideTocTitle"}
 			{fbvElement type="checkbox" id="hideAuthor" checked=$hideAuthor label="manager.sections.hideTocAuthor"}
-			{fbvElement type="checkbox" id="hideAbout" checked=$hideAbout label="manager.sections.hideAbout"}
 		{/fbvFormSection}
 
 		{fbvFormSection for="identifyType" title="manager.sections.identifyType"}

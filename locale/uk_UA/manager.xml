@@ -94,7 +94,6 @@
        <message key="manager.sections.form.mustAllowPermission">Будь ласка, переконайтеся, що для кожного призначення редактора розділу обрано принаймні по одному прапорцю.</message>
        <message key="manager.sections.form.reviewFormId">Будь ласка, переконайтеся, що Ви коректно обрали форму рецензування.</message>
        <message key="manager.sections.form.titleRequired">Необхідно вказати назву для цього розділу.</message>
-       <message key="manager.sections.hideAbout">Не вказувати цей розділ на сторінці "Про журнал".</message>
        <message key="manager.sections.hideTocAuthor">Для цього розділу не вказувати імена авторів на сторінках змісту випусків.</message>
        <message key="manager.sections.hideTocTitle">Не вказувати назву цього розділу на сторінках змісту випусків.</message>
        <message key="manager.sections.identifyType">Ідентифікувати об'єкти, опубліковані у цьому розділі, як</message>

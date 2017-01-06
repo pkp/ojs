@@ -82,7 +82,6 @@
 	<message key="manager.sections.editors">Επιμελητές ενότητας</message>
 	<message key="manager.sections.form.abbrevRequired">Απαιτείται μια συντομογραφία τίτλου για την ενότητα</message>
 	<message key="manager.sections.form.titleRequired">Απαιτείται ένας τίτλος για την ενότητα.</message>
-	<message key="manager.sections.hideAbout">Απόκρυψη αυτής της ενότητας από την σελίδα "Σχετικά με το Περιοδικό".</message>
 	<message key="manager.sections.hideTocTitle">Απόκρυψη του τίτλου της ενότητας αυτής από τον πίνακα περιεχομένων των τευχών.</message>
 	<message key="manager.sections.identifyType">Προσδιορίστε κάθε τεκμήριο που έχει δημοσιευτεί στην ενότητα αυτή ως</message>
 	<message key="manager.sections.identifyTypeExamples">(Για παράδειγμα, "Άρθρο που έχει περάσει από ομότιμη αξιολόγηση", "Μη εποπτευόμενη αξιολόγηση βιβλίου", "Άρθρο κατόπιν προσκλήσεως ", κτλ.)</message>
