@@ -1,0 +1,24 @@
+32733_crossref.xml
+
+.ezid.py sessionid=wq5jz4s3y5mgqblbuh6m8v9eyoelgkch  update doi:10.21426/B631132733 crossref @32733_crossref.xml _profile crossref _crossref yes _coowners ucm_mndawson _target http://escholarship.org/uc/item/11v4922p
+
+
+
+32734_crossref.xml
+./ezid.py sessionid=wq5jz4s3y5mgqblbuh6m8v9eyoelgkch update doi:10.21426/B631132734 crossref @32734_crossref.xml _profile crossref _crossref yes _owner ucm_mndawson _target http://escholarship.org/uc/item/7gh6r79w
+
+
+32735_crossref.xml
+./ezid.py sessionid=wq5jz4s3y5mgqblbuh6m8v9eyoelgkch  update doi:10.21426/B631132735 crossref @32735_crossref.xml _profile crossref _crossref yes _owner ucm_mndawson _target http://escholarship.org/uc/item/83f7v7t4
+
+
+32736_crossref.xml
+./ezid.py sessionid=wq5jz4s3y5mgqblbuh6m8v9eyoelgkch  update doi:10.21426/B631132736 crossref @32736_crossref.xml _profile crossref _crossref yes _owner ucm_mndawson _target http://escholarship.org/uc/item/69j7t33v
+
+
+32737_crossref.xml
+./ezid.py sessionid=wq5jz4s3y5mgqblbuh6m8v9eyoelgkch  update doi:10.21426/B631132737 crossref @32737_crossref.xml _profile crossref _crossref yes _owner ucm_mndawson _target http://escholarship.org/uc/item/9ww372qk
+
+
+32738_crossref.xml
+./ezid.py sessionid=wq5jz4s3y5mgqblbuh6m8v9eyoelgkch  update doi:10.21426/B631132738 crossref @32738_crossref.xml _profile crossref _crossref yes _owner ucm_mndawson _target http://escholarship.org/uc/item/0vk612f9
