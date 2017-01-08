@@ -9,7 +9,7 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ru_RU (Русский) locale.
-  * With updates from Pavel Pisklakov (revising translation). 
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
   -->
 
 <locale name="ru_RU" full_name="Русский">
