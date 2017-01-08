@@ -48,7 +48,7 @@
 
 	<!-- Общие сообщения -->
 	<message key="common.openJournalSystems">Open Journal Systems</message>
-	<message key="common.confirmComplete">Вы уверены, что хотите отметить эту задачу как завершенную? После этого Вы не сможете внести изменения.</message>
+	<message key="common.confirmComplete">Вы уверены, что хотите отметить эту задачу как завершенную? После этого вы не сможете внести изменения.</message>
 	<message key="common.payment">Платеж</message>
 	<message key="common.payments">Платежи</message>
 	<message key="common.homePageHeader.altText">Заголовок главной страницы</message>
@@ -195,11 +195,11 @@
 	<message key="user.profile.profileImage">Изображение профиля</message>
 	<message key="user.showAllJournals">Показать мои журналы</message>
 	<message key="user.registerForOtherJournals">Зарегистрировать для других журналов</message>
-	<message key="user.reviewerPrompt">Хотите ли Вы рецензировать материалы для этого журнала?</message>
+	<message key="user.reviewerPrompt">Хотите ли вы рецензировать материалы для этого журнала?</message>
 	<message key="user.reviewerPrompt.userGroup">Да, запросить роль «{$userGroup}».</message>
-	<message key="user.register.contextsPrompt">В каких журналах на этом сайте Вы хотите зарегистрироваться?</message>
+	<message key="user.register.contextsPrompt">В каких журналах на этом сайте вы хотите зарегистрироваться?</message>
 	<message key="user.register.otherContextRoles">Запросить следующие роли.</message>
-	<message key="user.register.noContextReviewerInterests">Если Вы запрашиваете роль рецензента в каком-то журнале, пожалуйста введите темы, которые интересуют Вас как рецензента.</message>
+	<message key="user.register.noContextReviewerInterests">Если вы запрашиваете роль рецензента в каком-то журнале, пожалуйста, введите темы, которые интересуют Вас как рецензента.</message>
 	<message key="user.myJournals">Мои журналы</message>
 	<message key="user.manageMySubscriptions">Управление моими подписками</message>
 	<message key="user.noRoles.chooseJournal">Ваша учетная запись сейчас не связана ни с одним журналом. Пожалуйста, выберите журнал:</message>
@@ -350,7 +350,7 @@
 
 	<!-- Информация системы -->
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ВНИМАНИЕ!</h4>
-<p>Система не сможет автоматически перезаписать файл конфигурации. Чтобы применить Ваши измененные настройки конфигурации, Вам нужно открыть <tt>config.inc.php</tt> в подходящем текстовом редакторе и заменить его содержимое содержимым текстового поля ниже.</p>]]></message>
+<p>Система не сможет автоматически перезаписать файл конфигурации. Чтобы применить ваши измененные настройки конфигурации, вам нужно открыть <tt>config.inc.php</tt> в подходящем текстовом редакторе и заменить его содержимое содержимым текстового поля ниже.</p>]]></message>
 
 
 	<!-- Слияние пользователей администратром сайта -->
@@ -432,7 +432,7 @@
 	<message key="manager.people.noAdministrativeRights"><![CDATA[Извините, у вас нет достаточных административных прав для управления записью этого пользователя. Возможные причины:
 		<ul>
 			<li>Этот пользователь является администратором сайта</li>
-			<li>Этот пользователь активен в журналах, которыми Вы не можете управлять</li>
+			<li>Этот пользователь активен в журналах, которыми вы не можете управлять</li>
 		</ul>
 	Эта задача должна быть выполнена администратором сайта.
 	]]></message>
@@ -571,7 +571,7 @@
 	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[Руководство для рецензентов знакомит рецензентов с критериями оценки степени соответствия материала для публикации в данном журнале, и может включать любые дополнительные инструкции по подготовке эффективной и полезной рецензии. При написании рецензии у рецензентов есть два текстовых поля: первое «Для автора и редактора» и второе «Для редактора». В качестве альтернативы управляющий журналом может создать форму рецензии в разделе «Формы для рецензий». В любом из этих случаев редакторы будут иметь возможность дать авторам возможность ознакомиться с рецензиями.]]></message>
 	<message key="reviewer.article.notifyEditorA">Уведомить редактора материала (</message>
 	<message key="reviewer.article.notifyEditorB">) о том, что вы согласны дать рецензию.</message>
-	<message key="reviewer.article.consultGuidelines">Если Вы собираетесь дать рецензию, ознакомьтесь с Руководством для рецензентов, приведенным ниже.</message>
+	<message key="reviewer.article.consultGuidelines">Если вы собираетесь дать рецензию, ознакомьтесь с Руководством для рецензентов, приведенным ниже.</message>
 	<message key="reviewer.article.downloadSubmission">Щелкайте на именах файлов, чтобы скачать и просмотреть файлы, связанные с этим материалом (отобразить их на экране или распечатать).</message>
 	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Укажите наличие или отсутствие конфликта интересов в отношении данного исследования (смотриье <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Руководство по заполнению Декларации о конфликте интересов</a>).]]></message>
 	<message key="reviewer.competingInterests">Конфликт интересов</message>
@@ -721,7 +721,7 @@
 	<message key="user.subscriptions.form.domain">Домен</message>
 	<message key="user.subscriptions.form.domainInstructions"><![CDATA[Если здесь введен домен, то диапазоны IP-адресов вводить необязательно.<br />Допустимые значения — доменные имена (например, lib.sfu.ca).]]></message>
 	<message key="user.subscriptions.form.domainIPRangeRequired">Выбранный тип подписки требует указания домена и/или диапазона IP-адресов для аутентификации по подписке.</message>
-	<message key="user.subscriptions.form.domainValid">Пожалуйста введите верное доменное имя.</message>
+	<message key="user.subscriptions.form.domainValid">Пожалуйста, введите верное доменное имя.</message>
 	<message key="user.subscriptions.form.ipRange">Диапазоны IP-адресов</message>
 	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
 	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[Если здесь введены диапазоны IP-адресов, то указание домена необязательно.<br />Допустимыми значениями являются IP-адрес (например, 142.58.103.1), диапазон IP-адресов (например, 142.58.103.1 - 142.58.103.4), диапазон IP-адресов с символом подстановки «*» (например, 142.58.*.*) и диапазон IP-адресов с маской при бесклассовой маршрутизации (например, 142.58.100.0/24).]]></message>
@@ -789,7 +789,7 @@
 	<message key="about.submissions">Отправка материалов</message>
 	<message key="about.onlineSubmissions.login">Войти в систему</message>
 	<message key="about.onlineSubmissions.register">Зарегистрироваться</message>
-	<message key="about.onlineSubmissions.registrationRequired">Для отправки материала Вам нужно {$login} или {$register}.</message>
+	<message key="about.onlineSubmissions.registrationRequired">Для отправки материала вам нужно {$login} или {$register}.</message>
 	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} или {$viewSubmissions}.</message>
 	<message key="about.onlineSubmissions.newSubmission">Отправить новый материал</message>
 	<message key="about.onlineSubmissions.viewSubmissions">просмотреть ранее отправленные материалы</message>
@@ -833,7 +833,7 @@
 
 	<!-- Пожертвования -->
 	<message key="donations.thankYou">Спасибо</message>
-	<message key="donations.thankYouMessage">Спасибо Вам за Ваш вклад. Мы высоко ценим Вашу поддержку.</message>
+	<message key="donations.thankYouMessage">Спасибо вам за ваш вклад. Мы высоко ценим вашу поддержку.</message>
 
 	<!-- Подарки -->
 	<message key="gifts.buyer">От</message>
@@ -841,11 +841,11 @@
 	<message key="gifts.recipient">Кому</message>
 	<message key="gifts.recipientDescription">Для кого этот подарок?</message>
 	<message key="gifts.thankYou">Спасибо</message>
-	<message key="gifts.thankYouMessage">Вы завершили покупку подарка. Вы получите копию письма с информацией о подарке, отправленной получателю подарка, как только Ваш платеж будет обработан.</message>
+	<message key="gifts.thankYouMessage">Вы завершили покупку подарка. Вы получите копию письма с информацией о подарке, отправленной получателю подарка, как только ваш платеж будет обработан.</message>
 	<message key="gifts.purchaseGiftIndividualSubscription">Подписка в подарок</message>
-	<message key="gifts.subscriptionFormIntroduction">Пожалуйста, заполните форму ниже. Указанная Вами контактная информация вместе с личным сообщением получателю подарка будут использованы для отправки письма получателю подарка электронной почтой и информирования его о новой, подаренной подписке (Вы также получите копию этого письма).</message>
+	<message key="gifts.subscriptionFormIntroduction">Пожалуйста, заполните форму ниже. Указанная Вами контактная информация вместе с личным сообщением получателю подарка будут использованы для отправки письма получателю подарка электронной почтой и информирования его о новой, подаренной подписке (вы также получите копию этого письма).</message>
 	<message key="gifts.details">Информация о подарке</message>
-	<message key="gifts.detailsDescription">Пожалуйста, выберите ниже подарок и добавьте личное сообщение, которое будет отправлено получателю (Вы получите копию этого письма).</message>
+	<message key="gifts.detailsDescription">Пожалуйста, выберите ниже подарок и добавьте личное сообщение, которое будет отправлено получателю (вы получите копию этого письма).</message>
 	<message key="gifts.gift">Подарок</message>
 	<message key="gifts.noteTitle">Заголовок</message>
 	<message key="gifts.note">Личное сообщение</message>
@@ -874,13 +874,13 @@
 	<message key="payment.loginRequired">Для осуществления платежа вам необходимо войти в систему.</message>
 	<message key="payment.loginRequired.forArticle">Для доступа требуется подписка или приобретенный доступ к этой статье. Чтобы проверить Вашу подписку, получить доступ к предыдущим покупкам или купить статью, пожалуйста, войдите в систему.</message>
 	<message key="payment.loginRequired.forIssue">Для доступа требуется подписка или приобретенный доступ к этому выпуску. Чтобы проверить Вашу подписку, получить доступ к предыдущим покупкам или купить выпуск, пожалуйста, войдите в систему.</message>
-	<message key="payment.loginRequired.forDonation">Для внесения пожертвования Вам необходимо войти в систему.</message>
+	<message key="payment.loginRequired.forDonation">Для внесения пожертвования вам необходимо войти в систему.</message>
 
 	<message key="payment.paid">Оплачено</message>
 	<message key="payment.payNow">Оплатить сейчас</message>
 	<message key="payment.waive">Отменить платеж</message>
 	<message key="payment.alreadyPaid">Уже оплачено</message>
-	<message key="payment.alreadyPaidMessage">Выберите этот пункт, если Вы уже отправили свой платеж в журнал для завершения процесса отправки материала. Материал не будет рассматриваться до прихода платежа. Щелкните на «Оплатить сейчас» выше, чтобы увидеть инструкции по оплате.</message>
+	<message key="payment.alreadyPaidMessage">Выберите этот пункт, если вы уже отправили свой платеж в журнал для завершения процесса отправки материала. Материал не будет рассматриваться до прихода платежа. Щелкните на «Оплатить сейчас» выше, чтобы увидеть инструкции по оплате.</message>
 	<message key="payment.paymentReceived">Платеж получен</message>
 	<message key="payment.paymentSent">Платеж уже был отправлен</message>
 	<message key="payment.authorFees">Платежи авторов</message>
@@ -916,7 +916,7 @@
 	<message key="installer.ojsUpgrade">Обновление OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>Версия OJS {$version}</h4>
 
-<p>Благодарим Вас за скачивание <strong>Open Journal Systems</strong>, разработанной в рамках Public Knowledge Project. Перед продолжением, пожалуйста, прочтите файл <a href="{$baseUrl}/docs/README">README</a>, идущий с этим программным обеспечением. Более подробную информацию о Public Knowledge Project и их проектах в области программного обеспечения Вы можете узнать, посетив <a href="http://pkp.sfu.ca/" target="_blank">веб-сайт PKP</a>. Если Вы обнаружили ошибки или у Вас есть вопросы к технической поддержке о Open Journal Systems, посмотрите <a href="http://forum.pkp.sfu.ca" target="_blank">форум поддержки</a> или посетите онлайновую <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систему регистрации ошибок</a> PKP. Хотя обращение в форум поддержки является предпочтительным способом связи, Вы также можете отправить сообщение команде проекта на адрес <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Благодарим Вас за скачивание <strong>Open Journal Systems</strong>, разработанной в рамках Public Knowledge Project. Перед продолжением, пожалуйста, прочтите файл <a href="{$baseUrl}/docs/README">README</a>, идущий с этим программным обеспечением. Более подробную информацию о Public Knowledge Project и их проектах в области программного обеспечения вы можете узнать, посетив <a href="http://pkp.sfu.ca/" target="_blank">веб-сайт PKP</a>. Если вы обнаружили ошибки или у Вас есть вопросы к технической поддержке о Open Journal Systems, посмотрите <a href="http://forum.pkp.sfu.ca" target="_blank">форум поддержки</a> или посетите онлайновую <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систему регистрации ошибок</a> PKP. Хотя обращение в форум поддержки является предпочтительным способом связи, вы также можете отправить сообщение команде проекта на адрес <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>Обновление</h4>
 
@@ -925,7 +925,7 @@
 <h4>Рекомендуемые требования к системе</h4>
 
 <ul>
-	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion}; Вы сейчас используете PHP {$phpVersion}{$wrongPhpText}</li>
+	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion}; вы сейчас используете PHP {$phpVersion}{$wrongPhpText}</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 или <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x или >= 2.0.4x или Microsoft IIS 6</li>
 	<li>Операционная система: любая ОС, которая поддерживает вышеперечисленное программное обеспечение, включая <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
@@ -956,7 +956,7 @@
 <p>2. Каталог для хранения загруженных файлов должен быть создан и сделан доступным для записи (смотри «Настройки файлов» ниже).</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Версия OJS {$version}</h4>
 
-<p>Благодарим Вас за скачивание <strong>Open Journal Systems</strong>, разработанной в рамках Public Knowledge Project. Перед продолжением, пожалуйста, прочтите файлы <a href="{$baseUrl}/docs/README">README</a> и <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a>, идущие с этим программным обеспечением. Более подробную информацию о Public Knowledge Project и их проектах в области программного обеспечения Вы можете узнать, посетив <a href="http://pkp.sfu.ca/" target="_blank">веб-сайт PKP</a>. Если Вы обнаружили ошибки или у Вас есть вопросы к технической поддержке о Open Journal Systems, посмотрите <a href="http://forum.pkp.sfu.ca" target="_blank">форум поддержки</a> или посетите онлайновую <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систему регистрации ошибок</a> PKP. Хотя обращение в форум поддержки является предпочтительным способом связи, Вы также можете отправить сообщение команде проекта на адрес <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Благодарим Вас за скачивание <strong>Open Journal Systems</strong>, разработанной в рамках Public Knowledge Project. Перед продолжением, пожалуйста, прочтите файлы <a href="{$baseUrl}/docs/README">README</a> и <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a>, идущие с этим программным обеспечением. Более подробную информацию о Public Knowledge Project и их проектах в области программного обеспечения вы можете узнать, посетив <a href="http://pkp.sfu.ca/" target="_blank">веб-сайт PKP</a>. Если вы обнаружили ошибки или у вас есть вопросы к технической поддержке о Open Journal Systems, посмотрите <a href="http://forum.pkp.sfu.ca" target="_blank">форум поддержки</a> или посетите онлайновую <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систему регистрации ошибок</a> PKP. Хотя обращение в форум поддержки является предпочтительным способом связи, вы также можете отправить сообщение команде проекта на адрес <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>Перед продолжением <strong>настоятельно рекомендуется</strong> создать резервную копию базы данных, каталога с файлами и каталога с установленной системой OJS.</p>
 <p>Если PHP запущен у вас в режиме <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, пожалуйста, убедитесь, что значение max_execution_time в файле конфигурации php.ini задано достаточно большим. Если это или какое-либо другое ограничение по времени (например, значение Timeout для Apache) будет достигнуто и процес обновления будет прерван, потребуется ручное вмешательство в процесс обновления.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Для полной поддержки Unicode (UTF-8), выберите UTF-8 для всех настроек кодировки символов. Пожалуйста, обратите внимание, что полная поддержка Unicode требует PHP, откомпилированного с поддержкой библиотеки <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> (включена по умолчанию в большинстве современных инсталляций PHP). У Вас могут возникнуть проблемы с расширенными кодировками, если сервер не соответствует этим требованиям.
@@ -964,25 +964,25 @@
 Ваш сервер сейчас поддерживает mbstring: <strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.allowFileUploads"><![CDATA[Ваш сервер сейчас разрешает загрузку файлов: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Ваш сервер сейчас разрешает максимальный размер загружаемого файла, равный: <strong>{$maxFileUploadSize}</strong>]]></message>
-	<message key="installer.localeInstructions">Основной язык, который будет использоваться для этой системы. Пожалуйста, обратитесь к документации OJS, если Вы заинтересованы в поддержке языков, отсутствующих в этом списке.</message>
+	<message key="installer.localeInstructions">Основной язык, который будет использоваться для этой системы. Пожалуйста, обратитесь к документации OJS, если вы заинтересованы в поддержке языков, отсутствующих в этом списке.</message>
 	<message key="installer.additionalLocalesInstructions">Выберите любые дополнительные языки, которые будут поддерживаться в этой системе. Эти языки будут доступны для использования в журналах, размещенных на сайте. Дополнительные языки могут также быть установлены в любой момент из интерфейса администрирования сайта.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Введите полный путь к существующему каталогу, в котором будут храниться загруженные файлы. Этот каталог не должен быть напрямую доступен через сеть Интернет. <strong>Пожалуйста, убедитесь, что каталог существует и доступен для записи перед установкой.</strong> Пути к каталогам в Windows должны использовать прямые слэши, например, «C:/myjournal/files».]]></message>
 	<message key="installer.databaseSettingsInstructions">OJS для хранения своих данных требует доступ к базе данных, поддерживающей язык SQL. Выше, в требованиях к системе, указаны поддерживаемые базы данных. В полях ниже укажите настройки, которые будут использованы для соединения с базой данных.</message>
 	<message key="installer.installApplication">Установить Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Обновить Open Journal Systems</message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Предупреждение:</strong> Если установка завершится неудачей в процессе установки базы данных, Вам может потребоваться удалить Вашу базу данных OJS или таблицы из базы данных, после чего предпринять попытку переустановить базу данных.]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Предупреждение:</strong> Если установка завершится неудачей в процессе установки базы данных, вам может потребоваться удалить Вашу базу данных OJS или таблицы из базы данных, после чего предпринять попытку переустановить базу данных.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>ВАЖНО!</h4>
-<p>Установщик не смог автоматически перезаписать файл конфигурации. Прежде чем попытаться воспользоваться системой, пожалуйста откройте <tt>config.inc.php</tt> в подходящем текстовом редакторе и замените его содержимое содержимым текстового поля ниже.</p>]]></message>
+<p>Установщик не смог автоматически перезаписать файл конфигурации. Прежде чем попытаться воспользоваться системой, пожалуйста, откройте <tt>config.inc.php</tt> в подходящем текстовом редакторе и замените его содержимое содержимым текстового поля ниже.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>Установка OJS была успешно завершена.</p>
-<p>Чтобы начать использовать систему, <a href="{$loginUrl}">войдите в систему</a> с именем пользователя и паролем, который Вы ввели на предыдущей странице.</p>
-<p>Если Вы хотите стать частью сообщества PKP, Вы можете:</p>
+<p>Чтобы начать использовать систему, <a href="{$loginUrl}">войдите в систему</a> с именем пользователя и паролем, который вы ввели на предыдущей странице.</p>
+<p>Если вы хотите стать частью сообщества PKP, вы можете:</p>
 <ol>
 	<li>Читать <a href="http://pkp.sfu.ca/blog" target="_new">блог PKP</a> и подписаться на <a href="http://pkp.sfu.ca/blog/feed" target="_new">ленту RSS</a> для получения новостей и обновлений.</li>
 	<li>Посещать <a href="http://forum.pkp.sfu.ca" target="_new">форум поддержки</a>, если у Вас есть вопросы или комментарии.</li>
 </ol>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>Обновление OJS до версии {$version} было успешно завершено.</p>
 <p>Не забудьте установить параметр installed в файле конфигурации config.inc.php обратно в значение <em>On</em>.</p>
-<p>Если Вы еще не зарегистрированы и хотите получать новости и обновления, <strong>пожалуйста, зарегистрируйтесь на <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Если у Вас есть вопросы или предложения, пожалуйста, посетите <a href="http://forum.pkp.sfu.ca" target="_new">форум поддержки</a>.</p>]]></message>
+<p>Если вы еще не зарегистрированы и хотите получать новости и обновления, <strong>пожалуйста, зарегистрируйтесь на <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Если у Вас есть вопросы или предложения, пожалуйста, посетите <a href="http://forum.pkp.sfu.ca" target="_new">форум поддержки</a>.</p>]]></message>
 
 	<!-- Предупреждения установщика при обновлении -->
 	<message key="site.upgradeAvailable.admin"><![CDATA[Доступна новая версия OJS! Сейчас вы пользуетесь OJS {$currentVersion}. Самая последняя версия — OJS {$latestVersion}. Пожалуйста, зайдите на <a href="http://pkp.sfu.ca/ojs_download" target="_new">эту страницу</a>, чтобы скачать самую последнюю версию и получить инструкции по обновлению.]]></message>
@@ -1086,7 +1086,7 @@
 
 
 	<!-- Типы уведомлений -->
-	<message key="notification.mailListDescription">Введите Ваш адрес электронной почты, чтобы моментально получать уведомления о добавлении нового контента в журнал.</message>
+	<message key="notification.mailListDescription">Введите ваш адрес электронной почты, чтобы моментально получать уведомления о добавлении нового контента в журнал.</message>
 	<message key="notification.notificationsPublicDescription">На этой странице показан список важных обновлений, связанных с этим журналом, таких как выход новых выпусков или объявления. Вы можете подписаться на эти уведомления через ленты RSS (щелкнув на значках справа) или <![CDATA[  <a href="{$emailUrl}">по электронной почте.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">Новая статья «{$title}» была отправлена.</message>

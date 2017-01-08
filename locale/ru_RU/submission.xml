@@ -24,7 +24,7 @@
 	<message key="grid.action.workflow">Процесс отправки</message>
 
 	<message key="submission.issueEntry">Метаданные</message>
-	<message key="submission.submit.whatNext.description">Журнал был уведомлен об отправке Вами материала, подтверждение записи были направлено на Вашу электронную почту. Как только редактор просмотрит Ваш материал, мы свяжемся с Вами.</message>
+	<message key="submission.submit.whatNext.description">Журнал был уведомлен об отправке Вами материала, подтверждение записи были направлено на Вашу электронную почту. Как только редактор просмотрит ваш материал, мы свяжемся с вами.</message>
 	<message key="grid.action.galleyInIssueEntry">Гранка появилась в выпуске</message>
 	<message key="grid.action.issueEntry">Показать метаданные этого материала</message>
 
@@ -68,9 +68,9 @@
 	<message key="submission.submit.contributorRole">Роль отправителя</message>
 	<message key="submission.submit.form.authorRequired">Требуется как минимум один автор.</message>
 	<message key="submission.submit.form.authorRequiredFields">Для каждого автора необходимо указать имя, фамилию и адрес электронной почты.</message>
-	<message key="submission.submit.form.titleRequired">Пожалуйста введите название Вашей статьи.</message>
-	<message key="submission.submit.form.abstractRequired">Пожалуйста введите аннотацию Вашей статьи.</message>
-	<message key="submission.submit.form.contributorRoleRequired">Пожалуйста выберите роль отправителя.</message>
+	<message key="submission.submit.form.titleRequired">Пожалуйста, введите название Вашей статьи.</message>
+	<message key="submission.submit.form.abstractRequired">Пожалуйста, введите аннотацию Вашей статьи.</message>
+	<message key="submission.submit.form.contributorRoleRequired">Пожалуйста, выберите роль отправителя.</message>
 
 	<message key="submission.citationFormat.notFound">Запрошенный формат оформления библиографических ссылок не удается получить.</message>
 

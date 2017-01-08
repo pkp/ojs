@@ -55,7 +55,7 @@
 	<message key="editor.issues.numberRequired">Номер выпуска обязателен и должен быть положительным числом.</message>
 	<message key="editor.issues.yearRequired">Номер года обязателен и должен быть положительным числом.</message>
 	<message key="editor.issues.titleRequired">Название для выпуска обязательно.</message>
-	<message key="editor.issues.issueIdentificationRequired">Идентификация выпуска обязательна. Пожалуйста выберите по крайней мере один из вариантов идентификации выпуска.</message>
+	<message key="editor.issues.issueIdentificationRequired">Идентификация выпуска обязательна. Пожалуйста, выберите по крайней мере один из вариантов идентификации выпуска.</message>
 	<message key="editor.issues.issueIdentification">Идентификация выпуска</message>
 	<message key="editor.issues.publicIssueIdentifier">Открытый идентификатор выпуска</message>
 	<message key="editor.issues.description">Описание</message>

@@ -13,15 +13,15 @@
 
 <locale name="ru_RU" full_name="Русский">
 	<message key="manager.website.archiving">Архивирование</message>
-	<message key="manager.emails.confirmResetAll">Вы уверены, что хотите заменить все шаблоны писем для данного журнала на шаблоны по умолчанию? Вы потеряете все изменения, которые Вы сделали.</message>
+	<message key="manager.emails.confirmResetAll">Вы уверены, что хотите заменить все шаблоны писем для данного журнала на шаблоны по умолчанию? Вы потеряете все изменения, которые вы сделали.</message>
 	<message key="manager.files.note">Внимание: файловый менеджер — это дополнительная возможность, которая позволяет напрямую просматривать и управлять файлами и каталогами, связанными с этим журналом.</message>
 	<message key="manager.journalManagement">Управление журналом</message>
 	<message key="manager.language.ui">Интерфейс пользователя</message>
 	<message key="manager.language.submissions">Отправленные материалы</message>
 	<message key="manager.language.forms">Формы</message>
-	<message key="manager.language.confirmDefaultSettingsOverwrite">Это заменит все настройки журнала, связанные с конкретным языком, которые Вы сделали для этого языка</message>
+	<message key="manager.language.confirmDefaultSettingsOverwrite">Это заменит все настройки журнала, связанные с конкретным языком, которые вы сделали для этого языка</message>
 	<message key="manager.languages.languageInstructions"><![CDATA[OJS может быть доступна пользователям на любом из поддерживаемых системой языков. В то же время, OJS может работать как многоязычная система, позволяя пользователям переключаться между языками на каждой странице и вводить определенные данные на нескольких дополнительных языках.<br /><br />Если поддерживаемый OJS не указан в списке ниже, попросите администратора сайта установить язык из интерфейса администрирования сайта. Смотрите в документации OJS инструкции по добавлению поддержки новых языков.]]></message>
-	<message key="manager.languages.noneAvailable">Извините, дополнительные языки не доступны. Свяжитесь с администратором сайта, если Вы хотите добавить дополнительные языки в этот журнал.</message>
+	<message key="manager.languages.noneAvailable">Извините, дополнительные языки не доступны. Свяжитесь с администратором сайта, если вы хотите добавить дополнительные языки в этот журнал.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Этот язык будет языком по умолчанию для сайта журнала.</message>
 	<message key="manager.managementPages">Страницы управления</message>
 	<message key="manager.payment.action">Действие</message>
@@ -63,7 +63,7 @@
 	<message key="manager.payment.options.waiverPolicy">Правила отмены платежей</message>
 	<message key="manager.payment.paymentId">ID платежа</message>
 	<message key="manager.payment.paymentMethod">Метод платежа</message>
-	<message key="manager.payment.paymentMethod.description">С этой страницы Вы можете настроить любой из следующих модулей методов платежей.</message>
+	<message key="manager.payment.paymentMethod.description">С этой страницы вы можете настроить любой из следующих модулей методов платежей.</message>
 	<message key="manager.payment.paymentMethods">Методы платежей</message>
 	<message key="manager.payment.paymentType">Тип платежа</message>
 	<message key="manager.payment.readerFees">Платежи читателя</message>
@@ -88,14 +88,14 @@
 	<message key="manager.section.noSectionEditors"><![CDATA[Редакторы разделов пока отсутствуют. Сначала добавьте эту роль хотя бы одному пользователю через Администрирование > Настройки > Пользователи &amp; Роли.]]></message>
 	<message key="manager.sections.assigned">Редакторы данного раздела</message>
 	<message key="manager.sections.confirmDelete">Вы уверены, что хотите навсегда удалить этот раздел?</message>
-	<message key="manager.sections.alertDelete">Перед удалением этого раздела Вы должны переместить опубликованные статьи в другие разделы.</message>
+	<message key="manager.sections.alertDelete">Перед удалением этого раздела вы должны переместить опубликованные статьи в другие разделы.</message>
 	<message key="manager.sections.create">Создать раздел</message>
 	<message key="manager.section.sectionEditorInstructions">Добавьте редактора раздела в этот раздел, чтобы статьи автоматически назначались редактору раздела. (В другом варианте, редакторы разделов могут назначаться вручную, после поступления материала). Если редактор раздела назначен, то он может автоматически назначаться на контроль процесса «РЕЦЕНЗИРОВАНИЕ» и/или процесса «РЕДАКТИРОВАНИЕ» (литературное редактирование, верстка и корректура) для материалов, направленных в данный раздел. Создаются редакторы раздела щелчком на ссылке «Редакторы разделов» под заголовком «Роли» в разделе «Управление журналом».</message>
 	<message key="manager.sections.editorRestriction">Статьи могут отправляться только редакторами и редакторами разделов.</message>
 	<message key="manager.sections.editors">Редакторы разделов</message>
 	<message key="manager.sections.form.abbrevRequired">Требуется аббревиатура названия для раздела</message>
-	<message key="manager.sections.form.mustAllowPermission">Пожалуйста убедитесь, что поставлена хотя бы одна галочка для каждого назначения редактора раздела.</message>
-	<message key="manager.sections.form.reviewFormId">Пожалуйста, убедитесь, что Вы выбрали правильную форму рецензии.</message>
+	<message key="manager.sections.form.mustAllowPermission">Пожалуйста, убедитесь, что поставлена хотя бы одна галочка для каждого назначения редактора раздела.</message>
+	<message key="manager.sections.form.reviewFormId">Пожалуйста, убедитесь, что вы выбрали правильную форму рецензии.</message>
 	<message key="manager.sections.form.titleRequired">Требуется название для раздела.</message>
 	<message key="manager.sections.hideTocAuthor">Убрать имена авторов для материалов этого раздела из содержания выпусков.</message>
 	<message key="manager.sections.hideTocTitle">Убрать название этого раздела из содержания выпусков.</message>
@@ -467,7 +467,7 @@
 	<message key="manager.subscriptions.form.institutionMailingAddress">Почтовый адрес</message>
 	<message key="manager.subscriptions.form.domainInstructions"><![CDATA[Если здесь введен домен, то диапазон IP-адресов вводить необязательно. <br />Допустимые значения — доменные имена (например, lib.sfu.ca).]]></message>
 	<message key="manager.subscriptions.form.domainIPRangeRequired">Выбранный тип подписки требует указания домена и/или диапазона IP-адресов для аутентификации по подписке.</message>
-	<message key="manager.subscriptions.form.domainValid">Пожалуйста введите правильное доменное имя.</message>
+	<message key="manager.subscriptions.form.domainValid">Пожалуйста, введите правильное доменное имя.</message>
 	<message key="manager.subscriptions.form.ipRange">Диапазон IP-адресов</message>
 	<message key="manager.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
 	<message key="manager.subscriptions.form.ipRangeInstructions"><![CDATA[Если здесь введен диапазон IP-адресов, то указание домена необязательно.<br />Допустимыми значениями являются IP-адрес (например, 142.58.103.1), диапазон IP-адресов (например, 142.58.103.1 - 142.58.103.4), диапазон IP-адресов с символом подстановки «*» (например, 142.58.*.*) и диапазон IP-адресов с маской при бесклассовой маршрутизации (например, 142.58.100.0/24).]]></message>
