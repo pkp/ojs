@@ -89,7 +89,6 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.sections.form.mustAllowPermission">Assicurati di aver selezionato almeno un'assegnazione per ciascun section editor.</message>
 	<message key="manager.sections.form.reviewFormId">Assicurati di aver scelto un modulo per la revisione valido.</message>
 	<message key="manager.sections.form.titleRequired">Inserisci un titolo per questa sezione.</message>
-	<message key="manager.sections.hideAbout">Non mostrare questa sezione nella pagina delle informazioni sulla rivista.</message>
 	<message key="manager.sections.hideTocAuthor">Non mostrare il nome degli autori degli articoli pubblicati in questa sezione nel sommario dei fascicoli</message>
 	<message key="manager.sections.hideTocTitle">Non mostrare il titolo di questa sezione nel sommario dei fascicoli.</message>
 	<message key="manager.sections.identifyType">Nei metadati, identifica gli item pubblicati in questa sezione come</message>

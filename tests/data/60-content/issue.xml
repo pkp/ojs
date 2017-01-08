@@ -9,12 +9,12 @@
   <date_published>2016-02-11</date_published>
   <last_modified>2016-02-11</last_modified>
   <sections>
-    <section ref="ART" seq="1" editor_restricted="0" meta_indexed="1" meta_reviewed="1" abstracts_not_required="0" hide_title="0" hide_author="0" hide_about="0" abstract_word_count="0">
+    <section ref="ART" seq="1" editor_restricted="0" meta_indexed="1" meta_reviewed="1" abstracts_not_required="0" hide_title="0" hide_author="0" abstract_word_count="0">
       <id type="internal" advice="ignore">1</id>
       <abbrev locale="en_US">ART</abbrev>
       <title locale="en_US">Articles</title>
     </section>
-    <section ref="REV" seq="2" editor_restricted="0" meta_indexed="1" meta_reviewed="1" abstracts_not_required="1" hide_title="0" hide_author="0" hide_about="0" abstract_word_count="0">
+    <section ref="REV" seq="2" editor_restricted="0" meta_indexed="1" meta_reviewed="1" abstracts_not_required="1" hide_title="0" hide_author="0" abstract_word_count="0">
       <id type="internal" advice="ignore">2</id>
       <abbrev locale="en_US">REV</abbrev>
       <title locale="en_US">Reviews</title>

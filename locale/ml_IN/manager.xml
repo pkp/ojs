@@ -90,7 +90,6 @@
 	<message key="manager.sections.form.mustAllowPermission">ഒരോ സെക്ഷന്‍ എഡിറ്റര്‍ അസൈമെന്റ്സിലും ഒരു ചെക്ക്ബോക്സ് എങ്കിലും ചെക്ക് ചെയ്തിട്ടുണ്ടെന്ന് ഉറപ്പ് വരുത്തുക.</message>
 	<message key="manager.sections.form.reviewFormId">ഒരു പ്രബലമായ അവലോകന ഫോറമാണ് താങ്കള്‍ തിരഞ്ഞെടുത്തതെന്ന് ഉറപ്പ് വരുത്തുക.</message>
 	<message key="manager.sections.form.titleRequired">ഈ വിഭാഗത്തിന് ഒരു തലക്കെട്ട് ആവശ്യമാണ്.</message>
-	<message key="manager.sections.hideAbout">ജര്‍ണലിനെ സംബദ്ധിച്ചതില്‍ നിന്ന് ഈ വിഭാഗത്തിനെ ഒഴിവാക്കുക</message>
 	<message key="manager.sections.hideTocAuthor">ഈ പതിപ്പിലെ ഉള്ളടക്ക പട്ടികയില്‍ നിന്നും സെക്ഷന്‍ ഐറ്റംസിന്റെ ഗ്രന്ഥകര്‍ത്താവിന്റെ നാമം ഒഴിവാക്കുക.</message>
 	<message key="manager.sections.hideTocTitle">ഈ പതിപ്പിലെ ഉള്ളടക്ക പട്ടികയില്‍ നിന്നും ഈ വിഭാഗത്തിന്റെ തലക്കെട്ട് ഒഴിവാക്കുക.</message>
 	<message key="manager.sections.identifyType">ഈ വിഭാഗത്തില്‍ പ്രസിദ്ധീകരിക്കപ്പെട്ട ഐറ്റംസ് തിരിച്ചറിയപ്പെടേണ്ടത്:</message>

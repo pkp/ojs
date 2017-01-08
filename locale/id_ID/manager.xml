@@ -158,7 +158,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Pastikan bahwa setidaknya satu kotak cek telah dicek untuk masing-masing tugas editor bagian.</message> 
 	<message key="manager.sections.form.reviewFormId">Pastikan Anda telah memilih form review yang valid.</message>	
 <message key="manager.sections.form.titleRequired">Judul diperlukan untuk bagian ini.</message> 
-	<message key="manager.sections.hideAbout">Hilangkan bagian ini dari Tentang Kami.</message> 
 	<message key="manager.sections.hideTocAuthor">Hilangkan nama penulis untuk item bagian dari daftar isi terbitan.</message>
 	<message key="manager.sections.hideTocTitle">Hilangkan judul bagian ini dari daftar isi terbitan.</message> 
 	<message key="manager.sections.identifyType">Identifikasi item yang diterbitkan di bagian ini sebagai sebuah</message> 

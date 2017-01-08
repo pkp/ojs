@@ -87,7 +87,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Ujistěte se, prosím, že je zaškrtnuté alespoň jedno políčko pro každý úkol editora sekce.</message>
 	<message key="manager.sections.form.reviewFormId">Ujistěte se prosím, že jste vybral platný formulář posudku.</message>
 	<message key="manager.sections.form.titleRequired">Je vyžadován název pro tuto sekci.</message>
-	<message key="manager.sections.hideAbout">Vypustit tuto sekci z "O časopisu".</message>
 	<message key="manager.sections.hideTocAuthor">Vypustit jména autorů pro položky sekce z obsahu čísla.</message>
 	<message key="manager.sections.hideTocTitle">Vypustit název této sekce z obsahu čísla.</message>
 	<message key="manager.sections.identifyType">Pro účely sběru metadat označte každou položku v této sekci jako</message>

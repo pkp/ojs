@@ -97,7 +97,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Пожалуйста убедитесь, что поставлена хотя бы одна галочка для каждого назначения редактора раздела.</message>
 	<message key="manager.sections.form.reviewFormId">Пожалуйста, убедитесь, что Вы выбрали правильную форму рецензии.</message>
 	<message key="manager.sections.form.titleRequired">Требуется название для раздела.</message>
-	<message key="manager.sections.hideAbout">Убрать этот раздел со страницы «О журнале».</message>
 	<message key="manager.sections.hideTocAuthor">Убрать имена авторов для материалов этого раздела из содержания выпусков.</message>
 	<message key="manager.sections.hideTocTitle">Убрать название этого раздела из содержания выпусков.</message>
 	<message key="manager.sections.identifyType">Обозначать материалы, опубликованные в этом разделе как</message>

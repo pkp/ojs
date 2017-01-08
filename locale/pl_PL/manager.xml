@@ -60,7 +60,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Upewnij się, że przynajmniej jedno pole wyboru zostało wybrane dla każdego z redaktorów działu.</message>
 	<message key="manager.sections.form.reviewFormId">Upewnij się, że wybrałeś poprawny formularz recenzji.</message>
 	<message key="manager.sections.form.titleRequired">Nazwa działu jest wymagana.</message>
-	<message key="manager.sections.hideAbout">Wyklucz ten dział z informacji o czasopiśmie.</message>
 	<message key="manager.sections.hideTocAuthor">Wyklucz nazwiska autorów dla tego działu ze spisu treści numerów.</message>
 	<message key="manager.sections.hideTocTitle">Wyklucz nazwę działu ze spisu treści numerów.</message>
 	<message key="manager.sections.identifyType">Oznacz teksty opublikowane w tym dziale jako</message>

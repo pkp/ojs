@@ -90,7 +90,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Asiguraţi-vă că este pusă cel puţin o bifă pentru fiecare dintre sarcinile redactorului de secţiune.</message>
 	<message key="manager.sections.form.reviewFormId">Asigură-te că ai ales un formular de evaluare valid.</message>
 	<message key="manager.sections.form.titleRequired">Este necesar un titlu pentru această secţiune.</message>
-	<message key="manager.sections.hideAbout">Nu menționa această secţiune în secţiunea „despre” revistă.</message>
 	<message key="manager.sections.hideTocAuthor">Nu menționa numele autorilor pentru articolele secţiunii din cuprinsul acestui număr.</message>
 	<message key="manager.sections.hideTocTitle">Nu menționa titlul acestei secţiuni în cuprinsul numărului.</message>
 	<message key="manager.sections.identifyType">Identifică articolele publicate în această secţiune ca şi un/o</message>

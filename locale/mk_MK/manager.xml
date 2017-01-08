@@ -95,7 +95,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Please ensure that at least one checkbox is checked for each Section Editor assignment.</message>
 	<message key="manager.sections.form.reviewFormId">Ве молам осигурајте се дека имате избрано валидна форма за преглед.</message>
 	<message key="manager.sections.form.titleRequired">Наслов е потребен за овој дел.</message>
-	<message key="manager.sections.hideAbout">Изостави го овој дел од делот “За списанието“</message>
 	<message key="manager.sections.hideTocAuthor">Изостави ги имињата на авторот во делот на ставки од содржината.</message>
 	<message key="manager.sections.hideTocTitle">Изостави го насловот во овој дел од содржината.</message>
 	<message key="manager.sections.identifyType">Идентификувај ги ставките објавени во овој дел како</message>

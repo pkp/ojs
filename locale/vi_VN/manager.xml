@@ -86,7 +86,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Đảm bảo rằng ít nhất một ô được đánh dấu cho mỗi đầu việc giao cho Biên tập viên Chuyên mục.</message>
 	<message key="manager.sections.form.reviewFormId">Đảm bảo rằng bạn đã chọn mẫu phiếu phản biện hợp lệ</message>
 	<message key="manager.sections.form.titleRequired">Chuyên mục này phải có tên.</message>
-	<message key="manager.sections.hideAbout">Bỏ mục này trong trang Giới thiệu Tạp chí.</message>
 	<message key="manager.sections.hideTocAuthor">Bỏ tên tác giả khỏi các bài trong chuyên mục trên mục lục của các số tạp chí</message>
 	<message key="manager.sections.hideTocTitle">Không đưa chuyên mục này vào mục lục của tạp chí.</message>
 	<message key="manager.sections.identifyType">Để dễ dàng mô tả, xác định mọi bài viết trong chuyện mục này là</message>
