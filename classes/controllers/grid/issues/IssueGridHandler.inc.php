@@ -484,7 +484,9 @@ class IssueGridHandler extends GridHandler {
 			);
 		}
 
-		return DAO::getDataChangedEvent();
+		$json = DAO::getDataChangedEvent();
+		$json->setGlobalEvent('issuePublished', array('id' => $issue->getId()));
+		return $json;
 	}
 
 	/**
@@ -519,6 +521,7 @@ class IssueGridHandler extends GridHandler {
 		$dispatcher = $request->getDispatcher();
 		$json = new JSONMessage();
 		$json->setEvent('containerReloadRequested', array('tabsUrl' => $dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues', 'issuesTabs', null)));
+		$json->setGlobalEvent('issueUnpublished', array('id' => $issue->getId()));
 		return $json;
 	}
 
