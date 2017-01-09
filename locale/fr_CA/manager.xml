@@ -590,11 +590,8 @@ Il existe cinq niveaux d'autorisation : Les Directeurs de revue ont accès à to
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Avertir les abonnés par courriel</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">mois avant la date d'échéance de l'abonnement.</message>
 	<message key="manager.setup.resetPermissions.confirm">êtes-vous certains de vouloir réinitialiser les autorisations déjà rattachées à l'article?</message>
-	<message key=""><![CDATA[]]></message>
-	<message key=""><![CDATA[]]></message>
-	<message key=""><![CDATA[]]></message>
-	<message key=""><![CDATA[]]></message>
-	<message key=""><![CDATA[]]></message>
-	<message key=""><![CDATA[]]></message>
-	<message key=""><![CDATA[]]></message>
+	<message key="plugins.importexport.common.cliError">ERREUR:</message>
+	<message key="plugins.importexport.common.error.unknownObjects">L'objet spécifié est introuvable.</message>
+	<message key="manager.setup.notifications.copyPrimaryContact">Envoyer une copie au contact principal, identifié dans les paramètres de la revue.</message>
+	<message key="plugins.importexport.common.error.unknownJournal">Le chemin pour la revue, "{$journalPath}", n'existe pas.</message>
 </locale>
