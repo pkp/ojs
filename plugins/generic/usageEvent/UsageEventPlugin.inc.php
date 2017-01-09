@@ -27,7 +27,17 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 	function getEventHooks() {
 		return array_merge(parent::getEventHooks(), array(
 			'ArticleHandler::download',
-			'IssueHandler::download'
+			'IssueHandler::download',
+			'HtmlArticleGalleyPlugin::articleDownloadFinished'
+		));
+	}
+
+	/**
+	 * @copydoc PKPUsageEventPlugin::getDownloadFinishedEventHooks()
+	 */
+	protected function getDownloadFinishedEventHooks() {
+		return array_merge(parent::getDownloadFinishedEventHooks(), array(
+			'HtmlArticleGalleyPlugin::articleDownloadFinished'
 		));
 	}
 

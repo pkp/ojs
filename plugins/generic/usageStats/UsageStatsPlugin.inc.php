@@ -26,6 +26,15 @@ class UsageStatsPlugin extends PKPUsageStatsPlugin {
 	}
 
 	/**
+	 * @copydoc PKPUsageEventPlugin::getDownloadFinishedEventHooks()
+	 */
+	protected function getDownloadFinishedEventHooks() {
+		return array_merge(parent::getDownloadFinishedEventHooks(), array(
+			'HtmlArticleGalleyPlugin::articleDownloadFinished'
+		));
+	}
+
+	/**
 	 * Register assets and output hooks to display statistics on the reader
 	 * frontend.
 	 *
