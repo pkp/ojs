@@ -147,10 +147,6 @@ Przed przesłaniem tekstu do redakcji techniczne, powiadom autora o decyzji i wy
 	<message key="editor.article.assignEditor">Dodaj redaktora czasopisma</message>
 	<message key="editor.article.selectEditor">Wybierz {$roleName}</message>
 	<message key="editor.article.selectDecision">Wybierz decyzję</message>
-	<message key="editor.article.decision.accept">Zaakceptuj zgłoszony tekst</message>
-	<message key="editor.article.decision.pendingRevisions">Wymagane poprawki</message>
-	<message key="editor.article.decision.resubmit">Do ponownej recenzji</message>
-	<message key="editor.article.decision.decline">Odrzucenie zgłoszonego tekstu</message>
 	<message key="editor.article.selectLayoutEditor">Wybierz specjalistę DTP</message>
 	<message key="editor.article.replaceLayoutEditor">Zmień specjalistę DTP Layout Editor</message>
 	<message key="editor.article.reviewSubmission">Prześlij recenzje</message>

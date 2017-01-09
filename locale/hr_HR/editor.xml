@@ -140,10 +140,6 @@
 	<message key="editor.article.assignEditor">Dodaj uredniku</message>
 	<message key="editor.article.selectEditor">Odaberite {$roleName}</message>
 	<message key="editor.article.selectDecision">Odaberite odluku</message>
-	<message key="editor.article.decision.accept">Objaviti bez izmjena</message>
-	<message key="editor.article.decision.pendingRevisions">Objaviti uz predložene izmjene</message>
-	<message key="editor.article.decision.resubmit">Revidirati i vratiti na recenziju</message>
-	<message key="editor.article.decision.decline">Tekst nije za objavljivanje</message>
 	<message key="editor.article.selectLayoutEditor">Odaberite grafičkog urednika</message>
 	<message key="editor.article.replaceLayoutEditor">Zamijenite grafičkog urednika</message>
 	<message key="editor.article.reviewSubmission">Recenzija prijave</message>

@@ -146,10 +146,6 @@
 	<message key="editor.article.assignEditor">افزودن سردبیر</message>
 	<message key="editor.article.selectEditor">انتخاب {$roleName}</message>
 	<message key="editor.article.selectDecision">انتخاب تصمیم</message>
-	<message key="editor.article.decision.accept">قبول ساب میشن</message>
-	<message key="editor.article.decision.pendingRevisions">اصلاخات لازم است</message>
-	<message key="editor.article.decision.resubmit">ساب میشن مجدد برای کارشناسی</message>
-	<message key="editor.article.decision.decline">رد کردن ساب میشن</message>
 	<message key="editor.article.selectLayoutEditor">انتخاب صفحه آرا</message>
 	<message key="editor.article.replaceLayoutEditor">جایگزینی صفحه آرا</message>
 	<message key="editor.article.reviewSubmission">کارشناسی ساب میشن</message>

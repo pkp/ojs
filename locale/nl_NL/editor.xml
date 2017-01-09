@@ -146,10 +146,6 @@
 	<message key="editor.article.assignEditor">Voeg redacteur toe</message>
 	<message key="editor.article.selectEditor">Kies {$roleName}</message>
 	<message key="editor.article.selectDecision">Kies beslissing</message>
-	<message key="editor.article.decision.accept">Accepteer inzending</message>
-	<message key="editor.article.decision.pendingRevisions">Revisies nodig</message>
-	<message key="editor.article.decision.resubmit">Opnieuw indienen voor review</message>
-	<message key="editor.article.decision.decline">Inzending weigeren</message>
 	<message key="editor.article.selectLayoutEditor">Kies opmaakredacteur</message>
 	<message key="editor.article.replaceLayoutEditor">Vervang opmaakredacteur</message>
 	<message key="editor.article.reviewSubmission">Review inzending</message>
