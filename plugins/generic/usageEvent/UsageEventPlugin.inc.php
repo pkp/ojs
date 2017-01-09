@@ -116,6 +116,8 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 					$article = $hookArgs[0];
 					$galley = $hookArgs[1];
 					$fileId = $hookArgs[2];
+					// if file is not a gallay file (e.g. CSS or images), there is no usage event.
+					if ($galley->getFileId() != $fileId) return false;
 					$canonicalUrlOp = 'download';
 					$canonicalUrlParams = array($article->getId(), $galley->getId(), $fileId);
 					$idParams = array('a' . $article->getId(), 'g' . $galley->getId(), 'f' . $fileId);
