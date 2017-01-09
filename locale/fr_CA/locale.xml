@@ -536,15 +536,15 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<!-- Installer -->
 	<message key="installer.appInstallation">Installation d'OJS</message>
 	<message key="installer.ojsUpgrade">Mise à jour d'OJS</message>
-	<message key="installer.installationInstructions"><![CDATA[*<h4>Version d'OJS {$version}</h4>
+	<message key="installer.installationInstructions"><![CDATA[<h4>Version d'OJS {$version}</h4>
 
-<p>Merci de télécharger Open Journal Systems <strong> du Public Knowledge Project</strong>. Avant de continuer, veuillez lire le fichier <a href="{$baseUrl}/docs/README">README</a> inclus avec ce logiciel. Pour en savoir plus sur Public Knowledge Project et ses projets de logiciels, veuillez visiter le <a href="http://pkp.sfu.ca/" target="_blank">site Web du PKP</a>. Si vous avez des rapports de bogues ou des demandes de soutien technique concernant Open Journal Systems, voir le <a href="http://forum.pkp.sfu.ca" target="_blank">forum de soutien</a> ou visiter le <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">système de rapports de bogues</a>en ligne de PKP. Même si le forum de soutien is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Merci de télécharger Open Journal Systems <strong> du Public Knowledge Project</strong>. Avant de continuer, veuillez lire le fichier <a href="{$baseUrl}/docs/README">README</a> inclus avec ce logiciel. Pour en savoir plus sur Public Knowledge Project et ses projets de logiciels, veuillez visiter le <a href="http://pkp.sfu.ca/" target="_blank">site Web du PKP</a>. Si vous avez des rapports de bogues ou des demandes de soutien technique concernant Open Journal Systems, voir le <a href="http://forum.pkp.sfu.ca" target="_blank">forum de soutien</a> ou visiter le <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">système de rapports de bogues</a>en ligne de PKP. Même si le forum de soutien est la méthode préférée de contact, vous pouvez aussi vous adresser par courriel à  <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>Mise à jour</h4>
 
 <p>Si vous faites la mise à jour d'une installation existante d'OJS, <a href="{$upgradeUrl}">cliquer ici</a> pour procéder.</p>
 
-<h4>Configuration du système recommandée</h4>
+<h4>Configuration du système recommandé</h4>
 
 <ul>
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion}; vous utilisez présentement PHP {$phpVersion}{$wrongPhpText}</li>
@@ -555,7 +555,7 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 
 <p>Comme PKP n'a pas les ressources nécessaires lui permettant de tester toutes les combinaisons possibles de versions et de plateformes des logiciels, aucune garantie de fonctionnement ou de soutien adéquat n'est implicite.</p>
 
-<p>Des modifications à ces paramètres peuvent être apportées après l'installation en modifiant le fichier <tt>config.inc.php</tt> dans le répertoire de base d'OJS, ou en utilisant l'interface de administration du site Web.</p>
+<p>Des modifications à ces paramètres peuvent être apportées après l'installation en modifiant le fichier <tt>config.inc.php</tt> dans le répertoire de base d'OJS, ou en utilisant l'interface d'administration du site Web.</p>
 
 <h4>Systèmes de base de données pris en charge</h4>
 
@@ -1030,7 +1030,4 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 L'installation de CLOCKSS pour Open Journal Systems n'a pas besoin d'avoir lieu avant que la publication soit en cours.]]></message>
 	<message key="manager.setup.citations.enable">Activer l'Assistant au balisage de référence (Citation Markup Assistant)</message>
 	<message key="submission.layout.galley.remoteURL">URL du contenu hébergé à distance</message>
-	<message key=""><![CDATA[]]></message>
-	<message key=""><![CDATA[]]></message>
-	<message key=""><![CDATA[]]></message>
 </locale>
