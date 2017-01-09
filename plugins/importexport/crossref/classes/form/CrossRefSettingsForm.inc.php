@@ -43,7 +43,7 @@ class CrossRefSettingsForm extends DOIExportSettingsForm {
 	function display($request) {
 		$templateMgr =& TemplateManager::getManager($request);
 		$plugin = $this->_plugin;
-		$templateMgr->assign('unregisteredURL', $request->url(null, null, 'importexport', array('plugin', $plugin->getName(), 'all')));
+		$templateMgr->assign('unregisteredURL', $request->url(null, null, 'importexport', array('plugin', $plugin->getName(), 'articles')));
 		parent::display($request);
 	}
 
