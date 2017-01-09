@@ -180,10 +180,6 @@
 	<message key="editor.article.assignEditor">Editör Ata</message>
 	<message key="editor.article.selectEditor">{$roleName} seç</message>
 	<message key="editor.article.selectDecision">Karar Seç</message>
-	<message key="editor.article.decision.accept">Yayına Kabul</message>
-	<message key="editor.article.decision.pendingRevisions">Düzeltme Gerekli</message>
-	<message key="editor.article.decision.resubmit">Değerlendirme İçin Yeniden Başvuru</message>
-	<message key="editor.article.decision.decline">Reddet</message>
 	<message key="editor.article.selectLayoutEditor">Mizanpajcı Seç</message>
 	<message key="editor.article.replaceLayoutEditor">Mizanpajcıyı Değiştir</message>
 	<message key="editor.article.reviewSubmission">Gönderiyi Değerlendir</message>

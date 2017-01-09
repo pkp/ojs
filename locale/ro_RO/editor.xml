@@ -152,10 +152,6 @@
 	<message key="editor.article.assignEditor">Adaugă redactor</message>
 	<message key="editor.article.selectEditor">Selectează {$roleName}</message>
 	<message key="editor.article.selectDecision">Selectează decizia</message>
-	<message key="editor.article.decision.accept">Acceptă propunerea</message>
-	<message key="editor.article.decision.pendingRevisions">Sunt necesare revizuiri</message>
-	<message key="editor.article.decision.resubmit">Retrimite spre evaluare</message>
-	<message key="editor.article.decision.decline">Respinge propunerea</message>
 	<message key="editor.article.selectLayoutEditor">Selectează redactorul machetei</message>
 	<message key="editor.article.replaceLayoutEditor">Înlocuieşte redactorul machetei</message>
 	<message key="editor.article.reviewSubmission">Evaluează propunerea</message>

@@ -149,10 +149,6 @@
 	<message key="editor.article.assignEditor">Assegna a un editor</message>
 	<message key="editor.article.selectEditor">Aggiungi il {$roleName}</message>
 	<message key="editor.article.selectDecision">Seleziona la decisione</message>
-	<message key="editor.article.decision.accept">Accettare la proposta</message>
-	<message key="editor.article.decision.pendingRevisions">Richiedere correzioni</message>
-	<message key="editor.article.decision.resubmit">Inviare nuovamente in revisione</message>
-	<message key="editor.article.decision.decline">Rifiutare la proposta</message>
 	<message key="editor.article.selectLayoutEditor">Seleziona l'editor del layout</message>
 	<message key="editor.article.replaceLayoutEditor">Sostituisci l'editor del layout</message>
 	<message key="editor.article.reviewSubmission">Revisione della proposta</message>
