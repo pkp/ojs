@@ -136,6 +136,8 @@ lib/pkp/js/controllers/grid/users/stageParticipant/form/AddParticipantFormHandle
 lib/pkp/js/pages/reviewer/ReviewerTabHandler.js
 lib/pkp/js/pages/authorDashboard/SubmissionEmailHandler.js
 js/controllers/grid/articleGalleys/ArticleGalleyGridHandler.js
+js/controllers/grid/issues/BackIssueGridHandler.js
+js/controllers/grid/issues/FutureIssueGridHandler.js
 js/controllers/tab/issueEntry/IssueEntryTabHandler.js
 js/controllers/tab/issueEntry/form/IssueEntryPublicationMetadataFormHandler.js
 js/pages/search/SearchFormHandler.js

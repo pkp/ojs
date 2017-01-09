@@ -94,6 +94,14 @@ class BackIssueGridHandler extends IssueGridHandler {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		return $issueDao->getPublishedIssues($journal->getId());
 	}
+
+	/**
+	 * Get the js handler for this component.
+	 * @return string
+	 */
+	public function getJSHandler() {
+		return '$.pkp.controllers.grid.issues.BackIssueGridHandler';
+	}
 }
 
 ?>
