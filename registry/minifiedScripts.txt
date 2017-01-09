@@ -30,6 +30,9 @@ lib/pkp/js/lib/json/json2.js
 # Our own functions (depend on plug-ins)
 lib/pkp/js/functions/general.js
 
+# Our global event messenger
+lib/pkp/js/eventRouter/EventRouter.js
+
 # Our own classes (depend on plug-ins)
 lib/pkp/js/classes/Helper.js
 lib/pkp/js/classes/ObjectProxy.js
