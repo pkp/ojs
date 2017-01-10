@@ -134,6 +134,43 @@
 				</div>
 			{/if}
 
+			{* Author biographies *}
+			{assign var="hasBiographies" value=0}
+			{foreach from=$article->getAuthors() item=author}
+				{if $author->getLocalizedBiography()}
+					{assign var="hasBiographies" value=$hasBiographies+1}
+				{/if}
+			{/foreach}
+			{if $hasBiographies}
+				<div class="item author_bios">
+					<h3 class="label">
+						{if $hasBiographies > 1}
+							{translate key="submission.authorBiographies"}
+						{else}
+							{translate key="submission.authorBiography"}
+						{/if}
+					</h3>
+					{foreach from=$article->getAuthors() item=author}
+						{if $author->getLocalizedBiography()}
+							<div class="sub_item">
+								<div class="label">
+									{if $author->getLocalizedAffiliation()}
+										{capture assign="authorName"}{$author->getFullName()|escape}{/capture}
+										{capture assign="authorAffiliation"}<span class="affiliation">{$author->getLocalizedAffiliation()|escape}</span>{/capture}
+										{translate key="submission.authorWithAffiliation" name=$authorName affiliation=$authorAffiliation}
+									{else}
+										{$author->getFullName()|escape}
+									{/if}
+								</div>
+								<div class="value">
+									{$author->getLocalizedBiography()|strip_unsafe_html}
+								</div>
+							</div>
+						{/if}
+					{/foreach}
+				</div>
+			{/if}
+
 			{call_hook name="Templates::Article::Main"}
 
 		</div><!-- .main_entry -->
