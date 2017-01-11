@@ -114,7 +114,6 @@ lib/pkp/js/controllers/tab/settings/permissions/form/PermissionSettingsFormHandl
 lib/pkp/js/controllers/tab/settings/paymentMethod/PaymentMethodHandler.js
 lib/pkp/js/controllers/grid/notifications/NotificationsGridHandler.js
 lib/pkp/js/controllers/tab/settings/siteAccessOptions/form/SiteAccessOptionsFormHandler.js
-lib/pkp/js/controllers/tab/settings/managementSettings/UsersAndRolesTabHandler.js
 lib/pkp/js/controllers/tab/workflow/WorkflowTabHandler.js
 lib/pkp/js/controllers/informationCenter/NotesHandler.js
 lib/pkp/js/controllers/statistics/ReportGeneratorFormHandler.js
@@ -126,6 +125,7 @@ lib/pkp/js/pages/submission/SubmissionTabHandler.js
 lib/pkp/js/pages/submission/SubmissionStep2FormHandler.js
 lib/pkp/js/pages/submission/SubmissionStep3FormHandler.js
 lib/pkp/js/pages/workflow/WorkflowHandler.js
+lib/pkp/js/controllers/grid/users/UserGridHandler.js
 lib/pkp/js/controllers/grid/users/reviewer/AdvancedReviewerSearchHandler.js
 lib/pkp/js/controllers/grid/users/reviewer/form/EditReviewFormHandler.js
 lib/pkp/js/controllers/grid/users/reviewer/form/AddReviewerFormHandler.js
