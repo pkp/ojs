@@ -17,7 +17,7 @@
 	// Attach the JS file tab handler.
 	$(function() {ldelim}
 		$('#accessTabs').pkpHandler(
-			'$.pkp.controllers.tab.settings.managementSettings.UsersAndRolesTabHandler',
+			'$.pkp.controllers.TabHandler',
 			{ldelim}
 				userGridContentUrl:'{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.AccessSettingsTabHandler" tab="users" op="showTab"}',
 			{rdelim}
