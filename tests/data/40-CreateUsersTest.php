@@ -52,7 +52,7 @@ class CreateUsersTest extends PKPCreateUsersTest {
 			'username' => 'dbuskins',
 			'firstName' => 'David',
 			'lastName' => 'Buskins',
-			'country' => 'United States',
+			'country' => 'United States of America',
 			'affiliation' => 'University of Chicago',
 			'roles' => array('Section editor'),
 		));
@@ -136,7 +136,7 @@ class CreateUsersTest extends PKPCreateUsersTest {
 			'username' => 'agallego',
 			'firstName' => 'Adela',
 			'lastName' => 'Gallego',
-			'country' => 'United States',
+			'country' => 'United States of America',
 			'affiliation' => 'State University of New York',
 			'roles' => array('Reviewer'),
 		));
@@ -178,7 +178,7 @@ class CreateUsersTest extends PKPCreateUsersTest {
 			'username' => 'gcox',
 			'firstName' => 'Graham',
 			'lastName' => 'Cox',
-			'country' => 'United States',
+			'country' => 'United States of America',
 			'affiliation' => 'Duke University',
 			'roles' => array('Layout Editor'),
 		));
