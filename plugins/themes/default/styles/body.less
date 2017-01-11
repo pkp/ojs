@@ -151,6 +151,28 @@ a {
 	}
 }
 
+// Center the content panel when no sidebar is present
+.pkp_structure_main:first-child:last-child {
+
+	@media(min-width: @screen-desktop) {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: @quadruple;
+
+		// Aligns the left and right borders
+		@no-sidebar-margins: @sidebar-width / 2;
+		&:before {
+			left: @no-sidebar-margins;
+		}
+
+		&:after {
+			left: auto;
+			right: @no-sidebar-margins;
+		}
+	}
+}
+
 // Lock in images so they don't run outside their container
 img {
 	max-width: 100%;
