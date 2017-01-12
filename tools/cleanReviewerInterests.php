@@ -22,7 +22,7 @@ class ReviewerInterestsDeletionTool extends CommandLineTool {
 	 * @param $argv array command-line arguments
 	 */
 	public function __construct($argv = array()) {
-		parent::CommandLineTool($argv);
+		parent::__construct($argv);
 
 		if (!sizeof($this->argv)) {
 			$this->usage();
@@ -86,7 +86,7 @@ class ReviewerInterestsDeletionTool extends CommandLineTool {
 		$vocabDao = DAORegistry::getDAO('ControlledVocabDAO');
 		$vocabEntryDao = DAORegistry::getDAO('ControlledVocabEntryDAO');
 		
-		$interestVocab = $vocabDao->getBySymbolic(CONTROLLED_VOCAB_INTEREST,0,0);
+		$interestVocab = $vocabDao->getBySymbolic(CONTROLLED_VOCAB_INTEREST);
 		$vocabEntryIterator = $vocabEntryDao->getByControlledVocabId($interestVocab->getId());
 		$vocabEntryList = $vocabEntryIterator->toArray(); 
 		
