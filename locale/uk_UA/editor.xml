@@ -169,10 +169,6 @@
        <message key="editor.article.assignEditor">Додати редактора</message>
        <message key="editor.article.selectEditor">Обрати {$roleName}</message>
        <message key="editor.article.selectDecision">Визначити рішення</message>
-       <message key="editor.article.decision.accept">Прийняти подання</message>
-       <message key="editor.article.decision.pendingRevisions">Необхідні виправлення</message>
-       <message key="editor.article.decision.resubmit">Необхідне додаткове рецензування</message>
-       <message key="editor.article.decision.decline">Відхилити подання</message>
        <message key="editor.article.selectLayoutEditor">Обрати редактора верстки</message>
        <message key="editor.article.replaceLayoutEditor">Змінити редактора верстки</message>
        <message key="editor.article.reviewSubmission">Рецензування подання</message>

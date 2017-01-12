@@ -145,10 +145,10 @@
 				<div class="item cover_image">
 					<div class="sub_item">
 						{if $article->getLocalizedCoverImage()}
-							<img src="{$publicFilesDir}/{$article->getLocalizedCoverImage()|escape}"{if $article->getLocalizedCoverImageAltText()} alt="{$article->getLocalizedCoverImageAltText()|escape}"{/if}>
+							<img src="{$article->getLocalizedCoverImageUrl()|escape}"{if $article->getLocalizedCoverImageAltText()} alt="{$article->getLocalizedCoverImageAltText()|escape}"{/if}>
 						{else}
 							<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
-								<img src="{$publicFilesDir}/{$issue->getLocalizedCoverImage()|escape}"{if $issue->getLocalizedCoverImageAltText()} alt="{$issue->getLocalizedCoverImageAltText()|escape}"{/if}>
+								<img src="{$issue->getLocalizedCoverImageUrl()|escape}"{if $issue->getLocalizedCoverImageAltText()} alt="{$issue->getLocalizedCoverImageAltText()|escape}"{/if}>
 							</a>
 						{/if}
 					</div>
@@ -175,7 +175,7 @@
 						{translate key="submissions.published"}
 					</div>
 					<div class="value">
-						{$article->getDatePublished()|date_format}
+						{$article->getDatePublished()|date_format:$dateFormatShort}
 					</div>
 				</div>
 			{/if}

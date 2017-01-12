@@ -86,7 +86,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Verzeker u ervan dat tenminste één aankruisvak is aangekruist voor iedere sectieredacteurstaak</message>
 	<message key="manager.sections.form.reviewFormId">Verzeker u ervan dat u een geldig reviewformulier heb gekozen.</message>
 	<message key="manager.sections.form.titleRequired">Een titel voor de sectie is verplicht.</message>
-	<message key="manager.sections.hideAbout">Deze sectie weglaten bij Over dit tijdschrift.</message>
 	<message key="manager.sections.hideTocAuthor">Auteursnamen weglaten bij de secties van de inhoudsopgave van het nummer.</message>
 	<message key="manager.sections.hideTocTitle">De titel van deze sectie niet opnemen in de inhoudsopgave van dit nummer.</message>
 	<message key="manager.sections.identifyType">Identificeer publicaties in deze sectie als a(n)</message>

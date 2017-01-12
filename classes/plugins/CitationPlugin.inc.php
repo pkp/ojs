@@ -61,10 +61,12 @@ abstract class CitationPlugin extends Plugin {
 	 */
 	function fetchCitation($article, $issue, $journal) {
 		$templateMgr = TemplateManager::getManager($this->getRequest());
-		$templateMgr->assign('citationPlugin', $this);
-		$templateMgr->assign('article', $article);
-		$templateMgr->assign('issue', $issue);
-		$templateMgr->assign('journal', $journal);
+		$templateMgr->assign(array(
+			'citationPlugin' => $this,
+			'article' => $article,
+			'issue' => $issue,
+			'journal' => $journal,
+		));
 		return $templateMgr->fetch($this->getTemplatePath() . '/citation.tpl');
 	}
 

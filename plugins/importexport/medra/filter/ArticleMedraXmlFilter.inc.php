@@ -135,11 +135,11 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		$notificationType = (empty($registeredDoi) ? O4DOI_NOTIFICATION_TYPE_NEW : O4DOI_NOTIFICATION_TYPE_UPDATE);
 		$articleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'NotificationType', $notificationType));
 		// DOI (mandatory)
-		$articleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOI', $doi));
+		$articleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOI', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
 		// DOI URL (mandatory)
 		$urlPath = $article->getBestArticleId();
 		if ($galley) $urlPath = array($article->getBestArticleId(), $galley->getBestGalleyId());
-		$url = $router->url($request, $context->getPath(), 'article', 'view', $urlPath);
+		$url = $router->url($request, $context->getPath(), 'article', 'view', $urlPath, null, null, true);
 		if ($plugin->isTestMode($context)) {
 			// Change server domain for testing.
 			$url = PKPString::regexp_replace('#://[^\s]+/index.php#', '://example.com/index.php', $url);
@@ -148,7 +148,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		// DOI strucural type
 		$articleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOIStructuralType', $this->getDOIStructuralType()));
 		// Registrant (mandatory)
-		$articleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'RegistrantName', $plugin->getSetting($context->getId(), 'registrantName')));
+		$articleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'RegistrantName', htmlspecialchars($plugin->getSetting($context->getId(), 'registrantName'), ENT_COMPAT, 'UTF-8')));
 		// Registration authority (mandatory)
 		$articleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'RegistrationAuthority', 'mEDRA'));
 		// WorkIdentifier - proprietary ID
@@ -353,22 +353,22 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		// Person name (mandatory)
 		$personName = $author->getFullName();
 		assert(!empty($personName));
-		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'PersonName', $personName));
+		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'PersonName', htmlspecialchars($personName, ENT_COMPAT, 'UTF-8')));
 		// Inverted person name
 		$invertedPersonName = $author->getFullName(true);
 		assert(!empty($invertedPersonName));
-		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'PersonNameInverted', $invertedPersonName));
+		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'PersonNameInverted', htmlspecialchars($invertedPersonName, ENT_COMPAT, 'UTF-8')));
 		// Affiliation
 		$affiliation = $this->getPrimaryTranslation($author->getAffiliation(null), $objectLocalePrecedence);
 		if (!empty($affiliation)) {
 			$affiliationNode = $doc->createElementNS($deployment->getNamespace(), 'ProfessionalAffiliation');
-			$affiliationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'Affiliation', $affiliation));
+			$affiliationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'Affiliation', htmlspecialchars($affiliation, ENT_COMPAT, 'UTF-8')));
 			$contributorNode->appendChild($affiliationNode);
 		}
 		// Biographical note
 		$bioNote = $this->getPrimaryTranslation($author->getBiography(null), $objectLocalePrecedence);
 		if (!empty($bioNote)) {
-			$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'BiographicalNote', PKPString::html2text($bioNote)));
+			$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'BiographicalNote', htmlspecialchars(PKPString::html2text($bioNote), ENT_COMPAT, 'UTF-8')));
 		}
 		return $contributorNode;
 	}
@@ -388,12 +388,12 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		$subjectNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SubjectSchemeIdentifier', $subjectSchemeId));
 		if (is_null($subjectSchemeName)) {
 			// Subject Heading
-			$subjectNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SubjectHeadingText', $subjectHeadingOrCode));
+			$subjectNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SubjectHeadingText', htmlspecialchars($subjectHeadingOrCode, ENT_COMPAT, 'UTF-8')));
 		} else {
 			// Subject Scheme Name
-			$subjectNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SubjectSchemeName', $subjectSchemeName));
+			$subjectNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SubjectSchemeName', htmlspecialchars($subjectSchemeName, ENT_COMPAT, 'UTF-8')));
 			// Subject Code
-			$subjectNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SubjectCode', $subjectHeadingOrCode));
+			$subjectNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SubjectCode', htmlspecialchars($subjectHeadingOrCode, ENT_COMPAT, 'UTF-8')));
 		}
 		return $subjectNode;
 	}

@@ -91,7 +91,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Her bir Bölüm Editörü atamasının işaretlenmesi için en az bir işaret kutusu olduğundan emin olun.</message>
 	<message key="manager.sections.form.reviewFormId">Lütfen geçerli bir inceleme formu seçtiğinizden emin olun.</message>
 	<message key="manager.sections.form.titleRequired">Bölüm için başlık gerekiyor.</message>
-	<message key="manager.sections.hideAbout">Bu bölümü Dergi Hakkında bölümünden ele.</message>
 	<message key="manager.sections.hideTocAuthor">Sayının içindekiler sayfasında bölüm öğeleri için yazar adlarını ele.</message>
 	<message key="manager.sections.hideTocTitle">Bu bölümün başlığını sayının içindekiler tablosundan çıkar.</message>
 	<message key="manager.sections.identifyType">Bu bölümde yayınlanan öğelerin belirlenmesinde kullanılacak tanım:</message>

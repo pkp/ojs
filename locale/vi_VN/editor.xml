@@ -148,10 +148,6 @@
 	<message key="editor.article.assignEditor">Thêm BTV chính</message>
 	<message key="editor.article.selectEditor">Lựa chọn {$roleName}</message>
 	<message key="editor.article.selectDecision">Lựa chọn quyết định</message>
-	<message key="editor.article.decision.accept">Chấp nhận bài nộp</message>
-	<message key="editor.article.decision.pendingRevisions">Cần phải sửa lại</message>
-	<message key="editor.article.decision.resubmit">Nộp lại bài để phản biện</message>
-	<message key="editor.article.decision.decline">Từ chối bài nộp</message>
 	<message key="editor.article.selectLayoutEditor">Lựa chọn BTV trình bày</message>
 	<message key="editor.article.replaceLayoutEditor">Thay BTV trình bày</message>
 	<message key="editor.article.reviewSubmission">Phản biện bài nộp</message>

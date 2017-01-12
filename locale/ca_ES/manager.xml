@@ -96,7 +96,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Comproveu que s’hagi activat com a mínim una casella de selecció per a cada assignació a l’editor/a de secció.</message>
 	<message key="manager.sections.form.reviewFormId">Comproveu que hàgiu seleccionat un formulari de revisió vàlid.</message>
 	<message key="manager.sections.form.titleRequired">Heu d’introduir un títol per a la secció.</message>
-	<message key="manager.sections.hideAbout">Omet aquesta secció de «Sobre la revista».</message>
 	<message key="manager.sections.hideTocAuthor">Omet els noms dels autors/ores en els elements de secció de la taula de continguts dels números.</message>
 	<message key="manager.sections.hideTocTitle">Omet el títol d’aquesta secció de la taula de continguts dels números.</message>
 	<message key="manager.sections.identifyType">Identifica els elements publicats en aquesta secció com a</message>

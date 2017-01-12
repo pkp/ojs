@@ -57,10 +57,12 @@ class UserHandler extends PKPUserHandler {
 		$this->setupTemplate($request);
 		$templateMgr = TemplateManager::getManager($request);
 
-		$templateMgr->assign('journalTitle', $journal->getLocalizedName());
-		$templateMgr->assign('journalPath', $journal->getPath());
-		$templateMgr->assign('acceptGiftSubscriptionPayments', $acceptGiftSubscriptionPayments);
-		$templateMgr->assign('giftSubscriptions', $giftSubscriptions);
+		$templateMgr->assign(array(
+			'journalTitle' => $journal->getLocalizedName(),
+			'journalPath' => $journal->getPath(),
+			'acceptGiftSubscriptionPayments' => $acceptGiftSubscriptionPayments,
+			'giftSubscriptions' => $giftSubscriptions,
+		));
 		$templateMgr->display('user/gifts.tpl');
 
 	}
@@ -178,16 +180,18 @@ class UserHandler extends PKPUserHandler {
 
 		$this->setupTemplate($request);
 
-		$templateMgr->assign('subscriptionName', $subscriptionName);
-		$templateMgr->assign('subscriptionEmail', $subscriptionEmail);
-		$templateMgr->assign('subscriptionPhone', $subscriptionPhone);
-		$templateMgr->assign('subscriptionMailingAddress', $subscriptionMailingAddress);
-		$templateMgr->assign('subscriptionAdditionalInformation', $subscriptionAdditionalInformation);
-		$templateMgr->assign('journalTitle', $journal->getLocalizedName());
-		$templateMgr->assign('journalPath', $journal->getPath());
-		$templateMgr->assign('acceptSubscriptionPayments', $acceptSubscriptionPayments);
-		$templateMgr->assign('individualSubscriptionTypesExist', $individualSubscriptionTypesExist);
-		$templateMgr->assign('institutionalSubscriptionTypesExist', $institutionalSubscriptionTypesExist);
+		$templateMgr->assign(array(
+			'subscriptionName' => $subscriptionName,
+			'subscriptionEmail' => $subscriptionEmail,
+			'subscriptionPhone' => $subscriptionPhone,
+			'subscriptionMailingAddress' => $subscriptionMailingAddress,
+			'subscriptionAdditionalInformation' => $subscriptionAdditionalInformation,
+			'journalTitle' => $journal->getLocalizedName(),
+			'journalPath' => $journal->getPath(),
+			'acceptSubscriptionPayments' => $acceptSubscriptionPayments,
+			'individualSubscriptionTypesExist' => $individualSubscriptionTypesExist,
+			'institutionalSubscriptionTypesExist' => $institutionalSubscriptionTypesExist,
+		));
 		$templateMgr->display('user/subscriptions.tpl');
 
 	}

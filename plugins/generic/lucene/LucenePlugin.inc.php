@@ -213,23 +213,22 @@ class LucenePlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @see Plugin::getTemplatePath()
+	 * @copydoc PKPPlugin::getTemplatePath
 	 */
-	function getTemplatePath() {
-		return parent::getTemplatePath() . 'templates/';
+	function getTemplatePath($inCore = false) {
+		return parent::getTemplatePath($inCore) . 'templates/';
 	}
 
 	//
 	// Implement template methods from GenericPlugin.
 	//
  	/**
-	 * @see Plugin::manage()
+	 * @copydoc Plugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
-		$request = $this->getRequest();
+	function manage($args, $request) {
+		if (!parent::manage($args, $request)) return false;
 
-		switch ($verb) {
+		switch (array_shift($args)) {
 			case 'settings':
 				// Prepare the template manager.
 				$templateMgr = TemplateManager::getManager($request);

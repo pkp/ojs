@@ -12,7 +12,6 @@
  * @uses $issueSeries string Vol/No/Year string for the issue
  * @uses $issueGalleys array Galleys for the entire issue
  * @uses $hasAccess bool Can this user access galleys for this context?
- * @uses $coverImagePath string Base URL path for an issue cover image
  * @uses $publishedArticles array Lists of articles published in this issue
  *   sorted by section.
  *}
@@ -27,10 +26,10 @@
 	<div class="heading">
 
 		{* Issue cover image *}
-		{assign var=issueCover value=$issue->getLocalizedCoverImage()}
+		{assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
 		{if $issueCover}
 			<a class="cover" href="{url op="view" page="issue" path=$issue->getBestIssueId()}">
-				<img src="{$coverImagePath|escape}{$issueCover|escape}"{if $issue->getLocalizedCoverImageAltText() != ''} alt="{$issue->getLocalizedCoverImageAltText()|escape}"{/if}>
+				<img src="{$issueCover|escape}"{if $issue->getLocalizedCoverImageAltText() != ''} alt="{$issue->getLocalizedCoverImageAltText()|escape}"{/if}>
 			</a>
 		{/if}
 

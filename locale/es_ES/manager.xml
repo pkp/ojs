@@ -95,7 +95,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Asegúrese de que hay, al menos, una casilla de verificación seleccionada para cada tarea del editor/a de sección.</message>
 	<message key="manager.sections.form.reviewFormId">Asegúrese de que ha elegido un formulario de revisión válido.</message>
 	<message key="manager.sections.form.titleRequired">Especifique un título para la sección.</message>
-	<message key="manager.sections.hideAbout">Omitir esta sección en el apartado Acerca de la revista.</message>
 	<message key="manager.sections.hideTocAuthor">Omitir los nombres de los autores/as en los elementos de sección de la tabla de contenidos de la publicación.</message>
 	<message key="manager.sections.hideTocTitle">Omitir el título de esta sección en la tabla de contenidos de la publicación.</message>
 	<message key="manager.sections.identifyType">Identificar los elementos publicados en esta sección como</message>

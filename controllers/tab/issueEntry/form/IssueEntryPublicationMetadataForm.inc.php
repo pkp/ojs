@@ -65,10 +65,12 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$context = $request->getContext();
 
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('submissionId', $this->getSubmission()->getId());
-		$templateMgr->assign('stageId', $this->getStageId());
-		$templateMgr->assign('formParams', $this->getFormParams());
-		$templateMgr->assign('context', $context);
+		$templateMgr->assign(array(
+			'submissionId' => $this->getSubmission()->getId(),
+			'stageId' => $this->getStageId(),
+			'formParams' => $this->getFormParams(),
+			'context' => $context,
+		));
 
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$templateMgr->assign('issueOptions', $this->getIssueOptions($context));
@@ -95,7 +97,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$publicationFeeEnabled = $paymentManager->publicationEnabled();
 		$templateMgr->assign('publicationFeeEnabled',  $publicationFeeEnabled);
 		if ($publicationFeeEnabled) {
-			$templateMgr->assign('publicationPayment', $completedPaymentDao->getPublicationCompletedPayment($context->getId(), $this->getSubission()->getId()));
+			$templateMgr->assign('publicationPayment', $completedPaymentDao->getPublicationCompletedPayment($context->getId(), $this->getSubmission()->getId()));
 		}
 
 		$templateMgr->assign('submission', $this->getSubmission());
@@ -232,7 +234,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 			$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
 			$submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), ROLE_ID_AUTHOR);
 			$submitterAssignment = $submitterAssignments->next();
-			assert($submitterAssignment); // At least one author should be assigned
+			assert(isset($submitterAssignment)); // At least one author should be assigned
 
 			$queuedPayment =& $paymentManager->createQueuedPayment(
 				$context->getId(),

@@ -103,12 +103,11 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 	}
 
  	/**
-	 * @see Plugin::manage()
+	 * @copydoc Plugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
+	function manage($args, $request) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
-		$request = $this->getRequest();
-		switch ($verb) {
+		switch (array_shift($args)) {
 			case 'settings':
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));

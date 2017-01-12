@@ -25,7 +25,7 @@ class EostromSubmissionTest extends ContentBaseTestCase {
 			'firstName' => 'Elinor',
 			'lastName' => 'Ostrom',
 			'affiliation' => 'Indiana University',
-			'country' => 'United States',
+			'country' => 'United States of America',
 		));
 
 		$title = 'Traditions and Trends in the Study of the Commons';
@@ -41,7 +41,7 @@ class EostromSubmissionTest extends ContentBaseTestCase {
 				array(
 					'firstName' => 'Frank',
 					'lastName' => 'van Laerhoven',
-					'country' => 'United States',
+					'country' => 'United States of America',
 					'affiliation' => 'Indiana University',
 					'email' => 'fvanlaerhoven@mailinator.com',
 				)

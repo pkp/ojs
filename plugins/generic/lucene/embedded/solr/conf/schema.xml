@@ -420,7 +420,6 @@
     <dynamicField name="*_ru_RU" type="text_ru" indexed="true"  stored="true" multiValued="false" />
     <dynamicField name="*_sr_SR" type="text" indexed="true"  stored="true" multiValued="false" /> <!-- not currently supported -->
     <dynamicField name="*_sv_SE" type="text_sv" indexed="true"  stored="true" multiValued="false" />
-    <dynamicField name="*_te_ST" type="text" indexed="true"  stored="true" multiValued="false" />
     <dynamicField name="*_tr_TR" type="text_tr" indexed="true"  stored="true" multiValued="false" />
     <dynamicField name="*_uk_UA" type="text" indexed="true"  stored="true" multiValued="false" /> <!-- not currently supported -->
     <dynamicField name="*_vi_VN" type="text" indexed="true"  stored="true" multiValued="false" /> <!-- not currently supported -->

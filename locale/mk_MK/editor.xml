@@ -168,10 +168,6 @@
 	<message key="editor.article.assignEditor">Додади уредник</message>
 	<message key="editor.article.selectEditor">Избери {$roleName}</message>
 	<message key="editor.article.selectDecision">Избери решение</message>
-	<message key="editor.article.decision.accept">Прифати поднесување</message>
-	<message key="editor.article.decision.pendingRevisions">Задолжителни ревизии</message>
-	<message key="editor.article.decision.resubmit">Пратете повторно за преглед</message>
-	<message key="editor.article.decision.decline">Одбиј поднесување</message>
 	<message key="editor.article.selectLayoutEditor">Изберете уредник на изгледот</message>
 	<message key="editor.article.replaceLayoutEditor">Повторно изберете уредник на изгледот</message>
 	<message key="editor.article.reviewSubmission">Прегледај поднесување</message>

@@ -218,8 +218,6 @@
 	<message key="user.role.subscriptionManagers">مدراء الاشتراكات</message>
 	<message key="user.role.journalAssistant">مساعد المجلة</message>
 	<message key="user.role.journalAssistants">مساعدو المجلة</message>
-	<message key="user.role.guestEditor">محرر مستضاف</message>
-	<message key="user.role.guestEditors">محررون مستضافون</message>
 	
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">إصدار</message>

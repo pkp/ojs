@@ -146,10 +146,6 @@
 	<message key="editor.article.assignEditor">Tilføj redaktør</message>
 	<message key="editor.article.selectEditor">Vælg {$roleName}</message>
 	<message key="editor.article.selectDecision">Vælg beslutning</message>
-	<message key="editor.article.decision.accept">Accepter manuskript</message>
-	<message key="editor.article.decision.pendingRevisions">Rettelser er påkrævet</message>
-	<message key="editor.article.decision.resubmit">Fremsend igen til bedømmelse</message>
-	<message key="editor.article.decision.decline">Afvis manuskript</message>
 	<message key="editor.article.selectLayoutEditor">Vælg layoutredaktør</message>
 	<message key="editor.article.replaceLayoutEditor">Erstat layoutredaktør</message>
 	<message key="editor.article.reviewSubmission">Bedøm manuskript</message>

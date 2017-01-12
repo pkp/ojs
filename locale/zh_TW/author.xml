@@ -29,7 +29,7 @@
 	<message key="author.submit.metadata"> 輸入後設資料</message>
 	<message key="author.submit.supplementaryFiles">上傳補充檔案</message>
 	<message key="author.submit.confirmation">確認</message>
-	<message key="author.submit.cancelSubmission">您可以在「作者」角色的使用者首頁中選擇「進行中的稿件」以在稍後任一個時間點完成此投稿程序。</message>
+	<message key="submission.submit.cancelSubmission">您可以在「作者」角色的使用者首頁中選擇「進行中的稿件」以在稍後任一個時間點完成此投稿程序。</message>
 	<message key="author.submit.notAccepting">這份期刊此時不接受投稿</message>
 	<message key="author.submissions.uploadCopyeditedVersion">上傳校樣編輯過後的版本</message>
 	<message key="author.submissions.proofreadingCorrections">校對修訂處</message>

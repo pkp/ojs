@@ -39,8 +39,8 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 
 		// Get section for this journal
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$seriesOptions = $sectionDao->getSectionTitles($submission->getContextId());
-		$templateMgr->assign('sectionOptions', $seriesOptions);
+		$sectionOptions = $sectionDao->getTitles($submission->getContextId());
+		$templateMgr->assign('sectionOptions', $sectionOptions);
 		$templateMgr->assign('sectionId', $submission->getSectionId());
 
 		// Cover image delete link action

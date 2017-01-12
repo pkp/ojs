@@ -83,7 +83,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Molimo da odaberete barem jednu opciju uz svako zaduženje urednika rubrika.</message>
 	<message key="manager.sections.form.reviewFormId">Molimo odaberite valjani recenzijski obrazac.</message>
 	<message key="manager.sections.form.titleRequired">Naslov je obavezan za ovu rubriku.</message>
-	<message key="manager.sections.hideAbout">Izostavi ovu rubriku pod "O časopisu".</message>
 	<message key="manager.sections.hideTocAuthor">Za priloge u ovoj rubrici ne prikazuj imena autora u kazalu sadržaja.</message>
 	<message key="manager.sections.hideTocTitle">Izostavi naslov ove rubrike iz kazala sadržaja izdanih brojeva časopisa.</message>
 	<message key="manager.sections.identifyType">Pri kreiranju metapodataka, svi će članci u rubrici biti označeni kao:</message>

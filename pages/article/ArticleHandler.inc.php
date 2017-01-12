@@ -361,7 +361,6 @@ print_r($galleyFile);
 		$returnFormat = isset($args[2]) ? $args[2] : null;
 
 		$citationPlugins = PluginRegistry::loadCategory('citationFormats');
-		uasort($citationPlugins, create_function('$a, $b', 'return strcmp($a->getDisplayName(), $b->getDisplayName());'));
 
 		import('lib.pkp.classes.core.JSONMessage');
 

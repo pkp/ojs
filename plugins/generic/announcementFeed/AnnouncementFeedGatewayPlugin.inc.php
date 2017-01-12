@@ -67,11 +67,10 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	}
 
 	/**
-	 * Override the builtin to get the correct template path.
-	 * @return string
+	 * @copydoc PKPPlugin::getTemplatePath
 	 */
-	function getTemplatePath() {
-		return $this->getAnnouncementFeedPlugin()->getTemplatePath() . 'templates/';
+	function getTemplatePath($inCore = false) {
+		return $this->getAnnouncementFeedPlugin()->getTemplatePath($inCore) . 'templates/';
 	}
 
 	/**
@@ -146,11 +145,13 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 		$version = $versionDao->getCurrentVersion();
 
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('ojsVersion', $version->getVersionString());
-		$templateMgr->assign('selfUrl', $request->getCompleteUrl());
-		$templateMgr->assign('dateUpdated', $dateUpdated);
-		$templateMgr->assign('announcements', $announcements->toArray());
-		$templateMgr->assign('journal', $journal);
+		$templateMgr->assign(array(
+			'ojsVersion' => $version->getVersionString(),
+			'selfUrl' => $request->getCompleteUrl(),
+			'dateUpdated' => $dateUpdated,
+			'announcements' => $announcements->toArray(),
+			'journal' => $journal,
+		));
 
 		$templateMgr->display($this->getTemplatePath() . $typeMap[$type], $mimeTypeMap[$type]);
 

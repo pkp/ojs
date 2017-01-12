@@ -24,8 +24,8 @@ class runScheduledTasks extends ScheduledTaskTool {
 	 * 		If specified, the first parameter should be the path to
 	 *		a tasks XML descriptor file (other than the default)
 	 */
-	function runScheduledTasks($argv = array()) {
-		parent::ScheduledTaskTool($argv);
+	function __construct($argv = array()) {
+		parent::__construct($argv);
 	}
 
 }

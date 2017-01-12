@@ -388,6 +388,25 @@ class Issue extends DataObject {
 	}
 
 	/**
+	 * Get a full URL to the localized cover image
+	 *
+	 * @return string
+	 */
+	function getLocalizedCoverImageUrl() {
+		$coverImage = $this->getLocalizedCoverImage();
+		if (!$coverImage) {
+			return '';
+		}
+
+		$request = Application::getRequest();
+
+		import('classes.file.PublicFileManager');
+		$publicFileManager = new PublicFileManager();
+
+		return $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($this->getJournalId()) . '/' . $coverImage;
+	}
+
+	/**
 	 * Set issue cover image alternate text
 	 * @param $coverImageAltText string
 	 * @param $locale string

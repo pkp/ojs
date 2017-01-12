@@ -141,14 +141,14 @@ class DataciteXmlFilter extends NativeExportFilter {
 		if ($plugin->isTestMode($context)) {
 			$doi = PKPString::regexp_replace('#^[^/]+/#', DATACITE_API_TESTPREFIX . '/', $doi);
 		}
-		$rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'identifier', $doi));
+		$rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'identifier', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
 		$node->setAttribute('identifierType', DATACITE_IDTYPE_DOI);
 		// Creators (mandatory)
 		$rootNode->appendChild($this->createCreatorsNode($doc, $issue, $article, $galley, $galleyFile, $publisher, $objectLocalePrecedence));
 		// Title (mandatory)
 		$rootNode->appendChild($this->createTitlesNode($doc, $issue, $article, $galley, $galleyFile, $objectLocalePrecedence));
 		// Publisher (mandatory)
-		$rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'publisher', $publisher));
+		$rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'publisher', htmlspecialchars($publisher, ENT_COMPAT, 'UTF-8')));
 		// Publication Year (mandatory)
 		$rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'publicationYear', date('Y', strtotime($publicationDate))));
 		// Subjects
@@ -160,7 +160,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 		}
 		if (!empty($subject)) {
 			$subjectsNode = $doc->createElementNS($deployment->getNamespace(), 'subjects');
-			$subjectsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subject', $subject));
+			$subjectsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subject', htmlspecialchars($subject, ENT_COMPAT, 'UTF-8')));
 			$rootNode->appendChild($subjectsNode);
 		}
 		// Dates
@@ -183,7 +183,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 			$format = $galleyFile->getFileType();
 			if (!empty($format)) {
 				$formatsNode = $doc->createElementNS($deployment->getNamespace(), 'formats');
-				$formatsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'format', $format));
+				$formatsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'format', htmlspecialchars($format, ENT_COMPAT, 'UTF-8')));
 				$rootNode->appendChild($formatsNode);
 			}
 		}
@@ -191,7 +191,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 		$rightsURL = $article ? $article->getLicenseURL() : $context->getSetting('licenseURL');
 		if(!empty($rightsURL)) {
 			$rightsNode = $doc->createElementNS($deployment->getNamespace(), 'rightsList');
-			$rightsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'rights', strip_tags(Application::getCCLicenseBadge($rightsURL))));
+			$rightsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'rights', htmlspecialchars(strip_tags(Application::getCCLicenseBadge($rightsURL)), ENT_COMPAT, 'UTF-8')));
 			$node->setAttribute('rightsURI', $rightsURL);
 			$rootNode->appendChild($rightsNode);
 		}
@@ -258,7 +258,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 		$creatorsNode = $doc->createElementNS($deployment->getNamespace(), 'creators');
 		foreach ($creators as $creator) {
 			$creatorNode = $doc->createElementNS($deployment->getNamespace(), 'creator');
-			$creatorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'creatorName', $creator));
+			$creatorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'creatorName', htmlspecialchars($creator, ENT_COMPAT, 'UTF-8')));
 			$creatorsNode->appendChild($creatorNode);
 		}
 		return $creatorsNode;
@@ -297,15 +297,15 @@ class DataciteXmlFilter extends NativeExportFilter {
 		$titlesNode = $doc->createElementNS($deployment->getNamespace(), 'titles');
 		// Start with the primary object locale.
 		$primaryTitle = array_shift($titles);
-		$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', PKPString::html2text($primaryTitle)));
+		$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars(PKPString::html2text($primaryTitle), ENT_COMPAT, 'UTF-8')));
 		// Then let the translated titles follow.
 		foreach($titles as $locale => $title) {
-			$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', PKPString::html2text($title)));
+			$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars(PKPString::html2text($title), ENT_COMPAT, 'UTF-8')));
 			$node->setAttribute('titleType', DATACITE_TITLETYPE_TRANSLATED);
 		}
 		// And finally the alternative title.
 		if (!empty($alternativeTitle)) {
-			$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', PKPString::html2text($alternativeTitle)));
+			$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars(PKPString::html2text($alternativeTitle), ENT_COMPAT, 'UTF-8')));
 			$node->setAttribute('titleType', DATACITE_TITLETYPE_ALTERNATIVE);
 		}
 		return $titlesNode;
@@ -478,7 +478,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 				assert(isset($article));
 				$doi = $article->getStoredPubId('doi');
 				if (!empty($doi)) {
-					$relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', $doi));
+					$relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
 					$node->setAttribute('relatedIdentifierType', DATACITE_IDTYPE_DOI);
 					$node->setAttribute('relationType', DATACITE_RELTYPE_ISPARTOF);
 				}
@@ -488,7 +488,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 				assert(isset($issue));
 				$doi = $issue->getStoredPubId('doi');
 				if (!empty($doi)) {
-					$relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', $doi));
+					$relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
 					$node->setAttribute('relatedIdentifierType', DATACITE_IDTYPE_DOI);
 					$node->setAttribute('relationType', DATACITE_RELTYPE_ISPARTOF);
 				}
@@ -499,7 +499,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 				foreach ($galleysByArticle as $relatedGalley) {
 					$doi = $relatedGalley->getStoredPubId('doi');
 					if (!empty($doi)) {
-						$relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', $doi));
+						$relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
 						$node->setAttribute('relatedIdentifierType', DATACITE_IDTYPE_DOI);
 						$node->setAttribute('relationType', DATACITE_RELTYPE_HASPART);
 					}
@@ -513,7 +513,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 				foreach ($articlesByIssue as $relatedArticle) {
 					$doi = $relatedArticle->getStoredPubId('doi');
 					if (!empty($doi)) {
-						$relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', $doi));
+						$relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
 						$node->setAttribute('relatedIdentifierType', DATACITE_IDTYPE_DOI);
 						$node->setAttribute('relationType', DATACITE_RELTYPE_HASPART);
 					}
@@ -569,7 +569,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 		if (!empty($sizes)) {
 			$sizesNode = $doc->createElementNS($deployment->getNamespace(), 'sizes');
 			foreach($sizes as $size) {
-				$sizesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'size', $size));
+				$sizesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'size', htmlspecialchars($size, ENT_COMPAT, 'UTF-8')));
 			}
 		}
 		return $sizesNode;
@@ -616,7 +616,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 		if (!empty($descriptions)) {
 			$descriptionsNode = $doc->createElementNS($deployment->getNamespace(), 'descriptions');
 			foreach($descriptions as $descType => $description) {
-				$descriptionsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'description', PKPString::html2text($description)));
+				$descriptionsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'description', htmlspecialchars(PKPString::html2text($description), ENT_COMPAT, 'UTF-8')));
 				$node->setAttribute('descriptionType', $descType);
 			}
 		}

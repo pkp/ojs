@@ -20,7 +20,6 @@ import('lib.pkp.classes.security.PKPRoleDAO');
 /** ID codes for all user roles */
 define('ROLE_ID_SECTION_EDITOR',	0x00000011);
 define('ROLE_ID_SUBSCRIPTION_MANAGER',	0x00200000);
-define('ROLE_ID_GUEST_EDITOR',		0x00000201);
 
 /** Fill in the blanks for roles used in PKP lib */
 define('ROLE_ID_SUB_EDITOR',		ROLE_ID_SECTION_EDITOR);
@@ -44,7 +43,6 @@ class RoleDAO extends PKPRoleDAO {
 
 		$journalRoleNames = array(
 			ROLE_ID_MANAGER => 'user.role.manager',
-			ROLE_ID_GUEST_EDITOR => 'user.role.guestEditor',
 			ROLE_ID_ASSISTANT => 'user.role.journalAssistant',
 			ROLE_ID_SECTION_EDITOR => 'user.role.sectionEditor',
 			ROLE_ID_SUBSCRIPTION_MANAGER => 'user.role.subscriptionManager',

@@ -89,7 +89,6 @@
 	<message key="manager.sections.form.mustAllowPermission">به ازای هر دبیر مقاله حداقل یک جعبه چک مارک میبایست چک بحورد</message>
 	<message key="manager.sections.form.reviewFormId">لطفا مطمئن شوید که یک فرم کارشناسی معتبر انتخاب کرده اید</message>
 	<message key="manager.sections.form.titleRequired">یک عنوان برای نوع مقاله لازم است.</message>
-	<message key="manager.sections.hideAbout">در قسمت &quot;درباره&quot; مجله ظاهر نشود.</message>
 	<message key="manager.sections.hideTocAuthor">در فهرست مقالات هر شماره مجله نام نویسندگان برای مقالات از این نوع آورده نشود</message>
 	<message key="manager.sections.hideTocTitle">عنوان این قسمت در فهرست مطالب شماره های مجله ظاهر نشود.</message>
 	<message key="manager.sections.identifyType">از نظر متا داده این نوع مقالات  در نظر بگیر به عنوان</message>

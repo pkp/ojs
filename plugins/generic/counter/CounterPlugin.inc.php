@@ -153,12 +153,11 @@ class CounterPlugin extends GenericPlugin {
 	}
 
  	/**
-	 * @see Plugin::manage()
+	 * @copydoc Plugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
-		$request =& $this->getRequest();
-		switch ($verb) {
+	function manage($args, $request) {
+		if (!parent::manage($args, $request)) return false;
+		switch (array_shift($args)) {
 			case 'counter':
 				$request->redirect(null, 'counter');
 				return false;

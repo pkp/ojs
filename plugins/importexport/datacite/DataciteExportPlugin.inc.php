@@ -379,7 +379,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 	 * @param $sourceFiles array
 	 */
 	function _tarFiles($targetPath, $targetFile, $sourceFiles) {
-		assert($this->_checkForTar());
+		assert((boolean) $this->_checkForTar());
 		// GZip compressed result file.
 		$tarCommand = Config::getVar('cli', 'tar') . ' -czf ' . escapeshellarg($targetFile);
 		// Do not reveal our internal export path by exporting only relative filenames.
@@ -420,13 +420,13 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 		$url = null;
 		switch (true) {
 			case is_a($object, 'Issue'):
-				$url = $router->url($request, $context->getPath(), 'issue', 'view', $object->getBestIssueId());
+				$url = $router->url($request, $context->getPath(), 'issue', 'view', $object->getBestIssueId(), null, null, true);
 				break;
 			case is_a($object, 'PublishedArticle'):
-				$url = $router->url($request, $context->getPath(), 'article', 'view', $object->getBestArticleId());
+				$url = $router->url($request, $context->getPath(), 'article', 'view', $object->getBestArticleId(), null, null, true);
 				break;
 			case is_a($object, 'ArticleGalley'):
-				$url = $router->url($request, $context->getPath(), 'article', 'view', array($article->getBestArticleId(), $object->getBestGalleyId()));
+				$url = $router->url($request, $context->getPath(), 'article', 'view', array($article->getBestArticleId(), $object->getBestGalleyId()), null, null, true);
 				break;
 		}
 		if ($this->isTestMode($context)) {

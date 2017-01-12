@@ -297,7 +297,24 @@ class Article extends Submission {
 		$this->setData('coverImageAltText', $coverImageAltText, $locale);
 	}
 
+	/**
+	 * Get a full URL to the localized cover image
+	 *
+	 * @return string
+	 */
+	function getLocalizedCoverImageUrl() {
+		$coverImage = $this->getLocalizedCoverImage();
+		if (!$coverImage) {
+			return '';
+		}
 
+		$request = Application::getRequest();
+
+		import('classes.file.PublicFileManager');
+		$publicFileManager = new PublicFileManager();
+
+		return $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($this->getContextId()) . '/' . $coverImage;
+	}
 }
 
 ?>

@@ -28,6 +28,16 @@ best to adapt old content to the new structures, but we strongly recommend
 performing a test upgrade and exploring the new system before committing your
 content to the upgrade. Downgrades from 3.x to 2.x will not be supported.
 
+Note that upgrading from OJS 2.4.x to OJS 3.0 will rearrange your submission
+file storage, so be sure to back it up before running an upgrade.
+
+With that noted, follow the OJS 3.0 process described below.
+
+
+========================
+Upgrading from OJS 3.0.0
+========================
+
 Upgrading to the latest version of OJS involves two steps:
 
     - Obtaining the latest OJS code
@@ -45,17 +55,17 @@ package, and from read-only github access.
 
 1. Full Package
 
-It is also possible to upgrade by downloading the complete package for the
-latest release of OJS:
+If you have not made local code modifications to the system, upgrade by 
+downloading the complete package for the latest release of OJS:
 
     - Download and decompress the package from the OJS web site
-    - Make a copy of the config.inc.php provided in the new package
     - Move or copy the following files and directories from your current OJS
       installation:
         - config.inc.php
         - public/
         - Your uploaded files directory ("files_dir" in config.inc.php), if it
           resides within your OJS directory
+    - Synchronize new changes from config.TEMPLATE.inc.php to config.inc.php
     - Replace the current OJS directory with the new OJS directory, moving the
       old one to a safe location as a backup
     - Be sure to review the Configuration Changes section of the release notes

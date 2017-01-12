@@ -145,10 +145,6 @@
 	<message key="editor.article.assignEditor">Přidat editora</message>
 	<message key="editor.article.selectEditor">Zvolit {$roleName}</message>
 	<message key="editor.article.selectDecision">Vybrat rozhodnutí</message>
-	<message key="editor.article.decision.accept">Přijmout příspěvek</message>
-	<message key="editor.article.decision.pendingRevisions">Požadovat přepracování (malé změny)</message>
-	<message key="editor.article.decision.resubmit">Znovu předložit k recenzi</message>
-	<message key="editor.article.decision.decline">Odmítnout příspěvek</message>
 	<message key="editor.article.selectLayoutEditor">Zvolit typografa</message>
 	<message key="editor.article.replaceLayoutEditor">Nahradit typografa</message>
 	<message key="editor.article.reviewSubmission">Recenzovat příspěvek</message>

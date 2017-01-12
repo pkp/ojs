@@ -48,6 +48,8 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	function &process(&$issues) {
 		// Create the XML document
 		$doc = new DOMDocument('1.0');
+		$doc->preserveWhiteSpace = false;
+		$doc->formatOutput = true;
 		$deployment = $this->getDeployment();
 
 		if (count($issues)==1) {
@@ -118,7 +120,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 
 		// Add public ID
 		if ($pubId = $issue->getStoredPubId('publisher-id')) {
-			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', $pubId));
+			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', htmlspecialchars($pubId, ENT_COMPAT, 'UTF-8')));
 			$node->setAttribute('type', 'public');
 			$node->setAttribute('advice', 'update');
 		}
@@ -142,7 +144,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$pubId = $issue->getStoredPubId($pubIdPlugin->getPubIdType());
 		if ($pubId) {
 			$deployment = $this->getDeployment();
-			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', $pubId));
+			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', htmlspecialchars($pubId, ENT_COMPAT, 'UTF-8')));
 			$node->setAttribute('type', $pubIdPlugin->getPubIdType());
 			$node->setAttribute('advice', 'update');
 			return $node;
@@ -160,16 +162,16 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$deployment = $this->getDeployment();
 
 		if ($issue->getDatePublished())
-			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_published', strftime('%F', strtotime($issue->getDatePublished()))));
+			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_published', strftime('%Y-%m-%d', strtotime($issue->getDatePublished()))));
 
 		if ($issue->getDateNotified())
-			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_notified', strftime('%F', strtotime($issue->getDateNotified()))));
+			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_notified', strftime('%Y-%m-%d', strtotime($issue->getDateNotified()))));
 
 		if ($issue->getLastModified())
-			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'last_modified', strftime('%F', strtotime($issue->getLastModified()))));
+			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'last_modified', strftime('%Y-%m-%d', strtotime($issue->getLastModified()))));
 
 		if ($issue->getOpenAccessDate())
-			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'open_access_date', strftime('%F', strtotime($issue->getOpenAccessDate()))));
+			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'open_access_date', strftime('%Y-%m-%d', strtotime($issue->getOpenAccessDate()))));
 	}
 
 	/**
@@ -229,8 +231,8 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 			foreach ($coverImages as $locale => $coverImage) {
 				$coverNode = $doc->createElementNS($deployment->getNamespace(), 'cover');
 				$coverNode->setAttribute('locale', $locale);
-				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', $coverImage));
-				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', $issue->getCoverImageAltText($locale)));
+				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', htmlspecialchars($coverImage, ENT_COMPAT, 'UTF-8')));
+				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', htmlspecialchars($issue->getCoverImageAltText($locale), ENT_COMPAT, 'UTF-8')));
 
 				import('classes.file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
@@ -274,7 +276,6 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 			$sectionNode->setAttribute('abstracts_not_required', $section->getAbstractsNotRequired());
 			$sectionNode->setAttribute('hide_title', $section->getHideTitle());
 			$sectionNode->setAttribute('hide_author', $section->getHideAuthor());
-			$sectionNode->setAttribute('hide_about', $section->getHideAbout());
 			$sectionNode->setAttribute('abstract_word_count', (int) $section->getAbstractWordCount());
 
 			$this->createLocalizedNodes($doc, $sectionNode, 'abbrev', $section->getAbbrev(null));
