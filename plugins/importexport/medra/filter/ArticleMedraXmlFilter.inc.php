@@ -195,23 +195,20 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		$seq = $article->getSequence();
 		assert(!empty($seq));
 		$contentItemNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SequenceNumber', $seq));
-		// Number of pages
-		$pages = $article->getPages();
-		if (is_numeric($pages)) {
-			$pages = (int) $pages;
-		} else {
-			// If the field is not numeric then try to parse it (eg. "pp. 3-8").
-			if (preg_match("/([0-9]+)\s*-\s*([0-9]+)/i", $pages, $matches)) {
-				if (is_numeric($matches[1]) && is_numeric($matches[2])) {
-					$firstPage = (int) $matches[1];
-					$lastPage = (int) $matches[2];
-					$pages = $lastPage - $firstPage + 1;
-				}
-			}
-		}
-		if (is_integer($pages)) {
+		// Describe page runs
+		$pages = $article->getPageArray();
+		if ($pages) {
 			$textItemNode = $doc->createElementNS($deployment->getNamespace(), 'TextItem');
-			$textItemNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'NumberOfPages', $pages));
+			foreach ($pages as $range) {
+				$pageRunNode = $doc->createElementNS($deployment->getNamespace(), 'PageRun');
+				$node = $doc->createElementNS($deployment->getNamespace(), 'FirstPageNumber', htmlspecialchars($range[0]));
+				$pageRunNode->appendChild($node);
+				if (isset($range[1])) {
+					$node = $doc->createElementNS($deployment->getNamespace(), 'LastPageNumber', htmlspecialchars($range[1]));
+					$pageRunNode->appendChild($node);
+				}
+				$textItemNode->appendChild($pageRunNode);
+			}
 			$contentItemNode->appendChild($textItemNode);
 		}
 		// Extent (for article-as-manifestation only)
