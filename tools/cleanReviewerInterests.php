@@ -49,7 +49,7 @@ class ReviewerInterestsDeletionTool extends CommandLineTool {
 
 		$orphans = $this->_getOrphanVocabInterests();
 		if (!count($orphans)) {
-			print 'No user interest to remove.';
+			echo "No user interests to remove.\n";
 			exit(0);
 		}
 		
@@ -57,8 +57,8 @@ class ReviewerInterestsDeletionTool extends CommandLineTool {
 		switch($command) {
 			case '--show':
 				$interests = array_map(function($entry) { return $entry->getData(CONTROLLED_VOCAB_INTEREST); }, $orphans);
-				print PHP_EOL . "Below are the user interests that are not referenced by any user account." . PHP_EOL;
-				print '=> ' . join($interests, "\n=> ") . PHP_EOL;
+				echo "Below are the user interests that are not referenced by any user account.\n";
+				echo "\t" . join($interests, "\n\t") . "\n";
 				break;
 				
 			case '--remove':
@@ -66,11 +66,11 @@ class ReviewerInterestsDeletionTool extends CommandLineTool {
 				foreach ($orphans as $orphanVocab) {
 					$vocabEntryDao->deleteObject($orphanVocab);
 				}
-				print count($orphans) . ' rows deleted!';
+				echo count($orphans) . " entries deleted\n";
 				break;
 
 			default:
-				print 'INVALID COMMAND !! '. PHP_EOL;
+				echo "Invalid command.\n";
 				$this->usage();
 				exit(2);
 		}
@@ -92,14 +92,18 @@ class ReviewerInterestsDeletionTool extends CommandLineTool {
 		
 		// list of vocab interests in db
 		$allInterestVocabIds = array_map(
-			function($entry) { return $entry->getId(); }, 
+			function($entry) {
+				return $entry->getId();
+			}, 
 			$vocabEntryList
 		);
 		
 		// list of vocabs associated to users
 		$interests = $interestDao->getAllInterests();
 		$userInterestVocabIds = array_map(
-			function($interest) { return $interest->getId(); },
+			function($interest) {
+				return $interest->getId();
+			},
 			$interests->toArray()
 		);
 		
@@ -108,7 +112,9 @@ class ReviewerInterestsDeletionTool extends CommandLineTool {
 		
 		$orphans = array_filter(
 			$vocabEntryList, 
-			function($entry) use($diff) { return in_array($entry->getId(), $diff); }
+			function($entry) use($diff) {
+				return in_array($entry->getId(), $diff);
+			}
 		);
 		
 		return $orphans;
@@ -117,4 +123,5 @@ class ReviewerInterestsDeletionTool extends CommandLineTool {
 
 $tool = new ReviewerInterestsDeletionTool(isset($argv) ? $argv : array());
 $tool->execute();
+
 ?>
