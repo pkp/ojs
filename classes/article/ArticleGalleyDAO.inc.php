@@ -115,9 +115,10 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	/**
 	 * @copydoc RepresentationDAO::getBySubmissionId()
 	 */
-	function getBySubmissionId($submissionId, $contextId = null) {
+	function getBySubmissionId($submissionId, $contextId = null, $submissionRevision = null) {
 		$params = array((int) $submissionId);
 		if ($contextId) $params[] = (int) $contextId;
+		if ($submissionRevision) $params[] = (int) $submissionRevision;
 
 		return new DAOResultFactory(
 			$this->retrieve(
@@ -129,6 +130,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 				WHERE g.submission_id = ?
 					AND nsf.file_id IS NULL
 					' . ($contextId?' AND s.context_id = ? ':'') . '
+					' . ($submissionRevision?' AND g.submission_revision = ? ':'') . '
 				ORDER BY g.seq',
 				$params
 			),
@@ -209,6 +211,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 
 		$galley->setId($row['galley_id']);
 		$galley->setSubmissionId($row['submission_id']);
+		$galley->setSubmissionRevision($row['submission_revision']);
 		$galley->setLocale($row['locale']);
 		$galley->setLabel($row['label']);
 		$galley->setSequence($row['seq']);
@@ -229,11 +232,12 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	function insertObject($galley) {
 		$this->update(
 			'INSERT INTO submission_galleys
-				(submission_id, label, locale, seq, remote_url, file_id)
+				(submission_id, submission_revision, label, locale, seq, remote_url, file_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?)',
 			array(
 				(int) $galley->getSubmissionId(),
+				(int) $galley->getSubmissionRevision(),
 				$galley->getLabel(),
 				$galley->getLocale(),
 				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getSubmissionId()) : $galley->getSequence(),
@@ -288,16 +292,18 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	 * @param $galleyId int Galley ID.
 	 * @param $articleId int Optional article ID.
 	 */
-	function deleteById($galleyId, $articleId = null) {
+	function deleteById($galleyId, $articleId = null, $submissionRevision = null) {
 
-		HookRegistry::call('ArticleGalleyDAO::deleteById', array(&$galleyId, &$articleId));
+		HookRegistry::call('ArticleGalleyDAO::deleteById', array(&$galleyId, &$articleId, &$submissionRevision));
 
 		$params = array((int) $galleyId);
 		if ($articleId) $params[] = (int) $articleId;
+		if ($submissionRevision) $params[] = (int) $submissionRevision;
 		$this->update(
 			'DELETE FROM submission_galleys
 			WHERE galley_id = ?'
-			. ($articleId?' AND submission_id = ?':''),
+			. ($articleId?' AND submission_id = ?':'') .'
+			'.($submissionRevision?' AND submission_revision = ?':''),
 			$params
 		);
 		if ($this->getAffectedRows()) {

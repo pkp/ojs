@@ -19,12 +19,16 @@ class ArticleGalleyGridRow extends GridRow {
 	/** @var Submission **/
 	var $_submission;
 
+	/** @var Submission revision */
+	var $_submissionRevision;
+
 	/**
 	 * Constructor
 	 * @param $submission Submission
 	 */
-	function __construct($submission) {
+	function __construct($submission, $submissionRevision) {
 		$this->_submission = $submission;
+		$this->_submissionRevision = $submissionRevision;
 
 		parent::__construct();
 	}
@@ -41,6 +45,7 @@ class ArticleGalleyGridRow extends GridRow {
 
 		// Retrieve the submission from the request
 		$submission = $this->getSubmission();
+		$submissionRevision = $this->getSubmissionRevision();
 
 		// Is this a new row or an existing row?
 		$rowId = $this->getId();
@@ -99,12 +104,21 @@ class ArticleGalleyGridRow extends GridRow {
 	}
 
 	/**
+	 * Get the submission revision for this row (already authorized)
+	 * @return Submission revision
+	 */
+	function getSubmissionRevision() {
+		return $this->_submissionRevision;
+	}
+
+	/**
 	 * Get the base arguments that will identify the data in the grid.
 	 * @return array
 	 */
 	function getRequestArgs() {
 		return array(
 			'submissionId' => $this->getSubmission()->getId(),
+			'submissionRevision' => $this->getSubmissionRevision(),
 		);
 	}
 }

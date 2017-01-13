@@ -24,6 +24,9 @@ class ArticleGalleyGridHandler extends GridHandler {
 	/** @var PKPRequest */
 	var $_request;
 
+	/** TODO: FIXME */
+	var $_submissionRevision;
+
 	/**
 	 * Constructor
 	 */
@@ -47,6 +50,23 @@ class ArticleGalleyGridHandler extends GridHandler {
 	 */
 	function getSubmission() {
 		return $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+	}
+
+	/**
+	 * Set submission revision.
+	 * @param $submissionRevision int
+	 * TODO: FIXME get submission revision from authorized context object
+	 */
+	function setSubmissionRevision($submissionRevision) {
+		$this->_submissionRevision = $submissionRevision;
+	}
+
+	/**
+	 * Get submission revision.
+	 * @return int
+	 */
+	function getSubmissionRevision() {
+		return $this->_submissionRevision;
 	}
 
 	/**
@@ -77,6 +97,9 @@ class ArticleGalleyGridHandler extends GridHandler {
 		import('lib.pkp.classes.security.authorization.WorkflowStageAccessPolicy');
 		$this->addPolicy(new WorkflowStageAccessPolicy($request, $args, $roleAssignments, 'submissionId', WORKFLOW_STAGE_ID_PRODUCTION));
 
+		// TODO: add submission revision to access policy
+		$this->setSubmissionRevision($request->getUserVar('submissionRevision'));
+
 		if ($request->getUserVar('representationId')) {
 			import('lib.pkp.classes.security.authorization.internal.RepresentationRequiredPolicy');
 			$this->addPolicy(new RepresentationRequiredPolicy($request, $args));
@@ -101,7 +124,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		);
 
 		import('controllers.grid.articleGalleys.ArticleGalleyGridCellProvider');
-		$cellProvider = new ArticleGalleyGridCellProvider($this->getSubmission());
+		$cellProvider = new ArticleGalleyGridCellProvider($this->getSubmission(), $this->getSubmissionRevision());
 
 		// Columns
 		$this->addColumn(new GridColumn(
@@ -167,7 +190,8 @@ class ArticleGalleyGridHandler extends GridHandler {
 	function getRowInstance() {
 		import('controllers.grid.articleGalleys.ArticleGalleyGridRow');
 		return new ArticleGalleyGridRow(
-			$this->getSubmission()
+			$this->getSubmission(),
+			$this->getSubmissionRevision()
 		);
 	}
 
@@ -179,6 +203,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	function getRequestArgs() {
 		return array(
 			'submissionId' => $this->getSubmission()->getId(),
+			'submissionRevision' => $this->getSubmissionRevision(),
 		);
 	}
 
@@ -187,7 +212,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	 */
 	function loadData($request, $filter = null) {
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		return $galleyDao->getBySubmissionId($this->getSubmission()->getId());
+		return $galleyDao->getBySubmissionId($this->getSubmission()->getId(), null, $this->getSubmissionRevision());
 	}
 
 	//
@@ -267,7 +292,8 @@ class ArticleGalleyGridHandler extends GridHandler {
 		import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
 		$galleyForm = new ArticleGalleyForm(
 			$request,
-			$this->getSubmission()
+			$this->getSubmission(),
+			$this->getSubmissionRevision()
 		);
 		$galleyForm->initData();
 		return new JSONMessage(true, $galleyForm->fetch($request, $this->getRequestArgs()));
@@ -284,7 +310,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		if (!$galley || !$request->checkCSRF()) return new JSONMessage(false);
 
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$galleyDao->deleteObject($galley);
+		$galleyDao->deleteById($galley->getId(), $this->getSubmission()->getId(), $this->getSubmissionRevision());
 
 		if ($galley->getFileId()) {
 			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
@@ -323,6 +349,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign(array(
 			'submissionId' => $this->getSubmission()->getId(),
+			'submissionRevision' => $this->getSubmissionRevision(),
 			'representationId' => $galley->getId(),
 		));
 		return new JSONMessage(true, $templateMgr->fetch('controllers/grid/articleGalleys/editFormat.tpl'));
@@ -340,6 +367,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$galleyForm = new ArticleGalleyForm(
 			$request,
 			$this->getSubmission(),
+			$this->getSubmissionRevision(),
 			$this->getGalley()
 		);
 		$galleyForm->initData();
@@ -356,7 +384,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$galley = $this->getGalley();
 
 		import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
-		$galleyForm = new ArticleGalleyForm($request, $this->getSubmission(), $galley);
+		$galleyForm = new ArticleGalleyForm($request, $this->getSubmission(), $this->getSubmissionRevision(), $galley);
 		$galleyForm->readInputData();
 
 		if ($galleyForm->validate($request)) {

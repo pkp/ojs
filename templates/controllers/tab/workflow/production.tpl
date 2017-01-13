@@ -29,7 +29,9 @@
 		<div id="submissionRevisions" class="pkp_controllers_tab">
 			<ul>
 				{foreach from=$submissionRevisions item=submissionRevision}
-					<li><a href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.workflow.VersioningTabHandler" op="versioning" submissionId=$submission->getId() stageId=$stageId submissionRevision=$submissionRevision}">{translate key="submission.production.version" submissionRevision=$submissionRevision}</a></li>
+					<li>
+						<a href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.workflow.VersioningTabHandler" op="versioning" submissionId=$submission->getId() stageId=$stageId submissionRevision=$submissionRevision}">{translate key="submission.production.version" submissionRevision=$submissionRevision}</a>
+					</li>
 				{/foreach}
 			</ul>
 		</div>

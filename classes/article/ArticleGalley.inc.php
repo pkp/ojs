@@ -171,7 +171,9 @@ class ArticleGalley extends Representation {
 	function getOtherRevisions($fileId, $fileStage = null, $submissionId = null) {
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 		$submissionFiles = $submissionFileDao->getAllRevisions($fileId, $fileStage, $submissionId);
-		array_shift($submissionFiles);
+		if(isset($submissionFiles)){
+			array_shift($submissionFiles);
+		}
 		return $submissionFiles;
 	}
 

@@ -77,20 +77,21 @@ class ArticleHandler extends Handler {
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 
-		// get published article object
-		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, true);
-
-		// versioning
-
 		// get all previous article versions
 		$this->previousRevisions = $articleDao->getSubmissionRevisions($articleId, $this->journal->getId(), false, true);
 
 		// get the most resent article version
 		$this->latestSubmissionRevision = $articleDao->getLatestRevisionId($articleId, $this->journal->getId() );
+		// set latest submission revision as default
+		$this->submissionRevision = $this->latestSubmissionRevision;
+
+		// get published article object
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, false, $this->submissionRevision);
 
 		// get title of recent article version
 		$this->latestTitle = $publishedArticleDao->getLocalizedTitleByVersion($publishedArticle->getId(), $this->latestSubmissionRevision);
 
+		// get data of publishedArticle
 		if (isset($publishedArticle)) {
 			$issue = $issueDao->getById($publishedArticle->getIssueId(), $publishedArticle->getJournalId(), true);
 			$this->issue = $issue;
@@ -120,11 +121,9 @@ class ArticleHandler extends Handler {
 		$articleId = $args[0];
 		$this->submissionRevision = $args[1];
 
-		// get published article object by revision
+		// get this published article version
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, false, $this->submissionRevision);
-
-		$this->article = $publishedArticle;
+		$this->article = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, false, $this->submissionRevision);
 
 		// check of this is an old version
 		if ($this->submissionRevision &&($this->submissionRevision < $this->latestSubmissionRevision)) {

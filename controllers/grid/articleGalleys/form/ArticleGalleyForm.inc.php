@@ -20,17 +20,22 @@ class ArticleGalleyForm extends Form {
 	/** @var the article */
 	var $_submission = null;
 
+	/** @var the article version */
+	var $_submissionRevision = null;
+
 	/** @var ArticleGalley current galley */
 	var $_articleGalley = null;
 
 	/**
 	 * Constructor.
 	 * @param $submission Submission
+	 * @param $submissionRevision SubmissionRevision (optional)
 	 * @param $articleGalley ArticleGalley (optional)
 	 */
-	function __construct($request, $submission, $articleGalley = null) {
+	function __construct($request, $submission, $submissionRevision = null, $articleGalley = null) {
 		parent::__construct('controllers/grid/articleGalleys/form/articleGalleyForm.tpl');
 		$this->_submission = $submission;
+		$this->_submissionRevision = $submissionRevision;
 		$this->_articleGalley = $articleGalley;
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
@@ -70,6 +75,7 @@ class ArticleGalleyForm extends Form {
 		$templateMgr->assign(array(
 			'supportedLocales' => $journal->getSupportedSubmissionLocaleNames(),
 			'submissionId' => $this->_submission->getId(),
+			'submissionRevision' => $this->_submissionRevision,
 		));
 
 		return parent::fetch($request);
@@ -126,6 +132,7 @@ class ArticleGalleyForm extends Form {
 			// Create a new galley
 			$articleGalley = $articleGalleyDao->newDataObject();
 			$articleGalley->setSubmissionId($this->_submission->getId());
+			$articleGalley->setSubmissionRevision($this->_submissionRevision);
 			$articleGalley->setLabel($this->getData('label'));
 			$articleGalley->setLocale($this->getData('galleyLocale'));
 			$articleGalley->setRemoteURL($this->getData('remoteURL'));

@@ -44,20 +44,6 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler {
 					__('editor.article.schedulePublication')
 				);
 				$templateMgr->assign('schedulePublicationLinkAction', $schedulePublicationLinkAction);
-
-				// Versioning
-				$context = $request->getContext();
-				$templateMgr->assign('versioningEnabled', $context->getSetting('versioningEnabled'));
-
-				// get all revisions of this submission
-				$articleDao = DAORegistry::getDAO('ArticleDAO');
-				$submissionRevisions = $articleDao->getSubmissionRevisions($submission->getId(), $context->getId(), true, false, SORT_DIRECTION_ASC);
-				$templateMgr->assign('submissionRevisions', $submissionRevisions);
-
-				// get latest submission revision
-				$latestSubmissionRevision = $articleDao -> getLatestRevisionId($submission->getId(), $context->getId());
-				$templateMgr->assign('latestSubmissionRevision', $latestSubmissionRevision);
-
 				break;
 		}
 		return parent::fetchTab($args, $request);
