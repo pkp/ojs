@@ -102,6 +102,7 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_metrics.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_issue_settings.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_submission_settings.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.0_review_method.xml" />
 	</upgrade>
 
 	<upgrade minversion="3.0.0.0" maxversion="3.0.0.9">
@@ -115,6 +116,11 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_issue_settings.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_submission_settings.xml" />
 		<code function="installEmailTemplate" key="SUBMISSION_ACK_NOT_USER" locales="en_US,ca_ES,el_GR,es_ES,fr_CA,pt_BR" />
+		<data file="dbscripts/xml/upgrade/3.0.0_review_method.xml" />
+	</upgrade>
+
+	<upgrade minversion="3.0.1.0" maxversion="3.0.1.9">
+		<data file="dbscripts/xml/upgrade/3.0.0_review_method.xml" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
