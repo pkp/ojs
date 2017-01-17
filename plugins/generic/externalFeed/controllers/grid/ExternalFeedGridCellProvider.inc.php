@@ -42,5 +42,6 @@ class ExternalFeedGridCellProvider extends GridCellProvider {
 			case 'displayBlockHomepage':
 				return array('selected' => ($feed->getDisplayBlock() == EXTERNAL_FEED_DISPLAY_BLOCK_HOMEPAGE) ? true : false, 'disabled' => true );
 		}
+		return parent::getTemplateVarsFromRowColumn($row, $column);
 	}
 }

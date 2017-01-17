@@ -50,8 +50,8 @@ class ExternalFeedForm extends Form {
 	function initData() {
 		if ($this->feedId) {
 			$feedDao = DAORegistry::getDAO('ExternalFeedDAO');
-			$feed = $feedDao->getExternalFeed($this->feedId);
-			
+			$feed = $feedDao->getExternalFeed($this->feedId, $this->contextId);
+
 			$this->setData('feedUrl', $feed->getUrl());
 			$this->setData('title', $feed->getTitle(AppLocale::getLocale()));
 			$this->setData('displayHomepage', $feed->getDisplayHomepage());
@@ -82,7 +82,8 @@ class ExternalFeedForm extends Form {
 			)
 		);
 		
-		$this->setData('title', Request::getUserVar('title')[AppLocale::getLocale()]);
+		$request = PKPApplication::getRequest();
+		$this->setData('title', $request->getUserVar('title')[AppLocale::getLocale()]);
 		
 		// Check that recent items value is a positive integer
 		if ((int) $this->getData('recentItems') <= 0) $this->setData('recentItems', '');
@@ -99,8 +100,10 @@ class ExternalFeedForm extends Form {
 	 */
 	function fetch($request) {
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('feedId', $this->feedId);
-		$templateMgr->assign('formLocale', AppLocale::getLocale());
+		$templateMgr->assign(array(
+			'feedId' => $this->feedId,
+			'formLocale' => AppLocale::getLocale(),
+		));
 		
 		return parent::fetch($request);
 	}
@@ -115,7 +118,7 @@ class ExternalFeedForm extends Form {
 		$plugin->import('classes.ExternalFeed');
 	
 		if (isset($this->feedId)) {
-			$feed = $externalFeedDao->getExternalFeed($this->feedId);
+			$feed = $externalFeedDao->getExternalFeed($this->feedId, $this->contextId);
 		}
 	
 		if (!isset($feed)) {

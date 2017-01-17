@@ -132,7 +132,7 @@ class ExternalFeedGridHandler extends GridHandler {
 		
 		// Ensure externalFeed is valid and for this journal
 		if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journal->getId())) {
-			$feed = $externalFeedDao->getExternalFeed($externalFeedId);
+			$feed = $externalFeedDao->getExternalFeed($externalFeedId, $journal->getId());
 			$feed->setSequence($newSequence);
 			$externalFeedDao->updateExternalFeed($feed);
 		}
@@ -158,10 +158,16 @@ class ExternalFeedGridHandler extends GridHandler {
 	 * @param $request PKPRequest
 	 */
 	function index($args, $request) {
-		$context = $request->getContext();
-		import('lib.pkp.classes.form.Form');
-		$form = new Form(self::$plugin->getTemplatePath() . '/externalFeeds.tpl');
-		return new JSONMessage(true, $form->fetch($request));
+		$templateMgr = TemplateManager::getManager($request);
+		$dispatcher = $request->getDispatcher();
+		return $templateMgr->fetchAjax(
+			'externalFeedGridContainer',
+			$dispatcher->url(
+				$request, ROUTE_COMPONENT, null,
+				'plugins.generic.externalFeed.controllers.grid.ExternalFeedGridHandler',
+				'fetchGrid'
+			)
+		);
 	}
 
 	/**
@@ -188,8 +194,7 @@ class ExternalFeedGridHandler extends GridHandler {
 		$externalFeedPlugin = self::$plugin;
 		$externalFeedForm = new ExternalFeedForm(self::$plugin, $context->getId(), $feedId);
 		$externalFeedForm->initData();
-		$json = new JSONMessage(true, $externalFeedForm->fetch($request));
-		return $json->getString();
+		return new JSONMessage(true, $externalFeedForm->fetch($request));
 	}
 
 	/**

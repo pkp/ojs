@@ -43,7 +43,7 @@ class ExternalFeedSettingsForm extends Form {
 	public function initData() {
 		$journalId = $this->journalId;
 		$plugin = $this->plugin;
-	
+
 		$this->_data = array(
 			'externalFeedStyleSheet' => $plugin->getSetting($journalId, 'externalFeedStyleSheet')
 		);
@@ -63,12 +63,12 @@ class ExternalFeedSettingsForm extends Form {
 	public function fetch($request) {
 		$journalId = $this->journalId;
 		$plugin = $this->plugin;
-	
+
 		// Ensure upload file settings are reloaded when the form is displayed.
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('journalStyleSheet', $plugin->getSetting($journalId, 'externalFeedStyleSheet'));
 		$templateMgr->assign('defaultStyleSheetUrl', $request->getBaseUrl() . '/' . $plugin->getDefaultStyleSheetFile());
-	
+
 		return parent::fetch($request);
 	}
 
