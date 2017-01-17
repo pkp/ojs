@@ -288,7 +288,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 			$entries = array();
 			if (empty($requestedPage) || $requestedPage == 'index') {
 				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
-				$this->import('simplepie.SimplePie');
+				require_once('lib/pkp/lib/vendor/simplepie/simplepie/autoloader.php');
 
 				$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journal->getId());
 				while ($currentFeed =& $feeds->next()) {
