@@ -228,30 +228,6 @@ class Article extends Submission {
 	}
 
 	/**
-	 * Deprecated - this was used for loosely counting pages.  Either use ranges as entered, or write an actual page counting function.
-	 * Get starting page of an article.
-	 * @see Submission::getPageArray()
-	 * @return int
-	 */
-	function getStartingPage() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated call to Article::getStartingPage().');
-		preg_match('/^[^\d]*(\d+)\D*(.*)$/', $this->getPages(), $pages);
-		return $pages[1];
-	}
-
-	/**
-	 * Deprecated - this was used for loosely counting pages.  Either use ranges as entered, or write an actual page counting function.
-	 * Get ending page of an article.
-	 * @see Submission::getPageArray()
-	 * @return int
-	 */
-	function getEndingPage() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated call to Article::getEndingPage().');
-		preg_match('/^[^\d]*(\d+)\D*(.*)$/', $this->getPages(), $pages);
-		return $pages[2];
-	}
-
-	/**
 	 * Get the localized cover page server-side file name
 	 * @return string
 	 */
