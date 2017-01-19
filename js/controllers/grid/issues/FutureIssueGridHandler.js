@@ -38,7 +38,7 @@
 			function($grid, options) {
 		this.parent($grid, options);
 
-		this.bind('issueUnpublished', function() { this.refreshGridHandler(); });
+		this.bindGlobal('issueUnpublished', this.refreshGridHandler );
 	};
 	$.pkp.classes.Helper.inherits(
 			$.pkp.controllers.grid.issues.FutureIssueGridHandler,
