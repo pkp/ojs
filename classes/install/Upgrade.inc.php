@@ -369,15 +369,6 @@ class Upgrade extends Installer {
 				// Authors get access to all stages.
 				$stageAssignmentDao->build($submissionId, $authorGroup->getId(), $submissionUserId);
 
-				// Reviewers get access to the external review stage.
-				$reviewersResult = $stageAssignmentDao->retrieve('SELECT reviewer_id FROM review_assignments WHERE submission_id = ?', array($submissionId));
-				while (!$reviewersResult->EOF) {
-					$reviewerRow = $reviewersResult->GetRowAssoc(false);
-					$stageAssignmentDao->build($submissionId, $reviewerUserGroup->getId(), $reviewerRow['reviewer_id']);
-					$reviewersResult->MoveNext();
-				}
-				unset($reviewersResult);
-
 				// Journal Editors
 				// First, full editors.
 				$editorsResult = $stageAssignmentDao->retrieve('SELECT e.* FROM submissions s, edit_assignments e, users u, roles r WHERE r.user_id = e.editor_id AND r.role_id = ' .
