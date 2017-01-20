@@ -101,15 +101,11 @@ class DOAJXmlFilter extends NativeExportFilter {
 			 * "page numbers" are; for example, some journals (eg. JMIR)
 			 * use the "e-location ID" as the "page numbers" in PubMed
 			 */
-			$pages = $pubObject->getPages();
-			if (preg_match("/([0-9]+)\s*-\s*([0-9]+)/i", $pages, $matches)) {
-				// simple pagination (eg. "pp. 3-8")
-				$recordNode->appendChild($node = $doc->createElement('startPage', htmlspecialchars($matches[1], ENT_COMPAT, 'UTF-8')));
-				$recordNode->appendChild($node = $doc->createElement('endPage', htmlspecialchars($matches[2], ENT_COMPAT, 'UTF-8')));
-			} elseif (preg_match("/(e[0-9]+)/i", $pages, $matches)) {
-				// elocation-id (eg. "e12")
-				$recordNode->appendChild($node = $doc->createElement('startPage', htmlspecialchars($matches[1], ENT_COMPAT, 'UTF-8')));
-				$recordNode->appendChild($node = $doc->createElement('endPage', htmlspecialchars($matches[1], ENT_COMPAT, 'UTF-8')));
+			$startPage = $pubObject->getStartingPage();
+			$endPage = $pubObject->getEndingPage();
+			if (isset($startPage) && $startPage !== "") {
+				$recordNode->appendChild($node = $doc->createElement('startPage', htmlspecialchars($startPage, ENT_COMPAT, 'UTF-8')));
+				$recordNode->appendChild($node = $doc->createElement('endPage', htmlspecialchars($endPage, ENT_COMPAT, 'UTF-8')));
 			}
 			// DOI
 			$doi = $pubObject->getStoredPubId('doi');
