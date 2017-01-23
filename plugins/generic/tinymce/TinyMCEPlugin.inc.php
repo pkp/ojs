@@ -363,7 +363,7 @@ class TinyMCEPlugin extends GenericPlugin {
 			<script language="javascript" type="text/javascript">
 				tinyMCE_GZ.init({
 					relative_urls : "false",
-					plugins : "paste,jbimages,fullscreen",
+					plugins : "paste,'.(Validation::isLoggedIn() ? 'jbimages,' : '').'fullscreen",
 					themes : "advanced",
 					languages : "' . join(',', $localeList) . '",
 					disk_cache : true
@@ -372,7 +372,7 @@ class TinyMCEPlugin extends GenericPlugin {
 			<script language="javascript" type="text/javascript">
 				tinyMCE.init({
 					entity_encoding : "raw",
-					plugins : "paste,jbimages,fullscreen",
+					plugins : "paste,'.(Validation::isLoggedIn() ? 'jbimages,' : '').'fullscreen",
 					mode : "exact",
 					language : "' . String::substr(AppLocale::getLocale(), 0, 2) . '",
 					elements : "' . $enableFields . '",
