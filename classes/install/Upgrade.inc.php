@@ -870,6 +870,17 @@ class Upgrade extends Installer {
 		$site = $siteDao->getSite();
 		$adminEmail = $site->getLocalizedContactEmail();
 
+		// get file names form OJS 2.4.x table article_files i.e.
+		// from the temporary table article_files_migration
+		$ojs2FileNames = array();
+		$result = $submissionFileDao->retrieve('SELECT file_id, revision, file_name FROM article_files_migration');
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$ojs2FileNames[$row['file_id']][$row['revision']] = $row['file_name'];
+			$result->MoveNext();
+		}
+		$result->Close();
+
 		import('lib.pkp.classes.file.SubmissionFileManager');
 
 		$contexts = $journalDao->getAll();
@@ -881,11 +892,7 @@ class Upgrade extends Installer {
 				foreach ($submissionFiles as $submissionFile) {
 					$generatedFilename = $submissionFile->getServerFileName();
 					$basePath = $submissionFileManager->getBasePath() . '/';
-					$globPattern = $submissionFile->getSubmissionId() . '-' .
-						$submissionFile->getFileId() . '-' .
-						$submissionFile->getRevision() . '-' .
-						'??' .
-						'.' . strtolower_codesafe($submissionFile->getExtension());
+					$globPattern = $ojs2FileNames[$submissionFile->getFileId()][$submissionFile->getRevision()];
 
 					$matchedResults = array_merge(
 						glob($basePath . '*/*/' . $globPattern),
@@ -1261,7 +1268,7 @@ class Upgrade extends Installer {
 
 			// Set genres for files
 			$submissionFiles = $submissionFileDao->getAllRevisions($row['file_id']);
-			foreach ($submissionFiles as $submissionFile) {
+			foreach ((array) $submissionFiles as $submissionFile) {
 				$submissionFile->setGenreId($genre->getId());
 				$submissionFile->setUploaderUserId($creatorUserId);
 				$submissionFile->setUserGroupId($managerUserGroup->getId());
@@ -1271,7 +1278,7 @@ class Upgrade extends Installer {
 
 			// Reload the files now that they're cast; set metadata
 			$submissionFiles = $submissionFileDao->getAllRevisions($row['file_id']);
-			foreach ($submissionFiles as $submissionFile) {
+			foreach ((array) $submissionFiles as $submissionFile) {
 				$suppFileSettingsResult = $submissionFileDao->retrieve('SELECT * FROM article_supp_file_settings WHERE supp_id = ? AND setting_value IS NOT NULL', array($row['supp_id']));
 				$extraSettings = $extraGalleySettings = array();
 				while (!$suppFileSettingsResult->EOF) {
