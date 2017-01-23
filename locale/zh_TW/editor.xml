@@ -137,10 +137,6 @@
 	<message key="editor.article.assignEditor">新增編輯</message>
 	<message key="editor.article.selectEditor">選擇{$roleName}</message>
 	<message key="editor.article.selectDecision">選擇決定</message>
-	<message key="editor.article.decision.accept">接受稿件</message>
-	<message key="editor.article.decision.pendingRevisions">修改後刊登</message>
-	<message key="editor.article.decision.resubmit">重新審查</message>
-	<message key="editor.article.decision.decline">婉謝退稿</message>
 	<message key="editor.article.selectLayoutEditor">選擇版面編輯</message>
 	<message key="editor.article.replaceLayoutEditor">替換版面編輯</message>
 	<message key="editor.article.reviewSubmission">審查稿件</message>

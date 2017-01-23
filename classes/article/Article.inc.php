@@ -228,24 +228,6 @@ class Article extends Submission {
 	}
 
 	/**
-	 * Get starting page of an article.
-	 * @return int
-	 */
-	function getStartingPage() {
-		preg_match('/^[^\d]*(\d+)\D*(.*)$/', $this->getPages(), $pages);
-		return $pages[1];
-	}
-
-	/**
-	 * Get ending page of an article.
-	 * @return int
-	 */
-	function getEndingPage() {
-		preg_match('/^[^\d]*(\d+)\D*(.*)$/', $this->getPages(), $pages);
-		return $pages[2];
-	}
-
-	/**
 	 * Get the localized cover page server-side file name
 	 * @return string
 	 */

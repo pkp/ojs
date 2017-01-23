@@ -192,10 +192,12 @@ class Upgrade extends Installer {
 		// First, do Admins.
 		// create the admin user group.
 		$userGroupDao->update('INSERT INTO user_groups (context_id, role_id, is_default) VALUES (?, ?, ?)', array(CONTEXT_SITE, ROLE_ID_SITE_ADMIN, 1));
+		$userGroupId = $userGroupDao->getInsertId();
+
 		$userResult = $userGroupDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array(CONTEXT_SITE, ROLE_ID_SITE_ADMIN));
 		while (!$userResult->EOF) {
 			$row = $userResult->GetRowAssoc(false);
-			$userGroupDao->update('INSERT INTO user_user_groups (user_group_id, user_id) VALUES (?, ?)', array($userGroupDao->getInsertId(), (int) $row['user_id']));
+			$userGroupDao->update('INSERT INTO user_user_groups (user_group_id, user_id) VALUES (?, ?)', array($userGroupId, (int) $row['user_id']));
 			$userResult->MoveNext();
 		}
 
@@ -697,7 +699,7 @@ class Upgrade extends Installer {
 				$newOptions[$key] = $option['content'];
 			}
 			$row['setting_value'] = serialize($newOptions);
-			$reviewFormDao->Replace('review_form_element_settings', $row, array('review_form_id', 'locale', 'setting_name'));
+			$reviewFormDao->Replace('review_form_element_settings', $row, array('review_form_element_id', 'locale', 'setting_name'));
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -857,6 +859,17 @@ class Upgrade extends Installer {
 		$site = $siteDao->getSite();
 		$adminEmail = $site->getLocalizedContactEmail();
 
+		// get file names form OJS 2.4.x table article_files i.e.
+		// from the temporary table article_files_migration
+		$ojs2FileNames = array();
+		$result = $submissionFileDao->retrieve('SELECT file_id, revision, file_name FROM article_files_migration');
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$ojs2FileNames[$row['file_id']][$row['revision']] = $row['file_name'];
+			$result->MoveNext();
+		}
+		$result->Close();
+
 		import('lib.pkp.classes.file.SubmissionFileManager');
 
 		$contexts = $journalDao->getAll();
@@ -868,11 +881,7 @@ class Upgrade extends Installer {
 				foreach ($submissionFiles as $submissionFile) {
 					$generatedFilename = $submissionFile->getServerFileName();
 					$basePath = $submissionFileManager->getBasePath() . '/';
-					$globPattern = $submissionFile->getSubmissionId() . '-' .
-						$submissionFile->getFileId() . '-' .
-						$submissionFile->getRevision() . '-' .
-						'??' .
-						'.' . strtolower_codesafe($submissionFile->getExtension());
+					$globPattern = $ojs2FileNames[$submissionFile->getFileId()][$submissionFile->getRevision()];
 
 					$matchedResults = array_merge(
 						glob($basePath . '*/*/' . $globPattern),
@@ -921,7 +930,7 @@ class Upgrade extends Installer {
 					$submissionFileDao->update('UPDATE submission_files sf, submissions s SET sf.uploader_user_id = ?, sf.user_group_id = ? WHERE sf.uploader_user_id IS NULL AND sf.user_group_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?', array($creatorUserId, $managerUserGroup->getId(), $journal->getId()));
 					break;
 				case 'postgres':
-					$submissionFileDao->update('UPDATE submission_files SET uploader_user_id = ?, user_group_id = ? FROM submission_files sf, submissions s WHERE sf.uploader_user_id IS NULL AND sf.user_group_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?', array($creatorUserId, $managerUserGroup->getId(), $journal->getId()));
+					$submissionFileDao->update('UPDATE submission_files SET uploader_user_id = ?, user_group_id = ? FROM submissions s WHERE submission_files.uploader_user_id IS NULL AND submission_files.user_group_id IS NULL AND submission_files.submission_id = s.submission_id AND s.context_id = ?', array($creatorUserId, $managerUserGroup->getId(), $journal->getId()));
 					break;
 				default: fatalError('Unknown database type!');
 			}
@@ -939,7 +948,7 @@ class Upgrade extends Installer {
 							$submissionFileDao->update('UPDATE submission_files sf, submissions s SET sf.user_group_id = ? WHERE sf.uploader_user_id = ? AND sf.user_group_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?', array($userGroupId, $uploaderUserId, $journal->getId()));
 							break;
 						case 'postgres':
-							$submissionFileDao->update('UPDATE submission_files SET user_group_id = ? FROM submission_files sf, submissions s WHERE sf.uploader_user_id = ? AND sf.user_group_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?', array($userGroupId, $uploaderUserId, $journal->getId()));
+							$submissionFileDao->update('UPDATE submission_files SET user_group_id = ? FROM submissions s WHERE submission_files.uploader_user_id = ? AND submission_files.user_group_id IS NULL AND submission_files.submission_id = s.submission_id AND s.context_id = ?', array($userGroupId, $uploaderUserId, $journal->getId()));
 							break;
 						default: fatalError('Unknown database type!');
 					}
@@ -1248,7 +1257,7 @@ class Upgrade extends Installer {
 
 			// Set genres for files
 			$submissionFiles = $submissionFileDao->getAllRevisions($row['file_id']);
-			foreach ($submissionFiles as $submissionFile) {
+			foreach ((array) $submissionFiles as $submissionFile) {
 				$submissionFile->setGenreId($genre->getId());
 				$submissionFile->setUploaderUserId($creatorUserId);
 				$submissionFile->setUserGroupId($managerUserGroup->getId());
@@ -1258,7 +1267,7 @@ class Upgrade extends Installer {
 
 			// Reload the files now that they're cast; set metadata
 			$submissionFiles = $submissionFileDao->getAllRevisions($row['file_id']);
-			foreach ($submissionFiles as $submissionFile) {
+			foreach ((array) $submissionFiles as $submissionFile) {
 				$suppFileSettingsResult = $submissionFileDao->retrieve('SELECT * FROM article_supp_file_settings WHERE supp_id = ? AND setting_value IS NOT NULL', array($row['supp_id']));
 				$extraSettings = $extraGalleySettings = array();
 				while (!$suppFileSettingsResult->EOF) {

@@ -141,10 +141,6 @@
 	<message key="editor.article.assignEditor">Προσθήκη επιμελητή</message>
 	<message key="editor.article.selectEditor">Επιλογή {$roleName}</message>
 	<message key="editor.article.selectDecision">Επιλογή απόφασης</message>
-	<message key="editor.article.decision.accept">Αποδοχή υποβολής</message>
-	<message key="editor.article.decision.pendingRevisions">Απαιτούνται αναθεωρήσεις</message>
-	<message key="editor.article.decision.resubmit">Εκ νέου υποβολή για αξιολόγηση</message>
-	<message key="editor.article.decision.decline">Απόρριψη υποβολής</message>
 	<message key="editor.article.selectLayoutEditor">Επιλογή επιμελητή σελιδοποίησης</message>
 	<message key="editor.article.replaceLayoutEditor">Αντικατάσταση επιμελητή σελιδοποίησης</message>
 	<message key="editor.article.reviewSubmission">Υποβολή αξιολόγησης</message>

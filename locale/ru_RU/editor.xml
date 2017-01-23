@@ -175,10 +175,6 @@
 	<message key="editor.article.assignEditor">Добавить редактора</message>
 	<message key="editor.article.selectEditor">Выбрать {$roleName}</message>
 	<message key="editor.article.selectDecision">Выбрать решение</message>
-	<message key="editor.article.decision.accept">Принять материал</message>
-	<message key="editor.article.decision.pendingRevisions">Нужны исправления</message>
-	<message key="editor.article.decision.resubmit">Отправить повторно на рецензирование</message>
-	<message key="editor.article.decision.decline">Отклонить материал</message>
 	<message key="editor.article.selectLayoutEditor">Выбрать верстальщика</message>
 	<message key="editor.article.replaceLayoutEditor">Заменить верстальщика</message>
 	<message key="editor.article.reviewSubmission">Рецензирование материала</message>
