@@ -16,7 +16,7 @@
 	<message key="plugins.pubIds.urn.description">Включает присвоение единообразных имен ресурсов (Uniform Resource Name, URN) для  выпусков, статей и гранок в OJS.</message>
 
 	<!-- форма настроек -->
-	<message key="plugins.pubIds.urn.manager.settings.description">Пожалуйста, настройте модуль «URN», чтобы иметь возможность использовать URN в OJS и управлять ими:]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.description">Пожалуйста, настройте модуль «URN», чтобы иметь возможность использовать URN в OJS и управлять ими:</message>
 
 	<message key="plugins.pubIds.urn.manager.settings.urnObjects">Контент журнала</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnObjectsRequired">Пожалуйста выберите объекты, которым должны быть присвоены URN.</message>
