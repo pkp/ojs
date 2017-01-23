@@ -111,15 +111,11 @@ class DOAJJsonFilter extends NativeImportExportFilter {
 			 * "page numbers" are; for example, some journals (eg. JMIR)
 			 * use the "e-location ID" as the "page numbers" in PubMed
 			 */
-			$pages = $pubObject->getPages();
-			if (preg_match("/([0-9]+)\s*-\s*([0-9]+)/i", $pages, $matches)) {
-				// simple pagination (eg. "pp. 3-8")
-				$article['bibjson']['start_page'] = $matches[1];
-				$article['bibjson']['end_page'] = $matches[2];
-			} elseif (preg_match("/(e[0-9]+)/i", $pages, $matches)) {
-				// elocation-id (eg. "e12")
-				$article['bibjson']['start_page'] = $matches[1];
-				$article['bibjson']['end_page'] = $matches[1];
+			$startPage = $pubObject->getStartingPage();
+			$endPage = $pubObject->getEndingPage();
+			if (isset($startPage) && $startPage !== "") {
+				$article['bibjson']['start_page'] = $startPage;
+				$article['bibjson']['end_page'] = $endPage;
 			}
 			// FullText URL
 			$article['bibjson']['link'] = array();

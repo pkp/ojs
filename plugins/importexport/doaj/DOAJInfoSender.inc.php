@@ -104,11 +104,11 @@ class DOAJInfoSender extends ScheduledTask {
 
 	/**
 	 * Add execution log entry
-	 * @param $result array
+	 * @param $errors array
 	 */
-	function _addLogEntry($result) {
-		if (is_array($result)) {
-			foreach($result as $error) {
+	function _addLogEntry($errors) {
+		if (is_array($errors)) {
+			foreach($errors as $error) {
 				assert(is_array($error) && count($error) >= 1);
 				$this->addExecutionLogEntry(
 					__($error[0], array('param' => (isset($error[1]) ? $error[1] : null))),

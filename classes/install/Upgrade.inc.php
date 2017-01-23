@@ -62,6 +62,17 @@ class Upgrade extends Installer {
 	}
 
 	/**
+	 * Clear the CSS cache files (needed when changing LESS files)
+	 * @return boolean
+	 */
+	function clearCssCache() {
+		$request = Application::getRequest();
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->clearCssCache();
+		return true;
+	}
+
+	/**
 	 * For 3.0.0 upgrade: Convert string-field semi-colon separated metadata to controlled vocabularies.
 	 * @return boolean
 	 */

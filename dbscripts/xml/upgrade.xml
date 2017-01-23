@@ -121,6 +121,7 @@
 
 	<upgrade minversion="3.0.1.0" maxversion="3.0.1.9">
 		<data file="dbscripts/xml/upgrade/3.0.0_review_method.xml" />
+		<code function="clearCssCache" />
 	</upgrade>
 
 	<upgrade minversion="3.0.0.0" maxversion="3.0.9.9">
