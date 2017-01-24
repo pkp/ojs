@@ -90,10 +90,7 @@
 	<message key="manager.setup.enableAnnouncements">Tillat redaksjonsledere å legge til tidsskriftsoppslag.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Vis de</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">nyeste oppslagene på tidsskriftets hjemmeside.</message>
-	<message key="manager.setup.enablePageNumber">Sidetall for elementene vil bli regnet ut og skrevet inn manuelt i innholdsoversikten (for eks. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Tilpassete identifikatorer vil bli brukt for å identifisere publisert elementer.</message>
 	<message key="manager.setup.enablePublicIssueId">Tilpassete identifikatorer vil bli brukt for å identifisere utgaver.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Tilpassete identifikatorer vil bli brukt for å identifisere tilleggsfiler til artikler.</message>
 	<message key="manager.setup.enableUserRegistration">Tillat brukere å registrere selv på tidsskriftets nettsted som:</message>
 	<message key="manager.setup.focusAndScope">Hovedfokus og spennvidde</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Forfatterenes indeksering av eget verk</message>
@@ -408,7 +405,6 @@
 	<message key="manager.setup.competingInterests.requireAuthors"><![CDATA[Krev at forfattere som sender inn manuskript samtidig sender inn en <I>Erklæring om interessekonflikter</I>.]]></message>
 	<message key="manager.setup.competingInterests.requireReviewers"><![CDATA[Krev at fagkonsulenter sender inn en <I>Erklæring om interessekonflikter</I> sammen med hver fagvurdering de sender inn.]]></message>
 	<message key="manager.setup.editorDecision">Redaktørens beslutning</message>
-	<message key="manager.setup.enablePublicGalleyId">Tilpassete identifikatorer vil bli brukt for å identifisere de ferdige sideoppsettene (f.eks. HTML eller PDF filer) for publiserte element.</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Tidsskrifthjemmeside topptekst</message>
 	<message key="manager.setup.journalLayout">Tidsskriftnettsidenes layout</message>
 	<message key="manager.setup.journalLayoutDescription">Velg et designtema og velg layout-komponenter her. Det går også an å laste opp et egenprodusert stilark for tidsskriftet (CSS-stylesheet). Dette kan i så fall overstyre både stildata i systemet og tema-stilark for designtema (hvis et tema er valgt).</message>
