@@ -7,12 +7,11 @@
   * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the fr_CA (Français (Canada)) locale.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_French_(fr_CA)
+  * Localization strings.
   -->
 
-<locale name="fr_CA" full_name="Français (Canada)">
+<locale name="fr_CA" full_name = "Français (Canada)">
 	<message key="manager.emails.confirmResetAll">Êtes-vous certain de vouloir réinitialiser tous les modèles de courriels dans cette revue? Vous allez perdre toutes les personnalisations que vous avez effectuées.</message>
 	<message key="manager.files.note">Note: L'explorateur de fichiers est une fonction avancée qui permet aux fichiers et aux répertoires associés à une revue d'être affichés et manipulés directement.</message>
 	<message key="manager.journalManagement">Gestion de la revue</message>
