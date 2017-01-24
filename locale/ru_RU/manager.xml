@@ -162,11 +162,7 @@
 	<message key="manager.setup.enableAnnouncements">Разрешить управляющим журналами добавлять объявления в журналы.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Показать</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">последних обьявлений на главной странице журнала.</message>
-	<message key="manager.setup.enablePageNumber">Номера страниц для материалов будут вычисляться и вводиться вручную в Содержание выпуска (например, 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Пользовательские идентификаторы будут использоваться для идентификации опубликованных материалов.</message>
-	<message key="manager.setup.enablePublicGalleyId">Пользовательские идентификаторы будут использоваться для идентификации гранок (например, файлов HTML или PDF) для опубликованных материалов.</message>
 	<message key="manager.setup.enablePublicIssueId">Пользовательские идентификаторы будут использоваться для идентификации выпусков.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Пользовательские идентификаторы будут использоваться для идентификации дополнительных файлов к статье.</message>
 	<message key="manager.setup.enableUserRegistration">Пользователи могут самостоятельно зарегистрироваться в журнале с одной или несколькими из следующих ролей:</message>
 	<message key="manager.setup.focusAndScope">Тематика</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Для авторов, чтобы проиндексировать их работу</message>

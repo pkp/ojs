@@ -133,11 +133,7 @@
 	<message key="manager.setup.enableAnnouncements">Włącz dodawanie ogłoszeń przez redaktorów czasopisma.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Wyświetl</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">najnowszych ogłoszeń na stronie głównej czasopisma.</message>
-	<message key="manager.setup.enablePageNumber">Numery stron dla tekstów zostaną obliczone i wprowadzone manualnie do spisu treści (np. s. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Opublikowane teksty będą opatrzone niestandardowymi identyfikatorami.</message>
-	<message key="manager.setup.enablePublicGalleyId">Opublikowane pliki z finalnymi tekstami (HTML / PDF) będą opatrzone niestandardowymi identyfikatorami.</message>
 	<message key="manager.setup.enablePublicIssueId">Opublikowane wydania będą opatrzone niestandardowymi identyfikatorami.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Dodatkowe pliki będą opatrzone niestandardowymi identyfikatorami.</message>
 	<message key="manager.setup.enableUserRegistration">Następujące role będą dostępne dla użytkowników rejestrujących się w czasopiśmie:</message>
 	<message key="manager.setup.focusAndScope">Cel i zakres tematyczny czasopisma</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Dla autorów w celu indeksowania medatanych</message>

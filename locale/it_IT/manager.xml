@@ -149,11 +149,7 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.enableAnnouncements">Abilita gli amministratori della rivista ad aggiungere avvisi.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Mostra</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">avvisi recenti nella homepage della rivista.</message>
-	<message key="manager.setup.enablePageNumber">I numeri di pagina degli articoli vanno calcolati e inseriti manualmente (es. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Gli identificatori personalizzati saranno apposti agli articoli pubblicati.</message>
-	<message key="manager.setup.enablePublicGalleyId">Gli identificatori personalizzati saranno apposti  a ciascun formato (es, HTML, PDF) di ciascun articolo pubblicato.</message>
 	<message key="manager.setup.enablePublicIssueId">Gli identificatori personalizzati saranno apposti ai fascicoli.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Gli identificatori personalizzati saranno apposti ai file supplementari degli articoli.</message>
 	<message key="manager.setup.enableUserRegistration">Gli utenti possono autoregistrarsi alla rivista con uno o più dei seguenti ruoli:</message>
 	<message key="manager.setup.focusAndScope">Scopo e ambito</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Indicizzare gli articoli</message>
@@ -302,7 +298,7 @@ Al momento di concludere una revisione, ai revisori vengono presentate due box, 
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">Viste delle pagine degli abstract</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Viste degli abstract e download degli articoli</message>
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Viste della home page della rivista</message>
-	<message key="manager.statistics.reports.today">Oggi</message>
+
 	<message key="manager.statistics.reports.filters.byContext.description">Restringe i risultati per contesto (fascicolo e/o articolo).</message>
 	<message key="manager.statistics.reports.filters.byObject.description">Restringe i risultati per tipo di oggetto (rivista, fascicolo, articolo, gabbia PDF, altre gabbie) e/o per uno o più id.</message>
 	<message key="manager.statistics.statistics">Statistiche</message>
