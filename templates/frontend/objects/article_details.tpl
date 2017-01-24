@@ -134,6 +134,8 @@
 				</div>
 			{/if}
 
+			{call_hook name="Templates::Article::Main"}
+
 			{* Author biographies *}
 			{assign var="hasBiographies" value=0}
 			{foreach from=$article->getAuthors() item=author}
@@ -171,7 +173,17 @@
 				</div>
 			{/if}
 
-			{call_hook name="Templates::Article::Main"}
+			{* References *}
+			{if $article->getCitations()}
+				<div class="item references">
+					<h3 class="label">
+						{translate key="submission.citations"}
+					</h3>
+					<div class="value">
+						{$article->getCitations()|nl2br}
+					</div>
+				</div>
+			{/if}
 
 		</div><!-- .main_entry -->
 
