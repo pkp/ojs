@@ -12,15 +12,16 @@
 {assign var="pageTitle" value="user.register"}
 {include file="common/header.tpl"}
 {/strip}
+{assign var=isloggedin value=Validation::isLoggedIn()}
 
-{if $implicitAuth === true && !Validation::isLoggedIn()}
+{if $implicitAuth === true && !$isloggedin}
 	<p><a href="{url page="login" op="implicitAuthLogin"}">{translate key="user.register.implicitAuth"}</a></p>
 {else}
 	<form id="registerForm" method="post" action="{url op="registerUser"}">
 
 	<p>{translate key="user.register.completeForm"}</p>
 
-	{if !$implicitAuth || ($implicitAuth === $smarty.const.IMPLICIT_AUTH_OPTIONAL && !Validation::isLoggedIn())}
+	{if !$implicitAuth || ($implicitAuth === $smarty.const.IMPLICIT_AUTH_OPTIONAL && !$isloggedin)}
 		{if !$existingUser}
 			{url|assign:"url" page="user" op="register" existingUser=1}
 			<p>{translate key="user.register.alreadyRegisteredOtherJournal" registerUrl=$url}</p>
@@ -41,12 +42,12 @@
 		{if $existingUser}
 			<p>{translate key="user.register.loginToRegister"}</p>
 		{/if}
-	{/if}{* !$implicitAuth || ($implicitAuth === $smarty.const.IMPLICIT_AUTH_OPTIONAL && !Validation::isLoggedIn()) *}
+	{/if}{* !$implicitAuth || ($implicitAuth === $smarty.const.IMPLICIT_AUTH_OPTIONAL && !$isloggedin) *}
 
 	{if $source}
 		<input type="hidden" name="source" value="{$source|escape}" />
 	{/if}
-{/if}{* $implicitAuth === true && !Validation::isLoggedIn() *}
+{/if}{* $implicitAuth === true && !$isloggedin *}
 
 
 <table class="data" width="100%">
@@ -61,7 +62,7 @@
 	</tr>
 {/if}{* count($formLocales) > 1 && !$existingUser *}
 
-{if !$implicitAuth || ($implicitAuth === $smarty.const.IMPLICIT_AUTH_OPTIONAL && !Validation::isLoggedIn())}
+{if !$implicitAuth || ($implicitAuth === $smarty.const.IMPLICIT_AUTH_OPTIONAL && !$isloggedin)}
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="username" required="true" key="user.username"}</td>
 		<td width="80%" class="value"><input type="text" name="username" value="{$username|escape}" id="username" size="20" maxlength="32" class="textField" /></td>
@@ -219,10 +220,10 @@
 			</tr>
 		{/if}{* count($availableLocales) > 1 *}
 	{/if}{* !$existingUser *}
-{/if}{* !$implicitAuth || ($implicitAuth === $smarty.const.IMPLICIT_AUTH_OPTIONAL && !Validation::isLoggedIn()) *}
+{/if}{* !$implicitAuth || ($implicitAuth === $smarty.const.IMPLICIT_AUTH_OPTIONAL && !$isloggedin) *}
 
 
-{if !$implicitAuth || $implicitAuth === $smarty.const.IMPLICIT_AUTH_OPTIONAL || ($implicitAuth === true && Validation::isLoggedIn())}
+{if !$implicitAuth || $implicitAuth === $smarty.const.IMPLICIT_AUTH_OPTIONAL || ($implicitAuth === true && $isloggedin)}
 	{if $allowRegReader || $allowRegReader === null || $allowRegAuthor || $allowRegAuthor === null || $allowRegReviewer || $allowRegReviewer === null || ($currentJournal && $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION && $enableOpenAccessNotification)}
 		<tr valign="top">
 			<td class="label">{fieldLabel suppressId="true" name="registerAs" key="user.register.registerAs"}</td>
@@ -243,7 +244,7 @@
 	
 	<br />
 	<p><input type="submit" value="{translate key="user.register"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="index" escape=false}'" /></p>
-{/if}{* !$implicitAuth || $implicitAuth === $smarty.const.IMPLICIT_AUTH_OPTIONAL || ($implicitAuth === true && Validation::isLoggedIn()) *}
+{/if}{* !$implicitAuth || $implicitAuth === $smarty.const.IMPLICIT_AUTH_OPTIONAL || ($implicitAuth === true && $isloggedin) *}
 
 
 {if !$implicitAuth || $implicitAuth === $smarty.const.IMPLICIT_AUTH_OPTIONAL}
