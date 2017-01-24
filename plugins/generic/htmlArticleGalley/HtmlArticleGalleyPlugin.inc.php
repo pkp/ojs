@@ -78,6 +78,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 				'issue' => $issue,
 				'article' => $article,
 				'galley' => $galley,
+				'htmlGalleyContents' => $this->_getHTMLContents($request, $galley),
 			));
 			$templateMgr->display($this->getTemplatePath() . '/display.tpl');
 
