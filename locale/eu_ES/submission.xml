@@ -11,7 +11,7 @@
   * Localization strings for the eu_ES (Euskara) locale.
   -->
 
-<locale name="eu_ES" full_name = "Euskara">
+<locale name="eu_ES" full_name="Euskara">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

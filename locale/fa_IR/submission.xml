@@ -11,7 +11,7 @@
   * Localization strings for the fa_IR (فارسی) locale.
   -->
 
-<locale name="fa_IR" full_name = "فارسی">
+<locale name="fa_IR" full_name="فارسی">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

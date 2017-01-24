@@ -11,7 +11,7 @@
   * Localization strings for the sv_SE (Svenska) locale.
   -->
 
-<locale name="sv_SE" full_name = "Svenska">
+<locale name="sv_SE" full_name="Svenska">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

@@ -11,7 +11,7 @@
   * Localization strings for the mk_MK (Македонски јазик) locale.
   -->
 
-<locale name="mk_MK" full_name = "Македонски јазик">
+<locale name="mk_MK" full_name="Македонски јазик">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

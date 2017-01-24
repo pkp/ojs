@@ -11,7 +11,7 @@
   * Localization strings for the ja_JP (日本語) locale.
   -->
 
-<locale name="ja_JP" full_name = "日本語">
+<locale name="ja_JP" full_name="日本語">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

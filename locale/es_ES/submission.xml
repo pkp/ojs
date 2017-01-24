@@ -11,7 +11,7 @@
   * Localization strings for the es_ES (Español (España)) locale.
   -->
 
-<locale name="es_ES" full_name = "Español (España)">
+<locale name="es_ES" full_name="Español (España)">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

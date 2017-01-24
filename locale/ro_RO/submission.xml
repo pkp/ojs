@@ -11,7 +11,7 @@
   * Localization strings for the ro_RO (Limba Română) locale.
   -->
 
-<locale name="ro_RO" full_name = "Limba Română">
+<locale name="ro_RO" full_name="Limba Română">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

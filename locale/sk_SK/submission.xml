@@ -11,7 +11,7 @@
   * Localization strings for the sk_SK (Slovenčina) locale.
   -->
 
-<locale name="sk_SK" full_name = "Slovenčina">
+<locale name="sk_SK" full_name="Slovenčina">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

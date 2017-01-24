@@ -11,7 +11,7 @@
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
   -->
 
-<locale name="ca_ES" full_name = "Català">
+<locale name="ca_ES" full_name="Català">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->
