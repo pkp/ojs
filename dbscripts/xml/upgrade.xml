@@ -11,7 +11,7 @@
   *
   -->
 
-<install version="3.0.0.0">
+<install version="3.0.1.0">
 	<upgrade minversion="2.0.0.0" maxversion="2.3.9.9">
 		<!-- OJS < 2.4.0 to 3.0 upgrade unsupported -->
 		<code function="abort" message="installer.unsupportedUpgradeError" />
@@ -87,6 +87,7 @@
 		<code function="installEmailTemplate" key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_SEND_TO_EXTERNAL" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_SEND_TO_PRODUCTION" locales="en_US" />
+		<code function="installEmailTemplate" key="SUBMISSION_ACK_NOT_USER" locales="en_US,ca_ES,el_GR,es_ES,fr_CA,pt_BR" />
 		<data file="dbscripts/xml/upgrade/3.0.0_scheduledTasks.xml" />
 		<code function="localizeCustomBlockSettings" />
 		<code function="convertEditorDecisionNotes" />
@@ -99,6 +100,9 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_pubId_settings.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_galley_files.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_metrics.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.0_issue_settings.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.0_submission_settings.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.0_review_method.xml" />
 	</upgrade>
 
 	<upgrade minversion="3.0.0.0" maxversion="3.0.0.9">
@@ -107,6 +111,22 @@
 		<data file="dbscripts/xml/upgrade/3.0.1_update.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_galley_files.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_metrics.xml" />
+		<code function="localizeIssueCoverImages" />
+		<code function="localizeArticleCoverImages" />
+		<data file="dbscripts/xml/upgrade/3.0.0_issue_settings.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.0_submission_settings.xml" />
+		<code function="installEmailTemplate" key="SUBMISSION_ACK_NOT_USER" locales="en_US,ca_ES,el_GR,es_ES,fr_CA,pt_BR" />
+		<data file="dbscripts/xml/upgrade/3.0.0_review_method.xml" />
+	</upgrade>
+
+	<upgrade minversion="3.0.1.0" maxversion="3.0.1.9">
+		<data file="dbscripts/xml/upgrade/3.0.0_review_method.xml" />
+		<code function="clearCssCache" />
+	</upgrade>
+
+	<upgrade minversion="3.0.0.0" maxversion="3.0.9.9">
+		<data file="dbscripts/xml/upgrade/3.1.0_update.xml" />
+		<note file="docs/release-notes/README-3.1.0" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->

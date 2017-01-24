@@ -41,7 +41,7 @@ class DOAJExportDeployment {
 	 * @param $context Context
 	 * @param $plugin PubObjectsPubIdExportPlugin
 	 */
-	function DOAJExportDeployment($context, $plugin) {
+	function __construct($context, $plugin) {
 		$this->setContext($context);
 		$this->setPlugin($plugin);
 	}

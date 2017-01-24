@@ -50,11 +50,11 @@ class DataciteSettingsForm extends Form {
 	 * @param $plugin DataciteExportPlugin
 	 * @param $contextId integer
 	 */
-	function DataciteSettingsForm($plugin, $contextId) {
+	function __construct($plugin, $contextId) {
 		$this->_contextId = $contextId;
 		$this->_plugin = $plugin;
 
-		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
+		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
 
 		// DOI plugin settings action link
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);

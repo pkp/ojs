@@ -20,8 +20,8 @@ class IsbndbCitationLookupPlugin extends PKPIsbndbCitationLookupPlugin {
 	/**
 	 * Constructor
 	 */
-	function IsbndbCitationLookupPlugin() {
-		parent::PKPIsbndbCitationLookupPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 }
 

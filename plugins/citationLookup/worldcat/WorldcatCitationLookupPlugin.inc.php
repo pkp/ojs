@@ -20,8 +20,8 @@ class WorldcatCitationLookupPlugin extends PKPWorldcatCitationLookupPlugin {
 	/**
 	 * Constructor
 	 */
-	function WorldcatCitationLookupPlugin() {
-		parent::PKPWorldcatCitationLookupPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 }
 

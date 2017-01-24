@@ -24,7 +24,7 @@ class DataciteInfoSender extends ScheduledTask {
 	 * Constructor.
 	 * @param $argv array task arguments
 	 */
-	function DataciteInfoSender($args) {
+	function __construct($args) {
 		PluginRegistry::loadCategory('importexport');
 		$plugin = PluginRegistry::getPlugin('importexport', 'DataciteExportPlugin'); /* @var $plugin DataciteExportPlugin */
 		$this->_plugin = $plugin;
@@ -33,7 +33,7 @@ class DataciteInfoSender extends ScheduledTask {
 			$plugin->addLocaleData();
 		}
 
-		parent::ScheduledTask($args);
+		parent::__construct($args);
 	}
 
 	/**

@@ -15,25 +15,12 @@
 	<message key="plugins.importexport.users.displayName">Plugiciel XML pour utilisateurs</message>
 	<message key="plugins.importexport.users.description">Importer et exporter des utilisateurs</message>
 
-	<message key="plugins.importexport.users.cliUsage">Utilisation : {$scriptName} {$pluginName} [command] ...
+	<message key="plugins.importexport.users.cliUsage"><![CDATA[Utilisation : {$scriptName} {$pluginName} [command] ...
 Commandes :
-	importer [xmlFileName] [press_path] [optional flags]
-	exporter [xmlFileName] [press_path]
-	exporter [xmlFileName] [press_path] [role_path1] [role_path2] ...
-
-Balises optionnelles :
-	continue_on_error: Si cette fonction est spécifiée, continuer à importer des utilisateurs même si une erreur survient
-
-	send_notify: Si cette fonction est spécifiée, envoyer des courriels d'avis contenant les noms d'utilisateurs et les mots de passe aux utilisateurs importés
-Exemples :
-	Importer les utilisateurs dans myPress à partir de myImportFile.xml, continuant même s'il y a erreur :
-	{$scriptName} {$pluginName} importer myImportFile.xml myPress continue_on_error
-
-	Exporter tous les utilisateurs à partir de myPress :
-	{$scriptName} {$pluginName} exporter myExportFile.xml myPress
-
-	Exporter tous les utilisateurs inscrits à titre de réviseurs, ainsi que leurs rôles de réviseur seulement :
-	{$scriptName} {$pluginName} exporter myExportFile.xml myPress reviewer</message>
+	import [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [userId1] [userId2] ...
+]]></message>
 	<message key="plugins.importexport.users.import.importUsers">Importation d'utilisateurs</message>
 	<message key="plugins.importexport.users.import.instructions">Choisir un fichier de données XML contenant l'information de l'utilisateur pour l'importer dans cette conférence planifiée. Voyez l'aide de la conférence planifiée pour les détails sur le format de ce fichier. Noter que si le fichier importé contient un ou plusieurs nom(s) d'utilisateur ou adresse(s) de courriel qui existent déjà dans le système, les données pour ces utilisateurs ne seront pas importées et tous les nouveaux rôles à créer seront assignés aux utilisateurs existants.</message>
 	<message key="plugins.importexport.users.import.failedToImportUser">L'importation de l'utilisateur à échouée</message>

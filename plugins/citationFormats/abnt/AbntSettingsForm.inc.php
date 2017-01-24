@@ -30,11 +30,11 @@ class AbntSettingsForm extends Form {
 	 * @param $plugin object
 	 * @param $journalId int
 	 */
-	function AbntSettingsForm(&$plugin, $journalId) {
+	function __construct(&$plugin, $journalId) {
 		$this->journalId = $journalId;
 		$this->plugin =& $plugin;
 
-		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
+		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
 	}
 
 	/**

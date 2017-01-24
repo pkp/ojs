@@ -21,8 +21,8 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 	/**
 	 * Constructor
 	 */
-	function ArticleSearchDAO() {
-		parent::SubmissionSearchDAO();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

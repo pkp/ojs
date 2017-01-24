@@ -87,7 +87,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Por favor asegúrese de que al menos una casilla de verificación está seleccionada para cada asignación de Editor de Sección</message>
 	<message key="manager.sections.form.reviewFormId">Por favor asegúrese de que usted ha escogido un formulario de revisión válido</message>
 	<message key="manager.sections.form.titleRequired">Es necesario el título para la sección.</message>
-	<message key="manager.sections.hideAbout">Omitir esta sección del apartado "La Revista"</message>
 	<message key="manager.sections.hideTocAuthor">Omitir nombres de autores para artículos de sección en la tabla de contenidos del número</message>
 	<message key="manager.sections.hideTocTitle">Omita el título de esta sección en la tabla de contenidos de los números.</message>
 	<message key="manager.sections.identifyType">En sus metadatos, identificar los elementos de esta sección como</message>
@@ -147,11 +146,7 @@
 	<message key="manager.setup.enableAnnouncements">Permite a los gestores de la revista agregar anuncios.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Mostrar</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">de los anuncios mas recientes de esta revista.</message>
-	<message key="manager.setup.enablePageNumber">Se incluirán en la tabla de contenidos de la revista números de página para cada elemento publicado (p.e., pág. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Se usarán identificadores a medida para identificar los elementos publicados.</message>
-	<message key="manager.setup.enablePublicGalleyId">Identificadores personalizados serán usados para identificar galeras (e.g. archivos HTML o PDF) para artículos publicados.</message>
 	<message key="manager.setup.enablePublicIssueId">Se usarán identificadores a medida para los números.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Se usarán identificadores a medida para identificar archivos de artículo suplementarios.</message>
 	<message key="manager.setup.enableUserRegistration">Los usuarios pueden registrarse por sí mismos en el sistema en alguno de los siguientes roles:</message>
 	<message key="manager.setup.focusAndScope">Temática y Alcance</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Para que los/as autores/as indexen su trabajo</message>
@@ -505,7 +500,7 @@ Hay casos en los que una sola estadística de uso debe ser usada, por ej. mostra
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">Vistas de la página del resumen del artículo</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Resumen y descargas del artículo</message>
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Vistas de la página principal de la revista</message>
-	<message key="manager.statistics.reports.today">Hoy</message>
+
 	<message key="manager.statistics.reports.filters.byContext.description">Limitar resultados por contexto (número y/o artículo)</message>
 	<message key="manager.statistics.reports.filters.byObject.description">Limitar resultados por tipo de objeto (revista, número, artículo, galeradas de pdf, otras galeradas), y/o por uno o más ids de objetos.</message>
 	<message key="manager.setup.copyrightYearBasis">Bases de los  nuevos derechos de artículo en el año actual</message>

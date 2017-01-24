@@ -31,7 +31,7 @@
 	<message key="author.submit.metadata">Saisir les métadonnées</message>
 	<message key="author.submit.supplementaryFiles">Télécharger les fichiers supplémentaires</message>
 	<message key="author.submit.confirmation">Confirmer la soumission</message>
-	<message key="author.submit.cancelSubmission">Vous pouvez terminer cette soumission plus tard en sélectionnant Soumissions actives à la Page d'accueil de l'auteur.</message>
+	<message key="submission.submit.cancelSubmission">Vous pouvez terminer cette soumission plus tard en sélectionnant Soumissions actives à la Page d'accueil de l'auteur.</message>
 	<message key="author.submit.notAccepting">Cette revue n'accepte pas de soumissions pour le moment.</message>
 	<message key="author.submit.requestWaiver">Demande d'exemption</message>
 	<message key="author.submit.qualifyForWaiver">Veuillez envisager d'être exempté des Frais de soumission d'article pour cet article</message>
@@ -118,7 +118,5 @@
 	<message key="author.submissions.queuedEditingProofread">En révision : Correction d'épreuves requise</message>
 	<message key="author.submit.reorder">Réordonner le nom de l'auteur</message>
 	<message key="author.submit.form.wordCountAlert">Vous avez dépassé la limite maximale de mots fixée pour les résumés, dans cette section de la rubrique</message>
-	<message key="author.submit.submissionLocale">Langue de la soumission</message>
-	<message key="author.submit.submissionLocaleDescription">La revue accepte les soumissions dans plusieurs langues. Choisir la langue principale de la soumission à partir de la liste déroulante ci-dessous.</message>
 	<message key="author.submit.form.localeRequired">Veuillez sélectionner une langue de soumission.</message>
 </locale>

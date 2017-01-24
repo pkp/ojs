@@ -23,8 +23,8 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 	/**
 	 * Constructor
 	 */
-	function RecommendBySimilarityPlugin() {
-		parent::GenericPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 
@@ -59,10 +59,10 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @see Plugin::getTemplatePath()
+	 * @copydoc PKPPlugin::getTemplatePath
 	 */
-	function getTemplatePath() {
-		return parent::getTemplatePath() . 'templates/';
+	function getTemplatePath($inCore = false) {
+		return parent::getTemplatePath($inCore) . 'templates/';
 	}
 
 

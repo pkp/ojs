@@ -87,7 +87,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Por favor asegúrate de que alomenos uunha caixa de verificación está seleccionada para cada asignación de Editor de Sección</message>
 	<message key="manager.sections.form.reviewFormId">Fai favor de asegúrarte  que escolliches un formulario de revisión válido</message>
 	<message key="manager.sections.form.titleRequired">Compre un título para a sección.</message>
-	<message key="manager.sections.hideAbout">Omitir da sección "A Revista"</message>
 	<message key="manager.sections.hideTocAuthor">Omitir nomes de autores para artigos de sección na Táboa e contidos do número</message>
 	<message key="manager.sections.hideTocTitle">Omite o título desta sección na Táboa de contidos dos números.</message>
 	<message key="manager.sections.identifyType">No seus metadados, identificar os elementos desta sección como</message>
@@ -149,11 +148,7 @@
 	<message key="manager.setup.enableAnnouncements">Permete aos administradores da revista adicionar anuncios.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Amosar</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">dos anuncios máis recentes desta revista.</message>
-	<message key="manager.setup.enablePageNumber">Incorporaranse na táboa de contidos da revista números de páxina para cada elemento publicado (p.e., pág. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Empregaranse identificadores a medida para identificar os elementos publicados.</message>
-	<message key="manager.setup.enablePublicGalleyId">Os Identificadores personalizados serán usados para identificar galeras (e.g. ficheros HTML o PDF) para artigos publicados.</message>
 	<message key="manager.setup.enablePublicIssueId">Empregaranse identificadores a medida para os números.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Empregaranse identificadores a medida para identificar ficheiros de artigo suplementar.</message>
 	<message key="manager.setup.enableUserRegistration">Os usuarios poden rexistrarse por sí mesmos no sistema en calquera dos roles a seguir</message>
 	<message key="manager.setup.focusAndScope">Temática e Alcance</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Para que os/as autores/as indexen o seu traballo</message>

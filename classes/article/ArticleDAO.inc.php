@@ -21,8 +21,19 @@ class ArticleDAO extends SubmissionDAO {
 	/**
 	 * Constructor.
 	 */
-	function ArticleDAO() {
-		parent::SubmissionDAO();
+	function __construct() {
+		parent::__construct();
+	}
+
+	/**
+	 * Get a list of fields for which localized data is supported
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array_merge(
+			parent::getLocaleFieldNames(), array(
+				'coverImageAltText', 'coverImage',
+		));
 	}
 
 	/**

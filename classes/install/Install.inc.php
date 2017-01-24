@@ -34,8 +34,8 @@ class Install extends PKPInstall {
 	 * @param $descriptor string descriptor path
 	 * @param $isPlugin boolean true iff a plugin is being installed
 	 */
-	function Install($params, $descriptor = 'install.xml', $isPlugin = false) {
-		parent::PKPInstall($descriptor, $params, $isPlugin);
+	function __construct($params, $descriptor = 'install.xml', $isPlugin = false) {
+		parent::__construct($descriptor, $params, $isPlugin);
 	}
 
 	//

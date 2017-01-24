@@ -20,8 +20,8 @@ class JournalGridHandler extends ContextGridHandler {
 	/**
 	 * Constructor
 	 */
-	function JournalGridHandler() {
-		parent::ContextGridHandler();
+	function __construct() {
+		parent::__construct();
 	}
 
 

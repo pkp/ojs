@@ -22,8 +22,8 @@ class ApproveSubmissionNotificationManager extends PKPApproveSubmissionNotificat
 	 * Constructor.
 	 * @param $notificationType int NOTIFICATION_TYPE_...
 	 */
-	function ApproveSubmissionNotificationManager($notificationType) {
-		parent::PKPApproveSubmissionNotificationManager($notificationType);
+	function __construct($notificationType) {
+		parent::__construct($notificationType);
 	}
 
 	/**

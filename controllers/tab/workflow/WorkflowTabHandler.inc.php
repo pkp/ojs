@@ -21,8 +21,8 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler {
 	/**
 	 * Constructor
 	 */
-	function WorkflowTabHandler() {
-		parent::PKPWorkflowTabHandler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

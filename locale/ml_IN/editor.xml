@@ -157,10 +157,6 @@
 	<message key="editor.article.assignEditor">എഡിറ്ററെ ചേര്‍ക്കുക</message>
 	<message key="editor.article.selectEditor">തിരഞ്ഞെടുക്കുക  {$roleName}</message>
 	<message key="editor.article.selectDecision">തീരുമാനം തിരഞ്ഞെടുക്കുക</message>
-	<message key="editor.article.decision.accept">സമര്‍പ്പണം സ്വീകരിക്കുക</message>
-	<message key="editor.article.decision.pendingRevisions">പുനരവലോകനം ആവശ്യമാണ്</message>
-	<message key="editor.article.decision.resubmit">അവലോകനത്തിനു വേണ്ടി പുനര്‍സമര്‍പ്പണം നടത്തുക</message>
-	<message key="editor.article.decision.decline">സമര്‍പ്പണം നിരസിക്കുക</message>
 	<message key="editor.article.selectLayoutEditor">ലേ ഔട്ട് എഡിറ്ററെ തിരഞ്ഞെടുക്കുക</message>
 	<message key="editor.article.replaceLayoutEditor">ലേ ഔട്ട് എഡിറ്ററെ പുന:സ്ഥാപിക്കുക</message>
 	<message key="editor.article.reviewSubmission">സമര്‍പ്പണം അവലോകനം ചെയ്യുക</message>

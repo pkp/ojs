@@ -33,8 +33,8 @@ class ArticleHandler extends Handler {
 	 * Constructor
 	 * @param $request Request
 	 */
-	function ArticleHandler() {
-		parent::Handler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**
@@ -361,7 +361,6 @@ print_r($galleyFile);
 		$returnFormat = isset($args[2]) ? $args[2] : null;
 
 		$citationPlugins = PluginRegistry::loadCategory('citationFormats');
-		uasort($citationPlugins, create_function('$a, $b', 'return strcmp($a->getDisplayName(), $b->getDisplayName());'));
 
 		import('lib.pkp.classes.core.JSONMessage');
 

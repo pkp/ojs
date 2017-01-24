@@ -82,7 +82,6 @@
 	<message key="manager.sections.editors">Επιμελητές ενότητας</message>
 	<message key="manager.sections.form.abbrevRequired">Απαιτείται μια συντομογραφία τίτλου για την ενότητα</message>
 	<message key="manager.sections.form.titleRequired">Απαιτείται ένας τίτλος για την ενότητα.</message>
-	<message key="manager.sections.hideAbout">Απόκρυψη αυτής της ενότητας από την σελίδα "Σχετικά με το Περιοδικό".</message>
 	<message key="manager.sections.hideTocTitle">Απόκρυψη του τίτλου της ενότητας αυτής από τον πίνακα περιεχομένων των τευχών.</message>
 	<message key="manager.sections.identifyType">Προσδιορίστε κάθε τεκμήριο που έχει δημοσιευτεί στην ενότητα αυτή ως</message>
 	<message key="manager.sections.identifyTypeExamples">(Για παράδειγμα, "Άρθρο που έχει περάσει από ομότιμη αξιολόγηση", "Μη εποπτευόμενη αξιολόγηση βιβλίου", "Άρθρο κατόπιν προσκλήσεως ", κτλ.)</message>
@@ -141,10 +140,7 @@
 	<message key="manager.setup.enableAnnouncements">Ενεργοποίηση δυνατότητας προσθήκης ανακοινώσεων από τους Διαχειριστές του περιοδικού.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Προβολή</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">των πιο πρόσφατων ανακοινώσεων στην αρχική σελίδα του περιοδικού.</message>
-	<message key="manager.setup.enablePageNumber">Οι αριθμοί σελίδας για τα τεκμήρια υπολογίζονται και καταχωρούνται χειρωνακτικά στον Πίνακα των περιεχομένων (π.χ., σελ. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Θα χρησιμοποιηθούν προσαρμοσμένα αναγνωριστικά για την αναγνώριση των δημοσιευμένων τεκμηρίων/άρθρων.</message>
 	<message key="manager.setup.enablePublicIssueId">Θα χρησιμοποιηθούν προσαρμοσμένα αναγνωριστικά για την αναγνώριση των τευχών.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Θα χρησιμοποιηθούν προσαρμοσμένα αναγνωριστικά για την αναγνώριση των συμπληρωματικών αρχείων των άρθρων.</message>
 	<message key="manager.setup.enableUserRegistration">Παροχή δυνατότητας σε χρήστες για εγγραφή στο περιοδικό αυτό σε έναν ή περισσότερους από τους παρακάτω ρόλους:</message>
 	<message key="manager.setup.focusAndScope">Θεματική περιοχή και περιεχόμενο</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Οδηγίες προς τους συγγραφείς για της ευρετηρίαση του έργου τους</message>
@@ -420,7 +416,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Σιγουρευτείτε ότι τουλάχιστον ένα πλαίσιο επιλογής έχει τσεκαριστεί για κάθε ανάθεση Επιμελητή Ενότητας.</message>
 	<message key="manager.sections.form.reviewFormId">Σιγουρευτείτε ότι έχετε επιλέξει μια έγκυρη φόρμα αξιολόγησης.</message>
 	<message key="manager.sections.hideTocAuthor">Παραλείψτε τα ονόματα των συγγραφέων για τεκμήρια ενοτήτων από τον πίνακα περιεχομένων του τεύχους</message>
-	<message key="manager.setup.enablePublicGalleyId">Προσαρμοσμένα αναγνωριστικά θα χρησιμοποιούνται για την αναγνώριση τυπογραφικών δοκιμίων (π.χ. HTML ή PDF αρχεία) δημοσιευμένων τεκμηρίων.</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Επικεφαλίδα Αρχικής Σελίδας Περιοδικού</message>
 	<message key="manager.setup.journalLogo.altText">Λογότυπο περιοδικού</message>
 	<message key="manager.subscriptionPolicies.expiry">Λήξη Συνδρομής</message>
@@ -502,7 +497,7 @@
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">Προβολές σελίδας περίληψης άρθρου</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Περιλήψεις άρθρου και μεταφορτώσεις</message>
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Προβολές αρχικής σελίδας περιοδικού</message>
-	<message key="manager.statistics.reports.today">Σήμερα</message>
+
 	<message key="manager.setup.categories">Κατηγορίες</message>
 	<message key="manager.setup.categories.description">Επιλέξτε τις κατάλληλες κατηγορίες από τη παραπάνω λίστα. Οι αναγνώστες θα μπορούν να πλοηγηθούν κατά κατηγορία από το ολοκλήρωμένο σετ του περιοδικού.</message>
 	<message key="manager.statistics.defaultMetricDescription">To Περιοδικό σας έχει ρυθμιστεί για να καταγράψει περισσότερα από ένα μετρικό σύστημα χρήσης. Τα στατιστικά χρήσης θα εμφανιστεί σε πολλαπλά πλαίσια.

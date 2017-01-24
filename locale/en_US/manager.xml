@@ -97,7 +97,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Please ensure that at least one checkbox is checked for each Section Editor assignment.</message>
 	<message key="manager.sections.form.reviewFormId">Please ensure that you have chosen a valid review form.</message>
 	<message key="manager.sections.form.titleRequired">A title is required for the section.</message>
-	<message key="manager.sections.hideAbout">Omit this section from About the Journal.</message>
 	<message key="manager.sections.hideTocAuthor">Omit author names for section items from issues' table of contents.</message>
 	<message key="manager.sections.hideTocTitle">Omit the title of this section from issues' table of contents.</message>
 	<message key="manager.sections.identifyType">Identify items published in this section as a(n)</message>
@@ -336,7 +335,7 @@
 	<message key="manager.setup.useTextTitle">Title text</message>
 	<message key="manager.statistics.defaultMetricDescription">
 		Your journal is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
-		There are cases where a single usage statistic must be used, e.g. to display an orderd list of most-used articles or to rank
+		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank
 		search results. Please select one of the configured metrics as a default.
 	</message>
 	<message key="manager.statistics.statistics">Journal Statistics</message>
@@ -363,7 +362,7 @@
 	<message key="manager.statistics.statistics.subscriptions">Subscriptions</message>
 	<message key="manager.statistics.reports.defaultReport.articleDownloads">Article file downloads</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">Article abstract page views</message>
-	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Article abstract and downloads</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Article abstract page views and downloads</message>
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Journal main page views</message>
 	<message key="manager.statistics.reports.defaultReport.issuePageViews">Issue table of contents page views</message>
 	<message key="manager.statistics.reports.filters.byContext.description">Narrow results by context (issues and/or article).</message>
@@ -598,4 +597,5 @@
 	<message key="plugins.importexport.common.cliError">ERROR:</message>
 	<message key="plugins.importexport.common.error.unknownJournal">The specified journal path, "{$journalPath}", does not exist.</message>
 	<message key="plugins.importexport.common.error.unknownObjects">The specified objects could not be found.</message>
+	<message key="manager.setup.notifications.copyPrimaryContact">Send a copy to the primary contact, identified in the Journal Settings.</message>
 </locale>

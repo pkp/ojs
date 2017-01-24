@@ -20,8 +20,8 @@ class SubmissionEmailLogEntry extends PKPSubmissionEmailLogEntry {
 	/**
 	 * Constructor.
 	 */
-	function SubmissionEmailLogEntry() {
-		parent::PKPSubmissionEmailLogEntry();
+	function __construct() {
+		parent::__construct();
 	}
 
 	function setArticleId($articleId) {

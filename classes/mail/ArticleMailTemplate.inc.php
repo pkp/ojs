@@ -28,8 +28,8 @@ class ArticleMailTemplate extends SubmissionMailTemplate {
 	 * @param $includeSignature boolean optional
 	 * @see SubmissionMailTemplate::SubmissionMailTemplate()
 	 */
-	function ArticleMailTemplate($article, $emailKey = null, $locale = null, $journal = null, $includeSignature = true) {
-		parent::SubmissionMailTemplate($article, $emailKey, $locale, $journal, $includeSignature);
+	function __construct($article, $emailKey = null, $locale = null, $journal = null, $includeSignature = true) {
+		parent::__construct($article, $emailKey, $locale, $journal, $includeSignature);
 	}
 
 	/**

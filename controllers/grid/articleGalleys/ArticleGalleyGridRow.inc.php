@@ -23,10 +23,10 @@ class ArticleGalleyGridRow extends GridRow {
 	 * Constructor
 	 * @param $submission Submission
 	 */
-	function ArticleGalleyGridRow($submission) {
+	function __construct($submission) {
 		$this->_submission = $submission;
 
-		parent::GridRow();
+		parent::__construct();
 	}
 
 	//

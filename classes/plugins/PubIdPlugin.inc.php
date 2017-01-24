@@ -20,8 +20,8 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 	/**
 	 * Constructor
 	 */
-	function PubIdPlugin() {
-		parent::PKPPubIdPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 

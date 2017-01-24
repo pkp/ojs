@@ -24,8 +24,8 @@ class IssueFile extends PKPFile {
 	/**
 	 * Constructor.
 	 */
-	function IssueFile() {
-		parent::PKPFile();
+	function __construct() {
+		parent::__construct();
 	}
 
 	//

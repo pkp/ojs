@@ -24,9 +24,6 @@
 %D {$issue->getYear()|escape}
 {/if}
 %T {$article->getLocalizedTitle()|strip_tags}
-%B {$article->getDatePublished()|date_format:"%Y"}
-%9 {$article->getLocalizedSubject()|escape}
-%! {$article->getLocalizedTitle()|strip_tags}
 %K {$article->getLocalizedSubject()|escape}
 %X {$article->getLocalizedAbstract()|strip_tags|replace:"\n":" "|replace:"\r":" "}
 %U {$articleUrl}
@@ -34,14 +31,7 @@
 %0 Journal Article
 {if $article->getStoredPubId('doi')}%R {$article->getStoredPubId('doi')|escape}
 {/if}
-{if $article->getPages()}
-{if $article->getStartingPage()}%& {$article->getStartingPage()|escape}{/if}
-{if $article->getEndingPage()}
-{math equation="end - start + 1" end=$article->getEndingPage() start=$article->getStartingPage() assign=pages}
-%P {$pages}
-{else}
-%P 1
-{/if}
+{if count($article->getPageArray()) > 0}%P {foreach from=$article->getPageArray() item=range name=pages}{$range[0]|escape}{if $range[1]}-{$range[1]|escape}{if !$smarty.foreach.pages.last},{/if}{/if}{/foreach}
 {/if}
 {if $issue->getShowVolume()}%V {$issue->getVolume()|escape}
 {/if}
@@ -52,8 +42,5 @@
 {/if}
 {if $article->getDatePublished()}
 %8 {$article->getDatePublished()|date_format:"%Y-%m-%d"}
-{/if}
-{if $issue->getDatePublished()}
-%7 {$issue->getDatePublished()|date_format:"%Y-%m-%d"}
 {/if}
 

@@ -49,6 +49,8 @@
 
 	{include file="submission/form/section.tpl" readOnly=$formParams.readOnly}
 
+	{include file="core:submission/submissionLocale.tpl" readOnly=$formParams.readOnly}
+
 	{include file="core:submission/submissionMetadataFormTitleFields.tpl" readOnly=$formParams.readOnly}
 
 	{* Contributors *}

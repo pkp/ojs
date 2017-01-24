@@ -60,7 +60,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Upewnij się, że przynajmniej jedno pole wyboru zostało wybrane dla każdego z redaktorów działu.</message>
 	<message key="manager.sections.form.reviewFormId">Upewnij się, że wybrałeś poprawny formularz recenzji.</message>
 	<message key="manager.sections.form.titleRequired">Nazwa działu jest wymagana.</message>
-	<message key="manager.sections.hideAbout">Wyklucz ten dział z informacji o czasopiśmie.</message>
 	<message key="manager.sections.hideTocAuthor">Wyklucz nazwiska autorów dla tego działu ze spisu treści numerów.</message>
 	<message key="manager.sections.hideTocTitle">Wyklucz nazwę działu ze spisu treści numerów.</message>
 	<message key="manager.sections.identifyType">Oznacz teksty opublikowane w tym dziale jako</message>
@@ -134,11 +133,7 @@
 	<message key="manager.setup.enableAnnouncements">Włącz dodawanie ogłoszeń przez redaktorów czasopisma.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Wyświetl</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">najnowszych ogłoszeń na stronie głównej czasopisma.</message>
-	<message key="manager.setup.enablePageNumber">Numery stron dla tekstów zostaną obliczone i wprowadzone manualnie do spisu treści (np. s. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Opublikowane teksty będą opatrzone niestandardowymi identyfikatorami.</message>
-	<message key="manager.setup.enablePublicGalleyId">Opublikowane pliki z finalnymi tekstami (HTML / PDF) będą opatrzone niestandardowymi identyfikatorami.</message>
 	<message key="manager.setup.enablePublicIssueId">Opublikowane wydania będą opatrzone niestandardowymi identyfikatorami.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Dodatkowe pliki będą opatrzone niestandardowymi identyfikatorami.</message>
 	<message key="manager.setup.enableUserRegistration">Następujące role będą dostępne dla użytkowników rejestrujących się w czasopiśmie:</message>
 	<message key="manager.setup.focusAndScope">Cel i zakres tematyczny czasopisma</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Dla autorów w celu indeksowania medatanych</message>

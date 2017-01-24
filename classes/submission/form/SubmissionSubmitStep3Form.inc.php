@@ -20,8 +20,8 @@ class SubmissionSubmitStep3Form extends PKPSubmissionSubmitStep3Form {
 	/**
 	 * Constructor.
 	 */
-	function SubmissionSubmitStep3Form($context, $submission) {
-		parent::PKPSubmissionSubmitStep3Form(
+	function __construct($context, $submission) {
+		parent::__construct(
 			$context,
 			$submission,
 			new SubmissionMetadataFormImplementation($this)

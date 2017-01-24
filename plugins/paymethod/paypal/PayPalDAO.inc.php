@@ -19,8 +19,8 @@ class PayPalDAO extends DAO {
 	/**
 	 * Constructor.
 	 */
-	function PayPalDAO() {
-		parent::DAO();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

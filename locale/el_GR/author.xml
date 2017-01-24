@@ -31,7 +31,7 @@
 	<message key="author.submit.metadata">Εισάγετε τα μεταδεδομένα</message>
 	<message key="author.submit.supplementaryFiles">Μεταφορτώστε τα συμπληρωματικά αρχεία (αν υπάρχουν)</message>
 	<message key="author.submit.confirmation">Επιβεβαίωση</message>
-	<message key="author.submit.cancelSubmission">Μπορείτε να ολοκληρώσετε αυτή την υποβολή αργότερα επιλέγοντας "Ενεργές Υποβολές" από την αρχική σελίδα του συγγραφέα.</message>
+	<message key="submission.submit.cancelSubmission">Μπορείτε να ολοκληρώσετε αυτή την υποβολή αργότερα επιλέγοντας "Ενεργές Υποβολές" από την αρχική σελίδα του συγγραφέα.</message>
 	<message key="author.submit.notAccepting">Αυτό το περιοδικό δεν δέχεται υποβολές τη συγκεκριμένη χρονική στιγμή.</message>
 	<message key="author.submit.requestWaiver">Αίτηση Παράβλεψης Εισφοράς Συγγραφέα</message>
 	<message key="author.submit.addReasonsForWaiver">Σας παρακαλούμε χρησιμοποιήστε το πλαίσιο σχολίων παρακάτω για να προσδιορίσετε τους λόγους για τους οποίους η καταβολή της εισφοράς συγγραφέα πρέπει να παραβλεφθεί.</message>
@@ -117,8 +117,6 @@
 	<message key="author.submissions.queuedEditingProofread">Σε Επιμέλεια: Έχει γίνει αίτημα για Επιμέλεια Τυπογραφικού Δοκιμίου</message>
 	<message key="author.submit.reorder">Αναδιάτασξη ονόματος συγγραφέα</message>
 	<message key="author.submit.form.wordCountAlert">Έχετε ξεπεράσει το μέγιστο αριθμό λέξεων για περιλήψεις αυτής της ενότητας.</message>
-	<message key="author.submit.submissionLocale">Γλώσσα υποβολής</message>
-	<message key="author.submit.submissionLocaleDescription">Το περιοδικό δέχεται υποβολές σε πολλές γλώσσες. Επιλέξτε την κύρια γλώσσα της υποβολής από το παρακάτω μενού.</message>
 	<message key="author.submit.form.localeRequired">Παρακαλούμε επιλέξτε μια γλώσσα υποβολής.</message>
 	<message key="author.submit.qualifyForWaiver">Παρακαλούμε εξετάστε την εξαίρεση του Κόστους Υποβολής Άρθρου για αυτό το άρθρο.</message>
 </locale>

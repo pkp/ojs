@@ -175,10 +175,6 @@
 	<message key="editor.article.assignEditor">أضف محرراً</message>
 	<message key="editor.article.selectEditor">إختر {$roleName}</message>
 	<message key="editor.article.selectDecision">إختر قراراً</message>
-	<message key="editor.article.decision.accept">إقبل طلب التقديم</message>
-	<message key="editor.article.decision.pendingRevisions">التحكيمات مطلوبة</message>
-	<message key="editor.article.decision.resubmit">أعد تقديمه للتحكيم</message>
-	<message key="editor.article.decision.decline">أرفض طلب التقديم</message>
 	<message key="editor.article.selectLayoutEditor">إختر محرر التصميم</message>
 	<message key="editor.article.replaceLayoutEditor">استبدل محرر التصميم</message>
 	<message key="editor.article.reviewSubmission">تنقيح طلب التقديم</message>

@@ -19,8 +19,8 @@ class WebFeedBlockPlugin extends BlockPlugin {
 	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
-	function WebFeedBlockPlugin($parentPluginName) {
-		parent::BlockPlugin();
+	function __construct($parentPluginName) {
+		parent::__construct();
 		$this->parentPluginName = $parentPluginName;
 	}
 
@@ -80,11 +80,10 @@ class WebFeedBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Override the builtin to get the correct template path.
-	 * @return string
+	 * @copydoc PKPPlugin::getTemplatePath
 	 */
-	function getTemplatePath() {
-		return $this->getWebFeedPlugin()->getTemplatePath();
+	function getTemplatePath($inCore = false) {
+		return $this->getWebFeedPlugin()->getTemplatePath($inCore);
 	}
 
 	/**

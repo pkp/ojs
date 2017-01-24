@@ -20,8 +20,8 @@ class SupplementaryFileNativeXmlFilter extends SubmissionFileNativeXmlFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function SupplementaryFileNativeXmlFilter($filterGroup) {
-		parent::SubmissionFileNativeXmlFilter($filterGroup);
+	function __construct($filterGroup) {
+		parent::__construct($filterGroup);
 	}
 
 
@@ -58,7 +58,7 @@ class SupplementaryFileNativeXmlFilter extends SubmissionFileNativeXmlFilter {
 		}
 		$this->createLocalizedNodes($doc, $submissionFileNode, 'source', $submissionFile->getSource(null));
 		if ($language = $submissionFile->getLanguage()) {
-			$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'language', $language));
+			$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'language', htmlspecialchars($language, ENT_COMPAT, 'UTF-8')));
 		}
 		return $submissionFileNode;
 	}

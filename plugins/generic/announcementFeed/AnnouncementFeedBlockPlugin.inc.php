@@ -21,9 +21,9 @@ class AnnouncementFeedBlockPlugin extends BlockPlugin {
 	/**
 	 * Constructor
 	 */
-	function AnnouncementFeedBlockPlugin($parentPluginName) {
+	function __construct($parentPluginName) {
 		$this->parentPluginName = $parentPluginName;
-		parent::BlockPlugin();
+		parent::__construct();
 	}
 
 	/**
@@ -76,12 +76,11 @@ class AnnouncementFeedBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Override the builtin to get the correct template path.
-	 * @return string
+	 * @copydoc PKPPlugin::getTemplatePath
 	 */
-	function getTemplatePath() {
-		$plugin =& $this->getAnnouncementFeedPlugin();
-		return $plugin->getTemplatePath() . 'templates/';
+	function getTemplatePath($inCore = false) {
+		$plugin = $this->getAnnouncementFeedPlugin();
+		return $plugin->getTemplatePath($inCore) . 'templates/';
 	}
 
 	/**

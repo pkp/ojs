@@ -128,6 +128,18 @@ URL υποβολής: {$submissionUrl}<br />
 {$editorialContactSignature}]]></body>
 		<description>Εφόσον έχει ενεργοποιηθεί η αντίστοιχη επιλογή, το συγκεκριμένο μήνυμα αποστέλλεται αυτόματα στον συγγραφέα όταν ολοκληρωθεί η διαδικασία υποβολής μιας εργασίας στο περιοδικό. Παρέχει πληροφορίες σχετικά με την παρακολούθηση της πορείας της υποβολής στις διάφορες διαδικασίες και ευχαριστεί τον συγγραφέα για την υποβολή.</description>
 	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>Επιβεβαίωση υποβολής</subject>
+		<body><![CDATA[Αγαπητέ κύριε/α,<br />
+<br />
+{$submitterName} έχετε υποβάλει την εργασία, &quot;{$submissionTitle}&quot; στις εκδόσεις {$contextName}. <br />
+<br />
+Για περισσότερες πληροφορίες παρακαλούμε επικοινωνήστε μαζί μας. Ευχαριστούμε που θεωρείτε τις εκδόσεις μας ως τον κατάλληλο χώρο για να δημοσιεύετε την εργασία σας. <br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email, when enabled, is automatically sent to the other authors who are not users within OMP specified during the submission process.
+Εφόσον έχει ενεργοποιηθεί η αντίστοιχη επιλογή, το συγκεκριμένο μήνυμα αποστέλλεται αυτόματα στον συγγραφέα που δεν είναι εγγεγραμμένος χρήστης όταν ολοκληρωθεί η διαδικασία υποβολής μιας εργασίας στις εκδόσεις.</description>
+	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
 		<subject>Μη κατάλληλη υποβολή</subject>
 		<body><![CDATA[{$authorName}:<br />

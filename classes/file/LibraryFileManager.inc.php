@@ -21,8 +21,8 @@ class LibraryFileManager extends PKPLibraryFileManager {
 	 * Constructor
 	 * @param $contextId int
 	 */
-	function LibraryFileManager($contextId) {
-		parent::PKPLibraryFileManager($contextId);
+	function __construct($contextId) {
+		parent::__construct($contextId);
 	}
 }
 

@@ -30,8 +30,8 @@ class ReviewerSubmission extends Article {
 	/**
 	 * Constructor.
 	 */
-	function ReviewerSubmission() {
-		parent::Article();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

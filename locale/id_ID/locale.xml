@@ -229,8 +229,6 @@
 	<message key="user.role.subscriptionManagers">Manajer Langganan</message>
 	<message key="user.role.journalAssistant">Asisten Jurnal</message>
 	<message key="user.role.journalAssistants">Asisten Jurnal</message>
-	<message key="user.role.guestEditor">Editor Tamu</message>
-	<message key="user.role.guestEditors">Editor Tamu</message>
 		
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Terbitan</message>

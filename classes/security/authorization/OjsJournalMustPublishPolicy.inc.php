@@ -25,8 +25,8 @@ class OjsJournalMustPublishPolicy extends AuthorizationPolicy {
 	 * @param $args array request arguments
 	 * @param $roleAssignments array
 	 */
-	function OjsJournalMustPublishPolicy($request) {
-		parent::AuthorizationPolicy('user.authorization.journalDoesNotPublish');
+	function __construct($request) {
+		parent::__construct('user.authorization.journalDoesNotPublish');
 		$this->_context = $request->getContext();
 	}
 

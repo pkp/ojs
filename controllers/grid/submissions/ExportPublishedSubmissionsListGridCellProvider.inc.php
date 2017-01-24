@@ -22,12 +22,12 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 	/**
 	 * Constructor
 	 */
-	function ExportPublishedSubmissionsListGridCellProvider($plugin, $authorizedRoles = null) {
+	function __construct($plugin, $authorizedRoles = null) {
 		$this->_plugin  = $plugin;
 		if ($authorizedRoles) {
 			$this->_authorizedRoles = $authorizedRoles;
 		}
-		parent::DataObjectGridCellProvider();
+		parent::__construct();
 	}
 
 	//

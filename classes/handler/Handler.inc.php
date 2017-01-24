@@ -19,8 +19,8 @@ class Handler extends PKPHandler {
 	/**
 	 * Constructor
 	 */
-	function Handler() {
-		parent::PKPHandler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

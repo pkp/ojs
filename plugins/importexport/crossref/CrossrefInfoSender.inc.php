@@ -24,7 +24,7 @@ class CrossrefInfoSender extends ScheduledTask {
 	 * Constructor.
 	 * @param $argv array task arguments
 	 */
-	function CrossrefInfoSender($args) {
+	function __construct($args) {
 		PluginRegistry::loadCategory('importexport');
 		$plugin = PluginRegistry::getPlugin('importexport', 'CrossRefExportPlugin'); /* @var $plugin CrossRefExportPlugin */
 		$this->_plugin = $plugin;
@@ -33,7 +33,7 @@ class CrossrefInfoSender extends ScheduledTask {
 			$plugin->addLocaleData();
 		}
 
-		parent::ScheduledTask($args);
+		parent::__construct($args);
 	}
 
 	/**

@@ -76,10 +76,10 @@ class ArticleReportPlugin extends ReportPlugin {
 		import('classes.article.Article');
 		import('classes.workflow.EditorDecisionActionsManager');
 		$decisionMessages = array(
-			SUBMISSION_EDITOR_DECISION_ACCEPT => __('editor.article.decision.accept'),
-			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => __('editor.article.decision.pendingRevisions'),
-			SUBMISSION_EDITOR_DECISION_RESUBMIT => __('editor.article.decision.resubmit'),
-			SUBMISSION_EDITOR_DECISION_DECLINE => __('editor.article.decision.decline'),
+			SUBMISSION_EDITOR_DECISION_ACCEPT => __('editor.submission.decision.accept'),
+			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => __('editor.submission.decision.pendingRevisions'),
+			SUBMISSION_EDITOR_DECISION_RESUBMIT => __('editor.submission.decision.resubmit'),
+			SUBMISSION_EDITOR_DECISION_DECLINE => __('editor.submission.decision.decline'),
 			null => __('plugins.reports.articles.nodecision')
 		);
 

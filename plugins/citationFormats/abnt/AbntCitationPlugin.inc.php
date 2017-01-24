@@ -75,19 +75,6 @@ class AbntCitationPlugin extends CitationPlugin {
 	}
 
 	/**
-	 * Display verbs for the management interface.
-	 * @return array
-	 */
-	function getManagementVerbs() {
-		return array(
-			array(
-				'settings',
-				__('plugins.citationFormats.abnt.manager.settings')
-			)
-		);
-	}
-
-	/**
 	 * @copydoc Plugin::getManagementVerbLinkAction()
 	 */
 	function getManagementVerbLinkAction($request, $verb) {

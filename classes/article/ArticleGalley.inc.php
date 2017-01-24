@@ -23,8 +23,8 @@ class ArticleGalley extends Representation {
 	/**
 	 * Constructor.
 	 */
-	function ArticleGalley() {
-		parent::Representation();
+	function __construct() {
+		parent::__construct();
 	}
 
 	//
@@ -36,7 +36,12 @@ class ArticleGalley extends Representation {
 	 */
 	function getViews() {
 		$application = PKPApplication::getApplication();
-		return $application->getPrimaryMetricByAssoc(ASSOC_TYPE_GALLEY, $this->getId());
+		$fileId = $this->getFileId();
+		if ($fileId) {
+			return $application->getPrimaryMetricByAssoc(ASSOC_TYPE_SUBMISSION_FILE, $fileId);
+		} else {
+			return 0;
+		}
 	}
 
 	/**
