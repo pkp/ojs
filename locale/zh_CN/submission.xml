@@ -11,7 +11,7 @@
   * Localization strings for the zh_CN (简体中文) locale.
   -->
 
-<locale name="zh_CN" full_name = "简体中文">
+<locale name="zh_CN" full_name="简体中文">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

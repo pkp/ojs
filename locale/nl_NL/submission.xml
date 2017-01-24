@@ -11,7 +11,7 @@
   * Localization strings for the nl_NL (Nederlands) locale.
   -->
 
-<locale name="nl_NL" full_name = "Nederlands">
+<locale name="nl_NL" full_name="Nederlands">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

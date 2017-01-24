@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="nb_NO" full_name = "Norwegian">
+<locale name="nb_NO" full_name="Norsk bokmål">
 	<message key="editor.home">Ansvarlig redaktør</message>
 	<message key="editor.submissionsAndPublishing">Manuskript og publisering</message>
 	<message key="editor.submissionQueue">Manuskriptkø</message>

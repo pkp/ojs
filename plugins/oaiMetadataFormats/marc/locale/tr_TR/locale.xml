@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name = "Turkish">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.OAIMetadata.marc.displayName">MARC Üst Veri Biçimi</message>
 	<message key="plugins.OAIMetadata.marc.description">Üst veri yapısı bir bakıma MARC biçimi ile tutarlı olmanın yoludur.</message>
 </locale>

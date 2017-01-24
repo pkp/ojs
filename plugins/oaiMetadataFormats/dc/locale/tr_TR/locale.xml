@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name = "Turkish">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.oaiMetadata.dc.displayName">DC Metadata Format</message>
 	<message key="plugins.oaiMetadata.dc.description">Structures metadata in a way that is consistent with the Dublin Core format.</message>
 </locale>
