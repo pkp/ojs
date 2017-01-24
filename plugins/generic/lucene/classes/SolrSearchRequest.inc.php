@@ -97,7 +97,7 @@ class SolrSearchRequest {
 	 * @param $searchHandler string The search handler URL. We assume the embedded server
 	 *  as a default.
 	 */
-	function SolrSearchRequest(){
+	function __construct(){
 		// The constructor does nothing
 	}
 

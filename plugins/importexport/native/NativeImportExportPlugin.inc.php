@@ -19,8 +19,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	/**
 	 * Constructor
 	 */
-	function NativeImportExportPlugin() {
-		parent::ImportExportPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**
@@ -113,6 +113,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				));
 				return $json->getString();
 			case 'import':
+				AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION);
 				$temporaryFileId = $request->getUserVar('temporaryFileId');
 				$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
 				$user = $request->getUser();
@@ -132,12 +133,42 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				if (in_array($document->documentElement->tagName, array('article', 'articles'))) {
 					$filter = 'native-xml=>article';
 				}
+
+				$deployment = new NativeImportExportDeployment($journal, $user);
+
 				libxml_use_internal_errors(true);
-				$content = $this->importSubmissions(file_get_contents($temporaryFilePath), $journal, $user, $filter);
+				$content = $this->importSubmissions(file_get_contents($temporaryFilePath), $filter, $deployment);
+				$templateMgr->assign('content', $content);
 				$validationErrors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR ||  $a->level == LIBXML_ERR_FATAL;'));
 				$templateMgr->assign('validationErrors', $validationErrors);
 				libxml_clear_errors();
-				$templateMgr->assign('content', $content);
+
+				// Are there any submissions import errors
+				$processedSubmissionsIds = $deployment->getProcessedObjectsIds(ASSOC_TYPE_SUBMISSION);
+				if (!empty($processedSubmissionsIds)) {
+					$submissionsErrors = array_filter($processedSubmissionsIds, create_function('$a', 'return !empty($a);'));
+					if (!empty($submissionsErrors)) {
+						$templateMgr->assign('submissionsErrors', $processedSubmissionsIds);
+					}
+				}
+				// Are there any issues import errors
+				$processedIssuesIds = $deployment->getProcessedObjectsIds(ASSOC_TYPE_ISSUE);
+				if (!empty($processedIssuesIds)) {
+					$issuesErrors = array_filter($processedIssuesIds, create_function('$a', 'return !empty($a);'));
+					if (!empty($issuesErrors)) {
+						$templateMgr->assign('issuesErrors', $processedIssuesIds);
+					}
+				}
+				// If there are any submissions or validataion errors
+				// delete imported submissions and issues.
+				// Issues errors can be ignored here, because they only contain section mismatch errors,
+				// that shall only be displayed to the user but that do not influence the import objects.
+				if (!empty($submissionsErrors) || !empty($validationErrors)) {
+					// remove all imported issues and sumissions
+					$deployment->removeImportedObjects(ASSOC_TYPE_ISSUE);
+					$deployment->removeImportedObjects(ASSOC_TYPE_SUBMISSION);
+				}
+				// Display the results
 				$json = new JSONMessage(true, $templateMgr->fetch($this->getTemplatePath() . 'results.tpl'));
 				return $json->getString();
 			case 'exportSubmissions':
@@ -192,9 +223,18 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			$submission = $submissionDao->getById($submissionId, $context->getId());
 			if ($submission) $submissions[] = $submission;
 		}
-		$submissionXml = $exportFilter->execute($submissions);
-		if ($submissionXml) $xml = $submissionXml->saveXml();
-		else fatalError('Could not convert submissions.');
+		libxml_use_internal_errors(true);
+		$submissionXml = $exportFilter->execute($submissions, true);
+		$xml = $submissionXml->saveXml();
+		$errors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;'));
+		if (!empty($errors)) {
+			$charset = Config::getVar('i18n', 'client_charset');
+			header('Content-type: text/html; charset=' . $charset);
+			echo '<html><body>';
+			$this->displayXMLValidationErrors($errors, $xml);
+			echo '</body></html>';
+			fatalError(__('plugins.importexport.common.error.validation'));
+		}
 		return $xml;
 	}
 
@@ -218,26 +258,34 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			$issue = $issueDao->getById($issueId, $context->getId());
 			if ($issue) $issues[] = $issue;
 		}
-		$issueXml = $exportFilter->execute($issues);
-		if ($issueXml) $xml = $issueXml->saveXml();
-		else fatalError('Could not convert issues.');
+		libxml_use_internal_errors(true);
+		$issueXml = $exportFilter->execute($issues, true);
+		$xml = $issueXml->saveXml();
+		$errors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;'));
+		if (!empty($errors)) {
+			$charset = Config::getVar('i18n', 'client_charset');
+			header('Content-type: text/html; charset=' . $charset);
+			echo '<html><body>';
+			$this->displayXMLValidationErrors($errors, $xml);
+			echo '</body></html>';
+			fatalError(__('plugins.importexport.common.error.validation'));
+		}
 		return $xml;
 	}
 
 	/**
 	 * Get the XML for a set of submissions wrapped in a(n) issue(s).
 	 * @param $importXml string XML contents to import
-	 * @param $context Context
-	 * @param $user User
 	 * @param $filter string Filter to be used
+	 * @param $deployment PKPImportExportDeployment
 	 * @return array Set of imported submissions
 	 */
-	function importSubmissions($importXml, $context, $user, $filter) {
+	function importSubmissions($importXml, $filter, $deployment) {
 		$filterDao = DAORegistry::getDAO('FilterDAO');
 		$nativeImportFilters = $filterDao->getObjectsByGroup($filter);
 		assert(count($nativeImportFilters) == 1); // Assert only a single unserialization filter
 		$importFilter = array_shift($nativeImportFilters);
-		$importFilter->setDeployment(new NativeImportExportDeployment($context, $user));
+		$importFilter->setDeployment($deployment);
 		return $importFilter->execute($importXml);
 	}
 

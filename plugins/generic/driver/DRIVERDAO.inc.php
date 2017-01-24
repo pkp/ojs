@@ -21,8 +21,8 @@ class DRIVERDAO extends OAIDAO {
  	/**
 	 * Constructor.
 	 */
-	function DRIVERDAO() {
-		parent::OAIDAO();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

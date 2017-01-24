@@ -19,8 +19,8 @@ class GatewayHandler extends Handler {
 	/**
 	 * Constructor
 	 */
-	function GatewayHandler() {
-		parent::Handler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	function index($args, $request) {

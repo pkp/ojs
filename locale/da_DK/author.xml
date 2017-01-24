@@ -27,7 +27,7 @@
 	<message key="author.submit.start">Start</message>
 	<message key="author.submit.supplementaryFiles">Overfør supplerende filer</message>
 	<message key="author.submit.confirmation">Bekræftelse</message>
-	<message key="author.submit.cancelSubmission">Du kan fuldføre denne indsendelse på et senere tidspunkt ved at vælge Aktive indsendelser på startsiden for forfattere.</message>
+	<message key="submission.submit.cancelSubmission">Du kan fuldføre denne indsendelse på et senere tidspunkt ved at vælge Aktive indsendelser på startsiden for forfattere.</message>
 	<message key="author.submit.notAccepting">Dette tidsskrift accepterer ikke indsendelser på nuværende tidspunkt.</message>
 	<message key="author.submit.requestWaiver">Anmod om afkald</message>
 	<message key="author.submit.qualifyForWaiver">Overvej at give afkald på artikelmanuskriptgebyret for denne artikel</message>
@@ -116,8 +116,6 @@
 	<message key="author.submissions.queuedReviewRevisions">Under bedømmelse: Rettelser påkrævet</message>
 	<message key="author.submissions.queuedEditingCopyedit">Under redigering: Manuskriptredigering påkrævet</message>
 	<message key="author.submissions.queuedEditingProofread">Under redigering: Korrekturlæsning påkrævet</message>
-	<message key="author.submit.submissionLocale">Indleveringssprog</message>
-	<message key="author.submit.submissionLocaleDescription">Dette tidsskrift accepterer indleverede manuskripter på en række sprog. Vælg det primære sprog for indleveringen i rullemenuen.</message>
 	<message key="author.submit.form.localeRequired">Vælg et indleveringssprog.</message>
 	<message key="author.submit.reorder">Genbestil forfatternavn</message>
 	<message key="author.submit.form.wordCountAlert">Du har overskredet grænsen for det maksimale antal ord for resuméer i denne sektion.</message>

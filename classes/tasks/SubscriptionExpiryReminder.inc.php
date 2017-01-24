@@ -20,8 +20,8 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 	/**
 	 * Constructor.
 	 */
-	function SubscriptionExpiryReminder() {
-		$this->ScheduledTask();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**
@@ -55,10 +55,10 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			$subscriptionContactSignature .= "\n" . $subscriptionMailingAddress;
 		}
 		if ($subscriptionPhone != '') {
-			$subscriptionContactSignature .= "\n" . AppLocale::Translate('user.phone') . ': ' . $subscriptionPhone;
+			$subscriptionContactSignature .= "\n" . __('user.phone') . ': ' . $subscriptionPhone;
 		}
 
-		$subscriptionContactSignature .= "\n" . AppLocale::Translate('user.email') . ': ' . $subscriptionEmail;
+		$subscriptionContactSignature .= "\n" . __('user.email') . ': ' . $subscriptionEmail;
 
 		$paramArray = array(
 			'subscriberName' => $user->getFullName(),

@@ -148,10 +148,6 @@
 	<message key="editor.article.assignEditor">Lägg till redaktör</message>
 	<message key="editor.article.selectEditor">Välj {$roleName}</message>
 	<message key="editor.article.selectDecision">Välj beslut</message>
-	<message key="editor.article.decision.accept">Acceptera manuskript</message>
-	<message key="editor.article.decision.pendingRevisions">Bearbetning krävs</message>
-	<message key="editor.article.decision.resubmit">Återsänd för granskning</message>
-	<message key="editor.article.decision.decline">Avböj manuskript</message>
 	<message key="editor.article.selectLayoutEditor">Välj Layoutredaktör</message>
 	<message key="editor.article.replaceLayoutEditor">Ersätt Layoutredaktör</message>
 	<message key="editor.article.reviewSubmission">Granskning av manuskript</message>

@@ -163,10 +163,6 @@
 	<message key="editor.article.assignEditor">Redakteur/in zuweisen</message>
 	<message key="editor.article.selectEditor">{$roleName} auswählen</message>
 	<message key="editor.article.selectDecision">Entscheidung auswählen</message>
-	<message key="editor.article.decision.accept">Beitrag annehmen</message>
-	<message key="editor.article.decision.pendingRevisions">Überarbeitung erforderlich</message>
-	<message key="editor.article.decision.resubmit">Erneut zur Begutachtung einreichen</message>
-	<message key="editor.article.decision.decline">Beitrag ablehnen</message>
 	<message key="editor.article.selectLayoutEditor">Layouter/in auswählen</message>
 	<message key="editor.article.replaceLayoutEditor">Layouter/in ersetzen</message>
 	<message key="editor.article.reviewSubmission">Beitrag begutachten</message>

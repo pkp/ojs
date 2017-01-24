@@ -19,8 +19,8 @@ class TocGridCellProvider extends GridCellProvider {
 	/**
 	 * Constructor
 	 */
-	function TocGridCellProvider($translate = false) {
-		parent::GridCellProvider();
+	function __construct($translate = false) {
+		parent::__construct();
 	}
 
 	/**

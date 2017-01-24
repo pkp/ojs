@@ -29,7 +29,7 @@
 	<message key="author.submit.metadata">Wprowadź metadane</message>
 	<message key="author.submit.supplementaryFiles">Prześlij dodatkowe pliki</message>
 	<message key="author.submit.confirmation">Potwierdź</message>
-	<message key="author.submit.cancelSubmission">Możesz uzupełnić swoje zgłoszenie w późniejszym terminie, przechodząc do "Zgłoszone teksty" w zakładce "Moje konto".</message>
+	<message key="submission.submit.cancelSubmission">Możesz uzupełnić swoje zgłoszenie w późniejszym terminie, przechodząc do "Zgłoszone teksty" w zakładce "Moje konto".</message>
 	<message key="author.submit.notAccepting">Czasopismo nie przyjmuje obecnie nowych zgłoszeń.</message>
 	<message key="author.submit.requestWaiver">Prośba o umorzenie płatności za publikację</message>
 	<message key="author.submit.qualityForWaiver">Proszę o umorzenie płatności za publikację testu</message>
@@ -48,8 +48,6 @@
 	<message key="author.submit.journalSection">Dział czasopisma</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Wybierz docelowy dział dla przesyłanego tekstu (informacje o działach znajdziesz na stronie <a href="{$aboutUrl}" target="_new">O czasopiśmie</a>).]]></message>
 	<message key="submission.submit.selectSection">Wybierz dział...</message>
-	<message key="author.submit.submissionLocale">Język przesyłanego tekstu</message>
-	<message key="author.submit.submissionLocaleDescription">Czasopismo akceptuje teksty napisane w różnych językach. Wybierz w jakim języku został napisany tekst.</message>
 	<message key="author.submit.submissionChecklist">Sprawdzenie tekstu przed wysłaniem</message>
 	<message key="author.submit.verifyChecklist">Aby kontynuować, upewnij się, że wszystkie elementy listy zostały zaznaczone.</message>
 	<message key="author.submit.copyrightNoticeAgree">Zapoznałem się z prawami autorskimi dotyczącymi przesyłanego tekstu (ewentualny komenatrz dla redaktora można wpisać poniżej).</message>

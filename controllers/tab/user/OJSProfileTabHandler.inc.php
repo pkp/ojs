@@ -20,8 +20,8 @@ class OJSProfileTabHandler extends ProfileTabHandler {
 	/**
 	 * Constructor
 	 */
-	function OJSProfileTabHandler() {
-		parent::ProfileTabHandler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

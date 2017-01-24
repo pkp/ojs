@@ -21,9 +21,9 @@ class GalleyMedraXmlFilter extends ArticleMedraXmlFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function GalleyMedraXmlFilter($filterGroup) {
+	function __construct($filterGroup) {
 		$this->setDisplayName('mEDRA XML galley export');
-		parent::ArticleMedraXmlFilter($filterGroup);
+		parent::__construct($filterGroup);
 	}
 
 	/**

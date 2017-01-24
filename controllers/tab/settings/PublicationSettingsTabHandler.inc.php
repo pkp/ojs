@@ -20,8 +20,8 @@ class PublicationSettingsTabHandler extends ManagerSettingsTabHandler {
 	/**
 	 * Constructor
 	 */
-	function PublicationSettingsTabHandler() {
-		parent::ManagerSettingsTabHandler();
+	function __construct() {
+		parent::__construct();
 		$this->setPageTabs(array(
 			'genres' => 'controllers/tab/settings/genres.tpl',
 			'submissionStage' => 'lib.pkp.controllers.tab.settings.submissionStage.form.SubmissionStageForm',

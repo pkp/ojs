@@ -20,8 +20,8 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 	 * Constructor.
 	 * @param $contextId omit for a new journal
 	 */
-	function JournalSiteSettingsForm($contextId = null) {
-		parent::ContextSiteSettingsForm($contextId);
+	function __construct($contextId = null) {
+		parent::__construct($contextId);
 	}
 
 	/**

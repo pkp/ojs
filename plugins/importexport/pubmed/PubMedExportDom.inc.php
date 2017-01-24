@@ -97,18 +97,12 @@ class PubMedExportDom {
 		// there is some ambiguity for online journals as to what
 		// "page numbers" are; for example, some journals (eg. JMIR)
 		// use the "e-location ID" as the "page numbers" in PubMed
-		$pages = $article->getPages();
-		if (preg_match("/([0-9]+)\s*-\s*([0-9]+)/i", $pages, $matches)) {
-			// simple pagination (eg. "pp. 3- 		8")
-			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $matches[1]);
-			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $matches[2]);
-		} elseif (preg_match("/(e[0-9]+)\s*-\s*(e[0-9]+)/i", $pages, $matches)) { // e9 - e14, treated as page ranges
-			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $matches[1]);
-			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $matches[2]);
-		} elseif (preg_match("/(e[0-9]+)/i", $pages, $matches)) {
-			// single elocation-id (eg. "e12")
-			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $matches[1]);
-			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $matches[1]);
+		$startPage = $pubObject->getStartingPage();
+		$endPage = $pubObject->getEndingPage();
+		if (isset($startPage) && $startPage !== "") {
+			// We have a page range or e-location id
+			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $startPage);
+			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $endPage);
 		} else {
 			// we need to insert something, so use the best ID possible
 			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $article->getBestArticleId());

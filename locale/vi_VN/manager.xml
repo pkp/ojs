@@ -86,7 +86,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Đảm bảo rằng ít nhất một ô được đánh dấu cho mỗi đầu việc giao cho Biên tập viên Chuyên mục.</message>
 	<message key="manager.sections.form.reviewFormId">Đảm bảo rằng bạn đã chọn mẫu phiếu phản biện hợp lệ</message>
 	<message key="manager.sections.form.titleRequired">Chuyên mục này phải có tên.</message>
-	<message key="manager.sections.hideAbout">Bỏ mục này trong trang Giới thiệu Tạp chí.</message>
 	<message key="manager.sections.hideTocAuthor">Bỏ tên tác giả khỏi các bài trong chuyên mục trên mục lục của các số tạp chí</message>
 	<message key="manager.sections.hideTocTitle">Không đưa chuyên mục này vào mục lục của tạp chí.</message>
 	<message key="manager.sections.identifyType">Để dễ dàng mô tả, xác định mọi bài viết trong chuyện mục này là</message>
@@ -148,11 +147,7 @@
 	<message key="manager.setup.enableAnnouncements">Cho phép Tổng biên tập thêm các thông báo của tạp chí.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Hiển thị</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">trong số những thông báo gần đây nhất lên trang chủ của tạp chí.</message>
-	<message key="manager.setup.enablePageNumber">Số trang của bài viết sẽ được tính và nhập bằng tay vào Mục lục (v.d., tr. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Các định danh riêng sẽ được dùng để định danh các bài viết được xuất bản.</message>
-	<message key="manager.setup.enablePublicGalleyId">Dấu hiệu tự đặt được dùng để xác đinh</message>
 	<message key="manager.setup.enablePublicIssueId">Các định danh riêng sẽ được dùng để định danh các số tạp chí.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Các định danh riêng sẽ được dùng để định danh các file phụ trợ.</message>
 	<message key="manager.setup.enableUserRegistration">Người dùng có thể tự đăng ký với tạp chí với một hoặc nhiều vai trò sau:</message>
 	<message key="manager.setup.focusAndScope">Trọng tâm và Phạm vi</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Để tác giả lập chỉ mục tác phẩm của mình</message>

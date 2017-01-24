@@ -29,7 +29,7 @@ class SubscriptionTypeForm extends Form {
 	 * Constructor
 	 * @param typeId int leave as default for new subscription type
 	 */
-	function SubscriptionTypeForm($typeId = null) {
+	function __construct($typeId = null) {
 
 		$this->validFormats = array (
 			SUBSCRIPTION_TYPE_FORMAT_ONLINE => __('subscriptionTypes.format.online'),
@@ -46,7 +46,7 @@ class SubscriptionTypeForm extends Form {
 
 		$this->typeId = isset($typeId) ? (int) $typeId : null;
 
-		parent::Form('subscription/subscriptionTypeForm.tpl');
+		parent::__construct('subscription/subscriptionTypeForm.tpl');
 
 		// Type name is provided
 		$this->addCheck(new FormValidatorLocale($this, 'name', 'required', 'manager.subscriptionTypes.form.typeNameRequired'));

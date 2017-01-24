@@ -21,8 +21,8 @@ class IssueGalleyDAO extends DAO {
 	/**
 	 * Constructor.
 	 */
-	function IssueGalleyDAO() {
-		parent::DAO();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

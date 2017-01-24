@@ -23,8 +23,8 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm {
 	 * @param $stageId integer
 	 * @param $formParams array
 	 */
-	function PublicIdentifiersForm($pubObject, $stageId = null, $formParams = null) {
-		parent::PKPPublicIdentifiersForm($pubObject, $stageId, $formParams);
+	function __construct($pubObject, $stageId = null, $formParams = null) {
+		parent::__construct($pubObject, $stageId, $formParams);
 	}
 
 	/**

@@ -26,7 +26,7 @@ class SubmissionEntryLinkAction extends LinkAction {
 	 * none is passed, the first submission entry tab will be opened.
 	 * @param $image string
 	 */
-	function SubmissionEntryLinkAction($request, $submissionId, $stageId, $selectedGalleyId = null, $image = 'information') {
+	function __construct($request, $submissionId, $stageId, $selectedGalleyId = null, $image = 'information') {
 		// Instantiate the modal.
 		$dispatcher = $request->getDispatcher();
 		import('lib.pkp.classes.linkAction.request.AjaxModal');
@@ -51,7 +51,7 @@ class SubmissionEntryLinkAction extends LinkAction {
 
 		// Configure the link action.
 		$toolTip = ($image == 'completed') ? __('grid.action.galleyInIssueEntry') : null;
-		parent::LinkAction('issueEntry', $modal, __('submission.issueEntry'), $image, $toolTip);
+		parent::__construct('issueEntry', $modal, __('submission.issueEntry'), $image, $toolTip);
 	}
 }
 

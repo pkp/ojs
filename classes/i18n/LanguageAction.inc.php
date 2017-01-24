@@ -22,8 +22,8 @@ class LanguageAction extends PKPLanguageAction {
 	/**
 	 * Constructor.
 	 */
-	function LanguageAction() {
-		parent::PKPLanguageAction();
+	function __construct() {
+		parent::__construct();
 	}
 }
 

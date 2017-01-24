@@ -20,8 +20,8 @@ class IssueGalleyGridHandler extends GridHandler {
 	/**
 	 * Constructor
 	 */
-	function IssueGalleyGridHandler() {
-		parent::GridHandler();
+	function __construct() {
+		parent::__construct();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER),
 			array(

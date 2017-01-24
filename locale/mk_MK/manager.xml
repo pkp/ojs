@@ -95,7 +95,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Please ensure that at least one checkbox is checked for each Section Editor assignment.</message>
 	<message key="manager.sections.form.reviewFormId">Ве молам осигурајте се дека имате избрано валидна форма за преглед.</message>
 	<message key="manager.sections.form.titleRequired">Наслов е потребен за овој дел.</message>
-	<message key="manager.sections.hideAbout">Изостави го овој дел од делот “За списанието“</message>
 	<message key="manager.sections.hideTocAuthor">Изостави ги имињата на авторот во делот на ставки од содржината.</message>
 	<message key="manager.sections.hideTocTitle">Изостави го насловот во овој дел од содржината.</message>
 	<message key="manager.sections.identifyType">Идентификувај ги ставките објавени во овој дел како</message>
@@ -159,11 +158,7 @@
 	<message key="manager.setup.enableAnnouncements">Овозможување на менаџерите на списанието да додадат соопштение во списанието .</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Приказ</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">од најновите соопштенија на почетната страница на списанието.</message>
-	<message key="manager.setup.enablePageNumber">Броевите на страницата за ставки ќе се пресметуваат и внесуваат рачно во Табела за содржина (на пример, стр 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Прилагодените HTML идентификатори ќе се користат за да се идентификуваат објавените предмети.</message>
-	<message key="manager.setup.enablePublicGalleyId">Прилагодените HTML идентификатори ќе се користат за да се идентификуваат форматите (на пример, HTML или PDF датотеки) за објавените предмети.</message>
 	<message key="manager.setup.enablePublicIssueId">Прилагодените HTML идентификатори ќе се користат за да се идентификуваат прашања.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Прилагодените HTML идентификатори ќе се користат за да се идентификуваат темите.</message>
 	<message key="manager.setup.enableUserRegistration">Корисниците можат да се регистрираат со списанието во една или повеќе од следните улоги:</message>
 	<message key="manager.setup.focusAndScope">Фокус и опсег</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">За авторите да ја означат нивната работа</message>

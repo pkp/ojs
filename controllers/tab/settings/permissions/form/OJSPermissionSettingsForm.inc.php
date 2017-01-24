@@ -20,8 +20,8 @@ class OJSPermissionSettingsForm extends PermissionSettingsForm {
 	/**
 	 * Constructor.
 	 */
-	function OJSPermissionSettingsForm($wizardMode = false) {
-		parent::PermissionSettingsForm(
+	function __construct($wizardMode = false) {
+		parent::__construct(
 			array(
 				'copyrightYearBasis' => 'string',
 			),

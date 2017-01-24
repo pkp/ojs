@@ -20,8 +20,8 @@ class PubIdExportSubmissionsListGridCellProvider extends ExportPublishedSubmissi
 	/**
 	 * Constructor
 	 */
-	function PubIdExportSubmissionsListGridCellProvider($plugin, $authorizedRoles = null) {
-		parent::ExportPublishedSubmissionsListGridCellProvider($plugin, $authorizedRoles);
+	function __construct($plugin, $authorizedRoles = null) {
+		parent::__construct($plugin, $authorizedRoles);
 	}
 
 	/**

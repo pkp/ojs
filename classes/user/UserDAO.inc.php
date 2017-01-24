@@ -22,8 +22,8 @@ class UserDAO extends PKPUserDAO {
 	/**
 	 * Constructor.
 	 */
-	function UserDAO() {
-		parent::PKPUserDAO();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

@@ -40,8 +40,8 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	/**
 	 * Constructor
 	 */
-	function CrossRefExportPlugin() {
-		parent::DOIPubIdExportPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**
@@ -141,7 +141,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc DOIPubIdExportPlugin::getSettingsFormClassName()
+	 * @copydoc PubObjectsExportPlugin::getSettingsFormClassName()
 	 */
 	function getSettingsFormClassName() {
 		return 'CrossRefSettingsForm';
@@ -181,7 +181,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc DOIPubIdExportPlugin::depositXML()
+	 * @copydoc PubObjectsExportPlugin::depositXML()
 	 */
 	function depositXML($objects, $context, $filename) {
 		$curlCh = curl_init();

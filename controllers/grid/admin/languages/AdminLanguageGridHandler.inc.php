@@ -21,8 +21,8 @@ class AdminLanguageGridHandler extends PKPAdminLanguageGridHandler {
 	/**
 	 * Constructor
 	 */
-	function AdminLanguageGridHandler() {
-		parent::PKPAdminLanguageGridHandler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

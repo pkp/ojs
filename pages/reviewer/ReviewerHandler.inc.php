@@ -19,8 +19,8 @@ class ReviewerHandler extends PKPReviewerHandler {
 	/**
 	 * Constructor
 	 */
-	function ReviewerHandler() {
-		parent::PKPReviewerHandler();
+	function __construct() {
+		parent::__construct();
 		$this->addRoleAssignment(
 			ROLE_ID_REVIEWER, array(
 				'submission', 'step', 'saveStep',

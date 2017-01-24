@@ -19,7 +19,7 @@ class EmbeddedServer {
 	//
  	// Constructor
  	//
-	function EmbeddedServer() {
+	function __construct() {
 	}
 
 

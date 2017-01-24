@@ -20,8 +20,8 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
-	function WebFeedGatewayPlugin($parentPluginName) {
-		parent::GatewayPlugin();
+	function __construct($parentPluginName) {
+		parent::__construct();
 		$this->parentPluginName = $parentPluginName;
 	}
 
@@ -65,11 +65,10 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 	}
 
 	/**
-	 * Override the builtin to get the correct template path.
-	 * @return string
+	 * @copydoc PKPPlugin::getTemplatePath
 	 */
-	function getTemplatePath() {
-		return $this->getWebFeedPlugin()->getTemplatePath();
+	function getTemplatePath($inCore = false) {
+		return $this->getWebFeedPlugin()->getTemplatePath($inCore);
 	}
 
 	/**
@@ -135,11 +134,13 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		$version = $versionDao->getCurrentVersion();
 
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('ojsVersion', $version->getVersionString());
-		$templateMgr->assign('publishedArticles', $publishedArticles);
-		$templateMgr->assign('journal', $journal);
-		$templateMgr->assign('issue', $issue);
-		$templateMgr->assign('showToc', true);
+		$templateMgr->assign(array(
+			'ojsVersion' => $version->getVersionString(),
+			'publishedArticles' => $publishedArticles,
+			'journal' => $journal,
+			'issue' => $issue,
+			'showToc' => true,
+		));
 
 		$templateMgr->display($this->getTemplatePath() . $typeMap[$type], $mimeTypeMap[$type]);
 

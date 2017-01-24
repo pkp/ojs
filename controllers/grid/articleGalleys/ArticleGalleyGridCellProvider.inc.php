@@ -24,8 +24,8 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 	 * Constructor
 	 * @param $submission Submission
 	 */
-	function ArticleGalleyGridCellProvider($submission) {
-		parent::DataObjectGridCellProvider();
+	function __construct($submission) {
+		parent::__construct();
 		$this->_submission = $submission;
 	}
 

@@ -86,7 +86,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Veuillez vous assurer qu'au moins une case à cocher est sélectionnée pour chaque assignation à un Rédacteur de rubrique.</message>
 	<message key="manager.sections.form.reviewFormId">Veuillez vous assurer que vous avez choisi un formulaire d'évaluation valide.</message>
 	<message key="manager.sections.form.titleRequired">Un titre est obligatoire pour la rubrique.</message>
-	<message key="manager.sections.hideAbout">Omettre cette rubrique de À propos de cette revue.</message>
 	<message key="manager.sections.hideTocAuthor">Omettre les noms d'auteur pour les articles de rubriques des sommaires de numéros.</message>
 	<message key="manager.sections.hideTocTitle">Omettre le titre de cette rubrique des sommaires de numéros.</message>
 	<message key="manager.sections.identifyType">Identifier les articles publiés dans cette rubrique en tant que un(e)</message>
@@ -146,11 +145,7 @@
 	<message key="manager.setup.enableAnnouncements">Permettre aux Directeurs de revues d'ajouter des annonces relatives à la revue.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Afficher les</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">annonces les plus récentes dans la page d'accueil de la revue.</message>
-	<message key="manager.setup.enablePageNumber">La pagination pour les articles sera calculée et saisie manuellement dans le sommaire de cette revue (par ex., p. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Des identifiants personnalisés seront utilisés pour identifier les articles publiés.</message>
-	<message key="manager.setup.enablePublicGalleyId">Des identifiants personnalisés seront utilisés pour identifier les épreuves (par ex., des fichiers HTML ou PDF) pour les éléments publiés.</message>
 	<message key="manager.setup.enablePublicIssueId">Des identifiants personnalisés seront utilisés pour identifier les numéros.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Des identifiants personnalisés seront utilisés pour identifier les fichiers supplémentaires de l'article.</message>
 	<message key="manager.setup.enableUserRegistration">Les utilisateurs peuvent s'inscrire eux-mêmes à la revue.</message>
 	<message key="manager.setup.focusAndScope">Énoncé de mission</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Aide aux auteurs pour l'indexation de leur travail</message>
@@ -507,7 +502,7 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">Vues de la page résumé de l'article</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Résumé de l'article et téléchargements</message>
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Vue de la page principale de la revue</message>
-	<message key="manager.statistics.reports.today">Aujourd'hui</message>
+
 	<message key="manager.statistics.reports.filters.byContext.description">Affiner les résultats par contexte (numéro et/ou article).</message>
 	<message key="manager.statistics.reports.filters.byObject.description">Affiner les résultats par type d'objet (revue, numéro, article, épreuves PDF, autres épreuves) et/ou par un ou plusieurs ID(s) d'objet.</message>
 

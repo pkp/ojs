@@ -23,8 +23,8 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 	/**
 	 * Constructor
 	 */
-	function PubIdExportRepresentationsListGridHandler() {
-		parent::GridHandler();
+	function __construct() {
+		parent::__construct();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER),
 			array('fetchGrid', 'fetchRow')

@@ -21,8 +21,8 @@ class OjsIssueGalleyRequiredPolicy extends DataObjectRequiredPolicy {
 	 * @param $args array request parameters
 	 * @param $operations array
 	 */
-	function OjsIssueGalleyRequiredPolicy($request, &$args, $operations = null) {
-		parent::DataObjectRequiredPolicy($request, $args, 'issueGalleyId', 'user.authorization.invalidIssueGalley', $operations);
+	function __construct($request, &$args, $operations = null) {
+		parent::__construct($request, $args, 'issueGalleyId', 'user.authorization.invalidIssueGalley', $operations);
 	}
 
 	//

@@ -19,8 +19,8 @@ class PayPalPlugin extends PaymethodPlugin {
 	/**
 	 * Constructor
 	 */
-	function PayPalPlugin() {
-		parent::PaymethodPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

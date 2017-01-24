@@ -18,7 +18,7 @@ class ArticleTombstoneManager {
 	/**
 	 * Constructor
 	 */
-	function ArticleTombstoneManager() {
+	function __construct() {
 	}
 
 	function insertArticleTombstone(&$article, &$journal) {

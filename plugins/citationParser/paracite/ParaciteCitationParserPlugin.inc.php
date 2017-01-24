@@ -20,8 +20,8 @@ class ParaciteCitationParserPlugin extends PKPParaciteCitationParserPlugin {
 	/**
 	 * Constructor
 	 */
-	function ParaciteCitationParserPlugin() {
-		parent::PKPParaciteCitationParserPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 }
 

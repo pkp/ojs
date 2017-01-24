@@ -87,7 +87,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Sørg for at mindst et afkrydsningsfelt er markeret for hver sektionsredaktøropgave.</message>
 	<message key="manager.sections.form.reviewFormId">Sørg for at du har valgt en gyldig review formular.</message>
 	<message key="manager.sections.form.titleRequired">En titel er påkrævet for denne sektion.</message>
-	<message key="manager.sections.hideAbout">Udelad denne sektion fra Om tidsskriftet.</message>
 	<message key="manager.sections.hideTocAuthor">Udelad fatternavne for sektionselementer fra numrenes indholdsfortegnelse.</message>
 	<message key="manager.sections.hideTocTitle">Udelad denne sektionstitel fra numres indholdsfortegnelse.</message>
 	<message key="manager.sections.identifyType">Identificer, med henblik på metadataformål, alle elementer i denne sektion som en/et</message>
@@ -147,11 +146,7 @@
 	<message key="manager.setup.enableAnnouncements">Gør det muligt for tidsskriftschefer at tilføje tidsskriftsmeddelelser.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Visning</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">af de seneste meddelelser på tidsskriftets hjemmeside.</message>
-	<message key="manager.setup.enablePageNumber">Elementers sidetal beregnes og angives manuelt i indholdsfortegnelsen (f.eks. s. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Brugerdefinerede id'er benyttes til at identificere publicerede elementer.</message>
-	<message key="manager.setup.enablePublicGalleyId">Redigerbare identifikationsmarkører bruges til at identificere korrekturer (f.eks. HTML eller PDF filer) for publicerede elementer.</message>
 	<message key="manager.setup.enablePublicIssueId">Brugerdefinerede id'er benyttes til at identificere numre.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Brugerdefinerede id'er benyttes til at identificere supplerende artikelfiler.</message>
 	<message key="manager.setup.enableUserRegistration">Brugere kan lade sig registrere hos tidsskriftet i en eller flere af følgende roller:</message>
 	<message key="manager.setup.focusAndScope">Fokus og område</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Til forfattere til indeksering af deres værker</message>

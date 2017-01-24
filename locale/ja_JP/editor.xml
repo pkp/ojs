@@ -141,10 +141,6 @@
 	<message key="editor.article.assignEditor">編集者を任命</message>
 	<message key="editor.article.selectEditor">{$roleName}の選択</message>
 	<message key="editor.article.selectDecision">判断の選択</message>
-	<message key="editor.article.decision.accept">アクセプト</message>
-	<message key="editor.article.decision.pendingRevisions">改訂を要求</message>
-	<message key="editor.article.decision.resubmit">査読のやり直し</message>
-	<message key="editor.article.decision.decline">リジェクト</message>
 	<message key="editor.article.selectLayoutEditor">レイアウトエディタを選択</message>
 	<message key="editor.article.replaceLayoutEditor">レイアウトエディタを置換</message>
 	<message key="editor.article.reviewSubmission">投稿物を査読</message>

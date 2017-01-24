@@ -29,8 +29,8 @@ class IssueGalley extends IssueFile {
 	/**
 	 * Constructor.
 	 */
-	function IssueGalley() {
-		parent::IssueFile();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

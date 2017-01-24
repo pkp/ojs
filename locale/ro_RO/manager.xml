@@ -90,7 +90,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Asiguraţi-vă că este pusă cel puţin o bifă pentru fiecare dintre sarcinile redactorului de secţiune.</message>
 	<message key="manager.sections.form.reviewFormId">Asigură-te că ai ales un formular de evaluare valid.</message>
 	<message key="manager.sections.form.titleRequired">Este necesar un titlu pentru această secţiune.</message>
-	<message key="manager.sections.hideAbout">Nu menționa această secţiune în secţiunea „despre” revistă.</message>
 	<message key="manager.sections.hideTocAuthor">Nu menționa numele autorilor pentru articolele secţiunii din cuprinsul acestui număr.</message>
 	<message key="manager.sections.hideTocTitle">Nu menționa titlul acestei secţiuni în cuprinsul numărului.</message>
 	<message key="manager.sections.identifyType">Identifică articolele publicate în această secţiune ca şi un/o</message>
@@ -162,11 +161,7 @@
 	<message key="manager.setup.enableAnnouncements">Permite managerilor revistei să adauge noutăți la revistă.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Afişarea</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">celor mai recente anunţuri pe pagina principală destinată anunțurilor.</message>
-	<message key="manager.setup.enablePageNumber">Numerotarea paginilor pentru articole va fi calculată şi introdusă manual în cuprins (ex. p. 14-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Pentru a identifica articolele publicate, vor fi utilizaţi identificatori creați special în acest scop.</message>
-	<message key="manager.setup.enablePublicGalleyId">Pentru a identifica diferitele asamblări, vor fi utilizaţi diferiţi identificatori (de ex. fişiere HTML sau PDF) pentru articolele publicate.</message>
 	<message key="manager.setup.enablePublicIssueId">Pentru a identifica numerele, vor fi folosiţi identificatori creați special în acest scop.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Pentru a identifica fişierele suplimentare necesare articolelor, vor fi utilizaţi identificatori creați special în acest scop.</message>
 	<message key="manager.setup.enableUserRegistration">Utilizatorii se pot înregistra la revistă, putând îndeplini unul din următoarele roluri:</message>
 	<message key="manager.setup.focusAndScope">Obiectivele şi domeniul acoperit</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Pentru autori pentru a-şi indexa opera</message>

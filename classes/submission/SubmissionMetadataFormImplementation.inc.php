@@ -21,8 +21,8 @@ class SubmissionMetadataFormImplementation extends PKPSubmissionMetadataFormImpl
 	 * Constructor.
 	 * @param $parentForm Form A form that can use this form.
 	 */
-	function SubmissionMetadataFormImplementation($parentForm = null) {
-		parent::PKPSubmissionMetadataFormImplementation($parentForm);
+	function __construct($parentForm = null) {
+		parent::__construct($parentForm);
 	}
 
 	/**
