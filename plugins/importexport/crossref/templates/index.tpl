@@ -39,7 +39,7 @@
 				{foreach from=$configurationErrors item=configurationError}
 					{if $configurationError == $smarty.const.DOI_EXPORT_CONFIG_ERROR_DOIPREFIX}
 						{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=crossrefConfigurationErrors notificationStyleClass="notifyWarning" notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents="plugins.importexport.common.error.DOIsNotAvailable"|translate}
-					{elseif $configurationError == $smarty.const.DOI_EXPORT_CONFIG_ERROR_SETTINGS}
+					{elseif $configurationError == $smarty.const.EXPORT_CONFIG_ERROR_SETTINGS}
 						{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=crossrefConfigurationErrors notificationStyleClass="notifyWarning" notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents="plugins.importexport.common.error.pluginNotConfigured"|translate}
 					{/if}
 				{/foreach}
@@ -78,9 +78,9 @@
 					{url|assign:submissionsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportSubmissionsListGridHandler" op="fetchGrid" plugin="crossref" category="importexport" escape=false}
 					{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
 					{if !empty($actionNames)}
-						<ul class="pubids_export_actions">
+						<ul class="export_actions">
 							{foreach from=$actionNames key=action item=actionName}
-								<li class="pubids_export_action">
+								<li class="export_action">
 									{fbvElement type="submit" label="$actionName" id="$action" name="$action" value="1" class="$action" translate=false inline=true}
 								</li>
 							{/foreach}
