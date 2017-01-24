@@ -894,10 +894,12 @@ class Upgrade extends Installer {
 					$basePath = $submissionFileManager->getBasePath() . '/';
 					$globPattern = $ojs2FileNames[$submissionFile->getFileId()][$submissionFile->getRevision()];
 
-					$matchedResults = array_merge(
-						glob($basePath . '*/*/' . $globPattern),
-						glob($basePath . '*/' . $globPattern)
-					);
+					$pattern1 = glob($basePath . '*/*/' . $globPattern);
+					$pattern2 = glob($basePath . '*/' . $globPattern);
+					if (!is_array($pattern1)) $pattern1 = array();
+					if (!is_array($pattern2)) $pattern2 = array();
+					$matchedResults = array_merge($pattern1, $pattern2);
+
 					if (count($matchedResults)>1) {
 						// Too many filenames matched. Continue with the first; this is just a warning.
 						error_log("WARNING: Duplicate potential files for \"$globPattern\" in \"" . $submissionFileManager->getBasePath() . "\". Taking the first.");
