@@ -91,10 +91,7 @@
 	<message key="manager.setup.enableAnnouncements">讓期刊管理員可以增加期刊公告。</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">顯示</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">之期刊首頁最近公告。</message>
-	<message key="manager.setup.enablePageNumber">項目頁碼將會以手動方式填入目錄裏(例如：頁 13-26)。</message>
-	<message key="manager.setup.enablePublicArticleId">自訂的識別碼將會被用來識別出版項目。</message>
 	<message key="manager.setup.enablePublicIssueId">自訂的識別碼將會被用來識別期數。</message>
-	<message key="manager.setup.enablePublicSuppFileId">自訂的識別碼將會被用來識別論文的補充檔案。</message>
 	<message key="manager.setup.enableUserRegistration">允設使用者在本期刊網站註冊為：</message>
 	<message key="manager.setup.focusAndScope">焦點和範圍</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">讓作者索引他們的作品</message>
