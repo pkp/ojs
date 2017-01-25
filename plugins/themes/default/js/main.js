@@ -15,8 +15,23 @@
 	});
 
 	$('.navDropdownMenu ul').on('blur.default  mouseleave.default', '[aria-haspopup="true"]', function (e) {
-		$(e.currentTarget).attr('aria-expanded', false);
+		$(e.currentTarget).attr('aria-expanded', false)
+			.attr('pkp-touch-state', '');
 	});
+
+	// Taps on nav menu items with submenus should expand on first tap
+	$('.navDropdownMenu a').on('touchstart', function(e) {
+		var target = $(e.target),
+			li = target.parent('li');
+		if (li.length && li.attr('aria-haspopup')) {
+			var state = li.attr('pkp-touch-state') || '';
+			if (state != 'open') {
+				target.trigger('focus.default');
+				li.attr('pkp-touch-state', 'open');
+				e.preventDefault();
+			}
+		}
+	})
 
 	// Register click handlers for the search panel
 	var headerSearchPanelIsClosing = false,
