@@ -53,7 +53,7 @@
 	<message key="admin.systemVersion">OJS-version</message>
 	<message key="admin.systemConfiguration">OJS-konfiguration</message>
 	<message key="admin.systemConfigurationDescription"><![CDATA[OJS konfigurationsinställningar från <tt>config.inc.php</tt>.]]></message>
-	<message key="admin.journals.createInstructions">Du kommer automatiskt att läggas till som tidskriftsansvarig. När du har skapat en ny tidskrift, logga in som tidskriftsansvarig för att fortsätta installation och aktivering av användare.</message>
+	<message key="admin.journals.createInstructions">Du kommer automatiskt att läggas till som tidskriftsansvarig. När du har skapat en ny tidskrift kommer du att omdirigeras till tidskriftens inställningsguide där du kan göra de första inställningarna.</message>
 	<message key="admin.journals.journalSettings">Tidskriftsinställningar</message>
 	<message key="admin.journals.noneCreated">Inga tidskrifter har skapats.</message>
 	<message key="admin.contexts.confirmDelete">Är du säker på att du vill radera den här tidskriften och allt dess innehåll?</message>
@@ -91,8 +91,8 @@
 	<message key="admin.categories.confirmDelete">Är du säker på att du vill radera denna kategori?</message>
 	<message key="admin.categories.name">Namn</message>
 	<message key="admin.categories.nameRequired">Ett kategorinamn är obligatoriskt.</message>
-	<message key="admin.presses.createInstructions">You will automatically be enrolled as the manager of this journal. After creating a new journal, you will be redirected to its settings wizard, to complete the initial journal setup.</message>
-	<message key="admin.scheduledTask.subscriptionExpiryReminder">Subscription Expiry Reminder</message>
-	<message key="admin.scheduledTask.openAccessNotification">Open Access Notification</message>
-	<message key="admin.scheduledTask.reviewReminder">Review Reminder</message>
+	<message key="admin.presses.createInstructions">Du kommer automatiskt att läggas till som tidskriftsansvarig. När du har skapat en ny tidskrift kommer du att omdirigeras till tidskriftens inställningsguide där du kan göra de första inställningarna.</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Påminnelse om att abonnemang löper ut</message>
+	<message key="admin.scheduledTask.openAccessNotification">Open access-meddelande</message>
+	<message key="admin.scheduledTask.reviewReminder">Granskningspåminnelse</message>
 </locale>
