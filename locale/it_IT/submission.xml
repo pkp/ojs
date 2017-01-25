@@ -21,4 +21,16 @@
 	<!-- galleys grid -->
 
 	<!-- galley files grid -->
+	<message key="submission.submit.title">Invia una nuova proposta</message>
+	<message key="submission.upload.selectComponent">Selezionare il tipo di proposta</message>
+	<message key="submission.title">Titolo dell'articolo</message>
+	<message key="submission.submit.newSubmissionSingle">Nuova proposta</message>
+	<message key="submission.issueEntry">Metadati</message>
+	<message key="submission.submit.whatNext.description">La redazione ha ricevuto notifica della tua proposta e ti è stata inviata una email di conferma. Appena gli editor avranno visionato la tua proposta sarai contattato.</message>
+	<message key="submission.issueEntry.modalTitle">Metadati</message>
+	<message key="submission.issueEntry.publicationMetadata">Pubblicazione</message>
+	<message key="submission.confirmSubmit">Sei sicuro di voler inviare la proposta?</message>
+	<message key="workflow.review.externalReview">Revisione</message>
+	<message key="editor.submission.decision.sendExternalReview">Invia questa proposta al revisore esterno</message>
+	<message key="submission.upload.fileContents">File della proposta</message>
 </locale>

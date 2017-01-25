@@ -51,4 +51,5 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmission">articolo</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">file principale</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Il suffisso DOI inserito è già in uso per un altro oggetto pubblicato. Inserisci un DOI unico per ciascun oggetto.</message>
+	<message key="plugins.pubIds.doi.editor.patternNotResolved">Il DOI non può essere assegnato perché contiene un indirizzo non valido</message>
 </locale>
