@@ -61,6 +61,7 @@ switch ($op) {
 	case 'deleteAuthSource':
 		define('HANDLER_CLASS', 'AuthSourcesHandler');
 		import('pages.admin.AuthSourcesHandler');
+		break;
 	//
 	// Merge users
 	//
