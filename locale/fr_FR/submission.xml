@@ -11,7 +11,7 @@
   * Localization strings for the fr_FR (Français (France)) locale.
   -->
 
-<locale name="fr_FR" full_name = "Français (France)">
+<locale name="fr_FR" full_name="Français (France)">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

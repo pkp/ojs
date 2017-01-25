@@ -11,7 +11,7 @@
   * Localization strings for the vi_VN (Tiếng Việt) locale.
   -->
 
-<locale name="vi_VN" full_name = "Tiếng Việt">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

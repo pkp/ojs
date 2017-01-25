@@ -11,7 +11,7 @@
   * Localization strings for the da_DK (Dansk) locale.
   -->
 
-<locale name="da_DK" full_name = "Dansk">
+<locale name="da_DK" full_name="Dansk">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

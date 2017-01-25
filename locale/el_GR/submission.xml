@@ -11,7 +11,7 @@
   * Localization strings for the el_GR (ελληνικά) locale.
   -->
 
-<locale name="el_GR" full_name = "ελληνικά">
+<locale name="el_GR" full_name="ελληνικά">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

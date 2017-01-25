@@ -11,7 +11,7 @@
   * Localization strings for the es_AR (Español (Argentina)) locale.
   -->
 
-<locale name="es_AR" full_name = "Español (Argentina)">
+<locale name="es_AR" full_name="Español (Argentina)">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

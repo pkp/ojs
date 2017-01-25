@@ -11,7 +11,7 @@
   * Localization strings for the pl_PL (Język Polski) locale.
   -->
 
-<locale name="pl_PL" full_name = "Język Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

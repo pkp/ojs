@@ -11,7 +11,7 @@
   * Localization strings for the no_NO (Norsk) locale.
   -->
 
-<locale name="no_NO" full_name = "Norsk">
+<locale name="no_NO" full_name="Norsk">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

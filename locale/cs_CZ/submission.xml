@@ -11,7 +11,7 @@
   * Localization strings for the cs_CZ (Čeština) locale.
   -->
 
-<locale name="cs_CZ" full_name = "Čeština">
+<locale name="cs_CZ" full_name="Čeština">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

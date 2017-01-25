@@ -11,7 +11,7 @@
   * Localization strings for the zh_TW (繁體中文) locale.
   -->
 
-<locale name="zh_TW" full_name = "繁體中文">
+<locale name="zh_TW" full_name="繁體中文">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

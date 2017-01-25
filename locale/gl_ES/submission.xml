@@ -11,7 +11,7 @@
   * Localization strings for the gl_ES (Galego) locale.
   -->
 
-<locale name="gl_ES" full_name = "Galego">
+<locale name="gl_ES" full_name="Galego">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->
