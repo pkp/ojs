@@ -22,27 +22,6 @@
 				{rdelim});
 	{rdelim});
 </script>
-
-{* Submission metadata versioning *}
-{if $isPublished}
-	<form id='submissionSettingsRevisionForm' class='pkp_form'>
-		{fbvFormArea id="submissionSettingsRevisionForm"}
-			{if $submissionSettingsRevisions|@count > 1} 
-				{fbvFormSection  for="submissionSettingsRevision"}
-					{fbvElement type="select" name="submissionSettingsRevision" id="submissionSettingsRevision" from=$submissionSettingsRevisions translate=false selected=$currentSubmissionSettingsRevision}
-				{/fbvFormSection}
-			{/if} 
-			{if  $versioningEnabled}
-				{fbvFormSection list=true}
-					{fbvElement type="checkbox" id="saveAsRevision" name="saveAsRevision" label="submission.saveAsRevision"}
-				{/fbvFormSection}
-			{/if}
-			{fbvFormSection}
-			{/fbvFormSection}
-		{/fbvFormArea}
-	</form>
-{/if}
-
 <div id="newIssueEntryTabs">
 	<ul>
 		<li>

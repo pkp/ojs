@@ -221,6 +221,9 @@ class PublishedArticleDAO extends ArticleDAO {
 					$publishedArticles[$currSectionId]['title'] = $publishedArticle->getSectionTitle();
 				}
 			}
+			// get metadata of the current version
+			$publishedArticle = $this->getPublishedArticleByArticleId($publishedArticle->getId(), null, false, $publishedArticle->getCurrentVersionId());
+
 			$publishedArticles[$currSectionId]['articles'][] = $publishedArticle;
 			$result->MoveNext();
 		}

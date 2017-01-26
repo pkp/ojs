@@ -258,15 +258,6 @@
 	$.pkp.controllers.tab.issueEntry.IssueEntryTabHandler.prototype.getRevisionSelectField = function() {
 		return $('select#submissionSettingsRevision');
 	}
-	
-	
-	/**
-	 * getSaveAsRevisionField
-	 * @return {jQueryObject}
-	 */
-	$.pkp.controllers.tab.issueEntry.IssueEntryTabHandler.prototype.getSaveAsRevisionField = function() {
-		return $('#saveAsRevision');
-	}
 
 
 	/**

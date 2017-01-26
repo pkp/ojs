@@ -353,12 +353,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 				$revision = $submission->getCurrentVersionId($context->getId());
 			}
 
-			// save as new revision
-			if ($request->getUserVar('saveAsRevision')) {
-				$revision++;
-			}
+			// store submission revision
 			$submission->setData('submissionRevision', $revision);
-
 
 			// Resequence the articles.
 			$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $issueId);

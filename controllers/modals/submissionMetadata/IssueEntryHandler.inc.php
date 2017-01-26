@@ -55,18 +55,6 @@ class IssueEntryHandler extends PublicationEntryHandler {
 		$tabContentUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'tab.issueEntry.IssueEntryTabHandler', 'galleyMetadata', null, array('submissionId' => $submission->getId(), 'stageId' => $this->getStageId()));
 		$templateMgr->assign('tabContentUrl', $tabContentUrl);
 
-		// submission metadata versioning
-		$context = $request->getContext();
-		$versioningEnabled = $context->getSetting('versioningEnabled');
-		$templateMgr->assign('versioningEnabled', $versioningEnabled);
-
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$contextId = $request->getContext()->getId();
-		$submissionSettingsRevisions = $articleDao->getSubmissionRevisions($submission->getId(), $contextId, true, true, SORT_DIRECTION_DESC);
-
-		$templateMgr->assign('submissionSettingsRevisions', $submissionSettingsRevisions);
-		$templateMgr->assign('isPublished', $submission->getStatus() == 3);
-
 		return $templateMgr->fetchJson('controllers/modals/submissionMetadata/issueEntryTabs.tpl');
 	}
 

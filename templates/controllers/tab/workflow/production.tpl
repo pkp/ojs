@@ -25,7 +25,7 @@
 	{rdelim});
 </script>
 <div id="production">
-	{if $versioningEnabled}
+	{if $versioningEnabled || $submissionRevisions|@count > 1}
 		<div id="submissionRevisions" class="pkp_controllers_tab">
 			<ul>
 				{foreach from=$submissionRevisions item=submissionRevision}
@@ -33,6 +33,11 @@
 						<a href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.workflow.VersioningTabHandler" op="versioning" submissionId=$submission->getId() stageId=$stageId submissionRevision=$submissionRevision}">{translate key="submission.production.version" submissionRevision=$submissionRevision}</a>
 					</li>
 				{/foreach}
+				{if $versioningEnabled && $newVersionAction}
+					<li>
+						{include file="linkAction/linkAction.tpl" image="add_item" action=$newVersionAction contextId="newVersionTabContainer"}
+					</li>
+				{/if}
 			</ul>
 		</div>
 

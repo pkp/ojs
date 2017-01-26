@@ -35,9 +35,6 @@
 				{rdelim}
 			{rdelim}
 		);
-		$('#{$submissionMetadataViewFormId}').pkpHandler(
-			'$.pkp.controllers.tab.issueEntry.SubmissionRevisionsHandler'
-		);
 	{rdelim});
 </script>
 
@@ -57,7 +54,6 @@
 		{assign var=submissionRevision value=$latestRevisionId}
 	{/if}
 	<input type="hidden" name="submissionRevision" id="submissionRevision" value="{$submissionRevision}" />
-	<input type="hidden" name="saveAsRevision" id="saveAsRevision" value="{$formParams.saveAsRevision}" />
 
 	{include file="submission/form/section.tpl" readOnly=$formParams.readOnly}
 
@@ -69,7 +65,7 @@
 	{if !$formParams.hideSubmit || !$formParams.anonymous}
 		{* generate a unique ID for the form *}
 		{assign var="authorsGridContainer" value="authorsGridContainer-"|uniqid|escape}
-		{url|assign:authorGridUrl router=$smarty.const.ROUTE_COMPONENT  component="grid.users.author.AuthorGridHandler" op="fetchGrid" submissionId=$submissionId stageId=$stageId escape=false}
+		{url|assign:authorGridUrl router=$smarty.const.ROUTE_COMPONENT  component="grid.users.author.AuthorGridHandler" op="fetchGrid" submissionId=$submissionId stageId=$stageId submissionRevision=$submissionRevision escape=false}
 		{load_url_in_div id=$authorsGridContainer url="$authorGridUrl"}
 	{/if}
 
