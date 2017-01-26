@@ -1559,6 +1559,52 @@ class Upgrade extends Installer {
 		$noteDao->update('DELETE FROM submission_comments WHERE comment_type=2'); // COMMENT_TYPE_EDITOR_DECISION
 		return true;
 	}
+	
+	/**
+	 * Convert comments to editors to queries.
+	 * @return boolean True indicates success.
+	 */
+	function convertCommentsToEditor() {
+		$commentsResult = $submissionDao->retrieve('SELECT article_id, user_id, comments_to_ed, date_submitted FROM articles_migration WHERE comments_to_ed IS NOT NULL AND comments_to_ed != ""');
+		
+		$queryDao = DAORegistry::getDAO('QueryDAO');
+		$noteDao = DAORegistry::getDAO('NoteDAO');
+		
+		while (!$commentsResult->EOF) {
+			$row = $commentsResult->getRowAssoc(false);
+			$commentsResult->MoveNext();
+
+			$comments_to_ed = PKPString::stripUnsafeHtml($row['comments_to_ed']);
+			
+			if ($comments_to_ed != ""){
+				$query = $queryDao->newDataObject();
+				$query->setAssocType(ASSOC_TYPE_SUBMISSION);
+				$query->setAssocId($row['article_id']);
+				$query->setStageId(WORKFLOW_STAGE_ID_SUBMISSION);
+				$query->setSequence(REALLY_BIG_NUMBER);
+				
+				$queryDao->insertObject($query);
+				$queryDao->resequence(ASSOC_TYPE_SUBMISSION, $row['article_id']);
+				$queryDao->insertParticipant($query->getId(), $row['user_id']);
+				
+				$queryId = $query->getId();
+
+				$note = $noteDao->newDataObject();
+				$note->setUserId($row['user_id']);
+				$note->setAssocType(ASSOC_TYPE_QUERY);
+				$note->setTitle('Comments to Editor');
+				$note->setContents($comments_to_ed);
+				$note->setDateCreated(strtotime($row['date_submitted']);
+				$note->setDateModified(strtotime($row['date_submitted']);			
+				$note->setAssocId($queryId);
+				$noteDao->insertObject($note);
+			}
+		}
+		$commentsResult->Close();
+
+		return true;
+	}	
+	
 
 	/**
 	 * Localize issue cover images.
