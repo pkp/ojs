@@ -1565,10 +1565,15 @@ class Upgrade extends Installer {
 	 * @return boolean True indicates success.
 	 */
 	function convertCommentsToEditor() {
-		$commentsResult = $submissionDao->retrieve('SELECT article_id, user_id, comments_to_ed, date_submitted FROM articles_migration WHERE comments_to_ed IS NOT NULL AND comments_to_ed != ""');
-		
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
 		$queryDao = DAORegistry::getDAO('QueryDAO');
 		$noteDao = DAORegistry::getDAO('NoteDAO');
+
+		$commentsResult = $submissionDao->retrieve('SELECT submissions.submission_id, submissions.comments_to_ed, stage_assignments.user_id FROM submissions 
+LEFT JOIN stage_assignments ON stage_assignments.submission_id = submissions.submission_id
+LEFT JOIN user_groups ON user_groups.user_group_id = stage_assignments.user_group_id
+WHERE comments_to_ed IS NOT NULL AND comments_to_ed != \'\' AND user_groups.role_id = \'65536\' ORDER BY submissions.submission_id');		
+		
 		
 		while (!$commentsResult->EOF) {
 			$row = $commentsResult->getRowAssoc(false);
@@ -1577,6 +1582,10 @@ class Upgrade extends Installer {
 			$comments_to_ed = PKPString::stripUnsafeHtml($row['comments_to_ed']);
 			
 			if ($comments_to_ed != ""){
+				
+				$user_id = $row['user_id'];
+				if (!$user_id) $user_id = 1;
+				
 				$query = $queryDao->newDataObject();
 				$query->setAssocType(ASSOC_TYPE_SUBMISSION);
 				$query->setAssocId($row['article_id']);
@@ -1585,17 +1594,17 @@ class Upgrade extends Installer {
 				
 				$queryDao->insertObject($query);
 				$queryDao->resequence(ASSOC_TYPE_SUBMISSION, $row['article_id']);
-				$queryDao->insertParticipant($query->getId(), $row['user_id']);
+				$queryDao->insertParticipant($query->getId(), $user_id);
 				
 				$queryId = $query->getId();
 
 				$note = $noteDao->newDataObject();
-				$note->setUserId($row['user_id']);
+				$note->setUserId($user_id);
 				$note->setAssocType(ASSOC_TYPE_QUERY);
 				$note->setTitle('Comments to Editor');
 				$note->setContents($comments_to_ed);
-				$note->setDateCreated(strtotime($row['date_submitted']);
-				$note->setDateModified(strtotime($row['date_submitted']);			
+				$note->setDateCreated(strtotime($row['date_submitted']));
+				$note->setDateModified(strtotime($row['date_submitted']));			
 				$note->setAssocId($queryId);
 				$noteDao->insertObject($note);
 			}
