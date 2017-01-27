@@ -17,6 +17,7 @@
 		$('#{$submissionMetadataViewFormId}').pkpHandler(
 			'$.pkp.controllers.form.FileUploadFormHandler',
 			{ldelim}
+				readOnly: {$formParams.readOnly|json_encode},
 				$uploader: $('#coverImageUploader'),
 				$preview: $('#coverImagePreview'),
 				uploaderOptions: {ldelim}
@@ -79,12 +80,14 @@
 							{translate key="common.altText"}
 						</span>
 						<span class="value">
-							{fbvElement type="text" id="coverImageAltText" label="common.altTextInstructions" value=$coverImageAltText}
+							{fbvElement type="text" id="coverImageAltText" label="common.altTextInstructions" value=$coverImageAltText readOnly=$formParams.readOnly}
 						</span>
 
-						<div id="{$deleteCoverImageLinkAction->getId()}" class="actions">
-							{include file="linkAction/linkAction.tpl" action=$deleteCoverImageLinkAction contextId="issueForm"}
-						</div>
+						{if !$formParams.readOnly}
+							<div id="{$deleteCoverImageLinkAction->getId()}" class="actions">
+								{include file="linkAction/linkAction.tpl" action=$deleteCoverImageLinkAction contextId="issueForm"}
+							</div>
+						{/if}
 					</div>
 				</div>
 			{/if}
