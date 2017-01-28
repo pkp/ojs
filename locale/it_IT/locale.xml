@@ -310,16 +310,6 @@
 	<message key="comments.commentsOnArticle">Commenti su questo articolo</message>
 	<message key="comments.authenticated"><![CDATA[di <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
-	<!-- Site Administration -->
-
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Per permettere l'indicizzazione dei contenuti delle riviste pubblicate in questo sito in un sistema di database dedicati alla ricerca e distribuiti globalmente, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registra</a> la URL del tuo sito URL nel Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. Questo servizio raccoglie i metadati da ogni elemento indicizzato in questa rivista, permettendo ricerche accurate ai siti che aderiscono alla <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Fai click qui</a> e inserisci <span class="highlight">{$siteUrl}</span> come <strong>Site URL</strong>, e <span class="highlight">{$oaiUrl}</span> come <strong>Base URL for OAI Archive</strong>.
-<br /><br />
-Nota che l'interfaccia OAI può essere disabilitata per questo sito modificando la configurazione di OJS. Le prossime versioni di OJS permetteranno di disabilitare l'interfaccia OAI anche solo su singole riviste all'interno del sito.]]></message>
-
-
-
 	<!-- Languages -->
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Specificare una fonte di autenticazione diversa da OJS produrà i seguenti effetti:</p>
 <ul>

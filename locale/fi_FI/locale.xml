@@ -338,13 +338,6 @@
 	<message key="search.results.orderDir.desc">Laskeva</message>
 	<message key="search.results.similarDocuments">samankaltaisia asiakirjoja</message>
 
-	<!-- Site Administration -->
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Jotta kaikkien tällä sivulla ylläpidettyjen julkaisujen sisältö indeksoitaisiin globaalisti hajautettuun tutkimustietokantojen järjestelmään, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">rekisteröi</a> sivustosi URL-osoite Public Knowledge Projectin metatieto<a href="http://pkp.sfu.ca/harvester/" target="_blank">haravaan</a>. Tämä työkalu kerää metatiedot jokaisesta tämän julkaisun indeksoidusta kohteesta. Tämä mahdollistaa tarkan kokonaishaun niiltä tutkimussivustoilta, jotka noudattavat <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiativen (OAI) protokollaa metatietojen haravoinnista</a>.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klikkaa tästä</a> ja syötä <span class=”highlight”>{$siteUrl}</span> <strong>sivuston URL-osoitteen</strong> alle ja <span class="highlight">{$oaiUrl}</span> <strong>OAI:n arkiston perus-URL-osoitteen</strong> alle.
-<br /><br />
-Huomaa, että OAI-käyttöliittymä voidaan poistaa tämän sivuston käytöstä muokkaamalla OJS:n järjestelmämäärityksiä. Tulevissa OJS-versioissa OAI-käyttöliittymän käyttöönotto ja käytöstä poisto voidaan tehdä julkaisukohtaisesti.]]></message>
-
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Mikäli oletustodentamislähteeksi määritetään OJS:n sijaan jokin muu lähde, sillä on seuraavia vaikutuksia:</p>
 <ul>
 	<li>Jos käyttäjä yrittää rekisteröidä tällä sivustolla uuden tilin käyttäjätunnuksella, joka on olemassa todentamislähteessä (mutta ei OJS:n tietokannassa), rekisteröinti sallitaan vain, jos annettu salasana kuuluu kyseiselle käyttäjätilille.</li>

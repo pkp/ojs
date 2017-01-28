@@ -313,12 +313,6 @@
 	<message key="comments.commentsOnArticle">Comentaris per a aquest article</message>
 	<message key="comments.authenticated"><![CDATA[per <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
-	<!-- Site Administration -->
-
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Per indexar els continguts de totes les revistes allotjades en aquest lloc web mitjançant un sistema de bases de dades de recerca distribuït globalment, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registreu-vos</a> a l’URL del lloc web amb el <a href="http://pkp.sfu.ca/harvester/" target="_blank">recopilador</a> de metadades del Public Knowledge Project. Aquesta eina recopila les metadades de tots els elements indexats a la revista, la qual cosa permet realitzar cerques precises i col·lectives en els llocs de recerca adherits al <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Protocol for metadata Harvesting de l’Open Archives Initiative</a>. <br /><br /> <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Feu clic aquí</a> i introduïu <span class="highlight">{$siteUrl}</span> a l’<strong>URL del lloc</strong> i <span class="highlight">{$oaiUrl}</span> a l’<strong>URL base per a l'arxiu OAI</strong>. <br /><br /> Podeu inhabilitar la interfície OAI per a aquest lloc editant la configuració del sistema de l’OJS. Les versions futures de l’OJS permetran habilitar o inhabilitar la interfície OAI per a cada revista del lloc.]]></message>
-
-
-
 	<!-- Languages -->
 
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Si indiqueu una font d’autenticació predeterminada que no sigui l’OJS es pot produir l’efecte següent:</p> <ul> <li>Si un usuari/ària intenta registrar un compte nou en aquest lloc web amb un nom d’usuari/ària que ja existeixi a la font d’autenticació (però no a la base de dades de l’OJS), l’intent de registre només s’admetrà si la contrasenya indicada és vàlida per a aquest compte d’usuari/ària.</li> </ul>]]></message>

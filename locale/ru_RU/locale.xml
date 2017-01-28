@@ -336,13 +336,6 @@
 	<message key="search.results.orderDir.desc">по убыванию</message>
 	<message key="search.results.similarDocuments">похожие документы</message>
 
-	<!-- Администрирование сайта -->
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Чтобы контент всех журналов, размещенных на этом сайте, индексировался в глобальной распределенной системе исследовательских баз данных, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">зарегистрируйте</a> адрес Вашего сайта в <a href="http://pkp.sfu.ca/harvester/" target="_blank">сборщике</a> метаданных Public Knowledge Project. Этот инструмент собирает метаданные каждого проиндексированного элемента в этом журнале, обеспечивая точный и коллективный поиск по исследовательским сайтам, которые поддерживают <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">протокол сбора метаданных Open Archives Initiative</a>.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Щелкните здесь</a> и  введите <span class="highlight">{$siteUrl}</span> в поле <strong>«Site URL»</strong>, и <span class="highlight">{$oaiUrl}</span> в поле <strong>«Base URL for OAI Archive»</strong>.
-<br /><br />
-Обратите внимание, что интерфейс OAI может быть отключен для этого сайта путем редактирования конфигурации системы OJS. Будущие версии OJS будут позволять включать и выключать интерфейс OAI для отдельных журналов на сайте.]]></message>
-
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Указание источника аутентификации по умолчанию, отличного от OJS, имеет следующий эффект:</p>
 <ul>
 	<li>Если пользователь пытается зарегистрировать на этом сайте новую учетную запись с именем пользователя, которое уже существует в источнике аутентификации (но не в базе данных OJS), попытка регистрации будет разрешена только в том случае, если пользователь введет пароль, соответствующий этой учетной записи в источнике аутентификации.</li>

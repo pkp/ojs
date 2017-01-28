@@ -246,16 +246,6 @@
 	<message key="comments.commentsOnArticle">Kommentarer til denne artikel</message>
 	<message key="comments.authenticated"><![CDATA[<a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
-	<!-- Site Administration -->
-
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Hvis indholdet af alle de tidsskrifter, der er tilknyttet dette websted, skal indekseres i et globalt distribueret system bestående af opslagsdatabaser, skal du <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrere</a> webstedets URL-adresse i værktøjet Public Knowledge Project, der bruges til harvesting af metadata<a href="http://pkp.sfu.ca/harvester/" target="_blank"></a>. Dette værktøj indsamler metadata fra de enkelte indekserede elementer i dette tidsskrift, hvilket sikrer præcis og kollektiv søgning blandt de opslagswebsteder, der overholder protokollen <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klik her</a>, og skriv <span class="highlight">{$siteUrl}</span> under <b>URL-adresse på websted</b> og <span class="highlight">{$oaiUrl}</span> under <b>URL-basisadresse på OAI-arkiv</b>.
-<br /><br />
-Vær opmærksom på, at OAI-grænsefladen kan deaktiveres for dette websted ved at redigere OJS-systemkonfigurationen. I fremtidige versioner af OJS vil OAI-grænsefladen kunne aktiveres eller deaktiveres for individuelle tidsskrifter på webstedet.]]></message>
-
-
-
 	<!-- Languages -->
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Det er i øjeblikket ikke muligt at hente sprogpakker fra webserveren Public Knowledge Project, fordi:</p>
 	<ul>

@@ -223,16 +223,6 @@
 	<message key="comments.commentsOnArticle">Comentários sobre o artigo</message>
 	<message key="comments.authenticated"><![CDATA[por <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
-	<!-- Site Administration -->
-
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Para indexar todo o conteúdo das revistas hospedadas neste portal num sistema global de bases de dados de pesquisa integradas, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registe</a> o URL do portal no <a href="http://pkp.sfu.ca/harvester/" target="_blank">colectador de metadados</a> do Public Knowledge Project. Esta ferramenta recolhe os metadados de cada item indexado na revista, permitindo pesquisa coletiva e precisa dentro dos portais que adoptam o <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Protocolo de Ficheiros Abertos para Recolha de Metadados - OAI PMH</a>.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Clique aqui</a> e insira <span class="highlight">{$siteUrl}</span> no campo <strong>URL do Portal</strong>, e <span class="highlight">{$oaiUrl}</span> no campo <strong>URL Base para o Ficheiro OAI</strong>.
-<br /><br />
-Note que a interface OAI pode ser desactivada para este portal nas configurações do sistema. Futuras versões do SEER/OJS permitirão activar ou desactivar a interface OAI para revistas, individualmente.]]></message>
-
-
-
 	<!-- Languages -->
 
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Definir uma fonte de autenticação padrão diferente da do sistema implica em:</p>
