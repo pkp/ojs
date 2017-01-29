@@ -23,4 +23,5 @@
 	<message key="plugins.block.user.logout">Odhlásit</message>
 	<message key="plugins.block.user.signOutAsUser">Odhlásit se z Jako uživatel</message>
 	<message key="plugins.block.user.rememberMe">Zapamatuj si mě</message>
+	<message key="plugins.block.user.implicitAuthLogin">Přihlášení do časopisů</message>
 </locale>

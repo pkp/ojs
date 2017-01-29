@@ -20,4 +20,9 @@
 	<message key="plugins.importexport.doaj.export">Export dat časopisu do DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contact">Kontaktujte DOAJ pro vložení</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">Pro zapsání vašeho časopisu do DOAJ odešlete částečně předvyplněný dotazník pro DOAJ a doplňte chybějící informace jak nejlépe umíte.</message>
+	<message key="plugins.importexport.doaj.export.article">Exportovat články</message>
+	<message key="plugins.importexport.doaj.export.articleInfo">Vybrané články exportovat v XML</message>
+	<message key="plugins.importexport.doaj.markRegistered.success">Označené objekty byly označeny jako registrované!</message>
+	<message key="plugins.importexport.doaj.export.issue">Export čísel</message>
+	<message key="plugins.importexport.doaj.export.issueInfo">Export vybraných čísel do XML</message>
 </locale>

@@ -29,4 +29,16 @@
 	<message key="plugins.reports.counter.1a.ytdPdf">YTD PDF</message>
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Celkem pro všechny časopisy</message>
 	<message key="plugins.reports.counter.legacyStats">Odkazy níže generují zprávy využití pomocí starého pluginu počítání přístupů. Pokud chcete počty generovat pomocí nového OJS počítadla, použijte odkazy výše.</message>
+	<message key="plugins.reports.counter.olderReports">Starší zprávy o stránce</message>
+	<message key="plugins.reports.counter.error.badParameters">Parametry zprávy byly neplatné.</message>
+	<message key="plugins.reports.counter.error.badRequest">Požadavek zprávy je neplatný.</message>
+	<message key="plugins.reports.counter.error.noResults">Pro tuto zprávu nebyly nalezeny žádné výsledky.</message>
+	<message key="plugins.reports.counter.error.noXML">Výsledky nelze zformátovat do XML.</message>
+	<message key="plugins.reports.counter.1a.xml">verze XML</message>
+	<message key="plugins.reports.counter.1a.anonymous">anonymní</message>
+	<message key="plugins.reports.counter.allCustomers">Všichni zákazníci</message>
+	<message key="plugins.reports.counter.1a.introduction">Tyto odkazy generují COUNTER zprávy založené na zastaralém vydání 3.0. Tato zpráva zahrnuje všechny časopisy na těchto stránkách. Použijte, pokud je to možné, poslední vydání.</message>
+	<message key="plugins.reports.counter.1a.name">COUNTER zpráva JR1 (R3)</message>
+	<message key="plugins.reports.counter.1a.description">COUNTER Journal zpráva 1 (R3): Stažení plných textů článků podle měsíce a časopisu</message>
+	<message key="plugins.reports.counter.release">Vydání COUNTER</message>
 </locale>
