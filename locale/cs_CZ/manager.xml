@@ -737,4 +737,6 @@
 	<!-- Categories -->
 	<message key="manager.setup.categories">Kategorie</message>
 	<message key="manager.setup.categories.description">Zvolte nejvíce vhodné kategorie z nabídky výše. Čtenáři boudou moci procházet podle těchto kategorií z kompletní sady časopisů.</message>
+	<message key="manager.statistics.reports.yesterday">Včera</message>
+	<message key="manager.statistics.reports.optionalColumns.description">Prvky vypsané kurzívou a označené * představují data, která jsou alternativou k současnému počítání statistik v OJS (metrický typ). Tato data můžete, nebo nemusíte, mít k dispozici v závislosti k nastavení vašeho statistického pluginu.</message>
 </locale>

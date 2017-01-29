@@ -428,9 +428,10 @@ Vězte, že rozhraní OAI může být pro tuto stránku vypnuto editací konfigu
 
 	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal System podporuje systém <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) pro zajištění a stálou ochranu vašeho časopisu. Máte několik možností, jak začlenit váš časopis do sítě LOCKSS:]]></message>
 
-	<message key="manager.setup.lockssDescription"><![CDATA[OJS podporuje technologii <a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) systém, aby zajistil bezpečnou a stálou archivaci časopisu. LOCKSS je open source software vyvinutý v Stanford University Library, který umožňuje knihovnám zabezpečovat vybrané webové časopisy tím, že se pravidelně dotazuje webových stránek časopisu na nově publikovaný obsah a archivuje ho. Každý archív je neustále kontrolován porovnáváním oproti archívům dalších knihoven, a pokud je zjištěno jeho poškození nebo ztráta jsou tyto archívy použity k jeho obnovení.
-<br /><br />
-Nastavení podpory technologie LOCKSS pro OJS nemusí být provedeno, dokud není publikování časopisu zaběhané. Potom následujte tyto dva kroky:]]></message>
+	<message key="manager.setup.lockssDescription"><![CDATA[<strong>PKP soukromá síť LOCKSS</strong>
+<p>Libovolný časopis v systému OJS, který má ISSN a publikoval alespoń jeden článek může po odsouhlasení podmínek užití být zdarma chráněn v rámci PKP PLN.</p>
+<p>Pro vstup, jděte do nastavení <a href="{$genericPluginsUrl}">Všeobecné pluginy</a>, najděte PKP PLN Plugin, vyberte Zapnout a poté zvolte Nastavení a tam odsouhleste Podmínky používání. Váš obsah bude poté automaticky uložen do sítě. Není potřeba žádné další akce.</p>
+<p>Pokud si myslíte, že máte přístup do jedné, nebo do více sítí LOCKSS, jejichž seznam můžete najít na <a href="http://www.lockss.org/community/networks/" target="_blank">here</a>, kontaktujte, prosím, administrátora příslušné LOCKSS sítě, abyste byli zahrnuti. Vyplnění následujícího formuláře vám umožní zahrnutí vašeho časopisu do těchto sítí. <em>Žádný obsah nebude chráněn, dokud nedostanete oznámení od příslušné sítě</em>.</p>]]></message>
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Navrhovaná oznámení o copyrightu Creative Commons</h3>
 <h4>1. Navrhovaná pravidla pro časopisy, které nabízejí otevřený přístup</h4>
@@ -486,8 +487,7 @@ Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet z
 			<li>Uživatel je administrátorem stránek</li>
 			<li>Uživatel je aktivní v časopisech, které Vy nespravujete</li>
 		</ul>
-	Tento úkol musí provést administrátor stránek.
-	]]></message>
+	Tento úkol musí provést administrátor stránek.]]></message>
 
 
 
@@ -504,8 +504,7 @@ Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet z
 	<!-- Announcements Management -->
 
 	<!-- Editor -->
-	<message key="editor.submissionReview.notes">
-	<![CDATA[<ol>
+	<message key="editor.submissionReview.notes"><![CDATA[<ol>
 	<li>Zvýrazněné položky indikují, že je vyžadována akce editora.</li>
 	<li>"Termín splnění" je vyplněn v okamžiku, kdy recenzent přijme žádost o recenzi; ukazuje počet týdnů do termínu splnění nebo (-) počet týdnů po termínu.</li>
 
@@ -517,8 +516,7 @@ Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet z
 
 
 </ol>]]></message>
-	<message key="editor.submissionEditing.notes">
-	<![CDATA[<ol>
+	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
 	<li>Označené položky vyžadují zásah editora, jednotlivá označení znamenají:
 		<ul>
 			<li class="highlightCopyediting">Je požadován zásah ve fázi lektorování</li>
@@ -1188,4 +1186,13 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Nahraný seznam měn "{$filename}" z XML</message>
 	<message key="debug.notes.helpMappingLoad">Znovunahraný soubor XML mapující nápovědu {$filename} při hledání {$id}.</message>
+	<message key="user.profile.implicitAuthChangePasswordInstructions">Pokud jste se přihlásili pomocí vašeho Shibboleth, je, v případě, že chcete změnit heslo, udělat toto v rámci procedur vaší organizace. Lokální uživatelé mohou pokračovat dále.</message>
+	<message key="user.login.implicitAuthLogin">Přihlášení pomocí Shibboleth</message>
+	<message key="user.register.emailValidation">Je požadováno emailové ověření</message>
+	<message key="user.register.emailValidationDescription">Je požadováno, abyste si před pokračování ověřili váš email. Zkontrolujte si, prosím, váš emailový účet, kde najdete další pokyny. Jakmile bude váš účet ověřen, můžete se přihlásit.</message>
+	<message key="user.register.implicitAuth">Přihlásit se pomocí Shiboleth přes existující účet organizace</message>
+	<message key="about.purchaseIssue">Zakoupení vydání</message>
+	<message key="about.purchaseArticle">Zakoupení článku</message>
+	<message key="about.purchaseIssueDescription">Čtenáři bez předplatného si stále mohou zakoupit jednotlivá čísla. Dostupné jsou následující možnosti platby a výše poplatků.</message>
+	<message key="about.purchaseArticleDescription">Čtenáři bez předplatného si stále mohou zakoupit jednotlivé články. Dostupné jsou následující možnosti platby a výše poplatků.</message>
 </locale>

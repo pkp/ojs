@@ -100,4 +100,6 @@
 	<message key="plugins.generic.lucene.sectionForm.ranking.low">Hodnotit hůře</message>
 	<message key="plugins.generic.lucene.sectionForm.ranking.normal">Normálně</message>
 	<message key="plugins.generic.lucene.sectionForm.ranking.high">Hodnotit lépe</message>
+	<message key="plugins.generic.lucene.settings.useProxySettings">Nastavení proxy</message>
+	<message key="plugins.generic.lucene.settings.useProxySettingsInstructions">Použijte nastavení proxy z konfiguračního souboru config.inc.php pro požadavky Solr webových služeb.</message>
 </locale>

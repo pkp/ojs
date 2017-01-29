@@ -47,4 +47,6 @@
 	<message key="plugins.importexport.medra.cliUsage">Použití: 
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...</message>
+	<message key="plugins.importexport.medra.register.success">Registrace proběhla úspěšně!</message>
+	<message key="plugins.importexport.medra.senderTask.name">Automatická registrace pro mEDRA.</message>
 </locale>

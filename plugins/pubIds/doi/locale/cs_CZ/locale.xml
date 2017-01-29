@@ -68,4 +68,5 @@
 	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi.description">Použijte toto tlačítko k vyloučení objektů (článků, sazebnic a doplňkových souborů), plánovaných k vydání v tomto čísle z přiřazování DOI. Vemte na vědomí, že objekty přidané/vydané později tím nebudou ovlivněny. Máte stále možnost měnit vlastnosti pro jednotlivé objekty.</message>
 	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Vymazat DOI objektů čísla</message>
 	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Toto tlačítko odebere DOI všem objektům (článkům, sazebnicím a doplňkovým souborům) v tomto čísle.</message>
+	<message key="plugins.pubIds.doi.editor.doi.issueObjects">DOI pro objekty čísla</message>
 </locale>

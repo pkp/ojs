@@ -1057,4 +1057,26 @@ URL příspěvku: {$submissionUrl}
 {$editorialContactSignature}</body>
 		<description>Tento email je automaticky posílán k přiřazenému editorovi, pokud autor nahraje upravenou verzi jeho článku.</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
+		<subject>Požadavek na recenzi článku</subject>
+		<body>{$reviewerName}:
+
+Tento email se týká manuskriptu článku "{$articleTitle}," který je v současnosti v recenzním řízení časopisu {$journalName}.
+
+Na základě přiopomínek recenezentů v předchozím recenzním kole zaslali autoři upravenou verzi jejich článku. Byli bychom rádi, kdybyste nám pomohl ohodnotit tento aktualizovaný článek.
+
+V příloze jsou Pokyny pro recenzenty tohoto časopisu a vlastní článek najdete jako přílohu tohoto emailu. Vaše připomínky spolu s doporučením je třeba zaslat emailem do {$reviewDueDate}.
+
+V odpovědi na tento mail do {$weekLaterDate} uveďte, prosím, zda jste odchodni recenzi provést.
+
+Děkujeme vám za vyhovění našemu požadavku.
+
+{$editorialContactSignature}
+
+
+Pokyny pro recenzenty
+
+{$reviewGuidelines}</body>
+		<description>Tento email je zasílá Sekční Editor Editorovi, pokud požaduje, aby přijal nebo odmítl recenzi v druhém či dalším kole recenzního řízení. V příloze zahrnuje vlastní článek. Tato zpráva je používána v případě nastavení režimu posílání článků k recenzi emailem. Tento režim se nastavuje v Nastavení časopisu, Krok 2. (v ostatních případe viz  REVIEW_REQUEST_SUBSEQUENT.)</description>
+	</email_text>
 </email_texts>
