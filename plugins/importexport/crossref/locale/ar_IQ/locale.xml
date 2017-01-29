@@ -37,7 +37,6 @@
 
 	<message key="plugins.importexport.crossref.export.unregistered">تصدير المقالات غير المسجلة</message>
 	<message key="plugins.importexport.crossref.export.selectUnregistered">إختر المقالات غير المسجلة</message>
-	<message key="plugins.importexport.crossref.export.noUnregistered">كل المقالات المنشورة قد تم تسجيلها سابقاً (أو ليس لأي منها DOI معينة لها).</message>
 
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[الاستعمال:
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles} objectId1 [objectId2] ...

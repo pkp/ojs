@@ -38,6 +38,5 @@
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Veuillez entrer le nom d'utilisateur que vous a donné Crossref.</message>
 	<message key="plugins.importexport.crossref.export.unregistered">Articles non-enregistrés</message>
 	<message key="plugins.importexport.crossref.export.selectUnregistered">Sélectionner les articles non-enregistrés</message>
-	<message key="plugins.importexport.crossref.export.noUnregistered">Tous les articles ont déjà été enregistrés (ou aucun d'eux n'a de DOI assigné)</message>
 	<message key="plugins.importexport.crossref.senderTask.name">Tâche automatique d'enregistrement de CrossRef</message>
 </locale>
