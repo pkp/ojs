@@ -33,4 +33,10 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">Nový sledovací kód pro Univerzální analýzu (analytics.js)</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">Pokud chcete sledova čtenost článku pomocí Google Analytics, je nutné zde vložit platné číslo účtu (např. UA-xxxxxx-x).</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Jeden či více účtů Google Analytics pro autory článků nejsou platné.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.enableSite">Domovská stránka</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteEnable">Umožnit nastavení časopisu na domovské stránce</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteDisable">Zakazat existující nastavení na domovské stránce</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.siteUnchanged">Nechat nastavení domovské stránky tak, jak je</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.disabled">Zakázáno</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.enableSiteInstructions">Tato nastavení mohou být aplikována v případě, že uživatelé procházejí také celý web poskytovatele. Pokud nejsou nastavení aplikována na úrovni celého webu, bude Google Analytics aktivní pouze na úrovni časopisu.</message>
 </locale>

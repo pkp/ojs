@@ -63,4 +63,5 @@
 	<message key="plugins.importexport.common.notification.exportSuccessful">Objekty byly úspěšně exportovány do '{$param}'</message>
  
 	<message key="plugins.importexport.common.cliError">CHYBA:</message>
+	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">Pro časopis na adrese {$path} chybí DOI prefix.</message>
 </locale>

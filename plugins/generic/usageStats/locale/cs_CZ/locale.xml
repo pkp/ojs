@@ -36,4 +36,41 @@
 	<message key="plugins.generic.usageStats.failedCounterBotList">Seznam COUNTER botů {$botlist} nelze otevřít. Soubor {$file} nelze zpracovat.</message>
 	<message key="plugins.generic.usageStats.pluginDisabled">Plugin statistik čtenosti je zakázán. Proces záznamů nefunguje.</message>
 	<message key="plugins.generic.usageStats.processingPathNotEmpty">Knihovna {$directory} není prázdná. To může znamenat, že předešlý proces zkolaboval, nebo že běží současně jiný proces. Soubor bude automaticky zpracován, pokud používáte scheduledTasksAutoStage.xml, jinak budete muset sirotčí soubory ze složky procesu přesunout do složky etapy.</message>
+	<message key="plugins.generic.usageStats.settings.archives">Archivy</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Možnosti ochrany soukromí dat</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath">Cesta k souboru "anonymizační soli"</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath.invalid">Soubor s "anonymizační solí" není zapisovatelný</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requiresSalt">Zapnutí ochrany daty vyžaduje soubor s "anonymizační solí"</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesCity">Zapnutí ochrany dat vylučuje Město jako volitelnou statistiku</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesRegion">Zapnutí ochrany dat vylučuje Region jako volitelnou statistiku</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns">Volitelené statistické informace</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives">Komprese archivů</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.cityRequiresRegion">Volitelný sloupec "Město" vyžaduje volitelný sloupec "Region"</message>
+	<message key="plugins.reports.usageStats.optout.displayName">Informace o ochraně soukromí v rámci statistiky využívání</message>
+	<message key="plugins.reports.usageStats.optout.description">Informace o ochraně soukromí v rámci statistiky využívání</message>
+	<message key="plugins.generic.usageStats.optout.title">Statistiky využívání</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements">K zabezpečení ochrany soukromí musíte specifikovat soubor, který je je čitelný a zapisovatelný pro webové uživatele, který bude obsahovat náhodně generovanou hodnotu ("sůl"). Tento soubor NESMÍ být zálohován, por zajištění ochrany soukromí. "Sůl" je náhodně generována buď použitím funkce  mcrypt_create_iv, která vyžaduje PHP funkci mcrypt; funkcí openssl_random_pseudo_bytes, která vyžaduje funkci PHP openssl; soubor /dev/urandom, který funguje jen na *nix systémech; nebo funkci mt_rand, která není kryptograficky bezpečná. Pokud používáte Windows server, zajistěte povolení instalace buď PHP mcrypt nebo openssl abyste zajistili kryptograficky bezpečnou generaci "soli".</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Tuto možnost aktivujte, pokud chcete používat plugin, který respektuje legislativu na ochranu osobních údajů, např. přihlašování pomocí hashovaných IP adres, informování uživatelů o sledování a poskytování možnosti odhlášení. Pokud použijete tuto volbu, nebudete moci využívat geo vlastnosti tohoto pluginu</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Respektovat ochranu osobních dat</message>
+	<message key="plugins.generic.usageStats.optout.done"><![CDATA[<p>Úspěšně jste se odhlásili z používání statistik vašich návštěv. Pokud vidíte tuto zprávu, nebudou shromažďována žádná data během vašeho používání těchto stránek. Kliknutím na tlačítko níže můžete změnit toto rozhodnutí.</p>]]></message>
+	<message key="plugins.generic.usageStats.optin">Přihlášení</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives.description">Aktivujte tuto možnost pro kompresi archivovaných log souborů pomocí nástroje gzip (budete muset nastavit gzip v konfiguračním souboru config.inc.php). Pokud je na vašem webu velký provoz, je dobré aktivovat tuto možnost a získat tak extra místo na disku.</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.description">Zapněte nebo vypněte následující volitelné informace. Tím ovlivníte možné statistické zprávy a také to ovlivní velikost databáze. NEPROVÁDĚJTE ZMĚNY pokud plně nechápete, co děláte.</message>
+	<message key="plugins.generic.usageStats.optout.shortDesc"><![CDATA[Provádíme anonymní záznamy pro statistické účely. Přečtěte si, prosím <a href="{$privacyInfo}">informace o ochraně soukromí</a> pro další podrobnosti.]]></message>
+	<message key="plugins.generic.usageStats.optout.description"><![CDATA[<h3>Všeobecné informace o ochraně soukromí</h3>
+<p>Prohlédněte si, prosím naše všeobecná <a href="{$privacyStatementUrl}">pravidla ochrany soukromí</a>.</p>
+<h3>Statistiky využití</p>
+<p>K zajištění možnosti analyzovat využití a vliv našeho časopisu a publikovaných článků sbíráme a ukládáme údaje o přístupech na domovskou stránku časopisu, do jednotlivých čísel, článků, sazebnic a doplňkových souborů. V rámci tohoto procesu jsou všechna data anonymizována. Nejsou ukládány žádné osobní údaje. IP adresy jsou hašovány (s použitím <em>SHA 256</em>) v kombinaci s <em>bezpečnostní 64 bitovou kryptografickou solí</em>, která je automaticky <em>generována náhodně každodenně přepisována</em>. IP adresa nemůže tedy být zpětně rekonstruována.</p>
+<p>Spolu s anonymizovanou IP adresou jsou shromažďovány následující údaje:</p>
+<ul>
+<li>Typ přístupu (např. administrátor)</li>
+<li>Doba požadavku</li>
+<li>Požadované URL</li>
+<li>Kód HTTP statusu</li>
+<li>Prohlížeč</li>
+</ul>
+<p>Shromažďovaná data jsou využívána pouze v rámci evaluačního procesu. Žádná IP adresa není mapována k uživatelskému ID. Technicky je nemožné sledovat spojitost specifické sady dat se specifickou IP adresou.</p>]]></message>
+	<message key="plugins.generic.usageStats.optout">Odhlásit</message>
+	<message key="plugins.generic.usageStats.optout.cookie"><![CDATA[<p>Pokud chcete, můžete se odhlásit z procesu sběru údajů. Kliknutím na tlačítko "Odhlásit" níže se můžete aktivně odhlásit z účasti ve statistické analýze. Pokud kliknete na tlačítko Odhlásit, bude ve vašem prohlížeči vytvořeno <em>cookie</em>, které uloží vaše rozhodnutí. Pokud máte nastaveno soukromí vašeho prohlížeče tak, že cookies jsou automaticky mazány, budete se muset odhlásit také při každé vaší další návštěvě tohoto časopisu. Cookie je platné pouze pro jeden specifický prohlížeč. Pokud používáte různé prohlížeče, budete se muset odhlásit znovu. V rámci tohoto cookie nejsou ukládány žádné osobní údaje. Vytvořené cookie je uloženo jeden rok po vaší poslední návštěvě.</p>
+<p>Vezměte, prosím, na vědomí, že vaše rozhodnutí o odhlášení ze sběru statistických údajů nemá vliv na údaje, které shromažďuje samotný server mimo tento časopis. Bližší informace najdete v našich obecných <a href="{$privacyStatementUrl}">podmínkách ochrany soukromí</a>.</p>]]></message>
 </locale>

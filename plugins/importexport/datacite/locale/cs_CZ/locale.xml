@@ -33,4 +33,9 @@
 	<message key="plugins.importexport.datacite.cliUsage">Použití: 
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...</message>
+	<message key="plugins.importexport.datacite.settings.form.passwordRequired">Vložte, prosím, heslo, které jste dostali od DataCite.</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration">Registrovat DOI automaticky</message>
+	<message key="plugins.importexport.datacite.register.success">Registrace byla úspěšná!</message>
+	<message key="plugins.importexport.datacite.senderTask.name">Úloha automatické registrace DataCite</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description"><![CDATA[OJS bude ukládat DOI automaticky do DataCite, jakmile budou články publikovány. Vemte, prosím, na vědomí, že to může zabrat nějaký čas po ukončení publikačního procesu. Můžete si zkontrolovat všechny neregistrované DOI v <a href="{$unregisteredURL}">seznamu neregistrovaných článků</a>]]></message>
 </locale>

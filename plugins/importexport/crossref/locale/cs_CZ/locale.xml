@@ -4,39 +4,75 @@
 <!--
   * plugins/importexport/crossref/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the cs_CZ (Čeština) locale.
-  *
   -->
  
 <locale name="cs_CZ" full_name="Čeština">
-	<message key="plugins.importexport.crossref.displayName">Plugin exportu do XML pro CrossRef</message>
 	<message key="plugins.importexport.crossref.description">Export metadat článku v XML formátu CrossRef.</message>
-	
-	<message key="plugins.importexport.crossref.cliUsage">Použití: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] články [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] čísla [issueId]</message>
-	<message key="plugins.importexport.crossref.settings.form.username">Uživatelské jméno</message>
-	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Vložte, prosím, uživatelské jméno, které jste dostali od CrossRef.</message>
-	<message key="plugins.importexport.crossref.export.unregistered">Neregistrované články</message>
+	<message key="plugins.importexport.crossref.displayName">Plugin exportu do XML pro CrossRef</message>
 	<message key="plugins.importexport.crossref.requirements">Požadavky</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">Všechna požadavky pluginu byly uspokojeny.</message>
+	<message key="plugins.importexport.crossref.error.pluginNotConfigured"><![CDATA[CrossRef plugin není konfigurován. Konfigurujte tento plugin  <a href="{$settingsUrl}">na jeho konfigurační stránce</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.DOIsNotAvailable"><![CDATA[Plugin veřejného identifikátoru DOI nebyl nakonfigurován. Povolte a nakonfigurujte plugin na <a href="{$doiUrl}" target="_blank">stránce nastavení pluginu DOI</a>]]></message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Vydavatel časopisu nebyl nakonfigurován! Musíte přidat instituci vydavatele <a href="{$publisherUrl}" target="_blank">v Kroku 1.5 Nastavení časopisu</a>.]]></message>
 	<message key="plugins.importexport.crossref.settings.depositorIntro">Následujáící položky je třeba pro úspěšné uložení do CrossRef.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorName">Jméno vkládajícího</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Email vkládajícího</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Vložte, prosím, jméno vkládajícího.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Vložte, prosím, e-mail vkládajícího.</message>
 	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">Automatická registrace DOI</message>
-	<message key="plugins.importexport.crossref.settings.form.description">Nastavte, prosím, plugin pro export a zápis do CrossRef:</message>
-	<message key="plugins.importexport.crossref.export.selectUnregistered">Vyberte neregistrované články</message>
-	<message key="plugins.importexport.crossref.error.pluginNotConfigured"><![CDATA[CrossRef plugin není konfigurován. Konfigurujte tento plugin  <a href="{$settingsUrl}">na jeho konfigurační stránce</a>.]]></message>
-	<message key="plugins.importexport.crossref.error.DOIsNotAvailable"><![CDATA[Plugin veřejného identifikátoru DOI nebyl nakonfigurován. Povolte a nakonfigurujte plugin na <a href="{$doiUrl}" target="_blank">stránce nastavení pluginu DOI</a>]]></message>
-	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Vydavatel časopisu nebyl nakonfigurován! Musíte přidat instituci vydavatele <a href="{$publisherUrl}" target="_blank">v Kroku 1.5 Nastavení časopisu</a>.]]></message>
 	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[OJS uloží automaticky DOI článků do databáze CrossRef v momentě, kdy je článek publikován. Musíte vzít v úvahu, že zpracování trvá nějakou chvíli. Seznam článků, které nejsou registrovány v DOI lze nalézt v <a href="{$unregisteredURL}">seznamu neregistrovaných článků</a>.]]></message>
+
 	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Tento plugin může být konfigurován pro automatickou registraci Digital Object Identifiers (DOIs) v rámci CrossRef. Budete potřebova uživatelské jméno a heslo (dostupné na <a href="http://www.crossref.org" target="_blank">CrossRef</a>). Pokud nemáte vlastní uživatelské jméno a heslo, můžete stále exportovat data do CrossRef XML formátu, ale nemůžete registrovat vaše DOIs do CrossRef přímo z OJS.]]></message>
+
 	<message key="plugins.importexport.crossref.settings.description"><![CDATA[Můžete <a href="{$settingsUrl}">zde konfigurovat export/registraci pro CrossRef</a>.]]></message>
-	<message key="plugins.importexport.crossref.export.noUnregistered">Všechny publikované články jsou již registrovány (nebo žádný z nich nemá přiřazeno DOI).</message>
+
+	<message key="plugins.importexport.crossref.settings.form.description">Nastavte, prosím, plugin pro export a zápis do CrossRef:</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Uživatelské jméno</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Vložte, prosím, uživatelské jméno, které jste dostali od CrossRef.</message>
+
+	<message key="plugins.importexport.crossref.export.unregistered">Neregistrované články</message>
+	<message key="plugins.importexport.crossref.export.selectUnregistered">Vyberte neregistrované články</message>
+
+	<message key="plugins.importexport.crossref.manageDOIs">Spravovat kódy DOI</message>
+	<message key="plugins.importexport.crossref.manageIssues">Spravovat čísla</message>
+	<message key="plugins.importexport.crossref.manageArticleDOIs">Spravovat DOI kódy článků</message>
+	<message key="plugins.importexport.crossref.senderTask.name">Automatická registrace pro CrossRef</message>
+	<message key="plugins.importexport.crossref.senderTask.warning.noDOIprefix">Pro časopis na adrese {$path} chybí DOI prefix.</message>
+	<message key="plugins.importexport.crossref.articles.notDeposited">Všechny publikované články již byly registrovány (nebo nemá žádní z nich přiřazené DOI).</message>
+	<message key="plugins.importexport.crossref.articles.failed">Nedošlo k žádným chybám zálohování.</message>
+	<message key="plugins.importexport.crossref.articles.submitted">Nejsou žádná právě odeslaná DOI.</message>
+	<message key="plugins.importexport.crossref.articles.completed">Nejsou ukončené zálohy.</message>
+	<message key="plugins.importexport.crossref.articles.found">Nejsou aktivní DOI.</message>
+	<message key="plugins.importexport.crossref.downloadXML">Stáhnout XML</message>
+	<message key="plugins.importexport.crossref.checkStatus">Zkontrolovat status</message>
+	<message key="plugins.importexport.crossref.checkStatusDescription">Klikněte na toto tlačítko pro aktualizaci stavu vybraného objektu/vybraných objektů.</message>
+	<message key="plugins.importexport.crossref.status.all">Všechny</message>
+	<message key="plugins.importexport.crossref.status.non">Nezálohováno</message>
+	<message key="plugins.importexport.crossref.status.submitted">Odesláno</message>
+	<message key="plugins.importexport.crossref.status.completed">Zálohováno</message>
+	<message key="plugins.importexport.crossref.status.failed">Neuspělo</message>
+	<message key="plugins.importexport.crossref.status.registered">Aktivní</message>
+	<message key="plugins.importexport.crossref.status.markedRegistered">Označit registrované</message>
+	<message key="plugins.importexport.crossref.register.error.mdsError">Podání nebylo úspěšné! Registrační server DOI vrátil následující chybu: '{$param}'.</message>
+	<message key="plugins.importexport.crossref.register.success">Podání bylo úspěšné!</message>
+	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[<p>Stav zálohy</p>    
+ <p>
+    - Nezálohováno: pro toto DOI nebyl doposud učiněn pokus o zálohu.<br />
+    - Zálohováno: toto DOI bylo odesláno k zálohování.<br />
+    - Aktivní: toto DOI bylo zálohováno a vyřešeno.<br />
+    - Neúspěch: zálohování tohoto DOI neuspělo.<br />
+    - Označeno jako registrované: toto DOI bylo ručně označené jako registrované
+    </p>
+    <p>Je zobrazován pouze stv posledního pokusu o zálohování.</p>
+    <p>Pokud zálohování neuspěje, vyřešte, prosím, problém a pokuste se registrovat DOI znovu.</p>]]></message>
+	<message key="plugins.importexport.crossref.notification.failed"><![CDATA[Pokus o registraci DOI neuspěl. Jděte, prosím, do CrossRef Export/Registrační plugin > Export neregistrovaných článků > Neúspěšné]]></message>
+	<message key="plugins.importexport.crossref.cliUsage">Použití: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] články [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] čísla [issueId]</message>
+
 </locale>
