@@ -137,6 +137,8 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_edit_decisions.xml" />
 		<code function="clearCssCache" />
 		<code function="convertCommentsToEditor" condition="return $installer->tableExists('submissions_tmp');" />
+		<code function="moveReviewerFiles" />
+		<data file="dbscripts/xml/upgrade/3.0.0_reviewer_files.xml" />
 	</upgrade>
 
 	<upgrade minversion="2.4.0.0" maxversion="3.0.1.9">
