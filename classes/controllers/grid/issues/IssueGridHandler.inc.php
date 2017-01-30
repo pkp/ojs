@@ -460,27 +460,29 @@ class IssueGridHandler extends GridHandler {
 
 		if ($articleSearchIndex) $articleSearchIndex->articleChangesFinished();
 
-		// Send a notification to associated users
-		import('classes.notification.NotificationManager');
-		$notificationManager = new NotificationManager();
-		$notificationUsers = array();
-		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
-		$allUsers = $userGroupDao->getUsersByContextId($journalId);
-		while ($user = $allUsers->next()) {
-			$notificationUsers[] = array('id' => $user->getId());
-		}
-		foreach ($notificationUsers as $userRole) {
-			$notificationManager->createNotification(
-				$request, $userRole['id'], NOTIFICATION_TYPE_PUBLISHED_ISSUE,
-				$journalId
+		// Send a notification to associated users if journal is publishing content online with OJS
+		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE) {		
+			import('classes.notification.NotificationManager');
+			$notificationManager = new NotificationManager();
+			$notificationUsers = array();
+			$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
+			$allUsers = $userGroupDao->getUsersByContextId($journalId);
+			while ($user = $allUsers->next()) {
+				$notificationUsers[] = array('id' => $user->getId());
+			}
+			foreach ($notificationUsers as $userRole) {
+				$notificationManager->createNotification(
+					$request, $userRole['id'], NOTIFICATION_TYPE_PUBLISHED_ISSUE,
+					$journalId
+				);
+			}
+			$notificationManager->sendToMailingList($request,
+				$notificationManager->createNotification(
+					$request, UNSUBSCRIBED_USER_NOTIFICATION, NOTIFICATION_TYPE_PUBLISHED_ISSUE,
+					$journalId
+				)
 			);
 		}
-		$notificationManager->sendToMailingList($request,
-			$notificationManager->createNotification(
-				$request, UNSUBSCRIBED_USER_NOTIFICATION, NOTIFICATION_TYPE_PUBLISHED_ISSUE,
-				$journalId
-			)
-		);
 
 		return DAO::getDataChangedEvent();
 	}
