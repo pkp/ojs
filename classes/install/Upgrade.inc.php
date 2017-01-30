@@ -1567,12 +1567,7 @@ class Upgrade extends Installer {
 	function convertCommentsToEditor() {
 		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
 		$queryDao = DAORegistry::getDAO('QueryDAO');
-		$noteDao = DAORegistry::getDAO('NoteDAO');
-		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
-		
-		$managerUserGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_MANAGER);
-		$managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $journal->getId());
-		$creatorUserId = $managerUsers->next()->getId();		
+		$noteDao = DAORegistry::getDAO('NoteDAO');	
 
 		$commentsResult = $submissionDao->retrieve('SELECT s.submission_id, s.comments_to_ed, sa.user_id FROM submissions s LEFT JOIN stage_assignments sa ON sa.submission_id = s.submission_id LEFT JOIN user_groups ug ON ug.user_group_id = sa.user_group_id WHERE s.comments_to_ed IS NOT NULL AND s.comments_to_ed != '' AND ug.role_id = 65536 ORDER BY s.submission_id');
 		
@@ -1585,9 +1580,6 @@ class Upgrade extends Installer {
 			
 			if ($comments_to_ed != ""){
 				
-				$user_id = $row['user_id'];
-				if (!$user_id) $user_id = $creatorUserId;
-				
 				$query = $queryDao->newDataObject();
 				$query->setAssocType(ASSOC_TYPE_SUBMISSION);
 				$query->setAssocId($row['submission_id']);
@@ -1596,12 +1588,12 @@ class Upgrade extends Installer {
 				
 				$queryDao->insertObject($query);
 				$queryDao->resequence(ASSOC_TYPE_SUBMISSION, $row['submission_id']);
-				$queryDao->insertParticipant($query->getId(), $user_id);
+				$queryDao->insertParticipant($query->getId(), $row['user_id']);
 				
 				$queryId = $query->getId();
 
 				$note = $noteDao->newDataObject();
-				$note->setUserId($user_id);
+				$note->setUserId($row['user_id']);
 				$note->setAssocType(ASSOC_TYPE_QUERY);
 				$note->setTitle('Comments to Editor');
 				$note->setContents($comments_to_ed);
