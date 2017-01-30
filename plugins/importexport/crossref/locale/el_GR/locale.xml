@@ -45,5 +45,4 @@
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Παρακαλούμε εισάγετε το όνομα χρήστη έχετε από το CrossRef.</message>
 	<message key="plugins.importexport.crossref.export.unregistered">Μη εγγεγραμμένα άρθρα</message>
 	<message key="plugins.importexport.crossref.export.selectUnregistered">Επιλέξτε μη εγγεγραμμένα άρθρα</message>
-	<message key="plugins.importexport.crossref.export.noUnregistered">Όλα τα δημοσιευμένα άρθρα έχουν ήδη εγγραφεί (ή κανένα από αυτά δεν έχει ένα DOI)</message>
 </locale>

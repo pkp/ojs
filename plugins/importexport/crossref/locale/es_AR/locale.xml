@@ -41,5 +41,4 @@
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Por favor introduzca el nombre de usuario que ha recibido de CrossRef</message>
 	<message key="plugins.importexport.crossref.export.unregistered">Artículos sin registrar</message>
 	<message key="plugins.importexport.crossref.export.selectUnregistered">Seleccione los artículos sin registrar</message>
-	<message key="plugins.importexport.crossref.export.noUnregistered">Todos los artículos publicados ya han sido registrados (o ninguno posee asignado un DOI)</message>
 </locale>

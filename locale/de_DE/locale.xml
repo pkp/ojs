@@ -429,9 +429,11 @@ Bitte beachten Sie, dass die OAI-Schnittstelle für diese Website in der OJS-Sys
 
 	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems unterstützt das System <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) um sichere und dauerhafte Archivierung Ihrer Zeitschrift zu gewährleisten. Ihnen stehen mehrere Möglichkeiten zur Verfügung, Ihre Zeitschrift in ein LOCKSS-Netzwerk aufzunehmen:]]></message>
 
-	<message key="manager.setup.lockssDescription"><![CDATA[<strong>Andere LOCKSS-Netzwerke</strong>
-<br /><br />
-Wenn Sie denken, dass Sie Zugriff auf eines oder mehrere der <a href="http://www.lockss.org/community/networks/" target="_blank">hier gelisteten</a> LOCKSS-Netzwerke haben, kontaktieren Sie bitte die/den entsprechende/n LOCKSS-Netzwerk-Administrator/in, um sich um Aufnahme zu bewerben. Dazu können Sie das Formular unten ausfüllen, um in diese Netzwerke aufgenommen zu werden. <em>Es werden keine Inhalte archiviert werden, bevor Sie das entsprechende Netzwerk benachrichtigt haben.</em>]]></message>
+	<message key="manager.setup.lockssDescription"><![CDATA[<strong>PKP Private LOCKSS Network</strong>
+<p>Jede OJS-Zeitschrift mit einer ISSN, die mindestens einen Artikel veröffentlicht hat, hat die Möglichkeit, den Nutzungsbedingungen des PKP PLN zuzustimmen und dort kostenlos archiviert zu werden.</p>
+<p>Um teilzunehmen, gehen Sie zu <a href="{$genericPluginsUrl}">Generische Plug-Ins</a>, finden Sie das PKP-PLN-Plug-In, wählen Sie Aktivieren und dann Einstellungen, und akzeptieren Sie die nutzungsbedingungen. Ihre Inhalte werden dann automatisch dem Netzwerk hinzugefügt, es sind keine weiteren Schritte notwendig.</p>
+<strong>Andere LOCKSS-Netzwerke</strong>
+<p>Wenn Sie denken, dass Sie Zugriff auf eines oder mehrere der <a href="http://www.lockss.org/community/networks/" target="_blank">hier gelisteten</a> LOCKSS-Netzwerke haben, kontaktieren Sie bitte die/den entsprechende/n LOCKSS-Netzwerk-Administrator/in, um sich um Aufnahme zu bewerben. Dazu können Sie das Formular unten ausfüllen, um in diese Netzwerke aufgenommen zu werden. <em>Es werden keine Inhalte archiviert werden, bevor Sie das entsprechende Netzwerk benachrichtigt haben</em>.</p>]]></message>
 	<!-- 3. Einrichtungsschritt -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Beispiele für die Anzeige von Creative-Commons-Lizenzen in den Copyright-Vermerken</h3>
 <h4>1. Empfohlene Copyright-Regelungen für Zeitschriften mit Open Access</h4>

@@ -74,5 +74,4 @@
 	<message key="plugins.importexport.crossref.cliUsage">Použití: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] články [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] čísla [issueId]</message>
-
 </locale>

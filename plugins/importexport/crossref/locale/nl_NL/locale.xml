@@ -26,7 +26,6 @@
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Geeft de gebruikersnaam die u van CrossRefe kreeg.</message>
 	<message key="plugins.importexport.crossref.export.unregistered">Exporteer alle ongeregistreerde artikelen</message>
 	<message key="plugins.importexport.crossref.export.selectUnregistered">Selecteer ongeregistreerd artikelen</message>
-	<message key="plugins.importexport.crossref.export.noUnregistered">Alle gepubliceerde artikelen zijn al geregistreerd (of geen ervan heeft een DOI).</message>
 	<message key="plugins.importexport.crossref.settings.depositorIntro">Geef de naam en het e-mailadres van degene die verantwoordlijk is voor de CrossRef DOI deposit.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorName">Depositor naam</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmail">E-mail depositor</message>

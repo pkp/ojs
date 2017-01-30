@@ -38,7 +38,6 @@
 
 	<message key="plugins.importexport.crossref.export.unregistered">Экспорт незарегистрированных статей</message>
 	<message key="plugins.importexport.crossref.export.selectUnregistered">Выбрать незарегистрированные статьи</message>
-	<message key="plugins.importexport.crossref.export.noUnregistered">Все опубликованные статьи уже были зарегистрированы (или ни одной из них не был присвоен DOI).</message>
 
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Вызов: 
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles} objectId1 [objectId2] ...

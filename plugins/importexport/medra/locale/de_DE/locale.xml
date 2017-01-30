@@ -48,9 +48,12 @@
 	<message key="plugins.importexport.medra.resetDescription">Klicken Sie auf diesen Knopf, wenn Sie dieses Objekt so behandeln möchten, als wäre es noch nie zuvor registriert worden (z.B. wenn mEDRA bei der ersten Registrierung eine Fehlermeldung per E-Mail sendet). Klicken Sie NICHT auf diesen Knopf, wenn Sie eine Fehlermeldung nach fehlgeschlagenem Hochladen erhalten!</message>
 	
 	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[Achtung: DOI, die Artikeln zugewiesen worden sind, werden zu mEDRA als <a href="http://www.medra.org/de/metadata_td.htm" target="_blank">'Werke'</a> exportiert. DOI, die Fahnen zugewiesen worden sind, werden als <a href="http://www.medra.org/de/metadata_td.htm" target="_blank">'Manifestationen'</a> exportiert.]]></message>
-		
+
+	<message key="plugins.importexport.medra.register.success">Registrierung erfolgreich!</message>
+
 	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Verwendung: 
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...
 ]]></message>
+	<message key="plugins.importexport.medra.senderTask.name">mEDRA automatic registration task</message>
 </locale>
