@@ -1568,11 +1568,13 @@ class Upgrade extends Installer {
 		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
 		$queryDao = DAORegistry::getDAO('QueryDAO');
 		$noteDao = DAORegistry::getDAO('NoteDAO');
+		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
+		
+		$managerUserGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_MANAGER);
+		$managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $journal->getId());
+		$creatorUserId = $managerUsers->next()->getId();		
 
-		$commentsResult = $submissionDao->retrieve('SELECT submissions.submission_id, submissions.comments_to_ed, stage_assignments.user_id FROM submissions 
-LEFT JOIN stage_assignments ON stage_assignments.submission_id = submissions.submission_id
-LEFT JOIN user_groups ON user_groups.user_group_id = stage_assignments.user_group_id
-WHERE comments_to_ed IS NOT NULL AND comments_to_ed != \'\' AND user_groups.role_id = \'65536\' ORDER BY submissions.submission_id');		
+		$commentsResult = $submissionDao->retrieve('SELECT s.submission_id, s.comments_to_ed, sa.user_id FROM submissions s LEFT JOIN stage_assignments sa ON sa.submission_id = s.submission_id LEFT JOIN user_groups ug ON ug.user_group_id = sa.user_group_id WHERE s.comments_to_ed IS NOT NULL AND s.comments_to_ed != '' AND ug.role_id = 65536 ORDER BY s.submission_id');
 		
 		
 		while (!$commentsResult->EOF) {
@@ -1584,16 +1586,16 @@ WHERE comments_to_ed IS NOT NULL AND comments_to_ed != \'\' AND user_groups.role
 			if ($comments_to_ed != ""){
 				
 				$user_id = $row['user_id'];
-				if (!$user_id) $user_id = 1;
+				if (!$user_id) $user_id = $creatorUserId;
 				
 				$query = $queryDao->newDataObject();
 				$query->setAssocType(ASSOC_TYPE_SUBMISSION);
-				$query->setAssocId($row['article_id']);
+				$query->setAssocId($row['submission_id']);
 				$query->setStageId(WORKFLOW_STAGE_ID_SUBMISSION);
 				$query->setSequence(REALLY_BIG_NUMBER);
 				
 				$queryDao->insertObject($query);
-				$queryDao->resequence(ASSOC_TYPE_SUBMISSION, $row['article_id']);
+				$queryDao->resequence(ASSOC_TYPE_SUBMISSION, $row['submission_id']);
 				$queryDao->insertParticipant($query->getId(), $user_id);
 				
 				$queryId = $query->getId();
