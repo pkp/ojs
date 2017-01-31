@@ -38,11 +38,11 @@
 		<data file="dbscripts/xml/upgrade/2.4.0_postUsageStatsMigration2.xml" condition="return $installer->tableExists('issue_galleys_stats_migration');" />
 		<data file="dbscripts/xml/upgrade/2.4.0_postCounterMigration.xml" condition="return $installer->tableExists('counter_monthly_log');" />
 		<data file="dbscripts/xml/upgrade/2.4.0_postTimedViewsMigration.xml" condition="return $installer->tableExists('timed_views_log');" />
-		<code function="convertCommentsToEditor" />
+		<data file="dbscripts/xml/upgrade/3.0.0_preupdate_commentsToEditor.xml" condition="return $installer->columnExists('submissions', 'comments_to_ed');" />
 	</upgrade>
 
 	<upgrade minversion="3.0.0.0" maxversion="3.0.1.9">
-		<code function="convertCommentsToEditor" />
+		<data file="dbscripts/xml/upgrade/3.0.0_preupdate_commentsToEditor.xml" condition="return $installer->columnExists('submissions', 'comments_to_ed');" />
 	</upgrade>
 	
 	<!-- PKP schema components -->
@@ -108,6 +108,7 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_submission_settings.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_review_method.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_edit_decisions.xml" />
+		<code function="convertCommentsToEditor" condition="return $installer->tableExists('submissions_tmp');" />
 	</upgrade>
 
 	<upgrade minversion="3.0.0.0" maxversion="3.0.0.9">
@@ -124,6 +125,7 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_review_method.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_stage_assignments.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_edit_decisions.xml" />
+		<code function="convertCommentsToEditor" condition="return $installer->tableExists('submissions_tmp');" />
 	</upgrade>
 
 	<upgrade minversion="3.0.1.0" maxversion="3.0.1.9">
@@ -131,6 +133,7 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_stage_assignments.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_edit_decisions.xml" />
 		<code function="clearCssCache" />
+		<code function="convertCommentsToEditor" condition="return $installer->tableExists('submissions_tmp');" />
 	</upgrade>
 
 	<upgrade minversion="3.0.0.0" maxversion="3.0.9.9">
