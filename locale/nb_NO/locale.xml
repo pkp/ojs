@@ -246,15 +246,6 @@
 	<message key="comments.commentsOnArticle">Kommentarer til denne artikkelen</message>
 	<message key="comments.authenticated"><![CDATA[av <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
-	<!-- Site Administration -->
-
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[For å få indeksert innholdet i alle tidsskrift på dette nettstedet i et verdensomspennende nettverk av forskningsdatabaser, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrer</a> nettstedets URL hos Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. Dette verktøyet samler metadata fra hvert indeksert element i dette tidsskriftet, og gjør det dermed mulig å søke presist og samlet i alle forskningsnettsted som følger <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative-protokollen for metadatainnhøsting</a>.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klikk her</a> og skriv inn <span class="highlight">{$siteUrl}</span> under <b>Nettsted URL</b>, og <span class="highlight">{$oaiUrl}</span> under <b>Base URL for OAI Arkiv</b>.
-<br /><br />
-Merk at OAI-grensesnittet kan slås av for dette nettstedet ved å redigere OJS' systemkonfigurasjon. Framtidige versjoner av OJS vil tillate å slå på eller av OAI-grensesnittet for enkelttidskrift på nettstedet.]]></message>
-
-
 	<!-- Languages -->
 
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[Det å spesifisere en annen default valideringskilde enn OJS har følgende virkning:

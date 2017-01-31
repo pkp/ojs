@@ -2,17 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * default.xml
+  * locale/fr_CA/default.xml
   *
   * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the fr_CA (Français (Canada)) locale.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_French_(fr_CA)
+  * Localization strings.
   -->
 
-<locale name="fr_CA" full_name="Français (Canada)">
+<locale name = "fr_CA" full_name = "Français (Canada)">
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">La soumission n'a pas déjà été publiée et n'est pas considérée actuellement par une autre revue. Si ce n'est pas le cas, fournir une explication dans le champ "Commentaires au rédacteur".</message>
 	<message key="default.journalSettings.checklist.fileFormat">Le fichier de la soumission est dans un des formats de fichier suivants : OpenOffice, Microsoft Word, RTF ou WordPerfect.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Le texte est à simple interligne, utilise une police de 12 points, emploie l'italique plutôt que le souligné (sauf pour les adresses URL) et place toutes les illustrations, figures et tableaux aux endroits appropriés dans le texte plutôt qu'à la fin.</message>

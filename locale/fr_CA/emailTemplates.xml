@@ -9,10 +9,9 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
-  *
   -->
 
-<email_texts locale="fr_CA">
+<email_texts locale = "fr_CA">
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Confirmation de la réinitialisation du mot de passe</subject>
 		<body><![CDATA[Nous avons reçu une demande concernant la réinitialisation de votre mot de passe pour le site Web {$siteTitle}.<br />

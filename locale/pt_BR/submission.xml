@@ -11,7 +11,7 @@
   * Localization strings for the en_US (English) locale.
   -->
 
-<locale name="pt_BR" full_name = "Português (Brasil)">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<!-- Submission wizard -->
 	<message key="submission.submit.title">Submeter um artigo</message>
 	<message key="submission.submit.userGroup">Realizar a submissão como...</message>

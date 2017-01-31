@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name = "Turkish">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.OAIMetadata.rfc1807.displayName">RFC1807 Üst veri Biçimi</message>
 	<message key="plugins.OAIMetadata.rfc1807.description">Üst veri yapısı bir bakıma RFC1807 ile tutarlı olmanın yoludur.</message>
 </locale>

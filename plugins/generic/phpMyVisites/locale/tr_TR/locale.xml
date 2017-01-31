@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="tr_TR" full_name = "Turkish">
+<locale name="tr_TR" full_name="Türkçe">
 
 	<!-- phpMyVisites -->
 	<message key="plugins.generic.phpmv.displayName">phpMyVisites Eklentisi</message>
