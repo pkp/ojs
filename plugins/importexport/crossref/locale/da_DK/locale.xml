@@ -16,7 +16,7 @@
 	<message key="plugins.importexport.crossref.displayName">CrossRef XML Export Plugin</message>
 	<message key="plugins.importexport.crossref.description">Eksportér artikelmetadata i CrossRef XML format.</message>
 
-	<message key="plugins.importexport.crossref.cliUsage">Brug: 
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Brug: 
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
 ]]></message>
