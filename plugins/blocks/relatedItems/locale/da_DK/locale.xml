@@ -13,7 +13,7 @@
   -->
 
 <locale name="da_DK" full_name="Dansk">
-	<message key="plugins.block.relatedItems.displayName">Related Items Block</message>
+	<message key="plugins.block.relatedItems.displayName">Relaterede emner (blok)</message>
 	<message key="plugins.block.relatedItems.description">Dette plugin fremviser relaterede artikler  i sidemenuen under læseværktøjer.</message>
 	<message key="plugins.block.relatedItems.title">Relaterede artikler</message>
 	<message key="plugins.block.relatedItems.hide">Skjul</message>
