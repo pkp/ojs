@@ -1561,6 +1561,60 @@ class Upgrade extends Installer {
 	}
 
 	/**
+	 * Convert comments to editors to queries.
+	 * @return boolean True indicates success.
+	 */
+	function convertCommentsToEditor() {
+		$submissionDao = Application::getSubmissionDAO();
+		$queryDao = DAORegistry::getDAO('QueryDAO');
+		$noteDao = DAORegistry::getDAO('NoteDAO');
+
+		$commentsResult = $submissionDao->retrieve(
+			'SELECT s.submission_id, s.comments_to_ed, s.date_submitted, sa.user_id
+			FROM submissions_tmp s
+			LEFT JOIN stage_assignments sa ON sa.submission_id = s.submission_id
+			LEFT JOIN user_groups ug ON ug.user_group_id = sa.user_group_id
+			WHERE s.comments_to_ed IS NOT NULL AND s.comments_to_ed != \'\' AND ug.role_id = 65536
+			ORDER BY s.submission_id'
+		);
+		while (!$commentsResult->EOF) {
+			$row = $commentsResult->getRowAssoc(false);
+			$comments_to_ed = PKPString::stripUnsafeHtml($row['comments_to_ed']);
+			if ($comments_to_ed != ""){
+				$query = $queryDao->newDataObject();
+				$query->setAssocType(ASSOC_TYPE_SUBMISSION);
+				$query->setAssocId($row['submission_id']);
+				$query->setStageId(WORKFLOW_STAGE_ID_SUBMISSION);
+				$query->setSequence(REALLY_BIG_NUMBER);
+
+				$queryDao->insertObject($query);
+				$queryDao->resequence(ASSOC_TYPE_SUBMISSION, $row['submission_id']);
+				$queryDao->insertParticipant($query->getId(), $row['user_id']);
+
+				$queryId = $query->getId();
+
+				$note = $noteDao->newDataObject();
+				$note->setUserId($row['user_id']);
+				$note->setAssocType(ASSOC_TYPE_QUERY);
+				$note->setTitle('Comments for the Editor');
+				$note->setContents($comments_to_ed);
+				$note->setDateCreated(strtotime($row['date_submitted']));
+				$note->setDateModified(strtotime($row['date_submitted']));
+				$note->setAssocId($queryId);
+				$noteDao->insertObject($note);
+			}
+			$commentsResult->MoveNext();
+		}
+		$commentsResult->Close();
+
+		// remove temporary table
+		$submissionDao->update('DROP TABLE submissions_tmp');
+
+		return true;
+	}
+
+
+	/**
 	 * Localize issue cover images.
 	 * @return boolean True indicates success.
 	 */
