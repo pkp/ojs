@@ -15,7 +15,7 @@
 <data>
 	<sql>
 		<query>
-			CREATE TABLE submissions_tmp AS (SELECT submission_id, comments_to_ed, date_submitted FROM submissions)
+			CREATE TABLE submissions_tmp AS (SELECT submission_id, context_id, comments_to_ed, date_submitted FROM submissions)
 		</query>
 	</sql>
 </data>
