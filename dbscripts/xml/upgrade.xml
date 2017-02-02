@@ -134,7 +134,6 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_edit_decisions.xml" />
 		<code function="clearCssCache" />
 		<code function="convertCommentsToEditor" condition="return $installer->tableExists('submissions_tmp');" />
-		<note file="docs/release-notes/README-3.0.2" />
 	</upgrade>
 
 	<upgrade minversion="3.0.0.0" maxversion="3.0.1.9">
