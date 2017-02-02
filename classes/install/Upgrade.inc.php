@@ -1574,7 +1574,7 @@ class Upgrade extends Installer {
 		import('lib.pkp.classes.security.Role'); // ROLE_ID_...
 
 		$commentsResult = $submissionDao->retrieve(
-			'SELECT s.submission_id, s.comments_to_ed, s.date_submitted
+			'SELECT s.submission_id, s.context_id, s.comments_to_ed, s.date_submitted
 			FROM submissions_tmp s
 			WHERE s.comments_to_ed IS NOT NULL AND s.comments_to_ed != \'\''
 		);
@@ -1582,29 +1582,26 @@ class Upgrade extends Installer {
 			$row = $commentsResult->getRowAssoc(false);
 			$comments_to_ed = PKPString::stripUnsafeHtml($row['comments_to_ed']);
 			if ($comments_to_ed != ""){
-				$submission = $submissionDao->getById($row['submission_id']);
-
 				$userId = null;
-				$authorAssignmentsResult = $stageAssignmetDao->getBySubmissionAndRoleId($submission->getId(), ROLE_ID_AUTHOR);
+				$authorAssignmentsResult = $stageAssignmetDao->getBySubmissionAndRoleId($row['submission_id'], ROLE_ID_AUTHOR);
 				if ($authorAssignmentsResult->getCount() != 0) {
 					// We assume the results are ordered by stage_assignment_id i.e. first author assignemnt is first
 					$userId = $authorAssignmentsResult->next()->getUserId();
 				} else {
-					$journalId = $submission->getContextId();
-					$managerUserGroup = $userGroupDao->getDefaultByRoleId($journalId, ROLE_ID_MANAGER);
-					$managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $journalId);
+					$managerUserGroup = $userGroupDao->getDefaultByRoleId($row['context_id'], ROLE_ID_MANAGER);
+					$managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $row['context_id']);
 					$userId = $managerUsers->next()->getId();
 				}
 				assert($userId);
 
 				$query = $queryDao->newDataObject();
 				$query->setAssocType(ASSOC_TYPE_SUBMISSION);
-				$query->setAssocId($submission->getId());
+				$query->setAssocId($row['submission_id']);
 				$query->setStageId(WORKFLOW_STAGE_ID_SUBMISSION);
 				$query->setSequence(REALLY_BIG_NUMBER);
 
 				$queryDao->insertObject($query);
-				$queryDao->resequence(ASSOC_TYPE_SUBMISSION, $submission->getId());
+				$queryDao->resequence(ASSOC_TYPE_SUBMISSION, $row['submission_id']);
 				$queryDao->insertParticipant($query->getId(), $userId);
 
 				$queryId = $query->getId();
