@@ -2,13 +2,13 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-  * 3.1.0_update.xml
+  * 3.0.2_update.xml
   *
   * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * 3.1.0.0 general updates.
+  * 3.0.2.0 general updates.
   -->
 <data>
 	<sql><!-- pkp/pkp-lib#2111: Clean up inoperative Guest Editor role -->
