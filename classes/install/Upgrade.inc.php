@@ -1816,7 +1816,7 @@ class Upgrade extends Installer {
 
 	/**
 	 * For 3.0.0 - 3.0.2 upgrade: first part of the fix for the migrated reviewer files.
-	 * The files are renamed and moved from 'review' to 'review/attachemnt' folder.
+	 * The files are renamed and moved from 'review' to 'review/attachment' folder.
 	 * @return boolean
 	 */
 	function moveReviewerFiles() {
