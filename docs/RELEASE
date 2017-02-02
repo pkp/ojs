@@ -1,91 +1,86 @@
-OJS 3.0.1 Release Notes
-CVS tag: ojs-3_0_1-0
+OJS 3.0.2 Release Notes
+CVS tag: ojs-3_0_2-0
 
-Release date: November 25, 2016
-===============================
-
-
-Configuration Changes
----------------------
-
-See config.TEMPLATE.inc.php for a description and examples of all supported
-configuration parameters.
-
-New config.inc.php parameters:
-	- files:filename_revision_match - The filename similarity (in percent) that
-		must be met for a possible revision to be detected.
+Release date: February 1, 2017
+==============================
 
 
 New Features
 ------------
-	#1565# Add visual cue when a field is missing a translation (multi-lingual inputs)
-	#1601# Implement CLI for import/export plugins
-	#1762# Add skip-to links for content in default frontend templates
-	#1825# Resolve HTML publishing issues
+	#850# Implement CRUD API for DOAJ
+	#1726# Permit submission locale changes
+	#1808# Display article references metadata on article details page
 	#1859# Add Sidebar Management to site settings for multi-journal installs
-	#1934# Localize issue and article cover images
-	#1951# Add support for custom issue ordering
-	#1981# Make filename similarity requirement configurable
+	#1906# enable RTL orientation in OJS 3
+	#2022# Add section to the submission filter form in the editorial back-end
+	#2174# Display author biographical information in OJS
 
 
 Bug Fixes
 ---------
-	#592# Fix behavior when journal not publicly enabled
-	#1469# "Forgot password" doesn't deliver reset password
-	#1594# acron plugin (pkp-lib) has app-specific language
-	#1599# Replace minifiedScripts.tpl with some other mechanism
-	#1628# Length of the rights statement
-	#1683# Implement OJS 2.4.x to 3.0 upgrade
-	#1709# Native Import Issues for OJS and OMP
-	#1740# Select window opens twice
-	#1747# Action "copy review form" inactive
-	#1765# Sidebar Management Wording
-	#1787# Tab-specific primary nav menu items don't work when already on page
-	#1788# Incorrect datetime value
-	#1793# Test/fix PostgreSQL upgrades
-	#1795# Spectrum colour picker not loaded in journal settings wizard
-	#1800# UserGroupDAO insertObject returns wrong value
-	#1801# Fix text paths for issue galleys
-	#1803# Fix attempt to connect to "ojs" database before installation
-	#1804# Fix function declaration variations for PHP7
-	#1805# Can't Export Issues
-	#1809# Fix listbuilder conventions for PHP7
-	#1810# Undefined constant in site settings
-	#1812# Remove Citation Assistant leftovers
-	#1815# Move metadata (DC/GS) meta tags into HTML head
-	#1820# Title parameter in multiple locale.xml files is $param instead of $title
-	#1821# When creating users, usernames are silently converted to lowercase
-	#1834# PHP Warning: end() expects parameter 1 to be array in search.tpl
-	#1838# Automatic emails for open access/subscription triggered post-install in OJS 3.0
-	#1840# Metrics migration from 2.4.x to 3.0
-	#1843# Permit all file stages in galleys grid
-	#1846# Ensure XML-imported content is indexed
-	#1847# Ensure closed registrations works properly
-	#1862# Ensure unique template files are compiled for each journal
-	#1868# Make datepicker respect date formats
-	#1872# UI plugin upgrade
-	#1877# DataCite export's "publisher" should be clarified
-	#1885# Fix MySQL test race condition
-	#1891# Make dependent files application closer-scoped
-	#1893# Fix MIME type detection problems for CSS
-	#1905# Acron really, really wants to run...
-	#1907# Show volume info only when checkbox selected
-	#1909# Fix APA/CBE/RefWorks author initial
-	#1910# Crossref plugin doesn’t use test API for status query
-	#1925# PKPString::mime_content_type() should fall back on mime_content_type when fileinfo is unavailable
-	#1927# Fix keyword input attempted autosuggest
-	#1930# Include article prefix on article details page
-	#1937# Resequence the category items
-	#1946# {$abstractTermIfEnabled} is not rendering in the emails for review request to a reviewer
-	#1948# {$journalTitle} not rendering in a decision email
-	#1956# 3.0.0 XML export validation message encoding
-	#1958# Use modern constructor syntax
-	#1966# Correct and Clean Up EndNote Citation Export
-	#1967# keywords not saved
-	#1973# PKPComponentRouter documentation misidentifies the path/to/component mapping
-	#1976# Smarty typos in tab/settings/appearance/form/ templates
-	#1989# Some notification emails sent out with empty recipient list
-	#2018# Section and published article ordering
-	#2028# Make review forms import nicely into email
-	#2032# Revise wording in Workflow Settings
-	#2034# Disable "Type" metadata by default
+	#1426# $_SERVER[HOSTNAME] should not be used for host identification
+	#1772# Consider adding aria-required to required fields
+	#1856# getByControlledVocabId() SQL does not work with PostgreSQL
+	#1867# Check box on the logging page of OJS 3.0
+	#1873# Display comments for editor
+	#1901# Update Crossref DOI display according to their new guidelines
+	#1924# Upgrade to 3.0.0: Filename migration
+	#1934# Localize issue and article cover images
+	#1996# [OJS3] Flaws in registration
+	#2039# Role selection in other journals on user profile page broken
+	#2042# Add theme api methods for manipulating parent scripts, styles and options
+	#2044# Article cover images don't appear in search results
+	#2045# Review form elements are brought into email draft despite inclusion flag status
+	#2046# Fix tool constructor syntax
+	#2047# [OJS] Submission notes visible for authors in OJS 3.0
+	#2049# Respect "editor only" section flag on submission process
+	#2052# Permit new decisions to restore archived submissions to active queue
+	#2053# Editor assign email template not available on Submission stage
+	#2062# Problems upgrading from OJS 3.0 to 3.0.1 with PostgreSQL
+	#2068# DOI Export Plugin assertion "register" is noisy
+	#2069# Article cover images in portrait dimensions can cause extra gaps
+	#2074# DOMDocument::createElementNS() is being used without consideration for escaping
+	#2075# Review first_page / last_page parsing
+	#2076# Review page counting code: MEDRA and EndNote
+	#2079# Full-text indexing not working
+	#2083# [OJS] Author View Metadata modal javascript error
+	#2085# Improve touch controls of frontend about nav dropdown
+	#2087# Wrong usage event object when accessing article page
+	#2089# List incomplete submissions in the managers active submissions lists
+	#2091# "Omit this section from About the Journal" in Section Settings is not used
+	#2092# [OJS] Reviewer doesn't have adequate permission to download review file
+	#2097# [OJS] Updating to OJS3 - revision files and initial copyedit files missing
+	#2098# [OJS3] Only tiny area clickable for tick boxes in tasks popup
+	#2100# [OJS3] Default Theme. Review interests on registration not visible
+	#2109# Section editors can access submission and data only if they are assigned to that submission
+	#2111# Guest Editor role is inoperative
+	#2112# Related Items plugin needs rewrite for OJS 3.x
+	#2115# Configured date formats need to be respected in front end
+	#2117# Display native export validation errors
+	#2118# [OJS] Enable journal to appear publicly on the site when path written with capital letters leads to an error
+	#2129# Proxy settings are not considered when fetching plugins.xml from PKP
+	#2131# OJS3: Errors on installation page are unobtrusive
+	#2134# OJS 3.0.1: Statistics plugin needs additional testing
+	#2136# [OJS] Empty sidebar breaks javascript in front end
+	#2138# Use %Y-%m-%d in strftime function
+	#2143# Remove restriction on email length
+	#2144# REVIEW_ACCEPT should be REVIEW_CONFIRM in upgrade script
+	#2154# fix hard coded current year in the usage stats JS
+	#2156# OJS install/upgrade documentation is slightly inaccurate
+	#2158# Press/journal assistants cannot delete their own placeholder queries
+	#2159# [OJS] upgrading to OJS3: Revisions and Reviewer's Attachments panels not visible in Review tab for authors
+	#2162# ru_RU locale update
+	#2167# fix getViews
+	#2176# No Reviewers after upgrading from 2.4.8 to 3.0.1
+	#2182# CSRF check prevents notes from being deleted
+	#2184# User group settings only installed for primary locale upon context creation
+	#2185# Make stage/review assignment joins in SubmissionDAO more selective
+	#2187# [OJS] Upgrading to OJS3: authors can not download the revisions they have uploaded
+	#2195# [OJS] Upgrading to OJS3: reviewers can see the names of the authors
+	#2201# [OJS 3.0.1] A reviewer has commented on "title" notifications should not go to other reviewers
+	#2208# PostgreSQL Update Statements
+	#2211# OJS 3: Remove site wide harvester registration section
+	#2212# Editorial actions do not appear when an editor assigns themselves
+	#2215# Dropdown controls in review forms present the wrong options
+	#2218# OJS3: 'Phone' field 24-character limit
+	#2223# Work around `false` returns from `glob` on some platforms during upgrade
