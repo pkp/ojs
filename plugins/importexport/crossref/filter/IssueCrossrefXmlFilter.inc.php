@@ -110,7 +110,7 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 		if (empty($depositorEmail)) {
 			$depositorEmail = $context->getSetting('supportEmail');
 		}
-		$depositorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'depositor_name', htmlspecialchars($depositorName, ENT_COMPAT, 'UTF=8')));
+		$depositorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'depositor_name', htmlspecialchars($depositorName, ENT_COMPAT, 'UTF-8')));
 		$depositorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'email_address', htmlspecialchars($depositorEmail, ENT_COMPAT, 'UTF-8')));
 		$headNode->appendChild($depositorNode);
 		$publisherInstitution = $context->getSetting('publisherInstitution');
