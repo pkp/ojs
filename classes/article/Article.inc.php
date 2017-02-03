@@ -196,22 +196,6 @@ class Article extends Submission {
 	}
 
 	/**
-	 * Get current review round.
-	 * @return int
-	 */
-	function getCurrentRound() {
-		return $this->getData('currentRound');
-	}
-
-	/**
-	 * Set current review round.
-	 * @param $currentRound int
-	 */
-	function setCurrentRound($currentRound) {
-		return $this->setData('currentRound', $currentRound);
-	}
-
-	/**
 	 * get expedited
 	 * @return boolean
 	 */
