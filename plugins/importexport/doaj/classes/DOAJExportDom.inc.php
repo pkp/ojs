@@ -142,7 +142,13 @@ class DOAJExportDom {
 		XMLCustomWriter::createChildWithText($doc, $root, 'documentType',  $article->getType($article->getLocale()), false);
 
 		/* --- Article title --- */
-		foreach ((array) $article->getTitle(null) as $locale => $title) {
+		$articleTitles = (array) $article->getTitle(null);
+		if (array_key_exists($article->getLocale(), $articleTitles)) {
+			$titleInArticleLocale = $articleTitles[$article->getLocale()];
+			unset($articleTitles[$article->getLocale()]);
+			$articleTitles = array_merge(array($article->getLocale() => $titleInArticleLocale), $articleTitles);
+		}
+		foreach ($articleTitles as $locale => $title) {
 			if (empty($title)) continue;
 
 			$titleNode = XMLCustomWriter::createChildWithText($doc, $root, 'title', $title);
@@ -173,7 +179,13 @@ class DOAJExportDom {
 		}
 
 		/* --- Abstract --- */
-		foreach ((array) $article->getAbstract(null) as $locale => $abstract) {
+		$articleAbstracts = (array) $article->getAbstract(null);
+		if (array_key_exists($article->getLocale(), $articleAbstracts)) {
+			$abstractInArticleLocale = $articleAbstracts[$article->getLocale()];
+			unset($articleAbstracts[$article->getLocale()]);
+			$articleAbstracts = array_merge(array($article->getLocale() => $abstractInArticleLocale), $articleAbstracts);
+		}
+		foreach ($articleAbstracts as $locale => $abstract) {
 			if (empty($abstract)) continue;
 
 			$abstractNode = XMLCustomWriter::createChildWithText($doc, $root, 'abstract', String::html2text($abstract));
@@ -185,13 +197,22 @@ class DOAJExportDom {
 		XMLCustomWriter::setAttribute($fullTextUrl, 'format', 'html');
 
 		/* --- Keywords --- */
-		$keywords = XMLCustomWriter::createElement($doc, 'keywords');
-		XMLCustomWriter::appendChild($root, $keywords);
+		$articleKeywords = (array) $article->getSubject(null);
+		if (array_key_exists($article->getLocale(), $articleKeywords)) {
+			$keywordsInArticleLocale = $articleKeywords[$article->getLocale()];
+			unset($articleKeywords[$article->getLocale()]);
+			$articleKeywords = array_merge(array($article->getLocale() => $keywordsInArticleLocale), $articleKeywords);
+		}
+		foreach ($articleKeywords as $locale => $keywords) {
+			$keywordsElement = XMLCustomWriter::createElement($doc, 'keywords');
+			XMLCustomWriter::setAttribute($keywordsElement, 'language', AppLocale::get3LetterIsoFromLocale($locale));
+			XMLCustomWriter::appendChild($root, $keywordsElement);
 
-		$subjects = array_map('trim', explode(';', $article->getSubject($article->getLocale())));
+			$subjects = array_map('trim', explode(';', $keywords));
 
-		foreach ($subjects as $keyword) {
-			XMLCustomWriter::createChildWithText($doc, $keywords, 'keyword', $keyword, false);
+			foreach ($subjects as $keyword) {
+				XMLCustomWriter::createChildWithText($doc, $keywordsElement, 'keyword', $keyword, false);
+			}
 		}
 
 		return $root;
