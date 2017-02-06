@@ -157,7 +157,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	/**
 	 * @copydoc PubObjectsExportPlugin::executeExportAction()
 	 */
-	function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart) {
+	function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation = null) {
 		$context = $request->getContext();
 		$path = array('plugin', $this->getName());
 		if ($request->getUserVar(CROSSREF_EXPORT_ACTION_CHECKSTATUS)) {
@@ -165,7 +165,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 			// redirect back to the right tab
 			$request->redirect(null, null, null, $path, null, $tab);
 		} else {
-			parent::executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart);
+			parent::executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation);
 		}
 	}
 
