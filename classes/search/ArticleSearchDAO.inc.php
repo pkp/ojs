@@ -99,6 +99,8 @@ class ArticleSearchDAO extends DAO {
 		if (!empty($journal)) {
 			$sqlWhere .= ' AND i.journal_id = ?';
 			$params[] = $journal->getId();
+		} else {
+			$sqlWhere .= ' AND j.enabled = 1';
 		}
 
 		import('classes.article.Article'); // STATUS_PUBLISHED
@@ -108,8 +110,10 @@ class ArticleSearchDAO extends DAO {
 			FROM	articles a,
 				published_articles pa,
 				issues i,
+				journals j,
 				article_search_objects o NATURAL JOIN ' . $sqlFrom . '
 			WHERE	pa.article_id = a.article_id AND
+				a.journal_id = j.journal_id AND
 				a.status = ' . STATUS_PUBLISHED . ' AND
 				pa.article_id = o.article_id AND
 				i.issue_id = pa.issue_id AND
