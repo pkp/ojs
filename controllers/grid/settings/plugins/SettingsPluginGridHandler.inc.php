@@ -62,10 +62,8 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 	 * @copydoc CategoryGridHandler::getCategoryRowInstance()
 	 */
 	protected function getRowInstance() {
-		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
-
-		import('controllers.grid.plugins.PluginGridRow');
-		return new PluginGridRow($userRoles, CONTEXT_JOURNAL);
+		import('lib.pkp.controllers.grid.plugins.PluginGridRow');
+		return new PluginGridRow($this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES));
 	}
 
 	/**
@@ -75,7 +73,7 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 		$categoryName = $request->getUserVar('category');
 		$pluginName = $request->getUserVar('plugin');
 		if ($categoryName && $pluginName) {
-			import('classes.security.authorization.OjsPluginAccessPolicy');
+			import('lib.pkp.classes.security.authorization.PluginAccessPolicy');
 			switch ($request->getRequestedOp()) {
 				case 'enable':
 				case 'disable':
@@ -86,7 +84,7 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 					$accessMode = ACCESS_MODE_ADMIN;
 					break;
 			}
-			$this->addPolicy(new OjsPluginAccessPolicy($request, $args, $roleAssignments, $accessMode));
+			$this->addPolicy(new PluginAccessPolicy($request, $args, $roleAssignments, $accessMode));
 		}
 		return parent::authorize($request, $args, $roleAssignments);
 	}
