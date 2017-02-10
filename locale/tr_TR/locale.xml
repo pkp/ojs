@@ -105,7 +105,6 @@
     <message key="common.subtitle.tip">İsteğe bağlı altyazı, ana başlığın ardından iki nokta üst üste (:) deyiminin arkasında görünecektir.</message>
     <message key="common.abstract">Özet</message>
     <message key="common.name">Adı</message>
-    <message key="common.designation">Görev Kısaltması</message>
 
 	<!-- Common Form Messages -->
 
