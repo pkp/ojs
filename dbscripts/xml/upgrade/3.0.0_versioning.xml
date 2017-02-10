@@ -18,5 +18,9 @@
 		<query>UPDATE authors SET version = 1 WHERE version IS NULL OR version = 0</query>
 		<query>UPDATE author_settings SET version = 1 WHERE version IS NULL OR version = 0</query>
 		<query>ALTER TABLE authors DROP PRIMARY KEY, ADD PRIMARY KEY (author_id, version)</query>
+		<query>UPDATE submission_galley_settings SET version = 1 WHERE version IS NULL OR version = 0</query>
+		<query>UPDATE submission_galley_files SET version = 1 WHERE version IS NULL OR version = 0</query>
+		<query>ALTER TABLE submission_galleys DROP COLUMN file_id</query>
+		<query>ALTER TABLE submission_galley_files DROP PRIMARY KEY, ADD PRIMARY KEY(galley_id, version)</query>
 	</sql>
 </data>

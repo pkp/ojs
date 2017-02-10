@@ -31,21 +31,24 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	/**
 	 * @copydoc RepresentationDAO::getById()
 	 */
-	function getById($galleyId, $submissionId = null, $contextId = null) {
+	function getById($galleyId, $submissionId = null, $contextId = null, $submissionRevision = null) {
 		$params = array((int) $galleyId);
 		if ($submissionId) $params[] = (int) $submissionId;
 		if ($contextId) $params[] = (int) $contextId;
+		if ($submissionRevision) $params[] = (int) $submissionRevision;
 
 		$result = $this->retrieve(
-			'SELECT	sf.*, g.*
+			'SELECT	sf.*, g.*, sfg.version
 			FROM	submission_galleys g
 				' . ($contextId?' JOIN submissions s ON (s.submission_id = g.submission_id)':'') . '
-				LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
-				LEFT JOIN submission_files nsf ON (nsf.file_id = g.file_id AND nsf.revision > sf.revision)
+				LEFT JOIN submission_galley_files sfg ON (sfg.galley_id = g.galley_id)
+				LEFT JOIN submission_files sf ON (sfg.file_id = sf.file_id)
+				LEFT JOIN submission_files nsf ON (nsf.file_id = sfg.file_id AND nsf.revision > sf.revision)
 			WHERE	g.galley_id = ?
 				AND nsf.file_id IS NULL ' .
 				($submissionId !== null?' AND g.submission_id = ?':'') .
-				($contextId?' AND s.context_id = ?':''),
+				($contextId?' AND s.context_id = ?':'') .
+				($submissionRevision?' AND sfg.version = ? ':''),
 			$params
 		);
 
@@ -67,8 +70,8 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	 * @param $articleId int
 	 * @return ArticleGalley
 	 */
-	function getGalleyByPubId($pubIdType, $pubId, $articleId = null) {
-		$galleyFactory = $this->getGalleysBySetting('pub-id::'.$pubIdType, $pubId, $articleId);
+	function getGalleyByPubId($pubIdType, $pubId, $articleId = null, $submissionRevision = null) {
+		$galleyFactory = $this->getGalleysBySetting('pub-id::'.$pubIdType, $pubId, $articleId, null, $submissionRevision);
 		if ($galleyFactory->wasEmpty()) return null;
 
 		assert($galleyFactory->getCount() == 1);
@@ -83,7 +86,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	 * @param $journalId int optional
 	 * @return DAOResultFactory The factory for galleys identified by setting.
 	 */
-	function getGalleysBySetting($settingName, $settingValue, $articleId = null, $journalId = null) {
+	function getGalleysBySetting($settingName, $settingValue, $articleId = null, $journalId = null, $submissionRevision = null) {
 		$params = array($settingName);
 
 		$sql = 'SELECT	g.*
@@ -106,6 +109,11 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 			$params[] = (int) $journalId;
 			$sql .= ' AND a.context_id = ?';
 		}
+		if($submissionRevision){
+			$params[] = (int) $submissionRevision;
+			$sql .= ' AND gs.version = ?';
+		}
+
 		$sql .= ' ORDER BY a.context_id, pa.issue_id, g.galley_id';
 		$result = $this->retrieve($sql, $params);
 
@@ -122,15 +130,16 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 
 		return new DAOResultFactory(
 			$this->retrieve(
-				'SELECT sf.*, g.*
+				'SELECT sf.*, g.*, sfg.version
 				FROM submission_galleys g
 				' . ($contextId?'INNER JOIN submissions s ON (g.submission_id = s.submission_id) ':'') . '
-				LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
-				LEFT JOIN submission_files nsf ON (nsf.file_id = g.file_id AND nsf.revision > sf.revision)
+				LEFT JOIN submission_galley_files sfg ON (sfg.galley_id = g.galley_id)
+				LEFT JOIN submission_files sf ON (sfg.file_id = sf.file_id)
+				LEFT JOIN submission_files nsf ON (nsf.file_id = sfg.file_id AND nsf.revision > sf.revision)
 				WHERE g.submission_id = ?
 					AND nsf.file_id IS NULL
 					' . ($contextId?' AND s.context_id = ? ':'') . '
-					' . ($submissionRevision?' AND g.submission_revision = ? ':'') . '
+					' . ($submissionRevision?' AND sfg.version = ? ':'') . '
 				ORDER BY g.seq',
 				$params
 			),
@@ -145,11 +154,12 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	 */
 	function getByContextId($journalId) {
 		$result = $this->retrieve(
-			'SELECT	sf.*, g.*
+			'SELECT	sf.*, g.*, sfg.version
 			FROM	submission_galleys g
 				INNER JOIN submissions a ON (g.submission_id = a.submission_id)
-				LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
-				LEFT JOIN submission_files nsf ON (nsf.file_id = g.file_id AND nsf.revision > sf.revision)
+				LEFT JOIN submission_galley_files sfg ON (sfg.galley_id = g.galley_id)
+				LEFT JOIN submission_files sf ON (sfg.file_id = sf.file_id)
+				LEFT JOIN submission_files nsf ON (nsf.file_id = sfg.file_id AND nsf.revision > sf.revision)
 			WHERE	a.context_id = ?
 				AND nsf.file_id IS NULL',
 			(int) $journalId
@@ -165,10 +175,10 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	 * @param $articleId int
 	 * @return ArticleGalley object
 	 */
-	function getByBestGalleyId($galleyId, $articleId) {
+	function getByBestGalleyId($galleyId, $articleId, $submissionRevision = null) {
 		$galley = null;
-		if ($galleyId != '') $galley = $this->getGalleyByPubId('publisher-id', $galleyId, $articleId);
-		if (!isset($galley) && ctype_digit("$galleyId")) $galley = $this->getById((int) $galleyId, $articleId);
+		if ($galleyId != '') $galley = $this->getGalleyByPubId('publisher-id', $galleyId, $articleId, $submissionRevision);
+		if (!isset($galley) && ctype_digit("$galleyId")) $galley = $this->getById((int) $galleyId, $articleId, null, $submissionRevision);
 		return $galley;
 	}
 
@@ -211,7 +221,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 
 		$galley->setId($row['galley_id']);
 		$galley->setSubmissionId($row['submission_id']);
-		$galley->setSubmissionRevision($row['submission_revision']);
+		$galley->setSubmissionRevision($row['version']);
 		$galley->setLocale($row['locale']);
 		$galley->setLabel($row['label']);
 		$galley->setSequence($row['seq']);
@@ -232,25 +242,46 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	function insertObject($galley) {
 		$this->update(
 			'INSERT INTO submission_galleys
-				(submission_id, submission_revision, label, locale, seq, remote_url, file_id)
+				(submission_id, label, locale, seq, remote_url)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?)',
 			array(
 				(int) $galley->getSubmissionId(),
-				(int) $galley->getSubmissionRevision(),
 				$galley->getLabel(),
 				$galley->getLocale(),
 				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getSubmissionId()) : $galley->getSequence(),
 				$galley->getRemoteURL(),
-				$galley->getFileId(),
 			)
 		);
 		$galley->setId($this->getInsertId());
 		$this->updateLocaleFields($galley);
+		$this->addFile($galley->getId(), $galley->getFileId(), $galley->getCurrentVersionId());
 
 		HookRegistry::call('ArticleGalleyDAO::insertNewGalley', array(&$galley, $galley->getId()));
 
 		return $galley->getId();
+	}
+
+	/**
+	* Connect galley version with file in submission_galley_files
+	* @param $galleyId ArticleGalleyId
+	* @param $fileId FileId
+	* @param $version SubmissionRevision
+	*/
+	function addFile($galleyId, $fileId=0, $version=1){
+		$this->update(
+			'INSERT INTO submission_galley_files
+				(galley_id, file_id, version)
+				VALUES
+				(?, ?, ?)
+			ON DUPLICATE KEY UPDATE
+				file_id = VALUES(file_id)',
+			array(
+				(int) $galleyId,
+				(int) $fileId,
+				(int) $version,
+			)
+		);
 	}
 
 	/**
@@ -264,18 +295,17 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 					locale = ?,
 					label = ?,
 					seq = ?,
-					remote_url = ?,
-					file_id = ?
+					remote_url = ?
 				WHERE galley_id = ?',
 			array(
 				$galley->getLocale(),
 				$galley->getLabel(),
 				(float) $galley->getSequence(),
 				$galley->getRemoteURL(),
-				(int) $galley->getFileId(),
 				(int) $galley->getId(),
 			)
 		);
+		$this->addFile($galley->getId(), $galley->getFileId(), $galley->getCurrentVersionId());
 		$this->updateLocaleFields($galley);
 	}
 
@@ -284,13 +314,14 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	 * @param $galley ArticleGalley
 	 */
 	function deleteObject($galley) {
-		return $this->deleteById($galley->getId());
+		return $this->deleteById($galley->getId(), null, $galley->getCurrentVersionId());
 	}
 
 	/**
 	 * Delete a galley by ID.
 	 * @param $galleyId int Galley ID.
 	 * @param $articleId int Optional article ID.
+	 * TODO delete entry in submission_galley_files
 	 */
 	function deleteById($galleyId, $articleId = null, $submissionRevision = null) {
 
@@ -298,16 +329,16 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 
 		$params = array((int) $galleyId);
 		if ($articleId) $params[] = (int) $articleId;
-		if ($submissionRevision) $params[] = (int) $submissionRevision;
 		$this->update(
 			'DELETE FROM submission_galleys
 			WHERE galley_id = ?'
-			. ($articleId?' AND submission_id = ?':'') .'
-			'.($submissionRevision?' AND submission_revision = ?':''),
+			. ($articleId?' AND submission_id = ?':''),
 			$params
 		);
 		if ($this->getAffectedRows()) {
-			$this->update('DELETE FROM submission_galley_settings WHERE galley_id = ?', array((int) $galleyId));
+			$this->update('
+				DELETE FROM submission_galley_settings
+				WHERE galley_id = ? AND version = ?', array((int) $galleyId, $submissionRevision));
 			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 			import('lib.pkp.classes.submission.SubmissionFile'); // Import constants
 
@@ -494,8 +525,9 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 				JOIN submissions s ON (s.submission_id = g.submission_id)
 				LEFT JOIN published_submissions ps ON (ps.submission_id = g.submission_id)
 				JOIN issues i ON (ps.issue_id = i.issue_id)
-				LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
-				LEFT JOIN submission_files nsf ON (nsf.file_id = g.file_id AND nsf.revision > sf.revision AND nsf.file_id IS NULL )
+				LEFT JOIN submission_galley_files sfg ON (sfg.galley_id = g.galley_id)
+				LEFT JOIN submission_files sf ON (sfg.file_id = sf.file_id)
+				LEFT JOIN submission_files nsf ON (nsf.file_id = sfg.file_id AND nsf.revision > sf.revision AND nsf.file_id IS NULL )
 				' . ($pubIdType != null?' LEFT JOIN submission_galley_settings gs ON (g.galley_id = gs.galley_id)':'')
 				. ($title != null?' LEFT JOIN submission_settings sst ON (s.submission_id = sst.submission_id)':'')
 				. ($author != null?' LEFT JOIN authors au ON (s.submission_id = au.submission_id)':'')

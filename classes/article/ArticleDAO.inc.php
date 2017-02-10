@@ -82,7 +82,6 @@ class ArticleDAO extends SubmissionDAO {
 		$article->setSectionTitle($row['section_title']);
 		$article->setSectionAbbrev($row['section_abbrev']);
 		$article->setCitations($row['citations']);
-		$article->setCurrentRound($row['current_round']);
 		$article->setPages($row['pages']);
 		$article->setFastTracked($row['fast_tracked']);
 		$article->setHideAuthor($row['hide_author']);

@@ -569,10 +569,6 @@
 		<field name="submission_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="submission_revision" type="I8">
-			<NOTNULL />
-			<DEFAULT VALUE="1"/>
-		</field>
 		<field name="label" type="C2" size="255"/>
 		<field name="file_id" type="I8"/>
 		<field name="seq" type="F">
@@ -592,12 +588,37 @@
 
 	<!--
 	  *
+	  * TABLE submission_galley_files
+	  *
+	  -->
+	<table name="submission_galley_files">
+		<field name="galley_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="version" type="I8">
+			<NOTNULL />
+			<DEFAULT VALUE="1"/>
+		</field>
+		<field name="file_id" type="I8"/>
+		<descr>Submission galley files</descr>
+		<index name="submission_galley_files_galley_id">
+			<col>galley_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
 	  * TABLE submission_galley_settings
 	  *
 	  -->
 	<table name="submission_galley_settings">
 		<field name="galley_id" type="I8">
 			<NOTNULL />
+		</field>
+		<field name="version" type="I8">
+			<NOTNULL />
+			<DEFAULT VALUE="1"/>
 		</field>
 		<field name="locale" type="C2" size="14">
 			<NOTNULL />

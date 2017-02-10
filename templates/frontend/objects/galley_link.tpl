@@ -49,16 +49,20 @@
 {/if}
 
 {* Revision? *}
-{if $revision}
-	{assign var=path value=$parentId|to_array:$galley->getBestGalleyId():'v':$revision->getRevision()}
-	{assign var=label value=$galley->getGalleyLabel()|cat:" ("|cat:$revision->getRevision()|cat:")"}
+{if $isPreviousRevision}
+	{assign var=path value=$parentId|to_array:$submissionRevision:$galley->getBestGalleyId()}
+	{assign var=label value=$galley->getGalleyLabel()}
 {else}
 	{assign var=path value=$parentId|to_array:$galley->getBestGalleyId()}
 	{assign var=label value=$galley->getGalleyLabel()}
 {/if}
 
 {* Don't be frightened. This is just a link *}
-<a class="obj_galley_link {$type}{if $restricted} restricted{/if}" href="{url page=$page op="view" path=$path}">
+{if $isPreviousRevision}
+	<a class="obj_galley_link {$type}{if $restricted} restricted{/if}" href="{url page=$page op="version" path=$path}">
+{else}
+	<a class="obj_galley_link {$type}{if $restricted} restricted{/if}" href="{url page=$page op="view" path=$path}">
+{/if}
 
 	{* Add some screen reader text to indicate if a galley is restricted *}
 	{if $restricted}

@@ -161,40 +161,6 @@ class ArticleGalley extends Representation {
 		return $this->getLabel();
 	}
 
-	/**
-	 * Retrieve not the first, but all other revisions assigned to this submission file.
-	 * @param $fileId int
-	 * @param $fileStage int (optional)
-	 * @param $submissionId int (optional)
-	 * @return Array
-	 */
-	function getOtherRevisions($fileId, $fileStage = null, $submissionId = null) {
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-		$submissionFiles = $submissionFileDao->getAllRevisions($fileId, $fileStage, $submissionId);
-		if(isset($submissionFiles)){
-			array_shift($submissionFiles);
-		}
-		return $submissionFiles;
-	}
-
-
-	/**
-	 * Retrieve the current revision assigned to this submission file.
-	 * @param $fileId int
-	 * @param $fileStage int (optional)
-	 * @param $submissionId int (optional)
-	 * @param $submissionRevision int (optional)
-	 * @return object
-	 */
-	function getCurrentFileVersion($fileId, $fileStage = null, $submissionId = null, $submissionRevision = null) {
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-		$submissionFiles = $submissionFileDao->getAllRevisions($fileId, $fileStage, $submissionId);
-	
-		return array_shift($submissionFiles);
-	}
-
-
-
 }
 
 ?>

@@ -223,11 +223,6 @@
 					<ul class="value galleys_links">
 						{foreach from=$galleys item=galley}
 							{assign var=galleyId value=$galley->getId()}
-							{assign var=otherRevisions value=$galley->getOtherRevisions($galley->getFileId())} 
-							{if $otherRevisions}
-								{* variable used later to decide whether to display old revisions or not *}
-								{assign var=hasRevisions value=true}
-							{/if}
 							<li>
 								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley}
 							</li>
@@ -246,13 +241,6 @@
 						{$article->getDatePublished()|date_format:$dateFormatShort}
 					</div>
 				</div>
-			{/if}
-
-			{* Display version history of each galley *}
-			{if $versioningEnabled && $hasRevisions}
-				{foreach from=$galleys item=galley}
-					{include file="frontend/objects/file_revisions.tpl" parent=$article galley=$galley} 
-				{/foreach}
 			{/if}
 
 			{* Citation formats *}

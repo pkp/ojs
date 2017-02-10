@@ -120,6 +120,8 @@ class ArticleHandler extends Handler {
 	function version($args, $request){
 		$articleId = $args[0];
 		$this->submissionRevision = $args[1];
+		$galleyId = isset($args[2]) ? $args[2] : 0;
+		array_splice($args, 1, 1);
 
 		// get this published article version
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
@@ -165,8 +167,8 @@ class ArticleHandler extends Handler {
 
 		// Fetch and assign the galley to the template
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = $galleyDao->getByBestGalleyId($galleyId, $article->getId());
-		if ($galley && $galley->getRemoteURL()) $request->redirectUrl($galley->getRemoteURL());
+		$this->galley = $galleyDao->getByBestGalleyId($galleyId, $this->article->getId(), $this->submissionRevision);
+		if ($this->galley && $this->galley->getRemoteURL()) $request->redirectUrl($this->galley->getRemoteURL());
 
 		// Copyright and license info
 		$templateMgr->assign(array(
@@ -195,7 +197,7 @@ class ArticleHandler extends Handler {
 		// Versioning
 		$templateMgr->assign('versioningEnabled', $journal->getSetting('versioningEnabled'));
 
-		if (!$galley) {
+		if (!$this->galley) {
 			// No galley: Prepare the article landing page.
 
 			// Get the subscription status if displaying the abstract;
@@ -238,7 +240,7 @@ class ArticleHandler extends Handler {
 		} else {
 			// Galley: Prepare the galley file download.
 			if (!HookRegistry::call('ArticleHandler::view::galley', array(&$request, &$issue, &$galley, &$article))) {
-				$request->redirect(null, null, 'download', array($articleId, $galleyId, $fileId, $fileRevision));
+				$request->redirect(null, null, 'download', array($articleId, $this->submissionRevision, $galleyId, $fileId, $fileRevision));
 			
 			}
 
@@ -294,14 +296,16 @@ class ArticleHandler extends Handler {
 	 */
 	function download($args, $request) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		$galleyId = isset($args[1]) ? $args[1] : 0;
-		$fileId = isset($args[2]) ? (int) $args[2] : 0;
-		// string 'v' is stored in args[2] if this is an url with file revision
-		$fileRevision = isset($args[2])&&$args[2]==='v' ? (int) $args[3] : null;
+		$submissionRevision = isset($args[1]) ? (int) $args[1] : 0;
+		$galleyId = isset($args[2]) ? $args[2] : 0;
+		$fileId = isset($args[3]) ? (int) $args[3] : 0;
+
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$this->galley = $galleyDao->getByBestGalleyId($galleyId, $articleId, $submissionRevision);
 
 		if ($this->galley->getRemoteURL()) $request->redirectUrl($this->galley->getRemoteURL());
 		if ($this->userCanViewGalley($request, $articleId, $galleyId)) {
-			if (!$fileId||$fileId==='v') {
+			if (!$fileId) {
 				$submissionFile = $this->galley->getFile();
 				if ($submissionFile) {
 					$fileId = $submissionFile->getFileId();
@@ -315,7 +319,7 @@ class ArticleHandler extends Handler {
 			if (!HookRegistry::call('ArticleHandler::download', array($this->article, &$this->galley, &$fileId))) {
 				import('lib.pkp.classes.file.SubmissionFileManager');
 				$submissionFileManager = new SubmissionFileManager($this->article->getContextId(), $this->article->getId());
-				$submissionFileManager->downloadFile($fileId, $fileRevision, $request->getUserVar('inline')?true:false);
+				$submissionFileManager->downloadFile($fileId, null, $request->getUserVar('inline')?true:false);
 			}
 		}
 	}
