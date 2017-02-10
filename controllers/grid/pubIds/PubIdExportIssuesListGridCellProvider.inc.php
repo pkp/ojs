@@ -88,7 +88,7 @@ class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider {
 	 *
 	 * @copydoc DataObjectGridCellProvider::getTemplateVarsFromRowColumn()
 	 */
-	function getTemplateVarsFromRowColumn($row, $column) {
+	function getTemplateVarsFromRowColumn($request, $row, $column) {
 		$publishedIssue = $row->getData();
 		$columnId = $column->getId();
 		assert(is_a($publishedIssue, 'Issue') && !empty($columnId));
